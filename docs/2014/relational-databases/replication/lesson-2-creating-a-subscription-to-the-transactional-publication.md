@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5995b7d2-7c06-46f5-b96c-2bee879bcda2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9dc9824efb3f962d97f786835fa2367be18b55f7
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: ce4035bd0f953058a1e868709275e2f5d0b025a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000417"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065916"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>2단원: 트랜잭션 게시에 구독 만들기
   이 단원에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 구독을 만듭니다. 이 단원을 수행하려면 이전 단원인 [1단원: 트랜잭션 복제를 사용하여 데이터 게시](lesson-1-publishing-data-using-transactional-replication.md)를 완료해야 합니다.  
@@ -36,11 +35,11 @@ ms.locfileid: "83000417"
   
 5.  구독자 페이지에서 구독자 인스턴스 이름이 표시되지 않는 경우 **구독자 추가**, **SQL Server 구독자 추가**를 차례로 클릭하고 **서버에 연결** 대화 상자에 구독자 인스턴스 이름을 입력한 다음 **연결**을 클릭합니다.  
   
-6.  구독자 페이지에서 구독자 서버의 인스턴스 이름을 선택 하 고 **구독 데이터베이스**에서 ** \< 새 데이터베이스>** 를 선택 합니다.  
+6.  구독자 페이지에서 구독자 서버의 인스턴스 이름을 선택 하 고 **\<New Database>** **구독 데이터베이스**에서를 선택 합니다.  
   
 7.  **새 데이터베이스** 대화 상자에서 **데이터베이스 이름** 상자에 **ProductReplica** 를 입력하고 **확인**을 클릭한 후 **다음**을 클릭합니다.  
   
-8.  **배포 에이전트 보안** 대화 상자에서 줄임표 (**...**) 단추를 클릭 하 고 \< **프로세스 계정** 상자에 _Machine_Name>_ **\ repl_distribution** 를 입력 한 다음이 계정에 대 한 암호를 입력 하 고 **확인**을 클릭 한 후 **다음**을 클릭 합니다.  
+8.  **배포 에이전트 보안** 대화 상자에서 줄임표 (**...**) 단추를 클릭 하 고 \<_Machine_Name> **프로세스 계정** 상자에 _**\ repl_distribution** 를 입력 한 다음이 계정에 대 한 암호를 입력 하 고 **확인**을 클릭 한 후 **다음**을 클릭 합니다.  
   
 9. **마침** 을 클릭하여 나머지 페이지의 기본값을 적용하고 마법사를 완료합니다.  
   

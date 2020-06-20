@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dafd3a5f8a460bb08e63919c2cb853ad74dc2f1f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779115"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932764"
 ---
 # <a name="migrate-query-plans"></a>쿼리 계획 마이그레이션
   데이터베이스를 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 업그레이드하면 대부분의 경우 쿼리 성능이 향상됩니다. 그러나 성능 향상을 위해 세심하게 튜닝된 중요한 쿼리의 경우 업그레이드하기 전에 각 쿼리에 대한 계획 지침을 만들어 쿼리 계획을 보존할 수 있습니다. 업그레이드 후에 쿼리 최적화 프로그램에서 한 개 이상의 쿼리에 대해 효율성이 낮은 계획이 선택된 경우 계획 지침을 사용하여 쿼리 최적화 프로그램에서 업그레이드 전 계획이 사용되도록 지정할 수 있습니다.  
@@ -50,7 +49,7 @@ ms.locfileid: "62779115"
   
 -   [Dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql) 동적 관리 함수의 query_plan 열을 쿼리 하는 중입니다.  
   
--   실행 계획 [xml](../../relational-databases/event-classes/showplan-xml-event-class.md), 실행 [계획 xml 통계 프로필](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)및 실행 [계획 xml For Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md) 이벤트 클래스 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]  
+-   실행 계획 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [xml](../../relational-databases/event-classes/showplan-xml-event-class.md), 실행 [계획 xml 통계 프로필](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)및 실행 [계획 xml For Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md) 이벤트 클래스  
   
  다음 예에서는 동적 관리 뷰를 쿼리하여 `SELECT City, StateProvinceID, PostalCode FROM Person.Address ORDER BY PostalCode DESC;` 문에 대한 쿼리 계획을 수집합니다.  
   
@@ -92,8 +91,8 @@ GO
  쿼리를 다시 실행하고 생성되는 쿼리 계획을 확인합니다. 생성된 계획이 계획 지침에 지정한 계획과 일치하는 것을 볼 수 있을 것입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;sp_create_plan_guide &#40;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
- [Transact-sql&#41;&#40;쿼리 힌트](/sql/t-sql/queries/hints-transact-sql-query)   
+ [sp_create_plan_guide&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [쿼리 힌트&#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
  [계획 지침](../../relational-databases/performance/plan-guides.md)  
   
   

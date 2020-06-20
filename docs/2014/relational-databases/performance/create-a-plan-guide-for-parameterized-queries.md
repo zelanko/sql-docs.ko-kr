@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b532ae16-66e7-4641-9bc8-b0d805853477
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 58202b7246acf2a958523cfb874b8ce25bd13bdc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 565610826f704274724ea05d821205a5b3391060
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150961"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066023"
 ---
 # <a name="create-a-plan-guide-for-parameterized-queries"></a>매개 변수가 있는 쿼리를 위한 계획 지침 만들기
   TEMPLATE 계획 지침은 지정된 형식으로 매개 변수화되는 독립 실행형 쿼리와 일치합니다.  

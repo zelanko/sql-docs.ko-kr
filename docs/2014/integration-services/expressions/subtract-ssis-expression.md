@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 03ede2272de2c574909ed44bb0291b3c56911f0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61c359d6f1424bae058fd9398aa9471350d309af
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768736"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969013"
 ---
 # <a name="--subtract-ssis-expression"></a>-(빼기)(SSIS 식)
   첫 번째 숫자 식에서 두 번째 식을 뺍니다.  

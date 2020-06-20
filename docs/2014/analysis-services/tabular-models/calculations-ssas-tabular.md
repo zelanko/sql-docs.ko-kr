@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 738816e3-0e1d-44a5-8d1b-81068dce8ac0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9412d01809402dfa23c116c93c80e0ab32bee747
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2da86ae5c5652c8b2614cae4bbb721802700d973
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284911"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939904"
 ---
 # <a name="calculations-ssas-tabular"></a>계산(SSAS 테이블 형식)
   데이터를 모델로 가져온 후에는 계산을 추가하여 해당 데이터를 집계, 필터링, 확장, 결합 및 보호할 수 있습니다. 테이블 형식 모델에서는 사용자 지정 계산을 만들기 위한 수식 언어인 DAX(Data Analysis Expressions)가 사용됩니다. 테이블 형식 모델에서 DAX 수식을 사용하여 만드는 계산은 *계산 열*, *측정값*및 *행 필터*에 사용됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[테이블 형식 모델의 DAX 이해&#40;SSAS 테이블 형식&#41;](understanding-dax-in-tabular-models-ssas-tabular.md)|테이블 형식 모델에서 계산 열, 측정값 및 행 필터에 대한 계산을 만드는 데 사용되는 DAX(Data Analysis Expressions) 수식 언어에 대해 설명합니다.|  
 |[DirectQuery 모드에서의 수식 호환성](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)|차이점을 설명하고, DirectQuery 모드에서 지원되지 않는 함수와 지원은 되지만 다른 결과를 반환할 수 있는 함수의 목록을 제공합니다.|  

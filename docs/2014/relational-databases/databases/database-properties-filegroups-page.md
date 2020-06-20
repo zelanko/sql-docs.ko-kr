@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b8de45556d3c19ee8460b33e7f07ceb485b37597
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0546a17491ed5d3b36890a605c5faa922c24fe6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917121"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970183"
 ---
 # <a name="database-properties-filegroups-page"></a>데이터베이스 속성(파일 그룹 페이지)
   이 페이지를 사용하여 파일 그룹을 확인하거나 선택한 데이터베이스에 새 파일 그룹을 추가할 수 있습니다. 파일 그룹 유형은 *행* 파일 그룹, FILESTREAM 데이터 및 메모리 최적화 파일 그룹으로 구분됩니다.  

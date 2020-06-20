@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f93b61de-01fe-4237-ada4-f1e481550564
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3d95ce69743caaa6b587195ba107774d8cd8454
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48bb1911e0606941229035e14df1da8a2720dfc4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63297517"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011534"
 ---
 # <a name="name-element-for-column-dta"></a>Column의 Name 요소(DTA)
   사용자 지정 구성에서 인덱스 열의 이름을 지정합니다.  

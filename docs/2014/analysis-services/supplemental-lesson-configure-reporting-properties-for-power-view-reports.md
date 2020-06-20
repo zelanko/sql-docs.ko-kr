@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 812c205c1e612604c0c39a5effb3b9da50308d7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03afd5bdafe30a8684165fef5febae49f210f042
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067954"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940214"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Power View 보고서의 보고 속성 구성
   이 추가 단원에서는 Adventure Works Internet Sales Model 프로젝트에 대한 보고 속성을 설정해 봅니다. 보고 속성을 사용하면 최종 사용자가 Power View에서 모델 데이터를 쉽게 선택하고 표시할 수 있습니다. 또한 특정 열과 테이블을 숨기고 차트에서 사용할 새 데이터를 만드는 속성을 설정합니다.  
@@ -26,7 +25,7 @@ ms.locfileid: "66067954"
   
  이 단원을 완료하기 위한 예상 시간: **30분**  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 추가 단원은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 추가 단원의 작업을 수행하기 전에 이전의 단원을 모두 완료해야 합니다.  
   
  이 특정 추가 단원을 완료하려면 다음이 필요합니다.  
@@ -70,7 +69,7 @@ ms.locfileid: "66067954"
   
 2.  수식 입력줄에 다음 수식을 사용하여 새 계산 열 두 개를 추가합니다.  
   
-    |열 이름|수식|  
+    |열 이름|Formula|  
     |-----------------|-------------|  
     |연도 분기|=[Calendar Year] & " Q" & [Calendar Quarter]|  
     |Year Month|=[Calendar Year] & FORMAT([Month],"#00")|  
@@ -170,7 +169,7 @@ ms.locfileid: "66067954"
     |Day Of Week|숨김|True|  
     |Day of Month|숨김|True|  
     |Day of Year|숨김|True|  
-    |Month Name|열 기준 정렬|월|  
+    |Month Name|열 기준 정렬|Month|  
     |월|숨김|True|  
     |Month Calendar|숨김|True|  
     |Fiscal Quarter|숨김|True|  
@@ -184,7 +183,7 @@ ms.locfileid: "66067954"
     |Geography Id|숨김|True|  
     |Sales Territory Id|숨김|True|  
   
-     **제품은**  
+     **제품**  
   
     |열|속성|값|  
     |------------|--------------|-----------|  

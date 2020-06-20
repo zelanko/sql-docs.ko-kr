@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 457f3ef946b5cfaf86a4a19774af63c5d7635882
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774285"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930974"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>가용성 그룹의 데이터베이스에 대한 로그인 및 작업 관리(SQL Server)
   AlwaysOn 가용성 그룹의 모든 주 데이터베이스와 해당 보조 데이터베이스에서 동일한 사용자 로그인 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 작업 집합을 정기적으로 유지 관리해야 합니다. 로그인과 작업은 가용성 그룹에 대한 가용성 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 모든 인스턴스에서 재현되어야 합니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "62774285"
   
 -   **추가 메타데이터**  
   
-     로그인과 작업 외에도 지정된 가용성 그룹의 보조 복제본을 호스팅하는 각 서버 인스턴스에서 다시 만들어야 하는 정보가 있습니다. 예를 들어 서버 구성 설정, 자격 증명, 암호화된 데이터, 사용 권한, 복제 설정, Service Broker 애플리케이션, 트리거(서버 수준) 등을 다시 만들어야 할 수 있습니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타 데이터 관리 &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)를 참조 하세요.  
+     로그인과 작업 외에도 지정된 가용성 그룹의 보조 복제본을 호스팅하는 각 서버 인스턴스에서 다시 만들어야 하는 정보가 있습니다. 예를 들어 서버 구성 설정, 자격 증명, 암호화된 데이터, 사용 권한, 복제 설정, Service Broker 애플리케이션, 트리거(서버 수준) 등을 다시 만들어야 할 수 있습니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)을 참조하세요.  
   
 ##  <a name="logins-of-applications-that-use-sql-server-authentication-or-a-local-windows-login"></a><a name="SSauthentication"></a> SQL Server 인증 또는 로컬 Windows 로그인을 사용하는 애플리케이션의 로그인  
  애플리케이션에서 SQL Server 인증 또는 로컬 Windows 로그인을 사용하는 경우 일치하지 않는 SID로 인해 원격 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에서 애플리케이션의 로그인이 확인되지 않을 수 있습니다. 일치하지 않는 SID로 인해 해당 로그인이 원격 서버 인스턴스에서 분리된 사용자가 됩니다. 이 문제는 애플리케이션이 장애 조치(Failover) 후 미러링된 데이터베이스 또는 로그 전달 데이터베이스에 연결하거나 백업에서 초기화된 복제 구독자 데이터베이스에 연결하는 경우에 발생할 수 있습니다.  

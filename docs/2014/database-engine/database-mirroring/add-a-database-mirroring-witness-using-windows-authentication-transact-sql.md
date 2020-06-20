@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c7020cacbb8466b1113e514162337befae358549
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88684c3a1ca12ea579859759ed804ca281647fa5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67792607"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934426"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Windows 인증을 사용하여 데이터베이스 미러링 모니터 추가(Transact-SQL)
   데이터베이스에 미러링 모니터를 설정하려면 데이터베이스 소유자는 데이터베이스 엔진 인스턴스를 미러링 모니터 서버의 역할로 할당해야 합니다. 미러링 모니터 서버 인스턴스는 주 서버 인스턴스 또는 미러 서버 인스턴스와 동일한 컴퓨터에서 실행될 수 있으나 이 경우 자동 장애 조치(Failover)의 효과가 크게 저하됩니다.  
@@ -58,11 +57,11 @@ ms.locfileid: "67792607"
   
      서버 네트워크 주소 구문은 다음과 같습니다.  
   
-     TCP:**//**\<_시스템 주소>_ **:**\<*포트>*  
+     TCP:**//** \<_system-address> _**:**\<*port>*  
   
-     여기서 \<*system-address&gt;* 는 대상 컴퓨터 시스템을 명확하게 식별하는 문자열이고, \<*포트&gt;* 는 파트너 서버 인스턴스의 미러링 엔드포인트에서 사용되는 포트 번호입니다. 자세햔 내용은 [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](specify-a-server-network-address-database-mirroring.md)을 사용합니다.  
+     여기서 \<*system-address> *는 대상 컴퓨터 시스템을 명확 하 게 식별 하는 문자열이 고, \<*port> *는 파트너 서버 인스턴스의 미러링 끝점에서 사용 하는 포트 번호입니다. 자세햔 내용은 [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](specify-a-server-network-address-database-mirroring.md)을 사용합니다.  
   
-     예를 들어 주 서버 인스턴스에서 다음 ALTER DATABASE 문은 미러링 모니터를 설정합니다. 데이터베이스 이름은 **AdventureWorks**이 고 시스템 주소는 DBSERVER3-감시 시스템의 이름이 며 미러링 모니터의 데이터베이스 미러링 끝점에 사용 되는 포트는 `7022`다음과 같습니다.  
+     예를 들어 주 서버 인스턴스에서 다음 ALTER DATABASE 문은 미러링 모니터를 설정합니다. 데이터베이스 이름은 **AdventureWorks**이 고 시스템 주소는 DBSERVER3-감시 시스템의 이름이 며 미러링 모니터의 데이터베이스 미러링 끝점에 사용 되는 포트는 `7022` 다음과 같습니다.  
   
     ```  
     ALTER DATABASE AdventureWorks   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 997d637d109c04dbecb3105538f51fa6ece0518f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8de6913085c24f98d8305f622f5cbec31aa2a79c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092437"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058967"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>업그레이드 관리자 실행(명령 프롬프트)
   **UpgradeAdvisorWizardCmd** 유틸리티를 사용 하 여 명령 프롬프트에서 업그레이드 관리자를 실행 합니다. XML 형식, 또는 쉼표로 구분된 값을 사용하는 파일로 결과를 받을 수 있습니다.  
@@ -66,15 +65,15 @@ where <server_info> is any combination of the following:
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 이 값은 업그레이드 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하는 데 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인입니다. 로그인을 지정하지 않으면 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다.  
   
  **-Sqlpassword** _암호_  
- **-SqlUser** 인수를 사용 하는 경우이 인수를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 대 한 암호를 지정 합니다.  
+ **-SqlUser** 인수를 사용 하는 경우이 인수를 사용 하 여 로그인에 대 한 암호를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **-CSV**  
- 표준 XML 결과 외에 쉼표로 구분된 값을 사용하여 .csv 파일로도 결과를 제공하도록 지정합니다. 결과는 내 문서\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor\110\Reports 폴더에 기록 됩니다.  
+ 표준 XML 결과 외에 쉼표로 구분된 값을 사용하여 .csv 파일로도 결과를 제공하도록 지정합니다. 결과는 내 문서 \\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor\110\Reports 폴더에 기록 됩니다.  
   
 ## <a name="return-values"></a>반환 값  
  다음 표에서는 **UpgradeAdvisorWizardCmd** 가 반환 하는 값을 보여 줍니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0|분석이 성공했으며 업그레이드 문제가 발견되지 않았습니다.|  
 |양의 정수|분석이 성공했으며 업그레이드 문제가 발견되었습니다.|  
@@ -144,7 +143,7 @@ where <server_info> is any combination of the following:
 |`IntegrationServices`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 대한 분석 설정을 포함합니다.|구성 파일마다 한 번만 지정할 수 있습니다(옵션). 지정하지 않으면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]가 분석되지 않습니다.|  
 |`PackagePath`|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 집합의 경로를 지정합니다.|`IntegrationServices` 요소마다 한 번만 지정할 수 있습니다(옵션). 이 요소가 없으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 분석이 수행되며 외부에서 저장된 패키지는 분석되지 않습니다. 기본값은 없습니다.|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-run-upgrade-advisor-using-a-configuration-file"></a>A. 구성 파일을 사용하여 업그레이드 관리자 실행  
  다음 예에서는 분석할 대상을 지정하는 구성 파일을 사용하여 명령 프롬프트에서 업그레이드 관리자를 실행하는 방법을 보여 줍니다. 이 예에서는 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결합니다.  

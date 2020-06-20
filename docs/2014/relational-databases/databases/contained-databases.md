@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ee9d1c22a216024f388d30978dbb62be933425cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3efd231a1aa4d2b348bcfe887bd05825fcd40c90
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917572"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952187"
 ---
 # <a name="contained-databases"></a>포함된 데이터베이스
   *포함된 데이터베이스* 는 다른 데이터베이스 및 해당 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 격리된 데이터베이스입니다.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 인스턴스에서 데이터베이스를 격리하는 방법은 네 가지가 있습니다.  
@@ -133,7 +132,7 @@ ms.locfileid: "62917572"
 ### <a name="database-administration"></a>데이터베이스 관리  
  데이터베이스 설정을 master 데이터베이스 대신 데이터베이스에 유지하면 데이터베이스 소유자에게 **sysadmin** 권한을 제공할 필요 없이 각 데이터베이스 소유자가 해당 데이터베이스를 더 세밀하게 제어할 수 있습니다.  
   
-##  <a name="limitations"></a><a name="Limitations"></a>제한을  
+##  <a name="limitations"></a><a name="Limitations"></a> 제한 사항  
  부분적으로 포함된 데이터베이스는 다음 기능을 허용하지 않습니다.  
   
 -   부분적으로 포함된 데이터베이스는 복제, 변경 데이터 캡처 또는 변경 내용 추적 기능을 사용할 수 없습니다.  

@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 92dbb6da-5919-4bde-9354-d454e9ea3da0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7c5e165380c0f920ebf1366855e7801b6bb9089a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42538ac6566b70105fd183da1cadd00f7fd0c13b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62472997"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011787"
 ---
 # <a name="automatically-delete-a-job"></a>Automatically Delete a Job
-  이 항목에서는 또는 SQL Server 관리 개체를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 하 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 여 작업이 성공, 실패 또는 완료 되었을 때 자동으로 삭제 하도록에서 에이전트를 구성 하는 방법에 대해 설명 합니다.  
+  이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 SQL Server 관리 개체를 사용 하 여 작업이 성공, 실패 또는 완료 되었을 때 자동으로 삭제 하도록에서 에이전트를 구성 하는 방법에 대해 설명 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 합니다.  
   
  작업 응답은 데이터베이스 관리자에게 작업 완료 시점과 작업 실행 간격을 알립니다. 일반적인 작업 응답은 다음과 같습니다.  
   

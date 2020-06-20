@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1dfa6926d86fce5006e458b3738a28a8b5f467d0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29bc8faa8fbd897a9bbb3a51c1042d48e84ff977
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63267385"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058770"
 ---
 # <a name="sql-server-agent-error-log"></a>SQL Server 에이전트 오류 로그
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 기본적으로 경고 및 오류를 기록하는 오류 로그를 만듭니다. 이 로그에는 다음 경고 및 오류가 표시됩니다.  
   
--   "작업 \< *job_name*>를 실행 하는 동안 삭제 되었습니다."와 같은 잠재적 문제에 대 한 정보를 제공 하는 경고 메시지입니다.  
+-   "작업을 \<*job_name*> 실행 하는 동안 작업이 삭제 되었습니다."와 같은 잠재적 문제에 대 한 정보를 제공 하는 경고 메시지입니다.  
   
 -   "메일 세션을 시작할 수 없습니다"와 같이 대개 시스템 관리자의 조정이 필요한 오류 메시지. 오류 메시지는 **net send**로 특정 사용자나 컴퓨터에 전달될 수 있습니다.  
   

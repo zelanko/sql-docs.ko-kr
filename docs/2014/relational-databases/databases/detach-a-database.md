@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 050220781f484b4a9e595551496d7e58c06f954c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8acc809b881012d18f78995bb8e521337fb02ee
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871958"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970033"
 ---
 # <a name="detach-a-database"></a>데이터베이스 분리
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 데이터베이스를 분리하는 방법에 대해 설명합니다. 분리된 파일은 그대로 남아 있으며 FOR ATTACH 또는 FOR ATTACH_REBUILD_LOG 옵션과 함께 CREATE DATABASE를 사용하여 다시 연결할 수 있습니다. 또한 파일을 다른 서버로 이동하거나 첨부할 수 있습니다.  

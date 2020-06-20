@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5975008849ec4ef8a4d50aa559bb69554b65132a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c944b402b8b1ba9b78036d667ec728ccaf561a91
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807671"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934284"
 ---
 # <a name="database-mirroring-operating-modes"></a>데이터베이스 미러링 운영 모드
   이 항목에서는 데이터베이스 미러링 세션의 동기 운영 모드 및 비동기 운영 모드에 대해 설명합니다.  
@@ -227,7 +226,7 @@ ms.locfileid: "62807671"
 ###  <a name="viewing-the-safety-setting-and-state-of-the-witness"></a><a name="ViewWitness"></a>보안 설정 및 미러링 모니터 상태 보기  
  데이터베이스의 보안 설정 및 미러링 모니터 상태를 보려면 **sys.database_mirroring** 카탈로그 뷰를 사용합니다. 관련된 열은 다음과 같습니다.  
   
-|요소|열|설명|  
+|요소|열|Description|  
 |------------|-------------|-----------------|  
 |트랜잭션 보안|**mirroring_safety_level** 또는 **mirroring_safety_level_desc**|다음 중 하나에 해당되는 미러 데이터베이스상의 업데이트를 위한 트랜잭션 보안 설정<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL = 데이터베이스가 온라인이 아닙니다.|  
 |미러링 모니터의 존재 여부|**mirroring_witness_name**|데이터베이스 미러링 모니터의 서버 이름 또는 미러링 모니터가 존재하지 않음을 나타내는 NULL|  

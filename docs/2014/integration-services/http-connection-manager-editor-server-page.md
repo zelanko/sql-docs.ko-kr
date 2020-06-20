@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 774778a0-ece6-4971-b93f-b121d8fc1fc1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 197a2668beb60acf2473a1f53786d7b553e08cf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3694eeb93e9edbc053a8534841a1edf438489ca9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058251"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968333"
 ---
 # <a name="http-connection-manager-editor-server-page"></a>HTTP 연결 관리자 편집기(서버 페이지)
   **HTTP 연결 관리자 편집기** 대화 상자의 **서버** 탭에서 URL이나 보안 자격 증명 등의 속성을 지정하여 HTTP 연결 관리자를 구성할 수 있습니다. HTTP 연결을 사용하면 패키지에서 HTTP를 통해 웹 서버에 액세스하고 파일을 보내거나 받을 수 있습니다. HTTP 연결 관리자를 구성했으면 연결을 테스트할 수도 있습니다.  
@@ -50,7 +49,7 @@ ms.locfileid: "66058251"
  **클라이언트 인증서 사용**  
  HTTP 연결 관리자에서 클라이언트 인증서를 인증에 사용할지 여부를 지정합니다.  
   
- **인증서**  
+ **MSSQLSERVER에 대한 프로토콜 속성**  
  **인증서 선택** 대화 상자를 사용하여 목록에서 인증서를 선택합니다. 입력란에 해당 인증서와 연결된 이름이 표시됩니다.  
   
  **제한 시간(초)**  

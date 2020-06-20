@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: eacf443c-001a-445f-ad1c-5f5a45eca6f4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: be224cdd8c3221f1e7796e15c9c0132aeb99bcd7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 47cf84427b2f4f26a29f732575530b384d9c4fc9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990667"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050301"
 ---
 # <a name="comparing-disk-based-table-storage-to-memory-optimized-table-storage"></a>디스크 기반 테이블 스토리지와 메모리 액세스에 최적화된 테이블 스토리지 비교
   

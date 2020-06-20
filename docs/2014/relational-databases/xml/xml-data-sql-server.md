@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7a08e0130e8ab45842d9cc0dc91fdba64a0b06c6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 48ddec1de8492c86aecfd80ea960c4a01673c24f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702270"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012869"
 ---
 # <a name="xml-data-sql-server"></a>XML 데이터(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 반구조화된 데이터 관리를 위한 다양한 애플리케이션을 개발할 수 있는 강력한 플랫폼을 제공합니다. XML에 대한 지원은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 모든 구성 요소에 통합되어 있고 해당되는 지원은 다음과 같습니다.  

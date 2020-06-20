@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 0ceb461e-12c1-44ea-97ac-b99bf308676b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1c9b04245e14be67242d5cd1ea6d257ac4fc6038
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2565ed28a882750ab9b37beadbce698d3a0abb19
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79525434"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939964"
 ---
 # <a name="tabular-model-programming"></a>테이블 형식 모델 프로그래밍
   테이블 형식 모델은 분석 및 보고 애플리케이션에서 사용되는 Analysis Services 데이터를 모델링하는 데 관계형 구문을 사용합니다. 이러한 모델은 테이블 형식 모드에 맞게 구성된 Analysis Service 인스턴스에서 실행되며 이때 요청 시 데이터를 집계하고 계산하는 빠른 테이블 검색 및 스토리지용 메모리 내 분석 엔진을 사용합니다.  

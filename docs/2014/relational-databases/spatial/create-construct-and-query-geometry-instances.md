@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: cb99c2ff07f30d268980c5c1c4d43a34904cdec9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 539f3f8bb1d9a1c277d6317cc571cf8bcb281833
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014307"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996576"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>geometry 인스턴스 만들기, 구성 및 쿼리
   평면 공간 데이터 형식 `geometry`는 유클리드(평면) 좌표계의 데이터를 나타냅니다. 이 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다.  
@@ -129,7 +128,7 @@ ms.locfileid: "66014307"
   
   
 ###  <a name="constructing-a-geometry-instance-from-gml-text-input"></a><a name="gml"></a> GML 텍스트 입력에서 geometry 인스턴스 구성  
- `geometry` 데이터 형식은 기하학적 개체의 XML 표현인 GML에서 `geometry` 인스턴스를 생성 하는 메서드를 제공 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 GML 하위 집합을 지원합니다.  
+ `geometry`데이터 형식은 `geometry` 기하학적 개체의 XML 표현인 GML에서 인스턴스를 생성 하는 메서드를 제공 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 GML 하위 집합을 지원합니다.  
   
  **GML 입력에서 모든 유형의 geometry 인스턴스를 생성하려면**  
  [GeomFromGml&#40;geometry 데이터 형식&#41;](/sql/t-sql/spatial-geometry/geomfromgml-geometry-data-type)  
@@ -156,7 +155,7 @@ ms.locfileid: "66014307"
   
   
 ##  <a name="querying-the-properties-and-behaviors-of-geometry-instances"></a><a name="querying"></a> geometry 인스턴스의 속성 및 동작 쿼리  
- 모든 `geometry` 인스턴스에는에서 제공 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메서드를 통해 검색할 수 있는 여러 속성이 있습니다. 다음 항목에서는 기하 도형 형식의 속성과 동작 및 각각을 쿼리하는 메서드를 정의합니다.  
+ 모든 `geometry` 인스턴스에는에서 제공 하는 메서드를 통해 검색할 수 있는 여러 속성이 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 다음 항목에서는 기하 도형 형식의 속성과 동작 및 각각을 쿼리하는 메서드를 정의합니다.  
   
 ###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> 유효성, 인스턴스 유형 및 GeometryCollection 정보  
  `geometry` 인스턴스가 생성되면 다음 메서드를 사용하여 이 인스턴스가 올바른 형식일 경우 인스턴스 유형을 반환하는지 또는 컬렉션 인스턴스일 경우 특정 `geometry` 인스턴스를 반환하는지를 확인할 수 있습니다.  
@@ -248,7 +247,7 @@ ms.locfileid: "66014307"
   
   
 ###  <a name="boundary-interior-and-exterior"></a><a name="boundary"></a> 경계, 내부 및 외부  
- 인스턴스의 *내부* `geometry` 는 인스턴스가 차지 하는 공간이 고 *외부* 는 해당 인스턴스가 차지 하지 않는 공간입니다.  
+ 인스턴스의 *내부* 는 `geometry` 인스턴스가 차지 하는 공간이 고 *외부* 는 해당 인스턴스가 차지 하지 않는 공간입니다.  
   
  *경계* 는 다음과 같이 OGC에 의해 정의됩니다.  
   
@@ -276,7 +275,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="envelope"></a><a name="envelope"></a> 봉투  
- *경계 상자*라고도 하 `geometry` 는 인스턴스의 *봉투 (envelope* )는 인스턴스의 최소 및 최대 (X, Y) 좌표로 구성 되는 축에 맞춰진 사각형입니다.  
+ *envelope* `geometry` *경계 상자*라고도 하는 인스턴스의 봉투 (envelope)는 인스턴스의 최소 및 최대 (X, Y) 좌표로 구성 되는 축에 맞춰진 사각형입니다.  
   
  **인스턴스의 봉투를 반환하려면**  
  [STEnvelope](/sql/t-sql/spatial-geometry/stenvelope-geometry-data-type)  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e28d79b94a964895afc85e4e2a964eece8aa398f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 247364d01575e9ffae5988df03c82ea198289507
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702498"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065440"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>XML 스키마 컬렉션에 대한 사용 권한 취소
   XML 스키마 컬렉션을 만드는 권한은 다음 중 하나를 사용하여 취소할 수 있습니다.  

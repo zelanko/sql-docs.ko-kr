@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 94fc8916-8032-490c-b9d5-ded8b6217e49
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4d614f3479dac0abcf5b1d6c5ae69dff3dfedf5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4bd7e159a148b134d744481a76ac910af572c0c2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059288"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969413"
 ---
 # <a name="event-handlers-tab"></a>이벤트 처리기 탭
   **디자이너의** 이벤트 처리기 [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭을 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에 제어 흐름을 작성할 수 있습니다. 이벤트 처리기는 패키지 또는 패키지의 태스크나 컨테이너에 의해 발생한 이벤트에 대한 응답으로 실행됩니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "66059288"
  **Delete**  
  이벤트 처리기를 선택하고 **삭제**를 클릭하여 해당 처리기를 패키지에서 제거합니다.  
   
- **실행 \<가능한 실행 파일 이름 \<에 대 한> 이벤트 처리기 이름을 만들려면 여기를 클릭>**  
+ **\<event handler name>실행 파일에 대 한를 만들려면 여기를 클릭 하십시오.\<executable name>**  
  이벤트 처리기를 만들려면 클릭합니다.  
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] 태스크 및 컨테이너를 나타내는 그래픽 개체를 **도구 상자** 에서 **이벤트 처리기** 탭의 디자인 화면으로 끌어 온 다음 이러한 태스크 및 컨테이너가 실행되는 순서를 정의하는 선행 제약 조건으로 이러한 개체를 연결하여 제어 흐름을 만듭니다.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d8009dcd369327941004fe220782c38d5602b4dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8048e2fb5b752c503993849cb21094da35ab7e35
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900306"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939574"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>병합 조인 변환을 사용하여 데이터 세트 확장
   병합 조인 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 병합 조인 변환에 입력을 제공하는 두 개의 데이터 흐름 구성 요소가 이미 들어 있어야 합니다.  

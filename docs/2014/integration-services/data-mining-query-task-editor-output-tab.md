@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 62f9e015-6fe0-4396-ad90-3ad51bf00025
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7b381ec722125bfa6ad8a4b8102e2fa3b7a5c309
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dca81c082f936913a5844a7920a561325e87ceb5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890465"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939134"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>데이터 마이닝 쿼리 태스크 편집기(출력 탭)
   **데이터 마이닝 쿼리 태스크 편집기** 대화 상자의 **출력** 탭을 사용하여 예측 쿼리의 대상을 지정할 수 있습니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "68890465"
  **연결**  
  목록에서 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결 관리자를 만듭니다.  
   
- **신규**  
+ **새 항목**  
  새 연결 관리자를 만듭니다. ADO.NET 및 OLE DB 연결 관리자 유형만 사용할 수 있습니다.  
   
  **출력 테이블**  

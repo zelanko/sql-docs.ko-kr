@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e5f25a42b54e0ae310c7033a81f75cad75582416
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: a3114d7c2a2a7908e4e010fbf5d80c7d332d264c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925067"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011621"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>재생 옵션(Distributed Replay Administration Tool)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 관리 도구인는 `DReplay.exe` Distributed Replay controller와 통신 하는 데 사용할 수 있는 명령줄 도구입니다. 이 항목에서는 **replay** 명령줄 옵션과 해당 구문에 대해 설명합니다.
@@ -52,7 +51,7 @@ ms.locfileid: "82925067"
 
  **-o** 클라이언트의 재생 작업을 캡처하여 `<ResultDirectory>` 클라이언트 구성 파일의 요소에 지정 된 경로에 있는 결과 추적 파일에 저장 `DReplayClient.xml` 합니다.
 
- **-O** 매개 변수를 지정 하지 않으면 결과 추적 파일이 생성 되지 않습니다. 콘솔 출력은 재생이 끝날 때 요약 정보를 반환하지만 그 외 다른 재생 통계는 사용할 수 없습니다.
+ **–o** 매개 변수를 지정하지 않으면 결과 추적 파일이 생성되지 않습니다. 콘솔 출력은 재생이 끝날 때 요약 정보를 반환하지만 그 외 다른 재생 통계는 사용할 수 없습니다.
 
  **-s** *target_server* [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 분산 작업을 재생 해야 하는 대상 인스턴스를 지정 합니다. 이 매개 변수는 **server_name[\인스턴스 이름]** 형식으로 지정해야 합니다.
 

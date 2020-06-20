@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8ffa3e3508fef50491f20b47e13c12865cb5432d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29c6c0195b8a6be73e70542a6b995f46ccaff51b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874979"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953655"
 ---
 # <a name="overview-of-clr-integration"></a>CLR 통합 개요
   CLR(공용 언어 런타임)은 Microsoft .NET Framework의 핵심으로, 모든 .NET Framework 코드의 실행 환경을 제공합니다. CLR 내에서 실행되는 코드를 관리 코드라고 합니다. CLR은 JIT(Just-In-Time) 컴파일, 메모리 할당 및 관리, 형식 안전성 적용, 예외 처리, 스레드 관리, 보안을 비롯하여 프로그램 실행에 필요한 다양한 기능과 서비스를 제공합니다.  자세한 내용은 .NET Framework SDK를 참조하십시오.  

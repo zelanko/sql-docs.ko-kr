@@ -39,16 +39,15 @@ helpviewer_keywords:
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 11d146144a05c9185a360b2791f9e162a94ff59a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4b102c8fd81923d7386c8e556896e715311a07e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797951"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934774"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작
-  이 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]항목에서는 Configuration Manager, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], 명령 프롬프트 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 **net** 명령, 또는 PowerShell을 사용 하 여, 에이전트 또는 Browser 서비스를 시작, 중지, 일시 중지, 재개 또는 다시 시작 하는 방법에 대해 설명 합니다.  
+  이 항목에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , 명령 프롬프트에서 **net** 명령, 또는 PowerShell을 사용 하 여, 에이전트 또는 Browser 서비스를 시작, 중지, 일시 중지, 재개 또는 다시 시작 하는 방법에 대해 설명 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 -   **시작하기 전 주의 사항:**  
   
@@ -117,7 +116,7 @@ ms.locfileid: "72797951"
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  기본적으로 로컬 Administrators 그룹의 멤버만 서비스를 시작, 중지, 일시 중지, 재개 또는 다시 시작할 수 있습니다. 관리자가 아닌 사용자에게 서비스 관리 권한을 부여하려면 [Windows Server 2003에서 사용자에게 서비스 관리 권한을 부여하는 방법](https://support.microsoft.com/kb/325349)을 참조하세요. 이 프로세스는 다른 Windows 버전에서도 비슷합니다.  
   
- `SHUTDOWN` 명령을 사용 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 하 [!INCLUDE[tsql](../../includes/tsql-md.md)] 여을 중지 하려면 **sysadmin** 또는 **serveradmin** 고정 서버 역할의 멤버 여야 하며 양도할 수 없습니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]명령을 사용 하 여을 중지 [!INCLUDE[tsql](../../includes/tsql-md.md)] `SHUTDOWN` 하려면 **sysadmin** 또는 **serveradmin** 고정 서버 역할의 멤버 여야 하며 양도할 수 없습니다.  
   
 ##  <a name="using-ssnoversion-configuration-manager"></a><a name="SSCMProcedure"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자 사용  
   
@@ -165,7 +164,7 @@ ms.locfileid: "72797951"
   
 #### <a name="to-start-stop-or-restart-the-an-instance-of-the-ssnoversion-agent"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 인스턴스를 시작, 중지 또는 다시 시작하려면  
   
-1.  개체 탐색기에서 인스턴스에 [!INCLUDE[ssDE](../../includes/ssde-md.md)]연결 하 고 ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트**를 마우스 오른쪽 단추로 클릭 한 다음 **시작**, **중지**또는 **다시 시작**을 클릭 합니다.  
+1.  개체 탐색기에서 인스턴스에 연결 하 고 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트**를 마우스 오른쪽 단추로 클릭 한 다음 **시작**, **중지**또는 **다시 시작**을 클릭 합니다.  
   
 2.  **사용자 계정 컨트롤** 대화 상자가 나타나면 **예**를 클릭합니다.  
   
@@ -186,7 +185,7 @@ ms.locfileid: "72797951"
   
 ###  <a name="to-start-a-named-instance-of-the-ssde"></a><a name="dbNamed"></a> 다음 명명된 인스턴스 시작하기: [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
--   명령 프롬프트에서 다음 명령 중 하나를 입력합니다. *\<instancename>* 을 관리할 인스턴스의 이름으로 바꿉니다.  
+-   명령 프롬프트에서 다음 명령 중 하나를 입력합니다. 을 *\<instancename>* 관리 하려는 인스턴스의 이름으로 바꿉니다.  
   
      **net start “SQL Server (** *instancename* **)”**  
   
@@ -264,7 +263,7 @@ ms.locfileid: "72797951"
     SHUTDOWN WITH NOWAIT;   
     ```  
   
- `SHUTDOWN` 문에 대 한 자세한 내용은 [SHUTDOWN &#40;transact-sql&#41;](/sql/t-sql/language-elements/shutdown-transact-sql)를 참조 하세요.  
+ 문에 대 한 자세한 내용은 `SHUTDOWN` [SHUTDOWN &#40;transact-sql&#41;](/sql/t-sql/language-elements/shutdown-transact-sql)를 참조 하세요.  
   
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell 사용  
   

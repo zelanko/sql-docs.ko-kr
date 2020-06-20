@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: e9a55dab-7c4e-4e09-97da-9f3a108e22c9
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4fe2f4f387dfbdf7a10ed34a5415f5f2b0d27353
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a0c8e98408f458f387df5cbb2bb9f80445c9b2a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092536"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059026"
 ---
 # <a name="reporting-services-parameters"></a>Reporting Services 매개 변수
-  를 분석 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]하려면 인스턴스를 지정 하 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 고 해당 인스턴스에 연결 하는 방법에 대 한 정보를 제공 해야 합니다.  
+  를 분석 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 지정 하 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 고 해당 인스턴스에 연결 하는 방법에 대 한 정보를 제공 해야 합니다.  
   
 ## <a name="options"></a>옵션  
  **Reporting Services 인스턴스 이름**  

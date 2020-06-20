@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8b72841d03023efacf4f8217aea8f6cdd383fbdd
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 9fb3d2b9e590e12b0a902a630b4c55a3baa9108f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82921556"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939624"
 ---
 # <a name="data-conversion-transformation"></a>데이터 변환
   데이터 변환은 입력 열의 데이터를 다른 데이터 형식으로 변환한 다음 새 출력 열에 복사합니다. 예를 들어 패키지는 여러 개의 원본에서 데이터를 추출한 다음 이 변환을 사용하여 대상 데이터 저장소에 필요한 데이터 형식으로 열을 변환할 수 있습니다. 단일 입력 열에 여러 개의 변환을 적용할 수 있습니다.  

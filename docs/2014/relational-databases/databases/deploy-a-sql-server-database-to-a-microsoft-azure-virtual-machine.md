@@ -41,16 +41,15 @@ helpviewer_keywords:
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c7d84fbe56d36bd91f2b7f8b49a3df73fb383c6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 085f8ae1699e6a7bc1ceecb31075dff83d2b79ea
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175733"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970048"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Microsoft Azure 가상 머신에 SQL Server 데이터베이스 배포
-  **AZURE vm에 SQL Server 데이터베이스 배포** 마법사를 사용 하 여 azure Vm (가상 머신)의 인스턴스에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 배포 합니다. 마법사는 전체 데이터베이스 백업 작업을 사용하므로 SQL Server 사용자 데이터베이스에서 전체 데이터베이스 스키마 및 데이터를 항상 복사합니다. 마법사에서는 사용자의 편의를 위해 모든 Azure VM 구성을 실행하므로 VM을 미리 구성할 필요가 없습니다.  
+  **AZURE vm에 SQL Server 데이터베이스 배포** 마법사를 사용 하 여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure vm (가상 머신)의 인스턴스에서로 데이터베이스를 배포 합니다. 마법사는 전체 데이터베이스 백업 작업을 사용하므로 SQL Server 사용자 데이터베이스에서 전체 데이터베이스 스키마 및 데이터를 항상 복사합니다. 마법사에서는 사용자의 편의를 위해 모든 Azure VM 구성을 실행하므로 VM을 미리 구성할 필요가 없습니다.  
   
  마법사는 같은 데이터베이스 이름을 가진 기존 데이터베이스를 덮어쓰지 않으므로 차등 백업을 위해 마법사를 사용할 수 없습니다. VM에서 기존 데이터베이스를 바꾸려면 먼저 기존 데이터베이스를 삭제하거나 데이터베이스 이름을 변경해야 합니다. 진행 중인 배포 작업의 데이터베이스 이름과 VM의 기존 데이터베이스 간에 이름 충돌이 발생할 경우 마법사에서는 작업을 완료할 수 있도록 진행 중인 데이터베이스에 대해 추가된 데이터베이스 이름을 제안합니다.  
   
@@ -148,19 +147,19 @@ ms.locfileid: "70175733"
   
         -   <OtherSettings  
   
-            -   TraceLevel="Debug" \<!-- 로깅 수준 -->  
+            -   TraceLevel = "Debug"\<!-- Logging level -->  
   
-            -   BackupPath="\\\\[server name]\\[volume]\\" \<!-- 백업에 사용된 마지막 경로입니다. 마법사에서 기본값으로 사용됩니다. -->  
+            -   BackupPath = " \\ \\ [server name] \\ [volume] \\ "\<!-- The last used path for backup. Used as default in the wizard. -->  
   
-            -   CleanupDisabled = False/> \<!--마법사는 중간 파일 및 Azure 개체 (VM, CS, SA)를 삭제 하지 않습니다. -->  
+            -   CleanupDisabled = False/>\<!-- Wizard will not delete intermediate files and Azure objects (VM, CS, SA). -->  
   
-        -   <PublishProfile \<!-- 마지막으로 사용된 게시 프로필 정보입니다. -->  
+        -   <PublishProfile\<!-- The last used publish profile information. -->  
   
-            -   Certificate="12A34B567890123ABCD4EF567A8" \<!-- 마법사에서 사용할 인증서입니다. -->  
+            -   Certificate = "12A34B567890123ABCD4EF567A8"\<!-- The certificate for use in the wizard. -->  
   
-            -   Subscription="1a2b34c5-67d8-90ef-ab12-xxxxxxxxxxxxx" \<!-- 마법사에서 사용할 구독입니다. -->  
+            -   Subscription = "1a2b34c5-67d8-90ef-ab12-xxxxxxxxxxxxx-67d8-ab12-xxxxxxxxxxxxx"\<!-- The subscription for use in the wizard. -->  
   
-            -   Name="My Subscription" \<!-- 구독 이름입니다. -->  
+            -   Name = "My Subscription"\<!-- The name of the subscription. -->  
   
             -   Publisher="" />  
   
@@ -185,7 +184,7 @@ ms.locfileid: "70175733"
 ##  <a name="introduction-page"></a><a name="Introduction"></a> 소개 페이지  
  이 페이지에서는 **AZURE VM에 SQL Server 데이터베이스 배포** 마법사에 대해 설명 합니다.  
   
- **옵션**  
+ **Options**  
   
 -   **이 페이지를 다시 표시 안 함** - 앞으로 소개 페이지가 표시되지 않도록 하려면 이 확인란을 클릭합니다.  
   
@@ -196,11 +195,11 @@ ms.locfileid: "70175733"
 -   **도움말** -마법사에 대 한 MSDN 도움말 항목을 시작 합니다.  
   
 ##  <a name="source-settings"></a><a name="Source_settings"></a>원본 설정  
- 이 페이지를 사용 하 여 Azure VM에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 배포 하려는 데이터베이스를 호스팅하는 인스턴스에 연결 합니다. 또한 파일을 Azure로 전송 하기 전에 로컬 컴퓨터에서 저장할 파일의 임시 위치를 지정 합니다. 이 위치는 공유 네트워크 위치일 수 있습니다.  
+ 이 페이지를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AZURE VM에 배포 하려는 데이터베이스를 호스팅하는 인스턴스에 연결 합니다. 또한 파일을 Azure로 전송 하기 전에 로컬 컴퓨터에서 저장할 파일의 임시 위치를 지정 합니다. 이 위치는 공유 네트워크 위치일 수 있습니다.  
   
- **옵션**  
+ **Options**  
   
--   **연결 ...** 을 클릭 한 다음 배포할 데이터베이스를 호스팅하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 인스턴스에 대 한 연결 세부 정보를 지정 합니다.  
+-   **연결 ...** 을 클릭 한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 배포할 데이터베이스를 호스팅하는 인스턴스에 대 한 연결 세부 정보를 지정 합니다.  
   
 -   **데이터베이스 선택** 드롭다운 목록을 사용하여 배포할 데이터베이스를 지정합니다.  
   
@@ -209,7 +208,7 @@ ms.locfileid: "70175733"
 ##  <a name="azure-sign-in"></a><a name="Azure_sign-in"></a>Azure 로그인  
  이 페이지를 사용 하 여 Azure에 연결 하 고 관리 인증서 또는 게시 프로필 세부 정보를 제공 합니다.  
   
- **옵션**  
+ **Options**  
   
 -   **관리 인증서** -이 옵션을 사용 하 여 Azure의 관리 인증서와 일치 하는 로컬 인증서 저장소의 인증서를 지정 합니다.  
   
@@ -222,7 +221,7 @@ ms.locfileid: "70175733"
 ##  <a name="deployment-settings-page"></a><a name="Deployment_settings"></a>배포 설정 페이지  
  이 페이지에서는 대상 서버를 지정하고 새 데이터베이스에 대한 세부 정보를 제공할 수 있습니다.  
   
- **옵션**  
+ **Options**  
   
 -   **Azure 가상 머신** -SQL Server 데이터베이스를 호스팅할 VM에 대 한 세부 정보를 지정 합니다.  
   

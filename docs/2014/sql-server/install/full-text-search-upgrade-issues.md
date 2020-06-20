@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d104a0c3-0492-4de6-8ce5-eacee47c978f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d907c9b440053b0c0fc110fa02ca3de4e993905c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 512f75c7086a8b9c2510552f4888c5cf2eac3116
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095117"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012312"
 ---
 # <a name="full-text-search-upgrade-issues"></a>전체 텍스트 Search 업그레이드 문제
   이 섹션의 항목에서는 업그레이드에 영향을 줄 수 있는 전체 텍스트 검색 문제에 대해 설명하고 이러한 변화가 환경에 미치는 영향을 완화하기 위해 취할 수 있는 조치에 대해 설명합니다.  

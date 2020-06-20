@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c771985b-149c-459a-b3cb-7b15fde01150
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52fc203075b06485c89fe4d2d3149472c57719f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780701"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933410"
 ---
 # <a name="program-exception-message-box"></a>프로그램 예외 메시지 상자
   애플리케이션에서 예외 메시지 상자를 사용하면 <xref:System.Windows.Forms.MessageBox> 클래스에 비해 메시징 환경을 보다 강력하게 제어할 수 있습니다. 자세한 내용은 [예외 메시지 상자 프로그래밍](../../../2014/database-engine/dev-guide/exception-message-box-programming.md)을 참조 하세요. 예외 메시지 상자 .dll 가져오기 및 배포에 대한 자세한 내용은 [Deploying an Exception Message Box Application](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md)를 참조하십시오.  
@@ -29,11 +28,11 @@ ms.locfileid: "62780701"
   
 1.  관리 코드 프로젝트의 참조를 Microsoft.ExceptionMessageBox.dll 어셈블리에 추가합니다.  
   
-2.  필드 (C `using` #) 또는 `Imports` ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .net) 지시문을 추가 하 여 <xref:Microsoft.SqlServer.MessageBox> 네임 스페이스를 사용 합니다.  
+2.  필드 `using`(C #) 또는 `Imports` ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .net) 지시문을 추가 하 여 <xref:Microsoft.SqlServer.MessageBox> 네임 스페이스를 사용 합니다.  
   
 3.  예상되는 예외를 처리할 try-catch 블록을 만듭니다.  
   
-4.  `catch` 블록 안에 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 클래스의 인스턴스를 만듭니다. 블록에서 <xref:System.Exception> 처리 하 `try` - 는 개체를 전달 합니다. `catch`  
+4.  `catch` 블록 안에 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 클래스의 인스턴스를 만듭니다. <xref:System.Exception>블록에서 처리 하는 개체를 전달 `try` - `catch` 합니다.  
   
 5.  (옵션) <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>에 다음 속성 중 하나 이상을 설정합니다.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "62780701"
   
 1.  관리 코드 프로젝트의 참조를 Microsoft.ExceptionMessageBox.dll 어셈블리에 추가합니다.  
   
-2.  필드 (C `using` #) 또는 `Imports` (Visual Basic .net) 지시문을 추가 하 여 <xref:Microsoft.SqlServer.MessageBox> 네임 스페이스를 사용 합니다.  
+2.  필드 `using`(C #) 또는 `Imports` (Visual Basic .net) 지시문을 추가 하 여 <xref:Microsoft.SqlServer.MessageBox> 네임 스페이스를 사용 합니다.  
   
 3.  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 클래스의 인스턴스를 만듭니다. 메시지 텍스트를 <xref:System.String> 값으로 전달합니다.  
   
@@ -77,11 +76,11 @@ ms.locfileid: "62780701"
   
 1.  관리 코드 프로젝트의 참조를 Microsoft.ExceptionMessageBox.dll 어셈블리에 추가합니다.  
   
-2.  필드 (C `using` #) 또는 `Imports` (Visual Basic .net) 지시문을 추가 하 여 <xref:Microsoft.SqlServer.MessageBox> 네임 스페이스를 사용 합니다.  
+2.  필드 `using`(C #) 또는 `Imports` (Visual Basic .net) 지시문을 추가 하 여 <xref:Microsoft.SqlServer.MessageBox> 네임 스페이스를 사용 합니다.  
   
 3.  다음의 두 가지 방법 중 하나로 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 클래스의 인스턴스를 만듭니다.  
   
-    -   블록에서 <xref:System.Exception> 처리 하 `try` - 는 개체를 전달 합니다. `catch`  
+    -   <xref:System.Exception>블록에서 처리 하는 개체를 전달 `try` - `catch` 합니다.  
   
     -   메시지 텍스트를 <xref:System.String> 값으로 전달합니다.  
   
@@ -111,15 +110,15 @@ ms.locfileid: "62780701"
   
 1.  관리 코드 프로젝트의 참조를 Microsoft.ExceptionMessageBox.dll 어셈블리에 추가합니다.  
   
-2.  필드 (C `using` #) 또는 `Imports` (Visual Basic .net) 지시문을 추가 하 여 <xref:Microsoft.SqlServer.MessageBox> 네임 스페이스를 사용 합니다.  
+2.  필드 `using`(C #) 또는 `Imports` (Visual Basic .net) 지시문을 추가 하 여 <xref:Microsoft.SqlServer.MessageBox> 네임 스페이스를 사용 합니다.  
   
 3.  다음의 두 가지 방법 중 하나로 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 클래스의 인스턴스를 만듭니다.  
   
-    -   블록에서 <xref:System.Exception> 처리 하 `try` - 는 개체를 전달 합니다. `catch`  
+    -   <xref:System.Exception>블록에서 처리 하는 개체를 전달 `try` - `catch` 합니다.  
   
     -   메시지 텍스트를 <xref:System.String> 값으로 전달합니다.  
   
-4.  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckbox%2A> 속성을 `true`로 설정합니다.  
+4.  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckbox%2A> 속성을 `true`으로 설정합니다.  
   
 5.  (옵션) 예외 메시지 상자를 다시 표시할지 여부를 사용자에게 묻는 텍스트를 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxText%2A>에 지정합니다. 기본 텍스트는 "이 메시지를 다시 표시 안 함"입니다.  
   

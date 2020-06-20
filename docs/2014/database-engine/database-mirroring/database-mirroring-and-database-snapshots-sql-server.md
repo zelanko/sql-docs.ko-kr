@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3c643ad9a84c6afe5b6ff08fd6716753ef42f79e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e807db72a84e210d8781aa53a3dcc50a1d2f194
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807277"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934364"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>데이터베이스 미러링 및 데이터베이스 스냅샷(SQL Server)
   가용성 목적으로 유지 관리 중인 미러 데이터베이스를 활용하여 보고 작업을 오프로드할 수 있습니다. 미러 데이터베이스를 보고 용도로 사용하려면 미러 데이터베이스에서 데이터베이스 스냅샷을 만들고 클라이언트 연결 요청을 가장 최근의 스냅샷으로 지정할 수 있습니다. 데이터베이스 스냅샷은 스냅샷이 만들어진 시점에 존재하던 원본 데이터베이스의 정적, 읽기 전용, 트랜잭션 일치 스냅샷입니다. 미러 데이터베이스에서 데이터베이스 스냅샷을 만들려면 데이터베이스가 동기화된 미러링 상태여야 합니다.  

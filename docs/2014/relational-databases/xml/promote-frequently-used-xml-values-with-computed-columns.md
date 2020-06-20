@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d9c86eef119ce121dfb5ff964e64f1970eda16db
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fd8bf917bd293cd4aab3d5c8c7fe526a557fec8a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702553"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065507"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>계산 열을 사용하여 자주 사용되는 XML 값 승격
   쿼리가 주로 적은 수의 요소 및 특성 값으로 작성된 경우 이러한 수량을 관계형 열로 승격시킬 수 있습니다. 이 방식은 전체 XML 인스턴스를 검색하는 동안 XML 데이터의 일부에 대해서 쿼리가 실행된 경우에 유용합니다. XML 열에 XML 인덱스를 만들 필요는 없습니다. 대신 승격된 열을 인덱싱할 수 있습니다. 승격된 열을 사용하도록 쿼리를 작성해야 합니다. 즉, 쿼리 최적화 프로그램은 XML 열에 있는 쿼리를 승격된 열로 다시 대상화하지 않습니다.  

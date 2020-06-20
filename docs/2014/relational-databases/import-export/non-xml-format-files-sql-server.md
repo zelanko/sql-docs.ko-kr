@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6554691ce8debb96d4b0ee350ef98d2bfc57f02c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bea7572d8281a525c8c3a3f874ff3b55071b717d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011874"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050502"
 ---
 # <a name="non-xml-format-files-sql-server"></a>비 XML 서식 파일(SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 *비 XML 서식 파일* 및 *XML 서식 파일*의 두 가지 서식 파일 유형을 대량으로 내보내고 가져올 수 있습니다.  

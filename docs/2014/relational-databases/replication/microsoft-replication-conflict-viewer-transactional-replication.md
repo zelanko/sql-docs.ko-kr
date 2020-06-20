@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 293048b191fff03b11b7e28d7778a34793b4c7f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60d6ba6ab84615e43e872c4e8d4238a263a0b767
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62714870"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065839"
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Microsoft 복제 충돌 뷰어(트랜잭션 복제)
   복제 충돌 뷰어에서는 지연 업데이트 구독을 사용하는 트랜잭션 복제 및 피어 투 피어 트랜잭션 복제에서 동기화 중 발생한 충돌을 볼 수 있습니다. 자세한 내용은 [트랜잭션 게시의 데이터 충돌 확인&#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)을 참조하세요.  

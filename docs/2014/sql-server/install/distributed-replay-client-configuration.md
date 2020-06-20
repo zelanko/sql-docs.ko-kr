@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ccf03e32-6bd9-43c0-b9b6-9fe0d9163339
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3eb00922b4f6e21dd4cfc8a46d8c0c27ed9a5be1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72336f2f012ad6f2da03440f431d2fe5be294b07
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095482"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012709"
 ---
 # <a name="distributed-replay-client-configuration"></a>Distributed Replay Client 구성
   **설치 마법사의** Distributed Replay Client 구성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지를 사용하여 Distributed Replay Client 서비스에 대한 관리 권한을 부여할 사용자를 지정합니다.  
@@ -24,7 +23,7 @@ ms.locfileid: "66095482"
   
 ## <a name="options"></a>옵션  
  **컨트롤러 이름**  
- 이 매개 변수는 선택적 매개 \< *변수 이며 기본값은>입니다* .  
+ 이 매개 변수는 선택적 매개 변수 이며 기본값은 \<*blank*> 입니다.  
   
  클라이언트 컴퓨터에서 Distributed Replay Client 서비스를 위해 통신할 컨트롤러의 이름을 입력합니다. 다음 사항에 유의하세요.  
   
@@ -37,11 +36,11 @@ ms.locfileid: "66095482"
  **작업 디렉터리**  
  Distributed Replay Client 서비스의 작업 디렉터리를 지정합니다.  
   
- 기본 작업 디렉터리 \<는 *드라이브 문자*>: 파일 \ 파일\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\입니다.  
+ 기본 작업 디렉터리는 \<*drive letter*> 파일 \ \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\WorkingDir \\ 입니다.  
   
  **결과 디렉터리**  
  Distributed Replay Client 서비스의 결과 디렉터리를 지정합니다.  
   
- 기본 결과 디렉터리 \<는 *드라이브 문자*>: 파일 \ 파일\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\입니다.  
+ 기본 결과 디렉터리는 \<*drive letter*> 파일 \ 파일 \ \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\ResultDir \\ 입니다.  
   
   

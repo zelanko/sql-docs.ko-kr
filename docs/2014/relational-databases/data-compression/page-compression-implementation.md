@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 65777f25066cfb42093313b90ac198c6bc1796a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 761ce75ed8fc80b467c33024beee546162e6013b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918228"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970323"
 ---
 # <a name="page-compression-implementation"></a>페이지 압축 구현
   이 항목에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 페이지 압축을 구현하는 방법에 대해 간략하게 설명합니다. 이 요약에서는 사용자의 데이터에 필요한 스토리지 공간을 계획하는 데 도움이 되는 기본 정보를 제공합니다.  

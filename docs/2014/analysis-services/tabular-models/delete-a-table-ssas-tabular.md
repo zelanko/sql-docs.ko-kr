@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: be4ed45f-fde3-466c-9869-49bd3ddb505e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 85d085472a8d904efb2b33b942ba9f0a67326fed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c72fa90426440c1be84318a15cf0d761ef16aca8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067247"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939706"
 ---
 # <a name="delete-a-table-ssas-tabular"></a>테이블 삭제(SSAS 테이블 형식)
   모델 디자이너의 모델 작업 영역 데이터베이스에서 더 이상 필요하지 않은 테이블을 삭제할 수 있습니다. 테이블을 삭제하면 원래 원본 데이터는 영향을 받지 않고 가져와서 작업하고 있는 데이터만 삭제됩니다. 테이블의 삭제는 실행 취소할 수 없습니다.  

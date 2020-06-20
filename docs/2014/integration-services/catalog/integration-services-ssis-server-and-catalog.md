@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 02966721d1fdfd1c1d3051510e0dd68ed26dcbc3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f125f7896f10e88279667dad4d089d8586f7af64
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771739"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924354"
 ---
 # <a name="integration-services-ssis-server"></a>Integration Services(SSIS) 서버
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 패키지를 디자인하고 테스트한 후에는 이 패키지가 포함된 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "62771739"
   
 -   **SSISDB 데이터베이스**  
   
-     데이터베이스 `SSISDB` 는 개체 탐색기의 **데이터베이스** 노드 아래에 나타납니다. 뷰를 쿼리하고 저장 프로시저를 호출하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버와 이 서버에 저장된 개체를 관리할 수 있습니다.  
+     `SSISDB`데이터베이스는 개체 탐색기의 **데이터베이스** 노드 아래에 나타납니다. 뷰를 쿼리하고 저장 프로시저를 호출하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버와 이 서버에 저장된 개체를 관리할 수 있습니다.  
   
 -   **Integration Services 카탈로그**  
   

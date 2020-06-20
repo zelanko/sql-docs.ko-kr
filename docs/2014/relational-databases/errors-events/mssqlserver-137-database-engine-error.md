@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2eaaadc4e1cc1f2f360fe3d45e2dea4c082b7b76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0142cd53006609e9274972e4f5964132f5982c2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62915690"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967973"
 ---
 # <a name="mssqlserver_137"></a>MSSQLSERVER_137
     
@@ -33,13 +32,13 @@ ms.locfileid: "62915690"
 |메시지 텍스트|스칼라 변수 "%.*ls"을(를) 선언해야 합니다.|  
   
 ## <a name="explanation"></a>설명  
- 이 오류는 SQL 스크립트에서 변수를 먼저 선언하지 않고 사용하는 경우에 발생합니다. 다음 예에서는가 선언 되지 않았으므로 **@mycol** SET 및 SELECT 문에 대해 모두 오류 137을 반환 합니다.  
+ 이 오류는 SQL 스크립트에서 변수를 먼저 선언하지 않고 사용하는 경우에 발생합니다. 다음 예에서는가 선언 되지 않았으므로 SET 및 SELECT 문에 대해 모두 오류 137을 반환 합니다 **@mycol** .  
   
  SET @mycol = 'ContactName';  
   
  SELECT @mycol;  
   
- 이 오류의 좀 더 복잡한 원인 중 하나로 EXECUTE 문 외부에서 선언된 변수를 사용하는 경우가 있습니다. 예를 들어 SELECT 문에 **@mycol** 지정 된 변수는 select 문에 대해 로컬입니다. 따라서 EXECUTE 문 외부에 있습니다.  
+ 이 오류의 좀 더 복잡한 원인 중 하나로 EXECUTE 문 외부에서 선언된 변수를 사용하는 경우가 있습니다. 예를 들어 **@mycol** select 문에 지정 된 변수는 select 문에 로컬인 것 이므로 EXECUTE 문 외부에 있습니다.  
   
  USE AdventureWorks2012;  
   

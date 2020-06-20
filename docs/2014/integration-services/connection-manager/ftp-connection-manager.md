@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ef8d3920f4565be7a44d29a974612991b73efeec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02501b845254301a8370fcd208d849a6c6e3e3a9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833732"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920856"
 ---
 # <a name="ftp-connection-manager"></a>FTP 연결 관리자
   FTP 연결 관리자를 사용하면 패키지에서 FTP(파일 전송 프로토콜) 서버에 연결할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 포함된 FTP 태스크에서는 이 연결 관리자가 사용됩니다.  

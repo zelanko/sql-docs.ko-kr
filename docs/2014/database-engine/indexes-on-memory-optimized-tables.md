@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 86805eeb-6972-45d8-8369-16ededc535c7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7dbb63c958b50d3fac51cd8686b8580c93dacdb2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c629b1397cbe4ff938052770aa6a605b631a00fa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62778963"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932804"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 인덱스
   이 섹션에는 메모리 최적화 테이블의 인덱스에 대한 항목이 포함됩니다.  

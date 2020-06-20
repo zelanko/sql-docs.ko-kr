@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2b57ad76be3811352bbfb8774fb56c748efa1ac8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7cb1c84cccf4123f6ca1894baba5676937d80a15
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061611"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925644"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Analysis Services DDL 실행 태스크 편집기(DDL 페이지)
   **Analysis Services DDL 실행 태스크 편집기** 대화 상자의 **DDL** 페이지를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트 또는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에 대한 연결을 지정하고 DDL(데이터 정의 언어) 문의 원본에 대한 정보를 제공할 수 있습니다.  
@@ -28,14 +27,14 @@ ms.locfileid: "66061611"
   
 ## <a name="static-options"></a>정적 옵션  
  **연결**  
- 목록에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트 또는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 연결 관리자를 선택 하거나 \< **새 연결 ...**>을 클릭 하 고 **Analysis Services 연결 관리자 추가** 대화 상자를 사용 하 여 새 연결을 만듭니다.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 목록에서 프로젝트 또는 연결 관리자를 선택 하거나를 클릭 하 \<**New connection...**> 고 **Analysis Services 연결 관리자 추가** 대화 상자를 사용 하 여 새 연결을 만듭니다.  
   
  **관련 항목:** [Analysis Services 연결 관리자 추가 대화 상자 UI 참조](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Analysis Services 연결 관리자](connection-manager/analysis-services-connection-manager.md)  
   
  **SourceType**  
  DDL 문의 원본 유형을 지정합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 **SourceDirect** 입력란에 저장된 DDL 문으로 설정합니다. 이 값을 선택하면 다음 섹션에 동적 옵션이 표시됩니다.|  
 |**파일 연결**|원본을 DDL 문이 포함된 파일로 설정합니다. 이 값을 선택하면 다음 섹션에 동적 옵션이 표시됩니다.|  
@@ -49,13 +48,13 @@ ms.locfileid: "66061611"
   
 ### <a name="sourcetype--file-connection"></a>SourceType = 파일 연결  
  **원본**  
- 목록에서 파일 연결을 선택 하거나 \< **새 연결** ...>을 클릭 한 다음 **파일 연결 관리자** 대화 상자를 사용 하 여 새 연결을 만듭니다.  
+ 목록에서 파일 연결을 선택 하거나를 클릭 \<**New connection...**> 한 다음 **파일 연결 관리자** 대화 상자를 사용 하 여 새 연결을 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md)  
   
 ### <a name="sourcetype--variable"></a>SourceType = 변수  
  **원본**  
- 목록에서 변수를 선택하거나 \<**새 변수...**>를 클릭한 다음 **변수 추가** 대화 상자를 사용하여 새 변수를 만듭니다.  
+ 목록에서 변수를 선택 하거나를 클릭 하 \<**New variable...**> 고 **변수 추가** 대화 상자를 사용 하 여 새 변수를 만듭니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)  
   

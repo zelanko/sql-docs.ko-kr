@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 07373f17838fa387fe6ee22e31312a3933307fa3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b2fe6e1d06f7c996d5221b591c872d651a375033
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890323"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919315"
 ---
 # <a name="data-mining-query"></a>데이터 마이닝 쿼리
   디자인 창에는 데이터 마이닝 예측 쿼리를 작성할 때 사용할 수 있는 데이터 마이닝 예측 쿼리 작성기가 포함되어 있습니다. 입력 테이블을 기반으로 하는 예측 쿼리를 디자인하거나 단일 예측 쿼리를 디자인할 수 있습니다. 쿼리를 실행하고 결과를 보려면 결과 뷰로 전환합니다. 쿼리 뷰에서는 예측 쿼리 작성기로 만든 DMX(Data Mining Extensions) 쿼리를 표시합니다.  

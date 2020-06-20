@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: d312c740-19d7-4931-84a2-88b805ec8439
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7369e9d37e5f706786410f8e171c89c6c38287d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a87b6a0ebd2293ad219ce43108c4f42487a8e0f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808728"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934609"
 ---
 # <a name="connect-to-server-login-page-reporting-services"></a>서버에 연결(로그인 페이지) Reporting Services
-  에 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]연결할 때이 탭을 사용 하 여 다음 옵션을 확인 하거나 지정할 수 있습니다.  
+  에 연결할 때이 탭을 사용 하 여 다음 옵션을 확인 하거나 지정할 수 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 있습니다.  
   
 ## <a name="options"></a>옵션  
  **서버 유형**  
@@ -31,7 +30,7 @@ ms.locfileid: "62808728"
  **서버 이름**  
  연결하려는 보고서 서버 인스턴스의 서버 모드에 따라 입력해야 하는 값이 결정됩니다.  
   
- 기본 모드로 실행되는 보고서 서버의 경우 연결할 보고서 서버 인스턴스를 지정합니다. 기본 인스턴스를 사용하는 경우 서버 이름은 대개 컴퓨터 이름입니다. 명명 된 인스턴스를 설치한 경우 서버 이름에 \<servername>\\<InstanceName\>형식으로 인스턴스 이름을 추가 합니다. Reporting Services는 백슬래시 문자를 사용하여 인스턴스 이름을 구분합니다.  
+ 기본 모드로 실행되는 보고서 서버의 경우 연결할 보고서 서버 인스턴스를 지정합니다. 기본 인스턴스를 사용하는 경우 서버 이름은 대개 컴퓨터 이름입니다. 명명 된 인스턴스를 설치한 경우 인스턴스 이름을<InstanceName 형식으로 서버 이름에 추가 \<servername> \\ \> 합니다. Reporting Services는 백슬래시 문자를 사용하여 인스턴스 이름을 구분합니다.  
   
  SharePoint 통합 모드로 실행되는 보고서 서버의 경우 SharePoint 사이트를 지정해야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]와 통합된 사이트 컬렉션에 있는 아무 사이트나 지정할 수 있습니다. URL을 지정할 때는 HTTP 또는 HTTPS 접두사를 포함해야 합니다. Management Studio에서 보고서 서버 인스턴스에 연결하려면 SharePoint에 액세스할 수 있는 권한이 있어야 합니다. 할당 받은 권한 수준에 따라 보고 관리할 수 있는 항목이 결정됩니다. 자세한 내용은 [Management Studio에서 보고서 서버에 연결](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)을 참조하세요.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "62808728"
  **연결**  
  선택한 서버에 연결합니다.  
   
- **옵션**  
+ **Options**  
  암호 저장과 같은 추가 서버 연결 옵션을 표시합니다.  
   
 ## <a name="see-also"></a>참고 항목  

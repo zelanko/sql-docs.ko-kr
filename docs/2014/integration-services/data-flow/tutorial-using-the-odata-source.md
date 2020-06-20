@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7a799707dc57e07528afb29c135a5ee394c56354
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61a49ccb89343984b29018f293656fd2a9137b37
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770219"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939194"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>자습서: OData 원본 사용 [SSIS]
   이 자습서에서는 샘플 **Northwind** OData 서비스(http://services.odata.org/V3/Northwind/Northwind.svc/) 에서 **Employees** 컬렉션을 추출한 다음, 플랫 파일로 로드하는 프로세스를 안내합니다.  
@@ -44,7 +43,7 @@ ms.locfileid: "62770219"
   
 5.  **새로 만들기...** 를 클릭하여 새 OData 연결 관리자를 추가합니다.  
   
-6.  **서비스 문서 위치**에 대해 OData 서비스 URL을 입력합니다. 이 URL은 서비스 문서나 특정 피드 또는 엔터티에 대한 URL일 수 있습니다. 이 자습서의 목적을 위해를 입력 [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/)합니다.  
+6.  **서비스 문서 위치**에 대해 OData 서비스 URL을 입력합니다. 이 URL은 서비스 문서나 특정 피드 또는 엔터티에 대한 URL일 수 있습니다. 이 자습서의 목적을 위해를 입력 [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/) 합니다.  
   
 7.  OData 서비스에 액세스하는 데 사용할 **인증** 으로 **Windows 인증** 이 선택되었는지 확인합니다. 기본적으로**Windows 인증** 이 선택됩니다. 기본 인증을 사용하려면 **이 사용자 이름 및 암호 사용**을 선택합니다.  
   

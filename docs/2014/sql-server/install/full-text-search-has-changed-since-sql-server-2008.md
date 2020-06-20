@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d253bb05-9166-4b50-bd4a-27b818f514e0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 59591056d107e8cc53863ca537dc57aaba7f6d26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 217e8326b0c847b1348464d5c87021b6f8d7f6fb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095152"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012431"
 ---
 # <a name="full-text-search-has-changed-since-sql-server-2008"></a>전체 텍스트 검색이 SQL Server 2008부터 변경되었습니다.
   업그레이드 관리자가 전체 텍스트 검색이 업그레이드되려고 하는 것을 발견했습니다. 많은 전체 텍스트 검색 옵션 및 설정이 변경되었으므로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 전체 텍스트 검색으로 업그레이드할 경우 일부 설정을 수정해야 할 수 있습니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c1ca545e081826f1b81117e377f370136a7b4998
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c42809ab5057d4234b992ec81db0b6571c3e68c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067007"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938824"
 ---
 # <a name="measures-ssas-tabular"></a>측정값(SSAS 테이블 형식)
   테이블 형식 모델에서 측정값은 보고 클라이언트용 DAX 수식을 사용하여 만든 계산입니다. 측정값은 보고 클라이언트 애플리케이션에서 사용자가 선택하는 필드, 필터 및 슬라이서에 따라 평가됩니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "66067007"
   
 -   [관련 작업](#bkmk_rel_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_understanding"></a>아니라  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a> 이점  
  AVERAGE, COUNT 또는 SUM과 같은 표준 집계 함수를 기반으로 측정값을 만들거나 DAX를 사용하여 고유한 수식을 정의할 수 있습니다. 각 측정값에는 수식 외에 이름, 테이블 세부 정보, 형식, 소수 자릿수와 같은 측정값 데이터 형식으로 정의된 속성이 있습니다.  
   
  측정값이 모델에서 정의되면 사용자가 이를 보고서나 피벗 테이블에 추가할 수 있습니다. 큐브 뷰 및 역할에 따라 측정값은 필드 목록에 테이블과 연결되어 표시되며 모델의 모든 사용자가 사용할 수 있습니다. 일반적으로 측정값은 팩트 테이블에서 생성되지만 연결된 테이블에 대해 독립적일 수 있습니다.  
@@ -85,8 +84,8 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |속성|기본 설정|설명|  
 |--------------|---------------------|-----------------|  
 |**설명**|비어 있음|측정값에 대한 설명입니다. 설명은 측정값과 함께 보고 클라이언트에 표시되지 않습니다.|  
-|**형식과**|수식 식에서 참조되는 열의 데이터 형식에 따라 자동으로 결정됩니다.|측정값의 형식입니다. 예를 들어 통화 또는 백분율입니다.|  
-|**수식**|측정값을 만들 때 수식 입력줄에 입력된 수식입니다.|측정값의 수식입니다.|  
+|**Format**|수식 식에서 참조되는 열의 데이터 형식에 따라 자동으로 결정됩니다.|측정값의 형식입니다. 예를 들어 통화 또는 백분율입니다.|  
+|**Formula**|측정값을 만들 때 수식 입력줄에 입력된 수식입니다.|측정값의 수식입니다.|  
 |**측정값 이름**|자동 합계를 사용하면 측정 값 이름이 열 이름 앞에 표시되고 그 뒤에 콜론이 표시됩니다. 사용자 지정 수식을 입력할 경우 이름, 콜론, 수식을 차례로 입력합니다.|보고 클라이언트 필드 목록에 표시된 측정값의 이름입니다.|  
   
 ##  <a name="using-a-measure-in-a-kpi"></a><a name="bkmk_KPI"></a>KPI에서 측정값 사용  
@@ -96,7 +95,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
 ##  <a name="related-tasks"></a><a name="bkmk_rel_tasks"></a> 관련 작업  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[측정값 만들기 및 관리&#40;SSAS 테이블 형식&#41;](measures-ssas-tabular.md)|모델 디자이너의 측정값 표를 사용하여 측정값을 만들고 관리하는 방법에 대해 설명합니다.|  
   

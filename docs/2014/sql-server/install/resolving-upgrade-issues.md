@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: 113eb435-8d36-4ed6-9790-b5e4c14809c8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 85de606ecea93aba80714d4266e9897dd856879f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c00b08d40bc8c17013e6af19b5d11b0b7ad78c4b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092495"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058991"
 ---
 # <a name="resolving-upgrade-issues"></a>업그레이드 문제 해결
   이 섹션의 항목에서는 검색 가능 여부에 관계없이 업그레이드 또는 업그레이드 이후 환경에 영향을 줄 수 있는 업그레이드 문제에 대해 설명합니다. 문제는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소별로 구성됩니다.  

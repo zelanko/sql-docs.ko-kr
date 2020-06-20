@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f2810e19-e513-458b-8925-5756b6ee1313
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 26dd8add089f27c3ea9db22204548196bc887faf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1bfdd083973dd5dc3a27b9087ca912812815bca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127132"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050652"
 ---
 # <a name="srv_paramsetoutput-extended-stored-procedure-api"></a>srv_paramsetoutput(확장 저장 프로시저 API)
     

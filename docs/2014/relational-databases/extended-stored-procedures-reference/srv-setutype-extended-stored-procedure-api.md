@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2439b19c4550d07b8d50a0bed6d72b603b1601a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1302f8bcd6a427d5225f6936b0adf158d0ed6ee0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745792"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050551"
 ---
 # <a name="srv_setutype-extended-stored-procedure-api"></a>srv_setutype(확장 저장 프로시저 API)
     
@@ -55,7 +54,7 @@ user_type
  *srvproc*  
  특정 클라이언트 연결에 대한 핸들인 SRV_PROC 구조에 대한 포인터입니다. 이 구조에는 확장 저장 프로시저 API 라이브러리가 애플리케이션과 클라이언트 간 통신 및 데이터를 관리하는 데 사용하는 정보가 들어 있습니다.  
   
- *열의*  
+ *column*  
  설정할 열을 나타냅니다. 열 번호는 1부터 시작됩니다.  
   
  *user_type*  
@@ -65,7 +64,7 @@ user_type
  SUCCEED 또는 FAIL 열이 없는 경우 FAIL을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- 열에는 두 가지 데이터 형식(실제 데이터 형식 및 사용자 정의 데이터 형식)이 있습니다. 사용자 정의 데이터 형식은에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열의 실제 사용자 정의 데이터 형식 (있는 경우) 및 열 설명 정보 (예: null 허용 여부 및 업데이트 가능성)를 저장 하는 데 사용 됩니다.  
+ 열에는 두 가지 데이터 형식(실제 데이터 형식 및 사용자 정의 데이터 형식)이 있습니다. 사용자 정의 데이터 형식은에서 열의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실제 사용자 정의 데이터 형식 (있는 경우) 및 열 설명 정보 (예: null 허용 여부 및 업데이트 가능성)를 저장 하는 데 사용 됩니다.  
   
  **srv_describe** 를 사용하여 *column* 이 정의된 후, 마지막 행이 전송되기 전에 언제든지 **srv_setutype** 함수를 호출할 수 있습니다.  
   

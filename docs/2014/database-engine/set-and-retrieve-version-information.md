@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c3f253c4-4e3d-48e8-8d90-bd6ee899faf7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 68113c6de003aea94924f6e220373664212becf1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8dd7119d66dbd2e904e83d434f1319867b7aa7e7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843484"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929204"
 ---
 # <a name="set-and-retrieve-version-information"></a>버전 정보 설정 및 검색
   버전 정보에는 원본 제어 파일의 기록 및 현재 상태가 포함됩니다. 모든 원본 제어 파일에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe는 포괄적인 기록을 유지 관리하므로 시간이 지남에 따라 하나 이상의 파일이 발전하는 상황을 추적할 수 있습니다. 또한 이 정보를 사용하여 모든 파일 버전의 로컬 복사본을 검색하거나 두 개의 파일 버전을 비교할 수 있습니다.  
