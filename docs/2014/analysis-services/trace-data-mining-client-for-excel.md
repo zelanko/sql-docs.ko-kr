@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 4aea3e17-cd0f-48dd-8f22-b54a6c716426
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 19a30107af159c1cd87324290844172371f02752
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f394e54252c382bb2f70dccc531f306f7264d87f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175572"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938364"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>추적(Excel용 데이터 마이닝 클라이언트)
   ![추적 단추](media/misc-trace.gif "추적 단추")
 
- **추적 프로그램** 대화 상자를 사용 하 여 데이터 마이닝에 사용 중인 인스턴스로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 전송 되는 문을 모니터링할 수 있습니다. 인스턴스에 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]대 한 연결을 만든 후에는 클라이언트와 서버 간의 모든 상호 작용이 구조를 만들고, 마이닝 모델을 추가 하 고, 예측을 만들고, 서버에서 반환 하는 일부 메시지를 포함 하는 **추적 프로그램** 창에 기록 됩니다.
+ **추적 프로그램** 대화 상자를 사용 하 여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 마이닝에 사용 중인 인스턴스로 전송 되는 문을 모니터링할 수 있습니다. 인스턴스에 대 한 연결을 만든 후에는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 클라이언트와 서버 간의 모든 상호 작용이 구조를 만들고, 마이닝 모델을 추가 하 고, 예측을 만들고, 서버에서 반환 하는 일부 메시지를 포함 하는 **추적 프로그램** 창에 기록 됩니다.
 
  요청하는 동작에 따라 문은 DMX(Data Mining Extensions) 데이터 정의 쿼리 또는 데이터 조작 쿼리, ASSL(Analysis Services Scripting Language) 패킷 또는 Analysis Services 저장 프로시저 호출이 될 수 있습니다. 그러나 실제 숫자 결과 및 데이터 값은 표시되지 않습니다.
 

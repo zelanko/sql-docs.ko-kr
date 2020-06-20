@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: a636fc13-4054-4cea-bce1-192ec4796063
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c733fbf1e8a075d0d240f5cb69d888310fc6009f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46ede058446778ad7e0d1a980bdd93bf5d72b966
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62757696"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939994"
 ---
 # <a name="tables-representation-tabular"></a>테이블 표현(테이블 형식)
   테이블 형식 모델에서 테이블은 데이터의 기본 표현입니다.  

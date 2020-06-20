@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a72e24f-9e11-4032-ab9e-5ecc6edd4890
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f6d845874a2fd221163953b0aeb2b8d32516e14b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a562af56807b2598c18b32952bc1ffd053ed8741
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62955902"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064348"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>서버 연결에 대한 F1 도움말(SQL Server Management Studio)
   이 섹션에서는 **의** 서버에 연결 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자에 대한 F1 도움말을 제공합니다.  

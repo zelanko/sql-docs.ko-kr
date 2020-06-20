@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: e5f5a938-ae7c-4f4e-9416-a7f94ac82763
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e5e94818245ba1e87d90f87539ae07e9531e5450
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea3aedff3f7bfa931b900bdeab59495a35853ae1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065566"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938244"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>사용 빈도 기반 최적화 마법사 F1 도움말
-  사용 빈도 기반 최적화 마법사는 출력 면에서 집계 디자인 마법사와 유사하며 파티션에 대한 집계를 디자인하는 데 사용됩니다. 그러나 사용 빈도 기반 최적화 마법사는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스의 쿼리 로그에 기록된 쿼리의 특정 사용 패턴을 기반으로 집계를 디자인합니다. 집계는 각 쿼리에 대해 기본 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본의 데이터를 다시 계산할 필요 없이 큐브 저장소에서 직접 미리 계산 된 합계를 검색할 수 있도록 하 여 성능 향상을 제공 합니다.  
+  사용 빈도 기반 최적화 마법사는 출력 면에서 집계 디자인 마법사와 유사하며 파티션에 대한 집계를 디자인하는 데 사용됩니다. 그러나 사용 빈도 기반 최적화 마법사는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스의 쿼리 로그에 기록된 쿼리의 특정 사용 패턴을 기반으로 집계를 디자인합니다. 집계는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 각 쿼리에 대해 기본 데이터 원본의 데이터를 다시 계산할 필요 없이 큐브 저장소에서 직접 미리 계산 된 합계를 검색할 수 있도록 하 여 성능 향상을 제공 합니다.  
   
- 내 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 사용 빈도 기반 최적화 마법사를 열려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트의 큐브 디자이너를 연 다음 **집계** 탭을 클릭 합니다. 도구 모음에서 **사용 빈도 기반 최적화** 단추를 클릭 합니다.  
+ 내에서 사용 빈도 기반 최적화 마법사를 열려면 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 프로젝트의 큐브 디자이너를 연 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다음 **집계** 탭을 클릭 합니다. 도구 모음에서 **사용 빈도 기반 최적화** 단추를 클릭 합니다.  
   
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]내에서 사용 빈도 기반 최적화 마법사를 열려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에 연결한 다음 **큐브** 폴더를 엽니다. 큐브를 선택한 다음 **측정값 그룹** 폴더를 열고 수정하려는 측정값 그룹을 확장합니다. **파티션** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **사용 빈도 기반 최적화**를 선택합니다.  
   

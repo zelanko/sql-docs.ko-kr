@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 37ffad63-d6db-4609-8deb-786200659554
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 29513ec37a946b9ec613ccc483048396149dd15a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9bbd1ffb75402e475e5d55a9661967be2fcd57c0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63042670"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063958"
 ---
 # <a name="lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis"></a>2단원: 일정에 따라 최선의 구현 방법 정책 평가
   하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 대해 최선의 구현 방법 정책에 대한 예약된 평가를 구성할 수 있습니다. 일정에 따라 최선의 구현 방법 정책을 실행하도록 구성하려면 정책을 대상 인스턴스로 가져와야 합니다.  

@@ -9,23 +9,22 @@ ms.topic: conceptual
 ms.assetid: 7225064a-4f6c-40d3-a026-34e757a966da
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7c64e45800b168a45a674dc74a5f192e5e9f8389
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f0d49f9fe2ca7fa54e4314cd2e412b8d9e31f126
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066088"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938384"
 ---
 # <a name="toolbar-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>도구 모음(파티션 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   **도구 모음** 창을 사용하여 큐브 디자이너의 **파티션** 탭에서 일반 동작을 수행할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |**비즈니스 인텔리전스 추가**|**비즈니스 인텔리전스 마법사** 를 표시하고 비즈니스 인텔리전스 기능을 큐브에 추가하려면 클릭합니다.|  
-|**프로세스**|**처리** 대화 상자를 표시하고 선택한 측정값 그룹 또는 파티션을 처리하려면 클릭합니다.|  
+|**Process**|**처리** 대화 상자를 표시하고 선택한 측정값 그룹 또는 파티션을 처리하려면 클릭합니다.|  
 |**새 파티션**|**파티션 마법사** 를 표시하고 선택한 측정값 그룹에 새 파티션을 만들려면 클릭합니다.|  
 |**이름 바꾸기**|선택한 파티션의 이름을 바꾸려면 클릭합니다.<br /><br /> 참고: 이 옵션은 **측정값 그룹** 창에서 한 측정값 그룹의 **파티션** 표에 있는 임의의 파티션 셀을 선택한 경우에만 사용할 수 있습니다.|  
 |**Delete**|**개체 삭제** 대화 상자를 표시하고 선택한 동작을 삭제하려면 클릭합니다.<br /><br /> 참고: 이 옵션은 **측정값 그룹** 창에서 한 측정값 그룹의 **파티션** 표에 있는 파티션의 전체 행을 선택한 경우에만 사용할 수 있습니다.<br /><br /> 참고: 이 옵션은 쓰기 저장 파티션을 선택하면 사용할 수 없습니다.|  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 94a57ff1-f77f-4c04-8bf5-cdab691d3421
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b196aaa30934e4206886b8b6290e402b6c28fce5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 246528596017d8b3434eeb194ce8de832ca4538e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771319"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923219"
 ---
 # <a name="finish"></a>Finish
   **마침** 페이지에서는 마법사 프로세스를 요약합니다. **마침** 를 클릭하여 마법사를 닫고 CDC 인스턴스 만들기 마법사에서 정의한 모든 테이블을 생성합니다.  

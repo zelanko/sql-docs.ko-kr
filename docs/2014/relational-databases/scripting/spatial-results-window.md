@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 27865055bec4312b9e969da096829af6c8ba60db
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d4a438cdaf0025397faec463f99e91a4c349d1b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718646"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048998"
 ---
 # <a name="spatial-results-window"></a>공간 데이터 결과 창
   **공간 데이터 결과** 창에서는 공간 데이터를 볼 수 있는 시각적인 매핑 도구를 제공합니다. 공간 데이터 결과를 보려면 쿼리 결과에 기하 도형 또는 지리 데이터가 포함된 공간 열이 있어야 합니다.  

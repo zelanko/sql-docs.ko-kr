@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 846589ee-5fe5-4ab3-b335-0c253e569f99
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e500eb47af39502e1bcf59f60b3dd24fed0713fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6267389f187b955982ec1c18c411f703b4562f3c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872130"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952440"
 ---
 # <a name="database-mail-log-and-audits"></a>데이터베이스 메일 로그 및 감사
   데이터베이스 메일 로깅 기능은 문제를 격리하여 수정하는 방법을 제공하도록 설계되었습니다. 데이터베이스 메일은 **msdb** 데이터베이스에 로그 정보를 저장합니다. 데이터베이스 메일 전자 메일 콘텐츠, 전자 메일의 상태, 받은 메시지(예: 오류)에 대한 정보는 데이터베이스 메일에서 로깅되며 문제 해결 및 감사 용도에 사용할 수 있습니다.  

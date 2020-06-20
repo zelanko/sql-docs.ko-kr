@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 07de51d3a5880b6b0d4ab6561fcf333a99387598
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 16dc1f6136956bb16c68806b35ac5a21d86cf179
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718069"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062903"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>SQL 쿼리 실행(SQLXML 관리되는 클래스)
   이 예에서는 다음 작업을 수행하는 방법을 보여 줍니다.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4a245aab71292e1482bd5a17bd32a27bded640ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53fbe7568050927e8ddd43085181125214e7f86a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775226"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932234"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>지원되는 버전 및 에디션 업그레이드
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]및 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 업그레이드할 수 있습니다. 이 항목에서는 이러한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 지원되는 업그레이드 경로 및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에 대해 지원되는 버전 업그레이드에 대해 설명합니다.  
@@ -73,7 +72,7 @@ ms.locfileid: "62775226"
   
  다음 표에는 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]로 업그레이드하는 데 지원되는 시나리오가 나열되어 있습니다.  
   
-|업그레이드할 버전|지원되는 업그레이드 경로|  
+|다음 버전에서 업그레이드|지원되는 업그레이드 경로|  
 |------------------|----------------------------|  
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Enterprise|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Developer|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer|  
@@ -121,7 +120,7 @@ ms.locfileid: "62775226"
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]2014를 사용하여 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에 연결합니다.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스를 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]로 업그레이드하는 경우 데이터베이스 호환성 수준이 90에서 100으로 변경됩니다. 에서 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]데이터베이스 호환성 수준에 유효한 값은 100, 110 및 120입니다. [ALTER Database Compatibility level &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) 호환성 수준 변경이 응용 프로그램에 미치는 영향을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설명 합니다.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스를 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]로 업그레이드하는 경우 데이터베이스 호환성 수준이 90에서 100으로 변경됩니다. 에서 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 데이터베이스 호환성 수준에 유효한 값은 100, 110 및 120입니다. [ALTER Database Compatibility level &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) 호환성 수준 변경이 응용 프로그램에 미치는 영향을 설명 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  위의 목록에 지정되지 않은 모든 시나리오는 지원되지 않습니다. 여기에는 다음이 포함되지만 이에 제한되지 않습니다.  
   
@@ -167,7 +166,7 @@ ms.locfileid: "62775226"
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise (Server + CAL 라이선스) <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise(코어 라이선스)|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise(코어 라이선스)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise(Server+CAL 라이선스)|  
   
- <sup>1</sup> Express with Tools [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] express with Advanced Services에도 적용 됩니다.  
+ <sup>1</sup> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] express with Tools 및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] express with Advanced Services에도 적용 됩니다.  
   
  <sup>2</sup> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 장애 조치 (failover) 클러스터의 버전 변경은 제한 됩니다. 다음과 같은 시나리오는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 장애 조치(Failover) 클러스터에서 지원되지 않습니다.  
   

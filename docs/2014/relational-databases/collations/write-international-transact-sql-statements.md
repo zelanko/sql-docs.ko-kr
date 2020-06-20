@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 64dc9129373a57de2924b2983e14266a67d4915e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1888d1045e43e0a9839fd76a21c51500af63539a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873517"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953329"
 ---
 # <a name="write-international-transact-sql-statements"></a>국가별 Transact-SQL 문 작성
   다음 지침에 따라 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하는 데이터베이스 및 데이터베이스 애플리케이션을 특정 언어에서 다른 언어로 이식하거나 여러 언어를 지원하도록 할 수 있습니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "62873517"
   
     -   ADO, OLE DB 및 ODBC 애플리케이션은 다음과 같은 ODBC용 타임스탬프, 날짜 및 시간 이스케이프 절을 사용해야 합니다.  
   
-         **{ts '** yyyy**-**_mm_**-**_(yyyy_)**:**_mm_**:**_ss_[**.** _fff_] **'}** 예: **{ts '** 1998**-** 09**-** 24 10 **:** 02 **:** 20 **'}**  
+         **{ts '** yyyy mm (yyyy) **-** _mm_ **-** _ddhh_**:**_mm_**:**_ss_[**.** _fff_] **'}** 예: **{ts '** 1998 **-** 09 **-** 24 10 **:** 02 **:** 20 **'}**  
   
          **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** 예: **{ d'** 1998**-** 09**-** 24 **'}**  
   
@@ -44,7 +43,7 @@ ms.locfileid: "62873517"
   
     -   다른 API나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트, 저장 프로시저, 트리거를 사용하는 애플리케이션에서는 분리되지 않은 숫자 문자열을 사용해야 합니다. 예를 들어 19980924와 같은 *yyyymmdd* 를 사용합니다.  
   
-    -   다른 api [!INCLUDE[tsql](../../includes/tsql-md.md)] 나 스크립트, 저장 프로시저 및 트리거를 사용 하는 응용 프로그램에서는 `time`, `date`, `smalldate`, `datetime`, **datetime2**및 `datetimeoffset` 데이터 형식과 문자열 데이터 형식 간의 모든 변환에 명시적 스타일 매개 변수와 함께 CONVERT 문을 사용 해야 합니다. 예를 들어 다음 문은 모든 언어 또는 날짜 형식 연결 설정에서 똑같이 해석됩니다.  
+    -   다른 api 나 스크립트, 저장 프로시저 및 트리거를 사용 하는 응용 프로그램에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] `time` ,, `date` `smalldate` , `datetime` , **datetime2**및 `datetimeoffset` 데이터 형식과 문자열 데이터 형식 간의 모든 변환에 명시적 스타일 매개 변수와 함께 CONVERT 문을 사용 해야 합니다. 예를 들어 다음 문은 모든 언어 또는 날짜 형식 연결 설정에서 똑같이 해석됩니다.  
   
         ```  
         SELECT *  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8fe96b7d84a2e363166238c3e840cac383f443dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 100ad85847c131b71ea6eff93346f283f70aaec0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918132"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953198"
 ---
 # <a name="monitor-data-tier-applications"></a>데이터 계층 애플리케이션 모니터링
   SSMS( **)의** 유틸리티 탐색기 **및** 개체 탐색기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 시스템 뷰 및 테이블과 함께 DAC(데이터 계층 애플리케이션)를 모니터링할 수 있습니다. 또한 DAC에 포함된 데이터베이스의 모든 개체를 표준 데이터베이스 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 모니터링 기술을 사용하여 모니터링할 수 있습니다.  

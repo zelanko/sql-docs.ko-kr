@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 828d299e47ecf582918ce5524e3b6c2bc2925d90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 991940b819e3d72fcb7b94eb031b0e40b7102667
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770724"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939544"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환을 사용하여 유사한 데이터 행 식별
   유사 항목 그룹화 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크 하나의 원본이 이미 들어 있어야 합니다.  

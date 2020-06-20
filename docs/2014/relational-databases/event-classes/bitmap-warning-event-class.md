@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5bf9b4e3-0eba-4e67-8ba9-30ca4b48e1d4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 812ba207d699cbbdb2156a4c5f3799cbfa8a74db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a59a1ecfc740cc7c3a07d8a41acfa51fb1623716
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023436"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030727"
 ---
 # <a name="bitmap-warning-event-class"></a>Bitmap Warning 이벤트 클래스
   **Bitmap Warning** 이벤트 클래스를 사용하여 쿼리 내의 비트맵 필터 사용을 모니터링할 수 있습니다. 또한 이벤트 하위 클래스를 사용하여 쿼리 내에서 비트맵 필터가 해제되면 보고되도록 할 수 있습니다.  
@@ -32,12 +31,12 @@ ms.locfileid: "63023436"
 |**ClientProcessID**|`int`|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
 |**DatabaseID**|`int`|USE *database* 문에서 지정한 데이터베이스 ID이거나 지정된 인스턴스에 대해 USE *database* 문이 실행되지 않은 경우 기본 데이터베이스의 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |**DatabaseName**|`nvarchar`|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|예|  
-|**EventClass**|`int`|이벤트 유형 = 212|27|아니요|  
+|**EventClass**|`int`|이벤트 유형 = 212|27|예|  
 |**EventSequence**|`int`|요청 내에 지정된 이벤트 시퀀스입니다.|51|예|  
 |**EventSubClass**|`int`|이벤트 하위 클래스의 유형입니다. 0 = 비트맵 필터가 해제되었습니다.|21|예|  
 |**HostName**|`nvarchar`|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공하면 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  
 |**IsSystem**|`int`|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다. 1 = 시스템, 0 = 사용자|60|예|  
-|**LoginName**|`nvarchar`|사용자 로그인 이름 ( *DOMAIN\username*형식의 Windows 로그인 자격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 증명 또는 보안 로그인)입니다.|11|예|  
+|**LoginName**|`nvarchar`|사용자 로그인 이름 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *DOMAIN\username*형식의 Windows 로그인 자격 증명 또는 보안 로그인)입니다.|11|예|  
 |**LoginSid**|`image`|로그인한 사용자의 SID(보안 ID)입니다. 이 정보는 **sys.server_principals** 카탈로그 뷰에 있습니다. 각 SID는 서버의 각 로그인마다 고유합니다.|41|예|  
 |**NTDomainName**|`nvarchar`|사용자가 속한 Windows 도메인입니다.|7|yes|  
 |**NTUserName**|`nvarchar`|Windows 사용자 이름입니다.|6|예|  

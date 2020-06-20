@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea02b01e-9f87-47ca-9117-afadc382fb45
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b65f0200dd91c3813be405d9186543732eea6741
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eed8a4c35aba41af5b5fbc446e8275d14c8a9ca8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663175"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029922"
 ---
 # <a name="data-file-auto-shrink-event-class"></a>Data File Auto Shrink 이벤트 클래스
   **Data File Auto Shrink** 이벤트 클래스는 데이터 파일이 축소되었음을 나타냅니다. 이 이벤트는 ALTER DATABASE 문의 명시적인 실행으로 데이터 파일이 축소될 경우에는 트리거되지 않습니다. 데이터 파일 크기 변화를 모니터링하는 추적에 **Data File Auto Shrink** 이벤트 클래스를 포함시키십시오.  

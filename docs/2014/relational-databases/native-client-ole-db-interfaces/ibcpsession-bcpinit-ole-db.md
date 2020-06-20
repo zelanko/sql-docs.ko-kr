@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 583096d7-da34-49be-87fd-31210aac81aa
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b9f282f9f95c971c4ab5007a947e94848e9b8ad6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3709b32e8db1027bce963f22b6fe282e120ad4f4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695402"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048008"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit(OLE DB)
   대량 복사 구조를 초기화하고, 일부 오류 검사를 수행하고, 데이터 및 서식 파일 이름이 올바른지 확인한 다음 파일을 엽니다.  

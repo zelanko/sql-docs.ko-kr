@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f70a956834108c21dd7b17bb9f3e04db38f29bfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d23037bc09b735fc28e52eabb1852d1af303d15
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059938"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916953"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>식을 사용하여 설정할 수 있는 데이터 흐름 속성
   데이터 흐름 태스크 컨테이너에서 사용할 수 있는 속성 식을 사용하여 데이터 흐름 개체의 특정 속성 값을 지정할 수 있습니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "66059938"
   
  이 항목에 나열된 데이터 흐름 개체의 속성 중 하나에 대한 속성 식을 지정하려면 디자이너의 **제어 흐름** 화면에서 데이터 흐름 태스크를 선택하거나 개별 구성 요소나 경로를 선택하지 않고 디자이너의 **데이터 흐름** 탭을 선택하여 데이터 흐름 태스크에 대한 **속성** 창을 표시합니다. **식** 속성을 선택하고 줄임표(...)를 클릭하여 **속성 식 편집기** 대화 상자를 표시합니다. **속성** 목록을 드롭다운하여 속성을 선택한 다음 **식** 입력란에 식을 입력하거나 줄임표(...)를 클릭하여 **식 작성기** 대화 상자를 표시합니다.  
   
- **속성** 목록에는 디자이너의 **데이터 흐름** 화면에 이미 배치한 이러한 데이터 흐름 개체에 사용할 수 있는 속성만 표시됩니다. 따라서 **속성** 목록을 사용하여 속성 식을 지원하는 데이터 흐름 개체의 가능한 모든 속성을 확인할 수는 없습니다. 예를 들어 ADO NET 원본을 디자이너 화면에 배치한 경우 **속성** 목록에는 `[ADO NET Source].[SqlCommand]` 속성에 대 한 항목이 포함 됩니다. 목록에는 데이터 흐름 태스크 자체의 수많은 속성도 표시됩니다.  
+ **속성** 목록에는 디자이너의 **데이터 흐름** 화면에 이미 배치한 이러한 데이터 흐름 개체에 사용할 수 있는 속성만 표시됩니다. 따라서 **속성** 목록을 사용하여 속성 식을 지원하는 데이터 흐름 개체의 가능한 모든 속성을 확인할 수는 없습니다. 예를 들어 ADO NET 원본을 디자이너 화면에 배치한 경우 **속성** 목록에는 속성에 대 한 항목이 포함 `[ADO NET Source].[SqlCommand]` 됩니다. 목록에는 데이터 흐름 태스크 자체의 수많은 속성도 표시됩니다.  
   
 ## <a name="properties-of-data-flow-objects-that-support-property-expressions"></a>속성 식을 지원하는 데이터 흐름 개체의 속성  
  다음 목록의 속성 값은 속성 식을 사용하여 지정할 수 있습니다.  

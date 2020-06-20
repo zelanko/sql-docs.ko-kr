@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1de6e214-5efa-4efa-9336-edbe2310cfbe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e98a7c30869428f4cc31428f35eaf6c6f86e97c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff9f2c372d6857257fa71e771f6eabe50eaf8fb9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069326"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940844"
 ---
 # <a name="select-partitions-to-modify-usage-based-optimization-wizard"></a>수정할 파티션 선택(사용 빈도 기반 최적화 마법사)
   **수정할 파티션 선택** 페이지를 사용하여 집계를 디자인할 파티션을 선택할 수 있습니다.  

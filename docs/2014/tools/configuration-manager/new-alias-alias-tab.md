@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 785eb6fb-f67e-449d-b1c8-c38dfbb95ef6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9a64d4a3cc46a68a06367d51a3cf3511191c6232
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c1ff7c45544c739acc254ace6cd1d9990257978
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62912958"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064217"
 ---
 # <a name="new-alias-alias-tab"></a>새 별칭(별칭 탭)
   별칭은 연결 설정에 사용할 수 있는 대체 이름입니다. 별칭은 연결 문자열의 필수 요소를 캡슐화하고 사용자가 선택한 이름으로 나타납니다. **별칭 - 새로 만들기** 대화 상자의 **별칭** 페이지를 사용하여 별칭에 대한 연결 문자열의 요소를 지정할 수 있습니다. 기존 별칭의 연결 문자열을 변경하려면 [&#60;Alias&#62; 속성&#40;별칭 탭&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)을 참조하세요.  

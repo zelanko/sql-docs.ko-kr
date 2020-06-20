@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bae68c2d507e1dd3809e76a9d842b765d72234e9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62762343"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952129"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Create a Database Snapshot (Transact-SQL)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 스냅샷은 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용해서만 만들 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 데이터베이스 스냅샷 만들기를 지원하지 않습니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "62762343"
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
  복구 모델을 사용할 수 있는 원본 데이터베이스는 다음 사전 요구 사항을 충족해야 합니다.  
   
--   서버 인스턴스는 데이터베이스 스냅샷을 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 실행해야 합니다. 의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]데이터베이스 스냅숏 지원에 대 한 자세한 내용은 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
+-   서버 인스턴스는 데이터베이스 스냅샷을 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 실행해야 합니다. 의 데이터베이스 스냅숏 지원에 대 한 자세한 내용은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
   
 -   데이터베이스 미러링 세션의 미러 데이터베이스가 아닌 경우 원본 데이터베이스는 온라인 상태여야 합니다.  
   
@@ -127,7 +126,7 @@ AdventureWorks_snapshot_evening
     > [!NOTE]  
     >  데이터베이스 스냅샷을 만들 때 로그 파일, 오프라인 파일, 복원 파일 및 존재하지 않는 파일은 CREATE DATABASE 문에 사용할 수 없습니다.  
   
-###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>예 (Transact-sql)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
   
 > [!NOTE]  
 >  이 예에서 사용된 `.ss` 확장명은 임의로 지정됩니다.  

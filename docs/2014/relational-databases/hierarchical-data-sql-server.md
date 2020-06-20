@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 351a5a4aa6bc1655b8da5fced3e51385dd498bdf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289191"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027100"
 ---
 # <a name="hierarchical-data-sql-server"></a>계층적 데이터(SQL Server)
   기본 제공 `hierarchyid` 데이터 형식을 사용 하면 계층적 데이터를 보다 쉽게 저장 하 고 쿼리할 수 있습니다. `hierarchyid`는 계층적 데이터의 가장 일반적인 유형인 트리를 나타내기 위해 최적화 되었습니다.  
@@ -58,7 +57,7 @@ ms.locfileid: "79289191"
   
   
 ##  <a name="limitations-of-hierarchyid"></a><a name="limits"></a> hierarchyid의 제한 사항  
- `hierarchyid` 데이터 형식에는 다음과 같은 제한 사항이 있습니다.  
+ `hierarchyid`데이터 형식에는 다음과 같은 제한 사항이 있습니다.  
   
 -   `hierarchyid` 형식의 열은 자동으로 트리를 나타내지 않습니다. 애플리케이션에 따라 원하는 행 간 관계가 값에 반영되도록 `hierarchyid` 값이 생성되어 할당됩니다. 일부 애플리케이션에는 다른 테이블에 정의된 계층에서의 위치를 나타내는 `hierarchyid` 형식의 열이 있을 수 있습니다.  
   
@@ -108,7 +107,7 @@ GO
   
 -   계층의 섹션 간 쿼리를 거의 하지 않는 쿼리의 경우. 즉, 쿼리가 일반적으로 계층의 단일 지점만 다루는 경우입니다. 이러한 경우 같은 위치에 배치하는 작업이 중요하지 않습니다. 예를 들어 조직 테이블이 개별 직원에 대한 급여를 처리하는 데에만 사용되는 경우 부모/자식이 더 우수합니다.  
   
--   리프가 아닌 하위 트리가 자주 이동하며 성능이 매우 중요한 경우. 부모/자식 표현의 경우 한 계층에서 한 행의 위치를 변경하면 단일 행에 영향을 줍니다. 사용 중인 행의 위치를 변경 하면 *n* 개의 행에 영향을 줍니다. 여기서 n은 이동 하는 하위 트리의 노드 수입니다. *n* `hierarchyid`  
+-   리프가 아닌 하위 트리가 자주 이동하며 성능이 매우 중요한 경우. 부모/자식 표현의 경우 한 계층에서 한 행의 위치를 변경하면 단일 행에 영향을 줍니다. 사용 중인 행의 위치를 변경 하면 `hierarchyid` *n* 개의 행에 영향을 줍니다. 여기서 *n* 은 이동 하는 하위 트리의 노드 수입니다.  
   
      리프가 아닌 하위 트리가 자주 이동하며 성능이 중요하지만 대부분의 이동이 잘 정의된 계층 수준에서 발생하는 경우에는 상위 수준과 하위 수준을 두 개의 계층으로 분할하십시오. 이렇게 하면 모든 트리가 상위 계층의 리프 수준으로 이동됩니다. 예를 들어 서비스에서 호스팅하는 웹 사이트 계층의 경우 사이트에는 계층으로 정렬된 많은 페이지가 있습니다. 호스팅된 사이트는 사이트 계층의 다른 위치로 이동될 수 있지만 하위 페이지는 거의 다시 정렬되지 않습니다. 이는 다음을 통해 나타낼 수 있습니다.  
   
@@ -319,7 +318,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>직렬화 가능 트랜잭션 사용 예  
- **Org_BreadthFirst** 인덱스를 사용하면 **@last_child** 확인 시 범위 검색이 사용됩니다. 응용 프로그램에서 확인할 수 있는 다른 오류 사례 외에도 삽입 후의 중복 키 위반은 id가 같은 여러 직원을 추가 하려고 했음을 나타내므로 다시 계산 **@last_child** 해야 합니다. 다음 코드에서는 직렬화 가능 트랜잭션과 너비 우선 인덱스를 사용하여 새 노드 값을 컴퓨팅합니다.  
+ **Org_BreadthFirst** 인덱스를 사용하면 **@last_child** 확인 시 범위 검색이 사용됩니다. 응용 프로그램에서 확인할 수 있는 다른 오류 사례 외에도 삽입 후의 중복 키 위반은 id가 같은 여러 직원을 추가 하려고 했음을 나타내므로 다시 **@last_child** 계산 해야 합니다. 다음 코드에서는 직렬화 가능 트랜잭션과 너비 우선 인덱스를 사용하여 새 노드 값을 컴퓨팅합니다.  
   
 ```  
 CREATE TABLE Org_T2  
@@ -389,7 +388,7 @@ GO
   
   
 ###  <a name="finding-ancestors-by-using-the-clr"></a><a name="findclr"></a> CLR을 사용하여 상위 항목 찾기  
- 한 계층의 두 노드를 사용하는 일반적인 작업에는 수준이 가장 낮은 공통 상위 항목을 찾는 작업이 있습니다. 이 `hierarchyid` 형식은 둘 다에서 사용할 [!INCLUDE[tsql](../includes/tsql-md.md)] 수 있기 때문에 또는 CLR로 작성 될 수 있습니다. 그러나 성능이 향상되는 CLR을 사용하는 것이 좋습니다.  
+ 한 계층의 두 노드를 사용하는 일반적인 작업에는 수준이 가장 낮은 공통 상위 항목을 찾는 작업이 있습니다. 이 [!INCLUDE[tsql](../includes/tsql-md.md)] `hierarchyid` 형식은 둘 다에서 사용할 수 있기 때문에 또는 CLR로 작성 될 수 있습니다. 그러나 성능이 향상되는 CLR을 사용하는 것이 좋습니다.  
   
  다음 CLR 코드를 사용하여 상위 항목을 나열하고 수준이 가장 낮은 공통 상위 항목을 찾을 수 있습니다.  
   
@@ -497,7 +496,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="moving-subtrees"></a><a name="BKMK_MovingSubtrees"></a> 하위 트리 이동  
- 다른 일반적인 작업은 하위 트리를 이동하는 것입니다. 아래 절차는의 **@oldMgr** 하위 트리를 사용 하 여의 **@oldMgr** **@newMgr**하위 트리를 포함 합니다.  
+ 다른 일반적인 작업은 하위 트리를 이동하는 것입니다. 아래 절차는의 하위 트리를 사용 하 여 **@oldMgr** **@oldMgr** 의 하위 트리를 포함 **@newMgr** 합니다.  
   
 ```  
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 84ababe0-166e-4b1e-903b-bee6c1f005e7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 26726e29bf841bef603249dedec73075e02ebe10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2be4f22066df411b3b54d95bbfb74ddf47c2f23e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012352"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030814"
 ---
 # <a name="audit-statement-permission-event-class"></a>Audit Statement Permission 이벤트 클래스
   **Audit Statement Permission** 이벤트 클래스는 문 사용 권한(예: CREATE TABLE)이 사용될 때마다 발생합니다.  

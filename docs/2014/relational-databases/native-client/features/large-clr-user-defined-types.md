@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b65eb61d-ccf6-49c0-98e7-9a4ef4b2f790
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 62835f917283d5d244f3347149d8572205c01d2e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 27f0c13caea8c4aca63d78238509c6d05f1bf7bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707274"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047921"
 ---
 # <a name="large-clr-user-defined-types"></a>큰 CLR 사용자 정의 형식
   SQL Server 2005에서는 CLR(공용 언어 런타임)에서의 UDT(사용자 정의 형식) 크기가 8,000바이트로 제한되었습니다. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상 버전에서는 이 제한이 더 이상 적용되지 않습니다. 이제 CLR UDT가 LOB(Large Object) 형식과 비슷하게 처리됩니다. 즉, 8,000바이트보다 작거나 같은 UDT는 SQL Server 2005에서와 동일하게 처리되나 이보다 큰 UDT도 지원되며 이 경우 크기가 "제한 없음"으로 보고됩니다.  

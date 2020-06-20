@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 41775a529d34aa5ca457f92c9d26e327b74705ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 809e4c86f14abf4ddda70b689755798cd1d0682b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721915"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064680"
 ---
 # <a name="replication-agents-overview"></a>복제 에이전트 개요
   복제는 에이전트라는 여러 독립 실행형 프로그램을 사용하여 변경 내용 추적 및 데이터 배포와 연관된 태스크를 수행합니다. 기본적으로 복제 에이전트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트에서 예약된 작업으로 실행되므로 해당 작업을 실행하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트가 실행 중이어야 합니다. 복제 에이전트는 명령줄이나 RMO(복제 관리 개체)를 사용하는 애플리케이션에서 실행할 수도 있습니다. 복제 에이전트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터 및 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 관리할 수 있습니다.  

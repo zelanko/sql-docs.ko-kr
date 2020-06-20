@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5e5bfe3faf83b0873a8b47c348df9cfd8138dacb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 857b31d844f7ab317167ee10c03cffef0d436cca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771639"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924290"
 ---
 # <a name="set-parameter-value-dialog-box"></a>매개 변수 값 설정 대화 상자
   **매개 변수 값 설정** 대화 상자를 사용하여 패키지 및 프로젝트에 대한 매개 변수 및 연결 관리자 속성 값을 설정할 수 있습니다.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c9ebad419585de0136708ea85e522f890dceac38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07144e6ead5d968ec116b9cc0ef2abd6736657b0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835579"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923284"
 ---
 # <a name="edit-the-oracle-database-properties"></a>Oracle 데이터베이스 속성 편집
   속성 편집기에서 Oracle 탭을 사용하여 새 인스턴스 마법사의 CDC 데이터베이스 만들기 페이지에 제공한 설명을 변경하고 Oracle 로그 마이닝 데이터베이스 연결 정보를 변경할 수 있습니다.  

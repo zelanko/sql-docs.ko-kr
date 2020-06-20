@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ec85083e634123497c707f3028285ec1300ff2d4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e815007bc48260f95a573f9459ede09d3e585927
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707090"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055877"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM 지원(ODBC)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 ODBC에서는 향상된 FILESTREAM 기능을 지원합니다. 이 기능에 대 한 자세한 내용은 [FILESTREAM 지원](../features/filestream-support.md)을 참조 하세요. FILESTREAM에 대 한 ODB 지원을 보여 주는 샘플은 [ODBC&#41;&#40;filestream을 사용 하 여 증분 방식으로 데이터 전송 및 수신 ](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)을 참조 하세요.  

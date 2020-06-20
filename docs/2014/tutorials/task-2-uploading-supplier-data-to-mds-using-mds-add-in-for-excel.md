@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 598deb57-e0cc-4e0a-aeb1-94432c094c67
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4e3cd4cecd88bcad83c6e9f2a59ecd5f225fb02a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5e825829eb70b695a619df8caaa59788d0ad413f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487697"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064768"
 ---
 # <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>태스크 2: Excel용 MDS 추가 기능을 사용하여 MDS에 공급자 데이터 업로드
   이 작업에서는 **Excel용 MDS 추가 기능**를 사용 하 여 정리 된 데이터와 공급자 데이터를 **MDS** 에 게시 합니다. 이전 단원에서 만든 **Suppliers** 모델에 **공급자** 라는 엔터티를 만듭니다. 이 엔터티는 Excel 파일의 각 열에 대한 특성을 갖습니다. 공급자 엔터티의 Code 및 Name 특성은 Excel의 공급자 이름 및 **공급자** **이름** 열에 해당 합니다.  
   
-1.  **Excel**에서 **정리 및 일치 하는 Suppliers .xls** 를 엽니다.  
+1.  **Excel**에서 **정리 및 일치 Suppliers.xls** 을 엽니다.  
   
 2.  **Ctrl + A** 를 눌러 전체 데이터를 선택 합니다. 스프레드시트에서 전체 데이터를 선택 하는 것이 **중요** 합니다.  
   
@@ -34,9 +33,9 @@ ms.locfileid: "81487697"
   
     1.  **새 연결 만들기**를 선택하고 **새로 만들기** 단추를 클릭합니다.  
   
-    2.  **새 연결 추가** 대화 상자에서 **설명** 에 **Local MDS server** 를 입력 하 고/localhost/MDS **서버 주소**에는 **http:\/** 를 입력 한 다음 **확인** 을 클릭 하 여 대화 상자를 닫습니다.  
+    2.  **새 연결 추가** 대화 상자에서 **설명** 에 **Local MDS server** 를 입력 하 고/localhost/MDS **서버 주소**에는 **http: \/ ** 를 입력 한 다음 **확인** 을 클릭 하 여 대화 상자를 닫습니다.  
   
-6.  **연결 관리** 대화 상자에서 **로컬 MDS 서버** (`http://localhost/MDS`)를 선택 하 고 **테스트** 를 클릭 하 여 연결을 테스트 합니다. 메시지 상자에서 **확인** 을 클릭합니다.  
+6.  **연결 관리** 대화 상자에서 **로컬 MDS 서버** ()를 선택 하 고 `http://localhost/MDS` **테스트** 를 클릭 하 여 연결을 테스트 합니다. 메시지 상자에서 **확인** 을 클릭합니다.  
   
 7.  **연결** 을 클릭 하 여 MDS 서버에 연결 합니다.  
   

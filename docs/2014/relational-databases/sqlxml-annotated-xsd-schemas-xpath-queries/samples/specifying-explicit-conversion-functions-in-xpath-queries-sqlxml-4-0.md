@@ -14,23 +14,22 @@ helpviewer_keywords:
 ms.assetid: 1111cb5d-2bd9-4bdb-8de2-dc0e47452dd6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d2153e92f87e87ef152542a1934b9cdfd596fef9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07e2e67c1c30302c6d3e758f76805e92e509f6c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717753"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002870"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 명시적 변환 함수 지정(SQLXML 4.0)
   다음 예에서는 XPath 쿼리에 명시적 변환 함수를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 샘플 스키마에 대 한 자세한 내용은 [예제 주석 XSD schema For XPath 예제 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)를 참조 하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. number() 명시적 변환 함수 사용  
  `number()` 함수는 인수를 숫자로 변환합니다.  
   
- **ContactID** 의 값이 숫자가 아닌 경우 다음 쿼리는 **ContactID** 를 숫자로 변환 하 고 값 4와 비교 합니다. 그런 다음 쿼리는 숫자 값이 4 인 **ContactID** 특성을 사용 하 여 컨텍스트 노드의 모든 ** \< Employee>** 요소 자식을 반환 합니다.  
+ **ContactID** 의 값이 숫자가 아닌 경우 다음 쿼리는 **ContactID** 를 숫자로 변환 하 고 값 4와 비교 합니다. 그런 다음 쿼리는 **\<Employee>** 숫자 값이 4 인 **ContactID** 특성을 사용 하 여 컨텍스트 노드의 모든 요소 자식을 반환 합니다.  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -79,7 +78,7 @@ ms.locfileid: "82717753"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. string() 명시적 변환 함수 사용  
  `string()` 함수는 인수를 문자열로 변환합니다.  
   
- 다음 쿼리는 **ContactID** 을 문자열로 변환 하 고 문자열 값 "4"와 비교 합니다. 이 쿼리는 **ContactID** 를 사용 하 여 컨텍스트 노드의 모든 ** \< Employee>** 요소 자식을 반환 합니다.  
+ 다음 쿼리는 **ContactID** 을 문자열로 변환 하 고 문자열 값 "4"와 비교 합니다. 이 쿼리는 **\<Employee>** 문자열 값이 "4" 인 **ContactID** 를 사용 하 여 컨텍스트 노드의 모든 요소 자식을 반환 합니다.  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  

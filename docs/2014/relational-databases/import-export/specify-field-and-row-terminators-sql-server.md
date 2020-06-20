@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5f00a8330673dc15eed57f770635a251d5aa97e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 548beeae68f5585c5cf2ba56b67027532ab43b71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011851"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026587"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>필드 및 행 종결자 지정(SQL Server)
   문자 데이터 필드의 경우 데이터 파일의 각 필드 끝은 *필드 종결자* 를, 그리고 각 행의 끝은 필요에 따라 *행 종결자*를 사용해 표시할 수 있습니다. 종결 문자는 프로그램이 한 개의 필드 또는 행이 끝나고 다른 필드 또는 행이 시작되는 부분을 읽도록 나타내는 한 가지 방법입니다.  
@@ -56,7 +55,7 @@ ms.locfileid: "66011851"
 >  **bcp** 를 대화형으로 사용하고 \n(줄 바꿈)을 행 종결자로 지정하면 **bcp** 가 \r(캐리지 리턴) 문자를 접두사로 자동 지정하므로 \r\n이 행 종결자가 됩니다.  
   
 ## <a name="specifying-terminators-for-bulk-export"></a>대량 내보내기를 위한 종결자 지정  
- 또는 `nchar` 데이터를 대량 `char` 으로 내보내거나 기본 종결자 이외의 종결자를 사용 하려는 경우 **bcp** 명령에 종결자를 지정 해야 합니다. 다음 중 한 가지 방법으로 종결자를 지정할 수 있습니다.  
+ `char`또는 데이터를 대량으로 내보내거나 `nchar` 기본 종결자 이외의 종결자를 사용 하려는 경우 **bcp** 명령에 종결자를 지정 해야 합니다. 다음 중 한 가지 방법으로 종결자를 지정할 수 있습니다.  
   
 -   필드별로 종결자를 지정하는 서식 파일을 사용합니다.  
   
@@ -127,8 +126,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
     |한정자|Description|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **= '*`field_terminator`*'**|문자 및 유니코드 문자 데이터 파일에 사용할 필드 종결자를 지정합니다.<br /><br /> 기본값은 \t(탭 문자)입니다.|  
-    |ROWTERMINATOR **= '*`row_terminator`*'**|문자 및 유니코드 문자 데이터 파일에 사용할 행 종결자를 지정합니다.<br /><br /> 기본값은 \n(줄 바꿈 문자)입니다.|  
+    |FIELDTERMINATOR **= ' *`field_terminator`* '**|문자 및 유니코드 문자 데이터 파일에 사용할 필드 종결자를 지정합니다.<br /><br /> 기본값은 \t(탭 문자)입니다.|  
+    |ROWTERMINATOR **= ' *`row_terminator`* '**|문자 및 유니코드 문자 데이터 파일에 사용할 행 종결자를 지정합니다.<br /><br /> 기본값은 \n(줄 바꿈 문자)입니다.|  
   
      자세한 내용은 [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)를 참조하세요.  
   
@@ -169,7 +168,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
   
 |옵션|attribute|  
 |------------|---------------|  
-|DATAFILETYPE **= '`char`'**|데이터 필드가 데이터 문자로 로드되도록 지정합니다.|  
+|DATAFILETYPE **= ' `char` '**|데이터 필드가 데이터 문자로 로드되도록 지정합니다.|  
 |FIELDTERMINATOR **='** `,` **'**|쉼표(`,`)를 필드 종결자로 지정합니다.|  
 |ROWTERMINATOR **='** `\n` **'**|행 종결자를 줄 바꿈 문자로 지정합니다.|  
   

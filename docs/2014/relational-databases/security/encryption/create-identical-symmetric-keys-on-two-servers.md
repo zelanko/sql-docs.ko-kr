@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 1ff075880833be8179697cb4047babee67cfe61e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 38eaccffff89b0be7e59f628fcfb9b6e772a02b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957232"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063187"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>두 서버에서 동일한 대칭 키 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 서로 다른 두 서버에서 동일한 대칭 키를 만드는 방법에 대해 설명합니다. ciphertext를 해독하려면 암호화하는 데 사용된 키가 필요합니다. 단일 데이터베이스에서 암호화와 암호 해독이 모두 수행되는 경우 키가 데이터베이스에 저장되며 사용 권한에 따라 암호화와 암호 해독에 모두 사용할 수 있습니다. 그러나 암호화와 암호 해독이 개별 데이터베이스나 개별 서버에서 수행되는 경우 한 데이터베이스에 저장된 키를 다른 데이터베이스에서 사용할 수 없습니다.  

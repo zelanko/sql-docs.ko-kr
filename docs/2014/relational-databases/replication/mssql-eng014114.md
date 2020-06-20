@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f5f04590-e1c6-40d8-ab2b-98c791a0fc44
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0afebe3d8e974ac4920a6f75bf544a13027b360e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ba2a1fde59f55eecbfeeec46555567cde964f8d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811005"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049304"
 ---
 # <a name="mssql_eng014114"></a>MSSQL_ENG014114
     
@@ -59,7 +58,7 @@ ms.locfileid: "68811005"
     go  
     ```  
   
-     [sp_addserver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql) 저장 프로시저를 실행한 후에 @[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 내용을 적용하려면 @SERVERNAME 서비스를 다시 시작해야 합니다.  
+     [sp_addserver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql) 저장 프로시저를 실행한 후에 @@SERVERNAME 변경 내용을 적용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 다시 시작해야 합니다.  
   
      클러스터형 인스턴스에 대해 @@SERVERNAME 값이 올바르지 않으면 클러스터 관리자를 사용하여 해당 이름을 변경해야 합니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
   

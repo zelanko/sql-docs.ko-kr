@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 801a731db6c5b31bc479d1a3f6079c45ad9a7c04
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63215795"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063606"
 ---
 # <a name="delete-a-workload-group"></a>작업 그룹 삭제
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 Transact-SQL을 사용하여 작업 그룹 또는 리소스 풀을 삭제할 수 있습니다.  
@@ -79,7 +78,7 @@ ms.locfileid: "63215795"
   
     -   `DROP WORKLOAD GROUP` 문을 실행했지만 변경 내용을 적용하기 위해 세션을 명시적으로 중지하지 않으려는 경우 DROP 문을 실행하기 이전의 이름을 사용하여 그룹을 다시 만든 다음 해당 그룹을 원래 리소스 풀로 이동하십시오.  
   
-3.  `ALTER RESOURCE GOVERNOR RECONFIGURE` 문을 실행 합니다.  
+3.  문을 실행 `ALTER RESOURCE GOVERNOR RECONFIGURE` 합니다.  
   
 ### <a name="example-transact-sql"></a>예제(Transact-SQL)  
  다음 예에서는 `groupAdhoc`이라는 작업 그룹을 삭제합니다.  

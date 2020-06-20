@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d40e3f05-54e8-4c4b-807a-0b06f446079b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: abe35e51764a7d16c49c8d15d9e2031e0cdabe05
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9fd6535c8f2c0f77efc1cc2871de77d29cd6615
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067332"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939725"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>관계 삭제(SSAS 테이블 형식)
   다이어그램 뷰의 모델 디자이너나 관계 관리 대화 상자를 사용하여 기존 관계를 삭제할 수 있습니다. 테이블 형식 모델에서 관계를 사용하는 방법에 대한 자세한 내용은 [관계&#40;SSAS 테이블 형식&#41;](relationships-ssas-tabular.md)를 참조하세요.  

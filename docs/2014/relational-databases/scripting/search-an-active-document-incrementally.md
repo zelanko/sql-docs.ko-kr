@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9eebc2c66143d4728a05fc3df0f9ac02af9a5288
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a7c378345848edf8c3a4de8c6d8d6c50ce101389
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703728"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009348"
 ---
 # <a name="search-an-active-document-incrementally"></a>활성 문서에서 입력하는 순서대로 검색
   텍스트를 입력하여 하나의 문서나 창을 증분식으로 검색할 수 있습니다. 검색 작업은 문서나 창에서 증분 검색 중에 입력된 문자와 일치하는 첫 번째 문자 집합을 강조 표시합니다. 증분 검색은 숨겨진 텍스트를 제외하고 문서나 창에 있는 모든 텍스트를 자동으로 검색합니다.  

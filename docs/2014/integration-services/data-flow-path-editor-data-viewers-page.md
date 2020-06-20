@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 38b5f077-9083-406a-a9a4-8bc39972dda2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 39d263d85b8956da4366134393d48405ebe104ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33d0d6ec4e462b38079c43bbb47e30feb4d34ed8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060077"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917063"
 ---
 # <a name="data-flow-path-editor-data-viewers-page"></a>데이터 흐름 경로 편집기(데이터 뷰어 페이지)
   **데이터 흐름 경로 편집기** 대화 상자의 **데이터 뷰어** 페이지를 사용하여 경로에 연결된 데이터 뷰어를 관리할 수 있습니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 16961116-57ac-4eef-8037-791b26ade548
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4cede183f39ed7aca5bfe6bc7f0226c96da6ca84
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89f4d5a65dc7c4a32fc0e90cec2226cffa12c6a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245655"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995044"
 ---
 # <a name="configure-login-auditing-sql-server-management-studio"></a>로그인 감사 구성(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 로그인 작업을 모니터링하도록 로그인 감사를 구성하는 방법에 대해 설명합니다. 로그인 감사를 구성하여 다음 이벤트의 오류 로그에 쓸 수 있습니다.  
