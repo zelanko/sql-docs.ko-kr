@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 39f76bc7-94e6-4dbc-bfa5-d56f4430bb26
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2ba357fc3910779573ffa36f3070b55c08ced8ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ffea6cf93eb1e9e5f137c4151e0f0d9e4d2ca4a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388721"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045745"
 ---
 # <a name="deployment-topologies-for-sql-server-bi-features-in-sharepoint"></a>SharePoint의 SQL Server BI 기능에 대한 배포 토폴로지
   이 항목에서는 SharePoint 2010 및 SharePoint 2013 환경에 SQL Server Business Intelligence 기능 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] 을 설치하기 위한 일반적인 토폴로지에 대해 설명합니다. 예를 들어 단일 서버와 3계층 설치에 대해 설명합니다.  
@@ -53,7 +52,7 @@ ms.locfileid: "81388721"
 ##  <a name="sharepoint-2013-example-deployment-topologies"></a><a name="bkmk_example_deployments_2013"></a>SharePoint 2013 예제 배포 토폴로지  
  SQL Server 설치 옵션 **SharePoint용 PowerPivot** 은 SharePoint에 대한 종속성이 없으며 SharePoint 개체 모델이나 인터페이스를 사용하여 통합을 지원하지 않습니다. 따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 Windows Server 2008 R2 이상 버전을 실행하는 컴퓨터에 설치할 수 있습니다. SharePoint 팜에서 애플리케이션 서버가 될 수 있지만, 애플리케이션 서버일 필요는 없습니다. 구성 단계 중 하나는 Excel Services가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 실행하는 서버를 가리키도록 하는 것입니다. 로드 균형 조정 및 내결함성을 위해 SharePoint 모드로 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버를 여러 대 설치하고 등록하는 것이 좋습니다.  
   
- Sharepoint 모드에는 sharepoint server 2013이 필요 하며 sharepoint 서비스 응용 프로그램 아키텍처를 활용 합니다. ** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **  
+ Sharepoint ** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 모드** 에는 sharepoint server 2013이 필요 하며 Sharepoint 서비스 응용 프로그램 아키텍처를 활용 합니다.  
   
  다음 섹션에서는 일반적인 배포 토폴로지를 보여 줍니다.  
   
@@ -68,11 +67,11 @@ ms.locfileid: "81388721"
 |**fs**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]서비스 응용 프로그램. 기본 이름은 **기본 PowerPivot 서비스 애플리케이션**입니다.|  
 |**3**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 만드는 등 기존 설치를 업데이트하는 개별 절차에 이 항목을 사용할 수도 있습니다.|  
 |**3-4**|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 미디어 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 기능 팩에서 SharePoint용 보고 서비스 추가 기능을 설치합니다.|  
-|**5**|**Sppowerpivot .msi** 를 실행 하 여 데이터 공급자, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 및 데이터 새로 고침 예약을 설치 합니다.|  
+|**5**|**spPowerPivot.msi** 를 실행 하 여 데이터 공급자, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 및 데이터 새로 고침 예약을 설치 합니다.|  
 |**6**|SharePoint 모드의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버. Excel Services 애플리케이션 **데이터 모델 설정** 에서 이 서버를 사용하도록 구성합니다.|  
 |**일**|SharePoint 콘텐츠, 구성 및 서비스 애플리케이션 데이터베이스입니다.|  
   
- ![SharePoint 설정은](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정") Microsoft SQL Server 연결 ()https://connect.microsoft.com/SQLServer/Feedback) [을 통해 사용자 의견 및 연락처 정보를 제출](https://connect.microsoft.com/SQLServer/Feedback) 합니다.  
+ ![SharePoint 설정은](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정") [Microsoft SQL Server 연결 ()을 통해 사용자 의견 및 연락처 정보를 제출](https://connect.microsoft.com/SQLServer/Feedback) https://connect.microsoft.com/SQLServer/Feedback) 합니다.  
   
 ###  <a name="powerpivot-for-sharepoint-2013-single-server-deployment"></a><a name="bkmk_powerpivot_sharepoint2013_1server"></a>SharePoint용 PowerPivot 2013 단일 서버 배포  
  단일 서버 배포는 테스트용으로는 유용하지만 프로덕션 배포에는 권장되지 않습니다.  
@@ -91,9 +90,9 @@ ms.locfileid: "81388721"
 ###  <a name="powerpivot-for-sharepoint-2013-two-server-deployment"></a><a name="bkmk_powerpivot_sharepoint2013_2server"></a>SharePoint용 PowerPivot 2013 2 서버 배포  
  다음 두 서버 배포에서 SharePoint 모드의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 SQL Server 데이터베이스 엔진은 SharePoint가 아니라 별도의 서버에서 실행됩니다. SharePoint 2013용 [!INCLUDE[ssGeminiLongvnext](../../includes/ssgeminilongvnext-md.md)] 설치 관리자 패키지(**spPowerPivot.msi**)가 SharePoint 서버에 설치됩니다.  
   
- [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)]는 SharePoint Server 2013를 확장 하 여 서버 쪽 데이터 새로 고침 처리, 데이터 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 공급자, 갤러리, 통합 문서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 및 고급 데이터 모델을 사용 하는 Excel 통합 문서에 대 한 관리 지원을 추가 합니다.  
+ [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)]는 SharePoint Server 2013를 확장 하 여 서버 쪽 데이터 새로 고침 처리, 데이터 공급자, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 및 고급 데이터 모델을 사용 하는 Excel 통합 문서에 대 한 관리 지원을 추가 합니다.  
   
- 설치 관리자 패키지는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 기능 팩의 일부로 사용할 수 있습니다. 기능 팩은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 다운로드 센터의 microsoft [® SQL Server® 2014 PowerPivot® For microsoft® SharePoint®](https://go.microsoft.com/fwlink/?LinkID=296473) (HYPERLINK "<https://go.microsoft.com/fwlink/?LinkID=296473>" \t "_blank" <https://go.microsoft.com/fwlink/?LinkID=296473>)에서 다운로드할 수 있습니다.  
+ 설치 관리자 패키지는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 기능 팩의 일부로 사용할 수 있습니다. 기능 팩은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 다운로드 센터의 microsoft [® SQL Server® 2014 PowerPivot® for Microsoft® SharePoint®](https://go.microsoft.com/fwlink/?LinkID=296473) (HYPERLINK " <https://go.microsoft.com/fwlink/?LinkID=296473> " \t "_blank")에서 다운로드할 수 있습니다 <https://go.microsoft.com/fwlink/?LinkID=296473> .  
   
  ![SSAS PowerPivot 모드 2 서버 배포](../../analysis-services/media/as-powerpivot-mode-2server-deployment.gif "SSAS PowerPivot 모드 2 서버 배포")  
   

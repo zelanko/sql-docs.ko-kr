@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6da74e3a-4388-4907-81cb-987389bae467
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ea6c92a75d09164fdb8cd8dd6398ca20fd722027
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 43b37ae16638e461e37edaead83cd9ceedc1c86d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706304"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022661"
 ---
 # <a name="sqlconnect"></a>SQLConnect
   연결이 열릴 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 SQL_COPT_SS_MUTUALLY_AUTHENTICATED 및 SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD를 연결을 여는 데 사용하는 인증 방법으로 설정합니다. Spn에 대 한 자세한 내용은 [클라이언트 연결 &#40;ODBC&#41;에서 spn&#41; &#40;서비스 사용자 이름 ](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)을 참조 하세요.  

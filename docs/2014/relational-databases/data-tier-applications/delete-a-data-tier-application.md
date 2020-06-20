@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efbd01499940490fd85dfaf1e0786d26b722749c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3fd058eb14b45fe9f5aaaea4e9e37c8741c19d6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782738"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970288"
 ---
 # <a name="delete-a-data-tier-application"></a>데이터 계층 애플리케이션 삭제
   데이터 계층 애플리케이션 삭제 마법사 또는 Windows PowerShell 스크립트를 사용하여 데이터 계층 애플리케이션을 삭제할 수 있습니다. 연결된 데이터베이스를 보존, 분리 또는 삭제할지를 지정할 수 있습니다.  
@@ -101,7 +100,7 @@ ms.locfileid: "72782738"
   
  데이터베이스에 대한 데이터 및 로그 파일이 영구적으로 삭제됩니다.  
   
- 이전- **소개** 페이지로 돌아갑니다. ** \< **  
+ ** \< 이전** - **소개** 페이지로 돌아갑니다.  
   
  **다음 >** - **요약** 페이지로 진행합니다.  
   
@@ -112,7 +111,7 @@ ms.locfileid: "72782738"
   
  **선택 항목 요약 검토** - 상자에 표시된 DAC, 데이터베이스 및 삭제 방법을 검토합니다. 정보가 올바르면 **다음** 또는 **마침** 을 선택하여 DAC를 삭제합니다. DAC 및 데이터베이스 정보가 올바르지 않으면 **취소** 를 선택하고 올바른 DAC를 선택합니다. 삭제 방법이 올바르지 않으면 **이전** 을 선택하여 **방법 선택** 페이지로 돌아간 후 다른 방법을 선택합니다.  
   
- 이전-다른 삭제 방법을 선택할 수 있도록 **방법 선택** 페이지로 돌아갑니다. ** \< **  
+ ** \< 이전** -다른 삭제 방법을 선택할 수 있도록 **방법 선택** 페이지로 돌아갑니다.  
   
  **다음 &gt;** - 이전 페이지에서 선택한 방법을 사용하여 DAC 인스턴스를 삭제하고 **데이터 계층 애플리케이션 삭제** 페이지로 진행합니다.  
   

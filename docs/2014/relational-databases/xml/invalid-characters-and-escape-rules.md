@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bb3f627cd4d4a3428d81cb89906be273d7c1a586
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 774e7e689dab8b329ec11d2c2c2a7286592c8bdb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82715562"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046721"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>잘못된 문자 및 이스케이프 규칙
   이 항목에서는 FOR XML 절에서 잘못된 XML 문자를 처리하는 방법에 대해 설명하고 XML 이름의 잘못된 문자에 대한 이스케이프 규칙을 나열합니다.  

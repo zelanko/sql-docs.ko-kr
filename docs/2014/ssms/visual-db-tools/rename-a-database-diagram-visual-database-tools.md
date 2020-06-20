@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 27c90b54-cc21-4f2f-a529-eacdc41f302e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8f177f8b2c399be020817ccc4228c58f11976512
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 374ca1c0b12c968a1beebd86e742263982dfa470
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63228341"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040770"
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>데이터베이스 다이어그램 이름 바꾸기(Visual Database Tools)
   개체 탐색기에서 데이터베이스 다이어그램의 이름을 바꿀 수 있습니다. 데이터베이스에 대한 ALTER 권한이 필요합니다.  

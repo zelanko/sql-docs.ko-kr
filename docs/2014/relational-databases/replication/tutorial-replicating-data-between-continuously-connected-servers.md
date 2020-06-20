@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 32b97d456c42eab89511d8f5a9d1924914ea81ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c63e48d4c5f5bfad6fe50155cd7fd7a088c2178
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655394"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047621"
 ---
 # <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>자습서: 계속 연결된 서버 간 데이터 복제
   복제는 계속 연결된 서버 간에 데이터를 이동할 때 발생하는 문제를 해결하는 좋은 방법입니다. 복제 마법사를 사용하면 복제 토폴로지를 쉽게 구성하고 관리할 수 있습니다. 이 자습서에서는 계속 연결된 서버에 대해 복제 토폴로지를 구성하는 방법에 대해 설명합니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "62655394"
     >  복제는 기본적으로 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 에 설치되지 않습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 **sysadmin** 고정 서버 역할의 멤버인 로그인을 사용 하 여 게시자 및 구독자에 연결 해야 합니다.  
+>  에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **sysadmin** 고정 서버 역할의 멤버인 로그인을 사용 하 여 게시자 및 구독자에 연결 해야 합니다.  
   
  **이 자습서를 완료 하는 데 소요 되는 예상 시간: 30 분**  
   

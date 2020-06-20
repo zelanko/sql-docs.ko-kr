@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c78acd4e-8668-4abc-9bc9-6ad381965863
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 35bd61c12933dac25ac90d8b56afb0e17b44d3ab
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bf46fed47817ed94ea2382f2147df254f2986aec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706331"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022751"
 ---
 # <a name="sqlcolumnprivileges"></a>SQLColumnPrivileges
   **Sqlcolumnprivileges** *CatalogName*, *SchemaName*, *TableName*또는 *ColumnName* 매개 변수에 대 한 값이 있는지 여부를 SQL_SUCCESS를 반환 합니다. 이러한 매개 변수에 잘못 된 값이 사용 되는 경우 **Sqlfetch** SQL_NO_DATA 반환 합니다.  

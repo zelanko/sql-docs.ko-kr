@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22b22251188f4b175c24610833aa1b74bdb0badb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63131802"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055249"
 ---
 # <a name="overview-smo"></a>개요(SMO)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SMO (management Objects)는의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]프로그래밍 방식 관리를 위해 디자인 된 개체입니다. SMO를 사용하면 사용자 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 애플리케이션을 빌드할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 관리할 수 있는 강력하고 확장성 있는 애플리케이션이지만 SMO 애플리케이션을 사용할 때 더 나은 결과를 얻을 수 있는 경우도 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SMO (management Objects)는의 프로그래밍 방식 관리를 위해 디자인 된 개체 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 입니다. SMO를 사용하면 사용자 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 애플리케이션을 빌드할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 관리할 수 있는 강력하고 확장성 있는 애플리케이션이지만 SMO 애플리케이션을 사용할 때 더 나은 결과를 얻을 수 있는 경우도 있습니다.  
   
  예를 들어 새로운 사용자의 요구 사항을 충족하고 교육 비용을 줄이기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 태스크를 제어하는 사용자 애플리케이션을 단순하게 만들어야 하는 경우, 또는 사용자 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 만들어야 하거나 인덱스를 효율적으로 생성하고 모니터링하는 애플리케이션을 만들어야 하는 경우 SMO 애플리케이션을 사용할 수 있습니다. 또한 타사 하드웨어나 소프트웨어를 데이터베이스 관리 애플리케이션에 원활하게 통합하기 위해 SMO 애플리케이션을 사용할 수도 있습니다.  
   
@@ -104,13 +103,13 @@ ms.locfileid: "63131802"
   
  실행 캡처를 사용하면 일반적으로 실행할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리를 캡처할 수 있습니다. 이 기능을 사용하면 SMO 프로그래머가 스크립트를 지연시키거나, 나중에 실행할 수 있도록 저장하거나, 최종 사용자에게 미리 보기를 제공할 수 있습니다. 예를 들어 `create database`, `create table` 및 `create index` 문을 한 번에 전송한 다음 세 개의 순차적 단계로 실행할 수 있습니다. 이 기능은 사용자가 <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> 개체를 사용하여 제어합니다.  
   
- **WMI 공급자**  
+ **WMI Provider**  
   
  WMI 공급자 개체는 SMO로 래핑됩니다. 따라서 SMO 프로그래머는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] WMI 공급자의 네임스페이스와 세부 정보로 표현되는 프로그래밍 모델을 이해하지 못한 상태에서도 SMO 클래스와 매우 유사한 간단한 개체 모델을 사용할 수 있습니다. WMI 공급자를 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스, 별칭, 그리고 클라이언트 및 서버 네트워크 라이브러리를 구성할 수 있습니다.  
   
  **스크립팅**  
   
- SMO에서는 스크립팅 기능이 향상되어 `Scripter` 클래스로 이전되었습니다. 클래스 `Scripter` 는 종속성을 검색 하 고, 개체 간의 관계를 파악 하 고, 종속성 계층을 조작할 수 있도록 합니다. 기본 스크립팅 개체는 `Scripter` 개체입니다. 또한 종속성을 처리하고 진행 상태나 오류 이벤트에 응답하는 다양한 지원 개체가 있습니다.  
+ SMO에서는 스크립팅 기능이 향상되어 `Scripter` 클래스로 이전되었습니다. `Scripter`클래스는 종속성을 검색 하 고, 개체 간의 관계를 파악 하 고, 종속성 계층을 조작할 수 있도록 합니다. 기본 스크립팅 개체는 `Scripter` 개체입니다. 또한 종속성을 처리하고 진행 상태나 오류 이벤트에 응답하는 다양한 지원 개체가 있습니다.  
   
  `Scripter` 개체는 다음과 같은 고급 스크립팅 옵션을 지원합니다.  
   
@@ -134,7 +133,7 @@ ms.locfileid: "63131802"
 /Server/Database[@Name='Adventureworks2012']  
 ```  
   
- 개체에 대한 URN은 URN 속성을 참조하여 검색할 수 있습니다. Scripter 개체도 `Scripter` 개체의 메서드에 개체 참조를 전달하는 매개 변수로 URN을 사용합니다. 또한 `Server` 개체의 **GETSMOOBJECT 메서드에 대해** 메서드에 대해 URN을 지정할 수 있습니다. 이 기능을 사용하여 SMO 개체 인스턴스를 만들 수 있습니다.  
+ 개체에 대한 URN은 URN 속성을 참조하여 검색할 수 있습니다. Scripter 개체도 `Scripter` 개체의 메서드에 개체 참조를 전달하는 매개 변수로 URN을 사용합니다. 또한 개체의 **getsmoobject 메서드에 대해** 메서드에 대해 URN을 지정할 수 있습니다 `Server` . 이 기능을 사용하여 SMO 개체 인스턴스를 만들 수 있습니다.  
   
 ## <a name="new-sql-server-features-represented-in-smo"></a>SMO로 표현된 새로운 SQL Server 기능  
  **테이블 및 인덱스 분할**  

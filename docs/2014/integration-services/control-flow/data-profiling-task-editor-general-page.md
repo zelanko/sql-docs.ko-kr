@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8462f85dc6c804020f12b9bc989d683c5a4ad0ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72e81e6d34a386c04d18f050fb8010a3bcf6b7a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832233"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919264"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>데이터 프로파일링 태스크 편집기(일반 페이지)
   **데이터 프로파일링 태스크 편집기** 의 **일반** 페이지를 사용하여 다음 옵션을 구성할 수 있습니다.  
@@ -58,9 +57,9 @@ ms.locfileid: "62832233"
  **대상**  
  데이터 프로필 출력을 포함할 파일 연결 관리자 또는 패키지 변수를 지정합니다.  
   
--   **DestinationType** 옵션이 **FileConnection**으로 설정된 경우 **Destination** 옵션에 사용 가능한 파일 연결 관리자가 표시됩니다. 이러한 연결 관리자 중 하나를 선택하거나 \<새 파일 연결>을 선택하여 새 파일 연결 관리자를 만듭니다.  
+-   **DestinationType** 옵션이 **FileConnection**으로 설정된 경우 **Destination** 옵션에 사용 가능한 파일 연결 관리자가 표시됩니다. 이러한 연결 관리자 중 하나를 선택 하거나를 선택 \<New File connection> 하 여 새 파일 연결 관리자를 만듭니다.  
   
--   **DestinationType** 옵션이 **Variable**로 설정된 경우 **Destination** 옵션에 사용 가능한 패키지 변수가 **Destination** 목록으로 표시합니다. 이러한 변수 중 하나를 선택하거나 \<새 변수>를 선택하여 새 변수를 만듭니다.  
+-   **DestinationType** 옵션이 **Variable**로 설정된 경우 **Destination** 옵션에 사용 가능한 패키지 변수가 **Destination** 목록으로 표시합니다. 이러한 변수 중 하나를 선택 하거나을 선택 \<New Variable> 하 여 새 변수를 만듭니다.  
   
  **OverwriteDestination**  
  출력 파일이 이미 있는 경우 덮어쓸 것인지 여부를 지정합니다. 기본값은 **False**입니다. 이 속성의 값은 DestinationType 옵션이 FileConnection으로 설정된 경우에만 사용됩니다. DestinationType 옵션이 Variable로 설정된 경우 태스크에서는 변수의 이전 값을 항상 덮어씁니다.  
@@ -76,7 +75,7 @@ ms.locfileid: "62832233"
  데이터 프로필 뷰어를 엽니다. 독립 실행형 데이터 프로필 뷰어에는 데이터 프로파일링 태스크의 데이터 프로필 출력이 표시됩니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 내에서 데이터 프로파일링 태스크를 실행하고 데이터 프로필을 계산한 후에 이러한 프로필 출력을 볼 수 있습니다.  
   
 > [!NOTE]  
->  또한 *\<드라이브>* :\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 폴더에서 DataProfileViewer.exe를 실행하여 데이터 프로필 뷰어를 열 수도 있습니다.  
+>  *\<drive>*: 파일 \ 파일 (x86) 폴더에서 DataProfileViewer.exe를 실행 하 여 데이터 프로필 뷰어를 열 수도 있습니다. Program Files\Microsoft SQL Server\110\dts\binn  
   
 ## <a name="see-also"></a>참고 항목  
  [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](single-table-quick-profile-form-data-profiling-task.md)   

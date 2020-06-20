@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: 126b4c4c-2a1c-4701-a0ad-8de23fbd7306
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3bbf6c9640882ffca2bbdbf82b2ef2667c394096
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0c859bdd982fa7de586c9230754c571eb750944
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66090692"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061622"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>Finance Name 정책 구독 및 확인
   이 태스크에서는 Finance 데이터베이스에서 Finance 정책 범주를 구독하도록 구성한 다음 Finance Name 정책을 테스트합니다.  
   
 ### <a name="to-subscribe-to-the-finance-policy-category"></a>Finance 정책 범주를 구독하려면  
   
-1.  개체 탐색기에서 **데이터베이스**를 확장 하 고,를 `Finance`마우스 오른쪽 단추로 클릭 하 고 **정책**을 가리킨 다음 **범주**를 클릭 합니다.  
+1.  개체 탐색기에서 **데이터베이스**를 확장 하 고,를 마우스 오른쪽 단추로 클릭 `Finance` 하 고 **정책**을 가리킨 다음 **범주**를 클릭 합니다.  
   
-2.  범주에 대 한 구독 확인란을 선택 합니다. **Subscribed** `Finance`  
+2.  범주에 대 한 **구독** 확인란을 선택 합니다 `Finance` .  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

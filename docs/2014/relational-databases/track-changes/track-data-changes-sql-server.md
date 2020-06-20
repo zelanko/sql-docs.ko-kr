@@ -32,16 +32,15 @@ helpviewer_keywords:
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e9fb2a89aff63a69d7ad8df111d36f2b7ccafdd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63073997"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047182"
 ---
 # <a name="track-data-changes-sql-server"></a>데이터 변경 내용 추적(SQL Server)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 은 데이터베이스에서 데이터에 대한 변경 내용을 추적하는 [변경 데이터 캡처](#Capture) 및 [변경 내용 추적](#Tracking)과 같은 두 가지 기능을 제공합니다. 이러한 기능은 데이터베이스의 사용자 테이블에 적용된 DML 변경 내용(삽입, 업데이트 및 삭제 작업)을 애플리케이션에서 확인할 수 있게 해줍니다. 변경 데이터 캡처 및 변경 추적은 동일한 데이터베이스에서 설정할 수 있으며 특별한 고려 사항은 필요하지 않습니다. 변경 데이터 캡처 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 내용 추적을 지 원하는 버전은 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 은 데이터베이스에서 데이터에 대한 변경 내용을 추적하는 [변경 데이터 캡처](#Capture) 및 [변경 내용 추적](#Tracking)과 같은 두 가지 기능을 제공합니다. 이러한 기능은 데이터베이스의 사용자 테이블에 적용된 DML 변경 내용(삽입, 업데이트 및 삭제 작업)을 애플리케이션에서 확인할 수 있게 해줍니다. 변경 데이터 캡처 및 변경 추적은 동일한 데이터베이스에서 설정할 수 있으며 특별한 고려 사항은 필요하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]변경 데이터 캡처 및 변경 내용 추적을 지 원하는 버전은 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>변경 데이터 캡처 또는 변경 추적 사용의 이점  
  데이터베이스에서 변경된 데이터를 쿼리하는 기능은 일부 애플리케이션의 효율성을 위한 중요한 요구 사항입니다. 일반적으로 애플리케이션 개발자는 데이터 변경을 확인하기 위해 애플리케이션에서 트리거, 타임스탬프, 열 및 추가 테이블의 조합으로 사용자 지정 추적 방법을 구현해야 합니다. 이러한 애플리케이션을 만들기 위해서는 많은 구현 작업과 스키마 업데이트가 필요하며 높은 성능 오버헤드가 수반되는 경우도 많습니다.  
@@ -65,12 +64,12 @@ ms.locfileid: "63073997"
 ## <a name="feature-differences-between-change-data-capture-and-change-tracking"></a>변경 데이터 캡처와 변경 내용 추적 간의 기능 차이점  
  다음 목록에서는 변경 데이터 캡처와 변경 내용 추적 간의 기능 차이점을 보여 줍니다. 변경 데이터 캡처의 추적 메커니즘에는 트랜잭션 로그의 비동기 변경 캡처가 포함되어 있으므로 DML 작업 이후에 변경을 사용할 수 있습니다. 변경 내용 추적의 추적 메커니즘에는 DML 작업과 함께 동기 변경 내용 추적이 포함되어 있으므로 변경 정보를 즉시 사용할 수 있습니다.  
   
-|기능|변경 데이터 캡처|변경 내용 추적|  
+|기능|변경 데이터 캡처|Change tracking|  
 |-------------|-------------------------|---------------------|  
 |**추적된 변경 내용**|||  
 |DML 변경|예|예|  
 |**추적된 정보**|||  
-|기록 데이터|예|아니요|  
+|기록 데이터|예|예|  
 |열 변경 여부|예|예|  
 |DML 유형|yes|예|  
   
@@ -85,7 +84,7 @@ ms.locfileid: "63073997"
  이 섹션에서는 변경 데이터 캡처 보안 모델에 대해 설명합니다.  
   
  **구성 및 관리**  
- 데이터베이스에 대 한 변경 데이터 캡처를 사용 하거나 사용 하지 않도록 설정 하려면 transact-sql&#41;또는 [sp_cdc_disable_db &#40;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) `sysadmin` [&#40;sp_cdc_enable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) 호출자가 고정 서버 역할의 멤버 여야 합니다. 테이블 수준에서 변경 데이터 캡처를 사용 하거나 사용 하지 않도록 설정 하려면 [sp_cdc_enable_table 호출자가 &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql) 및 [sp_cdc_disable_table &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql) 를 sysadmin 역할의 멤버 이거나 데이터베이스 `database db_owner` 역할의 멤버 여야 합니다.  
+ 데이터베이스에 대 한 변경 데이터 캡처를 사용 하거나 사용 하지 않도록 설정 하려면 transact-sql&#41;또는 [sp_cdc_disable_db &#40;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) [&#40;sp_cdc_enable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) 호출자가 고정 서버 역할의 멤버 여야 합니다 `sysadmin` . 테이블 수준에서 변경 데이터 캡처를 사용 하거나 사용 하지 않도록 설정 하려면 [sp_cdc_enable_table 호출자가 &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql) 및 [sp_cdc_disable_table &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql) 를 sysadmin 역할의 멤버 이거나 데이터베이스 역할의 멤버 여야 합니다. `database db_owner`  
   
  서버 `sysadmin` 역할의 멤버와 `database db_owner` 역할의 멤버만 저장 프로시저를 사용하여 변경 데이터 캡처 작업의 관리를 지원할 수 있습니다.  
   
@@ -101,7 +100,7 @@ ms.locfileid: "63073997"
 |열 유형|변경 테이블에 변경 내용이 캡처되는지 여부|제한 사항|  
 |--------------------|---------------------------------------|-----------------|  
 |스파스 열|예|열 집합을 사용할 때는 변경 내용 캡처를 지원하지 않습니다.|  
-|계산 열|아니요|계산 열의 변경 내용은 추적할 수 없습니다. 열이 적합한 유형의 변경 테이블에 나타나지만 NULL 값을 갖습니다.|  
+|계산 열|예|계산 열의 변경 내용은 추적할 수 없습니다. 열이 적합한 유형의 변경 테이블에 나타나지만 NULL 값을 갖습니다.|  
 |XML|예|개별 XML 요소에 대한 변경 사항은 추적할 수 없습니다.|  
 |타임스탬프|예|변경 테이블의 데이터 형식은 이진으로 변환됩니다.|  
 |BLOB 데이터 형식|예|BLOB 열의 이전 이미지는 열 자체가 변경된 경우에만 저장됩니다.|  
@@ -125,7 +124,7 @@ ms.locfileid: "63073997"
  데이터베이스 미러링에 대한 자세한 내용은 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.  
   
 #### <a name="transactional-replication"></a>트랜잭션 복제  
- 변경 데이터 캡처 및 트랜잭션 복제는 동일한 데이터베이스에 함께 존재할 수 있지만 두 기능이 모두 설정된 경우 변경 테이블 채우기가 다르게 처리됩니다. 변경 데이터 캡처 및 트랜잭션 복제는 항상 동일한 [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql)프로시저를 사용하여 트랜잭션 로그에서 변경 내용을 읽습니다. 변경 데이터 캡처가 자체적으로 설정된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업은 `sp_replcmds`를 호출합니다. 동일한 데이터베이스에서 두 기능을 모두 사용 하는 경우 로그 판독기 에이전트를 `sp_replcmds`호출 합니다. 이 에이전트는 변경 테이블과 배포 데이터베이스 테이블을 모두 채웁니다. 자세한 내용은 [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md)을 참조하세요.  
+ 변경 데이터 캡처 및 트랜잭션 복제는 동일한 데이터베이스에 함께 존재할 수 있지만 두 기능이 모두 설정된 경우 변경 테이블 채우기가 다르게 처리됩니다. 변경 데이터 캡처 및 트랜잭션 복제는 항상 동일한 [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql)프로시저를 사용하여 트랜잭션 로그에서 변경 내용을 읽습니다. 변경 데이터 캡처가 자체적으로 설정된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업은 `sp_replcmds`를 호출합니다. 동일한 데이터베이스에서 두 기능을 모두 사용 하는 경우 로그 판독기 에이전트를 호출 `sp_replcmds` 합니다. 이 에이전트는 변경 테이블과 배포 데이터베이스 테이블을 모두 채웁니다. 자세한 내용은 [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md)을 참조하세요.  
   
  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 변경 데이터 캡처가 설정되어 있고 두 테이블에 캡처가 설정된 시나리오를 생각해 보십시오. 변경 테이블을 채우기 위해 캡처 작업은 `sp_replcmds`를 호출합니다. 데이터베이스에 트랜잭션 복제가 설정되고 게시가 만들어집니다. 그런 다음 데이터베이스에 로그 판독기 에이전트가 만들어지고 캡처 작업이 삭제됩니다. 로그 판독기 에이전트는 변경 테이블에 커밋된 마지막 로그 시퀀스 번호에서 로그를 계속 검색합니다. 이렇게 하면 변경 테이블의 데이터 일관성이 보장됩니다. 이 데이터베이스에서 트랜잭션 복제가 해제되면 로그 판독기 에이전트가 제거되고 캡처 작업이 다시 만들어집니다.  
   
@@ -175,7 +174,7 @@ ms.locfileid: "63073997"
   
 |||  
 |-|-|  
-|**Task**|**항목**|  
+|**Task**|**뒷부분**|  
 |변경 데이터 캡처의 개요를 제공합니다.|[변경 데이터 캡처 정보&#40;SQL Server&#41;](../track-changes/about-change-data-capture-sql-server.md)|  
 |데이터베이스 또는 테이블에서 변경 데이터 캡처를 사용하도록 설정하거나 사용하지 않도록 설정하는 방법에 대해 설명합니다.|[변경 데이터 캡처 설정 및 해제&#40;SQL Server&#41;](../track-changes/enable-and-disable-change-data-capture-sql-server.md)|  
 |변경 데이터 캡처를 관리 및 모니터링하는 방법을 설명합니다.|[변경 데이터 캡처 관리 및 모니터링&#40;SQL Server&#41;](../track-changes/administer-and-monitor-change-data-capture-sql-server.md)|  

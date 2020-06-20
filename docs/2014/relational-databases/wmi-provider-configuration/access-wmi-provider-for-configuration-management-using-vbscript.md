@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f3a380f80b4ecc7540e29605543722edd55e226d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6a4b5fe474481288d8b8edd844be7af12ccbcd6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705060"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061312"
 ---
 # <a name="modify-sql-server-service-advanced-properties-using-vbscript"></a>VBScript를 사용하여 SQL Server 서비스 고급 속성 수정
-  이 섹션에서는 컴퓨터에서 실행 중인 설치 된 인스턴스의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 나열 하는 VBScript 프로그램을 만드는 방법을 설명 합니다.  
+  이 섹션에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 컴퓨터에서 실행 중인 설치 된 인스턴스의 버전을 나열 하는 VBScript 프로그램을 만드는 방법을 설명 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  이 코드 예제에서는 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스와 해당 버전을 나열합니다.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62705060"
   
 5.  파일을 저장합니다.  
   
-6.  명령 프롬프트에서를 입력 `cscript test.vbs` 하 여 스크립트를 실행 합니다.  
+6.  명령 프롬프트에서를 입력 하 여 스크립트를 실행 `cscript test.vbs` 합니다.  
   
 ## <a name="example"></a>예제  
   

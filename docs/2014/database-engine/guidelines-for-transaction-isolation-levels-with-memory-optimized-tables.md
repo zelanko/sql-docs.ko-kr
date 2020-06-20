@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 834c5950a8f8b0ddf8854d06c6fb1073a264fc22
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779158"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932889"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 트랜잭션 격리 수준에 대한 지침
   대부분의 경우 트랜잭션 격리 수준을 지정해야 합니다. 메모리 최적화 테이블에 대한 트랜잭션 격리는 디스크 기반 테이블과 다릅니다.  
@@ -123,7 +122,7 @@ COMMIT
 ```  
   
 ## <a name="locking-table-hints"></a>테이블 잠금 힌트  
- HOLDLOCK 및 XLOCK 등의 잠금[&#41;&#40;](/sql/t-sql/queries/hints-transact-sql-table)힌트는 디스크 기반 테이블에서 지정 된 격리 수준에 필요한 것 보다 더 많은 잠금을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 수행 하는 데 사용할 수 있습니다.  
+ HOLDLOCK 및 XLOCK 등의 잠금[&#41;&#40;](/sql/t-sql/queries/hints-transact-sql-table)힌트는 디스크 기반 테이블에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 지정 된 격리 수준에 필요한 것 보다 더 많은 잠금을 수행 하는 데 사용할 수 있습니다.  
   
  메모리 액세스에 최적화된 테이블은 잠금을 사용하지 않습니다. REPEATABLE READ와 SERIALIZABLE 같은 더 높은 격리 수준을 사용하여 원하는 보증을 선언할 수 있습니다.  
   

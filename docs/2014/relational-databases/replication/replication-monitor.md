@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fcb3a7ccfc5e0b5da01d3976f3c9f13e06df7ee7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 538082f8d757579b7b2bbf57d82fc6cc5944f9ab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250386"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057012"
 ---
 # <a name="replication-monitor"></a>복제 모니터
   설명서의 이 섹션에는 복제 모니터에 대한 정보가 포함되어 있습니다. 모니터에 표시되는 페이지와 대화 상자는 모니터링 중인 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전 및 복제 유형에 따라 달라집니다.  

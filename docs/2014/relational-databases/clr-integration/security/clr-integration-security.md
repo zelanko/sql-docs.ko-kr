@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 12ca3fcb00122313c1d1e4aae8b64733be9140c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aeec8c832061756a818c9d2438df3046a29c1160
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918994"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970583"
 ---
 # <a name="clr-integration-security"></a>CLR 통합 보안
-  CLR ( [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] 공용 언어 런타임)의 보안 모델은 다른 형식의 clr 및 서버에서 실행 되는 다른 clr 개체 또는 문 내 [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] 에서 실행 되는 clr이 아닌 개체 간 액세스를 관리 하 고 보호 합니다. 개체 간의 호출을 링크라고 합니다. 이러한 개체에 대해 수행되는 보안 검사의 유형은 관련된 링크의 유형에 따라 다릅니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)]Clr (공용 언어 런타임)의 보안 모델은 다른 형식의 clr 및 [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] 서버에서 실행 되는 다른 clr 개체 또는 문 내에서 실행 되는 clr이 아닌 개체 간 액세스를 관리 하 고 보호 합니다. 개체 간의 호출을 링크라고 합니다. 이러한 개체에 대해 수행되는 보안 검사의 유형은 관련된 링크의 유형에 따라 다릅니다.  
   
  CLR 통합 보안 모델의 목표는 다음과 같습니다.  
   
--   기본적으로에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]관리 되는 사용자 코드를 실행 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 견고성을 손상할 수 있는 작업을 수행하려면 높은 수준의 사용 권한으로 보호해야 합니다.  
+-   기본적으로에서 관리 되는 사용자 코드를 실행 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 견고성을 손상할 수 있는 작업을 수행하려면 높은 수준의 사용 권한으로 보호해야 합니다.  
   
 -   관리되는 사용자 코드에서 데이터베이스의 사용자 데이터나 다른 사용자 코드에 무단으로 액세스하지 못하도록 해야 합니다. 사용자 정의 코드는 해당 코드를 호출한 사용자 세션의 보안 컨텍스트에서 해당 보안 컨텍스트에 대한 올바른 권한을 사용하여 실행해야 합니다.  
   

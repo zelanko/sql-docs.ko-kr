@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: ab3ce02a-549d-4e01-87b9-d15281fba349
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f4c17d756297fc0916f9f9b3c7fa49b38c5d0f33
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3c290c659b7a023818051d3556b24fd011d8b372
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82697617"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998752"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>IBCPSession을 사용하여 파일에 대한 FILESTREAM 열 읽기(OLE DB)
   이 예제에서는 IBCPSession 인터페이스를 사용하여 파일에 대한 filestream 열을 읽고 서식 파일을 씁니다.  

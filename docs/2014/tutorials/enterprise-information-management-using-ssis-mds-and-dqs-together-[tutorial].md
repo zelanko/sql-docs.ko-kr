@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 29ed5816a3a5fc0af6c5a4ac144557933e3e1a5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 479a5c26ae8ed6322c030459c2432c49834b3683
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487722"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006696"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>SSIS, MDS 및 DQS를 함께 사용하는 엔터프라이즈 정보 관리 [자습서]
   기업의 정보 관리에는 일반적으로 기업 내부 및 외부의 데이터를 통합하고, 데이터를 정리하고, 데이터를 비교해서 중복 항목을 제거하고, 데이터를 표준화하고, 데이터를 강화하고, 데이터에 대한 법적 및 컴플라이언스 요구 사항을 준수하고, 모든 필수 보안 설정을 사용해서 데이터를 중앙 위치에 저장하는 모든 과정이 포함됩니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "81487722"
   
  이 자습서에서는 SSIS, MDS 및 DQS 기술을 함께 활용해서 예제 EIM(엔터프라이즈 정보 관리) 솔루션을 구현하는 방법에 대해 알아봅니다. 먼저, DQS를 사용해서 데이터(메타데이터)에 대한 지식이 포함된 기술 자료를 만들고, 기술 자료를 사용해서 Excel 파일에서 데이터를 정리하고, 데이터 일치를 통해 데이터에 있는 중복 항목을 식별 및 제거합니다. 그런 다음 Excel용 MDS 추가 기능을 사용해서 정리되고 일치된 데이터를 MDS에 업로드합니다. 마지막으로 SSIS 솔루션을 사용해서 전체 프로세스를 자동화합니다. 이 자습서의 SSIS 솔루션은 Excel 파일에서 입력 데이터를 읽지만 Oracle, Teradata, DB2 및 Azure SQL Database 같은 다양 한 원본에서 데이터를 읽도록 확장할 수 있습니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
   
 1.  다음 구성 요소가 설치된 Microsoft SQL Server 2012가 필요합니다.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "81487722"
   
 2.  [Master Data Services 구성 마법사를 사용하여 MDS를 구성합니다.](https://msdn.microsoft.com/library/ee633884.aspx)  
   
-     구성 관리자를 사용하여 MDS(Master Data Services) 데이터베이스를 만들고 구성할 수 있습니다. MDS 데이터베이스를 만든 후 웹 사이트 (예: `http://localhost/MDS`)에서 mds에 대 한 웹 응용 프로그램을 만들고 mds 데이터베이스를 mds 웹 응용 프로그램에 연결 합니다. MDS 웹 애플리케이션을 만들려면 컴퓨터에 IIS가 설치되어 있어야 합니다. MDS 데이터베이스 및 웹 응용 프로그램을 구성 하기 위한 필수 구성 요소에 대 한 자세한 내용은 [웹 응용 프로그램 요구 사항 (MDS(Master Data Services))](https://msdn.microsoft.com/library/ee633744.aspx) 및 [데이터베이스 요구 사항 (MDS(Master Data Services))](https://msdn.microsoft.com/library/ee633767.aspx) 을 참조 하십시오.  
+     구성 관리자를 사용하여 MDS(Master Data Services) 데이터베이스를 만들고 구성할 수 있습니다. MDS 데이터베이스를 만든 후 웹 사이트 (예:)에서 MDS에 대 한 웹 응용 프로그램을 만들고 mds `http://localhost/MDS` 데이터베이스를 mds 웹 응용 프로그램에 연결 합니다. MDS 웹 애플리케이션을 만들려면 컴퓨터에 IIS가 설치되어 있어야 합니다. MDS 데이터베이스 및 웹 응용 프로그램을 구성 하기 위한 필수 구성 요소에 대 한 자세한 내용은 [웹 응용 프로그램 요구 사항 (MDS(Master Data Services))](https://msdn.microsoft.com/library/ee633744.aspx) 및 [데이터베이스 요구 사항 (MDS(Master Data Services))](https://msdn.microsoft.com/library/ee633767.aspx) 을 참조 하십시오.  
   
 3.  [Data Quality 서버 설치 관리자를 사용 하 여 DQS를 설치 하 고 구성](https://msdn.microsoft.com/library/hh231682.aspx)합니다. **시작**, **모든 프로그램**, **Microsoft SQL Server 2014**, **Data Quality Services**, **data quality 서버 설치 프로그램**을 차례로 클릭 합니다.  
   
@@ -64,11 +63,11 @@ ms.locfileid: "81487722"
   
 6.  필드 [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/)를 사용 하 여 계정을 만듭니다. 이 자습서에서 수행하는 작업 중 하나에서는 **Azure Marketplace**(원래 이름은 **데이터 마켓**) 계정이 필요합니다. 필요에 따라 이 작업을 건너뛰고 다음 작업을 진행할 수 있습니다.  
   
-7.  [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=50426)에서 Suppliers .xls 파일을 다운로드 합니다.  
+7.  [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=50426)에서 Suppliers.xls 파일을 다운로드 합니다.  
   
 8.  **64 비트 버전의 excel**을 사용 하는 경우 dqs를 사용 하 여 정리 또는 일치 결과를 excel 파일로 내보낼 수 없습니다. 이 문제는 알려진 문제입니다. 이 문제를 해결하려면 다음을 수행하십시오.  
   
-    1.  **DQLInstaller-upgrade**를 실행 합니다. SQL Server의 기본 인스턴스를 설치한 경우 DQSInstaller.exe 파일은 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn에 있습니다. DQSInstaller.exe 파일을 두 번 클릭합니다.  
+    1.  **DQLInstaller.exe 업그레이드**를 실행 합니다. SQL Server의 기본 인스턴스를 설치한 경우 DQSInstaller.exe 파일은 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn에 있습니다. DQSInstaller.exe 파일을 두 번 클릭합니다.  
   
     2.  **Master Data Services 구성 관리자**에서 **데이터베이스 선택**을 클릭 하 고 기존 **MDS** 데이터베이스를 선택한 다음 **업그레이드**를 클릭 합니다.  
   

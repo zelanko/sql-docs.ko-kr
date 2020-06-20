@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d5f3dffc7661fc5843dcd220f27beb1117a85729
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: beb3492409f24acb881f5461e554fd8a392dc361
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63313768"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040483"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>결과 창에서 데이터 작업(Visual Database Tools)
   쿼리나 뷰를 실행하면 결과 창에 그 결과가 표시됩니다. 이러한 결과를 사용하여 작업할 수 있습니다. 예를 들어 행을 추가 및 삭제하고 데이터를 입력 또는 변경하며 수많은 결과 집합 사이를 쉽게 이동할 수 있습니다.  
@@ -115,9 +114,9 @@ ms.locfileid: "63313768"
 ### <a name="what-can-not-be-represented-fully"></a>완전히 표현할 수 없는 항목  
  데이터베이스에서 결과 창으로 반환되는 내용은 현재 사용 중인 데이터 원본의 공급자를 통해 주로 제어됩니다. 모든 데이터베이스 관리 시스템의 데이터를 결과 창에서 항상 변환할 수 있는 것은 아닙니다. 이와 같은 예외적인 경우는 다음과 같습니다.  
   
--   결과 창에서 작업하는 대부분의 사용자에게는 일반적으로 이진 데이터 형식이 유용하지 않으며 이러한 데이터를 다운로드하는 데도 아주 많은 시간이 필요할 수 있습니다. 따라서 * \<이진 데이터>* 또는 *Null*로 표시 됩니다.  
+-   결과 창에서 작업하는 대부분의 사용자에게는 일반적으로 이진 데이터 형식이 유용하지 않으며 이러한 데이터를 다운로드하는 데도 아주 많은 시간이 필요할 수 있습니다. 따라서 이러한 데이터 형식은 *\<Binary data>* 또는 *Null*로 표시됩니다.  
   
--   경우에 따라 전체 자릿수와 소수 자릿수가 유지되지 않을 수 있습니다. 예를 들어 결과 창에서 전체 자릿수를 27까지 지원하는데 데이터의 전체 자릿수가 더 큰 데이터 형식인 경우 데이터를 자르거나 * \<>데이터를 읽을 수 없는 *것으로 표시 될 수 있습니다.  
+-   경우에 따라 전체 자릿수와 소수 자릿수가 유지되지 않을 수 있습니다. 예를 들어 결과 창에서 전체 자릿수를 27까지 지원하는데 데이터의 전체 자릿수가 이보다 큰 형식인 경우 이 데이터는 초과 부분이 잘리거나 *\<Unable to read data>* 으로 표시될 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Visual Database Tools를 &#40;쿼리를 사용 하 여 기본 작업을 수행&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   

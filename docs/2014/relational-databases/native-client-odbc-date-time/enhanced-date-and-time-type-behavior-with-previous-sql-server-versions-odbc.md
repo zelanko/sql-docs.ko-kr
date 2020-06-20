@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d400faa496740182a1407f89e095ebaccf884b3a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ffbcbf5a294973f26aa01b9dfc503e027663bb19
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705472"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020291"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>이전 버전 SQL Server에 대한 향상된 날짜 및 시간 형식 동작(ODBC)
   이 항목에서는 향상된 날짜 및 시간 기능을 사용하는 클라이언트 애플리케이션이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]와 통신할 경우 및 Microsoft Data Access Components, Windows Data Access Components 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client를 사용하는 클라이언트 애플리케이션이 향상된 날짜 및 시간 기능을 지원하는 서버에 명령을 보낼 경우 예상되는 동작에 대해 설명합니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "82705472"
   
 |SQL Server 2005 형식|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)](또는 이후 버전) 형식|ODBC 클라이언트 형식|결과 변환(SQL에서 C로 변환)|매개 변수 변환(C에서 SQL로 변환)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|DateTime|날짜|SQL_C_TYPE_DATE|정상|확인 (1)|  
+|DateTime|Date|SQL_C_TYPE_DATE|정상|확인 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|시간 필드가 0으로 설정됩니다.|정상(2)<br /><br /> 시간 필드가 0 이외의 값이면 실패합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
 ||Time(0)|SQL_C_TYPE_TIME|정상|확인 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|날짜 필드가 현재 날짜로 설정됩니다.|정상(2)<br /><br /> 날짜가 무시됩니다. 초 소수 부분이 0 이외의 값이면 실패합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
@@ -41,7 +40,7 @@ ms.locfileid: "82705472"
 |||SQL_C_TYPE_TIMESTAMP|실패-시간 리터럴이 잘못 되었습니다.|확인 (1)|  
 ||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|정상|확인 (1)|  
 ||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|정상|클라이언트 변환 시 값이 1/300초로 반올림됩니다.|  
-|Smalldatetime|날짜|SQL_C_TYPE_DATE|정상|정상|  
+|Smalldatetime|Date|SQL_C_TYPE_DATE|정상|정상|  
 |||SQL_C_TYPE_TIMESTAMP|시간 필드가 0으로 설정됩니다.|정상(2)<br /><br /> 시간 필드가 0 이외의 값이면 실패합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
 ||Time(0)|SQL_C_TYPE_TIME|정상|정상|  
 |||SQL_C_TYPE_TIMESTAMP|날짜 필드가 현재 날짜로 설정됩니다.|정상(2)<br /><br /> 날짜가 무시됩니다. 초 소수 부분이 0 이외의 값이면 실패합니다.<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  

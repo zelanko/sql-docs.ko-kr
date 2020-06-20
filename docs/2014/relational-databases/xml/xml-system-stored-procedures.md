@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e60c7f85-6823-4d28-93d6-b053d08cc830
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 40d195d01cca04753b9ce8798be7de514de9620c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2008294fe5bc532dfb6883656420b4189e4da7b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702234"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046256"
 ---
 # <a name="xml-system-stored-procedures"></a>XML 시스템 저장 프로시저
   SQL Server는 OPENXML과 함께 사용되는 다음 시스템 저장 프로시저를 제공합니다.  

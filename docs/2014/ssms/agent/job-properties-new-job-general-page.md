@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: b6832840-1c18-4db8-94fc-080db880ae9f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47f4f0abf784118dd94b62d7b8e08a2e060c639a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c3427d8ab5956d4f95a42876b21ee309677f933
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211382"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062295"
 ---
 # <a name="job-properties-and-new-job-general-page"></a>작업 속성 및 새 작업(일반 페이지)
-  이 페이지를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 일반 속성을 확인 하 고 수정할 수 있습니다.  
+  이 페이지를 사용 하 여 에이전트 작업의 일반 속성을 확인 하 고 수정할 수 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.  
   
 ## <a name="options"></a>옵션  
  **이름**  
@@ -38,13 +37,13 @@ ms.locfileid: "68211382"
  **설명**  
  작업 설명을 변경합니다.  
   
- **사용**  
+ **Enabled**  
  작업을 설정합니다. 작업을 설정하지 않은 경우 일정 또는 경고에 따라 작업이 실행되지는 않지만 **sp_start_job** 저장 프로시저를 사용하여 작업을 시작할 수 있습니다.  
   
  **원본**  
  작업에 사용되는 마스터 서버를 표시합니다. **작업 속성 일반** 페이지에서만 사용할 수 있습니다.  
   
- **만들어지며**  
+ **만든 날짜**  
  작업을 만든 날짜와 시간을 표시합니다. **작업 속성 일반** 페이지에서만 사용할 수 있습니다.  
   
  **마지막으로 수정한 날짜**  
