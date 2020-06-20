@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9bfbb62c58efea29df26cb9fc6e632bc4e2b3642
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d752817f7d620b2c6e5fdc5eeb2178c50c42040
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62630802"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066583"
 ---
 # <a name="specify-synchronization-schedules"></a>동기화 일정 지정
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 동기화 일정을 지정하는 방법에 대해 설명합니다. 구독을 만드는 경우 구독에 대한 복제 에이전트를 실행하는 시기를 제어하는 동기화 일정을 정의할 수 있습니다. 일정 매개 변수를 지정하지 않으면 기본 일정이 사용됩니다.  
@@ -48,13 +47,13 @@ ms.locfileid: "62630802"
 |-----------|--------------|  
 |끌어오기 구독에 대한 병합 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|  
 |밀어넣기 구독에 대한 병합 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
-|밀어넣기 구독에 대한 배포 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>** <sup>1</sup>|  
-|끌어오기 구독에 대한 배포 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>** <sup>2</sup>|  
+|밀어넣기 구독에 대한 배포 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**<sup>1</sup>|  
+|끌어오기 구독에 대한 배포 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>**<sup>2</sup>|  
 |SQL Server 이외 구독자의 밀어넣기 구독에 대한 배포 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
   
- <sup>1</sup> Oracle 게시에서 밀어넣기 구독의 경우 **\<Publisher>-\<PublicationDatabase>** 가 아닌 **\<Publisher>-\<Publisher**>입니다.  
+ <sup>1</sup> Oracle 게시에 대 한 밀어넣기 구독의 경우에 \<Publisher> 는 대신 * *입니다. - \<Publisher**>**\<Publisher>-\<PublicationDatabase>**  
   
- <sup>2</sup> Oracle 게시에서 끌어오기 구독에 대한 작업 이름은 **\<Publisher>-\<PublicationDatabase>** 가 아닌 **\<Publisher>-\<DistributionDatabase**>입니다.  
+ <sup>2</sup> Oracle 게시에 대 한 끌어오기 구독의 경우에 \<Publisher> 는 대신 * *입니다. - \<DistributionDatabase**>**\<Publisher>-\<PublicationDatabase>**  
   
 #### <a name="to-specify-synchronization-schedules"></a>동기화 일정을 지정하려면  
   
@@ -64,9 +63,9 @@ ms.locfileid: "62630802"
   
     -   **요청 시에만 실행**  
   
-    -   **\<일정 정의...>**  
+    -   **\<Define Schedule...>**  
   
-2.  **\<일정 정의...>** 를 선택하면 **작업 일정 속성** 대화 상자에서 일정을 지정한 다음, **확인**을 클릭합니다.  
+2.  을 선택 하는 경우 **\<Define Schedule...>** **작업 일정 속성** 대화 상자에서 일정을 지정한 다음 **확인**을 클릭 합니다.  
   
 3.  마법사를 완료합니다.  
   
@@ -78,9 +77,9 @@ ms.locfileid: "62630802"
   
 3.  구독을 마우스 오른쪽 단추로 클릭한 다음 **자세히 보기**를 클릭합니다.  
   
-4.  **Subscription \< SubscriptionName>** 창에서 **작업**을 클릭 한 다음 ** \<agentname> 작업 속성**을 클릭 합니다.  
+4.  ** \< SubscriptionName> 구독** 창에서 **작업**을 클릭 한 다음 ** \<AgentName> 작업 속성**을 클릭 합니다.  
   
-5.  **작업 속성 -** JobName> **대화 상자의 \<일정** 페이지에서 **편집**을 클릭합니다.  
+5.  **작업 속성- \<JobName> ** 대화 상자의 **일정** 페이지에서 편집을 클릭 **합니다.**  
   
 6.  **작업 일정 속성** 대화 상자의 **일정 유형** 드롭다운 목록에서 값을 선택합니다.  
   
@@ -102,7 +101,7 @@ ms.locfileid: "62630802"
   
 3.  구독과 연결된 배포 에이전트 또는 병합 에이전트의 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  **작업 속성 -** JobName> **대화 상자의 \<일정** 페이지에서 **편집**을 클릭합니다.  
+4.  **작업 속성- \<JobName> ** 대화 상자의 **일정** 페이지에서 편집을 클릭 **합니다.**  
   
 5.  **작업 일정 속성** 대화 상자의 **일정 유형** 드롭다운 목록에서 값을 선택합니다.  
   
@@ -124,7 +123,7 @@ ms.locfileid: "62630802"
   
 3.  구독과 연결된 배포 에이전트 또는 병합 에이전트의 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  **작업 속성 -** JobName> **대화 상자의 \<일정** 페이지에서 **편집**을 클릭합니다.  
+4.  **작업 속성- \<JobName> ** 대화 상자의 **일정** 페이지에서 편집을 클릭 **합니다.**  
   
 5.  **작업 일정 속성** 대화 상자의 **일정 유형** 드롭다운 목록에서 값을 선택합니다.  
   
@@ -167,25 +166,25 @@ ms.locfileid: "62630802"
   
 1.  트랜잭션 게시에 대한 새 끌어오기 구독을 만듭니다. 자세한 내용은 [끌어오기 구독 만들기](create-a-pull-subscription.md)를 참조하세요.  
   
-2.  구독자에서 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)를 실행합니다. , **@publisher** **@publisher_db**, **@publication**를 지정 하 고 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 및 **@job_name** **@password**에 구독자에서 배포 에이전트 실행 되는 Windows 자격 증명을 지정 합니다. 구독을 동기화하는 배포 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
+2.  구독자에서 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)를 실행합니다. ,,를 지정 하 고 **@publisher** **@publisher_db** **@publication** [!INCLUDE[msCoName](../../includes/msconame-md.md)] 및에 구독자에서 배포 에이전트 실행 되는 Windows 자격 증명 **@job_name** **@password** 을 지정 합니다. 구독을 동기화하는 배포 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대한 밀어넣기 구독의 동기화 일정을 정의하려면  
   
 1.  트랜잭션 게시에 대한 새 밀어넣기 구독을 만듭니다. 자세한 내용은 [밀어넣기 구독 만들기](create-a-push-subscription.md)을 참조하세요.  
   
-2.  구독자에서 [sp_addpushsubscription_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)를 실행합니다. , **@subscriber** **@subscriber_db**, **@publication**를 지정 하 고 및 **@job_name** **@password**에 구독자에서 배포 에이전트 실행 되는 Windows 자격 증명을 지정 합니다. 구독을 동기화하는 배포 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
+2.  구독자에서 [sp_addpushsubscription_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)를 실행합니다. ,,를 지정 하 고 **@subscriber** **@subscriber_db** **@publication** 및에 구독자에서 배포 에이전트 실행 되는 Windows 자격 증명 **@job_name** 을 지정 합니다 **@password** . 구독을 동기화하는 배포 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-merge-publication"></a>병합 게시에 대한 끌어오기 구독의 동기화 일정을 정의하려면  
   
 1.  병합 게시에 대한 새 끌어오기 구독을 만듭니다. 자세한 내용은 [끌어오기 구독 만들기](create-a-pull-subscription.md)를 참조하세요.  
   
-2.  구독자에서 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)를 실행합니다. , **@publisher** **@publisher_db**, **@publication**를 지정 하 고 및 **@job_name** **@password**에 구독자에서 병합 에이전트 실행 되는 Windows 자격 증명을 지정 합니다. 구독을 동기화하는 병합 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
+2.  구독자에서 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)를 실행합니다. ,,를 지정 하 고 **@publisher** **@publisher_db** **@publication** 및에 구독자에서 병합 에이전트 실행 되는 Windows 자격 증명 **@job_name** 을 지정 합니다 **@password** . 구독을 동기화하는 병합 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-merge-publication"></a>병합 게시에 대한 밀어넣기 구독의 동기화 일정을 정의하려면  
   
 1.  병합 게시에 대한 새 밀어넣기 구독을 만듭니다. 자세한 내용은 [밀어넣기 구독 만들기](create-a-push-subscription.md)을 참조하세요.  
   
-2.  구독자에서 [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)를 실행합니다. , **@subscriber** **@subscriber_db**, **@publication**를 지정 하 고 및 **@job_name** **@password**에 구독자에서 병합 에이전트 실행 되는 Windows 자격 증명을 지정 합니다. 구독을 동기화하는 병합 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
+2.  구독자에서 [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)를 실행합니다. ,,를 지정 하 고 **@subscriber** **@subscriber_db** **@publication** 및에 구독자에서 병합 에이전트 실행 되는 Windows 자격 증명 **@job_name** 을 지정 합니다 **@password** . 구독을 동기화하는 병합 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
   
 ##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
  복제에서는 SQL Server 에이전트를 사용하여 스냅샷 생성이나 구독 동기화와 같이 정기적으로 수행하는 작업의 일정을 지정합니다. RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 복제 에이전트 작업의 일정을 지정할 수 있습니다.  
@@ -317,7 +316,7 @@ ms.locfileid: "62630802"
   
 3.  <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 메서드를 호출하여 구독을 만듭니다.  
   
-###  <a name="example-rmo"></a><a name="PShellExample"></a> 예(RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a>예 (RMO)  
  이 예에서는 병합 계시에 대한 밀어넣기 구독을 만들고 구독의 동기화 일정을 지정합니다.  
   
  [!code-csharp[HowTo#rmo_CreateMergePushSub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createmergepushsub)]  
@@ -325,7 +324,7 @@ ms.locfileid: "62630802"
  [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
 ## <a name="see-also"></a>참고 항목  
- [Replication Security Best Practices](security/replication-security-best-practices.md)   
+ [복제 보안을 위한 최선의 구현 방법](security/replication-security-best-practices.md)   
  [Subscribe to Publications](subscribe-to-publications.md)   
  [밀어넣기 구독 동기화](synchronize-a-push-subscription.md)   
  [끌어오기 구독 동기화](synchronize-a-pull-subscription.md)   

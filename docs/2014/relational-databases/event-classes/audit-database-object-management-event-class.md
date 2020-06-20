@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bc5c0be2-990b-4032-a5e6-41ce98661698
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 19cb23baa6df69de9a73595dd81f8c1a095d7224
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb9493acc0cbada458d05b3ab102237b2d1aa00e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62698997"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053331"
 ---
 # <a name="audit-database-object-management-event-class"></a>Audit Database Object Management 이벤트 클래스
   **Audit Database Object Management** 이벤트 클래스는 CREATE, ALTER 또는 DROP 문이 스키마와 같은 데이터베이스 개체에서 실행될 때 발생합니다.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6b11f924ce5692378896f1fd7d50186861abf223
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 472ca5cf27f7e7ea2b18daa961c19faadcf2251f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63140438"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043041"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>저장 프로시저에서 데이터 반환
   결과 집합 또는 데이터를 프로시저에서 호출 프로그램으로 반환하는 두 가지 방법인 출력 매개 변수 및 반환 코드가 있습니다. 이 항목은 두 방법에 대한 자세한 정보를 제공합니다.  
@@ -71,7 +70,7 @@ GO
  프로시저를 호출할 때 매개 변수에 OUTPUT을 지정하고 그 매개 변수가 프로시저 정의에서 OUTPUT을 사용하여 정의되지 않은 경우 오류 메시지가 나타납니다. 그러나 출력 매개 변수가 있는 프로시저를 실행할 수는 있지만 프로시저를 실행할 때는 OUTPUT을 지정할 수 없습니다. 오류가 반환되지는 않지만 호출 프로그램에서 출력 값을 사용할 수 없습니다.  
   
 ### <a name="using-the-cursor-data-type-in-output-parameters"></a>OUTPUT 매개 변수에 Cursor 데이터 형식 사용  
- [!INCLUDE[tsql](../../../includes/tsql-md.md)]프로시저는 `cursor` 출력 매개 변수에만 데이터 형식을 사용할 수 있습니다. 매개 변수에 `cursor` 대해 데이터 형식이 지정 된 경우 프로시저 정의에서 해당 매개 변수에 대해 다양 한 키워드와 출력 키워드를 모두 지정 해야 합니다. 매개 변수는 OUTPUT 으로만 지정 될 수 있지만 매개 변수 선언에 가변 키워드가 지정 된 경우에는 데이터 형식이 여야 `cursor` 하 고 OUTPUT 키워드도 지정 해야 합니다.  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)]프로시저는 `cursor` 출력 매개 변수에만 데이터 형식을 사용할 수 있습니다. `cursor`매개 변수에 대해 데이터 형식이 지정 된 경우 프로시저 정의에서 해당 매개 변수에 대해 다양 한 키워드와 출력 키워드를 모두 지정 해야 합니다. 매개 변수는 OUTPUT 으로만 지정 될 수 있지만 매개 변수 선언에 가변 키워드가 지정 된 경우에는 데이터 형식이 여야 `cursor` 하 고 OUTPUT 키워드도 지정 해야 합니다.  
   
 > [!NOTE]  
 >  `cursor` 데이터 형식은 OLE DB, ODBC, ADO, DB-Library 등의 데이터베이스 API를 통해 애플리케이션 변수에 바인딩할 수 없습니다. OUTPUT 매개 변수는 애플리케이션이 프로시저를 실행하기 전에 바인딩되어야 하므로 `cursor` OUTPUT 매개 변수가 있는 프로시저는 데이터베이스 API에서 호출할 수 없습니다. 이러한 프로시저는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 로컬 `cursor` 변수에 `cursor` OUTPUT 변수가 할당된 경우에만 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 일괄 처리, 프로시저 또는 트리거에서 호출할 수 있습니다.  
@@ -104,7 +103,7 @@ GO
     >  커서의 닫힌 상태는 반환 시에만 문제가 됩니다. 예를 들어 프로시저를 통해 커서를 일부 닫은 후 프로시저에서 나중에 다시 열어 호출한 일괄 처리, 프로시저, 트리거에 커서의 결과 집합을 반환하는 것은 유효합니다.  
   
 ### <a name="examples-of-cursor-output-parameters"></a>Cursor Output 매개 변수의 예  
- 다음 예에서는 `@currency``cursor` `cursor` 데이터 형식을 사용 하 여 출력 매개 변수 _를 지정 하는 프로시저를 만듭니다. 그런 다음 일괄 처리로 프로시저가 호출됩니다.  
+ 다음 예에서는 `@currency` `cursor` 데이터 형식을 사용 하 여 출력 매개 변수 _를 지정 하는 프로시저를 만듭니다 `cursor` . 그런 다음 일괄 처리로 프로시저가 호출됩니다.  
   
  먼저 선언된 프로시저를 만들고 Currency 테이블에서 커서를 엽니다.  
   
@@ -145,7 +144,7 @@ GO
 ```  
   
 ## <a name="returning-data-using-a-return-code"></a>반환 코드를 사용하여 데이터 반환  
- 프로시저는 반환 코드라고 하는 정수 값을 반환하여 프로시저의 실행 상태를 나타낼 수 있습니다. RETURN 문을 사용하여 프로시저의 반환 코드를 지정할 수 있습니다. OUTPUT 매개 변수에서와 같이 프로시저가 실행될 때 호출 프로그램에서 사용할 수 있도록 반환 코드 값을 변수에 저장해야 합니다. 예를 들어 데이터 형식의 `@result` `int` 할당 변수는 다음과 같은 프로시저 `my_proc`의 반환 코드를 저장 하는 데 사용 됩니다.  
+ 프로시저는 반환 코드라고 하는 정수 값을 반환하여 프로시저의 실행 상태를 나타낼 수 있습니다. RETURN 문을 사용하여 프로시저의 반환 코드를 지정할 수 있습니다. OUTPUT 매개 변수에서와 같이 프로시저가 실행될 때 호출 프로그램에서 사용할 수 있도록 반환 코드 값을 변수에 저장해야 합니다. 예를 들어 데이터 형식의 할당 변수는 `@result` `int` 다음과 같은 프로시저의 반환 코드를 저장 하는 데 사용 됩니다 `my_proc` .  
   
 ```  
 DECLARE @result int;  
@@ -256,7 +255,7 @@ GO
 ## <a name="see-also"></a>참고 항목  
  [DECLARE @local_variable&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
  [PRINT&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/print-transact-sql)   
- [Transact-sql @local_variable&#41;&#40;설정](/sql/t-sql/language-elements/set-local-variable-transact-sql)   
+ [@local_variableTransact-sql&#41;&#40;설정](/sql/t-sql/language-elements/set-local-variable-transact-sql)   
  [커서로](../cursors.md)   
  [Transact-sql&#41;&#40;반환](/sql/t-sql/language-elements/return-transact-sql)   
  [@@ERROR&#40;Transact-SQL&#41;](/sql/t-sql/functions/error-transact-sql)  

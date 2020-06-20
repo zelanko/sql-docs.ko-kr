@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 46c0c22e-d105-4d5b-bb9d-5694472e8651
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bbf73940b92ef158e4e93b10c2142c9053703f5f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d004ba320b50896b6f57c5de335d7f7b3d33e87a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705410"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020037"
 ---
 # <a name="error-messages"></a>오류 메시지
   Native Client ODBC 드라이버에서 반환 하는 메시지의 텍스트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLGetDiagRec**의 *MessageText* 매개 변수에 배치 됩니다. 오류의 원본은 메시지 헤더에 표시됩니다.  

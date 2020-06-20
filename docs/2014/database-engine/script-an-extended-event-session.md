@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80f9fdde-1f13-4292-a4fc-55da826be3b4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 072a3220ba5c6997c463031733bbbe0ce2587fe1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63b06c9d0564d4e78acf4742e49814c2d39ae6f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088913"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929344"
 ---
 # <a name="script-an-extended-event-session"></a>확장 이벤트 세션 스크립팅
   이 항목에서는 이벤트 세션을 스크립팅하는 방법에 대해 설명합니다. 이벤트 세션을 내보내거나 변경 또는 삭제할 수도 있고 다음에 대한 이벤트 세션을 삭제하고 만들 수도 있습니다.  

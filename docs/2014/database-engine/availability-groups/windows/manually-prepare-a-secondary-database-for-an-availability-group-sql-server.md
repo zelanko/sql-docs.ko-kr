@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 927d0fd7b108718daffe86a6534ca40492429d34
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3da3f7332bdabce65785b2844157dd4639389254
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797645"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936744"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>가용성 그룹에 대한 보조 데이터베이스 수동 준비(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 AlwaysOn 가용성 그룹에 대한 보조 데이터베이스를 준비하는 방법에 대해 설명합니다. 보조 데이터베이스를 준비하려면 (1) RESTORE WITH NORECOVERY를 사용하여 주 데이터베이스의 최신 데이터베이스 백업과 후속 로그 백업을 보조 복제본을 호스트하는 각 서버 인스턴스로 복원하고 (2) 복원된 데이터베이스를 가용성 그룹에 조인하는 두 단계를 수행해야 합니다.  
@@ -195,7 +194,7 @@ ms.locfileid: "72797645"
         > [!IMPORTANT]  
         >  주 데이터베이스와 보조 데이터베이스의 경로 이름이 다른 경우 파일을 추가할 수 없습니다. 이는 파일 추가 작업에 대한 로그를 받을 때 보조 복제본의 서버 인스턴스가 주 데이터베이스에서 사용되는 것과 동일한 경로에 새 파일을 배치하기 때문입니다.  
   
-         예를 들어 다음 명령은 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 기본 인스턴스에 대한 데이터 디렉터리(C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA)에 있는 주 데이터베이스의 백업을 복원합니다. 데이터베이스 복원 작업에서는 다른 클러스터 노드에 있는 보조 복제본을 호스팅하는 ( [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *AlwaysOn1*) 라는 원격 인스턴스의 데이터 디렉터리로 데이터베이스를 이동 해야 합니다. 이 경우 데이터 및 로그 파일이 *C:\Program FILES\MICROSOFT SQL Server\MSSQL12.에 복원 됩니다. ALWAYSON1\MSSQL\DATA* 디렉터리입니다. 복원 작업에서는 WITH NORECOVERY를 사용하여 보조 데이터베이스를 복원 중인 데이터베이스에 그대로 둡니다.  
+         예를 들어 다음 명령은 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 기본 인스턴스에 대한 데이터 디렉터리(C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA)에 있는 주 데이터베이스의 백업을 복원합니다. 데이터베이스 복원 작업에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 다른 클러스터 노드에 있는 보조 복제본을 호스팅하는 (*AlwaysOn1*) 라는 원격 인스턴스의 데이터 디렉터리로 데이터베이스를 이동 해야 합니다. 이 경우 데이터 및 로그 파일이 *C:\Program FILES\MICROSOFT SQL Server\MSSQL12.에 복원 됩니다. ALWAYSON1\MSSQL\DATA* 디렉터리입니다. 복원 작업에서는 WITH NORECOVERY를 사용하여 보조 데이터베이스를 복원 중인 데이터베이스에 그대로 둡니다.  
   
         ```sql
         RESTORE DATABASE MyDB1  
@@ -282,6 +281,6 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
 ## <a name="see-also"></a>참고 항목  
  [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [RESTORE 인수 &#40;Transact-sql&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
+ [RESTORE 인수&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [실패 한 파일 추가 작업 문제 해결 AlwaysOn 가용성 그룹 &#40;&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  

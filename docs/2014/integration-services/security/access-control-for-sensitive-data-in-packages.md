@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2d59a42fa7b77e6800218f1eeca4986320c1dcef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b47690162b2418469dcb3f866a7c002981b80a75
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766783"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964119"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>패키지의 중요한 데이터에 대한 액세스 제어
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터를 보호하기 위해 중요한 데이터만 보호하거나 패키지의 모든 데이터를 보호하는 패키지 수준을 설정할 수 있습니다. 또한 패키지 데이터를 암호 또는 사용자 키로 암호화하거나 데이터베이스를 사용하여 암호화할 수도 있습니다. 패키지 보호 수준은 반드시 정적이지 않으며 패키지의 수명 주기 동안 변경됩니다. 즉, 개발 과정에서 설정하는 보호 수준과 배포 과정에서 설정하는 보호 수준이 서로 다른 경우가 자주 있습니다.  
@@ -64,7 +63,7 @@ ms.locfileid: "62766783"
 ## <a name="protection-level-setting-and-the-ssisdb-catalog"></a>보호 수준 설정 및 SSISDB 카탈로그  
  SSISDB 카탈로그에서는 `ServerStorage` 보호 수준을 사용합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포하는 경우 카탈로그에서 패키지 데이터와 중요한 값을 자동으로 암호화합니다. 카탈로그에서는 검색하는 데이터의 암호도 자동으로 해제합니다.  
   
- 프로젝트(.ispac 파일)를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서 파일 시스템으로 내보내는 경우 보호 수준이 `EncryptSensitiveWithUserKey`로 자동으로 변경됩니다. 에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **Integration Services 프로젝트 가져오기 마법사** 를 사용 하 여 프로젝트를 가져오는 경우 속성 창의 **ProtectionLevel** 속성에 값 **Properties** 이 표시 `EncryptSensitiveWithUserKey`됩니다.  
+ 프로젝트(.ispac 파일)를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서 파일 시스템으로 내보내는 경우 보호 수준이 `EncryptSensitiveWithUserKey`로 자동으로 변경됩니다. 에서 **Integration Services 프로젝트 가져오기 마법사** 를 사용 하 여 프로젝트를 가져오는 경우 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **속성** 창의 **ProtectionLevel** 속성에 값이 표시 `EncryptSensitiveWithUserKey` 됩니다.  
   
 ## <a name="protection-level-setting-based-on-package-life-cycle"></a>패키지 수명 주기 기반의 보호 수준 설정  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 보호 수준은 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지 개발을 시작할 때 처음 설정할 수 있습니다. 나중에 패키지를 배포하거나 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]로 패키지를 가져오거나 또는 내보낼 때 그리고 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 또는 파일 시스템으로 복사할 때 패키지 보호 수준을 업데이트할 수 있습니다. 예를 들어 사용자 키 보호 수준 옵션 중 하나를 사용하여 사용자 컴퓨터에 패키지를 만들고 저장한 경우 해당 패키지를 다른 사용자에게 전달하기 전에 보호 수준을 변경해야 합니다. 그렇지 않으면 패키지를 열 수 없습니다.  

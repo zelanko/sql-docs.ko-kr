@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fc11acccd25dafd811379384bf9975e74e8986b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2263e2565137d50f318b8593e6ca9c16736c6cbe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63070987"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067133"
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>검색 값 입력 규칙(Visual Database Tools)
   이 항목에서는 다음과 같은 리터럴 형식 값을 검색 조건으로 입력할 때 적용되는 규칙을 설명합니다.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 090c6fb7e19099ed5ad2650a99aa12f9ae3d5033
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: c58c415bd7bb95221c523290a9a311d4dccb18b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82921969"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936324"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>AlwaysOn 정책을 사용하여 가용성 그룹의 상태 보기(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 의 AlwaysOn 정책 또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 PowerShell을 사용하여 AlwaysOn 가용성 그룹의 작동 상태를 확인하는 방법에 대해 설명합니다. AlwaysOn 정책 기반 관리에 대 한 자세한 내용은 [AlwaysOn 가용성 그룹의 작업 문제에 대 한 Alwayson 정책 (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md)을 참조 하세요.  
@@ -88,7 +87,7 @@ ms.locfileid: "82921969"
   
      이러한 cmdlet은 다음 옵션을 사용합니다.  
   
-    |옵션|설명|  
+    |옵션|Description|  
     |------------|-----------------|  
     |`AllowUserPolicies`|AlwaysOn 정책 범주에 있는 사용자 정책을 실행합니다.|  
     |`InputObject`|사용 중인 cmdlet에 따라 가용성 그룹, 가용성 복제본 또는 가용성 데이터베이스 상태를 나타내는 개체 모음입니다. cmdlet은 지정된 개체의 상태를 컴퓨팅합니다.|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9177dceefb03617a1837f7f051fb52aa805f33aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6c0f6dc8d999391df8d78a715efe71c648f3748
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833756"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921228"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Analysis Services 연결 관리자 추가 대화 상자 UI 참조
   **Analysis Services 연결 관리자 추가** 대화 상자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 실행하는 서버에 대한 연결을 만들거나 연결 속성을 편집할 수 있습니다.  

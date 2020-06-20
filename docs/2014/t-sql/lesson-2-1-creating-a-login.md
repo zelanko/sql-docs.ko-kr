@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7ceed5f82af858f6a2dc3a88df7276d5ba2fda3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 400a57693fbea10270a51f5735a19b9639112ce9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211202"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000735"
 ---
 # <a name="creating-a-login"></a>로그인 만들기
   [!INCLUDE[ssDE](../includes/ssde-md.md)]에 액세스하려면 사용자는 로그인이 필요합니다. 로그인은 사용자의 ID를 Windows 계정 또는 Windows 그룹의 멤버로 나타내거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에만 존재하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로그인이 될 수 있습니다. 가능하면 Windows 인증을 사용해야 합니다.  
@@ -26,7 +25,7 @@ ms.locfileid: "68211202"
   
 ### <a name="to-create-a-new-windows-account"></a>새 Windows 계정을 만들려면  
   
-1.  **시작**, **실행**을 차례로 클릭 하 고 **열기** 상자에를 `%SystemRoot%\system32\compmgmt.msc /s`입력 한 다음 **확인** 을 클릭 하 여 컴퓨터 관리 프로그램을 엽니다.  
+1.  **시작**, **실행**을 차례로 클릭 하 고 **열기** 상자에를 입력 한 `%SystemRoot%\system32\compmgmt.msc /s` 다음 **확인** 을 클릭 하 여 컴퓨터 관리 프로그램을 엽니다.  
   
 2.  **시스템 도구**에서 **로컬 사용자 및 그룹**을 확장하고 **사용자**를 마우스 오른쪽 단추로 클릭한 다음 **새 사용자**를 클릭합니다.  
   

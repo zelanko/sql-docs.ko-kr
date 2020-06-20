@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d74b848d-e796-49af-a8c5-dd69230f3a78
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: facde89ad6b476fa01b34badce10dd3cae52ecac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2c8cae3e47a6f48014cbafe588dde782c097260
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68186123"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040105"
 ---
 # <a name="start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler"></a>서버 연결 후 자동으로 추적 시작(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]인스턴스에 연결한 후 추적을 자동으로 시작하는 방법에 대해 설명합니다.  

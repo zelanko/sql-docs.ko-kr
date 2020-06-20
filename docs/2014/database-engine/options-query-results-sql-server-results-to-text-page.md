@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f5cdfc761b3b8c19e07b1818c2732414b03258cc
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: b7d785a7b8c2ce424f2f88b23024b0d22f399149
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856650"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930044"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>옵션 (쿼리 결과-SQL Server-텍스트 페이지로 결과 생성)
   이 페이지를 사용하여 쿼리 결과 집합을 텍스트 형식으로 표시하는 옵션을 지정할 수 있습니다. 이러한 옵션의 변경 내용은 새로운 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리에만 적용됩니다. 현재 쿼리에 대 한 옵션을 변경 하려면 **쿼리 메뉴에서** **쿼리 옵션** 을 클릭 하거나 쿼리 창에서 마우스 오른쪽 단추 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 클릭 한 다음 **쿼리 옵션**을 선택 합니다. **쿼리 옵션** 대화 상자의 **결과**에서 **텍스트**를 클릭합니다.  

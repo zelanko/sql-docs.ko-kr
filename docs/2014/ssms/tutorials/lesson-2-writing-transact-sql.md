@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 439cfab5-c049-43a8-8617-59eaa8d24873
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bd776a778f56831fc63fef1ea040e3f69883eff3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7a9f116ccd65e4763e382d1125ca0a8424ecd97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470030"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040961"
 ---
 # <a name="lesson-2-writing-transact-sql"></a>2단원: Transact-SQL 작성
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX 및 XML 쿼리와 SQLCMD 명령을 작성하기 위한 통합 개발 환경입니다. 이 자습서에서는 데이터베이스 엔진 쿼리 편집기를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 작성합니다.  

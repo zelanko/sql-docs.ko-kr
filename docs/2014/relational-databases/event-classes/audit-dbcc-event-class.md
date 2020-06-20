@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73724190-d6b7-4f11-9446-78bcafa6c693
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4fca7dab7d99c3516d93cd090b4446180d2ebf63
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 766a4c59f7a30a03d03e07dfa4e9dfe6714aa637
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62938893"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053272"
 ---
 # <a name="audit-dbcc-event-class"></a>Audit DBCC 이벤트 클래스
   **Audit DBCC** 이벤트 클래스는 DBCC 명령이 실행될 때마다 발생합니다.  

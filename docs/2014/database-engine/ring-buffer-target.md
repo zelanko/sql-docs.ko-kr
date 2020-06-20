@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 54494e11-b56b-43b7-aa5e-c8724e56b251
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 920cc72a9d99da61575249559661c01826b0e89b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 186e847bb9f9b621543119c25510dc5d6107e274
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088955"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929445"
 ---
 # <a name="ring-buffer-target"></a>링 버퍼 대상
   간단히 말해 링 버퍼 대상은 메모리에 이벤트 데이터를 보관합니다. 이 대상은 다음 두 모드 중 하나로 이벤트를 관리할 수 있습니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66088955"
   
  다음 표에서는 링 버퍼 대상을 구성하는 데 사용할 수 있는 옵션에 대해 설명합니다.  
   
-|옵션|허용되는 값|설명|  
+|옵션|허용되는 값|Description|  
 |------------|--------------------|-----------------|  
 |max_memory|모든 32 비트 정수입니다. 이 값은 선택 사항입니다.|사용 가능한 최대 메모리 크기(KB)입니다. 기존 이벤트는 처음 도달한 제한인 max_event_limit 또는 max_memory에 따라 삭제됩니다. 최대값은 4194303 KB입니다. 에서 다른 메모리 소비자에 게 영향을 줄 수 있으므로 링 버퍼 크기를 GB 범위에 대 한 제한으로 설정 하기 전에 신중 하 게 고려해 야 합니다 SQL Server|  
 |max_event_limit|모든 32 비트 정수입니다. 이 값은 선택 사항입니다.|ring_buffer에 보관되는 최대 이벤트 수입니다. 기존 이벤트는 처음 도달한 제한인 max_event_limit 또는 max_memory에 따라 삭제됩니다. 기본값 = 1000입니다.|  

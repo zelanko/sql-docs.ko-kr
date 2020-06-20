@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f2201be33df4346ab2afa812828ab9655b0ed2be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 616707bfb11b48b170fc8f0e8872076d2cd09d1c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67793289"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060356"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>분할 테이블 및 인덱스 복제
   분할을 사용하면 데이터 하위 집합을 빠르고 효율적으로 관리 및 액세스하는 동시에 데이터 컬렉션의 무결성을 유지할 수 있으므로 큰 테이블 또는 인덱스를 보다 편리하게 관리할 수 있습니다. 자세한 내용은 [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)을 참조하세요. 복제는 분할된 테이블 및 인덱스를 처리하는 방법을 지정하는 속성 집합을 제공하여 분할을 지원합니다.  
@@ -70,9 +69,9 @@ ms.locfileid: "67793289"
 ### <a name="enabling-partition-switching"></a>파티션 전환 설정  
  다음과 같은 트랜잭션 게시 속성을 사용하면 사용자가 복제된 환경에서 파티션 전환의 동작을 제어할 수 있습니다.  
   
--   allow_partition_switch로 `true`설정 하면 게시 데이터베이스에 대해 switch partition을 실행할 수 있습니다. ** \@**  
+-   ** \@ allow_partition_switch**로 설정 하면 `true` 게시 데이터베이스에 대해 switch partition을 실행할 수 있습니다.  
   
--   replicate_partition_switch는 스위치 파티션 DDL 문을 구독자에 복제 해야 하는지 여부를 결정 합니다. ** \@** 이 옵션은 ** \@allow_partition_switch** 가로 설정 된 경우에 `true`만 유효 합니다.  
+-   ** \@ REPLICATE_PARTITION_SWITCH** 는 스위치 파티션 DDL 문을 구독자에 복제 해야 하는지 여부를 결정 합니다. 이 옵션은 ** \@ allow_partition_switch** 가로 설정 된 경우에만 유효 `true` 합니다.  
   
  이러한 속성은 게시를 만들 때 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 을 사용하거나 게시를 만든 후 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) 을 사용하여 설정할 수 있습니다. 위에서 설명한 것처럼 병합 복제는 파티션 전환을 지원하지 않습니다. 병합 복제를 사용할 수 있도록 설정된 테이블에서 SWITCH PARTITION을 실행하려면 게시에서 해당 테이블을 제거합니다.  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5fcd3d72ef3e716cd640d35505b82df459eb37b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19a95cfa5c6780fbdf71ae58bd141aa9aa351efa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920786"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956223"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>리소스 관리자를 사용하여 백업 압축을 통해 CPU 사용량 제한(Transact-SQL)
   기본적으로 압축을 사용하여 백업하면 CPU 사용량이 크게 늘어나고 압축 프로세스로 사용되는 추가 CPU는 동시 작업에 악영향을 줄 수 있습니다. 따라서 CPU 경합이 발생하면 CPU 사용량이[Resource Governor](../resource-governor/resource-governor.md) 로 제한되는 세션에서 우선 순위가 낮은 압축 백업을 만들 수 있습니다. 이 항목에서는 이와 같은 경우에 CPU 사용량을 제한하는 리소스 관리자 작업 그룹에 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자의 세션을 매핑하는 방법으로 이러한 세션을 분류하는 시나리오를 제공합니다.  
@@ -160,7 +159,7 @@ GO
   
      RETURN @workload_group_name  
   
-     END  
+     End  
   
      이 CREATE FUNCTION 문의 구성 요소에 대한 자세한 내용은 다음을 참조하십시오.  
   
@@ -259,7 +258,7 @@ GO
  [&#91;맨 위로 이동&#93;](#Top)  
   
 ##  <a name="compressing-backups-using-a-session-with-limited-cpu"></a><a name="creating_compressed_backup"></a> CPU가 제한된 세션을 사용하여 백업 압축  
- 최대 CPU가 제한된 세션에서 압축된 백업을 만들려면 분류자 함수에 지정된 사용자로 로그인합니다. 백업 명령에 WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)])을 지정 하거나 **백업 압축** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])을 선택 합니다. 압축된 데이터베이스 백업을 만들려면 [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)를 참조하세요.  
+ 최대 CPU가 제한된 세션에서 압축된 백업을 만들려면 분류자 함수에 지정된 사용자로 로그인합니다. 백업 명령에 WITH COMPRESSION ()을 지정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 하거나 **백업 압축** ()을 선택 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 합니다. 압축된 데이터베이스 백업을 만들려면 [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)를 참조하세요.  
   
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>예제 C: 압축된 백업 만들기(Transact-SQL)  
  다음 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 예에서는 새로 형식이 지정된 백업 파일인 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 에 `Z:\SQLServerBackups\AdvWorksData.bak`데이터베이스의 압축된 전체 백업을 만듭니다.  

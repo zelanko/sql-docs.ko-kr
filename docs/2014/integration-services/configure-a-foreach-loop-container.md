@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 519c6f96-5e1f-47d2-b96a-d49946948c25
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 461a652999e97907962486cfc05e5b6668f5590d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 840011d1797c7ef9482af31ffc8b3ec3a6419b8a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060883"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921974"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Foreach 루프 컨테이너 구성
   이 절차에서는 열거자 및 컨테이너 수준의 속성 식을 비롯한 Foreach 루프 컨테이너를 구성하는 방법에 대해 설명합니다.  
@@ -72,7 +71,7 @@ ms.locfileid: "66060883"
   
 7.  선택적으로 **변수 매핑** 을 클릭하여 컬렉션 값에 개체 속성을 매핑한 후 다음을 수행합니다.  
   
-    1.  **변수 목록에서** 변수를 선택 하거나 ** \<새 변수>** 를 클릭 하 여 새 변수를 만듭니다.  
+    1.  **변수 목록에서** 변수를 선택 하거나를 클릭 **\<New Variable>** 하 여 새 변수를 만듭니다.  
   
     2.  새 변수를 추가하는 경우에는 **변수 추가** 대화 상자에서 변수 속성을 설정하고 **확인**을 클릭합니다.  
   

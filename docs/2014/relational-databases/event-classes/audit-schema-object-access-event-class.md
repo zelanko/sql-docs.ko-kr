@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1c099fa2-c857-4128-aca0-ed8cc3078a43
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 052e685615f654ad333ba441bb0c5cf5773a758b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 349dad1ebe3132ca8270997ddd77d2232a40adfe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63017154"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053191"
 ---
 # <a name="audit-schema-object-access-event-class"></a>Audit Schema Object Access 이벤트 클래스
   **Audit Schema Object Access** 이벤트 클래스는 SELECT 등의 개체 사용 권한이 사용되는 경우에 발생합니다.  

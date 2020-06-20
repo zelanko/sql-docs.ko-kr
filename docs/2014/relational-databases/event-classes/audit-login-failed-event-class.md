@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b83963b-b685-429d-92ba-5173f6f0000d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2860e10ef74676fb013b43e1740c9cf82223baa9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72734a0d8fa24cc69fd0f29b34fba4f6b2f61b6b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63000365"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053220"
 ---
 # <a name="audit-login-failed-event-class"></a>Audit Login Failed 이벤트 클래스
   **Audit Login Failed** 이벤트 클래스는 사용자가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로그인하려고 시도했으나 실패했음을 나타냅니다. 이 이벤트 클래스는 연결 풀에서 다시 사용된 연결 또는 새 연결에 의해 발생합니다.  

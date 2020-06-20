@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bda489e-86bc-4a7e-80f6-96047e03f281
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a37bafc9bac2601e3914455f431c639bce385f48
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a028ed31ff2f4936d5d7bd45ba7809467939718b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705356"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019903"
 ---
 # <a name="bcp_batch"></a>bcp_batch
   이전에 프로그램 변수에서 대량 복사하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bcp_sendrow [를 사용하여](bcp-sendrow.md)로 보낸 행을 모두 커밋합니다.  

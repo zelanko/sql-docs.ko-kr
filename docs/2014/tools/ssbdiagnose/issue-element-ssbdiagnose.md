@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 69b9e356fcaf4b5abd97b56c69ecdd9881aaaee2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2f182c7974eaf26cca2b666fcf9740dee675830
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63285767"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006767"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Issue 요소(ssbdiagnose)
   **ssbdiagnose** 유틸리티가 발견한 문제를 보고합니다. **ssbdiagnose** XML 출력 파일에는 보고되는 문제 당 하나의 Issue 요소가 포함됩니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "63285767"
   
 ## <a name="element-attributes"></a>요소 특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`type`|Issue 요소가 보고하는 문제의 범주를 식별합니다.<br /><br /> **"진단"** 보고서는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 구성을 분석할 때 발견된 구성 문제를 보고합니다.<br /><br /> **"문제"** 는 **ssbdiagnose** 의 분석을 완료하지 못하게 하는 문제를 보고합니다. 문제를 해결하고 **ssbdiagnose**를 다시 실행하십시오.<br /><br /> **"이벤트"** 는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -RUNTIME **검사를 실행할 때 발견된** 이벤트를 보고합니다. 단, **-SHOWEVENTS** 가 지정된 경우에만 이벤트가 보고됩니다.|  
 |`code`|메시지의 오류 번호를 식별합니다.|  
@@ -50,18 +49,18 @@ ms.locfileid: "63285767"
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특성|설명|  
+|특성|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|`string`, 길이 제한 없음|  
 |**값**|오류 메시지 텍스트를 반환합니다.|  
-|**내용과**|보고되는 오류 당 한 번|  
+|**발생 빈도**|보고되는 오류 당 한 번|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
 |관계|요소|  
 |------------------|--------------|  
 |**부모 요소**|[DiagnosticInformation 요소&#40;ssbdiagnose&#41;](diagnosticinformation-element-ssbdiagnose.md)|  
-|**자식 요소**|없음|  
+|**자식 요소**|None|  
   
 ## <a name="example"></a>예제  
  이 요소는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 구성을 분석할 때 오류가 발견되었으며 마스터 키가 없는 데이터베이스에 대해 1102 오류를 보고합니다.  

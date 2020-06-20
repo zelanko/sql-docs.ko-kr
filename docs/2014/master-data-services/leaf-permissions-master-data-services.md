@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ee587881b95821c2ae23580b54d298fa496cec15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf091886adb0a7fe484b2b62f44eb51b6c58d8bc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479175"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971273"
 ---
 # <a name="leaf-permissions-master-data-services"></a>리프 권한(Master Data Services)
   리프 권한은 엔터티의 모든 리프 멤버에 대한 특성 값에 적용됩니다.  
@@ -34,25 +33,25 @@ ms.locfileid: "65479175"
   
 -   **이름** 및 **코드** 특성에 할당된 사용 권한은 적용되지 않습니다.  
   
-|사용 권한|설명|  
+|사용 권한|Description|  
 |----------------|-----------------|  
 |**읽기 전용**|리프 멤버가 표시되지만 사용자가 이를 추가, 제거 또는 변경할 수 없습니다.<br /><br /> 통합 멤버가 있는 경우 Name 및 Code가 표시되지만 사용자는 이를 추가, 제거 또는 변경할 수 없습니다.|  
 |**업데이트**|리프 멤버가 표시되고 사용자가 이를 추가, 제거 및 변경할 수 있습니다.<br /><br /> 통합 멤버가 있는 경우 Name 및 Code가 표시되지만 사용자는 이를 추가, 제거 또는 변경할 수 없습니다.|  
-|**차단할**|엔터티의 리프 멤버가 표시되지 않습니다.|  
+|**거부**|엔터티의 리프 멤버가 표시되지 않습니다.|  
   
 ## <a name="attribute-permissions"></a>특성 사용 권한  
  특성 사용 권한은 특정 엔터티의 특성 값에 적용됩니다. 특성 사용 권한만 있는 사용자는 멤버를 추가하거나 제거할 수 없습니다.  
   
-|사용 권한|설명|  
+|사용 권한|Description|  
 |----------------|-----------------|  
 |**읽기 전용**|특성이 표시되지만 사용자가 특성 값을 변경할 수 없습니다.|  
 |**업데이트**|특성이 표시되고 사용자가 특성 값을 변경할 수 있습니다.|  
-|**차단할**|특성이 표시되지 않습니다.<br /><br /> 참고: 이름 및 코드 특성에 대한 액세스를 명시적으로 거부할 수 없습니다.|  
+|**거부**|특성이 표시되지 않습니다.<br /><br /> 참고: 이름 및 코드 특성에 대한 액세스를 명시적으로 거부할 수 없습니다.|  
   
 ### <a name="example"></a>예제  
  Product 엔터티에 대해 Subcategory 특성에 **업데이트** 권한을 할당합니다. 모든 다른 특성에 대한 사용 권한은 거부합니다.  
   
-|이름|코드|Subcategory(업데이트)|  
+|속성|코드|Subcategory(업데이트)|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|{5}산악 자전거|  
 |Mountain-100|BK-M201|{5}산악 자전거|  

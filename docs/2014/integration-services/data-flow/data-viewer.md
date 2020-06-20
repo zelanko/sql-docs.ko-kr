@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b5696b55252a6053b7501eee08dfbe4365678a26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f45a99b149feb0c0609aac88660ad7e62ca425f2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827644"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916023"
 ---
 # <a name="data-viewer"></a>데이터 뷰어
   경로에서 데이터 뷰어를 사용하도록 구성한 경우 데이터 뷰어에서는 데이터가 두 데이터 흐름 구성 요소 간을 이동할 때 데이터를 버퍼별로 표시합니다.  

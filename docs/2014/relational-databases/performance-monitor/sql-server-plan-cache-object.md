@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ff1acb1fb3af2708b14b31eeb82aa0989685630c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf5fbc6c3a01b39079c8f63a2998490025c85e8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210812"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066926"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server, Plan Cache 개체
   **Plan Cache** 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 저장 프로시저, 임시 및 준비된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 트리거와 같은 개체를 저장하기 위해 메모리를 사용하는 방법을 모니터링하는 카운터를 제공합니다. **Plan Cache** 개체의 여러 인스턴스를 한 번에 모니터링할 수 있으며 각 인스턴스는 모니터링할 다양한 유형의 계획을 나타냅니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "68210812"
 |SQL Server Plan Cache 카운터|Description|  
 |------------------------------------|-----------------|  
 |**Cache Hit Ratio**|캐시 적중 횟수와 조회 간 비율입니다.|  
-|**Cache Object Counts**|캐시에 있는 캐시 개체 수입니다.|  
+|**캐시 개체 수**|캐시에 있는 캐시 개체 수입니다.|  
 |**Cache Pages**|캐시 개체에 의해 사용되는 8KB 페이지 수입니다.|  
 |**Cache Objects in use**|사용 중인 캐시 개체의 수입니다.|  
   

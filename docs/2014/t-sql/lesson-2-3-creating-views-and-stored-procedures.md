@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 53a0426d-07d8-4b7c-aa21-22632753bad8
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 20f16e9deeb9e07d2c63090c92100871331e0443
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76f6ecec446536191e8be4b05547ba5fd44c9d8d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211188"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040541"
 ---
 # <a name="creating-views-and-stored-procedures"></a>뷰 및 저장 프로시저 만들기
   이제 Mary는 **TestData** 데이터베이스에 액세스할 수 있으므로 뷰 및 저장 프로시저와 같은 일부 데이터베이스 개체를 만든 다음 이러한 개체에 대한 액세스 권한을 Mary에게 부여할 수 있습니다. 뷰는 저장된 SELECT 문이며 저장 프로시저는 일괄 처리로 실행되는 하나 이상의 [!INCLUDE[tsql](../includes/tsql-md.md)] 문입니다.  

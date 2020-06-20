@@ -18,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: 9375e3d0-c193-4714-96bb-7effd8f4bf18
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 57edb1b92459b2e66f53895c20ead6f3e95cea59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: de48329e223539be8ade429de10a9c32cf890c41
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091488"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041892"
 ---
 # <a name="upgrade-advisor-user-interface-reference"></a>업그레이드 관리자 사용자 인터페이스 참조
-  이 섹션에는 업그레이드 관리자 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에 대 한 도움말 항목이 포함 되어 있습니다. 이러한 항목은 마법사 페이지와 대화 상자에서 F1 키를 누르거나 **도움말** 을 클릭 하 여 업그레이드 관리자 마법사에서 사용할 수 있습니다.  
+  이 섹션에는 업그레이드 관리자에 대 한 도움말 항목이 포함 되어 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . 이러한 항목은 마법사 페이지와 대화 상자에서 F1 키를 누르거나 **도움말** 을 클릭 하 여 업그레이드 관리자 마법사에서 사용할 수 있습니다.  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[SQL Server 구성 요소](../../../2014/sql-server/install/sql-server-components.md)|업그레이드 분석을 위해 제출할 서버와 서버 유형 및 구성 요소의 적절한 집합을 식별합니다.|  
 |[연결 매개 변수](../../../2014/sql-server/install/connection-parameters.md)|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]과 같은 특정 서버 유형의 업그레이드를 분석하려면 분석할 특정 서버 인스턴스를 선택해야 합니다. 이 페이지에서 업그레이드 관리자를 사용하여 분석할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 인스턴스에 연결하는 데 필요한 정보를 입력합니다.|  

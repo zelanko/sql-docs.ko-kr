@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0c1c5be804f60fa57b677a418c19d8aadee23f22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60c92a237562704e5bc5d43717f863aa78a14b55
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691666"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066590"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>병합 테이블 아티클 간의 논리적 레코드 관계 정의
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 테이블 아티클 간 논리적 레코드 관계를 정의하는 방법에 대해 설명합니다.  
@@ -50,13 +49,13 @@ ms.locfileid: "62691666"
 -   게시에 대한 구독이 초기화된 후 논리적 레코드를 추가, 수정 또는 삭제한 경우에는 변경 내용을 적용한 후에 새 스냅샷을 생성하고 모든 구독을 다시 초기화해야 합니다. 속성 변경 요구 사항에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- 새 게시 마법사 및 **게시 속성 - \<게시>** 대화 상자에서 사용할 수 있는 **조인 추가** 대화 상자에서 논리적 레코드를 정의합니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](create-a-publication.md) 및 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요.  
+ 새 게시 마법사와 **게시 속성- \<Publication> ** 대화 상자에서 사용할 수 있는 **조인 추가** 대화 상자에서 논리적 레코드를 정의 합니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](create-a-publication.md) 및 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요.  
   
  논리적 레코드가 병합 게시의 조인 필터에 적용되고 게시가 사전 계산 파티션을 사용하기 위한 요구 사항을 따르는 경우에만 **조인 추가** 대화 상자에서 논리적 레코드를 정의할 수 있습니다. 조인 필터에 적용되지 않는 논리적 레코드를 정의하고 논리적 레코드 수준에서 충돌 감지 및 해결을 설정하려면 저장 프로시저를 사용해야 합니다.  
   
 #### <a name="to-define-a-logical-record-relationship"></a>논리적 레코드 관계를 정의하려면  
   
-1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 행 필터를 선택합니다.  
+1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성- \<Publication> ** 대화 상자의 **행 필터** 페이지에 있는 **필터링 된 테이블** 창에서 행 필터를 선택 합니다.  
   
      논리적 레코드 관계는 조인 필터와 연결된 행 필터를 확장합니다. 따라서 조인 필터로 확장하기 전에 행 필터를 정의한 다음 논리적 레코드 관계를 적용해야 합니다. 한 조인 필터를 정의한 후에 다른 조인 필터를 사용하여 이 조인 필터를 확장할 수 있습니다. 조인 필터 정의 방법은 [병합 아티클 사이에서 조인 필터 정의 및 수정](define-and-modify-a-join-filter-between-merge-articles.md)을 참조하세요.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "62691666"
   
 3.  **조인 추가** 대화 상자에서 조인 필터를 정의한 다음 **논리적 레코드**확인란을 선택합니다.  
   
-4.  **게시 속성 - \<게시>** 대화 상자에 있는 경우 **확인**을 클릭하여 대화 상자를 저장하고 닫습니다.  
+4.  **게시 속성- \<Publication> ** 대화 상자에서 **확인** 을 클릭 하 여 저장 하 고 대화 상자를 닫습니다.  
   
 #### <a name="to-delete-a-logical-record-relationship"></a>논리적 레코드 관계를 삭제하려면  
   
@@ -72,7 +71,7 @@ ms.locfileid: "62691666"
   
      논리적 레코드 관계만 삭제하려면  
   
-    1.  새 게시 마법사의 **행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 논리적 레코드 관계와 연결된 조인 필터를 선택하고 **편집**을 클릭합니다.  
+    1.  새 게시 마법사의 **행 필터** 페이지 또는 **게시 \<Publication> 속성-** 대화 상자의 **행 필터** 페이지에 있는 **필터링 된 테이블** 창에서 논리적 레코드 관계와 연결 된 조인 필터를 선택한 다음 **편집**을 클릭 합니다.  
   
     2.  **조인 편집** 대화 상자에서 **논리적 레코드**확인란 선택을 취소합니다.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "62691666"
   
      논리적 레코드 관계 및 이와 관련된 조인 필터를 함께 삭제하려면  
   
-    -   새 게시 마법사의 **행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **필터링된 테이블** 창에서 필터를 선택하고 **삭제**를 클릭합니다. 삭제하는 조인 필터가 다른 조인에 의해 확장된 경우 해당 조인 또한 삭제됩니다.  
+    -   새 게시 마법사 또는 **게시 속성- \<Publication> ** 대화 상자의 **행 필터** 페이지에 있는 필터링 된 **테이블** 창에서 필터를 선택한 다음 **삭제**를 클릭 합니다. 삭제하는 조인 필터가 다른 조인에 의해 확장된 경우 해당 조인 또한 삭제됩니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  복제 저장 프로시저를 사용하여 아티클 간 논리적 레코드 관계를 프로그래밍 방식으로 지정할 수 있습니다.  
@@ -102,11 +101,11 @@ ms.locfileid: "62691666"
   
     -   논리적 레코드의 관련 행 내에서 발생하는 충돌을 감지하여 해결하려면 **@value** 에 **@logical_record_level_conflict_detection** 및 **@logical_record_level_conflict_resolution**을 참조하세요.  
   
-    -   표준 행 수준 또는 열 수준 충돌 검색 및 해결을 사용 하려면 기본값인 및 `false` **@logical_record_level_conflict_detection** **@logical_record_level_conflict_resolution**에 값을 지정 합니다.  
+    -   표준 행 수준 또는 열 수준 충돌 검색 및 해결을 사용 하려면 `false` 기본값인 및에 값을 지정 합니다 **@logical_record_level_conflict_detection** **@logical_record_level_conflict_resolution** .  
   
 3.  논리적 레코드를 구성하는 각 아티클에 대해 2단계를 반복합니다. 논리적 레코드의 각 아티클에 대해 동일한 충돌 감지 및 해결 옵션을 사용해야 합니다. 자세한 내용은 [논리적 레코드에서 충돌 감지 및 해결](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)을 참조하세요.  
   
-4.  게시 데이터베이스의 게시자에서 [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)를 실행합니다. 을 **@publication**지정 하 고에 **@article**관계에서 한 아티클의 이름을,에 **@join_articlename**두 번째 아티클의 이름을,에 관계 **@filtername**의 이름을,에 두 아티클 **@join_filterclause**간의 관계를 정의 하는 절,에 대 한 조인 유형 **@join_unique_key** 및 다음 값 중 하나를 지정 합니다. **@filter_type**  
+4.  게시 데이터베이스의 게시자에서 [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)를 실행합니다. 을 지정 하 고에 **@publication** 관계에서 한 아티클의 이름을, **@article** 에 두 번째 아티클의 이름을,에 관계의 이름을,에 **@join_articlename** **@filtername** 두 아티클 간의 관계를 정의 하는 절,에 대 한 **@join_filterclause** 조인 유형 **@join_unique_key** 및 다음 값 중 하나 **@filter_type** 를 지정 합니다.  
   
     -   **2** - 논리적 관계를 정의합니다.  
   
@@ -127,9 +126,9 @@ ms.locfileid: "62691666"
   
 2.  표준 행 수준 또는 열 수준의 충돌 감지 및 해결을 사용하려면 다음을 수행합니다.  
   
-    -   게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. 에 **@property** `false` **logical_record_level_conflict_detection** 값을 지정 하 고에 **@value**값을 지정 합니다. **@force_invalidate_snapshot** 및 **@force_reinit_subscription**에 **1** 값을 지정합니다.  
+    -   게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. 에 **logical_record_level_conflict_detection** 값을 지정 **@property** 하 고에 값을 `false` 지정 **@value** 합니다. **@force_invalidate_snapshot** 및 **@force_reinit_subscription**에 **1** 값을 지정합니다.  
   
-    -   게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. 에 **@property** `false` **logical_record_level_conflict_resolution** 값을 지정 하 고에 **@value**값을 지정 합니다. **@force_invalidate_snapshot** 및 **@force_reinit_subscription**에 **1** 값을 지정합니다.  
+    -   게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. 에 **logical_record_level_conflict_resolution** 값을 지정 **@property** 하 고에 값을 `false` 지정 **@value** 합니다. **@force_invalidate_snapshot** 및 **@force_reinit_subscription**에 **1** 값을 지정합니다.  
   
 #### <a name="to-remove-a-logical-record-relationship"></a>논리적 레코드 관계를 제거하려면  
   
@@ -142,9 +141,9 @@ ms.locfileid: "62691666"
     > [!NOTE]  
     >  이 쿼리는 [sp_helpmergefilter](/sql/relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql)와 동일한 정보를 반환하지만, 이 시스템 저장 프로시저는 조인 필터이기도 한 논리적 레코드 관계에 대한 정보만 반환합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_dropmergefilter](/sql/relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql)를 실행합니다. 을 **@publication**지정 하 고에 대 **@article**한 관계에 있는 아티클 중 하나의 이름을,에 대해 **@filtername**1 단계에서 가져온 관계의 이름을 지정 합니다.  
+2.  게시 데이터베이스의 게시자에서 [sp_dropmergefilter](/sql/relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql)를 실행합니다. 을 지정 하 **@publication** 고에 대 한 관계에 있는 아티클 중 하나의 이름을, **@article** 에 대해 1 단계에서 가져온 관계의 이름을 지정 합니다 **@filtername** .  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>예 (Transact-sql)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  이 예에서는 기존 게시에 사전 계산 파티션을 사용하고 `SalesOrderHeader` 및 `SalesOrderDetail` 테이블에 대한 두 개의 새 아티클을 구성하는 논리적 레코드를 만듭니다.  
   
  [!code-sql[HowTo#sp_AddMergeLogicalRecord](../../../snippets/tsql/SQL15/replication/howto/tsql/createlogicalrecordpub.sql#sp_addmergelogicalrecord)]  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 04f8eaf855d33faf0d2eab8fde718c92f9a24906
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6918a099e00b1de9e773320b5c6c0e4089859e02
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289231"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956363"
 ---
 # <a name="sql-server-backup-to-url"></a>URL에 대한 SQL Server 백업
   이 항목에서는 Azure Blob 저장소 서비스를 백업 대상으로 사용 하는 데 필요한 개념, 요구 사항 및 구성 요소를 소개 합니다. 백업 및 복원 기능은 디스크나 테이프를 사용하는 경우와 동일하거나 비슷하지만 몇 가지 차이점이 있습니다. 이러한 차이점과 주목할 만한 예외 및 몇 가지 코드 예가 이 항목에서 소개됩니다.  
@@ -47,12 +46,12 @@ ms.locfileid: "79289231"
 -   Azure Blob 저장소 서비스에 대 한 컨테이너를 만들 때 액세스 권한을 **개인**으로 설정 하는 것이 좋습니다. 액세스 권한을 프라이빗으로 설정하면 Azure 계정에 인증하는 데 필요한 정보를 제공할 수 있는 사용자 또는 계정으로 액세스가 제한됩니다.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명에 저장 하려면 Azure 계정 이름 및 액세스 키 인증이 필요 합니다. 이 정보는 백업 또는 복원 작업을 수행할 때 Azure 계정에 인증 하는 데 사용 됩니다.  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]자격 증명에 저장 하려면 Azure 계정 이름 및 액세스 키 인증이 필요 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 이 정보는 백업 또는 복원 작업을 수행할 때 Azure 계정에 인증 하는 데 사용 됩니다.  
   
 -   BACKUP 또는 RESTORE 명령을 실행하는 데 사용되는 사용자 계정은 **모든 자격 증명 변경** 권한이 있는 **db_backup operator** 데이터베이스 역할에 있어야 합니다.  
   
 ###  <a name="introduction-to-key-components-and-concepts"></a><a name="intorkeyconcepts"></a>주요 구성 요소 및 개념 소개  
- 다음 두 섹션에서는 azure blob storage 서비스와 Azure Blob 저장소 서비스로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 하거나 복원할 때 사용 되는 구성 요소를 소개 합니다. Azure Blob 저장소 서비스에 대 한 백업 또는 복원 작업을 수행 하기 위해 구성 요소와 구성 요소 간의 상호 작용을 이해 하는 것이 중요 합니다.  
+ 다음 두 섹션에서는 azure blob storage 서비스와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure blob 저장소 서비스로 백업 하거나 복원할 때 사용 되는 구성 요소를 소개 합니다. Azure Blob 저장소 서비스에 대 한 백업 또는 복원 작업을 수행 하기 위해 구성 요소와 구성 요소 간의 상호 작용을 이해 하는 것이 중요 합니다.  
   
  이 프로세스의 첫 번째 단계는 Azure 계정을 만드는 것입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 **Azure storage 계정 이름** 및 해당 **액세스 키** 값을 사용 하 여 저장소 서비스에 대 한 blob을 인증 하 고 쓰고 읽습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명은 이 인증 정보를 저장하며 백업 또는 복원 작업 중에 사용됩니다. 저장소 계정을 만들고 간단한 복원을 수행 하는 전체 연습은 [자습서를 사용 하 여 SQL Server 백업 및 복원에 대 한 Azure Storage 서비스 사용 자습서](https://go.microsoft.com/fwlink/?LinkId=271615)를 참조 하세요.  
   
@@ -61,9 +60,9 @@ ms.locfileid: "79289231"
 ###  <a name="azure-blob-storage-service"></a><a name="Blob"></a>Azure Blob Storage 서비스  
  **스토리지 계정:** 스토리지 계정은 모든 스토리지 서비스를 사용하기 위한 출발점입니다. Azure Blob Storage 서비스에 액세스 하려면 먼저 Azure Storage 계정을 만듭니다. Azure Blob Storage 서비스와 해당 구성 요소를 인증 하려면 **저장소 계정 이름** 및 해당 **액세스 키** 속성이 필요 합니다.  
   
- **컨테이너:** 컨테이너는 Blob 집합의 그룹화를 제공 하며 Blob을 무제한으로 저장할 수 있습니다. Azure Blob service에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 쓰려면 적어도 루트 컨테이너가 만들어져 있어야 합니다.  
+ **컨테이너:** 컨테이너는 Blob 집합의 그룹화를 제공 하며 Blob을 무제한으로 저장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Azure Blob service에 백업을 쓰려면 적어도 루트 컨테이너가 만들어져 있어야 합니다.  
   
- **Blob:** 모든 형식과 크기의 파일입니다. Azure Blob 저장소 서비스에는 블록 및 페이지 blob 이라는 두 가지 유형의 blob을 저장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에서는 페이지 Blob을 Blob 유형으로 사용합니다. Blob은 URL 형식을 사용 하 여 주소를 지정할\<수 있습니다. https://저장소\<계정> blob.core.windows.net/\<container>/blob>  
+ **Blob:** 모든 형식과 크기의 파일입니다. Azure Blob 저장소 서비스에는 블록 및 페이지 blob 이라는 두 가지 유형의 blob을 저장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에서는 페이지 Blob을 Blob 유형으로 사용합니다. Blob은 다음 URL 형식을 사용 하 여 주소를 지정할 수 있습니다. https:// \<storage account> . blob.core.windows.net/\<container>/\<blob>  
   
  ![Azure Blob Storage](../../database-engine/media/backuptocloud-blobarchitecture.gif "Azure Blob Storage")  
   
@@ -77,7 +76,7 @@ ms.locfileid: "79289231"
 > [!WARNING]  
 >  백업 파일을 복사 하 여 Azure Blob storage 서비스에 업로드 하도록 선택한 경우 페이지 Blob을 저장소 옵션으로 사용 합니다. 블록 Blob에서 복원은 지원되지 않습니다. 블록 Blob 유형에서 RESTORE는 오류와 함께 실패합니다.  
   
- 예제 URL 값은 http [s]://ACCOUNTNAME.Blob.core.windows.net/\<CONTAINER>/\<FILENAME .bak>입니다. HTTPS는 필수 사항은 아니지만 권장 사항입니다.  
+ 예제 URL 값은 http [s]://ACCOUNTNAME.Blob.core.windows.net/ \<CONTAINER> / \<FILENAME.bak> 입니다. HTTPS는 필수 사항은 아니지만 권장 사항입니다.  
   
  **자격 증명:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명은 SQL Server 외부의 리소스에 연결하는 데 필요한 인증 정보를 저장하는 데 사용되는 개체입니다.  여기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원 프로세스는 자격 증명을 사용 하 여 Azure Blob 저장소 서비스에 인증 합니다. 자격 증명에는 스토리지 계정 이름과 스토리지 계정 **액세스 키** 값이 저장됩니다. 만든 자격 증명은 BACKUP/RESTORE 문을 실행할 때 WITH CREDENTIAL 옵션에 지정해야 합니다. 저장소 계정 **액세스 키**를 보고, 복사 하거나, 다시 생성 하는 방법에 대 한 자세한 내용은 [저장소 계정 액세스 키](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)를 참조 하세요.  
   

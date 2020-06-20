@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cd43f430f43f31435df6fff71687136f4bd5f9e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56118ef2db319abd270ff51259e3537864fdd57e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010361"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955943"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>파일 입/출력 API를 사용하여 FileTable 액세스
   FileTable에서 파일 시스템 I/O가 작동하는 방식에 대해 설명합니다.  
@@ -25,7 +24,7 @@ ms.locfileid: "66010361"
 ##  <a name="get-started-using-file-io-apis-with-filetables"></a><a name="accessing"></a> FileTable에서 파일 I/O API 사용 시작  
  FileTable은 대개 Windows 파일 시스템 및 파일 I/O API를 통해 사용합니다. FileTable은 다양한 사용 가능한 파일 I/O API를 통한 비트랜잭션 액세스를 지원합니다.  
   
-1.  파일 I/O API 액세스는 일반적으로 파일 또는 디렉터리에 대한 논리 UNC 경로를 가져오는 것으로 시작됩니다. 애플리케이션에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]GetFileNamespacePath&#40;Transact-SQL&#41;[ 함수와 함께 ](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql) 문을 사용하여 디렉터리 또는 파일에 대한 논리 경로를 가져올 수 있습니다. 자세한 내용은 [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)을 참조하세요.  
+1.  파일 I/O API 액세스는 일반적으로 파일 또는 디렉터리에 대한 논리 UNC 경로를 가져오는 것으로 시작됩니다. 애플리케이션에서는 [GetFileNamespacePath&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql) 함수와 함께 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 디렉터리 또는 파일에 대한 논리 경로를 가져올 수 있습니다. 자세한 내용은 [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)을 참조하세요.  
   
 2.  그러면 애플리케이션에서는 이 논리 경로를 사용하여 파일 또는 디렉터리에 대한 핸들을 가져오고 개체에 대해 일부 작업을 수행합니다. 경로를 CreateFile() 또는 CreateDirectory()와 같은 지원되는 파일 시스템 API 함수에 전달하여 파일을 만들거나 열고 핸들을 가져올 수 있습니다. 그런 다음 핸들을 사용하여 데이터 스트리밍, 디렉터리 열거 또는 구성, 파일 특성 가져오기 또는 설정, 파일 또는 디렉터리 삭제 등과 같은 작업을 수행할 수 있습니다.  
   
@@ -77,7 +76,7 @@ ms.locfileid: "66010361"
   
 ##  <a name="additional-considerations-for-file-io-access-to-filetables"></a><a name="considerations"></a> FileTable에 대한 파일 I/O 액세스 시 추가 고려 사항  
   
-###  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="vnn"></a>AlwaysOn 가용성 그룹에서 Virtual Network 이름 (VNNs) 사용  
+###  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="vnn"></a> AlwaysOn 가용성 그룹에 VNN(가상 네트워크 이름) 사용  
  FILESTREAM 또는 FileTable 데이터가 포함된 데이터베이스가 AlwaysOn 가용성 그룹에 속하는 경우 파일 시스템 API를 통한 FILESTREAM 또는 FileTable 데이터에 대한 모든 액세스에는 컴퓨터 이름 대신 VNN이 사용됩니다. 자세한 내용은 [AlwaysOn 가용성 그룹의 FILESTREAM 및 FileTable&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md)을 참조하세요.  
   
 ###  <a name="partial-updates"></a><a name="partial"></a> 부분 업데이트  
