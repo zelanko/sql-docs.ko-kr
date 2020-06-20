@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 146834648164e49632a62352d684a6da66a09e12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aeedc1f735fd296169f704b794d1bb0e69adab22
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480014"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972273"
 ---
 # <a name="administrators-master-data-services"></a>관리자(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에는 모델 관리자와 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 시스템 관리자의 두 가지 관리자 유형이 있습니다.  
   
 ## <a name="model-administrators"></a>모델 관리자  
- 에서 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]모델 관리자는 **모델 개체** 탭의 최상위 모델 개체에 할당 된 **업데이트** 권한이 있고 다른 할당 된 권한은 없는 사용자입니다.  
+ 에서 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 모델 관리자는 **모델 개체** 탭의 최상위 모델 개체에 할당 된 **업데이트** 권한이 있고 다른 할당 된 권한은 없는 사용자입니다.  
   
 -   **탐색기** 기능 영역에 대한 액세스 권한을 가진 사용자는 이 영역에서 모든 마스터 데이터를 추가하고, 삭제하고, 업데이트할 수 있습니다.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "65480014"
  사용자는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 에서 또는 프로그래밍 방식으로 모델 관리자로 구성될 수 있습니다. 자세한 내용은 [모델 관리자 만들기&#40;Master Data Services&#41;](create-a-model-administrator-master-data-services.md)를 참조하세요.  
   
 ## <a name="master-data-services-system-administrator"></a>Master Data Services 시스템 관리자  
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 시스템 관리자는 한 명뿐입니다. 시스템 관리자는 데이터베이스를 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 만들 때 **관리자 계정** 에 대해 지정 된 사용자입니다.  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 시스템 관리자는 한 명뿐입니다. 시스템 관리자는 데이터베이스를 만들 때 **관리자 계정** 에 대해 지정 된 사용자입니다 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 시스템 관리자:  
   
@@ -48,7 +47,7 @@ ms.locfileid: "65480014"
   
 ## <a name="comparing-administrator-types"></a>관리자 유형 비교  
   
-|관리자 유형|설명|  
+|관리자 유형|Description|  
 |------------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 시스템 관리자|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 할당된 사용 권한은 관리자의 액세스 권한 아무런 영향을 주지 않습니다.<br /><br /> 모든 모델에 대 한 **업데이트** 권한이 자동으로 포함 됩니다.<br /><br /> 모든 기능 영역에 대한 액세스 권한을 자동으로 가집니다.<br /><br /> Mdm. tblUser에서 **ID** 열의 값은 **1**입니다.|  
 |모델 관리자|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 할당된 권한에 따라 사용자가 모델 관리자인지 여부가 결정됩니다.<br /><br /> 명시적으로 할당된 사용 권한이나 그룹에서 상속된 사용 권한을 기반으로 하는 모델 관리자일 수 있습니다.<br /><br /> 는 최상위 모델 개체에 할당 된 **업데이트** 권한이 있고 다른 사용 권한은 없는 모델에 대 한 관리자만 해당 합니다.<br /><br /> 액세스 권한이 부여된 기능 영역에 대해서만 액세스 권한을 가집니다.<br /><br /> Mdm. tblUser에서 **ID** 열의 값은 **1**이 아닙니다.|  

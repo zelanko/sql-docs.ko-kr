@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 27dfa9f596d63021eb5f22b2e0b25a306e7fa2b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7362df13956e44b73d6984691e882bec2f39a1e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798223"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062231"
 ---
 # <a name="manage-job-steps"></a>작업 단계 관리
   작업 단계는 데이터베이스나 서버에서 작업이 수행하는 동작입니다. 모든 작업에는 작업 단계가 하나 이상 있어야 합니다. 작업 단계가 될 수 있는 항목은 다음과 같습니다.  
@@ -101,7 +100,7 @@ ms.locfileid: "72798223"
   
 -   열려는 기존 PowerShell 스크립트 파일  
   
- 에이전트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] powershell 하위 시스템은 powershell 세션을 열고 powershell 스냅인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 로드 합니다. 작업 단계 명령으로 사용 되는 PowerShell 스크립트는 powershell 공급자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 cmdlet을 참조할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 스냅인을 사용하여 PowerShell 스크립트를 작성하는 방법에 대한 자세한 내용은 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트 powershell 하위 시스템은 powershell 세션을 열고 powershell 스냅인을 로드 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 작업 단계 명령으로 사용 되는 PowerShell 스크립트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] powershell 공급자 및 cmdlet을 참조할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 스냅인을 사용하여 PowerShell 스크립트를 작성하는 방법에 대한 자세한 내용은 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)을 참조하세요.  
   
 ## <a name="activex-scripting-job-steps"></a>ActiveX 스크립팅 작업 단계  
   
@@ -198,7 +197,7 @@ Set oServer = nothing
   
 |||  
 |-|-|  
-|**설명**|**항목**|  
+|**설명**|**뒷부분**|  
 |실행 프로그램으로 작업 단계를 만드는 방법에 대해 설명합니다.|[CmdExec 작업 단계 만들기](create-a-cmdexec-job-step.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 사용 권한을 다시 설정하는 방법에 대해 설명합니다.|[Configure a User to Create and Manage SQL Server Agent Jobs](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계를 만드는 방법에 대해 설명합니다.|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  
@@ -210,6 +209,6 @@ Set oServer = nothing
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계 로그를 삭제하는 방법에 대해 설명합니다.|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>참고 항목  
- [sysjobstepslogs &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+ [dbo.sysjobstepslogs &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [작업 만들기](create-jobs.md)   
  [sp_add_job&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  

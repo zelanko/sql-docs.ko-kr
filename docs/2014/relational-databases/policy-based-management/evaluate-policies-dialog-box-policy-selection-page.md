@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b163f9e984a3fa9933cdc57150357596f4face8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705132"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061745"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>정책 평가 대화 상자, 정책 선택 페이지
   이 대화 상자를 사용하여 정책 기반 관리 정책을 평가합니다. **평가 결과** 페이지를 선택하면 정책을 준수하지 않는 대상 집합의 항목에 정책을 적용할 수 있습니다.  
@@ -26,7 +25,7 @@ ms.locfileid: "62705132"
  **원본**  
  정책의 원본을 지정합니다. 원본을 변경하려면 찾아보기 단추 (**...**)를 클릭하여 **원본 선택** 대화 상자를 엽니다.  
   
- **파일**  
+ **Files**  
  정책 기반 관리 정책이 포함된 파일의 경로를 입력하거나 찾아보기 단추(**...**)를 사용하여 파일을 선택합니다.  
   
  **Server**  

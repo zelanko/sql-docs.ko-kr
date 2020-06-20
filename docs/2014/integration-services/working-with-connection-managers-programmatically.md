@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 973cb7dcfe7eb95e003428adf0c8a0beb7e68e87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6053418c624c2ab107a35a02c382576dcb41a534
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877717"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972443"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>프로그래밍 방식으로 연결 관리자 사용
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 관련된 연결 관리자 클래스의 AcquireConnection 메서드는 관리 코드에서 연결 관리자를 사용할 때 가장 자주 호출하는 메서드입니다. 관리 코드를 작성할 때 연결 관리자의 기능을 사용하려면 AcquireConnection 메서드를 호출해야 합니다. 스크립트 태스크, 스크립트 구성 요소, 사용자 지정 개체 또는 사용자 지정 애플리케이션 중 어느 항목에서 관리 코드를 작성하든 관계없이 이 메서드를 호출해야 합니다.  
@@ -61,7 +60,7 @@ ms.locfileid: "62877717"
 |MULTIFILE|다중 파일 연결 관리자|`System.String`|파일 중 하나에 대한 경로입니다.|  
 |MULTIFLATFILE|다중 플랫 파일 연결 관리자|`System.String`|파일 중 하나에 대한 경로입니다.|  
 |SMOServer|SMO 연결 관리자|`Microsoft.SqlServer.Management.Smo.Server`||  
-|SMTP|SMTP 연결 관리자|`System.String`|예를 들면 다음과 같습니다. `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
+|SMTP|SMTP 연결 관리자|`System.String`|예: `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
 |WMI|WMI 연결 관리자|`System.Management.ManagementScope`||  
 |SQLMOBILE|SQL Server Compact 연결 관리자|`System.Data.SqlServerCe.SqlCeConnection`||  
   

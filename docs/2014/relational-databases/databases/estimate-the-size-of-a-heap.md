@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 814175fa78176d14167355bfe188179552c545c6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916747"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965983"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>힙 크기 예측
   다음 단계에 따라 힙에 데이터를 저장하는 데 필요한 공간의 크기를 예측할 수 있습니다.  
@@ -57,13 +56,13 @@ ms.locfileid: "62916747"
      ***Max_Var_Size*** 에 추가된 바이트는 각 가변 길이 열을 추적하기 위한 것입니다. 이 수식에서는 모든 가변 길이 열이 100% 꽉 찬 것으로 가정합니다. 사용할 가변 길이 열 스토리지 공간 비율이 더 적을 것으로 예상되는 경우 해당 비율로 ***Max_Var_Size*** 값을 조정하여 전체 테이블 크기를 보다 정확하게 예측할 수 있습니다.  
   
     > [!NOTE]  
-    >  정의된 총 테이블 너비가 8,060바이트를 초과하는 `varchar`, `nvarchar`, `varbinary` 또는 `sql_variant` 열을 결합할 수 있습니다. 이러한 열 각각의 길이는 `varchar`, `nvarchar,``varbinary`또는 `sql_variant` 열에 대해 8000 바이트 이내로 제한 되어야 합니다. 그러나 결합된 너비는 테이블의 8,060바이트 제한을 초과할 수 있습니다.  
+    >  정의된 총 테이블 너비가 8,060바이트를 초과하는 `varchar`, `nvarchar`, `varbinary` 또는 `sql_variant` 열을 결합할 수 있습니다. 이러한 열 각각의 길이는 `varchar` , 또는 열에 대해 8000 바이트 이내로 제한 되어야 합니다 `nvarchar,``varbinary` `sql_variant` . 그러나 결합된 너비는 테이블의 8,060바이트 제한을 초과할 수 있습니다.  
   
      가변 길이 열이 없는 경우에는 ***Variable_Data_Size*** 를 0으로 설정합니다.  
   
 5.  전체 행 크기를 계산합니다.  
   
-     ***Row_Size***  = ***Fixed_Data_Size***Fixed_Data_Size + ***Variable_Data_Size***Variable_Data_Size + ***Null_Bitmap*** + 4  
+     ***Row_Size***   =  ***Fixed_Data_Size***  +  ***Variable_Data_Size***  +  ***Null_Bitmap*** + 4  
   
      이 수식에서 값 4는 데이터 행의 행 머리글 오버헤드입니다.  
   
@@ -95,7 +94,7 @@ ms.locfileid: "62916747"
   
 -   LOB(Large Object) 값  
   
-     LOB 데이터 형식 `varchar(max)`,,, `varbinary(max)` `nvarchar(max)` `text`, **ntextxml**및 `image` 값을 저장 하는 데 사용 되는 공간을 정확 하 게 결정 하는 알고리즘은 복잡 합니다. LOB 값의 예상 평균 크기만 전체 힙 크기에 추가해도 됩니다.  
+     LOB 데이터 형식,,, `varchar(max)` `varbinary(max)` `nvarchar(max)` `text` , **ntextxml**및 값을 저장 하는 데 사용 되는 공간을 정확 하 게 결정 하는 알고리즘은 `image` 복잡 합니다. LOB 값의 예상 평균 크기만 전체 힙 크기에 추가해도 됩니다.  
   
 -   압축  
   

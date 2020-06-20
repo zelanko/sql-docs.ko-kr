@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: becfebbfe57e00b9abcc3cec29364f6b65fb1dfc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08b322b5eb6658dfa44dfd1734a5e5d721674630
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316147"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044420"
 ---
 # <a name="design-tables-visual-database-tools"></a>테이블 디자인(Visual Database Tools)
   테이블 디자이너의 전체 창은 개별 테이블을 디자인하는 데 사용됩니다. 이 단원의 항목에서는 테이블 디자이너를 사용하여 데이터베이스 테이블을 만들고 수정하는 방법에 대해 설명합니다.  

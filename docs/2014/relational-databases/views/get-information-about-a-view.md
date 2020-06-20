@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4277aad4c1de0140606575c7ba437408518b3c8a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211649"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061501"
 ---
 # <a name="get-information-about-a-view"></a>뷰 정보 보기
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을(를) 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 뷰 정의 또는 속성에 대한 정보를 얻을 수 있습니다. 뷰 정의를 보면 어떻게 데이터가 원본 테이블에서 파생되었는지 알 수 있고 뷰에서 정의한 데이터를 볼 수 있습니다.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을(를) 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 뷰 정의 또는 속성에 대한 정보를 얻을 수 있습니다. 뷰 정의를 보면 어떻게 데이터가 원본 테이블에서 파생되었는지 알 수 있고 뷰에서 정의한 데이터를 볼 수 있습니다.  
   
 > [!IMPORTANT]  
 >  뷰가 참조하는 개체의 이름을 변경하려면 뷰를 수정하여 뷰의 텍스트에 새 이름이 적용되도록 해야 합니다. 따라서 개체 이름을 바꾸기 전에는 개체의 종속 관계를 먼저 표시하여 변경으로 인해 영향을 받는 뷰가 있는지 확인해야 합니다.  

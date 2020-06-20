@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3ae231e933e30613d45fe00eaa99d6a2d5c9c772
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9115b2a41111d65c4855cffcdc44e7fcd755285b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054872"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972758"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>SQL Server 개체 전송 태스크 편집기(개체 페이지)
   **SQL Server 개체 전송 태스크 편집기** 대화 상자의 **개체** 페이지를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 한 인스턴스에서 다른 인스턴스로 복사하기 위한 속성을 지정할 수 있습니다. 테이블, 뷰, 저장 프로시저 및 사용자 정의 함수와 같은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체를 복사할 수 있습니다. 이 태스크에 대한 자세한 내용은 [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md)를 참조하십시오.  
@@ -29,13 +28,13 @@ ms.locfileid: "66054872"
   
 ## <a name="static-options"></a>정적 옵션  
  **SourceConnection**  
- 목록에서 SMO 연결 관리자를 선택 하거나 ** \<새 연결 ... >** 을 클릭 하 여 원본 서버에 대 한 새 연결을 만듭니다.  
+ 목록에서 SMO 연결 관리자를 선택 하거나를 클릭 **\<New connection...>** 하 여 원본 서버에 대 한 새 연결을 만듭니다.  
   
  **SourceDatabase**  
  복사할 개체를 가져올 원본 서버의 데이터베이스를 선택합니다.  
   
  **DestinationConnection**  
- 목록에서 SMO 연결 관리자를 선택 하거나 ** \<새 연결 ... >** 을 클릭 하 여 대상 서버에 대 한 새 연결을 만듭니다.  
+ 목록에서 SMO 연결 관리자를 선택 하거나를 클릭 **\<New connection...>** 하 여 대상 서버에 대 한 새 연결을 만듭니다.  
   
  **DestinationDatabase**  
  개체를 복사해 넣을 대상 서버의 데이터베이스를 선택합니다.  
@@ -52,10 +51,10 @@ ms.locfileid: "66054872"
  **ExistingData**  
  데이터를 대상 서버로 복사하는 방법을 지정합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**바꾸십시오**|대상 서버의 데이터를 덮어씁니다.|  
-|**추가할**|원본 서버에서 복사한 데이터를 대상 서버의 기존 데이터에 추가합니다.|  
+|**Append**|원본 서버에서 복사한 데이터를 대상 서버의 기존 데이터에 추가합니다.|  
   
 > [!NOTE]  
 >  **ExistingData** 옵션은 **CopyData** 를 **True**로 설정한 경우에만 사용할 수 있습니다.  

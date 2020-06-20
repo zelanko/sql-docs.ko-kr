@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 246036bfea6dc8431f878165330f7f0571949897
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917010"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965743"
 ---
 # <a name="shrink-a-database"></a>데이터베이스 축소
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 과 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 개체를 사용하여 데이터베이스를 축소하는 방법에 대해 설명합니다.  
@@ -65,7 +64,7 @@ ms.locfileid: "62917010"
   
 #### <a name="to-shrink-a-database"></a>데이터베이스를 축소하려면  
   
-1.  **개체 탐색기**에서 인스턴스에 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]연결한 다음 해당 인스턴스를 확장 합니다.  
+1.  **개체 탐색기**에서 인스턴스에 연결한 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 다음 해당 인스턴스를 확장 합니다.  
   
 2.  **데이터베이스**를 확장 한 다음 축소할 데이터베이스를 마우스 오른쪽 단추로 클릭 합니다.  
   
@@ -107,7 +106,7 @@ ms.locfileid: "62917010"
  [파일 축소](shrink-a-file.md)   
  [sys.databases&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [database_files &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
- [DBCC &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
+ [DBCC&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
  [Transact-sql&#41;DBCC SHRINKFILE &#40;](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)   
  [데이터베이스 파일 및 파일 그룹](database-files-and-filegroups.md)  
   

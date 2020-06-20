@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fb008314b9cb156f1cc575bda71b6364eca6e3a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921035"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956763"
 ---
 # <a name="restore-pages-sql-server"></a>페이지 복원(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 페이지를 복원하는 방법에 대해 설명합니다. 페이지 복원의 목표는 전체 데이터베이스를 복원하지 않고 하나 이상의 손상된 페이지를 복원하는 것입니다. 일반적으로 복원 후보 페이지는 페이지에 액세스할 때 발생한 오류 때문에 "주의 대상"으로 표시됩니다. 주의 대상 페이지는 [msdb](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 데이터베이스의 **suspect_pages** 테이블에서 확인할 수 있습니다.  
@@ -62,7 +61,7 @@ ms.locfileid: "62921035"
   
     -   트랜잭션 로그  
   
-    -   할당 페이지: GAM(전역 할당 맵) 페이지, SGAM(공유 전역 할당 맵) 페이지 및 PFS(페이지 여유 공간) 페이지.  
+    -   할당 페이지: GAM(글로벌 할당 맵) 페이지, SGAM(공유 글로벌 할당 맵) 페이지 및 PFS(페이지 여유 공간) 페이지.  
   
     -   모든 데이터 파일의 0페이지(파일 부트 페이지)  
   
@@ -133,8 +132,8 @@ ms.locfileid: "62921035"
     |헤더|값|  
     |------------|------------|  
     |**이름**|백업 세트의 이름입니다.|  
-    |**구성 요소**|백업된 구성 요소: **데이터베이스**, **파일** 또는 **\<비어 있음>** (트랜잭션 로그의 경우)이 될 수 있습니다.|  
-    |**형식**|수행된 백업 유형입니다. **전체**, **차등**또는 **트랜잭션 로그**일 수 있습니다.|  
+    |**구성 요소**|백업 된 구성 요소: **데이터베이스**, **파일**또는 **\<blank>** (트랜잭션 로그의 경우)입니다.|  
+    |**형식**|수행된 백업 유형: **전체**, **차등** 또는 **트랜잭션 로그**가 될 수 있습니다.|  
     |**Server**|백업 작업을 수행한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 이름입니다.|  
     |**Database**|백업 작업과 관련된 데이터베이스의 이름입니다.|  
     |**위치**|볼륨에 있는 백업 세트의 위치입니다.|  

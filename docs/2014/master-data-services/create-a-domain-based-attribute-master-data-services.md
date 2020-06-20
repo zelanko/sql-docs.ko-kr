@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f0760ef2d2a29540b126235d6328af1fbfad39ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d750aafaee2f9964fd1534ed04cd36268bc4b5a2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483426"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971863"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>도메인 기반 특성 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 도메인 기반 특성을 만들어서 엔터티의 멤버로 특성 값을 채웁니다.  
@@ -63,7 +62,7 @@ ms.locfileid: "65483426"
   
 10. **엔터티** 목록에서 특성 값을 채우는 데 사용할 엔터티를 선택 합니다.  
   
-11. 선택 사항입니다. 특성 그룹의 변경 내용을 추적하려면 **Enable change tracking** 을 선택합니다. 자세한 내용은 [변경 내용 추적 그룹에 특성 추가&#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)를 참조하세요.  
+11. (선택 사항) 특성 그룹의 변경 내용을 추적하려면 **Enable change tracking** 을 선택합니다. 자세한 내용은 [변경 내용 추적 그룹에 특성 추가&#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)를 참조하세요.  
   
 12. **특성 저장**을 클릭합니다.  
   

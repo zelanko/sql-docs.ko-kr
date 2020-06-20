@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 3301c328-b0f5-4517-915c-93713413e453
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ac28a67051299b0dbdfc7010d9abe20d0d2d2493
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5191da78fc32d72c54fa6da925bd419685b90152
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058170"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965663"
 ---
 # <a name="import-an-integration-services-project"></a>Integration Services 프로젝트 가져오기
   기존 배포 파일(.ispac) 또는 Integration Services 카탈로그에 배포된 프로젝트에서 프로젝트를 만들려면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]**프로젝트 가져오기 마법사**를 사용합니다. 이 기능은 프로젝트의 원본이 없지만 .ispac 파일 또는 SSISDB 카탈로그에서 프로젝트를 만들려는 경우에 특히 유용합니다.  
   
 ### <a name="to-import-a-project"></a>프로젝트를 가져오려면  
   
-1.  의 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **파일** 메뉴에서 **새** > **프로젝트** 를 클릭 합니다.  
+1.  의 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **New**  >  **파일** 메뉴에서 새**프로젝트** 를 클릭 합니다.  
   
 2.  **새 프로젝트** 창의 **설치되어 있는 템플릿** 영역에서 **비즈니스 인텔리전스**를 확장하고 **Integration Services**를 클릭합니다.  
   

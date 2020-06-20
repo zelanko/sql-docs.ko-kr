@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 66393f8b48c9075c3200b1c56b8447410e143c57
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c71ff6e75cbbf27042c1eac70b1f97076290865
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921062"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957214"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>SQL Server 데이터베이스를 지정 시간으로 복원(전체 복구 모델)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 데이터베이스를 지정 시간으로 복원하는 방법에 대해 설명합니다. 이 항목에서는 전체 또는 대량 로그 복구 모델을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 관련된 내용을 다룹니다.  
@@ -132,9 +131,9 @@ ms.locfileid: "62921062"
   
  **기본 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문**  
   
- <backup_device> STOPAT ** = *`time`*,** RECOVERY로 로그 *database_name* 복원 ...  
+ <backup_device> STOPAT ** = *`time`* ,** RECOVERY로 로그 *database_name* 복원 ...  
   
- 복구 지점은 `datetime` *time*에 지정 된 값 또는 그 전에 발생 한 최근 트랜잭션 커밋입니다.  
+ 복구 지점은 time에 지정 된 값 또는 그 전에 발생 한 최근 트랜잭션 커밋입니다 `datetime` . *time*  
   
  특정 시점 이전에 수정한 내용만 복원하려면 복원하는 각 백업에 대해 WITH STOPAT **=** *time*을 지정합니다. 이렇게 하면 대상 시간을 지나치지 않게 됩니다.  
   
@@ -152,7 +151,7 @@ ms.locfileid: "62921062"
   
 3.  데이터베이스를 복구하지 않고 마지막 전체 데이터베이스 백업과 마지막 차등 데이터베이스 백업(있는 경우)을 복원합니다(RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  로그 복원을 중지할 시간을 지정 하 여 각 트랜잭션 로그 백업을 만들어진 순서 대로 적용 합니다 (<backup_device> STOPAT**=*`time`*,** RECOVERY로 데이터베이스 *database_name* 복원).  
+4.  로그 복원을 중지할 시간을 지정 하 여 각 트랜잭션 로그 백업을 만들어진 순서 대로 적용 합니다 (<backup_device> STOPAT** = *`time`* ,** RECOVERY로 데이터베이스 *database_name* 복원).  
   
     > [!NOTE]  
     >  RECOVERY 및 STOPAT 옵션. 지정된 시간이 트랜잭션 로그에서 수용하는 시간을 초과하는 경우처럼 요청한 시간이 트랜잭션 로그 백업에 포함되지 않을 경우 경고가 생성되고 데이터베이스는 복구되지 않은 상태로 남습니다.  
@@ -193,7 +192,7 @@ GO
 -   [로그 시퀀스 번호로 복구&#40;SQL Server&#41;](recover-to-a-log-sequence-number-sql-server.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [backupset &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   
+ [backupset&#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   
  [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [RESTORE HEADERONLY&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   

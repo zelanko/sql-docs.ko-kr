@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 719b0b357767fcc4412663449a6a7bd929b34cd3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767645"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965295"
 ---
 # <a name="step-4-adding-package-configurations"></a>4단계: 패키지 구성 추가
   이 태스크에서는 각 패키지에 구성을 추가합니다. 구성은 런타임 시 패키지 속성 및 패키지 개체의 값을 업데이트합니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "62767645"
   
 5.  패키지 구성 마법사 시작 페이지에서 **다음**을 클릭합니다.  
   
-6.  구성 유형 선택 페이지의 **구성 유형** 목록에서 **XML 구성 파일** 을 선택 하 고 **구성 위치가 환경 변수에 저장 됨** 옵션을 선택한 다음 목록에서 **DataTransfer** 환경 변수 `DataTransfer,` 를 입력 하거나 선택 합니다.  
+6.  구성 유형 선택 페이지의 **구성 유형** 목록에서 **XML 구성 파일** 을 선택 하 고 **구성 위치가 환경 변수에 저장 됨** 옵션을 선택한 다음 `DataTransfer,` 목록에서 **DataTransfer** 환경 변수를 입력 하거나 선택 합니다.  
   
     > [!NOTE]  
     >  이 환경 변수를 목록에서 사용할 수 있게 하려면 변수를 추가한 후에 컴퓨터를 다시 시작해야 할 수도 있습니다. 컴퓨터를 다시 시작하지 않으려면 환경 변수의 이름을 입력합니다.  
@@ -93,7 +92,7 @@ ms.locfileid: "62767645"
   
 5.  패키지 구성 마법사 시작 페이지에서 **다음**을 클릭합니다.  
   
-6.  구성 유형 선택 페이지의 **구성 유형** 목록에서 **XML 구성 파일** 을 선택 하 고 **구성 위치가 환경 변수에 저장 됨** 옵션을 선택한 다음 목록에서 `LoadXMLData` `LoadXMLData` 환경 변수를 입력 하거나 선택 합니다.  
+6.  구성 유형 선택 페이지의 **구성 유형** 목록에서 **XML 구성 파일** 을 선택 하 고 **구성 위치가 환경 변수에 저장 됨** 옵션을 선택한 다음 `LoadXMLData` `LoadXMLData` 목록에서 환경 변수를 입력 하거나 선택 합니다.  
   
     > [!NOTE]  
     >  이 환경 변수를 목록에서 사용할 수 있게 하려면 변수를 추가한 후에 컴퓨터를 다시 시작해야 할 수도 있습니다.  

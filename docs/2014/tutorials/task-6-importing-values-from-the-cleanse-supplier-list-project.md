@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f6b90a36238cd4a02e86d49125ee662f07d32882
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb3e7a85254cac96b8b8541de57b494e96b8928f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489092"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061070"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>태스크 6: Cleanse Supplier List 프로젝트에서 값 가져오기
   이 작업에서는 정리 프로세스 중에 수집된 데이터 품질 기술 자료를 가져옵니다. 자세한 내용은 [정리 프로젝트 값을 도메인으로 가져오기](https://msdn.microsoft.com/library/hh479581.aspx) 항목을 참조하십시오. 또한 업데이트된 **Suppliers** 기술 자료를 게시하기 전에 기술 자료를 DQS로 내보냅니다.  

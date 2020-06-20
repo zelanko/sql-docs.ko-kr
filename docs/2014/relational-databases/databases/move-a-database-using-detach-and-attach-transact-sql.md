@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 768a70dfe94af6f8d65f7c76fa08d3dff650fe7d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917097"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965893"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>분리 및 연결을 사용하여 데이터베이스 이동(Transact-SQL)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 분리된 데이터베이스를 다른 위치로 이동하고 동일한 서버 인스턴스나 다른 서버 인스턴스에 다시 연결하는 방법에 대해 설명합니다. 하지만 데이터베이스를 이동할 때는 분리 및 연결 작업 대신 계획된 ALTER DATABASE 재배치 프로시저를 사용하는 것이 좋습니다. 자세한 내용은 [Move User Databases](move-user-databases.md)을 참조하세요.  
@@ -49,9 +48,9 @@ ms.locfileid: "62917097"
 3.  복사된 파일을 연결합니다. 자세한 내용은 [Attach a Database](attach-a-database.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는가 연결 된 서버 인스턴스에 [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] 연결 된 쿼리 편집기 창에서 실행 되는 문의 복사본을 만듭니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] 가 연결 된 서버 인스턴스에 연결 된 쿼리 편집기 창에서 실행 되는 문의 복사본을 만듭니다.  
   
-1.  문을 분리 [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] 합니다.  
+1.  문을 분리 합니다 [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] .  
   
     ```  
     USE master;  

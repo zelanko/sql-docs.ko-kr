@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3b43bbae1dfec9b7d97677b033c50d21635e6537
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 082af2f3bd069bf8266af395c5d4c6382e191eb4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754834"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934304"
 ---
 # <a name="database-mirroring-history"></a>데이터베이스 미러링 기록
   이 대화 상자를 사용하여 지정된 서버 인스턴스의 미러링된 데이터베이스에 대한 미러링 상태 기록을 볼 수 있습니다.  

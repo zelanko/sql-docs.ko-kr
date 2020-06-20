@@ -15,26 +15,25 @@ helpviewer_keywords:
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2036dd0624e8c2c6479c8ba039aa5646f374902d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef8f72c282c540d695b799f0c4a884734db2c491
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211318"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062122"
 ---
 # <a name="use-tokens-in-job-steps"></a>작업 단계에서 토큰 사용
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계 스크립트에 토큰을 사용할 수 있습니다. 작업 단계를 작성할 때 토큰을 사용하면 소프트웨어 프로그램 작성 시 변수를 사용하는 것과 같은 유연성이 있습니다. 작업 단계 스크립트에 토큰을 삽입하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하위 시스템에서 해당 작업 단계를 실행하기 전에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에이전트가 런타임 시 토큰을 바꿉니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서비스 팩 1부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계의 토큰 구문이 변경되었습니다. 그러므로 작업 단계에서 사용되는 모든 토큰에 이스케이프 매크로를 사용해야 하며 그렇지 않으면 작업 단계가 실패합니다. 이스케이프 매크로 사용 및 토큰을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계 업데이트에 대해서는 다음에 나오는 "토큰 사용 이해", "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰 및 매크로" 및 "매크로를 사용하도록 작업 단계 업데이트" 섹션에서 설명합니다. 또한 대괄호를 사용하여 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 에이전트 작업 단계 토큰을 호출한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구문(예: "`[DATE]`")이 변경되었습니다. 이제 토큰 이름을 괄호로 묶고 토큰 구문의 시작 부분에 달러 기호(`$`)를 사용해야 합니다. 예를 들어:  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서비스 팩 1부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계의 토큰 구문이 변경되었습니다. 그러므로 작업 단계에서 사용되는 모든 토큰에 이스케이프 매크로를 사용해야 하며 그렇지 않으면 작업 단계가 실패합니다. 이스케이프 매크로 사용 및 토큰을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계 업데이트에 대해서는 다음에 나오는 "토큰 사용 이해", "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰 및 매크로" 및 "매크로를 사용하도록 작업 단계 업데이트" 섹션에서 설명합니다. 또한 대괄호를 사용하여 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 에이전트 작업 단계 토큰을 호출한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구문(예: "`[DATE]`")이 변경되었습니다. 이제 토큰 이름을 괄호로 묶고 토큰 구문의 시작 부분에 달러 기호(`$`)를 사용해야 합니다. 다음은 그 예입니다.  
 >   
 >  `$(ESCAPE_` *macro name* `(DATE))`  
   
 ## <a name="understanding-using-tokens"></a>토큰 사용 이해  
   
 > [!IMPORTANT]  
->  Windows 이벤트 로그에 대한 쓰기 권한이 있는 모든 Windows 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고 또는 WMI 경고로 활성화되는 작업 단계에 액세스할 수 있습니다. 이러한 보안상 위험을 방지하기 위해 경고로 활성화되는 작업에 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰은 기본적으로 해제됩니다. 이러한 토큰은 **a-a-dbn**, **a**- **ERR**, a- **심각도**, **-MSG**및 **WMI (*`property`*)** 입니다. 이번 릴리스에서는 모든 경고에 토큰을 사용할 수 있습니다.  
+>  Windows 이벤트 로그에 대한 쓰기 권한이 있는 모든 Windows 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고 또는 WMI 경고로 활성화되는 작업 단계에 액세스할 수 있습니다. 이러한 보안상 위험을 방지하기 위해 경고로 활성화되는 작업에 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰은 기본적으로 해제됩니다. 이러한 토큰은 **a-a-dbn**, **a**- **ERR**, a- **심각도**, **-MSG**및 **WMI ( *`property`* )** 입니다. 이번 릴리스에서는 모든 경고에 토큰을 사용할 수 있습니다.  
 >   
 >  이러한 토큰을 사용해야 하는 경우 먼저 Administrators 그룹과 같은 트러스트된 Windows 보안 그룹의 멤버만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 컴퓨터의 이벤트 로그에 대한 쓰기 권한이 있는지 확인합니다. 그런 다음 개체 탐색기에서 **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택하고 **경고 시스템** 페이지에서 **경고에 대한 모든 응답 작업에 대해 토큰 바꾸기** 를 선택하여 이러한 토큰을 설정합니다.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "68211318"
   
 ### <a name="sql-server-agent-tokens"></a>SQL Server 에이전트 토큰  
   
-|토큰|설명|  
+|토큰|Description|  
 |-----------|-----------------|  
 |**(A-DBN)**|데이터베이스 이름 작업이 경고로 실행되면 이 토큰은 작업 단계에서 자동으로 데이터베이스 이름 값으로 대체됩니다.|  
 |**(A-SVR)**|서버 이름입니다. 작업이 경고로 실행되면 이 토큰은 작업 단계에서 자동으로 서버 이름 값으로 대체됩니다.|  
@@ -84,7 +83,7 @@ ms.locfileid: "68211318"
   
 ### <a name="sql-server-agent-escape-macros"></a>SQL Server 에이전트 이스케이프 매크로  
   
-|이스케이프 매크로|설명|  
+|이스케이프 매크로|Description|  
 |-------------------|-----------------|  
 |**$(ESCAPE_SQUOTE(** *token_name* **))**|토큰 교체 문자열에서 작은따옴표(')를 이스케이프합니다. 작은따옴표 하나를 작은따옴표 두 개로 바꿉니다.|  
 |**$(ESCAPE_DQUOTE(** *token_name* **))**|토큰 교체 문자열에서 큰따옴표(")를 이스케이프합니다. 큰따옴표 하나를 큰따옴표 두 개로 바꿉니다.|  
@@ -100,7 +99,7 @@ ms.locfileid: "68211318"
   
 |토큰 구문|경고 토큰 바꾸기 설정|경고 토큰 바꾸기 해제|  
 |------------------|--------------------------------|---------------------------------|  
-|ESCAPE 매크로가 사용됨|작업에 있는 모든 토큰이 성공적으로 바뀝니다.|경고로 활성화된 토큰이 바뀌지 않습니다. 이러한 토큰은 **-a-dbn**, **a**- **오류**, a- **심각도**, a- **MSG**및 ***`property`* WMI ()** 입니다. 다른 정적 토큰은 성공적으로 바뀝니다.|  
+|ESCAPE 매크로가 사용됨|작업에 있는 모든 토큰이 성공적으로 바뀝니다.|경고로 활성화된 토큰이 바뀌지 않습니다. 이러한 토큰은 **-a-dbn**, **a**- **오류**, a- **심각도**, a- **MSG**및 **WMI ( *`property`* )** 입니다. 다른 정적 토큰은 성공적으로 바뀝니다.|  
 |ESCAPE 매크로가 사용되지 않음|토큰이 포함된 모든 작업이 실패합니다.|토큰이 포함된 모든 작업이 실패합니다.|  
   
 ## <a name="token-syntax-update-examples"></a>토큰 구문 업데이트 예  

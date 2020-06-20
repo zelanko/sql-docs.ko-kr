@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00c5e0017b8d81eaea6960f016e40dbc381e69e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c59a0444fc0a7b1b685b5a4f6b30a835165fae0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049138"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000892"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>공간 인덱스 대화 상자(Visual Database Tools)
   **공간 인덱스** 대화 상자를 사용하면 **인덱스/키** 대화 상자를 통해 인덱싱할 수 없는 **기하 도형** 또는*지리*데이터 형식의 열( **공간 열** )에 대한 인덱스를 만들 수 없습니다. 각 공간 열에는 둘 이상의 공간 인덱스가 있을 수 있으며, 이러한 공간 인덱스는 한 번에 하나씩 만들어야 합니다.  

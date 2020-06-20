@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: eb8c82be-323b-4d86-ab10-c1bf69a4abe3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a0b2c2e597ef7069bcc51fb885a2e810871bfbb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8524cdc2c4efb03e2a285c815ca58391045062f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952654"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045514"
 ---
 # <a name="backup-encryption-key-ssrs-native-mode"></a>백업 암호화 키(SSRS 기본 모드)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 암호화 키를 사용하여 보고서 서버 데이터베이스에 저장된 중요한 데이터를 보호합니다. 암호화된 연결 문자열 및 자격 증명에 계속 액세스하려 이 키를 백업해야 합니다. 보고서 서버 데이터베이스를 다른 컴퓨터로 이동하거나 보고서 서버 서비스 계정의 사용자 이름 또는 암호를 변경할 경우 이 키의 복사본을 백업해야 합니다. 두 작업을 수행하려면 이전에 만든 백업 복사본에서 키를 복원해야 합니다.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]기본 모드입니다.  
   
- 암호화 키 백업 대화 상자를 열려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자의 탐색 창에서 **암호화 키**를 클릭한 다음 **백업**을 클릭합니다. 이 대화 상자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자의 서비스 계정 페이지를 사용하여 서비스 계정을 업데이트할 때도 나타납니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager에 대 한 자세한 내용은 [Reporting Services 구성 관리자 &#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)를 참조 하세요.  
+ 암호화 키 백업 대화 상자를 열려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자의 탐색 창에서 **암호화 키**를 클릭한 다음 **백업**을 클릭합니다. 이 대화 상자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자의 서비스 계정 페이지를 사용하여 서비스 계정을 업데이트할 때도 나타납니다. Configuration Manager에 대 한 자세한 내용은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [Reporting Services 구성 관리자 &#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)를 참조 하세요.  
   
 ## <a name="options"></a>옵션  
  **파일 위치**  

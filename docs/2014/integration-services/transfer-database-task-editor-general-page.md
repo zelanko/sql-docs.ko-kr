@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f65927a-5835-45ee-9c19-e33f00d0755c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4a78fb3dd052a7e275b91073ccf2089510b97e44
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36f27bc789a5af9077225e3c507fadf54fb9ddfa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055103"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972863"
 ---
 # <a name="transfer-database-task-editor-general-page"></a>데이터베이스 전송 태스크 편집기(일반 페이지)
   **데이터베이스 전송 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 데이터베이스 전송 태스크를 명명 및 설명할 수 있습니다. 데이터베이스 전송 태스크에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 두 인스턴스 간에 복사 또는 이동합니다. 동일한 서버 내에서 데이터베이스를 복사하는 데도 전송 태스크를 사용할 수 있습니다. 이 태스크에 대한 자세한 내용은 [데이터베이스 전송 태스크](control-flow/transfer-database-task.md)를 참조하세요.  

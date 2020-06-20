@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 65af4c1bce3e09f33771b2729c01c02b9512688b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bbd9f3693fa8f84015efb061dda5e1a9267af960
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718052"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996388"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>CommandText 속성을 사용하여 템플릿 파일 실행
   이 예에서는 CommandTextproperty를 사용 하 여 SQL 또는 XPath 쿼리로 구성 된 템플릿 파일을 지정할 수 있는 방법을 보여 줍니다. SQL 또는 XPath 쿼리를 CommandText 값으로 지정 하는 대신 파일 이름을 값으로 지정할 수 있습니다. 다음 예제에서 CommandType 속성은 SqlXmlCommandType. 템플릿 파일로 지정 됩니다.  

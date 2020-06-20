@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 68228ece-cbf1-4f19-bfdc-053884c1af48
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7139ace2498ef2eeddb173950281ac4cf493efad
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c47f24152978fedf8f2c3d49ec3b721969712814
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705590"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020588"
 ---
 # <a name="cursor-concurrency-odbc"></a>커서 동시성(ODBC)
   커서 작업은 커서 유형처럼 애플리케이션에서 설정한 동시성 옵션의 영향을 받습니다. 동시성 옵션은 [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)의 SQL_ATTR_CONCURRENCY 옵션을 사용 하 여 설정 됩니다. 동시성 유형은 다음과 같습니다.  

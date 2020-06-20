@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3f70ddfc241a902a59dff989323a75b17f7af55e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bbd9c6fa86e3ef26f0779795ddeacda67976ec21
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807562"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934224"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용(Transact-SQL)
   이 항목에서는 인증서를 사용하여 데이터베이스 미러링의 인바운드 연결을 인증하도록 서버 인스턴스를 구성하는 단계에 대해 설명합니다. 인바운드 연결을 설정하려면 먼저 각 서버 인스턴스에서 아웃바운드 연결을 구성해야 합니다. 자세햔 내용은 [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)을 참조하세요.  

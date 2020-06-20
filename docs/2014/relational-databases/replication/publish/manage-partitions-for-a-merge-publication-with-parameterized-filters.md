@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a71ac4d6bcc887257ea5bfbc1523e327fc03b16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 983b02865c0564919259f896bf09d8bdb0cd969f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74479309"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060511"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>매개 변수가 있는 필터로 병합 게시에 대한 파티션 관리
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 매개 변수가 있는 필터로 병합 게시에 대한 파티션을 관리하는 방법에 대해 설명합니다. 매개 변수가 있는 행 필터를 사용하여 겹치지 않는 파티션을 생성할 수 있습니다. 이러한 파티션을 제한하여 특정 파티션을 하나의 구독에서만 받도록 할 수 있습니다. 이러한 경우 구독자 수가 많으면 파티션 수가 많아지고 이에 따라 동일한 수의 분할된 스냅샷이 필요합니다. 자세한 내용은 [매개 변수가 있는 행 필터](../merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
@@ -47,11 +46,11 @@ ms.locfileid: "74479309"
 -   겹치지 않는 파티션과 함께 구독을 생성하는 매개 변수가 있는 필터가 게시에 사용된 경우 특정 구독이 손실되어 다시 만들어야 하면 구독된 파티션을 제거하고 구독을 다시 만든 다음 파티션을 다시 만듭니다. 자세한 내용은 [매개 변수가 있는 행 필터](../merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오. 복제에서는 게시 만들기 스크립트가 생성될 때 기존 구독자 파티션에 대한 만들기 스크립트를 생성합니다. 자세한 내용은 [Scripting Replication](../scripting-replication.md)을 참조하세요.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- **게시 속성 - \<Publication>** 대화 상자의 **데이터 파티션** 페이지에서 파티션을 관리합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요. 이 페이지에서는 파티션을 만들거나 삭제하고, 구독자가 스냅샷 생성 및 배달을 시작하도록 허용하고, 하나 이상의 파티션에 대한 스냅샷을 생성하고, 스냅샷을 정리할 수 있습니다.  
+ **게시 속성- \<Publication> ** 대화 상자의 **데이터 파티션** 페이지에서 파티션을 관리 합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요. 이 페이지에서는 파티션을 만들거나 삭제하고, 구독자가 스냅샷 생성 및 배달을 시작하도록 허용하고, 하나 이상의 파티션에 대한 스냅샷을 생성하고, 스냅샷을 정리할 수 있습니다.  
   
 #### <a name="to-create-a-partition"></a>파티션을 만들려면  
   
-1.  **게시 속성 - \<게시>** 대화 상자의 **데이터 파티션** 페이지에서 **추가**를 클릭합니다.  
+1.  **게시 속성- \<Publication> ** 대화 상자의 **데이터 파티션** 페이지에서 **추가**를 클릭 합니다.  
   
 2.  **데이터 파티션 추가** 대화 상자에서 만들려는 파티션에 연결된 **HOST_NAME()** 및/또는 **SUSER_SNAME()** 값을 입력합니다.  
   
@@ -100,25 +99,25 @@ ms.locfileid: "74479309"
   
 #### <a name="to-view-information-on-existing-partitions"></a>기존 파티션의 정보를 보려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_helpmergepartition&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql)을 실행합니다. ** \@게시**에 대 한 게시의 이름을 지정 합니다. 필드 단일 필터링 기준에 따라 정보만 반환 하려면 ** \@suser_sname** 또는 ** \@host_name** 를 지정 합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_helpmergepartition&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql)을 실행합니다. ** \@ 게시**에 대 한 게시의 이름을 지정 합니다. 필드 단일 필터링 기준에 따라 정보만 반환 하려면 ** \@ suser_sname** 또는 ** \@ host_name** 를 지정 합니다.  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>새 파티션을 정의하고 새 분할된 스냅샷을 생성하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addmergepartition&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql)을 실행합니다. ** \@게시**에 대 한 게시 이름 및 다음 중 하나에 대 한 파티션을 정의 하는 매개 변수가 있는 값을 지정 합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_addmergepartition&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql)을 실행합니다. ** \@ 게시**에 대 한 게시 이름 및 다음 중 하나에 대 한 파티션을 정의 하는 매개 변수가 있는 값을 지정 합니다.  
   
-    -   suser_sname-매개 변수가 있는 필터가 [SUSER_SNAME &#40;transact-sql&#41;](/sql/t-sql/functions/suser-sname-transact-sql)에서 반환 된 값으로 정의 되는 경우입니다. ** \@**  
+    -   ** \@ suser_sname** -매개 변수가 있는 필터가 [SUSER_SNAME &#40;transact-sql&#41;](/sql/t-sql/functions/suser-sname-transact-sql)에서 반환 된 값으로 정의 되는 경우입니다.  
   
-    -   host_name-매개 변수가 있는 필터가 [HOST_NAME &#40;transact-sql&#41;](/sql/t-sql/functions/host-name-transact-sql)에서 반환 된 값으로 정의 되는 경우입니다. ** \@**  
+    -   ** \@ host_name** -매개 변수가 있는 필터가 [HOST_NAME &#40;transact-sql&#41;](/sql/t-sql/functions/host-name-transact-sql)에서 반환 된 값으로 정의 되는 경우입니다.  
   
 2.  이 새 파티션에 대해 매개 변수가 있는 스냅샷을 만들고 초기화합니다. 자세한 내용은 [매개 변수가 있는 필터로 병합 게시에 대한 스냅샷 만들기](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
   
 #### <a name="to-delete-a-partition"></a>파티션을 삭제하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_dropmergepartition&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql)을 실행합니다. ** \@게시** 에 대 한 게시 이름 및 다음 중 하나에 대 한 파티션을 정의 하는 매개 변수가 있는 값을 지정 합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_dropmergepartition&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql)을 실행합니다. ** \@ 게시** 에 대 한 게시 이름 및 다음 중 하나에 대 한 파티션을 정의 하는 매개 변수가 있는 값을 지정 합니다.  
   
-    -   suser_sname-매개 변수가 있는 필터가 [SUSER_SNAME &#40;transact-sql&#41;](/sql/t-sql/functions/suser-sname-transact-sql)에서 반환 된 값으로 정의 되는 경우입니다. ** \@**  
+    -   ** \@ suser_sname** -매개 변수가 있는 필터가 [SUSER_SNAME &#40;transact-sql&#41;](/sql/t-sql/functions/suser-sname-transact-sql)에서 반환 된 값으로 정의 되는 경우입니다.  
   
-    -   host_name-매개 변수가 있는 필터가 [HOST_NAME &#40;transact-sql&#41;](/sql/t-sql/functions/host-name-transact-sql)에서 반환 된 값으로 정의 되는 경우입니다. ** \@**  
+    -   ** \@ host_name** -매개 변수가 있는 필터가 [HOST_NAME &#40;transact-sql&#41;](/sql/t-sql/functions/host-name-transact-sql)에서 반환 된 값으로 정의 되는 경우입니다.  
   
      이 경우 파티션에 대한 스냅샷 작업과 스냅샷 파일도 제거됩니다.  
   

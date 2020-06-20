@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: d33cb556-0380-490a-9220-b74062dbd6d9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 992f8288018fb248b14db13b2ed1104aeecab04d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84f8a3a3408b68cb8c389b05b417f391a1f86c93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63285554"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060155"
 ---
 # <a name="sqltoolsvsnativehelpers"></a>SqlToolsVSNativeHelpers
   Visual Studio에서 SQL Server 기능을 지원하는 라이브러리입니다.  

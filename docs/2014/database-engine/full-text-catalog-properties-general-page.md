@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 60a56b6d64957198292146d392ea22a572fb8a4e
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 9e2411daea2d4b1c4028e9ed0b3143762f2db592
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000963"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933024"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>전체 텍스트 카탈로그 속성(일반 페이지)
   이 섹션에서는 **전체 텍스트 카탈로그 속성** 대화 상자의 **일반** 페이지에서 사용할 수 있는 옵션과 기능을 보여 줍니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "83000963"
  카탈로그가 데이터베이스의 기본 카탈로그인지 여부를 표시합니다.  
   
  **채우기 상태**  
- 카탈로그의 상태를 나타냅니다. 가능한 값은  
+ 카탈로그의 상태를 나타냅니다. 가능한 값은 다음과 같습니다.  
   
 -   **유휴 상태**  
   
@@ -52,7 +51,7 @@ ms.locfileid: "83000963"
   
 -   **디스크가 꽉 참-일시 중지 됨**  
   
--   **변경 내용 추적**  
+-   **Change tracking**  
   
  **항목 개수**  
  카탈로그의 전체 텍스트 항목 수를 표시합니다.  

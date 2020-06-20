@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 57131b757dfc66df990f0ddf8a3c5f28f4e04396
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f407d7578baabc2e0fe155235781b99b02dc1e3c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871221"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965783"
 ---
 # <a name="secondary-database-settings"></a>보조 데이터베이스 설정
   이 대화 상자를 사용하여 로그 전달 구성에서 보조 데이터베이스의 속성을 구성하고 수정할 수 있습니다.  

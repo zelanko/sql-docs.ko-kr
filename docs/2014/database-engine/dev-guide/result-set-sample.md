@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: a0590ba6-3856-4731-bb29-87b0a1c1b795
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f562a49ceb0bcc455c99aad1053af93209717f00
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c837eee28bfd20cc9f7b0a50ded2014ff75461f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637634"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933414"
 ---
 # <a name="result-set-sample"></a>결과 집합 예제
   경우에 따라서는 쿼리 결과를 읽는 동안 새 연결을 열거나 모든 결과를 메모리로 읽어 오지 않고 명령을 실행하는 것이 유용할 수 있습니다. ADO.NET 2.0의 MARS(Multiple Active Result Set)는 이러한 작업을 가능하게 하는 기술입니다. 현재로서는 서버 쪽 프로그래밍에 사용되는 in-process 공급자에는 MARS가 구현되지 않습니다. 서버 쪽 커서를 사용하면 이러한 제한을 해결할 수 있습니다. 이 예제는 서버 쪽 커서를 사용하여 서버 쪽 프로그래밍을 지원하지 않는 MARS의 한계를 극복하는 방법을 보여 줍니다.  
@@ -57,7 +56,7 @@ ms.locfileid: "73637634"
   
 -   사용하고 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 AdventureWorks 데이터베이스를 설치해야 합니다.  
   
--   사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 관리자가 아닌 경우 설치를 완료 하려면 관리자에 게 **createassembly** 권한을 부여 해야 합니다.  
+-   사용 중인 인스턴스의 관리자가 아닌 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 완료 하려면 관리자에 게 **createassembly** 권한을 부여 해야 합니다.  
   
 ## <a name="building-the-sample"></a>예제 빌드  
   

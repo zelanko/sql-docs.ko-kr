@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d5bf7340-2b0b-4593-965c-de04ae628344
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 848081c8a4eac92299a916618aa4cd6289183d0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf1666aeacd7df2589c810faa47edf9f435b73bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63238804"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060519"
 ---
 # <a name="maintain-publications"></a>게시 유지 관리
   게시를 만든 후에 아티클을 추가 또는 삭제하거나 게시 및 아티클 속성을 변경해야 할 수 있습니다. 게시가 생성된 후에는 대부분의 변경이 허용되지만 일부 경우에 게시에 대한 스냅샷을 새로 생성하거나 게시에 대한 구독을 다시 초기화해야 합니다. 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md) 및 [기존 게시에 대한 아티클 추가 및 삭제](add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  

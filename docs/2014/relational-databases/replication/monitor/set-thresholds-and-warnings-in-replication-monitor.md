@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ff3e97a3a784bc61a20de9c65a4381c81078480
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667186"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060808"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>복제 모니터에 임계값 및 경고 설정
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터는 게시 및 구독에 대 한 상태 정보를 표시 합니다. 기본적으로 복제 모니터는 초기화되지 않은 구독에 대해서만 경고를 표시하지만 다른 조건에 대한 경고를 활성화할 수 있습니다. 토폴로지에 대한 경고를 활성화하여 상태 및 성능 정보를 적시에 받아보는 것이 좋습니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]복제 모니터는 게시 및 구독에 대 한 상태 정보를 표시 합니다. 기본적으로 복제 모니터는 초기화되지 않은 구독에 대해서만 경고를 표시하지만 다른 조건에 대한 경고를 활성화할 수 있습니다. 토폴로지에 대한 경고를 활성화하여 상태 및 성능 정보를 적시에 받아보는 것이 좋습니다.  
   
  경고를 활성화할 때는 임계값을 지정해야 합니다. 임계값에 도달하거나 임계값이 초과되면 우선 순위가 더 높은 문제점이 표시될 필요가 없는 한 경고가 표시됩니다. 임계값에 도달하면 복제 모니터에 경고가 표시되는 것은 물론 알림 신호가 트리거될 수 있습니다. 다음 상황에 대해 경고를 설정할 수 있습니다.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "62667186"
   
      이 대화 상자에 모니터링 임계값과 관련 없는 경고를 포함하여 모든 게시 유형에 대한 경고가 표시됩니다. 자세한 내용은 [복제 에이전트 이벤트에 대한 경고 사용](../agents/use-alerts-for-replication-agent-events.md)을 참조하세요.  
   
-3.  ** \<Alertname> 경고 속성** 대화 상자에서 옵션을 설정 합니다.  
+3.  ** \<AlertName> 경고 속성** 대화 상자에서 옵션을 설정 합니다.  
   
     -   **일반** 페이지에서 **사용**을 클릭하고 경고를 적용할 데이터베이스를 지정합니다.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "62667186"
   
      이 대화 상자에 모니터링 임계값과 관련 없는 경고를 포함하여 모든 게시 유형에 대한 경고가 표시됩니다.  
   
-3.  ** \<Alertname> 경고 속성** 대화 상자에서 옵션을 설정 합니다.  
+3.  ** \<AlertName> 경고 속성** 대화 상자에서 옵션을 설정 합니다.  
   
     -   **일반** 페이지에서 **사용**을 클릭하고 경고를 적용할 데이터베이스를 지정합니다.  
   
@@ -149,7 +148,7 @@ ms.locfileid: "62667186"
   
      이 대화 상자에 모니터링 임계값과 관련 없는 경고를 포함하여 모든 게시 유형에 대한 경고가 표시됩니다. 자세한 내용은 [복제 에이전트 이벤트에 대한 경고 사용](../agents/use-alerts-for-replication-agent-events.md)을 참조하세요.  
   
-3.  ** \<Alertname> 경고 속성** 대화 상자에서 옵션을 설정 합니다.  
+3.  ** \<AlertName> 경고 속성** 대화 상자에서 옵션을 설정 합니다.  
   
     -   **일반** 페이지에서 **사용**을 클릭하고 경고를 적용할 데이터베이스를 지정합니다.  
   

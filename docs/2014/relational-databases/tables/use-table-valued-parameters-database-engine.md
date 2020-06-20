@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9cd3f00b89de1d2bad683e7ce7005605d3c61f18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa7013fddc6b2ce12ad9ad0f9fcb511d93915e05
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211768"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002862"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>테이블 반환 매개 변수 사용(데이터베이스 엔진)
   테이블 반환 매개 변수는 사용자 정의 테이블 형식을 사용하여 선언됩니다. 테이블 반환 매개 변수를 사용하면 임시 테이블이나 많은 매개 변수를 만들지 않고도 저장 프로시저 또는 함수와 같은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이나 루틴에 여러 행의 데이터를 보낼 수 있습니다.  
@@ -79,7 +78,7 @@ ms.locfileid: "68211768"
   
  테이블 반환 매개 변수는 동일한 매개 변수 배열 구현 이상의 성능을 제공합니다.  
   
-##  <a name="example"></a><a name="Example"></a>예 들어  
+##  <a name="example"></a><a name="Example"></a> 예  
  다음 예에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하며 테이블 반환 매개 변수 형식을 만들고, 해당 형식을 참조하는 변수를 선언하고, 매개 변수 목록을 채운 다음 저장 프로시저에 값을 전달하는 방법을 보여 줍니다.  
   
 ```  

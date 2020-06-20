@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8cfddd4d-f605-4913-9648-66e8e41417e1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8c79715803d598b3f30eb5b54bd6ddcb77f1aae2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6afcec22eb14686c0bd7e65cdf10be0075f31577
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057087"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964963"
 ---
 # <a name="ole-db-destination-editor-mappings-page"></a>OLE DB 대상 편집기(매핑 페이지)
   **OLE DB 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "66057087"
  사용 가능한 대상 열의 목록을 표시합니다. 끌어서 놓기 작업을 사용하여 테이블에서 사용 가능한 대상 열을 입력 열에 매핑합니다.  
   
  **입력 열**  
- 선택한 입력 열을 표시합니다. 출력에서 열을 제외 하려면 ** \<>무시** 를 선택 하 여 매핑을 제거할 수 있습니다.  
+ 선택한 입력 열을 표시합니다. **\<ignore>** 출력에서 열을 제외 하도록 선택 하 여 매핑을 제거할 수 있습니다.  
   
  **대상 열**  
  매핑 여부에 관계없이 사용 가능한 각 대상 열을 표시합니다.  

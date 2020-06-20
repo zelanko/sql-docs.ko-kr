@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a9dc6aadde75d1d4df797f85c0343bb11083b80f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5db3b83ab65d854f3a4d2182d9a4a1314e097681
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702048"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021056"
 ---
 # <a name="disconnecting-from-a-data-source"></a>데이터 원본에서 연결 끊기
   응용 프로그램이 데이터 원본 사용을 마치면 **Sqldisconnect**를 호출 합니다. **Sqldisconnect** 는 연결에 할당 된 모든 문을 해제 하 고 데이터 원본에서 드라이버의 연결을 끊습니다. 연결을 끊은 후 응용 프로그램은 [Sqlfreehandle](../native-client-odbc-api/sqlfreehandle.md) 을 호출 하 여 연결 핸들을 해제할 수 있습니다. 종료 하기 전에 응용 프로그램은 **Sqlfreehandle** 을 호출 하 여 환경 핸들을 해제 합니다.  

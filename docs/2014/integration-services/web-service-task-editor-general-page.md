@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c6f993f1f2386782bf8225f22b285b9385e2f8e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 254680ce380b88aca01184bb744a7dde1b8e5611
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054535"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972481"
 ---
 # <a name="web-service-task-editor-general-page"></a>웹 서비스 태스크 편집기(일반 페이지)
   **웹 서비스 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 HTTP 연결 관리자를 지정하고, 웹 서비스 태스크에 사용하는 WSDL(웹 서비스 기술 언어) 파일의 위치를 지정하고, 웹 서비스 태스크를 설명하고, WSDL 파일을 다운로드할 수 있습니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "66054535"
   
 ## <a name="options"></a>옵션  
  **HTTPConnection**  
- 목록에서 연결 관리자를 선택 하거나 \< **새 연결** ...>을 클릭 하 여 새 연결 관리자를 만듭니다.  
+ 목록에서 연결 관리자를 선택 하거나 \<**New connection...**> 를 클릭 하 여 새 연결 관리자를 만듭니다.  
   
 > [!IMPORTANT]  
 >  HTTP 연결 관리자는 익명 인증과 기본 인증만 지원하며 Windows 인증은 지원하지 않습니다.  
@@ -44,7 +43,7 @@ ms.locfileid: "66054535"
   
 -   **WSDLFile** 옵션으로 이 빈 파일을 선택합니다.  
   
--   **OverwriteWSDLFile** 의 값을로 `True` 설정 하 여 빈 파일을 실제 WSDL 파일로 덮어쓸 수 있도록 합니다.  
+-   **OverwriteWSDLFile** 의 값을로 설정 `True` 하 여 빈 파일을 실제 WSDL 파일로 덮어쓸 수 있도록 합니다.  
   
 -   **WSDL 다운로드** 를 클릭하여 실제 WSDL 파일을 다운로드하고 빈 파일을 덮어씁니다.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66054535"
  **OverwriteWSDLFile**  
  웹 서비스 태스크에 대한 WSDL 파일을 덮어쓸지 여부를 나타냅니다.  
   
- **Wsdl 다운로드** 단추를 사용 하 여 wsdl 파일을 다운로드 하려는 경우이 값을로 `True`설정 합니다.  
+ **Wsdl 다운로드** 단추를 사용 하 여 wsdl 파일을 다운로드 하려는 경우이 값을로 설정 `True` 합니다.  
   
  **이름**  
  웹 서비스 태스크에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘에서 레이블로 사용됩니다.  

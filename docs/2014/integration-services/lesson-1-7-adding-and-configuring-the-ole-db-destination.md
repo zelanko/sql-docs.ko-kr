@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b71e4254312c0dc07d6d8869a2e8b28eb02c36fe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767562"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966133"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>7단계: OLE DB 대상 추가 및 구성
   이제 패키지는 플랫 파일 원본에서 데이터를 추출하여 대상과 호환되는 형식으로 이 데이터를 변환할 수 있습니다. 다음 태스크에서는 변환된 데이터를 실제로 대상에 로드합니다. 데이터를 로드하려면 데이터 흐름에 OLE DB 대상을 추가해야 합니다. OLE DB 대상은 데이터베이스 테이블, 뷰 또는 SQL 명령을 사용하여 다양한 OLE DB 호환 데이터베이스에 데이터를 로드할 수 있습니다.  
@@ -50,7 +49,7 @@ ms.locfileid: "62767562"
   
 13. **Sample OLE DB Destination** 대상을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-14. 속성 창에서 `LocaleID` 속성이 **영어 (미국)** 로 설정 되어 있고`DefaultCodePage` 속성이 **1252**로 설정 되어 있는지 확인 합니다.  
+14. 속성 창에서 `LocaleID` 속성이 **영어 (미국)** 로 설정 되어 있고 `DefaultCodePage` 속성이 **1252**로 설정 되어 있는지 확인 합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [8단계: 1단원 패키지를 쉽게 이해할 수 있도록 만들기](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

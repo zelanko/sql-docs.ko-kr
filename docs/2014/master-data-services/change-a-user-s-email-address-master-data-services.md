@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1d540c414b1190a045fdb18b4b971e73f348459f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6438291ca0d84bfd88c80f490022ebd4dd96ede9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483579"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972083"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>사용자의 전자 메일 주소 변경(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 알림이 전송되는 전자 메일 주소와 알림 전자 메일의 기본 형식을 변경할 수 있습니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9a5d1b52-d505-4e6f-8a89-569329c094e2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8c926f2ea3d9ef9973f75764e254c5e0884836e3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 151db2640e9038ad574775fa5374bddb9ed4aad0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177293"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061117"
 ---
 # <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>태스크 14: Control Flow에 SQL 실행 태스크를 추가하여 MDS에 대한 저장 프로시저 실행
   데이터를 MDS의 준비 테이블에 로드한 다음에는 준비 테이블의 데이터를 MDS 데이터베이스의 적합한 테이블로 로드하기 위해 해당 테이블과 연관된 저장 프로시저를 실행합니다. 이 저장 프로시저에는 전달해야 하는 두 개의 필수 매개 변수(LogFlag 및 VersionName)가 있습니다. LogFlag는 준비 프로세스 중 트랜잭션을 기록할지 여부를 지정하고, VersionName은 모델의 버전을 나타냅니다. 자세한 내용은 [준비 된 저장 프로시저](https://msdn.microsoft.com/library/hh231028.aspx) 항목을 참조 하세요.
@@ -34,10 +33,10 @@ ms.locfileid: "78177293"
 
 5.  **변수** 창을 사용 하 여 다음 설정을 사용 하 여 두 개의 새 변수를 추가 합니다. **변수** 창이 표시 되지 않으면 메뉴 모음에서 **SSIS** 를 클릭 하 고 **변수**를 클릭 합니다.
 
-    |Name|데이터 형식|값|
+    |속성|데이터 형식|값|
     |----------|---------------|-----------|
     |LogFlag|Int32|1|
-    |VersionName|문자열|VERSION_1|
+    |VersionName|String|VERSION_1|
 
      ![SSIS 변수 창](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-02.jpg "SSIS 변수 창")
 

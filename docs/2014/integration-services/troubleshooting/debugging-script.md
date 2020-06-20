@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c8eee57be7c7bb9167c24bec117fd2f88a5bb745
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: efc89f76bb3a1ccfd04b63a359befb646b446aa4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62926338"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972733"
 ---
 # <a name="debugging-script"></a>스크립트 디버깅
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications)에서 스크립트 태스크 및 스크립트 구성 요소에 사용할 스크립트를 작성할 수 있습니다.  

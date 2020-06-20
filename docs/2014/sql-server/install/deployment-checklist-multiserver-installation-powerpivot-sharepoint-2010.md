@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ed0cd8bad3a99c7f1f59b5121aafb06ccdee63b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 20d32f3a050e79aef90eb8df302bd7a590cead3e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952241"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045153"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>배포 검사 목록: SharePoint용 PowerPivot 2010의 다중 서버 설치
-  이 검사 목록에서는 처음부터 작성 하는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 3 계층 sharepoint 2010 팜에 sharepoint 용을 추가 하는 단계를 안내 합니다. 3계층 팜에는 데이터베이스, 애플리케이션 및 웹 계층이 포함되어 있습니다. 이 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 토폴로지에를 추가 하려면 SQL Server 설치 프로그램을 실행 하 여 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 응용 프로그램 계층에를 설치 해야 합니다. PowerPivot 프로그램 파일은 웹 계층에 추가 되지만 웹 응용 프로그램을 배포할 때 설치 후 작업 으로만 추가 됩니다. 웹 계층이나 데이터 계층에는 배포 단계는 있지만 별도로 수행해야 하는 설치 단계는 없습니다. 응용 프로그램 서버에를 설치 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 하는 경우에만 수행 해야 하는 설치 단계가 있습니다.  
+  이 검사 목록 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서는 처음부터 작성 하는 3 계층 sharepoint 2010 팜에 sharepoint 용을 추가 하는 단계를 안내 합니다. 3계층 팜에는 데이터베이스, 애플리케이션 및 웹 계층이 포함되어 있습니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]이 토폴로지에를 추가 하려면 SQL Server 설치 프로그램을 실행 하 여 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 응용 프로그램 계층에를 설치 해야 합니다. PowerPivot 프로그램 파일은 웹 계층에 추가 되지만 웹 응용 프로그램을 배포할 때 설치 후 작업 으로만 추가 됩니다. 웹 계층이나 데이터 계층에는 배포 단계는 있지만 별도로 수행해야 하는 설치 단계는 없습니다. 응용 프로그램 서버에를 설치 하는 경우에만 수행 해야 하는 설치 단계가 있습니다 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
   
 ||  
 |-|  
@@ -26,10 +25,10 @@ ms.locfileid: "71952241"
   
   
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  SQL Server 및 SharePoint 2010을 설치하려면 로컬 관리자여야 합니다.  
   
- SharePoint를 설치하는 관리자가 팜도 구성해야 합니다. 팜을 구성하려면 데이터베이스 서버에 SQL Server 로그인이 있어야 합니다. 로그인은, `securityadmin` 및 `public`역할에 할당 되어야 합니다. `dbcreator`  
+ SharePoint를 설치하는 관리자가 팜도 구성해야 합니다. 팜을 구성하려면 데이터베이스 서버에 SQL Server 로그인이 있어야 합니다. 로그인은 `dbcreator` , 및 역할에 할당 되어야 합니다. `securityadmin` `public`  
   
  SharePoint Server 2010의 엔터프라이즈 또는 엔터프라이즈 평가판 버전이 있어야 합니다.  
   
@@ -122,7 +121,7 @@ ms.locfileid: "71952241"
   
     14. 이름에 인바운드 규칙을 설명 하는 이름을 입력 합니다 (예: **SQL Server**).  
   
-    15. **마침**을 클릭합니다.  
+    15. **Finish**를 클릭합니다.  
   
 ##  <a name="install-and-configure-a-three-tier-sharepoint-2010-farm"></a><a name="installsp"></a>3 계층 SharePoint 2010 팜 설치 및 구성  
  SharePoint 서버로 사용할 컴퓨터 각각에서 SharePoint 필수 구성 요소 설치 관리자 프로그램을 실행한 다음 SharePoint Server 설치 프로그램을 실행합니다.  
@@ -189,7 +188,7 @@ ms.locfileid: "71952241"
   
  SharePoint 사이트와 PowerPivot의 통합을 확인하려면 다음을 수행하십시오.  
   
-1.  앞서 만든 웹 애플리케이션을 브라우저에서 엽니다. 기본값을 사용 하는 경우 URL 주소> http://\<your computer name을 지정할 수 있습니다.  
+1.  앞서 만든 웹 애플리케이션을 브라우저에서 엽니다. 기본값을 사용한 경우 URL 주소에 http://를 지정할 수 있습니다 \<your computer name> .  
   
 2.  PowerPivot 데이터 액세스 및 처리 기능을 애플리케이션에서 사용할 수 있는지 확인합니다. 이렇게 하려면 PowerPivot 제공 라이브러리 템플릿이 있는지 확인하면 됩니다.  
   
@@ -209,9 +208,9 @@ ms.locfileid: "71952241"
   
 5.  시작 메뉴의 Microsoft SQL Server 2008 R2 프로그램 그룹에서 SQL Server Management Studio를 시작합니다. 이 도구가 서버에 설치되어 있지 않으면 마지막 단계로 건너뛰어 캐시된 파일이 있는지 확인하면 됩니다.  
   
-6.  서버 유형에서 **Analysis  Services**를 선택합니다.  
+6.  서버 유형에서 **Analysis Services**를 선택 합니다.  
   
-7.  서버 이름에 서버 이름 ** \<> \powerpivot**을 입력 합니다. 여기서 ** \<server-name>** 은 SharePoint용 PowerPivot가 설치 된 컴퓨터의 이름입니다.  
+7.  서버 이름에 ** \<server-name> \powerpivot)** 을 입력 **\<server-name>** 합니다. 여기서은 SharePoint용 PowerPivot 설치 된 컴퓨터의 이름입니다.  
   
 8.  **연결**을 클릭합니다.  
   

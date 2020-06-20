@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68fe4bbc199d6555bd490d25f92491100b8bbfcf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875667"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957163"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>트랜잭션 로그 백업 복원(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 트랜잭션 로그 백업을 복원하는 방법에 대해 설명합니다.  
@@ -100,7 +99,7 @@ ms.locfileid: "62875667"
     |------------|-----------|  
     |**복원**|선택된 확인란은 복원될 백업 세트를 나타냅니다.|  
     |**이름**|백업 세트의 이름입니다.|  
-    |**구성 요소**|백업된 구성 요소입니다. **데이터베이스**, **파일** 또는 \<blank>(트랜잭션 로그의 경우)가 될 수 있습니다.|  
+    |**구성 요소**|백업 구성 요소: **데이터베이스**, **파일**또는 \<blank> (트랜잭션 로그의 경우)입니다.|  
     |**Database**|백업 작업과 연관된 데이터베이스의 이름입니다.|  
     |**Start Date**|클라이언트의 국가별 설정으로 표시되는 백업 작업 시작 날짜 및 시간입니다.|  
     |**완료 날짜**|클라이언트의 국가별 설정으로 표시되는 백업 작업 완료 날짜 및 시간입니다.|  
@@ -130,7 +129,7 @@ ms.locfileid: "62875667"
   
         |헤더|값|  
         |------------|-----------|  
-        |\<비어 있음>|표시 선택을 위한 확인란을 표시합니다.|  
+        |\<blank>|표시 선택을 위한 확인란을 표시합니다.|  
         |**트랜잭션 표시**|트랜잭션이 커밋될 때 사용자가 지정한 표시된 트랜잭션의 이름입니다.|  
         |**Date**|트랜잭션이 커밋된 날짜 및 시간입니다. 트랜잭션 날짜 및 시간은 클라이언트 컴퓨터의 날짜 및 시간이 아닌 **msdbgmarkhistory** 테이블에 기록된 날짜 및 시간으로 표시됩니다.|  
         |**설명**|트랜잭션이 커밋될 때 사용자가 지정한 표시된 트랜잭션에 대한 설명입니다(있는 경우).|  
@@ -146,9 +145,9 @@ ms.locfileid: "62875667"
   
          게시된 데이터베이스를 해당 데이터베이스가 생성된 서버 이외의 다른 서버로 복원할 경우 복제 설정을 유지합니다.  
   
-         이 옵션은 `RECOVERY` 옵션을 사용 하 여 백업을 복원 하는 것과 같은 **커밋되지 않은 트랜잭션을 롤백하여 데이터베이스를 사용할 수 있는 상태로 유지** 합니다. 옵션 (뒷부분에서 설명)과 함께 사용할 수 있습니다.  
+         이 옵션은 옵션을 사용 하 여 백업을 복원 하는 것과 같은 **커밋되지 않은 트랜잭션을 롤백하여 데이터베이스를 사용할 수 있는 상태로 유지** 합니다. 옵션 (뒷부분에서 설명)과 함께 사용할 수 있습니다. `RECOVERY`  
   
-         이 옵션을 선택 하는 것은 `KEEP_REPLICATION` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문에서 옵션을 사용 하는 것과 같습니다.  
+         이 옵션을 선택 하는 것은 문에서 옵션을 사용 하는 것과 같습니다 `KEEP_REPLICATION` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` .  
   
     -   **각 백업 복원 전에 확인**  
   
@@ -162,19 +161,19 @@ ms.locfileid: "62875667"
   
          **db_owner**, **dbcreator**또는 **sysadmin**의 멤버만 복원된 데이터베이스를 사용할 수 있도록 합니다.  
   
-         이 옵션을 선택 하는 것은 `RESTRICTED_USER` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문에서 옵션을 사용 하는 것과 같습니다.  
+         이 옵션을 선택 하는 것은 문에서 옵션을 사용 하는 것과 같습니다 `RESTRICTED_USER` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` .  
   
 10. **복구 상태** 옵션에서 복원 작업 이후의 데이터베이스 상태를 지정합니다.  
   
     -   **커밋되지 않은 트랜잭션을 롤백하여 데이터베이스를 사용할 수 있는 상태로 유지합니다. 추가 트랜잭션 로그를 복원할 수 없습니다. (RESTORE WITH RECOVERY)**  
   
-         데이터베이스를 복구합니다. 이 옵션은 `RECOVERY` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문의 옵션과 동일 합니다.  
+         데이터베이스를 복구합니다. 이 옵션은 `RECOVERY` 문의 옵션과 동일 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 합니다.  
   
          복원할 로그 파일이 없는 경우에만 이 옵션을 선택합니다.  
   
     -   **데이터베이스를 비작동 상태로 유지하고 커밋되지 않은 트랜잭션을 롤백하지 않습니다. 추가 트랜잭션 로그를 복원할 수 (RESTORE WITH NORECOVERY)**  
   
-         데이터베이스를 복원되지 않은 `RESTORING` 상태로 유지합니다. 이 옵션은 `NORECOVERY` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문에서 옵션을 사용 하는 것과 같습니다.  
+         데이터베이스를 복원되지 않은 `RESTORING` 상태로 유지합니다. 이 옵션은 문에서 옵션을 사용 하는 것과 같습니다 `NORECOVERY` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` .  
   
          이 옵션을 선택하면 **복제 설정 유지** 옵션을 사용할 수 없습니다.  
   
@@ -183,7 +182,7 @@ ms.locfileid: "62875667"
   
     -   **데이터베이스를 읽기 전용 모드로 유지합니다. 커밋되지 않은 트랜잭션 실행을 취소하지만 복구 결과를 되돌릴 수 있도록 실행 취소 동작을 파일에 (RESTORE WITH STANDBY)**  
   
-         데이터베이스를 대기 모드로 유지합니다. 이 옵션은 `STANDBY` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문에서 옵션을 사용 하는 것과 같습니다.  
+         데이터베이스를 대기 모드로 유지합니다. 이 옵션은 문에서 옵션을 사용 하는 것과 같습니다 `STANDBY` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` .  
   
          이 옵션을 선택하려면 대기 파일을 지정해야 합니다.  
   

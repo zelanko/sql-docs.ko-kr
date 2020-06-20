@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 43eed16aa9cd69d70f308c3ce397720020446fdd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e29d088b8ea61c0d7fc58b45097f703a67bd1df
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62886526"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972714"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>패키지 배포 문제 해결 도구
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 개발하면서 패키지의 문제를 해결하는 데 사용할 수 있는 기능 및 도구를 제공합니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "62886526"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 유효성 검사 오류를 방지하는 데 도움이 되는 다음과 같은 추가 기능이 있습니다.  
   
--   **데이터 원본을 사용할 수 없을 때 오프라인으로 작업하도록 모든 패키지와 모든 연결을 설정합니다**. **SSIS** 메뉴에서 **오프라인으로 작업** 을 사용하도록 설정할 수 있습니다. `DelayValidation` 속성과 달리 **오프 라인으로 작업** 옵션은 패키지를 열기 전에도 사용할 수 있습니다. 또한 **오프라인으로 작업** 을 설정하여 디자이너에서의 작업 속도를 높이고, 패키지의 유효성을 검사하려는 경우에만 이 옵션을 해제할 수도 있습니다.  
+-   **데이터 원본을 사용할 수 없을 때 오프라인으로 작업하도록 모든 패키지와 모든 연결을 설정합니다**. **SSIS** 메뉴에서 **오프라인으로 작업** 을 사용하도록 설정할 수 있습니다. 속성과 달리 `DelayValidation` **오프 라인으로 작업** 옵션은 패키지를 열기 전에도 사용할 수 있습니다. 또한 **오프라인으로 작업** 을 설정하여 디자이너에서의 작업 속도를 높이고, 패키지의 유효성을 검사하려는 경우에만 이 옵션을 해제할 수도 있습니다.  
   
 -   **런타임까지 유효하지 않은 패키지 요소에 대해 DelayValidation 속성을 구성합니다**. 디자인 타임에는 구성이 유효하지 않은 패키지 요소의 `DelayValidation`을 `True`로 설정하여 유효성 검사 오류를 방지할 수 있습니다. 예를 들어 런타임에 SQL 실행 작업을 통해 테이블이 만들어지기 전까지는 존재하지 않는 대상 테이블을 사용하는 데이터 흐름 태스크가 있을 수 있습니다. `DelayValidation` 속성은 패키지 수준 또는 패키지에 포함된 개별 태스크 및 컨테이너 수준에서 설정할 수 있습니다. 일반적으로 패키지를 배포할 때는 동일한 패키지 요소에서 이 속성을 `True`로 설정해야 런타임에 동일한 유효성 검사 오류를 방지할 수 있습니다.  
   

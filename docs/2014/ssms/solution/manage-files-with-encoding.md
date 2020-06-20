@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 22b1c18cba793d5845e2adf92b1dca300911a72f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23d45b761909896009e614a8501e728d86b424b7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62823803"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061181"
 ---
 # <a name="manage-files-with-encoding"></a>인코딩으로 파일 관리
   특정 언어와 특정 플랫폼에서 코드를 더 쉽게 표시할 수 있도록 특정 문자 인코딩을 파일과 연결할 수 있습니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "62823803"
   
 #### <a name="to-save-a-file-with-a-different-encoding-or-line-ending-type"></a>다른 인코딩 또는 줄 끝 형식으로 파일을 저장하려면  
   
-1.  **파일** 메뉴에서 다른 **이름으로 파일 \<이름> 저장**을 클릭 합니다.  
+1.  **파일** 메뉴에서 **다른 이름으로 \<filename> 저장**을 클릭합니다.  
   
 2.  **다른 이름으로 파일 저장** 대화 상자에서 **저장** 단추를 확장한 다음 **인코딩하여 저장**을 클릭합니다.  
   

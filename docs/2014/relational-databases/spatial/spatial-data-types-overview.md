@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 340e250fde61f8c246099eadafc148278288dee0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c0548d974e83bfe2b1e103d4458b17078fba8014
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176653"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996466"
 ---
 # <a name="spatial-data-types-overview"></a>공간 데이터 형식 개요
   공간 데이터 형식은 두 가지가 있습니다. `geometry` 데이터 형식은 평면, 즉 유클리드(평평한 표면) 데이터를 지원합니다. `geometry` 데이터 형식은 OGC(Open Geospatial Consortium)의 Simple Features for SQL Specification 버전 1.1.0을 따르며 SQL MM(ISO 표준)과 호환됩니다.
@@ -29,14 +28,14 @@ ms.locfileid: "78176653"
 > [!IMPORTANT]
 >  향상된 공간 데이터 형식을 비롯한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]의 공간 기능에 대한 자세한 설명 및 예제를 보려면 [SQL Server 코드 이름 "Denali"의 새로운 공간 기능](https://go.microsoft.com/fwlink/?LinkId=226407)백서를 다운로드하세요.
 
-##  <a name="spatial-data-objects"></a><a name="objects"></a>공간 데이터 개체
- `geometry` 및 `geography` 데이터 형식은 16개의 공간 데이터 개체 또는 인스턴스 유형을 지원합니다. 그러나 이러한 인스턴스 유형 중 11개만 *인스턴스화할 수 있고*데이터베이스에서 이러한 인스턴스를 만들고 작업(인스턴스화)할 수 있습니다. `Points`이러한 인스턴스는, **linestrings, circularstring**, `CompoundCurves`, `Polygons` `CurvePolygons` 또는에서 여러 `geometry` 또는 `geography` 인스턴스로 구분 하는 부모 데이터 형식에서 특정 속성을 파생 시킵니다. `GeometryCollection` `Geography` 형식에는 `FullGlobe`라는 추가 인스턴스 유형이 있습니다.
+##  <a name="spatial-data-objects"></a><a name="objects"></a> 공간 데이터 개체
+ `geometry` 및 `geography` 데이터 형식은 16개의 공간 데이터 개체 또는 인스턴스 유형을 지원합니다. 그러나 이러한 인스턴스 유형 중 11개만 *인스턴스화할 수 있고*데이터베이스에서 이러한 인스턴스를 만들고 작업(인스턴스화)할 수 있습니다. 이러한 인스턴스는 `Points` , **linestrings, circularstring**, `CompoundCurves` , `Polygons` `CurvePolygons` 또는 `geometry` 에서 여러 또는 `geography` 인스턴스로 `GeometryCollection` 구분 하는 부모 데이터 형식에서 특정 속성을 파생 시킵니다. `Geography` 형식에는 `FullGlobe`라는 추가 인스턴스 유형이 있습니다.
 
- 아래 그림에서는 `geometry` 및 `geometry` 데이터 형식의 기반인 `geography` 계층을 보여 줍니다. 및 `geometry` `geography` 의 인스턴스화할 수 있는 형식은 파란색으로 표시 됩니다.
+ 아래 그림에서는 `geometry` 및 `geometry` 데이터 형식의 기반인 `geography` 계층을 보여 줍니다. 및의 인스턴스화할 수 있는 형식은 `geometry` `geography` 파란색으로 표시 됩니다.
 
  ![geometry 유형의 계층](../../database-engine/media/geom-hierarchy.gif "geometry 유형의 계층")
 
- 그림에서 `geometry` 알 수 있듯이 및 `geography` 데이터 형식의 인스턴스화할 수 `Point`있는 10 개의 형식은, `MultiPoint`, `LineString`, `CircularString`, `MultiLineString` `CompoundCurve` `Polygon` `CurvePolygon` `MultiPolygon`,,,, 및 `GeometryCollection`입니다. geography 데이터 형식의 경우 인스턴스화할 수 있는 추가 형식이 하나( `FullGlobe`) 있습니다. `geometry` 및 `geography` 형식은 인스턴스가 명시적으로 정의 되지 않은 경우에도 올바른 형식의 인스턴스인 경우 특정 인스턴스를 인식할 수 있습니다. 예를 들어, STPointFromText () `Point` 메서드를 사용 하 여 인스턴스를 명시적으로 `geometry` 정의 `geography` 하 고, 메서드 입력 `Point`의 형식이 올바른 경우에는 인스턴스를으로 인식 합니다. `STGeomFromText()` 메서드를 사용하여 동일한 인스턴스를 정의할 경우 `geometry` 및 `geography` 데이터 형식은 해당 인스턴스를 `Point`로 인식합니다.
+ 그림에서 알 수 있듯이 및 데이터 형식의 인스턴스화할 수 있는 10 개의 형식은,,,,,,,, `geometry` `geography` `Point` `MultiPoint` `LineString` `CircularString` `MultiLineString` `CompoundCurve` `Polygon` `CurvePolygon` `MultiPolygon` 및 `GeometryCollection` 입니다. geography 데이터 형식의 경우 인스턴스화할 수 있는 추가 형식이 하나( `FullGlobe`) 있습니다. `geometry`및 `geography` 형식은 인스턴스가 명시적으로 정의 되지 않은 경우에도 올바른 형식의 인스턴스인 경우 특정 인스턴스를 인식할 수 있습니다. 예를 들어, `Point` STPointFromText () 메서드를 사용 하 여 인스턴스를 명시적으로 정의 하 `geometry` 고, `geography` `Point` 메서드 입력의 형식이 올바른 경우에는 인스턴스를으로 인식 합니다. `STGeomFromText()` 메서드를 사용하여 동일한 인스턴스를 정의할 경우 `geometry` 및 `geography` 데이터 형식은 해당 인스턴스를 `Point`로 인식합니다.
 
  geometry 및 geography 형식의 하위 형식은 단순 형식과 컬렉션 형식으로 나뉩니다.  `STNumCurves()` 와 같은 일부 메서드는 단순 형식에서만 작동합니다.
 
@@ -84,34 +83,34 @@ ms.locfileid: "78176653"
 
  타원 시스템에서 방향이 없는 다각형은 아무 의미가 없거나 모호합니다. 적도 주변 링이 남반구 또는 북반구를 나타내는지 여부를 예로 들 수 있습니다. `geography` 데이터 형식을 사용하여 공간 인스턴스를 저장할 경우 링의 방향을 지정하고 인스턴스의 위치를 정확하게 나타내야 합니다. 타원 시스템의 다각형 내부는 왼쪽 규칙으로 정의됩니다.
 
- 호환성 수준이 100 이하인 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 경우 `geography` 데이터 형식에는 다음과 같은 제한 사항이 있습니다.
+ 호환성 수준이 100 이하인 경우 데이터 형식에는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] `geography` 다음과 같은 제한 사항이 있습니다.
 
 -   각 `geography` 인스턴스가 단일 반구 내에 포함되어야 합니다. 반구보다 큰 공간 개체는 저장할 수 없습니다.
 
 -   반구보다 큰 개체를 생성하는 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 또는 WKB(Well-Known Binary) 표현의 모든 `geography` 인스턴스에서 `ArgumentException`이 발생합니다.
 
--   STIntersection (), Stintersection (), `geography` stintersection () 및 Stsym차집합을 ()와 같이 두 개의 인스턴스를 입력 해야 하는 `geography` 데이터 형식 메서드는 메서드의 결과가 단일 반구 내에 포함 되지 않는 경우 null을 반환 합니다. STBuffer()도 결과가 단일 반구를 초과할 경우 null을 반환합니다.
+-   `geography` `geography` Stintersection (), stintersection (), stintersection () 및 Stsym차집합을 ()와 같이 두 개의 인스턴스를 입력 해야 하는 데이터 형식 메서드는 메서드의 결과가 단일 반구 내에 포함 되지 않는 경우 null을 반환 합니다. STBuffer()도 결과가 단일 반구를 초과할 경우 null을 반환합니다.
 
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 `FullGlobe`는 전체 구형을 포함하는 특수한 유형의 다각형입니다. `FullGlobe`에는 영역이 있지만 테두리나 꼭지점은 없습니다.
 
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>geography 데이터 형식에서 중요하지 않은 외부 및 내부 링
- OGC Simple Features for SQL Specification에서는 외부 링 및 내부 링에 대해 설명 하지만 이러한 구분은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `geography` 데이터 형식에 대해 거의 의미가 없습니다. 다각형의 링은 외부 링으로 사용 될 수 있습니다.
+ OGC Simple Features for SQL Specification에서는 외부 링 및 내부 링에 대해 설명 하지만 이러한 구분은 데이터 형식에 대해 거의 의미가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `geography` 없습니다. 다각형의 링은 외부 링으로 사용 될 수 있습니다.
 
  OGC 사양에 대한 자세한 내용은 다음을 참조하십시오.
 
--   [OGC 사양, 단순 기능 액세스 1부 - 공통 아키텍처](https://go.microsoft.com/fwlink/?LinkId=93627)
+-   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)
 
 -   [OGC Specifications, Simple Feature Access Part 2 - SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)
 
 
-##  <a name="circular-arc-segments"></a><a name="circular"></a>원호 세그먼트
+##  <a name="circular-arc-segments"></a><a name="circular"></a> 원호 세그먼트
  인스턴스화할 수 있는 세 가지 형식은 원호 세그먼트 `CircularString`, `CompoundCurve` 및 `CurvePolygon`을 취할 수 있습니다.  원호 세그먼트는 2차원 평면에서 3개의 점으로 정의되며 세 번째 점은 첫 번째 점과 같을 수 없습니다.
 
  그림 A와 B에서는 일반적인 원호 세그먼트를 보여 줍니다. 세 개의 각 점이 원의 둘레에 어떻게 놓이는지 확인하십시오.
 
  그림 C와 D에서는 선 세그먼트를 원호 세그먼트로 정의할 수 있는 방법을 보여 줍니다.  두 개의 점으로만 정의할 수 있는 일반적인 선 세그먼트와 달리 원호 세그먼트를 정의하려면 세 개의 점이 필요합니다.
 
- 원호 세그먼트 형식에서 작동 하는 메서드는 직선 세그먼트를 사용 하 여 원호를 대략적으로 사용 합니다. 호를 대략적으로 표시 하는 데 사용 되는 선 세그먼트의 수는 호의 길이와 곡률에 따라 달라 집니다. 각 원호 세그먼트 형식에 대해 Z 값을 저장할 수 있습니다. 그러나 메서드는 계산에 Z 값을 사용 하지 않습니다.
+ 원호 세그먼트 형식에서 작동하는 메서드는 직선 세그먼트를 사용하여 원호를 대략적으로 나타냅니다. 호를 대략적으로 나타내는 데 사용되는 선 세그먼트의 수는 호의 길이와 곡률에 따라 달라집니다. 각 원호 세그먼트 형식에 대해 Z 값을 저장할 수 있지만 메서드는 계산에 Z 값을 사용하지 않습니다.
 
 > [!NOTE]
 >  원호 세그먼트에 Z 값이 지정된 경우 원호 세그먼트의 모든 점에 대해 Z 값이 동일해야만 해당 원호 세그먼트를 입력할 수 있습니다. 예: `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` 은 허용되지만 `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` 은 허용되지 않습니다.
@@ -152,7 +151,7 @@ LS LengthCS Length
 5.65685...6.28318...
 ```
 
- 다음 그림에서는 각 형식이 저장 되는 방법을 보여 줍니다. 빨간색 `LineString``@g1`선은를 나타내고 파란색 `CircularString``@g2`선은를 나타냅니다.
+ 다음 그림에서는 각 형식이 저장 되는 방법을 보여 줍니다. 빨간색 선은 `LineString``@g1` 를 나타내고 파란색 선은를 나타냅니다 `CircularString``@g2` .
 
  ![](../../database-engine/media/e52157b5-5160-4a4b-8560-50cdcf905b76.png "e52157b5-5160-4a4b-8560-50cdcf905b76")
 
@@ -192,7 +191,7 @@ SELECT @g.ToString(), @g.STLength();
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');
 ```
 
- `CompoundCurve`인스턴스는 및 `LineString` `CircularString` 구성 요소를 모두 허용 하므로 원형 조각의 선 세그먼트에 대 한 두 개의 지점만 알고 있어야 합니다.  이 코드 예제에서는 `CompoundCurve`를 사용하여 동일한 그림을 저장하는 방법을 보여 줍니다.
+ `CompoundCurve`인스턴스는 `LineString` 및 `CircularString` 구성 요소를 모두 허용 하므로 원형 조각의 선 세그먼트에 대 한 두 개의 지점만 알고 있어야 합니다.  이 코드 예제에서는 `CompoundCurve`를 사용하여 동일한 그림을 저장하는 방법을 보여 줍니다.
 
 ```sql
 DECLARE @g geometry;

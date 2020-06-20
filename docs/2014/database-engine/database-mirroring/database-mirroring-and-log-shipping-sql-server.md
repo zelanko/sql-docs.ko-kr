@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ca584a81b8ba70073ee833d8033cd5f664747741
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ddc0a4147623753e04b14e60359c397b00a8d9b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807475"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934374"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>데이터베이스 미러링 및 로그 전달(SQL Server)
   지정된 데이터베이스를 미러링하거나 로그를 전달할 수 있으며 동시에 미러링하고 로그를 전달할 수도 있습니다. 사용할 방법을 선택하려면 다음을 고려합니다.  

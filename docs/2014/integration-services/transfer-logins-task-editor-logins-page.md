@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf244c24-bd45-4ece-b66b-78b488f35c5b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ae8ebf56e4ae7c4fce3566cb7688d203b8ceb318
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67c81901e454c4e7a47e5d448f2aa17d6a8820fa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054929"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972813"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>로그인 전송 태스크 편집기(로그인 페이지)
   **로그인 전송 태스크 편집기** 대화 상자의 **로그인** 페이지를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 한 인스턴스에서 다른 인스턴스로 복사하는 속성을 지정할 수 있습니다. 이 태스크에 대한 자세한 내용은 [Transfer Logins Task](control-flow/transfer-logins-task.md)를 참조하십시오.  
@@ -29,15 +28,15 @@ ms.locfileid: "66054929"
   
 ## <a name="options"></a>옵션  
  **SourceConnection**  
- 목록에서 SMO 연결 관리자를 선택 하거나 ** \<새 연결 ... >** 을 클릭 하 여 원본 서버에 대 한 새 연결을 만듭니다.  
+ 목록에서 SMO 연결 관리자를 선택 하거나를 클릭 **\<New connection...>** 하 여 원본 서버에 대 한 새 연결을 만듭니다.  
   
  **DestinationConnection**  
- 목록에서 SMO 연결 관리자를 선택 하거나 ** \<새 연결 ... >** 을 클릭 하 여 대상 서버에 대 한 새 연결을 만듭니다.  
+ 목록에서 SMO 연결 관리자를 선택 하거나를 클릭 **\<New connection...>** 하 여 대상 서버에 대 한 새 연결을 만듭니다.  
   
  **LoginsToTransfer**  
  원본 서버에서 대상 서버로 복사할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**AllLogins**|원본 서버의 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인이 대상 서버로 복사됩니다.|  
 |**대해 selectedlogins**|**LoginsList** 로 지정된 로그인만 대상 서버로 복사됩니다.|  
@@ -54,10 +53,10 @@ ms.locfileid: "66054929"
   
  이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**FailTask**|대상 서버에 이름이 동일한 로그인이 이미 있는 경우 태스크가 실패합니다.|  
-|**언제**|대상 서버에 이름이 동일한 로그인이 있는 경우 이를 덮어씁니다.|  
+|**Overwrite**|대상 서버에 이름이 동일한 로그인이 있는 경우 이를 덮어씁니다.|  
 |**킵**|대상 서버에 이름이 동일한 로그인이 있는 경우 이를 건너뜁니다.|  
   
  **CopySids**  

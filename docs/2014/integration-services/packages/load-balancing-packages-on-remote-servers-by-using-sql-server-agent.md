@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a7c1f4792d97ae82561f0d05fe9754daae0a2bf3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2a790f38eea65084058308b3f5f2d89f3bc40ca
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890189"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964819"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>SQL Server 에이전트를 사용하여 원격 서버의 패키지 로드 균형 조정
   패키지를 여러 개 실행해야 하는 경우 사용 가능한 다른 서버를 사용하는 것이 편리합니다. 모든 패키지를 한 부모 패키지에서 관리하고 다른 서버를 사용하여 패키지를 실행하는 이 방법을 로드 균형 조정이라고 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 부하 분산은 패키지 소유자가 직접 설계해야 하며 서버에서 자동으로 수행되지 않습니다. 또한 원격 서버에서 실행되는 패키지는 다른 패키지의 개별 태스크가 아닌 전체 패키지여야 합니다.  
@@ -54,7 +53,7 @@ ms.locfileid: "62890189"
   
  다음 표에서는 전체 프로세스를 안내하는 항목에 대한 링크를 보여 줍니다.  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[자식 패키지 구현](../implementation-of-child-packages.md)|패키지를 설치하고 해당 패키지를 실행할 SQL Server 에이전트 작업을 만드는 방법을 설명합니다.|  
 |[부모 패키지 구현](../implementation-of-the-parent-package.md)|여러 개의 SQL Server 에이전트 작업 실행 태스크가 포함된 부모 패키지를 만드는 방법을 설명합니다. 각 태스크는 자식 패키지 중 하나를 실행합니다.|  

@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 479cc0e650c598e0a253caca796b854dc4eb69cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aee638291a4aee2c4ea5d60a69fc206af613e15d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892671"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965553"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>원본 테이블 및 뷰 선택(SQL Server 가져오기 및 내보내기 마법사)
   **원본 테이블 및 뷰 선택** 페이지를 사용 하 여 데이터 원본에서 대상으로 복사할 테이블 및 뷰를 지정할 수 있습니다.  
   
 > [!NOTE]  
->  테이블 복사 옵션을 선택할 경우 테이블의 모든 열을 복사하지 않아도 됩니다. 대상 테이블을 선택한 후 매핑 편집을 클릭 하 여 **열 매핑** 대화 상자를 표시 합니다. 건너 뛰 려는 열에 대해 **열 매핑** 대화 상자의 **대상** 열에서 ** \<>무시** 를 선택 합니다.  
+>  테이블 복사 옵션을 선택할 경우 테이블의 모든 열을 복사하지 않아도 됩니다. 대상 테이블을 선택한 후 매핑 편집을 클릭 하 여 **열 매핑** 대화 상자를 표시 합니다. **\<ignore>** 건너 뛰 려는 열에 대해 **열 매핑** 대화 상자의 **대상** 열에서를 선택 합니다.  
   
  이 마법사에 대해 자세히 알아보려면 [SQL Server 가져오기 및 내보내기 마법사](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)를 참조 하세요. 마법사 시작 옵션 및 마법사를 성공적으로 실행 하는 데 필요한 권한에 대 한 자세한 내용은 [SQL Server 가져오기 및 내보내기 마법사 실행](start-the-sql-server-import-and-export-wizard.md)을 참조 하세요.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "62892671"
   
 ### <a name="other-options"></a>다른 옵션  
  **매핑 편집**  
- **열 매핑** 대화 상자를 사용 하 여 원본 데이터를 받을 대상 열을 지정할 수 있습니다. 건너 뛰 려는 열에 대해 **열 매핑** 대화 \<상자의 **대상** 열에서> 무시를 선택 하 여 열의 하위 집합만 복사할 수 있습니다.  
+ **열 매핑** 대화 상자를 사용 하 여 원본 데이터를 받을 대상 열을 지정할 수 있습니다. \<ignore>건너 뛰 려는 열에 대해 **열 매핑** 대화 상자의 **대상** 열에서 선택 하 여 열의 하위 집합만 복사할 수 있습니다.  
   
  **미리 보기**  
  **데이터 미리 보기** 대화 상자에서 원본 데이터를 미리 보고 가져오기 또는 내보내기 작업을 수행 하기 전에 데이터를 확인할 수 있습니다. **데이터 미리 보기** 대화 상자에는 최대 200 개의 데이터 행이 표시 됩니다.  

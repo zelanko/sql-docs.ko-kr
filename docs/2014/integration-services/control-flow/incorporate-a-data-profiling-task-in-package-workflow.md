@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5d8096ee89a9c0b63c89849a02317dc23b2b130e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 969f7d7fb40f4fc40c3735f73699effe9803bbf5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831633"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918843"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>패키지 워크플로에 데이터 프로파일링 태스크 포함
   데이터 프로파일링과 정리는 초기 단계의 자동 처리 대상이 아닙니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 데이터 프로파일링 태스크의 출력을 통해 보고된 위반이 의미 있거나 과도한지 확인하려면 일반적으로 시각적 분석과 사람의 판단이 필요합니다. 데이터 품질 문제를 인지한 이후에도 정리를 위한 최선의 방법을 찾기 위한 신중한 계획이 필요합니다.  
@@ -85,7 +84,7 @@ ms.locfileid: "62831633"
   
 2.  패키지에 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 추가합니다. .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient)를 사용하고, 가용한 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스 인스턴스에 연결하도록 이 연결 관리자를 구성합니다.  
   
-     기본적으로 연결 관리자의 이름은 \<server name>.AdventureWorks1입니다.  
+     기본적으로 연결 관리자의 이름은 \<server name> 다음과 같습니다. AdventureWorks1.  
   
 3.  패키지에 파일 연결 관리자를 추가합니다. 데이터 프로파일링 태스크를 위한 출력 파일을 만들도록 이 연결 관리자를 구성합니다.  
   
@@ -102,9 +101,9 @@ ms.locfileid: "62831633"
   
 -   **변수** 창에서 다음 두 개의 패키지 변수를 추가하고 구성합니다.  
   
-    -   변수 중 하나에 `ProfileConnectionName`대해 이름을 입력 하 고이 변수의 유형을 **String**으로 설정 합니다.  
+    -   `ProfileConnectionName`변수 중 하나에 대해 이름을 입력 하 고이 변수의 유형을 **String**으로 설정 합니다.  
   
-    -   다른 변수에 대 한 `AddressLine2NullRatio`이름을 입력 하 고이 변수의 유형을 **Double**로 설정 합니다.  
+    -   `AddressLine2NullRatio`다른 변수에 대 한 이름을 입력 하 고이 변수의 유형을 **Double**로 설정 합니다.  
   
 ### <a name="configure-the-data-profiling-task"></a>데이터 프로파일링 태스크 구성  
  데이터 프로파일링 태스크는 다음과 같이 구성해야 합니다.  
@@ -142,9 +141,9 @@ ms.locfileid: "62831633"
   
 4.  **스크립트** 페이지에서 선호하는 프로그래밍 언어를 선택합니다. 그런 다음 스크립트에서 사용할 수 있는 두 개의 패키지 변수를 만듭니다.  
   
-    1.  에 `ReadOnlyVariables`대해를 `ProfileConnectionName`선택 합니다.  
+    1.  에 대해 `ReadOnlyVariables` 를 선택 `ProfileConnectionName` 합니다.  
   
-    2.  **ReadWriteVariables**의 경우를 `AddressLine2NullRatio`선택 합니다.  
+    2.  **ReadWriteVariables**의 경우를 선택 `AddressLine2NullRatio` 합니다.  
   
 5.  **스크립트 편집** 을 선택하여 스크립트 개발 환경을 엽니다.  
   

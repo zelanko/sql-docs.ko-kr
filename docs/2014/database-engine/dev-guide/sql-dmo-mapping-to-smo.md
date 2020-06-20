@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 590f5396-98d5-485e-9b41-728c6ed7cb9d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a6273032f88807291bfc7024f1abcdbd1440073
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 147c75384fa65a103c3d17c731add99ecec79b63
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780683"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933374"
 ---
 # <a name="sql-dmo-mapping-to-smo"></a>SMO에 대한 SQL-DMO 매핑
   SQL-DMO(SQL Distributed Management Objects)는 더 이상 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 포함되지 않습니다. SMO([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects)를 사용하도록 SQL-DMO 애플리케이션을 변환해야 합니다. SMO 개체 모델은 SQL-DMO와 비슷하므로 대부분의 SQL-DMO 개체는 SMO에서 이름이 같은 개체에 매핑됩니다. 그러나 일부 SQL-DMO 개체는 SMO로 전환되는 과정에서 변경되거나 삭제되었습니다. 다음 표에는 SMO로 직접 변환되지 않은 SQL-DMO 개체에 대해 수행할 수 있는 권장 작업이 나와 있습니다.  
@@ -24,7 +23,7 @@ ms.locfileid: "62780683"
 |---------------------|-------------------|  
 |View2 개체|<xref:Microsoft.SqlServer.Management.Smo.Agent> 네임스페이스로 이동되었습니다.|  
 |AlertSystem 개체|<xref:Microsoft.SqlServer.Management.Smo.Agent> 네임스페이스로 이동되었습니다.|  
-|Application 개체|제거되었습니다.|  
+|Application 개체|제거됩니다.|  
 |Backup 개체 및 Backup2 개체|<xref:Microsoft.SqlServer.Management.Smo.Backup> 및 <xref:Microsoft.SqlServer.Management.Smo.BackupRestoreBase> 개체입니다.|  
 |BackupDevice 개체|<xref:Microsoft.SqlServer.Management.Smo.BackupDevice> 개체입니다.|  
 |BulkCopy 개체 및 BulkCopy2 개체|제거되고 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 개체로 대체되었습니다.|  
@@ -65,7 +64,7 @@ ms.locfileid: "62780683"
 |MergePullSubscription 개체 및 MergePullSubscription2 개체|<xref:Microsoft.SqlServer.Replication.MergePullSubscription> 개체입니다. <xref:Microsoft.SqlServer.Replication> 네임스페이스로 이동되었습니다.|  
 |MergeSubscription 개체|<xref:Microsoft.SqlServer.Replication.MergeSubscription> 개체입니다. <xref:Microsoft.SqlServer.Replication> 네임스페이스로 이동되었습니다.|  
 |MergeSubsetFilter 개체|`N:Microsoft.SqlServer.Replication` 네임스페이스로 이동되었습니다.|  
-|NameList 개체|제거되었습니다. <xref:Microsoft.SqlServer.Management.Smo.Scripter> 개체의 대체 기능입니다.|  
+|NameList 개체|제거됩니다. <xref:Microsoft.SqlServer.Management.Smo.Scripter> 개체의 대체 기능입니다.|  
 |Operator 개체|<xref:Microsoft.SqlServer.Management.Smo.Agent> 네임스페이스로 이동되었습니다.|  
 |Permission 개체 및 Permission2 개체|<xref:Microsoft.SqlServer.Management.Smo.ServerPermission>, <xref:Microsoft.SqlServer.Management.Smo.DatabasePermission>, <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole> 및 <xref:Microsoft.SqlServer.Management.Smo.ObjectPermission> 개체입니다.|  
 |Property 개체|`Property` 개체입니다.|  
@@ -73,7 +72,7 @@ ms.locfileid: "62780683"
 |QueryResults 개체 및 QueryResults2 개체|<xref:System.Data.DataTable> 또는 <xref:System.Data.DataSet> 시스템 개체로 대체되었습니다.|  
 |RegisteredServer 개체|<xref:Microsoft.SqlServer.Replication> 네임스페이스로 이동되었습니다.|  
 |RegisteredSubscriber 개체|<xref:Microsoft.SqlServer.Replication> 네임스페이스로 이동되었습니다.|  
-|Registry 개체 및 Registry2 개체|제거되었습니다.|  
+|Registry 개체 및 Registry2 개체|제거됩니다.|  
 |RemoteLogin 개체|<xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체입니다. Common 네임스페이스로 이동되었습니다.|  
 |RemoteServer 개체 및 RemoteServer2 개체|<xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체입니다. <xref:Microsoft.SqlServer.Management.Common> 네임스페이스로 이동되었습니다.|  
 |Replication 개체|<xref:Microsoft.SqlServer.Replication> 네임스페이스로 이동되었습니다.|  
@@ -84,7 +83,7 @@ ms.locfileid: "62780683"
 |Restore 개체 및 Restore2 개체|<xref:Microsoft.SqlServer.Management.Smo.Restore> 및 <xref:Microsoft.SqlServer.Management.Smo.BackupRestoreBase> 개체입니다.|  
 |Rule 개체 및 Rule2 개체|<xref:Microsoft.SqlServer.Management.Smo.Rule> 개체의  멤버의 부모에 대해 SQL Server 인스턴스 이름을 표시합니다.|  
 |Schedule 개체|<xref:Microsoft.SqlServer.Replication> 네임스페이스로 이동되었습니다.|  
-|ServerGroup 개체|제거되었습니다.|  
+|ServerGroup 개체|제거됩니다.|  
 |ServerRole 개체|<xref:Microsoft.SqlServer.Management.Smo.ServerRole> 개체입니다.|  
 |SQLObjectList 개체|<xref:Microsoft.SqlServer.Management.Smo.SqlSmoObject> 배열입니다.|  
 |SQLServer 개체 및 SQLServer2 개체|<xref:Microsoft.SqlServer.Management.Smo.Server> 개체입니다.|  
