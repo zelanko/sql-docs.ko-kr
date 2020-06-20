@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ac0eae2ad0f6b856495cb3a329cfe2f7e635dc1a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 706b029dbd811f2e1794e451291830bf15d37274
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719033"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026226"
 ---
 # <a name="migrating-computed-columns"></a>계산 열 마이그레이션
   계산 열은 메모리 최적화 테이블에서 지원되지 않습니다. 그러나 계산 열을 시뮬레이션할 수 있습니다.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e8498937fa1f259b194ea57fc5f5d286adf0db12
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: aa7f81fb0260def654f0ad1c93ccee367f44f664
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706661"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027454"
 ---
 # <a name="extended-events"></a>확장 이벤트
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트는 확장성이 높고 다양하게 구성 가능한 인프라를 갖추고 있으므로 사용자는 이를 통해 문제를 해결하거나 성능 문제를 파악하는 데 필요한 만큼의 정보만 수집할 수 있습니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "82706661"
   
  다음 표는 확장 이벤트의 개념에 대해 설명합니다.  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[SQL Server 확장 이벤트 패키지](sql-server-extended-events-packages.md)|확장 이벤트 세션이 실행 중일 때 데이터를 얻거나 처리하는 데 사용되는 개체가 포함된 확장 이벤트 패키지에 대해 설명합니다.|  
 |[SQL Server 확장 이벤트 대상](../../database-engine/sql-server-extended-events-targets.md)|이벤트 세션이 지속되는 동안 데이터를 수신할 수 있는 이벤트 소비자에 대해 설명합니다.|  

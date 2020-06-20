@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 410aa819e2d4af056c53fc30a971625001b1186e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d847c7df84c1d00ed357a40a72839ff52f5737c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702198"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021761"
 ---
 # <a name="sqlputdata"></a>SQLPutData
   SQLPutData를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_LONGVARCHAR ( `text` ), SQL_WLONGVARCHAR ( `ntext` ) 또는 SQL_LONGVARBINARY () 열에 대해 65535 바이트 이상의 데이터 (버전 4.21 a) 또는 400 KB의 데이터 (SQL Server 버전 6.0 이상)를 전송 하는 경우 다음과 같은 제한 사항이 적용 됩니다 `image` .  
@@ -36,7 +35,7 @@ ms.locfileid: "82702198"
 ## <a name="diagnostics"></a>진단  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQLPutData에 대해 하나의 Native Client 특정 SQLSTATE가 있습니다.  
   
-|SQLSTATE|Error|설명|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |22026|문자열 데이터, 길이가 일치하지 않음|전송할 데이터 길이 (바이트)를 응용 프로그램에서 지정 하는*경우 (예*SQL_LEN_DATA_AT_EXEC: *n* 이 0 보다 큰 경우)에는 sqlputdata를 통해 응용 프로그램에서 제공 하는 총 바이트 수가 지정 된 길이와 일치 해야 합니다.|  
   

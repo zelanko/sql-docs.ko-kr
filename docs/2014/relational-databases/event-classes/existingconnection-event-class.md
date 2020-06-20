@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3eae548f-61af-4f91-ae6f-af5c8a152543
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d30a857647b9796afb919b078553ecce58344c21
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73437390154de5f573a1ae5d68f7d0e7ae8dec37
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63023401"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029659"
 ---
 # <a name="existingconnection-event-class"></a>ExistingConnection 이벤트 클래스
   ExistingConnection 이벤트 클래스는 추적이 시작될 때의 기존 사용자 연결 속성을 나타냅니다. 서버에서는 기존 사용자 연결당 하나의 ExistingConnection 이벤트를 발생시킵니다.  
@@ -33,8 +32,8 @@ ms.locfileid: "63023401"
 |ClientProcessID|`int`|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
 |DatabaseID|`int`|사용자 연결의 현재 데이터베이스 ID입니다. USE *database* 문으로 지정한 데이터베이스 ID 이거나 지정한 인스턴스에 대해 use *database* 문을 실행 하지 않은 경우 기본 데이터베이스의 ID입니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |DatabaseName|`nvarchar`|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|yes|  
-|EventClass|`int`|이벤트 유형 = 17|27|아니요|  
-|EventSequence|`int`|해당 추적에서 해당 이벤트의 시퀀스입니다.|51|아니요|  
+|EventClass|`int`|이벤트 유형 = 17|27|예|  
+|EventSequence|`int`|해당 추적에서 해당 이벤트의 시퀀스입니다.|51|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  
 |IntegerData|`int`|연결에 사용 중인 네트워크 패킷 크기입니다.|25|예|  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 905a0a4189a97b6cd8ef3cc461f805adf0afd727
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a293d5dfc6bfbdf66afb680f0604117e2cc02b2d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "68210705"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010531"
 ---
 # <a name="parameterized-row-filters"></a>매개 변수가 있는 행 필터
   매개 변수가 있는 행 필터를 사용하면 여러 게시를 만들지 않고도 데이터의 여러 파티션을 서로 다른 구독자로 보낼 수 있습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 매개 변수가 있는 행 필터를 동적 필터라고 불렀습니다. 파티션은 테이블에 있는 행의 하위 집합입니다. 게시된 테이블의 각 행은 매개 변수가 있는 필터를 만들 때 선택한 설정에 따라 하나의 파티션에만 속하거나(겹치지 않는 파티션 생성) 두 개 이상의 파티션에 속할 수 있습니다(겹치는 파티션 생성).  
@@ -94,7 +93,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  예를 들어 직원 Pamela Ansman-Wolfe에게 직원 ID로 280을 할당합니다. 이 직원에 대한 구독을 만들 때 HOST_NAME() 값에 직원 ID 값(이 경우 280)을 지정합니다. 병합 에이전트가 게시자로 연결하면 HOST_NAME()에서 반환된 값을 해당 테이블의 값과 비교한 다음 **EmployeeID** 열에 280이라는 값이 포함된 행만 다운로드합니다.  
   
 > [!IMPORTANT]
->  HOST_NAME() 함수는 `nchar` 값을 반환하므로 위의 예처럼 필터 절의 열이 숫자 데이터 형식인 경우 CONVERT를 사용해야 합니다. 성능상의 이유로 `CONVERT(nchar,EmployeeID) = HOST_NAME()`과 같은 매개 변수가 있는 행 필터 절의 열 이름에는 함수를 적용하지 않는 것이 좋습니다. 대신 `EmployeeID = CONVERT(int,HOST_NAME())`예제에서 보여준 방식을 사용하는 것이 좋습니다. 이 절은 **@subset_filterclause** [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)매개 변수에 사용할 수 있지만 일반적으로 새 게시 마법사에서는 사용할 수 없습니다. 마법사는 필터 절을 실행 하 여 유효성을 검사 하며 컴퓨터 이름을로 변환할 `int`수 없기 때문에 실패 합니다. 새 게시 마법사를 사용할 경우 게시에 대한 스냅샷을 만들기 전에 마법사에서 `CONVERT(nchar,EmployeeID) = HOST_NAME()` 을 지정한 다음 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 을 사용하여 해당 절을 `EmployeeID = CONVERT(int,HOST_NAME())` 로 변경하는 것이 좋습니다.  
+>  HOST_NAME() 함수는 `nchar` 값을 반환하므로 위의 예처럼 필터 절의 열이 숫자 데이터 형식인 경우 CONVERT를 사용해야 합니다. 성능상의 이유로 `CONVERT(nchar,EmployeeID) = HOST_NAME()`과 같은 매개 변수가 있는 행 필터 절의 열 이름에는 함수를 적용하지 않는 것이 좋습니다. 대신 `EmployeeID = CONVERT(int,HOST_NAME())`예제에서 보여준 방식을 사용하는 것이 좋습니다. 이 절은 **@subset_filterclause** [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)매개 변수에 사용할 수 있지만 일반적으로 새 게시 마법사에서는 사용할 수 없습니다. 마법사는 필터 절을 실행 하 여 유효성을 검사 하며 컴퓨터 이름을로 변환할 수 없기 때문에 실패 합니다 `int` . 새 게시 마법사를 사용할 경우 게시에 대한 스냅샷을 만들기 전에 마법사에서 `CONVERT(nchar,EmployeeID) = HOST_NAME()` 을 지정한 다음 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 을 사용하여 해당 절을 `EmployeeID = CONVERT(int,HOST_NAME())` 로 변경하는 것이 좋습니다.  
   
  **HOST_NAME() 값을 재정의하려면**  
   
@@ -102,7 +101,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: 새 구독 마법사의 **HOST\_NAME\(\) 값** 페이지에서 값을 지정합니다. 구독 만들기에 대한 자세한 내용은 [게시 구독](../subscribe-to-publications.md)을 참조하세요.  
   
--   복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 프로그래밍: [sp_addmergesubscription &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) ( **@hostname** 밀어넣기 구독의 경우) 또는 [sp_addmergepullsubscription_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) (끌어오기 구독의 경우)의 매개 변수에 대 한 값을 지정 합니다.  
+-   복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 프로그래밍: **@hostname** [sp_addmergesubscription &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) (밀어넣기 구독의 경우) 또는 [sp_addmergepullsubscription_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) (끌어오기 구독의 경우)의 매개 변수에 대 한 값을 지정 합니다.  
   
 -   병합 에이전트: 명령줄 또는 에이전트 프로필을 통해 **-Hostname** 매개 변수의 값을 지정합니다. 병합 에이전트에 대한 자세한 내용은 [Replication Merge Agent](../agents/replication-merge-agent.md)를 참조하십시오. 에이전트 프로필에 대한 자세한 내용은 [Replication Agent Profiles](../agents/replication-agent-profiles.md)을 참조하십시오.  
   
@@ -119,7 +118,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  필터링 옵션을 설정하려면 [Optimize Parameterized Row Filters](../publish/optimize-parameterized-row-filters.md)를 참조하십시오.  
   
 ### <a name="setting-use-partition-groups-and-keep-partition-changes"></a>'use partition groups' 및 'keep partition changes' 설정  
- **use partition groups** 및 **keep partition changes** 옵션은 모두 게시 데이터베이스에 추가 메타데이터를 저장하여 필터링된 아티클이 있는 게시에 대한 동기화 성능을 향상시킵니다. **use partition groups** 옵션은 사전 계산 파티션 기능을 사용하여 더욱 향상된 성능을 제공합니다. 게시의 아티클이 일련의 요구 사항을 충족하는 경우 이 옵션은 기본적으로 `true`로 설정됩니다. 이러한 요구 사항에 대한 자세한 내용은 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](parameterized-filters-optimize-for-precomputed-partitions.md)를 참조하세요. 아티클이 사전 계산 파티션을 사용 하기 위한 요구 사항을 충족 하지 않는 경우에는 **파티션 변경 내용 유지** 옵션이로 설정 됩니다 `true`.  
+ **use partition groups** 및 **keep partition changes** 옵션은 모두 게시 데이터베이스에 추가 메타데이터를 저장하여 필터링된 아티클이 있는 게시에 대한 동기화 성능을 향상시킵니다. **use partition groups** 옵션은 사전 계산 파티션 기능을 사용하여 더욱 향상된 성능을 제공합니다. 게시의 아티클이 일련의 요구 사항을 충족하는 경우 이 옵션은 기본적으로 `true`로 설정됩니다. 이러한 요구 사항에 대한 자세한 내용은 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](parameterized-filters-optimize-for-precomputed-partitions.md)를 참조하세요. 아티클이 사전 계산 파티션을 사용 하기 위한 요구 사항을 충족 하지 않는 경우에는 **파티션 변경 내용 유지** 옵션이로 설정 됩니다 `true` .  
   
 ### <a name="setting-partition-options"></a>'partition options' 설정  
  아티클을 만들 때 필터링된 테이블의 데이터를 구독자에서 공유하는 방식에 따라 **partition options** 속성의 값을 지정합니다. 속성은 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)및 **Article Properties** 대화 상자를 사용하여 네 값 중 하나로 설정할 수 있습니다. 새 게시 마법사와 **게시 속성** 대화 상자의 **필터 추가** 또는 **필터 편집** 대화 상자를 사용하여 이 속성을 두 개의 값 중 하나로 설정할 수 있습니다. 다음 표에서는 사용할 수 있는 값을 요약합니다.  

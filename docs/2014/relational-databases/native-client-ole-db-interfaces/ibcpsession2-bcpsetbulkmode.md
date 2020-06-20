@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a07ba7d4af55fa4215a7b08ae34b718d4de46cd4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6d4619dc87bf7dfbc34f4d835ee21bced27f1a52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694586"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056234"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
   IBCPSession2::BCPSetBulkMode는 열 형식을 지정하기 위한 [IBCPSession::BCPColFmt&#40;OLE DB&#41;](ibcpsession-bcpcolfmt-ole-db.md)에 대한 대안을 제공합니다. 개별 열 형식 특성을 설정하는 IBCPSession::BCPColFmt와 달리, IBCPSession2::BCPSetBulkMode는 모든 특성을 설정합니다.  
@@ -69,12 +68,12 @@ HRESULT BCPSetBulkMode (
   
  다음 표에서는 *property* 매개 변수에 대한 상수를 나열합니다.  
   
-|속성|설명|  
+|속성|Description|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> 는 BCP의-c 옵션에 해당 합니다. EXE 및 IBCPSession:: BCPColFmt를 *Euserdatatype* 속성으로 설정 `BCP_TYPE_SQLCHARACTER` 합니다.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> 는 BCP의-w 옵션에 해당 합니다. EXE 및 IBCPSession:: BCPColFmt와 *Euserdatatype* 속성은로 설정 `BCP_TYPE_SQLNCHAR` 됩니다.|  
-|BCP_OUT_NATIVE_TEXT_MODE|비문자 유형의 경우 네이티브 유형을 지정하고 문자 유형의 경우 유니코드를 지정합니다.<br /><br /> 는 BCP의-N 옵션에 해당 합니다. EXE 및 IBCPSession:: BCPColFmt with *Euserdatatype* 속성 `BCP_TYPE_SQLNCHAR` 은 열 유형이 문자열 이거나 문자열이 아닌 경우로 설정 됩니다 `BCP_TYPE_DEFAULT` .|  
-|BCP_OUT_NATIVE_MODE|네이티브 데이터베이스 유형을 지정합니다.<br /><br /> 는 BCP의-n 옵션에 해당 합니다. EXE 및 IBCPSession:: BCPColFmt와 *Euserdatatype* 속성은로 설정 `BCP_TYPE_DEFAULT` 됩니다.|  
+|BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> 는 BCP.EXE의-c 옵션 및 *Euserdatatype* 속성이로 설정 된 IBCPSession:: BCPColFmt에 해당 `BCP_TYPE_SQLCHARACTER` 합니다.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> *Euserdatatype* 속성이로 설정 된 BCP.EXE 및 IBCPSession:: BCPColFmt의-w 옵션에 해당 `BCP_TYPE_SQLNCHAR` 합니다.|  
+|BCP_OUT_NATIVE_TEXT_MODE|비문자 유형의 경우 네이티브 유형을 지정하고 문자 유형의 경우 유니코드를 지정합니다.<br /><br /> 열 형식이 문자열이 면이 고, 그렇지 않은 경우에는 IBCPSession:: BCPColFmt with *Euserdatatype* 속성을로 설정 하 여 BCP.EXE 및의-N 옵션에 해당 `BCP_TYPE_SQLNCHAR` `BCP_TYPE_DEFAULT` 합니다.|  
+|BCP_OUT_NATIVE_MODE|네이티브 데이터베이스 유형을 지정합니다.<br /><br /> *Euserdatatype* 속성이로 설정 된 BCP.EXE 및 IBCPSession:: BCPColFmt의-n 옵션에 해당 `BCP_TYPE_DEFAULT` 합니다.|  
   
  IBCPSession2::BCPSetBulkMode와 충돌하지 않는 IBCPSession::BCPControl 옵션에 대해 IBCPSession::BCPControl 및 IBCPSession2::BCPSetBulkMode를 호출할 수 있습니다. 예를 들어 `BCP_OPTION_FIRST` 및 IBCPSession2:: Bcpset대량 모드를 사용 하 여 IBCPSession:: BCPControl을 호출할 수 있습니다.  
   

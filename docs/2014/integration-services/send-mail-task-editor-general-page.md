@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5e60ebbf-8f2d-4d77-a859-e47e0f605cb2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 50a054bbe83c7873d1da93909bc57331fcf4a635
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: daaad6f1c340d92f7bdc6f0b4faf46598cdae31c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055856"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963521"
 ---
 # <a name="send-mail-task-editor-general-page"></a>메일 보내기 태스크 편집기(일반 페이지)
   **메일 보내기 태스크 편집기** 대화 상자의 **일반 페이지** 를 사용하여 메일 보내기 태스크의 이름을 지정하고 설명할 수 있습니다.  

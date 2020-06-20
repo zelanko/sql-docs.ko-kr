@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 70adec34-078c-4ae0-9961-d6a8318340e7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f2b84ce093c25faa284033065c329bb14f254a8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b5fd79d47d0a3bd9ac80c2f66ff54cc096fcca88
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676859"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047697"
 ---
 # <a name="view-facets-dialog-box"></a>패싯 보기 대화 상자
   이 대화 상자를 사용하여 정책 기반 관리 패싯의 속성을 볼 수 있습니다. 패싯의 속성은 패싯을 만들 때 정의되며 이 대화 상자를 사용하여 변경할 수 없습니다.  

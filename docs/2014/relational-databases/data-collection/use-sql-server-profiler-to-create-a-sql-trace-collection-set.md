@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ddfb1b83ccb225122edc19860c45480ec1c0c00a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873342"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970421"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>SQL Server 프로파일러를 사용하여 SQL 추적 컬렉션 집합 만들기(SQL Server Management Studio)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 의 서버 쪽 추적 기능을 이용하여 일반 SQL 추적 수집기 유형을 사용하는 컬렉션 집합을 만들기 위한 추적 정의를 내보낼 수 있습니다. 이 프로세스는 두 부분으로 구성되어 있습니다.  
@@ -72,7 +71,7 @@ ms.locfileid: "62873342"
   
     1.  필터 목록에서 **기간**을 클릭합니다.  
   
-    2.  부울 연산자 창에서 **크거나 같음** 노드를 확장 하 고를 값으로 입력 `80` 한 다음 **확인**을 클릭 합니다.  
+    2.  부울 연산자 창에서 **크거나 같음** 노드를 확장 하 `80` 고를 값으로 입력 한 다음 **확인**을 클릭 합니다.  
   
 9. **실행** 을 클릭하여 추적을 시작합니다.  
   
@@ -106,7 +105,7 @@ ms.locfileid: "62873342"
   
     2.  **관리**와 **데이터 컬렉션**을 차례로 확장합니다.  
   
-     컬렉션 `SPROC_CollectionSet` 집합은 **시스템 데이터 컬렉션 집합** 노드와 같은 수준에 나타납니다. 이 컬렉션 집합은 기본적으로 해제되어 있습니다.  
+     `SPROC_CollectionSet`컬렉션 집합은 **시스템 데이터 컬렉션 집합** 노드와 같은 수준에 나타납니다. 이 컬렉션 집합은 기본적으로 해제되어 있습니다.  
   
 6.  개체 탐색기를 사용하여 SPROC_CollectionSet에 대해 컬렉션 모드 및 업로드 일정 등의 속성을 편집합니다. 데이터 수집기와 함께 제공되는 시스템 데이터 컬렉션 집합의 경우와 동일한 절차를 따릅니다.  
   

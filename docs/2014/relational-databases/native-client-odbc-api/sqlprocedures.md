@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec41f017-f5e0-40ef-913a-65d206068631
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1a0464cd8a91db43f9629bed3cc9e45e48a8f7c3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e37f15841a36eb95c1e9263d137ba2734d622367
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705908"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021797"
 ---
 # <a name="sqlprocedures"></a>SQLProcedures
   모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저는 값을 반환합니다. **Sqlprocedures** 는 결과 집합 열 PROCEDURE_TYPE에 대 한 SQL_PT_FUNCTION를 보고 합니다.  

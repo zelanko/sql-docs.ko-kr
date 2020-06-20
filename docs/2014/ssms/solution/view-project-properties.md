@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5537efab-19da-40a1-a201-20adc1d71e7e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9e8aaa92f02d1b26e23aad3c9ccffe52cd886ac2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d34c6b836f13fe120d50153e642f42d6c8785e7d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63240110"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058268"
 ---
 # <a name="view-project-properties"></a>프로젝트 속성 보기
   프로젝트와 연관된 속성을 속성 창에서 볼 수 있습니다.  

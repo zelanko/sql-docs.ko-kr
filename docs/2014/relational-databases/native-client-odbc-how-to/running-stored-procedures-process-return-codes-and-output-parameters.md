@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 38918636fa569b5f9b43e1f93698879863429fb0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4aebcc06fe8442070ae55da81fbb914fea2e2df2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705219"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048197"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>반환 코드 및 출력 매개 변수 처리(ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저는 정수 반환 코드 및 출력 매개 변수를 사용할 수 있습니다. 반환 코드와 출력 매개 변수는 서버의 마지막 패킷으로 전달되므로 [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) 에서 SQL_NO_DATA를 반환할 때까지 애플리케이션에서 사용할 수 없습니다. 저장 프로시저에서 오류가 반환 되 면 SQLMoreResults를 호출 하 여 SQL_NO_DATA 반환 될 때까지 다음 결과로 이동 합니다.  

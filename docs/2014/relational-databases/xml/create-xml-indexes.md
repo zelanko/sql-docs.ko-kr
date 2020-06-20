@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8448e133891d375a97010c15d2079335e473c6f1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9e7800193222b8c9060fee1b247cc5585654cde4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717061"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046954"
 ---
 # <a name="create-xml-indexes"></a>XML 인덱스 만들기
   이 항목에서는 기본 및 보조 XML 인덱스를 만드는 방법에 대해 설명합니다.  

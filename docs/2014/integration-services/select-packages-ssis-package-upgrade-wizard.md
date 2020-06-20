@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 224100f1-51f6-4f1f-91a2-054819c76ae8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ccf14ace0a160be4ca9ecc5287ca45f077ba7e16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f67103eedf14bb405ad1655d21803ec84e6ff0ca
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056015"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963743"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>패키지 선택(SSIS 패키지 업그레이드 마법사)
   **패키지 선택** 페이지를 사용하여 업그레이드할 패키지를 선택할 수 있습니다. 이 페이지에는 마법사의 **원본 위치 선택** 페이지에서 지정한 위치에 저장된 패키지가 나열됩니다.  

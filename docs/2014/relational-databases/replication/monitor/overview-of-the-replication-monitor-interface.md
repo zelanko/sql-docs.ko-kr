@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48299e2cf318071624c8a7649c52dd9b2f932a77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b76d4df23f5d8bb25664ba0f1d294deca9be0418
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62668989"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057171"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>복제 모니터 인터페이스 개요
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터는 모든 복제 작업을 게시자 관점 또는 배포자 관점으로 제공합니다. 왼쪽 창에서 모니터에 게시자를 추가하면 오른쪽 창에 게시자, 해당 게시, 게시에 대한 구독 및 다양한 복제 에이전트 정보가 표시됩니다. 복제 토폴로지에 대한 정보를 제공하는 것 외에도 복제 모니터를 사용하여 에이전트 시작 및 중지, 데이터 유효성 검사 등 다양한 태스크를 수행할 수 있습니다.  
@@ -225,7 +224,7 @@ ms.locfileid: "62668989"
   
      이 대화 상자에서는 프로필 속성 변경, 프로필 만들기 및 삭제, 기본 프로필 지정, 특정 유형(예: 스냅샷 에이전트)의 모든 에이전트가 지정된 프로필을 사용하도록 지정 등의 작업을 수행할 수 있습니다.  
   
--   **\<AgentProfileName> 속성**  
+-   **\<AgentProfileName>정보의**  
   
      이 대화 상자에서는 프로필의 매개 변수 설정을 보고 편집할 수 있습니다.  
   

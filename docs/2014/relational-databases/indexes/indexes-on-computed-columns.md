@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ecbca9e7838c4c9395a8bcb6e11351c40f7037f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162457"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049893"
 ---
 # <a name="indexes-on-computed-columns"></a>계산 열의 인덱스
   다음 요구 사항을 충족하면 계산 열에 인덱스를 정의할 수 있습니다.  
@@ -88,7 +87,7 @@ ms.locfileid: "63162457"
   
  **데이터 형식 요구 사항**  
   
--   계산 열에 대해 정의 된 *computed_column_expression* 는 `text`, `ntext`또는 `image` 데이터 형식으로 계산 될 수 없습니다.  
+-   계산 열에 대해 정의 된 *computed_column_expression* 는 `text` , `ntext` 또는 데이터 형식으로 계산 될 수 없습니다 `image` .  
   
 -   `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)` 및 `xml` 데이터 형식에서 파생된 계산 열의 경우 해당 데이터 형식을 인덱스 키 열로 사용할 수 있으면 인덱스를 만들 수 있습니다.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "63162457"
      데이터베이스 호환성 수준이 90 이상으로 설정된 경우 ANSI_WARNINGS를 ON으로 설정하면 암시적으로 ARITHABORT가 ON으로 설정됩니다.  
   
 ##  <a name="creating-indexes-on-persisted-computed-columns"></a><a name="BKMK_persisted"></a> 지속형 계산 열에 인덱스 만들기  
- CREATE TABLE 또는 ALTER TABLE 문에서 열이 PERSISTED로 표시된 경우 결정적이지만 정확하지 않은 식으로 정의된 계산 열에 인덱스를 만들 수 있습니다. 즉,는 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 열에 인덱스를 만들 때와 쿼리에서 인덱스가 참조 될 때 이러한 지속형 값을 사용 합니다. 이 옵션을 사용 하면가 결정적이 고 정확 하 게 인 [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)]경우 계산 열에 인덱스를 만들 수 있습니다.  
+ CREATE TABLE 또는 ALTER TABLE 문에서 열이 PERSISTED로 표시된 경우 결정적이지만 정확하지 않은 식으로 정의된 계산 열에 인덱스를 만들 수 있습니다. 즉 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ,는 열에 인덱스를 만들 때와 쿼리에서 인덱스가 참조 될 때 이러한 지속형 값을 사용 합니다. 이 옵션을 사용 하면 [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)] 가 결정적이 고 정확 하 게 인 경우 계산 열에 인덱스를 만들 수 있습니다.  
   
 ## <a name="related-content"></a>관련 내용  
  [COLUMNPROPERTY&#40;Transact-SQL&#41;](/sql/t-sql/functions/columnproperty-transact-sql)  

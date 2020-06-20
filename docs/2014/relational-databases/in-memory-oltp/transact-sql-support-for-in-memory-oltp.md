@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8042534c8b22863c5a00abf4969bdb9754cef892
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bf3708a258e3bb97231e45b10bea2c59351a06a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702207"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025493"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 Transact-SQL 지원
   Transact-SQL 쿼리 또는 DML 문(SELECT, INSERT, UPDATE 또는 DELETE), 임시 문과, 저장 프로시저, 테이블 반환 함수, 스칼라 함수, 트리거, 뷰와 같은 SQL 모듈을 사용하여 메모리 최적화 테이블에 액세스할 수 있습니다. 자세한 내용은 해석 된 [transact-sql을 사용 하 여 메모리 액세스에 최적화 된 테이블에 액세스](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)를 참조 하세요.  
@@ -42,7 +41,7 @@ ms.locfileid: "82702207"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [지원 되는 데이터 형식](supported-data-types-for-in-memory-oltp.md)  
+-   [지원되는 데이터 형식](supported-data-types-for-in-memory-oltp.md)  
   
 -   [해석된 Transact-SQL을 사용하여 메모리 액세스에 최적화된 테이블에 액세스](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)  
   

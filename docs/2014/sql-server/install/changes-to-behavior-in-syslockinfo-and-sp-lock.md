@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b9892ae3-ac15-48be-8b52-78dbed6467ed
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e8c6534449ffc4e89efcd49c943726bf6ecd9f26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65ace190004cab911dd8996642720620eba94935
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096652"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045160"
 ---
 # <a name="changes-to-behavior-in-syslockinfo-and-sp_lock"></a>syslockinfo 및 sp_lock의 동작에 대한 변경입니다.
   **syslockinfo** 및 **sp_lock** 이 예기치 않은 값을 반환할 수 있으며 추가 행을 반환할 수도 있습니다. 반면에 이전 버전에서는 **syslockinfo** 및 **sp_lock** 이 잠금 리소스당 최대 두 개의 행을 반환했습니다.  

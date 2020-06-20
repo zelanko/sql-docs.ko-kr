@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 14c10afd53e219b847625e50f8fc88714cad1111
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bf9a33bc18790bf8821d778746a708f78bbb3d8f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702280"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046358"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 인덱스(SQL Server)
   XML 인덱스를 `xml` 데이터 형식의 열에 만들 수 있습니다. 그러면 열에 있는 XML 인스턴스에 대해 모든 태그, 값 및 경로가 인덱싱되어 쿼리 성능이 향상됩니다. 다음 경우에 애플리케이션에서 XML 인덱스를 활용할 수 있습니다.  
@@ -132,7 +131,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   작업에 경로 식을 사용하여 개별적인 XML 인스턴스로부터 여러 값을 검색하는 경우 PROPERTY 인덱스에 있는 각 XML 인스턴스 내의 경로를 클러스터링하면 도움이 될 수 있습니다. 이러한 시나리오는 개체의 속성이 인출되고 해당 기본 키 값이 알려진 속성 모음 시나리오에서 일반적으로 발생합니다.  
   
--   작업에 해당 값이 포함된 요소 또는 특성 이름을 알지 못하는 상태에서 XML 인스턴스 내의 값을 쿼리하는 작업이 포함되는 경우 VALUE 인덱스를 만들 수 있습니다. 이러한 경우는 //author[last-name="Howard"]\(\<author> 요소는 계층의 임의 수준에서 발생 가능)와 같은 하위 항목 축 조회 시에 일반적으로 발생합니다. 또한 /book [@* = "novel"]\(쿼리가 "novel" 값이 있는 일부 특성을 포함하는 \<book> 요소 조회)과 같은 와일드카드 쿼리에서 발생합니다.  
+-   작업에 해당 값이 포함된 요소 또는 특성 이름을 알지 못하는 상태에서 XML 인스턴스 내의 값을 쿼리하는 작업이 포함되는 경우 VALUE 인덱스를 만들 수 있습니다. 이는 일반적으로 \<author> 계층의 모든 수준에서 요소가 발생할 수 있는 author [last name = "Howard"]와 같은 하위 항목 축 조회와 함께 발생 합니다. 또한/book [@ * = "novel"]와 같은 와일드 카드 쿼리에서 발생 합니다 .이 경우 쿼리는 값이 \<book> "novel" 인 일부 특성을 가진 요소를 찾습니다.  
   
 ### <a name="path-secondary-xml-index"></a>PATH 보조 XML 인덱스  
  쿼리에서 일반적으로 `xml` 유형 열에 경로 식을 지정하는 경우에는 PATH 보조 인덱스로 검색 속도를 높일 수도 있습니다. 이 항목의 앞에서 설명한 대로 기본 인덱스는 **exist()** 메서드를 WHERE 절에 지정하는 쿼리가 있는 경우에 유용합니다. 또한 PATH 보조 인덱스를 추가하면 이러한 쿼리에서 검색 성능을 향상시킬 수 있습니다.  

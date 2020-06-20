@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: cf30312e-4338-49a7-90f0-6e4f7b431ff8
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 911bd20c7d232bca52fdf9dca294bd7a4924d984
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6266664bc4e1d1c782ce75a9de4edebe52d11f0c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054135"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972033"
 ---
 # <a name="change-the-system-administrator-account-master-data-services"></a>시스템 관리자 계정 변경(Master Data Services)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 시스템 관리자로 지정 된 사용자 계정을 변경할 수 있습니다.  
+  시스템 관리자로 지정 된 사용자 계정을 변경할 수 있습니다 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
 > [!WARNING]  
 >  이 절차를 완료하면 이전 시스템 관리자의 사용자 계정이 삭제됩니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "66054135"
   
 1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 을 열고 [!INCLUDE[ssDE](../includes/ssde-md.md)] 데이터베이스의 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 인스턴스에 연결합니다.  
   
-2.  Mdm. tblUser에서 새 관리자로 지정할 사용자를 찾아 해당 값을 `SID` 열에 복사 합니다.  
+2.  Mdm. tblUser에서 새 관리자로 지정할 사용자를 찾아 해당 값을 열에 복사 `SID` 합니다.  
   
 3.  새 쿼리를 만듭니다.  
   

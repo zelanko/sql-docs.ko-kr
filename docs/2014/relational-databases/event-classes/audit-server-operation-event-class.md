@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6cc3dbb9-817e-4329-9f45-c3adcff3b511
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 99f3b353231da86af00bc4531e2645fe0a5b1994
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a3359de449dcce4a976dec2debd9b5be99addd2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012436"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031079"
 ---
 # <a name="audit-server-operation-event-class"></a>Audit Server Operation 이벤트 클래스
   **Audit Server Operation** 이벤트 클래스는 설정 변경, 리소스, 외부 액세스 또는 인증과 같은 보안 감사 작업이 사용될 때 발생합니다.  

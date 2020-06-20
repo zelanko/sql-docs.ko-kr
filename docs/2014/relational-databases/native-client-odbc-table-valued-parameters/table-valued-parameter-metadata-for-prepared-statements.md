@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fd2fc705-2e98-4011-9822-c7e6cca4a535
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8e526b01f8e33006c01861cdafef1fd9cd03d2ef
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ad1394bd5e5bedc69a98308ba67a98434559c146
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705168"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998898"
 ---
 # <a name="table-valued-parameter-metadata-for-prepared-statements"></a>준비된 문의 테이블 반환 매개 변수 메타데이터
   응용 프로그램은 SQLNumParams 및 SQLDescribeParam을 통해 준비 된 프로시저 호출에 대 한 메타 데이터를 가져올 수 있습니다. 테이블 반환 매개 변수의 경우 *DataTypePtr* 는 SQL_SS_TABLE로 설정 됩니다. SQL_CA_SS_TYPE_NAME, SQL_CA_SS_CATALOG_NAME 및 SQL_CA_SS_SCHEMA_NAME에 대 한 SQLGetDescField를 통해 추가 메타 데이터를 사용할 수 있습니다.  

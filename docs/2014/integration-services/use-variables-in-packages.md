@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7742e92d-46c5-4cc4-b9a3-45b688ddb787
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 96bfbf87789aa1d683b6368f210539a191f7ee95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ddf6086306d24c4f92dfef2b9f4522dc2002733f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054687"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972593"
 ---
 # <a name="use-variables-in-packages"></a>패키지에서 변수 사용
   변수는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에 추가된 유용하고 융통성 있는 기능입니다. 변수는 패키지 개체 간 및 부모 패키지와 자식 패키지 간 통신을 제공합니다. 식과 스크립트에도 변수를 사용할 수 있습니다.  

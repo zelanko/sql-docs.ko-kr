@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a69d4805a21cfbd83bd9a8d79b5150460d4977be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7ac008fe139adf55376bb50fbf60dddcd6b9ae5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721688"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010894"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Create and Apply the Initial Snapshot
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 초기 스냅샷을 만들고 적용하는 방법에 대해 설명합니다. 매개 변수가 있는 필터를 사용하는 병합 게시에는 두 부분으로 구성된 스냅샷이 필요합니다. 자세한 내용은 [매개 변수가 있는 필터로 병합 게시에 대한 스냅샷 만들기](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
@@ -44,7 +43,7 @@ ms.locfileid: "62721688"
   
 3.  스냅샷을 생성할 게시를 마우스 오른쪽 단추로 클릭한 다음 **스냅샷 에이전트 상태 보기**를 클릭합니다.  
   
-4.  **스냅샷 에이전트 상태 보기 - \<게시&gt;** 대화 상자에서 **시작**을 클릭합니다.  
+4.  **스냅숏 에이전트 상태 보기 \<Publication> -** 대화 상자에서 **시작**을 클릭 합니다.  
   
  스냅샷 에이전트에서 스냅샷 생성을 마치면 "[100%] 17개 아티클의 스냅샷이 생성되었습니다"라는 메시지가 표시됩니다.  
   
@@ -78,13 +77,13 @@ ms.locfileid: "62721688"
   
 1.  스냅샷, 트랜잭션 또는 병합 게시를 만듭니다. 자세한 내용은 [게시 만들기](publish/create-a-publication.md)를 참조 하세요.  
   
-2.  [sp_addpublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)을 실행합니다. 및 **@publication** 다음 매개 변수를 지정 합니다.  
+2.  [sp_addpublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)을 실행합니다. **@publication**및 다음 매개 변수를 지정 합니다.  
   
     -   배포자에서 스냅샷 에이전트를 실행하는 Windows 인증 자격 증명을 지정하는 **@job_login**.  
   
     -   제공된 Windows 자격 증명의 암호인 **@job_password**.  
   
-    -   (옵션) 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면 **@publisher_security_mode** 에 값 **@publisher_security_mode** . 이 경우 및 **@publisher_login** **@publisher_password**에 대 한 SQL Server 인증 로그인 정보도 지정 해야 합니다.  
+    -   (옵션) 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면 **@publisher_security_mode** 에 값 **@publisher_security_mode** . 이 경우 및에 대 한 SQL Server 인증 로그인 정보도 지정 해야 합니다 **@publisher_login** **@publisher_password** .  
   
     -   (옵션) 스냅샷 에이전트 작업에 대한 동기화 일정. 자세한 내용은 [동기화 일정 지정](specify-synchronization-schedules.md)을 참조 하세요.  
   
@@ -119,15 +118,15 @@ ms.locfileid: "62721688"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** = **0**  
+    -   **-DistributorSecurityMode**  =  **0**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** = **0**  
+    -   **-PublisherSecurityMode**  =  **0**  
   
-###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>예 (Transact-sql)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  이 예제에서는 트랜잭션 게시를 만들고 **sqlcmd** 스크립팅 변수를 사용하여 새 게시에 대한 스냅샷 에이전트 작업을 추가하는 방법을 보여 줍니다. 또한 추가한 작업을 시작합니다.  
   
  [!code-sql[HowTo#sp_trangenerate_snapshot](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubinitialsnapshot.sql#sp_trangenerate_snapshot)]  
@@ -147,7 +146,7 @@ ms.locfileid: "62721688"
  스냅샷 에이전트는 게시가 만들어진 후 스냅샷을 생성합니다. RMO(복제 관리 개체)를 사용하여 이러한 스냅샷을 프로그래밍 방식으로 생성하고 복제 에이전트 기능에 액세스하도록 관리 코드에 지시할 수 있습니다. 사용하는 개체는 복제 유형에 따라 달라집니다. 스냅샷 에이전트는 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> 개체를 사용하여 동기적으로 시작하거나 에이전트 작업을 사용하여 비동기적으로 시작할 수 있습니다. 생성된 초기 스냅샷은 구독이 처음 동기화될 때 구독자로 전송되어 적용됩니다. 기존 스냅샷에 유효한 최신 데이터가 필요하게 될 때마다 에이전트를 다시 실행해야 합니다. 자세한 내용은 [게시 유지 관리](publish/maintain-publications.md)를 참조하세요.  
   
 > [!IMPORTANT]  
->  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장 해야 하는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework에서 제공 하는 [암호화 서비스](https://go.microsoft.com/fwlink/?LinkId=34733) 를 사용 합니다.  
+>  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장 해야 하는 경우 Windows .NET Framework에서 제공 하는 [암호화 서비스](https://go.microsoft.com/fwlink/?LinkId=34733) 를 사용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 합니다.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-starting-the-snapshot-agent-job-asynchronous"></a>스냅샷 에이전트 작업을 시작하여 스냅샷 또는 트랜잭션 게시에 대한 초기 스냅샷을 생성하려면(비동기)  
   

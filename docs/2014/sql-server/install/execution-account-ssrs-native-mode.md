@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 440b5a09-5fd4-4c3a-b510-f3c33cbf1c82
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0eff6dca788744b93d2d6d4a0a7175764e263f71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6cb210be7856566c16f615d90cf879dcae5d6306
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952540"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042717"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>실행 계정(SSRS 기본 모드)
   이 페이지를 사용하여 무인 모드 처리용으로 사용할 계정을 구성할 수 있습니다. 이 계정은 다음과 같이 다른 자격 증명 원본을 사용할 수 없는 특별한 환경에서 사용됩니다.  
@@ -26,7 +25,7 @@ ms.locfileid: "71952540"
   
 -   보고서 서버가 보고서에서 참조하는 외부 이미지 파일 또는 기타 리소스를 검색하기 위해 다른 서버에 연결하는 경우  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]기본 모드입니다.  
   
  이 계정 설정은 선택 사항이지만 설정하지 않은 경우 외부 이미지 및 일부 데이터 원본에 대한 연결을 사용하는 데 제한이 따릅니다. 외부 이미지 파일을 검색할 때 보고서 서버는 익명 연결을 설정할 수 있는지 여부를 확인합니다. 연결이 암호로 보호된 경우 보고서 서버는 무인 보고서 처리 계정을 사용하여 원격 서버에 연결합니다. 보고서에 대한 데이터를 검색할 때 데이터 원본 연결이 자격 증명 유형을 **없음** 으로 지정한 경우 보고서 서버는 현재 사용자를 가장하거나, 사용자에게 자격 증명을 요청하거나, 저장된 자격 증명을 사용하거나, 무인 처리 계정을 사용합니다. 보고서 서버는 다른 컴퓨터에 연결할 때 해당 서비스 계정 자격 증명을 위임 또는 가장할 수 없으므로 사용 가능한 다른 자격 증명이 없는 경우 무인 처리 계정을 사용해야 합니다.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "71952540"
  계정을 지정하려면 선택합니다.  
   
  **계정**  
- Windows 도메인 사용자 계정을 입력합니다. *도메인>\\<사용자 계정\>형식을 사용 \<* 합니다.  
+ Windows 도메인 사용자 계정을 입력합니다. * \<domain> \\ 사용자 계정 \><* 형식을 사용 합니다.  
   
  **암호**  
  암호를 입력합니다.  

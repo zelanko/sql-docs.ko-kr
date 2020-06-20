@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 99467a32-6576-4272-a076-b16c06933f2a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9f0853d7db0664e75140c0e5478af19c233a2517
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2cdca0a3cd9ce47ccb39ebeaf8fd1cd260aafbd9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761719"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031649"
 ---
 # <a name="mssqlserver_8689"></a>MSSQLSERVER_8689
     
@@ -39,7 +38,7 @@ ms.locfileid: "62761719"
  USE PLAN 힌트에 지정된 모든 데이터베이스가 있는지 확인하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;쿼리 힌트](/sql/t-sql/queries/hints-transact-sql-query)   
+ [쿼리 힌트&#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
  [계획 지침](../performance/plan-guides.md)  
   
   

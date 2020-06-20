@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 01383ffade91cde641018b90be30dc92e644b151
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 03abb1dc601c7b329742f290b9ce62aefd08e7bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704076"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056893"
 ---
 # <a name="code-outlining"></a>코드 개요
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 쿼리를 편집할 때 개요 기능을 사용하여 코드를 필요에 따라 숨길 수 있습니다. 이 기능을 사용하면 특히 큰 쿼리 파일에서 작업 중인 코드를 쉽게 볼 수 있습니다.
@@ -36,7 +35,7 @@ ms.locfileid: "82704076"
 
  ![개요를 보여 주는 XML 코드](../../database-engine/media/editoutlinexmlfull.gif "개요를 보여 주는 XML 코드")
 
- \<InnerTag> 줄의 빼기 기호를 클릭하면 다음 그림과 같이 InnerTag만 축소됩니다.
+ 줄에서 빼기 기호를 클릭 하면 \<InnerTag> 다음 그림과 같이 InnerTag만 축소 됩니다.
 
  ![내부 노드가 숨겨진 XML 코드](../../database-engine/media/editoutlinexmlinnercol.gif "내부 노드가 숨겨진 XML 코드")
 
@@ -44,11 +43,11 @@ ms.locfileid: "82704076"
 
  ![숨겨진 코드를 보여 주는 도구 설명을 포함하는 XML 코드](../../database-engine/media/editoutlinexmlmouse.gif "숨겨진 코드를 보여 주는 도구 설명을 포함하는 XML 코드")
 
- \<MiddleTag> 줄의 빼기 기호를 클릭하면 다음 그림과 같이 MiddleTag 및 InnerTag가 모두 축소됩니다.
+ 줄에서 빼기 기호를 클릭 하면 \<MiddleTag> 다음 그림과 같이 MiddleTag 및 InnerTag가 모두 축소 됩니다.
 
  ![내부 및 가운데 태그가 숨겨진 XML 코드](../../database-engine/media/editoutlinexmlmiddlecol.gif "내부 및 가운데 태그가 숨겨진 XML 코드")
 
- \<OuterTag> 줄의 빼기 기호를 클릭하면 다음 그림과 같이 3개의 줄이 모두 축소됩니다.
+ 줄에서 빼기 기호를 클릭 하면 \<OuterTag> 다음 그림과 같이 세 줄이 모두 축소 됩니다.
 
  ![숨겨진 3개의 태그를 모두 보여 주는 XML 코드](../../database-engine/media/editoutlinexmloutercol.gif "숨겨진 3개의 태그를 모두 보여 주는 XML 코드")
 

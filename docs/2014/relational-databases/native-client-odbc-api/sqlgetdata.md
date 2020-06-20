@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 92cd4d2357d8908ac8944883772fd2639ee30b11
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1d8633a66b9c6d1896f95275380d73ab69cb873d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706058"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022256"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
   **SQLGetData** 는 열 값을 바인딩하지 않고 결과 집합 데이터를 검색하는 데 사용됩니다. 동일한 열에서**SQLGetData** 를 연속해서 호출하여 **text**, **ntext**또는 **image** 데이터 형식 열에서 많은 양의 데이터를 검색할 수 있습니다.  

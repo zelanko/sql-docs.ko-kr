@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f551b8e8-3668-4ed4-852f-bae826254f4f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d3f2412114e50292c91908b3a20c433d022b239
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68185813"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057606"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>여러 인스턴스에 예약된 정책 배포
   등록된 서버를 사용하면 중앙 위치에서 관리되는 서버로 예약된 정책을 배포할 수 있습니다. 로컬 서버 그룹 또는 중앙 관리 서버에서 예약된 정책을 배포할 수 있습니다.  
@@ -95,7 +94,7 @@ ms.locfileid: "68185813"
 ## <a name="next"></a>다음  
  이 자습서를 마칩니다. 시작으로 돌아가려면 [자습서: 정책 기반 관리를 사용 하 여 최선의 구현 방법 평가](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)를 참조 하세요.  
   
- [!INCLUDE[ssDE](../includes/ssde-md.md)] 자습서 목록을 보려면 [데이터베이스 엔진 자습서](../relational-databases/database-engine-tutorials.md)를 클릭 합니다.  
+ 자습서 목록을 보려면 [!INCLUDE[ssDE](../includes/ssde-md.md)] [데이터베이스 엔진 자습서](../relational-databases/database-engine-tutorials.md)를 클릭 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [정책 기반 관리를 사용하여 서버 관리](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

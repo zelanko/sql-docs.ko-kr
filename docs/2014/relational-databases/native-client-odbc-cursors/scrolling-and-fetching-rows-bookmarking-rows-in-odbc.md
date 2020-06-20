@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9cfcd243-c9d4-4c2a-abc4-399dbabe5f6b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6489fcee1a8faa3f1205c8418e329182c41e376c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: def05f478c16dcbcdc91771925a11b0b91da2e9e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705551"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020539"
 ---
 # <a name="bookmarking-rows-in-odbc"></a>ODBC의 행 집합에 책갈피 설정
   책갈피는 데이터의 행을 식별하는 데 사용되는 값입니다. 책갈피 값의 의미는 드라이버나 데이터 원본에만 알려집니다. 예를 들어 책갈피 값은 행 번호처럼 간단하거나 디스크 주소처럼 복잡할 수 있습니다. ODBC 애플리케이션에서는 특정 행에 대해 책갈피를 요청하고 이를 저장한 다음 다시 커서에 전달하여 원래 행으로 돌아갑니다.  

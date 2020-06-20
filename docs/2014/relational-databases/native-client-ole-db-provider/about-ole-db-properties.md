@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0b36a61e-b542-400d-a3d2-e6f643caf2c6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 87027481170d8f72f91b1923ae6703b9796d5541
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b7336a8076a8e6550e3b36d7ba43545f19f61921
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704768"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056052"
 ---
 # <a name="about-ole-db-properties"></a>OLE DB 속성 정보
   소비자는 속성 값을 설정하여 특정 개체 동작을 요청합니다. 예를 들어 소비자는 속성을 사용하여 행 집합에서 노출할 인터페이스를 지정합니다. 소비자는 속성 값을 가져와서 행 집합, 세션 또는 데이터 원본 개체와 같은 개체의 기능을 확인합니다.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f7ea763aa9c0bd187b2207dc50a1f678c295f3b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92627b1f66b91af63979b25f5a8d69d1a341ec73
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483396"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971913"
 ---
 # <a name="create-a-collection-master-data-services"></a>컬렉션 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 리프 멤버 및 통합 멤버의 기본 목록을 만들려는 경우 컬렉션을 만듭니다. 엔터티의 모든 멤버를 컬렉션에 포함할 필요는 없습니다.  

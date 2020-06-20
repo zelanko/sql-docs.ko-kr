@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5b30a9f60f52b8b19875f5fb3c15242ce2c632fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b500c2c9a2e725577ac542b738f2ea6a536cfe34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175431"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024937"
 ---
 # <a name="lesson-8-restore-a-database-to-azure-storage"></a>8단원: Azure Storage에 데이터베이스 복원
   이 단원에서는 로컬로 백업 파일을 만들고 Azure Storage 복원 하는 방법을 배웁니다. 온-프레미스 또는 Azure의 가상 머신에서 데이터베이스를 사용할 수 있습니다. 이 단원을 수행하기 위해 4, 5, 6, 7단원을 완료할 필요는 없습니다.  
@@ -85,7 +84,7 @@ ms.locfileid: "70175431"
   
 8.  **데이터베이스 파일** 을 다음으로 복원 섹션의 다음 **으로 복원** 필드에 다음을 입력 합니다.  
   
-     데이터 파일에 대해을 입력 `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`합니다. 로그 파일에 대해을 입력 `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`합니다.  
+     데이터 파일에 대해을 입력 `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf` 합니다. 로그 파일에 대해을 입력 `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf` 합니다.  
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-8.gif "SQL 14 CTP2")  
   

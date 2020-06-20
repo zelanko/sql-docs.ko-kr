@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c63b7c0d1acad34bb273e4a49921d55818965e80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a9a7c6c48229aa827aaed178e5ed4448c20431b9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72688730"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970573"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 데이터 정렬은 데이터에 대한 정렬 규칙과 대/소문자 및 악센트 구분 속성을 제공합니다. `char` 및 `varchar`과 같은 문자 데이터 형식과 함께 사용되는 데이터 정렬은 해당 데이터 형식을 나타내는 데 사용할 수 있는 코드 페이지와 해당 문자를 지정합니다. 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 설치하든 데이터베이스 백업을 복원하든 서버를 클라이언트 데이터베이스에 연결하든 사용할 데이터의 로캘 요구 사항, 정렬 순서, 대/소문자 및 악센트 구분 여부를 파악해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 사용 가능한 데이터 정렬을 나열하려면 [sys를 참조하세요.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)를 참조하세요.  
@@ -135,7 +134,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
  다음 표에서는 유니코드 서버 및 비유니코드 서버의 다양한 조합과 함께 다국어 데이터 사용에 대한 정보를 제공합니다.  
   
-|Server (서버)|클라이언트|이점 또는 제한 사항|  
+|서버|클라이언트|이점 또는 제한 사항|  
 |------------|------------|-----------------------------|  
 |유니코드(Unicode)|유니코드(Unicode)|유니코드 데이터는 시스템 전체에서 사용되므로 이 시나리오는 검색한 데이터가 손상되지 않는 등 최상의 성능을 제공합니다. ADO(ActiveX Data Objects), OLE DB 및 ODBC 버전 3.7 이상이 여기에 해당됩니다.|  
 |유니코드(Unicode)|비유니코드|이 시나리오에서, 특히 새로운 운영 체제를 실행하는 서버와 이전 버전의 운영 체제에 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 클라이언트 간의 연결에서는 데이터를 클라이언트 컴퓨터로 이동할 때 제한 사항 또는 오류가 발생할 수 있습니다. 서버의 유니코드 데이터는 데이터 변환을 위해 비유니코드 클라이언트의 해당 코드 페이지에 매핑을 시도합니다.|  
@@ -144,7 +143,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="supplementary-characters"></a><a name="Supplementary_Characters"></a>보조 문자  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 유니코드 데이터를 저장 `nchar` 하기 `nvarchar` 위해 및와 같은 데이터 형식을 제공 합니다. 이러한 데이터 형식은 텍스트를 *UTF-16*이라고 하는 형식으로 인코딩합니다. 유니코드 컨소시엄에서는 각 문자에 0x0000 ~ 0x10FFFF 범위의 값인 고유한 코드 포인트를 할당합니다. 가장 자주 사용되는 문자에는 메모리 및 디스크에서 16비트 단어로 나타날 수 있는 코드 포인트 값이 할당되지만 코드 포인트 값이 0xFFFF보다 큰 문자에는 두 개의 연속적인 16비트 단어가 필요합니다. 이러한 문자를 *보조 문자*라고 하며 두 개의 연속적인 16비트 단어는 *서로게이트 쌍*이라고 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 `nchar` `nvarchar` 유니코드 데이터를 저장 하기 위해 및와 같은 데이터 형식을 제공 합니다. 이러한 데이터 형식은 텍스트를 *UTF-16*이라고 하는 형식으로 인코딩합니다. 유니코드 컨소시엄에서는 각 문자에 0x0000 ~ 0x10FFFF 범위의 값인 고유한 코드 포인트를 할당합니다. 가장 자주 사용되는 문자에는 메모리 및 디스크에서 16비트 단어로 나타날 수 있는 코드 포인트 값이 할당되지만 코드 포인트 값이 0xFFFF보다 큰 문자에는 두 개의 연속적인 16비트 단어가 필요합니다. 이러한 문자를 *보조 문자*라고 하며 두 개의 연속적인 16비트 단어는 *서로게이트 쌍*이라고 합니다.  
   
  보조 문자를 사용하는 경우  
   
@@ -175,7 +174,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |문자열 함수 또는 연산자|SC 데이터 정렬 사용|SC 데이터 정렬 사용 안 함|  
 |---------------------------------|--------------------------|-----------------------------|  
 |[CHARINDEX](/sql/t-sql/functions/charindex-transact-sql)<br /><br /> [LEN](/sql/t-sql/functions/len-transact-sql)<br /><br /> [PATINDEX](/sql/t-sql/functions/patindex-transact-sql)|UTF-16 서로게이트 쌍이 단일 코드 포인트로 계산됩니다.|UTF-16 서로게이트 쌍이 두 개의 코드 포인트로 계산됩니다.|  
-|[LEFT](/sql/t-sql/functions/left-transact-sql)<br /><br /> [REPLACE](/sql/t-sql/functions/replace-transact-sql)<br /><br /> [REVERSE](/sql/t-sql/functions/reverse-transact-sql)<br /><br /> [RIGHT](/sql/t-sql/functions/right-transact-sql)<br /><br /> [SUBSTRING](/sql/t-sql/functions/substring-transact-sql)<br /><br /> [STUFF](/sql/t-sql/functions/stuff-transact-sql)|함수가 각 서로게이트 쌍을 단일 코드 포인트로 처리하며 올바르게 작동합니다.|함수가 서로게이트 쌍을 분할하여 예기치 않은 결과가 발생할 수 있습니다.|  
+|[LEFT](/sql/t-sql/functions/left-transact-sql)<br /><br /> [바꾸십시오](/sql/t-sql/functions/replace-transact-sql)<br /><br /> [되돌립니다](/sql/t-sql/functions/reverse-transact-sql)<br /><br /> [RIGHT](/sql/t-sql/functions/right-transact-sql)<br /><br /> [부분](/sql/t-sql/functions/substring-transact-sql)<br /><br /> [STUFF](/sql/t-sql/functions/stuff-transact-sql)|함수가 각 서로게이트 쌍을 단일 코드 포인트로 처리하며 올바르게 작동합니다.|함수가 서로게이트 쌍을 분할하여 예기치 않은 결과가 발생할 수 있습니다.|  
 |[NCHAR](/sql/t-sql/functions/nchar-transact-sql)|0 ~ 0x10FFFF 범위의 지정된 유니코드 코드 포인트 값에 해당하는 문자를 반환합니다. 지정된 값이 0 ~ 0xFFFF 범위에 있을 경우 하나의 문자가 반환됩니다. 값이 더 높을 경우 해당 서로게이트가 반환됩니다.|0xFFFF보다 큰 값은 해당 서로게이트 대신 NULL을 반환합니다.|  
 |[유니코드](/sql/t-sql/functions/unicode-transact-sql)|0 ~ 0x10FFFF 범위의 UTF-16 코드 포인트를 반환합니다.|0 ~ 0xFFFF 범위의 UCS-2 코드 포인트를 반환합니다.|  
 |[와일드 카드 - 문자 하나와 일치](/sql/t-sql/language-elements/wildcard-match-one-character-transact-sql)<br /><br /> [와일드카드 - 일치하지 않는 하나 이상의 문자](/sql/t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql)|모든 와일드카드 연산에 보조 문자를 사용할 수 있습니다.|이러한 와일드카드 연산에 보조 문자를 사용할 수 없습니다. 다른 와일드카드 연산자는 사용할 수 있습니다.|  

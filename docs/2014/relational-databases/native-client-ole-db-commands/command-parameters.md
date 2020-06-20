@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 072ead49-ebaf-41eb-9a0f-613e9d990f26
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 93ec7e88dba785b1559512601adebdee64ea9fdb
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f6da29add8fd92530e40ebbfb7b94dedd619adf4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82708201"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056440"
 ---
 # <a name="command-parameters"></a>명령 매개 변수
   매개 변수는 명령 텍스트에서 물음표(?) 문자로 표시됩니다. 예를 들어 다음 SQL 문은 한 개의 입력 매개 변수를 표시합니다.  

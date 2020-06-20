@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: df9e157431a8330aed8357231c3b28d12cb4fbc1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 39f22fe37138fab22d79acc5bd667257f392737a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705007"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056300"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>이전 SQL Server 버전 관련 새로운 날짜 및 시간 기능(OLE DB)
   이 항목에서는 향상 된 날짜 및 시간 기능을 사용 하는 클라이언트 응용 프로그램이 이전 버전의와 통신할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , 그리고 이전 버전의 Native client를 사용 하 여 컴파일한 클라이언트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 향상 된 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 날짜 및 시간 기능을 지 원하는 서버에 명령을 보내는 경우 예상 되는 동작에 대해 설명 합니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "82705007"
   
 |OLE DB 클라이언트 형식|SQL Server 2005 형식|SQL Server 2008(또는 이후 버전) 형식|결과 변환(서버에서 클라이언트로)|매개 변수 변환(클라이언트에서 서버로)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|DateTime|날짜|정상|정상|  
+|DBTYPE_DBDATE|DateTime|Date|정상|정상|  
 |DBTYPE_DBTIMESTAMP|||시간 필드가 0으로 설정됩니다.|시간 필드가 0이 아닌 경우 문자열 잘림이 발생 하 여 IRowsetChange가 실패 합니다.|  
 |DBTYPE_DBTIME||Time(0)|정상|정상|  
 |DBTYPE_DBTIMESTAMP|||날짜 필드가 현재 날짜로 설정됩니다.|소수 자릿수 초가 0이 아닌 경우 문자열 잘림이 발생 하 여 IRowsetChange가 실패 합니다.<br /><br /> 날짜는 무시됩니다.|  
@@ -39,7 +38,7 @@ ms.locfileid: "82705007"
 |DBTYPE_DBTIMESTAMP|||실패-시간 리터럴이 잘못 되었습니다.|정상|  
 |DBTYPE_DBTIMESTAMP||Datetime2 (3)|정상|정상|  
 |DBTYPE_DBTIMESTAMP||Datetime2 (7)|정상|정상|  
-|DBTYPE_DBDATE|Smalldatetime|날짜|정상|정상|  
+|DBTYPE_DBDATE|Smalldatetime|Date|정상|정상|  
 |DBTYPE_DBTIMESTAMP|||시간 필드가 0으로 설정됩니다.|시간 필드가 0이 아닌 경우 문자열 잘림 때문에 IRowsetChange가 실패 합니다.|  
 |DBTYPE_DBTIME||Time(0)|정상|정상|  
 |DBTYPE_DBTIMESTAMP|||날짜 필드가 현재 날짜로 설정됩니다.|소수 자릿수 초가 0이 아닌 경우 문자열 잘림이 발생 하 여 IRowsetChange가 실패 합니다.<br /><br /> 날짜는 무시됩니다.|  

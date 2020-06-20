@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d296aae78434bcfff1c69770878705ef5f4bd0ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63145473"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025349"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>1단원: 데이터베이스 엔진에 연결
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]을 설치할 때 설치되는 도구는 버전 및 설치 선택 사항에 따라 달라집니다. 이 단원에서는 주 도구를 검토하고 이러한 도구에 연결하는 방법을 보여 주며 보다 많은 사용자에게 권한을 부여하는 기본 기능을 수행하는 방법을 보여 줍니다.  
@@ -27,7 +26,7 @@ ms.locfileid: "63145473"
   
 ### <a name="basic-tools"></a>기본 도구  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]는 [!INCLUDE[ssDE](../includes/ssde-md.md)]을 관리하고 [!INCLUDE[tsql](../includes/tsql-md.md)] 코드를 기록하는 주 도구이며 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 셸에 호스팅됩니다. 에 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 는 포함 되어 있지 않지만 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkId=144346)에서 별도로 다운로드할 수 있습니다.  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]는 [!INCLUDE[ssDE](../includes/ssde-md.md)]을 관리하고 [!INCLUDE[tsql](../includes/tsql-md.md)] 코드를 기록하는 주 도구이며 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 셸에 호스팅됩니다. 에는 포함 되어 있지 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 않지만 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkId=144346)에서 별도로 다운로드할 수 있습니다.  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 클라이언트 도구 둘 다와 함께 설치됩니다. 이 관리자를 사용하면 서버 프로토콜을 설정하고, TCP 포트와 같은 프로토콜 옵션을 구성하고, 서버 서비스가 자동으로 시작되도록 구성하고, 클라이언트 컴퓨터에서 사용자가 선호하는 방법으로 연결을 설정하도록 구성할 수 있습니다. 이 도구는 더 많은 고급 연결 요소를 구성하지만 기능을 설정하지는 않습니다.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "63145473"
   
 ##### <a name="to-start-sql-server-management-studio"></a>SQL Server Management Studio를 시작하려면  
   
--   **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]을 차례로 가리킨 다음 **SQL Server Management Studio**을 클릭 합니다.  
+-   **시작** 메뉴에서 **모든 프로그램**,을 차례로 가리킨 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] 다음 **SQL Server Management Studio**을 클릭 합니다.  
   
 ##### <a name="to-start-sql-server-configuration-manager"></a>SQL Server 구성 관리자를 시작하려면  
   
@@ -50,7 +49,7 @@ ms.locfileid: "63145473"
 1.  Administrators 그룹의 멤버로 Windows에 로그인한 다음 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 엽니다.  
   
     > [!IMPORTANT]  
-    >  또는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)] 이상에 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] 연결 하는 경우 관리자 자격 증명을 사용 하 여 연결 하려면를 마우스 오른쪽 단추로 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 클릭 한 다음 **관리자 권한으로 실행** 을 클릭 해야 할 수 있습니다. [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]부터는 설치 과정에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대해 선택한 로그인이 추가되므로 관리자 자격 증명은 필요하지 않습니다.  
+    >  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]또는 이상에 연결 하는 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] 경우 [!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 관리자 자격 증명을 사용 하 여 연결 하려면를 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행** 을 클릭 해야 할 수 있습니다. [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]부터는 설치 과정에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대해 선택한 로그인이 추가되므로 관리자 자격 증명은 필요하지 않습니다.  
   
 2.  **서버에 연결** 대화 상자에서 **취소**를 클릭합니다.  
   
@@ -85,7 +84,7 @@ ms.locfileid: "63145473"
   
      **로그인 - 신규** 대화 상자가 나타납니다.  
   
-2.  **일반** 페이지의 **로그인 이름** 상자에 * \<도메인 \\><로그인\>* 형식으로 Windows 로그인을 입력 합니다.  
+2.  **일반** 페이지의 **로그인 이름** 상자에 * \<domain> \\ 로그인 \><* 형식으로 Windows 로그인을 입력 합니다.  
   
 3.  **기본 데이터베이스** 상자에서 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 를 선택합니다(사용 가능한 경우). 사용할 수 없는 경우 **master**를 선택합니다.  
   

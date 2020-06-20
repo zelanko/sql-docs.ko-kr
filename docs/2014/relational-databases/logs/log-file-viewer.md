@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a4ea7fc8-1cb2-4c98-bc86-8991c5e748b2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f72f8e40374198a5230e32b8ec5b3974fdb6b971
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3cc7a4fd33dba71723a353d8ca3cb0d3f9e21e9b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144643"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024711"
 ---
 # <a name="log-file-viewer"></a>로그 파일 뷰어
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 로그 파일 뷰어를 사용하여 로그 파일에 기록되는 오류 및 이벤트에 대한 정보에 액세스할 수 있습니다.  

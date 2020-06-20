@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bdd8754ac3d4a63e038218c054d064f20485344b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4725d05e41ae6335ceae19c46c2c36af14dbcf8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056272"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964403"
 ---
 # <a name="save-a-copy-of-a-package"></a>패키지의 복사본 저장
   이 절차에서는 파일 시스템, 패키지 저장소 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 **msdb** 데이터베이스에 패키지 복사본을 저장하는 방법을 설명합니다. 패키지 복사본의 저장 위치를 지정할 때 패키지 이름을 업데이트할 수도 있습니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "66056272"
   
 1.  솔루션 탐색기에서 복사본을 저장하려는 패키지를 두 번 클릭합니다.  
   
-2.  **파일** 메뉴에서 **다른 이름으로 \<패키지 파일>의 복사본 저장**을 클릭합니다.  
+2.  **파일** 메뉴에서 ** \<package file> 다른 이름으로 복사본 저장**을 클릭 합니다.  
   
 3.  **패키지 복사본 저장** 대화 상자의 **패키지 위치** 목록에서 패키지 위치를 선택합니다.  
   

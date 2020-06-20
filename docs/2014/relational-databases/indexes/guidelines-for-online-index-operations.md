@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e2f7a25a4a6a4bb6b8f153a8b04b47aeb542265c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 907fe6a826607fe1cb403ad9b8debe6faf6771fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162488"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025422"
 ---
 # <a name="guidelines-for-online-index-operations"></a>온라인 인덱스 작업에 대한 지침
   온라인 인덱스 작업을 수행할 때 다음 지침이 적용됩니다.  
   
--   기본 테이블에 `image`, **ntext**및 `text`등의 LOB (large object) 데이터 형식이 포함 된 경우 클러스터형 인덱스는 오프 라인으로 생성, 다시 작성 또는 삭제 해야 합니다.  
+-   기본 테이블에 `image` , **ntext**및 등의 LOB (large object) 데이터 형식이 포함 된 경우 클러스터형 인덱스는 오프 라인으로 생성, 다시 작성 또는 삭제 해야 `text` 합니다.  
   
 -   로컬 임시 테이블의 인덱스를 온라인 상태로 만들거나 다시 작성하거나 삭제할 수 없습니다. 이 제한 사항은 전역 임시 테이블의 인덱스에는 적용되지 않습니다.  
   
