@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ca39a35-f22c-46c5-82a4-342e34bf5d1b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bd79fb3d5860847fbd522d7fb200e1138787e19d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a61e8b5417bf8312998b5051c47545b705b44c00
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255246"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047516"
 ---
 # <a name="validate-subscriptions"></a>구독 유효성 검사
   **구독 유효성 검사** 대화 상자를 사용하여 각 구독에 대한 배포 에이전트가 다음에 실행될 때 트랜잭션 게시에 대한 구독의 유효성을 검사할지 지정할 수 있습니다. 유효성 검사 결과는 복제 모니터에 표시됩니다. 자세한 내용은 [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)을 참조하세요.  

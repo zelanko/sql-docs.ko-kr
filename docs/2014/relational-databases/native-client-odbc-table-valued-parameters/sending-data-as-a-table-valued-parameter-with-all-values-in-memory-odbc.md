@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a0df84bb0a4ee7e933666705a9d1a1d8fb31edf2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e47843558b485bca12f2e15d406f5a7a47db24cf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698164"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999057"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>모든 값을 메모리에 로드하여 테이블 반환 매개 변수로 데이터 전송(ODBC)
   이 항목에서는 모든 값이 메모리에 있을 때 데이터를 테이블 반환 매개 변수로 저장 프로시저에 보내는 방법에 대해 설명합니다. 테이블 반환 매개 변수를 보여 주는 다른 예제는 [ODBC&#41;&#40;테이블 반환 매개 변수 사용 ](table-valued-parameters-odbc.md)을 참조 하세요.  

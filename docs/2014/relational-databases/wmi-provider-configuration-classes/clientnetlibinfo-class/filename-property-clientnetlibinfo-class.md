@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5b478582-9389-4923-a914-0df2d8333b0e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 770090cbef3c3e7b00d53164a986ffc80bfbd7c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8bebc684684d3337a7b90d33aad1059349a723c3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191175"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062745"
 ---
 # <a name="filename-property-clientnetlibinfo-class"></a>FileName 속성(ClientNetLibInfo 클래스)
   클라이언트 네트워크 라이브러리 파일의 파일 이름을 가져옵니다.  

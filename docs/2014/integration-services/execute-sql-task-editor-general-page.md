@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 96d211defa789888a3fd7b513b4dff60fa795cb6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 294836625075a70b8e101afef2bb9221a177ca47
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058985"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966780"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>SQL 실행 태스크 편집기(일반 페이지)
   **SQL 실행 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 SQL 실행 태스크를 구성하고 해당 태스크에서 실행할 SQL 문을 제공할 수 있습니다.  
@@ -39,7 +38,7 @@ ms.locfileid: "66058985"
 > [!NOTE]  
 >  저장 프로시저에서 연결 설정 및 트랜잭션 완료 시간으로 **TimeOut**에서 지정한 시간(초)보다 큰 수를 지정하여 대기 기능을 에뮬레이트할 경우 저장 프로시저의 제한 시간이 없습니다. 그러나 쿼리를 실행하는 저장 프로시저는 항상 **TimeOut**에서 지정한 시간의 제한을 받습니다.  
   
- **코드 페이지**  
+ **CodePage**  
  변수의 유니코드 값을 변환할 때 사용할 코드 페이지를 지정합니다. 기본값은 로컬 컴퓨터의 코드 페이지입니다.  
   
 > [!NOTE]  
@@ -57,7 +56,7 @@ ms.locfileid: "66058985"
  **관련 항목:** [OLE DB 연결 관리자](connection-manager/ole-db-connection-manager.md), [ODBC 연결 관리자](connection-manager/odbc-connection-manager.md), [ADO 연결 관리자](connection-manager/ado-connection-manager.md), [ADO.NET 연결 관리자](connection-manager/ado-net-connection-manager.md), [SQL Server Compact Edition 연결 관리자](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **연결**  
- 정의된 연결 관리자 목록에서 연결을 선택합니다. 새 연결을 만들려면 \< **새 연결** ...>을 선택 합니다.  
+ 정의된 연결 관리자 목록에서 연결을 선택합니다. 새 연결을 만들려면를 선택 \<**New connection...**> 합니다.  
   
  **SQLSourceType**  
  태스크에서 실행하는 SQL 문의 원본 유형을 선택합니다.  
@@ -68,7 +67,7 @@ ms.locfileid: "66058985"
   
  이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 Transact-SQL 문으로 설정합니다. 이 값을 선택하면 동적 옵션 **SQLStatement**가 표시됩니다.|  
 |**파일 연결**|Transact-SQL 문이 포함된 파일을 선택합니다. 이 옵션을 설정하면 동적 옵션 **FileConnection**이 표시됩니다.|  
@@ -101,13 +100,13 @@ ms.locfileid: "66058985"
   
 ### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = 파일 연결  
  **FileConnection**  
- 기존 파일 연결 관리자를 선택 하거나 \< **새 연결** ...>을 클릭 하 여 새 연결 관리자를 만듭니다.  
+ 기존 파일 연결 관리자를 선택 하거나를 클릭 \<**New connection...**> 하 여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = 변수  
  **SourceVariable**  
- 기존 변수를 선택 하거나 \< **새 변수** ...>를 클릭 하 여 새 변수를 만듭니다.  
+ 기존 변수를 선택 하거나를 클릭 \<**New variable...**> 하 여 새 변수를 만듭니다.  
   
  **관련 항목:** [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   

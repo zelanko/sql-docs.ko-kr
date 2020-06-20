@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 179e7aaea331ba565ca5afae7bd51754e23b9718
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c057e0d41cb46adef0ec1e01c3406190db900e4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876205"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958423"
 ---
 # <a name="differential-backups-sql-server"></a>차등 백업(SQL Server)
   이 백업 및 복원 항목은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 관련됩니다.  

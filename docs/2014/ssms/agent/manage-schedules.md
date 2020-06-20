@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: f56c0736-dccc-41d2-afcf-71344aff143a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c2371109c8fa28c579cd90735a51a4ad3a790385
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f54f2a3520a0d34290cb81b411a5ce41a59d7c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255068"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062183"
 ---
 # <a name="manage-schedules"></a>일정 관리
-  에이전트 작업 일정의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 속성을 보고 변경할 수 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]에이전트 작업 일정의 속성을 보고 변경할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>옵션  
  **사용 가능한 일정**  
@@ -29,7 +28,7 @@ ms.locfileid: "63255068"
  **이름**  
  일정 이름을 표시합니다.  
   
- **사용**  
+ **Enabled**  
  일정을 사용하려면 이 옵션을 선택합니다.  
   
  **설명**  
@@ -38,7 +37,7 @@ ms.locfileid: "63255068"
  **이 일정 내의 작업**  
  일정에 연결된 작업 번호를 나열합니다. 작업의 속성을 보려면 번호를 클릭합니다.  
   
- **신규**  
+ **새 항목**  
  새 일정을 만들려면 이 단추를 클릭합니다.  
   
  **Delete**  

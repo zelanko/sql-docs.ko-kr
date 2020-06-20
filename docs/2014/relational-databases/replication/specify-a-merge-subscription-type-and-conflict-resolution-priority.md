@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 2b828d83-2341-4924-b92a-4f81a22246c0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0ef72b3c36e1cfc7d59792056e080d1cbf2d5c55
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a19ae6246fe59308283fbaf2f35e2c49f96b140c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63156354"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055562"
 ---
 # <a name="specify-a-merge-subscription-type-and-conflict-resolution-priority-sql-server-management-studio"></a>병합 구독 유형 및 충돌 해결 우선 순위 지정(SQL Server Management Studio)
    새 구독 마법사의 **구독 유형** 페이지에서 병합 구독 유형 및 충돌 해결 우선 순위를 지정합니다. 이 마법사의 사용 방법은 [Create a Pull Subscription](create-a-pull-subscription.md) 및 [Create a Push Subscription](create-a-push-subscription.md)를 참조하십시오.  
   
- 구독을 만든 후에 구독 유형은 수정할 수 없지만 서버 구독 유형에 대한 우선 순위는 **구독 속성 - \<Publisher>: \<PublicationDatabase>** 대화 상자에서 변경할 수 있습니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md) 및 [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)을 참조하세요.  
+ 구독 유형은 구독을 만든 후 수정할 수 없지만 **구독 속성- \<Publisher> : \<PublicationDatabase> ** 대화 상자에서 서버 구독 유형에 대 한 우선 순위를 수정할 수 있습니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md) 및 [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)을 참조하세요.  
   
 ### <a name="to-specify-a-merge-subscription-type-and-conflict-resolution-priority"></a>병합 구독 유형 및 충돌 해결 우선 순위를 지정하려면  
   
@@ -33,7 +32,7 @@ ms.locfileid: "63156354"
   
 ### <a name="to-modify-the-conflict-resolution-priority"></a>충돌 해결 우선 순위를 수정하려면  
   
-1.  게시자의 **구독 속성 - \<Publisher>: \<PublicationDatabase>** 에서 **우선 순위** 옵션에 값(0.00~99.99)을 입력합니다.  
+1.  **구독 속성- \<Publisher> \<PublicationDatabase> ** 게시자에서 **우선 순위** 옵션에 대 한 값 (0.00 ~ 99.99)을 입력 합니다.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

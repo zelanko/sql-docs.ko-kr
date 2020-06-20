@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 06651ffcfee30d538c8ede09914133a2ed818b3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c92a6c3e746babe0d4e5025250c7ab8c5ccd6d37
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151096"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016990"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, Workload Group Stats 개체
   SQLServer:Workload Group Stats 개체는 리소스 관리자 작업 그룹 통계에 대한 정보를 보고하는 성능 카운터를 포함합니다.  

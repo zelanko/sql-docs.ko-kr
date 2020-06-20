@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2d94adfd-3ba1-493a-b29a-b436f9d583df
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 861e24cf64a29d55a01fc9a10300e4174cd76d5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5dbffb87f58d2beb633f43ff18680222ea62cf5e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676956"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047742"
 ---
 # <a name="verify-max-worker-threads-setting"></a>최대 작업자 스레드 수 설정 검사
   이 규칙은 최대 작업자 스레드 수 서버 옵션에서 발생할 수 있는 잘못된 설정을 검사합니다. 최대 작업자 스레드 수 옵션을 작은 값으로 설정하면 들어오는 클라이언트 요청을 적절한 시간 내에 처리하기 위한 스레드의 수가 부족하게 되어 “스레드 고갈” 상태가 발생할 수 있습니다. 옵션을 큰 값으로 설정하면 주소 공간이 낭비될 수 있습니다. 각 활성 스레드의 소비 공간이 32비트 서버의 경우 512KB, 64비트 서버의 경우 최대 4MB에 이르기 때문입니다.  

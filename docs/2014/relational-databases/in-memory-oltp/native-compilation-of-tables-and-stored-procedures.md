@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9fb2078ea3b9515af26df0846ee2f5d92bd9349a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 32c5b04610d894e06278fbeecdaf3bbebe850d60
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706435"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025953"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>테이블과 저장 프로시저의 네이티브 컴파일
   메모리 내 OLTP에서는 네이티브 컴파일이라는 개념이 도입됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 메모리 최적화 테이블에 액세스하는 저장 프로시저를 고유하게 컴파일할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 기본적으로 메모리 최적화 테이블을 컴파일할 수도 있습니다. 네이티브 컴파일을 사용하면 기존의 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]보다 빠르게 데이터에 액세스할 수 있으며 더 효율적으로 쿼리를 실행할 수 있습니다. 테이블과 저장 프로시저의 네이티브 컴파일은 DLL을 생성합니다.  

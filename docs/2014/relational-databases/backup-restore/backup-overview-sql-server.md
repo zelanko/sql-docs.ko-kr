@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bf284ffce044e0efa1f855e0e504a1f92dc7e3da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60fbd0341c4e29c6f98cc4d5fe5a2cfabc9b703f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175987"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959067"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 구성 요소에 대해 소개합니다. 데이터를 보호하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 백업해야 합니다. 여기서는 백업 유형과 백업 제한 사항에 대해 설명합니다. 또한 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 디바이스와 백업 미디어를 소개합니다.  
@@ -85,7 +84,7 @@ ms.locfileid: "70175987"
   
  **백업 미디어 용어 및 정의**  
   
- [백업 장치](backup-devices-sql-server.md)  
+ [백업 디바이스(backup device)](backup-devices-sql-server.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업이 기록되는 대상이자 백업을 복원하는 원본이 되는 디스크 또는 테이프 디바이스입니다. SQL Server 백업은 Azure Blob Storage 서비스에 기록할 수도 있으며 백업 파일의 대상과 이름을 지정하기 위해 **URL** 형식이 사용됩니다. 자세한 내용은 [Azure Blob Storage 서비스로 SQL Server 백업 및 복원](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
   
  [백업 미디어](media-sets-media-families-and-backup-sets-sql-server.md)  
@@ -133,7 +132,7 @@ ms.locfileid: "70175987"
   
 -   백업 작업이 진행 중일 때는 데이터베이스 파일을 만들거나 삭제하려고 해도 해당 작업이 실패합니다.  
   
- 백업 작업이 파일 관리 작업 또는 축소 작업과 겹치면 충돌이 발생합니다. 충돌 하는 작업 중 어떤 작업이 먼저 시작 되었는지에 관계 없이 두 번째 작업은 첫 번째 작업에서 설정한 잠금 시간이 초과 될 때까지 대기 합니다. 제한 시간은 세션 제한 시간 설정에 의해 제어 됩니다. 제한 시간 내에 잠금이 해제 되 면 두 번째 작업이 계속 됩니다. 잠금 제한 시간이 초과되면 두 번째 작업이 실패합니다.  
+ 백업 작업이 파일 관리 작업 또는 축소 작업과 겹치면 충돌이 발생합니다. 충돌하는 작업 중 어떤 작업이 먼저 시작되었는지에 관계없이 두 번째 작업은 첫 번째 작업에서 설정한 잠금 제한 시간이 초과될 때까지 대기합니다. 제한 시간은 세션 제한 시간 설정에서 제어합니다. 제한 시간 동안에 잠금이 해제되면 두 번째 작업이 계속됩니다. 잠금 제한 시간이 초과되면 두 번째 작업이 실패합니다.  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **백업 디바이스 및 백업 미디어를 사용하려면**  
@@ -156,7 +155,7 @@ ms.locfileid: "70175987"
   
 -   [디바이스에서 백업 복원&#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
--   [자습서: Azure Blob Storage Service로 SQL Server 백업 및 복원](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [자습서: Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **백업을 만들려면**  
   
@@ -179,7 +178,7 @@ ms.locfileid: "70175987"
   
 -   [Resource Governor를 사용하여 백업 압축을 통해 CPU 사용량 제한&#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [자습서: Azure Blob Storage Service로 SQL Server 백업 및 복원](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [자습서: Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 데이터베이스 백업 및 복원](back-up-and-restore-of-sql-server-databases.md)   

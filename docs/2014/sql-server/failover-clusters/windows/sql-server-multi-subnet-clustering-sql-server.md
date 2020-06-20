@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ca6e081097cb26d4054e5b62fd62cefc0c6d96f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 46350002f917d9d0f785ba1453d2930fb4113703
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172442"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062460"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 다중 서브넷 클러스터링(SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치(failover) 클러스터는 각 장애 조치(failover) 클러스터 노드가 다른 서브넷 또는 서브넷 집합에 연결된 구성입니다. 이러한 서브넷은 같은 위치에 있을 수도 있고 지리적으로 분산된 사이트에 있을 수도 있습니다. 지리적으로 분산된 사이트의 클러스터링을 늘이기 클러스터라고도 합니다. 모든 노드에서 액세스할 수 있는 공유 스토리지가 없기 때문에 여러 서브넷의 데이터 스토리지 간에 데이터를 복제해야 합니다. 데이터 복제에서는 둘 이상의 데이터 복사본을 사용할 수 있습니다. 따라서 다중 서브넷 장애 조치(Failover) 클러스터는 고가용성과 함께 재해 복구 솔루션을 제공합니다.

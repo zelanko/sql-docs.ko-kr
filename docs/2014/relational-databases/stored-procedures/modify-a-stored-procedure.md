@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 13396239-6100-48ce-aa34-461358d99c92
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a7cbc7981817a6c62db378976fe36a4dc753c6b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 906f0e06650da505094d18774ce86dab53d53f38
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015884"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062823"
 ---
 # <a name="modify-a-stored-procedure"></a>저장 프로시저 수정
     

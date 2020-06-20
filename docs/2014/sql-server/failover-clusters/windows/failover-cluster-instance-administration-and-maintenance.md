@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 402e9e0d787d6f60e069625e908faee4fbecaeca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e65863314943e07150aed8fc45494e7059fea21
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049449"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062490"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>장애 조치(failover) 클러스터 인스턴스 관리 및 유지 관리
   기존 AlwaysOn FCI(장애 조치(Failover) 클러스터 인스턴스)에서 노드 추가 또는 제거와 같은 유지 관리 태스크는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 사용하여 수행합니다. IP 주소 리소스 변경, 특정 FCI 시나리오 복구 등과 같은 다른 관리 태스크는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 서비스용 관리 스냅인인 장애 조치(Failover) 클러스터 관리자 스냅인을 사용하여 수행합니다.  

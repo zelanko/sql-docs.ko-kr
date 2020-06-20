@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 118a7cac-4c0d-44fd-b63e-3d542932d239
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ea1d9d70e8b470277af5641faaaa1767b4f1a6c0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a740856a041bb662e8605db9c2b2e06a78808fef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704381"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017379"
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>SQL Server Native Client와 함께 ADO 사용
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]MARS (multiple active result sets), 쿼리 알림, udt (사용자 정의 형식) 또는 새로운 **xml** 데이터 형식과 같은에 도입 된 새 기능을 활용 하기 위해 ADO (ADO(ActiveX Data Objects))를 사용 하는 기존 응용 프로그램은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 데이터 액세스 공급자로 사용 해야 합니다.  
@@ -58,7 +57,7 @@ con.ConnectionString = "Provider=SQLNCLI11;" _
 con.Open  
 ```  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 섹션에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자와 함께 ADO를 사용 하는 방법에 대 한 예제를 제공 합니다.  
   
 ### <a name="retrieving-xml-column-data"></a>XML 열 데이터 검색  

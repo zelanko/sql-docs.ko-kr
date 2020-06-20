@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bd9095a11ef304c256b6c5a60560a71866e744fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d07a3a347e4b67f1b84db9f5aba43f638ec640a1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62899021"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966713"
 ---
 # <a name="add-or-change-a-property-expression"></a>속성 식 추가 또는 변경
   패키지, 태스크, Foreach 루프 컨테이너, For 루프 컨테이너, 시퀀스 컨테이너, 이벤트 처리기, 패키지 및 프로젝트 수준의 연결 관리자 및 로그 공급자에 속성 식을 만들 수 있습니다.  

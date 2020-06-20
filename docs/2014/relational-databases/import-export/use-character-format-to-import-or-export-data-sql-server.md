@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ab658be26dc8ccbdd4e760d0b1bc835ace3b2c38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88e16e3ea97b0a2348d3fd41ff7b980055c8c206
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011667"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026279"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
   다른 프로그램에서 사용할 텍스트 파일로 데이터를 대량으로 내보내거나 다른 프로그램에서 생성한 텍스트 파일에서 데이터를 대량으로 가져오는 경우 문자 형식을 사용하는 것이 좋습니다.  
@@ -44,7 +43,7 @@ ms.locfileid: "66011667"
   
 -   문자 서식 파일로 저장되는 모든 `sql_variant` 데이터는 메타데이터 없이 저장됩니다. 각 데이터 값은 암시적 데이터 변환 규칙에 따라 `char`로 변환되며 `sql_variant` 열로 데이터를 가져오는 경우 `char`로 변환됩니다. `sql_variant` 이외의 데이터 형식으로 열에 가져오는 경우 해당 데이터는 `char`에서 암시적 변환을 거칩니다. 데이터 변환에 대한 자세한 내용은 [데이터 형식 변환&#40;데이터베이스 엔진&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine)을 참조하세요.  
   
--   **Bcp** 유틸리티는 소수점 `money` 뒤에 네 자리 숫자를 사용 하 고 쉼표 구분 기호와 같은 숫자 구분 기호를 사용 하지 않고 값을 문자 형식 데이터 파일로 내보냅니다. 예를 들어 1,234,567.123456이라는 값을 포함하는 `money` 열을 데이터 파일로 대량 내보내면 1234567.1235라는 문자열이 됩니다.  
+-   **Bcp** 유틸리티는 `money` 소수점 뒤에 네 자리 숫자를 사용 하 고 쉼표 구분 기호와 같은 숫자 구분 기호를 사용 하지 않고 값을 문자 형식 데이터 파일로 내보냅니다. 예를 들어 1,234,567.123456이라는 값을 포함하는 `money` 열을 데이터 파일로 대량 내보내면 1234567.1235라는 문자열이 됩니다.  
   
 ## <a name="command-options-for-character-format"></a>문자 형식의 명령 옵션  
  **Bcp**, BULK INSERT 또는 INSERT ...를 사용 하 여 문자 형식 데이터를 테이블로 가져올 수 있습니다. SELECT \* FROM OPENROWSET (BULK ...)를 선택 합니다. **Bcp** 명령 또는 BULK INSERT 문의 경우 명령줄에서 데이터 형식을 지정할 수 있습니다. INSERT ... SELECT * FROM OPENROWSET(BULK...) 문의 경우 서식 파일에서 데이터 형식을 지정해야 합니다.  
@@ -56,14 +55,14 @@ ms.locfileid: "66011667"
 |**bcp**|**-c**|**Bcp** 유틸리티가 문자 데이터를 사용 하도록 합니다. <sup>1</sup>|  
 |BULK INSERT|DATAFILETYPE **='char'**|데이터를 대량 가져올 때 문자 형식을 사용합니다.|  
   
- <sup>1</sup> 문자 (**-c**) 데이터를 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트와 호환 되는 형식으로 로드 하려면 **-V** 스위치를 사용 합니다. 자세한 내용은 [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)를 참조하세요.  
+ <sup>1</sup> 문자 (**-c**) 데이터를 이전 버전의 클라이언트와 호환 되는 형식으로 로드 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **-V** 스위치를 사용 합니다. 자세한 내용은 [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)를 참조하세요.  
   
  자세한 내용은 [bcp 유틸리티](../../tools/bcp-utility.md), [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 또는 [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)를 참조하세요.  
   
 > [!NOTE]  
 >  서식 파일에서 필드 단위로 서식을 지정할 수도 있습니다. 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)를 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 **bcp** 를 사용하여 문자 데이터의 대량 내보내기를 수행하고 내보낸 데이터에 BULK INSERT를 사용하여 대량 가져오기를 수행하는 방법을 보여 줍니다.  
   
 ### <a name="sample-table"></a>예제 테이블  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b28468db1024a9789364e5b6e5c115cba71fa9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62743503"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024966"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>연결된 서버 만들기(SQL Server 데이터베이스 엔진)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 연결된 서버를 만들고 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 데이터에 액세스하는 방법을 보여 줍니다. 연결된 서버를 만들면 여러 원본의 데이터로 작업할 수 있습니다. 연결된 서버는 반드시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 인스턴스일 필요는 없지만 이것이 일반적인 시나리오입니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "62743503"
 ##  <a name="security"></a><a name="Security"></a> 보안  
   
 ### <a name="permissions"></a>사용 권한  
- 문을 사용 [!INCLUDE[tsql](../../includes/tsql-md.md)] 하는 경우 `ALTER ANY LINKED SERVER` 서버에 대 한 사용 권한 또는 **setupadmin** 고정 서버 역할의 멤버 자격이 필요 합니다. 을 사용 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 하 `CONTROL SERVER` 는 경우 **sysadmin** 고정 서버 역할의 권한 또는 멤버 자격이 필요 합니다.  
+ 문을 사용 하는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] `ALTER ANY LINKED SERVER` 서버에 대 한 사용 권한 또는 **setupadmin** 고정 서버 역할의 멤버 자격이 필요 합니다. 을 사용 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 하 `CONTROL SERVER` 는 경우 **sysadmin** 고정 서버 역할의 권한 또는 멤버 자격이 필요 합니다.  
   
 ##  <a name="how-to-create-a-linked-server"></a><a name="Procedures"></a> 방법: 연결된 서버 만들기  
  다음 중 하나를 사용할 수 있습니다.  
@@ -152,7 +151,7 @@ ms.locfileid: "62743503"
   
      0으로 설정하면 **sp_configure** 의 기본값인 [원격 로그인 제한 시간](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md) 옵션 값을 사용합니다.  
   
-     **쿼리 제한 시간**  
+     **쿼리 시간 제한**  
      연결된 서버에 대한 쿼리의 제한 시간 값(초)입니다.  
   
      0으로 설정하면 **sp_configure** 의 기본값인 [원격 쿼리 제한 시간](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md) 옵션 값을 사용합니다.  

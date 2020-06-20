@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ace29bf0-705a-434f-82e4-db99d01c5008
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9ab758f83bde2cb587d3cfab8764fd7eb8fe2577
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54c1cb71a3a5ed546c7408d3fcb747792e9cc248
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68197994"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063110"
 ---
 # <a name="using-capture-mode"></a>캡처 모드 사용
   SMO 프로그램은 프로그램에서 실행하는 문 대신 실행하거나 문과 함께 실행한 해당 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 캡처하고 기록할 수 있습니다. <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 사용하거나 <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Server> 속성을 사용하여 캡처 모드를 설정합니다.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d70ee72c-6e2a-4bcd-9456-4a697a866361
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4026154204cf6de95711a3014b069c34a29d9922
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c7f6cbff4e68eaedd3e78a82cddd872ba5f8f19e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704508"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017822"
 ---
 # <a name="isolation-levels-ole-db"></a>격리 수준(OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트는 연결에 대한 트랜잭션 격리 수준을 제어할 수 있습니다. Native Client OLE DB 공급자 소비자는 트랜잭션 격리 수준을 제어 하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음을 사용 합니다.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a62d8fbafc353e2d71223506b7fb4516d184b494
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 08b79888eb47634deaccc910b2ea3c93800b7c78
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717098"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046806"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>XML 데이터 형식 변수 및 열 만들기
   `xml` 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 제공 데이터 형식이며 `int` 및 `varchar`와 같은 다른 기본 제공 유형과 비슷한 점이 있습니다. 다른 기본 제공 유형과 마찬가지로 `xml` 변수 유형, 매개 변수 유형, 함수 반환 유형 또는 [CAST 및 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)로 테이블을 만들 때 데이터 형식을 열 유형으로 사용할 수 있습니다.  

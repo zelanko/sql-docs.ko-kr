@@ -13,18 +13,17 @@ f1_keywords:
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 23dee8cac6046223bf22ea52d1ceb4013a408050
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9e114802c6e69467ba9438ee4c525ef85e73024
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059057"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966843"
 ---
 # <a name="execute-package-task-editor"></a>패키지 실행 태스크 편집기
   패키지 실행 태스크 편집기로 패키지 실행 태스크를 구성합니다. 패키지 실행 태스크는 패키지가 다른 패키지를 워크플로의 일부로 실행할 수 있도록 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 엔터프라이즈 기능을 확장했습니다.  
   
- **수행 작업**  
+ **원하는 작업을 선택하세요.**  
   
 -   [패키지 실행 태스크 편집기 열기](#open)  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66059057"
  자식 패키지가 암호로 보호되어 있으면 자식 패키지의 암호를 입력하거나 줄임표 단추(...)를 클릭하여 자식 패키지의 새 암호를 만듭니다.  
   
  `ExecuteOutOfProcess`  
- 자식 패키지를 부모 패키지 프로세스에서 실행할지 아니면 별도의 프로세스에서 실행할지 지정합니다. 기본적으로 패키지 실행 태스크의 ExecuteOutOfProcess 속성은로 `False`설정 되 고 자식 패키지는 부모 패키지와 같은 프로세스에서 실행 됩니다. 이 속성을 `true`로 설정하면 하위 패키지가 개별 프로세스로 실행됩니다. 이렇게 하면 하위 패키지의 실행 속도가 느려집니다. 또한 이 속성을 `true`로 설정하면 도구만 설치로 패키지를 디버깅할 수 없으며 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 제품을 설치해야 합니다. 자세한 내용은 [Integration Services 설치](install-windows/install-integration-services.md)를 참조하세요.  
+ 자식 패키지를 부모 패키지 프로세스에서 실행할지 아니면 별도의 프로세스에서 실행할지 지정합니다. 기본적으로 패키지 실행 태스크의 ExecuteOutOfProcess 속성은로 설정 되 `False` 고 자식 패키지는 부모 패키지와 같은 프로세스에서 실행 됩니다. 이 속성을 `true`로 설정하면 하위 패키지가 개별 프로세스로 실행됩니다. 이렇게 하면 하위 패키지의 실행 속도가 느려집니다. 또한 이 속성을 `true`로 설정하면 도구만 설치로 패키지를 디버깅할 수 없으며 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 제품을 설치해야 합니다. 자세한 내용은 [Integration Services 설치](install-windows/install-integration-services.md)를 참조하세요.  
   
 ### <a name="referencetype-dynamic-options"></a>ReferenceType 동적 옵션  
   
@@ -69,7 +68,7 @@ ms.locfileid: "66059057"
  **위치**  
  자식 패키지의 위치를 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**SQL Server**|위치를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스로 설정합니다.|  
 |**파일 시스템**|파일 시스템에 위치를 설정합니다.|  
@@ -88,7 +87,7 @@ ms.locfileid: "66059057"
   
 #### <a name="location--sql-server"></a>Location = SQL Server  
  **연결**  
- 목록에서 OLE DB 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ 목록에서 OLE DB 연결 관리자를 선택 하거나 \<**New connection...**> 를 클릭 하 여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [OLE DB 연결 관리자](connection-manager/ole-db-connection-manager.md), [OLE DB 연결 관리자 구성](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
@@ -97,7 +96,7 @@ ms.locfileid: "66059057"
   
 #### <a name="location--file-system"></a>Location = 파일 시스템  
  **연결**  
- 목록에서 파일 연결 관리자를 선택 하거나 \< **새 연결** ...>을 클릭 하 여 새 연결 관리자를 만듭니다.  
+ 목록에서 파일 연결 관리자를 선택 하거나 \<**New connection...**> 를 클릭 하 여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   

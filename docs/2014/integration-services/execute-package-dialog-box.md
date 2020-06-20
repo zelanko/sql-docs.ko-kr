@@ -12,20 +12,19 @@ f1_keywords:
 ms.assetid: 4f7a806d-4867-4d1f-bc65-b00c1caee7b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b4b920b17e960059e1212be7dd15c176c0b25a47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12a6666357bf4e8a6dc68f395a1e2e8e1fd8fcaf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059191"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966873"
 ---
 # <a name="execute-package-dialog-box"></a>Execute Package Dialog Box
   **패키지 실행** 대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 저장된 패키지를 실행할 수 있습니다.  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지는 환경 변수에 값이 저장된 매개 변수를 포함할 수 있습니다. 이러한 패키지를 실행하려면 먼저 환경 변수 값을 제공하는 데 사용할 환경을 지정해야 합니다. 프로젝트에 여러 환경을 포함할 수는 있지만 실행할 때는 하나의 환경만 사용하여 환경 변수 값을 바인딩할 수 있습니다. 패키지에 사용되는 환경 변수가 없는 경우에는 환경이 필요하지 않습니다.  
   
- 수행 작업  
+ 원하는 작업을 선택하세요.  
   
 -   [패키지 실행 대화 상자 열기](#open_dialog)  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89d1e2fd7c4f0e414424ad678c7ea9f3936b02f0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 044d4bcb17144b4fcb6e233b1aadec84e20f2876
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176383"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966623"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>사용자 지정 개체 빌드, 배포 및 디버깅
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 사용자 지정 개체에 대한 코드를 작성한 후에는 어셈블리를 빌드하여 배포하고 패키지에서 사용할 수 있도록 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에 통합한 다음 테스트 및 디버깅을 수행해야 합니다.
@@ -70,7 +69,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ```
 
 ##  <a name="deploying-the-assembly"></a><a name="deploying"></a> 어셈블리 배포
- 디자이너 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 는가 설치 될 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 만들어진 일련의 폴더에 있는 파일을 열거 하 여 패키지에서 사용할 수 있는 사용자 지정 개체를 찾습니다. 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 설정을 사용 하는 경우이 폴더 집합은 **C:\Program Files\Microsoft SQL Server\120\DTS**아래에 있습니다. 그러나 사용자 지정 개체에 대 한 설치 프로그램을 만드는 경우 **HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\120\SSIS\Setup\DtsPath** 레지스트리 키의 값을 확인 하 여이 폴더의 위치를 확인 해야 합니다.
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)]디자이너는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치 될 때 만들어진 일련의 폴더에 있는 파일을 열거 하 여 패키지에서 사용할 수 있는 사용자 지정 개체를 찾습니다 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 설정을 사용 하는 경우이 폴더 집합은 **C:\PROGRAM Files\Microsoft SQL Server\120\DTS**아래에 있습니다. 그러나 사용자 지정 개체에 대 한 설치 프로그램을 만드는 경우 **HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\120\SSIS\Setup\DtsPath** 레지스트리 키의 값을 확인 하 여이 폴더의 위치를 확인 해야 합니다.
 
  다음과 같은 두 가지 방법으로 폴더에 어셈블리를 추가할 수 있습니다.
 
@@ -115,7 +114,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ##  <a name="testing-and-debugging-your-code"></a><a name="testing"></a> 코드 테스트 및 디버깅
  사용자 지정 개체의 런타임 메서드를 가장 간단하게 디버그하려면 사용자 지정 개체를 빌드하고 해당 구성 요소를 사용하는 패키지를 실행한 후에 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 **dtexec.exe**를 시작합니다.
 
- `Validate` 메서드와 같은 구성 요소의 디자인 타임 메서드를 디버깅 하려면의 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]두 번째 인스턴스에서 해당 구성 요소를 사용 하는 패키지를 열고 **devenv.exe** 프로세스에 연결 합니다.
+ 메서드와 같은 구성 요소의 디자인 타임 메서드를 디버깅 하려면 `Validate` 의 두 번째 인스턴스에서 해당 구성 요소를 사용 하는 패키지를 열고 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **devenv.exe** 프로세스에 연결 합니다.
 
  또한 패키지가 열려 있고 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 실행 중일 때 구성 요소의 런타임 메서드를 디버그하려면 **DtsDebugHost.exe** 프로세스에도 연결할 수 있도록 패키지 실행을 강제로 일시 중지해야 합니다.
 
@@ -123,7 +122,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 
 1.  이 항목에 설명된 대로 디버그 구성 요소에서 프로젝트를 서명 및 빌드하고 배포한 다음 전역 어셈블리 캐시에 설치합니다.
 
-2.  **프로젝트 속성**의 **디버그** 탭에서 시작 **동작**으로 **시작 외부 프로그램** 을 선택 하 고 기본적으로 C:\Program Files\Microsoft SQL server\120\dts\binn입니다 .에 설치 된 dtexec를 찾습니다 **.**
+2.  **프로젝트 속성**의 **디버그** 탭에서 시작 **동작**으로 **시작 외부 프로그램** 을 선택 하 고 기본적으로 C:\Program Files\Microsoft SQL server\120\dts\binn입니다 .에 설치 된 **dtexec.exe**를 찾습니다.
 
 3.  **명령줄 옵션** 입력란의 **시작 옵션** 아래에서 구성 요소를 사용하는 패키지를 실행하는 데 필요한 명령줄 인수를 입력합니다. 명령줄 인수는 /F[ILE] 스위치와 그 다음에 나오는 .dtsx 파일의 경로 및 파일 이름으로 구성되는 경우가 많습니다. 자세한 내용은 [dtexec Utility](../packages/dtexec-utility.md)를 참조하세요.
 

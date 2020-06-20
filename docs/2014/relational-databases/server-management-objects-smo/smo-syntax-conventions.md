@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a19c67f19c6b1b73947ef752a09516449eeec1a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb0cd83ca572a7cf2cb0993524c31808567c0f59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655356"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055201"
 ---
 # <a name="smo-syntax-conventions"></a>SMO 구문 표기 규칙
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SMO (Management Objects) 표기 규칙은 Visual Studio .NET 참조 자료 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 사용 되는 규칙을 기반으로 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SMO (Management Objects) 표기 규칙은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio .net 참조 자료에서 사용 되는 규칙을 기반으로 합니다.  
   
 |규칙|사용 대상|  
 |----------------|--------------|  

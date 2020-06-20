@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 50455f67760c920881f9f8daaf42d7abe4037c45
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0397d7f5588be7543f71819c93827819bd8d073f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707287"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047938"
 ---
 # <a name="metadata-discovery"></a>메타데이터 검색
   의 메타 데이터 검색 개선 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 기능을 사용 하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 응용 프로그램에서 쿼리 실행 시 반환 된 열 또는 매개 변수 메타 데이터가 쿼리를 실행 하기 전에 지정한 메타 데이터 형식과 동일 하거나 호환 되는지 확인할 수 있습니다. 쿼리 실행 후 반환된 메타데이터가 쿼리를 실행하기 전에 지정한 메타데이터 형식과 호환되지 않는 경우 오류가 발생합니다.  

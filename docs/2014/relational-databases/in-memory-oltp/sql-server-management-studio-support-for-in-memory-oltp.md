@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 644ba0cfdbe2f0043364c633676bbc536c641efa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62468198"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025794"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 SQL Server Management Studio 지원
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인프라를 관리하기 위한 통합 환경입니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 구성, 모니터링 및 관리하는 도구를 제공합니다. 자세한 내용은 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)를 참조하세요.  
@@ -153,7 +152,7 @@ ms.locfileid: "62468198"
 ## <a name="unsupported-features-in-ssmanstudiofull"></a>다음에서 지원되지 않는 기능 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  메모리 내 OLTP 개체의 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 데이터베이스 엔진이 지원하지 않는 기능과 작업을 지원하지 않습니다.  
   
- 지원 되지 않는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능에 대 한 자세한 내용은 [지원 되는 SQL Server 기능](unsupported-sql-server-features-for-in-memory-oltp.md)을 참조 하세요.  
+ 지원 되지 않는 기능에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [지원 되는 SQL Server 기능](unsupported-sql-server-features-for-in-memory-oltp.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP에 대한 SQL Server 지원](sql-server-support-for-in-memory-oltp.md)  

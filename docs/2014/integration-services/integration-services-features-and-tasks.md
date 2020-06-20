@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 64b1945ba990278241d38cebb029feab86d6d7bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ab35cd849d020a265fac097f2a0314a81c20dd8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058027"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965444"
 ---
 # <a name="integration-services-features-and-tasks"></a>Integration Services 기능 및 태스크
-  디자이너, 개발자, 분석가 또는 관리자가 패키지를 만들고 개발 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 하는 데 필요한 정보를 찾아 볼 수 있습니다. 그런 다음 이러한 패키지를 애플리케이션 및 웹 사이트에 통합하는 방법에 대해 설명합니다.  
+  디자이너, 개발자, 분석가 또는 관리자가 패키지를 만들고 개발 하는 데 필요한 정보를 찾아 볼 수 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 있습니다. 그런 다음 이러한 패키지를 애플리케이션 및 웹 사이트에 통합하는 방법에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Integration Services &#40;SSIS&#41; 및 Studio 환경](integration-services-ssis-development-and-management-tools.md)  

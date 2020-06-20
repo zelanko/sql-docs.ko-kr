@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4e175aa3-4f3d-4b23-a423-4a7a1bd4e84e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: de5a49853f08541cd617afb20273820f956ee660
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8884d417a2609eb8537582e22ae8339db5d05890
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061326"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028132"
 ---
 # <a name="sqltransaction-event-class"></a>SQLTransaction 이벤트 클래스
   SQLTransaction 이벤트 클래스를 사용하여 트랜잭션이 시작되고 완료되는 시기와 특히 애플리케이션, 트리거 또는 저장 프로시저를 테스트하는 시기를 모니터링할 수 있습니다.  
@@ -34,8 +33,8 @@ ms.locfileid: "63061326"
 |DatabaseName|`nvarchar`|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|예|  
 |Duration|`bigint`|이벤트에 의해 사용된 시간(마이크로초)입니다.|13|yes|  
 |EndTime|`datetime`|이벤트가 종료된 시간입니다.|15|예|  
-|EventClass|`int`|이벤트 유형 = 50|27|아니요|  
-|EventSequence|`int`|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니요|  
+|EventClass|`int`|이벤트 유형 = 50|27|예|  
+|EventSequence|`int`|요청 내에 지정된 이벤트 시퀀스입니다.|51|예|  
 |EventSubClass|`int`|이벤트 하위 클래스의 유형입니다.<br /><br /> 0=시작<br /><br /> 1=커밋<br /><br /> 2=롤백<br /><br /> 3=저장점|21|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  

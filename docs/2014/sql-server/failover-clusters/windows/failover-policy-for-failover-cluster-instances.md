@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e9df2b0158504577630caa6830687a2665c91327
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8d441e5627280cb46168d9ff187d7f43da8b26a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050087"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062498"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스(FCI)에서는 한 번에 하나의 노드에서만 WSFC(Windows Server Failover Cluster) 클러스터 리소스 그룹을 소유할 수 있습니다. 클라이언트 요청은 FCI에서 이 노드를 통해 제공됩니다. 오류가 발생하여 다시 시작이 실패하면 그룹 소유권이 FCI의 다른 WSFC 노드로 이동합니다. 이 프로세스를 장애 조치(Failover)라고 합니다. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 는 오류 검색의 안정성이 향상되었고 유연한 장애 조치(failover) 정책을 제공합니다.  
@@ -51,7 +50,7 @@ ms.locfileid: "63050087"
   
 -   [SQL Server 구성 요소 진단](failover-policy-for-failover-cluster-instances.md#component)  
   
-####  <a name="state-of-the-sql-server-service"></a><a name="service"></a> SQL Server 서비스의 상태  
+####  <a name="state-of-the-sql-server-service"></a><a name="service"></a>SQL Server 서비스의 상태  
  WSFC 서비스는 활성 FCI 노드에 대한 SQL Server 서비스의 시작 상태를 모니터링하여 SQL Server 서비스가 중지된 시간을 감지합니다.  
   
 ####  <a name="responsiveness-of-the-sql-server-instance"></a><a name="instance"></a>SQL Server 인스턴스의 응답성  
@@ -70,7 +69,7 @@ ms.locfileid: "63050087"
   
 1.  시스템  
   
-2.  리소스  
+2.  resource  
   
 3.  쿼리 프로세스  
   
@@ -92,7 +91,7 @@ ms.locfileid: "63050087"
   
  이 시스템 저장 프로시저는 오류 상태 수준에서 중요한 역할을 하므로 [sp_server_diagnostics&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)를 검토하세요.  
   
-|Level|조건|설명|  
+|Level|조건|Description|  
 |-----------|---------------|-----------------|  
 |0|자동 장애 조치(Failover) 또는 다시 시작 안 함|어떤 실패 조건에서도 장애 조치(Failover) 또는 다시 시작이 자동으로 트리거되지 않음을 나타냅니다. 이 수준은 시스템 유지 관리 목적으로만 제공됩니다.|  
 |1|서버 다운 시 장애 조치(Failover) 또는 다시 시작|다음 조건이 발생한 경우 서버가 다시 시작되거나 장애 조치(Failover)됨을 나타냅니다.<br /><br /> SQL Server 서비스가 다운된 경우|  
@@ -104,7 +103,7 @@ ms.locfileid: "63050087"
  *기본값  
   
 ####  <a name="responding-to-failures"></a><a name="respond"></a>실패에 대 한 응답  
- 하나 이상의 오류 상태가 감지된 경우 WSFC 서비스의 오류 대응 방법은 FCI 리소스 그룹의 다시 시작 및 장애 조치(failover) 설정과 WSFC 쿼럼 상태에 따라 다릅니다. FCI에 손실된 WSFC 쿼럼이 있으면 전체 FCI가 오프라인 상태가 되고 해당 FCI의 고가용성이 손실됩니다. 이 FCI가 계속 WSFC 쿼럼을 유지하면 WSFC 서비스는 실패한 노드의 다시 시작을 처음 시도하여 대응하고 다시 시작 시도가 실패할 경우 장애 조치(failover)할 수도 있습니다. 다시 시작 및 장애 조치(failover) 설정은 장애 조치(failover) 클러스터 관리자 스냅인에서 구성됩니다. 이러한 설정에 대 한 자세한 내용은 [ \<리소스> 속성: 정책 탭](https://technet.microsoft.com/library/cc725685.aspx)을 참조 하세요.  
+ 하나 이상의 오류 상태가 감지된 경우 WSFC 서비스의 오류 대응 방법은 FCI 리소스 그룹의 다시 시작 및 장애 조치(failover) 설정과 WSFC 쿼럼 상태에 따라 다릅니다. FCI에 손실된 WSFC 쿼럼이 있으면 전체 FCI가 오프라인 상태가 되고 해당 FCI의 고가용성이 손실됩니다. 이 FCI가 계속 WSFC 쿼럼을 유지하면 WSFC 서비스는 실패한 노드의 다시 시작을 처음 시도하여 대응하고 다시 시작 시도가 실패할 경우 장애 조치(failover)할 수도 있습니다. 다시 시작 및 장애 조치(failover) 설정은 장애 조치(failover) 클러스터 관리자 스냅인에서 구성됩니다. 이러한 설정에 대 한 자세한 내용은 [ \<Resource> 속성: 정책 탭](https://technet.microsoft.com/library/cc725685.aspx)을 참조 하세요.  
   
  쿼럼 상태의 유지 관리에 대한 자세한 내용은 [WSFC 쿼럼 모드 및 투표 구성&#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)을 참조하세요.  
   

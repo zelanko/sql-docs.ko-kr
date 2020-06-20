@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fd5ced641ee8fc17f0be7d7b6e19aff17dcb69bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eec806bffba330ac3ab995c1b3bfd3504589ecfd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011293"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063289"
 ---
 # <a name="get-started-with-full-text-search"></a>전체 텍스트 검색 시작
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터베이스는 기본적으로 전체 텍스트를 사용하도록 설정되어 있습니다. 하지만 테이블에서 전체 텍스트 인덱스를 사용하려면 먼저 전체 텍스트 엔진을 사용하여 액세스하려는 테이블 열에 전체 텍스트 인덱싱 기능을 설정해야 합니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "66011293"
   
     1.  전체 텍스트 인덱스에 포함할 각 텍스트 열을 식별합니다.  
   
-    2.  지정 된 열에 이진 데이터 (`varbinary(max)`또는 `image` 데이터)로 저장 된 문서가 포함 되어 있으면 인덱싱되는 열에 있는 각 문서의 유형을 식별 하는 테이블 열 ( *유형 열*)을 지정 해야 합니다.  
+    2.  지정 된 열에 이진 데이터 (또는 데이터)로 저장 된 문서가 포함 되어 있으면 `varbinary(max)` `image` 인덱싱되는 열에 있는 각 문서의 유형을 식별 하는 테이블 열 ( *유형 열*)을 지정 해야 합니다.  
   
     3.  전체 텍스트 검색에서 열에 있는 문서에 사용할 언어를 지정합니다.  
   
@@ -91,7 +90,7 @@ ms.locfileid: "66011293"
   
  전체 텍스트 카탈로그에 테이블을 할당할 때는 다음 지침을 고려하십시오.  
   
--   항상 전체 텍스트 고유 키에 사용 가능한 가장 작은 고유 인덱스를 선택하십시오. 4 바이트의 정수 기반 인덱스가 적합 합니다. 이렇게 하면 파일 시스템에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search 서비스에 필요한 리소스가 상당히 줄어듭니다. 기본 키가 100바이트 이상이면 테이블에서 다른 고유 인덱스를 선택하거나 다른 고유 인덱스를 만들어 전체 텍스트 고유 키로 사용하십시오. 반대로 전체 텍스트 고유 키의 크기가 허용되는 최대 크기인 900바이트를 초과하면 전체 텍스트 채우기를 계속할 수 없습니다.  
+-   항상 전체 텍스트 고유 키에 사용 가능한 가장 작은 고유 인덱스를 선택하십시오. 4 바이트의 정수 기반 인덱스가 적합 합니다. 이렇게 하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 파일 시스템에서 Search 서비스에 필요한 리소스가 상당히 줄어듭니다. 기본 키가 100바이트 이상이면 테이블에서 다른 고유 인덱스를 선택하거나 다른 고유 인덱스를 만들어 전체 텍스트 고유 키로 사용하십시오. 반대로 전체 텍스트 고유 키의 크기가 허용되는 최대 크기인 900바이트를 초과하면 전체 텍스트 채우기를 계속할 수 없습니다.  
   
 -   수백 만 개의 행을 가진 테이블의 인덱스를 만들 때는 테이블을 자체의 전체 텍스트 카탈로그에 할당하십시오.  
   
@@ -101,14 +100,14 @@ ms.locfileid: "66011293"
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>전체 텍스트 인덱스와 중지 목록 연결  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 중지 목록이 제공됩니다. *중지 목록* 이란 의미 없는 단어라고도 하는 중지 단어의 목록입니다. 중지 목록은 각 전체 텍스트 인덱스와 연결되며, 중지 목록의 단어는 전체 텍스트 인덱스의 전체 텍스트 쿼리에 적용됩니다. 기본적으로 시스템 중지 목록은 새로운 전체 텍스트 인덱스와 연결됩니다. 그러나 고유한 중지 목록을 직접 만들어 사용할 수도 있습니다. 자세한 내용은 [전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)를 참조하세요.  
   
- 예를 들어 다음 [전체 텍스트 중지 목록](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 만들기 문은 시스템 중지 목록에서 복사 하 여 myStoplist3 라는 새 전체 텍스트 중지 목록을 만듭니다.  
+ 예를 들어 다음 [전체 텍스트 중지 목록 만들기](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 시스템 중지 목록에서 복사 하 여 myStoplist3 라는 새 전체 텍스트 중지 목록을 만듭니다.  
   
 ```  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
- 다음 [변경 전체 텍스트 중지 목록](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 에서는 mystoplist 목록 이라는 중지 목록을 변경 하 고, 먼저 스페인어에 대해, 프랑스어의 경우 ' en ' 이라는 단어를 추가 합니다.  
+ 다음 [변경 전체 텍스트 중지 목록](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) 에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] mystoplist 목록 이라는 중지 목록을 변경 하 고, 먼저 스페인어에 대해, 프랑스어의 경우 ' en ' 이라는 단어를 추가 합니다.  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  

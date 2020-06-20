@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a656644-2154-419f-9787-99877f597770
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9a47f6e17a85fdf9cec169a611b9fe205ba02543
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7847a5424b81efca1fcaff6b7dab899023204a7b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192038"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062668"
 ---
 # <a name="numberofflags-property-clientnetworkprotocol-class"></a>NumberOfFlags 속성(ClientNetworkProtocol 클래스)
   [Setordervalue 메서드 (ClientNetworkProtocol 클래스)](clientnetworkprotocol-class.md)에서 지정한 클라이언트 네트워크 프로토콜에 필요한 플래그 옵션의 수를 가져옵니다.  

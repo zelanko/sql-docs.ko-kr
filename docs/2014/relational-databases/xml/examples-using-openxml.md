@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e8be13e95cbf47a0769be20d6b0e55b39e9b7a57
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 09fc6ad073b12df2f9fbd8ebc6a59149f6154ced
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702752"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054941"
 ---
 # <a name="examples-using-openxml"></a>예제: OPENXML 사용
   이 항목의 예제에서는 XML 문서의 행 집합 뷰를 만들 때 OPENXML을 사용하는 방법을 설명합니다. OPENXML 구문에 대한 자세한 내용은 [OPENXML&#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)을 참조하세요. 다음 예에서는 OPENXML의 메타 속성 지정을 제외한 OPENXML의 모든 측면을 보여 줍니다. OPENXML에서 메타 속성을 지정하는 방법은 [OPENXML에 메타 속성 지정](specify-metaproperties-in-openxml.md)을 참조하세요.  
@@ -476,7 +475,7 @@ EXEC sp_xml_removedocument @docHandle
   
 -   행 집합의**ProdID**열에 대해 *ColPattern* 으로 지정된 XPath 패턴( **.** )은 컨텍스트 노드인 현재 노드를 식별합니다. 지정된 *rowpattern*에 따른 < **> 요소의** ProductID`OrderDetail` 특성입니다.  
   
--   행 집합에 있는 *Qty* 열에 대해 지정된 **ColPattern\@,** ../**Quantity**는 컨텍스트 노드 **ProductID>의 노드인 부모 <** >의 `OrderDetail`Quantity\< 특성을 식별합니다.  
+-   *ColPattern*, **.. 행 \@ **집합의 **quantity 열에 대해 지정 된** quantity는 컨텍스트 노드의 부모, <> 노드 **수량** 특성을 식별 `OrderDetail` \<ProductID> 합니다.  
   
 -   이와 비슷하게 행 집합에 있는 *OID* 열에 지정된 **ColPattern\@,** ../../**OrderID**는 컨텍스트 노드에 대한 부모 노드의 부모 < **>의** OrderID`Order` 특성을 식별합니다. 부모 노드는 <`OrderDetail`>이고 컨텍스트 노드는 <`ProductID`>입니다.  
   
@@ -604,7 +603,7 @@ id  lname   xmlname                   OverFlow
 -   WITH 절에 있는 열이 형식화된 XML 열이고 XML 인스턴스가 스키마에 맞지 않는 경우 오류가 반환됩니다.  
   
 ### <a name="j-retrieving-individual-values-from-multivalued-attributes"></a>J. 다중 값 특성에서 개별 값 검색  
- XML 문서는 다중 값 특성을 가질 수 있습니다. 예를 들어 **IDREFS** 특성은 다중 값일 수 있습니다. XML 문서에서 다중 값 특성 값은 공간으로 값이 구별되는 문자열로 지정됩니다. 다음 XML 문서에서 **Student> 요소의** attends\< 특성과 **Class>의** attendedBy\< 특성은 다중 값을 갖고 있습니다. 다중 값 XML 특성에서 개별 값을 검색하고 데이터베이스의 독립된 행에서 각각의 값을 저장하려면 추가 작업이 필요합니다. 다음 예제에서는 처리 과정을 보여 줍니다.  
+ XML 문서는 다중 값 특성을 가질 수 있습니다. 예를 들어 **IDREFS** 특성은 다중 값일 수 있습니다. XML 문서에서 다중 값 특성 값은 공간으로 값이 구별되는 문자열로 지정됩니다. 다음 XML 문서에서 요소의 **attends** 특성과 \<Student> 의 **attendedBy** 특성은 \<Class> 다중 값입니다. 다중 값 XML 특성에서 개별 값을 검색하고 데이터베이스의 독립된 행에서 각각의 값을 저장하려면 추가 작업이 필요합니다. 다음 예제에서는 처리 과정을 보여 줍니다.  
   
  이 예제 XML 문서는 다음 요소로 구성됩니다.  
   
@@ -616,13 +615,13 @@ id  lname   xmlname                   OverFlow
   
      **id** (학생 ID), **name**및 **attendedBy** 특성입니다. **attendedBy** 특성은 다중 값 특성입니다.  
   
- **Student>에 있는** attends\< 특성과 **Class>에 있는** attendedBy\< 특성은 Student 및 Class 테이블 간의 **m:n** 관계를 나타냅니다. 학생은 여러 개의 수업을 받을 수 있고 한 수업에는 여러 학생이 있을 수 있습니다.  
+ 의 **attends** 특성과 \<Student> 의 **attendedBy** 특성은 \<Class> Student 테이블과 클래스 테이블 간의 **m:n** 관계를 나타냅니다. 학생은 여러 개의 수업을 받을 수 있고 한 수업에는 여러 학생이 있을 수 있습니다.  
   
  이 문서를 조각으로 나눈 후 다음과 같이 데이터베이스에 저장한다고 가정하십시오.  
   
--   Students 테이블에 \<Student> 데이터를 저장합니다.  
+-   데이터를 \<Student> 학생 테이블에 저장 합니다.  
   
--   Courses 테이블에 \<Class> 데이터를 저장합니다.  
+-   \<Class>과정 테이블에 데이터를 저장 합니다.  
   
 -   CourseAttendence 테이블에 학생과 수업 간의 **m:n** 관계 데이터를 저장합니다. 값을 추출하려면 추가 작업이 필요합니다. 이 정보를 검색하고 테이블에 저장하려면 다음 저장 프로시저를 사용하십시오.  
   
@@ -632,9 +631,9 @@ id  lname   xmlname                   OverFlow
   
     -   **Extract_idrefs_values**  
   
-         \<Course> 요소에서 각각의 학생 ID를 추출합니다. Edge 테이블을 사용하여 이 값을 검색합니다.  
+         각 요소에서 개별 학생 Id를 추출 합니다 \<Course> . Edge 테이블을 사용하여 이 값을 검색합니다.  
   
- 다음 단계를 참조하십시오.  
+ 실행할 단계는 다음과 같습니다.  
   
 ```  
 -- Create these tables:  
@@ -801,9 +800,9 @@ Col1        BinaryCol
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [sp_xml_preparedocument&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
- [sp_xml_removedocument&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
- [OPENXML&#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)   
+ [Transact-sql&#41;sp_xml_preparedocument &#40;](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
+ [Transact-sql&#41;sp_xml_removedocument &#40;](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
+ [OPENXML &#40;Transact-sql&#41;](/sql/t-sql/functions/openxml-transact-sql)   
  [OPENXML&#40;SQL Server&#41;](openxml-sql-server.md)  
   
   

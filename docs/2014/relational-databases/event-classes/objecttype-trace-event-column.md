@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31ba88f3bc49d78dc8c68ac77ba6bda90e63aad0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f90661e5ebedc91505989c3d80dcec78436ce86
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63028380"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029143"
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType 추적 이벤트 열
   Object Type 추적 이벤트 열은 다양한 추적 이벤트에 사용됩니다. 이 항목에서는 이 열에 사용할 수 있는 값과 해당 값의 정의에 대해 설명합니다.  

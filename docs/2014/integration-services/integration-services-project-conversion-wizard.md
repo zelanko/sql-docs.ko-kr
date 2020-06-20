@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9c077fdb85612c5e3f574d9d0236b07f149b9c3a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f82e5eb63122f6a965e3a001b8124445cbe91675
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057983"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965423"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Integration Services 프로젝트 변환 마법사
   **Integration Services 프로젝트 변환 마법사** 는 프로젝트를 프로젝트 배포 모델로 변환합니다.  
@@ -25,7 +24,7 @@ ms.locfileid: "66057983"
 > [!NOTE]  
 >  프로젝트에 하나 이상의 데이터 원본이 포함된 경우 프로젝트 변환이 완료되면 데이터 원본이 제거됩니다. 프로젝트의 패키지에서 공유할 수 있는 데이터 원본에 대한 연결을 만들려면 프로젝트 수준에서 연결 관리자를 추가합니다. 자세한 내용은 [패키지에서 연결 관리자 추가, 삭제 또는 공유](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)을 참조하세요.  
   
- **수행 작업**  
+ **원하는 작업을 선택하세요.**  
   
 -   [Integration Services 프로젝트 변환 마법사 열기](#open_dialog)  
   
@@ -103,7 +102,7 @@ ms.locfileid: "66057983"
  **상태**  
  패키지를 프로젝트 배포 모델로 변환할 준비가 되었는지를 나타냅니다.  
   
- **메시지**  
+ **Message**  
  패키지와 연결된 메시지를 표시합니다.  
   
  **암호**  
@@ -168,7 +167,7 @@ ms.locfileid: "66057983"
  **패키지**  
  패키지 파일을 나열합니다.  
   
- **Type**  
+ **형식**  
  XML 구성과 같은 구성 유형을 나열합니다.  
   
  **구성 문자열**  
@@ -230,10 +229,10 @@ ms.locfileid: "66057983"
 ##  <a name="set-the-options-on-the-perform-conversion"></a><a name="conversion"></a>변환 수행에서 옵션 설정  
  변환 수행 페이지에는 프로젝트 변환 상태가 표시됩니다.  
   
- **작업**  
+ **동작**  
  특정 변환 단계를 나열합니다.  
   
- **만들어집니다**  
+ **결과**  
  각 변환 단계의 상태를 나열합니다. 자세한 내용을 보려면 상태 메시지를 클릭하십시오.  
   
  프로젝트 변환은 프로젝트가 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]에 저장될 때까지 저장되지 않습니다.  

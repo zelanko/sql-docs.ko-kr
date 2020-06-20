@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0de7744d-9b73-463f-ae80-e31a020004b5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7e9c170a187fc3ccf28301a2ee1c9ee7b626169f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4446f3b3a132488fdac6e859f30abaca40a193d3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196439"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055005"
 ---
 # <a name="execute-user-defined-functions"></a>사용자 정의 함수 실행
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 사용자 정의 함수를 실행할 수 있습니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "68196439"
 ###  <a name="security"></a><a name="Security"></a> 보안  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
- EXECUTE 문을 실행하는 데에는 사용 권한이 필요하지 않습니다. 그러나 EXECUTE 문자열 내에서 참조되는 보안 개체에 대해서는 사용 권한이 필요합니다. 예를 들어 문자열에 INSERT 문이 있는 경우 EXECUTE 문의 호출자에게는 대상 테이블에 대한 INSERT 권한이 있어야 합니다. EXECUTE 문이 모듈 내에 포함된 경우에도 EXECUTE 문이 실행될 때는 사용 권한 검사가 수행됩니다. 자세한 내용은 [EXECUTE&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)를 참조하세요.  
+ EXECUTE 문을 실행하는 데에는 사용 권한이 필요하지 않습니다. 그러나 EXECUTE 문자열 내에서 참조되는 보안 개체에 대해서는 사용 권한이 필요합니다. 예를 들어 문자열에 INSERT 문이 있는 경우 EXECUTE 문의 호출자에게는 대상 테이블에 대한 INSERT 권한이 있어야 합니다. EXECUTE 문이 모듈 내에 포함된 경우에도 EXECUTE 문이 실행될 때는 사용 권한 검사가 수행됩니다. 자세한 내용은 [EXECUTE &#40;transact-sql&#41;](/sql/t-sql/language-elements/execute-transact-sql) 를 참조 하세요.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -69,6 +68,6 @@ ms.locfileid: "68196439"
     PRINT @ret;  
     ```  
   
- 자세한 내용은 [EXECUTE &#40;transact-sql&#41;](/sql/t-sql/language-elements/execute-transact-sql)를 참조 하세요.  
+ 자세한 내용은 [EXECUTE&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)을 참조하세요.  
   
   

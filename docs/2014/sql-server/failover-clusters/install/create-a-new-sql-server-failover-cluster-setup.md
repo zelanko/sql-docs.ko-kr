@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 03e62c5ca77a05ee8f8b1bbca13a57a71b37e2a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ee19526ffa4d88948d2efa2313be212ca094522
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893711"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062647"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>새 SQL Server 장애 조치(Failover) 클러스터 만들기(설치)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하거나 업그레이드하려면 장애 조치 클러스터의 각 노드에서 설치 프로그램을 실행해야 합니다. 기존의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 노드를 추가하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스에 추가할 노드에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행해야 합니다. 다른 노드를 관리하려고 액티브 노드에서 설치 프로그램을 실행하지 않도록 주의해야 합니다.  
@@ -198,7 +197,7 @@ ms.locfileid: "68893711"
   
      자세한 내용은 [데이터베이스 엔진 구성 - 데이터 디렉터리](../../install/database-engine-configuration-data-directories.md)를 참조하세요.  
   
-21. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 구성 - FILESTREAM 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 FILESTREAM을 설정합니다. FILESTREAM에 대한 자세한 내용은 [데이터베이스 엔진 구성 - Filestream](../../install/database-engine-configuration-filestream.md)을 참조하세요. 계속하려면 **다음**을 클릭합니다.  
+21. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 구성 - FILESTREAM 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 FILESTREAM을 설정합니다. FILESTREAM에 대한 자세한 내용은 [데이터베이스 엔진 구성 - Filestream](../../install/database-engine-configuration-filestream.md)을 참조하세요. **다음** 을 클릭하여 계속합니다.  
   
 22. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 구성 - 계정 프로비전 페이지를 사용하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대해 관리자 권한을 갖는 사용자 또는 계정을 지정합니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대한 시스템 관리자를 한 명 이상 지정해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하는 계정을 추가하려면 **현재 사용자 추가**를 클릭합니다. 시스템 관리자 목록에 계정을 추가하거나 목록의 계정을 제거하려면 **추가** 또는 **제거**를 클릭한 다음 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대한 관리자 권한을 가질 사용자, 그룹 또는 컴퓨터 목록을 편집합니다. 자세한 내용은 [Analysis Services 구성 - 계정 프로비전](../../install/analysis-services-configuration-account-provisioning.md)을 참조하세요.  
   
@@ -232,7 +231,7 @@ ms.locfileid: "68893711"
     >   
     >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터의 모든 노드에서 설치하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전이 동일해야 합니다. 기존 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 새 노드를 추가할 때는 기존의 장애 조치(Failover) 클러스터 버전에 일치하는 버전을 지정해야 합니다.  
   
-##  <a name="prepare"></a><a name="prepare"></a> 준비  
+##  <a name="prepare"></a><a name="prepare"></a>준비해  
   
 #### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>고급/엔터프라이즈 장애 조치(Failover) 클러스터 설치 1단계: 준비  
   
@@ -257,7 +256,7 @@ ms.locfileid: "68893711"
     > [!NOTE]  
     >  동일한 장애 조치(Failover) 클러스터를 위해 준비하고 있는 모든 노드에서 동일한 제품 키를 지정해야 합니다.  
   
-9. 사용 조건 페이지에서 사용권 계약을 읽은 다음 사용 조건과 계약 조건에 동의하면 해당 확인란을 선택합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다. 계속하려면 **다음**을 클릭합니다. 설치를 끝내려면 **취소**를 클릭합니다.  
+9. 사용 조건 페이지에서 사용권 계약을 읽은 다음 사용 조건과 계약 조건에 동의하면 해당 확인란을 선택합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다. **다음** 을 클릭하여 계속합니다. 설치를 끝내려면 **취소**를 클릭합니다.  
   
 10. 기능 선택 페이지에서 설치할 구성 요소를 선택합니다. 기능 이름을 선택하면 오른쪽 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 확인란을 원하는 대로 선택할 수 있지만 장애 조치(Failover) 클러스터링을 지원하는 것은 테이블 형식 모드의 [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 및 다차원 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 뿐입니다. 선택한 다른 구성 요소는 설치를 실행하고 있는 현재 노드에서 장애 조치(Failover) 기능 없이 독립 실행형 기능으로 실행됩니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 모드에 대한 자세한 내용은 [Analysis Services 인스턴스의 서버 모드 확인](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)을 참조하세요.  
   
@@ -278,7 +277,7 @@ ms.locfileid: "68893711"
     > [!IMPORTANT]  
     >  장애 조치(Failover) 클러스터를 위해 준비한 모든 노드에 대해 동일한 인스턴스 ID를 사용합니다.  
   
-     **인스턴스 루트 디렉터리** -기본적으로 인스턴스 루트 디렉터리\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\는 C:\Program files입니다. 기본이 아닌 루트 디렉터리를 지정하려면 제공된 필드를 사용하거나 줄임표 단추를 클릭하고 설치 폴더를 찾습니다.  
+     **인스턴스 루트 디렉터리** -기본적으로 인스턴스 루트 디렉터리는 C:\Program files입니다 \\ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] \\ . 기본이 아닌 루트 디렉터리를 지정하려면 제공된 필드를 사용하거나 줄임표 단추를 클릭하고 설치 폴더를 찾습니다.  
   
      **설치된 인스턴스** - 설치 프로그램을 실행 중인 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 표 형식으로 표시됩니다. 컴퓨터에 기본 인스턴스가 이미 설치된 경우 명명된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스를 설치해야 합니다. **다음**을 클릭하여 계속합니다.  
   
@@ -290,7 +289,7 @@ ms.locfileid: "68893711"
   
     -   [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)]에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스에 대한 도메인 그룹을 지정합니다. 모든 리소스 사용 권한은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정을 그룹 멤버로 포함하는 도메인 수준 그룹을 통해 제어됩니다.  
   
-     계속하려면 **다음**을 클릭합니다.  
+     **다음** 을 클릭하여 계속합니다.  
   
 14. 이 항목의 나머지 부분에 대한 워크플로는 설치에 대해 지정한 기능에 따라 달라집니다. 선택 항목에 따라 일부 페이지가 표시되지 않을 수도 있습니다.  
   
@@ -304,9 +303,9 @@ ms.locfileid: "68893711"
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스에 대한 로그인 정보 지정을 완료하면 **다음**을 클릭합니다.  
   
-16. **서버 구성-데이터 정렬** 탭을 사용 하 여 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 및 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대해 기본이 아닌 데이터 정렬을 지정 합니다. 자세한 내용은 [서버 구성 - 데이터 정렬](../../install/server-configuration-collation.md)을 참조하세요.  
+16. **서버 구성-데이터 정렬** 탭을 사용 하 여 및에 대해 기본이 아닌 데이터 정렬을 지정 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 합니다. 자세한 내용은 [서버 구성 - 데이터 정렬](../../install/server-configuration-collation.md)을 참조하세요.  
   
-17. **서버 구성 - Filestream** 을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 FILESTREAM을 설정합니다. 자세한 내용은 [데이터베이스 엔진 구성 - Filestream](../../install/database-engine-configuration-filestream.md)을 참조하세요. 계속하려면 **다음**을 클릭합니다.  
+17. **서버 구성 - Filestream** 을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 FILESTREAM을 설정합니다. 자세한 내용은 [데이터베이스 엔진 구성 - Filestream](../../install/database-engine-configuration-filestream.md)을 참조하세요. **다음** 을 클릭하여 계속합니다.  
   
 18. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 페이지를 사용하여 만들 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설치 유형을 지정할 수 있습니다. 장애 조치(Failover) 클러스터 설치의 경우 이 옵션은 구성되지 않은 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설치로 설정됩니다. 설치를 완료한 후에 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서비스를 구성해야 합니다.  
   
@@ -355,7 +354,7 @@ ms.locfileid: "68893711"
   
     -   새로 만들 그룹의 이름을 입력합니다. "Available storage"는 유효한 그룹 이름이 아닙니다.  
   
-9. 클러스터 디스크 선택 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 대한 공유 클러스터 디스크 리소스를 선택합니다. 클러스터 디스크에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터가 저장됩니다. 디스크를 여러 개 지정할 수 있습니다. 사용 가능한 공유 디스크 표에는 사용 가능한 디스크 목록, 각 디스크가 공유 디스크로 정규화되었는지 여부 및 각 디스크 리소스에 대한 설명이 표시됩니다. 계속하려면 **다음**을 클릭합니다.  
+9. 클러스터 디스크 선택 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 대한 공유 클러스터 디스크 리소스를 선택합니다. 클러스터 디스크에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터가 저장됩니다. 디스크를 여러 개 지정할 수 있습니다. 사용 가능한 공유 디스크 표에는 사용 가능한 디스크 목록, 각 디스크가 공유 디스크로 정규화되었는지 여부 및 각 디스크 리소스에 대한 설명이 표시됩니다. **다음** 을 클릭하여 계속합니다.  
   
     > [!NOTE]  
     >  모든 데이터베이스에 대해 첫 번째 드라이브가 기본 드라이브로 사용되지만 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 또는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 구성 페이지에서 이를 변경할 수 있습니다.  
@@ -364,7 +363,7 @@ ms.locfileid: "68893711"
   
     -   **네트워크 설정** -장애 조치 (failover) 클러스터 인스턴스의 모든 노드 및 서브넷에 대 한 ip 유형 및 ip 주소를 지정 합니다. 다중 서브넷 장애 조치(Failover) 클러스터에 대해 여러 IP 주소를 지정할 수 있지만 IP 주소는 서브넷별로 하나씩만 지원됩니다. 모든 준비된 노드는 하나 이상의 IP 주소에 대한 소유자여야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 여러 서브넷이 있는 경우 IP 주소 리소스 종속성을 OR로 설정하라는 메시지가 나타납니다.  
   
-     계속하려면 **다음**을 클릭합니다.  
+     **다음** 을 클릭하여 계속합니다.  
   
 11. 이 항목의 나머지 부분에 대한 워크플로는 설치에 대해 지정한 기능에 따라 달라집니다. 선택 항목에 따라 일부 페이지가 표시되지 않을 수도 있습니다.  
   
@@ -405,7 +404,7 @@ ms.locfileid: "68893711"
 19. 설치가 끝나면 설치 및 기타 중요 한 참고 사항에 대 한 요약 로그 파일에 대 한 링크가 **완료** 페이지에 제공 됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 과정을 완료하려면 **닫기**를 클릭합니다. 동일한 장애 조치(Failover) 클러스터를 위해 준비한 모든 노드가 이제 이 단계를 통해 최종 완료된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터의 일부가 됩니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 새 설치 구성** -시스템의 공격 받을 수 노출 영역을 줄이고 키 서비스 및 기능 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 선택적으로 설치 하 고 사용 하도록 설정 합니다. 자세한 내용은 [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md)을 참조하세요.  
+ **새 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 구성** -시스템의 공격 받을 수 노출 영역을 줄이고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 키 서비스 및 기능을 선택적으로 설치 하 고 사용 하도록 설정 합니다. 자세한 내용은 [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md)을 참조하세요.  
   
  로그 파일 위치에 대한 자세한 내용은 [SQL Server 설치 로그 파일 보기 및 읽기](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)를 참조하세요.  
   

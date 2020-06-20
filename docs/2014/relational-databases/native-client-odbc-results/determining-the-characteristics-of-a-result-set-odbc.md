@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b93a0386c921a863e310e99164d654c7d84e357b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5957092cdddfbcbce904d9a6483914672565d337
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699339"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999106"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>결과 집합의 특징 확인(ODBC)
   메타데이터는 다른 데이터를 설명하는 데이터입니다. 예를 들어 결과 집합 메타데이터는 결과 집합에 있는 열 수, 이러한 열의 데이터 형식, 이름, 전체 자릿수, Null 허용 여부 등과 같은 결과 집합의 특징을 설명합니다.  

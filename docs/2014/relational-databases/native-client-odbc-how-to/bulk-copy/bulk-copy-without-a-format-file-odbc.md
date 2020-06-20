@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4ee969a7-44ba-40d0-b9ab-8306f1a2b19d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d30da37208c30bc74c6efa7dcdb790469c481fb0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: acb86d80146c9a33e32d36d87701971dcb8fd8ed
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82714706"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019117"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>서식 파일 없이 대량 복사(ODBC)
   이 예제에서는 대량 복사 함수를 사용하여 서식 파일 없이 기본 모드 데이터 파일을 만드는 방법을 보여 줍니다. 이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  

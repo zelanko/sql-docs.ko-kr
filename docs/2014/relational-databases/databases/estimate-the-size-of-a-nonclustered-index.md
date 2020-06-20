@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aa4b0d73d1cba3d612da9f666bb548dfbc54102f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 097c0e5568ba17b12f83d09e347eb3bf8b0bd7da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054116"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965970"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>비클러스터형 인덱스의 크기 예측
   다음 단계에 따라 비클러스터형 인덱스를 저장하는 데 필요한 공간을 예측합니다.  
@@ -181,7 +180,7 @@ ms.locfileid: "66054116"
   
 5.  인덱스 행 크기를 계산합니다.  
   
-     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size***Fixed_Leaf_Size + ***Variable_Leaf_Size***Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 (인덱스 행의 행 머리글 오버 헤드) + 6 (자식 페이지 ID 포인터)  
+     ***Leaf_Row_Size***   =  ***Fixed_Leaf_Size***  +  ***Variable_Leaf_Size***  +  ***Leaf_Null_Bitmap*** + 1 (인덱스 행의 행 머리글 오버 헤드) + 6 (자식 페이지 ID 포인터)  
   
 6.  페이지당 인덱스 행 수를 계산합니다. 페이지당 사용 가능한 바이트 수는 8,096바이트입니다.  
   
@@ -210,7 +209,7 @@ ms.locfileid: "66054116"
   
 1.  인덱스의 리프가 아닌 수준의 수를 계산합니다.  
   
-     ***리프가 아닌 수준*** = 1 + 로그 Index_Rows_Per_Page (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***리프가 아닌 수준*** = 1 + 로그 Index_Rows_Per_Page (***Num_Leaf_Pages***  /  ***Index_Rows_Per_Page***)  
   
      이 값을 가장 근사한 정수로 올립니다. 비클러스터형 인덱스의 리프 수준은 이 값에 포함되지 않습니다.  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f4f39024817d3d0aa35c015ed815eb8f412f1c8e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09b5a5069d019dc452a49179e1c83d78a50e0566
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137510"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046216"
 ---
 # <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>자동 페이지 복구(가용성 그룹 및 데이터베이스 미러링)
   자동 페이지 복구는 데이터베이스 미러링과 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]에서 지원됩니다. 특정 유형의 오류로 인해 페이지가 손상되어 읽을 수 없게 되면 데이터베이스 미러링 파트너(주 파트너 또는 미러 파트너) 또는 가용성 복제본(주 복제본 또는 보조 복제본)이 자동으로 페이지를 복구하려고 시도합니다. 페이지를 읽을 수 없는 파트너 또는 복제본은 해당 파트너나 다른 복제본에 페이지의 새 복사본을 요청합니다. 이 요청이 성공하면 읽을 수 없는 페이지는 읽을 수 있는 복사본으로 대체되고 일반적으로 오류가 해결됩니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "63137510"
 ##  <a name="error-types-that-cause-an-automatic-page-repair-attempt"></a><a name="ErrorTypes"></a>자동 페이지 복구 시도가 발생 하는 오류 유형  
  데이터베이스 미러링 자동 페이지 복구는 다음 표에 나열된 오류 중 하나로 인해 실패한 작업이 있는 데이터 파일의 페이지만 복구하도록 시도합니다.  
   
-|오류 번호|설명|자동 페이지 복구 시도가 발생되는 인스턴스|  
+|오류 번호|Description|자동 페이지 복구 시도가 발생되는 인스턴스|  
 |------------------|-----------------|---------------------------------------------------------|  
 |[823](../../relational-databases/errors-events/mssqlserver-823-database-engine-error.md)|운영 체제가 데이터에서 실패한 CRC(순환 중복 검사)를 수행한 경우에만 동작이 수행됩니다.|ERROR_CRC이며 이 오류에 대한 운영 체제 값은 23입니다.|  
 |[824](../../relational-databases/errors-events/mssqlserver-824-database-engine-error.md)|논리 오류입니다.|조각난 쓰기 오류 또는 잘못된 페이지 체크섬과 같은 논리적 데이터 오류입니다.|  
@@ -52,7 +51,7 @@ ms.locfileid: "63137510"
   
 -   9페이지(데이터베이스 부트 페이지)  
   
--   할당 페이지: GAM(전역 할당 맵) 페이지, SGAM(공유 전역 할당 맵) 페이지 및 PFS(페이지 여유 공간) 페이지.  
+-   할당 페이지: GAM(글로벌 할당 맵) 페이지, SGAM(공유 글로벌 할당 맵) 페이지 및 PFS(페이지 여유 공간) 페이지.  
   
 
   
@@ -106,7 +105,7 @@ ms.locfileid: "63137510"
  
   
 ## <a name="see-also"></a>참고 항목  
- [Suspect_pages 테이블 &#40;SQL Server 관리&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
+ [suspect_pages 테이블 관리&#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
  [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   

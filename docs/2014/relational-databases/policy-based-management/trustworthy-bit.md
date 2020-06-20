@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3198188a-2b59-4865-9560-10f760934b8e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c8e03217eef0ee9e23d6efa2bbcb8e715fe64dcb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 062a63dd52f4641a0ddfcbc20cb9bad3cce6dc61
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63252726"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047766"
 ---
 # <a name="trustworthy-bit"></a>신뢰할 수 있는 비트
   이 규칙은 데이터베이스의 dbo 역할이 sysadmin 고정 서버 역할에 할당되어 있고 데이터베이스의 신뢰할 수 있는 비트가 ON으로 설정되었는지를 확인합니다.  

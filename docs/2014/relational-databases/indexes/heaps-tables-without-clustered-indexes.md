@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: de71808c54264639aea82fe66cf23a7bfd6bd0ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a39bac2e0352f2adc7749e980d5cc91044f8ab2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162156"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025332"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>힙(클러스터형 인덱스가 없는 테이블)
   힙이란 클러스터형 인덱스가 없는 테이블입니다. 힙으로 저장된 테이블에서 하나 이상의 비클러스터형 인덱스를 만들 수 있습니다. 데이터는 순서를 지정하지 않고 힙에 저장됩니다. 일반적으로 데이터는 처음에 행이 테이블에 삽입되는 순서대로 저장되지만 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 힙 안의 데이터를 이동하여 행을 효율적으로 저장할 수 있습니다. 따라서 데이터 순서는 예측할 수 없습니다. 힙에서 반환되는 행의 순서를 지정하려면 `ORDER BY` 절을 사용해야 합니다. 행의 스토리지 순서를 지정하려면 테이블에서 클러스터형 인덱스를 만들어 테이블이 힙이 되지 않도록 합니다.  
@@ -52,7 +51,7 @@ ms.locfileid: "63162156"
 ## <a name="related-content"></a>관련 내용  
  [CREATE INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   
- [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
+ [DROP INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
  [클러스터형 및 비클러스터형 인덱스 소개](clustered-and-nonclustered-indexes-described.md)  
   

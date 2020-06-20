@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 69ca337b8b4ed4ab0e801cbb510ad533b4558448
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ffd259662c4ee4e48ff6b8c5469f72e96bf9778e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62657493"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062681"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>SQL Server 장애 조치 클러스터에 클라이언트 도구 설치
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 와 같은 클라이언트 도구는 동일한 시스템의 모든 인스턴스에서 공통으로 공유하는 기능으로, 나란히 설치할 수 있도록 지원되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 이전 버전과 호환됩니다. 한 번에 하나의 클라이언트 도구 버전만 노드에 존재합니다.  

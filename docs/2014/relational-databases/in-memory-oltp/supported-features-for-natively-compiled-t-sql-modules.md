@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6b875808a5a9379f917b246cb871420a339519f7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 65e6e794c5858a68c4b2a9b298513911b487cf52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718811"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025729"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저에서 지원되는 구문
   이 항목에는 고유 하 게 컴파일된 저장 프로시저에 대해 지원 되는 기능 목록이 포함 되어 있습니다 ([CREATE PROCEDURE &#40;transact-sql&#41;](/sql/t-sql/statements/create-procedure-transact-sql)).  
   
 -   [고유하게 컴파일된 저장 프로시저의 프로그래밍 기능](#pncsp)  
   
--   [지원되는 연산자](#so)  
+-   [지원 되는 연산자](#so)  
   
 -   [고유하게 컴파일된 저장 프로시저의 기본 제공 함수](#bfncsp)  
   
@@ -66,7 +65,7 @@ ms.locfileid: "82718811"
 ##  <a name="supported-operators"></a><a name="so"></a>지원 되는 연산자  
  지원되는 연산자는 다음과 같습니다.  
   
--   [Transact-sql&#41;&#40;비교 연산자](/sql/t-sql/language-elements/comparison-operators-transact-sql) (예: >, \< , >= 및 <=)는 조건 (IF, WHILE)에서 지원 됩니다.  
+-   [Transact-sql&#41;&#40;비교 연산자](/sql/t-sql/language-elements/comparison-operators-transact-sql) (예: >, \<, > = 및 <=)는 조건 (IF, WHILE)에서 지원 됩니다.  
   
 -   단항 연산자(+, -).  
   
@@ -112,7 +111,7 @@ ms.locfileid: "82718811"
   
 -   필터 조건자 IS [NOT] NULL  
   
--   메모리 액세스에 \< 최적화 된 테이블>  
+-   FROM \<memory optimized table>  
   
 -   AVG, COUNT, COUNT_BIG, MIN, MAX 및 SUM 집계 함수를 사용 하 [여 GROUP BY &#40;transact-sql&#41;](/sql/t-sql/queries/select-group-by-transact-sql) 지원 됩니다. MIN 및 MAX는 nvarchar, char, varchar, varchar, varbinary 및 binary 형식에 대해 지원되지 않습니다. Order by 목록의 식이 GROUP BY 목록에 표시 되는 경우에는 Order by 절을 사용 하 여 [order By 절](/sql/t-sql/queries/select-order-by-clause-transact-sql) 에서 [group By &#40;&#41;transact-sql](/sql/t-sql/queries/select-group-by-transact-sql)&#41;를 사용할 수 &#40;. 예를 들어, GROUP BY a + b ORDER BY a + b는 지원되지만 GROUP BY a, b ORDER BY a + b는 지원되지 않습니다.  
   
@@ -172,7 +171,7 @@ ms.locfileid: "82718811"
 ##  <a name="limitations-on-sorting"></a><a name="los"></a>정렬에 대 한 제한 사항  
  [TOP&#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 및 [ORDER BY 절&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)을 사용하는 쿼리에서는 8,000개 이상의 행을 정렬할 수 있습니다. 하지만 [ORDER BY 절&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)이 없을 경우, [TOP&#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql)은 최대 8,000개까지만 행을 정렬할 수 있습니다. 조인이 있으면 이러한 행 수가 더 줄어듭니다.  
   
- 쿼리에서 [TOP&#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 연산자와 [ORDER BY 절&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)을 모두 사용하는 경우 TOP 연산자에 대해 최대 8192행을 지정할 수 있습니다. 8192행보다 더 많이 지정하면 다음 오류 메시지가 나타납니다. **메시지 41398, 수준 16, 상태 1, 프로시저 *\<procedureName>*, 줄 *\<lineNumber>* TOP 연산자는 최대 8192개의 행을 반환할 수 있습니다. *\<number>* 개가 요청되었습니다.**  
+ 쿼리에서 [TOP&#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 연산자와 [ORDER BY 절&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)을 모두 사용하는 경우 TOP 연산자에 대해 최대 8192행을 지정할 수 있습니다. 8192 개를 초과 하는 행을 지정 하면 메시지 **41398, 수준 16, 상태 1, 프로시저, 줄 등의 오류 메시지가 표시 됩니다. *\<procedureName>* *\<lineNumber>* TOP 연산자는 최대 8192 행을 반환할 수 있습니다 .이 *\<number>* 요청 되었습니다.**  
   
  TOP 절을 사용하지 않는 경우 ORDER BY를 사용하여 몇 행이든 정렬할 수 있습니다.  
   

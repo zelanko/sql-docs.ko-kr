@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8286c918c224b92e1f391931569030a7218252f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f4f291e5dc4aaa8a240757713cc65bd2a6a8230
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68198419"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055487"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit(데이터베이스 엔진)
   *인스턴스 또는 개별 데이터베이스를* 감사 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 할 때는 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]에서 발생하는 이벤트를 추적 및 기록합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit에서는 서버 수준 이벤트에 대한 서버 감사 사양과 데이터베이스 수준 이벤트에 대한 데이터베이스 감사 사양을 포함하는 서버 감사를 생성할 수 있습니다. 감사 이벤트는 이벤트 로그 또는 감사 파일에 기록될 수 있습니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "68198419"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit에서는 감사를 만들기 위해 *확장 이벤트* 를 사용합니다. 확장 이벤트에 대 한 자세한 내용은 [확장 이벤트](../../extended-events/extended-events.md)를 참조 하세요.  
   
 ### <a name="sql-server-audit"></a>SQL Server Audit  
- *SQL Server Audit* 개체는 사용자가 모니터링하려는 서버 또는 데이터베이스 수준 동작 및 동작 그룹에 대한 하나의 인스턴스를 수집합니다. 감사는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 수준으로 존재합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스별로 여러 개의 감사를 가질 수 있습니다.  
+ *SQL Server Audit* 개체는 모니터링할 단일 서버 인스턴스 또는 데이터베이스 수준 동작 및 동작 그룹을 수집 합니다. 감사는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 수준으로 존재합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스별로 여러 개의 감사를 가질 수 있습니다.  
   
  감사를 정의할 때 결과 출력 위치를 지정하는데 이를 감사 대상이라고 합니다. 감사가 *비활성* 상태로 생성되면 동작을 자동으로 감사하지 않습니다. 감사가 활성화되면 감사 대상이 감사로부터 데이터를 수신합니다.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "68198419"
 > [!IMPORTANT]  
 >  허가 받은 사용자는 Windows 애플리케이션 이벤트 로그에 대해 읽기/쓰기 작업이 가능합니다. 애플리케이션 이벤트 로그는 Windows 보안 이벤트 로그보다 낮은 권한을 요구하므로 Windows 보안 이벤트 로그보다 보안 수준이 낮습니다.  
   
- Windows 보안 로그에 대한 쓰기 작업을 수행하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정을 **보안 감사 생성** 정책에 추가해야 합니다. 기본적으로 이 정책에는 로컬 시스템, 로컬 서비스 및 네트워크 서비스 등이 포함됩니다. 이 설정은 보안 정책 스냅인(secpol.msc)을 사용하여 구성할 수 있습니다. 또한 **성공** 및 **실패** 모두에 대한 **감사 개체 액세스**보안 정책을 설정해야 합니다. 이 설정은 보안 정책 스냅인(secpol.msc)을 사용하여 구성할 수 있습니다. 또는 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] Windows Server 2008에서는 감사 정책 프로그램 ()`AuditPol.exe)`을 사용 하 여 명령줄에서 보다 세부적인 **응용 프로그램 생성** 정책을 설정할 수 있습니다. Windows 보안 로그의 쓰기를 설정하는 단계에 대한 자세한 내용은 [보안 로그에 SQL Server 감사 이벤트 쓰기](write-sql-server-audit-events-to-the-security-log.md)를 참조하세요. Auditpol.exe 프로그램에 대한 자세한 내용은 기술 자료 문서 921469, [그룹 정책을 사용하여 세부 보안 감사를 구성하는 방법](https://support.microsoft.com/kb/921469/)을 참조하세요. Windows 이벤트 로그는 Windows 운영 체제에 전반적으로 적용됩니다. Windows 이벤트 로그에 대한 자세한 내용은 [이벤트 뷰어 개요(Event Viewer Overview)](https://go.microsoft.com/fwlink/?LinkId=101455)를 참조하십시오. 감사에 대해 보다 정확한 권한이 필요하다면 이진 파일 대상을 사용하십시오.  
+ Windows 보안 로그에 대한 쓰기 작업을 수행하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정을 **보안 감사 생성** 정책에 추가해야 합니다. 기본적으로 이 정책에는 로컬 시스템, 로컬 서비스 및 네트워크 서비스 등이 포함됩니다. 이 설정은 보안 정책 스냅인(secpol.msc)을 사용하여 구성할 수 있습니다. 또한 **성공** 및 **실패** 모두에 대한 **감사 개체 액세스**보안 정책을 설정해야 합니다. 이 설정은 보안 정책 스냅인(secpol.msc)을 사용하여 구성할 수 있습니다. [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)]또는 Windows Server 2008에서는 감사 정책 프로그램 ()을 사용 하 여 명령줄에서 보다 세부적인 **응용 프로그램 생성** 정책을 설정할 수 있습니다 `AuditPol.exe)` . Windows 보안 로그의 쓰기를 설정하는 단계에 대한 자세한 내용은 [보안 로그에 SQL Server 감사 이벤트 쓰기](write-sql-server-audit-events-to-the-security-log.md)를 참조하세요. Auditpol.exe 프로그램에 대한 자세한 내용은 기술 자료 문서 921469, [그룹 정책을 사용하여 세부 보안 감사를 구성하는 방법](https://support.microsoft.com/kb/921469/)을 참조하세요. Windows 이벤트 로그는 Windows 운영 체제에 전반적으로 적용됩니다. Windows 이벤트 로그에 대한 자세한 내용은 [이벤트 뷰어 개요(Event Viewer Overview)](https://go.microsoft.com/fwlink/?LinkId=101455)를 참조하십시오. 감사에 대해 보다 정확한 권한이 필요하다면 이진 파일 대상을 사용하십시오.  
   
  감사 정보를 파일에 저장할 때 변조를 방지하기 위해 다음과 같은 방법으로 파일 위치에 대한 액세스를 제한할 수 있습니다.  
   
@@ -119,14 +118,14 @@ ms.locfileid: "68198419"
 ### <a name="database-mirroring-and-sql-server-audit"></a>데이터베이스 미러링 및 SQL Server Audit  
  데이터베이스 감사 사양이 정의되어 있고 데이터베이스 미러링을 사용하는 데이터베이스는 데이터베이스 감사 사양을 포함합니다. 미러링된 SQL 인스턴스에서 올바르게 작동하려면 다음 항목을 구성해야 합니다.  
   
--   데이터베이스 감사 사양을 활성화하여 감사 레코드를 작성할 수 있도록 하려면 미러 서버에 동일한 GUID를 가진 감사가 있어야 합니다. 이는 CREATE audit WITH guid`=`*\<WITH source Server AUDIT*> 명령을 사용 하 여 구성할 수 있습니다.  
+-   데이터베이스 감사 사양을 활성화하여 감사 레코드를 작성할 수 있도록 하려면 미러 서버에 동일한 GUID를 가진 감사가 있어야 합니다. 이는 CREATE AUDIT WITH GUID를 사용 하 여 구성할 수 있습니다 `=` * \<GUID from source Server Audit*> .  
   
 -   이진 파일 대상의 경우 미러 서버 서비스 계정에 감사 내역이 작성될 위치에 대한 적절한 권한이 있어야 합니다.  
   
 -   Windows 이벤트 로그 대상의 경우 미러 서버가 위치한 컴퓨터의 보안 정책이 보안 또는 애플리케이션 이벤트 로그에 대한 서비스 계정 액세스를 허용해야 합니다.  
   
 ### <a name="auditing-administrators"></a>감사 관리자  
- `sysadmin` 고정 서버 역할의 멤버는 각 데이터베이스에서 **dbo** 사용자로 식별 됩니다. 관리자 작업을 감사하기 위해서는 **dbo** 사용자의 작업을 감사합니다.  
+ `sysadmin`고정 서버 역할의 멤버는 각 데이터베이스에서 **dbo** 사용자로 식별 됩니다. 관리자 작업을 감사하기 위해서는 **dbo** 사용자의 작업을 감사합니다.  
   
 ## <a name="creating-and-managing-audits-with-transact-sql"></a>Transact-SQL로 감사 생성 및 관리  
  DDL 문, 동적 관리 뷰/함수 및 카탈로그 뷰를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit의 모든 측면을 구현할 수 있습니다.  
@@ -137,15 +136,15 @@ ms.locfileid: "68198419"
 |||  
 |-|-|  
 |[ALTER AUTHORIZATION](/sql/t-sql/statements/alter-authorization-transact-sql)|[CREATE SERVER AUDIT](/sql/t-sql/statements/create-server-audit-transact-sql)|  
-|[ALTER DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)|[서버 감사 사양 만들기](/sql/t-sql/statements/create-server-audit-specification-transact-sql)|  
+|[ALTER DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)|[CREATE SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/create-server-audit-specification-transact-sql)|  
 |[ALTER SERVER AUDIT](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)|[DROP DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/drop-database-encryption-key-transact-sql)|  
 |[ALTER SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/alter-server-audit-transact-sql)|[DROP SERVER AUDIT](/sql/t-sql/statements/drop-server-audit-transact-sql)|  
-|[데이터베이스 감사 사양 만들기](/sql/t-sql/statements/create-database-audit-specification-transact-sql)|[DROP SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)|  
+|[CREATE DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/create-database-audit-specification-transact-sql)|[DROP SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)|  
   
 ### <a name="dynamic-views-and-functions"></a>동적 뷰 및 함수  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit에 사용할 수 있는 동적 뷰 및 함수를 나열합니다.  
   
-|동적 뷰 및 함수|설명|  
+|동적 뷰 및 함수|Description|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](/sql/relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql)|감사 로그에 보고할 수 있는 모든 감사 동작 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit의 일부로 구성할 수 있는 모든 감사 동작 그룹에 대한 행을 반환합니다.|  
 |[sys.dm_server_audit_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql)|감사의 현재 상태에 대한 정보를 제공합니다.|  
@@ -155,7 +154,7 @@ ms.locfileid: "68198419"
 ### <a name="catalog-views"></a>카탈로그 뷰  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit에 사용할 수 있는 카탈로그 뷰를 나열합니다.  
   
-|카탈로그 뷰|설명|  
+|카탈로그 뷰|Description|  
 |-------------------|-----------------|  
 |[sys.database_ audit_specifications](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)|서버 인스턴스에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit의 데이터베이스 감사 사양 정보를 포함합니다.|  
 |[sys.database_audit_specification_details](/sql/relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql)|서버 인스턴스에 있는 모든 데이터베이스에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit의 데이터베이스 감사 사양 정보를 포함합니다.|  
@@ -195,7 +194,7 @@ ms.locfileid: "68198419"
   
  [SQL Server 감사 로그 보기](view-a-sql-server-audit-log.md)  
   
- [보안 로그에 SQL Server Audit 이벤트 쓰기](write-sql-server-audit-events-to-the-security-log.md)  
+ [보안 로그에 SQL Server 감사 이벤트 쓰기](write-sql-server-audit-events-to-the-security-log.md)  
   
 ## <a name="topics-closely-related-to-auditing"></a>감사 관련 항목  
  [서버 속성&#40;보안 페이지&#41;](../../../database-engine/configure-windows/server-properties-security-page.md)  

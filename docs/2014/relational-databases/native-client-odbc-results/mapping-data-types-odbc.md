@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c1fad6175b6330b35264d8558fa7b52f86b85a9c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a87497d52e8f011b35933c8e1cea9cd8269a4617
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699274"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039446"
 ---
 # <a name="mapping-data-types-odbc"></a>데이터 형식 매핑(ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sql 데이터 형식을 odbc sql 데이터 형식에 매핑합니다. 아래 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL 데이터 형식과 이러한 데이터 형식이 매핑되는 ODBC SQL 데이터 형식에 대해 설명합니다. 또한 ODBC SQL 데이터 형식 및 해당 ODBC C 데이터 형식과 지원되는 변환 및 기본 변환에 대해 설명합니다.  
