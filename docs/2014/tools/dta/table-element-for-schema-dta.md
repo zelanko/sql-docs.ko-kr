@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b3a72f800643afa5e7edf6bdfa9928196f5da2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 622b5a02f0b13e9cbf6a78977a07daea93a3f520
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63138785"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007576"
 ---
 # <a name="table-element-for-schema-dta"></a>Schema의 Table 요소(DTA)
   튜닝에 사용할 테이블을 지정합니다.  
@@ -35,17 +34,17 @@ ms.locfileid: "63138785"
   
 ## <a name="element-attributes"></a>요소 특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
-|`NumberOfRows`|선택 사항입니다. 여러 다른 크기의 테이블을 시뮬레이트할 수 있게 하는 정수입니다.|  
+|`NumberOfRows`|(선택 사항) 여러 다른 크기의 테이블을 시뮬레이트할 수 있게 하는 정수입니다.|  
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특성|설명|  
+|특성|Description|  
 |--------------------|-----------------|  
-|**데이터 형식 및 길이**|1 ~ 007e; 255 자 사이의 **문자열**입니다.|  
+|**데이터 형식 및 길이**|**string**, 1에서 255자 사이|  
 |**기본값**|없음|  
-|**내용과**|선택 사항입니다. 작업에 적합한 수만큼 테이블을 나열합니다.|  
+|**발생 빈도**|(선택 사항) 작업에 적합한 수만큼 테이블을 나열합니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   

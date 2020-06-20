@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e784216116bdb9ab308dff5fa998740b0fa459b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691592"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060577"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>트랜잭션 게시에 업데이트할 수 있는 구독 만들기(Management Studio)
 
@@ -116,7 +115,7 @@ ms.locfileid: "62691592"
     * `1` - 게시자에 연결할 때 구독자에서 변경 작업을 수행하는 사용자의 보안 컨텍스트를 사용합니다. 이 보안 모드에 관한 제한 사항에 대해서는 [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) 을 참조하세요.
     * `2`[sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)를 사용하여 만든 기존의 사용자 정의 연결된 서버 로그인을 사용합니다.
 
-6. 게시자에서, `@subscriber` `@destination_db`,를 지정 하 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) 를 실행 하 고에 대해 값 `@subscription_type`으로 pull을 지정 하 고에 대해 `@update_mode`3 단계에서 지정한 것과 동일한 값을 지정 `@publication`합니다.
+6. 게시자에서,,를 지정 하 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) 를 실행 하 고에 대해 값으로 pull을 지정 하 `@publication` `@subscriber` `@destination_db` `@subscription_type` 고에 대해 3 단계에서 지정한 것과 동일한 값을 지정 `@update_mode` 합니다.
 
 이렇게 하면 게시자에서 끌어오기 구독이 등록됩니다. 
 
@@ -190,7 +189,7 @@ ms.locfileid: "62691592"
     * (선택 사항) `0` 에 대한 `@distributor_security_mode` 값과, `@distributor_login` 및 `@distributor_password`에 대한 SQL Server 로그인 정보(배포자에 연결할 때 SQL Server 인증을 사용 해야하는 경우). 
     * 이 구독에 대한 배포 에이전트 작업 일정.
 
-5. 게시자에서 [sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql) 를 실행 하 여 게시자에 구독자를 등록 하 고, `@publication`, `@subscriber` `@destination_db`,에 `@subscription_type`pull 값,에 `@update_mode`3 단계에서 지정한 것과 같은 값을 지정 합니다.
+5. 게시자에서 [sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql) 를 실행 하 여 게시자에 구독자를 등록 하 고, `@publication` , `@subscriber` `@destination_db` ,에 pull 값 `@subscription_type` ,에 3 단계에서 지정한 것과 같은 값을 지정 `@update_mode` 합니다.
 
 이렇게 하면 게시자에서 끌어오기 구독이 등록됩니다. 
 
@@ -299,11 +298,11 @@ GO
 ```
 
 ## <a name="set-queued-updating-conflict-resolution-options-sql-server-management-studio"></a>지연 업데이트 충돌 해결 옵션 설정(SQL Server Management Studio)
-  **게시 속성 - \<Publication>** 대화 상자의 **구독 옵션** 페이지에서 지연 업데이트 구독을 지원하는 게시에 대한 충돌 해결 옵션을 설정할 수 있습니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요.  
+  **게시 속성- \<Publication> ** 대화 상자의 **구독 옵션** 페이지에서 지연 업데이트 구독을 지 원하는 게시에 대 한 충돌 해결 옵션을 설정 합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요.  
   
 ### <a name="to-set-queued-updating-conflict-resolution-options"></a>지연 업데이트 충돌 해결 옵션을 설정하려면  
   
-1.  **게시 속성 - \<게시>** 대화 상자의 **구독 옵션** 페이지에서 **충돌 해결 정책** 옵션에 대해 다음 값 중 하나를 선택합니다.    
+1.  **게시 속성- \<Publication> ** 대화 상자의 **구독 옵션** 페이지에서 **충돌 해결 정책** 옵션에 대해 다음 값 중 하나를 선택 합니다.    
     -   **게시자 변경 내용 유지**    
     -   **구독자 변경 내용 유지**    
     -   **구독 다시 초기화**    

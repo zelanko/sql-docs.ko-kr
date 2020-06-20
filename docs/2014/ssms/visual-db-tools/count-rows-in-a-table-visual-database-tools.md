@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 04b836a53b4b9928118221053d1fbc2c3a89dfdd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b839fe4359e083df9c6b4643111b61f5b681914
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63217810"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067196"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>테이블의 행 계산(Visual Database Tools)
   테이블의 행을 계산하여 다음을 확인할 수 있습니다.  
@@ -55,7 +54,7 @@ ms.locfileid: "63217810"
   
 2.  다이어그램 창의 배경을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 **그룹화 방법 추가** 를 선택합니다. 쿼리 및 뷰 디자이너에서 **그룹화 방법** 열이 조건 창의 표에 추가됩니다.  
   
-3.  테이블이 나 테이블 구조 개체를 나타내는 사각형에서 ** \*(모든 열)** 을 선택 합니다.  
+3.  테이블이 나 테이블 구조 개체를 나타내는 사각형에서 ** \* (모든 열)** 을 선택 합니다.  
   
      쿼리 및 뷰 디자이너의 조건 창에서 **그룹화 방법** 열에 **Count**라는 단어가 자동으로 입력되고 요약하려는 열에 대한 열 별칭이 할당됩니다. 쿼리 결과에 더 유용한 열 머리글을 만들려면 [열 별칭 만들기&#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md)를 참조하세요.  
   

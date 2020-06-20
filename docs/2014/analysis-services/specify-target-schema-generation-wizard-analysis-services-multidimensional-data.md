@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 342877c5-14af-4287-a2b3-d48882b0133a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e780758513aebc90dd35399894e78d0096cb0400
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 343cb7d3957f1859b8676629a14b165e756b450d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068248"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940284"
 ---
 # <a name="specify-target-schema-generation-wizard-analysis-services---multidimensional-data"></a>대상 지정(스키마 생성 마법사)(Analysis Services - 다차원 데이터)
   **대상 지정** 페이지를 사용하여 관계형 스키마가 생성될 데이터 원본 뷰를 식별할 수 있습니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "66068248"
 > [!NOTE]  
 >  이 옵션은 **새 데이터 원본 뷰 만들기** 를 선택한 경우에만 사용할 수 있습니다.  
   
- **신규**  
+ **새 항목**  
  데이터 원본 마법사를 표시하고 새 데이터 원본 뷰와 연결할 새 데이터 원본을 정의하려면 클릭합니다.  
   
  자세한 내용은 [데이터 원본 마법사 F1 도움말&#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)을 참조하세요.  

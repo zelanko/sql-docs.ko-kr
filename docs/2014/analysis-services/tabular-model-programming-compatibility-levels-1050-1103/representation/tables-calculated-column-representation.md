@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 190bfa92-2445-404d-86df-7cc94d283add
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a671f33fa26829e96cb53e1a040eb042406bc4eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f7a56c01a1c4af7a2e618c6b6a6cb586424e639
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62757708"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940054"
 ---
 # <a name="calculated-column-representation-tabular"></a>계산 열 표현(테이블 형식)
   계산 열은 테이블에 새 열을 만드는 DAX 식이며 구해진 값이 테이블에 저장됩니다. 테이블이 처리될 때마다 계산 열 식이 계산됩니다.  

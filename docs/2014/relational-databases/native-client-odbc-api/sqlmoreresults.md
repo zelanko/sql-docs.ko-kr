@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 50679a4d9654307140ef798c0ab612349d1ed175
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 69ddc312b2d4bf5d6e2845c7f159318d831b4163
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705973"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022016"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
   **SQLMoreResults** 는 애플리케이션에서 여러 결과 행 집합을 검색하는 데 사용됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문에 COMPUTE 절 또는 ODBC 문이나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 전송된 일괄 처리가 포함되어 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버가 여러 결과 집합을 생성하게 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 두 경우의 결과를 처리할 서버 커서를 만들 수 없습니다. 따라서 개발자는 ODBC 문으로 인해 차단되지 않도록 해야 합니다. 즉, 연결에서 다른 활성 문의 데이터를 처리하기 전에 반환된 데이터를 폐기하거나 ODBC 문을 취소해야 합니다.  

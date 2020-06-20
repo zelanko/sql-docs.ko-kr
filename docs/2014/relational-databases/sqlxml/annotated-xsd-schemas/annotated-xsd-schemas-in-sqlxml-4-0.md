@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: eecd0d5f-d3dd-4d20-9586-19820410ad47
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59940c88f72ed46da3e4b81ce3fabe3bb73ec4b6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 44c625f9492f14fcefc31ad7d6572f6509dcec1f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702938"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043107"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>SQLXML 4.0의 주석이 추가된 XSD 스키마
   이 섹션에서는 SQLXML 4.0에서 주석이 추가된 XSD 스키마를 사용하는 방법에 대해 설명합니다. 이전 버전의 SQLXML에서는 XDR(XML-Data Reduced) 스키마를 통해 비슷한 기능이 제공되었습니다. 이 섹션에서는 레거시 애플리케이션을 위한 XDR 정보도 제공합니다.  

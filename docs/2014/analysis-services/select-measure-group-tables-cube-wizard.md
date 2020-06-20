@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 67e8e1ef-c7c6-434e-bd36-4b35f3cb7759
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7eea2aaca722ed2621127120f21b2ec350392606
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60e1bc5248f2ba85c505beb11ff78e5bbd3ded2b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069465"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940984"
 ---
 # <a name="select-measure-group-tables-cube-wizard"></a>측정값 그룹 테이블 선택(큐브 마법사)
   **측정값 그룹 테이블 선택** 페이지를 사용하여 데이터 원본 뷰를 식별하고 큐브에 사용할 측정값 그룹 테이블을 선택할 수 있습니다.  

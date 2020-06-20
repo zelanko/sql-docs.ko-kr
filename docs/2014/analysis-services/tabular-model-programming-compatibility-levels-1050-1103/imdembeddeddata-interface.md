@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 331f8c33f7748e6591acd6d6ecda7a03ef7d8137
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62757784"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940114"
 ---
 # <a name="imdembedded-interface"></a>IMDEmbedded 인터페이스
   IMDEmbedded 인터페이스는 포함된 PowerPivot 데이터베이스 또는 테이블 형식 model 데이터베이스를 관리하는 데 사용되는 공용 인터페이스입니다. 이 인터페이스는 `IPersistStream` 인터페이스에서 상속됩니다. 이 인터페이스에서는 다음 작업이 허용됩니다.  
@@ -38,8 +37,8 @@ ms.locfileid: "62757784"
   
 -   로컬 또는 in-process 데이터베이스를 컨테이너 문서의 포함된 스트림에 저장합니다. `IPersistStream`에서 상속됩니다.  
   
-## <a name="reference"></a>참고  
- 다음 참조는 **상수가 msmd.h** 헤더 `IMDEmbedded` 파일에 표시 된 인터페이스를 문서화 합니다.  
+## <a name="reference"></a>참조  
+ 다음 참조는 `IMDEmbedded` **상수가 msmd.h** 헤더 파일에 표시 된 인터페이스를 문서화 합니다.  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>원본 파일: PXOEmbeddedData.idl  
   
@@ -88,7 +87,7 @@ HRESULT GetStreamIdentifier (
  *out_pbstrStreamId*  
  스트림 식별자의 위치를 지정합니다.  
   
-#### <a name="return-value"></a>Return Value  
+#### <a name="return-value"></a>반환 값  
  `S_OK`  
  스트림 식별자가 반환되었습니다.  
   
@@ -132,7 +131,7 @@ HRESULT SetContainerURL (
  *in_bstrURL*  
  포함하는 문서의 URL을 지정합니다.  
   
-#### <a name="return-value"></a>Return Value  
+#### <a name="return-value"></a>반환 값  
  `S_OK`  
  컨테이너 URL을 설정했습니다.  
   
@@ -162,7 +161,7 @@ HRESULT SetHosted (
  *in_ftHosted*  
  호출자가 서비스 애플리케이션(예: IIS)의 호스팅된 환경에 있으면 TRUE입니다.  
   
-#### <a name="return-value"></a>Return Value  
+#### <a name="return-value"></a>반환 값  
  `S_OK`  
  플래그를 설정했습니다.  
   
@@ -192,7 +191,7 @@ HRESULT SetTempDirPath (
  *in_bstrPath*  
  임시 파일에 대한 호스트 애플리케이션에서 사용하는 경로입니다.  
   
-#### <a name="return-value"></a>Return Value  
+#### <a name="return-value"></a>반환 값  
  `S_OK`  
  임시 파일 디렉터리를 설정했습니다.  
   
@@ -219,7 +218,7 @@ HRESULT Cancel ( void )
 #### <a name="parameters"></a>매개 변수  
  없음  
   
-#### <a name="return-value"></a>Return Value  
+#### <a name="return-value"></a>반환 값  
  `S_OK`  
  작업을 취소했습니다.  
   
@@ -251,7 +250,7 @@ HRESULT GetSizeMax (
  *in_bstrPath*  
  포함된 데이터베이스 이미지의 예상 크기(바이트)입니다.  
   
-#### <a name="return-value"></a>Return Value  
+#### <a name="return-value"></a>반환 값  
  `S_OK`  
  크기를 가져왔습니다.  
   

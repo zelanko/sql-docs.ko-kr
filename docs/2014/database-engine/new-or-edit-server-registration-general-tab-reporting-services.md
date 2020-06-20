@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5f899a8e-52ef-46b5-b7a9-f200ccd9f724
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e0e6d6d3ad57726c42556c9ecc2662edce102e57
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9892a6fb3033be549d95b708a012e55d40bcb80
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62844279"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930512"
 ---
 # <a name="new-or-edit-server-registration-general-tab-reporting-services"></a>새 서버 등록 또는 서버 등록 편집(일반 탭)(Reporting Services)
   이 탭을 사용하여 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]인스턴스의 등록 옵션을 지정할 수 있습니다.  

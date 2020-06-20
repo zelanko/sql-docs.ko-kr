@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8681506b-5dc6-4165-beb6-1e76ca470425
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1e8ac94f235e08f2217edb9504722ebac998cb28
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 62d69cdc42745fcbb5eb7d2cb05f90b710e5c70d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000935"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933004"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>전체 텍스트 카탈로그 속성(채우기 일정 페이지)
   이 대화 상자를 사용하여 전체 텍스트 카탈로그를 채우거나 다시 채우는 시기를 결정하는 일정을 추가하거나 수정할 수 있습니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "83000935"
  **채우기 유형**  
  전체, 증분 또는 최적화 등의 채우기 작업을 표시하거나 수정합니다.  
   
- **사용**  
+ **Enabled**  
  예약된 작업을 사용하려면 이 확인란을 선택하고 사용하지 않으려면 이 확인란의 선택을 취소합니다.  
   
  **설명**  
@@ -43,7 +42,7 @@ ms.locfileid: "83000935"
  **편집**  
  선택한 채우기 일정을 편집하려면 이 단추를 클릭합니다.  
   
- **삭제**  
+ **Delete**  
  선택한 채우기 일정을 제거하려면 이 단추를 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8209a707-faef-4ffc-8991-6c13bb350753
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6c5b38fdc684cce71e0910a8a576180ece3e48f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b854c683cdbc3ff503751efbaf564dfa9e3110f7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068135"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940294"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>테이블 유형 지정(데이터 마이닝 마법사)
   **테이블 유형 지정** 페이지를 사용하여 마이닝 구조 정의에 사용할 테이블을 식별할 수 있습니다. 선택하지 않은 테이블은 마이닝 구조 정의에 사용되지 않습니다.  

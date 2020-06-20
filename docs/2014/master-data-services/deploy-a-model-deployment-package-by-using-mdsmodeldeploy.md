@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 81c87a7990c6c7125cbccbe99050cd5ee477e6d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e6229b3edebb8800de642272c9aa2adc0ea907f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483070"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971609"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>MDSModelDeploy를 사용하여 모델 배포 패키지 배포
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 MDSModelDeploy 도구를 사용하여 다음 중 하나를 포함하는 패키지를 배포합니다.  
@@ -46,17 +45,17 @@ ms.locfileid: "65483070"
   
 2.  명령 프롬프트를 열고 MDSModelDeploy.exe로 이동합니다.  
   
-    -   MDS를 기본 위치에 설치 하는 경우 도구는 *드라이브*: Files\Microsoft SQL Server\120\Master Data Services\Configuration\MDSModelDeploy.exe에서 사용할 수 있습니다.  
+    -   MDS를 기본 위치에 설치 하는 경우이 도구는 *드라이브*: Files\Microsoft SQL Server\120\Master Data Services\Configuration\MDSModelDeploy.exe에서 사용할 수 있습니다.  
   
     -   MDS를 기본 위치에 설치하지 않은 경우 로컬 컴퓨터에서 MDSModelDeploy.exe를 검색하십시오.  
   
-3.  선택 사항입니다. 보기 옵션 및 도움말입니다.  
+3.  (선택 사항) 보기 옵션 및 도움말입니다.  
   
     -   모든 사용 가능한 옵션을 표시하려면 `MDSModelDeploy` 를 입력하고 Enter 키를 누릅니다.  
   
     -   옵션에 대한 도움말을 표시하려면 *과 같이 입력합니다. 여기서* OptionName `MDSModelDeploy help OptionName`은 옵션의 이름입니다.  
   
-4.  선택 사항입니다. 여러 웹 애플리케이션이 있는 경우 이 명령을 입력하고 Enter 키를 눌러 배포할 서비스의 이름을 결정합니다.  
+4.  (선택 사항) 여러 웹 애플리케이션이 있는 경우 이 명령을 입력하고 Enter 키를 눌러 배포할 서비스의 이름을 결정합니다.  
   
     ```  
     MDSModelDeploy listservices  
@@ -110,7 +109,7 @@ ms.locfileid: "65483070"
      모델을 업데이트할 때 처음 3단계 동안 프로세스가 실패하면 진행되지 않습니다. 그러나 이미 수행한 변경 내용은 롤백되지 않습니다. 4단계에서 프로세스가 실패하면 업데이트 가능한 멤버가 업데이트됩니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 사용자 정의 메타데이터, 파일 특성, 사용자 및 그룹 권한은 모델 배포 패키지에 포함되지 않습니다. 모델을 배포한 후에 이러한 항목을 수동으로 업데이트해야 합니다. 자세한 내용은 다음을 참조하세요.  
+ 사용자 정의 메타데이터, 파일 특성, 사용자 및 그룹 권한은 모델 배포 패키지에 포함되지 않습니다. 모델을 배포한 후에 이러한 항목을 수동으로 업데이트해야 합니다.    자세한 내용은 다음을 참조하세요.  
   
 -   [메타 데이터 &#40;추가 MDS(Master Data Services)&#41;](../../2014/master-data-services/add-metadata-master-data-services.md)  
   

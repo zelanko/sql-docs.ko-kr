@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 471d8a31-199c-4f92-bb10-004fc7733b35
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cfda8d23f3be8b37f9eb3876496394fc32660769
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d3cf84e541f114d527d9a00cd19bce705a09af30
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702076"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021221"
 ---
 # <a name="allocating-a-connection-handle"></a>연결 핸들 할당
   애플리케이션이 데이터 원본이나 드라이버에 연결하려면 먼저 연결 핸들을 할당해야 합니다. 이 작업은 *HandleType* 매개 변수를 SQL_HANDLE_DBC로 설정 하 고 초기화 된 환경 핸들을 가리키는 *InputHandle* **를 호출 하** 여 수행 됩니다.  

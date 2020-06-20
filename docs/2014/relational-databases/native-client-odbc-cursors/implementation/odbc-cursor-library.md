@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3c610d3d-6e06-49cf-9a40-05b6a1c83a32
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 63a9a974c1487548526d4b40b8c72d2ce86f2136
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b0f0ad049c6b9e77f9888d582ab0cda2f5a5e0f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705649"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020921"
 ---
 # <a name="odbc-cursor-library"></a>ODBC 커서 라이브러리
   일부 ODBC 드라이버는 기본 커서 설정만 지원 합니다. 또한 이러한 드라이버는 **SQLSetPos**와 같은 위치 지정 커서 작업을 지원 하지 않습니다. ODBC 커서 라이브러리는 일반적으로 블록 또는 정적 커서를 지원하지 않는 드라이버에서 블록 또는 정적 커서를 구현하는 데 사용되는 MDAC(Microsoft Data Access Components) 구성 요소입니다. 커서 라이브러리는 만든 커서에 대해 위치 지정 업데이트 및 DELETE 문과 **SQLSetPos** 도 구현 합니다.  

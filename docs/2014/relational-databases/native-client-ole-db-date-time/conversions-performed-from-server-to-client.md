@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d248abc5fbfeb22b7ef399945b0116e9be2bda51
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0eee18c654e427253fd1bc4687c89e81c290625c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705089"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043771"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>서버에서 클라이언트로 수행되는 변환
   이 항목에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]이상 버전과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB로 작성된 클라이언트 애플리케이션 간에 수행되는 날짜 및 시간 변환에 대해 설명합니다.  
@@ -27,7 +26,7 @@ ms.locfileid: "82705089"
   
 |대상 -><br /><br /> 시작|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|날짜|1,7|정상|-|-|1|1,3|1,7|-|OK(VT_BSTR)|정상|확인|4|4|  
+|Date|1,7|정상|-|-|1|1,3|1,7|-|OK(VT_BSTR)|정상|확인|4|4|  
 |Time|5, 6, 7|-|9|정상|6|3, 6|5, 6|-|OK(VT_BSTR)|정상|확인|4|4|  
 |Smalldatetime|7|8|9,10|10|정상|3|7|-|7(VT_DATE)|정상|확인|4|4|  
 |DateTime|5, 7|8|9,10|10|정상|3|7|-|7(VT_DATE)|정상|확인|4|4|  

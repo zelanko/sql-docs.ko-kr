@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 023af8d3-aea0-45a9-ac32-554634bf4b9a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 53c909caebfd6502b021a9a1abb4e1ecb29e3bb7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6075d5156a9cc3662ac62e884787b8a650788be9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056952"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964893"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>패키지 및 프로젝트 보호 수준 대화 상자
   **패키지 보호 수준** 대화 상자를 사용하여 패키지 보호 수준을 업데이트할 수 있습니다. 보호 수준은 보호 방법(암호 또는 사용자 키)과 패키지 보호의 범위를 결정합니다. 보호에는 모든 데이터를 포함시키거나 중요한 데이터만 포함시킬 수 있습니다.  

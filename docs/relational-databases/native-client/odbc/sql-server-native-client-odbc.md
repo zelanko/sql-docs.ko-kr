@@ -1,5 +1,6 @@
 ---
 title: ODBC
+description: SQL Server는 odbc를 SQL Server Native Client ODBC 드라이버를 사용 하 여 SQL Server와 통신 하는 C 및 c + + 응용 프로그램에 대 한 네이티브 API로 지원 합니다.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: 811d5ba3-a2b8-48c0-adbc-8c91f041f458
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b5aec5d77f7355b601644907034bce0996080ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: edf6fee6f271461052da2954dafdcfb6d27de599
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388377"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950260"
 ---
 # <a name="sql-server-native-client-odbc"></a>SQL Server Native Client(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

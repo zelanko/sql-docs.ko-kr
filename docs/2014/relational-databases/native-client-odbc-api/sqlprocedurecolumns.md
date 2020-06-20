@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 536d8551b82918aae34fa25723c99e8cfad5f1ad
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 078e391bd39fdc49cde539c4004ed51d25eef93f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705879"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021922"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
   `SQLProcedureColumns`모든 저장 프로시저의 반환 값 특성을 보고 하는 한 행을 반환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

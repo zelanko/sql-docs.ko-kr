@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5694d3fe-52e8-4fb7-a1f1-22629151b618
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 242c6451cc6dc018e4972be7a16305b676845687
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87e6c59cb71abdc5bda32538ead84ec56a4f6c9d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069273"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940854"
 ---
 # <a name="select-table-dialog-box-mining-accuracy-chart-view"></a>테이블 선택 대화 상자(마이닝 정확도 차트 뷰)
   **테이블 선택** 대화 상자를 사용하여 선택한 마이닝 구조에 포함된 마이닝 모델의 정확도를 테스트하는 데 사용할 테이블을 선택할 수 있습니다.  

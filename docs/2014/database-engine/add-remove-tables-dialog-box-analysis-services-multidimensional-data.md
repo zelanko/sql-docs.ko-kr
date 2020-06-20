@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c0c0ad4d5c375b537f4bc0fd4efb820395a8d6e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04192a5990126d06c4b3f7b6a77cc218f3a631de
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889219"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937338"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>테이블 추가/제거 대화 상자 (Analysis Services 다차원 데이터)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 **테이블 추가/제거** 대화 상자를 사용하여 데이터 원본의 테이블을 데이터 원본 뷰에서 추가 또는 제거할 수 있습니다. 다음을 수행하여 **테이블 추가/제거** 대화 상자를 표시할 수 있습니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "68889219"
  **Available objects**  
  Displays the objects and their types in the data source that are not already included in the data source view.  
   
- **>>** **사용 가능한 개체** 에 나열 된 모든 개체를 **포함 된 개체로**전송 하거나, 하나 이상의 개체를 선택 하 **>** 고, 선택한 개체를 **포함 된 개체로**전송 하려면 클릭 합니다.  
+ **>>** **사용 가능한 개체** 에 나열 된 모든 개체를 **포함 된 개체로**전송 하거나, 하나 이상의 개체를 선택 하 고, **>** 선택한 개체를 **포함 된 개체로**전송 하려면 클릭 합니다.  
   
  **Filter**  
  **사용 가능한 개체**에 나열된 개체를 제한하는 데 사용할 필터를 입력한 다음 단추를 클릭하여 나열된 개체를 필터링합니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "68889219"
  **Included objects**  
  이미 데이터 원본 뷰에 추가된 개체 및 개체 유형을 표시합니다.  
   
- 포함 **<<** 된 **개체** 에 나열 된 모든 개체를 **사용 가능한 개체**에 전송 하려면 클릭 하거나, 하나 이상의 개체 **<** 를 선택 하 고 선택한 개체를 **사용 가능한 개체**로 전송 하려면 클릭 합니다.  
+ **<<** **포함 된 개체** 에 나열 된 모든 개체를 **사용 가능한 개체**에 전송 하려면 클릭 하거나, 하나 이상의 개체를 선택 하 고 **<** 선택한 개체를 **사용 가능한 개체**로 전송 하려면 클릭 합니다.  
   
  **Add related tables**  
  **포함된 개체**에서 선택한 테이블과 관련된 모든 테이블을 추가하려면 클릭합니다.  
