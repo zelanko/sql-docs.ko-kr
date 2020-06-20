@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8b97b0129a7cc4ffa21b4a82ad0208a2c1890b27
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef2599ea202fad2b85881951692f1f04898e94e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313649"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006570"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>태스크 4: 결과 관리 및 보기
   이 작업에서는 컴퓨터 기반 정리 결과를 검토하고 공급자 데이터에서 대화형 정리를 수행할 수도 있습니다. 자세한 내용은 [대화형 정리 단계](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) 를 참조 하세요.  
   
 1.  도메인 목록에서 **연락처 전자 메일** 도메인을 선택 합니다.  
   
-2.  오른쪽 창에서 **잘못 됨** 탭으로 전환 합니다. 끝에 문자 '가 없는 두 개의 전자 메일 주소를 확인 합니다. 모든 전자 메일 주소가 ** \@adventure-works.com** (' ')로 끝나야 하는 도메인 규칙에 의해 잘못 된 두 개의 전자 메일입니다. DQS는 정리 중 도메인 규칙을 사용해서 전자 메일이 올바른지 여부를 확인합니다. 이 탭에는 기술 자료에서 잘못된 것으로 표시되었거나 도메인 규칙에 위배되는 도메인 값이 표시됩니다. 여기에서 이 값들은 도메인 규칙(전자 메일 유효성 검사)에 위배됩니다.  
+2.  오른쪽 창에서 **잘못 됨** 탭으로 전환 합니다. 끝에 문자 '가 없는 두 개의 전자 메일 주소를 확인 합니다. 모든 전자 메일 주소가 ** \@ adventure-works.com** (' ')로 끝나야 하는 도메인 규칙에 의해 잘못 된 두 개의 전자 메일입니다. DQS는 정리 중 도메인 규칙을 사용해서 전자 메일이 올바른지 여부를 확인합니다. 이 탭에는 기술 자료에서 잘못된 것으로 표시되었거나 도메인 규칙에 위배되는 도메인 값이 표시됩니다. 여기에서 이 값들은 도메인 규칙(전자 메일 유효성 검사)에 위배됩니다.  
   
-3.  다음 **으로 수정** 열에 ** \@adventure-works.com** (' ')로 끝나는 올바른 전자 메일 주소를 입력 합니다.  
+3.  다음 **으로 수정** 열에 ** \@ adventure-works.com** (' ')로 끝나는 올바른 전자 메일 주소를 입력 합니다.  
   
      ![전자 메일 수정 내용 유효성 검사 규칙](../../2014/tutorials/media/et-managingandviewingresults-01.jpg "전자 메일 수정 내용 유효성 검사 규칙")  
   
@@ -32,7 +31,7 @@ ms.locfileid: "72313649"
   
 5.  오른쪽 창에서 **새** 탭으로 전환 합니다. 이 탭의 값은 DQS가 기술 자료에서 값이 올바른지 여부를 확인하기에 아직 정보가 충분하지 않은 값입니다. 따라서 도메인 값을 변경하거나 변경을 제안할 수 없습니다.  
   
-6.  값을 검토 하 여 모든 전자 메일이 ** \@adventure-works.com** 로 종료 되는지 확인 하 고 도구 모음에서 **모든 용어 승인** 을 클릭 합니다. 이 탭에서 승인 된 값은 **올바른** 탭으로 이동 합니다.  
+6.  값을 검토 하 여 모든 전자 메일이 ** \@ adventure-works.com** 로 종료 되는지 확인 하 고 도구 모음에서 **모든 용어 승인** 을 클릭 합니다. 이 탭에서 승인 된 값은 **올바른** 탭으로 이동 합니다.  
   
 7.  도메인 목록에서 **Country** 도메인을 선택 합니다.  
   

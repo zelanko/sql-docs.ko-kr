@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5cd9a87a-af4b-45f3-8c18-f7fd7e7d3064
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9b23e8d7f68cca0722691863a2c5c8d5e095c33c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87df538858c9294cb8986da3df0d2b3814411326
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62661835"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057761"
 ---
 # <a name="database-element-for-server-dta"></a>Server의 Database 요소(DTA)
   특정 서버에서 튜닝할 데이터베이스를 지정합니다.  
@@ -52,7 +51,7 @@ ms.locfileid: "62661835"
  데이터베이스 엔진 튜닝 관리자 XML 스키마에서 이 요소의 이름은 **DatabaseDetailsTypecomplexType** 입니다. 이 `Database` 요소와 `Configuration` 요소가 루트 부모인 요소를 혼동하지 마십시오. 자세한 내용은 [Configuration의 Database 요소&#40;DTA&#41;](database-element-for-configuration-dta.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
- `Database` 요소의 사용 예제를 보려면 [SERVER 요소 &#40;DTA&#41;](server-element-dta.md)를 참조 하세요.  
+ 요소의 사용 예제를 `Database` 보려면 [Server 요소 &#40;DTA&#41;](server-element-dta.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  

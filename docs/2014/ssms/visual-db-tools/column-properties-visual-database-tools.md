@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6aeb4d01cae7c09c27cafa8284638bf0a7de9691
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990200"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058216"
 ---
 # <a name="column-properties-visual-database-tools"></a>열 속성(Visual Database Tools)
   열 속성 집합에는 테이블 디자이너([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서만 사용 가능) 내 **열 속성** 탭에서 볼 수 있는 전체 집합과 서버 탐색기를 사용하여 속성 창에서 볼 수 있는 하위 집합이 있습니다.  
@@ -179,12 +178,12 @@ ms.locfileid: "62990200"
  이 열이 다른 위치에 복제되었는지 여부를 표시합니다.  
   
  **RowGuid**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 열을 ROWGUID로 사용하는지 여부를 나타냅니다. 데이터 형식이 인 열에 대해서만이 값을 **예** 로 설정할 수 있습니다 `uniqueidentifier`. 이 속성을 편집하려면 해당 값을 클릭하고 드롭다운 목록을 확장한 다음 다른 값을 선택합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 열을 ROWGUID로 사용하는지 여부를 나타냅니다. 데이터 형식이 인 열에 대해서만이 값을 **예** 로 설정할 수 있습니다 `uniqueidentifier` . 이 속성을 편집하려면 해당 값을 클릭하고 드롭다운 목록을 확장한 다음 다른 값을 선택합니다.  
   
  **크기**  
  열의 데이터 형식에 허용되는 크기(바이트)를 표시합니다. 예를 들어 `nchar` 데이터 형식의 길이가 10(문자 수)까지 허용되면 유니코드 문자 집합 크기는 20까지 허용됩니다.  
   
 > [!NOTE]  
->  `varchar(max)` 데이터 형식의 길이는 각 행별로 다릅니다. sp_help은 `varchar(max)` 열 길이로 (-1)을 반환 합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 는 열 크기로 -1을 표시합니다.  
+>  `varchar(max)` 데이터 형식의 길이는 각 행별로 다릅니다. sp_help은 열 길이로 (-1)을 반환 `varchar(max)` 합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 는 열 크기로 -1을 표시합니다.  
   
   

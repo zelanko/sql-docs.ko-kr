@@ -12,22 +12,21 @@ helpviewer_keywords:
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fa9d36a446645b289f2c182e90782d6932cf20ef
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07cff70d32d7d39619ecf3ee4ce36e37f2dee924
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702253"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012876"
 ---
 # <a name="wildcard-components-and-content-validation"></a>와일드카드 구성 요소 및 콘텐츠 유효성 검사
   와일드카드 구성 요소는 콘텐츠 모델에 나타나는 형식의 유연성을 향상시키는 데 사용됩니다. 이러한 구성 요소는 XSD 언어에서 다음과 같은 방식으로 지원됩니다.  
   
--   요소 와일드카드 구성 요소: 이러한 구성 요소는 **\<xsd:any>** 요소로 표시됩니다.  
+-   요소 와일드카드 구성 요소: 이러한 요소는 요소로 표현 됩니다 **\<xsd:any>** .  
   
--   특성 와일드카드 구성 요소: 이러한 구성 요소는 **\<xsd:anyAttribute>** 요소로 표시됩니다.  
+-   특성 와일드카드 구성 요소: 이러한 요소는 요소로 표현 됩니다 **\<xsd:anyAttribute>** .  
   
- **\<xsd:any>** 및 **\<xsd:anyAttribute>** 와일드카드 문자 요소는 모두 **processContents** 특성의 사용을 지원합니다. 이렇게 하면 XML 애플리케이션에서 이러한 와일드카드 문자 요소와 관련된 문서 내용에 대한 유효성 검사를 처리하는 방법을 나타내는 값을 지정할 수 있습니다. 다음은 다양한 값과 해당 기능에 대한 설명입니다.  
+ 및의 두 와일드 카드 문자 요소는 모두 **\<xsd:any>** **\<xsd:anyAttribute>** **processContents** 특성의 사용을 지원 합니다. 이렇게 하면 XML 애플리케이션에서 이러한 와일드카드 문자 요소와 관련된 문서 내용에 대한 유효성 검사를 처리하는 방법을 나타내는 값을 지정할 수 있습니다. 다음은 다양한 값과 해당 기능에 대한 설명입니다.  
   
 -   **strict** 값은 콘텐츠의 유효성을 완전히 검사하도록 지정합니다.  
   

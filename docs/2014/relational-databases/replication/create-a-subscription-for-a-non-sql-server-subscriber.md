@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31a7d1e52c53cb858039f1fd0ed403f255ad5ca2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721675"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010920"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>SQL Server 이외 구독자에 대한 구독 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 SQL Server 이외 구독자에 대한 구독을 만드는 방법에 대해 설명합니다. 트랜잭션 복제와 스냅샷 복제는[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자로의 데이터 게시를 지원합니다. 지원되는 구독자 플랫폼에 대한 자세한 내용은 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)에서 SQL Server 이외 구독자에 대한 구독을 만드는 방법에 대해 설명합니다.  
@@ -45,7 +44,7 @@ ms.locfileid: "62721675"
   
          스냅샷 에이전트에서[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 적합한 스냅샷 및 초기화 스크립트를 생성하려면[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 대한 게시를 설정한 다음 스냅샷을 만듭니다.  
   
-3.  **게시 속성 - \<PublicationName>** 대화 상자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 대한 게시를 사용하도록 설정합니다. 이 단계에 대한 자세한 내용은 [Publication Properties, Subscription Options](publication-properties-subscription-options.md) 을 참조하세요.  
+3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **게시 속성- \<PublicationName> ** 대화 상자를 사용 하 여 이외 구독자에 대해 게시를 사용 하도록 설정 합니다. 이 단계에 대한 자세한 내용은 [Publication Properties, Subscription Options](publication-properties-subscription-options.md) 을 참조하세요.  
   
 4.  새 구독 마법사를 사용하여 구독을 만듭니다. 이 항목에는 이 단계에 대한 자세한 정보를 제공합니다.  
   
@@ -137,7 +136,7 @@ ms.locfileid: "62721675"
   
 2.  게시를 마우스 오른쪽 단추로 클릭한 다음 **스냅샷 에이전트 상태 보기**를 클릭합니다.  
   
-3.  **스냅샷 에이전트 상태 보기 - \<게시&gt;** 대화 상자에서 **시작**을 클릭합니다.  
+3.  **스냅숏 에이전트 상태 보기 \<Publication> -** 대화 상자에서 **시작**을 클릭 합니다.  
   
  스냅샷 에이전트에서 스냅샷 생성을 마치면 "[100%] 17개 아티클의 스냅샷이 생성되었습니다"라는 메시지가 표시됩니다.  
   
@@ -155,12 +154,12 @@ ms.locfileid: "62721675"
   
     -   `enabled_for_het_sub` 값이 1인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자가 지원됩니다.  
   
-    -   의 `enabled_for_het_sub` 값이 0 이면 [transact-sql&#41;&#40;sp_changepublication ](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) `enabled_for_het_sub` 을 실행 하 고에 대해 **@property** 및 `true` 를 지정 **@value**합니다.  
+    -   의 값 `enabled_for_het_sub` 이 0 이면 [transact-sql&#41;&#40;sp_changepublication ](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)을 실행 하 `enabled_for_het_sub` 고에 대해 및를 **@property** 지정 `true` **@value** 합니다.  
   
         > [!NOTE]  
         >  `enabled_for_het_sub`을 `true`로 변경하기 전에 게시에 대한 기존 구독을 모두 삭제해야 합니다. 게시에서 업데이트 구독도 지원하는 경우 `enabled_for_het_sub`을 `true`로 설정할 수 없습니다. `enabled_for_het_sub` 변경은 다른 게시 속성에도 영향을 줍니다. 자세한 내용은 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)을(를) 참조하세요.  
   
-3.  게시 데이터베이스의 게시자에서 [sp_addsubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)을 실행합니다. , **@publication** **@subscriber**,의 값 **(기본 대상)** **@destination_db**,에 **push** 값 **@subscription_type**,에 값 3을 지정 합니다 **@subscriber_type** (OLE DB 공급자 지정).  
+3.  게시 데이터베이스의 게시자에서 [sp_addsubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)을 실행합니다. **@publication**, **@subscriber** ,의 값 **(기본 대상)** **@destination_db** ,에 **push** 값,에 값 3을 지정 **@subscription_type** **@subscriber_type** 합니다 (OLE DB 공급자 지정).  
   
 4.  게시 데이터베이스의 게시자에서 [sp_addpushsubscription_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)를 실행합니다. 다음을 지정합니다.  
   
@@ -168,12 +167,12 @@ ms.locfileid: "62721675"
   
     -   **@subscriber_db**에 **(기본 대상)** 값  
   
-    -   , **@subscriber_datasrc**, **@subscriber_location**, **@subscriber_provider_string**및 **@subscriber_catalog**에 대[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 한 **@subscriber_provider**비 데이터 원본의 속성입니다.  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **@subscriber_provider** ,, **@subscriber_datasrc** **@subscriber_location** , **@subscriber_provider_string** 및 **@subscriber_catalog** 에 대 한 비 데이터 원본의 속성입니다.  
   
-    -   배포자 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 및 **@job_login** **@job_password**에 대 한 배포 에이전트 실행 되는 Windows 자격 증명입니다.  
+    -   [!INCLUDE[msCoName](../../includes/msconame-md.md)]배포자에서 및에 대 한 배포 에이전트 실행 되는 Windows 자격 증명입니다 **@job_login** **@job_password** .  
   
         > [!NOTE]  
-        >  Windows 통합 인증을 사용 하 여 만든 연결은 항상 및 **@job_login** **@job_password**로 지정 된 windows 자격 증명을 사용 합니다. 배포 에이전트는 항상 Windows 통합 인증을 사용하여 배포자에 대한 로컬 연결을 만듭니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 구독자에 연결합니다.  
+        >  Windows 통합 인증을 사용 하 여 만든 연결은 항상 및로 지정 된 Windows 자격 증명을 사용 합니다 **@job_login** **@job_password** . 배포 에이전트는 항상 Windows 통합 인증을 사용하여 배포자에 대한 로컬 연결을 만듭니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 구독자에 연결합니다.  
   
     -   (선택 사항) **@subscriber_security_mode**에 **0** 값, **@subscriber_login** 및 **@subscriber_password**에 OLE DB 공급자 로그인 정보  
   

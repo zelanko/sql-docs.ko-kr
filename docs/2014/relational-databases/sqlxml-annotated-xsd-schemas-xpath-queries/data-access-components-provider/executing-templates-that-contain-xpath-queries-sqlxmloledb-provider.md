@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 60b20a1ee5a90b2b51abbe71a189add066e1b7e4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 227c8a5b3222bdddab9632ec2e80f0bb4dd54250
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703254"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015597"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>XPath 쿼리를 포함하는 템플릿 실행(SQLXMLOLEDB 공급자)
   이 예에서는 다음 SQLXMLOLEDB 공급자별 속성을 사용하는 방법을 보여 줍니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "82703254"
   
 -   매핑 스키마  
   
- 이 예제 ADO 응용 프로그램에서 XPath 쿼리 (루트)로 구성 된 XML 템플릿은 [xpath 쿼리 실행 &#40;SQLXMLOLEDB 공급자&#41;](executing-xpath-queries-sqlxmloledb-provider.md)에 설명 된 XSD 매핑 스키마 (myschema.xml)에 대해 지정 됩니다.  
+ 이 예제 ADO 응용 프로그램에서 XPath 쿼리 (루트)로 구성 된 XML 템플릿은 xpath 쿼리 [실행 &#40;SQLXMLOLEDB Provider&#41;](executing-xpath-queries-sqlxmloledb-provider.md)에 설명 된 XSD 매핑 스키마 (MySchema.xml)에 대해 지정 됩니다.  
   
  매핑 스키마 속성은 XPath 쿼리가 실행 되는 XSD 매핑 스키마를 제공 합니다. 기본 경로 속성은 매핑 스키마에 대 한 파일 경로를 제공 합니다.  
   

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b385e6b02807ed79e2becb127a16e76d04329764
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 946bfd0c05e7739af4bfebf799980a0dc27de245
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62473134"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065021"
 ---
 # <a name="alerts"></a>경고
   이벤트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 생성되어 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 애플리케이션 로그에 입력됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 애플리케이션 로그를 판독하고 기록된 이벤트와 사용자가 정의한 경고를 비교합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 일치하는 내용을 찾으면 이벤트에 대해 자동화된 응답으로 경고가 발생합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트를 모니터링할 뿐 아니라 성능 조건 및 WMI(Windows Management Instrumentation) 이벤트도 모니터링할 수 있습니다.  
@@ -76,7 +75,7 @@ ms.locfileid: "62473134"
 ## <a name="selecting-a-performance-condition"></a>성능 조건 선택  
  특정 성능 조건에 응답하여 경고가 발생하도록 지정할 수 있습니다. 이 경우 모니터링할 성능 카운터, 경고에 대한 임계값 및 경고가 발생할 경우 표시해야 하는 카운터 동작을 지정합니다. 성능 조건을 설정하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 새 경고 **의** 에이전트 **일반** 페이지 또는 **경고 속성** 대화 상자에서 다음 항목을 정의해야 합니다.  
   
--   **개체가**  
+-   **Object**  
   
      개체는 모니터링할 성능의 영역입니다.  
   
@@ -100,7 +99,7 @@ ms.locfileid: "62473134"
 ## <a name="selecting-a-wmi-event"></a>WMI 이벤트 선택  
  특정 WMI 이벤트에 응답하여 경고가 발생하도록 지정할 수 있습니다. WMI 이벤트를 선택하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 새 경고 **의** 에이전트 **일반** 페이지 또는 **경고 속성** 대화 상자에서 다음을 정의해야 합니다.  
   
--   **Namespace**  
+-   **네임스페이스**  
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 이벤트에 대해 쿼리하도록 제공되는 WMI 네임스페이스에 WMI 클라이언트로 등록됩니다.  
   

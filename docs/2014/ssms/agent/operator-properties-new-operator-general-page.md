@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: c036d1c9-83d1-4a95-b67e-29d283b1a046
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8c394792f3d56614c4e3bc316e2b4a73dcd1e88b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8d339867a7b8183b00f7825c2f5059dddd2ed9d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211344"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067742"
 ---
 # <a name="operator-properties-and-new-operator-general-page"></a>운영자 속성 및 새 운영자(일반 페이지)
-  이 페이지를 사용 하 여 에이전트 운영자의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 일반 속성을 확인 하 고 수정할 수 있습니다.  
+  이 페이지를 사용 하 여 에이전트 운영자의 일반 속성을 확인 하 고 수정할 수 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.  
   
 ## <a name="options"></a>옵션  
  **이름**  
  운영자의 이름을 변경합니다.  
   
- **사용**  
+ **Enabled**  
  운영자를 활성화합니다. 활성화하지 않으면 해당 운영자에게 알림이 전송되지 않습니다.  
   
  **전자 메일 이름**  

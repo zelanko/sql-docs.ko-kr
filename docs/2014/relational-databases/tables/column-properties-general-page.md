@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 741c8633a9b7eed9fcd253918c34a27119e51ee4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29a82df217eef719b4f0efffb3fc0c24b36a27aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62854908"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047277"
 ---
 # <a name="column-properties-general-page"></a>열 속성(일반 페이지)
   이 페이지를 사용하여 선택한 열의 속성을 볼 수 있습니다.  

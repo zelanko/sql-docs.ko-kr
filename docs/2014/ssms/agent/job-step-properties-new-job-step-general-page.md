@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c8f8bc17b6a4c4792858c64144788aa12b858a3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62510957"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062247"
 ---
 # <a name="job-step-properties-new-job-step-general-page"></a>작업 단계 속성: 새 작업 단계(일반 페이지)
-  이 페이지를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계의 속성을 확인 하 고 변경 하거나 새 작업 단계를 정의할 수 있습니다.  
+  이 페이지를 사용 하 여 에이전트 작업 단계의 속성을 확인 하 고 변경 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 새 작업 단계를 정의할 수 있습니다.  
   
  이 페이지로 이동하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 개체 탐색기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 확장한 다음 **작업**을 마우스 오른쪽 단추로 클릭하고 **새 작업**을 클릭한 다음 **단계** 페이지를 선택하고 **새로 만들기**를 클릭합니다. 개체 탐색기에서 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭한 다음 **단계** 를 선택하고 **새로 만들기**, **삽입**또는 **편집**을 클릭하여 이 페이지로 이동할 수도 있습니다.  
   
@@ -28,7 +27,7 @@ ms.locfileid: "62510957"
  **단계 이름**  
  작업 단계의 이름을 설정합니다.  
   
- **Type**  
+ **형식**  
  작업 단계에서 사용하는 하위 시스템을 설정합니다. 선택한 하위 시스템에 따라 작업 단계 정의에 표시되는 옵션이 달라집니다.  
   
  **다음 계정으로 실행**  
@@ -53,7 +52,7 @@ ms.locfileid: "62510957"
  **붙여넣기**  
  클립보드의 내용을 붙여 넣습니다.  
   
- **Parse**  
+ **구문 분석**  
  명령의 구문을 확인합니다.  
   
 ## <a name="options-for-activex-script-job-steps"></a>ActiveX 스크립트 작업 단계 옵션  

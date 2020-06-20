@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47ce33e0d0a8cf76a90beb1fa3cc6ddfda27606f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02ace1911238a994785189d2d0911ac7d687dade
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316138"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064343"
 ---
 # <a name="general-user-interface-elements"></a>일반 사용자 인터페이스 요소
   **편집기**, **속성** 창 및 **도구 상자**는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 기본 요소 중 일부입니다.  

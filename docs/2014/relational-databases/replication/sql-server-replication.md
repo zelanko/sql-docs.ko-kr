@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e51f45e06939971ada6166fb977c787ad0354926
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62626156"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047669"
 ---
 # <a name="sql-server-replication"></a>SQL Server 복제
   복제는 한 데이터베이스에서 다른 데이터베이스로 데이터와 데이터베이스 개체를 복사 및 배포한 다음 데이터베이스 간에 동기화를 수행하여 일관성을 유지하는 일련의 기술입니다. 복제를 사용하면 LAN 및 WAN, 전화 접속 연결, 무선 연결 및 인터넷을 통해 데이터를 여러 다른 위치로 배포하고 원격 또는 모바일 사용자에게 배포할 수 있습니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "62626156"
   
 ## <a name="publications-and-articles"></a>게시 및 문서 
   
--   [Create a Publication](publish/create-a-publication.md)    
+-   [게시 만들기](publish/create-a-publication.md)    
 -   [아티클 정의](publish/define-an-article.md)   
 -   [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)   
 -   [아티클 속성 보기 및 수정](publish/view-and-modify-article-properties.md)    
@@ -128,7 +127,7 @@ ms.locfileid: "62626156"
 -   [Oracle 게시자에 대한 트랜잭션 집합 작업 구성](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
 -   [복제 스크립트 업그레이드](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
-## <a name="monitor"></a>모니터
+## <a name="monitor"></a>Monitor
   
 -   [비관리자의 복제 모니터 사용 허용](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [프로그래밍 방식으로 복제 모니터링](monitor/programmatically-monitor-replication.md)    

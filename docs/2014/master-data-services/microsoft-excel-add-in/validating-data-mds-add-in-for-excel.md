@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 02a788c5675a763d7285c9986eef94f3621e6a9f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0a460abdab356b4ec20678c2e549605792271fe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478817"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960809"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>데이터 유효성 검사(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 데이터를 게시할 때 두 가지 종류의 유효성 검사가 수행됩니다.  
@@ -34,16 +33,16 @@ ms.locfileid: "65478817"
 ## <a name="validation-statuses"></a>유효성 검사 상태  
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 유효성 검사 상태는 다음과 같습니다.  
   
-|상태|설명|  
+|상태|Description|  
 |------------|-----------------|  
 |Error|행에 있는 하나 이상의 값이 MDS 관리자가 정의한 비즈니스 규칙에 대한 유효성 검사에 실패했습니다.|  
 |유효성 확인 안 됨|행의 값이 비즈니스 규칙에 대해 유효성이 검사되지 않았습니다.|  
-|성공|행의 모든 값이 비즈니스 규칙에 대한 유효성 검사에 통과했습니다.|  
+|Success|행의 모든 값이 비즈니스 규칙에 대한 유효성 검사에 통과했습니다.|  
   
 ## <a name="input-statuses"></a>입력 상태  
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 입력 상태는 다음과 같습니다.  
   
-|상태|설명|  
+|상태|Description|  
 |------------|-----------------|  
 |Error|행에 있는 하나 이상의 값이 길이 또는 데이터 형식 같은 시스템 요구 사항을 충족하지 않습니다. MDS 저장소에서 값이 업데이트되지 않습니다.|  
 |새 행|행의 값이 아직 MDS 저장소에 게시되지 않았습니다.|  

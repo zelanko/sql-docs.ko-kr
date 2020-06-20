@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 1115707b08c3068b27d83e3e292e6baf64e6cbeb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10ea5b8f6145df5caadc229c96ea3de3fda406f5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035681"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047024"
 ---
 # <a name="aliasname-property-sqlserveralias-class"></a>AliasName 속성(SqlServerAlias 클래스)
   서버 연결 별칭의 이름을 가져옵니다.  

@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: e3c2a450-8fd4-44cb-93d8-affe1b65c68e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3f0ea289b75085cd4b7e90531eeaf592979707c2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8c7ca5946228ea05708984fb89ebc603061d983d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704639"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049630"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-methods"></a>OLE DB 테이블 반환 매개 변수 형식 지원(메서드)
   다음 표준 OLE DB 메서드는 테이블 반환 매개 변수를 지원합니다.  
   
-|메서드|테이블 반환 매개 변수 지원|  
+|방법|테이블 반환 매개 변수 지원|  
 |------------|-------------------------------------|  
 |ITableDefinitionWithConstraints::CreateTableWithConstraints|테이블 반환 매개 변수의 형식 정보를 알고 있으며 해당 형식 정보를 기반으로 테이블 반환 매개 변수 행 집합 개체를 인스턴스화하려는 경우 사용합니다.<br /><br /> 자세한 내용은 [테이블 반환 매개 변수 행 집합 만들기](table-valued-parameter-rowset-creation.md)의 "정적 시나리오"를 참조하세요.|  
 |IOpenRowset::OpenRowset|테이블 반환 매개 변수의 형식 정보를 알지 못하며 서버에서 검색된 메타데이터 정보를 기반으로 테이블 반환 매개 변수 행 집합 개체를 인스턴스화하려는 경우 사용합니다.<br /><br /> 자세한 내용은 [테이블 반환 매개 변수 행 집합 만들기](table-valued-parameter-rowset-creation.md)의 "동적 시나리오"를 참조하세요.|  

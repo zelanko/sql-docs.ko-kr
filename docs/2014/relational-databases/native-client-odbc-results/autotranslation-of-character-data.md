@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 134c37bf2e509c44bfe459638e24ad24f4128aa0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cbced1bb62dcacb896a7ff30fdbd6b5aa28f20e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699676"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039586"
 ---
 # <a name="autotranslation-of-character-data"></a>문자 데이터 자동 변환
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **CHAR**, **varchar**또는 **text** 데이터 형식을 사용 하 여 SQL_C_CHAR 선언 된 ANSI 문자 변수와 같은 문자 데이터는 제한 된 수의 문자만 나타낼 수 있습니다. 즉, 문자당 1바이트를 사용하여 저장된 문자 데이터는 246자만 나타낼 수 있습니다. SQL_C_CHAR 변수에 저장된 값은 클라이언트 컴퓨터의 ACP(ANSI 코드 페이지)를 사용하여 해석되고, 서버에서 **char**, **varchar**또는 **text** 데이터 형식을 사용 하 여 저장 된 값은 서버의 ACP를 사용 하 여 평가 됩니다.  

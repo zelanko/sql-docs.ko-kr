@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 07e01e8069cce53d1c37d01cea7513fcbcdd1cb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 523c4fc30151acd3ee4df21f2fdaa2187e702870
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80380754"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011031"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>웹 동기화를 위한 IIS 구성
   이 항목의 절차는 병합 복제를 위해 웹 동기화를 구성하는 두 번째 단계입니다. 게시를 웹 동기화용으로 설정한 다음 이 단계를 수행합니다. 구성 프로세스에 대한 개요는 [웹 동기화 구성](configure-web-synchronization.md)을 참조하십시오. 이 항목의 절차를 완료한 다음에는 구독이 웹 동기화를 사용하도록 구성하는 세 번째 단계를 이어서 수행합니다. 세 번째 단계는 다음 항목에서 설명합니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "80380754"
   
 1.  SSL(Secure Sockets Layer)을 구성합니다. SSL은 IIS와 모든 구독자 간의 통신을 위해 필요합니다.  
   
-2.  설치 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마법사를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하 여 IIS를 실행 하는 컴퓨터에 연결 구성 요소를 설치 합니다. 3단계에서 언급한 웹 동기화 구성 마법사를 사용하려면 IIS를 실행하는 컴퓨터에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 도 설치해야 합니다.  
+2.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 사용 하 여 IIS를 실행 하는 컴퓨터에 연결 구성 요소를 설치 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 3단계에서 언급한 웹 동기화 구성 마법사를 사용하려면 IIS를 실행하는 컴퓨터에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 도 설치해야 합니다.  
   
 3.  IIS를 실행하는 컴퓨터를 웹 동기화용으로 구성합니다. 컴퓨터를 수동으로 구성할 수 있지만 웹 동기화 구성 마법사를 사용하는 것이 좋습니다.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "80380754"
   
     1.  **시작**을 클릭한 다음 **실행**을 클릭합니다.  
   
-    2.  **열기** 상자에를 입력 `inetmgr`한 다음 **확인**을 클릭 합니다.  
+    2.  **열기** 상자에를 입력 한 `inetmgr` 다음 **확인**을 클릭 합니다.  
   
 3.  IIS 인증서 마법사를 실행합니다.  
   
@@ -91,7 +90,7 @@ ms.locfileid: "80380754"
   
 1.  IIS를 실행하는 컴퓨터에 관리자로 로그온합니다.  
   
-2.  SelfSSL을 다운로드하고 설치합니다. 기본적으로 이 애플리케이션은 \<*드라이브*&gt;:\Program Files\IIS Resources\SelfSSL에 설치됩니다. 애플리케이션 및 설명서 바로 가기는 \<*드라이브*&gt;:\Documents and Settings\All Users\Start Menu\Programs\IIS Resources\SelfSSL에 복사됩니다.  
+2.  SelfSSL을 다운로드하고 설치합니다. 응용 프로그램은 기본적으로 다음 위치에 설치 됩니다 \<*drive*> . Files\IIS resources\selfssl에 응용 프로그램 및 설명서 바로 가기는 \<*drive*> : \Documents and Settings\All Users\Start Menu\Programs\IIS resources\selfssl에에 복사 됩니다.  
   
 3.  SelfSSL을 실행합니다.  
   
@@ -100,7 +99,7 @@ ms.locfileid: "80380754"
         > [!NOTE]  
         >  기본적으로 SelfSSL에서 설치한 인증서는 7일 동안 유효합니다.  
   
-    -   하나 이상의 매개 변수에 대한 값을 지정하려면 **시작**, **실행**을 차례로 클릭합니다. **열기** 상자에를 입력 `cmd`한 다음 **확인**을 클릭 합니다. SelfSSL 설치 디렉터리를 찾고 `SelfSSL`을 입력한 다음 하나 이상의 매개 변수에 대해 값을 지정합니다. 매개 변수 목록을 보려면 `SelfSSL -?`를 입력합니다.  
+    -   하나 이상의 매개 변수에 대한 값을 지정하려면 **시작**, **실행**을 차례로 클릭합니다. **열기** 상자에를 입력 한 `cmd` 다음 **확인**을 클릭 합니다. SelfSSL 설치 디렉터리를 찾고 `SelfSSL`을 입력한 다음 하나 이상의 매개 변수에 대해 값을 지정합니다. 매개 변수 목록을 보려면 `SelfSSL -?`를 입력합니다.  
   
 ## <a name="installing-connectivity-components-and-sql-server-management-studio"></a>연결 구성 요소 및 SQL Server Management Studio 설치  
   
@@ -155,7 +154,7 @@ ms.locfileid: "80380754"
   
     1.  **별칭** 상자에 가상 디렉터리의 별칭을 입력합니다.  
   
-    2.  **경로** 상자에 가상 디렉터리의 경로를 입력합니다. 예를 들어 **별칭** 상자에 `websync1` 를 입력 한 경우 **경로** 상자 `C:\Inetpub\wwwroot\websync1` 에를 입력 합니다. **다음**을 클릭합니다.  
+    2.  **경로** 상자에 가상 디렉터리의 경로를 입력합니다. 예를 들어 `websync1` **별칭** 상자에를 입력 한 경우 `C:\Inetpub\wwwroot\websync1` **경로** 상자에를 입력 합니다. **다음**을 클릭합니다.  
   
     3.  두 대화 상자에서 모두 **예**를 클릭합니다. 새 폴더가 생성되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ISAPI(Internet Server API) DLL이 복사됩니다. .  
   
@@ -179,11 +178,11 @@ ms.locfileid: "80380754"
   
 11. IIS를 실행하는 컴퓨터에서 64비트 버전의 Windows를 실행 중인 경우 replisapi.dll을 해당 디렉터리에 복사해야 합니다.  
   
-    1.  **시작**을 클릭한 다음 **실행**을 클릭합니다. **열기** 상자에를 입력 `iisreset`한 다음 **확인**을 클릭 합니다.  
+    1.  **시작**을 클릭한 다음 **실행**을 클릭합니다. **열기** 상자에를 입력 한 `iisreset` 다음 **확인**을 클릭 합니다.  
   
     2.  IIS를 중지했다가 다시 시작한 다음 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\replisapi에 있는 replisapi.dll을 6b단계에서 지정한 디렉터리로 복사합니다.  
   
-    3.  **시작**을 클릭한 다음 **실행**을 클릭합니다. **열기** 상자에를 입력 `cmd`한 다음 **확인**을 클릭 합니다.  
+    3.  **시작**을 클릭한 다음 **실행**을 클릭합니다. **열기** 상자에를 입력 한 `cmd` 다음 **확인**을 클릭 합니다.  
   
     4.  6b단계에서 지정한 디렉터리에서 다음 명령을 실행합니다.  
   
@@ -194,7 +193,7 @@ ms.locfileid: "80380754"
   
 #### <a name="to-install-and-configure-the-sql-server-replication-listener"></a>SQL Server 복제 수신기를 설치 및 구성하려면  
   
-1.  IIS를 실행하는 컴퓨터에 replisapi.dll을 포함시킬 파일 디렉터리를 만듭니다. 원하는 위치에 이 디렉터리를 만들 수 있지만 \<*드라이브*>:\Inetpub 디렉터리 아래에 만드는 것이 좋습니다. 예를 들어 \<*드라이브*>:\Inetpub\SQLReplication\\ 디렉터리를 만듭니다.  
+1.  IIS를 실행하는 컴퓨터에 replisapi.dll을 포함시킬 파일 디렉터리를 만듭니다. 원하는 위치에 디렉터리를 만들 수 있지만: \Inetpub 디렉터리 아래에 디렉터리를 만드는 것이 좋습니다 \<*drive*> . 예를 들어, \Inetpub\SQLReplication 디렉터리를 만듭니다 \<*drive*> \\ .  
   
     > [!IMPORTANT]  
     >  이 디렉터리는 FAT 파일 시스템이 아닌 NTFS 파일 시스템 파티션에 만드는 것이 가장 좋습니다. NTFS 파일 시스템을 사용하면 NTFS 파일 시스템 권한을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에 액세스할 수 있는 사용자를 정확하게 제어할 수 있습니다.  
@@ -203,7 +202,7 @@ ms.locfileid: "80380754"
   
 3.  replisapi.dll을 등록합니다.  
   
-    1.  **시작**을 클릭한 다음 **실행**을 클릭합니다. **열기** 상자에를 입력 `cmd`한 다음 **확인**을 클릭 합니다.  
+    1.  **시작**을 클릭한 다음 **실행**을 클릭합니다. **열기** 상자에를 입력 한 `cmd` 다음 **확인**을 클릭 합니다.  
   
     2.  1단계에서 만든 디렉터리에서 다음 명령을 실행합니다.  
   
@@ -224,7 +223,7 @@ ms.locfileid: "80380754"
 ## <a name="setting-permissions-for-the-sql-server-replication-listener"></a>SQL Server 복제 수신기에 대한 사용 권한 설정  
  구독자가 IIS를 실행하는 컴퓨터에 연결하면 IIS 구성 시 지정한 인증 유형을 사용하여 해당 구독자가 인증됩니다. IIS에서는 구독자를 인증한 다음 해당 구독자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제를 호출할 수 있는 권한이 있는지 여부를 확인합니다. replisapi.dll에 대한 권한을 설정하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제를 호출할 수 있는 사용자를 제어합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에 무단으로 액세스하지 못하도록 하려면 사용 권한을 적절하게 구성해야 합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 수신기를 실행할 계정에 대해 최소 사용 권한을 구성하려면 다음 절차를 완료합니다. 이 절차의 단계는 IIS 6.0 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 실행에 적용 됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 수신기를 실행할 계정에 대해 최소 사용 권한을 구성하려면 다음 절차를 완료합니다. 이 절차의 단계는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] IIS 6.0 실행에 적용 됩니다.  
   
  다음 단계를 수행한 다음에는 PAL(게시 액세스 목록)에 필요한 로그인을 추가합니다. PAL에 대한 자세한 내용은 [게시자 보안 설정](security/secure-the-publisher.md)을 참조하세요.  
   
@@ -276,7 +275,7 @@ ms.locfileid: "80380754"
   
     1.  **시작**을 클릭한 다음 **실행**을 클릭합니다.  
   
-    2.  **열기** 상자에를 입력 `inetmgr`한 다음 **확인**을 클릭 합니다.  
+    2.  **열기** 상자에를 입력 한 `inetmgr` 다음 **확인**을 클릭 합니다.  
   
     3.  **인터넷 정보 서비스(IIS) 관리자**에서 **로컬 컴퓨터** 노드를 확장합니다.  
   
@@ -290,7 +289,7 @@ ms.locfileid: "80380754"
   
     2.  만든 애플리케이션 풀을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-    3.  ApplicationPoolName> 속성 대화 상자의 **id** 탭에서 **구성 가능**을 클릭 합니다. ** \<**  
+    3.  ** \<ApplicationPoolName> 속성** 대화 상자의 **Id** 탭에서 **구성 가능**을 클릭 합니다.  
   
     4.  **사용자 이름** 및 **암호** 필드에 1단계에서 만든 계정과 암호를 입력합니다.  
   
@@ -302,7 +301,7 @@ ms.locfileid: "80380754"
   
     2.  웹 동기화에 사용 중인 웹 사이트를 확장하고 웹 동기화를 위해 만든 가상 디렉터리를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-    3.  **\<VirtualDirectoryName&gt; 속성** 대화 상자의 **가상 디렉터리** 탭에 있는 **애플리케이션 풀** 드롭다운 목록에서 5단계에서 만든 애플리케이션 풀을 선택합니다.  
+    3.  ** \<VirtualDirectoryName> 속성** 대화 상자의 **가상 디렉터리** 탭에 있는 **응용 프로그램 풀** 드롭다운 목록에서 5 단계에서 만든 응용 프로그램 풀을 선택 합니다.  
   
     4.  **확인**을 클릭합니다.  
   
@@ -347,7 +346,7 @@ ms.locfileid: "80380754"
     > [!NOTE]  
     >  인증서는 사용자에 대해 설치되므로 IIS와 동기화할 각 사용자에 대해 이 프로세스를 수행해야 합니다.  
   
-4.  **\<서버 이름>에 연결** 대화 상자에서 병합 에이전트가 IIS에 연결하는 데 사용할 로그인 및 암호를 지정합니다. 이러한 자격 증명은 새 구독 마법사에서도 지정할 수 있습니다.  
+4.  **연결 대상 \<ServerName> ** 대화 상자에서 병합 에이전트 IIS에 연결 하는 데 사용할 로그인 및 암호를 지정 합니다. 이러한 자격 증명은 새 구독 마법사에서도 지정할 수 있습니다.  
   
 5.  **SQL Websync 진단 정보**라는 Internet Explorer 창에서 페이지의 각 **상태** 열 값이 **SUCCESS**인지 확인합니다.  
   

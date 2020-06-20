@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 13afe8de4806b76328288c0d910a244e293109c5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3b8d1de2ad5e95ea83d323c6e5e772f31f59c549
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704390"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049639"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>SQL Server Native Client에서 연결 문자열 키워드 사용
   일부 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client API에서는 연결 문자열을 사용하여 연결 특성을 지정합니다. 연결 문자열은 키워드와 연관된 값의 목록이며 각 키워드는 특정 연결 특성을 식별합니다.  
@@ -48,12 +47,12 @@ ms.locfileid: "82704390"
   
  다음 표에서는 ODBC 연결 문자열에서 사용할 수 있는 키워드에 대해 설명합니다.  
   
-|키워드|설명|  
+|키워드|Description|  
 |-------------|-----------------|  
 |`Addr`|"Address"에 대한 동의어입니다.|  
 |`Address`|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 서버의 네트워크 주소입니다. `Address`는 일반적으로 서버의 네트워크 이름이지만 파이프, IP 주소나 TCP/IP 포트 및 소켓 주소와 같은 다른 이름일 수도 있습니다.<br /><br /> IP 주소를 지정하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자에서 TCP/IP 또는 명명된 파이프 프로토콜이 설정되어 있는지 확인합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용할 때 ODBC 연결 문자열에서 `Address` 값이 `Server`에 전달된 값보다 우선합니다. 또한 `Address=;`이면 `Server` 키워드에 지정된 서버에 연결하지만 `Address= ;, Address=.;`, `Address=localhost;` 및 `Address=(local);`이면 항상 로컬 서버에 연결합니다.<br /><br /> `Address` 키워드에 대한 전체 구문은 다음과 같습니다.<br /><br /> [*protocol* `:` ]*Address*[ `,` *port &#124;\pipe\pipename*]<br /><br /> *프로토콜* 은 `tcp` (tcp/ip), `lpc` (공유 메모리) 또는 `np` (명명 된 파이프) 일 수 있습니다. 프로토콜에 대한 자세한 내용은 [클라이언트 프로토콜 구성](../../../database-engine/configure-windows/configure-client-protocols.md)을 참조하세요.<br /><br /> *프로토콜과* `Network` 키워드가 모두 지정 되지 않은 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 Configuration Manager에 지정 된 프로토콜 순서를 사용 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 합니다.<br /><br /> *port*는 지정한 서버에서 연결할 포트입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 포트 1433을 사용합니다.|  
 |`AnsiNPW`|"yes"인 경우 드라이버는 NULL 비교, 문자 데이터 패딩, 경고 및 NULL 연결 처리에 ANSI 정의 동작을 사용합니다. "no"인 경우 ANSI 정의 동작이 표시되지 않습니다. ANSI NPW 동작에 대 한 자세한 내용은 [ISO 옵션의 효과](../../native-client-odbc-queries/executing-statements/effects-of-iso-options.md)를 참조 하세요.|  
-|`APP`|[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md) 를 호출 하는 응용 프로그램의 이름입니다 (선택 사항). 지정 된 경우이 값은 **program_name** **sysprocesses** 열에 저장 되 고 [sp_who](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql) 및 [APP_NAME](/sql/t-sql/functions/app-name-transact-sql) 함수에서 반환 됩니다.|  
+|`APP`|[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md) 를 호출 하는 응용 프로그램의 이름입니다 (선택 사항). 지정 된 경우이 값은 **program_name** **master.dbo.sys프로세스** 열에 저장 되며 [sp_who](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql) 및 [APP_NAME](/sql/t-sql/functions/app-name-transact-sql) 함수에서 반환 됩니다.|  
 |`ApplicationIntent`|서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 가능한 값은 `ReadOnly` 및 `ReadWrite`입니다. 예: ApplicationIntent = ReadOnly<br /><br /> 기본값은 `ReadWrite`입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대 한 Native Client의 지원에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] [고가용성, 재해 복구를 위한 SQL Server Native Client 지원](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)을 참조 하세요.|  
 |`AttachDBFileName`|연결할 수 있는 데이터베이스에 대한 주 파일의 이름입니다. 전체 경로를 포함하여 C 문자열 변수를 사용할 경우 다음과 같이 모든 \ 문자를 이스케이프합니다.<br /><br /> `AttachDBFileName=c:\\MyFolder\\MyDB.mdf`<br /><br /> 이 데이터베이스는 연결되어 해당 연결에 대한 기본 데이터베이스가 됩니다. 을 사용 하려면 `AttachDBFileName` [SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md) database 매개 변수 또는 SQL_COPT_CURRENT_CATALOG 연결 특성에도 데이터베이스 이름을 지정 해야 합니다. 데이터베이스가 이전에 연결된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 이 데이터베이스를 다시 연결하지 않으며 연결된 데이터베이스를 연결 기본값으로 사용합니다.|  
 |`AutoTranslate`|"yes"인 경우 클라이언트와 서버 간에 전송된 ANSI 문자열을 유니코드를 통한 변환으로 변환하여 클라이언트와 서버 코드 페이지 간의 확장 문자 일치에서 문제를 최소화합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **CHAR**, **varchar**또는 **text** 변수, 매개 변수 또는 열로 전송 된 클라이언트 SQL_C_CHAR 데이터는 클라이언트의 acp (ANSI 코드 페이지)를 사용 하 여 문자에서 유니코드로 변환 된 후 서버의 acp를 사용 하 여 유니코드에서 문자로 변환 됩니다.<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]클라이언트 SQL_C_CHAR 변수로 전송 된 **char**, **varchar**또는 **text** 데이터는 server acp를 사용 하 여 문자에서 유니코드로 변환 된 다음 클라이언트 acp를 사용 하 여 유니코드에서 문자로 변환 됩니다.<br /><br /> 이러한 변환은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 의해 클라이언트에서 수행됩니다. 이를 위해서는 서버에 사용된 것과 동일한 ACP(ANSI 코드 페이지)를 클라이언트에서 사용할 수 있어야 합니다.<br /><br /> 이러한 설정은 다음 전송에 대해 발생하는 변환에는 영향을 미치지 않습니다.<br /><br /> -서버에서 **char**, **varchar**또는 **text** 로 전송 된 유니코드 SQL_C_WCHAR 클라이언트 데이터입니다.<br />-   클라이언트에서 유니코드 SQL_C_WCHAR 변수로 전송 된 **char**, **varchar**또는 **text** 서버 데이터입니다.<br />-ANSI SQL_C_CHAR 서버에서 유니코드 **nchar**, **nvarchar**또는 **ntext** 로 전송 되는 클라이언트 데이터입니다.<br />-유니코드 **nchar**, **nvarchar**또는 **ntext** 서버 데이터를 클라이언트의 ANSI SQL_C_CHAR 변수로 보냅니다.<br /><br /> "no"인 경우 문자 변환이 수행되지 않습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버는 서버의 **CHAR**, **varchar**또는 **text** 변수, 매개 변수 또는 열로 전송 된 클라이언트 ANSI 문자 SQL_C_CHAR 데이터를 변환 하지 않습니다. 서버에서 클라이언트의 SQL_C_CHAR 변수로 전송 된 **char**, **varchar**또는 **text** 데이터에 대해서는 변환이 수행 되지 않습니다.<br /><br /> 클라이언트와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 서로 다른 ACP를 사용하는 경우 확장 문자가 잘못 해석될 수 있습니다.|  
@@ -85,7 +84,7 @@ ms.locfileid: "82704390"
 |`TrustServerCertificate`|`Encrypt`에서 사용할 경우 자체 서명된 서버 인증서를 통한 암호화를 사용합니다.|  
 |`UID`|유효한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 계정입니다. Windows 인증을 사용할 경우 UID를 지정할 필요가 없습니다.|  
 |`UseProcForPrepare`|이 키워드는 더 이상 사용되지 않으며 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 이 설정을 무시합니다.|  
-|`WSID`|워크스테이션 ID로, 일반적으로 애플리케이션이 있는 컴퓨터의 네트워크 이름입니다(옵션). 지정 된 경우이 값은 **sysprocesses** 열 **호스트 이름** 에 저장 되 고 [sp_who](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql) 및 [HOST_NAME](/sql/t-sql/functions/host-name-transact-sql) 함수에 의해 반환 됩니다.|  
+|`WSID`|워크스테이션 ID로, 일반적으로 애플리케이션이 있는 컴퓨터의 네트워크 이름입니다(옵션). 지정 하는 경우이 값은master.dbo.sys를 **처리** 하는 열 **호스트 이름** 에 저장 되 고 [sp_who](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql) 및 [HOST_NAME](/sql/t-sql/functions/host-name-transact-sql) 함수에 의해 반환 됩니다.|  
   
  **국가별 변환 설정은 통화, 숫자, 날짜 및 시간 데이터 형식에 적용 됩니다. 변환 설정은 출력 변환에만 적용할 수 있으며 통화, 숫자, 날짜 또는 시간 값이 문자열로 변환 된 경우에만 표시 됩니다**.  
   

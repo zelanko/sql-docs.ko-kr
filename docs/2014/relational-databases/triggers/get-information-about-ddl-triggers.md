@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8d5e59264036380f6c8b5c9e73df5a6700c4b1ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9cd71d188c2f53bd9872359199c07d700688552d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62698212"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014464"
 ---
 # <a name="get-information-about-ddl-triggers"></a>DDL 트리거에 대한 정보 가져오기
   이 섹션에 나열된 카탈로그 뷰를 사용하여 DDL 트리거에 대한 정보를 가져올 수 있습니다.  

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 60d7224a764cd0ab506d03cb154cb06456a8c408
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 825482d26d8b1fb071e802534a3166e61a4e20b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704210"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005969"
 ---
 # <a name="sparse-columns-support-ole-db"></a>스파스 열 지원(OLE DB)
   이 항목에서는 스파스 열에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 지원에 대해 설명합니다. 스파스 열에 대한 자세한 내용은 [Sparse Columns Support in SQL Server Native Client](../features/sparse-columns-support-in-sql-server-native-client.md)을 참조하십시오. 샘플은 [열 및 스파스 열의 카탈로그 메타데이터 표시 &#40;OLE DB&#41;](../../native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)를 참조하세요.  
@@ -47,7 +46,7 @@ ms.locfileid: "82704210"
 ## <a name="ole-db-support-for-sparse-columns"></a>스파스 열에 대한 OLE DB 지원  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서는 다음과 같은 OLE DB 인터페이스가 스파스 열을 지원하도록 수정되었습니다.  
   
-|유형 또는 멤버 함수|설명|  
+|유형 또는 멤버 함수|Description|  
 |-----------------------------|-----------------|  
 |IColumnsInfo::GetColumnsInfo|`column_set` *DwFlags*의 열에 대해 새 DBCOLUMNFLAGS 플래그 값이 설정 DBCOLUMNFLAGS_SS_ISCOLUMNSET.<br /><br /> DBCOLUMNFLAGS_WRITE가 `column_set` 열에 대해 설정됩니다.|  
 |IColumsRowset::GetColumnsRowset|새 DBCOLUMNFLAGS 플래그 값인 DBCOLUMNFLAGS_SS_ISCOLUMNSET이 DBCOLUMN_FLAGS의 `column_set` 열에 대해 설정됩니다.<br /><br /> DBCOLUMN_COMPUTEMODE가 `column_set` 열에 대해 DBCOMPUTEMODE_DYNAMIC으로 설정됩니다.|  

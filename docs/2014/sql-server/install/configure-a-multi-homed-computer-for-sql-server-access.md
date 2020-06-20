@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97ba04b8d41c3e5ca4927abb53cf27cfa3013fcd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211508"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036987"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>SQL Server 액세스를 허용하도록 다중 홈 컴퓨터 구성
   한 서버에서 두 개 이상의 네트워크 또는 네트워크 서브넷으로의 연결을 제공해야 할 경우 다중 홈 컴퓨터를 사용하는 것이 일반적인 시나리오입니다. 이 컴퓨터는 경계 네트워크(DMZ(완충 영역) 또는 스크린된 서브넷이라고도 함)에 있는 경우가 많습니다. 이 항목에서는 다중 홈 환경에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 네트워크 연결을 제공하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 고급 보안이 포함된 Windows 방화벽을 구성하는 방법에 대해 설명합니다.  
@@ -55,7 +54,7 @@ ms.locfileid: "68211508"
   
 #### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>컴퓨터에서 사용할 수 있는 IP 주소를 확인하려면  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치 된 컴퓨터에서 **시작**, **실행**을 차례로 클릭 하 고를 입력 `cmd` 한 다음 [!INCLUDE[clickOK](../../includes/clickok-md.md)]을 입력 합니다.  
+1.  가 설치 된 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **시작**, **실행**을 차례로 클릭 하 고를 입력 한 다음을 입력 `cmd` [!INCLUDE[clickOK](../../includes/clickok-md.md)] 합니다.  
   
 2.  명령 프롬프트 창에 `ipconfig,`을 입력한 다음 Enter 키를 누르면 해당 컴퓨터에서 사용할 수 있는 IP 주소가 나열됩니다.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "68211508"
   
 1.  **시작**을 클릭하고 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 선택한 다음 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자**를 클릭합니다.  
   
-2.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자**의 콘솔 창에서 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크 구성**, **\<인스턴스 이름>에 대한 프로토콜**을 차례로 확장한 다음 **TCP/IP**를 두 번 클릭합니다.  
+2.  ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**의 콘솔 창에서 ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크 구성**, **에 대 한 \<instance name> 프로토콜 **을 차례로 확장 한 다음 **tcp/ip**를 두 번 클릭 합니다.  
   
 3.  **TCP/IP 속성** 대화 상자의 **IP 주소** 탭에 여러 개의 IP 주소가 **IP1**, **IP2**의 형식으로 **IPAll**까지 표시됩니다. 이러한 주소에는 루프백 어댑터의 IP 주소인 127.0.0.1이 포함됩니다. 컴퓨터에 구성된 각 IP 주소에 대한 추가 IP 주소가 나타납니다.  
   
@@ -85,7 +84,7 @@ ms.locfileid: "68211508"
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 컴퓨터에서 관리자로 로그온합니다.  
   
-2.  **시작**, **실행**을 차례로 클릭 하 `wf.msc`고를 입력 한 다음 **확인**을 클릭 합니다.  
+2.  **시작**, **실행**을 차례로 클릭 하 `wf.msc` 고를 입력 한 다음 **확인**을 클릭 합니다.  
   
 3.  **사용자 계정 컨트롤** 대화 상자에서 **계속** 을 클릭하여 고급 보안이 포함된 Windows 방화벽 스냅인을 관리자 자격 증명으로 엽니다.  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7c3186a-9a8c-45d8-ab34-05beec4c26dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7e00ceeae68ccc791c3680e029e13844fa6ec683
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a655976f925f83d8c9446cab99016f32ab14887
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68731068"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047689"
 ---
 # <a name="define-and-modify-a-column-filter"></a>열 필터 정의 및 수정
   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 열 필터를 정의하고 수정하는 방법에 대해 설명합니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "68731068"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  새 게시 마법사의 **아티클** 페이지에서 열 필터를 정의합니다. 새 게시 마법사 사용 방법에 대한 자세한 내용은 [게시 만들기](create-a-publication.md)를 참조하세요.  
   
- **게시 속성 - \<게시>** 대화 상자의 **아티클** 페이지에서 열 필터를 정의하고 수정합니다. 게시 및 아티클 속성에 대한 자세한 내용은 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요.  
+ **게시 속성- \<Publication> ** 대화 상자의 **아티클** 페이지에서 열 필터를 정의 하 고 수정 합니다. 게시 및 아티클 속성에 대한 자세한 내용은 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="to-define-a-column-filter"></a>열 필터를 정의하려면  
   
@@ -56,7 +55,7 @@ ms.locfileid: "68731068"
   
 #### <a name="to-modify-column-filtering"></a>열 필터링을 수정하려면  
   
-1.  **게시 속성 - \<게시>** 대화 상자의 **아티클** 페이지에 있는 **게시할 개체** 창에서 필터링할 테이블을 확장합니다.  
+1.  게시 **속성- \<Publication> ** 대화 상자의 **아티클** 페이지에 있는 **게시할 개체** 창에서 필터링 할 테이블을 확장 합니다.  
   
 2.  필터링할 각 열 옆에 있는 확인란의 선택은 취소하고 아티클에 포함시킬 각 열에 대한 확인란은 선택합니다.  
   

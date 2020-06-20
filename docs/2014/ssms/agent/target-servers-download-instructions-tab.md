@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 289faf0f637e5e4d4d84e7e7150189a37c5f59f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39acaf350a4d63fc8896b3a55ca88fe4ed91461f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245340"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067487"
 ---
 # <a name="target-servers-download-instructions-tab"></a>대상 서버(다운로드 명령 탭)
   이 페이지를 사용하여 하나 이상의 대상 서버에 대한 다운로드 명령을 표시하고 업데이트할 수 있습니다.  
@@ -26,7 +25,7 @@ ms.locfileid: "63245340"
  **대상 서버**  
  명령을 확인하거나 수정할 서버를 선택합니다.  
   
- **작업**  
+ **직함**  
  명령을 확인하거나 수정할 작업을 선택합니다.  
   
  **대상 서버**  
@@ -50,7 +49,7 @@ ms.locfileid: "63245340"
  **Delete**  
  선택한 다운로드 명령을 삭제합니다.  
   
- **해제**  
+ **지우기**  
  선택한 다운로드 명령의 상태를 지웁니다.  
   
 ## <a name="see-also"></a>참고 항목  

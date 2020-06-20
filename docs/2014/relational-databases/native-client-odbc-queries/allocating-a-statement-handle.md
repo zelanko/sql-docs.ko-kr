@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a7cce55becbe02982fcf3f7ffaf6f18954735499
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fac0802b474f38f6a6c314dd727fa335d14598d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705199"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018698"
 ---
 # <a name="allocating-a-statement-handle"></a>문 핸들 할당
   애플리케이션에서 문을 실행하려면 먼저 문 핸들을 할당해야 합니다. *HandleType* 매개 변수가 SQL_HANDLE_STMT로 설정 되 고 연결 핸들을 가리키는 *InputHandle* **를 호출 하 여이** 를 수행 합니다.  

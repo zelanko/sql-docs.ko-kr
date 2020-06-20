@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4c789ea6cececcfacbc428fda393c1c13684765
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e1f29d8e9edcccf093ac85cc134b5b92b9c2173
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704850"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061668"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>패싯 속성 대화 상자, 일반 페이지
   이 대화 상자를 사용하여 정책 기반 관리 패싯의 속성을 볼 수 있습니다. 서버, 데이터베이스 또는 테이블과 같은 하나 이상의 대상 유형에 각 패싯을 적용할 수 있습니다. 이 페이지를 사용하여 이 패싯과 관련된 대상 유형을 볼 수 있습니다. 패싯의 속성은 패싯이 만들어질 때 정의되며 이 페이지를 사용하여 변경할 수 없습니다.  

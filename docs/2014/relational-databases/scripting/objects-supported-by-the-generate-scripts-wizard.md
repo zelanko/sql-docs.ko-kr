@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 071eb2cb-f073-41ca-9f4d-11d3b8803495
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1cfee492433da4a9812a6961d34b741cf8bff089
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5ddc1da0d2f87fc12dfbe034a683802f54b7d34f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703817"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009749"
 ---
 # <a name="objects-supported-by-the-generate-scripts-wizard"></a>스크립트 생성 마법사에 지원되는 개체
   스크립트 생성 및 게시 마법사는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 지원되는 개체의 하위 집합을 지원합니다.  

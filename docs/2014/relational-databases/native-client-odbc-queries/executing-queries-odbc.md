@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d935bcba-8ce6-4159-8395-6c86431602ad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 597d138832ab5234d0059c25e91fd4d830be255c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6370b5c7d70346ccd801d1800c8411f93d897e9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82711085"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018618"
 ---
 # <a name="executing-queries-odbc"></a>쿼리 실행(ODBC)
   ODBC 애플리케이션은 연결 핸들을 초기화하고 데이터 원본에 연결한 후 연결 핸들에 하나 이상의 문 핸들을 할당합니다. 그런 다음 응용 프로그램은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문 핸들에서 문을 실행할 수 있습니다. SQL 문을 실행하는 이벤트의 일반적인 순서는 다음과 같습니다.  

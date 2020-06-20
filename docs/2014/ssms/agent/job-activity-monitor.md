@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 11f2182c-5f71-46f8-8d2b-74f0fc48f2d6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f34b06d90bfb8e028004beb03c3f4b9a87345c0d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58f04e83541f218a4cdcfbd99d6b3de12bf38b2f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211374"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064983"
 ---
 # <a name="job-activity-monitor"></a>작업 활동 모니터
   이 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 현재 활동을 볼 수 있습니다. **필터** 를 클릭하여 표시되는 작업의 수를 제한할 수 있습니다. **에이전트 작업 활동** 표는 읽기 전용입니다. 표를 정렬하려면 열 머리글을 클릭합니다. 작업을 수정하려면 작업을 두 번 클릭하여 **작업 속성** 대화 상자를 엽니다. 표에서 작업을 마우스 오른쪽 단추로 클릭하여 모든 작업 단계의 실행을 시작하거나, 특정 작업 단계에서 시작하거나, 작업을 활성화 또는 비활성화하거나, 작업을 새로 고치거나, 작업을 삭제하거나, 작업 기록이나 작업 속성을 확인하는 등의 작업을 수행할 수 있습니다. 현재 정보로 표를 업데이트하려면 **새로 고침** 을 클릭합니다.  
@@ -27,7 +26,7 @@ ms.locfileid: "68211374"
  **이름**  
  작업의 이름입니다.  
   
- **사용**  
+ **Enabled**  
  작업을 사용할지(**예**) 또는 사용하지 않을지(**아니요**)를 지정합니다.  
   
  **상태** <sup>1</sup>  
@@ -48,10 +47,10 @@ ms.locfileid: "68211374"
  **실행 가능**  
  작업을 실행할 수 있으면**예** 이고 작업을 실행할 수 없으면 **아니요** 입니다. 단계나 대상 서버가 없는 경우 작업을 실행할 수 없습니다.  
   
- **예약**  
+ **예약됨**  
  작업이 작업 일정에 할당되어 있으면**예** 이고, 그렇지 않으면 **아니요** 입니다.  
   
- <sup>1</sup> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sysadmin 고정 서버 역할과 서버 관리자 그룹의 멤버만이 열의 값을 볼 수 있습니다. SQLAgentOperatorRole 역할의 멤버는 이 열의 값을 볼 수 없습니다.  
+ <sup>1</sup> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Sysadmin 고정 서버 역할과 서버 관리자 그룹의 멤버만이 열의 값을 볼 수 있습니다. SQLAgentOperatorRole 역할의 멤버는 이 열의 값을 볼 수 없습니다.  
   
 #### <a name="to-open-the-job-activity-monitor"></a>작업 활동 모니터를 열려면  
   

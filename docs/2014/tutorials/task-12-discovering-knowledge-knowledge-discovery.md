@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6dd54475ee63b2f6ef5e1b56b94c11aafd5996ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0bad2760a5dc9b16b24d75bb35617759543205f3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484680"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064775"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>태스크 12: 지식 검색(기술 자료 검색)
   이 작업에서는 **공급자 ID** 및 **공급자 이름** 도메인에 대 한 **기술 자료 검색** 작업을 수행 합니다. 이 시나리오에서 기술 자료 검색 프로세스는 주로 이러한 두 도메인의 값을 가져옵니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "65484680"
   
 2.  **데이터 원본**에 대해 **Excel 파일** 을 선택 합니다.  
   
-3.  **찾아보기**를 클릭 하 고 **Suppliers .xls**를 찾아 선택한 다음 **열기**를 클릭 합니다.  
+3.  **찾아보기**를 클릭 하 고 **Suppliers.xls**찾아서 선택한 다음 **열기**를 클릭 합니다.  
   
 4.  검색할 **공급자를** **워크시트**에 대해 선택 합니다.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "65484680"
   
 6.  **다음** 을 클릭 하 여 **검색** 페이지로 전환 합니다.  
   
-7.  **검색 페이지에서** **시작** 을 클릭 하 여 검색 프로세스를 시작 합니다. **공급자 .xls** 파일의 공급자 이름 및 공급자 **이름** 열에 **대 한 검색이** 수행 됩니다. **공급자 ID** 및 **공급자 이름** 도메인은 검색에서 가져온 정보로 채워야 합니다.  
+7.  **검색 페이지에서** **시작** 을 클릭 하 여 검색 프로세스를 시작 합니다. 검색은 **Suppliers.xls** 파일의 공급자 **SupplierID** 이름 및 **공급자 이름** 열에 대해 수행 됩니다. **공급자 ID** 및 **공급자 이름** 도메인은 검색에서 가져온 정보로 채워야 합니다.  
   
      ![검색 프로세스의 검색 페이지](../../2014/tutorials/media/et-discoveringknowledge-03.jpg "검색 프로세스의 검색 페이지")  
   
