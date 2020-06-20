@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b97c5099-1039-4e6a-95df-14e1a34af344
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f76a48481066ff30bbd5a825d477d0e6309abaca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03b6023bc432b21472df62e96f9d50739e2251a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204966"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000732"
 ---
 # <a name="stop-a-query-visual-database-tools"></a>쿼리 중지(Visual Database Tools)
   쿼리에 시간이 너무 오래 걸리거나 예상한 결과를 반환하지 않은 경우 아직 완료되지 않았으면 쿼리를 중지할 수 있습니다.  

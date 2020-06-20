@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 37b267c22458442e3c1c1572c2740b6595918fca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e9072a68dd3179e5900fda06d4fea58b484a37e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487732"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002598"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
   이 자습서에서는 시나리오를 통해 소유권 체인 및 사용자 컨텍스트 전환과 관련된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 보안 개념을 설명합니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "81487732"
  이 예제의 각 코드 블록에 대한 설명도 함께 나와 있습니다. 전체 예제를 복사하려면 이 자습서 끝에 있는 [전체 예제](#CompleteExample) 를 참조하세요.  
   
 ## <a name="1-configure-the-environment"></a>1. 환경 구성  
- 및 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 다음 코드를 사용 하 여 `AdventureWorks2012` 데이터베이스를 열고 `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 사용 하 여 dbo 사용자가 컨텍스트로 표시 되는지 확인 합니다.  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]및 다음 코드를 사용 하 여 데이터베이스를 열고 `AdventureWorks2012` 문을 사용 하 여 `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] dbo 사용자가 컨텍스트로 표시 되는지 확인 합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -95,7 +94,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- GRANT 문에 대한 자세한 내용은 [GRANT&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)를 참조하세요. 저장 프로시저에 대한 자세한 내용은 [저장 프로시저&#40;데이터베이스 엔진&#41;](stored-procedures/stored-procedures-database-engine.md)를 참조하세요. 모든 [!INCLUDE[ssDE](../includes/ssde-md.md)] 사용 권한에 대 한 포스터는을 [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)참조 하세요.  
+ GRANT 문에 대한 자세한 내용은 [GRANT&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)를 참조하세요. 저장 프로시저에 대한 자세한 내용은 [저장 프로시저&#40;데이터베이스 엔진&#41;](stored-procedures/stored-procedures-database-engine.md)를 참조하세요. 모든 사용 권한에 대 한 포스터는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 을 참조 [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf) 하세요.  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2. 데이터에 액세스하는 저장 프로시저 만들기  
  데이터베이스 내에서 컨텍스트를 전환 하려면 EXECUTE AS 문을 사용합니다. EXECUTE AS를 사용하려면 IMPERSONATE 권한이 있어야 합니다.  

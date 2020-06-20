@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc7b94b52a51fdae8d205dd177bc3d4bac6f721d
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: cb46be347590d3fb61d05476616e6c0a52e1ed41
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849532"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929094"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>가용성 그룹의 Azure에 SQL Server 관리 백업 설정
   이 항목은 AlwaysOn 가용성 그룹에 참여하는 데이터베이스를 위해 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]을 구성하는 방법에 대한 자습서입니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "82849532"
 -   네트워크 대역폭:이는 하이브리드 클라우드 또는 클라우드 전용 구성의 다른 Azure 지역에서 복제본이 서로 다른 물리적 위치에 있는 구현에 적용 됩니다. 네트워크 대역폭은 보조 복제본의 대기 시간에 영향을 미칠 수 있으며, 보조 복제본이 동기 복제로 설정된 경우 이로 인해 주 복제본에서 로그가 증가할 수 있습니다. 보조 복제본이 동기 복제로 설정된 경우, 보조 복제본이 네트워크 대기 시간 때문에 동기화 상태를 유지하지 못할 수 있으며 이로 인해 보조 복제본으로 장애 조치(failover) 시 데이터 손실이 발생할 수 있습니다.  
   
 ### <a name="configuring-ss_smartbackup-for-availability-databases"></a>가용성 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 구성  
- **권한에**  
+ **사용 권한:**  
   
 -   **ALTER ANY CREDENTIAL** 권한 및 **db_backupoperator** `EXECUTE` **sp_delete_backuphistory**저장 프로시저에 대 한 권한이 있는 db_backupoperator 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   

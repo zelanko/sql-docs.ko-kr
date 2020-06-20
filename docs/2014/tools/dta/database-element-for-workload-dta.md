@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 112fca2a-37e5-4162-b2e7-b56eb8ab0c6f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9f5b5c233a482672a0cc225364dbf1e4f3b4b645
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48f9202483bcb2cf8e06b6e0d14834753cc666b8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63185410"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000388"
 ---
 # <a name="database-element-for-workload-dta"></a>Workload의 Database 요소(DTA)
   작업 추적 테이블이 위치하는 데이터베이스를 지정합니다.  
@@ -53,7 +52,7 @@ ms.locfileid: "63185410"
  데이터베이스 엔진 튜닝 관리자 XML 스키마에서 이 요소의 이름은 **DatabaseDetailsTypecomplexType** 입니다. 이 `Database` 요소와 `Configuration` 요소가 루트 부모인 요소를 혼동하지 마십시오. [Configuration의 Database 요소&#40;DTA&#41;](database-element-for-configuration-dta.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
- 이 `Database` 요소의 사용 예는 [DTA&#41;&#40;작업 요소 ](workload-element-dta.md)의 코드 예제를 참조 하세요.  
+ 이 요소의 사용 예는 `Database` [DTA&#41;&#40;작업 요소 ](workload-element-dta.md)의 코드 예제를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
