@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 192c38bc189928cf980ab0141e53ab12f37d805c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5d74b9c4def9c0314569a8d0bd87939cdcb11b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175872"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038711"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>쿼리 저장소를 사용하여 성능 모니터링
   쿼리 저장소 기능을 통해 DBA는 쿼리 계획 선택 및 성능에 대한 정보를 얻을 수 있습니다. 쿼리 계획 변경으로 인해 발생하는 성능 차이를 신속하게 찾을 수 있도록 하여 성능 문제 해결을 간소화합니다. 이 기능은 쿼리, 계획 및 런타임 통계의 기록을 자동으로 캡처하고 검토할 수 있도록 이 기록을 유지합니다. 데이터를 기간별로 구분하여 데이터베이스 사용 패턴을 파악하고 서버에서 쿼리 계획 변경이 발생한 시기를 이해할 수 있게 해줍니다. 쿼리 저장소는 [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) 옵션을 사용하여 구성할 수 있습니다.
@@ -40,7 +39,7 @@ ms.locfileid: "78175872"
 
 #### <a name="by-using-transact-sql-statements"></a>Transact-SQL 문 사용
 
-1.  `ALTER DATABASE` 문을 사용하여 쿼리 저장소를 사용하도록 설정합니다. 예를 들면 다음과 같습니다.
+1.  `ALTER DATABASE` 문을 사용하여 쿼리 저장소를 사용하도록 설정합니다. 다음은 그 예입니다.
 
     ```
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;
@@ -506,7 +505,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 
  `sp_query_store_force_plan`을 사용할 경우 쿼리 저장소에서 해당 쿼리에 대한 계획으로 기록된 계획만 강제로 적용할 수 있습니다. 즉, 쿼리 저장소가 활성 상태일 때 Q1을 실행하는 데 이미 사용된 계획만 쿼리에 사용할 수 있습니다.
 
- **쿼리에 대 한 계획 강제 적용을 제거 합니다.** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램을 다시 사용 하 여 최적의 쿼리 계획을 계산 하려면를 `sp_query_store_unforce_plan` 사용 하 여 쿼리에 대해 선택한 계획의 강제 적용을 해제 합니다.
+ **쿼리에 대 한 계획 강제 적용을 제거 합니다.** 쿼리 최적화 프로그램을 다시 사용 하 여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 최적의 쿼리 계획을 계산 하려면를 사용 하 여 `sp_query_store_unforce_plan` 쿼리에 대해 선택한 계획의 강제 적용을 해제 합니다.
 
 ```
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;

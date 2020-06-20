@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 395df605926f0ff4ddc30970cdcebce0f1d0c8fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fad4d1cbeaa84b5c6be683d7a87997d1a3f89bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044448"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052644"
 ---
 # <a name="qnparameter-table-event-class"></a>QN:Parameter Table 이벤트 클래스
   QN:Parameter table 이벤트는 매개 변수 테이블에 대한 참조 수를 만들고 보관하며 매개 변수 정보를 저장하는 내부 테이블을 삭제하는 데 필요한 작업에 대한 정보를 보고합니다. 이 이벤트는 또한 매개 변수 테이블에 대한 사용 개수를 다시 설정하기 위한 내부 작업도 보고합니다.  
@@ -32,13 +31,13 @@ ms.locfileid: "63044448"
 |ClientProcessID|`int`|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
 |DatabaseID|`int`|USE *database* 문으로 지정한 데이터베이스 ID이거나 지정한 인스턴스에 대해 실행된 USE *database*문이 없는 경우 기본 데이터베이스 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |DatabaseName|`nvarchar`|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|예|  
-|EventClass|`Int`|이벤트 유형 = 200|27|아니요|  
-|EventSequence|`int`|이 이벤트의 시퀀스 번호입니다.|51|아니요|  
+|EventClass|`Int`|이벤트 유형 = 200|27|예|  
+|EventSequence|`int`|이 이벤트의 시퀀스 번호입니다.|51|예|  
 |EventSubClass|`nvarchar`|각 이벤트 클래스에 대한 자세한 정보를 제공하는 이벤트 하위 클래스 유형입니다. 이 열에는 다음 값이 포함될 수 있습니다.<br /><br /> 테이블 생성됨: 매개 변수 테이블이 데이터베이스에 생성되었음을 나타냅니다.<br /><br /> 테이블 삭제 시도: 데이터베이스에서 사용하지 않는 매개 변수 테이블을 자동으로 삭제하여 리소스를 늘리려고 했음을 나타냅니다.<br /><br /> 테이블 삭제 시도 실패: 데이터베이스에서 사용하지 않는 매개 변수 테이블을 삭제하려고 했지만 실패했음을 나타냅니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 자동으로 매개 변수 테이블 삭제 일정을 다시 조정하여 리소스를 늘립니다.<br /><br /> 테이블 삭제됨: 데이터베이스에서 성공적으로 매개 변수 테이블을 삭제했음을 나타냅니다.<br /><br /> 테이블 고정됨: 내부 처리에서 매개 변수 테이블을 현재 사용으로 표시했음을 나타냅니다.<br /><br /> 테이블 고정 해제됨: 매개 변수 테이블이 고정 해제되었음을 나타냅니다. 내부 처리에서 테이블 사용을 마쳤습니다.<br /><br /> 증가한 사용자 수: 매개 변수 테이블을 참조하는 쿼리 알림 구독 수가 증가했음을 나타냅니다.<br /><br /> 감소한 사용자 수: 매개 변수 테이블을 참조하는 쿼리 알림 구독 수가 감소했음을 나타냅니다.<br /><br /> LRU 카운터 다시 설정: 매개 변수 테이블에 대한 사용 수가 다시 설정되었음을 나타냅니다.<br /><br /> 정리 작업 시작됨: 이 매개 변수 테이블의 모든 구독 정리가 시작되었음을 나타냅니다. 이 이벤트는 데이터베이스가 시작될 때나 이 매개 변수 테이블 구독의 기반이 되는 테이블이 삭제되었을 때 발생합니다.<br /><br /> 정리 작업 완료됨: 이 매개 변수 테이블의 모든 구독 정리를 마쳤음을 나타냅니다.|21|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터의 이름입니다. 클라이언트가 호스트 이름을 제공하면 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  
-|IsSystem|`int`|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다.<br /><br /> 0 = 사용자<br /><br /> 1 = 시스템|60|아니요|  
-|LoginName|`nvarchar`|사용자 로그인 이름 ( *도메인*\\*사용자 이름*형식의 Windows 로그인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명 또는 보안 로그인)입니다.|11|아니요|  
+|IsSystem|`int`|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다.<br /><br /> 0 = 사용자<br /><br /> 1 = 시스템|60|예|  
+|LoginName|`nvarchar`|사용자 로그인 이름 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *도메인* \\ *사용자 이름*형식의 Windows 로그인 자격 증명 또는 보안 로그인)입니다.|11|예|  
 |LoginSID|`image`|로그인한 사용자의 SID(보안 ID)입니다. 이 정보는 sys.server_principals 카탈로그 뷰에 있습니다. 각 SID는 서버의 각 로그인마다 고유합니다.|41|예|  
 |NTDomainName|`nvarchar`|사용자가 속한 Windows 도메인입니다.|7|예|  
 |NTUserName|`nvarchar`|이 이벤트를 생성한 연결을 소유하고 있는 사용자의 이름입니다.|6|예|  

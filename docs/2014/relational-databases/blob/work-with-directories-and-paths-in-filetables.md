@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 52e486dc6cb6c3da45d590d4ba2e557c87c1a556
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4641159e894b764cbee4d7f02085f3ceb8e6d87d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66009878"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970833"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>FileTable에서 디렉터리 및 경로 작업
   파일이 FileTable에 저장되는 디렉터리 구조에 대해 설명합니다.  
@@ -55,12 +54,12 @@ GO
 > [!IMPORTANT]  
 >  15개 수준을 초과하는 하위 디렉터리를 FileTable 디렉터리에 저장할 수 없습니다. 15개 수준의 하위 디렉터리를 저장할 경우 최하위 수준에는 파일이 포함될 수 없습니다. 최하위 수준에 파일이 있으면 수준이 초과됩니다.  
   
-###  <a name="length-of-full-path-name"></a><a name="fqnlength"></a>전체 경로 이름의 길이  
+###  <a name="length-of-full-path-name"></a><a name="fqnlength"></a> 전체 경로 이름의 길이  
   
 > [!IMPORTANT]  
 >  NTFS 파일 시스템은 Windows 셸 및 대부분의 Windows API의 260자 제한보다 긴 경로 이름을 지원합니다. 따라서 전체 경로 이름이 260자를 초과할 수 있기 때문에 Windows 탐색기 또는 다른 많은 Windows 애플리케이션으로 보거나 열 수 없는 Transact-SQL을 사용하여 FileTable의 파일 계층에 파일을 만들 수 있습니다. 그러나 Transact-SQL을 사용해서도 이러한 파일에 계속 액세스할 수 있습니다.  
   
-##  <a name="the-full-path-to-an-item-stored-in-a-filetable"></a><a name="fullpath"></a>FileTable에 저장 된 항목의 전체 경로입니다.  
+##  <a name="the-full-path-to-an-item-stored-in-a-filetable"></a><a name="fullpath"></a> FileTable에 저장된 항목의 전체 경로  
  FileTable에 저장된 파일 또는 디렉터리의 전체 경로는 다음 요소로 시작됩니다.  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 수준에서 파일 I/O 액세스를 위해 설정된 공유  
@@ -90,18 +89,18 @@ GO
   
 -   이러한 루트 디렉터리는 단독 파일 핸들로 열 수 있습니다.  
   
-##  <a name="the-is_directory-column-in-the-filetable-schema"></a><a name="is_directory"></a>FileTable 스키마의 is_directory 열  
+##  <a name="the-is_directory-column-in-the-filetable-schema"></a><a name="is_directory"></a> FileTable 스키마의 is_directory 열  
  다음 표에서는 **is_directory** 열과 FileTable의 FILESTREAM 데이터가 포함된 **file_stream** 열 간의 상호 작용에 대해 설명합니다.  
   
 ||||  
 |-|-|-|  
 |*is_directory* **value**|*file_stream* **value**|**동작**|  
 |FALSE|NULL|이는 시스템 정의 제약 조건에 의해 catch되는 잘못된 조합입니다.|  
-|FALSE|\<값>|항목은 파일을 나타냅니다.|  
+|FALSE|\<value>|항목은 파일을 나타냅니다.|  
 |TRUE|NULL|항목은 디렉터리를 나타냅니다.|  
-|TRUE|\<값>|이는 시스템 정의 제약 조건에 의해 catch되는 잘못된 조합입니다.|  
+|TRUE|\<value>|이는 시스템 정의 제약 조건에 의해 catch되는 잘못된 조합입니다.|  
   
-##  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="alwayson"></a>AlwaysOn 가용성 그룹에서 Virtual Network 이름 (VNNs) 사용  
+##  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="alwayson"></a> AlwaysOn 가용성 그룹에 VNN(가상 네트워크 이름) 사용  
  FILESTREAM 또는 FileTable 데이터가 포함된 데이터베이스가 AlwaysOn 가용성 그룹에 속하는 경우  
   
 -   FILESTREAM 및 FileTable 함수가 컴퓨터 이름 대신 VNN(가상 네트워크 이름)을 사용하거나 반환합니다. 이러한 함수에 대한 자세한 내용은 [Filestream 및 FileTable 함수&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filestream-and-filetable-functions-transact-sql)를 참조하세요.  
@@ -109,9 +108,9 @@ GO
 -   파일 시스템 API를 통한 FILESTREAM 또는 FileTable 데이터에 대한 모든 액세스에는 컴퓨터 이름 대신 VNN이 사용되어야 합니다. 자세한 내용은 [AlwaysOn 가용성 그룹의 FILESTREAM 및 FileTable&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [FileTable에 대 한 필수 구성 요소 사용](enable-the-prerequisites-for-filetable.md)   
- [Filetable 만들기, 변경 및 삭제](create-alter-and-drop-filetables.md)   
- [Transact-sql을 사용 하 여 Filetable 액세스](access-filetables-with-transact-sql.md)   
+ [FileTable의 필수 구성 요소를 사용하도록 설정](enable-the-prerequisites-for-filetable.md)   
+ [FileTable 만들기, 변경 및 삭제](create-alter-and-drop-filetables.md)   
+ [Transact-SQL을 사용하여 FileTable에 액세스](access-filetables-with-transact-sql.md)   
  [파일 입/출력 API를 사용하여 FileTable 액세스](access-filetables-with-file-input-output-apis.md)  
   
   

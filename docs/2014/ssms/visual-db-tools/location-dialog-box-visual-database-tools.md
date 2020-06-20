@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0d3ee86b85a2eadf990caddc6c92499cf0e706d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c07f0fa1937887f2f685d235232385dd216eb393
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63306222"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040783"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>위치 대화 상자(Visual Database Tools)
   이 대화 상자를 사용하여 원하는 파일을 포함하는 폴더를 찾고 선택할 수 있습니다. 이 대화 상자에서는 호출하는 대화 상자로 선택한 폴더의 경로를 반환합니다. 다음과 같은 방법으로 이 대화 상자에 액세스할 수 있습니다.  

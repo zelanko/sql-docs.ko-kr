@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 62dc29f8143f92fc9674ed10c092dc6ad08570fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85bd8f79f7be5a46e8f714f69a0b61de560a0aed
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63060372"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051688"
 ---
 # <a name="sqlstmtcompleted-event-class"></a>SQL:StmtCompleted 이벤트 클래스
   SQL:StmtCompleted 이벤트 클래스는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 완료되었음을 나타냅니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "63060372"
 |DatabaseName|`nvarchar`|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|yes|  
 |Duration|`bigint`|이벤트에 의해 사용된 시간(마이크로초)입니다.|13|예|  
 |EndTime|`datetime`|이벤트가 종료된 시간입니다.|15|예|  
-|EventClass|`int`|이벤트 유형 = 41|27|아니요|  
+|EventClass|`int`|이벤트 유형 = 41|27|예|  
 |EventSequence|`int`|요청 내에 지정된 이벤트 시퀀스입니다.|51|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 33037538a773d27c32522238b14e6ebfc2557eaf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5e2c771dc186fb520c1b59961c523b16a9efa83f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176102"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972673"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>동기 및 비동기 변환 이해
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 동기 변환과 비동기 변환의 차이점을 가장 쉽게 이해하려면 먼저 동기 변환을 이해해야 합니다. 동기 변환이 개발자의 요구에 맞지 않으면 디자인에 비동기 변환을 사용해야 합니다.
@@ -30,7 +29,7 @@ ms.locfileid: "78176102"
 
  동기 변환의 예로는 데이터 변환이 있습니다. 이 변환에서는 들어오는 각 행에 대해 지정된 열의 값을 변환하고 해당 행을 개별적으로 보냅니다. 각각의 불연속 변환 작업은 데이터 집합의 다른 모든 행과 독립적으로 이루어집니다.
 
- 스크립팅 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 및 프로그래밍에서는 구성 요소 입력의 ID를 조회 하 고 구성 요소 출력의 `SynchronousInputID` 속성에 할당 하 여 동기 변환을 지정 합니다. 이렇게 하면 데이터 흐름 엔진에서는 입력의 각 행을 처리하고 자동으로 각 행을 지정된 출력으로 보내게 됩니다. 모든 행을 모든 출력으로 보내려는 경우에는 데이터를 출력하기 위한 추가 코드를 작성할 필요가 없습니다. `ExclusionGroup` 속성을 사용하여 조건부 분할 변환에서처럼 행을 출력 그룹 중 하나로만 보내도록 지정하려는 경우에는 `DirectRow` 메서드를 호출하여 각 행에 대해 적절한 대상을 선택해야 합니다. 오류 출력이 있으면 `DirectErrorRow`를 호출하여 문제가 있는 행을 기본 출력 대신 오류 출력으로 보내야 합니다.
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]스크립팅 및 프로그래밍에서는 구성 요소 입력의 ID를 조회 하 고 `SynchronousInputID` 구성 요소 출력의 속성에 할당 하 여 동기 변환을 지정 합니다. 이렇게 하면 데이터 흐름 엔진에서는 입력의 각 행을 처리하고 자동으로 각 행을 지정된 출력으로 보내게 됩니다. 모든 행을 모든 출력으로 보내려는 경우에는 데이터를 출력하기 위한 추가 코드를 작성할 필요가 없습니다. `ExclusionGroup` 속성을 사용하여 조건부 분할 변환에서처럼 행을 출력 그룹 중 하나로만 보내도록 지정하려는 경우에는 `DirectRow` 메서드를 호출하여 각 행에 대해 적절한 대상을 선택해야 합니다. 오류 출력이 있으면 `DirectErrorRow`를 호출하여 문제가 있는 행을 기본 출력 대신 오류 출력으로 보내야 합니다.
 
 ## <a name="asynchronous-transformations"></a>비동기 변환
  각 행을 다른 모든 행에 독립적으로 처리할 수 없는 경우 디자인에 비동기 변환을 사용해야 할 수 있습니다. 즉, 각 행을 처리할 때 데이터 흐름에 따라 전달할 수 없지만 대신 데이터를 비동기적으로 출력하거나 입력과는 다른 시기에 출력해야 합니다. 예를 들어 다음과 같은 경우에는 비동기 변환이 필요합니다.

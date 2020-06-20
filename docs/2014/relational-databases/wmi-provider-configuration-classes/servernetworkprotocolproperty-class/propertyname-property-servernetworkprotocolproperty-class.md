@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0175ce3c-e07e-4710-a2f9-a26dface6eb3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ee721660c8d2b1740ba4ecdb24d47fb3dc8745a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 421f9b263ca797cbc3e7a0b544e3ea1074d9c880
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711478"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059765"
 ---
 # <a name="propertyname-property-servernetworkprotocolproperty-class"></a>PropertyName 속성(ServerNetworkProtocolProperty 클래스)
   현재 참조된 속성의 이름을 가져옵니다.  
@@ -38,7 +37,7 @@ object
   
 ## <a name="parts"></a>부분  
  *object*  
- 인스턴스의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]네트워크 프로토콜 특성을 나타내는 [servernetworkprotocolproperty 클래스](servernetworkprotocolproperty-class.md) 개체입니다.  
+ 인스턴스의 네트워크 프로토콜 특성을 나타내는 [Servernetworkprotocolproperty 클래스](servernetworkprotocolproperty-class.md) 개체입니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  현재 속성의 이름을 지정하는 문자열 값입니다.  

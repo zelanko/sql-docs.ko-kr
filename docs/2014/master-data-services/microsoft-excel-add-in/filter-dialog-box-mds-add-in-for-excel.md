@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 757c70398afe0f88d535b6853abe29b79e9617bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac7c811c6f823b20a99fa590b48448d4b8ca3dbf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482563"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961103"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>필터 대화 상자(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 **필터** 대화 상자를 사용하여 Excel로 로드하기 전에 MDS 관리 데이터 목록의 범위를 좁힐 수 있습니다.  
@@ -25,7 +24,7 @@ ms.locfileid: "65482563"
 ## <a name="columns"></a>열  
  **열** 섹션에서는 Excel에 표시할 특성(열)을 확인할 수 있습니다.  
   
-|컨트롤 이름|설명|  
+|컨트롤 이름|Description|  
 |------------------|-----------------|  
 |특성 유형|특성 유형은 사용하려는 멤버 유형을 설명합니다. 대부분의 경우 **리프**입니다. 멤버 형식에 대한 자세한 내용은 [멤버&#40;Master Data Services&#41;](../members-master-data-services.md)를 참조하세요.|  
 |명시적 계층|**통합** 특성 유형을 선택한 경우 통합 멤버가 속하는 계층을 선택합니다. 자세한 내용은 [명시적 계층&#40;Master Data Services&#41;](../explicit-hierarchies-master-data-services.md)을 참조하세요.|  
@@ -38,7 +37,7 @@ ms.locfileid: "65482563"
 ## <a name="rows"></a>행  
  **행** 섹션에서는 Excel에 표시할 멤버(행)를 확인할 수 있습니다. 이렇게 하려면 표시되는 행을 필터링할 조건을 정의합니다.  
   
-|컨트롤 이름|설명|  
+|컨트롤 이름|Description|  
 |------------------|-----------------|  
 |attribute|필터링할 특성을 표시합니다. 나열된 특성이 없으면 추가되지 않았기 때문입니다.<br /><br /> 참고: 워크시트에 표시하지 않으려는 특성으로 필터링할 수 있습니다.|  
 |연산자|선택한 특성 유형에 해당하는 연산자를 표시합니다. 자세한 내용은 [필터 연산자&#40;Master Data Services&#41;](../filter-operators-master-data-services.md)를 참조하세요.|  
@@ -51,7 +50,7 @@ ms.locfileid: "65482563"
 ## <a name="summary"></a>요약  
  **요약** 섹션을 사용하여 데이터를 로드하기 전에 로드할 데이터 양에 대한 세부 정보를 표시합니다.  
   
-|컨트롤 이름|설명|  
+|컨트롤 이름|Description|  
 |------------------|-----------------|  
 |모델|모델의 이름입니다.|  
 |버전|버전의 이름입니다.|  

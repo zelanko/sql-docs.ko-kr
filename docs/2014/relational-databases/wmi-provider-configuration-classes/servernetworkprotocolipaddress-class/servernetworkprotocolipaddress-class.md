@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b987e8770b4bef8c09974fc8b0770f4a8a6b45cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a1f50e106ad2e5b326f698089691ee996f058cc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62643382"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059817"
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>ServerNetworkProtocolIPAddress 클래스
   [ServerNetworkProtocolIPAddress 클래스] ServerNetworkProtocolIPAddress-class.md)는 서버 네트워크 프로토콜에서 지 원하는 IP 주소를 나타냅니다.  
   
  [ServerNetworkProtocolIPAddress 클래스] ServerNetworkProtocolIPAddress-class.md)를 사용 하 여 다음 작업을 수행할 수 있습니다.  
   
--   인스턴스의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]이름을 확인 합니다.  
+-   인스턴스의 이름을 확인 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 합니다.  
   
 -   IP 주소 이름 및 프로토콜 이름을 확인합니다.  
   

@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: cfe0e5dc-5be3-4222-b721-fe83665edd94
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f59ed0eee86f17fdda568caa5c1a1dc7252c6d9c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32a3b5a0c32949239488b86dc1209183e95ac9ff
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055347"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962473"
 ---
 # <a name="ssis-package-format"></a>SSIS 패키지 형식
   현재 버전의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 보다 쉽게 형식을 읽고 패키지를 비교할 수 있도록 패키지 형식(.dtsx 파일)이 크게 변경되었습니다. 또한 이진 형식으로 저장 된 충돌 하는 변경 내용 또는 변경 내용이 포함 되지 않은 패키지를 더욱 안정적으로 병합할 수 있습니다.  
   
- 현재 package.dtsx 패키지 파일 형식을 보려면 [ \[package.dtsx\]: 데이터 변환 서비스 패키지 XML 파일 형식 사양](https://go.microsoft.com/fwlink/?LinkId=233251)을 참조 하세요.  
+ 현재 PACKAGE.DTSX 패키지 파일 형식을 보려면 [ \[ Package.dtsx \] : 데이터 변환 서비스 패키지 XML 파일 형식 사양](https://go.microsoft.com/fwlink/?LinkId=233251)을 참조 하세요.  
   
  다음 목록에서는 파일 형식 변경 내용을 간략하게 설명합니다. 이러한 변경 내용의 코드 예제를 보려면 [SQL Server 2012의 패키지 형식 변경 내용](https://go.microsoft.com/fwlink/?LinkId=233255)을 참조하십시오.  
   

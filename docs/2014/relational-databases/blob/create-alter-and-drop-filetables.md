@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b810a3785c41356042639c4fdb79b4f6cf28d871
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a10e6333f6dd38a850a832b82a7cb7a0e0bf698
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76934806"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955583"
 ---
 # <a name="create-alter-and-drop-filetables"></a>FileTable 만들기, 변경 및 삭제
   새 FileTable을 만들거나 기존 FileTable을 변경 또는 삭제하는 방법에 대해 설명합니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "76934806"
   
 ###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> 방법: FileTable 만들기  
  **Transact-SQL을 사용하여 FileTable 만들기**  
- [AS FileTable](/sql/t-sql/statements/create-table-transact-sql) 옵션이 포함된 **CREATE TABLE&#40;Transact-SQL&#41;** 문을 호출하여 FileTable을 만듭니다. FileTable에는 고정 스키마가 있으므로 열 목록을 지정할 필요가 없습니다. 새 FileTable에 대해 다음 설정을 지정할 수 있습니다.  
+ **AS FileTable** 옵션이 포함된 [CREATE TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) 문을 호출하여 FileTable을 만듭니다. FileTable에는 고정 스키마가 있으므로 열 목록을 지정할 필요가 없습니다. 새 FileTable에 대해 다음 설정을 지정할 수 있습니다.  
   
 1.  **FILETABLE_DIRECTORY**. FileTable에 저장된 모든 파일 및 디렉터리에 대한 루트 디렉터리 역할을 하는 디렉터리를 지정합니다. 이 이름은 데이터베이스의 모든 FileTable 디렉터리 이름 중에서 고유해야 합니다. 고유성 비교는 현재 데이터 정렬 설정과 관계없이 대/소문자를 구분하지 않습니다.  
   
@@ -175,11 +174,11 @@ GO
 |CHECK 제약 조건|시스템 정의 CHECK 제약 조건이 다음 요구 사항을 적용합니다.<br /><br /> 유효한 파일 이름<br /><br /> 유효한 파일 특성<br /><br /> 부모 개체는 디렉터리여야 합니다.<br /><br /> 파일 조작 중에는 네임스페이스 계층 구조가 잠깁니다.|  
   
  **시스템 정의 제약 조건에 대한 명명 규칙**  
- 위에서 설명한 시스템 정의 제약 조건은 **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** 형식입니다. 여기서 각 항목은 다음을 나타냅니다.  
+ 위에서 설명한 시스템 정의 제약 조건은 다음과 같은 ** \<constraintType> \<tablename> \_ \<columnname> \_ \<uniquifier> 형식으로 이름이 지정 됩니다** .  
   
 -   *<constraint_type>* 은 CK(확인 제약 조건), DF(기본 제약 조건), FK(외래 키), PK(기본 키) 또는 UQ(고유 제약 조건)입니다.  
   
--   *\<uniquifier>* 는 이름을 고유하게 만드는 시스템 생성 문자열입니다. 이 문자열은 FileTable 이름 및 고유 식별자를 포함할 수 있습니다.  
+-   *\<uniquifier>* 는 이름을 고유 하 게 만드는 시스템 생성 문자열입니다. 이 문자열은 FileTable 이름 및 고유 식별자를 포함할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [FileTable 관리](manage-filetables.md)  

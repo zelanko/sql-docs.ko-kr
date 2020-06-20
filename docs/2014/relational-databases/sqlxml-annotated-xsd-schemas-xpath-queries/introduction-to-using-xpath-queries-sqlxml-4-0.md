@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 69fe9c7decd7521ca752b0b5092748c907036f40
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9a32f28268d39b0cc93a315f45d775804eacdd98
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703125"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015398"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath 쿼리 사용 소개(SQLXML 4.0)
   XPath(XML Path Language) 쿼리는 URL의 일부로 지정하거나 템플릿 내에 지정할 수 있습니다. 매핑 스키마에 따라 이 결과 조각의 구조가 결정되고 값은 데이터베이스에서 검색됩니다. 이 프로세스는 CREATE VIEW 문을 사용하여 뷰를 만들고 이러한 뷰에 대한 SQL 쿼리를 작성하는 것과 개념적으로 유사합니다.  
@@ -45,9 +44,9 @@ ms.locfileid: "82703125"
 </root>  
 ```  
   
- 이 문서에서 ** \< Customer>** 는 요소 노드이 고 **cid** 는 특성 노드이며 **"Important"** 는 텍스트 노드입니다.  
+ 이 문서에서 **\<Customer>** 는 요소 노드이 고 **cid** 는 Attribute 노드이며 **"Important"** 는 텍스트 노드입니다.  
   
- XPath는 XML 문서에서 노드 집합을 선택하는 데 사용되는 그래프 탐색 언어입니다. 각 XPath 연산자는 이전 XPath 연산자에서 선택한 노드 집합을 기반으로 노드 집합을 선택합니다. 예를 들어 ** \< 고객>** 노드 집합이 지정 된 경우 XPath는 **date** 특성 값이 **"7/14/1999"** 인 모든 ** \< Order>** 노드를 선택할 수 있습니다. 결과 노드 집합에는 주문 날짜가 1999년 7월 14일인 모든 주문이 포함됩니다.  
+ XPath는 XML 문서에서 노드 집합을 선택하는 데 사용되는 그래프 탐색 언어입니다. 각 XPath 연산자는 이전 XPath 연산자에서 선택한 노드 집합을 기반으로 노드 집합을 선택합니다. 예를 들어 노드 집합이 지정 된 경우 **\<Customer>** XPath는 **\<Order>** **date** 특성 값이 **"7/14/1999"** 인 모든 노드를 선택할 수 있습니다. 결과 노드 집합에는 주문 날짜가 1999년 7월 14일인 모든 주문이 포함됩니다.  
   
  XPath 언어는 W3C(World Wide Web Consortium)에서 표준 탐색 언어로 정의됩니다. SQLXML 4.0은에 있는 W3C XPath 사양의 하위 집합을 구현 http://www.w3.org/TR/1999/PR-xpath-19991008.html 합니다.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "82703125"
   
 -   **루트 쿼리**  
   
-     SQLXML 4.0은 루트 쿼리(/)를 지원하지 않습니다. 모든 XPath 쿼리는 스키마의 최상위 ** \< ElementType>** 에서 시작 해야 합니다.  
+     SQLXML 4.0은 루트 쿼리(/)를 지원하지 않습니다. 모든 XPath 쿼리는 스키마의 최상위 수준에서 시작 해야 합니다 **\<ElementType>** .  
   
 -   **오류 보고**  
   
@@ -93,7 +92,7 @@ ms.locfileid: "82703125"
 |-------------|----------|----------------------------|  
 |Axes|`attribute`, `child`, `parent` 및 `self` 축|[XPath 쿼리에 축 지정 &#40;SQLXML 4.0&#41;](samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |연속 및 중첩 조건자를 포함하는 부울 값 조건자||[XPath 쿼리에 산술 연산자 지정 &#40;SQLXML 4.0&#41;](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|모든 관계 연산자|=,! =, <, \< =, >, >=|[XPath 쿼리에 관계형 연산자 지정 &#40;SQLXML 4.0&#41;](samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|모든 관계 연산자|=,! =, <, \<=, > , >=|[XPath 쿼리에 관계형 연산자 지정 &#40;SQLXML 4.0&#41;](samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |산술 연산자|+, -, *, div|[XPath 쿼리에 산술 연산자 지정 &#40;SQLXML 4.0&#41;](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |명시적 변환 함수|`number()`, `string()`, `Boolean()`|[XPath 쿼리에 명시적 변환 함수 지정 &#40;SQLXML 4.0&#41;](samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |부울 연산자|AND, OR|[XPath 쿼리에 부울 연산자 지정 &#40;SQLXML 4.0&#41;](samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  

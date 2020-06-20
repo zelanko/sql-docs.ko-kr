@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4f1b4823db4ae961024ac2a786c948d8349f31be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b8000c1c28d5a1d3d129b6e8d01c4ab2fbbbc7d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919631"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954713"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Null 허용 여부 및 3개의 값 논리 비교
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 대해 잘 아는 경우 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 `System.Data.SqlTypes` 네임스페이스와 의미 체계 및 전체 자릿수가 유사하다는 것을 알 수 있습니다. 그러나 약간의 차이가 있으며 이 항목에서는 이러한 차이 중 가장 중요한 점에 대해 설명합니다.  
@@ -36,9 +35,9 @@ ms.locfileid: "62919631"
  `System.Data.SqlTypes` 네임스페이스에서는 이 3값 논리를 나타내기 위해 `SqlBoolean` 형식을 제공합니다. `SqlTypes` 간을 비교하면 `SqlBoolean` 값 형식이 반환됩니다. UNKNOWN 값은 `SqlBoolean` 형식의 null 값으로 표현됩니다. `IsTrue` 형식의 값을 확인하기 위해 `IsFalse`, `IsNull` 및 `SqlBoolean` 속성이 제공됩니다.  
   
 ## <a name="operations-functions-and-null-values"></a>연산, 함수 및 NULL 값  
- 모든 산술 연산자 (+,-, \*,/,%), 비트 연산자 (~, & 및 |) 및 대부분의 함수는의 `SqlTypes` 피연산자 또는 인수 중 하나가 null 인 경우 null을 반환 합니다. `IsNull` 속성은 항상 true 또는 false 값을 반환합니다.  
+ 모든 산술 연산자 (+,-, \* ,/,%), 비트 연산자 (~, & 및 |) 및 대부분의 함수는의 피연산자 또는 인수 중 하나가 null 인 경우 null을 반환 `SqlTypes` 합니다. `IsNull` 속성은 항상 true 또는 false 값을 반환합니다.  
   
-## <a name="precision"></a>자릿수  
+## <a name="precision"></a>전체 자릿수  
  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR의 decimal 데이터 형식에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 숫자 및 decimal 데이터 형식의 최대값과는 다른 최대값이 있습니다. 또한 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR decimal 데이터 형식에는 최대 전체 자릿수가 있는 것으로 간주됩니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 CLR의 `SqlDecimal`은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 decimal 데이터 형식과 동일한 전체 자릿수, 소수 자릿수 및 의미 체계를 제공합니다.  
   
 ## <a name="overflow-detection"></a>오버플로 검색  

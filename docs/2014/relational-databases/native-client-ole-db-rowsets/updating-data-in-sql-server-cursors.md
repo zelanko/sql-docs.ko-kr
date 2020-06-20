@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 037176b5e1833b3cbfcbc93131560fcafcc8e404
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 42e6221a85c30e3adb97df3a11c9cbdc49216b4d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704671"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039122"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>SQL Server 커서의 데이터 업데이트
   커서를 통해 데이터를 가져오고 업데이트할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 공급자 소비자 응용 프로그램은 다른 클라이언트 응용 프로그램에 적용 되는 것과 동일한 고려 사항과 제약 조건에 의해 바인딩됩니다.  

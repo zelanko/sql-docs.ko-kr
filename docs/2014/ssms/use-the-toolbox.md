@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 517db08c37a0952a25a66828a37b11fd6ffa96ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b1dcc6e8a696d6a30be3d38bf30b653f24cac28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63280667"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040860"
 ---
 # <a name="use-the-toolbox"></a>도구 상자 사용
   도구 상자의 항목, 텍스트 및 컨트롤을 선택하여 양식, 페이지 및 디자이너로 끌어다 놓고 이러한 원본의 항목을 다시 도구 상자로 끌어다 놓아 나중에 다시 사용할 수 있습니다. 예를 들어 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서는 태스크를 유지 관리 계획으로 끌어다 놓을 수 있습니다.  

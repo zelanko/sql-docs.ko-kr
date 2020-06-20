@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 807376fb-1f1a-4f2a-8cf8-a622c5858634
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1a6a226ae76f75a07b483b74a09ecafc0191eee2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9fed9ad4e73102eadd1374ff87d2a46d0ff4126
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919954"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954641"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>SQL 서버의 사용자 정의 형식 작업
-  일반 쿼리 구문을 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어에서의 UDT (사용자 정의 형식) 기능에 액세스할 수 있습니다. UDT는 데이터베이스 개체 정의에 사용하거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리, 함수 및 저장 프로시저의 변수, 그리고 함수 및 저장 프로시저의 인수로 사용할 수 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 일반 쿼리 구문을 사용 하 여 언어에서의 UDT (사용자 정의 형식) 기능에 액세스할 수 있습니다. UDT는 데이터베이스 개체 정의에 사용하거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리, 함수 및 저장 프로시저의 변수, 그리고 함수 및 저장 프로시저의 인수로 사용할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [UDT 테이블 및 열 정의](working-with-user-defined-types-defining-udt-tables-and-columns.md)  

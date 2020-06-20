@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 40b938bf-7b09-48b3-9771-4421a673e17b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a9c167c4aa94802c7ae80d405c286460015186fb
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cfd262e03666618ed7afd03e86d5d75bd08c8a8e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717934"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015147"
 ---
 # <a name="sqlxmlparameter-object-sqlxml-managed-classes"></a>SqlXmlParameter 개체(SQLXML 관리되는 클래스)
   SqlXmlParameter 개체는 다음 속성을 지원 합니다.  
   
- 이름  
+ 속성  
  매개 변수의 이름입니다. 명령에 매개 변수가 전달될 수 있습니다. SqlXmlCommand 개체의 CreateParameter 메서드를 호출 하면 매개 변수 개체가 만들어집니다.  
   
  값  

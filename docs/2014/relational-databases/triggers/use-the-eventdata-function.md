@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57fb59a3954fb00ab943944c58cccd352c7270d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524268"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014354"
 ---
 # <a name="use-the-eventdata-function"></a>EVENTDATA 함수 사용
   DDL 트리거를 발생하는 이벤트에 대한 정보는 EVENTDATA 함수를 사용하여 캡처합니다. 이 함수는 `xml` 값을 반환합니다. XML 스키마에는 다음에 대한 정보가 포함됩니다.  
@@ -49,7 +48,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- DDL 트리거의 `EVENTDATA()` 문은 허용되지 않는 `CREATE TABLE` 문의 텍스트를 캡처합니다. 이는 EVENTDATA에서 생성 된 `xml` 데이터에 대해 XQuery 문을 사용 하 고 CommandText> 요소를 \<검색 하 여 수행 됩니다. 자세한 내용은 [XQuery 언어 참조&#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)를 참조하세요.  
+ DDL 트리거의 `EVENTDATA()` 문은 허용되지 않는 `CREATE TABLE` 문의 텍스트를 캡처합니다. 이는 EVENTDATA에서 생성 된 데이터에 대해 XQuery 문을 사용 하 `xml` 고 요소를 검색 하 여 수행 됩니다 \<CommandText> . 자세한 내용은 [XQuery 언어 참조&#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)를 참조하세요.  
   
 > [!CAUTION]  
 >  EVENTDATA는 CREATE_SCHEMA 이벤트의 데이터와 해당 CREATE SCHEMA 정의(있는 경우)의 <schema_element>를 캡처합니다. 또한 EVENTDATA는 <schema_element> 정의를 별개의 이벤트로 인식합니다. 따라서 CREATE SCHEMA 정의의 <schema_element>가 나타내는 이벤트와 CREATE_SCHEMA 이벤트 둘 다에서 생성된 DDL 트리거는 `TSQLCommand` 데이터 등의 동일한 이벤트 데이터를 두 번 반환할 수 있습니다. 예를 들어 CREATE_SCHEMA 및 CREATE_TABLE 이벤트 둘 다에서 생성된 DDL 트리거가 있으며 다음 일괄 처리가 실행된다고 가정해 보십시오.  

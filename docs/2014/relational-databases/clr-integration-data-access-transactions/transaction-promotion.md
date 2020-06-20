@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bc7e26e-28ad-4198-a40d-8b2c648ba304
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bf30b06849c0384d118edf635a6361712c2d22f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e78cbb3d2fc888e56c0b55780daf7b449fe6dc40
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874769"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954983"
 ---
 # <a name="transaction-promotion"></a>트랜잭션 승격
   트랜잭션 *승격* 은 필요에 따라 완전히 배포 가능한 트랜잭션으로 자동 승격될 수 있는 경량 로컬 트랜잭션에 대해 설명합니다. 서버의 데이터베이스 트랜잭션 내에서 관리되는 저장 프로시저를 호출하면 로컬 트랜잭션의 컨텍스트에서 CLR(공용 언어 런타임) 코드가 실행됩니다.  데이터베이스 트랜잭션 내에서 원격 서버에 대한 연결을 열면 원격 서버에 대한 연결이 분산 트랜잭션에 참여하고 로컬 트랜잭션이 분산 트랜잭션으로 자동 승격됩니다. 따라서 트랜잭션 승격은 필요할 때까지 분산 트랜잭션의 생성을 지연시켜 분산 트랜잭션의 오버헤드를 최소화합니다. `Enlist` 키워드를 사용하여 트랜잭션 승격을 사용하도록 설정한 경우 트랜잭션 승격이 자동으로 수행되며 개발자 작업이 필요하지 않습니다. .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 .NET Framework `System.Data.SqlClient` 네임스페이스의 클래스를 통해 처리되는 트랜잭션 승격 지원을 제공합니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "62874769"
 ## <a name="distributed-transactions"></a>분산 트랜잭션  
  분산 트랜잭션은 일반적으로 많은 시스템 리소스를 사용합니다. MS DTC([!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator)는 이러한 트랜잭션을 관리하고 해당 트랜잭션에서 액세스되는 모든 리소스 관리자를 통합합니다. 한편, 트랜잭션 승격은 실제로 작업을 단순한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션에 위임하는 특수한 형태의 `System.Transactions` 트랜잭션입니다. `System.Transactions`, `System.Data.SqlClient` 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 트랜잭션 처리와 관련된 작업을 조정하고 필요에 따라 완전한 분산 트랜잭션으로 승격합니다.  
   
- 트랜잭션 승격을 사용하면 활성 `TransactionScope` 트랜잭션을 사용하여 연결을 열고 다른 연결은 열지 않을 때 완전 분산 트랜잭션의 추가 오버헤드를 발생시키지 않고 트랜잭션이 경량 트랜잭션으로 커밋된다는 이점이 있습니다. 에 대 한 `TransactionScope`자세한 내용은 [system.object 사용](../native-client-ole-db-transactions/transactions.md)을 참조 하세요.  
+ 트랜잭션 승격을 사용하면 활성 `TransactionScope` 트랜잭션을 사용하여 연결을 열고 다른 연결은 열지 않을 때 완전 분산 트랜잭션의 추가 오버헤드를 발생시키지 않고 트랜잭션이 경량 트랜잭션으로 커밋된다는 이점이 있습니다. 에 대 한 자세한 내용은 `TransactionScope` [system.object 사용](../native-client-ole-db-transactions/transactions.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [CLR 통합 및 트랜잭션](clr-integration-and-transactions.md)  

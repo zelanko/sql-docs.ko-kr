@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0fc16356-76f7-44b8-a58b-f0b7c43694ec
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 810b1d36eefb99d6e1bcf855dc7710495429751a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fe6e5bc6e4f60bc0703482f3bf4d761104b3c5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010323"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955683"
 ---
 # <a name="create-a-filestream-enabled-database"></a>FILESTREAM 사용 데이터베이스 만들기
   이 항목에서는 FILESTREAM을 지원하는 데이터베이스를 만드는 방법을 보여 줍니다. FILESTREAM이 특별한 유형의 파일 그룹을 사용하므로 데이터베이스를 만들 때 하나 이상의 파일 그룹에 대해 CONTAINS FILESTREAM 절을 지정해야 합니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "66010323"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **새 쿼리** 를 클릭하여 쿼리 편집기를 표시합니다.  
   
-2.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 복사 ARCHIVE 라는 FILESTREAM 사용 데이터베이스를 만듭니다.  
+2.  코드 복사 [!INCLUDE[tsql](../../includes/tsql-md.md)] Archive 라는 FILESTREAM 사용 데이터베이스를 만듭니다.  
   
     > [!NOTE]  
     >  이 스크립트의 경우 C:\Data 디렉터리가 있어야 합니다.  

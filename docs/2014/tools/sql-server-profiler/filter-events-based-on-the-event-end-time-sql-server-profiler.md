@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 74628f9e-2d39-496a-a443-0a3887db223d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 48f0ada8740735e64fe57c35bc17553f59aa444c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7ccb13828235b690bad83e3791b945d8584d5e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184281"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054388"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>이벤트 종료 시간 기반의 이벤트 필터링(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 이벤트 종료 시간을 기반으로 추적 이벤트를 필터링하는 방법을 설명합니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "63184281"
   
 5.  **이벤트 선택**탭에서 **EndTime** 데이터 열을 클릭하여 **필터 편집** 대화 상자를 시작합니다. 열 제목을 마우스 오른쪽 단추로 클릭한 다음 **열 필터 편집**을 선택할 수도 있습니다.  
   
-6.  보다 **큼** 또는 **보다 작음**을 확장 하 고 비교 `datetime`연산자 아래에 나타나는 필드에 값을 입력 합니다.  
+6.  보다 **큼** 또는 **보다 작음**을 확장 하 고 `datetime` 비교 연산자 아래에 나타나는 필드에 값을 입력 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 프로파일러](sql-server-profiler.md)   

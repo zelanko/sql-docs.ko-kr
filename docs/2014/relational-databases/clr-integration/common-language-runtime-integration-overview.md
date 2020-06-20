@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a7764c6e8e45b56e43e592e70b1c85b8d4744b69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d858dde63a43a0b929f3e091d0c0b295b268f5b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919316"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970683"
 ---
 # <a name="common-language-runtime-clr-integration-overview"></a>CLR(공용 언어 런타임) 통합 개요
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 이제 Windows 용 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework의 CLR (공용 언어 런타임) 구성 요소를 통합 하는 기능을 제공 합니다. CLR은 관리 코드에 언어 간 통합, 코드 액세스 보안, 개체 수명 관리 및 디버깅과 프로파일링 지원 등의 서비스를 제공합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 사용자 및 애플리케이션 개발자는 이제 통합된 CLR을 사용하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#을 포함한 .NET Framework 언어로 저장 프로시저, 트리거, 사용자 정의 형식, 사용자 정의 함수(스칼라 및 테이블 반환), 사용자 정의 집계 함수를 작성할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에는 .NET Framework 버전 4가 미리 설치되어 있습니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이제에 대 한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET FRAMEWORK의 CLR (공용 언어 런타임) 구성 요소를 통합 하는 기능을 제공 합니다. Windows. CLR은 관리 코드에 언어 간 통합, 코드 액세스 보안, 개체 수명 관리 및 디버깅과 프로파일링 지원 등의 서비스를 제공합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 사용자 및 애플리케이션 개발자는 이제 통합된 CLR을 사용하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#을 포함한 .NET Framework 언어로 저장 프로시저, 트리거, 사용자 정의 형식, 사용자 정의 함수(스칼라 및 테이블 반환), 사용자 정의 집계 함수를 작성할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에는 .NET Framework 버전 4가 미리 설치되어 있습니다.  
   
  이 통합의 주요 이점은 다음과 같습니다.  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ceef262411bf420330cf9e650d61a916719cb0e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f20c9413923c68ae393315230511722c13f207d6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63130775"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055234"
 ---
 # <a name="smo-namespaces"></a>SMO 네임스페이스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects(SMO)에는 다양한 네임스페이스가 있습니다. 각 네임스페이스는 SMO의 서로 다른 기능 영역을 나타냅니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "63130775"
   
 |클래스|함수|  
 |-----------|--------------|  
-|<xref:Microsoft.SqlServer.Management.Smo>|프로그래밍 방식으로를 조작 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]하는 데 사용 되는 인스턴스 클래스, 유틸리티 클래스 및 열거형을 포함 합니다.|  
+|<xref:Microsoft.SqlServer.Management.Smo>|프로그래밍 방식으로를 조작 하는 데 사용 되는 인스턴스 클래스, 유틸리티 클래스 및 열거형을 포함 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.|  
 |<xref:Microsoft.SqlServer.Management.Common>|연결 클래스와 같이 RMO(복제 관리 개체)와 SMO에 공통되는 클래스를 포함합니다.|  
 |<xref:Microsoft.SqlServer.Management.Smo.Agent>|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 나타내는 클래스를 포함합니다.|  
 |<xref:Microsoft.SqlServer.Management.Smo.Wmi>|WMI 공급자를 나타내는 클래스를 포함합니다.|  

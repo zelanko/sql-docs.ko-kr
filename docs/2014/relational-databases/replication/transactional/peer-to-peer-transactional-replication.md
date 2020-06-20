@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c781435bdf8458b7f2714141d659750b0f31055
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67793920"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998050"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
   피어 투 피어 복제는 *노드*라고도 하는 여러 서버 인스턴스에 걸쳐 데이터 복사본을 유지 관리함으로써 확장성 및 고가용성 솔루션을 제공합니다. 트랜잭션 복제를 기반으로 구축된 피어 투 피어 복제는 트랜잭션 측면에서 일관적인 변경 내용을 거의 실시간으로 전파합니다. 따라서 읽기 작업을 확장해야 하는 애플리케이션은 클라이언트의 읽기 작업을 여러 노드에 배포할 수 있습니다. 여러 노드의 데이터가 거의 실시간으로 유지 관리되므로 피어 투 피어 복제는 데이터 중복을 제공하며 이러한 중복은 데이터의 가용성을 높여 줍니다.  
@@ -137,24 +136,24 @@ ms.locfileid: "67793920"
   
 -   배포 에이전트 매개 변수 **-SubscriptionStreams** 및 로그 판독기 에이전트 매개 변수 **-MaxCmdsInTran**  
   
--   아티클 속성 ** \@destination_owner** 및 ** \@destination_table**.  
+-   아티클 속성 ** \@ destination_owner** 및 ** \@ destination_table**.  
 
 -   피어 투 피어 트랜잭션 복제에서는 피어 투 피어 게시에 대한 단방향 트랜잭션 구독을 만들 수 없습니다.
   
  다음 속성에는 특별히 고려할 사항이 있습니다.  
   
--   게시 속성 ** \@allow_initialize_from_backup** 에는 값이 필요 `true`합니다.  
+-   게시 속성 ** \@ allow_initialize_from_backup** 에는 값이 필요 `true` 합니다.  
   
--   아티클 속성 ** \@replicate_ddl** 에는 값 `true`이 필요 합니다. identityrangemanagementoption에는 값 `manual`이 필요 합니다. ** \@** 및 ** \@상태** 에는 옵션 **24** 가 설정 되어 있어야 합니다.  
+-   아티클 속성 ** \@ replicate_ddl** 에는 값이 필요 합니다 `true` . ** \@ identityrangemanagementoption** 에는 값이 필요 합니다 `manual` . 및 ** \@ 상태** 에는 옵션 **24** 가 설정 되어 있어야 합니다.  
   
--   아티클 속성 ** \@ins_cmd**, ** \@del_cmd**및 ** \@upd_cmd** 값은로 `SQL`설정할 수 없습니다.  
+-   아티클 속성 ** \@ ins_cmd**, ** \@ del_cmd**및 ** \@ upd_cmd** 값은로 설정할 수 없습니다 `SQL` .  
   
--   Subscription 속성 ** \@sync_type** 에는 `none` 또는 `automatic`값이 필요 합니다.  
+-   Subscription 속성 ** \@ sync_type** 에는 또는 값이 필요 합니다 `none` `automatic` .  
   
 ### <a name="maintenance-considerations"></a>유지 관리 고려 사항  
  다음 동작을 수행하려면 시스템을 정지해야 합니다. 즉, 모든 노드에서 게시된 테이블에 대한 작업을 중지하고 각 노드가 다른 모든 노드의 변경 내용을 모두 받았는지 확인해야 합니다.  
   
--   기존 토폴로지에 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 노드 추가  
+-   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]기존 토폴로지에 노드 추가  
   
 -   기존 게시에 아티클 추가  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 601038bb-3b17-42ac-b09d-5b3a82fb6564
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 672d9c363f64037f5f40f51fc7c6cb1c4c3bc674
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2fd5c1f75a0085767ade60f6010e446b70e60840
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054745"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972623"
 ---
 # <a name="use-an-expression-in-a-precedence-constraint"></a>선행 제약 조건에서 식 사용
   이 절차에서는 **선행 제약 조건 편집기** 대화 상자를 사용하여 선행 제약 조건에 식을 추가하는 방법에 대해 설명합니다. 선행 제약 조건에 식을 추가하려면 패키지에 태스크 또는 컨테이너와 같은 실행 개체가 적어도 두 개 이상 포함되어야 하며 선행 제약 조건에 의해 연결되어 있어야 합니다.  

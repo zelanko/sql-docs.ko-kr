@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: dc664d80-fbe3-4586-aba8-a71fa62d14f0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8d6ee17a176c77bf29eb308d2af1bae364f37098
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7fc39541915b43abd024e1b02022f8a9e61580b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721875"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016650"
 ---
 # <a name="ltagentnamegt-agent-location"></a>&lt;AgentName&gt; 에이전트 위치
   병합 에이전트(병합 구독의 경우) 및 배포 에이전트(트랜잭션 구독 및 스냅샷 구독의 경우)는 배포자 또는 구독자에서 실행됩니다. 에이전트가 배포자에서 실행되는 경우 구독을 밀어넣기 구독이라고 하고 에이전트가 구독자에서 실행되는 경우 구독을 끌어오기 구독이라고 합니다. 밀어넣기 및 끌어오기 구독에 대한 자세한 내용은 [게시 구독](subscribe-to-publications.md)을 참조하세요. 마법사를 통해 만든 구독은 모두 두 유형 중 하나가 됩니다. 두 가지 유형의 구독을 모두 만들려면 마법사를 두 번 실행해야 합니다.  

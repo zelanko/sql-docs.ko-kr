@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a59ffcd6-4b69-4c5c-9740-699ccb2183fb
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ffa52839c20a34574423e3b123da79f734fb69ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ba5e4e5dd6d9a6541a98e0cb30229d7335bac24
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786692"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936084"
 ---
 # <a name="browse-for-servers-network-servers"></a>서버 찾아보기(네트워크 서버)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소에 연결 시 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 정확한 이름을 모르는 경우 **서버 이름** 상자에서 **더 찾아보기**를 클릭하여 **서버 찾아보기** 대화 상자를 엽니다.  
@@ -34,6 +33,6 @@ ms.locfileid: "62786692"
   
 ## <a name="options"></a>옵션  
  **네트워크에서 연결할 SQL Server 인스턴스를 선택하십시오.**  
- 트리에 표시된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 클릭하여 연결할 서버를 지정합니다. **+** 또는 **-** 기호로 표시 된 노드를 클릭 하 여 트리 뷰의 일부를 표시 하거나 숨길 수 있습니다.  
+ 트리에 표시된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 클릭하여 연결할 서버를 지정합니다. 또는 기호로 표시 된 노드를 클릭 하 여 트리 뷰의 일부를 표시 하거나 숨길 수 있습니다 **+** **-** .  
   
   

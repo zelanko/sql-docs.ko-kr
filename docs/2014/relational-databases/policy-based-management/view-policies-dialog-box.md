@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 40ce89f518dfdbf4d1c782121dc5ec0e935752ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d5cd144cf02dcfacf0cfca3a3e4623809266250
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676843"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038351"
 ---
 # <a name="view-policies-dialog-box"></a>정책 보기 대화 상자
   이 대화 상자를 사용하여 이 대상에 적용되는 정책을 볼 수 있습니다. 이 대화 상자에는 관련 정책, 해당 정책 범주 및 정책에 대한 정보가 표시됩니다.  

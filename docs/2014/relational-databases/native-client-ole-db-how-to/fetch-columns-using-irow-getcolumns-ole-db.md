@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a91faaa534c35e7affcdf11cb5174d8cb9e62fc6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: eb08c4640265e311a36723af9985af006ec96c38
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704889"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039222"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>IRow::GetColumns를 사용하여 열 인출(OLE DB)
   `IRow` 인터페이스를 사용하여 결과 집합에 있는 단일 행의 열에 직접 액세스할 수 있습니다. 따라서 `IRow`는 행이 한 개인 결과 집합에서 열을 검색하는 데 효과적입니다.  

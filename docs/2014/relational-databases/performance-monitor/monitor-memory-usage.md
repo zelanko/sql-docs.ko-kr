@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c8d7dc9fdf5a6cd6e52261c0d2327676db79508c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ceb2174950731df9c54ed8ee0caba0578714df75
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63239148"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998377"
 ---
 # <a name="monitor-memory-usage"></a>메모리 사용량 모니터링
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스를 주기적으로 모니터링하여 메모리 사용이 일반적인 범위를 벗어나지 않는지 확인할 수 있습니다.  

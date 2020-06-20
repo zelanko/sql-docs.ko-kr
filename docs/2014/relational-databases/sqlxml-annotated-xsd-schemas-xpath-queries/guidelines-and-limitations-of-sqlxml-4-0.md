@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fe433d30-90a1-421e-85c6-af13294dc18d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f7a6bce4d8a3cdf86e18fead1c33d86346061511
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e020cbf0ac32e4c878b0b74b67e7c9c679d5d178
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703129"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015387"
 ---
 # <a name="guidelines-and-limitations-of-sqlxml-40"></a>SQLXML 4.0에 대한 지침 및 제한 사항
   SQLXML 4.0에서 작업을 수행할 때는 다음 사항을 기억해야 합니다.  

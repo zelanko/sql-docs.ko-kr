@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9f9439fd1b0844b09e26331859ce37d18817f908
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b5273340ce44cc360c332d926fd89b52988fa76b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62505989"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054423"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>컨트롤러 및 클라이언트 서비스 계정 수정
   이 항목에서는 Distributed Replay Controller 및 Distributed Replay Client 서비스 계정을 수정한 후 ACL(액세스 제어 목록)을 다시 적용하는 방법에 대해 설명합니다.  
@@ -24,7 +23,7 @@ ms.locfileid: "62505989"
   
 1.  Distributed Replay 서비스가 설치된 컴퓨터에서 명령 프롬프트에 `dcomcnfg`을(를) 입력합니다.  
   
-2.  **서비스**를 두 번 클릭하고 아래로 스크롤한 다음, **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<서비스 이름>** 을 마우스 오른쪽 단추로 클릭하고 **시작** 또는 **중지**를 클릭합니다.  
+2.  **서비스**를 두 번 클릭 하 고 아래로 스크롤한 다음 ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<service name> **를 마우스 오른쪽 단추로 클릭 하 고 **시작** 또는 **중지**를 클릭 합니다.  
   
 ### <a name="to-modify-the-distributed-replay-controller-service"></a>Distributed Replay Controller 서비스를 수정하려면  
   

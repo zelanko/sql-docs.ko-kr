@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 325bedac3968cb59c70863d54c7e0ef429cedd75
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8194b5cc2d4c4a2f1f116ca5a99ea16e18156f13
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68941071"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005256"
 ---
 # <a name="view-and-modify-article-properties"></a>아티클 속성 보기 및 수정
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 아티클 속성을 보고 수정하는 방법에 대해 설명합니다.  
@@ -58,7 +57,7 @@ ms.locfileid: "68941071"
 -   게시가 생성되면 일부 속성 변경으로 인해 새 스냅샷이 필요합니다. 게시에 구독이 있는 경우에는 이러한 변경 내용으로 인해 모든 구독도 다시 초기화해야 합니다. 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md) 및 [기존 게시에 대한 아티클 추가 및 삭제](add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- **\< 및 복제 모니터에서 사용할 수 있는**게시 속성 - [!INCLUDE[msCoName](../../../includes/msconame-md.md)]게시>[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 대화 상자에서 아티클 속성을 보고 수정합니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../monitor/start-the-replication-monitor.md)을 참조하세요.  
+ 및 복제 모니터에서 사용할 수 있는 **게시 속성- \<Publication> ** 대화 상자에서 아티클 속성을 보고 수정 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 합니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../monitor/start-the-replication-monitor.md)을 참조하세요.  
   
 -   **일반** 페이지에는 게시 이름 및 설명, 데이터베이스 이름, 게시 유형 및 구독 만료 설정이 포함되어 있습니다.  
   
@@ -82,49 +81,49 @@ ms.locfileid: "68941071"
   
 #### <a name="to-view-and-modify-article-properties"></a>아티클 속성을 보고 수정하려면  
   
-1.  **게시 속성 -** 게시> **대화 상자의 \<아티클** 페이지에서 아티클을 선택한 후 **아티클 속성**을 클릭합니다.  
+1.  **게시 속성- \<Publication> ** 대화 상자의 **아티클** 페이지에서 아티클을 선택 하 고 **아티클 속성**을 클릭 합니다.  
   
 2.  속성 변경 내용을 적용할 아티클을 다음과 같이 선택합니다.  
   
-    -   **선택한 \<ObjectType> 아티클 속성 설정**을 클릭하여 **아티클 속성 - \<ObjectName>** 대화 상자를 엽니다. 이 대화 상자에서 변경한 속성은 **아티클** 페이지의 개체 창에 강조 표시된 개체에만 적용됩니다.  
+    -   **강조 표시 된 \<ObjectType> 아티클 속성 설정** 을 클릭 하 여 **아티클 속성 \<ObjectName> -** 대화 상자를 시작 합니다 .이 대화 상자에서 변경한 속성은 **아티클** 페이지의 개체 창에 강조 표시 된 개체에만 적용 됩니다.  
   
-    -   **모든 \<ObjectType> 아티클 속성 설정**을 클릭하여 **모든 \<ObjectType> 아티클의 속성** 대화 상자를 엽니다. 이 대화 상자에서 변경한 속성은 게시용으로 아직 선택하지 않은 개체를 비롯하여 **아티클** 페이지의 개체 창에서 해당 형식을 갖는 모든 개체에 적용됩니다.  
+    -   모든 아티클의 속성 **설정을 \<ObjectType> **클릭 하 여 **모든 \<ObjectType> 아티클의** 속성 대화 상자를 시작 합니다 .이 대화 상자에서 변경한 속성은 게시에 대해 아직 선택 하지 않은 개체를 포함 하 여 **아티클** 페이지의 개체 창에 있는 해당 유형의 모든 개체에 적용 됩니다.  
   
         > [!NOTE]  
-        >  **모든 \<ObjectType> 아티클의 속성** 대화 상자에서 변경한 속성은 이전에 **아티클 속성 - \<ObjectName>** 대화 상자에서 지정한 내용을 재정의합니다. 예를 들어 특정 개체 유형의 모든 아티클에 대해 여러 기본값을 설정하고 개별 개체에 대해 일부 속성도 설정하려면 먼저 모든 아티클의 기본값을 설정합니다. 그런 다음 개별 개체에 대해 속성을 설정합니다.  
+        >  **모든 \<ObjectType> 아티클의 속성** 대화 상자에서 속성을 변경 하면 이전에 ** \<ObjectName> 아티클 속성-** 대화 상자에서 변경한 내용이 재정의 됩니다. 예를 들어 특정 개체 유형의 모든 아티클에 대해 여러 기본값을 설정하고 개별 개체에 대해 일부 속성도 설정하려면 먼저 모든 아티클의 기본값을 설정합니다. 그런 다음 개별 개체에 대해 속성을 설정합니다.  
   
 3.  필요한 경우 속성을 수정한 다음 **확인**을 클릭합니다.  
   
-4.  **게시 속성 -** 게시> **대화 상자에서 \<확인**을 클릭합니다.  
+4.  **게시 속성- \<Publication> ** 대화 상자에서 **확인을** 클릭 합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  아티클은 수정할 수 있으며 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 해당 속성을 반환할 수 있습니다. 사용되는 저장 프로시저는 아티클이 속한 게시 유형에 따라 달라집니다.  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 속한 아티클의 속성을 보려면  
   
-1.  게시 매개 변수에 게시의 이름을 지정 하 고 ** \@article** 매개 변수에 아티클의 이름을 지정 하 여 [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql)를 실행 합니다. ** \@** ** \@아티클을**지정 하지 않으면 게시의 모든 아티클에 대 한 정보가 반환 됩니다.  
+1.  ** \@ 게시** 매개 변수에 게시의 이름을 지정 하 고 ** \@ article** 매개 변수에 아티클의 이름을 지정 하 여 [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql)를 실행 합니다. ** \@ 아티클을**지정 하지 않으면 게시의 모든 아티클에 대 한 정보가 반환 됩니다.  
   
 2.  테이블 아티클에 대해 [sp_helparticlecolumns](/sql/relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql) 를 실행하여 기본 테이블에서 사용할 수 있는 모든 열을 나열합니다.  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 속한 아티클의 속성을 수정하려면  
   
-1.  Property 매개 변수에 변경 되는 아티클 속성을 지정 하 고 ** \@value** 매개 변수에이 속성의 새 값을 지정 하 여 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)를 실행 합니다. ** \@**  
+1.  ** \@ Property** 매개 변수에 변경 되는 아티클 속성을 지정 하 고 ** \@ value** 매개 변수에이 속성의 새 값을 지정 하 여 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)를 실행 합니다.  
   
     > [!NOTE]  
-    >  변경 시 새 스냅숏을 생성 해야 하는 경우 ** \@force_invalidate_snapshot**에 값 **1** 을 지정 해야 하며, 변경으로 인해 구독자를 다시 초기화 해야 하는 경우에는 ** \@force_reinit_subscription**에 대해 값 **1** 도 지정 해야 합니다. 변경된 경우 새 스냅샷 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
+    >  변경 시 새 스냅숏을 생성 해야 하는 경우 ** \@ force_invalidate_snapshot**에 값 **1** 을 지정 해야 하며, 변경으로 인해 구독자를 다시 초기화 해야 하는 경우에는 ** \@ force_reinit_subscription**에 대해 값 **1** 도 지정 해야 합니다. 변경된 경우 새 스냅샷 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-merge-publication"></a>병합 게시에 속한 아티클의 속성을 보려면  
   
-1.  게시 매개 변수에 게시의 이름을 지정 하 고 ** \@article** 매개 변수에 아티클의 이름을 지정 하 여 [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)를 실행 합니다. ** \@** 이러한 매개 변수를 지정하지 않으면 게시 또는 게시자에 있는 모든 아티클에 대한 정보가 반환됩니다.  
+1.  ** \@ 게시** 매개 변수에 게시의 이름을 지정 하 고 ** \@ article** 매개 변수에 아티클의 이름을 지정 하 여 [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)를 실행 합니다. 이러한 매개 변수를 지정하지 않으면 게시 또는 게시자에 있는 모든 아티클에 대한 정보가 반환됩니다.  
   
 2.  테이블 아티클에 대해 [sp_helpmergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-helpmergearticlecolumn-transact-sql) 을 실행하여 기본 테이블에서 사용할 수 있는 모든 열을 나열합니다.  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-merge-publication"></a>병합 게시에 속한 아티클의 속성을 수정하려면  
   
-1.  Property 매개 변수에 변경 되는 아티클 속성을 지정 하 고 ** \@value** 매개 변수에이 속성의 새 값을 지정 하 여 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)를 실행 합니다. ** \@**  
+1.  ** \@ Property** 매개 변수에 변경 되는 아티클 속성을 지정 하 고 ** \@ value** 매개 변수에이 속성의 새 값을 지정 하 여 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)를 실행 합니다.  
   
     > [!NOTE]  
-    >  변경 시 새 스냅숏을 생성 해야 하는 경우 ** \@force_invalidate_snapshot**에 값 **1** 을 지정 해야 하며, 변경으로 인해 구독자를 다시 초기화 해야 하는 경우에는 ** \@force_reinit_subscription**에 대해 값 **1** 도 지정 해야 합니다. 변경된 경우 새 스냅샷 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
+    >  변경 시 새 스냅숏을 생성 해야 하는 경우 ** \@ force_invalidate_snapshot**에 값 **1** 을 지정 해야 하며, 변경으로 인해 구독자를 다시 초기화 해야 하는 경우에는 ** \@ force_reinit_subscription**에 대해 값 **1** 도 지정 해야 합니다. 변경된 경우 새 스냅샷 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
   
 ###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  이 트랜잭션 복제 예에서는 게시된 아티클의 속성을 반환합니다.  

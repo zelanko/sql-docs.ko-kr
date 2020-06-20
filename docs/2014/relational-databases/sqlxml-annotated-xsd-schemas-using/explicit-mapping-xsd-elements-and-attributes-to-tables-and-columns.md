@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 11144714addb50dc4c481512399228802390f2f3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 267f9044505126cbe7f865e6577da3cbe2f26bcf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703616"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055153"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>테이블 및 열에 대한 XSD 요소 및 특성의 명시적 매핑(SQLXML 4.0)
   XSD 스키마를 사용하여 관계형 데이터베이스의 XML 뷰를 제공할 때는 스키마의 요소 및 특성을 데이터베이스의 테이블 및 열에 매핑해야 합니다. 데이터베이스 테이블/뷰의 행은 XML 문서의 요소에 매핑됩니다. 데이터베이스의 열 값은 특성 또는 요소에 매핑됩니다.  
@@ -54,13 +53,13 @@ ms.locfileid: "82703616"
 ## <a name="sql-field"></a>sql-field  
  `sql-field` 주석은 요소 또는 특성을 데이터베이스 열에 매핑합니다. `sql:field` 주석은 스키마의 XML 노드를 데이터베이스 열에 매핑하기 위해 추가됩니다. 비어 있는 콘텐츠 요소에는 `sql:field`를 지정할 수 없습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. sql:relation 및 sql:field 주석 지정  
- 이 예에서 XSD 스키마는 ** \< FName>** 및 ** \< LName>** 자식 요소와 **ContactID** 특성을 포함 하는 복합 형식의 ** \< Contact>** 요소로 구성 됩니다.  
+ 이 예에서 XSD 스키마는 **\<Contact>** **\<FName>** 및 **\<LName>** 자식 요소와 **ContactID** 특성을 포함 하는 복합 형식의 요소로 구성 됩니다.  
   
- `sql:relation`주석은 ** \< contact>** 요소를 AdventureWorks 데이터베이스의 Person. contact 테이블에 매핑합니다. `sql:field`주석은 ** \< FName>** 요소를 FirstName 열에 매핑하고 ** \< LName>** 요소를 LastName 열에 매핑합니다.  
+ `sql:relation`주석은 **\<Contact>** AdventureWorks 데이터베이스의 Person. Contact 테이블에 요소를 매핑합니다. `sql:field`주석은 **\<FName>** 요소를 FirstName 열에 매핑하고 요소를 **\<LName>** LastName 열에 매핑합니다.  
   
  **ContactID** 특성에는 주석이 지정 되지 않습니다. 따라서 이름이 같은 열에 특성을 매핑하는 기본 매핑이 수행됩니다.  
   

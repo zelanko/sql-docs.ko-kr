@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9c630646aa81ebaeccf49f729299394419b7099a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb72255fa14695a16f4bc382fe0d617441dfaeb6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021730"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038426"
 ---
 # <a name="publication-properties-subscription-options"></a>게시 속성, 구독 옵션
   **게시 속성** 대화 상자의 **구독 옵션** 페이지를 사용하여 구독과 연결된 게시 수준 속성을 보고 설정할 수 있습니다. 속성은 다음 범주로 그룹화됩니다.  
@@ -63,7 +62,7 @@ ms.locfileid: "63021730"
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 백업 파일을 사용하여 구독을 초기화할 수 있도록 허용할지 여부를 결정합니다. 자세한 내용은 [스냅샷 없이 트랜잭션 구독 초기화](initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
   
  **SQL Server 이외 구독자 허용**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 게시에서[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자를 지원할지 여부를 결정합니다. 이 옵션을 **True** 로 설정 하면 이외[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자를 지원 하도록 다른 게시 속성을 설정 합니다. 구독이 있으면 이 옵션은 읽기 전용입니다. **즉시 업데이트 구독 허용** , **지연 업데이트 구독 허용**또는 **피어 투 피어 구독 허용**이 **True** 로 설정된 경우에는 이 옵션을 **True**로 설정할 수 없습니다. 자세한 내용은 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)을(를) 참조하세요.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 게시에서[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자를 지원할지 여부를 결정합니다. 이 옵션을 **True** 로 설정 하면 이외 구독자를 지원 하도록 다른 게시 속성을 설정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 구독이 있으면 이 옵션은 읽기 전용입니다. **즉시 업데이트 구독 허용** , **지연 업데이트 구독 허용**또는 **피어 투 피어 구독 허용**이 **True** 로 설정된 경우에는 이 옵션을 **True**로 설정할 수 없습니다. 자세한 내용은 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)을(를) 참조하세요.  
   
 ### <a name="data-transformation"></a>데이터 변환  
  **데이터 변환 허용**  
