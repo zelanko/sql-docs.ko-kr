@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 860de6d29557b6594c9ec149f09e915b837fa95e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149754"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048510"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능을 사용하기 전에 이 항목에서 설명하는 제품 요구 사항을 검토하세요.  
@@ -107,7 +106,7 @@ ms.locfileid: "63149754"
   
 -   SPID  
   
--   Start Time  
+-   시작 시간  
   
 -   EndTime  
   
@@ -125,7 +124,7 @@ ms.locfileid: "63149754"
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
 ## <a name="operating-system-requirements"></a>운영 체제 요구 사항  
- 관리 도구, 컨트롤러 및 클라이언트 서비스를 실행할 수 있는 운영 체제는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 동일합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 지원 되는 운영 체제에 대 한 자세한 내용은 [SQL Server 2014를 설치 하기 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)을 참조 하세요.  
+ 관리 도구, 컨트롤러 및 클라이언트 서비스를 실행할 수 있는 운영 체제는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 동일합니다. 인스턴스에 대해 지원 되는 운영 체제에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2014를 설치 하기 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)을 참조 하세요.  
   
  Distributed Replay 기능은 x86 기반 및 x64 기반 운영 체제 모두에서 지원됩니다. x64 기반 운영 체제의 경우 WOW(Windows on Windows) 모드만 지원됩니다.  
   

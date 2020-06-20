@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 65f498318c29f6e3dc7189bd8f1c5d852cc1a2d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f8d96c9d599987d75dd02085b2ea3343a9414d6e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176713"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063731"
 ---
 # <a name="transactional-replication"></a>트랜잭션 복제
   트랜잭션 복제는 일반적으로 게시 데이터베이스 개체 및 데이터의 스냅샷으로 시작됩니다. 일반적으로 초기 스냅샷이 사용되자마자 게시자에서의 후속 데이터 변경 내용 및 스키마 수정 내용이 구독자로 배달됩니다. 이러한 작업은 거의 실시간으로 수행됩니다. 데이터 변경 내용은 게시자에서 발생한 것과 같은 순서 및 같은 트랜잭션 경계 내에서 구독자에 적용되므로 게시 내에서는 트랜잭션 일관성이 보장됩니다.

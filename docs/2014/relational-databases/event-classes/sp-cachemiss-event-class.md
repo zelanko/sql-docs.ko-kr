@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82229233-f772-4558-95a0-d54584d1b1ae
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5f3d74cad3f462d9bd8d2d57cc3b6e37c4739598
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91df12e64c24bb3e21bb69e73f5ac1741f18ba0b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050929"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028396"
 ---
 # <a name="spcachemiss-event-class"></a>SP:CacheMiss 이벤트 클래스
   SP:CacheMiss 이벤트 클래스는 캐시에 프로시저가 없음을 나타냅니다. SP:CacheMiss 이벤트가 자주 발생하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용 가능한 메모리를 더 확보하여 프로시저 캐시 크기를 늘려야 합니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "63050929"
 |ApplicationName|`nvarchar`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 애플리케이션의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|10|예|  
 |ClientProcessID|`int`|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
 |DatabaseID|`int`|저장 프로시저가 실행되는 데이터베이스의 ID입니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
-|EventClass|`int`|이벤트 유형 = 34|27|아니요|  
+|EventClass|`int`|이벤트 유형 = 34|27|예|  
 |EventSequence|`int`|요청 내에 지정된 이벤트 시퀀스입니다.|51|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|yes|  

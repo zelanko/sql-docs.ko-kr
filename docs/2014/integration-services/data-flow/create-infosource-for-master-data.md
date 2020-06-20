@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 87ada4ef6cf9266720ac0c9742440d0d60345c88
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7e105502a79fc96deeba0ee49d94d88272e73c51
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827954"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916373"
 ---
 # <a name="create-infosource-for-master-data"></a>마스터 데이터용 InfoSource 만들기
   **마스터 데이터용 InfoSource 만들기** 대화 상자에서는 SAP Netweaver BW 시스템의 마스터 데이터에 대한 새 InfoSource를 만듭니다.  

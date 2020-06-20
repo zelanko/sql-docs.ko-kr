@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c03333e715483f8da32703636373ef0115c3a1c0
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 7e9821521e793092c62843dd9bdab0c16bb0f26b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82921605"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915623"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 데이터 형식
   데이터가 패키지의 데이터 흐름으로 들어갈 때 데이터를 추출하는 원본은 데이터를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환합니다. 숫자 데이터에는 숫자 데이터 형식이 지정되고, 문자열 데이터에는 문자 데이터 형식이, 그리고 날짜에는 날짜 데이터 형식이 지정됩니다. 또한 GUID 및 BLOB(Binary Large Object Block)과 같은 다른 데이터에는 해당 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식이 지정됩니다. 데이터에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식과 호환되지 않는 데이터 형식이 있는 경우에는 오류가 발생합니다.  

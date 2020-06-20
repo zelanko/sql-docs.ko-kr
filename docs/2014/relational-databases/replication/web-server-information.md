@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 86d72275-45c7-459f-98cf-f5a366ed279c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b5f5c2385b4c58447db008544124ae9048566958
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7b461ed26b3e234f083add3312e256e164efc9b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199946"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063645"
 ---
 # <a name="web-server-information"></a>웹 서버 정보
   병합 복제에 대해 웹 동기화 옵션을 사용하려면 웹 서버 정보가 필요합니다. 웹 동기화를 구성하는 방법은 [웹 동기화 구성](configure-web-synchronization.md)을 참조하세요.  

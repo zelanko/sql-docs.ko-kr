@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fd64fe5cad5f85c41830d25dce279ba09915626b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 071dcc95a2b8dac3aef7fbea25c8dc2ba9dfed02
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771171"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923054"
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance
   이 절차에서는 CDC Designer 콘솔을 사용하여 런타임에 CDC 인스턴스 작업을 관리하는 방법에 대해 설명합니다.  

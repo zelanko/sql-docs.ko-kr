@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d12dbcdf49fc34bdd37fca21635cbcd416efc36b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c200e69d0e80232a558c4fa030864fe864d237c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176230"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967353"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>스크립트 구성 요소 코딩 및 디버깅
   [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 스크립트 구성 요소에는 메타데이터 디자인 모드와 코드 디자인 모드의 두 가지 모드가 있습니다. **스크립트 변환 편집기**를 열면 구성 요소가 메타데이터 디자인 모드로 전환됩니다. 여기서는 메타데이터를 구성하고 구성 요소 속성을 설정할 수 있습니다. 메타데이터 디자인 모드에서 스크립트 구성 요소 속성을 설정하고 입/출력을 구성한 후에는 코드 디자인 모드로 전환하여 사용자 지정 스크립트를 작성할 수 있습니다. 메타데이터 디자인 모드 및 코드 디자인 모드에 대한 자세한 내용은 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](configuring-the-script-component-in-the-script-component-editor.md)을 참조하세요.
@@ -59,9 +58,9 @@ ms.locfileid: "78176230"
 
     -   `Connections` 컬렉션 클래스 - 스크립트 변환 편집기의 연결 관리자 페이지에서 선택한 연결에 대한 참조를 포함합니다.
 
-    -   `Variables` **스크립트 변환 편집기**의 **스크립트** 페이지에서 `ReadOnlyVariable` 및 `ReadWriteVariables` 속성에 입력 한 변수에 대 한 참조를 포함 하는 컬렉션 클래스입니다.
+    -   `Variables` `ReadOnlyVariable` `ReadWriteVariables` **스크립트 변환 편집기**의 **스크립트** 페이지에서 및 속성에 입력 한 변수에 대 한 참조를 포함 하는 컬렉션 클래스입니다.
 
--   프로젝트 `BufferWrapper` 항목에는 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> **스크립트 변환 편집기**의 **입/출력** 페이지에 구성 된 각 입력 및 출력에 대해에서 상속 되는 클래스가 포함 되어 있습니다. 각 클래스는 구성된 입/출력 열과 그 열이 포함된 데이터 흐름 버퍼에 해당하는 형식화된 접근자 속성을 포함합니다.
+-   `BufferWrapper`프로젝트 항목에는 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> **스크립트 변환 편집기**의 **입/출력** 페이지에 구성 된 각 입력 및 출력에 대해에서 상속 되는 클래스가 포함 되어 있습니다. 각 클래스는 구성된 입/출력 열과 그 열이 포함된 데이터 흐름 버퍼에 해당하는 형식화된 접근자 속성을 포함합니다.
 
  이러한 개체, 메서드 및 속성을 사용하는 방법에 대한 자세한 내용은 [스크립트 구성 요소 개체 모델 이해](understanding-the-script-component-object-model.md)를 참조하세요. 특정 유형의 스크립트 구성 요소에서 이러한 클래스의 메서드와 속성을 사용하는 방법에 대한 자세한 내용은 [추가 스크립트 구성 요소 예제](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md) 섹션을 참조하세요. 예 항목에는 전체 코드 예제도 들어 있습니다.
 
@@ -170,7 +169,7 @@ public class ScriptMain : UserComponent
 |---------------------|-------------------|
 |variables|`Variables` 클래스의 `ComponentWrapper` 속성을 통해 표시되는, `Variables` 프로젝트 항목의 `ScriptMain` 컬렉션 클래스에 있는 명명된 접근자 및 형식화된 접근자 속성을 사용합니다.<br /><br /> `PreExecute` 메서드는 읽기 전용 변수만 액세스할 수 있습니다. `PostExecute` 메서드는 읽기 전용 변수와 읽기/쓰기 변수 모두에 액세스할 수 있습니다.|
 |Connections|`Connections` 클래스의 `ComponentWrapper` 속성을 통해 표시되는, `Connections` 프로젝트 항목의 `ScriptMain` 컬렉션 클래스에 있는 명명된 접근자 및 형식화된 접근자 속성을 사용합니다.|
-|이벤트|클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 속성과 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스의 **\<Fire X>** 메서드를 사용 하 여 이벤트를 발생 시킵니다. `ScriptMain`|
+|이벤트|<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A>클래스의 속성과 `ScriptMain` 인터페이스의 ** \<X> Fire** 메서드를 사용 하 여 이벤트를 발생 시킵니다 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> .|
 |로깅|`ScriptMain` 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> 메서드를 사용하여 로깅을 수행합니다.|
 
 ## <a name="debugging-the-script-component"></a>스크립트 구성 요소 디버깅
@@ -184,9 +183,9 @@ public class ScriptMain : UserComponent
 
  다음 방법을 사용하여 스크립트 구성 요소의 실행을 모니터링할 수도 있습니다.
 
--   실행을 중단 하 고 **system.object** 네임 스페이스의 메서드 `MessageBox.Show` 를 사용 하 여 모달 메시지를 표시 합니다. (이 코드는 디버깅 프로세스를 완료한 후 제거하십시오.)
+-   실행을 중단 하 고 `MessageBox.Show` **system.object** 네임 스페이스의 메서드를 사용 하 여 모달 메시지를 표시 합니다. (이 코드는 디버깅 프로세스를 완료한 후 제거하십시오.)
 
--   정보 메시지, 경고 및 오류에 대한 이벤트를 발생시킵니다. FireInformation, FireWarning 및 FireError 메서드는 Visual Studio **출력** 창에 이벤트 설명을 표시합니다. 그러나 FireProgress 메서드, Console.Write 메서드 및 Console.WriteLine 메서드는 **출력** 창에 어떠한 정보도 표시하지 않습니다. FireProgress 이벤트의 메시지는 **디자이너의**진행률[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 탭에 표시됩니다. 자세한 내용은 [스크립트 구성 요소에서 이벤트 발생](../../data-flow/transformations/script-component.md)을 참조하세요.
+-   정보 메시지, 경고 및 오류에 대한 이벤트를 발생시킵니다. FireInformation, FireWarning 및 FireError 메서드는 Visual Studio **출력** 창에 이벤트 설명을 표시합니다. 그러나 FireProgress 메서드, Console.Write 메서드 및 Console.WriteLine 메서드는 **출력** 창에 어떠한 정보도 표시하지 않습니다. FireProgress 이벤트의 메시지는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너의 **진행률** 탭에 표시됩니다. 자세한 내용은 [스크립트 구성 요소에서 이벤트 발생](../../data-flow/transformations/script-component.md)을 참조하세요.
 
 -   이벤트 또는 사용자 정의 메시지를 활성화된 로깅 공급자에 기록합니다. 자세한 내용은 [스크립트 구성 요소의 로깅](logging-in-the-script-component.md)을 참조하세요.
 
@@ -197,7 +196,7 @@ public class ScriptMain : UserComponent
 
  [스크립트 구성 요소 개체 모델 이해](understanding-the-script-component-object-model.md) 스크립트 구성 요소에서 사용할 수 있는 개체, 메서드 및 속성을 사용 하는 방법을 설명 합니다.
 
- [스크립팅 솔루션에서 다른 어셈블리 참조](../referencing-other-assemblies-in-scripting-solutions.md) 스크립트 구성 요소의 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 클래스 라이브러리에서 개체를 참조 하는 방법을 설명 합니다.
+ [스크립팅 솔루션에서 다른 어셈블리 참조](../referencing-other-assemblies-in-scripting-solutions.md) 스크립트 구성 요소의 클래스 라이브러리에서 개체를 참조 하는 방법을 설명 합니다 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] .
 
  [스크립트 구성 요소에 대 한 오류 출력 시뮬레이션](../../extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md) 스크립트 구성 요소에서 처리 하는 동안 오류를 발생 시키는 행의 오류 출력을 시뮬레이트하는 방법에 대해 설명 합니다.
 

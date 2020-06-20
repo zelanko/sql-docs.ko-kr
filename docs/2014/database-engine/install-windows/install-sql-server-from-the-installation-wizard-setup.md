@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0e0af29d348ff55b415d22d44bc8e8e48a35d290
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0561ff95fc5fbcfb6a9dc552580e14ff2a5d14f1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775753"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932728"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>설치 마법사에서 SQL Server 2014 설치(설치 프로그램)
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 새 인스턴스를 설치하는 절차를 단계별로 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 모든 구성 요소를 설치할 수 있는 단일 기능 트리를 제공하므로 구성 요소를 개별적으로 설치할 필요가 없습니다. 설치할 수 있는 다양 한 구성 요소에 대 한 자세한 내용은 [SQL Server 2014에 대 한 설치](installation-for-sql-server.md)를 참조 하세요.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 개별적으로 설치 하는 방법에 대 한 자세한 내용은 [SQL Server 2014 설치](install-sql-server.md)를 참조 하세요.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 새 인스턴스를 설치하는 절차를 단계별로 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 모든 구성 요소를 설치할 수 있는 단일 기능 트리를 제공하므로 구성 요소를 개별적으로 설치할 필요가 없습니다. 설치할 수 있는 다양 한 구성 요소에 대 한 자세한 내용은 [SQL Server 2014에 대 한 설치](installation-for-sql-server.md)를 참조 하세요.  구성 요소를 개별적으로 설치 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2014 설치](install-sql-server.md)를 참조 하세요.  
   
  다음 추가 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 다른 방법을 설명합니다.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "62775753"
   
 8.  설치 프로그램에서 설치 파일 설치 페이지에는 설치 파일의 다운로드, 추출 및 설치 진행률이 표시됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에 대한 업데이트가 발견되고 이러한 업데이트가 포함되도록 지정된 경우 해당 업데이트도 함께 설치됩니다.  
   
-9. 설치 역할 페이지에서 ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능 설치**를 선택 하 고 **다음** 을 클릭 하 여 기능 선택 페이지를 계속 진행 합니다.  
+9. 설치 역할 페이지에서 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능 설치**를 선택하고 **다음** 을 클릭하여 기능 선택 페이지를 계속 진행합니다.  
   
 10. 기능 선택 페이지에서 설치할 구성 요소를 선택합니다. 기능 이름을 선택하면 **기능 설명** 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 확인란을 자유롭게 조합하여 선택할 수 있습니다. 자세한 내용은 [SQL Server 2014의 버전 및 구성 요소](../../sql-server/editions-and-components-of-sql-server-2016.md) 및 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
   
@@ -146,15 +145,15 @@ ms.locfileid: "62775753"
   
 18. Distributed Replay Client 구성 페이지를 사용하여 Distributed Replay Client 서비스에 대한 관리 권한을 부여할 사용자를 지정합니다. 관리 권한이 있는 사용자는 Distributed Replay Client 서비스에 무제한으로 액세스할 수 있습니다.  
   
-     **컨트롤러 이름**은 선택적 매개 변수이며 기본값은 \<*빈 값*>입니다. 클라이언트 컴퓨터에서 Distributed Replay Client 서비스를 위해 통신할 컨트롤러의 이름을 입력합니다. 다음 사항에 유의하세요.  
+     **컨트롤러 이름** 은 선택적 매개 변수 이며 기본값은 \<*blank*> 입니다. 클라이언트 컴퓨터에서 Distributed Replay Client 서비스를 위해 통신할 컨트롤러의 이름을 입력합니다. 다음 사항에 유의하세요.  
   
     -   컨트롤러를 이미 설정한 경우 각 클라이언트를 구성할 때 컨트롤러의 이름을 입력합니다.  
   
     -   컨트롤러를 아직 설정하지 않은 경우에는 컨트롤러 이름을 비워 둡니다. 그러나 **클라이언트 구성** 파일에서 컨트롤러 이름을 수동으로 입력해야 합니다.  
   
-     Distributed Replay 클라이언트 서비스의 **작업 디렉터리** 를 지정 합니다. 기본 작업 디렉터리 \<는 *드라이브 문자*>: 파일 \ 파일\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\입니다.  
+     Distributed Replay 클라이언트 서비스의 **작업 디렉터리** 를 지정 합니다. 기본 작업 디렉터리는 \<*drive letter*> 파일 \ \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\WorkingDir \\ 입니다.  
   
-     Distributed Replay 클라이언트 서비스의 **결과 디렉터리** 를 지정 합니다. 기본 결과 디렉터리 \<는 *드라이브 문자*>: 파일 \ 파일\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\입니다.  
+     Distributed Replay 클라이언트 서비스의 **결과 디렉터리** 를 지정 합니다. 기본 결과 디렉터리는 \<*drive letter*> 파일 \ 파일 \ \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\ResultDir \\ 입니다.  
   
      계속하려면 **다음**을 클릭합니다.  
   

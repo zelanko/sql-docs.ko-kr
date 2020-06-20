@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 30e46515fda5bf03a96e9f1168b470f635698d07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9fe8a7c8ad24c472eb41448f1303ad240a5232c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211113"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048432"
 ---
 # <a name="eventstring-element-dta"></a>EventString 요소(DTA)
   XML 입력 파일에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 작업을 직접 지정합니다.  
@@ -37,17 +36,17 @@ ms.locfileid: "68211113"
   
 ## <a name="element-attributes"></a>요소 특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
-|`Weight`|선택 사항입니다. 지정한 이벤트에 대한 쿼리 가중치 요인(중요도 요인)을 지정합니다. `float` 데이터 형식을 사용하여 가중치를 지정할 수 있습니다(예: `Weight`="100.01"). `Weight`에 지정할 수 있는 최소값은 "0"입니다.|  
+|`Weight`|(선택 사항) 지정한 이벤트에 대한 쿼리 가중치 요인(중요도 요인)을 지정합니다. `float` 데이터 형식을 사용하여 가중치를 지정할 수 있습니다(예: `Weight`="100.01"). `Weight`에 지정할 수 있는 최소값은 "0"입니다.|  
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특성|설명|  
+|특성|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|`string`, 길이 제한 없음|  
 |**기본값**|없음|  
-|**내용과**|다른 작업 유형이 지정되지 않은 경우 한 번만 지정해야 합니다. `EventString` 부모에 대해 `File`, `Database` 또는 `Workload` 자식 요소를 지정해야 하지만 한 유형만 사용할 수 있습니다. 예를 들어 `EventString` 요소로 작업을 지정할 경우 동일한 XML 입력 파일에서 `File` 요소로 작업을 지정할 수 없습니다.|  
+|**발생 빈도**|다른 작업 유형이 지정되지 않은 경우 한 번만 지정해야 합니다. `EventString` 부모에 대해 `File`, `Database` 또는 `Workload` 자식 요소를 지정해야 하지만 한 유형만 사용할 수 있습니다. 예를 들어 `EventString` 요소로 작업을 지정할 경우 동일한 XML 입력 파일에서 `File` 요소로 작업을 지정할 수 없습니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 27d6afa2-7dab-4fe7-a1ad-064b879dc654
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5ebbd488cd85fde3003f6e54c5f08fd05c601d3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a202279021e3e6c7c3c44a167792bb9439567aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662317"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029286"
 ---
 # <a name="locks-event-category"></a>잠금 이벤트 범주
   **Locks** 이벤트 범주의 이벤트 클래스를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에서 잠금 작업을 모니터링합니다. 이러한 이벤트 클래스를 사용하면 여러 사용자들이 동시에 데이터를 읽고 수정하여 발생되는 잠금 문제를 조사할 수 있습니다.  

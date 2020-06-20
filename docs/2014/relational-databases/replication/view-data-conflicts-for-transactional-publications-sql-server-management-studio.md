@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e046351ca3dc7977691fc98e24453ccbf8e6af53
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 228753c113bcf43ed276d989a3996e9bf23bfc16
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144414"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063659"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>트랜잭션 게시의 데이터 충돌 확인(SQL Server Management Studio)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 복제 충돌 뷰어에서 피어 투 피어 트랜잭션 복제와 지연 업데이트 구독이 포함된 트랜잭션 복제의 충돌을 볼 수 있습니다. 충돌 감지 및 해결 방법은 [피어 투 피어 복제에서 충돌 검색](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md) 및 [지연 업데이트 충돌 해결 옵션 설정&#40;SQL Server Management Studio&#41;](publish/create-an-updatable-subscription-to-a-transactional-publication.md)을 참조하세요.  
@@ -32,7 +31,7 @@ ms.locfileid: "63144414"
   
     -   @conflict_retention sp_addpublication [의](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)매개 변수에 보존 값을 지정합니다.  
   
-    -   매개 변수에 값 `'conflict_retention'` 을 지정 하 고 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)의 @value 매개 변수에 보존 값을 지정 합니다. @property  
+    -   매개 변수에 값을 지정 `'conflict_retention'` @property 하 고 @value [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)의 매개 변수에 보존 값을 지정 합니다.  
   
 ### <a name="to-view-conflicts"></a>충돌을 보려면  
   

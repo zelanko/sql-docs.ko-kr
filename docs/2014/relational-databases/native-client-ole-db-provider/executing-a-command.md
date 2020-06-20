@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bb0b3cbf-fe45-46ba-b2ec-c5a39e3c7081
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 47307455468a20351c3a3cda2a619e6296fb29ad
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 41e8da036d5a4b6469a31213247ad7d4edb7dbfe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704731"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056006"
 ---
 # <a name="executing-a-command"></a>명령 실행
   데이터 원본에 대한 연결이 설정된 후 소비자는 **IDBCreateSession::CreateSession** 메서드를 호출하여 세션을 만듭니다. 세션은 명령, 행 집합 또는 트랜잭션 팩토리로 작동합니다.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e97c9ba15aab664e9f0c77f9eb84152f75c3e3d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7417efef16ae16ef11b955af12ba8dbbd549939c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065876"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938324"
 ---
 # <a name="translations-analysis-services"></a>번역(Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** 다차원 전용  
@@ -45,7 +44,7 @@ ms.locfileid: "66065876"
   
 1.  Adventure Works 다차원 모델을 디자이너에서 엽니다.  
   
-2.  솔루션 탐색기에서 데이터 원본 뷰를 열고 놀이 Works DW\<버전>을 두 번 클릭 합니다.  
+2.  솔루션 탐색기에서 데이터 원본 뷰를 열고 놀이 Works DW dsv를 두 번 클릭 \<version> 합니다.  
   
 3.  dimDate, dimProduct, dimProductCategory 또는 dimProductSubcateogry를 찾습니다. 이 차원들 모두에는 월, 요일, 제품 이름, 범주 이름 등에 대한 번역된 멤버용 특성이 포함되어 있습니다.  
   

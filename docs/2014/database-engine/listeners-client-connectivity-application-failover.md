@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5ee2879bc0ef94d8abee20032c83a74d00696ef2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 241087f5da3c7baa09a34fab8ab1886809ce0d36
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289311"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931455"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)(SQL Server)
   이 항목에서는 [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 클라이언트 연결 및 애플리케이션 장애 조치(failover) 기능에 대한 고려 사항에 대해 설명합니다.  
@@ -118,7 +117,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- 이 연결 문자열 예에서 클라이언트는 포트 1433에서 `AGListener` 라는 가용성 그룹 수신기에 연결을 시도합니다. 가용성 그룹 수신기가 1433에서 수신하는 경우 포트를 생략할 수도 있습니다.  연결 문자열에 `ApplicationIntent` 속성이로 `ReadOnly`설정 되어 있으므로이 연결 문자열은 *읽기 전용 연결 문자열*입니다.  이 설정이 없으면 서버에서 연결에 대한 읽기 전용 라우팅을 시도하지 않습니다.  
+ 이 연결 문자열 예에서 클라이언트는 포트 1433에서 `AGListener` 라는 가용성 그룹 수신기에 연결을 시도합니다. 가용성 그룹 수신기가 1433에서 수신하는 경우 포트를 생략할 수도 있습니다.  연결 문자열에 속성이로 설정 되어 있으므로이 연결 문자열은 `ApplicationIntent` `ReadOnly` *읽기 전용 연결 문자열*입니다.  이 설정이 없으면 서버에서 연결에 대한 읽기 전용 라우팅을 시도하지 않습니다.  
   
  가용성 그룹의 주 데이터베이스는 들어오는 읽기 전용 라우팅 요청을 처리한 다음 주 복제본에 조인되고 읽기 전용 라우팅을 위해 구성된 온라인 읽기 전용 복제본을 찾습니다.  클라이언트는 주 복제본 서버에서 연결 정보를 다시 받고 식별된 읽기 전용 복제본에 연결합니다.  
   
@@ -194,7 +193,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 -   [AlwaysOn 클라이언트 연결 &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)
   
--   [SQL Server&#41;&#40;가용성 그룹 수신기 만들기 또는 구성](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [가용성 그룹 수신기 속성 보기&#40;SQL Server&#41;](availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
   

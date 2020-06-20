@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c442e3e264e36f9d6ffef35947f4f96180c4b799
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e7518ef7933d864da5b8e9827f772e6599b79d95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712280"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048177"
 ---
 # <a name="support-for-large-udts"></a>큰 UDT에 대한 지원
   이 예제 솔루션에는 두 개의 프로젝트가 포함되어 있습니다. 첫 번째 프로젝트는 C# 원본 코드에서 어셈블리(DLL)를 만듭니다. 이 어셈블리에는 CLR 유형이 포함되어 있습니다. 테이블이 데이터베이스에 추가됩니다. 테이블의 열은 어셈블리에 정의된 유형으로 지정됩니다. 기본적으로 이 예제에서는 master 데이터베이스를 사용합니다. 두 번째 프로젝트는 테이블에서 데이터를 읽는 네이티브 C 애플리케이션입니다.  

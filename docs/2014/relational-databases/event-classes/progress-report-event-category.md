@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 15eba54b-ad75-4eda-9fc3-429672da46f2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4b91a2848dda5dff2150d80760c7a43680a8f325
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 027e32084e61de8f9f03444dde11401adf32ec2a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827018"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028918"
 ---
 # <a name="progress-report-event-category"></a>Progress Report 이벤트 범주
   **Progress Report** 이벤트 범주에는 **Progress Report: Online Index Operation** 이벤트 클래스가 포함됩니다.  

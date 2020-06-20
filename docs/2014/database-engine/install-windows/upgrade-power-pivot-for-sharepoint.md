@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: Minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b15e2f457cca84abb7ab597bdf14d0b2fb2e3ffe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bebcfed02aa30ffc686b2a74807b6a4cc3955c90
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388045"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932004"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>SharePoint용 PowerPivot 업그레이드
-  이 항목에서는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포를 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]으로 업그레이드하는 데 필요한 단계에 대해 간략하게 설명합니다. 특정 단계는 현재 환경에서 실행 중인 SharePoint 버전에 따라 다르며 SharePoint용 PowerPivot 추가 기능 (**Sppowerpivot .msi**)을 포함 합니다.  
+  이 항목에서는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포를 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]으로 업그레이드하는 데 필요한 단계에 대해 간략하게 설명합니다. 특정 단계는 현재 환경에서 실행 중인 SharePoint 버전에 따라 다르며 SharePoint용 PowerPivot 추가 기능 (**spPowerPivot.msi**)을 포함 합니다.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013  
   
@@ -34,11 +33,11 @@ ms.locfileid: "81388045"
   
 -   PowerPivot 구성 도구는 SQL Server 공유 기능 중 하나인 동시에 모든 공유 기능 업그레이드 중 하나입니다. 업그레이드 프로세스 중에 공유 기능 업그레이드가 필요한 다른 SQL Server 인스턴스 또는 기능을 선택하면 PowerPivot 구성 도구도 업그레이드됩니다. PowerPivot 구성 도구가 업그레이드되었지만 PowerPivot 인스턴스가 업그레이드되지 않은 경우 문제가 있을 수 있습니다. SQL Server 공유 기능에 대 한 자세한 내용은 [설치 마법사를 사용 하 여 SQL Server 2014로 업그레이드 &#40;설치&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)를 참조 하세요.  
   
--   SharePoint용 PowerPivot 추가 기능 (**Sppowerpivot .msi**)은 이전 버전과 나란히 설치 됩니다. 예를 들어 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 추가 기능은 `c:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools`폴더에 설치됩니다.  
+-   SharePoint용 PowerPivot 추가 기능 (**spPowerPivot.msi**)은 이전 버전과 나란히 설치 됩니다. 예를 들어 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 추가 기능은 `c:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools`폴더에 설치됩니다.  
   
 
   
-##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 전제 조건  
  **권한**  
   
 -   SharePoint용 PowerPivot 설치를 업그레이드하려면 팜 관리자여야 합니다. SQL Server 설치 프로그램을 실행하려면 로컬 관리자여야 합니다.  
@@ -47,9 +46,9 @@ ms.locfileid: "81388045"
   
  **SQL Server:**  
   
--   기존 PowerPivot 설치가 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]인 경우로 업그레이드 하려면 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]SP2 (서비스 팩 2)가 필요 합니다.  
+-   기존 PowerPivot 설치가 인 경우 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 로 업그레이드 하려면 SP2 (서비스 팩 2)가 필요 합니다 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
   
--   기존 PowerPivot 설치가 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]인 경우로 업그레이드 하려면 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]SP1 (서비스 팩 1)이 필요 합니다.  
+-   기존 PowerPivot 설치가 인 경우 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 로 업그레이드 하려면 SP1 (서비스 팩 1)이 필요 합니다 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
   
  **SharePoint 2010:**  
   
@@ -84,7 +83,7 @@ ms.locfileid: "81388045"
   
          또는  
   
-         **시작** 메뉴에서 **모든 프로그램**을 가리키고 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**을 클릭 한 다음 **SharePoint용 PowerPivot 2013 구성도**클릭 합니다. 이 도구는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 이 로컬 서버에 설치된 경우에만 표시됩니다.  
+         **시작** 메뉴에서 **모든 프로그램**을 가리키고 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] , **구성 도구**을 클릭 한 다음 **SharePoint용 PowerPivot 2013 구성도**클릭 합니다. 이 도구는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 이 로컬 서버에 설치된 경우에만 표시됩니다.  
   
     2.  시작 시 구성 도구에서 PowerPivot 팜 솔루션과 PowerPivot 웹 애플리케이션 솔루션의 업그레이드 상태를 확인합니다. 이러한 솔루션의 이전 버전이 검색 되 면 "**최신 버전의 PowerPivot 솔루션 파일이 검색 되었습니다. 팜을 업그레이드 하려면 업그레이드 옵션을 선택 하십시오**. " **확인** 을 클릭하여 시스템 유효성 검사 메시지를 닫습니다.  
   
@@ -148,7 +147,7 @@ ms.locfileid: "81388045"
     Get-Service | where {$_.displayname -like "*powerpivot*"}  
     ```  
   
-5.  **Powerpivot [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ** **(SQL Server Analysis Services** ) Windows 서비스를 실행 하는 첫 번째 SharePoint 응용 프로그램 서버에서 설치 프로그램을 실행 하 여 powerpivot 인스턴스를 업그레이드 합니다. SQL Server 설치 마법사의 설치 페이지에서 업그레이드 옵션을 선택합니다. 자세한 내용은 [설치 마법사를 사용 하 여 SQL Server 2014로 업그레이드 &#40;설치&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)를 참조 하세요.  
+5.  **실행 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] **Powerpivot **(SQL Server Analysis Services)** Windows 서비스를 실행 하는 첫 번째 SharePoint 응용 프로그램 서버에서를 설치 하 여 powerpivot 인스턴스를 업그레이드 합니다. SQL Server 설치 마법사의 설치 페이지에서 업그레이드 옵션을 선택합니다. 자세한 내용은 [설치 마법사를 사용 하 여 SQL Server 2014로 업그레이드 &#40;설치&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)를 참조 하세요.  
   
 6.  구성 도구를 실행하기 전에**서버를 다시 시작** 합니다. 이 단계를 수행하면 SQL Server 설치 프로그램에서 설치하는 업데이트나 필수 구성 요소가 시스템에 완전히 구성됩니다.  
   
@@ -185,7 +184,7 @@ ms.locfileid: "81388045"
   
     9. **예**를 클릭하여 계속합니다.  
   
-    10. 팜에서 솔루션 및 기능 업그레이드를 완료하는 데 몇 분 정도 걸릴 수 있습니다. 이 시간 동안 PowerPivot 데이터에 대 한 연결 요청은 실패 하며 "데이터를 새로 고칠 수 없습니다." 또는 "요청 된 작업을 수행 하는 동안 오류가 발생 했습니다. 다시 시도하세요”와 같은 오류로 인해 실패합니다. 업그레이드가 완료된 후에는 서버를 사용할 수 있으며 이러한 오류가 더 이상 발생하지 않습니다.  
+    10. 팜에서 솔루션 및 기능 업그레이드를 완료하는 데 몇 분 정도 걸릴 수 있습니다. 이 시간 동안 PowerPivot 데이터에 대 한 연결 요청은 실패 하며 "데이터를 새로 고칠 수 없습니다." 또는 "요청 된 작업을 수행 하는 동안 오류가 발생 했습니다. 다시 시도하세요." 업그레이드가 완료된 후에는 서버를 사용할 수 있으며 이러한 오류가 더 이상 발생하지 않습니다.  
   
 8.  팜의 각 SQL Server Analysis Services (PowerPivot) 서비스에 대해이 **프로세스를 반복** 합니다. 1) SQL Server 설치 프로그램 2) 실행) PowerPivot 구성 도구를 실행 합니다.  
   
@@ -237,7 +236,7 @@ ms.locfileid: "81388045"
 Get-PowerPivotSystemService  
 ```  
   
- **CurrentSolutionVersion**을 확인합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]는 버전 12.0입니다. \<주 빌드>입니다. \<부 빌드>  
+ **CurrentSolutionVersion**을 확인합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]버전 12.0. \<major build> .\<minor build>  
   
 ### <a name="verify-the-version-of-the-analysis-services-windows-service"></a>Analysis Services Windows 서비스 버전 확인  
  SharePoint 2010 팜에서 일부 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 서버만 업그레이드한 경우 업그레이드하지 않은 서버의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스가 팜에 있어야 하는 버전보다 이전 버전이 됩니다. 모든 서버를 사용하려면 모든 서버를 같은 버전으로 업그레이드해야 합니다. 다음 방법 중 하나를 사용 하 여 각 컴퓨터에서 SQL Server Analysis Services (PowerPivot) Windows 서비스의 버전을 확인 합니다.  
@@ -250,7 +249,7 @@ Get-PowerPivotSystemService
   
 3.  **세부 정보**를 클릭합니다.  
   
-4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]파일 버전은 12.00 이어야 합니다. \<주 빌드>입니다. \<부 빌드>입니다.  
+4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]파일 버전은 12.00 이어야 합니다 \<major build> . \<minor build>  
   
 5.  이 번호가 PowerPivot 솔루션 및 시스템 서비스 버전과 동일한지 확인합니다.  
   
@@ -278,7 +277,7 @@ Get-PowerPivotSystemService
   
  ProductVersion   FileVersion           FileName  
   
- **12.0.2000.8** 2014.0120.200 C:\PROGRAM Files\Microsoft SQL Server\MSAS12. POWERPIVOT2000\OLAP\bin\msmdsrv.exe  
+ **12.0.2000.8** 2014.0120.200 C:\PROGRAM Files\Microsoft SQL Server\MSAS12.POWERPIVOT2000\OLAP\bin\msmdsrv.exe  
   
 ### <a name="verify-the-msolap-data-provider-version-on-sharepoint"></a>SharePoint에서 MSOLAP 데이터 공급자 버전 확인  
  다음 지침에 따라 Analysis Services OLE DB 공급자 버전 중 Excel 서비스에서 신뢰할 수 있는 버전을 확인합니다. Excel 서비스에 대한 신뢰할 수 있는 데이터 공급자 설정을 확인하려면 팜 또는 서비스 애플리케이션의 관리자여야 합니다.  
@@ -300,7 +299,7 @@ Get-PowerPivotSystemService
   
 2.  어셈블리 이름을 기준으로 정렬하고 **Microsoft.Analysis Services.Adomd.Client**를 찾습니다.  
   
-3.  버전 12.0이 있는지 확인 합니다. \<빌드 번호>입니다.  
+3.  버전 12.0이 있는지 확인 합니다 \<build number> .  
   
 
 ##  <a name="upgrading-multiple-powerpivot-for-sharepoint-servers-in-a-sharepoint-farm"></a><a name="geminifarm"></a>SharePoint 팜에서 여러 SharePoint용 PowerPivot 서버 업그레이드  

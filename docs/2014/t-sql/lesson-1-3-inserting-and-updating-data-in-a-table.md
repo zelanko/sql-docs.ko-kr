@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 514dc87a-b829-43b5-8fc8-1a400a260284
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 19e6683baeb0a82c77a858b04f18695ba7120b15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0646019f166e1c2cc126a4cc7d2ed8f27a7bd2f3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250132"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048464"
 ---
 # <a name="inserting-and-updating-data-in-a-table-tutorial"></a>테이블에서 데이터 삽입 및 업데이트(자습서)
   이제 **Products** 테이블을 만들었으므로 INSERT 문을 사용하여 테이블에 데이터를 삽입할 준비가 되었습니다. 데이터가 삽입된 후 UPDATE 문을 사용하여 행 내용을 변경합니다. UPDATE 문의 WHERE 절을 사용하여 업데이트를 단일 행으로 제한합니다. 4개의 문이 다음 데이터를 입력합니다.  

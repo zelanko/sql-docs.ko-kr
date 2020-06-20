@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8107a3ea-f891-4134-946b-c64e3a8e92e8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9cd00b1966351b5205da737a8f04912b015ec81e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a889f4bc00f48a73fa16b079a34c2b07f1df297
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63023113"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029540"
 ---
 # <a name="full-text-event-category"></a>Full Text 이벤트 범주
   **Full Text** 이벤트 범주에는 일반 전체 텍스트 이벤트가 포함됩니다.  

@@ -13,27 +13,26 @@ helpviewer_keywords:
 ms.assetid: 396aa22a-4723-47f5-ae72-7de99d92dd6f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: abffd5a1fc77f6cf4935cbf5172210445dbd7006
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6ffc477b299daeda004cca26d95f3d33e2e5509b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050953"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028459"
 ---
 # <a name="spcachehit-event-class"></a>SP:CacheHit 이벤트 클래스
   SP:CacheHit 이벤트 클래스는 저장 프로시저가 계획 캐시에 있음을 나타냅니다.  
   
 ## <a name="spcachehit-event-class-data-columns"></a>SP:CacheHit 이벤트 클래스 데이터 열  
   
-|데이터 열 이름|`Data type`|설명|열 ID|필터 가능|  
+|데이터 열 이름|`Data type`|Description|열 ID|필터 가능|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 애플리케이션의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|10|예|  
 |ClientProcessID|`int`|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
 |DatabaseID|`int`|저장 프로시저가 실행되는 데이터베이스의 ID입니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |DatabaseName|`nvarchar`|저장 프로시저가 실행되는 데이터베이스의 이름입니다.|35|yes|  
-|EventClass|`int`|이벤트 유형 = 38|27|아니요|  
-|EventSequence|`int`|요청 내의 지정된 이벤트 시퀀스입니다.|51|아니요|  
+|EventClass|`int`|이벤트 유형 = 38|27|예|  
+|EventSequence|`int`|요청 내의 지정된 이벤트 시퀀스입니다.|51|예|  
 |EventSubClass|`int`|이벤트 하위 클래스의 유형입니다.<br /><br /> 1=Execution Context Hit: 계획 캐시에 사용 가능한 실행 계획이 있습니다.<br /><br /> 2=Compplan Hit: 계획 캐시에 컴파일된 계획이 있습니다.|21|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  

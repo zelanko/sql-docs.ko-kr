@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d4db32bc-972d-4429-809a-a62047c33e79
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3145385db6239df128ead6070ebede48bc96e64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90bcc20e16d775e6497958fc1adc58269fb24296
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63025829"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029378"
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted 이벤트 클래스
   Object:Deleted 이벤트 클래스는 DROP INDEX 및 DROP TABLE 문 등에 의해 개체가 삭제되었음을 나타냅니다. 이 이벤트 클래스를 사용하면 임시 저장 프로시저를 자주 만드는 ODBC 애플리케이션 등에 의해 개체가 삭제되었는지 파악할 수 있습니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "63025829"
 |ClientProcessID|`int`|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
 |DatabaseID|`int`|USE *database* 문으로 지정한 데이터베이스 ID 이거나 지정한 인스턴스에 대해 use *database* 문을 실행 하지 않은 경우 기본 데이터베이스의 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에 ServerName 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |DatabaseName|`nvarchar`|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|예|  
-|EventClass|`int`|이벤트 유형 = 47|27|아니요|  
+|EventClass|`int`|이벤트 유형 = 47|27|예|  
 |EventSequence|`int`|요청 내에 지정된 이벤트 시퀀스입니다.|51|예|  
 |EventSubClass|`int`|이벤트 하위 클래스의 유형입니다.<br /><br /> 0=시작<br /><br /> 1=커밋<br /><br /> 2=롤백|21|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  

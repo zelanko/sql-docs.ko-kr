@@ -1,5 +1,6 @@
 ---
 title: 형식 지원, ODBC 날짜 및 시간
+description: 문자열, 리터럴 및 데이터 구조에 대 한 데이터 형식 매핑 및 형식을 포함 하 여 SQL Server 날짜 및 시간 데이터 형식을 지 원하는 ODBC 형식에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 12/18/2019
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b34d6864bf6b6c36404770f0ab795634dd746dc8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cdab7196199b28835d5f21c0c51f3ad787fdc7ac
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301767"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967679"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>ODBC 날짜 및 시간 기능 향상을 위한 데이터 형식 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "81301767"
 |DateTime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93(sql.h)<br /><br /> 11(sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93(sql.h)<br /><br /> 11(sqlext.h)|  
 |Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql .h)<br /><br /> 9 (sqlext .h)|  
-|시간|SQL_SS_TIME2|-154 (SQLNCLI)|  
+|Time|SQL_SS_TIME2|-154 (SQLNCLI)|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155(SQLNCLI.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93(sql.h)<br /><br /> 11(sqlext.h)|  
 ||||
@@ -65,7 +66,7 @@ ms.locfileid: "81301767"
 |DateTime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Datetime에 대해 최대 3자리의 소수 자릿수 초를 지원합니다.|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> 이 데이터 형식의 정확도는 1분 단위입니다. 초 구성 요소 부분은 출력 시 0이 되고, 입력 시 서버에 의해 반올림됩니다.|  
 |Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
-|시간|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
+|Time|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|' yyyy-mm-dd hh: mm: ss [. 9999999] '<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
 ||||

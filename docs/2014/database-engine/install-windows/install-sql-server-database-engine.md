@@ -11,22 +11,21 @@ helpviewer_keywords:
 ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6373f67d40b9da97f652f3bcb05b3414deab5c8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3cf4ca5d422e9d124c397bbcae8d8b48d12b95b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779364"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932734"
 ---
 # <a name="about-the-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진 정보
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소는 데이터 저장, 처리 및 보안 유지를 위한 핵심 서비스입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 기업에서 수요가 높아지고 있는 대부분의 데이터 소비형 애플리케이션의 요구 사항을 만족시키기 위해 액세스 제어 및 빠른 트랜잭션 처리를 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 한 대의 컴퓨터에서 최대 50개의 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 지원합니다. 일반적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 만들려면 설치 [마법사에서 SQL Server 2014 설치 &#40;설치&#41;](install-sql-server-from-the-installation-wizard-setup.md)를 참조 하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 한 대의 컴퓨터에서 최대 50개의 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 지원합니다. 일반적인 설치를 만들려면 설치 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [마법사에서 SQL Server 2014 설치 &#40;설치&#41;](install-sql-server-from-the-installation-wizard-setup.md)를 참조 하세요.  
   
  **중요** 로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 경우 원격 공유에 대한 읽기 및 실행 권한이 있는 도메인 계정을 사용해야 합니다.  
   
- 설치 마법사의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치할 구성 요소 페이지에서 ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진** 를 선택 하면 다음 기능이 설치 됩니다.  
+ 설치 마법사의 설치할 구성 요소 페이지에서 ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진** 를 선택 하면 다음 기능이 설치 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   

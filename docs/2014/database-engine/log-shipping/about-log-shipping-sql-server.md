@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a66125c6e241c75d473fa170d3de5ef9755b28e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 01abcbe81304d2bbc9a09c29f304a55945aae5ff
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774557"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931509"
 ---
 # <a name="about-log-shipping-sql-server"></a>로그 전달 정보(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 전달을 사용하면 *주 서버* 인스턴스의 *주 데이터베이스* 에서 별도의 *보조 서버* 인스턴스에 있는 하나 이상의 *보조 데이터베이스* 로 트랜잭션 로그 백업을 자동으로 보낼 수 있습니다. 트랜잭션 로그 백업은 각 보조 데이터베이스에 개별적으로 적용됩니다. *모니터 서버*라는 선택적인 세 번째 서버 인스턴스는 백업 및 복원 작업의 기록과 상태를 기록하고 예약된 대로 작업이 실행되지 않으면 선택적으로 경고를 발생시킵니다.  

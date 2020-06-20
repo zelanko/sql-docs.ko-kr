@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d43ed0ad-3dbd-42e0-9cef-8320b8d87497
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0986e654430a47cc494bf1646c222b4888fc105b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67b642d369c73cc144af31f835786613766045f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033515"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028849"
 ---
 # <a name="preconnectstarting-event-class"></a>PreConnect:Starting 이벤트 클래스
   PreConnect:Starting 이벤트 클래스는 LOGON 트리거나 리소스 관리자 분류자 함수가 언제 실행을 시작하는지 표시합니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5c76fda112acae7b8a9314d217f5c32d197e87f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90a5bb55a7ebe460177369d20de8bda9dd23d959
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775633"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931893"
 ---
 # <a name="upgrade-data-quality-services"></a>Data Quality Services 업그레이드
   이 항목에서는 기존 DQS(Data Quality Services) 설치를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2로 업그레이드하는 방법을 설명합니다. DQS의 Data Quality 서버를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드할 때 DQS 데이터베이스 스키마도 업그레이드해야 합니다.  
@@ -25,7 +24,7 @@ ms.locfileid: "62775633"
 > -   데이터 품질 태스크를 수행하기 위해 Integration Services의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] DQS 정리 변환 편집기 [나 최신 또는 이전 버전의 Data Quality 클라이언트를 사용하여](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) 버전의 Data Quality 서버에 연결할 수 있습니다.  
 > -   Data Quality Services 및 MDS(Master Data Services)를 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2로 업그레이드한 후 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 버전의 Excel용 MDS(Master Data Services) 추가 기능을 계속 사용할 수 있습니다. 하지만 SQL Server 2014 CTP2로 업그레이드한 후에는 이전 버전의 Excel용 MDS(Master Data Services) 추가 기능이 모두 작동하지 않습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 버전의 Excel용 MDS(Master Data Services) 추가 기능은 [여기](https://go.microsoft.com/fwlink/?LinkId=328664)서 다운로드할 수 있습니다.  
   
-##  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 전제 조건  
   
 -   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 컴퓨터에서 Administrators 그룹의 멤버로 로그온해야 합니다.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "62775633"
     5.  DQS 데이터베이스 스키마 업그레이드에 성공하면 완료 메시지가 표시됩니다.  
   
 ##  <a name="verifying-the-dqs-databases-schema-upgrade"></a><a name="Verify"></a> DQS 데이터베이스 스키마 업그레이드 확인  
- DQS 데이터베이스 스키마가 성공적으로 업그레이드되었는지 확인하려면 DQS_MAIN 및 DQS_PROJECTS 데이터베이스에서 A_DB_VERSION 테이블을 쿼리하여 각 데이터베이스의 현재 버전을 확인하면 됩니다. 이렇게 하려면  
+ DQS 데이터베이스 스키마가 성공적으로 업그레이드되었는지 확인하려면 DQS_MAIN 및 DQS_PROJECTS 데이터베이스에서 A_DB_VERSION 테이블을 쿼리하여 각 데이터베이스의 현재 버전을 확인하면 됩니다. 이렇게 하려면 다음을 수행합니다.  
   
 1.  SQL Server Management Studio를 시작하고 업그레이드된 DQS 데이터베이스 스키마가 포함된 SQL Server 인스턴스에 연결합니다.  
   

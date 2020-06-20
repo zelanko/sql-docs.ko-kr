@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 96604a09811626a304502dc05ef4f7e9edcd0359
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e635be21bd93b5ed08426cf38b86dc69d024ef6b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771231"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923064"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>CDC 인스턴스 속성을 편집하는 방법
   이 절차에서는 CDC Designer 콘솔을 사용하여 CDC 인스턴스에 대한 구성 속성을 편집하는 방법에 대해 설명합니다.  

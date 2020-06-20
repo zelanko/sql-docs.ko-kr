@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d503ffad6c8d723bb0d933120a37e9b680a37cd7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d141c1951066af14e25cb4dd36459f5e87051001
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704792"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056076"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties(OLE DB)
   매개 변수별 서수로 매개 변수 속성을 설정하거나, SSPARAMPROPS 구조의 배열을 지정하여 대량 매개 변수 속성을 설정합니다.  

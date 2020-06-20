@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b69a8593-5bb0-4f04-87d2-f8e7bd7eb4fc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8ef64ee84a90a74d2206fa8cc766e45b1a691566
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73a4c6fc0795fde7a9b8e7378fd0a88447ff5cd2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059277"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966940"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>SQL Server Data Tools에서 패키지 로깅 사용
   이 절차에서는 패키지에 로그를 추가하는 방법, 패키지 수준 로깅을 구성하는 방법 및 로깅 구성을 XML 파일에 저장하는 방법을 설명합니다. 로그는 패키지 수준에서만 추가할 수 있지만 패키지에 포함되는 컨테이너에서 로깅을 활성화하기 위해 패키지가 로깅을 수행할 필요는 없습니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "66059277"
   
 3.  **공급자 유형** 목록에서 로그 공급자를 선택한 다음 **추가**를 클릭합니다.  
   
-4.  **구성** 열에서 연결 관리자를 선택하거나 **\<새 연결>** 을 클릭하여 로그 공급자에 대한 적절한 유형의 연결 관리자를 만듭니다. 선택한 공급자에 따라 다음 연결 관리자 중 하나를 사용합니다.  
+4.  **구성** 열에서 연결 관리자를 선택 하거나 **\<New connection>** 를 클릭 하 여 로그 공급자에 적합 한 유형의 새 연결 관리자를 만듭니다. 선택한 공급자에 따라 다음 연결 관리자 중 하나를 사용합니다.  
   
     -   텍스트 파일에는 파일 연결 관리자를 사용합니다. 자세한 내용은 [파일 연결 관리자](connection-manager/file-connection-manager.md) 를 참조 하세요.  
   

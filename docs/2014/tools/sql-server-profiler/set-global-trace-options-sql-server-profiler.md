@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c09927de3c10ab3b937101edc6b9da37503abb11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d580b5ebef26ce91fee23b3b920715d354cb4046
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63267413"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048279"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>전역 추적 옵션 설정(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]의 특정 인스턴트로 생성되는 모든 추적에 적용되는 옵션을 설정하는 방법에 대해 설명합니다.  

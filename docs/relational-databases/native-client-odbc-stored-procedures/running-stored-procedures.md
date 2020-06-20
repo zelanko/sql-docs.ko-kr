@@ -1,5 +1,6 @@
 ---
 title: 저장 프로시저 실행 | Microsoft Docs
+description: 저장 프로시저는 데이터베이스에 저장된 실행 가능한 개체입니다. SQL Server는 저장 프로시저와 확장 저장 프로시저를 지원 합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 866b6dd3-2acd-4dfb-aeca-a0352b2d4c6a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b69a9177f98c8ee1096c18f368af12b11d6b325
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 328d82720efe527d0fdba43d53772ed1e72864e1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304554"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967595"
 ---
 # <a name="running-stored-procedures"></a>저장 프로시저 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

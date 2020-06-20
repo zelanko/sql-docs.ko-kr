@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b1ab8545714e84c8ecf8ee6c9cb89b7b8c0d3831
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff1e75cc88e51de75af32bcd9d48860be52d5861
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922243"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959245"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>백업 기록 및 헤더 정보(SQL Server)
   서버 인스턴스에서 이루어지는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원 작업에 대한 전체 기록은 **msdb** 데이터베이스에 저장됩니다. 이 항목에서는 백업 및 복원 기록 테이블에 대해 설명하고 백업 기록에 액세스하는 데 사용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 대해서도 설명합니다. 또한 이 항목에서는 데이터베이스와 트랜잭션 로그 파일을 나열하는 것이 유용한 경우에 대해 설명하고, 백업 헤더 정보와 미디어 헤더 정보를 사용하는 경우를 비교하여 설명합니다.  

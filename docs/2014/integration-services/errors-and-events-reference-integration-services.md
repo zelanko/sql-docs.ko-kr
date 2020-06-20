@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 71efd530222ce548bb867b9e886b1891d5aedb05
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f26689dde5f840eb0e23d9506272056574969003
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62899451"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966943"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>오류 및 이벤트 참조(Integration Services)
   설명서의 이 섹션에는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]와 관련된 몇 가지 오류와 이벤트에 대한 정보가 포함되어 있습니다. 또한 오류 메시지의 원인 및 해결 방법 정보도 포함되어 있습니다.  

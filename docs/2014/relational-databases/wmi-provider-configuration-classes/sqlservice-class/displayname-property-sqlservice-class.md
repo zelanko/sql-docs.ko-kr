@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 49c408aa-6eb4-45cd-8d5c-60f065f24f5c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cb5a00278e8b740df5efa93e71c417ccb4943f5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9439b7410821cffe5d959fda7a894e4f69e33ed0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63016299"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002324"
 ---
 # <a name="displayname-property-sqlservice-class"></a>DisplayName 속성(SqlService 클래스)
   서비스의 표시 이름을 가져옵니다.  

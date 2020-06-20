@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6310453e1257aaee1a02f035c7213ef4fe6131af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5088e029e90b4556c1559f8c948e8a8734762749
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704770"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001880"
 ---
 # <a name="monitor-job-activity"></a>작업 활동 모니터링
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 활동 모니터를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 정의된 모든 작업의 현재 활동을 모니터링할 수 있습니다.  
@@ -57,13 +56,13 @@ ms.locfileid: "62704770"
   
 |||  
 |-|-|  
-|**설명**|**항목**|  
+|**설명**|**뒷부분**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 런타임 상태를 보는 방법에 대해 설명합니다.|[작업 활동 보기](view-job-activity.md)|  
   
 ## <a name="see-also"></a>참고 항목  
  [작업 활동 보기](view-job-activity.md)   
- [dbo. sysjobactivity &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobactivity-transact-sql)   
- [SQL-DMO 세션 &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-syssessions-transact-sql)   
+ [dbo.sysjobactivity &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobactivity-transact-sql)   
+ [Transact-sql&#41;&#40;dbo.sys세션](/sql/relational-databases/system-tables/dbo-syssessions-transact-sql)   
  [Transact-sql&#41;sp_help_jobactivity &#40;](/sql/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql)  
   
   

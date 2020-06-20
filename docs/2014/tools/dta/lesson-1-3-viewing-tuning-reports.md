@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4963a309f6c54998ece968f8a5393e818fd30d07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f435e79b3f03d2fecdf0d2f18d2fd5aad90bfa1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110148"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048319"
 ---
 # <a name="viewing-tuning-reports"></a>튜닝 보고서 보기
   이 단원의 이전 연습에서 MySession 튜닝 세션의 결과로 생성된 데이터베이스 엔진 튜닝 관리자 구성에서 데이터베이스 개체를 만들거나 삭제하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 보았습니다. MySession 튜닝 세션은 [Tuning a Workload](lesson-1-1-tuning-a-workload.md)에서 만들었습니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "66110148"
   
 4.  **튜닝 보고서** 창의 **보고서 선택** 목록에서 **문 비용 보고서** 를 클릭합니다. 보고서를 표시할 공간이 더 필요한 경우 **세션 모니터** 창 테두리를 왼쪽으로 끕니다. 데이터베이스의 테이블에 대해 실행되는 각 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에는 성능 비용이 연결되어 있습니다. 테이블에서 자주 액세스되는 열에 효율적인 인덱스를 만들어 이 성능 비용을 줄일 수 있습니다. 이 보고서에는 작업에서 문을 실행한 경우의 원래 비용과 튜닝 권장 구성이 구현된 경우의 비용 간에 예상되는 향상률이 표시됩니다. 보고서에 포함된 정보의 양은 작업의 길이와 복잡성을 기반으로 합니다.  
   
-5.  표 영역에서 **문 비용 보고서** 창을 마우스 오른쪽 단추로 클릭하고 **파일로 내보내기**를 클릭합니다. 보고서를로 `MyReport`저장 합니다. 파일 이름에 .xml 확장명이 자동으로 추가됩니다. 즐겨 사용하는 XML 편집기나 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 MyReport.xml을 열어 보고서 내용을 볼 수 있습니다.  
+5.  표 영역에서 **문 비용 보고서** 창을 마우스 오른쪽 단추로 클릭하고 **파일로 내보내기**를 클릭합니다. 보고서를로 저장 `MyReport` 합니다. 파일 이름에 .xml 확장명이 자동으로 추가됩니다. 즐겨 사용하는 XML 편집기나 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 MyReport.xml을 열어 보고서 내용을 볼 수 있습니다.  
   
 6.  데이터베이스 엔진 튜닝 관리자의 **보고서** 탭으로 돌아가서 **문 비용 보고서** 를 마우스 오른쪽 단추로 다시 클릭합니다. 사용 가능한 다른 옵션을 검토합니다. 보고 있는 보고서의 글꼴을 변경할 수 있습니다. 여기에서 글꼴을 변경하면 다른 탭 페이지에서도 변경됩니다.  
   
@@ -46,6 +45,6 @@ ms.locfileid: "66110148"
  이제 MySession 튜닝 세션에 대한 데이터베이스 엔진 튜닝 관리자 GUI의 **보고서** 탭을 탐색했습니다. 이와 같은 단계를 사용하여 EvaluateMySession 튜닝 세션에 대해 생성된 보고서를 탐색할 수 있습니다. **세션 모니터** 창에서 **EvaluateMySession** 을 두 번 클릭하여 시작합니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [3단원: dta 명령 프롬프트 유틸리티 사용](lesson-3-using-the-dta-command-prompt-utility.md)  
+ [3단원: DTA 명령 프롬프트 유틸리티 사용](lesson-3-using-the-dta-command-prompt-utility.md)  
   
   

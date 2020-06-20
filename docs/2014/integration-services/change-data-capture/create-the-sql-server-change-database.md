@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 72785cffa01da7bf00248d442b1d3ce4103c45a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4b7fb5d79d24a3333e21a9b0e6f4c115e967ffa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771369"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923434"
 ---
 # <a name="create-the-sql-server-change-database"></a>SQL Server 변경 데이터베이스 만들기
   새 인스턴스 마법사를 시작하면 CDC 데이터베이스 만들기 페이지가 열립니다. CDC 데이터베이스 만들기 페이지를 사용하여 새 CDC 인스턴스에 대한 정보를 제공하고 변경 데이터베이스를 새로 만들 수 있습니다.  

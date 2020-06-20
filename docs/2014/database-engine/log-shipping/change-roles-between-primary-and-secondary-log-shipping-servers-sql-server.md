@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 08467118608db6b222bea2a41351eac951449a16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86c29f696c93789cb3815cf14587690c2edb5f6b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774567"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931325"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>주 로그 전달 서버와 보조 로그 전달 서버 간 역할 변경(SQL Server)
   보조 서버로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 전달 구성에 대해 장애 조치(Failover)를 수행한 후에 주 데이터베이스로 작동하도록 보조 데이터베이스를 구성할 수 있습니다. 그러면 필요할 때 주 데이터베이스와 보조 데이터베이스를 바꿀 수 있습니다.  
@@ -78,7 +77,7 @@ ms.locfileid: "62774567"
 3.  보조 서버(새로운 주 서버)의 로그 전달 백업 작업을 활성화하고 주 서버(새로운 보조 서버)의 복사 및 복원 작업을 활성화합니다.  
   
 > [!IMPORTANT]  
->  보조 데이터베이스를 주 데이터베이스로 변경하는 경우 사용자와 애플리케이션에 일관된 환경을 제공하려면 로그인, 작업 등 데이터베이스의 일부 또는 모든 메타데이터를 새로운 주 서버 인스턴스에서 다시 만들어야 할 수도 있습니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타 데이터 관리 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)를 참조 하세요.  
+>  보조 데이터베이스를 주 데이터베이스로 변경하는 경우 사용자와 애플리케이션에 일관된 환경을 제공하려면 로그인, 작업 등 데이터베이스의 일부 또는 모든 메타데이터를 새로운 주 서버 인스턴스에서 다시 만들어야 할 수도 있습니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)을 참조하세요.  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   

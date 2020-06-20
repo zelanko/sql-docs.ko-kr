@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cd4cf8f8fe90afcda343b2b494e0b0b050c8c951
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d689824674c1e14f2051deafbdc9ca58f302441
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890609"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967063"
 ---
 # <a name="microsoft-connector-11-for-sap-bw"></a>Microsoft Connector 1.1 for SAP BW
   SAP BW용 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1은 SAP Netweaver BW 버전 7 시스템에서 데이터를 추출하거나 해당 시스템으로 데이터를 로드할 수 있도록 지원하는 3가지 구성 요소 집합으로 구성됩니다.  

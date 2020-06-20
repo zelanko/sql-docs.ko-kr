@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 26bd117cb63ccc623ee54f3370e1d07237de9c52
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9db752a0910abb1a671e50b3a7a34fd2fd9cff68
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059652"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967013"
 ---
 # <a name="date-and-time-formats"></a>날짜 및 시간 형식
   빠른 구문 분석에서는 데이터 구문 분석을 위한 신속하고 간단한 루틴을 제공합니다. 빠른 구문 분석에서는 날짜 및 시간 데이터 형식에 대해 다음과 같은 형식이 지원됩니다.  
@@ -120,11 +119,11 @@ ms.locfileid: "66059652"
   
  빠른 구문 분석에서는 문자열이 DT_DATE, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 및 DT_DBTIMESTAMPOFFSET으로 출력됩니다. 잘림 형식의 날짜/시간 값은 채워집니다. 다음 표에서는 누락된 날짜 및 시간 부분에 대해 추가되는 값을 나열합니다.  
   
-|날짜/시간 부분|안쪽 여백|  
+|날짜/시간 부분|여백|  
 |---------------------|-------------|  
 |초|00을 추가합니다.|  
 |분|00:00을 추가합니다.|  
-|Hour|00:00:00을 추가합니다.|  
+|시간|00:00:00을 추가합니다.|  
 |일|해당 월의 일에 대해 01을 추가합니다.|  
 |월|해당 연도의 월에 대해 01을 추가합니다.|  
   

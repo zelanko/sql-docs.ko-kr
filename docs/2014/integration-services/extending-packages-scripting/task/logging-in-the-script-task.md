@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e6d870ec12a896ff9046aa2e05df1e1f6220dc17
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dd7ead14af420eff25331c732b9d249b2a4b94f5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82087083"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967193"
 ---
 # <a name="logging-in-the-script-task"></a>스크립트 태스크에서 로깅
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 패키지의 로깅 기능을 사용하면 나중에 분석할 수 있도록 미리 정의된 이벤트나 사용자 정의 메시지를 기록하여 실행 진행률, 결과 및 문제에 대한 세부 정보를 기록할 수 있습니다. 스크립트 태스크에서는 `Dts` 개체의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> 메서드를 사용하여 사용자 정의 데이터를 로깅할 수 있습니다. 로깅을 사용하도록 설정하고 **SSIS 로그 구성** 대화 상자의 **자세히** 탭에서 **ScriptTaskLogEntry** 이벤트를 로깅하도록 선택할 경우 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> 메서드를 한 번만 호출하면 태스크에 대해 구성된 모든 로그 공급자에 해당 이벤트 정보가 저장됩니다.  

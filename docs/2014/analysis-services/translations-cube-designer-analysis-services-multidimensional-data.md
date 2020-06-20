@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 51f33f3b-6b7f-41bf-a620-97fd5189e633
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e5f361679d7e2e57024f0ac6859dbc3b0aac32a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50f41313457a468a243af4b7542a9b4aa675157d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065792"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938284"
 ---
 # <a name="translations-cube-designer-analysis-services---multidimensional-data"></a>번역(큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **번역** 탭을 사용하여 선택한 큐브에 대한 큐브 뷰를 생성 및 수정할 수 있습니다.  

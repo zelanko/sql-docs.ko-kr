@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4c015844fd0b0a3ed219adabaf95f4b2af98d663
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5171de39727578028ed4cf01c090b98e3d70e0d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486979"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914753"
 ---
 # <a name="raw-file-source"></a>원시 파일 원본
   원시 파일 원본은 파일에서 원시 데이터를 읽습니다. 원본의 기본 데이터 표현을 사용하므로 데이터를 변환하거나 거의 구문 분석할 필요도 없습니다. 따라서 원시 파일 원본은 플랫 파일 및 OLE DB 원본과 같은 다른 원본보다 빨리 데이터를 읽을 수 있습니다.  

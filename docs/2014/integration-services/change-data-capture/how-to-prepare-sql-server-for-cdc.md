@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a327fa18-58f4-4e69-bb87-44faf47e20ef
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7d0b936b0d48696491e71aa6ad4ea573b898f33c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10ef71a7e5bd285ecdd9e47787e55d27a3615fc8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62836042"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923034"
 ---
 # <a name="how-to-prepare-sql-server-for-cdc"></a>CDC를 위해 SQL Server를 준비하는 방법
   Oracle CDC Service에서는 모든 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 MSXDBCDC 데이터베이스가 포함되어야 합니다. CDC Service 구성 콘솔에서 SQL Server 준비 동작을 사용하여 이 데이터베이스를 만듭니다. 이 태스크는 각 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 한 번만 수행됩니다.  

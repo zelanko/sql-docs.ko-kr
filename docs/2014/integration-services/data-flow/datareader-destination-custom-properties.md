@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 948ebbc696048915662caaa24b791e6258c459be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e5691ad8c769621bc9f16e4447d0926d69e02b96
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827625"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915968"
 ---
 # <a name="datareader-destination-custom-properties"></a>DataReader 대상 사용자 지정 속성
   DataReader 대상에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  

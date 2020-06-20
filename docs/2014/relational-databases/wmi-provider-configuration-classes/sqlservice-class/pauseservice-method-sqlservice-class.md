@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c3a8feb-58b8-4385-b4c8-bf33cf4d276d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f4b9667f9d0018920885d4fdf7e5fce3b5a47311
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8286e123bbbc279ba461336c5716eeb208c5b238
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061841"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002150"
 ---
 # <a name="pauseservice-method-sqlservice-class"></a>PauseService 메서드(SqlService 클래스)
   서비스를 일지 중지된 상태로 지정합니다.  

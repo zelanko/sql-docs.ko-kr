@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e1e2c83f-dfad-4bb8-aa7a-09d3f69517ae
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c0353c89dbfc14032d33dfa49fa0c08e698cb5c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 99d5439c289b5d4e71786d4c6734f158f6bba371
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211215"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048531"
 ---
 # <a name="creating-a-database-tutorial"></a>데이터베이스 만들기(자습서)
   많은 [!INCLUDE[tsql](../includes/tsql-md.md)] 문과 마찬가지로 CREATE DATABASE 문에는 필수 매개 변수로 데이터베이스 이름이 있습니다. 또한 CREATE DATABASE에는 데이터베이스 파일을 저장할 디스크 위치와 같은 많은 선택적 매개 변수가 있습니다. 선택적 매개 변수 없이 CREATE DATABASE를 실행할 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 이러한 여러 매개 변수에 기본값을 사용합니다. 이 자습서에서는 아주 약간의 선택적 구문 매개 변수만 사용합니다.  

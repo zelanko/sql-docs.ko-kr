@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a6920920aa603c615cdc5f84a34a93204842052d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192967"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995367"
 ---
 # <a name="create-a-multiserver-environment"></a>다중 서버 환경 만들기
   다중 서버 관리를 위해서는 마스터 서버(MSX)와 하나 이상의 대상 서버(TSX)를 설치해야 합니다. 모든 대상 서버에서 처리되는 작업은 먼저 마스터 서버에서 정의된 다음 대상 서버로 다운로드됩니다.  
@@ -37,8 +36,8 @@ ms.locfileid: "63192967"
   
 ||**TSX = 7.0**|**TSX = 8.0 < SP3**|**TSX = 8.0 SP3 이상**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
-|**MSX = 7.0**|예|예|아니요|아니요|아니요|아니요|아니요|  
-|**MSX = 8.0 < SP3**|예|예|아니요|아니요|아니요|아니요|아니요|  
+|**MSX = 7.0**|예|예|아니요|아니요|아니요|아니요|예|  
+|**MSX = 8.0 < SP3**|예|예|아니요|아니요|아니요|아니요|예|  
 |**MSX = 8.0 SP3 이상**|아니요|예|예|예|예|예|예|  
 |**MSX = 9.0**|아니요|아니요|예|예|예|예|예|  
 |**MSX = 10.0**|아니요|아니요|아니요|예|예|예|예|  
@@ -58,13 +57,13 @@ ms.locfileid: "63192967"
 ## <a name="related-tasks"></a>관련 작업  
  다음 항목에서는 다중 서버 환경을 만들기 위한 공통적인 태스크에 대해 설명합니다.  
   
-|설명|항목|  
+|Description|항목|  
 |-----------------|-----------|  
-|마스터 서버를 만드는 방법에 대해 설명합니다.|[Make a Master Server](make-a-master-server.md)|  
+|마스터 서버를 만드는 방법에 대해 설명합니다.|[마스터 서버 만들기](make-a-master-server.md)|  
 |대상 서버를 만드는 방법에 대해 설명합니다.|[대상 서버 만들기](make-a-target-server.md)|  
 |마스터 서버에 대상 서버를 등록하는 방법에 대해 설명합니다.|[마스터 서버에 대상 서버 등록](enlist-a-target-server-to-a-master-server.md)|  
-|마스터 서버에서 대상 서버를 제거하는 방법에 대해 설명합니다.|[마스터 서버에서 대상 서버 제거](defect-a-target-server-from-a-master-server.md)|  
-|마스터 서버에서 여러 대상 서버를 제거하는 방법에 대해 설명합니다.|[Defect Multiple Target Servers from a Master Server](defect-multiple-target-servers-from-a-master-server.md)|  
+|마스터 서버에서 대상 서버를 제거하는 방법에 대해 설명합니다.|[Defect a Target Server from a Master Server](defect-a-target-server-from-a-master-server.md)|  
+|마스터 서버에서 여러 대상 서버를 제거하는 방법에 대해 설명합니다.|[마스터 서버에서 여러 대상 서버 제거](defect-multiple-target-servers-from-a-master-server.md)|  
 |대상 서버의 상태를 확인하는 방법에 대해 설명합니다.|[Transact-sql&#41;sp_help_targetserver &#40;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [Transact-sql&#41;sp_help_targetservergroup &#40;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
   
 ## <a name="see-also"></a>참고 항목  

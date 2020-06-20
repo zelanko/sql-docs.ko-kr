@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f2070c53-4a5c-4c11-ac38-96ee200c84f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a4bf6fac03eab1e096c0ac5dc63285c11bd3f114
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79cb42654619ea3802d513fcf63df879833e48f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62735756"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048408"
 ---
 # <a name="featureset-element-dta"></a>FeatureSet 요소(DTA)
   데이터베이스 엔진 튜닝 관리자에서 분석 도중에 사용하도록 할 물리적 디자인 구조(인덱스 또는 인덱싱된 뷰)를 포함합니다.  
