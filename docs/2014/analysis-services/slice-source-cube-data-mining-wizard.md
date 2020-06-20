@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bcb156d5c0a3c1332e748878ddebda1772b80696
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 762248d4c2a268ac36b0dfa3ffeba20123017017
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068601"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940504"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>원본 큐브 조각화(데이터 마이닝 마법사)
   **원본 큐브 조각화** 대화 상자를 사용하여 모델의 학습에 사용되는 데이터를 제한할 수 있습니다. 일반적으로 큐브는 모든 상점, 모든 지역 및 모든 제품 등 여러 다른 차원 및 특성과 관련된 데이터를 포함합니다. 제한 없는 특성 조합의 모델 학습은 실용적이지 않으므로 이 대화 상자를 사용하여 모델 학습에 사용할 특정 집합을 선택하십시오.  
@@ -40,7 +39,7 @@ ms.locfileid: "66068601"
  **자세한 내용:** [데이터 마이닝 마법사&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>옵션  
- **차원**  
+ **치수나**  
  조각화하려는 차원을 선택합니다.  
   
  **계층**  

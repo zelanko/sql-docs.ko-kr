@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 748ad91c-0d25-491d-af85-8f96d4447579
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a1642afd64bf63410c2f7530f0db879fd569d272
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d57f0e06e5cceee591d849f1932816064f83104
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092054"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065156"
 ---
 # <a name="sql-server-2014-setup-user-interface"></a>SQL Server 2014 설정 사용자 인터페이스
   이 단원에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 설치 사용자 인터페이스에 대해 설명합니다.  

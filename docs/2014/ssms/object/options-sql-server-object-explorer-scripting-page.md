@@ -12,34 +12,33 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9966db2e5b08cd16976e2c16434cec0adca8445f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63031937"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058563"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>옵션 (SQL Server 개체 탐색기 스크립팅 페이지)
   이 페이지를 사용하여 **개체 탐색기**의 개체 컨텍스트 메뉴에서 다음 명령에 적용되는 스크립팅 옵션을 설정할 수 있습니다.  
   
 -   사용자 테이블 및 뷰에 대한 **편집** 명령  
   
--   **개체 \<> 개체** 를 사용자가 만든 개체에 대 한 명령으로 스크립팅 합니다.  
+-   사용자가 만든 개체에 대한 **\<object> 스크립팅** 명령  
   
 -   사용자가 만든 개체에 대한 **수정** 명령  
   
 -   이 페이지에서는 **SQL Server 스크립트 생성 마법사**에 대한 스크립팅 옵션의 기본값도 설정합니다.  
   
 ## <a name="remarks"></a>설명  
- **편집** 및 **수정** 명령은 동일한 옵션 설정에 대 한 명령 **으로> 스크립트 \<개체** 와 다른 결과를 생성할 수 있습니다. **편집** 및 **수정** 명령은 쿼리 편집기 세션 중에 현재 데이터베이스의 개체를 수정하기 위해 디자인되었고, **스크립트 개체 \<> 스크립트** 는 나중에 개체를 만드는 데 사용할 수 있도록 스크립트를 생성 하도록 디자인 되었습니다.  
+ **편집** 및 **수정** 명령은 동일한 옵션 설정에 대해 **\<object> 스크립팅** 명령과 다른 결과를 생성할 수 있습니다. **편집** 및 **수정** 명령은 쿼리 편집기 세션 중에 현재 데이터베이스의 개체를 수정하기 위해 디자인되었고, **\<object> 스크립팅** 명령은 나중에 개체를 만드는 데 사용할 수 있도록 스크립트를 생성하기 위해 디자인되었습니다.  
   
 ## <a name="options"></a>옵션  
  각 옵션 오른쪽의 목록에 있는 사용 가능한 설정에서 선택하여 스크립팅 옵션을 지정합니다.  
   
 ### <a name="general-scripting-options"></a>일반 스크립팅 옵션  
  **개별 문 구분**  
- 일괄 처리 구분 기호를 사용하여 개별 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 구분합니다. **쿼리 편집기**에 대 한 기본 일괄 처리 구분 기호를 변경 하려면 **도구**/**옵션**/**쿼리 실행**/**SQL Server**/**일반**/**일괄 처리 구분 기호**를 선택 합니다. 기본값은 False입니다. 자세한 내용은 [GO &#40;transact-sql&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go)을 참조 하세요.  
+ 일괄 처리 구분 기호를 사용하여 개별 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 구분합니다. **쿼리 편집기**에 대 한 기본 일괄 처리 구분 기호를 변경 하려면 **도구** / **옵션** / **쿼리 실행** / **SQL Server** / **일반** / **일괄 처리 구분 기호**를 선택 합니다. 기본값은 False입니다. 자세한 내용은 [GO &#40;transact-sql&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go)을 참조 하세요.  
   
  **설명 머리글 포함**  
  스크립트를 개체별 섹션으로 구분하여 스크립트에 설명을 추가합니다. 기본값은 True입니다. 자세한 내용은 [설명 &#40;transact-sql&#41;](/sql/t-sql/language-elements/comment-transact-sql)를 참조 하세요.  
@@ -56,7 +55,7 @@ ms.locfileid: "63031937"
  **전체 텍스트 카탈로그 스크립팅**  
  전체 텍스트 카탈로그에 대한 스크립트를 포함합니다. 기본값은 False입니다. 자세한 내용은 [전체 텍스트 카탈로그 만들기 &#40;transact-sql&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)를 참조 하세요.  
   
- **스크립트 사용 \<데이터베이스>**  
+ **스크립트 사용\<database>**  
  현재 **개체 탐색기** 데이터베이스의 컨텍스트에서 데이터베이스 개체를 만들기 위해 스크립트에 USE DATABASE 문을 추가합니다. 스크립트를 다른 데이터베이스에서 사용할 경우 False를 선택하여 생략합니다. 기본값은 True입니다. 자세한 내용은 [USE&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql)를 참조하세요.  
   
 ### <a name="object-scripting-options"></a>개체 스크립팅 옵션  

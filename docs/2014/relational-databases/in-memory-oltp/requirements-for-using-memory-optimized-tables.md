@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9b9e442fb97245d32c398602cdfd727de8239cb8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ecb9d388fd0e1362bb8844e874cd89162912e93e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62467906"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050054"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 사용을 위한 요구 사항
   [SQL Server 2014을 설치 하기 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)외에 메모리 내 OLTP를 사용 하기 위한 요구 사항은 다음과 같습니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "62467906"
   
 -   메모리 내 OLTP를 설치하려면 **를 설치할 때** 데이터베이스 엔진 서비스 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 선택합니다.  
   
-     보고서 생성 (메모리 내[oltp에 테이블 또는 저장 프로시저를 이식 해야 하는지 확인](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 및를 설치 하려면 (개체 탐색기를 통해 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 메모리 내 oltp를 관리 하려면)를 설치할 **Management Tools-Basic** [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]때 관리 도구-기본 또는 **관리 도구-고급** 을 선택 합니다.  
+     보고서 생성 (메모리 내[oltp에 테이블 또는 저장 프로시저를 이식 해야 하는지 확인](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) 및를 설치 하려면 ( [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 개체 탐색기를 통해 메모리 내 oltp를 관리 하려면) [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 를 설치할 때 **관리 도구-기본** 또는 **관리 도구-고급** 을 선택 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 합니다.  
   
 ## <a name="important-notes-on-using-hek_2"></a>[!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
   
@@ -53,7 +52,7 @@ ms.locfileid: "62467906"
 -   메모리 최적화 테이블로 하나 이상의 데이터베이스를 만들 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 즉시 파일 초기화([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 계정에 SE_MANAGE_VOLUME_NAME 사용자 권한 부여)를 사용하도록 설정해야 합니다. 즉시 파일 초기화를 사용하지 않을 경우 메모리 최적화 스토리지 파일(데이터 및 델타 파일)이 생성될 때 초기화되므로 작업 성능이 저하될 수 있습니다. 즉시 파일 초기화에 대한 자세한 내용은 [데이터베이스 파일 초기화](../databases/database-instant-file-initialization.md)를 참조하세요. 즉시 파일 초기화를 사용하도록 설정하는 방법은 [즉시 파일 초기화를 사용하도록 설정하는 방법과 이유](https://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx)를 참조하세요.  
   
 ## <a name="did-this-article-help-you-were-listening"></a>이 문서가 도움이 되었나요? 대기 중입니다.  
- 어떤 정보를 찾고 계세요? 정보를 찾으셨나요? 사용자 의견을 듣고 콘텐츠를 개선 하 고 있습니다. 에 의견을 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page)제출 하세요.  
+ 어떤 정보를 찾고 계세요? 정보를 찾으셨나요? 사용자 의견을 듣고 콘텐츠를 개선 하 고 있습니다. 에 의견을 제출 하세요 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page) .  
   
 ## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](in-memory-oltp-in-memory-optimization.md)  

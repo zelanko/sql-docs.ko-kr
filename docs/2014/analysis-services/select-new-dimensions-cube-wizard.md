@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7241a3b3-bba9-4b4c-99d9-61ec92ab969a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0362322d63e351ab7547a6bb19511c2c10d1df95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73115f3613b63a63cfe07c80c23e97cd39639d5f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069338"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940884"
 ---
 # <a name="select-new-dimensions-cube-wizard"></a>새 차원 선택(큐브 마법사)
   **새 차원 선택** 페이지를 사용하여 만들 새로 만들 차원을 선택할 수 있습니다.  

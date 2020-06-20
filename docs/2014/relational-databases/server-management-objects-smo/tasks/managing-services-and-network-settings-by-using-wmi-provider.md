@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9ba2f9688adb5579616693470be151d757818117
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 167cec89a772084cbd171be14001dded42e059d7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72796632"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996811"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>WMI 공급자를 사용하여 서비스 및 네트워크 설정 관리
   WMI 공급자는 MMC( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console)에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 및 네트워크 프로토콜을 관리하는 데 사용하는 게시된 인터페이스입니다. SMO에서 <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 개체가 WMI 공급자를 나타냅니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "72796632"
 ## <a name="example"></a>예제  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Wmi 공급자를 사용 하는 프로그램의 경우에는 `Imports` wmi 네임 스페이스를 한 정하는 문을 포함 해야 합니다. 다음과 같이 애플리케이션의 선언 앞에, 다른 `Imports` 문 끝에 구문을 삽입하십시오.  
+ Wmi 공급자를 사용 하는 프로그램의 경우에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 `Imports` wmi 네임 스페이스를 한 정하는 문을 포함 해야 합니다. 다음과 같이 애플리케이션의 선언 앞에, 다른 `Imports` 문 끝에 구문을 삽입하십시오.  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

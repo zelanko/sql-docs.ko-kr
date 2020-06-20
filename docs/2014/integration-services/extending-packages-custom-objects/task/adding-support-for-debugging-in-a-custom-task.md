@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 44b583c062280cb080228d7db3bd24a312a350fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce4e1a0483d02a3d263f8359369ccb448f4bf65f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768539"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968693"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>사용자 지정 태스크에 디버깅 지원 추가
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임 엔진에서는 중단점을 사용하여 실행 중 패키지, 태스크 및 기타 유형의 컨테이너를 일시 중지할 수 있습니다. 중단점을 사용하면 애플리케이션이나 태스크가 올바르게 실행되지 못하도록 하는 오류를 검토하고 수정할 수 있습니다. 중단점 아키텍처를 통해 클라이언트는 태스크 처리가 일시 중지된 동안 정의된 실행 지점에서 패키지에 있는 개체의 런타임 값을 평가할 수 있습니다.  

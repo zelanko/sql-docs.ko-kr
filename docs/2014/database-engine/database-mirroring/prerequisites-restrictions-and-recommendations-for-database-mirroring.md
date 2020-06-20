@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9763385093db6e649e60ab7a6be74f8f28466e1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0dc29dbdc8432a4abd197a2a1a3f15b6ff5f6d52
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754606"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934064"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>데이터베이스 미러링을 위한 필수 구성 요소, 제한 사항 및 권장 사항
     
@@ -44,7 +43,7 @@ ms.locfileid: "62754606"
   
 
   
-##  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 전제 조건  
   
 -   미러링 세션을 설정하려면 파트너 및 미러링 모니터 서버(있는 경우)가 같은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행되어야 합니다.  
   

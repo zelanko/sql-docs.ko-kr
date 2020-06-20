@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 40aef457-d69f-4905-a2d3-924c37bd3d97
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8a236805ac047b351aa49c2486b8acac84818017
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31fa9942ccfe25c5c56cc0edbce98f6946afad98
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069075"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940690"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>시퀀스 클러스터링 클러스터 전환 탭(마이닝 모델 뷰어)
   **Microsoft 시퀀스 클러스터링 뷰어** 의 **상태 전환** 탭에는 선택한 클러스터의 특성-값 쌍 또는 상태 간의 전환이 자세히 표시됩니다.  

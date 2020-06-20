@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 82dbd97a-582c-4f60-8d44-fc52dba7b276
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a135df3d3850aebdb9ac6dda08561a7fae21793f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6557f27f0b4a71e6bdbbb7c733628d18e4b17886
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069287"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940874"
 ---
 # <a name="select-related-tables-dimension-wizard"></a>관련 테이블 선택(차원 마법사)
   **관련 테이블 선택** 페이지를 사용하여 관련 테이블(주 차원 테이블과 관련된 데이터 원본 뷰의 테이블)을 차원에 포함할 수 있습니다.  

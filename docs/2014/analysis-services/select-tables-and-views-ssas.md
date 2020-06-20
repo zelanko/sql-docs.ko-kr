@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5e8121cc-03f0-4168-98cf-63c5c032bb0b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cf29721888fb672c242baa8a5984da4de40cd020
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 354883f2bb57de348d6449dd969470483d3c5e50
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858140"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940824"
 ---
 # <a name="select-tables-and-views-ssas"></a>테이블 및 뷰 선택(SSAS)
   **테이블 가져오기 마법사** 의 이 페이지에서는 가져올 데이터가 포함되어 있는 테이블과 뷰를 선택할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  

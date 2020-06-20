@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7ac1acb47c6345bb2b746b2e3a3e1817b63a3e75
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 8ee1d9205eeff0fd407cb8c2766d8fbceed47bf9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886380"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961633"
 ---
 # <a name="master-data-services-overview"></a>Master Data Services 개요
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델은 마스터 데이터의 구조에서 가장 높은 수준의 컨테이너입니다. 온라인 제품 데이터를 관리하는 등의 목적으로 유사한 데이터의 그룹을 관리하기 위해 모델을 만듭니다. 모델에는 하나 이상의 엔터티가 포함되며 엔터티에는 데이터 레코드인 멤버가 포함됩니다.
@@ -54,7 +53,7 @@ ms.locfileid: "82886380"
 |엔터티 만들기|멤버를 포함하는 데 필요한 만큼 엔터티를 만듭니다.|[엔터티&#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)<br /><br /> [엔터티 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|
 |도메인 기반 특성으로 사용할 엔터티 만들기|도메인 기반 특성을 만들려면 먼저 엔터티를 만들어 특성 값 목록을 채웁니다.|[도메인 기반 특성&#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)<br /><br /> [도메인 기반 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|
 |엔터티에 대한 특성 만들기|멤버를 설명하기 위해 특성을 만듭니다. 이름 및 코드 특성은 각 엔터티에 자동으로 포함되며 제거할 수 없습니다. 다른 자유 형식 특성을 만들어 텍스트, 날짜, 숫자 또는 파일을 포함할 수 있습니다.|[특성&#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)<br /><br /> [텍스트 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)<br /><br /> [숫자 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)<br /><br /> [날짜 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-date-attribute-master-data-services.md)<br /><br /> [링크 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)<br /><br /> [파일 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|
-|특성 그룹 만들기|엔터티에 대한 4개 또는 5개 이상의 특성이 있는 경우 특성 그룹을 만들 수 있습니다. 이러한 그룹은 **탐색기** 에서 표 위에 탭으로 표시되며, 여러 특성을 손쉽게 탐색할 수 있도록 각 탭으로 그룹화합니다. \<이미지> 삽입|[특성 그룹&#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)<br /><br /> [특성 그룹 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)|
+|특성 그룹 만들기|엔터티에 대한 4개 또는 5개 이상의 특성이 있는 경우 특성 그룹을 만들 수 있습니다. 이러한 그룹은 **탐색기** 에서 표 위에 탭으로 표시되며, 여러 특성을 손쉽게 탐색할 수 있도록 각 탭으로 그룹화합니다. \<INSERT IMAGE>|[특성 그룹&#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)<br /><br /> [특성 그룹 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)|
 |지원 엔터티에 대한 데이터 레코드(멤버) 가져오기|준비 프로세스를 사용하여 지원 엔터티에 대한 데이터를 가져옵니다.<br /><br /> 제품 모델의 경우 색이나 크기를 가져올 수 있습니다.<br /><br /> 멤버를 직접 만들 수도 있습니다.<br /><br /> 참고: 사용자는 엔터티의 리프 모델 개체에 대한 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 업데이트 **이상의 사용 권한과** 탐색기 **기능 영역에 대한 액세스 권한이 있는 경우** 에서 멤버를 만들 수 있습니다.|[데이터 가져오기 &#40;MDS(Master Data Services)&#41;](overview-importing-data-from-tables-master-data-services.md)<br /><br /> [준비 프로세스를 사용하여 Master Data Services에 멤버 로드 또는 업데이트](../../2014/master-data-services/add-update-and-delete-data-master-data-services.md)<br /><br /> [리프 멤버 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)|
 |데이터 품질을 보장하기 위한 비즈니스 규칙 만들기|데이터의 정확성을 보장하는 비즈니스 규칙을 만들고 게시합니다. 다음과 같은 작업을 위해 비즈니스 규칙을 사용할 수 있습니다.<br /><br /> 기본 특성 값을 설정합니다.<br /><br /> 특성 값을 변경합니다.<br /><br /> 데이터가 비즈니스 규칙 유효성 검사에 실패한 경우 전자 메일 알림을 보냅니다.|[비즈니스 규칙&#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)<br /><br /> [비즈니스 규칙 만들기 및 게시&#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)<br /><br /> [알림&#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)<br /><br /> [메일 알림 구성&#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md)<br /><br /> [알림을 보내도록 비즈니스 규칙 구성&#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|
 |기본 엔터티에 대한 데이터 레코드(멤버)를 가져옵니다. 비즈니스 규칙 적용|준비 프로세스를 사용하여 기본 엔터티에 대한 데이터를 가져옵니다. 작업이 완료되면 버전의 유효성을 검사합니다. 이를 통해 비즈니스 규칙이 모델 버전의 모든 멤버에 적용됩니다.<br /><br /> 그런 다음 모든 비즈니스 규칙 유효성 검사 문제를 해결할 수 있습니다.|[유효성 검사&#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)<br /><br /> [비즈니스 규칙에 대해 버전 유효성 검사&#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)<br /><br /> [유효성 검사 저장 프로시저&#40;Master Data Services&#41;](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)|

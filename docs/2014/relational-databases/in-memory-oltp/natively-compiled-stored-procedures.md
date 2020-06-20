@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d5ed432c-10c5-4e4f-883c-ef4d1fa32366
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e9bdc0c104b212f3c26389c1792b6b617634a12a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63a3b7b1e91323290059b5208f9c2582ced1da8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714920"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050063"
 ---
 # <a name="natively-compiled-stored-procedures"></a>Natively Compiled Stored Procedures
   고유하게 컴파일된 저장 프로시저는 메모리 최적화 테이블에 액세스하는 네이티브 코드로 컴파일된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저입니다. 고유하게 컴파일된 저장 프로시저는 쿼리 및 비즈니스 논리가 저장 프로시저에서 효율적으로 실행되도록 해 줍니다. 네이티브 컴파일 프로세스에 대한 자세한 내용은 [Native Compilation of Tables and Stored Procedures](native-compilation-of-tables-and-stored-procedures.md)을 참조하세요. 디스크 기반 저장 프로시저를 고유하게 컴파일된 저장 프로시저로 마이그레이션하는 방법은 [고유하게 컴파일된 저장 프로시저의 마이그레이션 문제](migration-issues-for-natively-compiled-stored-procedures.md)를 참조하세요.  
@@ -46,6 +45,6 @@ ms.locfileid: "62714920"
 -   [데이터 액세스 애플리케이션에서 고유하게 컴파일된 저장 프로시저 호출](calling-natively-compiled-stored-procedures-from-data-access-applications.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 액세스에 최적화 된 테이블](memory-optimized-tables.md)  
+ [메모리 최적화 테이블](memory-optimized-tables.md)  
   
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 73fa339f-b71a-4be4-97ca-d4ae84c8b90b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2dd2fe9f5e4e2a5b41c9951b1a38dd819a15aa35
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c2f030a0191596e40ef1ee9e2b0b2d4da34c773
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316036"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011452"
 ---
 # <a name="considerations-for-replaying-traces-sql-server-profiler"></a>추적 재생에 대한 고려 사항(SQL Server Profiler)
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 다음과 같은 종류의 추적을 재생할 수 없습니다.  

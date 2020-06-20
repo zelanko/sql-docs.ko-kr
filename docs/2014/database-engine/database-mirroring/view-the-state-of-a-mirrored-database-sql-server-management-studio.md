@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 544f4194-253e-4c57-96ca-31c16301434f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f5e61bd8ef63baa9a087bcae912b04f653f63b54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a6d664a838e82a10df4ab16f4f6c097ffacf8b2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753885"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933811"
 ---
 # <a name="view-the-state-of-a-mirrored-database-sql-server-management-studio"></a>미러된 데이터베이스의 상태 보기(SQL Server Management Studio)
   데이터베이스 미러링 세션 동안 **데이터베이스 속성** 대화 상자의 **미러링** 페이지에서 상태를 확인할 수 있습니다.  
@@ -35,11 +34,11 @@ ms.locfileid: "62753885"
   
     |상태|설명|  
     |------------|-----------------|  
-    |\<비어 있음>|데이터베이스 미러링 세션이 없으며 **미러링** 페이지에 대해 보고할 활동이 없습니다.|  
+    |\<blank>|데이터베이스 미러링 세션이 없으며 **미러링** 페이지에 대해 보고할 활동이 없습니다.|  
     |일시 중지됨|주 데이터베이스가 실행되고 있지만 미러 서버로 로그를 보내지 않습니다. 데이터베이스의 미러 복사본을 사용할 수 없습니다.|  
     |연결 없음|주 서버 인스턴스는 해당 파트너나 미러링 모니터 서버 인스턴스(있는 경우)에 연결할 수 없습니다.|  
     |동기화 중|미러 데이터베이스의 내용이 주 데이터베이스의 내용보다 오래된 것입니다. 주 서버 인스턴스에서 로그 레코드를 미러 서버 인스턴스로 보내면 미러 서버 인스턴스에서 변경 사항을 미러 데이터베이스에 적용하여 롤포워드합니다.<br /><br /> 데이터베이스 미러링 세션을 시작할 때는 미러 데이터베이스와 주 데이터베이스가 동기화하는 중입니다.|  
-    |장애 조치(Failover)|주 서버 인스턴스에서 수동 장애 조치(역할 교체)가 시작되었지만 미러 서버 인스턴스에서 아직 수락하지 않았습니다.|  
+    |장애 조치|주 서버 인스턴스에서 수동 장애 조치(역할 교체)가 시작되었지만 미러 서버 인스턴스에서 아직 수락하지 않았습니다.|  
     |동기화됨|미러 데이터베이스에 주 데이터베이스와 동일한 데이터가 들어 있습니다. 수동 장애 조치와 자동 장애 조치는 동기화 *상태에서만* 가능합니다.|  
   
 ## <a name="see-also"></a>참고 항목  

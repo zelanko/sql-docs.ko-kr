@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a343e6b9e93aa1910c82f436f3a50daf00d57bc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754284"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933886"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>서버 인스턴스 업그레이드 시 미러된 데이터베이스의 작동 중단 최소화
-  서버 인스턴스를로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]업그레이드할 때 *롤링 업그레이드*라고 하는 순차적 업그레이드를 수행 하 여 각 미러된 데이터베이스의 가동 중지 시간을 단일 수동 장애 조치 (failover)로 줄일 수 있습니다. 롤링 업그레이드란 간단히 말해서 현재 미러링 세션에서 미러 서버 역할을 하고 있는 서버 인스턴스를 업그레이드한 다음 미러된 데이터베이스를 수동으로 장애 조치(Failover)하고, 이전 주 서버를 업그레이드하고, 미러링을 다시 시작하는 여러 단계로 이루어진 프로세스입니다. 실제로 정확한 프로세스는 업그레이드 중인 서버 인스턴스에서 실행되는 미러링 세션의 개수 및 레이아웃과 운영 모드에 따라 달라집니다.  
+  서버 인스턴스를로 업그레이드할 때 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] *롤링 업그레이드*라고 하는 순차적 업그레이드를 수행 하 여 각 미러된 데이터베이스의 가동 중지 시간을 단일 수동 장애 조치 (failover)로 줄일 수 있습니다. 롤링 업그레이드란 간단히 말해서 현재 미러링 세션에서 미러 서버 역할을 하고 있는 서버 인스턴스를 업그레이드한 다음 미러된 데이터베이스를 수동으로 장애 조치(Failover)하고, 이전 주 서버를 업그레이드하고, 미러링을 다시 시작하는 여러 단계로 이루어진 프로세스입니다. 실제로 정확한 프로세스는 업그레이드 중인 서버 인스턴스에서 실행되는 미러링 세션의 개수 및 레이아웃과 운영 모드에 따라 달라집니다.  
   
 > [!NOTE]  
 >  롤링 업그레이드를 수행 하 여 Service Pack 또는 핫픽스를 설치 하는 방법에 대 한 자세한 내용은 [미러된 데이터베이스의 가동 중지 시간을 최소화 하면서 시스템에 서비스 팩 설치](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)를 참조 하세요.  

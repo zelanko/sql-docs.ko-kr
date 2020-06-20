@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 34462589141133e04ca8728361e3a173f0944f12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2936d94f07d5bd8ba046811ad632a5be81f15a8a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62895502"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968523"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>스크립트 태스크를 사용하여 빈 플랫 파일 검색
   플랫 파일 원본에서는 플랫 파일의 처리를 시도하기 전에 플랫 파일에 데이터 행이 들어 있는지 여부를 확인하지 않습니다. 그러나 데이터 행이 들어 있지 않은 파일을 건너뛰면 특히 수많은 플랫 파일을 반복하는 패키지 등에서 패키지 효율성을 높일 수 있습니다. 스크립트 태스크는 패키지에서 데이터 흐름의 처리를 시작하기 전에 빈 플랫 파일을 찾을 수 있습니다.  
@@ -29,19 +28,19 @@ ms.locfileid: "62895502"
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
   
 ## <a name="description"></a>Description  
- 다음 예에서는 `System.IO` 네임스페이스의 메서드로 플랫 파일 연결 관리자에서 지정한 플랫 파일을 테스트하여 해당 파일이 비어 있는지 여부나 열 머리글 또는 빈 줄과 같이 필요한 비데이터 행만 들어 있는지 여부를 확인합니다. 이 스크립트에서는 먼저 파일 크기를 확인합니다. 크기가 0바이트이면 해당 파일은 비어 있는 것입니다. 파일 크기가 0보다 크면 스크립트에서는 줄이 더 이상 없거나 줄 수가 비데이터 행의 예상 개수를 초과할 때까지 파일의 줄을 읽습니다. 파일의 줄 수가 비데이터 행의 예상 개수보다 작거나 같으면 해당 파일은 비어 있는 것으로 간주됩니다. 결과는 패키지의 제어 흐름에서 분기하는 데 사용할 수 있는 값을 갖는 사용자 변수에 부울 값으로 반환됩니다. 또한 `FireInformation` 이 메서드는 VSTA ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications)의 **출력** 창에 결과를 표시 합니다.  
+ 다음 예에서는 `System.IO` 네임스페이스의 메서드로 플랫 파일 연결 관리자에서 지정한 플랫 파일을 테스트하여 해당 파일이 비어 있는지 여부나 열 머리글 또는 빈 줄과 같이 필요한 비데이터 행만 들어 있는지 여부를 확인합니다. 이 스크립트에서는 먼저 파일 크기를 확인합니다. 크기가 0바이트이면 해당 파일은 비어 있는 것입니다. 파일 크기가 0보다 크면 스크립트에서는 줄이 더 이상 없거나 줄 수가 비데이터 행의 예상 개수를 초과할 때까지 파일의 줄을 읽습니다. 파일의 줄 수가 비데이터 행의 예상 개수보다 작거나 같으면 해당 파일은 비어 있는 것으로 간주됩니다. 결과는 패키지의 제어 흐름에서 분기하는 데 사용할 수 있는 값을 갖는 사용자 변수에 부울 값으로 반환됩니다. `FireInformation`또한이 메서드는 **Output** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSTA (Tools for Applications)의 출력 창에 결과를 표시 합니다.  
   
 #### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
   
-1.  이라는 `EmptyFlatFileTest`플랫 파일 연결 관리자를 만들고 구성 합니다.  
+1.  이라는 플랫 파일 연결 관리자를 만들고 구성 `EmptyFlatFileTest` 합니다.  
   
 2.  `FFNonDataRows`라는 정수 변수를 만들고 해당 값을 플랫 파일에 필요한 비데이터 행의 개수로 설정합니다.  
   
 3.  `FFIsEmpty`라는 부울 변수를 만듭니다.  
   
-4.  스크립트 태스크의 `FFNonDataRows`ReadOnlyVariables**속성에** 변수를 추가합니다.  
+4.  스크립트 태스크의 **ReadOnlyVariables** 속성에 `FFNonDataRows` 변수를 추가합니다.  
   
-5.  스크립트 태스크의 `FFIsEmpty`ReadWriteVariables**속성에** 변수를 추가합니다.  
+5.  스크립트 태스크의 **ReadWriteVariables** 속성에 `FFIsEmpty` 변수를 추가합니다.  
   
 6.  코드에서 `System.IO` 네임스페이스를 가져옵니다.  
   

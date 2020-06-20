@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 197b2ecf-a1a3-4a3a-a523-a0ee919c1dde
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e48602f61c09a8de76e2894a4fa808b2f39f4cbe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d28a05e7cd025e213e2cebdce9d582a9df446fea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66090968"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065051"
 ---
 # <a name="with-rows-is-not-supported-in-create-statistics-statements-in-the-compatibility-mode-of-90-or-later"></a>호환성 모드 90 이상에서는 CREATE STATISTICS 문에 WITH ROWS를 사용할 수 없습니다.
   호환성 모드가 90 이상으로 설정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행할 때 CREATE STATISTICS 문에 WITH ROWS를 지정할 수 없습니다.  

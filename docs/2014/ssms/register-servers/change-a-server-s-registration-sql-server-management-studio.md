@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce6d9d88-3ac8-4f5d-8ea9-e9b55ceca0f4
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 05161b2c9e3266b57841ff4268f4dc64ede90434
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f04bb68826aaa701edb06800144255117b61c422
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244646"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058462"
 ---
 # <a name="change-a-server39s-registration-sql-server-management-studio"></a>서버 등록 변경(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 서버의 등록을 변경하는 방법에 대해 설명합니다. 등록된 서버에 대한 연결 정보는 언제든지 변경할 수 있습니다.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6a0ad817-3d8d-4495-889d-c66a7ef9e8bb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6e80a18cef595ae3543aba8a656aca9267607e38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4118846915ea5014f25253b625c8bf2913e11295
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63240484"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011442"
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>추적 테이블 재생(SQL Server Profiler)
   재생은 저장된 추적을 열고 나중에 재생하는 기능입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 사용자 연결 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 시뮬레이션할 수 있는 다중 스레드 재생 엔진을 갖추고 있습니다. 재생 기능은 애플리케이션이나 프로세스 문제 해결에 유용합니다. 문제를 파악하여 수정할 때 수정된 애플리케이션이나 프로세스에 대해 잠재적인 문제를 발견한 추적을 실행합니다. 원래 추적을 재생한 다음 결과를 비교합니다.  

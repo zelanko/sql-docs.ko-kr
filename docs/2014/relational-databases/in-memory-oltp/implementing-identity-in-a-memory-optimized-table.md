@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c0a704a3-3a31-4c2c-b967-addacda62ef8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a3fe549e5a49dcc7c0c0417199206a6fd34079ac
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 793890018d0d7e57e4102d03a9120feb9803b816
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706492"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050127"
 ---
 # <a name="implementing-identity-in-a-memory-optimized-table"></a>메모리 액세스에 최적화된 테이블에서 IDENTITY 구현
   IDENTITY(1, 1)는 메모리 최적화 테이블에서 지원됩니다. 그러나 x != 1 또는 y != 1인 IDENTITY(x, y) 정의를 사용하는 ID 열은 메모리 최적화 테이블에서 지원되지 않습니다. IDENTITY 값에 대한 해결 방법은 SEQUENCE 개체를 사용합니다([Sequence Numbers](../sequence-numbers/sequence-numbers.md)).  

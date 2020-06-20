@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6a6b2685c8cfda9217b554e161919c24344b34a2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: edcdea9d266cf0ef231b1e16be4da7009372dcd6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706481"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050115"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 소개
   메모리 액세스에 최적화된 테이블은 [CREATE TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)을 사용하여 만드는 테이블입니다.  
@@ -55,7 +54,7 @@ ms.locfileid: "82706481"
 |기능|고유하게 컴파일된 저장 프로시저를 통한 액세스|해석된 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 액세스|CLR 액세스|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |메모리 최적화 테이블|예|예|아니요 <sup>1</sup>|  
-|[메모리 액세스에 최적화된 테이블 변수](../../database-engine/memory-optimized-table-variables.md)|예|예|아니요|  
+|[메모리 액세스에 최적화된 테이블 변수](../../database-engine/memory-optimized-table-variables.md)|예|예|예|  
 |[Natively Compiled Stored Procedures](https://msdn.microsoft.com/library/dn133184.aspx)|EXECUTE 문으로는 고유하게 컴파일된 저장 프로시저에서 저장 프로시저를 실행할 수 없습니다.|예|아니요 <sup>1</sup>|  
   
  <sup>1</sup> 컨텍스트 연결 ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 모듈을 실행 하는 경우의 연결)에서 메모리 최적화 테이블 또는 고유 하 게 컴파일된 저장 프로시저에 액세스할 수 없습니다. 하지만 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저에 액세스할 수 있는 다른 연결을 만들어서 열 수 있습니다. 자세한 내용은 [일반 연결 및 컨텍스트 연결](../clr-integration/data-access/context-connections-vs-regular-connections.md)을 참조 하세요.  

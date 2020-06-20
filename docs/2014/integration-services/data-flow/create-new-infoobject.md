@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1c57974bc671802d3ade3263d8650883683c846e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5aea80fec8c166f963ed60962cd49987bc5b460c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827904"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916243"
 ---
 # <a name="create-new-infoobject"></a>새 InfoObject 만들기
   **새 InfoObject 만들기** 대화 상자를 사용하여 SAP Netweaver BW 시스템에서 새 InfoObject를 만들 수 있습니다.  

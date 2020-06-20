@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 63be6853-c54a-42b2-ae1a-db2175f1d28e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 41c183c72188cccb21838e1e574992bfb723c022
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c04f7890ba8d8efe64afaf11b922af156c5de46
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091155"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065127"
 ---
 # <a name="verify-that-no-database-files-are-on-compressed-drives-during-the-upgrade-process"></a>업그레이드 프로세스 중에 데이터베이스 파일이 압축된 드라이브에 없는지 확인합니다.
   업그레이드 관리자가 압축된 드라이브에서 데이터베이스 파일을 검색했습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 압축된 드라이브에서 데이터베이스를 만들거나 업그레이드할 수 없습니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6aa7f18e-baad-4481-9777-8c3b230b392f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ebbb5ac25ea71dc5b9929fb529414b059c0589fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec559ba5ccbb53dd92f3a5e1175a10a59fbaf43c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919300"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954043"
 ---
 # <a name="getting-information-about-assemblies"></a>어셈블리에 대한 정보 가져오기
   다음 카탈로그 뷰와 함수에서 어셈블리에 대한 메타데이터를 쿼리할 수 있습니다.  

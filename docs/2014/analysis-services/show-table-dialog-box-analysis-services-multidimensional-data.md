@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c0bf4fa-5685-4269-bf7d-f0e9802ab4bf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d21063bf403d9973ac4ff09725545e47e84a7cd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c174dd70611d39a4938146480583615e09ad3914
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068657"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940514"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>테이블 표시 대화 상자(Analysis Services - 다차원 데이터)
   **의** 테이블 표시 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 차원, 큐브 또는 마이닝 구조와 연결된 데이터 원본 뷰에서 테이블을 포함시킬 수 있습니다. 다음과 같은 방법으로 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에서 이 대화 상자를 표시할 수 있습니다.  

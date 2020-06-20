@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 280f4bc3c20fb65be24ace423f69982ad96bfbff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d78707925303d5e19d93b170f257d76fb7d1747d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011107"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004052"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
   전체 텍스트 검색을 정의하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 쿼리는 전체 텍스트 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE)를 사용합니다. 이러한 조건자와 함수는 다양한 형태의 쿼리 용어를 지원하는 많은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 지원합니다. 전체 텍스트 쿼리를 작성하려면 이러한 조건자와 함수를 사용하는 시기와 방법을 알아야 합니다.  
@@ -50,7 +49,7 @@ ms.locfileid: "66011107"
   
  
   
-### <a name="examples"></a>예  
+### <a name="examples"></a>예제  
   
 #### <a name="a-using-contains-with-simple_term"></a>A. <simple_term>에 CONTAINS 사용  
  다음 예에서는 가격이 `$80.99` 이고 `"Mountain"`이라는 단어가 포함된 모든 제품을 검색합니다.  
@@ -105,7 +104,7 @@ GO
   
  
   
-### <a name="examples"></a>예  
+### <a name="examples"></a>예제  
   
 #### <a name="a-using-containstable"></a>A. CONTAINSTABLE 사용  
  다음 예에서는 **Description** 열에서 "light" 또는 "lightweight"라는 단어 근처에 "aluminum"이라는 단어가 포함된 모든 제품의 설명 ID와 설명을 반환합니다. 등급 값이 2 이상인 행만 반환됩니다.  
@@ -130,7 +129,7 @@ GO
 ```  
   
 #### <a name="b-using-freetexttable"></a>B. FREETEXTTABLE 사용  
- 다음 예에서는 순위가 높은 행을 먼저 반환하고 SELECT 목록에 각 행의 순위를 추가하도록 FREETEXTTABLE 쿼리를 확장합니다. 쿼리를 지정 하려면 **productdescriptionid 임을** 가 `ProductDescription` 테이블의 고유 키 열 이라는 것을 알아야 합니다.  
+ 다음 예에서는 순위가 높은 행을 먼저 반환하고 SELECT 목록에 각 행의 순위를 추가하도록 FREETEXTTABLE 쿼리를 확장합니다. 쿼리를 지정 하려면 **productdescriptionid 임을** 가 테이블의 고유 키 열 이라는 것을 알아야 합니다 `ProductDescription` .  
   
 ```  
 USE AdventureWorks2012  
@@ -232,7 +231,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 ### <a name="xml-data"></a>xml 데이터  
  `xml` 데이터 형식 열에는 XML 문서만 저장되고 이러한 문서에는 XML 필터만 사용됩니다. 따라서 유형 열은 필요하지 않습니다. `xml` 열에서 전체 텍스트 인덱스는 XML 요소의 내용은 인덱싱하지만 XML 태그는 무시합니다. 특성 값은 숫자 값이 아니면 전체 텍스트 인덱싱됩니다. 요소 태그는 토큰 경계로 사용됩니다. 여러 언어를 포함하는 올바른 형식의 XML 또는 HTML 문서와 조각이 지원됩니다.  
   
- 열을 쿼리 하는 `xml` 방법에 대 한 자세한 내용은 [XML 열에 전체 텍스트 검색 사용](../xml/use-full-text-search-with-xml-columns.md)을 참조 하세요.  
+ 열을 쿼리 하는 방법에 대 한 자세한 내용은 `xml` [XML 열에 전체 텍스트 검색 사용](../xml/use-full-text-search-with-xml-columns.md)을 참조 하세요.  
   
  
   
@@ -242,7 +241,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 > [!NOTE]  
 >   쿼리 용어의 구문을 보려면 다음 표의 **지원 요소** 열에서 해당 링크를 클릭하십시오.  
   
-|쿼리 용어 형태|설명|지원 요소|  
+|쿼리 용어 형태|Description|지원 요소|  
 |----------------------|-----------------|------------------|  
 |하나 이상의 특정 단어 또는 구(*단순 단어*)|전체 텍스트 검색에서 단어(또는 *토큰*)는 지정된 언어의 언어 규칙에 따라 적절한 단어 분리기에 의해 경계가 식별되는 문자열입니다. 올바른 구는 여러 단어로 구성됩니다. 문장 부호는 있을 수도 있고 없을 수도 있습니다.<br /><br /> 예를 들어 "크 라 상"는 단어이 고 "caf?"는 au lait "는 구입니다. 이와 같은 단어 및 구를 단순 단어라고 합니다.<br /><br /> 자세한 내용은 이 항목 뒷부분의 [특정 단어 또는 구(단순 단어) 검색](#Simple_Term)을 참조하십시오.|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) 및 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 은 정확히 일치하는 구를 검색합니다.<br /><br /> [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 및 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 은 구를 여러 개의 단어로 나눕니다.|  
 |특정 텍스트로 시작하는 단어 또는 그러한 단어를 포함하는 구(*접두사 단어*)|접두사 단어는 파생어를 만들거나 굴절형을 만들기 위해 단어 앞에 추가되는 문자열을 말합니다.<br /><br /> 단일 접두사 단어의 경우 지정된 단어로 시작하는 모든 단어가 결과 집합의 일부로 반환됩니다. 예를 들어 "auto*" 단어를 사용하면 "automatic", "automobile" 등이 검색됩니다.<br /><br /> 구의 경우 구에 포함된 각 단어가 접두사 단어로 간주됩니다. 예를 들어 "auto tran\*"은 "automatic transmission" 및 "automobile transducer"와 일치하지만 "automatic motor transmission"과는 일치하지 않습니다.<br /><br /> 자세한 내용은 이 항목 뒷부분의 [접두사(접두사 단어) 검색](#Prefix_Term)을 참조하십시오.|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) 및 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  

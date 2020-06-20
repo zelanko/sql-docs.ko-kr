@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9e0eadbbc2d126a001057cf5f9d0e17211c0a93e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f3c3354fecd145f1df35d0c01252886de69bd37b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874727"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004067"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>검색에 사용된 단어 분리기를 이전 버전으로 되돌리기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 한국어를 제외하고 전체 텍스트 검색에서 지원되는 모든 언어에 대해 단어 분리기 및 형태소 분석기의 버전을 설치하고 활성화합니다. 이 항목에서는 이러한 버전의 구성 요소에서 이전 버전으로 전환하거나 이전 버전에서 다시 새 버전으로 전환하는 방법에 대해 설명합니다.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7d32b560-49d6-4558-b5d6-9127067f82d6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c9ee7f745fc683a9ed93f2ca09ac94e1bf580f71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 79ab9c0d18f20bcfd6f549918cc1501a1d8e1e49
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952386"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065113"
 ---
 # <a name="virtual-directories-are-unspecified-upgrade-advisor"></a>가상 디렉터리가 지정되지 않음(업그레이드 관리자)
   업그레이드 관리자가 보고서 서버 웹 서비스 또는 보고서 관리자에 대한 가상 디렉터리 설정을 검색하지 못했습니다. 업그레이드가 완료된 후 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 보고서 서버에 대한 URL 예약을 구성해야 합니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "71952386"
 ## <a name="corrective-action"></a>수정 동작  
  업그레이드 완료 후 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 보고서 서버 및 보고서 관리자의 URL을 설정합니다. IIS 관리자를 사용하여 더 이상 필요하지 않은 모든 가상 디렉터리를 제거합니다.  
   
- 자세한 내용은 온라인 설명서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 [URL &#40;SSRS Configuration Manager&#41;구성](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) 을 참조 하세요.  
+ 자세한 내용은 온라인 설명서의 [URL &#40;SSRS Configuration Manager&#41;구성](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) 을 참조 하세요 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>참고 항목  
  [업그레이드 관리자를 &#40;업그레이드 문제를 Reporting Services&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  

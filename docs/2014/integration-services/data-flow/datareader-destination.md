@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 56fcc4bf-c901-42c3-a71d-110039293431
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 694e85a56686379d089f3c2fc11721e4dd6f8642
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85e1a9e6ab979f74d2fb628a883950d94138ad66
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827556"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916081"
 ---
 # <a name="datareader-destination"></a>DataReader 대상
   DataReader 대상은 ADO.NET `DataReader` 인터페이스를 사용하여 데이터 흐름에 데이터를 제공합니다. 그러면 다른 애플리케이션에서 이 데이터를 사용할 수 있습니다. 예를 들어 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 패키지 실행 결과를 사용하도록 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 보고서의 데이터 원본을 구성할 수 있습니다. 이렇게 하려면 DataReader 대상을 구현하는 데이터 흐름을 만듭니다.  

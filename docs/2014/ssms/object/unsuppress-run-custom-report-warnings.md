@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0deed900-c910-4d12-aac0-6ab9e39eb068
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ed653b16fe524f364ba89f13e00715b725080033
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae7f4d08ac613113d715728a5cb78ae37bd6f99b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62824399"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058531"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>사용자 지정 보고서 실행 경고 표시
   사용자 지정 보고서에 대한 경고 대화 상자에는 두 가지가 있습니다. 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 이러한 상자를 표시하는 방법에 대해 설명합니다.  
@@ -28,21 +27,21 @@ ms.locfileid: "62824399"
   
 #### <a name="to-unsuppress-the-main-custom-report-warning-dialog-box"></a>주 사용자 지정 보고서 경고 대화 상자를 표시하려면  
   
-1.  \< *서버*\<*Drive* *Share*\\ 공유 드라이브> \documents 및 설정<UserProfile\>\Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.에 연결 합니다.>|>\\<  
+1.  \<*Server*> \\ < *Share* >| \<*Drive*> \Documents 및 설정 \\<UserProfile \> \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml에 연결 합니다.  
   
-2.  를 마우스 오른쪽 `reports.xml`단추로 클릭 한 다음 **편집**을 클릭 합니다.  
+2.  를 마우스 오른쪽 단추로 클릭 한 `reports.xml` 다음 **편집**을 클릭 합니다.  
   
-3.  **\<SuppressWarning\<>true/SuppressWarning>를 SuppressWarning \<>false\</SuppressWarning>로 **변경 합니다.  
+3.  ** \<SuppressWarning> True \</SuppressWarning> 를 \<SuppressWarning> false \</SuppressWarning> 로**변경 합니다.  
   
 4.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 다시 시작합니다.  
   
 #### <a name="to-unsuppress-the-drill-through-custom-report-warning-dialog-box"></a>드릴스루 사용자 지정 보고서 경고 대화 상자를 표시하려면  
   
-1.  \< *서버*\<*Drive* *Share*\\ 공유 드라이브> \documents 및 설정<UserProfile\>\Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.에 연결 합니다.>|>\\<  
+1.  \<*Server*> \\ < *Share* >| \<*Drive*> \Documents 및 설정 \\<UserProfile \> \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml에 연결 합니다.  
   
-2.  를 마우스 오른쪽 `reports.xml`단추로 클릭 하 고 **편집**을 클릭 합니다.  
+2.  를 마우스 오른쪽 단추로 클릭 `reports.xml` 하 고 **편집**을 클릭 합니다.  
   
-3.  ** \<SuppressDrillthroughWarning\<>true/SuppressDrillthroughWarning>를 SuppressDrillthroughWarning \<>false\</SuppressDrillthroughWarning>로 **변경 합니다.  
+3.  ** \<SuppressDrillthroughWarning> True \</SuppressDrillthroughWarning> 를 \<SuppressDrillthroughWarning> false \</SuppressDrillthroughWarning> 로**변경 합니다.  
   
 4.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 다시 시작합니다.  
   

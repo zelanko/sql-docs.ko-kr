@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ba2550b3d327d392d63aeacf4d6588457cd1aa79
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f747c2638af420c61861465cd65d5af65ca53e05
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771119"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915453"
 ---
 # <a name="look-up-infoobject"></a>InfoObject 조회
   **InfoObject 조회** 대화 상자에서는 SAP Netweaver BW 시스템에 정의된 InfoObject를 조회할 수 있습니다. 사용할 수 있는 InfoObject 목록이 표시될 때 원하는 InfoObject를 선택하면 관련 옵션이 SAP BW 대상의 값으로 채워집니다.  

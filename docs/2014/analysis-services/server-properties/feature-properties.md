@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a34d046a-6562-4d98-b827-37cebc6d77b4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1cc2d52bd942fe15eeabd72f1c37740637e692d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08001a172c1b39fb912ef042ed85effd4f8ededa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069046"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940717"
 ---
 # <a name="feature-properties"></a>기능 속성
   기능 속성은 서버 인스턴스 간 연결을 제어하는 속성을 비롯한 제품 기능(대부분 고급 기능)에 해당합니다.  

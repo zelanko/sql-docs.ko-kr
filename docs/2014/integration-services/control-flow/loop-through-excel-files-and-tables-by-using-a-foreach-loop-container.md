@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 979a0e0a1e8a05b676d4de7ccda0c5876943d587
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d93bb5d5d1625c4d558b865bdd28445e377abbfa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830584"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918574"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑
   이 항목의 절차에서는 적절한 열거자와 함께 Foreach 루프 컨테이너를 사용하여 폴더 내의 Excel 통합 문서 또는 Excel 통합 문서 내의 테이블을 루핑하는 방법에 대해 설명합니다.  
@@ -49,7 +48,7 @@ ms.locfileid: "62830584"
   
 8.  새 Excel 연결 관리자를 선택하고 속성 창에서 **Expressions** 속성을 클릭한 다음 줄임표를 클릭합니다.  
   
-9. **속성 식 편집기**에서 `ConnectionString` 속성을 선택 하 고 줄임표를 클릭 합니다.  
+9. **속성 식 편집기**에서 속성을 선택 하 `ConnectionString` 고 줄임표를 클릭 합니다.  
   
 10. 식 작성기에서 다음 식을 입력합니다.  
   

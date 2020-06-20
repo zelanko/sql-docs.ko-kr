@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d4a942bd-2dd1-42db-ad0e-e9a9ae5b856d
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: ae7d1e66d4cbd9b74ad8e58d3ac59c7ddda920a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a8fbff8e52fdc91e2ed633ade725ecbb7baa5e9e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244612"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058432"
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>서버 그룹 만들기 또는 편집(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 서버 그룹을 만들고 등록된 서버를 서버 그룹에 배치하여 등록된 서버에서 서버를 구성하는 방법에 대해 설명합니다. 언제든지 등록된 서버에서 서버 그룹을 만들고, 또한 서버를 등록할 때 서버 그룹을 만들 수도 있습니다.  
