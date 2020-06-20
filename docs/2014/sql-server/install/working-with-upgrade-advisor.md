@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5f26a7b9-1ac2-442c-8316-87b078db3baf
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8b80e11ffdf12037b466531b0d5b10a2b9f3a2e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d529a8ed50a885aa74969fc0cbb3668fc1e5587b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66090961"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041424"
 ---
 # <a name="working-with-upgrade-advisor"></a>업그레이드 관리자 작업
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로의 성공적인 업그레이드를 위해 업그레이드 관리자는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하기 전에 설치에서 해결해야 하는 문제를 식별하는 중앙 콘솔을 제공합니다.  
@@ -39,7 +38,7 @@ ms.locfileid: "66090961"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[업그레이드 관리자 개요](../../../2014/sql-server/install/overview-of-upgrade-advisor.md)|업그레이드 프로세스, 업그레이드 관리자 분석 마법사 및 업그레이드 관리자 보고서 뷰어에 대한 개요를 제공합니다.|  
 |[업그레이드 관리자 방법 도움말 항목](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)|일반적인 업그레이드 관리자 절차를 수행하는 방법에 대한 지침을 제공합니다.|  

@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 57ad9d3e-8f95-4df6-af01-c291ccf49164
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d9828c02625ae2bc5a85859577a237b4c4fa99c5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1649582f97e9e08691726745e4ba14b2f8226bd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81484683"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061079"
 ---
 # <a name="task-16-verifying-with-master-data-manager"></a>태스크 16: 마스터 데이터 관리자에서 확인
   이 작업에서는 SSIS 패키지에서 제출된 일괄 처리 작업의 상태를 확인하고 마스터 데이터 관리자를 사용해서 MDS 서버에 데이터가 업로드되었는지 확인합니다.  
   
-1.  **마스터 데이터 관리자** (`http://localhost/MDS`)를 시작 합니다. 이미 열려 있는 경우 맨 위에 있는 **Microsoft SQL Server MDS(Master Data Services)** 를 클릭 하 여 **홈 페이지로**전환 합니다.  
+1.  **마스터 데이터 관리자** ()를 시작 `http://localhost/MDS` 합니다. 이미 열려 있는 경우 맨 위에 있는 **Microsoft SQL Server MDS(Master Data Services)** 를 클릭 하 여 **홈 페이지로**전환 합니다.  
   
 2.  **Integration Management**를 클릭 합니다.  
   

@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a49bfc0da1b5e18a4ea486fa68834254bbe82882
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1894b074491af1962d2180337288e188d41b2951
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211791"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055066"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>테이블 열 속성(SQL Server Management Studio)
   이러한 속성은 테이블 디자이너의 아래쪽 창에 나타납니다. 별도로 언급하지 않는 한 열을 선택하면 속성 창에서 이러한 속성을 편집할 수 있습니다. **열 속성** 을 범주 또는 사전순으로 표시할 수 있습니다. 많은 속성의 경우 특정 데이터 형식에 대해서만 나타나거나 변경할 수 있습니다.  

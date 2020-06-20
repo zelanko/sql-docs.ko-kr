@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 35b7c489b49a4463dc0b12f1469d1310f5d26fef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4695b53e52c9c63eaacb4f2f32c6bc9f65958213
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63186993"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060830"
 ---
 # <a name="distributor-and-publisher-information-script"></a>배포자 및 게시자 정보 스크립트
   이 스크립트는 시스템 테이블 및 복제 저장 프로시저를 사용하여 배포자 및 게시자의 개체에 대한 일반적인 질문에 대해 응답할 수 있습니다. 스크립트는 "현재 상태로" 사용할 수 있으며 사용자 지정 스크립트의 기준도 제공할 수 있습니다. 스크립트를 사용자 환경에서 실행하려면 다음 두 가지를 수정해야 합니다.  
   
 -   사용자의 게시 데이터베이스 이름을 사용할 수 있도록 `use AdventureWorks2012` 줄을 변경합니다.  
   
--   `--` 줄에서 주석(`exec sp_helparticle @publication='<PublicationName>'`)을 제거하고 \<PublicationName>을 게시 이름으로 바꿉니다.  
+-   줄에서 주석 ( `--` )을 제거 `exec sp_helparticle @publication='<PublicationName>'` 하 고를 \<PublicationName> 게시 이름으로 바꿉니다.  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  

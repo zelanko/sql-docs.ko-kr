@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5198dc4ba4e81bc1d7a8dd2411da59da81596102
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63187933"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060220"
 ---
 # <a name="metadata-visibility-configuration"></a>메타데이터 표시 유형 구성
   사용자가 소유하고 있거나 일부 사용 권한이 부여된 보안 개체에 대해서만 메타데이터를 볼 수 있도록 제한됩니다. 예를 들어 다음 쿼리는 사용자에게 `myTable`테이블에 대한 SELECT 또는 INSERT와 같은 권한을 부여한 경우에 행을 반환합니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9afffa5a-d803-4653-8afc-386453fc163f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e22e47af568ecf723b54a35fb6b83bd5ce74e333
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d743341d7d1d6cae23165c7c1e4b1ddb15779927
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060767"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921844"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>실패한 패키지를 다시 시작하는 검사점 구성
   검사점에 적용되는 속성을 설정하여 전체 패키지를 다시 실행하는 대신 장애 지점에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 다시 시작하도록 구성합니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "66060767"
   
 4.  제어 흐름 디자인 화면 배경의 아무 위치나 마우스 오른쪽 단추로 클릭한 후 **속성**을 클릭합니다.  
   
-5.  SaveCheckpoints 속성을로 `True`설정 합니다.  
+5.  SaveCheckpoints 속성을로 설정 `True` 합니다.  
   
 6.  CheckpointFileName 속성에 검사점 파일의 이름을 입력합니다.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "66060767"
   
     -   태스크 또는 컨테이너를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
   
-    -   선택한 각 태스크 및 컨테이너에 대해 FailPackageOnFailure 속성을로 `True` 설정 합니다.  
+    -   `True`선택한 각 태스크 및 컨테이너에 대해 FailPackageOnFailure 속성을로 설정 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [검사점을 사용하여 패키지 다시 시작](packages/restart-packages-by-using-checkpoints.md)  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7f4ddc16bdfcc7e0d3acdfabe83e81f3d06c0b93
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 74775847bdff99ef83571d15529224abe720144d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154446"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937744"
 ---
 # <a name="dqs-administration"></a>dqs 관리
   DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )를 사용하면 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]에서 수행되는 여러 DQS 활동을 관리하고, DQS 활동과 관련된 서버 수준의 속성을 구성하고, 참조 데이터 서비스 설정을 구성하고, DQS 로그 설정을 구성할 수 있습니다. 이러한 작업은 **의** 관리 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]기능을 통해 수행됩니다. DQS의 보안 액세스(역할)에 따라 사용자에게는 이 영역의 특정 기능에 대한 액세스 권한이 부여되거나 거부됩니다.  

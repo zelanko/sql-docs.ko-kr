@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b459abaf-8787-4b65-9231-ae30e5469fd0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ec0edb2e72143fd41709355a3e9cc338544289a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c64408d6d705654014b6d071012001374a5f486
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091691"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041766"
 ---
 # <a name="update-openxml-xpath-expressions-to-remove-unsupported-functions"></a>OPENXML XPath 식을 업데이트하여 지원되지 않는 함수를 제거합니다.
   업그레이드 관리자가 XPath 기능이 사용되는 것을 감지했습니다. 업그레이드한 후 OPENXML 기능에 대한 XPath 기능의 변경에 따른 영향을 받을 수 있습니다.  

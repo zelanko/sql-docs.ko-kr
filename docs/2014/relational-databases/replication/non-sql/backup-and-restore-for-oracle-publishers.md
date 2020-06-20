@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e5f181d0-cacf-442b-8b7a-202b3cfc358b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 911d0a740a20f74edf9e32d4a6ff69a8d6040f24
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fb07772da3bdcf485ca7668fc9a9e34a8e51c5b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022490"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060570"
 ---
 # <a name="backup-and-restore-for-oracle-publishers"></a>Oracle 게시자 백업 및 복원
   백업 및 복원 시 다음 지침을 따릅니다.  

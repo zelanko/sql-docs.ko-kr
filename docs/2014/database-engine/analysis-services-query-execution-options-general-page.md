@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c534a0e2-5c35-46c2-a7e8-b1964850bd0e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5b2d8d7b20a7a3a5230d8441eb1f72f19e978eb4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe91495b5e73bad0687b675ab73a8c49ad538170
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065294"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937304"
 ---
 # <a name="analysis-services-query-execution-options-general-page"></a>Analysis Services 쿼리 실행 옵션(일반 페이지)
   이 페이지를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 쿼리의 결과 표시 옵션을 지정할 수 있습니다.  

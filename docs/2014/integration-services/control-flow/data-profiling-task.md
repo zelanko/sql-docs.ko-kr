@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0a895fd1dc3fe51296a110902fb1dd4c27d3d5a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfde82079c32b9aaba8db0ba9e52b02886bd2c47
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831902"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919254"
 ---
 # <a name="data-profiling-task"></a>데이터 프로파일링 태스크
   데이터 프로파일링 태스크는 사용자가 데이터 원본에 익숙해지고 데이터에서 해결해야 할 문제를 식별하는 데 도움이 되는 다양한 프로필을 계산합니다.  
@@ -82,7 +81,7 @@ ms.locfileid: "62831902"
 |FunctionalDependencyProfile|`integer` 형식, `char` 형식 및 `datetime` 형식의 열|  
 |InclusionProfile|`integer` 형식, `char` 형식 및 `datetime` 형식의 열|  
   
- \*유효한 데이터 형식에 대 한 이전 `integer`표에서, `char` `datetime`, 및 `numeric` 형식에는 다음과 같은 특정 데이터 형식이 포함 됩니다.  
+ \*유효한 데이터 형식에 대 한 이전 표에서,, `integer` `char` 및 형식에는 `datetime` `numeric` 다음과 같은 특정 데이터 형식이 포함 됩니다.  
   
  정수 형식에는 `bit`, `tinyint`, `smallint`, `int` 및 `bigint`가 포함됩니다.  
   
@@ -92,7 +91,7 @@ ms.locfileid: "62831902"
   
  숫자 형식에는 `integer` 형식(`bit` 제외), `money`, `smallmoney`, `decimal`, `float`, `real` 및 `numeric`이 포함됩니다.  
   
- \*\*`image` `text`,,, 및 `variant` 형식은 열 Null 비율 프로필 이외의 프로필에 대해 지원 되지 않습니다. `XML` `udt`  
+ \*\*`image`,,, `text` `XML` `udt` 및 `variant` 형식은 열 Null 비율 프로필 이외의 프로필에 대해 지원 되지 않습니다.  
   
 ### <a name="valid-tables-and-columns"></a>유효한 테이블 및 열  
  테이블 또는 열이 비어 있으면 데이터 프로파일링이 다음 동작을 수행합니다.  

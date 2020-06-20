@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 201ccae98886e5126eb347c10d16985cbeeddffe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 17ca833a0773b48df0cc3781505b1046e2a63814
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779138"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932744"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>SysPrep을 사용하여 SQL Server 설치 시 고려 사항
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep을 사용하여 컴퓨터에 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 준비하고 나중에 구성을 완료할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep은 두 단계로 된 과정을 통해 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 구성합니다. 단계는 다음과 같습니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "62779138"
   
      이 단계에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]준비 인스턴스의 구성을 완료할 수 있습니다. 이 단계를 실행하는 동안 컴퓨터, 네트워크 및 계정 관련 정보를 제공할 수 있습니다.  
   
- SysPrep을 사용 하 여를 설치 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 방법에 대 한 자세한 내용은 [Sysprep을 사용 하 여 SQL Server 2014 설치](install-sql-server-using-sysprep.md)를 참조 하세요.  
+ SysPrep을 사용 하 여를 설치 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Sysprep을 사용 하 여 SQL Server 2014 설치](install-sql-server-using-sysprep.md)를 참조 하세요.  
   
 ## <a name="common-uses-for-ssnoversion-sysprep"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep의 일반적인 용도  
  다음과 같은 방법으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 기능을 사용할 수 있습니다.  
@@ -65,7 +64,7 @@ ms.locfileid: "62779138"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 준비할 때 자동으로 준비되고, 이미지 완료 단계에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 완료할 때 함께 완료됩니다.  
   
- 지원 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에 대 한 자세한 내용은 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
+ 지원 되는 버전에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]준비 인스턴스를 구성하는 동안 버전 업그레이드를 수행할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition에 대해서는 이 옵션이 지원되지 않습니다.  
   

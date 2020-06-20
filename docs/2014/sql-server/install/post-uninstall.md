@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fdbdd223-c3cb-4d88-a96c-c5d362030c83
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 44a1ce794c70da1b64010a7e045447cfe44b6184
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59e3718e22b19482d96a303a0dbd09206b6e63d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093494"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041909"
 ---
 # <a name="post-uninstall"></a>게시 제거
   게시 제거 페이지를 사용하여 작업이 성공적으로 완료되었는지 확인할 수 있습니다.  

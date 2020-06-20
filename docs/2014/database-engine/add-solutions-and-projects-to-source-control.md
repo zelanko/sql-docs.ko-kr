@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3eaed80e-6f55-42ea-a964-aca31c09d055
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6d9cc15f79235e225dc6589a16b48c373479e639
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5256795677f4e8ce4249737d25d3ded1c4cd69c8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62792093"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937344"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>원본 제어에 솔루션 및 프로젝트 추가
   솔루션을 원본 제어에 추가할 경우 솔루션은 원본 제어 공급자가 작성 및 유지 관리하는 동적 버전 관리 보관의 일부가 됩니다. 누군가가 솔루션의 새 버전을 체크 인할 때마다 해당 버전은 보관의 일부가 되며 다른 소스 제어 사용자가 사용할 수 있게 됩니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "62792093"
   
  다음 표에서는 이 섹션에서 다루는 항목에 대해 설명합니다.  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[원본 제어에 솔루션 추가](../../2014/database-engine/add-solutions-to-source-control.md)|추가할 수 있는 프로젝트 형식을 설명하고 솔루션을 소스 제어에 추가하는 방법에 대한 지침을 제공합니다.|  
 |[원본 제어에 프로젝트 추가](../../2014/database-engine/add-projects-to-source-control.md)|프로젝트를 솔루션에 추가하는 방법에 대한 지침을 제공합니다.|  

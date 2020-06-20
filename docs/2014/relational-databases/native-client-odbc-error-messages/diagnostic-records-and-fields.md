@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3d7d839fb55aff82c9d4f2ca12a316fa7401a502
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4fe52b211eb6d5a0e4d875264609d036702b2b0b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705406"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020066"
 ---
 # <a name="diagnostic-records-and-fields"></a>진단 레코드 및 필드
   진단 레코드는 ODBC 환경, 연결, 문 또는 설명자 핸들과 연결되어 있습니다. ODBC 함수가 SQL_SUCCESS 또는 SQL_INVALID_HANDLE이 아닌 반환 코드를 생성하는 경우 해당 함수에서 호출된 핸들에 정보 또는 오류 메시지가 포함된 진단 레코드가 연결되어 있습니다. 이러한 레코드는 해당 핸들을 사용하여 다른 함수를 호출할 때까지 유지되며, 이때 레코드가 삭제됩니다. 한 번에 핸들에 연결할 수 있는 진단 레코드 수에는 제한이 없습니다.  

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6de2025d-c25c-47b9-9a25-18c294935c15
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 58076b9ad8c32563ae8502de148803ac762b35f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67855ba7841c06181240f220945dda0f4a719629
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62472933"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067723"
 ---
 # <a name="pick-schedule-for-job"></a>작업 일정 선택
-  이 대화 상자를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 기존 일정을 선택할 수 있습니다.  
+  이 대화 상자를 사용 하 여 에이전트 작업의 기존 일정을 선택할 수 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.  
   
 ## <a name="options"></a>옵션  
  **사용 가능한 일정**  
@@ -31,7 +30,7 @@ ms.locfileid: "62472933"
  **이름**  
  일정 이름을 표시합니다.  
   
- **사용**  
+ **Enabled**  
  일정이 사용되면 선택되어 있습니다.  
   
  **설명**  

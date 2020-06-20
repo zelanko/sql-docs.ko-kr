@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6deb484f6e213e7089c3aef272ebaebeba13a913
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bedc984f75bdd5d78781fbd7a300bfa87a7fe43e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832067"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919247"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>데이터 프로파일링 태스크 편집기(프로필 요청 페이지)
   **데이터 프로파일링 태스크 편집기** 의 **프로필 요청 페이지** 를 사용하여 컴퓨팅할 프로필을 선택하고 구성할 수 있습니다. 단일 데이터 프로파일링 태스크에서 여러 테이블 또는 뷰에 있는 여러 열이나 열 조합에 대해 여러 프로필을 컴퓨팅할 수 있습니다.  

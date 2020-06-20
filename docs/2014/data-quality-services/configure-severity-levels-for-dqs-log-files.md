@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4aeffaf9098e2476db4a0faf95811f3ea5204aaa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b711dfaf089173dcf72f854168e6b73aa05949ab
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480918"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937974"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>DQS 로그 파일에 대한 심각도 수준 구성
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]를 사용하여 다양한 작업 및 모듈의 심각도를 구성하는 방법에 대해 설명합니다. 심각도는 DQS에서 발생하는 이벤트의 강도를 정의합니다. DQS 이벤트의 심각도는 다음과 같습니다(심각도 내림차순 정렬).  
@@ -48,7 +47,7 @@ ms.locfileid: "65480918"
  로그 심각도 설정을 구성하려면 DQS_MAIN 데이터베이스에 대한 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a>활동 수준에서 심각도 수준 구성  
- DQS에서 도메인 관리, 기술 자료 검색, 일치 정책, 데이터 정리, 데이터 일치 및 참조 데이터 서비스와 같은 작업에 대한 로그 심각도 설정을 구성할 수 있습니다. 이렇게 하려면  
+ DQS에서 도메인 관리, 기술 자료 검색, 일치 정책, 데이터 정리, 데이터 일치 및 참조 데이터 서비스와 같은 작업에 대한 로그 심각도 설정을 구성할 수 있습니다. 이렇게 하려면 다음을 수행합니다.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 응용 프로그램을 실행](../../2014/data-quality-services/run-the-data-quality-client-application.md)합니다.  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6908c21a-65e3-458f-a272-fee256d86448
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 88c5b77b4ac0f2d0f8ed579f2ff32eae8c263610
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 822ae4fba589f005aaee41857a9db3388a309254
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150310"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007879"
 ---
 # <a name="viewing-the-sql-server-error-log"></a>SQL Server 오류 로그 보기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그를 보면 프로세스(예: 백업 및 복원 작업, 일괄 처리 명령, 다른 스크립트 및 프로세스)가 성공적으로 완료되었는지 확인할 수 있습니다. 이것은 자동 복구 메시지(특히 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 중지되었다가 다시 시작된 경우), 커널 메시지 또는 기타 서버 수준 오류 메시지 등의 현재 또는 잠재적 문제 영역을 찾아내는 데 유용합니다.  

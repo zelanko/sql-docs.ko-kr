@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6ed56d36-18d9-40c2-b51f-f2a4c71d1e73
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ae7f6128f14db0e1ccc423b5433744de7d3dc5d4
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 38f2e94ab794accb8f3b951d0affab2451624748
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922054"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917219"
 ---
 # <a name="create-the-ssis-catalog"></a>SSIS 카탈로그 만들기
   [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 패키지를 디자인하고 테스트한 후에는 이 패키지가 포함된 프로젝트를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 프로젝트를 배포하려면 서버에 `SSISDB` 카탈로그가 있어야 합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 설치 프로그램에서 카탈로그를 자동으로 만들지 않으므로 다음 지침에 따라 카탈로그를 수동으로 만들어야 합니다.  
@@ -24,7 +23,7 @@ ms.locfileid: "82922054"
   
 ### <a name="to-create-the-ssisdb-catalog-in-sql-server-management-studio"></a>SQL Server Management Studio에서 SSISDB 카탈로그를 만들려면  
   
-1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 엽니다.  
+1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 엽니다.  
   
 2.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 엔진에 연결합니다.  
   

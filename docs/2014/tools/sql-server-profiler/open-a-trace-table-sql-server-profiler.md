@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f7cc6b9-c717-4995-9af9-cacc6501aee2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 66329c13eff3d8691e44c5b0ca07171cb9493bc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9409aea253584ab273681db1854aff8cbe263e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63240557"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054371"
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>추적 테이블 열기(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 기존 추적 테이블을 여는 방법에 대해 설명합니다.  

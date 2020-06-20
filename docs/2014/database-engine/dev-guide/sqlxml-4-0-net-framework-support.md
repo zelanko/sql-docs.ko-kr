@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c18cf801-f893-4fbc-8e2b-c563f6108acf
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 99973fe28d18dc28a0d6690567eb3923e74eb812
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e2545f41db1571276b3eba53fbe34533ac6a62d6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780516"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933339"
 ---
 # <a name="sqlxml-40-net-framework-support"></a>SQLXML 4.0 .NET Framework 지원
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 XML 데이터에 액세스하고 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 환경으로 데이터를 가져와서 처리한 후 업데이트를 다시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 보내는 애플리케이션을 작성하는 데 사용할 수 있는 기능을 지원합니다. 이 섹션에서는 .NET Framework 지원 기능에 대해 설명하고 이러한 기능의 사용 예를 보여 줍니다.  

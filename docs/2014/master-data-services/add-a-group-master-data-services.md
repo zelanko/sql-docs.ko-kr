@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: df04cd5bcb216a716312783aff3b78d03ea01ac1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ada37cb662ba38510243798694f812aed892bc28
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480141"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972343"
 ---
 # <a name="add-a-group-master-data-services"></a>그룹 추가(Master Data Services)
   **의** 그룹 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 목록에 그룹을 추가하여 웹 애플리케이션에 사용 권한을 할당하는 프로세스를 시작합니다. 그룹의 사용자가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에 액세스할 수 있게 하려면 하나 이상의 기능 영역과 모델 개체에 그룹 권한을 부여해야 합니다.  

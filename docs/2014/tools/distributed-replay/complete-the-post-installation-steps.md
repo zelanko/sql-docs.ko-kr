@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0a788a2a-9b4f-4bfc-b1b5-83eeb1ea9ab2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 558236f7034588a544aa4fb78091c19475cc8f4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed350264ccab56365f4e5cf5074c063b4244fd31
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63025659"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007690"
 ---
 # <a name="complete-the-post-installation-steps"></a>설치 후 단계 완료
   Distributed Replay를 설치한 후에는 Distributed Replay Controller 및 Client 서비스 계정을 수정해야 합니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "63025659"
   
          `netsh advfirewall firewall add rule name="allow dreplay client" dir=in program="%InstallPath%\DReplayClient\DReplayClient.exe" action=allow`  
   
-2.  **대상 서버에서 각 클라이언트 사용 권한 부여**: 클라이언트 컴퓨터에 클라이언트 서비스를 설치하는 작업을 완료하면 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 sysadmin 역할에 클라이언트 서비스 계정을 수동으로 추가해야 합니다.  
+2.  **대상 서버에서 각 클라이언트 권한 부여**: 클라이언트 컴퓨터에 클라이언트 서비스를 설치하는 작업을 완료하면 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 sysadmin 역할에 클라이언트 서비스 계정을 수동으로 추가해야 합니다.  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  Distributed Replay 기능을 설치하려면 관리 권한이 있어야 합니다. sysadmin 권한을 가진 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인만 테스트 서버의 sysadmin 서버 역할에 클라이언트 서비스 계정을 추가할 수 있습니다. Distributed Replay 보안 고려 사항에 대한 자세한 내용은 [Distributed Replay Security](distributed-replay-security.md)을 참조하십시오.  

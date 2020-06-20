@@ -1,5 +1,6 @@
 ---
 title: 지원 정책
+description: SQL Server Native Client 지원 되는 SQL Server 버전, 운영 체제 및 ADO, BCP, ODBC 및 OLE DB에 대 한 지원 정책에 대해 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.assetid: 09c80cf4-23e6-4027-a24f-cdb9c87af811
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f7b0c4e271d72188d306fa52a1ccb843ddbb4e1b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 621cd2345f578b4f1a6091450d3e4a1c5697682b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388232"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965234"
 ---
 # <a name="support-policies-for-sql-server-native-client"></a>SQL Server Native Client에 대한 지원 정책
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,15 +31,15 @@ ms.locfileid: "81388232"
   
 |SQL Server Native Client 버전|지원되는 운영 체제|  
 |--------------------------------------|---------------------------------|  
-|SQL Server Native Client(SQL Server 2005)|Microsoft Windows 2000 서비스 팩 4 이상<br /><br /> Microsoft Windows Server 2003 이상<br /><br /> Microsoft Windows XP 서비스 팩 1 이상<br /><br /> Microsoft Windows Vista([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 팩 2 이상 필요)<br /><br /> Microsoft Windows Server 2008 R2 (서비스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 팩 2 이상 필요)|  
-|SQL Server Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])|Microsoft Windows Server 2003 서비스 팩 2 이상<br /><br /> Microsoft Windows XP 서비스 팩 2 이상<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2|  
-|SQL Server Native Client 10.5 ([!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)])|Microsoft Windows Server 2003 서비스 팩 2 이상<br /><br /> Microsoft Windows XP 서비스 팩 2 이상<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2<br /><br /> Microsoft Windows 7|  
+|SQL Server Native Client(SQL Server 2005)|Microsoft Windows 2000 서비스 팩 4 이상<br /><br /> Microsoft Windows Server 2003 이상<br /><br /> Microsoft Windows XP 서비스 팩 1 이상<br /><br /> Microsoft Windows Vista([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 팩 2 이상 필요)<br /><br /> Microsoft Windows Server 2008 R2 ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 팩 2 이상 필요)|  
+|SQL Server Native Client 10.0 ( [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] )|Microsoft Windows Server 2003 서비스 팩 2 이상<br /><br /> Microsoft Windows XP 서비스 팩 2 이상<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2|  
+|SQL Server Native Client 10.5 ( [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] )|Microsoft Windows Server 2003 서비스 팩 2 이상<br /><br /> Microsoft Windows XP 서비스 팩 2 이상<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2<br /><br /> Microsoft Windows 7|  
 |SQL Server Native Client 11.0([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 및 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)])|Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2<br /><br /> Microsoft Windows 7<br /><br /> Microsoft Windows 8<br /><br /> Microsoft Windows Server 2012|  
   
 ## <a name="ado-support-policies"></a>ADO 지원 정책  
  ADO 애플리케이션에서는 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전의 기능이 필요하지 않은 경우 Windows에 포함된 SQLOLEDB OLE DB 공급자를 사용할 수 있습니다.  
   
- ADO 응용 프로그램에서는에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]포함 된 Native Client 버전을 사용할 수 있습니다. 또한 ADO 애플리케이션에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 포함된 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client 11.0도 사용할 수 있지만 이렇게 하려면 연결 문자열에 `DataTypeCompatibility=80`을 지정해야 합니다. 연결 문자열에 `DataTypeCompatibility=80`이 있으면 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]의 기능만 사용할 수 있습니다.  
+ ADO 응용 프로그램 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는에 포함 된 Native Client 버전을 사용할 수 있습니다 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] . 또한 ADO 애플리케이션에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 포함된 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client 11.0도 사용할 수 있지만 이렇게 하려면 연결 문자열에 `DataTypeCompatibility=80`을 지정해야 합니다. 연결 문자열에 `DataTypeCompatibility=80`이 있으면 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]의 기능만 사용할 수 있습니다.  
   
 ## <a name="bcp-support-policies"></a>BCP 지원 정책  
  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]부터 bcp.exe에서는 bcp.exe가 포함된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전보다 세 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전 이하인 데이터 파일을 지원합니다.  
@@ -51,7 +52,7 @@ ms.locfileid: "81388232"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client와 함께 사용하도록 인증되지 않은 OLE DB 애플리케이션은 연결 문자열에서 `DataTypeCompatibility=80`을 지정하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용할 수 있습니다.  
   
- OLE DB Service Component를 사용하는 OLE DB 애플리케이션은 연결 문자열에 `DataTypeCompatibility=80`을 지정하는 경우에만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용할 수 있습니다. 그러나이 경우에는 이후에 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 추가 된 기능을 사용할 수 없습니다.  
+ OLE DB Service Component를 사용하는 OLE DB 애플리케이션은 연결 문자열에 `DataTypeCompatibility=80`을 지정하는 경우에만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용할 수 있습니다. 그러나이 경우에는 이후에 추가 된 기능을 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client를 사용하여 애플리케이션 빌드](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  

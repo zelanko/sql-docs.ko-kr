@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a0ccca3f8c9f6307f9715286a3496002dd7e1278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbe92bf5f783bb1b71c1020d0ff808aafa0594b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889231"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937164"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Always On 가용성 그룹이 포함된 Analysis Services
   AlwaysOn 가용성 그룹은 미리 정의된 SQL Server 관계형 데이터베이스 컬렉션으로, 조건이 한 데이터베이스에서 장애 조치(failover)를 트리거하면 전체 데이터베이스에서 함께 장애 조치가 수행되고, 동일한 가용성 그룹에 있는 다른 인스턴스의 미러된 데이터베이스로 요청을 리디렉션합니다. 가용성 그룹을 고가용성 솔루션으로 사용하는 경우 해당 그룹의 데이터베이스를 Analysis Services 테이블 형식 또는 다차원 솔루션의 데이터 원본으로 사용할 수 있습니다. 가용성 데이터베이스를 사용할 경우 데이터 처리 또는 가져오기, 관계형 데이터 직접 쿼리(ROLAP 스토리지 또는 DirectQuery 모드 사용), 쓰기 저장과 같은 모든 Analysis Services 작업이 예상대로 작동합니다.  
@@ -23,7 +22,7 @@ ms.locfileid: "68889231"
  처리 및 쿼리는 읽기 전용 작업입니다. 이러한 작업을 읽기 가능한 보조 복제본으로 오프로드하면 성능을 향상시킬 수 있습니다. 이 시나리오를 위해 추가적인 구성이 필요합니다. 이 항목의 검사 목록을 따라 모든 단계를 수행하십시오.  
   
   
-##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 전제 조건  
  모든 복제본에 대한 SQL Server 로그인이 있어야 합니다. 가용성 그룹, 수신기 및 데이터베이스를 구성하려면 **sysadmin** 이어야 하지만, 사용자인 경우 **db_datareader** 권한만 있으면 Analysis Services 클라이언트에서 데이터베이스에 액세스할 수 있습니다.  
   
  TDS(Tabular Data Stream) 프로토콜 버전 7.4 이상을 지원하는 데이터 공급자(예: SQL Server Native Client 11.0 또는 .NET Framework 4.02의 SQL Server용 공급자)를 사용하십시오.  
@@ -217,7 +216,7 @@ ms.locfileid: "68889231"
  이렇게 하려면 Analysis Services 모델에 읽기/쓰기 연결을 지원하는 데이터 원본을 추가로 만들어야 합니다. 추가 데이터 원본을 만들 때는 읽기 전용 연결에 지정한 동일한 수신기 이름 및 데이터베이스를 사용합니다. 단, **애플리케이션 의도**는 수정하지 않고 READWRITE 연결을 지원하는 기본값을 그대로 둡니다. 이제 읽기/쓰기 데이터 원본을 기반으로 하는 새 팩트 또는 차원 테이블을 데이터 원본 뷰에 추가하고, 새 테이블에 쓰기 저장을 설정할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치 (Failover) &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [활성 보조: 읽기 가능한 보조 복제본 &#40;AlwaysOn 가용성 그룹&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [AlwaysOn 가용성 그룹 &#40;SQL Server의 운영 문제에 대 한 AlwaysOn 정책&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [SSAS 다차원&#41;&#40;데이터 원본 만들기](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   

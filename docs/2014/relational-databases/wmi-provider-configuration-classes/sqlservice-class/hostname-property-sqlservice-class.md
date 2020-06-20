@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3df0ca15-9eca-4cbd-8c39-cb00be6a0215
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c27c0e32953833a8b7438501d1d42a617cae2cc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 343b162346c1b96083f3fe428689401da6ab8c41
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061883"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002162"
 ---
 # <a name="hostname-property-sqlservice-class"></a>HostName 속성(SqlService 클래스)
   서비스의 호스트 이름을 가져옵니다.  

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 20bd8904f8dfabd81f3f16ef7bed4c6bf1084c0d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2cf03fdc9031ce9761125d95619438837f2959bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798227"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067777"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
-  이 항목에서는 에이전트 작업의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 소유권을 다른 사용자에 게 다시 할당 하는 방법에 대해 설명 합니다.  
+  이 항목에서는 에이전트 작업의 소유권을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다른 사용자에 게 다시 할당 하는 방법에 대해 설명 합니다.  
   
 -   **시작하기 전 주의 사항:**  [제한 사항](#Restrictions), [보안](#Security)  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e26d3e89fcba41d474ca56637f9e465f17127348
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68199452"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060541"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>게시 데이터베이스의 스키마 변경
   복제는 게시된 개체에 대한 다양한 스키마 변경을 지원합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 게시자에 게시된 개체에 대해 다음 스키마 변경을 수행하면 기본적으로 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자에 변경 내용이 전파됩니다.  
@@ -85,11 +84,11 @@ ms.locfileid: "68199452"
   
 #### <a name="adding-columns"></a>열 추가  
   
--   테이블에 새 열을 추가한 후 이 열을 기존 게시에 포함하려면 ALTER TABLE \<Table> ADD \<Column>을 실행합니다. 기본적으로 이 열은 모든 구독자로 복제됩니다. 이 열에는 NULL 값이 허용되거나 기본 제약 조건이 포함되어야 합니다. 열을 추가하는 방법은 이 항목의 "병합 복제" 섹션을 참조하십시오.  
+-   테이블에 새 열을 추가 하 고이 열을 기존 게시에 포함 하려면 ALTER TABLE add를 \<Table> 실행 \<Column> 합니다. 기본적으로 이 열은 모든 구독자로 복제됩니다. 이 열에는 NULL 값이 허용되거나 기본 제약 조건이 포함되어야 합니다. 열을 추가하는 방법은 이 항목의 "병합 복제" 섹션을 참조하십시오.  
   
--   테이블에 새 열을 추가한 후 이 열을 기존 게시에 포함시키지 않으려면 스키마 변경 복제를 해제한 다음 ALTER TABLE \<Table> ADD \<Column>을 실행합니다.  
+-   테이블에 새 열을 추가 하 고 기존 게시에 해당 열을 포함 하지 않으려면 스키마 변경 복제를 사용 하지 않도록 설정한 다음 ALTER TABLE add를 실행 합니다 \<Table> \<Column> .  
   
--   기존 게시에 기존 열을 포함시키려면 [sp_articlecolumn&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 또는 **게시 속성 - \<Publication>** 대화 상자를 사용합니다.  
+-   기존 게시에 기존 열을 포함 하려면 [sp_articlecolumn &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)또는 **게시 속성- \<Publication> ** 대화 상자를 사용 합니다.  
   
      자세한 내용은 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)을 참조하세요. 이 작업을 수행하려면 구독을 다시 초기화해야 합니다.  
   
@@ -97,15 +96,15 @@ ms.locfileid: "68199452"
   
 #### <a name="dropping-columns"></a>열 삭제  
   
--   기존 게시에서 열을 삭제하고 해당 열을 게시자의 테이블에서 삭제하려면 ALTER TABLE \<Table> DROP \<Column>을 실행합니다. 기본적으로 해당 열이 모든 구독자의 테이블에서 삭제됩니다.  
+-   기존 게시에서 열을 삭제 하 고 게시자의 테이블에서 열을 삭제 하려면 ALTER TABLE drop을 실행 \<Table> \<Column> 합니다. 기본적으로 해당 열이 모든 구독자의 테이블에서 삭제됩니다.  
   
--   열을 기존 게시에서는 삭제하지만 게시자의 테이블에서는 유지하려면 [sp_articlecolumn&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 또는 **게시 속성 - \<게시>** 대화 상자를 사용합니다.  
+-   기존 게시에서 열을 삭제 하지만 게시자의 테이블에 있는 열을 유지 하려면 [transact-sql sp_mergearticlecolumn&#41;&#40;sp_articlecolumn ](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql) [&#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)또는 **게시 속성- \<Publication> ** 대화 상자를 사용 합니다.  
   
      자세한 내용은 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)을 참조하세요. 이 작업을 수행하려면 새 스냅샷을 생성해야 합니다.  
   
 -   삭제할 열은 데이터베이스에 있는 모든 게시 아티클의 필터 절에 사용할 수 없습니다.  
   
--   다음과 같이 게시된 아티클에서 열을 삭제할 때는 데이터베이스에 영향을 줄 수 있는 열의 제약 조건, 인덱스 또는 속성을 예를 들어:  
+-   다음과 같이 게시된 아티클에서 열을 삭제할 때는 데이터베이스에 영향을 줄 수 있는 열의 제약 조건, 인덱스 또는 속성을 다음은 그 예입니다.  
   
     -   트랜잭션 게시 아티클에서 기본 키에 사용되는 열은 복제에 사용되므로 삭제할 수 없습니다.  
   

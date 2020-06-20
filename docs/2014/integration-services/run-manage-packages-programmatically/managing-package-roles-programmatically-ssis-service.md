@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2e0ca0d5-d4f5-421d-b17d-a48b37b923e5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b3494c520c0b0cef49ce2daf6c1d77e6899ba5d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0bc0227c06f2a6e747c2fff90082e7e12596ad57
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176122"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964483"
 ---
 # <a name="managing-package-roles-programmatically-ssis-service"></a>프로그래밍 방식으로 패키지 역할 관리(SSIS 서비스)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 프로그래밍 방식으로 사용할 때 패키지에 적용할 수 있는 역할을 확인하거나 개별 패키지에 적용된 역할을 확인 또는 설정할 수 있습니다. <xref:Microsoft.SqlServer.Dts.Runtime.Application> 네임스페이스의 <xref:Microsoft.SqlServer.Dts.Runtime> 클래스는 이 요구 사항을 충족하기 위한 다양한 메서드를 제공합니다.

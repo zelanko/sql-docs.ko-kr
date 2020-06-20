@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6f6a4e147c90fe7c4f25f5c8b821b4787ec3be71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a548a1bb7efc1d894d16c309d1b960a015f470f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766985"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964673"
 ---
 # <a name="monitoring-for-package-executions-and-other-operations"></a>패키지 실행 및 기타 작업 모니터링
   다음 도구 중 하나 이상을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 실행, 프로젝트 유효성 검사 및 기타 작업을 모니터링할 수 있습니다. 데이터 탭과 같은 일부 도구는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 프로젝트에 대해서만 사용할 수 있습니다.  

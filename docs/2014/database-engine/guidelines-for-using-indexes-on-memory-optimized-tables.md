@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f00d643088634c918eb626917eae64a001ce3678
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779227"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932874"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 인덱스 사용 지침
   인덱스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블에서 데이터에 효율적으로 액세스하는 데 사용됩니다. 올바른 인덱스를 지정하면 쿼리 성능을 크게 개선할 수 있습니다. 예를 들어, 다음 쿼리를 살펴보세요.  
@@ -71,7 +70,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
 |색인 검색은 모든 테이블 행을 검색합니다.|예|예|예|  
 |같음 조건자(=)의 인덱스 검색.|예<br /><br /> (전체 키 필요)|예 <sup>1</sup>|예|  
-|같지 않음 조건자에 대 한 Index seek (> \<, <, =, >=, BETWEEN).|아니요(인덱스 검색의 결과)|예 <sup>1</sup>|예|  
+|같지 않음 조건자에 대 한 Index seek (>, <, \<=, > =, BETWEEN).|아니요(인덱스 검색의 결과)|예 <sup>1</sup>|예|  
 |인덱스 정의와 일치하는 정렬 순서로 행을 검색합니다.|예|예|예|  
 |인덱스 정의의 역순과 일치하는 정렬 순서로 행을 검색합니다.|아니요|예|예|  
   

@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 92323972-7943-4208-bbf4-050774fb6027
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b224868d4d9fc111cdbf9482282767420b6adcc8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2ecd601b1329b3b95f1c3827cd04775c93304f6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63205143"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061283"
 ---
 # <a name="understanding-the-wmi-provider-for-configuration-management"></a>구성 관리용 WMI 공급자 이해
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리용 WMI 공급자를 제공 합니다. 구성 관리용 WMI 공급자는 WMI(Windows Management Instrumentation)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트/서버 네트워크 설정 및 서버 별칭을 관리할 수 있도록 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]서비스, 네트워크 설정 및 별칭은 컴퓨터의 root\Microsoft\SqlServer\ComputerManagement*nn* 네임 스페이스에 있는 WMI 개체로 표시 됩니다. 지정된 컴퓨터에서 WMI 공급자를 사용하여 연결이 설정된 후에는 WQL이나 스크립팅 언어를 사용하여 서비스, 네트워크 설정 및 별칭을 쿼리할 수 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구성 관리용 WMI 공급자를 제공 합니다. 구성 관리용 WMI 공급자는 WMI(Windows Management Instrumentation)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트/서버 네트워크 설정 및 서버 별칭을 관리할 수 있도록 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]서비스, 네트워크 설정 및 별칭은 컴퓨터의 root\Microsoft\SqlServer\ComputerManagement*nn* 네임 스페이스에 있는 WMI 개체로 표시 됩니다. 지정된 컴퓨터에서 WMI 공급자를 사용하여 연결이 설정된 후에는 WQL이나 스크립팅 언어를 사용하여 서비스, 네트워크 설정 및 별칭을 쿼리할 수 있습니다.  
   
  WMI 공급자는 인스턴스 공급자로서 [WMI 클래스](../wmi-provider-configuration-classes/wmi-provider-for-configuration-management-classes.md) 의 인스턴스를 제공 하 고 다음과 같은 비동기 작업을 지원 합니다.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "63205143"
   
  구성 관리용 WMI 공급자를 사용 하는 관리 응용 프로그램의 예는 [구성 관리용 Wmi 공급자에 WQL 및 스크립트 언어 사용](using-wql-and-scripting-languages-with-the-wmi-provider.md)을 참조 하세요.  
   
- WMI 공급자를 사용 하 여 관리 응용 프로그램을 프로그래밍 하는 방법에 대 한 자세한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 내용은 .NET Framework SDK의 wmi 설명서를 참조 하십시오.  
+ WMI 공급자를 사용 하 여 관리 응용 프로그램을 프로그래밍 하는 방법에 대 한 자세한 내용은 .NET Framework SDK의 WMI 설명서를 참조 하십시오 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="see-also"></a>참고 항목  
  [구성 관리용 WMI 공급자 작업](working-with-the-wmi-provider-for-configuration-management.md)   

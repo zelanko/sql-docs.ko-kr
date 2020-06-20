@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: aa4cd8349846a5c00f62f6cbf115b4cc3a1614ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dbdd0f502f97d1329072a319648c50b48ac583ff
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480471"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937564"
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>.NET Framework 업데이트 후 SQLCLR 어셈블리 업그레이드
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS)는 Microsoft .NET Framework 4 어셈블리를 참조하는 SQLCR(SQL 공용 언어 런타임)의 컬렉션입니다. 참조되는 이러한 .NET Framework 어셈블리에 영향을 주는 .NET Framework 업데이트를 컴퓨터에 설치하면 GAC(전역 어셈블리 캐시)의 어셈블리 MVID(모듈 버전 ID)가 변경될 수 있습니다. 이렇게 되면 GAC의 참조되는 어셈블리 MVID와 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 어셈블리 MVID 간에 불일치가 발생합니다.  

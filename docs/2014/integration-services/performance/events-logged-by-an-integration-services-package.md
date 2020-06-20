@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ef709a48f0c5c162e971cebbdf5d49c4417250ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 113bc3d3c16912681a0136b058b49715bf0b4455
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889844"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964703"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>통합 서비스 패키지에 의해 기록된 이벤트
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 Windows 애플리케이션 로그에 다양한 이벤트 메시지를 기록합니다. 이러한 메시지는 패키지가 시작되거나 중지될 때 또는 특정 문제가 발생할 때 기록됩니다.  

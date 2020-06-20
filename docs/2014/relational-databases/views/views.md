@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 21be7e81440fe6eb9573ecd100a459d70319ccea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c7332506666b11e96255c2b903d70b232ae4efa6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191270"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061447"
 ---
 # <a name="views"></a>뷰
   뷰는 쿼리에 의해 내용이 정의되는 가상 테이블입니다. 테이블과 같이 뷰는 데이터의 명명된 열과 행 집합으로 구성됩니다. 인덱싱하지 않을 경우 뷰는 데이터베이스에 저장된 데이터 값 집합으로 존재하지 않습니다. 데이터 행과 열은 뷰를 정의하는 쿼리에서 참조하는 테이블에 있으며 뷰가 참조될 때 동적으로 생성됩니다.  

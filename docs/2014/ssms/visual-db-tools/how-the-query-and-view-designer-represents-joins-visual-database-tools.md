@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: abd8dd7c3c23a13b1cdff7a2d6f76fb99375a641
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f91e8f226fe97cdced78deb6b8c239806461d426
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155267"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067185"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>쿼리 및 뷰 디자이너의 조인 표시 방법(Visual Database Tools)
   테이블이 조인되면 [쿼리 및 뷰 디자이너](visual-database-tools.md) 는 [다이어그램 창](diagram-pane-visual-database-tools.md) 에 조인을 그래픽으로 나타내고 [SQL 창](sql-pane-visual-database-tools.md)에 SQL 구문을 사용합니다.  

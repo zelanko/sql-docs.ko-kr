@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7a4b9cd5eaad7b51f7cc3d2a0c73bea3f23fd542
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 312469e8355fb5720f1a1ce13a58a59f759da4ec
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767185"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964818"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>패키지에 대한 SQL Server 에이전트 작업
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 실행을 자동화하고 예약할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템에 저장된 패키지를 예약할 수 있습니다.  
   
 ## <a name="sections-in-this-topic"></a>이 항목의 섹션  
- 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
+ 이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
 -   [SQL Server 에이전트에서 작업 예약](#jobs)  
   
@@ -56,7 +55,7 @@ ms.locfileid: "62767185"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 패키지를 실행하는 방법을 보여 주는 비디오는 MSDN Library의 비디오 홈 페이지에서 [방법: SQL Server 에이전트를 사용하여 패키지 실행 자동화(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=141771)를 참조하세요.  
   
-##  <a name="troubleshooting"></a><a name="trouble"></a>슈팅이  
+##  <a name="troubleshooting"></a><a name="trouble"></a> 문제 해결  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 커맨드 라인에서 패키지가 성공적으로 실행되더라도 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에이전트 작업 단계를 시작하지 못할 수 있습니다. 이 문제에 대한 몇 가지 일반적인 이유와 권장 솔루션이 있습니다. 자세한 내용은 다음 리소스를 참조하세요.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 문서 - [SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다](https://support.microsoft.com/kb/918760)  

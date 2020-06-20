@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 85f2095d-2590-4f59-8a29-7e100edd02bb
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 6a802cfadfa48c7dbba7479ca169daedf70fe8b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: baeeffd49ac89ce85cf64932fbfd4982d7243887
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957138"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060265"
 ---
 # <a name="service-master-key"></a>인스턴스에서 해당 인스턴스를 위해 생성되는 SMK(
   서비스 마스터 키는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화 계층의 루트이며 처음으로 다른 키를 암호화해야 할 때 자동으로 생성됩니다. 기본적으로 서비스 마스터 키는 Windows 데이터 보호 API 및 로컬 컴퓨터 키를 사용하여 암호화됩니다. 서비스 마스터 키는 이 키를 만든 Windows 서비스 계정이나 서비스 계정 이름 및 암호에 대한 액세스를 갖고 있는 보안 주체만 열 수 있습니다.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2f5c922d-4d71-4694-9fca-28dd99375799
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3fc62dc5f0e716273df257aba7fdc137391d3055
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e73bbb92d8fd3fdcaa7756ce1dcb74d8cd598b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196734"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055101"
 ---
 # <a name="rename-tables-database-engine"></a>테이블 이름 바꾸기(데이터베이스 엔진)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 테이블 이름을 바꿀 수 있습니다.  
@@ -58,7 +57,7 @@ ms.locfileid: "68196734"
   
 1.  개체 탐색기에서 이름을 바꾸려는 테이블을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **디자인** 을 선택합니다.  
   
-2.  **보기** 메뉴에서 **속성**을 선택합니다.  
+2.  **뷰** 메뉴에서 **속성**을 선택합니다.  
   
 3.  **속성** 창의 **이름** 값 필드에 테이블의 새 이름을 입력합니다.  
   

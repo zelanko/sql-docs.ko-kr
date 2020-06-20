@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7737c6ae-c16b-4856-aa6e-5882640093b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ddadfc3ab85afbecdff9b9969f7835c749a92bf7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 792ef4d13c2181f95b3f8f68654b0084e921706a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057008"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964943"
 ---
 # <a name="ole-db-source-editor-error-output-page"></a>OLE DB 원본 편집기(오류 출력 페이지)
   **OLE DB 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택하고 오류 출력 열에 속성을 설정할 수 있습니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66057008"
  **입/출력**  
  데이터 원본의 이름을 표시합니다.  
   
- **열의**  
+ **열**  
  **OLE DB 원본 편집기** 대화 상자의 **연결 관리자**페이지에서 선택한 외부(원본) 열을 표시합니다.  
   
  **오류**  

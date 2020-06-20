@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: efe66cec-3933-4f6e-8d35-fe3d300de66c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 76349c0ca91f24a6d8d7942a89eb9683a91b573d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84eb956d8a973cf1186eb8f7454c5a8dd8f0709d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056337"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964250"
 ---
 # <a name="save-a-package-as-a-package-template"></a>패키지 템플릿으로 패키지 저장
   이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 새 Integration Services 패키지를 만들 때 사용자 지정 패키지를 템플릿으로 지정하고 사용하는 방법에 대해 설명합니다. 기본적으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 새 패키지를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 추가할 때 빈 패키지를 만드는 패키지 템플릿을 사용합니다. 이러한 기본 템플릿은 바꿀 수 없지만 새 템플릿을 추가할 수는 있습니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "66056337"
   
 2.  솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가**를 가리킨 다음 **새 항목**을 클릭합니다.  
   
-3.  **새 항목 추가-\<프로젝트 이름>** 대화 상자에서 템플릿으로 사용할 패키지를 클릭 합니다.  
+3.  **새 항목 추가- \<project name> ** 대화 상자에서 템플릿으로 사용할 패키지를 클릭 합니다.  
   
      템플릿 목록에 새 SSIS 패키지라는 기본 패키지 템플릿이 포함됩니다. 패키지 아이콘을 통해 패키지 템플릿으로 사용할 수 있는 템플릿을 식별할 수 있습니다.  
   

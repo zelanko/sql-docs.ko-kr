@@ -1,5 +1,6 @@
 ---
 title: ODBC의 트랜잭션 | Microsoft Docs
+description: ODBC는 연결 수준에서 트랜잭션을 관리 하 고 완료 된 모든 작업을 커밋 또는 롤백합니다. 자동 커밋 또는 수동 커밋 모드에서 수행 됩니다.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: c5a87fa5-827a-4e6f-a0d9-924bac881eb0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 093eae04962409b5ac426713aedc74aa1bd0703b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 175bc304e1a2127873c54da79fd921995af17714
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303680"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950273"
 ---
 # <a name="performing-transactions-in-odbc"></a>ODBC에서 트랜잭션 수행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

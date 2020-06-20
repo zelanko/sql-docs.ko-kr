@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1530594eefbb5c614901f2b8cb73030b989951fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b4054be2d956bccecd1d64dc807671caf8f980f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480971"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937994"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Configure Advanced Settings for DQS Log Files
   이 항목에서는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 및 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 로그 파일에 대해 로그 파일의 롤링 파일 크기 제한을 설정하거나, 이벤트의 타임스탬프 패턴을 설정하는 등 고급 설정을 구성하는 방법에 대해 설명합니다.  
@@ -113,7 +112,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
 >  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 로깅 설정 구성이 동적으로 생성되어 DQS_MAIN.Log 파일에 저장됩니다. SQL Server의 기본 인스턴스를 설치한 경우 이 파일은 대개 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Log에 있습니다. 그러나 이 파일에서 직접 변경한 내용은 유지되지 않고 DQS_MAIN 데이터베이스의 A_CONFIGURATION 테이블에 있는 구성 설정이 이 변경 내용을 덮어씁니다.  
   
 ##  <a name="configure-data-quality-client-log-settings"></a><a name="DQSClient"></a>Data Quality Client 로그 설정 구성  
- [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 로그 설정 구성 파일 dqlog.client.xml은 일반적으로 C:\PROGRAM Files\Microsoft SQL server\120\tools\binn\dq\config에서 사용할 수 있습니다. XML 파일의 내용은 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 로그 구성 설정에 대해 이전에 수정한 xml 파일과 비슷합니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 로그 설정을 구성하려면  
+ [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]로그 설정 구성 파일 DQLog.Client.xml은 일반적으로 C:\Program FILES\MICROSOFT SQL server\120\tools\binn\dq\config에서 사용할 수 있습니다. XML 파일의 내용은 로그 구성 설정에 대해 이전에 수정한 XML 파일과 비슷합니다 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] . [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 로그 설정을 구성하려면  
   
 1.  XML 편집 도구나 메모장을 관리자로 실행합니다.  
   

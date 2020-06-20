@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 30c50d1f6efc44c17eac76e0e03432c2461da296
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b822da364fef2831f0f183089ce1cc330ca3118e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033688"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067574"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 시작 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행되는 Windows 계정과 해당 네트워크 권한을 정의합니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 관리자를 통해 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에이전트 서비스 계정을 설정하는 방법에 대해 설명합니다.  
@@ -45,7 +44,7 @@ ms.locfileid: "63033688"
 ###  <a name="security"></a><a name="Security"></a> 보안  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
- 해당 기능을 수행 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 `sysadmin` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]고정 서버 역할의 멤버인 계정의 자격 증명을 사용 하도록 에이전트를 구성 해야 합니다. 이 계정에는 다음과 같은 Windows 사용 권한이 필요합니다.  
+ 해당 기능을 수행 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sysadmin` 에서 고정 서버 역할의 멤버인 계정의 자격 증명을 사용 하도록 에이전트를 구성 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이 계정에는 다음과 같은 Windows 사용 권한이 필요합니다.  
   
 -   서비스로 로그온(SeServiceLogonRight)  
   
@@ -55,7 +54,7 @@ ms.locfileid: "63033688"
   
 -   프로세스의 메모리 할당량 조정(SeIncreaseQuotaPrivilege)  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정에 필요한 windows 사용 권한에 대 한 자세한 내용은 [SQL Server 에이전트 서비스에 대 한 계정 선택](select-an-account-for-the-sql-server-agent-service.md) 및 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조 하세요.  
+ 에이전트 서비스 계정에 필요한 Windows 사용 권한에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 에이전트 서비스에 대 한 계정 선택](select-an-account-for-the-sql-server-agent-service.md) 및 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조 하세요.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
@@ -71,7 +70,7 @@ ms.locfileid: "63033688"
   
 5.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 콘솔 창에서 **SQL Server 서비스**를 선택합니다.  
   
-6.  세부 정보 창에서 **SQL Server 에이전트**_(server_name)_ 을 마우스 오른쪽 단추로 클릭 하 고, 여기서 *server_name* 은 서비스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 계정을 변경 하려는 에이전트 인스턴스의 이름입니다. 그런 다음 **속성**을 선택 합니다.  
+6.  세부 정보 창에서 **SQL Server 에이전트**_(server_name)_ 을 마우스 오른쪽 단추로 클릭 하 고, 여기서 *server_name* 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 계정을 변경 하려는 에이전트 인스턴스의 이름입니다. 그런 다음 **속성**을 선택 합니다.  
   
 7.  **SQL Server 에이전트**_(server_name)_ **속성** 대화 상자의 **로그온** 탭에 있는 다음 **계정으로 로그온**아래에서 다음 옵션 중 하나를 선택 합니다.  
   

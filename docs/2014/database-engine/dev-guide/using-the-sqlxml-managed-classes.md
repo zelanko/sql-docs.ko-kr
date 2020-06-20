@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 3f021290-00ee-44e1-af4b-33d3ba8c6302
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ad1756d3943f6a9db68633c59013bcb85037ffa7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 634a0e4110b13931201edd026ee95028cb94e859
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780332"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933194"
 ---
 # <a name="using-the-sqlxml-managed-classes"></a>SQLXML 관리되는 클래스 사용
   이 섹션에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 관리되는 클래스를 사용하는 방법을 보여 주는 예제 애플리케이션을 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .NET Framework 내에서 데이터에 액세스 하 고 수정 하 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 는 방법 및 diffgram를 사용 하 여 테이블의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 업데이트 하는 방법에 대 한 자세한 내용은 [.net 환경에서 SQLXML 기능에 액세스](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)를 참조 하세요.  
+ .NET Framework 내에서 데이터에 액세스 하 고 수정 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 방법 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 및 diffgram를 사용 하 여 테이블의 데이터를 업데이트 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [.Net 환경에서 SQLXML 기능에 액세스](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)를 참조 하세요.  
   
 > [!NOTE]  
 >  XML 대량 로드를 사용하여 XML 문서를 대량 로드하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 애플리케이션을 작성할 수도 있습니다. 자세한 내용은 [SQLXML 4.0&#41;&#40;XML 데이터 대량 로드 수행 ](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)을 참조 하세요. 애플리케이션에 XML 대량 로드 DLL(Xblkld4.dll)에 대한 참조를 추가해야 합니다. 이 DLL은 Visual Studio .NET에서 자동으로 래퍼 라이브러리를 만드는 COM DLL입니다.  

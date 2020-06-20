@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-manager: jroth
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 30f840c9fe558382c5a0549f09657c917c69c3d4
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: a5181dcf07745fc1bf9cd993ebd65c58f55f96c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886190"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054271"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Data Migration Assistant를 사용 하 여 Azure SQL Database으로 마이그레이션하는 SQL Server 데이터 공간 준비 상태를 평가 합니다.
 
@@ -62,8 +61,8 @@ Azure Migrate 프로젝트는 평가 하거나 마이그레이션하는 환경�
     | ------------- | ------------- |
     | 아시아 | 동남 아시아 또는 동아시아 |
     | 유럽 | 남부 유럽 또는 유럽 서부 |
-    | 영국 | 영국 남부 또는 영국 서부 |
-    | 미국 | 미국 중부 또는 미국 서 부 2 |
+    | United Kingdom | 영국 남부 또는 영국 서부 |
+    | 미국 | 미국 중부 또는 미국 서부 2 |
 
     프로젝트에 대해 지정된 지리는 온-프레미스 VM에서 수집된 메타데이터를 저장하는 데 사용됩니다. 실제 마이그레이션에 대한 대상 지역을 선택할 수 있습니다.
 

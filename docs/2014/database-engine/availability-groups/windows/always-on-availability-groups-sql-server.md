@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e040fb9c05683be9d737ea134710c03d36317cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c05dc72e99d5b897412bdcf8afdd85370dd06b7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75229005"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937234"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Always On 가용성 그룹(SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능은 데이터베이스 미러링에 대한 엔터프라이즈 수준의 대안을 제공하는 고가용성 및 재해 복구 솔루션입니다. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에 도입된 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 엔터프라이즈 사용자 데이터베이스 집합의 가용성을 극대화합니다. *가용성 그룹* 은 함께 장애 조치 (failover) 되는 사용자 데이터베이스의 불연속 집합 ( *가용성 데이터베이스*라고 함)에 대 한 장애 조치 (failover) 환경을 지원 합니다. 가용성 그룹은 읽기/쓰기 주 데이터베이스 집합과 1~8개의 해당 보조 데이터베이스 집합을 지원합니다. 필요한 경우 보조 데이터베이스에 대해 읽기 전용 액세스를 설정하거나 일부 백업 작업에 사용되도록 설정할 수 있습니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "75229005"
  가용성 그룹은 가용성 복제본의 수준에서 장애 조치(Failover)됩니다. 따라서 데이터 파일 손실, 데이터베이스 삭제, 트랜잭션 로그 손상 등으로 인해 주의 대상 데이터베이스가 발생할 경우 이러한 데이터베이스 문제로는 장애 조치(Failover)가 수행되지 않습니다.  
   
   
-##  <a name="benefits"></a><a name="Benefits"></a>아니라  
+##  <a name="benefits"></a><a name="Benefits"></a> 이점  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에서는 데이터베이스 가용성을 향상시키고 리소스 사용을 개선시켜 주는 다양한 옵션을 제공합니다. 주요 구성 요소는 다음과 같습니다.  
   
 -   최대 9개의 가용성 복제본을 지원합니다. *가용성 복제본* 은 SQL Server의 특정 인스턴스에 의해 호스팅되고 가용성 그룹에 속하는 각 가용성 데이터베이스의 로컬 복사본을 유지 관리하는 가용성 그룹 인스턴스화입니다. 각 가용성 그룹은 하나의 주 복제본과 최대 8개의 보조 복제본을 지원합니다. 자세한 내용은 [Always On 가용성 그룹 개요&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)를 참조하세요.  
@@ -118,11 +117,11 @@ ms.locfileid: "75229005"
   
 -   [변경 내용 추적 정보 SQL 서비스](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)  
   
--   [포함된 데이터베이스](../../../relational-databases/databases/contained-databases.md)  
+-   [포함 된 데이터베이스](../../../relational-databases/databases/contained-databases.md)  
   
 -   [데이터베이스 암호화](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
--   [데이터베이스 스냅샷](database-snapshots-with-always-on-availability-groups-sql-server.md)  
+-   [데이터베이스 스냅숏](database-snapshots-with-always-on-availability-groups-sql-server.md)  
   
 -   [FILESTREAM](../../../relational-databases/blob/filestream-sql-server.md)  
   
@@ -141,7 +140,7 @@ ms.locfileid: "75229005"
 -   [Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
   
 > [!WARNING]  
->  에서 다른 기능 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 사용 하는 경우의 제한 사항에 대 한 자세한 내용은 [Always On 가용성 그룹: 상호 운용성;을 참조 하세요. SQL Server;](always-on-availability-groups-interoperability-sql-server.md).  
+>  에서 다른 기능을 사용 하는 경우의 제한 사항에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] [Always On 가용성 그룹: 상호 운용성;을 참조 하세요. SQL Server;](always-on-availability-groups-interoperability-sql-server.md).  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
@@ -155,7 +154,7 @@ ms.locfileid: "75229005"
   
      [CSS SQL Server 엔지니어 블로그](https://blogs.msdn.com/b/psssql/)  
   
--   **비디오**  
+-   **비디오:**  
   
      [Microsoft SQL Server 코드 이름 "Denali" Always On 시리즈, 1부: 차세대 고가용성 솔루션 소개](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   

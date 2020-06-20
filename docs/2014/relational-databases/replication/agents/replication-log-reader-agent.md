@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e2dbe201e2690a013902ad6891b7f93f68fe0e04
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 120c7418d8b16fe6d083961affcf0b8a9c9f6c65
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127012"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061560"
 ---
 # <a name="replication-log-reader-agent"></a>복제 로그 판독기 에이전트
   복제 로그 판독기 에이전트는 트랜잭션 복제를 위해 구성한 각 데이터베이스의 트랜잭션 로그를 모니터링하고 트랜잭션 로그에서 복제 대상으로 표시된 트랜잭션을 배포 데이터베이스에 복사하는 실행 파일입니다.  
