@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47951e101a5f8f480496c8570a22cd1a950b3309
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84a0fb2152a7e05b853abd28b94e82bffa32273b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270580"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058053"
 ---
 # <a name="create-update-queries-visual-database-tools"></a>업데이트 쿼리 만들기(Visual Database Tools)
   업데이트 쿼리를 사용하면 한 번의 작업으로 여러 행의 내용을 변경할 수 있습니다. 예를 들어 `titles` 테이블에서 업데이트 쿼리를 사용하여 특정 출판사의 모든 책 가격에 10%를 추가할 수 있습니다.  

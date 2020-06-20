@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f10ba1f9ff6837d1ca308872ef166e04c417981c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0af9736d247fb823c13d614a081aef43e3d8d9b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067518"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048559"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>다이어그램에서 선택한 테이블 저장(Visual Database Tools)
   데이터베이스 다이어그램에서 변경한 내용을 모두 저장할 필요가 없는 경우 특정 테이블이나 테이블 집합만 저장할 수 있습니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 27ac17469a96213bdd39cbf2bee5a343d117e6f0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d914595c5c62016efca26dece908ee28b7010706
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487632"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940014"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>테이블 형식 모델링(Adventure Works 자습서)
   이 자습서에서는 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 를 사용하여 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Analysis Services 테이블 형식 모델을 만드는 방법을 설명하는 단원을 제공합니다.  
@@ -51,14 +50,14 @@ ms.locfileid: "81487632"
 > [!NOTE]  
 >  이 자습서에서는 배포한 테이블 형식 모델 데이터베이스를 SQL Server Management Studio를 사용하여 관리하거나 보고 클라이언트 애플리케이션을 사용하여 배포된 모델에 연결하여 모델 데이터를 탐색하는 과정을 안내하는 단원이나 정보는 제공하지 않습니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 자습서를 완료하려면 다음 필수 구성 요소가 설치되어 있어야 합니다.  
   
 -   테이블 형식 모드에서 실행 중인 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services 인스턴스  
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
--   AdventureWorksDW 예제 데이터베이스. 이 예제 데이터베이스에는 이 자습서를 완료하는 데 필요한 데이터가 포함되어 있습니다. 예제 데이터베이스를 다운로드 하려면를 참조 [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)하십시오.  
+-   AdventureWorksDW 예제 데이터베이스. 이 예제 데이터베이스에는 이 자습서를 완료하는 데 필요한 데이터가 포함되어 있습니다. 예제 데이터베이스를 다운로드 하려면를 참조 하십시오 [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) .  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 이상(11단원의 Excel에서 분석 기능을 사용하는 데 필요)  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bae6a0354fc7d24471aa7cb7877fe066421d8b5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755328"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934414"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션에 클라이언트 연결(SQL Server)
   데이터베이스 미러링 세션에 연결하기 위해 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 또는 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용할 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스에 대해 구성하면 두 데이터 액세스 공급자가 모두 데이터베이스 미러링을 완전하게 지원합니다. 미러된 데이터베이스 사용 시 프로그래밍 고려 사항에서 대한 자세한 내용은 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)을 참조하십시오. 또한 현재 주 서버 인스턴스를 사용할 수 있어야 하며 서버 인스턴스에 클라이언트 로그인이 만들어져 있어야 합니다. 자세한 내용은 [분리된 사용자 문제 해결&#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)을 실행합니다. 클라이언트에서 데이터베이스 미러링 세션에 연결할 때는 미러링 모니터 서버 인스턴스가 있어도 사용되지 않습니다.  
@@ -85,11 +84,11 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Server 특성  
  연결 문자열에는 초기 파트너 이름을 제공하는 `Server` 특성이 있어야 합니다. 이 특성은 현재 주 서버 인스턴스를 식별합니다.  
   
- 서버 인스턴스를 식별 하는 가장 간단한 방법은 이름, *<server_name>*[**\\** _<SQL_Server_instance_name>_]를 지정 하는 것입니다. 예를 들어:  
+ 서버 인스턴스를 식별 하는 가장 간단한 방법은 이름, *<server_name>*[ **\\** _<SQL_Server_instance_name>_]를 지정 하는 것입니다. 다음은 그 예입니다.  
   
  `Server=Partner_A;`  
   
- 를 실행하거나  
+ 또는  
   
  `Server=Partner_A\Instance_2;`  
   
@@ -98,7 +97,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  연결 문자열에서 포트가 아닌 명명된 인스턴스 이름을 지정하는 경우 SQL Server Browser 쿼리가 필요합니다.  
   
- IP 주소와 포트를 지정 하기 위해 특성 `Server` 은 다음과 같이>`,` * \<포트>* `Server=` *ip_address<* 형식을 사용 합니다.  
+ IP 주소와 포트를 지정 하기 위해 `Server` 특성은 `Server=` *<ip_address>* 형식을 사용 합니다 `,` *\<port>* . 예를 들면 다음과 같습니다.  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -118,7 +117,7 @@ Server=123.34.45.56,4724;
 >  이 문자열에는 인증 정보가 생략됩니다.  
   
 > [!IMPORTANT]  
->  `Server` 특성`Server=tcp:`*(\<servername>*)이 **네트워크** 특성과 호환 되지 않으며 두 위치에서 모두 프로토콜을 지정 하면 오류가 발생할 수 있습니다. 따라서 연결 문자열에서 **Network** 특성을 사용 하 여 프로토콜을 `Server` 지정 하 고 특성 (`"Network=dbmssocn; Server=`*\<servername>* `"`)에 서버 이름만 지정 하는 것이 좋습니다.  
+>  `Server`특성 ()이 있는 프로토콜 접두사는 `Server=tcp:` *\<servername>* **Network** 특성과 호환 되지 않으며 두 위치에서 모두 프로토콜을 지정 하면 오류가 발생할 수 있습니다. 따라서 연결 문자열에서 **네트워크** 특성을 사용 하 여 프로토콜을 지정 하 고 특성에 서버 이름만 지정 하는 것이 좋습니다 `Server` ( `"Network=dbmssocn; Server=` *\<servername>* `"` ).  
   
 #### <a name="failover-partner-attribute"></a>Failover Partner 특성  
  초기 파트너 이름 외에 클라이언트에서 현재 미러 서버 인스턴스를 식별하는 장애 조치(failover) 파트너 이름을 지정할 수도 있습니다. 장애 조치(failover) 파트너는 Failover Partner 특성의 키워드 중 하나에 의해 지정됩니다. 이 특성의 키워드는 사용 중인 API에 따라 다릅니다. 다음 표에서는 이러한 키워드를 보여 줍니다.  
@@ -129,7 +128,7 @@ Server=123.34.45.56,4724;
 |ODBC 드라이버|`Failover_Partner`|  
 |ADO(ActiveX Data Objects)|`Failover Partner`|  
   
- 서버 인스턴스를 식별 하는 가장 간단한 방법은 시스템 이름, *<server_name>*[**\\** _<SQL_Server_instance_name>_]를 기준으로 하는 것입니다.  
+ 서버 인스턴스를 식별 하는 가장 간단한 방법은 시스템 이름, *<server_name>*[ **\\** _<SQL_Server_instance_name>_]를 기준으로 하는 것입니다.  
   
  또는 `Failover Partner` 특성에 IP 주소와 포트 번호를 제공할 수 있습니다. 데이터베이스에 대한 첫 번째 연결 중에 초기 연결 시도가 실패하면 장애 조치(failover) 파트너에 대한 연결에서 DNS 및 SQL Server Browser를 사용하지 않습니다. 연결이 설정되면 장애 조치(failover) 파트너 이름이 장애 조치(failover) 파트너 이름을 덮어쓰므로 장애 조치가 발생할 경우 리디렉션된 연결에 DNS 및 SQL Server Browser가 필요합니다.  
   
@@ -166,7 +165,7 @@ Server=123.34.45.56,4724;
   
  다시 시도 시간은 다음 수식을 사용하여 계산됩니다.  
   
- _RetryTime_ **=** _previousretrytime의 초기값_ **+ (** 0.08 **&#42;** _LoginTimeout_**)**  
+ _RetryTime_ **=** _Previousretrytime의 초기값_ **+ (** 0.08 **&#42;** _LoginTimeout_**)**  
   
  여기서 *PreviousRetryTime* 의 초기값은 0입니다.  
   
@@ -234,7 +233,7 @@ Server=123.34.45.56,4724;
 > [!NOTE]  
 >  애플리케이션에서 구성 변경 내용을 추적하고 연결 문자열을 적절하게 변경할 수 있습니다. 이렇게 하려면 추가 코드가 필요하지만 관리 작업이 줄어듭니다.  
   
-|Configuration|주 서버|미러 서버|Partner_A 및 Partner_B를 지정하여 연결을 시도할 때의 동작|  
+|구성|주 서버|미러 서버|Partner_A 및 Partner_B를 지정하여 연결을 시도할 때의 동작|  
 |-------------------|----------------------|-------------------|------------------------------------------------------------------------------|  
 |초기 미러링 구성 단계입니다.|Db_1|Partner_B|Partner_A가 초기 파트너 이름으로 캐시됩니다. 클라이언트가 Partner_A에 대한 연결에 성공합니다. 클라이언트는 미러 서버 이름인 Partner_B를 다운로드하고 이를 캐시합니다. 이때 클라이언트가 제공한 장애 조치(failover) 파트너 이름은 무시합니다.|  
 |Partner_A에 하드웨어 오류가 발생하고 장애 조치가 수행됩니다(클라이언트 연결 끊기).|Partner_B|none|Partner_A가 초기 파트너 이름으로 계속 캐시되지만 클라이언트가 제공한 장애 조치(failover) 파트너 이름인 Partner_B를 사용하여 클라이언트는 현재 주 서버에 연결할 수 있습니다.|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f809d0d26b591dfdeff1037886ed45f7effb1086
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 703f90a11adbf6d190e68fc50609cc282594ba53
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702591"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065563"
 ---
 # <a name="non-deterministic-content-models"></a>비결정적 콘텐츠 모델
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1(서비스 팩 1) 이전에, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 비결정적 콘텐츠 모델이 있는 XML 스키마를 거부했습니다.  

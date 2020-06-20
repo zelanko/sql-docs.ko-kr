@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e58db16e14c0e959ca83dcdd687159f80bbeaf77
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c8f3f5c10a4b9f78ed77d643b34297336581f43f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717502"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996223"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>OLE DB를 사용하여 Updategram 실행(SQLXML 4.0)
   이 항목에서는 updategram을 실행 하기 위한 usingOLE DB의 작업 예제를 제공 합니다.  
@@ -58,7 +57,7 @@ ms.locfileid: "82717502"
 </Schema>  
 ```  
   
- 쿼리에서 모든 직원 요소를 반환합니다. 기본 매핑을 사용 하 여 ** \< contact>** 요소는 AdventureWorks 데이터베이스의 person. contact 테이블에 매핑됩니다.  
+ 쿼리에서 모든 직원 요소를 반환합니다. 기본 매핑을 사용 하는 경우 **\<Person.Contact>** 요소는 AdventureWorks 데이터베이스의 Person. Contact 테이블에 매핑됩니다.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>XML을 명령으로 설정하고 결과를 XML 문서로 검색하려면  
   

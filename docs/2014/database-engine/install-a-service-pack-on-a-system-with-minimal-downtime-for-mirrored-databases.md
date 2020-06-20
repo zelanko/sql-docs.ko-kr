@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e878d31ec926f8b2cc460854f422b4d01d32d414
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779597"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932789"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>미러된 데이터베이스 작동 중단을 최소화하면서 시스템에 서비스 팩 설치
   이 항목에서는 서비스 팩과 핫픽스를 설치할 때 미러된 데이터베이스의 작동 중단을 최소화하는 방법에 대해 설명합니다. 이 프로세스에는 데이터베이스 미러링에 참여하는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 인스턴스를 순차적으로 업그레이드하는 과정이 포함됩니다. *롤링 업데이트*라고 하는 이러한 형태의 업데이트는 단일 장애 조치 (failover)에 대해서만 가동 중지 시간을 줄입니다. 미러 서버가 주 서버와 지리적으로 먼 거리에 있는 성능 우선 모드 세션의 경우는 롤링 업데이트가 적합하지 않습니다.  
@@ -125,7 +124,7 @@ ms.locfileid: "62779597"
   
     -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 경우: **데이터베이스 속성** 대화 상자의 **미러링 페이지** 를 사용하여 [운영 모드](../relational-databases/databases/database-properties-mirroring-page.md) 옵션을 **성능 우선(동기)** 으로 변경합니다.  
   
-    -   의 [!INCLUDE[tsql](../includes/tsql-md.md)]경우: [ALTER database](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) 를 사용 하 여 트랜잭션 보안을 OFF로 설정 합니다.  
+    -   의 [!INCLUDE[tsql](../includes/tsql-md.md)] 경우: [ALTER database](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) 를 사용 하 여 트랜잭션 보안을 OFF로 설정 합니다.  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>미러링 모니터를 미러링 세션에 다시 추가하려면  
   

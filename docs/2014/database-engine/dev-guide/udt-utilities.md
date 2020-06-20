@@ -9,23 +9,22 @@ ms.topic: reference
 ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f13445faaef35ad0005666ac1b2fc2b8f95df425
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8217f3571c7ec285d10e04d1c289f1a4963ee384
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637723"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933244"
 ---
 # <a name="udt-utilities"></a>UDT 유틸리티
   UDT 유틸리티 예제에는 여러 유틸리티 함수가 포함되어 있습니다. 여기에는 어셈블리 메타데이터를 Transact-SQL에 표시하는 함수, 어셈블리의 형식을 테이블로 반환하는 예제 스트리밍 테이블 반환 함수, 사용자 정의 데이터 형식의 필드, 메서드 및 속성을 반환하는 함수 등이 있습니다. 이 예제에서는 Transact-SQL의 스트리밍 테이블 반환 함수, .NET Framework 리플렉션 API, .NET Framework의 테이블 반환 함수 호출 등의 기술을 보여 줍니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://www.microsoft.com/sql-server/sql-server-editions-express)에서 무료로 구할 수 있습니다.  
   
--   Codeplex [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [웹 사이트](https://go.microsoft.com/fwlink/?linkid=62796) 에서 사용할 수 있는 데이터베이스  
+-   [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]Codeplex [웹 사이트](https://go.microsoft.com/fwlink/?linkid=62796) 에서 사용할 수 있는 데이터베이스  
   
 -   .NET Framework SDK 2.0 이상 또는 Microsoft Visual Studio 2005 이상. .NET Framework SDK는 무료로 구할 수 있습니다.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "73637723"
   
 -   사용하고 있는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 인스턴스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 설치해야 합니다.  
   
--   사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 관리자가 아닌 경우 설치를 완료 하려면 관리자에 게 **createassembly** 권한을 부여 해야 합니다.  
+-   사용 중인 인스턴스의 관리자가 아닌 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 완료 하려면 관리자에 게 **createassembly** 권한을 부여 해야 합니다.  
   
 ## <a name="building-the-sample"></a>예제 빌드  
   

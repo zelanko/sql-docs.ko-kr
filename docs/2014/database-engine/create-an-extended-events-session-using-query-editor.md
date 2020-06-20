@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cba0e02b-b201-4863-bf1b-9164e68e5fa8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4a541c86029be9a438492a851c0eb16d18120f75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 648370ecdd2938b6fb425955dc02da8960f884c2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065026"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934534"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>쿼리 편집기를 사용하여 확장 이벤트 세션 만들기
   쿼리 편집기를 사용하거나 개체 탐색기에서 확장 이벤트 세션을 만들 수 있습니다. 개체 탐색기 확장 이벤트는 이벤트 세션 데이터를 생성, 수정 및 보는 데 사용할 수 있는 두 가지 사용자 인터페이스를 제공 합니다. 마법사는 이벤트 세션 만들기 프로세스를 안내 하는 마법사와 고급 구성 옵션을 제공 하는 새 세션 UI를 제공 합니다. 확장 이벤트 세션을 만들어 SQL Server 추적을 진단하면 다음과 같은 문제를 해결할 수 있습니다.  
@@ -92,7 +91,7 @@ ms.locfileid: "66065026"
     ADD EVENT package_name.event_name  
     ```  
   
-     예를 들어:  
+     다음은 그 예입니다.  
   
     ```  
     ADD EVENT sqlserver.file_read_completed,  
@@ -129,7 +128,7 @@ ms.locfileid: "66065026"
         AND column_type = 'data'  
         ```  
   
-         예를 들어:  
+         다음은 그 예입니다.  
   
         ```  
         SELECT *   

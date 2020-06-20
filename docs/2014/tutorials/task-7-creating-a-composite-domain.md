@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae778647-1df0-4952-9a69-0ef6177eea9c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bbc00117e10e48adbde37b9f0561610feff8f87e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42936d25e267bcad5ba8ae512750f9e12f041579
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65488962"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064718"
 ---
 # <a name="task-7-creating-a-composite-domain"></a>태스크 7: 복합 도메인 만들기
   이 작업에서는 **Address Line**, **City**, **State**및 **Zip** 도메인으로 구성 된 복합 도메인, **주소 유효성 검사**를 만듭니다. 복합 도메인을 사용하면 규칙에 여러 도메인이 포함되는 도메인 간 규칙을 정의할 수 있습니다. 복합 도메인에는 필드 값을 여러 도메인으로 구문 분석할 수 있는 등의 다른 이점이 있습니다.  예를 들어 Full Name 필드에 대한 값을 각각 First Name, Middle Name 및 Last Name 도메인으로 구문 분석할 수 있습니다. 이 자습서에서는 도메인 간 규칙만 정의합니다. 자세한 내용은 [복합 도메인 관리](https://msdn.microsoft.com/library/hh510399.aspx) 를 참조 하세요.  
@@ -30,7 +29,7 @@ ms.locfileid: "65488962"
   
 3.  도메인 목록에서 **Address Line**, **City**, **State**및 **Zip** 을 선택 하 고 **오른쪽 화살표** 를 클릭 하 여 **복합 도메인 목록의 도메인** 에 추가 합니다.  
   
-4.  **확인**을 클릭하여 대화 상자를 닫습니다.  
+4.  **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
 ## <a name="next-step"></a>다음 단계  
  [태스크 8: 복합 도메인 규칙 만들기](../../2014/tutorials/task-8-creating-a-composite-domain-rule.md)  

@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 26cf53e3-3bcb-4697-8a88-53e93bc68b56
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8a898990af62b66bb330ad490bc614f23a479ad4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9812887ba47b4072236b14b404669c5666dc74b7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755230"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934674"
 ---
 # <a name="connect-to-server-connection-properties-page-analysis-services"></a>서버에 연결(연결 속성 페이지) Analysis Services
-  등록 된 서버에 연결 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 하거나 [!INCLUDE[ssAS](../includes/ssas-md.md)] **등록 된 서버**에 등록할 때이 탭을 사용 하 여 옵션을 확인 하거나 지정할 수 있습니다. **연결** 및 **옵션** 은 연결 시에만 이 대화 상자에 나타납니다. **테스트** 및 **저장** 은 [!INCLUDE[ssAS](../includes/ssas-md.md)]등록 시에만 이 대화 상자에 나타납니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[ssAS](../includes/ssas-md.md)] **등록 된 서버에 연결 하거나 등록 된 서버**에 등록할 때이 탭을 사용 하 여 옵션을 확인 하거나 지정할 수 있습니다. **연결** 및 **옵션** 은 연결 시에만 이 대화 상자에 나타납니다. **테스트** 및 **저장** 은 [!INCLUDE[ssAS](../includes/ssas-md.md)]등록 시에만 이 대화 상자에 나타납니다.  
   
 ## <a name="options"></a>옵션  
  **데이터베이스에 연결**  
- 목록에서 연결할 데이터베이스를 선택합니다. ** \<기본>** 를 선택 하면 서버의 기본 데이터베이스에 연결 됩니다. ** \<서버>찾아보기 **를 선택 하면 연결 하려는 데이터베이스에 대 한 서버를 찾아볼 수 있습니다.  
+ 목록에서 연결할 데이터베이스를 선택합니다. 를 선택 하면 **\<default>** 서버의 기본 데이터베이스에 연결 됩니다. 를 선택 하면 **\<Browse server>** 연결 하려는 데이터베이스에 대 한 서버를 찾아볼 수 있습니다.  
   
  **연결 시간 제한**  
  제한 시간이 초과 되기 전까지 연결이 설정 될 때까지 대기 하는 시간 (초)을 입력 합니다. 기본값은 15 초입니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "62755230"
  **연결**  
  목록에 있는 값을 사용하여 연결을 시도합니다.  
   
- **옵션**  
+ **Options**  
  대화 상자를 변경하고 암호 저장과 같은 추가 서버 연결 옵션을 숨기려면 클릭합니다.  
   
  **테스트**  

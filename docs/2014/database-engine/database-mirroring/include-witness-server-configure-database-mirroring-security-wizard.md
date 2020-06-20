@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f04b38a4-f4e2-4d4c-bdac-7cc70e5a5684
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9f588b8a4305f44eceb8a8f6ab351bc940fbfef5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57d476216b34053f6bb61deef719d082240ca0c8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754936"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934154"
 ---
 # <a name="include-witness-server-configure-database-mirroring-security-wizard"></a>미러링 모니터 서버 포함(데이터베이스 미러링 보안 구성 마법사)
   이 페이지를 사용하여 데이터베이스 미러링에 대한 보안 구성에 미러링 모니터 서버를 포함할지 여부를 지정할 수 있습니다.  

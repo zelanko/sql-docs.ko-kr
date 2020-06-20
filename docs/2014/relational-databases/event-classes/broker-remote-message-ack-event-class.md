@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c919eb7c63a241c780d5e56b3e530921c6b51d6d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aaabe8df0521838bec85a724caab705c27475c0a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663914"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030317"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack 이벤트 클래스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 **가 메시지 승인을 보내거나 받을 때** Broker:Remote Message Ack [!INCLUDE[ssSB](../../includes/sssb-md.md)] 이벤트를 생성합니다.  

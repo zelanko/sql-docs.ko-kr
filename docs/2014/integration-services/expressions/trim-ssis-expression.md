@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 59d7eb92d79aa77da3faded36036de4b14142c93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af359074869cddb1e46d732b5136b7f4e41517de
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896524"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968960"
 ---
 # <a name="trim-ssis-expression"></a>TRIM(SSIS 식)
   선행 및 후행 공백을 제거하고 문자 식을 반환합니다.  

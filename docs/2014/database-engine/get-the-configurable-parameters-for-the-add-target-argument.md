@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 08454543-c5c8-4ca3-9af9-f1d82264471c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a66a4e77b3858b769aef287e68cac18b8b8514ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30644bc30c0bd8c4ccbc17c616c6f24bf9455dc8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064799"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932919"
 ---
 # <a name="get-the-configurable-parameters-for-the-add-target-argument"></a>ADD TARGET 인수에 대한 구성 가능한 매개 변수 가져오기
   이 태스크를 수행하려면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 쿼리 편집기를 사용합니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "66064799"
   
 -   parameter_type  
   
--   필수  
+-   required  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 확장 이벤트 세션을 만들기 전에 CREATE EVENT SESSION 또는 ALTER EVENT SESSION에 ADD TARGET 인수를 사용할 경우에 어떤 매개 변수를 설정할 수 있는지 확인하는 것이 좋습니다.  

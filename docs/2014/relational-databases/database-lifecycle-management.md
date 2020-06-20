@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b0d61f3262d68bcc14abc6b03f83c53ed3a8ba95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0a2c469b23e1ce4134767920547297b23ec030cc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232086"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952783"
 ---
 # <a name="database-lifecycle-management"></a>데이터베이스 수명 주기 관리
   DLM(데이터베이스 수명 주기 관리)은 정책을 기반으로 하는 데이터베이스 및 데이터 자산 관리 방법입니다. DLM은 제품이 아니지만 데이터베이스 애플리케이션의 데이터베이스 스키마, 데이터 및 메타데이터를 관리하는 포괄적인 접근 방식입니다. DLM에 대한 신중한 사전 접근 방식을 통해 조직에서는 적절한 수준의 성능, 보고, 가용성 및 비용에 따라 데이터 리소스를 관리할 수 있습니다.  

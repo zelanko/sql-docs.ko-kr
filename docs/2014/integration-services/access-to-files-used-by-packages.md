@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2e3ddea9-5289-4289-a70e-11c018f34977
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c0dbc5c5c72b6c69a6d2d390ac6c2c8920a19332
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f76636fa25b9a061f8e152c7df2eb583a386004
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062184"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926534"
 ---
 # <a name="access-to-files-used-by-packages"></a>패키지에서 사용되는 파일 액세스
   패키지 보호 수준은 패키지 외부에 저장된 파일을 보호하지 않습니다. 이러한 파일은 다음과 같습니다.  

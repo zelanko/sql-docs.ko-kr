@@ -8,21 +8,20 @@ ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: ddd07c68d5549ed4cfc7cc3f421168ad968dadda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b90fdbd9a0bc80dfc6a82416d0193b2951fe13ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014247"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996401"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   `CurvePolygon`은 외부 경계 링과 0개 이상의 내부 링에서 정의하는 토폴로지 방식으로 닫힌 표면입니다.  
   
 > [!IMPORTANT]  
->  하위 유형을 포함 하 여에 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]도입 된 공간 기능에 대 한 자세한 설명 및 예를 보려면 [SQL Server 2012의 새로운 공간 기능](https://go.microsoft.com/fwlink/?LinkId=226407)백서를 다운로드 하세요. `CurvePolygon`  
+>  하위 유형을 포함 하 여에 도입 된 공간 기능에 대 한 자세한 설명 및 예를 보려면 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] `CurvePolygon` [SQL Server 2012의 새로운 공간 기능](https://go.microsoft.com/fwlink/?LinkId=226407)백서를 다운로드 하세요.  
   
- 다음 조건은 `CurvePolygon` 인스턴스의 특성을 정의 합니다.  
+ 다음 조건은 인스턴스의 특성을 정의 합니다 `CurvePolygon` .  
   
 -   `CurvePolygon` 인스턴스의 경계는 외부 링과 모든 내부 링으로 정의됩니다.  
   

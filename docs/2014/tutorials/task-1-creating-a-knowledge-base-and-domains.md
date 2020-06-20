@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7d74a60b-8933-4038-bcbb-4e9dcc4f70e9
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 79edd8566f2b3c9b586bc8c8815e1d9bc586fb05
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7ad3b085178c0d0cfe3ece010a571992e7fdb99
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481243"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064856"
 ---
 # <a name="task-1-creating-a-knowledge-base-and-domains"></a>태스크 1: 기술 자료 및 도메인 만들기
   이 태스크에서는 **Suppliers** 기술 자료를 만들고 데이터를 정리 하 고 데이터를 일치 시켜 중복 항목을 제거 하는 데 사용 되는 도메인을 만듭니다.  

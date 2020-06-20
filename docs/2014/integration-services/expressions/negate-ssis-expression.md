@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f0118dfc-aced-4de2-953e-5ebf9c962b8d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1137fa6847cf851a6cb56ffd8a0da10032decc7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac803cb797644d47c6bc5ee4fcee99e14ba88a4c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62897421"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969193"
 ---
 # <a name="--negate-ssis-expression"></a>-(부정)(SSIS 식)
   숫자 식을 부정합니다.  

@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea87e2de984107c5a0fda6eb2629ee5cfd197841
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806754"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934189"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>예: 인증서를 사용하여 데이터베이스 미러링 설정(Transact-SQL)
   이 예에서는 인증서 기반 인증을 사용하여 데이터베이스 미러링 세션을 만드는 데 필요한 모든 단계를 보여 줍니다. 이 항목의 예에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용합니다. 네트워크 보안을 보장할 수 없는 경우 데이터베이스 미러링 연결에 암호화를 사용하는 것이 좋습니다.  
   
  인증서를 다른 시스템으로 복사할 때는 안전한 복사 방법을 사용하세요. 모든 인증서를 안전하게 보관하는 데 많은 주의를 기울여야 합니다.  
   
-##  <a name="example"></a><a name="ExampleH2"></a>예 들어  
+##  <a name="example"></a><a name="ExampleH2"></a> 예  
  다음 예에서는 HOST_A에 있는 한 파트너에서 실행되어야 하는 단계를 보여 줍니다. 이 예에서 파트너 2개는 컴퓨터 시스템 3대의 기본 서버 인스턴스입니다. 이 중 두 서버 인스턴스는 트러스트되지 않은 Windows 도메인에서 실행되므로 인증서 기반 인증이 필요합니다.  
   
  HOST_A는 초기 주 역할을 맡고 HOST_B는 미러 역할을 맡습니다.  
@@ -257,7 +256,7 @@ ms.locfileid: "62806754"
     ```  
   
     > [!NOTE]  
-    >  자동 장애 조치 (failover)가 있는 보호 우선 모드에서 실행 하려면 트랜잭션 보안을 FULL (기본 설정)으로 설정 된 채로 두고 두 번째 set PARTNER **'*`partner_server`*'** 문을 실행 한 후 가능한 한 빨리 미러링 모니터 서버를 추가 합니다. 먼저 아웃바운드 및 인바운드 연결에 대한 미러링 모니터를 구성해야 합니다.  
+    >  자동 장애 조치 (failover)가 있는 보호 우선 모드에서 실행 하려면 트랜잭션 보안을 FULL (기본 설정)으로 설정 된 채로 두고 두 번째 set PARTNER **' *`partner_server`* '** 문을 실행 한 후 가능한 한 빨리 미러링 모니터 서버를 추가 합니다. 먼저 아웃바운드 및 인바운드 연결에 대한 미러링 모니터를 구성해야 합니다.  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   

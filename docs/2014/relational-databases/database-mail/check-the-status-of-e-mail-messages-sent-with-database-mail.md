@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: eb290f24-b52f-46bc-84eb-595afee6a5f3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 73d0cf3a374a7f3dda7797238d2c1702360aa955
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a4997ce60dcfbdae6145ae4ae442fabe7c79f924
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872332"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952843"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>데이터베이스 메일을 통해 보낸 전자 메일 메시지의 상태 확인
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 데이터베이스 메일로 보낸 전자 메일 메시지의 상태를 확인하는 방법에 대해 설명합니다.  
@@ -44,7 +43,7 @@ ms.locfileid: "62872332"
   
      기본적으로 외부 프로그램은 성공적으로 전송된 메시지에 대한 정보를 기록하지 않습니다. 모든 메시지를 기록하려면 **데이터베이스 메일 구성 마법사** 의 **시스템 매개 변수 구성**페이지를 사용하여 로깅 수준을 자세히로 설정하세요.  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>예 (Transact-sql)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예에서는 `danw` 로 전송되었지만 외부 프로그램에서 성공적으로 보내지 못한 모든 전자 메일 메시지에 대한 정보를 나열합니다. 이 문은 제목, 외부 프로그램에서 메시지를 보내지 못한 날짜와 시간, 데이터베이스 메일 로그의 오류 메시지를 나열합니다.  
   
 ```  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3068ac7a3094605bb809ac84c63766b64fda486
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196670"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002896"
 ---
 # <a name="use-sparse-columns"></a>스파스 열 사용
   스파스 열은 Null 값에 대해 최적화된 스토리지가 있는 일반 열입니다. 스파스 열을 사용하면 Null 값에 대한 공간 요구 사항이 줄어드는 반면 Null이 아닌 값을 검색하는 데 더 많은 오버헤드가 발생합니다. 최소 20%에서 40% 사이의 공간이 절약되는 경우에는 스파스 열을 사용하십시오. 스파스 열 및 열 집합은 [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 또는 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) 문을 사용하여 정의합니다.  
@@ -166,7 +165,7 @@ ms.locfileid: "68196670"
   
      병합 복제는 스파스 열 또는 열 집합을 지원하지 않습니다.  
   
--   변경 내용 추적  
+-   Change tracking  
   
      변경 내용 추적은 스파스 열 및 열 집합을 지원합니다. 테이블에서 열 집합이 업데이트되면 변경 내용 추적이 이를 전체 행에 대한 업데이트로 처리합니다. 열 집합 업데이트 작업을 통해 업데이트되는 정확한 스파스 열 집합을 알 수 있는 자세한 변경 내용 추적은 제공되지 않습니다. 스파스 열이 DML 문을 통해 명시적으로 업데이트되는 경우에는 해당 열에 대한 변경 내용 추적이 일반적으로 작동하여 변경된 정확한 열 집합을 식별할 수 있습니다.  
   
@@ -176,7 +175,7 @@ ms.locfileid: "68196670"
   
 -   열의 스파스 속성은 테이블을 복사할 때 보존되지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 예의 Document 테이블에는 `DocID` 및 `Title`열을 사용하는 공통 집합이 포함되어 있습니다. Production 그룹은 모든 생산 문서에 대한 `ProductionSpecification` 및 `ProductionLocation` 열을 원하며, Marketing 그룹은 마케팅 문서에 대한 `MarketingSurveyGroup` 열을 원합니다. 이 예의 코드에서는 스파스 열을 사용하는 테이블을 만들고, 테이블에 두 개의 행을 삽입한 다음 테이블에서 데이터를 선택합니다.  
   
 > [!NOTE]  

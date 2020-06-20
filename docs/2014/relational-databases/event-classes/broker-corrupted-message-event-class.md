@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a49f10826496e9e8fea46b1846b74535a173f821
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 710112cfd4ab902c4c92a87602f6e362f3078d93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62664088"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030531"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message 이벤트 클래스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 Service Broker가 손상된 메시지를 수신할 때 **Broker:Corrupted Message** 이벤트를 발생시킵니다.  
@@ -45,14 +44,14 @@ ms.locfileid: "62664088"
 |**NTDomainName**|**nvarchar**|사용자가 속한 Windows 도메인입니다.|7|yes|  
 |**NTUserName**|**nvarchar**|이 이벤트를 생성한 연결을 소유하고 있는 사용자의 이름입니다.|6|yes|  
 |**ObjectName**|**nvarchar**|원격 데이터베이스에서 이 데이터베이스에 연결하기 위해 사용된 연결 문자열 및 대화의 다른 한 쪽의 서비스 이름입니다.|34|예|  
-|**RoleName**|**nvarchar**|이 메시지를 수신하는 엔드포인트의 역할입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **시작자**:<br />                  수신 엔드포인트가 대화의 시작자입니다.<br /><br /> **대상**:<br />                  수신 엔드포인트가 대화의 대상입니다.|38|아니요|  
-|**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
+|**RoleName**|**nvarchar**|이 메시지를 수신하는 엔드포인트의 역할입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **시작자**:<br />                  수신 엔드포인트가 대화의 시작자입니다.<br /><br /> **대상**:<br />                  수신 엔드포인트가 대화의 대상입니다.|38|예|  
+|**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|예|  
 |**심각도**|**int**|오류로 인해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 메시지를 삭제한 경우 오류의 심각도입니다.|29|예|  
 |**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 클라이언트와 관련된 프로세스에 할당한 서버 프로세스 ID입니다.|12|예|  
 |**StartTime**|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|예|  
-|**State**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원본 코드 내에서 이벤트가 생성된 위치를 나타냅니다. 이 이벤트가 생성될 수 있는 각 위치의 상태 코드는 서로 다릅니다. Microsoft 지원 엔지니어는 이 상태 코드를 사용하여 이벤트가 생성된 위치를 찾을 수 있습니다.|30|아니요|  
+|**State**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원본 코드 내에서 이벤트가 생성된 위치를 나타냅니다. 이 이벤트가 생성될 수 있는 각 위치의 상태 코드는 서로 다릅니다. Microsoft 지원 엔지니어는 이 상태 코드를 사용하여 이벤트가 생성된 위치를 찾을 수 있습니다.|30|예|  
 |**TextData**|**ntext**|발견된 손상에 대한 설명입니다.|1|예|  
-|**트랜잭션 ID**|**bigint**|시스템이 할당한 트랜잭션 ID입니다.|4|예|  
+|**Transaction ID**|**bigint**|시스템이 할당한 트랜잭션 ID입니다.|4|예|  
   
  이 이벤트의 **TextData** 열에는 메시지의 문제를 기술하는 메시지가 포함됩니다.  
   

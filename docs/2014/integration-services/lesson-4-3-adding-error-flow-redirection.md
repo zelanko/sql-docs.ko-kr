@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c2d7be5fa95e92b97e76e28647f4406ee356c5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891405"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968253"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>3단계: 오류 Flow 리디렉션 추가
   이전 태스크에서 설명한 대로 Lookup Currency Key 변환은 오류를 생성한 손상된 예제 플랫 파일을 처리할 때 일치하는 항목을 생성할 수 없습니다. 변환은 오류 출력에 대해 기본 설정을 사용하므로 오류가 발생하면 변환이 실패합니다. 변환이 실패하면 나머지 패키지도 실패합니다.  
@@ -24,7 +23,7 @@ ms.locfileid: "62891405"
   
  이 태스크에서는 Lookup Currency Key 변환을 구성하여 실패하는 모든 행을 오류 출력으로 리디렉션합니다. 이러한 행은 데이터 흐름의 오류 분기에서 파일에 기록됩니다.  
   
- 기본적으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 출력의 추가 열인 **ErrorCode** 및 **errorcolumn**에는 오류 번호를 나타내는 숫자 코드와 오류가 발생 한 열의 ID만 포함 됩니다. 이러한 숫자 값은 해당 오류 설명이 없으므로 사용이 제한적일 수 있습니다.  
+ 기본적으로 오류 출력의 추가 열인 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] **ErrorCode** 및 **errorcolumn**에는 오류 번호를 나타내는 숫자 코드와 오류가 발생 한 열의 ID만 포함 됩니다. 이러한 숫자 값은 해당 오류 설명이 없으므로 사용이 제한적일 수 있습니다.  
   
  실패한 행을 패키지가 파일에 기록하기 전에 스크립트 구성 요소를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] API에 액세스한 다음 오류 설명을 가져와 오류 출력의 유용성을 향상시킬 수 있습니다.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62891405"
   
 8.  **입/출력** 페이지에서 **출력 0**을 확장하고 **출력 열**을 클릭한 다음 **열 추가**를 클릭합니다.  
   
-9. 속성에 **ErrorDescription** 을 `DataType` 입력 하 고 속성을 **유니코드 문자열 [DT_WSTR]** 로 설정 합니다. `Name`  
+9. 속성에 `Name` **ErrorDescription** 을 입력 하 고 속성을 `DataType` **유니코드 문자열 [DT_WSTR]** 로 설정 합니다.  
   
 10. **스크립트** 페이지에서 `LocaleID` 속성이 **영어 (미국)** 로 설정 되어 있는지 확인 합니다.  
   

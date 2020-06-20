@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9d80d4ea-a0f6-4a79-885d-79143ca09c00
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1060520a9c1fc6b5db20d1cca5e8c2d19cbd429a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e766b8fbea0aa1e7e1e804474cd8dfa9be92832
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62773299"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927554"
 ---
 # <a name="view-file-history"></a>파일 기록 보기
   **기록** 명령을 사용 하 여 원본 제어 파일에 대 한 버전 기록을 볼 수 있습니다. 이 기록에는 원본 제어에서 파일이 추가 또는 체크 인된 날짜와 시간이 포함되어 있습니다.  

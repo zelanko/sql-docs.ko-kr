@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9e3e3756f65baa7e1b62e3a84ff709a60b9c887b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d458939ba233bdfe7a99edd38afc74b5433ae061
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754549"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934104"
 ---
 # <a name="mirroring-states-sql-server"></a>미러링 상태(SQL Server)
   데이터베이스 미러링 세션 동안 미러된 데이터베이스는 항상 특정 상태( *미러링 상태*)가 됩니다. 이러한 데이터베이스의 상태는 통신 상태, 데이터 흐름 및 파트너 간의 데이터 차이를 반영합니다. 데이터베이스 미러링 세션은 주 데이터베이스와 같은 상태가 됩니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1726cba5-a294-4a8b-a5c6-e9d325066000
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1f49961a48c096cf01fbf7f09de0d76ac9fd4bfe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcf0a6eebeb3e57e5ef1cadcff7d01872878104c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781810"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933304"
 ---
 # <a name="sqlxml-managed-classes-object-model"></a>SQLXML 관리되는 클래스 개체 모델
   이 섹션에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 관리되는 클래스 개체 모델에 대해 설명합니다.  

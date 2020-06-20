@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d25f79da-1ec1-4683-8ceb-5026b62b7364
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 01ef137ef7297be5171bcfdcacd13c80e4da4624
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b190471ffa985c0f76bc44ce46acea0cd73a7ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63301727"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064361"
 ---
 # <a name="operator-properties-history-page"></a>운영자 속성(기록 페이지)
   이 페이지를 사용하여 가장 최근에 운영자에게 보낸 알림의 날짜, 시간 및 유형을 확인할 수 있습니다.  
