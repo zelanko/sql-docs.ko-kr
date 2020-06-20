@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3bada5fc49dc344510164260330699b60a3288cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3032ff13af69a0690e1f81f08f7b3fb17aae0ee1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255306"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047550"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>병합 구독자의 파티션 정보 유효성 검사
   병합 게시에 대해 매개 변수가 있는 행 필터를 정의할 때는 구독자의 로그인 이름과 같이 구독자 정보를 참조하는 기능을 사용합니다. 기본적으로 복제는 각 동기화 전과 스냅샷이 구독자에 적용될 때마다 이러한 기능에 기반하여 구독자 정보의 유효성을 검사합니다. 유효성 검사 프로세스는 데이터가 각 구독자에 대해 올바르게 분할되었는지 확인합니다. 유효성 검사 동작은 **validate_subscriber_info** 게시 속성으로 제어할 수 있으며 이 속성은 [sp_changemergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 사용하거나 **게시 속성** 대화 상자의 **구독 옵션** 페이지에서 변경할 수 있습니다. 게시 속성 변경 방법은 [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)을 참조하십시오.  

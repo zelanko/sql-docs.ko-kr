@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9c4d9b65fed30d09bf739271131d3b83afcd0902
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 971f45fd69f381a8997bb2f8f08444f4d9c107c4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010135"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955443"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM(SQL Server)
   FILESTREAM을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]기반 애플리케이션에서 문서 및 이미지와 같은 구조화되지 않은 데이터를 파일 시스템에 저장할 수 있습니다. 애플리케이션은 풍부한 스트리밍 API 및 파일 시스템의 성능을 활용할 수 있고 동시에 구조화되지 않은 데이터와 해당되는 구조화된 데이터 간에 트랜잭션 일관성을 유지할 수 있습니다.  
@@ -158,11 +157,11 @@ ms.locfileid: "66010135"
   [FILESTREAM 데이터용 클라이언트 애플리케이션 만들기](create-client-applications-for-filestream-data.md)  
   [OpenSqlFilestream을 사용하여 FILESTREAM 데이터 액세스](access-filestream-data-with-opensqlfilestream.md)  
   [FILESTREAM 데이터 부분 업데이트](make-partial-updates-to-filestream-data.md)  
-  [FILESTREAM 애플리케이션에서 데이터베이스 작업과의 충돌 방지](avoid-conflicts-with-database-operations-in-filestream-applications.md)  
+  [FILESTREAM 응용 프로그램에서 데이터베이스 작업과의 충돌 방지](avoid-conflicts-with-database-operations-in-filestream-applications.md)  
   [FILESTREAM 사용 데이터베이스 이동](move-a-filestream-enabled-database.md)  
   [장애 조치(Failover) 클러스터에서 FILESTREAM 설정](set-up-filestream-on-a-failover-cluster.md)  
   [FILESTREAM 액세스를 위한 방화벽 구성](configure-a-firewall-for-filestream-access.md)  
   
 ##  <a name="related-content"></a><a name="relcontent"></a> 관련 내용  
- [FILESTREAM과 기타 SQL Server 기능 간 호환성](filestream-compatibility-with-other-sql-server-features.md)  
+ [FILESTREAM과 기타 SQL Server 기능 간의 호환성](filestream-compatibility-with-other-sql-server-features.md)  
   

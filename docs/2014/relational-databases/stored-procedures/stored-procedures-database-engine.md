@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fdbca3ed012e082c899a5015faabc5c0019fcd75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1d8d7d0684d528276cc18adfdd3df837a79d551
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68197114"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047457"
 ---
 # <a name="stored-procedures-database-engine"></a>저장 프로시저(데이터베이스 엔진)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 저장 프로시저는 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 그룹이거나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임) 메서드에 대한 참조입니다. 프로시저는 다음과 같은 점에서 다른 프로그래밍 언어의 구문과 유사합니다.  
@@ -64,7 +63,7 @@ ms.locfileid: "68197114"
  임시  
  임시 프로시저는 사용자 정의 프로시저에 속합니다. 임시 프로시저는 **tempdb**에 저장된다는 점을 제외하고는 영구 프로시저와 유사합니다. 임시 프로시저에는 로컬 및 전역의 두 가지 유형이 있습니다. 이 두 유형은 이름, 표시 여부 및 가용성 면에서 서로 다릅니다. 로컬 임시 프로시저는 이름이 하나의 숫자 기호(#)로 시작하며 현재 사용자 연결에만 표시되고 연결이 닫히면 삭제됩니다. 전역 임시 프로시저는 이름이 두 개의 숫자 기호(##)로 시작하며 생성된 후 모든 사용자에게 표시되고 해당 프로시저를 사용하는 마지막 세션이 끝나면 삭제됩니다.  
   
- System  
+ 시스템  
  시스템 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함됩니다. 이러한 프로시저는 물리적으로 **Resource** 데이터베이스에 저장되지만 논리적으로는 모든 시스템 정의 데이터베이스와 사용자 정의 데이터베이스의 **sys** 스키마에 표시됩니다. 또한 **msdb** 데이터베이스에도 **dbo** 스키마에 경고 및 작업을 예약하는 데 사용되는 시스템 저장 프로시저가 있습니다. 시스템 프로시저는 **sp_** 접두사로 시작하므로 사용자 정의 프로시저의 이름을 지정할 때 이 접두사를 사용하지 않는 것이 좋습니다. 시스템 저장 프로시저의 전체 목록은 [시스템 저장 프로시저&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)를 참조하세요.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 다양한 유지 관리 작업을 수행할 수 있도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인터페이스를 외부 프로그램에 제공하는 시스템 프로시저를 지원합니다. 이러한 확장 프로시저에는 xp_ 접두사가 사용됩니다. 확장 저장 프로시저의 전체 목록은 [일반 확장 저장 프로시저&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql)를 참조하세요.  

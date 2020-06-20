@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d3c5863489bcdda590137587273b9b31b4bae3cc
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7e2b1e0f8ba22eacff01929ed3364dcffe0cf815
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707071"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011111"
 ---
 # <a name="profiling-odbc-driver-performance"></a>ODBC 드라이버 성능 프로파일링
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 다음과 같은 두 가지 유형의 성능 데이터를 프로파일링할 수 있습니다.  
@@ -74,7 +73,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="application-profile-statistics"></a>애플리케이션 프로필 통계  
   
-|SQLPERF 필드|설명|  
+|SQLPERF 필드|Description|  
 |-------------------|-----------------|  
 |TimerResolution|서버 클럭 시간의 최소 인식 값(밀리초)입니다. 일반적으로 0으로 보고되며, 보고된 수가 큰 경우에만 고려되어야 합니다. 서버 클럭의 최소 인식 값이 시간 기반 통계의 적정 간격보다 클 경우 해당 통계는 과장될 수 있습니다.|  
 |SQLidu|SQL_PERF_START 이후의 INSERT, DELETE 또는 UPDATE 문의 수입니다.|  
@@ -112,7 +111,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>시간 통계  
   
-|SQLPERF 필드|설명|  
+|SQLPERF 필드|Description|  
 |-------------------|-----------------|  
 |msExecutionTime|SQL_PERF_START 이후 드라이버가 처리를 위해 소요한 누적 시간으로, 서버의 응답을 대기하는 데 보낸 시간도 포함됩니다.|  
 |msNetworkServerTime|드라이버가 서버의 응답을 대기하는 데 보낸 누적 시간입니다.|  

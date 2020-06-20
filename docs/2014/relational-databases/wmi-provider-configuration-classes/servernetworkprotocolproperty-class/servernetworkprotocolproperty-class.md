@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 72e124ad-a610-405a-8749-b2508068b348
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 39d0a86147d40bb4f2eaf85dbf5b9ae92bfe540d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0f5d0261bd1968eb01ce8c394de4aeda1a02a22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62642912"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056790"
 ---
 # <a name="servernetworkprotocolproperty-class"></a>ServerNetworkProtocolProperty 클래스
   [ServerNetworkProtocolProperty 클래스] servernetworkprotocolproperty-class.md)는 서버 네트워크 프로토콜의 속성을 나타냅니다.  

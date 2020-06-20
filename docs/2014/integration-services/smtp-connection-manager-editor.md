@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2693de0d-b04d-4325-a856-ce667d2b8aa1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 527c8f647c963c2c1c03171eeb154a790ab1994a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca3da66a23292212df7464c8d5966e5c3603e13e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055557"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962943"
 ---
 # <a name="smtp-connection-manager-editor"></a>SMTP 연결 관리자 편집기
   **SMTP 연결 관리자 편집기** 대화 상자를 사용하여 SMTP(Simple Mail Transfer Protocol) 서버를 지정할 수 있습니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "66055557"
 >  SMTP 연결 관리자는 익명 인증과 Windows 인증만 지원하며 기본 인증은 지원하지 않습니다.  
   
 > [!NOTE]  
->  Microsoft Exchange를 SMTP 서버로 사용 하는 경우 **Windows 인증 사용** 을로 `True`설정 해야 할 수 있습니다. 인증되지 않은 SMTP 연결을 허용하지 않도록 Exchange Server를 구성할 수도 있습니다.  
+>  Microsoft Exchange를 SMTP 서버로 사용 하는 경우 **Windows 인증 사용** 을로 설정 해야 할 수 있습니다 `True` . 인증되지 않은 SMTP 연결을 허용하지 않도록 Exchange Server를 구성할 수도 있습니다.  
   
  **SSL(Secure Sockets Layer) 사용**  
  전자 메일 메시지를 보낼 때 SSL(Secure Sockets Layer)을 사용하여 통신을 암호화하려면 선택합니다.  

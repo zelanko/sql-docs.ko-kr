@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cb523d8e9b1dbbb136475d0aa739491935f755ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea6ec9f196acd0a64a0b785024bd6426cd6a5381
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922162"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959073"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>전체 데이터베이스 복원(전체 복구 모델)
   전체 데이터베이스 복원의 목적은 전체 데이터베이스를 복원하는 것입니다. 복원하는 동안 전체 데이터베이스는 오프라인 상태가 됩니다. 데이터베이스의 일부를 온라인에 연결하기 전에 데이터베이스의 모든 부분의 지정 시간이 같고 커밋되지 않은 트랜잭션이 없는 일치하는 지점으로 모든 데이터를 복구합니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "62922162"
   
  **항목 내용:**  
   
--   [오류 지점으로 데이터베이스 복원](#PointOfFailure)  
+-   [데이터베이스를 오류 지점으로 복원](#PointOfFailure)  
   
 -   [데이터베이스를 로그 백업 내 지점으로 복원](#PointWithinBackup)  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62922162"
 > [!NOTE]  
 >  이전 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 백업 지원에 대한 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)의 "호환성 지원" 섹션을 참조하세요.  
   
-##  <a name="restoring-a-database-to-the-point-of-failure"></a><a name="PointOfFailure"></a>데이터베이스를 오류 지점으로 복원  
+##  <a name="restoring-a-database-to-the-point-of-failure"></a><a name="PointOfFailure"></a> 오류 지점으로 데이터베이스 복원  
  일반적으로 실패 지점으로 데이터베이스를 복구하는 작업에는 다음의 기본 단계가 포함됩니다.  
   
 1.  활성 트랜잭션 로그(비상 로그)를 백업합니다. 이렇게 하면 비상 로그 백업이 만들어집니다. 활성 트랜잭션 로그를 사용할 수 없을 때 해당 로그 부분의 모든 트랜잭션이 손실됩니다.  
@@ -73,7 +72,7 @@ ms.locfileid: "62922162"
 >  데이터베이스 백업을 다른 서버 인스턴스로 복원할 경우 [백업 및 복원으로 데이터베이스 복사](../databases/copy-databases-with-backup-and-restore.md)를 참조하세요.  
   
 ###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> 기본 Transact-SQL RESTORE 구문  
- 이전 그림의 복원 순서에 대 한 기본 [restore](/sql/t-sql/statements/restore-statements-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문은 다음과 같습니다.  
+ 이전 그림의 복원 순서에 대한 기본 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] 구문은 다음과 같습니다.  
   
 1.  RESTORE DATABASE *database* FROM *full database backup* WITH NORECOVERY;  
   
@@ -85,7 +84,7 @@ ms.locfileid: "62922162"
   
 4.  RESTORE DATABASE *database* WITH RECOVERY;  
   
-###  <a name="example-recovering-to-the-point-of-failure-transact-sql"></a><a name="ExampleToPoFTsql"></a>예: 오류 지점으로 복구 (Transact-sql)  
+###  <a name="example-recovering-to-the-point-of-failure-transact-sql"></a><a name="ExampleToPoFTsql"></a> 예제: 오류 지점으로 복구(Transact-SQL)  
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 예에서는 복원 순서에서 오류 지점으로 데이터베이스를 복원하는 필수 옵션을 보여 줍니다. 이 예에서는 데이터베이스의 비상 로그 백업을 만듭니다. 다음으로 전체 데이터베이스 백업 및 로그 백업을 복원한 다음 비상 로그 백업을 복원합니다. 이 예의 경우 별도의 마지막 단계에서 데이터베이스를 복구합니다.  
   
 > [!NOTE]  
@@ -121,7 +120,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 GO  
 ```  
   
-##  <a name="restoring-a-database-to-a-point-within-a-log-backup"></a><a name="PointWithinBackup"></a>데이터베이스를 로그 백업 내 지점으로 복원  
+##  <a name="restoring-a-database-to-a-point-within-a-log-backup"></a><a name="PointWithinBackup"></a> 데이터베이스를 로그 백업 내 지점으로 복원  
  전체 복구 모델에서, 전체 데이터베이스 복원은 일반적으로 지정 시간, 표시된 트랜잭션 또는 로그 백업 내 LSN으로 복구될 수 있습니다. 그러나 대량 로그 복구 모델에서 로그 백업에 대량 로그 변경 내용이 있을 경우 지정 시간 복구를 사용할 수 없습니다.  
   
 ### <a name="sample-point-in-time-restore-scenarios"></a>예제 지정 시간 복원 시나리오  
@@ -178,10 +177,10 @@ GO
 ## <a name="see-also"></a>참고 항목  
  [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [SQL Server&#41;&#40;트랜잭션 로그 백업 적용](transaction-log-backups-sql-server.md)   
- [Transact-sql&#41;sp_addumpdevice &#40;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
- [SQL Server&#41;&#40;전체 데이터베이스 백업](full-database-backups-sql-server.md)   
- [차등 백업 &#40;SQL Server&#41;](differential-backups-sql-server.md)   
+ [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [sp_addumpdevice&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [전체 데이터베이스 백업&#40;SQL Server&#41;](full-database-backups-sql-server.md)   
+ [차등 백업&#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [백업 개요&#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [복원 및 복구 개요&#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  
   

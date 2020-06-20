@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f79d8b3c-521e-4e50-a564-21d73ae5767b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0eb6de956884eb66990459b8b4c6a6336c8ed8ac
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 45e72165eef621dc377b02ed3d2e7e1e3cf7ab8e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705949"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021874"
 ---
 # <a name="sqlnumresultcols"></a>SQLNumResultCols
   실행된 문의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 결과 집합의 열 수를 보고할 때 서버에 연결하지 않습니다. 이 경우는 `SQLNumResultCols` 서버 왕복을 발생 시 키 지 않습니다. [SQLDescribeCol](sqldescribecol.md) 및 [sqlcolattribute](sqlcolattribute.md)와 마찬가지로 `SQLNumResultCols` 준비 되었지만 실행 되지 않은 문에 대해를 호출 하면 서버 왕복이 생성 됩니다.  

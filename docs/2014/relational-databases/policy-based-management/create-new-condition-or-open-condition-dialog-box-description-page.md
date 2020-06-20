@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 2ef0a556-9566-4af8-849e-ab038b9279cc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 80198964075bc6de2bdd816c54ccf2ca1e3710f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42c403674d9ea8b34035631409a274bcce0b55bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705379"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005861"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-description-page"></a>새 조건 만들기 또는 조건 열기 대화 상자, 설명 페이지
   이 대화 상자를 사용하여 정책 기반 관리 조건에 설명을 추가할 수 있습니다.  

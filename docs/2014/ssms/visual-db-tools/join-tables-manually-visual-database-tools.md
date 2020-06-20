@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9c785356-646b-4c87-82d4-25efd6051d9d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0299be9a1cb480a567e0b166c990d25588598aba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe3dcd7f2affdbeb2e2fa5769f1aa6d02d27d5ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711060"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064951"
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>테이블 수동 조인(Visual Database Tools)
   쿼리에 둘 이상의 테이블을 추가하면 [쿼리 및 뷰 디자이너](visual-database-tools.md) 는 데이터베이스에 저장된 테이블 관계 정보나 공용 데이터를 기반으로 테이블을 조인합니다. 자세한 내용은 [테이블 자동 조인&#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md)을 참조하세요. 하지만 쿼리 및 뷰 디자이너가 테이블을 자동으로 조인하지 않은 경우나 테이블간에 추가로 조인 조건을 만들려는 경우에는 테이블을 수동으로 조인하면 됩니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "62711060"
   
 1.  조인할 개체를 [다이어그램 창](diagram-pane-visual-database-tools.md) 에 추가합니다.  
   
-2.  첫 번째 테이블 또는 테이블 구조 개체의 조인 열 이름을 끌어서 두 번째 테이블 또는 테이블 구조 개체의 관련 열 위에 놓습니다. `text`, `ntext`또는 i`mage` 열을 기반으로 할 수 없습니다.  
+2.  첫 번째 테이블 또는 테이블 구조 개체의 조인 열 이름을 끌어서 두 번째 테이블 또는 테이블 구조 개체의 관련 열 위에 놓습니다. `text`, `ntext` 또는 i 열을 기반으로 할 수 없습니다 `mage` .  
   
     > [!NOTE]  
     >  조인 열의 데이터 형식은 같거나 호환 가능해야 합니다. 예를 들어, 첫 번째 테이블의 조인 열이 날짜이면 이 열을 두 번째 테이블의 날짜 열과 관련시켜야 합니다. 반면에 첫 번째 조인 열이 정수이면 관련된 조인 열의 데이터 형식도 정수이어야 하지만 크기는 달라도 됩니다. 쿼리 및 뷰 디자이너는 조인을 만드는 데 사용하는 열의 데이터 형식을 검사하지 않지만 데이터 형식이 호환되지 않으면 쿼리를 실행할 때 데이터베이스에 오류 메시지가 표시됩니다.  

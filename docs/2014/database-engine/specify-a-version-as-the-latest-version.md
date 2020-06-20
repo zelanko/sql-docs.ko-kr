@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 407dffb1-3ecf-461e-835d-124781f26ee7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f34631e979ded7a329939c23a758ccc0c9aea959
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d598ec6f828fc7d8d59b3f998b775a752b94c4a6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773479"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928874"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>최신 버전으로 버전 지정
   파일을 원본 제어에 체크 인하면 체크 인한 버전은 최신 버전이 됩니다. 최신 버전을 체크 아웃하거나 검색하는 사용자는 가장 최근에 체크 인된 항목의 로컬 복사본을 받게 됩니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "62773479"
   
 3.  **파일** 메뉴에서 **원본 제어** 를 가리킨 다음 **ViewHistory**를 클릭 합니다.  
   
-4.  파일> **기록** 대화 상자에서 최신 버전으로 지정할 버전을 선택 하 고 고정을 클릭 합니다. **Pin** \<  
+4.  **기록** \<file> 대화 상자에서 최신 버전으로 지정할 버전을 선택 하 고 **고정**을 클릭 합니다.  
   
      최신 파일 버전이라는 것을 나타내는 고정 기호가 선택한 버전 옆에 나타납니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 로드된 다른 버전이 있을 경우 파일을 다시 로드하라는 메시지가 나타납니다.  
   

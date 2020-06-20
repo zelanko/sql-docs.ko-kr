@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3f1eb85cb05c8284990d46241ed752515ef5504b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba09ba6110f5da2082f13d8277a00bfb9d590d2e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479439"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961923"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>SQL Server 2014에서 지원되지 않는 MDS(Master Data Services) 기능
   이 항목에서는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서 더 이상 사용할 수 없는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]기능에 대해 설명합니다.  
@@ -58,11 +57,11 @@ ms.locfileid: "65479439"
  이 유형의 규칙을 포함하는 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 모델 배포 패키지가 있는 경우 데이터베이스를 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]로 업그레이드할 때 비즈니스 규칙은 제외됩니다.  
   
 ### <a name="bulk-updates-and-exporting"></a>대량 업데이트 및 내보내기  
- [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션에서는 더 이상 여러 멤버에 대한 특성 값을 대량으로 업데이트할 수 없습니다. 대량 업데이트를 수행 하려면 준비 프로세스 또는를 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]사용 합니다.  
+ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션에서는 더 이상 여러 멤버에 대한 특성 값을 대량으로 업데이트할 수 없습니다. 대량 업데이트를 수행 하려면 준비 프로세스 또는를 사용 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 합니다.  
   
- [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션에서는 더 이상 멤버를 Excel로 내보낼 수 없습니다. Excel에서 멤버로 작업 하려면를 사용 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]합니다.  
+ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션에서는 더 이상 멤버를 Excel로 내보낼 수 없습니다. Excel에서 멤버로 작업 하려면를 사용 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 합니다.  
   
-### <a name="transactions"></a>의  
+### <a name="transactions"></a>트랜잭션  
  사용자는 **탐색기** 기능 영역에서 더 이상 자신의 트랜잭션을 되돌릴 수 없습니다. 이전에는 사용자가 **탐색기**에서 데이터에 대 한 변경 내용을 되돌릴 수 있었습니다. 관리자는 **버전 관리** 기능 영역에서 모든 사용자에 대 한 트랜잭션을 되돌릴 수 있습니다.  
   
  주석은 이제 영구적이며 삭제할 수 없습니다. 이전에는 주석이 트랜잭션으로 간주되어 트랜잭션을 되돌리면 삭제할 수 있었습니다.  

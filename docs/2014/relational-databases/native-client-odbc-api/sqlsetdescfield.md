@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: de4bed15-15be-4825-994c-1046255e725a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2ac1f46529dc16c67de7237f191f81decf9a2c0c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 576f6257f3ff5378dc4adb975ab3ef3847dd928c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702166"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021619"
 ---
 # <a name="sqlsetdescfield"></a>SQLSetDescField
   SQLSetDescField를 사용 하 여 테이블 반환 매개 변수 및 테이블 반환 매개 변수 열의 설명자 필드를 설정할 수 있습니다. 사용할 수 있는 필드에 대 한 자세한 내용은 테이블 반환 매개 변수 [설명자 필드](../native-client-odbc-table-valued-parameters/table-valued-parameter-descriptor-fields.md) 및 [테이블 반환 매개 변수 구성 열의 설명자 필드](../native-client-odbc-table-valued-parameters/descriptor-fields-for-table-valued-parameter-constituent-columns.md)를 참조 하세요.  

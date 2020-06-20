@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: 0b03585b-a510-484d-8a63-9b32459def9c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98478b8ed61a49e74a70d576ccd3600319fce645
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c55200e2121cf642df4ff3d974ec98c65a8760a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62695680"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062272"
 ---
 # <a name="job-properties-new-job-schedules-page"></a>작업 속성: 새 작업(일정 페이지)
-  이 페이지를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 일정을 확인 하 고 구성할 수 있습니다.  
+  이 페이지를 사용 하 여 에이전트 작업의 일정을 확인 하 고 구성할 수 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.  
   
 ## <a name="options"></a>옵션  
  **일정 목록**  
  이 작업의 일정을 나열합니다.  
   
- **신규**  
+ **새 항목**  
  새 일정을 만듭니다. 일정을 만들면 해당 작업에 일정이 추가됩니다.  
   
  **선택**  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 301a751bf5b5959ab1fc434ac2a583a6b0378fdd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68198989"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055581"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>피어 투 피어 복제에서 충돌 검색
   피어 투 피어 트랜잭션 복제를 사용하면 토폴로지의 모든 노드에서 데이터를 삽입, 업데이트 및 삭제하고 데이터 변경 내용을 다른 노드로 전파할 수 있습니다. 모든 노드에서 데이터를 변경할 수 있으므로 각 노드에서의 변경이 서로 충돌할 수 있습니다. 두 개 이상의 노드에서 행이 수정되면 이 행이 다른 노드에 전파될 때 충돌이 발생하거나 업데이트가 손실될 수 있습니다.  
@@ -86,7 +85,7 @@ ms.locfileid: "68198989"
   
 -   배포 에이전트에서 변경 내용 적용을 계속하도록 하여 노드를 다시 동기화합니다.  
   
-    1.  [Sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)실행: 매개 변수 및 @property `true` @value 매개 변수에 대해 ' p2p_continue_onconflict '를 지정 합니다.  
+    1.  [Sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)실행: 매개 변수 및 매개 변수에 대해 ' p2p_continue_onconflict '를 지정 @property `true` @value 합니다.  
   
     2.  배포 에이전트를 시작합니다.  
   
@@ -97,7 +96,7 @@ ms.locfileid: "68198989"
         > [!NOTE]  
         >  이 단계를 수행한 이후에도 데이터에 일관성이 없는 경우에는 우선 순위가 가장 높은 노드의 행을 수동으로 업데이트한 후 이 노드에서 변경 내용이 전파되도록 해야 합니다. 토폴로지에 더 이상 충돌하는 변경 내용이 없으면 모든 노드가 일관적인 상태가 됩니다.  
   
-    5.  [Sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)실행: 매개 변수 및 @property `false` @value 매개 변수에 대해 ' p2p_continue_onconflict '를 지정 합니다.  
+    5.  [Sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)실행: 매개 변수 및 매개 변수에 대해 ' p2p_continue_onconflict '를 지정 @property `false` @value 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [피어 투 피어 트랜잭션 복제](peer-to-peer-transactional-replication.md)  

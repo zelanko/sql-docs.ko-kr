@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 870243a5ee69f6058fdc34597ccd4a78b93859e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c099bf9ea271b5ea93fdebfe8f35c98864bca09
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63252863"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062546"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>역할 전환 후 로그인 및 작업 관리(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 고가용성 또는 재해 복구 솔루션을 배포하는 경우 **master** 또는 **msdb** 데이터베이스에 해당 데이터베이스에 대해 저장되는 관련 정보를 다시 생성해야 합니다. 대개 관련 정보에는 주 데이터베이스의 작업과 데이터베이스에 연결해야 하는 프로세스 또는 사용자의 로그인이 포함됩니다. 보조/미러 데이터베이스를 호스팅하는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 이 정보를 복제해야 합니다. 가능하다면 역할이 전환된 후 새 주 데이터베이스에서 프로그래밍 방식으로 해당 정보를 다시 생성하는 것이 가장 좋습니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "63252863"
 >  각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 드라이브 문자를 다르게 지정하는 등의 방법으로 서로 다르게 구성할 수 있습니다. 각 파트너에 대한 작업 시 이러한 모든 차이점을 감안해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타 데이터를 관리 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [분리된 사용자 문제 해결&#40;SQL Server&#41;](troubleshoot-orphaned-users-sql-server.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ea55922-608c-4db2-8b3f-873862755bba
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9692b27e2c9c366808ba70ca9bd7ff0c14771bf7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d570dda8bb6e7a839ae901b7d9f8709895c2e88a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62867347"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031116"
 ---
 # <a name="audit-add-role-event-class"></a>Audit Add Role 이벤트 클래스
   **Audit Add Role** 이벤트 클래스는 데이터베이스에서 데이터베이스 역할이 추가되거나 제거될 때 발생합니다. 이 이벤트 클래스는 **sp_addrole** 및 **sp_droprole** 저장 프로시저에서 사용됩니다.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 71db8ef6-341b-4465-99db-5c63e48d4c7d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 694c5676a5d55fe4fca227d9042ff4f1a9e9d618
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7983d9b7513a44b45311835be85c33fbc9b31397
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704971"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063856"
 ---
 # <a name="increase-or-disable-blocked-process-threshold"></a>차단된 프로세스 임계값 늘리기 또는 해제
   이 규칙은 blocked process threshold 옵션이 0(해제)으로 설정되거나 5 이상의 값(초)으로 설정되어 있는지 검사합니다. blocked process threshold 옵션을 1에서 4 사이의 값으로 설정하면 교착 상태 모니터가 계속해서 실행될 수 있습니다. 1에서 4 사이의 값은 문제 해결 용도로만 사용해야 하며 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 고객 서비스 지원 센터의 도움 없이 장기적으로 사용하거나 프로덕션 환경에서 사용하면 안 됩니다.  

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5b3661c860ee32de8b0f9e6553cfe6171361861a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ca3fbfa00f087d3728fa9244efd4e06ed1610c42
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82697680"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998766"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>IRowsetFastUpload를 사용하여 FILESTREAM 열에 데이터 전송(OLE DB)
   이 예제에서는 IRowsetFastUpload 인터페이스를 사용하여 filestream 열에 4MB에서 4GB 사이의 데이터를 전송합니다.  

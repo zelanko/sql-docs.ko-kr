@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2788847a52d47596c38a9f63161d122543fe8099
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a2721e3fc4d46d2cfbf5284986d343d5baca5862
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706003"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022150"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
   테이블은 **SQLGetInfo**에서 반환 되는 값을 보여 줍니다. 값은 연결된 서버의 버전 번호에 따라 다를 수 있습니다.  
   
- **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 sqlgetinfo는 **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버 (SQLSRV32)의 sqlgetinfo와 다릅니다. DLL)를 사용 하 여 **SQLGetInfo** 를 호출 하면 SQL_KEYWORDS 및 0 버퍼 길이가 사용 됩니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 드라이버는 SQL_SUCCESS를 반환하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버는 SQL_SUCCESS_WITH_INFO를 반환합니다.  그러나 output 키워드 문자열 보다 작은 0이 아닌 버퍼 길이를 사용 하 여 호출 하는 경우 Native Client의 **SQLGetInfo** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_SUCCESS_WITH_INFO 및 SQLState 01004을 반환 합니다.  
+ **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 sqlgetinfo **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 SQL_KEYWORDS 및 0 버퍼 길이를 사용 하 여 **sqlgetinfo** 를 호출할 때 ODBC 드라이버 (SQLSRV32.DLL)에서 sqlgetinfo와 다릅니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 드라이버는 SQL_SUCCESS를 반환하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버는 SQL_SUCCESS_WITH_INFO를 반환합니다.  그러나 output 키워드 문자열 보다 작은 0이 아닌 버퍼 길이를 사용 하 여 호출 하는 경우 Native Client의 **SQLGetInfo** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_SUCCESS_WITH_INFO 및 SQLState 01004을 반환 합니다.  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
@@ -117,7 +116,7 @@ ms.locfileid: "82706003"
 |SQL_IDENTIFIER_QUOTE_CHAR|"(큰따옴표)|  
 |SQL_INDEX_KEYWORDS|SQL_IK_ASC SQL_IK_DESC|  
 |SQL_INFO_SCHEMA_VIEWS|드라이버에서 지원하지 않는 요청입니다.|  
-|SQL_INFO_SS_NETLIB_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 관련 특성입니다. 연결에서 사용하는 네트워크 라이브러리의 이름입니다.<br /><br /> 기본적으로 DBNETLIB이 반환 됩니다.  이 경우 DBNETLIB는 네트워크 라이브러리를 참조 하 고 DBNETLIB와는 관련이 없습니다.|  
+|SQL_INFO_SS_NETLIB_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 관련 특성입니다. 연결에서 사용하는 네트워크 라이브러리의 이름입니다.<br /><br /> 기본적으로 DBNETLIB이 반환 됩니다.  이 경우 DBNETLIB는 네트워크 라이브러리를 참조 하며 dbnetlib.dll와 관련이 없습니다.|  
 |SQL_INTEGRITY|"Y"|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES1|SQL_CA1_ABSOLUTE SQL_CA1_BOOKMARK SQL_CA1_BULK_ADD SQL_CA1_BULK_DELETE_BY_BOOKMARK SQL_CA1_BULK_FETCH_BY_BOOKMARK SQL_CA1_BULK_UPDATE_BY_BOOKMARK SQL_CA1_LOCK_NO_CHANGE SQL_CA1_NEXT SQL_CA1_POS_DELETE SQL_CA1_POS_POSITION SQL_CA1_POS_REFRESH SQL_CA1_POS_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_POSITIONED_UPDATE SQL_CA1_RELATIVE SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES2|SQL_CA2_CRC_EXACT SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_CONCURRENCY SQL_CA2_SENSITIVITY_ADDITIONS SQL_CA2_SENSITIVITY_UPDATES SQL_CA2_SIMULATE_UNIQUE|  

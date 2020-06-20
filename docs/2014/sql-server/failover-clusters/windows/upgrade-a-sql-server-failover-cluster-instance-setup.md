@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d018fb391c7633877f985b4e5e0798bfd803a5fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c393143fbd9f1cc32c9e9ae7c5c1c22fdd0b9447
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62680380"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046114"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>SQL Server 장애 조치(Failover) 클러스터 인스턴스 업그레이드(설치)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 마법사를 사용하거나 명령 프롬프트에서 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 장애 조치(Failover) 클러스터를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터로 업그레이드할 수 있습니다.  
@@ -45,7 +44,7 @@ ms.locfileid: "62680380"
   
 -   Visual Studio 구성 요소가 올바르게 설치될 수 있도록 하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 업데이트를 설치해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에서 이 업데이트가 있는지 여부를 확인한 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치를 계속하기 전에 업데이트를 다운로드하여 설치해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 중 작업이 중단되는 것을 방지하려면 아래에 설명된 대로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치를 실행하기 전에 업데이트를 다운로드하여 설치할 수 있습니다(또는 Windows Update에서 사용 가능한 .NET 3.5 SP1의 모든 업데이트 설치).  
   
-     Windows Server 2008 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 운영 체제가 설치 된 컴퓨터에를 설치 하는 경우 필요한 업데이트를 [여기](https://go.microsoft.com/fwlink/?LinkId=198093) 에서 가져올 수 있습니다.  
+     [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Windows Server 2008 SP2 운영 체제가 설치 된 컴퓨터에를 설치 하는 경우 필요한 업데이트를 [여기](https://go.microsoft.com/fwlink/?LinkId=198093) 에서 가져올 수 있습니다.  
   
      [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP1 또는 [!INCLUDE[win7](../../../includes/win7-md.md)] SP1 운영 체제가 설치된 컴퓨터에 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 를 설치하는 경우 이 업데이트가 포함되어 있습니다.  
   
@@ -78,11 +77,11 @@ ms.locfileid: "62680380"
 ## <a name="upgrading-to-a-sssql14-multi-subnet-failover-cluster"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 다중 서브넷 장애 조치(Failover) 클러스터로 업그레이드  
  다음과 같은 두 가지 업그레이드 시나리오가 있을 수 있습니다.  
   
-1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]장애 조치 (failover) 클러스터가 현재 단일 서브넷에 구성 되어 있습니다. 먼저 설치 프로그램을 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 시작 하 고 업그레이드 프로세스를 수행 하 여 기존 클러스터를로 업그레이드 해야 합니다. 기존 장애 조치(Failover) 클러스터의 업그레이드를 완료한 후에는 AddNode 기능을 사용해서 다른 서브넷에 있는 노드를 추가합니다. 클러스터 네트워크 구성 페이지에서 IP 주소 리소스 종속성을 OR로 변경하도록 확인하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치(Failover) 클러스터 구성이 완료됩니다.  
+1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]장애 조치 (failover) 클러스터가 현재 단일 서브넷에 구성 되어 있습니다. 먼저 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 설치 프로그램을 시작 하 고 업그레이드 프로세스를 수행 하 여 기존 클러스터를로 업그레이드 해야 합니다. 기존 장애 조치(Failover) 클러스터의 업그레이드를 완료한 후에는 AddNode 기능을 사용해서 다른 서브넷에 있는 노드를 추가합니다. 클러스터 네트워크 구성 페이지에서 IP 주소 리소스 종속성을 OR로 변경하도록 확인하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치(Failover) 클러스터 구성이 완료됩니다.  
   
-2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]장애 조치 (failover) 클러스터는 현재 스트레치 V-LAN 기술을 사용 하 여 여러 서브넷에 구성 되어 있습니다. 먼저 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]기존 클러스터를로 업그레이드 해야 합니다. V-LAN 확장 기술은 단일 서브넷을 구성하기 때문에 네트워크 구성을 다중 서브넷으로 변경하고 Windows 장애 조치(Failover) 클러스터 관리 도구를 사용하여 IP 주소 리소스 종속성을 OR로 변경해야 합니다.  
+2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]장애 조치 (failover) 클러스터는 현재 스트레치 V-LAN 기술을 사용 하 여 여러 서브넷에 구성 되어 있습니다. 먼저 기존 클러스터를로 업그레이드 해야 합니다 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] . V-LAN 확장 기술은 단일 서브넷을 구성하기 때문에 네트워크 구성을 다중 서브넷으로 변경하고 Windows 장애 조치(Failover) 클러스터 관리 도구를 사용하여 IP 주소 리소스 종속성을 OR로 변경해야 합니다.  
   
-###  <a name="best-practices-before-upgrading-a-ssnoversion-failover-cluster"></a><a name="BestPractices"></a>장애 조치 (Failover) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클러스터를 업그레이드 하기 전의 모범 사례  
+###  <a name="best-practices-before-upgrading-a-ssnoversion-failover-cluster"></a><a name="BestPractices"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]장애 조치 (Failover) 클러스터를 업그레이드 하기 전의 모범 사례  
  다시 시작으로 인한 예기치 않은 작동 중단 시간을 없애려면 클러스터 노드에서 업그레이드를 실행하기 전에 모든 장애 조치(Failover) 클러스터 노드에 .NET Framework 4.0용 다시 부팅 불필요 패키지를 사전 설치합니다. 다음 단계를 수행하여 필수 구성 요소를 사전 설치하는 것이 좋습니다.  
   
 -   .NET Framework 4.0용 다시 부팅 불필요 패키지를 설치하고 패시브 노드부터 시작하여 공유 구성 요소만 업그레이드합니다. 그러면 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 4.0, Windows Installer 4.5 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 지원 파일이 설치됩니다.  
@@ -108,19 +107,19 @@ ms.locfileid: "62680380"
 2.  > [!IMPORTANT]  
     >   3단계 및 4단계에 대한 자세한 내용은 [장애 조치(Failover) 클러스터 업그레이드 수행 전 최선의 방법](#BestPractices) 섹션을 참조하십시오.  
   
-3.  필수 구성 요소를 설치하고 나면 설치 마법사를 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 센터가 시작됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]기존 인스턴스를 업그레이드 하려면,, **또는 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 업그레이드를 클릭 합니다.**  
+3.  필수 구성 요소를 설치하고 나면 설치 마법사를 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 센터가 시작됩니다. 기존 인스턴스를 업그레이드 하려면,, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **또는에서 업그레이드를 클릭 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 합니다.**  
   
 4.  설치 지원 파일이 필요한 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램이 이를 설치합니다. 컴퓨터를 다시 시작하라는 메시지가 표시되면 컴퓨터를 다시 시작한 후 작업을 계속합니다.  
   
 5.  시스템 구성 검사기가 컴퓨터에서 검색 작업을 실행합니다. 계속하려면 [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
   
-6.  제품 키 페이지에서 기존 제품 버전에 맞는 새 버전의 PID 키를 입력합니다. 예를 들어 Enterprise 장애 조치(Failover) 클러스터를 업그레이드하려면 [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]용 PID 키를 입력해야 합니다. 계속하려면 **다음**을 클릭합니다. 장애 조치(Failover) 클러스터 업그레이드에 사용하는 PID 키는 동일 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 내의 모든 장애 조치(Failover) 클러스터 노드에서 동일해야 합니다. 자세한 내용은 [SQL Server 2014의 버전 및 구성 요소](../../editions-and-components-of-sql-server-2016.md) 및 [지원 되는 버전 및 에디션 업그레이드](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)를 참조 하세요.  
+6.  제품 키 페이지에서 기존 제품 버전에 맞는 새 버전의 PID 키를 입력합니다. 예를 들어 Enterprise 장애 조치(Failover) 클러스터를 업그레이드하려면 [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]용 PID 키를 입력해야 합니다. **다음** 을 클릭하여 계속합니다. 장애 조치(Failover) 클러스터 업그레이드에 사용하는 PID 키는 동일 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 내의 모든 장애 조치(Failover) 클러스터 노드에서 동일해야 합니다. 자세한 내용은 [SQL Server 2014의 버전 및 구성 요소](../../editions-and-components-of-sql-server-2016.md) 및 [지원 되는 버전 및 에디션 업그레이드](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)를 참조 하세요.  
   
-7.  사용 조건 페이지에서 사용권 계약을 읽은 다음 사용 조건과 계약 조건에 동의하면 해당 확인란을 선택합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다. 계속하려면**다음**을 클릭합니다. 설치를 끝내려면 **취소**를 클릭합니다.  
+7.  사용 조건 페이지에서 사용권 계약을 읽은 다음 사용 조건과 계약 조건에 동의하면 해당 확인란을 선택합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다. **다음을 클릭 하 여 계속**합니다. 설치를 끝내려면 **취소**를 클릭합니다.  
   
-8.  인스턴스 선택 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로 업그레이드할 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]인스턴스를 지정합니다. 계속하려면**다음**을 클릭합니다.  
+8.  인스턴스 선택 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로 업그레이드할 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]인스턴스를 지정합니다. **다음을 클릭 하 여 계속**합니다.  
   
-9. 기능 선택 페이지에는 업그레이드할 기능이 미리 선택되어 있습니다. 기능 이름을 선택하면 오른쪽 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 업그레이드할 기능은 변경할 수 없으며, 업그레이드 작업 중에 기능을 추가할 수도 없습니다. 업그레이드 작업이 완료 된 후의 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 업그레이드 된 인스턴스에 기능을 추가 하려면 [SQL Server 2014 &#40;설정&#41;인스턴스에 기능 추가 ](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)를 참조 하세요.  
+9. 기능 선택 페이지에는 업그레이드할 기능이 미리 선택되어 있습니다. 기능 이름을 선택하면 오른쪽 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 업그레이드할 기능은 변경할 수 없으며, 업그레이드 작업 중에 기능을 추가할 수도 없습니다. 업그레이드 작업이 완료 된 후의 업그레이드 된 인스턴스에 기능을 추가 하려면 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] [SQL Server 2014 &#40;설정&#41;인스턴스에 기능 추가 ](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)를 참조 하세요.  
   
      선택한 기능의 필수 구성 요소가 오른쪽 창에 표시됩니다. 설치되어 있지 않은 필수 구성 요소가 있는 경우 SQL Server 설치 프로그램은 이 절차의 뒷부분에 설명된 설치 단계에서 이를 설치합니다.  
   
@@ -128,13 +127,13 @@ ms.locfileid: "62680380"
   
      **인스턴스 id** -기본적으로 인스턴스 이름이 인스턴스 id로 사용 됩니다. 인스턴스 ID는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 설치 디렉터리 및 레지스트리 키를 식별하는 데 사용됩니다. 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 기본 인스턴스의 경우 인스턴스 이름 및 인스턴스 ID는 MSSQLSERVER입니다. 기본이 아닌 인스턴스 ID를 사용하려면 **인스턴스 ID** 확인란을 선택하고 값을 입력합니다. 기본값을 재정의하는 경우, 모든 장애 조치 클러스터 노드에서 업그레이드할 인스턴스에 대해 동일한 인스턴스 ID를 지정해야 합니다. 업그레이드된 인스턴스에 대한 인스턴스 ID는 다수의 노드에서 일치해야 합니다.  
   
-     **검색 된 인스턴스 및 기능** -설치 프로그램을 실행 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 중인 컴퓨터에 있는 인스턴스가 표 형식으로 표시 됩니다. 계속하려면**다음**을 클릭합니다.  
+     **검색 된 인스턴스 및 기능** - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행 중인 컴퓨터에 있는 인스턴스가 표 형식으로 표시 됩니다. **다음을 클릭 하 여 계속**합니다.  
   
 11. 디스크 공간 요구 사항 페이지에서는 사용자가 지정한 기능에 필요한 디스크 공간을 계산한 후 설치 프로그램을 실행 중인 컴퓨터에서 사용 가능한 디스크 공간과 실제로 필요한 디스크 공간의 크기를 비교하여 보여 줍니다.  
   
 12. 전체 텍스트 검색 업그레이드 페이지에서 업그레이드하려는 데이터베이스의 업그레이드 옵션을 지정합니다. 자세한 내용은 [전체 텍스트 검색 업그레이드](../../install/full-text-search-upgrade-options.md)를 참조하세요.  
   
-13. **오류 보고** 페이지에서를 개선 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]하는 데 도움이 되도록에 보낼 정보를 지정 합니다. 오류 보고 옵션은 기본적으로 사용됩니다.  
+13. **오류 보고** 페이지에서를 개선 하는 데 도움이 되도록에 보낼 정보를 지정 합니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . 오류 보고 옵션은 기본적으로 사용됩니다.  
   
 14. 시스템 구성 검사기는 업그레이드 작업이 시작되기 전에 사용자가 지정한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능에 따라 사용자 컴퓨터 구성이 유효한지 검사하기 위한 하나 이상의 규칙 집합을 실행합니다.  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3a1f10ae77061983a5cf64ddd5a3462bb4be49b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80daa694cd015a83657368902b07da254e6196ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035592"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048607"
 ---
 # <a name="issues-of-database-evolution-visual-database-tools"></a>데이터베이스의 단계적 개발 문제(Visual Database Tools)
   배포된 데이터베이스의 구조를 변경하는 경우 변경 내용이 기존 데이터 및 데이터베이스 구조와 호환되도록 각별히 주의해야 합니다. 다음과 같이 수정한 경우 특별한 단계를 수행해야 할 수도 있습니다.  

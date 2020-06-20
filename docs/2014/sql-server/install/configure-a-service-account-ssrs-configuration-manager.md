@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 04dff943d1227f84ff514e593f65c2ce4d7a918f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da8ada61df6a95a83f59bfb3791329728f2856c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952580"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036951"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>서비스 계정 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치에서 보고서 서버 웹 서비스, 보고서 관리자 및 백그라운드 처리 애플리케이션은 하나의 서비스 내에서 실행됩니다. 서비스를 실행하는 계정은 설치 중 서비스 ID 페이지에 계정을 지정할 때 정의되지만 다른 계정을 사용하거나 암호를 업데이트하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용할 수 있습니다.  

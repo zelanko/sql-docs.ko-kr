@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 572644cf673c70000cee7de77f2bca9199f19675
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bb4d4fc19471ce2bacc8b84f60a7e7082ad1ace
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211092"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064101"
 ---
 # <a name="profiler-utility"></a>프로파일러 유틸리티
   **profiler** 유틸리티는 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 도구를 실행합니다. 이 항목에서 나중에 나열된 옵션 인수를 사용하여 애플리케이션 시작 방법을 제어할 수 있습니다.  
@@ -60,7 +59,7 @@ ms.locfileid: "68211092"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 위한 사용자 로그인 ID입니다. 로그인 ID는 대/소문자를 구분합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]입니다.  
+>  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].  
   
  **/P** *password*  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 위한 암호를 지정합니다. 사용자가 원하는 대로 지정할 수 있습니다.  

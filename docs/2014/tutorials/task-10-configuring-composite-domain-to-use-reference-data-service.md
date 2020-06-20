@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 752eefde-8b87-4f54-878e-9963ccbadc8e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 525e0286d8d82f501981c9e936caca581886b9b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd1727ffaa24edf12ed7ad8a5fb4f55f4910855e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481234"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064819"
 ---
 # <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>태스크 10: 참조 데이터 서비스를 사용하도록 복합 도메인 구성
   이 작업에서는 **Melissa 데이터 주소 검사** 서비스를 사용 하도록 **Address Validation** 복합 도메인을 구성 합니다. 런타임에 정리 작업을 수행하는 동안 DQS는 Address Validation 도메인에 있는 도메인 값을 정리하도록 이 서비스에 전달합니다. 자세한 내용은 [참조 데이터에 도메인/복합 도메인 매핑을](https://msdn.microsoft.com/library/hh213030.aspx) 참조 하세요.  
@@ -46,7 +45,7 @@ ms.locfileid: "65481234"
   
      ![도메인에 RDS 스키마 항목 매핑](../../2014/tutorials/media/et-configuringcdtouserds-05.jpg "도메인에 RDS 스키마 항목 매핑")  
   
-9. **확인**을 클릭하여 대화 상자를 닫습니다.  
+9. **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
 ## <a name="next-step"></a>다음 단계  
  [태스크 11: 기술 자료 게시](../../2014/tutorials/task-11-publishing-the-knowledge-base.md)  

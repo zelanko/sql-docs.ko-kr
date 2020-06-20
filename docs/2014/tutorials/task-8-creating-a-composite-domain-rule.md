@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cff3b662-7876-4445-9bdd-96be35b3ca0c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7e40ec982a9b2c43c3d55ec60179ac9a0b80e8a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4766a1206eb09e98bb20d3712a63762126b682b7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489619"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006244"
 ---
 # <a name="task-8-creating-a-composite-domain-rule"></a>태스크 8: 복합 도메인 규칙 만들기
   이 작업에서는 **주소 유효성 검사** 복합 도메인에 대 한 규칙을 만듭니다. 도메인 간 규칙을 정의 합니다. **city** **가 로스앤젤레스 인 경우**시/ **도는** **CA** 여야 합니다. 여기서 **city** 및 **state** 는 두 개의 도메인입니다.  

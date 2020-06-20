@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3fb5e3fa319259df5ba0da1d6234fedee9cb604
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144805"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025192"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>2단원: 다른 컴퓨터에서 연결
   보안을 강화하기 위해 처음 설치 시에는 [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer, Express 및 Evaluation 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 다른 컴퓨터에서 액세스할 수 없습니다. 이 단원에서는 다른 컴퓨터에서 연결하기 위해 프로토콜을 설정하고 포트를 구성하며 Windows 방화벽을 구성하는 방법을 보여 줍니다.  
@@ -44,7 +43,7 @@ ms.locfileid: "63144805"
     > [!NOTE]  
     >  32비트 및 64비트 옵션을 모두 사용할 수 있습니다.  
   
-2.  **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 확장 한 다음 _ \<InstanceName>_ **에 대 한 프로토콜** 을 클릭 합니다.  
+2.  **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 확장하고 ‘\<InstanceName>’**의 프로토콜을 클릭합니다.** __  
   
      기본 인스턴스(명명되지 않은 인스턴스)는 **MSSQLSERVER**로 나열됩니다. 명명된 인스턴스를 설치한 경우 제공한 이름이 나열됩니다. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)]설치 하는 동안 이름을 변경 하지 않는 한 **SQLEXPRESS**로 설치 됩니다.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "63144805"
  보안을 강화하기 위해 Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]및 Windows 7에서는 모두 Windows 방화벽을 설정합니다. 다른 컴퓨터에서 이 인스턴스에 연결하려면 방화벽에서 통신 포트를 열어야 합니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 기본 인스턴스는 포트 1433에서 수신하므로 고정 포트를 구성하지 않아도 됩니다. 그러나 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 을 포함한 명명된 인스턴스는 동적 포트에서 수신합니다. 방화벽에서 포트를 열려면 먼저 고정 포트 또는 정적 포트로 지정된 특정 포트에서 수신하도록 [!INCLUDE[ssDE](../includes/ssde-md.md)] 을 구성해야 합니다. 이렇게 하지 않으면 [!INCLUDE[ssDE](../includes/ssde-md.md)] 이 시작할 때마다 다른 포트에서 수신할 수 있습니다. 방화벽 및 기본 Windows 방화벽 설정에 대한 자세한 내용과 데이터베이스 엔진, Analysis Services, Reporting Services 및 Integration Services에 영향을 주는 TCP 포트에 대한 설명은 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)을 참조하세요.  
   
 > [!NOTE]  
->  포트 번호 할당은 인터넷 할당 번호 기관에 의해 관리 되며에 [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844)나열 됩니다. 포트 번호는 49152 ~ 65535의 숫자에서 할당 해야 합니다.  
+>  포트 번호 할당은 인터넷 할당 번호 기관에 의해 관리 되며에 나열 됩니다 [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844) . 포트 번호는 49152 ~ 65535의 숫자에서 할당 해야 합니다.  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>SQL Server가 특정 포트에서 수신하도록 구성  
   
@@ -67,13 +66,13 @@ ms.locfileid: "63144805"
   
 3.  **TCP/IP 속성** 대화 상자에서 **IP 주소** 탭을 클릭합니다.  
   
-4.  **IPAll** 섹션의 **TCP 포트** 상자에 사용 가능한 포트 번호를 입력합니다. 이 자습서에서는를 사용 `49172`합니다.  
+4.  **IPAll** 섹션의 **TCP 포트** 상자에 사용 가능한 포트 번호를 입력합니다. 이 자습서에서는를 사용 `49172` 합니다.  
   
 5.  **확인** 을 클릭하여 대화 상자를 닫고 서비스를 다시 시작해야 한다는 경고에 대해 **확인** 을 클릭합니다.  
   
 6.  왼쪽 창에서 **SQL Server 서비스**를 클릭하고  
   
-7.  오른쪽 창에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭합니다. 가 [!INCLUDE[ssDE](../includes/ssde-md.md)] 다시 시작 되 면 포트 `49172`에서 수신 대기 하 게 됩니다.  
+7.  오른쪽 창에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭합니다. 가 [!INCLUDE[ssDE](../includes/ssde-md.md)] 다시 시작 되 면 포트에서 수신 대기 하 게 됩니다 `49172` .  
   
 ##  <a name="opening-ports-in-the-firewall"></a><a name="firewall"></a>방화벽에서 포트 열기  
  방화벽 시스템은 컴퓨터 리소스에 대한 무단 액세스를 방지합니다. 방화벽이 설정된 경우 다른 컴퓨터에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 연결하려면 방화벽에서 포트를 열어야 합니다.  
@@ -91,7 +90,7 @@ ms.locfileid: "63144805"
   
 3.  **규칙 유형** 대화 상자에서 **포트**를 선택한 다음 **다음**을 클릭합니다.  
   
-4.  **프로토콜 및 포트** 대화 상자에서 **TCP**를 선택합니다. **특정 로컬 포트**를 선택한 다음 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스의 포트 번호를 입력합니다. 기본 인스턴스의 경우 1433을 입력합니다. 명명 `49172` 된 인스턴스를 구성 하 고 이전 작업에서 고정 포트를 구성 하는 경우을 입력 합니다. **다음**을 클릭합니다.  
+4.  **프로토콜 및 포트** 대화 상자에서 **TCP**를 선택합니다. **특정 로컬 포트**를 선택한 다음 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스의 포트 번호를 입력합니다. 기본 인스턴스의 경우 1433을 입력합니다. `49172`명명 된 인스턴스를 구성 하 고 이전 작업에서 고정 포트를 구성 하는 경우을 입력 합니다. **다음**을 클릭합니다.  
   
 5.  **동작** 대화 상자에서 **연결 허용**을 선택하고 **다음**을 클릭합니다.  
   

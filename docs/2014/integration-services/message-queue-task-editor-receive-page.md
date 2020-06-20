@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 51c26583e24ca0e5247c2aca65ea6fa617932e5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b30a7863fe50843f4408931b2b766bcb520f3a2c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057668"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950993"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>메시지 큐 태스크 편집기(받기 페이지)
   **메시지 큐 태스크 편집기** 대화 상자의 **받기** 페이지를 사용하여 메시지 큐 태스크가 MSMQ( [!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing) 메시지를 받도록 구성할 수 있습니다.  
@@ -39,7 +38,7 @@ ms.locfileid: "66057668"
  **MessageType**  
  메시지 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**데이터 파일 메시지**|메시지가 파일에 저장됩니다. 이 값을 선택하면 동적 옵션 **DataFileMessage**가 표시됩니다.|  
 |**변수 메시지**|메시지가 변수에 저장됩니다. 이 값을 선택하면 동적 옵션 **VariableMessage**가 표시됩니다.|  
@@ -52,13 +51,13 @@ ms.locfileid: "66057668"
  **SaveFileAs**  
  사용할 파일의 경로를 입력하거나 줄임표 단추 **(...)** 를 클릭한 다음, 파일을 찾습니다.  
   
- **언제**  
+ **Overwrite**  
  데이터 파일 메시지의 내용을 저장할 경우 기존 파일의 데이터를 덮어쓸지 여부를 나타냅니다. 기본값은 `False`입니다.  
   
  **Filter**  
  필터를 메시지에 적용할지 여부를 지정합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**필터 없음**|태스크에서 메시지를 필터링하지 않습니다. 이 값을 선택하면 동적 옵션 **IdentifierReadOnly**가 표시됩니다.|  
 |**받을 패키지**|메시지는 지정한 패키지의 메시지만 받습니다. 이 값을 선택하면 동적 옵션 **Identifier**가 표시됩니다.|  
@@ -70,7 +69,7 @@ ms.locfileid: "66057668"
  이 옵션은 읽기 전용입니다. 이전에 Filter 속성을 설정할 때 이 옵션은 비어 있거나 패키지의 GUID를 포함할 수 있습니다.  
   
 #### <a name="filter--from-package"></a>Filter = 받을 패키지  
- **한정자**  
+ **식별자**  
  필터를 적용하도록 선택한 경우 메시지를 받을 수 있는 패키지의 고유 식별자를 입력하거나 줄임표 단추 **(...)** 를 클릭한 다음, 패키지를 지정합니다.  
   
  **관련 항목:** [패키지 선택](control-flow/select-a-package.md)  
@@ -79,13 +78,13 @@ ms.locfileid: "66057668"
  **Filter**  
  필터를 메시지에 적용할지 여부를 지정합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**필터 없음**|태스크에서 메시지를 필터링하지 않습니다. 이 값을 선택하면 동적 옵션 **IdentifierReadOnly**가 표시됩니다.|  
 |**받을 패키지**|메시지는 지정한 패키지의 메시지만 받습니다. 이 값을 선택하면 동적 옵션 **Identifier**가 표시됩니다.|  
   
  **변수**  
- 변수 이름을 입력하거나 \<**새 변수...**>를 클릭한 다음, 새 변수를 구성합니다.  
+ 변수 이름을 입력 하거나 클릭 한 \<**New variable...**> 다음 새 변수를 구성 합니다.  
   
  **관련 항목:** [변수 추가](../../2014/integration-services/add-variable.md)  
   
@@ -96,7 +95,7 @@ ms.locfileid: "66057668"
  이 옵션은 비어 있습니다.  
   
 #### <a name="filter--from-package"></a>Filter = 받을 패키지  
- **한정자**  
+ **식별자**  
  필터를 적용하도록 선택한 경우 메시지를 받을 수 있는 패키지의 고유 식별자를 입력하거나 줄임표 단추 **(...)** 를 클릭한 다음, 패키지를 지정합니다.  
   
  **관련 항목:** [패키지 선택](control-flow/select-a-package.md)  
@@ -105,7 +104,7 @@ ms.locfileid: "66057668"
  **비교**  
  필터를 메시지에 적용할지 여부를 지정합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**없음**|메시지를 비교하지 않습니다.|  
 |**정확하게 일치**|메시지가 **CompareString** 옵션의 문자열과 정확히 일치해야 합니다.|  
@@ -119,7 +118,7 @@ ms.locfileid: "66057668"
  **비교**  
  필터를 메시지에 적용할지 여부를 지정합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**없음**|메시지를 비교하지 않습니다.|  
 |**정확하게 일치**|메시지가 **CompareString** 옵션의 문자열과 정확히 일치해야 합니다.|  
@@ -130,7 +129,7 @@ ms.locfileid: "66057668"
  **Compare** 옵션을 **없음**으로 설정한 경우가 아니면 메시지를 비교할 문자열을 제공합니다.  
   
  **변수**  
- 받은 메시지를 보관할 변수의 이름을 입력하거나 \<**새 변수...**>를 클릭한 다음, 새 변수를 구성합니다.  
+ 받은 메시지를 보관할 변수의 이름을 입력 하거나를 클릭 한 \<**New variable...**> 다음 새 변수를 구성 합니다.  
   
  **관련 항목:** [변수 추가](../../2014/integration-services/add-variable.md)  
   
@@ -139,6 +138,6 @@ ms.locfileid: "66057668"
  [메시지 큐 태스크 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
  [메시지 큐 태스크 편집기 &#40;보내기 페이지&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
  [식 페이지](expressions/expressions-page.md)   
- [Message Queue Task](control-flow/message-queue-task.md)  
+ [메시지 큐 태스크](control-flow/message-queue-task.md)  
   
   

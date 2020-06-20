@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1ce64f821edd68dceaa1809a62a6b894ded6a868
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c7e4b1a77f2fe5a13e21d8b3fe59e37931669b30
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211690"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054988"
 ---
 # <a name="user-defined-functions"></a>사용자 정의 함수
   프로그래밍 언어의 함수처럼 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 정의 함수는 매개 변수를 받아들이고 복잡한 계산과 같은 동작을 수행하며 해당 작업의 결과를 값으로 반환합니다. 반환 값은 단일 스칼라 값이나 결과 집합일 수 있습니다.  
@@ -69,7 +68,7 @@ ms.locfileid: "68211690"
  시스템 함수  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다양한 작업을 수행하는 데 사용되는 다양한 시스템 함수를 제공합니다. 기본 제공 함수는 수정할 수 없습니다. 자세한 내용은 [기본 제공 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/functions), [시스템 저장 함수&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/system-functions-for-transact-sql) 및 [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views)를 참조하세요.  
   
-##  <a name="guidelines"></a><a name="Guidelines"></a>가이드라인  
+##  <a name="guidelines"></a><a name="Guidelines"></a> 지침  
  한 문을 취소하고 모듈(트리거, 저장 프로시저 등)의 다음 문을 실행하도록 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 오류는 함수 내에서 다르게 처리됩니다. 함수에서 그러한 오류가 발생하면 함수의 실행이 중단됩니다. 이에 따라 함수를 호출한 문도 취소됩니다.  
   
  BEGIN...END 블록 내에 있는 문은 어떠한 부작용도 유발하지 않습니다. 함수의 부작용으로는 데이터베이스 테이블 수정과 같은 함수 외부 범위를 갖는 리소스 상태의 영구적인 변경을 들 수 있습니다. 함수의 문에서 변경할 수 있는 것은 로컬 커서나 변수와 같은 함수의 로컬 개체뿐입니다. 함수에서 수행할 수 없는 동작의 예로는 데이터베이스 테이블의 수정, 함수에서 로컬로 사용되지 않는 커서 작업, 전자 메일 보내기, 카탈로그 수정 시도 및 사용자에게 반환되는 결과 집합 생성 등이 있습니다.  
@@ -140,7 +139,7 @@ ms.locfileid: "68211690"
   
 |||  
 |-|-|  
-|**태스크 설명**|**항목**|  
+|**태스크 설명**|**뒷부분**|  
 |Transact-SQL 사용자 정의 함수를 만드는 방법에 대해 설명합니다.|[사용자 정의 함수 만들기&#40;데이터베이스 엔진&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |CLR 함수를 만드는 방법에 대해 설명합니다.|[CLR 함수 만들기](../user-defined-functions/create-clr-functions.md)|  
 |사용자 정의 집계 함수를 만드는 방법에 대해 설명합니다.|[사용자 정의 집계 만들기](../user-defined-functions/create-user-defined-aggregates.md)|  

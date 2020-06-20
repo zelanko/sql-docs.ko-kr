@@ -16,19 +16,18 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cd2a71e6acd52ba92f44c26f184bbd3141de6f4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919597"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954708"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR 스칼라 반환 함수
-  SVF(스칼라 반환 함수)는 문자열, 정수 또는 비트 값과 같은 단일 값을 반환합니다. .NET Framework 프로그래밍 언어를 사용하여 관리 코드에 스칼라 반환 사용자 정의 함수를 만들 수 있습니다. 이러한 함수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 이나 다른 관리 코드에서 액세스할 수 있습니다. CLR 통합의 장점 및 관리 코드와 [!INCLUDE[tsql](../../includes/tsql-md.md)]관리 코드를 선택 하는 방법에 대 한 자세한 내용은 [clr 통합 개요](../clr-integration/clr-integration-overview.md)를 참조 하세요.  
+  SVF(스칼라 반환 함수)는 문자열, 정수 또는 비트 값과 같은 단일 값을 반환합니다. .NET Framework 프로그래밍 언어를 사용하여 관리 코드에 스칼라 반환 사용자 정의 함수를 만들 수 있습니다. 이러한 함수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 이나 다른 관리 코드에서 액세스할 수 있습니다. CLR 통합의 장점 및 관리 코드와 관리 코드를 선택 하는 방법에 대 한 자세한 내용은 [!INCLUDE[tsql](../../includes/tsql-md.md)] [Clr 통합 개요](../clr-integration/clr-integration-overview.md)를 참조 하세요.  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>CLR 스칼라 반환 함수에 대한 요구 사항  
- .NET Framework SVF는 .NET Framework 어셈블리 클래스의 메서드로 구현됩니다. SVF에서 반환 되는 입력 매개 변수 및 유형은, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `varchar` `char` `rowversion` `text` `ntext` `image` `timestamp` `table`,,,,,, 또는 `cursor`를 제외 하 고에서 지원 되는 스칼라 데이터 형식 중 하나일 수 있습니다. SVF는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식과 구현 메서드의 반환 데이터 형식이 일치하는지 확인해야 합니다. 형식 변환에 대 한 자세한 내용은 [CLR 매개 변수 데이터 매핑](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)을 참조 하세요.  
+ .NET Framework SVF는 .NET Framework 어셈블리 클래스의 메서드로 구현됩니다. SVF에서 반환 되는 입력 매개 변수 및 유형은,,,,,,, 또는를 제외 하 고에서 지원 되는 스칼라 데이터 형식 중 하나일 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `varchar` `char` `rowversion` `text` `ntext` `image` `timestamp` `table` `cursor` . SVF는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식과 구현 메서드의 반환 데이터 형식이 일치하는지 확인해야 합니다. 형식 변환에 대 한 자세한 내용은 [CLR 매개 변수 데이터 매핑](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)을 참조 하세요.  
   
  .NET Framework 언어로 .NET Framework SVF를 구현하는 경우 `SqlFunction` 사용자 지정 특성을 지정하여 함수에 대한 추가 정보를 포함할 수 있습니다. `SqlFunction` 특성은 함수가 데이터를 액세스 또는 수정하는지, 결정적인지 여부 및 함수에 부동 소수점 연산이 포함되는지 여부를 나타냅니다.  
   

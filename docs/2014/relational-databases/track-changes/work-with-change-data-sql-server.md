@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eaafa011f1b99ea90afce2902c877d0a25b9e6e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 018d5add95e5d0936f6055e1c6710b6a8ddabdab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63269885"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061465"
 ---
 # <a name="work-with-change-data-sql-server"></a>변경 데이터 작업(SQL Server)
   변경 데이터는 TVF(테이블 반환 함수)를 통해 변경 데이터 캡처 소비자에게 제공됩니다. 이러한 함수의 모든 쿼리에는 반환된 결과 집합을 개발할 때 고려할 LSN(로그 시퀀스 번호)의 범위를 정의하는 두 매개 변수가 필요합니다. 간격을 한정하는 LSN 하한/상한 값 모두 간격 내에 포함되는 것으로 간주됩니다.  
@@ -67,7 +66,7 @@ ms.locfileid: "63269885"
   
 -   [cdc.fn_cdc_get_all_changes_<capture_instance>](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql) 함수는 지정된 간격 동안 발생한 모든 변경 내용을 반환합니다. 이 함수는 항상 생성됩니다. 항목은 항상 먼저 변경 내용의 트랜잭션 커밋 LSN순으로 정렬된 다음 해당 트랜잭션 내의 변경을 순서대로 나열하는 값순으로 정렬되어 반환됩니다. 선택한 행 필터 옵션에 따라 업데이트 시 최종 행이 반환(행 필터 옵션 "all")되거나 업데이트 시 새 값과 이전 값이 모두 반환(행 필터 옵션 "all update old")됩니다.  
   
--   원본 테이블을 사용하도록 설정된 경우 [ 매개 변수가 1로 설정되면 ](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql)cdc.fn_cdc_get_net_changes_<capture_instance>@supports_net_changes 함수가 생성됩니다.  
+-   원본 테이블을 사용하도록 설정된 경우 @supports_net_changes 매개 변수가 1로 설정되면 [cdc.fn_cdc_get_net_changes_<capture_instance>](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql) 함수가 생성됩니다.  
   
     > [!NOTE]  
     >  이 옵션은 원본 테이블에 정의된 기본 키가 있거나 @index_name 매개 변수를 사용하여 고유 인덱스를 식별한 경우에만 지원됩니다.  

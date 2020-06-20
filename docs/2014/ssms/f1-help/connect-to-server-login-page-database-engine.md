@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2fe246a1f8baf1ab9f60ab1fa73e21e81c052aa1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b66a623ca2db3881409604c768ad2873eebf289
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70153701"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064371"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>서버에 연결(로그인 페이지) 데이터베이스 엔진
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 연결할 때 이 탭을 사용하여 옵션을 확인하거나 지정할 수 있습니다.  
@@ -67,7 +66,7 @@ ms.locfileid: "70153701"
  **연결**  
  위에서 선택한 서버에 연결하려면 클릭합니다.  
   
- **옵션**  
+ **Options**  
  대화 상자를 변경하여 암호 저장과 같은 추가 서버 연결 옵션을 숨기려면 클릭합니다.  
   
   

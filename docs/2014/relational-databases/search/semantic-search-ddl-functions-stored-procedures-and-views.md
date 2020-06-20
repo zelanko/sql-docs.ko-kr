@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 182f395f-3168-48a4-b723-ef4403544f9f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ee5cf7136739b012615121e00d8b8d3ed7c7c6ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce6c23f9a8ff1d0dac8986bf6b44c7725d4badc4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011041"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004011"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>의미 체계 검색 DDL, 함수, 저장 프로시저 및 뷰
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 통계 의미 체계 검색을 지원하는 Transact-SQL 문 및 데이터베이스 개체를 나열합니다.  
   
  전체 텍스트 검색을 지원하는 문과 데이터베이스 개체의 목록은 [전체 텍스트 검색 DDL, 함수, 저장 프로시저 및 뷰](../views/views.md)를 참조하세요.  
   
-##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a>Transact-sql DDL (데이터 정의 언어) 문  
+##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Transact-SQL DDL(데이터 정의 언어) 문  
   
 |Object|추가 정보|  
 |------------|----------------------|  
@@ -57,7 +56,7 @@ ms.locfileid: "66011041"
 |[sp_fulltext_semantic_register_language_statistics_db&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql)|[의미 체계 검색 설치 및 구성](install-and-configure-semantic-search.md)|  
 |[sp_fulltext_semantic_unregister_language_statistics_db&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql)|[의미 체계 검색 설치 및 구성](install-and-configure-semantic-search.md)|  
   
-##  <a name="system-views---catalog-views"></a><a name="cv"></a>시스템 뷰-카탈로그 뷰  
+##  <a name="system-views---catalog-views"></a><a name="cv"></a> 시스템 뷰 - 카탈로그 뷰  
   
 |Object|추가 정보|  
 |------------|----------------------|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6da262b-7b38-4ce4-bfd6-6a557c6e8a84
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f51e8f62a6be442c123c5a1309293e204caf08f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b17703fa87f5c0d3e7146a1660ac1ca7c7c1d81
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783215"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008930"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>마스터 서버에서 대상 서버 제거
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 SMO(SQL Server 관리 개체)를 사용하여 마스터 서버에서 대상 서버를 제거하는 방법에 대해 설명합니다. 이 프로시저를 대상 서버에서 실행합니다.  
@@ -79,4 +78,4 @@ sp_msx_defect ;
 ## <a name="see-also"></a>참고 항목  
  [다중 서버 환경 만들기](create-a-multiserver-environment.md)   
  [엔터프라이즈에서 자동화 된 관리](automated-administration-across-an-enterprise.md)   
- [Defect Multiple Target Servers from a Master Server](defect-multiple-target-servers-from-a-master-server.md)  
+ [마스터 서버에서 여러 대상 서버 제거](defect-multiple-target-servers-from-a-master-server.md)  

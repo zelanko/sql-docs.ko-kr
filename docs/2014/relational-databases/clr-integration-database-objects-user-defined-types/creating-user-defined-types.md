@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a26ef6e6f2c7b394191a292bd2d92155eb40450c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6fb949573b73463712e9981cad90e9c7fad9c7c5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76939643"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970693"
 ---
 # <a name="creating-a-user-defined-type"></a>사용자 정의 형식 만들기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 설치할 수 있는 UDT(사용자 정의 형식)를 만들려면 먼저 Visual C# 또는 Visual Basic과 같은 지원되는 .NET Framework 프로그래밍 언어 중 하나에서 UDT를 만들기 위한 사양에 맞는 클래스를 만들어야 합니다. 그런 다음 클래스를 DLL(동적 연결 라이브러리)로 컴파일하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드할 수 있습니다. 또한 Visual Studio를 사용하여 UDT를 만들고 배포할 수도 있습니다.  

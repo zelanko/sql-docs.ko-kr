@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a2e91899172dfc6d640df0c33c77e32de3c1c21c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab42ba3eb6468aac3da2fa780d371818c8776690
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011658"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026298"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>네이티브 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
   확장/DBCS(더블바이트 문자 집합) 문자가 포함되어 있지 않은 데이터 파일을 사용하여 여러 개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 간에 데이터를 대량 전송할 때는 네이티브 형식을 사용하는 것이 바람직합니다.  
@@ -57,10 +56,10 @@ ms.locfileid: "66011658"
   
 -   `char` 또는 `varchar` 데이터  
   
-     **Bcp** 는 각 또는 `varchar` 필드가 `char` 시작 될 때 접두사 길이를 추가 합니다.  
+     Bcp는 각 또는 필드가 시작 될 때 `char` `varchar` 접두사 길이를 추가 합니다. **bcp**  
   
     > [!IMPORTANT]  
-    >  기본 모드를 사용 하는 경우 기본적으로 **bcp** 유틸리티는 문자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 데이터 파일에 복사 하기 전에 OEM 문자로 변환 합니다. **Bcp** 유틸리티는 데이터 파일의 문자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 대량으로 가져오기 전에 문자를 ANSI 문자로 변환 합니다. 이러한 변환 과정에서 확장 문자 데이터가 손실될 수 있습니다. 확장 문자의 경우 유니코드 네이티브 형식을 사용하거나 코드 페이지를 지정하십시오.  
+    >  기본 모드를 사용 하는 경우 기본적으로 **bcp** 유틸리티는 문자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 데이터 파일에 복사 하기 전에 OEM 문자로 변환 합니다. **Bcp** 유틸리티는 데이터 파일의 문자를 테이블에 대량으로 가져오기 전에 문자를 ANSI 문자로 변환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이러한 변환 과정에서 확장 문자 데이터가 손실될 수 있습니다. 확장 문자의 경우 유니코드 네이티브 형식을 사용하거나 코드 페이지를 지정하십시오.  
   
 -   `sql_variant` 데이터  
   
@@ -80,14 +79,14 @@ ms.locfileid: "66011658"
 |**bcp**|**-n**|**Bcp** 유틸리티에서 데이터의 네이티브 데이터 형식을 사용 하도록 합니다. <sup>1</sup>|  
 |BULK INSERT|DATAFILETYPE **= '** native **'**|데이터의 네이티브 또는 와이드 네이티브 데이터 형식을 사용합니다. 서식 파일로 데이터 형식을 지정하면 DATAFILETYPE은 필요하지 않습니다.|  
   
- <sup>1</sup> 네이티브 (**-n**) 데이터를 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트와 호환 되는 형식으로 로드 하려면 **-V** 스위치를 사용 합니다. 자세한 내용은 [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)를 참조하세요.  
+ <sup>1</sup> 네이티브 (**-n**) 데이터를 이전 버전의 클라이언트와 호환 되는 형식으로 로드 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **-V** 스위치를 사용 합니다. 자세한 내용은 [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)를 참조하세요.  
   
  자세한 내용은 [bcp 유틸리티](../../tools/bcp-utility.md), [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 또는 [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)를 참조하세요.  
   
 > [!NOTE]  
 >  서식 파일에서 필드 단위로 서식을 지정할 수도 있습니다. 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)를 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 **bcp** 를 사용하여 네이티브 데이터의 대량 내보내기를 수행하고 내보낸 데이터에 BULK INSERT를 사용하여 대량 가져오기를 수행하는 방법을 보여 줍니다.  
   
 ### <a name="sample-table"></a>예제 테이블  

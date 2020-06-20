@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e74e1530efc8e6000a9edf8882cf37cc60b1f1e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f175351120ab22fe4f64ecc0a33d0d78e3da48ee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63226194"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996789"
 ---
 # <a name="managing-service-broker"></a>Service Broker 관리
   SMO에서 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 개체는 `Microsoft.SqlServer.Management.Smo.Broker` 네임스페이스에 있기 때문에 Microsoft.SqlServer.Smo.dll에 대한 참조가 필요합니다. 클래스 정보를 지원하려면 Microsoft.SqlServer.ServiceBrokerEnum.dll에 대한 참조도 필요합니다.  
