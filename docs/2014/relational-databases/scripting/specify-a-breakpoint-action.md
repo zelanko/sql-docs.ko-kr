@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a85363b4971055b020314492db429b72447b6490
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 36b0f97ab4c6f36f5fc3f95e3eed3418ee0d88b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718603"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049010"
 ---
 # <a name="specify-a-breakpoint-action"></a>중단점 동작 지정
   중단점 **적중될 때** 동작은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거가 중단점에 대해 수행하는 사용자 지정 태스크를 지정합니다. 지정한 적중 횟수에 도달하고 지정한 중단 조건을 만족하면 디버거는 해당 중단점에 대해 지정된 동작을 수행합니다.  
@@ -28,13 +27,13 @@ ms.locfileid: "82718603"
   
  출력 메시지는 디버깅 중인 **의 정보가 포함된 식을 포함하는 텍스트 문자열로** 메시지 표시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 옵션에 지정합니다. 식은 다음과 같습니다.  
   
--   중괄호([!INCLUDE[tsql](../../includes/tsql-md.md)])에 포함된 {} 식. 식은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 변수, 매개 변수 및 기본 제공 함수를 포함할 수 있습니다. 예제에는 {@MyVariable}, {@NameParameter}, {@@SPID} 또는 {SERVERPROPERTY('ProcessID')}가 포함됩니다.  
+-   중괄호({})에 포함된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식. 식은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 변수, 매개 변수 및 기본 제공 함수를 포함할 수 있습니다. 예제에는 {@MyVariable}, {@NameParameter}, {@@SPID} 또는 {SERVERPROPERTY('ProcessID')}가 포함됩니다.  
   
 -   다음 키워드 중 하나:  
   
     1.  $ADDRESS는 중단점이 설정된 저장 프로시저 또는 사용자 정의 함수의 이름을 반환합니다. 중단점이 편집기 창에 설정되어 있으면 $ADDRESS는 편집 중인 스크립트 파일의 이름을 반환합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거에서 $ADDRESS와 $FUNCTION은 동일한 정보를 반환합니다.  
   
-    2.  $CALLER는 저장 프로시저 또는 함수를 호출한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 단위의 이름을 반환합니다. 중단점이 편집기 창에 있으면 $CALLER는 \<No caller available>을 반환합니다. 중단점이 편집기 창의 코드에서 호출되는 저장 프로시저 또는 사용자 정의 함수에 있으면 $CALLER는 편집 중인 파일의 이름을 반환합니다. 중단점이 다른 저장 프로시저 또는 함수에서 호출되는 저장 프로시저 또는 사용자 정의 함수에 있으면 $CALLER는 호출하는 프로시저 또는 함수의 이름을 반환합니다.  
+    2.  $CALLER는 저장 프로시저 또는 함수를 호출한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 단위의 이름을 반환합니다. 중단점이 편집기 창에 있으면 $CALLER 반환 \<No caller available> 됩니다. 중단점이 편집기 창의 코드에서 호출되는 저장 프로시저 또는 사용자 정의 함수에 있으면 $CALLER는 편집 중인 파일의 이름을 반환합니다. 중단점이 다른 저장 프로시저 또는 함수에서 호출되는 저장 프로시저 또는 사용자 정의 함수에 있으면 $CALLER는 호출하는 프로시저 또는 함수의 이름을 반환합니다.  
   
     3.  $CALLSTACK은 체인에서 현재 저장 프로시저 또는 사용자 정의 함수를 호출한 함수 호출 스택을 반환합니다. 중단점이 편집기 창에 있으면 $CALLSTACK은 편집 중인 스크립트 파일의 이름을 반환합니다.  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1679bf9e-a2ef-4f90-8907-a002f7341a7d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 951b49c0356ae27cb58041af5186becfd12853bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b791ba0e3f709288a4e2c5b6add4e74e15d56dee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62677062"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047782"
 ---
 # <a name="unexpected-system-failures"></a>예기치 않은 시스템 오류
   이 규칙은 컴퓨터 이벤트 로그에서 SYSTEM 이벤트 6008을 검사합니다. 이 이벤트는 예기치 않은 시스템 종료를 나타냅니다. 시스템이 불안정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 호스팅하는 데 필요한 안정성 및 무결성을 제공하지 않을 수 있습니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d932e59c-953f-4ab4-934d-b6baf344835c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 74e72deb65d3f693e309926870174ebe72817c3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb89a55e8e4568af00854fc487c51dcdff0658dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63273325"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057705"
 ---
 # <a name="schema-element-for-database-dta"></a>Database의 Schema 요소(DTA)
   튜닝할 데이터베이스의 스키마를 지정합니다.  

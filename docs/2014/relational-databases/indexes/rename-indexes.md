@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 744e7a10c9c4dcd776d58b6234749f2be5aa1479
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 184d6e20f7857c5ea3535e77e21a0630ffc7b678
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63036236"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049852"
 ---
 # <a name="rename-indexes"></a>인덱스 이름 바꾸기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 인덱스 이름을 바꾸는 방법에 대해 설명합니다. 인덱스 이름을 바꾸면 현재 인덱스 이름이 새 이름으로 바뀝니다. 지정된 이름은 테이블 또는 뷰에서 고유해야 합니다. 예를 들어 **XPK_1**이라는 인덱스가 두 테이블에 있을 수는 있지만 동일한 테이블에 **XPK_1**이라는 인덱스가 두 개 있을 수는 없습니다. 기존의 비활성 인덱스와 동일한 이름의 인덱스는 만들 수 없습니다. 인덱스 이름을 바꾼다고 인덱스가 다시 작성되는 것은 아닙니다.  
@@ -66,7 +65,7 @@ ms.locfileid: "63036236"
   
 7.  **닫기**를 클릭합니다.  
   
-8.  **파일** 메뉴에서 **table name**_저장_을 클릭합니다.  
+8.  **파일** 메뉴에서 _table name_**저장**을 클릭합니다.  
   
 #### <a name="to-rename-an-index-by-using-object-explorer"></a>개체 탐색기를 사용하여 인덱스 이름을 바꾸려면  
   

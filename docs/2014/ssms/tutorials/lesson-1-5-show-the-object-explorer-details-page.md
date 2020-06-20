@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8e0965ef-cc3a-43d5-82ad-01f525654b2f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a2771cd508c2bc2f3be0de1c9d0502e8ab5ce062
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff847756d8717184654d8d08c84222dc9e99b9ca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63282028"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058295"
 ---
 # <a name="show-the-object-explorer-details-page"></a>개체 탐색기 정보 페이지 표시
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 개체 탐색기에서 선택한 개체마다 보고서를 표시할 수 있습니다. 개체 탐색기 정보 페이지라고 하는 이 보고서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 생성되며 문서 창으로 열립니다.  

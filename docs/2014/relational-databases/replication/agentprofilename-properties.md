@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b2ecd6ec8584eb4031e7d2c8a0af95204a930498
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 490b922cc76b6443317dbe7368db734f23e002fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721845"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016581"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>&lt;AgentProfileName&gt; 속성
   **에이전트 프로필 속성** 대화 상자를 사용하여 프로필의 각 에이전트 매개 변수에 대해 지정된 값을 보고 사용자 정의 프로필의 값을 수정할 수 있습니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c8642a96-3a09-4ec7-a9c3-c539147e6330
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c48c3aac77d845fba9df72819bc0503eca337ce9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d34085e320cd8ca0b82d382d6d49eaa303086114
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68190076"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065071"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>SQL Server 설치의 새로운 기능
   Windows Vista는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 지원되는 운영 체제가 아닙니다. [!INCLUDE[win7](../../includes/win7-md.md)] 및 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 운영 체제의 경우에는 최소 요구 사항이 서비스 팩 1입니다. 운영 체제 요구 사항에 대 한 자세한 내용은 [SQL Server 2014을 설치 하기 위한 하드웨어 및 소프트웨어 요구 사항](hardware-and-software-requirements-for-installing-sql-server.md)을 참조 하세요.  
@@ -30,7 +29,7 @@ ms.locfileid: "68190076"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서의 업그레이드는 지원되지만 함께 설치는 지원되지 않습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 의 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]지원에 대한 자세한 내용은 [지원되는 버전 및 버전 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)를 참조하세요.  
   
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 Standard 버전의 데이터베이스 엔진에 대한 메모리 용량은 128GB입니다. 에서 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Standard 버전의 데이터베이스 엔진에는 64 GB의 메모리 용량이 있습니다.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 Standard 버전의 데이터베이스 엔진에 대한 메모리 용량은 128GB입니다. 에서 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Standard 버전의 데이터베이스 엔진에는 64 GB의 메모리 용량이 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 2014의 새로운 기능](../what-s-new-in-sql-server-2016.md)   

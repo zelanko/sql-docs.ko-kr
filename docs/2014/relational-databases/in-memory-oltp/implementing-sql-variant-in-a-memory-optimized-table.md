@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d61fe79fd5daddbf5b256540db960143652640bc
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4f0e928ad5349538b11f81949a01f5a986f7d296
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82714908"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050099"
 ---
 # <a name="implementing-sql_variant-in-a-memory-optimized-table"></a>메모리 액세스에 최적화된 테이블에서 SQL_VARIANT 구현
   `SQL_VARIANT` 열이 있는 테이블의 예를 살펴봅니다.  

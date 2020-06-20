@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2dc11b61-d065-4126-8e00-acf40390f9fb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 552a86ba168ab121210b42cc0e462f8fdcbea84b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 549ff7451a31b48459b5a290b94ad406c3768a91
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782169"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935248"
 ---
 # <a name="lightweight-pooling-server-configuration-option"></a>경량 풀링 서버 구성 옵션
   **경량 풀링** 옵션을 사용하여 SMP(대칭적 다중 처리) 환경에서 가끔 발생하는 과도한 컨텍스트 전환과 관련된 시스템 오버헤드를 줄이는 방법을 제공할 수 있습니다. 과도한 컨텍스트 전환이 일어나면 lightweight pooling이 컨텍스트 전환을 인라인으로 수행하여 사용자/커널 링 전환을 줄임으로써 처리량을 향상시킬 수 있습니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 5dde7575a3f657b89d29fefa0da52002bcd6af28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d744457cc517a6172cca96b27eae1f456deca24e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014302"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016070"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>geography 인스턴스 만들기, 구성 및 쿼리
   지리 공간 데이터 형식인 `geography`는 둥근 표면 좌표계로 데이터를 나타냅니다. 이 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 .NET CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` 데이터 형식은 GPS 위도 및 경도 좌표와 같은 타원(둥근 표면) 데이터를 저장합니다.  
@@ -103,7 +102,7 @@ ms.locfileid: "66014302"
  [STGeomCollFromWKB&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/stgeomcollfromwkb-geography-data-type)STGeomCollFromWKB(geography 데이터 형식)  
   
 ###  <a name="constructing-a-geography-instance-from-gml-text-input"></a><a name="gml"></a> GML 텍스트 입력으로부터 지리 인스턴스 구성  
- `geography` 데이터 형식은 `geography` 인스턴스의 XML 표현인 GML에서 인스턴스를 `geography` 생성 하는 메서드를 제공 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 GML 하위 집합을 지원합니다.  
+ `geography`데이터 형식은 `geography` 인스턴스의 XML 표현인 GML에서 인스턴스를 생성 하는 메서드를 제공 합니다 `geography` . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 GML 하위 집합을 지원합니다.  
   
  Geography Markup Language에 대한 자세한 내용은 OGC 사양: [OGC 사양, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)를 참조하세요.  
   
@@ -128,7 +127,7 @@ ms.locfileid: "66014302"
  [AsGml&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/asgml-geography-data-type)  
   
 ##  <a name="querying-the-properties-and-behaviors-of-geography-instances"></a><a name="query"></a> 지리 인스턴스의 속성 및 동작 쿼리  
- 모든 `geography` 인스턴스에는에서 제공 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메서드를 통해 검색할 수 있는 여러 속성이 있습니다. 다음 항목에서는 geography 형식의 속성과 동작 및 각각을 쿼리하는 메서드를 정의합니다.  
+ 모든 `geography` 인스턴스에는에서 제공 하는 메서드를 통해 검색할 수 있는 여러 속성이 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 다음 항목에서는 geography 형식의 속성과 동작 및 각각을 쿼리하는 메서드를 정의합니다.  
   
 ###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> 유효성, 인스턴스 유형 및 GeometryCollection 정보  
  `geography` 인스턴스를 구성한 후 다음과 같은 방법으로 인스턴스 유형을 반환할 수 있습니다. `GeometryCollection` 인스턴스인 경우 특정 `geography` 인스턴스를 반환할 수 있습니다.  
@@ -161,7 +160,7 @@ ms.locfileid: "66014302"
  [STEndpoint&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/stendpoint-geography-data-type)  
   
 ###  <a name="dimension"></a><a name="dimension"></a> 차원  
- 비어 있지 않은 `geography` 인스턴스는 0, 1 또는 2차원이 될 수 있습니다. 및 `geography` `MultiPoint`와 `Point` 같은 0 차원 인스턴스는 길이 또는 영역이 없습니다. `LineString, CircularString`, `CompoundCurve` 및 `MultiLineString`과 같은 1차원 개체에는 길이가 있고, `Polygon, CurvePolygon` 및 `MultiPolygon`과 같은 2차원 인스턴스에는 영역과 길이가 있습니다. 비어 있는 인스턴스에서는 -1차원을 보고하고 `GeometryCollection`에서는 해당 내용의 최대 차원을 보고합니다.  
+ 비어 있지 않은 `geography` 인스턴스는 0, 1 또는 2차원이 될 수 있습니다. `geography`및와 같은 0 차원 인스턴스 `Point` `MultiPoint` 는 길이 또는 영역이 없습니다. `LineString, CircularString`, `CompoundCurve` 및 `MultiLineString`과 같은 1차원 개체에는 길이가 있고, `Polygon, CurvePolygon` 및 `MultiPolygon`과 같은 2차원 인스턴스에는 영역과 길이가 있습니다. 비어 있는 인스턴스에서는 -1차원을 보고하고 `GeometryCollection`에서는 해당 내용의 최대 차원을 보고합니다.  
   
  **인스턴스의 차원을 반환하려면**  
  [STDimension&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/stdimension-geography-data-type)  

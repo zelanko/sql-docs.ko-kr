@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 115f1072dae34075929622b8b3b57a16a43728a2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4a4bb9cca85fd3f7a7ab076b2f8be7707827aced
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82711067"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018543"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>쿼리에 대한 SQL 문 생성
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc 드라이버는 서버 커서를 사용 하 여 odbc 사양에 정의 된 커서 기능을 구현 합니다. ODBC 응용 프로그램은 [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) 를 사용 하 여 다른 문 특성을 설정 하 여 커서 동작을 제어 합니다. 다음은 이러한 특성과 해당 기본값에 대한 설명입니다.  
@@ -55,7 +54,7 @@ ms.locfileid: "82711067"
   
      둘 이상의 SELECT 문이 포함된 저장 프로시저를 실행하는 SQL 문. 여기에는 매개 변수나 변수를 채우는 SELECT 문도 포함됩니다.  
   
--   키워드가  
+-   키워드  
   
      FOR BROWSE 또는 INTO 키워드를 포함하는 SQL 문  
   

@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 58d4d71189598a6fd101e6db0a40b8c8b0a3b903
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be474ea547222c30321d893ee8a1ce6f0af0be39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161864"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049875"
 ---
 # <a name="indexes"></a>인덱스
   다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용할 수 있는 인덱스 유형을 나열하고 추가 정보에 대한 링크를 제공합니다.  
   
-|인덱스 유형|설명|추가 정보|  
+|인덱스 유형|Description|추가 정보|  
 |----------------|-----------------|----------------------------|  
 |Hash|해시 인덱스를 사용하면 메모리의 해시 테이블을 통해 데이터에 액세스할 수 있습니다. 해시 인덱스는 고정된 크기의 메모리를 소모하며, 버킷 수의 함수입니다.|[메모리 액세스에 최적화된 테이블의 인덱스 사용 지침](../in-memory-oltp/memory-optimized-tables.md)|  
 |메모리 최적화 비클러스터형 인덱스|메모리 최적화 비클러스터형 인덱스의 경우 메모리 사용은 행 개수 및 인덱스 키 열의 크기를 반영합니다.|[메모리 액세스에 최적화된 테이블의 인덱스 사용 지침](../in-memory-oltp/memory-optimized-tables.md)|  

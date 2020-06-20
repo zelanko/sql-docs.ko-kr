@@ -23,26 +23,25 @@ helpviewer_keywords:
 ms.assetid: 0978301b-f068-46b6-82b9-dc555161f52e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 85d057af7202a5076f299371fb2b0b2ec170087f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: eb1f05e838688947303d3d58d188be40cddb5253
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703569"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003280"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>sql:hide를 사용하여 요소 및 특성 숨기기
   XSD 스키마에 대해 XPath 쿼리를 실행하면 결과 XML 문서에는 스키마에 지정된 요소와 특성이 포함됩니다. `sql:hide` 주석을 사용하여 일부 요소와 특성이 스키마에서 숨겨지도록 지정할 수 있습니다. 이는 쿼리의 선택 조건에 스키마의 특정 요소나 특성이 필요하지만 생성되는 XML 문서에는 해당 요소나 특성이 포함되지 않게 하려는 경우에 유용합니다.  
   
  `sql:hide` 주석은 부울 값(0=false, 1=true)을 사용합니다. 허용되는 값은 0, 1, true 및 false입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. 특성에 sql:hide 지정  
- 이 예의 XSD 스키마는 **ContactID**, **FirstName**및 **LastName** 특성을 사용 하 여 ** \< Contact>** 요소로 구성 됩니다.  
+ 이 예의 XSD 스키마는 **\<Person.Contact>** **ContactID**, **FirstName**및 **LastName** 특성이 있는 요소로 구성 됩니다.  
   
- ** \< Person. Contact>** 요소는 복합 유형 이므로 동일한 이름 (기본 매핑)의 테이블에 매핑됩니다. ** \< Person. Contact>** 요소의 모든 특성은 단순 유형 이며 AdventureWorks 데이터베이스의 person 테이블에서 이름이 같은 열에 매핑됩니다. 스키마에서 `sql:hide` 주석은 **ContactID** 특성에 지정 됩니다. 이 스키마에 대해 XPath 쿼리를 지정 하면 **ContactID** 는 XML 문서에 반환 되지 않습니다.  
+ **\<Person.Contact>** 요소는 복합 유형 이므로 동일한 이름 (기본 매핑)의 테이블에 매핑됩니다. 요소의 모든 특성은 **\<Person.Contact>** 단순 형식이 며 AdventureWorks 데이터베이스의 Person 테이블에서 이름이 같은 열에 매핑됩니다. 스키마에서 `sql:hide` 주석은 **ContactID** 특성에 지정 됩니다. 이 스키마에 대해 XPath 쿼리를 지정 하면 **ContactID** 는 XML 문서에 반환 되지 않습니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -89,7 +88,7 @@ ms.locfileid: "82703569"
 </ROOT>  
 ```  
   
- 요소에 대해 `sql:hide`를 지정하면 생성되는 XML 문서에 요소와 해당 특성 또는 자식 요소가 표시되지 않습니다. 다음은 `sql:hide` ** \< OD>** 요소에를 지정 하는 또 다른 XSD 스키마입니다.  
+ 요소에 대해 `sql:hide`를 지정하면 생성되는 XML 문서에 요소와 해당 특성 또는 자식 요소가 표시되지 않습니다. 다음은 `sql:hide` 요소에를 지정 하는 다른 XSD 스키마입니다 **\<OD>** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -144,7 +143,7 @@ ms.locfileid: "82703569"
 </xsd:schema>  
 ```  
   
- 이 스키마에 대해 XPath 쿼리 (예:)를 지정 하는 경우 `/Customers[@CID="1"]` 생성 되는 XML 문서에는 다음 부분 결과에 표시 된 것 처럼 ** \< OD>** 요소와 해당 자식이 포함 되지 않습니다.  
+ 이 스키마에 대해 XPath 쿼리 (예:)를 지정 하는 경우 `/Customers[@CID="1"]` 생성 된 XML 문서에는 **\<OD>** 다음 부분 결과와 같이 요소와 해당 자식이 포함 되지 않습니다.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

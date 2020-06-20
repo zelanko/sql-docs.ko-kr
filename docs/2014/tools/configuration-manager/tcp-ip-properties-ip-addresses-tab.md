@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: afb62458cb76a1187dce06efadeca00fc8a382f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6379ddae6d14424d8705441e5a174fc7cb513b28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151439"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064131"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>TCP/IP 속성 (IP 주소 탭)
   **TCP/IP 속성(IP 주소 탭)** 대화 상자를 사용하여 특정 IP 주소에 대한 TCP/IP 프로토콜 옵션을 구성할 수 있습니다. **IPAll** 을 선택하면 모든 주소에 대해 **TCP 동적 포트** 및 **TCP 포트**만 동시에 구성할 수 있습니다.  
   
- 변경 내용은가 다시 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 될 때 적용 됩니다. SQL Server Browser 서비스를 시작 및 중지하는 방법은 온라인 설명서의 "방법: SQL Server Browser 서비스 시작 및 중지"를 참조하십시오.  
+ 변경 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다시 시작 될 때 적용 됩니다. SQL Server Browser 서비스를 시작 및 중지하는 방법은 온라인 설명서의 "방법: SQL Server Browser 서비스 시작 및 중지"를 참조하십시오.  
   
 ## <a name="static-vs-dynamic-ports"></a>정적 포트 대 동적 포트  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 인스턴스는 들어오는 연결을 1443번 포트에서 수신합니다. 보안상의 이유 또는 클라이언트 애플리케이션 요구 사항으로 인해 포트를 변경할 수 있습니다. 기본적으로 SQL Server Express를 비롯한 명명된 인스턴스는 동적 포트에서 수신하도록 구성됩니다. 정적 포트를 구성하려면 **TCP 동적 포트** 상자를 비워 놓고 **TCP 포트** 상자에 사용 가능한 포트 번호를 제공합니다. 방화벽에서 포트를 여는 방법은 온라인 설명서에서 SQL Server 액세스를 허용하도록 Windows 방화벽 구성을 참조하십시오.  

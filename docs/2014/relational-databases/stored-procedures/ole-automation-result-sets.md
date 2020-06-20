@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b2f99e33-2303-427c-94b9-9d55f8e2a6ab
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 649731c1dbbe3f52dec899cc47366cfeb15c9c56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7c9bdc4d51d989db2d4d676b29e0824c0e5b59a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63195234"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062813"
 ---
 # <a name="ole-automation-result-sets"></a>OLE 자동화 결과 집합
   OLE 자동화 속성 또는 메서드에서 1차원 또는 2차원 배열로 데이터를 반환하면 해당 배열은 클라이언트에 결과 집합으로 반환됩니다.  

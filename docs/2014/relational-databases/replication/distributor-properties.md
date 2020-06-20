@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ae7c7197fffcad7f64a82cf7c060e2e35e9bf460
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 501c7931d651498fea49749be38af374c02424ab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721399"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010779"
 ---
 # <a name="sql-server-replication-distributor-properties"></a>SQL Server 복제 배포자 속성
 이 항목에서는 **배포자 속성** 창 내에서 **일반**, **게시자**및 **배포 데이터베이스** 페이지에 있는 속성에 대해 설명 합니다. 

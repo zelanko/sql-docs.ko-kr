@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f4dcc5a7658ee3549d774989ae95a027a5787fc2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 581ce3a1b13d94814904876f61637dcad3dd76de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719076"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050078"
 ---
 # <a name="memory-optimization-advisor"></a>메모리 최적화 관리자
   트랜잭션 성능 보고서 도구( [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)참조)는 메모리 내 OLTP를 사용하도록 변환할 경우 효과를 얻을 수 있는 데이터베이스 테이블을 알려 줍니다. 메모리 내 OLTP를 사용하도록 포팅할 테이블을 식별한 후 메모리 최적화 관리자를 사용하여 디스크 기반 데이터베이스 테이블을 메모리 내 OLTP로 마이그레이션할 수 있습니다.  

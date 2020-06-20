@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 15c17c92-616f-402e-894b-907a296efe5f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 403e0af44fc1db7efaf674d02ed0e3b94e81a5b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a16d439d3b2bc59479866b7bb36295ec4fc8950
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916877"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965959"
 ---
 # <a name="estimate-the-size-of-a-table"></a>테이블 크기 예측
   다음 단계를 통해 테이블에 데이터를 저장하는 데 필요한 공간을 추정할 수 있습니다.  

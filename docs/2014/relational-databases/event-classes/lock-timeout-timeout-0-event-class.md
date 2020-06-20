@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 312cda4fd588336d8be42c82a20392c8d0b80664
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dbb165b157fda7d2bd978a91f479d6c1f2a09272
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023497"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052910"
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Lock:Timeout(timeout &gt; 0) 이벤트 클래스
   **Lock:Timeout(timeout > 0)** 이벤트 클래스는 페이지 등의 특정 리소스에 대해 다른 트랜잭션이 차단 잠금을 보유 중이기 때문에 해당 리소스에 대한 잠금 요청 시간이 초과되었음을 나타냅니다. 이 이벤트 클래스는 제한 시간 값이 0인 이벤트를 포함하지 않는다는 점만 제외하면 **Lock:Timeout** 이벤트 클래스와 동일하게 동작합니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "63023497"
 |DatabaseName|`nvarchar`|시간 초과가 발생한 데이터베이스의 이름입니다.|35|yes|  
 |Duration|`bigint`|이벤트에 의해 사용된 시간(마이크로초)입니다.|13|예|  
 |EndTime|`datetime`|이벤트가 종료된 시간입니다. 이 열은 **SQL:BatchStarting** 또는 **SP:Starting**과 같은 시작하는 이벤트 클래스의 경우 채워지지 않습니다.|15|예|  
-|EventClass|`int`|이벤트 유형 = 189|27|아니요|  
+|EventClass|`int`|이벤트 유형 = 189|27|예|  
 |EventSequence|`int`|요청 내에 지정된 이벤트 시퀀스입니다.|51|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  
@@ -58,7 +57,7 @@ ms.locfileid: "63023497"
 |StartTime|`datetime`|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|예|  
 |TextData|`ntext`|추적에서 캡처된 이벤트 클래스에 따라 달라지는 텍스트 값입니다.|1|yes|  
 |TransactionID|`bigint`|시스템이 할당한 트랜잭션의 ID입니다.|4|예|  
-|유형|`int`|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|예|  
+|Type|`int`|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|예|  
   
 ## <a name="see-also"></a>참고 항목  
  [Lock: Timeout 이벤트 클래스](lock-timeout-event-class.md)   

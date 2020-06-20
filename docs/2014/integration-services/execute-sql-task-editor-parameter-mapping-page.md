@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ebe020a-7921-46b2-8823-398748f379b2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7508324be0bef23ba0590bb181135512d75701e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93881c4e9b91e7ace4c250fbf90b8913484f2ce2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059036"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966763"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>SQL 실행 태스크 편집기(매개 변수 매핑 페이지)
   **SQL 실행 태스크 편집기** 대화 상자의 **매개 변수 매핑** 페이지를 사용하여 변수를 SQL 문의 매개 변수에 매핑할 수 있습니다.  
@@ -28,11 +27,11 @@ ms.locfileid: "66059036"
   
 ## <a name="options"></a>옵션  
  **변수 이름**  
- **추가**를 클릭하여 매개 변수 매핑을 추가했으면 **변수 추가** 대화 상자를 사용하여 목록에서 시스템 또는 사용자 정의 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 추가합니다.  
+ **추가**를 클릭 하 여 매개 변수 매핑을 추가한 후 목록에서 시스템 또는 사용자 정의 변수를 선택 하거나 \<**New variable...**> **변수 추가** 대화 상자를 사용 하 여 새 변수를 추가 하려면 클릭 합니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)  
   
- **Direction**  
+ **방향**  
  매개 변수의 방향을 선택합니다. 각 변수를 입력 매개 변수, 출력 매개 변수 또는 반환 코드에 매핑합니다.  
   
  **데이터 형식**  

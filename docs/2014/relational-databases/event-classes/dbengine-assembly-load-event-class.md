@@ -10,13 +10,12 @@ topic_type:
 - apiref
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 184d08a213dfe796421b379fbb1e3deccd0c56e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c418ac40d8155ad3f5bcd32848b2f7818676b76d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66090867"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053041"
 ---
 # <a name="assembly-load-event-class"></a>Assembly Load 이벤트 클래스
   [어셈블리-로드-클래스](../../database-engine/assembly-load-event-class.md)를 참조 하세요.  

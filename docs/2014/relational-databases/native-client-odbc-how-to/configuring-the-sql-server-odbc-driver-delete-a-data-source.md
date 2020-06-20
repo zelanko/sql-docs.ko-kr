@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c87d0123c5174461e4e3470b4e77ccb4bc5b10a1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ddb4cacd31b08346d64b3d9caa4868c53a90050d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701890"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018962"
 ---
 # <a name="delete-a-data-source-odbc"></a>데이터 원본 삭제(ODBC)
   ODBC 관리자를 사용 하 여 프로그래밍 방식으로 ( [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)사용) 또는 파일 (파일 데이터 원본 이름)을 삭제 하 여 데이터 원본을 삭제할 수 있습니다.  

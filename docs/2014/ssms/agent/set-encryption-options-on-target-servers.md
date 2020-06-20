@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 1a9fd539-e166-4ea8-9f21-ac400ca74dee
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b27dd81df572e289d182fdaa637a3af972b3d603
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd10d2e05e59015542f41cc123de993e6128f9f6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63244983"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067570"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>대상 서버의 암호화 옵션 설정
   마스터 서버와 대상 서버 중 일부 또는 모두 간의 SSL(Secure Sockets Layer) 암호화 통신을 위해 인증서를 사용할 수는 없지만 마스터 서버와 대상 서버 간의 채널을 암호화하려는 경우 대상 서버에서 필요한 보안 수준을 사용하도록 구성합니다.  
   
- 특정 마스터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버/대상 서버 통신 채널에 필요한 적절 한 보안 수준을 구성 하려면 대상 서버의 에이전트 레지스트리 하위 키 **\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\***instance_name*>**\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)** \<instance_name \SQLServerAgent\MsxEncryptChannelOptions (REG_DWORD)를 다음 값 중 하나로 설정 합니다. \<*instance_name*>의 값은 **MSSQL.**_n_입니다. 예를 들어 **MSSQL.1** 또는 **MSSQL.3**입니다.  
+ 특정 마스터 서버/대상 서버 통신 채널에 필요한 적절 한 보안 수준을 구성 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상 서버의 에이전트 레지스트리 하위 키 **\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft \\ SQL Server** \<*instance_name*> **\SQLServerAgent\MsxEncryptChannelOptions (REG_DWORD)** 를 다음 값 중 하나로 설정 합니다. 의 값은 \<*instance_name*> **MSSQL입니다.** _n_. 예를 들어 **MSSQL.1** 또는 **MSSQL.3**입니다.  
   
 |값|Description|  
 |-----------|-----------------|  

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c759cddb5f66f0dbee401e0e58bd6ad8590af8ff
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 177c655f97e32f2044460e87c6cd775cdf8fcde9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704437"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017643"
 ---
 # <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>SQL Server Native Client를 사용하여 Azure SQL Database에 연결
   Native Client를 사용 하 여에 연결 하는 방법을 보여 주는 샘플은 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [개발: 방법 도움말 항목 (Azure SQL Database)](https://msdn.microsoft.com/library/ee621787.aspx)을 참조 하세요.  

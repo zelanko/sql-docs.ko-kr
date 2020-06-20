@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1ef3c378b963168e3c4724033e390803812c5a27
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5954a96ce62e74643087ee4723b1977b140bbf96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63064904"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058318"
 ---
 # <a name="solutions-sql-server-management-studio"></a>솔루션(SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 솔루션은 하나 이상의 관련 프로젝트의 모음입니다. 프로젝트는 일반적으로 사용되는 관리 스크립트와 같이 개발자가 관련 파일을 구성하는 데 사용되는 컨테이너입니다.  

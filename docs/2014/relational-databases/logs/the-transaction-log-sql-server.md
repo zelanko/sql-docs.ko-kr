@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 025ef22e6dee1fcfaa1225a4709fa01b6c326b12
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289411"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049748"
 ---
 # <a name="the-transaction-log-sql-server"></a>트랜잭션 로그(SQL Server)
   각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에는 각 트랜잭션에 의해 적용된 모든 트랜잭션 및 데이터베이스 수정 내용을 기록하는 트랜잭션 로그가 있습니다. 트랜잭션 로그가 채워지지 않도록 트랜잭션 로그를 정기적으로 잘라야 합니다. 그러나 일부 요소로 인해 로그 잘림이 지연될 수 있으므로 로그 크기를 모니터링하는 것이 중요합니다. 일부 작업을 최소로 기록하여 트랜잭션 로그 크기에 주는 영향을 줄일 수 있습니다.  
@@ -76,7 +75,7 @@ ms.locfileid: "79289411"
   
  여러 요소로 인해 로그 잘림이 지연될 수 있습니다. 로그 잘림이 발생하지 않는 이유는 **sys.databases** 카탈로그 뷰의 **log_reuse_wait** 및 [log_reuse_wait_desc](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 열을 쿼리하여 확인할 수 있습니다. 다음 표에서는 이러한 열의 값에 대해 설명합니다.  
   
-|log_reuse_wait 값|log_reuse_wait_desc 값|설명|  
+|log_reuse_wait 값|log_reuse_wait_desc 값|Description|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING|현재 다시 사용 가능한 가상 로그 파일이 하나 이상 있습니다.|  
 |1|CHECKPOINT|마지막 로그 잘림이나 로그 헤더가 가상 로그 파일을 넘어서 이동되지 않았기 때문에 검사점이 발생하지 있습니다(모든 복구 모델).<br /><br /> 로그 잘림 지연을 유발하는 일반적인 이유입니다. 자세한 내용은 [데이터베이스 검사점&#40;SQL Server&#41;](database-checkpoints-sql-server.md)을 참조하세요.|  
@@ -118,7 +117,7 @@ ms.locfileid: "79289411"
   
 -   새 데이터를 삽입 또는 추가할 때 [UPDATE](/sql/t-sql/queries/update-transact-sql) 문의 .WRITE 절을 사용하여 큰 값 데이터 형식을 부분적으로 업데이트하는 작업. 기존 값이 업데이트되는 경우 최소 로깅이 사용되지 않습니다. 큰 값 데이터 형식에 대한 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)을 참조하세요.  
   
--   `text`, `ntext`및 `image` 데이터 형식 열에 새 데이터를 삽입 또는 추가할 때 [WRITETEXT](/sql/t-sql/queries/writetext-transact-sql) 및 [UPDATETEXT](/sql/t-sql/queries/updatetext-transact-sql) 문 기존 값이 업데이트되는 경우 최소 로깅이 사용되지 않습니다.  
+-   [WRITETEXT](/sql/t-sql/queries/writetext-transact-sql) [UPDATETEXT](/sql/t-sql/queries/updatetext-transact-sql) `text` , `ntext` 및 `image` 데이터 형식 열에 새 데이터를 삽입 또는 추가할 때 WRITETEXT 및 UPDATETEXT 문 기존 값이 업데이트되는 경우 최소 로깅이 사용되지 않습니다.  
   
     > [!NOTE]  
     >  WRITETEXT 및 UPDATETEXT 문은 더 이상 사용되지 않으므로 새 애플리케이션에서 사용하지 마십시오.  

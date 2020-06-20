@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 17c1e63789e9c2069d8fdecd8bd62b64bf8a886d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 75950f1848d39162afd5725477de56077b3a2523
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244657"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058495"
 ---
 # <a name="create-a-central-management-server-and-server-group-sql-server-management-studio"></a>중앙 관리 서버 및 서버 그룹 만들기(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]인스턴스를 중앙 관리 서버로 지정하는 방법에 대해 설명합니다. 중앙 관리 서버는 하나 이상의 중앙 관리 서버 그룹으로 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스 목록을 저장합니다. 중앙 관리 서버 그룹을 사용하여 수행되는 동작은 서버 그룹의 모든 서버에 적용됩니다. 여기에는 개체 탐색기를 사용하여 서버에 연결하는 동작 및 여러 서버에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 정책 기반 관리 정책을 동시에 실행하는 동작이 포함됩니다.  
@@ -57,7 +56,7 @@ ms.locfileid: "75244657"
   
 2.  등록된 서버에서 **데이터베이스 엔진**을 확장하고 **중앙 관리 서버**를 마우스 오른쪽 단추로 클릭한 다음 **중앙 관리 서버 등록**을 클릭합니다.  
   
-3.  **새 서버 등록** 대화 상자의 서버 드롭다운 목록에서 중앙 관리 서버로 만들 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 선택합니다. 중앙 관리 서버를 만들려면 Windows 인증을 사용해야 합니다.  
+3.  **새 서버 등록[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대화 상자의 서버 드롭다운 목록에서 중앙 관리 서버로 만들 ** 인스턴스를 선택합니다. 중앙 관리 서버를 만들려면 Windows 인증을 사용해야 합니다.  
   
 4.  **등록된 서버**에서 서버 이름과 설명(선택 사항)을 입력합니다.  
   

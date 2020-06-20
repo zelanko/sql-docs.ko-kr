@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e7b3cbe-3670-4e18-8172-2226e0b6b142
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b32491262bf843cd1ab7fb4d6fd3a0c9c39e4da8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c81f2f4e0cfda66ad67d05b8fe5ce62052c85f23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694293"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011221"
 ---
 # <a name="rowsets"></a>행 집합
   행 집합은 데이터 열이 포함된 행의 집합입니다. 행 집합은 모든 OLE DB 데이터 공급자가 결과 집합 데이터를 테이블 형식으로 노출할 수 있도록 하는 중앙 개체입니다.  
@@ -58,7 +57,7 @@ ms.locfileid: "82694293"
   
 -   [IRow를 사용하여 단일 행 인출](fetching-a-single-row-with-irow.md)  
   
--   [책갈피](bookmarks.md)  
+-   [내부의](bookmarks.md)  
   
 -   [행 집합의 데이터 업데이트](updating-data-in-rowsets.md)  
   

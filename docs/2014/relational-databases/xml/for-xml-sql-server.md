@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 669bf07101a05f2646a0928405b1807dadf0b2ea
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c13c1d4cdf7b1bbc72c956652bb89c2014103d76
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716647"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059461"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML(SQL Server)
   SELECT 쿼리는 결과를 행 집합으로 반환합니다. 선택적으로 쿼리에서 FOR XML 절을 지정하면 SQL 쿼리의 서식 결과를 XML로 검색할 수 있습니다. FOR XML 절은 최상위 쿼리 및 하위 쿼리에서 사용할 수 있습니다. 최상위 FOR XML 절은 SELECT 문에서만 사용할 수 있습니다. 하위 쿼리에서는 INSERT, UPDATE 및 DELETE 문에서 FOR XML을 사용할 수 있습니다. 또한 대입 문에서도 사용할 수 있습니다.  
@@ -39,7 +38,7 @@ ms.locfileid: "82716647"
   
 -   PATH  
   
- RAW 모드는 행 집합의 각 행마다 SELECT 문으로 반환되는 단일 \<row> 요소를 생성합니다. 중첩된 FOR XML 쿼리를 작성하여 XML 계층을 생성할 수 있습니다.  
+ RAW 모드는 \<row> 행 집합의 행 마다 SELECT 문에 의해 반환 되는 단일 요소를 생성 합니다. 중첩된 FOR XML 쿼리를 작성하여 XML 계층을 생성할 수 있습니다.  
   
  AUTO 모드는 SELECT 문이 지정된 방식에 따른 추론 방식을 사용하여 결과 XML에서 중첩 구조를 생성합니다. 생성된 XML의 셰이프는 최소한으로만 제어할 수 있습니다. AUTO 모드 추론 방식으로 생성된 XML 셰이프와는 달리 XML 계층을 생성하도록 중첩된 FOR XML 쿼리를 작성할 수 있습니다.  
   

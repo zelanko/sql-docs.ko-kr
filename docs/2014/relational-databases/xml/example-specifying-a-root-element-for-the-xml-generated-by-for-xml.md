@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bcc54b11-0713-4e43-8dbe-d6f3ad1993b5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8b711477522f000af52129f6f3d981fa24c38790
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ab9253727389e29973ee1f4b5ce38ce94ca86670
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716801"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067850"
 ---
 # <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>예제: FOR XML로 생성된 XML에 대한 루트 요소 지정
   `ROOT` 쿼리에 `FOR XML` 옵션을 지정하면 이 쿼리에 표시된 것과 같이 결과 XML에 대해 단일 최상위 요소를 요청할 수 있습니다. `ROOT` 지시어에 지정된 인수는 루트 요소 이름을 제공합니다.  

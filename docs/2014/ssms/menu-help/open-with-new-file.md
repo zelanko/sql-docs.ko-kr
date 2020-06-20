@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 92d0b5adcdb6b5c482b2a0abcf4ca00f83674df9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 170a6a85c0d4b3e969bd87356b562e4b96ded47f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63240148"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048731"
 ---
 # <a name="open-with-new-file"></a>연결 프로그램(새 파일)
   **파일** 메뉴에서 **열기**를 클릭한 다음 **파일**을 클릭하여 하나 이상의 편집기로 문서를 열 수 있습니다. **파일 열기** 대화 상자에서 파일을 선택하고 **열기** 화살표를 클릭한 다음 **연결 프로그램**을 클릭합니다. **연결 프로그램** 대화 상자의 **열려는 프로그램을 선택하십시오.** 목록에서 원하는 프로그램을 클릭한 다음 **열기**를 클릭합니다.  

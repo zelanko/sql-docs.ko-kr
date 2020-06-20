@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2b215ff16f5e4a42a6d43f0a6e5f9758f158a682
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: f82a6ff79bfc9fbd1fb2d97036fa83c0b3f5d22b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859852"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067427"
 ---
 # <a name="options-environment-general-page"></a>옵션(환경-일반 페이지)
   **옵션** 대화 상자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 시작 동작, 일반 창 관리 옵션 및 기타 일반 설정을 구성할 수 있습니다. **도구** 메뉴에서 **옵션**을 클릭하고 **환경** 폴더를 확장한 다음 **일반**을 클릭합니다.  
