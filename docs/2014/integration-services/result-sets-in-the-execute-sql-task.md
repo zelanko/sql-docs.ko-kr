@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8efb049292caecf21f38ef5bc5a7392138bdcf5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 535ab473d8fe6cf9a89fafa1fc0c9f45b0096f7e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056426"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964573"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>SQL 실행 태스크의 결과 집합
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에서 결과 집합이 SQL 실행 태스크에 반환되는지 여부는 태스크에 사용되는 SQL 명령의 유형에 따라 다릅니다. 예를 들어 SELECT 문은 일반적으로 결과 집합을 반환하지만 INSERT 문은 결과 집합을 반환하지 않습니다.  
@@ -51,15 +50,15 @@ ms.locfileid: "66056426"
   
  결과 집합 유형이 **단일 행**인 경우 열 이름을 결과 집합 이름으로 사용하여 반환 결과의 열을 변수에 바인딩하거나 열 목록의 열의 서수 위치를 결과 집합 이름으로 사용할 수 있습니다. 예를 들어 `SELECT Color FROM Production.Product WHERE ProductID = ?` 쿼리에 대한 결과 집합 이름은 **Color** 또는 **0**일 수 있습니다. 쿼리에서 여러 열을 반환하고 모든 열의 값에 액세스하려는 경우 각 열을 다른 변수에 바인딩해야 합니다. 번호를 결과 집합 이름으로 사용하여 열을 변수에 매핑하면 열이 쿼리의 열 목록에 표시되는 순서가 번호로 적용됩니다. 예를 들어 `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`쿼리에서 **Color** 열에 대해 0을 사용하고 **ListPrice** 열에 대해 1을 사용할 수 있습니다. 열 이름을 결과 집합 이름으로 사용하는 기능은 태스크에서 사용하도록 구성된 공급자에 따라 달라집니다. 일부 공급자만 열 이름을 사용할 수 있습니다.  
   
- 단일 값을 반환하는 일부 쿼리에는 열 이름이 포함되지 않을 수 있습니다. 예를 들어 `SELECT COUNT (*) FROM Production.Product` 문은 열 이름을 반환하지 않습니다. 서수 위치인 0을 결과 이름으로 사용하여 반환 결과에 액세스할 수 있습니다. 열 이름별로 반환 결과에 액세스하려면 쿼리에 AS \<alias name> 절을 포함하여 열 이름을 제공해야 합니다. `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`문은 **CountOfProduct** 열을 제공합니다. **CountOfProduct** 열 이름 또는 서수 위치 0을 사용하여 반환 결과 열에 액세스할 수 있습니다.  
+ 단일 값을 반환하는 일부 쿼리에는 열 이름이 포함되지 않을 수 있습니다. 예를 들어 `SELECT COUNT (*) FROM Production.Product` 문은 열 이름을 반환하지 않습니다. 서수 위치인 0을 결과 이름으로 사용하여 반환 결과에 액세스할 수 있습니다. 열 이름을 사용 하 여 반환 결과에 액세스 하려면 쿼리에 AS 절을 포함 \<alias name> 하 여 열 이름을 제공 해야 합니다. `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`문은 **CountOfProduct** 열을 제공합니다. **CountOfProduct** 열 이름 또는 서수 위치 0을 사용하여 반환 결과 열에 액세스할 수 있습니다.  
   
  결과 집합 유형이 **전체 결과 집합** 이나 **XML**이면 결과 집합 이름으로 0을 사용해야 합니다.  
   
- 변수를 **단일 행** 결과 집합 유형이 있는 결과 집합에 매핑하면 변수에는 결과 집합이 포함하는 열의 데이터 형식과 호환되는 데이터 형식이 있어야 합니다. 예를 들어 `String` 데이터 형식이 있는 열을 포함하는 결과 집합은 숫자 데이터 형식의 변수에 매핑할 수 없습니다. **TypeConversionMode** 속성을로 `Allowed`설정 하는 경우 SQL 실행 태스크는 출력 매개 변수와 쿼리 결과를 결과가 할당 되는 변수의 데이터 형식으로 변환 하려고 시도 합니다.  
+ 변수를 **단일 행** 결과 집합 유형이 있는 결과 집합에 매핑하면 변수에는 결과 집합이 포함하는 열의 데이터 형식과 호환되는 데이터 형식이 있어야 합니다. 예를 들어 `String` 데이터 형식이 있는 열을 포함하는 결과 집합은 숫자 데이터 형식의 변수에 매핑할 수 없습니다. **TypeConversionMode** 속성을로 설정 하는 경우 `Allowed` SQL 실행 태스크는 출력 매개 변수와 쿼리 결과를 결과가 할당 되는 변수의 데이터 형식으로 변환 하려고 시도 합니다.  
   
  XML 결과 집합은 `String` 또는 `Object` 데이터 형식의 변수에만 매핑할 수 있습니다. 변수에 `String` 데이터 형식이 있는 경우 SQL 실행 태스크는 문자열을 반환하고 XML 원본은 XML 데이터를 사용할 수 있습니다. 변수에 `Object` 데이터 형식이 있는 경우 SQL 실행 태스크는 DOM(문서 개체 모델) 개체를 반환합니다.  
   
- **전체 결과 집합** 은 `Object` 데이터 형식의 변수에 매핑되어야 합니다. 반환 결과는 행 집합 개체입니다. Foreach 루프 컨테이너를 사용하여 개체 변수에 저장된 테이블 행 값을 패키지 변수로 추출한 다음 스크립트 태스크를 사용하여 패키지 변수에 저장된 데이터를 파일에 쓸 수 있습니다. Foreach 루프 컨테이너 및 스크립트 태스크를 사용하여 이러한 작업을 수행하는 방법에 대한 데모는 msftisprodsamples.codeplex.com에서 CodePlex 샘플인 [SQL 매개 변수 및 결과 집합 실행](https://go.microsoft.com/fwlink/?LinkId=157863)(영문)을 참조하세요.  
+ **전체 결과 집합** 은 데이터 형식의 변수에 매핑되어야 합니다 `Object` . 반환 결과는 행 집합 개체입니다. Foreach 루프 컨테이너를 사용하여 개체 변수에 저장된 테이블 행 값을 패키지 변수로 추출한 다음 스크립트 태스크를 사용하여 패키지 변수에 저장된 데이터를 파일에 쓸 수 있습니다. Foreach 루프 컨테이너 및 스크립트 태스크를 사용하여 이러한 작업을 수행하는 방법에 대한 데모는 msftisprodsamples.codeplex.com에서 CodePlex 샘플인 [SQL 매개 변수 및 결과 집합 실행](https://go.microsoft.com/fwlink/?LinkId=157863)(영문)을 참조하세요.  
   
  다음 표에는 결과 집합에 매핑될 수 있는 변수의 데이터 형식이 요약되어 있습니다.  
   

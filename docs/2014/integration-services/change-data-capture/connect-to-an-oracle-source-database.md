@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f32462ef33af50a08cd933ed5c1a04c4efaa17de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf25496a36a1c5864ee4101226b6432663af111f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835765"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923464"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Oracle 원본 데이터베이스에 연결
   Oracle 원본 페이지를 사용하여 Oracle 원본 데이터베이스에 연결하는 데 필요한 정보를 제공할 수 있습니다. CDC 인스턴스는 연결된 Oracle 데이터베이스의 다시 실행 로그를 읽습니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "62835765"
 > [!NOTE]
 >  사용자가 로그 마이닝 사용자가 되려면 Oracle 데이터베이스에 다음 권한이 부여되어야 합니다.  
 > 
->  -   \<any-captured-table>에 대한 SELECT 권한  
+>  -   SELECT on\<any-captured-table>  
 > -   SELECT ANY TRANSACTION  
 > -   DBMS LOGMNR에 대한 EXECUTE 권한  
 > -   V$LOGMNR CONTENTS에 대한 SELECT 권한  

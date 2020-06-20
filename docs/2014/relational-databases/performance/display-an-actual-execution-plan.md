@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9403e6e2cf1c341780a06bbdff1c5f38685dd34a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f384e2d2752b7601fbb46b8ee7f7b56a2615651c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150977"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066878"
 ---
 # <a name="display-an-actual-execution-plan"></a>실제 실행 계획 표시
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 실제 그래픽 실행 계획을 생성하는 방법에 대해 설명합니다. 실제 실행 계획을 생성하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 또는 일괄 처리가 실행됩니다. 생성된 실행 계획은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 쿼리를 실행할 때 사용하는 실제 쿼리 실행 계획을 표시합니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "63150977"
   
 ### <a name="to-include-an-execution-plan-for-a-query-during-execution"></a>실행 중에 쿼리의 실행 계획을 포함하려면  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 도구 모음에서 **데이터베이스 엔진 쿼리**를 클릭 합니다. **파일 열기** 도구 모음 단추를 클릭하여 기존 쿼리를 열고 예상 실행 계획을 표시할 수도 있습니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]도구 모음에서 **데이터베이스 엔진 쿼리**를 클릭 합니다. **파일 열기** 도구 모음 단추를 클릭하여 기존 쿼리를 열고 예상 실행 계획을 표시할 수도 있습니다.  
   
 2.  실제 실행 계획을 표시할 쿼리를 입력합니다.  
   

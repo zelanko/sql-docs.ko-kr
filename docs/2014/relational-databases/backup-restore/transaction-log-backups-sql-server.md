@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 752447d6c38a2df0fcbdce72fbba12edd7a9eeb3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920683"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956165"
 ---
 # <a name="transaction-log-backups-sql-server"></a>트랜잭션 로그 백업(SQL Server)
   이 항목에서는 전체 또는 대량 로그 복구 모델을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 관련된 내용을 다룹니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 트랜잭션 로그를 백업하는 방법에 대해 설명합니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "62920683"
   
  **항목 내용:**  
   
--   [로그 백업 시퀀스의 작동 방법](#LogBackupSequence)  
+-   [로그 백업 시퀀스의 작동 방식](#LogBackupSequence)  
   
 -   [권장 사항](#Recommendations)  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62920683"
 ##  <a name="how-a-sequence-of-log-backups-works"></a><a name="LogBackupSequence"></a>로그 백업 시퀀스의 작동 방식  
  트랜잭션 로그 백업 *로그 체인* 시퀀스는 데이터 백업과 독립되어 있습니다. 예를 들어 이벤트가 다음과 같은 순서로 발생한다고 가정합니다.  
   
-|시간|이벤트|  
+|Time|이벤트|  
 |----------|-----------|  
 |8:00 A.M.|데이터베이스를 백업합니다.|  
 |정오|트랜잭션 로그를 백업합니다.|  

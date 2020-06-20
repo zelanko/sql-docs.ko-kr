@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6da8f9de22f1b3191d6fba1918e8c05a64d062f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd7c505701a4edb1f66ca516d06179b2eb1a222d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920676"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956253"
 ---
 # <a name="tail-log-backups-sql-server"></a>비상 로그 백업(SQL Server)
   이 항목에서는 전체 또는 대량 로그 복구 모델을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 백업 및 복원과 관련된 내용을 다룹니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "62920676"
 ##  <a name="scenarios-that-require-a-tail-log-backup"></a><a name="TailLogScenarios"></a> 비상 로그 백업이 필요한 시나리오  
  다음과 같은 경우에는 비상 로그 백업을 수행하는 것이 좋습니다.  
   
--   데이터베이스가 온라인이며 데이터베이스에서 복원 작업을 수행하려는 경우 먼저 비상 로그를 백업합니다. 온라인 데이터베이스에 대 한 오류를 방지 하려면 다음을 사용 해야 합니다. [BACKUP](/sql/t-sql/statements/backup-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 WITH NORECOVERY 옵션을 사용 합니다.  
+-   데이터베이스가 온라인이며 데이터베이스에서 복원 작업을 수행하려는 경우 먼저 비상 로그를 백업합니다. 온라인 데이터베이스에 대 한 오류를 방지 하려면 다음을 사용 해야 합니다. [BACKUP](/sql/t-sql/statements/backup-transact-sql) 문의 WITH NORECOVERY 옵션을 사용 [!INCLUDE[tsql](../../includes/tsql-md.md)] 합니다.  
   
 -   데이터베이스가 오프라인이고 시작되지 않아서 데이터베이스를 복원해야 할 경우 먼저 비상 로그를 백업합니다. 이 시점에서는 트랜잭션이 발생할 수 없으므로 WITH NORECOVERY 옵션의 사용은 선택 사항입니다.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "62920676"
   
 |BACKUP LOG 옵션|주석|  
 |-----------------------|--------------|  
-|NORECOVERY|데이터베이스에서 복원 작업을 계속하려는 경우 NORECOVERY를 사용합니다. NORECOVERY는 데이터베이스를 복원 중인 상태로 만듭니다. 이렇게 하면 비상 로그 백업 후 데이터베이스가 변경되지 않습니다.  NO_TRUNCATE 옵션 또는 COPY_ONLY 옵션을 함께 지정하지 않으면 로그가 잘립니다.<br /><br /> ** \* 중요 \* \* ** 데이터베이스가 손상 된 경우를 제외 하 고 NO_TRUNCATE를 사용 하지 않는 것이 좋습니다.|  
+|NORECOVERY|데이터베이스에서 복원 작업을 계속하려는 경우 NORECOVERY를 사용합니다. NORECOVERY는 데이터베이스를 복원 중인 상태로 만듭니다. 이렇게 하면 비상 로그 백업 후 데이터베이스가 변경되지 않습니다.  NO_TRUNCATE 옵션 또는 COPY_ONLY 옵션을 함께 지정하지 않으면 로그가 잘립니다.<br /><br /> 중요 데이터베이스가 손상 된 경우를 제외 하 고 NO_TRUNCATE를 사용 하지 않는 것이 좋습니다. ** \* \* \* \* **|  
 |CONTINUE_AFTER_ERROR|손상된 데이터베이스의 비상 로그를 백업하는 경우에만 CONTINUE_AFTER_ERROR를 사용합니다.<br /><br /> 참고: 손상 된 데이터베이스에서 비상 로그 백업을 사용 하는 경우 일반적으로 로그 백업에서 캡처되는 메타 데이터 중 일부를 사용할 수 없을 수도 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [완전하지 않은 백업 메타데이터가 포함된 비상 로그 백업](#IncompleteMetadata)을 참조하십시오.|  
   
 ##  <a name="tail-log-backups-that-have-incomplete-backup-metadata"></a><a name="IncompleteMetadata"></a>완전 하지 않은 백업 메타 데이터가 포함 된 비상 로그 백업  
@@ -78,8 +77,8 @@ ms.locfileid: "62920676"
  [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [SQL Server 데이터베이스 백업 및 복원](back-up-and-restore-of-sql-server-databases.md)   
- [SQL Server&#41;&#40;복사 전용 백업](copy-only-backups-sql-server.md)   
- [트랜잭션 로그 백업은 SQL Server를 &#40;&#41;](transaction-log-backups-sql-server.md)   
+ [복사 전용 백업&#40;SQL Server&#41;](copy-only-backups-sql-server.md)   
+ [트랜잭션 로그 백업&#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](apply-transaction-log-backups-sql-server.md)  
   
   

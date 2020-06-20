@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4b0dcc3c1709943207834aab6ef4b39453b2d89d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bdb65c464e63f8e7ab248c49f6dca729add3004
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827562"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915993"
 ---
 # <a name="define-a-state-variable"></a>상태 변수 정의
   이 절차에서는 CDC 상태가 저장되는 패키지 변수를 정의하는 방법을 설명합니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "62827562"
 |`<ir-start>`|초기 로드가 시작되기 직전 변경 내용의 LSN입니다.|  
 |`<ir-end>`|초기 로드가 끝난 직후 변경 내용의 LSN입니다.|  
 |`TS`|이렇게 하면 마지막 CDC 상태 업데이트의 타임 스탬프가 표시됩니다.|  
-|**\<타임 스탬프>**|System.DateTime.UtcNow 속성인 64비트의 10진수 표현입니다.|  
+|**\<timestamp>**|System.DateTime.UtcNow 속성인 64비트의 10진수 표현입니다.|  
 |`ER`|마지막 작업이 실패했을 때 표시되며 오류의 원인에 대한 간단한 설명이 포함되어 있습니다. 이 구성 요소가 있으면 항상 마지막에 표시됩니다.|  
 |`<short-error-text>`|간단한 오류 설명입니다.|  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62827562"
   
  다음 표에는 가능한 CDC 상태 값에 대한 설명이 나와 있습니다.  
   
-|시스템 상태|설명|  
+|시스템 상태|Description|  
 |-----------|-----------------|  
 |(INITIAL)|현재 CDC 그룹에서 패키지가 실행되기 전의 초기 상태입니다. CDC 상태가 비어 있을 때의 상태이기도 합니다.|  
 |ILSTART(초기 로드 시작)|CDC 제어 태스크에 대한 `MarkInitialLoadStart` 작업 호출 이후 초기 로드 패키지를 시작할 때의 상태입니다.|  

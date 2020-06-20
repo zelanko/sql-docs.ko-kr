@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8a4c2cb8-fd2f-4c45-824f-b93473a8981e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3bf33d52b380e1ac05864c6e7402567b42df54a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54d61b7696f00aeacdd92a3803630838f6f3ad1a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061035"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923984"
 ---
 # <a name="cdc-source-editor-error-output-page"></a>CDC 원본 편집기(오류 출력 페이지)
   **CDC 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택할 수 있습니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "66061035"
  **입/출력**  
  데이터 원본의 이름을 표시합니다.  
   
- **열의**  
+ **열**  
  **CDC 원본 편집기** 대화 상자의 **연결 관리자** 페이지에서 선택한 외부(원본) 열을 표시합니다.  
   
  **오류**  
@@ -59,7 +58,7 @@ ms.locfileid: "66061035"
  다음 옵션을 사용하여 CDC 원본에서 오류 및 잘림을 처리하는 방법을 구성할 수 있습니다.  
   
  **구성 요소 실패**  
- 오류 또는 잘림이 발생하면 데이터 흐름 태스크가 실패합니다. 기본 동작입니다.  
+ 오류 또는 잘림이 발생하면 데이터 흐름 태스크가 실패합니다. 이것은 기본적인 동작입니다.  
   
  **오류 무시**  
  오류 또는 잘림이 무시되고 데이터 행이 CDC 원본 출력으로 전달됩니다.  

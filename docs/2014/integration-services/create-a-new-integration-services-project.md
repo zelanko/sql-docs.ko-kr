@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1e23f259-0401-4333-ab4f-89809aae63b1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3a1d8542ba5cc689cef60fc81641c37c96ea790
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e677162d88fd1f724b53e0d1838eefd16d1a87af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060220"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917393"
 ---
 # <a name="create-a-new-integration-services-project"></a>새 Integration Services 프로젝트 만들기
   이 절차에서는 새 프로젝트와 새 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 솔루션을 만듭니다.  

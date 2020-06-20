@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2289aab5-e048-4288-bcae-aaf768ca014a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 26c5b80fe5932906324d7131e967760a6a918aaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 804c1c74356e52822cc369e9b4a179433d6c6f92
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62698922"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053360"
 ---
 # <a name="audit-database-object-gdr-event-class"></a>Audit Database Object GDR 이벤트 클래스
   **Audit Database Object GDR** 이벤트 클래스는 어셈블리와 스키마 같은 데이터베이스 개체에 대해 GRANT, REVOKE 또는 DENY가 실행되었을 때 발생합니다.  

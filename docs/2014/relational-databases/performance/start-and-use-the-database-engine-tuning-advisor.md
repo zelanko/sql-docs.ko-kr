@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2421ceaff8b2f54c1371f44e80b4a1774b64f829
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150638"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066799"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자 시작 및 사용
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 데이터베이스 엔진 튜닝 관리자를 시작 및 사용하는 방법에 대해 설명합니다. 데이터베이스 튜닝 후 결과를 보고 작업하는 방법은 [데이터베이스 엔진 튜닝 관리자의 출력 보기 및 작업](database-engine-tuning-advisor.md)을 참조하세요.  
@@ -175,7 +174,7 @@ ms.locfileid: "63150638"
   
 2.  작업을 만듭니다. 자세한 내용은 이 항목의 앞부분에 나오는 [작업 만들기](#Create) 를 참조하세요.  
   
-3.  데이터베이스 엔진 튜닝 관리자를 시작 하 고 인스턴스에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로그인 합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [데이터베이스 엔진 튜닝 관리자 시작](#Start) 을 참조하세요.  
+3.  데이터베이스 엔진 튜닝 관리자를 시작 하 고 인스턴스에 로그인 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [데이터베이스 엔진 튜닝 관리자 시작](#Start) 을 참조하세요.  
   
 4.  **일반** 탭의 **세션 이름** 에 이름을 입력하여 새 튜닝 세션을 만듭니다.  
   
@@ -298,7 +297,7 @@ ms.locfileid: "63150638"
 ##  <a name="create-an-xml-input-file"></a><a name="XMLInput"></a>XML 입력 파일 만들기  
  숙련된 XML 개발자인 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에서 작업을 튜닝할 때 사용하는 XML 형식의 파일을 만들 수 있습니다. 이러한 XML 파일을 만들려면 선호하는 XML 도구를 사용하여 예제 파일을 편집하거나 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 XML 스키마에서 인스턴스를 생성합니다.  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 XML 스키마는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 다음 위치에 있습니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]튜닝 관리자 XML 스키마는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 다음 위치에 있습니다.  
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
@@ -436,7 +435,7 @@ database_name.owner_name.table_name
  **중지 시간**  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자를 중지할 날짜 및 시간을 입력합니다.  
   
- **인덱스와 인덱싱된 뷰**  
+ **인덱스 및 인덱싱된 뷰**  
  클러스터형 인덱스, 비클러스터형 인덱스 및 인덱싱된 뷰 추가에 대한 권장 구성을 포함하려면 이 확인란을 선택합니다.  
   
  **인덱싱된 뷰**  
@@ -493,13 +492,13 @@ database_name.owner_name.table_name
  **세부 정보**  
  상태를 나타내는 아이콘이 포함되어 있습니다.  
   
- **작업**  
+ **동작**  
  수행 중인 단계를 표시합니다.  
   
  **상태**  
  동작 단계의 상태를 표시합니다.  
   
- **메시지**  
+ **Message**  
  동작 단계에서 반환된 모든 메시지가 포함되어 있습니다.  
   
  **튜닝 로그**  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 037b176dfacd9420fba64a405d8c851c558e93e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e9e9aef856276508ef557d465c20210e16f3073
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056184"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964203"
 ---
 # <a name="script-task-editor-script-page"></a>스크립트 태스크 편집기(스크립트 페이지)
   **스크립트 태스크 편집기** 대화 상자의 **스크립트** 페이지를 사용하여 스크립트 속성을 설정하고 스크립트에서 액세스할 수 있는 변수를 지정할 수 있습니다.  
@@ -37,8 +36,8 @@ ms.locfileid: "66056184"
   
  스크립트 태스크에 대한 스크립트 언어를 설정하려면 **옵션** 대화 상자의 **일반** 페이지에서 **스크립트 언어** 옵션을 사용하십시오. 자세한 내용은 [General Page](general-page-of-integration-services-designers-options.md)을 참조하세요.  
   
- **진입점**  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 런타임이 스크립트 태스크 코드에 대한 진입점으로 호출하는 메서드를 지정합니다. 지정한 메서드는 VSTA ( [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications) 프로젝트의 scriptmain 클래스에 있어야 합니다. scriptmain 클래스는 스크립트 템플릿에 의해 생성 된 기본 클래스입니다.  
+ **EntryPoint**  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 런타임이 스크립트 태스크 코드에 대한 진입점으로 호출하는 메서드를 지정합니다. 지정한 메서드는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] VSTA (Tools for Applications) 프로젝트의 scriptmain 클래스에 있어야 합니다. scriptmain 클래스는 스크립트 템플릿에 의해 생성 된 기본 클래스입니다.  
   
  VSTA 프로젝트에서 메서드 이름을 변경한 경우 **EntryPoint** 속성의 값을 변경해야 합니다.  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bcd6f094-c613-4835-ae19-4caaadb4bb17
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 869c74a0a739ce95ccb91861d031da1d5d0c6510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e236ed2a298bc8fc9a829948a864f6f5c27a2ba2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151051"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066868"
 ---
 # <a name="display-and-save-execution-plans"></a>실행 계획 표시 및 저장
   이 섹션에서는 실행 계획을 표시하는 방법과 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 실행 계획을 XML 형식의 파일로 저장하는 방법에 대해 설명합니다.  

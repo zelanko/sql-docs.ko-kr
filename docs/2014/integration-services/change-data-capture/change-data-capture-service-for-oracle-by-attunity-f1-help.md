@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0617fca6-1bc1-4ad2-9986-fab94ea0a6f0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a2d9e58d622efd5951f95d3e3b9907a4289df9e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fbe9adaa975940e6d6c73f9b7ebdfa2388ba6e0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835824"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923661"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-f1-help"></a>Attunity Oracle CDC Service F1 도움말
   CDC Service 구성 콘솔을 사용하여 로컬 Oracle CDC Service를 정의, 업데이트 및 삭제합니다.  

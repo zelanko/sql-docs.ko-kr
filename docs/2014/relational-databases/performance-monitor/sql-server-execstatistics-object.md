@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f8557a8-345f-4622-a8a5-763a0388ad94
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a09c2a57b76974758626a1847d5f0df3f8b7f55c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3697dcc854919699cea8d48087ca3a1f69f66c13
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250596"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066969"
 ---
 # <a name="sql-server-execstatistics-object"></a>SQL Server, ExecStatistics 개체
   Microsoft SQL Server의 **SQLServer:ExecStatistics** 개체는 다양한 실행을 모니터링하는 카운터를 제공합니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d1cc7358a7058af9feb3f0540085ab140cfd8a7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f0b0340c33f5a53ba75cb42fa16e08b8b45f92da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889637"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964508"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>프로그래밍 방식으로 원격 패키지 로드 및 실행
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]가 설치되어 있지 않은 로컬 컴퓨터에서 원격 패키지를 실행하려면 패키지를 시작할 때 해당 패키지가 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]가 설치된 원격 컴퓨터에서 실행되도록 합니다. 이렇게 하려면 로컬 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트, 웹 서비스 또는 원격 구성 요소를 사용하여 원격 컴퓨터에서 패키지를 시작하도록 합니다. 로컬 컴퓨터에서 직접 원격 패키지를 시작하면 패키지가 로컬 컴퓨터로 로드되어 로컬 컴퓨터에서 실행됩니다. 로컬 컴퓨터에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]가 설치되어 있지 않으면 패키지가 실행되지 않습니다.  
@@ -36,10 +35,10 @@ ms.locfileid: "62889637"
   
 -   [웹 서비스 또는 원격 구성 요소를 사용하여 프로그래밍 방식으로 원격 패키지 실행](#service)  
   
- 이 항목에서 설명하는 패키지 로드 및 저장 방법을 사용할 경우에는 대부분 `Microsoft.SqlServer.ManagedDTS` 어셈블리에 대한 참조가 필요합니다. 예외는 **sp_start_job** 저장 프로시저를 실행 하기 위해이 항목에서 설명 하는 ADO.NET 방법입니다 .이 방법에서는에 `System.Data`대 한 참조만 필요 합니다. 새 프로젝트에 `Microsoft.SqlServer.ManagedDTS` 어셈블리에 대한 참조를 추가한 후에는 `using` 또는 `Imports` 문을 사용하여 <xref:Microsoft.SqlServer.Dts.Runtime> 네임스페이스를 가져옵니다.  
+ 이 항목에서 설명하는 패키지 로드 및 저장 방법을 사용할 경우에는 대부분 `Microsoft.SqlServer.ManagedDTS` 어셈블리에 대한 참조가 필요합니다. 예외는 **sp_start_job** 저장 프로시저를 실행 하기 위해이 항목에서 설명 하는 ADO.NET 방법입니다 .이 방법에서는에 대 한 참조만 필요 합니다 `System.Data` . 새 프로젝트에 `Microsoft.SqlServer.ManagedDTS` 어셈블리에 대한 참조를 추가한 후에는 `using` 또는 `Imports` 문을 사용하여 <xref:Microsoft.SqlServer.Dts.Runtime> 네임스페이스를 가져옵니다.  
   
 ###  <a name="using-sql-server-agent-to-run-a-remote-package-programmatically-on-the-server"></a><a name="agent"></a> SQL Server 에이전트를 사용하여 서버에서 프로그래밍 방식으로 원격 패키지 실행  
- 다음 코드 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 프로그래밍 방식으로 사용하여 서버에서 원격 패키지를 실행하는 방법을 보여 줍니다. 이 코드 샘플에서는 **에이전트 작업을 시작하는**sp_start_job[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 저장 프로시저를 호출합니다. 이 프로시저가 시작하는 작업의 이름은 `RunSSISPackage`이며 이 작업은 원격 컴퓨터에 있습니다. 그런 다음 `RunSSISPackage` 작업은 원격 컴퓨터에서 패키지를 실행합니다.  
+ 다음 코드 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 프로그래밍 방식으로 사용하여 서버에서 원격 패키지를 실행하는 방법을 보여 줍니다. 이 코드 샘플에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 시작하는 **sp_start_job** 시스템 저장 프로시저를 호출합니다. 이 프로시저가 시작하는 작업의 이름은 `RunSSISPackage`이며 이 작업은 원격 컴퓨터에 있습니다. 그런 다음 `RunSSISPackage` 작업은 원격 컴퓨터에서 패키지를 실행합니다.  
   
 > [!NOTE]  
 >  **sp_start_job** 저장 프로시저의 반환 값은 저장 프로시저에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 성공적으로 시작할 수 있었는지 여부를 나타내며, 패키지가 성공했는지 실패했는지를 나타내지는 않습니다.  
@@ -164,7 +163,7 @@ namespace LaunchSSISPackageAgent_CS
   
 1.  Visual Studio를 열고 원하는 프로그래밍 언어로 웹 서비스 프로젝트를 만듭니다. 예제 코드에서는 프로젝트 이름으로 LaunchSSISPackageService를 사용합니다.  
   
-2.  에 `Microsoft.SqlServer.ManagedDTS` 대 한 참조를 추가 하 `Imports` 고 `using` 또는 문을 코드 파일에 **추가 합니다.**  
+2.  에 대 한 참조를 추가 하 `Microsoft.SqlServer.ManagedDTS` 고 `Imports` 또는 `using` 문을 코드 파일에 **Microsoft.SqlServer.Dts.Runtime** 추가 합니다.  
   
 3.  LaunchPackage 웹 서비스 메서드의 예제 코드를 클래스에 붙여 넣습니다. 이 예제에서는 코드 창의 전체 내용을 보여 줍니다.  
   
@@ -331,7 +330,7 @@ public class LaunchSSISPackageServiceCS : System.Web.Services.WebService
 ```  
   
 #### <a name="testing-the-web-service"></a>웹 서비스 테스트  
- 다음 예제 콘솔 애플리케이션에서는 웹 서비스를 사용하여 패키지를 실행합니다. 웹 서비스의 LaunchPackage 메서드는 클라이언트 컴퓨터에서 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 어셈블리에 대한 참조가 필요하지 않도록 패키지 실행 결과를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 값 대신 정수로 반환합니다. 이 예제에서는 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 값을 미러링하는 값을 포함하는 프라이빗 열거형을 만들어 실행 결과를 보고합니다.  
+ 다음 예제 콘솔 애플리케이션에서는 웹 서비스를 사용하여 패키지를 실행합니다. 웹 서비스의 LaunchPackage 메서드는 클라이언트 컴퓨터에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 어셈블리에 대한 참조가 필요하지 않도록 패키지 실행 결과를 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 값 대신 정수로 반환합니다. 이 예제에서는 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 값을 미러링하는 값을 포함하는 프라이빗 열거형을 만들어 실행 결과를 보고합니다.  
   
 ###### <a name="to-create-a-console-application-to-test-the-web-service"></a>콘솔 애플리케이션을 만들어 웹 서비스를 테스트하려면  
   

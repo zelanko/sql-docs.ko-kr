@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 711ac7ff-5d3d-4533-80ca-d1fecdb3048f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1ca7eb5b4883edf9ab718c731049da4c3be44324
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d83154a1453dce3b4d338c6823a3e1d1b714114
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835801"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923447"
 ---
 # <a name="connect-to-oracle"></a>Oracle에 연결
   CDC 인스턴스에 사용되는 테이블을 처음으로 추가하거나 편집하는 경우 Oracle 데이터베이스에 연결하라는 메시지가 표시됩니다. 캡처할 테이블의 스키마에 액세스할 수 있는 Oracle 사용자의 자격 증명을 입력해야 합니다. 이 대화 상자에 다음을 입력합니다.  
