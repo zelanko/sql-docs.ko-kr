@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 55b09057927fa9c5102b8d816c42e1741bc0883a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2c9dfab3a728bc3d5c2a5179a9bb63fb9845b5c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767675"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965379"
 ---
 # <a name="integration-services-user-interface"></a>Integration Services 사용자 인터페이스
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너 탭의 디자인 화면 외에도 사용자 인터페이스를 사용하면 패키지에 기능을 추가하고 패키지 개체의 속성을 구성하기 위한 다음 창과 대화 상자에 액세스할 수 있습니다.  
@@ -47,7 +46,7 @@ ms.locfileid: "62767675"
 |**디지털 서명**|패키지에 서명하거나 패키지에서 서명을 제거합니다.|**SSIS** 메뉴에서 **디지털 서명**을 클릭합니다.<br /><br /> 또는<br /><br /> **제어 흐름** 탭의 디자인 화면에서 마우스 오른쪽 단추로 아무 곳이나 클릭한 후 **디지털 서명**을 클릭합니다.|  
 |**중단점 설정**|태스크에 중단점을 설정하고 중단점 속성을 설정합니다.|**제어 흐름** 탭의 디자인 화면에서 태스크 또는 컨테이너를 마우스 오른쪽 단추로 클릭한 후 **중단점 편집**을 클릭합니다. 패키지에 중단점을 설정하려면 **제어 흐름** 탭의 디자인 화면에서 마우스 오른쪽 단추로 아무 곳이나 클릭한 후 **중단점 편집**을 클릭합니다.|  
   
- **시작** 창에서는 샘플, 자습서 및 비디오에 대한 링크를 제공합니다. 추가 콘텐츠에 대한 링크를 추가하려면 현재 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에 포함된 SamplesSites.xml 파일을 수정합니다. RSS 피드 URL을 지정하는 \<GettingStartedSamples> 요소 값은 수정하지 않는 것이 좋습니다. 파일은 *\<드라이브>* :\Program Files\Microsoft SQL Server\110\DTS\Binn 폴더에 있습니다. 64비트 컴퓨터의 경우 파일은 *\<드라이브>* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn 폴더에 있습니다.  
+ **시작** 창에서는 샘플, 자습서 및 비디오에 대한 링크를 제공합니다. 추가 콘텐츠에 대한 링크를 추가하려면 현재 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에 포함된 SamplesSites.xml 파일을 수정합니다. \<GettingStartedSamples>RSS 피드 URL을 지정 하는 요소 값은 수정 하지 않는 것이 좋습니다. 파일은 *\<drive>* : FILES\MICROSOFT SQL Server\110\DTS\Binn 폴더에 있습니다. 64 비트 컴퓨터에서 파일은: filefiles *\<drive>* (x86) \MICROSOFT SQL Server\110\DTS\Binn 폴더에 있습니다.  
   
  SamplesSites.xml 파일이 손상된 경우 파일에서 xml을 다음과 같은 기본 xml로 바꿉니다.  
   

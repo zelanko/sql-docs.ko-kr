@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 31c05bbc1be8376144eb191ff28a9cdc6eebdd8a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b450d603ec1d7b8c930a0361d8070519b6a2a91
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068895"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940624"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Analysis Services에서 서버 속성 구성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리자가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 기본 서버 구성 속성을 수정할 수 있습니다. 각 인스턴스에는 동일한 서버의 다른 인스턴스와 독립적으로 설정할 수 있는 자체 구성 속성이 있습니다.  
   
  서버 속성을 설정하려면 SQL Server Management Studio를 사용하거나 특정 인스턴스의 msmdsrv.ini 파일을 편집합니다.  
   
- 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
+ 이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
  [서버(인스턴스) 속성 구성](#bkmk_config)  
   
@@ -77,13 +76,13 @@ ms.locfileid: "66068895"
   
  다음 항목에서는 여러 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 구성 속성에 대해 설명합니다.  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[일반 속성](general-properties.md)|일반 속성에는 데이터 디렉터리, 백업 디렉터리 및 기타 서버 동작을 정의하는 속성을 비롯한 기본 및 고급 속성이 모두 포함됩니다.|  
 |[데이터 마이닝 속성](data-mining-properties.md)|데이터 마이닝 속성은 설정 및 해제할 데이터 마이닝 알고리즘을 제어합니다. 기본적으로 모든 알고리즘이 설정됩니다.|  
 |DSO|DSO는 더 이상 지원되지 않습니다. DSO 속성은 무시됩니다.|  
 |[기능 속성](feature-properties.md)|기능 속성은 서버 인스턴스 간 연결을 제어하는 속성을 비롯한 제품 기능(대부분 고급 기능)에 해당합니다.|  
-|[FileStore 속성](filestore-properties.md)|파일 저장 속성은 고급 사용을 위한 것입니다. 여기에는 고급 메모리 관리 설정이 포함됩니다.|  
+|[파일 저장소 속성](filestore-properties.md)|파일 저장 속성은 고급 사용을 위한 것입니다. 여기에는 고급 메모리 관리 설정이 포함됩니다.|  
 |[잠금 관리자 속성](lock-manager-properties.md)|잠금 관리자 속성은 잠금 및 제한 시간에 해당하는 서버 동작을 정의합니다. 이러한 속성은 대부분 고급 사용을 위한 것입니다.|  
 |[로그 속성](log-properties.md)|로그 속성은 서버에서 이벤트를 기록하는 경우, 장소 및 방법을 제어합니다. 여기에는 오류 로깅, 예외 로깅, 비행 레코더, 쿼리 로깅 및 추적이 포함됩니다.|  
 |[메모리 속성](memory-properties.md)|메모리 속성은 서버의 메모리 사용 방법을 제어합니다. 이 속성은 주로 고급 사용을 위한 것입니다.|  

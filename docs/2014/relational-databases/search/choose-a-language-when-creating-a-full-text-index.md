@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5f045933735d2a26b1e9007868f96680bef4fc47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b514820ad64cbf17df209cbda552e4c5182b75fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012728"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997784"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>전체 텍스트 인덱스 생성 시 언어 선택
   전체 텍스트 인덱스를 만들 때는 인덱싱된 열에 대한 열 수준 언어를 지정해야 합니다. 지정된 언어의 [단어 분리기 및 형태소 분석기](configure-and-manage-word-breakers-and-stemmers-for-search.md) 는 인덱싱된 열에 대한 전체 텍스트 쿼리에 사용됩니다. 전체 텍스트 인덱스를 만들기 위해 열 언어를 선택할 때 고려할 몇 가지 사항이 있습니다. 이러한 고려 사항은 전체 텍스트 엔진으로 텍스트를 토큰화한 다음 인덱싱하는 방법과 관련이 있습니다.  
@@ -49,7 +48,7 @@ ms.locfileid: "66012728"
   
 -   보안  
   
-     언어 구성 요소의 향상 된 보안 기능 덕분에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 새로운 단어 분리기는 기본적으로 사용 하도록 설정 되어 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 전반적인 보안 및 견고성을 향상시키려면 단어 분리기 및 필터와 같은 외부 구성 요소의 서명을 확인하는 것이 좋습니다. 이러한 구성 요소에 서명이 있는지 확인하도록 전체 텍스트를 구성하는 방법은 다음과 같습니다.  
+     [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]언어 구성 요소의 향상 된 보안 기능 덕분에 새로운 단어 분리기는 기본적으로 사용 하도록 설정 되어 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 전반적인 보안 및 견고성을 향상시키려면 단어 분리기 및 필터와 같은 외부 구성 요소의 서명을 확인하는 것이 좋습니다. 이러한 구성 요소에 서명이 있는지 확인하도록 전체 텍스트를 구성하는 방법은 다음과 같습니다.  
   
     ```  
     EXEC sp_fulltext_service 'verify_signature';  
@@ -61,7 +60,7 @@ ms.locfileid: "66012728"
   
 -   다양한 언어에 대한 단어 분리기가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 포함되었으며 기본적으로 사용하도록 설정되어 있습니다.  
   
- 에서 단어 분리기 및 형태소 분석기를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 포함 하는 언어 목록은 [fulltext_languages &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)를 참조 하세요.  
+ 에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 단어 분리기 및 형태소 분석기를 포함 하는 언어 목록은 [Fulltext_languages &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)를 참조 하세요.  
   
 
   
@@ -108,7 +107,7 @@ ms.locfileid: "66012728"
 ##  <a name="effect-of-column-type-on-full-text-search"></a><a name="type"></a> 전체 텍스트 검색에 대한 열 유형의 영향  
  언어 선택에서 또 다른 고려 사항은 데이터 표현 방법과 관련이 있습니다. `varbinary(max)` 열에 저장되지 않은 데이터에 대해서는 특수 필터링이 수행되지 않습니다. 일반적으로 텍스트는 있는 그대로 단어 분리기 구성 요소를 통과합니다.  
   
- 또한 단어 분리기는 주로 문자 텍스트를 처리합니다. 따라서 HTML과 같은 표시 유형이 텍스트에 포함되어 있을 경우 인덱싱 및 검색 중에 언어 정확도가 떨어질 수 있습니다. 이 경우 두 가지 선택 사항이 있습니다. 기본 방법은 열에 `varbinary(max)` 텍스트 데이터를 저장 하 고 필터링 할 수 있도록 해당 문서 유형을 나타내는 것입니다. 이 방법을 선택할 수 없으면 중립 단어 분리기를 사용하고 가능한 경우 의미 없는 단어 목록에 HTML의 'br'과 같은 표시 데이터를 추가할 수 있습니다.  
+ 또한 단어 분리기는 주로 문자 텍스트를 처리합니다. 따라서 HTML과 같은 표시 유형이 텍스트에 포함되어 있을 경우 인덱싱 및 검색 중에 언어 정확도가 떨어질 수 있습니다. 이 경우 두 가지 선택 사항이 있습니다. 기본 방법은 열에 텍스트 데이터를 저장 하 `varbinary(max)` 고 필터링 할 수 있도록 해당 문서 유형을 나타내는 것입니다. 이 방법을 선택할 수 없으면 중립 단어 분리기를 사용하고 가능한 경우 의미 없는 단어 목록에 HTML의 'br'과 같은 표시 데이터를 추가할 수 있습니다.  
   
 > [!NOTE]  
 >  중립 언어를 지정하면 언어 기반 형태소 분석은 적용되지 않습니다.  

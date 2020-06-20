@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6af26cafd4f8dd9bf874ae7860c4f796bef48ae1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f74d9089bf6c2a87edaeaee80c95757982f6c2a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892769"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966220"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>SSIS 패키지 저장(SQL Server 가져오기 및 내보내기 마법사)
-  **SSIS 패키지 저장** 페이지를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` 데이터베이스 또는 확장명이 package.dtsx 인 파일에 Integration Services[!INCLUDE[ssIS](../../includes/ssis-md.md)]() 패키지를 이름, 설명 및 저장할 수 있습니다.  
+  **SSIS 패키지 저장** 페이지를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` 데이터베이스 또는 확장명이 package.dtsx 인 파일에 Integration Services () 패키지를 이름, 설명 및 저장할 수 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에서는 마법사가 만든 패키지를 저장하는 옵션을 사용할 수 없습니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "62892769"
  **설명**  
  패키지에 대한 설명을 입력합니다. 해당 패키지의 용도를 설명하여 패키지를 이해하기 쉽고 유지 관리하기 편하도록 만드는 것이 가장 좋습니다.  
   
- **대상**  
+ **Target**  
  대상 파일에 대해 이전에 지정된 대상([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 파일)을 봅니다.  
   
 ## <a name="target-dynamic-options"></a>대상 동적 옵션  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5e850b7c-4b89-42ad-b0a6-d63ac7cc9568
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b162ebfa6d888460b49f0877d634c88bba47464a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce970f4e944fbc4d940d1021a48600be9cd47967
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062143"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926314"
 ---
 # <a name="add-a-source-using-source-assistant"></a>원본 길잡이를 사용하여 원본 추가
   이 항목에서는 원본 길잡이를 사용하여 새 원본을 추가하는 단계를 제공하며, 원본 길잡이를 SSIS 디자이너에 끌어 놓으면 나타나는 **새 원본 추가** 대화 상자에서 사용할 수 있는 옵션을 보여 줍니다.  
@@ -28,10 +27,10 @@ ms.locfileid: "66062143"
   
 3.  **유형** 목록에서 대상의 유형을 선택합니다.  
   
-4.  **연결** 관리자 목록에서 기존 연결 관리자를 선택 하거나 ** \<새>** 를 선택 하 여 새 연결 관리자를 만듭니다.  
+4.  **연결** 관리자 목록에서 기존 연결 관리자를 선택 하거나 선택 **\<New>** 하 여 새 연결 관리자를 만듭니다.  
   
 5.  기본 연결 관리자를 선택한 경우 **확인** 을 클릭하여 **새 대상 추가** 대화 상자를 닫습니다. 데이터 흐름에 추가된 대상 및 연결 관리자가 표시됩니다.  
   
-6.  ** \<새>** 을 클릭 하 여 새 연결 관리자를 만들 경우 연결에 대 한 매개 변수를 지정할 수 있는 **연결 관리자** 대화 상자가 표시 됩니다. 새 연결 관리자 만들기 작업을 마치면 SSIS 디자이너에 대상 및 연결 관리자가 표시됩니다.  
+6.  **\<New>** 를 클릭 하 여 새 연결 관리자를 만들 경우 연결에 대 한 매개 변수를 지정할 수 있는 **연결 관리자** 대화 상자가 표시 됩니다. 새 연결 관리자 만들기 작업을 마치면 SSIS 디자이너에 대상 및 연결 관리자가 표시됩니다.  
   
   

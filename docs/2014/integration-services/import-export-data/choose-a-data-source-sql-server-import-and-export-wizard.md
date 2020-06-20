@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4298cfec7478560c2cef01e7d3c6df577a2a8f16
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62893598"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966273"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>데이터 원본 선택(SQL Server 가져오기 및 내보내기 마법사)
   **데이터 원본 선택** 페이지를 사용 하 여 복사할 데이터의 원본을 지정할 수 있습니다.  
@@ -80,10 +79,10 @@ ms.locfileid: "62893598"
 ### <a name="data-source--microsoft-excel"></a>데이터 원본 = Microsoft Excel  
   
 > [!NOTE]  
->  Excel 2003 또는 이전 버전을 사용하는 데이터 원본에 연결하려는 경우에만 **Microsoft Excel** 을 선택하십시오. Excel 2007를 사용 하는 데이터 원본에 연결 하려면 **Microsoft Office 12.0 Access 데이터베이스 엔진 OLE DB 공급자**를 선택 하 **고 속성**을 클릭 한 다음 **데이터 연결 속성** 대화 상자의 **모두** 탭에서 **확장 속성**에 `Excel 12.0` 대 한 값을 입력 합니다.  
+>  Excel 2003 또는 이전 버전을 사용하는 데이터 원본에 연결하려는 경우에만 **Microsoft Excel** 을 선택하십시오. Excel 2007를 사용 하는 데이터 원본에 연결 하려면 **Microsoft Office 12.0 Access 데이터베이스 엔진 OLE DB 공급자**를 선택 하 **고 속성**을 클릭 한 다음 **데이터 연결 속성** 대화 상자의 **모두** 탭에서 `Excel 12.0` **확장 속성**에 대 한 값을 입력 합니다.  
   
  **Excel 파일 경로**  
- 데이터를 가져올 스프레드시트의 경로 및 파일 이름(예: 예를 들면 **C:\mydata.xls, \\\Sales\Database\Northwind.xls**입니다. 또는 **찾아보기**를 클릭합니다.  
+ 데이터를 가져올 스프레드시트의 경로 및 파일 이름(예: 예를 들어 **C:\MyData.xls \\\Sales\Database\Northwind.xls**합니다. 또는 **찾아보기**를 클릭합니다.  
   
  **찾아보기**  
  **열기** 대화 상자를 사용하여 스프레드시트를 찾습니다.  

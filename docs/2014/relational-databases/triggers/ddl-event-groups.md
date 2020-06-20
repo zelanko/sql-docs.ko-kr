@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d23a16fab200c3c6ef55a1cac8f1838a2f51468d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 245b383146e30c1fb42a6c6e23874a5c18d0b187
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211723"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014662"
 ---
 # <a name="ddl-event-groups"></a>DDL 이벤트 그룹
   다음 표에서는 DDL 트리거 또는 이벤트 알림을 실행하는 데 사용할 수 있는 DDL 이벤트 그룹과 해당 그룹에서 처리하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 나열합니다. 이벤트 그룹 포함 특성에 유의하십시오. 예를 들어 FOR DDL_TABLE_EVENTS(10018)를 지정하는 DDL 트리거 또는 이벤트 알림은 CREATE TABLE, ALTER TABLE 및 DROP TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 처리합니다. FOR DDL_TABLE_VIEW_EVENTS(10017)를 지정하는 DDL 트리거 또는 이벤트 알림은 DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS 및 DDL_STATISTICS_EVENTS 유형 아래의 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 처리합니다.  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d04ba8b85c124b66e250d17ad204ef76a8de6dc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fe802796b129ff9bdb50e5dea13e1fe98beee269
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882353"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061583"
 ---
 # <a name="enhance-transactional-replication-performance"></a>트랜잭션 복제 성능 향상
   [일반적인 복제 성능 향상](enhance-general-replication-performance.md)에 설명된 일반 성능 팁을 살펴본 후에 트랜잭션 복제에 해당하는 이러한 추가 영역을 살펴보십시오.  
@@ -80,7 +79,7 @@ ms.locfileid: "73882353"
   
      **-Subscriptionstreams** 매개 변수는 집계 복제 처리량을 크게 향상 시킬 수 있습니다. 이 매개 변수는 변경 내용의 일괄 처리를 병렬로 적용하기 위해 구독자에 여러 연결을 설정하도록 허용하지만 단일 스레드를 사용할 때 나타나는 여러 가지 트랜잭션 특징을 유지합니다. 여러 연결 중 하나가 실행 또는 커밋되지 않으면 모든 연결에서 현재 일괄 처리를 중지하고 에이전트가 단일 스트림을 사용하여 실패한 일괄 처리를 다시 시도합니다. 이러한 재시도 단계가 완료되기 전에는 구독자에 임시 트랜잭션 불일치가 발생할 수 있으며 실패한 일괄 처리가 성공적으로 커밋되면 구독자의 트랜잭션 일관성이 다시 유지됩니다.  
   
-     [Transact-sql&#41;sp_addsubscription &#40;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) ** \@subscriptionstreams** 을 사용 하 여이 에이전트 매개 변수의 값을 지정할 수 있습니다.  
+     [Transact-sql&#41;sp_addsubscription &#40;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) ** \@ subscriptionstreams** 을 사용 하 여이 에이전트 매개 변수의 값을 지정할 수 있습니다.  
   
 -   로그 판독기 에이전트에 대해 **-ReadBatchSize** 매개 변수의 값을 늘립니다.  
   

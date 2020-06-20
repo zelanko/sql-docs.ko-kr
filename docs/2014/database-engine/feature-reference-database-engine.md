@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2ed7a37f-4640-4379-84a1-e4e97335ef33
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 844795b57c69fa003140fb42453cb59b138ffcc7
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 54cc9e8a704dbeab670d5e9fc7eaad4d599ef7cd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001013"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933034"
 ---
 # <a name="feature-reference-database-engine"></a>기능 참조(데이터베이스 엔진)
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 에는 데이터베이스 개체와 데이터를 생성, 관리 및 표시할 수 있는 여러 가지 도구와 애플리케이션이 있습니다. 또한 기능, 서비스 및 네트워크 프로토콜을 활성화 및 비활성화하고 서버와 데이터베이스 성능을 모니터링하고 문제 해결하는 데 사용할 수 있는 도구가 있습니다. 이 섹션에서는 이러한 도구와 애플리케이션의 대화 상자를 설명하는 항목을 제공합니다.  

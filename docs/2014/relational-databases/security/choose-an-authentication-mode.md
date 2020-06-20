@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5e06e33048548baad245bee78b9989e9c4cc700b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6156d149cdd49b8dc80c6c349d5ce923696a835f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011337"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997517"
 ---
 # <a name="choose-an-authentication-mode"></a>인증 모드 선택
   설치 중에 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인증 모드를 선택해야 합니다. Windows 인증 모드 및 혼합 모드의 2가지 유형이 있습니다. Windows 인증 모드는 Windows 인증을 활성화하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증은 비활성화합니다. 혼합 모드는 Windows 인증과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 모두 활성화합니다. Windows 인증은 항상 사용할 수 있으며 비활성화할 수 없습니다.  
@@ -67,7 +66,7 @@ ms.locfileid: "63011337"
   
 1.  **시작** 메뉴에서 **실행**을 클릭합니다.  
   
-2.  **실행** 대화 상자에서를 입력 `secpol.msc`한 다음 **확인**을 클릭 합니다.  
+2.  **실행** 대화 상자에서를 입력 한 `secpol.msc` 다음 **확인**을 클릭 합니다.  
   
 3.  **로컬 보안 설정** 애플리케이션에서 **보안 설정**, **계정 정책**을 차례로 확장한 다음 **암호 정책**을 클릭합니다.  
   

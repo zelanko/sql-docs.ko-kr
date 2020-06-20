@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 71c53ead-3d19-4bc1-aafd-e5b32595b420
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c0b75b96f30d2fe7f104e8f59aa03d7de6202e6a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61939b09b4a4365c09089df2b52026e96f9427ee
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057407"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965153"
 ---
 # <a name="multiple-precedence-constraints"></a>여러 선행 제약 조건
   선행 제약 조건은 두 개의 태스크, 두 개의 컨테이너 또는 각 태스크와 컨테이너를 하나씩 선택하여 두 개의 실행 개체를 참조합니다. 선행 제약 조건을 선행 실행 개체 및 제약 조건이 지정된 실행 개체라고 합니다. 제약 조건이 지정된 실행 개체에는 여러 선행 제약 조건이 포함될 수 있습니다. 자세한 내용은 [Precedence Constraints](control-flow/precedence-constraints.md)을(를) 참조하세요.  
@@ -32,7 +31,7 @@ ms.locfileid: "66057407"
 ## <a name="logicaland-property"></a>LogicalAnd 속성  
  태스크 또는 컨테이너에 여러 제약 조건이 있는 경우 `LogicalAnd` 속성은 선행 제약 조건이 그 자체로만 평가되는지 또는 다른 제약 조건과 함께 평가되는지 여부를 지정합니다.  
   
- 디자이너 `LogicalAnd` [!INCLUDE[ssIS](../includes/ssis-md.md)] 에서 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] **선행 제약 조건 편집기** 를 사용 하거나에서 제공 하는 속성 창을 사용 하 여 속성을 설정할 수 있습니다.  
+ `LogicalAnd`디자이너에서 **선행 제약 조건 편집기** [!INCLUDE[ssIS](../includes/ssis-md.md)] 를 사용 하거나에서 제공 하는 속성 창을 사용 하 여 속성을 설정할 수 있습니다 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .  
   
 ## <a name="related-tasks"></a>관련 작업  
  [선행 제약 조건의 속성 설정](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)  

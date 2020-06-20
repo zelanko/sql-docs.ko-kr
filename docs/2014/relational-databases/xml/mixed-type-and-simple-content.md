@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6ea1f11d-e64b-4ebb-ab68-4eb6e4027665
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2d7eaab49c3ccd2bb110c76a81d9dcb371de6278
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a793932ad91b909183069793d05615d828b4e20d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702626"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013390"
 ---
 # <a name="mixed-type-and-simple-content"></a>혼합 형식 및 단순 내용
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 혼합 형식을 단순 내용으로 제한할 수 없습니다.  

@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 6e58acd0-73c5-4161-9fbc-8ea531bc681c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7c966c3e4388588810438d7e91a9ae0356ef60c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 724f6e91b911f9edc89188a265364956176d6974
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780352"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933137"
 ---
 # <a name="discontinued-management-tools-features-in-sql-server-2014"></a>SQL Server 2014에서 지원되지 않는 관리 도구 기능
   이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 더 이상 사용할 수 없는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]관리 도구 기능에 대해 설명합니다.  
   
 ## <a name="features-removed-in-sscurrent"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 제거된 기능  
- 없음  
+ None  
   
 ## <a name="features-removed-in-sssql11"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 제거된 기능  
   

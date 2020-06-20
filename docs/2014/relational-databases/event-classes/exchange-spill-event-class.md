@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0220e81325345e84524ec0218dbaff7d6143bdd8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a59679fc2c48e2c5eabc4be73b186d5267897e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62663688"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052983"
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill 이벤트 클래스
   **Exchange Spill** 이벤트 클래스는 병렬 쿼리 계획의 통신 버퍼가 **tempdb** 데이터베이스에 임시적으로 기록되었음을 나타냅니다. 이는 매우 드물게 발생하며 쿼리 계획에 다중 범위 검색이 있는 경우에만 발생합니다.  
   
- 일반적으로 이러한 다중 범위 검색은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리에 BETWEEN 연산자가 많이 사용되었을 때 발생하며 각 BETWEEN 연산자는 테이블 또는 인덱스에서 행 범위를 선택합니다. 또는 (T. a > 10 및 T. a \< 20) 또는 (> 100 및 t. a \< 120)와 같은 식을 사용 하 여 여러 범위를 가져올 수 있습니다. 또한 T.a에 ORDER BY 절이 있거나 계획 내의 반복자가 정렬된 튜플을 소비해야 하는 경우 쿼리 계획에서 이러한 범위가 순서대로 검색되어야 합니다.  
+ 일반적으로 이러한 다중 범위 검색은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리에 BETWEEN 연산자가 많이 사용되었을 때 발생하며 각 BETWEEN 연산자는 테이블 또는 인덱스에서 행 범위를 선택합니다. 또는 (T. a > 10 및 T. a \< 20) OR (T.a > 100 및 t. a 120)와 같은 식을 사용 하 여 여러 범위를 가져올 수 있습니다 \< . 또한 T.a에 ORDER BY 절이 있거나 계획 내의 반복자가 정렬된 튜플을 소비해야 하는 경우 쿼리 계획에서 이러한 범위가 순서대로 검색되어야 합니다.  
   
  이러한 쿼리의 쿼리 계획에 여러 **Parallelism** 연산자가 있는 경우 **Parallelism** 연산자가 사용하는 메모리 통신 버퍼는 꽉 차게 되고 쿼리 실행 진행이 중지되는 상황이 발생할 수 있습니다. 이런 경우에는 **Parallelism** 연산자 중 하나가 자신의 출력 버퍼를 **tempdb** 에 기록하여(이 연산을 *exchange spill*이라고 함) 일부 입력 버퍼에서 행을 사용할 수 있습니다. 결국 소비자가 이러한 행을 사용할 준비가 되면 기록된 행이 소비자에게 반환됩니다.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "62663688"
 |**GroupID**|**int**|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|yes|  
 |**HostName**|**nvarchar**|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|yes|  
 |**IsSystem**|**int**|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다. 1 = 시스템, 0 = 사용자|60|yes|  
-|**LoginName**|**nvarchar**|사용자 로그인 이름([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*DOMAIN>\<<username\\\> 형식의 Windows 로그인 자격 증명 또는*  보안 로그인)입니다.|11|yes|  
+|**LoginName**|**nvarchar**|사용자 로그인 이름 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] * \<DOMAIN> \\<\> username*형식의 Windows 로그인 자격 증명 또는 보안 로그인)입니다.|11|yes|  
 |**LoginSid**|**image**|로그인한 사용자의 SID(보안 ID)입니다. 이 정보는 **master** 데이터베이스의 **syslogins** 테이블에 있습니다. 각 SID는 서버의 각 로그인마다 고유합니다.|41|yes|  
 |**NTDomainName**|**nvarchar**|사용자가 속한 Windows 도메인입니다.|7|yes|  
 |**NTUserName**|**nvarchar**|Windows 사용자 이름입니다.|6|yes|  

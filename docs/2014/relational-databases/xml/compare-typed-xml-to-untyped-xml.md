@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b00b44ebe66a372b2037e62dc589afa35003495e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fae9ca930bd8741a1332b61c8272f2133590483e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717193"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013537"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>형식화된 XML과 형식화되지 않은 XML 비교
   `xml` 유형의 변수, 매개 변수 및 열을 만들 수 있습니다. 선택적으로 XML 스키마 컬렉션을 `xml` 유형의 변수, 매개 변수 또는 열과 연결할 수 있습니다. 이 경우 `xml` 데이터 형식 인스턴스를 *형식화*됨 이라고 합니다. 그 외의 경우에는 XML 인스턴스를 *형식화되지 않았다*고 합니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9836484-39c5-4a89-b080-3567783b6fff
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 358d468c900d367496cd904b4f401b0948af0853
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4dfa610b7632455c5d7d7a84efcb6101ffc7575b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044158"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052508"
 ---
 # <a name="server-memory-change-event-class"></a>Server Memory Change 이벤트 클래스
   **Server Memory Change** 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 사용량이 1MB 또는 최대 서버 메모리의 5% 중 큰 값만큼 증가하거나 감소하는 경우 발생합니다.  

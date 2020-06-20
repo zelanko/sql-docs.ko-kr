@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7150ca05e536214d43d4992ed1e7f79138ac2be9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916893"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965695"
 ---
 # <a name="tempdb-database"></a>tempdb 데이터베이스
   **tempdb** 시스템 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결된 모든 사용자가 사용할 수 있는 전역 리소스로서 다음 항목을 보관하는 데 사용됩니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "62916893"
   
 -   온라인 인덱스 작업, MARS(Multiple Active Result Sets) 및 AFTER 트리거 같은 기능에 대한 데이터 수정 트랜잭션에서 생성된 행 버전  
   
- **tempdb** 내의 작업은 최소한으로 기록됩니다. 이렇게 하면 트랜잭션을 롤백할 수 있습니다. **tempdb** 시스템이 항상 깨끗 한 데이터베이스 복사본으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 되도록를 시작할 때마다 tempdb가 다시 생성 됩니다. 연결이 끊길 때 임시 테이블 및 저장 프로시저는 자동으로 제거되고 시스템이 종료될 때 활성 상태인 연결이 없습니다. 따라서 **tempdb** 에는 한 세션에서 다른 세션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 으로 저장 하는 것이 없습니다. **tempdb**에서는 백업 및 복원 작업이 허용되지 않습니다.  
+ **tempdb** 내의 작업은 최소한으로 기록됩니다. 이렇게 하면 트랜잭션을 롤백할 수 있습니다. **tempdb** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템이 항상 깨끗 한 데이터베이스 복사본으로 시작 되도록를 시작할 때마다 tempdb가 다시 생성 됩니다. 연결이 끊길 때 임시 테이블 및 저장 프로시저는 자동으로 제거되고 시스템이 종료될 때 활성 상태인 연결이 없습니다. 따라서 **tempdb** 에는 한 세션에서 다른 세션으로 저장 하는 것이 없습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **tempdb**에서는 백업 및 복원 작업이 허용되지 않습니다.  
   
 ## <a name="physical-properties-of-tempdb"></a>tempdb의 물리적 속성  
  다음 표에는 **tempdb** 데이터 및 로그 파일의 초기 구성 값이 나열되어 있습니다. 이러한 파일의 크기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에 따라 조금씩 다를 수 있습니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "62916893"
 |주 데이터|tempdev|tempdb.mdf|디스크가 꽉 찰 때까지 10%씩 자동 증가|  
 |로그|templog|templog.ldf|최대 2TB까지 10%씩 자동 증가|  
   
- **Tempdb** 의 크기는 시스템의 성능에 영향을 줄 수 있습니다. 예를 들어 **tempdb** 크기가 너무 작은 경우 시작할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]때마다 워크 로드 요구 사항을 지원 하기 위해 데이터베이스를 자동 증가 시키기 때문에 시스템 처리에 너무 많은 시간이 걸릴 수 있습니다. **Tempdb**의 크기를 늘려서 이러한 오버 헤드를 방지할 수 있습니다.  
+ **Tempdb** 의 크기는 시스템의 성능에 영향을 줄 수 있습니다. 예를 들어 **tempdb** 크기가 너무 작은 경우 시작할 때마다 워크 로드 요구 사항을 지원 하기 위해 데이터베이스를 자동 증가 시키기 때문에 시스템 처리에 너무 많은 시간이 걸릴 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **Tempdb**의 크기를 늘려서 이러한 오버 헤드를 방지할 수 있습니다.  
   
 ## <a name="performance-improvements-in-tempdb"></a>tempdb의 성능 향상  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음과 같은 방법으로 **tempdb** 의 성능이 향상됩니다.  
@@ -70,16 +69,16 @@ ms.locfileid: "62916893"
 |ANSI_PADDING|OFF|예|  
 |ANSI_WARNINGS|OFF|예|  
 |ARITHABORT|OFF|예|  
-|AUTO_CLOSE|OFF|아니요|  
+|AUTO_CLOSE|OFF|예|  
 |AUTO_CREATE_STATISTICS|켜기|예|  
-|AUTO_SHRINK|OFF|아니요|  
+|AUTO_SHRINK|OFF|예|  
 |AUTO_UPDATE_STATISTICS|켜기|예|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|예|  
 |CHANGE_TRACKING|OFF|예|  
 |CONCAT_NULL_YIELDS_NULL|OFF|예|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|예|  
 |CURSOR_DEFAULT|GLOBAL|예|  
-|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니요<br /><br /> 아니요<br /><br /> 아니요|  
+|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|예<br /><br /> 아니요<br /><br /> 아니요|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|예|  
 |DB_CHAINING|켜기|예|  
 |ENCRYPTION|OFF|예|  
@@ -91,7 +90,7 @@ ms.locfileid: "62916893"
 |RECOVERY|SIMPLE|예|  
 |RECURSIVE_TRIGGERS|OFF|예|  
 |Service Broker 옵션|ENABLE_BROKER|예|  
-|TRUSTWORTHY|OFF|아니요|  
+|TRUSTWORTHY|OFF|예|  
   
  이러한 데이터베이스 옵션에 대한 자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)을 참조하세요.  
   

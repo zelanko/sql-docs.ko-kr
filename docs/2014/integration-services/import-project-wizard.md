@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9247ad6c-4bd1-43ab-b347-583181cb9917
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f1399b14ec9345b9ca312db463ba5e508d9b9bbe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec71ccf6434cd892be7c44fd4957099965dff6de
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058044"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965483"
 ---
 # <a name="import-project-wizard"></a>프로젝트 가져오기 마법사
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트 가져오기 마법사를 사용하여 기존 항목에 따라 새 Integration Services 프로젝트를 만듭니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 카탈로그에 이미 배포된 프로젝트를 가져오거나 프로젝트 배포 파일(확장명 .ispac)에서 프로젝트를 가져옵니다.  

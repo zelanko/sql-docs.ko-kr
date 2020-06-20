@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c595e0a-d968-47d3-a84f-9b6857342671
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 513792c12833a14b8d1d3fc78f4b3bb6be173627
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8298df4bfd0eaa91cf788fedbffe4e9b2a1389de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023455"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052879"
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape 이벤트 클래스
   Mount Tape 이벤트 클래스는 테이프 탑재 요청을 받을 때 발생합니다. 이 이벤트 클래스를 사용하여 테이프 탑재 요청 및 요청의 성공 또는 실패를 모니터링할 수 있습니다.  
@@ -34,8 +33,8 @@ ms.locfileid: "63023455"
 |DatabaseName|`nvarchar`|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|예|  
 |Duration|`bigint`|이벤트에 의해 사용된 시간(마이크로초)입니다.|13|yes|  
 |EndTime|`datetime`|Mount Request 이벤트의 경우 제한 시간이 발생하면 탑재 제한 시간의 시간이 되고 제한 시간이 발생하지 않으면 이벤트 자체의 시간이 됩니다. 이 경우 StartTime은 해당되는 탑재 요청의 시간을 나타냅니다.|15|예|  
-|EventClass|`int`|이벤트 유형 = 195|27|아니요|  
-|EventSequence|`int`|요청 내의 지정된 이벤트 시퀀스입니다.|51|아니요|  
+|EventClass|`int`|이벤트 유형 = 195|27|예|  
+|EventSequence|`int`|요청 내의 지정된 이벤트 시퀀스입니다.|51|예|  
 |EventSubClass|`int`|이벤트 하위 클래스의 유형입니다.<br /><br /> 1 = 테이프 탑재 요청<br /><br /> 2 = 테이프 탑재 완료<br /><br /> 3 = 테이프 탑재 취소|21|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  

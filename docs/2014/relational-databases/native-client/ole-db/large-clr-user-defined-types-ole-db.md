@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8fb6c943e237e791ff4febed0ab3273eb9324662
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 78ae9021de1b2e9af3ab9017827c6ea64bc608e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704266"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998611"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>큰 CLR 사용자 정의 형식(OLE DB)
   이 항목에서는 큰 CLR(공용 언어 런타임) UDT(사용자 정의 형식)를 지원하기 위한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 OLE DB 변경 내용에 대해 설명합니다.  
@@ -77,7 +76,7 @@ ms.locfileid: "82704266"
   
  UDT에 대해 다음 열도 정의됩니다.  
   
-|열 식별자|형식|설명|  
+|열 식별자|Type|Description|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 열의 경우 UDT가 정의된 카탈로그의 이름입니다.|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 열의 경우 UDT가 정의된 스키마의 이름입니다.|  
@@ -102,7 +101,7 @@ ms.locfileid: "82704266"
   
  UDT에 대해 다음 추가 열이 정의됩니다.  
   
-|열 식별자|형식|설명|  
+|열 식별자|Type|Description|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 열의 경우 UDT가 정의된 카탈로그의 이름입니다.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 열의 경우 UDT가 정의된 스키마의 이름입니다.|  

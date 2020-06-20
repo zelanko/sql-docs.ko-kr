@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5c5ff985b62e39287b696e96f10142daf90ae0a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 415d4e2d1aaa3166ae4df2dea53b34e064544e06
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783132"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934752"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>서버 속성 보기 또는 변경(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]인스턴스의 속성을 보거나 변경하는 방법에 대해 설명합니다.  
@@ -59,7 +58,7 @@ ms.locfileid: "72783132"
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  자세한 내용은 [서버 수준 역할](../../relational-databases/security/authentication-access/server-level-roles.md)을 참조하세요.  
   
- 매개 변수 없이 `sp_configure` 또는 첫 번째 매개 변수만 사용 하 여에 대 한 실행 권한은 기본적으로 모든 사용자에 게 부여 됩니다. 구성 옵션 `sp_configure` 을 변경 하거나 RECONFIGURE 문을 실행 하는 두 매개 변수를 사용 하 여 실행 하려면 사용자에 게 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
+ 매개 변수 없이 또는 첫 번째 매개 변수만 사용 하 여에 대 한 실행 권한은 `sp_configure` 기본적으로 모든 사용자에 게 부여 됩니다. `sp_configure`구성 옵션을 변경 하거나 RECONFIGURE 문을 실행 하는 두 매개 변수를 사용 하 여 실행 하려면 사용자에 게 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
@@ -148,9 +147,9 @@ GO
   
 2.  **SQL Server 구성 관리자**에서 **SQL Server 서비스**를 클릭합니다.  
   
-3.  세부 정보 창에서 **SQL Server (\<***instancename***>)** 을 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 클릭 합니다.  
+3.  세부 정보 창에서 **SQL Server ( \<***instancename***> )** 를 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 클릭 합니다.  
   
-4.  **SQL Server (\<***instancename***>) 속성** 대화 상자에서 **서비스** 탭 또는 **고급** 탭의 서버 속성을 변경한 다음 **확인**을 클릭 합니다.  
+4.  **SQL Server ( \<***instancename***> ) 속성** 대화 상자에서 **서비스** 탭 또는 **고급** 탭의 서버 속성을 변경한 다음 **확인**을 클릭 합니다.  
   
 ##  <a name="follow-up-after-you-change-server-properties"></a><a name="FollowUp"></a> 후속 작업: 서버 속성을 변경한 후  
  일부 속성의 경우 변경 내용을 적용하려면 서버를 다시 시작해야 할 수도 있습니다.  

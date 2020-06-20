@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7a50004cfb39b93ecd0c144fb0d92d37545c83ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89b42f439b5622074327506b9f2ca2b2358cd12f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921188"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957270"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>데이터베이스를 새 위치로 복원(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]데이터베이스를 새 위치로 복원하고 선택적으로 데이터베이스 이름을 바꾸는 방법에 대해 설명합니다. 데이터베이스를 새 디렉터리 경로로 이동하거나 동일한 서버 인스턴스 또는 다른 서버 인스턴스에 데이터베이스의 복사본을 만들 수 있습니다.  
@@ -94,9 +93,9 @@ ms.locfileid: "62921188"
   
     1.  **디바이스**  
   
-         찾아보기(**...**) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **백업 미디어 유형** 상자에서 나열된 디바이스 유형 중 하나를 선택합니다. **백업 미디어** 상자에 대해 하나 이상의 디바이스를 선택하려면 **추가**를 클릭합니다.  
+         찾아보기( **...** ) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **백업 미디어 유형** 상자에서 나열된 디바이스 유형 중 하나를 선택합니다. **백업 미디어** 상자에 대해 하나 이상의 디바이스를 선택하려면 **추가**를 클릭합니다.  
   
-         원하는 디바이스를 **백업 미디어** 목록 상자에 추가한 후 **확인**을 클릭하여 **일반** 페이지로 돌아갑니다.  
+         원하는 디바이스를 **백업 미디어** 목록 상자에 추가한 후 **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.  
   
          **원본: 디바이스: 데이터베이스** 목록 상자에서 복원할 데이터베이스의 이름을 선택합니다.  
   
@@ -104,7 +103,7 @@ ms.locfileid: "62921188"
   
 4.  **대상** 섹션의 **데이터베이스** 상자에는 복원할 데이터베이스의 이름이 자동으로 채워집니다. 데이터베이스의 이름을 변경하려면 **데이터베이스** 상자에 새 이름을 입력합니다.  
   
-5.  **복원 위치** 상자에서 기본값인 **마지막으로 수행된 백업으로**를 그대로 적용하거나 **시간대**를 클릭하여 **백업 시간대** 대화 상자에 액세스한 후 복구 동작을 중지할 지정 시간을 직접 선택합니다. 특정 지정 시간을 지정하는 방법은 [Backup Timeline](backup-timeline.md) 를 참조하세요.  
+5.  **복원 위치** 상자에서 기본값인 **마지막으로 수행된 백업으로** 를 그대로 적용하거나 **시간대** 를 클릭하여 **백업 시간대** 대화 상자에 액세스한 후 복구 동작을 중지할 지정 시간을 직접 선택합니다. 특정 지정 시간을 지정하는 방법은 [Backup Timeline](backup-timeline.md) 를 참조하세요.  
   
 6.  **복원에 사용할 백업 세트** 표에서 복원할 백업을 선택합니다. 이 표는 지정한 위치에서 사용 가능한 백업을 표시합니다. 기본적으로 복구 계획이 제안됩니다. 제안된 복구 계획을 재정의하려면 표에서 선택 항목을 변경합니다. 이전 백업의 선택이 취소되면 이전 백업 복원에 기반하는 백업도 자동으로 선택이 취소됩니다.  
   
@@ -159,10 +158,10 @@ ms.locfileid: "62921188"
     > [!NOTE]  
     >  데이터베이스를 다른 서버 인스턴스로 복원하는 경우 새 이름 대신 원래 데이터베이스 이름을 사용할 수 있습니다.  
   
-     *backup_device* [ `,`... *n* ]  
+     *backup_device* [ `,` ...*n* ]  
      데이터베이스 백업 복원에 사용할 1-64개의 백업 디바이스 목록(쉼표로 구분됨)을 지정합니다. 물리적 백업 디바이스를 지정하거나, 정의된 경우 해당 논리적 백업 디바이스를 지정할 수 있습니다. 물리적 백업 디바이스를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.  
   
-     { DISK | TAPE } `=`*physical_backup_device_name*  
+     { DISK | TAPE } `=` *physical_backup_device_name*  
   
      자세한 내용은 [백업 디바이스&#40;SQL Server&#41;](backup-devices-sql-server.md)를 참조하세요.  
   
@@ -176,22 +175,22 @@ ms.locfileid: "62921188"
   
      이 옵션이 지정되지 않은 경우에는 기본적으로 백업 디바이스의 첫 번째 백업 세트가 사용됩니다.  
   
-     자세한 내용은 [RESTORE 인수 &#40;transact-sql&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)에서 "백업 세트 지정"을 참조 하십시오.  
+     자세한 내용은 [RESTORE 인수&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)에서 "백업 세트 지정"을 참조하세요.  
   
-     ' '을 **'*`operating_system_file_name`*'** 로 이동 `,`(... ***`logical_file_name_in_backup`*** *n* ]  
+     ' '을 **' *`operating_system_file_name`* '** 로 이동 (... ** *`logical_file_name_in_backup`* ** `,` *n* ]  
      *logical_file_name_in_backup* 에 지정된 데이터 또는 로그 파일을 *operating_system_file_name*에 지정된 위치로 복원하도록 지정합니다. 백업 세트에서 새 위치로 복원할 모든 논리적 파일에 대해 MOVE 문을 지정합니다.  
   
-    |옵션|설명|  
+    |옵션|Description|  
     |------------|-----------------|  
     |*logical_file_name_in_backup*|백업 세트에 있는 데이터 또는 로그 파일의 논리적 이름을 지정합니다. 백업 세트에 있는 데이터 또는 로그 파일의 논리적 파일 이름은 백업 세트 생성 시 데이터베이스의 해당 논리적 이름과 일치합니다.<br /><br /> 참고: 백업 세트에서 논리적 파일 목록을 가져오려면 [RESTORE FILELISTONLY](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)를 사용합니다.|  
     |*operating_system_file_name*|*logical_file_name_in_backup*에 지정된 파일의 새 위치를 지정합니다. 파일이 이 위치로 복원됩니다.<br /><br /> *operating_system_file_name* 에서 복원 파일의 새 파일 이름을 지정합니다(선택 사항). 이 작업은 동일한 서버 인스턴스에 기존 데이터베이스의 복사본을 만들려는 경우에 필요합니다.|  
     |*n*|추가 MOVE 문을 지정할 수 있음을 나타내는 자리 표시자입니다.|  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>예 (Transact-sql)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  이 예제에서는 `MyAdvWorks` 샘플 데이터베이스의 백업을 복원하여 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 라는 새 데이터베이스를 만듭니다. 여기에는 두 개의 파일 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data 및 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log가 포함되어 있습니다. 이 데이터베이스는 단순 복구 모델을 사용합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스가 이미 서버 인스턴스에 있으므로 백업에 들어 있는 파일을 새 위치로 복원해야 합니다. RESTORE FILELISTONLY 문은 복원할 데이터베이스에 있는 파일의 수와 이름을 확인하는 데 사용합니다. 데이터베이스 백업은 백업 디바이스에 있는 첫 번째 백업 세트입니다.  
   
 > [!NOTE]  
->  지정 시간 복원을 비롯하여 트랜잭션 로그를 백업 및 복원하는 예에서는 다음 `MyAdvWorks_FullRM` 예와 마찬가지로 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]에서 만든 `MyAdvWorks` 데이터베이스를 사용합니다. 그러나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 ALTER DATABASE <database_name> SET RECOVERY FULL을 사용하여 결과로 생성된 `MyAdvWorks_FullRM` 데이터베이스가 전체 복구 모델을 사용하도록 변경되어야 합니다.  
+>  지정 시간 복원을 비롯하여 트랜잭션 로그를 백업 및 복원하는 예에서는 다음 `MyAdvWorks_FullRM` 예와 마찬가지로 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]에서 만든 `MyAdvWorks` 데이터베이스를 사용합니다. 그러나 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 결과로 생성된 `MyAdvWorks_FullRM` 데이터베이스에서 전체 복구 모델을 사용하도록 변경해야 합니다. ALTER DATABASE <database_name> SET RECOVERY FULL.  
   
 ```sql  
 USE master;  
@@ -223,7 +222,7 @@ GO
 -   [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타 데이터를 관리 &#40;SQL Server&#41;](../databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [백업 및 복원으로 데이터베이스 복사](../databases/copy-databases-with-backup-and-restore.md)  
   

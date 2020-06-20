@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ed9c8ff90798205f9db02ae4b4b47eb4310d4b06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc473447934b6274e0d202f6240634fb00d90491
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250758"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998178"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server, Buffer Manager 개체
   **Buffer Manager** 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다음 항목을 어떻게 사용하는지 모니터링하는 카운터를 제공합니다.  
@@ -67,6 +66,6 @@ ms.locfileid: "63250758"
  [SQL Server, 계획 캐시 개체](sql-server-plan-cache-object.md)   
  [시스템 모니터 &#40;리소스 사용량 모니터링&#41;](monitor-resource-usage-system-monitor.md)   
  [dm_os_performance_counters &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
- [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md)  
+ [버퍼 풀 확장](../../database-engine/configure-windows/buffer-pool-extension.md)  
   
   

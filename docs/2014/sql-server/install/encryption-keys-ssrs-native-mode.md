@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 540cf25a150349c7b6399975d20d10bc202ed935
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 05b11804630de6bd57681a569225971864c15814
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952168"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036904"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>암호화 키(SSRS 기본 모드)
   암호화 키 페이지를 사용하여 보고서 서버의 데이터를 암호화 및 암호 해독하는 데 사용되는 대칭 키를 관리할 수 있습니다. 암호화 키 관리는 보고서 서버 구성에 있어 매우 중요합니다. 대칭 키는 보고서 서버 데이터베이스를 만들 때 자동으로 만들어지고 적용됩니다. 일상적인 유지 관리 작업을 수행할 수 있도록 대칭 키의 백업 복사본을 만드십시오. 다음 유지 관리 태스크를 수행하려면 올바른 대칭 키 복사본이 있어야 합니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "71952168"
   
 -   기존 보고서 서버 데이터베이스를 공유 또는 사용하도록 새 보고서 서버 인스턴스 구성  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]기본 모드입니다.  
   
 > [!IMPORTANT]  
 >  Reporting Services 암호화 키를 주기적으로 변경하는 것은 최상의 보안 권장 방법입니다. Reporting Services의 중요 버전 업그레이드 직후에 키를 변경하는 것이 가장 좋습니다. 업그레이드 후에 키를 변경하면 업그레이드 주기를 벗어나 Reporting Services 암호화 키를 변경할 경우에 발생하는 추가 서비스 중단이 최소화됩니다.  
@@ -53,7 +52,7 @@ ms.locfileid: "71952168"
   
  현재 연결된 보고서 서버 인스턴스에 대한 대칭 키의 이전 복사본은 복원된 버전으로 덮어쓰여집니다. 대칭 키를 복원한 다음에는 해당 보고서 서버 데이터베이스를 사용하는 모든 보고서 서버를 초기화해야 합니다. 보고서 서버를 초기화 하는 방법에 대 한 자세한 내용은 [보고서 서버 초기화 &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)를 참조 하세요.  
   
- **변화**  
+ **변경**  
  대칭 키를 다시 만들고 보고서 서버 데이터베이스에 암호화된 모든 값을 다시 암호화합니다. 대칭 키를 다시 만들기 전에 보고서 서버 서비스를 중지해야 합니다.  
   
  스케일 아웃 배포의 경우 대칭 키의 모든 복사본은 새 버전으로 바뀝니다. 대칭 키를 변경하기 전에 스케일 아웃 배포에 참가한 서버 목록을 검토하여 올바른 보고서 서버 인스턴스에만 새 키에 대한 액세스 권한이 부여되도록 합니다. 스케일 아웃 배포에 포함되는 서버는 **스케일 아웃 배포** 페이지에 나열되어 있습니다. 키를 다시 만들기 전에 배포의 각 보고서 서버에서 서비스를 중지하십시오.  

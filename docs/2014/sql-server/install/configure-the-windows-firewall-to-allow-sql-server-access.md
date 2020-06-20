@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5dcbf0aae9c96e788fdbf9544114d226fa8f0bfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1a0bc32040fc90e5f73faa708f314722bc8f3b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637853"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037002"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
   방화벽 시스템은 컴퓨터 리소스에 대한 무단 액세스를 방지합니다. 방화벽을 설정하고 올바르게 구성하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 연결 시도가 차단될 수 있습니다.  
@@ -91,7 +90,7 @@ ms.locfileid: "73637853"
   
     -   일부 범위 제한 설정  
   
-     제어판의 **Windows 방화벽** 항목은 방화벽 구성에 익숙하지 않은 사용자, 그리고 모바일 형태가 아닌 컴퓨터에 대한 기본 방화벽 옵션을 구성하는 사용자에게 가장 적합합니다. 다음 절차를 사용 하 여 `run` 명령에서 제어판의 **Windows 방화벽** 항목을 열 수도 있습니다.  
+     제어판의 **Windows 방화벽** 항목은 방화벽 구성에 익숙하지 않은 사용자, 그리고 모바일 형태가 아닌 컴퓨터에 대한 기본 방화벽 옵션을 구성하는 사용자에게 가장 적합합니다. 다음 절차를 사용 하 여 명령에서 제어판의 **Windows 방화벽** 항목을 열 수도 있습니다 `run` .  
   
     #### <a name="to-open-the-windows-firewall-item"></a>Windows 방화벽 항목을 열려면  
   
@@ -159,7 +158,7 @@ ms.locfileid: "73637853"
   
 1.  제어판의 **Windows 방화벽** 항목에 있는 **예외** 탭에서 **프로그램 추가**를 클릭합니다.  
   
-2.  방화벽을 통해 허용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하려는 인스턴스의 위치로 이동 합니다 (예: **C:\Program Files\Microsoft SQL Server\MSSQL12. <instance_name> \mssql\binn**). **Sqlservr.exe**를 선택 하 고 **열기**를 클릭 합니다.  
+2.  방화벽을 통해 허용 하려는 인스턴스의 위치로 이동 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (예: **C:\PROGRAM Files\Microsoft SQL Server\MSSQL12. <instance_name> \mssql\binn**). **sqlservr.exe**을 선택한 다음 **열기**를 클릭 합니다.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -323,4 +322,4 @@ ms.locfileid: "73637853"
 -   **PortQry** 유틸리티를 사용하면 TCP/IP 포트 상태를 수신 대기 중, 수신 대기 중 아님 또는 필터링됨으로 보고할 수 있습니다. 필터링됨(filtered) 상태의 경우 포트가 수신 중일 수도 있고 수신 중이 아닐 수도 있습니다. 이 상태는 유틸리티가 포트로부터 응답을 수신하지 못했음을 나타냅니다. **PortQry** 유틸리티는 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=17148)에서 다운로드할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Windows 서버 시스템의 서비스 개요 및 네트워크 포트 요구 사항](https://support.microsoft.com/kb/832017)  
+ [Windows Server 시스템에 대한 서비스 개요 및 네트워크 포트 요구 사항](https://support.microsoft.com/kb/832017)  

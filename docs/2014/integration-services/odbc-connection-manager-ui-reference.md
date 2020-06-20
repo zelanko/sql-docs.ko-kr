@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a596eeaf-68b2-4560-b77d-d2f72ddba926
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4489dd45616c1f2f8240f53e6a3bb0c59f459580
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e928c72fa3bf372646ecac79bbc6ad33d4a0f2c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057283"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965063"
 ---
 # <a name="odbc-connection-manager-ui-reference"></a>ODBC 연결 관리자 UI 참조
   **ODBC 연결 관리자 구성** 대화 상자를 사용하여 ODBC 데이터 원본에 대한 연결을 추가할 수 있습니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "66057283"
  **데이터 연결 속성**  
  선택한 ODBC 연결 관리자의 속성과 값을 표시합니다.  
   
- **신규**  
+ **새 항목**  
  **연결 관리자** 대화 상자를 사용하여 ODBC 연결 관리자를 만듭니다. 필요하면 이 대화 상자에서 새 ODBC 데이터 원본을 만들 수도 있습니다.  
   
  **Delete**  

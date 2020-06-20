@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: aca690da62c0a25bb5b40464d7e13574d83064f5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 277b3440dd0bdd32041ee08e7da06fe430f48ee1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717523"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015056"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Updategram의 데이터베이스 동시성 문제 처리(SQLXML 4.0)
-  다른 데이터베이스 업데이트 메커니즘과 마찬가지로 updategram에서도 다중 사용자 환경에서 데이터의 동시 업데이트를 처리해야 합니다. Updategram은 선택한 필드 데이터의 스냅샷을 비교하는 방법으로 업데이트 대상 데이터를 데이터베이스에서 마지막으로 읽은 이후 다른 사용자 애플리케이션에서 해당 데이터를 변경했는지 여부를 확인하는 낙관적 동시성 제어를 사용합니다. Updategrams은 updategrams의 ** \< before>** 블록에 이러한 스냅숏 값을 포함 합니다. Updategram는 데이터베이스를 업데이트 하기 전에 데이터베이스에 현재 있는 값에 대해 ** \< 이전>** 블록에 지정 된 값을 확인 하 여 업데이트가 유효한 지 확인 합니다.  
+  다른 데이터베이스 업데이트 메커니즘과 마찬가지로 updategram에서도 다중 사용자 환경에서 데이터의 동시 업데이트를 처리해야 합니다. Updategram은 선택한 필드 데이터의 스냅샷을 비교하는 방법으로 업데이트 대상 데이터를 데이터베이스에서 마지막으로 읽은 이후 다른 사용자 애플리케이션에서 해당 데이터를 변경했는지 여부를 확인하는 낙관적 동시성 제어를 사용합니다. Updategrams은 updategrams 블록에 이러한 스냅숏 값을 포함 **\<before>** 합니다. 데이터베이스를 업데이트 하기 전에 updategram은 블록에 지정 된 값을 **\<before>** 데이터베이스에 현재 있는 값과 비교 하 여 업데이트가 유효한 지 확인 합니다.  
   
  낙관적 동시성 제어는 updategram에 낮음(없음), 중간, 높음이라는 세 가지 보호 수준을 제공합니다. Updategram을 적절하게 지정하여 필요한 보호 수준을 결정할 수 있습니다.  
   
 ## <a name="lowest-level-of-protection"></a>가장 낮은 수준의 보호  
- 이 보호 수준에서는 데이터베이스를 마지막으로 읽은 후 적용된 다른 업데이트에 대한 참조 없이 업데이트가 처리됩니다. 이 경우 ** \<>이전** 블록에서 레코드를 식별 하기 위해 기본 키 열만 지정 하 고 ** \< after>** 블록에 업데이트 된 정보를 지정 합니다.  
+ 이 보호 수준에서는 데이터베이스를 마지막으로 읽은 후 적용된 다른 업데이트에 대한 참조 없이 업데이트가 처리됩니다. 이 경우 블록에서 레코드를 식별 하는 기본 키 열만 지정 하 **\<before>** 고 블록에 업데이트 된 정보를 지정 합니다 **\<after>** .  
   
- 예를 들어 다음 updategram에서 새 연락처 전화 번호는 이전 전화 번호가 무엇이었는지에 상관없이 올바른 전화 번호입니다. ** \< 이전>** 블록은 기본 키 열 (ContactID)만 지정 하는 방법을 확인 합니다.  
+ 예를 들어 다음 updategram에서 새 연락처 전화 번호는 이전 전화 번호가 무엇이었는지에 상관없이 올바른 전화 번호입니다. **\<before>** 블록에서 기본 키 열 (ContactID)만 지정 하는 방법을 확인 합니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -53,9 +52,9 @@ ms.locfileid: "82717523"
 ## <a name="intermediate-level-of-protection"></a>중간 수준의 보호  
  이 보호 수준의 경우 updategram은 사용자의 트랜잭션에서 레코드를 읽은 후 다른 트랜잭션에서 값을 변경하지 않았는지 확인하기 위해 업데이트 대상 데이터의 현재 값을 데이터베이스 열의 값과 비교합니다.  
   
- ** \< 이전>** 블록에서 업데이트 하려는 기본 키 열과 열을 지정 하 여 이러한 수준의 보호를 가져올 수 있습니다.  
+ 블록에서 업데이트할 기본 키 열과 열을 지정 하 여이 수준의 보호를 가져올 수 있습니다 **\<before>** .  
   
- 예를 들어 다음 updategram은 ContactID가 1인 연락처의 Person.Contact 테이블의 Phone 열 값을 변경합니다. ** \< Before>** 블록은이 특성 값이 업데이트 된 값을 적용 하기 전에 데이터베이스의 해당 열에 있는 값과 일치 하는지 확인 하기 위해 **Phone** 특성을 지정 합니다.  
+ 예를 들어 다음 updategram은 ContactID가 1인 연락처의 Person.Contact 테이블의 Phone 열 값을 변경합니다. **\<before>** 블록은 업데이트 된 값을 적용 하기 전에이 특성 값이 데이터베이스의 해당 열에 있는 값과 일치 하는지 확인 하기 위해 **Phone** 특성을 지정 합니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -75,11 +74,11 @@ ms.locfileid: "82717523"
   
  다음과 같은 두 가지 방법으로 동시 업데이트에 대해 이와 같은 높은 수준의 보호를 사용할 수 있습니다.  
   
--   ** \< 이전>** 블록의 테이블에서 추가 열을 지정 합니다.  
+-   블록의 테이블에서 추가 열을 지정 **\<before>** 합니다.  
   
-     ** \< Before>** 블록에서 추가 열을 지정 하는 경우 updategram은 이러한 열에 대해 지정 된 값을 업데이트를 적용 하기 전에 데이터베이스에 있는 값과 비교 합니다. 트랜잭션에서 레코드를 읽은 후 레코드 열 중 하나라도 변경되었으면 updategram은 업데이트를 수행하지 않습니다.  
+     블록에서 추가 열을 지정 하 **\<before>** 는 경우 updategram은 이러한 열에 대해 지정 된 값을 업데이트를 적용 하기 전에 데이터베이스에 있는 값과 비교 합니다. 트랜잭션에서 레코드를 읽은 후 레코드 열 중 하나라도 변경되었으면 updategram은 업데이트를 수행하지 않습니다.  
   
-     예를 들어 다음 updategram은 이동 이름을 업데이트 하지만 ** \< 이전>** 블록에서 추가 열 (StartTime, EndTime)을 지정 하 여 동시 업데이트에 대해 더 높은 수준의 보호를 요청 합니다.  
+     예를 들어 다음 updategram은 이동 이름을 업데이트 하지만 블록에 추가 열 (StartTime, EndTime)을 지정 **\<before>** 하 여 동시 업데이트에 대 한 더 높은 수준의 보호를 요청 합니다.  
   
     ```  
     <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -97,11 +96,11 @@ ms.locfileid: "82717523"
     </ROOT>  
     ```  
   
-     이 예에서는 ** \< before>** 블록에서 레코드에 대 한 모든 열 값을 지정 하 여 가장 높은 수준의 보호를 지정 합니다.  
+     이 예에서는 블록의 레코드에 대해 모든 열 값을 지정 하 여 가장 높은 수준의 보호를 지정 합니다 **\<before>** .  
   
--   ** \< Before>** 블록에서 timestamp 열 (사용 가능한 경우)을 지정 합니다.  
+-   블록에서 타임 스탬프 열 (사용 가능한 경우)을 지정 **\<before>** 합니다.  
   
-     > 블록의 모든 레코드 열을 지정 하는 대신 `<before` , ** \< before>** 블록의 기본 키 열과 함께 timestamp 열 (테이블이 있는 경우)을 지정할 수 있습니다. 데이터베이스는 레코드가 업데이트될 때마다 타임스탬프 열을 고유한 값으로 업데이트합니다. 이 경우 updategram은 타임스탬프 값을 데이터베이스의 해당 값과 비교합니다. 타임스탬프 값은 데이터베이스에 이진 값으로 저장되므로 스키마에서 타임스탬프 열은 `dt:type="bin.hex"`, `dt:type="bin.base64"` 또는 `sql:datatype="timestamp"`로 지정해야 합니다. `xml`데이터 형식 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 데이터 형식 중 하나를 지정할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+     > 블록의 모든 레코드 열을 지정 하는 대신 `<before` 블록의 기본 키 열과 함께 timestamp 열 (테이블이 있는 경우)을 지정할 수 있습니다 **\<before>** . 데이터베이스는 레코드가 업데이트될 때마다 타임스탬프 열을 고유한 값으로 업데이트합니다. 이 경우 updategram은 타임스탬프 값을 데이터베이스의 해당 값과 비교합니다. 타임스탬프 값은 데이터베이스에 이진 값으로 저장되므로 스키마에서 타임스탬프 열은 `dt:type="bin.hex"`, `dt:type="bin.base64"` 또는 `sql:datatype="timestamp"`로 지정해야 합니다. `xml`데이터 형식 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 데이터 형식 중 하나를 지정할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="to-test-the-updategram"></a>Updategram을 테스트하려면  
   

@@ -12,18 +12,17 @@ f1_keywords:
 ms.assetid: 80c41c71-226c-45fe-b9cf-af824b592fe1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ecd796d2fb2bc37c4c2ad6d9fac00ef4258ec038
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc3e6d627bf7e3072d8b6ff40a644773474ba4cb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068024"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940234"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>스토리지 설정 대화 상자(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 **스토리지 설정** 대화 상자를 사용하여 차원, 큐브, 측정값 그룹 또는 파티션에 대해 자동 관리 캐싱, 스토리지 및 알림 설정을 지정할 수 있습니다. 다음을 수행하여 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 **스토리지 설정** 대화 상자를 표시할 수 있습니다.  
   
--   의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] **속성** 창에서 차원, 큐브, 측정값 그룹 또는 `ProactiveCaching` 파티션의 속성 값에 대 한 줄임표 단추 (**...**)를 클릭 합니다.  
+-   **...** `ProactiveCaching` 의 **속성** 창에서 차원, 큐브, 측정값 그룹 또는 파티션의 속성 값에 대 한 줄임표 단추 (...)를 클릭 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 합니다.  
   
 -   **큐브 디자이너**의 **파티션** 탭에서 측정값 그룹을 확장하고 **스토리지 설정**을 클릭합니다.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "66068024"
 ||**예약된 MOLAP**<br /><br /> 다음 스토리지 및 자동 관리 캐싱 설정을 사용하려면 선택합니다.|MOLAP 스토리지 모드<br /><br /> 자동 관리 캐싱을 설정합니다.<br /><br /> 다시 작성 간격으로 1일을 사용하여 정기적으로 캐시를 업데이트합니다.|  
 ||**MOLAP**<br /><br /> 다음 스토리지 및 자동 관리 캐싱 설정을 사용하려면 선택합니다.|MOLAP 스토리지 모드|  
 |**사용자 지정 설정**|스토리지 모드, 자동 관리 캐싱 및 알림 옵션을 명시적으로 설정하려면 선택합니다.||  
-|**옵션**|스토리지 모드, 자동 관리 캐싱 및 알림 옵션을 명시적으로 설정할 수 있는 ** 옵션** 대화 상자를 표시하려면 클릭합니다. **스토리지 옵션** 대화 상자에 대한 자세한 내용은 [스토리지 옵션 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](storage-options-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.||  
+|**Options**|스토리지 모드, 자동 관리 캐싱 및 알림 옵션을 명시적으로 설정할 수 있는 ** 옵션** 대화 상자를 표시하려면 클릭합니다. **스토리지 옵션** 대화 상자에 대한 자세한 내용은 [스토리지 옵션 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](storage-options-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.||  
   
 ## <a name="see-also"></a>참고 항목  
  [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

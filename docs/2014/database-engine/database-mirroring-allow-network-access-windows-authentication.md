@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 28c8fec5-5feb-4c84-8d72-f2bd1ae3b40d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e40a1eead54fe9d00eaf099410260023229796d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d1d8786d128ef2cc99fe571e33f89c4c4e7699c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228573"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934468"
 ---
 # <a name="allow-network-access-to-a-database-mirroring-endpoint-using-windows-authentication-sql-server"></a>Windows 인증을 사용하여 데이터베이스 미러링 엔드포인트에 대한 네트워크 액세스 허용(SQL Server)
   Windows 인증을 사용하여 두 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 데이터베이스 미러링 엔드포인트를 연결하려면 다음과 같은 조건에서 로그인 계정의 수동 구성이 필요합니다.  

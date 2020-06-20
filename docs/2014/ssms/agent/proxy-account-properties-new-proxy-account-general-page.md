@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 5cd81265-bf59-413b-8397-150ddc70d0c7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59361a2c0428be8ec7f2abc5b3a7fd199611bccc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4770c05b28f4a45ad6cdad0af5a8f0207c1357ea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62650204"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067661"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>프록시 계정 속성 및 새 프록시 계정(일반 페이지)
-  이 페이지를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정의 속성을 확인 하거나 변경할 수 있습니다.  
+  이 페이지를 사용 하 여 에이전트 프록시 계정의 속성을 확인 하거나 변경할 수 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.  
   
 ## <a name="options"></a>옵션  
  **프록시 이름**  

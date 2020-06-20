@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6d9d1481-18e4-4108-9efa-68152b0940c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: af4c8ae7c2ba827e6110602bd21432fec4f74393
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c8610fd3ac9ee92d6e08084c48f14298cb3203f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067967"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940194"
 ---
 # <a name="table-analysis-tools-for-excel"></a>Excel용 테이블 분석 도구
   **분석** 도구 모음의 데이터 마이닝 도구는 데이터 마이닝을 시작 하는 가장 쉬운 방법입니다. 각 도구는 자동으로 배포 및 데이터 유형을 분석하고 결과가 유효하다는 것을 증명하기 위한 매개 변수를 설정합니다. 알고리즘을 선택하거나 복잡한 매개 변수를 구성할 필요가 없습니다.  

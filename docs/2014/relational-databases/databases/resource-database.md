@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4595fbd7be23414f55a51c2333eee7ebe4f39899
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cca2f9e1ff6069a608beb1df1880b37e15f4e869
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871110"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965793"
 ---
 # <a name="resource-database"></a>Resource 데이터베이스
   Resource 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함된 시스템 개체가 모두 들어 있는 읽기 전용 데이터베이스입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 개체(예: sys.objects)는 실제로는 Resource 데이터베이스에 저장되지만 논리적으로는 모든 데이터베이스의 sys 스키마에 나타납니다. Resource 데이터베이스에는 사용자 데이터 또는 사용자 메타데이터가 없습니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "62871110"
  Resource 데이터베이스를 새 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 빠르고 쉽게 업그레이드합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업그레이드를 수행하려면 시스템 개체를 삭제한 다음 만들어야 합니다. 이제 Resource 데이터베이스 파일에 모든 시스템 개체가 들어 있으므로 단일 Resource 데이터베이스 파일을 로컬 서버에 복사하면 업그레이드할 수 있습니다.  
   
 ## <a name="physical-properties-of-resource"></a>Resource의 물리적 속성  
- Resource 데이터베이스의 물리적 파일 이름은 mssqlsystemresource.mdf 및 mssqlsystemresource.ldf입니다. 이러한 파일은 \<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\에 있으며 이동할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 인스턴스에는 관련된 mssqlsystemresource.mdf 파일이 하나만 있으며 인스턴스에서 이 파일을 공유하지 않습니다.  
+ Resource 데이터베이스의 물리적 파일 이름은 mssqlsystemresource.mdf 및 mssqlsystemresource.ldf입니다. 이러한 파일은 \<*drive*> : FileFiles\Microsoft SQL Server\MSSQL에 있습니다 \<version> . \<*instance_name*> \MSSQL\Binn\ 및는 이동 하면 안 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 인스턴스에는 관련된 mssqlsystemresource.mdf 파일이 하나만 있으며 인스턴스에서 이 파일을 공유하지 않습니다.  
   
 > [!WARNING]  
 >  업그레이드와 서비스 팩은 BINN 폴더에 설치되는 새 리소스 데이터베이스를 제공합니다. 리소스 데이터베이스의 위치 변경은 지원되지 않거나 사용하지 않는 것이 좋습니다.  
