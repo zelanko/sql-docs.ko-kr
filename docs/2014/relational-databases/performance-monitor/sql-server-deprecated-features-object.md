@@ -14,25 +14,24 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96abc6def3f4ab8cdb76b548e7717ae6c030c00f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206957"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067017"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, Deprecated Features 개체
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 SQLServer:Deprecated Features 개체는 사용되지 않는 기능으로 지정된 기능을 모니터링하는 카운터를 제공합니다. 이 카운터는 경우에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 마지막으로 시작된 이후로 사용되지 않는 기능이 발견된 횟수를 나열하는 사용 카운트를 제공합니다.  
   
  다음 표에서는 SQL Server Deprecated Features 카운터 인스턴스에 대해 설명합니다.  
   
-|SQL Server Deprecated Features 카운터 인스턴스|설명|  
+|SQL Server Deprecated Features 카운터 인스턴스|Description|  
 |------------------------------------------------------|-----------------|  
 |임시 테이블 및 저장 프로시저의 이름으로 사용되는 '#' 및 '##'|# 외에 다른 문자를 포함하지 않는 식별자가 발견되었습니다. 적어도 하나 이상의 추가 문자를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
-|'::' 함수 호출 구문|테이블 반환 함수에 대해 :: 함수 호출 구문이 발견되었습니다. `SELECT column_list FROM` * \< Function_name>* `()`으로 대체 합니다. 예를 들어 `SELECT * FROM ::fn_virtualfilestats(2,1)`를 `SELECT * FROM sys.fn_virtualfilestats(2,1)`로 대체합니다. 컴파일마다 한 번씩 발생합니다.|  
+|'::' 함수 호출 구문|테이블 반환 함수에 대해 :: 함수 호출 구문이 발견되었습니다. 을로 바꿉니다 `SELECT column_list FROM` *\< function_name>* `()` . 예를 들어 `SELECT * FROM ::fn_virtualfilestats(2,1)`를 `SELECT * FROM sys.fn_virtualfilestats(2,1)`로 대체합니다. 컴파일마다 한 번씩 발생합니다.|  
 |‘\@’ 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자 ‘\@\@’으로 시작하는 이름|\@ 또는 \@\@으로 시작하는 식별자가 발견되었습니다. \@ 또는 \@\@나 \@\@ 식별자로 시작하는 이름을 사용할 수 없습니다. 컴파일마다 한 번씩 발생합니다.|  
-|ADDING TAPE DEVICE|사용 되지 않는 기능 sp_addumpdevice`tape`' '이 (가) 발견 되었습니다. 대신 sp_addumpdevice '`disk`'를 사용 하세요. 사용할 때마다 한 번씩 발생합니다.|  
+|ADDING TAPE DEVICE|사용 되지 않는 기능 sp_addumpdevice ' `tape` '이 (가) 발견 되었습니다. 대신 sp_addumpdevice ' `disk` '를 사용 하세요. 사용할 때마다 한 번씩 발생합니다.|  
 |ALL 권한|GRANT ALL, DENY ALL 또는 REVOKE ALL 구문이 발견된 총 횟수입니다. 특정 권한을 거부하도록 구문을 수정해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|서버 인스턴스가 시작된 이후로 ALTER DATABASE에서 사용되지 않는 기능인 TORN_PAGE_DETECTION 옵션이 사용된 총 횟수입니다. 대신 PAGE_VERIFY 구문을 사용해야 합니다. DDL 문에서 사용할 때마다 한 번씩 발생합니다.|  
 |ALTER LOGIN WITH SET CREDENTIAL|사용되지 않는 기능 구문인 ALTER LOGIN WITH SET CREDENTIAL 또는 ALTER LOGIN WITH NO CREDENTIAL이 발견되었습니다. 대신 ADD 또는 DROP CREDENTIAL 구문을 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  

@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9610dc1cc729dc555d42c0dfe5eeb117f9cfba18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c72e46f95ec756faa9e103bbb23c4dadca5be36
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806353"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065471"
 ---
 # <a name="editions-and-components-of-sql-server-2014"></a>SQL Server 2014 버전 및 구성 요소
   설치 요구 사항은 사용자의 애플리케이션 요구에 따라 달라질 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전별로 각기 다르게 조직 및 개인의 고유한 성능, 런타임 및 가격 요구 사항을 충족시켜 줍니다. 설치하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소도 특정 요구 사항에 따라 달라집니다. 다음 섹션은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 여러 버전과 구성 요소 중에서 가장 적합한 항목을 선택하는 방법을 이해하는 데 도움이 될 것입니다.  
@@ -55,14 +54,14 @@ ms.locfileid: "62806353"
 ## <a name="specialized-editions-of-sscurrent"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 특수 버전  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 특수 버전은 비즈니스 작업을 대상으로 합니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 특수 버전에 대해 설명합니다.  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|설명|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|Description|  
 |---------------------------------------|-----------------|  
 |Web(64비트 및 32비트)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Web 버전을 사용하면 소규모부터 대규모에 이르는 웹 속성에 대한 확장성, 경제성 및 관리 효율성 기능을 제공하여 웹 호스터와 웹 VAP의 총 소유 비용을 낮출 수 있습니다.|  
   
 ## <a name="breadth-editions-of-sscurrent"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 확장형 버전  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 확장형 버전은 특정 고객 시나리오에 맞게 엔지니어링되었으며 무료로 또는 최소한의 비용으로 제공됩니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 확장형 버전에 대해 설명합니다.  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|설명|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|Description|  
 |---------------------------------------|-----------------|  
 |Developer(64비트 및 32비트)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Developer 버전을 사용하면 개발자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]기반에서 어떤 유형의 애플리케이션도 빌드할 수 있습니다. 이 버전은 Enterprise 버전의 모든 기능을 포함하지만 프로덕션 서버가 아닌 개발 및 테스트 시스템으로 사용하도록 라이선스가 허여되어 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer는 애플리케이션을 빌드하고 테스트하는 사용자에게 적합한 버전입니다.|  
 |Express(64비트 및 32비트) 버전|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Express 버전은 초급 단계의 무료 데이터베이스로 데스크톱 및 소규모 서버 데이터 기반 애플리케이션을 분석 및 빌드하는 데 적합합니다. 이 버전은 개별 소프트웨어 공급업체, 개발자 및 취미로 클라이언트 애플리케이션을 빌드하는 사용자에게 이상적입니다. 고급 데이터베이스 기능이 필요할 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express를 다른 고급 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 원활하게 업그레이드할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB는 모든 프로그래밍 기능을 포함하지만 사용자 모드에서 실행되며 구성이 필요 없는 빠른 설치가 가능하고 필수 구성 요소가 적은 새로운 경량 버전의 Express입니다|  
@@ -85,13 +84,13 @@ ms.locfileid: "62806353"
   
 |서버 구성 요소|Description|  
 |-----------------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에는 [!INCLUDE[ssDE](../includes/ssde-md.md)]데이터 저장, 처리 및 보안 유지를 위한 핵심 서비스인, 복제 기능, 전체 텍스트 검색 기능 및 관계형 데이터와 XML 데이터 관리 도구 및 DQS [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] () 서버가 포함 되어 있습니다.|  
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 데이터 저장, 처리 및 보안 유지를 위한 핵심 서비스인, 복제 기능, 전체 텍스트 검색 기능 및 관계형 데이터와 XML 데이터 관리 도구 및 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] DQS () 서버가 포함 되어 있습니다.|  
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에는 OLAP(온라인 분석 처리) 및 데이터 마이닝 애플리케이션을 생성하고 관리하기 위한 도구가 포함되어 있습니다.|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 테이블 형식, 행렬, 그래픽 및 자유 형식 보고서를 생성, 관리 및 배포하기 위한 서버/클라이언트 구성 요소가 포함되어 있습니다. 또한[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 보고서 애플리케이션을 개발하는 데 사용할 수 있는 확장 가능 플랫폼입니다.|  
 |[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 데이터 이동, 복사 및 변환을 위한 그래픽 도구 및 프로그래밍 가능 개체 집합입니다. 또한 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 에 대한 DQS( [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]) 구성 요소도 포함됩니다.|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|MDS([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] )는 마스터 데이터 관리용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 솔루션입니다. MDS는 모든 도메인(제품, 고객, 계정)을 관리하도록 구성할 수 있으며 계층, 세부적인 보안, 트랜잭션, 데이터 버전 관리 및 비즈니스 규칙은 물론 데이터 관리에 사용할 수 있는 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 을 포함합니다.|  
   
-|관리 도구|설명|  
+|관리 도구|Description|  
 |----------------------|-----------------|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]]의 모든 구성 요소를 액세스, 구성, 관리, 운영 및 개발하기 위한 통합 환경입니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 에서는 모든 수준의 개발자와 관리자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 사용할 수 있습니다.|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스, 서버 프로토콜, 클라이언트 프로토콜 및 클라이언트 별칭에 대한 기본 구성 관리 작업을 수행할 수 있습니다.|  
@@ -101,7 +100,7 @@ ms.locfileid: "62806353"
 |[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]|[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 에서는 비즈니스 인텔리전스 구성 요소( [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)])를 위한 솔루션을 작성할 수 있는 IDE를 제공합니다.<br /><br /> (이전의 Business Intelligence Development Studio).<br /><br /> 또한[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 에 포함된 “데이터베이스 프로젝트”에서는 Visual Studio 내의 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 플랫폼(온-프레미스 및 온-프레미스 모두)에서 모든 해당 데이터베이스 디자인 작업을 수행하도록 데이터베이스 개발자에게 통합 환경을 제공합니다. 데이터베이스 개발자는 Visual Studio에서 향상된 서버 탐색기를 사용하여 데이터베이스 개체 및 데이터를 쉽게 만들거나 편집하고 쿼리를 실행할 수 있습니다.|  
 |연결 구성 요소|클라이언트와 서버 간 통신 구성 요소와 DB-Library, ODBC 및 OLE DB용 네트워크 라이브러리를 설치합니다.|  
   
-|문서화|설명|  
+|설명서|Description|  
 |-------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 핵심 설명서입니다.|  
   

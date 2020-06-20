@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ab9c51ba125a7489d693a1af6b16e432e8fb7099
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5fa2fce50d7f62f134ef96175ed359c86ea84080
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632732"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058851"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>업그레이드 관리자를 사용하여 업그레이드 준비
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업그레이드 관리자는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로의 업그레이드를 준비할 수 있도록 도와 줍니다. 업그레이드 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전에서 설치된 구성 요소를 분석한 다음 업그레이드 전이나 후에 해결해야 할 문제를 보여 주는 보고서를 생성합니다.  
@@ -56,7 +55,7 @@ ms.locfileid: "73632732"
 >  보고서에는 "기타 업그레이드 문제"  항목이 들어 있을 수 있습니다. 이 항목은 업그레이드 관리자에 의해 감지되지는 않았지만 서버 또는 애플리케이션에 있을 수 있는 문제 목록에 대한 링크를 제공합니다. 발견할 수 없는 문제 목록을 검토하고 이런 문제로 인해 서버 또는 애플리케이션을 변경해야 하는지 여부를 결정해야 합니다.  
   
 ## <a name="how-to-install-and-run-upgrade-advisor"></a>업그레이드 관리자 설치 및 실행 방법  
- 업그레이드 관리자를 설치 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 위치는 분석할 내용에 따라 달라 집니다. 업그레이드 관리자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 제외하고 지원되는 모든 구성 요소의 원격 분석을 지원합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 검색하지 않는 경우 사용자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있거나 업그레이드 관리자의 필수 구성 요소가 있는 모든 컴퓨터에 업그레이드 관리자를 설치할 수 있습니다. 자세한 내용은 [지원되는 버전 및 에디션 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)를 참조하세요. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 인스턴스를 검색하는 경우에는 보고서 서버에 업그레이드 관리자를 설치해야 합니다.  
+ 업그레이드 관리자를 설치 하는 위치는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 분석할 내용에 따라 달라 집니다. 업그레이드 관리자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 제외하고 지원되는 모든 구성 요소의 원격 분석을 지원합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 검색하지 않는 경우 사용자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있거나 업그레이드 관리자의 필수 구성 요소가 있는 모든 컴퓨터에 업그레이드 관리자를 설치할 수 있습니다. 자세한 내용은 [지원되는 버전 및 에디션 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)를 참조하세요. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 인스턴스를 검색하는 경우에는 보고서 서버에 업그레이드 관리자를 설치해야 합니다.  
   
  업그레이드 관리자는 기능 팩으로 제공됩니다.  
   
@@ -74,13 +73,13 @@ ms.locfileid: "73632732"
   
  업그레이드 관리자를 설치한 후 **시작** 메뉴에서 열 수 있습니다.  
   
--   **시작**을 클릭 하 고 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]을 차례로 가리킨 다음 ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업그레이드 관리자**를 클릭 합니다.  
+-   **시작**을 클릭 하 고 **모든 프로그램**,을 차례로 가리킨 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] 다음 ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업그레이드 관리자**를 클릭 합니다.  
   
  자세한 내용은 업그레이드 관리자 다운로드에 포함된 업그레이드 관리자 설명서 및 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 릴리스 정보를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server의 여러 버전 및 인스턴스 작업](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
- [지원 되는 버전 및 에디션 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
+ [지원되는 버전 및 에디션 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [이전 버전과의 호환성](../../../2014/getting-started/backward-compatibility.md)  
   
   

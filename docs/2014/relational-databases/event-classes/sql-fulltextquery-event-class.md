@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 654fb295-f0a5-4d66-93e0-5d43e4d7d535
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5452b53bf6171b7e516f246972aa0d9d56e321a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 699f06460d2cf78aa502fde925d9475035c979ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050753"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051664"
 ---
 # <a name="sqlfulltextquery-event-class"></a>SQL:FullTextQuery 이벤트 클래스
   SQL:FullTextQuery 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 전체 텍스트 쿼리를 실행할 때 발생합니다. 이 이벤트 클래스를 추적에 포함하여 전체 텍스트 카탈로그와 연결된 문제를 모니터링할 수 있습니다.  
@@ -34,11 +33,11 @@ ms.locfileid: "63050753"
 |ClientProcessID|`int`|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
 |DatabaseID|`int`|USE *database* 문으로 지정한 데이터베이스 ID이거나 지정한 인스턴스에 대해 USE *database*문이 발급되지 않은 경우에 사용되는 기본 데이터베이스 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에 ServerName 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |DatabaseName|`nvarchar`|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|예|  
-|Duration|`bigint`|전체 텍스트 쿼리를 완료하는 데 걸린 시간입니다.|13|아니요|  
+|Duration|`bigint`|전체 텍스트 쿼리를 완료하는 데 걸린 시간입니다.|13|예|  
 |EndTime|`datetime`|이벤트 종료 시간입니다.|15|예|  
 |Error|`int`|오류 메시지 수입니다.|31|예|  
-|EventClass|`int`|기록된 이벤트 유형 = 123|27|아니요|  
-|EventSequence|`int`|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니요|  
+|EventClass|`int`|기록된 이벤트 유형 = 123|27|예|  
+|EventSequence|`int`|요청 내에 지정된 이벤트 시퀀스입니다.|51|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  
 |IntegerData|`int`|반환된 행 수입니다. 쿼리가 오류를 반환하면 이 값은 NULL입니다. 쿼리가 행을 반환하지 않으면 이 값은 0입니다.|25|예|  

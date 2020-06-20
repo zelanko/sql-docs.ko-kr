@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b27ea0fa-ab31-424b-80cf-aad1e87f3816
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b841f2afe85c1cf657a4686c2a0e989ecff85715
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 096a767ec57e71b40da67305a42bf18fbbc841a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62643079"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059741"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolproperty-class"></a>IPAddressName 속성(ServerNetworkProtocolProperty 클래스)
   IP 주소의 이름을 가져옵니다.  
@@ -38,7 +37,7 @@ object
   
 ## <a name="parts"></a>부분  
  *object*  
- 인스턴스의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]네트워크 프로토콜 특성을 나타내는 [servernetworkprotocolproperty 클래스](servernetworkprotocolproperty-class.md) 개체입니다.  
+ 인스턴스의 네트워크 프로토콜 특성을 나타내는 [Servernetworkprotocolproperty 클래스](servernetworkprotocolproperty-class.md) 개체입니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  IP 주소의 이름을 지정하는 문자열 값입니다.  

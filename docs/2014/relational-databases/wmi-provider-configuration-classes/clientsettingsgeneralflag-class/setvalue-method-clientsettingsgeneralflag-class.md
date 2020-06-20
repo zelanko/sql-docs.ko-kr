@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7e96139ac789e4ded8453e2c26d1cd436fed6d7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e53d7c31c702531e58f4f950e2053989d1f9de05
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63242802"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067900"
 ---
 # <a name="setvalue-method-clientsettingsgeneralflag-class"></a>SetValue 메서드(ClientSettingsGeneralFlag 클래스)
   참조된 플래그의 모든 값을 설정합니다.  
@@ -45,7 +44,7 @@ Value
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*값*|플래그의 값을 지정하는 부울 값입니다.|  
   

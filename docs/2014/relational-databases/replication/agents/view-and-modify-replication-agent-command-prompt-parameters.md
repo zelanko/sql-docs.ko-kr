@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6e4327de10dd03b3ff8cf034ade64391d18d2a86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e64551075920f2f08bf84fe22086c06387b4439a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192891"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068751"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters-sql-server-management-studio"></a>복제 에이전트의 명령 프롬프트 매개 변수 보기 및 수정(SQL Server Management Studio)
-  복제 에이전트는 명령줄 매개 변수를 받는 실행 파일입니다. 기본적으로 에이전트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 실행되므로 **작업 속성 - \<Job>** 대화 상자를 사용하여 이러한 매개 변수를 보고 수정할 수 있습니다. 이 대화 상자는 **의** 작업 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 폴더 및 복제 모니터의 **에이전트** 탭에서 사용할 수 있습니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../monitor/start-the-replication-monitor.md)을 참조하세요.  
+  복제 에이전트는 명령줄 매개 변수를 받는 실행 파일입니다. 기본적으로 에이전트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 실행 되므로 **작업 속성- \<Job> ** 대화 상자를 사용 하 여 이러한 매개 변수를 보고 수정할 수 있습니다. 이 대화 상자는 **의** 작업 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 폴더 및 복제 모니터의 **에이전트** 탭에서 사용할 수 있습니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../monitor/start-the-replication-monitor.md)을 참조하세요.  
   
 > [!NOTE]  
 >  에이전트 매개 변수에 대한 변경 사항은 다음에 에이전트가 시작될 때 적용됩니다. 에이전트가 연속적으로 실행되는 경우에는 에이전트를 중단했다가 다시 시작해야 합니다.  
@@ -31,19 +30,19 @@ ms.locfileid: "63192891"
   
 |에이전트|작업 이름|매개 변수 목록은 다음을 참조하세요.|  
 |-----------|--------------|------------------------------------|  
-|스냅샷 에이전트|**\<게시자>-\<publicationdatabase>>\<->-\<정수>**|[Replication Snapshot Agent](replication-snapshot-agent.md)|  
+|스냅샷 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<integer>**|[Replication Snapshot Agent](replication-snapshot-agent.md)|  
 |병합 게시 파티션에 대한 스냅샷 에이전트|**Dyn_\<Publisher>-\<PublicationDatabase>-\<Publication>-\<GUID>**|[Replication Snapshot Agent](replication-snapshot-agent.md)|  
-|로그 판독기 에이전트|**\<게시자>-\<publicationdatabase>>-\<정수>**|[복제 로그 판독기 에이전트](replication-log-reader-agent.md)|  
-|끌어오기 구독에 대한 병합 에이전트|**\<게시자>-\<publicationdatabase>>-\<게시>-\<구독자>-\<subscriptiondatabase>-\<integer>**|[Replication Merge Agent](replication-merge-agent.md)|  
-|밀어넣기 구독에 대한 병합 에이전트|**\<게시자>-\<publicationdatabase>>-\<게시>-\<구독자>-\<정수>**|[Replication Merge Agent](replication-merge-agent.md)|  
-|밀어넣기 구독에 대한 배포 에이전트|**\<\<\<게시자>-publicationdatabase>>-게시>-구독자>-\<정수>1 \<** <sup>1</sup>|[복제 배포 에이전트](replication-distribution-agent.md)|  
-|끌어오기 구독에 대한 배포 에이전트|**\<\<\<\<게시자>-publicationdatabase>>-게시>-구독자>-subscriptiondatabase>-\<GUID>2 \<** <sup>2</sup>|[복제 배포 에이전트](replication-distribution-agent.md)|  
-|SQL Server 이외 구독자의 밀어넣기 구독에 대한 배포 에이전트|**\<게시자>-\<publicationdatabase>>-\<게시>-\<구독자>-\<정수>**|[복제 배포 에이전트](replication-distribution-agent.md)|  
-|큐 판독기 에이전트|**[\<배포자>]. \<정수>**|[복제 큐 판독기 에이전트](replication-queue-reader-agent.md)|  
+|로그 판독기 에이전트|**\<Publisher>-\<PublicationDatabase>-\<integer>**|[복제 로그 판독기 에이전트](replication-log-reader-agent.md)|  
+|끌어오기 구독에 대한 병합 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|[Replication Merge Agent](replication-merge-agent.md)|  
+|밀어넣기 구독에 대한 병합 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Merge Agent](replication-merge-agent.md)|  
+|밀어넣기 구독에 대한 배포 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**<sup>1</sup>|[Replication Distribution Agent](replication-distribution-agent.md)|  
+|끌어오기 구독에 대한 배포 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>**<sup>2</sup>|[Replication Distribution Agent](replication-distribution-agent.md)|  
+|SQL Server 이외 구독자의 밀어넣기 구독에 대한 배포 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Distribution Agent](replication-distribution-agent.md)|  
+|큐 판독기 에이전트|**[\<Distributor>].\<integer>**|[Replication Queue Reader Agent](replication-queue-reader-agent.md)|  
   
- <sup>1</sup> Oracle 게시에서 밀어넣기 구독의 경우 **\<Publisher>-\<PublicationDatabase>** 가 아닌 **\<Publisher>-\<Publisher**>입니다.  
+ <sup>1</sup> Oracle 게시에 대 한 밀어넣기 구독의 경우에 \<Publisher> 는 대신 * *입니다. - \<Publisher**>**\<Publisher>-\<PublicationDatabase>**  
   
- <sup>2</sup> Oracle 게시에서 끌어오기 구독에 대한 작업 이름은 **\<Publisher>-\<PublicationDatabase>** 가 아닌 **\<Publisher>-\<DistributionDatabase**>입니다.  
+ <sup>2</sup> Oracle 게시에 대 한 끌어오기 구독의 경우에 \<Publisher> 는 대신 * *입니다. - \<DistributionDatabase**>**\<Publisher>-\<PublicationDatabase>**  
   
 ### <a name="to-view-and-modify-replication-agent-command-line-parameters-from-management-studio"></a>Management Studio에서 복제 에이전트 명령줄 매개 변수를 확인한 다음 수정하려면  
   
@@ -57,7 +56,7 @@ ms.locfileid: "63192891"
   
 3.  작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  **작업 속성 - \<Job>** 대화 상자의 **단계** 페이지에서 **에이전트 실행** 단계를 선택한 다음 **편집**을 클릭합니다.  
+4.  **작업 \<Job> 속성-** 대화 상자의 **단계** 페이지에서 **에이전트 실행**단계를 선택한 다음 **편집**을 클릭 합니다.  
   
 5.  **작업 단계 속성 - 에이전트를 실행합니다** 대화 상자에서 **명령** 필드를 편집합니다.  
   
@@ -71,9 +70,9 @@ ms.locfileid: "63192891"
   
 3.  구독을 마우스 오른쪽 단추로 클릭한 다음 **자세히 보기**를 클릭합니다.  
   
-4.  **Subscription \< SubscriptionName>** 창에서 **작업**을 클릭 한 다음 ** \<agentname> 작업 속성**을 클릭 합니다.  
+4.  ** \< SubscriptionName> 구독** 창에서 **작업**을 클릭 한 다음 ** \<AgentName> 작업 속성**을 클릭 합니다.  
   
-5.  **작업 속성 - \<Job>** 대화 상자의 **단계** 페이지에서 **에이전트 실행** 단계를 선택한 다음 **편집**을 클릭합니다.  
+5.  **작업 \<Job> 속성-** 대화 상자의 **단계** 페이지에서 **에이전트 실행**단계를 선택한 다음 **편집**을 클릭 합니다.  
   
 6.  **작업 단계 속성 - 에이전트를 실행합니다** 대화 상자에서 **명령** 필드를 편집합니다.  
   
@@ -87,7 +86,7 @@ ms.locfileid: "63192891"
   
 3.  표에서 에이전트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  **작업 속성 - \<Job>** 대화 상자의 **단계** 페이지에서 **에이전트 실행** 단계를 선택한 다음 **편집**을 클릭합니다.  
+4.  **작업 \<Job> 속성-** 대화 상자의 **단계** 페이지에서 **에이전트 실행**단계를 선택한 다음 **편집**을 클릭 합니다.  
   
 5.  **작업 단계 속성 - 에이전트를 실행합니다** 대화 상자에서 **명령** 필드를 편집합니다.  
   

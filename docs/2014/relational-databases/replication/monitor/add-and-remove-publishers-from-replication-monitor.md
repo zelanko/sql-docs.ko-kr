@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 484aafea03bb1b053239e9948ac498403b5ac25d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e05d920b21a2e99f5daed06f00183ce8bed85754
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667421"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060823"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>복제 모니터에서 게시자 추가 및 제거
   복제 모니터를 실행하는 서버가 게시자인 경우 자동으로 모니터에 추가됩니다. **게시자 추가** 대화 상자를 통해 게시자를 추가할 수 있습니다. 게시자를 추가하면 게시자는 모니터의 왼쪽 창에 있는 그룹에 표시됩니다. **내 게시자** 그룹이 기본적으로 포함되지만 새 그룹을 만들어 하나 이상의 복제 토폴로지를 관리할 수 있습니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](start-the-replication-monitor.md)을 참조하세요.  

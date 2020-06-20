@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1bb6f278b18381d1b3d3defdb53a7c40a6f673ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f1a649addeb0642ba5fc799aeff48e50044677a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62960286"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004832"
 ---
 # <a name="secure-the-distributor"></a>배포자 보안 설정
   배포자에 연결하는 병합 에이전트에는 로그 판독기 에이전트, 스냅샷 에이전트, 큐 판독기 에이전트, 배포 에이전트 및 병합 에이전트가 있습니다. 필요한 최소 권한만 부여하는 원칙을 따르고 모든 암호 스토리지를 보호하면서 이러한 에이전트에 적절한 로그인을 제공하는 것이 중요합니다.  

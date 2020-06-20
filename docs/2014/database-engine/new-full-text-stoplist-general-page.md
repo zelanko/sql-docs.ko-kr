@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 97f8e82d-82ab-4525-91c9-1ee3ae217309
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1dc58f006d1e37885418dfb923c6c7cc7563d018
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: a6272fb570b85989f38c8187e29712966862710d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000833"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930469"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>새 전체 텍스트 중지 목록(일반 페이지)
   이 대화 상자를 사용하여 전체 텍스트 중지 목록을 만들 수 있습니다. *중지 목록은**중지 단어*라고 하는 일반적으로 사용되는 단어 집합으로, 중지 목록을 사용하는 테이블에 대한 전체 텍스트 인덱싱에서 생략됩니다. 자세한 내용은 [전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리](../relational-databases/search/full-text-search.md)를 참조하세요.  

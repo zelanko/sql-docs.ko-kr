@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4830a677125cb03e2c53ed78065d94d5265d4a83
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ebd47e354b77a57768a396b2c5d5dd8e3c570d2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920776"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954259"
 ---
 # <a name="assemblies-database-engine"></a>어셈블리(데이터베이스 엔진)
   이 섹션의 항목에서는 어셈블리를 이해하고 어셈블리를 디자인 및 구현하는 데 도움이 되는 정보를 제공합니다.  
   
- 어셈블리는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 사용 되는 DLL 파일로 함수, 저장 프로시저, 트리거, 사용자 정의 집계 및 CLR [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] (공용 언어 런타임)에 의해 호스팅되는 관리 코드 언어 중 하나로 작성 되는 사용자 정의 형식입니다 [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+ 어셈블리는 인스턴스에서 사용 되는 DLL 파일로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 함수, 저장 프로시저, 트리거, 사용자 정의 집계 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] CLR (공용 언어 런타임)에 의해 호스팅되는 관리 코드 언어 중 하나로 작성 되는 사용자 정의 형식입니다 [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 어셈블리는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 공용 언어 런타임으로 작성된 관리 애플리케이션 모듈(.dll 파일)을 참조하는 개체입니다. 어셈블리에는 클래스 메타데이터와 관리 코드가 포함되어 있습니다. 어셈블리를 SQL Server 인스턴스에 업로드하는 단계는 다음과 같은 데이터베이스 개체를 만들기 위한 첫 번째 단계입니다.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "62920776"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[어셈블리 디자인](assemblies-designing.md)|어셈블리를 만들기 전에 고려해야 하는 항목에 대해 설명합니다. 여기에는 어셈블리 패키지, 코드 액세스 권한 및 기타 제한 사항이 포함됩니다.|  
 |[어셈블리 구현](assemblies-implementing.md)|어셈블리를 만들고 삭제하는 방법, 어셈블리 수정 방법 및 시기, 어셈블리에 대한 메타데이터 검색 방법에 대해 설명합니다.|  

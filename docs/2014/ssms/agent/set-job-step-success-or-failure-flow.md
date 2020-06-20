@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7e9412ee0bd2be7b44dff2a06bd674abee0da34a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fddc5820676cb231b6f0cd5f7151e24d8eceaefa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798171"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067548"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Set Job Step Success or Failure Flow
-  에이전트 작업 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 만들 때 작업 실행 중에 오류가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 발생 하는 경우 수행할 작업을 지정할 수 있습니다. 각 작업 단계의 성공이나 실패에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 수행해야 할 동작을 결정합니다. 그런 후에 다음 프로시저를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 통해 작업 단계 동작 흐름 논리를 구성합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 만들 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업 실행 중에 오류가 발생 하는 경우 수행할 작업을 지정할 수 있습니다. 각 작업 단계의 성공이나 실패에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 수행해야 할 동작을 결정합니다. 그런 후에 다음 프로시저를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 통해 작업 단계 동작 흐름 논리를 구성합니다.  
   
 -   **시작하기 전 주의 사항:**  
   

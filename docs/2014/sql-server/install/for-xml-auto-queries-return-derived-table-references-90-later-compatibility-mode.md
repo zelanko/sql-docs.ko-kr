@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 10c32f06-f7e1-40e0-8f79-6d921f2bef1d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5b42d8fd7694aaa3962d049cb0e9663479778958
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 702cb2ca1d437dff03cee09c98d72082500709d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095186"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012453"
 ---
 # <a name="for-xml-auto-queries-return-derived-table-references-in-90-or-later-compatibility-modes"></a>FOR XML AUTO 쿼리는 호환성 모드 90 이상에서 파생 테이블 참조를 반환합니다.
   데이터베이스 호환성 수준이 90 이상으로 설정되어 있으면 AUTO 모드에서 실행되는 FOR XML 쿼리는 파생 테이블 별칭에 대한 참조를 반환합니다. 호환성 수준이 80으로 설정되어 있으면 FOR XML AUTO 쿼리는 파생 테이블을 정의하는 기본 테이블에 대한 참조를 반환합니다.  

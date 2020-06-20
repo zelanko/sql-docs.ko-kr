@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aef64ed8031664dcbefa7d0e30bf9f63435b292c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9082377f1599b719f490222d3ddacba4a6622699
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015704"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067245"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>쿼리에 열 추가(Visual Database Tools)
   쿼리에서 열을 사용하려면 쿼리에 열을 추가해야 합니다. 열을 추가하여 쿼리 출력에 표시하거나, 정렬에 사용하거나, 열의 내용을 검색하거나, 해당 내용을 요약할 수 있습니다. 쿼리를 실행할 때 쿼리에 사용되는 열 중 어떠한 열을 결과 창에 포함할지 지정할 수 있습니다. 자세한 내용은 [쿼리 결과에서 열 제거&#40;Visual Database Tools&#41;](visual-database-tools.md)를 참조하세요.  
@@ -40,7 +39,7 @@ ms.locfileid: "63015704"
   
 ### <a name="to-add-all-columns-for-one-table-or-table-valued-object"></a>하나의 테이블 또는 테이블 반환 개체에 대한 열 전체를 추가하려면  
   
--   **다이어그램 창**에서 ** \*(모든 열)** 옆의 확인란을 선택 합니다.  
+-   **다이어그램 창**에서 ** \* (모든 열)** 옆의 확인란을 선택 합니다.  
   
 ### <a name="to-add-all-columns-for-all-tables-and-table-structured-objects"></a>모든 테이블 및 테이블 구조 개체에 대한 열 전체를 추가하려면  
   

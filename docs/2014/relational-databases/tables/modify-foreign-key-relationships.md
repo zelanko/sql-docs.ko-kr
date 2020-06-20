@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43b4fe6f4c3a7eafb0bf38a284c331bcaeaf4d5f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196838"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067950"
 ---
 # <a name="modify-foreign-key-relationships"></a>외래 키 관계 수정
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 관계의 외래 키 측을 수정할 수 있습니다. 테이블의 외래 키를 수정하면 주 키 테이블의 열과 관련된 열이 변경됩니다.  
@@ -139,7 +138,7 @@ ms.locfileid: "68196838"
   
     -   **기본값 설정** 테이블의 모든 외래 키 열에 기본값이 정의되어 있으면 열에 정의된 기본값으로 값을 설정합니다.  
   
-4.  **파일** 메뉴에서 **테이블 이름**_저장_을 클릭합니다.  
+4.  **파일** 메뉴에서 _테이블 이름_**저장**을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **외래 키를 수정하려면**  

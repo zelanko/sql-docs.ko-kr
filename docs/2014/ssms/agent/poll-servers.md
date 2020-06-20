@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 96f5fd43-3edd-4418-9dd0-4d34e618890e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ae75dc8af9364a619113d2c38071a441e15351be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6370e53083d2cf818e8c8b09752d49e092755a46
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062212"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067682"
 ---
 # <a name="poll-servers"></a>서버 폴링
   다중 서버 관리가 구현될 때 대상 서버는 정기적으로 마스터 서버에 연결하여 실행된 작업에 대한 정보를 업로드하고 새 작업을 다운로드합니다. 마스터 서버에 연결하는 프로세스를 *서버 폴링* 이라고 하며 서버 폴링은 정기적인 *폴링 간격*마다 발생합니다.  

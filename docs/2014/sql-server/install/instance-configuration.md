@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66329d4c25a23a6b3dbc3570723bab8aecfa3d4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86a9538e81881a3b42b95447f4264200e2fe9d4c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68190960"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065311"
 ---
 # <a name="instance-configuration"></a>인스턴스 구성
   **설치 마법사의** 인스턴스 구성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스를 만들지 또는 명명된 인스턴스를 만들지 지정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 아직 설치되지 않은 경우 명명된 인스턴스를 지정하지 않으면 기본 인스턴스가 만들어집니다.  
@@ -71,7 +70,7 @@ ms.locfileid: "68190960"
   
 -   공백이나 다른 특수 문자는 인스턴스 이름에 사용할 수 없습니다. 백슬래시(\\), 쉼표(,), 콜론(:), 세미콜론(;), 작은따옴표('), 앰퍼샌드(&), 하이픈(-) 및 @ 기호도 사용할 수 없습니다.  
   
--   **현재 Windows 코드 페이지에서 유효한 문자만 인스턴스 이름에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용할 수 있습니다. 지원 되지 않는 유니코드 문자를 사용 하는 경우 설치 오류가 발생 합니다.**  
+-   **현재 Windows 코드 페이지에서 유효한 문자만 인스턴스 이름에 사용할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 지원 되지 않는 유니코드 문자를 사용 하는 경우 설치 오류가 발생 합니다.**  
   
  **감지된 인스턴스 및 기능**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 실행 중인 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 및 구성 요소 목록을 확인합니다.  

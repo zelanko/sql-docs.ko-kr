@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ef05ce53-c6ce-42ec-9df8-46c951626424
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7145d846657613b50706ebe75c9832f40f49383e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f5947e8fc8d459388fe35d86c75666e25b5d907
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092036"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036131"
 ---
 # <a name="sql-server-agent-log-shipping-job-category-causes-upgrade-to-fail"></a>SQL Server 에이전트 로그 전달 작업 범주로 인해 업그레이드하지 못합니다.
   로그 전달이라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 범주가 있으면 업그레이드 프로세스가 실패합니다.  
@@ -26,7 +25,7 @@ ms.locfileid: "66092036"
 ## <a name="component"></a>구성 요소  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  로그 전달이라는 시스템 작업 범주가 있습니다. 업그레이드하려는 설치에 로그 전달이라는 사용자가 만든 작업 범주가 이미 있으면 업그레이드하기 전에 이 작업 범주의 이름을 바꿔야 합니다. 그렇지 않으면 업그레이드 프로세스가 실패합니다.  
   
 ## <a name="see-also"></a>참고 항목  

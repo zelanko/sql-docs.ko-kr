@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b67b95c5-61ef-4bd8-9a3e-1640eb7583ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 23567accc051e72ede3b8ed079b22411de6bc7c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a73c25d91b742f1cc1f7edcc8a95cdf226b2683c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211833"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067970"
 ---
 # <a name="modify-columns-database-engine"></a>열 수정(데이터베이스 엔진)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 열의 데이터 형식을 수정할 수 있습니다.  
@@ -56,7 +55,7 @@ ms.locfileid: "68211833"
   
 3.  **열 속성** 탭에서 **데이터 형식** 속성의 표 형태 셀을 클릭하고 드롭다운 목록에서 새 데이터 형식을 선택합니다.  
   
-4.  **파일** 메뉴에서 **테이블 이름**_저장_을 클릭합니다.  
+4.  **파일** 메뉴에서 _테이블 이름_**저장**을 클릭합니다.  
   
 > [!NOTE]  
 >  열의 데이터 형식을 수정하면 선택한 데이터 형식에 대해 이미 다른 길이를 지정했더라도 테이블 디자이너에서 해당 형식의 기본 길이가 적용됩니다. 데이터 형식을 지정한 후에 항상 데이터 형식 길이를 원하는 값으로 설정해야 합니다.  

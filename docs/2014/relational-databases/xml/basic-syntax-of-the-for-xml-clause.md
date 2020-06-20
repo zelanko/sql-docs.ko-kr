@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e09323a96a5a2fc282c1595c2606ea7e9b9a6bee
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: dc0410e7a54674673f64442d8a3cf9476d250033
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717361"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059557"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>FOR XML 절의 기본 구문
   FOR XML 모드는 RAW, AUTO, EXPLICIT 또는 PATH일 수 있습니다. 이 모드는 결과 XML의 셰이프를 결정합니다.  
@@ -62,7 +61,7 @@ XML
   
 ## <a name="arguments"></a>인수  
  RAW[('*ElementName*')]  
- 쿼리 결과를 사용하여 결과 집합의 각 행을 요소 태그로 \<row /> 일반 식별자를 갖는 XML 요소로 변환합니다. 이 지시어를 사용하는 경우 필요에 따라 행 요소에 대한 이름을 지정할 수 있습니다. 결과 XML은 각 행에 대해 행 요소가 생성될 때 지정된 *ElementName* 을 사용합니다. 자세한 내용은 [FOR XML에서 RAW 모드 사용](use-raw-mode-with-for-xml.md)을 참조하세요.  
+ 쿼리 결과를 사용 하 여 결과 집합의 각 행을 요소 태그로 일반 식별자 인 XML 요소로 변환 합니다 \<row /> . 이 지시어를 사용하는 경우 필요에 따라 행 요소에 대한 이름을 지정할 수 있습니다. 결과 XML은 각 행에 대해 행 요소가 생성될 때 지정된 *ElementName* 을 사용합니다. 자세한 내용은 [FOR XML에서 RAW 모드 사용](use-raw-mode-with-for-xml.md)을 참조하세요.  
   
  AUTO  
  단순하게 중첩된 XML 트리로 쿼리 결과를 반환합니다. 최소한 한 개의 열이 SELECT 절에 나열되는 FROM 절의 각 테이블은 XML 요소로 표시됩니다. SELECT 절에 나열되는 열은 해당 요소의 특성에 매핑됩니다. 자세한 내용은 [FOR XML에서 AUTO 모드 사용](use-auto-mode-with-for-xml.md)을 참조하세요.  
@@ -71,7 +70,7 @@ XML
  결과 XML 트리 셰이프가 명시적으로 정의되도록 지정합니다. 쿼리는 이 모드를 사용하여 원하는 중첩에 대한 추가 정보가 명시적으로 지정되도록 특정 방식으로 작성되어야 합니다. 자세한 내용은 [FOR XML에서 EXPLICIT 모드 사용](use-explicit-mode-with-for-xml.md)을 참조하세요.  
   
  PATH  
- 요소와 특성을 혼합하고 추가 중첩을 사용하여 복잡한 속성을 나타내는 보다 간단한 방법을 제공합니다. FOR XML EXPLICIT 모드 쿼리를 사용하여 행 집합에서 이러한 종류의 XML을 구성할 수 있지만 PATH 모드는 복잡할 수도 있는 EXPLICIT 모드 쿼리 대신 훨씬 간단한 방법을 제공합니다. **XML** 유형 인스턴스를 반환하는 중첩 FOR XML 쿼리 및 TYPE 지시어 작성 기능과 함께 PATH 모드를 사용하면 보다 간편하게 쿼리를 작성할 수 있습니다. 이 모드는 대부분의 EXPLICIT 모드 쿼리 작성을 대신할 방법을 제공합니다. 기본적으로 PATH 모드는 결과 집합의 각 행에 대한 \<row> 요소 래퍼를 생성합니다. 필요에 따라 요소 이름을 지정할 수 있습니다. 요소 이름을 지정한 경우 지정된 이름이 래퍼 요소 이름으로 사용됩니다. 빈 문자열(FOR XML PATH (''))을 제공하면 래퍼 요소가 생성되지 않습니다. 자세한 내용은 [FOR XML에서 PATH 모드 사용](use-path-mode-with-for-xml.md)을 참조하세요.  
+ 요소와 특성을 혼합하고 추가 중첩을 사용하여 복잡한 속성을 나타내는 보다 간단한 방법을 제공합니다. FOR XML EXPLICIT 모드 쿼리를 사용하여 행 집합에서 이러한 종류의 XML을 구성할 수 있지만 PATH 모드는 복잡할 수도 있는 EXPLICIT 모드 쿼리 대신 훨씬 간단한 방법을 제공합니다. **XML** 유형 인스턴스를 반환하는 중첩 FOR XML 쿼리 및 TYPE 지시어 작성 기능과 함께 PATH 모드를 사용하면 보다 간편하게 쿼리를 작성할 수 있습니다. 이 모드는 대부분의 EXPLICIT 모드 쿼리 작성을 대신할 방법을 제공합니다. 기본적으로 PATH 모드는 \<row> 결과 집합의 각 행에 대해 요소 래퍼를 생성 합니다. 필요에 따라 요소 이름을 지정할 수 있습니다. 요소 이름을 지정한 경우 지정된 이름이 래퍼 요소 이름으로 사용됩니다. 빈 문자열(FOR XML PATH (''))을 제공하면 래퍼 요소가 생성되지 않습니다. 자세한 내용은 [FOR XML에서 PATH 모드 사용](use-path-mode-with-for-xml.md)을 참조하세요.  
   
  XMLDATA  
  인라인 XDR(XML-Data Reduced) 스키마가 반환되어야 함을 지정합니다. 스키마는 인라인 스키마로 문서 앞에 놓이게 됩니다. 작업 샘플은 [FOR XML에서 RAW 모드 사용](use-raw-mode-with-for-xml.md)을 참조하세요.  

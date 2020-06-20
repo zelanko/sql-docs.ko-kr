@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6d1e0e37-29ea-408a-a055-384984d884be
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 249b338148dc762e091d0be47bc081fe87c72fcd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2efb37fafa29bcb043dedbcfa8719d0092b1c77
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162398"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068941"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>정책 기반 관리의 일반 속성 구성
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 정책 기반 관리에 대한 속성을 구성하는 방법에 대해 설명합니다.  
@@ -55,7 +54,7 @@ ms.locfileid: "63162398"
   
      다음 옵션은 **정책 관리 속성** 대화 상자에서 사용할 수 있습니다.  
   
-     **사용**  
+     **Enabled**  
      정책 기반 관리 사용 여부를 지정합니다.  
   
      **HistoryRetentionInDays**  

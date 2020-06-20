@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5575b83803628f20568c86f44568fab909f7fdd9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68f2bff1458cdbb134aaeb7e64ec959fe111fdb6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919288"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953943"
 ---
 # <a name="assembly-properties-general-page"></a>어셈블리 속성(일반 페이지)
   이 페이지를 사용하여 어셈블리 속성을 확인하거나 수정할 수 있습니다.  

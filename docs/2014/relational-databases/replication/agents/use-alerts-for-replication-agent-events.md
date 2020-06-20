@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3a670a78f6e906221638fb67c1cf5be8398b415b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e9d945123fae29e8cb629348b41e811f25e0e71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210736"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068773"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>복제 에이전트 이벤트에 대한 경고 사용
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트에서는 경고를 사용하여 복제 에이전트 이벤트 등의 이벤트를 모니터링하는 방법을 제공합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트는 경고와 관련된 이벤트에 대한 Windows 애플리케이션 로그를 모니터링합니다. 이런 이벤트가 발생하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트는 사용자가 정의한 태스크를 실행하거나 지정된 운영자에게 전자 메일 또는 호출기 메시지를 보내어 자동으로 응답합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에는 태스크를 실행하거나 운영자에게 알리도록 구성할 수 있는 복제 에이전트에 대한 미리 정의된 경고 집합이 포함되어 있습니다. 실행할 태스크를 정의하는 방법은 이 항목의 "경고에 대한 응답 자동화" 섹션을 참조하십시오.  

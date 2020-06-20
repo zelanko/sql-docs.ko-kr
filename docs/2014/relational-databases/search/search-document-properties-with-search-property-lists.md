@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16ab59a9fcdab29c927cb624dabcdfa71eaae1e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011078"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003949"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>검색 속성 목록을 사용하여 문서 속성 검색
   이전에는 문서 속성의 내용을 문서 본문의 내용과 구분할 수 없었으므로 전체 문서에서 일반 검색에 대해 전체 텍스트 쿼리를 수행할 수 없었습니다. 그러나 이제 `varbinary`, `varbinary(max)`(`FILESTREAM` 포함) 또는 `image` 이진 데이터 열의 지원되는 문서 유형의 경우 Author 및 Title과 같은 특정 속성에 대한 속성 범위 검색을 지원하도록 전체 텍스트 인덱스를 구성할 수 있습니다. 이러한 형태의 검색을 *속성 검색*이라고 합니다.  
@@ -211,7 +210,7 @@ GO
   
     1.  문서 속성을 제거하려면 속성 왼쪽에 있는 행 머리글을 클릭하고 Del 키를 누릅니다.  
   
-    2.  문서 속성을 추가 하려면의 **\*** 오른쪽에 있는 목록 아래쪽에서 빈 행을 클릭 하 고 새 속성의 값을 입력 합니다.  
+    2.  문서 속성을 추가 하려면의 오른쪽에 있는 목록 아래쪽에서 빈 행을 클릭 하 **\*** 고 새 속성의 값을 입력 합니다.  
   
          이러한 값에 대한 자세한 내용은 [검색 속성 목록 편집기](../../database-engine/search-property-list-editor.md)를 참조하십시오. Microsoft에서 정의한 속성의 이러한 값을 가져오는 방법은 [검색 속성의 속성 집합 GUID 및 속성 정수 ID 찾기](find-property-set-guids-and-property-integer-ids-for-search-properties.md)를 참조하세요. ISV(Independent Software Vendor)에서 정의한 속성에 대한 자세한 내용은 해당 공급업체의 설명서를 참조하십시오.  
   

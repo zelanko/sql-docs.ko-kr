@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ba1e5eddfdcffa5fbefdea323f110ba9d15ca8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667890"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005819"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사
   이 항목에서는 복제 모니터, [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 트랜잭션 복제에 대한 대기 시간을 측정하고 연결의 유효성을 검사하는 방법에 대해 설명합니다. 트랜잭션 복제는 트랜잭션 복제 토폴로지에서 대기 시간을 측정하고 게시자, 배포자 및 구독자 간 연결의 유효성을 검사하는 편리한 방법을 제공하는 추적 프로그램 토큰 기능을 제공합니다. 토큰(적은 양의 데이터)은 게시 데이터베이스의 트랜잭션 로그에 기록되고, 일반적인 복제된 트랜잭션인 것처럼 표시되고, 시스템을 통해 전달되며 다음을 계산할 수 있습니다.  
@@ -55,15 +54,15 @@ ms.locfileid: "62667890"
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
  또한 추적 프로그램 토큰은 모든 작업을 중지하고 모든 노드가 처리 중인 변경 내용을 모두 받았는지 확인하므로 시스템을 중지시킬 때 유용할 수 있습니다. 자세한 내용은 [복제 토폴로지 정지&#40;복제 Transact-SQL 프로그래밍&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)를 참조하세요.  
   
- 추적 프로그램 토큰을 사용 하려면 다음의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]특정 버전을 사용 해야 합니다.  
+ 추적 프로그램 토큰을 사용 하려면 다음의 특정 버전을 사용 해야 합니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   배포자 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 는 이상 이어야 합니다.  
+-   배포자는 이상 이어야 합니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] .  
   
 -   게시자는 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이후 버전이거나 Oracle 게시자여야 합니다.  
   
--   밀어넣기 구독의 경우 구독자가 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 이상인 경우 추적 프로그램 토큰 통계가 게시자, 배포자 및 구독자에서 수집 됩니다.  
+-   밀어넣기 구독의 경우 구독자가 7.0 이상인 경우 추적 프로그램 토큰 통계가 게시자, 배포자 및 구독자에서 수집 됩니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   끌어오기 구독의 경우 구독자가 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이후 버전이면 추적 프로그램 토큰 통계는 구독자에서만 수집됩니다. 구독자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]인 경우 게시자와 배포자 에서만 통계가 수집 됩니다.  
+-   끌어오기 구독의 경우 구독자가 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이후 버전이면 추적 프로그램 토큰 통계는 구독자에서만 수집됩니다. 구독자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 또는 인 경우 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 게시자와 배포자 에서만 통계가 수집 됩니다.  
   
  또한 다음과 같이 주의해야 할 다른 문제 및 제한 사항이 많이 있습니다.  
   
@@ -111,7 +110,7 @@ ms.locfileid: "62667890"
   
 2.  (옵션) 게시 데이터베이스의 게시자에서 [sp_helpsubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)을 실행합니다. 해당 구독이 있는지 그리고 상태가 활성 상태인지 확인합니다.  
   
-3.  게시 데이터베이스의 게시자에서 [sp_posttracertoken&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql)을 실행하여 **@publication**을 지정합니다. **@tracer_token_id** 출력 매개 변수의 값을 확인 합니다.  
+3.  게시 데이터베이스의 게시자에서 [sp_posttracertoken&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql)을 실행하여 **@publication**을 지정합니다. **@tracer_token_id**출력 매개 변수의 값을 확인 합니다.  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>트랜잭션 복제에 대한 대기 시간을 확인하고 연결 유효성을 검사하려면  
   
@@ -127,7 +126,7 @@ ms.locfileid: "62667890"
   
 2.  게시 데이터베이스의 게시자에서 [sp_deletetracertokenhistory&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql)를 실행하여 **@publication**을 지정하고 **@tracer_id**에 대해 2단계에서 얻은 삭제할 추적 프로그램의 ID를 지정합니다.  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>예 (Transact-sql)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  이 예제에서는 추적 프로그램 토큰 레코드를 게시하고 게시된 추적 프로그램 토큰의 반환된 ID를 사용하여 대기 시간 정보를 봅니다.  
   
  [!code-sql[HowTo#sp_tracertokens](../../../snippets/tsql/SQL15/replication/howto/tsql/createtracertokens.sql#sp_tracertokens)]  

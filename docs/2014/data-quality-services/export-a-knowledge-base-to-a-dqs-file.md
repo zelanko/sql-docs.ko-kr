@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1d1b2e20347cafb4717880de8fd224950f76b036
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3795721eea41c5abe308e6250b4c2eb8132dd5d2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480731"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937694"
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>.dqs 파일로 기술 자료 내보내기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 .dqs 데이터 파일로 전체 기술 자료를 내보내는 방법에 대해 설명합니다. 도메인 또는 전체 기술 자료를 데이터 파일로 내보낼 수 있습니다. 도메인 내보내기에 대한 자세한 내용은 [.dqs 파일로 도메인 내보내기](../../2014/data-quality-services/export-a-domain-to-a-dqs-file.md)를 참조하세요.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a6ed18416eadf1c2cc664029588bf0201038c261
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1ba4b2f081047f25fa775e0c8754caa4ce643e70
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011166"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004167"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링
   서버 인스턴스의 전체 텍스트 관리에는 다음이 포함됩니다.  

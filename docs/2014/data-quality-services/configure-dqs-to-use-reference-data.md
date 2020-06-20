@@ -13,21 +13,20 @@ f1_keywords:
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6cd3599ff68fadf6a55af1c57379e9cdd8cc4b5d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c183bebe34e37455fbefa214ed0fcfeb55f3aa8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154491"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937984"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>참조 데이터를 사용하도록 DQS 구성
   이 항목에서는 데이터를 정리하는 데 참조 데이터를 사용하도록 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )를 구성하는 방법에 대해 설명합니다. Azure Marketplace 또는 다이렉트 온라인 타사 참조 데이터 공급자의 참조 데이터를 사용할 수 있습니다.  
   
 ## <a name="before-you-begin"></a>시작하기 전에  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
- Marketplace의 참조 데이터를 사용하려면 유효한 Marketplace 계정 키가 있어야 합니다. Marketplace 계정 키를 만드는 방법에 대 한 자세한 내용은 [계정 만들기](https://go.microsoft.com/fwlink/?LinkId=212936) ()https://go.microsoft.com/fwlink/?LinkId=212936)를 참조 하세요. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 **관리** 에서 **구성** 을 클릭한 다음 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 참조 데이터 **탭에서** DataMarket 계정 ID 만들기 **를 클릭하여** 내에서 Marketplace 계정 키를 만들 수도 있습니다.  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 전제 조건  
+ Marketplace의 참조 데이터를 사용하려면 유효한 Marketplace 계정 키가 있어야 합니다. Marketplace 계정 키를 만드는 방법에 대 한 자세한 내용은 [계정 만들기](https://go.microsoft.com/fwlink/?LinkId=212936) ()를 참조 하세요 https://go.microsoft.com/fwlink/?LinkId=212936) . [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 **관리** 에서 **구성** 을 클릭한 다음 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 참조 데이터 **탭에서** DataMarket 계정 ID 만들기 **를 클릭하여** 내에서 Marketplace 계정 키를 만들 수도 있습니다.  
   
 ###  <a name="security"></a><a name="Security"></a> 보안  
   

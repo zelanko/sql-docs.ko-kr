@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dbc91bf7-687c-4083-9694-02f3e102c175
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 898a36e6f8dc65be24f386159a34158f23c1125a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4fe72aa8b6c38a25baf537eb01bac7924d43e290
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662406"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052998"
 ---
 # <a name="ftcrawl-stopped-event-class"></a>FT:Crawl Stopped 이벤트 클래스
   **:Crawl Stopped** 이벤트 클래스는 전체 텍스트 탐색(채우기)이 중지되었음을 나타냅니다. 중지되는 이유는 탐색이 완료되었거나 오류가 발생했기 때문입니다.  

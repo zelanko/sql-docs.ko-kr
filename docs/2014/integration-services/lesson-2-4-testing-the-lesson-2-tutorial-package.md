@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1a9b8361c83201fa2e3c6aa0c6a091e09f7c12f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4483facba1a1233dda7f3330f432ef8d3f9c2b5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767491"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968230"
 ---
 # <a name="step-4-testing-the-lesson-2-tutorial-package"></a>4단계: 2단원 자습서 패키지 테스트
   Foreach 루프 컨테이너와 플랫 파일 연결 관리자가 이제 구성되었으므로 2단원 패키지에서는 Sample Data 폴더에 있는 14개의 플랫 파일을 반복 처리할 수 있습니다. 지정한 파일 이름 기준과 일치하는 파일 이름을 찾을 때마다 Foreach 루프 컨테이너는 사용자 정의 변수를 해당 파일 이름으로 채웁니다. 이에 따라 이 변수가 플랫 파일 연결 관리자의 ConnectionString 속성을 업데이트하면 새 플랫 파일에 연결됩니다. Foreach 루프 컨테이너는 폴더에 있는 다음 파일에 연결하기 전에 새 플랫 파일의 데이터에 대해 수정되지 않은 데이터 흐름 태스크를 실행합니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "62767491"
   
 1.  **솔루션 탐색기**에서 **Lesson 2.dtsx** 를 마우스 오른쪽 단추로 클릭한 다음 **패키지 실행**을 클릭합니다.  
   
-     패키지가 실행됩니다. 출력 창에서 각 루프의 상태를 확인 하거나 **진행률** 탭을 클릭 하 여 확인할 수 있습니다. 예를 들어 Currency_VEB 파일에서 대상 테이블에 1097 줄이 추가 된 것을 볼 수 있습니다.  
+     패키지가 실행됩니다. 출력 창에서 각 루프의 상태를 확인 하거나 **진행률** 탭을 클릭 하 여 확인할 수 있습니다. 예를 들어 Currency_VEB.txt 파일에서 대상 테이블에 1097 줄이 추가 된 것을 볼 수 있습니다.  
   
 2.  패키지의 실행이 완료된 후에 **디버그** 메뉴에서 **디버깅 중지**를 클릭합니다.  
   

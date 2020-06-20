@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f8090c75108f7a384019030082699917fca915b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 429245f875ce6d13ef3818cf7bae874f72c500ed
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067684"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939944"
 ---
 # <a name="analyze-in-excel-ssas-tabular"></a>Excel에서 분석(SSAS 테이블 형식)
   테이블 형식 모델 작성자는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 Excel에서 분석 기능을 사용하여 개발 중 신속하게 모델 프로젝트를 분석할 수 있습니다. Excel에서 분석 기능은 Microsoft Excel을 열고 모델 작업 영역 데이터베이스에 데이터 원본을 연결한 후 자동으로 워크시트에 피벗 테이블을 추가합니다. 피벗 테이블 필드 목록에 작업 영역 데이터베이스 개체(테이블, 열 및 측정값)가 필드로 포함됩니다. 그런 다음 유효 사용자 또는 역할 및 큐브 뷰의 컨텍스트 내에서 개체 및 데이터를 조회할 수 있습니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "66067684"
   
 -   [관련 작업](#bkmk_rt)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>아니라  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> 이점  
  모델 작성자는 Excel에서 분석 기능을 사용하여 일반적인 데이터 분석 애플리케이션인 Microsoft Excel으로 모델 프로젝트의 효율성을 테스트할 수 있습니다. Excel에서 분석 기능을 사용하려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 실행하는 컴퓨터에 Microsoft Office 2003 이상이 설치되어 있어야 합니다.  
   
 > [!NOTE]  
@@ -44,14 +43,14 @@ ms.locfileid: "66067684"
  **기타 Windows 사용자**  
  현재 로그온한 사용자가 아닌 다른 Windows 사용자 이름을 지정합니다. 다른 Windows 사용자를 사용할 때 암호는 필요 없습니다. Excel에서 유효 사용자 이름의 컨텍스트 내에서 개체 및 데이터에 대한 조회만 가능하며, 모델 개체 또는 데이터를 변경할 수 없습니다.  
   
- **역할**  
+ **Role**  
  역할은 개체 메타데이터 및 데이터에 대한 사용자 권한을 정의하는 데 사용됩니다. 역할은 일반적으로 특정 Windows 사용자 또는 Windows 사용자 그룹에 대해 정의됩니다. 일부 역할은 DAX 수식에서 정의하는 추가 행 수준 필터를 포함할 수 있습니다. Excel에서 분석 기능을 사용할 때 선택 사항으로 사용할 역할을 지정할 수 있습니다. 역할에 정의된 권한 및 필터에 따라 조회할 수 있는 개체 메타데이터 및 데이터가 제한됩니다. 자세한 내용은 [역할 만들기 및 관리&#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)를 참조하세요.  
   
  유효 사용자 또는 역할 외에 큐브 뷰를 지정할 수 있습니다. 큐브 뷰를 사용하는 모델의 작성자는 모델 개체 및 데이터의 특정 비즈니스 시나리오 보기를 정의할 수 있습니다. 기본 설정은 큐브 뷰를 사용하지 않는 것입니다. Excel에서 분석 기능에서 큐브 뷰를 사용하려면 먼저 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 큐브 뷰 대화 상자를 사용하여 큐브 뷰가 정의되어 있어야 합니다. 큐브 뷰가 지정되면 피벗 테이블 필드 목록에 큐브 뷰에서 선택된 개체만 포함됩니다. 자세한 내용은 [SSAS 테이블 형식&#41;&#40;큐브 뷰 만들기 및 관리 ](perspectives-ssas-tabular.md)를 참조 하세요.  
   
 ##  <a name="related-tasks"></a><a name="bkmk_rt"></a> 관련 작업  
   
-|**항목**|**설명**|  
+|**뒷부분**|**설명**|  
 |---------------|---------------------|  
 |[Excel에서 테이블 형식 모델 분석&#40;SSAS 테이블 형식&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)|이 항목에서는 모델 디자이너에서 Excel에서 분석 기능을 사용하여 Excel을 열고, 모델 작업 영역 데이터베이스에 데이터 원본을 연결하고, 워크시트에 피벗 테이블을 추가하는 방법을 설명합니다.|  
   

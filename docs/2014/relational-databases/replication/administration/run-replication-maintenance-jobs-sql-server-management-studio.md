@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f294ad3868670783d3010498dd0ba89e1e6a48be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74c00479e5587c8662d81e554cae5add2e295183
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127057"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068757"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>복제 유지 관리 작업 실행(SQL Server Management Studio)
   복제는 다음 유지 관리 작업을 사용합니다.  
@@ -27,9 +26,9 @@ ms.locfileid: "63127057"
 -   **배포에 대한 복제 모니터링 리프레셔**
 -   **복제 에이전트 점검**
 -   **배포 기록 정리: 배포**
--   **만료 된 구독 정리**  
+-   **만료된 구독 정리**  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 **작업** 폴더와 복제 모니터의 **에이전트** 탭에서 위와 같은 작업을 시작하고 중지합니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../monitor/start-the-replication-monitor.md)을 참조하세요. 동일한 폴더와 탭에서 사용 가능한 **작업 속성 - \<Job>** 대화 상자에서 각 작업의 속성을 보고 수정합니다.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 **작업** 폴더와 복제 모니터의 **에이전트** 탭에서 위와 같은 작업을 시작하고 중지합니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../monitor/start-the-replication-monitor.md)을 참조하세요. **작업 속성- \<Job> ** 대화 상자에서 각 작업의 속성을 보고 수정할 수 있습니다 .이 대화 상자는 동일한 폴더와 탭에서 사용할 수 있습니다.  
   
 ### <a name="to-start-or-stop-a-replication-maintenance-job-in-management-studio"></a>Management Studio에서 복제 유지 관리 작업을 시작하거나 중지하려면  
   
@@ -55,7 +54,7 @@ ms.locfileid: "63127057"
   
 3.  작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  **작업 속성 - \<Job>** 대화 상자에서 필요한 경우 속성을 수정한 다음 **확인**을 클릭합니다.  
+4.  **작업 속성- \<Job> ** 대화 상자에서 필요한 경우 속성을 수정한 다음 **확인**을 클릭 합니다.  
   
 ### <a name="to-view-and-modify-properties-for-a-replication-maintenance-job-in-replication-monitor"></a>복제 모니터에서 복제 유지 관리 작업의 속성을 보고 수정하려면  
   
@@ -65,7 +64,7 @@ ms.locfileid: "63127057"
   
 3.  표에서 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  **작업 속성 - \<Job>** 대화 상자에서 필요한 경우 속성을 수정한 다음 **확인**을 클릭합니다.  
+4.  **작업 속성- \<Job> ** 대화 상자에서 필요한 경우 속성을 수정한 다음 **확인**을 클릭 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [복제 에이전트를 시작 및 중지 &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   

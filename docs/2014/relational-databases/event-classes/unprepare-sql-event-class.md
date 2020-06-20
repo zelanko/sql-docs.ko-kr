@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cfcbdd9d-d83b-46ae-9caa-d1833b5913f4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aeb6709930190017487476d0d19b105261ae7acd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e536713d0f3d600d3f7b8a7326594b7e364f2f8a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62473403"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051330"
 ---
 # <a name="unprepare-sql-event-class"></a>Unprepare SQL 이벤트 클래스
   Unprepare SQL 이벤트 클래스는 SqlClient, ODBC, OLE DB 또는 DB-Library가 준비된 문 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 준비 취소(삭제)했음을 나타냅니다.  
@@ -32,8 +31,8 @@ ms.locfileid: "62473403"
 |ClientProcessID|`int`|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
 |DatabaseID|`int`|USE *database* 문으로 지정한 데이터베이스 ID 이거나 지정한 인스턴스에 대해 use *database* 문을 실행 하지 않은 경우 기본 데이터베이스의 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에 ServerName 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |DatabaseName|`nvarchar`|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|예|  
-|EventClass|`int`|이벤트 유형 = 73|27|아니요|  
-|EventSequence|`int`|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니요|  
+|EventClass|`int`|이벤트 유형 = 73|27|예|  
+|EventSequence|`int`|요청 내에 지정된 이벤트 시퀀스입니다.|51|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |Handle|`int`|준비된 Transact-SQL 문의 핸들입니다.|33|예|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공하면 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  

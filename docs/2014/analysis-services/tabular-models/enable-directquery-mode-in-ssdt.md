@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 71fc7ebd-2e86-4a76-994b-66d3a57bcc9b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 965a3a7c1bfa9549793690e92760ce39f147e0d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1387b5773ee3521979a3afc18f3417cabc156fe4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067203"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938924"
 ---
 # <a name="enable-directquery-design-mode-ssas-tabular"></a>DirectQuery 디자인 모드를 사용하도록 설정(SSAS 테이블 형식)
   DirectQuery 모드에서 모델을 만들려면 먼저 DirectQuery 모드 사용자를 지원하도록 디자인 타임 환경을 변경해야 합니다. 이렇게 하면 디자이너에서 다음과 같은 작업이 수행됩니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fab91a2df7d0401e8301589b1dd0d21027e579c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd3166072daa1b252b703b01f1623ccc041a17be
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891298"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968173"
 ---
 # <a name="step-5-testing-the-lesson-4-tutorial-package"></a>5단계: 4단원 자습서 패키지 테스트
   런타임에 손상된 파일인 Currency_BAD.txt가 있으면 Currency Key Lookup 변환에서 일치 항목을 생성하지 못합니다. 이제 Currency Key Lookup의 오류 출력이 실패한 행을 새 실패한 행 대상으로 리디렉션하도록 구성되었으므로 해당 구성 요소가 실패하지 않으며 패키지가 성공적으로 실행됩니다. 실패한 모든 오류 행은 ErrorOutput.txt에 기록됩니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "62891298"
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>4단원 자습서 패키지를 실행하려면  
   
-1.  **디버그** 메뉴에서 **디버깅 시작**을 클릭 합니다.  
+1.  **디버그** 메뉴에서 **디버깅 시작**을 클릭합니다.  
   
 2.  패키지의 실행이 완료된 후에 **디버그** 메뉴에서 **디버깅 중지**를 클릭합니다.  
   

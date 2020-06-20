@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: bd0b5824abfc36923909ce37866b221c0bc830d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 00f8b06296b3407ac070cd40378f3ff1039a0b93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957211"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997314"
 ---
 # <a name="encrypt-a-column-of-data"></a>데이터 열 암호화
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 통해 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 대칭 암호화를 사용하여 데이터 열을 암호화하는 방법에 대해 설명합니다.  

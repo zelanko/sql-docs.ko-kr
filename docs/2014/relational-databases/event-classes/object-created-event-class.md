@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 57536924-5e66-4b09-a76d-8fcea2131771
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0588bdced4d8d11111b02eb7d6a1e1a892d1acb4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e82f9d68a5b796c6152531437265a665a9b85a68
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023928"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052857"
 ---
 # <a name="objectcreated-event-class"></a>Object:Created 이벤트 클래스
   Object:Created 이벤트 클래스는 CREATE INDEX, CREATE TABLE, CREATE DATABASE 문 등을 사용하여 개체가 생성되었음을 나타냅니다.  
@@ -30,11 +29,11 @@ ms.locfileid: "63023928"
   
 |데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|인스턴스에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]대 한 연결을 만든 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|10|예|  
+|ApplicationName|`nvarchar`|인스턴스에 대 한 연결을 만든 클라이언트 응용 프로그램의 이름입니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이 열은 프로그램의 표시 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|10|예|  
 |ClientProcessID|`int`|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
 |DatabaseID|`int`|USE *database* 문으로 지정한 데이터베이스 ID 이거나 지정한 인스턴스에 대해 use *database* 문을 실행 하지 않은 경우 기본 데이터베이스의 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에 ServerName 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |DatabaseName|`nvarchar`|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|예|  
-|EventClass|`int`|이벤트 유형 = 46|27|아니요|  
+|EventClass|`int`|이벤트 유형 = 46|27|예|  
 |EventSequence|`int`|요청 내의 지정된 이벤트 시퀀스입니다.|51|예|  
 |EventSubClass|`int`|이벤트 하위 클래스의 유형입니다.<br /><br /> 0=시작<br /><br /> 1=커밋<br /><br /> 2=롤백|21|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  

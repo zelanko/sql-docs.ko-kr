@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 130228aee1ba21829651afb5dfd5665692a42315
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 13c588f975a219284ed4ec26b6ed2cfa73dd70a3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702399"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059392"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>애플리케이션 코드에서 FOR XML 결과 사용
   SQL 쿼리에서 FOR XML 절을 사용하면 쿼리 결과 검색은 물론 XML 데이터로 캐스팅할 수도 있습니다. 이 기능을 사용하면 XML 애플리케이션 코드에서 FOR XML 쿼리 결과를 사용할 수 있을 때 다음을 수행할 수 있습니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 859373db-c744-4a4b-8479-45163f61e8cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 270ca92b723aa67938dc1f56d72425d7e1c98040
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14fdc36c66073e89dcc2014aed4319a2ce78a98f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774997"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931124"
 ---
 # <a name="remove-log-shipping-sql-server"></a>로그 전달 제거(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 로그 전달을 제거하는 방법에 대해 설명합니다.  

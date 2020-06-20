@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae466627-cc36-4460-a234-fe060f6f01c0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: aaccdd5d4f84f5bdba240fadc7d4d0729476f215
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9727c2b27cd49817bbc3876603fed67e76450de2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489142"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061062"
 ---
 # <a name="task-5-adding-data-flow-task"></a>태스크 5: Data Flow Task 추가
   이 작업에서는 SSIS 패키지의 제어 흐름에 데이터 흐름 태스크를 추가합니다.  

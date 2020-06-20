@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4249328a-24d8-4284-9d1d-7d04ed90e3d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b55ca5e8f2e57e85a75f610efe4115ced0dce365
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 78986e85dd8ee808f5fb621182d903a94bbc5eb7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798145"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067517"
 ---
 # <a name="stop-a-job"></a>Stop a Job
-  이 항목에서는 에이전트 작업을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 중지 하는 방법에 대해 설명 합니다. 작업은 SQL Server 에이전트에서 수행하도록 지정된 일련의 동작입니다.  
+  이 항목에서는 에이전트 작업을 중지 하는 방법에 대해 설명 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 작업은 SQL Server 에이전트에서 수행하도록 지정된 일련의 동작입니다.  
   
 -   **시작 하기 전에:** ,  
   

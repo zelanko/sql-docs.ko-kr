@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1622e87d971a32dcf478dfb036a504e0959fd76
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774934"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930764"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>CHECK 및 FOREIGN KEY 제약 조건 마이그레이션
   CHECK 및 FOREIGN KEY 제약 조건은 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 의 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서 지원되지 않습니다. 이러한 제약 조건은 주로 스키마에서 논리 데이터 무결성을 강화하는 데 사용되고 애플리케이션의 기능 수정을 유지할 때 중요할 수 있습니다.  

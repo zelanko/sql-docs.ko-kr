@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 5aceabe5a263cfa53572be6f818ddc905f9742a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b882aad6557eb812ee44eeeb46ecbbbda86061c3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014225"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996318"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
   `GeometryCollection`은 1개 이상의 `geometry` 또는 `geography` 인스턴스 컬렉션입니다. `GeometryCollection`은 비워 둘 수 있습니다.  

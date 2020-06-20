@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: efcb50b9-f8ff-4121-bf67-05830171b928
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 12a7ae2db2d0e1c91e85eeb4a2c2691579c2da70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73b82f154e206d59b92c84c7b8f72df572774430
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745554"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050541"
 ---
 # <a name="srv_sendmsg-extended-stored-procedure-api"></a>srv_sendmsg(확장 저장 프로시저 API)
     
@@ -85,7 +84,7 @@ msglen
  *class*  
  오류 심각도를 지정합니다. 심각도가 10보다 작거나 같으면 정보 메시지로 간주됩니다.  
   
- *state*  
+ *상태*  
  현재 메시지의 오류 상태 번호를 제공합니다. 이 오류 상태 번호는 오류의 컨텍스트에 대한 정보를 제공합니다. 유효한 상태 번호는 0에서 255까지입니다.  
   
  *rpcname*  

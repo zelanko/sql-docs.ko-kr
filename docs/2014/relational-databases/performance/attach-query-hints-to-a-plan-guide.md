@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2131f796-6359-4f9e-9047-da0b3d4dedaf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 89af21c2c591db2dff678be7aaf8c064e728b9ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 074c69ffefd2b5a7b2ef445f941f97b7130b0732
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151071"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066083"
 ---
 # <a name="attach-query-hints-to-a-plan-guide"></a>계획 지침에 쿼리 힌트 연결
   계획 지침에 모든 올바른 쿼리 힌트 조합을 사용할 수 있습니다. 계획 지침이 쿼리와 일치하면 컴파일 및 최적화하기 전에 계획 지침의 힌트 절에 지정된 OPTION 절이 쿼리에 추가됩니다. 계획 지침에 일치하는 쿼리에 이미 OPTION 절이 있으면 계획 지침에 지정된 쿼리 힌트가 쿼리에서 이를 대체합니다. 그러나 이미 OPTION 절이 있는 쿼리에 계획 지침을 일치시키려면 해당 쿼리 텍스트를 지정할 때 sp_create_plan_guide 문이 쿼리의 OPTION 절을 포함해야 합니다. 계획 지침에 지정한 힌트로 이미 쿼리에 있는 힌트를 대체하는 대신 계획 지침에 지정한 힌트를 이미 쿼리에 있는 힌트에 추가하려면 원래 힌트와 추가 힌트를 모두 계획 지침의 OPTION 절에 지정해야 합니다.  

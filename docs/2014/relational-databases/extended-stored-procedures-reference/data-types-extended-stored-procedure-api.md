@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 715cdc343e3a73781c06977fdb3d3d829d6bf533
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57b9c5b8929f6af33546a55e848a75e4243b4973
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62511650"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050812"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>데이터 형식(확장 저장 프로시저 API)
     
@@ -27,7 +26,7 @@ ms.locfileid: "62511650"
   
  확장 저장 프로시저 API 데이터 형식을 사용하려면 프로그램에 Srv.h 헤더 파일을 포함합니다.  
   
-|데이터 형식|SQL Server 데이터 형식|설명|  
+|데이터 형식|SQL Server 데이터 형식|Description|  
 |---------------|--------------------------|-----------------|  
 |SRVBIGBINARY|`binary`|길이가 0-8000바이트인 `binary` 데이터 형식입니다.|  
 |SRVBIGCHAR|`char`|길이가 0-8000바이트인 `character` 데이터 형식입니다.|  

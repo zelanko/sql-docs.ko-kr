@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b0209f3d8e77cfe893a0e462fc9ccf3761da8dfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15570e88d688fb80be7a8889d77fc403ee5c2462
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62911395"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059625"
 ---
 # <a name="setstringvalue-method-sqlserviceadvancedproperty-class-"></a>SetStringValue 메서드(SqlServiceAdvancedProperty 클래스)
   속성의 문자열 값을 설정합니다.  
@@ -45,7 +44,7 @@ StrValue
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*StrValue*|고급 속성의 값을 지정하는 문자열 값입니다.|  
   

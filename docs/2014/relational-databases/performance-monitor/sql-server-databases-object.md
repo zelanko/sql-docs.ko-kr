@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b4c0c7a5626f3eb48509d7a4cfbf239f7cb931da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f4f46bd388476934226e41d371c85fa13b94d23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250648"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066086"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, Databases 개체
   SQL Server의 **SQLServer:Databases** 개체는 대량 복사 작업, 백업 및 복원 처리량, 트랜잭션 로그 동작을 모니터링하기 위해 카운터를 제공합니다. 트랜잭션 및 트랜잭션 로그를 모니터링하면 데이터베이스에서 사용자 작업이 일어나는 횟수와 트랜잭션 로그가 얼마나 기록되었는지 확인할 수 있습니다. 사용자 작업의 양은 데이터베이스의 성능을 결정하고 로그 크기, 잠금 및 복제에 영향을 줍니다. 낮은 수준의 로그 작업을 모니터링하여 사용자 작업 및 리소스 사용을 측정하면 성능 병목 상태를 분석할 때 유용합니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "63250648"
 |**Log Cache Reads/sec**|로그 관리자 캐시를 통해 수행된 초당 읽기입니다.|  
 |**Log File(s) Size (KB)**|데이터베이스에 있는 모든 트랜잭션 로그 파일의 총 크기(KB)입니다.|  
 |**Log File(s) Used Size (KB)**|데이터베이스에서 사용된 모든 로그 파일의 총 크기입니다.|  
-|**Log Flush Wait Time**|로그를 플러시하는 총 대기 시간(밀리초)입니다. AlwaysOn 보조 데이터베이스에서 이 값은 로그 레코드가 디스크에 확정될 때까지의 대기 시간을 나타냅니다.|  
+|**로그 플러시 대기 시간**|로그를 플러시하는 총 대기 시간(밀리초)입니다. AlwaysOn 보조 데이터베이스에서 이 값은 로그 레코드가 디스크에 확정될 때까지의 대기 시간을 나타냅니다.|  
 |**Log Flush Waits/sec**|로그 플러시를 기다리는 초당 커밋 수입니다.|  
 |**Log Flush Write Time (ms)**|마지막 1초 동안 완료된 로그 플러시의 쓰기를 수행하는 데 소요된 시간(밀리초)입니다.|  
 |**Log Flushes/sec**|초당 로그 플러시 수입니다.|  
@@ -52,13 +51,13 @@ ms.locfileid: "63250648"
 |**Log Pool Disk Reads/sec**|논리 블록을 인출하기 위해 로그 풀에서 실행한 디스크 읽기 수입니다.|  
 |**Log Pool Requests/sec**|로그 풀에서 처리된 로그 블록 요청 수입니다.|  
 |**Log Truncations**|트랜잭션 로그가 축소된 횟수입니다.|  
-|**Percent Log Used**|사용 중인 로그에 있는 공백의 비율입니다.|  
+|**사용 되는 로그 비율**|사용 중인 로그에 있는 공백의 비율입니다.|  
 |**Repl. 보류 중인 개 트랜잭션**|복제하도록 표시되었지만 배포 데이터베이스에는 아직 배달되지 않은 게시 데이터베이스의 트랜잭션 로그에 있는 트랜잭션 수입니다.|  
 |**Repl. Trans. Rate**|게시 데이터베이스의 트랜잭션 로그에서 읽어서 배포 데이터베이스로 배달된 트랜잭션 수입니다.|  
 |**Shrink Data Movement Bytes/sec**|자동 축소 작업이나 DBCC SHRINKDATABASE 또는 DBCC SHRINKFILE 문에 의해 이동된 초당 데이터 양입니다.|  
 |**Tracked transactions/sec**|데이터베이스의 커밋 테이블에 기록된 커밋된 트랜잭션의 수입니다.|  
 |**Transactions/sec**|데이터베이스에 대해 시작된 초당 트랜잭션 수입니다.<br /><br /> **Transactions/sec** 는 XTP 전용 트랜잭션(고유하게 컴파일된 저장 프로시저를 통해 시작된 트랜잭션)을 계산하지 않습니다.|  
-|**Write Transactions/sec**|마지막 1초 동안 데이터베이스에 쓰고 커밋된 트랜잭션 수입니다.|  
+|**쓰기 트랜잭션/초**|마지막 1초 동안 데이터베이스에 쓰고 커밋된 트랜잭션 수입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [시스템 모니터 &#40;리소스 사용량 모니터링&#41;](monitor-resource-usage-system-monitor.md)   

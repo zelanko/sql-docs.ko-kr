@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 69de90bb43e35b559def569bfe1f60433d7c14de
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4cdb785a5a053e0b839386c5fbb57e9393f5b9dc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706595"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050921"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>확장 이벤트에 PowerShell 공급자 사용
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 공급자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트를 관리할 수 있습니다. XEvent 하위 폴더는 SQLSERVER 드라이브 아래에 있습니다. 다음 방법 중 하나를 사용하여 이 폴더에 액세스할 수 있습니다.  
@@ -39,7 +38,7 @@ ms.locfileid: "82706595"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 공급자는 확장 이벤트 세션을 생성, 변경 및 관리하는 데 사용할 수 있는 강력한 도구입니다. 다음 섹션에서는 확장 이벤트에 PowerShell 스크립트를 사용하는 몇 가지 기본적인 예를 제공합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서 다음 사항에 유의하십시오.  
   
 -   스크립트는 PS SQLSERVER:> 프롬프트에서 실행 해야 합니다 \\ (명령 프롬프트에서를 입력 하 여 사용 가능 `sqlps` ).  

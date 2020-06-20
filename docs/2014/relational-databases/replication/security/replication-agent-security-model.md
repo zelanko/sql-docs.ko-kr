@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4b919289d49901f64b26db0aa2d4b71eeb0e132a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da597bf97422f5a0960062b385bc0b67338edfe1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62960848"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004955"
 ---
 # <a name="replication-agent-security-model"></a>복제 에이전트 보안 모델
   복제 에이전트 보안 모델을 사용하여 복제 에이전트를 실행 및 연결하는 계정을 세밀하게 제어할 수 있습니다. 즉, 각 에이전트에 대해 다른 계정을 지정할 수 있습니다. 계정을 지정하는 방법은 [복제의 로그인 및 암호 관리](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)를 참조하세요.  
@@ -55,9 +54,9 @@ ms.locfileid: "62960848"
 |에이전트|사용 권한|  
 |-----------|-----------------|  
 |스냅샷 에이전트|에이전트를 실행하는 Windows 계정을 사용하여 배포자에 연결합니다. 이 계정은 다음과 같아야 합니다.<br /><br /> -적어도 배포 데이터베이스에서 **db_owner** 고정 데이터베이스 역할의 멤버 여야 합니다.<br /><br /> -스냅샷 공유에 대해 쓰기, 읽기 및 수정 권한이 있어야 합니다.<br /><br /> <br /><br /> 게시자 연결에 사용되는 계정은 적어도 게시 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.|  
-|로그 판독기 에이전트|에이전트를 실행하는 Windows 계정을 사용하여 배포자에 연결합니다. 이 계정은 적어도 배포 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.<br /><br /> 게시자 연결에 사용되는 계정은 적어도 게시 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.<br /><br /> `sync_type` *Replication support only*, *initialize with backup*또는 *initialize from lsn*옵션을 선택할 때 로그 판독기 에이전트를 실행 한 후 `sp_addsubscription`에 실행 해야 설정 스크립트가 배포 데이터베이스에 기록 됩니다. 로그 판독기 에이전트는 **sysadmin** 고정 서버 역할의 멤버인 계정으로 실행되어야 합니다. `sync_type` 옵션이 *자동*으로 설정 된 경우 특별 한 로그 판독기 에이전트 동작이 필요 하지 않습니다.|  
-|밀어넣기 구독에 대한 배포 에이전트|에이전트를 실행하는 Windows 계정을 사용하여 배포자에 연결합니다. 이 계정은 다음과 같아야 합니다.<br /><br /> -적어도 배포 데이터베이스에 있는 **db_owner** 고정 데이터베이스 역할의 멤버 여야 합니다.<br /><br /> -PAL의 멤버여야 합니다.<br /><br /> -스냅샷 공유에 대해 읽기 권한이 있어야 합니다.<br /><br /> -SQL Server 이외 구독자에 대한 구독인 경우에는 구독자용 OLE DB 공급자의 설치 디렉터리에 대해 읽기 권한이 있어야 합니다.<br /><br /> -LOB 데이터를 복제할 때 배포 에이전트에는 복제 **C:\Program Files\Microsoft SQL Server\XX\COMfolder** 에 대한 쓰기 권한이 있어야 합니다. 여기서 XX는 인스턴스 ID를 나타냅니다.<br /><br /> <br /><br /> 구독자 연결에 사용되는 계정은 적어도 구독 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버이거나 SQL Server 이외 구독자에 대한 구독인 경우에는 동등한 권한이 있어야 합니다.<br /><br /> 참고: 배포 에이전트 `-subscriptionstreams >= 2` 에서를 사용 하는 경우 교착 상태를 `View Server State` 검색할 수 있도록 구독자에 대 한 권한도 부여 해야 합니다.|  
-|끌어오기 구독에 대한 배포 에이전트|에이전트를 실행하는 Windows 계정을 사용하여 구독자에 연결합니다. 이 계정은 적어도 구독 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다. 배포자 연결에 사용되는 계정은 다음과 같아야 합니다.<br /><br /> -PAL의 멤버여야 합니다.<br /><br /> -스냅샷 공유에 대해 읽기 권한이 있어야 합니다.<br /><br /> -LOB 데이터를 복제할 때 배포 에이전트에는 복제 **C:\Program Files\Microsoft SQL Server\XX\COMfolder** 에 대한 쓰기 권한이 있어야 합니다. 여기서 XX는 인스턴스 ID를 나타냅니다.<br /><br /> <br /><br /> 참고: 배포 에이전트 `-subscriptionstreams >= 2` 에서를 사용 하는 경우 교착 상태를 `View Server State` 검색할 수 있도록 구독자에 대 한 권한도 부여 해야 합니다.|  
+|로그 판독기 에이전트|에이전트를 실행하는 Windows 계정을 사용하여 배포자에 연결합니다. 이 계정은 적어도 배포 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.<br /><br /> 게시자 연결에 사용되는 계정은 적어도 게시 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.<br /><br /> `sync_type` *Replication support only*, *initialize with backup*또는 *initialize from lsn*옵션을 선택할 때 로그 판독기 에이전트를 실행 한 후에 실행 해야 `sp_addsubscription` 설정 스크립트가 배포 데이터베이스에 기록 됩니다. 로그 판독기 에이전트는 **sysadmin** 고정 서버 역할의 멤버인 계정으로 실행되어야 합니다. `sync_type`옵션이 *자동*으로 설정 된 경우 특별 한 로그 판독기 에이전트 동작이 필요 하지 않습니다.|  
+|밀어넣기 구독에 대한 배포 에이전트|에이전트를 실행하는 Windows 계정을 사용하여 배포자에 연결합니다. 이 계정은 다음과 같아야 합니다.<br /><br /> -적어도 배포 데이터베이스에 있는 **db_owner** 고정 데이터베이스 역할의 멤버 여야 합니다.<br /><br /> -PAL의 멤버여야 합니다.<br /><br /> -스냅샷 공유에 대해 읽기 권한이 있어야 합니다.<br /><br /> -SQL Server 이외 구독자에 대한 구독인 경우에는 구독자용 OLE DB 공급자의 설치 디렉터리에 대해 읽기 권한이 있어야 합니다.<br /><br /> -LOB 데이터를 복제할 때 배포 에이전트에는 복제 **C:\Program Files\Microsoft SQL Server\XX\COMfolder** 에 대한 쓰기 권한이 있어야 합니다. 여기서 XX는 인스턴스 ID를 나타냅니다.<br /><br /> <br /><br /> 구독자 연결에 사용되는 계정은 적어도 구독 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버이거나 SQL Server 이외 구독자에 대한 구독인 경우에는 동등한 권한이 있어야 합니다.<br /><br /> 참고: 배포 에이전트에서를 사용 하는 경우 `-subscriptionstreams >= 2` `View Server State` 교착 상태를 검색할 수 있도록 구독자에 대 한 권한도 부여 해야 합니다.|  
+|끌어오기 구독에 대한 배포 에이전트|에이전트를 실행하는 Windows 계정을 사용하여 구독자에 연결합니다. 이 계정은 적어도 구독 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다. 배포자 연결에 사용되는 계정은 다음과 같아야 합니다.<br /><br /> -PAL의 멤버여야 합니다.<br /><br /> -스냅샷 공유에 대해 읽기 권한이 있어야 합니다.<br /><br /> -LOB 데이터를 복제할 때 배포 에이전트에는 복제 **C:\Program Files\Microsoft SQL Server\XX\COMfolder** 에 대한 쓰기 권한이 있어야 합니다. 여기서 XX는 인스턴스 ID를 나타냅니다.<br /><br /> <br /><br /> 참고: 배포 에이전트에서를 사용 하는 경우 `-subscriptionstreams >= 2` `View Server State` 교착 상태를 검색할 수 있도록 구독자에 대 한 권한도 부여 해야 합니다.|  
 |밀어넣기 구독에 대한 병합 에이전트|에이전트를 실행하는 Windows 계정을 사용하여 게시자 및 배포자에 연결합니다. 이 계정은 다음과 같아야 합니다.<br /><br /> -적어도 배포 데이터베이스에 있는 **db_owner** 고정 데이터베이스 역할의 멤버 여야 합니다.<br /><br /> -PAL의 멤버여야 합니다.<br /><br /> -게시 데이터베이스의 사용자와 연결된 로그인이어야 합니다.<br /><br /> -스냅샷 공유에 대해 읽기 권한이 있어야 합니다.<br /><br /> <br /><br /> 구독자 연결에 사용되는 계정은 적어도 구독 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.|  
 |끌어오기 구독에 대한 병합 에이전트|에이전트를 실행하는 Windows 계정을 사용하여 구독자에 연결합니다. 이 계정은 적어도 구독 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다. 게시자 및 배포자 연결에 사용되는 계정은 다음과 같아야 합니다.<br /><br /> -PAL의 멤버여야 합니다.<br /><br /> -게시 데이터베이스의 사용자와 연결된 로그인이어야 합니다.<br /><br /> -배포 데이터베이스의 사용자와 연결된 로그인이어야 합니다. 이 사용자는 `Guest` 사용자일 수 있습니다.<br /><br /> -스냅샷 공유에 대해 읽기 권한이 있어야 합니다.|  
 |큐 판독기 에이전트|에이전트를 실행하는 Windows 계정을 사용하여 배포자에 연결합니다. 이 계정은 적어도 배포 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.<br /><br /> 게시자 연결에 사용되는 계정은 적어도 게시 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.<br /><br /> 구독자 연결에 사용되는 계정은 적어도 구독 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.|  
@@ -67,19 +66,19 @@ ms.locfileid: "62960848"
   
 |에이전트|작업 이름|  
 |-----------|--------------|  
-|스냅샷 에이전트|**\<게시자>-\<publicationdatabase>>\<->-\<정수>**|  
+|스냅샷 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<integer>**|  
 |병합 게시 파티션에 대한 스냅샷 에이전트|**Dyn_\<Publisher>-\<PublicationDatabase>-\<Publication>-\<GUID>**|  
-|로그 판독기 에이전트|**\<게시자>-\<publicationdatabase>>-\<정수>**|  
-|끌어오기 구독에 대한 병합 에이전트|**\<게시자>-\<publicationdatabase>>-\<게시>-\<구독자>-\<subscriptiondatabase>-\<integer>**|  
-|밀어넣기 구독에 대한 병합 에이전트|**\<게시자>-\<publicationdatabase>>-\<게시>-\<구독자>-\<정수>**|  
-|밀어넣기 구독에 대한 배포 에이전트|**\<\<\<게시자>-publicationdatabase>>-게시>-구독자>-\<정수>1 \<** <sup>1</sup>|  
-|끌어오기 구독에 대한 배포 에이전트|**\<\<\<\<게시자>-publicationdatabase>>-게시>-구독자>-subscriptiondatabase>-\<GUID>2 \<** <sup>2</sup>|  
-|SQL Server 이외 구독자의 밀어넣기 구독에 대한 배포 에이전트|**\<게시자>-\<publicationdatabase>>-\<게시>-\<구독자>-\<정수>**|  
-|큐 판독기 에이전트|**[\<배포자>]. \<정수>**|  
+|로그 판독기 에이전트|**\<Publisher>-\<PublicationDatabase>-\<integer>**|  
+|끌어오기 구독에 대한 병합 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|  
+|밀어넣기 구독에 대한 병합 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
+|밀어넣기 구독에 대한 배포 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**<sup>1</sup>|  
+|끌어오기 구독에 대한 배포 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>**<sup>2</sup>|  
+|SQL Server 이외 구독자의 밀어넣기 구독에 대한 배포 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
+|큐 판독기 에이전트|**[\<Distributor>].\<integer>**|  
   
- <sup>1</sup> Oracle 게시에 대 한 밀어넣기 구독의 경우 작업 이름은 ** \<\< ** ** \<\<** 게시자>-publicationdatabase>>대신 publisher>-게시자>입니다.  
+ <sup>1</sup> Oracle 게시에 대 한 밀어넣기 구독의 경우 작업 이름은 대신 * *입니다 \<Publisher> - \<Publisher**> **\<Publisher>-\<PublicationDatabase>** .  
   
- <sup>2</sup> Oracle 게시에 대 한 끌어오기 구독의 경우 작업 이름은 게시자 ** \<>-\<publicationdatabase>>** 대신 ** \<publisher>-\<DistributionDatabase**>입니다.  
+ <sup>2</sup> Oracle 게시에 대 한 끌어오기 구독의 경우 작업 이름은 대신 * *입니다 \<Publisher> - \<DistributionDatabase**> **\<Publisher>-\<PublicationDatabase>** .  
   
  복제를 구성할 때는 에이전트를 실행해야 하는 계정을 지정합니다. 그러나 모든 작업 단계는 *프록시*의 보안 컨텍스트에서 실행되므로 복제는 사용자가 지정하는 에이전트 계정에 대해 다음 매핑을 내부적으로 수행합니다.  
   

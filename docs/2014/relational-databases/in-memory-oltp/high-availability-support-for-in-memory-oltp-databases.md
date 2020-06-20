@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 37c719beb625a533c2d8f279a8500365c4786c05
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0214b2ec0fbc712873d4c39732425a78ef31653
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990580"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050187"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>메모리 내 OLTP 데이터베이스에 대한 고가용성 지원
   원시 컴파일 저장 프로시저가 있거나 없이 메모리 최적화 테이블을 포함하는 데이터베이스는 AlwaysOn 가용성 그룹에서 완전히 지원됩니다.  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 개체를 포함하는 데이터베이스의 구성과 지원 방식은 이러한 개체를 포함하지 않는 데이터베이스의 경우와 차이가 없습니다.  

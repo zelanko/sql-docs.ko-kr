@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82ed0e5dd67738b705b4991b90669198495d497a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63286524"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060260"
 ---
 # <a name="sql-trace"></a>SQL 추적
   SQL 추적에서는 이벤트가 추적 정의에 나열된 이벤트 클래스의 인스턴스인 경우 수집됩니다. 이러한 이벤트는 추적 외부로 필터링하고 대상에 대해 쿼리할 수 있습니다. 대상은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 관리하는 애플리케이션의 추적 정보를 사용할 수 있는 파일 또는 SMO( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]관리 개체)일 수 있습니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "63286524"
  다음은 SQL 추적의 주요 개념을 설명하는 용어입니다.  
   
  **이벤트**  
- 의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]인스턴스 내에서 동작의 발생입니다.  
+ 의 인스턴스 내에서 동작의 발생입니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] .  
   
  **데이터 열**  
  이벤트의 특성입니다.  
@@ -70,7 +69,7 @@ ms.locfileid: "63286524"
 ## <a name="use-data-columns-to-describe-returned-events"></a>데이터 열을 사용하여 반환되는 이벤트 설명  
  SQL 추적은 추적 출력의 데이터 열을 통해 추적이 실행될 때 반환된 이벤트에 대한 정보를 제공합니다. 다음 표에서는 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 데이터 열에 대해 설명합니다. 이 데이터 열은 SQL 추적에서 사용하는 데이터 열과 동일하며 기본으로 선택된 열에 해당합니다.  
   
-|데이터 열|열 번호|설명|  
+|데이터 열|열 번호|Description|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName** <sup>1</sup>|10|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 애플리케이션의 이름입니다. 이 열은 프로그램의 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|  
 |**BigintData1**|52|추적에 지정된 이벤트 클래스에 따라 달라지는 값(`bigint` 데이터 형식)입니다.|  
@@ -82,7 +81,7 @@ ms.locfileid: "63286524"
 |**데이터베이스 ID** <sup>1</sup>|3|USE *database_name* 문으로 지정한 데이터베이스 ID이거나 지정한 인스턴스에 대해 실행된 USE *database_name*문이 없는 경우 기본 데이터베이스 ID입니다. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|  
 |**DatabaseName**|35|사용자 문이 실행되는 데이터베이스의 이름입니다.|  
 |**DBUserName** <sup>1</sup>|40|클라이언트의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 사용자 이름입니다.|  
-|**작업**|13|이벤트의 기간(마이크로초)입니다.<br /><br /> 서버는 이벤트 기간을 마이크로초(1초의 1/1000000, 즉 10<sup>-6</sup>) 단위로 보고하고 이벤트에 사용되는 CPU 시간량을 밀리초(1초의 1/1000, 즉 10<sup>-3</sup>) 단위로 보고합니다. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 그래픽 사용자 인터페이스는 기본적으로 **Duration** 열을 밀리초 단위로 표시하지만 추적을 파일이나 데이터베이스 테이블에 저장하면 **Duration** 열 값이 마이크로초 단위로 기록됩니다.|  
+|**기간**|13|이벤트의 기간(마이크로초)입니다.<br /><br /> 서버는 이벤트 기간을 마이크로초(1초의 1/1000000, 즉 10<sup>-6</sup>) 단위로 보고하고 이벤트에 사용되는 CPU 시간량을 밀리초(1초의 1/1000, 즉 10<sup>-3</sup>) 단위로 보고합니다. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 그래픽 사용자 인터페이스는 기본적으로 **Duration** 열을 밀리초 단위로 표시하지만 추적을 파일이나 데이터베이스 테이블에 저장하면 **Duration** 열 값이 마이크로초 단위로 기록됩니다.|  
 |**EndTime**|15|이벤트가 종료된 시간입니다. 이 열은 **SQL:BatchStarting** 또는 **SP:Starting**등의 시작하는 이벤트를 참조하는 이벤트 클래스에 대해 채워지지 않습니다.|  
 |**오류**|31|지정된 이벤트의 오류 번호입니다. 종종 **sysmessages**테이블에 저장된 오류 번호를 나타냅니다.|  
 |**EventClass** <sup>1</sup>|27|캡처된 이벤트 클래스 유형입니다.|  
@@ -109,11 +108,11 @@ ms.locfileid: "63286524"
 |**ObjectID2**|56|관련 개체 또는 엔터티의 ID입니다(사용 가능한 경우).|  
 |**ObjectName**|34|참조되는 개체의 이름입니다.|  
 |**ObjectType** <sup>2</sup>|28|이벤트와 관련된 개체 유형을 나타내는 값입니다, 이 값은 **sysobjects** 의 **유형**열과 일치합니다.|  
-|**이동**|61|저장 프로시저나 일괄 처리 내에 있는 문의 시작 오프셋입니다.|  
+|**Offset**|61|저장 프로시저나 일괄 처리 내에 있는 문의 시작 오프셋입니다.|  
 |**OwnerID**|58|잠금 이벤트 전용입니다. 잠금을 소유한 개체의 유형을 나타냅니다.|  
 |**OwnerName**|37|개체 소유자의 데이터베이스 사용자 이름입니다.|  
 |**ParentName**|59|개체가 속해 있는 스키마의 이름입니다.|  
-|**권한**|19|확인한 사용 권한의 유형을 나타내는 정수 값입니다. 값은 다음과 같습니다.<br /><br /> **1** = 모두 선택<br /><br /> **2** = 모두 업데이트<br /><br /> **4** = 모두 참조<br /><br /> **8** = 삽입<br /><br /> **16** = 삭제<br /><br /> **32** = EXECUTE (프로시저에만 해당)<br /><br /> **4096** = SELECT ANY (하나 이상의 열)<br /><br /> **8192** = 모든 업데이트<br /><br /> **16384** = REFERENCES ANY|  
+|**권한**|19|확인한 사용 권한의 유형을 나타내는 정수 값입니다. 값:<br /><br /> **1** = 모두 선택<br /><br /> **2** = 모두 업데이트<br /><br /> **4** = 모두 참조<br /><br /> **8** = 삽입<br /><br /> **16** = 삭제<br /><br /> **32** = EXECUTE (프로시저에만 해당)<br /><br /> **4096** = SELECT ANY (하나 이상의 열)<br /><br /> **8192** = 모든 업데이트<br /><br /> **16384** = REFERENCES ANY|  
 |**ProviderName**|46|OLE DB 공급자 이름입니다.|  
 |**나타납니다**|16|이벤트에 대해 서버에서 수행한 논리적 디스크 읽기 작업의 수입니다. 이 읽기 작업에는 해당 문 실행 중의 모든 테이블 및 버퍼 읽기가 포함됩니다.|  
 |**요청**|49|문을 포함하는 요청의 ID입니다.|  
@@ -126,14 +125,14 @@ ms.locfileid: "63286524"
 |**SPID**|12|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 클라이언트와 연결된 프로세스에 할당한 SPID(서버 프로세스 ID)입니다.|  
 |**Sqlhandle 대해**|63|임시 쿼리 또는 데이터베이스의 텍스트 및 SQL 개체의 개체 ID를 기반으로 하는 64비트 해시입니다. 이 값을 **sys. dm_exec_sql_text ()** 에 전달 하 여 연결 된 sql 텍스트를 검색할 수 있습니다.|  
 |**StartTime** <sup>1</sup>|14|이벤트가 시작된 시간입니다(사용 가능한 경우).|  
-|**State**|30|오류 상태 코드|  
+|**상태**|30|오류 상태 코드|  
 |**Success**|23|이벤트가 성공적이었는지를 나타냅니다. 값은 다음과 같습니다.<br /><br /> **1** = 성공<br /><br /> **0** = 실패<br /><br /> 예를 들어 **1** 은 권한 확인에 성공했음을 의미하며 **0** 은 확인에 실패했음을 의미합니다.|  
 |**TargetLoginName**|42|로그인을 대상으로 하는 동작(예: 새 로그인 추가)의 경우 대상 로그인의 이름입니다.|  
 |**TargetLoginSid**|43|로그인을 대상으로 하는 동작(예: 새 로그인 추가)의 경우 대상 로그인의 SID입니다.|  
 |**TargetUserName**|39|데이터베이스 사용자를 대상으로 하는 동작(예: 사용자에게 권한 부여)의 경우 해당 사용자의 이름입니다.|  
 |**TextData**|1|추적에서 캡처된 이벤트 클래스에 따라 달라지는 텍스트 값입니다. 그렇지만 매개 변수가 있는 쿼리를 추적하면 변수는 **TextData** 열에 데이터 값으로 표시되지 않습니다.|  
-|**트랜잭션 ID**|4|시스템이 할당한 트랜잭션 ID입니다.|  
-|**Type**|57|추적에서 캡처된 이벤트 클래스에 따라 달라지는 정수 값입니다.|  
+|**Transaction ID**|4|시스템이 할당한 트랜잭션 ID입니다.|  
+|**형식**|57|추적에서 캡처된 이벤트 클래스에 따라 달라지는 정수 값입니다.|  
 |**쓰므로**|17|이벤트에 대해 서버에서 수행한 물리적 디스크 쓰기 작업의 수입니다.|  
 |**XactSequence**|50|현재 트랜잭션을 설명하는 토큰입니다.|  
   

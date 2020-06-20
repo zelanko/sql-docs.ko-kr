@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f104f7a6395442484be15f1e72c849edbf11e74f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a70b6c8093b48ce2f258fdfbfaf7f1d4c466561
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70152685"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066949"
 ---
 # <a name="sql-server-http_storage_object"></a>SQL Server, HTTP_STORAGE_OBJECT
   **SQLServer: HTTP_STORAGE_OBJECT** 성능 개체는 Azure Storage 계정을 모니터링 하는 성능 카운터로 구성 됩니다. [Azure의 SQL Server 데이터 파일](../databases/sql-server-data-files-in-microsoft-azure.md) 기능을 사용 하면 Azure Storage blob에 데이터베이스 파일을 저장할 수 있습니다. 이 성능 개체는 각 Azure 스토리지 계정을 각각 다른 드라이브로 취급합니다.  

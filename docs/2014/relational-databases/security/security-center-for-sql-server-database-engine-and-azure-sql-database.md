@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: fc99b725f4c5895306d544df14bf2a9390189066
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3eeea022cff74d2ca8ddb636d9f83e4d369529bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244530"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004110"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터
   이 페이지에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]및 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]의 보안 및 보호에 대해 필요한 정보를 찾는 데 도움이 되는 링크를 제공합니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "75244530"
   
 ## <a name="links-to-specific-related-topics"></a>특정 관련 항목에 대한 링크  
  ![작은 파일 폴더 아이콘](../../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **인증: 귀하는 누구 인가요?**  
- **누가 인증 하나요? (Windows 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])**  
+ **누가 인증 하나요? (Windows 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )**  
   
 -   [인증 모드 선택](choose-an-authentication-mode.md)  
   

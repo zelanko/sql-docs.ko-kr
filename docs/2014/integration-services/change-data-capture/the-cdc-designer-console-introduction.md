@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a2ab8f20002188684b09fbd574b1cfe5e26feba
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62834645"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922304"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC Designer 콘솔 소개
   이 섹션에서는 Attunity Oracle CDC Designer 설치 절차에 대해 설명합니다.  
   
 ## <a name="installation"></a>설치  
- 이 섹션에서는 Attunity Oracle CDC Designer 설치 절차에 대해 설명합니다. CDC Designer 콘솔을 설치 하려면 SQL Server 설치 미디어에서 **attunityoraclecdcdesigner.msi** 를 수동으로 실행 합니다.  X86 및 x 64 용 설치 패키지는 SQL Server 설치 미디어의 **.\Tools\AttunityCDCOracle\\ ** 에 있습니다.  
+ 이 섹션에서는 Attunity Oracle CDC Designer 설치 절차에 대해 설명합니다. CDC Designer 콘솔을 설치 하려면 SQL Server 설치 미디어에서 **AttunityOracleCdcDesigner.msi** 를 수동으로 실행 합니다.  X86 및 x 64 용 설치 패키지는 SQL Server 설치 미디어의 **.\Tools\AttunityCDCOracle \\ ** 에 있습니다.  
   
 ## <a name="supported-windows-environments"></a>지원되는 Windows 환경  
  CDC Designer 콘솔은 다음과 같은 Windows 환경에서 실행될 수 있습니다.  

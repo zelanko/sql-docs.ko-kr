@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 12be8011-b76c-45c1-8f55-7f46e0e374e9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 11c9cd6f9084deaa2cb16acf8bf489a8aa28a353
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6c66b43d4bad56724817a4d38a810fd150b2b3fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706526"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050250"
 ---
 # <a name="creating-and-accessing-tables-in-tempdb-from-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저의 TempDB에서 테이블 만들기 및 액세스
-  고유하게 컴파일된 저장 프로시저의 TempDB에서 테이블을 만들거나 액세스하는 것은 지원되지 않습니다. 그 대신 테이블 형식과 테이블 변수를 사용합니다. 예:  
+  고유하게 컴파일된 저장 프로시저의 TempDB에서 테이블을 만들거나 액세스하는 것은 지원되지 않습니다. 그 대신 테이블 형식과 테이블 변수를 사용합니다. 다음은 그 예입니다.  
   
 ```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 18575c95602f73baa959d35b176cf16220fc8e64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: db78d2aef82e04846e7dff823c3448005beb1b22
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112164"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920804"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services(SSIS) 연결
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 연결을 사용하여 다음과 같은 다양한 태스크와 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 기능을 수행하거나 구현합니다.  
@@ -64,9 +63,9 @@ ms.locfileid: "79112164"
 -   기존 연결 관리자가 사용자 요구에 맞지 않는 경우 자체 사용자 지정 연결 관리자를 만들 수 있습니다.  
   
 ### <a name="built-in-connection-managers"></a>기본 제공 연결 관리자  
- 다음 표에서는에서 제공 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 연결 관리자 유형을 보여 줍니다.  
+ 다음 표에서는에서 제공 하는 연결 관리자 유형을 보여 줍니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-|유형|설명|항목|  
+|Type|Description|항목|  
 |----------|-----------------|-----------|  
 |ADO|ADO(ActiveX Data Objects) 개체에 연결합니다.|[ADO 연결 관리자](ado-connection-manager.md)|  
 |ADO.NET|.NET 공급자를 사용하여 데이터 원본에 연결합니다.|[ADO.NET 연결 관리자](ado-net-connection-manager.md)|  
@@ -74,11 +73,11 @@ ms.locfileid: "79112164"
 |DQS|Data Quality Services 서버 및 서버의 Data Quality Services 데이터베이스에 연결합니다.|[DQS 정리 연결 관리자](dqs-cleansing-connection-manager.md)|  
 |EXCEL|Excel 통합 문서 파일에 연결합니다.|[Excel 연결 관리자](excel-connection-manager.md)|  
 |FILE|파일 또는 폴더에 연결합니다.|[파일 연결 관리자](file-connection-manager.md)|  
-|FLATFILE|단일 플랫 파일의 데이터에 연결합니다.|[Flat File Connection Manager](flat-file-connection-manager.md)|  
+|FLATFILE|단일 플랫 파일의 데이터에 연결합니다.|[플랫 파일 연결 관리자](flat-file-connection-manager.md)|  
 |FTP|FTP 서버에 연결합니다.|[FTP 연결 관리자](ftp-connection-manager.md)|  
 |HTTP|웹 서버에 연결합니다.|[HTTP 연결 관리자](http-connection-manager.md)|  
 |MSMQ|메시지 큐에 연결합니다.|[MSMQ 연결 관리자](msmq-connection-manager.md)|  
-|MSOLAP100|인스턴스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 연결 합니다.|[Analysis Services 연결 관리자](analysis-services-connection-manager.md)|  
+|MSOLAP100|인스턴스 또는 프로젝트에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 합니다.|[Analysis Services 연결 관리자](analysis-services-connection-manager.md)|  
 |MULTIFILE|다중 파일 또는 폴더에 연결합니다.|[다중 파일 연결 관리자](multiple-files-connection-manager.md)|  
 |MULTIFLATFILE|다중 데이터 파일 및 폴더에 연결합니다.|[다중 플랫 파일 연결 관리자](multiple-flat-files-connection-manager.md)|  
 |OLEDB|OLE DB Provider를 사용하여 데이터 원본에 연결합니다.|[OLE DB 연결 관리자](ole-db-connection-manager.md)|  
@@ -94,11 +93,11 @@ ms.locfileid: "79112164"
 > [!IMPORTANT]  
 >  다음 표에 나열된 연결 관리자는 [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] 및 [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)]에서만 작동합니다.  
   
-|유형|설명|항목|  
+|Type|Description|항목|  
 |----------|-----------------|-----------|  
-|ORACLE|Oracle \<버전 정보> 서버에 연결 합니다.|Oracle 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=251526)다운로드 페이지를 참조하십시오.|  
+|ORACLE|Oracle 서버에 연결 \<version info> 합니다.|Oracle 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=251526)다운로드 페이지를 참조하십시오.|  
 |SAPBI|SAP NetWeaver BI 버전 7 시스템에 연결합니다.|SAP BI 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft SQL Server 2008 기능 팩](https://www.microsoft.com/download/details.aspx?id=30440)다운로드 페이지를 참조하십시오.|  
-|TERADATA|Teradata \<버전 정보> 서버에 연결 합니다.|Teradata 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=251526)다운로드 페이지를 참조하십시오.|  
+|TERADATA|Teradata 서버에 연결 \<version info> 합니다.|Teradata 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=251526)다운로드 페이지를 참조하십시오.|  
   
 ### <a name="custom-connection-managers"></a>사용자 지정 연결 관리자  
  사용자 지정 연결 관리자를 작성할 수도 있습니다. 자세한 내용은 [Developing a Custom Connection Manager](../extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)을 참조하세요.  

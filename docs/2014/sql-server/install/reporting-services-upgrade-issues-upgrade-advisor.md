@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: d9663f25-98d7-4508-ae3c-55a7277211bd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 75c3bda5d15e3930fcdeba9ca73d70128fd90336
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e2f39ea7b911f2ca83767dcfbfd82947acd4f52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952064"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059007"
 ---
 # <a name="reporting-services-upgrade-issues-upgrade-advisor"></a>Reporting Services 업그레이드 문제(업그레이드 관리자)
-  다음 항목에서는로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 업그레이드에 영향을 줄 수 있는 문제에 대해 설명 합니다. 이러한 변화가 환경에 미치는 영향을 완화하기 위해 취할 수 있는 조치에 대해 설명합니다.  
+  다음 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 로의 업그레이드에 영향을 줄 수 있는 문제에 대해 설명 합니다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . 이러한 변화가 환경에 미치는 영향을 완화하기 위해 취할 수 있는 조치에 대해 설명합니다.  
   
  업그레이드 관리자는 보고서 서버 설치를 분석합니다. 보고서 디자이너가 컴퓨터에 설치된 유일한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소인 경우와 같이 클라이언트 구성 요소만 설치된 경우에는 문제가 보고되지 않습니다.  
   
  설치를 구성한 방법에 따라 업그레이드 관리자가 보고하지 않는 추가적인 문제가 발생할 수도 있습니다. 이러한 문제는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 업그레이드를 방해하지 않지만 업그레이드가 완료된 후 보고서와 애플리케이션이 실행되는 방법에는 영향을 줄 수 있습니다. 이러한 문제에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 "Reporting Services의 이전 버전과의 호환성"을 참조하십시오.  
   
- 설치 프로그램을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 업그레이드할 수 없는 경우에는 새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 설치하고 기존 설치를 새 인스턴스로 마이그레이션할 수 있습니다. 자세한 내용은 온라인 설명서의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "업그레이드 및 마이그레이션 Reporting Services"을 참조 하십시오. [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)을 참조 하십시오.  
+ 설치 프로그램을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 업그레이드할 수 없는 경우에는 새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 설치하고 기존 설치를 새 인스턴스로 마이그레이션할 수 있습니다. 자세한 내용은 온라인 설명서의 "업그레이드 및 마이그레이션 Reporting Services"을 참조 하십시오 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)을 참조 하십시오.  
   
  다음 항목에서는 업그레이드 관리자가 보고하는 알려진 문제에 대해 설명하고 업그레이드를 성공적으로 수행하기 위해 기존 설치를 수정하는 방법에 대해 설명합니다.  
   

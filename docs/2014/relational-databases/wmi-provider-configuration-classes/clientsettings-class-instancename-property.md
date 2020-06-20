@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 58dacb4a-751a-491f-9adb-88ec6afc797c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b559ddf5c33b10375d89138a0ac5580472c4fadf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2fe85d19daf34eb5b15c3969ecf503c3bd20e605
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63242655"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067920"
 ---
 # <a name="instancename-property-clientsettings-class"></a>InstanceName 속성(ClientSettings 클래스)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 인스턴스의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 이름을 가져옵니다.  
+  클라이언트 인스턴스의 이름을 가져옵니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="syntax"></a>구문  
   

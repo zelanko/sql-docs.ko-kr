@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c7867f9b-7acc-4fae-bde1-63808c403ebc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c41edcfc545e69e6e8174003ca765a4c2f1d551b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42e6b505c71abecce7b56b5cb2544b4e9f4e8f71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064426"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061095"
 ---
 # <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>자습서: 정책 기반 관리를 사용하여 최선의 구현 방법 평가
   정책 기반 관리를 사용한 최선의 구현 방법 평가 자습서입니다. 이 자습서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용에는 익숙하지만 정책 기반 관리는 사용 경험이 없는 사용자를 위한 것입니다. 정책 기반 관리는 사이트 관리 표준을 강화하는 데 사용할 수 있는 정책을 정의하기 위한 시스템입니다. 정책 기반 관리에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 분석하여 인스턴스가 최선의 구현 방법 지침과 권장 사항을 충족하는지 여부를 확인하는 데 사용할 수 있는 최선의 구현 방법 정책 집합이 포함되어 있습니다.  
