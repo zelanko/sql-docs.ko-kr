@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 245ae929b9a267f06b675b9380760f3db6067d1c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2600524da45f9a81f155432397cee2e7e876274
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809057"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934784"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>단일 사용자 모드로 SQL Server 시작
   특정 상황에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 옵션 -m **을 사용하여**의 인스턴스를 단일 사용자 모드로 시작해야 합니다. 예를 들어 서버 구성 옵션을 변경하거나 손상된 master 데이터베이스 또는 다른 시스템 데이터베이스를 복구하려고 할 수도 있습니다. 두 가지 동작 모두 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 단일 사용자 모드로 시작해야 합니다.  
@@ -55,7 +54,7 @@ ms.locfileid: "62809057"
   
 4.  클러스터 관리자 또는 장애 조치(failover) 클러스터 관리 콘솔에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스가 여전히 오프라인 상태인지 확인합니다.  
   
-5.  이제 SQLCMD -E -S\<servername> 명령을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하고 필요한 작업을 수행합니다.  
+5.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이제 다음 명령을 사용 하 여에 연결 하 고 필요한 작업을 수행 합니다. SQLCMD-E-S \<servername> .  
   
 6.  작업이 완료되면 명령 프롬프트를 닫고 클러스터 관리자를 통해 SQL 및 기타 리소스를 다시 온라인 상태로 만듭니다.  
   

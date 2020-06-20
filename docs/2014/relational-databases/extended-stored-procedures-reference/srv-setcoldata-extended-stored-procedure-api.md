@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2e19205a-25ca-4d4a-916b-d591cf2c892b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fd84bacfd389651abaf00486cd9940d95a26b0b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87592be4ea5698f9a7a6cb5c45bdb8cfe4fbd484
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745574"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050514"
 ---
 # <a name="srv_setcoldata-extended-stored-procedure-api"></a>srv_setcoldata(확장 저장 프로시저 API)
     
@@ -55,7 +54,7 @@ data
  *srvproc*  
  특정 클라이언트 연결에 대한 핸들인 SRV_PROC 구조에 대한 포인터입니다. 이 구조에는 확장 저장 프로시저 API 라이브러리가 애플리케이션과 클라이언트 간 통신 및 데이터를 관리하는 데 사용하는 정보가 들어 있습니다.  
   
- *열의*  
+ *column*  
  주소가 지정되는 열의 번호를 나타냅니다. 열 번호는 1부터 시작됩니다.  
   
  *데이터*  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 54eac961-5c7a-4481-982d-f93a64b5c2f4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 050986f4c78fc285e936b206c82faef90b89d75e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a80e7e4d42f322bc42d0c67c57e3a1f9bddb87a0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62810363"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935098"
 ---
 # <a name="run-sql-server-with-or-without-a-network"></a>네트워크에서 또는 네트워크 없이 SQL Server 실행
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 네트워크에서 실행되거나 네트워크 없이 작동할 수 있습니다.  
@@ -49,8 +48,8 @@ ms.locfileid: "62810363"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlcmd **와 같은 로컬 클라이언트에서 독립 실행형**인스턴스에 연결할 때는 네트워크를 사용하지 않고 로컬 파이프를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 직접 연결합니다. 로컬 파이프와 네트워크 파이프 간의 차이는 네트워크의 사용 여부에 있습니다. 달리 지정하지 않는 한, 표준 파이프( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .\pipe\sql\query)를 사용하여 로컬 파이프와 네트워크 파이프에서\\\\인스턴스에 연결합니다.  
   
- 서버 이름을 지정하지 않고 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하면 로컬 파이프를 사용하게 됩니다. 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하고 서버 이름을 정확하게 지정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 구성하여 다중 네트워크를 사용했을 경우 IPX/SPX와 같이 다른 네트워크 IPC 메커니즘이나 네트워크 파이프를 사용하게 됩니다. 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 네트워크 파이프를 지원하지 않으므로 클라이언트에서  **인스턴스에 연결할 때는 불필요한 /**  <Server_name>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인수를 제외해야 합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] osql **에서 독립 실행형**인스턴스에 연결하려면 다음을 입력합니다.  
+ 서버 이름을 지정하지 않고 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하면 로컬 파이프를 사용하게 됩니다. 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하고 서버 이름을 정확하게 지정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 구성하여 다중 네트워크를 사용했을 경우 IPX/SPX와 같이 다른 네트워크 IPC 메커니즘이나 네트워크 파이프를 사용하게 됩니다. 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 네트워크 파이프를 지원하지 않으므로 클라이언트에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 때는 불필요한 **/**_<Server_name>_ 인수를 제외해야 합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] osql **에서 독립 실행형**인스턴스에 연결하려면 다음을 입력합니다.  
   
- **osql /Usa /P** _\<saPassword>_  
+ **osql/미국/p**_\<saPassword>_  
   
   

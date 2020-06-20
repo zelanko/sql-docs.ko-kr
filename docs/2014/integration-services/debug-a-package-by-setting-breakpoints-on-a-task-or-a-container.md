@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 907caaa37c429dd2f788d0123f7f8ee0bbf8a27a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ef85c2744475a2f55af2abc3514aa3167473ff7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059654"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951853"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>태스크 또는 컨테이너에 중단점을 설정하여 패키지 디버깅
   이 절차에서는 패키지, 태스크, For 루프 컨테이너, Foreach 루프 컨테이너 또는 시퀀스 컨테이너에 중단점을 설정하는 방법을 설명합니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "66059654"
   
     -   이벤트 처리기에 중단점을 설정하려면 **이벤트 처리기** 탭을 클릭하고 태스크, For 루프 컨테이너, Foreach 루프 컨테이너 또는 시퀀스 컨테이너를 마우스 오른쪽 단추로 클릭한 다음 **중단점 편집**을 클릭합니다.  
   
-4.  **중단점 설정 \<컨테이너 이름>** 대화 상자에서 활성화할 중단점을 선택합니다.  
+4.  **중단점 \<container name> 설정** 대화 상자에서 활성화할 중단점을 선택 합니다.  
   
 5.  필요에 따라 각 중단점의 적중 횟수 형식 및 적중 횟수를 수정합니다.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4e5b716847c33623968077aca33932ad005953af
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797805"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960293"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>SQL Server PowerShell 경로 탐색
   [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell 공급자는 SQL Server 인스턴스의 개체를 파일 경로와 비슷한 구조로 표시합니다. Windows PowerShell cmdlet을 사용하여 공급자 경로를 탐색하고 사용자 지정 드라이브를 만들어 입력해야 하는 경로를 단축할 수 있습니다.  
@@ -25,14 +24,14 @@ ms.locfileid: "72797805"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자는 다음 테이블과 같이 공급자 cmdlet의 하위 집합을 구현합니다.  
   
-|Cmdlet|정규 별칭|cmd 별칭|UNIX 셸 별칭|설명|  
+|Cmdlet|정규 별칭|cmd 별칭|UNIX 셸 별칭|Description|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|현재 노드를 가져옵니다.|  
 |`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|현재 노드를 변경합니다.|  
-|**Get ChildItem**|**gci**|**dir**|**l**|현재 노드에 저장된 개체를 나열합니다.|  
-|**항목 가져오기**|**gi**|||현재 항목의 속성을 반환합니다.|  
-|**항목 이름 바꾸기**|**rni**|**수락**|**ren**|개체 이름을 바꿉니다.|  
-|**항목 제거**|**ri**|**del, rd**|**rm, rmdir**|개체를 제거합니다.|  
+|**Get-ChildItem**|**gci**|**dir**|**l**|현재 노드에 저장된 개체를 나열합니다.|  
+|**Get-Item**|**gi**|||현재 항목의 속성을 반환합니다.|  
+|**Rename-Item**|**rni**|**수락**|**ren**|개체 이름을 바꿉니다.|  
+|**Remove-Item**|**ri**|**del, rd**|**rm, rmdir**|개체를 제거합니다.|  
   
 > [!IMPORTANT]  
 >  일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 식별자(개체 이름)의 경우 Windows PowerShell에서 지원하지 않는 문자가 경로 이름에 포함되어 있습니다. 이러한 문자가 포함된 이름을 사용하는 방법은 [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md)을 참조하십시오.  
@@ -44,7 +43,7 @@ ms.locfileid: "72797805"
 |-------------------|----------------------------|  
 |SQLSERVER:\SQL|로컬 컴퓨터의 이름을 반환합니다. SMO 또는 WMI를 사용하여 다른 컴퓨터에 있는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스에 연결한 경우에는 해당 컴퓨터도 나열됩니다.|  
 |SQLSERVER:\SQL\\*ComputerName*|컴퓨터에 있는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스의 목록입니다.|  
-|SQLSERVER: \ SQL\\*ComputerName*\\*InstanceName*|Endpoints, Certificates 및 Databases와 같은 인스턴스의 최상위 개체 유형 목록입니다.|  
+|SQLSERVER: \ SQL \\ *ComputerName* \\ *InstanceName*|Endpoints, Certificates 및 Databases와 같은 인스턴스의 최상위 개체 유형 목록입니다.|  
 |Databases와 같은 개체 클래스 노드|데이터베이스(예: master, model, AdventureWorks20008R2) 목록과 같은 해당 유형의 개체 목록입니다.|  
 |AdventureWorks2012와 같은 개체 이름 노드|개체 내에 포함된 개체 유형 목록입니다. 예를 들어 데이터베이스는 테이블 및 뷰와 같은 개체 유형을 나열합니다.|  
   

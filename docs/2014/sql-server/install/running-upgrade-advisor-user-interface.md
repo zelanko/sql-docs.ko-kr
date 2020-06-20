@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7f47c9b3-88d3-43d6-837e-f157b49a55ac
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5aecaea9bef359ad24aebbd20dd5e9547497043b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 653e3d0565d0b32c67ccf77772a9b89f611dd082
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092453"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058949"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>업그레이드 관리자 실행(사용자 인터페이스)
   업그레이드를 계획하는 동안 업그레이드 관리자를 실행하여 로컬 또는 원격 구성 요소를 분석할 수 있습니다. 업그레이드 관리자는 분석되는 각 구성 요소와 인스턴스에 대한 보고서를 생성합니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66092453"
 > [!IMPORTANT]  
 >  업그레이드 관리자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 원격 인스턴스를 분석하지 않습니다. [!INCLUDE[ssRS](../../includes/ssrs.md)] 인스턴스를 분석하려면 [!INCLUDE[ssRS](../../includes/ssrs.md)]가 설치된 컴퓨터에 업그레이드 관리자를 설치해야 합니다.  
 >   
->  Integration Services를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 분석 하려면 동일한 컴퓨터에를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 설치 하 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 고 설치 해야 합니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Integration Services를 분석 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 동일한 컴퓨터에를 설치 하 고 설치 해야 합니다 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 ## <a name="running-the-upgrade-advisor-analysis-wizard"></a>업그레이드 관리자 분석 마법사 실행  
  업그레이드 관리자 분석 마법사는 다음과 같은 여섯 단계로 실행됩니다.  

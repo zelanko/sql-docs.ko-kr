@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6c5ddad15af74e45313d3e71b059fae36d166560
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49de4a381de3e998073a73c284e3e3e5960f4921
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808694"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934737"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>transform noise words 서버 구성 옵션
-  의미 없는 `transform noise words` 단어 ( [중지 단어](../../relational-databases/search/full-text-search.md))로 인해 전체 텍스트 쿼리에 대 한 부울 연산에서 0 개의 행을 반환 하는 경우 오류 메시지를 표시 하지 않으려면 서버 구성 옵션을 사용 합니다. 이 옵션은 부울 연산 또는 NEAR 연산에 의미 없는 단어가 들어 있는 CONTAINS 조건자를 사용하는 전체 텍스트 쿼리에 유용합니다. 다음 표에서는 이 옵션에 사용할 수 있는 값을 설명합니다.  
+  `transform noise words`의미 없는 단어 ( [중지 단어](../../relational-databases/search/full-text-search.md))로 인해 전체 텍스트 쿼리에 대 한 부울 연산에서 0 개의 행을 반환 하는 경우 오류 메시지를 표시 하지 않으려면 서버 구성 옵션을 사용 합니다. 이 옵션은 부울 연산 또는 NEAR 연산에 의미 없는 단어가 들어 있는 CONTAINS 조건자를 사용하는 전체 텍스트 쿼리에 유용합니다. 다음 표에서는 이 옵션에 사용할 수 있는 값을 설명합니다.  
   
 |값|Description|  
 |-----------|-----------------|  

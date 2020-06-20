@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 10a1d77c-3153-474f-a6a0-969556794467
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: df9d9e51846e286c67a4773823207524755d15dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 296ae4d4051e79e3c5d3bc158ef3e87c9164ecd3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278209"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059093"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>고정 서버 역할 이름과 일치하는 로그인 이름을 바꿉니다.
   업그레이드 관리자가 고정 서버 역할 이름과 일치하는 하나 이상의 사용자 정의 로그인 이름을 검색했습니다. 고정 서버 역할 이름은 예약되어 있습니다. 업그레이드하기 전에 로그인 이름을 바꾸십시오  
@@ -60,7 +59,7 @@ ms.locfileid: "72278209"
   
 2.  로그인을 삭제합니다.  
   
-3.  **Sp_addlogin** 시스템 프로시저를 사용 하 여 새 로그인을 만듭니다. 각 해당 로그인에 대 한 ** \@sid** 매개 변수에 1 단계에서 반환 된 sid를 지정 합니다.  
+3.  **Sp_addlogin** 시스템 프로시저를 사용 하 여 새 로그인을 만듭니다. 각 해당 로그인에 대 한 ** \@ sid** 매개 변수에 1 단계에서 반환 된 sid를 지정 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [업그레이드 문제 데이터베이스 엔진](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

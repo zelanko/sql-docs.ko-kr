@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 80c0456f-17c0-41d8-b2aa-502a2f3bb6de
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cdc50e81bcc58722a3c04fc8516b9158072533cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1102657a4921fd5ab48bfe10c0a05ed67126df47
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065056"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934508"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>마법사를 사용하여 확장 이벤트 세션을 만들기(개체 탐색기)
   서버의 이벤트를 손쉽게 선택하고 캡처할 수 있도록 확장 이벤트에는 확장 이벤트 세션을 만드는 단계를 안내해 주는 새 세션 마법사가 포함되어 있습니다. 새 세션 마법사에는 대부분의 확장 이벤트 기능이 표시됩니다. [새 세션 대화 상자](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md) 에서는 데이터를 캡처, 표시 및 분석하는 확장 이벤트 세션을 정의할 수 있습니다. 새 세션 대화 상자에는 모든 확장 이벤트 기능이 표시됩니다.  

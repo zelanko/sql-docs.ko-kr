@@ -13,27 +13,26 @@ helpviewer_keywords:
 ms.assetid: 30df7ba9-1e5f-432b-b90b-4310ef0473c0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9e40c50f93973b7c3c80cdf5dbca831d531a68d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 079b7ad5d7a509cc1f96f748005458d289682091
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062221"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051380"
 ---
 # <a name="xquery-static-type-event-class"></a>XQuery Static Type 이벤트 클래스
   XQuery Static Type 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 XQuery 식을 실행할 때 발생합니다. 이 이벤트 클래스는 XQuery 식의 정적 유형을 제공합니다.  
   
 ## <a name="xquery-static-type-event-class-data-columns"></a>XQuery Static Type 이벤트 클래스 데이터 열  
   
-|데이터 열 이름|`Data type`|설명|열 ID|필터 가능|  
+|데이터 열 이름|`Data type`|Description|열 ID|필터 가능|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 애플리케이션의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|10|예|  
 |ClientProcessID|`int`|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
 |DatabaseID|`int`|USE *database* 문으로 지정한 데이터베이스 ID 이거나 지정한 인스턴스에 대해 use *database* 문을 실행 하지 않은 경우 기본 데이터베이스의 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에 ServerName 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |DatabaseName|`nvarchar`|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|yes|  
-|EventClass|`int`|이벤트 유형 = 198|27|아니요|  
-|EventSequence|`int`|요청 내의 지정된 이벤트 시퀀스입니다.|51|아니요|  
+|EventClass|`int`|이벤트 유형 = 198|27|예|  
+|EventSequence|`int`|요청 내의 지정된 이벤트 시퀀스입니다.|51|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  
 |IsSystem|`int`|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다. 1 = 시스템, 0 = 사용자|60|예|  

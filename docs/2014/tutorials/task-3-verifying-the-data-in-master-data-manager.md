@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: d88953d2-2258-40ac-b3bf-2ef502f9b5fd
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8e5d87a9d98e4804dd9f2687b5125e55882606c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aed5a76cff9d90b81f02f6af11b6fc437efee14e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487684"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035312"
 ---
 # <a name="task-3-verifying-the-data-in-master-data-manager"></a>태스크 3: 마스터 데이터 관리자에서 데이터 확인
   이 작업에서는 **마스터 데이터 관리자 웹 애플리케이션** 을 사용해서 **Supplier** 엔터티가 **MDS**에 생성되었는지 확인합니다.
 
-1.  **마스터 데이터 관리자** 가 이미 열려 있으면 상단에서 **SQL Server 2012 Master Data Services** 를 클릭하여 홈 페이지로 이동합니다. 그렇지 않으면로 `http://localhost/MDS` 이동 하 여 **마스터 데이터 관리자**를 시작 합니다.
+1.  **마스터 데이터 관리자** 가 이미 열려 있으면 상단에서 **SQL Server 2012 Master Data Services** 를 클릭하여 홈 페이지로 이동합니다. 그렇지 않으면로 이동 `http://localhost/MDS` 하 여 **마스터 데이터 관리자**를 시작 합니다.
 
 2.  **모델** 에 대해 **Suppliers**를 선택하고 **탐색기**를 클릭합니다.
 

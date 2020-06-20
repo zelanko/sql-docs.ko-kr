@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c8a7a607221599d599438352eab5add1cc94e5d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 826622cd17862c0535e60c01baab756af2b2996b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63186236"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004712"
 ---
 # <a name="synchronize-a-pull-subscription"></a>끌어오기 구독 동기화
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]복제 에이전트 [또는 RMO(복제 관리 개체)를 사용하여](agents/replication-agents-overview.md)에서 끌어오기 구독을 동기화하는 방법에 대해 설명합니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "63186236"
   
 3.  동기화할 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 상태 보기**를 클릭합니다.  
   
-4.  **동기화 상태 보기 - \<Subscriber>:\<SubscriptionDatabase>** 대화 상자에서 **시작**을 클릭합니다. 동기화가 완료되면 **동기화 완료** 라는 메시지가 표시됩니다.  
+4.  **동기화 상태 보기- \<Subscriber> : \<SubscriptionDatabase> ** 대화 상자에서 **시작**을 클릭 합니다. 동기화가 완료되면 **동기화 완료** 라는 메시지가 표시됩니다.  
   
 5.  **닫기**를 클릭합니다.  
   
@@ -58,15 +57,15 @@ ms.locfileid: "63186236"
   
     -   **-배포자**  
   
-    -   **-DistributorSecurityMode** = **1**  
+    -   **-DistributorSecurityMode**  =  **1**  
   
     -   **-구독자**  
   
     -   **-SubscriberDB**  
   
-    -   **-SubscriberSecurityMode** = **1**  
+    -   **-SubscriberSecurityMode**  =  **1**  
   
-    -   **-SubscriptionType** = **1**  
+    -   **-SubscriptionType**  =  **1**  
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 다음 인수도 지정해야 합니다.  
   
@@ -74,19 +73,19 @@ ms.locfileid: "63186236"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** = **0**  
+    -   **-DistributorSecurityMode**  =  **0**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** = **0**  
+    -   **-PublisherSecurityMode**  =  **0**  
   
     -   **-SubscriberLogin**  
   
     -   **-SubscriberPassword**  
   
-    -   **-SubscriberSecurityMode** = **0**  
+    -   **-SubscriberSecurityMode**  =  **0**  
   
 #### <a name="to-start-the-merge-agent-from-the-command-prompt-or-from-a-batch-file"></a>명령 프롬프트 또는 배치 파일에서 병합 에이전트를 시작하려면  
   
@@ -96,21 +95,21 @@ ms.locfileid: "63186236"
   
     -   **-PublisherDB**  
   
-    -   **-PublisherSecurityMode** = **1**  
+    -   **-PublisherSecurityMode**  =  **1**  
   
     -   **-게시**  
   
     -   **-배포자**  
   
-    -   **-DistributorSecurityMode** = **1**  
+    -   **-DistributorSecurityMode**  =  **1**  
   
     -   **-구독자**  
   
-    -   **-SubscriberSecurityMode** = **1**  
+    -   **-SubscriberSecurityMode**  =  **1**  
   
     -   **-SubscriberDB**  
   
-    -   **-SubscriptionType** = **1**  
+    -   **-SubscriptionType**  =  **1**  
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 다음 인수도 지정해야 합니다.  
   
@@ -118,19 +117,19 @@ ms.locfileid: "63186236"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** = **0**  
+    -   **-DistributorSecurityMode**  =  **0**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** = **0**  
+    -   **-PublisherSecurityMode**  =  **0**  
   
     -   **-SubscriberLogin**  
   
     -   **-SubscriberPassword**  
   
-    -   **-SubscriberSecurityMode** = **0**  
+    -   **-SubscriberSecurityMode**  =  **0**  
   
 ###  <a name="examples-replication-agents"></a><a name="TsqlExample"></a> 예(복제 에이전트)  
  다음 예에서는 배포 에이전트를 시작하여 끌어오기 구독을 동기화합니다. 모든 연결은 Windows 인증을 사용하여 만듭니다.  
@@ -172,7 +171,7 @@ ms.locfileid: "63186236"
     -   <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> 속성에서 <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> 클래스의 인스턴스를 가져오고 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A> 메서드를 호출합니다. 이 메서드는 에이전트를 동기적으로 시작하고 실행 중인 에이전트 작업에 대한 제어는 그대로 유지됩니다. 동기화 실행 중에는 에이전트를 실행하면서 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> 이벤트를 처리할 수 있습니다.  
   
         > [!NOTE]  
-        >  `false` 끌어오기 구독을 만들 때에 <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> 값 (기본값)을 지정한 경우에는, <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor%2A> <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode%2A>및 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin%2A> 도 지정 해야 합니다. 구독에 대 한 에이전트 작업 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword%2A> 관련 메타 데이터는 [MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql)에서 사용할 수 없기 때문입니다.  
+        >  `false`끌어오기 구독을 만들 때에 값 (기본값)을 지정한 경우에는 <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> , 및도 지정 해야 합니다 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor%2A> <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode%2A> <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin%2A> <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword%2A> . 구독에 대 한 에이전트 작업 관련 메타 데이터는 [MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql)에서 사용할 수 없기 때문입니다.  
   
 #### <a name="to-synchronize-a-pull-subscription-to-a-merge-publication"></a>병합 게시에 끌어오기 구독을 동기화하려면  
   
@@ -199,7 +198,7 @@ ms.locfileid: "63186236"
     -   <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> 속성에서 <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> 클래스의 인스턴스를 가져오고 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> 메서드를 호출합니다. 이 메서드는 병합 에이전트를 동기적으로 시작하고 실행 중인 에이전트 작업에 대한 제어는 그대로 유지됩니다. 동기화 실행 중에는 에이전트를 실행하면서 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> 이벤트를 처리할 수 있습니다.  
   
         > [!NOTE]  
-        >  끌어오기 구독을 만들 때 `false` 에 <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> 값 (기본값)을 지정한 경우에는,,,,, 및를 지정 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A>해야 합니다. 구독에 대 한 에이전트 작업 관련 메타 데이터 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A> 는 [MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql)에서 사용할 수 없기 때문입니다.  
+        >  끌어오기 구독을 만들 때에 값 (기본값)을 지정한 경우에는,,,,, 및를 `false` <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> 지정 해야 합니다 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A> . 구독에 대 한 에이전트 작업 관련 메타 데이터는 [MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql)에서 사용할 수 없기 때문입니다.  
   
 ###  <a name="examples-rmo"></a><a name="PShellExample"></a>예 (RMO)  
  다음은 트랜잭션 게시에 끌어오기 구독을 동기화하는 예로, 에이전트 작업을 사용하여 에이전트를 비동기적으로 시작합니다.  

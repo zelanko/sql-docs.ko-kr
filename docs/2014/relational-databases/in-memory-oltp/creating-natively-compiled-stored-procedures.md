@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9525ef65973baa38ae19ba4681e4a93f949c004a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e8e8139427c7f2ad92eea856be8da542f65e344
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63071824"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050268"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저 만들기
   고유하게 컴파일된 저장 프로시저는 전체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로그래밍 기능 및 쿼리 노출 영역을 구현하지 않습니다. 일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문은 고유하게 컴파일된 저장 프로시저 내에서 사용할 수 없습니다. 자세한 내용은 고유 하 게 [컴파일된 저장 프로시저에서 지원 되는 구문](../in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)을 참조 하세요.  
@@ -53,10 +52,10 @@ go
   
  코드 샘플에서 `NATIVE_COMPILATION`은 이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저가 고유하게 컴파일된 저장 프로시저임을 나타냅니다. 다음 옵션이 필요합니다.  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
-|`SCHEMABINDING`|고유하게 컴파일된 저장 프로시저는 참조하는 개체의 스키마에 바인딩되어야 합니다. 이는 프로시저에서 참조하는 테이블을 삭제할 수 없음을 의미합니다. 프로시저에서 참조 되는 테이블은 해당 스키마 이름을 포함 해야 하며 쿼리에\*와일드 카드 ()를 사용할 수 없습니다. `SCHEMABINDING`은 이 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 고유하게 컴파일된 저장 프로시저에 대해서만 지원됩니다.|  
-|`EXECUTE AS`|고유하게 컴파일된 저장 프로시저는 기본 실행 컨텍스트인 `EXECUTE AS CALLER`를 지원하지 않습니다. 따라서 실행 컨텍스트를 지정해야 합니다. `EXECUTE AS OWNER` `EXECUTE AS` *사용자*및 `EXECUTE AS SELF` 옵션이 지원 됩니다.|  
+|`SCHEMABINDING`|고유하게 컴파일된 저장 프로시저는 참조하는 개체의 스키마에 바인딩되어야 합니다. 이는 프로시저에서 참조하는 테이블을 삭제할 수 없음을 의미합니다. 프로시저에서 참조 되는 테이블은 해당 스키마 이름을 포함 해야 하며 쿼리에 와일드 카드 ( \* )를 사용할 수 없습니다. `SCHEMABINDING`은 이 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 고유하게 컴파일된 저장 프로시저에 대해서만 지원됩니다.|  
+|`EXECUTE AS`|고유하게 컴파일된 저장 프로시저는 기본 실행 컨텍스트인 `EXECUTE AS CALLER`를 지원하지 않습니다. 따라서 실행 컨텍스트를 지정해야 합니다. `EXECUTE AS OWNER` `EXECUTE AS` *사용자*및 옵션이 `EXECUTE AS SELF` 지원 됩니다.|  
 |`BEGIN ATOMIC`|고유하게 컴파일된 저장 프로시저의 본문은 단 하나의 ATOMIC 블록으로 구성되어야 합니다. ATOMIC 블록은 저장 프로시저의 원자성 실행을 보장합니다. 프로시저가 활성 트랜잭션의 컨텍스트 외부에서 호출되면 새 트랜잭션을 시작하며 ATOMIC 블록의 끝에서 커밋합니다. 고유하게 컴파일된 저장 프로시저의 ATOMIC 블록에는 다음과 같은 두 가지 필수 옵션이 있습니다.<br /><br /> `TRANSACTION ISOLATION LEVEL`. 지원 되는 격리 수준에 대 한 [트랜잭션 격리 수준](../../database-engine/transaction-isolation-levels.md) 을 참조 하세요.<br /><br /> `LANGUAGE`. 저장 프로시저의 언어는 사용 가능한 언어 또는 언어 별칭 중 하나로 설정되어야 합니다.|  
   
  `EXECUTE AS` 및 Windows 로그인과 관련하여 `EXECUTE AS`를 통해 수행된 가장 때문에 오류가 발생할 수 있습니다. 사용자 계정이 Windows 인증을 사용하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 사용되는 서비스 계정과 Windows 로그인의 도메인 간에는 완전 신뢰 관계가 있어야 합니다. 완전 신뢰가 없는 경우 고유 하 게 컴파일된 저장 프로시저를 만들 때 다음과 같은 오류 메시지가 반환 됩니다. 메시지 15404, Windows NT 그룹/사용자 ' 사용자 이름 '에 대 한 정보를 가져올 수 없습니다. 오류 코드 0x5.  

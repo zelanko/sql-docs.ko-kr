@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 49008384-2c55-4080-a890-9bceb40e4d6d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 63d8f82d207a985bac34b5c9a9be3273bb84ef7d
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 393462c56169e7070601a98cc9144e1996a19847
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000397"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065887"
 ---
 # <a name="lesson-3-synchronizing-the-subscription-to-the-merge-publication"></a>3단원: 병합 게시에 구독 동기화
   이 단원에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 병합 에이전트를 시작하여 구독을 초기화합니다. 또한 이 절차를 사용하여 게시자와 동기화합니다. 이 단원을 수행하려면 이전 단원인 [2단원: 병합 게시에 대한 구독 만들기](lesson-2-creating-a-subscription-to-the-merge-publication.md)를 완료해야 합니다.  

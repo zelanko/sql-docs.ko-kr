@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 04cb8ea2505340cb90221b328c04efc390296c19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7086db16eab9935624546965652834313a467db
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175362"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927889"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>클러스터형 columnstore 인덱스 사용
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 클러스터형 columnstore 인덱스를 사용하는 태스크입니다.
@@ -68,7 +67,7 @@ GO
  분할된 데이터에 대해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 먼저 각 행을 파티션에 할당한 다음 파티션 내에서 데이터에 columnstore 작업을 수행합니다. 각 파티션에는 고유한 행 그룹 수와 적어도 하나의 deltastore가 있습니다.
 
 ### <a name="deltastore-loading-scenarios"></a>Deltastore 로드 시나리오
- 행 수가 행 그룹에 허용된 최대 행 수에 도달할 때까지 행은 deltastore에 누적됩니다. Deltastore는 행 그룹 당 최대 행 수를 포함 하 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 경우 행 그룹를 "닫힘"으로 표시 합니다. "튜플-이동" 이라고 하는 백그라운드 프로세스는 닫힌 행 그룹를 찾고 columnstore로 이동 합니다. 여기서 행 그룹는 열 세그먼트로 압축 되며 열 세그먼트는 columnstore에 저장 됩니다.
+ 행 수가 행 그룹에 허용된 최대 행 수에 도달할 때까지 행은 deltastore에 누적됩니다. Deltastore는 행 그룹 당 최대 행 수를 포함 하는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 행 그룹를 "닫힘"으로 표시 합니다. "튜플-이동" 이라고 하는 백그라운드 프로세스는 닫힌 행 그룹를 찾고 columnstore로 이동 합니다. 여기서 행 그룹는 열 세그먼트로 압축 되며 열 세그먼트는 columnstore에 저장 됩니다.
 
  클러스터형 columnstore 인덱스마다 여러 deltastore가 있을 수 있습니다.
 

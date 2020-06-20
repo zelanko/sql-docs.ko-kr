@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: c4288265-43f7-44fd-acab-ba64d04264d9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ec8fa09f34b27d9638f505981f11de960cb4d5b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f592958e5feecfaeba0279a428b012038de4514e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62520163"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051276"
 ---
 # <a name="localdb_error_cannot_access_instance_folder"></a>LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_FOLDER
     
@@ -27,7 +26,7 @@ ms.locfileid: "62520163"
 |이벤트 ID|261|  
 |이벤트 원본|SQL Server 로컬 데이터베이스 런타임 12.0|  
 |구성 요소|로컬 데이터베이스 런타임 API|  
-|메시지 텍스트|로컬 데이터베이스 인스턴스 폴더%% LOCALAPPDATA%% \ Microsoft\Microsoft SQL Server 로컬 DB\Instances\\<인스턴스 이름\>에 액세스할 수 없습니다.|  
+|메시지 텍스트|로컬 데이터베이스 인스턴스 폴더%% LOCALAPPDATA%% \ Microsoft\Microsoft SQL Server 로컬 DB\Instances \\<인스턴스 이름에 액세스할 수 없습니다. \>|  
   
 ## <a name="explanation"></a>설명  
  인스턴스 폴더에 액세스할 수 없습니다.  

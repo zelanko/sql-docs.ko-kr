@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4f7302da7be80038478c887a01bb32037503fc0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 38129f2f502f3a3f2ec1be02d718a642e2a52c23
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69028694"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934994"
 ---
 # <a name="server-memory-configuration-options"></a>서버 메모리 구성 옵션
   **최소 서버 메모리** 및 **최대 서버 메모리**의 두 가지 서버 메모리 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 사용하는 SQL Server 프로세스의 메모리 양(MB)을 다시 구성할 수 있습니다. 이 메모리는 SQL Server Memory Manager가 관리합니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "69028694"
  **min server memory** 의 기본 설정은 0이고, **max server memory** 의 기본 설정은 2147483647MB입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 사용할 수 있는 시스템 리소스에 따라 메모리 요구 사항을 동적으로 변경할 수 있습니다.  
   
 > [!NOTE]  
-> **max server memory** 를 최소값으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능이 심각하게 손상되며 SQL Server를 시작하지 못할 수도 있습니다. 이 옵션을 변경한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 후 시작할 수 없는 경우 **-f** 시작 옵션을 사용 하 여 시작 하 고 **max server memory** 를 이전 값으로 다시 설정 합니다. 자세한 내용은 [Database Engine Service Startup Options](database-engine-service-startup-options.md)을(를) 참조하세요.  
+> **max server memory** 를 최소값으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능이 심각하게 손상되며 SQL Server를 시작하지 못할 수도 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 옵션을 변경한 후 시작할 수 없는 경우 **-f** 시작 옵션을 사용 하 여 시작 하 고 **max server memory** 를 이전 값으로 다시 설정 합니다. 자세한 내용은 [Database Engine Service Startup Options](database-engine-service-startup-options.md)을(를) 참조하세요.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 동적으로 메모리를 사용하면 주기적으로 시스템을 쿼리하여 사용할 수 있는 메모리 양을 확인합니다. 사용 가능한 메모리를 이 수준으로 유지 관리하면 OS(운영 체제)에서 페이징을 방지합니다. 사용 가능한 메모리가 이보다 적은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 메모리를 OS로 해제합니다. 사용 가능한 메모리가 이보다 많은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 더 많은 메모리를 할당할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 작업에 메모리가 더 필요한 경우에만 메모리를 추가합니다. 서버가 유휴 상태이면 가상 주소 공간 크기가 증가하지 않습니다.  
   
@@ -96,14 +95,14 @@ ms.locfileid: "69028694"
 3.  **네트워크 애플리케이션을 위해 데이터 처리량 최대화** 가 선택된 경우에는 다른 옵션을 선택하고 **확인**을 클릭한 다음 나머지 대화 상자를 닫습니다.  
   
 ## <a name="lock-pages-in-memory"></a>메모리의 페이지 잠금  
- 이 Windows 정책은 데이터를 실제 메모리에 유지하는 프로세스를 사용하여 시스템이 디스크의 가상 메모리로 데이터를 페이징하지 않도록 방지할 수 있는 계정을 결정합니다. 메모리의 페이지를 잠그면 메모리를 디스크로 페이징할 때 서버가 계속해서 응답합니다. Sqlservr.exe 실행 권한이 있는 계정에 Windows "LPIM (잠긴 페이지 메모리)" 사용자 권한이 부여 된 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에는 **메모리의 페이지 잠금** 옵션은 Standard edition 이상에서 32 비트 및 64 비트 인스턴스에서 ON으로 설정 됩니다. SQL Server 이전 버전의 SQL Server에서는 SQL Server의 32비트 인스턴스에 대한 페이지 잠금 옵션을 설정하려면 sqlservr.exe 실행 권한이 있는 계정에 LPIM 사용자 권한이 있고 'awe_enabled' 구성 옵션을 ON으로 설정해야 합니다.  
+ 이 Windows 정책은 데이터를 실제 메모리에 유지하는 프로세스를 사용하여 시스템이 디스크의 가상 메모리로 데이터를 페이징하지 않도록 방지할 수 있는 계정을 결정합니다. 메모리의 페이지를 잠그면 메모리를 디스크로 페이징할 때 서버가 계속해서 응답합니다. **Lock Pages in Memory** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sqlservr.exe를 실행할 수 있는 권한이 있는 계정에 WINDOWS "Lpim (잠긴 페이지)" 사용자 권한이 부여 된 경우 SQL Server 메모리의 페이지 잠금 옵션은 64 32 ON으로 설정 되어 있습니다. 이전 버전의 SQL Server에서는 SQL Server의 32비트 인스턴스에 대한 페이지 잠금 옵션을 설정하려면 sqlservr.exe 실행 권한이 있는 계정에 LPIM 사용자 권한이 있고 'awe_enabled' 구성 옵션을 ON으로 설정해야 합니다.  
   
- 에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **메모리의 페이지 잠금** 옵션을 사용 하지 않도록 설정 하려면 SQL Server 시작 계정에 대 한 "메모리의 페이지 잠금" 사용자 권한을 제거 합니다.  
+ 에 대해 **메모리의 페이지 잠금** 옵션을 사용 하지 않도록 설정 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server 시작 계정에 대 한 "메모리의 페이지 잠금" 사용자 권한을 제거 합니다.  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>메모리의 페이지 잠금을 사용하지 않도록 설정하려면  
  **메모리의 페이지 잠금 옵션을 사용 하지 않도록 설정 하려면:**  
   
-1.  **시작** 메뉴에서 **실행**을 클릭합니다. **열기** 상자에을 입력 `gpedit.msc`합니다.  
+1.  **시작** 메뉴에서 **실행**을 클릭합니다. **열기** 상자에을 입력 `gpedit.msc` 합니다.  
   
      **그룹 정책** 대화 상자가 열립니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: '명령줄 관리 도구: SqlLocalDB | Microsoft Docs'
+title: '명령줄 관리 도구: SqlLocalDB.exe | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ api_location:
 ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 58ea983555fdcb4bb177813db88d40f4bcc59c0e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 147afb38ae7d4ca81d07784aff4efeb28a0859a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128781"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051001"
 ---
 # <a name="command-line-management-tool-sqllocaldbexe"></a>명령줄 관리 도구: SqlLocalDB.exe
   SqlLocalDB.exe는 사용자가 명령줄에서 LocalDB 인스턴스를 쉽게 관리할 수 있는 간단한 도구입니다. 이 도구는 LocalDB 인스턴스 API에 대한 단순 래퍼로 구현되어 있습니다. SQLCMD 등의 비슷한 여러 SQL Server 도구와 마찬가지로 매개 변수는 SqlLocalDB에 명령줄 인수로 전달되며 출력은 콘솔로 보내집니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "63128781"
 |||  
 |`trace&#124;t on&#124;off`|추적을 설정하고 해제합니다.|  
   
- SqlLocalDB에서는 공백을 구분 기호로 처리하므로 공백 및 공백 문자가 포함된 인스턴스 이름은 따옴표로 묶어야 합니다. 예를 들어:  
+ SqlLocalDB에서는 공백을 구분 기호로 처리하므로 공백 및 공백 문자가 포함된 인스턴스 이름은 따옴표로 묶어야 합니다. 다음은 그 예입니다.  
   
  `SqlLocalDB create "My instance name with spaces"`  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 18236ec3ca5a62cd45a2cf7cdd3d56b5cea79063
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: ff715b51a7fa84a462d1439e78627d648e20472d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000459"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065957"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>1단원: 트랜잭션 복제를 사용하여 데이터 게시
    이 단원에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 트랜잭션 게시를 만들어 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 샘플 데이터베이스에 **Product** 테이블의 필터링된 하위 집합을 게시합니다. 또한 배포 에이전트에 사용된 SQL Server 로그인을 PAL(게시 액세스 목록)에 추가합니다. 이 자습서를 시작하려면 이전 자습서인 [복제용 서버 준비](tutorial-preparing-the-server-for-replication.md)를 완료해야 합니다.  
@@ -50,7 +49,7 @@ ms.locfileid: "83000459"
   
 10. 에이전트 보안 페이지에서 **스냅샷 에이전트의 보안 설정 사용** 확인란을 선택 취소합니다.  
   
-11. 스냅샷 에이전트에 대해 **보안 설정**을 클릭하고 **프로세스 계정** 상자에 \<_Machine_Name&gt;_**\repl_snapshot**을 입력한 다음 이 계정에 대한 암호를 입력하고 **확인**을 클릭합니다.  
+11. 스냅숏 에이전트에 대 한 **보안 설정** 을 클릭 하 고 \<_Machine_Name> **프로세스 계정** 상자에 _**\ repl_snapshot** 를 입력 한 다음이 계정에 대 한 암호를 입력 하 고 **확인**을 클릭 합니다.  
   
 12. 이전 단계를 반복하여 repl_logreader를 로그 판독기 에이전트에 대한 프로세스 계정으로 설정한 다음 **마침**을 클릭합니다.  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca35b67a-104a-41fb-ac58-a61be06fe114
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bce3bd6862e612a8cefa35d1c981d608bf2c341c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d28202148d6f85e0aafde6ee324b11fd8cd10b23
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62842988"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928937"
 ---
 # <a name="source-control-basics"></a>원본 제어 기본 사항
   소스 제어란 서버 소프트웨어의 중심부에서 파일 버전을 저장 및 추적하고 파일에 대한 액세스를 제어하는 시스템을 말합니다. 일반 원본 제어 시스템에는 원본 제어 공급자 및 둘 이상의 원본 제어 클라이언트가 포함됩니다.  
@@ -51,7 +50,7 @@ ms.locfileid: "62842988"
   
 |||  
 |-|-|  
-|**Task**|**항목**|  
+|**Task**|**뒷부분**|  
 |원본 제어 옵션 설정|[원본 제어 옵션 설정](../../2014/database-engine/set-source-control-options.md)|  
 |원본 제어 연결 변경|[원본 제어 연결 변경](../../2014/database-engine/change-source-control-connections.md)|  
 |원본 제어에서 파일 제외|[소스 제어에서 파일 제외](../../2014/database-engine/exclude-files-from-source-control.md)|  

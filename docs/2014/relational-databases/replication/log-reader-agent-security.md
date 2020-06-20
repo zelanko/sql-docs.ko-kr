@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d6981e74-ddb8-41b8-9ea1-56c2ece63b8a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c55292aff126d1955c438c9417ce0651cc6afc94
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 01e3d687ef2edbd9c42ba8066a7c029d865e5774
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63162243"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065896"
 ---
 # <a name="log-reader-agent-security"></a>로그 판독기 에이전트 보안
   **로그 판독기 에이전트 보안** 대화 상자에서 다음을 지정할 수 있습니다.  

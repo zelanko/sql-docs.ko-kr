@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: acfa87245449566c1f91b447910f5194eda192b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92183382aa8832f3c381ce864df34c0744095da3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922587"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960127"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 는 관리자와 개발자가 서버 관리 및 애플리케이션 배포를 자동화할 수 있는 강력한 스크립팅 셸인 Windows PowerShell을 지원합니다. Windows PowerShell 언어는 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트보다 더 복잡한 논리를 지원하므로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리자가 강력한 관리 스크립트를 작성할 수 있습니다. 또한 Windows PowerShell 스크립트를 사용하여 다른 [!INCLUDE[msCoName](../includes/msconame-md.md)] 서버 제품을 관리할 수도 있습니다. 이는 관리자에게 서버 전체에 대한 공용 스크립팅 언어를 제공합니다.  

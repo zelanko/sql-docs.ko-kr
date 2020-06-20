@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 60fdfbecf617f0a4aa92b40b72b1b5e969f69388
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c3ee58ebc7cd579b04d317b44e823779ae987e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745883"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004551"
 ---
 # <a name="synchronize-a-push-subscription"></a>밀어넣기 구독 동기화
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]복제 에이전트 [또는 RMO(복제 관리 개체)를 사용하여](agents/replication-agents-overview.md)에서 밀어넣기 구독을 동기화하는 방법에 대해 설명합니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "62745883"
   
 4.  동기화할 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 상태 보기**를 클릭합니다.  
   
-5.  **동기화 상태 보기 - \<Subscriber>:\<SubscriptionDatabase>** 대화 상자에서 **시작**을 클릭합니다. 동기화가 완료되면 **동기화 완료** 라는 메시지가 표시됩니다.  
+5.  **동기화 상태 보기- \<Subscriber> : \<SubscriptionDatabase> ** 대화 상자에서 **시작**을 클릭 합니다. 동기화가 완료되면 **동기화 완료** 라는 메시지가 표시됩니다.  
   
 6.  **닫기**를 클릭합니다.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62745883"
   
 4.  배포자 연결 설정에 대한 메시지가 표시됩니다. **확인**을 클릭합니다.  
   
-5.  **동기화 상태 보기 - \<Subscriber>:\<SubscriptionDatabase>** 대화 상자에서 **시작**을 클릭합니다. 동기화가 완료되면 **동기화 완료** 라는 메시지가 표시됩니다.  
+5.  **동기화 상태 보기- \<Subscriber> : \<SubscriptionDatabase> ** 대화 상자에서 **시작**을 클릭 합니다. 동기화가 완료되면 **동기화 완료** 라는 메시지가 표시됩니다.  
   
 6.  **닫기**를 클릭합니다.  
   

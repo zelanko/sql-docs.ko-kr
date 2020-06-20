@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0fe85fbf-8e8d-4983-96fd-d04b3c7d6d65
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ecf171c8c50e1f7ce1e7cdc9e86cd27ac6fe558b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: caae904bc1e25288e81d3baba21719be28c05d31
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161996"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050228"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>메모리 액세스에 최적화된 개체에 대한 내구성 정의
   메모리 내 OLTP는 완전한 ACID(원자성, 일관성, 격리 및 내구성) 속성을 보장합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 메모리 최적화 테이블의 컨텍스트에서 내구성은 다음과 같은 보증을 제공합니다.  

@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: face8120-4d32-4c6c-a1e8-99f27d1ff15d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: db98f9806f48699af996a33675138150803e8812
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf46eaa4790bfc09e6f10ef1c43aa06aad12f436
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952389"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036391"
 ---
 # <a name="service-account-ssrs-native-mode"></a>서비스 계정(SSRS 기본 모드)
   서비스 계정 페이지를 사용하여 보고서 서버 서비스를 실행할 계정을 지정할 수 있습니다. 이 계정은 설치하는 동안 처음에 구성하며 계정 또는 암호를 변경하려는 경우 수정할 수 있습니다. 보고서 서버 웹 서비스, 보고서 관리자 및 백그라운드 처리 애플리케이션은 이 페이지에서 지정하는 서비스 ID로 모두 실행됩니다.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]기본 모드입니다.  
   
- 보고서 서버 서비스에 지정한 계정은 레지스트리, 보고서 서버 프로그램 파일 및 보고서 서버 데이터베이스에 액세스할 수 있는 권한이 있어야 합니다. 계정에 대한 모든 권한은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 계정을 설정할 때 자동으로 구성됩니다. 서비스 계정을 사용 하 여 보고서 서버 데이터베이스에 연결 하는 경우 Configuration Manager은 해당 계정에 대 한 데이터베이스 로그인을 만들고 보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 RSExecRole에 계정을 할당 하 여 데이터베이스 사용 권한을 구성 합니다. 보고서 서버 데이터베이스는 보고서 서버가 기록하는 유일한 데이터 저장소입니다. 서비스 계정에는 다른 데이터 저장소에 대한 권한이 필요하지 않습니다.  
+ 보고서 서버 서비스에 지정한 계정은 레지스트리, 보고서 서버 프로그램 파일 및 보고서 서버 데이터베이스에 액세스할 수 있는 권한이 있어야 합니다. 계정에 대한 모든 권한은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 계정을 설정할 때 자동으로 구성됩니다. 서비스 계정을 사용 하 여 보고서 서버 데이터베이스에 연결 하는 경우 Configuration Manager은 해당 계정에 대 한 데이터베이스 로그인을 만들고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보고서 서버 데이터베이스를 호스팅하는 인스턴스의 RSExecRole에 계정을 할당 하 여 데이터베이스 사용 권한을 구성 합니다. 보고서 서버 데이터베이스는 보고서 서버가 기록하는 유일한 데이터 저장소입니다. 서비스 계정에는 다른 데이터 저장소에 대한 권한이 필요하지 않습니다.  
   
  이 페이지를 열려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작한 다음 탐색 창에서 링크를 클릭합니다. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)을 참조하세요.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "71952389"
  목록에서 **네트워크 서비스**, **로컬 시스템**또는 **로컬 서비스** 를 선택합니다. **네트워크 서비스** 만 사용하는 것이 좋지만 사용할 수 있는 계정을 사용하여 해당 계정을 구성할 수 있습니다.  
   
  **다른 계정 사용**  
- Windows 사용자 계정을 지정하려면 이 옵션을 선택합니다. 로컬 Windows 사용자 계정 또는 도메인 사용자 계정을 입력할 수 있습니다. 도메인 * \< \\><사용자\>* 로 도메인 계정을 지정 합니다. 다음 형식으로 로컬 Windows 사용자 계정을 지정 합니다. * \<컴퓨터 이름>\\<사용자\>*. 기존 계정만 선택할 수 있으며 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성에 새 계정을 만들 수는 없습니다.  
+ Windows 사용자 계정을 지정하려면 이 옵션을 선택합니다. 로컬 Windows 사용자 계정 또는 도메인 사용자 계정을 입력할 수 있습니다. * \<domain> \\ 사용자 \><* 형식으로 도메인 계정을 지정 합니다. * \<computer name> \\ 사용자 \><* 형식으로 로컬 Windows 사용자 계정을 지정 합니다. 기존 계정만 선택할 수 있으며 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성에 새 계정을 만들 수는 없습니다.  
   
  계정의 최대 문자 수 제한은 20자입니다.  
   

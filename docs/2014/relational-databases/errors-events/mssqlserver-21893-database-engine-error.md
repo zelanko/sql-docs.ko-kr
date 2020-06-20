@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ab1195a-fe2a-4e06-b871-b177b6bea1fe
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6258f36990efccf83b43e8d8ac8bd4c2397477aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1de5347082ba632af7ef2685a46ed6418904183
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62914958"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034620"
 ---
 # <a name="mssqlserver_21893"></a>MSSQLSERVER_21893
     
@@ -30,7 +29,7 @@ ms.locfileid: "62914958"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|SQLErrorNum21893|  
-|메시지 텍스트|원래 게시자 '%s'의 구독자(%s)가 리디렉션된 게시자 '%s'에 원격 서버로 표시되지 않습니다. 리디렉션된 `sp_addlinkedserver` 게시자에서를 실행 하 여 이러한 구독자를 원격 서버로 추가 합니다.|  
+|메시지 텍스트|원래 게시자 '%s'의 구독자(%s)가 리디렉션된 게시자 '%s'에 원격 서버로 표시되지 않습니다. `sp_addlinkedserver`리디렉션된 게시자에서를 실행 하 여 이러한 구독자를 원격 서버로 추가 합니다.|  
   
 ## <a name="explanation"></a>설명  
  `sp_validate_redirected_publisher`는 원격 서버에 있는 게시자 데이터베이스의 구독 메타데이터 테이블을 사용하여 연관된 구독자를 식별하고 이러한 구독자에 대해 master.dbo.sysservers에 연관된 항목이 있는지 확인합니다. 이 오류는 식별된 구독자 중 하나라도 없는 경우에 반환됩니다.  

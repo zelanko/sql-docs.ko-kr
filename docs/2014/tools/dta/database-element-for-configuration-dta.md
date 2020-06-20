@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fbca62a5d32ed6b7ec30eb5d6dba6a82a2b80c64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 045671cc386f91bb9f24caaa95cd6934fc50f5b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63298349"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011548"
 ---
 # <a name="database-element-for-configuration-dta"></a>Configuration의 Database 요소(DTA)
   데이터베이스 엔진 튜닝 관리자가 가상 구성(`Configuration` 요소에 의해 지정됨)을 평가하게 하려는 데이터베이스를 지정합니다.  
@@ -52,7 +51,7 @@ ms.locfileid: "63298349"
  데이터베이스 엔진 튜닝 관리자 XML 스키마에서 이 요소의 이름은 **DatabaseTypecomplexType** 입니다. 이 `Database` 요소와 XML 입력 파일의 맨 위에서 발생하는 `Server` 요소가 루트 부모인 요소를 혼동하지 마십시오. 자세한 내용은 [Server의 Database 요소&#40;DTA&#41;](database-element-for-server-dta.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
- 이 `Database` 요소의 사용 예를 보려면 [DTA&#41;&#40;사용자 지정 구성이 포함 된 XML 입력 파일 샘플 ](xml-input-file-sample-with-user-specified-configuration-dta.md)을 참조 하세요.  
+ 이 요소의 사용 예를 `Database` 보려면 [DTA&#41;&#40;사용자 지정 구성이 포함 된 XML 입력 파일 샘플 ](xml-input-file-sample-with-user-specified-configuration-dta.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  

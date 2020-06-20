@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 418cdbb85781cd99d3febc2371ed69751d29f588
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 22faed7d9505c1ad487b5300a46a565379512091
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922106"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050163"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>메모리 내 OLTP(메모리 내 최적화)
 
@@ -66,7 +65,7 @@ ms.locfileid: "82922106"
 ## <a name="in-this-section"></a>단원 내용
  이 섹션에서는 다음과 같은 개념에 대해 설명합니다.
 
-|항목|설명|
+|항목|Description|
 |-----------|-----------------|
 |[메모리 액세스에 최적화된 테이블 사용을 위한 요구 사항](memory-optimized-tables.md)|하드웨어 및 소프트웨어 요구 사항과 메모리 최적화 테이블의 사용 지침에 대해 설명합니다.|
 |[VM 환경에서 메모리 내 OLTP 사용](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)|가상화된 환경에서 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 사용에 대해 다룹니다.|

@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 52365cbe64a50b9622ded5587f0baf2ed46cce98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d90911932b5f9bfc91368e70e66d2b227a3964f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753160"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997134"
 ---
 # <a name="getting-started-in-smo"></a>SMO 시작
-  이 항목에는 SMO (Management Objects [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) 사용을 시작 하는 방법에 대 한 정보가 포함 되어 있습니다. SMO 섹션은 개발자를 대상으로 합니다. 다음 목록을 참조하면 SMO 개체 계층 구조, SMO에서 프로그램을 작성하기 위해 준비하는 방법, 여러 다른 언어로 SMO 프로그램을 작성하는 방법을 비롯하여 일반적인 프로그래밍 작업과 특정 프로그래밍 태스크에 대한 정보를 쉽게 찾아볼 수 있습니다.  
+  이 항목에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMO (Management Objects) 사용을 시작 하는 방법에 대 한 정보가 포함 되어 있습니다. SMO 섹션은 개발자를 대상으로 합니다. 다음 목록을 참조하면 SMO 개체 계층 구조, SMO에서 프로그램을 작성하기 위해 준비하는 방법, 여러 다른 언어로 SMO 프로그램을 작성하는 방법을 비롯하여 일반적인 프로그래밍 작업과 특정 프로그래밍 태스크에 대한 정보를 쉽게 찾아볼 수 있습니다.  
   
 |||  
 |-|-|  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d739df96-2659-4383-8e10-194657632526
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 447e6d4d35fa77f71f1a7a1b90a5a782e0ccebcc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11d71e8401f6b870aaeb3f64f4145b509e3a3fe0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096617"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065388"
 ---
 # <a name="changes-to-behavior-of-trace-flags"></a>추적 플래그의 동작에 대한 변경입니다.
   한 세션에서 설정한 전역 추적 플래그가 다른 세션에 즉시 적용됩니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]의 일부 추적 플래그는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 없습니다.  
@@ -26,7 +25,7 @@ ms.locfileid: "66096617"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Description  
- 업그레이드하기 전에 추적 플래그를 모두 해제하는 것이 좋습니다. 데이터베이스 가용성 또는 복구 모드를 수정 하는 추적 플래그는이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 성공적으로 업그레이드 하지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]못하게 할 수 있습니다. 이러한 추적 플래그는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 필요하고 여전히 유효하다는 것이 확인되면 설정할 수 있습니다. 추적 플래그를 다시 설정해야 하는 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 추가 테스트를 수행해야 합니다.  
+ 업그레이드하기 전에 추적 플래그를 모두 해제하는 것이 좋습니다. 데이터베이스 가용성 또는 복구 모드를 수정 하는 추적 플래그는이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 성공적으로 업그레이드 하지 못하게 할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이러한 추적 플래그는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 필요하고 여전히 유효하다는 것이 확인되면 설정할 수 있습니다. 추적 플래그를 다시 설정해야 하는 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 추가 테스트를 수행해야 합니다.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 전역 및 세션 수준 추적 플래그를 지원합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서는 DBCC TRACEON 명령에 추가 인수 (-1)을 사용하여 추적 플래그를 로컬 또는 전역으로 지정할 수 있습니다. 이 인수를 지정하지 않으면 기본값은 로컬입니다.  
   

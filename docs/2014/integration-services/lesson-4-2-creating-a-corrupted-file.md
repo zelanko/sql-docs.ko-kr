@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f793f2cadf46d4a5431c01f5a1b1966ffad6fd55
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767385"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968203"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>2단계: 손상된 파일 만들기
   변환 오류의 구성 및 처리를 보여 주기 위해 처리 시 구성 요소의 실패를 야기하는 예제 플랫 파일을 만들어야 합니다.  
@@ -34,18 +33,18 @@ ms.locfileid: "62767385"
   
     3.  SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 파일을 클릭합니다.  
   
-2.  텍스트 편집기의 찾기 및 바꾸기 기능을 사용 하 여의 `VEB` 모든 인스턴스를 찾아로 `BAD`바꿉니다.  
+2.  텍스트 편집기의 찾기 및 바꾸기 기능을 사용 하 여의 모든 인스턴스를 찾아 `VEB` 로 바꿉니다 `BAD` .  
   
-3.  다른 예제 데이터 파일과 동일한 폴더에서 수정 된 파일을로 `Currency_BAD.txt`저장 합니다.  
+3.  다른 예제 데이터 파일과 동일한 폴더에서 수정 된 파일을로 저장 합니다 `Currency_BAD.txt` .  
   
     > [!IMPORTANT]  
-    >  `Currency_BAD.txt` 이 다른 예제 데이터 파일과 동일한 폴더에 저장 되었는지 확인 합니다.  
+    >  `Currency_BAD.txt`이 다른 예제 데이터 파일과 동일한 폴더에 저장 되었는지 확인 합니다.  
   
 4.  텍스트 편집기를 닫습니다.  
   
 ### <a name="to-verify-that-an-error-will-occur-during-run-time"></a>런타임 도중 오류가 발생하는지 확인하려면  
   
-1.  **디버그** 메뉴에서 **디버깅 시작**을 클릭 합니다.  
+1.  **디버그** 메뉴에서 **디버깅 시작**을 클릭합니다.  
   
      세 번째 데이터 흐름 반복에서 Lookup Currency Key 변환은 Currency_BAD.txt 파일을 처리하려고 하며 여기서 변환이 실패합니다. 변환 실패로 인해 전체 패키지가 실패하게 됩니다.  
   

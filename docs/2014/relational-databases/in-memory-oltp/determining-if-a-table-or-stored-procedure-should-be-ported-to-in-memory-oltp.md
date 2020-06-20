@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 358a595ef326f86db9ab81294bc3a9c88fc8ef0d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8e517cff394bc0c813e34763469f75147a0a16c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706532"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050240"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인
   의 트랜잭션 성능 수집기를 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 사용 하면 메모리 내 OLTP로 데이터베이스 응용 프로그램의 성능을 향상 시킬 수 있습니다. 트랜잭션 성능 분석 보고서에는 애플리케이션에서 메모리 내 OLTP를 사용하기 위해 얼마나 많은 작업을 수행해야 하는지도 나와 있습니다. 메모리 내 OLTP에 이식할 디스크 기반 테이블을 식별한 후 [메모리 최적화 관리자](memory-optimization-advisor.md)를 사용하여 테이블을 마이그레이션할 수 있습니다. 마찬가지로 [Native Compilation Advisor](native-compilation-advisor.md) 를 사용하여 저장 프로시저를 고유하게 컴파일된 저장 프로시저에 이식할 수 있습니다.  
@@ -93,7 +92,7 @@ ms.locfileid: "82706532"
   
 4.  **새로** 만들기를 클릭 하 여 프로필 데이터를 저장할 새 데이터베이스를 만듭니다. 데이터베이스 만들기를 완료 한 후 마법사에서 **다음** 을 클릭 합니다.  
   
-5.  마법사의 다음 단계에서 사용자와 로그인을 추가할 수 있습니다. 로그인을 MDW 인스턴스에 대한 역할 멤버 자격에 매핑할 수도 있습니다. 이 역할 멤버 자격은 로컬 인스턴스에서 데이터를 수집하는 데 필요하지 않습니다. 로컬 인스턴스에서 데이터를 수집하지 않는 경우 프로파일링할 트랜잭션을 실행할 계정에 데이터베이스 역할 멤버 자격 `mdw_admin`을 부여해도 됩니다. 완료 되 면 **다음**을 클릭 합니다.  
+5.  마법사의 다음 단계에서 사용자와 로그인을 추가할 수 있습니다. 로그인을 MDW 인스턴스에 대한 역할 멤버 자격에 매핑할 수도 있습니다. 이 역할 멤버 자격은 로컬 인스턴스에서 데이터를 수집하는 데 필요하지 않습니다. 로컬 인스턴스에서 데이터를 수집하지 않는 경우 프로파일링할 트랜잭션을 실행할 계정에 데이터베이스 역할 멤버 자격 `mdw_admin`을 부여해도 됩니다. 완료하면 **다음**을 클릭합니다.  
   
 6.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트가 실행 중인지 확인합니다.  
   

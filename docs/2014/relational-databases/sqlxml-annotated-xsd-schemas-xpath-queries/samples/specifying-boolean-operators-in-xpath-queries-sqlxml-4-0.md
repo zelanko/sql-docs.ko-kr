@@ -15,21 +15,20 @@ helpviewer_keywords:
 ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 45db8a3111173257cad45bea2961b9bb4c72bffc
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f4373229d6e612a7de401dbd94bc0da1766db45b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717790"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065692"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 부울 연산자 지정(SQLXML 4.0)
   다음 예에서는 XPath 쿼리에 부울 연산자를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 샘플 스키마에 대 한 자세한 내용은 [예제 주석 XSD schema For XPath 예제 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)를 참조 하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. OR 부울 연산자 지정  
- 이 XPath 쿼리는 **CustomerID** 특성 값이 13 또는 31 인 컨텍스트 노드의 ** \< Customer>** 요소 자식을 반환 합니다.  
+ 이 XPath 쿼리는 **\<Customer>** **CustomerID** 특성 값이 13 또는 31 인 컨텍스트 노드의 요소 자식을 반환 합니다.  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -41,7 +40,7 @@ ms.locfileid: "82717790"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- 조건자에서 `attribute` 는 축 이며 `CustomerID` 노드 테스트입니다. **CustomerID** 가 ** \< 특성>** 노드인 경우 TRUE이 고, ** \< 특성>** 노드가 축의 주 노드인지 때문입니다 `attribute` . 조건자는 ** \< Customer>** 요소를 필터링 하 고 조건자에 지정 된 조건을 만족 하는 요소만 반환 합니다.  
+ 조건자에서 `attribute` 는 축이 고 `CustomerID` 는 노드 테스트 ( **CustomerID** **\<attribute>** 해당 **\<attribute>** 노드가 축에 대 한 주 노드인지 때문에 CustomerID가 노드인 경우 TRUE `attribute` )입니다. 조건자는 요소를 필터링 **\<Customer>** 하 고 조건자에 지정 된 조건을 만족 하는 요소만 반환 합니다.  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>매핑 스키마에 대해 XPath 쿼리를 테스트하려면  
   

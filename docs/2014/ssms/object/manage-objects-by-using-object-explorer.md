@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0ffd514fcdf5479f91e31d3bb5f261bba7ab4cd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1044dfabf22f8d6b00518a74b6afd4127048cd07
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62999645"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058611"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>개체 탐색기를 사용하여 개체 관리
   개체 탐색기를 사용하여 데이터베이스, 테이블 및 저장 프로시저와 같은 개체를 관리할 수 있습니다.  

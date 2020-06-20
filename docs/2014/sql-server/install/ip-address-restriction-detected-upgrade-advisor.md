@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9a154455-c68f-4403-a3a7-b90f4d35eecb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 487ced9f103fd10a581841595111f01a5710bd15
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2028e59e91d42bfdced2d18fa6ce129dfb108302
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952079"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059235"
 ---
 # <a name="ip-address-restriction-detected-upgrade-advisor"></a>IP 주소 제한이 검색됨(업그레이드 관리자)
   업그레이드 관리자가 보고서 서버 또는 보고서 관리자 가상 디렉터리를 호스팅하는 IIS 웹 사이트에서 하나 이상의 IP 주소 제한을 검색했습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 IP 주소 제한에 대한 기본 지원을 제공하지 않습니다.  

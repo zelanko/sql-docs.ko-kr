@@ -12,20 +12,19 @@ f1_keywords:
 ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f930a2e6f3ce84c330a4b7292ebaaba3b2ab871e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c6cd168a852eca294e85de696a611b460423c5a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062217"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926554"
 ---
 # <a name="active-operations-dialog-box"></a>활성 작업 대화 상자
   **활성 작업** 대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에서 현재 실행 중인 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 작업(예: 배포, 유효성 검사 및 패키지 실행)의 상태를 볼 수 있습니다. 이 데이터는 SSISDB 카탈로그에 저장됩니다.  
   
  관련된 [!INCLUDE[tsql](../includes/tsql-md.md)] 뷰에 대한 자세한 내용은 [catalog.operations&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-views/catalog-operations-ssisdb-database), [catalog.validations&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-views/catalog-validations-ssisdb-database) 및 [catalog.executions&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-views/catalog-executions-ssisdb-database)를 참조하세요.  
   
- **수행 작업**  
+ **원하는 작업을 선택하세요.**  
   
 1.  [활성 작업 대화 상자 열기](#open_dialog)  
   
@@ -42,8 +41,8 @@ ms.locfileid: "66062217"
 ##  <a name="configure-the-options"></a><a name="options"></a>옵션 구성  
   
 ### <a name="options"></a>옵션  
- **Type**  
- 작업 유형을 지정합니다. 다음은 **형식** 필드에 사용할 수 있는 값과 transact-sql `catalog.operations` 뷰의 operations_type 열에 있는 해당 값입니다.  
+ **형식**  
+ 작업 유형을 지정합니다. 다음은 **형식** 필드에 사용할 수 있는 값과 transact-sql 뷰의 operations_type 열에 있는 해당 값입니다 `catalog.operations` .  
   
 |||  
 |-|-|  

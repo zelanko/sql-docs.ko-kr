@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d1995ca52507a3027438cac21677517059d3d219
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cd09eb091a7f488f891bc2e69d19ad039b65e065
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154835"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959621"
 ---
 # <a name="back-up-database-media-options-page"></a>데이터베이스 백업(미디어 옵션 페이지)
   **데이터베이스 백업** 대화 상자의 **미디어 옵션** 페이지를 사용하여 데이터베이스 미디어 옵션을 확인하거나 수정할 수 있습니다.  
@@ -86,7 +85,7 @@ ms.locfileid: "70154835"
  하나 이상의 오류가 발생한 다음에도 백업 작업이 계속됩니다.  
   
 ### <a name="transaction-log"></a>트랜잭션 로그  
- **트랜잭션 로그** 패널의 옵션은 트랜잭션 로그 백업의 동작을 제어합니다. 이러한 옵션은 전체 복구 모델 또는 대량 로그 복구 모델에서만 해당됩니다. **트랜잭션 로그**가 **데이터베이스 백업** 대화 상자의 [일반](../../integration-services/general-page-of-integration-services-designers-options.md) 페이지에 있는 **백업 유형** 필드에서 선택된 경우에만 이 옵션이 활성화됩니다.  
+ **트랜잭션 로그** 패널의 옵션은 트랜잭션 로그 백업의 동작을 제어합니다. 이러한 옵션은 전체 복구 모델 또는 대량 로그 복구 모델에서만 해당됩니다. **트랜잭션 로그** 가 **데이터베이스 백업** 대화 상자의 [일반](../../integration-services/general-page-of-integration-services-designers-options.md) 페이지에 있는 **백업 유형** 필드에서 선택된 경우에만 이 옵션이 활성화됩니다.  
   
 > [!NOTE]  
 >  트랜잭션 로그 백업에 대한 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](transaction-log-backups-sql-server.md)을 참조하세요.  
@@ -113,8 +112,8 @@ ms.locfileid: "70154835"
   
 ## <a name="see-also"></a>참고 항목  
  [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [트랜잭션 로그 &#40;SQL Server 백업&#41;](back-up-a-transaction-log-sql-server.md)   
- [SQL Server&#41;&#40;파일 및 파일 그룹 백업](back-up-files-and-filegroups-sql-server.md)   
+ [트랜잭션 로그 백업&#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
+ [파일 및 파일 그룹 백업&#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
  [데이터베이스가 손상된 경우 트랜잭션 로그 백업&#40;SQL Server&#41;](back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   
   

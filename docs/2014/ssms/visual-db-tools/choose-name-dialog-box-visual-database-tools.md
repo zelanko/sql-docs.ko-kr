@@ -13,16 +13,15 @@ f1_keywords:
 ms.assetid: cd6b5527-c032-473e-b954-1a549e1cdf4a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c1916c87eae6a884775ae612e42381a12586d894
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77d6bd0494baeefa7fedf41580a9b488b6197b11
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62509965"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066225"
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>이름 선택 대화 상자(Visual Database Tools)
-  이 대화 상자는 **파일** 메뉴에서 **TableName \<> 저장** , **DiagramName \<>저장 **또는 **ViewName>\<저장** 을 선택 하는 경우에 나타납니다.  
+  이 대화 상자 \<TableName**> 는 **파일** 메뉴에서 * * 저장, **저장 \<DiagramName> **또는 **저장 \<ViewName> ** 을 선택 하면 나타납니다.  
   
  **테이블/다이어그램/뷰 이름 입력**  
  테이블, 다이어그램이나 뷰의 이름을 입력할 수 있는 입력란이 제공됩니다.  

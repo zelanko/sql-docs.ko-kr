@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 371da8231138fb43e9b001808b9fb88ad09543b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfc8e5cf35a7f03f485bc3ff9e94ee70eab2cea2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63131649"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997082"
 ---
 # <a name="create-a-visual-c-smo-project-in-visual-studio-net"></a>Visual Studio .NET에서 Visual C# SMO 프로젝트 만들기
   이 섹션에서는 간단한 SMO 콘솔 애플리케이션을 빌드하는 방법을 설명합니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "63131649"
   
 2.  **파일** 메뉴에서 **새 프로젝트**를 클릭합니다. **새 프로젝트** 대화 상자가 나타납니다.  
   
-3.  **프로젝트 형식** 대화 상자에서 **Visual c #** 을 선택한 다음 **Windows**를 선택 합니다. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 설치 된 템플릿 창에서 **Windows 응용 프로그램**을 선택 합니다.  
+3.  **프로젝트 형식** 대화 상자에서 **Visual c #** 을 선택한 다음 **Windows**를 선택 합니다. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]설치 된 템플릿 창에서 **Windows 응용 프로그램**을 선택 합니다.  
   
 4.  필드 **이름** 필드에 새 응용 프로그램의 이름을 입력 합니다.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "63131649"
   
 6.  **프로젝트** 메뉴에서 **참조 추가**를 선택합니다. **참조 추가** 대화 상자가 나타납니다.  
   
-7.  **찾아보기**를 클릭 하 고 [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] 폴더에서 SMO 어셈블리를 찾은 후 다음 파일을 선택 합니다. SMO 애플리케이션을 빌드하려면 최소한 다음 파일이 있어야 합니다.  
+7.  **찾아보기**를 클릭 하 고 폴더에서 SMO 어셈블리를 찾은 [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] 후 다음 파일을 선택 합니다. SMO 애플리케이션을 빌드하려면 최소한 다음 파일이 있어야 합니다.  
   
      Microsoft.SqlServer.ConnectionInfo.dll  
   
