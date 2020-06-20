@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 08898d4c7a324a97fc0e44ef45b15dba90d42a1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85558c0a6361837b5645b9fc38ad040254265d72
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921850"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957743"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>복원 시퀀스 계획 및 수행(전체 복구 모델)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대해 일반적으로 전체 복구 모델을 사용하는 복원 시퀀스를 계획하고 수행하는 방법에 대해 설명합니다. *복원 시퀀스* 는 하나 이상의 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 문의 시퀀스입니다. 일반적으로 복원 시퀀스는 복원 중인 데이터베이스, 파일 및/또는 페이지의 내용을 초기화하고(데이터 복사 단계), 기록된 트랜잭션을 롤포워드하고(다시 실행 단계), 커밋되지 않은 트랜잭션을 롤백합니다(실행 취소 단계).  

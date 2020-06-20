@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 34e06960274c7e16ef4f6efc31f1b7ca55a7d48c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c10f39c3e44844c4ec8a6a2328c41ea2de350d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270587"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058099"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>통합 쿼리 만들기(Visual Database Tools)
   UNION 키워드를 사용하면 두 SELECT 문의 결과를 하나의 결과 테이블에 포함할 수 있습니다. 각 SELECT 문에서 반환된 모든 행이 UNION 식의 결과로 결합됩니다. 예제는 [transact-sql&#41;&#40;SELECT 예 ](/sql/t-sql/queries/select-examples-transact-sql)를 참조 하세요.  

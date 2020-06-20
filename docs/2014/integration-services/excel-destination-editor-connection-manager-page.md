@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: fc13f725-963c-488e-91e2-20627133e842
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c55b9daba7e8e1823e1ced43fc9958d4fe5892ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a969ad04f8ba5bc86167beecfab5fec85e87caa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059238"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966883"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>Excel 대상 편집기(연결 관리자 페이지)
   **Excel 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 데이터 원본 정보를 지정하고 그 결과를 미리 볼 수 있습니다. Excel 대상은 데이터를 워크시트 또는 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] Excel 통합 문서의 명명된 범위로 로드합니다.  
   
 > [!NOTE]  
->  Excel `CommandTimeout` 대상의 속성은 **excel 대상 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용 하 여 설정할 수 있습니다. 또한 특정 빠른 로드 옵션은 **고급 편집기**에서만 사용할 수 있습니다. 이러한 속성에 대한 자세한 내용은 [Excel Custom Properties](data-flow/excel-custom-properties.md)의 Excel 대상 섹션을 참조하십시오.  
+>  Excel `CommandTimeout` 대상의 속성은 **Excel 대상 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용 하 여 설정할 수 있습니다. 또한 특정 빠른 로드 옵션은 **고급 편집기**에서만 사용할 수 있습니다. 이러한 속성에 대한 자세한 내용은 [Excel Custom Properties](data-flow/excel-custom-properties.md)의 Excel 대상 섹션을 참조하십시오.  
   
  Excel 대상에 대한 자세한 내용은 [Excel Destination](data-flow/excel-destination.md)을 참조하십시오.  
   
@@ -33,13 +32,13 @@ ms.locfileid: "66059238"
  **Excel 연결 관리자**  
  목록에서 기존 Excel 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결을 만듭니다.  
   
- **신규**  
+ **새 항목**  
  **Excel 연결 관리자** 대화 상자를 사용하여 새 연결 관리자를 만듭니다.  
   
  **데이터 액세스 모드**  
  원본에서 데이터를 선택하는 방법을 지정합니다.  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |테이블 또는 뷰|데이터를 워크시트 또는 Excel 데이터 원본의 명명된 범위로 로드합니다.|  
 |테이블 이름 또는 뷰 이름 변수|변수에 워크시트 또는 범위 이름을 지정합니다.<br /><br /> **관련 정보**: [패키지에서 변수 사용](../../2014/integration-services/use-variables-in-packages.md)|  
@@ -48,7 +47,7 @@ ms.locfileid: "66059238"
  **Excel 시트의 이름**  
  드롭다운 목록에서 Excel 대상을 선택합니다. 목록이 비어 있는 경우 **새로 만들기**를 클릭합니다.  
   
- **신규**  
+ **새 항목**  
  **새로 만들기** 를 클릭하여 **테이블 만들기** 대화 상자를 시작합니다. **확인**을 클릭하면 대화 상자에서 **Excel 연결 관리자** 가 가리키는 Excel 파일이 만들어집니다.  
   
  **기존 데이터 보기**  

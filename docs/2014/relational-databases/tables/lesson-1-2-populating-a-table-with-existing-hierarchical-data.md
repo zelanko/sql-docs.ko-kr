@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7b2614d090bce0ecf0c61db5c9a5222ec6b10951
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 966548b11ad4697abc06de5c5c239a511f80b7af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110172"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068093"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>기존 계층적 데이터로 테이블 채우기
    이 태스크에서는 새 테이블을 만들고 이를 **EmployeeDemo** 테이블의 데이터로 채웁니다. 이 태스크의 단계는 다음과 같습니다.  
@@ -113,7 +112,7 @@ ms.locfileid: "66110172"
   
      `10        4         2`  
   
-3.  **Neworg** 테이블을 채웁니다. GetRoot 및 ToString 메서드를 사용 하 여 **Num** 값을 `hierarchyid` 형식에 연결한 다음 **OrgNode** 열을 결과 계층 값으로 업데이트 합니다.  
+3.  **Neworg** 테이블을 채웁니다. GetRoot 및 ToString 메서드를 사용 하 여 **Num** 값을 형식에 `hierarchyid` 연결한 다음 **OrgNode** 열을 결과 계층 값으로 업데이트 합니다.  
   
     ```  
     WITH paths(path, EmployeeID)   

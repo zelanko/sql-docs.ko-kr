@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0bf7e8ff-1416-4923-9c4c-49341e208c62
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 541d6d27dc5dbc31dad98840e7ed6654f48a8dfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6af7c52741b85a2733b93c2b1ed8c03a14dd6343
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175405"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928223"
 ---
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>Azure SQL 데이터베이스를 사용한 투명한 데이터 암호화
   [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 투명한 데이터 암호화(미리 보기)는 애플리케이션을 변경할 필요 없이 사용하지 않는 데이터베이스, 연결된 백업 및 트랜잭션 로그 파일에 대한 실시간 암호화 및 암호 해독을 수행하여 악의적인 활동의 위협으로부터 보호하도록 도와줍니다.
@@ -50,7 +49,7 @@ ms.locfileid: "78175405"
 
 ##  <a name="sign-up-for-the-preview-of-tde-and-enable-tde-on-a-database"></a><a name="Preview"></a>TDE 미리 보기에 등록 하 고 데이터베이스에서 TDE를 사용 하도록 설정 합니다.
 
-1.  에서 [https://portal.azure.com](https://portal.azure.com) azure Portal을 방문 하 고 azure 관리자 또는 참가자 계정으로 로그인 합니다.
+1.  에서 Azure Portal을 방문 [https://portal.azure.com](https://portal.azure.com) 하 고 Azure 관리자 또는 참가자 계정으로 로그인 합니다.
 
 2.  왼쪽 배너에서 **찾아보기**를 클릭한 다음 **SQL 데이터베이스**를 클릭합니다.
 
@@ -68,9 +67,9 @@ ms.locfileid: "78175405"
 
      ![SQLDB_TDE_TermsNewUI](../../2014/database-engine/media/sqldb-tde-termsnewui.png "SQLDB_TDE_TermsNewUI")
 
-     [!INCLUDE[ssSDS](../includes/sssds-md.md)] VIEW DATABASE STATE [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 권한이 있는 데이터베이스 사용자로 **와 같은 쿼리 도구를 사용하여** 에 연결하는 방법으로도 암호화 진행률을 모니터링할 수 있습니다. Dm_database_encryption_keys 뷰의 `encryption_state` 열을 쿼리 [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) 합니다.
+     [!INCLUDE[ssSDS](../includes/sssds-md.md)] VIEW DATABASE STATE [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 권한이 있는 데이터베이스 사용자로 **와 같은 쿼리 도구를 사용하여** 에 연결하는 방법으로도 암호화 진행률을 모니터링할 수 있습니다. `encryption_state` [Dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) 뷰의 열을 쿼리 합니다.
 
-##  <a name="enabling-tde-on-sssds-by-using-transact-sql"></a><a name="Encrypt"></a>Transact-sql을 사용 하 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 여에서 tde 사용 설정
+##  <a name="enabling-tde-on-sssds-by-using-transact-sql"></a><a name="Encrypt"></a>[!INCLUDE[ssSDS](../includes/sssds-md.md)]Transact-sql을 사용 하 여에서 TDE 사용 설정
  다음 단계에서는 미리 보기에 이미 등록된 상태인 것으로 가정합니다.
 
 ###  <a name="TsqlProcedure"></a>
@@ -90,7 +89,7 @@ ms.locfileid: "78175405"
     GO
     ```
 
-3.  에서 [!INCLUDE[ssSDS](../includes/sssds-md.md)]암호화 진행률을 모니터링 하기 위해 **view database STATE** 권한이 있는 데이터베이스 사용자는 `encryption_state` [dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) 뷰의 열을 쿼리할 수 있습니다.
+3.  에서 암호화 진행률을 모니터링 하기 위해 [!INCLUDE[ssSDS](../includes/sssds-md.md)] **VIEW database STATE** 권한이 있는 데이터베이스 사용자는 `encryption_state` [dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) 뷰의 열을 쿼리할 수 있습니다.
 
 ## <a name="enabling-tde-on-sql-database-by-using-powershell"></a>PowerShell을 사용하여 SQL Database에서 TDE 사용 설정
  Azure PowerShell을 사용하면 다음 명령을 실행하여 TDE를 설정하거나 해제할 수 있습니다. 명령을 실행하기 전에 계정을 PS 창에 연결해야 합니다. 다음 단계에서는 미리 보기에 이미 등록된 상태인 것으로 가정합니다. PowerShell에 대한 자세한 내용은 [Azure PowerShell을 설치 및 구성하는 방법](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)을 참조하세요.
@@ -116,7 +115,7 @@ ms.locfileid: "78175405"
 
 #### <a name="to-disable-tde-by-using-the-azure-portal"></a>Azure 포털을 사용하여 TDE를 사용하지 않도록 설정하려면
 
-1.  에서 [https://portal.azure.com](https://portal.azure.com) azure Portal을 방문 하 고 azure 관리자 또는 참가자 계정으로 로그인 합니다.
+1.  에서 Azure Portal을 방문 [https://portal.azure.com](https://portal.azure.com) 하 고 Azure 관리자 또는 참가자 계정으로 로그인 합니다.
 
 2.  왼쪽 배너에서 **찾아보기**를 클릭한 다음 **SQL 데이터베이스**를 클릭합니다.
 
@@ -128,7 +127,7 @@ ms.locfileid: "78175405"
 
 6.  **투명한 데이터 암호화 미리 보기** 블레이드에서 **데이터 암호화** 단추를 **끔**으로 이동한 다음 페이지 상단의 **저장** 을 클릭하여 설정을 적용합니다. **암호화 상태** 는 투명한 데이터 암호 해독의 진행률과 비슷합니다.
 
-     [!INCLUDE[ssSDS](../includes/sssds-md.md)] VIEW DATABASE STATE [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 권한이 있는 데이터베이스 사용자로 **와 같은 쿼리 도구를 사용하여** 에 연결하는 방법으로도 암호 해독의 진행률을 모니터링할 수 있습니다. Dm_database_encryption_keys 뷰의 `encryption_state` 열을 쿼리 [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)합니다.
+     [!INCLUDE[ssSDS](../includes/sssds-md.md)] VIEW DATABASE STATE [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 권한이 있는 데이터베이스 사용자로 **와 같은 쿼리 도구를 사용하여** 에 연결하는 방법으로도 암호 해독의 진행률을 모니터링할 수 있습니다. `encryption_state` [Dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)뷰의 열을 쿼리 합니다.
 
 #### <a name="to-disable-tde-by-using-transact-sql"></a>Transact-SQL을 사용하여 TDE를 사용하지 않도록 설정하려면
 
@@ -142,7 +141,7 @@ ms.locfileid: "78175405"
     GO
     ```
 
-3.  에서 [!INCLUDE[ssSDS](../includes/sssds-md.md)]암호화 진행률을 모니터링 하기 위해 **view database STATE** 권한이 있는 데이터베이스 사용자는 `encryption_state` [dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) 뷰의 열을 쿼리할 수 있습니다.
+3.  에서 암호화 진행률을 모니터링 하기 위해 [!INCLUDE[ssSDS](../includes/sssds-md.md)] **VIEW database STATE** 권한이 있는 데이터베이스 사용자는 `encryption_state` [dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) 뷰의 열을 쿼리할 수 있습니다.
 
 ##  <a name="working-with-tde-protected-databases-on-sssds"></a><a name="Working"></a>에서 TDE로 보호 되는 데이터베이스 작업[!INCLUDE[ssSDS](../includes/sssds-md.md)]
  Azure 내에서의 작업을 위해 데이터베이스 암호를 해독할 필요는 없습니다. 원본 데이터베이스 또는 주 데이터베이스의 TDE 설정은 대상에서 투명하게 상속됩니다. 여기에는 다음과 관련된 작업이 포함됩니다.

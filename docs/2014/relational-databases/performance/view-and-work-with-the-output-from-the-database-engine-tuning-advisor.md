@@ -25,16 +25,15 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4e767348fb5bc01bcdb2aaaa3fad1dd4f461eb6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dd2e8af6e1768ef1872f2888d2a74850edbde23c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811022"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069056"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자의 출력 보기 및 작업
-  데이터베이스 엔진 튜닝 관리자는 데이터베이스를 튜닝할 때 요약, 권장 구성, 보고서 및 튜닝 로그를 만듭니다. 튜닝 로그 출력을 사용하여 데이터베이스 엔진 튜닝 관리자 튜닝 세션의 문제를 해결할 수 있습니다. 요약, 권장 사항 및 보고서를 사용 하 여 튜닝 권장 구성을 구현할 것인지 여부를 결정 하 고 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 필요한 쿼리 성능이 향상 될 때까지 튜닝을 계속 수행할 수 있습니다. 데이터베이스 튜닝 관리자를 사용하여 작업을 만들고 데이터베이스를 튜닝하는 방법은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](database-engine-tuning-advisor.md)을 참조하세요.  
+  데이터베이스 엔진 튜닝 관리자는 데이터베이스를 튜닝할 때 요약, 권장 구성, 보고서 및 튜닝 로그를 만듭니다. 튜닝 로그 출력을 사용하여 데이터베이스 엔진 튜닝 관리자 튜닝 세션의 문제를 해결할 수 있습니다. 요약, 권장 사항 및 보고서를 사용 하 여 튜닝 권장 구성을 구현할 것인지 여부를 결정 하 고 설치에 필요한 쿼리 성능이 향상 될 때까지 튜닝을 계속 수행할 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 데이터베이스 튜닝 관리자를 사용하여 작업을 만들고 데이터베이스를 튜닝하는 방법은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](database-engine-tuning-advisor.md)을 참조하세요.  
   
 ##  <a name="view-tuning-output"></a><a name="View"></a> 튜닝 출력 보기  
  다음 프로시저에서는 데이터베이스 엔진 튜닝 관리자 GUI로 튜닝 권장 구성, 요약, 보고서 및 튜닝 로그를 보는 방법에 대해 설명합니다. 사용자 인터페이스 옵션에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 [사용자 인터페이스 설명](#UI) 을 참조하세요.  
@@ -163,17 +162,17 @@ ms.locfileid: "68811022"
   
 2.  [사용자 정의 구성이 포함된 XML 입력 파일 샘플&#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)을 복사하여 XML 편집기 또는 텍스트 편집기에 붙여넣습니다. 이 예제를 사용하여 튜닝 세션용 XML 입력 파일을 만듭니다. 이 태스크를 수행하는 방법은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](database-engine-tuning-advisor.md)의 "XML 입력 파일 만들기" 섹션을 참조하세요.  
   
-3.  예제 XML 입력 파일에서 `TuningOptions` 및 `Configuration` 요소를 편집합니다. `TuningOptions` 요소에서 데이터베이스 엔진 튜닝 관리자가 튜닝 세션 중 고려할 물리적 디자인 구조를 지정합니다. `Configuration` 요소에서 데이터베이스 엔진 튜닝 관리자가 분석할 물리적 데이터베이스 디자인 구조의 가상 구성과 일치하는 물리적 디자인 구조를 지정합니다. 및 부모 요소에 사용할 수 있는 특성 및 자식 요소에 대 한 자세한 내용은 [XML 입력 파일 참조 &#40;데이터베이스 엔진 튜닝 관리자&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)를 참조 하세요. `Configuration` `TuningOptions`  
+3.  예제 XML 입력 파일에서 `TuningOptions` 및 `Configuration` 요소를 편집합니다. `TuningOptions` 요소에서 데이터베이스 엔진 튜닝 관리자가 튜닝 세션 중 고려할 물리적 디자인 구조를 지정합니다. `Configuration` 요소에서 데이터베이스 엔진 튜닝 관리자가 분석할 물리적 데이터베이스 디자인 구조의 가상 구성과 일치하는 물리적 디자인 구조를 지정합니다. 및 부모 요소에 사용할 수 있는 특성 및 자식 요소에 대 한 자세한 내용은 `TuningOptions` `Configuration` [XML 입력 파일 참조 &#40;데이터베이스 엔진 튜닝 관리자&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)를 참조 하세요.  
   
 4.  입력 파일을 **.xml** 확장명으로 저장합니다.  
   
-5.  데이터베이스 엔진 튜닝 관리자 XML 스키마에 대해 4단계에서 저장한 XML 입력 파일의 유효성을 검사합니다. 이 스키마는를 설치할 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]때 다음 위치에 설치 됩니다.  
+5.  데이터베이스 엔진 튜닝 관리자 XML 스키마에 대해 4단계에서 저장한 XML 입력 파일의 유효성을 검사합니다. 이 스키마는를 설치할 때 다음 위치에 설치 됩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
     ```  
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     데이터베이스 엔진 튜닝 관리자 XML 스키마는에서 [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta)온라인으로도 제공 됩니다.  
+     데이터베이스 엔진 튜닝 관리자 XML 스키마는에서 온라인으로도 제공 됩니다 [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta) .  
   
 6.  작업 및 XML 입력 파일을 만든 후에는 분석을 위해 **dta** 명령줄 유틸리티에 이 입력 파일을 전송할 수 있습니다. **-ox** 유틸리티 인수에 XML 출력 파일 이름을 지정했는지 확인하세요. 이렇게 하면 `Configuration` 요소에 지정된 권장 구성으로 XML 출력 파일이 생성됩니다. 이 출력에 따른 다른 가상 구성을 확인하기 위해 데이터베이스 엔진 튜닝 관리자를 다시 실행하려면 출력 파일에서 `Configuration` 요소 내용을 복사하여 원본 또는 새 XML 입력 파일에 붙여 넣습니다. **dta** 유틸리티에서 XML 입력 파일을 사용하는 방법에 대한 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](database-engine-tuning-advisor.md)의 "dta 유틸리티를 사용하여 데이터베이스 튜닝" 섹션을 참조하세요.  
   
@@ -308,10 +307,10 @@ ms.locfileid: "68811022"
  **나중에 적용하도록 예약**  
  권장 구성에 대한 스크립트를 생성하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업으로 동작을 저장합니다.  
   
- **Date**  
+ **날짜**  
  권장 구성을 적용하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 실행할 날짜를 지정합니다.  
   
- **런타임**  
+ **Time**  
  권장 구성을 적용하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 실행할 시간을 지정합니다.  
   
 ### <a name="reports-tab-options"></a>보고서 탭 옵션  
@@ -320,10 +319,10 @@ ms.locfileid: "68811022"
  **튜닝 요약**  
  데이터베이스 엔진 튜닝 관리자의 권장 구성을 요약하여 표시합니다.  
   
- **Date**  
+ **날짜**  
  데이터베이스 엔진 튜닝 관리자가 보고서를 만든 날짜입니다.  
   
- **런타임**  
+ **Time**  
  데이터베이스 엔진 튜닝 관리자가 보고서를 만든 시간입니다.  
   
  **Server**  
@@ -338,7 +337,7 @@ ms.locfileid: "68811022"
  **작업 테이블**  
  작업이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블인 경우 나타납니다.  
   
- **작업**  
+ **워크로드**  
  작업을 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기에서 가져온 경우 나타납니다.  
   
  **최대 튜닝 시간**  
@@ -387,7 +386,7 @@ ms.locfileid: "68811022"
  선택한 보고서에 대한 자세한 정보를 볼 수 있습니다. 표의 열은 보고서마다 다릅니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 엔진 튜닝 관리자를 시작 하 고 사용 합니다.](database-engine-tuning-advisor.md)   
+ [데이터베이스 엔진 튜닝 관리자 시작 및 사용](database-engine-tuning-advisor.md)   
  [dta 유틸리티](../../tools/dta/dta-utility.md)  
   
   
