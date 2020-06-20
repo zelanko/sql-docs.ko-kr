@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9c0415a8-b780-40dd-a6dd-6ee0e30a24cb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 580641db4007f5a7e414f641a8a0495030405b38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bff0c172301b1c11a500258e67f4e8f5c69bd3ae
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066232"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938464"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>도구 모음(특성 관계 디자이너 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   차원 디자이너의 **특성 관계** 탭에서 도구 모음을 사용하여 다음 절차를 수행하십시오.  
@@ -38,7 +37,7 @@ ms.locfileid: "66066232"
  **비즈니스 인텔리전스 추가**  
  **비즈니스 인텔리전스 마법사** 를 열고 비즈니스 인텔리전스 기능을 추가합니다. 자세한 내용은 [비즈니스 인텔리전스 마법사를 사용하여 차원 향상](use-the-business-intelligence-wizard-to-enhance-dimensions.md)을 참조하세요.  
   
- **프로세스**  
+ **Process**  
  개체를 처리합니다.  
   
  **새 특성 관계**  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 10fcf850a770296a81c99bc9b8168857b443df41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a0f52b9bd12a91d546e33787853dd8883d77b48
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894787"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968453"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>스크립트 태스크를 사용한 Excel 파일 작업
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 파일 형식으로 스프레드시트에 저장된 데이터를 작업하기 위한 Excel 연결 관리자, Excel 원본 및 Excel 대상을 제공합니다. 이 항목에서는 스크립트 태스크를 사용하여 사용 가능한 Excel 데이터베이스(통합 문서 파일) 및 테이블(워크시트 및 명명된 범위)에 대한 정보를 가져오는 기술을 설명합니다. 이러한 예제는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB 공급자가 지원하는 다른 파일 기반 데이터 원본에도 사용할 수 있도록 쉽게 수정할 수 있습니다.  
@@ -79,23 +78,23 @@ ms.locfileid: "62894787"
   
 #### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
   
-1.  패키지에 새 스크립트 태스크를 추가 하 고 이름을로 `ExcelFileExists`변경 합니다.  
+1.  패키지에 새 스크립트 태스크를 추가 하 고 이름을로 변경 `ExcelFileExists` 합니다.  
   
 2.  **스크립트 태스크 편집기**의 **스크립트** 탭에서 **ReadOnlyVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
-    -   `ExcelFile`을(를) 입력합니다.  
+    -   `ExcelFile`.  
   
          또는  
   
-    -   속성 필드 옆의 줄임표 (**...**) 단추를 클릭 하 고 **변수 선택** 대화 상자에서 `ExcelFile` 변수를 선택 합니다.  
+    -   속성 필드 옆의 줄임표 (**...**) 단추를 클릭 하 고 **변수 선택** 대화 상자에서 변수를 선택 `ExcelFile` 합니다.  
   
 3.  **ReadWriteVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
-    -   `ExcelFileExists`을(를) 입력합니다.  
+    -   `ExcelFileExists`.  
   
          또는  
   
-    -   속성 필드 옆의 줄임표 (**...**) 단추를 클릭 하 고 **변수 선택** 대화 상자에서 `ExcelFileExists` 변수를 선택 합니다.  
+    -   속성 필드 옆의 줄임표 (**...**) 단추를 클릭 하 고 **변수 선택** 대화 상자에서 변수를 선택 `ExcelFileExists` 합니다.  
   
 4.  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
   
@@ -149,23 +148,23 @@ public class ScriptMain
   
 #### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
   
-1.  패키지에 새 스크립트 태스크를 추가 하 고 이름을로 `ExcelTableExists`변경 합니다.  
+1.  패키지에 새 스크립트 태스크를 추가 하 고 이름을로 변경 `ExcelTableExists` 합니다.  
   
 2.  **스크립트 태스크 편집기**의 **스크립트** 탭에서 **ReadOnlyVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
-    -   쉼표로 `ExcelTable` 구분 `ExcelFile` 하 여 입력`.`  
+    -   `ExcelTable` `ExcelFile` 쉼표로 구분 하 여 입력`.`  
   
          또는  
   
-    -   속성 필드 옆의 줄임표 (**...**) 단추를 클릭 하 고 **변수 선택** 대화 상자에서 `ExcelTable` 및 `ExcelFile` 변수를 선택 합니다.  
+    -   속성 필드 옆의 줄임표 (**...**) 단추를 클릭 하 고 **변수 선택** 대화 상자에서 `ExcelTable` 및 변수를 선택 `ExcelFile` 합니다.  
   
 3.  **ReadWriteVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
-    -   `ExcelTableExists`을(를) 입력합니다.  
+    -   `ExcelTableExists`.  
   
          또는  
   
-    -   속성 필드 옆의 줄임표 (**...**) 단추를 클릭 하 고 **변수 선택** 대화 상자에서 `ExcelTableExists` 변수를 선택 합니다.  
+    -   속성 필드 옆의 줄임표 (**...**) 단추를 클릭 하 고 **변수 선택** 대화 상자에서 변수를 선택 `ExcelTableExists` 합니다.  
   
 4.  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
   
@@ -268,7 +267,7 @@ public class ScriptMain
   
 3.  **ReadWriteVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
-    -   `ExcelFiles`을(를) 입력합니다.  
+    -   `ExcelFiles`.  
   
          또는  
   
@@ -335,7 +334,7 @@ public class ScriptMain
   
 2.  **스크립트 태스크 편집기**를 열고 **스크립트** 탭에서 **ReadOnlyVariables**를 클릭한 후 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
-    -   `ExcelFile`을(를) 입력합니다.  
+    -   `ExcelFile`.  
   
          또는  
   
@@ -343,7 +342,7 @@ public class ScriptMain
   
 3.  **ReadWriteVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
-    -   `ExcelTables`을(를) 입력합니다.  
+    -   `ExcelTables`.  
   
          또는  
   

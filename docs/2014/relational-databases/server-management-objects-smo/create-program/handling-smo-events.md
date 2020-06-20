@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d0d309103880a369a88952e19b252fc15693fdd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcca4bfbf68bb74b8d0c61c0f434e1b0958d58da
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191924"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063128"
 ---
 # <a name="handling-smo-events"></a>SMO 이벤트 처리
   이벤트 처리기 및 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 사용하여 구독할 수 있는 서버 이벤트 유형이 있습니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "63191924"
   
  이벤트를 처리하려면 이벤트 처리기 클래스를 작성해야 합니다. 이벤트 처리기 클래스는 여러 개의 이벤트 처리기 함수를 포함할 수 있고, 이벤트를 처리하려면 이 클래스를 설치해야 합니다. 이벤트 처리기 함수는 이벤트에 대 한 정보를 보고 하는 데 사용할 수 있는 이벤트에 대 한 정보를 *ServerEventNotificatificationArgs* 매개 변수에서 받습니다.  
   
- 처리할 수 있는 데이터베이스 및 서버 이벤트의 유형은 <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> 클래스 및 <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>클래스에 나열 됩니다.  
+ 처리할 수 있는 데이터베이스 및 서버 이벤트의 유형은 클래스 및 클래스에 나열 됩니다 <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet> .  
   
 ## <a name="example"></a>예제  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

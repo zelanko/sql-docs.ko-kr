@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a218855202eec9109718d5090acf16e80da42b6a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c65fe8a302afd15bc406e0785407865c928797fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284926"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938524"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>테이블 형식 모델의 DAX 이해(SSAS 테이블 형식)
   DAX(Data Analysis Expressions)는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Microsoft Excel 통합 문서 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델 프로젝트에서 사용자 지정 계산을 만드는 데 사용되는 수식 언어입니다. DAX 수식에는 테이블 및 열의 데이터에 대해 고급 계산을 수행하기 위한 함수, 연산자 및 값이 포함됩니다.  
@@ -70,7 +69,7 @@ ms.locfileid: "67284926"
   
  자세한 내용은 [계산 열&#40;SSAS 테이블 형식&#41;](ssas-calculated-columns.md)에서 작성된 테이블 형식 모델 프로젝트에 대해 설명합니다.  
   
-### <a name="measures"></a>측정값 그룹  
+### <a name="measures"></a>측정값  
  측정값은 컨텍스트에 따라 결과가 변경되는 동적 수식입니다. 측정값은 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서, Excel 피벗 테이블 또는 피벗 차트와 같이 여러 특성을 사용한 모델 데이터의 결합과 필터링을 지원하는 보고 형식에서 사용됩니다. 테이블 형식 모델 프로젝트에서 측정값은 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 모델 디자이너에서 측정값 표(및 수식 입력줄)를 사용하여 모델 작성자가 정의합니다.  
   
  측정값의 수식에서는 COUNT 또는 SUM과 같은 자동 합계 기능을 사용하여 자동으로 만든 표준 집계 함수를 사용할 수도 있고 DAX를 사용하여 고유한 수식을 정의할 수도 있습니다. 수식 입력줄에서 측정값에 대한 수식을 정의하는 경우 도구 설명 기능에 총 현재 컨텍스트에 대한 결과의 미리 보기가 표시되지만 결과가 어느 곳에도 즉시 출력되지는 않습니다. 기타 측정값 정보도 **속성** 창에 표시됩니다.  
@@ -97,14 +96,14 @@ ms.locfileid: "67284926"
   
  테이블 형식 모델 및 DAX는 다음과 같은 데이터 형식을 지원합니다.  
   
-|모델의 데이터 형식|DAX의 데이터 형식|설명|  
+|모델의 데이터 형식|DAX의 데이터 형식|Description|  
 |------------------------|----------------------|-----------------|  
 |정수|64비트(8바이트) 정수 값 <sup>1, 2</sup>|소수 자릿수가 없는 숫자입니다. 정수는 양수나 음수가 될 수 있지만 -9,223,372,036,854,775,808(-2^63)부터 9,223,372,036,854,775,807(2^63-1) 사이의 정수여야 합니다.|  
 |10진수|64비트(8바이트) 실수 <sup>1, 2</sup>|실수는 소수 자리를 가질 수 있는 수입니다. 실수는 광범위한 값을 포함합니다.<br /><br /> -1.79E +308에서 -2.23E -308 사이의 음수 값<br /><br /> 0<br /><br /> 2.23E -308에서 1.79E + 308 사이의 양수 값<br /><br /> 하지만 유효 숫자 수는 열일곱 자릿수로 제한됩니다.|  
-|부울|부울|True 또는 False 값입니다.|  
+|Boolean|Boolean|True 또는 False 값입니다.|  
 |텍스트|String|유니코드 문자 데이터 문자열입니다. 텍스트 형식으로 표시된 문자열, 숫자 또는 날짜가 될 수 있습니다.|  
-|날짜|날짜/시간|허용되는 날짜-시간 표현의 날짜 및 시간<br /><br /> 유효한 날짜는 1900년 3월 1일 이후의 모든 날짜입니다.|  
-|Currency|Currency|통화 데이터 형식에는 -922,337,203,685,477.5808부터 922,337,203,685,477.5807 사이의 소수 자릿수가 고정된 네 자릿수를 사용할 수 있습니다.|  
+|Date|날짜/시간|허용되는 날짜-시간 표현의 날짜 및 시간<br /><br /> 유효한 날짜는 1900년 3월 1일 이후의 모든 날짜입니다.|  
+|통화|통화|통화 데이터 형식에는 -922,337,203,685,477.5808부터 922,337,203,685,477.5807 사이의 소수 자릿수가 고정된 네 자릿수를 사용할 수 있습니다.|  
 |해당 없음|비어 있음|공백은 SQL null을 나타내거나 대체하는 DAX의 데이터 형식입니다. BLANK 함수를 사용하여 공백을 만들고 논리 함수 ISBLANK를 사용하여 공백을 테스트할 수 있습니다.|  
   
  테이블 형식 모델에는 많은 DAX 함수에 입력 또는 출력으로 사용되는 테이블 데이터 형식도 포함되어 있습니다. 예를 들어 FILTER 함수는 테이블을 입력으로 사용하여 필터 조건을 충족하는 행만 포함하는 다른 테이블을 출력합니다. 집계 함수와 테이블 함수를 결합하면 동적으로 정의된 데이터 집합을 대상으로 복잡한 계산을 수행할 수 있습니다.  
@@ -113,7 +112,7 @@ ms.locfileid: "67284926"
   
  테이블 형식 모델의 데이터 형식 및 DAX의 명시적/암시적 데이터 형식 변환에 대한 자세한 내용은 [지원되는 데이터 형식&#40;SSAS 테이블 형식&#41;](data-types-supported-ssas-tabular.md)을 참조하세요.  
   
-##  <a name="dax-operators"></a><a name="bkmk_DAX_opertors"></a> DAX 연산자  
+##  <a name="dax-operators"></a><a name="bkmk_DAX_opertors"></a>DAX 연산자  
  DAX 언어는 수식에서 다음과 같은 네 가지 유형의 계산 연산자를 사용합니다.  
   
 -   값을 비교하고 논리적 TRUE\FALSE 값을 반환하는 비교 연산자  
@@ -136,7 +135,7 @@ ms.locfileid: "67284926"
   
 |||  
 |-|-|  
-|수식|설명|  
+|Formula|Description|  
 |`=TODAY()`|열의 모든 행에 오늘 날짜를 삽입합니다.|  
 |`=3`|열의 모든 행에 값 3을 삽입합니다.|  
 |`=[Column1] + [Column2]`|[Column1]과 [Column2]의 같은 행에 값을 추가하고 결과를 같은 행의 계산 열에 넣습니다.|  
@@ -170,7 +169,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  이 수식에는 다음과 같은 요소가 포함되어 있습니다.  
   
-|수식 요소|설명|  
+|수식 요소|Description|  
 |---------------------|-----------------|  
 |`Days in Current Quarter:=`|측정값 이름입니다.|  
 |`=`|등호(=)가 수식을 시작합니다.|  
@@ -227,7 +226,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  정보 함수는 인수로 제공되는 셀 또는 행을 살펴보고 값이 필요한 형식과 일치하는지 여부를 알려 줍니다. 예를 들어 ISERROR 함수는 참조하는 값에 오류가 포함되어 있는 경우 TRUE를 반환합니다. 자세한 내용은 [DAX&#41;&#40;정보 함수 ](/dax/information-functions-dax)를 참조 하세요.  
   
 ### <a name="logical-functions"></a>논리 함수  
- 논리 함수는 식에 대해 실행되어 식의 값에 대한 정보를 반환합니다. 예를 들어 TRUE 함수를 사용하면 계산 중인 식에서 TRUE 값을 반환하는지 여부를 알 수 있습니다. 자세한 내용은 [&#40;DAX&#41;논리 함수 ](/dax/logical-functions-dax)를 참조 하세요.  
+ 논리 함수는 식에 대해 실행되어 식의 값에 대한 정보를 반환합니다. 예를 들어 TRUE 함수를 사용하면 평가 중인 식이 TRUE 값을 반환하는지 여부를 알 수 있습니다. 자세한 내용은 [&#40;DAX&#41;논리 함수 ](/dax/logical-functions-dax)를 참조 하세요.  
   
 ### <a name="mathematical-and-trigonometric-functions"></a>수치 연산 및 삼각 함수  
  DAX의 수치 연산 함수는 Excel 수치 연산 및 삼각 함수와 매우 비슷합니다. DAX 함수에서 사용하는 숫자 데이터 형식에는 사소한 몇 가지 차이점이 있습니다. 자세한 내용은 [수학 및 삼각 함수 &#40;DAX&#41;](/dax/math-and-trig-functions-dax)를 참조 하세요.  
@@ -239,7 +238,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  DAX의 텍스트 함수는 Excel의 텍스트 함수와 매우 비슷합니다. 문자열의 일부를 반환하거나, 문자열 내의 텍스트를 검색하거나, 문자열 값을 연결할 수 있습니다. DAX에서는 날짜, 시간 및 숫자의 형식을 제어하기 위한 함수도 제공합니다. 자세한 내용은 [DAX&#41;&#40;텍스트 함수 ](/dax/text-functions-dax)를 참조 하세요.  
   
 ### <a name="time-intelligence-functions"></a>시간 인텔리전스 함수  
- DAX에 제공되는 시간 인텔리전스 함수를 사용하면 달력과 날짜에 대한 기본 제공 정보를 사용하는 계산을 만들 수 있습니다. 시간 및 날짜 범위를 집계 또는 계산과 함께 사용하면 비교 가능한 기간에서 판매량, 재고 등에 대한 의미 있는 비교 자료를 작성할 수 있습니다. 자세한 내용은 [시간 인텔리전스 함수 &#40;DAX&#41;](/dax/time-intelligence-functions-dax)를 참조 하세요.  
+ DAX에 제공되는 시간 인텔리전스 함수를 사용하면 달력과 날짜에 대한 기본 제공 정보를 사용하는 계산을 만들 수 있습니다. 집계 또는 계산과 함께 시간 및 날짜 범위를 사용하여 판매, 재고 등에 대해 의미 있는 기간별 비교를 빌드할 수 있습니다. 자세한 내용은 [시간 인텔리전스 함수 &#40;DAX&#41;](/dax/time-intelligence-functions-dax)를 참조 하세요.  
   
 ###  <a name="table-valued-functions"></a><a name="bkmk_TableFunc"></a>테이블 반환 함수  
  테이블을 출력하거나, 테이블을 입력으로 받아들이거나, 둘 다 수행하는 DAX 함수가 있습니다. 테이블에 열이 하나만 있을 수 있기 때문에 테이블 반환 함수는 단일 열도 입력으로 받아들입니다. DAX 수식을 최대한 활용하려면 이러한 테이블 반환 함수를 사용하는 방법을 이해하는 것이 중요합니다. DAX에는 다음과 같은 유형의 테이블 반환 함수가 있습니다.  

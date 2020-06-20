@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2a926405f2c35ff62b3589003ebe015fe920b743
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 157f45cd6d6fd7f201998cb3798440573654be58
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176423"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968993"
 ---
 # <a name="use-property-expressions-in-packages"></a>패키지에서 속성 식 사용
   속성 식은 런타임에 동적으로 속성을 업데이트하기 위해 속성에 할당한 식입니다. 예를 들어 속성 식을 사용하면 메일 보내기 태스크에서 사용하는 받는 사람 줄에 변수에 저장된 전자 메일 주소를 삽입할 수 있습니다.
@@ -114,7 +113,7 @@ ms.locfileid: "78176423"
  다음 예제 식에서는 속성 식에서 시스템 변수, 연산자, 함수 및 문자열 리터럴을 사용하는 방법을 보여 줍니다.
 
 ### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>패키지의 LoggingMode 속성에 대한 속성 식
- 다음 속성 식을 사용하여 패키지의 LoggingMode 속성을 설정할 수 있습니다. 이 식은 DAY 및 GETDATE 함수를 사용하여 날짜의 일 부분을 나타내는 정수를 가져옵니다. 일이 1이거나 15이면 로깅이 설정되고 그렇지 않으면 로깅 설정이 해제됩니다. 값 1은 LoggingMode 열거자 멤버 `Enabled`에 해당 하는 정수이 고, 값 2는 멤버 `Disabled`에 해당 하는 정수입니다. 식에는 열거자 멤버 이름 대신 숫자 값을 사용해야 합니다.
+ 다음 속성 식을 사용하여 패키지의 LoggingMode 속성을 설정할 수 있습니다. 이 식은 DAY 및 GETDATE 함수를 사용하여 날짜의 일 부분을 나타내는 정수를 가져옵니다. 일이 1이거나 15이면 로깅이 설정되고 그렇지 않으면 로깅 설정이 해제됩니다. 값 1은 LoggingMode 열거자 멤버에 해당 하는 정수이 `Enabled` 고, 값 2는 멤버에 해당 하는 정수입니다 `Disabled` . 식에는 열거자 멤버 이름 대신 숫자 값을 사용해야 합니다.
 
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`
 

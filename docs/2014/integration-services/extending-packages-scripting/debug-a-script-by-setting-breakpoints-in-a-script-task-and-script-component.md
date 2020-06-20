@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97c41b4ca75336f70b049239112132c89b05fba5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a05344f1fc20e575566d0a0fa527ac64b32363f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768489"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968408"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>스크립트 태스크 및 스크립트 구성 요소에서 중단점을 설정하여 스크립트 디버깅
   이 절차에서는 스크립트 태스크 및 스크립트 구성 요소에 사용되는 스크립트에서 중단점을 설정하는 방법에 대해 설명합니다.  
   
- 스크립트에 중단점을 설정하면 중단점이 기본 제공 중단점과 함께 **중단점 설정 - \<개체 이름>** 대화 상자에 나열됩니다.  
+ 스크립트에 중단점을 설정한 후 중단점 **설정- \<object name> ** 대화 상자에 중단점이 기본 제공 중단점과 함께 나열 됩니다.  
   
 > [!IMPORTANT]  
 >  스크립트 태스크 및 스크립트 구성 요소의 중단점이 무시되는 경우도 있습니다. 자세한 내용은 스크립트 [태스크 코딩 및 디버깅](../control-flow/script-task.md) 의 스크립트 **태스크 디버깅** 섹션 및 [스크립트 구성 요소 코딩 및 디버깅]의 스크립트 **구성 요소 디버깅** 섹션을 참조 하십시오. /extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  

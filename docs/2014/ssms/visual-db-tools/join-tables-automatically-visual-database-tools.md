@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bab311878966087ef9b6c3f05bb3023d02fdeb20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8be1530a24feec56fcba053b784f768667559f4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711070"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048582"
 ---
 # <a name="join-tables-automatically-visual-database-tools"></a>테이블 자동 조인(Visual Database Tools)
   쿼리에 두 개 이상의 테이블을 추가하면 [쿼리 및 뷰 디자이너](visual-database-tools.md) 가 해당 테이블 사이의 관련성을 판단합니다. 관련이 있는 경우 쿼리 및 뷰 디자이너는 테이블 또는 테이블 구조 개체를 나타내는 사각형 사이에 자동으로 조인 선을 넣습니다.  

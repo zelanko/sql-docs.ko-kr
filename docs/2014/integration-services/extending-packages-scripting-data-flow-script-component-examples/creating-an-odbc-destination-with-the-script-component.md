@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5ac76e77d1bd5eebd2e796a6a72463564cb3df3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a682c5010887a6aec10d886173d8538cada5963
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896189"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968633"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>스크립트 구성 요소를 사용하여 ODBC 대상 만들기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 일반적으로 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 대상 및 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for ODBC를 사용하여 ODBC 대상에 데이터를 저장합니다. 그러나 단일 패키지에서 사용할 임시 ODBC 대상을 만들 수도 있습니다. 이 임시 ODBC 대상을 만들려면 다음 예와 같이 스크립트 구성 요소를 사용합니다.  
@@ -60,7 +59,7 @@ ms.locfileid: "62896189"
   
 7.  **연결 관리자** 페이지에서 **MyODBCConnectionManager**와 같이 알기 쉬운 이름으로 ODBC 연결 관리자를 추가하거나 만듭니다.  
   
-8.  **스크립트** 페이지에서 **스크립트 편집**을 클릭 한 다음 `ScriptMain` 클래스에서 아래에 표시 된 스크립트를 입력 합니다.  
+8.  **스크립트** 페이지에서 **스크립트 편집**을 클릭 한 다음 클래스에서 아래에 표시 된 스크립트를 입력 `ScriptMain` 합니다.  
   
 9. 스크립트 개발 환경을 닫고 **스크립트 변환 편집기**를 닫은 다음 예제를 실행합니다.  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 61881d22-381d-407e-8c43-a07ba94389f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 91c87062d00e46d931afba0599cf4b19ed316ebc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a68bcbd67ed7405468657c2450685f105159e32
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049536"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028669"
 ---
 # <a name="sessions-event-category"></a>Sessions 이벤트 범주
   **Sessions** 이벤트 범주에는 **ExistingConnection** 이벤트 클래스가 포함됩니다.  

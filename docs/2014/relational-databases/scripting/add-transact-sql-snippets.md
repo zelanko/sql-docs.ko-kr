@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 11b036fd94d1f18d9e35b6f224def60d3bbade01
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f2606af57bc4a63b86b1066176cbebd886f7d5b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704120"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063533"
 ---
 # <a name="add-transact-sql-snippets"></a>Transact-SQL 코드 조각 추가
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함된 미리 정의된 코드 조각 집합에 사용자 고유의 Transact-SQL 코드 조각을 추가할 수 있습니다.  

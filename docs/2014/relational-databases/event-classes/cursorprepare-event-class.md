@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 990e50fb-b3ee-4366-8613-2c40d4a456f7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ee6325c134070f60fa578709d2247c85dc3d5173
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95752a97c95db61765c634ecbf2b26aeb0e26125
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663387"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030040"
 ---
 # <a name="cursorprepare-event-class"></a>CursorPrepare 이벤트 클래스
   **CursorPrepare** 이벤트 클래스는 API(애플리케이션 프로그래밍 인터페이스) 커서에서 발생하는 커서 준비 이벤트를 설명합니다. 커서 준비 이벤트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 커서와 연관된 SELECT 문을 실행 계획으로 컴파일하지만, 커서를 만들지 않은 경우 발생합니다.  

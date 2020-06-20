@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60914b0c-1f65-45f8-8132-0ca331749fcc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8cc6c9a2961696512c69f9c3e9de6d229eabb509
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af4efe24c58d22738e0e7b38ca68f37ce29603f2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251318"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951807"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>저장 프로시저를 사용하여 SSIS 패키지 배포 및 실행
   프로젝트 배포 모델을 사용하도록 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 구성하면 [!INCLUDE[ssIS](../includes/ssis-md.md)] 카탈로그의 저장 프로시저를 사용하여 프로젝트를 배포하고 패키지를 실행할 수 있습니다. 프로젝트 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오.  
@@ -36,9 +35,9 @@ ms.locfileid: "72251318"
   
 1.  [catalog.deploy_project&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database)를 호출하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 대한 패키지를 포함하는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 배포합니다.  
   
-     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트 배포 파일의 이진 콘텐츠를 검색 하려면 * \@project_stream* 매개 변수에 대해 SELECT 문을 OPENROWSET 함수 및 BULK 행 집합 공급자와 함께 사용 합니다. BULK 행 집합 공급자를 사용하여 파일에서 데이터를 읽을 수 있습니다. BULK 행 집합 공급자에 대한 SINGLE_BLOB 인수는 데이터 파일의 내용을 varbinary(max) 형식의 단일 행, 단일 열 행 집합으로 반환합니다. 자세한 내용은 [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)을 참조하세요.  
+     프로젝트 배포 파일의 이진 콘텐츠를 검색 하려면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] * \@ project_stream* 매개 변수에 대해 SELECT 문을 OPENROWSET 함수 및 BULK 행 집합 공급자와 함께 사용 합니다. BULK 행 집합 공급자를 사용하여 파일에서 데이터를 읽을 수 있습니다. BULK 행 집합 공급자에 대한 SINGLE_BLOB 인수는 데이터 파일의 내용을 varbinary(max) 형식의 단일 행, 단일 열 행 집합으로 반환합니다. 자세한 내용은 [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)을 참조하세요.  
   
-     다음 예에서는 SSISPackages_ProjectDeployment 프로젝트를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버의 SSIS Packages 폴더에 배포합니다. 이진 데이터는 프로젝트 파일 SSISPackage_ProjectDeployment (.ispac)에서 읽고 varbinary (max) 형식의 * \@projectbinary* 매개 변수에 저장 됩니다. Projectbinary 매개 변수 값이 * \@project_stream* 매개 변수에 할당 됩니다. * \@*  
+     다음 예에서는 SSISPackages_ProjectDeployment 프로젝트를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버의 SSIS Packages 폴더에 배포합니다. 이진 데이터는 프로젝트 파일 SSISPackage_ProjectDeployment (.ispac)에서 읽고 varbinary (max) 형식의 * \@ projectbinary* 매개 변수에 저장 됩니다. * \@ Projectbinary* 매개 변수 값이 * \@ project_stream* 매개 변수에 할당 됩니다.  
   
     ```  
     DECLARE @ProjectBinary as varbinary(max)  

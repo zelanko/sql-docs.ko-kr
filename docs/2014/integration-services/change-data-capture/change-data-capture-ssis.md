@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7ad456034902c2d3793100e93e370453348a1451
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e6b2080053231f9a5326f35d47ab598c2c5f35d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176533"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923664"
 ---
 # <a name="change-data-capture-ssis"></a>변경 데이터 캡처(SSIS)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 변경 데이터 캡처는 원본 테이블에서 데이터 마트 및 데이터 웨어하우스로의 증분 로드를 효율적으로 수행하는 문제에 대한 효과적인 솔루션을 제공합니다.
@@ -90,7 +89,7 @@ ms.locfileid: "78176533"
  위 다이어그램에 설명된 프로세스 및 단계는 단일 테이블에서 증분 로드를 수행합니다. 여러 테이블에서 증분 로드를 수행하는 경우 전반적인 프로세스는 같습니다. 그러나 여러 테이블 처리에 맞게 패키지의 디자인을 변경해야 합니다. 여러 테이블에서 증분 로드를 수행하는 패키지를 만드는 방법은 [여러 테이블의 증분 로드 수행](perform-an-incremental-load-of-multiple-tables.md)을 참조하세요.
 
 ## <a name="samples-of-change-data-capture-packages"></a>패키지 변경 데이터 캡처 예제
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서는 패키지에서 변경 데이터 캡처를 사용하는 방법을 보여 주는 두 가지 예제를 제공합니다. 자세한 내용은 아래 항목을 참조하세요.
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서는 패키지에서 변경 데이터 캡처를 사용하는 방법을 보여 주는 두 가지 예제를 제공합니다. 자세한 내용은 다음 항목을 참조하세요.
 
 -   [지정된 간격 동안 변경 데이터 캡처 패키지 예제 추가 정보](https://go.microsoft.com/fwlink/?LinkId=133507)
 

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 249c19b5-af68-4433-80f6-337395176641
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b86b68b0e7273a275c8dd1bd00fe99a7c462a27d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d55f37f5401f60ddfeec340af1ae6d532eb6ad01
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662629"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029782"
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Errors and Warnings 이벤트 범주(데이터베이스 엔진)
   **Errors and Warnings** 이벤트 범주에는 일반적인 오류 및 경고 이벤트가 포함되어 있습니다.  

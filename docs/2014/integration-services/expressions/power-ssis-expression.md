@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: db48ae65-bfa6-4db1-8d3c-d0d4f8a399bc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3d25801b7cc7f6282ebc8cf7b1ce7839159312dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aaa36617b6b51abe985001bbe431862237436d1a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62897417"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969133"
 ---
 # <a name="power-ssis-expression"></a>POWER(SSIS 식)
   숫자 식의 거듭제곱을 반환합니다. 거듭제곱 매개 변수는 정수여야 합니다.  

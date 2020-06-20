@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 697742ba-cc14-414d-8187-1845ad0dd99b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c59157c8d6beccdbb2d3e853cb6e035f9f89f61c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56ca1bd689c51b01f8b3ae9266cfaf2077acb2f0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901083"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914083"
 ---
 # <a name="sql-server-compact-edition-destination"></a>SQL Server Compact Edition 대상
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스에 데이터를 기록합니다.  
