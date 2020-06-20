@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8c9536e14f20e62b944df44ff943b05edb92e5fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f6f14d93e840b9a206e0b5261eb9efade0f0e28
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060562"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921510"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>OLE DB 명령 변환 구성
   OLE DB 명령 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 플랫 파일 원본이나 OLE DB 원본과 같은 원본이 이미 들어 있어야 합니다. 이러한 변환은 일반적으로 매개 변수가 있는 쿼리에 사용됩니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "66060562"
   
 8.  **문자열 값 편집기**에서 각 매개 변수에 대한 매개 변수 표시자로 물음표(?)를 사용하여 매개 변수가 있는 SQL 문을 입력합니다.  
   
-9. **새로 고침**을 클릭 합니다. **새로 고침**을 클릭하면 변환이 외부 열 컬렉션의 각 매개 변수에 대한 열을 만들고 DBParamInfoFlags 속성을 설정합니다.  
+9. **새로 고침**을 클릭합니다. **새로 고침**을 클릭하면 변환이 외부 열 컬렉션의 각 매개 변수에 대한 열을 만들고 DBParamInfoFlags 속성을 설정합니다.  
   
 10. **입/출력 속성** 탭을 클릭합니다.  
   

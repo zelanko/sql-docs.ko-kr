@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c6d1901-ef21-4aa7-9d0a-6bbeb7fadf1c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1628acc984433b1def07c63387b1630c902885aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f172aa778cbaa959671da870521641147186f571
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056068"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964053"
 ---
 # <a name="script-transformation-editor-script-page"></a>스크립트 변환 편집기(스크립트 페이지)
   **스크립트 변환 편집기** 대화 상자의 **스크립트** 탭을 사용하여 스크립트 및 관련 속성을 지정할 수 있습니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "66056068"
 |**UserComponentTypeName**|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인프라를 지원하는 `Microsoft.SqlServer.TxScript` 어셈블리 및 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> 클래스를 지정합니다.|  
   
  **스크립트 편집**  
- VSTA [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (Tools for Applications)를 사용 하 여 스크립트를 만들거나 수정할 수 있습니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] VSTA (Tools for Applications)를 사용 하 여 스크립트를 만들거나 수정할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   

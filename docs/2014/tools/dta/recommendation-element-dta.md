@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bcc0a95028b1f107f15752692d3dcad090fbe8b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ebb2d9fc4e6c060aaee348297ab1732ffb2eb2a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62659586"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040288"
 ---
 # <a name="recommendation-element-dta"></a>Recommendation 요소(DTA)
   사용자 지정 구성의 일부인 가상 인덱스에 대한 정보를 포함합니다.  
@@ -53,7 +52,7 @@ ms.locfileid: "62659586"
 |**자식 요소**|[Create 요소&#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` 요소입니다. 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 XML 스키마](https://go.microsoft.com/fwlink/?linkid=43100)를 참조하십시오.|  
   
 ## <a name="remarks"></a>설명  
- 데이터베이스 엔진 튜닝 관리자 XML 스키마에서 이 요소의 이름은 **RecommendationTypecomplexType** 입니다. 이 요소는 가상 구성에 대한 인덱스를 지정하는 데 사용됩니다. 이 `Recommendation` 요소를 분할(`RecommendationPType`) 또는 뷰(`RecommendationViewType`)를 지정하는 데 사용할 수 있는 다른 유형과 혼동하지 마십시오. 이러한 다른 `Recommendation` 요소 형식에 대 한 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 XML 스키마](https://go.microsoft.com/fwlink/?linkid=43100)를 참조 하세요.  
+ 데이터베이스 엔진 튜닝 관리자 XML 스키마에서 이 요소의 이름은 **RecommendationTypecomplexType** 입니다. 이 요소는 가상 구성에 대한 인덱스를 지정하는 데 사용됩니다. 이 `Recommendation` 요소를 분할(`RecommendationPType`) 또는 뷰(`RecommendationViewType`)를 지정하는 데 사용할 수 있는 다른 유형과 혼동하지 마십시오. 이러한 다른 요소 형식에 대 한 자세한 내용은 `Recommendation` [데이터베이스 엔진 튜닝 관리자 XML 스키마](https://go.microsoft.com/fwlink/?linkid=43100)를 참조 하세요.  
   
 ## <a name="example"></a>예제  
  이 요소의 사용 예를 보려면 [사용자 정의 구성이 포함된 XML 입력 파일 샘플&#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)을 참조하세요.  

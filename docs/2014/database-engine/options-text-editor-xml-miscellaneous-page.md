@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 51ad78c95881daacebcb3f2b7999a299cd4ebd7d
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 2e91eb8e0704b7c07fac285986a0827e4d79b160
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000593"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929596"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>옵션(텍스트 편집기 - XML - 기타 페이지)
 
@@ -44,4 +43,4 @@ ms.locfileid: "83000593"
   
 ## <a name="caching"></a>캐싱  
  **스키마**  
- 스키마 캐시의 위치를 지정합니다. 찾아보기 단추(...)를 클릭하면 현재 스키마 캐시 위치가 새 창에서 열립니다. 기본 위치는 * \< Management Studio 설치 디렉터리>* \Xml\schemas.입니다.  
+ 스키마 캐시의 위치를 지정합니다. 찾아보기 단추(...)를 클릭하면 현재 스키마 캐시 위치가 새 창에서 열립니다. 기본 위치는 *\<Management Studio install directory>* \Xml\schemas..  

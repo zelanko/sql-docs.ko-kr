@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec4261d1-2799-4af8-9706-06b8c62d2fdf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 774cba19a7762a41d60fe7cf90d63de275e59b71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ebdb6750c61373041653d7c65df01fa866b9b68
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060663"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921690"
 ---
 # <a name="configure-data-viewer-grid-tab"></a>데이터 뷰어 구성(표 탭)
   **데이터 뷰어 구성** 대화 상자의 **표** 탭을 사용하여 표시할 열을 지정할 수 있습니다. 표 형태 차트에서는 데이터 레코드를 표의 행으로 표시합니다. 차트는 한 버퍼의 내용만 반영합니다.  

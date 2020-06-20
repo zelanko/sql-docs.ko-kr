@@ -1,5 +1,6 @@
 ---
 title: 기능
+description: SQL Server Native Client은 Windows 데이터 액세스 구성 요소의 기능을 제공 하는 것 외에도 SQL Server 기능을 제공 하는 다른 기능을 구현 합니다.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e10bc2259c8e283a97db89a85940377e50aef3da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c5e598cedaf4a1cd846caf143094840e9ed8427
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388443"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84949339"
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client 기능
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "81388443"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client부터 변경된 동작에 대해 설명합니다.  
   
  [데이터베이스 미러링 사용](../../../relational-databases/native-client/features/using-database-mirroring.md)  
- Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 미러된 데이터베이스의 사용을 지 원하는 방법에 대해 설명 합니다 .이는 대기 서버에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스의 복사본 또는 미러를 보관 하는 기능입니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client가 미러된 데이터베이스의 사용을 지 원하는 방법에 대해 설명 합니다 .이는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 대기 서버에서 데이터베이스의 복사본 또는 미러를 보관 하는 기능입니다.  
   
  [비동기 작업 수행](../../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 비동기 작업을 지원하는 방법을 설명합니다. 비동기 작업은 호출 스레드를 차단하지 않고 즉시 반환할 수 있는 기능입니다.  
@@ -44,7 +45,7 @@ ms.locfileid: "81388443"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 XML 데이터 형식을 지원하는 방법을 설명합니다. XML 데이터 형식은 열 형식, 변수 형식, 매개 변수 형식 또는 함수 반환 형식에 사용할 수 있는 XML 기반 데이터 형식입니다.  
   
  [사용자 정의 형식 사용](../../../relational-databases/native-client/features/using-user-defined-types.md)  
- Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 UDT (사용자 정의 형식)를 지 원하는 방법에 대해 설명 합니다. 이러한 UDT는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 개체 및 사용자 지정 데이터 구조를 저장할 수 있도록 하 여 SQL 형식 시스템을 확장 합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client에서 UDT (사용자 정의 형식)를 지 원하는 방법에 대해 설명 합니다. 이러한 UDT는 데이터베이스에 개체 및 사용자 지정 데이터 구조를 저장할 수 있도록 하 여 SQL 형식 시스템을 확장 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  [큰 값 형식 사용](../../../relational-databases/native-client/features/using-large-value-types.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 큰 값 데이터 형식인 LOB(Large Object) 데이터 형식을 지원하는 방법을 설명합니다.  
@@ -59,7 +60,7 @@ ms.locfileid: "81388443"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 행 집합 수정에 대한 소비자 알림을 지원하는 방법을 설명합니다.  
   
  [대량 복사 작업 수행](../../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
- Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블 또는 뷰에서 많은 양의 데이터를 전송할 수 있도록 하는 대량 복사 작업을 지 원하는 방법에 대해 설명 합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client가 테이블 또는 뷰에서 많은 양의 데이터를 전송할 수 있도록 하는 대량 복사 작업을 지 원하는 방법에 대해 설명 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 합니다.  
   
  [유효성 검사 없이 암호화 사용](../../../relational-databases/native-client/features/using-encryption-without-validation.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용하여 인증서 유효성을 검사하지 않고 서버에 전송된 데이터를 암호화하는 방법을 설명합니다.  
@@ -71,7 +72,7 @@ ms.locfileid: "81388443"
  큰 CLR(공용 언어 런타임) UDT(사용자 정의 형식)에 대한 지원을 설명합니다.  
   
  [FILESTREAM 지원](../../../relational-databases/native-client/features/filestream-support.md)  
- 향상 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 된 FILESTREAM 기능에 대 한 Native Client 지원을 설명 합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]향상 된 FILESTREAM 기능에 대 한 Native Client 지원을 설명 합니다.  
   
  [클라이언트 연결의 SPN&#40;서비스 사용자 이름&#41; 지원](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
  모든 프로토콜에서 상호 인증을 지원하기 위해 SPN(서비스 사용자 이름)이 어떻게 확장되었는지 설명합니다.  

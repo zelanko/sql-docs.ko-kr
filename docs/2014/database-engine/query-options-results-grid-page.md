@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 764bf435-3aab-4c62-b4e0-64fe020a5a95
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1d5696dcc7b82844fad52754f3c4457344eca793
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 17a331fff0a4405fb1c43210b9c7e43c2f457625
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000583"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929504"
 ---
 # <a name="query-options-results-grid-page"></a>쿼리 옵션 결과(표 형태 페이지)
   이 페이지를 사용하여 쿼리 결과 집합을 표 형태로 표시하는 옵션을 지정할 수 있습니다.  

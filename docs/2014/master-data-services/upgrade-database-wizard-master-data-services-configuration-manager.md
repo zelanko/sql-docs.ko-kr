@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 977c96b625ecb62f9f02d19e71df57cd17d8660f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69ce04217f2913214bbdd9de631c1ac339a39ce7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478490"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971018"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>데이터베이스 업그레이드 마법사(Master Data Services 구성 관리자)
   **데이터베이스 업그레이드 마법사** 를 사용하여 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 업그레이드합니다.  
@@ -26,7 +25,7 @@ ms.locfileid: "65478490"
 ## <a name="upgrade-review"></a>업그레이드 검토  
  이 페이지에 지정된 정보를 검토합니다. 정보가 정확하면 **다음** 을 클릭하여 지정된 데이터베이스를 업그레이드합니다.  
   
-|컨트롤 이름|설명|  
+|컨트롤 이름|Description|  
 |------------------|-----------------|  
 |**SQL Server 인스턴스**|현재 선택한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스의 이름입니다.|  
 |**MDS(Master Data Services) 데이터베이스**|현재 선택한 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 이름입니다.|  

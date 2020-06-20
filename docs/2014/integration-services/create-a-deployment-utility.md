@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e5f7959496cfa2b473fbf5c500f424647df0a1c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25effc199b1f8e525ceec78216e935e13afe2be2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060225"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917363"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   패키지를 배포하는 첫 번째 단계는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트의 배포 유틸리티를 만드는 것입니다. 배포 유틸리티는 다른 서버로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트의 패키지를 배포하는 데 필요한 파일이 포함된 폴더입니다. 배포 유틸리티는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트가 저장된 컴퓨터에 만들어집니다.  
@@ -29,13 +28,13 @@ ms.locfileid: "66060225"
   
  다음 표에서는 배포 유틸리티 속성을 나열합니다.  
   
-|속성|설명|  
+|속성|Description|  
 |--------------|-----------------|  
 |AllowConfigurationChange|배포 도중 구성의 업데이트를 허용할지 여부를 지정하는 값입니다.|  
 |CreateDeploymentUtility|프로젝트를 빌드할 때 패키지 배포 유틸리티를 만들지 여부를 지정하는 값입니다. 배포 유틸리티를 만들려면 이 속성을 `True`로 설정합니다.|  
 |DeploymentOutputPath|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트와 관련된 배포 유틸리티의 위치입니다.|  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 빌드하면 매니페스트 파일인 \<project name>.SSISDeploymentManifest.xml이 패키지 종속 관계 및 패키지의 복사본과 함께 프로젝트의 bin\Deployment 폴더 또는 DeploymentOutputPath 속성에서 지정한 위치에 만들어지고 추가됩니다. 매니페스트 파일은 프로젝트의 패키지, 패키지 구성 및 모든 기타 파일을 나열합니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]프로젝트를 빌드하면 매니페스트 파일 \<project name>.SSISDeploymentManifest.xml이 만들어지고 프로젝트 패키지 및 패키지 종속성의 복사본, 프로젝트의 bin\Deployment 폴더 또는 DeploymentOutputPath 속성에 지정 된 위치에 추가 됩니다. 매니페스트 파일은 프로젝트의 패키지, 패키지 구성 및 모든 기타 파일을 나열합니다.  
   
  배포 폴더의 내용은 프로젝트를 작성할 때마다 새로 고쳐집니다. 즉, 배포 폴더에 저장되었지만 빌드 프로세스로 폴더에 다시 복사되지 않은 파일은 모두 삭제됩니다. 예를 들어 배포 폴더에 저장된 패키지 구성 파일은 삭제되지 않습니다.  
   
@@ -45,9 +44,9 @@ ms.locfileid: "66060225"
   
 2.  프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-3.  **프로젝트 이름> 속성 페이지 대화 상자에서 배포 유틸리티를 클릭 합니다. \<** **Deployment Utility**  
+3.  ** \<project name> 속성 페이지** 대화 상자에서 **배포 유틸리티**를 클릭 합니다.  
   
-4.  패키지를 배포할 때 패키지 구성을 업데이트 하려면 **Allowconfigurationchanges** 를로 `True`설정 합니다.  
+4.  패키지를 배포할 때 패키지 구성을 업데이트 하려면 **Allowconfigurationchanges** 를로 설정 `True` 합니다.  
   
 5.  `CreateDeploymentUtility`를 `True`로 설정합니다.  
   

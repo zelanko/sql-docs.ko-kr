@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 07cbc624-2c6b-4568-96e4-f18663a05d80
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f7e88065ff66ea953d0a91ed080fc3d7159ab794
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f7287091ddd64ef9df1c63706a2f562feed4a5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489102"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999672"
 ---
 # <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>태스크 5: Excel에서 도메인 기반 특성 만들기
   이 태스크에서는 **공급자** 엔터티의 **State** 특성을 **도메인 기반 특성**으로 변환 합니다. State 특성을 도메인 기반으로 구성한 후 MDS에 게시 하면 **상태** 라는 새 엔터티가 열의 모든 값을 사용 하 여 mds 서버에 생성 되 고 **공급자** 엔터티의 **state** 특성은 **state** 엔터티의 값으로 채워집니다. 이제 **Suppliers** **모델에** **는 공급자 엔터티의** **state** 특성과 **state 엔터티에 종속** 된 도메인 기반 **특성이 있는 두** 개의 엔터티가 있어야 합니다.  
   
-1.  정리한 **공급자와 일치** 하는 **Excel** 창으로 전환 합니다.  
+1.  **정리 하 고 일치** 하는 Suppliers.xlsx열어 놓은 **Excel** 창으로 전환 합니다.  
   
 2.  리본에서 **새로 고침** 단추를 클릭 하 여 MDS에서 최신 업데이트를 가져옵니다. 선택적 **작업 4**를 수행한 경우에는 두 개 이상의 레코드가 표시 됩니다.  
   

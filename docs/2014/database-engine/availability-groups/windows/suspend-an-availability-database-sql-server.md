@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c428d9141acfaca3e8ec7876e62b733c30ec161
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49afe868a509f84160fc1ad154135e8e67f6900a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797955"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936401"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>가용성 데이터베이스 일시 중지(SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 의 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 가용성 데이터베이스를 일시 중지할 수 있습니다. 일시 중지하거나 재개할 데이터베이스를 호스팅하는 서버 인스턴스에서 일시 중지 명령을 실행해야 합니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "72797955"
   
 |일시 중지된 데이터베이스|일시 중지 명령의 효과|  
 |------------------------|-------------------------------|  
-|보조 데이터베이스|로컬 보조 데이터베이스만 일시 중지되고 동기화 상태가 NOT SYNCHRONIZING이 됩니다. 다른 보조 데이터베이스는 영향을 받지 않습니다. 일시 중지된 데이터베이스는 데이터(로그 레코드)의 수신과 적용을 중지하고 주 데이터베이스보다 뒤처지기 시작합니다. 읽기 가능한 보조 복제본에 대한 기존 연결은 계속 사용할 수 있습니다. 읽기 가능한 보조 복제본의 일시 중단된 데이터베이스에 대한 새 연결은 데이터 이동이 다시 시작될 때까지 허용되지 않습니다.<br /><br /> 주 데이터베이스는 사용 가능한 상태로 남아 있습니다. 각각의 해당 보조 데이터베이스를 중지하면 주 데이터베이스가 노출된 상태로 실행됩니다.<br /><br /> ** \* 중요 \* \* ** 보조 데이터베이스가 일시 중단 된 동안에는 해당 주 데이터베이스의 송신 큐에 보내지 않은 트랜잭션 로그 레코드가 누적 됩니다. 보조 복제본에 대한 연결은 데이터 이동이 일시 중단된 시간에 사용 가능했던 데이터를 반환합니다.|  
+|보조 데이터베이스|로컬 보조 데이터베이스만 일시 중지되고 동기화 상태가 NOT SYNCHRONIZING이 됩니다. 다른 보조 데이터베이스는 영향을 받지 않습니다. 일시 중지된 데이터베이스는 데이터(로그 레코드)의 수신과 적용을 중지하고 주 데이터베이스보다 뒤처지기 시작합니다. 읽기 가능한 보조 복제본에 대한 기존 연결은 계속 사용할 수 있습니다. 읽기 가능한 보조 복제본의 일시 중단된 데이터베이스에 대한 새 연결은 데이터 이동이 다시 시작될 때까지 허용되지 않습니다.<br /><br /> 주 데이터베이스는 사용 가능한 상태로 남아 있습니다. 각각의 해당 보조 데이터베이스를 중지하면 주 데이터베이스가 노출된 상태로 실행됩니다.<br /><br /> 중요 보조 데이터베이스를 일시 중지 하면 해당 주 데이터베이스의 송신 큐에 보내지 않은 트랜잭션 로그 레코드가 누적 됩니다. ** \* \* \* \* ** 보조 복제본에 대한 연결은 데이터 이동이 일시 중단된 시간에 사용 가능했던 데이터를 반환합니다.|  
 |주 데이터베이스|주 데이터베이스는 연결된 모든 보조 데이터베이스로의 데이터 이동을 중지합니다. 주 데이터베이스는 계속해서 노출된 모드에서 실행됩니다. 클라이언트에서 주 데이터베이스를 계속해서 사용할 수 있고 읽을 수 있는 보조 데이터베이스의 기존 연결을 계속해서 사용할 수 있으며 새로운 연결을 만들 수 있습니다.|  
   
 > [!NOTE]  
@@ -41,7 +40,7 @@ ms.locfileid: "72797955"
   
      [제한 사항](#Restrictions)  
   
-     [전제 조건](#Prerequisites)  
+     [필수 구성 요소](#Prerequisites)  
   
      [권장 사항](#Recommendations)  
   
@@ -64,7 +63,7 @@ ms.locfileid: "72797955"
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
  SUSPEND 명령은 대상 데이터베이스를 호스팅하는 복제본에서 수락되는 즉시 반환하지만 실제로 데이터베이스 일시 중지는 비동기식으로 발생합니다.  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 전제 조건  
  일시 중지할 데이터베이스를 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다. 주 데이터베이스와 해당 보조 데이터베이스를 일시 중지하려면 주 복제본을 호스팅하는 서버 인스턴스에 연결합니다. 주 데이터베이스는 사용 가능한 상태로 두고 보조 데이터베이스를 일시 중지하려면 보조 복제본에 연결합니다.  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  

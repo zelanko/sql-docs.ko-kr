@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ff921952-b935-4bb0-b587-bba6cd15a090
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9d349a21fdd522b5af299c3ad130cdce984f569c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00348bae82ed089dfd23a17b5f5f9594ea9df66e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63253167"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066631"
 ---
 # <a name="storage-system-input-output-time-out"></a>스토리지 시스템 입/출력 시간 초과
   이 규칙은 시스템 이벤트 로그에서 EventId 9를 검사합니다. 이 메시지는 스토리지 시스템에서 I/O 시간 초과가 발생했음을 나타냅니다.  

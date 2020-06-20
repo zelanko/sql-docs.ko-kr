@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 594eec78-677c-4500-ae9b-e400abf6f39c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8dd06c632a20278f88403a0ec21d9a8b672c8b3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8d3154a3385d152e97295bd2eee0864f28d39f51
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62961121"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053289"
 ---
 # <a name="audit-database-principal-management-event-class"></a>Audit Database Principal Management 이벤트 클래스
   **Audit Database Principal Management** 이벤트 클래스는 데이터베이스에서 사용자 같은 보안 주체를 만들고 변경하거나 삭제할 때 발생합니다.  

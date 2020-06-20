@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fcdbfe9f9289ab9cc529d4d37eb27d877dfff3ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 543905343d74c9fbabe5f671d9021657ea5f76b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150484"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066761"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>SQL Server Profiler를 사용하여 계획 지침 작성 및 테스트
    계획 지침을 만들 때는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 **sp_create_plan_guide** 저장 프로시저의 *statement_text* 인수에서 사용할 정확한 쿼리 텍스트를 캡처할 수 있습니다. 이렇게 하면 컴파일 시 계획 지침이 쿼리와 일치하도록 보장할 수 있습니다. 계획 지침을 만든 다음 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 실제로 계획 지침이 쿼리와 일치하는지 여부를 테스트할 수도 있습니다. 일반적으로 쿼리가 계획 지침과 일치하는지 확인하기 위해 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 계획 지침을 테스트해야 합니다.  
@@ -66,7 +65,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  일괄 처리 텍스트 파일을 메모장에서 열고 텍스트를 복사 및 붙여 넣기 버퍼로 복사합니다.  
   
-8.  계획 지침을 만들고 복사한 텍스트를 **@stmt**인수에 대해 지정된 따옴표( **@stmt** ) 안에 붙여넣습니다. **@stmt** 인수의 앞에 다른 작은따옴표를 사용 하 여 임의의 작은따옴표를 이스케이프 해야 합니다. 작은따옴표를 삽입할 때는 다른 문자를 추가 또는 제거하지 않도록 주의해야 합니다. 예를 들어 날짜 리터럴 **'** 20000101 **'** 은 **''** 20000101 **''** 로 구분해야 합니다.  
+8.  계획 지침을 만들고 복사한 텍스트를 **@stmt**인수에 대해 지정된 따옴표( **@stmt** ) 안에 붙여넣습니다. 인수의 앞에 다른 작은따옴표를 사용 하 여 임의의 작은따옴표를 이스케이프 해야 합니다 **@stmt** . 작은따옴표를 삽입할 때는 다른 문자를 추가 또는 제거하지 않도록 주의해야 합니다. 예를 들어 날짜 리터럴 **'** 20000101 **'** 은 **''** 20000101 **''** 로 구분해야 합니다.  
   
  계획 지침은 다음과 같습니다.  
   
@@ -94,7 +93,7 @@ EXEC sp_create_plan_guide
     > [!NOTE]  
     >  **Showplan XML for Query Compile** 이벤트를 사용할 수 없습니다. 해당 이벤트에**PlanGuideDB** 가 없습니다.  
   
-5.  계획 지침이 OBJECT 또는 SQL 유형인 경우 쿼리와 일치할 것으로 예상되는 계획 지침의 **PlanGuideDB** 및 **PlanGuideName** 특성이 **Showplan XML** 이벤트에 포함되어 있는지 확인합니다. 또는 TEMPLATE 계획 지침의 경우 예상되는 계획 지침의 **TemplatePlanGuideDB** 및 **TemplatePlanGuideName** 특성이 **Showplan XML** 이벤트에 포함되어 있는지 확인합니다. 그러면 계획 지침이 작동하는지 확인할 수 있습니다. 이러한 특성은 계획의 ** \<StmtSimple>** 요소 아래에 포함 됩니다.  
+5.  계획 지침이 OBJECT 또는 SQL 유형인 경우 쿼리와 일치할 것으로 예상되는 계획 지침의 **PlanGuideDB** 및 **PlanGuideName** 특성이 **Showplan XML** 이벤트에 포함되어 있는지 확인합니다. 또는 TEMPLATE 계획 지침의 경우 예상되는 계획 지침의 **TemplatePlanGuideDB** 및 **TemplatePlanGuideName** 특성이 **Showplan XML** 이벤트에 포함되어 있는지 확인합니다. 그러면 계획 지침이 작동하는지 확인할 수 있습니다. 이러한 특성은 계획의 요소 아래에 포함 됩니다 **\<StmtSimple>** .  
   
 ## <a name="see-also"></a>참고 항목  
  [sp_create_plan_guide&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 644454c4-3c5a-469a-90ec-e51dc7fb99fc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4ed1d29af328a162eafadb1ce7a160c262bdcba3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fd85a523804232deff14f2e1da5485229f943dd2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177251"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999660"
 ---
 # <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>태스크 4: 일치 작업의 결과를 Excel 파일로 내보내기
   이 작업에서는 일치 작업의 결과를 Excel 파일로 내보냅니다.

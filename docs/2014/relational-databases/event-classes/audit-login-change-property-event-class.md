@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47c8f045-37e5-471e-bf01-55d988ed47c1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 890a61f8532d34b24676fae842676ff613d09c70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55080c0fcdc224afe9a6f005abee778486361990
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62991255"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053227"
 ---
 # <a name="audit-login-change-property-event-class"></a>Audit Login Change Property 이벤트 클래스
   **Audit Login Change Property** 이벤트 클래스는 **sp_defaultdb** 저장 프로시저, **sp_defaultlanguage** 저장 프로시저 또는 ALTER LOGIN 문을 사용하여 로그인 속성을 수정할 때 발생합니다.  

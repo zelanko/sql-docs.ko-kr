@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ddbdb4bd-ad4e-4bf1-9a75-656aa26ce10a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9278a388fa6beb52dc747d310bea4a2ce32c600e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c45e87fdd8e00e9456718c4c9c8160c22bac03a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705307"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019378"
 ---
 # <a name="bcp_sendrow"></a>bcp_sendrow
   프로그램 변수에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 데이터 행을 보냅니다.  

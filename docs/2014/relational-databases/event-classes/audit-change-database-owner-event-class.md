@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2f1dd4fc-2540-423c-80ad-c5bc712c42e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 35ffa7a1a9a5f914d95c13d0ada205d2dc0db483
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11f3a12c892a76277063827393b682809478ce46
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62932417"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053379"
 ---
 # <a name="audit-change-database-owner-event-class"></a>Audit Change Database Owner 이벤트 클래스
   **Audit Change Database Owner** 이벤트 클래스는 ALTER AUTHORIZATION 문을 사용하여 데이터베이스 소유자를 변경하고 이 작업에 필요한 사용 권한이 확인된 경우 발생합니다.  

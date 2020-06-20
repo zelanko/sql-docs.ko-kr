@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bddf15e6469e2fd347c716e98e750c077bcc29e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c74e92286eab4bc1be8f3f538d83d86f056cf01
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797691"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936924"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>가용성 그룹 수신기 만들기 또는 구성(SQL Server)
-  이 항목에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], 또는 PowerShell을 사용 하 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]여 AlwaysOn 가용성 그룹에 대 한 단일 *가용성 그룹 수신기* 를 만들거나 구성 하는 방법에 대해 설명 합니다.  
+  이 항목에서는에서, 또는 PowerShell을 사용 하 여 AlwaysOn 가용성 그룹에 대 한 단일 *가용성 그룹 수신기* 를 만들거나 구성 하는 방법에 대해 설명 합니다 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../../includes/tsql-md.md)] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
   
 > [!IMPORTANT]  
 >  가용성 그룹에 대한 첫 번째 가용성 그룹 수신기를 만들려면 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell을 사용하는 것이 좋습니다. 추가 수신기를 만들려는 경우처럼 필요한 경우를 제외하고 WSFC 클러스터에서 수신기를 직접 만들지 마세요.  
@@ -191,22 +190,22 @@ ms.locfileid: "72797691"
     ```  
   
     > [!NOTE]  
-    >  Cmdlet의 구문을 보려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경에서 **get-help** cmdlet을 사용 합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
+    >  Cmdlet의 구문을 보려면 PowerShell 환경에서 **get-help** cmdlet을 사용 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
   
 SQL Server PowerShell 공급자를 설정 하 고 사용 하려면 [SQL Server PowerShell 공급자](../../../powershell/sql-server-powershell-provider.md)를 참조 하세요.
   
 ## <a name="troubleshooting"></a>문제 해결  
   
 ###  <a name="failure-to-create-an-availability-group-listener-because-of-active-directory-quotas"></a><a name="ADQuotas"></a>Active Directory 할당량으로 인해 가용성 그룹 수신기를 만들지 못했습니다.  
- 참여하는 클러스터 노드 컴퓨터 계정에 대한 Active Directory 할당량에 도달하여 새 가용성 그룹 수신기를 만들지 못할 수도 있습니다.  자세한 내용은 다음 항목을 참조하세요.  
+ 참여하는 클러스터 노드 컴퓨터 계정에 대한 Active Directory 할당량에 도달하여 새 가용성 그룹 수신기를 만들지 못할 수도 있습니다.  자세한 내용은 다음 문서를 참조하세요.  
   
--   [HYPERLINK "https://support.microsoft.com/kb/307532" 컴퓨터 개체 수정 시 클러스터 서비스 계정 문제를 해결 하는 방법](https://support.microsoft.com/kb/307532)  
+-   [HYPERLINK " https://support.microsoft.com/kb/307532 " 컴퓨터 개체 수정 시 클러스터 서비스 계정 문제를 해결 하는 방법](https://support.microsoft.com/kb/307532)  
   
--   [HYPERLINK "https://technet.microsoft.com/library/cc904295(WS.10).aspx" Active Directory 할당량](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
+-   [HYPERLINK " https://technet.microsoft.com/library/cc904295(WS.10).aspx " Active Directory 할당량](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
 ##  <a name="follow-up-after-creating-an-availability-group-listener"></a><a name="FollowUp"></a> 후속 작업: 가용성 그룹 수신기를 만든 후  
   
-###  <a name="multisubnetfailover-keyword-and-associated-features"></a><a name="MultiSubnetFailover"></a> MultiSubnetFailover 키워드 및 관련 기능  
+###  <a name="multisubnetfailover-keyword-and-associated-features"></a><a name="MultiSubnetFailover"></a>MultiSubnetFailover 키워드 및 관련 기능  
  `MultiSubnetFailover`는 SQL Server 2012에서 AlwaysOn 가용성 그룹과 AlwaysOn 장애 조치(Failover) 클러스터 인스턴스를 사용하여 보다 빠르게 장애 조치할 수 있도록 하는 데 사용되는 새로운 연결 문자열 키워드입니다. `MultiSubnetFailover=True` 가 연결 문자열에서 설정되면 다음 세 가지 하위 기능을 사용할 수 있습니다.  
   
 -   AlwaysOn 가용성 그룹 또는 장애 조치(Failover) 클러스터 인스턴스에 대한 다중 서브넷 수신기로 보다 빠른 다중 서브넷 장애 조치  
@@ -221,7 +220,7 @@ SQL Server PowerShell 공급자를 설정 하 고 사용 하려면 [SQL Server P
   
  **MultiSubnetFailover=True가 .NET Framework 3.5 또는 OLEDB에서 지원되지 않음**  
   
- **문제:** 가용성 그룹 또는 장애 조치(Failover) 클러스터 인스턴스에 각기 다른 서브넷의 여러 IP 주소를 사용하는 수신기 이름(WSFC 클러스터 관리자에서는 네트워크 이름 또는 클라이언트 액세스 지점이라고도 함)이 있고 .NET Framework 3.5 SP1 또는 SQL Native Client 11.0 OLEDB가 있는 ADO.NET을 사용하는 경우 가용성 그룹 수신기에 대한 클라이언트 연결 요청 중 50%가 연결 제한 시간을 초과할 수 있습니다.  
+ **문제:** 가용성 그룹 또는 장애 조치 (Failover) 클러스터 인스턴스에 서로 다른 서브넷의 여러 IP 주소에 따라 수신기 이름 (WSFC 클러스터 관리자에서는 네트워크 이름 또는 클라이언트 액세스 지점 이라고 함)이 있고 .NET Framework 3.5 s p 1을 사용 하는 ADO.NET SQL Native Client 또는 11.0 OLEDB를 사용 하는 경우 가용성 그룹 수신기에 대 한 클라이언트 연결 요청의 잠재적 50%가 연결 제한 시간에 도달할 수 있습니다.  
   
  **해결 방법:** 다음 작업 중 하나를 수행하는 것이 좋습니다.  
   
@@ -233,7 +232,7 @@ SQL Server PowerShell 공급자를 설정 하 고 사용 하려면 [SQL Server P
   
 -   클러스터 리소스를 조작할 권한이 있는 경우 더 권장하는 방법은 가용성 그룹 수신기의 네트워크 이름을 `RegisterAllProvidersIP=0`으로 설정하는 것입니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "RegisterAllProvidersIP 설정"을 참조하세요.  
   
-     **장점** : 클라이언트 연결 제한 시간 값을 증가시키지 않아도 됩니다.  
+     **장점:** 클라이언트 연결 제한 시간 값을 증가시키지 않아도 됩니다.  
   
      **단점:** 서브넷 간 장애 조치 (failover)가 발생 하는 경우 클라이언트 복구 시간은 `HostRecordTTL` 설정 및 사이트 간 DNS/AD 복제 일정의 설정에 따라 15 분 이상 걸릴 수 있습니다.  
   
@@ -255,7 +254,7 @@ SQL Server PowerShell 공급자를 설정 하 고 사용 하려면 [SQL Server P
   
 -   `MultiSubnetFailover`를 true로 설정하지 않는 연결 문자열  
   
-     `RegisterAllProvidersIP = 1`일 때는 연결 문자열이 `MultiSubnetFailover = True`를 사용하지 않는 클라이언트에서 연결 대기 시간이 길어집니다. 이는 이러한 클라이언트가 모든 IP에 순차적으로 연결을 시도하기 때문에 발생합니다. 반면에 `RegisterAllProvidersIP`를 0으로 변경하면 활성 IP 주소가 WSFC 클러스터의 클라이언트 액세스 지점에 등록되기 때문에 레거시 클라이언트에 대한 대기 시간이 줄어듭니다. 따라서 가용성 그룹 수신기에 연결 해야 하는 레거시 클라이언트가 있고 `MultiSubnetFailover` 속성을 사용할 수 없는 경우 0으로 변경 `RegisterAllProvidersIP` 하는 것이 좋습니다.  
+     `RegisterAllProvidersIP = 1`일 때는 연결 문자열이 `MultiSubnetFailover = True`를 사용하지 않는 클라이언트에서 연결 대기 시간이 길어집니다. 이는 이러한 클라이언트가 모든 IP에 순차적으로 연결을 시도하기 때문에 발생합니다. 반면에 `RegisterAllProvidersIP`를 0으로 변경하면 활성 IP 주소가 WSFC 클러스터의 클라이언트 액세스 지점에 등록되기 때문에 레거시 클라이언트에 대한 대기 시간이 줄어듭니다. 따라서 가용성 그룹 수신기에 연결 해야 하는 레거시 클라이언트가 있고 속성을 사용할 수 없는 경우 `MultiSubnetFailover` 0으로 변경 하는 것이 좋습니다 `RegisterAllProvidersIP` .  
   
     > [!IMPORTANT]  
     >  WSFC 클러스터(장애 조치(Failover) 클러스터 관리자 GUI)를 통해 가용성 그룹 수신기를 만들면 기본적으로 `RegisterAllProvidersIP`는 0(false)으로 설정됩니다.  
@@ -263,7 +262,7 @@ SQL Server PowerShell 공급자를 설정 하 고 사용 하려면 [SQL Server P
 ###  <a name="hostrecordttl-setting"></a><a name="HostRecordTTL"></a> HostRecordTTL 설정  
  기본적으로 클라이언트는 클러스터 DNS 레코드를 20분 동안 캐시합니다.  캐시된 레코드의 TTL(Time to Live)인 `HostRecordTTL`을 줄이면 레거시 클라이언트가 더 빨리 다시 연결할 수 있습니다.  하지만 `HostRecordTTL` 설정을 줄이면 DN 서버의 트래픽이 증가할 수 있습니다.  
   
-###  <a name="sample-powershell-script-to-disable-registerallprovidersip-and-reduce-ttl"></a><a name="SampleScript"></a> RegisterAllProvidersIP를 비활성화하고 TTL을 줄이는 샘플 PowerShell 스크립트  
+###  <a name="sample-powershell-script-to-disable-registerallprovidersip-and-reduce-ttl"></a><a name="SampleScript"></a>RegisterAllProvidersIP를 비활성화 하 고 TTL을 줄이는 샘플 PowerShell 스크립트  
  다음 PowerShell 예에서는 수신기 리소스에 대한 `RegisterAllProvidersIP` 및 `HostRecordTTL` 클러스터 매개 변수를 구성하는 방법을 보여 줍니다.  DNS 레코드는 기본 20분이 아닌 5분 동안 캐시됩니다.  두 클러스터 매개 변수를 모두 수정하면 `MultiSubnetFailover` 매개 변수를 사용할 수 없는 레거시 클라이언트에 대한 장애 조치(Failover) 후 올바른 IP 주소에 연결하는 시간이 줄어들 수 있습니다.  `yourListenerName` 을 변경할 수신기의 이름으로 바꿉니다.  
   
 ```powershell
@@ -328,5 +327,5 @@ Start-ClusterResource yourAGResource
   
 ## <a name="see-also"></a>참고 항목  
  [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치 (Failover) &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [SQL Server 다중 서브넷 클러스터링&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  

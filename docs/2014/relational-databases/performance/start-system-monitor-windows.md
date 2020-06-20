@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: aeb073b7e44060c0382d3d641aa196b93fbb402d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aba02928ead04c3ad4ab1027f86e367b7bb787d5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150581"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066782"
 ---
 # <a name="start-system-monitor-windows"></a>시스템 모니터 시작(Windows)
   시스템 모니터를 사용하여 시스템 리소스의 사용률을 모니터링할 수 있습니다. 프로세서 및 메모리 사용 같은 서버 리소스와 잠금 및 트랜잭션 같은 다양한 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에 대한 실시간 성능 데이터를 카운터 형식으로 수집하여 확인합니다.  

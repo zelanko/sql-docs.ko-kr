@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a7b09bb2f08095af33f80fe4161032036482f835
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57a494af168a8f5572bafe93f8fb47b22a954a19
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228788"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936910"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>가용성 그룹 만들기(Transact-SQL)
   이 항목에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 기능이 설정된 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 인스턴스에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하여 가용성 그룹을 만들고 구성하는 방법을 설명합니다. *가용성 그룹* 은 단일 단위로 장애 조치(Failover)될 사용자 데이터베이스 집합과 장애 조치(Failover)를 지원하는 장애 조치(Failover) 파트너 집합( *가용성 복제본*이라고 함)을 정의합니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "75228788"
 |작업|Transact-SQL 문|태스크를 수행할 위치**<sup>*</sup>**|  
 |----------|----------------------------------|-------------------------------------------|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스당 하나의 데이터베이스 미러링 엔드포인트 만들기|[끝점 만들기](/sql/t-sql/statements/create-endpoint-transact-sql) *endpointName* ... DATABASE_MIRRORING|데이터베이스 미러링 엔드포인트가 없는 각 서버 인스턴스에서 실행합니다.|  
-|가용성 그룹 만들기|[가용성 그룹 만들기](/sql/t-sql/statements/create-availability-group-transact-sql)|초기 주 복제본을 호스트할 서버 인스턴스에서 실행합니다.|  
+|가용성 그룹 만들기|[CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql)|초기 주 복제본을 호스트할 서버 인스턴스에서 실행합니다.|  
 |가용성 그룹에 보조 복제본 조인|[ALTER AVAILABILITY GROUP](join-a-secondary-replica-to-an-availability-group-sql-server.md) *group_name* JOIN|보조 복제본을 호스트하는 각 서버 인스턴스에서 실행합니다.|  
 |보조 데이터베이스 준비|[백업](/sql/t-sql/statements/backup-transact-sql) 및 [복원](/sql/t-sql/statements/restore-statements-transact-sql).|주 복제본을 호스트하는 서버 인스턴스에 백업을 만듭니다.<br /><br /> RESTORE WITH NORECOVERY를 사용하여 보조 복제본을 호스팅하는 각 서버 인스턴스에 백업을 복원합니다.|  
 |가용성 그룹에 각 보조 데이터베이스를 조인하여 데이터 동기화 시작|[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr) *database_name* SET HADR AVAILABILITY GROUP = *group_name*|보조 복제본을 호스트하는 각 서버 인스턴스에서 실행합니다.|  
@@ -60,7 +59,7 @@ ms.locfileid: "75228788"
   
 1.  주 복제본을 호스팅할 서버 인스턴스에 연결합니다.  
   
-2.  [Create availability group](/sql/t-sql/statements/create-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용 하 여 가용성 그룹을 만듭니다.  
+2.  [CREATE AVAILABILITY group](/sql/t-sql/statements/create-availability-group-transact-sql) 문을 사용 하 여 가용성 그룹을 만듭니다 [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
 3.  새 보조 복제본을 가용성 그룹에 조인합니다. 자세한 내용은 [가용성 그룹에 보조 복제본 조인&#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 Always On 가용성 그룹에 보조 데이터베이스를 조인하는 방법에 대해 설명합니다.  
   
@@ -101,7 +100,7 @@ ms.locfileid: "75228788"
         GO  
         ```  
   
-    2.  다음 코드 예제에서는 *MyDb1* 및 *MyDb2*의 전체 데이터베이스 백업을 만듭니다. 이 코드 예제에서는 가상의 백업 공유 \\ \\ *FILESERVER*\\*sqlbackups*을 사용 합니다.  
+    2.  다음 코드 예제에서는 *MyDb1* 및 *MyDb2*의 전체 데이터베이스 백업을 만듭니다. 이 코드 예제에서는 가상의 백업 공유 \\ \\ *FILESERVER* \\ *sqlbackups*을 사용 합니다.  
   
         ```sql
         -- Backup sample databases:  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 422a755f-ee52-4863-b1aa-f4ef1b8fd0bb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16e5145ff3338cb597813e26e480d92aa899a1c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdaf7cc0e4e96f7e58c80a074df636f603d89a6f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62657248"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040381"
 ---
 # <a name="name-element-for-table-dta"></a>Table의 Name 요소(DTA)
   튜닝을 위한 테이블 이름을 지정합니다.  

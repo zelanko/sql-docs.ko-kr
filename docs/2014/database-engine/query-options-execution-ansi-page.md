@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c90d7cdf-3309-46f4-b900-220521bb9552
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b20ab1851d02e493035414dd4682fc5330296b19
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 088068bd4ddd70879efa606b22b186eb4839eaf6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858626"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929654"
 ---
 # <a name="query-options-execution-ansi-page"></a>쿼리 옵션 실행(ANSI 페이지)
   이 페이지를 사용 하 여에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ISO (ANSI) 표준에 지정 된 설정의 일부 또는 전부를 사용 하 여 쿼리를 실행 하도록 지정할 수 있습니다.  

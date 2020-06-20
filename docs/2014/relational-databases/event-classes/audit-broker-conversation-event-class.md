@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e92b8dacf3f1d4c9bf4992739acc7592f2135386
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5b454172d9be71390e383e3cdd03a2d92adc4d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62912197"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053409"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation 이벤트 클래스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 **Audit Broker Conversation** 이벤트를 만들어 Service Broker 대화 보안과 관련된 감사 메시지를 보고합니다.  

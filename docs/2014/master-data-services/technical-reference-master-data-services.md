@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 54865b00-563a-4932-ad4d-cbfd36b1e6c5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3594c866e2b55d4ae6a7fb8b014b15a5378b531f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a4a59eef6530bcb84b942794dcedcd863e1265f1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482779"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971010"
 ---
 # <a name="technical-reference-master-data-services"></a>기술 참조(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 구성 요소에 대한 기술 참조 정보를 찾습니다.  

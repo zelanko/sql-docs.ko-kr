@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0ead368dece8a0c1effd8f8ddc7ff5e5793e8350
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51004cf91b039ccdd83eda91425b3aea0764d237
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62791857"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937074"
 ---
 # <a name="availability-replica-is-disconnected"></a>가용성 복제본 연결 해제됨
     
@@ -28,11 +27,11 @@ ms.locfileid: "62791857"
 |||  
 |-|-|  
 |**정책 이름**|가용성 복제본 연결 상태|  
-|**문제**|가용성 복제본의 연결이 끊어짐|  
-|**범주**|**위험**|  
+|**문제점**|가용성 복제본의 연결이 끊어짐|  
+|**범주**|**심각**|  
 |**패싯에**|가용성 복제본|  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  이 정책은 가용성 복제본 간의 연결 상태를 확인합니다. 가용성 복제본의 연결 상태가 DISCONNECTED인 경우 정책은 비정상 상태에 있습니다. 그렇지 않으면 정책은 정상 상태입니다.  
   
 > [!NOTE]  

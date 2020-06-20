@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 683e8044b235828741fe429f133af82d1977031a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a96a7a7fcf6e4642ee9bd2d577e35dcbfb705fe4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150713"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066805"
 ---
 # <a name="monitor-and-tune-for-performance"></a>성능 모니터링 및 튜닝
   데이터베이스 모니터링의 목표는 서버의 성능을 평가하는 것입니다. 효과적인 모니터링을 위해서는 현재 성능에 대한 스냅샷을 정기적으로 만들어 문제를 일으키는 프로세스를 격리하고 데이터를 지속적으로 수집하여 성능 경향을 추적해야 합니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "63150713"
  지속적인 데이터베이스 성능 평가를 수행하면 응답 시간을 최소화하고 처리량을 최대화할 수 있으므로 성능이 최적화됩니다. 효율적인 네트워크 소통량, 디스크 I/O 및 CPU 사용량을 통해 성능을 최적화할 수 있습니다. 애플리케이션 요구 사항을 완벽하게 분석하고, 데이터의 논리적 및 물리적 구조를 이해하고, 데이터베이스 사용량을 평가하고, OLTP(온라인 트랜잭션 처리) 및 의사 결정 지원과 같이 서로 상충되는 상황인 경우 타협점을 찾아야 합니다.  
   
 ## <a name="benefits-of-monitoring-and-tuning-databases-for-performance"></a>데이터베이스 성능 모니터링 및 튜닝의 이점  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Microsoft Windows 운영 체제에서는 데이터베이스의 현재 상태를 확인하고 상태 변화에 따른 성능을 추적할 수 있는 유틸리티를 제공합니다. 를 모니터링 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]하는 데 사용할 수 있는 다양 한 도구와 기술이 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 모니터링하는 방법을 알면 다음 작업을 수행하는 데 도움을 얻을 수 있습니다.  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Microsoft Windows 운영 체제에서는 데이터베이스의 현재 상태를 확인하고 상태 변화에 따른 성능을 추적할 수 있는 유틸리티를 제공합니다. 를 모니터링 하는 데 사용할 수 있는 다양 한 도구와 기술이 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 모니터링하는 방법을 알면 다음 작업을 수행하는 데 도움을 얻을 수 있습니다.  
   
 -   성능을 향상시킬 수 있는지 알 수 있습니다. 예를 들어 자주 사용하는 쿼리의 응답 시간을 모니터링하면 테이블에 있는 쿼리나 인덱스에 대한 변경이 필요한지 알 수 있습니다.  
   

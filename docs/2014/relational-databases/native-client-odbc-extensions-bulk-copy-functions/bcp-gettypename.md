@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 52ab4d4b3cbb0e4418886517c9ffd9c70315851a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0341d9ba11cd66fdbfb72a05521028098c56c400
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701938"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019438"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
   지정한 BCP 유형 토큰의 SQL 유형 이름을 반환합니다.  
@@ -69,15 +68,15 @@ fIsMaxType
 |`SQLDATETIME`|여기서는|**datetime**|  
 |`SQLBITN`|여기서는|**bit-null**|  
 |`SQLBIT`|여기서는|**bit**|  
-|`SQLBIGCHAR`|아니요|**char**|  
-|`SQLCHARACTER`|아니요|**char**|  
-|`SQLBIGVARCHAR`|아니요|**varchar**|  
-|`SQLVARCHAR`|아니요|**varchar**|  
+|`SQLBIGCHAR`|예|**char**|  
+|`SQLCHARACTER`|예|**char**|  
+|`SQLBIGVARCHAR`|예|**varchar**|  
+|`SQLVARCHAR`|예|**varchar**|  
 |`SQLTEXT`|여기서는|**text**|  
-|`SQLBIGBINARY`|아니요|**binary**|  
-|`SQLBINARY`|아니요|**바이너리**|  
-|`SQLBIGVARBINARY`|아니요|**Varbinary**|  
-|`SQLVARBINARY`|아니요|**Varbinary**|  
+|`SQLBIGBINARY`|예|**binary**|  
+|`SQLBINARY`|예|**이진**|  
+|`SQLBIGVARBINARY`|예|**Varbinary**|  
+|`SQLVARBINARY`|예|**Varbinary**|  
 |`SQLIMAGE`|여기서는|**이미지**|  
 |`SQLINTN`|여기서는|**int-null**|  
 |`SQLDATETIMN`|여기서는|**datetime-null**|  
@@ -92,8 +91,8 @@ fIsMaxType
 |`SQLMONEY4`|여기서는|**Smallmoney**|  
 |`SQLFLT4`|여기서는|**실제로**|  
 |`SQLUNIQUEID`|여기서는|**uniqueidentifier**|  
-|`SQLNCHAR`|아니요|**Nchar**|  
-|`SQLNVARCHAR`|아니요|**Varchar**|  
+|`SQLNCHAR`|예|**Nchar**|  
+|`SQLNVARCHAR`|예|**Varchar**|  
 |`SQLNTEXT`|여기서는|**N**|  
 |`SQLVARIANT`|여기서는|**sql_variant**|  
 |`SQLINT8`|여기서는|**Bigint**|  

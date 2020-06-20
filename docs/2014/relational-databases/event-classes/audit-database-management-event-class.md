@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e3de528-c3f8-413f-a6b9-d324ca95ad8e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 73fffd183e9bfea55cc5a86184e348618eabf927
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9fc72179193754f4e8b4d52ed0598939f587f676
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62932446"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053371"
 ---
 # <a name="audit-database-management-event-class"></a>Audit Database Management 이벤트 클래스
   **Audit Database Management** 이벤트 클래스는 데이터베이스가 생성, 변경 또는 삭제될 때 발생합니다.  

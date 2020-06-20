@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46777707354b1379d50b6379e21aabd02ffb5097
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812948"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936320"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>최소 작동 중지 및 데이터 손실로 가용성 그룹 서버 업그레이드 및 업데이트
   서버 인스턴스를 SQL Server 2012에서 서비스 팩 또는 최신 버전으로 업데이트하거나 업그레이드할 때 순차적 업데이트 또는 업그레이드를 수행하면 가용성 그룹의 작동 중단을 단 한 번의 수동 장애 조치(Failover)로 줄일 수 있습니다. SQL Server 버전을 업그레이드하는 경우 롤링 업그레이드라고 하고, 핫픽스 또는 서비스 팩이 포함된 현재 SQL Server 버전을 업데이트하는 것을 롤링 업데이트라고 합니다.  
@@ -115,9 +114,9 @@ ms.locfileid: "62812948"
   
 |가용성 그룹|Node1|Node2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1|주|||  
-|AG2||주||  
-|AG3|||주|  
+|AG1|기본|||  
+|AG2||기본||  
+|AG3|||기본|  
   
  다음 시퀀스에서 부하 분산 롤링 업그레이드/업데이트를 실행하기 위한 상황에 적합할 수 있습니다.  
   
@@ -139,9 +138,9 @@ ms.locfileid: "62812948"
   
 |가용성 그룹|Node1|Node2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1||주||  
-|AG2|주|||  
-|AG3|||주|  
+|AG1||기본||  
+|AG2|기본|||  
+|AG3|||기본|  
   
  특정 구현에 따라 업그레이드/업데이트 경로가 달라질 수 있으며 클라이언트 애플리케이션에 발생하는 작동 중지 시간도 달라질 수 있습니다.  
   

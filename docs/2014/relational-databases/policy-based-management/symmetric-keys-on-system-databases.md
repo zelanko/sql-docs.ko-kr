@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 28e25ae3-d3dc-45ec-b316-f219512a1a47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5ac7d41bc693813f471caff7e746a44184146962
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81c657ededc694ed87df99e0739ff74b1eb9e39b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63252661"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066599"
 ---
 # <a name="symmetric-keys-on-system-databases"></a>시스템 데이터베이스의 대칭 키
   이 규칙은 master, msdb, model 및 tempdb 데이터베이스에서 사용자가 만든 대칭 키를 검사합니다.  

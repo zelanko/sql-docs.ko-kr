@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c6dbe5e5-b523-4b7c-94f0-eb1dfbce2056
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 38c59357d402cd12d73fecc91c4f40a6ca0ec32b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f5e552c02f0b02d6c401fbf8de892326d2d3cf5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62938883"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053252"
 ---
 # <a name="audit-login-change-password-event-class"></a>Audit Login Change Password 이벤트 클래스
   **Audit Login Change Password** 이벤트 클래스는 사용자가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 암호를 변경할 때마다 발생합니다.  

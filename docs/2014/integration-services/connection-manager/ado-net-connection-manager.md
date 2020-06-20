@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97a0690775b7b6d95a257bc5f5ed0a6483e1c24a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 850c8f0f54339594b19debd48ebf4ac7021873d3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833865"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921249"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 연결 관리자
-  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 사용하면 패키지에서 .NET 공급자를 사용하여 데이터 원본에 액세스할 수 있습니다. 이 연결 관리자는 일반적으로와 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]같은 데이터 원본에 액세스 하는 데 사용 되며, c #과 같은 언어를 사용 하 여 관리 코드로 작성 된 사용자 지정 작업에서 OLE DB 및 XML을 통해 노출 되는 데이터 원본에도 액세스 합니다.  
+  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 사용하면 패키지에서 .NET 공급자를 사용하여 데이터 원본에 액세스할 수 있습니다. 이 연결 관리자는 일반적으로와 같은 데이터 원본에 액세스 하는 데 사용 되며 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , c #과 같은 언어를 사용 하 여 관리 코드로 작성 된 사용자 지정 작업에서 OLE DB 및 XML을 통해 노출 되는 데이터 원본에도 액세스 합니다.  
   
- 패키지 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 에 연결 관리자를 추가 하면에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임에 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결로 확인 되는 연결 관리자를 만들고, 연결 관리자 속성을 설정 하 고, 연결 관리자를 패키지의 `Connections` 컬렉션에 추가 합니다.  
+ [!INCLUDE[vstecado](../../includes/vstecado-md.md)]패키지에 연결 관리자를 추가 하면에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임에 연결로 확인 되는 연결 관리자를 만들고, [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자 속성을 설정 하 고, 연결 관리자를 `Connections` 패키지의 컬렉션에 추가 합니다.  
   
  연결 관리자의 `ConnectionManagerType` 속성이 `ADO.NET`로 설정됩니다. `ConnectionManagerType`의 값은 연결 관리자에서 사용되는 .NET 공급자 이름이 포함되도록 한정됩니다.  
   

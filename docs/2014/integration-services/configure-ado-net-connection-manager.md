@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 609f8354-e876-4fed-adab-ac8d57a94f1c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 51d115aaeebcedd102709b0e1f3fab81e439a521
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 978f50d5b12088271d5cf89ba4513b95f175fdc2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060843"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921824"
 ---
 # <a name="configure-adonet-connection-manager"></a>ADO.NET 연결 관리자 구성
   **ADO.NET 연결 관리자 구성** 대화 상자를 사용하여 SqlClient 공급자와 같은 .NET Framework 데이터 공급자를 사용하여 액세스할 수 있는 데이터 원본에 연결을 추가할 수 있습니다. 연결 관리자는 기존 연결을 사용하거나 새 연결을 만들 수 있습니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "66060843"
  **데이터 연결 속성**  
  선택한 ADO.NET 데이터 연결의 속성과 값을 봅니다.  
   
- **신규**  
+ **새 항목**  
  **연결 관리자** 대화 상자를 사용하여 ADO.NET 데이터 연결을 만듭니다.  
   
  **Delete**  

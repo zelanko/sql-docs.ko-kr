@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a9597686f4c9ca5a90a8344b425b6808cd96477a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a7d54586a8a2d0b60a65288b4a90947862692d5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060567"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921704"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Integration Services 서비스를 클러스터 리소스로 구성
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스를 클러스터 리소스로 구성할 때 얻는 장점이 단점보다 많다고 생각하는 사용자를 위해 이 섹션에서는 필요한 구성 방법을 설명합니다. 그러나 [!INCLUDE[msCoName](../includes/msconame-md.md)] 서비스를 클러스터 리소스로 구성하지 않는 것이 좋습니다( [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 권장).  
@@ -102,7 +101,7 @@ ms.locfileid: "66060567"
   
 3.  공유 디스크에서 텍스트 편집기나 XML 편집기로 구성 파일을 엽니다. `ServerName` 요소의 값을 같은 리소스 그룹에 있는 가상 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이름으로 변경합니다.  
   
-4.  `StorePath` 요소의 값을 이전 단계에서 공유 디스크에 만든 **패키지** 폴더의 정규화 된 경로로 변경 합니다.  
+4.  요소의 값을 `StorePath` 이전 단계에서 공유 디스크에 만든 **패키지** 폴더의 정규화 된 경로로 변경 합니다.  
   
 5.  레지스트리의 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** 값을 공유 디스크의 정규화된 경로 및 서비스 구성 파일의 파일 이름에 업데이트합니다.  
   
