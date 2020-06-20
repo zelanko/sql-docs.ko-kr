@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: e250336b-0695-44f6-a42f-23222f94e377
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5c376340af1674c05ac3a38c88cde202bd35f314
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a47891599dbe735bd437f5239c73bfd34c422ca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211171"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057923"
 ---
 # <a name="monitoring-the-error-logs"></a>오류 로그 모니터링
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 특정 시스템 이벤트와 사용자 정의 이벤트를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 애플리케이션 로그에 기록합니다. 두 가지 로그 모두 모든 기록된 이벤트에 자동으로 타임스탬프를 남깁니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 있는 정보를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련된 문제를 해결할 수 있습니다.  

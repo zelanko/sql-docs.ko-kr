@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a887d956-4cd0-400a-aa96-00d7abd7c44b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 06913c27af89657aef5a0a5397cd77a1ee025299
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f36846565bb60fbf875e9babdabbb6d1667f5ea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211850"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062861"
 ---
 # <a name="ole-automation-objects-in-transact-sql"></a>Transact-SQL의 OLE 자동화 개체
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리, 저장 프로시저 및 트리거를 통해 OLE 자동화 개체를 참조할 수 있도록 하는 몇 가지 시스템 저장 프로시저가 포함됩니다. 이러한 시스템 저장 프로시저는 확장 저장 프로시저처럼 실행되며 저장 프로시저를 통해 실행되는 OLE 자동화 개체는 확장 저장 프로시저와 같은 방식으로 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스의 주소 공간에서 실행됩니다.  

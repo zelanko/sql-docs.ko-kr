@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5e48a38ba97feaf03a9ed14f3668ac4b98095a92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d172683f5248c5ad50cb20bb26f58c94849d4c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62679124"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064331"
 ---
 # <a name="about-sql-server-management-studio"></a>SQL Server Management Studio 정보
   이 대화 상자를 사용하여 컴퓨터에 설치되어 있는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 대한 정보를 확인하거나 복사할 수 있습니다. 평가 버전은 제품 사용 만료일까지 남은 일 수를 표시합니다.  

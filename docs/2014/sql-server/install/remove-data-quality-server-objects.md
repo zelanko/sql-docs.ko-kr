@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f273823825cf94da6269a58389f04207ad1c2707
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 870913346a7754e54cfd007f7c2b988b9b216cc4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68190666"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036661"
 ---
 # <a name="remove-data-quality-server-objects"></a>Data Quality 서버 개체 제거
   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 인스턴스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 제거하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 있는 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 의 인스턴스를 완전히 제거해도 DQS 데이터베이스 등의 일부 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 개체는 삭제되지 않습니다. 이로 인해 사용자가 SQL Server 설치 프로그램을 사용하여 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 를 제거할 때 DQS 데이터가 삭제되지 않습니다. 제거 프로세스가 완료된 후 이러한 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 개체를 수동으로 삭제해야 합니다.  

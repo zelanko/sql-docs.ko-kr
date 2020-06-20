@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 524e878933652699bef6e31da42d3a784b54df7c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51f195a9f5fbe97eadfc281ad50bd0de55d6151e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892645"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965533"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>테이블 복사 또는 쿼리 지정(SQL Server 가져오기 및 내보내기 마법사)
   **테이블 복사 또는 쿼리 지정** 페이지를 사용 하 여 데이터를 복사 하는 방법을 지정할 수 있습니다. 그래픽 인터페이스를 사용하여 복사할 기존 데이터베이스 개체를 선택하거나 Transact-SQL을 사용하여 복잡한 쿼리를 만들 수 있습니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "62892645"
   
 -   System.Data.Odbc  
   
- 추가 공급자에 대해 **하나 이상의 테이블 또는 뷰에서 데이터 복사** 옵션을 사용할 수 있도록 하기 위해 제 3 자가 providerdescriptor .xml 파일에 자체 providerdescriptor 섹션을 추가할 수 있습니다. 기본적으로이 파일은> \< *드라이브* 에 있습니다. ProviderDescriptor 섹션에 대한 요구 사항을 검토하려면 기본적으로 ProviderDescriptors.xml 파일과 같은 폴더에 있는 ProviderDescriptors.xsd 스키마 파일을 참조하십시오.  
+ 추가 공급자에 대해 **하나 이상의 테이블 또는 뷰에서 데이터 복사** 옵션을 사용할 수 있도록 하기 위해 제 3 자가 ProviderDescriptors.xml 파일에 자체 providerdescriptor 섹션을 추가할 수 있습니다. 기본적으로이 파일은 다음 위치에 \<*drive*> 있습니다.: FILES\MICROSOFT SQL server\100\dts\providerdescriptors ProviderDescriptor 섹션에 대한 요구 사항을 검토하려면 기본적으로 ProviderDescriptors.xml 파일과 같은 폴더에 있는 ProviderDescriptors.xsd 스키마 파일을 참조하십시오.  
   
  **전송할 데이터를 지정 하는 쿼리 작성**  
  **원본 쿼리 지정** 대화 상자를 사용 하 여 행을 검색 하는 SQL 문을 작성 합니다. 복사 작업 중에 원본 데이터를 수정하거나 제한하려면 이 옵션을 사용합니다. 선택 조건에 일치하는 행만 복사할 수 있습니다.  

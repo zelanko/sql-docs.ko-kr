@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: 33aac25f-abb4-4f29-af88-4a0dacd80ae7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3718a084211e7c3b2b7a14973e195a4b1c3b6b1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30a54064d398ec6db09a9ccd54eed9411a7f905a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780726"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933220"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>CLR(공용 언어 런타임) 통합에 대한 사용 시나리오 및 예
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 CLR(공용 언어 런타임) 통합의 프로그래밍 기능을 알아보는 데 사용할 수 있는 예제 애플리케이션, 패키지 예제 및 여러 코딩 예제가 포함되어 있습니다.  
   
  이러한 샘플과 추가 자료를 구현 하는 전체 Visual Studio 프로젝트에 대해서는 [CodePlex의 샘플 & 커뮤니티 프로젝트 Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=193935)를 참조 하세요.  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[CLR UDF에서 네이티브 코드 액세스](../../../2014/database-engine/dev-guide/accessing-native-code-from-a-clr-udf.md)|데이터베이스의 어셈블리에 있는 사용자 정의 함수에서 네이티브(비관리) C++ 코드의 함수를 호출하는 방법을 보여 줍니다.|  
 |[배열 매개 변수 예제](../../../2014/database-engine/dev-guide/array-parameter-sample.md)|클라이언트에서 서버의 CLR 통합 저장 프로시저로 정보 배열을 전달하여 데이터베이스에 행 집합을 만들거나 업데이트 또는 삭제하는 방법을 보여 줍니다. 이 작업은 UDT를 사용하여 수행합니다.|  
@@ -39,7 +38,7 @@ ms.locfileid: "62780726"
 |[통화 형식 및 변환 함수](../../../2014/database-engine/dev-guide/currency-type-and-conversion-function.md)|C#을 사용하여 Currency 사용자 정의 데이터 형식을 정의합니다.|  
 |[CLR을 사용하여 큰 개체 처리](../../../2014/database-engine/dev-guide/handling-large-objects-using-clr.md)|CLR 저장 프로시저를 사용하여 서버에서 액세스할 수 있는 파일 시스템과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 간에 LOB(Large Binary Object)를 전송하는 방법을 보여 줍니다.|  
 |[Hello World Ready 예제](../../../2014/database-engine/dev-guide/hello-world-ready-sample.md)|간단한 World Ready CLR 통합 기반 저장 프로시저를 만들고, 배포 및 테스트하는 기본 작업을 보여 줍니다.|  
-|[Hello World 예제](../../../2014/database-engine/dev-guide/hello-world-sample.md)|간단한 CLR 통합 기반 저장 프로시저를 만들고, 배포 및 테스트하는 기본 작업을 보여 줍니다.|  
+|[Hello World 샘플](../../../2014/database-engine/dev-guide/hello-world-sample.md)|간단한 CLR 통합 기반 저장 프로시저를 만들고, 배포 및 테스트하는 기본 작업을 보여 줍니다.|  
 |[In-Process 데이터 액세스 예제](../../../2014/database-engine/dev-guide/in-process-data-access-sample.md)|CLR in-process 데이터 액세스 공급자의 다양한 기능을 보여 주는 여러 간단한 함수가 포함되어 있습니다.|  
 |[결과 집합 예제](../../../2014/database-engine/dev-guide/result-set-sample.md)|쿼리 결과를 읽는 동안 새 연결을 열거나 모든 결과를 메모리로 읽어 오지 않고 명령을 실행하는 방법을 보여 줍니다.|  
 |[데이터 세트 보내기 예제](../../../2014/database-engine/dev-guide/send-dataset-sample.md)|서버측 CLR 기반 저장 프로시저 내에서 ADO .NET 기반 데이터 세트을 결과 집합으로 클라이언트에 반환하는 방법을 보여 줍니다.|  

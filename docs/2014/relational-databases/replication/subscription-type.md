@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9a50f588-ee45-4a87-826f-372ff0798587
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d936c1a1086f13d43bc38758f86a0ab80f757f7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18ccd93efe123d20415c3ce2cee2f0178b3d8620
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63249377"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063767"
 ---
 # <a name="subscription-type"></a>구독 유형
   병합 복제는 서버와 클라이언트라는 구독 유형을 제공합니다. 이전 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 각각 전역 및 로컬이라고 불렀습니다. 서버 구독이 있는 구독자는 다음을 수행할 수 있습니다.  

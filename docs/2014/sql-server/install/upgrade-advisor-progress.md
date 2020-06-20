@@ -16,25 +16,24 @@ helpviewer_keywords:
 ms.assetid: a9e3d1c8-d492-4beb-93c7-f1bc40d4a910
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 697f70d4435213a991e55adecb51a98120d8df1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 692b06051872084ff5e1b16dfaf1f8198a649d62
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091557"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062338"
 ---
 # <a name="upgrade-advisor-progress"></a>업그레이드 관리자 진행률
   업그레이드 관리자 분석은 선택된 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소의 분석을 수행하는 전용 분석기를 통해 시작됩니다. 구성 요소가 분석 되 면 **진행률 대화 상자에 진행률이 보고** 됩니다.  
   
 ## <a name="options"></a>옵션  
- **작업**  
+ **동작**  
  분석할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 지정합니다.  
   
  **상태**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소 진행률 인터페이스에서 반환된 상태 값을 표시합니다.  
   
- **메시지**  
+ **Message**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개별 분석기에서 반환된 오류, 실패 또는 성공 메시지를 표시합니다.  
   
 > [!NOTE]  

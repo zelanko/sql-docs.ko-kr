@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: a0ec9643-3b44-4467-b855-f45ae4794f7f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2677d0dd1f4697177171ba0edd4641ec02110310
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a50ec57973deca40accbc98970919363681be63f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056573"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964634"
 ---
 # <a name="raw-file-destination-editor-connection-manager-page"></a>원시 파일 대상 편집기(연결 관리자 페이지)
   원시 파일 대상 편집기를 사용하여 원시 데이터를 파일에 기록하도록 원시 파일 대상을 구성합니다.  
   
- **수행 작업**  
+ **원하는 작업을 선택하세요.**  
   
 -   [원시 파일 대상 편집기 열기](#open)  
   
@@ -62,6 +61,6 @@ ms.locfileid: "66056573"
  출력 열에 사용할 대체 이름을 지정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Raw File Destination](data-flow/raw-file-destination.md)  
+ [원시 파일 대상](data-flow/raw-file-destination.md)  
   
   

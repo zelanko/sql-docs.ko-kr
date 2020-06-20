@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b824129d1687dce8471800f79d106328b9ee36f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42dd04f4edf2d1e9b9b31b11ab96fcd97f9d21d6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892286"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966183"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services(SSIS) 변수
   변수에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지와 해당 컨테이너, 태스크 및 이벤트 처리기가 런타임에 사용할 수 있는 값이 저장됩니다. 스크립트 태스크와 스크립트 구성 요소의 스크립트에서도 변수가 사용될 수 있습니다. 태스크 및 컨테이너의 순서를 워크플로에 지정하는 선행 제약 조건에서는 해당 제약 조건 정의에 식이 포함된 경우에 변수가 사용될 수 있습니다.  
@@ -82,16 +81,16 @@ ms.locfileid: "62892286"
 > [!NOTE]  
 >  시스템 변수에서 구성할 수 있는 유일한 옵션은 값이 변경될 때 이벤트를 발생시키는지 여부를 지정하는 것입니다.  
   
- 설명  
+ Description  
  변수에 대한 설명을 지정합니다.  
   
  EvaluateAsExpression  
- 속성이로 `True`설정 되 면 제공 된 식이 변수 값을 설정 하는 데 사용 됩니다.  
+ 속성이로 설정 되 면 `True` 제공 된 식이 변수 값을 설정 하는 데 사용 됩니다.  
   
  식  
  변수에 할당되는 식을 지정합니다.  
   
- 이름  
+ 속성  
  변수 이름을 지정합니다.  
   
  네임스페이스  
@@ -114,17 +113,17 @@ ms.locfileid: "62892286"
  IncludeInDebugDump  
  디버그 덤프 파일에 변수 값이 포함되는지 여부를 나타냅니다.  
   
- 사용자 정의 변수 및 시스템 변수의 경우 **경우 inclueindebugdump** 옵션의 기본값은 `true`입니다.  
+ 사용자 정의 변수 및 시스템 변수의 경우 **경우 inclueindebugdump** 옵션의 기본값은 `true` 입니다.  
   
- 그러나 사용자 정의 변수의 경우 다음 조건이 충족 될 때 시스템에서 **IncludeInDebugDump** 옵션을 `false` 로 다시 설정 합니다.  
+ 그러나 사용자 정의 변수의 경우 **IncludeInDebugDump** `false` 다음 조건이 충족 될 때 시스템에서 IncludeInDebugDump 옵션을로 다시 설정 합니다.  
   
--   **EvaluateAsExpression** `true`variable 속성이로 설정 된 경우 시스템에서는 **IncludeInDebugDump** 옵션을로 `false`다시 설정 합니다.  
+-   **EvaluateAsExpression** variable 속성이로 설정 된 경우 `true` 시스템에서는 **IncludeInDebugDump** 옵션을로 다시 설정 합니다 `false` .  
   
-     디버그 덤프 파일에 식의 텍스트를 변수 값으로 포함 하려면 **IncludeInDebugDump** 옵션을로 `true`설정 합니다.  
+     디버그 덤프 파일에 식의 텍스트를 변수 값으로 포함 하려면 **IncludeInDebugDump** 옵션을로 설정 `true` 합니다.  
   
--   변수 데이터 형식이 문자열로 변경 되 면 시스템은 **IncludeInDebugDump** 옵션을로 `false`다시 설정 합니다.  
+-   변수 데이터 형식이 문자열로 변경 되 면 시스템은 **IncludeInDebugDump** 옵션을로 다시 설정 `false` 합니다.  
   
- 시스템에서 **IncludeInDebugDump** 옵션을로 `false`다시 설정 하면 사용자가 선택한 값이 재정의 될 수 있습니다.  
+ 시스템에서 **IncludeInDebugDump** 옵션을로 다시 설정 하면 `false` 사용자가 선택한 값이 재정의 될 수 있습니다.  
   
  값  
  사용자 정의 변수의 값은 문자 또는 식일 수 있습니다. 변수에는 변수 값과 값의 데이터 형식을 설정하기 위한 옵션이 포함됩니다. 이 두 속성은 호환되어야 합니다. 예를 들어 정수 데이터 형식에는 문자열 값을 사용할 수 없습니다.  

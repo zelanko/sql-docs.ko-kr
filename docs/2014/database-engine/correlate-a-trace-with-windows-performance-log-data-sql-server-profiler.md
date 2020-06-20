@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: e1b3072c-8daf-49a7-9895-c8cccd2adb95
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3294c9fd70ebae8eab4e76e17b2e0a21771ec26f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d1b66cbbed716a4ce7b2d5cf9611e161141f162
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065046"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934584"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>추적과 Windows 성능 로그 데이터의 상관 관계 지정(SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]Microsoft Windows 시스템 모니터 카운터와 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이벤트의 상관 관계를 지정할 수 있습니다. Windows 시스템 모니터는 지정한 카운터에 대한 시스템 작업을 성능 로그에 기록합니다.  
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]Microsoft Windows 시스템 모니터 카운터와 또는 이벤트의 상관 관계를 지정할 수 있습니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Windows 시스템 모니터는 지정한 카운터에 대한 시스템 작업을 성능 로그에 기록합니다.  
   
 > [!NOTE]  
 >  다른 버전의 Windows 간 로그 공유에 대한 자세한 내용은 이 항목의 마지막 부분에 있는 절차를 참조하십시오.  

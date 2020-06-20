@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 53699902-8699-4547-b56b-a5b2079e98b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 22b7c9ea4012655043cac7eb7f3d432ef1e2e854
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c86dfee37e9b206643069a2d442b27575324ed17
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057053"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964983"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>OLE DB 원본 편집기(연결 관리자 페이지)
   **OLE DB 원본 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 원본의 OLE DB 연결 관리자를 선택할 수 있습니다. 이 페이지를 사용하면 데이터베이스에서 테이블이나 뷰를 선택할 수도 있습니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66057053"
 >  [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2003 이전 버전을 사용하는 데이터 원본에서 데이터를 로드하려면 Excel 원본을 사용하십시오. 자세한 내용은 [Excel 원본 편집기&#40;연결 관리자 페이지&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)를 참조하세요.  
   
 > [!NOTE]  
->  OLE DB `CommandTimeout` 원본의 속성은 **OLE DB 원본 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용 하 여 설정할 수 있습니다. 이 속성에 대한 자세한 내용은 [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md)의 Excel 원본 섹션을 참조하십시오.  
+>  `CommandTimeout`OLE DB 원본의 속성은 **OLE DB 원본 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용 하 여 설정할 수 있습니다. 이 속성에 대한 자세한 내용은 [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md)의 Excel 원본 섹션을 참조하십시오.  
   
  OLE DB 원본에 대한 자세한 내용은 [OLE DB Source](data-flow/ole-db-source.md)을 참조하십시오.  
   
@@ -46,13 +45,13 @@ ms.locfileid: "66057053"
  **OLE DB 연결 관리자**  
  목록에서 기존 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결을 만듭니다.  
   
- **신규**  
+ **새 항목**  
  **OLE DB 연결 관리자 구성** 대화 상자를 사용하여 새 연결 관리자를 만듭니다.  
   
  **데이터 액세스 모드**  
  원본에서 데이터를 선택하는 방법을 지정합니다.  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |테이블 또는 뷰|OLE DB 데이터 원본에 있는 테이블이나 뷰에서 데이터를 검색합니다.|  
 |테이블 이름 또는 뷰 이름 변수|변수에 테이블 또는 뷰 이름을 지정합니다.<br /><br /> **관련 정보:** [패키지에서 변수 사용](../../2014/integration-services/use-variables-in-packages.md)|  
@@ -63,7 +62,7 @@ ms.locfileid: "66057053"
  **데이터 보기** 대화 상자를 사용하여 결과를 미리 봅니다. **미리 보기** 에는 최대 200개의 행이 표시될 수 있습니다.  
   
 > [!NOTE]  
->  데이터를 미리 보면 CLR 사용자 정의 형식의 열에 데이터가 포함되지 않습니다. 대신 \<값이 너무 커서 표시할 수 없습니다> 또는 System.Byte[] 값이 표시됩니다. 전자는 SQL OLE DB 공급자를 사용하여 데이터 원본에 액세스하는 경우 표시되고 후자는 &lt; [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client 공급자를 사용하는 경우 표시됩니다.  
+>  데이터를 미리 보면 CLR 사용자 정의 형식의 열에 데이터가 포함되지 않습니다. 대신 값 \<value too big to display> 또는 system.string []가 표시 됩니다. 전자는 SQL OLE DB 공급자를 사용하여 데이터 원본에 액세스하는 경우 표시되고 후자는 &lt; [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client 공급자를 사용하는 경우 표시됩니다.  
   
 ## <a name="data-access-mode-dynamic-options"></a>데이터 액세스 모드 동적 옵션  
   

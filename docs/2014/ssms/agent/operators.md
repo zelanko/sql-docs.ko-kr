@@ -1,5 +1,5 @@
 ---
-title: 운영자 | Microsoft 문서
+title: 연산자 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 03deab738f374716002c4d78e07078e90fb41822
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d141a2db9a69603701200bc50dcac57ef402968a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189025"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064426"
 ---
 # <a name="operators"></a>연산자
   운영자는 작업이 완료되거나 경고가 발생할 때 전자 메일 알림을 받을 수 있는 사람이나 그룹의 별칭입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 운영자를 통해 관리자 알림을 지원합니다. 운영자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 알림 및 모니터링 기능을 사용하도록 설정합니다.  
@@ -47,7 +46,7 @@ ms.locfileid: "68189025"
  운영자의 연락 정보는 운영자가 알림을 받는 방법을 정의합니다. 운영자는 전자 메일, 호출기 또는 **net send** 명령으로 알림을 받을 수 있습니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)]의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이후 버전에서는 에이전트에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 호출기 및 **net send** 옵션이 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 말고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.  
+>  의 이후 버전에서는 에이전트에서 호출기 및 **net send** 옵션이 제거 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 새 개발 작업에서는 이 기능을 사용하지 말고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.  
   
 -   **이메일 알림**  
   
@@ -117,7 +116,7 @@ ms.locfileid: "68189025"
   
 |||  
 |-|-|  
-|**작업**|**항목**|  
+|**작업**|**뒷부분**|  
 |운영자 만들기 관련 태스크|[운영자 만들기](create-an-operator.md)<br /><br /> [유사 시 대기 운영자 지정](designate-a-fail-safe-operator.md)|  
 |알림 할당 관련 태스크|[운영자에게 경고 할당](assign-alerts-to-an-operator.md)<br /><br /> [경고에 대한 응답 정의&#40;SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [Transact-sql&#41;sp_add_notification &#40;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [운영자에게 경고 할당](assign-alerts-to-an-operator.md)|  
   

@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 013a8e8ab09b192a2ff7a04a9d7ddc5be1395636
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4818b67766dafe851035041c8fd5137a0dfade73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82710747"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999203"
 ---
 # <a name="batches-of-statements"></a>문의 일괄 처리
-  문 일괄 처리에는 두 개 이상의 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문이 포함 되어 있습니다. 세미콜론 (;)은 **Sqlexecdirect** 또는 [sqlprepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360)에 전달 된 단일 문자열로 기본 제공 됩니다. 예:  
+  문 일괄 처리에는 두 개 이상의 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문이 포함 되어 있습니다. 세미콜론 (;)은 **Sqlexecdirect** 또는 [sqlprepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360)에 전달 된 단일 문자열로 기본 제공 됩니다. 다음은 그 예입니다.  
   
 ```  
 SQLExecDirect(hstmt,   

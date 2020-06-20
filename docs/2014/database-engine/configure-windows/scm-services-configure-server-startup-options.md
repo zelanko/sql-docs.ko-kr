@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 91a48d4acd771c19617bac26c1393f30334768e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af822eb405fb66f5e91340d42fc79bef0d769fbf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62810371"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935064"
 ---
 # <a name="configure-server-startup-options-sql-server-configuration-manager"></a>서버 시작 옵션 구성(SQL Server 구성 관리자)
-  이 항목에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration Manager를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 시작될 때마다 사용할 시작 옵션을 구성하는 방법에 대해 설명합니다. 시작 옵션 목록에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](database-engine-service-startup-options.md)을 참조하세요.  
+  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 시작될 때마다 사용할 시작 옵션을 구성하는 방법에 대해 설명합니다. 시작 옵션 목록에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](database-engine-service-startup-options.md)을 참조하세요.  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -52,9 +51,9 @@ ms.locfileid: "62810371"
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 독립 실행형 프로그램이 아니라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 프로그램용 스냅인이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 최신 버전의 Windows에서 애플리케이션으로 표시되지 않습니다.  
     >   
     >  -   **Windows 10**:  
-    >          Configuration Manager를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열려면 **시작 페이지**에서 sqlservermanager12.msc (의 경우 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])를 입력 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 경우 12를 더 작은 수로 바꿉니다. SQLServerManager12.msc를 클릭하면 구성 관리자가 열립니다. Configuration Manager를 시작 페이지나 작업 표시줄에 고정 하려면 Sqlservermanager12.msc를 마우스 오른쪽 단추로 클릭 한 다음 **파일 위치 열기**를 클릭 합니다. Windows 파일 탐색기에서 Sqlservermanager12.msc를 마우스 오른쪽 단추로 클릭 한 다음 **시작 화면에 고정** 또는 **작업 표시줄에 고정**을 클릭 합니다.  
+    >          Configuration Manager를 열려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **시작 페이지**에서 sqlservermanager12.msc (의 경우)를 입력 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 경우 12를 더 작은 수로 바꿉니다. SQLServerManager12.msc를 클릭하면 구성 관리자가 열립니다. Configuration Manager를 시작 페이지나 작업 표시줄에 고정 하려면 Sqlservermanager12.msc를 마우스 오른쪽 단추로 클릭 한 다음 **파일 위치 열기**를 클릭 합니다. Windows 파일 탐색기에서 Sqlservermanager12.msc를 마우스 오른쪽 단추로 클릭 한 다음 **시작 화면에 고정** 또는 **작업 표시줄에 고정**을 클릭 합니다.  
     > -   **Windows 8**:  
-    >          Configuration Manager를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열려면 **검색** 참의 **앱**아래에 **SQLServerManager\<version>** (예: `SQLServerManager12.msc`)를 입력 한 다음 **enter**키를 누릅니다.  
+    >          Configuration Manager를 열려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **검색** 참의 **앱**아래에 **SQLServerManager \<version> ** 를 입력 한 `SQLServerManager12.msc` 다음 **enter**키를 누릅니다.  
   
 2.  오른쪽 창에서 **SQL Server(***<instance_name>***)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   

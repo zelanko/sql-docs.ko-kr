@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 59de41e7-557f-462a-8914-53ec35496baa
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 20c42e7d57415875acd1aebeaa3a674285468dc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ab6f5e1d93def3f28fafb5423721afa16aad236
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094354"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042289"
 ---
 # <a name="installation-how-to-topics"></a>설치 방법 도움말 항목
   다음 항목을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 설치할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[설치 마법사 &#40;설치 프로그램에서 SQL Server 2014을 설치&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|설치 마법사를 사용한 일반적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 설명하는 절차 항목입니다.|  
 |[Install SQL Server 2014 from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)|무인 설치 프로그램을 실행하는 데 사용하는 예제 구문 및 설치 매개 변수를 제공하는 절차 항목입니다.|  

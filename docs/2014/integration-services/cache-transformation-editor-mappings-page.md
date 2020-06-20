@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e236fc3fd55d156dbe9dbf7aebe840541e1bee1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56e4197bf4e4be1ca695778920ba8abe03bf4f7e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061183"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924614"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>캐시 변환 편집기(매핑 페이지)
   **캐시 변환 편집기** 의 **매핑** 페이지를 사용하여 캐시 변환의 입력 열을 캐시 연결 관리자의 대상 열에 매핑할 수 있습니다.  

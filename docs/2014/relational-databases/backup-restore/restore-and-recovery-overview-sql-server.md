@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2175ae19218592a2742aa1404ffa6620da333846
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 2b8f032dce4f2eb09ef80cfa8c6333de2d563a81
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925088"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957133"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>복원 및 복구 개요(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 오류를 복구하려면 데이터베이스 관리자는 논리적으로 올바르고 의미 있는 복원 시퀀스로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 집합을 복원해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복원 및 복구에서는 다음과 같이 전체 데이터베이스, 데이터 파일 또는 데이터 페이지 백업으로부터의 데이터 복원을 지원합니다.  

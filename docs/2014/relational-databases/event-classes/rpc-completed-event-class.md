@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c4b427047aeba970ad65a6bd2ac31a219978ea71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a16d34ca8865174d9d05dc08f01402a9d87187b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046768"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052592"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed 이벤트 클래스
   RPC:Completed 이벤트 클래스는 원격 프로시저 호출이 완료되었음을 나타냅니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "63046768"
 |Duration|`bigint`|이벤트에서 사용한 시간입니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]부터 마이크로초 단위입니다. 이전 버전에서는 밀리초 단위입니다.|13|yes|  
 |EndTime|`datetime`|원격 프로시저 호출이 종료된 시간입니다.|15|예|  
 |Error|`int`|지정된 이벤트의 오류 번호입니다.<br /><br /> 0=확인<br /><br /> 1=오류<br /><br /> 2=중단<br /><br /> 3=건너뜀|31|yes|  
-|EventClass|`int`|이벤트 유형 = 10|27|아니요|  
+|EventClass|`int`|이벤트 유형 = 10|27|예|  
 |EventSequence|`int`|요청 내에 지정된 이벤트 시퀀스입니다.|51|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공하면 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  

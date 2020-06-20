@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f17abdd4-5f34-403a-ade4-7857d3056b83
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d67d036987fe92275b4cf524c15c1ebe083001b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a70c72647ad1b348a8f9c1fb6980626b5f1b178
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704956"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063821"
 ---
 # <a name="input-and-output-error-during-hard-page-fault"></a>Input and Output Error During Hard Page Fault
   이 규칙은 시스템 이벤트 로그에서 EventId 51을 검사합니다. 이 오류는 하드 페이지 폴트 중에 오류로 인해 발생합니다.  

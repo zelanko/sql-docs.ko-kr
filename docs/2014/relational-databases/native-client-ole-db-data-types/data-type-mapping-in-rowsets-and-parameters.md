@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 65858c2d8f43a7fb675f17ff8c719b1041d6ea79
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ca5250c11d373085cdb3183d5717b84f54c1b8d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705126"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056306"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>행 집합 및 매개 변수의 데이터 형식 매핑
   행 집합 및 매개 변수 값에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **IColumnsInfo:: GetColumnInfo** 및 **ICommandWithParameters:: GetParameterInfo**함수에 보고 된 다음 OLE DB 정의 된 데이터 형식을 사용 하 여 데이터를 나타냅니다.  

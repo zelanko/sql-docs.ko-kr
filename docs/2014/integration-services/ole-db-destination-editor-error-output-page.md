@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3398a56ef3428376ca8c50b0fbd2b53e75b9491e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33a152e645706507b00a6ae261fdaec8d9450f12
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057117"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964973"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>OLE DB 대상 편집기(오류 출력 페이지)
   **OLE DB 대상 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 지정할 수 있습니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66057117"
  **입/출력**  
  입력 이름을 표시합니다.  
   
- **열의**  
+ **열**  
  사용되지 않습니다.  
   
  **오류**  

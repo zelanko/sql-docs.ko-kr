@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 014c0891fa3a887e781def415e68c38549bafe08
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e7afc4ff0e6b69c70535ef39677f3d834edbee15
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755048"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934244"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>데이터베이스 미러링 모니터(경고 페이지)
   데이터베이스 미러링 이벤트에서 지원되는 경고와 지정된 경고 임계값(사용 가능한 경우)의 읽기 전용 목록을 표시합니다.  

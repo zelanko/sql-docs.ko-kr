@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c97682163313a56acb8521174fa8d4012a69b529
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150825"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063899"
 ---
 # <a name="plan-guides"></a>계획 지침
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 실제 쿼리의 텍스트를 직접 변경할 수 없거나 직접 변경하지 않으려는 경우 계획 지침에 따라 쿼리 성능을 최적화할 수 있습니다. 계획 지침은 쿼리 힌트 또는 고정 쿼리 계획을 연결하여 쿼리 최적화에 영향을 줍니다. 계획 안내는 타사 공급업체에서 제공된 데이터베이스 애플리케이션의 일부 쿼리 하위 집합이 올바른 성능을 내지 못하는 경우에 유용합니다. 계획 지침에서 최적화하려는 Transact-SQL 문을 지정하고 사용할 쿼리 힌트가 들어 있는 OPTION 절이나 쿼리를 최적화하는 데 사용할 특정 쿼리 계획을 지정합니다. 쿼리가 실행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 Transact-SQL 문을 계획 지침과 대응시키고 런타임에 쿼리에 OPTION 절을 추가하거나 지정된 쿼리 계획을 사용합니다.  
@@ -125,7 +124,7 @@ sp_create_plan_guide
   
  SQL 또는 TEMPLATE 기반 계획 지침을 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 두 값의 문자를 비교하여 @module_or_batch 및 @params 인수의 값을 일치시킵니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 실제 일괄 처리에서 수신한 것과 똑같이 텍스트를 제공해야 합니다.  
   
- = @type ' SQL '이 고 @module_or_batch 가 NULL로 설정 된 경우의 @module_or_batch 값은의 @stmt값으로 설정 됩니다. 즉, *statement_text* 의 값은에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]전송 될 때 문자에 대해 문자를 사용 하 여 동일한 형식으로 제공 되어야 합니다. 이 일치 작업을 더 효과적으로 처리하기 위해 내부 변환은 수행되지 않습니다.  
+ @type= ' SQL '이 고 @module_or_batch 가 NULL로 설정 된 경우의 값은 @module_or_batch 의 값으로 설정 됩니다 @stmt . 즉, *statement_text* 의 값은에 전송 될 때 문자에 대해 문자를 사용 하 여 동일한 형식으로 제공 되어야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이 일치 작업을 더 효과적으로 처리하기 위해 내부 변환은 수행되지 않습니다.  
   
  일반(SQL 또는 OBJECT) 계획 지침 및 TEMPLATE 계획 지침 모두 문에 적용할 수 있을 경우 일반 계획 지침만 사용됩니다.  
   
@@ -137,7 +136,7 @@ sp_create_plan_guide
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|작업|항목|  
+|Task|항목|  
 |----------|-----------|  
 |계획 지침을 만드는 방법에 대해 설명합니다.|[새 계획 지침 만들기](create-a-new-plan-guide.md)|  
 |매개 변수가 있는 쿼리에 대한 계획 지침을 만드는 방법에 대해 설명합니다.|[매개 변수가 있는 쿼리를 위한 계획 지침 만들기](create-a-plan-guide-for-parameterized-queries.md)|  
@@ -149,7 +148,7 @@ sp_create_plan_guide
 |계획 지침의 유효성을 검사하는 방법에 대해 설명합니다.|[업그레이드 후 계획 지침의 유효성 검사](validate-plan-guides-after-upgrade.md)|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;sp_create_plan_guide &#40;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [Transact-sql&#41;sp_create_plan_guide_from_handle &#40;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
  [Transact-sql&#41;sp_control_plan_guide &#40;](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
  [plan_guides &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   

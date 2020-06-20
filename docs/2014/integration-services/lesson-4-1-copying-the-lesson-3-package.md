@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c3a765f23b4bfcdd4d8f0ff84ac8d363424882bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fdeb04558cf8544eb8aad5456ec42fed8160f025
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767453"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965163"
 ---
 # <a name="step-1-copying-the-lesson-3-package"></a>1단계: 3단원 패키지 복사
   이 태스크에서는 3단원에서 만든 Lesson 3.dtsx 패키지의 복사본을 만듭니다. 또는 3단원을 완료하지 않은 경우에는 자습서에 포함되어 있는 완성된 3단원 패키지를 프로젝트에 추가한 다음 작업을 수행할 복사본을 만들 수 있습니다. 4단원의 나머지 부분에서 이 새 복사본을 사용합니다.  
@@ -36,9 +35,9 @@ ms.locfileid: "62767453"
   
 6.  **제어 흐름** 탭 배경의 아무 곳이나 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-7.  속성 창에서 `Name` 속성을로 `Lesson 4`업데이트 합니다.  
+7.  속성 창에서 속성을로 업데이트 `Name` `Lesson 4` 합니다.  
   
-8.  **Id** 속성 상자를 클릭 한 다음 목록에서 ** \<새 id 생성>** 를 클릭 합니다.  
+8.  **ID** 속성 상자를 클릭한 다음 목록에서 **\<Generate New ID>** 를 클릭합니다.  
   
 ### <a name="to-add-the-completed-lesson-3-package"></a>완성된 3단원 패키지를 추가하려면  
   

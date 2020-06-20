@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3e4eaf05eb6334a9df316642adbeb4086be079ca
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 584032b958494e6b33b729a8d0657a4ee544a86e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707411"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056356"
 ---
 # <a name="persisted-data-source-objects"></a>지속형 데이터 원본 개체
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 **IPersistFile** 인터페이스를 사용 하 여 지속형 데이터 원본 개체를 지원 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  **1. 데이터 원본 초기화 지속:**  
   
  이 예에서는 서버, 데이터베이스 및 연결의 Windows 인증 모드 사용을 정의하는 데이터 원본 초기화 속성을 지속하는 함수를 보여 줍니다. 서버 이름과 데이터베이스 이름은 함수의 *pLocation* 및 *pDatasource* 매개 변수로 받습니다.  

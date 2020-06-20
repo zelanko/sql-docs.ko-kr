@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4305438285ae5f3b51ab8ac51ec2b1d0699aee64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95de509e0c78c807c3c9de25b317eb2b540db93a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62810351"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935040"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>다른 컴퓨터에 연결(SQL Server 구성 관리자)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 다른 컴퓨터에 연결하는 방법에 대해 설명합니다. 첫 번째 절차에 따라 Windows 컴퓨터 관리 MMC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console)를 열고 해당 컴퓨터에 연결한 다음 서비스 및 애플리케이션 트리를 확장합니다. 두 번째 절차에 따라 원격 컴퓨터의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에 대한 링크가 있는 파일을 만듭니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "62810351"
   
 3.  **컴퓨터 선택** 대화 상자의 **다른 컴퓨터** 입력란에 관리할 컴퓨터의 이름을 입력하고 **확인**을 클릭합니다.  
   
-     원격 컴퓨터에서 실행 중인 서비스가 컴퓨터 관리에 표시됩니다. 최상위 노드가 **컴퓨터 관리** \<*remotecomputer*>로 변경됩니다.  
+     원격 컴퓨터에서 실행 중인 서비스가 컴퓨터 관리에 표시됩니다. 최상위 노드가 **컴퓨터 관리** 로 변경 \<*remotecomputer*> 됩니다.  
   
 4.  콘솔 트리에서 **서비스 및 애플리케이션**을 확장한 다음 **SQL Server 구성 관리자** 를 확장하여 원격 컴퓨터의 서비스를 관리합니다.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62810351"
   
 1.  **시작** 메뉴에서 **실행**을 클릭합니다.  
   
-2.  **열기** 상자에를 입력 `mmc -a` 하 여 작성자 모드 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 관리 콘솔을 엽니다.  
+2.  **열기** 상자에를 입력 `mmc -a` 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 작성자 모드에서 관리 콘솔을 엽니다.  
   
 3.  **파일** 메뉴에서 **스냅인 추가/제거**를 클릭합니다.  
   
@@ -59,13 +58,13 @@ ms.locfileid: "62810351"
   
 8.  **스냅인 추가/제거** 창에서 **확인**을 클릭합니다.  
   
-9. **컴퓨터 관리 (***\<컴퓨터 이름>***)** 와 **서비스 및 응용 프로그램**을 확장 합니다.  
+9. **컴퓨터 관리(***\<computer name>***)** 와 **서비스 및 애플리케이션**을 확장합니다.  
   
 10. **SQL Server 구성 관리자**를 마우스 오른쪽 단추로 클릭한 다음 **여기에서 창 새로 만들기**를 클릭합니다.  
   
 11. **창** 메뉴에서 **콘솔 루트**를 클릭하여 첫 번째 창으로 전환한 다음, 창을 삭제합니다.  
   
-12. **파일** 메뉴에서 다른 이름 **으로 저장**을 클릭 하 고 파일 확장명을 가진 `.msc` 적절 한 이름을 사용 하 여 원하는 폴더에 파일을 저장 합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console을 닫습니다.  
+12. **파일** 메뉴에서 다른 이름 **으로 저장**을 클릭 하 고 파일 확장명을 가진 적절 한 이름을 사용 하 여 원하는 폴더에 파일을 저장 합니다 `.msc` . [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console을 닫습니다.  
   
 13. 대상 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 열려면 파일을 두 번 클릭합니다. 필요한 경우 파일에 대한 링크를 바탕 화면이나 **시작** 메뉴에 저장합니다.  
   

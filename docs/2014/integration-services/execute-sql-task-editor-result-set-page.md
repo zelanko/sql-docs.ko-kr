@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d27000c8-8d91-4e1c-b45e-bca9a3c12f6d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d84f7fe551d83f609b2ffc3da92b51eb36b9a595
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43921efab592e6642fcc5adaef8caa869a1b524f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058971"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966753"
 ---
 # <a name="execute-sql-task-editor-result-set-page"></a>SQL 실행 태스크 편집기(결과 집합 페이지)
   **SQL 실행 태스크 편집기** 대화 상자의 **결과 집합** 페이지를 사용하여 SQL 문의 결과를 새 변수 또는 기존 변수로 매핑할 수 있습니다. 일반 페이지의 **ResultSet** 을 **없음**으로 설정한 경우에는 이 대화 상자의 옵션을 사용할 수 없습니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "66058971"
  **관련 항목**: [SQL 실행 태스크의 결과 집합](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
   
  **변수 이름**  
- 변수를 선택하여 결과 집합을 변수로 매핑하거나 \<**새 변수...**>를 클릭하여 **변수 추가** 대화 상자를 사용하여 새 변수를 추가합니다.  
+ 변수를 선택 하 여 결과 집합을 변수에 매핑하고 \<**New variable...**> **변수 추가** 대화 상자를 사용 하 여 새 변수를 추가 하려면 클릭 합니다.  
   
  **추가**  
  결과 집합 매핑을 추가하려면 클릭합니다.  

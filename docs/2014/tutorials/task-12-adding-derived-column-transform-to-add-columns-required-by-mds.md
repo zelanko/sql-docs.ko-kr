@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 98ccb271-04da-4126-9729-67e9a479aaef
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 18789f5bc1d97e1531588d50e2430829f95912b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8eac057177032892ac99f557aa9d18ce497b7b2f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65485247"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054292"
 ---
 # <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>태스크 12: 파생 열 변환을 추가하여 MDS에 필요한 열 추가
   이 작업에서는 파생 열 변환을 데이터 흐름에 추가합니다. 이 변환에 전달 된 레코드에 두 개의 파생 열 **Importtype** 및 **batchtag**를 추가 합니다. MDS의 준비 테이블에 데이터를 업로드하려면 먼저 이러한 열을 추가해야 합니다. 이러한 두 열은 MDS에서 준비 테이블의 필수 열입니다. 자세한 내용은 [리프 멤버 준비 테이블](../master-data-services/leaf-member-staging-table-master-data-services.md) 을 참조 하십시오.  

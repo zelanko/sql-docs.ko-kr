@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84acc1541e8c66da15405330ca48b41f256811ab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056890"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964883"
 ---
 # <a name="package-configurations"></a>패키지 구성
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 런타임에 속성 값을 업데이트 하는 데 사용할 수 있는 패키지 구성을 제공 합니다.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 런타임에 속성 값을 업데이트 하는 데 사용할 수 있는 패키지 구성을 제공 합니다.  
   
 > [!NOTE]  
 >  구성은 패키지 배포 모델에 사용할 수 있습니다. 매개 변수는 프로젝트 배포 모델에 대한 구성 대신 사용됩니다. 프로젝트 배포 모델을 사용하면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오.  
@@ -79,12 +78,12 @@ ms.locfileid: "66056890"
   
 -   **/ConfigFile** 옵션을 사용하여 디자인 타임에 지정한 구성을 대체하는 구성을 로드할 수는 없습니다.  
   
- 이러한 옵션에 대 한 자세한 내용과 이러한 옵션의 동작이 및 이전 버전 간에 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 어떻게 다른 지에 대 한 자세한 내용은 [SQL Server 2014의 Integration Services 기능에 대 한 동작 변경 내용](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)을 참조 하세요.  
+ 이러한 옵션에 대 한 자세한 내용과 이러한 옵션의 동작이 및 이전 버전 간에 어떻게 다른 지에 대 한 자세한 내용은 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] [SQL Server 2014의 Integration Services 기능에 대 한 동작 변경 내용](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)을 참조 하세요.  
   
 ## <a name="package-configuration-types"></a>패키지 구성 유형  
  다음 표에서는 패키지 구성 유형에 대해 설명합니다.  
   
-|유형|설명|  
+|Type|Description|  
 |----------|-----------------|  
 |XML 구성 파일|구성을 포함하는 XML 파일입니다. XML 파일은 여러 구성을 포함할 수 있습니다.|  
 |환경 변수|환경 변수는 구성을 포함합니다.|  
@@ -123,7 +122,7 @@ ms.locfileid: "66056890"
 ### <a name="registry-entry"></a>레지스트리 항목  
  레지스트리 항목을 사용하여 구성을 저장하려면 기존 키를 사용하거나 HKEY_CURRENT_USER에서 새 키를 만들 수 있습니다. `Value` 값이 있는 레지스트리 키를 사용해야 합니다. 값은 DWORD 또는 문자열이 될 수 있습니다.  
   
- **레지스트리 항목** 구성 유형을 선택할 경우 레지스트리 항목 상자에 레지스트리 키의 이름을 입력합니다. 형식은 \<레지스트리 키>입니다. HKEY_CURRENT_USER의 루트에 없는 레지스트리 키를 사용하려면 \<레지스트리 키\레지스트리 키\\...> 형식을 사용하여 키를 식별합니다. 예를 들어 SSISPackages에 있는 MyPackage 키를 사용하려면 `SSISPackages\MyPackage`를 입력합니다.  
+ **레지스트리 항목** 구성 유형을 선택할 경우 레지스트리 항목 상자에 레지스트리 키의 이름을 입력합니다. 형식은 \<registry key>입니다. HKEY_CURRENT_USER의 루트에 없는 레지스트리 키를 사용 하려면 해당 형식을 사용 하 여 \<Registry key\registry key\\...> 키를 식별 합니다. 예를 들어 SSISPackages에 있는 MyPackage 키를 사용하려면 `SSISPackages\MyPackage`를 입력합니다.  
   
 ### <a name="sql-server"></a>SQL Server  
  **SQL Server** 구성 유형을 선택한 경우 구성을 저장할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스에 대한 연결을 지정하십시오. 기존 테이블에 구성을 저장하거나 지정한 데이터베이스에 새 테이블을 만들 수 있습니다.  

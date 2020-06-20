@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: af68d59a-a04d-4f23-9967-ad4ee2e63381
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3831943533939f7b9f8e31f09b80c71cc61b8d3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef3d6fe660b563ceb8f86b2d3cce123447de5366
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094427"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042544"
 ---
 # <a name="install-sql-server-management-tools"></a>SQL Server 관리 도구 설치
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 도구에는 다음과 같은 구성 요소가 포함되어 있습니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "66094427"
   
  컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스의 수에 관계없이 하나의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 관리 도구 복사본만 설치됩니다.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]관리 도구는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 도구와 동일한 컴퓨터에서 함께 실행할 수 있습니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]관리 도구는 이전 버전의 관리 도구와 동일한 컴퓨터에서 함께 실행할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 2014 버전에서 지 원하는 기능](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa21df6a-b6b5-4b15-9104-957385821594
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 404b1d5d8467fe5840a6f53007bd55bc58cdf19f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8406f31269c92dfc950834d31da88fcb26259d51
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089535"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928244"
 ---
 # <a name="trace-table-properties-events-selection-tab"></a>추적 테이블 속성(이벤트 선택 탭)
   **추적 테이블 속성** 대화 상자의 **이벤트 선택** 탭을 사용하여 추적의 이벤트 및 데이터 열 속성을 보거나 추적에서 이벤트나 열을 제거할 수 있습니다.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5e51cda61bb44d1f143cab50901276b927cca73a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae3b565f858c383775b4fcccfac236c316fcfa4e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176073"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927434"
 ---
 # <a name="what39s-new-database-engine"></a>새&#39;s (데이터베이스 엔진)
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 의 최신 릴리스에는 데이터 스토리지 시스템을 디자인, 개발 및 유지 관리하는 설계자, 개발자 및 관리자의 작업 효율성과 생산성을 증대시키는 새로운 기능과 향상된 기능이 추가되었습니다. 다음은 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에서 향상된 기능에 대한 설명입니다.  
@@ -30,11 +29,11 @@ ms.locfileid: "70176073"
  
   
 ###  <a name="sql-server-data-files-in-azure"></a><a name="DataFiles"></a>Azure에서 데이터 파일 SQL Server  
- [Azure에서 SQL Server 데이터 파일](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) 을 사용 하면 azure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] blob으로 저장 된 데이터베이스 파일을 기본으로 지원할 수 있습니다. 이 기능을 사용 하면 온-프레미스 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Azure의 가상 머신에서 Azure Blob Storage 데이터에 대 한 전용 저장소 위치를 실행 하는 데이터베이스를 만들 수 있습니다.  
+ [Azure에서 SQL Server 데이터 파일](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) 을 사용 하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] azure blob으로 저장 된 데이터베이스 파일을 기본으로 지원할 수 있습니다. 이 기능을 사용 하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온-프레미스 또는 Azure의 가상 머신에서 Azure Blob Storage 데이터에 대 한 전용 저장소 위치를 실행 하는 데이터베이스를 만들 수 있습니다.  
   
   
 ###  <a name="host-a-sql-server-database-in-an-azure-virtual-machine"></a><a name="AzureVM"></a>Azure 가상 머신에서 SQL Server 데이터베이스 호스팅  
- Azure 가상 컴퓨터에 [SQL Server 데이터베이스 배포](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) 마법사를 사용 하 여 Azure 가상 컴퓨터의 인스턴스에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스를 호스팅할 수 있습니다.  
+ Azure 가상 컴퓨터에 [SQL Server 데이터베이스 배포](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) 마법사를 사용 하 여 Azure 가상 컴퓨터의 인스턴스에서 데이터베이스를 호스팅할 수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 있습니다.  
   
   
 ###  <a name="backup-and-restore-enhancements"></a><a name="Backup"></a>향상 된 백업 및 복원 기능  
@@ -42,11 +41,11 @@ ms.locfileid: "70176073"
   
 -   **URL에 대한 SQL Server 백업**  
   
-     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], PowerShell 및 SMO에서만 지원되는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP1 CU2에 [!INCLUDE[tsql](../includes/tsql-md.md)] URL 백업이 도입되었습니다. 에서 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 를 사용 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 하 여 Azure Blob storage 서비스에 백업 하거나 복원할 수 있습니다. 새로운 옵션은 백업 태스크와 유지 관리 계획에 사용할 수 있습니다. 자세한 내용은 [SQL Server Management Studio에서 백업 작업 사용](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS), [유지 관리 계획 마법사를 사용 하 여 URL에 백업 SQL Server](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)및 [SQL Server Management Studio를 사용 하 여 Azure storage에서 복원](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)을 참조 하세요.  
+     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], PowerShell 및 SMO에서만 지원되는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP1 CU2에 [!INCLUDE[tsql](../includes/tsql-md.md)] URL 백업이 도입되었습니다. 에서를 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 사용 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 하 여 Azure Blob storage 서비스에 백업 하거나 복원할 수 있습니다. 새로운 옵션은 백업 태스크와 유지 관리 계획에 사용할 수 있습니다. 자세한 내용은 [SQL Server Management Studio에서 백업 작업 사용](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS), [유지 관리 계획 마법사를 사용 하 여 URL에 백업 SQL Server](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)및 [SQL Server Management Studio를 사용 하 여 Azure storage에서 복원](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)을 참조 하세요.  
   
--   **Azure에 SQL Server 관리 백업**  
+-   **Azure에 대 한 관리 되는 백업 SQL Server**  
   
-     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] URL 백업을 기반으로 하는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 는 데이터베이스 및 로그 백업을 관리하고 예약하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 제공하는 서비스입니다. 이 릴리스에서는 Azure storage에 대 한 백업만 지원 됩니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 데이터베이스 수준뿐만 아니라 인스턴스 수준에서도 구성될 수 있으므로 데이터베이스 수준의 세부 제어와 인스턴스 수준의 자동화를 활용할 수 있도록 합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]온-프레미스 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 실행 되는 인스턴스와 Azure virtual machines에서 실행 되는 인스턴스에 대해 구성할 수 있습니다. Azure virtual machines에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 실행 되는 인스턴스에 대해 권장 됩니다. 자세한 내용은 [Azure에 대 한 관리 되는 백업 SQL Server](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)를 참조 하세요.  
+     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] URL 백업을 기반으로 하는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 는 데이터베이스 및 로그 백업을 관리하고 예약하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 제공하는 서비스입니다. 이 릴리스에서는 Azure storage에 대 한 백업만 지원 됩니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 데이터베이스 수준뿐만 아니라 인스턴스 수준에서도 구성될 수 있으므로 데이터베이스 수준의 세부 제어와 인스턴스 수준의 자동화를 활용할 수 있도록 합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]온-프레미스로 실행 되는 인스턴스와 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Azure virtual machines에서 실행 되는 인스턴스에 대해 구성할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Azure virtual machines에서 실행 되는 인스턴스에 대해 권장 됩니다. 자세한 내용은 [Azure에 대 한 관리 되는 백업 SQL Server](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)를 참조 하세요.  
   
 -   **백업용 암호화**  
   
@@ -80,7 +79,7 @@ ms.locfileid: "70176073"
   
   
 ###  <a name="partition-switching-and-indexing"></a><a name="OIR"></a>파티션 전환 및 인덱싱  
- 이제 분할 테이블의 개별 파티션을 다시 작성할 수 있습니다. 자세한 내용은 [ALTER INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)를 참조 하세요.  
+ 이제 분할 테이블의 개별 파티션을 다시 작성할 수 있습니다. 자세한 내용은 [ALTER INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)를 참조하세요.  
    
   
 ###  <a name="managing-the-lock-priority-of-online-operations"></a><a name="Lock"></a>온라인 작업의 잠금 우선 순위 관리  
@@ -100,7 +99,7 @@ ms.locfileid: "70176073"
   
 -   **보관 데이터 압축**  
   
-     인덱스 변경 ... REBUILD에는 COLUMNSTORE 인덱스의 지정 된 파티션을 추가로 압축 하는 새로운 COLUMNSTORE_ARCHIVE 데이터 압축 옵션이 있습니다. 이 옵션을 보관 또는 데이터 스토리지 크기를 줄여야 하는 기타 상황에 사용할 수 있으며 스토리지 및 검색에 더 많은 시간을 이용할 수 있습니다. 자세한 내용은 [ALTER INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)를 참조 하세요.  
+     인덱스 변경 ... REBUILD에는 COLUMNSTORE 인덱스의 지정 된 파티션을 추가로 압축 하는 새로운 COLUMNSTORE_ARCHIVE 데이터 압축 옵션이 있습니다. 이 옵션을 보관 또는 데이터 스토리지 크기를 줄여야 하는 기타 상황에 사용할 수 있으며 스토리지 및 검색에 더 많은 시간을 이용할 수 있습니다. 자세한 내용은 [ALTER INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)를 참조하세요.  
    
   
 ###  <a name="buffer-pool-extension"></a><a name="Buffer"></a>버퍼 풀 확장  
@@ -133,13 +132,13 @@ ms.locfileid: "70176073"
  `SELECT ... INTO` 문이 향상되어 이제 병렬로 실행될 수 있습니다. 데이터베이스 호환성 수준은 110 이상이어야 합니다.  
   
 ### <a name="tsql-enhancements-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 향상된 [!INCLUDE[tsql](../includes/tsql-md.md)] 기능  
- 메모리 내 OLTP를 [!INCLUDE[tsql](../includes/tsql-md.md)] 지원 하기 위한 변경 내용에 대 한 자세한 내용은 [메모리 내 oltp에 대 한 transact-sql 지원](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)을 참조 하세요.  
+ 메모리 내 OLTP를 지원 하기 위한 변경 내용에 대 한 자세한 내용은 [!INCLUDE[tsql](../includes/tsql-md.md)] [메모리 내 oltp에 대 한 transact-sql 지원](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)을 참조 하세요.  
   
   
 ##  <a name="system-view-enhancements"></a><a name="SystemTable"></a> 향상된 시스템 뷰 기능  
   
 ### <a name="sysxml_indexes"></a>sys.xml_indexes  
- [xml_indexes &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql) 에는 `xml_index_type`, `xml_index_type_description`및 `path_id`라는 3 개의 새 열이 있습니다.  
+ [sys.xml_indexes &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql) 에는 `xml_index_type` , 및 열이 3 개 `xml_index_type_description` `path_id` 있습니다.  
   
 ### <a name="sysdm_exec_query_profiles"></a>sys.dm_exec_query_profiles  
  [dm_exec_query_profiles &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql) 쿼리를 실행 하는 동안 실시간 쿼리 진행률을 모니터링 합니다.  
@@ -148,7 +147,7 @@ ms.locfileid: "70176073"
  [column_store_row_groups &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql) 는 클러스터 된 columnstore 인덱스 정보를 제공 하 여 관리자가 시스템 관리를 결정 하도록 지원 합니다.  
   
 ### <a name="sysdatabases"></a>sys.databases  
- [&#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 에는 `is_auto_create_stats_incremental_on`, `is_query_store_on`및 `resource_pool_id`라는 3 개의 새 열이 있습니다.  
+ [&#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 에는 `is_auto_create_stats_incremental_on` , 및 라는 3 개의 새 열이 있습니다 `is_query_store_on` `resource_pool_id` .  
   
 ### <a name="system-view-enhancements-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 향상된 시스템 뷰 기능  
  메모리 내 OLTP를 지 원하는 시스템 뷰 향상에 대 한 자세한 내용은 [메모리 내 oltp에 대 한 시스템 뷰, 저장 프로시저, dmv 및 대기 유형](../../2014/database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md)을 참조 하세요.  
@@ -157,7 +156,7 @@ ms.locfileid: "70176073"
 ##  <a name="security-enhancements"></a><a name="Security"></a> 향상된 보안 기능  
   
 ### <a name="connect-any-database-permission"></a>CONNECT ANY DATABASE 권한  
- 새로운 서버 수준 사용 권한입니다. 현재 있는 모든 데이터베이스와 향후 만들 수 있는 새로운 데이터베이스에 연결해야 하는 로그인에 **CONNECT ANY DATABASE** 를 부여합니다. 연결을 벗어나는 데이터베이스에서는 사용 권한을 부여하지 않습니다. **SELECT ALL USER 보안 개체** 또는 `VIEW SERVER STATE` 를 사용 하 여 인스턴스의 모든 데이터 또는 모든 데이터베이스 상태를 보기 위한 감사 프로세스를 허용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다.  
+ 새로운 서버 수준 사용 권한입니다. 현재 있는 모든 데이터베이스와 향후 만들 수 있는 새로운 데이터베이스에 연결해야 하는 로그인에 **CONNECT ANY DATABASE** 를 부여합니다. 연결을 벗어나는 데이터베이스에서는 사용 권한을 부여하지 않습니다. **SELECT ALL USER 보안 개체** 또는를 사용 하 여 `VIEW SERVER STATE` 인스턴스의 모든 데이터 또는 모든 데이터베이스 상태를 보기 위한 감사 프로세스를 허용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 합니다.  
   
 ### <a name="impersonate-any-login-permission"></a>IMPERSONATE ANY LOGIN 권한  
  새로운 서버 수준 사용 권한입니다. 허용하면 데이터베이스에 연결할 때 중간 계층 프로세스가 클라이언트 계정을 가장하여 연결할 수 있습니다. 거부하면 높은 권한 로그인이 다른 로그인을 가장하지 못하도록 차단할 수 있습니다. 예를 들어, **CONTROL SERVER** 권한이 있는 로그인이 다른 로그인을 가장하지 못하도록 차단할 수 있습니다.  
@@ -168,7 +167,7 @@ ms.locfileid: "70176073"
   
 ##  <a name="deployment-enhancements"></a><a name="Deployment"></a>배포 기능 향상  
 ### <a name="azure-vm"></a>Azure VM
-[Microsoft Azure 가상 컴퓨터에 SQL Server 데이터베이스를 배포](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md) 하 여 Azure VM에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스를 배포할 수 있습니다.  
+[Microsoft Azure 가상 컴퓨터에 SQL Server 데이터베이스를 배포](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md) 하 여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Azure VM에 데이터베이스를 배포할 수 있습니다.  
 
 ### <a name="refs"></a>ReFS
 이제 참조에 데이터베이스 배포가 지원 됩니다.   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 112cf764-f85a-4c1a-b732-d299d717c0d4
 author: yualan
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3c310ee1d60648ac4b1eb299a0fd291adb86aea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 249f29e40701658ddcc85f4a2a79fc8c0ac2cff5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061289"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925134"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 업로드 태스크
 **Azure SQL DW 업로드 태스크** 를 통해 SSIS 패키지에서 로컬 데이터를 Azure SQL DW(Data Warehouse)의 테이블에 업로드할 수 있습니다. 현재 지원되는 원본 데이터 파일 형식은 UTF8 인코딩 방식의 구분 기호로 분리된 텍스트입니다. 업로드 프로세스는 효율적인 PolyBase 방식을 따릅니다. 특히 데이터는 Azure Blob Storage에 먼저 업로드되고 그 다음으로 Azure SQL DW에 업로드됩니다. 그러므로 이 태스크를 사용하려면 Azure Blob Storage 계정이 필요합니다.
@@ -27,7 +26,7 @@ ms.locfileid: "66061289"
 
 **일반** 페이지에서 다음 속성을 구성합니다.
 
-필드|설명
+필드|Description
 -----|-----------
 LocalDirectory|업로드할 데이터 파일이 포함된 로컬 디렉터리를 지정합니다.
 Recursively|하위 디렉터리를 재귀적으로 검색할 것인지 여부를 지정합니다.
@@ -42,7 +41,7 @@ RetainFiles|Azure Storage에 업로드된 파일을 유지할지 여부를 지�
 CompressionType|Azure Storage에 파일 업로드 시 사용할 압축 형식을 지정합니다. 로컬 원본은 영향을 받지 않습니다.
 CompressionLevel|압축 형식에 사용할 압축 수준을 지정합니다.
 AzureDwConnection|Azure SQL DW용 ADO.NET 연결 관리자를 지정합니다.
-TableName|대상 테이블의 이름을 지정합니다. 기존 테이블 이름을 선택 하거나 ** \<새 테이블 ... >** 를 선택 하 여 새 테이블을 만듭니다.
+TableName|대상 테이블의 이름을 지정합니다. 기존 테이블 이름을 선택 하거나를 선택 하 여 새 테이블을 만듭니다 **\<New Table ...>** .
 TableDistribution|새 테이블에 대한 배포 방법을 지정합니다. 새 테이블 이름이 **TableName**에 대해 지정된 경우 적용합니다.
 HashColumnName|해시 테이블 배포에 사용되는 열을 지정합니다. **TableDistribution** 에 대해 **HASH**가 지정된 경우 적용합니다.
 

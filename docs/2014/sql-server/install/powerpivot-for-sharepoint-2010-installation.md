@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8d47dde7-c941-4280-a934-e2fe3f9a938f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0bb88370db889eac44e3ce71ad498779e55e4d7d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6591890be1d514e9c1dd3b23233420971c4b8889
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952047"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041980"
 ---
 # <a name="powerpivot-for-sharepoint-2010-installation"></a>SharePoint 2010용 PowerPivot 설치
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]는 SharePoint에 게시하는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 대한 쿼리 처리 및 관리 제어를 제공하는 서버 구성 요소의 모음입니다. 서비스에는 Analysis Services 엔진 및 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스가 포함됩니다.  

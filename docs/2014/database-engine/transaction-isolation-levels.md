@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8a6a82bf-273c-40ab-a101-46bd3615db8a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eea34b8ad278447d9e9085d99acb8500d14d5e7a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ee0ba17dc999c9076ca4622d47db28b8200b851
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637784"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928174"
 ---
 # <a name="transaction-isolation-levels-in-memory-optimized-tables"></a>메모리 액세스에 최적화 된 테이블의 트랜잭션 격리 수준
 
@@ -39,7 +38,7 @@ ms.locfileid: "73637784"
   
 -   메모리 최적화 테이블에 액세스하는 데 보다 높은 격리 수준 힌트를 명시적으로 사용합니다(예: WITH (SNAPSHOT)).  
   
--   메모리 최적화 테이블에 대한 격리 수준을 SNAPSHOT(메모리 최적화 모든 테이블에 대한 WITH(SNAPSHOT) 힌트를 포함한 것)으로 설정할 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` 설정 옵션을 지정합니다. 에 대 한 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`자세한 내용은 [ALTER database SET Options &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)를 참조 하세요.  
+-   메모리 최적화 테이블에 대한 격리 수준을 SNAPSHOT(메모리 최적화 모든 테이블에 대한 WITH(SNAPSHOT) 힌트를 포함한 것)으로 설정할 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` 설정 옵션을 지정합니다. 에 대 한 자세한 내용은 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` [ALTER Database SET Options &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)를 참조 하세요.  
   
  또는 세션의 격리 수준이 READ COMMITTED인 경우 자동 커밋 트랜잭션을 사용할 수 있습니다.  
   

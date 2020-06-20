@@ -15,37 +15,36 @@ helpviewer_keywords:
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 843c5e8cbb857271d4cbd07288e24bfbd98019e3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49c4814daf0463c99c7ccda6f16adb039fd58d64
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176623"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964501"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>로컬 패키지의 출력 로드
-  [!INCLUDE[vstecado](../../includes/vstecado-md.md)]을 사용하여 출력을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상에 저장한 경우 또는 **System.IO** 네임스페이스의 클래스를 사용하여 출력을 플랫 파일 대상에 저장한 경우 클라이언트 애플리케이션에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 출력을 읽을 수 있습니다. 하지만 데이터를 지속하기 위한 중간 단계 없이 클라이언트 애플리케이션이 메모리에서 직접 패키지의 출력을 읽을 수도 있습니다. 이 솔루션의 핵심은 **IDbDataParameter** 네임 `Microsoft.SqlServer.Dts.DtsClient` 스페이스에서 `IDbConnection`, `IDbCommand`및 인터페이스의 특수 구현을 포함 하는 네임 스페이스 **입니다.** Microsoft.SqlServer.Dts.DtsClient.dll 어셈블리는 기본적으로 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**에 설치됩니다.
+  [!INCLUDE[vstecado](../../includes/vstecado-md.md)]을 사용하여 출력을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상에 저장한 경우 또는 **System.IO** 네임스페이스의 클래스를 사용하여 출력을 플랫 파일 대상에 저장한 경우 클라이언트 애플리케이션에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 출력을 읽을 수 있습니다. 하지만 데이터를 지속하기 위한 중간 단계 없이 클라이언트 애플리케이션이 메모리에서 직접 패키지의 출력을 읽을 수도 있습니다. 이 솔루션의 핵심은 `Microsoft.SqlServer.Dts.DtsClient` `IDbConnection` `IDbCommand` **IDbDataParameter** 네임 스페이스에서, 및 인터페이스 **System.Data** 의 특수 구현을 포함 하는 네임 스페이스입니다. Microsoft.SqlServer.Dts.DtsClient.dll 어셈블리는 기본적으로 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**에 설치됩니다.
 
 > [!NOTE]
 >  이 항목에서 설명하는 절차를 수행하려면 데이터 흐름 태스크와 부모 개체의 DelayValidation 속성이 기본값인 **False**로 설정되어 있어야 합니다.
 
-## <a name="description"></a>설명
+## <a name="description"></a>Description
  이 절차에서는 DataReader 대상을 사용하는 패키지의 출력을 메모리에서 직접 로드하는 클라이언트 애플리케이션을 관리 코드로 개발하는 방법을 보여 줍니다. 여기에 요약된 단계는 뒷부분의 코드 예제에서 자세히 보여 줍니다.
 
 #### <a name="to-load-data-package-output-into-a-client-application"></a>데이터 패키지 출력을 클라이언트 애플리케이션으로 로드하려면
 
 1.  패키지에서 DataReader 대상이 클라이언트 애플리케이션으로 읽어 올 출력을 받도록 구성합니다. DataReader 대상 이름은 나중에 클라이언트 애플리케이션에서 사용되므로 이 대상에 알기 쉬운 이름을 지정합니다. 또한 DataReader 대상의 이름을 적어 두어야 합니다.
 
-2.  개발 프로젝트에서 `Microsoft.SqlServer.Dts.DtsClient` **DtsClient**어셈블리를 찾아 네임 스페이스에 대 한 참조를 설정 합니다. 기본적으로 이 어셈블리는 **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**에 설치됩니다. C # `Using` 또는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports` 문을 사용 하 여 네임 스페이스를 코드로 가져옵니다.
+2.  개발 프로젝트에서 `Microsoft.SqlServer.Dts.DtsClient` 어셈블리 **Microsoft.SqlServer.Dts.DtsClient.dll**를 찾아 네임 스페이스에 대 한 참조를 설정 합니다. 기본적으로 이 어셈블리는 **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**에 설치됩니다. C # 또는 문을 사용 하 여 네임 스페이스를 코드로 가져옵니다 `Using` [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports` .
 
-3.  코드에서 패키지를 실행 하는 데 `DtsClient.DtsConnection` **dtexec** 에 필요한 명령줄 매개 변수를 포함 하는 연결 문자열을 사용 하 여 형식의 개체를 만듭니다. 자세한 내용은 [dtexec Utility](../packages/dtexec-utility.md)를 참조하세요. 그런 다음 이 연결 문자열을 사용하여 연결을 엽니다. **dtexecui** 유틸리티를 사용하여 필요한 연결 문자열을 시각적으로 만들 수도 있습니다.
+3.  코드에서 `DtsClient.DtsConnection` **dtexec.exe** 패키지를 실행 하는 데 필요한 명령줄 매개 변수를 포함 하는 연결 문자열을 사용 하 여 형식의 개체를 만듭니다. 자세한 내용은 [dtexec Utility](../packages/dtexec-utility.md)를 참조하세요. 그런 다음 이 연결 문자열을 사용하여 연결을 엽니다. **dtexecui** 유틸리티를 사용하여 필요한 연결 문자열을 시각적으로 만들 수도 있습니다.
 
     > [!NOTE]
     >  예제 코드에서는 `/FILE <path and filename>` 구문을 사용하여 파일 시스템에서 패키지를 로드하는 방법을 보여 줍니다. 그러나 `/SQL <package name>` 구문을 사용하여 MSDB 데이터베이스에서 패키지를 로드하거나 `/DTS \<folder name>\<package name>` 구문을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 저장소에서 패키지를 로드할 수도 있습니다.
 
 4.  이전에 만든 `DtsClient.DtsCommand`을 사용하는 `DtsConnection` 형식의 개체를 만들고 이 개체의 `CommandText` 속성을 패키지의 DataReader 대상 이름으로 설정합니다. 그런 다음 이 명령 개체의 `ExecuteReader` 메서드를 호출하여 패키지 결과를 새 DataReader로 로드합니다.
 
-5.  필요할 경우 `DtsDataParameter` 개체에서 `DtsCommand` 개체의 컬렉션을 사용하여 패키지의 출력을 간접적으로 매개 변수화함으로써 패키지에 정의된 변수에 값을 전달할 수 있습니다. 패키지 내에서는 이러한 변수를 쿼리 매개 변수로 사용하거나 식에 사용하여 DataReader 대상에 반환되는 결과에 영향을 줄 수 있습니다. 클라이언트 응용 프로그램의 `DtsDataParameter` 개체와 함께 사용 하려면 먼저 **DtsClient** 네임 스페이스의 패키지에서 이러한 변수를 정의 해야 합니다. ( **변수** 창에서 **변수 열 선택** 도구 모음 단추를 클릭 하 여 **네임 스페이스** 열을 표시 해야 할 수도 있습니다.) 클라이언트 코드에서의 `DtsDataParameter` `Parameters` 컬렉션 `DtsCommand`에를 추가 하는 경우 변수 이름에서 DtsClient 네임 스페이스 참조를 생략 합니다. 예를 들면 다음과 같습니다.
+5.  필요할 경우 `DtsDataParameter` 개체에서 `DtsCommand` 개체의 컬렉션을 사용하여 패키지의 출력을 간접적으로 매개 변수화함으로써 패키지에 정의된 변수에 값을 전달할 수 있습니다. 패키지 내에서는 이러한 변수를 쿼리 매개 변수로 사용하거나 식에 사용하여 DataReader 대상에 반환되는 결과에 영향을 줄 수 있습니다. **DtsClient** `DtsDataParameter` 클라이언트 응용 프로그램의 개체와 함께 사용 하려면 먼저 DtsClient 네임 스페이스의 패키지에서 이러한 변수를 정의 해야 합니다. ( **변수** 창에서 **변수 열 선택** 도구 모음 단추를 클릭 하 여 **네임 스페이스** 열을 표시 해야 할 수도 있습니다.) 클라이언트 코드에서의 컬렉션에를 추가 하는 경우 `DtsDataParameter` `Parameters` `DtsCommand` 변수 이름에서 DtsClient 네임 스페이스 참조를 생략 합니다. 다음은 그 예입니다.
 
     ```
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));
@@ -63,7 +62,7 @@ ms.locfileid: "78176623"
 ## <a name="example"></a>예제
  다음 예에서는 단일 집계 값을 계산하고 해당 값을 DataReader 대상에 저장하는 패키지를 실행한 다음 DataReader에서 이 값을 읽어 Windows Form의 입력란에 표시합니다.
 
- 패키지의 출력을 클라이언트 애플리케이션으로 로드할 때는 매개 변수를 사용할 필요가 없습니다. 매개 변수를 사용 하지 않으려면 **DtsClient** 네임 스페이스에서 변수 사용을 생략 하 고 `DtsDataParameter` 개체를 사용 하는 코드를 생략 하면 됩니다.
+ 패키지의 출력을 클라이언트 애플리케이션으로 로드할 때는 매개 변수를 사용할 필요가 없습니다. 매개 변수를 사용 하지 않으려면 **DtsClient** 네임 스페이스에서 변수 사용을 생략 하 고 개체를 사용 하는 코드를 생략 하면 `DtsDataParameter` 됩니다.
 
 #### <a name="to-create-the-test-package"></a>테스트 패키지를 만들려면
 
@@ -81,7 +80,7 @@ ms.locfileid: "78176623"
     SELECT * FROM Sales.vIndividualCustomer WHERE CountryRegionName = ?
     ```
 
-6.  을 `Parameters` 클릭 하 고 **쿼리 매개 변수 설정** 대화 상자에서 0 쿼리의 단일 입력 매개 변수를 DtsClient:: Country 변수에 매핑합니다.
+6.  을 클릭 하 `Parameters` 고 **쿼리 매개 변수 설정** 대화 상자에서 0 쿼리의 단일 입력 매개 변수를 DtsClient:: Country 변수에 매핑합니다.
 
 7.  데이터 흐름에 집계 변환을 추가하고 OLE DB 원본의 출력을 변환에 연결합니다. 집계 변환 편집기를 열고 모든 입력 열 (*)에 대해 "모두 계산" 작업을 수행 하 고 집계 된 값을 CustomerCount 별칭으로 출력 하도록 구성 합니다.
 
@@ -93,15 +92,15 @@ ms.locfileid: "78176623"
 
 1.  새 Windows Forms 애플리케이션을 만듭니다.
 
-2.  **%PROGRAMFILES%\MICROSOFT SQL Server\100\DTS\Binn**에서 동일한 `Microsoft.SqlServer.Dts.DtsClient` 이름의 어셈블리를 찾아 네임 스페이스에 대 한 참조를 추가 합니다.
+2.  `Microsoft.SqlServer.Dts.DtsClient` **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**에서 동일한 이름의 어셈블리를 찾아 네임 스페이스에 대 한 참조를 추가 합니다.
 
 3.  다음 예제 코드를 복사하여 폼의 코드 모듈에 붙여 넣습니다.
 
-4.  필요에 따라 `dtexecArgs` 변수 값을 수정 하 여 패키지를 실행 하는 데 **dtexec** 에 필요한 명령줄 매개 변수를 포함 합니다. 예제 코드는 파일 시스템에서 패키지를 로드합니다.
+4.  `dtexecArgs` **dtexec.exe** 에서 패키지를 실행 하는 데 필요한 명령줄 매개 변수를 포함 하도록 필요에 따라 변수 값을 수정 합니다. 예제 코드는 파일 시스템에서 패키지를 로드합니다.
 
-5.  필요에 따라 `dataReaderName` 변수 값을 수정 하 여 패키지에 있는 DataReader 대상의 이름을 포함 하도록 합니다.
+5.  필요에 따라 변수 값을 수정 `dataReaderName` 하 여 패키지에 있는 DataReader 대상의 이름을 포함 하도록 합니다.
 
-6.  폼에 단추와 입력란을 추가합니다. 샘플 코드에서는를 `btnRun` 단추의 이름으로 사용 하 고 `txtResults` 를 텍스트 상자의 이름으로 사용 합니다.
+6.  폼에 단추와 입력란을 추가합니다. 샘플 코드에서는를 `btnRun` 단추의 이름으로 사용 하 고를 `txtResults` 텍스트 상자의 이름으로 사용 합니다.
 
 7.  애플리케이션을 실행하고 단추를 클릭합니다. 그러면 패키지가 실행되는 동안 잠깐 일시 중지된 후 패키지에서 계산한 집계 값, 즉 캐나다의 고객 수가 폼의 입력란에 표시됩니다.
 

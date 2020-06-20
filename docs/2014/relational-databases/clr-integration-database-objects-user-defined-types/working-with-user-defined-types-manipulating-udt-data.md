@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 11aa57037a1ea92bd72ed2eaa581d34baff8a122
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea8d8ef411c8766ebecb98ca1c9eeaa1be11f156
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874313"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954413"
 ---
 # <a name="manipulating-udt-data"></a>UDT 데이터 조작
   [!INCLUDE[tsql](../../includes/tsql-md.md)]에서는 UDT(사용자 정의 형식) 열의 데이터를 수정할 때 INSERT, UPDATE 또는 DELETE 문에 대한 특별한 구문을 제공하지 않습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 또는 CONVERT 함수는 네이티브 데이터 형식을 UDT 형식으로 캐스트하는 데 사용됩니다.  
@@ -156,7 +155,7 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>UDT 메서드 호출  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 UDT에 정의된 메서드를 호출할 수도 있습니다. **Point** 클래스에는, 및 `Distance` `DistanceFrom` `DistanceFromXY`라는 세 개의 메서드가 있습니다. 이 세 가지 메서드를 정의 하는 코드 목록은 [사용자 정의 형식 코딩](creating-user-defined-types-coding.md)을 참조 하세요.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 UDT에 정의된 메서드를 호출할 수도 있습니다. **Point** 클래스에는, 및 라는 세 개의 메서드가 있습니다 `Distance` `DistanceFrom` `DistanceFromXY` . 이 세 가지 메서드를 정의 하는 코드 목록은 [사용자 정의 형식 코딩](creating-user-defined-types-coding.md)을 참조 하세요.  
   
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 `PointValue.Distance` 메서드를 호출합니다.  
   
@@ -167,7 +166,7 @@ SELECT ID, PointValue.X AS [Point.X],
 FROM dbo.Points;  
 ```  
   
- 결과는 `Distance` 열에 표시 됩니다.  
+ 결과는 열에 표시 됩니다 `Distance` .  
   
 ```  
 IDXYDistance  
@@ -177,7 +176,7 @@ IDXYDistance
 319999.0050503762308  
 ```  
   
- 메서드 `DistanceFrom` 는 **point** 데이터 형식의 인수를 사용 하 고 지정 된 점에서 pointvalue 까지의 거리를 표시 합니다.  
+ `DistanceFrom`메서드는 **point** 데이터 형식의 인수를 사용 하 고 지정 된 점에서 pointvalue 까지의 거리를 표시 합니다.  
   
 ```  
 SELECT ID, PointValue.ToString() AS Pnt,  

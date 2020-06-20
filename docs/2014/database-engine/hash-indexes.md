@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f4bdc9c1-7922-4fac-8183-d11ec58fec4e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 263fdcd4b09c4acc6c2bba4d67629f867d64c6b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 420cf534b57dc6b6592b4dd55cf5ec2addd04b2a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779495"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932864"
 ---
 # <a name="hash-indexes"></a>해시 인덱스
   인덱스는 메모리 최적화 테이블의 진입점으로 사용됩니다. 테이블의 행을 읽으려면 메모리에 있는 데이터를 찾을 인덱스가 필요합니다.  

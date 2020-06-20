@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c7314598bffe53b6db1c24ecaaec2cf32ee06cb7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63273738"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008602"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>연습: 데이터베이스 다이어그램 추가 및 변경
   이 연습에서는 데이터베이스 다이어그램을 만들고 수정하는 방법과 데이터베이스 다이어그램 구성 요소를 통해 데이터베이스를 변경하는 방법을 설명합니다. 또한 다이어그램에 테이블을 추가하고, 테이블 간에 관계를 만들고, 열에 대해 제약 조건과 인덱스를 만들며 각 테이블에 대해 표시할 정보 수준을 변경하는 방법을 설명합니다.  
@@ -70,11 +69,11 @@ ms.locfileid: "63273738"
   
 1.  기존 테이블 외부에서 다이어그램 디자이너를 마우스 오른쪽 단추로 클릭한 다음 **새 테이블**을 선택합니다.  
   
-2.  **이름 선택** 대화 상자에서 **확인** 을 클릭 하 여 기본 이름을 `Table1`적용 합니다.  
+2.  **이름 선택** 대화 상자에서 **확인** 을 클릭 하 여 기본 이름을 적용 `Table1` 합니다.  
   
      새 테이블 표에 **열 이름**, **데이터 형식**및 **Null 허용**의 세 열이 나타납니다.  
   
-3.  에 다음 정보를 `Table1`추가 합니다.  
+3.  에 다음 정보를 추가 합니다 `Table1` .  
   
     |**열 이름**|**데이터 형식**|**Null 허용**|  
     |---------------------|-------------------|---------------------|  
@@ -88,7 +87,7 @@ ms.locfileid: "63273738"
   
 5.  **파일** 메뉴에서 **Diagram1 저장**을 클릭합니다.  
   
-6.  **이름 선택** 대화 상자에서 **확인** 을 클릭 하 여 기본 이름을 `Diagram1`적용 합니다.  
+6.  **이름 선택** 대화 상자에서 **확인** 을 클릭 하 여 기본 이름을 적용 `Diagram1` 합니다.  
   
 7.  **을 데이터베이스에 저장한다는 메시지가 포함된** 저장 `Table1` 대화 상자가 나타납니다. **예**를 클릭합니다.  
   

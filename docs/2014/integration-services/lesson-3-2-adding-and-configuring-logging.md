@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ef4f5d42ae3451d4199e84480a5672e437d7ca5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 530a88929f2add4ff64a7495e5a81c50e552d0b3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892439"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965263"
 ---
 # <a name="step-2-adding-and-configuring-logging"></a>2단계: 로깅 추가 및 구성
   이 태스크에서는 Lesson 3.dtsx 패키지의 데이터 흐름에 로깅을 설정한 다음 PipelineExecutionPlan 및 PipelineExecuteTrees 이벤트를 로그하도록 텍스트 파일 로그 공급자를 구성합니다. 텍스트 파일 로그 공급자는 쉽게 보고 변환할 수 있는 로그를 만듭니다. 이러한 로그 파일은 단순하기 때문에 특히 패키지의 기본 테스트 단계에서 유용합니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너의 로그 이벤트 창에서도 로그 항목을 볼 수 있습니다.  
@@ -30,15 +29,15 @@ ms.locfileid: "62892439"
   
      Integration Services 새 텍스트 파일 로그 공급자를 패키지에 추가 하 고 기본 이름 **SSIS 로그 공급자를 텍스트 파일로**추가 합니다. 이제 새 로그 공급자를 구성할 수 있습니다.  
   
-4.  **이름** 열에을 입력 `Lesson 3 Log File`합니다.  
+4.  **이름** 열에을 입력 `Lesson 3 Log File` 합니다.  
   
 5.  **설명**을 수정할 수도 있습니다.  
   
-6.  **구성** 열에서 ** \<새 연결>** 을 클릭 하 여 로그 정보가 쓰여질 대상을 지정 합니다.  
+6.  **구성** 열에서 **\<New Connection>** 을 클릭하여 로그 정보가 쓰여질 대상을 지정합니다.  
   
      **파일 연결 관리자 편집기** 대화 상자의 **사용 유형**에서 **파일 만들기**를 선택한 다음 **찾아보기**를 클릭합니다. 기본적으로 **파일 선택** 대화 상자에 프로젝트 폴더가 열리지만 임의의 위치에 로그 정보를 저장할 수도 있습니다.  
   
-7.  **파일 선택** 대화 상자의 **파일 이름** 상자에를 입력 `TutorialLog.log`하 고 **열기**를 클릭 합니다.  
+7.  **파일 선택** 대화 상자의 **파일 이름** 상자에 `TutorialLog.log` 를 입력 하 고 **열기**를 클릭 합니다.  
   
 8.  **확인** 을 클릭하여 **파일 연결 관리자 편집기** 대화 상자를 닫습니다.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "62892439"
   
 12. **기본** 을 클릭하여 정보 범주를 숨깁니다.  
   
-13. **공급자 및 로그** 탭의 **이름** 열에서을 선택 `Lesson 3 Log File`합니다. 패키지의 로그 공급자를 만든 후에는 로그 공급자를 삭제한 후 다시 만들지 않아도 이 로그 공급자를 선택 취소하여 잠시 로깅을 해제할 수 있습니다.  
+13. **공급자 및 로그** 탭의 **이름** 열에서을 선택 `Lesson 3 Log File` 합니다. 패키지의 로그 공급자를 만든 후에는 로그 공급자를 삭제한 후 다시 만들지 않아도 이 로그 공급자를 선택 취소하여 잠시 로깅을 해제할 수 있습니다.  
   
 14. **확인**을 클릭합니다.  
   

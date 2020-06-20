@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: acc1c7b0-4abf-42f8-b9a9-c383b715a735
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 56a76c3675ceb3cf84c7812b4f9d95d61f9f830a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a1fa100abd2fda4ff85e4153f0a9d7044bae8f46
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62661954"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052843"
 ---
 # <a name="objects-event-category"></a>Objects 이벤트 범주
   **Objects** 이벤트 범주에는 일반적인 개체 이벤트가 포함됩니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3c8777250946ad689c324314ecbbdff7bf9dcc9b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 413f7176e5b849d2e51cf575716928021f6e2fae
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482900"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971243"
 ---
 # <a name="master-data-manager-web-application"></a>마스터 데이터 관리자 웹 애플리케이션
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션은 주로 관리자가 관리 태스크를 수행하는 데 사용됩니다. 예를 들어 모델, 비즈니스 규칙 또는 여러 버전의 데이터를 만드는 일은 관리자만 수행할 수 있습니다. 관리자에 대한 자세한 내용은 [관리자&#40;Master Data Services&#41;](administrators-master-data-services.md)를 참조하세요.  

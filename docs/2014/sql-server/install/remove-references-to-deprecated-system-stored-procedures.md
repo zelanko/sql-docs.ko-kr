@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 487d24fc-41d5-495e-843c-0ac974ec472f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e841956adf08f9ac14a3f1360839e9132bf9cd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65e7da666beaf84050dd8d60caf4cac5bfc013c7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093108"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036612"
 ---
 # <a name="remove-references-to-deprecated-system-stored-procedures"></a>더 이상 사용되지 않는 시스템 저장 프로시저에 대한 참조를 제거합니다.
   업그레이드 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 더 이상 사용할 수 없는 문서화되지 않은 시스템 저장 프로시저 및 확장 저장 프로시저를 참조하는 문을 발견했습니다. 이러한 개체를 참조하는 문은 실패합니다. 문서화되지 않은 시스템 개체나 API는 이후 릴리스에서 알림 표시 없이 변경되거나 제거될 수 있으므로 사용하지 마십시오.  

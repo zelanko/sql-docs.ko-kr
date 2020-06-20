@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a872057f354b289d65a6a3a730e3a63afd7af0d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6e45b1f49c348e6cce329fb918479e92edbe9ae
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782317"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935344"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>데이터베이스 엔진에 암호화 연결 사용(SQL Server 구성 관리자)
   이 항목에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 대한 인증서를 지정하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 암호화된 연결을 사용하도록 설정하는 방법에 대해 설명합니다. 서버 컴퓨터에 구축된 인증서가 있어야 하며 클라이언트 컴퓨터가 해당 인증서의 루트 인증 기관을 트러스트하도록 설정되어 있어야 합니다. 구축은 인증서를 Windows로 가져와서 설치하는 프로세스입니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "62782317"
  클라이언트가 서버에 사용되는 인증서의 소유권을 확인할 수 있어야 합니다. 클라이언트에 서버 인증서를 서명한 인증 기관의 공개 키 인증서가 있으면 추가 구성은 필요 없습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows에는 많은 인증 기관의 공개 키 인증서가 포함되어 있습니다. 클라이언트에 퍼블릭 키 인증서가 없는 퍼블릭 또는 프라이빗 인증 기관에서 서버 인증서를 서명한 경우 서버 인증서를 서명한 인증 기관의 퍼블릭 키 인증서를 설치해야 합니다.  
   
 > [!NOTE]  
->  장애 조치(Failover) 클러스터에 암호화를 사용하려면 장애 조치 클러스터의 모든 노드에 있는 가상 서버의 정규화된 DNS 이름으로 서버 인증서를 설치해야 합니다. 예를 들어 이름이 test1 인 노드가 있는 2 개 노드 클러스터가 있는 경우입니다. 회사>.com 및 test2. * \< * 회사>virtsql 이라는 가상 서버가 있는 경우 virtsql에 대 한 인증서를 설치 해야 합니다. * \< * 두 노드에서 모두 회사를>합니다. * \< * **ForceEncryption**옵션 값을 **예**로 설정할 수 있습니다.  
+>  장애 조치(Failover) 클러스터에 암호화를 사용하려면 장애 조치 클러스터의 모든 노드에 있는 가상 서버의 정규화된 DNS 이름으로 서버 인증서를 설치해야 합니다. 예를 들어 노드 이름이 test1. 인 두 노드 클러스터가 있는 경우 *\<your company>* 입니다. com 및 *\<your company>* test2. com에 virtsql 이라는 가상 서버가 있는 경우 virtsql에 대 한 인증서를 설치 해야 *\<your company>* 합니다. 두 노드의 com **ForceEncryption**옵션 값을 **예**로 설정할 수 있습니다.  
   
  **항목 내용**  
   
@@ -83,9 +82,9 @@ ms.locfileid: "62782317"
   
 ###  <a name="to-configure-the-server-to-accept-encrypted-connections"></a><a name="ConfigureServerConnections"></a> 암호화된 연결을 허용하도록 서버를 구성하려면  
   
-1.  **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 확장하고 \<서버 인스턴스>**에 대한 프로토콜을 마우스 오른쪽 단추로 클릭한 다음, **속성**을 선택합니다.** __  
+1.  **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 확장 하 고 **에 대 한 프로토콜** 을 마우스 오른쪽 단추로 클릭 한 _\<server instance>_ 다음**속성**을 선택 합니다.  
   
-2.  _\<인스턴스 이름>_ **에 대 한 프로토콜** **속성** 대화 상자에서 **인증서 탭의** **인증서** 상자에 대 한 드롭다운에서 원하는 인증서를 선택한 다음 **확인**을 클릭 합니다.  
+2.  속성 **에 대 한 프로토콜** _\<instance name>_ **Properties** 대화 상자 **에서 인증서** 탭의 **인증서** 상자에 대 한 드롭다운에서 원하는 인증서를 선택한 다음 **확인**을 클릭 합니다.  
   
 3.  **플래그** 탭의 **ForceEncryption** 상자에서 **예**를 선택한 다음 **확인** 을 클릭하여 대화 상자를 닫습니다.  
   

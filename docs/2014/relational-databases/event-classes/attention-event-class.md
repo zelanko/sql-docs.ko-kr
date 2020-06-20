@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da996305-181b-4cec-8388-c3b66677ed27
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 695214082f9d2d3c2655d2e1da00c5d1db9697a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c7f032d4e58dd0539d2bbe05d0d5ceebec800edd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62912321"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031108"
 ---
 # <a name="attention-event-class"></a>Attention 이벤트 클래스
   **Attention** 이벤트 클래스는 취소, 클라이언트 인터럽트 요청, 클라이언트 연결 끊어짐 등의 attention 이벤트가 발생했음을 나타냅니다. 취소 작업은 데이터 액세스 드라이버 제한 시간 구현의 일부라고 할 수 있습니다.  

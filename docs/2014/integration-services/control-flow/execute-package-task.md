@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 37d0edcabdb0171c8ca83c79080d59fdd8aafb76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60ebcc5ae689b6781a17cc7725020f6e2382e987
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284948"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919144"
 ---
 # <a name="execute-package-task"></a>패키지 실행 태스크
   패키지 실행 태스크는 패키지가 다른 패키지를 워크플로의 일부로 실행할 수 있도록 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 엔터프라이즈 기능을 확장했습니다.  
@@ -56,7 +55,7 @@ ms.locfileid: "67284948"
   
  또는 한 단위의 부모 패키지와 해당 자식 패키지가 함께 실행되지 못하게 하거나 다른 프로세스의 추가 오버헤드를 발생시키지 않으려는 경우도 있습니다. 예를 들어 패키지 부모 프로세스의 후속 처리가 자식 프로세스의 성공 여부에 따라 달라지는 경우 자식 프로세스가 실패하면 부모 패키지 프로세스에서 자식 패키지를 실행해야 합니다.  
   
- 기본적으로 패키지 실행 태스크의 ExecuteOutOfProcess 속성은로 `False`설정 되 고 자식 패키지는 부모 패키지와 같은 프로세스에서 실행 됩니다. 이 속성을 `True`로 설정하면 하위 패키지가 개별 프로세스로 실행됩니다. 이렇게 하면 하위 패키지의 실행 속도가 느려집니다. 또한 속성을 `True`로 설정하면 도구만 설치로 패키지를 디버깅할 수 없습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치해야 합니다. 자세한 내용은 [Integration Services 설치](../install-windows/install-integration-services.md)를 참조하세요.  
+ 기본적으로 패키지 실행 태스크의 ExecuteOutOfProcess 속성은로 설정 되 `False` 고 자식 패키지는 부모 패키지와 같은 프로세스에서 실행 됩니다. 이 속성을 `True`로 설정하면 하위 패키지가 개별 프로세스로 실행됩니다. 이렇게 하면 하위 패키지의 실행 속도가 느려집니다. 또한 속성을 `True`로 설정하면 도구만 설치로 패키지를 디버깅할 수 없습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치해야 합니다. 자세한 내용은 [Integration Services 설치](../install-windows/install-integration-services.md)를 참조하세요.  
   
 ## <a name="extending-transactions"></a>트랜잭션 확장  
  부모 패키지가 사용하는 트랜잭션은 자식 패키지로 확장될 수 있으므로 두 패키지가 수행한 작업을 모두 커밋하거나 롤백할 수 있습니다. 예를 들어 자식 패키지가 수행한 데이터베이스 삽입에 따라 부모 패키지가 수행한 데이터베이스 삽입을 커밋하거나 롤백할 수 있고 그 반대의 경우도 마찬가지로 적용됩니다. 자세한 내용은 [Inherited Transactions](../inherited-transactions.md)을 참조하세요.  

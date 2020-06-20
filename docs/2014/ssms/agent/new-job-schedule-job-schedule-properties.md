@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9af1d89e4bb53af3d3f640e7efb010e5ac8de35
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704620"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064406"
 ---
 # <a name="new-job-schedule-job-schedule-properties"></a>새 작업 일정: 작업 일정 속성
   이 페이지를 사용하여 일정 속성을 확인하고 변경할 수 있습니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "62704620"
  **일정 유형**  
  일정 유형을 선택합니다.  
   
- **사용**  
+ **Enabled**  
  일정을 사용하거나 사용하지 않으려면 선택합니다.  
   
 ## <a name="recurring-schedule-types-options"></a>되풀이 일정 유형 옵션  
@@ -52,10 +51,10 @@ ms.locfileid: "62704620"
  **수요일**  
  수요일에 작업이 수행되도록 설정합니다. 주별 되풀이 일정에만 사용할 수 있습니다.  
   
- **자원은**  
+ **목요일**  
  목요일에 작업이 수행되도록 설정합니다. 주별 되풀이 일정에만 사용할 수 있습니다.  
   
- **까지**  
+ **금요일**  
  금요일에 작업이 수행되도록 설정합니다. 주별 되풀이 일정에만 사용할 수 있습니다.  
   
  **토요일**  
@@ -64,7 +63,7 @@ ms.locfileid: "62704620"
  **일요일**  
  일요일에 작업이 수행되도록 설정합니다. 주별 되풀이 일정에만 사용할 수 있습니다.  
   
- **동안**  
+ **Day**  
  일정이 시작되는 날짜를 선택합니다. 월별 되풀이 일정에만 사용할 수 있습니다.  
   
  **일 /**  
@@ -89,10 +88,10 @@ ms.locfileid: "62704620"
  일정을 무기한 유지하도록 지정합니다.  
   
 ## <a name="one-time-schedule-types-options"></a>일회 일정 유형 옵션  
- **날짜**  
+ **Date**  
  작업을 실행할 날짜를 선택합니다.  
   
- **시간**  
+ **Time**  
  작업을 실행할 시간을 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  

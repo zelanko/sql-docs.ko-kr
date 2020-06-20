@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43bb7fdd5b9c8cf8a73c423ac21e8ba7f779ec79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5558bc5684f2eb9053c935543db0c05d6225daf7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797932"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934384"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기(Transact-SQL)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 Windows 인증을 사용하는 데이터베이스 미러링 엔드포인트를 만드는 방법에 대해 설명합니다. 데이터베이스 미러링 또는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]을 지원하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 각 인스턴스에 데이터베이스 미러링 엔드포인트가 필요합니다. 서버 인스턴스는 하나의 포트가 있는 데이터베이스 미러링 엔드포인트를 하나만 가질 수 있습니다. 데이터베이스 미러링 엔드포인트는 엔드포인트가 생성될 때 로컬 시스템에서 사용 가능한 모든 포트를 사용할 수 있습니다. 서버 인스턴스의 모든 데이터베이스 미러링 세션이 이 포트에서 수신하고 데이터베이스 미러링에 대해 들어오는 모든 연결에 이 포트가 사용됩니다.  
@@ -65,37 +64,37 @@ ms.locfileid: "72797932"
   
 4.  Transact-SQL로 Windows 인증을 사용하는 엔드포인트를 만들려면 CREATE ENDPOINT 문을 사용합니다. 이 문은 일반적으로 다음과 같은 형식으로 되어 있습니다.  
   
-     CREATE ENDPOINT * \<endpointName>*  
+     끝점 만들기*\<endpointName>*  
   
      STATE=STARTED  
   
-     AS TCP (LISTENER_PORT = * \<listenerportlist>>* )  
+     AS TCP (LISTENER_PORT = *\<listenerPortList>* )  
   
      FOR DATABASE_MIRRORING  
   
      (  
   
-     [AUTHENTICATION = **WINDOWS** [ * \<authorizationmethod>* ]  
+     [AUTHENTICATION = **WINDOWS** [ *\<authorizationMethod>* ]  
   
      ]  
   
      [ [**,**] ENCRYPTION = **REQUIRED**  
   
-     [알고리즘 { * \<알고리즘>* }]  
+     [알고리즘 { *\<algorithm>* }]  
   
      ]  
   
-     [**,**] ROLE = *\<역할>*  
+     [**,**] ROLE =*\<role>*  
   
      )  
   
-     where  
+     라는 설치 관리자 실행 파일에 포함됩니다. 여기서  
   
-    -   endpointName>은 서버 인스턴스의 데이터베이스 미러링 끝점에 대 한 고유한 이름입니다. * \<*  
+    -   *\<endpointName>* 서버 인스턴스의 데이터베이스 미러링 끝점에 대 한 고유 이름입니다.  
   
     -   STARTED는 엔드포인트가 시작되어 연결에 대한 수신을 시작하도록 지정합니다. 데이터베이스 미러링 엔드포인트는 일반적으로 STARTED 상태로 생성됩니다. STOPPED 상태(기본값)나 DISABLED 상태로 세션을 시작할 수도 있습니다.  
   
-    -   listenerportlist>>는 서버에서 데이터베이스 미러링 메시지를 수신 하는 데 사용할 단일 포트 번호 (*nnnn*)입니다. * \<* TCP만 허용되기 때문에 다른 프로토콜을 지정하면 오류가 발생합니다.  
+    -   *\<listenerPortList>* 는 서버에서 데이터베이스 미러링 메시지를 수신 하는 데 사용할 단일 포트 번호 (*nnnn*)입니다. TCP만 허용되기 때문에 다른 프로토콜을 지정하면 오류가 발생합니다.  
   
          하나의 포트 번호는 컴퓨터 시스템당 한 번만 사용할 수 있습니다. 데이터베이스 미러링 엔드포인트는 엔드포인트가 생성될 때 로컬 시스템에서 사용 가능한 모든 포트를 사용할 수 있습니다. 시스템의 TCP 엔드포인트에서 현재 사용 중인 포트를 식별하려면 다음 Transact-SQL 문을 사용합니다.  
   
@@ -106,7 +105,7 @@ ms.locfileid: "72797932"
         > [!IMPORTANT]  
         >  각 서버 인스턴스에는 하나의 고유 수신기 포트만 필요합니다.  
   
-    -   엔드포인트에서 연결을 인증하는 데 NTLM이나 Kerberos만을 사용하려는 경우가 아니라면 Windows 인증에서 AUTHENTICATION 옵션은 선택 사항입니다. authorizationmethod>NTLM, KERBEROS 또는 NEGOTIATE 중 하나로 연결을 인증 하는 데 사용 되는 메서드를 지정 합니다. * \<* 기본값인 NEGOTIATE를 적용하면 엔드포인트가 Windows 협상 프로토콜을 사용하여 NTLM이나 Kerberos를 선택합니다. 협상을 사용하면 반대쪽 엔드포인트의 인증 수준에 따라 인증을 사용하여 연결을 설정하거나 인증을 사용하지 않고 연결을 설정할 수 있습니다.  
+    -   엔드포인트에서 연결을 인증하는 데 NTLM이나 Kerberos만을 사용하려는 경우가 아니라면 Windows 인증에서 AUTHENTICATION 옵션은 선택 사항입니다. *\<authorizationMethod>* NTLM, KERBEROS 또는 NEGOTIATE 중 하나로 연결을 인증 하는 데 사용 되는 방법을 지정 합니다. 기본값인 NEGOTIATE를 적용하면 엔드포인트가 Windows 협상 프로토콜을 사용하여 NTLM이나 Kerberos를 선택합니다. 협상을 사용하면 반대쪽 엔드포인트의 인증 수준에 따라 인증을 사용하여 연결을 설정하거나 인증을 사용하지 않고 연결을 설정할 수 있습니다.  
   
     -   ENCRYPTION은 기본적으로 REQUIRED로 설정되어 있으며 이는 엔드포인트에 대한 모든 연결에 암호화를 사용해야 함을 의미합니다. 그러나 다음과 같이 엔드포인트에 대해 암호화를 해제하거나 선택적으로 사용할 수 있습니다. 대체 방법은 다음과 같습니다.  
   
@@ -118,19 +117,19 @@ ms.locfileid: "72797932"
   
          한 엔드포인트에 암호화가 필요한 경우 다른 엔드포인트의 ENCRYPTION은 SUPPORTED나 REQUIRED로 설정해야 합니다.  
   
-    -   알고리즘>끝점에 대 한 암호화 표준을 지정 하는 옵션을 제공 합니다. * \<* * \<알고리즘>* 의 값은 rc4, aes, aes RC4 또는 rc4 AES 중 하나 이거나 알고리즘의 조합일 수 있습니다.  
+    -   *\<algorithm>* 끝점에 대 한 암호화 표준을 지정 하는 옵션을 제공 합니다. 의 값은 *\<algorithm>* rc4, aes, AES RC4 또는 RC4 AES의 알고리즘 또는 알고리즘 조합 중 하나일 수 있습니다.  
   
          AES RC4는 엔드포인트가 AES 알고리즘에 우선 순위를 두어 암호화 알고리즘을 협상하도록 지정합니다. RC4 AES는 엔드포인트가 RC4 알고리즘에 우선 순위를 두어 암호화 알고리즘을 협상하도록 지정합니다. 양쪽 엔드포인트가 두 알고리즘을 모두 지정하지만 순서가 다른 경우 연결을 수락하는 엔드포인트의 알고리즘이 적용됩니다.  
   
         > [!NOTE]  
         >  RC4 알고리즘은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES를 사용하는 것이 좋습니다.  
   
-    -   역할>서버에서 수행할 수 있는 역할을 정의 합니다. * \<* ROLE은 반드시 지정해야 합니다. 그러나 엔드포인트의 역할은 데이터베이스 미러링과만 관련이 있습니다. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]에 대해서는 엔드포인트의 역할이 무시됩니다.  
+    -   *\<role>* 서버에서 수행할 수 있는 역할을 정의 합니다. ROLE은 반드시 지정해야 합니다. 그러나 엔드포인트의 역할은 데이터베이스 미러링과만 관련이 있습니다. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]에 대해서는 엔드포인트의 역할이 무시됩니다.  
   
          서버 인스턴스가 데이터베이스 미러링 세션에 따라 각기 다른 역할을 하도록 하려면 ROLE=ALL을 지정합니다. 서버 인스턴스가 파트너 또는 미러링 모니터 서버가 되도록 제한하려면 ROLE=PARTNER와 ROLE=WITNESS를 각각 지정합니다.  
   
         > [!NOTE]  
-        >  다양 한 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대 한 데이터베이스 미러링 옵션에 대 한 자세한 내용은 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
+        >  다양 한 버전의에 대 한 데이터베이스 미러링 옵션에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
   
      CREATE ENDPOINT 구문에 대한 자세한 내용은 [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)에서 Windows 인증을 사용하는 데이터베이스 미러링 엔드포인트를 만드는 방법에 대해 설명합니다.  
   

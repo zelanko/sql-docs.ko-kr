@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 1d53dda1-f2c8-4a9b-8ec7-78f43ca1d7db
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ea95066a8fecbf96c8f6b14b42486d4d62264ae2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83d91be5152c4e7f1345cee8756abbe57c0016f0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62757724"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940034"
 ---
 # <a name="hierarchy-representation-tabular"></a>계층 표현(테이블 형식)
   테이블 형식 모델에서 계층은 사용자가 선택한 값을 기준으로 한 특성에서 다른 특성으로의 탐색 경로를 나타냅니다.  

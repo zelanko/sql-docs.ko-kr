@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 061daaa3b44c151a1f77b075bef66ef90570af98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e1a6af8407813a2a712b0c43c0b06097477f00f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176353"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966521"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>사용자 지정 데이터 흐름 구성 요소 개발
   데이터 흐름 태스크는 다양한 데이터 원본에 연결한 다음 해당 데이터를 빠른 속도로 변환하고 라우팅하는 여러 구성 요소로 구성됩니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서는 개발자가 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]와 배포된 패키지에서 사용할 수 있는 사용자 지정 원본, 변환 및 대상을 만들 수 있게 해주는 확장 가능한 개체 모델을 제공합니다. 이 섹션에는 사용자 지정 데이터 흐름 구성 요소의 개발 과정을 설명하는 항목이 포함되어 있습니다.
@@ -37,7 +36,7 @@ ms.locfileid: "78176353"
 
  [실행 계획 및 버퍼 할당](execution-plan-and-buffer-allocation.md) 데이터 흐름 실행 계획 및 데이터 버퍼 할당에 대해 설명 합니다.
 
- [데이터 흐름의 데이터 형식 작업](working-with-data-types-in-the-data-flow.md) 데이터 흐름이 데이터 형식을 .NET Framework 관리 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 되는 데이터 형식에 매핑하는 방법을 설명 합니다.
+ [데이터 흐름의 데이터 형식 작업](working-with-data-types-in-the-data-flow.md) 데이터 흐름이 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 데이터 형식을 .NET Framework 관리 되는 데이터 형식에 매핑하는 방법을 설명 합니다.
 
  [데이터 흐름 구성 요소의 유효성 검사](validating-a-data-flow-component.md) 구성 요소 구성을 확인 하 고 구성 요소 메타 데이터를 다시 구성 하는 데 사용 되는 메서드를 설명 합니다
 
@@ -62,14 +61,14 @@ ms.locfileid: "78176353"
 
  <xref:Microsoft.SqlServer.Dts.Pipeline.Design>데이터 흐름 구성 요소에 대 한 사용자 인터페이스를 만드는 데 사용 되는 클래스 및 인터페이스를 포함 합니다.
 
- [Integration Services 오류 및 메시지 참조](../../integration-services-error-and-message-reference.md) 미리 정의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 된 오류 코드와 해당 심볼 이름 및 설명을 나열 합니다.
+ [Integration Services 오류 및 메시지 참조](../../integration-services-error-and-message-reference.md) 미리 정의 된 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 오류 코드와 해당 심볼 이름 및 설명을 나열 합니다.
 
 ## <a name="related-sections"></a>관련 단원
 
 ### <a name="information-common-to-all-custom-objects"></a>모든 사용자 지정 개체에 대한 일반적인 정보
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서 만들 수 있는 모든 사용자 지정 개체 유형에 공통적인 내용은 다음 항목을 참조하십시오.
 
- [Integration Services에 대 한 사용자 지정 개체 개발](../../extending-packages-custom-objects/developing-custom-objects-for-integration-services.md) 에 대 한 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]모든 형식의 사용자 지정 개체를 구현 하는 기본 단계를 설명 합니다.
+ [Integration Services에 대 한 사용자 지정 개체 개발](../../extending-packages-custom-objects/developing-custom-objects-for-integration-services.md) 에 대 한 모든 형식의 사용자 지정 개체를 구현 하는 기본 단계를 설명 합니다 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .
 
  [사용자 지정 개체 유지](../../extending-packages-custom-objects/persisting-custom-objects.md) 사용자 지정 지 속성에 대해 설명 하 고 필요한 경우에 대해 설명 합니다.
 

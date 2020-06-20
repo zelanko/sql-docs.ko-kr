@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4d4baf1d-d0a1-4d09-bec7-137811f43f09
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e2ab1c4be29b87e1051daa702ce40905a95e34ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50ade30369ecdc7f5350503cc0e676a8158bb466
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022006"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061526"
 ---
 # <a name="publication-information-warnings-transactional-publication-sql-server-2005-and-later"></a>게시 정보, 경고(트랜잭션 게시, SQL Server 2005 이상)
   **경고** 탭은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전을 실행하는 배포자에서 사용할 수 있습니다. **경고** 탭을 사용하면 선택한 게시에 대해 다음 태스크를 수행할 수 있습니다.  
@@ -39,7 +38,7 @@ ms.locfileid: "63022006"
   
      이 조건은 **대기 시간이 임계값을 초과하는 경우 경고**옵션에 해당합니다. 지정한 임계값에 도달하거나 이 값을 초과하면 우선 순위가 더 높은 문제가 발생하지 않는 한 구독 상태가 **성능 심각** 으로 표시됩니다. 또한 임계값은 구독 정보가 포함된 페이지의 **성능** 열에 표시되는 성능 등급을 제공하는 데 사용됩니다. 성능 등급은 다음 값 중 하나입니다.  
   
-    -   최고  
+    -   우수  
   
     -   좋음  
   
@@ -54,7 +53,7 @@ ms.locfileid: "63022006"
  임계값에 도달하면 복제 모니터에 경고가 표시되는 것은 물론 알림 신호가 트리거될 수 있습니다. 알림 신호는 **경고 구성** 을 클릭하고 **복제 경고 구성** 대화 상자에서 정보를 제공하여 정의합니다.  
   
 ## <a name="options"></a>옵션  
- **사용**  
+ **Enabled**  
  경고를 설정하고 임계값을 지정하려면 선택합니다.  
   
  **Warning**  

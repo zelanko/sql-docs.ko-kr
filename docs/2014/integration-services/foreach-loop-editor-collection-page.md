@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5b9396ab5a25bba979859ac685c4759b8b01c24d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77604faa4cb32fc7babf273717422621b39648aa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66428803"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966433"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Foreach 루프 편집기(컬렉션 페이지)
   **Foreach 루프 편집기** 대화 상자의 **컬렉션** 페이지를 사용하여 열거자 유형을 지정하고 열거자를 구성할 수 있습니다.  
@@ -25,10 +24,10 @@ ms.locfileid: "66428803"
  Foreach 루프 컨테이너와 이를 구성하는 방법은 [Foreach 루프 컨테이너](control-flow/foreach-loop-container.md) 및 [Foreach 루프 컨테이너 구성](../../2014/integration-services/configure-a-foreach-loop-container.md)을 참조하세요.  
   
 ## <a name="static-options"></a>정적 옵션  
- **Enumerator**  
+ **열거**  
  목록에서 열거자 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**Foreach File 열거자**|파일을 열거합니다. 이 값을 선택하면 아래의 **Foreach File 열거자**섹션에 설명된 동적 옵션이 표시됩니다.|  
 |**Foreach Item 열거자**|항목의 값을 열거합니다. 이 값을 선택하면 아래의 **Foreach Item 열거자**섹션에 설명된 동적 옵션이 표시됩니다.|  
@@ -115,7 +114,7 @@ ms.locfileid: "66428803"
  변수에 저장된 ADO 또는 ADO.NET 개체의 행이나 테이블을 열거하는 데 Foreach ADO 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 변수에 데이터 세트를 기록하는 스크립트 태스크를 포함하는 경우 Foreach ADO 열거자를 사용하여 데이터 세트의 행을 열거할 수 있습니다. 변수가 ADO.NET 데이터 세트를 포함하는 경우 여러 테이블의 행을 열거하거나 테이블을 열거하도록 열거자를 구성할 수 있습니다.  
   
  **ADO 개체 원본 변수**  
- 목록에서 사용자 정의 변수를 선택 하거나 \< **새 변수** ...>를 클릭 하 여 새 변수를 만듭니다.  
+ 목록에서 사용자 정의 변수를 선택 하거나 \<**New variable...**> 를 클릭 하 여 새 변수를 만듭니다.  
   
 > [!NOTE]  
 >  변수에 Object 데이터 형식이 있어야 합니다. 그렇지 않으면 오류가 발생합니다.  
@@ -135,7 +134,7 @@ ms.locfileid: "66428803"
  지정한 데이터 원본에 대한 스키마를 열거하는 데 Foreach ADO.NET 스키마 행 집합 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 SQL 실행 태스크를 포함하는 경우 Foreach ADO.NET 스키마 행 집합 열거자를 사용하여 **AdventureWorks** 데이터베이스의 열과 같은 스키마를 열거하고 SQL 실행 태스크를 사용하여 스키마 사용 권한을 가져올 수 있습니다.  
   
  **연결**  
- 목록에서 ADO.NET 연결 관리자를 선택 하거나 \< **새 연결 ...**>을 클릭 하 여 새 ADO.NET 연결 관리자를 만듭니다.  
+ 목록에서 ADO.NET 연결 관리자를 선택 하거나 \<**New connection...**> 를 클릭 하 여 새 ADO.NET 연결 관리자를 만듭니다.  
   
 > [!IMPORTANT]  
 >  ADO.NET 연결 관리자는 OLE DB용 .NET 공급자를 사용해야 합니다. SQL Server에 연결하는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 연결 관리자 **대화 상자의** OleDb용 .NET 공급자 **섹션에 나열된** Native Client를 공급자로 사용하는 것이 좋습니다.  
@@ -154,21 +153,21 @@ ms.locfileid: "66428803"
  지정한 변수의 열거 가능한 개체를 열거하는 데 Foreach From Variable 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 쿼리를 실행하여 변수에 결과를 저장하는 SQL 실행 태스크를 포함하는 경우 Foreach From Variable 열거자를 사용하여 쿼리 결과를 열거할 수 있습니다.  
   
  **변수**  
- 목록에서 변수를 선택 하거나 \< **새 변수** ...>를 클릭 하 여 새 변수를 만듭니다.  
+ 목록에서 변수를 선택 하거나 \<**New variable...**> 를 클릭 하 여 새 변수를 만듭니다.  
   
  **관련 항목:** [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
 ### <a name="enumerator--foreach-nodelist-enumerator"></a>Enumerator = Foreach NodeList 열거자  
  XML 파일에 XPath 식을 적용한 결과 생성된 XML 노드 집합을 열거하는 데 Foreach Nodelist 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 스크립트 태스크를 포함하는 경우 Foreach NodeList 열거자를 사용하여 XPath 식 조건에 부합하는 값을 XML 파일에서 스크립트 태스크로 전달할 수 있습니다.  
   
- XML 파일에 적용되는 XPath 식은 OuterXPathString 속성에 저장되는 외부 XPath 작업입니다. XPath 열거형 형식이로 `ElementCollection`설정 된 경우 Foreach NodeList 열거자는 InnerXPathString 속성에 저장 된 내부 XPath 식을 요소 컬렉션에 적용할 수 있습니다.  
+ XML 파일에 적용되는 XPath 식은 OuterXPathString 속성에 저장되는 외부 XPath 작업입니다. XPath 열거형 형식이로 설정 된 경우 `ElementCollection` Foreach NodeList 열거자는 InnerXPathString 속성에 저장 된 내부 XPath 식을 요소 컬렉션에 적용할 수 있습니다.  
   
  XML 문서 및 데이터 작업 방법은 MSDN Library의 "[.NET Framework에 XML 적용(Employing XML in the .NET Framework)](https://go.microsoft.com/fwlink/?LinkId=56214)"을 참조하십시오.  
   
  **DocumentSourceType**  
  XML 문서의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
@@ -177,18 +176,18 @@ ms.locfileid: "66428803"
  **DocumentSource**  
  **DocumentSourceType** 을 **직접 입력**으로 설정한 경우 xml 코드를 입력 하거나 줄임표 (...) 단추를 클릭 하 여 **문서 원본 편집기**대화 상자를 사용 하 여 xml을 제공 합니다.  
   
- **DocumentSourceType** 을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택 하거나 \< **새 연결** ...>을 클릭 하 여 새 연결 관리자를 만듭니다.  
+ **DocumentSourceType** 을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택 하거나를 클릭 \<**New connection...**> 하 여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **DocumentSourceType** 을 **변수**로 설정한 경우 기존 변수를 선택 하거나 \< **새 변수** ...>를 클릭 하 여 새 변수를 만듭니다.  
+ **DocumentSourceType** 을 **변수**로 설정한 경우 기존 변수를 선택 하거나 \<**New variable...**> 를 클릭 하 여 새 변수를 만듭니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
  **EnumerationType**  
  목록에서 열거 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**Navigator**|XPathNavigator를 사용하여 열거합니다.|  
 |**노드**|XPath 작업에서 반환한 노드를 열거합니다.|  
@@ -198,7 +197,7 @@ ms.locfileid: "66428803"
  **OuterXPathStringSourceType**  
  XPath 문자열의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
@@ -207,21 +206,21 @@ ms.locfileid: "66428803"
  `OuterXPathString`  
  **OuterXPathStringSourceType**을 **직접 입력**으로 설정한 경우 XPath 문자열을 입력합니다.  
   
- **OuterXPathStringSourceType** 을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택 하거나 \< **새 연결** ...>을 클릭 하 여 새 연결 관리자를 만듭니다.  
+ **OuterXPathStringSourceType** 을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택 하거나를 클릭 \<**New connection...**> 하 여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **OuterXPathStringSourceType** 을 **변수**로 설정한 경우 기존 변수를 선택 하거나 \< **새 변수** ...>를 클릭 하 여 새 변수를 만듭니다.  
+ **OuterXPathStringSourceType** 을 **변수**로 설정한 경우 기존 변수를 선택 하거나 \<**New variable...**> 를 클릭 하 여 새 변수를 만듭니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
  **InnerElementType**  
- **EnumerationType** 가로 `ElementCollection`설정 된 경우 목록에서 내부 요소의 유형을 선택 합니다.  
+ **EnumerationType** 가로 설정 된 경우 `ElementCollection` 목록에서 내부 요소의 유형을 선택 합니다.  
   
  **InnerXPathStringSourceType**  
  내부 XPath 문자열의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
@@ -230,11 +229,11 @@ ms.locfileid: "66428803"
  `InnerXPathString`  
  **InnerXPathStringSourceType**을 **직접 입력**으로 설정한 경우 XPath 문자열을 입력합니다.  
   
- **InnerXPathStringSourceType** 을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택 하거나 \< **새 연결** ...>을 클릭 하 여 새 연결 관리자를 만듭니다.  
+ **InnerXPathStringSourceType** 을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택 하거나를 클릭 \<**New connection...**> 하 여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **InnerXPathStringSourceType** 을 **변수**로 설정한 경우 기존 변수를 선택 하거나 \< **새 변수** ...>를 클릭 하 여 새 변수를 만듭니다.  
+ **InnerXPathStringSourceType** 을 **변수**로 설정한 경우 기존 변수를 선택 하거나 \<**New variable...**> 를 클릭 하 여 새 변수를 만듭니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
@@ -242,7 +241,7 @@ ms.locfileid: "66428803"
  SMO(SQL Server Management Objects) 개체를 열거하는 데 Foreach SMO 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 SQL 실행 태스크를 포함하는 경우 Foreach SMO 열거자를 사용하여 **AdventureWorks** 데이터베이스의 테이블을 열거하고 각 테이블의 행 수를 계산하는 쿼리를 실행할 수 있습니다.  
   
  **연결**  
- 기존 ADO.NET 연결 관리자를 선택 하거나 \< **새 연결 ...**>을 클릭 하 여 새 연결 관리자를 만듭니다.  
+ 기존 ADO.NET 연결 관리자를 선택 하거나를 클릭 \<**New connection...**> 하 여 새 연결 관리자를 만듭니다.  
   
  관련 항목: [ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](configure-ado-net-connection-manager.md)  
   
@@ -274,7 +273,7 @@ ms.locfileid: "66428803"
  **Blob 시간 범위 시작/끝 필터**  
  시간 범위 필터를 지정합니다. **TimeRangeFrom** 에서 **TimeRangeTo** 사이에 수정된 파일이 열거됩니다.  
 ### <a name="enumerator--foreach-adls-file-enumerator"></a> 열거자 = Foreach ADLS File 열거자  
-**ADLS File 열거자** 를 사용 하면 SSIS 패키지에서 ADLS의 파일을 필터로 열거할 수 있습니다. 슬래시 (`/`)-앞에 열거 된 파일의 전체 경로를 변수에 저장 하 고 Foreach 루프 컨테이너 내의 태스크에서 사용할 수 있습니다.
+**ADLS File 열거자** 를 사용 하면 SSIS 패키지에서 ADLS의 파일을 필터로 열거할 수 있습니다. 슬래시 ( `/` )-앞에 열거 된 파일의 전체 경로를 변수에 저장 하 고 Foreach 루프 컨테이너 내의 태스크에서 사용할 수 있습니다.
   
 **AzureDataLakeConnection**  
 Azure Data Lake 연결 관리자를 지정하거나 ADLS 계정을 참조하는 새 연결 관리자를 만듭니다.   

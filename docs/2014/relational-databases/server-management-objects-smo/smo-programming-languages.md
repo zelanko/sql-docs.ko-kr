@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: f5e5a832-03e9-477b-b55d-491c678ebb43
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: feca89ac2ac888c2fa9f082595e761e898dea971
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49c6031d15a2140f5a5c269d90cce0cd230eee1b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211923"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055233"
 ---
 # <a name="programming-languages"></a>프로그래밍 언어
-  이 섹션에서는 Visual Basic .NET, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual c # .NET 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 SMO (Management Objects)를 프로그래밍 하는 방법에 대해 설명 합니다.  
+  이 섹션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .Net, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual c # .net 및 Visual C++에서 SMO (Management Objects)를 프로그래밍 하는 방법에 대해 설명 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[Visual Basic .NET 시작](../../database-engine/dev-guide/getting-started-in-visual-basic-net.md)|Visual Basic .NET에서 SMO 프로그램 작성을 시작하는 방법을 설명합니다.|  
 |[Visual C&#35; .NET 시작](smo-programming-getting-started-in-visual-csharp-net.md)|Visual C# .NET에서 SMO 프로그램 작성을 시작하는 방법을 설명합니다.|  

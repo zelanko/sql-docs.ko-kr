@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a942136314702d5fe87c1997f20dcb19a74df13d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c65b4df915a85cf0ec7c7c0c8c0ff9f6607ad96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184412"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055309"
 ---
 # <a name="sequence-numbers"></a>시퀀스 번호
   시퀀스는 시퀀스를 만들 때 지정한 사양에 따라 숫자 값의 시퀀스를 생성하는 사용자 정의 스키마 바인딩된 개체입니다. 숫자 값의 시퀀스는 지정된 간격으로 올림차순 또는 내림차순으로 생성되며 요청된 경우 순환(반복)할 수 있습니다. ID 열과 달리 시퀀스는 테이블에 연결되어 있지 않습니다. 애플리케이션은 다음 값을 가져오기 위해 시퀀스 개체를 참조합니다. 시퀀스와 테이블 간의 관계는 애플리케이션에서 제어합니다. 사용자 애플리케이션에서는 시퀀스 개체를 참조하고 여러 행 및 테이블에 걸쳐 값 키를 조정할 수 있습니다.  
@@ -78,7 +77,7 @@ CREATE SEQUENCE Schema.SequenceName
 ## <a name="managing-sequences"></a>시퀀스 관리  
  시퀀스에 대한 자세한 내용을 보려면 [sys.sequences](/sql/relational-databases/system-catalog-views/sys-sequences-transact-sql)를 쿼리하십시오.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  [CREATE SEQUENCE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-sequence-transact-sql), [NEXT VALUE FOR&#40;Transact-SQL&#41;](/sql/t-sql/functions/next-value-for-transact-sql) 및 [sp_sequence_get_range](/sql/relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql) 항목에서 또 다른 예제를 찾아볼 수 있습니다.  
   
 ### <a name="a-using-a-sequence-number-in-a-single-table"></a>A. 단일 테이블에서 시퀀스 번호 사용  

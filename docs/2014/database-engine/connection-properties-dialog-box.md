@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6df812ad-4d80-4503-8a23-47719ce85624
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80e858e75cec96b7e56e16fa7465a22048563726
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808401"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934614"
 ---
 # <a name="connection-properties-dialog-box"></a>연결 속성 대화 상자
   이 대화 상자를 사용하여 현재 연결 속성을 확인할 수 있습니다. 다양한 개체 탐색기 대화 상자에서 **연결 속성 보기** 를 클릭하면 이 대화 상자를 사용할 수 있습니다. 이 페이지에 표시된 속성은 읽기 전용입니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "62808401"
  SQL Azure의 쿼리 제한 시간은 30분입니다.  
   
 ## <a name="authentication"></a>인증  
- 현재 연결에 대한 인증 속성을 표시합니다. 인증 속성은 연결을 설정할 때 사용한 로그인 및 인증 방법입니다. 인증 속성을 변경 하려면에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]연결을 끊은 다음 원하는 연결 옵션을 사용 하 여 서버에 개체 탐색기을 다시 연결 합니다.  
+ 현재 연결에 대한 인증 속성을 표시합니다. 인증 속성은 연결을 설정할 때 사용한 로그인 및 인증 방법입니다. 인증 속성을 변경 하려면에서 연결을 끊은 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 다음 원하는 연결 옵션을 사용 하 여 서버에 개체 탐색기을 다시 연결 합니다.  
   
  **인증 방법**  
  현재 연결에 사용된 인증 방법입니다.  
@@ -58,7 +57,7 @@ ms.locfileid: "62808401"
  **실행 제한 시간**  
  서버에서 태스크 실행이 완료되기까지 대기하는 시간(초)입니다. 이를 변경하려면 원하는 연결 속성으로 다시 연결합니다.  
   
- **암호화됨**  
+ **암호화**  
  현재 연결의 암호화 여부를 나타냅니다. 이를 변경하려면 원하는 연결 속성으로 다시 연결합니다.  
   
 ## <a name="product-category"></a>제품 범주  

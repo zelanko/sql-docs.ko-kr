@@ -22,16 +22,15 @@ helpviewer_keywords:
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3648798bdbdfb6114fb44b0c4086340bb32d1085
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59ce040242b87cfc955054e062a09fd579f77a14
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890237"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964843"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>패키지 실행 유틸리티(DtExecUI) UI 참조
-  **패키지 실행 유틸리티** 를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 수 있습니다. 이 유틸리티는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템의 세 위치 중 하나에 저장된 패키지를 실행합니다. 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 열거나 명령 프롬프트에서를 입력 `dtexecui` 하 여 열 수 있는이 사용자 인터페이스는 **DTExec** 명령 프롬프트 도구를 사용 하 여 패키지를 실행 하는 대신 사용할 수 있습니다.  
+  **패키지 실행 유틸리티** 를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 수 있습니다. 이 유틸리티는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템의 세 위치 중 하나에 저장된 패키지를 실행합니다. 에서 열거나 명령 프롬프트에서를 입력 하 여 열 수 있는이 사용자 인터페이스 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] `dtexecui` 는 **DTExec** 명령 프롬프트 도구를 사용 하 여 패키지를 실행 하는 대신 사용할 수 있습니다.  
   
  패키지는 **dtexecui.exe** 유틸리티와 같은 프로세스로 실행됩니다. 이 유틸리티는 32비트 도구이므로 패키지는 WOW(Windows on Win32)에서 실행되는 64비트 환경에서 **dtexecui.exe** 를 사용하여 실행됩니다. 64비트 컴퓨터에서 dtexecui.exe 유틸리티를 사용하여 명령을 개발하고 테스트하는 경우에는 프로덕션 서버에서 명령을 배포하거나 예약하기 전에 64비트 버전의 **dtexec.exe** 를 사용하여 64비트 모드에서 명령을 테스트해야 합니다.  
   

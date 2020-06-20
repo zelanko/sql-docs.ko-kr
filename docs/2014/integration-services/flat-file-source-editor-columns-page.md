@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f8fda95b51f568098b0ac9fc13b8a204adb71c51
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f882aae9062d97914c86644a7be0ea126ed9dd8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058607"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966443"
 ---
 # <a name="flat-file-source-editor-columns-page"></a>플랫 파일 원본 편집기(열 페이지)
   **플랫 파일 원본 편집기** 대화 상자의 **열** 노드를 사용하여 출력 열을 외부(원본) 열에 매핑할 수 있습니다.  
   
 > [!NOTE]  
->  플랫 `FileNameColumnName` 파일 원본의 속성과 출력 열의 `FastParse` 속성은 **플랫 파일 원본 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용 하 여 설정할 수 있습니다. 이러한 속성에 대한 자세한 내용은 [Flat File Custom Properties](data-flow/flat-file-custom-properties.md)의 플랫 파일 원본 섹션을 참조하십시오.  
+>  플랫 파일 원본의 `FileNameColumnName` 속성과 `FastParse` 출력 열의 속성은 **플랫 파일 원본 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용 하 여 설정할 수 있습니다. 이러한 속성에 대한 자세한 내용은 [Flat File Custom Properties](data-flow/flat-file-custom-properties.md)의 플랫 파일 원본 섹션을 참조하십시오.  
   
  플랫 파일 원본에 대한 자세한 내용은 [Flat File Source](data-flow/flat-file-source.md)을 참조하십시오.  
   
@@ -43,6 +42,6 @@ ms.locfileid: "66058607"
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [플랫 파일 원본 편집기 &#40;연결 관리자 페이지&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
  [플랫 파일 원본 편집기 &#40;오류 출력 페이지&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
- [Flat File Connection Manager](connection-manager/file-connection-manager.md)  
+ [플랫 파일 연결 관리자](connection-manager/file-connection-manager.md)  
   
   

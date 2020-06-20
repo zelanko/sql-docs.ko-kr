@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 298723c5031299b1b105f686e188e1e27cfd758c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916949"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965881"
 ---
 # <a name="model-database"></a>model 데이터베이스
   **model** 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 생성된 모든 데이터베이스에 대한 템플릿으로 사용됩니다. **을(를) 시작할 때마다** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 생성되기 때문에 **model** 데이터베이스는 항상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템에 있어야 합니다. 데이터베이스 옵션을 포함한 **model** 데이터베이스의 전체 내용이 새 데이터베이스에 복사됩니다. 또한 **model** 의 일부 설정이 시작되는 동안 새 **tempdb** 를 만드는 데 사용되므로 **시스템에 항상** model [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스가 있어야 합니다.  
@@ -60,23 +59,23 @@ ms.locfileid: "62916949"
 |AUTO_SHRINK|OFF|예|  
 |AUTO_UPDATE_STATISTICS|켜기|예|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|예|  
-|CHANGE_TRACKING|OFF|아니요|  
+|CHANGE_TRACKING|OFF|예|  
 |CONCAT_NULL_YIELDS_NULL|OFF|예|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|예|  
 |CURSOR_DEFAULT|GLOBAL|예|  
-|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니요<br /><br /> 예<br /><br /> yes|  
+|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|예<br /><br /> 예<br /><br /> yes|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|예|  
-|DB_CHAINING|OFF|아니요|  
+|DB_CHAINING|OFF|예|  
 |ENCRYPTION|OFF|예|  
 |NUMERIC_ROUNDABORT|OFF|예|  
 |PAGE_VERIFY|CHECKSUM|예|  
 |PARAMETERIZATION|SIMPLE|예|  
 |QUOTED_IDENTIFIER|OFF|예|  
 |READ_COMMITTED_SNAPSHOT|OFF|예|  
-|RECOVERY|버전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 따라 다름<sup>1</sup>|예|  
+|RECOVERY|버전에 따라 다름 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup>|예|  
 |RECURSIVE_TRIGGERS|OFF|예|  
-|Service Broker 옵션|DISABLE_BROKER|아니요|  
-|TRUSTWORTHY|OFF|아니요|  
+|Service Broker 옵션|DISABLE_BROKER|예|  
+|TRUSTWORTHY|OFF|예|  
   
  <sup>1</sup> 데이터베이스의 현재 복구 모델을 확인 하려면 [데이터베이스의 복구 모델 보기 또는 변경 &#40;SQL Server&#41;](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) 또는 [sys. &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)을 참조 하세요.  
   

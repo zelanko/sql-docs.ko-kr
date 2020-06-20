@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: ea76aae0-8798-4677-8ab8-4a579de4957c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 12f9b5ad88ce49eb13b4aa460e02e295b13135ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e442ad28f64de8bd293fa95a604207e9bdc13107
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058545"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966398"
 ---
 # <a name="for-each-item-columns-dialog-box-ui-reference"></a>For Each Item 열 대화 상자 UI 참조
   **For Each Item 열** 대화 상자를 사용하여 Foreach Item 열거자에서 열거하는 항목에 열을 정의할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
- **열의**  
+ **열**  
  열을 나열합니다.  
   
  **데이터 형식**  

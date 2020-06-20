@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 74599a76-3fa4-4ac9-9d16-e0a03c15a762
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 801872affac61572553cbbd2e9648e197e16bb47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 64093c4a0db4a4fc31f287fe908757de13a3462e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054288"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972300"
 ---
 # <a name="add-metadata-master-data-services"></a>메타데이터 추가(Master Data Services)
-  에서 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]사용자 정의 메타 데이터를 **메타 데이터** 모델에 추가 하 여 모델 개체를 설명 합니다.  
+  에서 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 사용자 정의 메타 데이터를 **메타 데이터** 모델에 추가 하 여 모델 개체를 설명 합니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
@@ -34,7 +33,7 @@ ms.locfileid: "66054288"
   
 ### <a name="to-add-metadata"></a>메타데이터를 추가하려면  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 홈 페이지의 **모델** 목록에서 **메타 데이터** 모델을 선택 합니다.  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]홈 페이지의 **모델** 목록에서 **메타 데이터** 모델을 선택 합니다.  
   
 2.  **버전** 목록에서 버전을 선택합니다.  
   

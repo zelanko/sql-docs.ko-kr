@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ef98316982090d247c09ec887e0d00a5c895950b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 61cc9b3b9a07bb20d8aa0defa28fdae133ae454f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74054843"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933275"
 ---
 # <a name="string-utility-functions-sample"></a>문자열 유틸리티 함수 예제
   문자열 유틸리티 예제에는 쉼표로 구분된 문자열을 열이 하나인 테이블로 분할하는, Visual C# 및 Visual Basic으로 작성된 스트리밍 테이블 반환 함수가 포함되어 있습니다. 또한 문자열 열을 쉼표로 구분된 문자열로 변환하는 집계 함수도 포함되어 있습니다.  또한 정규식 대체 및 정규식 검색 기능을 제공하는 스칼라 함수와 테이블 반환 함수를 구현합니다.  
@@ -54,7 +53,7 @@ ms.locfileid: "74054843"
   
 -   사용하고 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 AdventureWorks 데이터베이스를 설치해야 합니다.  
   
--   사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 관리자가 아닌 경우 설치를 완료 하려면 관리자에 게 **createassembly** 권한을 부여 해야 합니다.  
+-   사용 중인 인스턴스의 관리자가 아닌 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 완료 하려면 관리자에 게 **createassembly** 권한을 부여 해야 합니다.  
   
 ## <a name="building-the-sample"></a>예제 빌드  
   

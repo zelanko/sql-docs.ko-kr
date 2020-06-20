@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 223a8a300a4f3000512f8d75dfb7595cb52abc08
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb2a248ea8fa0205f1db11df0589ab2b3da0ab9b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067832"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940184"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>테이블 형식 모델 디자이너(SSAS 테이블 형식)
   테이블 형식 모델 디자이너는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 일부로 Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 이상 환경과 통합되어 있으며, 전문적인 테이블 형식의 모델 솔루션을 개발하기 위한 추가 프로젝트 형식 템플릿이 함께 제공됩니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "66067832"
   
 -   [Visual Studio 통합](#bkmk_vsint)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>아니라  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> 이점  
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]를 설치하면 테이블 형식의 모델을 만들기 위한 새 프로젝트 템플릿이 사용 가능한 프로젝트 형식에 추가됩니다. 이 템플릿 중 하나를 사용하여 테이블 형식의 새 모델 프로젝트를 만든 다음 테이블 형식 모델 디자이너 도구와 마법사를 사용하여 모델 제작을 시작할 수 있습니다.  
   
  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 환경에서는 전문적인 다차원 및 테이블 형식 모델 솔루션 제작을 위한 새로운 템플릿과 도구뿐만 아니라 디버깅 및 프로젝트 수명 주기 기능을 제공하여 조직에 맞는 가장 강력한 BI 솔루션을 개발할 수 있습니다. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]에 대한 자세한 내용은 [Visual Studio 시작](https://go.microsoft.com/fwlink/?LinkId=206389)을 참조하십시오.  
@@ -111,14 +110,14 @@ ms.locfileid: "66067832"
   
  이러한 새 메뉴 항목 외에도 도구 메뉴 항목의 Analysis Services 옵션에 추가 설정이 추가되어 있습니다.  
   
-### <a name="toolbar"></a>도구 모음  
+### <a name="toolbar"></a>Toolbar  
  Analysis Services 도구 모음을 통해 신속하고 간편하게 자주 사용하는 모델 작성 명령에 액세스할 수 있습니다.  
   
 ##  <a name="visual-studio-integration"></a><a name="bkmk_vsint"></a> Visual Studio 통합  
  **원본 제어**  
  Analysis Services 프로젝트는 선택한 원본 제어 플러그 인과 통합됩니다. 원본 제어를 사용하도록 Visual Studio를 구성하면 솔루션 탐색기에서 체크 인/체크 아웃을 사용할 수 있습니다. Team Foundation Server를 사용하도록 구성하려면 [Team Foundation 버전 제어로 Visual Studio 구성](https://msdn.microsoft.com/library/ms253064.aspx)을 참조하십시오. 그 외 다양한 타사 원본 제어 플러그 인도 지원합니다.  
   
- **글꼴**  
+ **Fonts**  
  테이블 형식 모델은 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 환경의 글꼴을 사용하여 표시되는 글꼴을 제어합니다. 기본 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 글꼴을 사용하여 해당 언어의 유니코드 문자를 모두 표시할 수 없을 경우 이 글꼴을 변경해야 할 수 있습니다. 글꼴을 변경하려면 **도구** 메뉴를 클릭하고 **옵션**을 클릭한 다음 **글꼴 및 색**을 클릭합니다.  
   
  **바로 가기 키**  
