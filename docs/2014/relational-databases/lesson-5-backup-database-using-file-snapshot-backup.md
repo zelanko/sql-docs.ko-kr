@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 689c3a734a5b4eb424511da52032dc348b5757ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7686f6ee0a5cbce01fb69d36d645ff9787276ef8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75231802"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024926"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>6단원: 온-프레미스의 원본 머신에서 Azure의 대상 머신으로 데이터베이스 마이그레이션
   이 단원에서는 다른 온-프레미스 컴퓨터 또는 Azure의 가상 컴퓨터에 있을 수 있는 다른 SQL Server 이미 있다고 가정 합니다. Azure에서 SQL Server 가상 머신을 만드는 방법에 대 한 자세한 내용은 [azure에서 SQL Server 가상 머신 프로 비전](https://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/)을 참조 하세요. Azure에서 SQL Server 가상 컴퓨터를 프로 비전 한 후 다른 컴퓨터의 SQL Server Management Studio을 통해이 가상 컴퓨터의 SQL Server 인스턴스에 연결할 수 있는지 확인 합니다.  
@@ -136,9 +135,9 @@ ms.locfileid: "75231802"
   
 5.  **데이터베이스 연결** 대화 상자에서 연결할 데이터베이스를 지정하려면 **추가**를 클릭합니다. **데이터베이스 파일 찾기** 대화 상자에서 다음을 수행합니다.  
   
-     데이터베이스 데이터 파일 위치에 대해를 입력 `https://teststorageaccnt.blob.core.windows.net/testcontainer/`합니다.  
+     데이터베이스 데이터 파일 위치에 대해를 입력 `https://teststorageaccnt.blob.core.windows.net/testcontainer/` 합니다.  
   
-     파일 이름에을 입력 `TestDB1Data.mdf`합니다.  
+     파일 이름에을 입력 `TestDB1Data.mdf` 합니다.  
   
 6.  **확인**을 클릭합니다.  
   

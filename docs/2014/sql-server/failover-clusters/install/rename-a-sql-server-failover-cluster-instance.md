@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96bd1cc82f73fd78bd16d0d3fe2f2015fabe4995
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63126027"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062602"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>SQL Server 장애 조치(Failover) 클러스터 인스턴스 이름 변경
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 장애 조치 클러스터의 일부인 경우 가상 서버의 이름을 바꾸는 방법은 독립 실행형 인스턴스의 이름을 바꾸는 방법과 다릅니다. 자세한 내용은 [SQL Server의 독립 실행형 인스턴스를 호스팅하는 컴퓨터 이름 바꾸기](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)를 참조하세요.  
@@ -63,15 +62,15 @@ ms.locfileid: "63126027"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>이름 바꾸기 작업 후 추가 고려 사항  
  장애 조치(Failover) 클러스터의 네트워크 이름을 바꾼 후에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 및 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 모든 시나리오를 지원하기 위해 다음 지침을 확인하고 수행해야 합니다.  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Windows 클러스터 관리자 도구를 사용 하 여 [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] 장애 조치 (failover) 클러스터 인스턴스의 네트워크 이름을 변경한 후에는 이후 업그레이드 또는 제거 작업이 실패할 수 있습니다. 이 문제를 해결 하려면 [이](https://go.microsoft.com/fwlink/?LinkId=244002) 문서의 해결 방법 섹션에 있는 지침에 따라 **ClusterName** 레지스트리 항목을https://go.microsoft.com/fwlink/?LinkId=244002)업데이트 합니다.  
+ ** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] :** [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] Windows 클러스터 관리자 도구를 사용 하 여 장애 조치 (failover) 클러스터 인스턴스의 네트워크 이름을 변경한 후에는 이후 업그레이드 또는 제거 작업이 실패할 수 있습니다. 이 문제를 해결 하려면 [이](https://go.microsoft.com/fwlink/?LinkId=244002) 문서의 해결 방법 섹션에 있는 지침에 따라 **ClusterName** 레지스트리 항목을 업데이트 https://go.microsoft.com/fwlink/?LinkId=244002) 합니다.  
   
- ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스:** 에이전트 서비스에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 아래와 같은 추가 작업을 확인 하 고 수행 합니다.  
+ ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스:** 아래의 추가 작업 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 확인 하 고 수행 합니다. 에이전트 서비스:  
   
 -   SQL 에이전트가 이벤트를 전달하도록 구성된 경우 레지스트리 설정을 수정합니다. 자세한 내용은 [이벤트 전달 서버 지정&#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md)을 참조하세요.  
   
 -   컴퓨터/클러스터 네트워크 이름을 바꿀 때 마스터 서버(MSX) 및 대상 서버(TSX) 인스턴스 이름을 수정합니다. 자세한 내용은 아래 항목을 참조하세요.  
   
-    -   [Defect Multiple Target Servers from a Master Server](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
+    -   [마스터 서버에서 여러 대상 서버 제거](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
     -   [다중 서버 환경 만들기](../../../ssms/agent/create-a-multiserver-environment.md)  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a41f11b200ffe5dfc91479ea54095fd24c90699a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 603b5e6b929259dc8b1408c0c2a1afab383446e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011552"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055517"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>전체 텍스트 인덱스 만들기 및 관리
   전체 텍스트 인덱스의 정보는 전체 텍스트 엔진이 테이블에서 특정 단어나 단어 조합을 빠르게 검색할 수 있는 전체 텍스트 쿼리를 컴파일하는 데 사용됩니다. 전체 텍스트 인덱스는 하나 이상의 데이터베이스 테이블 열에 중요한 단어와 그 위치에 대한 정보를 저장합니다. 전체 텍스트 인덱스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 전체 텍스트 엔진이 작성하고 유지 관리하는 특수한 유형의 토큰 기반 인덱스입니다. 전체 텍스트 인덱스의 작성 과정은 다른 유형의 인덱스를 작성하는 것과 다릅니다. 특정 행에 저장된 값을 기준으로 B-트리 구조를 생성하는 대신 전체 텍스트 엔진은 인덱싱되는 텍스트의 개별 토큰을 기준으로 반전된 누적 압축 인덱스 구조를 작성합니다.  전체 텍스트 인덱스 크기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되는 컴퓨터의 사용 가능한 메모리 리소스에 의해서만 제한됩니다.  
@@ -78,7 +77,7 @@ ms.locfileid: "66011552"
 |Reflector|1|3|2|  
 |Bracket|1|2|3|  
 |Bracket|1|3|3|  
-|Assembly|1|2|6|  
+|어셈블리|1|2|6|  
 |3|1|2|7|  
 |설치|1|3|4|  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66011552"
   
  **ColId** 열에는 전체 텍스트 인덱싱된 특정 열에 해당하는 값이 포함됩니다.  
   
- 열 `DocId` 에는 전체 텍스트 인덱싱된 테이블의 특정 전체 텍스트 키 값에 매핑되는 8 바이트 정수 값이 포함 되어 있습니다. 이 매핑은 전체 텍스트 키가 정수 데이터 형식이 아닌 경우에만 필요합니다. 이러한 경우 전체 텍스트 키 값과 `DocId` 값 사이의 매핑은 DocId 매핑 테이블 이라는 별도의 테이블에서 유지 관리 됩니다. 이러한 매핑을 쿼리하려면 [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) 시스템 저장 프로시저를 사용합니다. 검색 조건을 충족하려면 위 테이블의 DocId 값이 쿼리 중인 기본 테이블에서 행을 검색할 수 있도록 DocId Mapping 테이블과 조인되어야 합니다. 기본 테이블의 전체 텍스트 키 값이 정수 형식인 경우 값은 DocId로 직접 사용되며 매핑이 필요하지 않습니다. 따라서 정수 전체 텍스트 키 값을 사용하면 전체 텍스트 쿼리 최적화에 도움이 될 수 있습니다.  
+ 열에는 `DocId` 전체 텍스트 인덱싱된 테이블의 특정 전체 텍스트 키 값에 매핑되는 8 바이트 정수 값이 포함 되어 있습니다. 이 매핑은 전체 텍스트 키가 정수 데이터 형식이 아닌 경우에만 필요합니다. 이러한 경우 전체 텍스트 키 값과 값 사이의 매핑은 `DocId` DocId 매핑 테이블 이라는 별도의 테이블에서 유지 관리 됩니다. 이러한 매핑을 쿼리하려면 [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) 시스템 저장 프로시저를 사용합니다. 검색 조건을 충족하려면 위 테이블의 DocId 값이 쿼리 중인 기본 테이블에서 행을 검색할 수 있도록 DocId Mapping 테이블과 조인되어야 합니다. 기본 테이블의 전체 텍스트 키 값이 정수 형식인 경우 값은 DocId로 직접 사용되며 매핑이 필요하지 않습니다. 따라서 정수 전체 텍스트 키 값을 사용하면 전체 텍스트 쿼리 최적화에 도움이 될 수 있습니다.  
   
  **Occurrence** 열에는 정수 값이 포함됩니다. 각 DocId 값에는 해당 DocId 내의 특정 키워드에 대한 상대적 단어 오프셋에 해당하는 발생 빈도 값의 목록이 있습니다. 발행 빈도 값은 구 또는 근접 단어 일치를 확인하는 데 유용합니다. 예를 들어 구는 발생 빈도 값의 숫자가 서로 인접해 있습니다. 발생 빈도 값은 관련성을 평가하는 데에도 유용합니다. 예를 들어 DocId의 키워드 발생 빈도를 평가 시 사용할 수 있습니다.  
   
@@ -108,7 +107,7 @@ ms.locfileid: "66011552"
 |Rear|1|3|1|  
 |Reflector|1|3|2|  
   
- 조각 2에서 볼 수 있듯이 전체 텍스트 쿼리에서는 각 조각을 내부적으로 쿼리하고 이전 항목을 무시해야 합니다. 따라서 전체 텍스트 인덱스에 전체 텍스트 인덱스 조각이 너무 많으면 쿼리 성능이 크게 저하될 수 있습니다. 조각 수를 줄이려면 [ALTER 전체 텍스트 카탈로그](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 다시 구성 옵션을 사용 하 여 전체 텍스트 카탈로그를 다시 구성 합니다. 이 문은 *마스터 병합*을 수행하고 이 병합에서는 여러 조각을 하나의 큰 조각으로 병합하고 전체 텍스트 인덱스에서 사용되지 않는 항목을 모두 제거합니다.  
+ 조각 2에서 볼 수 있듯이 전체 텍스트 쿼리에서는 각 조각을 내부적으로 쿼리하고 이전 항목을 무시해야 합니다. 따라서 전체 텍스트 인덱스에 전체 텍스트 인덱스 조각이 너무 많으면 쿼리 성능이 크게 저하될 수 있습니다. 조각 수를 줄이려면 [ALTER 전체 텍스트 카탈로그](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql) 문의 다시 구성 옵션을 사용 하 여 전체 텍스트 카탈로그를 다시 구성 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . 이 문은 *마스터 병합*을 수행하고 이 병합에서는 여러 조각을 하나의 큰 조각으로 병합하고 전체 텍스트 인덱스에서 사용되지 않는 항목을 모두 제거합니다.  
   
  다시 구성 작업 후 예제 인덱스에는 다음과 같은 행이 포함됩니다.  
   
@@ -124,7 +123,7 @@ ms.locfileid: "66011552"
 |Reflector|1|2|5|  
 |Reflector|1|3|2|  
 |Bracket|1|2|3|  
-|Assembly|1|2|6|  
+|어셈블리|1|2|6|  
 |3|1|2|7|  
   
  [항목 내용](#top)  

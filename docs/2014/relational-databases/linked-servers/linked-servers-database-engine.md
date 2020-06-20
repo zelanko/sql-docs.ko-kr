@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e50cd7bc491109c1aa7a1941d04330141e907941
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4a1de70882cdeb87ccc0ae42aa23a9b6c8b3248e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175902"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049828"
 ---
 # <a name="linked-servers-database-engine"></a>연결된 서버(데이터베이스 엔진)
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스 외부의 OLE DB 데이터 원본에 대해 명령을 실행할 수 있도록 연결된 서버를 구성합니다. 일반적으로 연결된 서버는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 다른 인스턴스 또는 Oracle과 같은 다른 데이터베이스 제품에 있는 테이블이 포함된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]문을 실행할 수 있도록 구성됩니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Access 및 Excel을 포함한 많은 유형의 OLE DB 데이터 원본을 연결된 서버로 구성할 수 있습니다. 연결된 서버에는 다음과 같은 이점이 있습니다.
@@ -46,7 +45,7 @@ ms.locfileid: "78175902"
 
  *OLE DB Provider* 는 특정 데이터 원본과 상호 작용하고 관리하는 DLL입니다. *OLE DB 데이터 원본* 은 OLE DB를 통해 액세스할 수 있는 특정 데이터베이스를 식별합니다. 연결된 서버 정의를 통해 쿼리되는 데이터 원본은 일반적으로 데이터베이스이지만 OLE DB Provider에는 여러 파일 및 파일 형식이 존재합니다. 여기에는 텍스트 파일, 스프레드시트 데이터 및 전체 텍스트 내용의 검색 결과가 포함됩니다.
 
- Native Client OLE DB 공급자 (PROGID: SQLNCLI11)는의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]공식 OLE DB 공급자입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 (PROGID: SQLNCLI11)는의 공식 OLE DB 공급자입니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
 
 > [!NOTE]
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 분산 쿼리는 필수 OLE DB 인터페이스를 구현하는 모든 OLE DB Provider에서 실행되도록 디자인되었습니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB Provider와 다른 특정 공급자에 대해서만 테스트되었습니다.
@@ -78,7 +77,7 @@ ms.locfileid: "78175902"
 
  또한 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]를 사용하여 연결된 서버를 정의할 수 있습니다. 개체 탐색기에서 **서버 개체**를 마우스 오른쪽 단추로 클릭하고 **새로 만들기**를 선택하고 **연결된 서버**를 선택합니다. 연결된 서버 이름을 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택하면 연결된 서버 정의를 삭제할 수 있습니다.
 
- 연결된 서버에 대해 분산 쿼리를 실행할 경우 각 데이터 원본에서 쿼리할 정식 이름인, 네 부분으로 된 테이블 이름이 포함됩니다. 네 부분으로 구성 된 이름은 _linked_server_name. catalog_**_`schema`_ 형식 이어야 합니다.** _object_name_.
+ 연결된 서버에 대해 분산 쿼리를 실행할 경우 각 데이터 원본에서 쿼리할 정식 이름인, 네 부분으로 된 테이블 이름이 포함됩니다. 네 부분으로 구성 된 이름은 linked_server_name. catalog 형식 _linked_server_name.catalog_**이어야 합니다. _`schema`_ ** _object_name_.
 
 > [!NOTE]
 >  연결된 서버는 이 서버가 정의된 서버의 포인트 백(루프백)에 정의될 수 있습니다. 단일 서버 네트워크에서 분산 쿼리를 사용하는 애플리케이션을 테스트할 때 루프백 서버를 유용하게 사용할 수 있습니다. 루프백 연결된 서버는 테스트를 위한 것이며 분산 트랜잭션과 같은 많은 작업에 지원되지 않습니다.

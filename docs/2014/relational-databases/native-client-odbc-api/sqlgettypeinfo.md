@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 13b982c3-ae03-4155-bc0d-e225050703ce
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4237ebcc22318fdd6a93af09a79d7f8e2bea8989
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f995e3c288435ed55d2f1496894f73409496c06d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705998"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022031"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버는 결과 집합의 추가 열 USERTYPE를 보고 합니다 `SQLGetTypeInfo` . USERTYPE은 DB-Library 데이터 형식 정의를 보고하며 기존 DB-Library 애플리케이션을 ODBC에 이식할 때 개발자가 이 기능을 이용할 수 있습니다.  

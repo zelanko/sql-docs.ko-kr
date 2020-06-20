@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a134751-3e93-4fe8-bf22-1e0561189293
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 237838d4d9780c6180adebcae264949b10af94e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec5f055f8ca86efc350436458ba0145efb0419a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061250"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028118"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile 이벤트 클래스
   SQL:StmtRecompile 이벤트 클래스는 모든 유형의 일괄 처리로 인해 발생한 문 수준의 다시 컴파일을 나타냅니다. 여기에는 저장 프로시저, 트리거, 임시 일괄 처리 및 쿼리가 있습니다. sp_executesql, 동적 SQL, Prepare 메서드, Execute 메서드 또는 비슷한 인터페이스를 사용하여 쿼리를 제출할 수 있습니다. SP:Recompile 이벤트 클래스 대신 SQL:StmtRecompile 이벤트 클래스를 사용해야 합니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "63061250"
   
 |데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|인스턴스에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]대 한 연결을 만든 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|10|예|  
+|ApplicationName|`nvarchar`|인스턴스에 대 한 연결을 만든 클라이언트 응용 프로그램의 이름입니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이 열은 프로그램의 표시 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|10|예|  
 |ClientProcessID|`int`|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
 |DatabaseID|`int`|저장 프로시저가 실행되는 데이터베이스의 ID입니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |DatabaseName|`nvarchar`|저장 프로시저가 실행되는 데이터베이스의 이름입니다.|35|예|  
@@ -52,7 +51,7 @@ ms.locfileid: "63061250"
 |ServerName|`nvarchar`|추적할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이름입니다.|26|예|  
 |SessionLoginName|`nvarchar`|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
 |SPID|`int`|연결의 서버 프로세스 ID입니다.|12|예|  
-|SqlHandle|`varbinary`|임시 쿼리 또는 데이터베이스의 텍스트 및 SQL 개체의 개체 ID를 기반으로 하는 64비트 해시입니다. 이 값을 sys.dm_exec_sql_text에 전달하여 연결된 SQL 텍스트를 검색할 수 있습니다.|63|아니요|  
+|SqlHandle|`varbinary`|임시 쿼리 또는 데이터베이스의 텍스트 및 SQL 개체의 개체 ID를 기반으로 하는 64비트 해시입니다. 이 값을 sys.dm_exec_sql_text에 전달하여 연결된 SQL 텍스트를 검색할 수 있습니다.|63|예|  
 |StartTime|`datetime`|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|예|  
 |TextData|`ntext`|다시 컴파일한 Transact-SQL 문의 텍스트입니다.|1|예|  
 |TransactionID|`bigint`|시스템이 할당한 트랜잭션의 ID입니다.|4|예|  

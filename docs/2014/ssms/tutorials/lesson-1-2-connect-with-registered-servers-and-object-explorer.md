@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d6b3911f-68b4-4483-831b-df89d6400add
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 374d75c18adc091eaf6a01ae1164a529a34accee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3854950962caf61de0edc7c5a910675fdd7ef37e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62636427"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061931"
 ---
 # <a name="connect-with-registered-servers-and-object-explorer"></a>등록된 서버 및 개체 탐색기와 연결
   이 자습서에서는 등록된 서버와 개체 탐색기를 사용하는 방법을 보여 줍니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "62636427"
   
 5.  **등록된 서버 이름** 입력란에 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]를 입력합니다.  
   
-6.  **연결 속성** 탭의 **데이터베이스에 연결** 목록에서 ** \<찾아보기 서버 ... >** 를 선택 합니다.  
+6.  **연결 속성** 탭의 **데이터베이스에 연결** 목록에서을 선택 **\<Browse server...>** 합니다.  
   
 7.  **데이터베이스 찾아보기** 대화 상자에서 **예**를 클릭합니다.  
   

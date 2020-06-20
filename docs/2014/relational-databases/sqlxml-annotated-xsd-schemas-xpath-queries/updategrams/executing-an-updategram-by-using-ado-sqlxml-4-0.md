@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ef87a971b939a7f7c0ed5475a2b79ceba6150802
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fb903ddd3d8639b3e33d04d9d8853585f83fc894
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717571"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009438"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>ADO를 사용하여 updategram 실행(SQLXML 4.0)
   이 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 애플리케이션은 ADO를 사용하여 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결하고 updategram을 실행합니다. 사용되는 updategram은 특정 직원의 성을 업데이트합니다. 이 예에서는 AdventureWorks 예제 데이터베이스를 사용합니다.  

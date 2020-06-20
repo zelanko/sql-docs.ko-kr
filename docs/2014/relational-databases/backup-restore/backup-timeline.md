@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 92cffa7c280aac559433a8fc7ad5a3223c9f6de2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3fb7cd9d51015a4a26cc50608b012542255a880
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876705"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958982"
 ---
 # <a name="backup-timeline"></a>백업 시간대
   **백업 시간대** 대화 상자를 사용하여 데이터베이스를 지정 시간으로 복원할 백업을 찾고 지정할 수 있습니다. **데이터베이스 복원(일반 페이지)** 창에서 **시간대** 를 클릭하여 **백업 시간대** 대화 상자에 액세스할 수 있습니다. 이 대화 상자에서 데이터베이스에 대해 수행된 복원 작업의 시간대를 확인할 수 있습니다.  

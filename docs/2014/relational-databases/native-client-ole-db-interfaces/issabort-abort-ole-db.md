@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8e36bb4cff26213467f30dd58b4d172be7d8a38d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a2055514d3ce5e2fdc9d6220a79f489fc64e9c55
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707331"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056151"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort(OLE DB)
   현재 행 집합 및 현재 명령과 연결된 일괄 처리되는 명령을 취소합니다.  

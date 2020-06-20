@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0bb23beae7bcf8e47166ea205a3ce4e5a72f0493
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3892487195c274f80b3dca7f5882ee877e78db16
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63126995"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000500"
 ---
 # <a name="sql-server-properties-log-on-tab"></a>SQL Server 속성(로그온 탭)
   **SQL Server 속성** 대화 상자의 **로그온** 탭을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에서 사용할 계정을 지정하고 계정의 암호를 변경하며 서비스를 시작 및 중지할 수 있습니다. 계정의 암호를 변경하면 즉시 적용됩니다.  

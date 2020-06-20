@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 75ac184717fbee6cf26c99924fdccb164592fdfa
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 29a8ee59db4cade8cc3ddf649b54d4c2c47e87ee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702090"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021317"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>DB-Library에서 ODBC 대량 복사로 변환
   Native Client ODBC 드라이버에서 지 원하는 대량 복사 함수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] db-library 대량 복사 함수와 비슷하며, 다음과 같은 경우를 제외 하 고 db-library 대량 복사 프로그램을 ODBC로 쉽게 변환할 수 있습니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "82702090"
     |-------------------------|--------------------------------|-------------------------|  
     |Null 값 제공|0|-1(SQL_NULL_DATA)|  
     |변수 데이터 제공|-1|-10(SQL_VARLEN_DATA)|  
-    |길이가 0인 문자 또는 이진 문자열|NA|0|  
+    |길이가 0인 문자 또는 이진 문자열|해당 없음|0|  
   
      DB-LIBRARY에서 *varlen* 값-1은 가변 길이 데이터를 제공 하 고 있음을 나타냅니다 .이는 ODBC *CBDATA* 에서 NULL 값만 제공 됨을 의미 하는 것으로 해석 됩니다. -1의 DB-LIBRARY *varlen* 사양을 SQL_VARLEN_DATA로 변경 하 고 0의 *varlen* 사양을 SQL_NULL_DATA으로 변경 합니다.  
   

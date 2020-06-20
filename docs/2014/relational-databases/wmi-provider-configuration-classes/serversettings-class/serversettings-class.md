@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: d11ef801-dcb3-4fe1-84db-bf943ccf0e99
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cc1ee935e19c4f44dc1c350355edd08371ea6485
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb0e43d01057296b73547d6a8256bd4140c5a736
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137310"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056743"
 ---
 # <a name="serversettings-class"></a>ServerSettings 클래스
-  [ServerSettings Class] serversettings-class.md)는 인스턴스의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]서버 설정을 나타냅니다.  
+  [ServerSettings Class] serversettings-class.md)는 인스턴스의 서버 설정을 나타냅니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  [ServerSettings Class] serversettings-class.md)를 사용 하 여 다음 작업을 수행할 수 있습니다.  
   

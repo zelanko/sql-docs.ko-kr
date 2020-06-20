@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 464961600f69f14a2b66515a75906c0fd4af3f82
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 37d8344323add8b9b6f520d59862cdd978823e4f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175360"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049771"
 ---
 # <a name="lesson-9-restore-a-database-from-azure-storage"></a>9단원: Azure Storage에서 데이터베이스 복원
   이 단원에서는 Azure Storage에서 데이터베이스 백업 파일을 온-프레미스 또는 Azure의 가상 머신에 있는 데이터베이스로 복원 하는 방법에 대해 설명 합니다. 이 단원을 수행하기 위해 4, 5, 6, 7, 8단원을 완료할 필요는 없습니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "70175360"
   
 3.  다음 전체 스크립트를 복사하여 쿼리 창에 붙여 넣습니다. 필요에 따라 스크립트를 수정 합니다.  
   
-     **참고:** `RESTORE` 문을 실행 하 여 Azure Storage의 데이터베이스 백업 (.bak)을 다른 컴퓨터의 데이터베이스 인스턴스에 복원 합니다.  
+     **참고:** 문을 실행 하 여 `RESTORE` Azure Storage의 데이터베이스 백업 (.bak)을 다른 컴퓨터의 데이터베이스 인스턴스에 복원 합니다.  
   
     ```sql  
   

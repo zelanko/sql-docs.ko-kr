@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9b8d6f35f8dedeb4539dc8299ca32f6566beb03f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d14d27cdc20c0f090c7a030efe05cfce4842f437
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161957"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026080"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저의 성능 모니터링
   이 항목에서는 고유하게 컴파일된 저장 프로시저의 성능을 모니터링하는 방법에 대해 설명합니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "63161957"
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- `sp_statement_completed` 확장 이벤트에 대 한 자세한 내용은 이벤트를 [발생 시킨 문을 검색](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)하는 방법을 참조 하세요.  
+ 확장 이벤트에 대 한 자세한 내용은 `sp_statement_completed` 이벤트를 [발생 시킨 문을 검색](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)하는 방법을 참조 하세요.  
   
 ## <a name="using-data-management-views"></a>데이터 관리 뷰 사용  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 프로시저 수준 및 쿼리 수준 모두에서 고유하게 컴파일된 저장 프로시저에 대한 실행 통계 수집을 지원합니다. 실행 통계 수집은 성능에 미치는 영향 때문에 기본적으로 설정되지 않습니다.  

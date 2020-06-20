@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2005에서 업그레이드하나요? | Microsoft 문서
+title: SQL Server 2005에서 업그레이드하나요? | Microsoft Docs
 ms.custom: ''
 ms.date: 12/15/2019
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: feed59c01a9fe77c226164c6b5b5df5caf0c77c1
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 23e7547e858bf3fd9fe21563bd3b100024372b83
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922159"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045496"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>SQL Server 2005에서 업그레이드하나요?
   SQL Server 2005 지원 연장이 종료되므로 새 버전의 SQL Server와 Azure SQL 데이터베이스로 업그레이드할 이유가 생겼습니다. 업그레이드를 통해 보안 및 규정 준수를 유지할 수 있고, 획기적인 성능을 달성하고 데이터 플랫폼 인프라를 최적화할 수 있습니다.  

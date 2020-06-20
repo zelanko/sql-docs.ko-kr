@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 105e8022775642d915cbcedf180ed9e07f8bc958
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac134bbd4c65da4700990b69b09134230e98903f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289171"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023826"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>유지 관리 계획 마법사 사용
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 유지 관리 계획 마법사를 사용하여 단일 서버 또는 다중 서버 유지 관리 계획을 만드는 방법에 대해 설명합니다. 유지 관리 계획 마법사는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 정기적으로 실행할 수 있는 유지 관리 계획을 만듭니다. 이를 통해 백업, 데이터베이스 무결성 확인 또는 지정된 간격으로 데이터베이스 통계 업데이트와 같은 다양한 데이터베이스 관리 태스크를 수행할 수 있습니다.  
@@ -104,7 +103,7 @@ ms.locfileid: "79289171"
   
             -   **되풀이**. 이 옵션이 기본 옵션입니다.  
   
-            -   **한때**  
+            -   **한 번**  
   
         3.  일정을 사용하거나 사용하지 않으려면 **사용** 확인란을 선택하거나 선택을 취소합니다.  
   
@@ -209,7 +208,7 @@ ms.locfileid: "79289171"
   
 #### <a name="define-the-index-tasks"></a>인덱스 태스크 정의  
   
-1.  **인덱스 다시 구성 태스크 정의** 페이지에서 인덱스 페이지를 보다 효율적인 검색 순서로 이동할 서버를 선택합니다. 이 태스크에서는 `ALTER INDEX ... REORGANIZE` 문을 사용합니다. 자세한 내용은 [ALTER INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)를 참조 하세요. 완료되면 **다음**을 클릭합니다.  
+1.  **인덱스 다시 구성 태스크 정의** 페이지에서 인덱스 페이지를 보다 효율적인 검색 순서로 이동할 서버를 선택합니다. 이 태스크에서는 `ALTER INDEX ... REORGANIZE` 문을 사용합니다. 자세한 내용은 [ALTER INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)를 참조하세요. 완료되면 **다음**을 클릭합니다.  
   
      이 페이지에서는 다음과 같은 옵션을 선택할 수 있습니다.  
   
@@ -283,7 +282,7 @@ ms.locfileid: "79289171"
      **인덱스 통계만**  
      인덱스 통계만 업데이트합니다. `WITH INDEX` 옵션을 사용합니다.  
   
-     **검색 유형**  
+     **검사 유형**  
      업데이트된 통계를 수집하는 데 사용되는 검색 유형입니다.  
   
      **전체 검사**  
@@ -369,11 +368,11 @@ ms.locfileid: "79289171"
     > [!IMPORTANT]  
     >  **만들기** 를 클릭하면 열리는 대화 상자에서는 관리 인증서나 구독용 게시 프로필이 필요합니다. 관리 인증서나 게시 프로필에 액세스할 수 없는 경우 Transact-SQL이나 SQL Server Management Studio를 사용하여 스토리지 계정 이름을 지정하고 키 정보에 액세스하여 SQL 자격 증명을 만들 수 있습니다. Transact-sql을 사용 하 여 자격 증명을 만들려면 [이 항목의 샘플 코드를 참조](../security/authentication-access/create-a-credential.md#Credential) 하세요. 또는 SQL Server Management Studio를 사용하여 데이터베이스 엔진 인스턴스에서 **보안**을 마우스 오른쪽 단추로 클릭하고 **새로 만들기**, **자격 증명**을 차례로 선택합니다. **ID** 에 대한 스토리지 계정 이름을 지정하고 **암호** 필드에 액세스 키를 지정합니다.  
   
-     **Azure 스토리지 컨테이너**  
+     **Azure Storage 컨테이너**  
      Azure Storage 컨테이너의 이름을 지정합니다.  
   
      **URL 접두사:**  
-     이는 지정된 Azure 스토리지 컨테이너 이름 및 SQL 자격 증명에 저장된 스토리지 계정 정보를 기반으로 자동 생성됩니다. ** \<저장소 계정> blob.core.windows.net**이외의 형식을 사용 하는 도메인을 사용 하지 않는 경우이 필드의 정보를 편집 하지 않는 것이 좋습니다.  
+     이는 지정된 Azure 스토리지 컨테이너 이름 및 SQL 자격 증명에 저장된 스토리지 계정 정보를 기반으로 자동 생성됩니다. ** \<storage account> Blob.core.windows.net**이외의 형식을 사용 하는 도메인을 사용 하지 않는 경우이 필드의 정보를 편집 하지 않는 것이 좋습니다.  
   
      **백업 파일 확장명** 상자  
      백업 파일에 사용할 확장명을 지정합니다. 기본값은 .bak입니다.  
@@ -404,7 +403,7 @@ ms.locfileid: "79289171"
     |||  
     |-|-|  
     |**기본 서버 설정 사용**|서버 수준 기본값을 사용하려면 클릭합니다. 이 기본값은 **백업 압축 기본값** 서버 구성 옵션으로 설정됩니다. 이 옵션의 현재 설정을 확인하는 방법에 대한 자세한 내용은 [백업 압축 기본값 서버 구성 옵션 보기 또는 구성](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)을 참조하세요.|  
-    |**백업 압축**|서버 수준 기본값에 관계없이 백업을 압축하려면 클릭합니다.<br /><br /> ** \* 중요 \* \* ** 기본적으로 압축 하면 CPU 사용량이 크게 늘어나고 압축 프로세스로 사용 되는 추가 CPU는 동시 작업에 악영향을 줄 수 있습니다. 따라서 CPU 사용량이 리소스 관리자에 의해 제한되는 세션에서 우선 순위가 낮은 압축 백업을 만들 수 있습니다. 자세한 내용은 이 항목 뒷부분의 [Resource GovernoR을 사용하여 백업 압축을 통해 CPU 사용량 제한&#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)에 의해 제한되는 세션에서 우선 순위가 낮은 압축 백업을 만들 수 있습니다.|  
+    |**백업 압축**|서버 수준 기본값에 관계없이 백업을 압축하려면 클릭합니다.<br /><br /> 중요 기본적으로 압축 하면 CPU 사용량이 크게 늘어나고 압축 프로세스로 사용 되는 추가 CPU는 동시 작업에 악영향을 줄 수 있습니다. ** \* \* \* \* ** 따라서 CPU 사용량이 리소스 관리자에 의해 제한되는 세션에서 우선 순위가 낮은 압축 백업을 만들 수 있습니다. 자세한 내용은 이 항목 뒷부분의 [Resource GovernoR을 사용하여 백업 압축을 통해 CPU 사용량 제한&#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)에 의해 제한되는 세션에서 우선 순위가 낮은 압축 백업을 만들 수 있습니다.|  
     |**백업 압축 안 함**|서버 수준 기본값에 관계없이 압축되지 않은 백업을 만들려면 클릭합니다.|  
   
 2.  **데이터베이스 백업(차등) 태스크 정의** 페이지에서 부분 백업을 실행할 데이터베이스를 선택합니다. 이 페이지에서 사용할 수 있는 옵션에 대한 자세한 내용은 위의 16단계에 있는 정의 목록을 참조하세요. 이 태스크에서는 `BACKUP DATABASE ... WITH DIFFERENTIAL` 문을 사용합니다. 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)을 참조하세요.  작업을 마쳤으면 **다음**을 클릭합니다.  
@@ -494,7 +493,7 @@ ms.locfileid: "79289171"
      **메시지**  
      프로세스에서 반환된 모든 오류 또는 경고 메시지를 제공합니다.  
   
-     **보고서**  
+     **Report**  
      파티션 작성 마법사의 결과가 포함된 보고서를 만듭니다. **보고서 보기**, **보고서를 파일로 저장**, **클립보드에 보고서 복사**및 **보고서를 전자 메일로 보내기**중에서 선택할 수 있습니다.  
   
      **보고서 보기**  

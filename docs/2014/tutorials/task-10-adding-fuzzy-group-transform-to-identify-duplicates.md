@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 90b2b323-babd-464a-8914-9dc5e66aca74
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 48e233c6f2c7a55bf2420825b9fb3064db6e89e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e7091c4dbb8244476357afba18e973535def8baa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481257"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064814"
 ---
 # <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>태스크 10: 유사 항목 그룹화 변환을 추가하여 중복 항목 식별
   이 작업에서는 유사 항목 그룹 변환을 데이터 흐름에 추가합니다. 유사 항목 그룹 변환은 원본 데이터에서 중복 항목을 식별하는 데 도움이 될 수 있습니다. 자세한 내용은 [유사 항목 그룹화 변환](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) 을 참조 하세요.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: abe9d977dfcde5523e875881b1a5b80be7b1b887
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52cad45846eb1eb4ab716a3ab8d399eacbbc0414
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63223229"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062627"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>AdvancedProperties 속성(SqlService 클래스)
   `SqlService` 개체에 대한 고급 속성이 포함된 개체 참조의 배열을 가져옵니다.  
@@ -41,7 +40,7 @@ object
  서비스를 나타내는 [SqlService 클래스](sqlservice-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
- 개체에 대 한 고급 속성을 포함 하는 [SqlServiceAdvancedProperty 클래스](../sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 개체의 배열입니다. `SqlService`  
+ 개체에 대 한 고급 속성을 포함 하는 [SqlServiceAdvancedProperty 클래스](../sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 개체의 배열입니다 `SqlService` .  
   
 ## <a name="remarks"></a>설명  
   

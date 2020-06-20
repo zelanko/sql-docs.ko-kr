@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 97193ac4-aa97-489c-9e81-6fcbdf88aebf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 08b9f31035b2d87ca89154497c90089fb72d0987
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fdfe0f5b6dc14718f12c0bac44409cd3eb2f0709
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150593"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057827"
 ---
 # <a name="sql-server-services"></a>SQL Server 서비스
   이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 구성 관리자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 대화 상자에 대한 F1 도움말 항목을 제공합니다.  

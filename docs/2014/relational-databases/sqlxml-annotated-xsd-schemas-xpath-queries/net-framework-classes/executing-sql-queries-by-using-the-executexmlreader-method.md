@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f106a4c5-8d6e-40c0-bf1f-11e121afcb01
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 16cd12463e6e4a1b886134635cb5d988e9437b04
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 49189e6bacd9151cd21f8c7ebfed3df63b4eb92e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718083"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062893"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>ExecuteXMLReader 메서드를 사용하여 SQL 쿼리 실행
   ExecuteToStream 메서드를 사용 하는 대신 SqlXmlCommand 개체의 ExecuteXmlReader 메서드를 사용 하 여 명령을 실행할 수 있습니다. 이 메서드는 결과를 추가로 처리 하는 데 사용할 수 있는 XmlReader 개체를 반환 합니다 .이 예제에서는 요소 또는 특성 이름과 값을 인쇄 합니다.  

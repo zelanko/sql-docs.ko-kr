@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ba89efce86c3996298cc00276cd206811146a988
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0791a9bd9c7f6b323886a38bed27bea84940770d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717013"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046712"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>XML 스키마 컬렉션에 대한 사용 권한 거부
   새 XML 스키마 컬렉션을 만들거나 기존 스키마 컬렉션을 사용할 권한을 거부할 수 있습니다.  

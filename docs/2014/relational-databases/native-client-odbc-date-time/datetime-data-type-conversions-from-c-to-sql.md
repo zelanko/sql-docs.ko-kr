@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 43d16368d1f550ccf534a1a6e9804c7ce18b096c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6d966d1876b03bde301dd29e76e2982da9cd5d8b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705490"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020332"
 ---
 # <a name="conversions-from-c-to-sql"></a>C에서 SQL로의 변환
   이 항목에서는 C 형식을 날짜/시간 형식으로 변환할 때 고려해 야 할 문제에 대해 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  

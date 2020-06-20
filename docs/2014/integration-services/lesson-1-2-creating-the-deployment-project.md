@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 59990fe2-7036-4e9c-8efc-6ece9e66eda7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6f5b0cc2c86ef483a7e2b2c0f5dccba21383641f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8eeabf6f529d6439e814e2b6ef31e074315e53e0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891850"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965313"
 ---
 # <a name="step-2-creating-the-deployment-project"></a>2단계: 배포 프로젝트 만들기
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 배포 가능한 단위는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트입니다. 패키지를 배포할 수 있으려면 새 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만들고 모든 패키지 및 패키지와 함께 배포할 모든 보조 파일을 해당 프로젝트에 추가해야 합니다.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e51d3475-e998-47f3-837b-4b4bd7635dcb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d04001770eab3ee218f5a3addbafe8db921f6315
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a30f8e31cb168dc278f12a24ae3793a13a8077b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62911605"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048874"
 ---
 # <a name="propertyname-property-sqlserviceadvancedproperty-class"></a>PropertyName 속성(SqlServiceAdvancedProperty 클래스)
   고급 속성의 이름을 가져오거나 설정합니다.  

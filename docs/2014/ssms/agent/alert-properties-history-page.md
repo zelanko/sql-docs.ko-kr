@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: f5359f5c-93a3-4a4a-8286-e9fe6f0196c7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bdda14df5463fc9bd2a90d990d7c2be35f910d4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d1dbd64c7ffc8f80dacd79f96db5a0025a5805e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189827"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056631"
 ---
 # <a name="alert-properties-history-page"></a>경고 속성(기록 페이지)
-  이 페이지를 사용 하 여 에이전트 경고의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기록을 확인 하 고 수정할 수 있습니다.  
+  이 페이지를 사용 하 여 에이전트 경고의 기록을 확인 하 고 수정할 수 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.  
   
 ## <a name="options"></a>옵션  
  **마지막 경고 날짜**  

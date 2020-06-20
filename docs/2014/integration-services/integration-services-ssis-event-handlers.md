@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 41a6ae9c6462beecaa244694bd8679df88aefc47
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2aab5732a667dfe9e26a89048991900148077df3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176136"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965403"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services(SSIS) 이벤트 처리기
   런타임 시 실행 개체(패키지 및 Foreach 루프, For 루프, 시퀀스 및 태스크 호스트 컨테이너)는 이벤트를 발생시킵니다. 예를 들어 오류가 발생하면 OnError 이벤트가 발생합니다. 이러한 이벤트에 대한 사용자 지정 이벤트 처리기를 만들면 패키지 기능을 확장하고 런타임 시 패키지를 더 쉽게 관리할 수 있습니다. 이벤트 처리기는 다음과 같은 태스크를 수행할 수 있습니다.
@@ -83,7 +82,7 @@ ms.locfileid: "78176136"
 |**OnProgress**|**OnProgress** 이벤트에 대한 이벤트 처리기입니다. 이 이벤트는 실행 개체의 진행 상태를 측정할 수 있는 경우 실행 개체에 의해 발생합니다.|
 |**OnQueryCancel**|**OnQueryCancel** 이벤트에 대한 이벤트 처리기입니다. 이 이벤트는 실행 중지 시기를 결정하기 위해 실행 개체에 의해 발생합니다.|
 |**OnTaskFailed**|**OnTaskFailed** 이벤트에 대한 이벤트 처리기입니다. 이 이벤트는 작업이 실패할 때 해당 태스크에 의해 발생합니다.|
-|**OnVariableValueChanged**|**OnVariableValueChanged** 이벤트에 대한 이벤트 처리기입니다. 이 이벤트는 변수 값이 변경될 때 실행 개체에 의해 발생합니다. 이 이벤트는 변수가 정의되는 실행 개체에 의해 발생합니다. 변수의 **RaiseChangeEvent** 속성을로 `False`설정 하는 경우에는이 이벤트가 발생 하지 않습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)을 참조하세요.|
+|**OnVariableValueChanged**|**OnVariableValueChanged** 이벤트에 대한 이벤트 처리기입니다. 이 이벤트는 변수 값이 변경될 때 실행 개체에 의해 발생합니다. 이 이벤트는 변수가 정의되는 실행 개체에 의해 발생합니다. 변수의 **RaiseChangeEvent** 속성을로 설정 하는 경우에는이 이벤트가 발생 하지 않습니다 `False` . 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)을 참조하세요.|
 |**OnWarning**|**OnWarning** 이벤트에 대한 이벤트 처리기입니다. 이 이벤트는 경고가 발생할 때 실행 개체에 의해 발생합니다.|
 
 ## <a name="configuration-of-an-event-handler"></a>이벤트 처리기 구성

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3b41e33a-c1ca-4b2a-9464-312b0ed3ca89
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1cdf0cbca45fc12dc5e61e4dca913d2e16af5ab5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1067820e80f9c7a4e1af2c8a14c85bc9dbfdd6aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704471"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017608"
 ---
 # <a name="transactions"></a>트랜잭션
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 로컬 트랜잭션 지원을 구현 합니다. 소비자는 MS DTC(Microsoft Distributed Transaction Coordinator)를 사용하여 분산 또는 통합 트랜잭션을 사용할 수 있습니다. 여러 세션에 걸친 트랜잭션 제어를 요구 하는 소비자의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 MS DTC에서 시작 및 유지 관리 되는 트랜잭션을 조인할 수 있습니다.  

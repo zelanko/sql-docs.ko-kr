@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9c63930883642cf7f5e675cb57d5f83648a5787a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 877d8593e04ee13abae6b96e624476b00660cb92
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797469"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062480"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>쿼럼 없이 WSFC 클러스터 강제 시작
   이 항목에서는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터 노드를 쿼럼 없이 강제로 시작하는 방법에 대해 설명합니다.  이 기능은 재해 복구 및 다중 서브넷 시나리오에서 데이터를 복구하고 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스의 고가용성을 완전히 다시 설정하는 데 필요할 수 있습니다.  

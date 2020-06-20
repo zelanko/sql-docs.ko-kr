@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b1040afed8e9cb63f22bf81a30c426a4bdc8ec22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e48dfbf5420c6032b8185cf59b2b132df2c82cf2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176190"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966243"
 ---
 # <a name="integration-services-ssis-projects"></a>Integration Services(SSIS) 프로젝트
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 패키지 개발을 위해 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 를 제공합니다.
 
- 데이터베이스 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소에 패키지를 배포 하는 경우 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스를 사용 하 여 패키지를 관리 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서만 사용할 수 있습니다. 서비스에 대한 자세한 내용은 [Integration Services 서비스&#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)를 참조하세요. 패키지 배포에 대 한 자세한 내용은 [패키지 배포 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)를 참조 하세요.
+ 데이터베이스 또는 패키지 저장소에 패키지를 배포 하는 경우 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssIS](../includes/ssis-md.md)] 서비스를 사용 하 여 패키지를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 관리 합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서만 사용할 수 있습니다. 서비스에 대한 자세한 내용은 [Integration Services 서비스&#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)를 참조하세요. 패키지 배포에 대 한 자세한 내용은 [패키지 배포 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)를 참조 하세요.
 
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 배포하는 경우 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 Transact-SQL 뷰 및 저장 프로시저를 사용하여 프로젝트를 관리합니다. 프로젝트 배포에 대한 자세한 내용은 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]서버에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 서버](catalog/integration-services-ssis-server-and-catalog.md)를 참조하세요.
 
@@ -46,7 +45,7 @@ ms.locfileid: "78176190"
 
  다음 표에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 표시되는 폴더에 대해 설명합니다.
 
-|폴더|설명|
+|폴더|Description|
 |------------|-----------------|
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지|패키지가 포함됩니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 패키지](../../2014/integration-services/integration-services-ssis-packages.md)를 참조하세요.|
 |기타|패키지 파일 이외의 파일을 포함합니다.|

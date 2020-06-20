@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 426f6aa75647b351edc33152144eec93d32394c4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e771f4b09fd866195231adb7a98cdf615af2920
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177330"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046458"
 ---
 # <a name="windows-server-failover-clustering-wsfc-with-sql-server"></a>SQL Server의 WSFC(Windows Server 장애 조치(Failover) 클러스터링)
   WSFC( *Windows Server 장애 조치(failover) 클러스터링* ) 클러스터는 애플리케이션 및 서비스의 가용성 향상을 위해 함께 작동하는 독립 서버 그룹입니다. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에서는 WSFC 서비스와 기능을 활용하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스를 지원합니다.

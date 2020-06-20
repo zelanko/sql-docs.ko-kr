@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7aba19ff-72b3-45f6-8e54-23f4988d63a8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 379877d3a08c60a293b96c5c57d55a2894ba0a79
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fef0fb69b5bfd028977276d8efabc333a21e0feb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63074060"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044559"
 ---
 # <a name="handle-multiple-job-steps"></a>다중 작업 단계 처리
   작업에 둘 이상의 작업 단계가 있는 경우에는 작업 단계가 실행되는 순서를 지정해야 합니다. 이를 *흐름 제어**라고 합니다.* 언제든지 새 작업 단계를 추가하고 작업 단계의 흐름을 다시 정렬할 수 있습니다. 변경 내용은 다음에 작업이 실행될 때 적용됩니다. 다음 그림에서는 데이터베이스 백업 작업에 대한 흐름 제어를 보여 줍니다.  
@@ -44,9 +43,9 @@ ms.locfileid: "63074060"
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_add_job &#40;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   
- [dbo. sysjobhistory &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)   
- [sysjobs &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)   
- [sysjobsteps &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobsteps-transact-sql)   
+ [dbo.sysjobhistory &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)   
+ [Transact-sql&#41;&#40;작업dbo.sys](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)   
+ [dbo.sysjobsteps &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobsteps-transact-sql)   
  [작업 구현](implement-jobs.md)   
  [작업 단계 관리](manage-job-steps.md)  
   

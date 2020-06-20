@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: fc9d1639-5efa-44fe-a04f-4d4d0def2833
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b04ab7f3327d8be4764b47c91fdc88d7a92f00b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19a2bb2ce9a219c195421e2efa203fc115e1ae1b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62710978"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044256"
 ---
 # <a name="save-change-script-dialog-box-visual-database-tools"></a>변경 스크립트 저장 대화 상자(Visual Database Tools)
   이 대화 상자에는 테이블을 마지막으로 저장한 후에 변경한 내용에 대한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트가 표시됩니다. 이 대화 상자를 사용하여 선택한 위치에 텍스트 파일로 스크립트를 저장할 수도 있습니다.  

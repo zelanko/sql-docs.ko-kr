@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e86dc4ce-5aa3-4c0d-acb5-c9e8871ed963
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e0bb761cf3402080842ae0eaff7b04a0f312a3a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd437dec39566ae01e03df5414e29cac0c28a5d8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63267321"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048299"
 ---
 # <a name="set-a-maximum-file-size-for-a-trace-file-sql-server-profiler"></a>추적 파일에 최대 파일 크기 설정(SQL Server Profiler)
   추적 파일에 최대 파일 크기를 설정하려면 다음 절차를 수행하십시오.  

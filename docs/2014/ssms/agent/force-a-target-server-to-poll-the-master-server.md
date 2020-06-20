@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f1189a47-5ac3-45e2-9c5f-847810672279
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7e9580839c18ed40a6163ab933ce40276bc413ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 307eee715b468c3d99fa0b8e1779ba2c6c73cbaf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044058"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008746"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>Force a Target Server to Poll the Master Server
   이 항목에서는 강제로 대상 서버가 마스터 서버를 폴링하도록 하는 방법에 대해 설명합니다. 대상 서버는 마스터 서버에 등록된 서버여야 합니다.  

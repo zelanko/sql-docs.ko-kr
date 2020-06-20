@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f3395c65-0320-47f9-8d83-daaa082d8713
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f78c568d467601b2f23ae8952036764ea2b464d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f73f8e1e4dbbadc4b73a487d433fc8ab1913b5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057877"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951233"
 ---
 # <a name="lookup-transformation-editor-advanced-page"></a>조회 변환 편집기(고급 페이지)
   **조회 변환 편집기** 대화 상자의 **고급** 페이지를 사용하여 조회 변환의 부분 캐싱을 구성하고 SQL 문을 수정할 수 있습니다.  

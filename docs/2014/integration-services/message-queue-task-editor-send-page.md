@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 66323ccdb91076496f9796245c368697d9ebc8c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ed0d210668b64ff6f6fcc8c94a713743e2f9bfa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057597"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951063"
 ---
 # <a name="message-queue-task-editor-send-page"></a>메시지 큐 태스크 편집기(보내기 페이지)
   **메시지 큐 태스크 편집기** 대화 상자의 **보내기** 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에서 메시지를 보내도록 메시지 큐 태스크를 구성할 수 있습니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "66057597"
  **MessageType**  
  메시지 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**데이터 파일 메시지**|메시지가 파일에 저장됩니다. 이 값을 선택하면 동적 옵션 **DataFileMessage**가 표시됩니다.|  
 |**변수 메시지**|메시지가 변수에 저장됩니다. 이 값을 선택하면 동적 옵션 **VariableMessage**가 표시됩니다.|  

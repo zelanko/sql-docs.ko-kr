@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 39c0797c-ad2b-4591-85c9-a23a7f902895
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0ef94ed9e296c588b70789ace0bbbbe79bc8008f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4feb59622c2a42de67193c75d545a6b8a2a08863
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68205960"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024122"
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>운영자에게 알림 태스크(유지 관리 계획)
   **운영자에게 알림 태스크** 대화 상자를 사용하여 이 유지 관리 계획에 자동 알림을 추가할 수 있습니다. 이 태스크를 사용하려면 MSDB를 사용하여 데이터베이스 메일을 활성화하고 메일 호스트 데이터베이스로 구성해야 합니다. 또한 유효한 메일 주소를 가지고 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 운영자가 있어야 합니다.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93ecd0b99ad355e38194afc338201790fba97684
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768035"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965583"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사 실행
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사는 데이터 원본 간에 데이터를 복사하고 기본 패키지를 구성하는 가장 간단한 방법을 제공합니다. 마법사에 대 한 자세한 내용은 [SQL Server 가져오기 및 내보내기 마법사](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)를 참조 하세요.  
@@ -41,7 +40,7 @@ ms.locfileid: "62768035"
   
      또는  
   
-     에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서버 유형에 연결 하 고 데이터베이스를 확장 한 다음 데이터베이스를 마우스 오른쪽 단추로 클릭 하 고 **태스크**를 가리킨 다음 **데이터 가져오기** 또는 **데이터 내보내기**를 클릭 합니다.  
+     에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 서버 유형에 연결 하 고 데이터베이스 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 를 확장 한 다음 데이터베이스를 마우스 오른쪽 단추로 클릭 하 고 **태스크**를 가리킨 다음 **데이터 가져오기** 또는 **데이터 내보내기**를 클릭 합니다.  
   
      또는  
   

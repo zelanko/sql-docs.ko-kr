@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 30382bcb0c70fb985c88866602cb997988b88569
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 733066f73b7adab950defcb2552364eda2bde7e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70153748"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062108"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>서버에 연결(연결 속성 페이지) 데이터베이스 엔진
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스에 연결하거나 [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 **등록된 서버**에 등록할 때 이 탭을 사용하여 옵션을 확인하거나 지정할 수 있습니다. **연결** 및 **옵션** 은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결 중인 경우에만 이 대화 상자에 나타납니다. **테스트** 및 **저장** 은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]등록 시에만 이 대화 상자에 나타납니다.  
   
 ## <a name="options"></a>옵션  
  **데이터베이스에 연결**  
- 목록에서 연결할 데이터베이스를 선택합니다. ** \<기본>** 를 선택 하면 서버의 기본 데이터베이스에 연결 됩니다. ** \<서버>찾아보기 **를 선택 하는 경우 서버에서 연결할 데이터베이스를 찾아볼 수 있습니다.  
+ 목록에서 연결할 데이터베이스를 선택합니다. 를 선택 하면 **\<default>** 서버의 기본 데이터베이스에 연결 됩니다. 를 선택 하면 **\<Browse server>** 연결할 데이터베이스의 서버를 찾아볼 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 통해 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]데이터베이스 엔진 인스턴스에 연결할 때는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용해야 하며 **서버에 연결** 대화 상자의 **연결 속성** 탭에서 데이터베이스를 지정해야 합니다. **연결 암호화** 확인란을 선택해야 합니다.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "70153748"
  **연결**  
  목록에 있는 값을 사용하여 연결을 시도합니다.  
   
- **옵션**  
+ **Options**  
  대화 상자를 변경하여 암호 저장과 같은 추가 서버 연결 옵션을 숨기려면 클릭합니다.  
   
  **테스트**  

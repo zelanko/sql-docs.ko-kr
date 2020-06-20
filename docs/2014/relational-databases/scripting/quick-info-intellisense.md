@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c8b59f4-1922-4bde-844f-5f2306514d96
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 29eae1af8b741a3243d2966cedc45a38d620df58
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4f173c57438301702a8e51acf4531c655fde0cc8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703765"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009639"
 ---
 # <a name="quick-info-intellisense"></a>요약 정보(IntelliSense)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense **요약 정보** 옵션은 코드의 모든 식별자에 대한 완전한 선언을 표시합니다. 마우스 포인터를 식별자 위로 이동하면 노란색 팝업 창에 해당 선언이 표시됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **요약 정보** 는 데이터베이스 엔진 및 XML 쿼리 편집기에서 사용할 수 있습니다.  

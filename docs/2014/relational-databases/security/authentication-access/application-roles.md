@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 56f075ff4a26af4913d792c20a8d7c1d6a58fcb0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2fcc7b1e333bb42a00675da5bb9fd559d1c34f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011676"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055393"
 ---
 # <a name="application-roles"></a>애플리케이션 역할
   애플리케이션 역할은 애플리케이션이 사용자와 같은 자체 사용 권한으로 실행할 수 있도록 설정하는 데이터베이스 보안 주체입니다. 애플리케이션 역할을 사용하면 특정 데이터에 대한 액세스를 특정 애플리케이션을 통해 연결하는 사용자에게만 허용할 수 있습니다. 데이터베이스 역할과는 달리 애플리케이션 역할에는 멤버가 없으며 기본적으로 비활성화됩니다. 애플리케이션 역할은 두 인증 모드에서 모두 작동하며 **sp_setapprole**을 사용하여 활성화되고 암호가 필요합니다. 애플리케이션 역할은 데이터베이스 수준의 보안 주체이기 때문에 다른 데이터베이스에서 **guest**에 부여한 사용 권한을 통해서만 해당 데이터베이스에 액세스할 수 있습니다. 따라서 다른 데이터베이스의 애플리케이션 역할은 **guest** 가 해제된 데이터베이스에 액세스할 수 없습니다.  

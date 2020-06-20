@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: de7ff72e7ce135ab477e3d254eeb26193c8bbc69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3df0c1cd06427deb051a9c4214d03084b44c6f9b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206046"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024677"
 ---
 # <a name="create-a-maintenance-plan"></a>유지 관리 계획 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 단일 서버 또는 다중 서버 유지 관리 계획을 만드는 방법에 대해 설명합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하면 유지 관리 계획 마법사나 디자인 화면을 통해 이러한 유지 관리 계획을 만들 수 있습니다. 기본 유지 관리 계획을 만들 때는 마법사가 적합한 반면 디자인 화면을 사용하여 계획을 만들면 워크플로의 향상된 기능을 활용할 수 있습니다.  

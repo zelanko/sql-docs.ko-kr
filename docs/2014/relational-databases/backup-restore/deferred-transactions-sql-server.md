@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e36b6c114e7e5f2f95c0747d6e36e4dabc118daa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 188a0409fbad3f12283adacafbfcb5f176650b72
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876225"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958683"
 ---
 # <a name="deferred-transactions-sql-server"></a>지연된 트랜잭션(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise에서는 손상된 트랜잭션이 롤백(실행 취소)에 필요한 데이터가 데이터베이스 시작 시 오프라인 상태인 경우에 지연될 수 있습니다. *지연된 트랜잭션* 은 롤포워드 단계가 완료될 때 커밋되지 않으며, 오류로 인해 롤백할 수 없는 트랜잭션입니다. 트랜잭션을 롤백할 수 없으므로 해당 트랜잭션은 지연됩니다.  
@@ -84,7 +83,7 @@ ms.locfileid: "62876225"
   
          응급 모드에 대한 자세한 내용은 [Database States](../databases/database-states.md)를 참조하십시오.  
   
-    -   그런 후에 DBCC 문인 [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql), [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)또는 [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql)중 하나에 DBCC REPAIR_ALLOW_DATA_LOSS 옵션을 사용하여 데이터베이스를 복구합니다.  
+    -   그런 후에 DBCC 문인 [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql), [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql), [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql) 중 하나에 DBCC REPAIR_ALLOW_DATA_LOSS 옵션을 사용하여 데이터베이스를 복구합니다.  
   
          DBCC에서 잘못된 페이지가 발생하면 DBCC에서 할당을 취소하고 관련 오류를 모두 복구합니다. 이 방법을 사용하면 물리적으로 일관된 상태로 데이터베이스를 다시 온라인 상태로 만들 수 있습니다. 그러나 추가 데이터가 손실될 수도 있으므로 이 방법은 마지막으로 선택해야 합니다.  
   

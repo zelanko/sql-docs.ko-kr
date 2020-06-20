@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 602ac6de5a2b623e33b1b85b46a9f8cf31e0b225
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c2b82c3bec13c82aa30aebd175ef78f8136ee04
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871724"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965872"
 ---
 # <a name="move-user-databases"></a>사용자 데이터베이스 이동
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 문의 FILENAME 절에 새 파일 위치를 지정하여 사용자 데이터베이스의 데이터, 로그 및 전체 텍스트 카탈로그 파일을 새 위치로 이동할 수 있습니다. 이 방법은 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 내에서 데이터베이스 파일을 이동하는 경우에 적용됩니다. 데이터베이스를 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스나 다른 서버로 이동하려면 [백업 및 복원](../backup-restore/back-up-and-restore-of-sql-server-databases.md) 작업이나 [분리/연결](move-a-database-using-detach-and-attach-transact-sql.md)작업을 사용합니다.  

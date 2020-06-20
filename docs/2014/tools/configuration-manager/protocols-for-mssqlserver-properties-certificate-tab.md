@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 776addd6-25f3-4875-9a71-064035787090
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ef6e097721cbe0198cf9f9fb916cd53b1be6840
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 906946f396e598e582c4fb409d953e4fc889d207
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245006"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000579"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>MSSQLSERVER에 대한 프로토콜 속성(인증서 탭)
   **MSSQLSERVER에 대한 프로토콜 속성** 대화 상자의 **인증서** 탭을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용할 인증서를 선택하거나 인증서 속성을 확인할 수 있습니다. 인증서를 선택하기 전에는 모든 필드가 비어 있습니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 72ac6ac92da531d0f653e0fc03d88d170b7706e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4c4331d2ade2819d172189a0de9daddecf3d9f6b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62743219"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025032"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>데이터베이스의 대상 복구 시간 변경(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]데이터베이스의 대상 복구 시간을 설정하거나 변경하는 방법에 대해 설명합니다. 기본적으로 대상 복구 시간은 0이고, 데이터베이스에서는 *복구 간격* 서버 옵션에 의해 제어되는 **자동 검사점** 을 사용합니다. 대상 복구 시간을 0보다 큰 값으로 설정하면 데이터베이스에서 *간접 검사점* 을 사용하고 이 데이터베이스에 대한 복구 시간의 상한을 설정합니다.  

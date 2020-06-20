@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7add6f82-eed1-47fc-a5d7-7b91f3f24d34
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 44e116ece7460787f272f0b8cc6e99a4300fc728
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb2efbff93fb7cc831038a7e26fe4ada44d81325
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056712"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964753"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>파티션 처리 대상 편집기(연결 관리자 페이지)
   **파티션 처리 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트나 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 대한 연결을 지정할 수 있습니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "66056712"
  **연결 관리자**  
  목록에서 기존 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결을 만듭니다.  
   
- **신규**  
+ **새 항목**  
  **Analysis Services 연결 관리자 추가** 대화 상자를 사용하면 새 연결을 만들 수 있습니다.  
   
  **사용 가능한 파티션 목록**  
@@ -42,7 +41,7 @@ ms.locfileid: "66056712"
  **처리 방법**  
  처리 방법을 선택합니다. 이 옵션의 기본값은 **전체**입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |추가(증분)|파티션의 증분 처리를 수행합니다.|  
 |전체|파티션의 전체 처리를 수행합니다.|  

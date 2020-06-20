@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8d9392d9-a9ba-4378-84e4-59f516b67ddb
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5204b27fb4745f8005a328dc62503f7db418387d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f19fa2dc044d5975edfbc201c8fc3eb9e9244936
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093845"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044612"
 ---
 # <a name="modify-stored-procedures-that-use-discontinued-full-text-search-properties"></a>지원되지 않는 전체 텍스트 검색 속성을 사용하는 저장 프로시저를 수정합니다.
   저장 프로시저가 올바로 수행되도록 하려면 기존 프로시저를 편집하고 제거되었거나 지원되지 않는 전체 텍스트 관련 속성 및 설정을 제거해야 합니다.  
@@ -26,7 +25,7 @@ ms.locfileid: "66093845"
 ## <a name="component"></a>구성 요소  
  전체 텍스트 검색  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  제거된 전체 텍스트 검색 관련 속성 및 설정은 다음과 같습니다.  
   
 -   **DataTimeout**  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 450eb2eb-6ea3-405b-8dd2-1ff926c016e7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4d0a0bcb7115255c3c6b3750cd930e7d06b9e2df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 972c23b318855f2ac575c4905455c22ddbc02b16
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225810"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061873"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>AND에 우선 순위가 있는 조건 조합(Visual Database Tools)
   AND를 사용하여 조건을 조합하려면 각 조건에 한 번씩, 즉 쿼리에 열을 두 번 추가합니다. 조건을 OR와 조합하려면 첫째 조건은 필터 열에 지정하고 추가 조건은 **또는...** 열에 지정합니다.  

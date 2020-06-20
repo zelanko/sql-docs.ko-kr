@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f960b871591785c81bcef84ce1b9cbacd4ba99f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127044"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062029"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio 바로 가기 키
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에는 두 개의 키보드 구성표가 있습니다. 기본적으로 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] 2010을 기반으로 하는 바로 가기 키가 포함된 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 구성표가 사용됩니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 에서는 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]의 표준 구성표와 유사한 키보드 구성표도 제공합니다. 키보드 구성표를 변경하거나 다른 바로 가기 키를 추가하려면 **도구** 메뉴에서 **옵션**을 클릭합니다. **환경**, **키보드** 페이지에서 원하는 키보드 구성표를 선택합니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1bb7396f-cbb2-4f88-b82b-543287ed4172
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 479b0d562ffb78bc0003ca320eea0a85ab172430
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4c76a3058283a098357701a44de48efff917acd7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721697"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010954"
 ---
 # <a name="connect-to-server-oracle-connection-properties"></a>서버에 연결(Oracle), 연결 속성
   **서버에 연결** 대화 상자의 **연결 속성** 탭을 사용하여 **게이트웨이** 또는 **전체**게시 옵션을 지정할 수 있습니다. 게시자를 식별한 다음에 이 옵션을 변경하려면 해당 게시자를 삭제하고 다시 구성해야 합니다. 자세한 내용은 [Oracle 게시자 구성](non-sql/configure-an-oracle-publisher.md)을 참조하세요.  

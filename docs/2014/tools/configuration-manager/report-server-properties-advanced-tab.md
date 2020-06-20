@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80aedab6-2be4-409d-88ba-2107e96345fe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 90280725036f3d984b0d7b989e9a802dfec38746
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac6fb800d435be9d8a906cfd17f84ba60db7b90f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63048628"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007873"
 ---
 # <a name="report-server-properties-advanced-tab"></a>보고서 서버 속성(고급 탭)
   이 서비스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]입니다. 사용자 지정 속성을 정의한 경우 속성이 해당 값과 함께 이 탭에 나타납니다.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 565fb54d1ec91920b83a11989f0dd3416bec9491
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cc4e24c3dce73e46350b0c106429c42ab5f0edb2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718656"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049027"
 ---
 # <a name="search-text-with-wildcards"></a>와일드카드로 텍스트 검색
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **찾기 및 바꾸기** 대화 상자의 **찾을 내용** 필드에서 다음 식은 문자나 숫자를 대체할 수 있습니다.  

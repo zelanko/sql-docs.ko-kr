@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9f00eb93492ca150278800c4bbdfa3565550fdef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50536e5b6816c84dff26c9c9f99c46d02272b7de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721945"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064656"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 복제 토폴로지의 사용자 구성 가능한 모든 기능에 대한 프로그래밍 방식 액세스는 시스템 저장 프로시저를 통해 제공됩니다. 저장 프로시저는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]나 sqlcmd 명령줄 유틸리티를 사용하여 개별적으로 실행할 수 있지만 복제 태스크의 논리적 시퀀스를 수행하기 위해 실행할 수 있는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트 파일을 작성하는 것이 효율적일 수 있습니다.  
@@ -121,13 +120,13 @@ GO
   
  그런 다음 이 스크립트를 로컬에 `instdistpub.sql`로 저장하여 필요할 때 실행하거나 다시 실행할 수 있습니다.  
   
- 위 스크립트에는 **온라인 설명서의 여러 복제 코드 예제에 사용된**sqlcmd[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 스크립팅 변수가 포함되어 있습니다. 스크립팅 변수는 `$(MyVariable)` 구문을 사용하여 정의되며 변수 값은 명령줄이나 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 스크립트에 전달할 수 있습니다. 자세한 내용은 이 항목의 다음 섹션인 "복제 스크립트 실행"을 참조하십시오.  
+ 위 스크립트에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서의 여러 복제 코드 예제에 사용된 **sqlcmd** 스크립팅 변수가 포함되어 있습니다. 스크립팅 변수는 `$(MyVariable)` 구문을 사용하여 정의되며 변수 값은 명령줄이나 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 스크립트에 전달할 수 있습니다. 자세한 내용은 이 항목의 다음 섹션인 "복제 스크립트 실행"을 참조하십시오.  
   
 ## <a name="executing-replication-scripts"></a>복제 스크립트 실행  
  복제 스크립트를 만든 후에는 다음 방법 중 하나로 실행할 수 있습니다.  
   
 ### <a name="creating-a-sql-query-file-in-sql-server-management-studio"></a>SQL Server Management Studio에서 SQL 쿼리 파일 만들기  
- [!INCLUDE[tsql](../../../includes/tsql-md.md)] 프로젝트에서 SQL 쿼리 파일로 복제 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 스크립트 파일을 만들 수 있습니다. 스크립트를 작성하면 이 쿼리 파일에 대한 데이터베이스에 연결하여 스크립트를 실행할 수 있습니다. 를 사용 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]하 여 스크립트를 만드는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 방법에 대 한 자세한 내용은 [쿼리 및 텍스트 편집기 &#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md))를 참조 하세요.  
+ [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 프로젝트에서 SQL 쿼리 파일로 복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트 파일을 만들 수 있습니다. 스크립트를 작성하면 이 쿼리 파일에 대한 데이터베이스에 연결하여 스크립트를 실행할 수 있습니다. 를 사용 하 여 스크립트를 만드는 방법에 대 한 자세한 내용은 [!INCLUDE[tsql](../../../includes/tsql-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] [쿼리 및 텍스트 편집기 &#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md))를 참조 하세요.  
   
  스크립팅 변수가 포함된 스크립트를 사용하려면 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]가 **sqlcmd** 모드에서 실행 중이어야 합니다. **sqlcmd** 모드에서는 쿼리 편집기에서 **sqlcmd**와 관련된 추가적인 구문(예: 변수 값에 사용되는 `:setvar`)을 사용할 수 있습니다. **sqlcmd** 모드에 대한 자세한 내용은 [쿼리 편집기로 SQLCMD 스크립트 편집](../../scripting/edit-sqlcmd-scripts-with-query-editor.md)을 참조하세요. 다음 스크립트에서는 `:setvar`를 사용하여 `$(DistPubServer)` 변수의 값을 제공합니다.  
   
@@ -153,13 +152,13 @@ SET @publisher = $(DistPubServer);
 ```  
   
 ### <a name="using-the-sqlcmd-utility-from-the-command-line"></a>명령줄에서 sqlcmd 유틸리티 사용  
- 다음 예제에서는 명령줄에서 `instdistpub.sql`sqlcmd 유틸리티[를 사용하여 ](../../../tools/sqlcmd-utility.md) 스크립트 파일을 실행하는 방법을 보여 줍니다.  
+ 다음 예제에서는 명령줄에서 [sqlcmd 유틸리티](../../../tools/sqlcmd-utility.md)를 사용하여 `instdistpub.sql` 스크립트 파일을 실행하는 방법을 보여 줍니다.  
   
 ```  
 sqlcmd.exe -E -S sqlserverinstance -i C:\instdistpub.sql -o C:\output.log -v DistPubServer="N'MyDistributorAndPublisher'"  
 ```  
   
- 이 예에서 `-E` 스위치는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결할 때 Windows 인증을 사용함을 나타냅니다. Windows 인증을 사용하면 스크립트 파일에 사용자 이름과 암호를 저장하지 않아도 됩니다. 스크립트 파일의 경로와 이름은 `-i` 스위치로 지정하고 출력 파일의 이름은 `-o` 스위치(이 스위치를 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 출력이 콘솔 대신 이 파일에 작성됨)로 지정합니다. `sqlcmd` 유틸리티를 사용하면 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스위치를 사용하여 런타임에 스크립팅 변수를 `-v` 스크립트에 전달할 수 있습니다. 이 예제에서 `sqlcmd`는 실행되기 전에 스크립트에서 `$(DistPubServer)`의 모든 인스턴스를 `N'MyDistributorAndPublisher'` 값으로 바꿉니다.  
+ 이 예에서 `-E` 스위치는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결할 때 Windows 인증을 사용함을 나타냅니다. Windows 인증을 사용하면 스크립트 파일에 사용자 이름과 암호를 저장하지 않아도 됩니다. 스크립트 파일의 경로와 이름은 `-i` 스위치로 지정하고 출력 파일의 이름은 `-o` 스위치(이 스위치를 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 출력이 콘솔 대신 이 파일에 작성됨)로 지정합니다. `sqlcmd` 유틸리티를 사용하면 `-v` 스위치를 사용하여 런타임에 스크립팅 변수를 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트에 전달할 수 있습니다. 이 예제에서 `sqlcmd`는 실행되기 전에 스크립트에서 `$(DistPubServer)`의 모든 인스턴스를 `N'MyDistributorAndPublisher'` 값으로 바꿉니다.  
   
 > [!NOTE]  
 >  `-X` 스위치는 스크립팅 변수를 사용하지 않도록 설정합니다.  

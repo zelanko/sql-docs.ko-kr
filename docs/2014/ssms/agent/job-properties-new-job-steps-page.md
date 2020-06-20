@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 231fe13e-c2dc-4149-a73e-1497e62c49e8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c9b7941f7d85404f56d24252534c518037d30a17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65003667a08d198934719ef3a307f1b89b96c6c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62695653"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062238"
 ---
 # <a name="job-propertiesnew-job-steps-page"></a>작업 속성: 새 작업(단계 페이지)
-  이 페이지를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에 대 한 작업 단계를 확인 하 고 구성할 수 있습니다.  
+  이 페이지를 사용 하 여 에이전트 작업에 대 한 작업 단계를 확인 하 고 구성할 수 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.  
   
 ## <a name="options"></a>옵션  
  **작업 단계 목록**  
@@ -32,10 +31,10 @@ ms.locfileid: "62695653"
  **시작 단계**  
  작업을 시작할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 시작할 단계를 선택합니다.  
   
- **신규**  
+ **새 항목**  
  선택한 작업 단계 아래에 새 작업 단계를 만듭니다.  
   
- **넣거나**  
+ **삽입**  
  선택한 작업 단계 위에 새 작업 단계를 만듭니다.  
   
  **편집**  
