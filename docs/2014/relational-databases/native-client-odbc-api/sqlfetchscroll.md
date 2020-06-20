@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 524a3985-a08d-4445-99e0-bb551a666615
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2b4a5094f8bac1e3972b4d0b2daa7a0da9fa3629
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: eecf9714a97577ff490b642cee5b9c380333e40b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706139"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022511"
 ---
 # <a name="sqlfetchscroll"></a>SQLFetchScroll
   **Sqlfetchscroll** 은 응용 프로그램에 데이터의 한 행 집합을 반환 합니다. 행 집합의 크기는 [SQLSetStmtAttr](sqlsetstmtattr.md)를 사용 하 여 설정 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버는 다음과 같은 제한 사항을 사용 하 여 정의 된 모든 fetch 명령 (예: SQL_FETCH_RELATIVE)을 지원 합니다.  

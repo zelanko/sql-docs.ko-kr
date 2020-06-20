@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 494b57b50115b5ed3cf5089448215b89e9422ccb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfcf97bd83b4892367b9b80c4ed301c22debd686
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150448"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069038"
 ---
 # <a name="view-the-sql-server-error-log-sql-server-management-studio"></a>SQL Server 오류 로그 보기(SQL Server Management Studio)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에는 사용자 정의한 이벤트와 특정 시스템 이벤트가 들어 있습니다. 이 오류 로그를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 관련된 문제를 해결할 수 있습니다.  

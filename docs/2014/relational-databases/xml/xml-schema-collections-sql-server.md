@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 939f0d85233f5efe7ddc010169fd0922000083f7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3ee4757f1353278447ee55e97c8d4ba23aa2d649
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702258"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046497"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 스키마 컬렉션 [SQL Server]
   [Xml &#40;transact-sql&#41;](/sql/t-sql/xml/xml-transact-sql)항목에서 설명 하는 것 처럼 SQL Server는 데이터 형식을 통해 xml 데이터의 기본 저장소를 제공 합니다 `xml` . 필요에 따라 XML 스키마 컬렉션을 통해 XSD 스키마를 변수나 형식의 열에 연결할 수 있습니다 `xml` . XML 스키마 컬렉션은 가져온 XML 스키마를 저장하고 다음을 수행하는 데 사용됩니다.  
@@ -119,7 +118,7 @@ ms.locfileid: "82702258"
   
 -   **Customer** 는 ELEMENT 구성 요소입니다.  
   
- 데이터베이스로 스키마를 가져올 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 스키마 자체는 저장하지 않습니다. 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 여러 개별 구성 요소를 저장합니다. 즉, \<Schema> 태그는 저장되지 않으며 이 태그 내에 정의된 구성 요소만 보관됩니다. 모든 스키마 요소는 보관되지 않습니다. \<Schema> 태그에 해당 구성 요소의 기본 동작을 지정하는 특성이 포함된 경우 이러한 특성은 다음 표에 설명된 것과 같이 가져오기 프로세스 중에 태그 내에 있는 스키마 구성 요소로 이동됩니다.  
+ 데이터베이스로 스키마를 가져올 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 스키마 자체는 저장하지 않습니다. 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 여러 개별 구성 요소를 저장합니다. 즉, 태그는 \<Schema> 저장 되지 않으며이 태그 내에 정의 된 구성 요소만 유지 됩니다. 모든 스키마 요소는 보관되지 않습니다. 태그에 \<Schema> 해당 구성 요소의 기본 동작을 지정 하는 특성이 포함 된 경우 이러한 특성은 다음 표에 표시 된 것과 같이 가져오기 프로세스 중에 스키마 구성 요소로 이동 됩니다.  
   
 |특성 이름|동작|  
 |--------------------|--------------|  

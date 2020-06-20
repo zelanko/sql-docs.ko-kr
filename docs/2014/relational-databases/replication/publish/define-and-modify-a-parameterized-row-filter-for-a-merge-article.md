@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 86a96f938a036edf39b3602278f9b6b6d2d46719
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d80ad53661aced22795220507398e2fcc510edd3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68212113"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047684"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정
   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 매개 변수가 있는 행 필터를 정의하고 수정하는 방법에 대해 설명합니다.  
@@ -44,11 +43,11 @@ ms.locfileid: "68212113"
   
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- 새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **행 필터** 페이지에서 매개 변수가 있는 행 필터를 정의, 수정 및 삭제합니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](create-a-publication.md) 및 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요.  
+ 새 게시 마법사의 **테이블 행 필터** 페이지 또는 ** \<Publication> 게시 속성-** 대화 상자의 **행 필터** 페이지에서 매개 변수가 있는 행 필터를 정의, 수정 및 삭제 합니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](create-a-publication.md) 및 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="to-define-a-parameterized-row-filter"></a>매개 변수가 있는 행 필터를 정의하려면  
   
-1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 의 **행 필터** 페이지에서 **추가**를 클릭하고 **필터 추가**를 클릭합니다.  
+1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 ** \<Publication> 게시 속성 **의 **행 필터** 페이지에서 **추가**를 클릭 한 다음 **필터 추가**를 클릭 합니다.  
   
 2.  **필터 추가** 대화 상자의 드롭다운 목록 상자에서 필터링할 테이블을 선택합니다.  
   
@@ -78,11 +77,11 @@ ms.locfileid: "68212113"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  **게시 속성 - \<게시>** 대화 상자에 있는 경우 **확인**을 클릭하여 대화 상자를 저장하고 닫습니다.  
+6.  **게시 속성- \<Publication> ** 대화 상자에서 **확인** 을 클릭 하 여 저장 하 고 대화 상자를 닫습니다.  
   
 #### <a name="to-modify-a-parameterized-row-filter"></a>매개 변수가 있는 행 필터를 수정하려면  
   
-1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 필터를 선택하고 **편집**을 클릭합니다.  
+1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 ** \<Publication> 게시 속성 **의 **행 필터** 페이지에 있는 필터링 된 **테이블** 창에서 필터를 선택한 다음 **편집**을 클릭 합니다.  
   
 2.  **필터 편집** 대화 상자에서 필터를 수정합니다.  
   
@@ -90,7 +89,7 @@ ms.locfileid: "68212113"
   
 #### <a name="to-delete-a-parameterized-row-filter"></a>매개 변수가 있는 행 필터를 삭제하려면  
   
-1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 필터를 선택하고 **삭제**를 클릭합니다.  
+1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 ** \<Publication> 게시 속성 **의 **행 필터** 페이지에 있는 필터링 된 **테이블** 창에서 필터를 선택한 다음 **삭제**를 클릭 합니다.  
   
 
   
@@ -99,7 +98,7 @@ ms.locfileid: "68212113"
   
 #### <a name="to-define-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>병합 게시에서 아티클에 대한 매개 변수가 있는 행 필터를 정의하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행합니다. 에 **@publication**아티클의 **@article** **@source_object**이름,에 게시 되는 테이블,에 매개 변수가 있는 필터를 정의 하는 where 절 **@subset_filterclause** (포함 `WHERE`하지 않음),에 매개 변수가 있는 행 필터의 결과로 생성 **@partition_options**되는 분할 유형을 설명 하는에 대 한 다음 값 중 하나를 지정 합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행합니다. 에 **@publication** 아티클의 이름,에 **@article** 게시 되는 테이블,에 **@source_object** 매개 변수가 있는 필터를 정의 하는 where 절 **@subset_filterclause** (포함 하지 않음), `WHERE` 에 매개 변수가 있는 **@partition_options** 행 필터의 결과로 생성 되는 분할 유형을 설명 하는에 대 한 다음 값 중 하나를 지정 합니다.  
   
     -   **0** - 아티클의 필터링이 정적이거나 각 파티션에 대한 데이터의 고유 하위 집합을 생성합니다. 즉 "겹치는" 파티션을 생성하지 않습니다.  
   
@@ -111,9 +110,9 @@ ms.locfileid: "68212113"
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>병합 게시에서 아티클에 대한 매개 변수가 있는 행 필터를 변경하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. , **@publication** **@article**, `subset_filterclause` **@property**에 값,에 매개 변수가 있는 필터를 정의 하는 식 **@value** (포함 `WHERE`하지 않음), **@force_invalidate_snapshot** 및 **@force_reinit_subscription**에 대해 값 **1** 을 지정 합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. **@publication**, **@article** ,에 값, `subset_filterclause` 에 **@property** 매개 변수가 있는 필터를 정의 하는 식 **@value** (포함 하지 않음 `WHERE` ), 및에 대해 값 **1** 을 **@force_invalidate_snapshot** **@force_reinit_subscription** 지정 합니다.  
   
-2.  이 변경 내용으로 인해 파티션에 변화가 생기면 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 을 다시 실행합니다. 에 **@publication**을 **@article**지정 하 고 `partition_options` 에 **@property**값을,에 가장 적합 한 분할 옵션 **@value**을 지정 합니다 .이 옵션은 다음 중 하나일 수 있습니다.  
+2.  이 변경 내용으로 인해 파티션에 변화가 생기면 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 을 다시 실행합니다. 에 **@publication** 을 지정 하 **@article** `partition_options` 고에 값을,에 가장 적합 한 분할 옵션을 지정 합니다 .이 옵션은 다음 중 **@property** **@value** 하나일 수 있습니다.  
   
     -   **0** - 아티클의 필터링이 정적이거나 각 파티션에 대한 데이터의 고유 하위 집합을 생성합니다. 즉 "겹치는" 파티션을 생성하지 않습니다.  
   
@@ -123,7 +122,7 @@ ms.locfileid: "68212113"
   
     -   **3** - 아티클을 필터링하면 각 구독에 고유한 겹치지 않는 파티션이 생성됩니다.  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>예 (Transact-sql)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예에서는 병합 게시의 아티클 그룹을 정의합니다. 이 병합 게시에서는 `Employee` LoginID **열을 기준으로 매개 변수가 있는 행 필터를 사용하여 자체 필터링되는** 테이블에 대해 일련의 조인 필터로 아티클이 필터링됩니다. 동기화 중에 [HOST_NAME](/sql/t-sql/functions/host-name-transact-sql) 함수에서 반환하는 값은 재정의됩니다. 자세한 내용은 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)항목의 HOST_NAME() 값 재정의를 참조하십시오.  
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubdynamic1.sql#sp_mergedynamicpub1)]  

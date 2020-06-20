@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 344b899905e844312ee6e5a66455fc2fa14b446f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4a9a6a82fb8460d12c117184c955fc98823e21d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63462518"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005136"
 ---
 # <a name="sql-server-replication-publisher-information-dialog-box"></a>' 게시자 정보 ' 대화 상자 SQL Server 복제
   **게시** 탭은 왼쪽 창에서 선택한 게시자에서의 모든 게시에 대한 요약 정보를 제공합니다.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ccaafe71d4137fd4b31eec412c1e35595861bdd0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "68210711"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049403"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>시간 기반 행 필터에 대한 최상의 구현 방법
   애플리케이션 사용자가 테이블의 시간 기반 데이터 하위 집합을 필요로 하는 경우가 종종 있습니다. 예를 들어 영업 사원이 지난 주의 주문 데이터를 필요로 하거나, 행사 계획자가 다음 주의 행사 데이터를 필요로 할 수 있습니다. 대부분의 경우 애플리케이션에서는 `GETDATE()` 함수가 들어 있는 쿼리를 사용하여 이 작업을 수행합니다. 예를 들어 다음과 같은 행 필터 문을 사용한다고 가정합니다.  
@@ -26,7 +25,7 @@ ms.locfileid: "68210711"
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- 이 유형의 필터를 사용하면 일반적으로 병합 에이전트가 실행될 때 항상 두 가지 작업이 실행됩니다. 즉, 이 필터를 만족하는 행은 구독자에 복제되고 이 필터를 더 이상 만족하지 않는 행은 구독자에서 정리됩니다. 로 `HOST_NAME()`필터링 하는 방법에 대 한 자세한 내용은 [매개 변수가 있는 행 필터](parameterized-filters-parameterized-row-filters.md)를 참조 하세요. 그러나 병합 복제는 데이터에 대 한 행 필터를 정의 하는 방법에 관계 없이 마지막 동기화 이후 변경 된 데이터만 복제 하 고 정리 합니다.  
+ 이 유형의 필터를 사용하면 일반적으로 병합 에이전트가 실행될 때 항상 두 가지 작업이 실행됩니다. 즉, 이 필터를 만족하는 행은 구독자에 복제되고 이 필터를 더 이상 만족하지 않는 행은 구독자에서 정리됩니다. 로 필터링 하는 방법에 대 한 자세한 내용은 `HOST_NAME()` [매개 변수가 있는 행 필터](parameterized-filters-parameterized-row-filters.md)를 참조 하세요. 그러나 병합 복제는 데이터에 대 한 행 필터를 정의 하는 방법에 관계 없이 마지막 동기화 이후 변경 된 데이터만 복제 하 고 정리 합니다.  
   
  행을 처리하는 병합 복제의 경우 행에 있는 데이터는 행 필터를 만족하고 마지막 동기화 이후에 변경된 데이터여야 합니다. **SalesOrderHeader** 테이블의 경우 행이 삽입될 때 **OrderDate** 가 입력됩니다. 행 삽입은 데이터 변경에 해당하므로 해당 행은 구독자에 예상대로 복제됩니다. 그러나 구독자에 필터를 더 이상 만족하지 않는 행(예: 7일 이상 경과된 주문)이 있는 경우 해당 행은 다른 이유로 업데이트되지 않았으면 구독자에서 제거되지 않습니다.  
   

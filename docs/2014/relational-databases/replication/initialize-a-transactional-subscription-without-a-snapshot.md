@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0cef8a7e8a64935cca6b378e14c00eb0d80f6b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59bb28e8afbee86a901e69ea745b13352ff0f438
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721146"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068691"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>스냅샷 없이 트랜잭션 구독 초기화
   기본적으로 트랜잭션 게시에 대한 구독은 스냅샷 에이전트가 생성하고 배포 에이전트가 적용하는 스냅샷으로 초기화됩니다. 큰 초기 데이터 세트를 다루는 시나리오와 같은 일부 시나리오에서는 다른 방법을 사용하여 구독을 초기화하는 것이 좋습니다. 구독자를 초기화하는 다른 방법은 다음과 같습니다.  

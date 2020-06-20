@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73e151c6-b24e-4422-a116-51e0846bc6f5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 66c73c84a54daeeb2cca82e6b591da73b76a280b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7a9e3025046dbb301ad192b02657db5e288cdaf7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703305"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015814"
 ---
 # <a name="template-caching-sqlxml-40"></a>템플릿 캐싱(SQLXML 4.0)
   템플릿 캐싱은 성능을 크게 개선합니다. 템플릿 캐싱이 설정되어 있으면 템플릿이 처음 실행될 때 메모리에 남아 있습니다. 따라서 후속 템플릿 실행 성능이 개선됩니다.  

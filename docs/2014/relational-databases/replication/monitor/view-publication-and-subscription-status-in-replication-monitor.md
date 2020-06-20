@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b8d48b9a21d810f60b071c17dd89ad51c9e489a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62666970"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049393"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>복제 모니터에서 게시 및 구독 상태 보기
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터는 게시 및 구독에 대 한 상태 정보를 표시 합니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]복제 모니터는 게시 및 구독에 대 한 상태 정보를 표시 합니다.  
   
 -   게시 상태는 해당 구독의 가장 높은 우선 순위 상태에 의해 결정됩니다. 예를 들어 게시에 대한 특정 구독에 오류가 있고 다른 구독에 성능 문제가 있으면 해당 게시에 대해 오류 상태가 표시됩니다.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "62666970"
 |Error|![UI 아이콘: 오류](../media/repl-icon-error.gif "UI 아이콘: 오류")|  
 |성능 심각|![UI 아이콘: 경고](../media/repl-icon-warn.gif "UI 아이콘: 경고")|  
 |실패한 명령 다시 시도 중|![UI 아이콘: 복제 에이전트 다시 시도](../media/repl-icon-retry.gif "UI 아이콘: 복제 에이전트 다시 시도")|  
-|확인|none|  
+|정상|없음|  
   
 ## <a name="subscription-status-values"></a>구독 상태 값  
  다음 표에서는 구독 상태 값과 해당 아이콘을 우선 순위순으로 보여 줍니다. 한 구독이 동시에 두 가지 상태에 있을 수 있습니다(예: **곧 만료됨/만료됨** 및 **실패한 명령 다시 시도 중**). 이 경우 우선 순위가 가장 높은 상태가 표시됩니다.  

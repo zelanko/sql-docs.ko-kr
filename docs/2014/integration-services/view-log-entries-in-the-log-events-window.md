@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c02123c3-67fc-4370-ad14-91ed259f1873
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ed348a4525024052946ac30bfe6ec780ca86a4b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2eeacf8b8e722898485871c9f2c469e780e15c78
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054624"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972541"
 ---
 # <a name="view-log-entries-in-the-log-events-window"></a>이벤트 로그 창에서 로그 항목 보기
   이 절차에서는 패키지를 실행하고 패키지에서 작성한 로그 항목을 보는 방법을 설명합니다. 로그 항목은 실시간으로 볼 수 있습니다. **이벤트 로그** 창에 기록된 로그 항목을 상세히 분석할 수 있게 복사하여 저장할 수도 있습니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "66054624"
   
 2.  **SSIS** 메뉴에서 **이벤트 로그**를 클릭 합니다. 필요한 경우 View.LogEvents 명령을 **옵션** 대화 상자의 **키보드** 페이지에서 선택한 키 조합에 매핑하여 **이벤트 로그** 창을 표시할 수도 있습니다.  
   
-3.  **디버그** 메뉴에서 **디버깅 시작**을 클릭 합니다.  
+3.  **디버그** 메뉴에서 **디버깅 시작**을 클릭합니다.  
   
      로깅하도록 설정한 이벤트 및 사용자 지정 메시지가 런타임에 발생하면 각 이벤트나 메시지의 로그 항목이 **이벤트 로그** 창에 작성됩니다.  
   

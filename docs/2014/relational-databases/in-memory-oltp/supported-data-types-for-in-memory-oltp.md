@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b7ba8c40979873cc2c3f2358b57dc0e491a1795e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a7dda500486c39a66f871d5934f957028fc51e9d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718832"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025743"
 ---
 # <a name="supported-data-types"></a>지원되는 데이터 형식
   다음은 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저에서 **지원되는** 데이터 형식입니다.  

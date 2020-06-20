@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e31f36624e8923722612810836df5d2a57b6b686
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11f0ba7a901a3e55644b3129ebbd9d9e2d3e2944
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67624405"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025832"
 ---
 # <a name="resolve-out-of-memory-issues"></a>OOM(메모리 부족) 문제 해결
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 다른 방법으로 더 많은 메모리를 사용합니다. 필요 증가에 따라 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 에 대해 설치하고 할당한 메모리의 양이 불충분해질 수 있습니다. 이 경우 메모리가 부족해질 수 있습니다. 이 항목에서는 OOM 상황에서 복구하는 방법을 설명합니다. 여러 OOM 상황을 방지하는 데 도움이 될 수 있는 지침은 [메모리 사용량 모니터링 및 문제 해결](monitor-and-troubleshoot-memory-usage.md) 을 참조하세요.  
@@ -24,12 +23,12 @@ ms.locfileid: "67624405"
   
 |항목|개요|  
 |-----------|--------------|  
-| [OOM으로 인한 데이터베이스 복원 실패 해결](#resolve-database-restore-failures-due-to-oom) |“' *\<resourcePoolName>* ' 리소스 풀의 메모리 부족으로 인해 ' *\<databaseName>* ' 데이터베이스에 대한 복원 작업이 실패했습니다”라는 오류 메시지가 나타나는 경우 수행할 작업입니다.|  
+| [OOM으로 인한 데이터베이스 복원 실패 해결](#resolve-database-restore-failures-due-to-oom) |" *\<databaseName>* ' ' 리소스 풀의 메모리 부족으로 인해 ' ' 데이터베이스에 대 한 복원 작업이 실패 했습니다." 라는 오류 메시지가 표시 되는 경우 수행할 작업 *\<resourcePoolName>* 입니다.|  
 | [메모리 부족 또는 OOM 상황이 작업에 미치는 영향 해결](#resolve-impact-of-low-memory-or-oom-conditions-on-the-workload)|메모리 부족 문제가 성능에 부정적인 영향을 미치고 있음을 발견할 경우 수행할 작업입니다.|  
-| [사용 가능한 메모리가 충분한 경우 메모리 부족으로 인한 페이지 할당 오류 해결](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |작업에 사용할 수 있는 메모리가 충분한데 “' *\<resourcePoolName>* ' 리소스 풀의 메모리 부족으로 인해 ' *\<databaseName>* ' 데이터베이스에 대해 페이지를 할당할 수 없습니다...”라는 오류 메시지가 나타나는 경우 수행할 작업입니다.|  
+| [사용 가능한 메모리가 충분한 경우 메모리 부족으로 인한 페이지 할당 오류 해결](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |' *\<databaseName>* ' 리소스 풀의 메모리 부족으로 인해 ' ' 데이터베이스에 대 한 페이지 할당을 허용 하지 않습니다. ' 라는 오류 메시지가 표시 되는 경우 수행할 작업 *\<resourcePoolName>* 입니다. 오류 메시지가 나타나는 경우 수행할 작업입니다.|  
   
 ## <a name="resolve-database-restore-failures-due-to-oom"></a>OOM으로 인한 데이터베이스 복원 실패 해결  
- 데이터베이스를 복원 하려고 하면 "*\<resourcepoolname>>*' 리소스 풀의 메모리 부족으로 인해 '*\<databaseName>*' 데이터베이스에 대 한 복원 작업이 실패 했습니다." 라는 오류 메시지가 표시 될 수 있습니다. 데이터베이스를 성공적으로 복원 하려면 메모리를 더 많이 사용 하 여 메모리 부족 문제를 해결 해야 합니다.  
+ 데이터베이스를 복원 하려고 하면 "' *\<databaseName>* ' 리소스 풀의 메모리 부족으로 인해 ' ' 데이터베이스에 대 한 복원 작업이 실패 했습니다." 라는 오류 메시지가 표시 될 수 있습니다 *\<resourcePoolName>* . 데이터베이스를 성공적으로 복원 하려면 메모리를 더 많이 사용 하 여 메모리 부족 문제를 해결 해야 합니다.  
   
  OOM으로 인한 복구 오류를 해결하려면 다음 방법으로 복구 작업에 사용 가능한 메모리를 임시로 늘리십시오.  
   
@@ -128,14 +127,14 @@ GO
  MAX_MEMORY_PERCENT의 최대값에 대한 자세한 내용은 항목 섹션 [메모리 최적화 테이블 및 인덱스에 사용 가능한 메모리 비율](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#percent-of-memory-available-for-memory-optimized-tables-and-indexes)을 참조하세요.  
   
 ##### <a name="install-additional-memory"></a>추가 메모리 설치  
- 가능한 경우 궁극적으로 가장 좋은 해결 방법은 추가 실제 메모리를 설치하는 것입니다. 이 작업을 수행 하는 경우에는 MAX_MEMORY_PERCENT 값을 늘릴 수도 있습니다 ( [기존 풀에서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)하위 항목 변경 참조) .이를 통해 더 많은 메모리가 필요 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하지 않으므로 새로 설치 된 모든 메모리를 리소스 풀에서 사용할 수 있는 경우를 최대한 활용할 수 있습니다.  
+ 가능한 경우 궁극적으로 가장 좋은 해결 방법은 추가 실제 메모리를 설치하는 것입니다. 이 작업을 수행 하는 경우에는 MAX_MEMORY_PERCENT 값을 늘릴 수도 있습니다 ( [기존 풀에서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)하위 항목 변경 참조) .이를 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 더 많은 메모리가 필요 하지 않으므로 새로 설치 된 모든 메모리를 리소스 풀에서 사용할 수 있는 경우를 최대한 활용할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  서버가 VM에서 실행 중이고 전용 서버가 아니면 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 값을 동일한 값으로 설정합니다.   
 > 자세한 내용은 [최선의 구현 방법: VM 환경에서 메모리 내 OLTP 사용](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) 항목을 참조하세요.  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>사용 가능한 메모리가 충분한 경우 메모리 부족으로 인한 페이지 할당 오류 해결  
- *"\<Resourcepoolname>>*' 리소스 풀의 메모리 부족으로 인해"*\<databaseName>*' 데이터베이스에 대 한 페이지 할당이 허용 되지 않습니다. 자세한 내용은<https://go.microsoft.com/fwlink/?LinkId=330673>' '를 참조 하십시오. 라는 오류 메시지가 기록된 경우 리소스 관리자를 사용하지 않기 때문일 수 있습니다. 리소스 관리자를 사용하지 않으면 MEMORYBROKER_FOR_RESERVE가 인위적인 메모리 압력을 유발합니다.  
+ " *\<databaseName>* ' 리소스 풀의 메모리 부족으로 인해 데이터베이스 ' '에 대 한 페이지 할당을 허용 하지 않습니다." 라는 오류 메시지가 표시 *\<resourcePoolName>* 됩니다. <https://go.microsoft.com/fwlink/?LinkId=330673>자세한 내용은 ' '를 참조 하십시오. 라는 오류 메시지가 기록된 경우 리소스 관리자를 사용하지 않기 때문일 수 있습니다. 리소스 관리자를 사용하지 않으면 MEMORYBROKER_FOR_RESERVE가 인위적인 메모리 압력을 유발합니다.  
   
  이 오류를 해결하려면 리소스 관리자를 사용하도록 설정해야 합니다.  
   

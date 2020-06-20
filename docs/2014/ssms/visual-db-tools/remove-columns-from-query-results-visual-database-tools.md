@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 77be473f189d8574ebde74215569e700e80725b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90d502ad2cdb4c67d5d4f23f262b56cb17ea7519
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63253508"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064903"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>쿼리 결과에서 열 제거(Visual Database Tools)
   선택 쿼리에 사용 중인 열을 결과 집합에 표시하지 않으려는 경우 즉, 쿼리의 선택 목록에 포함하지 않으려는 경우 해당 열을 출력에서 제거할 수 있습니다. 쿼리의 출력에서 열을 제거한 후에도 이 열을 검색 조건에 사용하거나 정렬 필드로 사용할 수 있습니다.  

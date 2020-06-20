@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: da60ceee93802b14b7d09392740a1f6b471e4ab1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f595b9f0e0a6d7bceffc5cb283c60b6f40e025b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150605"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047822"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>계획 지침을 사용하여 쿼리 매개 변수화 동작 지정
   PARAMETERIZATION 데이터베이스 옵션이 SIMPLE로 설정된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 쿼리를 매개 변수화하도록 선택할 수 있습니다. 즉, 쿼리에 포함된 모든 리터럴 값은 매개 변수로 대체됩니다. 이 프로세스를 단순 매개 변수화라고 합니다. SIMPLE 매개 변수화가 적용되면 매개 변수화할 쿼리와 매개 변수화하지 않을 쿼리를 제어할 수 없습니다. 그러나 PARAMETERIZATION 데이터베이스 옵션을 FORCED로 설정하여 데이터베이스의 모든 쿼리가 매개 변수화되도록 지정할 수 있습니다. 이 프로세스를 강제 매개 변수화라고 합니다.  
@@ -53,7 +52,7 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
 2.  PARAMETERIZATION FORCED 쿼리 힌트를 지정하여 매개 변수가 있는 쿼리 형식에 대한 계획 지침을 만듭니다.  
   
     > [!IMPORTANT]  
-    >  쿼리를 매개 변수화하는 과정의 일부로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 리터럴 값 및 크기에 따라 리터럴 값을 바꾸는 매개 변수에 데이터 유형을 할당합니다. **@stmt** **Sp_get_query_template**의 출력 매개 변수에 전달 된 상수 리터럴의 값에 동일한 프로세스가 수행 됩니다. **@params** **Sp_create_plan_guide** 의 인수에 지정 된 데이터 형식은에 의해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]매개 변수화 된 쿼리의 데이터 형식과 일치 해야 하므로 쿼리에 사용할 수 있는 매개 변수 값의 전체 범위를 포함 하는 계획 지침을 두 개 이상 만들어야 할 수 있습니다.  
+    >  쿼리를 매개 변수화하는 과정의 일부로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 리터럴 값 및 크기에 따라 리터럴 값을 바꾸는 매개 변수에 데이터 유형을 할당합니다. **@stmt** **Sp_get_query_template**의 출력 매개 변수에 전달 된 상수 리터럴의 값에 동일한 프로세스가 수행 됩니다. Sp_create_plan_guide의 인수에 지정 된 데이터 형식은에 **@params** 의해 매개 변수화 된 쿼리의 데이터 형식과 일치 해야 하므로 **sp_create_plan_guide** 쿼리에 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 수 있는 매개 변수 값의 전체 범위를 포함 하는 계획 지침을 두 개 이상 만들어야 할 수 있습니다.  
   
  다음 스크립트는 매개 변수가 있는 쿼리를 얻고 이에 대한 계획 지침을 만들기 위해 사용할 수 있습니다.  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cd83011fc7fd5b85efb5f20545dd80bb3d6dd43e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 153ef21209ff4261020e26aca3bc52d28dc852a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175932"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026247"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>서식 파일을 사용하여 테이블 열 건너뛰기(SQL Server)
   이 항목에서는 서식 파일에 대해 설명합니다. 필드가 데이터 파일에 없는 경우 서식 파일을 사용하여 테이블 열 가져오기를 건너뛸 수 있습니다. 건너뛴 열이 Null을 허용하거나 기본값을 가질 경우에만 데이터 파일에 테이블의 열 수보다 적은 수의 필드가 있을 수 있습니다.
@@ -99,7 +98,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
     3       SQLCHAR       0       100     "\r\n"   3     Col3         SQL_Latin1_General_CP1_CI_AS
     ```
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
  다음 예도 이 항목의 앞부분에 나오는 "예제 테이블 및 데이터 파일"에서 생성된 `myTestSkipCol` 예제 테이블과 `myTestSkipCol2.dat` 예제 데이터 파일을 기반으로 합니다.
 
 #### <a name="using-bulk-insert"></a>BULK INSERT 사용
@@ -151,7 +150,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 > [!NOTE]
 >  XML 서식 파일의 구조에 대한 자세한 내용은 [XML 서식 파일&#40;SQL Server&#41;](xml-format-files-sql-server.md)을 참조하세요.
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
  이 섹션의 예에서는 이 섹션의 예에서는 이 항목의 앞부분에 나오는 "예제 테이블 및 데이터 파일"에서 생성된 `myTestSkipCol` 예제 테이블과 `myTestSkipCol2.dat` 예제 데이터 파일을 사용합니다. `myTestSkipCol2.dat` 의 데이터를 `myTestSkipCol` 테이블로 가져오기 위해 이 예에서는 수정된 XML 서식 파일인 `myTestSkipCol2-x.xml`을 사용합니다. 이 예는 이 항목의 앞부분에 나오는 "기본 XML 서식 파일 만들기"에서 생성된 서식 파일을 기반으로 합니다.
 
 ```

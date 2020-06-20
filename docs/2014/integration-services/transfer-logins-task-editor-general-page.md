@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 738989b6-7ec0-432c-9cc1-714486124d20
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4574053bacafe97a9c6242246a48e2e65599b6a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7be36c5818bbcf4855c90ba2fc16b0ba083cf39
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054957"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972803"
 ---
 # <a name="transfer-logins-task-editor-general-page"></a>로그인 전송 태스크 편집기(일반 페이지)
   **로그인 전송 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 로그인 전송 태스크의 이름을 지정하고 해당 태스크를 설명할 수 있습니다. 이 태스크에 대한 자세한 내용은 [Transfer Logins Task](control-flow/transfer-logins-task.md)를 참조하십시오.  

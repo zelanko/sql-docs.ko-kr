@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f4d18ef352c3e5ab6342e573d16bc3deaed5db72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5abd2e60f4f9bb5290b47f95349782f8b26ad8bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211997"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043196"
 ---
 # <a name="create-a-resource-pool"></a>리소스 풀 만들기
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 리소스 풀을 만들 수 있습니다.  
@@ -71,15 +70,15 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Resource Governor](resource-governor.md)   
- [Resource Governor 사용](enable-resource-governor.md)   
- [Resource Governor 리소스 풀](resource-governor-resource-pool.md)   
+ [리소스 관리자](resource-governor.md)   
+ [리소스 관리자 사용](enable-resource-governor.md)   
+ [리소스 관리자 리소스 풀](resource-governor-resource-pool.md)   
  [리소스 풀 설정 변경](change-resource-pool-settings.md)   
  [리소스 풀 삭제](delete-a-resource-pool.md)   
- [템플릿을 사용 하 여 Resource Governor 구성](configure-resource-governor-using-a-template.md)   
- [작업 그룹 Resource Governor](resource-governor-workload-group.md)   
+ [템플릿을 사용하여 리소스 관리자 구성](configure-resource-governor-using-a-template.md)   
+ [리소스 관리자 작업 그룹](resource-governor-workload-group.md)   
  [Resource Governor 분류자 함수](resource-governor-classifier-function.md)   
- [Transact-sql&#41;&#40;리소스 풀 만들기](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [CREATE RESOURCE POOL&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
  [ALTER RESOURCE GOVERNOR&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

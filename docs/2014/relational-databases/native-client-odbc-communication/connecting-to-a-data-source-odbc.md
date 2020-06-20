@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe7f86c2ca53ef4534abd1024d317eee0c1b3c99
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 42d38247cdf688c9d0445b9dd12b7423b646adef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705784"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021159"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>데이터 원본에 연결(ODBC)
   애플리케이션은 환경 및 연결 핸들을 할당하고 연결 특성을 설정한 후 데이터 원본이나 드라이버에 연결합니다. 연결에 사용할 수 있는 함수는 다음과 같이 세 가지가 있습니다.  

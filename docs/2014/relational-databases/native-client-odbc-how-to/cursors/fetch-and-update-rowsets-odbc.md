@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cf0eb3b4-8b72-49fc-a845-95edc360cf93
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a799e2c4c7c3e7e3119fece847cb726751441c39
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 10f23e8a8e8c76160362af2f3efacfd297062254
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701885"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018915"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>행 집합 인출 및 업데이트(ODBC)
     

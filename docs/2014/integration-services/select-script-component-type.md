@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 281a36c6-c2c2-4a25-8f48-5f372ed8b63f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e07e29c8b200984d5803007f3612f9a43824e261
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0017111b0c5c0ab3e6414d801395eba99ececc82
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055982"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963663"
 ---
 # <a name="select-script-component-type"></a>스크립트 구성 요소 유형 선택
   **스크립트 구성 요소 유형 선택** 대화 상자를 사용하여 원본, 변환 또는 대상으로 사용하도록 미리 구성된 스크립트 변환 생성 여부를 지정할 수 있습니다.  

@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dd59bf315e90bd52ba1388d27c533ab4a3136d3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0104fe6b64ff2ecc1a37bb1da9691e34d7913f21
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72381737"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061087"
 ---
 # <a name="task-4-setting-domain-rules"></a>태스크 4: 도메인 규칙 설정
-  이 작업에서는 **연락처 전자 메일** 도메인에 대 한 규칙을 만들어 전자 메일 주소가 ** \@adventure-works.com**으로 끝나는지 확인 합니다. 이 페이지에 대한 자세한 내용은 [도메인 규칙 만들기](https://msdn.microsoft.com/library/hh510397.aspx) 항목을 참조하십시오.  
+  이 작업에서는 **연락처 전자 메일** 도메인에 대 한 규칙을 만들어 전자 메일 주소가 ** \@ adventure-works.com**으로 끝나는지 확인 합니다. 이 페이지에 대한 자세한 내용은 [도메인 규칙 만들기](https://msdn.microsoft.com/library/hh510397.aspx) 항목을 참조하십시오.  
   
 1.  **도메인 목록** 에서 **Contact Email**을 클릭합니다.  
   
@@ -32,7 +31,7 @@ ms.locfileid: "72381737"
   
 5.  **규칙 작성** 창에서 **아래쪽 화살표**를 클릭하고 **값이 다음으로 종료**를 선택합니다.  
   
-6.  텍스트 상자에 ** \@adventure-works.com** 를 입력 하 고 **tab**키를 누릅니다. **규칙 작성** 창에서 **선택한 절에 새 조건 추가** 도구 모음 단추를 클릭하여 조건을 추가할 수 있습니다.  
+6.  텍스트 상자에 ** \@ adventure-works.com** 를 입력 하 고 **tab**키를 누릅니다. **규칙 작성** 창에서 **선택한 절에 새 조건 추가** 도구 모음 단추를 클릭하여 조건을 추가할 수 있습니다.  
   
      ![전자 메일 유효성 검사 규칙](../../2014/tutorials/media/et-settingdomainrules-02.jpg "전자 메일 유효성 검사 규칙")  
   
@@ -44,9 +43,9 @@ ms.locfileid: "72381737"
   
      ![도메인 규칙 테스트 대화 상자](../../2014/tutorials/media/et-settingdomainrules-04.jpg "도메인 규칙 테스트 대화 상자")  
   
-9. **Contact Email** 열에 **frank7\@adventure-works.com** (올바른 값)를 입력 합니다.  
+9. **Contact Email** 열에 **frank7 \@ adventure-works.com** (올바른 값)를 입력 합니다.  
   
-10. 이전 두 단계를 반복 하 **여\@joe2 adventure-work.com** (가 없는 잘못 된 값)을 추가 합니다.  
+10. 이전 두 단계를 반복 하 여 **joe2 \@ adventure-work.com** (가 없는 잘못 된 값)을 추가 합니다.  
   
 11. 도구 모음에서 마지막 단추(**모든 용어에 대한 도메인 규칙을 테스트합니다.**)를 클릭하여 규칙에 대해 입력 데이터를 테스트합니다.  
   

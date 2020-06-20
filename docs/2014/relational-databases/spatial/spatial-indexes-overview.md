@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 75cf9c751afb03b963eb888a6dbe6ed03ed4003a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36406bd60b4204469aca3d20862020870a8832fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176663"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068385"
 ---
 # <a name="spatial-indexes-overview"></a>공간 인덱스 개요
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 공간 데이터 및 공간 인덱스를 지원합니다. *공간 인덱스* 는 공간 열을 인덱싱할 수 있는 확장된 인덱스의 유형입니다. 공간 열은 `geometry` 또는 `geography`와 같은 공간 데이터 형식의 데이터를 포함하는 테이블 열입니다.
@@ -58,7 +57,7 @@ ms.locfileid: "78176663"
  기본값이 아닌 표 밀도를 지정하여 분해 프로세스를 제어할 수 있습니다. 예를 들어 각 수준별로 서로 다른 표 밀도는 인덱싱된 공간의 크기와 공간 열의 개체를 기준으로 인덱스를 미세하게 조정하는 데 유용할 수도 있습니다.
 
 > [!NOTE]
->  공간 인덱스의 표 밀도는 데이터베이스 호환성 수준이 100 이하로 설정된 경우 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) 카탈로그 뷰의 level_1_grid, level_2_grid, level_3_grid 및 level_4_grid 열에서 볼 수 있습니다. 공간 `GEOMETRY_AUTO_GRID` / `GEOGRAPHY_AUTO_GRID` 분할 (tessellation) 구성표 옵션은 이러한 열을 채우지 않습니다. 자동 표 옵션이 사용 된 경우 `NULL` 에는 spatial_index_tessellations 카탈로그 뷰에 이러한 열에 대 한 값이 있습니다.
+>  공간 인덱스의 표 밀도는 데이터베이스 호환성 수준이 100 이하로 설정된 경우 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) 카탈로그 뷰의 level_1_grid, level_2_grid, level_3_grid 및 level_4_grid 열에서 볼 수 있습니다. `GEOMETRY_AUTO_GRID` / `GEOGRAPHY_AUTO_GRID` 공간 분할 (tessellation) 구성표 옵션은 이러한 열을 채우지 않습니다. `NULL`자동 표 옵션이 사용 된 경우에는 spatial_index_tessellations 카탈로그 뷰에 이러한 열에 대 한 값이 있습니다.
 
 ###  <a name="tessellation"></a><a name="tessellation"></a>분할
  인덱싱된 공간을 표 계층 구조로 분해한 후 공간 인덱스는 공간 열에서 데이터를 한 번에 한 행씩 읽습니다. 공간 개체나 인스턴스의 데이터를 읽은 후 공간 인덱스는 해당 개체에 대해 *공간 분할 프로세스* 를 수행합니다. 공간 분할 프로세스는 개체를 표 형태 셀의 집합과 연결하여(*연결된 셀*) 개체를 표 계층 구조에 맞게 조정합니다. 표 계층 구조의 수준 1에서 시작하면 공간 분할 프로세스는 전체 수준에서 *너비 우선* 으로 진행됩니다. 이 프로세스는 한 번에 한 수준씩 4-수준 전체에서 계속 진행될 수도 있습니다.
@@ -98,7 +97,7 @@ ms.locfileid: "78176663"
 
  예를 들어 수준-1 표의 셀 15에 꼭 맞는 팔각형을 보여 주는 위의 그림을 검토해 봅니다. 그림에서는 팔각형을 수준-2의 셀 9개로 나누어서 셀 15가 공간 분할되었습니다. 이 그림에서는 개체당 셀 수 제한을 9개 이상으로 가정합니다. 개체당 셀 수 제한이 8개 이하라면 셀 15는 공간 분할되지 않고 해당 셀 15만 개체의 개수로 계산됩니다.
 
- 기본적으로 대부분의 공간 인덱스에 대해 공간과 자릿수 간의 적절한 균형을 이루는 개체당 셀 수 제한은 개체당 셀 16개입니다. 그러나 [CREATE 공간 인덱스](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 CELLS_PER_OBJECT`=`*n* 절을 지원 합니다 .이 절을 사용 하면 1과 8192 (포함) 사이의 개체당 셀 수 제한을 지정할 수 있습니다.
+ 기본적으로 대부분의 공간 인덱스에 대해 공간과 자릿수 간의 적절한 균형을 이루는 개체당 셀 수 제한은 개체당 셀 16개입니다. 그러나 [CREATE 공간 인덱스](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 CELLS_PER_OBJECT `=` *n* 절을 지원 합니다 .이 절을 사용 하면 1과 8192 (포함) 사이의 개체당 셀 수 제한을 지정할 수 있습니다.
 
 > [!NOTE]
 >  공간 인덱스의 **cells_per_object** 설정은 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) 카탈로그 뷰에서 볼 수 있습니다.
@@ -113,9 +112,9 @@ ms.locfileid: "78176663"
 ###  <a name="tessellation-schemes"></a><a name="schemes"></a>공간 분할 구성표
  공간 인덱스의 동작은 부분적으로 해당 *공간 분할(tessellation) 구성표*의 영향을 받습니다. 공간 분할(tessellation) 구성표는 데이터 형식에 따라 달라집니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 공간 인덱스는 두 가지 공간 분할(tessellation) 구성표를 지원합니다.
 
--   *기 하 도형 표 공간 분할*- `geometry` 데이터 형식에 대 한 스키마입니다.
+-   *기 하 도형 표 공간 분할*-데이터 형식에 대 한 스키마입니다 `geometry` .
 
--   *지리 표 공간 분할*- `geography` 데이터 형식의 열에 적용 됩니다.
+-   *지리 표 공간 분할*-데이터 형식의 열에 적용 됩니다 `geography` .
 
 > [!NOTE]
 >  공간 인덱스의 **tessellation_scheme** 설정은 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) 카탈로그 뷰에서 볼 수 있습니다.
@@ -124,10 +123,10 @@ ms.locfileid: "78176663"
  GEOMETRY_AUTO_GRID 공간 분할은 `geometry` 이상에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식의 기본 공간 분할(tessellation) 구성표입니다.  GEOMETRY_GRID 공간 분할은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 geometry 데이터 형식에 사용할 수 있는 유일한 공간 분할(tessellation) 구성표입니다. 이 섹션에서는 공간 인덱스 작업과 연관된 기하 도형 표 공간 분할의 측면에서 지원되는 메서드 및 경계 상자에 대해 설명합니다.
 
 > [!NOTE]
->  [CREATE 공간 인덱스](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문의 using (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 절을 사용 하 여이 공간 분할 (tessellation) 구성표를 명시적으로 지정할 수 있습니다.
+>  [CREATE 공간 인덱스](/sql/t-sql/statements/create-spatial-index-transact-sql) 문의 using (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 절을 사용 하 여이 공간 분할 (tessellation) 구성표를 명시적으로 지정할 수 있습니다 [!INCLUDE[tsql](../../../includes/tsql-md.md)] .
 
 ##### <a name="the-bounding-box"></a>경계 상자
- 기하학적 데이터는 무한할 수 있는 평면을 차지합니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 공간 인덱스는 제한된 공간을 필요로 합니다. 분해를 위한 제한된 공간을 설정하려면 기하 도형 표 공간 분할 구성표에는 사각형 *경계 상자*가 필요합니다. 경계 상자는 공간 인덱스의 속성으로 저장 되는 4 개 좌표 `(` _x 분_**,**_y 분_ `)` `(` _, x 최대값_**,**_y 최대값_`)`으로 정의 됩니다. 이러한 좌표는 다음을 나타냅니다.
+ 기하학적 데이터는 무한할 수 있는 평면을 차지합니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 공간 인덱스는 제한된 공간을 필요로 합니다. 분해를 위한 제한된 공간을 설정하려면 기하 도형 표 공간 분할 구성표에는 사각형 *경계 상자*가 필요합니다. 경계 상자는 `(` _x-min_**,**_y-min_ `)` `(` _x-max_**,** 공간 인덱스의 속성으로 저장_y-max_되는 4 개 좌표 x 분, y 분, x 최대값, y 최대값으로 정의 됩니다 `)` . 이러한 좌표는 다음을 나타냅니다.
 
 -   *x-min* 은 경계 상자의 왼쪽 아래 모퉁이의 X 좌표입니다.
 
@@ -138,13 +137,13 @@ ms.locfileid: "78176663"
 -   *y-max* 는 오른쪽 위 모퉁이의 Y 좌표입니다.
 
 > [!NOTE]
->  이러한 좌표는 [CREATE 공간 인덱스](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문의 BOUNDING_BOX 절에 의해 지정 됩니다.
+>  이러한 좌표는 [CREATE 공간 인덱스](/sql/t-sql/statements/create-spatial-index-transact-sql) 문의 BOUNDING_BOX 절에 의해 지정 됩니다 [!INCLUDE[tsql](../../../includes/tsql-md.md)] .
 
  `(` _X 분_**,**_y-min_ `)` 및 `(` _x max_**,**_y 최대값_ `)` 좌표는 경계 상자의 배치와 크기를 결정 합니다. 경계 상자 외부의 공간은 번호가 0으로 매겨진 단일 셀로 처리됩니다.
 
  공간 인덱스는 경계 상자 내부의 공간을 분해합니다. 표 계층 구조 수준-1 표가 경계 상자를 채웁니다. 표 계층 구조에서 기하학적 개체를 배치하기 위해 공간 인덱스에서는 개체 좌표와 경계 상자 좌표를 비교합니다.
 
- 다음 그림에서는 경계 상자의 `(` _x 분_**,**_y 분_ `)` `(`, _x_최대값 **,**_y 최대값_ `)` 좌표에 의해 정의 되는 요소를 보여 줍니다. 표 계층 구조의 최상위 수준이 4x4 표로 표시됩니다. 이해하기 쉽도록 하위 수준은 생략되었습니다. 경계 상자 외부의 공간은 0으로 표시됩니다. 'A' 개체는 부분적으로 상자 밖으로 뻗어 있고 'B' 개체는 완전히 셀 0의 상자 바깥쪽에 있습니다.
+ 다음 그림에서는 `(` 경계 상자의 _x 분_**,**_y 분_ , `)` `(` _x_최대값 **,**_y 최대값_ `)` 좌표에 의해 정의 되는 요소를 보여 줍니다. 표 계층 구조의 최상위 수준이 4x4 표로 표시됩니다. 이해하기 쉽도록 하위 수준은 생략되었습니다. 경계 상자 외부의 공간은 0으로 표시됩니다. 'A' 개체는 부분적으로 상자 밖으로 뻗어 있고 'B' 개체는 완전히 셀 0의 상자 바깥쪽에 있습니다.
 
  ![좌표 및 셀 0을 보여 주는 경계 상자](../../database-engine/media/spndx-bb-4x4-objects.gif "좌표 및 셀 0을 보여 주는 경계 상자")
 
@@ -157,7 +156,7 @@ ms.locfileid: "78176663"
  공간 분할 구성표는 `geography` 열에만 적용합니다. 이 섹션에서는 지리 표 공간 분할에서 지원되는 메서드에 대해 요약하고 측지 공간이 평면에 표시되는 방법에 대해 설명합니다. 이 측지 공간은 표 계층 구조로 분해됩니다.
 
 > [!NOTE]
->  [CREATE 공간 인덱스](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문의 using (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID) 절을 사용 하 여이 공간 분할 (tessellation) 구성표를 명시적으로 지정할 수 있습니다.
+>  [CREATE 공간 인덱스](/sql/t-sql/statements/create-spatial-index-transact-sql) 문의 using (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID) 절을 사용 하 여이 공간 분할 (tessellation) 구성표를 명시적으로 지정할 수 있습니다 [!INCLUDE[tsql](../../../includes/tsql-md.md)] .
 
 ##### <a name="projection-of-the-geodetic-space-onto-a-plane"></a>측지 공간을 평면에 표시
  `geography` 인스턴스(개체)에서의 계산은 개체를 포함하는 공간을 측지 타원면으로 처리합니다 이 공간을 분해하기 위해 지리 표 공간 분할 구성표에서는 타원면의 표면을 해당하는 위쪽 반구와 아래쪽 반구로 나눈 후 다음 단계를 수행합니다.

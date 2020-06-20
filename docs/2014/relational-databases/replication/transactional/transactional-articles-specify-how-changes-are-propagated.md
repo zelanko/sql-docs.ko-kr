@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb07987bfdca341a01a523c13db3e346ab5085f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655678"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016570"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정
   트랜잭션 복제를 사용하여 데이터 변경 내용이 게시자에서 구독자로 전파되는 방법을 지정할 수 있습니다. 다음 4가지 중 하나를 사용하여 게시된 각 테이블에 대해 INSERT, UPDATE 또는 DELETE 등의 각 작업이 구독자로 전파되는 방법을 지정할 수 있습니다.  
@@ -37,13 +36,13 @@ ms.locfileid: "62655678"
 ## <a name="default-and-custom-stored-procedures"></a>기본 저장 프로시저 및 사용자 지정 저장 프로시저  
  복제 시 각 테이블 아티클에 대해 기본적으로 생성되는 3가지 프로시저는 다음과 같습니다.  
   
--   **sp_MSins_\<** *tablename* **>** - 삽입을 처리합니다.  
+-   **sp_MSins_ \<** *tablename* **> **은 삽입을 처리 합니다.  
   
--   **sp_MSupd_\<** *tablename* **>** - 업데이트를 처리합니다.  
+-   업데이트를 처리 하는 **sp_MSupd_ \<** *tablename* **> **.  
   
--   **sp_MSdel_\<** *tablename* **>** - 삭제를 처리합니다.  
+-   삭제를 처리 하는 **sp_MSdel_ \<** *tablename* **> **.  
   
- 프로시저에 사용 되는 ** \< ***tablename*** > ** 은 아티클이 게시에 추가 된 방법과 구독 데이터베이스에 소유자가 다른 같은 이름의 테이블이 포함 되어 있는지 여부에 따라 달라 집니다.  
+ **\<***tablename***>** 프로시저에서 사용 되는은 아티클이 게시에 추가 된 방법과 구독 데이터베이스에 소유자가 다른 같은 이름의 테이블이 포함 되어 있는지 여부에 따라 달라 집니다.  
   
  이러한 프로시저는 아티클을 게시에 추가할 때 지정하는 사용자 지정 프로시저로 바꿀 수 있습니다. 구독자에서 행이 업데이트될 때 데이터를 감사 테이블에 삽입하는 경우와 같이 애플리케이션에 사용자 지정 논리가 필요할 경우 사용자 지정 프로시저를 사용합니다. 사용자 지정 저장 프로시저 지정 방법은 위에 나열된 항목을 참조하십시오.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62655678"
   
 -   게시된 테이블에 대해 스키마 변경을 적용하면 사용자 지정 프로시저를 다시 생성해야 합니다. 자세한 내용은 [스키마 변경 내용을 반영하기 위해 사용자 지정 트랜잭션 프로시저 다시 생성](transactional-articles-regenerate-to-reflect-schema-changes.md)을 참조하세요.  
   
--   배포 에이전트의 **-SubscriptionStreams** 매개 변수에 1보다 큰 값을 사용할 경우 기본 키 열에 대한 업데이트가 성공했는지 확인해야 합니다. 예를 들어:  
+-   배포 에이전트의 **-SubscriptionStreams** 매개 변수에 1보다 큰 값을 사용할 경우 기본 키 열에 대한 업데이트가 성공했는지 확인해야 합니다. 다음은 그 예입니다.  
   
     ```  
     update ... set pk = 2 where pk = 1 -- update 1  
@@ -148,7 +147,7 @@ old-c1, old-c2, old-c3,... old-cn
 > [!NOTE]  
 >   XCALL을 사용하는 경우 **text** 및 **image** 열에 대한 이전 이미지 값은 NULL이 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 프로시저는 `Vendor Table` 예제 데이터베이스의 [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] 용으로 만든 기본 프로시저입니다.  
   
 ```  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5c85e0663b5fa9961793cc30bb4a0986b64077bd
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07674cef07116f47f4538d5913e002f20ca61282
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82715006"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019098"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>대량 복사 서식 파일 만들기(ODBC)
   이 예제에서는 대량 복사 함수를 사용하여 데이터 파일과 서식 파일을 모두 만드는 방법을 보여 줍니다. 이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  

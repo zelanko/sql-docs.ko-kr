@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 15c1b428-ea6d-4672-894c-f0e289e2da3f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 173211cfa6c1e70d979f908c88433857fccd0201
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1c655b5e9a406c3e1881c9dd199a92666377918f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705745"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021122"
 ---
 # <a name="allocating-an-environment-handle"></a>환경 핸들 할당
   애플리케이션에서 ODBC 함수를 호출하려면 먼저 ODBC 환경을 초기화하고 환경 핸들을 할당해야 합니다. 이 핸들은 전역 컨텍스트 핸들이고 ODBC의 다른 핸들에 대한 자리 표시자입니다. 이 작업을 수행 하려면 *HandleType* 매개 변수를 SQL_HANDLE_ENV로 설정 하 고 *InputHandle* 를 SQL_NULL_HANDLE으로 설정 하 여 **SQLAllocHandle** 를 호출 합니다.  

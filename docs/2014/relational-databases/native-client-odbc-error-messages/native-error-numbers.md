@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 77cbc826-f47f-4803-8e7a-223d6df069b1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b9612fbd7dd50ffeec812532e25a63eecca26571
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7232a921027246c3ceb7d0ae1ffd5efbd3672895
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705360"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019987"
 ---
 # <a name="native-error-numbers"></a>원시 오류 번호
   에서 반환 하는 데이터 원본에서 발생 하는 오류의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 드라이버는에 의해 반환 된 원시 오류 번호를 반환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 드라이버에서 검색 된 오류의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 드라이버는 원시 오류 번호 0을 반환 합니다. 네이티브 오류 번호 목록에 대 한 자세한 내용은의 **master** 데이터베이스에서 **sysmessages** 시스템 테이블의 error 열을 참조 하십시오 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

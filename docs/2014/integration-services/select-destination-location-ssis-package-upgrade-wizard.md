@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 89274a71-0ffe-4889-84df-f5a7d78459ef
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d891f456f9c4922b3c680913f767d4e9b14a76a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c397e1e174703b40a7bada8ed6fe42675a0c9c24
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056004"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963864"
 ---
 # <a name="select-destination-location-ssis-package-upgrade-wizard"></a>대상 위치 선택(SSIS 패키지 업그레이드 마법사)
   **대상 위치 선택** 페이지를 사용하여 업그레이드된 패키지를 저장할 대상을 지정할 수 있습니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "66056004"
  **패키지 원본**  
  업그레이드 패키지를 저장할 위치를 지정합니다. 이 옵션에는 다음 표에 나열된 값이 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**파일 시스템**|업그레이드된 패키지를 로컬 컴퓨터의 폴더에 저장함을 나타냅니다.|  
 |**SSIS 패키지 저장소**|업그레이드된 패키지를 Integration Services 패키지 저장소에 저장함을 나타냅니다. 패키지 저장소는 Integration Services 서비스에서 관리하는 파일 시스템 폴더 집합으로 구성됩니다. 자세한 내용은 [패키지 관리&#40;SSIS 서비스&#41;](service/package-management-ssis-service.md)를 참조하세요.<br /><br /> 이 값을 선택하면 해당 **패키지 원본** 동적 옵션이 표시됩니다.|  

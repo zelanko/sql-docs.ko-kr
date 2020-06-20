@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 904a5580-82ba-4a26-b0c5-d1c989975f61
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ee8ee5b2113d6fda6aaac72b407c899a610960bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcb8f4da5f39647665b3f07355ea8eed2506cda5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055848"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963413"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>패키지 보호 수준 설정 또는 변경
   패키지 내용과 패키지에 포함된 중요한 값(예: 암호)에 대한 액세스를 제어하려면 `ProtectionLevel` 속성의 값을 설정합니다. 프로젝트에 포함된 패키지는 프로젝트 생성을 위해 프로젝트와 보호 수준이 동일해야 합니다. 프로젝트에서 `ProtectionLevel` 속성을 변경한 경우 패키지에 대한 프록시 설정을 수동으로 업데이트해야 합니다.  
   
- 패키지 수명 주기의 여러 단계에서 패키지 `ProtectionLevel` 에 적합 한 설정을 확인 하는 방법에 대 한 자세한 내용은 [패키지의 중요 한 데이터에 대 한 Access Control](security/access-control-for-sensitive-data-in-packages.md)를 참조 하세요. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 보안 기능에 대한 개요는 [보안 개요&#40;Integration Services&#41;](security/security-overview-integration-services.md)를 참조하세요.  
+ `ProtectionLevel`패키지 수명 주기의 여러 단계에서 패키지에 적합 한 설정을 확인 하는 방법에 대 한 자세한 내용은 [패키지의 중요 한 데이터에 대 한 Access Control](security/access-control-for-sensitive-data-in-packages.md)를 참조 하세요. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 보안 기능에 대한 개요는 [보안 개요&#40;Integration Services&#41;](security/security-overview-integration-services.md)를 참조하세요.  
   
  이 항목의 절차에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 또는 dtutil 명령 프롬프트 유틸리티를 사용하여 `ProtectionLevel` 속성을 변경하는 방법에 대해 설명합니다.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "66055848"
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>SQL Server Data Tools에서 패키지 보호 수준을 설정하거나 변경하려면  
   
-1.  항목의 `ProtectionLevel` 속성에 사용할 수 있는 값을 검토 하 고 패키지 [의 보호 수준을 설정](security/access-control-for-sensitive-data-in-packages.md)하 고 패키지에 대 한 적절 한 값을 결정 합니다.  
+1.  항목의 속성에 사용할 수 있는 값을 검토 하 `ProtectionLevel` 고 패키지 [의 보호 수준을 설정](security/access-control-for-sensitive-data-in-packages.md)하 고 패키지에 대 한 적절 한 값을 결정 합니다.  
   
 2.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -42,7 +41,7 @@ ms.locfileid: "66055848"
   
 4.  속성 창에 패키지 속성이 표시되지 않으면 디자인 화면을 클릭합니다.  
   
-5.  속성 창의 **보안** 그룹에서 `ProtectionLevel` 속성에 대 한 적절 한 값을 선택 합니다.  
+5.  속성 창의 **보안** 그룹에서 속성에 대 한 적절 한 값을 선택 `ProtectionLevel` 합니다.  
   
      암호가 필요한 보호 수준을 선택한 경우 암호를 **PackagePassword** 속성의 값으로 입력합니다.  
   
@@ -50,9 +49,9 @@ ms.locfileid: "66055848"
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>명령 프롬프트에서 패키지 보호 수준을 설정하거나 변경하려면  
   
-1.  항목의 `ProtectionLevel` 속성에 사용할 수 있는 값을 검토 하 고 패키지 [의 보호 수준을 설정](security/access-control-for-sensitive-data-in-packages.md)하 고 패키지에 대 한 적절 한 값을 결정 합니다.  
+1.  항목의 속성에 사용할 수 있는 값을 검토 하 `ProtectionLevel` 고 패키지 [의 보호 수준을 설정](security/access-control-for-sensitive-data-in-packages.md)하 고 패키지에 대 한 적절 한 값을 결정 합니다.  
   
-2.  `Encrypt` [Dtutil 유틸리티](dtutil-utility.md)항목에서 옵션에 대 한 매핑을 검토 하 고 선택한 `ProtectionLevel` 속성의 값으로 사용할 적절 한 정수를 결정 합니다.  
+2.  `Encrypt` [Dtutil 유틸리티](dtutil-utility.md)항목에서 옵션에 대 한 매핑을 검토 하 고 선택한 속성의 값으로 사용할 적절 한 정수를 결정 합니다 `ProtectionLevel` .  
   
 3.  명령 프롬프트 창을 엽니다.  
   
@@ -73,6 +72,6 @@ ms.locfileid: "66055848"
          배치 파일에서 비슷한 명령을 사용할 경우 배치 파일에 파일 자리 표시자로 "%f" 대신 "%%f"를 입력합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Encrypt](dtutil-utility.md)  
+ [dtutil 유틸리티](dtutil-utility.md)  
   
   

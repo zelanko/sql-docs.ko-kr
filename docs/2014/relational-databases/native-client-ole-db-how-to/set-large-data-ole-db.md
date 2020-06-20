@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9789ddf12272dd6c33c8cfbbb8677ecc3bb4b191
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 777aeb6dea50a3c49f8e68ee17907295f8d886fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82696195"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049652"
 ---
 # <a name="set-large-data-ole-db"></a>대형 데이터 설정(OLE DB)
   이 예제에서는 BLOB 데이터를 설정하고 테이블을 만들어 예제 레코드를 추가한 다음 행 집합에서 해당 레코드를 인출하고 BLOB 필드의 값을 설정하는 방법을 보여 줍니다. 이 예제는 IA64에서 지원되지 않습니다.  
@@ -47,7 +46,7 @@ ms.locfileid: "82696195"
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>설명  
+### <a name="description"></a>Description  
  ole32.lib oleaut32.lib를 사용하여 컴파일하고 다음 C++ 코드 목록을 실행합니다. 이 애플리케이션은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명된 인스턴스에 연결하려면 연결 문자열을 L"(local)"에서 L"(local)\\\name"으로 변경합니다. 여기서 name은 명명된 인스턴스입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
 ### <a name="code"></a>코드  

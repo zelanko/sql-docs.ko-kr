@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 233f5bc9decf5e8246f2aba6836ec5ecb650283b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea79d34a5c0e8f8d51ce38db799f88c8aa981dd0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781845"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003578"
 ---
 # <a name="using-encryption"></a>암호화 사용
   SMO에서 서비스 마스터 키는 <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> 개체로 표시됩니다. <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Server> 속성에서 참조하며, <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> 메서드를 사용하여 다시 생성할 수 있습니다.  

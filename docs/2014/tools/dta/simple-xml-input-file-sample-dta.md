@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b00e4eb-1742-43ec-98d8-d84216b6b840
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 46a51a1ead140209145635e422d3ea1033b117e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00a973732c296cadd3d38a6ac7d9c50b7da3c90b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63283418"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007616"
 ---
 # <a name="simple-xml-input-file-sample-dta"></a>단순 XML 입력 파일 예제(DTA)
   튜닝 작업에 사용할 간단한 이 XML 입력 파일 예제를 복사하여 자주 사용하는 XML 편집기나 텍스트 편집기에 붙여넣습니다. 그런 다음 **Server**, **Database**, **Schema**, **Table**, **Workload**및 **TuningOptions** 요소에 지정된 값을 특정 튜닝 세션에 대한 값으로 바꿉니다. 이러한 요소에 사용할 수 있는 특성 및 자식 요소에 대한 자세한 내용은 [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)를 참조하세요. 다음 예에서는 사용 가능한 특성 및 자식 요소 옵션의 하위 집합만 사용합니다.  

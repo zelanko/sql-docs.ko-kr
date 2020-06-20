@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7bd6af4f85fb8a39f2206bf6c3b9f3099a4af0b2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8b54e8abc817c35b120966b551d8b01a546052a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82708566"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049672"
 ---
 # <a name="getting-large-data"></a>대규모 데이터 가져오기
   일반적으로 소비자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ISequentialStream** 인터페이스 포인터를 통해 참조 되지 않는 데이터를 처리 하는 다른 코드에서 네이티브 클라이언트 OLE DB 공급자 저장소 개체를 만드는 코드를 격리 해야 합니다.  

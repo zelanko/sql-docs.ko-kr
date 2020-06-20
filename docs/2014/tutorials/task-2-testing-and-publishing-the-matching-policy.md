@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e1ffb6d7-fbc5-4695-b538-cc2302d1a17d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a9957625e09bde8bb733eca6e564dfdcfbb0bd98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 434052f26f8cddcb818decdae42e573a10edc678
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484734"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006547"
 ---
 # <a name="task-2-testing-and-publishing-the-matching-policy"></a>태스크 2: 일치 정책 테스트 및 게시
   이 태스크에서는 **Remove Duplicate Suppliers** 일치 정책을 테스트 하 고 게시 합니다.  

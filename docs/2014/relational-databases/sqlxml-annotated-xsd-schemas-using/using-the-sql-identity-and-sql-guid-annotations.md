@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7661dfd0-6573-4692-a8f1-3597adcd33c4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 48e36f7532a3f81df1784b3e2108d3c06ed84987
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e8faa6c9faada65a86f41a552ebe497b40b18663
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703469"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002974"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>sql:identity 및 sql:guid 주석 사용
   `sql:identity` `sql:guid` 의 데이터베이스 열에 매핑되는 노드의 XSD 스키마에서 및 주석을 지정할 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . updategram 형식은 `updg:at-identity` 및 `updg:guid` 특성을 지원하지만 DiffGram 형식은 이러한 특성을 지원하지 않습니다. `updg:at-identity` 특성은 IDENTITY 형식의 열을 업데이트할 때의 동작을 정의합니다. `updg:guid` 특성을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 GUID 값을 가져와서 updategram에 사용할 수 있습니다. 자세한 내용 및 작업 예제는 [XML Updategrams을 사용 하 여 데이터 삽입 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)을 참조 하세요.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 400db44d053caf131ef13947adbd0154875995cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60586083e8bdfe7f0227db605d9f36d50a59ef0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667138"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049359"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>복제 모니터를 사용하여 정보 보기 및 태스크 수행
 복제 모니터는 정보를 보고 다양한 작업을 수행할 수 있는 여러 가지 탭과 옵션을 제공합니다. 이 아티클에서는 복제 모니터를 사용할 때 보고 수행할 수 있는 여러 가지 사항을 설명합니다.
@@ -64,7 +63,7 @@ ms.locfileid: "62667138"
   
 -   **게시** -이 탭에는 선택한 게시자의 모든 게시에 대 한 정보가 표시 됩니다.  
   
--   **구독 조사 목록** -이 탭은 선택한 게시자에서 사용 가능한 모든 게시의 구독에 대 한 정보 (오류, 경고 또는 성능이 가장 낮은 성능)를 표시 하기 위한 것입니다. 이전 버전을 실행 하 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]는 배포자의 경우이 탭이 표시 되지 않습니다.  
+-   **구독 조사 목록** -이 탭은 선택한 게시자에서 사용 가능한 모든 게시의 구독에 대 한 정보 (오류, 경고 또는 성능이 가장 낮은 성능)를 표시 하기 위한 것입니다. 이전 버전을 실행 하는 배포자의 경우이 탭이 표시 되지 않습니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] .  
   
 -   **에이전트** 탭-이 탭은 모든 복제 유형에 서 사용 되는 에이전트 및 작업에 대 한 자세한 정보를 표시 합니다. 이 탭에서는 각 에이전트 및 작업을 시작하고 중지할 수 있습니다.  
   
@@ -106,7 +105,7 @@ ms.locfileid: "62667138"
   
 1.  왼쪽 창에서 게시자 그룹을 확장한 다음 해당 게시자를 클릭합니다.   
 2.  구독에 대한 정보를 보려면 **구독 조사 목록** 탭을 클릭합니다.  
-3.  **\<SubscriptionType> 구독 표시** 드롭다운 목록에서 표시할 구독 유형을 선택합니다. '동기화 중'과 같은 특정 상태에 있는 구독만 보려면 **표시** 드롭다운 목록에서 옵션을 선택합니다.    
+3.  ** \<SubscriptionType> 구독 표시** 드롭다운 목록에서 표시할 구독 유형을 선택 합니다. '동기화 중'과 같은 특정 상태에 있는 구독만 보려면 **표시** 드롭다운 목록에서 옵션을 선택합니다.    
 4.  구독 속성을 보고 수정하려면 해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 이 탭에서 자세한 정보에 액세스 하 고 태스크를 수행할 수도 있습니다. 자세한 내용은 [복제 모니터를 사용 하 여 정보 보기 및 태스크 수행](view-information-and-perform-tasks-replication-monitor.md)을 참조 하세요.  
 
 ## <a name="for-publication-agents"></a>게시 에이전트의 경우

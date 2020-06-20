@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 67084043-6b23-4975-b9db-6e49923d4bab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 68b7f660675c8eca1b090d4ced08e770f1a7d22d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1e7ce6db35817fdfc9bb4169a69e5f959b40f268
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719103"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050149"
 ---
 # <a name="implementing-an-outer-join"></a>외부 조인 구현
   외부 조인은 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 다음 예제에서는 고유하게 컴파일된 저장 프로시저에서 왼쪽 우선 외부 조인의 기능을 구현하는 방법을 보여 줍니다.  

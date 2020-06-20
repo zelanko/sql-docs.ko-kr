@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0a9f440f32b0bbcc314893b8abe6a183ac8b0738
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b93a38614800e1298894caa9c6d97c3f9353ac73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704426"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017358"
 ---
 # <a name="installing-sql-server-native-client"></a>SQL Server Native Client 설치
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0은 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]을(를) 설치할 때 설치됩니다. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client는 없습니다. 자세한 내용은 [SQL Server Native Client의 새로운 기능](../sql-server-native-client.md)을 참조 하세요. sqlncli.msi는 SQL Server 2012 기능 팩 웹 페이지에서도 제공됩니다. 최신 버전의 SQL Server Native Client을 다운로드 하려면 [Microsoft?? SQL Server?? 2012 SP2 기능 팩](https://www.microsoft.com/download/details.aspx?id=43339) SQL Server 2012 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client도 컴퓨터에 설치되어 있으면 이전 버전과 함께 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0이 설치됩니다.  

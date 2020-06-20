@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f47529726445cf52d280df78a6a96f18889fcd2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fb5c40db46772cabcb5d1df19e03aced749e1c6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63272821"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997850"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>트랜잭션 복제에서 저장 프로시저 실행 게시
   게시자에서 실행되고 게시된 테이블에 영향을 주는 하나 이상의 저장 프로시저가 있는 경우 이러한 저장 프로시저를 저장 프로시저 실행 아티클로 게시에 포함해 보십시오. 프로시저 정의(CREATE PROCEDURE 문)는 구독이 초기화될 때 구독자로 복제되고 게시자에서 프로시저가 실행되면 복제가 구독자에서 해당하는 프로시저를 실행합니다. 이렇게 하면 프로시저 실행만 복제하고 행별 변경 내용은 복제하지 않으므로 대용량 일괄 처리 작업이 수행되는 경우 성능을 크게 향상시킬 수 있습니다. 예를 들어 게시 데이터베이스에서 다음 저장 프로시저를 생성한다고 가정합니다.  
@@ -52,7 +51,7 @@ EXEC give_raise
   
 -   SQL Server Management Studio: [저장 프로시저 실행을 트랜잭션 게시로 게시&#40;SQL Server Management Studio&#41;](../publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   복제 Transact-sql 프로그래밍: [transact-sql&#41;&#40;sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 실행 하 고 매개 변수에 **@type**' serializable proc exec ' (권장) 또는 ' proc exec ' 값을 지정 합니다. 아티클을 정의하는 방법은 [아티클 정의](../publish/define-an-article.md)를 참조하세요.  
+-   복제 Transact-sql 프로그래밍: [transact-sql&#41;&#40;sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 실행 하 고 매개 변수에 ' serializable proc exec ' (권장) 또는 ' proc exec ' 값을 지정 **@type** 합니다. 아티클을 정의하는 방법은 [아티클 정의](../publish/define-an-article.md)를 참조하세요.  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>구독자에서 프로시저 수정  
  기본적으로 게시자의 저장 프로시저 정의는 각 구독자로 전파됩니다. 그러나 구독자에서 저장 프로시저를 수정할 수도 있습니다. 이는 게시자와 구독자에서 다른 논리를 실행하려고 할 때 유용합니다. 예를 들어 구독자의 저장 프로시저 **sp_big_delete**에는 두 가지 기능이 있습니다. 복제된 테이블 **big_table1** 에서 1,000,000개의 행을 삭제하고 복제되지 않은 테이블 **big_table2**를 업데이트합니다. 네트워크 리소스에 대한 수요를 줄이려면 **sp_big_delete**를 게시하여 100만 개의 행 삭제를 저장 프로시저로 전파해야 합니다. 구독자에서 100만 개의 행만 삭제하고 **big_table2** 에 대한 후속 업데이트를 수행하지 않도록 **sp_big_delete**를 정의할 수 있습니다.  

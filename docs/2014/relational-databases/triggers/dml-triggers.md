@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: df06fb9ccbf4f3683877605e321207f0ca6d997e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7fb2e5e85c9479726fe38e02721186a0723a2ec8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196510"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014599"
 ---
 # <a name="dml-triggers"></a>DML 트리거
   DML 트리거는 트리거에 정의된 테이블 또는 뷰에 영향을 주는 DML(데이터 조작 언어) 이벤트가 실행될 때 자동으로 적용되는 특별한 유형의 저장 프로시저입니다. DML 이벤트에는 INSERT, UPDATE 또는 DELETE 문이 포함됩니다. DML 트리거를 사용하여 비즈니스 규칙과 데이터 무결성을 적용하고, 다른 테이블을 쿼리하고, 복잡한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 포함할 수 있습니다. 트리거 및 트리거를 시작하는 문은 트리거 내에서 롤백할 수 있는 단일 트랜잭션으로 처리됩니다. 디스크 공간 부족 등의 심각한 오류가 발견되면 전체 트랜잭션이 자동으로 롤백됩니다.  
@@ -61,8 +60,8 @@ ms.locfileid: "68196510"
 |연계 참조|적용되는 제한 없음|연계 참조 무결성 제약 조건이 적용되는 테이블에는 INSTEAD OF UPDATE 트리거와 DELETE 트리거가 허용되지 않습니다.|  
 |실행|이후:<br /><br /> 제약 조건 처리<br />선언적 참조 동작<br />**inserted** 및 **deleted** 테이블 만들기<br />트리거 동작|이전: 제약 조건 처리<br /><br /> 대신: 트리거 동작<br /><br /> 이후:  **inserted** 및 **deleted** 테이블 만들기|  
 |실행 순서|첫 실행과 마지막 실행을 지정할 수 있음|해당 없음|  
-|`varchar(max)``nvarchar(max)` **inserted** 및 **deleted** 테이블의, 및 `varbinary(max)` 열 참조|허용됨|허용됨|  
-|`text``ntext` **inserted** 및 **deleted** 테이블의, 및 `image` 열 참조|허용되지 않음|허용됨|  
+|`varchar(max)``nvarchar(max)` `varbinary(max)` **inserted** 및 **deleted** 테이블의, 및 열 참조|허용됨|허용됨|  
+|`text``ntext` `image` **inserted** 및 **deleted** 테이블의, 및 열 참조|허용되지 않음|허용됨|  
   
  CLR 트리거  
  CLR 트리거는 AFTER 또는 INSTEAD OF 트리거일 수 있습니다. 또한 CLR 트리거는 DDL 트리거일 수 있습니다. CLR 트리거는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 실행하는 대신 .NET Framework에서 생성되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업로드되는 어셈블리 멤버인 관리 코드로 작성된 하나 이상의 메서드를 실행합니다.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2fcff4e55ca4a2935f90b360965a1bc5fefe5656
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd38540533e3e663fa23eee2c651f0beb9463546
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63261797"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005076"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication-sql-server-2005-and-later"></a>게시자 정보, 구독 조사 목록(병합 게시, SQL Server 2005 이상)
   **구독 조사 목록** 탭은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전을 실행하는 배포자에 대해 사용할 수 있으며 선택한 게시자에서 사용 가능한 모든 게시의 구독 정보를 표시합니다. 구독 목록을 필터링하여 오류, 경고 및 성능이 저조한 구독을 볼 수 있습니다. 이 탭에서는 관리자가 게시자에서의 모든 복제 작업을 모니터링할 수 있는 단일 위치를 제공합니다. 복제 모니터는 선택한 복제 유형과 **표시** 드롭다운 목록 상자에서 선택한 옵션에 기반하여 주의가 필요한 모든 구독을 표시합니다. 이 탭에 표시되는 항목은 현재 상태와 성능에 기반하기 때문에 현재 **표시** 목록 상자의 옵션과 일치하는 구독만 이 페이지에 표시됩니다.  
@@ -85,7 +84,7 @@ ms.locfileid: "63261797"
   
  성능 등급은 다음 값 중 하나입니다.  
   
--   최고  
+-   우수  
   
 -   좋음  
   
@@ -101,7 +100,7 @@ ms.locfileid: "63261797"
  **마지막 동기화**  
  병합 에이전트가 마지막으로 실행된 시간입니다. 마지막 동기화 중에 변경 내용이 처리될 수도 있고 처리되지 않을 수도 있습니다. 동기화가 진행 중이면 백분율로 진행 상황을 표시합니다.  
   
- **작업**  
+ **기간**  
  마지막 동기화 중에 병합 에이전트가 실행된 시간입니다. 병합 에이전트가 현재 동기화 중이면 이 시간은 경과된 시간을 나타내고 병합 에이전트가 이전에 동기화된 경우에는 총 시간을 나타냅니다.  
   
  **연결**  

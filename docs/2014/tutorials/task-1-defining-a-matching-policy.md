@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bcc2ddcb8c8fbf33c51fb82d1b1c2fd8308bd28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481310"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064843"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>태스크 1: 일치 정책 정의
   이 작업에서는 규칙이 포함된 일치 정책을 만듭니다. 규칙에는 하나의 필수 구성 요소 **id**가 있습니다. 즉, 공급자 id는 규칙의 다른 도메인을 사용 하기 전에 일치 해야 합니다. 규칙은 **유사성** 값이 **70%** 로 설정 된 **공급자 이름** 및 **유사성** 값이 **30%** 로 설정 된 **Contact Email** 이라는 두 개의 다른 도메인을 사용 합니다.  
@@ -26,7 +25,7 @@ ms.locfileid: "65481310"
   
 2.  **맵** 페이지에서 **데이터 원본**으로 **Excel 파일** 을 선택 합니다.  
   
-3.  **찾아보기**를 클릭 하 고 필터가 **Excel 통합 문서로**설정 되었는지 확인 한 후 정리 작업을 수행한 후 내보낸 **공급자 목록 .xls** 파일을 선택 합니다.  
+3.  **찾아보기**를 클릭 하 고, 필터가 **Excel 통합 문서로**설정 되었는지 확인 하 고, 정리 작업을 수행한 후 내보낸 **공급자 List.xls파일 정리** 를 선택 합니다.  
   
     > [!NOTE]  
     >  이 작업은 주로 일치 정책을 정의하기 위한 것이기 때문에 이 작업을 마친 후에는 결과를 내보낼 수 없습니다. 다음 단원에서는 일치 작업에 대한 데이터 품질 프로젝트를 만들어서 실행하고 이 일치 정책을 사용해서 공급자 목록에서 중복된 항목을 제거합니다.  

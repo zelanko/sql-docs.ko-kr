@@ -13,23 +13,22 @@ helpviewer_keywords:
 ms.assetid: cb2226a0-3037-4fdf-966f-81eabc0da9cf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f753aaddbd2647b1d8874b0d34db415f75aa99b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b21476bb6b696b51cc1932c171bdd8dfa1d0e6d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055034"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972840"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>오류 메시지 전송 태스크 편집기(메시지 페이지)
   **오류 메시지 전송 태스크 편집기** 대화 상자의 **메시지** 페이지를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용자 정의 오류 메시지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 한 인스턴스에서 다른 인스턴스로 복사하기 위한 속성을 지정할 수 있습니다. 이 태스크에 대한 자세한 내용은 [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md)를 참조하십시오.  
   
 ## <a name="options"></a>옵션  
  **SourceConnection**  
- 목록에서 SMO 연결 관리자를 선택 하거나 ** \<새 연결 ... >** 을 클릭 하 여 원본 서버에 대 한 새 연결을 만듭니다.  
+ 목록에서 SMO 연결 관리자를 선택 하거나를 클릭 **\<New connection...>** 하 여 원본 서버에 대 한 새 연결을 만듭니다.  
   
  **DestinationConnection**  
- 목록에서 SMO 연결 관리자를 선택 하거나 ** \<새 연결 ... >** 을 클릭 하 여 대상 서버에 대 한 새 연결을 만듭니다.  
+ 목록에서 SMO 연결 관리자를 선택 하거나를 클릭 **\<New connection...>** 하 여 대상 서버에 대 한 새 연결을 만듭니다.  
   
  **IfObjectExists**  
  이름이 동일한 오류 메시지가 이미 대상 서버에 있는 경우 기존 사용자 정의 오류 메시지를 덮어쓸지, 기존 메시지를 건너뛸지, 아니면 태스크가 실패하도록 할지를 선택합니다.  
@@ -39,10 +38,10 @@ ms.locfileid: "66055034"
   
  이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**True**|모든 사용자 정의 메시지를 복사합니다.|  
-|**허위**|지정한 사용자 정의 메시지만 복사합니다.|  
+|**False**|지정한 사용자 정의 메시지만 복사합니다.|  
   
  **ErrorMessagesList**  
  복사할 오류 메시지를 선택 하려면 찾아보기 단추 **(...)** 를 클릭 합니다.  

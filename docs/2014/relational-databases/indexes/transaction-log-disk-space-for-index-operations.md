@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 986f464752f631d55b994469b733a3374a1926a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c34c9ff7a9494496d6c60d5920184c0ce86131d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161827"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025073"
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>인덱스 작업에 필요한 트랜잭션 로그 디스크 공간
   대량 인덱스 작업은 트랜잭션 로그를 빠르게 채울 수 있는 대량의 데이터 로드를 생성할 수 있습니다. 트랜잭션 로그는 인덱스 작업의 롤백을 보장하기 위해 인덱스 작업이 완료된 이후에만 잘릴 수 있지만 트랜잭션 로그 백업은 인덱스 작업 중에도 수행할 수 있습니다. 따라서 인덱스 작업 중에는 인덱스 작업 트랜잭션 및 모든 동시 사용자 트랜잭션을 모두 저장할 수 있는 충분한 트랜잭션 로그 공간이 필요합니다. 이것은 오프라인 인덱스 작업과 온라인 인덱스 작업 모두에 해당합니다. 오프라인 인덱스 작업 중에는 기본 테이블에 액세스할 수 없기 때문에 사용자 트랜잭션이 거의 없고 로그가 빠르게 증가하지 않을 수 있습니다. 온라인 인덱스 작업에서는 동시 사용자 작업이 제한되지 않습니다. 따라서 대량의 온라인 인덱스 작업과 대량의 동시 사용자 트랜잭션이 결합하는 경우에는 자를 수 없을 만큼 지속적으로 트랜잭션 로그가 증가할 수 있습니다.  

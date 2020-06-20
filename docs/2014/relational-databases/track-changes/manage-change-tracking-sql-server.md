@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c9d0deb3567daa64afb46c96a4e93c9da9c0972a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36409f2ce256325da1c9849e5bec7e7ce114cf25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62670844"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014706"
 ---
 # <a name="manage-change-tracking-sql-server"></a>변경 내용 추적 관리(SQL Server)
   이 항목에서는 변경 내용 추적을 관리하는 방법에 대해 설명합니다. 또한 보안을 구성하는 방법과 변경 내용 추적을 사용할 때 스토리지 및 성능에 미치는 영향을 확인하는 방법에 대해서도 설명합니다.  

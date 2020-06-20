@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3bbd3ac1bf97530d64760d1434b9e7e8f6a81d34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40c16c0afd90bd7042f387fd40f48dbb0237027e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482805"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961013"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>데이터 로드(Excel용 MDS 추가 기능)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]에서 사용 하려면 먼저 MDS 저장소에서 활성 Excel 워크시트로 데이터를 로드 해야 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]합니다. 데이터 사용을 마쳤으면 다른 사용자가 공유할 수 있도록 다시 MDS 저장소에 게시합니다.  
+  에서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 사용 하려면 먼저 MDS 저장소에서 활성 Excel 워크시트로 데이터를 로드 해야 합니다. 데이터 사용을 마쳤으면 다른 사용자가 공유할 수 있도록 다시 MDS 저장소에 게시합니다.  
   
  로드할 수 있는 데이터는 액세스할 수 있는 권한이 있는 데이터로 제한됩니다. 데이터 액세스 권한은 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션에 설정되거나 프로그래밍 방식으로 설정됩니다.  
   

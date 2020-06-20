@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 56d4f7d922c0c229b1e2126f93611670adf7c702
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2736d5990de4453a063a688a988bad0f3a74d962
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63135614"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068267"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>기존 추적 수정(Transact-SQL)
   이 항목에서는 저장 프로시저를 사용하여 기존 추적을 수정하는 방법에 대해 설명합니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "63135614"
   
     -   **@on**SIGN-ON  
   
-     매개 변수를 수정할 **@on** 때 **@columnid** 매개 변수와의 상호 작용을 염두에 두어야 합니다.  
+     매개 변수를 수정할 때 **@on** 매개 변수와의 상호 작용을 염두에 두어야 합니다 **@columnid** .  
   
     |켜기|열 ID|결과|  
     |--------|---------------|------------|  

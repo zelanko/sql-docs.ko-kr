@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 500ee6b3-2154-45d2-a3cf-8760166d9413
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 524400e9c9420fb54447220215d4660874ec6d69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66898aa056800c0a7573b5afa73762785706ff7a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091086"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044617"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>GEOMETRY, GEOGRAPHY 및 HIERARCHYID의 클라이언트 쪽 사용에 대한 경고
   공간 데이터 형식을 포함하는 **Microsoft.SqlServer.Types.dll**어셈블리가 버전 10.0에서 버전 11.0으로 업그레이드되었습니다. 이 어셈블리를 참조하는 사용자 지정 애플리케이션에서는 특정 조건에 해당될 때 오류가 발생할 수 있습니다.  
@@ -26,7 +25,7 @@ ms.locfileid: "66091086"
 ## <a name="description"></a>Description  
  공간 데이터 형식을 포함하는 **Microsoft.SqlServer.Types.dll**어셈블리가 버전 10.0에서 버전 11.0으로 업그레이드되었습니다. 이 어셈블리를 참조하는 사용자 지정 애플리케이션에서는 다음 조건에 해당될 때 오류가 발생할 수 있습니다.  
   
--   가 설치 된 컴퓨터에가 설치 되어 있는 컴퓨터에서 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 사용자 지정 응용 프로그램을 이동 하는 경우 SqlTypes 어셈블리의 참조 된 버전 10.0이 없기 때문에 응용 프로그램이 실패 합니다. **SqlTypes** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`라는 오류 메시지가 나타날 수 있습니다.  
+-   가 설치 된 컴퓨터에가 설치 되어 있는 컴퓨터에서 사용자 지정 응용 프로그램을 이동 하는 경우 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] **SqlTypes** 어셈블리의 참조 된 버전 10.0이 없기 때문에 응용 프로그램이 실패 합니다. `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`라는 오류 메시지가 나타날 수 있습니다.  
   
 -   **SqlTypes** 어셈블리 버전 11.0을 참조 하 고 버전 10.0도 설치 되 면 다음 오류 메시지가 표시 될 수 있습니다.`"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
   

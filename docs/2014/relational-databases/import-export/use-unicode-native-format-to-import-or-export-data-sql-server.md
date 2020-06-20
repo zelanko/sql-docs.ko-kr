@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b1d115dacc53cb074080931c2ebad88dcaf1c68d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: beae2f836de16dedf3be6d8c196910c53be02266
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011571"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026288"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>데이터를 가져오거나 내보내기 위해 유니코드 네이티브 형식 사용(SQL Server)
   유니코드 네이티브 형식은 한 곳의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에서 다른 설치로 정보를 복사해야 할 때 유용합니다. 비문자 형식의 데이터에 네이티브 형식을 사용하면 문자 형식과 다른 데이터 형식 간의 불필요한 변환을 막고 시간을 절약할 수 있습니다. 모든 문자 형식의 데이터에 유니코드 문자 형식을 사용하면 다른 코드 페이지를 사용하는 서버 간에 데이터를 대량 로드할 때 확장 문자의 손실을 방지할 수 있습니다. 유니코드 네이티브 형식의 데이터 파일은 어떤 대량 가져오기 방법으로도 읽을 수 있습니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "66011571"
   
 |명령|옵션|설명|  
 |-------------|------------|-----------------|  
-|**bcp**|**-N**|**Bcp** 유틸리티는 모든 문자가 아닌 데이터에 네이티브 (데이터베이스) 데이터 형식을 사용 하 고 모든 문자 (`char`, `nchar` `varchar` `nvarchar` `text`,,, 및 `ntext`) 데이터에 유니코드 문자 데이터 형식을 사용 하는 유니코드 네이티브 형식을 사용 합니다.|  
+|**bcp**|**-N**|**Bcp** 유틸리티는 모든 문자가 아닌 데이터에 네이티브 (데이터베이스) 데이터 형식을 사용 하 고 모든 문자 (,,,, `char` `nchar` `varchar` `nvarchar` `text` 및 `ntext` ) 데이터에 유니코드 문자 데이터 형식을 사용 하는 유니코드 네이티브 형식을 사용 합니다.|  
 |BULK INSERT|DATAFILETYPE **= '** widenative **'**|데이터를 대량으로 가져올 때 유니코드 네이티브 형식을 사용합니다.|  
   
  자세한 내용은 [bcp 유틸리티](../../tools/bcp-utility.md), [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 또는 [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)를 참조하세요.  
@@ -42,7 +41,7 @@ ms.locfileid: "66011571"
 > [!NOTE]  
 >  서식 파일에서 필드 단위로 서식을 지정할 수도 있습니다. 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)를 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 **bcp** 를 사용하여 네이티브 데이터의 대량 내보내기를 수행하고 내보낸 데이터에 BULK INSERT를 사용하여 대량 가져오기를 수행하는 방법을 보여 줍니다.  
   
 ### <a name="sample-table"></a>예제 테이블  

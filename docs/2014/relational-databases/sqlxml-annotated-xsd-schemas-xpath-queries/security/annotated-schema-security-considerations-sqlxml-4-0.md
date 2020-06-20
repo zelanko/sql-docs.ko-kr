@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7d7e44dc-b6d3-4e0f-95c7-8f99930c94f2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a04bbba08d3609fd9a4fccb96e515c23db62f6fb
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 098f554410a846ed0223d17117b51025dfcf7897
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717695"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002760"
 ---
 # <a name="annotated-schema-security-considerations-sqlxml-40"></a>주석 스키마 보안 고려 사항(SQLXML 4.0)
   다음은 주석 스키마를 사용하기 위한 보안 지침입니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "82717695"
   
 -   주석을 사용하여 명시적 매핑을 지정하면 테이블 이름 및 열 이름과 같은 데이터베이스 정보가 공개됩니다. 따라서 이러한 스키마가 공개되지 않도록 해야 합니다.  
   
--   재귀(`max-depth` 주석을 더 높은 값으로 설정하여 지정)를 사용하여 매핑 스키마에 대해 지정한 특정 쿼리는 실행하는 데 오랜 시간이 걸릴 수 있습니다. 선택적으로 명령 제한 시간 속성을 설정 하 여 제한 시간을 지정할 수 있습니다 (초 단위). 예:  
+-   재귀(`max-depth` 주석을 더 높은 값으로 설정하여 지정)를 사용하여 매핑 스키마에 대해 지정한 특정 쿼리는 실행하는 데 오랜 시간이 걸릴 수 있습니다. 선택적으로 명령 제한 시간 속성을 설정 하 여 제한 시간을 지정할 수 있습니다 (초 단위). 다음은 그 예입니다.  
   
     ```  
     cn.Open "Provider=SQLOLEDB;Server=localhost;Database=tempdb;Integrated Security=SSPI;Command Properties='Command Time Out=50';"  

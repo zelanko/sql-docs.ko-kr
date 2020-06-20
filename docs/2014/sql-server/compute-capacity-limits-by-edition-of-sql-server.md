@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a32b00ec6ad34095a17816406eb5516207fafa1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714768"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013021"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server의 버전별 컴퓨팅 용량 제한
   이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 의 서로 다른 버전별 컴퓨팅 용량 제한과 이들 버전이 하이퍼 스레드 프로세서가 있는 물리적 환경 및 가상화된 환경에서 서로 어떻게 다른지에 대해 설명합니다.  
@@ -83,7 +82,7 @@ ms.locfileid: "62714768"
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|단일 인스턴스에서 사용되는 최대 컴퓨팅 용량([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|단일 인스턴스에서 사용되는 최대 컴퓨팅 용량(AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition: 코어 기반 라이선스<sup>1</sup>|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|  
-|개발자|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|  
+|Developer|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|  
 |평가|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|  
 |비즈니스 인텔리전스|소켓 4개 또는 코어 16개 미만으로 제한됨|운영 체제가 지원하는 최대 크기|  
 |Standard|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 4개 또는 코어 16개 미만으로 제한됨|  
@@ -92,7 +91,7 @@ ms.locfileid: "62714768"
 |Express with Tools|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|  
 |Express with Advanced Services|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|  
   
- <sup>1</sup> SERVER + CAL (클라이언트 액세스 라이선스) 기반 라이선스가 포함 된 Enterprise Edition (새 계약에 사용할 수 없음)은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스당 최대 20 개의 코어로 제한 됩니다. 코어 기반 서버 라이선스 모델에서는 제한이 없습니다.  
+ <sup>1</sup> SERVER + CAL (클라이언트 액세스 라이선스) 기반 라이선스가 포함 된 Enterprise Edition (새 계약에 사용할 수 없음)은 인스턴스당 최대 20 개의 코어로 제한 됩니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . 코어 기반 서버 라이선스 모델에서는 제한이 없습니다.  
   
  게스트 애플리케이션에서는 프로세서 아키텍처가 보이지 않으므로 가상화된 환경에서 컴퓨팅 용량 제한은 코어가 아닌 논리적 프로세서 수를 기준으로 합니다.  예를 들어, 쿼드 코어 프로세서 및 코어당 하이퍼 스레드 두 개를 사용할 수 있는 기능이 장착된 소켓 4개짜리 서버에는 하이퍼 스레딩을 사용하는 논리적 프로세서가 32개 포함되어 있지만 하이퍼 스레딩을 사용하지 않는 논리적 프로세서는 16개 밖에 없습니다. 이러한 논리적 프로세서는 호스트 서버에서 실제 프로세서의 실행 스레드로 매핑된 해당 논리적 프로세서에서의 가상 컴퓨터 계산 부하를 사용 하는 서버의 가상 컴퓨터에 매핑될 수 있습니다.  
   

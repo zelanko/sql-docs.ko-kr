@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c9dbc755d5ee95b74991b249bc037fb6fc5a9f11
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c58cea8755a7f1d859c1730d79567797547ccaf9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806705"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024137"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>유지 관리 계획(하위 계획 속성)
   **유지 관리 계획(하위 계획 속성)** 대화 상자를 사용하여 유지 관리 계획에 대한 하위 계획의 이름, 설명 및 일정을 지정할 수 있습니다. 유지 관리 계획 **디자인** 탭의 **하위 계획 속성** 을 클릭하거나 디자이너 표에서 하위 계획을 두 번 클릭하여 이 대화 상자를 표시할 수 있습니다.  

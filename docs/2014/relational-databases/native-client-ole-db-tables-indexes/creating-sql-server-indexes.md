@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6239d440-2818-4b98-bb79-732dced41952
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4d810978a7326b1be4356d60c495b24806d95183
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3693355eec7a290c03658c10db500161aa52062d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704558"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017912"
 ---
 # <a name="creating-sql-server-indexes"></a>SQL Server 인덱스 만들기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 소비자가 테이블에 새 인덱스를 정의할 수 있도록 **Iindexdefinition:: createindex** 함수를 제공 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  

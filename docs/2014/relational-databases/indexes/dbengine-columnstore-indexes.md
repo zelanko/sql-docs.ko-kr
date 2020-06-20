@@ -8,13 +8,12 @@ ms.technology: table-view-index
 ms.topic: conceptual
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 39bf7c9bb07fc048e2bf40a0e6ac93b02e9dfe64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df38a91e8fbd97cc6ece532a351ed37732a58c75
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161816"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025482"
 ---
 # <a name="columnstore-indexes"></a>Columnstore 인덱스 
 [비클러스터형 Columnstore 인덱스 사용](../../database-engine/using-nonclustered-columnstore-indexes.md) 및 [클러스터형 columnstore 인덱스 사용](../../database-engine/using-clustered-columnstore-indexes.md)을 참조 하세요.
