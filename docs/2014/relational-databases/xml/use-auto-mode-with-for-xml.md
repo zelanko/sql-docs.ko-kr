@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8b1acd069ebbb64c090cd167b2f6feb2903af3b6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 232cc046667c6d31cb9657a7abdc862204507d23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702426"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059405"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>FOR XML에서 AUTO 모드 사용
   [FOR XML&#40;SQL Server&#41;](for-xml-sql-server.md)에 설명된 대로 AUTO 모드는 쿼리 결과를 중첩 XML 요소로 반환합니다. 이 모드에서는 쿼리 결과로 생성되는 XML의 모양을 상세하게 조정할 수 없습니다. AUTO 모드 쿼리는 간단한 계층을 생성하려는 경우에 유용합니다. 그러나 [FOR XML에서 EXPLICIT 모드 사용](use-explicit-mode-with-for-xml.md) 및 [FOR XML에서 PATH 모드 사용](use-path-mode-with-for-xml.md) 에서는 쿼리 결과로 생성되는 XML의 모양을 좀 더 상세하게 조정할 수 있습니다.  
@@ -121,7 +120,7 @@ FOR XML AUTO, ELEMENTS
 ...  
 ```  
   
- 이 쿼리에서 CustomerID 값은 CustomerID가 테이블의 기본 키이기 때문에 \<Cust> 요소를 만들 때 한 행씩 순서대로 비교됩니다. CustomerID가 테이블의 기본 키로 식별되지 않는 경우 모든 열 값(이 쿼리의 CustomerType인 CustomerID)이 한 행씩 순서대로 비교됩니다. 값이 다르면 새로운 \<Cust> 요소가 XML에 추가됩니다.  
+ \<Cust>Customerid가 테이블의 기본 키 이기 때문에이 쿼리에서 customerid 값은 요소를 만들 때 한 행에서 다음 행으로 비교 됩니다. CustomerID가 테이블의 기본 키로 식별되지 않는 경우 모든 열 값(이 쿼리의 CustomerType인 CustomerID)이 한 행씩 순서대로 비교됩니다. 값이 다르면 새 \<Cust> 요소가 XML에 추가 됩니다.  
   
  이러한 열 값을 비교할 때 비교되는 임의의 열 유형이 **text**, **ntext**, **image**또는 **xml**인 경우 값이 같더라도 FOR XML은 값이 다르고 비교되지 않는 것으로 가정합니다. 이러한 이유는 큰 개체에 대한 비교가 지원되지 않기 때문입니다. 선택한 각 행에 대한 결과에 요소가 추가됩니다. **(n)varchar(max)** 및 **varbinary(max)** 의 열이 비교되는지 확인합니다.  
   

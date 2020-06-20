@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bc3dbe16-f6c1-4f07-8d88-2b8e86302c7e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bad387683b2a093f680c00885a50b043e8a890cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a507ba84708a1444c52f49421eda1009ede9adb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094892"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059287"
 ---
 # <a name="how-to-filter-reports"></a>방법: 보고서 필터링
   이 항목에서는 업그레이드 관리자 보고서 뷰어를 사용하여 보고서에 필터를 적용하는 방법에 대해 설명합니다.  

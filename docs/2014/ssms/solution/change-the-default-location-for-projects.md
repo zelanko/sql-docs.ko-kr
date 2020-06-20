@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3b8af28d-3095-40aa-b7db-636f2852d483
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a772a80e6cb0e51682880c0579ec07914948372b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 330dc8ae1746a4fe7be8291cf1032a12bc62e948
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62956137"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066356"
 ---
 # <a name="change-the-default-location-for-projects"></a>프로젝트 기본 위치 변경
   파일 및 프로젝트의 기본 위치는 내 문서 폴더의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 프로젝트 폴더입니다.  

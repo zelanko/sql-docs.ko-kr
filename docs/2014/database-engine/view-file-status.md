@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 96601fc3-64b8-4dd8-9b73-cc6710293eb9
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3034ec95573d2f3c43ab28f2ad31e5ba41661cfc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7082304781a3feab0939b685b16321651b6fda91
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773369"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927367"
 ---
 # <a name="view-file-status"></a>파일 상태 보기
   소스 제어는 모든 원본 제어 항목에 대한 자세한 상태 정보를 유지 관리합니다. 이 정보를 사용하여 파일의 현재 상태를 식별하고 해당 항목에 대한 상태 보고서를 만들 수 있습니다.  

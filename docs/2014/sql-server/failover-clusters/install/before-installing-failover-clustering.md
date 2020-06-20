@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc959fa8406453230ee133bf6183fa3dc1ba51f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b74de0c0ac044f3bdcadf3381976dcecc777e36c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63190347"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037191"
 ---
 # <a name="before-installing-failover-clustering"></a>장애 조치(Failover) 클러스터링을 설치하기 전에
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하기 전에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 실행할 하드웨어와 운영 체제를 선택해야 합니다. 또한 WSFC(Windows Server 장애 조치(Failover) 클러스터링)를 구성하고 네트워크, 보안 및 기타 장애 조치(Failover) 클러스터에서 실행할 소프트웨어에 대한 고려 사항을 검토해야 합니다.  
@@ -47,7 +46,7 @@ ms.locfileid: "63190347"
   
     -   .NET Framework 3.5 SP1은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램으로 더 이상 설치되지 않지만 이전 버전의 Windows 운영 체제에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치할 경우 필요할 수 있습니다. 자세한 내용은 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [릴리스 정보](https://go.microsoft.com/fwlink/?LinkId=296445)를 참조 하세요.  
   
-    -   ** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 업데이트 패키지:** 설치 하는 동안 설치 .NET Framework 4로 인해 컴퓨터를 다시 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 시작 하지 않도록 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 하려면 설치 프로그램에서 컴퓨터에 업데이트를 설치 해야 합니다.  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 를 Windows 7 SP1 또는 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2에 설치하는 경우 이 업데이트가 포함됩니다. 이전 버전의 Windows 운영 체제에 설치하는 경우 [Windows Vista 및 Windows Server 2008의 .NET Framework 4.0용 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)에서 다운로드하십시오.  
+    -   ** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 업데이트 패키지:** 설치 하는 동안 설치 .NET Framework 4로 인해 컴퓨터를 다시 시작 하지 않도록 하려면 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 설치 프로그램에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 컴퓨터에 업데이트를 설치 해야 합니다.  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 를 Windows 7 SP1 또는 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2에 설치하는 경우 이 업데이트가 포함됩니다. 이전 버전의 Windows 운영 체제에 설치하는 경우 [Windows Vista 및 Windows Server 2008의 .NET Framework 4.0용 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)에서 다운로드하십시오.  
   
     -   .NET Framework 4: 설치 프로그램에서는 클러스터링된 운영 체제에 .NET Framework 4를 설치합니다. 설치 시간을 단축하려면 설치 프로그램을 실행하기 전에 .NET Framework 4를 설치하는 것이 좋습니다.  
   
@@ -199,7 +198,7 @@ ms.locfileid: "63190347"
   
  <sup>1</sup> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클러스터는 WOW 모드에서 지원 되지 않습니다. 또한 WOW에 원래 설치했던 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에서 업그레이드하는 것도 지원되지 않습니다. 이 경우 업그레이드할 수 있는 유일한 방법은 새 버전을 추가로 설치한 후 마이그레이션하는 것 뿐입니다.  
   
- <sup>2</sup> 다중 서브넷 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치 (failover) 클러스터링에 지원 됩니다.  
+ <sup>2</sup> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치 (failover) 클러스터링에 지원 됩니다.  
   
   
   
@@ -220,7 +219,7 @@ ms.locfileid: "63190347"
   
 1.  IP 주소 리소스 종속성은 다중 서브넷 구성에서 OR로 설정됩니다. 자세한 내용은 [새 SQL Server 장애 조치 (Failover) 클러스터 만들기 &#40;설치](create-a-new-sql-server-failover-cluster-setup.md) 를 참조 하세요&#41;  
   
-2.  Mixed AND-OR IP 주소 종속성은 지원되지 않습니다. 예: \<IP1> AND \<IP2> OR \<IP3>은 되지 않습니다.  
+2.  Mixed AND-OR IP 주소 종속성은 지원되지 않습니다. 예를 들어 \<IP1> 및 \<IP2> 또는 \<IP3> 는 지원 되지 않습니다.  
   
 3.  서브넷당 둘 이상의 IP 주소는 지원되지 않습니다.  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 010a4cab-d878-4889-8ac8-7d91db6345d6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0fc22cd7489294e8623596c1ce1e4f38c90706aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 324bee017a307b381fa44ddc4e000f4205c26644
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245723"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067480"
 ---
 # <a name="target-servers-target-server-status-tab"></a>대상 서버(대상 서버 상태 탭)
   이 페이지를 사용하여 이 마스터 서버와 관련된 대상 서버의 상태를 확인할 수 있습니다.  

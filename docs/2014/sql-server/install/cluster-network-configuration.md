@@ -12,19 +12,18 @@ f1_keywords:
 ms.assetid: 579482ef-a023-45b2-9176-b4a4188adf9d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48dca8e9ce522f2520521441b2e7eea349ff099b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04b0d412cd577fb0869f2188d99c1ea6a5646d2b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096442"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037170"
 ---
 # <a name="cluster-network-configuration"></a>클러스터 네트워크 구성
   **클러스터 네트워크 선택** 페이지를 사용하여 장애 조치(Failover) 클러스터 인스턴스에 대한 네트워크 리소스를 지정할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
- **장애 조치 (failover) 클러스터 네트워크 이름-네트워크에서 장애 조치 (failover) 클러스터 인스턴스를 식별 하는 데 사용 되는 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
+ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치 (Failover) 클러스터 네트워크 이름** -네트워크에서 장애 조치 (failover) 클러스터 인스턴스를 식별 하는 데 사용 되는 이름입니다.  
   
  **네트워크 설정** – 장애 조치(Failover) 클러스터 인스턴스의 IP 유형과 IP 주소를 지정합니다.  
   

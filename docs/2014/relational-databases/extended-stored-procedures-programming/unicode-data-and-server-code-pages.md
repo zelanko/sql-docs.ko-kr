@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b7c992f8b33e2eb96b0e6ea7eec1f58beaf8aefd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 027f46cc60aa065a98fc5b7736ff1707248d69bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62511828"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050845"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>유니코드 데이터 및 서버 코드 페이지
     
@@ -39,7 +38,7 @@ ms.locfileid: "62511828"
   
 -   열 이름 메타 데이터는 멀티 바이트 데이터로 **srv_describe** 전달 됩니다.  
   
-     확장 저장 프로시저는 필드 매개 변수가 SRV_SPROC_CODEPAGE로 설정 된 **srv_pfield** 를 호출 하 여의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]멀티 바이트 코드 페이지를 가져옵니다.  
+     확장 저장 프로시저는 필드 매개 변수가 SRV_SPROC_CODEPAGE로 설정 된 **srv_pfield** 를 호출 하 여의 멀티 바이트 코드 페이지를 가져옵니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   오류 메시지는 멀티 바이트 데이터로 **srv_sendmsg** 전달 됩니다.  
   

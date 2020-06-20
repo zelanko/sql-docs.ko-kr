@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c2e34258f10033c61f9966e62fa7c14025423613
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5f7d99c3459d7bf41a4b9b6552ad6dbb6fe2213c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952329"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036982"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>전자 메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)
 
@@ -38,7 +37,7 @@ ms.locfileid: "71952329"
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드|  
+|[!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]기본 모드|  
   
  
   
@@ -67,7 +66,7 @@ ms.locfileid: "71952329"
   
 -   SMTP 서버와 전자 메일을 보낼 수 있는 권한이 있는 사용자 계정만 지정하는 경우 Reporting Services 구성 관리자를 사용합니다. 이는 보고서 서버 전자 메일 배달 확장 프로그램을 구성하는 데 필요한 최소 설정입니다. 자세한 내용은 [전자 메일 설정-Configuration Manager &#40;SSRS 기본 모드&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) 및 [전자 메일 배달 Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)를 참조 하세요.  
   
--   텍스트 편집기를 사용하여 RSreportserver.config 파일에 추가 설정을 지정합니다(옵션). 이 파일에는 보고서 서버 전자 메일 배달을 위한 모든 구성 설정이 포함되어 있습니다. 로컬 SMTP 서버를 사용하거나 전자 메일 배달을 특정 호스트로 제한하는 경우 이러한 파일에 추가 설정을 지정해야 합니다. 구성 파일을 찾아서 수정 하는 방법에 대 한 자세한 내용은 SQL Server 온라인 설명서에서 [Reporting Services 구성 파일 수정 &#40;rsreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) 을 참조 하십시오.  
+-   텍스트 편집기를 사용하여 RSreportserver.config 파일에 추가 설정을 지정합니다(옵션). 이 파일에는 보고서 서버 전자 메일 배달을 위한 모든 구성 설정이 포함되어 있습니다. 로컬 SMTP 서버를 사용하거나 전자 메일 배달을 특정 호스트로 제한하는 경우 이러한 파일에 추가 설정을 지정해야 합니다. 구성 파일을 찾아서 수정 하는 방법에 대 한 자세한 내용은 SQL Server 온라인 설명서의 [RSreportserver.config&#41;&#40;Reporting Services 구성 파일 수정](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) 을 참조 하세요.  
   
 > [!NOTE]  
 >  보고서 서버 전자 메일 설정은 CDO를 기반으로 합니다. 특정 설정에 대한 세부 정보를 보려면 CDO 제품 설명서를 참조하십시오.  
@@ -148,12 +147,12 @@ ms.locfileid: "71952329"
   
  보고서 서버와 로컬 SMTP 서버 또는 전달자 간의 연결은 다음과 같은 구성 설정에 의해 결정됩니다.  
   
--   `SendUsing`는 **1**로 설정 됩니다.  
+-   `SendUsing`가 **1**로 설정됩니다.  
   
 -   **SMTPServerPickupDirectory** 를 로컬 드라이브의 폴더로 설정합니다.  
   
     > [!NOTE]  
-    >  로컬 SMTP 서버를 사용 하는 `SMTPServer` 경우를 설정 하지 않아야 합니다.  
+    >  `SMTPServer`로컬 SMTP 서버를 사용 하는 경우를 설정 하지 않아야 합니다.  
   
 -   `From`전자 메일 메시지의 **보낸 사람:** 줄에 표시 되는 값을 설정 합니다. 이 값은 필수입니다.  
   
@@ -181,7 +180,7 @@ ms.locfileid: "71952329"
   
 3.  <`UrlRoot`>이 보고서 서버 URL 주소로 설정 되어 있는지 확인 합니다. 이 값은 보고서 서버를 구성할 때 설정되므로 이미 채워져 있을 것입니다. 그렇지 않으면 보고서 서버 URL 주소를 입력합니다.  
   
-4.  배달 섹션에서 <`ReportServerEmail`>를 찾습니다.  
+4.  배달 섹션에서 <>를 찾습니다 `ReportServerEmail` .  
   
 5.  <`SMTPServer`>에서 SMTP 서버의 이름을 입력 합니다. 이 값은 IP 주소, 회사 인트라넷에 있는 컴퓨터의 UNC 이름 또는 정규화된 도메인 이름일 수 있습니다.  
   
@@ -207,11 +206,11 @@ ms.locfileid: "71952329"
   
 5.  **SMTP 서비스** 확인란을 선택하고 **확인**을 클릭합니다.  
   
-6.  Windows 구성 요소 마법사에서 **다음**을 클릭합니다. **마침**을 클릭합니다.  
+6.  Windows 구성 요소 마법사에서 **다음**을 클릭합니다. **Finish**를 클릭합니다.  
   
 7.  서비스가 **서비스** 콘솔에서 실행되고 있는지 확인합니다.  
   
-8.  텍스트 편집기에서 **rsreportserver.config** 파일을 엽니다.  
+8.  텍스트 편집기에서 **RSReportServer.config** 파일을 엽니다.  
   
 9. `<UrlRoot>` 가 보고서 서버 URL 주소로 설정되어 있는지 확인합니다. 이 값은 보고서 서버를 구성할 때 설정되므로 이미 채워져 있을 것입니다. 그렇지 않으면 보고서 서버 URL 주소를 입력합니다.  
   

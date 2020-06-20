@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4aed312c01e47245d3b2c3d360652ab2b366cfd9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c5c7595b163dbaa965ed5c71b039e76108a4b49a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702318"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013182"
 ---
 # <a name="use-xml-data-in-applications"></a>애플리케이션에서 XML 데이터 사용
   이 항목에서는 애플리케이션에서 `xml` 데이터 형식을 사용하기 위해 제공되는 옵션에 대해 설명합니다. 이 항목에는 다음에 대한 정보가 포함됩니다.  

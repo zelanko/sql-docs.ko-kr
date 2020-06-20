@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 951e96cd13ba7cbb6f14039d3745a44ff6167fa0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d07777b7f55d6471127cb1cbe4adbafb36679573
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62760763"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068108"
 ---
 # <a name="duplicate-tables"></a>테이블 복제
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 새 테이블을 만들고, 기존 테이블에서 열 정보를 복사하여 기존 테이블을 복제할 수 있습니다.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8e23845e-97f0-4907-9d57-f1acd338b1f0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 172c8cbf13b76c23cd9f4768aaf5162e923bc28d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ace573ddc016c074f1ad5bb29f099d7e62c5c81d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154300"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934568"
 ---
 # <a name="connect-to-azure-storage"></a>Azure Storage에 연결
   **Azure Storage 연결** 대화 상자를 사용하여 스토리지 계정을 지정하고 Azure 연결의 유효성을 검사할 수 있습니다.  

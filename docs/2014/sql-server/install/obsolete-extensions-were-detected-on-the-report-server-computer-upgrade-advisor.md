@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40d245a2-0631-470e-81b3-1feb47e028cb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 18f90bd6c551a6240a49eed9a0ec39723851bce1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5fa59ce825a8731997cc905db636f40dcd7964e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952073"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012147"
 ---
 # <a name="obsolete-extensions-were-detected-on-the-report-server-computer-upgrade-advisor"></a>보고서 서버 컴퓨터에서 사용되지 않는 확장 프로그램이 검색됨(업그레이드 관리자)
   업그레이드 관리자가 현재 릴리스에서 더 이상 사용되지 않는 렌더링 확장 프로그램을 하나 이상 검색했습니다.  

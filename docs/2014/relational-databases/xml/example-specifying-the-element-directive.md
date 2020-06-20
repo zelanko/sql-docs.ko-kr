@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dbf710587d67bf56d2c5f56d7d89a436608c572f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d91c0ddc4bd9c15a033e728d450abd153cac2756
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716719"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067809"
 ---
 # <a name="example-specifying-the-element-directive"></a>예제: ELEMENT 지시어 지정
   이 예에서는 직원 정보를 검색하고 다음과 같이 요소 중심 XML을 생성합니다.  

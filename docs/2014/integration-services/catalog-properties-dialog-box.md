@@ -12,22 +12,21 @@ f1_keywords:
 ms.assetid: 3e2fcf11-e010-41c6-bc26-e4b281c0bfbc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f5bf6ecd9b78e4e7c35c63a1b84316d59da7a10
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061108"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924564"
 ---
 # <a name="catalog-properties-dialog-box"></a>카탈로그 속성 대화 상자
-  카탈로그 속성 대화 상자를 사용하여 SSISDB 카탈로그를 구성할 수 있습니다. 카탈로그 속성은 중요 한 데이터가 암호화 되는 방법, 작업 및 프로젝트 버전 관리 데이터가 보존 되는 방법 및 유효성 검사 작업의 제한 시간이 초과 되는 경우를 정의 합니다. SSISDB 카탈로그는 프로젝트, 패키지, 매개 변수 및 환경 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에 대 한 중앙 저장소 및 관리 지점입니다.  
+  카탈로그 속성 대화 상자를 사용하여 SSISDB 카탈로그를 구성할 수 있습니다. 카탈로그 속성은 중요 한 데이터가 암호화 되는 방법, 작업 및 프로젝트 버전 관리 데이터가 보존 되는 방법 및 유효성 검사 작업의 제한 시간이 초과 되는 경우를 정의 합니다. SSISDB 카탈로그는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트, 패키지, 매개 변수 및 환경에 대 한 중앙 저장소 및 관리 지점입니다.  
   
  또한 catalog.catalog_property 뷰에서 카탈로그 속성을 보고 catalog.configure_catalog 저장 프로시저를 사용하여 속성을 설정할 수 있습니다. 자세한 내용은 [catalog.catalog_properties&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) 및 [catalog.configure_catalog&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)를 참조하세요.  
   
  SSISDB 카탈로그를 만드는 방법에 대한 자세한 내용은 [SSIS 카탈로그 만들기](catalog/ssis-catalog.md)를 참조하세요.  
   
- **수행 작업**  
+ **원하는 작업을 선택하세요.**  
   
 -   [카탈로그 속성 대화 상자 열기](#open_dialog)  
   
@@ -46,7 +45,7 @@ ms.locfileid: "66061108"
 ### <a name="options"></a>옵션  
  다음 표에서는 대화 상자의 특정 속성과 catalog.catalog_property 뷰의 해당 속성에 대해 설명합니다.  
   
-|속성 이름(카탈로그 속성 대화 상자)|속성 이름(catalog.catalog_property 뷰)|설명|  
+|속성 이름(카탈로그 속성 대화 상자)|속성 이름(catalog.catalog_property 뷰)|Description|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |암호화 알고리즘 이름|ENCRYPTION_CLEANUP_ENABLED|카탈로그의 중요한 매개 변수 값을 암호화하는 데 사용되는 암호화 유형을 지정합니다. 가능한 값은 다음과 같습니다.<br /><br /> **DES**<br /><br /> **TRIPLE_DES**<br /><br /> **TRIPLE_DES_3KEY**<br /><br /> **DESPX**<br /><br /> **AES_128**<br /><br /> **AES_192**<br /><br /> **AES_256** (기본값)|  
 |유효성 검사 제한 시간(초)|VALIDATION_TIMEOUT|프로젝트 유효성 검사 또는 패키지 유효성 검사가 중지되기 전에 실행될 수 있는 최대 기간(초)을 지정합니다. 기본값은 300초입니다.<br /><br /> 유효성 검사 수행은 비동기 작업입니다. 프로젝트나 패키지가 클수록 유효성 검사에 걸리는 시간이 길어집니다.<br /><br /> 프로젝트와 패키지의 유효성을 검사하는 방법은 [Integration Services Data Types in Expressions](expressions/integration-services-data-types-in-expressions.md)를 참조하십시오.|  

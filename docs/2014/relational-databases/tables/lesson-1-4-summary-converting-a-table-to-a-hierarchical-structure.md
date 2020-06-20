@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d57a1876-3fb3-4d82-8b5c-510b6e0d8a11
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 740353035b1bd53a8c99b6336b3a70532eb57b2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9fa2051020babf67d1dfe6c6a99720c491b398f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110129"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068066"
 ---
 # <a name="summary-converting-a-table-to-a-hierarchical-structure"></a>요약: 테이블을 계층 구조로 변환
   `hierarchyid` 데이터 형식은 단순하고 간단한 형식으로 계층 관계를 저장할 수 있습니다. 적절한 인덱스를 사용하면 계층 수준, 계층의 하위 트리 또는 기존의 단일 조회별로 데이터를 효율적으로 반환할 수 있습니다.  

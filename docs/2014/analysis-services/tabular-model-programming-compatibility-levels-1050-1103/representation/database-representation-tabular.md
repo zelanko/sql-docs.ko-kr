@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 377b85c22d1c6da9f5296d6ad57a86028e022785
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c327e07685e98e6fa9f992025510e869d909e5ea
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62757806"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940094"
 ---
 # <a name="database-representationtabular"></a>데이터베이스 표현(테이블 형식)
   테이블 형식 모드에서 데이터베이스는 테이블 형식 모델의 모든 개체에 대한 컨테이너입니다.  

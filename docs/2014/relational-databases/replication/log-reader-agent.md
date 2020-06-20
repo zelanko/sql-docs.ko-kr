@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 300a3c46-0e48-4334-99c0-9ee690d2ef4f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ac94543b0c3d4957cdd3eb95d80c33fc5443c546
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdf50267de5ce0abaf6f4b91a324a0317cb4cb0c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63057795"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065857"
 ---
 # <a name="log-reader-agent"></a>로그 판독기 에이전트
   **로그 판독기 에이전트** 대화 상자는 상태, 기록, 정보 메시지, 모든 오류 메시지 등 로그 판독기 에이전트에 대한 자세한 정보를 표시합니다.  

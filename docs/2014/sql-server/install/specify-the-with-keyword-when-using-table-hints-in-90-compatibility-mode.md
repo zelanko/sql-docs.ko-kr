@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7636cc85-5155-44db-baf6-df807761adb8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ff2fee26c6f71cc398f8dbacf91f3ad8dbdb3358
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ecd13475395cef4257d97eb7480f32420932e22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092154"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036302"
 ---
 # <a name="specify-the-with-keyword-when-using-table-hints-in-90-compatibility-mode"></a>호환성 모드 90에서 테이블 힌트를 사용할 경우 WITH 키워드를 지정합니다.
   일부 예외는 있으나 WITH 키워드를 사용하여 테이블 힌트를 지정한 경우에만 쿼리의 FROM 절에서 테이블 힌트가 지원됩니다. 자세한 내용은[!INCLUDE[tsql](../../includes/tsql-md.md)]온라인 설명서에서 "FROM([!INCLUDE[tsql](../../includes/tsql-md.md)])" 및 "테이블 힌트( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )"를 참조하십시오.  

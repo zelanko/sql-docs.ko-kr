@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2df5fa785f715dbf63c7682148c20bbaf971d0c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 51fe880ce3865e44620e0f7ae88c2103b0796f38
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76928099"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933268"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>보조 문자 인식 문자열 조작 예제
   이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예제는 보조 문자 인식 문자열 처리 단계를 보여 줍니다. 이 예제에서는 기본 제공 함수와 동일한 문자열 조작 함수를 제공할 뿐만 아니라 추가 보조 문자 인식 기능을 통해 유니코드 및 보조 문자의 문자열을 모두 처리할 수 있는 다섯 가지 Transact-SQL 문자열 함수의 구현 예를 보여 줍니다. 다섯 가지 함수는 lens(), `lefts(), rights(), subs()` 및 `replace_s()` 입니다. 이는 기본 제공 함수 `LEN(), LEFT(), RIGHT(), SUBSTRING()` 및 `REPLACE()` 문자열 함수에 해당됩니다.  
@@ -52,7 +51,7 @@ ms.locfileid: "76928099"
   
 -   사용하고 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 AdventureWorks 데이터베이스를 설치해야 합니다.  
   
--   사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 관리자가 아닌 경우 설치를 완료 하려면 관리자에 게 **createassembly** 권한을 부여 해야 합니다.  
+-   사용 중인 인스턴스의 관리자가 아닌 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 완료 하려면 관리자에 게 **createassembly** 권한을 부여 해야 합니다.  
   
 ## <a name="building-the-sample"></a>예제 빌드  
   

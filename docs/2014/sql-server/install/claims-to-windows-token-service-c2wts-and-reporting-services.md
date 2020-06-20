@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dc6636946f7c94992fc831f814df57baf6397a1f
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 72b88bd1bd2a033683f83dd53cca8404eccb613f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922156"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059351"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>C2WTS(Windows 토큰 서비스에 대한 클레임) 및 Reporting Services
   The SharePoint Claims to Windows Token Service (c2WTS) is required with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드에 SharePoint C2WTS(Windows 토큰 서비스에 대한 클레임)가 필요합니다. 특히 사용자가 Windows 인증을 사용하여 데이터 원본에 액세스할 경우라도 WFE(웹 프런트 엔드)와 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스 간의 통신은 항상 클레임 인증으로 수행되기 때문에 SharePoint C2WTS가 필요합니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "82922156"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** Sharepoint 2013 &#124; SharePoint 2010|  
   
-## <a name="prerequisites"></a>필수 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
   
 > [!NOTE]  
 >  참고: 일부 구성 단계는 특정 팜 토폴로지에 따라 변경될 수 있으며 작동하지 않을 수도 있습니다. 예를 들어 단일 서버 설치에는 Windows Identity Foundation c2WTS 서비스가 지원되지 않으므로 이 팜 구성에서는 Windows 토큰 위임에 대한 클레임 시나리오가 가능하지 않습니다.  
@@ -69,7 +68,7 @@ ms.locfileid: "82922156"
   
 2.  C2WTS ' AllowedCallers ' 구성  
   
-     c2WTS에는 구성 파일 **c2wtshost.exe.config**에 명시적으로 나열 된 ' 호출자 ' id가 필요 합니다. c2WTS는이 작업을 수행 하도록 구성 되지 않은 한 시스템의 모든 인증 된 사용자 로부터의 요청을 허용 하지 않습니다. 이 경우 ‘caller’는 WSS_WPG Windows 그룹입니다. c2wtshost.exe.confi 파일은 다음 위치에 저장됩니다.  
+     c2WTS에는 **c2wtshost.exe.config**구성 파일에 명시적으로 나열 된 ' 호출자 ' id가 필요 합니다. c2WTS는이 작업을 수행 하도록 구성 되지 않은 한 시스템의 모든 인증 된 사용자 로부터의 요청을 허용 하지 않습니다. 이 경우 ‘caller’는 WSS_WPG Windows 그룹입니다. c2wtshost.exe.confi 파일은 다음 위치에 저장됩니다.  
   
      **Files\Windows Id Foundation\v3.5\c2wtshost.exe.config**  
   

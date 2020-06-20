@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a828e284-097e-4854-8c49-931934eb73bf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9dda41e229e36c0c4b86c5bdb00782c3b5871bfa
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 97ba002eafc02f445f3f7104811b2c347668e300
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858648"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932954"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>전체 텍스트 인덱스 속성(일정 페이지)
   이 페이지를 사용하여 전체 텍스트 인덱스의 기본 테이블에 대한 업데이트의 증분 채우기를 시작하는 SQL Server 에이전트 작업을 실행하는 일정을 보거나 만들 수 있습니다. 기본 테이블이나 뷰에 `timestamp` 데이터 형식의 열이 포함되어 있지 않으면 전체 채우기가 수행됩니다.  

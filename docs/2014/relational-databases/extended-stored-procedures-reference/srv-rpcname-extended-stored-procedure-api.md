@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0a1424e4-3319-4836-b8d8-5e0344cc683f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f309349b2867412d552372e83ed1947b34242336
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28a8a91b07fd61ba347e26f774380630198e3e4a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046652"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050596"
 ---
 # <a name="srv_rpcname-extended-stored-procedure-api"></a>srv_rpcname(확장 저장 프로시저 API)
     

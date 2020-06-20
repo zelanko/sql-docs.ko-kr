@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b27b5bbc77d1d48e3697893e2e21dcf7d8a6c570
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 413d0d42ce629076488b5971408df25ca0ce9d1e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768449"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968443"
 ---
 # <a name="working-with-images-with-the-script-task"></a>스크립트 태스크를 사용한 이미지 작업
   제품 또는 사용자 데이터베이스에는 텍스트 및 숫자 데이터 외에 이미지도 포함되는 경우가 많습니다. Microsoft .NET Framework의 `System.Drawing` 네임스페이스에서는 이미지 조작을 위한 클래스를 제공합니다.  
@@ -47,7 +46,7 @@ ms.locfileid: "62768449"
   
 1.  `CurrentImageFile`이라는 문자열 변수를 만들고 해당 값을 기존 이미지 파일의 경로 및 파일 이름으로 설정합니다.  
   
-2.  **스크립트 태스크 편집기**의 `CurrentImageFile` **스크립트** 페이지에서 `ReadOnlyVariables` 속성에 변수를 추가 합니다.  
+2.  **스크립트 태스크 편집기**의 **스크립트** 페이지에서 `CurrentImageFile` 속성에 변수를 추가 `ReadOnlyVariables` 합니다.  
   
 3.  스크립트 프로젝트에서 `System.Drawing` 네임스페이스에 대한 참조를 설정합니다.  
   
@@ -158,7 +157,7 @@ End Function
   
 2.  또한 `MaxThumbSize`라는 정수 변수를 만들고 100과 같이 값을 픽셀 단위로 할당합니다.  
   
-3.  **스크립트 태스크 편집기**의 `ReadOnlyVariables` **스크립트** 페이지에서 두 변수를 모두 속성에 추가 합니다.  
+3.  **스크립트 태스크 편집기**의 **스크립트** 페이지에서 두 변수를 모두 속성에 추가 `ReadOnlyVariables` 합니다.  
   
 4.  스크립트 프로젝트에서 `System.Drawing` 네임스페이스에 대한 참조를 설정합니다.  
   

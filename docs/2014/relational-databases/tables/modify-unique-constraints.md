@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8bb3daf170e25abc9b346aeaedb4b835cae2dfdd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6dbe235d5d4c2b4b9523319622710cc20d1c3b76
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68809923"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067933"
 ---
 # <a name="modify-unique-constraints"></a>UNIQUE 제약 조건 수정
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 UNIQUE 제약 조건을 수정할 수 있습니다.  
@@ -63,7 +62,7 @@ ms.locfileid: "68809923"
     |클러스터형 옵션 설정|**테이블 디자이너** 아래의 표에서 **클러스터형으로 만들기**를 선택한 다음 클러스터형 인덱스를 만들려면 드롭다운에서 예를 선택하고 비클러스터형 인덱스를 만들려면 아니요를 선택합니다. 클러스터형 인덱스는 테이블마다 하나씩만 만들 수 있습니다. 클러스터형 인덱스가 이미 이 테이블에 있는 경우 원본 인덱스에 대해 이 설정을 먼저 해제해야 합니다.|  
     |채우기 비율 정의|**테이블 디자이너**아래의 표에서 **파일 사양** 범주를 확장하고 0에서 100 사이의 정수를 **채우기 비율** 상자에 입력합니다.|  
   
-5.  **파일** 메뉴에서 **테이블 이름**_저장_을 클릭합니다.  
+5.  **파일** 메뉴에서 _테이블 이름_**저장**을 클릭합니다.  
   
 ##  <a name="to-modify-a-unique-constraint"></a><a name="TsqlProcedure"></a> **UNIQUE 제약 조건을 수정하려면 다음을 수행합니다.**  
   

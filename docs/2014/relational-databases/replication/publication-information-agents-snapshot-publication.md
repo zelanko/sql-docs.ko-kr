@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7d8b89024d27626516f99a5237c0efcd593bad0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02b112a93cb6098ab873ac2a698303b8a717afd3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021783"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065729"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>게시 정보, 에이전트(스냅샷 게시)
   **에이전트** 탭은 선택한 게시에 대한 스냅샷 에이전트의 요약 정보를 표시합니다.  
@@ -52,7 +51,7 @@ ms.locfileid: "63021783"
  **마지막 시작 시간**  
  마지막으로 에이전트가 시작된 시간입니다.  
   
- **작업**  
+ **기간**  
  에이전트가 실행된 시간입니다. 에이전트가 현재 실행되고 있는 경우 이 시간은 경과된 시간을 나타내고 에이전트가 이전에 실행된 경우에는 총 시간을 나타냅니다.  
   
  **마지막 동작**  

@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: cba737f7-b187-47d0-8458-23dc18d18aca
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 417ca3c2e5e477960c4c905543f3a712a5ec7453
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: de153d45e2f652bfea6e9dce68428af84be68b6c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095167"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012336"
 ---
 # <a name="full-text-indexes-on-nonpersisted-computed-columns-are-not-allowed"></a>비지속형 계산 열에 전체 텍스트 인덱스를 사용할 수 없습니다.
   비결정적이고 정확하지 않은 계산 열에서는 전체 텍스트 인덱스를 만들 수 없습니다. 이러한 열은 유형 열 또는 전체 텍스트 키 열로 사용할 수 없습니다.  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]에서는 비결정적이고 정확하지 않은 계산 열을 유형 열이나 전체 텍스트 키 열로 사용하여 전체 텍스트 인덱스를 만들 수 있었지만 이제는 이 기능이 지원되지 않습니다. 업그레이드하면 오래되고 호환되지 않으며 지원되지 않는 전체 텍스트 인덱스가 비활성화됩니다.  
   
 ## <a name="corrective-action"></a>수정 동작  

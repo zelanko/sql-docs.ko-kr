@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5696c47-5f10-4ab4-bd6a-8eea71d4c020
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: eaed6350c6a6dde394e2ccff1617ac3bab2ba19c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c62ec98e826a14b1472345d40ce9ad440df8f133
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088694"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928123"
 ---
 # <a name="trace-template-properties-general-tab"></a>추적 템플릿 속성(일반 탭)
   **추적 템플릿 속성** 대화 상자의 **일반** 탭을 사용하여 다음 옵션으로 새 추적 템플릿을 만들 수 있습니다. 이 대화 상자에 액세스하려면 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **파일** 메뉴에서 **템플릿**을 가리킨 다음 **새 템플릿**을 클릭합니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "66088694"
  이 서버 유형에 대해 만든 추적에 기본적으로 이 템플릿을 사용합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server Profiler &#40;추적 템플릿을 만듭니다&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [추적 템플릿 만들기&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [SQL Server Profiler 템플릿 및 권한](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   

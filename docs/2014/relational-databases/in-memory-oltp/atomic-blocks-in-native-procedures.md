@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca8f5b4d767ef0fe836cd260f8d12dd5b40c75d0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62467283"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050366"
 ---
 # <a name="atomic-blocks"></a>ATOMIC 블록
   `BEGIN ATOMIC`은 ANSI SQL 표준의 일부입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 고유하게 컴파일된 저장 프로시저의 최상위 수준에서만 ATOMIC 블록을 지원합니다.  
@@ -130,14 +129,14 @@ GO
   
  `BEGIN ATOMIC`에는 다음 옵션이 필요합니다.  
   
-|필요한 설정|설명|  
+|필요한 설정|Description|  
 |----------------------|-----------------|  
 |`TRANSACTION ISOLATION LEVEL`|지원되는 값은 `SNAPSHOT`, `REPEATABLEREAD` 및 `SERIALIZABLE`입니다.|  
 |`LANGUAGE`|날짜 및 시간 형식과 시스템 메시지를 결정합니다. [sys.syslanguages&#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql)의 모든 언어와 별칭이 지원됩니다.|  
   
  다음 설정은 선택 사항입니다.  
   
-|선택적 설정|설명|  
+|선택적 설정|Description|  
 |----------------------|-----------------|  
 |`DATEFORMAT`|모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 형식이 지원됩니다. 지정되면 `DATEFORMAT`에서 `LANGUAGE`와 관련된 기본 날짜 형식을 재정의합니다.|  
 |`DATEFIRST`|지정되면 `DATEFIRST`에서 `LANGUAGE`와 관련된 기본값을 재정의합니다.|  

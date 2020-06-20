@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9c9e9ae4-9e03-4137-acb6-b18928a0c4ca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 919a0c9eb96021ccd7495579cda9756bcdde3194
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86ae466b9fce53073bfc0645c753246023ff3269
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761442"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066470"
 ---
 # <a name="delete-foreign-key-relationships"></a>외래 키 관계 삭제
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 외래 키 제약 조건을 삭제할 수 있습니다. 외래 키 제약 조건을 삭제하면 참조 무결성을 적용할 필요가 없어집니다.  

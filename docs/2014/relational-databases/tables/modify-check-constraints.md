@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 651b13121653f5627f59bc6a8a11f1e2e49c43b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b8a43f06a0c100725607dfc903bfd045a0d387b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211848"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067993"
 ---
 # <a name="modify-check-constraints"></a>CHECK 제약 조건 수정
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 특정 조건에 대한 제약 조건을 설정 또는 해제하는 옵션 또는 제약 조건 식을 변경할 때 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 CHECK 제약 조건을 수정할 수 있습니다.  
@@ -69,7 +68,7 @@ ms.locfileid: "68211848"
   
 5.  **닫기**를 클릭합니다.  
   
-6.  **파일** 메뉴에서 **테이블 이름**_저장_을 클릭합니다.  
+6.  **파일** 메뉴에서 _테이블 이름_**저장**을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **CHECK 제약 조건을 수정하려면**  

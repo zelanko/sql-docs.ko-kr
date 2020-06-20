@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f597aa6c9ba9759b606501b0bd72a2166b1805e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd2452a969f290f4d33529eee44d36611c8d7525
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127403"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050742"
 ---
 # <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler(확장 저장 프로시저 API)
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
   
- 설치된 확장 저장 프로시저 API 메시지 처리기를 호출합니다. 이 함수는 일반적으로 확장 저장 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로시저에서를 호출 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그 파일이 나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 응용 프로그램 로그에 확장 저장 프로시저에 정의 된 오류를 기록 하는 데 사용 됩니다.  
+ 설치된 확장 저장 프로시저 API 메시지 처리기를 호출합니다. 이 함수는 일반적으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 저장 프로시저에서를 호출 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그 파일이 나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 응용 프로그램 로그에 확장 저장 프로시저에 정의 된 오류를 기록 하는 데 사용 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -79,7 +78,7 @@ oserrtextlen
  *severity*  
  오류의 표준 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 심각도 값입니다. 이 숫자는 0과 24 사이여야 합니다.  
   
- *state*  
+ *상태*  
  오류의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 상태 값입니다.  
   
  *oserrnum*  

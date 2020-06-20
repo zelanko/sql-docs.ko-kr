@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 952043d5d001fe4fe65e6dd1aa7bb2001290429e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39c09a3a73051e7a61f3a62a125232d83d1570c0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110067"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068080"
 ---
 # <a name="optimizing-the-neworg-table"></a>NewOrg 테이블 최적화
-  [기존 계층적 데이터로 테이블 채우기](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) 태스크에서 만든 `hierarchyid` **neword** 테이블은 모든 직원 정보를 포함 하며 데이터 형식을 사용 하 여 계층 구조를 나타냅니다. 이 태스크에서는 새 인덱스를 추가하여 `hierarchyid` 열에서의 검색을 지원합니다.  
+  [기존 계층적 데이터로 테이블 채우기](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) 태스크에서 만든 **neword** 테이블은 모든 직원 정보를 포함 하며 데이터 형식을 사용 하 여 계층 구조를 나타냅니다 `hierarchyid` . 이 태스크에서는 새 인덱스를 추가하여 `hierarchyid` 열에서의 검색을 지원합니다.  
   
 ## <a name="clustered-index"></a>클러스터형 인덱스  
- `hierarchyid` 열 (**OrgNode**)은 **neworg** 테이블의 기본 키입니다. 테이블을 만들 때 **OrgNode** 열의 고유성을 적용하기 위해 이 열에 **PK_NewOrg_OrgNode** 라는 클러스터형 인덱스가 포함되었습니다. 이 클러스터형 인덱스는 테이블의 깊이 우선 검색도 지원합니다.  
+ `hierarchyid`열 (**OrgNode**)은 **neworg** 테이블의 기본 키입니다. 테이블을 만들 때 **OrgNode** 열의 고유성을 적용하기 위해 이 열에 **PK_NewOrg_OrgNode** 라는 클러스터형 인덱스가 포함되었습니다. 이 클러스터형 인덱스는 테이블의 깊이 우선 검색도 지원합니다.  
   
 ## <a name="nonclustered-index"></a>비클러스터형 인덱스  
  이 단계에서는 일반적인 검색을 지원하는 두 개의 비클러스터형 인덱스를 만듭니다.  

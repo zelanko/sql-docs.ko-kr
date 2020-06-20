@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 39b8e065b6b3cbd013089700de07376edc9a656c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d36026ea8543beaed20577bf87f5eb7b0b04f1cb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770704"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939614"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>파생 열 변환을 사용하여 열 값 파생
   파생 열 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 하나의 원본이 이미 들어 있어야 합니다.  
@@ -44,7 +43,7 @@ ms.locfileid: "62770704"
     > [!NOTE]  
     >  식이 올바르지 않으면 식 텍스트가 강조 표시되고 열의 도구 설명에 오류에 대한 설명이 제공됩니다.  
   
-7.  **파생 열** 목록에서 **\<새 열로 추가>** 를 선택하여 식의 계산 결과를 새 열에 기록하거나 기존 열을 선택하여 평가 결과를 업데이트합니다.  
+7.  **파생 열** 목록에서 **\<add as new column>** 식의 계산 결과를 새 열에 기록 하거나 기존 열을 선택 하 여 평가 결과로 업데이트할 기존 열을 선택 합니다.  
   
      새 열을 사용하는 경우 **파생 열 변환 편집기** 대화 상자는 식을 계산하고 데이터 형식, 길이, 전체 자릿수, 소수 자릿수 및 코드 페이지에 따라 열에 데이터 형식을 할당합니다.  
   

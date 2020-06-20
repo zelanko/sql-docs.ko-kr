@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d09b5d31-433f-4f7c-8c68-9df3a97785d5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6799bc899a7e65082d83398f79996bea8d9dd2d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6481a2dac7bc23d61b73b2d4f50401952723dc69
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061793"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925826"
 ---
 # <a name="add-variable"></a>변수 추가
   **변수 추가** 대화 상자를 사용하여 새 변수의 속성을 지정할 수 있습니다.  
@@ -31,10 +30,10 @@ ms.locfileid: "66061793"
  **이름**  
  변수 이름을 입력합니다.  
   
- **Namespace**  
+ **네임스페이스**  
  변수의 네임스페이스를 지정합니다. 기본적으로 사용자 정의 변수는 **User** 네임스페이스에 있습니다.  
   
- **값 유형**  
+ **값 형식**  
  데이터 형식을 선택합니다.  
   
  **값**  

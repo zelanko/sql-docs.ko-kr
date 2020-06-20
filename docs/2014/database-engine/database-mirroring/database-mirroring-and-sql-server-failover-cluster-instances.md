@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e7c3a3094309d2d1d32a840d4eee933555daa66a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d317e04251b3dedfc587d98898a366cf6a360bb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755579"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934331"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>데이터베이스 미러링 및 SQL Server 장애 조치(Failover) 클러스터 인스턴스
   장애 조치 클러스터는 리소스 그룹으로 알려진 MSCS( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Service) 클러스터 그룹 내에 있는 하나 이상의 물리적 디스크 조합이며 클러스터의 참여 노드입니다. 리소스 그룹은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 호스팅하는 장애 조치 클러스터형 인스턴스로 구성됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치 클러스터형 인스턴스는 네트워크에서 한 대의 컴퓨터처럼 보이지만 어떤 노드를 사용할 수 없게 되는 경우 노드 간 장애 조치 기능을 제공합니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
   
- 장애 조치 (Failover) 클러스터는 단일 데이터베이스에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대 한 고가용성 지원을 제공 하는 데이터베이스 미러링과 달리 전체 인스턴스에 대해 고가용성 지원을 제공 합니다. 데이터베이스 미러링은 장애 조치 클러스터 간, 그리고 장애 조치 클러스터와 비클러스터형 호스트 간에 작동합니다.  
+ 장애 조치 (Failover) 클러스터는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 단일 데이터베이스에 대 한 고가용성 지원을 제공 하는 데이터베이스 미러링과 달리 전체 인스턴스에 대해 고가용성 지원을 제공 합니다. 데이터베이스 미러링은 장애 조치 클러스터 간, 그리고 장애 조치 클러스터와 비클러스터형 호스트 간에 작동합니다.  
   
 > [!NOTE]  
 >  데이터베이스 미러링에 대한 소개는 [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)을 참조하세요.  

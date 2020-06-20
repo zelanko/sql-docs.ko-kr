@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2ac05e89-c002-4adc-86c7-438df70e9ed5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef0cb7dfe9b3fbbca1cda3833506e56cc6bb9681
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7cdcf36f26ce7dbba0e6a9de77faf286d2ccb00b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067905"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940144"
 ---
 # <a name="table-import-wizard-reference-ssas"></a>테이블 가져오기 마법사 참조(SSAS)
   이 섹션에서는 **테이블 가져오기 마법사**에 대한 도움말을 제공합니다. 이 마법사를 사용하여 다양한 데이터 원본에서 데이터를 가져올 수 있습니다. 모델 디자이너에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
