@@ -22,12 +22,12 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d4e624323c2794afc38a9d8dcf948db69282af0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 55e5892b9183ab2455cee7aa39a34de0d7bb28bf
+ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827927"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107043"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "82827927"
 |**physical_memory_kb**|**bigint**|**적용 대상:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상.<br /><br /> 컴퓨터에 있는 실제 메모리의 전체 크기를 지정합니다. Null을 허용하지 않습니다.|  
 |**virtual_memory_in_bytes**|**bigint**|**적용 대상:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .<br /><br /> 사용자 모드로 프로세스에 사용할 수 있는 가상 메모리의 양입니다. 3-GB 스위치를 사용하여 SQL Server가 시작되었는지 확인하는 데 사용할 수 있습니다.|  
 |**virtual_memory_kb**|**bigint**|**적용 대상:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상.<br /><br /> 사용자 모드로 프로세스에 사용할 수 있는 가상 주소 공간의 전체 크기를 지정합니다. Null을 허용하지 않습니다.|  
-|**bpool_commited**|**int**|**적용 대상:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .<br /><br /> 메모리 관리자의 커밋된 메모리(KB)를 나타냅니다. 메모리 관리자의 예약된 메모리는 포함하지 않습니다. Null을 허용하지 않습니다.|  
+|**bpool_committed**|**int**|**적용 대상:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .<br /><br /> 메모리 관리자의 커밋된 메모리(KB)를 나타냅니다. 메모리 관리자의 예약된 메모리는 포함하지 않습니다. Null을 허용하지 않습니다.|  
 |**committed_kb**|**int**|**적용 대상:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상.<br /><br /> 메모리 관리자의 커밋된 메모리(KB)를 나타냅니다. 메모리 관리자의 예약된 메모리는 포함하지 않습니다. Null을 허용하지 않습니다.|  
 |**bpool_commit_target**|**int**|**적용 대상:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .<br /><br /> SQL Server 메모리 관리자가 소비할 수 있는 메모리 크기(KB)를 나타냅니다.|  
 |**committed_target_kb**|**int**|**적용 대상:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상.<br /><br /> SQL Server 메모리 관리자가 소비할 수 있는 메모리 크기(KB)를 나타냅니다. 다음과 같이 다양한 입력을 사용하여 필요한 메모리 양을 계산합니다.<br /><br /> -로드를 포함 하는 시스템의 현재 상태입니다.<br /><br /> -현재 프로세스에서 요청 하는 메모리<br /><br /> -컴퓨터에 설치 된 메모리의 양<br /><br /> -구성 매개 변수<br /><br /> **Committed_target_kb** **committed_kb**보다 크면 메모리 관리자가 추가 메모리를 얻으려고 시도 합니다. **Committed_target_kb** **committed_kb**보다 작으면 메모리 관리자가 커밋된 메모리 양을 축소 하려고 시도 합니다. **Committed_target_kb** 은 항상 도난당 하 고 예약 된 메모리를 포함 합니다. Null을 허용하지 않습니다.|  
@@ -80,7 +80,7 @@ ms.locfileid: "82827927"
 |**cores_per_socket** |**int** | **적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 이상.<br /><br />시스템에서 사용할 수 있는 소켓 당 프로세서 수를 지정 합니다. |  
 |**numa_node_count** |**int** | **적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 이상.<br /><br />시스템에서 사용할 수 있는 numa 노드 수를 지정 합니다. 이 열에는 실제 numa 노드 뿐만 아니라 소프트 numa 노드도 포함 됩니다. |  
   
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
