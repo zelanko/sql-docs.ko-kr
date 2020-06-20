@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e476880103a69ae016c6720f36e26ef884db6f5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012026"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055395"
 ---
 # <a name="create-a-login"></a>로그인 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 로그인을 만드는 방법에 대해 설명합니다. 로그인은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 연결하는 사용자 또는 프로세스의 ID입니다.  
@@ -148,7 +147,7 @@ ms.locfileid: "63012026"
  **이 로그인으로 매핑된 사용자**  
  이 로그인으로 액세스할 수 있는 데이터베이스를 선택합니다. 데이터베이스를 선택하면 **데이터베이스 역할 멤버 자격 대상:** _database_name_ 창에 유효한 데이터베이스 역할이 표시됩니다.  
   
- **매핑할**  
+ **Map**  
  아래 나열되는 데이터베이스에 해당 로그인이 액세스하는 것을 허용합니다.  
   
  **Database**  
@@ -198,7 +197,7 @@ ms.locfileid: "63012026"
  **이름**  
  표에 추가된 각 보안 주체 또는 보안 개체의 이름입니다.  
   
- **Type**  
+ **형식**  
  각 항목의 유형입니다.  
   
  **명시적 탭**  
@@ -216,7 +215,7 @@ ms.locfileid: "63012026"
  **허용 권한 소유**  
  나열된 사용 권한에 대한 WITH GRANT 옵션 상태를 나타냅니다. 이 부분은 읽기 전용입니다. 이 사용 권한을 적용하려면 [GRANT](/sql/t-sql/statements/grant-transact-sql) 문을 사용합니다.  
   
- **차단할**  
+ **거부**  
  로그인에 이 사용 권한을 거부하려면 선택하고 사용 권한을 해제하려면 선택을 취소합니다.  
   
 ### <a name="status"></a>상태  
@@ -237,7 +236,7 @@ ms.locfileid: "63012026"
  이 로그인을 사용하거나 사용하지 않도록 선택합니다. 이 옵션은 ALTER LOGIN 문에 ENABLE 또는 DISABLE 옵션을 사용합니다.  
   
  **SQL Server 인증**  
- **로그인 잠겨** 있음 확인란은 선택한 로그인이 인증을 사용 하 여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 연결 하 고 로그인이 잠겨 있는 경우에만 사용할 수 있습니다. 이 설정은 읽기 전용입니다. 잠긴 로그인을 잠금 해제하려면 UNLOCK 옵션을 사용하여 ALTER LOGIN을 실행합니다.  
+ **로그인 잠겨** 있음 확인란은 선택한 로그인이 인증을 사용 하 여 연결 하 고 로그인이 잠겨 있는 경우에만 사용할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . 이 설정은 읽기 전용입니다. 잠긴 로그인을 잠금 해제하려면 UNLOCK 옵션을 사용하여 ALTER LOGIN을 실행합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9cb496137c3986b78a55862e434c153d354a42ea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63298632"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055020"
 ---
 # <a name="use-column-sets"></a>열 집합 사용
   스파스 열을 사용하는 테이블에서는 테이블의 모든 스파스 열을 반환하는 열 집합을 지정할 수 있습니다. 열 집합은 구조화된 출력으로 테이블의 모든 스파스 열을 결합하는 형식화되지 않은 XML 표현입니다. 열 집합은 열 집합이 테이블에 물리적으로 저장되지 않는다는 점에서 계산 열과 유사하며, 직접 업데이트할 수 있다는 점에서 계산 열과 다릅니다.  
@@ -112,14 +111,14 @@ GO
 |데이터 형식|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|최대 길이|자릿수|확장|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
 |`char`, `varchar`, `binary`|-1|'기본값'|0|0|8000|해당 사항 없음**|해당 없음|  
-|`nvarchar`|-1|'기본값'|0|0|4000|해당 없음|해당 없음|  
-|`decimal`, `float`, `real`|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|18|0|  
-|`integer`, `bigint`, `tinyint`, `smallint`|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|  
-|`datetime2`|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|7|  
-|`datetime offset`|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|7|  
-|`datetime`, `date`, `smalldatetime`|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|  
-|`money`, `smallmoney`|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|  
-|`time`|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|7|  
+|`nvarchar`|-1|'기본값'|0|0|4000|해당 사항 없음|해당 없음|  
+|`decimal`, `float`, `real`|해당 사항 없음|해당 없음|해당 없음|해당 없음|해당 없음|18|0|  
+|`integer`, `bigint`, `tinyint`, `smallint`|해당 사항 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|  
+|`datetime2`|해당 없음|해당 사항 없음|해당 없음|해당 없음|해당 없음|해당 없음|7|  
+|`datetime offset`|해당 없음|해당 사항 없음|해당 사항 없음|해당 없음|해당 없음|해당 없음|7|  
+|`datetime`, `date`, `smalldatetime`|해당 없음|해당 사항 없음|해당 사항 없음|해당 없음|해당 없음|해당 없음|해당 없음|  
+|`money`, `smallmoney`|해당 없음|해당 없음|해당 사항 없음|해당 없음|해당 없음|해당 없음|해당 없음|  
+|`time`|해당 없음|해당 없음|해당 없음|해당 사항 없음|해당 없음|해당 없음|7|  
   
  \*  localeID -1은 기본 로캘을 의미합니다. 영어 로캘은 1033입니다.  
   
@@ -136,7 +135,7 @@ GO
   
 -   스파스 열 또는 열 집합에 대해 REVOKE 문을 실행하면 보안이 기본값인 해당 부모 개체의 보안으로 되돌려집니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예의 Document 테이블에는 `DocID` 및 `Title`열의 공통 집합이 포함되어 있습니다. Production 그룹은 모든 생산 문서에 대한 `ProductionSpecification` 및 `ProductionLocation` 열을 원하며, Marketing 그룹은 마케팅 문서에 대한 `MarketingSurveyGroup` 열을 원합니다.  
   
 ### <a name="a-creating-a-table-that-has-a-column-set"></a>A. 열 집합을 포함하는 테이블 만들기  

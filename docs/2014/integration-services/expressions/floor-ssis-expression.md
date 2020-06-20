@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9addd13deb4dcf3c81a4975e0ed33783799ae2a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93e92395435b229bf613d2d26f5a90b4ca4157ca
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769169"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966643"
 ---
 # <a name="floor-ssis-expression"></a>FLOOR(SSIS 식)
   숫자 식보다 작거나 같은 최대 정수를 반환합니다.  

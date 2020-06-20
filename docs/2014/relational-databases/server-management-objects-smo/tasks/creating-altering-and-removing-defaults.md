@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c30ac3b9-8150-4264-ba4c-c549f44261ab
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dcc29aa897674ae61d6bc5e8a53abe109661ebbc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e741c6a134df9c3a4a3ce7ad90333705631f936
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797163"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055167"
 ---
 # <a name="creating-altering-and-removing-defaults"></a>기본값 생성, 변경 및 제거
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects(SMO)에서 기본 제약 조건은 <xref:Microsoft.SqlServer.Management.Smo.Default> 개체로 표시됩니다.  

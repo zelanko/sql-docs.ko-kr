@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 037e56649d3473e3fe09b9533bcc96b4729870d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196715"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055060"
 ---
 # <a name="table-properties"></a>테이블 속성
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 테이블 속성 편집 대화 상자에 표시된 테이블 속성에 대해 설명합니다. 이러한 속성을 표시하는 방법은 [테이블 정의 보기](view-the-table-definition.md)를 참조하세요.  
@@ -128,7 +127,7 @@ ms.locfileid: "68196715"
  **텍스트 파일 그룹**  
  테이블의 텍스트 데이터가 들어 있는 파일 그룹의 이름입니다.  
   
- **그룹별로**  
+ **파일 그룹**  
  테이블이 있는 파일 그룹의 이름입니다.  
   
  **테이블 분할 여부**  
@@ -141,7 +140,7 @@ ms.locfileid: "68196715"
   
 ### <a name="general"></a>일반  
  **VarDecimal 스토리지 형식을 사용합니다.**  
- 인 `True`경우이 읽기 전용 값은 `decimal` 및 `numeric` 데이터 형식이 vardecimal 저장소 형식을 사용 하 여 저장 됨을 나타냅니다. 이 옵션을 변경 하려면 [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)의 `vardecimal storage format` 옵션을 사용 합니다. VarDecimal 스토리지 형식은 더 이상 사용되지 않습니다. 대신 ROW 압축을 사용하세요.  
+ `True`인 경우이 읽기 전용 값은 `decimal` 및 `numeric` 데이터 형식이 vardecimal 저장소 형식을 사용 하 여 저장 됨을 나타냅니다. 이 옵션을 변경 하려면 `vardecimal storage format` [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)의 옵션을 사용 합니다. VarDecimal 스토리지 형식은 더 이상 사용되지 않습니다. 대신 ROW 압축을 사용하세요.  
   
  **인덱스 공간**  
  테이블의 인덱스가 차지하는 공간의 크기(MB)입니다. 이 값에 테이블에 대한 XML 인덱스 공간 사용량은 포함되지 않습니다. XML 인덱스가 해당 테이블에 속할 경우 [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) 를 대신 사용하세요.  

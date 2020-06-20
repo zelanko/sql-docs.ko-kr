@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 81df03de-219b-4ec1-b3c6-fb861150346e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d6f06cea141c2812e97459b0427d1ceb248688a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69c6dfdf1657e7ddf93905b4f9e880eba23ec1b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095776"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054909"
 ---
 # <a name="database-engine-upgrade-issues"></a>데이터베이스 엔진 업그레이드 문제
   이 섹션의 항목에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 로의 업그레이드에 영향을 줄 수 있는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]문제에 대해 설명하고 이러한 변화가 환경에 미치는 영향을 완화하기 위해 취할 수 있는 조치에 대해 설명합니다.  

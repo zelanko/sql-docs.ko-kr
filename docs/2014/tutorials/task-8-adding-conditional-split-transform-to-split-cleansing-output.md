@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d4ebe420-a4a9-4076-89d3-41abe726fc5c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d5a55f0694094e6fe88a42946bcff34f420210f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57e8738edf77dae56454baba9ffc1b193146b110
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489678"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006336"
 ---
 # <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>태스크 8: 분할 정리 출력에 조건부 분할 변환 추가
   이 변환에서는 데이터 흐름에 조건부 분할 변환을 추가합니다. 조건부 분할 변환은 데이터 내용에 따라 각 행을 서로 다른 출력으로 라우팅할 수 있습니다. 이 자습서에서는 DQS 정리 변환의 **레코드 상태** 출력 열을 사용 합니다. 이 자습서에서는 수정 레코드 또는 수정된 레코드만 MDS 서버에 업로드합니다. 따라서 레코드 **상태가** **올바른지** 또는 **수정**되었는지 확인 하 고 레코드를 MDS에 업로드 하기 전에 결합 합니다.  

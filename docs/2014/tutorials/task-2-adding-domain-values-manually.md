@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa6898db-f54b-4e98-84e4-ac64e48c3561
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 459d0160e9977ed58ebafe5feb9e58eaa5939f72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11d5ab92a0f974e58b48734fc739ba63660a4e5a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65488380"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006660"
 ---
 # <a name="task-2-adding-domain-values-manually"></a>태스크 2: 도메인 값을 수동으로 추가
   이 작업에서는 **Country** 도메인에 대 한 값을 수동으로 추가 합니다. 이 페이지의 필드에 대 한 자세한 내용은 [도메인 값 변경](https://msdn.microsoft.com/library/hh510408.aspx) 항목을 참조 하세요.  

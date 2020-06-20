@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8603ea91-2ec4-40b6-8070-4f824332f5d3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bcf16dc7d63e6a4acca6c30871666d1ffe996192
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 935409eeb7724f4c9807aecc8ec69c4cba0735a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78171722"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006501"
 ---
 # <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>태스크 4: SQL Server Data Tools를 사용하여 SSIS 프로젝트 만들기
   이 작업에서는 공급자 데이터 정리 및 일치를 자동화하기 위해 **SQL Server Data Tools** 를 사용해서 SSIS 프로젝트를 만듭니다.

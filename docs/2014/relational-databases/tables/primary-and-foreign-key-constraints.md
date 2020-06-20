@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fcda1522fdb8be83ec61df04898d19600ad04a3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b6e7b88de880348fabb00cb46d3028716441bc2b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176818"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055125"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>PRIMARY KEY 및 FOREIGN KEY 제약 조건
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 데이터 무결성을 강제 적용하는 데 사용할 수 있는 두 가지 유형의 제약 조건으로 기본 키와 외래 키가 있습니다. 이들 키는 중요한 데이터베이스 개체입니다.
@@ -106,7 +105,7 @@ ms.locfileid: "78176818"
 ##  <a name="related-tasks"></a><a name="Tasks"></a> 관련 작업
  다음 표에서는 기본 키 및 외래 키 제약 조건과 연관된 일반 태스크를 보여 줍니다.
 
-|작업|항목|
+|Task|항목|
 |----------|-----------|
 |기본 키를 만드는 방법에 대해 설명합니다.|[기본 키 만들기](../tables/create-primary-keys.md)|
 |기본 키를 삭제하는 방법에 대해 설명합니다.|[기본 키 삭제](../tables/delete-primary-keys.md)|

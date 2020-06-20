@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 436b4c3d-3f2f-464a-be7e-5c051d9ffb8f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e7a66be0d4e002643ffe1c72ce8c44aa50f61c0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d92406e6bffec0acc2db19b30c5a8ca83834b59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952619"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054871"
 ---
 # <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>배포 검사 목록: 기존 SharePoint 팜에 Reporting Services 설치
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 보고서 서버를 새로운 SharePoint 팜 또는 기존 SharePoint 팜에 설치할 수 있습니다. 이 항목에서는 기존 SharePoint 팜에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 을 설치하기 위한 가능한 시나리오와 최선의 구현 방법에 대해 설명합니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "71952619"
 |보고서 서버 배포에 사용되는 계정을 만들거나 식별합니다. 보고서 서버 서비스용 서비스 계정과 보고서 서버 데이터베이스에 연결하기 위한 자격 증명이 있어야 합니다.||  
 |보고서 서버 데이터베이스를 호스팅할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 결정합니다. 로컬 또는 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 사용할 수 있습니다. 보고서에 맞는 스토리지 용량을 가진 컴퓨터에 있는 인스턴스를 선택해야 합니다.||  
 |구독에 보고서 서버 전자 메일을 사용하려면 조직에 전자 메일 서비스를 제공하는 SMTP 서버 또는 게이트웨이의 이름을 찾습니다(옵션).|[SSRS Configuration Manager &#40;전자 메일 배달에 대 한 보고서 서버 구성&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)|  
-|참고: 이전 CTP 릴리스에서 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 컴퓨터를 업그레이드 하는 경우 구성 파일에 사용자 지정 변경 내용을 적용 한 경우로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]업그레이드 한 후 구성 파일을 동일 하 게 변경 해야 합니다. 관련이 있는 파일은 **web.config** 및 **client.config**입니다.||  
+|참고: 이전 CTP 릴리스에서 컴퓨터를 업그레이드 하는 경우 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 구성 파일에 사용자 지정 변경 내용을 적용 한 경우로 업그레이드 한 후 구성 파일을 동일 하 게 변경 해야 합니다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . 관련이 있는 파일은 **web.config** 및 **client.config**입니다.||  
   
 ## <a name="installation-scenarios"></a>설치 시나리오  
  다음 표에서는 기존 SharePoint 팜에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 을 설치하기 위한 가능한 시나리오에 대해 설명합니다. 로컬 모드에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 통합하지 않고도 SharePoint 문서 라이브러리에서 로컬로 보고서를 렌더링할 수 있습니다. SharePoint 제품용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능은 필요하지만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버는 아닙니다. 로컬 모드에 대 한 자세한 내용은 [보고서 뷰어의 로컬 모드와 연결 된 모드 보고서 &#40;Sharepoint 모드&#41;의 Reporting Services](../../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) 및 [sharepoint 제품용 Reporting Services 추가 기능을 찾을 수 있는 위치](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)를 참조 하세요.  

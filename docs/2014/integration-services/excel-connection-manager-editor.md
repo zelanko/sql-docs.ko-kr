@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ff097e4-cafb-4885-a898-05b2a46628c1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0881624f421cba5bda5d2b0ba8f9d3732efd2497
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08dc39cb21eec03a7cbdc5bd56c68212044dd211
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059264"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966893"
 ---
 # <a name="excel-connection-manager-editor"></a>Excel 연결 관리자 편집기
   **Excel 연결 관리자 편집기** 대화 상자를 사용하여 기존 또는 새 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 통합 문서 파일에 대한 연결을 추가할 수 있습니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "66059264"
  **Excel 버전**  
  파일을 만드는 데 사용된 Microsoft Excel 버전을 지정합니다.  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |Excel 97-2003|Excel 97 이상을 사용하여 파일을 만들었습니다.|  
 |Excel 3.0|파일이 Excel 3.0를 사용 하 여 만들어졌습니다.|  

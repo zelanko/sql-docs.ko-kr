@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a4484f9ccb76ea31c95a5392570e18df2c4b0ff5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 184865166da659ae00308eb1192e832989949da6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67792909"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061624"
 ---
 # <a name="create-the-finance-name-policy"></a>Finance Name 정책 만들기
    이 태스크에서는 Finance라는 데이터베이스를 만든 다음 모든 테이블이 **fintbl**로 시작하도록 지정하는 조건을 만듭니다. 그런 다음 Finance 데이터베이스의 테이블에 대한 명명 표준을 적용하는 정책 및 정책 범주를 만듭니다.  
@@ -39,7 +38,7 @@ ms.locfileid: "67792909"
   
 3.  **패싯** 목록에서 **여러 부분으로 구성된 이름**을 선택합니다.  
   
-4.  **식** 영역의 **필드** 상자에서 ** \@Name**;을 선택 합니다. **연산자** 상자에서 **Like**를 선택 합니다. 그런 다음 **값** 상자에 **' fintbl% '** 를 입력 하 여 모든 테이블 이름이 문자 **fintbl**로 시작 되도록 강제 합니다.  
+4.  **식** 영역의 **필드** 상자에서 ** \@ 이름**을 선택 하 고 **연산자** 상자에서 **Like**를 선택한 다음 **값** 상자에 **' fintbl% '** 를 입력 하 여 모든 테이블 이름이 문자 **fintbl**로 시작 되도록 합니다.  
   
 5.  **설명** 페이지에서 **Finance table names must begin with fintbl**을 입력한 다음 **확인** 을 클릭하여 조건을 만듭니다.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "67792909"
   
 6.  **새 조건 만들기** 대화 상자의 **이름** 상자에 **Finance Database**를 입력합니다.  
   
-7.  **식** 상자에서 ** \@Name = ' 재무 '** 를 포함 하도록 식을 완성 한 다음 **확인** 을 클릭 하 여 조건 페이지를 닫습니다.  
+7.  **식** 상자에서 ** \@ Name = ' 재무 '** 를 포함 하도록 식을 완성 한 다음 **확인** 을 클릭 하 여 조건 페이지를 닫습니다.  
   
     > [!NOTE]  
     >  **값** 상자에서 Tab 키를 눌러 **확인** 단추를 활성화해야 할 수도 있습니다.  
@@ -74,7 +73,7 @@ ms.locfileid: "67792909"
   
 1.  개체 탐색기에서 **관리**를 확장하고 **정책 관리**를 마우스 오른쪽 단추로 클릭한 다음 **범주 관리**를 클릭합니다.  
   
-2.  **정책 범주 관리** 대화 상자의 **이름**에서 빈 상자에를 입력 `Finance` 한 다음 **데이터베이스 구독 위임**의 선택을 취소 합니다. **데이터베이스 구독 위임** 을 선택하면 해당 인스턴스에 있는 모든 데이터베이스가 이 정책 범주에 속하는 정책을 구독하게 됩니다. 따라서 Finance 데이터베이스만 Finance Name 정책을 구독해야 합니다.  
+2.  **정책 범주 관리** 대화 상자의 **이름**에서 `Finance` 빈 상자에를 입력 한 다음 **데이터베이스 구독 위임**의 선택을 취소 합니다. **데이터베이스 구독 위임** 을 선택하면 해당 인스턴스에 있는 모든 데이터베이스가 이 정책 범주에 속하는 정책을 구독하게 됩니다. 따라서 Finance 데이터베이스만 Finance Name 정책을 구독해야 합니다.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

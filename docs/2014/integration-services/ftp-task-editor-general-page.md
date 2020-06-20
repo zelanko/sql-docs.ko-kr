@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ad2605902cb523c0147888e4aedee0df3c9f936e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02ffd6309ae31f538fecdf6af2cb8475608d6cf5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058427"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966340"
 ---
 # <a name="ftp-task-editor-general-page"></a>FTP 태스크 편집기(일반 페이지)
   **FTP 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 태스크가 통신하는 FTP 서버에 연결하는 FTP 연결 관리자를 지정할 수 있습니다. 또한 FTP 태스크를 명명 및 설명할 수 있습니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "66058427"
   
 ## <a name="options"></a>옵션  
  **FtpConnection**  
- 기존 FTP 연결 관리자를 선택 하거나 \< **새 연결** ...>을 클릭 하 여 연결 관리자를 만듭니다.  
+ 기존 FTP 연결 관리자를 선택 하거나를 클릭 \<**New connection...**> 하 여 연결 관리자를 만듭니다.  
   
 > [!IMPORTANT]  
 >  FTP 연결 관리자는 익명 인증과 기본 인증만 지원하며 Windows 인증은 지원하지 않습니다.  
