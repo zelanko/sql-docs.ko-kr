@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dcebe499eb80fbe01b9aa36a4e07785846eaf621
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a476770e120cd620f01096cc20f9eab7f9f4404
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058367"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966313"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>유사 항목 그룹화 변환 편집기(고급 탭)
   **유사 항목 그룹화 변환 편집기** 대화 상자의 **고급** 탭을 사용하여 입/출력 열을 지정하고, 유사성 임계값을 설정하고, 구분 기호를 정의할 수 있습니다.  
   
 > [!NOTE]  
->  유사 `Exhaustive` 항목 그룹화 `MaxMemoryUsage` 변환의 및 속성은 **유사 항목 그룹화 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용 하 여 설정할 수 있습니다. 이러한 속성에 대한 자세한 내용은 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)의 유사 항목 그룹화 변환 섹션을 참조하십시오.  
+>  유사 `Exhaustive` `MaxMemoryUsage` 항목 그룹화 변환의 및 속성은 **유사 항목 그룹화 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용 하 여 설정할 수 있습니다. 이러한 속성에 대한 자세한 내용은 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)의 유사 항목 그룹화 변환 섹션을 참조하십시오.  
   
  유사 항목 그룹화 변환에 대한 자세한 내용은 [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md)을 참조하십시오.  
   

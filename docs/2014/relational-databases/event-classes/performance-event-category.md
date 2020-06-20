@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 708f3585-d8be-4980-bbff-672d7c59397e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b7f387145077e5a562279b6c72bc0f7eefadde36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0c076a4132298797313ecbf0874d9d2d4e453cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023301"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052806"
 ---
 # <a name="performance-event-category"></a>Performance 이벤트 범주
   **Performance** 이벤트 범주를 사용하여 **Showplan** 이벤트 클래스 및 SQL DML(데이터 조작 언어) 연산자 실행으로 생성된 이벤트 클래스를 모니터링할 수 있습니다.  

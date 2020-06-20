@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e8b09ee01da2dde8e8bf50fbda21c1c8bca1689d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be36167020b96dba6d494685d958c38e0e6afbba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011942"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050491"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>BULK INSERT 또는 OPENROWSET(BULK...)를 사용하여 데이터 대량 가져오기
   이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT 문 및 INSERT...SELECT * FROM OPENROWSET(BULK...) 문을 사용하여 데이터 파일의 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 대량으로 가져오는 방법을 간략하게 설명합니다. 또한 BULK INSERT 및 OPENROWSET(BULK…)을 사용할 때와 이러한 방법을 사용하여 원격 데이터 원본에서 데이터를 대량으로 가져올 때의 보안 고려 사항에 대해서도 설명합니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "66011942"
 ## <a name="bulk-insert-statement"></a>BULK INSERT 문  
  BULK INSERT는 데이터 파일의 데이터를 테이블로 로드합니다. 이 기능은 **bcp** 명령의 **in** 옵션이 제공하는 기능과 유사하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에서 데이터 파일을 읽는다는 점이 다릅니다. BULK INSERT 구문에 대한 자세한 내용은 [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)를 참조하세요.  
   
-### <a name="examples"></a>예  
+### <a name="examples"></a>예제  
  BULK INSERT 예를 보려면 다음을 참조하십시오.  
   
 -   [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)  
@@ -75,7 +74,7 @@ ms.locfileid: "66011942"
   
  BULK 옵션의 추가 사용법에 대한 자세한 내용은 [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)를 참조하세요.  
   
-### <a name="examples"></a>예  
+### <a name="examples"></a>예제  
  INSERT...SELECT * FROM OPENROWSET(BULK...) 문의 예는 다음 항목을 참조하십시오.  
   
 -   [XML 문서 대량 가져오기 및 내보내기 예제&#40;SQL Server&#41;](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
@@ -94,7 +93,7 @@ ms.locfileid: "66011942"
   
 -   [서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑&#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="security-considerations"></a>보안 고려 사항  
+## <a name="security-considerations"></a>보안 고려사항  
  사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 계정의 보안 프로필이 사용됩니다. SQL Server 인증을 사용하는 로그인은 데이터베이스 엔진 외부에서 인증될 수 없습니다. 따라서 BULK INSERT 명령이 SQL Server 인증을 사용하는 로그인에 의해 시작되면 데이터에 대한 연결이 SQL Server 프로세스 계정(SQL Server 데이터베이스 엔진 서비스에서 사용하는 계정)의 보안 컨텍스트를 사용하여 설정됩니다. 원본 데이터를 성공적으로 읽으려면 SQL Server 데이터베이스 엔진에서 사용하는 계정에 원본 데이터에 대한 액세스 권한을 부여해야 합니다. 반면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자가 Windows 인증을 사용하여 로그온한 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 보안 프로필에 관계없이 해당 사용자 계정으로 액세스할 수 있는 파일만 읽을 수 있습니다.  
   
  예를 들어 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로그온한 사용자가 있다고 가정합니다. 이 사용자가 BULK INSERT 또는 OPENROWSET을 사용하여 데이터 파일의 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로 가져오려면 사용자 계정에 해당 데이터 파일에 대한 읽기 액세스 권한이 있어야 합니다. 해당 데이터 파일에 대한 액세스 권한이 있는 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에 해당 파일에 대한 액세스 권한이 없더라도 해당 파일의 데이터를 테이블로 가져올 수 있습니다. 이때 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에 파일 액세스 권한을 부여할 필요가 없습니다.  
@@ -121,7 +120,7 @@ GO
  [데이터 대량 가져오기 및 내보내기&#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
  [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [SELECT&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
- [&#40;Transact-sql&#41;](/sql/t-sql/queries/from-transact-sql)   
+ [FROM&#40;Transact-SQL&#41;](/sql/t-sql/queries/from-transact-sql)   
  [bcp 유틸리티](../../tools/bcp-utility.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)  
   

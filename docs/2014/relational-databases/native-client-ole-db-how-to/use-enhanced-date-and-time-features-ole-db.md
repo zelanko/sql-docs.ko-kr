@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 70477e5fc741949a42aa5eebfd7a1d0a2b3568b6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 19fcfb169eeeb5e877cf70f1ea675e07be9f37d0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82696232"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049662"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>향상된 날짜 및 시간 기능 사용(OLE DB)
   이 예제에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에 도입된 날짜/시간 기능을 사용하는 방법을 보여 줍니다. 이 샘플에서는 네 가지 새로운 날짜 및 시간 형식 ( `date` , **time**, 및)을 사용 하 여 `datetime2` `datetimeoffset` 매개 변수가 있는 명령을 실행 하 고 행 집합 결과를 검색 합니다.  

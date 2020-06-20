@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4d38e6e9-f95f-4e79-ae45-89f631037528
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 937485df231bcff089157bd8fee05ebd913a4ff4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad2a8c4a365894d17508d47816eaaecc8333b94e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63459859"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057910"
 ---
 # <a name="protocols-for-mssqlserver-properties-flags-tab"></a>MSSQLSERVER에 대한 프로토콜 속성(플래그 탭)
   서버에 인증서가 설치되어 있으면 **MSSQLSERVER에 대한 프로토콜 속성** 대화 상자의 **플래그** 탭을 사용하여 프로토콜 암호화를 확인 또는 지정할 수 있으며 인스턴스 옵션을 숨길 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설정을 활성화하거나 비활성화하려면 **ForceEncryption**을 다시 시작해야 합니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "63459859"
  로그인 프로세스는 항상 암호화됩니다. **ForceEncryption** 을 **예**로 설정하면 모든 클라이언트/서버 통신이 암호화되며, [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 연결하는 클라이언트가 서버 인증서의 루트 인증 기관을 신뢰하도록 구성되어야 합니다. 자세한 내용은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 온라인 설명서에서 "방법:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 암호화 연결 사용( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자)"을 참조하세요.  
   
 ## <a name="cluster-servers"></a>클러스터 서버  
- 장애 조치(failover) 클러스터에서 암호화를 사용하려면 장애 조치 클러스터의 모든 노드에 있는 가상 서버의 정규화된 DNS 이름으로 서버 인증서를 설치해야 합니다. 예를 들어 노드의 이름이 "test1. *\<your company>* .com" 및 "test2. *\<your company>* .com"인 두 노드 클러스터와 "virtsql"이라는 가상 서버가 있는 경우 "virtsql. *\<your company>* .com"에 대한 인증서를 두 노드에 모두 설치해야 합니다. 그런 다음 **SQL Server 구성 관리자** 의 **ForceEncryption** 확인란을 선택하여 장애 조치 클러스터에 암호화를 구성해야 합니다.  
+ 장애 조치(failover) 클러스터에서 암호화를 사용하려면 장애 조치 클러스터의 모든 노드에 있는 가상 서버의 정규화된 DNS 이름으로 서버 인증서를 설치해야 합니다. 예를 들어 노드 이름이 "test1.." 인 두 노드 클러스터가 있는 경우입니다. *\<your company>* com "및" *\<your company>* test2. com "및" virtsql "라는 가상 서버는" virtsql "에 대 한 인증서를 설치 해야 합니다 *\<your company>* . com "의 두 노드에 있습니다. 그런 다음 **SQL Server 구성 관리자** 의 **ForceEncryption** 확인란을 선택하여 장애 조치 클러스터에 암호화를 구성해야 합니다.  
   
 ## <a name="options"></a>옵션  
  **ForceEncryption**  
@@ -41,6 +40,6 @@ ms.locfileid: "63459859"
  **HideInstance**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 찾아보기 **단추를 사용하여 인스턴스를 찾으려고 하는 클라이언트 컴퓨터에 이** 인스턴스를 노출하지 않도록 합니다. 연결할 서버에 있는 명명된 인스턴스의 경우 클라이언트 애플리케이션에서 프로토콜 엔드포인트 정보를 지정해야 합니다. 예를 들어 `tcp:server,5000`과 같이 포트 번호나 명명된 파이프 이름을 지정해야 합니다. 자세한 내용은 [Logging In to SQL Server](../../database-engine/configure-windows/logging-in-to-sql-server.md)을 참조하세요.  
   
- 자세한 내용은 온라인 설명서의 “방법: 데이터베이스 엔진에 암호화 연결 사용(SQL Server 구성 관리자)”을 참조하세요.  
+ 자세한 내용은 온라인 설명서에서 “방법: 데이터베이스 엔진에 암호화 연결 사용(SQL Server 구성 관리자)”을 참조하세요.  
   
   

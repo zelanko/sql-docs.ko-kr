@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6a76517e-983b-47a1-8f02-661b99859a8b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f880dcacbd4571c188d0368a0378a89c45787af2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d3f78c3c97c5bbe862867d5f51ff35f57d147df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011720"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026348"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>서식 파일을 사용하여 데이터 필드 건너뛰기(SQL Server)
   데이터 파일에는 테이블의 열 수보다 많은 필드를 둘 수 있습니다. 이 항목에서는 테이블 열을 해당 데이터 필드에 매핑하고 나머지 필드는 무시하는 방법으로 데이터 파일에 더 많은 필드를 수용하도록 비 XML 서식 파일과 XML 서식 파일 모두를 수정하는 방법에 대해 설명합니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66011720"
  이 항목의 수정된 서식 파일의 예는 다음 테이블 및 데이터 파일을 기준으로 합니다.  
   
 ### <a name="sample-table"></a>예제 테이블  
- 이 예에서는 `myTestSkipField` 스키마의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 예제 데이터베이스에 생성된 `dbo` 라는 테이블이 필요하며 이 테이블을 만들려면 쿼리 편집기 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 다음 코드를 실행 합니다.  
+ 이 예에서는 `myTestSkipField` 스키마의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 예제 데이터베이스에 생성된 `dbo` 라는 테이블이 필요하며 이 테이블을 만들려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음 코드를 실행 합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -81,7 +80,7 @@ GO
 > [!NOTE]  
 >  비 XML 서식 파일 구문에 대한 자세한 내용은 [비 XML 서식 파일&#40;SQL Server&#41;](xml-format-files-sql-server.md)을 참조하세요.  
   
-### <a name="examples"></a>예  
+### <a name="examples"></a>예제  
  다음 예에서는 `INSERT ... SELECT * FROM OPENROWSET(BULK...)` 서식 파일을 사용하는 `myTestSkipField.fmt` 을 사용합니다. 또한 `myTestSkipField-c.dat` 데이터 파일을 `myTestSkipField` 테이블로 대량 가져옵니다. 예제 테이블 및 데이터 파일을 만들려면 이 항목의 앞부분에 나오는 "예제 데이터 파일 및 테이블"을 참조하십시오.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음 코드를 실행합니다.  
@@ -121,7 +120,7 @@ GO
 </BCPFORMAT>  
 ```  
   
-### <a name="examples"></a>예  
+### <a name="examples"></a>예제  
  다음 예에서는 `INSERT ... SELECT * FROM OPENROWSET(BULK...)` 서식 파일을 사용하는 `myTestSkipField.Xml` 을 사용합니다. 또한 `myTestSkipField-c.dat` 데이터 파일을 `myTestSkipField` 테이블로 대량 가져옵니다. 예제 테이블 및 데이터 파일을 만들려면 이 항목의 앞부분에 나오는 "예제 데이터 파일 및 테이블"을 참조하십시오.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음 코드를 실행합니다.  

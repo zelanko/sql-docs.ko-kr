@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c0e187c1-cbd9-463c-b417-8a734574f102
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 892dd145ea19c40bada704387a4b2408e84d9522
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7b16491b9a3729ad4df71c7ddceaee6db21777ff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718941"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049948"
 ---
 # <a name="simulating-an-exists-clause-in-a-natively-compiled-stored-procedure"></a>고유하게 컴파일된 저장 프로시저의 EXISTS 절 시뮬레이션
   고유하게 컴파일된 저장 프로시저는 `EXISTS` 절을 지원하지 않지만 해결 방법이 있습니다.  

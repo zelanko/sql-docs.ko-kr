@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2300e9cf-f0a8-49e6-b1f5-45ffe03ccb5f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fbf267591ccd85b31bd8436a773e2337e292d0b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72db4beceba50cac053e3d3a6fcadafa3cf28663
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62866218"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011508"
 ---
 # <a name="name-element-for-index-dta"></a>Index의 Name 요소(DTA)
   사용자 지정 구성에서 인덱스의 이름을 지정합니다.  

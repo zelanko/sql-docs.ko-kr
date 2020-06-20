@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6220d6650d2be81cad3f38862ba74213219a28a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80a29b8e8cc5b53c09369156a5cf5f717e9447a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175945"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050026"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *메모리 내 columnstore 인덱스* 는 열 기반 데이터 저장소 및 열 기반 쿼리 처리를 사용 하 여 데이터를 저장 하 고 관리 합니다. columnstore 인덱스는 주로 대량 로드 및 읽기 전용 쿼리를 수행하는 데이터 웨어하우징 작업에 효과적입니다. columnstore 인덱스를 사용하면 기존의 행 기반 스토리지보다 최대 **10배의 쿼리 성능** 이익과 압축되지 않은 데이터 크기보다 최대 **7배의 데이터 압축** 을 얻을 수 있습니다.
@@ -42,7 +41,7 @@ ms.locfileid: "78175945"
 ##  <a name="basics"></a><a name="basics"></a>기본 사항
  *columnstore index* 는 columnstore라는 칼럼 데이터 형식을 사용하여 데이터를 저장, 검색 및 관리하는 기술입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 클러스터형 columnstore 인덱스와 비클러스터형 columnstore 인덱스를 모두 지원합니다. 둘 다 동일한 메모리 내 columnstore 기술을 사용하지만 용도와 지원 기능에 차이가 있습니다.
 
-###  <a name="benefits"></a><a name="benefits"></a>아니라
+###  <a name="benefits"></a><a name="benefits"></a> 이점
  columnstore 인덱스는 대개 큰 데이터 집합을 분석하는 읽기 전용 쿼리에 적합합니다. 주로 데이터 웨어하우징 작업에 대한 쿼리가 여기에 해당합니다. columnstore 인덱스는 전체 테이블 검색을 사용하는 쿼리에는 뛰어난 성능을 제공하지만 특정 값을 찾아 데이터를 검색하는 쿼리에는 부적합합니다.
 
  columnstore 인덱스의 이점:
@@ -193,7 +192,7 @@ ms.locfileid: "78175945"
 
 -   [ALTER INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql) (다시 작성).
 
--   [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)
+-   [DROP INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)
 
 ### <a name="clustered-columnstore-indexes"></a>클러스터형 columnstore 인덱스
  일반 태스크는 [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)을 참조하세요.
@@ -202,7 +201,7 @@ ms.locfileid: "78175945"
 
 -   [ALTER INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql) 다시 작성 하거나 다시 구성 합니다.
 
--   [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)
+-   [DROP INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)
 
 -   [INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)
 

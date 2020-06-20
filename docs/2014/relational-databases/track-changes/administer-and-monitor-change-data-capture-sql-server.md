@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 467cb4dab267b04965058f118d798bdd5a7b0909
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d97929ead145d1b0de1a1f83becb15ade397683
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929189"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048930"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>변경 데이터 캡처 관리 및 모니터링(SQL Server)
   이 항목에서는 변경 데이터 캡처를 관리 및 모니터링하는 방법에 대해 설명합니다.  
@@ -37,10 +36,10 @@ ms.locfileid: "76929189"
  *maxscans* 매개 변수는 반환(continuous = 0) 또는 waitfor 실행(continuous = 1) 전에 로그를 비우기 위해 시도되는 검색 주기의 최대 수를 지정합니다.  
   
 #### <a name="continuous-parameter"></a>continuous 매개 변수  
- *연속* 매개 변수는 로그 `sp_cdc_scan` 를 드레이닝 하거나 최대 검색 주기 수 (하나의 샷 모드)를 실행 한 후에의 내어 줍니다 제어 하는지 여부를 제어 합니다. 또한 명시적으로 중지될 때까지 `sp_cdc_scan`을 계속 실행할지도 지정합니다(연속 모드).  
+ *연속* 매개 변수는 `sp_cdc_scan` 로그를 드레이닝 하거나 최대 검색 주기 수 (하나의 샷 모드)를 실행 한 후에의 내어 줍니다 제어 하는지 여부를 제어 합니다. 또한 명시적으로 중지될 때까지 `sp_cdc_scan`을 계속 실행할지도 지정합니다(연속 모드).  
   
 ##### <a name="one-shot-mode"></a>단발 모드  
- 단일 샷 모드에서 캡처 작업은 *maxtrans* 검색 `sp_cdc_scan` 을 수행 하 여 로그를 비우고 반환 하도록 요청 합니다. 로그에 있는 *maxtrans* 와 모든 트랜잭션은 이후 검색에서 처리됩니다.  
+ 단일 샷 모드에서 캡처 작업은 `sp_cdc_scan` *maxtrans* 검색을 수행 하 여 로그를 비우고 반환 하도록 요청 합니다. 로그에 있는 *maxtrans* 와 모든 트랜잭션은 이후 검색에서 처리됩니다.  
   
  단발 모드는 처리할 트랜잭션 양이 알려져 있고 작업이 종료된 후 자동으로 닫히면 이점을 얻을 수 있는 제어된 테스트 환경에서 사용됩니다. 프로덕션 환경에서는 단발 모드를 사용하지 않는 것이 좋습니다. 프로덕션 환경은 검색 주기의 실행 빈도를 관리하는 작업 일정에 의존하기 때문입니다.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "76929189"
 ### <a name="structure-of-the-cleanup-job"></a>정리 작업의 구조  
  변경 데이터 캡처는 보존 기반 정리 전략을 사용하여 변경 테이블 크기를 관리합니다. 정리 메커니즘은 첫 번째 데이터베이스 테이블이 설정될 때 생성되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업으로 구성됩니다. 단일 정리 작업은 모든 데이터베이스 변경 테이블의 정리를 처리하며 정의된 모든 캡처 인스턴스에 대해 동일한 보존 값을 적용합니다.  
   
- 정리 작업은 매개 변수가 없는 저장 프로시저인 `sp_MScdc_cleanup_job`을 실행하여 시작됩니다. 이 저장 프로시저는 먼저 `msdb.dbo.cdc_jobs`에서 정리 작업에 대해 구성된 보존 값 및 임계값을 추출합니다. 보존 값은 변경 테이블의 새로운 하위 워터마크를 컴퓨팅하는 데 사용됩니다. 지정 된 시간 (분)을 `cdc.lsn_time_mapping` 테이블의 최대 *tran_end_time* 값에서 빼서 datetime 값으로 표현 된 새 하위 워터 마크를 가져옵니다. 그런 다음 CDC.lsn_time_mapping 테이블을 사용하여 이 datetime 값을 해당 `lsn` 값으로 변환합니다. 테이블의 여러 항목에서 동일한 커밋 시간을 공유하는 경우에는 최소 `lsn`이 있는 항목에 해당하는 `lsn`을 새로운 하위 워터마크로 선택합니다. 이 `lsn` 값을 `sp_cdc_cleanup_change_tables`로 전달하여 데이터베이스 변경 테이블에서 변경 테이블 항목을 제거합니다.  
+ 정리 작업은 매개 변수가 없는 저장 프로시저인 `sp_MScdc_cleanup_job`을 실행하여 시작됩니다. 이 저장 프로시저는 먼저 `msdb.dbo.cdc_jobs`에서 정리 작업에 대해 구성된 보존 값 및 임계값을 추출합니다. 보존 값은 변경 테이블의 새로운 하위 워터마크를 컴퓨팅하는 데 사용됩니다. 지정 된 시간 (분)을 테이블의 최대 *tran_end_time* 값에서 빼서 `cdc.lsn_time_mapping` datetime 값으로 표현 된 새 하위 워터 마크를 가져옵니다. 그런 다음 CDC.lsn_time_mapping 테이블을 사용하여 이 datetime 값을 해당 `lsn` 값으로 변환합니다. 테이블의 여러 항목에서 동일한 커밋 시간을 공유하는 경우에는 최소 `lsn`이 있는 항목에 해당하는 `lsn`을 새로운 하위 워터마크로 선택합니다. 이 `lsn` 값을 `sp_cdc_cleanup_change_tables`로 전달하여 데이터베이스 변경 테이블에서 변경 테이블 항목을 제거합니다.  
   
 > [!NOTE]  
 >  최근 트랜잭션의 커밋 시간을 기반으로 새로운 하위 워터마크를 계산하는 방법은 지정된 시간 동안 변경 테이블에 변경 내용을 보관할 수 있는 이점이 있습니다. 이는 캡처 프로세스가 실행 중인 경우에도 마찬가지입니다. 실제 하위 워터마크와 커밋 시간을 공유하는 최소 `lsn`을 선택하면 현재 하위 워터마크와 커밋 시간이 동일한 모든 항목이 변경 테이블 내에 계속 표시됩니다.  
@@ -105,7 +104,7 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
 ### <a name="use-data-collector-to-collect-sampling-data"></a>데이터 수집기를 사용하여 샘플링 데이터 수집  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 수집기를 사용하면 모든 테이블 또는 동적 관리 뷰에서 데이터에 대한 스냅샷을 수집하고 성능 데이터 웨어하우스를 구축할 수 있습니다. 데이터베이스에 변경 데이터 캡처가 설정된 경우 나중에 분석할 수 있도록 sys.dm_cdc_log_scan_sessions 뷰 및 sys.dm_cdc_errors 뷰의 스냅샷을 정기적으로 수집하는 것이 좋습니다. 다음 절차에서는 sys.dm_cdc_log_scan_sessions 관리 뷰에서 샘플 데이터를 수집하도록 데이터 수집기를 설정합니다.  
   
- **데이터 컬렉션 구성**  
+ **데이터 수집 구성**  
   
 1.  데이터 수집기를 설정하고 및 관리 데이터 웨어하우스를 구성합니다. 자세한 내용은 [데이터 컬렉션 관리](../data-collection/data-collection.md)를 참조하세요.  
   

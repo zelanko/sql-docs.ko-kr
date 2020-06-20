@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 746aed7f49b0db51f46a32fdf040eb5b9e968dd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50c9419911f83c98fba5baf0f995ffbeafb916ad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768028"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965653"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>대상 선택(SQL Server 가져오기 및 내보내기 마법사)
   **대상 선택** 페이지를 사용하여 복사할 데이터의 대상을 지정할 수 있습니다.  
@@ -60,7 +59,7 @@ ms.locfileid: "62768028"
  **새로 고침**  
  **새로 고침**을 클릭하여 사용 가능한 데이터베이스 목록을 복원합니다.  
   
- **신규**  
+ **새 항목**  
  **데이터베이스 만들기** 대화 상자를 사용하여 새 대상 데이터베이스를 만듭니다.  
   
 ### <a name="destination--flat-file-destination"></a>대상 = 플랫 파일 대상  
@@ -70,19 +69,19 @@ ms.locfileid: "62768028"
  **찾아보기**  
  **열기** 대화 상자를 사용하여 파일을 찾습니다.  
   
- **로캘을**  
+ **Locale**  
  문자 정렬 순서와 날짜 및 시간 형식을 정의하는 로캘 ID(LCID)를 지정합니다.  
   
- **유니코드(Unicode)**  
+ **유니코드**  
  유니코드를 사용할지 여부를 나타냅니다. 유니코드를 사용하면 코드 페이지를 지정할 필요가 없습니다.  
   
  **코드 페이지**  
  사용할 언어의 코드 페이지를 지정합니다.  
   
- **형식과**  
+ **Format**  
  구분 기호로 분리됨, 고정 폭, 왼쪽 정렬 중 어떤 서식을 사용할지를 지정합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |구분됨|**열** 페이지에 지정된 구분 기호로 열을 구분합니다.|  
 |고정 폭|열에 고정 폭이 지정됩니다.|  
@@ -97,10 +96,10 @@ ms.locfileid: "62768028"
 ### <a name="destination--microsoft-excel"></a>대상 = Microsoft Excel  
   
 > [!NOTE]  
->  Excel 2003 또는 이전 버전을 사용하는 데이터 원본에 연결하려는 경우에만 **Microsoft Excel** 을 선택하십시오. Excel 2007를 사용 하는 데이터 원본에 연결 하려면 **Microsoft Office 12.0 Access 데이터베이스 엔진 OLE DB 공급자**를 선택 하 **고 속성**을 클릭 한 다음 **데이터 연결 속성** 대화 상자의 **모두** 탭에서 **확장 속성**에을 입력 `Excel 12.0`합니다.  
+>  Excel 2003 또는 이전 버전을 사용하는 데이터 원본에 연결하려는 경우에만 **Microsoft Excel** 을 선택하십시오. Excel 2007를 사용 하는 데이터 원본에 연결 하려면 **Microsoft Office 12.0 Access 데이터베이스 엔진 OLE DB 공급자**를 선택 하 **고 속성**을 클릭 한 다음 **데이터 연결 속성** 대화 상자의 **모두** 탭에서 **확장 속성**에을 입력 `Excel 12.0` 합니다.  
   
  **Excel 파일 경로**  
- 데이터를 저장할 통합 문서의 경로 및 파일 이름 (예: C:\MyData.xls, \\\Sales\Database\Northwind.xls)을 지정 합니다. 또는 **찾아보기** 를 클릭하여 통합 문서를 찾습니다.  
+ 데이터를 저장할 통합 문서의 경로 및 파일 이름을 지정 합니다 (예: C:\MyData.xls \\\Sales\Database\Northwind.xls). 또는 **찾아보기** 를 클릭하여 통합 문서를 찾습니다.  
   
  **찾아보기**  
  **열기** 대화 상자를 사용하여 Excel 통합 문서를 찾습니다.  
@@ -117,7 +116,7 @@ ms.locfileid: "62768028"
 >  Access 2003 또는 이전 버전을 사용하는 데이터베이스에 연결하려는 경우에만 **Microsoft Access** 를 선택하십시오. Access 2007을 사용하는 데이터베이스에 연결하려면 **Microsoft Office 12.0 Access Database Engine OLE DB Provider**를 선택하십시오.  
   
  **파일 이름**  
- 데이터를 저장할 데이터베이스 파일의 경로 및 파일 이름 (예: C:\MyData.mdb, \\\Sales\Database\Northwind.mdb)을 지정 합니다. 또는 **찾아보기** 를 클릭하여 데이터베이스 파일을 찾습니다.  
+ 데이터를 저장할 데이터베이스 파일의 경로 및 파일 이름 (예: C:\MyData.mdb, \Sales\Database\Northwind.mdb)을 지정 합니다 \\ . 또는 **찾아보기** 를 클릭하여 데이터베이스 파일을 찾습니다.  
   
  **찾아보기**  
  **열기** 대화 상자를 사용하여 해당 데이터베이스 파일을 찾습니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e762c1999a4206d5277050934e82b5d5d5c59371
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 14a57452c7b2f5234e230665734d5048b5421b51
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82715124"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050136"
 ---
 # <a name="implementing-merge-functionality"></a>MERGE 기능 구현
   데이터베이스에 특정 행 이 이미 있는지 여부에 따라 데이터베이스에서 삽입 또는 업데이트를 수행해야 할 수 있습니다.  

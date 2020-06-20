@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ed2f620-6511-4985-9961-d2927c2b1759
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eaad0a80fd77257c6e79e092733d75c0c8df5df5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56af8e7de291c81736d2b83abf8a31a972653c8f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827084"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052785"
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed 이벤트 클래스
   PreConnect:Completed 이벤트 클래스는 LOGON 트리거나 리소스 관리자 분류자 함수가 언제 실행을 종료하는지 표시합니다.  

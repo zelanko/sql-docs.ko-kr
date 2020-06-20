@@ -22,16 +22,15 @@ helpviewer_keywords:
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2f3ce90e2670357d0842b0a6ac7838f396465bab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55c621f9f345f0863e6656b66a77a8ccc439b0bc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768169"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965623"
 ---
 # <a name="sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사
-  가져오기 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 내보내기 마법사는 원본에서 대상으로 데이터를 복사 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 하는 패키지를 만드는 가장 간단한 방법을 제공 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가져오기 및 내보내기 마법사는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 원본에서 대상으로 데이터를 복사 하는 패키지를 만드는 가장 간단한 방법을 제공 합니다.  
   
 > [!NOTE]  
 >  64비트 컴퓨터의 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 64비트 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사(DTSWizard.exe)를 설치합니다. 그러나 Access 또는 Excel 등의 일부 데이터 원본은 32비트 공급자만 제공합니다. 이러한 데이터 원본을 사용하려면 32비트 버전의 마법사를 설치하여 실행해야 합니다. 32비트 버전의 마법사를 설치하려면 설치 도중 클라이언트 도구 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 선택합니다.  
@@ -50,7 +49,7 @@ ms.locfileid: "62768169"
   
  일부 마법사 기능은 마법사를 시작하는 환경에 따라 다르게 작동합니다.  
   
--   에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]가져오기 및 내보내기 마법사를 시작 하는 경우 **즉시 실행** 확인란을 선택 하 여 패키지를 즉시 실행 합니다. 기본적으로 이 확인란이 선택되어 있으므로 패키지가 즉시 실행됩니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 가져오기 및 내보내기 마법사를 시작 하는 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **즉시 실행** 확인란을 선택 하 여 패키지를 즉시 실행 합니다. 기본적으로 이 확인란이 선택되어 있으므로 패키지가 즉시 실행됩니다.  
   
      패키지를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장할지, 아니면 파일 시스템에 저장할지를 결정할 수도 있습니다. 패키지를 저장하도록 선택할 경우에는 패키지 보호 수준도 지정해야 합니다. 패키지 보호 수준에 대 한 자세한 내용은 [패키지의 중요 한 데이터에 대 한 Access Control](../security/access-control-for-sensitive-data-in-packages.md)를 참조 하세요.  
   
@@ -74,12 +73,12 @@ ms.locfileid: "62768169"
   
 -   새 대상 데이터베이스나 테이블 또는 파일을 만들려는 경우 새 데이터베이스나 테이블 또는 파일을 만들 수 있는 권한. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CREATE DATABASE 또는 CREATE TABLE 권한이 필요합니다.  
   
--   마법사로 만든 패키지를 저장하려는 경우 msdb 데이터베이스나 파일 시스템에 쓸 수 있는 권한. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 msdb 데이터베이스에 대 한 INSERT 권한이 필요 합니다.  
+-   마법사로 만든 패키지를 저장하려는 경우 msdb 데이터베이스나 파일 시스템에 쓸 수 있는 권한. 에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb 데이터베이스에 대 한 INSERT 권한이 필요 합니다.  
   
 ## <a name="mapping-data-types-in-the-import-and-export-wizard"></a>가져오기 및 내보내기 마법사에서 데이터 형식 매핑  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사는 최소한의 변환 기능을 제공합니다. 새로운 대상 테이블 및 파일에서 열의 이름, 데이터 형식 및 데이터 형식 속성을 설정하는 것 이외의 열 수준 변환은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서 지원되지 않습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 제공되는 매핑 파일을 사용하여 데이터베이스 버전 또는 시스템 간에 데이터 형식을 매핑합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 Oracle로 매핑할 수 있습니다. XML 형식의 매핑 파일은 기본적으로 C:\Program Files\Microsoft SQL Server\100\DTS\MappingFiles에 설치됩니다. 비즈니스에서 데이터 형식 간에 다른 매핑을 필요로 하는 경우 매핑을 업데이트하여 마법사가 수행하는 매핑에 적용할 수 있습니다. 예를 들어, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d b 2로 데이터를 전송할 때 **nchar** 데이터 형식을 db2 **vargraphic** 데이터 형식이 아닌 db2 **그래픽** 데이터 형식에 매핑하려면 매핑되도록 하려면 sqlclienttoibmdb2.xml 매핑 파일의 **nchar** 매핑을 **vargraphic** 대신 **그래픽** 을 사용 하도록 변경 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 제공되는 매핑 파일을 사용하여 데이터베이스 버전 또는 시스템 간에 데이터 형식을 매핑합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 Oracle로 매핑할 수 있습니다. XML 형식의 매핑 파일은 기본적으로 C:\Program Files\Microsoft SQL Server\100\DTS\MappingFiles에 설치됩니다. 비즈니스에서 데이터 형식 간에 다른 매핑을 필요로 하는 경우 매핑을 업데이트하여 마법사가 수행하는 매핑에 적용할 수 있습니다. 예를 들어,에서 d b 2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 데이터를 전송할 때 **nchar** 데이터 형식을 db2 **vargraphic** 데이터 형식이 아닌 db2 **그래픽** 데이터 형식에 매핑하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SqlClientToIBMDB2.xml 매핑 파일의 **nchar** 매핑이 **vargraphic** 대신 **그래픽** 을 사용 하도록 변경 합니다.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에는 가장 일반적으로 사용되는 원본과 대상 조합 간 매핑이 포함되어 있으므로 새 매핑 파일을 Mapping Files 디렉터리에 추가하여 추가 원본 및 대상을 지원할 수 있습니다. 새 매핑 파일은 게시된 XSD 스키마를 따라야 하며 원본과 대상의 고유한 조합 간에 매핑해야 합니다.  
   

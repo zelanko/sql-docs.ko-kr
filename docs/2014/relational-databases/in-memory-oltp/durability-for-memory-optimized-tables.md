@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fb0f2dec6ac7ad68a6a1aa1de8d4734f99559b54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1d48d671b23d7b7b17557e7829d6f2522c375acd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175962"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050223"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 내구성
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]는 메모리 최적화 테이블에 대한 완전한 내구성을 제공합니다. 메모리 최적화 테이블을 변경한 트랜잭션을 커밋할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용하면 (디스크 기반 테이블과 마찬가지로) 기본 스토리지를 사용할 수 있는 경우 변경 내용이 영구적이 됩니다(데이터베이스 다시 시작 유지). 내구성의 두 가지 주요 구성 요소는 트랜잭션 로깅 및 디스크상 스토리지에 데이터 변경 내용 저장입니다.
@@ -52,7 +51,7 @@ ms.locfileid: "78175962"
 
  Merge 작업 작업은 하나 이상의 데이터 및 델타 파일 쌍을 병합 하 고 새 데이터 및 델타 파일 쌍을 만듭니다.
 
- 가 다시 시작 되거나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스가 다시 온라인 상태가 될 때 충돌 복구 중에는 데이터 및 델타 파일 쌍을 사용 하 여 메모리 최적화 데이터가 채워집니다. 델타 파일은 해당 데이터 파일에서 행을 읽을 때 삭제된 행에 대한 필터의 역할을 합니다. 각 데이터 및 델타 파일 쌍은 서로 독립적이기 때문에 이러한 파일은 메모리에 데이터를 채우는 데 걸리는 시간을 줄이기 위해 병렬로 로드됩니다. 데이터가 메모리로 로드되면 메모리 내 OLTP 엔진은 메모리 최적화 데이터가 완전하도록 검사점 파일에 아직 포함되지 않은 활성 트랜잭션 로그 레코드를 적용합니다.
+ 가 다시 시작 되거나 데이터베이스가 다시 온라인 상태가 될 때 충돌 복구 중에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 및 델타 파일 쌍을 사용 하 여 메모리 최적화 데이터가 채워집니다. 델타 파일은 해당 데이터 파일에서 행을 읽을 때 삭제된 행에 대한 필터의 역할을 합니다. 각 데이터 및 델타 파일 쌍은 서로 독립적이기 때문에 이러한 파일은 메모리에 데이터를 채우는 데 걸리는 시간을 줄이기 위해 병렬로 로드됩니다. 데이터가 메모리로 로드되면 메모리 내 OLTP 엔진은 메모리 최적화 데이터가 완전하도록 검사점 파일에 아직 포함되지 않은 활성 트랜잭션 로그 레코드를 적용합니다.
 
  복원 작업 중에는 메모리 내 OLTP 검사점 파일이 데이터베이스 백업에서 만들어진 다음 하나 이상의 트랜잭션 로그 백업이 적용 됩니다. 충돌 복구와 마찬가지로 메모리 내 OLTP 엔진은 데이터를 병렬로 메모리로 로드하여 복구 시간에 미치는 영향을 최소화합니다.
 

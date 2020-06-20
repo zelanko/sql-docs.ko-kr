@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9883127b-aa34-4235-88cc-c161cd2112cc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2f993f699be738ea653ab0fc977fb16f84278853
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fb019e0f7922851a76d6a43439c2d3e7dcc6b6f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662394"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029530"
 ---
 # <a name="lockdeadlock-chain-event-class"></a>Lock:Deadlock Chain 이벤트 클래스
   Lock:Deadlock Chain 이벤트 클래스는 교착 상태의 각 참가자에 대해 생성됩니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "62662394"
 |BinaryData|`image`|잠금 리소스 식별자입니다.|2|예|  
 |DatabaseID|`int`|이 리소스가 속한 데이터베이스의 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에 ServerName 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |DatabaseName|`nvarchar`|리소스가 속한 데이터베이스의 이름입니다.|35|예|  
-|EventClass|`int`|이벤트 유형 = 59|27|아니요|  
+|EventClass|`int`|이벤트 유형 = 59|27|예|  
 |EventSequence|`int`|요청 내에 지정된 이벤트 시퀀스입니다.|51|예|  
 |EventSubClass|`int`|이벤트 하위 클래스의 유형입니다.<br /><br /> 101=리소스 유형 잠금<br /><br /> 102=리소스 유형 교환|21|예|  
 |IntegerData|`int`|교착 상태 번호입니다. 번호는 서버가 시작될 때 0부터 시작하도록 할당되고 교착 상태가 발생할 때마다 증가됩니다.|25|예|  
@@ -51,7 +50,7 @@ ms.locfileid: "62662394"
 |StartTime|`datetime`|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|예|  
 |TextData|`ntext`|리소스 유형에 따라 달라지는 텍스트 값입니다.|1|예|  
 |TransactionID|`bigint`|시스템이 할당한 트랜잭션의 ID입니다.|4|예|  
-|유형|`int`|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|yes|  
+|Type|`int`|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|yes|  
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_trace_setevent &#40;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   

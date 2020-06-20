@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 776d5fae1aa295f15238397b439cca1015ebe99c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 521843d02f601b22dc8f8ff8f7dffa03af5d5084
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63180733"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064881"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램에서 테이블 제거(Visual Database Tools)
   데이터베이스 다이어그램에서 테이블을 제거할 수 있습니다. 테이블을 제거한 경우에도 데이터베이스는 바뀌지 않습니다. 제거한 테이블 및 해당 테이블과 다른 테이블의 관계는 데이터베이스에 계속 남아 있습니다.  

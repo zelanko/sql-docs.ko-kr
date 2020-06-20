@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2beb1a7890786e31fb525b61963c235033882247
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 107ba245f19ae77eec2be82d63c62e5c3d45d092
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161799"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025254"
 ---
 # <a name="index-disk-space-example"></a>인덱스 디스크 공간 예
   인덱스를 생성하거나, 다시 작성하거나, 삭제할 때마다 해당 파일 및 파일 그룹에서 이전(원본) 및 새(대상) 구조 모두에 대한 디스크 공간이 필요합니다. 기존 구조는 인덱스 생성 트랜잭션이 커밋된 후 할당 취소됩니다. 또한 분류 작업을 위한 임시 디스크 공간도 추가로 필요할 수 있습니다. 자세한 내용은 [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)을 참조하세요.  
@@ -96,7 +95,7 @@ ms.locfileid: "63161799"
   
 -   임시 매핑 인덱스에 대한 공간을 확인합니다.  
   
-     이 예에서 이전 책갈피는 힙 (8 바이트)의 행 ID (RID)이 고 새 책갈피는 클러스터링 키 (를 포함 하는 `uniqueifier`24 바이트)입니다. 이전 책갈피와 새 책갈피 사이에 겹치는 열은 없습니다.  
+     이 예에서 이전 책갈피는 힙 (8 바이트)의 행 ID (RID)이 고 새 책갈피는 클러스터링 키 (를 포함 하는 24 바이트 `uniqueifier` )입니다. 이전 책갈피와 새 책갈피 사이에 겹치는 열은 없습니다.  
   
      임시 매핑 인덱스 크기 = 1백만*(8바이트+24바이트)/80%~40MB  
   

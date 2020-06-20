@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6c0975dee640230880dfe05a7d86359172cfa157
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d09750c0cb81d64f5921ae2064b2e75edb6ca96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882234"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047582"
 ---
 # <a name="validate-replicated-data"></a>복제된 데이터의 유효성 검사
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 구독자의 데이터에 대한 유효성을 검사하는 방법에 대해 설명합니다.  
@@ -112,7 +111,7 @@ ms.locfileid: "73882234"
 
 #### <a name="all-articles"></a>모든 아티클
   
-1.  게시 데이터베이스의 게시자에서 [sp_publication_validation&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql)을 실행합니다. ** \@게시** 를 지정 하 고 ** \@rowcount_only**에 다음 값 중 하나를 지정 합니다.    
+1.  게시 데이터베이스의 게시자에서 [sp_publication_validation&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql)을 실행합니다. ** \@ 게시** 를 지정 하 고 ** \@ rowcount_only**에 다음 값 중 하나를 지정 합니다.    
     -   **1** - 행 개수의 유효성만 검사합니다(기본값).    
     -   **2** - 행 개수 및 이진 체크섬의 유효성을 검사합니다.  
   
@@ -124,7 +123,7 @@ ms.locfileid: "73882234"
   
 #### <a name="single-article"></a>단일 아티클 
   
-1.  게시 데이터베이스의 게시자에서 [sp_article_validation&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql)을 실행합니다. ** \@게시**, ** \@아티클의**아티클 이름 및 ** \@rowcount_only**에 대 한 다음 값 중 하나를 지정 합니다.    
+1.  게시 데이터베이스의 게시자에서 [sp_article_validation&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql)을 실행합니다. ** \@ 게시**, ** \@ 아티클의**아티클 이름 및 ** \@ rowcount_only**에 대 한 다음 값 중 하나를 지정 합니다.    
     -   **1** - 행 개수의 유효성만 검사합니다(기본값).    
     -   **2** -행 개수 및 이진 체크섬  
   
@@ -137,9 +136,9 @@ ms.locfileid: "73882234"
 #### <a name="single-subscriber"></a>단일 구독자
   
 1.  게시 데이터베이스의 게시자에서 [BEGIN TRANSACTION&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql)을 사용하여 명시적 트랜잭션을 엽니다.    
-2.  게시 데이터베이스의 게시자에서 [sp_marksubscriptionvalidation&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql)을 실행합니다. ** \@게시**에 대 한 게시, ** \@구독자**의 구독자 이름 및 ** \@destination_db**에 대 한 구독 데이터베이스의 이름을 지정 합니다.    
+2.  게시 데이터베이스의 게시자에서 [sp_marksubscriptionvalidation&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql)을 실행합니다. ** \@ 게시**에 대 한 게시, ** \@ 구독자**의 구독자 이름 및 ** \@ destination_db**에 대 한 구독 데이터베이스의 이름을 지정 합니다.    
 3.  (옵션) 유효성을 검사할 각 구독에 대해 2단계를 반복합니다.    
-4.  게시 데이터베이스의 게시자에서 [sp_article_validation&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql)을 실행합니다. ** \@게시**, ** \@아티클의**아티클 이름 및 ** \@rowcount_only**에 대 한 다음 값 중 하나를 지정 합니다.    
+4.  게시 데이터베이스의 게시자에서 [sp_article_validation&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql)을 실행합니다. ** \@ 게시**, ** \@ 아티클의**아티클 이름 및 ** \@ rowcount_only**에 대 한 다음 값 중 하나를 지정 합니다.    
     -   **1** - 행 개수의 유효성만 검사합니다(기본값).    
     -   **2** -행 개수 및 이진 체크섬  
   
@@ -187,7 +186,7 @@ ms.locfileid: "73882234"
 
 ### <a name="using-transact-sql-t-sql"></a>Transact-SQL(T-SQL) 사용
 
-1.  게시 데이터베이스의 게시자에서 [sp_validatemergesubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql)을 실행합니다. ** \@게시**, ** \@구독자**의 구독자 이름, ** \@subscriber_db**에 대 한 구독 데이터베이스 이름 및 ** \@level**에 대 한 다음 값 중 하나를 지정 합니다.   
+1.  게시 데이터베이스의 게시자에서 [sp_validatemergesubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql)을 실행합니다. ** \@ 게시**, ** \@ 구독자**의 구독자 이름, ** \@ subscriber_db**에 대 한 구독 데이터베이스 이름 및 ** \@ level**에 대 한 다음 값 중 하나를 지정 합니다.   
     -   **1** - 행 개수의 유효성만 검사합니다.    
     -   **3** - 행 개수 및 이진 체크섬의 유효성을 검사합니다.  
   
@@ -218,7 +217,7 @@ ms.locfileid: "73882234"
 
 ### <a name="using-transact-sql-t-sql"></a>Transact-SQL(T-SQL) 사용
 
-1.  게시 데이터베이스의 게시자에서 [sp_validatemergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql)을 실행합니다. ** \@게시** 를 지정 하 고 ** \@수준**에 다음 값 중 하나를 지정 합니다.    
+1.  게시 데이터베이스의 게시자에서 [sp_validatemergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql)을 실행합니다. ** \@ 게시** 를 지정 하 고 ** \@ 수준**에 다음 값 중 하나를 지정 합니다.    
     -   **1** - 행 개수의 유효성만 검사합니다.    
     -   **3** - 행 개수 및 이진 체크섬의 유효성을 검사합니다.  
   

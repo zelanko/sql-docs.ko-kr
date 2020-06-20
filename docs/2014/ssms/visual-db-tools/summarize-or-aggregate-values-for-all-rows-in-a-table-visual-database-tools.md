@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ecdcafb1cb2d2b78a63dbd15ecec148e5eb1b2a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204613"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057949"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>테이블에 있는 모든 행의 값 요약 또는 집계(Visual Database Tools)
   집계 함수를 사용하면 테이블의 모든 값을 요약할 수 있습니다. 예를 들어, `titles` 테이블의 책 전체에 대한 가격 합계를 표시하는 다음과 같은 쿼리를 만들 수 있습니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f068d4db-2d56-41b1-bed2-0cffa3ca411d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ec6f347cdbc6d14e8f621466a1708b8ee9fe7d36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90f967b2446e11a27f5a87803bb71d6e1ec53557
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489750"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039844"
 ---
 # <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>5단원: SSIS를 사용하여 정리 및 일치 자동화
   1 단원에서는 Suppliers 기술 자료를 작성 하 고이를 사용 하 여 2 단원에서 데이터를 정리 하 고 도구 **DQS 클라이언트**를 사용 하 여 3 단원에서 데이터를 일치 시킵니다. 실제 시나리오에서는 dqs가 지원 하지 않는 소스에서 데이터를 끌어오거나 **Dqs 클라이언트** 도구를 사용 하지 않고도 정리 및 일치 프로세스를 자동화 해야 할 수 있습니다. SSIS (SQL Server Integration Services)에는 다양 한 유형의 원본과 **[Dqs 정리 변환](https://msdn.microsoft.com/library/ee677619.aspx)** 구성 요소의 데이터를 통합 하 여 dqs에서 노출 하는 정리 기능을 호출 하는 데 사용할 수 있는 구성 요소가 있습니다. 현재 DQS는 사용할 SSIS에 대해 일치 하는 기능을 제공 하지 않지만 **[유사 항목 그룹화 변환을](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** 사용 하 여 데이터에서 중복 항목을 식별할 수 있습니다.  

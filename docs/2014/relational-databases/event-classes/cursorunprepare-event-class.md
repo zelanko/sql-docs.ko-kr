@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 34055a2f-7d0f-4e13-a62e-7ee5b6c23b86
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aac3a20511012e0a058fff6988c793c4f51d594d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3c872738f35d4c99032d14feff6f3890ddeebca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663397"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030064"
 ---
 # <a name="cursorunprepare-event-class"></a>CursorUnprepare 이벤트 클래스
   **CursorUnprepare** 이벤트 클래스는 API(애플리케이션 프로그래밍 인터페이스) 커서에서 발생하는 커서 준비 취소 이벤트에 대한 정보를 제공합니다. 커서 준비 취소 이벤트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 실행 계획을 삭제할 때 발생합니다.  

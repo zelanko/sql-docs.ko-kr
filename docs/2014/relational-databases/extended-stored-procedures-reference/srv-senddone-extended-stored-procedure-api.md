@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1fc4f1d5-56d4-43f6-b5e4-0c0cc295cba3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2bce064ee38082861e9b6c5d4f2c6e28bf41dded
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa71ebe23557ab470748b3108fc1263469a193cf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745524"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050558"
 ---
 # <a name="srv_senddone-extended-stored-procedure-api"></a>srv_senddone(확장 저장 프로시저 API)
     
@@ -61,7 +60,7 @@ count
  *status*  
  다양한 *status* 플래그에 대한 2바이트 필드입니다. *status* 플래그 값에 AND 및 OR 논리 연산자를 사용하여 여러 플래그를 설정할 수 있습니다. 다음 표에서는 가능한 *status* 플래그를 보여 줍니다.  
   
-|상태 플래그|설명|  
+|상태 플래그|Description|  
 |-----------------|-----------------|  
 |SRV_DONE_COUNT|*count* 매개 변수에 올바른 개수가 포함되어 있습니다.|  
 |SRV_DONE_ERROR|현재 클라이언트 명령에 오류가 수신되었습니다.|  

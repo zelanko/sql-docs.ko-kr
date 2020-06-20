@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 70d6cc06b0e53754c22e6a8233f529b03c8e4371
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b241bbc850ffe5fc201cfc6711ae3ee380c0fea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63224648"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058195"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>열 선택 대화 상자(Visual Database Tools)
   이 대화 상자를 사용하면 데이터베이스 다이어그램에서 테이블에 대한 사용자 지정 보기를 변경할 수 있습니다. 사용자 지정 보기에는 사용자가 지정한 열 속성만 표시됩니다.  

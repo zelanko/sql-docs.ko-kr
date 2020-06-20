@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c60edd0423dbba712d6185a1bfe417b2067378bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 59ab03f1c869f37ea92b3be1fe0fc30d86284a03
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232233"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953213"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기
   DAC(데이터 계층 애플리케이션) 파일(.bacpac 파일)을 가져와 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 새 인스턴스에서 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 데이터를 사용하여 원본 데이터베이스의 복제본을 만듭니다. 내보내기 및 가져오기 작업을 결합하여 인스턴스 간에 DAC나 데이터베이스를 마이그레이션하거나 논리 백업을 만들 수 있습니다. 예를 들어 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 배포된 데이터베이스의 온-프레미스 복사본을 만들 수 있습니다.  
@@ -124,7 +123,7 @@ ms.locfileid: "75232233"
   
 -   **새 데이터베이스 이름** -가져온 데이터베이스의 이름을 제공 합니다.  
   
--   버전-비즈니스 또는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 웹을 지정 합니다. ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 버전에 대한 자세한 내용은 이 [SQL Database](https://www.windowsazure.com/home/tour/database/) 웹 사이트를 참조하세요.  
+-   **버전 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 비즈니스 또는 웹을 지정 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 버전에 대한 자세한 내용은 이 [SQL Database](https://www.windowsazure.com/home/tour/database/) 웹 사이트를 참조하세요.  
   
 -   **최대 데이터베이스 크기 (GB)** -드롭다운 메뉴를 사용 하 여 데이터베이스의 최대 크기를 지정 합니다.  
   
@@ -138,7 +137,7 @@ ms.locfileid: "75232233"
 ###  <a name="summary-page"></a><a name="Summary"></a> 요약 페이지  
  이 페이지에서 작업에 대해 지정한 원본 및 대상 설정을 검토할 수 있습니다. 지정한 설정을 사용하여 가져오기 작업을 완료하려면 **마침**을 클릭합니다. 가져오기 작업을 취소하고 마법사를 종료하려면 **취소**를 클릭합니다.  
   
-###  <a name="progress-page"></a><a name="Progress"></a>진행률 페이지  
+###  <a name="progress-page"></a><a name="Progress"></a> 진행률 페이지  
  이 페이지에는 작업 상태를 나타내는 진행률 표시줄이 표시됩니다. 자세한 상태를 보려면 **자세히 보기** 옵션을 클릭합니다.  
   
  계속하려면 **다음**을 클릭합니다.  

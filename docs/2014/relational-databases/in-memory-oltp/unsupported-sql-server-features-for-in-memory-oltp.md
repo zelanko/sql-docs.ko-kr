@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4a5ec9cefd0106a8e6eb4d796921efe147bea446
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e7eb4324d56c3ab45486063cb8097603ac3a416b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702221"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050007"
 ---
 # <a name="supported-sql-server-features"></a>지원되는 SQL Server 기능
   이 항목에서는 메모리 최적화 개체와 함께 사용할 수 있거나 사용할 수 없는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능에 대해 설명합니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "82702221"
   
 -   다중 버전 관리 및 낙관적 동시성 제어. 자세한 내용은 [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md)을 참조하세요.  
   
--   메모리 최적화 데이터 파일 그룹이 포함된 데이터베이스의 백업 및 복원. 자세한 내용은 [SQL Server Database 백업 및 복원](../backup-restore/back-up-and-restore-of-sql-server-databases.md)을 참조하세요.  
+-   메모리 최적화 데이터 파일 그룹이 포함된 데이터베이스의 백업 및 복원. 자세한 내용은 [SQL Server 데이터베이스 백업 및 복원](../backup-restore/back-up-and-restore-of-sql-server-databases.md)을 참조 하세요.  
   
 -   지원 가능성을 위해 제공되는 카탈로그 뷰, 동적 관리 뷰 및 확장 이벤트. 자세한 내용은 [메모리 내 OLTP에 대한 시스템 뷰, 저장 프로시저, DMV 및 대기 유형](../../database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md)을 참조하세요.  
   
@@ -88,7 +87,7 @@ ms.locfileid: "82702221"
 |연결된 서버|자세한 내용은 [연결된 서버&#40;데이터베이스 엔진&#41;](../linked-servers/linked-servers-database-engine.md)를 참조하세요.|  
 |대량 로깅|데이터베이스의 복구 모델에 관계없이 메모리 최적화 영구 테이블에 대한 모든 작업은 항상 모두 기록됩니다.|  
 |최소 로깅|최소 로깅은 메모리 최적화 테이블에 대해 지원되지 않습니다. 최소 로깅에 대한 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md) 및 [대량 가져오기의 최소 로깅을 위한 선행 조건](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)을 참조하세요.|  
-|변경 내용 추적|변경 내용 추적은 메모리 내 OLTP 개체가 포함된 데이터베이스에서 사용할 수 있습니다. 그러나 메모리 최적화 테이블의 변경 내용은 추적되지 않습니다.|  
+|Change tracking|변경 내용 추적은 메모리 내 OLTP 개체가 포함된 데이터베이스에서 사용할 수 있습니다. 그러나 메모리 최적화 테이블의 변경 내용은 추적되지 않습니다.|  
 |DDL 트리거|데이터베이스 수준 및 서버 수준 DDL 트리거는 둘 다 메모리 내 OLTP 테이블과 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다.|  
 |CDC(변경 데이터 캡처)|CDC는 DROP과 같은 특정 작업을 수행할 수 없도록 하므로 메모리 내 OLTP 개체가 포함된 데이터베이스에서 사용하도록 설정하면 안 됩니다.|  
 |데이터베이스 포함|데이터베이스 포함은 고유하게 컴파일된 저장 프로시저와 메모리 최적화 테이블이 포함된 데이터베이스에서 지원되지 않습니다. 자세한 내용은 [Contained Databases](../databases/contained-databases.md)를 참조하세요.|  
@@ -105,9 +104,9 @@ ms.locfileid: "82702221"
   
  몇 가지 예외를 제외하고 데이터베이스간 트랜잭션은 지원되지 않습니다. 다음 테이블에서는 지원되는 경우 및 해당 제한 사항에 대해 설명합니다. (참고 항목: [데이터베이스 간 쿼리](cross-database-queries.md))  
   
-|데이터베이스|허용됨|설명|  
+|데이터베이스|허용됨|Description|  
 |---------------|-------------|-----------------|  
-|사용자 데이터베이스, 모델 및 msdb|아니요|데이터베이스 간 쿼리 및 트랜잭션은 지원되지 않습니다.<br /><br /> 메모리 최적화 테이블이나 고유하게 컴파일된 저장 프로시저에 액세스하는 쿼리와 트랜잭션은 시스템 데이터베이스 master(읽기 전용 액세스) 및 tempdb를 제외하고 다른 데이터베이스에 액세스할 수 없습니다.|  
+|사용자 데이터베이스, 모델 및 msdb|예|데이터베이스 간 쿼리 및 트랜잭션은 지원되지 않습니다.<br /><br /> 메모리 최적화 테이블이나 고유하게 컴파일된 저장 프로시저에 액세스하는 쿼리와 트랜잭션은 시스템 데이터베이스 master(읽기 전용 액세스) 및 tempdb를 제외하고 다른 데이터베이스에 액세스할 수 없습니다.|  
 |리소스 데이터베이스 및 tempdb|예|단일 사용자 데이터베이스를 제외하고 리소스 데이터베이스 및 tempdb를 사용하는 데이터베이스 간 트랜잭션에는 제한 사항이 없습니다.|  
 |master|읽기 전용|메모리 내 OLTP 및 master 데이터베이스와 관련된 데이터베이스 간 트랜잭션은 master 데이터베이스에 대한 쓰기가 포함된 경우 커밋에 실패합니다. master 데이터베이스에서 읽기만 하고 하나의 사용자 데이터베이스만 사용하는 데이터베이스 간 트랜잭션은 허용됩니다.|  
   

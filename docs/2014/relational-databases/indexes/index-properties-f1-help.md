@@ -17,13 +17,12 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 390a63d21dc72e052017f2d30b061d71de863bc1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161895"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049901"
 ---
 # <a name="index-properties-f1-help"></a>인덱스 속성 F1 도움말
   이 항목의 섹션에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 이용할 수 있는 다양한 인덱스 속성을 참조합니다.  
@@ -93,7 +92,7 @@ ms.locfileid: "63161895"
  인덱스 키에 참여하는 열이 테이블 또는 뷰 열에 NULL 값을 저장하도록 허용할지 여부를 나타냅니다.  
   
  **추가**  
- 인덱스 키에 열을 추가합니다. **추가**를 클릭하면 나타나는 ‘\<테이블 이름>**에서 열 선택**’ 대화 상자에서 테이블 열을 선택합니다.  공간 인덱스의 경우 열을 하나 선택하면 이 단추가 흐리게 표시됩니다.  
+ 인덱스 키에 열을 추가합니다. 추가를 클릭할 때 나타나는 **에서 열 선택** 대화 상자에서 테이블 열을 선택 *\<table name>* 합니다. **Add** 공간 인덱스의 경우 열을 하나 선택하면 이 단추가 흐리게 표시됩니다.  
   
  **제거**  
  선택된 열을 인덱스 키에 참여하는 열에서 제거합니다.  
@@ -134,7 +133,7 @@ ms.locfileid: "63161895"
 ##  <a name="storage-page-options"></a><a name="Storage"></a> 스토리지 페이지 옵션  
  이 페이지를 사용하여 선택한 인덱스의 파일 그룹 또는 파티션 구성표 속성을 확인하거나 수정할 수 있습니다. 인덱스 유형과 관련된 옵션만 표시됩니다.  
   
- **그룹별로**  
+ **파일 그룹**  
  지정한 파일 그룹에 인덱스를 저장합니다. 목록에는 표준(행) 파일 그룹만 표시됩니다. 목록에서는 기본적으로 데이터베이스의 PRIMARY 파일 그룹이 선택됩니다. 자세한 내용은 [Database Files and Filegroups](../databases/database-files-and-filegroups.md)을 참조하세요.  
   
  **Filestream 파일 그룹**  
@@ -180,7 +179,7 @@ ms.locfileid: "63161895"
 ### <a name="bounding-box"></a>경계 상자  
  *경계 상자* 는 기하 평면에서 최상위 표의 경계입니다. 경계 상자 매개 변수는 기하 도형 표 공간 분할에서만 존재합니다. 이러한 매개 변수는 **공간 분할(tessellation) 구성표** 가 **지리 표**인 경우 사용할 수 없습니다.  
   
- 패널은 경계 상자의 **(*`X-min`*,*`Y-min`*)** 및 **(*`X-max`*,*`Y-max`*)** 좌표를 표시 합니다. 기본 좌표 값은 없습니다. 따라서 `geometry` 유형 열에 새 공간 인덱스를 만드는 경우 좌표 값을 지정해야 합니다.  
+ 패널은 경계 상자의 **( *`X-min`* , *`Y-min`* )** 및 **( *`X-max`* , *`Y-max`* )** 좌표를 표시 합니다. 기본 좌표 값은 없습니다. 따라서 `geometry` 유형 열에 새 공간 인덱스를 만드는 경우 좌표 값을 지정해야 합니다.  
   
  `X-min`  
  경계 상자의 왼쪽 아래 모퉁이의 X 좌표입니다.  
@@ -226,7 +225,7 @@ ms.locfileid: "63161895"
  **수준 2**  
  둘째 수준 표의 밀도입니다.  
   
- **수준 3**  
+ **Level 3**  
  셋째 수준 표의 밀도입니다.  
   
  **수준 4**  
@@ -236,7 +235,7 @@ ms.locfileid: "63161895"
  이 페이지를 사용하여 필터링된 인덱스에 대한 필터 조건자를 입력할 수 있습니다. 자세한 내용은 [Create Filtered Indexes](create-filtered-indexes.md)을(를) 참조하세요.  
   
  **필터 식**  
- 필터링된 인덱스에 포함할 데이터 행을 정의합니다. 예, `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
+ 필터링된 인덱스에 포함할 데이터 행을 정의합니다. 예를 들어 `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
 ## <a name="see-also"></a>참고 항목  
  [인덱스 옵션 설정](set-index-options.md)   

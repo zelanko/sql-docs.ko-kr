@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ea22b1c0bc435006e05fde02043ca9f44a8ca681
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d9e699ea80253934ecc6f3ce744feaed6fd6a392
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703020"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047465"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Updategram에 매개 변수 전달(SQLXML 4.0)
   Updategram은 템플릿이므로 Updategram에 매개 변수를 전달할 수 있습니다. 템플릿에 매개 변수를 전달 하는 방법에 대 한 자세한 내용은 [Updategram 보안 고려 사항 &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)를 참조 하세요.  
@@ -31,7 +30,7 @@ ms.locfileid: "82703020"
 > [!NOTE]  
 >  `<sql:header>` 및 `<updg:header>`에서는 `nullvalue`를 unqualified로 지정해야 하는 반면 `<updg:sync>`에서는 `nullvalue`를 qualified로 지정합니다(예: `updg:nullvalue`).  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예제를 사용 하 여 작업 예제를 만들려면 [SQLXML 예를 실행 하기 위한 요구 사항](../../sqlxml/requirements-for-running-sqlxml-examples.md)에 지정 된 요구 사항을 충족 해야 합니다.  
   
  Updategram 예를 사용하기 전에 다음 사항을 확인하십시오.  

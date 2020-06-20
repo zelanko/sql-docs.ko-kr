@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 49364423-6aa9-40f3-914a-eca37be12b88
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ba973e51a7d3c86b9f1a15075b0a86ac94502cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d9db95a016fe9eda1c6128bac54847f717e6378
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662848"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053031"
 ---
 # <a name="deprecation-event-category"></a>Deprecation 이벤트 범주
   **Deprecation** 이벤트 범주에는 일반적인 사용 중단 알림 이벤트가 포함됩니다.  

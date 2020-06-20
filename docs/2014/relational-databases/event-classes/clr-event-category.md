@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 101badf320f72887d6eb9669224d24fff5b9a299
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a98bdf472c86a3e608da768d884897600efa476
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663648"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030308"
 ---
 # <a name="clr-event-category"></a>CLR 이벤트 범주
   **CLR** 이벤트 범주에는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 내의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CLR(공용 언어 런타임) 개체를 실행하여 만들어지는 이벤트 클래스가 포함됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[Assembly Load 이벤트 클래스](../../database-engine/assembly-load-event-class.md)|어셈블리 로드 요청이 실행되었음을 나타냅니다.|  
 |[Assembly Load 이벤트 클래스](../../database-engine/assembly-load-event-class.md)|어셈블리 로드 요청을 실행할 때 발생합니다.|  

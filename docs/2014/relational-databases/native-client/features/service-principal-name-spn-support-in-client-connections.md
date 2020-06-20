@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 419be334c31aa5c4a0f65f9d9f881dbffc4aef94
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 10a64baa17bd070d9354beaf6ff8c2e460682318
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707256"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049576"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>클라이언트 연결의 SPN(서비스 사용자 이름) 지원
   [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]부터는 모든 프로토콜에서 상호 인증을 지원하도록 SPN(서비스 사용자 이름)이 확장되었습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 SPN은 Active Directory에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 기본 SPN이 등록된 경우 TCP를 사용하는 Kerberos에 대해서만 지원되었습니다.  
@@ -44,10 +43,10 @@ ms.locfileid: "82707256"
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
-## <a name="usage"></a>사용량  
+## <a name="usage"></a>사용  
  다음 표에서는 클라이언트 애플리케이션이 보안 인증을 사용할 수 있는 가장 일반적인 시나리오에 대해 설명합니다.  
   
-|시나리오|설명|  
+|시나리오|Description|  
 |--------------|-----------------|  
 |레거시 애플리케이션이 SPN을 지정하지 않습니다.|이 호환성 시나리오는 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용으로 개발된 애플리케이션의 동작에 변화가 없을 것임을 보장합니다. 지정된 SPN이 없으면 해당 애플리케이션은 생성된 SPN에 의존하며, 어떤 인증 방법이 사용되는지 알 수 없습니다.|  
 |현재 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용하는 클라이언트 애플리케이션이 연결 문자열의 SPN을 도메인 사용자 또는 컴퓨터 계정으로, 인스턴스별 SPN으로, 또는 사용자 정의 문자열로 지정합니다.| 공급자, 초기화 또는 연결 문자열에서 `ServerSPN` 키워드를 사용하여 다음을 수행할 수 있습니다.<br /><br /> -인스턴스에서 연결을 위해 사용 하는 계정을 지정 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 합니다. 이를 통해 Kerberos 인증에 대한 액세스가 간소화됩니다. Kerberos KDC(키 배포 센터)가 있고 올바른 계정이 지정된 경우 NTLM보다 Kerberos 인증이 사용될 가능성이 더 높습니다. KDC는 일반적으로 도메인 컨트롤러와 동일한 컴퓨터에 위치합니다.<br />-인스턴스에 대 한 서비스 계정을 조회할 SPN을 지정 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 합니다. 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 이 용도로 사용할 수 있는 두 개의 기본 SPN이 생성됩니다. 그러나 키가 Active Directory에 있다는 보장은 없으므로 이 경우 Kerberos 인증이 보장되지는 않습니다.<br />-인스턴스의 서비스 계정을 조회 하는 데 사용할 SPN을 지정 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 합니다. 이는 서비스 계정에 매핑되는 사용자 정의 문자열일 수 있습니다. 이 경우 키는 KDC에 수동으로 등록해야 하며 사용자 정의 SPN에 대한 규칙을 충족해야 합니다.<br /><br /> `FailoverPartnerSPN` 키워드를 사용하여 장애 조치(Failover) 파트너 서버에 대한 SPN을 지정할 수 있습니다. 계정 및 Active Directory 키 값의 범위는 주 서버에 지정할 수 있는 값과 동일합니다.|  

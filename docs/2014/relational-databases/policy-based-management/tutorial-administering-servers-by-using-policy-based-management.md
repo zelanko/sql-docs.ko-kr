@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 58757aa0de2b13c68926cf596a8da702b972edf3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 634263350f0f094697ff2a77d68de5a2feacc9b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63256055"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047758"
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>자습서: 정책 기반 관리를 사용하여 서버 관리
   정책 기반 관리 정책을 사용하여 서버 관리 자습서를 시작합니다. 이 자습서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 익숙하지만 정책 기반 관리에는 경험이 없는 사용자를 대상으로 합니다.  

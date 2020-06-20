@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 12e4b5a5-b793-4b6c-a0e5-c450c49bf26f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 639e6b7640f3463bfe100345d044437d619a5546
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29bd3fa9e171551197927aae0d1bc00446df6e7f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63460007"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064940"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>쿼리 및 뷰 디자이너 도구(Visual Database Tools)
   쿼리, 뷰, 인라인 함수 또는 단일 문 저장 프로시저를 디자인할 때 사용하는 디자이너는 다이어그램 창, 조건 창, SQL 창 및 결과 창으로 구성됩니다.  

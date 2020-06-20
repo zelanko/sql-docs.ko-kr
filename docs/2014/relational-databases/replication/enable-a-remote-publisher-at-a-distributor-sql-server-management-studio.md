@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d7b554dc39832a834ebe1bc2ac2d4bfefa21721a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d871e2cfb6eb0d4e095a19ba9893b26418230e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721312"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010731"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>배포자에서 원격 게시자 설정(SQL Server Management Studio)
-  **게시자** 페이지에서 원격 배포자를 사용하려면 게시자를 설정합니다. 이 페이지는 배포 구성 마법사 및 **배포자 속성 - \<Distributor>** 대화 상자에서 사용할 수 있습니다. 마법사 사용 방법 및 대화 상자에 액세스하는 방법은 [게시 및 배포 구성](configure-publishing-and-distribution.md) 및 [배포자 및 게시자 속성 보기 및 수정](view-and-modify-distributor-and-publisher-properties.md)을 참조하세요.  
+  **게시자** 페이지에서 원격 배포자를 사용하려면 게시자를 설정합니다. 이 페이지는 배포 구성 마법사 및 **배포자 속성- \<Distributor> ** 대화 상자에서 사용할 수 있습니다. 마법사 사용 방법 및 대화 상자에 액세스하는 방법은 [게시 및 배포 구성](configure-publishing-and-distribution.md) 및 [배포자 및 게시자 속성 보기 및 수정](view-and-modify-distributor-and-publisher-properties.md)을 참조하세요.  
   
 ### <a name="to-enable-a-publisher-in-the-configure-distribution-wizard"></a>배포 구성 마법사에서 게시자를 설정하려면  
   
@@ -39,7 +38,7 @@ ms.locfileid: "62721312"
   
 ### <a name="to-enable-a-publisher-in-the-distributor-properties-dialog-box"></a>배포자 속성 대화 상자에서 게시자를 설정하려면  
   
-1.  **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 **추가**를 클릭합니다.  
+1.  **배포자 속성- \<Distributor> ** 대화 상자의 **게시자** 페이지에서 **추가**를 클릭 합니다.  
   
 2.  **SQL Server 게시자 추가**를 클릭합니다. 배포자를 사용하도록 Oracle 게시자를 설정하는 방법은 [Create a Publication from an Oracle Database](publish/create-a-publication-from-an-oracle-database.md)를 참조하십시오.  
   

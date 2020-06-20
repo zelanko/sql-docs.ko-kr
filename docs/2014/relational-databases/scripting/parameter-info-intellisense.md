@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b50c09f27b458fcb2d940a639bee9cb76c1c0044
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b44033b0af52372e6da8efc68a8916164c2f862e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703786"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009632"
 ---
 # <a name="parameter-info-intellisense"></a>매개 변수 정보(IntelliSense)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense **매개 변수 정보** 옵션은 함수나 저장 프로시저에 필요한 매개 변수의 개수, 이름 및 유형에 대한 정보를 제공하는 매개 변수 목록을 엽니다. 굵게 표시된 매개 변수는 함수나 시스템 저장 프로시저를 입력할 때 필요한 다음 매개 변수를 나타냅니다.  

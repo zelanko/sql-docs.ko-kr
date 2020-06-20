@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 38a33b34b64cf285e94f66c547b2309b8daf1ae8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5df714d818949b921ff2236e50d58913eab0e0db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035684"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062558"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>분리된 사용자 문제 해결(SQL Server)
-  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로그인하려면 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 사용자에게 있어야 합니다. 이 로그인은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 사용자 연결이 허용되는지 여부를 확인하는 인증 프로세스에서 사용됩니다. 서버 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 로그인은 **server_principals** 카탈로그 뷰와 **sys.** s a s.  
+  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로그인하려면 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 사용자에게 있어야 합니다. 이 로그인은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 사용자 연결이 허용되는지 여부를 확인하는 인증 프로세스에서 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]서버 인스턴스의 로그인은 **sys. server_principals** 카탈로그 뷰와 **sys.sys로그인** 호환성 보기에 표시 됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 매핑된 데이터베이스 사용자를 사용하여 개별 데이터베이스에 액세스합니다. 이 규칙에는 두 가지 예외가 있습니다.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "63035684"
  해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 서버 인스턴스에서 정의되지 않았거나 잘못 정의되어 있는 데이터베이스 사용자는 이 인스턴스에 로그인할 수 없습니다. 이러한 사용자는 해당 서버 인스턴스에 있는 데이터베이스의 *분리된 사용자* 라고 합니다. 데이터베이스 사용자는 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 삭제되면 분리될 수 있습니다. 데이터베이스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 인스턴스에 복원되거나 연결된 후에도 데이터베이스 사용자가 분리될 수 있습니다. 데이터베이스 사용자가 새 서버 인스턴스에 없는 SID로 매핑되는 경우 사용자가 분리될 수 있습니다.  
   
 > [!NOTE]  
->  로그인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 은 해당 데이터베이스에서 **게스트** 를 사용 하도록 설정 하지 않은 경우 해당 데이터베이스 사용자가 없는 데이터베이스에 액세스할 수 없습니다. 데이터베이스 사용자 계정을 만드는 방법에 대 한 자세한 내용은 [CREATE user &#40;transact-sql&#41;](/sql/t-sql/statements/create-user-transact-sql)를 참조 하세요.  
+>  로그인은 해당 데이터베이스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 **게스트** 를 사용 하도록 설정 하지 않은 경우 해당 데이터베이스 사용자가 없는 데이터베이스에 액세스할 수 없습니다. 데이터베이스 사용자 계정을 만드는 방법에 대 한 자세한 내용은 [CREATE user &#40;transact-sql&#41;](/sql/t-sql/statements/create-user-transact-sql)를 참조 하세요.  
   
 ## <a name="to-detect-orphaned-users"></a>분리된 사용자를 검색하려면  
  분리된 사용자를 검색하려면 다음 Transact-SQL 문을 실행합니다.  
@@ -58,7 +57,7 @@ GO;
  현재 데이터베이스에 있으며 어떤 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에도 연결되지 않은 사용자와 이에 해당되는 SID(보안 ID)가 나열됩니다. 자세한 내용은 [sp_change_users_login &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql)를 참조 하세요.  
   
 > [!NOTE]  
->  **sp_change_users_login** 는 Windows에서 만든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인과 함께 사용할 수 없습니다.  
+>  **sp_change_users_login** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows에서 만든 로그인과 함께 사용할 수 없습니다.  
   
 ## <a name="to-resolve-an-orphaned-user"></a>분리된 사용자를 확인하려면  
  분리된 사용자를 확인하려면 다음 절차를 수행합니다.  
@@ -88,7 +87,7 @@ GO;
     >  ALTER ANY LOGIN 사용 권한이 있는 로그인으로만 다른 사용자의 로그인 암호를 변경할 수 있습니다. 그러나 **sysadmin** 역할의 멤버만 **sysadmin** 역할 멤버의 암호를 수정할 수 있습니다.  
   
     > [!NOTE]  
-    >  **sp_password** Windows 계정에는 sp_password [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용할 수 없습니다. Windows 네트워크 계정을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하는 사용자는 Windows에 의해 인증되므로 암호는 Windows에서만 변경할 수 있습니다.  
+    >  Windows 계정에는 **sp_password** 를 사용할 수 없습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Windows 네트워크 계정을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하는 사용자는 Windows에 의해 인증되므로 암호는 Windows에서만 변경할 수 있습니다.  
   
      자세한 내용은 [sp_password &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql)를 참조 하세요.  
   
@@ -99,7 +98,7 @@ GO;
  [Transact-sql&#41;sp_addlogin &#40;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql)   
  [Transact-sql&#41;sp_grantlogin &#40;](/sql/relational-databases/system-stored-procedures/sp-grantlogin-transact-sql)   
  [Transact-sql&#41;sp_password &#40;](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql)   
- [sys.debug &#40;Transact-sql&#41;](/sql/relational-databases/system-compatibility-views/sys-sysusers-transact-sql)   
- [sys.debug &#40;Transact-sql&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)  
+ [Transact-sql&#41;사용자 &#40;sys.sys](/sql/relational-databases/system-compatibility-views/sys-sysusers-transact-sql)   
+ [Transact-sql&#41;&#40;로그인sys.sys](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)  
   
   

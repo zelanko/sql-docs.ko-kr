@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0f9f7f7d-f8ab-426e-a85d-4eda3a241eb5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b40f40cea8e4f9c36b74ea87b22c5c2a6633e077
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d88904b45a54073d60c6d3247d1479bae597bd3f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62659945"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059853"
 ---
 # <a name="servernetworkprotocol-class"></a>ServerNetworkProtocol 클래스
-  [Servernetworkprotocol 클래스] servernetworkprotocol-class.md)는 네트워크를 통해 클라이언트와 통신할 수 있도록 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 하는 인스턴스에 설치 된 네트워크 프로토콜을 나타냅니다.  
+  [ServerNetworkProtocol 클래스] servernetworkprotocol-class.md)는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네트워크를 통해 클라이언트와 통신할 수 있도록 하는 인스턴스에 설치 된 네트워크 프로토콜을 나타냅니다.  
   
  [ServerNetworkProtocol 클래스] servernetworkprotocol-class.md)를 사용 하 여 다음을 수행할 수 있습니다.  
   

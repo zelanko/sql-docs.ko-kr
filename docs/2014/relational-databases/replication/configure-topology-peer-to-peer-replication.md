@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5c41bc845e7b02959f25aa8282452db64f819558
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2dfc09f5ae7f488afd46f29c301d11b7687e0a4b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176573"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010979"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>토폴로지 구성(피어 투 피어 복제)
   **토폴로지 구성** 페이지를 사용하여 새 노드 추가, 노드 삭제, 기존 노드 간 새 연결 추가와 같은 일반적인 구성 태스크를 수행할 수 있습니다. 이 마법사의 **게시** 페이지에서 선택한 노드는 디자인 화면에 표시됩니다. 구성 옵션을 지정하려면 노드, 연결 또는 디자인 화면을 마우스 오른쪽 단추로 클릭합니다.
@@ -43,7 +42,7 @@ ms.locfileid: "78176573"
 
  마법사에서 토폴로지 정보를 요청하는 경우 모든 노드가 요청에 응답하기 전에 마법사를 닫았다가 다시 열면 이 페이지에 토폴로지의 노드가 모두 표시되지 않을 수 있습니다.
 
- **새 피어 노드 추가** 피어 투 피어 토폴로지에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스를 추가 합니다. 인스턴스를 노드로 추가하면 마법사가 완료된 후 해당 인스턴스에 게시가 만들어집니다. 노드를 추가한 후 해당 노드를 마우스 오른쪽 단추로 클릭하여 새 노드와 기존 노드 사이의 연결을 추가합니다.
+ **새 피어 노드 추가** 피어 투 피어 토폴로지에의 인스턴스를 추가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 인스턴스를 노드로 추가하면 마법사가 완료된 후 해당 인스턴스에 게시가 만들어집니다. 노드를 추가한 후 해당 노드를 마우스 오른쪽 단추로 클릭하여 새 노드와 기존 노드 사이의 연결을 추가합니다.
 
  피어 투 피어 토폴로지에 참가하려면 인스턴스가 다음 요구 사항을 충족해야 합니다.
 

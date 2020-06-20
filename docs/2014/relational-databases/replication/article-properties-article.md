@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c9c597c672a1889827f3994c1df9ea65ec4c54a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721785"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049541"
 ---
 # <a name="article-properties---ltarticlegt"></a>아티클 속성 - &lt;Article&gt;
   **아티클 속성** 대화 상자는 새 게시 마법사 및 **게시 속성** 대화 상자에서 사용할 수 있습니다. 이 대화 상자를 사용하여 모든 아티클 유형에 대한 속성을 보고 설정할 수 있습니다. 게시가 생성된 경우에만 설정할 수 있거나 게시에 활성 구독이 없는 경우에만 설정할 수 있는 속성이 있습니다. 설정할 수 없는 속성은 읽기 전용으로 표시됩니다.  
@@ -45,7 +44,7 @@ ms.locfileid: "62721785"
  구독자에서 개체 생성 시 사용자 정의 데이터 형식에서 기본 데이터 형식으로 변환할지 여부를 결정합니다. 사용자 정의 데이터 형식에는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입된 사용자 정의 CLR 유형이 포함됩니다. 이러한 데이터 형식을 이전 버전의 **로 복제하려면 값을** True [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 지정합니다. 이렇게 하면 구독자에서 해당 데이터 형식을 올바르게 처리할 수 있습니다.  
   
  **구독자에서 스키마 만들기**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서는 CREATE SCHEMA 문을 사용하여 정의되는 스키마가 도입되었습니다. 스키마는 개체의 소유자로 \<Database>.\<Schema>.\<Object>와 같이 여러 부분으로 구성된 이름에 사용됩니다. DBO 이외의 스키마가 소유하고 있는 데이터베이스에 개체가 있는 경우 복제 시 구독자에서 이러한 스키마를 만들 수 있으므로 게시된 개체를 만들 수 있습니다.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서는 CREATE SCHEMA 문을 사용하여 정의되는 스키마가 도입되었습니다. 스키마는 개체의 소유자입니다. 여러 부분으로 구성 된 이름 (예:)에 사용 \<Database> 됩니다 \<Schema> . \<Object> DBO 이외의 스키마가 소유 하 고 있는 데이터베이스에 개체가 있는 경우 복제 시 구독자에서 이러한 스키마를 만들 수 있으므로 게시 된 개체를 만들 수 있습니다.  
   
  데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]로 복제하려면 다음을 수행하십시오.  
   
@@ -77,14 +76,14 @@ ms.locfileid: "62721785"
  **INSERT, UPDATE 및 DELETE 저장 프로시저 복사**  
  이 대화 상자의 **문 배달** 섹션에서 저장 프로시저를 사용하여 변경 내용을 구독자(기본값)로 전파하도록 선택한 경우 해당 프로시저를 각 구독자에 복사할지 여부를 선택합니다. **False**를 선택할 경우 수동으로 프로시저를 복사해야 하며, 수동으로 복사하지 않을 경우 배포 에이전트에서 변경 내용을 배달하려고 하면 오류가 발생합니다.  
   
- **Statement delivery**  
+ **문 배달**  
  이 섹션의 옵션은 테이블로 복제된 인덱싱된 뷰를 포함하여 모든 테이블에 적용됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 는 애플리케이션에 다른 기능이 필요 하지 않는 한 기본 옵션을 사용할 것을 권장합니다. 기본적으로 트랜잭션 복제는 각 구독자에 설치된 저장 프로시저 집합를 통하여 변경 내용을 구독자로 전파합니다. 게시자에서 테이블에 삽입, 업데이트 또는 삭제 작업을 수행하면 구독자에서 저장 프로시저 호출로 변환됩니다.  
   
  **문 배달** 옵션은 저장 프로시저 사용 여부를 지정하며, 사용할 경우 이 형식이 해당 프로시저로 전달되는 매개 변수에 사용됩니다. **저장 프로시저** 옵션을 사용하여 복제에서 자동으로 만든 프로시저 또는 사용자가 만든 대체 사용자 지정 프로시저를 사용할 수 있습니다.  
   
  자세한 내용은 [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](transactional/transactional-articles-specify-how-changes-are-propagated.md)을 참조하세요.  
   
- **복제**  
+ **유사**  
  이 옵션은 저장 프로시저에만 적용됩니다. 저장 프로시저의 정의(CREATE PROCEDURE 문)를 복제할 것인지 아니면 저장 프로시저의 실행을 복제할 것인지를 결정합니다. 저장 프로시저의 실행을 복제하면 구독이 초기화될 때 프로시저 정의가 구독자로 복제됩니다. 게시자에서 이 프로시저를 실행하면 이러한 복제의 결과로 구독자에서 해당 프로시저가 실행됩니다. 이렇게 하면 대규모 일괄 처리 작업이 수행되는 경우 성능을 크게 향상시킬 수 있습니다. 자세한 내용은 [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md)를 참조하세요.  
   
 ## <a name="options-for-merge-publications"></a>병합 게시에 대한 옵션  
@@ -124,7 +123,7 @@ ms.locfileid: "62721785"
  기본 해결 프로그램을 선택한 경우 사용된 구독 유형에 따라 각 구독자에 할당된 우선 순위나 게시자에 기록된 첫 번째 변경 내용을 기준으로 충돌을 해결합니다. 자세한 내용은 [병합 복제 충돌 감지 및 해결](merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
   
  **사용자 지정 해결 프로그램 사용(배포자에 등록됨)**  
- 아티클 해결 프로그램( [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 제공하는 해결 프로그램 또는 사용자가 작성한 해결 프로그램) 사용을 선택한 경우 목록 상자에서 해결 프로그램을 선택해야 합니다. 자세한 내용은 [고급 병합 복제 충돌 감지 및 해결](merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
+ 아티클 해결 프로그램( [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 제공하는 해결 프로그램 또는 사용자가 작성한 해결 프로그램) 사용을 선택한 경우 목록 상자에서 해결 프로그램을 선택해야 합니다. 자세한 내용은 [고급 병합 복제 충돌 감지 및 해결](merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조 하세요.  
   
  해결 프로그램에 입력이 필요한 경우 **해결 프로그램에 필요한 정보 입력** 입력란에 필요한 입력을 지정합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 사용자 지정 해결 프로그램에 필요한 입력에 대한 자세한 내용은 [Microsoft COM-Based Resolvers](merge/advanced-merge-replication-conflict-com-based-resolvers.md) 을 참조하세요.  
   
@@ -151,7 +150,7 @@ ms.locfileid: "62721785"
  **테이블스페이스 이름**  
  Oracle 서버 인스턴스에서 복제 변경 추적 테이블을 만들 테이블스페이스입니다. 자세한 내용은 [Oracle 테이블스페이스 관리](non-sql/manage-oracle-tablespaces.md)를 참조하세요.  
   
- **Statement delivery**  
+ **문 배달**  
  이 섹션의 옵션은 트랜잭션 게시의 모든 테이블에 적용됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 는 애플리케이션에 다른 기능이 필요 하지 않는 한 기본 옵션을 사용할 것을 권장합니다. 기본적으로 트랜잭션 복제는 각 구독자에 설치된 저장 프로시저 집합를 통하여 변경 내용을 구독자로 전파합니다. 게시자에서 테이블에 삽입, 업데이트 또는 삭제 작업을 수행하면 구독자에서 저장 프로시저 호출로 변환됩니다.  
   
  **문 배달** 옵션은 저장 프로시저 사용 여부를 지정하며, 사용할 경우 이 형식이 해당 프로시저로 전달되는 매개 변수에 사용됩니다. **저장 프로시저** 옵션을 사용하여 복제에서 자동으로 만든 프로시저 또는 사용자가 만든 대체 사용자 지정 프로시저를 사용할 수 있습니다.  
@@ -175,7 +174,7 @@ ms.locfileid: "62721785"
 ## <a name="see-also"></a>참고 항목  
  [Create a Publication](publish/create-a-publication.md)   
  [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)   
- [초기 스냅샷 만들기 및 적용](create-and-apply-the-initial-snapshot.md)   
+ [초기 스냅숏 만들기 및 적용](create-and-apply-the-initial-snapshot.md)   
  [구독 다시 초기화](reinitialize-a-subscription.md)   
  [데이터 및 데이터베이스 개체 게시](publish/publish-data-and-database-objects.md)  
   

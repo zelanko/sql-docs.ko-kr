@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c3cbc8673d38cc21a92f0d333df1dc485db6d733
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7a76f86f1be8012e0df2ed80960095eb83d6882e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702120"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021449"
 ---
 # <a name="bulk-copying-from-program-variables"></a>프로그램 변수에서 대량 복사
   프로그램 변수에서 직접 대량 복사를 수행할 수 있습니다. 행의 데이터를 보유할 변수를 할당하고 [bcp_init](../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 를 호출하여 대량 복사를 시작한 후 각 열에 대해 [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 를 호출하여 열과 연결될 프로그램 변수의 위치와 서식을 지정합니다. 각 변수에 데이터를 채운 다음 [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 를 호출하여 데이터 행 하나를 서버에 전송합니다. 모든 행을 서버에 전송할 때까지 변수에 데이터를 채우고 **bcp_sendrow** 를 호출하는 과정을 반복한 후 [bcp_done](../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) 을 호출하여 작업이 완료되었음을 지정합니다.  

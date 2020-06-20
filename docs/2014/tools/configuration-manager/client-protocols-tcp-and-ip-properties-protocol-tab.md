@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 32e1546af52fb411564c2b6d1635971b9f73fc60
-ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
+ms.openlocfilehash: 46e6e7a966db29299c298cb16e460e0a9212e8fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716680"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011665"
 ---
 # <a name="client-protocols---tcp-and-ip-properties-protocol-tab"></a>클라이언트 프로토콜 - TCP/IP 속성(프로토콜 탭)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **TCP/IP 속성** 대화 상자의 **프로토콜** 탭을 사용하여 다음 옵션을 확인 또는 지정할 수 있습니다. 다른 포트에 연결하려면 **기본 포트** 입력란에 포트 번호를 입력하십시오. 연결 문자열에 대한 자세한 내용은 [TCP/IP를 사용하여 유효한 연결 문자열 만들기](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)를 참조하세요.  

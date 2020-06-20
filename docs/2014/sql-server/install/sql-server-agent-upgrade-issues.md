@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 77e303ff-febd-4103-ae5d-6e5b85bc8009
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 598a317bdecb2ed3808a7b5af35316d95d3b87c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac234a757510af5ebfac261ea6d3e7e57d2f426f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092007"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036242"
 ---
 # <a name="sql-server-agent-upgrade-issues"></a>SQL Server 에이전트 업그레이드 문제
   다음 항목에서는 업그레이드에 영향을 줄 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 문제에 대해 설명하고 이러한 변화가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경에 미치는 영향을 완화하기 위해 취할 수 있는 조치에 대해 설명합니다.  

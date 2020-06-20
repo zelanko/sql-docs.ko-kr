@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4fe48814f8d707b0feeacf7a9a84c79df0ffe71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac54f2b22de55ed74c4635ec0f86d008c7624a42
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63036237"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025257"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>인덱스의 채우기 비율 지정
   이 항목에서는 채우기 비율의 역할에 대해 설명하고 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 인덱스의 채우기 비율 값을 지정하는 방법에 대해 설명합니다.  
@@ -79,7 +78,7 @@ ms.locfileid: "63036237"
   
 7.  **닫기**를 클릭합니다.  
   
-8.  **파일** 메뉴에서 **table_name**_저장_을 선택합니다.  
+8.  **파일** 메뉴에서 _table_name_**저장**을 선택합니다.  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>개체 탐색기를 사용하여 인덱스의 채우기 비율을 지정하려면  
   

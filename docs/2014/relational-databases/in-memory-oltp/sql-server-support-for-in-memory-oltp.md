@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f4525df0-a186-44e5-bba6-5d8123a0f965
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 470b3edf0435099b2a9fd17b14ac299299274a71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bbefa22294623cb5539f8c2146478e5c23c462ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63181246"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049940"
 ---
 # <a name="sql-server-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 SQL Server 지원
   이 섹션에서는 메모리 최적화 테이블을 지원하는 새 구문/기능과 업데이트된 구문/기능에 대해 설명합니다.  

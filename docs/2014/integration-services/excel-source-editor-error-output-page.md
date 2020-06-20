@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 38181aca8a2946a9268f77560bdadcbc96e617bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f1f5983048c1301e210c2ac64e0a092898f31e0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059226"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966813"
 ---
 # <a name="excel-source-editor-error-output-page"></a>Excel 원본 편집기(오류 출력 페이지)
   **Excel 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택하고 오류 출력 열에 속성을 설정할 수 있습니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66059226"
  **입력 또는 출력**  
  데이터 원본의 이름을 표시합니다.  
   
- **열의**  
+ **열**  
  **Excel 원본 편집기** 대화 상자의 **연결 관리자**페이지에서 선택한 외부(원본) 열을 표시합니다.  
   
  **오류**  

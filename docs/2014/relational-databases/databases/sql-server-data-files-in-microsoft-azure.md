@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 06e5403a9e490677e1cb5f88eb20ed8ffb967e15
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e54cf82c9413b97599e6e06ad9a51be46cd822a9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76939597"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965710"
 ---
 # <a name="sql-server-data-files-in-azure"></a>Azure의 SQL Server 데이터 파일
   Azure에서 SQL Server 데이터 파일은 Azure Blob으로 저장 된 SQL Server 데이터베이스 파일에 대 한 기본 지원을 지원 합니다. 이를 통해 온-프레미스 또는 Azure의 가상 머신에서 실행 되는 SQL Server에서 데이터베이스를 Azure Blob Storage 데이터에 대 한 전용 저장소 위치로 만들 수 있습니다. 특히, 이 향상된 기능은 분리 및 연결 작업을 사용하여 컴퓨터 간의 데이터 이동을 간소화합니다. 또한 데이터베이스 백업 파일에 대 한 대체 저장소 위치를 제공 합니다 .이를 통해 또는 Azure Storage에서 복원할 수 있습니다. 따라서 데이터 가상화, 데이터 이동, 보안 및 가용성, 고가용성 및 탄력적인 크기 조정을 위한 쉽고 저렴한 비용 및 유지 관리 등 여러 가지 이점을 제공하여 다양한 하이브리드 솔루션을 사용할 수 있도록 지원합니다.  
@@ -96,9 +95,9 @@ ON
   
 ###  <a name="limitations"></a><a name="bkmk_Limitations"></a> 제한 사항  
   
--   이 기능의 현재 릴리스에서는 Azure Storage 데이터를 저장 `FileStream` 하는 것이 지원 되지 않습니다. Azure Storage 통합 로컬 `Filestream` 데이터베이스에 데이터를 저장할 수 있지만 Azure Storage를 사용 하 여 컴퓨터 간에 Filestream 데이터를 이동할 수는 없습니다. `FileStream` 데이터의 경우 컴퓨터 간에 Filestream과 연관된 파일(.mdf, .ldf)을 이동하는 데 기존 기술을 계속 사용하는 것이 좋습니다.  
+-   이 기능의 현재 릴리스에서는 Azure Storage 데이터를 저장 하 `FileStream` 는 것이 지원 되지 않습니다. `Filestream`Azure Storage 통합 로컬 데이터베이스에 데이터를 저장할 수 있지만 Azure Storage를 사용 하 여 컴퓨터 간에 Filestream 데이터를 이동할 수는 없습니다. `FileStream` 데이터의 경우 컴퓨터 간에 Filestream과 연관된 파일(.mdf, .ldf)을 이동하는 데 기존 기술을 계속 사용하는 것이 좋습니다.  
   
--   현재 이 새로운 향상된 기능을 사용하여 여러 SQL Server 인스턴스에서 Azure Storage의 동일한 데이터베이스 파일에 동시에 액세스할 수 없습니다. 활성 데이터베이스 파일을 사용 하 여 서버 a가 온라인 상태이 고 ServerB가 실수로 시작 되었으며 동일한 데이터 파일을 가리키는 데이터베이스가 있는 경우 두 번째 서버는 데이터베이스를 시작할 수 **없습니다.\* 오류 코드 5120 ls ". 운영 체제 오류% d: "% ls"**.  
+-   현재 이 새로운 향상된 기능을 사용하여 여러 SQL Server 인스턴스에서 Azure Storage의 동일한 데이터베이스 파일에 동시에 액세스할 수 없습니다. 활성 데이터베이스 파일을 사용 하 여 서버 a가 온라인 상태이 고 ServerB가 실수로 시작 되었으며 동일한 데이터 파일을 가리키는 데이터베이스가 있는 경우 두 번째 서버는 데이터베이스를 시작할 수 **없습니다. \* 오류 코드 5120 ls ". 운영 체제 오류% d: "% ls"**.  
   
 -   .mdf, .ldf 및 .ndf 파일만 Azure의 SQL Server 데이터 파일 기능을 사용하여 Azure Storage에 저장할 수 있습니다.  
   
@@ -106,9 +105,9 @@ ON
   
 -   각 BLOB의 최대 크기는 1TB입니다. 이로 인해 Azure Storage에 저장할 수 있는 개별 데이터베이스 데이터 및 로그 파일의 상한이 설정됩니다.  
   
--   Azure Storage의 SQL Server 데이터 파일 기능을 사용하여 Azure BLOB에 메모리 내 OLTP 데이터를 저장할 수 없습니다. 이것은 메모리 내 OLTP는 및에 `FileStream` 종속 되어 있으므로이 기능의 현재 릴리스에서는 Azure Storage 데이터를 저장 `FileStream` 하는 것이 지원 되지 않기 때문입니다.  
+-   Azure Storage의 SQL Server 데이터 파일 기능을 사용하여 Azure BLOB에 메모리 내 OLTP 데이터를 저장할 수 없습니다. 이것은 메모리 내 OLTP는 및에 종속 되어 있으므로 `FileStream` 이 기능의 현재 릴리스에서는 Azure Storage 데이터를 저장 하는 것이 지원 되지 않기 때문입니다 `FileStream` .  
   
--   Azure의 SQL Server 데이터 파일 기능을 사용 하는 경우 SQL Server는 `master` 데이터베이스에 설정 된 데이터 정렬을 사용 하 여 모든 URL 또는 파일 경로를 비교 합니다.  
+-   Azure의 SQL Server 데이터 파일 기능을 사용 하는 경우 SQL Server는 데이터베이스에 설정 된 데이터 정렬을 사용 하 여 모든 URL 또는 파일 경로를 비교 합니다 `master` .  
   
 -   `AlwaysOn Availability Groups`은 기본 데이터베이스에 새 데이터베이스 파일을 추가하지 않는 한 지원됩니다. 데이터베이스 작업 중에 기본 데이터베이스에서 새 파일을 만들어야 하는 경우 먼저 보조 노드에서 AlwaysOn 가용성 그룹을 사용하지 않도록 설정합니다. 그런 다음 기본 데이터베이스에서 데이터베이스 작업을 수행하고 기본 노드에 데이터베이스를 백업합니다. 그런 다음 데이터베이스를 보조 노드에 복원하고 보조 노드에서 AlwaysOn 가용성 그룹을 사용하도록 설정합니다. Azure의 SQL Server 데이터 파일 기능을 사용 하는 경우 AlwaysOn 장애 조치 (Failover) 클러스터 인스턴스는 지원 되지 않습니다.  
   
@@ -141,7 +140,7 @@ ON
   
  **인증 오류**  
   
--   *'% 자격 증명을 삭제할 수 없습니다. \*l s '이 (가) 활성 데이터베이스 파일에서 사용 되 고 있기 때문입니다.*   
+-   *'% 자격 증명을 삭제할 수 없습니다. \* l s '이 (가) 활성 데이터베이스 파일에서 사용 되 고 있기 때문입니다.*   
     해결 방법: Azure Storage에서 활성 데이터베이스 파일이 사용 중인 자격 증명을 삭제하려고 하면 이 오류가 나타날 수 있습니다. 자격 증명을 삭제하려면 이 데이터베이스 파일을 포함하는 연결된 BLOB을 먼저 삭제해야 합니다. 활성 임대가 있는 BLOB을 삭제하려면 먼저 임대를 해제해야 합니다.  
   
 -   *공유 액세스 서명이 컨테이너에서 올바르게 만들어지지 않았습니다.*   
@@ -162,10 +161,10 @@ ON
 2.  *Alter 문을 실행할 때 발생 하는 오류*   
     해결 방법: 데이터베이스가 온라인 상태일 때 Alter Database 문을 실행해야 합니다. 데이터 파일을 Azure Storage에 복사할 경우 항상 블록 BLOB이 아닌 페이지 BLOB을 만듭니다. 그렇지 않으면 ALTER Database 문이 실패합니다. [자습서: Azure Storage 서비스의 데이터 파일 SQL Server](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)에서 7 단원에 제공 된 지침을 검토 합니다.  
   
-3.  *오류 코드 5120 물리적 파일 "%"을 (를) 열 수 없습니다. \*ls ". 운영 체제 오류% d: "% ls"*   
-    해결 방법: 현재 이 새로운 향상된 기능을 사용하여 여러 SQL Server 인스턴스에서 Azure Storage의 동일한 데이터베이스 파일에 동시에 액세스할 수 없습니다. 활성 데이터베이스 파일을 사용 하 여 서버 a가 온라인 상태이 고 ServerB가 실수로 시작 되었으며 동일한 데이터 파일을 가리키는 데이터베이스가 있는 경우 두 번째 서버는 데이터베이스를 시작할 수 *없습니다\* . 오류 코드 5120 ls ". 운영 체제 오류% d: "% ls"*.  
+3.  *오류 코드 5120 물리적 파일 "%"을 (를) 열 수 없습니다. \* ls ". 운영 체제 오류% d: "% ls"*   
+    해결 방법: 현재 이 새로운 향상된 기능을 사용하여 여러 SQL Server 인스턴스에서 Azure Storage의 동일한 데이터베이스 파일에 동시에 액세스할 수 없습니다. 활성 데이터베이스 파일을 사용 하 여 서버 a가 온라인 상태이 고 ServerB가 실수로 시작 되었으며 동일한 데이터 파일을 가리키는 데이터베이스가 있는 경우 두 번째 서버는 데이터베이스를 시작할 수 *없습니다. \* 오류 코드 5120 ls ". 운영 체제 오류% d: "% ls"*.  
   
-     이 문제를 해결하려면 먼저 Azure Storage의 데이터베이스 파일에 액세스하려면 서버 A가 필요한지 여부를 확인해야 합니다. 서버 A가 필요하지 않은 경우 서버 A와 Azure Storage에 있는 데이터베이스 파일 사이의 연결을 제거하면 됩니다. 이렇게 하려면 다음 단계를 따르십시오.  
+     이 문제를 해결하려면 먼저 Azure Storage의 데이터베이스 파일에 액세스하려면 서버 A가 필요한지 여부를 확인해야 합니다. 서버 A가 필요하지 않은 경우 서버 A와 Azure Storage에 있는 데이터베이스 파일 사이의 연결을 제거하면 됩니다. 이렇게 하려면 다음 단계를 수행하세요.  
   
     1.  ALTER Database 문을 사용하여 서버 A의 파일 경로를 로컬 폴더로 설정합니다.  
   

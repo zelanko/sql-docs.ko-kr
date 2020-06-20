@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dc1bfce77a089b24e68613c94af6e2886e6b5952
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3cb3818ed644eede3cf4f2c256a0dcb94ec58c3a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874467"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954103"
 ---
 # <a name="implementing-assemblies"></a>어셈블리 구현
   이 항목에서는 사용자가 데이터베이스에서 어셈블리를 구현하고 사용하는 데 도움이 되는 다음 영역에 대해 설명합니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "62874467"
 -   어셈블리 버전 관리  
   
 ## <a name="creating-assemblies"></a>어셈블리 만들기  
- 어셈블리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 문을 사용하여 만들고 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 Assembly Assisted Editor를 사용하여 만듭니다. 또한에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] SQL Server 프로젝트를 배포 하면 해당 프로젝트에 대해 지정 된 데이터베이스에 어셈블리가 등록 됩니다. 자세한 내용은 [Deploying CLR Database Objects](deploying-clr-database-objects.md)을 참조하세요.  
+ 어셈블리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 문을 사용하여 만들고 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 Assembly Assisted Editor를 사용하여 만듭니다. 또한에 SQL Server 프로젝트를 배포 하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 해당 프로젝트에 대해 지정 된 데이터베이스에 어셈블리가 등록 됩니다. 자세한 내용은 [Deploying CLR Database Objects](deploying-clr-database-objects.md)을 참조하세요.  
   
  **Transact-SQL을 사용하여 어셈블리를 만들려면**  
   
@@ -71,14 +70,14 @@ ms.locfileid: "62874467"
   
 -   [개체 삭제](../../ssms/object/delete-objects.md)  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 생성된 어셈블리는 모두 기본적으로 실행할 수 없습니다. **Sp_configure** 시스템 저장 프로시저의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **clr enabled** 옵션을 사용 하 여에 업로드 된 모든 어셈블리를 사용 하지 않도록 설정 하거나 실행할 수 있습니다. 어셈블리 실행을 해제하면 CLR(공용 언어 런타임) 함수, 저장 프로시저, 트리거, 집계 및 사용자 정의 유형이 실행되지 않고 현재 실행 중인 경우 중지됩니다. 어셈블리 실행을 해제하더라도 어셈블리를 만들거나, 변경하거나, 삭제하는 기능은 해제되지 않습니다. 자세한 내용은 [clr 사용 서버 구성 옵션](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)을 참조 하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 생성된 어셈블리는 모두 기본적으로 실행할 수 없습니다. **Sp_configure** 시스템 저장 프로시저의 **clr enabled** 옵션을 사용 하 여에 업로드 된 모든 어셈블리를 사용 하지 않도록 설정 하거나 실행할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 어셈블리 실행을 해제하면 CLR(공용 언어 런타임) 함수, 저장 프로시저, 트리거, 집계 및 사용자 정의 유형이 실행되지 않고 현재 실행 중인 경우 중지됩니다. 어셈블리 실행을 해제하더라도 어셈블리를 만들거나, 변경하거나, 삭제하는 기능은 해제되지 않습니다. 자세한 내용은 [clr 사용 서버 구성 옵션](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)을 참조 하세요.  
   
  **어셈블리 실행을 해제하거나 설정하려면**  
   
 -   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
 ##  <a name="managing-assembly-versions"></a><a name="_managing"></a>어셈블리 버전 관리  
- 어셈블리가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 업로드되면 데이터베이스 시스템 카탈로그에 저장되어 이 카탈로그에서 관리됩니다. 에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리의 정의에 대 한 모든 변경 내용은 데이터베이스 카탈로그에 저장 된 어셈블리로 전파 되어야 합니다.  
+ 어셈블리가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 업로드되면 데이터베이스 시스템 카탈로그에 저장되어 이 카탈로그에서 관리됩니다. 에서 어셈블리의 정의에 대 한 모든 변경 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터베이스 카탈로그에 저장 된 어셈블리로 전파 되어야 합니다.  
   
  어셈블리를 수정해야 할 경우 ALTER ASSEMBLY 문을 실행하여 데이터베이스의 어셈블리를 업데이트해야 합니다. 이렇게 하면 어셈블리가 해당 구현을 보유하고 있는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 모듈의 최신 복사본으로 업데이트됩니다.  
   

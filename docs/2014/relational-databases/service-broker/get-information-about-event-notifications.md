@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8bc10867-66d6-4f57-ac32-a6c29f3327cd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9786faaf44724b1a2452bd5304b63deb2c9ea54e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8d8271b6279910321058d01c7b2f96b1df62bd0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015315"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003354"
 ---
 # <a name="get-information-about-event-notifications"></a>이벤트 알림에 대한 정보 가져오기
   다음 카탈로그 뷰는 이벤트 알림에 대한 메타데이터를 쿼리하는 데 사용할 수 있습니다.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88d025c4-07c2-4e4d-8634-204249a8c82c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 037eb57f53bf583195efdf1f91fcd55f94ebaddc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a356550796cc682b2292defffd6565b7fea0783
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676909"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049531"
 ---
 # <a name="working-with-policy-based-management-facets"></a>정책 기반 관리 패싯 작업
   정책 기반 관리 패싯은 관리하려는 영역과 관련된 논리적 속성 집합입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 여러 가지의 미리 정의된 패싯이 있습니다. 예를 들어 기본적으로 해제되는 기능을 속성으로 정의하는 노출 영역 구성 패싯이 있습니다.  

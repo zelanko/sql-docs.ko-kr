@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3bd29769b0ba4fd5d9a48fcef07181b7ac70f7c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 010b5b2e9778ccf37133b0a84796373c012290f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255437"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047534"
 ---
 # <a name="validate-subscription"></a>구독 유효성 검사
   **구독 유효성 검사** 대화 상자를 사용하여 다음에 구독에 대한 병합 에이전트가 실행될 때 병합 게시에 대한 해당 구독의 유효성을 검사하도록 지정할 수 있습니다. 유효성 검사 결과는 복제 모니터에 표시됩니다. 자세한 내용은 [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)을 참조하세요.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81ddf552e71bdd0b83c8082c2bd84450f6088e5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919601"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954703"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>CLR 사용자 정의 집계 함수 호출
   [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문에서 시스템 집계 함수에 적용되는 모든 규칙을 따르는 CLR(공용 언어 런타임) 사용자 정의 집계를 호출할 수 있습니다.  
@@ -34,9 +33,9 @@ ms.locfileid: "62919601"
   
 -   사용자 정의 집계는 schema_name 형식의 두 부분으로 된 이름을 사용 하 여 호출 해야 합니다 *. udagg_name*.  
   
--   사용자 정의 집계의 인수 형식은 `CREATE AGGREGATE` 문에 정의 된 대로 집계의 *input_type* 일치 하거나 암시적으로 변환 될 수 있어야 합니다.  
+-   사용자 정의 집계의 인수 형식은 문에 정의 된 대로 집계의 *input_type* 일치 하거나 암시적으로 변환 될 수 있어야 합니다 `CREATE AGGREGATE` .  
   
--   사용자 정의 집계의 반환 형식은 `CREATE AGGREGATE` 문의 *return_type* 와 일치 해야 합니다.  
+-   사용자 정의 집계의 반환 형식은 문의 *return_type* 와 일치 해야 합니다 `CREATE AGGREGATE` .  
   
 ## <a name="example-1"></a>예 1  
  테이블의 열에서 가져온 문자열 값 집합을 연결하는 사용자 정의 집계 함수의 예는 다음과 같습니다.  
@@ -196,7 +195,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- 코드를 **Myagg .dll**로 컴파일하면에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음과 같이 집계를 등록할 수 있습니다.  
+ 코드를 **MyAgg.dll**컴파일하면에서 다음과 같이 집계를 등록할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 9244f32b2ee9921d1caaa63b5d6aae9c324049ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fdd093d99d055df8e15fc22e3e570e6805e35d6e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014205"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003312"
 ---
 # <a name="multilinestring"></a>MultiLineString
   는 `MultiLineString` 0 개 이상의 `geometry` 또는 **geographyLineString** 인스턴스의 컬렉션입니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66014205"
   
  그림에 대한 설명:  
   
--   그림 1은 경계가 두 `MultiLineString` `LineString` 요소의 네 끝점 인 단순 인스턴스입니다.  
+-   그림 1은 `MultiLineString` 경계가 두 요소의 네 끝점 인 단순 인스턴스입니다 `LineString` .  
   
 -   그림 2는 `MultiLineString` 요소의 엔드포인트만 교차하므로 단순한 `LineString` 인스턴스입니다. 경계는 두 개의 겹치지 않는 엔드포인트입니다.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66014205"
   
 -   그림 4는 단순하지 않고 닫혀 있지 않은 `MultiLineString` 인스턴스입니다.  
   
--   그림 5는 단순하고 닫혀 있지 않은 `MultiLineString` 인스턴스입니다. 해당 `LineStrings` 요소가 닫혀 있지 않으므로 닫혀 있지 않습니다. `LineStrings` 인스턴스의 내부에 교차하는 것이 없으므로 단순합니다.  
+-   그림 5는 단순하고 닫혀 있지 않은 `MultiLineString` 인스턴스입니다. 해당 요소가 닫혀 있지 않으므로 닫혀 있지 않습니다 `LineStrings` . `LineStrings` 인스턴스의 내부에 교차하는 것이 없으므로 단순합니다.  
   
 -   그림 6은 단순하고 닫혀 있는 `MultiLineString` 인스턴스입니다. 이 인스턴스는 해당 요소가 모두 닫혀 있으므로 닫혀 있고, 해당 요소 중 교차하는 것이 없으므로 단순합니다.  
   

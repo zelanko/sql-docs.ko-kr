@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2985efc1-4b14-46c3-abbd-a656b159f23c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 758207977c8ddf92d6696dda71a8943e6a596d4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8146efb876bf97c36c549a2b58d104592df611e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091193"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062321"
 ---
 # <a name="verify-all-filegroups-are-writeable-during-the-upgrade-process"></a>업그레이드 프로세스 중에 모든 파일 그룹이 쓰기 가능한지 확인합니다.
   업그레이드 관리자가 하나 이상의 파일 그룹이 있는 데이터베이스를 검색했습니다. 업그레이드하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있는 모든 데이터베이스의 파일 그룹을 READ_WRITE로 설정해야 합니다.  

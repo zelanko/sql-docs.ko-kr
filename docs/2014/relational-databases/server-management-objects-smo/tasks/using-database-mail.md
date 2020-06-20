@@ -13,21 +13,20 @@ helpviewer_keywords:
 ms.assetid: 7605390f-b485-48cc-8d97-e364a066067b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2db385919c30037612f00e53b2b990c1a7df0429
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 77fe80016cb67e15d8eca6efb3a313d269550533
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781862"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003573"
 ---
 # <a name="using-database-mail"></a>데이터베이스 메일 사용
   SMO에서 데이터베이스 메일 하위 시스템은 <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> 속성에서 참조되는 <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A> 개체로 표시됩니다. SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> 개체를 사용하여 데이터베이스 메일 하위 시스템을 구성하고 프로필 및 메일 계정을 관리할 수 있습니다. SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> 개체는 `Server` 개체에 속하는데, 이는 메일 계정의 범위가 서버 수준임을 의미합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 visual [studio .net에서 VISUAL BASIC SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 또는 [visual Studio .Net에서 VISUAL C&#35; smo 프로젝트 만들기](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
- 데이터베이스 메일를 사용 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 하는 프로그램의 경우 메일 네임 `Imports` 스페이스를 한 정하는 문을 포함 해야 합니다. 다음과 같이 애플리케이션의 선언 앞에, 다른 `Imports` 문 끝에 구문을 삽입하십시오.  
+ 데이터베이스 메일를 사용 하는 프로그램의 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `Imports` 메일 네임 스페이스를 한 정하는 문을 포함 해야 합니다. 다음과 같이 애플리케이션의 선언 앞에, 다른 `Imports` 문 끝에 구문을 삽입하십시오.  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cca3dcf0-2a7e-465a-84de-7ce055360eb6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 015cec73c97a3a02179bb65735aaed4dd4f0da6c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c41ac2dcce9c5bdbdd351148d16bcaa8f067d22f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702058"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021201"
 ---
 # <a name="communicating-with-sql-server-odbc"></a>SQL Server와 통신(ODBC)
   ODBC 응용 프로그램에서 인스턴스와 통신 하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경 및 연결 핸들을 할당 하 고 데이터 원본에 연결 해야 합니다. 연결이 설정되면 애플리케이션에서는 서버에 쿼리를 보내고 모든 결과 집합을 처리할 수 있습니다. 데이터 원본 사용을 마치면 애플리케이션은 데이터 원본에 대한 연결을 끊고 연결 핸들을 해제한 후 연결 핸들이 모두 해제되면 환경 핸들을 해제합니다.  

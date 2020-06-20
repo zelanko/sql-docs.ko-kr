@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 636314fd-d099-45cd-8bb4-f730d0a06739
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e4791e826adccb925241b02312900ea524f228e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39ccf68bcd7a16c95fd5247c7b7a9fa7b5e63fce
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768469"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966463"
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>스크립트 태스크를 사용하여 원격 프라이빗 메시지 큐에 메시지 보내기
   개발자는 메시지 큐(MSMQ)를 통해 메시지를 주고 받는 방법으로 신속하고 안전하게 애플리케이션과 통신할 수 있습니다. 메시지 큐는 로컬 컴퓨터나 원격 컴퓨터에 있을 수 있으며 퍼블릭 큐이거나 프라이빗 큐일 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 MSMQ 연결 관리자와 메시지 큐 태스크에서 원격 컴퓨터의 프라이빗 큐로 메시지를 보낼 수 없습니다. 그러나 스크립트 태스크를 사용하면 원격 프라이빗 메시지 큐에 메시지를 쉽게 보낼 수 있습니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "62768469"
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
   
 ## <a name="description"></a>Description  
- 다음 예에서는 기존 MSMQ 연결 관리자와 System.Messaging 네임스페이스의 개체 및 메서드를 사용하여 패키지 변수에 들어 있는 텍스트를 원격 프라이빗 메시지 큐에 보냅니다. MSMQ 연결 관리자의 M:Microsoft.SqlServer.Dts.ManagedConnections.MSMQConn.AcquireConnection (System.object) 메서드를 호출 하면이 작업을 수행 하는 **MessageQueue** 메서드가 포함 `Send` 된 MessageQueue 개체가 반환 됩니다.  
+ 다음 예에서는 기존 MSMQ 연결 관리자와 System.Messaging 네임스페이스의 개체 및 메서드를 사용하여 패키지 변수에 들어 있는 텍스트를 원격 프라이빗 메시지 큐에 보냅니다. MSMQ 연결 관리자의 M:Microsoft.SqlServer.Dts.ManagedConnections.MSMQConn.AcquireConnection (System.object) 메서드를 호출 하면이 작업을 수행 하는 메서드가 포함 된 **MessageQueue** 개체가 반환 `Send` 됩니다.  
   
 #### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
   
@@ -40,9 +39,9 @@ ms.locfileid: "62768469"
     FORMATNAME:DIRECT=OS:<computername>\private$\<queuename>  
     ```  
   
-2.  형식의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] `String` **MessageText** 이라는 변수를 만들어 메시지 텍스트를 스크립트에 전달 합니다. 변수의 값으로 기본 메시지를 입력합니다.  
+2.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]형식의 **MessageText** 이라는 변수를 만들어 `String` 메시지 텍스트를 스크립트에 전달 합니다. 변수의 값으로 기본 메시지를 입력합니다.  
   
-3.  디자인 화면에 스크립트 태스크를 추가하고 편집합니다. **스크립트 태스크 편집기**의 **스크립트** 탭에서 `MessageText`ReadOnlyVariables**속성에** 변수를 추가하여 해당 변수를 스크립트 내에서 사용할 수 있게 합니다.  
+3.  디자인 화면에 스크립트 태스크를 추가하고 편집합니다. **스크립트 태스크 편집기**의 **스크립트** 탭에서 **ReadOnlyVariables** 속성에 `MessageText` 변수를 추가하여 해당 변수를 스크립트 내에서 사용할 수 있게 합니다.  
   
 4.  **스크립트 편집**을 클릭하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) 스크립트 편집기를 엽니다.  
   
@@ -105,6 +104,6 @@ public class ScriptMain
 ![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Message Queue Task](../control-flow/message-queue-task.md)  
+ [메시지 큐 태스크](../control-flow/message-queue-task.md)  
   
   

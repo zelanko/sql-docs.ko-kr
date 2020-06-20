@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 25fb4e31-6dbf-4cf6-8e47-0dd0998c836c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 52b569ba68e6693c5b720e118a4500e2e768b3dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5618ae2d935fdf0e78cd24b7bb9f0f2f6881940f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63277118"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058005"
 ---
 # <a name="specify-search-criteria-visual-database-tools"></a>검색 조건 지정(Visual Database Tools)
   검색 기준을 사용하여 쿼리가 반환하는 행의 수를 제한할 수 있습니다.  

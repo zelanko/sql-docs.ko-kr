@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5ac46b6-765b-4424-b6c7-4d5a1b898d65
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 673fa5941785f332893af3ea8f3630579d8a5741
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1ec5ccdb01b8cddbe0efd59794f0d2a7d932f7d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761999"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031087"
 ---
 # <a name="audit-add-member-to-db-role-event-class"></a>Audit Add Member to DB Role 이벤트 클래스
   **Audit Add Member to DB Role** 이벤트 클래스는 데이터베이스 역할에서 로그인이 추가되거나 제거될 때마다 발생합니다. 이 이벤트 클래스는 **sp_addrolemember**, **sp_changegroup**, 및 **sp_droprolemember** 저장 프로시저와 함께 사용됩니다.  

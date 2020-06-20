@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fe7b988590de54a3cb02aa540b244e1f56f3ba24
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 275a38b70a8215d3ffb9d35530cd0bd5df4ffb70
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054131"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966013"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>클러스터형 인덱스의 크기 예측
   다음 단계를 사용하여 클러스터형 인덱스에 데이터를 저장하는 데 필요한 공간을 예측할 수 있습니다.  
@@ -174,7 +173,7 @@ ms.locfileid: "66054131"
   
 7.  인덱스의 수준 수를 계산합니다.  
   
-     ***비 leaf_Levels*** = 1 + 로그 Index_Rows_Per_Page (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***비 leaf_Levels*** = 1 + 로그 Index_Rows_Per_Page (***Num_Leaf_Pages***  /  ***Index_Rows_Per_Page***)  
   
      이 값을 가장 근사한 정수로 올립니다. 클러스터형 인덱스의 리프 수준은 이 값에 포함되지 않습니다.  
   

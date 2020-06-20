@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 102c3d72d811627074da570ee74902e51a4b86dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 269990d534a2357d1931b1cff79718323e08db41
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162169"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025343"
 ---
 # <a name="how-online-index-operations-work"></a>온라인 인덱스 작동 방식
   이 항목에서는 온라인 인덱스 작업 중에 존재하는 구조에 대해 설명하고 이러한 구조와 관련된 작업을 보여 줍니다.  

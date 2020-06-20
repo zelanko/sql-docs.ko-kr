@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e0394bc-6ea8-4533-845c-76782bec73c2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1834a4d3044dc8c444486d727274d6fa72a56a2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9012a73642f23fa502e4bc3c4d006d3ce6c7f543
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023429"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052935"
 ---
 # <a name="lockdeadlock-event-class"></a>Lock:Deadlock 이벤트 클래스
   Lock:Deadlock 이벤트 클래스는 잠금을 얻으려고 시도하는 동안 교착 상태가 발생하여 이 시도가 취소될 때 생성됩니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "63023429"
 |DatabaseName|`nvarchar`|잠금을 얻은 데이터베이스 이름입니다.|35|yes|  
 |Duration|`bigint`|잠금 요청이 발생한 시간과 교착 상태가 발생한 시간 사이의 간격(마이크로초)입니다.|13|예|  
 |EndTime|`datetime`|교착 상태가 끝난 시간입니다.|15|예|  
-|EventClass|`int`|이벤트 유형 = 25|27|아니요|  
+|EventClass|`int`|이벤트 유형 = 25|27|예|  
 |EventSequence|`int`|요청 내의 지정된 이벤트 시퀀스입니다.|51|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  
@@ -59,7 +58,7 @@ ms.locfileid: "63023429"
 |StartTime|`datetime`|사용 가능한 경우 이벤트가 시작된 시간입니다.|14|yes|  
 |TextData|`ntext`|획득한 잠금 유형에 따라 달라지는 텍스트 값입니다.|1|예|  
 |TransactionID|`bigint`|시스템이 할당한 트랜잭션의 ID입니다.|4|예|  
-|유형|`int`|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|예|  
+|Type|`int`|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|예|  
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_trace_setevent &#40;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
