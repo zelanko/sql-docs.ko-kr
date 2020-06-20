@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a01524acf4fc72cb50732650f1f2e6f58b4ff74d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d15836fb551f5c7c0b04712dbcb0b783cc317a9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771529"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923604"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Attunity Oracle CDC Service
   Oracle CDC Service는 Oracle 트랜잭션 로그를 검색하고 관련 Oracle 테이블의 변경 내용을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 테이블에 캡처하는 Windows 서비스입니다. Oracle에서 캡처한 변경 내용이 저장되는 SQL 변경 테이블은 네이티브 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 데이터 캡처 기능에서 사용하는 변경 테이블과 같은 유형입니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 변경 내용을 사용하는 것만큼 쉽게 이 변경 내용을 사용할 수 있습니다.  
@@ -25,14 +24,14 @@ ms.locfileid: "62771529"
   
  Oracle용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC Service를 설치하면 서비스 구성 UI와 서비스 프로그램이 선택한 위치에 배치됩니다. Oracle CDC Service는 Oracle CDC Service 구성 콘솔을 사용하여 별도로 구성됩니다. Oracle CDC Service 구성에 대한 자세한 내용은 [Change Data Capture Service for Oracle by Attunity F1 도움말](change-data-capture-service-for-oracle-by-attunity-f1-help.md)을 참조하십시오.  
   
- Oracle CDC Service를 설치 하려면 SQL Server 설치 미디어에서 **attunityoraclecdcservice.msi** 를 수동으로 실행 합니다. X86 및 x 64 용 설치 패키지는 SQL Server 설치 미디어의 **.\Tools\AttunityCDCOracle\\ ** 에 있습니다.  
+ Oracle CDC Service를 설치 하려면 SQL Server 설치 미디어에서 **AttunityOracleCdcService.msi** 를 수동으로 실행 합니다. X86 및 x 64 용 설치 패키지는 SQL Server 설치 미디어의 **.\Tools\AttunityCDCOracle \\ ** 에 있습니다.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client가 설치되는 지원되는 Windows 컴퓨터에 Oracle CDC Service를 설치할 수 있으며 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치되는 동일한 컴퓨터에 설치할 필요는 없습니다.  
   
 ## <a name="supported-windows-environments"></a>지원되는 Windows 환경  
  Attunity Oracle CDC Service는 다음 Windows 환경에서 실행할 수 있습니다.  
   
--   Windows 8  
+-   Windows 8  
   
 -   Windows 7 32비트(x86) 및 64비트(x64)  
   

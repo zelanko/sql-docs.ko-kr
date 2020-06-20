@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 32e57b44b759ba36ea92cd7d08a600738ff2b4dd
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 64684c7b87119aa2763ddc4f48f200de20dde0cc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859235"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067372"
 ---
 # <a name="customize-toolbars-page"></a>사용자 지정(도구 모음 페이지)
   **도구 모음** 탭을 사용하여 도구 모음을 만들고 제거하며 다시 설정하고 해당 이름을 바꿀 수 있습니다. **도구** 메뉴에서 **사용자 지정** 을 클릭한 다음 **도구 모음**을 클릭하여 이 탭에 액세스할 수 있습니다.  

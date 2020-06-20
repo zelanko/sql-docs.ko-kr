@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 651099b0-33b4-453a-a864-b067f21eb8b9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3823b6d55439aad860d9176933c348e44acc1ba5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6193c9962c0e7402e041f9359966cc9ebb736995
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922851"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960128"
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>PowerShell의 SQL Server 식별자
   Windows PowerShell의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자는 Windows PowerShell 경로에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 식별자를 사용합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 식별자는 Windows PowerShell이 경로에서 지원하지 않는 문자를 포함할 수 있습니다. Windows PowerShell 경로에서 식별자를 사용할 때는 이러한 문자를 이스케이프 처리하거나 특수 인코딩을 사용해야 합니다.  

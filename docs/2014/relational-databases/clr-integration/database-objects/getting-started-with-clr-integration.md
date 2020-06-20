@@ -24,19 +24,18 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: db3a72facf1676360e7c338663facac66840a113
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2d48e3c9a2c25dda9dae893cc8e61ff30be4314
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874116"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970621"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 통합으로 작업 시작
-  이 항목에서는 .NET Framework CLR (공용 언어 런타임)과의 [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] 통합을 사용 하 여 데이터베이스 개체를 컴파일하는 데 필요한 네임 스페이스 및 라이브러리에 대 한 개요를 제공 합니다. 또한 이 항목에서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#으로 작성된 간단한 CLR 저장 프로시저를 작성, 컴파일 및 실행하는 방법도 보여 줍니다.  
+  이 항목에서는 [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] .NET FRAMEWORK CLR (공용 언어 런타임)과의 통합을 사용 하 여 데이터베이스 개체를 컴파일하는 데 필요한 네임 스페이스 및 라이브러리에 대 한 개요를 제공 합니다. 또한 이 항목에서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#으로 작성된 간단한 CLR 저장 프로시저를 작성, 컴파일 및 실행하는 방법도 보여 줍니다.  
   
 ## <a name="required-namespaces"></a>필수 네임스페이스  
- 부터 시작 [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)]합니다. CLR 통합 기능은 .NET Framework의 일부인 system.data.dll이라는 어셈블리에서 제공되며 이 어셈블리는 GAC(전역 어셈블리 캐시)와 .NET Framework 디렉터리에 있습니다. 이 어셈블리에 대한 참조는 일반적으로 명령줄 도구와 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio에 자동으로 추가되므로 직접 추가하지 않아도 됩니다.  
+ 부터 시작 [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] 합니다. CLR 통합 기능은 .NET Framework의 일부인 system.data.dll이라는 어셈블리에서 제공되며 이 어셈블리는 GAC(전역 어셈블리 캐시)와 .NET Framework 디렉터리에 있습니다. 이 어셈블리에 대한 참조는 일반적으로 명령줄 도구와 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio에 자동으로 추가되므로 직접 추가하지 않아도 됩니다.  
   
  system.data.dll 어셈블리에는 CLR 데이터베이스 개체를 컴파일하는 데 필요한 다음과 같은 네임스페이스가 들어 있습니다.  
   
@@ -85,7 +84,7 @@ End Class
   
 ```  
   
- 이 간단한 프로그램에는 공용 클래스에 대한 정적 메서드 하나가 포함되어 있습니다. 이 메서드는 간단한 텍스트 메시지를 출력할 관리되는 데이터베이스 개체를 만들기 위해 `SqlContext`와 `SqlPipe`라는 새로운 클래스 두 개를 사용합니다. 또한 이 메서드는 "Hello world!"라는 문자열을 out 매개 변수 값으로 할당합니다. 저장 프로시저에서 [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] 이 메서드를 저장 프로시저로 선언할 수 있습니다.  
+ 이 간단한 프로그램에는 공용 클래스에 대한 정적 메서드 하나가 포함되어 있습니다. 이 메서드는 간단한 텍스트 메시지를 출력할 관리되는 데이터베이스 개체를 만들기 위해 `SqlContext`와 `SqlPipe`라는 새로운 클래스 두 개를 사용합니다. 또한 이 메서드는 "Hello world!"라는 문자열을 out 매개 변수 값으로 할당합니다. 저장 프로시저에서이 메서드를 저장 프로시저로 선언할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] .  
   
  이제 이 프로그램을 라이브러리로 컴파일하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 로드한 다음 저장 프로시저로 실행해 봅니다.  
   
@@ -96,7 +95,7 @@ End Class
 C:\Windows\Microsoft.NET\Framework\(version)  
 ```  
   
- version에는 설치된 .NET Framework 재배포 가능 패키지의 버전 번호가 포함됩니다. 예를 들어:  
+ version에는 설치된 .NET Framework 재배포 가능 패키지의 버전 번호가 포함됩니다. 다음은 그 예입니다.  
   
 ```  
 C:\Windows\Microsoft.NET\Framework\v2.0.31113  
@@ -119,7 +118,7 @@ vbc /target:library helloworld.vb
  이러한 명령은 라이브러리 DLL을 빌드하도록 지정하는 /target 옵션을 사용하여 Visual C# 또는 Visual Basic 컴파일러를 시작합니다.  
   
 ## <a name="loading-and-running-the-hello-world-stored-procedure-in-sql-server"></a>SQL Server에서 "Hello World" 저장 프로시저 로드 및 실행  
- 샘플 프로시저가 성공적으로 컴파일되면에서 [!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)] 테스트 하 고 새 쿼리를 만들어 적절 한 테스트 데이터베이스 (예: AdventureWorks 예제 데이터베이스)에 연결할 수 있습니다.  
+ 샘플 프로시저가 성공적으로 컴파일되면에서 테스트 하 [!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)] 고 새 쿼리를 만들어 적절 한 테스트 데이터베이스 (예: AdventureWorks 예제 데이터베이스)에 연결할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 CLR(공용 언어 런타임) 코드를 실행하는 기능이 기본적으로 OFF로 설정되어 있습니다. **Sp_configure** 시스템 저장 프로시저를 사용 하 여 CLR 코드를 사용 하도록 설정할 수 있습니다. 자세한 내용은 [Enabling CLR Integration](../clr-integration-enabling.md)을 참조하세요.  
   
@@ -142,7 +141,7 @@ EXTERNAL NAME helloworld.HelloWorldProc.HelloWorld
 -- EXTERNAL NAME helloworld.[MyNS.HelloWorldProc].HelloWorld  
 ```  
   
- 프로시저가 만들어지면 [!INCLUDE[tsql](../../../includes/tsql-md.md)]로 작성된 일반적인 저장 프로시저와 마찬가지로 프로시저를 실행할 수 있습니다. 다음 명령을 실행하십시오.  
+ 프로시저가 만들어지면 [!INCLUDE[tsql](../../../includes/tsql-md.md)]로 작성된 일반적인 저장 프로시저와 마찬가지로 프로시저를 실행할 수 있습니다. 다음 명령을 실행합니다.  
   
 ```  
 DECLARE @J nchar(25)  

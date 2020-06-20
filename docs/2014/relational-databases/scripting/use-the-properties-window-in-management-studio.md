@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c9c5b4f6b7c54b7bde76d61dc55b1b10f805dd87
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 208aadd4f082e92987a5f7dfce4668a7b1cf51c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718191"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997807"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Management Studio에서 속성 창 사용
   속성 창은 연결 또는 실행 계획 연산자와 같은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 항목의 상태와 테이블, 뷰, 디자이너 등과 같은 데이터베이스 개체에 대한 정보를 설명합니다.  

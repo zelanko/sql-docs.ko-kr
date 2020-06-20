@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ed991d65858d40b96013659caa2d83c479ca1d3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e647ed8d563bb922ee083d7a10a57429148e954a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782716"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953093"
 ---
 # <a name="register-a-database-as-a-dac"></a>DAC로 데이터베이스 등록
-  **데이터 계층 응용 프로그램 등록 마법사** 또는 Windows PowerShell 스크립트를 사용 하 여 기존 데이터베이스의 개체를 설명 하는 dac (데이터 계층 응용 프로그램) 정의를 작성 하 고 `msdb` 시스템 데이터베이스 (의**master** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]master)에 dac 정의를 등록할 수 있습니다.  
+  **데이터 계층 응용 프로그램 등록 마법사** 또는 Windows PowerShell 스크립트를 사용 하 여 기존 데이터베이스의 개체를 설명 하는 dac (데이터 계층 응용 프로그램) 정의를 작성 하 고 `msdb` 시스템 데이터베이스 (의**master** )에 dac 정의를 등록할 수 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 있습니다.  
   
 -   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [사용 권한](#Permissions)  
   
@@ -78,11 +77,11 @@ ms.locfileid: "72782716"
   
  **응용 프로그램 이름입니다.** - DAC 정의를 식별하는 데 사용되는 이름을 지정하는 문자열입니다. 이 필드는 데이터베이스 이름으로 채워집니다.  
   
- **버전.** - DAC의 버전을 식별하는 숫자 값입니다. DAC 버전은 Visual Studio에서 개발자가 작업 중인 DAC의 버전을 식별하는 데 사용됩니다. DAC를 배포 하는 경우 버전은 `msdb` 데이터베이스에 저장 되 고 나중에의 **Data-tier Applications** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]데이터 계층 응용 프로그램 노드에서 볼 수 있습니다.  
+ **버전.** - DAC의 버전을 식별하는 숫자 값입니다. DAC 버전은 Visual Studio에서 개발자가 작업 중인 DAC의 버전을 식별하는 데 사용됩니다. DAC를 배포 하는 경우 버전은 데이터베이스에 저장 되 `msdb` 고 나중에의 **데이터 계층 응용 프로그램** 노드에서 볼 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
- **한.** - 선택 사항입니다. DAC의 용도를 설명하는 텍스트입니다. DAC를 배포할 때 설명은 `msdb` 데이터베이스에 저장 되며 나중에의 **Data-tier Applications** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]데이터 계층 응용 프로그램 노드에서 볼 수 있습니다.  
+ **한.** - 선택 사항입니다. DAC의 용도를 설명하는 텍스트입니다. DAC를 배포할 때 설명은 데이터베이스에 저장 `msdb` 되며 나중에의 **데이터 계층 응용 프로그램** 노드에서 볼 수 있습니다 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
- 이전- **소개** 페이지로 돌아갑니다. ** \< **  
+ ** \< 이전** - **소개** 페이지로 돌아갑니다.  
   
  **다음 >** - 데이터베이스의 개체로 DAC를 작성할 수 있는지 확인하고 **유효성 검사 및 요약** 페이지에 결과를 표시합니다.  
   
@@ -94,7 +93,7 @@ ms.locfileid: "72782716"
 ### <a name="retrieving-objects"></a>개체 검색  
  **데이터베이스 및 서버 개체 검색** - 마법사가 데이터베이스의 모든 필요한 개체 및 데이터베이스 엔진의 인스턴스를 검색할 때 진행률 표시줄을 표시합니다.  
   
- 이전-항목을 변경 하기 위한 **속성 설정** 페이지로 돌아갑니다. ** \< **  
+ ** \< 이전** -항목을 변경 하기 위한 **속성 설정** 페이지로 돌아갑니다.  
   
  **다음 >** - DAC를 등록하고 **DAC 등록** 페이지에 결과를 표시합니다.  
   
@@ -103,7 +102,7 @@ ms.locfileid: "72782716"
 ### <a name="validating-objects"></a>개체 유효성 확인  
  **검사 중: **  _SchemaName_ **.** _ObjectName_ **.** - 마법사가 검색된 개체의 종속성을 확인하고 모두 DAC에 유효한 개체인지 확인할 때 진행률 표시줄을 표시합니다. _SchemaName_**.** _ObjectName_ 현재 확인 중인 개체를 식별 합니다.  
   
- 이전-항목을 변경 하기 위한 **속성 설정** 페이지로 돌아갑니다. ** \< **  
+ ** \< 이전** -항목을 변경 하기 위한 **속성 설정** 페이지로 돌아갑니다.  
   
  **다음 >** - DAC를 등록하고 **DAC 등록** 페이지에 결과를 표시합니다.  
   
@@ -114,7 +113,7 @@ ms.locfileid: "72782716"
   
  **보고서 저장** - 유효성 검사 보고서의 복사본을 HTML 파일로 저장하려면 이 단추를 선택합니다. 기본 폴더는 Windows 계정의 Documents 폴더에 있는 **SQL Server Management Studio\dac packages 패키지** 폴더입니다.  
   
- 이전-항목을 변경 하기 위한 **속성 설정** 페이지로 돌아갑니다. ** \< **  
+ ** \< 이전** -항목을 변경 하기 위한 **속성 설정** 페이지로 돌아갑니다.  
   
  **다음 >** - DAC를 등록하고 **DAC 등록** 페이지에 결과를 표시합니다.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "72782716"
   
  **DAC 등록** - DAC를 등록하기 위해 수행한 각 동작의 성공 또는 실패를 보고합니다. 정보를 검토하여 각 동작의 성공 또는 실패를 확인합니다. 오류가 발생한 동작에는 모두 **결과** 열에 링크가 있습니다. 링크를 선택하면 해당 동작의 오류에 대한 보고서가 표시됩니다.  
   
- **보고서 저장** - 등록 보고서를 HTML 파일로 저장하려면 이 단추를 선택합니다. 파일은 모든 동작에서 생성된 모든 오류를 비롯하여 각 동작의 상태를 보고합니다. 기본 폴더는 Windows 계정의 Documents 폴더에 있는 **SQL Server Management Studio\dac packages 패키지** 폴더입니다. 파일 이름의 형식은 \<DACPackageName>_RegisterDACReport_yyyymmdd.html이며, 여기서 \<*DACPackageName*>은 배포할 패키지의 이름이고 *yyyy*는 현재 연도, *mm*은 현재 월, *dd*는 현재 날짜입니다.  
+ **보고서 저장** - 등록 보고서를 HTML 파일로 저장하려면 이 단추를 선택합니다. 파일은 모든 동작에서 생성된 모든 오류를 비롯하여 각 동작의 상태를 보고합니다. 기본 폴더는 Windows 계정의 Documents 폴더에 있는 **SQL Server Management Studio\dac packages 패키지** 폴더입니다. 파일 이름은_RegisterDACReport_yyyymmdd.html 형식으로 되어 있습니다 \<DACPackageName> \<*DACPackageName*> . 여기서은 배포 되는 패키지의 이름, *yyyy* = 현재 연도, *mm* = 현재 월, *dd* = 현재 날짜입니다.  
   
  **마침** - 마법사를 종료합니다.  
   

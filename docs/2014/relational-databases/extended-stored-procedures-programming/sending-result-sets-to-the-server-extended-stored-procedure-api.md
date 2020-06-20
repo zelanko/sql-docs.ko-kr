@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 9d54673d-ea9d-4ac6-825a-f216ad8b0e34
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a58c8eca585bbbe2c935c524840bc465992d45c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82984440f96416189eb18f900764ee7bdaf05a01
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62511848"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050859"
 ---
 # <a name="sending-result-sets-to-the-server-extended-stored-procedure-api"></a>서버로 결과 집합 보내기(확장 저장 프로시저 API)
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하십시오.  
   
- 로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]결과 집합을 보낼 때 확장 저장 프로시저는 다음과 같이 적절 한 API를 호출 해야 합니다.  
+ 로 결과 집합을 보낼 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 저장 프로시저는 다음과 같이 적절 한 API를 호출 해야 합니다.  
   
 -   **Srv_sendmsg** 함수는 **srv_sendrow**를 사용 하 여 모든 행 (있는 경우)이 전송 되기 전이나 후에 순서에 관계 없이 호출 될 수 있습니다. **Srv_senddone**를 사용 하 여 완료 상태를 보내기 전에 모든 메시지를 클라이언트로 보내야 합니다.  
   

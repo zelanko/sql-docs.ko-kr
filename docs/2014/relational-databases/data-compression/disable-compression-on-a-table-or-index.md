@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bda1e452-397b-4757-82a4-181217361589
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7700a2d1da4349bd1bc652badc1c2cdd89dc6550
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80b5775d3b6f7a3f47ab75c5348b556c17b6e676
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873274"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970363"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>테이블 또는 인덱스에서 압축 해제
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 테이블이나 인덱스에서 압축을 해제하는 방법에 대해 설명합니다.  

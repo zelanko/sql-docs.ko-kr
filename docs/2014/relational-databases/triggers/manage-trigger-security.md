@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bcdc2af7f67c1ea4bda49e09cfe92eda43c9dea3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fdc176dcad50c3bf28f058c3724a01267975bfc5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524129"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014321"
 ---
 # <a name="manage-trigger-security"></a>트리거 보안 관리
   기본적으로 두 DML 및 DDL 트리거는 트리거를 호출하는 사용자의 컨텍스트에서 모두 실행됩니다. 트리거 호출자는 트리거를 실행시키는 문을 실행하는 사용자입니다. 예를 들어 **Mary** 라는 사용자가 DML 트리거 **DML_trigMary** 를 실행시키는 DELETE 문을 실행하면 **DML_trigMary** 내에 있는 코드는 **Mary**에 대한 사용자 권한 컨텍스트에서 실행됩니다. 이러한 기본 동작은 데이터베이스나 서버 인스턴스에 악의적인 코드를 침투시키려는 사용자가 이용할 수 있습니다. 예를 들어 다음 DDL 트리거는 `JohnDoe`라는 사용자가 만든 것입니다.  

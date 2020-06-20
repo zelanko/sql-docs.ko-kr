@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a1255a810c5d41dfe7c69dee781c670965f0756c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2408399c0c04338312f2076e42d3ac7de167f7aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703660"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037796"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>스크립팅 변수와 함께 sqlcmd 사용
   스크립트에서 사용할 수 있는 변수를 스크립팅 변수라고 합니다. 스크립팅 변수를 사용하면 하나의 스크립트를 여러 시나리오에서 사용할 수 있습니다. 예를 들어 하나의 스크립트를 여러 서버에서 실행해야 하는 경우 각 서버에 맞게 스크립트를 수정하는 대신 서버 이름에 스크립팅 변수를 사용할 수 있습니다. 스크립팅 변수로 제공되는 서버 이름을 변경하여 같은 스크립트를 다른 서버에서 실행할 수 있습니다.  
@@ -127,7 +126,7 @@ ms.locfileid: "82703660"
   
  R/W는 **setvar** 명령을 사용하여 값을 다시 설정할 수 있으며 후속 명령에 새 값이 사용됨을 나타냅니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-the-setvar-command-in-a-script"></a>A. 스크립트에서 setvar 명령 사용  
  **setvar** 명령을 사용하면 스크립트에서 여러 **sqlcmd** 옵션을 제어할 수 있습니다. 다음 예에서는 `test.sql` 변수가 `SQLCMDLOGINTIMEOUT` 초로 설정되고 다른 스크립팅 변수인 `60` 가 `server`로 설정된 `testserver`스크립트를 만듭니다. `test.sql`의 코드는 다음과 같습니다.  
@@ -341,7 +340,7 @@ ms.locfileid: "82703660"
  `>2 GO`  
   
 ## <a name="see-also"></a>참고 항목  
- [Sqlcmd 유틸리티 사용](sqlcmd-use-the-utility.md)   
+ [sqlcmd 유틸리티 사용](sqlcmd-use-the-utility.md)   
  [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)   
  [명령 프롬프트 유틸리티 참조&#40;데이터베이스 엔진#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   

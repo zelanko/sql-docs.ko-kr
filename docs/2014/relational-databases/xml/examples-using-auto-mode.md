@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7d2b40ae9c5eda9288f86527c2cbf973a4106e09
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bb6567924747d9325610c23d1f11de8ced1bc017
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716695"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059487"
 ---
 # <a name="examples-using-auto-mode"></a>예제: AUTO 모드 사용
   다음 예에서는 AUTO 모드를 사용하는 방법을 보여 줍니다. 이러한 쿼리는 대부분 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 예제 데이터베이스의 ProductModel 테이블에 있는 Instructions 열에 저장된 자전거 제조 지침 XML 문서에 대해 지정됩니다.  
@@ -265,7 +264,7 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   쿼리 결과에서 반환된 요소와 특성 이름의 특수 XML 및 URL 문자는 그에 해당되는 유니코드 문자의 16진수 값을 사용하여 인코딩됩니다. 이전 결과에서 요소 이름 <`Special Chars`>는 <`Special_x0020_Chars`>로 반환됩니다. 특성 이름 <`Col#&2`>는 <`Col_x0023__x0026_2`>로 반환됩니다. XML 및 URL 특수 문자가 모두 인코딩됩니다.  
   
--   요소나 특성의 값에 5개의 표준 XML 문자 엔터티(', "", \<, > 및 &)가 있는 경우 이 특수 XML 문자는 항상 XML 문자 인코딩을 사용하여 인코딩됩니다. 이전 결과에서 <`&`> 특성 값의 `Col1` 값은 `&`로 인코딩됩니다. 그러나 # 문자는 유효한 XML 문자이고 특수 XML 문자가 아니기 때문에 #로 그대로 유지됩니다.  
+-   요소 또는 특성의 값에 5 개의 표준 XML 문자 엔터티 (', "", 및 &)가 포함 된 경우 \<, > 이러한 특수 xml 문자는 항상 xml 문자 인코딩을 사용 하 여 인코딩됩니다. 이전 결과에서 <`&`> 특성 값의 `Col1` 값은 `&`로 인코딩됩니다. 그러나 # 문자는 유효한 XML 문자이고 특수 XML 문자가 아니기 때문에 #로 그대로 유지됩니다.  
   
 -   요소나 특성의 값에 URL에서 특수한 의미가 있는 특수 URL 문자가 있으면 이 문자는 DBOBJECT URL 값에서만 인코딩되고 특수 문자가 테이블이나 열 이름의 일부일 경우에만 인코딩됩니다. 결국 테이블 이름 `#` 의 일부인 문자 `Col#&2` 는 `_x0023_ in the DBOJBECT URL`으로 인코딩됩니다.  
   

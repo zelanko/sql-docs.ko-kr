@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8c763c6db472f52df320d0c89dc47483636bf9f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97a5a459fafd80956a2b8d31c27b86169c6fa850
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917971"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952483"
 ---
 # <a name="database-mail"></a>데이터베이스 메일
   데이터베이스 메일은 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]에서 전자 메일 메시지를 보내는 엔터프라이즈 솔루션입니다. 데이터베이스 메일을 사용하여 데이터베이스 애플리케이션에서 전자 메일 메시지를 사용자에게 보낼 수 있습니다. 메시지에는 쿼리 결과와 네트워크상의 리소스 파일이 포함될 수 있습니다.  

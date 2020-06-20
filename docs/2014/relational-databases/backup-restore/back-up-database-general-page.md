@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fc6680702fd32c670d2f3c3861c47bab96c52c47
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c315c827e1c8b206b2098009510bf6468bd7d74
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155083"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959641"
 ---
 # <a name="back-up-database-general-page"></a>데이터베이스 백업(일반 페이지)
   **데이터베이스 백업** 대화 상자의 **일반** 페이지를 사용하여 데이터베이스 백업 작업에 대한 설정을 확인하거나 수정할 수 있습니다.  
@@ -25,7 +24,7 @@ ms.locfileid: "70155083"
  기본 백업 개념에 대한 자세한 내용은 [백업 개요&#40;SQL Server&#41;](backup-overview-sql-server.md)를 참조하세요.  
   
 > [!NOTE]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 백업 태스크를 지정할 때 **스크립트** 단추를 클릭한 다음 스크립트에 대한 대상을 선택하여 해당되는 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) 스크립트를 생성할 수 있습니다.  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 백업 태스크를 지정할 때 [!INCLUDE[tsql](../../includes/tsql-md.md)][스크립트](/sql/t-sql/statements/backup-transact-sql) 단추를 클릭한 다음 스크립트에 대한 대상을 선택하여 해당되는 **BACKUP** 스크립트를 생성할 수 있습니다.  
   
  **SQL Server Management Studio를 사용하여 백업을 만들려면**  
   
@@ -113,17 +112,17 @@ ms.locfileid: "70155083"
 > [!IMPORTANT]  
 >  **만들기** 를 클릭하면 열리는 대화 상자에서는 관리 인증서나 구독용 게시 프로필이 필요합니다. 관리 인증서나 게시 프로필에 액세스할 수 없는 경우 Transact-SQL이나 SQL Server Management Studio를 사용하여 스토리지 계정 이름을 지정하고 키 정보에 액세스하여 SQL 자격 증명을 만들 수 있습니다. Transact-sql을 사용 하 여 자격 증명을 만들려면 [이 항목의 샘플 코드를 참조](../security/authentication-access/create-a-credential.md#Credential) 하세요. 또는 SQL Server Management Studio를 사용하여 데이터베이스 엔진 인스턴스에서 **보안**을 마우스 오른쪽 단추로 클릭하고 **새로 만들기**, **자격 증명**을 차례로 선택합니다. **ID** 에 대한 스토리지 계정 이름을 지정하고 **암호** 필드에 액세스 키를 지정합니다.  
   
- **Azure 스토리지 컨테이너**  
+ **Azure Storage 컨테이너**  
  Azure Storage 컨테이너의 이름을 지정합니다.  
   
  **URL 접두사:**  
- 이는 지정된 Azure 스토리지 컨테이너 이름 및 SQL 자격 증명에 저장된 스토리지 계정 정보를 기반으로 자동 생성됩니다. ** \<저장소 계정> blob.core.windows.net**이외의 형식을 사용 하는 도메인을 사용 하지 않는 경우이 필드의 정보를 편집 하지 않는 것이 좋습니다.  
+ 이는 지정된 Azure 스토리지 컨테이너 이름 및 SQL 자격 증명에 저장된 스토리지 계정 정보를 기반으로 자동 생성됩니다. ** \<storage account> Blob.core.windows.net**이외의 형식을 사용 하는 도메인을 사용 하지 않는 경우이 필드의 정보를 편집 하지 않는 것이 좋습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [트랜잭션 로그 &#40;SQL Server 백업&#41;](back-up-a-transaction-log-sql-server.md)   
- [SQL Server&#41;&#40;파일 및 파일 그룹 백업](back-up-files-and-filegroups-sql-server.md)   
- [SQL Server&#41;&#40;디스크 파일에 대 한 논리적 백업 장치를 정의 합니다.](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [테이프 드라이브에 대 한 논리적 백업 장치를 정의 &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
+ [트랜잭션 로그 백업&#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
+ [파일 및 파일 그룹 백업&#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
+ [디스크 파일에 대한 논리적 백업 디바이스 정의&#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
+ [테이프 드라이브에 대한 논리적 백업 디바이스 정의&#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [복구 모델&#40;SQL Server&#41;](recovery-models-sql-server.md)  
   
   

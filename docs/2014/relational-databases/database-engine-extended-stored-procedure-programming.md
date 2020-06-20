@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 158a6765-0542-4e84-b5ab-f173d946ef5e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 63f66eb4b47588476afc2e01cf9c42a00293aee5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fecb8f996ddfcaede83cdb330e9c82bffdce5819
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706841"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953042"
 ---
 # <a name="database-engine-extended-stored-procedure-programming"></a>데이터베이스 엔진 확장 저장 프로시저 프로그래밍
     

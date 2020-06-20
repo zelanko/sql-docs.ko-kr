@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2c858d0fa8579aff288efd7026ab4b65035bad8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c081ee21b3471656e368bfd31058c95e6aa7428b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127191"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050724"
 ---
 # <a name="srv_paramlen-extended-stored-procedure-api"></a>srv_paramlen(확장 저장 프로시저 API)
     
@@ -58,7 +57,7 @@ n
 ## <a name="returns"></a>반환  
  매개 변수 데이터의 실제 길이(바이트)입니다. *n*번째 매개 변수가 없거나 원격 저장 프로시저가 없으면 -1이 반환되고, *n*번째 매개 변수가 NULL이면 0이 반환됩니다.  
   
- 매개 변수가 다음 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 시스템 데이터 형식 중 하나 이면이 함수는 다음 값을 반환 합니다.  
+ 매개 변수가 다음 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시스템 데이터 형식 중 하나 이면이 함수는 다음 값을 반환 합니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
 |새 데이터 형식|입력 데이터 길이|  
 |--------------------|-----------------------|  

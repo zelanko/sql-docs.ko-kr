@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 90d3e9e50ef16e51e9669a92cfb53f5f734c83ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea5c088bf16576cf6711e9f01ee21452dd001b8e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827922"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916473"
 ---
 # <a name="connect-components-in-a-data-flow"></a>데이터 흐름의 구성 요소 연결
   이 절차에서는 데이터 흐름의 구성 요소 출력을 동일 데이터 흐름 내의 다른 구성 요소에 연결하는 방법에 대해 설명합니다.  

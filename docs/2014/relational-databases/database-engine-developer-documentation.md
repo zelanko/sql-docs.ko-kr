@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a5751cadb999ee3a2c9d8260bee7a6197047d312
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6cee1b600d85b9e606a86774ac7881a1e86641ed
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706857"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953045"
 ---
 # <a name="developer39s-guide-database-engine"></a>개발자&#39;s 가이드 (데이터베이스 엔진)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 데이터베이스 애플리케이션 개발, 관리 및 제어를 위한 풍부한 도구 집합을 제공합니다.  

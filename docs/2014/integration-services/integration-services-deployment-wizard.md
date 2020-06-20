@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 721953c31a44a2ea02f480c9830e6347adfd4eb3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 727eb2b745a732049d6eb4a5e2f1808f076167d0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058004"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968313"
 ---
 # <a name="integration-services-deployment-wizard"></a>Integration Services 배포 마법사
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 배포 마법사는 프로젝트 배포 모델을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 SSISDB 카탈로그에 프로젝트를 배포합니다.  
   
- 의 열려 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]프로젝트에서 배포 마법사를 시작 하려면 **프로젝트** 메뉴에서 **배포** 를 선택 합니다. 에서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]마법사를 시작 하려면 개체 탐색기에서 **Integration Services 카탈로그** > **SSISDB** 노드를 확장 하 고 **프로젝트** 폴더를 마우스 오른쪽 단추로 클릭 한 다음 **프로젝트 배포**를 클릭 합니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 열려 있는 프로젝트에서 배포 마법사를 시작 하려면 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **프로젝트** 메뉴에서 **배포** 를 선택 합니다. 에서 마법사를 시작 하려면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 개체 탐색기에서 **Integration Services 카탈로그**  >  **SSISDB** 노드를 확장 하 고 **프로젝트** 폴더를 마우스 오른쪽 단추로 클릭 한 다음 **프로젝트 배포**를 클릭 합니다.  
   
  마법사에서 다음 네 단계가 진행됩니다. 다음 **을 클릭 하** 여 다음 단계로 이동 하거나 이전 단계로 돌아가려면 **이전** 을 클릭 합니다.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "66058004"
 4.  **배포/결과** -프로젝트를 배포 하 고 결과를 표시 합니다.  
   
 ## <a name="select-source"></a>원본 선택  
- 만든 프로젝트 배포 파일을 배포 하려면 **프로젝트 배포 파일** 을 선택 하 고 .ispac 파일의 경로를 입력 하거나 **찾아보기** 를 클릭 하 여 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 프로젝트 폴더에서 찾습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 카탈로그에 있는 프로젝트를 배포하려면 **Integration Services 카탈로그**를 선택한 후 서버 이름과 카탈로그에 있는 프로젝트 경로를 입력합니다.  
+ 만든 프로젝트 배포 파일을 배포 하려면 **프로젝트 배포 파일** 을 선택 하 고 .ispac 파일의 경로를 입력 하거나 **찾아보기** 를 클릭 하 여 프로젝트 폴더에서 찾습니다. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 카탈로그에 있는 프로젝트를 배포하려면 **Integration Services 카탈로그**를 선택한 후 서버 이름과 카탈로그에 있는 프로젝트 경로를 입력합니다.  
   
  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]에서 마법사를 시작하면 기본적으로 마법사에서 열린 프로젝트가 원본으로 선택되고 이 단계를 건너뜁니다. 이 단계로 돌아가서 다른 원본을 선택 하려면 **이전** 을 클릭 하거나 왼쪽 창에서 **원본 선택** 을 클릭 합니다.  
   

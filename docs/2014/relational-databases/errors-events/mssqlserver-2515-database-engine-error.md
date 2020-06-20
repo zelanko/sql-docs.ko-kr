@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: af93aa29-70c9-4923-90af-aafadb20c1c6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7e531a2d916cfc464c18aab931c268197fbf5982
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33aebb89b831d414d06954bf15f245e851f1abdf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62915030"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034516"
 ---
 # <a name="mssqlserver_2515"></a>MSSQLSERVER_2515
     
@@ -61,7 +60,7 @@ ms.locfileid: "62915030"
  REPAIR를 실행하면 차등 비트맵이 무효화됩니다. 전체 데이터베이스 백업이 수행되기까지 차등 백업을 수행할 수 없습니다. 전체 데이터베이스 백업은 차등 비트맵을 다시 작성하기 위한 기준점이 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server&#41;&#40;전체 데이터베이스 백업 만들기](../backup-restore/create-a-full-database-backup-sql-server.md)   
+ [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../backup-restore/create-a-full-database-backup-sql-server.md)   
  [MSSQLSERVER_2516](mssqlserver-2516-database-engine-error.md)  
   
   

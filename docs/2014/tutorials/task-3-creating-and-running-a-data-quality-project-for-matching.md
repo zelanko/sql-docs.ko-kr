@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6260e911-ea8b-4c69-a39d-d1bccd565a32
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c6953214bd5e5353643cb16b75ed51ac18783256
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8de716da5a7f845f68bd50fa09b04594bf883ad6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78171772"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035408"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>태스크 3: 일치에 대한 데이터 품질 프로젝트 만들기 및 실행
   이 작업에서는 일치 작업을 위한 데이터 품질 프로젝트를 만들고 정리된 공급자 데이터에서 일치 프로세스를 실행하여 데이터에 있는 모든 중복 항목을 제거합니다.

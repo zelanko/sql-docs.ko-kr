@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5001e9fd-555c-4332-a57d-4d29a537454a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4a45742bb7a827f9f63676b51e83f795058f48f6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7b745c1cbb085870a9282d30078ac82882a16032
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703216"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015566"
 ---
 # <a name="sqlxml-40-data-access-components"></a>SQLXML 4.0 데이터 액세스 구성 요소
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 데이터베이스에 XML 데이터를 삽입하고 검색할 수 있는 다음 3개의 데이터 공급자가 포함되어 있습니다.  

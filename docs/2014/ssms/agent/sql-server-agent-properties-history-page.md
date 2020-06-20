@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: dc73734c-b3c3-407f-bbd1-8714b4fa47b0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10796dde3513e5c4b7970d1e4f6c4eedcad3c6c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4008df15ded37398ef8565bac759364699561fad
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245599"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058691"
 ---
 # <a name="sql-server-agent-properties-history-page"></a>SQL Server 에이전트 속성(기록 페이지)
-  이 페이지를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 기록 로그 관리에 대 한 설정을 확인 하 고 수정할 수 있습니다.  
+  이 페이지를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에이전트 서비스 기록 로그 관리에 대 한 설정을 확인 하 고 수정할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.  
   
 ## <a name="options"></a>옵션  
  **작업 기록 로그 크기 제한**  

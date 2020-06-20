@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: 52440d9e-89fd-4c15-a008-a1ea99f41387
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: caebd8ecad5fe9a48745d10adff28cf2a68d6a1d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ae1a9c60a7a7966f4eff2a08b4557487f5aec58c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702921"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065709"
 ---
 # <a name="architecture-of-client-side-and-server-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 및 서버 쪽 XML 서식 지정 아키텍처(SQLXML 4.0)
   다음 그림에서는 서버 쪽 XML 서식 지정 아키텍처를 보여 줍니다.  
   
  ![서버 쪽 XML 서식 지정 아키텍처](../../../database-engine/dev-guide/media/serversidexml.gif "서버 쪽 XML 서식 지정 아키텍처")  
   
- 이 예에서는 클라이언트에서 지정한 명령이 서버로 전송됩니다. 서버는 XML 문서를 생성하여 클라이언트로 반환합니다. 이 경우 서버에는의 인스턴스가 있습니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . 서버 쪽 XML 서식 지정을 사용하면 SQLXMLOLEDB 공급자나 SQLOLEDB 공급자를 사용할 수 있습니다.  SQLXMLOLEDB 공급자는 SQLXML 4.0에 포함된 Sqlxml4.dll을 사용합니다. SQLOLEDB 공급자를 사용하면 기본적으로 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 또는 MDAC(Microsoft Data Access Components) 2.6 이상 버전에 포함된 Sqlxmlx.dll에서 제공되는 SQLXML 기능을 가져옵니다. SQLOLEDB와 함께 Sqlxml4.msi을 사용 하려면 SQLOLEDB 연결 개체에서 SQLXML 버전 속성을 "SQLXML. 4.0"으로 설정 해야 합니다. 두 경우 모두, 서버는 XML 문서를 생성하여 클라이언트로 보냅니다.  
+ 이 예에서는 클라이언트에서 지정한 명령이 서버로 전송됩니다. 서버는 XML 문서를 생성하여 클라이언트로 반환합니다. 이 경우 서버에는의 인스턴스가 있습니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . 서버 쪽 XML 서식 지정을 사용하면 SQLXMLOLEDB 공급자나 SQLOLEDB 공급자를 사용할 수 있습니다.  SQLXMLOLEDB 공급자는 SQLXML 4.0에 포함된 Sqlxml4.dll을 사용합니다. SQLOLEDB 공급자를 사용하면 기본적으로 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 또는 MDAC(Microsoft Data Access Components) 2.6 이상 버전에 포함된 Sqlxmlx.dll에서 제공되는 SQLXML 기능을 가져옵니다. SQLOLEDB와 함께 Sqlxml4.dll를 사용 하려면 SQLOLEDB 연결 개체에서 SQLXML 버전 속성을 "SQLXML. 4.0"으로 설정 해야 합니다. 두 경우 모두, 서버는 XML 문서를 생성하여 클라이언트로 보냅니다.  
   
 > [!NOTE]  
 >  XPath 쿼리 및 Updategram은 클라이언트에서 구문 분석됩니다. SQLXML 4.0의 XPath 템플릿이나 Updategram 기능을 가져오려면 Sqlxml4.dll을 사용합니다.  

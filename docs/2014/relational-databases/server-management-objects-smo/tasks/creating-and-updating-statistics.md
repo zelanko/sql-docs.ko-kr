@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54995cc99aae2065112cbb510203b656c409dcac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a774a994de7cd6cb9396658d739921b8c3b64383
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782127"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037530"
 ---
 # <a name="creating-and-updating-statistics"></a>통계 생성 및 업데이트
   SMO에서 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 개체를 사용하여 데이터베이스의 쿼리 처리에 대한 통계 정보를 수집할 수 있습니다.  

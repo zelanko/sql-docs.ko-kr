@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6585733a4b864e14815990189fd6924e217de546
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc61f11a800a07a0b9a5ee1e9c3048a17bb36f13
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770690"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939276"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>조건부 분할 변환을 사용하여 데이터 세트 분할
   조건부 분할 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 하나의 원본이 이미 들어 있어야 합니다.  

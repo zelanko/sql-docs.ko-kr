@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e22b65aab9b9775889a3a03fe3ba90a84aafc9f0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d98e8d4ab44709947d8786bce2829954703c77e5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705160"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039422"
 ---
 # <a name="table-valued-parameters-odbc"></a>테이블 반환 매개 변수(ODBC)
   ODBC의 테이블 반환 매개 변수 지원을 통해 한 번의 호출로 여러 행을 서버로 보냄으로써 클라이언트 애플리케이션에서 서버로 매개 변수가 있는 데이터를 보다 효율적으로 전송할 수 있습니다.  

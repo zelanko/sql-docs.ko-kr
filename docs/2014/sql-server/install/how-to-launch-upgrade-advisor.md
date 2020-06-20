@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 0a067cb0-ed83-4a29-bb14-06b24254f3dd
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 59936989a63e702eba78bca834498f530efdae17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42fc062ce36687b15cc649b1527fdb7710644ac2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094911"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059260"
 ---
 # <a name="how-to-launch-upgrade-advisor"></a>방법: 업그레이드 관리자 시작
   업그레이드 관리자는 업그레이드 관리자 분석 마법사와 업그레이드 관리자 보고서 뷰어를 시작하는 데 사용할 수 있는 중앙 콘솔을 제공합니다. 이 항목에서는 업그레이드 관리자를 시작하는 방법에 대해 설명합니다.  
   
 ### <a name="to-launch-upgrade-advisor"></a>업그레이드 관리자를 시작하려면  
   
--   업그레이드 관리자를 시작 하려면 **시작**, **모든 프로그램**, **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 을 차례로 클릭 한 다음 ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업그레이드 관리자**를 클릭 합니다.  
+-   업그레이드 관리자를 시작 하려면 **시작**, **모든 프로그램**,을 차례로 클릭 한 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 다음 ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업그레이드 관리자**를 클릭 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [업그레이드 관리자 &#40;사용자 인터페이스를 실행 하는 중&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   

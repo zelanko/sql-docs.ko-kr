@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6fcb8be3b7803402d6e20510d95f293107b66540
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 3efc3dc8b42fc08969cc1afb85d4e629f6759e10
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000823"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930284"
 ---
 # <a name="options-query-executionsql-serveradvanced-page"></a>옵션(쿼리 실행:SQL Server:고급 페이지)
   SET 명령을 사용할 때 이용할 수 있는 몇 가지 옵션이 있습니다. 이 페이지를 사용하면 SQL Server 쿼리 편집기에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 실행에 대한 **set** 옵션을 지정할 수 있습니다. 설정한 옵션은 다른 코드 편집기에는 영향을 주지 않습니다. 이러한 옵션의 변경 사항은 새로운 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리에만 적용됩니다. 현재 쿼리에 대한 옵션을 변경하려면 **쿼리** 메뉴 또는 **쿼리 창의 바로 가기 메뉴에서** 쿼리 옵션 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 클릭하고 **실행**에서 **고급**을 클릭합니다. 각 옵션에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서를 참조하십시오.  

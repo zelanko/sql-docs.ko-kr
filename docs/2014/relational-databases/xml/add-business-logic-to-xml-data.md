@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6b4be577d1499ea4809ee10b36343875253fc032
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2c411ff747536f0f27679c74a0d56b2f059df52e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717401"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059605"
 ---
 # <a name="add-business-logic-to-xml-data"></a>XML 데이터에 비즈니스 논리 추가
   비즈니스 논리를 여러 가지 방식으로 XML 데이터에 추가할 수 있습니다.  

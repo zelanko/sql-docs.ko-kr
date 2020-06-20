@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43727e0c7795fbd1f2f0c6a56693c2f06fdf4536
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab592ba35ebc0b012a41aea2f05e27a76c0a7e0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193050"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065407"
 ---
 # <a name="high-availability-solutions-sql-server"></a>고가용성 솔루션(SQL Server)
   이 항목에서는 서버나 데이터베이스의 가용성을 개선하는 여러 가지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고가용성 솔루션을 소개합니다. 고가용성 솔루션은 하드웨어 또는 소프트웨어 오류의 영향을 차단하고 애플리케이션의 가용성을 유지하여 사용자가 인지하는 작동 중단을 최소화합니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "63193050"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 서버 또는 데이터베이스의 고가용성 유지를 위한 여러 가지 옵션을 제공합니다. 고가용성 옵션에는 다음이 포함됩니다.  
   
  AlwaysOn 장애 조치(failover) 클러스터 인스턴스  
- Alwayson 제공의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 일부로 Alwayson 장애 조치 (Failover) 클러스터 인스턴스는 WSFC (Windows Server 장애 조치 (Failover) 클러스터링) 기능을 사용 하 여 fci ( *장애 조치 (failover) 클러스터 인스턴스* ) 인 서버 인스턴스 수준의 중복성을 통해 로컬 고가용성을 제공 합니다. FCI는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 노드 및 다중 서브넷 간에 설치되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 단일 인스턴스입니다. 네트워크에서 FCI는 단일 컴퓨터에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스처럼 보이지만 현재 노드를 사용할 수 없을 경우 FCI가 하나의 WSFC 노드에서 다른 노드로 장애 조치(failover) 기능을 제공합니다.  
+ Alwayson 제공의 일부로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Alwayson 장애 조치 (failover) 클러스터 인스턴스는 WSFC (Windows Server 장애 조치 (failover) 클러스터링) 기능을 사용 하 여 fci ( *장애 조치 (failover) 클러스터 인스턴스* ) 인 서버 인스턴스 수준의 중복성을 통해 로컬 고가용성을 제공 합니다. FCI는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 노드 및 다중 서브넷 간에 설치되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 단일 인스턴스입니다. 네트워크에서 FCI는 단일 컴퓨터에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스처럼 보이지만 현재 노드를 사용할 수 없을 경우 FCI가 하나의 WSFC 노드에서 다른 노드로 장애 조치(failover) 기능을 제공합니다.  
   
  자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
   

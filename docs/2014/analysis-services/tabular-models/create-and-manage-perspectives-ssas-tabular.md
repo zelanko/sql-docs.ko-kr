@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2a411c2b-2820-4086-ad7f-ce6a941fefc7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b920446018c9199ed0bd436e67a65d43341f7f43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51ba015363cafee537f6845ec2039dba6027e6ec
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067425"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939794"
 ---
 # <a name="create-and-manage-perspectives-ssas-tabular"></a>큐브 뷰 만들기 및 관리(SSAS 테이블 형식)
   큐브 뷰는 모델을 비즈니스 또는 애플리케이션 중심의 관점에서 파악할 수 있게 해주는 보기 가능한 모델 하위 집합을 정의합니다. 이 항목의 태스크에서는 모델 디자이너의 **큐브 뷰** 를 사용하여 큐브 뷰를 만들고 관리하는 방법을 설명합니다.  

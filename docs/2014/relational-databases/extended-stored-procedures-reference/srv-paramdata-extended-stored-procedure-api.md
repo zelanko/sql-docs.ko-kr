@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0825b86cabf57df552063335a0870461cb8a5658
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36246adc49870e9418765e37511e6d94cafe5c67
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127419"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050757"
 ---
 # <a name="srv_paramdata-extended-stored-procedure-api"></a>srv_paramdata(확장 저장 프로시저 API)
     
@@ -58,7 +57,7 @@ n
 ## <a name="returns"></a>반환  
  매개 변수 값에 대한 포인터입니다. *n*번째 매개 변수가 NULL이거나, *n*번째 매개 변수가 없거나, 원격 저장 프로시저가 없으면 NULL이 반환됩니다. 매개 변수 값이 문자열이면 Null로 종결되지 않을 수 있습니다. **srv_paramlen**을 사용하여 문자열 길이를 확인합니다.  
   
- 매개 변수가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 중 하나인 경우이 함수는 다음 값을 반환 합니다. 포인터 데이터에는 데이터 형식에 대한 포인터가 유효(VP), NULL 또는 해당 사항 없음(N/A)인지 여부와 가리키는 데이터 콘텐츠가 포함됩니다.  
+ 매개 변수가 데이터 형식 중 하나인 경우이 함수는 다음 값을 반환 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 포인터 데이터에는 데이터 형식에 대한 포인터가 유효(VP), NULL 또는 해당 사항 없음(N/A)인지 여부와 가리키는 데이터 콘텐츠가 포함됩니다.  
   
 |새 데이터 형식|입력 데이터 길이|  
 |--------------------|-----------------------|  
@@ -69,7 +68,7 @@ n
 |BIGVARBINARY|**NULL:** NULL, 해당 사항 없음<br /><br /> **ZERO:** VP, 0x00<br /><br /> **>=255:** VP, 255바이트<br /><br /> **<255:** VP, 실제 데이터|  
 |NCHAR|**NULL:** NULL, 해당 사항 없음<br /><br /> **ZERO:** VP, 255개 공백<br /><br /> **>=255:** VP, 255자<br /><br /> **<255:** VP, 실제 데이터 + 패딩(최대 255)|  
 |NVARCHAR|**NULL:** NULL, 해당 사항 없음<br /><br /> **ZERO:** VP, NULL<br /><br /> **>=255:** VP, 255자<br /><br /> **<255:** VP, 실제 데이터|  
-|NTEXT|**NULL:** 해당 사항 없음<br /><br /> **ZERO:** 해당 사항 없음<br /><br /> **>= 255:** 해당 없음<br /><br /> ** \<255:** 해당 없음|  
+|NTEXT|**NULL:** 해당 사항 없음<br /><br /> **ZERO:** 해당 사항 없음<br /><br /> **>= 255:** 해당 없음<br /><br /> ** \< 255:** 해당 없음|  
   
  \*   데이터가 Null로 종결되지 않으면 255자보다 큰 데이터 잘림에 대한 경고가 표시되지 않습니다.  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3e8fc0f770d8763ccb330b3c7588a97604d876e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04d332e2c71e69b9a3e7d1d1b0c60eb9aabaf2e5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62762845"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960154"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell Provider
   Windows PowerShell용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체의 계층 구조를 파일 시스템 경로와 비슷한 경로에 표시합니다. 이 경로를 사용하여 개체를 찾은 다음 SMO( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) 모델의 메서드를 사용하여 개체에 대해 동작을 수행할 수 있습니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "62762845"
 |SQLSERVER:\IntegrationServices|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체.|  
 |SQLSERVER:\SQLAS|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체|  
   
- 예를 들어 SQLSERVER:\SQL 폴더를 사용하여 SMO 개체 모델에서 지원하는 개체를 표시할 수 있는 경로를 시작할 수 있습니다. Sqlserver: \ sql 경로의 선행 부분은 sqlserver: \ sql\\*ComputerName*\\*InstanceName*입니다. 인스턴스 이름 뒤에 오는 노드에는 개체 컬렉션(예: *데이터베이스* 또는 *뷰*)과 개체 이름(예: AdventureWorks2012)이 번갈아 사용됩니다. 스키마는 개체 클래스로 표현되지 않습니다. 스키마의 테이블 또는 뷰와 같은 최상위 수준 개체에 대한 노드를 지정할 때는 개체 이름을 *SchemaName.ObjectName*형식으로 지정해야 합니다.  
+ 예를 들어 SQLSERVER:\SQL 폴더를 사용하여 SMO 개체 모델에서 지원하는 개체를 표시할 수 있는 경로를 시작할 수 있습니다. Sqlserver: \ sql 경로의 선행 부분은 sqlserver: \ sql \\ *ComputerName* \\ *InstanceName*입니다. 인스턴스 이름 뒤에 오는 노드에는 개체 컬렉션(예: *데이터베이스* 또는 *뷰*)과 개체 이름(예: AdventureWorks2012)이 번갈아 사용됩니다. 스키마는 개체 클래스로 표현되지 않습니다. 스키마의 테이블 또는 뷰와 같은 최상위 수준 개체에 대한 노드를 지정할 때는 개체 이름을 *SchemaName.ObjectName*형식으로 지정해야 합니다.  
   
  다음은 로컬 컴퓨터의 기본 [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스에서 AdventureWorks2012 데이터베이스의 Purchasing 스키마에 있는 Vendor 테이블의 경로입니다.  
   

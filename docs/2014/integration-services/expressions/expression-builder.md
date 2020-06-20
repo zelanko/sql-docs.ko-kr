@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c2aa59b0806cc0ede01fa728636ab9d90479f14b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 141e2694b8f753129e809c615c8efd7f1adffa61
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898851"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969373"
 ---
 # <a name="expression-builder"></a>식 작성기
   **식 작성기** 대화 상자를 사용하여 변수를 나열하고 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식 언어에 포함된 함수, 유형 변환 및 연산자에 대한 참조를 기본적으로 제공하는 그래픽 사용자 인터페이스로 변수 값을 설정하는 식을 작성하거나 속성 식을 생성 및 편집할 수 있습니다.  

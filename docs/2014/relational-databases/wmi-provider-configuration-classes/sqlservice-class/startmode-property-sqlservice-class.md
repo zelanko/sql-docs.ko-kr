@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bf77e36824c05a0f07bc789c380cffbc1518669d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1986e21af8d9c6334d8ff9b5a374d46d6c25dda5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63187831"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013678"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode 속성(SqlService 클래스)
   서비스의 시작 모드를 가져옵니다.  
@@ -48,13 +47,13 @@ object
  부팅  
  값 = 0. 운영 체제 로더에 의해 서비스가 시작됩니다. 이 옵션은 드라이버 서비스에 대해서만 유효합니다.  
   
- System  
+ 시스템  
  값 = 1입니다. `IoInitSystem` 메서드에 의해 서비스가 시작됩니다. 이 옵션은 드라이버 서비스에 대해서만 유효합니다.  
   
  자동  
  값 = 2입니다. 시스템 시작 중 서비스 제어 관리자에 의해 자동으로 서비스가 시작됩니다.  
   
- Manual  
+ 설명서  
  값 = 3입니다. 프로세스에서 `StartService` 메서드를 호출할 때 컴퓨터 관리자에 의해 서비스가 시작됩니다.  
   
  사용 안 함  

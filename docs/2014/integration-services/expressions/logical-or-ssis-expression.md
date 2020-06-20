@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e4be7f70d568fd705847d3529fadd28181a71352
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 729c03eac1667bd1ca5247efe3e7f06709dc16cb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62897599"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969253"
 ---
 # <a name="-logical-or-ssis-expression"></a>||(논리적 OR)(SSIS 식)
   논리적 OR 연산을 수행합니다. 두 조건 중 하나 또는 둘 다가 TRUE이면 식도 TRUE가 됩니다.  

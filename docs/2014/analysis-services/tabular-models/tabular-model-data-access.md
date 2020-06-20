@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a35afb1c1bd38aa123211ae1801d914494aec91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49ae9c1a0e9eac4c5fd8a47106a2d72dc880a856
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79525474"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938594"
 ---
 # <a name="tabular-model-data-access"></a>테이블 형식 모델 데이터 액세스
   Analysis Services의 테이블 형식 model 데이터베이스에는 다차원 모델에서 데이터 또는 메타데이터를 검색하는 데 사용하는 것과 동일한 대부분의 클라이언트, 인터페이스 및 언어로 액세스할 수 있습니다. 자세한 내용은 [다차원 모델 데이터 액세스&#40;Analysis Services - 다차원 데이터&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)를 참조하세요.  
@@ -38,7 +37,7 @@ ms.locfileid: "79525474"
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 클라이언트에서 모델로 보내는 쿼리는 모델에 대해 추적을 설정하여 모니터링할 수 있는 DAX 문으로 실행됩니다.  또한 클라이언트는 CSDL(개념 스키마 정의 언어)에 따라 제공되는 초기 스키마 정의에 대한 요청을 서버에 보냅니다. 자세한 내용은 [비즈니스 인텔리전스에 대한 CSDL 주석&#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 테이블 형식 모델을 호스팅하는 인스턴스를 관리하고 해당 메타데이터 및 데이터를 쿼리할 수 있습니다. 모델 또는 모델의 개체를 처리하고, 파티션을 생성 및 관리하고, 데이터 액세스를 관리하는 데 사용될 수 있는 보안을 설정할 수 있습니다. 자세한 내용은 아래 항목을 참조하세요.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 테이블 형식 모델을 호스팅하는 인스턴스를 관리하고 해당 메타데이터 및 데이터를 쿼리할 수 있습니다. 모델 또는 모델의 개체를 처리하고, 파티션을 생성 및 관리하고, 데이터 액세스를 관리하는 데 사용될 수 있는 보안을 설정할 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.  
   
 -   [Analysis Services 인스턴스의 서버 모드 확인](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

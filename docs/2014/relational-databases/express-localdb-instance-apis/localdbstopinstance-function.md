@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 4bd73187-0aac-4f03-ac54-2b78e41917e5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6f28abbf9871d5f4e512e9c9ee0cfb5c7ad9db59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d4c19943bc79567a5e3abee0c19597247eb31bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63135278"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050984"
 ---
 # <a name="localdbstopinstance-function"></a>LocalDBStopInstance 함수
   지정한 SQL Server Express LocalDB 인스턴스의 실행을 중지합니다.  

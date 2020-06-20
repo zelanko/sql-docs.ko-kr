@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a5bf48818e6e1d0b5d92fbd04602d09a72276593
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b3d34fc79dd7817e64b34b61083415477860ce97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718233"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997929"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense에서 지원되는 Transact-SQL 구문
   이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 IntelliSense에서 지원하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]문 및 구문 요소에 대해 설명합니다.  
@@ -54,7 +53,7 @@ ms.locfileid: "82718233"
 |[설정@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|모든 구문|  
 |[CREATE 문을 실행하기 전에](/sql/t-sql/language-elements/execute-transact-sql)|사용자 정의 저장 프로시저, 시스템 저장 프로시저, 사용자 정의 함수 및 시스템 함수 실행|  
 |[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)|모든 구문|  
-|[뷰 만들기](/sql/t-sql/statements/create-view-transact-sql)|모든 구문|  
+|[CREATE VIEW](/sql/t-sql/statements/create-view-transact-sql)|모든 구문|  
 |[CREATE PROCEDURE](/sql/t-sql/statements/create-procedure-transact-sql)|모든 구문. 단, 다음 항목은 예외입니다.<br /><br /> EXTERNAL NAME 절에 대한 IntelliSense 지원은 없습니다.<br /><br /> AS 절에서 IntelliSense는 이 항목에 나열된 문과 구문만 지원합니다.|  
 |[ALTER PROCEDURE](/sql/t-sql/statements/alter-procedure-transact-sql)|모든 구문. 단, 다음 항목은 예외입니다.<br /><br /> EXTERNAL NAME 절에 대한 IntelliSense 지원은 없습니다.<br /><br /> AS 절에서 IntelliSense는 이 항목에 나열된 문과 구문만 지원합니다.|  
 |[사용](/sql/t-sql/language-elements/use-transact-sql)|모든 구문|  
@@ -93,7 +92,7 @@ ms.locfileid: "82718233"
   
  앞에서 나열된 요소가 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 사용되는 경우에는 IntelliSense가 제공되지 않습니다. 예를 들어 SELECT 문에서 사용되는 열 이름에 대해서는 IntelliSense가 지원되지만 CREATE FUNCTION 문에서 사용되는 열에 대해서는 IntelliSense가 지원되지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트나 일괄 처리 내에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense는 이 항목에 나열된 문과 구문만 지원합니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 예제에서는 IntelliSense에서 지원하는 문 및 구문을 보여 줍니다. 예를 들어 다음 일괄 처리에서 IntelliSense는 `SELECT` 가 `SELECT` 문에 포함되어 있지 않고 자체적으로 코딩된 경우 `CREATE FUNCTION` 문에 대해 사용할 수 있습니다.  
   
 ```  

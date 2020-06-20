@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a9c1510030f61896f686b49f4bc134a7dfcb42b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ceb58c211b52c1fbd184aafe316e5ea77d364529
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284869"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938934"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery 모드(SSAS 테이블 형식)
   Analysis Services를 사용하면 *DirectQuery 모드*를 통해 관계형 데이터베이스 시스템에서 직접 데이터 및 집계를 검색하여 테이블 형식 모델에서 데이터를 검색하고 보고서를 만들 수 있습니다. 이 항목에서는 메모리에만 있는 표준 테이블 형식 모델과 관계형 데이터 원본을 쿼리할 수 있는 테이블 형식 모델 간의 차이점을 소개하고 DirectQuery 모드에서 사용할 모델을 제작하고 배포하는 방법에 대해 설명합니다.  
@@ -82,7 +81,7 @@ ms.locfileid: "67284869"
   
 -   **클라이언트 제한 사항:** DirectQuery 모드에 있는 모델은 DAX를 사용해서만 쿼리할 수 있습니다. MDX를 사용하여 쿼리를 만들 수는 없습니다. 즉, Excel에서는 MDX를 사용하기 때문에 Excel 피벗 클라이언트를 사용할 수 없습니다.  
   
-     그러나 DAX 테이블 쿼리를 XMLA Execute 문의 일부로 사용 하 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 경우에서 DirectQuery 모델에 대 한 쿼리를 만들 수 있습니다. 자세한 내용은 [DAX 쿼리 구문 참조] (/dax/dax-syntax-reference)를 참조 하세요.
+     그러나 DAX 테이블 쿼리를 XMLA Execute 문의 일부로 사용 하는 경우에서 DirectQuery 모델에 대 한 쿼리를 만들 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 자세한 내용은 [DAX 쿼리 구문 참조] (/dax/dax-syntax-reference)를 참조 하세요.
   
  모든 디자인 문제를 해결하고 모델을 테스트했으면 배포할 준비가 된 것입니다. 이때 모델에 대한 쿼리에 응답하는 데 기본적으로 사용되는 방법을 설정할 수 있습니다. 사용자가 캐시에 액세스할 수 있는 권한을 가지도록 할지 항상 관계형 데이터 원본만 사용하도록 할지 결정하셨습니까?  
   
@@ -144,7 +143,7 @@ ms.locfileid: "67284869"
   
  가장 설정 속성은 DirectQuery 전용 모델 또는 DirectQuery를 사용하여 쿼리에 대답하는 혼합 모델에 대해 DirectQuery를 사용하여 모델에 연결할 때 사용되는 자격 증명을 지정합니다. 속성 값은 다음과 같습니다.  
   
- **기본**  
+ **기본값**  
  가져오기 마법사에서 지정한 자격 증명을 사용하여 데이터 원본에 연결합니다. 이 자격 증명은 특정 Windows 사용자 또는 서비스 계정일 수 있습니다.  
   
  `ImpersonateCurrentUser`  
@@ -166,7 +165,7 @@ ms.locfileid: "67284869"
   
 ##  <a name="related-topics-and-tasks"></a><a name="bkmk_related_tasks"></a>관련 항목 및 작업  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[파티션 및 DirectQuery 모드 &#40;SSAS 테이블 형식&#41;](define-partitions-in-directquery-models-ssas-tabular.md)|DirectQuery 모드에 대해 구성된 모델에서 파티션을 사용하는 방법에 대해 설명합니다.|  
 |[DirectQuery 모드에서의 DAX 수식 호환성](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)|DirectQuery 모드에 대해 구성된 모델에서 사용할 수 있는 수식에 대한 제한 사항과 호환성 요구 사항을 설명합니다.|  

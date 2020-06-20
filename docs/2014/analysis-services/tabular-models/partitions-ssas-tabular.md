@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f5dd80a1f6645e7d1c766e88de653fa1e8f1f4cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c40ce510c86ab72ab0c35d60c8080dcf2f250f91
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066898"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938814"
 ---
 # <a name="partitions-ssas-tabular"></a>파티션(SSAS 테이블 형식)
   파티션은 테이블을 논리적 부분으로 나눕니다. 각 파티션은 다른 파티션과 별개로 처리(새로 고침)할 수 있습니다. 모델 제작 중 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 파티션 대화 상자를 사용하여 만든 파티션은 모델 작업 영역 데이터베이스에 적용됩니다. 모델을 배포하면 모델 작업 영역 데이터베이스에 대해 정의된 파티션이 배포된 model 데이터베이스에 복제됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 파티션 대화 상자를 사용하여 배포된 model 데이터베이스에 대해 파티션을 추가로 만들고 관리할 수 있습니다.  이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 파티션 관리자 대화 상자를 사용하여 모델 제작 중에 만든 파티션을 설명합니다. 배포된 모델의 파티션을 만들고 관리하는 방법에 대한 자세한 내용은 [테이블 형식 모델 파티션 만들기 및 관리&#40;SSAS 테이블 형식&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)를 참조하세요.  
@@ -26,7 +25,7 @@ ms.locfileid: "66066898"
   
 -   [관련 작업](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>아니라  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> 이점  
  테이블 형식 모델에서 파티션은 테이블을 논리적 파티션 개체로 나눕니다. 각 파티션은 다른 파티션과 별개로 처리할 수 있습니다. 예를 들어 한 테이블에 거의 변경되지 않는 데이터를 포함하는 행 집합과 자주 변경되는 데이터를 포함하는 행 집합이 들어 있을 수 있습니다. 이때 데이터의 일부만 처리하려고 할 경우 데이터를 모두 처리할 필요가 없습니다. 파티션을 사용하면 자주 처리해야 하는 데이터 부분을 자주 처리할 필요 없는 데이터와 분리할 수 있습니다.  
   
  효과적인 모델 디자인은 파티션을 이용하여 불필요한 처리 및 Analysis Services 서버에 대한 후속 프로세서 로드를 배제하는 동시에 데이터 원본의 최신 데이터를 반영하여 데이터를 자주 처리하고 새로 고칠 수 있습니다. 모델 제작 중에 파티션을 구현하고 이용하는 방법은 배포된 모델에 대해 파티션을 구현하고 이용하는 방법과 매우 다를 수 있습니다. 모델 제작 단계 중에는 최종적으로 배포된 모델에 포함될 데이터의 하위 집합에 대해서만 작업할 수 있다는 점에 유의해야 합니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "66066898"
   
 ##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> 관련 작업  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[작업 영역 데이터베이스에서 파티션 만들기 및 관리&#40;SSAS 테이블 형식&#41;](workspace-database-ssas-tabular.md)|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 파티션 관리자를 사용하여 모델 작업 영역 데이터베이스에서 파티션을 만들고 관리하는 방법에 대해 설명합니다.|  
 |[SSAS 테이블 형식&#41;&#40;작업 영역 데이터베이스에서 파티션 처리](process-partitions-in-the-workspace-database-ssas-tabular.md)|모델 작업 영역 데이터베이스에서 파티션을 처리(새로 고침)하는 방법을 설명 합니다.|  

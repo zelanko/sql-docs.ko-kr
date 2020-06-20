@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 7b6fb18e-ec39-4661-88e3-977ed64e2c82
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d2205465f1fd6f03c67e1fc09ec76a2dfbb2e083
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c59a2acf78ed8df34ff78de209b5a20df8ef07e5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952038"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059038"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Reporting Services 구성 관리자 F1 도움말 항목(SSRS 기본 모드)
   이 섹션에서는 Reporting Services 구성 관리자에 대한 F1 도움말을 제공합니다.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]기본 모드입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

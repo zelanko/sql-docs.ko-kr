@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 56655f7d75635668d266b44853fc29969fd741ed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 078c7bfeef2ff8636243f4853c03de252c7b9289
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782664"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953002"
 ---
 # <a name="validate-a-dac-package"></a>DAC 패키지 유효성 검사
   DAC 패키지를 프로덕션 환경에 배포하기 전에 내용을 검토하고 기존 DAC를 업그레이드하기 전에 업그레이드 동작의 유효성을 검사하는 것이 좋습니다. 사용자의 조직에서 개발되지 않은 패키지를 배포하는 경우에는 더욱 그렇습니다.  

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5bb2fbd3129475c5d712cd4d1fce8bbe29ea096f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07f6714f27f60afda91134034509ff439d92f071
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011913"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050477"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>데이터 대량 가져오기 중 ID 값 유지(SQL Server)
-  Id 값을 포함 하는 데이터 파일을 인스턴스로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]대량으로 가져올 수 있습니다. 기본적으로 가져온 데이터 파일의 ID 열 값은 무시되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 자동으로 고유 값을 할당합니다. 고유 값은 테이블 작성 중에 지정된 초기 및 증분 값을 기준으로 합니다.  
+  Id 값을 포함 하는 데이터 파일을 인스턴스로 대량으로 가져올 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 기본적으로 가져온 데이터 파일의 ID 열 값은 무시되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 자동으로 고유 값을 할당합니다. 고유 값은 테이블 작성 중에 지정된 초기 및 증분 값을 기준으로 합니다.  
   
  데이터 파일에 테이블의 ID 열에 대한 값이 없으면 서식 파일을 사용하여 데이터를 가져올 때 테이블의 ID 열을 건너뛰어야 함을 지정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 자동으로 열에 고유 값을 할당합니다.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66011913"
 > [!NOTE]  
 >  여러 테이블에서 사용할 수 있거나 테이블을 참조하지 않고 애플리케이션에서 호출할 수 있는 자동으로 증가하는 번호를 만들려면 [시퀀스 번호](../sequence-numbers/sequence-numbers.md)를 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 항목의 예제에서는 INSERT ...를 사용 하 여 데이터를 대량으로 가져옵니다. SELECT * FROM OPENROWSET (BULK ...) 및 default 값을 유지 합니다.  
   
 ### <a name="sample-table"></a>예제 테이블  
@@ -79,7 +78,7 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
 |한정자|Description|  
 |----------------|-----------------|  
 |**-E**|데이터 파일의 ID 값이 ID 열에 사용되도록 지정합니다.|  
-|**-T**|`bcp` 유틸리티가 트러스트 된 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결 되도록 지정 합니다.|  
+|**-T**|`bcp`유틸리티가 트러스트 된 연결을 통해에 연결 되도록 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
  Windows 명령 프롬프트에서 다음을 입력합니다.  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1b29be9c59a35120949966e840420b415dc3157c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 26fe0058a93e05d1533ed5332eeaa5054727f9bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702316"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012906"
 ---
 # <a name="use-xml-in-computed-columns"></a>계산 열에 XML 사용
   XML 인스턴스는 계산 열의 원본이나 계산 열의 유형으로 표시될 수 있습니다. 이 항목의 예에서는 계산 열이 있는 XML을 사용하는 방법을 보여 줍니다.  

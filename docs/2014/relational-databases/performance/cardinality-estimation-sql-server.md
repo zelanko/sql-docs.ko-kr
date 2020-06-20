@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa56127f649d71bfcc8825322f8bf729175d41df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151040"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066041"
 ---
 # <a name="cardinality-estimation-sql-server"></a>카디널리티 추정(SQL Server)
   카디널리티 평가기라고 하는 카디널리티 추정 논리가 쿼리 계획의 품질을 개선하여 쿼리 성능을 향상시키도록 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서 다시 디자인되었습니다. 새로운 카디널리티 평가기는 최신 OLTP 및 데이터 웨어하우징 작업에서 제대로 작동하는 가정 및 알고리즘을 통합합니다. 이 평가기는 최신 작업에 대한 자세한 카디널리티 추정 연구와 SQL Server 카디널리티 평가기를 향상시키기 위해 과거 15년 동안 학습한 지식을 기반으로 합니다. 고객의 의견은 대부분의 쿼리가 변경을 통해 이점을 얻거나 변경되지 않은 채로 유지되는 반면 소수의 쿼리는 이전 카디널리티 평가기와 비교했을 때 회귀를 보여줄 수도 있음을 나타냅니다.  
@@ -49,7 +48,7 @@ ms.locfileid: "63151040"
   
 -   *query_optimizer_force_both_cardinality_estimation*_behaviors는 두 추적 플래그 2312 및 9481이 모두 설정되어 이전 카디널리티 추정 동작과 새 카디널리티 추정 동작 모두를 동시에 적용하려고 시도할 때 발생합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 새 카디널리티 예상치의 변경 내용 중 일부를 보여 줍니다. 카디널리티를 예측하기 위한 코드는 다시 작성되었습니다. 논리는 복잡하며, 모든 변경 내용의 전체 목록을 제공할 수는 없습니다.  
   
 > [!NOTE]  
@@ -75,7 +74,7 @@ SELECT year, purchase_price FROM dbo.Cars WHERE Make = 'Honda' AND Model = 'Civi
   
  이 동작은 변경되었습니다. 이제 새 카디널리티 예상치는 Make열과 Model 열에 상관 관계가 *있다고* 가정합니다. 쿼리 최적화 프로그램은 추정 수식에 지수 성분을 추가하여 높은 카디널리티를 예측합니다. 이제 쿼리 최적화 프로그램에서 22.36 행 (.05 * SQRT (. 20) \* 1000 rows = 22.36 rows)이 조건자와 일치 하는 것으로 추정 합니다. 이 시나리오와 특정 데이터 분산에서는 22.36개의 행이 쿼리가 실제로 반환할 50개의 행과 가깝습니다.  
   
- 새 카디널리티 평가기 논리는 조건자 선택도를 정렬하고 지수를 늘립니다. 예를 들어, 조건자 선택도가 .05, .20 및 0.25 인 경우 카디널리티 예상치는 (. 05 * SQRT (. 20) \* SQRT (SQRT (. 25)))입니다.  
+ 새 카디널리티 평가기 논리는 조건자 선택도를 정렬하고 지수를 늘립니다. 예를 들어, 조건자 선택도가 .05, .20 및 0.25 인 경우 카디널리티 예상치는 (. 05 * SQRT (. 20) \* sqrt (SQRT (. 25)))입니다.  
   
 ### <a name="example-c-new-cardinality-estimates-assume-filtered-predicates-on-different-tables-are-independent"></a>예 C. 새 카디널리티 예상치는 서로 다른 테이블의 필터링된 조건자가 독립적이라고 가정합니다.  
  이 예에서 이전 카디널리티 평가기는 조건자 필터 s.type 및 r.date에 서로 상관 관계가 있다고 가정합니다. 그러나 최신 작업에 대한 테스트 결과는 서로 다른 테이블의 열에 있는 조건자 필터에 일반적으로 서로 상관 관계가 없음을 보여 주었습니다.  
