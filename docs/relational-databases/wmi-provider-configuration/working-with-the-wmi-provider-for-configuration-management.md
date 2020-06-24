@@ -1,5 +1,6 @@
 ---
 title: 구성 관리용 WMI 공급자 사용
+description: 바인딩, 연결 문자열 지정 및 권한/서버 인증을 포함 하 여 구성 관리용 WMI 공급자에 대해 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 04/12/2019
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d76cc006e2f8638de9b6d3c21660806239022ec0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c064c2927919ab4760903a9a3457f9c0be816647
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73657372"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295396"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>구성 관리용 WMI 공급자 작업
 
@@ -39,13 +40,13 @@ ms.locfileid: "73657372"
 
 애플리케이션은 공급자가 정의한 WMI 네임스페이스에 연결하여 구성 관리용 WMI 공급자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 보냅니다. Windows WMI 서비스는이 네임 스페이스를 공급자 DLL에 매핑하고 DLL을 메모리에 로드 합니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 단일 WMI 네임스페이스로 나타냅니다.
 
-네임 스페이스의 기본값은 다음과 같습니다. 형식에서 `VV` 는 SQL Server의 주 버전 번호입니다. 는를 실행 `SELECT @@VERSION;`하 여 검색할 수 있습니다.
+네임 스페이스의 기본값은 다음과 같습니다. 형식에서 `VV` 는 SQL Server의 주 버전 번호입니다. 는를 실행 하 여 검색할 수 `SELECT @@VERSION;` 있습니다.
 
 ```console
 \\.\root\Microsoft\SqlServer\ComputerManagementVV
 ```
 
-PowerShell을 사용 하 여 연결 하는 경우 `\\.\` 선행을 제거 해야 합니다. 예를 들어 다음 PowerShell 코드는 주 버전 13 인 SQL Server 2016에 대 한 모든 WMI 클래스를 나열 합니다.
+PowerShell을 사용 하 여 연결 하는 경우 선행을 `\\.\` 제거 해야 합니다. 예를 들어 다음 PowerShell 코드는 주 버전 13 인 SQL Server 2016에 대 한 모든 WMI 클래스를 나열 합니다.
 
 ```powershell
 Get-WmiObject -Namespace 'root\Microsoft\SqlServer\ComputerManagement13' -List
@@ -69,7 +70,7 @@ where `instance_name` defaults to `MSSQLSERVER` in a default installation of [!I
 gwmi -ns 'root\Microsoft\SqlServer' __NAMESPACE | ? {$_.name -match 'ComputerManagement' } | select name
 ```
 
- **참고:** Windows 방화벽을 통해 연결 하는 경우에는 컴퓨터가 적절히 구성 되어 있는지 확인 해야 합니다. MSDN [!INCLUDE[msCoName](../../includes/msconame-md.md)] [웹 사이트](https://go.microsoft.com/fwlink/?linkid=15426)의 WMI(Windows Management Instrumentation) 설명서에서 "Windows 방화벽을 통해 연결" 문서를 참조 하세요.  
+ **참고:** Windows 방화벽을 통해 연결 하는 경우에는 컴퓨터가 적절히 구성 되어 있는지 확인 해야 합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]MSDN [웹 사이트](https://go.microsoft.com/fwlink/?linkid=15426)의 WMI(Windows Management Instrumentation) 설명서에서 "Windows 방화벽을 통해 연결" 문서를 참조 하세요.  
   
 ## <a name="permissions-and-server-authentication"></a>권한과 서버 인증  
  구성 관리용 WMI 공급자에 액세스하려면 클라이언트 WMI 관리 스크립트가 대상 컴퓨터에서 관리자 컨텍스트로 실행되고 있어야 합니다. 관리할 컴퓨터에서 로컬 Windows Administrators 그룹의 멤버여야 합니다.  

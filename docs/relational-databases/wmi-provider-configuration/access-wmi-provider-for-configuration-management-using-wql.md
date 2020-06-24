@@ -1,5 +1,6 @@
 ---
 title: WQL을 사용 하 여 WMI 공급자 액세스
+description: 이 예제를 사용 하 여 SQL Server에서 컴퓨터 관리용 WMI 공급자에 대해 WMI(Windows Management Instrumentation) 쿼리 언어 문을 실행 하는 방법을 확인할 수 있습니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 53ade765b0f6b6710a12da06ae0b7470b55d9400
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b9fa96f19bc0675a1e83db858e16605338b3899
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658948"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295446"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>WQL을 사용하여 구성 관리용 WMI 공급자 액세스
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "73658948"
   
 3.  첫 번째 텍스트 필드에 컴퓨터 관리용 WMI 공급자 네임스페이스인 root\Microsoft\SqlServer\ComputerManagement11을 입력합니다. **연결**을 클릭합니다.  
   
-4.  **쿼리**를 클릭합니다. 로컬 컴퓨터에서 실행 중인 현재 서비스를 반환 하는 쿼리를 입력 **합니다 \* . Sqlservice에서 선택 합니다.** **적용**을 클릭합니다.  
+4.  **쿼리**를 클릭합니다. 로컬 컴퓨터에서 실행 중인 현재 서비스를 반환 하는 쿼리를 입력 ** \* 합니다. Sqlservice에서 선택 합니다.** **적용**을 클릭합니다.  
   
 5.  **WHERE ServiceName = "MSSQLSERVER"를**추가 하 여 쿼리를 구체화 합니다.  
   

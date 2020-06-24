@@ -1,5 +1,6 @@
 ---
 title: 서버 이벤트용 WMI 공급자 개념
+description: 서버 이벤트 용 WMI 공급자가 WMI(Windows Management Instrumentation)를 사용 하 여 SQL Server 인스턴스의 이벤트를 모니터링 하는 방법에 대해 알아보려면 다음 리소스를 사용 합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1acbe114258b0a7a5bee71656a0b6878f09fefc3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 055c2cc30f4df8f3a7c2b1ddf3b00b16e0362200
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73657332"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295356"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>서버 이벤트용 WMI 공급자 개념
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

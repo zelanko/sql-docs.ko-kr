@@ -1,5 +1,6 @@
 ---
 title: '샘플: .NET에서 WMI 이벤트 공급자 사용'
+description: '샘플 c # 응용 프로그램은 WMI 이벤트 공급자를 사용 하 여 SQL Server 인스턴스에서 발생 하는 모든 데이터 정의 언어 이벤트에 대 한 이벤트 데이터를 반환 합니다.'
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3d7aa7e9-0bb3-4a5b-9a3c-047f3240a6f8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c942954d43c40dd4461237f2692afaa65ea87c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f0216b39c9291bbce60fb39e4583ddeee2618b7
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660586"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295376"
 ---
 # <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>샘플: .NET Framework에서 WMI 이벤트 공급자 사용
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

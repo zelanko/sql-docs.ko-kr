@@ -1,5 +1,6 @@
 ---
 title: WMI 공급자를 사용 하 여 SQL Server 에이전트 경고 만들기
+description: 특정 이벤트에 응답 하는 SQL Server 에이전트 경고를 만듭니다. 이 간단한 경고는 나중에 분석할 때 XML 교착 상태 그래프 이벤트를 테이블에 저장 합니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b9ceab4fd40174a68bd512fedf2c1b6d5b159b99
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a1678379c2120ba4f2edbc2868d5651cbf403587
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660523"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295416"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>샘플: WMI 공급자를 사용하여 SQL Server 에이전트 경고 만들기
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   WMI 이벤트 공급자를 사용하는 일반적인 방법 중 하나는 특정 이벤트에 응답하는 SQL Server 에이전트 경고를 만드는 것입니다. 다음 예제에서는 XML 교착 상태 그래프 이벤트를 나중에 분석할 수 있도록 테이블에 저장하는 간단한 경고를 보여 줍니다. SQL Server 에이전트는 WQL 요청을 전송하고 WMI 이벤트를 수신하고 이벤트에 대한 응답으로 작업을 실행합니다. 알림 메시지 처리와 관련된 Service Broker 개체가 여러 개 있지만 WMI 이벤트 공급자가 이러한 개체의 생성 및 관리 세부 정보를 처리합니다.  
   
 ## <a name="example"></a>예제  
- 먼저 교착 상태 그래프 이벤트를 저장할 `AdventureWorks` 데이터베이스에 테이블을 만듭니다. 테이블에는 두 개의 열이 `AlertTime` 포함 되어 있습니다. 열은 경고가 실행 되는 시간 `DeadlockGraph` 을 보유 하 고 열은 교착 상태 그래프가 포함 된 XML 문서를 보유 합니다.  
+ 먼저 교착 상태 그래프 이벤트를 저장할 `AdventureWorks` 데이터베이스에 테이블을 만듭니다. 테이블에는 두 개의 열이 포함 되어 있습니다. `AlertTime` 열은 경고가 실행 되는 시간을 보유 하 고 `DeadlockGraph` 열은 교착 상태 그래프가 포함 된 XML 문서를 보유 합니다.  
   
  그런 다음 경고를 만듭니다. 스크립트에서는 경고에서 실행할 작업을 만들어 작업에 작업 단계를 추가하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 현재 인스턴스를 작업의 대상으로 지정합니다. 그런 후 스크립트에서는 경고를 만듭니다.  
   
@@ -35,7 +36,7 @@ ms.locfileid: "73660523"
  경고는 교착 상태 그래프 추적 이벤트가 로깅될 때마다 작업을 실행합니다. WMI 경고에 대해 SQL Server 에이전트는 지정된 네임스페이스와 WQL 문을 사용하여 알림 쿼리를 만듭니다. 이 경고에 대해 SQL Server 에이전트는 로컬 컴퓨터에서 기본 인스턴스를 모니터링합니다. WQL 문은 기본 인스턴스에서 모든 `DEADLOCK_GRAPH` 이벤트를 요청합니다. 경고에서 모니터링하는 대상 인스턴스를 변경하려면 경고의 `MSSQLSERVER`에서 `@wmi_namespace`의 인스턴스 이름을 바꿉니다.  
   
 > [!NOTE]  
->  WMI 이벤트를 수신 하는 SQL Server 에이전트 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 은 **msdb** 및 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]에서 사용 하도록 설정 해야 합니다.  
+>  WMI 이벤트를 수신 하는 SQL Server 에이전트은 [!INCLUDE[ssSB](../../includes/sssb-md.md)] **msdb** 및에서 사용 하도록 설정 해야 합니다 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  
 USE AdventureWorks ;  
@@ -90,7 +91,7 @@ GO
 ```  
   
 ## <a name="testing-the-sample"></a>예제 테스트  
- 작업이 실행되는 것을 확인하려면 교착 상태를 발생시켜야 합니다. 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]두 개의 **SQL 쿼리** 탭을 열고 두 쿼리를 모두 동일한 인스턴스에 연결 합니다. 쿼리 탭 중 하나에서 다음 스크립트를 실행합니다. 이 스크립트는 하나의 결과 집합을 생성한 후 종료됩니다.  
+ 작업이 실행되는 것을 확인하려면 교착 상태를 발생시켜야 합니다. 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 두 개의 **SQL 쿼리** 탭을 열고 두 쿼리를 모두 동일한 인스턴스에 연결 합니다. 쿼리 탭 중 하나에서 다음 스크립트를 실행합니다. 이 스크립트는 하나의 결과 집합을 생성한 후 종료됩니다.  
   
 ```  
 USE AdventureWorks ;  
@@ -103,7 +104,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- 두 번째 쿼리 탭에서 다음 스크립트를 실행 합니다. 이 스크립트는 하나의 결과 집합을 생성 한 다음 잠금을 획득 하기 위해 대기 하 `Production.Product`는 블록을 생성 합니다.  
+ 두 번째 쿼리 탭에서 다음 스크립트를 실행 합니다. 이 스크립트는 하나의 결과 집합을 생성 한 다음 잠금을 획득 하기 위해 대기 하는 블록을 생성 `Production.Product` 합니다.  
   
 ```  
 USE AdventureWorks ;  
@@ -119,7 +120,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- 첫 번째 쿼리 탭에서 다음 스크립트를 실행 합니다. 이 스크립트는 잠금을 획득 하려고 대기 하는를 `Production.Location`차단 합니다. 지정된 제한 시간이 초과되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 스크립트나 예제의 스크립트를 교착 상태로 처리한 후 트랜잭션을 종료합니다.  
+ 첫 번째 쿼리 탭에서 다음 스크립트를 실행 합니다. 이 스크립트는 잠금을 획득 하려고 대기 하는를 차단 `Production.Location` 합니다. 지정된 제한 시간이 초과되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 스크립트나 예제의 스크립트를 교착 상태로 처리한 후 트랜잭션을 종료합니다.  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  

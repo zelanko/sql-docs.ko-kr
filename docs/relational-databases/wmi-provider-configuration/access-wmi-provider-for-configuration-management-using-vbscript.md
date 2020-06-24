@@ -1,5 +1,6 @@
 ---
 title: VBScript를 사용 하 여 WMI 공급자 액세스
+description: 컴퓨터에서 실행 중인 설치 된 SQL Server 인스턴스의 버전을 나열 하는 VBScript 프로그램을 만드는 방법에 대해 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a5415e9d425087f42e3058328f061660ffbe8c1e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd515a60802f429611c1ae272216fac93642093e
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658957"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295456"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>VBScript를 사용하여 구성 관리용 WMI 공급자 액세스
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  이 섹션에서는 컴퓨터에서 실행 중인 설치 된 인스턴스의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 나열 하는 VBScript 프로그램을 만드는 방법을 설명 합니다.  
+  이 섹션에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 컴퓨터에서 실행 중인 설치 된 인스턴스의 버전을 나열 하는 VBScript 프로그램을 만드는 방법을 설명 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  이 코드 예제에서는 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스와 해당 버전을 나열합니다.  
   
