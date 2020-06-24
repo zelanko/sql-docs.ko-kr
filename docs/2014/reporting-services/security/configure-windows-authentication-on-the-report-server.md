@@ -13,12 +13,12 @@ ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a575d2e0f366df452d37615c7d3076027f5c400a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a0dffa0dc53cb8ded9f388199bef35a73a52577
+ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66102128"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263897"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>보고서 서버의 Windows 인증 구성
   기본적으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 Negotiate 또는 NTLM 인증을 지정하는 요청을 허용합니다. 배포에 이러한 보안 공급자를 사용하는 클라이언트 애플리케이션 및 브라우저가 포함된 경우 추가 구성 없이 기본값을 사용할 수 있습니다. Windows 통합 보안을 위해 다른 보안 공급자를 사용하거나(예: Kerberos를 직접 사용하려는 경우) 기본값을 수정하고 원래 설정을 복원하려는 경우 이 항목의 정보를 사용하여 보고서 서버에서 인증 설정을 지정할 수 있습니다.  
@@ -32,9 +32,9 @@ ms.locfileid: "66102128"
     > [!IMPORTANT]  
     >  `RSWindowsNegotiate`를 사용할 경우 보고서 서버 서비스가 도메인 사용자 계정으로 실행되도록 구성하고 해당 계정의 SPN(서비스 사용자 이름)을 등록하지 않으면 Kerberos 인증 오류가 발생합니다. 자세한 내용은 이 항목의 [보고서 서버에 연결할 때 Kerberos 인증 오류 해결](#proxyfirewallRSWindowsNegotiate) 을 참조하십시오.  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에는 Windows 인증을 구성해야 합니다. 기본적으로 보고서 서버 웹 서비스 및 보고서 관리자에 대 한 Web.config 파일에는 \<authentication mode = "Windows" > 설정이 포함 되어 있습니다. 이를 \<authentication mode="Forms">로 변경하는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대한 Windows 인증이 실패합니다.  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에는 Windows 인증을 구성해야 합니다. 기본적으로 보고서 서버 웹 서비스 및 보고서 관리자에 대 한 Web.config 파일에는 \<authentication mode="Windows"> 설정이 포함 됩니다. 로 변경 하는 경우 \<authentication mode="Forms"> 에 대 한 Windows 인증이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 실패 합니다.  
   
--   보고서 서버 웹 서비스 및 보고서 관리자에 대 한 Web.config 파일에는 identity impersonate \<= "true"/>가 있어야 합니다.  
+-   보고서 서버 웹 서비스 및 보고서 관리자에 대 한 Web.config 파일에는가 있어야 합니다 \<identity impersonate= "true" /> .  
   
 -   클라이언트 애플리케이션 또는 브라우저에서 Windows 통합 보안을 지원해야 합니다.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66102128"
           </AuthenticationTypes>  
     ```  
   
-4.  <`Authentication`>의 기존 항목 위에 붙여넣습니다.  
+4.  <>의 기존 항목 위에 붙여넣습니다 `Authentication` .  
   
      `Custom` 유형에서는 `RSWindows`을 사용할 수 없습니다.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "66102128"
   
  Kerberos 로깅을 사용하는 경우 오류를 감지할 수 있습니다. 자격 증명을 요청하는 메시지가 여러 번 표시된 다음 빈 브라우저 창이 표시되는 것도 오류의 다른 증상입니다.  
   
- 구성 파일에서 < `RSWindowsNegotiate` />를 제거 하 고 연결을 다시 시도 하 여 Kerberos 인증 오류가 발생 하 고 있는지 확인할 수 있습니다.  
+ `RSWindowsNegotiate`구성 파일에서 </>를 제거 하 고 연결을 다시 시도 하 여 Kerberos 인증 오류가 발생 하 고 있는지 확인할 수 있습니다.  
   
  문제를 확인한 후에는 다음과 같은 방법으로 해결할 수 있습니다.  
   
@@ -160,14 +160,8 @@ ms.locfileid: "66102128"
     <RSWindowsExtendedProtectionScenario>Any</RSWindowsExtendedProtectionScenario>  
     ```  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 다시 시작하고 추적 로그 파일에서 다음과 같은 항목을 찾습니다.  
-  
-    ```  
-    rshost!rshost!e44!01/14/2010-14:43:51:: i INFO: Registered valid SPNs list for endpoint 2: rshost!rshost!e44!01/14/2010-14:43:52:: i INFO: SPN Whitelist Added <Explicit> - <HTTP/sqlpod064-13.w2k3.net>.  
-    ```  
-  
--   \<Explicit> 아래의 값은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 계정에 대해 Active Directory에 구성된 SPN을 포함합니다.  
-  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 다시 시작합니다.
+
  확장된 보호를 계속 사용하지 않으려면 구성 값을 다시 기본값으로 설정하고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 계정을 다시 시작합니다.  
   
 ```  

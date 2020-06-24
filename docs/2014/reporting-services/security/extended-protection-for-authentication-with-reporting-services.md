@@ -10,25 +10,25 @@ ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 89aae3981d88c25104a29a6abfe81f09bb04de53
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 74da8e34feb100edce52457536f7e19a49464eba
+ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177087"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263893"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services 인증에 대한 확장된 보호
   확장된 보호는 최신 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 운영 체제에서 향상된 기능 집합입니다. 확장된 보호는 애플리케이션에서 자격 증명과 인증을 보호하는 방법을 개선합니다. 이 기능 자체는 자격 증명 전달과 같은 특정 공격에 대해 직접적인 보호 기능을 제공하지 않지만 인증에 대해 확장된 보호를 적용할 수 있는 인프라를 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 와 같은 애플리케이션에 제공합니다.
 
  확장된 보호에서 주로 향상된 인증 기능은 서비스 바인딩과 채널 바인딩입니다. 채널 바인딩은 CBT(채널 바인딩 토큰)를 사용하여 두 끝점 간에 설정된 채널이 손상되지 않았는지 확인합니다. 서비스 바인딩은 SPN(서비스 사용자 이름)을 사용하여 인증 토큰의 대상이 유효한지 검사합니다. 확장된 보호에 대한 자세한 내용은 [확장된 보호를 사용하는 Windows 통합 인증(Integrated Windows Authentication with Extended Protection)](https://go.microsoft.com/fwlink/?LinkId=179922)을 참조하십시오.
 
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 는 운영 체제에서 사용 하도록 설정 되 고에 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]구성 된 확장 된 보호를 지원 하 고 적용 합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 는 기본적으로 Negotiate 또는 NTLM 인증을 지정하는 요청을 수락하므로 운영 체제의 확장된 보호 지원 및 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 확장된 보호 기능을 활용할 수 있습니다.
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 운영 체제에서 사용 하도록 설정 되 고에 구성 된 확장 된 보호를 지원 하 고 적용 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 는 기본적으로 Negotiate 또는 NTLM 인증을 지정하는 요청을 수락하므로 운영 체제의 확장된 보호 지원 및 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 확장된 보호 기능을 활용할 수 있습니다.
 
 > [!IMPORTANT]
 >  Windows에서는 기본적으로 확장된 보호를 사용할 수 없습니다. Windows에서 확장된 보호를 사용하는 방법은 [인증에 대한 확장된 보호](https://go.microsoft.com/fwlink/?LinkID=178431)를 참조하십시오. 운영 체제 및 클라이언트 인증 스택 모두 확장된 보호를 지원해야 인증이 성공합니다. 이전 운영 체제의 경우 확장된 보호를 사용할 수 있도록 컴퓨터가 완전하게 준비되려면 업데이트를 여러 개 설치해야 할 수도 있습니다. 확장된 보호와 관련된 최신 개발 내용은 [확장된 보호에 대한 업데이트된 정보](https://go.microsoft.com/fwlink/?LinkId=183362)를 참조하십시오.
 
 ## <a name="reporting-services-extended-protection-overview"></a>Reporting Services 확장된 보호 개요
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 는 운영 체제에서 사용 하도록 설정 된 확장 된 보호를 지원 하 고 적용 합니다. 운영 체제에서 확장된 보호를 지원하지 않거나 해당 기능을 사용하지 않을 경우 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 확장된 보호 기능으로 인해 인증이 실패합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 확장된 보호를 사용하려면 SSL 인증서가 필요합니다. 자세한 내용은 [기본 모드 보고서 서버에서 SSL 연결 구성](configure-ssl-connections-on-a-native-mode-report-server.md)을 참조하세요.
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 운영 체제에서 사용 하도록 설정 된 확장 된 보호를 지원 하 고 적용 합니다. 운영 체제에서 확장된 보호를 지원하지 않거나 해당 기능을 사용하지 않을 경우 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 확장된 보호 기능으로 인해 인증이 실패합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 확장된 보호를 사용하려면 SSL 인증서가 필요합니다. 자세한 내용은 [기본 모드 보고서 서버에서 SSL 연결 구성](configure-ssl-connections-on-a-native-mode-report-server.md)을 참조하세요.
 
 > [!IMPORTANT]
 >  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 에서는 기본적으로 확장된 보호를 사용할 수 없습니다. `rsreportserver.config` 구성 파일을 수정하거나 WMI API를 사용하여 구성 파일을 업데이트하면 이 기능을 사용할 수 있습니다. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 에서는 확장된 보호 설정을 수정하거나 볼 수 있는 사용자 인터페이스를 제공하지 않습니다. 자세한 내용은 이 항목의 [구성 설정](#ConfigurationSettings) 섹션을 참조하십시오.
@@ -45,9 +45,9 @@ ms.locfileid: "78177087"
 
 ### <a name="upgrade"></a>업그레이드
 
--   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서버를 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]로 업그레이드하면 기본값이 설정된 구성 설정이 `rsreportserver.config` 파일에 추가됩니다. 설정이 이미 있으면 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 설치 시 해당 설정이 `rsreportserver.config` 파일에 유지 됩니다.
+-   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서버를 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]로 업그레이드하면 기본값이 설정된 구성 설정이 `rsreportserver.config` 파일에 추가됩니다. 설정이 이미 있으면 설치 시 해당 설정이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 파일에 유지 됩니다 `rsreportserver.config` .
 
--   구성 설정이 `rsreportserver.config` 구성 파일에 추가 되 면 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 확장 된 보호 기능의 기본 동작이 해제 되므로이 항목에 설명 된 대로 기능을 사용 하도록 설정 해야 합니다. 자세한 내용은 이 항목의 [구성 설정](#ConfigurationSettings) 섹션을 참조하십시오.
+-   구성 설정이 구성 파일에 추가 되 면 `rsreportserver.config` [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 확장 된 보호 기능의 기본 동작이 해제 되므로이 항목에 설명 된 대로 기능을 사용 하도록 설정 해야 합니다. 자세한 내용은 이 항목의 [구성 설정](#ConfigurationSettings) 섹션을 참조하십시오.
 
 -   `RSWindowsExtendedProtectionLevel` 설정의 기본값은 `Off`입니다.
 
@@ -101,9 +101,9 @@ ms.locfileid: "78177087"
 |클라이언트가 보고서 서버에 간접 및 직접 액세스(클라이언트가 프록시 또는 보고서 서버에 대한 SSL 연결 설정)|![RS_ExtendedProtection_CombinationSSL](../media/rs-extendedprotection-combinationssl.gif "RS_ExtendedProtection_CombinationSSL")<br /><br /> 1) 클라이언트 애플리케이션<br /><br /> 2) 보고서 서버<br /><br /> 3) 프록시<br /><br /> 4) 클라이언트 애플리케이션|채널 바인딩이 사용될 수 있습니다.<br /><br /> 보고서 서버에서 프록시 이름을 알 수 있어야 하므로 보고서 서버 관리자가 호스트 헤더를 사용하여 프록시에 대한 URL 예약을 만들거나 Windows 레지스트리 항목 `BackConnectionHostNames`에서 프록시 이름을 구성해야 합니다.<br /><br /> `RSWindowsExtendedProtectionLevel`을 `Allow` 또는 `Require`로 설정합니다.<br /><br /> `RSWindowsExtendedProtectionScenario`를 `Proxy`로 설정합니다.|
 
 ## <a name="configuring-reporting-rervices-extended-protection"></a>Reporting Services 확장된 보호 구성
- 이 `rsreportserver.config` 파일에는 확장 된 보호의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 동작을 제어 하는 구성 값이 포함 되어 있습니다.
+ `rsreportserver.config`이 파일에는 확장 된 보호의 동작을 제어 하는 구성 값이 포함 되어 있습니다 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .
 
- `rsreportserver.config` 파일 사용 및 편집에 대 한 자세한 내용은 [rsreportserver.config Configuration file](../report-server/rsreportserver-config-configuration-file.md)을 참조 하세요. WMI API를 사용하여 확장된 보호 설정을 변경하고 검토할 수도 있습니다. 자세한 내용은 [SetExtendedProtectionSettings 메서드&#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)을 참조하십시오.
+ 파일 사용 및 편집에 대 한 자세한 내용은 `rsreportserver.config` [Rsreportserver.config Configuration file](../report-server/rsreportserver-config-configuration-file.md)을 참조 하세요. WMI API를 사용하여 확장된 보호 설정을 변경하고 검토할 수도 있습니다. 자세한 내용은 [SetExtendedProtectionSettings 메서드&#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)을 참조하십시오.
 
  구성 설정 유효성 검사에 실패하면 보고서 서버에서 `RSWindowsNTLM`, `RSWindowsKerberos` 및 `RSWindowsNegotiate` 인증 유형을 사용할 수 없습니다.
 
@@ -113,7 +113,7 @@ ms.locfileid: "78177087"
 |설정|설명|
 |-------------|-----------------|
 |`RSWindowsExtendedProtectionLevel`|확장된 보호를 적용하는 수준을 지정합니다. 유효한 값은 `Off`, `Allow` 및 `Require`입니다.<br /><br /> 기본값은 `Off`입니다.<br /><br /> `Off`는 채널 바인딩이나 서비스 바인딩을 확인하지 않도록 지정합니다.<br /><br /> `Allow`는 확장된 보호를 지원하지만 반드시 사용하도록 요구하지는 않습니다. Allow가 지정하는 내용은 다음과 같습니다.<br /><br /> 확장된 보호를 지원하는 운영 체제에서 실행되는 클라이언트 애플리케이션에 대해 확장된 보호가 적용됩니다. 보호 적용 방법은 `RsWindowsExtendedProtectionScenario` 설정에 따라 결정됩니다.<br /><br /> 확장된 보호를 지원하지 않는 운영 체제에서 실행되는 애플리케이션에 대해 인증이 허용됩니다.<br /><br /> 값 `Require`가 지정하는 내용은 다음과 같습니다.<br /><br /> 확장된 보호를 지원하는 운영 체제에서 실행되는 클라이언트 애플리케이션에 대해 확장된 보호가 적용됩니다.<br /><br /> 확장 된 보호를 지원 하지 않는 운영 체제에서 실행 되는 응용 프로그램에 대 한 인증은 허용 **되지** 않습니다.|
-|`RsWindowsExtendedProtectionScenario`|유효성을 검사할 확장된 보호의 형태, 즉 채널 바인딩, 서비스 바인딩 또는 둘 다를 지정합니다. 유효한 값은 `Any`, `Proxy` 및 `Direct`입니다.<br /><br /> 기본값은 `Proxy`입니다.<br /><br /> 값 `Any`가 지정하는 내용은 다음과 같습니다.<br /><br /> -Windows NTLM, Kerberos 및 협상 인증이 지정되며 채널 바인딩은 필요하지 않습니다.<br /><br /> -서비스 바인딩이 적용됩니다.<br /><br /> 값 `Proxy`가 지정하는 내용은 다음과 같습니다.<br /><br /> -채널 바인딩 토큰이 있으면 Windows NTLM, Kerberos 및 협상 인증이 지정됩니다.<br /><br /> -서비스 바인딩이 적용됩니다.<br /><br /> 값 `Direct`가 지정하는 내용은 다음과 같습니다.<br /><br /> --CBT가 있고, 현재 서비스로의 SSL 연결이 있으며, SSL 연결의 CBT가 NTLM/Kerberos/협상 토큰의 CBT와 일치하면 Windows NTLM, Kerberos 및 협상 인증이 지정됩니다.<br /><br /> -서비스 바인딩이 적용되지 않습니다.<br /><br /> <br /><br /> 참고:가로 `RsWindowsExtendedProtectionLevel` `OFF`설정 된 경우이 설정은 무시 됩니다.|
+|`RsWindowsExtendedProtectionScenario`|유효성을 검사할 확장된 보호의 형태, 즉 채널 바인딩, 서비스 바인딩 또는 둘 다를 지정합니다. 유효한 값은 `Any`, `Proxy` 및 `Direct`입니다.<br /><br /> 기본값은 `Proxy`입니다.<br /><br /> 값 `Any`가 지정하는 내용은 다음과 같습니다.<br /><br /> -Windows NTLM, Kerberos 및 협상 인증이 지정되며 채널 바인딩은 필요하지 않습니다.<br /><br /> -서비스 바인딩이 적용됩니다.<br /><br /> 값 `Proxy`가 지정하는 내용은 다음과 같습니다.<br /><br /> -채널 바인딩 토큰이 있으면 Windows NTLM, Kerberos 및 협상 인증이 지정됩니다.<br /><br /> -서비스 바인딩이 적용됩니다.<br /><br /> 값 `Direct`가 지정하는 내용은 다음과 같습니다.<br /><br /> --CBT가 있고, 현재 서비스로의 SSL 연결이 있으며, SSL 연결의 CBT가 NTLM/Kerberos/협상 토큰의 CBT와 일치하면 Windows NTLM, Kerberos 및 협상 인증이 지정됩니다.<br /><br /> -서비스 바인딩이 적용되지 않습니다.<br /><br /> <br /><br /> 참고:가로 설정 된 경우이 설정은 무시 됩니다 `RsWindowsExtendedProtectionLevel` `OFF` .|
 
  `rsreportserver.config` 구성 파일의 항목 예:
 
@@ -152,12 +152,6 @@ ms.locfileid: "78177087"
 |ComputerNamePhysicalDnsFullyQualified|컴퓨터를 고유하게 식별하는 정규화된 DNS 이름입니다. 로컬 컴퓨터가 클러스터의 노드인 경우 클러스터 가상 서버의 이름이 아니라 로컬 컴퓨터의 정규화된 DNS 이름이 사용됩니다.<br /><br /> 정규화된 DNS 이름은 *HostName*.*DomainName*형식으로 DNS 호스트 이름과 DNS 도메인 이름을 결합한 것입니다.|
 |ComputerNamePhysicalDnsHostname|로컬 컴퓨터의 DNS 호스트 이름입니다. 로컬 컴퓨터가 클러스터의 노드인 경우 클러스터 가상 서버의 이름이 아니라 로컬 컴퓨터의 DNS 호스트 이름이 사용됩니다.|
 |ComputerNamePhysicalNetBIOS|로컬 컴퓨터의 NetBIOS 이름입니다. 로컬 컴퓨터가 클러스터의 노드인 경우 클러스터 가상 서버의 이름이 아니라 로컬 컴퓨터의 NetBIOS 이름이 사용됩니다.|
-
- SPN이 추가되면 다음과 비슷한 항목이 추적 로그에 추가됩니다.
-
- `rshost!rshost!10a8!01/07/2010-19:29:38:: i INFO: SPN Whitelist Added <ComputerNamePhysicalNetBIOS> - <theservername>.`
-
- `rshost!rshost!10a8!01/07/2010-19:29:38:: i INFO: SPN Whitelist Added <ComputerNamePhysicalDnsHostname> - <theservername>.`
 
  자세한 내용은 [보고서 서버의 SPN&#40;서비스 사용자 이름&#41; 등록](../report-server/register-a-service-principal-name-spn-for-a-report-server.md) 및 [URL 예약 및 등록 정보&#40;SSRS 구성 관리자&#41;](../install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)를 참조하세요.
 
