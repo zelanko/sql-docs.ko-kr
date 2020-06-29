@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 33a152e645706507b00a6ae261fdaec8d9450f12
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 86da6b855756fa6aca7d8423623638615eb7a981
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964973"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424130"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>OLE DB 대상 편집기(오류 출력 페이지)
   **OLE DB 대상 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 지정할 수 있습니다.  

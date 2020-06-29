@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: de47ea98-135e-4730-900e-dac629848798
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ff01832b565b0cca2e1a2550606307552ee63a33
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: efcfde9920aa50e7df6a4b9de59aebf066092c57
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967093"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425550"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>플랫 파일 연결 관리자 편집기(미리 보기 페이지)
   **플랫 파일 연결 관리자 편집기** 대화 상자의 **미리 보기** 노드를 사용하여 원본 파일의 내용을 테이블 형식으로 볼 수 있습니다.  

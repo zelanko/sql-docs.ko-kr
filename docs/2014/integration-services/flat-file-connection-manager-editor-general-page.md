@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0f4387b3311c4b2157ba202890c2a190e83e7ad5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 82181fad0220ad73804c23d7ebce2fbe6994d820
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967103"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425660"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>플랫 파일 연결 관리자 편집기(일반 페이지)
   **플랫 파일 연결 관리자 편집기** 대화 상자의 **일반** 페이지를 사용하여 파일과 데이터 형식을 선택할 수 있습니다. 플랫 파일 연결을 사용하면 패키지를 텍스트 파일에 연결할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "84967103"
  **찾아보기**  
  플랫 파일 연결에 사용할 파일 이름을 찾습니다.  
   
- **Locale**  
+ **로캘**  
  정렬과 날짜 및 시간 형식에 사용할 언어별 정보를 제공하는 로캘을 지정합니다.  
   
  **유니코드**  
@@ -50,7 +50,7 @@ ms.locfileid: "84967103"
  **Format**  
  구분 기호로 분리됨, 고정 폭, 왼쪽 정렬 중 어떤 형식을 사용할지를 지정합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |구분됨|**열** 페이지에 지정된 구분 기호로 열을 구분합니다.|  
 |고정 폭|열에 고정 폭이 지정됩니다.|  
@@ -65,7 +65,7 @@ ms.locfileid: "84967103"
  **머리글 행 구분 기호**  
  구분 기호 목록에서 머리글 행 구분 기호를 선택하거나 구분 기호 텍스트를 입력합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**{CR}{LF}**|머리글 행을 캐리지 리턴-줄 바꿈 조합으로 구분합니다.|  
 |**CR**|머리글 행을 캐리지 리턴으로 구분합니다.|  

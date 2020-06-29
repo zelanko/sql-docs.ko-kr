@@ -20,14 +20,14 @@ helpviewer_keywords:
 - importing data, SSIS packages
 - sources [Integration Services], copying data
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 55c621f9f345f0863e6656b66a77a8ccc439b0bc
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 726be9118269eb15e0741c1611a75071a88f667a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965623"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425120"
 ---
 # <a name="sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가져오기 및 내보내기 마법사는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 원본에서 대상으로 데이터를 복사 하는 패키지를 만드는 가장 간단한 방법을 제공 합니다.  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: 0a743f8d-2a51-4296-9976-8104f5ca22d3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 82853123767237314edac1e301723724628439d9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 06e82633d29654872523e60a792663424594ab79
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965043"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424360"
 ---
 # <a name="odbc-destination-editor-error-output-page"></a>ODBC 대상 편집기(오류 출력 페이지)
   **ODBC 대상 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택할 수 있습니다.  
@@ -41,13 +41,13 @@ ms.locfileid: "84965043"
 ### <a name="column"></a>열  
  사용되지 않습니다.  
   
-### <a name="error"></a>Error  
+### <a name="error"></a>오류  
  ODBC 대상에서 흐름 오류를 처리하는 방법을 선택합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
   
 ### <a name="truncation"></a>잘림  
  ODBC 대상에서 흐름 잘림을 처리하는 방법을 선택합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>설명  
  오류에 대한 설명을 표시합니다.  
   
 ### <a name="set-this-value-to-selected-cells"></a>이 값을 선택한 셀에 설정  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - File System Task Editor
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cf0c153168c513c98f8b9ac58984cb88ae1811da
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 342a718e1d72a257e469cd855ffd60fff6c5704d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967133"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425680"
 ---
 # <a name="file-system-task-editor-general-page"></a>파일 시스템 태스크 편집기(일반 페이지)
   **파일 시스템 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 태스크가 수행하는 파일 시스템 작업을 구성할 수 있습니다.  
@@ -39,10 +39,10 @@ ms.locfileid: "84967133"
  **IsDestinationPathVariable**  
  대상 경로가 변수에 저장되는지 여부를 나타냅니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**True**|대상 경로가 변수에 저장됩니다. 이 값을 선택하면 동적 옵션 **DestinationVariable**이 표시됩니다.|  
-|**False**|파일 연결 관리자에서 대상 경로를 지정합니다. 이 값을 선택 하면 동적 옵션가 표시 됩니다 `DestinationConnection` .|  
+|**허위**|파일 연결 관리자에서 대상 경로를 지정합니다. 이 값을 선택 하면 동적 옵션가 표시 됩니다 `DestinationConnection` .|  
   
  **OverwriteDestination**  
  작업이 대상 디렉터리에 있는 파일을 덮어쓸 수 있는지 여부를 지정합니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "84967133"
  **연산**  
  수행할 파일 시스템 작업을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**디렉터리 복사**|디렉터리를 복사합니다. 이 값을 선택하면 원본 및 대상에 대한 동적 옵션이 표시됩니다.|  
 |**파일 복사**|파일을 복사합니다. 이 값을 선택하면 원본 및 대상에 대한 동적 옵션이 표시됩니다.|  
@@ -78,7 +78,7 @@ ms.locfileid: "84967133"
 |값||  
 |-----------|-|  
 |**True**|대상 경로가 변수에 저장됩니다. 이 값을 선택하면 동적 옵션 **SourceVariable**이 표시됩니다.|  
-|**False**|파일 연결 관리자에서 대상 경로를 지정합니다. 이 값을 선택하면 동적 옵션 **DestinationVariable**이 표시됩니다.|  
+|**허위**|파일 연결 관리자에서 대상 경로를 지정합니다. 이 값을 선택하면 동적 옵션 **DestinationVariable**이 표시됩니다.|  
   
 ## <a name="isdestinationpathvariable-dynamic-options"></a>IsDestinationPathVariable 동적 옵션  
   

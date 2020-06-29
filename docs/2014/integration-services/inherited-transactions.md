@@ -11,14 +11,14 @@ helpviewer_keywords:
 - child packages
 - inherited transactions [Integration Services]
 ms.assetid: 90db5564-d41e-4cfe-8c9e-4e68d41eff1c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 929624cf85f7146fa668632fa586a47caca743f0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 110dfa19f9251b1cd43fc7ad0d6f7b4ce894dfa1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965473"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424780"
 ---
 # <a name="inherited-transactions"></a>상속된 트랜잭션
   패키지 실행 태스크를 사용하면 패키지가 다른 패키지를 실행할 수 있습니다. 패키지 실행 태스크에서 실행하는 패키지인 자식 패키지는 자체의 패키지 트랜잭션을 만들거나 부모 패키지 트랜잭션을 상속할 수 있습니다.  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 09368b18-37a5-4321-a173-7cfe5d42d2a2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 25053ac966629c1265d735df8502eccad1d8a290
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 558d26d06a64e6734f5b662d44673578dc71b191
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84950933"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424550"
 ---
 # <a name="message-queue-task-editor-general-page"></a>메시지 큐 태스크 편집기(일반 페이지)
   **메시지 큐 태스크 편집기** 대화 상자의 **일반 페이지** 를 사용하여 메시지 큐 태스크의 이름을 지정하고 설명하며 메시지 형식을 지정하고 태스크에서 메시지를 보내거나 받을지를 나타낼 수 있습니다.  

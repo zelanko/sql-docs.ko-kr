@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e25d8b904faaeff05620386e984ddc5bdd99fdf5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2a8064a36bce9be9cfa5e2cc88c5f23806932d2c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967123"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425690"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>플랫 파일 연결 관리자 편집기(고급 페이지)
   **플랫 파일 연결 관리자 편집기** 대화 상자의 **고급** 페이지를 사용하여 Integration Services가 플랫 파일에 있는 데이터를 읽고 쓰는 방법을 지정하는 속성을 설정할 수 있습니다. 사용자는 플랫 파일에 있는 열 이름을 바꿀 수 있고 파일의 각 열에 대해 데이터 형식 및 구분 기호를 포함하는 속성을 설정할 수 있습니다.  

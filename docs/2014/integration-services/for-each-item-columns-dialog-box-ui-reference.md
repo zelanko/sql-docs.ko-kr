@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - For Each Item Columns dialog box
 ms.assetid: ea76aae0-8798-4677-8ab8-4a579de4957c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e442ad28f64de8bd293fa95a604207e9bdc13107
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7423058574534f5557732cdef3b7f54cb6dc393f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966398"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425360"
 ---
 # <a name="for-each-item-columns-dialog-box-ui-reference"></a>For Each Item 열 대화 상자 UI 참조
   **For Each Item 열** 대화 상자를 사용하여 Foreach Item 열거자에서 열거하는 항목에 열을 정의할 수 있습니다.  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.columns.f1
 ms.assetid: 565984eb-8318-4be7-bebc-262209cf5065
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 61311dfa6428c9dd1e67fe783389c2a4b20ac1d8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 52e05d125710e8dc5efba7e2efc7420f68686c71
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965033"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424270"
 ---
 # <a name="odbc-source-editor-columns-page"></a>ODBC 원본 편집기(열 페이지)
   **ODBC 원본 편집기** 대화 상자의 **열** 페이지를 사용하여 출력 열을 각 외부(원본) 열에 매핑할 수 있습니다.  

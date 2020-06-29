@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.general.f1
 ms.assetid: 0b2daa20-c189-4b5b-9b43-bc9c34b08450
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 13994ac9a235a9259a1f436dc8bf0dd6435a51a3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ebf86dde82ea4bc7f4e5f4f488e9bedbebbcae4a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966373"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425350"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Foreach 루프 편집기(일반 페이지)
   **Foreach 루프 편집기** 대화 상자의 **일반** 페이지에서 지정한 열거자를 사용하여 컬렉션의 각 멤버에 대해 워크플로를 반복하는 Foreach 루프 컨테이너의 이름을 지정하고 설명할 수 있습니다.  

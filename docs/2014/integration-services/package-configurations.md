@@ -18,14 +18,14 @@ helpviewer_keywords:
 - direct configurations [Integration Services]
 - packages [Integration Services], configurations
 ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 84acc1541e8c66da15405330ca48b41f256811ab
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 84ad905a0b9e19c27e8b24bf9d4b2d0329a7db2c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964883"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423920"
 ---
 # <a name="package-configurations"></a>패키지 구성
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 런타임에 속성 값을 업데이트 하는 데 사용할 수 있는 패키지 구성을 제공 합니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "84964883"
 ## <a name="package-configuration-types"></a>패키지 구성 유형  
  다음 표에서는 패키지 구성 유형에 대해 설명합니다.  
   
-|Type|Description|  
+|Type|설명|  
 |----------|-----------------|  
 |XML 구성 파일|구성을 포함하는 XML 파일입니다. XML 파일은 여러 구성을 포함할 수 있습니다.|  
 |환경 변수|환경 변수는 구성을 포함합니다.|  

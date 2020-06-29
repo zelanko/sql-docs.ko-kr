@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.previewdata.f1
 ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 49566ab97aa832c7e61d4056749fcfa90af1b167
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 17debc001d8ba7826fe845c006e944e5a3dc87a0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965563"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424830"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>데이터 미리 보기 대화 상자(SQL Server 가져오기 및 내보내기 마법사)
   **데이터 미리 보기** 대화 상자를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사가 데이터 원본에 보내는 쿼리를 볼 수 있습니다. 또한 이 대화 상자를 사용하여 최대 200개의 샘플 데이터 행을 미리 볼 수 있습니다.  

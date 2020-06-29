@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Destination Editor
 ms.assetid: b01571fa-bc19-4742-8eed-ac163172a919
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c7d2c37e38386f7e46c1b8a0800d45dfc0b9b0dd
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 83c3553916ba629382256c0d2c1c7a89131df071
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967083"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425540"
 ---
 # <a name="flat-file-destination-editor-connection-manager-page"></a>플랫 파일 대상 편집기(연결 관리자 페이지)
   **플랫 파일 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 대상에 사용할 플랫 파일 연결을 선택하고, 덮어쓸 것인지 아니면 기존 대상 파일에 추가할 것인지를 지정할 수 있습니다. 플랫 파일 대상에서는 텍스트 파일에 데이터를 기록합니다. 이 텍스트 파일은 구분 기호로 분리하거나 고정 폭, 구분 기호 있는 고정 폭 또는 왼쪽 정렬 중 하나를 사용할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "84967083"
  **파일의 데이터 덮어쓰기**  
  기존 파일을 덮어쓸지 아니면 기존 파일에 데이터를 추가할지 여부를 나타냅니다.  
   
- **헤더**  
+ **머리글**  
  데이터를 쓰기 전에 삽입할 텍스트 블록을 입력합니다. 이 옵션을 사용하여 열 머리글 등의 추가 정보를 포함할 수 있습니다.  
   
  **미리 보기**  
