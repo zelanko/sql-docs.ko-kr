@@ -12,14 +12,14 @@ helpviewer_keywords:
 - importing packages
 - exporting packages
 ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ce04befcb4c8558216cecded6cb1892c3106295f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 442a5580e81de39ac9786f692620e92327634138
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965683"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436910"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>패키지 가져오기 및 내보내기(SSIS 서비스)
     
@@ -109,7 +109,7 @@ ms.locfileid: "84965683"
   
 3.  개체 탐색기가 열려 있지 않으면 **보기** 메뉴에서 **개체 탐색기**를 클릭합니다.  
   
-4.  개체 탐색기에서 **저장된 패키지** 폴더를 확장합니다.  
+4.  개체 탐색기에서 **저장 된 패키지** 폴더를 확장 합니다.  
   
 5.  하위 폴더를 확장하고 내보내려는 패키지를 찾습니다.  
   

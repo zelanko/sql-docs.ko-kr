@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], properties
 ms.assetid: 52d47ca4-fb8c-493d-8b2b-48bb269f859b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2116f6b07ae47325972c82f8b04ae027530a5a52
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 278ce3d1a7f1fafeb3c378559e5ec88da62895c8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963093"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421470"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>태스크 또는 컨테이너의 속성 설정
   **속성** 창을 사용하여 태스크 및 컨테이너의 속성을 대부분 설정할 수 있습니다. 태스크 컬렉션의 속성과 **속성** 창을 사용해서 설정하기에 너무 복잡한 속성은 예외입니다. 예를 들어 Foreach 루프 컨테이너에서 사용되는 열거자는 **속성** 창에서 구성할 수 없습니다. 이러한 복잡한 속성을 설정하려면 태스크 또는 컨테이너 편집기를 사용해야 합니다. 대부분의 태스크 및 컨테이너 편집기에는 여러 개의 노드가 포함되어 있으며, 각 노드에는 관련 속성이 들어 있습니다. 노드의 이름은 노드에 들어 있는 속성의 내용을 나타냅니다.  

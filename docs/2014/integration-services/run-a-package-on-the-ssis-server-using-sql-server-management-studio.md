@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 56dc1bf8-99d4-41dc-bdc4-f64f1ccfd688
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eeaea0d2fd211d1aa89b21422e62110f816f31a5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d17009988dea54621d4fd7ef542cf452bfe95c6e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964551"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422960"
 ---
 # <a name="run-a-package-on-the-ssis-server-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 SSIS 서버에서 패키지 실행
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 프로젝트를 배포한 후에는 서버에서 패키지를 실행할 수 있습니다.  

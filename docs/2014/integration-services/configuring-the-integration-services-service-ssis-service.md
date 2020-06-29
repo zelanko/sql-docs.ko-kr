@@ -12,14 +12,14 @@ helpviewer_keywords:
 - service [Integration Services], configuring
 - default configuration files
 ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bb374c8af950973d61ad99dc6d3ef896dcc21939
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4176906d19ccdd7ed3671ce5eee65887656ae8f6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921514"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434680"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>Integration Services 서비스 구성(SSIS 서비스)
     

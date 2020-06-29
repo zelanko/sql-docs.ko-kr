@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Select a Package dialog box
 ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 53b81c8c1ecf6d0399066fee9cdb779d7ac556d2
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b858b22244691a527c5e3aad909f046683487b9b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918269"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438160"
 ---
 # <a name="select-a-package"></a>패키지 선택
   **패키지 선택** 대화 상자를 사용하여 메시지 큐 태스크에서 수신할 메시지를 전송하는 패키지를 지정할 수 있습니다.  

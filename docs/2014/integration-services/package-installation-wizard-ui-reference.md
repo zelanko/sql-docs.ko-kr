@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - Package Installer Wizard
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b51049f0a55a10ae83af9e0f253c1c717f6d4962
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cc500615774a67bae70e9c9fa8845db166f44466
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964863"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423880"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>패키지 설치 마법사 UI 참조
   **패키지 설치 마법사** 를 사용하여 프로젝트에 포함된 패키지 및 기타 파일과 모든 패키지 종속 파일을 포함한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 배포할 수 있습니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "84964863"
  **경로**  
  구성할 속성의 경로를 봅니다.  
   
- **형식**  
+ **Type**  
  속성의 데이터 형식을 봅니다.  
   
  **값**  

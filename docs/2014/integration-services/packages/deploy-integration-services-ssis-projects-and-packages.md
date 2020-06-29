@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 807bece28f82759d0a708fa785f23141a0b4407d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e900225cc4215d586ea7494a60ba04835bcd2652
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964833"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423712"
 ---
 # <a name="deployment-of-projects-and-packages"></a>프로젝트 및 패키지 배포
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 프로젝트 배포 모델 및 패키지 배포 모델의 두 가지 배포 모델을 지원합니다. 프로젝트 배포 모델을 사용하면 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "84964833"
 ## <a name="features-of-project-deployment-model"></a>프로젝트 배포 모델의 기능  
  다음 표에서는 프로젝트 배포 모델에만 배포되는 프로젝트에 사용할 수 있는 기능을 나열합니다.  
   
-|기능|Description|  
+|기능|설명|  
 |-------------|-----------------|  
 |매개 변수|매개 변수는 패키지에서 사용할 데이터를 지정합니다. 패키지 매개 변수 및 프로젝트 매개 변수를 사용하여 각각 패키지 수준 또는 프로젝트 수준으로 매개 변수 범위를 지정할 수 있습니다. 매개 변수를 식 또는 태스크에서 사용할 수 있습니다. 프로젝트가 카탈로그에 배포되면 각 매개 변수의 리터럴 값을 할당하거나 디자인 타임에 할당된 기본값을 사용할 수 있습니다. 리터럴 값 대신 환경 변수를 참조할 수도 있습니다. 환경 변수 값은 패키지 실행 시 확인됩니다.|  
 |환경|환경은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에서 참조할 수 있는 변수의 컨테이너입니다. 각 프로젝트는 환경 참조를 여러 개 가질 수 있지만 단일 패키지 실행 인스턴스는 단일 환경의 변수만 참조할 수 있습니다. 환경을 사용하여 패키지에 할당할 값을 구성할 수 있습니다. 예를 들어 "Dev", "test" 및 "Production"이라는 환경이 있을 수 있습니다.|  

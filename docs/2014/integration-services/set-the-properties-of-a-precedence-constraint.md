@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 - precedence constraints [Integration Services], properties
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 679e61c37df7d31b80f47fff186589ce0081f838
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 55e71b6615afc15c2963b4dbb9bfbf2790e90b3b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963134"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421545"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>선행 제약 조건의 속성 설정
   선행 제약 조건의 속성을 설정하려면 다음 도구 중 하나를 사용하면 됩니다.  
@@ -67,11 +67,11 @@ ms.locfileid: "84963134"
   
     |읽기/쓰기 속성|구성 동작|  
     |--------------------------|--------------------------|  
-    |Description|설명을 제공합니다.|  
+    |설명|설명을 제공합니다.|  
     |EvalOp|계산 작업을 선택합니다. `Expression`, **Expressionandconstant**또는 **expressionandconstant** 작업을 선택할 경우 식을 지정할 수 있습니다.|  
     |식|계산 작업에 식이 포함된 경우 식을 제공합니다. 식은 부울로 계산되어야 합니다. 식 언어에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md)을 참조하세요.|  
     |LogicalAnd|`LogicalAnd`선행 제약 조건이 다른 선행 제약 조건과 함께 계산 되는지 여부를 지정 하려면 설정 하 고, 여러 실행 파일이 제약 조건이 있는 실행 파일에 연결 된 경우|  
-    |속성|선행 제약 조건의 이름을 업데이트합니다.|  
+    |이름|선행 제약 조건의 이름을 업데이트합니다.|  
     |ShowAnnotation|사용할 주석의 유형을 지정합니다. 주석을 사용하지 않으려면 **Never** 를 선택하고, 요청 시 주석을 사용하려면 **AsNeeded** 를 선택하고, Name 속성의 값을 사용하여 자동으로 주석을 달려면 **ConstraintName** 을 선택합니다. 또한 Description 속성의 값을 사용하여 자동으로 주석을 달려면 **ConstraintDescription** 을 선택하고, Value 및 Expression 속성의 값을 사용하여 자동으로 주석을 달려면 **ConstraintOptions** 를 선택합니다.|  
     |값|EvalOP 속성에 지정된 계산 작업에 제약 조건이 포함된 경우 제약 조건이 지정된 실행 개체의 실행 결과를 선택합니다.|  
   

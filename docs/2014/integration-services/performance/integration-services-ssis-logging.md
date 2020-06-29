@@ -21,14 +21,14 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b563160c9cd41a449b4669bb6b17ca43d427ff6e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 30f65b7bfd4563bbc9ada1d615f0d48af225895d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964713"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423410"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services(SSIS) 로깅
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에는 패키지, 컨테이너 및 태스크에서의 로깅 구현을 위해 사용할 수 있는 로그 공급자가 포함되어 있습니다. 로깅을 사용하면 패키지에 대한 런타임 정보를 캡처하여 패키지가 실행될 때마다 패키지를 감사하고 문제를 해결하는 데 활용할 수 있습니다. 예를 들어 로그를 사용하여 패키지를 실행한 운영자의 이름과 패키지가 시작 및 종료된 시간을 캡처할 수 있습니다.  
@@ -165,7 +165,7 @@ ms.locfileid: "84964713"
 #### <a name="use-the-pipelinecomponenttime-event"></a>PipelineComponentTime 이벤트 사용  
  가장 유용한 사용자 지정 로그 항목은 PipelineComponentTime 이벤트일 수 있습니다. 이 로그 항목은 5개의 각 주요 처리 단계에서 데이터 흐름의 각 구성 요소에 소요된 시간(밀리초)을 보고합니다. 다음 표에서는 이러한 처리 단계에 대해 설명합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개발자는 이러한 단계를 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>을 참조하세요.  
   
-|단계|Description|  
+|단계|설명|  
 |----------|-----------------|  
 |유효성 검사|구성 요소가 유효한 속성 값 및 구성 설정을 확인합니다.|  
 |PreExecute|구성 요소가 데이터 행을 처리하기 전에 일회성 처리를 수행합니다.|  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Model Training Editor
 ms.assetid: 098fbb1a-2a26-4288-9f68-d6233cb388ad
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e9109b4dc77dd55e3f0e0500324f0853c915c272
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4eb8396eb5d644b6287e9ed2a81f7fa1dc881958
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939164"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429850"
 ---
 # <a name="data-mining-model-training-editor-connection-tab"></a>데이터 마이닝 모델 학습 편집기(연결 탭)
   **데이터 마이닝 모델 학습 편집기** 대화 상자의 **연결** 페이지를 사용하여 성향을 습득할 마이닝 모델을 선택할 수 있습니다.  

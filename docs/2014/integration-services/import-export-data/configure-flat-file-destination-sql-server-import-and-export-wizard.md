@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2584cb4a6867d4af3b3f6bc1feff167c900a166d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fc1a9102a8fa4ee834663ae839940e2db9b469e1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965616"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424980"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>플랫 파일 대상 구성(SQL Server 가져오기 및 내보내기 마법사)
   **플랫 파일 대상 구성** 페이지를 사용하여 대상 플랫 파일의 서식 옵션을 지정하고 계속하기 전에 결과를 미리 볼 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "84965616"
  **행 구분 기호**  
  행 구분 기호 목록에서 선택합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**{CR}{LF}**|행이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.|  
 |**CR**|행이 캐리지 리턴으로 구분됩니다.|  
@@ -46,7 +46,7 @@ ms.locfileid: "84965616"
  **열 구분 기호**  
  열 구분 기호 목록에서 선택합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**{CR}{LF}**|열이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.|  
 |**CR**|열이 캐리지 리턴으로 구분됩니다.|  

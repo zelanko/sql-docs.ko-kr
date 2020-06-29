@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3c20d069a419a4d9f95a31489449a4726e25c304
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 57f87ec28e6c32f8e44abb3567878b85416ccd5e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920459"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434100"
 ---
 # <a name="odata-connection-manager"></a>OData 연결 관리자
   OData 연결 관리자를 사용하면 패키지에서 OData 원본에 연결할 수 있습니다. OData 원본 구성 요소는 OData 연결 관리자를 사용하여 OData 원본에 연결하고 서비스에서 데이터를 사용합니다. 이러한 구성 요소 설치 지침을 비롯한 자세한 내용은 [OData Source](../data-flow/odata-source.md)섹션을 참조하십시오.  
@@ -47,7 +47,7 @@ ms.locfileid: "84920459"
   
 |||  
 |-|-|  
-|속성|Description|  
+|속성|설명|  
 |Url|서비스 문서에 대한 URL입니다.|  
 |UserName|기본 인증에 사용할 사용자 이름입니다.|  
 |암호|기본 인증에 사용할 암호입니다.|  
