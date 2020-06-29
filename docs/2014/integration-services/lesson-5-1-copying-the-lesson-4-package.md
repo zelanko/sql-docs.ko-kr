@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6bd8de63662b070e317f7c01d1d60f15b6864787
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a2d07500e357d69ba0e07d5453ae7df7f0244360
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968193"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440430"
 ---
 # <a name="step-1-copying-the-lesson-4-package"></a>1단계: 4단원 패키지 복사
   이 태스크에서는 4단원에서 만든 Lesson 4.dtsx 패키지의 복사본을 만듭니다. 또는 자습서에 포함되어 있는 완성된 4단원 패키지를 프로젝트에 추가한 다음 복사할 수도 있습니다. 5단원의 나머지 부분에서 이 새 복사본을 사용합니다.  

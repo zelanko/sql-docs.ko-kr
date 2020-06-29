@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0fd4a8bfbde0a728370cb7980bb5a0add809be0f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e0373918efff503779e139bb21efad58549b3850
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966067"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440650"
 ---
 # <a name="step-1-copying-the-lesson-1-package"></a>1단계: 1단원 패키지 복사
   이 태스크에서는 1단원에서 만든 Lesson 1.dtsx 패키지의 복사본을 만듭니다. 1단원을 완료하지 않은 경우에는 자습서에 포함되어 있는 완성된 1단원 패키지를 프로젝트에 추가한 다음 복사할 수도 있습니다. 2단원의 나머지 부분에서 이 새 복사본을 사용합니다.  

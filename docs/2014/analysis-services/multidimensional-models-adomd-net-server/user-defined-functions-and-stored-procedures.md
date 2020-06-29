@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07e8aa47-37d4-4bbc-8bff-49e422d12897
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 0dcf79644ba3e9bc337b14e4ff28fe703e81564d
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: a49aa41d158bf2c9fd1ebb1a711d6ff35c0df98b
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545435"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469018"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>사용자 정의 함수 및 저장 프로시저
   ADOMD.NET 서버 개체를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에서 메타 데이터 및 데이터와 상호 작용 하는 UDF (사용자 정의 함수) 또는 저장 프로시저를 만들 수 있습니다. 이러한 in-process 메서드는 MDX(Multidimensional Expressions) 또는 DMX(Data Mining Extensions) 문을 통해 호출되어 네트워크 통신에 따른 지연 시간 없이 추가 기능을 제공합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "84545435"
 ## <a name="udf-examples"></a>UDF 예  
  UDF는 MDX 또는 DMX 문의 컨텍스트 내에서 호출할 수 있는 메서드로, 사용 가능한 매개 변수 수와 반환하는 데이터 형식에 제한이 없습니다.  
   
- MDX를 사용하여 만든 UDF는 DMX용으로 만든 UDF와 비슷합니다. 주된 차이점은 <xref:Microsoft.AnalysisServices.AdomdServer.Context> 및 <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentCube%2A> 속성과 같은 <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentMiningModel%2A> 개체의 일부 속성을 각각 한 가지 스크립팅 언어에만 사용할 수 있다는 것입니다.  
+ MDX를 사용하여 만든 UDF는 DMX용으로 만든 UDF와 비슷합니다. 주요 차이점은 [microsoft.analysisservices.sharepoint.integration.dll. AdomdServer](/previous-versions/sql/sql-server-2014/ms143353(v=sql.120)) 개체의 특정 속성 (예: [microsoft.analysisservices.sharepoint.integration.dll](/previous-versions/sql/sql-server-2014/ms137081(v=sql.120)) ) 및 microsoft.analysisservices.sharepoint.integration.dll * 속성은 하나의 스크립팅 언어에만 사용할 수 있다는 것입니다. AdomdServer [*](/previous-versions/sql/sql-server-2014/ms137178(v=sql.120)) 속성은 하나의 스크립팅 언어에 대해서만 사용할 수 있습니다.  
   
  다음 예에서는 UDF를 사용하여 노드 설명을 반환하고 튜플을 반환하고 튜플에 필터를 적용하는 방법을 보여 줍니다.  
   

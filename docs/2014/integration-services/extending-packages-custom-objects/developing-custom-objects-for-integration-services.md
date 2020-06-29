@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6afb7c8bcb0b6873ff0040eccdcf86dd90997851
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: 299c45662bc4034ba9db3331d09980b4fa31afe7
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85427640"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469318"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Integration Services용 사용자 지정 개체 개발
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 포함된 제어 흐름 및 데이터 흐름 개체가 요구 사항을 완전히 충족하지 못하는 경우 다음을 비롯한 여러 가지 유형의 사용자 지정 개체를 직접 개발할 수 있습니다.
@@ -60,7 +60,7 @@ ms.locfileid: "85427640"
 
 |사용자 지정 개체|기본 클래스|attribute|주요 메서드|
 |-------------------|----------------|---------------|-----------------------|
-|Task|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|
+|Task|[Microsoft. SqlServer. Runtime. 작업](/dotnet/api/microsoft.sqlserver.dts.runtime.task)|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|
 |ODBC 대상 편집기|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>|
 |로그 공급자|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>|
 |Enumerator|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A>|
@@ -69,19 +69,19 @@ ms.locfileid: "85427640"
 ## <a name="providing-links-to-samples-and-help-content"></a>샘플 및 도움말 콘텐츠에 대한 링크 제공
  관리 코드로 작성된 사용자 지정 개체의 샘플 및 도움말 콘텐츠에 대한 링크를 **SSIS 도구 상자**에 표시하려면 다음 속성을 사용합니다.
 
--   <xref:Microsoft.SqlServer.Dts.Pipeline.DTSPipelineComponentAttribute.SamplesTag%2A>
+-   [DTSPipelineComponentAttribute (영문) (영문)](/dotnet/api/microsoft.sqlserver.dts.pipeline.dtspipelinecomponentattribute.samplestag)
 
--   <xref:Microsoft.SqlServer.Dts.Pipeline.DTSPipelineComponentAttribute.HelpCollection%2A>
+-   [DTSPipelineComponentAttribute *를 수집 합니다.](/dotnet/api/microsoft.sqlserver.dts.pipeline.dtspipelinecomponentattribute.helpcollection)
 
--   <xref:Microsoft.SqlServer.Dts.Pipeline.DTSPipelineComponentAttribute.HelpKeyword%2A>
+-   [DTSPipelineComponentAttribute. HelpKeyword *.](/dotnet/api/microsoft.sqlserver.dts.pipeline.dtspipelinecomponentattribute.helpkeyword)
 
--   <xref:Microsoft.SqlServer.Dts.Runtime.DTSTaskAttribute.SamplesTag%2A>
+-   [Microsoft. Runtime. Dtstaskststststststststststststststststst>](/dotnet/api/microsoft.sqlserver.dts.runtime.dtstaskattribute.samplestag)
 
--   <xref:Microsoft.SqlServer.Dts.Runtime.DTSTaskAttribute.HelpCollection%2A>
+-   [Microsoft. Runtime. dtstaskstststststststststststststststststst](/dotnet/api/microsoft.sqlserver.dts.runtime.dtstaskattribute.helpcollection)
 
--   <xref:Microsoft.SqlServer.Dts.Runtime.DTSTaskAttribute.HelpKeyword%2A>
+-   [HelpKeyword *을 (를) 실행 합니다.](/dotnet/api/microsoft.sqlserver.dts.runtime.dtstaskattribute.helpkeyword)
 
- 네이티브 코드로 작성된 사용자 지정 개체의 샘플 및 도움말 콘텐츠에 대한 링크를 표시하려면 SamplesTag, HelpKeyword 및 HelpCollection의 레지스트리 스크립트(.rgs) 파일에서 항목을 추가합니다. 다음은 이에 대한 예입니다.
+ 네이티브 코드로 작성된 사용자 지정 개체의 샘플 및 도움말 콘텐츠에 대한 링크를 표시하려면 SamplesTag, HelpKeyword 및 HelpCollection의 레지스트리 스크립트(.rgs) 파일에서 항목을 추가합니다. 다음은 예제입니다.
 
  `val HelpKeyword = s 'sql11.dts.designer.executepackagetask.F1'`
 

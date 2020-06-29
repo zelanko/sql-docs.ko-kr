@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b8f443c6525743dfd00849459cee210eb87a0062
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 624e5b98691f7f06878a10a3fa98f5f43615efd7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968240"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440510"
 ---
 # <a name="step-1-copying-the-deployment-bundle"></a>1단계: 배포 번들 복사
   이 태스크에서는 배포 번들을 대상 컴퓨터에 복사합니다.  

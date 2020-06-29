@@ -9,15 +9,15 @@ ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7cceedac33c3f368f99fd87ab3aa2453f1cf9ba9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 4920844de9e20c3c4a4a89a192c2d67f0e58f0b8
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84971513"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469038"
 ---
 # <a name="custom-workflow-xml-description-master-data-services"></a>사용자 지정 워크플로 XML 설명(Master Data Services)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]에서 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 메서드는 워크플로 시작 시 SQL Server MDS Workflow Integration Service가 호출합니다. 이 메서드는 워크플로 비즈니스 규칙을 트리거한 항목에 대한 메타데이터 및 데이터를 XML 블록으로 받습니다. 워크플로 처리기를 구현하는 예제 코드는 [사용자 지정 워크플로 예제&#40;Master Data Services&#41;](create-a-custom-workflow-example.md)를 참조하세요.  
+  에서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [MasterDataServices](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) 는 워크플로가 시작 될 때 MDS 워크플로 통합 서비스를 SQL Server 하 여 호출 하는 것입니다. 이 메서드는 워크플로 비즈니스 규칙을 트리거한 항목에 대한 메타데이터 및 데이터를 XML 블록으로 받습니다. 워크플로 처리기를 구현하는 예제 코드는 [사용자 지정 워크플로 예제&#40;Master Data Services&#41;](create-a-custom-workflow-example.md)를 참조하세요.  
   
  다음 예제에서는 워크플로 처리기로 전송되는 XML을 보여 줍니다.  
   

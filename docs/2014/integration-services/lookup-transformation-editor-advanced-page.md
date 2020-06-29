@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Lookup Transformation Editor
 ms.assetid: f3395c65-0320-47f9-8d83-daaa082d8713
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2f73f8e1e4dbbadc4b73a487d433fc8ab1913b5f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 02aa291ef4d282fa77c21f93cc0700cbe1a3032c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951233"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440280"
 ---
 # <a name="lookup-transformation-editor-advanced-page"></a>조회 변환 편집기(고급 페이지)
   **조회 변환 편집기** 대화 상자의 **고급** 페이지를 사용하여 조회 변환의 부분 캐싱을 구성하고 SQL 문을 수정할 수 있습니다.  

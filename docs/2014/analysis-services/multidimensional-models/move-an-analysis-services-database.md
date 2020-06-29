@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 4f10901625ece0a154248f99370e427c7a999c87
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: fc9a6d3ee38e50120ab22ec48b1a673013eb50da
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84546065"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468958"
 ---
 # <a name="move-an-analysis-services-database"></a>Analysis Services 데이터베이스 이동
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA(데이터베이스 관리자)가 다차원 또는 테이블 형식 model 데이터베이스를 다른 위치로 이동해야 하는 경우가 종종 있습니다. 이러한 경우는 보다 나은 성능, 데이터베이스 확장에 따른 공간 확보, 또는 제품 업그레이드를 위해 데이터베이스를 다른 디스크로 이동하는 것과 같이 대부분 비즈니스 요구 사항에 의해 발생합니다.  
@@ -140,7 +140,7 @@ ms.locfileid: "84546065"
   
 ## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft.analysisservices.sharepoint.integration.dll *입니다.](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [Analysis Services 데이터베이스 연결 및 분리](attach-and-detach-analysis-services-databases.md)   
  [데이터베이스 저장소 위치](database-storage-location.md)   
  [데이터베이스 ReadWriteModes](database-readwritemodes.md)   

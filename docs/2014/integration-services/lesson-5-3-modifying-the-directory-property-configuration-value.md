@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d2ce127c6d0ce9a6a5ca62692d9f40fb70fadb69
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a71a7a181322d60caca98da4ddf3261cbce99c9e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951540"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440370"
 ---
 # <a name="step-3-modifying-the-directory-property-configuration-value"></a>3단계: Directory 속성 구성 값 수정
   이 태스크에서는 패키지 수준 변수 `User::varFolderName`의 Value 속성에 대해 SSISTutorial.dtsConfig 파일에 저장된 구성 설정을 수정합니다. 이 변수는 Foreach 루프 컨테이너의 Directory 속성을 업데이트합니다. 수정 된 값은 `New Sample Data` 이전 작업에서 만든 폴더를 가리킵니다. 구성 설정을 수정하고 패키지를 실행하면 Directory 속성은 원래 패키지에서 구성된 디렉터리 값 대신 구성 파일에서 채워진 값을 사용하여 변수를 통해 업데이트됩니다.  

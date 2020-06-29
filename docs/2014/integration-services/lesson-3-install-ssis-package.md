@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3fa7119ba9a8321e2b3bb8cbe1015271c9a3c95e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ed53af447271aad48abd08e8e98b0fd11bbcf7c4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965204"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440500"
 ---
 # <a name="lesson-3-installing-packages"></a>3단원: 패키지 설치
   [2 단원: 배포 번들 만들기](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)에서는 배포 유틸리티를 작성 하 고 다른 컴퓨터에 패키지를 설치 해야 하는 항목이 포함 된 배포 번들을 만들었습니다. 또한 배포 번들에서 파일 목록을 확인하고 배포 유틸리티를 작성할 때 만들었던 매니페스트 파일의 내용을 검사했습니다.  

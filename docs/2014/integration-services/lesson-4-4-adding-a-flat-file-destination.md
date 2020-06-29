@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 66533fb63a76bc92bcb45e7cb8feb058467e6583
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 177654c7bfe8d7acb7559139ef784dfd66611572
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968189"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440400"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>4단계: 플랫 파일 대상 추가
   Lookup Currency Key 변환의 오류 출력은 조회 작업에 실패한 모든 데이터 행을 스크립트 변환으로 리디렉션합니다. 발생한 오류에 대한 정보를 보강하기 위해 스크립트 변환은 오류에 대한 설명을 가져오는 스크립트를 실행합니다.  

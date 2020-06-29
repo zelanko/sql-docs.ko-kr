@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0df04b8388bc54f0181e5d5b7bb7600faece6260
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: b4257d883b1f39e918f0f8a6eb8135e25b784a79
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85427230"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469288"
 ---
 # <a name="developing-a-custom-task"></a>사용자 지정 태스크 개발
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서는 태스크를 사용하여 데이터의 추출, 변환 및 로드를 지원하는 작업 단위를 수행합니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 SQL 문 실행부터 FTP 사이트의 파일 다운로드에 이르기까지 가장 자주 사용되는 동작을 수행하는 다양한 태스크가 포함되어 있습니다. 포함된 태스크와 지원되는 동작이 요구 사항을 완전히 충족시키지 못할 경우에는 사용자 지정 태스크를 만들 수 있습니다.  
   
- 사용자 지정 태스크를 만들려면 <xref:Microsoft.SqlServer.Dts.Runtime.Task> 기본 클래스에서 상속되는 클래스를 만들고 새 클래스에 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 특성을 적용한 다음 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 메서드를 포함하여 기본 클래스의 중요한 메서드와 속성을 재정의해야 합니다.  
+ 사용자 지정 태스크를 만들려면 [Microsoft.](/dotnet/api/microsoft.sqlserver.dts.runtime.task) c s c. c s c. c s c. c s v. c s. 기본 클래스에서 상속 되는 클래스를 만들고, <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 새 클래스에 특성을 적용 하 고, 메서드를 포함 하 여 기본 클래스의 중요 한 메서드와 속성을 재정의 해야 합니다 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> .  
   
 ## <a name="in-this-section"></a>섹션 내용  
  이 섹션에서는 사용자 지정 태스크와 선택 사항인 태스크의 사용자 지정 사용자 인터페이스를 만들고 구성하고 코딩하는 방법을 설명합니다.  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fd3166072daa1b252b703b01f1623ccc041a17be
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a033fd1bc3384fa5a246c61d3176e3fadccf5500
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968173"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440410"
 ---
 # <a name="step-5-testing-the-lesson-4-tutorial-package"></a>5단계: 4단원 자습서 패키지 테스트
   런타임에 손상된 파일인 Currency_BAD.txt가 있으면 Currency Key Lookup 변환에서 일치 항목을 생성하지 못합니다. 이제 Currency Key Lookup의 오류 출력이 실패한 행을 새 실패한 행 대상으로 리디렉션하도록 구성되었으므로 해당 구성 요소가 실패하지 않으며 패키지가 성공적으로 실행됩니다. 실패한 모든 오류 행은 ErrorOutput.txt에 기록됩니다.  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 550dd2bad920dc3538de011b7841c0174912e718
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: fc9186b0250f0bdb8dd5ad91cc7e84782218bbc2
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84521258"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468908"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>시계열 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   모든 마이닝 모델은 동일한 구조를 사용하여 콘텐츠를 저장합니다. 이 구조는 데이터 마이닝 콘텐츠 스키마 행 집합에 따라 정의됩니다. 그러나 해당 표준 구조 내에서 정보를 포함하는 노드는 다양한 종류의 트리를 나타내기 위해 서로 다른 방법으로 정렬됩니다. 이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘을 기반으로 하는 마이닝 모델에 대해 노드가 구성되는 방법과 각 노드의 의미에 대해 설명합니다.  
@@ -120,7 +120,7 @@ ms.locfileid: "84521258"
   
  **ARTXP**  
   
-|노드 유형 ID|설명|  
+|노드 유형 ID|Description|  
 |------------------|-----------------|  
 |1(모델)|시계열|  
 |3(내부)|ARTXP 시계열 트리 내의 내부 분기를 나타냅니다.|  
@@ -129,7 +129,7 @@ ms.locfileid: "84521258"
   
  **ARIMA**  
   
-|노드 유형 ID|설명|  
+|노드 유형 ID|Description|  
 |------------------|-----------------|  
 |27(ARIMA 루트)|ARIMA 트리의 최상위 노드입니다.|  
 |28(ARIMA 주기 구조)|단일 주기 구조를 설명하는 ARIMA 트리의 구성 요소입니다.|  
@@ -423,7 +423,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  *차수* 의 값은 계열이 비교 또는 차별화되는 횟수를 나타냅니다.  
   
- 열거된 가능한 값 유형을 보려면 <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>를 참조하세요.  
+ 가능한 값 형식의 열거형은 [microsoft.analysisservices.sharepoint.integration.dll. AdomdServer. MiningValueType](/previous-versions/sql/sql-server-2014/ms144375(v=sql.120))를 참조 하세요.  
   
 ### <a name="using-the-arima-tree-information"></a>ARIMA 트리 정보 사용  
  비즈니스 솔루션에 ARIMA 알고리즘을 기반으로 하는 예측을 사용할 경우 예측을 수행하는 데 사용된 방법을 보여 주기 위해 수식을 보고서에 붙여넣을 수 있습니다. 캡션을 사용하여 약식 표현으로 수식을 표시하거나 설명을 사용하여 긴 표현으로 수식을 표시할 수 있습니다.  

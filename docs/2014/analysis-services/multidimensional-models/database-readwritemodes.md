@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 723eb7c1c0e8547ee411fc54ecd4aca613011b38
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: aa44924311e412c348a92b0e6abb522ae36bbc14
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547115"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468998"
 ---
 # <a name="database-readwritemodes"></a>ReadWriteMode 데이터베이스
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA(데이터베이스 관리자)는 읽기/쓰기 데이터베이스를 읽기 전용 데이터베이스로, 또는 이와 반대로 변경해야 하는 경우가 종종 있습니다. 이러한 상황은 솔루션 확장 및 성능 개선을 위해 여러 서버에서 동일한 데이터베이스 폴더를 공유하는 것과 같이 대부분 비즈니스 요구 사항에 의해 발생합니다. 이 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA는 `ReadWriteMode` 데이터베이스 속성을 사용하여 데이터베이스 운영 모드를 손쉽게 변경할 수 있습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "84547115"
   
 ## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft.analysisservices.sharepoint.integration.dll *입니다.](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [Analysis Services 데이터베이스 연결 및 분리](attach-and-detach-analysis-services-databases.md)   
  [Analysis Services 데이터베이스 이동](move-an-analysis-services-database.md)   
  [Detach 요소](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   

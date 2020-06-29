@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dc1aeb650810f9b6d580dabcd22091a2e1eb9d49
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: b1e6079d12de5468a654e646c434ae72596f62dc
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85427260"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469278"
 ---
 # <a name="creating-a-custom-task"></a>사용자 지정 태스크 만들기
   사용자 지정 태스크를 만드는 단계는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]의 다른 사용자 지정 개체를 만드는 단계와 비슷합니다.  
   
--   기본 클래스에서 상속되는 새 클래스를 만듭니다. 태스크의 경우 기본 클래스는 <xref:Microsoft.SqlServer.Dts.Runtime.Task>입니다.  
+-   기본 클래스에서 상속되는 새 클래스를 만듭니다. 작업의 경우 기본 클래스는 [Microsoft.](/dotnet/api/microsoft.sqlserver.dts.runtime.task)s s s.  
   
 -   개체 유형을 식별하는 특성을 클래스에 적용합니다. 태스크의 경우 이 특성은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>입니다.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "85427260"
 ## <a name="getting-started-with-a-custom-task"></a>사용자 지정 태스크 시작  
   
 ### <a name="creating-projects-and-classes"></a>프로젝트 및 클래스 만들기  
- 관리되는 태스크는 모두 <xref:Microsoft.SqlServer.Dts.Runtime.Task> 기본 클래스에서 파생되므로 사용자 지정 태스크를 만들려면 먼저 관리되는 프로그래밍 언어로 클래스 라이브러리 프로젝트를 만들고 기본 클래스에서 상속되는 클래스를 만들어야 합니다. 이 파생 클래스에서 기본 클래스의 메서드 및 속성을 재정의하여 사용자 지정 기능을 구현합니다.  
+ 관리 되는 모든 작업은 [Microsoft.](/dotnet/api/microsoft.sqlserver.dts.runtime.task) c s c. c s c. c s c. c s c. c s c. c s. c s c. c s. 이 파생 클래스에서 기본 클래스의 메서드 및 속성을 재정의하여 사용자 지정 기능을 구현합니다.  
   
  동일한 솔루션에서 사용자 지정 사용자 인터페이스에 대한 두 번째 클래스 라이브러리 프로젝트를 만듭니다. 배포를 쉽게 하려면 사용자 인터페이스에 대한 별도의 어셈블리를 만드는 것이 좋습니다. 이렇게 하면 연결 관리자 또는 해당 사용자 인터페이스를 독립적으로 업데이트하거나 다시 배포할 수 있기 때문입니다.  
   

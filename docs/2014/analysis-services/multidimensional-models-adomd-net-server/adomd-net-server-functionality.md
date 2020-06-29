@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b74c6957-3f64-4e09-aa09-d06ee93f82fa
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 95e0627e4f794050438ba392be6911d661f243aa
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: f00215c6bcc0104c920be29e0837288a469b252e
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84537393"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469078"
 ---
 # <a name="adomdnet-server-functionality"></a>ADOMD.NET Server 기능
   모든 ADOMD.NET 서버 개체는 서버의 데이터 및 메타데이터에 대해 읽기 전용 액세스를 제공하므로 ADOMD.NET 서버 개체 모델을 사용하여 데이터 및 메타데이터를 검색할 수 있습니다. 그러나 이 서버 개체 모델은 스키마 행 집합을 지원하지 않습니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "84537393"
  ADOMD.NET 서버 개체를 사용 하 여에 대 한 UDF (사용자 정의 함수) 또는 저장 프로시저를 만들 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . 이러한 in-process 메서드는 MDX(Multidimensional Expressions), DMX(Data Mining Extensions) 또는 SQL과 같은 언어로 만들어진 쿼리 문을 통해 호출됩니다. 이러한 in-process 메서드는 네트워크 통신에 따른 지연 시간 없이 추가 기능을 제공하기도 합니다.  
   
 > [!NOTE]  
->  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> 개체는 DMX만을 지원합니다.  
+>  [Microsoft.analysisservices.sharepoint.integration.dll AdomdServer. AdomdCommand](/previous-versions/sql/sql-server-2014/ms143286(v=sql.120)) 개체는 DMX만 지원 합니다.  
   
 ## <a name="what-is-a-udf"></a>UDF 정의  
  *UDF* 는 다음과 같은 특징이 있는 메서드입니다.  

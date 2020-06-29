@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 683e52e5-1c7e-49ab-9ffe-6a450a1c5776
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 503266d2b29a1482f89fc6647ed5519fdb9dfc7f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a5fa141b5972753665b33e111dc9857586e68cae
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966163"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440700"
 ---
 # <a name="step-5-testing-the-updated-packages"></a>5단계: 업데이트된 패키지 테스트
   대상 컴퓨터에 자습서 패키지를 설치하는 데 사용할 배포 번들을 만드는 다음 단원을 진행하기 전에 패키지를 테스트해야 합니다. 이 태스크에서는 Deployment Tutorial 프로젝트에 추가한 후 구성을 사용하여 확장했던 DataTransfer.dtsx 및 LoadXMLData 패키지를 실행합니다.  

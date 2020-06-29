@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: e904333dc25e7ae58d8eae29ba00279d7e599033
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 4373c881fae6599b0a470d154153250614b50627
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547105"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468988"
 ---
 # <a name="database-storage-location"></a>데이터베이스 스토리지 위치
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA(데이터베이스 관리자)가 특정 데이터베이스를 서버 데이터 폴더 외부에 두어야 하는 경우가 종종 있습니다. 대개 성능 향상이나 스토리지 확장과 같은 비즈니스 요구 사항에 따라 특정 데이터베이스를 서버 데이터 폴더 외부에 둡니다. 이러한 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA는 `DbStorageLocation` 데이터베이스 속성을 사용하여 데이터베이스 위치를 로컬 디스크나 네트워크 디바이스에 지정할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "84547105"
 >  `Alter` 명령을 사용하여 데이터베이스 스토리지 위치를 변경해서는 안 됩니다. 대신 데이터베이스 명령 시퀀스를 사용 하는 것이 좋습니다 `Detach` / `Attach` ( [Analysis Services 데이터베이스 이동](move-an-analysis-services-database.md), [Analysis Services 데이터베이스 연결 및 분리](attach-and-detach-analysis-services-databases.md)참조).  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
+ [Microsoft.analysisservices.sharepoint.integration.dll *입니다.](/dotnet/api/microsoft.analysisservices.core.database.dbstoragelocation)   
  [Analysis Services 데이터베이스 연결 및 분리](attach-and-detach-analysis-services-databases.md)   
  [Analysis Services 데이터베이스 이동](move-an-analysis-services-database.md)   
  [DbStorageLocation 요소](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)   

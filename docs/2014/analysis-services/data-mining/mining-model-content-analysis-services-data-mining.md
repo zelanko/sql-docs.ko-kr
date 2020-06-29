@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 0943e3f98ae65ec6c142fb1b98f86da054e88638
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 3cbfbf253bfd080084b8182b353b1efb8b535d3c
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84521620"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468968"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   기본 마이닝 구조의 데이터를 사용하여 마이닝 모델을 디자인하고 처리하고 나면 마이닝 모델이 완성되고 마이닝 모델에 *마이닝 모델 콘텐츠*가 포함됩니다. 이 콘텐츠를 사용하여 예측을 만들거나 데이터를 분석할 수 있습니다.  
@@ -80,13 +80,13 @@ ms.locfileid: "84521620"
 |3|내부|트리의 내부 분할 노드입니다. 의사 결정 트리 모델에 적용됩니다.|  
 |4|분포|트리의 터미널 노드입니다. 의사 결정 트리 모델에 적용됩니다.|  
 |5|클러스터|알고리즘을 통해 검색되는 클러스터입니다. 클러스터링 모델 및 시퀀스 클러스터링 모델에 적용됩니다.|  
-|6|Unknown|알 수 없는 노드 유형입니다.|  
+|6|알 수 없음|알 수 없는 노드 유형입니다.|  
 |7|항목 집합|알고리즘을 통해 검색되는 항목 집합입니다. 연결 모델 및 시퀀스 클러스터링 모델에 적용됩니다.|  
 |8|AssociationRule|알고리즘을 통해 검색되는 연결 규칙입니다. 연결 모델 및 시퀀스 클러스터링 모델에 적용됩니다.|  
 |9|PredictableAttribute|예측 가능한 특성입니다. 모든 모델 유형에 적용됩니다.|  
 |10|InputAttribute|입력 특성입니다. 의사 결정 트리 및 Naïve Bayes 모델에 적용됩니다.|  
 |11|InputAttributeState|입력 특성의 상태에 대한 통계입니다. 의사 결정 트리 및 Naïve Bayes 모델에 적용됩니다.|  
-|13|순서|시퀀스 클러스터의 Markov 모델 구성 요소에 대한 최상위 노드입니다. 시퀀스 클러스터링 모델에 적용됩니다.|  
+|13|시퀀스|시퀀스 클러스터의 Markov 모델 구성 요소에 대한 최상위 노드입니다. 시퀀스 클러스터링 모델에 적용됩니다.|  
 |14|전환|Markov 전환 행렬입니다. 시퀀스 클러스터링 모델에 적용됩니다.|  
 |15|TimeSeries|시계열 트리의 루트가 아닌 노드입니다. 시계열 모델에만 적용됩니다.|  
 |16|TsTree|예측 가능한 시계열에 해당하는 시계열 트리의 루트 노드입니다. MIXED 매개 변수를 사용하여 모델을 만든 경우에만 시계열 모델에 적용됩니다.|  
@@ -231,7 +231,7 @@ ms.locfileid: "84521620"
 |17|기타|알고리즘을 통해 정의된 사용자 지정 값을 나타냅니다.|  
 |18|미리 렌더링된 문자열|알고리즘을 통해 문자열로 렌더링되는 사용자 지정 값을 나타냅니다. 개체 모델에 의해 서식이 적용되지 않았습니다.|  
   
- 값 형식은 ADMOMD.NET 열거형에서 파생됩니다. 자세한 내용은 <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>를 참조하세요.  
+ 값 형식은 ADMOMD.NET 열거형에서 파생됩니다. 자세한 내용은 [microsoft.analysisservices.sharepoint.integration.dll. AdomdServer. MiningValueType](/previous-versions/sql/sql-server-2014/ms144375(v=sql.120))를 참조 하세요.  
   
 ### <a name="node-score"></a>노드 점수  
  노드 점수 관리는 모델 유형에 따라 다르며 노드 유형의 영향을 받을 수도 있습니다. 각 모델 및 노드 유형에 따라 NODE_SCORE가 계산되는 방법은 [알고리즘 유형별 마이닝 모델 콘텐츠](#bkmk_AlgoType)를 참조하세요.  

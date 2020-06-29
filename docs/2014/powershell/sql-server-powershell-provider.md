@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 04d332e2c71e69b9a3e7d1d1b0c60eb9aabaf2e5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 679ce02fe6e0016dfe7fd2d81dd285fbacd6523f
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84960154"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469068"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell Provider
   Windows PowerShell용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체의 계층 구조를 파일 시스템 경로와 비슷한 경로에 표시합니다. 이 경로를 사용하여 개체를 찾은 다음 SMO( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) 모델의 메서드를 사용하여 개체에 대해 동작을 수행할 수 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "84960154"
 |SQLSERVER:\SQLPolicy|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|정책 및 패싯과 같은 정책 기반 관리 개체입니다.|  
 |SQLSERVER:\SQLRegistration|<xref:Microsoft.SqlServer.Management.RegisteredServers><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>|서버 그룹 및 등록된 서버와 같은 등록된 서버 개체입니다.|  
 |SQLSERVER:\Utility|<xref:Microsoft.SqlServer.Management.Utility>|[!INCLUDE[ssDE](../includes/ssde-md.md)]의 관리되는 인스턴스와 같은 유틸리티 개체입니다.|  
-|SQLSERVER:\DAC|<xref:Microsoft.SqlServer.Management.DAC>|DAC 패키지와 같은 데이터 계층 애플리케이션 개체 및 DAC 배포와 같은 작업입니다.|  
+|SQLSERVER:\DAC|[Microsoft. SqlServer. DAC](/dotnet/api/microsoft.sqlserver.management.utility.deployeddac)|DAC 패키지와 같은 데이터 계층 애플리케이션 개체 및 DAC 배포와 같은 작업입니다.|  
 |SQLSERVER:\DataCollection|<xref:Microsoft.SqlServer.Management.Collector>|컬렉션 집합 및 구성 저장소와 같은 데이터 수집기 개체입니다.|  
 |SQLSERVER:\IntegrationServices|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체.|  
 |SQLSERVER:\SQLAS|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체|  

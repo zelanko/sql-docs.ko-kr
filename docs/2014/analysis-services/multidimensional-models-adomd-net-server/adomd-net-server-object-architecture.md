@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: bdc81de9-b390-4654-b62a-cd6c0c9ca10d
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 8454d2cbe9153c6a547ae2813c85bf1e45f269ad
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 33a8f420f985c9e62c7d7f275e7de370a6988e8d
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84537392"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469058"
 ---
 # <a name="adomdnet-server-object-architecture"></a>ADOMD.NET 서버 개체 아키텍처
   ADOMD.NET 서버 개체는에서 Udf (사용자 정의 함수) 또는 저장 프로시저를 만드는 데 사용할 수 있는 도우미 개체입니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -32,11 +32,11 @@ ADOMD.NET 개체 모델
   
 |대상|사용 개체|  
 |--------|---------------------|  
-|MDX(Multidimensional Expressions) 식 평가|<xref:Microsoft.AnalysisServices.AdomdServer.Expression><br /> <xref:Microsoft.AnalysisServices.AdomdServer.Expression> 개체는 MDX 식을 실행하고 지정된 튜플에서 해당 식을 평가하는 방법을 제공합니다.|  
-|전체 MDX 문을 생성하지 않고 MDX 함수를 실행할 수 있는 지원 제공|<xref:Microsoft.AnalysisServices.AdomdServer.MDX><br /> <xref:Microsoft.AnalysisServices.AdomdServer.MDX> 개체를 사용하면 <xref:Microsoft.AnalysisServices.AdomdServer.Expression> 개체를 사용하지 않고 미리 정의된 MDX 함수를 호출할 수 있으므로 편리합니다. <xref:Microsoft.AnalysisServices.AdomdServer.MDX> 개체의 추가 함수는 이후 릴리스에서 사용할 수 있습니다.|  
-|UDF의 현재 실행 컨텍스트 표현|<xref:Microsoft.AnalysisServices.AdomdServer.Context><br /> <xref:Microsoft.AnalysisServices.AdomdServer.Context> 개체는 현재 큐브 또는 마이닝 모델과 같은 정보와 다양한 메타데이터 컬렉션을 노출합니다. <xref:Microsoft.AnalysisServices.AdomdServer.Context> 개체의 주요 용도 중 하나는 <xref:Microsoft.AnalysisServices.AdomdServer.Hierarchy.CurrentMember%2A> 개체의 <xref:Microsoft.AnalysisServices.AdomdServer.Hierarchy> 속성입니다. UDF 또는 저장 프로시저의 작성자는 이 속성을 사용하여 쿼리가 실행되는 특정 차원의 멤버를 기준으로 결정을 내릴 수 있습니다.|  
-|집합 및 튜플 만들기|<xref:Microsoft.AnalysisServices.AdomdServer.SetBuilder>, <xref:Microsoft.AnalysisServices.AdomdServer.TupleBuilder><br /> <xref:Microsoft.AnalysisServices.AdomdServer.SetBuilder>는 변경할 수 없는 집합을 만드는 방법을 제공하고 <xref:Microsoft.AnalysisServices.AdomdServer.TupleBuilder>는 변경할 수 없는 튜플을 만드는 방법을 제공합니다.|  
-|MDX 언어의 6가지 기본 유형 간의 암시적 변환 및 캐스트 지원|<xref:Microsoft.AnalysisServices.AdomdServer.MDXValue><br /> <xref:Microsoft.AnalysisServices.AdomdServer.MDXValue> 개체는 다음 형식 간의 암시적 변환 및 캐스트를 제공합니다.<br /><br /> -   <xref:Microsoft.AnalysisServices.AdomdServer.Hierarchy><br />-   <xref:Microsoft.AnalysisServices.AdomdServer.Level><br />-   <xref:Microsoft.AnalysisServices.AdomdServer.Member><br />-   <xref:Microsoft.AnalysisServices.AdomdServer.Tuple><br />-   <xref:Microsoft.AnalysisServices.AdomdServer.Set><br />-스칼라 또는 값 형식|  
+|MDX(Multidimensional Expressions) 식 평가|[Microsoft.analysisservices.sharepoint.integration.dll. AdomdServer](/previous-versions/sql/sql-server-2014/ms143609(v=sql.120))<br /> [Microsoft.analysisservices.sharepoint.integration.dll AdomdServer](/previous-versions/sql/sql-server-2014/ms143609(v=sql.120)) 개체는 MDX 식을 실행 하 고 지정 된 튜플에서 해당 식을 평가 하는 방법을 제공 합니다.|  
+|전체 MDX 문을 생성하지 않고 MDX 함수를 실행할 수 있는 지원 제공|[Microsoft.analysisservices.sharepoint.integration.dll. AdomdServer](/previous-versions/sql/sql-server-2014/ms143616(v=sql.120))<br /> Microsoft.analysisservices.sharepoint.integration.dll 개체는 [AdomdServer](/previous-versions/sql/sql-server-2014/ms143616(v=sql.120)) [개체를](/previous-versions/sql/sql-server-2014/ms143609(v=sql.120)) 사용 하지 않고 미리 정의 된 mdx 함수를 호출 하는 데 편리 합니다. [Microsoft.analysisservices.sharepoint.integration.dll AdomdServer](/previous-versions/sql/sql-server-2014/ms143616(v=sql.120)) 개체에 대 한 추가 함수는 이후 릴리스에서 사용할 수 있습니다.|  
+|UDF의 현재 실행 컨텍스트 표현|[Microsoft.analysisservices.sharepoint.integration.dll. AdomdServer](/previous-versions/sql/sql-server-2014/ms143353(v=sql.120))<br /> [Microsoft.analysisservices.sharepoint.integration.dll](/previous-versions/sql/sql-server-2014/ms143353(v=sql.120)) 개체는 현재 큐브 또는 마이닝 모델과 같은 정보와 다양 한 메타 데이터 컬렉션을 제공 합니다. Microsoft.analysisservices.sharepoint.integration.dll 개체의 한 가지 주요 용도는 [AdomdServer](/previous-versions/sql/sql-server-2014/ms143353(v=sql.120)) [개체의](/previous-versions/sql/sql-server-2014/ms143578(v=sql.120)) [microsoft.analysisservices.sharepoint.integration.dll. AdomdServer](/previous-versions/sql/sql-server-2014/ms137044(v=sql.120)) 개체를 사용 하는 것입니다 .이 속성은 UDF 또는 저장 프로시저의 작성자는 이 속성을 사용하여 쿼리가 실행되는 특정 차원의 멤버를 기준으로 결정을 내릴 수 있습니다.|  
+|집합 및 튜플 만들기|[Microsoft.analysisservices.sharepoint.integration.dll AdomdServer](/previous-versions/sql/sql-server-2014/ms144510(v=sql.120)), [microsoft.analysisservices.sharepoint.integration.dll. AdomdServer. TupleBuilder](/previous-versions/sql/sql-server-2014/ms145407(v=sql.120))<br /> [Microsoft.analysisservices.sharepoint.integration.dll AdomdServer](/previous-versions/sql/sql-server-2014/ms144510(v=sql.120)) 는 변경할 수 없는 집합을 만드는 방법을 제공 하는 반면 [microsoft.analysisservices.sharepoint.integration.dll. AdomdServer](/previous-versions/sql/sql-server-2014/ms145407(v=sql.120)) 는 변경할 수 없는 튜플을 만드는 방법을 제공 합니다.|  
+|MDX 언어의 6가지 기본 유형 간의 암시적 변환 및 캐스트 지원|[Microsoft.analysisservices.sharepoint.integration.dll. AdomdServer. MDXValue](/previous-versions/sql/sql-server-2014/ms143573(v=sql.120))<br /> [Microsoft.analysisservices.sharepoint.integration.dll](/previous-versions/sql/sql-server-2014/ms143573(v=sql.120)) 개체는 다음 형식 간의 암시적 변환과 캐스트를 제공 합니다.<br /><br /> -   [Microsoft.analysisservices.sharepoint.integration.dll. AdomdServer](/previous-versions/sql/sql-server-2014/ms143578(v=sql.120))<br />-   [Microsoft.analysisservices.sharepoint.integration.dll. AdomdServer](/previous-versions/sql/sql-server-2014/ms143581(v=sql.120))<br />-   [Microsoft.analysisservices.sharepoint.integration.dll. AdomdServer](/previous-versions/sql/sql-server-2014/ms143820(v=sql.120))<br />-   [Microsoft.analysisservices.sharepoint.integration.dll. AdomdServer](/previous-versions/sql/sql-server-2014/ms145330(v=sql.120))<br />-   [Microsoft.analysisservices.sharepoint.integration.dll. AdomdServer](/previous-versions/sql/sql-server-2014/ms144530(v=sql.120))<br />-스칼라 또는 값 형식|  
   
 ## <a name="see-also"></a>참고 항목  
  [ADOMD.NET 서버 프로그래밍](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  

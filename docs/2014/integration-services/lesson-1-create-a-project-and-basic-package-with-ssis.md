@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 076c76c9232dcba910c3810d2632f799b2960142
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 17bfedafcb97793ccccf414a6ae5da9bc66faa66
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966083"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440610"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>1단원: 프로젝트 및 기본 패키지 만들기
   이 단원에서는 하나의 플랫 파일 원본에서 데이터를 추출하고 두 개의 조회 변환 구성 요소를 사용하여 데이터를 변환하며 **AdventureWorksDW2012** 의 **FactCurrency**팩트 테이블에 해당 데이터를 쓰는 간단한 ETL 패키지를 만듭니다. 이 단원에서는 새로운 패키지를 만들고 데이터 원본 및 대상 연결을 추가하고 구성하며 새로운 제어 흐름 및 데이터 흐름 구성 요소를 사용하여 작업하는 방법에 대해 설명합니다.  
@@ -61,10 +61,10 @@ ms.locfileid: "84966083"
   
 |열 이름|데이터 형식|조회 테이블|조회 열|  
 |-----------------|---------------|------------------|-------------------|  
-|AverageRate|float|None|None|  
+|AverageRate|float|없음|없음|  
 |CurrencyKey|int(FK)|DimCurrency|CurrencyKey(PK)|  
 |DateKey|int(FK)|FactOnlineSales|DateKey (PK)|  
-|EndOfDayRate|float|None|None|  
+|EndOfDayRate|float|없음|없음|  
   
 ### <a name="mapping-source-data-to-be-compatible-with-the-destination"></a>대상과 호환될 원본 데이터 매핑  
  원본 및 대상 데이터 형식을 분석하면 **CurrencyKey** 와 **DateKey** 값을 조회해야 한다는 사실을 알 수 있습니다. 이러한 조회를 수행할 변환은 **DimCurrency** 및 **DimDate** 차원 테이블의 대체 키를 사용하여 **CurrencyKey** 및 **DateKey** 값을 가져옵니다.  

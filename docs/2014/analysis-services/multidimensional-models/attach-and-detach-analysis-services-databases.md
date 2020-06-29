@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: a0c62698f1aed231128803cb91c80264a2fbdbf4
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 44698c89eff608d6c993c3cec030098883eb5aee
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544835"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469008"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Analysis Services 데이터베이스 연결 및 분리
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA(데이터베이스 관리자)는 종종 일정 기간 동안 데이터베이스를 오프라인 상태로 유지하다가 동일한 서버 인스턴스 또는 다른 서버 인스턴스에서 해당 데이터베이스를 다시 온라인 상태로 되돌려야 하는 경우가 있습니다. 이러한 경우는 보다 나은 성능, 데이터베이스 확장에 따른 공간 확보, 또는 제품 업그레이드를 위해 데이터베이스를 다른 디스크로 이동하는 것과 같이 대부분 비즈니스 요구 사항에 의해 발생합니다. 이러한 모든 상황은 물론 다른 상황에서도 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA는 `Attach` 및 `Detach` 명령을 사용하여 아주 간단히 데이터베이스를 오프라인 상태로 유지하다가 다시 온라인 상태로 만들 수 있습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "84544835"
   
 ## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft.analysisservices.sharepoint.integration.dll *입니다.](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [Analysis Services 데이터베이스 이동](move-an-analysis-services-database.md)   
  [데이터베이스 ReadWriteModes](database-readwritemodes.md)   
  [ReadOnly 모드와 ReadWrite 모드 간 Analysis Services 데이터베이스 전환](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b6b446d566e7c9aa18e635799e81120d1ac73470
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6ffa1849e099e670b5fa13db399af67883e8806c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965177"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440470"
 ---
 # <a name="step-3-testing-the-lesson-3-tutorial-package"></a>3단계: 3단원 자습서 패키지 테스트
   이 태스크에서는 Lesson 3.dtsx 패키지를 실행합니다. 패키지를 실행하면 이벤트 로그 창에 로그 파일에 기록된 로그 항목이 나열됩니다. 패키지 실행을 끝낸 후 로그 공급자가 생성한 로그 파일 내용을 확인합니다.  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e3bb87bbf5e3e17f5468fabe50c158b30239777d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f7fcaa0ecab3561e49fc8080251d2523034f5149
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951493"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440380"
 ---
 # <a name="step-4-testing-the-lesson-5-tutorial-package"></a>4단계: 5단원 자습서 패키지 테스트
   런타임에 패키지는 패키지를 만들 때 지정한 원래 디렉터리 이름을 사용하지 않고 런타임에 업데이트된 변수에서 `Directory` 속성 값을 가져옵니다. SSISTutorial.dtsConfig 파일을 사용하여 변수의 값이 채워집니다.  

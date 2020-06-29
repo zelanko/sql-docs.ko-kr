@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fdeb04558cf8544eb8aad5456ec42fed8160f025
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1645a1dee923da3913d12e36bdd60829918bbf7b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965163"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440480"
 ---
 # <a name="step-1-copying-the-lesson-3-package"></a>1단계: 3단원 패키지 복사
   이 태스크에서는 3단원에서 만든 Lesson 3.dtsx 패키지의 복사본을 만듭니다. 또는 3단원을 완료하지 않은 경우에는 자습서에 포함되어 있는 완성된 3단원 패키지를 프로젝트에 추가한 다음 작업을 수행할 복사본을 만들 수 있습니다. 4단원의 나머지 부분에서 이 새 복사본을 사용합니다.  

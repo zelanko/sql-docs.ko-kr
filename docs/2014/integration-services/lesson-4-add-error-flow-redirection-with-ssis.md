@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a97a07c4854fc1e25913aff7b6e966be79032e86
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a8ebde9465a5f6f9f591e5d175aa7ed26c5c2fca
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951563"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440440"
 ---
 # <a name="lesson-4-adding-error-flow-redirection"></a>4단원: 오류 Flow 리디렉션 추가
   변환 프로세스에서 발생할 수 있는 오류를 처리 하기 위해에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 변환할 수 없는 데이터를 처리 하는 방법을 구성 요소 단위 및 열 단위로 결정 하는 기능을 제공 합니다. 특정 열의 오류를 무시하거나 오류가 발생한 전체 행을 리디렉션하거나 또는 구성 요소 작동이 실패하도록 선택할 수 있습니다. 기본적으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 모든 구성 요소는 오류 발생 시 작동이 실패하도록 구성되어 있습니다. 구성 요소 작동이 실패하면 이에 따라 패키지 실행이 실패하고 모든 후속 처리가 중지됩니다.  

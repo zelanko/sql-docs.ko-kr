@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c035446034c5f9f8dfdeeed6a9b6b4be2ea77d72
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 190e1ef9c3ceb2acbb93de5bcc1381848f946319
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966053"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440600"
 ---
 # <a name="step-2-verifying-the-deployment-bundle"></a>2단계: 배포 번들 확인
   1단원에서는 Deployment Tutorial 프로젝트를 만들고 패키지와 보조 파일을 프로젝트에 추가했습니다. 이전 태스크에서는 프로젝트를 위한 배포 유틸리티를 작성했습니다.  

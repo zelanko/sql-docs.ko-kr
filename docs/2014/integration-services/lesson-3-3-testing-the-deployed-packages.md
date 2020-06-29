@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 31f12cd8abde0262c499d8a889f28041a9e3974c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c8d2f5e7cc6453c67a8a11eb558a678924ed4cef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965242"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440560"
 ---
 # <a name="step-3-testing-the-deployed-packages"></a>3단계: 배포된 패키지 테스트
   이 태스크에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 배포한 패키지를 테스트합니다.

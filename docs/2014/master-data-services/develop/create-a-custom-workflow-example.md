@@ -9,18 +9,18 @@ ms.topic: reference
 ms.assetid: dfd1616c-a75c-4f32-bdb1-7569e367bf41
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 77b954956a4934d1b325667cbbeb75060de16c31
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 9d72e31b8e4040353c9c93bceb65ca3c2be98788
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84971523"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469048"
 ---
 # <a name="custom-workflow-example-master-data-services"></a>사용자 지정 워크플로 예제(Master Data Services)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]에서 사용자 지정 워크플로 클래스 라이브러리를 만들 때는 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 인터페이스를 구현하는 클래스를 만듭니다. 이 인터페이스에는 워크플로 시작 시 SQL Server MDS Workflow Integration Service가 호출하는 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>라는 메서드가 하나 포함됩니다. <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 메서드에는 두 개의 매개변수가 포함됩니다. *workflowType*에는 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]의 **워크플로 유형** 텍스트 상자에 입력한 텍스트가 들어 있고 *dataElement*에는 워크플로 비즈니스 규칙을 트리거한 항목의 메타데이터와 항목 데이터가 들어 있습니다.  
+  에서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 사용자 지정 워크플로 클래스 라이브러리를 만들 때 MasterDataServices를 구현 하는 클래스를 만듭니다. [iworkflowtypeextender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) 인터페이스를 구현 합니다. 이 인터페이스에는 워크플로가 시작 될 때 MDS 워크플로 통합 서비스 SQL Server에서 호출 하는 [MasterDataServices](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))메서드 하나가 포함 되어 있습니다. [MasterDataServices](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) 에는 두 개의 매개 변수가 포함 됩니다. *workflowType* 에는의 **워크플로 유형** 텍스트 상자에 입력 한 텍스트가 포함 되 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 고 *dataelement* 에는 워크플로 비즈니스 규칙을 트리거한 항목에 대 한 메타 데이터 및 항목 데이터가 포함 됩니다.  
   
 ## <a name="custom-workflow-example"></a>사용자 지정 워크플로 예제  
- 다음 코드 예제에서는 워크플로 비즈니스 규칙을 트리거한 요소에 대한 XML 데이터에서 Name, Code 및 LastChgUserName 특성을 추출하기 위해 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 메서드를 구현하는 방법과 추출한 특성을 다른 데이터베이스에 삽입하기 위한 저장 프로시저를 호출하는 방법을 보여 줍니다. 항목 데이터 XML의 예와 항목 데이터 XML에 포함되는 태그에 대한 설명은 [사용자 지정 워크플로 XML 설명&#40;Master Data Services&#41;](create-a-custom-workflow-xml-description.md)을 참조하십시오.  
+ 다음 코드 예제에서는 [MasterDataServices 워크플로 *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) 메서드를 구현 하 여 워크플로 비즈니스 규칙을 트리거한 요소의 XML 데이터에서 Name, Code 및 LastChgUserName 특성을 추출 하는 방법 및 저장 프로시저를 호출 하 여 다른 데이터베이스에 삽입 하는 방법을 보여 줍니다. 항목 데이터 XML의 예와 항목 데이터 XML에 포함되는 태그에 대한 설명은 [사용자 지정 워크플로 XML 설명&#40;Master Data Services&#41;](create-a-custom-workflow-xml-description.md)을 참조하십시오.  
   
 ```csharp  
 using System;  

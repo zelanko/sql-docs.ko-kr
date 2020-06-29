@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ed2089257af4f82b0bbb863731a17d396dc8795c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4023db85af32babf04de54efbceb6130d7f979ea
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968263"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440590"
 ---
 # <a name="lesson-2-adding-looping"></a>2단원: 루핑 추가
   [1 단원: 프로젝트 및 기본 패키지 만들기](lesson-1-create-a-project-and-basic-package-with-ssis.md)에서는 단일 플랫 파일 원본에서 데이터를 추출 하 고, 조회 변환을 사용 하 여 데이터를 변환 하 고, 마지막으로 **AdventureWorksDW2012** 예제 데이터베이스의 **FactCurrency** 팩트 테이블로 데이터를 로드 하는 패키지를 만들었습니다.  

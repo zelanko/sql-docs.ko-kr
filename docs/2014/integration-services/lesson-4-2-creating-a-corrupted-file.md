@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f793f2cadf46d4a5431c01f5a1b1966ffad6fd55
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4095d76eb4710d67abd1e5ed25a05544142d1e3c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968203"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440450"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>2단계: 손상된 파일 만들기
   변환 오류의 구성 및 처리를 보여 주기 위해 처리 시 구성 요소의 실패를 야기하는 예제 플랫 파일을 만들어야 합니다.  

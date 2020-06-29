@@ -9,12 +9,12 @@ ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 63f8be6f47ef4a6abd20c42757648ca03a5701b3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 73c9371d28e64e41f7e0f7d2a53e94309fc66c28
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962063"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469088"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>사용자 지정 워크플로 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]는 비즈니스 규칙을 사용하여 기본적인 워크플로 솔루션을 만듭니다. 이러한 솔루션을 사용하면 지정 조건에 따라 자동으로 데이터에 대해 업데이트 및 유효성 검사 작업을 수행하고 전자 메일 알림이 전송되게 할 수 있습니다. 기본 제공 워크플로 동작으로 가능한 것보다 복잡한 처리가 필요한 경우에는 사용자 지정 워크플로를 사용하십시오. 사용자 지정 워크플로는 사용자가 만드는 .NET 어셈블리입니다. 사용자 워크플로 어셈블리가 호출되면 상황에 따라 필요한 동작이 코드에 사용될 수 있습니다. 예를 들어, 워크플로에 다중 계층 승인 또는 복잡한 의사 결정 트리와 같은 CEP(복합 이벤트 처리)가 필요한 경우 데이터를 분석하고 어디로 데이터를 보내서 승인을 받을지를 결정하는 사용자 지정 워크플로를 시작하도록 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]를 구성할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "84962063"
 ## <a name="configure-master-data-services-for-custom-workflows"></a>사용자 지정 워크플로용 MDS(Master Data Services) 구성  
  사용자 지정 워크플로를 만들려면 사용자 지정 코드를 일부 작성하고 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]가 워크플로 데이터를 사용자 워크플로 처리기로 전달하도록 구성해야 합니다. 사용자 지정 워크플로 처리를 사용하려면 다음 단계를 수행하십시오.  
   
-1.  <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>를 구현하는 .NET 어셈블리를 만듭니다.  
+1.  [MasterDataServices](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130))를 구현 하는 .net 어셈블리를 만듭니다.  
   
 2.  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스에 연결하고 사용자 워크플로 처리기에 태그를 연결하기 위해 SQL Server MDS Workflow Integration Service를 구성합니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "84962063"
 5.  사용자 지정 워크플로를 트리거하는 멤버에 비즈니스 규칙을 적용합니다.  
   
 ### <a name="create-the-workflow-handler-assembly"></a>워크플로 처리기 어셈블리 만들기  
- 사용자 지정 워크플로는 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 인터페이스를 구현하는 .NET 클래스 라이브러리 어셈블리입니다. SQL Server MDS Workflow Integration Service는 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 메서드를 호출하여 사용자 코드를 실행합니다. <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>를 구현하는 예제 코드는 [사용자 지정 워크플로 예제&#40;Master Data Services&#41;](create-a-custom-workflow-example.md)를 참조하세요.  
+ 사용자 지정 워크플로는 [MasterDataServices](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) 를 구현 하는 .net 클래스 라이브러리 어셈블리로 서,. SQL Server MDS 워크플로 통합 서비스는 코드를 실행 하기 위해 [MasterDataServices 워크플로 *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) 메서드를 호출 합니다. [MasterDataServices](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))를 구현 하는 예제 코드는 [사용자 지정 워크플로 예제 &#40;MDS(Master Data Services)&#41;](create-a-custom-workflow-example.md)를 참조 하세요.  
   
  Visual Studio 2010을 사용하여 사용자 지정 워크플로를 처리하기 위해 SQL Server MDS Workflow Integration Service가 호출할 수 있는 어셈블리를 만들려면 다음 단계를 수행하십시오.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "84962063"
   
 3.  'using Microsoft.MasterDataServices.Core.Workflow;'를 C# 코드 파일에 추가합니다.  
   
-4.  클래스 선언에 있는 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>에서 상속합니다. 클래스 선언은 'public class WorkflowTester : IWorkflowTypeExtender'와 비슷해야 합니다.  
+4.  클래스 선언의 MasterDataServices에서 상속 합니다. [IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) 를 상속 합니다. 클래스 선언은 'public class WorkflowTester : IWorkflowTypeExtender'와 비슷해야 합니다.  
   
-5.  <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 인터페이스를 구현합니다. SQL Server MDS Workflow Integration Service가 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 메서드를 호출하여 워크플로를 시작합니다.  
+5.  MasterDataServices을 구현 합니다. [iworkflowtypeextender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) 인터페이스를 구현 합니다. [MasterDataServices](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) 를 호출 하 여 워크플로를 시작 하는 SQL Server MDS 워크플로 통합 서비스에 의해 호출 됩니다.  
   
 6.  \Master Data Services\webapplication\bin에서 Microsoft.MasterDataServices.Workflow.exe 이라는 SQL Server MDS 워크플로 통합 서비스 실행 파일의 위치로 어셈블리를 복사 합니다. \<Your installation folder>  
   
@@ -78,7 +78,7 @@ ms.locfileid: "84962063"
     </setting>  
     ```  
   
-3.  "ConnectionString" 설정 아래에 "WorkflowTypeExtenders" 설정을 추가하여 사용자 워크플로 처리기 어셈블리에 태그 이름을 연결합니다. 다음은 그 예입니다.  
+3.  "ConnectionString" 설정 아래에 "WorkflowTypeExtenders" 설정을 추가하여 사용자 워크플로 처리기 어셈블리에 태그 이름을 연결합니다. 예를 들면 다음과 같습니다.  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  

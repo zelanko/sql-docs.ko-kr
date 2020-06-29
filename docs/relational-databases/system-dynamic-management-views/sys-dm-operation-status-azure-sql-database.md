@@ -19,12 +19,12 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 9464a28505707abe602decabd00cde58a02d1feb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6b0894c29e1c3cb525cd9378c0a95e56299e8a1e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833763"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440710"
 ---
 # <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status(Azure SQL Database)
 
@@ -32,7 +32,7 @@ ms.locfileid: "82833763"
 
   [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 서버의 데이터베이스에 대해 수행된 작업 정보를 반환합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |session_activity_id|**uniqueidentifier**|작업의 ID입니다. Null이 아닙니다.|  
 |resource_type|**int**|작업이 수행된 리소스의 유형을 나타냅니다. Null이 아닙니다. 현재 릴리스에서 이 뷰는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 수행된 작업을 추적하며 해당 정수 값은 0입니다.|  
@@ -73,7 +73,9 @@ ms.locfileid: "82833763"
 -   대화 상자의  
   
 -   데이터베이스 삭제  
-  
+
+이 보기의 정보는 약 1 시간 동안 보존 됩니다. 최근 90 일 동안의 작업 세부 정보를 보려면 [Azure 활동 로그](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log) 를 사용 하세요. 90 일 넘게 보존 하려면 Log Analytics 작업 영역에 [활동 로그](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace) 항목을 전송 하는 것이 좋습니다.
+
 ## <a name="example"></a>예제  
  데이터베이스 ' mydb '와 연결 된 최근 지역 복제 작업을 표시 합니다.  
   

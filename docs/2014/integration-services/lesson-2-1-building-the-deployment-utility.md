@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c8c0cc7df39c8b5bac3ff216aa3d61975c707207
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4a8782742ebc287e4f7ac9112387b084fb0e3dfd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966093"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440640"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>1단계: 배포 유틸리티 빌드
   이 태스크에서는 Deployment Tutorial 프로젝트를 위한 배포 유틸리티를 구성 및 작성합니다.  
