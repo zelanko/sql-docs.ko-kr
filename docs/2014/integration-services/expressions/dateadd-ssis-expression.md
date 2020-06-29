@@ -11,14 +11,14 @@ helpviewer_keywords:
 - dates [Integration Services]
 - DATEADD function
 ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8eb32407c6e8fdd79593e7710a2bf1e332f5e4a9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a9200a63f30ca485e56ca4453c781e6565d3c289
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966673"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428950"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD(SSIS 식)
   날짜에서 지정한 날짜 부분에 날짜 또는 시간 간격을 나타내는 숫자를 더한 후 새로운 DT_DBTIMESTAMP 값을 반환합니다. 숫자 매개 변수는 정수로 계산되고 날짜 매개 변수는 유효한 날짜여야 합니다.  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - '& (bitwise AND)'
 - bitwise AND (&)
 ms.assetid: 06d2958e-66a5-44d8-8bc4-56209ebe1ff2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 016144ec2df56d7c620b3e16f275e97882eb6137
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 409b5413c93cce0f58ecf1d6004d943b3a8d298f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966683"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429160"
 ---
 # <a name="amp-bitwise-and-ssis-expression"></a>&amp; (비트 AND)(SSIS 식)
   두 정수 값의 비트 AND 연산을 수행합니다. 그런 후 첫 번째 피연산자의 각 비트를 두 번째 피연산자의 해당 비트와 비교합니다. 두 비트가 모두 1이면 해당 결과 비트가 1로 설정되고, 그렇지 않으면 해당 결과 비트가 0으로 설정됩니다.  

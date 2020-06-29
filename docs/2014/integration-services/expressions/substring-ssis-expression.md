@@ -10,14 +10,14 @@ helpviewer_keywords:
 - SUBSTRING function
 - part of expression returned [Integration Services]
 ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5c1618bb188a893ffb43eaae36f22ea17a615659
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0f69a2fcfaca55b77d828ece6cd5309c2ebc08f2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969033"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428080"
 ---
 # <a name="substring-ssis-expression"></a>SUBSTRING(SSIS 식)
   문자 식에서 지정된 위치부터 시작하여 지정된 길이만큼 반환합니다. *position* 매개 변수와 *length* 매개 변수는 정수여야 합니다.  

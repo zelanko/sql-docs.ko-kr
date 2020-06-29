@@ -10,14 +10,14 @@ helpviewer_keywords:
 - replacing string expression
 - REPLACE function
 ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cf3885a6efc1e93e3f42a16fde0469e3c0c0ca43
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f052e6aadcbd7bc2ed8f81e61a66c7cbb629c54a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969103"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428290"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE(SSIS 식)
   식 내의 문자열을 다른 문자열이나 빈 문자열로 바꾼 후 문자 식을 반환합니다.  

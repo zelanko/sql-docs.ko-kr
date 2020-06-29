@@ -9,14 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - custom objects [Integration Services]
 ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 044d4bcb17144b4fcb6e233b1aadec84e20f2876
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7e3af4d446e33dcfa251020778c047bcfac71a05
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966623"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427940"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>사용자 지정 개체 빌드, 배포 및 디버깅
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 사용자 지정 개체에 대한 코드를 작성한 후에는 어셈블리를 빌드하여 배포하고 패키지에서 사용할 수 있도록 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에 통합한 다음 테스트 및 디버깅을 수행해야 합니다.
@@ -81,8 +81,8 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 
 |사용자 지정 개체|배포 폴더|
 |-------------------|-----------------------|
-|작업|작업|
-|ODBC 대상 편집기|Connections|
+|Task|작업|
+|ODBC 대상 편집기|연결|
 |로그 공급자|LogProviders|
 |데이터 흐름 구성 요소|PipelineComponents|
 

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data types [Integration Services], expressions
 - data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d94df6a59043bee136b0dc42ad8fb013c6c77456
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6d878306f095725c459a8d45ae8482d5f73e5f30
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967483"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429080"
 ---
 # <a name="cast-ssis-expression"></a>캐스트(SSIS 식)
   식의 데이터 형식을 다른 데이터 형식으로 명시적으로 변환합니다. 캐스트 연산자는 잘라내기 연산자로 실행될 수도 있습니다.

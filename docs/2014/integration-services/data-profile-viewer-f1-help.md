@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], viewer
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 88ad528bfe581639dfa7e5dde35a7b53278b44b7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d541e0c6143c9652629f80d911bf42db26e9a4ef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951837"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429720"
 ---
 # <a name="data-profile-viewer-f1-help"></a>데이터 프로필 뷰어 F1 도움말
   데이터 프로필 뷰어를 사용하여 데이터 프로파일링 태스크의 출력을 볼 수 있습니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "84951837"
  **Count**  
  프로파일링된 열의 값에 **길이** 열에 표시된 길이가 지정된 행 수를 표시합니다.  
   
- **나타낸**  
+ **백분율**  
  프로파일링된 열의 값에 **길이** 열에 표시된 길이가 지정된 행의 비율을 표시합니다.  
   
 ### <a name="profile-type--column-null-ratio-profile"></a>프로필 유형 = 열 Null 비율 프로필  
@@ -93,7 +93,7 @@ ms.locfileid: "84951837"
  **패턴**  
  프로파일링된 열에 대해 계산된 패턴을 표시합니다.  
   
- **나타낸**  
+ **백분율**  
  값이 **패턴** 열에 표시된 패턴과 일치하는 행의 비율을 표시합니다.  
   
 ### <a name="profile-type--column-statistics-profile"></a>프로필 유형 = 열 통계 프로필  
@@ -127,7 +127,7 @@ ms.locfileid: "84951837"
  **Count**  
  프로파일링된 열에 **값** 열에 표시된 값이 있는 행 수를 표시합니다.  
   
- **나타낸**  
+ **백분율**  
  프로파일링된 열에 **값** 열에 표시된 값이 있는 행의 비율을 표시합니다.  
   
 ### <a name="profile-type--candidate-key-profile"></a>프로필 유형 = 후보 키 프로필  

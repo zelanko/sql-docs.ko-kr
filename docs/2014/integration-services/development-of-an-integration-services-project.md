@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQL Server Integration Services projects, creating
 - SSIS projects, creating
 ms.assetid: 6e90b016-36a5-415e-9440-a20199fffff0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 16377c286a870c311486f5c128b5eddc058f07f7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: da648b3b09b25fa2a7b1cf886ad1bf770296f5ef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967003"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429580"
 ---
 # <a name="development-of-an-integration-services-project"></a>Integration Services 프로젝트 배포
   프로젝트에 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 추가할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만들고 사용하려면 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 환경을 설치해야 합니다. 자세한 내용은 [Integration Services 설치](install-windows/install-integration-services.md)를 참조하세요.  

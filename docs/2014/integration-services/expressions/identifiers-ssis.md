@@ -17,14 +17,14 @@ helpviewer_keywords:
 - expressions [Integration Services], identifiers
 - qualified identifiers [Integration Services]
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 51d9b0bd0a971f94c4eeba91dd4b009d57ccb47c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e09d338f7f8e29f5b499a64f9f84e042b1fd1234
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969360"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428600"
 ---
 # <a name="identifiers-ssis"></a>식별자(SSIS)
   식에서 식별자는 연산에 사용할 수 있는 열과 변수입니다. 식은 일반 식별자와 정규화된 식별자를 사용할 수 있습니다.  

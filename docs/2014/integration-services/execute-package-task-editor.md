@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.dts.designer.executepackagetask.package.f1
 - sql12.dts.designer.executepackagetask.general.f1
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b9e114802c6e69467ba9438ee4c525ef85e73024
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 337b261c8c6b51125510ae463a673c746d7d6604
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966843"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429290"
 ---
 # <a name="execute-package-task-editor"></a>패키지 실행 태스크 편집기
   패키지 실행 태스크 편집기로 패키지 실행 태스크를 구성합니다. 패키지 실행 태스크는 패키지가 다른 패키지를 워크플로의 일부로 실행할 수 있도록 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 엔터프라이즈 기능을 확장했습니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "84966843"
  **위치**  
  자식 패키지의 위치를 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**SQL Server**|위치를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스로 설정합니다.|  
 |**파일 시스템**|파일 시스템에 위치를 설정합니다.|  

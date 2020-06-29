@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Execute Process Task Editor
 ms.assetid: 39651a0a-3a83-40f4-b8eb-b8b869607a94
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9f742ac646b51a7eed6d5a1cab2877fb4802be59
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9f32c85421eed59441d80d0009d4cfe237819cbd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966803"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429170"
 ---
 # <a name="execute-process-task-editor-general-page"></a>프로세스 실행 태스크 편집기(일반 페이지)
   **프로세스 실행 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 프로세스 실행 태스크를 명명 및 설명할 수 있습니다.  

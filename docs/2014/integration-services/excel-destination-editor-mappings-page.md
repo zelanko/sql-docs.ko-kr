@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: ad44268b-d705-422c-a0c2-d532812502e1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b10711f9c1940bc4cc307cb64a78227746863287
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0f8b5cdc7a800c4702d18e709a8ecb354b8ab9a8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966836"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429330"
 ---
 # <a name="excel-destination-editor-mappings-page"></a>Excel 대상 편집기(매핑 페이지)
   **Excel 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  

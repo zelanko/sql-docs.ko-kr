@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6f1f5983048c1301e210c2ac64e0a092898f31e0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 74e252782a40039e4d5709fabc4ae6ecd7a37932
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966813"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429270"
 ---
 # <a name="excel-source-editor-error-output-page"></a>Excel 원본 편집기(오류 출력 페이지)
   **Excel 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택하고 오류 출력 열에 속성을 설정할 수 있습니다.  

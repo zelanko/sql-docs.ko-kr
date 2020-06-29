@@ -14,14 +14,14 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4b691367b8cfbe00c1e383fa3a2fd18e2d545be8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f9b03bd26ea45ca175f173e1626c30c6277359e1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967433"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428960"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>속성 식의 열거 상수
   속성 식에 열거자 멤버 목록의 값이 포함된 경우 식에 멤버 이름 대신 열거자 멤버의 숫자 값을 사용해야 합니다. 예를 들어 식에 `LoggingMode` 속성을 설정한 경우 이름인 Disabled 대신 숫자 값 2를 사용해야 합니다.  

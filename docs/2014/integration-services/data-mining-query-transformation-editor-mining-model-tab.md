@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Transformation Editor
 ms.assetid: 432bba6f-b218-403e-b92c-59ef9f39e4d5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2a994ee7b9e01b310ba9d90c5acf35ba93877c0a
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 062ca99578895b8e8ce30094aead02ece95e1ac0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939113"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429740"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>데이터 마이닝 쿼리 변환 편집기(마이닝 모델 탭)
   **데이터 마이닝 쿼리 변환 편집기** 대화 상자의 **마이닝 모델** 탭을 사용하여 데이터 마이닝 구조 및 해당 마이닝 모델을 선택할 수 있습니다.  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Expressions Page dialog box
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c1aeecb2bc6d4932c9b5fffcc36e29cb75a921bd
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ba4e73ea495456e8f9e452108ab09106a65543ae
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969333"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428720"
 ---
 # <a name="expressions-page"></a>식 페이지
   **식** 페이지를 사용하여 속성 식을 편집하고 **속성 식 편집기** 및 **식 작성기** 대화 상자에 액세스할 수 있습니다.  

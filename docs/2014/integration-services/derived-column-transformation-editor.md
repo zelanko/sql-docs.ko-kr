@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Derived Column Transformation Editor
 ms.assetid: ff73923e-d245-43d8-bf24-af3bdc942e51
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3983e75bdde3379fac48a74a595959af2568a3ab
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0d866559ebb185321b0e30b4f4df1454da4c0a03
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951653"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429560"
 ---
 # <a name="derived-column-transformation-editor"></a>파생 열 변환 편집기
   **파생 열 변환 편집기** 대화 상자를 사용하여 새 열 또는 대체 열을 채우는 식을 만들 수 있습니다.  

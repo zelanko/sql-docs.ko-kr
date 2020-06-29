@@ -12,14 +12,14 @@ helpviewer_keywords:
 - date data types
 - date and time formats for fast parse
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9db752a0910abb1a671e50b3a7a34fd2fd9cff68
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a5f880de91cad3925e43a65e6282319dbb1e57ee
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967013"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429710"
 ---
 # <a name="date-and-time-formats"></a>날짜 및 시간 형식
   빠른 구문 분석에서는 데이터 구문 분석을 위한 신속하고 간단한 루틴을 제공합니다. 빠른 구문 분석에서는 날짜 및 시간 데이터 형식에 대해 다음과 같은 형식이 지원됩니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "84967013"
   
 -   다음 표에 나열된 ISO 8601 형식  
   
-    |형식|Description|  
+    |서식|설명|  
     |------------|-----------------|  
     |YYYYMMDD<br /><br /> YYYY-MM-DD|네 자리 연도, 두 자리 월 및 두 자리 일이 포함된 기본 및 하이픈으로 연결된 형식입니다. 하이픈으로 연결된 형식에서 날짜 부분은 하이픈(-)으로 구분됩니다.|  
     |YYYY-MM|네 자리 연도와 두 자리 연도의 기본 및 하이픈으로 연결된 축약 형식입니다. 하이픈으로 연결된 형식에서 날짜 부분은 하이픈(-)으로 구분됩니다.|  
@@ -62,7 +62,7 @@ ms.locfileid: "84967013"
   
 -   다음 표에 나열된 ISO 8601 시간 형식  
   
-    |형식|Description|  
+    |서식|설명|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|두 자리 시간, 두 자리 분 및 두 자리 초의 기본 및 확장 형식입니다. 확장 형식에서 시간 부분은 콜론(:)으로 구분됩니다.|  
     |HHMI<br /><br /> HH:MI|두 자리 시간과 두 자리 분의 기본 및 확장 잘림 형식입니다. 확장 형식에서 시간 부분은 콜론(:)으로 구분됩니다.|  
@@ -71,7 +71,7 @@ ms.locfileid: "84967013"
   
 -   다음 표에 나열된 표준 시간대를 지정하는 시간 형식  
   
-    |형식|Description|  
+    |서식|설명|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|현지 시간을 얻기 위해 UTC(Coordinated Universal Time)에 더한 시간과 분을 나타내는 기본 및 확장 형식입니다.|  
     |-HH:MI<br /><br /> -HHMI|현지 시간을 얻기 위해 UTC에서 뺀 시간과 분을 나타내는 기본 및 확장 형식입니다.|  
@@ -89,7 +89,7 @@ ms.locfileid: "84967013"
   
 -   다음 표에 나열된 소수 부분을 포함하는 시간 형식  
   
-    |형식|Description|  
+    |서식|설명|  
     |------------|-----------------|  
     |HH[.nnnnnnn]|n은 시간의 소수 부분을 나타내는 0에서 9999999 사이의 값입니다. 대괄호는 이 값이 선택 사항임을 나타냅니다.<br /><br /> 예를 들어 값 12.750은 12:45를 나타냅니다.|  
     |HHMI[.nnnnnnn]<br /><br /> HH:MI[.nnnnnnn]|n은 분의 소수 부분을 나타내는 0에서 9999999 사이의 값입니다. 대괄호는 이 값이 선택 사항임을 나타냅니다.<br /><br /> 예를 들어 값 1220.500은 12:20:30을 나타냅니다.|  

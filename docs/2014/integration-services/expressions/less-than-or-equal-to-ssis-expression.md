@@ -10,14 +10,14 @@ helpviewer_keywords:
 - <= (less than or equal to operator)
 - less than or equal to operator (<=)
 ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a4b4c3cebb104dd57ad95945d2c790e657be0075
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d44a2298a626cd549739d54f4e277755f00f427e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969313"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428400"
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;=(작거나 같음)(SSIS 식)
   첫 번째 식이 두 번째 식보다 작거나 같은지 비교합니다. 식 계산기는 비교를 수행하기 전에 많은 데이터 형식을 자동으로 변환합니다.  
