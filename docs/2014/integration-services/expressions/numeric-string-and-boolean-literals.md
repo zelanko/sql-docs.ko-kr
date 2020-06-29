@@ -14,14 +14,14 @@ helpviewer_keywords:
 - literals [Integration Services]
 - mapping literals [Integration Services]
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 15cea1ab511324cad52ed197f9f612bbedb2b162
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e480e7720fc6515417d28ae7b2d6c46c484f1989
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969173"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437180"
 ---
 # <a name="literals-ssis"></a>리터럴(SSIS)
   식은 숫자, 문자열 및 부울 리터럴을 포함할 수 있습니다. 식 계산기는 정수, 10진수 및 부동 소수점 상수와 같은 다양한 숫자 리터럴을 지원합니다. 또한 식 계산기의 값 처리 방법을 지정하는 long 및 float 접미사와 숫자 리터럴의 과학적 표기법을 지원합니다.  
@@ -96,12 +96,12 @@ ms.locfileid: "84969173"
   
  이스케이프 시퀀스가 필요한 다른 문자가 문자열에 포함될 수 있습니다. 다음 표에서는 문자열 리터럴의 이스케이프 시퀀스를 보여 줍니다.  
   
-|이스케이프 시퀀스|Description|  
+|이스케이프 시퀀스|설명|  
 |---------------------|-----------------|  
 |\a|경고|  
 |\b|백스페이스|  
 |\f|폼 피드|  
-|\n|줄 바꿈|  
+|\n|새 줄|  
 |\r|캐리지 리턴|  
 |\t|가로 탭|  
 |\v|세로 탭|  

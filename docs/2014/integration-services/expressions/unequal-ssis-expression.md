@@ -10,14 +10,14 @@ helpviewer_keywords:
 - unequal operator (!=)
 - '!= (not equal to)'
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f4587524468a2ebd42fb207a888b8691890c7f11
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b70350ab2214b16c3fc9f531dd541b0a7fa2c966
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966563"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437050"
 ---
 # <a name="-unequal-ssis-expression"></a>!=(같지 않음)(SSIS 식)
   호환 가능한 데이터 형식의 두 식이 같지 않은지 비교합니다. 식 계산기는 비교를 수행하기 전에 많은 데이터 형식을 자동으로 변환합니다.  

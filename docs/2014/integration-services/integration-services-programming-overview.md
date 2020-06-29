@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data flow engine [Integration Services]
 - languages [Integration Services]
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 21459ff6295fce745a380dfb25650d9bbd971de8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5a0f7c24eb26cfcf7b834be52b765ce8d31a0a0e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965453"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436570"
 ---
 # <a name="integration-services-programming-overview"></a>Integration Services 프로그래밍 개요
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 데이터 이동 및 변환을 패키지 제어 흐름 및 관리와 분리하는 아키텍처가 있습니다. 또한 이 아키텍처를 정의하며 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 프로그래밍할 때 자동화하고 확장할 수 있는 두 가지 엔진이 있습니다. 런타임 엔진은 개발자가 실행 흐름을 제어하고 로깅, 이벤트 처리기 및 변수에 대한 옵션을 설정할 수 있게 해 주는 제어 흐름 및 패키지 관리 인프라를 구현합니다. 데이터 흐름 엔진은 데이터 추출, 변환 및 로드에만 사용되는 특수한 고성능 엔진입니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 프로그래밍할 때 실제 프로그래밍 작업은 이러한 두 엔진에 대해 수행됩니다.  

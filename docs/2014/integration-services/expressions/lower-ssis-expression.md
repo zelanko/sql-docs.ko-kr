@@ -12,14 +12,14 @@ helpviewer_keywords:
 - uppercase characters [Integration Services]
 - lowercase characters
 ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 398d666488fb3d212c78e0bb0a1778180eaec3c6
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 55474bb9c52acea8c6c3fe091874f46f4e7c61de
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969233"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437250"
 ---
 # <a name="lower-ssis-expression"></a>LOWER(SSIS 식)
   대문자를 소문자로 변환한 후에 문자 식을 반환합니다.  

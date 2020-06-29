@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - HTTP Connection Manager Editor
 ms.assetid: e831a830-49a3-49c5-8a31-9731fc4fd12e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6f5fa616116b4a6842143b6950905de4b8db0063
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 71880421f9f692c3d2c33aa6439e409c84851293
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968343"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436920"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>HTTP 연결 관리자 편집기(프록시 페이지)
   **HTTP 연결 관리자 편집기** 대화 상자의 **프록시** 탭을 사용하여 프록시 서버를 사용하도록 HTTP 연결 관리자를 구성할 수 있습니다. HTTP 연결을 사용하면 패키지에서 HTTP를 통해 웹 서버에 액세스하고 파일을 보내거나 받을 수 있습니다.  

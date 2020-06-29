@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8a2ab8f20002188684b09fbd574b1cfe5e26feba
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f167e52d6ee3c1111058a098c2fbd219999c0f10
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922304"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435260"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC Designer 콘솔 소개
   이 섹션에서는 Attunity Oracle CDC Designer 설치 절차에 대해 설명합니다.  

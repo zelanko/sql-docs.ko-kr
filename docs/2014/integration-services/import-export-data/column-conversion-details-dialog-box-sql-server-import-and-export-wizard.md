@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.issuedetails.f1
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dd4e53a1e6485d74ba2aff4039108b357d9c0c92
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9207e76191060c56acad37db734827579a83aae0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966237"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436830"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>열 변환 정보 대화 상자(SQL Server 가져오기 및 내보내기 마법사)
   **열 변환 정보** 대화 상자를 사용 하 여 개별 열에 대 한 자세한 변환 정보를 검토할 수 있습니다. 이 변환 정보에는 원본 및 대상의 열 데이터 형식과 마법사에서 수행할 변환이 포함됩니다. 또한 이 페이지에는 필요한 데이터 형식 변환을 결정하기 위해 마법사에서 사용하는 데이터 형식 매핑 파일이 나열됩니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]가 설치되는 동안 이러한 데이터 형식 매핑 파일이 설치됩니다.  

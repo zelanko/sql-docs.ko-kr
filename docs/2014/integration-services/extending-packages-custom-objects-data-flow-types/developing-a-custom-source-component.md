@@ -18,14 +18,14 @@ helpviewer_keywords:
 - custom sources [Integration Services]
 - source components [Integration Services]
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8fe20a8bafae1a9f8dd331d1db5ae16fba5c3ee1
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 65287938d3cdbe45a0853dcd47280f68f0443b3f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968963"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437030"
 ---
 # <a name="developing-a-custom-source-component"></a>사용자 지정 원본 구성 요소 개발
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 개발자가 사용자 지정 데이터 원본에 연결하고 해당 원본의 데이터를 데이터 흐름 태스크의 다른 구성 요소에 제공할 수 있는 원본 구성 요소를 작성할 수 있습니다. 사용자 지정 원본을 만드는 기능은 기존 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 원본 중 하나를 사용하여 액세스할 수 없는 데이터 원본에 연결해야 하는 경우에 유용합니다.

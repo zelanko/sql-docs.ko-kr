@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3ead520cb30cf01f67ac0559b9783b0bd52488ac
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d1c870e23f30c4281367087b514081181a6c1baa
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923017"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435730"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>로컬 CDC Service를 관리하는 방법
   이 절차에서는 CDC Service 구성 콘솔을 사용하여 특정 CDC Service를 관리하는 방법에 대해 설명합니다.  

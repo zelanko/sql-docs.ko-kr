@@ -11,14 +11,14 @@ helpviewer_keywords:
 - TRIM function
 - trailing blanks
 ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: af359074869cddb1e46d732b5136b7f4e41517de
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 756d9bd066f4ecbcb1cfb7e43cec8ca7ea2713a6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968960"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437070"
 ---
 # <a name="trim-ssis-expression"></a>TRIM(SSIS 식)
   선행 및 후행 공백을 제거하고 문자 식을 반환합니다.  

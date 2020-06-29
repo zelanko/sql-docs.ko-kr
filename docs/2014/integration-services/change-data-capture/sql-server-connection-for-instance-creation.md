@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 81d0e7e2-d8f0-4bd9-9565-218ce996f28e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 474212ceeeae896612064ac359c36c2296b3ef5a
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9f71d1c017e2be711690f8c8c4ea59ef8370d277
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922434"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435440"
 ---
 # <a name="sql-server-connection-for-instance-creation"></a>인스턴스를 만들기 위한 SQL Server 연결
   Oracle CDC 인스턴스를 만드는 첫 번째 단계 중 하나는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 CDC 데이터베이스를 만드는 것입니다. 이 CDC 데이터베이스가 SQL Server CDC에 사용되며 이를 위해서는 `sysadmin` 고정 서버 역할의 멤버인 로그인이 필요합니다.  

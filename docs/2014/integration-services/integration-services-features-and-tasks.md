@@ -10,14 +10,14 @@ helpviewer_keywords:
 - development [Integration Services]
 - Integration Services, programming
 ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5ab35cd849d020a265fac097f2a0314a81c20dd8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 70747bd224d58379696ed81ff751f1969e14220f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965444"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436460"
 ---
 # <a name="integration-services-features-and-tasks"></a>Integration Services 기능 및 태스크
   디자이너, 개발자, 분석가 또는 관리자가 패키지를 만들고 개발 하는 데 필요한 정보를 찾아 볼 수 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 있습니다. 그런 다음 이러한 패키지를 애플리케이션 및 웹 사이트에 통합하는 방법에 대해 설명합니다.  

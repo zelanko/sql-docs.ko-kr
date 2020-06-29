@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Property Expressions Editor dialog box
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b87040080e6aa88690d1368ab54e8dbcc8cae0df
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4f6aa4baeb6252c3f57400cfaf94604f6ac1fefd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969113"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437140"
 ---
 # <a name="property-expressions-editor"></a>속성 식 편집기
   **속성 식 편집기** 대화 상자를 사용하여 속성 값을 업데이트하는 속성 식을 생성, 편집 또는 삭제할 수 있습니다.  

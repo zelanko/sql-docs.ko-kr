@@ -15,14 +15,14 @@ helpviewer_keywords:
 - SQL Server Integration Services, studio environments
 - tools [Integration Services], SQL Server Management Studio
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ef53f08f457d9122b1ab965d0269717379779335
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 65ee6741020d9d67f9b87ecea92022f47e6adc50
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965433"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436540"
 ---
 # <a name="integration-services-ssis-and-studio-environments"></a>Integration Services(SSIS) 및 Studio 환경
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 사용할 수 있는 두 가지 Studio가 있습니다.  

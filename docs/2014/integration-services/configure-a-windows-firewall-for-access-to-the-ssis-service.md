@@ -15,14 +15,14 @@ helpviewer_keywords:
 - SQL Server Integration Services, firewalls
 - SSIS, firewalls
 ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0af4510e50a1cb8bcf87ac9a9ceacb1ee3c4affc
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: af43443b110be4d30d748aa3ce409e5167ce0371
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921964"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434970"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>SSIS 서비스 액세스에 대한 Windows 방화벽 구성
     

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Character Map Transformation Editor
 ms.assetid: 3f1dbcf9-9cca-4606-bdcc-7ea6ad48cdf3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6d769112c95b88becfd1ec9bfbe7beabd0130cdd
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5f74855074ac4d362c1505a0e3a4ebff416ed4b5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922107"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435080"
 ---
 # <a name="character-map-transformation-editor"></a>문자표 변환 편집기
   **문자표 변환 편집기** 대화 상자를 사용하여 열 데이터에 적용할 문자열 함수를 선택하고 매핑이 내부 변경인지, 아니면 새 열로 추가되었는지를 지정할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "84922107"
  **대상**  
  문자열 작업 결과를 기존 열을 사용하여 내부에 저장할지, 아니면 수정된 데이터를 새 열로 저장할지를 지정합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |새 열|새 열에 데이터를 저장합니다. **출력 별칭**의 열 이름을 할당합니다.|  
 |내부 변경|수정된 데이터를 기존 열에 저장합니다.|  
@@ -43,7 +43,7 @@ ms.locfileid: "84922107"
  **연산**  
  열 데이터에 적용할 문자열 함수를 목록에서 선택합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |소문자|소문자로 변환합니다.|  
 |대문자|대문자로 변환합니다.|  

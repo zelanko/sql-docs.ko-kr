@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - signing policies [Integration Services]
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 776a8319750721f3b489df1a3a4466c7dc36f15e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 95a812cf5c5faa7e367d4e39a8edac8d7bab89de
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968323"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436900"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>레지스트리 값을 설정하여 서명 정책 구현
   선택적 레지스트리 값을 사용하여 서명된 패키지나 서명되지 않은 패키지를 로드하기 위한 조직의 정책을 관리할 수 있습니다. 이 레지스트리 값을 사용하면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 실행하고 정책을 적용할 각 컴퓨터에 이 레지스트리 값을 만들어야 합니다. 레지스트리 값이 설정된 후 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 패키지를 로드하기 전에 서명을 확인합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "84968323"
   
  다음 표에서는 DWORD 데이터의 유효한 값 및 연관된 정책을 나열합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0|관리 제한이 없습니다.|  
 |1|잘못된 서명을 차단합니다.<br /><br /> 이 설정은 서명되지 않은 패키지를 차단하지 않습니다.|  

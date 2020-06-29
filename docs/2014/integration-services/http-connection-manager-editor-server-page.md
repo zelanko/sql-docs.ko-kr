@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - HTTP Connection Manager Editor
 ms.assetid: 774778a0-ece6-4971-b93f-b121d8fc1fc1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3694eeb93e9edbc053a8534841a1edf438489ca9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ab0e8bfe2d0cda5ded11566023406b73ed7058c4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968333"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436890"
 ---
 # <a name="http-connection-manager-editor-server-page"></a>HTTP 연결 관리자 편집기(서버 페이지)
   **HTTP 연결 관리자 편집기** 대화 상자의 **서버** 탭에서 URL이나 보안 자격 증명 등의 속성을 지정하여 HTTP 연결 관리자를 구성할 수 있습니다. HTTP 연결을 사용하면 패키지에서 HTTP를 통해 웹 서버에 액세스하고 파일을 보내거나 받을 수 있습니다. HTTP 연결 관리자를 구성했으면 연결을 테스트할 수도 있습니다.  

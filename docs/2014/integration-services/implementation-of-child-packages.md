@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - child packages
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7390434b1565c64b63e62c89d1e61b13f18cd6a6
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4a297324e5f51b3464fbf9e08568823e520a06bf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965713"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436930"
 ---
 # <a name="implementation-of-child-packages"></a>자식 패키지 구현
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 사용하여 로그 균형 조정을 구현하면 사용 가능한 CPU 또는 서버 시간을 사용할 다른 서버에 자식 패키지가 설치됩니다. 자식 패키지를 만들고 실행하려면 다음 단계를 수행하십시오.  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 80126a2f1955356ae451e2f1092869e962674689
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 70b9c14d609f2db69ee5751eca18acb5262a07a1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922494"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435430"
 ---
 # <a name="specify-an-interval-of-change-data"></a>변경 데이터의 간격 지정
   변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 제어 흐름에서 첫 번째 태스크는 변경 간격의 엔드포인트를 계산하는 것입니다. 이러한 엔드포인트는 `datetime` 값이며 패키지에서 나중에 사용하기 위해 패키지 변수에 저장됩니다.  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Conditional Split Transformation Editor
 ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fa63a9f16507df8f0966d19323b2e110b7c84fcc
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 405d20ce5711f3e3378b0037b6d4c1f753a8f09c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921994"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434920"
 ---
 # <a name="conditional-split-transformation-editor"></a>조건부 분할 변환 편집기
   **조건부 분할 변환 편집기** 대화 상자를 사용하여 식을 만들고, 식을 평가하는 순서를 설정하고, 조건부 분할 출력의 이름을 지정할 수 있습니다. 이 대화 상자에는 식을 작성할 때 사용할 수 있는 수치 연산, 문자열 및 날짜/시간 함수와 연산자가 포함되어 있습니다. True로 평가하는 첫 번째 조건에 따라 행을 전송할 출력이 결정됩니다.  

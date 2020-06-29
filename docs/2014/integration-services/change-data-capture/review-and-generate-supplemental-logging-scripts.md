@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - scripts
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f47cd8f5d57d8a1e3a12c9d1b73c2e2815366629
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 56ef2f097a5a23edbaab4e64d73b78988db8d9cf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922524"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435470"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>보완 로깅 스크립트 검토 및 생성
   **스크립트** 탭을 사용하여 보완 로깅을 설정하는 Oracle 원본 데이터베이스에서 스크립트를 실행하거나 다시 실행할 수 있습니다.  

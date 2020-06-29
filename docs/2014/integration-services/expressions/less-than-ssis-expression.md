@@ -10,14 +10,14 @@ helpviewer_keywords:
 - less than (<)
 - < (less than operator)
 ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d95a6a5fd8646ea44db80c4dbefe9da14b9daf34
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b0cfbc8653507e56c630b62a1fdbce616e0b2bd9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969303"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437270"
 ---
 # <a name="lt-less-than-ssis-expression"></a>&lt;(보다 작음)(SSIS 식)
   첫 번째 식이 두 번째 식보다 작은지 비교합니다. 식 계산기는 비교를 수행하기 전에 많은 데이터 형식을 자동으로 변환합니다.  

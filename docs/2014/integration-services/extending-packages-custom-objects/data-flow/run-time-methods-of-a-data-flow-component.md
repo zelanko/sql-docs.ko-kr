@@ -13,14 +13,14 @@ helpviewer_keywords:
 - run-time [Integration Services]
 - data flow components [Integration Services], run-time methods
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 656acd0802eb08e7b32c2d6b4dbee2129682d298
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b7c5e6a413a2bcf647752d2a1ad4c4f77ac3560b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968843"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436950"
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>데이터 흐름 구성 요소의 런타임 메서드
   런타임에 데이터 흐름 태스크에서는 구성 요소의 시퀀스를 검사하고, 실행 계획을 준비하고, 작업 계획을 실행하는 작업자 스레드의 풀을 관리합니다. 또한 원본에서 데이터 행을 로드하고 이를 변환을 통해 처리한 다음 대상에 저장합니다.  

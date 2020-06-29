@@ -10,14 +10,14 @@ helpviewer_keywords:
 - '- (negative)'
 - negative operator (-)
 ms.assetid: f0118dfc-aced-4de2-953e-5ebf9c962b8d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ac803cb797644d47c6bc5ee4fcee99e14ba88a4c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bd4c13677b1c4b7e0a788b3459e8f658e25c2c6c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969193"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437200"
 ---
 # <a name="--negate-ssis-expression"></a>-(부정)(SSIS 식)
   숫자 식을 부정합니다.  

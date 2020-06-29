@@ -15,14 +15,14 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 42dd04f4edf2d1e9b9b31b11ab96fcd97f9d21d6
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a3565f98786b02eaeacb1140e34f862102ca2463
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966183"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436270"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services(SSIS) 변수
   변수에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지와 해당 컨테이너, 태스크 및 이벤트 처리기가 런타임에 사용할 수 있는 값이 저장됩니다. 스크립트 태스크와 스크립트 구성 요소의 스크립트에서도 변수가 사용될 수 있습니다. 태스크 및 컨테이너의 순서를 워크플로에 지정하는 선행 제약 조건에서는 해당 제약 조건 정의에 식이 포함된 경우에 변수가 사용될 수 있습니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "84966183"
 > [!NOTE]  
 >  시스템 변수에서 구성할 수 있는 유일한 옵션은 값이 변경될 때 이벤트를 발생시키는지 여부를 지정하는 것입니다.  
   
- Description  
+ 설명  
  변수에 대한 설명을 지정합니다.  
   
  EvaluateAsExpression  
@@ -90,7 +90,7 @@ ms.locfileid: "84966183"
  식  
  변수에 할당되는 식을 지정합니다.  
   
- 속성  
+ 이름  
  변수 이름을 지정합니다.  
   
  네임스페이스  
@@ -102,7 +102,7 @@ ms.locfileid: "84966183"
  ReadOnly  
  이 속성을 `False`로 설정하면 변수는 읽기/쓰기 변수입니다.  
   
- 범위  
+ Scope  
  > [!NOTE]  
 >  이 속성 설정은 **변수** 창에서 **변수 이동** 을 클릭한 경우에만 변경할 수 있습니다.  
   

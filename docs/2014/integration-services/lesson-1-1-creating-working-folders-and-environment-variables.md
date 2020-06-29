@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 25700bfb9e2cd28fd18efe59a2df4e68f468d39b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 27ce934ae2ad13c55a331fd03f76cccd6f4a5c4d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965364"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436200"
 ---
 # <a name="step-1-creating-working-folders-and-environment-variables"></a>1단계: 작업 폴더 및 환경 변수 만들기
   이 태스크에서는 이후의 자습서 태스크에서 사용할 작업 폴더(C:\DeploymentTutorial)와 새 시스템 환경 변수(`DataTransfer` 및 `LoadXMLData`)를 만듭니다.  

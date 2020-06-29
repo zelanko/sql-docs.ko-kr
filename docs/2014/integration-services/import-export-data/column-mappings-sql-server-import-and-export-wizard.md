@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.columnmapandtransform.f1
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1f3266bbbc100af3eac03bc18805c82b753d7aa7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c1d381ec773499fdcf018375c7a51740880d3d9b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965636"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436790"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>열 매핑(SQL Server 가져오기 및 내보내기 마법사)
   **열 매핑** 대화 상자를 사용 하 여 변환 매개 변수를 편집할 수 있습니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "84965636"
  **대상**  
  복사 작업 중에 특정 열을 무시할지 여부를 지정합니다. **\<ignore>** 건너 뛰 려는 열에 대해이 열에서를 선택 하 여 열의 하위 집합만 복사할 수 있습니다. 열을 매핑하기 전에 매핑하지 않을 열은 모두 무시해야 합니다.  
   
- **형식**  
+ **Type**  
  열에 대한 데이터 형식을 선택합니다.  
   
  **Null 허용**  

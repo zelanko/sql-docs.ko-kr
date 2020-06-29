@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data flow components [Integration Services], execution plans
 - execution plans [Integration Services]
 ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0159c05b641cf234e2d8fdc6cd8c56bddb6a1054
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e64e7ca1680c8219168e447fec8dde41aa577ba5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968873"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436970"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>실행 계획 및 버퍼 할당
   실행 전에 데이터 흐름 태스크에서는 구성 요소를 검사하고 각 구성 요소 시퀀스에 대한 실행 계획을 생성합니다. 이 섹션에서는 실행 계획, 실행 계획을 보는 방법 및 실행 계획에 따라 입력 및 출력 버퍼가 할당되는 방식에 대해 자세히 설명합니다.  

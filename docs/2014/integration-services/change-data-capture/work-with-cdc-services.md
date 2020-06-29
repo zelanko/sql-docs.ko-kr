@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - cdcServ
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c794a2823474f5b4f3f3f8d4cb522f9dbe85e7f6
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 273784e4246b02780784f8467389b347fbb83abb
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922184"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435180"
 ---
 # <a name="work-with-cdc-services"></a>CDC Service 작업
   CDC Service 구성 콘솔을 사용하여 새 CDC Service를 만들고 CDC를 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 준비할 수 있습니다.  

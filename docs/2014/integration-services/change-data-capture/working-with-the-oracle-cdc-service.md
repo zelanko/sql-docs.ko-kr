@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cb8b61bf8cfa9a2b26646df19810a94705a30d14
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 92e3b83a4d580859132c2dc31e841046155dcd5a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922154"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435240"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Oracle CDC Service 작업
   이 섹션에서는 Oracle CDC Service의 몇 가지 중요한 개념에 대해 설명합니다. 이 섹션에서 설명하는 개념은 다음과 같습니다.  

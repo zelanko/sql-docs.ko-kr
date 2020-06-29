@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3a7d54586a8a2d0b60a65288b4a90947862692d5
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 01d572424691ae14b8c75fa594327eef3fbd9504
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921704"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434900"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Integration Services 서비스를 클러스터 리소스로 구성
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스를 클러스터 리소스로 구성할 때 얻는 장점이 단점보다 많다고 생각하는 사용자를 위해 이 섹션에서는 필요한 구성 방법을 설명합니다. 그러나 [!INCLUDE[msCoName](../includes/msconame-md.md)] 서비스를 클러스터 리소스로 구성하지 않는 것이 좋습니다( [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 권장).  

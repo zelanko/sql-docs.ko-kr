@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadestination.f1
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 50c9419911f83c98fba5baf0f995ffbeafb916ad
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8c47c5596d5674adf56105cffd7617a2e3436bc8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965653"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436840"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>대상 선택(SQL Server 가져오기 및 내보내기 마법사)
   **대상 선택** 페이지를 사용하여 복사할 데이터의 대상을 지정할 수 있습니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "84965653"
  **찾아보기**  
  **열기** 대화 상자를 사용하여 파일을 찾습니다.  
   
- **Locale**  
+ **로캘**  
  문자 정렬 순서와 날짜 및 시간 형식을 정의하는 로캘 ID(LCID)를 지정합니다.  
   
  **유니코드**  
@@ -81,7 +81,7 @@ ms.locfileid: "84965653"
  **Format**  
  구분 기호로 분리됨, 고정 폭, 왼쪽 정렬 중 어떤 서식을 사용할지를 지정합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |구분됨|**열** 페이지에 지정된 구분 기호로 열을 구분합니다.|  
 |고정 폭|열에 고정 폭이 지정됩니다.|  

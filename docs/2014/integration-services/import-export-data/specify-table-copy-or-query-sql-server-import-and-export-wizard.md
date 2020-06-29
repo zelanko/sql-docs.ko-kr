@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.specifytablecopyorquery.f1
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 51f195a9f5fbe97eadfc281ad50bd0de55d6151e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 784bd4649fb2169c78f38414c6c400e34582aa99
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965533"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436730"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>테이블 복사 또는 쿼리 지정(SQL Server 가져오기 및 내보내기 마법사)
   **테이블 복사 또는 쿼리 지정** 페이지를 사용 하 여 데이터를 복사 하는 방법을 지정할 수 있습니다. 그래픽 인터페이스를 사용하여 복사할 기존 데이터베이스 개체를 선택하거나 Transact-SQL을 사용하여 복잡한 쿼리를 만들 수 있습니다.  

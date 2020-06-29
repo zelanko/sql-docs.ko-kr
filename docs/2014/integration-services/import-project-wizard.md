@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.importprojectwizard.f1
 ms.assetid: 9247ad6c-4bd1-43ab-b347-583181cb9917
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ec71ccf6434cd892be7c44fd4957099965dff6de
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8b9f20115010f2ad51159f29a4b64da195938969
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965483"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436650"
 ---
 # <a name="import-project-wizard"></a>프로젝트 가져오기 마법사
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트 가져오기 마법사를 사용하여 기존 항목에 따라 새 Integration Services 프로젝트를 만듭니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 카탈로그에 이미 배포된 프로젝트를 가져오거나 프로젝트 배포 파일(확장명 .ispac)에서 프로젝트를 가져옵니다.  

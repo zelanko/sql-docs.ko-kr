@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e82378cd044c40abb4b8519a0c6d60bb906e3f23
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 026b39f9cd3ad330c2b33c5b607cce86b6b9ada2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922654"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435540"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>변경 데이터에 대한 쿼리 준비
   변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 제어 흐름에서 세 번째이자 마지막 태스크는 변경 데이터 쿼리를 준비하고 데이터 흐름 태스크를 추가하는 것입니다.  

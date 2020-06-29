@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadatasource.f1
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4298cfec7478560c2cef01e7d3c6df577a2a8f16
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 18b97b67590bfff4f01e5dff332722a3aba1cf7e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966273"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436880"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>데이터 원본 선택(SQL Server 가져오기 및 내보내기 마법사)
   **데이터 원본 선택** 페이지를 사용 하 여 복사할 데이터의 원본을 지정할 수 있습니다.  
