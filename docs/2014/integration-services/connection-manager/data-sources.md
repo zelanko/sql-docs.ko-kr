@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Integration Services], about data sources
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 46d1f79079efd5b4816359cb97a14642f309cfbb
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fe18c331a1fe1786392f94fa2a3d2623ce13d0bb
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921044"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434350"
 ---
 # <a name="data-sources"></a>Data Sources
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에는 패키지에 사용할 수 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 데이터 원본에 사용할 수 있는 디자인 타임 개체가 포함 되어 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  

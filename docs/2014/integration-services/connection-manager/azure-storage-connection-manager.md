@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.dts.designer.afpstorageconn.f1
 - sql11.dts.designer.afpstorageconn.f1
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c6b6c86aa3f76088ff3cb0e36a1a111b325944ea
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 47580d8d1d961df9fbcbed0bd7164f1c54792b86
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921094"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434330"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure Storage 연결 관리자
   SSIS 패키지는 Azure Storage 연결 관리자를 통해 속성으로 지정된 값(스토리지 계정 이름 및 계정 키)을 사용하여 Azure Storage 계정에 연결할 수 있습니다.  

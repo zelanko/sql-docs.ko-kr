@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.dts.designer.afpsubscrconn.f1
 - sql11.dts.designer.afpsubscrconn.f1
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6c311f79f8495288f918ac57cda009d2a64f12b1
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bff1286525983b32c2191f1f8864a0f2bef0e6b0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921074"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434250"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 구독 연결 관리자
   SSIS 패키지는 Azure HDInsight 연결 관리자를 통해 속성에 대해 지정된 값(Azure 구독 ID 및 관리 인증서)을 사용하여 Azure 구독에 연결할 수 있습니다.

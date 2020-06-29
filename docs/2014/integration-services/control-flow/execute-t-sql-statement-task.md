@@ -13,14 +13,14 @@ helpviewer_keywords:
 - statements [Integration Services]
 - Execute T-SQL Statement task [Integration Services]
 ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3a79cbc796efe01813f7a785e674519524afd4f8
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7ebc73ad843ac7fcf1dfbe7699ecd8ea53edcdad
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919024"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433180"
 ---
 # <a name="execute-t-sql-statement-task"></a>T-SQL 문 실행 태스크
   T-SQL 문 실행 태스크는 Transact-SQL 문을 실행합니다. 자세한 내용은 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](/sql/t-sql/language-reference) 및 [Integration Services&#40;SSIS&#41; 쿼리](../integration-services-ssis-queries.md)를 참조하세요.  

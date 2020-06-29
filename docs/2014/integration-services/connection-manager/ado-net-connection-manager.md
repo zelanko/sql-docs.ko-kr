@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO.NET connection manager [Integration Services]
 - connections [Integration Services], ADO.NET
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 850c8f0f54339594b19debd48ebf4ac7021873d3
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9bdc25eeeae93fe0bd85deb55bfc86c55ab91ee5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921249"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434530"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 연결 관리자
   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 사용하면 패키지에서 .NET 공급자를 사용하여 데이터 원본에 액세스할 수 있습니다. 이 연결 관리자는 일반적으로와 같은 데이터 원본에 액세스 하는 데 사용 되며 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , c #과 같은 언어를 사용 하 여 관리 코드로 작성 된 사용자 지정 작업에서 OLE DB 및 XML을 통해 노출 되는 데이터 원본에도 액세스 합니다.  

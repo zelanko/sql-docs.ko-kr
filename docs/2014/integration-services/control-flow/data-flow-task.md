@@ -15,14 +15,14 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ff5c519fbe9bf8096807962a939677b3a5d58cc5
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7f10a396923fe25e018271fd62d0412c75471c35
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919583"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433650"
 ---
 # <a name="data-flow-task"></a>데이터 흐름 태스크
   데이터 흐름 태스크는 원본과 대상 사이에 데이터를 이동하는 데이터 흐름 엔진을 캡슐화하며, 이를 통해 사용자는 데이터 이동 시 데이터를 변환, 정리 및 수정할 수 있습니다. 데이터 흐름 태스크를 패키지에 추가하면 패키지에서 데이터를 추출, 변환 및 로드할 수 있습니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "84919583"
 ### <a name="sample-messages-from-a-data-flow-task"></a>데이터 흐름 태스크의 예제 메시지  
  다음 표에서는 매우 간단한 패키지의 로그 항목에 대한 예제 메시지를 보여 줍니다. 이 패키지에서는 OLE DB 원본을 사용하여 테이블에서 데이터를 추출하고, 정렬 변환을 사용하여 데이터를 정렬하며, OLE DB 대상을 사용하여 다른 테이블에 데이터를 씁니다.  
   
-|로그 항목|Messages|  
+|로그 항목|메시지|  
 |---------------|--------------|  
 |`BufferSizeTuning`|`Rows in buffer type 0 would cause a buffer size greater than the configured maximum. There will be only 9637 rows in buffers of this type.`<br /><br /> `Rows in buffer type 2 would cause a buffer size greater than the configured maximum. There will be only 9497 rows in buffers of this type.`<br /><br /> `Rows in buffer type 3 would cause a buffer size greater than the configured maximum. There will be only 9497 rows in buffers of this type.`|  
 |`OnPipelinePostEndOfRowset`|`A component will be given the end of rowset signal. : 1180 : Sort : 1181 : Sort Input`<br /><br /> `A component will be given the end of rowset signal. : 1291 : OLE DB Destination : 1304 : OLE DB Destination Input`|  

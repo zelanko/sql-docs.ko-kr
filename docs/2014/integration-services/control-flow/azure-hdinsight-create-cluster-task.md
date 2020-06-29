@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.dts.designer.afpcreatecltask.f1
 - sql11.dts.designer.afpcreatecltask.f1
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 79a49a7029e404e370987e73527ff199e2fd0e34
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a2e0d73034bc131b0cc65d475f00efd4f54612b3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919957"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433920"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight 클러스터 만들기 태스크
 **Azure HDInsight 클러스터 만들기 태스크** 를 사용하면 SSIS 패키지에서 지정된 Azure 구독 및 리소스 그룹에 Azure HDInsight 클러스터를 만들 수 있습니다.

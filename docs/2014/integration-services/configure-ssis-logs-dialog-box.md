@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Configure SSIS Logs dialog box
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6fab2f2e8fad2cd77e5bc27a78e66940fc40544b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0de63b2c4d438faa0dea8b8fdefa5f50d071c7e4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921674"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434810"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>SSIS 로그 구성 대화 상자
   **SSIS 로그 구성** 대화 상자를 사용하여 패키지에 대한 로깅 옵션을 정의할 수 있습니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "84921674"
  **고급**  
  로깅할 이벤트를 선택하거나 선택을 취소하고, 각 이벤트에 대해 로깅할 정보를 선택하거나 선택을 취소합니다. 이벤트 목록을 제외한 모든 로깅 세부 정보를 숨기려면 **기본** 을 클릭합니다. 다음은 로깅에 사용할 수 있는 정보입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**컴퓨터**|로깅된 이벤트가 발생한 컴퓨터의 이름입니다.|  
 |**연산자**|패키지를 시작한 사람의 사용자 이름입니다.|  

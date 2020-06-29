@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], ADO
 - ADO connection manager [Integration Services]
 ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 85c76037c44f6260bbfc436823d844abdf74355d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fb4b667733f81eebbaf2b6a2ab9b205c09fe2c66
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921254"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434540"
 ---
 # <a name="ado-connection-manager"></a>ADO 연결 관리자
   ADO 연결 관리자를 사용하면 패키지에서 레코드 집합과 같은 ADO(ActiveX Data Objects) 개체에 연결할 수 있습니다. 이 연결 관리자는 일반적으로 Microsoft Visual Basic 6.0과 같은 초기 버전의 언어로 작성된 사용자 지정 태스크나 데이터 원본에 연결하기 위해 ADO를 사용하는 기존 애플리케이션의 일부인 사용자 지정 태스크에서 사용됩니다.  

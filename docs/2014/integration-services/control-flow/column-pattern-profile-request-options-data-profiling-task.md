@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a00c72e6f444ec1e62082f254d6b77894b479d09
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 831350b3ab54f84236f7f258415aeb782539cdb5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919644"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433760"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>열 패턴 프로필 요청 옵션(데이터 프로파일링 태스크)
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **열 패턴 프로필 요청** 의 옵션을 설정할 수 있습니다. 열 패턴 프로필은 문자열 열에서 지정된 값의 비율을 포괄하는 정규식 집합을 보고합니다. 이 프로필을 사용하면 잘못된 문자열과 같은 데이터 문제를 식별하는 데 도움이 되며 앞으로 새 값의 유효성 검사에 사용할 수 있는 정규식을 제안 받을 수 있습니다. 예를 들어 US Zip Code 열의 패턴 프로필이 \d{5}-\d{4}, \d{5} 및 \d{9} 정규식을 생성할 수 있습니다. 다른 정규식이 보이면 데이터에 유효하지 않거나 잘못된 형식의 값이 포함되어 있을 가능성이 높습니다.  
@@ -44,10 +44,10 @@ ms.locfileid: "84919644"
   
 |태그|용어|  
 |---------|----------|  
-|Direction|East|  
-|Direction|West|  
-|Direction|North|  
-|Direction|South|  
+|방향|East|  
+|방향|West|  
+|방향|North|  
+|방향|South|  
   
  다른 태그를 사용하여 주소에서 "번지"의 개념을 나타내는 다른 단어를 그룹화할 수 있습니다.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "84919644"
   
  자세한 내용은 이 항목의 앞부분에 나오는 "구분 기호 및 기호 사용 이해"를 참조하십시오.  
   
- **기호만**  
+ **기호**  
  패턴의 일부로 유지할 기호를 나열합니다. 이러한 기호에는 날짜의 "/", 시간의 ":" 및 전자 메일 주소의 "@"이 포함될 수 있습니다. 기본적으로 **기호** 목록에는 다음 문자가 포함 됩니다. `,.;:-"'` ~ =&/@!? () <> [] {} | # * ^% '입니다.  
   
  자세한 내용은 이 항목의 앞부분에 나오는 "구분 기호 및 기호 사용 이해"를 참조하십시오.  

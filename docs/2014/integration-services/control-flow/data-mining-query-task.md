@@ -12,14 +12,14 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 93021fb7000bd7adccd467e04fb7cf3430db5efe
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6bb3cea630401f92395e2ca4416c03bcd870c881
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919474"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433580"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
   데이터 마이닝 쿼리 태스크는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 작성된 데이터 마이닝 모델을 기반으로 예측 쿼리를 실행합니다. 예측 쿼리는 마이닝 모델을 사용하여 새 데이터에 대한 예측을 만듭니다. 예를 들어 예측 쿼리는 여름 기간 동안 판매될 요트 수를 예측하거나 요트를 구매할 잠재 고객 목록을 생성할 수 있습니다.  
