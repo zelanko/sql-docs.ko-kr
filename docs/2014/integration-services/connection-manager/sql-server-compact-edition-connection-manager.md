@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connections [Integration Services], SQL Server Compact
 - connection managers [Integration Services], SQL Server Compact
 ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1a61dedbbdbcdcd08651407ac1be4a2a35df883b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a8242de8a7374fec7bad5e0eb4fabf96264cecc1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920334"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438330"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition 연결 관리자
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 연결 관리자를 사용하면 패키지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스에 연결할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Compact 대상은 이 연결 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스의 테이블에 데이터를 로드합니다.  

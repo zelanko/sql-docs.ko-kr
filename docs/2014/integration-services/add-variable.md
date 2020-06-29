@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Add Variable dialog box
 ms.assetid: d09b5d31-433f-4f7c-8c68-9df3a97785d5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6481a2dac7bc23d61b73b2d4f50401952723dc69
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d6181b7f18027315a7f2162a5693493bcb595db4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925826"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439570"
 ---
 # <a name="add-variable"></a>변수 추가
   **변수 추가** 대화 상자를 사용하여 새 변수의 속성을 지정할 수 있습니다.  

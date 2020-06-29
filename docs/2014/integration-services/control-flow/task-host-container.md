@@ -12,14 +12,14 @@ helpviewer_keywords:
 - containers [Integration Services], Task Host
 - Task Host container
 ms.assetid: 7394a2c2-1b07-427d-b94a-9792e7783d35
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c5a389a39320ef37e3dc2b2a5fcef015d664fce6
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4429d564cea0f08d5c2408199a8f1837b38389b0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917969"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438150"
 ---
 # <a name="task-host-container"></a>태스크 호스트 컨테이너
   태스크 호스트 컨테이너는 단일 태스크를 캡슐화합니다. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 태스크 호스트는 별도로 구성되지 않고 캡슐화되는 태스크의 속성을 설정할 때 구성됩니다. 태스크 호스트 컨테이너에서 캡슐화하는 태스크에 대한 자세한 내용은 [Integration Services Tasks](integration-services-tasks.md)를 참조하십시오.  

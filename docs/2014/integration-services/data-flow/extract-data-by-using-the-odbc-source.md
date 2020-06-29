@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ed7cdc549b3521d3efddc831455136775378cd52
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8a51457b748569f5f36e6606dc89b7f276cddd94
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915673"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437760"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>ODBC 원본을 사용하여 데이터 추출
   이 절차에서는 ODBC 원본을 사용하여 데이터를 추출하는 방법을 설명합니다. ODBC 원본을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크가 이미 들어 있어야 합니다.  

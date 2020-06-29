@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3d15836fb551f5c7c0b04712dbcb0b783cc317a9
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 40c845334c2a323f8212109664f65a2898e994d6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923604"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438830"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Attunity Oracle CDC Service
   Oracle CDC Service는 Oracle 트랜잭션 로그를 검색하고 관련 Oracle 테이블의 변경 내용을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 테이블에 캡처하는 Windows 서비스입니다. Oracle에서 캡처한 변경 내용이 저장되는 SQL 변경 테이블은 네이티브 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 데이터 캡처 기능에서 사용하는 변경 테이블과 같은 유형입니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 변경 내용을 사용하는 것만큼 쉽게 이 변경 내용을 사용할 수 있습니다.  

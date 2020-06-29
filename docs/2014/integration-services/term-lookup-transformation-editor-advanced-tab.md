@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: be3575dc-e79c-49f6-8243-ad270bce77d5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 732919f8a6f9de24bbbd5ac9aeb378b24086ccb1
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2443f80e0a479edeff92b33a49c1771e54b8f979
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962143"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440010"
 ---
 # <a name="term-lookup-transformation-editor-advanced-tab"></a>용어 조회 변환 편집기(고급 탭)
   **용어 조회 변환 편집기** 대화 상자의 **고급** 탭을 사용하여 조회에서 대/소문자를 구분할지 여부를 지정할 수 있습니다.  

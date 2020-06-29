@@ -10,14 +10,14 @@ helpviewer_keywords:
 - deploying packages [Integration Services], deployment utility
 - deployment utility [Integration Services]
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 25effc199b1f8e525ceec78216e935e13afe2be2
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f0a5f0f4db3f2e3ab5f961de99db0e92ca7009e3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917363"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437960"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   패키지를 배포하는 첫 번째 단계는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트의 배포 유틸리티를 만드는 것입니다. 배포 유틸리티는 다른 서버로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트의 패키지를 배포하는 데 필요한 파일이 포함된 폴더입니다. 배포 유틸리티는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트가 저장된 컴퓨터에 만들어집니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "84917363"
   
  다음 표에서는 배포 유틸리티 속성을 나열합니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |AllowConfigurationChange|배포 도중 구성의 업데이트를 허용할지 여부를 지정하는 값입니다.|  
 |CreateDeploymentUtility|프로젝트를 빌드할 때 패키지 배포 유틸리티를 만들지 여부를 지정하는 값입니다. 배포 유틸리티를 만들려면 이 속성을 `True`로 설정합니다.|  

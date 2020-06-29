@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.mappings.f1
 ms.assetid: 842d075f-8b7a-457c-a1a1-a7acbe10e9b7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0c2da86e24a7582c67daf746180cec2c715ba5be
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8e77b1aabeebdec6c5b5744f8a331b9709bfcef7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925885"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439590"
 ---
 # <a name="ado-net-destination-editor-mappings-page"></a>ADO NET 대상 편집기(매핑 페이지)
   **ADO NET 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  

@@ -19,14 +19,14 @@ helpviewer_keywords:
 - custom variables [Integration Services]
 - variables [Integration Services], customizing
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9d9ce228394ac5e11e9d526aee98dc1c012ef511
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cb2cd5b00ddb8f6d334ace778305b5814c915b62
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924764"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439250"
 ---
 # <a name="working-with-variables-programmatically"></a>프로그래밍 방식으로 변수 사용
   변수는 패키지, 컨테이너, 태스크 및 이벤트 처리기에서 동적으로 값을 설정하고 프로세스를 제어하는 데 사용됩니다. 선행 제약 조건에서 변수를 사용하여 다른 태스크로의 데이터 흐름 방향을 제어할 수도 있습니다. 다음과 같은 다양한 용도로 변수를 사용할 수 있습니다.

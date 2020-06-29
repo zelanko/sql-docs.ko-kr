@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cacheconnection.f1
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 403210fd8a60cdfb7e92b18f9bb66ccb0a6f1f4c
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d22744bd83daa70994e552965ea96d148800afef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924624"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439150"
 ---
 # <a name="cache-connection-manager-editor"></a>캐시 연결 관리자 편집기
   캐시 연결 관리자는 캐시 변환이나 캐시 파일(.caw)에서 참조 데이터 세트를 읽고 데이터를 캐시 파일에 저장할 수 있습니다. 데이터는 항상 메모리에 저장됩니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "84924624"
 > [!NOTE]  
 >  조회 변환은 캐시 연결 관리자를 사용하도록 구성된 경우 참조 데이터 세트의 인덱스 열만 입력 열에 매핑할 수 있습니다. 또한 모든 인덱스 열을 매핑해야 합니다.  
   
- **형식**  
+ **Type**  
  열의 데이터 형식을 지정합니다.  
   
  `Length`  

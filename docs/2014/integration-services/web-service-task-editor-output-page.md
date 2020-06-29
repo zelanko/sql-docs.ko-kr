@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 73c83969-7b0e-479d-a436-0a46b2068d01
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4b8dbb9847f3591d0f26a2dc7ca6e31f1b22da83
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c6d753b7ef37d515140a3fc32137dd4680fa3079
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972453"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439820"
 ---
 # <a name="web-service-task-editor-output-page"></a>웹 서비스 태스크 편집기(출력 페이지)
   **웹 서비스 태스크 편집기** 대화 상자의 **출력** 페이지를 사용하여 웹 메서드에서 반환하는 결과를 저장할 위치를 지정할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "84972453"
  **OutputType**  
  결과를 저장할 때 사용할 스토리지 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**파일 연결**|결과를 파일에 저장합니다. 이 값을 선택하면 동적 옵션 **File**이 표시됩니다.|  
 |**변수**|결과를 변수에 저장합니다. 이 값을 선택하면 동적 옵션 **Variable**이 표시됩니다.|  

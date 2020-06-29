@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9c2e960333c5ce2cd4d22742faac4deacc6651e1
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8dc844d1fdfb1e82f0ffa8de93a6a1060ef190cd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923928"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438950"
 ---
 # <a name="advanced-connection-properties"></a>고급 연결 속성
   **고급 연결 속성** 대화 상자를 사용하여 연결 문자열에 연결 매개 변수를 추가할 수 있습니다.  

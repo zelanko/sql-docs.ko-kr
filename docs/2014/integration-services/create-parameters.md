@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.parameterwindow.f1
 ms.assetid: cd5d675b-dd5d-49cc-8b1f-dc717a973f99
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f43c6f25d7360b558a8bbfb9887b6bd2d6362106
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a26ae08c08a32b0593be8c9a2777b7cfe9c884fa
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917221"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437890"
 ---
 # <a name="create-parameters"></a>Create Parameters
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 를 사용하여 프로젝트 매개 변수 및 패키지 매개 변수를 만들 수 있습니다. 다음 절차에서는 패키지/프로젝트 매개 변수를 만드는 단계별 지침을 제공합니다.  
@@ -36,14 +36,14 @@ ms.locfileid: "84917221"
   
 3.  목록 자체에서 또는 **속성**창에서 **이름**, **데이터 형식**, **값**, **구분** 및 **필수** 속성의 값을 입력합니다. 다음 표에서는 이러한 속성을 설명합니다.  
   
-    |속성|Description|  
+    |속성|설명|  
     |--------------|-----------------|  
-    |속성|매개 변수의 이름입니다.|  
+    |이름|매개 변수의 이름입니다.|  
     |데이터 형식|매개 변수의 데이터 형식입니다.|  
     |기본값|디자인 타임에 할당되는 매개 변수의 기본값입니다. 디자인 기본값이라고도 합니다.|  
     |중요|구분 매개 변수 값은 카탈로그에서 암호화되고 Transact-SQL 또는 SQL Server Management Studio를 사용하여 볼 경우 NULL 값으로 나타납니다.|  
     |필수|패키지를 실행하기 전에 반드시 지정해야 하는 디자인 기본값 이외의 값입니다.|  
-    |Description|유지 관리의 편의를 위한 매개 변수 설명입니다. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 경우 Visual Studio 속성 창의 해당 매개 변수 창에서 매개 변수를 선택할 때 매개 변수 설명을 설정합니다.|  
+    |설명|유지 관리의 편의를 위한 매개 변수 설명입니다. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 경우 Visual Studio 속성 창의 해당 매개 변수 창에서 매개 변수를 선택할 때 매개 변수 설명을 설정합니다.|  
   
     > [!NOTE]  
     >  프로젝트를 카탈로그에 배포하면 몇 가지 추가 속성이 프로젝트와 연결됩니다. 카탈로그의 모든 매개 변수에 대한 모든 속성을 보려면 [catalog.object_parameters&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database) 뷰를 참조하세요.  
@@ -70,14 +70,14 @@ ms.locfileid: "84917221"
   
 4.  **이름**, **데이터 형식**, **값**, **구분**및 **필수** 속성의 값을 입력합니다.  
   
-    |속성|Description|  
+    |속성|설명|  
     |--------------|-----------------|  
-    |속성|매개 변수의 이름입니다.|  
+    |이름|매개 변수의 이름입니다.|  
     |데이터 형식|매개 변수의 데이터 형식입니다.|  
     |기본값|디자인 타임에 할당되는 매개 변수의 기본값입니다. 디자인 기본값이라고도 합니다.|  
     |중요|구분 매개 변수 값은 카탈로그에서 암호화되고 Transact-SQL 또는 SQL Server Management Studio를 사용하여 볼 경우 NULL 값으로 나타납니다.|  
     |필수|패키지를 실행하기 전에 반드시 지정해야 하는 디자인 기본값 이외의 값입니다.|  
-    |Description|유지 관리의 편의를 위한 매개 변수 설명입니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]의 경우 Visual Studio 속성 창의 해당 매개 변수 창에서 매개 변수를 선택할 때 매개 변수 설명을 설정합니다.|  
+    |설명|유지 관리의 편의를 위한 매개 변수 설명입니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]의 경우 Visual Studio 속성 창의 해당 매개 변수 창에서 매개 변수를 선택할 때 매개 변수 설명을 설정합니다.|  
   
 5.  프로젝트를 저장하여 매개 변수 변경 내용을 저장합니다. 매개 변수 값은 프로젝트 파일의 구성에 저장됩니다. 매개 변수 값의 모든 변경 사항을 디스크에 커밋하려면 프로젝트 파일을 저장합니다.  
   

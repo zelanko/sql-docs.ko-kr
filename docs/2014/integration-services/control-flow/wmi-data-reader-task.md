@@ -12,14 +12,14 @@ helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Data Reader task [Integration Services]
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 00efb17903aa6827dafc48f007d6b63cd137c325
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fa94e484ea82f0ca5421ada5a6e8779e02dfd461
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917665"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438030"
 ---
 # <a name="wmi-data-reader-task"></a>WMI 데이터 판독기 태스크
   WMI 데이터 판독기 태스크는 WMI(Windows Management Instrumentation) 쿼리 언어를 사용하여 WMI로부터 컴퓨터 시스템에 대한 정보를 반환하는 쿼리를 실행합니다. WMI 데이터 판독기 태스크는 다음 용도로 사용할 수 있습니다.  

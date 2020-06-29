@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connections [Integration Services], FTP
 - connection managers [Integration Services], FTP
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 02501b845254301a8370fcd208d849a6c6e3e3a9
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: caeba8ad0baa8104a3d56a3e8b4f95cb0d4f563f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920856"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438480"
 ---
 # <a name="ftp-connection-manager"></a>FTP 연결 관리자
   FTP 연결 관리자를 사용하면 패키지에서 FTP(파일 전송 프로토콜) 서버에 연결할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 포함된 FTP 태스크에서는 이 연결 관리자가 사용됩니다.  

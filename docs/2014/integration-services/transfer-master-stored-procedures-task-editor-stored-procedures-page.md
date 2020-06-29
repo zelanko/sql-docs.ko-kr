@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Stored Procedures Task Editor
 ms.assetid: 5fcf171e-cc0b-4c24-8eb5-3a4b4775e64a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 09a9ad4645f430418c39f76178bfe7a6757018dd
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0cd0b269c0ced445017d573cfad08a767d5f2008
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972783"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439990"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>master 저장 프로시저 전송 태스크 편집기(저장 프로시저 페이지)
   **master 저장 프로시저 전송 태스크 편집기** 대화 상자의 **저장 프로시저** 페이지를 사용하여 하나 이상의 사용자 정의 저장 프로시저를 **인스턴스의** master [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스에서 다른 **인스턴스의** master [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]데이터베이스로 복사하기 위한 속성을 지정할 수 있습니다. 이 태스크에 대한 자세한 내용은 [Transfer Master Stored Procedures Task](control-flow/transfer-master-stored-procedures-task.md)를 참조하십시오.  
@@ -38,19 +38,19 @@ ms.locfileid: "84972783"
   
  이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**FailTask**|대상 서버의 **master** 데이터베이스에 같은 이름의 저장 프로시저가 이미 있는 경우 태스크가 실패합니다.|  
 |**Overwrite**|대상 서버의 **master** 데이터베이스에 있는 같은 이름의 저장 프로시저를 덮어씁니다.|  
-|**킵**|대상 서버의 **master** 데이터베이스에 있는 같은 이름의 저장 프로시저를 건너뜁니다.|  
+|**건너뛰기**|대상 서버의 **master** 데이터베이스에 있는 같은 이름의 저장 프로시저를 건너뜁니다.|  
   
  **TransferAllStoredProcedures**  
  원본 서버의 **master** 데이터베이스에 있는 모든 사용자 정의 저장 프로시저를 대상 서버로 복사할지 여부를 선택합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**True**|**master** 데이터베이스의 모든 사용자 정의 저장 프로시저를 복사합니다.|  
-|**False**|지정한 저장 프로시저만 복사합니다.|  
+|**허위**|지정한 저장 프로시저만 복사합니다.|  
   
  **StoredProceduresList**  
  원본 서버의 **master** 데이터베이스에서 대상 **master** 데이터베이스로 복사할 사용자 정의 저장 프로시저를 선택합니다. 이 옵션은 **TransferAllStoredProcedures** 를 **False**로 설정한 경우에만 사용할 수 있습니다.  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - WMI Data Reader Task Editor
 ms.assetid: 1ee4fd97-defc-4a63-adfe-5f2df548e62a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 48227317d06df138010b6d265b299dc803004547
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 57de6dba3a2aec845bd92b3698e526228fd0120d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972423"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439810"
 ---
 # <a name="wmi-data-reader-task-editor-general-page"></a>WMI 데이터 판독기 태스크 편집기(일반 페이지)
   **WMI 데이터 판독기 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 WMI 데이터 판독기 태스크를 명명 및 설명할 수 있습니다.  

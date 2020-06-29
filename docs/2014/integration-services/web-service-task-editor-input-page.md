@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fa1858469ec8756f05e186ca1cb50c966ee47268
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a0ff06e9001c943c294b9c7ba8f93d9cad21e9c3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972463"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439840"
 ---
 # <a name="web-service-task-editor-input-page"></a>웹 서비스 태스크 편집기(입력 페이지)
   **웹 서비스 태스크 편집기** 대화 상자의 **입력** 페이지를 사용하여 웹 서비스, 웹 메서드 및 웹 메서드에 입력으로 제공할 값을 지정할 수 있습니다. 문자열을 값 열에 직접 입력하거나 값 열에서 변수를 선택하여 값을 지정할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "84972463"
  **이름**  
  웹 메서드에 대한 입력의 이름을 나열합니다.  
   
- **형식**  
+ **Type**  
  입력의 데이터 형식을 나열합니다.  
   
 > [!NOTE]  

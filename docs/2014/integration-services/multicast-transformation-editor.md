@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Multicast Transformation Editor
 ms.assetid: 96155ed9-6597-4fe1-8f9f-b741b18ba2c1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1bbc845ac8ccf2d60a218f34770cf8f2483ff57b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cfe53eaf946af96a9f49398e50aed0fdf53727f8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967033"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440160"
 ---
 # <a name="multicast-transformation-editor"></a>멀티캐스트 변환 편집기
   **멀티캐스트 변환 편집기** 대화 상자를 사용하여 각 변환 출력에 대한 속성을 보고 설정할 수 있습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "84967033"
  멀티캐스트 변환에 대한 자세한 내용은 [Multicast Transformation](data-flow/transformations/multicast-transformation.md)을 참조하십시오.  
   
 ## <a name="options"></a>옵션  
- **outputs**  
+ **출력**  
  왼쪽에서 출력을 선택하여 오른쪽에 있는 테이블에서 해당 속성을 확인합니다.  
   
  **속성**  

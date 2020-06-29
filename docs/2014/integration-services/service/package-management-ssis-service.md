@@ -21,14 +21,14 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1ca2e8dd516b995dcf3d2e48b1ed14209677d41f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4d31334e742161aadd5911f58d65fca0df4cbd73
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963513"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440130"
 ---
 # <a name="package-management-ssis-service"></a>패키지 관리(SSIS 서비스)
   패키지 관리에는 다음 태스크를 비롯한 태스크가 포함됩니다.  

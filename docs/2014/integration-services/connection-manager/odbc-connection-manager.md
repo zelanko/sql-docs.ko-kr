@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data sources [Integration Services], connections
 - connection managers [Integration Services], ODBC
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0f7642cd5f2245cbe5056ff09ec35477c0a6619c
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 701ea85cafc22d9ea850e18310c3c2d06748cb08
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920514"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438360"
 ---
 # <a name="odbc-connection-manager"></a>ODBC 연결 관리자
   ODBC 연결 관리자를 사용하면 패키지에서 ODBC(Open Database Connectivity) 사양을 사용하여 다양한 데이터베이스 관리 시스템에 연결할 수 있습니다.  

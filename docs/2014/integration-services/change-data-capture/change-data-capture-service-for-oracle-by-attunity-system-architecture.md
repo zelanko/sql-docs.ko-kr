@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1db6c737-3c60-4066-a0a3-3611e1c83e4e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5b22bbf0ccd350f3cc9201423452ab250f9cc509
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 623c1821c081d4d2e5d47ac18b2fdc146cef0cbe
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923754"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438900"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-system-architecture"></a>Attunity Oracle CDC Service 시스템 아키텍처
   Oracle CDC Service는 하나 이상의 원본 Oracle 데이터베이스에서 선택한 테이블의 변경 내용을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CDC 데이터베이스에 캡처합니다. 다음 다이어그램에서는 Oracle CDC Service를 구성하는 구성 요소를 보여 줍니다.  

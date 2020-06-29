@@ -11,14 +11,14 @@ helpviewer_keywords:
 - sources [Integration Services], XML
 - XML source [Integration Services]
 ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fcf27faf2678aa89c0fa646c0a1b3f7b4d9401c3
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 39fc58138cd9342d922c4cb37977b9a4da0a8095
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915663"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437750"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>XML 원본을 사용하여 데이터 추출
   XML 원본을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크가 이미 들어 있어야 합니다.  

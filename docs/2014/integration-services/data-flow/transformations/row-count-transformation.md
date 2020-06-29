@@ -15,14 +15,14 @@ helpviewer_keywords:
 - variables [Integration Services], updating
 - counting rows
 ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 15521c2be7ddaad50431691088c233a7ddf946ae
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1b0940d608aeaa96b7ec43fa4486944ce0f887e3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939404"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437620"
 ---
 # <a name="row-count-transformation"></a>행 개수 변환
   행 개수 변환은 행이 데이터 흐름을 통과할 때 행 수를 세어 최종 개수를 변수에 저장합니다.  

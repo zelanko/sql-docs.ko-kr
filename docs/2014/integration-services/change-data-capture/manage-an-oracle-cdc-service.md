@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - createSrv
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7e5a70f0fad3661d36b23c4af439bd117b11a7d6
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f65f59a115fbfb1cebb1f92620d9085672835fd4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922844"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438620"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
   CDC Service 구성 콘솔을 사용하여 특정 CDC Service를 관리할 수 있습니다.  

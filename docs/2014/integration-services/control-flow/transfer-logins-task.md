@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Logins task [Integration Services]
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 103dbc8358560fd04fe602d1fdaf5d85a611e3b1
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4551cc4f86f962c3f715398468a7d9a2ce17fbb2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917927"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438120"
 ---
 # <a name="transfer-logins-task"></a>로그인 전송 태스크
   로그인 전송 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 사이에서 하나 이상의 로그인을 전송합니다.  

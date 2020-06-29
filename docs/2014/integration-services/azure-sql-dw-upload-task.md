@@ -11,13 +11,13 @@ f1_keywords:
 - SQL11.DTS.DESIGNER.AFPDWUPTASK.F1
 ms.assetid: 112cf764-f85a-4c1a-b732-d299d717c0d4
 author: yualan
-ms.author: janinez
-ms.openlocfilehash: 249f29e40701658ddcc85f4a2a79fc8c0ac2cff5
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.author: chugu
+ms.openlocfilehash: adcc4cc06ac01ea833972ffcd7c1a5ade411bfb2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925134"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439320"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 업로드 태스크
 **Azure SQL DW 업로드 태스크** 를 통해 SSIS 패키지에서 로컬 데이터를 Azure SQL DW(Data Warehouse)의 테이블에 업로드할 수 있습니다. 현재 지원되는 원본 데이터 파일 형식은 UTF8 인코딩 방식의 구분 기호로 분리된 텍스트입니다. 업로드 프로세스는 효율적인 PolyBase 방식을 따릅니다. 특히 데이터는 Azure Blob Storage에 먼저 업로드되고 그 다음으로 Azure SQL DW에 업로드됩니다. 그러므로 이 태스크를 사용하려면 Azure Blob Storage 계정이 필요합니다.
@@ -26,7 +26,7 @@ ms.locfileid: "84925134"
 
 **일반** 페이지에서 다음 속성을 구성합니다.
 
-필드|Description
+필드|설명
 -----|-----------
 LocalDirectory|업로드할 데이터 파일이 포함된 로컬 디렉터리를 지정합니다.
 Recursively|하위 디렉터리를 재귀적으로 검색할 것인지 여부를 지정합니다.

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c3c94fead420fcd20978d662f2849369018af50e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0e0197a21f563cd96745b3ee2bed148b18e0cb0f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84914333"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437680"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>SAP BW 원본 편집기(오류 출력 페이지)
   **SAP BW 원본 편집기** 의 **오류 출력** 페이지에서는 오류 처리 옵션을 선택하고 오류 출력 열에 속성을 설정할 수 있습니다.  

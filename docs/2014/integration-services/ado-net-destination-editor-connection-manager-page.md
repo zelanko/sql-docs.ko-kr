@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.connection.f1
 ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 36c06fda23fc11c76df4d278a18095659d433567
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 78851d5bbad18d2d1076eaa87200dd73e6962a90
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925974"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439660"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>ADO NET 대상 편집기(연결 관리자 페이지)
   **ADO NET 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 대상에 대한 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결을 선택할 수 있습니다. 이 페이지를 사용하면 데이터베이스에서 테이블이나 뷰를 선택할 수도 있습니다.  

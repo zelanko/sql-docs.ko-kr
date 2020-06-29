@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Export Column Transformation Editor
 ms.assetid: b659a5c2-5509-4b5b-9c82-136c971d5c7f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2460e3a86c83dbd6b206bf173ac2c2691ecee685
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4135c5096ad74559344ecb182c10feb770cdda37
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966733"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437350"
 ---
 # <a name="export-column-transformation-editor-columns-page"></a>열 내보내기 변환 편집기(열 페이지)
   **열 내보내기 변환 편집기** 대화 상자의 **열** 페이지를 사용하여 데이터 흐름에서 파일로 추출할 열을 지정할 수 있습니다. 열 내보내기 변환 시 데이터를 파일에 추가할 것인지, 아니면 기존 파일을 덮어쓸 것인지를 지정할 수 있습니다.  

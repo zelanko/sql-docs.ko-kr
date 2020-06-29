@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8fa82822-ac99-48ef-a18d-f4f3a77105b4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ddbfc46786b2bbf766d604762612018f89c3d942
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c2a81eeea47f1241057c91e21b06ae1360be6589
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923921"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438930"
 ---
 # <a name="cdc-instance-deployment-script"></a>CDC 인스턴스 배포 스크립트
   CDC 인스턴스 배포 스크립트를 표시하는 CDC 인스턴스 배포 스크립트 대화 상자입니다. 이 스크립트를 사용하여 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 아티팩트를 포함하는 CDC 데이터베이스를 다시 만들 수 있습니다.  

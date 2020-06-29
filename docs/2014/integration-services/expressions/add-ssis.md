@@ -11,14 +11,14 @@ helpviewer_keywords:
 - add operator (+)
 - adding expressions
 ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3357e9c6d52d6bd2668d8464362ebff567033ca8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 995632c691daf8210b7c01a6c132878228968f01
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966693"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437290"
 ---
 # <a name="-add-ssis"></a>+(더하기)(SSIS)
   두 숫자 식을 더합니다.  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.connection.f1
 ms.assetid: 7de3f438-bdd6-49b5-937a-47369e754943
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7d6dc089acb1d15491817d8876dee82951e4495d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6ae18b66e93d7c3c363596b2bf0bc42d4357191f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925904"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439580"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>ADO NET 원본 편집기(연결 관리자 페이지)
   **ADO NET 원본 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 원본의 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자를 선택할 수 있습니다. 이 페이지를 사용하면 데이터베이스에서 테이블이나 뷰를 선택할 수도 있습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "84925904"
  **데이터 액세스 모드**  
  원본에서 데이터를 선택하는 방법을 지정합니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |테이블 또는 뷰|[!INCLUDE[vstecado](../includes/vstecado-md.md)] 데이터 원본에 있는 테이블이나 뷰에서 데이터를 검색합니다.|  
 |SQL 명령|SQL 쿼리를 사용하여 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 데이터 원본에서 데이터를 검색합니다.|  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5723ba6fcbcd8e5b2280fc977aa5f405d461b805
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4faa8626fd0237477fb521e5eaacf6afc823fd0e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925564"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439500"
 ---
 # <a name="analysis-of-data-flow"></a>데이터 흐름 분석
   [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` 데이터베이스 뷰를 사용 하 여 패키지의 데이터 흐름을 분석할 수 있습니다. 이 뷰는 데이터 흐름 구성 요소가 다운스트림 구성 요소에 데이터를 전송할 때마다 행을 표시합니다. 이 정보를 사용하여 각 구성 요소로 보내진 행을 자세하게 파악할 수 있습니다.  

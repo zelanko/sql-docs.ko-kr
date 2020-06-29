@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Audit Transformation Editor
 ms.assetid: 32786a34-5870-4fde-83c7-ec74d62404b8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6a58d216b33f5fb8fd582050374d06463fd2c99e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 95c144141e26415ac576589d36b98b54c52eecb6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925540"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439440"
 ---
 # <a name="audit-transformation-editor"></a>감사 변환 편집기
   감사 변환을 사용하면 패키지가 실행되는 환경에 대한 데이터를 패키지의 데이터 흐름에 포함할 수 있습니다. 예를 들어 패키지, 컴퓨터 및 운영자의 이름을 데이터 흐름에 추가할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 이 정보를 제공하는 시스템 변수가 포함되어 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "84925540"
  **감사 유형**  
  감사 정보를 제공할 사용 가능한 시스템 변수를 선택합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**실행 인스턴스 GUID**|패키지의 실행 인스턴스를 고유하게 식별하는 GUID를 삽입합니다.|  
 |**패키지 ID**|패키지를 고유하게 식별하는 GUID를 삽입합니다.|  

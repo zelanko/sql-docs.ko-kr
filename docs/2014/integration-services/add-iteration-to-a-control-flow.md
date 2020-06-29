@@ -14,14 +14,14 @@ helpviewer_keywords:
 - iterations [Integration Services]
 - For Loop containers
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 671073193853d35f1d66f815b5952ab69e978bf9
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 039f1dff39f5bc89dbe360d49ad0d4174d665074
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926064"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439640"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>제어 흐름에 반복 추가
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 패키지의 제어 흐름에서 조건에 따라 반복되는 루프를 간단하게 포함시킬 수 있는 제어 흐름 요소인 For 루프 컨테이너가 포함됩니다. 자세한 내용은 [For 루프 컨테이너](control-flow/for-loop-container.md)가 될 때까지 워크플로를 반복합니다.  

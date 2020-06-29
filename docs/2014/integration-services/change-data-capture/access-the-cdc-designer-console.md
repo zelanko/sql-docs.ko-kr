@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - accMsDes
 ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 58f712111dfa93bbac03bb984c30b87521b5be14
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: df4e9ffabcec2d484d4d747c1093082dca7855bf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923934"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438960"
 ---
 # <a name="access-the-cdc-designer-console"></a>CDC Designer 콘솔 액세스
   콘솔을 설치한 컴퓨터에서 CDC Designer 콘솔에 액세스할 수 있습니다. 설치에 대한 자세한 내용은 설치를 참조하십시오.  

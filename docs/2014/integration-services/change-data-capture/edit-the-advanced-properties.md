@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - advanced
 ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 694f7280995f7f884681e2ec9c23658c00296fa3
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9a2ccf9973cf545168f6778576ff27eae5e630d5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923294"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438710"
 ---
 # <a name="edit-the-advanced-properties"></a>고급 속성 편집
   **고급** 탭을 사용하여 CDC 인스턴스에 특별 속성을 추가할 수 있습니다.  

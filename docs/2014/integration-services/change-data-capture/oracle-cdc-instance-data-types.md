@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: eec13d8d-c15a-4542-bfc4-da66b1a6bfe0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b622fe35bd4b349057168464f8d42fa3f1160f52
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5c76fcbf2beaee458284297c522948c11a42fdef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922731"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438570"
 ---
 # <a name="oracle-cdc-instance-data-types"></a>Oracle CDC 인스턴스 데이터 형식
   Oracle CDC 인스턴스는 대부분의 Oracle 데이터 형식을 지원합니다. 다음 섹션에서는 지원되는 데이터 형식과 지원되지 않는 데이터 형식에 대해 설명합니다.  

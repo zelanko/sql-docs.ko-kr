@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Script task [Integration Services], about Script task
 - Script task [Integration Services]
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6c44017e7f3746861209b62bcb8c7b8999712076
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 024c499d882a515286904229a9d9f7942d9b8056
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918379"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438210"
 ---
 # <a name="script-task"></a>스크립트 태스크
   스크립트 작업은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]가 제공하는 기본 제공 작업과 변환에서 사용할 수 없는 기능을 수행하는 코드를 제공합니다. 또한 여러 개의 태스크와 변환을 사용하는 대신 여러 기능을 하나의 스크립트에 결합할 수 있습니다. 스크립트 태스크는 데이터 행마다 한 번 수행하는 대신 패키지에서 한 번 또는 열거된 개체마다 한 번 수행해야 하는 작업에 사용합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "84918379"
 ### <a name="configuring-the-script-task-in-the-designer"></a>디자이너에서 스크립트 태스크 구성  
  다음 표에서는 스크립트 태스크용으로 로깅될 수 있는 `ScriptTaskLogEntry` 이벤트에 대해 설명합니다. `ScriptTaskLogEntry` **SSIS 로그 구성** 대화 상자의 **자세히** 탭에서 로깅할 이벤트를 선택 합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../performance/integration-services-ssis-logging.md) 및 [로깅할 메시지 사용자 지정](../custom-messages-for-logging.md)을 참조하세요.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`ScriptTaskLogEntry`|스크립트에서 로깅을 구현한 결과를 보고합니다. 이 태스크는 `Log` 개체의 `Dts` 메서드를 호출할 때마다 로그 항목을 기록합니다. 이러한 항목은 코드가 실행될 때 기록됩니다. 자세한 내용은 [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md)을 참조하세요.|  
   

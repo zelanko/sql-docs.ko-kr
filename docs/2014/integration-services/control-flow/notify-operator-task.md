@@ -13,14 +13,14 @@ helpviewer_keywords:
 - notifications [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: 6c816c68-c6d6-44e4-bb34-c8e060a958a1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9ee8ee285d395425e925f2d5ec1e8a169d4ac5fa
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ed5158a4ec5cfe8374fedbb2afbca1294b58f05e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918413"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438220"
 ---
 # <a name="notify-operator-task"></a>운영자에게 알림 태스크
   운영자에게 알림 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 운영자에게 알림 메시지를 보냅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 운영자는 전자 알림을 받을 수 있는 사람 또는 그룹의 별칭입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 운영자에 대한 자세한 내용은 [운영자](../../ssms/agent//operators.md)를 참조하세요.  

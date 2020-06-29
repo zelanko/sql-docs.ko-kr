@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 6ed56d36-18d9-40c2-b51f-f2a4c71d1e73
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 38f2e94ab794accb8f3b951d0affab2451624748
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2572cc131f34a21171054a159e3b7968c453a780
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917219"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437900"
 ---
 # <a name="create-the-ssis-catalog"></a>SSIS 카탈로그 만들기
   [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 패키지를 디자인하고 테스트한 후에는 이 패키지가 포함된 프로젝트를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 프로젝트를 배포하려면 서버에 `SSISDB` 카탈로그가 있어야 합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 설치 프로그램에서 카탈로그를 자동으로 만들지 않으므로 다음 지침에 따라 카탈로그를 수동으로 만들어야 합니다.  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - mirTab
 ms.assetid: 260c1617-eecc-4007-a84d-3c5778ce46b6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 93837d6a410d4d6c1a4e7e71af2f591a5f4230a6
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 78daea310112cf7e9e78e489097fe9a76e69996b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923159"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438650"
 ---
 # <a name="generate-mirror-tables-and-cdc-capture-instances"></a>미러 테이블 및 CDC 캡처 인스턴스 생성
   미러 테이블 생성 페이지를 사용하여 CDC 인스턴스에 포함된 테이블에 대한 미러 테이블 생성  

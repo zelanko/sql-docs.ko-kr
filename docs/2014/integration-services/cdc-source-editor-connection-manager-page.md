@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.connection.f1
 ms.assetid: 304e6717-e160-4a7b-a06f-32182449fef8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c6ee99e02d9c3c5e78d00abd3e8d9f5673ee4d22
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1e455f049d70d3a6ad889d820f79e2fed70e326d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924064"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438980"
 ---
 # <a name="cdc-source-editor-connection-manager-page"></a>CDC 원본 편집기(연결 관리자 페이지)
   **CDC 원본 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 CDC 원본이 변경 행을 읽어오는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 데이터베이스(CDC 데이터베이스)에 대한 ADO.NET 연결 관리자를 선택할 수 있습니다. CDC 데이터베이스를 선택한 후 데이터베이스에서 캡처된 테이블을 선택해야 합니다.  

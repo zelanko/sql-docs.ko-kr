@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.eventhandlerwindow.f1
 ms.assetid: 94fc8916-8032-490c-b9d5-ded8b6217e49
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4bd7e159a148b134d744481a76ac910af572c0c2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8777e6c0515a602198e3ed393714544d774f9958
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969413"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437420"
 ---
 # <a name="event-handlers-tab"></a>이벤트 처리기 탭
   **디자이너의** 이벤트 처리기 [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭을 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에 제어 흐름을 작성할 수 있습니다. 이벤트 처리기는 패키지 또는 패키지의 태스크나 컨테이너에 의해 발생한 이벤트에 대한 응답으로 실행됩니다.  

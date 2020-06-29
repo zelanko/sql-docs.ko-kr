@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Send Mail Task Editor
 ms.assetid: adb385d5-ef24-4d18-b9ea-b39e00a7075e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ee2b7992065e31bc6ef57de9b22444cf2da1f963
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3beaed3fa3e03ddf9fa9b90349a3aa57a131c9b0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963489"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440060"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>메일 보내기 태스크 편집기(메일 페이지)
   **메일 보내기 태스크 편집기** 대화 상자의 **메일** 페이지를 사용하여 받는 사람, 메시지 유형 및 메시지 우선 순위를 지정할 수 있습니다. 또한 메시지에 파일을 첨부할 수 있습니다. 메시지 텍스트는 사용자가 제공한 문자열, 텍스트가 포함된 파일에 대한 파일 연결 또는 텍스트가 포함된 변수 이름일 수 있습니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "84963489"
  **MessageSourceType**  
  메시지의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 메시지 텍스트로 설정합니다. 이 값을 선택하면 동적 옵션 **MessageSource**가 표시됩니다.|  
 |**파일 연결**|원본을 메시지 텍스트가 포함된 파일로 설정합니다. 이 값을 선택하면 동적 옵션 **MessageSource**가 표시됩니다.|  

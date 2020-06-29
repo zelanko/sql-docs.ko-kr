@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Copy Column Transformation Editor
 ms.assetid: d8e70541-d563-4ce4-bf66-bc888a0d3026
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 317748ee2e5df7f64c15afd5f4d5661a739f4f88
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7647d25891b37e5f09356d427072e84b45882e4c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917513"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437970"
 ---
 # <a name="copy-column-transformation-editor"></a>열 복사 변환 편집기
   **열 복사 변환 편집기** 대화 상자를 사용하여 복사할 열을 선택하고 새 출력 열의 이름을 할당할 수 있습니다.  

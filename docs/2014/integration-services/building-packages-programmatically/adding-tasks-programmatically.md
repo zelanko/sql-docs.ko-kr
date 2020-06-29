@@ -13,14 +13,14 @@ helpviewer_keywords:
 - tasks [Integration Services], packages
 - adding package tasks
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: db7f6d541462348d464f69f6abf122aaa2acca7d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2cb0f2d50b77e16396d831ce351263a12443aab6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925094"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439300"
 ---
 # <a name="adding-tasks-programmatically"></a>프로그래밍 방식으로 태스크 추가
   런타임 엔진에서 다음과 같은 유형의 개체에 태스크를 추가할 수 있습니다.  

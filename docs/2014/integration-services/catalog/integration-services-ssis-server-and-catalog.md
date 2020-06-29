@@ -10,14 +10,14 @@ helpviewer_keywords:
 - packages [Integration Services], managing
 - managing packages [Integration Services]
 ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f125f7896f10e88279667dad4d089d8586f7af64
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3425a628b5779f8f088a6144355449fc94d988b1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924354"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439090"
 ---
 # <a name="integration-services-ssis-server"></a>Integration Services(SSIS) 서버
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 패키지를 디자인하고 테스트한 후에는 이 패키지가 포함된 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다.  

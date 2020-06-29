@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c4128993-2333-48c7-84b1-e51cdcea393d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6298ffb8c030866e3ca25b3007f1115217922c68
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cfb4e2004cab7e1b1a2d097d57ef3b8a66eba508
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917320"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437910"
 ---
 # <a name="create-a-user-defined-role"></a>사용자 정의 역할 만들기
     

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3d69416b36969e564b611d1b1274367b6ce5cb86
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9888ddabcd18fde861e3e68cfc685e6716262125
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924974"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439270"
 ---
 # <a name="building-packages-programmatically"></a>프로그래밍 방식으로 패키지 작성
   패키지를 동적으로 만들거나 개발 환경 외부에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 관리 및 실행해야 하는 경우 패키지를 프로그래밍 방식으로 조작할 수 있습니다. 이 경우 다음 중 하나를 선택할 수 있습니다.

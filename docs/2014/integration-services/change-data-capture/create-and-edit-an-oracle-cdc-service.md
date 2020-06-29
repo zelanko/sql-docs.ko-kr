@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 197bd304e6197f8b212f1d407032ef8ba7fa3e06
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8c07fc8eb400ddabe9a1eb7733722c247b7b58f0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923518"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438790"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Oracle CDC Service 만들기 및 편집
   CDC Service 구성 콘솔에서 새 Oracle CDC Windows 서비스를 만들고 편집합니다.  

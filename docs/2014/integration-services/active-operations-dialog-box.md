@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.ssis.ssms.isoperations.executions.f1
 - sql12.ssis.ssms.isoperations.general.f1
 ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9c6cd168a852eca294e85de696a611b460423c5a
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 49861de7be207875c554e02d3f3b1b2f941fff64
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926554"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439800"
 ---
 # <a name="active-operations-dialog-box"></a>활성 작업 대화 상자
   **활성 작업** 대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에서 현재 실행 중인 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 작업(예: 배포, 유효성 검사 및 패키지 실행)의 상태를 볼 수 있습니다. 이 데이터는 SSISDB 카탈로그에 저장됩니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "84926554"
 ##  <a name="configure-the-options"></a><a name="options"></a>옵션 구성  
   
 ### <a name="options"></a>옵션  
- **형식**  
+ **Type**  
  작업 유형을 지정합니다. 다음은 **형식** 필드에 사용할 수 있는 값과 transact-sql 뷰의 operations_type 열에 있는 해당 값입니다 `catalog.operations` .  
   
 |||  

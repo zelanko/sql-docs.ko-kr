@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 2e232566-1c3d-4134-adfc-bfd9db210e6d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8eb0d9c2b5f051a4ef4c420c91e565a9712af944
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1fd7544225acd64140d674d7c7c94b6d7c33a023
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921794"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438550"
 ---
 # <a name="configure-data-viewer-column-chart-tab"></a>데이터 뷰어 구성(세로 막대형 차트 탭)
   **데이터 뷰어 구성** 대화 상자의 **세로 막대형 차트** 탭을 사용하여 차트에서 막대로 표시할 열을 지정할 수 있습니다. 막대의 수는 열의 불연속 데이터 값의 수를 표시하고 막대의 높이는 각 값의 인스턴스 수를 표시합니다. 차트는 한 버퍼의 내용만 반영합니다.  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: fc13f725-963c-488e-91e2-20627133e842
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5a969ad04f8ba5bc86167beecfab5fec85e87caa
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7b2a485077f501d38d5d6bab2a4d5b309f47dc6a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966883"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437390"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>Excel 대상 편집기(연결 관리자 페이지)
   **Excel 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 데이터 원본 정보를 지정하고 그 결과를 미리 볼 수 있습니다. Excel 대상은 데이터를 워크시트 또는 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] Excel 통합 문서의 명명된 범위로 로드합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "84966883"
  **데이터 액세스 모드**  
  원본에서 데이터를 선택하는 방법을 지정합니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |테이블 또는 뷰|데이터를 워크시트 또는 Excel 데이터 원본의 명명된 범위로 로드합니다.|  
 |테이블 이름 또는 뷰 이름 변수|변수에 워크시트 또는 범위 이름을 지정합니다.<br /><br /> **관련 정보**: [패키지에서 변수 사용](../../2014/integration-services/use-variables-in-packages.md)|  

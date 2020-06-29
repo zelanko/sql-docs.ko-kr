@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.erroroutput.f1
 ms.assetid: 4dd9d129-a95c-4d3a-bbbf-e84a39089950
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ec17acfb9be26fc08274d285cf98897768633b9b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6317ca0b8b53e3d9b70caf71d47b3b8bdb39d0b4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925764"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439540"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>ADO NET 원본 편집기(오류 출력 페이지)
   **ADO NET 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택하고 오류 출력 열에 속성을 설정할 수 있습니다.  

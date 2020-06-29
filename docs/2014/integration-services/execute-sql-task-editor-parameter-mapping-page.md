@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: 8ebe020a-7921-46b2-8823-398748f379b2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 93881c4e9b91e7ace4c250fbf90b8913484f2ce2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cfbb4468cb69947dfa54fb519b7698286393d578
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966763"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437370"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>SQL 실행 태스크 편집기(매개 변수 매핑 페이지)
   **SQL 실행 태스크 편집기** 대화 상자의 **매개 변수 매핑** 페이지를 사용하여 변수를 SQL 문의 매개 변수에 매핑할 수 있습니다.  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: d27000c8-8d91-4e1c-b45e-bca9a3c12f6d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 43921efab592e6642fcc5adaef8caa869a1b524f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 027f3c77e84b47958e9fb6567acdb308c14eb1e7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966753"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437360"
 ---
 # <a name="execute-sql-task-editor-result-set-page"></a>SQL 실행 태스크 편집기(결과 집합 페이지)
   **SQL 실행 태스크 편집기** 대화 상자의 **결과 집합** 페이지를 사용하여 SQL 문의 결과를 새 변수 또는 기존 변수로 매핑할 수 있습니다. 일반 페이지의 **ResultSet** 을 **없음**으로 설정한 경우에는 이 대화 상자의 옵션을 사용할 수 없습니다.  

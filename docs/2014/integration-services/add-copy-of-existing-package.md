@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Add Copy of Existing Package dialog box
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e2642f9f5ba5d20fc124dc80f4098f2e148af288
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c30e5127bea29ecf1cd0d280adf0f5b1f2a6d766
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926204"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439700"
 ---
 # <a name="add-copy-of-existing-package"></a>기존 패키지의 복사본 추가
   **기존 패키지의 복사본 추가** 대화 상자를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 파일 시스템 또는 SSIS 패키지 저장소에 저장된 패키지의 복사본을 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 추가할 수 있습니다.  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - viewing package objects
 - SQL Server Integration Services packages, properties
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8ab1a510ec348ca30ffd1b8946b71ab935c0057c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ffe46be35db26186f715b18ba6114732d130e02e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972528"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439880"
 ---
 # <a name="view-package-objects"></a>패키지 개체 보기
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 **패키지 탐색기** 탭은 패키지에 대한 탐색기 뷰를 제공합니다. 이 뷰에는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 아키텍처의 컨테이너 계층이 표시됩니다. 패키지 컨테이너는 최상위 계층에 있으며, 패키지를 확장하면 패키지에 있는 연결, 실행 개체, 이벤트 처리기, 로그 공급자, 선행 제약 조건 및 변수를 볼 수 있습니다.

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: ad0cb668-0df2-4d4e-9a20-d20692a0b67a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 365a22cc515a971ff460a6433973f884c640c973
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 207c6e9837f2a828316c91c642d7397b72c4ddc3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84950813"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440170"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>다중 플랫 파일 연결 관리자 편집기(열 페이지)
   **다중 플랫 파일 연결 관리자 편집기** 대화 상자의 **열** 노드를 사용하여 행 정보 및 열 정보를 지정하고 선택한 첫 번째 파일을 미리 볼 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "84950813"
  **행 구분 기호**  
  사용 가능한 행 구분 기호의 목록에서 선택하거나 구분 기호 텍스트를 입력합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**{CR}{LF}**|행이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.|  
 |**CR**|행이 캐리지 리턴으로 구분됩니다.|  
@@ -52,7 +52,7 @@ ms.locfileid: "84950813"
  **열 구분 기호**  
  사용 가능한 열 구분 기호의 목록에서 선택하거나 구분 기호 텍스트를 입력합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**{CR}{LF}**|열이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.|  
 |**CR**|열이 캐리지 리턴으로 구분됩니다.|  
@@ -93,7 +93,7 @@ ms.locfileid: "84950813"
  **행 구분 기호**  
  사용 가능한 행 구분 기호의 목록에서 선택하거나 구분 기호 텍스트를 입력합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**{CR}{LF}**|행이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.|  
 |**CR**|행이 캐리지 리턴으로 구분됩니다.|  

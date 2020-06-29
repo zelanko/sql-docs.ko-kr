@@ -15,14 +15,14 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d079c83b8389c24c766e2ce7d385ad9c1e4a4785
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3328970373e30551a090cd5cf4fbd67cb9bb67aa
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924940"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439240"
 ---
 # <a name="connecting-data-flow-components-programmatically"></a>프로그래밍 방식으로 데이터 흐름 구성 요소 연결
   데이터 흐름 태스크에 구성 요소를 추가한 후 해당 구성 요소를 연결하여 원본에서 변환을 거쳐 대상으로 이동하는 데이터 흐름을 나타내는 실행 트리를 만들 수 있습니다. 데이터 흐름의 구성 요소를 연결하려면 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 개체를 사용합니다.  

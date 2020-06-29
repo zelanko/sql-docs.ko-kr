@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9700f663-53f2-49b6-b1ef-92c7b752d6a1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9713bbf35f3271dd0ae7168dac838d37621ec5c8
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f37c189f4d71aa9201f87a0215a3e0fee331216c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915973"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437840"
 ---
 # <a name="dimension-processing-destination-custom-properies"></a>차원 처리 대상 사용자 지정 속성
   차원 처리 대상에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - f1Help
 ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8140863e66e35f99ccee95d7f20910e583ca2a0a
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8ba47ee41c6aba217b03c2a1fbacbdb64ef24d53
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923774"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438890"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Attunity Oracle CDC Designer F1 도움말 참조
   Attunity Oracle CDC Designer는 Oracle CDC 인스턴스를 만들고 관리하는 데 사용됩니다. 이 섹션의 항목에서는 CDC Designer 콘솔에서 사용할 수 있는 태스크를 수행하는 방법에 설명합니다.  

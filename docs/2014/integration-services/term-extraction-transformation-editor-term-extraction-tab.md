@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 4c305b7d-a231-4d03-a09f-8e2d6564fa76
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2ba82ed1dac3cf992ca181e5795b33721eca4d86
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 00a1ecae07fe4babf433d199d069fc6200b52269
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962223"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440030"
 ---
 # <a name="term-extraction-transformation-editor-term-extraction-tab"></a>용어 추출 변환 편집기(용어 추출 탭)
   **용어 추출 변환 편집기** 대화 상자의 **용어 추출** 탭을 사용하여 추출할 텍스트가 포함된 텍스트 열을 지정합니다.  

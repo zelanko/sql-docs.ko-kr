@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Logins Task Editor
 ms.assetid: bf244c24-bd45-4ece-b66b-78b488f35c5b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 67c81901e454c4e7a47e5d448f2aa17d6a8820fa
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c849c57c0854757a75eecf163a384c06ae8f1c47
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972813"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440000"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>로그인 전송 태스크 편집기(로그인 페이지)
   **로그인 전송 태스크 편집기** 대화 상자의 **로그인** 페이지를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 한 인스턴스에서 다른 인스턴스로 복사하는 속성을 지정할 수 있습니다. 이 태스크에 대한 자세한 내용은 [Transfer Logins Task](control-flow/transfer-logins-task.md)를 참조하십시오.  
@@ -36,7 +36,7 @@ ms.locfileid: "84972813"
  **LoginsToTransfer**  
  원본 서버에서 대상 서버로 복사할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**AllLogins**|원본 서버의 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인이 대상 서버로 복사됩니다.|  
 |**대해 selectedlogins**|**LoginsList** 로 지정된 로그인만 대상 서버로 복사됩니다.|  
@@ -53,11 +53,11 @@ ms.locfileid: "84972813"
   
  이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**FailTask**|대상 서버에 이름이 동일한 로그인이 이미 있는 경우 태스크가 실패합니다.|  
 |**Overwrite**|대상 서버에 이름이 동일한 로그인이 있는 경우 이를 덮어씁니다.|  
-|**킵**|대상 서버에 이름이 동일한 로그인이 있는 경우 이를 건너뜁니다.|  
+|**건너뛰기**|대상 서버에 이름이 동일한 로그인이 있는 경우 이를 건너뜁니다.|  
   
  **CopySids**  
  로그인에 연결된 보안 식별자를 대상 서버로 복사할지 여부를 선택합니다. 로그인 전송 태스크를 데이터베이스 전송 동작과 함께 사용하는 경우에는**CopySids** 를 **True** 로 설정해야 합니다. 그렇게 하지 않으면 복사된 로그인을 전송된 데이터베이스에서 인식하지 않습니다.  

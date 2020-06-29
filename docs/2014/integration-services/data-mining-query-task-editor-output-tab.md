@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 62f9e015-6fe0-4396-ad90-3ad51bf00025
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dca81c082f936913a5844a7920a561325e87ceb5
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 003a184e2a9f94a7e116a819a30bc5cd3b6f5181
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939134"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437460"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>데이터 마이닝 쿼리 태스크 편집기(출력 탭)
   **데이터 마이닝 쿼리 태스크 편집기** 대화 상자의 **출력** 탭을 사용하여 예측 쿼리의 대상을 지정할 수 있습니다.  

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 56963bff1b17cc3cb1fd7f2c26bce452f238b1f7
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7468848373a6451428fed9e67a678183ba09581d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915774"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437780"
 ---
 # <a name="error-handling-in-data"></a>데이터 오류 처리
   데이터 흐름 구성 요소가 열 데이터에 변환을 적용하거나, 원본에서 데이터를 추출하거나, 데이터를 대상으로 로드할 때 오류가 발생할 수 있습니다. 오류는 주로 예기치 않은 데이터 값으로 인해 발생합니다. 예를 들어 열에 숫자 대신 문자열이 포함되었기 때문에 데이터 변환이 실패하거나, 열의 데이터 형식은 숫자인데 데이터가 날짜여서 데이터베이스 열에 대한 삽입 작업이 실패하거나, 열 값이 0이어서 식 계산이 실패하고 잘못된 수치 연산이 발생할 수 있습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "84915774"
   
  원본, 변환 및 대상에서 오류 및 잘림이 처리되는 방법을 구성할 수 있습니다. 다음 표에서는 옵션에 대해 설명합니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |구성 요소 실패|오류 또는 잘림이 발생하면 데이터 흐름 태스크가 실패합니다. 실패는 오류 또는 잘림에 대한 기본 옵션입니다.|  
 |오류 무시|오류 또는 잘림이 무시되고 데이터 행이 변환 또는 원본의 출력으로 전달됩니다.|  

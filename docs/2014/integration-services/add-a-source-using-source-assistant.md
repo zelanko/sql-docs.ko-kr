@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5e850b7c-4b89-42ad-b0a6-d63ac7cc9568
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ce970f4e944fbc4d940d1021a48600be9cd47967
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1b58b10508765580e0cffe9bd62099f3e2d69863
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926314"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439730"
 ---
 # <a name="add-a-source-using-source-assistant"></a>원본 길잡이를 사용하여 원본 추가
   이 항목에서는 원본 길잡이를 사용하여 새 원본을 추가하는 단계를 제공하며, 원본 길잡이를 SSIS 디자이너에 끌어 놓으면 나타나는 **새 원본 추가** 대화 상자에서 사용할 수 있는 옵션을 보여 줍니다.  

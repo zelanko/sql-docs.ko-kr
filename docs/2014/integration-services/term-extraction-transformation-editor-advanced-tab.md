@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 87118281-6e3c-499e-bac4-fa4c24bb12c6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6c783a06d5d5518639e6368f5c1eb572e60206b5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 377d6161f7aeb7be5b0ab4278967ac2cd6b6c057
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962263"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440050"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>용어 추출 변환 편집기(고급 탭)
   **용어 추출 변환 편집기** 대화 상자의 **고급** 탭을 사용하여 빈도, 길이 및 단어 또는 구 추출 여부와 같은 추출에 대한 속성을 지정할 수 있습니다.  

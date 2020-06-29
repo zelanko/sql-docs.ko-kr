@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: 52ed1a97-2dbb-4ad8-89b5-4748103e89fa
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f16df0120e58b987009f0e8e674901e27bbfbe43
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 192620afe223b6c11e8ce646a15da3ddcc3258e3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965133"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440110"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>다중 플랫 파일 연결 관리자 편집기(미리 보기 페이지)
   **다중 플랫 파일 연결 관리자 편집기** 대화 상자의 **미리 보기** 페이지를 사용하여 첫 번째로 선택한 원본 파일의 내용을 정의할 때 해당 내용을 열로 구분해서 볼 수 있습니다.  

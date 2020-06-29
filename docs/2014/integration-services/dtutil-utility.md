@@ -22,14 +22,14 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b7dc27ea31f17d011a8ad486f6dd9f4a101db2ee
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 11dd13bbf431413efe10f4ecdb0031b5a1650242
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966977"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437510"
 ---
 # <a name="dtutil-utility"></a>Encrypt
   **dtutil** 명령 프롬프트 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 관리합니다. 이 유틸리티는 패키지를 복사, 이동, 삭제하거나 패키지가 있는지 여부를 확인할 수 있습니다. 해당 동작은 [!INCLUDE[ssIS](../includes/ssis-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] 데이터베이스, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 패키지 저장소 및 파일 시스템의 세 위치 중 하나에 저장된 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지에서 수행할 수 있습니다. 유틸리티가 **msdb**에 저장된 패키지에 액세스하는 경우 명령 프롬프트에 사용자 이름과 암호를 입력해야 할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하면 사용자 이름과 암호를 모두 입력해야 합니다. 사용자 이름이 누락된 경우 **dtutil** 은 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 로그온하려고 시도합니다. 패키지 스토리지 유형은 `/SQL`, `/FILE` 및 `/DTS` 옵션으로 식별됩니다.  
@@ -116,7 +116,7 @@ dtutil /option [value] [/option [value]]...
 ## <a name="dtutil-exit-codes"></a>dtutil 종료 코드  
  **dtutil** 은 구문 오류가 있거나, 잘못된 인수가 사용되었거나, 잘못된 옵션 조합이 지정된 경우 경고를 표시하는 종료 코드를 설정합니다. 그 이외의 경우 이 유틸리티는 "작업이 완료되었습니다"라는 메시지를 표시합니다. 다음 표에는 **dtutil** 유틸리티가 종료 시 설정할 수 있는 값이 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0|유틸리티가 성공적으로 실행되었습니다.|  
 |1|유틸리티가 실패했습니다.|  
@@ -129,7 +129,7 @@ dtutil /option [value] [/option [value]]...
   
  명령줄에서 옵션 순서는 중요하지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 일반적인 명령줄 사용 시나리오를 보여 줍니다.  
   
 ### <a name="copy-examples"></a>복사 예  

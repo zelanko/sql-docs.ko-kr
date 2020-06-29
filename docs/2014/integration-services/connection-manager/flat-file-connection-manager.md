@@ -14,14 +14,14 @@ helpviewer_keywords:
 - flat files
 - flat file connections [Integration Services]
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e46c1ea54ba178fba73a1bfb2cc8ee296ca2b0d0
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 55d44369a0d6d57f876bb08475266955c87724b1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920894"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438470"
 ---
 # <a name="flat-file-connection-manager"></a>Flat File Connection Manager
   플랫 파일 연결 관리자를 사용하면 패키지에서 플랫 파일의 데이터에 액세스할 수 있습니다. 예를 들어 플랫 파일 원본 및 대상은 플랫 파일 연결 관리자를 사용하여 데이터를 추출 및 로드할 수 있습니다.  

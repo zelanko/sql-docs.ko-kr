@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5da68a6379c0d65c4d5a83af2b359f96784d4ae2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2a19d45b609f5e5ab848cdfc056966fe09c803eb
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84950923"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440180"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>다중 플랫 파일 연결 관리자 편집기(고급 페이지)
   **다중 플랫 파일 연결 관리자 편집기** 대화 상자의 **고급** 페이지를 사용하여 플랫 파일 연결 관리자에서 연결하는 텍스트 파일에 있는 각 열의 데이터 형식 및 구분 기호와 같은 속성을 설정할 수 있습니다.  

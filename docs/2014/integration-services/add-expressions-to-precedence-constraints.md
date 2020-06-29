@@ -14,14 +14,14 @@ helpviewer_keywords:
 - combining constraints
 - expressions [Integration Services], constraints
 ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 93b9b60d3042e690d2e3e23b05131fabe384e945
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3b86869a2b5d2e1ecd93227355509170db2bd5c7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926114"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439670"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>선행 제약 조건에 식 추가
   선행 제약 조건에서는 식을 사용하여 선행 실행 개체 및 제약 조건이 지정된 실행 개체 간의 제약 조건을 정의할 수 있습니다. 실행 개체는 태스크 또는 컨테이너일 수 있습니다. 식은 단독으로 사용되거나 선행 실행 개체의 실행 결과와 함께 사용될 수 있습니다. 실행 개체의 실행 결과는 성공 또는 실패입니다. 선행 제약 조건의 실행 결과를 구성할 경우 `Success`, `Failure` 또는 `Completion`으로 실행 결과를 지정할 수 있습니다. `Success`로 설정하려면 선행 실행 개체가 성공해야 하며, `Failure`는 선행 실행 개체가 실패해야 하며, `Completion`은 선행 태스크의 성공 또는 실패 여부에 관계없이 제약 조건이 지정된 실행 개체가 실행되어야 함을 나타냅니다. 자세한 내용은 [Precedence Constraints](control-flow/precedence-constraints.md)을(를) 참조하세요.  

@@ -10,14 +10,14 @@ f1_keywords:
 - SQL12.DTS.DESIGNER.AFPHDICM.F1
 - SQL11.DTS.DESIGNER.AFPHDICM.F1
 ms.assetid: 850a978d-5dba-45b6-a10e-306aafbc353d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0f4a54b2b7c7f809c570eacd0541d798b3f583a4
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0eaf2f57fec50a58ad1b7e7578407fb6cf3fa0c0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925252"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439360"
 ---
 # <a name="azure-hdinsight-connection-manager"></a>Azure HDInsight 연결 관리자
 **Azure HDInsight 연결 관리자**를 통해 SSIS 패키지는 Azure HDInsight 클러스터에 연결할 수 있습니다.

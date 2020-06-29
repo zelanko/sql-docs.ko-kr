@@ -15,14 +15,14 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - deploying packages [Integration Services], configurations
 ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5552d40cf2f899ca6b95658ac2aa50d5cc25f62f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8931df95aba03710c5feb8b8270dcf9453ba1789
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917350"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437920"
 ---
 # <a name="create-package-configurations"></a>패키지 구성 만들기
   **패키지 구성 도우미** 대화 상자 및 패키지 구성 마법사를 사용하여 패키지 구성을 만들 수 있습니다. 이 도구에 액세스하려면 **의** SSIS **메뉴에서** 패키지 구성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]을 클릭합니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "84917350"
   
  다음 표에서는 **패키지 구성 도우미** 대화 상자 구성 목록의 열에 대해 설명합니다.  
   
-|열|Description|  
+|열|설명|  
 |------------|-----------------|  
 |**구성 이름**|구성의 이름입니다.|  
 |**구성 유형**|구성의 유형입니다.|  

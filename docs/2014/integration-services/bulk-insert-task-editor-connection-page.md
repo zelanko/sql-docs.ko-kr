@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 045c2b6ced6326b0667b798027cfe4c87ca7a362
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b2cd722fd8520ff011c0d57040a55d624178e15e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924644"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439170"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>대량 삽입 태스크 편집기(연결 페이지)
   **대량 삽입 태스크 편집기** 대화 상자의 **연결** 페이지를 사용하여 대량 삽입 태스크의 원본 및 대상과 사용할 서식을 지정할 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "84924644"
  **Format**  
  대량 삽입을 위한 서식의 원본을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**파일 사용**|서식 지정을 포함하는 파일을 선택합니다. 이 옵션을 선택하면 동적 옵션 **FormatFile**이 표시됩니다.|  
 |**지정**|서식을 지정합니다. 이 옵션을 선택 하면 동적 옵션 및가 표시 됩니다 `RowDelimiter` `ColumnDelimiter` .|  

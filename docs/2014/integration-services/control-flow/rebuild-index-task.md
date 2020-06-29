@@ -13,14 +13,14 @@ helpviewer_keywords:
 - indexes [Integration Services]
 - Rebuild Index task
 ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 602f2f1065de7be8e1f18eafdd9d5e3cf0ff0a98
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 33bbe25bc8c47f4f749f95dbb7096c3a76c25297
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918521"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438250"
 ---
 # <a name="rebuild-index-task"></a>인덱스 다시 작성 태스크
   인덱스 다시 작성 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 테이블과 뷰의 인덱스를 다시 작성합니다. 인덱스 관리에 대한 자세한 내용은 [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)을 참조하세요.  

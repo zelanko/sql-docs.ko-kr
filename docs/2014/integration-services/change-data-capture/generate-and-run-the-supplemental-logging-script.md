@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - supLog
 ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 946b0a722ff0f0200c08404568bbeb385095b5f4
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6d0244eda0c337fe0f0ea4c361cca899fbb2ca8a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923190"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438660"
 ---
 # <a name="generate-and-run-the-supplemental-logging-script"></a>보완 로깅 스크립트 생성 및 실행
   변경 사항을 캡처하기 위한 테이블 선택 페이지를 사용하여 보완 로깅을 설정할 Oracle 원본 데이터베이스에서 스크립트를 실행할 수 있습니다.  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f50178e7-6d9a-45f9-bfce-61260aa882c1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dcabeab37e3fc82807958cc7c1f5772b4ada0347
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eeed332d6b41d8b81105b005df3011a39d0e084e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923617"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438840"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-how-to-guide"></a>Attunity Oracle CDC Service 방법 가이드
   이 섹션에서는 CDC Service 구성 콘솔에서 태스크를 수행하는 방법에 대해 설명합니다.  

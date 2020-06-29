@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.ssdqs.designer.cleansing.f1
 - SQL12.SSDQS.DESIGNER.DQCONNECTION.F1
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eaff1c5ac8ae5a804f546fc5e551dcb62e2fda7a
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3f16adec193cebde1d30d1455e68240622b4ded8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966910"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437430"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>DQS 정리 변환 편집기 대화 상자
   **DQS 정리 변환 편집기** 대화 상자를 통해 DQS(Data Quality Services)를 사용하여 데이터를 수정할 수 있습니다. 자세한 내용은 [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md)을(를) 참조하세요.  
@@ -67,7 +67,7 @@ ms.locfileid: "84966910"
   
  유효한 값은 다음과 같습니다.  
   
--   **구성 요소 실패**- 변환에 실패하여 Data Quality Services 데이터베이스에 입력 데이터가 삽입되지 않았음을 나타냅니다. 이것은 기본값입니다.  
+-   **구성 요소 실패**- 변환에 실패하여 Data Quality Services 데이터베이스에 입력 데이터가 삽입되지 않았음을 나타냅니다. 기본값입니다.  
   
 -   **행 리디렉션**- 입력 데이터가 Data Quality Services 데이터베이스에 삽입되지 않고 오류 출력으로 리디렉션되었음을 나타냅니다.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "84966910"
  **신뢰도**  
  수정된 데이터에 대한 신뢰 수준을 포함할지 여부를 나타냅니다. 신뢰 수준은 수정 내용 또는 제안 내용에 대한 DQS의 확신도를 나타냅니다. 신뢰 수준에 대한 자세한 내용은 [데이터 정리](../../2014/data-quality-services/data-cleansing.md)를 참조하세요.  
   
- **문서화**  
+ **이유**  
  데이터 수정 이유를 포함할지 여부를 나타냅니다.  
   
  **추가된 데이터**  

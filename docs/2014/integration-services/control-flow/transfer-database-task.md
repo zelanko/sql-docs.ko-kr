@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 43a4f930b93d8657bdb5c2d0f91d7e6680b9ade2
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fbc7c5cdadfa381cb493c08d4b50500f12f5db92
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918013"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438140"
 ---
 # <a name="transfer-database-task"></a>데이터베이스 전송 태스크
   데이터베이스 전송 태스크는 두 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 간에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터베이스를 전송합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 복사하여 전송하는 다른 태스크와 달리 데이터베이스 전송 태스크는 데이터베이스를 복사 또는 이동할 수 있습니다. 동일한 서버 내에서 데이터베이스를 복사하는 데도 전송 태스크를 사용할 수 있습니다.  

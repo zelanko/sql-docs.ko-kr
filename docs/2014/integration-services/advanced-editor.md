@@ -13,14 +13,14 @@ f1_keywords:
 - sql12.dts.designer.advancededitor.componentproperties.f1
 - sql12.dts.designer.advancededitor.connections.f1
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1f84e430e59c0acba99c4a1e9d6fe501f81d1997
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 632f519d045db314f6ed42d3b54bd792ae9981ce
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925704"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439530"
 ---
 # <a name="advanced-editor"></a>고급 편집기
   **고급 편집기** 대화 상자를 사용하여 선택한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체의 속성을 구성할 수 있습니다.  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Analysis Services Processing Task Editor
 ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4ae832263c3a025f53989761541e3278f5ea6a60
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0ab462b751215ed6573de20764f3dee0715e5f33
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925584"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439470"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Analysis Services 처리 태스크 편집기(Analysis Services 페이지)
   **Analysis Services 처리 태스크 편집기** 대화 상자의 **Analysis Services** 페이지를 사용하여 Analysis Services 연결 관리자를 지정하고, 처리할 분석 개체를 선택하고, 처리 및 오류 처리 옵션을 설정할 수 있습니다.  
@@ -45,10 +45,10 @@ ms.locfileid: "84925584"
  **관련 항목:** [Analysis Services Connection Manager](connection-manager/analysis-services-connection-manager.md), [Analysis Services 연결 관리자 추가 대화 상자 UI 참조](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **개체 목록**  
- |속성|Description|  
+ |속성|설명|  
 |--------------|-----------------|  
 |**개체 이름**|지정한 개체 이름을 나열합니다.|  
-|**형식**|지정한 개체의 유형을 나열합니다.|  
+|**Type**|지정한 개체의 유형을 나열합니다.|  
 |**처리 옵션**|목록에서 처리 옵션을 선택합니다.<br /><br /> **관련 항목**: [다차원 모델 개체 처리](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**설정**|지정한 개체에 대한 처리 설정을 나열합니다.|  
   
@@ -64,7 +64,7 @@ ms.locfileid: "84925584"
  **관련 항목:** [영향 분석 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
  **일괄 처리 설정 요약**  
- |속성|Description|  
+ |속성|설명|  
 |--------------|-----------------|  
 |**처리 순서**|개체가 순차적으로 또는 일괄 처리 방식으로 처리되는지 여부를 지정합니다. 병렬 처리가 사용되면 동시에 처리할 개체 수를 지정합니다.|  
 |**트랜잭션 모드**|순차적 처리를 위한 트랜잭션 모드를 지정합니다.|  

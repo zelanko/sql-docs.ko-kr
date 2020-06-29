@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Integration Services packages, security
 - SQL Server Integration Services packages, security
 ms.assetid: 1088aafc-14c5-4e7d-9930-606a24c3049b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ad5bc2dbecd153192d7a2a3115d83ecfa1cb765c
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7dd6fbed4bedc285069306ab4c400f0f67f9f293
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926528"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439790"
 ---
 # <a name="access-to-the-integration-services-service"></a>Integration Services 서비스 액세스
   패키지 보호 수준으로 패키지를 편집 및 실행할 수 있는 사용자를 제한할 수 있지만, 현재 서버에서 실행 중인 패키지 목록을 볼 수 있는 사용자 및 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 현재 실행 중인 패키지를 중지할 수 있는 사용자를 제한하려면 보다 높은 수준의 보호가 필요합니다.  

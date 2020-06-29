@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Script component [Integration Services], about Script component
 - Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4921ddbfd1b7066d94aa18ae4cec68d702dc4223
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 65a5c846313ad6d7d840c272c23c16698530547f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939394"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437560"
 ---
 # <a name="script-component"></a>스크립트 구성 요소
   스크립트 구성 요소는 스크립트를 호스팅하고 패키지에서 사용자 지정 스크립트 코드를 포함시키고 실행할 수 있도록 합니다. 패키지의 스크립트 구성 요소는 다음 용도로 사용할 수 있습니다.  

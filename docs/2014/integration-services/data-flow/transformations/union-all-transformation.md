@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b65e6f445ef82b3ee2bd5a06a63b031e6d884d1f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 49f33b6d8d754f71390c80ee439870a533198027
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939234"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437530"
 ---
 # <a name="union-all-transformation"></a>UNION ALL 변환
   UNION ALL 변환은 여러 개의 입력을 하나의 출력으로 결합합니다. 예를 들어 5개 플랫 파일 원본의 출력이 UNION ALL 변환의 입력이 되어 하나의 출력으로 결합될 수 있습니다.  

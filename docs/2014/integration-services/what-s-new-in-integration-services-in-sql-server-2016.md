@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Integration Services, what's new
 - what's new [Integration Services]
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1d17451c8706722b0dac21d777f35a17fe319799
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 84f0b668407c89e1d6acc3c8cfbda73f129ca19a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972473"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439860"
 ---
 # <a name="what39s-new-integration-services"></a>새&#39;s (Integration Services)
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]는 이전 릴리스에서 변경 되지 않았습니다.  

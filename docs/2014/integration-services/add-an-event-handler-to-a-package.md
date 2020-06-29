@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - event handlers [Integration Services], creating
 ms.assetid: 5e56885d-8658-480a-bed9-3f2f8003fd78
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b20ebca153e9aa1eead2e288831a26c40e2dbd5d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 378b8c95f5b7f4ed1e247a89f3e3ad6111654303
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926284"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439710"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>패키지에 이벤트 처리기 추가
   컨테이너와 태스크는 런타임에 이벤트를 발생시킵니다. 이벤트가 발생할 때 워크플로를 실행하여 이벤트에 응답하는 사용자 지정 이벤트 처리기를 만들 수 있습니다. 예를 들어 태스크가 실패하면 전자 메일 메시지를 보내는 이벤트 처리기를 만들 수 있습니다.  

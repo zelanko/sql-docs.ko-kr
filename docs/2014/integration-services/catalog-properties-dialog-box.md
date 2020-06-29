@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.ssis.ssms.iscatalogprop.general.f1
 - sql12.ssis.ssms.iscreatecatalog.f1
 ms.assetid: 3e2fcf11-e010-41c6-bc26-e4b281c0bfbc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8f5bf6ecd9b78e4e7c35c63a1b84316d59da7a10
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9f1a4a9d7a74e47d609c319f90b07d8ebfdce00e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924564"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439140"
 ---
 # <a name="catalog-properties-dialog-box"></a>카탈로그 속성 대화 상자
   카탈로그 속성 대화 상자를 사용하여 SSISDB 카탈로그를 구성할 수 있습니다. 카탈로그 속성은 중요 한 데이터가 암호화 되는 방법, 작업 및 프로젝트 버전 관리 데이터가 보존 되는 방법 및 유효성 검사 작업의 제한 시간이 초과 되는 경우를 정의 합니다. SSISDB 카탈로그는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트, 패키지, 매개 변수 및 환경에 대 한 중앙 저장소 및 관리 지점입니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "84924564"
 ### <a name="options"></a>옵션  
  다음 표에서는 대화 상자의 특정 속성과 catalog.catalog_property 뷰의 해당 속성에 대해 설명합니다.  
   
-|속성 이름(카탈로그 속성 대화 상자)|속성 이름(catalog.catalog_property 뷰)|Description|  
+|속성 이름(카탈로그 속성 대화 상자)|속성 이름(catalog.catalog_property 뷰)|설명|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |암호화 알고리즘 이름|ENCRYPTION_CLEANUP_ENABLED|카탈로그의 중요한 매개 변수 값을 암호화하는 데 사용되는 암호화 유형을 지정합니다. 가능한 값은 다음과 같습니다.<br /><br /> **DES**<br /><br /> **TRIPLE_DES**<br /><br /> **TRIPLE_DES_3KEY**<br /><br /> **DESPX**<br /><br /> **AES_128**<br /><br /> **AES_192**<br /><br /> **AES_256** (기본값)|  
 |유효성 검사 제한 시간(초)|VALIDATION_TIMEOUT|프로젝트 유효성 검사 또는 패키지 유효성 검사가 중지되기 전에 실행될 수 있는 최대 기간(초)을 지정합니다. 기본값은 300초입니다.<br /><br /> 유효성 검사 수행은 비동기 작업입니다. 프로젝트나 패키지가 클수록 유효성 검사에 걸리는 시간이 길어집니다.<br /><br /> 프로젝트와 패키지의 유효성을 검사하는 방법은 [Integration Services Data Types in Expressions](expressions/integration-services-data-types-in-expressions.md)를 참조하십시오.|  

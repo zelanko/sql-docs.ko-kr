@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 030b10c2-6b88-4c2c-bf67-22994be25a60
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 15db72d9faf2683b02a359b928266c5456e3c9aa
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2de6ae3fa1d21e7f3d58187e20200f5624a53227
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923554"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438810"
 ---
 # <a name="connection-to-sql-server-for-delete"></a>삭제를 위해 SQL Server에 연결
   MSXDBCDC 데이터베이스에 대해 쓰기 권한이 포함된 데이터베이스 역할(예: **db_owner** 역할)이 없는 로그인이 Oracle CDC 인스턴스를 삭제하려고 시도하면 SQL Server에 연결 대화 상자가 표시됩니다.  

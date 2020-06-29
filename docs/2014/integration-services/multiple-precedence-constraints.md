@@ -12,14 +12,14 @@ helpviewer_keywords:
 - precedence constraints [Integration Services], multiple
 - constrained executables [Integration Services]
 ms.assetid: 71c53ead-3d19-4bc1-aafd-e5b32595b420
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 61939b09b4a4365c09089df2b52026e96f9427ee
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 16fefbbf886818989131710876564fc9e147a56a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965153"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440140"
 ---
 # <a name="multiple-precedence-constraints"></a>여러 선행 제약 조건
   선행 제약 조건은 두 개의 태스크, 두 개의 컨테이너 또는 각 태스크와 컨테이너를 하나씩 선택하여 두 개의 실행 개체를 참조합니다. 선행 제약 조건을 선행 실행 개체 및 제약 조건이 지정된 실행 개체라고 합니다. 제약 조건이 지정된 실행 개체에는 여러 선행 제약 조건이 포함될 수 있습니다. 자세한 내용은 [Precedence Constraints](control-flow/precedence-constraints.md)을(를) 참조하세요.  

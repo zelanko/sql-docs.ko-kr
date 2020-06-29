@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data flow [Integration Services], copying objects
 - connection managers [Integration Services], copying
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4bd8a4c3ce267052062725b0328039cc4a5c7076
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d6f98e60468c35814d6ce85c5ef52786580555c2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917576"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437990"
 ---
 # <a name="copy-package-objects"></a>패키지 개체 복사
   이 항목에서는 한 패키지 내에서 또는 패키지 간에 제어 흐름 항목, 데이터 흐름 항목 및 연결 관리자를 복사하는 방법에 대해 설명합니다.  

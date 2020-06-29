@@ -11,13 +11,13 @@ f1_keywords:
 - SQL11.DTS.DESIGNER.AFPADLSCM.F1
 ms.assetid: 7f1323f9-9dc3-4378-9c70-bbc65bfeabfd
 author: yualan
-ms.author: janinez
-ms.openlocfilehash: db1db5b066e5540d64121993e6126edefa3b8124
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.author: chugu
+ms.openlocfilehash: 89278c4d6a099214a75f3c7898558f1f1ce4fd0c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925414"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439430"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 연결 관리자
   **Azure Data Lake Store 연결 관리자** 를 사용하면 두 가지 인증 유형 즉, Azure AD 사용자 ID와 Azure AD 서비스 ID를 통해 SSIS 패키지를 Azure Data Lake Store 서비스에 연결할 수 있습니다.  

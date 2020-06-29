@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e0780086554b121c95f947643d0005511fa9319b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e842f91a6c0313dd749c8fdeefec2e7a57fd5609
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915843"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437800"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>변경 유형에 따라 CDC 스트림 전송
   CDC 분할자 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 하나의 CDC 원본이 들어 있어야 합니다.  

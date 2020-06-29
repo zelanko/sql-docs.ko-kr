@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a41158c6ab83491c10c702619a9da46f096a4bfa
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 186a0633b168c551514705a0494b63f080884373
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951687"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437490"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   현재 버전의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 프로젝트를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에서는 환경을 사용하여 패키지를 관리하고, 패키지를 실행하고, 패키지에 대한 런타임 값을 구성할 수 있습니다.  

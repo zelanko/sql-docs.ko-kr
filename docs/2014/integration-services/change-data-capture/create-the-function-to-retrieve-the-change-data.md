@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 90f754abc2e10732c33c011fdaf8fcd06c0175a4
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cc1d5af0a64225aca4ff54570ad6504d25d62812
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923454"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438800"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>변경 데이터 검색을 위한 함수 만들기
   변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 제어 흐름을 완료한 후 다음 태스크는 변경 데이터를 검색하는 테이블 반환 함수를 만드는 것입니다. 첫 번째 증분 로드 전에 이 함수를 한 번만 만들면 됩니다.  

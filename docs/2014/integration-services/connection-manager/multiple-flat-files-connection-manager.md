@@ -14,14 +14,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], Multiple Flat Files
 - multiple flat file connections
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5dcad5e767f16054385f30e95e15bd8a598d9fdd
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 15084294d26be8afc8e933c7c7c4066506ef3fd9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920655"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438370"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>다중 플랫 파일 연결 관리자
   다중 플랫 파일 연결 관리자를 사용하면 패키지에서 다중 플랫 파일의 데이터에 액세스할 수 있습니다. 예를 들어 데이터 흐름 태스크가 For 루프 컨테이너와 같은 루프 컨테이너 내부에 있는 경우 플랫 파일 원본에서 다중 플랫 파일 연결 관리자를 사용할 수 있습니다. 각 컨테이너 루프에서 플랫 파일 원본은 다중 플랫 파일 연결 관리자가 제공하는 다음 파일 이름에서 데이터를 로드합니다.  

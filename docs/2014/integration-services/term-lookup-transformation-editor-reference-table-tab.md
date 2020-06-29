@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: 86ccec6d-615b-4f84-9226-ff80d8012f17
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9c00aa838b5bf420862cfe2793c404989ad911c9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 53e41dd7a3c2d3613244be402ee070630647ff19
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962088"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439970"
 ---
 # <a name="term-lookup-transformation-editor-reference-table-tab"></a>용어 조회 변환 편집기(참조 테이블 탭)
   **용어 조회 변환 편집기** 대화 상자의 **참조 테이블** 탭을 사용하여 참조(조회) 테이블에 대한 연결을 지정할 수 있습니다.  

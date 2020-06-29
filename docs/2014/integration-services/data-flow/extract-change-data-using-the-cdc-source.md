@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e0e4fe1f3c7920f034103a4fca6df3460ff4aea7
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 32c1865f7ec7472aa91f6d55b5f4d76628736b3a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915813"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437820"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>CDC 원본을 사용하여 변경 데이터 추출
   CDC 원본을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 하나의 CDC 제어 태스크가 이미 들어 있어야 합니다.  

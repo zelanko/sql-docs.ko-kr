@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 254680ce380b88aca01184bb744a7dde1b8e5611
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8c642c100e41574a525578c3392aedbc82ac419a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972481"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439850"
 ---
 # <a name="web-service-task-editor-general-page"></a>웹 서비스 태스크 편집기(일반 페이지)
   **웹 서비스 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 HTTP 연결 관리자를 지정하고, 웹 서비스 태스크에 사용하는 WSDL(웹 서비스 기술 언어) 파일의 위치를 지정하고, 웹 서비스 태스크를 설명하고, WSDL 파일을 다운로드할 수 있습니다.  

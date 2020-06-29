@@ -10,14 +10,14 @@ f1_keywords:
 - SQL11.SSIS.AZURE.F1
 - SQL12.SSIS.AZURE.F1
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7c99d4c9c561345a49faa595e080985731656bc3
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: abcad704ed02655c03a970d3fe4b80556b96cf69
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925424"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439400"
 ---
 # <a name="azure-feature-pack"></a>Azure 기능 팩
 Azure용 SSIS(SQL Server Integration Services) 기능 팩은 Azure 서비스에 연결하고, Azure 및 온-프레미스 데이터 원본 간에 데이터를 전송하고, Azure에 저장된 데이터를 처리하기 위해 SSIS에 이 페이지에 나열된 구성 요소를 제공하는 확장 프로그램입니다.
@@ -72,7 +72,7 @@ Azure용 SSIS(SQL Server Integration Services) 기능 팩을 다운로드합니�
   
 -   [Azure용 Microsoft SQL Server 2014 Integration Services 기능 팩](https://www.microsoft.com/download/details.aspx?id=47366)  
 
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>전제 조건  
 이 기능 팩을 설치하기 전에 다음과 같은 필수 조건을 설치해야 합니다.  
   
 -   SQL Server Integration Services  
