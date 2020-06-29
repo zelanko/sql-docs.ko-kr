@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.dts.designer.destinationassistant.f1
 - SQL12.DTS.DESIGNER.DESTINATIONASSIST.F1
 ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fe1a39f16c9c7675f7683f2a30f9520573083765
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 62b496b825d60aecdcc78872ccf9fb629988836a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915953"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432170"
 ---
 # <a name="destination-assistant"></a>대상 길잡이
   대상 길잡이 구성 요소는 대상 구성 요소 및 연결 관리자 만들기를 도와줍니다. 이 구성 요소는 SSIS 도구 상자의 **즐겨찾기** 섹션에 있습니다.  

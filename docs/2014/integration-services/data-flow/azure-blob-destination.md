@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.dts.designer.afpblobdest.f1
 - sql11.dts.designer.afpblobdest.f1
 ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5a64cfd2385cb510163ca5c2f66db64a86dd00bc
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fb406d38b17748e8284acee4b2849a9fd99e53ac
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916693"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432390"
 ---
 # <a name="azure-blob-destination"></a>Azure Blob 대상
   SSIS 패키지는 **Azure Blob 대상** 구성 요소를 통해 Azure Blob에 데이터를 쓸 수 있습니다. 지원되는 파일 형식은 CSV 및 AVRO입니다. **Azure Blob 대상** 을 데이터 흐름 디자이너에 끌어서 놓은 다음 두 번 클릭 하 여 편집기를 표시 합니다.  

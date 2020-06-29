@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 173a540821afd20bfe5931472eae066cb82bfa7f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 405f798bd0344ece545ce319a1994e0f2c4f98db
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915003"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431766"
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC Source Custom Properties
   다음 표에서는 ODBC 원본의 사용자 지정 속성을 설명합니다. 모든 속성은 SSIS 속성 식에서 설정할 수 있습니다.  

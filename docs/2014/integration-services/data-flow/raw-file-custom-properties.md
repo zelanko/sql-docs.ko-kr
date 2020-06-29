@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 83065ca2b878b51045d548d04e97b70d40716926
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: baa16324dc716a8df002776a1533f8fa78c8eefd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84914773"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431530"
 ---
 # <a name="raw-file-custom-properties"></a>원시 파일 사용자 지정 속성
   **원본 사용자 지정 속성**  

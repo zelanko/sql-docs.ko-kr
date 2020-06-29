@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 212688d5dddaa84b1b7c6aee3fe4ebbb6415e8a9
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 053b34add45354d0df71fa73a72f8786cc706d15
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916867"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432440"
 ---
 # <a name="data-flow-taps"></a>데이터 흐름 탭
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]에는 런타임에 패키지의 데이터 흐름 경로에서 데이터 탭을 추가하고, 데이터 탭의 출력을 외부 파일에 전달할 수 있는 새로운 기능이 도입되었습니다. 이 기능을 사용하려면 프로젝트 배포 모델을 사용하여 SSIS 프로젝트를 SSIS 서버에 배포해야 합니다. 서버에 패키지를 배포한 후에는 패키지를 실행하기 전에 SSISDB 데이터베이스에 대해 T-SQL 스크립트를 실행하여 데이터 탭을 추가해야 합니다. 다음은 예제 시나리오입니다.  
@@ -75,7 +75,7 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
 ## <a name="performance-consideration"></a>성능 고려 사항  
  자세한 로깅 수준을 사용하도록 설정하고 데이터 탭을 추가하면 데이터 통합 솔루션에서 수행되는 I/O 작업이 증가합니다. 따라서 문제 해결을 위해서만 데이터 탭을 추가하는 것이 좋습니다.  
   
-## <a name="video"></a>비디오  
+## <a name="video"></a>동영상  
  이 [TechNet 비디오](https://technet.microsoft.com/sqlserver/dn600163) 에서는 프로그래밍 방식으로 패키지를 디버깅하고 런타임에 일부 결과를 캡처하는 데 도움이 되도록 SQL Server 2012 SSISDB 카탈로그에 데이터 탭을 추가/사용하는 방법을 보여 줍니다. 이러한 데이터 탭을 나열/제거하는 방법과 함께 SSIS 패키지의 데이터 탭을 사용하기 위한 최선의 구현 방법에 대해서도 설명합니다.  
   
 ## <a name="related-tasks"></a>관련 작업  

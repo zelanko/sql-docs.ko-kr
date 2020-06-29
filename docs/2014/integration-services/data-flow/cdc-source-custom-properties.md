@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 744e9357-94a9-4202-abe8-1d3d202697e9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ebb2869899ab670a55ba2fcdafdfb1276f9207fa
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9a20ef31d1d7239d2788c5575d5cbcfcc32bc115
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916625"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432370"
 ---
 # <a name="cdc-source-custom-properties"></a>CDC 원본 사용자 지정 속성
   다음 표에서는 CDC 원본의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  

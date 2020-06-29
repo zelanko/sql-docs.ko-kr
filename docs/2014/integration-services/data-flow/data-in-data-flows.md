@@ -14,14 +14,14 @@ helpviewer_keywords:
 - string comparisons
 - data flow [Integration Services], data options
 ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: abce2a7e9c2c75b497a40965f3b4742ed7278bca
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a073db65768c413b6cbe648c757ad75d80bd318e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916090"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432230"
 ---
 # <a name="data-in-data-flows"></a>데이터 흐름의 데이터
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 데이터 흐름에 사용되는 데이터 형식 집합이 제공됩니다.  

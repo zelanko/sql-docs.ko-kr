@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3eac4413-0c90-4b06-8f7e-d0d72f4d869d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b159eaf782724466906110ae8f3ed42d2eb6f9c0
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 04d5f9a669fbccc798698914c919e63d90e04591
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84914885"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431600"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>파티션 처리 대상 사용자 지정 속성
   파티션 처리 대상에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  

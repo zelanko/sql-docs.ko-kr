@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6bdb65c464e63f8e7ab248c49f6dca729add3004
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 61ecaa07074ed21d6f0b93c7cc544f4487431a64
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915993"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432190"
 ---
 # <a name="define-a-state-variable"></a>상태 변수 정의
   이 절차에서는 CDC 상태가 저장되는 패키지 변수를 정의하는 방법을 설명합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "84915993"
   
  다음 표에는 가능한 CDC 상태 값에 대한 설명이 나와 있습니다.  
   
-|시스템 상태|Description|  
+|시스템 상태|설명|  
 |-----------|-----------------|  
 |(INITIAL)|현재 CDC 그룹에서 패키지가 실행되기 전의 초기 상태입니다. CDC 상태가 비어 있을 때의 상태이기도 합니다.|  
 |ILSTART(초기 로드 시작)|CDC 제어 태스크에 대한 `MarkInitialLoadStart` 작업 호출 이후 초기 로드 패키지를 시작할 때의 상태입니다.|  

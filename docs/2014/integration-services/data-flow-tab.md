@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataflowwindow.f1
 ms.assetid: ffd7ab42-d7ae-4e7c-86a1-a4364a37c91e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a84f6acf89490bf12b09db6017d305e15b45abd3
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 29504391addbc4dc76da6d0d9b612386ed4f6bee
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916899"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432460"
 ---
 # <a name="data-flow-tab"></a>데이터 흐름 탭
   **디자이너의** 데이터 흐름 [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭을 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에 데이터 흐름을 만들 수 있습니다.  

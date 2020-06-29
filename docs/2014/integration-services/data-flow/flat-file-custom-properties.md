@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f83cf140b370783d21ee2254e7361a2ae3467424
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 685abe5eec37eba41a8e3c1e1ee5ce6df49947a3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915543"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432150"
 ---
 # <a name="flat-file-custom-properties"></a>플랫 파일 사용자 지정 속성
   **원본 사용자 지정 속성**  

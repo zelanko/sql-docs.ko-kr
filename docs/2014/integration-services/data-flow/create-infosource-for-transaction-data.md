@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 230378a1073516c35d2df5bd48a449aaed610823
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b40ffa639b693af18752a34b8f57be90c679027f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916338"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432280"
 ---
 # <a name="create-infosource-for-transaction-data"></a>트랜잭션 데이터용 InfoSource 만들기
   **트랜잭션 데이터용 InfoSource 만들기** 대화 상자를 사용하여 SAP Netweaver BW 시스템에서 트랜잭션 데이터용으로 새 InfoSource를 만들 수 있습니다.  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - history tables [SQL Server]
 - History Cleanup task [Integration Services]
 ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a5b71480ef7396e935e80f9d94633a5278446700
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 84bc697b7fb18269fc581cea51e111aebc82c15e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918803"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432932"
 ---
 # <a name="history-cleanup-task"></a>기록 정리 태스크
   기록 정리 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 데이터베이스의 다음 기록 테이블에서 항목을 삭제합니다.  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.loaddimwizard.finish.f1
 ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 25e68290102d545f0ccb4bbc019616671f7602a2
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1efce0cbfe052827aea40fc529b11cad469b463e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939555"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430580"
 ---
 # <a name="finish-the-slowly-changing-dimension-wizard"></a>느린 변경 차원 마법사 완료
   **느린 변경 차원 마법사 완료** 대화 상자를 사용하여 마법사가 느린 변경 차원에 대한 지원 기능을 구성하기 전에 선택한 내용을 확인할 수 있습니다.  

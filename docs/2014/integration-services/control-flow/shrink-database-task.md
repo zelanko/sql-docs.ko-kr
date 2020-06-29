@@ -13,14 +13,14 @@ helpviewer_keywords:
 - database shrinking [Integration Services]
 - shrinking databases
 ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0217014f5de3941f8071939a4fcb108f00023fd3
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 587777928e362e87e4b691e3c46167c1239984cf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918113"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432750"
 ---
 # <a name="shrink-database-task"></a>데이터베이스 축소 태스크
   데이터베이스 축소 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 데이터와 로그 파일의 크기를 줄입니다.  

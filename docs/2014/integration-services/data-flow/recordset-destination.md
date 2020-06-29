@@ -14,14 +14,14 @@ helpviewer_keywords:
 - destinations [Integration Services], Recordset
 - in-memory ADO recordsets [Integration Services]
 ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4e70a6ac51e21950110772e62930a8f636e03f9d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c1acc29c904e9020721e8ac62dff09a8ec29a392
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84914703"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431490"
 ---
 # <a name="recordset-destination"></a>레코드 집합 대상
   레코드 집합 대상은 메모리 내 ADO 레코드 집합을 만들고 채웁니다. 레코드 집합의 모양은 디자인 타임에 레코드 집합 대상에 대한 입력에 의해 정의됩니다.  

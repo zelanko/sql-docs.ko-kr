@@ -11,14 +11,14 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: aa6e88fec83b6d70a7f96f91ea09b4fcd6ad13c9
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9ca00dfe612f5735f767d50c66ebbb0e079bc39c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915693"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432180"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>OLE DB 원본을 사용하여 데이터 추출
   OLE DB 원본을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크가 이미 들어 있어야 합니다.  

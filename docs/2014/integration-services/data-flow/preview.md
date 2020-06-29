@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 551494c4-9e27-4592-9200-c6bf19e80c9a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fe4af63e4252f95bd0e234d318e264ff0adc7017
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 16e970112cbf55adf68ddf3bb246aa46a04a2f33
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84914863"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431660"
 ---
 # <a name="preview"></a>미리 보기
   **미리 보기** 대화 상자를 사용하여 SAP BW 원본이 추출할 데이터를 미리 볼 수 있습니다.  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - mapping query parameters to variables [Integration Services]
 - variables [Integration Services], mapping parameters to
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4a1d86dce6be4ed342fe8d90fefe53649533b816
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d2d9c9470364c13380751e3e7aca1fef13973a76
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915243"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432010"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>쿼리 매개 변수를 데이터 흐름 구성 요소의 변수에 매핑
   매개 변수가 있는 쿼리를 사용하도록 OLE DB 원본을 구성할 경우 매개 변수를 변수에 매핑할 수 있습니다.  

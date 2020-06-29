@@ -17,14 +17,14 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9f414053bcc3f51ffc737a84a3b693fb0e924a7b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a5227175e80db3a8f31a8b8db8c3d6bee3061bae
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915063"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431920"
 ---
 # <a name="ole-db-destination"></a>OLE DB 대상
   OLE DB 대상은 데이터베이스 테이블이나 뷰 또는 SQL 명령을 사용하여 다양한 OLE DB 호환 데이터베이스로 데이터를 로드합니다. 예를 들어 OLE DB 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 테이블로 데이터를 로드할 수 있습니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "84915063"
   
  **OLE DB 대상 편집기** 대화 상자에 표시된 빠른 로드 옵션 외에도 **고급 편집기** 대화 상자의 FastLoadOptions 속성에 옵션을 입력하여 다음과 같은 대량 로드 옵션을 사용하도록 OLE DB 대상을 구성할 수 있습니다.  
   
-|빠른 로드 옵션|Description|  
+|빠른 로드 옵션|설명|  
 |----------------------|-----------------|  
 |KILOBYTES_PER_BATCH|삽입할 크기(KB)를 지정합니다. 옵션에는 `KILOBYTES_PER_BATCH`  =  \<positive integer value**> * * 형식이 있습니다.|  
 |FIRE_TRIGGERS|테이블 삽입에 대한 트리거 시작 여부를 지정합니다. 이 옵션은 **FIRE_TRIGGERS**형식으로 입력합니다. 이 옵션이 있으면 트리거가 시작됨을 나타냅니다.|  

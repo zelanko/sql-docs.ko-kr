@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f747c2638af420c61861465cd65d5af65ca53e05
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ec67a0330bca614e5224b01d8df81a5e07ff8e95
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915453"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432140"
 ---
 # <a name="look-up-infoobject"></a>InfoObject 조회
   **InfoObject 조회** 대화 상자에서는 SAP Netweaver BW 시스템에 정의된 InfoObject를 조회할 수 있습니다. 사용할 수 있는 InfoObject 목록이 표시될 때 원하는 InfoObject를 선택하면 관련 옵션이 SAP BW 대상의 값으로 채워집니다.  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 54422b13b39de1e39f86ad653ecea95cdca02784
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d0780e96d2779fadba7110b8eae02c5fe095d4b5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918345"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433020"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>데이터 프로파일링 태스크 설정
   원본 데이터의 프로필을 검토하기 전에 수행해야 하는 첫 번째 단계는 데이터 프로파일링 태스크를 설정하고 실행하는 것입니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 내에서 이 태스크를 만듭니다. 데이터 프로파일링 태스크를 구성하려면 데이터 프로파일링 태스크 편집기를 사용합니다. 이 편집기를 사용하면 프로필을 출력할 위치와 컴퓨팅할 프로필을 선택할 수 있습니다. 태스크를 설정한 후 패키지를 실행하여 데이터 프로필을 컴퓨팅합니다.  

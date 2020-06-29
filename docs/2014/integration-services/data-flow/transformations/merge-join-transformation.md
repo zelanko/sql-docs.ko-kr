@@ -15,14 +15,14 @@ helpviewer_keywords:
 - joining datasets [Integration Services]
 - joins [SQL Server], SSIS
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a35556b066a4a4c1458caa3696d8d34ef50f7056
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0e489ccd60039cc45667571e504ef1e1a5ffdea6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939434"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430270"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
   병합 조인 변환은 FULL, LEFT 또는 INNER 조인으로 두 개의 정렬된 데이터 세트를 조인하여 생성된 출력을 제공합니다. 예를 들어 LEFT 조인을 사용하여 제품 정보가 포함된 테이블을 제품 제조 국가/지역이 나열된 테이블과 조인할 수 있습니다. 조인 결과로 모든 제품과 제조 국가/지역이 나열된 테이블이 생성됩니다.  

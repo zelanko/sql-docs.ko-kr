@@ -27,14 +27,14 @@ helpviewer_keywords:
 - missing values replaced [Integration Services]
 - similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4003c60117165e6f12b0ab128a0545d3afca507f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eaa71fc0a12529b33dc8e10b401b0f2241783806
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939540"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430600"
 ---
 # <a name="fuzzy-lookup-transformation"></a>유사 항목 조회 변환
   유사 항목 조회 변환은 데이터 표준화, 데이터 수정, 누락된 값 제공 등 데이터 정리 태스크를 수행합니다.  

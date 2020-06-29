@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2c355c95c5e6c686a063c4c32081aa0740f8e2fd
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 51f92ddc8903a5c9dea9982866a22a19b013f41a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915213"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431980"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>런타임에 OData 원본 쿼리 수정
   데이터 흐름 태스크의 **[OData Source].[Query]** 속성에 식을 추가하여 런타임에 OData 원본 쿼리를 수정할 수 있습니다.  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - multiple sorts
 - duplicate data [Integration Services]
 ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ae30620804f81653fa6d28e881ca7896685fa458
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7039d02b6cc55355c3b27e5694474df4666570ef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939294"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430130"
 ---
 # <a name="sort-transformation"></a>정렬 변환
   정렬 변환은 입력 데이터를 오름차순이나 내림차순으로 정렬하고 정렬된 데이터를 변환 출력에 복사합니다. 입력에 여러 가지 정렬을 적용할 수 있으며 각 정렬은 정렬 순서를 결정하는 숫자로 식별됩니다. 숫자가 가장 적은 열이 맨 먼저 정렬되고 그 다음 숫자의 정렬 열이 다음에 정렬됩니다. 예를 들어 **CountryRegion** 열이 정렬 순서 1이고 **City** 열이 정렬 순서 2인 경우 출력은 먼저 국가/지역별로 정렬된 다음 도시별로 정렬됩니다. 양수는 오름차순 정렬을 나타내고 음수는 내림차순 정렬을 나타냅니다. 정렬되지 않은 열의 정렬 순서는 0입니다. 정렬이 선택되지 않은 열은 정렬된 열과 함께 자동으로 변환 출력에 복사됩니다.  
