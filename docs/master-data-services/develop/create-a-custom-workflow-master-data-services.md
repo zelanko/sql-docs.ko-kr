@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f5d4d302aae5bbfe813bcda328989440b118dee3
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: 70c386b6b86ffd29b6cbb999a8e4ec561b8e2838
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83730798"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469438"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>사용자 지정 워크플로 만들기(Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "83730798"
 ## <a name="configure-master-data-services-for-custom-workflows"></a>사용자 지정 워크플로용 MDS(Master Data Services) 구성  
  사용자 지정 워크플로를 만들려면 사용자 지정 코드를 일부 작성하고 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]가 워크플로 데이터를 사용자 워크플로 처리기로 전달하도록 구성해야 합니다. 사용자 지정 워크플로 처리를 사용하려면 다음 단계를 수행하십시오.  
   
-1.  <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>를 구현하는 .NET 어셈블리를 만듭니다.  
+1.  [MasterDataServices] (/previous-versions/sql/sql-server-2016/hh758785 (v =)를 구현 하는 .NET 어셈블리를 만듭니다.  
   
 2.  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스에 연결하고 사용자 워크플로 처리기에 태그를 연결하기 위해 SQL Server MDS Workflow Integration Service를 구성합니다.  
   
@@ -53,26 +53,26 @@ ms.locfileid: "83730798"
 5.  사용자 지정 워크플로를 트리거하는 멤버에 비즈니스 규칙을 적용합니다.  
   
 ### <a name="create-the-workflow-handler-assembly"></a>워크플로 처리기 어셈블리 만들기  
- 사용자 지정 워크플로는 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 인터페이스를 구현하는 .NET 클래스 라이브러리 어셈블리입니다. SQL Server MDS Workflow Integration Service는 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 메서드를 호출하여 사용자 코드를 실행합니다. <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>를 구현하는 예제 코드는 [사용자 지정 워크플로 예제&#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)를 참조하세요.  
+ 사용자 지정 워크플로는 [MasterDataServices](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) 를 구현 하는 .net 클래스 라이브러리 어셈블리로 서,. SQL Server MDS 워크플로 통합 서비스는 코드를 실행 하기 위해 [MasterDataServices 워크플로 *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) 메서드를 호출 합니다. [MasterDataServices](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) 를 구현 하는 예제 코드는 [사용자 지정 워크플로 예제 &#40;MDS(Master Data Services)&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)를 참조 하세요.  
   
  Visual Studio 2010을 사용하여 사용자 지정 워크플로를 처리하기 위해 SQL Server MDS Workflow Integration Service가 호출할 수 있는 어셈블리를 만들려면 다음 단계를 수행하십시오.  
   
 1.  Visual Studio 2010에서 원하는 언어를 사용하는 새 **클래스 라이브러리** 프로젝트를 만듭니다. C# 클래스 라이브러리를 만들려면 **Visual C#\Windows** 프로젝트 형식을 선택하고 **클래스 라이브러리** 템플릿을 선택합니다. 프로젝트 이름(예: **MDSWorkflowTest**)을 입력하고 **확인**을 클릭합니다.  
   
-2.  Microsoft.MasterDataServices.WorkflowTypeExtender.dll에 대한 참조를 추가합니다. 이 어셈블리는 \<설치 폴더>\Master Data Services\WebApplication\bin에 있습니다.  
+2.  Microsoft.MasterDataServices.WorkflowTypeExtender.dll에 대한 참조를 추가합니다. 이 어셈블리는 \<Your installation folder> \Master Data services\webapplication\bin에서 찾을 수 있습니다.  
   
 3.  'using Microsoft.MasterDataServices.Core.Workflow;'를 C# 코드 파일에 추가합니다.  
   
-4.  클래스 선언에 있는 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>에서 상속합니다. 클래스 선언은 'public class WorkflowTester : IWorkflowTypeExtender'와 비슷해야 합니다.  
+4.  클래스 선언의 MasterDataServices에서 상속 합니다. [IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) 를 상속 합니다. 클래스 선언은 'public class WorkflowTester : IWorkflowTypeExtender'와 비슷해야 합니다.  
   
-5.  <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 인터페이스를 구현합니다. SQL Server MDS Workflow Integration Service가 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 메서드를 호출하여 워크플로를 시작합니다.  
+5.  MasterDataServices을 구현 합니다. [iworkflowtypeextender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) 인터페이스를 구현 합니다. [MasterDataServices](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) 를 호출 하 여 워크플로를 시작 하는 SQL Server MDS 워크플로 통합 서비스에 의해 호출 됩니다.  
   
-6.  \<설치 폴더>\Master Data Services\WebApplication\bin에 있는 SQL Server MDS Workflow Integration Service 실행 파일인 Microsoft.MasterDataServices.Workflow.exe의 위치로 어셈블리를 복사합니다.  
+6.  \Master Data Services\webapplication\bin에서 Microsoft.MasterDataServices.Workflow.exe 이라는 SQL Server MDS 워크플로 통합 서비스 실행 파일의 위치로 어셈블리를 복사 합니다. \<Your installation folder>  
   
 ### <a name="configure-sql-server-mds-workflow-integration-service"></a>SQL Server MDS Workflow Integration Service 구성  
  다음 단계에 따라 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 구성 파일을 편집하여 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스에 대한 연결 정보를 포함하고 사용자 워크플로 처리기 어셈블리에 태그를 연결하십시오.  
   
-1.  \<설치 폴더>\Master Data Services\WebApplication\bin에서 Microsoft.MasterDataServices.Workflow.exe.config를 찾습니다.  
+1.  \<Your installation folder>\Master Data services\webapplication\bin에서 Microsoft.MasterDataServices.Workflow.exe.config 찾기  
   
 2.  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스 연결 정보를 "ConnectionString" 설정에 추가합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 대/소문자 구분 데이터 정렬이 사용되는 경우에는 데이터베이스에 사용된 것과 동일하게 대/소문자를 구분하여 데이터베이스 이름을 입력해야 합니다. 예를 들어, 완전한 설정 태그는 다음과 같습니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "83730798"
     </setting>  
     ```  
   
-3.  "ConnectionString" 설정 아래에 "WorkflowTypeExtenders" 설정을 추가하여 사용자 워크플로 처리기 어셈블리에 태그 이름을 연결합니다. 예를 들어:  
+3.  "ConnectionString" 설정 아래에 "WorkflowTypeExtenders" 설정을 추가하여 사용자 워크플로 처리기 어셈블리에 태그 이름을 연결합니다. 예를 들면 다음과 같습니다.  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  
@@ -90,7 +90,7 @@ ms.locfileid: "83730798"
     </setting>  
     ```  
   
-     \<value> 태그의 내부 텍스트 형식은 \<Workflow tag>=\<assembly-qualified workflow type name>입니다. \<Workflow tag>는 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에서 비즈니스 규칙을 만들 때 워크플로 처리기 어셈블리를 식별하는 데 사용하는 이름입니다. \<assembly-qualified workflow type name>은 워크플로 클래스의 네임스페이스로 한정된 이름, 쉼표, 어셈블리의 표시 이름을 차례로 입력한 것입니다. 어셈블리가 강력한 이름으로 지정되어 있는 경우 버전 정보와 해당 PublicKeyToken도 포함해야 합니다. 서로 다른 워크플로에 대해 여러 워크플로 처리기를 만든 경우 여러 \<setting> 태그를 포함할 수 있습니다.  
+     태그의 내부 텍스트는 \<value> 형식입니다 \<Workflow tag> = \<assembly-qualified workflow type name> . \<Workflow tag>는에서 비즈니스 규칙을 만들 때 워크플로 처리기 어셈블리를 식별 하는 데 사용 하는 이름입니다 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . \<assembly-qualified workflow type name>은 (는) 워크플로 클래스의 네임 스페이스로 한정 된 이름이 고, 쉼표 뒤에는 어셈블리의 표시 이름이 옵니다. 어셈블리가 강력한 이름으로 지정되어 있는 경우 버전 정보와 해당 PublicKeyToken도 포함해야 합니다. 여러 \<setting> 종류의 워크플로에 대해 여러 워크플로 처리기를 만든 경우 여러 태그를 포함할 수 있습니다.  
   
 > [!NOTE]  
 >  서버 구성에 따라 Microsoft.MasterDataServices.Workflow.exe.config 파일을 저장할 때 "액세스가 거부되었습니다." 오류가 표시될 수 있습니다. 이 경우 서버에서 UAC(사용자 계정 컨트롤)를 일시적으로 비활성화하십시오. 이렇게 하려면 제어판을 열고 **시스템 및 보안**을 클릭합니다. **알림 센터**에서 **사용자 계정 컨트롤 설정 변경**을 클릭합니다. **사용자 계정 컨트롤 설정** 대화 상자에서 알림을 받지 않도록 막대를 맨 아래로 이동합니다. 컴퓨터를 다시 시작하고 이전 단계를 반복하여 구성 파일을 편집합니다. 파일을 저장한 후 UAC 설정을 기본 수준으로 다시 설정합니다.  
@@ -104,7 +104,7 @@ ms.locfileid: "83730798"
   
 3.  mds_workflow_service 사용자에게 워크플로 처리기 어셈블리를 실행하기 위한 사용 권한을 부여합니다. 이렇게 하려면 mds_workflow_service 사용자를 워크플로 처리기 어셈블리의 **속성**에 대한 **보안** 탭에 추가하고 mds_workflow_service 사용자에게 READ 및 EXECUTE 권한을 부여합니다.  
   
-4.  mds_workflow_service 사용자에게 SQL Server MDS Workflow Integration Service 실행 파일을 실행하기 위한 사용 권한을 부여합니다. 이렇게 하려면 mds_workflow_service 사용자를 \<설치 폴더>\Master Data Services\WebApplication\bin에 있는 Microsoft.MasterDataServices.Workflow.exe의 **속성**에 대한 **보안** 탭에 추가하고 mds_workflow_service 사용자에게 READ 및 EXECUTE 권한을 부여합니다.  
+4.  mds_workflow_service 사용자에게 SQL Server MDS Workflow Integration Service 실행 파일을 실행하기 위한 사용 권한을 부여합니다. 이렇게 하려면 \Master Data Services\WebApplication\bin에서 Microsoft.MasterDataServices.Workflow.exe **속성** 의 **보안** 탭에 mds_workflow_service 사용자를 추가 하 \<Your installation folder> 고 mds_workflow_service 사용자에 게 읽기 및 실행 권한을 부여 합니다.  
   
 5.  InstallUtil.exe라는 .NET 설치 유틸리티를 사용하여 SQL Server MDS Workflow Integration Service를 설치합니다. InstallUtil.exe는 .NET 설치 폴더(예: C:\Windows\Microsoft.NET\Framework\v4.0.30319\\)에 있습니다. 높은 권한의 명령 프롬프트에 다음을 입력하여 SQL Server MDS Workflow Integration Service를 설치합니다.  
   

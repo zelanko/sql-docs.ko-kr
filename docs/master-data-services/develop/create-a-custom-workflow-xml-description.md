@@ -10,18 +10,18 @@ ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 72c8ec8fb062566c3d071c0e62a1acf6775d3700
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: b584b65135d950ce06abd9c15db5f3ccf132bbce
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83730756"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469418"
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>사용자 지정 워크플로 만들기 - XML 설명
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]에서 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 메서드는 워크플로 시작 시 SQL Server MDS Workflow Integration Service가 호출합니다. 이 메서드는 워크플로 비즈니스 규칙을 트리거한 항목에 대한 메타데이터 및 데이터를 XML 블록으로 받습니다. 워크플로 처리기를 구현하는 예제 코드는 [사용자 지정 워크플로 예제&#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)를 참조하세요.  
+  에서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [MasterDataServices](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) 는 워크플로가 시작 될 때 MDS 워크플로 통합 서비스를 SQL Server 하 여 호출 하는 것입니다. 이 메서드는 워크플로 비즈니스 규칙을 트리거한 항목에 대한 메타데이터 및 데이터를 XML 블록으로 받습니다. 워크플로 처리기를 구현하는 예제 코드는 [사용자 지정 워크플로 예제&#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)를 참조하세요.  
   
  다음 예제에서는 워크플로 처리기로 전송되는 XML을 보여 줍니다.  
   
@@ -65,14 +65,14 @@ ms.locfileid: "83730756"
   
  다음 표에서는 이 XML에 포함되는 태그 일부에 대해 설명합니다.  
   
-|태그|설명|  
+|태그|Description|  
 |---------|-----------------|  
 |\<Type>|로드할 사용자 지정 워크플로 어셈블리를 식별하기 위해 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에서 **워크플로 유형** 입력란에 입력한 텍스트입니다.|  
-|\<SendData>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에서 **메시지에 멤버 데이터 포함** 확인란으로 제어하는 부울 값입니다. 값 1을 지정하면 \<MemberData> 섹션이 전송되고, 다른 값을 지정하면 \<MemberData> 섹션이 전송되지 않습니다.|  
+|\<SendData>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에서 **메시지에 멤버 데이터 포함** 확인란으로 제어하는 부울 값입니다. 값이 1 이면 \<MemberData> 섹션이 전송 되 고, 그렇지 않으면 \<MemberData> 섹션이 전송 되지 않습니다.|  
 |<Server_URL>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에서 **워크플로 사이트** 입력란에 입력한 텍스트입니다.|  
 |<Action_ID>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에서 **워크플로 이름** 입력란에 입력한 텍스트입니다.|  
-|\<MemberData>|워크플로 동작을 트리거한 멤버의 데이터를 포함합니다. 이 태그는 \<SendData>의 값이 1인 경우에만 포함됩니다.|  
-|\<*Xxx* 입력>|이 태그 집합에는 멤버 생성에 대한 메타데이터(예: 만든 날짜, 만든 사람 등)가 포함됩니다.|  
+|\<MemberData>|워크플로 동작을 트리거한 멤버의 데이터를 포함합니다. 의 값이 1 인 경우에만 포함 됩니다 \<SendData> .|  
+|\<Enter*xxx*>|이 태그 집합에는 멤버 생성에 대한 메타데이터(예: 만든 날짜, 만든 사람 등)가 포함됩니다.|  
 |\<LastChg*xxx*>|이 태그 집합에는 멤버에 적용된 마지막 변경 내용에 대한 메타데이터(예: 변경 내용을 적용한 날짜, 변경 내용을 적용한 사람 등)가 포함됩니다.|  
 |\<Name>|변경된 멤버의 첫 번째 특성입니다. 이 예제 멤버에는 Name 및 Code 특성만 포함되어 있습니다.|  
 |\<Code>|변경된 멤버의 다음 특성입니다. 이 예제 멤버에 더 많은 특성이 포함될 경우 해당 특성은 이 특성 다음에 오게 됩니다.|  

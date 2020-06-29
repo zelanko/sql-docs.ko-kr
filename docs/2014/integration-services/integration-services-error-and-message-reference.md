@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 73186e55435f22545c5779ccd1925b4cb8be6d75
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: cfe6ed509cfa14ab97379df64f21562cb58d30b9
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85436640"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469308"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 오류 및 메시지 참조
-  다음 표에서는 각 범주별로 미리 정의된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류, 경고 및 정보 메시지를 숫자 코드 및 심볼 이름과 함께 오름차순으로 나열합니다. 이러한 각 오류는 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 네임스페이스에 있는 <xref:Microsoft.SqlServer.Dts.Runtime> 클래스의 필드로 정의됩니다.  
+  다음 표에서는 각 범주별로 미리 정의된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류, 경고 및 정보 메시지를 숫자 코드 및 심볼 이름과 함께 오름차순으로 나열합니다. 이러한 각 오류는 네임 스페이스의 [Microsoft. Runtime. Runtime](/dotnet/api/microsoft.sqlserver.dts.runtime.hresults) 클래스에서 필드로 정의 됩니다. <xref:Microsoft.SqlServer.Dts.Runtime>  
   
  이 목록은 아무런 설명 없이 오류가 발생할 경우 유용할 수 있습니다. 이 목록에는 현재 문제 해결 정보는 들어 있지 않습니다.  
   
