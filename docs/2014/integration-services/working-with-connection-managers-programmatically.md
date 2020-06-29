@@ -9,14 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - connection managers [Integration Services], programming
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6053418c624c2ab107a35a02c382576dcb41a534
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e6e9725f7ecdbc1625c74f4c650f6f3215dc64ee
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972443"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419910"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>프로그래밍 방식으로 연결 관리자 사용
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 관련된 연결 관리자 클래스의 AcquireConnection 메서드는 관리 코드에서 연결 관리자를 사용할 때 가장 자주 호출하는 메서드입니다. 관리 코드를 작성할 때 연결 관리자의 기능을 사용하려면 AcquireConnection 메서드를 호출해야 합니다. 스크립트 태스크, 스크립트 구성 요소, 사용자 지정 개체 또는 사용자 지정 애플리케이션 중 어느 항목에서 관리 코드를 작성하든 관계없이 이 메서드를 호출해야 합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "84972443"
 |MULTIFILE|다중 파일 연결 관리자|`System.String`|파일 중 하나에 대한 경로입니다.|  
 |MULTIFLATFILE|다중 플랫 파일 연결 관리자|`System.String`|파일 중 하나에 대한 경로입니다.|  
 |SMOServer|SMO 연결 관리자|`Microsoft.SqlServer.Management.Smo.Server`||  
-|SMTP|SMTP 연결 관리자|`System.String`|예: `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
+|SMTP|SMTP 연결 관리자|`System.String`|`SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
 |WMI|WMI 연결 관리자|`System.Management.ManagementScope`||  
 |SQLMOBILE|SQL Server Compact 연결 관리자|`System.Data.SqlServerCe.SqlCeConnection`||  
   

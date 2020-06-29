@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b3a44a21e375d37115f71ff8762b941bd87ef2ae
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 61e511aaff6c3c77338211537a685f8a1dc82981
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972723"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420610"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>패키지 실행을 위한 덤프 파일 생성
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 패키지 실행에 대한 정보를 제공하는 디버그 덤프 파일을 만들 수 있습니다. 이러한 파일의 정보는 패키지 실행 문제를 해결하는 데 도움이 됩니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "84972723"
   
  다음 표에서는 .tmp 파일의 특정 섹션에 대해서만 설명합니다. .tmp 파일에는 이 표에 나열되지 않은 추가 데이터가 포함되어 있습니다.  
   
-|정보 유형|Description|예제|  
+|정보 유형|설명|예제|  
 |-------------------------|-----------------|-------------|  
 |환경|운영 체제 버전, 메모리 사용량 현황 데이터, 프로세스 ID 및 프로세스 이미지 이름. 환경 정보는 .tmp 파일의 시작 부분에 있습니다.|# SSIS Textual Dump taken at 9/13/2007 1:50:34 PM<br /><br /> #PID 4120<br /><br /> #Image Name [C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Running on 2 amd64 processors under WOW64<br /><br /> # Memory: 58% in use. Physical: 845M/2044M  Paging: 2404M/4095M (avail/total)|  
 |DLL(동적 연결 라이브러리) 경로 및 버전|패키지 처리 시 시스템에서 로드하는 각 DLL의 경로 및 버전 번호|# Loaded Module: c:\bb\Sql\DTS\src\bin\debug\i386\DTExec.exe (10.0.1069.5)<br /><br /> # Loaded Module: C:\Windows\SysWOW64\ntdll.dll (6.0.6000.16386)<br /><br /> # Loaded Module: C:\Windows\syswow64\kernel32.dll (6.0.6000.16386)|  

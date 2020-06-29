@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.treeview.f1
 ms.assetid: fdcd93fc-fe9a-40ec-bac3-5f303cd83eaf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c09a6f967b85d19a8d07563862537787d45f1b42
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fd0842cc37bfde02d47be6f7cf9dcebc7241006b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962483"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420970"
 ---
 # <a name="ssis-package-explorer-tab"></a>SSIS 패키지 탐색기 탭
   **디자이너의** 패키지 탐색기 [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭을 사용하여 패키지에 있는 구성, 연결, 이벤트 처리기, 태스크 및 컨테이너와 같은 실행 개체, 로그 공급자, 선행 제약 조건, 변수와 같은 요소를 모두 계층적으로 볼 수 있습니다. 패키지에 데이터 흐름 태스크가 있는 경우 **패키지 탐색기** 탭에는 데이터 흐름 구성 요소의 계층 뷰를 포함하는 노드가 포함됩니다.  

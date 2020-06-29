@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Unpivot Transformation Editor
 ms.assetid: 72a36ef0-4070-4f6c-9c74-0720109617dd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 45430eea18d533855e00021f5fda46d80ac0e0c2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 45aeb428f0905b7bf96900b6d592ff11963d8f4d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972653"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420320"
 ---
 # <a name="unpivot-transformation-editor"></a>피벗 해제 변환 편집기
   **피벗 해제 변환 편집기** 대화 상자를 사용하여 행에 피벗할 열을 선택하고 데이터 열 및 새 피벗 값 출력 열을 지정할 수 있습니다.  

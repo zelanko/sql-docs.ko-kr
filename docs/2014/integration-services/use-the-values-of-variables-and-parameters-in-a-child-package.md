@@ -12,14 +12,14 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - variables [Integration Services], adding
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 19f96adc9932b888f3304257fb9a23a22b06cc87
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a1ace15be59c7102547b4faedf70adc811bd140e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972613"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420200"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>자식 패키지에서 변수 및 매개 변수의 값 사용
   이 절차에서는 부모 변수 구성 유형을 사용하는 패키지 구성을 만드는 방법에 대해 설명합니다. 이 구성 유형을 사용하여 부모 패키지에서 실행되는 자식 패키지가 부모 변수에 액세스하도록 설정할 수 있습니다.  

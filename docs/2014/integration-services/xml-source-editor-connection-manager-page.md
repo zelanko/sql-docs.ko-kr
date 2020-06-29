@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e0df8c4cf72574df16ad42445434592faeae8548
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ead9ad63b6dfc7d144c0d9e748ad01b847774d85
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972373"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419730"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>XML 원본 편집기(연결 관리자 페이지)
   **XML 원본 편집기** 의 **연결 관리자** 페이지를 사용하여 XML 데이터를 변환할 XML 파일 및 XSD를 지정할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "84972373"
  **데이터 액세스 모드**  
  원본에서 데이터를 선택하는 방법을 지정합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |XML 파일 위치|XML 파일에서 데이터를 검색합니다.|  
 |변수를 사용한 XML 파일|변수에 XML 파일 이름을 지정합니다.<br /><br /> **관련 정보**: [패키지에서 변수 사용](../../2014/integration-services/use-variables-in-packages.md)|  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Destination Editor
 ms.assetid: 423e1654-54af-47c6-ab6f-98670534557d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 44b7a2b45ca77af87457ae0f4e908ec0a667ff79
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9d11bf1042b19831e09739bc3b08d6a242404b70
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962813"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421290"
 ---
 # <a name="sql-destination-editor-connection-manager-page"></a>SQL 대상 편집기(연결 관리자 페이지)
   **SQL 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 데이터 원본 정보를 지정하고 결과를 미리 볼 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]대상은 데이터베이스의 테이블 또는 뷰로 데이터를 로드 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 합니다.  

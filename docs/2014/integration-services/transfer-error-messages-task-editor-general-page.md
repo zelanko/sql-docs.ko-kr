@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Error Messages Task Editor
 ms.assetid: 67b21f48-4795-4128-81dc-743f7a95ef74
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3a89818eac194ff6d980fcfc801014584ee1f724
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c656b2399586025a316bb32c97496efad0648e93
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972855"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420770"
 ---
 # <a name="transfer-error-messages-task-editor-general-page"></a>오류 메시지 전송 태스크 편집기(일반 페이지)
   **오류 메시지 전송 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 오류 메시지 전송 태스크의 이름을 지정하고 해당 태스크를 설명할 수 있습니다. 오류 메시지 전송 태스크에서는 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용자 정의 오류 메시지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스 간에 전송합니다. 이 태스크에 대한 자세한 내용은 [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md)를 참조하십시오.  

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - expressions [Integration Services], data flow components
 ms.assetid: 9181b998-d24a-41fb-bb3c-14eee34f910d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d08d256946fbeb2f5b70057fc0d6992758b3a211
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0c996889b6127bb8ea16bab077bfd9d757921b11
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972633"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420350"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>데이터 흐름 구성 요소에서 식 사용
   이 절차에서는 조건부 분할 변환 또는 파생 열 변환에 식을 추가하는 방법을 설명합니다. 조건부 분할 변환에서는 데이터 행을 변환 출력으로 바꾸는 조건을 정의하는 데 식을 사용하며 파생 열 변환에서는 열에 할당된 값을 정의하는 데 식을 사용합니다.  

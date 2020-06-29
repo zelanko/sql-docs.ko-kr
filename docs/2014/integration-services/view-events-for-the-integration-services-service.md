@@ -11,14 +11,14 @@ helpviewer_keywords:
 - service [Integration Services], events
 - Integration Services service, events
 ms.assetid: 37e23946-10d1-4116-8568-8fd24067102e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5d79e68ddd375a0e61a07a48dec413034a822419
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 57340afcbe1914b5e54ded06c8a7384ff33fd901
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972573"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420140"
 ---
 # <a name="view-events-for-the-integration-services-service"></a>Integration Services 서비스의 뷰 이벤트
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스의 이벤트는 다음 두 도구를 사용하여 볼 수 있습니다.  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cfe0e5dc-5be3-4222-b721-fe83665edd94
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 32a3b5a0c32949239488b86dc1209183e95ac9ff
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 813339fea4db41433ca73e47245cb9c87f393421
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962473"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420940"
 ---
 # <a name="ssis-package-format"></a>SSIS 패키지 형식
   현재 버전의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 보다 쉽게 형식을 읽고 패키지를 비교할 수 있도록 패키지 형식(.dtsx 파일)이 크게 변경되었습니다. 또한 이진 형식으로 저장 된 충돌 하는 변경 내용 또는 변경 내용이 포함 되지 않은 패키지를 더욱 안정적으로 병합할 수 있습니다.  

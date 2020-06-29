@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Union All Transformation Editor
 ms.assetid: 32fbc1c1-da83-4684-9479-31fc3e2df98c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6414b887ee88ddc0281ee86fd3236f026b8a3f28
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a7e84c106767aa897b2e419b51ca5b5c538501cf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972643"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420340"
 ---
 # <a name="union-all-transformation-editor"></a>UNION ALL 변환 편집기
   **UNION ALL 변환 편집기** 대화 상자를 사용하여 여러 개의 입력 행 집합을 단일 출력 행 집합으로 병합할 수 있습니다. Union All 변환을 데이터 흐름에 포함하면 여러 데이터 흐름의 데이터를 병합하고, Union All 변환을 중첩하여 복잡한 데이터 세트를 만들고, 데이터의 오류를 수정하고, 행을 다시 병합할 수 있습니다.  

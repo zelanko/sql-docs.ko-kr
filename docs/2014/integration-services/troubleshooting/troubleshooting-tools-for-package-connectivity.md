@@ -14,14 +14,14 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2dbeca0a1f49484061c894b33b9022a63cede712
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fce781a80b03e937f875214a74c60aeacf016246
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972685"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420460"
 ---
 # <a name="troubleshooting-tools-package-connectivity"></a>패키지 연결 문제 해결 도구
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 패키지와 패키지가 데이터를 추출 및 로드하는 데이터 원본 간 연결 문제를 해결하는 데 사용할 수 있는 기능 및 도구를 제공합니다.  

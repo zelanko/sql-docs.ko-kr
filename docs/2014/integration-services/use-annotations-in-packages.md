@@ -11,14 +11,14 @@ helpviewer_keywords:
 - adding annotations
 - annotations [Integration Services]
 ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a5a454e34a9a81e90a0f02de7a640631ab8ce027
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 27c7df6afd894ea9730027da1d54786ed8397fad
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972603"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420231"
 ---
 # <a name="use-annotations-in-packages"></a>패키지에서 주석 사용
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너는 패키지에 대한 설명을 제공하고 이해 및 유지 관리를 쉽게 하기 위해 사용할 수 있는 주석을 제공합니다. 주석은 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너의 제어 흐름, 데이터 흐름 및 이벤트 처리기에 추가할 수 있습니다. 주석에는 모든 종류의 텍스트가 포함될 수 있으며 패키지에 레이블, 설명 및 기타 설명 정보를 추가하는 데 유용합니다. 주석은 디자인 타임 전용 기능입니다. 예를 들어 주석은 로그에 기록되지 않습니다.  

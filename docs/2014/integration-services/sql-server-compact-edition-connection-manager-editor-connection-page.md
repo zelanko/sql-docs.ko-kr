@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Compact Connection Manager Editor
 ms.assetid: b72584b8-4289-41d3-bed8-5e5393adc356
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 557e849713ff6a58172dfbc3ddcd8e0816ef2b7f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 082bbd8737fa102c74474118395098a3b46125a2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962788"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421190"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>SQL Server Compact Edition 연결 관리자 편집기(연결 페이지)
   **SQL Server Compact Edition 연결 관리자** 대화 상자를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 데이터베이스에 연결하기 위한 속성을 지정할 수 있습니다.  

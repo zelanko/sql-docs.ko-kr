@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Choose Variable Columns dialog box
 ms.assetid: 7cccc230-3b20-4074-804f-3448d9616a83
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b0e53d710c6c3310641a30144a42ea5f614dffd6
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6cf956c2a29e03095b12cc323d267ebc0c43ae3e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972583"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420130"
 ---
 # <a name="variable-grid-options"></a>가변 눈금 옵션
   **가변 눈금 옵션** 대화 상자를 사용하여 **변수** 창에 표시될 열을 선택하고 변수 목록에 적용할 필터를 선택할 수 있습니다. 해당 변수 속성에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)를 참조하세요.  

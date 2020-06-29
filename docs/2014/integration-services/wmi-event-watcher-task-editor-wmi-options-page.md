@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - WMI Event Watcher Task Editor
 ms.assetid: 525f3de7-a021-4e52-9939-3a83c88f131a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b330e63d802d0801f4473bb1a1422c5bf79c35e2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a64ac51999d15ad226894540d3eb2819164e90e2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972413"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419850"
 ---
 # <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>WMI 이벤트 감시자 태스크 편집기(WMI 옵션 페이지)
   **WMI 이벤트 감시자 태스크 편집기** 대화 상자의 **WMI 옵션** 페이지를 사용하여 WQL(Windows Management Instrumentation Query Language) 쿼리의 원본 및 WMI 이벤트 감시자 태스크가 Microsoft Windows Instrumentation(WMI) 이벤트에 응답하는 방식을 지정할 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "84972413"
  **WQLQuerySourceType**  
  태스크에서 실행하는 WQL 쿼리의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**직접 입력**|WQL 쿼리에 대한 원본을 설정합니다. 이 값을 선택하면 동적 옵션 **WQLQuerySource**가 표시됩니다.|  
 |**파일 연결**|WQL 쿼리가 포함된 파일을 선택합니다. 이 값을 선택하면 동적 옵션 **WQLQuerySource**가 표시됩니다.|  

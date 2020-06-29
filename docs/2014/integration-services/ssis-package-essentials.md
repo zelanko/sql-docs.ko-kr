@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - package requirements
 ms.assetid: b0c86c35-e3d3-4724-9a96-4087e9d74bf3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 608fae64df45e8cf84c1b72e37eb501df7758613
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2c4e3f6637c4e9fd65b0218b8489372355b3608f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962543"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421051"
 ---
 # <a name="ssis-package-essentials"></a>SSIS 패키지 주요 사항
   패키지는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 기능을 구현하여 데이터를 추출, 변환 및 로드하는 개체입니다. 패키지는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 의 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]디자이너를 사용하여 만들거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사나 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 연결 프로젝트 마법사를 사용하여 만들 수도 있습니다. 자세한 내용은 SSIS 디자이너 및 [프로젝트 가져오기 마법사](../../2014/integration-services/import-project-wizard.md)의 [SQL Server Data Tools에서 패키지를 만듭니다](create-packages-in-sql-server-data-tools.md) .  

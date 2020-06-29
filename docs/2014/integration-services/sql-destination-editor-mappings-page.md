@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Destination Editor
 ms.assetid: 3ca00cf8-3460-43e9-9705-af4c530f7fbd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d2ad2ed1689494918080aaad85eb8f84efedc711
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c65f4fece56a32c184afb7e983b075f4820a1876
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962673"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421120"
 ---
 # <a name="sql-destination-editor-mappings-page"></a>SQL 대상 편집기(매핑 페이지)
   **SQL 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  

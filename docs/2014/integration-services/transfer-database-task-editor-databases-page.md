@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Database Task Editor
 ms.assetid: ccdb74d0-4bea-420c-a726-2e0eb8957e0a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 398e3f3d8496d26c2672ad6d11557c0058a594ee
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fddfbf70b298614767429a8a006d264ad4853aa0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962093"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420850"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>데이터베이스 전송 태스크 편집기(데이터베이스 페이지)
   **데이터베이스 전송 태스크 편집기** 대화 상자의 **데이터베이스** 페이지를 사용하여 데이터베이스 전송 태스크와 관련된 원본 및 대상 데이터베이스의 속성을 지정할 수 있습니다. 데이터베이스 전송 태스크에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 두 인스턴스 간에 복사 또는 이동합니다. 동일한 서버 내에서 데이터베이스를 복사하는 데도 전송 태스크를 사용할 수 있습니다. 이 태스크에 대한 자세한 내용은 [데이터베이스 전송 태스크](control-flow/transfer-database-task.md)를 참조하세요.  
@@ -52,10 +52,10 @@ ms.locfileid: "84962093"
   
  이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**True**|대상 서버 데이터베이스를 덮어씁니다.|  
-|**False**|대상 서버 데이터베이스를 덮어쓰지 않습니다.|  
+|**허위**|대상 서버 데이터베이스를 덮어쓰지 않습니다.|  
   
 > [!CAUTION]  
 >  **DestinationOverwrite** 에 대해 **True**를 지정하면 대상 서버 데이터베이스의 데이터를 덮어쓰며 이로 인해 데이터가 손실될 수 있습니다. 이를 방지하려면 데이터베이스 전송 태스크를 실행하기 전에 대상 서버 데이터베이스를 다른 위치에 백업합니다.  
@@ -81,10 +81,10 @@ ms.locfileid: "84962093"
   
  이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**True**|원본 데이터베이스를 다시 연결합니다.|  
-|**False**|원본 데이터베이스를 다시 연결하지 않습니다.|  
+|**허위**|원본 데이터베이스를 다시 연결하지 않습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   

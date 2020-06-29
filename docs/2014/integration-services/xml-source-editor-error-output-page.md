@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: 2ddb97c2-1e43-478f-8872-b6efd41b931e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5ef142bf30473222bb39babce35b6bac59a6b848
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6d25aea1c1b42015c0384460a166d937d8c4919c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972363"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419590"
 ---
 # <a name="xml-source-editor-error-output-page"></a>XML 원본 편집기(오류 출력 페이지)
   **XML 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택하고 오류 출력 열에 속성을 설정할 수 있습니다.  

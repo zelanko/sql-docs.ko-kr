@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Compact Connection Manager Editor
 ms.assetid: f9fbff4b-c502-44b3-8e7b-398d66e82206
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9e6b326e86e1a9e21a740c3bf1bd1fedb6919e98
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4ddfebf9f606a717eabbeeccbcf9fd79742f60dc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962749"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421260"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>SQL Server Compact Edition 연결 관리자 편집기(모든 페이지)
   **SQL Server Compact Edition 연결 관리자** 대화 상자를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 데이터베이스에 연결하기 위한 속성을 지정할 수 있습니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "84962749"
   
  다음 표에서는 모드 옵션의 4가지 값에 대해 설명합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**Read Only**|데이터베이스에 대한 읽기 전용 액세스 권한을 지정합니다.|  
 |**읽기 쓰기**|데이터베이스에 대한 읽기/쓰기 권한을 지정합니다.|  
