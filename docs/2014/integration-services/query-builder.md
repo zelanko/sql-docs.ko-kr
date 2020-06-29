@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Query Builder dialog box
 ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1a393352f7ec0f9384ed2d30b2909c9d9f2c1dc0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 81be066d92ef1e19a141414dad4359b60efca2f9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964623"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423160"
 ---
 # <a name="query-builder"></a>쿼리 작성기
   **쿼리 작성기** 대화 상자를 사용하여 SQL 실행 태스크, OLE DB 원본 및 대상, 조회 변환에서 사용할 쿼리를 만들 수 있습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "84964623"
  **]**  
  도구 모음을 사용하여 데이터 세트를 관리하고, 표시할 창을 선택하고, 쿼리 함수를 제어할 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**다이어그램 창 표시/숨기기**|**다이어그램** 창을 표시하거나 숨깁니다.|  
 |**표 형태 창 표시/숨기기**|**표 형태** 창을 표시하거나 숨깁니다.|  
@@ -62,7 +62,7 @@ ms.locfileid: "84964623"
  **쿼리 정의**  
  쿼리 정의에서는 쿼리를 정의 및 테스트할 수 있는 도구 모음 및 창을 사용할 수 있습니다.  
   
-|창|Description|  
+|창|설명|  
 |----------|-----------------|  
 |**다이어그램** 창|쿼리를 다이어그램에 표시합니다. 다이어그램은 쿼리에 포함된 테이블과 이러한 테이블의 조인 방법을 보여 줍니다. 쿼리 출력에 열을 추가하거나 제거하려면 테이블에서 해당 열의 옆에 있는 확인란을 선택하거나 선택을 취소합니다.<br /><br /> 쿼리에 테이블을 추가하면 쿼리 작성기에서 테이블의 키에 따라 테이블을 기반으로 테이블 간의 조인을 만듭니다. 조인을 추가하려면 한 테이블의 필드를 다른 테이블의 필드로 끌어 놓습니다. 조인을 관리하려면 해당 조인을 마우스 오른쪽 단추로 클릭한 다음 메뉴 옵션을 선택합니다.<br /><br /> **다이어그램** 창을 마우스 오른쪽 단추로 클릭 하 여 테이블을 추가 또는 제거 하 고, 모든 테이블을 선택 하 고, 창을 표시 하거나 숨깁니다.|  
 |**표 형태** 창|쿼리를 표에 표시합니다. 이 창을 사용하여 쿼리에서 열을 추가 및 제거하고 각 열의 설정을 변경할 수 있습니다.|  

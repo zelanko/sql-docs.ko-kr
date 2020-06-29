@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Select SMO Enumeration dialog box
 ms.assetid: 64ada1fe-21a2-4675-98fc-d5c803aa32f0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9b112669457f9e9f675e00466896e4da91abd53d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 01f8570d0a4d16cf49654e13913ec8b819bb37bd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963698"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421890"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>SMO 열거 선택 대화 상자
   **SMO 열거 선택** 대화 상자를 사용하여 지정한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 열거할 SMO( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects) 개체를 지정할 수 있고 열거형을 선택할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "84963698"
  **미리 채우기**  
  Objects 열거형과 함께 **미리 채우기** 옵션을 사용합니다.  
   
- **이름을**  
+ **이름**  
  Names 열거형을 사용합니다.  
   
  **URN**  

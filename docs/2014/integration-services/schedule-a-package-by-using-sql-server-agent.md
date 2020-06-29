@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3d389cce-05af-4e1d-b684-7bbff413c806
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 56fc015eb3bf089e573ece9df73f8ff08c3423be
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f4dd958ebeae0a62f73e23e5b8fad66c3ec4e665
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964341"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422500"
 ---
 # <a name="schedule-a-package-by-using-sql-server-agent"></a>SQL Server 에이전트를 사용하여 패키지 예약
   다음 절차에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 작업 단계를 통해 패키지 실행을 자동화하여 패키지를 실행하는 단계를 제공합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "84964341"
   
      **다음 표에서는 패키지 원본에 대해 설명합니다.**  
   
-    |패키지 원본|Description|  
+    |패키지 원본|설명|  
     |--------------------|-----------------|  
     |**SSIS 카탈로그**|SSISDB 데이터베이스에 저장된 패키지입니다. 패키지는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포되는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 포함됩니다.|  
     |**SQL Server**|MSDB 데이터베이스에 저장된 패키지입니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스를 사용하여 패키지를 관리합니다.|  
@@ -95,7 +95,7 @@ ms.locfileid: "84964341"
     |**로깅**|로그 공급자를 패키지 실행과 연결합니다.<br /><br /> **텍스트 파일용 SSIS 로그 공급자**<br /> ASCII 텍스트 파일에 로그 항목을 기록합니다.<br /><br /> **SQL Server용 SSIS 로그 공급자**<br /> MSDB 데이터베이스의 sysssislog 테이블에 로그 항목을 기록합니다.<br /><br /> **SQL Server Profiler용 SSIS 로그 공급자**<br /> SQL Server 프로파일러를 사용하여 볼 수 있는 추적 정보를 기록합니다.<br /><br /> **Windows 이벤트 로그용 SSIS 로그 공급자**<br /> Windows 이벤트 로그의 애플리케이션 로그에 로그 항목을 기록합니다.<br /><br /> **XML 파일용 SSIS 로그 공급자**<br /> XML 파일에 로그 파일을 기록합니다.<br /><br /> 텍스트 파일, XML 파일 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로파일러 로그 공급자의 경우 패키지에 포함된 파일 연결 관리자를 선택합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그 공급자의 경우 패키지에 포함된 OLE DB 연결 관리자를 선택합니다.<br /><br /> 이 옵션은 `/Logger`의 `dtexec` 옵션에 해당합니다.|  
     |**값 설정**|패키지 속성 설정을 재정의합니다. **속성** 상자에서 **속성 경로** 및 **값** 열에 값을 입력합니다. 속성 하나에 대한 값을 입력하면, **속성** 상자에 빈 행이 나타나고 다른 속성에 대한 값을 입력할 수 있게 됩니다.<br /><br /> 속성 상자에서 속성을 제거하려면 행을 클릭한 다음 **제거**를 클릭합니다.<br /><br /> 다음 중 하나를 수행하여 속성 경로를 찾을 수 있습니다.<br /><br /> XML 구성 파일 (. ssistutorial.dtsconfig) 파일에서 속성 경로를 복사 \* 합니다. 경로는 파일의 구성 섹션에 경로 속성의 값으로 나열됩니다. 다음은 MaximumErrorCount 속성에 대한 경로의 예입니다.<br /><br /> \Package.Properties[MaximumErrorCount]<br /><br /> **패키지 구성 마법사** 를 실행 하 고 마지막 **마법사 완료** 페이지에서 속성 경로를 복사 합니다. 그런 다음 마법사를 취소할 수 있습니다.|  
     |**확인**|**서명된 패키지만 실행**<br /> 패키지 서명 확인 여부를 나타냅니다. 패키지가 서명되지 않았거나 서명이 잘못된 경우 패키지가 실패합니다. 이 옵션은 `/VerifySigned`의 `dtexec` 옵션에 해당합니다.<br /><br /> **패키지 빌드 확인**<br /> 패키지의 빌드 번호가 이 옵션 옆에 있는 **빌드** 상자에 입력된 빌드 번호와 비교하여 검증되었는지를 나타냅니다. 일치하지 않을 경우 패키지가 실행되지 않습니다. 이 옵션은 `/VerifyBuild`의 `dtexec` 옵션에 해당합니다.<br /><br /> **패키지 ID 확인**<br /> 패키지의 GUID가 이 옵션 옆에 있는 **패키지 ID** 상자에 입력된 package ID와 비교하여 검증되었는지를 나타냅니다. 이 옵션은 `/VerifyPackageID`의 `dtexec` 옵션에 해당합니다.<br /><br /> **버전 ID 확인**<br /> 패키지의 버전 GUID가 이 옵션 옆에 있는 **버전 ID** 상자에 입력된 버전 ID와 비교하여 검증되었는지를 나타냅니다. 이 옵션은 `/VerifyVersionID`의 `dtexec` 옵션에 해당합니다.|  
-    |**명령 줄**|dtexec의 명령줄 옵션을 수정합니다. 옵션에 대한 자세한 내용은 [dtexec Utility](packages/dtexec-utility.md)를 참조하십시오.<br /><br /> 팁: 명령줄을 명령 프롬프트 창에 복사 하 고,를 추가 하 `dtexec` 고, 명령줄에서 패키지를 실행할 수 있습니다. 이렇게 하면 명령줄 텍스트를 쉽게 만들 수 있습니다.<br /><br /> **원래 옵션 복원**<br /> **작업 단계 속성**대화 상자의 **패키지**, **구성**, **명령 파일**, **데이터 원본**, **실행 옵션**, **로깅**, **값 설정** , **확인** 탭에 설정한 명령줄 옵션을 사용합니다.<br /><br /> **수동으로 명령 편집**<br /> **명령줄** 상자에 명령줄 옵션을 추가로 입력합니다.<br /><br /> **확인** 을 클릭 하 여 작업 단계에 대 한 변경 내용을 저장 하기 전에 **원래 옵션 복원**을 클릭 하 여 **명령줄** 상자에서 입력 한 추가 옵션을 모두 제거할 수 있습니다.|  
+    |**명령줄**|dtexec의 명령줄 옵션을 수정합니다. 옵션에 대한 자세한 내용은 [dtexec Utility](packages/dtexec-utility.md)를 참조하십시오.<br /><br /> 팁: 명령줄을 명령 프롬프트 창에 복사 하 고,를 추가 하 `dtexec` 고, 명령줄에서 패키지를 실행할 수 있습니다. 이렇게 하면 명령줄 텍스트를 쉽게 만들 수 있습니다.<br /><br /> **원래 옵션 복원**<br /> **작업 단계 속성**대화 상자의 **패키지**, **구성**, **명령 파일**, **데이터 원본**, **실행 옵션**, **로깅**, **값 설정** , **확인** 탭에 설정한 명령줄 옵션을 사용합니다.<br /><br /> **수동으로 명령 편집**<br /> **명령줄** 상자에 명령줄 옵션을 추가로 입력합니다.<br /><br /> **확인** 을 클릭 하 여 작업 단계에 대 한 변경 내용을 저장 하기 전에 **원래 옵션 복원**을 클릭 하 여 **명령줄** 상자에서 입력 한 추가 옵션을 모두 제거할 수 있습니다.|  
   
 9. **확인** 을 클릭하여 설정을 저장하고 **새 작업 단계** 대화 상자를 닫습니다.  
   

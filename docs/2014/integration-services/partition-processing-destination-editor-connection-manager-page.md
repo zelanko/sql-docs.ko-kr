@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: 7add6f82-eed1-47fc-a5d7-7b91f3f24d34
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bb2efbff93fb7cc831038a7e26fe4ada44d81325
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: faf99a55fe52ba46e6bf69a59d23c2054e3c9144
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964753"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423500"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>파티션 처리 대상 편집기(연결 관리자 페이지)
   **파티션 처리 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트나 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 대한 연결을 지정할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "84964753"
  **처리 방법**  
  처리 방법을 선택합니다. 이 옵션의 기본값은 **전체**입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |추가(증분)|파티션의 증분 처리를 수행합니다.|  
 |전체|파티션의 전체 처리를 수행합니다.|  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SSIS packages, properties
 - SQL Server Integration Services packages, properties
 ms.assetid: 0d20346e-475c-412f-b3ff-7bce25242b7a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7dbc9e7c535b327b39c18fad80d7848a96d0ded7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 84d7f96befa709ebeb99e91013be771db1d54a93
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963239"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421600"
 ---
 # <a name="set-the-properties-of-a-package"></a>패키지의 속성 설정
   이 절차에서는 **속성** 창을 사용하여 패키지 속성을 구성하는 방법을 설명합니다.  

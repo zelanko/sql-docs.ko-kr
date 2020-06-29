@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Integration Services service, configuring
 - Integration Services service, properties
 ms.assetid: 3a8ad546-0f58-4b31-ab56-58d6313b1098
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 29e57da658b97d4ed3d9867dfee51644f0af9ddc
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e31cdf067585b6494a884a1d9ade7570e2246172
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963163"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421560"
 ---
 # <a name="set-the-properties-of-the-integration-services-service"></a>Integration Services 서비스 속성 설정
     

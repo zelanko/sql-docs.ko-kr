@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfiledestinationcolumns.f1
 ms.assetid: 37f61d0b-1269-42ee-94ab-011cbaac63e9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 444689420ad7f83568fc584257329f5133497f38
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8a0ceb00767715c3f0b5d149ecd7c8ac3116cf78
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964643"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423210"
 ---
 # <a name="raw-file-destination-editor-columns-page"></a>원시 파일 대상 편집기(열 페이지)
   원시 파일 대상 편집기를 사용하여 원시 데이터를 파일에 기록하도록 원시 파일 대상을 구성합니다.  

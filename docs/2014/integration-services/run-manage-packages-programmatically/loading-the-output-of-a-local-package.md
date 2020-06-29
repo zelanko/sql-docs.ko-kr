@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data flow [Integration Services], loading results
 - loading data flow results
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 49c4814daf0463c99c7ccda6f16adb039fd58d64
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9919db21f87b5b178d8893b55f0db93f9a48f23e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964501"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422790"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>로컬 패키지의 출력 로드
   [!INCLUDE[vstecado](../../includes/vstecado-md.md)]을 사용하여 출력을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상에 저장한 경우 또는 **System.IO** 네임스페이스의 클래스를 사용하여 출력을 플랫 파일 대상에 저장한 경우 클라이언트 애플리케이션에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 출력을 읽을 수 있습니다. 하지만 데이터를 지속하기 위한 중간 단계 없이 클라이언트 애플리케이션이 메모리에서 직접 패키지의 출력을 읽을 수도 있습니다. 이 솔루션의 핵심은 `Microsoft.SqlServer.Dts.DtsClient` `IDbConnection` `IDbCommand` **IDbDataParameter** 네임 스페이스에서, 및 인터페이스 **System.Data** 의 특수 구현을 포함 하는 네임 스페이스입니다. Microsoft.SqlServer.Dts.DtsClient.dll 어셈블리는 기본적으로 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**에 설치됩니다.
@@ -28,7 +28,7 @@ ms.locfileid: "84964501"
 > [!NOTE]
 >  이 항목에서 설명하는 절차를 수행하려면 데이터 흐름 태스크와 부모 개체의 DelayValidation 속성이 기본값인 **False**로 설정되어 있어야 합니다.
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
  이 절차에서는 DataReader 대상을 사용하는 패키지의 출력을 메모리에서 직접 로드하는 클라이언트 애플리케이션을 관리 코드로 개발하는 방법을 보여 줍니다. 여기에 요약된 단계는 뒷부분의 코드 예제에서 자세히 보여 줍니다.
 
 #### <a name="to-load-data-package-output-into-a-client-application"></a>데이터 패키지 출력을 클라이언트 애플리케이션으로 로드하려면
@@ -44,7 +44,7 @@ ms.locfileid: "84964501"
 
 4.  이전에 만든 `DtsClient.DtsCommand`을 사용하는 `DtsConnection` 형식의 개체를 만들고 이 개체의 `CommandText` 속성을 패키지의 DataReader 대상 이름으로 설정합니다. 그런 다음 이 명령 개체의 `ExecuteReader` 메서드를 호출하여 패키지 결과를 새 DataReader로 로드합니다.
 
-5.  필요할 경우 `DtsDataParameter` 개체에서 `DtsCommand` 개체의 컬렉션을 사용하여 패키지의 출력을 간접적으로 매개 변수화함으로써 패키지에 정의된 변수에 값을 전달할 수 있습니다. 패키지 내에서는 이러한 변수를 쿼리 매개 변수로 사용하거나 식에 사용하여 DataReader 대상에 반환되는 결과에 영향을 줄 수 있습니다. **DtsClient** `DtsDataParameter` 클라이언트 응용 프로그램의 개체와 함께 사용 하려면 먼저 DtsClient 네임 스페이스의 패키지에서 이러한 변수를 정의 해야 합니다. ( **변수** 창에서 **변수 열 선택** 도구 모음 단추를 클릭 하 여 **네임 스페이스** 열을 표시 해야 할 수도 있습니다.) 클라이언트 코드에서의 컬렉션에를 추가 하는 경우 `DtsDataParameter` `Parameters` `DtsCommand` 변수 이름에서 DtsClient 네임 스페이스 참조를 생략 합니다. 다음은 그 예입니다.
+5.  필요할 경우 `DtsDataParameter` 개체에서 `DtsCommand` 개체의 컬렉션을 사용하여 패키지의 출력을 간접적으로 매개 변수화함으로써 패키지에 정의된 변수에 값을 전달할 수 있습니다. 패키지 내에서는 이러한 변수를 쿼리 매개 변수로 사용하거나 식에 사용하여 DataReader 대상에 반환되는 결과에 영향을 줄 수 있습니다. **DtsClient** `DtsDataParameter` 클라이언트 응용 프로그램의 개체와 함께 사용 하려면 먼저 DtsClient 네임 스페이스의 패키지에서 이러한 변수를 정의 해야 합니다. ( **변수** 창에서 **변수 열 선택** 도구 모음 단추를 클릭 하 여 **네임 스페이스** 열을 표시 해야 할 수도 있습니다.) 클라이언트 코드에서의 컬렉션에를 추가 하는 경우 `DtsDataParameter` `Parameters` `DtsCommand` 변수 이름에서 DtsClient 네임 스페이스 참조를 생략 합니다. 예를 들면 다음과 같습니다.
 
     ```
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));

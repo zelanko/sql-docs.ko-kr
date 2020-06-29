@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectsourcelocation.f1
 ms.assetid: 429f146e-edb4-4401-a225-f2c8468971c5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 90cb7110a6b4e9372fe5397ba050f91535a58f94
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6a38fc05df2ec463243a5bbd2b4514e9b28c22c8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963703"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421910"
 ---
 # <a name="select-source-location-ssis-package-upgrade-wizard"></a>원본 위치 선택(SSIS 패키지 업그레이드 마법사)
   **원본 위치 선택** 페이지를 사용하여 패키지를 업그레이드할 원본을 지정할 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "84963703"
  **패키지 원본**  
  업그레이드할 패키지를 포함하는 스토리지 위치를 선택합니다. 이 옵션에는 다음 표에 나열된 값이 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**파일 시스템**|업그레이드할 패키지가 로컬 컴퓨터의 폴더에 있음을 나타냅니다.<br /><br /> 이러한 패키지를 업그레이드하기 전에 마법사가 원래 패키지를 백업하도록 하려면 원래 패키지를 파일 시스템에 저장해야 합니다. 자세한 내용은 방법 도움말 항목을 참조하십시오.|  
 |**SSIS 패키지 저장소**|업그레이드할 패키지가 패키지 저장소에 있음을 나타냅니다. 패키지 저장소는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스가 관리하는 파일 시스템 폴더 집합으로 구성됩니다. 자세한 내용은 [패키지 관리&#40;SSIS 서비스&#41;](service/package-management-ssis-service.md)를 참조하세요.<br /><br /> 이 값을 선택하면 해당 **패키지 원본** 동적 옵션이 표시됩니다.|  

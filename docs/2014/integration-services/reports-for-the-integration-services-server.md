@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 648aa642f380d042091005cf9dbd8e6d8d61add9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6f71f87241f57fef455b44d4cfe5007d1ff0968d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964593"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423060"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Integration Services 서버를 위한 보고서
   현재 릴리스의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 서버에 배포된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 모니터링하는 데 도움이 되는 표준 보고서를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 사용할 수 있습니다. 이러한 보고서는 패키지 상태 및 기록을 보고 필요한 경우 패키지 실행 실패 원인을 파악하는 데 도움이 됩니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "84964593"
   
 |섹션|Description|  
 |-------------|-----------------|  
-|Assert|보고서에 적용된 현재 필터(예: 시작 시간 범위)를 보여 줍니다.|  
+|필터|보고서에 적용된 현재 필터(예: 시작 시간 범위)를 보여 줍니다.|  
 |실행 정보|각 패키지 실행의 시작 시간, 종료 시간 및 기간을 보여 줍니다. 패키지 실행 태스크를 사용하여 자식 패키지에 전달된 값과 같이 패키지 실행과 함께 사용된 매개 변수 값의 목록을 볼 수도 있습니다. 매개 변수 목록을 보려면 개요를 클릭합니다.|  
   
  패키지 실행 태스크를 사용하여 자식 패키지에 값을 제공하는 방법에 대한 자세한 내용은 [Execute Package Task](control-flow/execute-package-task.md)를 참조하십시오.  
@@ -60,7 +60,7 @@ ms.locfileid: "84964593"
   
 |섹션|Description|  
 |-------------|-----------------|  
-|Assert|보고서에 적용된 현재 필터(예: 지정된 문자열이 있는 연결 및 **마지막으로 실패한 시간** 범위)를 보여 줍니다.<br /><br /> **마지막으로 실패한 시간** 범위를 설정하면 특정 날짜 범위 동안 발생한 연결 실패만 표시됩니다. 날짜 범위는 수 일, 수 개월 또는 수 년으로 지정할 수 있습니다.|  
+|필터|보고서에 적용된 현재 필터(예: 지정된 문자열이 있는 연결 및 **마지막으로 실패한 시간** 범위)를 보여 줍니다.<br /><br /> **마지막으로 실패한 시간** 범위를 설정하면 특정 날짜 범위 동안 발생한 연결 실패만 표시됩니다. 날짜 범위는 수 일, 수 개월 또는 수 년으로 지정할 수 있습니다.|  
 |세부 정보|연결 문자열, 연결 실패 기간 동안의 실행 수 및 연결이 마지막으로 실패한 날짜를 보여 줍니다.|  
   
 ## <a name="all-operations-report"></a>모든 작업 보고서  

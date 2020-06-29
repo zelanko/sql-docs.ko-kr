@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - precedence constraints [Integration Services], values
 ms.assetid: ab9d8e8e-b7da-44b2-b89f-b215d799f032
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cfeed4c8d067c97e012bdd72ef0c7ebaac340098
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 176028430b3a942fb38847ba0c1898d7d9f86ad3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963073"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421430"
 ---
 # <a name="set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu"></a>바로 가기 메뉴를 사용하여 선행 제약 조건 값 설정
   이 절차에서는 바로 가기 메뉴를 사용하여 선행 제약 조건에 대한 값을 설정하는 방법에 대해 설명합니다.  
