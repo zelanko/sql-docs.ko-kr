@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cadfc71bdbb137650d897dc8374ed1caa8d193ab
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: a870cdbd9a90fefe29088892f278446479665de7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881900"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753636"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>식 컨텍스트 및 쿼리 평가(XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   식의 컨텍스트는 식을 분석 및 평가하는 데 사용되는 정보입니다. XQuery는 다음과 같은 두 개의 단계로 평가됩니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "84881900"
 ## <a name="static-context"></a>정적 컨텍스트  
  정적 컨텍스트 초기화는 식에 대한 정적 분석을 위해 모든 정보를 함께 입력하는 프로세스를 의미합니다. 정적 컨텍스트 초기화의 일부로 다음과 같은 작업이 완료됩니다.  
   
--   **경계 공백** 정책이 스트립으로 설정 되어 있습니다. 따라서 경계 공백은 쿼리의 **모든 요소** 및 **특성** 생성자에 의해 유지 되지 않습니다. 다음은 그 예입니다.  
+-   **경계 공백** 정책이 스트립으로 설정 되어 있습니다. 따라서 경계 공백은 쿼리의 **모든 요소** 및 **특성** 생성자에 의해 유지 되지 않습니다. 예를 들면 다음과 같습니다.  
   
     ```  
     declare @x xml  

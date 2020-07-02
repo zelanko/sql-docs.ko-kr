@@ -1,5 +1,5 @@
 ---
-title: sys. xml_schema_attributes (Transact-sql) | Microsoft Docs
+title: sys.xml_schema_attributes (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: dd0c98aa-5e72-4df6-96d9-482786c8dbb1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4af723da42b93b3a5a656c2f00f65d94ca1fb184
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 89a8a1f8ccd6458937de3266ec8c7bce58b73a17
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832689"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754357"
 ---
 # <a name="sysxml_schema_attributes-transact-sql"></a>sys.xml_schema_attributes(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Symbol_space** 특성 인 XML 스키마 구성 요소별 **행을 반환 합니다.**  
 
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**\<상속 된 열>**|--|[Xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)에서 상속 됩니다.|  
+|**\<inherited columns>**|--|[sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)에서 상속 됩니다.|  
 |**is_default_fixed**|**bit**|1 = 기본값이 고정 값입니다. XML 인스턴스에서 이 값을 무시할 수 없습니다.<br /><br /> 0 = 기본값이 특성에 대한 고정 값이 아닙니다. (기본값)|  
 |**must_be_qualified**|**bit**|1 = 특성의 네임스페이스를 명시적으로 한정해야 합니다.<br /><br /> 0 = 특성의 네임스페이스를 암시적으로 한정할 수 있습니다. (기본값)|  
 |**default_value**|**nvarchar**<br /><br /> **(4000)**|특성의 기본값입니다. 기본값을 제공하지 않으면 NULL입니다.|  

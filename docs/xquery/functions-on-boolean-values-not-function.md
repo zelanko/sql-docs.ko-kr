@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24235099ec742d4c6d62e3d97ee1f551af24f7d4
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: db4fbd8e78827ff8818f74e83bf9f2d8ca8d0d39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84524416"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753605"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>부울 값 함수 - not 함수 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   *$Arg* 의 유효한 부울 값이 FALSE 이면 true를 반환 하 고 *$Arg* 의 유효한 부울 값이 TRUE 이면 false를 반환 합니다.  
   
@@ -41,7 +41,7 @@ fn:not($arg as item()*) as xs:boolean
  *$arg*  
  유효한 부울 값이 있는 항목의 시퀀스입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 항목에서는 AdventureWorks 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
   
 ### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Not () XQuery 함수를 사용 하 여 카탈로그 설명에 요소가 포함 되지 않은 제품 모델을 찾습니다 \<Specifications> .  

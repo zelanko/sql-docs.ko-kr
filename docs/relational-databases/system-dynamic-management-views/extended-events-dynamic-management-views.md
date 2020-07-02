@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6d337c2f-71e9-4e0c-8877-9780baa7699d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: afae172e03fe537fd3873ca182434b6cc5caf767
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 071ad14b340326bef64a878708142addeadcd077
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829544"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754295"
 ---
 # <a name="extended-events-dynamic-management-views"></a>확장 이벤트 동적 관리 뷰
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트에 대한 다음 동적 관리 개체에 대해 다룹니다.  
   

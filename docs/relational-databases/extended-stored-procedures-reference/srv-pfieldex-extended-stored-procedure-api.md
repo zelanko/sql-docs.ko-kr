@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d4e9a34b-b3a3-434f-8556-768bd20d145a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1333cfc819b8027260c715ed3398c0099f96a854
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2294e12af7e22a70ab064a2c3d1163007631eef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005558"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755918"
 ---
 # <a name="srv_pfieldex-extended-stored-procedure-api"></a>srv_pfieldex(확장 저장 프로시저 API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
@@ -54,7 +54,7 @@ len
  *필드가*  
  반환할 *srvproc* 필드를 지정합니다.  
   
-|필드|Description|반환 형식|  
+|필드|설명|반환 형식|  
 |-----------|-----------------|------------------|  
 |SRV_MSGLCID|현재 세션 메시지 LCID입니다.|ULONG*|  
 |SRV_INSTANCENAME|인스턴스 이름(명명된 경우)을 반환하거나, 그렇지 않으면 NULL을 반환합니다.|WCHAR*|  

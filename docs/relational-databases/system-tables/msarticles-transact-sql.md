@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98bd5295aadbe75928b4a05e7ec882235fb47313
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: daec387a9be288a44cbecc286bd77784ad776374
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832390"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753951"
 ---
 # <a name="msarticles-transact-sql"></a>MSarticles(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Msarticles** 테이블에는 게시자가 복제 하는 각 아티클에 대 한 행이 하나씩 포함 되어 있습니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82832390"
 |**publisher_id**|**smallint**|게시자의 ID입니다.|  
 |**publisher_db**|**sysname**|게시자 데이터베이스의 이름입니다.|  
 |**publication_id**|**int**|게시의 ID입니다.|  
-|**자료**|**sysname**|아티클의 이름입니다.|  
+|**문서**|**sysname**|아티클의 이름입니다.|  
 |**article_id**|**int**|아티클의 ID입니다.|  
 |**destination_object**|**sysname**|구독자에서 생성되는 테이블의 이름입니다.|  
 |**source_owner**|**sysname**|게시자에서 원본 테이블의 스키마 이름입니다.|  

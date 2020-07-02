@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d380e799-2857-408a-bcbf-5e73a8e6aa5a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7abf136187b4f45a03cebc92fd23ee544dddb117
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac7a3e57c18f6ce4ea73415224aabc3843488cf9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68116693"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755558"
 ---
 # <a name="xp_loginconfig-transact-sql"></a>xp_loginconfig(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 로그인 보안 구성을 보고합니다.  
   
@@ -74,7 +74,7 @@ xp_loginconfig ['config_name']
 ## <a name="permissions"></a>사용 권한  
  **Master** 데이터베이스에 대 한 CONTROL 권한이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-how-to-report-all-configuration-values"></a>A. 모든 구성 값을 보고하는 방법  
  다음 예에서는 현재 구성된 모든 설정을 표시합니다.  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 22b1b6bf2abbf322cec690d9e466f2ea40fcb72a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 306357f87ffa30dbdd6fca302089cf0d8967242f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059252"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754028"
 ---
 # <a name="sysfn_trace_getfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정된 추적에 적용되는 필터에 대한 정보를 반환합니다.  
   
@@ -52,7 +52,7 @@ fn_trace_getfilterinfo ( trace_id )
 ## <a name="tables-returned"></a>반환된 테이블  
  다음 정보를 반환합니다. 열에 대 한 자세한 내용은 [sp_trace_setfilter &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)을 참조 하십시오.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**columnid**|**int**|필터가 적용되는 열의 ID입니다.|  
 |**logical_operator**|**int**|AND 또는 OR 연산자의 적용 여부를 지정합니다.|  
@@ -65,7 +65,7 @@ fn_trace_getfilterinfo ( trace_id )
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 ALTER TRACE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 추적 번호 2에 대한 모든 필터 정보를 반환합니다.  
   
 ```  

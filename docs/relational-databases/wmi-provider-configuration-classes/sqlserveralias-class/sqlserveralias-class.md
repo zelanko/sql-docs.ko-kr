@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6cbcb2ab05c30f667e6e5b95d8223ab4e152137e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18d6cfd0b2d0184e5bf667fc12f57a6c0dcf5025
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659190"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753726"
 ---
 # <a name="sqlserveralias-class"></a>SqlServerAlias 클래스
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   [SqlServerAlias 클래스](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) 는 서버 연결 별칭을 나타냅니다.  
   
  서버 연결 별칭은 다음 두 가지 모두에 해당하는 경우 필요합니다.  
   
--   클라이언트가 기본 네트워크 전송이 아닌 네트워크 전송을 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 통해 인스턴스에 연결 하 고 있습니다.  
+-   클라이언트가 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본 네트워크 전송이 아닌 네트워크 전송을 통해 인스턴스에 연결 하 고 있습니다.  
   
 -   클라이언트가 대체 명명된 파이프에서 수신하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결하는 경우  
   

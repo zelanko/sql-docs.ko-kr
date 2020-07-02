@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 542b19ca-61c8-41ca-aa2e-0aba8906cc24
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8a787f6856b46578d8fcc6792da17023e2b2aa3f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0d68da06033c4d01409562cb4f3bd6816181d414
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833924"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754413"
 ---
 # <a name="systrace_subclass_values-transact-sql"></a>sys.trace_subclass_values(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Sys. trace_subclass_values** 카탈로그 뷰에는 명명 된 열 값 목록이 포함 되어 있습니다. 지정된 버전의 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 이러한 하위 클래스 값이 변경되지 않습니다.  
   

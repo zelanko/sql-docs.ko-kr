@@ -20,21 +20,21 @@ ms.assetid: f8a8ea39-5a09-4662-801e-b43519467def
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb5fb2353c20d379714faeceb82eaca574b0335f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4d8303f293208fe69d27c59b88b1fb9d1cc9a814
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831272"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754396"
 ---
 # <a name="sysviews-transact-sql"></a>sys.views(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   각 뷰 개체에 대 한 행을 포함 **합니다. 여기에는 sys. type** = V가 있습니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**\<상속 된 열>**||이 뷰가 상속 하는 열 목록은 [sys. 개체 &#40;transact-sql](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 을 참조 하세요&#41;|  
+|**\<inherited columns>**||이 뷰가 상속 하는 열 목록은 [sys. 개체 &#40;transact-sql](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 을 참조 하세요&#41;|  
 |**is_replicated**|**bit**|1 = 뷰가 복제됩니다.|  
 |**has_replication_filter**|**bit**|1 = 뷰에 복제 필터가 있습니다.|  
 |**has_opaque_metadata**|**bit**|1 = 뷰에 VIEW_METADATA 옵션이 지정되었습니다. 자세한 내용은 [CREATE VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)를 참조하세요.|  

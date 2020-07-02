@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f90f0f9ca490cc2adfeb2768b9d1dfe9f072eb39
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: aa9acc4c79d513392ecd85f7c667452fd5a108e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834147"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753845"
 ---
 # <a name="suspect_pages-transact-sql"></a>suspect_pages(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   사소한 823 오류 또는 824 오류가 발생하여 실패한 페이지당 하나의 행을 포함합니다. 이러한 페이지는 오류가 의심되어 이 테이블에 나열되지만 실제로는 문제가 없을 수 있습니다. 주의 대상 페이지가 복구 되 면 **event_type** 열에서 해당 상태가 업데이트 됩니다.  
   

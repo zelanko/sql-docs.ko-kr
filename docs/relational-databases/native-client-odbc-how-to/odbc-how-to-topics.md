@@ -11,15 +11,15 @@ ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9644e670f613006c02a32ab83da92617000e8ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3655c567081538c957af1b3d646e683867097dd2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298836"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755684"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC How-to Topics
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버를 사용하려면 ODBC 데이터 원본을 만들고 서버에 올바른 버전의 카탈로그 저장 프로시저가 있는지 확인할 수 있어야 합니다. SQL Server를 사용하는 ODBC 애플리케이션의 코드를 작성하려면 ODBC 핸들을 할당하고 특성을 설정하고 SQL Server의 인스턴스에 연결하고 쿼리를 실행하고 결과를 처리하는 방법을 알아야 합니다.  
   

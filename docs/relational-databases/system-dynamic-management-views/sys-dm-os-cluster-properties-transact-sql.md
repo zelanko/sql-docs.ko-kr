@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ca7b6c657170c4e1afe5792d6e58a8e2a4aab277
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1da39966fe7c11a4c4685d40b6cc762e14bf2b2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830553"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754201"
 ---
 # <a name="sysdm_os_cluster_properties-transact-sql"></a>sys.dm_os_cluster_properties(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에 나오는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클러스터 리소스 속성의 현재 설정이 포함된 하나의 행을 반환합니다. 이 뷰를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 독립 실행형 인스턴스에서 실행하는 경우에는 데이터가 반환되지 않습니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "82830553"
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스에 대한 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 sys.dm_os_cluster_properties를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 리소스에 대한 속성 설정을 반환합니다.  
   
 ```  

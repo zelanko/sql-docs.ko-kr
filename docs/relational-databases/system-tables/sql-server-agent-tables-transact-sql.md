@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4cbc772ff5dcc14c196a8c9b920f67b03bd70598
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a677a563666acff5c18f84a3f133b03b616072ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834217"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753874"
 ---
 # <a name="sql-server-agent-tables-transact-sql"></a>SQL Server 에이전트 테이블(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 섹션의 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 사용하는 정보를 저장하는 시스템 테이블에 대해 설명합니다. 모든 테이블은 msdb 데이터베이스의 dbo 스키마에 있습니다.  
   

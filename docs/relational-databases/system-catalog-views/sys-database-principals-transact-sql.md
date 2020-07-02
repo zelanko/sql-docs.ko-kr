@@ -20,15 +20,15 @@ ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: feed483cf3ee08c0652e55de51b1f73fc087ed39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 634d0d69698503a4bc483c9803858e5cda4b515d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80873119"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754476"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>sys.database_principals(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 각 주체에 대해 행을 반환합니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "80873119"
 |**authentication_type_desc**|**nvarchar(60)**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 인증 유형에 대한 설명입니다. 다음은 가능한 값과 그에 대 한 설명입니다.<br /><br /> 없음: 인증 안 함<br />인스턴스: 인스턴스 인증<br />데이터베이스: 데이터베이스 인증<br />WINDOWS: Windows 인증<br />외부: Azure Active Directory 인증|  
 |**default_language_name**|**sysname**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 이 보안 주체의 기본 언어를 나타냅니다.|  
 |**default_language_lcid**|**int**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 이 보안 주체의 기본 LCID를 나타냅니다.|  
-|**allow_encrypted_value_modifications**|**bit**|**적용**대상: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> 대량 복사 작업에서 서버에 대한 암호화 메타데이터 검사를 표시하지 않습니다. 이를 통해 사용자는 데이터의 암호를 해독 하지 않고 테이블 또는 데이터베이스 간에 Always Encrypted를 사용 하 여 암호화 된 데이터를 대량 복사할 수 있습니다. 기본값은 OFF입니다. |      
+|**allow_encrypted_value_modifications**|**bit**|**적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> 대량 복사 작업에서 서버에 대한 암호화 메타데이터 검사를 표시하지 않습니다. 이를 통해 사용자는 데이터의 암호를 해독 하지 않고 테이블 또는 데이터베이스 간에 Always Encrypted를 사용 하 여 암호화 된 데이터를 대량 복사할 수 있습니다. 기본값은 OFF입니다. |      
   
 ## <a name="remarks"></a>설명  
  *PasswordLastSetTime* 속성은 지원 되는 모든 SQL Server 구성에서 사용할 수 있지만 다른 속성은 SQL Server Windows Server 2003 이상에서 실행 중이 고 CHECK_POLICY와 CHECK_EXPIRATION 모두 사용 하도록 설정 된 경우에만 사용할 수 있습니다. 자세한 내용은 [암호 정책](../../relational-databases/security/password-policy.md) 을 참조 하세요.
@@ -57,7 +57,7 @@ Principal_id의 값은 보안 주체가 삭제 된 경우 다시 사용 될 수 
 ## <a name="permissions"></a>사용 권한  
  모든 사용자는 자신의 사용자 이름, 시스템 사용자 및 고정 데이터베이스 역할을 볼 수 있습니다. 다른 사용자를 보려면 사용자에 대한 ALTER ANY USER 또는 사용 권한이 필요합니다. 사용자 정의 역할을 보려면 ALTER ANY ROLE 또는 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-listing-all-the-permissions-of-database-principals"></a>A: 데이터베이스 보안 주체의 모든 사용 권한 나열  
  다음 쿼리는 데이터베이스 보안 주체에 대해 명시적으로 부여되거나 거부된 사용 권한을 나열합니다.  
@@ -95,7 +95,7 @@ JOIN sys.schemas AS s
  다음 쿼리는 데이터베이스 보안 주체에 대해 명시적으로 부여되거나 거부된 사용 권한을 나열합니다.  
   
 > [!IMPORTANT]  
->  고정 데이터베이스 역할의 사용 권한은에 `sys.database_permissions`표시 되지 않습니다. 따라서 데이터베이스 보안 주체가 여기에 나열되지 않은 추가 사용 권한을 가질 수 있습니다.  
+>  고정 데이터베이스 역할의 사용 권한은에 표시 되지 않습니다 `sys.database_permissions` . 따라서 데이터베이스 보안 주체가 여기에 나열되지 않은 추가 사용 권한을 가질 수 있습니다.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   
@@ -106,7 +106,7 @@ JOIN sys.database_permissions AS pe
 ```  
   
 ### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>D: 데이터베이스 내의 스키마 개체에 대 한 사용 권한 나열  
- 다음 쿼리는 및 `sys.database_principals` `sys.database_permissions` 에 `sys.objects` `sys.schemas` 조인 하 고 특정 스키마 개체에 부여 되거나 거부 된 사용 권한을 나열 합니다.  
+ 다음 쿼리는 및에 조인 하 고 `sys.database_principals` `sys.database_permissions` `sys.objects` `sys.schemas` 특정 스키마 개체에 부여 되거나 거부 된 사용 권한을 나열 합니다.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

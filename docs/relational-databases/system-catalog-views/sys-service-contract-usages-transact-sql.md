@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 20af425e-1152-4a46-b1ac-94cff5fc9f02
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9acced780886d9016206c33392c7308e21b4fbd8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fde721193aa3c8447890692c51a259e3e86b0f01
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831375"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754438"
 ---
 # <a name="sysservice_contract_usages-transact-sql"></a>sys.service_contract_usages(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   이 카탈로그 뷰에는 각 서비스-계약 쌍에 대한 행이 포함되어 있습니다.  
   

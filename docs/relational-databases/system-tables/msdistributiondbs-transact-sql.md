@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d7ffa9df-bf1d-41b8-837e-b762c17c2764
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 30eeddfa1adaa75d4f4b074af99d1ed8ad6ed238
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9f7fbc3827a7859cfbd4b38d90860e43560d8ad5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812977"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753901"
 ---
 # <a name="msdistributiondbs-transact-sql"></a>MSdistributiondbs(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Msdb..msdistributiondbs** 테이블은 로컬 배포자에 정의 된 각 배포 데이터베이스에 대해 하나의 행을 포함 합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   

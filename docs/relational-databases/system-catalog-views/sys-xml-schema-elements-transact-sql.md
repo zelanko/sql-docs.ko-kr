@@ -1,5 +1,5 @@
 ---
-title: sys. xml_schema_elements (Transact-sql) | Microsoft Docs
+title: sys.xml_schema_elements (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: 190ed0cd-0c5e-4607-9db4-9e77cacf17d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1be210ca687ff19c5e1dfaf56923a55c731807c1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 79e37c8e6c65f11abb03f68c3ac8c106d7d78857
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831291"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754323"
 ---
 # <a name="sysxml_schema_elements-transact-sql"></a>sys.xml_schema_elements(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Symbol_space** **E**의 형식인 XML 스키마 구성 요소별 행을 반환 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**\<상속 된 열>**|**--**|[Xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)에서 열을 상속 합니다.|  
+|**\<inherited columns>**|**--**|[sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)에서 열을 상속 합니다.|  
 |**is_default_fixed**|**bit**|1 = 기본값이 고정 값입니다. XML 인스턴스에서 이 값을 무시할 수 없습니다.<br /><br /> 0 = 기본값이 요소에 대해 고정 값이 않습니다(기본값).|  
 |**is_abstract**|**bit**|1 = 요소가 추상적이며 인스턴스 문서에서 사용할 수 없습니다. 인스턴스 문서에 요소의 대체 그룹 멤버가 나타나야 합니다.<br /><br /> 0 = 요소가 추상적이지 않습니다(기본값).|  
 |**is_nillable**|**bit**|1 = 요소가 nillable입니다.<br /><br /> 0 = 요소가 nillable이 (기본값)|  

@@ -20,15 +20,15 @@ ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3069bbf376fbd1a94be6697e6bbb4ea2552c5c27
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dfbb10c989300f33a551cb4686e7467eaf90a604
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833747"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754047"
 ---
 # <a name="sysdm_os_nodes-transact-sql"></a>sys.dm_os_nodes(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 SQLOS라는 내부 구성 요소는 하드웨어 프로세서 위치와 비슷한 노드 구조를 만듭니다. 이러한 구조는 [소프트 NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md) 를 사용 하 여 변경 하 여 사용자 지정 노드 레이아웃을 만들 수 있습니다.  
 
@@ -43,7 +43,7 @@ SQLOS라는 내부 구성 요소는 하드웨어 프로세서 위치와 비슷�
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|노드의 ID입니다.|  
-|node_state_desc|**nvarchar(256)**|노드 상태에 대한 설명입니다. 함께 사용할 수 없는 값이 먼저 표시되고 함께 사용할 수 있는 값이 그 다음에 표시됩니다. 다음은 그 예입니다.<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />상호 배타적인 node_state_desc 값은 네 가지가 있습니다. 이러한 설명은 아래에 나와 있습니다.<br /><ul><li>온라인: 노드가 온라인 상태입니다.<li>오프 라인: 노드가 오프 라인 상태임<li>유휴 상태: 노드에 보류 중인 작업 요청이 없으며 유휴 상태를 입력 했습니다.<li>IDLE_READY: 노드에 보류 중인 작업 요청이 없으며 유휴 상태를 시작할 준비가 되었습니다.</li></ul><br />아래에는 결합할 수 있는 세 가지 node_state_desc 값이 설명 되어 있습니다.<br /><ul><li>DAC:이 노드는 [전용 관리 연결](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)에 대해 예약 되어 있습니다.<li>THREAD_RESOURCES_LOW: 메모리가 부족 하 여이 노드에서 새 스레드를 만들 수 없습니다.<li>핫 추가 됨: 핫 add CPU 이벤트에 대 한 응답으로 노드가 추가 되었음을 나타냅니다.</li></ul>|  
+|node_state_desc|**nvarchar(256)**|노드 상태에 대한 설명입니다. 함께 사용할 수 없는 값이 먼저 표시되고 함께 사용할 수 있는 값이 그 다음에 표시됩니다. 예를 들면 다음과 같습니다.<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />상호 배타적인 node_state_desc 값은 네 가지가 있습니다. 이러한 설명은 아래에 나와 있습니다.<br /><ul><li>온라인: 노드가 온라인 상태입니다.<li>오프 라인: 노드가 오프 라인 상태임<li>유휴 상태: 노드에 보류 중인 작업 요청이 없으며 유휴 상태를 입력 했습니다.<li>IDLE_READY: 노드에 보류 중인 작업 요청이 없으며 유휴 상태를 시작할 준비가 되었습니다.</li></ul><br />아래에는 결합할 수 있는 세 가지 node_state_desc 값이 설명 되어 있습니다.<br /><ul><li>DAC:이 노드는 [전용 관리 연결](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)에 대해 예약 되어 있습니다.<li>THREAD_RESOURCES_LOW: 메모리가 부족 하 여이 노드에서 새 스레드를 만들 수 없습니다.<li>핫 추가 됨: 핫 add CPU 이벤트에 대 한 응답으로 노드가 추가 되었음을 나타냅니다.</li></ul>|  
 |memory_object_address|**varbinary(8)**|이 노드와 연관된 메모리 개체의 주소입니다. [Dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md). memory_object_address에 대 한 일 대 일 관계입니다.|  
 |memory_clerk_address|**varbinary(8)**|이 노드와 연관된 메모리 클럭의 주소입니다. [Dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md). memory_clerk_address에 대 한 일 대 일 관계입니다.|  
 |io_completion_worker_address|**varbinary(8)**|이 노드에 대한 IO 완료가 할당된 작업자의 주소입니다. [Dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md). worker_address에 대 한 일 대 일 관계입니다.|  

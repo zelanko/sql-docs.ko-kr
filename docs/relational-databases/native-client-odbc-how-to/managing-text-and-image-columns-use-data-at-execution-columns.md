@@ -13,15 +13,15 @@ ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78bfa4cd343fd13be121b660de700ef670f24adb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 741844bb8bcbf3e50b01ea4f3af0da6ad69e2567
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81293803"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755706"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>텍스트 및 이미지 열 관리 - Data-at-Execution 열 사용
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
     
 ### <a name="to-use-data-at-execution-text-ntext-or-image-columns"></a>실행 시 데이터 text, ntext 또는 image 열을 사용하려면  
@@ -49,11 +49,11 @@ ms.locfileid: "81293803"
   
  이 예제는 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 명명된 인스턴스에 연결하려면 ODBC 데이터 원본의 정의를 변경하여 server\namedinstance 형식으로 인스턴스를 지정합니다. 기본적으로 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 는 명명된 인스턴스에 설치됩니다.  
   
- 첫 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록을 실행 하 여 예제에서 사용 하는 테이블을 만듭니다.  
+ 첫 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) 코드 목록을 실행 하 여 예제에서 사용 하는 테이블을 만듭니다.  
   
  odbc32.lib를 사용하여 두 번째(C++) 코드 목록을 컴파일합니다. 그리고 나서 프로그램을 실행합니다.  
   
- 세 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록을 실행 하 여 예제에서 사용 하는 테이블을 삭제 합니다.  
+ 세 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) 코드 목록을 실행 하 여 예제에서 사용 하는 테이블을 삭제 합니다.  
   
 ```  
 use AdventureWorks  

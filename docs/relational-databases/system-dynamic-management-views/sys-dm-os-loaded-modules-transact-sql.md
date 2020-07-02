@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58f0258843995acc82e84d69a4d2d101594fc313
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 30aa54e93b30d2067e2ab02ba8d264920724cead
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820830"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754133"
 ---
 # <a name="sysdm_os_loaded_modules-transact-sql"></a>sys.dm_os_loaded_modules(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   서버 주소 공간으로 로드되는 각 모듈에 대해 행을 반환합니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "82820830"
 |**시험판**|**bit**|1 = 로드된 모듈의 시험판 버전입니다.|  
 |**private_build**|**bit**|1 = 로드된 모듈의 프라이빗 빌드입니다.|  
 |**special_build**|**bit**|1 = 로드된 모듈의 특수 빌드입니다.|  
-|**언어도**|**int**|모듈 버전 정보의 언어입니다.|  
+|**language**|**int**|모듈 버전 정보의 언어입니다.|  
 |**회사가**|**nvarchar(256)**|모듈을 만든 회사의 이름입니다.|  
 |**한**|**nvarchar(256)**|모듈에 대한 설명입니다.|  
 |**name**|**nvarchar(255)**|모듈의 이름입니다. 모듈의 전체 경로가 포함됩니다.|  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 493bf17904f65b265656e03299fe13f9ea3f6441
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: aa7c9997a8044181c5d60d1efd19c057fc433814
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821731"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754445"
 ---
 # <a name="systcp_endpoints-transact-sql"></a>sys.tcp_endpoints(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   시스템 내의 각 TCP 엔드포인트당 한 개의 행을 포함합니다. **Sys. tcp_endpoints** 에서 설명 하는 끝점은 연결 권한을 부여 하 고 취소 하는 개체를 제공 합니다. 포트 및 IP 주소와 관련해서 표시되는 정보는 프로토콜을 구성하는 데 사용되지 않으며 실제 프로토콜 구성과 일치하지 않을 수도 있습니다. 프로토콜을 보고 구성하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용합니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "82821731"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**상속 된 열<>**||는 [sys. 끝점](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)에서 열을 상속 합니다.|  
-|**포트**|int|엔드포인트가 수신 중인 포트 번호입니다. Null을 허용하지 않습니다.|  
+|**port**|int|엔드포인트가 수신 중인 포트 번호입니다. Null을 허용하지 않습니다.|  
 |**is_dynamic_port**|bit|1 = 포트 번호가 동적으로 할당되었는지 여부를 나타냅니다.<br /><br /> Null을 허용하지 않습니다.|  
 |**ip_address**|**nvarchar (45)**|LISTENER_IP 절에서 지정한 수신기 IP 주소입니다. Null을 허용합니다.|  
   

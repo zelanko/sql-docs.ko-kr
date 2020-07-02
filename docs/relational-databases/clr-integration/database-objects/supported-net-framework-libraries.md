@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a676688176e164736552460667432919250f8e99
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 610dcca5103e4a819b0e6c59629ddd4d510f5469
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82261853"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756350"
 ---
 # <a name="supported-net-framework-libraries"></a>지원되는 .NET Framework 라이브러리
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 호스팅된 CLR(공용 언어 런타임)을 사용하면 관리되는 코드로 저장 프로시저, 트리거, 사용자 정의 함수, 사용자 정의 형식 및 사용자 정의 집계를 작성할 수 있습니다. .NET Framework 클래스 라이브러리에 있는 기능을 사용하면 문자열 조작, 고급 수학 연산, 파일 액세스, 암호화 등에 대한 기능을 제공하는 미리 작성된 클래스에 액세스할 수 있습니다. 임의의 관리되는 저장 프로시저, 사용자 정의 형식, 트리거, 사용자 정의 함수 또는 사용자 정의 집계에서 이러한 클래스에 액세스할 수 있습니다.  
   
 > [!NOTE]  
@@ -57,7 +57,7 @@ https://docs.microsoft.com/sql/relational-databases/clr-integration/assemblies-d
 ## <a name="unsupported-libraries"></a>지원되지 않는 라이브러리  
  지원되지 않는 라이브러리도 관리되는 저장 프로시저, 트리거, 사용자 정의 함수, 사용자 정의 형식 및 사용자 정의 집계에서 호출할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]코드에서 사용할 수 있으려면 먼저 **CREATE ASSEMBLY** 문을 사용 하 여 데이터베이스에 지원 되지 않는 라이브러리를 등록 해야 합니다. 지원되지 않는 라이브러리를 서버에 등록하고 실행하는 경우 보안과 안정성을 검토하여 테스트해야 합니다.  
   
- 예를 들어 **DirectoryServices** 네임 스페이스는 지원 되지 않습니다. 코드에서 호출 하려면 먼저 **UNSAFE** 권한으로 DirectoryServices 어셈블리를 등록 해야 합니다. **DirectoryServices** 네임 스페이스의 클래스가 **SAFE** 또는 **EXTERNAL_ACCESS**에 대 한 요구 사항을 충족 하지 않으므로 **UNSAFE** 권한이 필요 합니다. 자세한 내용은 [Clr 통합 프로그래밍 모델 제한](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md) 및 [Clr 통합 코드 액세스 보안](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)을 참조 하세요.  
+ 예를 들어 **DirectoryServices** 네임 스페이스는 지원 되지 않습니다. 코드에서 호출 하려면 먼저 **안전 하지 않은** 권한으로 System.DirectoryServices.dll 어셈블리를 등록 해야 합니다. **DirectoryServices** 네임 스페이스의 클래스가 **SAFE** 또는 **EXTERNAL_ACCESS**에 대 한 요구 사항을 충족 하지 않으므로 **UNSAFE** 권한이 필요 합니다. 자세한 내용은 [Clr 통합 프로그래밍 모델 제한](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md) 및 [Clr 통합 코드 액세스 보안](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [어셈블리 만들기](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   

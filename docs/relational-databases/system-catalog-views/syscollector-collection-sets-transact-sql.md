@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e258fbd2e0d7a9d15e3c8aa9c2ec3e7bcc7ddc0c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 62b63057e34c2d26ad9d8ee3689267c9a06c93dc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824944"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754311"
 ---
 # <a name="syscollector_collection_sets-transact-sql"></a>syscollector_collection_sets(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   일정, 컬렉션 모드 및 해당 상태를 포함한 컬렉션 집합에 대한 정보를 제공합니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "82824944"
 |dump_on_any_error|**bit**|On (1) 또는 off (0)를 설정 하 여 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 오류 발생 시 덤프 파일을 만들지 여부를 나타냅니다. Null을 허용하지 않습니다.|  
 |dump_on_codes|**nvarchar(max)**|덤프 파일을 트리거하는 데 사용되는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 오류 코드 목록을 포함합니다. Null을 허용합니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  dc_operator, dc_proxy에 대한 SELECT가 필요합니다.  
   
 ## <a name="remarks"></a>설명  

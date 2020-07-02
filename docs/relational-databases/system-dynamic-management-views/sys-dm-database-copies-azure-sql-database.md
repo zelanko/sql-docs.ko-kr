@@ -19,22 +19,22 @@ ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f63469fb4955895b1eb1e3e8466dfbce6306e502
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d4371de1240e64aa5465f6f2d58f5e2eef029acf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824635"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754259"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies(Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   데이터베이스 복사본에 대한 정보를 반환합니다.  
   
 지역에서 복제 링크에 대 한 정보를 반환 하려면 [geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md) 또는 [dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) 뷰 (SQL Database V12에서 사용 가능)를 사용 합니다.
   
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|`sys.databases` 뷰의 현재 데이터베이스 ID입니다.|  
 |**start_date**|**datetimeoffset**|지역의 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터 센터에서 데이터베이스 복사가 시작된 UTC 시간입니다.|  
@@ -47,7 +47,7 @@ ms.locfileid: "82824635"
 |**copy_guid**|**uniqueidentifier**|복사 작업의 고유 ID입니다.|  
 |**partner_server**|**sysname**|복사본이 생성 되는 SQL Database 서버의 이름입니다.|  
 |**partner_database**|**sysname**|파트너 서버의 데이터베이스 복사본 이름입니다.|  
-|**replication_state**|**tinyint**|이 데이터베이스에 대 한 연속 복사 복제 상태입니다. 값은 다음과 같습니다.<br /><br /> 0 = 보류 중. 데이터베이스 복사본 만들기가 예약 되었지만 필요한 준비 단계가 아직 완료 되지 않았거나 시드 할당량에 의해 일시적으로 차단 되었습니다.<br /><br /> 1 = 시드 시드 중인 복사 데이터베이스가 아직 원본 데이터베이스와 완전히 동기화 되지 않았습니다. 이 상태에서는 복사본에 연결할 수 없습니다. 진행 중인 시드 작업을 취소 하려면 복사 데이터베이스를 삭제 해야 합니다.|  
+|**replication_state**|**tinyint**|이 데이터베이스에 대 한 연속 복사 복제 상태입니다. 값:<br /><br /> 0 = 보류 중. 데이터베이스 복사본 만들기가 예약 되었지만 필요한 준비 단계가 아직 완료 되지 않았거나 시드 할당량에 의해 일시적으로 차단 되었습니다.<br /><br /> 1 = 시드 시드 중인 복사 데이터베이스가 아직 원본 데이터베이스와 완전히 동기화 되지 않았습니다. 이 상태에서는 복사본에 연결할 수 없습니다. 진행 중인 시드 작업을 취소 하려면 복사 데이터베이스를 삭제 해야 합니다.|  
 |**replication_state_desc**|**nvarchar(256)**|replication_state에 대한 설명으로, 다음 중 하나입니다.<br /><br /> PENDING<br /><br /> SEEDING<br />|  
 |**maximum_lag**|**int**|예약된 필드입니다.|  
 |**is_continuous_copy**|**bit**|0 = 0을 반환 합니다.|  

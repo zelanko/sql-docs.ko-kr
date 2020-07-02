@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a313ff3b-1fe9-421e-b94b-cea19c43b0e5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b5b616b88cccd8beabe2c08dbcdf4521368d62f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6ee5170d56dee11f66da07655aec9b71e4d5e478
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830518"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754171"
 ---
 # <a name="sysdm_os_hosts-transact-sql"></a>sys.dm_os_hosts(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 등록되어 있는 모든 호스트를 반환합니다. 이 뷰는 이러한 호스트에서 사용하는 리소스도 반환합니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82830518"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**host_address**|**varbinary(8)**|호스트 개체의 내부 메모리 주소입니다.|  
-|**type**|**nvarchar(60)**|호스팅된 구성 요소의 유형입니다. 예제:<br /><br /> SOSHOST_CLIENTID_SERVERSNI= SQL Server 네이티브 인터페이스<br /><br /> SOSHOST_CLIENTID_SQLOLEDB = SQL Server Native Client OLE DB 공급자<br /><br /> SOSHOST_CLIENTID_MSDART = Microsoft Data Access 런타임|  
+|**type**|**nvarchar(60)**|호스팅된 구성 요소의 유형입니다. 예:<br /><br /> SOSHOST_CLIENTID_SERVERSNI= SQL Server 네이티브 인터페이스<br /><br /> SOSHOST_CLIENTID_SQLOLEDB = SQL Server Native Client OLE DB 공급자<br /><br /> SOSHOST_CLIENTID_MSDART = Microsoft Data Access 런타임|  
 |**name**|**nvarchar(32)**|호스트의 이름입니다.|  
 |**enqueued_tasks_count**|**int**|이 호스트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 큐에 배치한 태스크의 총 개수입니다.|  
 |**active_tasks_count**|**int**|이 호스트가 큐에 배치한 현재 실행 중인 태스크의 수입니다.|  
@@ -61,7 +61,7 @@ ms.locfileid: "82830518"
 |sys.dm_os_hosts. default_memory_clerk_address|sys.dm_os_memory_clerks. memory_clerk_address|일 대 일|  
 |sys.dm_os_hosts. host_address|sys.dm_os_memory_clerks. host_address|일 대 일|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 호스팅된 구성 요소에서 커밋된 총 메모리 양을 확인합니다.  
   
 ||  

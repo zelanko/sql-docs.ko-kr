@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 85e2d580-1c54-4b81-b7e6-2e12997199fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 69c38cca8ab26691a155d11ad3afc88bdc2852d2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a88683f29875047d412d7ae858dc9db47659a36f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827325"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755480"
 ---
 # <a name="dbocdc_jobs-transact-sql"></a>dbo.cdc_jobs(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   캡처 및 정리 작업에 대한 변경 데이터 캡처 구성 매개 변수를 저장합니다. 이 테이블은 **msdb**에 저장 됩니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82827325"
 |**주기가**|**bit**|캡처 작업이 지속적으로 실행(1)될지, 1회 모드로 실행(0)될지를 나타내는 플래그입니다. 자세한 내용은 [sp_cdc_add_job &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)을 참조 하십시오.<br /><br /> **연속** 은 캡처 작업에 대해서만 유효 합니다.|  
 |**pollinginterval**|**bigint**|로그 검색 주기 사이의 시간(초)입니다.<br /><br /> **pollinginterval** 는 캡처 작업에 대해서만 사용할 수 있습니다.|  
 |**보존**|**bigint**|변경 테이블에 변경 행이 보관되는 시간(분)입니다.<br /><br /> **보존** 은 정리 작업에 대해서만 유효 합니다.|  
-|**고대비**|**bigint**|정리 시 단일 문을 사용하여 삭제할 수 있는 삭제 항목의 최대 수입니다.|  
+|**threshold**|**bigint**|정리 시 단일 문을 사용하여 삭제할 수 있는 삭제 항목의 최대 수입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [sp_cdc_add_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)   

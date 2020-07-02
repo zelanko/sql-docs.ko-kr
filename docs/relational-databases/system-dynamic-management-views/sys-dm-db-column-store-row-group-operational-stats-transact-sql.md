@@ -13,15 +13,15 @@ ms.assetid: 31b71c68-50a0-4fd8-a7fe-2d2292be1163
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35d30dfa78ab43f8efe8d3a1cb6bbb9ad30188a7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9430c5c42f9b871457fdaae1386e198a176a0bba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824603"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754245"
 ---
 # <a name="sysdm_db_column_store_row_group_operational_stats-transact-sql"></a>sys. dm_db_column_store_row_group_operational_stats (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   Columnstore 인덱스의 압축 된 행 그룹에 대 한 현재 행 수준 i/o, 잠금 및 액세스 방법 작업을 반환 합니다. 행 그룹를 사용 하 여 사용자 쿼리가 columnstore 인덱스의 압축 된 또는 파티션에 대 한 읽기 또는 쓰기를 대기 해야 하는 시간을 추적 하 고, 상당한 i/o 작업 또는 핫 스폿이 발생 하는 행 그룹을 식별할 수 **있습니다 dm_db_column_store_row_group_operational_stats.**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82824603"
 |**rowgroup_lock_wait_count**|**bigint**|마지막 SQL 다시 시작 이후 데이터베이스 엔진이이 행 그룹 잠금에서 대기한 누적 횟수입니다.|  
 |**rowgroup_lock_wait_in_ms**|**bigint**|마지막 SQL 다시 시작 이후 데이터베이스 엔진이이 행 그룹 잠금에서 대기한 누적 시간 (밀리초)입니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  다음 사용 권한이 필요합니다.  
   
 -   Object_id에 지정 된 테이블에 대 한 CONTROL 권한  
@@ -56,7 +56,7 @@ ms.locfileid: "82824603"
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;인덱스 관련 동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [인덱스 관련 동적 관리 뷰 및 함수 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [sys.dm_db_index_physical_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
  [dm_db_index_usage_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   

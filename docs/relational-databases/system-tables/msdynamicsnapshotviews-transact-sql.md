@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4fc1822a-5d6e-4034-a2e2-363210232d3b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fdae6d15d4a173d99b4f78107114c7a9e5e7d9d0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 21a708b3e257c574f955bddf60e0ea0565eb3955
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812753"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753860"
 ---
 # <a name="msdynamicsnapshotviews-transact-sql"></a>MSdynamicsnapshotviews(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSdynamicsnapshotviews** 테이블은 스냅숏 에이전트에 의해 만들어진 모든 필터링 된 데이터 스냅숏 뷰를 추적 하며, SQL Server 에이전트 또는 스냅숏 에이전트의 비정상적인 종료 시 뷰를 정리 하기 위해 시스템에서 사용 됩니다. 이 테이블은 게시 및 구독 데이터베이스에 저장됩니다.  
   

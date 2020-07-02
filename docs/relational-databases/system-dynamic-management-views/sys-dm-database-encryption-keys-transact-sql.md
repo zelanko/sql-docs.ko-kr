@@ -20,19 +20,19 @@ ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2a1057be51a987e694fa1a29de4299ff63a70733
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3d42cc2873c1e3e03e2af3e0a01080cdb18c349a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824636"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754286"
 ---
 # <a name="sysdm_database_encryption_keys-transact-sql"></a>sys.dm_database_encryption_keys(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   연결된 데이터베이스 암호화 키 및 데이터베이스의 암호화 상태에 대한 정보를 반환합니다. 데이터 암호화에 대한 자세한 내용은 [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하십시오.  
  
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|데이터베이스의 ID입니다.|  
 |encryption_state|**int**|데이터베이스가 암호화되었는지 여부를 나타냅니다.<br /><br /> 0 = 데이터베이스 암호화 키가 없고 암호화되지 않음<br /><br /> 1 = 암호화되지 않음<br /><br /> 2 = 암호화 진행 중<br /><br /> 3 = 암호화됨<br /><br /> 4 = 키 변경 진행 중<br /><br /> 5 = 해독 진행 중<br /><br /> 6 = 보호 변경 진행 중. 데이터베이스 암호화 키를 암호화하는 인증서 또는 비대칭 키를 변경하고 있습니다.|  
@@ -46,12 +46,12 @@ ms.locfileid: "82824636"
 |encryptor_thumbprint|**varbinary(20)**|암호기의 손도장을 표시합니다.|  
 |encryptor_type|**nvarchar(32)**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> 암호기를 설명합니다.|  
 |percent_complete|**real**|데이터베이스 암호화 상태 변경의 완료 비율입니다. 상태 변경이 없으면 0이 됩니다.|
-|encryption_state_desc|**nvarchar(32)**|**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상<br><br> 데이터베이스가 암호화 되었는지 아니면 암호화 되지 않는지를 나타내는 문자열입니다.<br><br>없음<br><br>즉<br><br>됨<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
+|encryption_state_desc|**nvarchar(32)**|**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상<br><br> 데이터베이스가 암호화 되었는지 아니면 암호화 되지 않는지를 나타내는 문자열입니다.<br><br>NONE<br><br>즉<br><br>됨<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
 |encryption_scan_state|**int**|**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상<br><br>암호화 검색의 현재 상태를 나타냅니다. <br><br>0 = 검색이 시작 되지 않았습니다. TDE가 사용 하도록 설정 되어 있지 않습니다.<br><br>1 = 검사가 진행 중입니다.<br><br>2 = 검사가 진행 중이지만 일시 중단 되었습니다. 사용자를 다시 시작할 수 있습니다.<br><br>3 = 어떤 이유로 검사가 중단 되었으며 수동 작업이 필요 합니다. 자세한 내용은 Microsoft 지원를 문의 하세요.<br><br>4 = 검사가 성공적으로 완료 되었으며 TDE가 사용 하도록 설정 되 고 암호화가 완료 되었습니다.|
-|encryption_scan_state_desc|**nvarchar(32)**|**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상<br><br>암호화 검색의 현재 상태를 나타내는 문자열입니다.<br><br> 없음<br><br>RUNNING<br><br>SUSPENDED<br><br>ABORTED<br><br>완료|
+|encryption_scan_state_desc|**nvarchar(32)**|**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상<br><br>암호화 검색의 현재 상태를 나타내는 문자열입니다.<br><br> NONE<br><br>RUNNING<br><br>SUSPENDED<br><br>ABORTED<br><br>완료|
 |encryption_scan_modify_date|**datetime**|**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상<br><br> 암호화 검색 상태를 마지막으로 수정한 날짜 (UTC)를 표시 합니다.|
   
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   

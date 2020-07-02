@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 46e14eb91dde8018abcc52fe618dd9ff688a15b3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b4e96eee6274a53206b26ace6acb4a488a87889c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809118"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755590"
 ---
 # <a name="sp_update_targetservergroup-transact-sql"></a>sp_update_targetservergroup(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정한 대상 서버 그룹의 이름을 변경합니다.  
   
@@ -48,13 +48,13 @@ sp_update_targetservergroup
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행 하려면 사용자에 게 **sysadmin** 고정 서버 역할을 부여 해야 합니다.  
   
 ## <a name="remarks"></a>설명  
  **sp_update_targetservergroup** 는 **msdb** 데이터베이스에서 실행 해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 대상 서버 그룹 `Servers Processing Customer Orders`를 `Local Servers Processing Customer Orders`로 변경합니다.  
   
 ```  

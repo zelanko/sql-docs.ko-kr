@@ -11,15 +11,15 @@ ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3693a2f38542b0ae8c12d0634a9784a00340ba73
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0fd5b0eeb1190becf95a7119ed35a51d01a55c37
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81293915"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755710"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>방법: Geography 열에 행 삽입(ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   이 예제는 두 개의 다른 바인딩(SQLCCHAR 및 SQLCBINARY)을 사용하는 WKB(WellKnownBinary)에서 가져온 두 개의 행을 geography 열이 포함된 테이블에 삽입합니다. 그런 다음 이 테이블에서 한 행을 선택하고 ::STAsText()를 사용하여 행을 표시합니다. WKB는 0x01010000000700ECFAD03A4C4001008000B5DF07C0이며 애플리케이션은 POINT(56.4595 -2.9842)라는 결과를 콘솔로 출력합니다.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "81293915"
  공간 저장소에 대 한 자세한 내용은 [공간 데이터 &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)를 참조 하세요.  
   
 ## <a name="example"></a>예제  
- 첫 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은이 예제에서 사용 하는 테이블을 만듭니다.  
+ 첫 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) 코드 목록은이 예제에서 사용 하는 테이블을 만듭니다.  
   
  odbc32.lib 및 user32.lib를 사용하여 두 번째(C++) 코드 목록을 컴파일합니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81293915"
   
  이 예제는 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 명명된 인스턴스에 연결하려면 ODBC 데이터 원본의 정의를 변경하여 server\namedinstance 형식으로 인스턴스를 지정합니다. 기본적으로 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 는 명명된 인스턴스에 설치됩니다.  
   
- 세 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은이 예제에서 사용 하는 테이블을 삭제 합니다.  
+ 세 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) 코드 목록은이 예제에서 사용 하는 테이블을 삭제 합니다.  
   
 ```sql
 use tempdb  

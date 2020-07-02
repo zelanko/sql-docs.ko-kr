@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a87e6108e68c3b9a2648abf7394f03f7e5c8d1ea
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: e22aadcb6da106c28ff38fc5b9d455f04152d0ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306062"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753592"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>노드 함수 - namespace-uri
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   *$Arg* 에 지정 된 QName의 네임 스페이스 URI를 xs: string으로 반환 합니다.  
   
@@ -49,7 +49,7 @@ fn:namespace-uri($arg as node()?) as xs:string
   
 -   *$Arg* 이 확장 된 QName이 네임 스페이스에 없는 element 또는 attribute 노드인 경우 함수는 길이가 0 인 문자열을 반환 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 항목에서는 AdventureWorks 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
   
 ### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>A. 특정 노드의 네임스페이스 URI 검색  

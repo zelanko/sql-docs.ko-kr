@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: e8265846-8051-4848-b28e-fac27c10bdeb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7429f2c375daa12035e0734cf7a205f03f9be765
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: aa882aed655b2627206f8a50a9d2ff9bcd6b8bb0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808326"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755586"
 ---
 # <a name="syssp_cdc_drop_job-transact-sql"></a>sys.sp_cdc_drop_job(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   msdb에서 현재 데이터베이스의 변경 데이터 캡처 정리 또는 캡처 작업을 제거합니다.  
   
@@ -53,10 +53,10 @@ sys.sp_cdc_drop_job [ [ @job_type = ] 'job_type' ]
 ## <a name="remarks"></a>설명  
  sp_cdc_drop_job은 [sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)에서 내부적으로 호출 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `AdventureWorks2012` 데이터베이스의 정리 작업을 제거합니다.  
   
 ```  

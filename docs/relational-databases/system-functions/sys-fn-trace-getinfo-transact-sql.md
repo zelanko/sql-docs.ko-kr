@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 04b140fe-110a-47b8-98b5-e4c161beb6c9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 041f651fb34c486cebc589f119f3e5f220314dd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fce5e207ef1ca7f28c0d2088e9f23e701d860b7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059229"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754010"
 ---
 # <a name="sysfn_trace_getinfo-transact-sql"></a>sys.fn_trace_getinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정한 추적이나 모든 기존 추적에 대한 정보를 반환합니다.  
   
@@ -49,10 +49,10 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
   
 ## <a name="tables-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |traceid|**int**|추적의 ID입니다.|  
-|속성(property)|**int**|추적의 속성입니다.<br /><br /> 1= 추적 옵션. 자세한 내용은 @options [sp_trace_create &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)을 참조 하십시오.<br /><br /> 2 = 파일 이름<br /><br /> 3 = 최대 크기<br /><br /> 4 = 중지 시간<br /><br /> 5 = 현재 추적 상태. 0 = 중지됨. 1 = 실행 중.|  
+|속성(property)|**int**|추적의 속성입니다.<br /><br /> 1= 추적 옵션. 자세한 내용은 @options [Sp_trace_create &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)을 참조 하십시오.<br /><br /> 2 = 파일 이름<br /><br /> 3 = 최대 크기<br /><br /> 4 = 중지 시간<br /><br /> 5 = 현재 추적 상태. 0 = 중지됨. 1 = 실행 중.|  
 |값|**sql_variant**|지정된 추적의 속성에 대한 정보입니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -65,7 +65,7 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 ALTER TRACE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 모든 활성 추적에 대한 정보를 반환합니다.  
   
 ```  

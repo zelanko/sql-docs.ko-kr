@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b80437f4c5a51fa649a291673fc212483fd43ae
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: c522e0756ca846558acbf6ac1b96c7d4abeef57e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881837"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753562"
 ---
 # <a name="functions-on-sequences---empty"></a>시퀀스 함수 - empty
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   *$Arg* 값이 빈 시퀀스인 경우 True를 반환 합니다. 그렇지 않으면 함수에서 False를 반환합니다.  
   

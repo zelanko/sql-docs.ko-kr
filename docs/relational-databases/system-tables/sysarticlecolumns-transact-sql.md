@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 55918592-e05d-43b6-843b-7e4d82fa6275
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c7a77aa4850765e37963a5a59995fd9e9004004
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3c295da10074efbd6e4ee1b014b754ac8622ba73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834137"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753852"
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Sysarticlecolumns** 테이블은 스냅숏 또는 트랜잭션 게시에 게시 되는 각 테이블 열에 대해 하나의 행을 포함 하 고 각 열을 해당 아티클에 매핑합니다. 이 테이블은 게시 데이터베이스에 저장됩니다.  
   

@@ -18,15 +18,15 @@ ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7793291a565d50554180de10ab9df39a491f423a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 28341d5b79cf58d5b432d007cc7abe134da0d190
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809356"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755572"
 ---
 # <a name="sp_updateextendedproperty-transact-sql"></a>sp_updateextendedproperty(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   기존 확장 속성의 값을 업데이트합니다.  
   
@@ -87,12 +87,12 @@ sp_updateextendedproperty
   
  유효한 *property_name* 및 *값*이 지정 된 경우 모든 개체 형식 및 이름이 null 이면 업데이트 된 속성이 현재 데이터베이스에 속합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  Db_owner 및 db_ddladmin 고정 데이터베이스 역할의 멤버는 개체의 확장 속성을 업데이트할 수 있습니다. 단, 데이터베이스 자체 나 사용자 또는 역할에는 속성을 추가할 수 없습니다 db_ddladmin.  
   
  사용자는 자신이 소유하거나 ALTER 또는 CONTROL 권한이 있는 개체의 확장 속성을 업데이트할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-updating-an-extended-property-on-a-column"></a>A. 열의 확장 속성 업데이트  
  다음 예에서는 `Caption` 테이블의 `ID` 열에서 `T1` 속성의 값을 업데이트합니다.  

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a9c6391540f3da535eb709bba0a39bac11a99289
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3024de2e45f8d4fe6b7a8521f24e9fe44424d5f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834257"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753981"
 ---
 # <a name="sp_table_privileges-transact-sql"></a>sp_table_privileges(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   지정한 테이블에 대한 INSERT, DELETE, UPDATE, SELECT, REFERENCES와 같은 테이블 사용 권한의 목록을 반환합니다.  
   
@@ -78,7 +78,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 이름이 `Contact`로 시작하는 모든 테이블에 대한 권한 정보를 반환합니다.  
   
 ```  
