@@ -14,15 +14,15 @@ ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74122d531eba1f714e16c168838ee1653a8f1293
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc270cb83833e3fcfc54ef4721a62ccaf3980729
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302684"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789434"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   **SQLBindParameter** 를 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 데이터를 제공할 때 데이터 변환을 수행하지 않아도 되기 때문에 애플리케이션의 클라이언트 및 서버 구성 요소 모두에서 성능이 크게 향상됩니다. 이 외에도 근사치 데이터 형식을 삽입하거나 업데이트할 경우의 전체 자릿수 손실을 줄일 수 있습니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "81302684"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버를 사용할 경우 입력 매개 변수를 바인딩할 때 SQL_PARAM_INPUT을 지정합니다. OUTPUT 키워드를 사용하여 정의된 저장 프로시저 매개 변수를 바인딩할 경우에는 SQL_PARAM_OUTPUT 또는 SQL_PARAM_INPUT_OUTPUT만 지정합니다.  
   
- 바인딩된 매개 변수 배열의 배열 요소 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 문 실행 시 오류가 발생 하는 경우에는 NATIVE Client ODBC 드라이버를 사용 하 여 [sqlrowcount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) 를 신뢰할 수 없습니다. ODBC 문 특성 SQL_ATTR_PARAMS_PROCESSED_PTR은 오류가 발생하기 전까지 처리된 행 수를 보고합니다. 그러면 필요한 경우 애플리케이션에서는 해당 매개 변수 상태 배열을 확인하여 성공적으로 실행된 문 수를 파악할 수 있습니다.  
+ [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 바인딩된 매개 변수 배열의 배열 요소에서 문 실행 시 오류가 발생 하는 경우에는 Native Client ODBC 드라이버를 사용 하 여 sqlrowcount를 신뢰할 수 없습니다. ODBC 문 특성 SQL_ATTR_PARAMS_PROCESSED_PTR은 오류가 발생하기 전까지 처리된 행 수를 보고합니다. 그러면 필요한 경우 애플리케이션에서는 해당 매개 변수 상태 배열을 확인하여 성공적으로 실행된 문 수를 파악할 수 있습니다.  
   
 ## <a name="binding-parameters-for-sql-character-types"></a>SQL 문자 형식에 대한 매개 변수 바인딩  
  전달된 SQL 데이터 형식이 문자 형식인 경우 *ColumnSize* 는 문자 수입니다(바이트 아님). 바이트의 데이터 문자열 길이가 8000보다 큰 경우 *ColumnSize* 는 **SQL_SS_LENGTH_UNLIMITED**로 설정되어야 하며 이는 SQL 형식 크기에 제한이 없음을 나타냅니다.  

@@ -1,5 +1,5 @@
 ---
-title: sys.debug 보호 (Transact-sql) | Microsoft Docs
+title: sys.sys보호 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 49c9658d-fb51-4c77-94a0-fba699b0102d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca403b5ad56386252d789ddede007a7293e59a40
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 457eccb7cf032a8b4e0be3a112e15cfe492a32f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079245"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790470"
 ---
 # <a name="syssysprotects-transact-sql"></a>sys.sysprotects(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   GRANT 및 DENY 문을 사용해 데이터베이스의 보안 계정에 적용된 권한에 관한 정보를 포함합니다.  
   

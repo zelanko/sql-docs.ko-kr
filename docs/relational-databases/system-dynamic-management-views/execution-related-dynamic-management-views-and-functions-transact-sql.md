@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 46db1a37a7ee05dfe85d1fcbedc3400ef6ffcf24
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ce9611eb339466c6f1b6bfde7ac3516b14716305
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829537"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790481"
 ---
 # <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>실행 관련 동적 관리 뷰 및 함수(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   이 섹션에서는 다음과 같은 동적 관리 개체에 대해 설명합니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "82829537"
 
   
 > [!NOTE]  
->  **Dm_exec_query_transformation_stats** 동적 관리 뷰는 정보를 제공 하기 위해서만 확인 됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.  
+>  **Dm_exec_query_transformation_stats** 동적 관리 뷰는 정보를 제공 하기 위해서만 확인 됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

@@ -5,7 +5,7 @@ ms.date: 05/28/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: language-reference
 f1_keywords:
 - sp_execute_external_script_TSQL
@@ -20,16 +20,16 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 45273b83d5beb033d8c3aad60fa9919a885e55c4
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: 10c29ab8faed05c2fb2750e1e4de17b2fc1fb2b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84203490"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790405"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script(Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **Sp_execute_external_script** 저장 프로시저는 프로시저에 대 한 입력 인수로 제공 된 스크립트를 실행 하 고 [Machine Learning Services](../../machine-learning/sql-server-machine-learning-services.md) 및 [언어 확장과](../../language-extensions/language-extensions-overview.md)함께 사용 됩니다. 
@@ -189,7 +189,7 @@ sp_execute_external_script
 > [!NOTE]  
 > 스트리밍 및 병렬 처리는 Enterprise Edition 에서만 지원 됩니다. 오류를 발생 시 키 지 않고 표준 버전의 쿼리에 매개 변수를 포함할 수 있지만 매개 변수는 영향을 주지 않으며 R 스크립트는 단일 프로세스로 실행 됩니다.  
   
-## <a name="restrictions"></a>제한  
+## <a name="restrictions"></a>제한 사항  
 
 ### <a name="data-types"></a>데이터 형식
 
@@ -225,7 +225,7 @@ Float 값 (예: `+Inf` , `-Inf` , `NaN` )은 두 언어 모두 IEEE 754를 사�
 
 **EXECUTE ANY EXTERNAL SCRIPT** database 권한이 필요 합니다.  
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 이 섹션에서는를 사용 하 여이 저장 프로시저를 사용 하 여 R 또는 Python 스크립트를 실행 하는 방법의 예를 보여 줍니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] .
 
@@ -322,7 +322,7 @@ Python을 사용하여 비슷한 모델을 생성하려면 언어 식별자를 `
 
 점수 매기기의 경우 네이티브 [PREDICT](../../t-sql/queries/predict-transact-sql.md) 함수를 사용할 수도 있으며, 이 함수는 Python 또는 R 런타임 호출을 방지하기 때문에 일반적으로 더 빠릅니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 + [SQL machine learning](../../machine-learning/index.yml)
 + [언어 확장을 SQL Server](../../language-extensions/language-extensions-overview.md)합니다. 

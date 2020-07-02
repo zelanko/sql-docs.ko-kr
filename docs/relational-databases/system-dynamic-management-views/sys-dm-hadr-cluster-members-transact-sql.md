@@ -22,15 +22,15 @@ ms.assetid: feb20b3a-8835-41d3-9a1c-91d3117bc170
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffa67137c4b7d99cd0aa394319e9415a72b73103
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3ec0ed5aa4ddedd7e3fcfd544d53a270eb9e3372
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829398"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790463"
 ---
 # <a name="sysdm_hadr_cluster_members-transact-sql"></a>sys.dm_hadr_cluster_members(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 사용하도록 설정된 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]의 로컬 인스턴스를 호스팅하는 WSFC 노드에 WSFC 쿼럼이 있는 경우 쿼럼을 구성하는 각 멤버에 대한 행과 각 멤버의 상태를 반환합니다. 여기에는 클러스터의 모든 노드 ( **Clusterenum** 함수를 사용 하 여 CLUSTER_ENUM_NODE 형식으로 반환)와 디스크 또는 파일 공유 감시 (있는 경우)가 포함 됩니다. 지정된 구성원에 대해 반환되는 행에는 해당 구성원의 상태에 대한 정보가 들어 있습니다. 예를 들어 한 노드가 다운 되는 주 노드 쿼럼이 있는 5 개 노드 클러스터의 경우,가 쿼럼 인 노드에 있는에 대해 사용 하도록 설정 된 서버 인스턴스에서 **dm_hadr_cluster_members** 를 쿼리하면 s [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] **. dm_hadr_cluster_members** 에서 다운 노드의 상태를 "NODE_DOWN"로 나타냅니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "82829398"
 |**member_state_desc**|**nvarchar(60)**|**Member_state**에 대 한 설명 이며 다음 중 하나입니다.<br /><br /> UP<br /><br /> 아래로|  
 |**number_of_quorum_votes**|**tinyint**|이 쿼럼 구성원이 소유한 쿼럼 투표의 수입니다. 과반수 없음: 디스크만 쿼럼이 값의 기본값은 0입니다. 다른 쿼럼 유형의 경우 기본값은 1입니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

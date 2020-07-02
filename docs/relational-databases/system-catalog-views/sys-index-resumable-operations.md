@@ -19,16 +19,16 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 143ed8e5487772a39e4e98c92f8f07d78de7f370
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c57cc780bc3e05347daf8dd7778e7e5de274d303
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823385"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790493"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 **index_resumable_operations** 는 다시 시작 가능한 인덱스 다시 작성 또는 만들기에 대 한 현재 실행 상태를 모니터링 하 고 확인 하는 시스템 뷰입니다.  
 **적용 대상**: SQL Server (2017 이상) 및 Azure SQL Database
   
@@ -63,7 +63,7 @@ SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;
 ## <a name="see-also"></a>참고 항목
 
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
-- [인덱스 만들기](../../t-sql/statements/create-index-transact-sql.md)
+- [CREATE  INDEX](../../t-sql/statements/create-index-transact-sql.md)
 - [카탈로그 뷰](catalog-views-transact-sql.md)
 - [개체 카탈로그 뷰](object-catalog-views-transact-sql.md)
 - [sys.indexes](sys-xml-indexes-transact-sql.md)

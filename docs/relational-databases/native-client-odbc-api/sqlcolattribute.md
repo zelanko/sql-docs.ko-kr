@@ -14,17 +14,17 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6113316f3be68ca03b5c107ed54965577b6963c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b539e532d6de43bf646652a1d4845eaf38d8bd2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302634"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789393"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  **Sqlcolattribute** 를 사용 하 여 준비 또는 실행 된 ODBC 문에 대 한 결과 집합 열의 특성을 검색할 수 있습니다. 준비 된 문에 대해 **Sqlcolattribute** 를 호출 하면로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]왕복이 발생 합니다. Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC 드라이버는 문 실행의 일부로 결과 집합 열 데이터를 받으므로 **Sqlexecute** 또는 **sqlcolattribute** 가 완료 된 후 **sqlcolattribute** 를 호출 하면 서버 왕복이 포함 되지 않습니다.  
+  **Sqlcolattribute** 를 사용 하 여 준비 또는 실행 된 ODBC 문에 대 한 결과 집합 열의 특성을 검색할 수 있습니다. 준비 된 문에 대해 **Sqlcolattribute** 를 호출 하면로 왕복이 발생 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버는 문 실행의 일부로 결과 집합 열 데이터를 받으므로 **sqlexecute** 또는 **sqlcolattribute** 가 완료 된 후 **sqlcolattribute** 를 호출 하면 서버 왕복이 포함 되지 않습니다.  
   
 > [!NOTE]  
 >  일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 결과 집합에는 ODBC 열 식별자 특성을 사용할 수 없습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "81302634"
   
  버전에 관계없이, 준비된 SQL 문의 일괄 처리에서 여러 개의 결과 집합이 생성될 경우 첫 번째 결과 집합에 대해서만 열 특성이 보고됩니다.  
   
- 다음 열 특성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 드라이버에 의해 노출 되는 확장입니다. Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC 드라이버는 *NumericAttrPtr* 매개 변수의 모든 값을 반환 합니다. WORD 배열에 대한 포인터인 SQL_CA_SS_COMPUTE_BYLIST를 제외하고는 SDWORD(signed long) 값을 반환합니다.  
+ 다음 열 특성은 Native Client ODBC 드라이버에 의해 노출 되는 확장 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버는 *NumericAttrPtr* 매개 변수의 모든 값을 반환 합니다. WORD 배열에 대한 포인터인 SQL_CA_SS_COMPUTE_BYLIST를 제외하고는 SDWORD(signed long) 값을 반환합니다.  
   
 |필드 식별자|반환 값|  
 |----------------------|--------------------|  
@@ -78,7 +78,7 @@ ms.locfileid: "81302634"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에는 각각 XML 스키마 컬렉션 이름, 스키마 이름 및 카탈로그 이름을 나타내는 추가 정보를 제공 하는 드라이버별 설명자 필드가 도입 되었습니다. 이러한 속성에는 영숫자가 아닌 문자가 포함된 경우 따옴표나 이스케이프 문자가 필요하지 않습니다. 다음 표에는 새로 도입된 설명자 필드가 나와 있습니다.  
   
-|열 이름|유형|설명|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|XML 스키마 컬렉션 이름이 정의된 카탈로그의 이름입니다. 카탈로그 이름을 찾을 수 없는 경우 이 변수에는 빈 문자열이 포함됩니다.<br /><br /> 이 정보는 읽기/쓰기 필드인 IRD의 SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME 레코드 필드에서 반환됩니다.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|CharacterAttributePtr|XML 스키마 컬렉션 이름이 정의된 스키마의 이름입니다. 스키마 이름을 찾을 수 없는 경우 이 변수에는 빈 문자열이 포함됩니다.<br /><br /> 이 정보는 읽기/쓰기 필드인 IRD의 SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME 레코드 필드에서 반환됩니다.|  
@@ -86,7 +86,7 @@ ms.locfileid: "81302634"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에는 결과 집합의 UDT(사용자 정의 형식) 열 또는 저장 프로시저나 매개 변수가 있는 쿼리의 UDT 매개 변수에 대한 추가 정보를 제공하기 위한 새 드라이버 관련 설명자 필드도 도입되었습니다. 이러한 속성에는 영숫자가 아닌 문자가 포함된 경우 따옴표나 이스케이프 문자가 필요하지 않습니다. 다음 표에는 새로 도입된 설명자 필드가 나와 있습니다.  
   
-|열 이름|유형|설명|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|UDT가 포함된 카탈로그의 이름입니다.|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|UDT가 포함된 스키마의 이름입니다.|  

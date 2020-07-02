@@ -14,25 +14,25 @@ ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efe1fdccbef4f5c4a393083f6eb81efee759be5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7612fc4da7cb12b4e38f20404cbf9481d610877c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302590"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789328"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  SQL 문의 매개 변수를 설명 하기 위해 Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] odbc 드라이버는 준비 된 ODBC 문 핸들 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에 대해 SQLDescribeParam가 호출 될 때 SELECT 문을 작성 하 고 실행 합니다. 결과 집합의 메타데이터에 따라 준비된 문의 매개 변수 특징이 결정됩니다. SQLDescribeParam는 SQLExecute 또는 SQLExecDirect에서 반환할 수 있는 오류 코드를 반환할 수 있습니다.  
+  SQL 문의 매개 변수를 설명 하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT odbc 드라이버는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 준비 된 ODBC 문 핸들에 대해 SQLDescribeParam가 호출 될 때 SELECT 문을 작성 하 고 실행 합니다. 결과 집합의 메타데이터에 따라 준비된 문의 매개 변수 특징이 결정됩니다. SQLDescribeParam는 SQLExecute 또는 SQLExecDirect에서 반환할 수 있는 오류 코드를 반환할 수 있습니다.  
   
- 로 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 시작 하는 데이터베이스 엔진의 향상 된 기능을 통해 SQLDescribeParam를 통해 예상 결과에 대 한 보다 정확한 설명을 얻을 수 있습니다. 이러한 더 정확한 결과는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 SQLDescribeParam에 의해 반환 된 값과 다를 수 있습니다. 자세한 내용은 [메타데이터 검색](../../relational-databases/native-client/features/metadata-discovery.md)을 참조하세요.  
+ 로 시작 하는 데이터베이스 엔진의 향상 된 기능 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 을 통해 SQLDescribeParam를 통해 예상 결과에 대 한 보다 정확한 설명을 얻을 수 있습니다. 이러한 더 정확한 결과는 이전 버전의에서 SQLDescribeParam에 의해 반환 된 값과 다를 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 자세한 내용은 [메타데이터 검색](../../relational-databases/native-client/features/metadata-discovery.md)을 참조하세요.  
   
- 또한에서 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]새로 만들기, *ParameterSizePtr* 는 이제 [ODBC 사양](https://go.microsoft.com/fwlink/?LinkId=207044)에 정의 된 대로 해당 매개 변수 표식의 열 또는 식 크기 (문자 수)에 대 한 정의를 사용 하 여 정렬 하는 값을 반환 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 Native Client에서 *ParameterSizePtr* 은 형식에 대 한 **SQL_DESC_OCTET_LENGTH** 의 해당 값 또는 형식에 대해 SQLBindParameter에 제공 된 관련이 없는 열 크기 값 (예:**SQL_INTEGER**) 일 수 있습니다.  
+ 또한에서 새로 만들기 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , *ParameterSizePtr* 는 이제 [ODBC 사양](https://go.microsoft.com/fwlink/?LinkId=207044)에 정의 된 대로 해당 매개 변수 표식의 열 또는 식 크기 (문자 수)에 대 한 정의를 사용 하 여 정렬 하는 값을 반환 합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서 *ParameterSizePtr* 은 형식에 대 한 **SQL_DESC_OCTET_LENGTH** 의 해당 값 또는 형식에 대해 SQLBindParameter에 제공 된 관련이 없는 열 크기 값 (예:**SQL_INTEGER**) 일 수 있습니다.  
   
  드라이버는 다음과 같은 상황에서 SQLDescribeParam 호출을 지원 하지 않습니다.  
   
--   SQLExecDirect 이후 FROM 절 [!INCLUDE[tsql](../../includes/tsql-md.md)] 이 포함 된 UPDATE 또는 DELETE 문에 대해  
+-   SQLExecDirect 이후 [!INCLUDE[tsql](../../includes/tsql-md.md)] from 절이 포함 된 UPDATE 또는 DELETE 문에 대해  
   
 -   HAVING 절에 매개 변수를 포함하거나 SUM 함수 결과와 비교되는 ODBC 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 경우  
   
@@ -42,9 +42,9 @@ ms.locfileid: "81302590"
   
 -   매개 변수 중 하나가 함수에 대한 매개 변수인 쿼리의 경우  
   
--   명령에 주석 (/* \*/)이 있는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+-   명령에 주석 (/* \* /)이 있는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 일괄 처리를 처리 하는 경우 드라이버는 일괄 처리의 첫 번째 문 다음에 있는 문의 매개 변수 표식에 대해 SQLDescribeParam를 호출 하는 것도 지원 하지 않습니다.  
+ 문 일괄 처리를 처리 [!INCLUDE[tsql](../../includes/tsql-md.md)] 하는 경우 드라이버는 일괄 처리의 첫 번째 문 다음에 있는 문의 매개 변수 표식에 대해 SQLDescribeParam를 호출 하는 것도 지원 하지 않습니다.  
   
  준비 된 저장 프로시저의 매개 변수를 설명할 때 SQLDescribeParam는 시스템 저장 프로시저 [sp_sproc_columns](../../relational-databases/system-stored-procedures/sp-sproc-columns-transact-sql.md) 를 사용 하 여 매개 변수 특징을 검색 합니다. sp_sproc_columns는 현재 사용자 데이터베이스 내의 저장 프로시저에 대 한 데이터를 보고할 수 있습니다. 정규화 된 저장 프로시저 이름을 준비 하면 SQLDescribeParam에서 데이터베이스를 실행할 수 있습니다. 예를 들어 다음과 같은 시스템 저장 프로시저 [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) 을 준비 하 고 모든 데이터베이스에서 실행할 수 있습니다.  
   
@@ -58,7 +58,7 @@ SQLPrepare(hstmt, "{call sp_who(?)}", SQL_NTS);
 SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);  
 ```  
   
- 대량 값 데이터 형식의 경우 *DataTypePtr* 에서 반환 되는 값은 SQL_VARCHAR, SQL_VARBINARY 또는 SQL_NVARCHAR입니다. 큰 값 데이터 형식 매개 변수의 크기가 "제한 없음" 임을 나타내려면 Native Client ODBC 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *ParameterSizePtr* 를 0으로 설정 합니다. 표준 **varchar** 매개 변수에 대 한 실제 크기 값이 반환 됩니다.  
+ 대량 값 데이터 형식의 경우 *DataTypePtr* 에서 반환 되는 값은 SQL_VARCHAR, SQL_VARBINARY 또는 SQL_NVARCHAR입니다. 큰 값 데이터 형식 매개 변수의 크기가 "제한 없음" 임을 나타내려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 드라이버는 *ParameterSizePtr* 를 0으로 설정 합니다. 표준 **varchar** 매개 변수에 대 한 실제 크기 값이 반환 됩니다.  
   
 > [!NOTE]  
 >  매개 변수가 이미 SQL_VARCHAR, SQL_VARBINARY 또는 SQL_WVARCHAR 매개 변수의 최대 크기와 바인딩되어 있으면 "제한 없음"이 아니라 매개 변수의 바인딩된 크기가 반환됩니다.  

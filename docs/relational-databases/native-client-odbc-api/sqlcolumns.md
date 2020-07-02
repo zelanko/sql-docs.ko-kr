@@ -14,15 +14,15 @@ ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abce98b64da8de6039f81025201cce25269763a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: feae55d486eae6b269cef94320fe9468edb6e672
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302611"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789375"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   **Sqlcolumns** 는 *CatalogName*, *TableName*또는 *ColumnName* 매개 변수에 대 한 값이 있는지 여부를 SQL_SUCCESS을 반환 합니다. 이러한 매개 변수에 잘못 된 값이 사용 되는 경우 **Sqlfetch** SQL_NO_DATA 반환 합니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "81302611"
   
  UDT 매개 변수의 경우 서버에서 이 정보를 반환하거나 요구하면 위에 정의된 새로운 드라이버별 설명자를 사용하여 UDT의 추가 메타데이터 속성을 얻거나 설정할 수 있습니다.  
   
- 클라이언트가 SQLColumns에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 하 고이를 호출 하는 경우 카탈로그 입력 매개 변수에 NULL 또는 와일드 카드 값을 사용 하면 다른 카탈로그의 정보가 반환 되지 않습니다. 현재 카탈로그에 대한 정보만 반환됩니다. 클라이언트는 먼저 SQLTables를 호출 하 여 원하는 테이블이 있는 카탈로그를 확인할 수 있습니다. 그런 다음 클라이언트는 SQLColumns 호출에서 카탈로그 입력 매개 변수에 해당 카탈로그 값을 사용 하 여 해당 테이블의 열에 대 한 정보를 검색할 수 있습니다.  
+ 클라이언트가 SQLColumns에 연결 하 고이를 호출 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카탈로그 입력 매개 변수에 NULL 또는 와일드 카드 값을 사용 하면 다른 카탈로그의 정보가 반환 되지 않습니다. 현재 카탈로그에 대한 정보만 반환됩니다. 클라이언트는 먼저 SQLTables를 호출 하 여 원하는 테이블이 있는 카탈로그를 확인할 수 있습니다. 그런 다음 클라이언트는 SQLColumns 호출에서 카탈로그 입력 매개 변수에 해당 카탈로그 값을 사용 하 여 해당 테이블의 열에 대 한 정보를 검색할 수 있습니다.  
   
 ## <a name="sqlcolumns-and-table-valued-parameters"></a>SQLColumns 및 테이블 반환 매개 변수  
  SQLColumns에서 반환 하는 결과 집합은 SQL_SOPT_SS_NAME_SCOPE 설정에 따라 달라 집니다. 자세한 내용은 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)를 참조 하세요. 테이블 반환 매개 변수에 다음 열이 추가되었습니다.  
@@ -77,14 +77,14 @@ ms.locfileid: "81302611"
  **Sqlcolumns** 는 크기가 높은 CLR udt (사용자 정의 형식)를 지원 합니다. 자세한 내용은 [ODBC&#41;&#40;LARGE CLR 사용자 정의 형식 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>스파스 열에 대한 SQLColumns 지원  
- SQLColumns의 결과 집합에는 두 개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 특정 열이 추가 되었습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQLColumns의 결과 집합에는 두 개의 특정 열이 추가 되었습니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**Smallint**|열이 스파스 열이면 SQL_TRUE이며 그렇지 않으면 SQL_FALSE입니다.|  
 |SS_IS_COLUMN_SET|**Smallint**|열이 **column_set** 열인 경우 SQL_TRUE입니다. 그렇지 않으면 SQL_FALSE 합니다.|  
   
- ODBC 사양에 따라 SS_IS_SPARSE 및 SS_IS_COLUMN_SET는 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]버전에 추가 된 모든 드라이버 특정 열 앞에, 그리고 odbc 자체에 의해 지정 된 모든 열 뒤에 나타납니다.  
+ ODBC 사양에 따라 SS_IS_SPARSE 및 SS_IS_COLUMN_SET는 이전 버전에 추가 된 모든 드라이버 특정 열 앞에, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 그리고 odbc 자체에 의해 지정 된 모든 열 뒤에 나타납니다.  
   
  SQLColumns에서 반환 하는 결과 집합은 SQL_SOPT_SS_NAME_SCOPE 설정에 따라 달라 집니다. 자세한 내용은 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)를 참조 하세요.  
   

@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 64e1847db5477ce556824d1b424649f617a0fa9f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c667434348cfcb8a7f901b69bc7df86c09a34c19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488022"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789593"
 ---
 # <a name="assemblies---properties"></a>어셈블리 - 속성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 페이지를 사용하여 어셈블리 속성을 확인하거나 수정할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
@@ -46,7 +46,7 @@ ms.locfileid: "81488022"
  **강력한 이름**  
  어셈블리에 디지털 서명된 경우에는 **True** 를 표시하고 디지털 서명되지 않은 경우에는 **False** 를 표시합니다.  
   
- **버전**  
+ **Version**  
  어셈블리의 버전 번호를 표시합니다.  
   
 ## <a name="see-also"></a>참고 항목  

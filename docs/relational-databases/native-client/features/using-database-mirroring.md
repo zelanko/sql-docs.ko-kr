@@ -18,15 +18,15 @@ ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9c702d8d0508dcb64090f0b753da64019736ceb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 40879f902b6d014f90e6e2493b1761018c29ce40
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303228"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787833"
 ---
 # <a name="using-database-mirroring"></a>데이터베이스 미러링 사용
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
     
 > [!NOTE]  
@@ -60,14 +60,14 @@ ms.locfileid: "81303228"
 >  또한 서버 이름은 대/소문자를 구분하지 않지만 데이터베이스 이름은 대/소문자를 구분합니다. 따라서 DSN 및 연결 문자열에서 동일한 대/소문자 조합을 사용해야 합니다.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 공급자  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 연결 및 연결 문자열 특성을 통해 데이터베이스 미러링을 지원 합니다. DBPROPSET_SQLSERVERDBINIT 속성 집합에 SSPROP_INIT_FAILOVERPARTNER 속성이 추가되었으며 DBPROP_INIT_PROVIDERSTRING의 새로운 연결 문자열 특성으로 **FailoverPartner** 키워드가 추가되었습니다. 자세한 내용은 [SQL Server Native Client 연결 문자열 키워드 사용](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조 하세요.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 연결 및 연결 문자열 특성을 통해 데이터베이스 미러링을 지원 합니다. DBPROPSET_SQLSERVERDBINIT 속성 집합에 SSPROP_INIT_FAILOVERPARTNER 속성이 추가되었으며 DBPROP_INIT_PROVIDERSTRING의 새로운 연결 문자열 특성으로 **FailoverPartner** 키워드가 추가되었습니다. 자세한 내용은 [SQL Server Native Client 연결 문자열 키워드 사용](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조 하세요.  
   
- **CoUninitialize** 가 호출 될 때까지 또는 응용 프로그램에 데이터 원본 개체와 같은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 관리 하는 일부 개체에 대 한 참조가 있는 경우에만 장애 조치 (failover) 캐시가 유지 됩니다.  
+ **CoUninitialize** 가 호출 될 때까지 또는 응용 프로그램에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 원본 개체와 같은 Native Client OLE DB 공급자가 관리 하는 일부 개체에 대 한 참조가 있는 경우에만 장애 조치 (failover) 캐시가 유지 됩니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자의 데이터베이스 미러링 지원에 대 한 자세한 내용은 [초기화 및 권한 부여 속성](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)을 참조 하세요.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자의 데이터베이스 미러링 지원에 대 한 자세한 내용은 [초기화 및 권한 부여 속성](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)을 참조 하세요.  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 드라이버  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client ODBC 드라이버는 연결 및 연결 문자열 특성을 통해 데이터베이스 미러링을 지원 합니다. 특히 SQL_COPT_SS_FAILOVER_PARTNER 특성은 [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 및 [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) 함수에 사용할 수 있도록 추가 되었습니다. 그리고 **Failover_Partner** 키워드가 새 연결 문자열 특성으로 추가 되었습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버는 연결 및 연결 문자열 특성을 통해 데이터베이스 미러링을 지원 합니다. 특히 SQL_COPT_SS_FAILOVER_PARTNER 특성은 [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 및 [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) 함수에 사용할 수 있도록 추가 되었습니다. 그리고 **Failover_Partner** 키워드가 새 연결 문자열 특성으로 추가 되었습니다.  
   
  장애 조치(Failover) 캐시는 애플리케이션에 한 개 이상의 환경 핸들이 할당되어 있는 동안 유지됩니다. 반대로 마지막 환경 핸들의 할당이 취소되면 장애 조치(Failover) 캐시가 손실됩니다.  
   

@@ -33,17 +33,17 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1e4af8a90a4f83d8200f02910f3e445b49fca91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3107dbb5771731fd15bb1432b2a180af612c86fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983205"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790455"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  특정 단어나 구와 정확히 일치하거나 비슷하게 일치하는 단어 검색, 서로 근접한 단어 검색 또는 가중치 검색에서 일치하는 항목이 포함된 열에 대해 0개 이상의 행이 있는 테이블을 반환합니다. CONTAINSTABLE은 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문의 [FROM 절](../../t-sql/queries/from-transact-sql.md) 에 사용 되며 일반 테이블 이름인 것 처럼 참조 됩니다. 문자 기반 데이터 형식을 포함하는 전체 텍스트 인덱싱된 열에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 검색을 수행합니다.  
+  특정 단어나 구와 정확히 일치하거나 비슷하게 일치하는 단어 검색, 서로 근접한 단어 검색 또는 가중치 검색에서 일치하는 항목이 포함된 열에 대해 0개 이상의 행이 있는 테이블을 반환합니다. CONTAINSTABLE은 SELECT 문의 [FROM 절](../../t-sql/queries/from-transact-sql.md) 에 사용 [!INCLUDE[tsql](../../includes/tsql-md.md)] 되며 일반 테이블 이름인 것 처럼 참조 됩니다. 문자 기반 데이터 형식을 포함하는 전체 텍스트 인덱싱된 열에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 검색을 수행합니다.  
   
  CONTAINSTABLE은 [contains 조건자](../../t-sql/queries/contains-transact-sql.md) 와 동일한 종류의 일치에 유용 하며 contains와 동일한 검색 조건을 사용 합니다.  
   
@@ -132,9 +132,9 @@ CONTAINSTABLE
   
  언어가 다른 문서가 단일 열에 BLOB(Binary Large Object)으로 함께 저장된 경우 지정된 문서의 LCID(로캘 ID)에 따라 해당 내용을 인덱싱하는 데 사용할 언어가 결정됩니다. 이러한 열을 쿼리할 때 LANGUAGE** *language_term*을 지정하면 검색 확률을 높일 수 있습니다.  
   
- 문자열로 지정 하는 경우 *language_term* 는 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 호환성 뷰의 **alias** 열 값에 해당 합니다.  문자열은 '*language_term*'과 같이 작은따옴표로 묶어야 합니다. 정수로 지정하는 경우 *language_term*은 언어를 식별하는 실제 LCID입니다. 16진수 값으로 지정하는 경우 *language_term*은 0x로 시작하는 16진수 LCID 값입니다. 16진수 값은 앞에 오는 0을 포함하여 8자리 수를 초과할 수 없습니다.  
+ 문자열로 지정 하는 경우 *language_term* 은 [sys.sys언어](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 호환성 보기의 **별칭** 열 값에 해당 합니다.  문자열은 '*language_term*'과 같이 작은따옴표로 묶어야 합니다. 정수로 지정하는 경우 *language_term*은 언어를 식별하는 실제 LCID입니다. 16진수 값으로 지정하는 경우 *language_term*은 0x로 시작하는 16진수 LCID 값입니다. 16진수 값은 앞에 오는 0을 포함하여 8자리 수를 초과할 수 없습니다.  
   
- 값이 DBCS (더블 바이트 문자 집합) 형식인 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 경우는이를 유니코드로 변환 합니다.  
+ 값이 DBCS (더블 바이트 문자 집합) 형식인 경우는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이를 유니코드로 변환 합니다.  
   
  지정된 언어가 잘못되었거나 해당 언어에 해당하는 리소스가 설치되지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 오류를 반환합니다. 중립 언어 리소스를 사용하려면 0x0을 *language_term*으로 지정합니다.  
   
@@ -167,7 +167,7 @@ FROM table AS FT_TBL INNER JOIN
 ## <a name="permissions"></a>사용 권한  
  테이블이나 참조되는 테이블의 열에 대해 SELECT 권한이 있는 사용자만 실행 권한이 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-simple-example"></a>A. 간단한 예  
  다음 예에서는 3 개의 군을 나열 하 고 플래그에 색을 나열 하는 두 개의 열로 이루어진 간단한 테이블을 만들고 채웁니다. 이 예제에서는 테이블에 대 한 전체 텍스트 카탈로그 및 인덱스를 만들고 채웁니다. 그런 다음 **CONTAINSTABLE** 구문을 보여 줍니다. 이 예에서는 검색 값이 여러 번 충족 될 때 순위 값이 증가 하는 방식을 보여 줍니다. 마지막 쿼리에서 녹색 및 검정을 모두 포함 하는 탄자니아는 쿼리 된 색 중 하나만 포함 하는 이탈리아 보다 더 높은 순위를 갖습니다.  

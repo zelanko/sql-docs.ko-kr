@@ -13,19 +13,19 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5de109f0f26dcc8b892f7856f889ea93089c1205
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2358894c1303856fc3e1b9db06bca1f7e9427509
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304374"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787698"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>큰 CLR 사용자 정의 형식(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   이 항목에서는 큰 CLR(공용 언어 런타임) UDT(사용자 정의 형식)를 지원하기 위한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 OLE DB 변경 내용에 대해 설명합니다.  
   
- Native Client의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Large clr udt 지원에 대 한 자세한 내용은 [Large Clr 사용자 정의 형식](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)을 참조 하세요. 샘플은 [큰 CLR UDT 사용&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)을 참조하세요.  
+ Native Client의 large CLR Udt 지원에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Large Clr 사용자 정의 형식](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)을 참조 하세요. 샘플은 [큰 CLR UDT 사용&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)을 참조하세요.  
   
 ## <a name="data-format"></a>데이터 형식  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 ~0을 사용하여 LOB(Large Object) 형식에 대해 무제한 크기인 값의 길이를 나타냅니다. ~0은 8,000바이트보다 큰 CLR UDT 크기도 나타냅니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "81304374"
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  **prgParamInfo**를 통해 DBPARAMINFO 구조에 반환된 정보는 다음과 같습니다.  
   
-|매개 변수 형식|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
+|매개 변수 유형|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (8,000바이트 이하 길이)|"DBTYPE_UDT"|*n*|정의되지 않음|정의되지 않음|지우기|  
 |DBTYPE_UDT<br /><br /> (8,000바이트를 초과하는 길이)|"DBTYPE_UDT"|~0|정의되지 않음|정의되지 않음|set|  
@@ -62,7 +62,7 @@ ms.locfileid: "81304374"
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  DBPARAMBINDINFO 구조에 제공된 정보는 다음을 준수해야 합니다.  
   
-|매개 변수 형식|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
+|매개 변수 유형|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|--------------------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (8,000바이트 이하 길이)|DBTYPE_UDT|*n*|무시됨|무시됨|DBTYPE_IUNKNOWN을 사용하여 매개 변수가 전달되는 경우 설정해야 합니다.|  
 |DBTYPE_UDT<br /><br /> (8,000바이트를 초과하는 길이)|DBTYPE_UDT|~0|무시됨|무시됨|무시됨|  
@@ -80,7 +80,7 @@ ms.locfileid: "81304374"
   
  UDT에 대해 다음 열도 정의됩니다.  
   
-|열 식별자|유형|설명|  
+|열 식별자|형식|설명|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 열의 경우 UDT가 정의된 카탈로그의 이름입니다.|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 열의 경우 UDT가 정의된 스키마의 이름입니다.|  
@@ -90,7 +90,7 @@ ms.locfileid: "81304374"
 ## <a name="icolumnsinfogetcolumninfo"></a>IColumnsInfo::GetColumnInfo  
  DBCOLUMNINFO 구조에 반환되는 정보는 다음과 같습니다.  
   
-|매개 변수 형식|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
+|매개 변수 유형|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
 |DBTYPE_UDT<br /><br /> (8,000바이트 이하 길이)|DBTYPE_UDT|*n*|~0|~0|지우기|  
 |DBTYPE_UDT<br /><br /> (8,000바이트를 초과하는 길이)|DBTYPE_UDT|~0|~0|~0|설정|  
@@ -105,7 +105,7 @@ ms.locfileid: "81304374"
   
  UDT에 대해 다음 추가 열이 정의됩니다.  
   
-|열 식별자|유형|설명|  
+|열 식별자|형식|설명|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 열의 경우 UDT가 정의된 카탈로그의 이름입니다.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 열의 경우 UDT가 정의된 스키마의 이름입니다.|  
