@@ -18,15 +18,15 @@ ms.assetid: 51b03c2f-0d54-40f5-9172-e747942d4a46
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ad6ca284f99a777b8909d2f96ea68ff83c9f467
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c737f6c139a82735e4da1d764b4036bb93c8b2a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818143"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751691"
 ---
 # <a name="sp_releaseapplock-transact-sql"></a>sp_releaseapplock(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   애플리케이션 리소스에서 잠금을 해제합니다.  
   
@@ -65,10 +65,10 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
   
  어떤 이유로든 서버가 종료되면 잠금은 해제됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Form1` 데이터베이스의 `AdventureWorks2012` 리소스에 대해 현재 트랜잭션과 연관된 잠금을 해제합니다.  
   
 ```  

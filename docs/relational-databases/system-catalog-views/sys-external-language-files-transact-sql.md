@@ -19,15 +19,15 @@ ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a991761e26f8f63ae6431d7d242fb2625135d3ac
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: e90925354a9a48d3a2b0ff8e789d940ece6cb476
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627483"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751739"
 ---
 # <a name="sysexternal_language_files-transact-sql"></a>sys. external_language_files (Transact-sql)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 이 카탈로그 뷰는 데이터베이스에 있는 외부 언어 확장 파일의 목록을 제공 합니다. **R** 및 **Python**은 예약된 이름이며 해당 특정 이름을 사용하여 외부 언어를 만들 수 없습니다.
 
@@ -47,7 +47,7 @@ File_spec에서 외부 언어가 생성 되 면 확장 자체와 해당 속성�
 |매개 변수|nvarchar(4000)|외부 언어 prameters|
 |environment_variables |nvarchar(4000)|외부 언어 환경 변수|
 
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
 
 + [sys.external_languages](sys-external-languages-transact-sql.md)  
 + [외부 언어 만들기](../../t-sql/statements/create-external-language-transact-sql.md)  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85271f37c441ab88ce5ad14279c07f6feda3d95d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f122698756a6d2359112b535158dcb6ff89569b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827370"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750445"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스의 각 데이터 또는 로그 파일마다 하나의 행을 포함합니다. 이 열은 백업 당시의 파일 구성을 설명합니다. 파일이 백업에 포함 되는지 여부는 **is_present** 열에 의해 결정 됩니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   

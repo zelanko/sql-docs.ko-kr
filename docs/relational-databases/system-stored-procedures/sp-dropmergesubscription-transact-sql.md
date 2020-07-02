@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2868afcf85895ce1e7456bc2eea3693d9b25e679
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: be9ad08f1591ef6f7e8893b09031a2e695be031d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831167"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750549"
 ---
 # <a name="sp_dropmergesubscription-transact-sql"></a>sp_dropmergesubscription(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   병합 게시에 대한 구독 및 연결된 병합 에이전트를 삭제합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -54,7 +54,7 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 |-----------|-----------------|  
 |**모두가**|밀어넣기, 끌어오기 및 익명 구독|  
 |**익명**|익명 구독입니다.|  
-|**누르기**|밀어넣기 구독입니다.|  
+|**push**|밀어넣기 구독입니다.|  
 |**서브스크립션을**|끌어오기 구독입니다.|  
 |**모두** (기본값)|밀어넣기 및 끌어오기 구독 모두입니다.|  
   

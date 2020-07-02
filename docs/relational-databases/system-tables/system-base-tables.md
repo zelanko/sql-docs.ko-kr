@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1e436807a5738a1ad844a07b3403eb99d1a5cf18
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3336905579401f17a5c3afa2509e64670e5ea1ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819848"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752643"
 ---
 # <a name="system-base-tables"></a>시스템 기본 테이블
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   시스템 기본 테이블은 특정 데이터베이스에 대한 메타데이터를 실제로 저장하는 기본 테이블입니다. **Master** 데이터베이스는 다른 데이터베이스에 없는 몇 가지 추가 테이블을 포함 하기 때문에 이러한 점에서 특수 합니다. 이러한 테이블에는 서버 차원 범위의 지속형 메타데이터가 들어 있습니다.  
   

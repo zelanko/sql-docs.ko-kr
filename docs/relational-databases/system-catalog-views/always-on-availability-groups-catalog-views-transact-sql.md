@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff53e873-8ff6-4628-af84-4ec52fa4951c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c22f06547d1b51333b68efb300661763755fd843
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 107bf85ac92fc91aeed7fb5f4ab445e57605e39a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832037"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753019"
 ---
 # <a name="always-on-availability-groups-catalog-views-transact-sql"></a>Always On 가용성 그룹 카탈로그 뷰 (Transact-sql)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 섹션에는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]과 관련된 카탈로그 뷰 및 함수가 포함되어 있습니다.  
   

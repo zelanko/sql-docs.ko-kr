@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 6a38709a-60fe-46f6-89da-718f74f15600
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d5c2b7a1ca52a22a189395164544ff6fb8adb687
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7fca6309675975b6c03c46f7724eb6acfe91e580
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831333"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752883"
 ---
 # <a name="sysservice_message_types-transact-sql"></a>sys.service_message_types(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   이 카탈로그 뷰에는 Service Broker에 등록된 각 메시지 유형에 대한 행이 포함되어 있습니다.
   
@@ -37,7 +37,7 @@ ms.locfileid: "82831333"
 |**message_type_id**|**int**|데이터베이스 내에서 고유한 메시지 유형의 ID입니다. NULL을 허용하지 않습니다.|  
 |**principal_id**|**int**|해당 메시지 유형을 소유하는 데이터베이스 보안 주체의 ID입니다. NULL을 허용합니다.|  
 |**유효성 검사**|**char(2)**|해당 유형의 메시지를 보내기 전에 Service Broker가 수행하는 유효성 검사입니다. NULL을 허용하지 않습니다. 다음 중 하나:<br /><br /> N = 없음<br /><br /> X = XML<br /><br /> E = 비어 있음|  
-|**validation_desc**|**nvarchar(60)**|해당 유형의 메시지를 보내기 전에 Service Broker가 수행하는 유효성 검사에 대한 설명입니다. NULL을 허용합니다. 다음 중 하나:<br /><br /> 없음<br /><br /> XML<br /><br /> EMPTY|  
+|**validation_desc**|**nvarchar(60)**|해당 유형의 메시지를 보내기 전에 Service Broker가 수행하는 유효성 검사에 대한 설명입니다. NULL을 허용합니다. 다음 중 하나:<br /><br /> NONE<br /><br /> XML<br /><br /> EMPTY|  
 |**xml_collection_id**|**int**|XML 스키마를 사용하는 유효성 검사의 경우 스키마 컬렉션의 ID를 사용합니다.<br /><br /> 그렇지 않으면 NULL입니다.|  
   
 ## <a name="permissions"></a>사용 권한  

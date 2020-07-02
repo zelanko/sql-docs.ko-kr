@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e0efc86400b0858e387a83e8ea765f0058e30459
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e8097e5f528685a35038d4d20170277b7a922d64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824501"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749311"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   지정한 배포 데이터베이스의 속성을 반환합니다. 이 저장 프로시저는 배포 데이터베이스의 배포자에서 실행됩니다.  
   
@@ -49,7 +49,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**history retention**|**int**|기록을 보존할 기간(시간)입니다.|  
 |**history_cleanup_agent**|**sysname**|기록 정리 에이전트의 이름입니다.|  
 |**distribution_cleanup_agent**|**sysname**|배포 정리 에이전트의 이름입니다.|  
-|**status**|**int**|내부 전용입니다.|  
+|**status**|**int**|내부적으로만 사용됩니다.|  
 |**data_folder**|**nvarchar(255)**|데이터베이스 파일을 저장하는 데 사용되는 디렉터리 이름입니다.|  
 |**data_file**|**nvarchar(255)**|데이터베이스 파일의 이름입니다.|  
 |**data_file_size**|**int**|초기 데이터 파일의 크기(MB)입니다.|  
@@ -63,7 +63,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ## <a name="remarks"></a>설명  
  **sp_helpdistributiondb** 은 모든 유형의 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Db_owner** 고정 데이터베이스 역할의 멤버 또는 배포 데이터베이스에 있는 **replmonitor** 역할의 멤버 및 배포 데이터베이스를 사용 하는 게시의 게시 액세스 목록에 있는 사용자는 **sp_helpdistributiondb** 를 실행 하 여 파일 관련 정보를 반환할 수 있습니다. **Public** 역할의 멤버는 **sp_helpdistributiondb** 를 실행 하 여 액세스 권한이 있는 배포 데이터베이스에 대 한 파일 관련 없는 정보를 반환할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

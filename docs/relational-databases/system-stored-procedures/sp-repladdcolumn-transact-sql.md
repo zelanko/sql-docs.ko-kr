@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08f459761c6e72063979bef6f7d9067611f2dd78
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 05c00137acdf989456903fedddcc45a7b79e0e61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826583"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751630"
 ---
 # <a name="sp_repladdcolumn-transact-sql"></a>sp_repladdcolumn(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   게시된 기존 테이블 아티클에 열을 추가합니다. 이 테이블을 게시하는 모든 게시자에 새 열을 추가하거나 이 테이블을 게시하는 특정 게시에 열을 추가할 수 있습니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -52,7 +52,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  [ @column =] '*열*'  
  복제용으로 추가될 테이블에 있는 열의 이름입니다. *열* 은 **sysname**이며 기본값은 없습니다.  
   
- [ @typetext =] '*typetext*'  
+ [ @typetext = ] '*typetext*'  
  추가되는 열의 정의입니다. *typetext* 는 **nvarchar (3000)** 이며 기본값은 없습니다. 예를 들어 order_filled 열이 추가 되 고 있고이 열이 NULL이 아닌 단일 문자 필드인 경우 기본값 **N이 N**인 경우 order_filled는 *column* 매개 변수이 고, **CHAR (1) NOT NULL 제약 조건 constraint_name default ' N '** 은 *typetext* 매개 변수 값입니다.  
   
  [ @publication_to_add =] '*publication_to_add*'  
@@ -85,7 +85,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  sysadmin 고정 서버 역할의 멤버 및 db_owner 고정 데이터베이스 역할의 멤버만 sp_repladdcolumn를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

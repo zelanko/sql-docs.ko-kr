@@ -24,30 +24,30 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2753924d37734d0f3198949f9e75102ff6030744
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 84e6c1b0b5530ed33ade4a3ac4813b1a3fe6d251
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689399"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750793"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>sql:mapped를 사용하여 XML 문서에서 스키마 요소 제외
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   기본 매핑 때문에 XSD 스키마의 모든 요소와 특성은 데이터베이스 테이블/뷰 및 열에 매핑됩니다. XSD 스키마에서 데이터베이스 테이블 (뷰) 또는 열에 매핑되지 않고 XML에 표시 되지 않는 요소를 만들려는 경우 **sql: mapped** 주석을 지정할 수 있습니다.  
   
  **Sql: 매핑된** 주석은 스키마를 수정할 수 없거나 스키마를 사용 하 여 다른 원본의 XML 유효성을 검사 하 고 데이터베이스에 저장 되지 않은 데이터를 포함 하는 경우에 특히 유용 합니다. **Sql: mapped** 주석은 매핑되지 않은 요소 및 특성이 XML 문서에 표시 되지 않는다는 점에서 **sql: is 상수** 와 다릅니다.  
   
  **Sql: 매핑된** 주석은 부울 값 (0 = false, 1 = true)을 사용 합니다. 허용되는 값은 0, 1, true 및 false입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. sql:mapped 주석 지정  
- 다른 원본의 XSD 스키마가 있고, 이 XSD 스키마는 Person으로 구성 됩니다. **ContactID**, **FirstName**, **LastName**및 **HomeAddress** 특성을 사용 하 여 ** \<>요소에 문의 하세요** .  
+ 다른 원본의 XSD 스키마가 있고, 이 XSD 스키마는 ContactID, **\<Person.Contact>** **FirstName**, **ContactID** **LastName**및 **HomeAddress** 특성으로 구성 된 요소로 구성 됩니다.  
   
  이 XSD 스키마를 AdventureWorks 데이터베이스의 Person. Contact 테이블에 매핑하면 Employees 테이블에 직원의 홈 주소가 저장 되지 않으므로 **HomeAddress** 특성에 **sql: mapped** 이 지정 됩니다. 따라서 매핑 스키마에 대해 XPath 쿼리를 지정할 경우 이 특성은 데이터베이스에 매핑되지 않으며 결과 XML 문서에 반환되지 않습니다.  
   
- 스키마의 나머지 부분에 대해서는 기본 매핑이 수행됩니다. Person ** \< . contact>** 요소는 person 테이블에 매핑되고, 모든 특성은 person. contact 테이블에서 이름이 같은 열에 매핑됩니다.  
+ 스키마의 나머지 부분에 대해서는 기본 매핑이 수행됩니다. **\<Person.Contact>** 요소는 Person contact 테이블에 매핑되고 모든 특성은 person. contact 테이블에서 이름이 같은 열에 매핑됩니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

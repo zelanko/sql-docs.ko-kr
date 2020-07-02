@@ -17,23 +17,23 @@ helpviewer_keywords:
 ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0abca8ca826ec986a9cbf71f4fb577291e095e39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36ffc832e8e79e93eb3b158e7f99cfb64cea2dd7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029537"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752651"
 ---
 # <a name="ihextendedarticleview-transact-sql"></a>IHextendedArticleView(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **IHextendedArticleView** 뷰는 SQL Server 되지 않은 게시의 아티클에 대 한 정보를 제공 합니다. 이 뷰는 **배포** 데이터베이스에 저장 됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|게시자에 대한 고유 식별자입니다.|  
 |**publication_id**|**int**|게시에 대한 고유 식별자입니다.|  
-|**자료**|**sysname**|아티클의 이름입니다.|  
+|**문서**|**sysname**|아티클의 이름입니다.|  
 |**destination_object**|**sysname**|구독자에 게시된 개체의 이름입니다.|  
 |**source_owner**|**sysname**|게시자에 게시된 개체의 소유자입니다.|  
 |**source_object**|**sysname**|게시자에 게시된 개체의 이름입니다.|  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cfced9a7fa554149b491f8ff350ca81723c81d20
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3eac29c10b8f0204b3516051981fc29b3bee3ddc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824361"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751712"
 ---
 # <a name="sp_registercustomresolver-transact-sql"></a>sp_registercustomresolver(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   병합 복제 동기화 프로세스를 수행하는 동안 호출될 수 있는 비즈니스 논리 처리기 또는 COM 기반 사용자 지정 해결 프로그램을 등록합니다. 이 저장 프로시저는 배포자에서 실행됩니다.  
   
@@ -57,7 +57,7 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="remarks"></a>설명  
  **sp_registercustomresolver** 는 병합 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_registercustomresolver**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

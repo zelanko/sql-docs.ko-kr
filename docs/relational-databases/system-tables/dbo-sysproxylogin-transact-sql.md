@@ -1,5 +1,5 @@
 ---
-title: dbo. sysproxylogin (Transact-sql) | Microsoft Docs
+title: dbo.sysproxylogin (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 433d33cb-bdf2-47bb-af78-2a40b7c8dfce
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cfa29500a798cdcfe535a377abd8c649972415b0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b798627a09a9bb96e753221750711dbfe465657f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825962"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750293"
 ---
 # <a name="dbosysproxylogin-transact-sql"></a>dbo.sysproxylogin(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   각 SQL Server 에이전트 프록시 계정에 연결되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 기록합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
@@ -42,6 +42,6 @@ ms.locfileid: "82825962"
  **Sysadmin** 고정 서버 역할의 멤버만이 테이블에 액세스할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [&#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
+ [Transact-sql&#41;&#40;dbo.sys프록시](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
   
   

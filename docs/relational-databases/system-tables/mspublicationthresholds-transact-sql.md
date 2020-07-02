@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9da3879f-b1f4-4ab4-abd4-a9a8ac395eba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2025dac432856e944dfd7e12e591907ef05a3565
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7b5ab784ea0c8cc34068773739c2a818a11aa5f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831967"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751617"
 ---
 # <a name="mspublicationthresholds-transact-sql"></a>MSpublicationthresholds(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSpublicationthresholds** 테이블은 게시에 대 한 복제 성능 메트릭을 추적 하는 데 사용 되며 모니터링 되는 각 임계값에 대해 하나의 행을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

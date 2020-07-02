@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4499183a8cf5019fe7a4ce10bdb9ffc83726551a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 87597bbf7685f525eb2dab5c9dfed623b1577359
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831207"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750627"
 ---
 # <a name="sp_delete_jobserver-transact-sql"></a>sp_delete_jobserver(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정된 대상 서버를 제거합니다.  
   
@@ -58,7 +58,7 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행 하려면 사용자가 **sysadmin** 고정 서버 역할의 멤버 여야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 작업 처리에서 서버를 제거 합니다 `SEATTLE2` `Weekly Sales Backups` .  
   
 > [!NOTE]  

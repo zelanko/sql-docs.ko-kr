@@ -24,15 +24,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 336db1dba88e245492fb4c2e9fcefddb751b59ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 832607a376c8c08dbcdcff0c70278401a166a7f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388183"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750815"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>sql:prefix(SQLXML 4.0)를 사용하여 유효한 ID, IDREF 및 IDREFS 유형 특성 만들기
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   특성을 ID 유형 특성으로 지정할 수 있습니다. 그런 다음 IDREF 또는 IDREFS로 지정된 특성을 사용하여 ID 유형 특성을 참조하고 문서 간의 링크를 사용할 수 있습니다.  
   
  ID, IDREF 및 IDREFS는 몇 가지 차이점은 있지만 데이터베이스의 PK/FK(기본 키/외래 키) 관계에 해당합니다. XML 문서에서 ID 유형 특성 값은 고유해야 합니다. **CustomerID** 및 **OrderID** 특성이 XML 문서에서 ID 유형으로 지정 된 경우 이러한 값은 고유 해야 합니다. 하지만 데이터베이스의 CustomerID 및 OrderID 열은 동일한 값을 가질 수 있습니다. 예를 들어 CustomerID = 1 및 OrderID = 1은 데이터베이스에서 유효합니다.  
@@ -51,13 +51,13 @@ ms.locfileid: "81388183"
   
  **Sql: prefix** 주석은 XSD fixed 특성과 함께 사용할 수 없습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. ID 및 IDREFS 유형 지정  
- 다음 스키마에서 ** \<Customer>** 요소는 ** \<Order>** 자식 요소로 구성 됩니다. Order>요소에는 자식 요소인 ** \<orderdetail>** 요소가 있습니다. ** \<**  
+ 다음 스키마에서 **\<Customer>** 요소는 **\<Order>** 자식 요소로 구성 됩니다. 요소에는 **\<Order>** 자식 요소인 **\<OrderDetail>** 요소가 있습니다.  
   
- ** \<Customer>** 의 **orderidlist** 특성은 ** \<Order>** 요소의 **OrderID** 특성을 참조 하는 IDREFS 유형 특성입니다.  
+ 의 **Orderidlist** 특성은 **\<Customer>** 요소의 **OrderID** 특성을 참조 하는 IDREFS 유형 특성입니다 **\<Order>** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

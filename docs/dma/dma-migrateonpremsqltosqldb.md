@@ -1,7 +1,7 @@
 ---
 title: Data Migration Assistant를 사용 하 여 Azure SQL Database SQL Server 마이그레이션
 description: Data Migration Assistant를 사용 하 여 온-프레미스 SQL Server를로 마이그레이션하는 방법에 대해 알아봅니다 Azure SQL Database
-ms.date: 07/15/2019
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6280a3ea803424dc2a6a72d673c59e1e48816601
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: ec6b5ad0ab2047e72a1f3e3e5dfcd9fc49b954d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885930"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749782"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Azure Vm에서 온-프레미스 SQL Server 또는 SQL Server를 마이그레이션하여 Data Migration Assistant를 사용 하 여 Azure SQL Database
 
@@ -75,7 +75,7 @@ Data Migration Assistant은 온-프레미스 SQL Server를 원활 하 게 평가
 4. 원본 데이터베이스를 마이그레이션할 단일 대상 데이터베이스를 선택합니다.
 
    > [!NOTE]
-   > Windows 사용자를 마이그레이션하려면 **대상 외부 사용자 도메인 이름** 텍스트 상자에서 목표가 외부 사용자 도메인 이름이 올바르게 지정 되어 있는지 확인 합니다.
+   > Windows 사용자를 마이그레이션하려면 대상 외부 **사용자 도메인 이름** 텍스트 상자에서 대상 외부 사용자 도메인 이름이 올바르게 지정 되어 있는지 확인 합니다.
 
     ![대상 데이터베이스 선택](../dma/media/select-target-database.png)
 
@@ -87,8 +87,8 @@ Data Migration Assistant은 온-프레미스 SQL Server를 원활 하 게 평가
 
     ![스키마 개체 선택](../dma/media/select-schema-objects.png)
 
-       > [!NOTE]
-       > Some of the objects that cannot be converted as-is are presented with automatic fix opportunities. Clicking these objects on the left pane displays the suggested fixes on the right pane. Review the fixes and choose to either apply or ignore all changes, object by object. Note that applying or ignoring all changes for one object does not affect changes to other database objects. Statements that cannot be converted or automatically fixed are reproduced to the target database and commented.
+    > [!NOTE]
+    > 그대로 변환할 수 없는 일부 개체의 경우 자동 수정 옵션이 제공됩니다. 왼쪽 창에서 이러한 개체를 클릭하면 오른쪽 창에 수정 제안 사항이 표시됩니다. 해당 수정 내용을 검토하고 개체별로 모든 변경 내용을 적용하거나 무시하도록 선택합니다. 개체 하나에 대해 모든 변경을 적용하거나 무시해도 다른 데이터베이스 개체의 변경 내용에는 영향을 주지 않습니다. 변환하거나 자동으로 수정할 수 없는 문은 대상 데이터베이스로 재현되어 주석 처리됩니다.
 
     ![제안 된 수정](../dma/media/suggested-fix.png)
 

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e9873045fd7e4fb11ad19bbbce953a086512df9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d6414be15bcd33e8ae2a0ab267baaa039761fc04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824374"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750450"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   게시에 적합한 Oracle 테이블을 나열할 때 제외되는 스키마에 대한 정보를 수정 및 표시합니다.  
   
@@ -47,7 +47,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 |값|설명|  
 |-----------|-----------------|  
-|**추가**|지정된 스키마를 게시에 적합하지 않은 스키마 목록에 추가합니다.|  
+|**add**|지정된 스키마를 게시에 적합하지 않은 스키마 목록에 추가합니다.|  
 |**그림자**|지정된 스키마를 게시에 적합하지 않은 스키마 목록에서 삭제합니다.|  
 |**help**|게시에 적합하지 않은 스키마 목록을 반환합니다.|  
   
@@ -63,7 +63,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>설명  
  **sp_schemafilter** 은 유형이 다른 게시자에만 사용 해야 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  배포자에서 **sysadmin** 고정 서버 역할의 멤버만 **sp_schemafilter**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

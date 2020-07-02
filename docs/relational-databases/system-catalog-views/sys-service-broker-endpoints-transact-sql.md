@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 221a490f6accb13706c19860f70c1de2db6d2bf8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a59beeb51d59b00fbd902045f0f1aaebc9322a64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832676"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752904"
 ---
 # <a name="sysservice_broker_endpoints-transact-sql"></a>sys.service_broker_endpoints(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   이 카탈로그 뷰에는 각 Service Broker 엔드포인트에 대한 행이 포함되어 있습니다. 이 뷰의 모든 행에는 TCP 구성 메타 데이터를 포함 하는 **tcp_endpoints** 뷰에 동일한 **endpoint_id** 의 해당 행이 있습니다. TCP는 Service Broker에 유일하게 허용되는 프로토콜입니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**\<상속 된 열>**|**--**|[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)에서 열을 상속 합니다.|  
+|**\<inherited columns>**|**--**|[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)에서 열을 상속 합니다.|  
 |**is_message_forwarding_enabled**|**bit**|메시지 전달을 위해 엔드포인트를 지원합니다. 처음에는 **0** (사용 안 함)으로 설정 됩니다. NULL을 허용하지 않습니다.|  
 |**message_forwarding_size**|**int**|전달 되는 메시지에 사용할 수 있는 **tempdb** 공간의 최대 크기 (mb)입니다. 처음에는 **10**으로 설정 됩니다. NULL을 허용하지 않습니다.|  
 |**connection_auth**|**tinyint**|이 엔드포인트에 연결하는 데 필요한 연결 인증 유형. 다음 중 하나입니다.<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -NEGOTIATE<br /><br /> **4** -인증서<br /><br /> **5** -NTLM, 인증서<br /><br /> **6** -KERBEROS, 인증서<br /><br /> **7** -협상, 인증서<br /><br /> **8** -인증서, NTLM<br /><br /> **9** -인증서, KERBEROS<br /><br /> **10** -인증서, 협상<br /><br /> NULL을 허용하지 않습니다.|  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: faad3284619bfd3e7beaf5324ac107aed3ac2ff2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e09946d4a705aa695b4049ac887cbb0b465ee9d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834317"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749279"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   게시에 대한 모니터링 임계값 메트릭을 변경합니다. 복제 모니터링에 사용되는 이 저장 프로시저는 배포 데이터베이스의 배포자에서 실행됩니다.  
   
@@ -71,7 +71,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 |**5**|**mergeslowrunduration** -저대역폭 (전화 접속) 연결을 통한 병합 동기화의 기간을 모니터링 합니다.|  
 |**6**|**mergefastrunduration** -고대역폭 lan (local area network) 연결을 통한 병합 동기화의 기간을 모니터링 합니다.|  
 |**7**|**mergefastrunspeed** - 고대역폭(LAN) 연결을 통한 병합 동기화의 동기화 속도를 모니터링합니다.|  
-|**20cm(8**|**mergeslowrunspeed** -저대역폭 (전화 접속) 연결을 통한 병합 동기화의 동기화 속도를 모니터링 합니다.|  
+|**8**|**mergeslowrunspeed** -저대역폭 (전화 접속) 연결을 통한 병합 동기화의 동기화 속도를 모니터링 합니다.|  
   
  *Metric_id* 또는 *thresholdmetricname*중 하나를 지정 해야 합니다. *Thresholdmetricname* 를 지정 하는 경우 *metric_id* 은 NULL 이어야 합니다.  
   

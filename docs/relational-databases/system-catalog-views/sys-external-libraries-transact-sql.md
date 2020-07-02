@@ -19,15 +19,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 7303649ec6d7a849979871de3f4f91b978adc23a
-ms.sourcegitcommit: a0ebbcb717f09d3614de5ce9eb9f3c00f0a45f81
+ms.openlocfilehash: a825843a69d9ba2f65f272adba86e6d8656aedde
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85409372"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750704"
 ---
 # <a name="sysexternal_libraries-transact-sql"></a>sys.external_libraries(Transact-SQL)  
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 는 R, Python 및 Java와 같은 외부 런타임과 관련 된 패키지 라이브러리의 관리를 지원 합니다.
 
@@ -47,7 +47,7 @@ ms.locfileid: "85409372"
 |scope |int |public 범위에 대해 0입니다. 1 전용 범위 |  
 |scope_desc |varchar (7) |패키지가 공용 인지 아니면 전용인 지를 나타냅니다.|
 
-## <a name="see-also"></a>추가 정보  
+## <a name="see-also"></a>참고 항목  
 
 + [sys.external_library_files](sys-external-library-files-transact-sql.md)  
 + [외부 라이브러리 만들기](../../t-sql/statements/create-external-library-transact-sql.md)  

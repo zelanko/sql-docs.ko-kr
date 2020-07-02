@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc81a19350c3ba95b99c821d972c02dd112c18e7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4e21038736343ecce98ded93d87f32d64b7ebe4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809825"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750399"
 ---
 # <a name="sp_trace_create-transact-sql"></a>sp_trace_create(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   추적 정의를 만듭니다. 새 추적은 중지된 상태가 됩니다.  
   
@@ -57,7 +57,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |-----------------|------------------|-----------------|  
 |TRACE_FILE_ROLLOVER|**2**|*Max_file_size* 에 도달 하면 현재 추적 파일이 닫히고 새 파일이 생성 되도록 지정 합니다. 모든 새 기록은 새 파일에 기록합니다. 새 파일은 이전 파일과 같은 이름을 갖지만 정수를 붙여 시퀀스를 표시합니다. 예를 들어 원래 추적 파일 이름이 filename.trc이면, 다음 추적 파일 이름은 filename_1.trc이고 그 다음은 filename_2.trc의 식으로 명명됩니다.<br /><br /> 롤오버 추적 파일이 많이 생성될수록 파일 이름에 붙이는 정수 값도 순차적으로 증가합니다.<br /><br /> *Max_file_size*값을 지정 하지 않고이 옵션을 지정 하는 경우 SQL Server는 기본값 *max_file_size* (5mb)를 사용 합니다.|  
 |SHUTDOWN_ON_ERROR|**4**|어떤 이유에서건 추적을 파일에 쓸 수 없으면 SQL Server가 시스템을 종료하도록 지정합니다. 이 옵션은 보안 감사 추적을 수행할 때 유용합니다.|  
-|TRACE_PRODUCE_BLACKBOX|**20cm(8**|서버가 만든 마지막 5MB 추적 정보의 기록은 서버에 의해 저장됨을 지정합니다. TRACE_PRODUCE_BLACKBOX는 다른 모든 옵션과 호환되지 않습니다.|  
+|TRACE_PRODUCE_BLACKBOX|**8**|서버가 만든 마지막 5MB 추적 정보의 기록은 서버에 의해 저장됨을 지정합니다. TRACE_PRODUCE_BLACKBOX는 다른 모든 옵션과 호환되지 않습니다.|  
   
 `[ @tracefile = ] 'trace_file'`추적을 기록할 위치와 파일 이름을 지정 합니다. *trace_file* 은 **nvarchar (** 가 수) 이며 기본값은 없습니다. *trace_file* 은 로컬 디렉터리 (예: n ' C:\MSSQL\Trace\trace.trc ') 이거나 공유 또는 경로에 대 한 UNC 일 수 있습니다 \\ \\ *Servername* \\ *Sharename* \\ *Directory*  
   
@@ -137,13 +137,13 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
     -   **Exception**  
   
-    -   **주의**  
+    -   **Attention**  
   
 -   이 추적에서는 이벤트나 열을 추가 또는 제거할 수 없습니다.  
   
 -   이 추적에는 필터를 지정할 수 없습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  사용자는 ALTER TRACE 권한이 있어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d58dcdaf-f82d-43d9-941b-f520581442bf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: da3fa2b141714dc4efce5977719c08332538a506
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a693e0638c724a8a30cdded509e961b4baa0620e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831367"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752894"
 ---
 # <a name="sysservice_queue_usages-transact-sql"></a>sys.service_queue_usages(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   이 카탈로그 뷰는 서비스와 서비스 큐 간의 각 참조에 대해 행을 반환합니다. 서비스는 하나의 큐에만 연결될 수 있으며 큐는 여러 서비스에 연결될 수 있습니다.  
   

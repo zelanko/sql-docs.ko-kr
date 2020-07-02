@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1597a3b6f8366b74e713eaeeda2ce412762809b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d9c45fa084aa6e7231ebb62a01d0192dc1e2c200
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824737"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738735"
 ---
 # <a name="sysdm_clr_loaded_assemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   서버 주소 공간으로 로드되는 각각의 관리되는 사용자 어셈블리에 대해 행을 반환합니다. 이 뷰를 사용 하 여에서 실행 중인 CLR 통합 관리 되는 데이터베이스 개체를 이해 하 고 문제를 해결할 수 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.  
   
@@ -39,13 +39,13 @@ ms.locfileid: "82824737"
 |**appdomain_address**|**int**|어셈블리가 로드 되는 응용 프로그램 도메인 (**AppDomain**)의 주소입니다. 단일 사용자가 소유 하는 모든 어셈블리는 항상 동일한 **AppDomain**에 로드 됩니다. **Appdomain_address** 를 사용 하 여 [dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md) 뷰에서 **appdomain** 에 대 한 추가 정보를 조회할 수 있습니다.|  
 |**load_time**|**datetime**|어셈블리가 로드된 시간입니다. 이 어셈블리는 메모리가 부족할 때까지 로드 된 상태로 유지 되 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고 **AppDomain**을 언로드합니다. **Load_time** 를 모니터링 하 여 메모리 부족 상태에서 발생 하는 빈도를 파악 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고 **AppDomain**을 언로드할 수 있습니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="remarks"></a>설명  
  **Dm_clr_loaded_assemblies 뷰 appdomain_address** 에는 **dm_clr_appdomains appdomain_address**와 다 대 일 관계가 있습니다. **Dm_clr_loaded_assemblies 뷰 assembly_id** 에는 **assembly_id**와 일 대 다 관계가 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 로드되어 있는 현재 데이터베이스의 모든 어셈블리에 대한 세부 정보를 표시하는 방법을 보여 줍니다.  
   
 ```  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60004b81134b550761e65eba2ce38e155732c77f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 14c013da5fed9a0a9477692ce6bdda20b5d921a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817390"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751673"
 ---
 # <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   이 저장 프로시저는 SQL Server의 게시자 인스턴스에서 게시 데이터베이스 또는 SQL Server의 구독자 인스턴스에서 구독 데이터베이스의 모든 복제 개체를 제거합니다. 적절한 데이터베이스에서 실행하고 같은 인스턴스 상에 다른 데이터베이스의 컨텍스트에서 실행을 하는 경우 복제 개체를 제거해야 할 데이터베이스를 지정합니다. 이 프로시저는 배포 데이터베이스와 같은 다른 데이터베이스에서 개체를 제거하지 않습니다.  
   

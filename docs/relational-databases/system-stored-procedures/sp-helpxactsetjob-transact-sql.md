@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9fbc18b737c4c901527e6dc1684b75c2f5ddedda
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ac90a8a3e892aef0bb5d45a6864fb2291f52d60f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826075"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751733"
 ---
 # <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Oracle 게시자에 대한 Xactset 작업 정보를 표시합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
   
@@ -48,7 +48,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |**thisdate**|**varchar (22)**|변경 시간|  
 |**nextdate**|**varchar (22)**|작업을 실행할 다음 날짜입니다.|  
 |**broken**|**varchar(1)**|작업이 끊어지는지 여부를 나타내는 플래그입니다.|  
-|**interval**|**varchar (200)**|작업 간격입니다.|  
+|**간격은**|**varchar (200)**|작업 간격입니다.|  
 |**있어**|**int**|해당 작업에 대한 실패 횟수입니다.|  
 |**xactsetjobwhat**|**varchar (200)**|작업에 의해 실행된 프로시저 이름입니다.|  
 |**xactsetjob**|**varchar(1)**|작업의 상태이며 다음 중 하나일 수 있습니다.<br /><br /> **1** -작업을 사용할 수 있습니다.<br /><br /> **0** -작업을 사용할 수 없습니다.|  
@@ -65,7 +65,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
   
  **sp_helpxactsetjob** 항상 게시자에서 Xactset 작업 (HREPL_XactSetJob)에 대 한 현재 설정을 반환 합니다. Xactset 작업이 현재 작업 큐에 있는 경우 Oracle 게시자의 관리자 계정에서 만든 USER_JOB 데이터 사전 뷰에서 작업의 특성을 추가로 반환합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_helpxactsetjob**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

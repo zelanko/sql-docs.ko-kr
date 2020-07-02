@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9408727ed9a9f10a8ed223c8765591ff8327b99
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6cb269ec8ce866e02dcb4ea06a7fe66f0c49e5a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834007"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750696"
 ---
 # <a name="syssoap_endpoints-transact-sql"></a>sys.soap_endpoints(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -42,7 +42,7 @@ ms.locfileid: "82834007"
 |**default_database**|**sysname**|DATABASE = 옵션에 지정된 기본 데이터베이스의 이름입니다.<br /><br /> NULL = DEFAULT가 지정되었습니다.|  
 |**default_namespace**|**nvarchar (384)**|NAMESPACE = 옵션에 지정 된 기본 네임 스페이스 `https://tempuri.org` 입니다. 대신 default가 지정 된 경우입니다.|  
 |**default_result_schema**|**tinyint**|SCHEMA = 옵션의 기본값입니다.<br /><br /> 0 = 없음<br /><br /> 1 = 표준|  
-|**default_result_schema_desc**|**nvarchar(60)**|SCHEMA = 옵션의 기본값에 대한 설명입니다.<br /><br /> 없음<br /><br /> STANDARD|  
+|**default_result_schema_desc**|**nvarchar(60)**|SCHEMA = 옵션의 기본값에 대한 설명입니다.<br /><br /> NONE<br /><br /> STANDARD|  
 |**is_xml_charset_enforced**|**bit**|0 = CHARACTER_SET = SQL 옵션이 지정되었습니다.<br /><br /> 1 = CHARACTER_SET = XML 옵션이 지정되었습니다.|  
 |**is_session_enabled**|**bit**|0 = SESSION = DISABLE 옵션이 지정되었습니다.<br /><br /> 1 = SESSION = ENABLED 옵션이 지정되었습니다.|  
 |**session_timeout**|**int**|SESSION_TIMEOUT = 옵션에 지정된 값입니다.|  

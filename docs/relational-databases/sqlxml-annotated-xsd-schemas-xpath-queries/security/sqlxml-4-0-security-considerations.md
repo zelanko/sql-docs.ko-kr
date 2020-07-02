@@ -15,15 +15,15 @@ ms.assetid: 7281bdbd-cf1d-4d73-9fe7-ee8b2b946696
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 949d9bfe16efa15bae9cf171e976d2924158214b
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: b21bd5b2a2a02ccc8cc9dbbd04cd24cf1165d77e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306002"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750728"
 ---
 # <a name="sqlxml-40-security-considerations"></a>SQLXML 4.0 보안 고려 사항
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   이 섹션에서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML의 보안 관련 고려 사항에 대한 정보를 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 69723419-4544-49c6-a517-adb30ffa5741
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5debab1572bc2f788c0dc13773d0dc140c693108
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 58bc0af5be721d30211617a18095213e76991a24
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82805973"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750151"
 ---
 # <a name="log_shipping_secondary-transact-sql"></a>log_shipping_secondary(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   보조 ID 당 레코드 하나를 저장합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
@@ -48,11 +48,11 @@ ms.locfileid: "82805973"
  지정 된 주 데이터베이스에 대 한 동일한 보조 서버의 여러 보조 데이터베이스가 **log_shipping_secondary** 테이블의 일부 설정을 공유 합니다. 이러한 보조 데이터베이스 중 하나에서 공유된 설정이 변경되면 해당 설정은 모든 데이터베이스에서도 변경됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [로그 전달 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Transact-sql&#41;sp_add_log_shipping_secondary_database &#40;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)   
  [Transact-sql&#41;sp_change_log_shipping_secondary_database &#40;](../../relational-databases/system-stored-procedures/sp-change-log-shipping-secondary-database-transact-sql.md)   
  [Transact-sql&#41;sp_delete_log_shipping_secondary_database &#40;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
- [Transact-sql&#41;sp_help_log_shipping_secondary_database &#40;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)   
+ [sp_help_log_shipping_secondary_database&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)   
  [시스템 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

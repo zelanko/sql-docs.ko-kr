@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a831315e-793d-41c4-8333-b324bb2bc614
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f2159935d5cf1641f828a2ed1d81208d8cc68fd6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5066571ed19984d88d5ef134a778865ff1bfe1a3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826135"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750675"
 ---
 # <a name="sp_delete_alert-transact-sql"></a>sp_delete_alert(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   경고를 제거합니다.  
   
@@ -50,10 +50,10 @@ sp_delete_alert [ @name = ] 'name'
 ## <a name="remarks"></a>설명  
  경고를 제거하면 해당 경고와 연관된 모든 알림도 함께 제거됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Test Alert`라는 경고를 제거합니다.  
   
 ```  

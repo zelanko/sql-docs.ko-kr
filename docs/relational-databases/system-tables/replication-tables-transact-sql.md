@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 05ddadf1089969a2e345bbfdb638c9dea8b71676
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 709f99ce8e45e9a362aa8ef1aa0d5607d3b79172
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808150"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751587"
 ---
 # <a name="replication-tables-transact-sql"></a>복제 테이블(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   복제 시스템 테이블은 복제 토폴로지를 지원합니다. 사용자 데이터베이스가 게시자 또는 구독자로 구성되는 경우 복제는 데이터베이스에 시스템 테이블을 추가합니다. 이러한 테이블은 사용자 데이터베이스가 복제 토폴로지에서 제거될 때 제거됩니다. 시스템 테이블 사용과 관련 된 일반적인 규칙은 [시스템 테이블 &#40;transact-sql&#41;](system-tables-transact-sql.md)를 참조 하세요.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "83808150"
  
 |||  
 |-|-|  
-|[conflict_ \< 스키마>_ \< 테이블>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
+|[conflict_ \<schema> _\<table>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
 |[MSdynamicsnapshotjobs](msdynamicsnapshotjobs-transact-sql.md)             |[MSpeer_response](mspeer-response-transact-sql.md)|
 |[MSdynamicsnapshotviews](msdynamicsnapshotviews-transact-sql.md)           |[MSpeer_topologyrequest](mspeer-topologyrequest-transact-sql.md)|  
 |[MSmerge_altsyncpartners](msmerge-altsyncpartners-transact-sql.md)         |[MSpeer_topologyresponse](mspeer-topologyresponse-transact-sql.md)|  

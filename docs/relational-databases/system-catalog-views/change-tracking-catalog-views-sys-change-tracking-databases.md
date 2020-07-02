@@ -21,15 +21,15 @@ ms.assetid: bb233baa-2991-4904-a0eb-3772b81121a4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d4ba41b2dc85bc9e5560ae9911bde7fb54abc3c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 414286c06884721fad81ea25dd100fa5a7cd13b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823668"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753015"
 ---
 # <a name="change-tracking-catalog-views---syschange_tracking_databases"></a>변경 내용 추적 카탈로그 뷰-sys. change_tracking_databases
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   변경 내용 추적이 설정된 각 데이터베이스에 대해 한 개의 행을 반환합니다.  
 
@@ -41,7 +41,7 @@ ms.locfileid: "82823668"
 |retention_period_units_desc|**nvarchar(60)**|보존 기간에 대한 설명을 지정합니다.<br /><br /> 분<br /><br /> 시간<br /><br /> 일|  
 |retention_period_units|**tinyint**|보존 기간의 시간 단위:<br /><br /> 1 = 분<br /><br /> 2 = 시간<br /><br /> 3 = 일|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  sys.databases에 대한 권한 확인과 동일한 권한 확인이 sys.change_tracking_databases에 대해 수행됩니다. sys.change_tracking의 호출자가 데이터베이스의 소유자가 아니고 해당 행을 보는 데 필요한 최소 권한은 master 데이터베이스나 현재 데이터베이스의 ALTER ANY DATABASE나 VIEW ANY DATABASE 서버 수준 사용 권한 또는 CREATE DATABASE 권한입니다.  
   
 ## <a name="see-also"></a>참고 항목  

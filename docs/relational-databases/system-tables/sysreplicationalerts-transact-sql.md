@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 163b5aba5f676f14afd26b962c856b325ccc4dc4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6f9096b3e974b0fad906c4121a8c81bd2ba26e90
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819943"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751564"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   복제 경고를 발생시키는 조건에 대한 정보를 포함합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "82819943"
 |**publication_type**|**int**|게시의 유형입니다.<br /><br /> **0** = 스냅숏<br /><br /> **1** = 트랜잭션.<br /><br /> **2** = 병합.|  
 |**구독자**|**sysname**|이 경고를 발생시킨 에이전트와 관련된 구독자의 이름입니다.|  
 |**subscriber_db**|**sysname**|이 경고를 발생시킨 에이전트와 관련된 구독자 데이터베이스 이름입니다.|  
-|**자료**|**sysname**|이 경고를 발생시킨 에이전트와 관련된 아티클의 이름입니다.|  
+|**문서**|**sysname**|이 경고를 발생시킨 에이전트와 관련된 아티클의 이름입니다.|  
 |**destination_object**|**sysname**|이 경고와 관련된 구독 테이블의 이름입니다.|  
 |**source_object**|**sysname**|이 경고와 관련된 게시된 테이블의 이름입니다.|  
 |**alert_error_text**|**ntext**|경고의 텍스트입니다.|  

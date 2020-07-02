@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a0e6ab6c9c633181d72c6916f92606a9c71b177a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ada6e3bd06cdc915f8d34b18434994e9cc662a5e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824568"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749329"
 ---
 # <a name="sp_helpdistpublisher-transact-sql"></a>sp_helpdistpublisher(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   배포자를 사용하여 게시자의 속성을 반환합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
   
@@ -67,7 +67,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
   
  **sp_helpdistpublisher** 은**sysadmin** 이 아닌 로그인에 대 한 결과 집합에 게시자 로그인 또는 암호를 표시 하지 않습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버는 로컬 서버를 배포자로 사용 하는 모든 게시자에 대해 **sp_helpdistpublisher** 를 실행할 수 있습니다. 배포 데이터베이스의 **db_owner** 고정 데이터베이스 역할 또는 **replmonitor** 역할의 멤버는 해당 배포 데이터베이스를 사용 하는 모든 게시자에 대해 **sp_helpdistpublisher** 을 실행할 수 있습니다. 지정 된 *게시자* 에서 게시에 대 한 게시 액세스 목록의 사용자는 **sp_helpdistpublisher**를 실행할 수 있습니다. *Publisher* 를 지정 하지 않으면 사용자에 게 액세스 권한이 있는 모든 게시자에 대 한 정보가 반환 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

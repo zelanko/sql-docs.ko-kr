@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c091872c7e79a45fd6fb135d20c0910f9cd0158d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e9c59c6347317d193eafe43c511c0ece3831e29c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828418"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750530"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   하나 이상의 프록시에 대한 정보를 나열합니다.  
   
@@ -57,7 +57,7 @@ sp_help_proxy
 |CmdExec|운영 체제(CmdExec)|  
 |스냅샷|Replication Snapshot Agent|  
 |LogReader|복제 로그 판독기 에이전트|  
-|배포|복제 배포 에이전트|  
+|분포|복제 배포 에이전트|  
 |병합|Replication Merge Agent|  
 |QueueReader|복제 큐 판독기 에이전트|  
 |ANALYSISQUERY|Analysis Services 명령|  
@@ -88,7 +88,7 @@ sp_help_proxy
   
  지정 된 하위 시스템에 대해 로그인에서 사용할 수 있는 프록시를 확인 하려면 *이름* 및 *subsystem_name*를 지정 합니다. 이러한 인수를 제공 하면 **sp_help_proxy** 는 지정 된 로그인이 액세스할 수 있고 지정 된 하위 시스템에 사용할 수 있는 프록시를 나열 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 **msdb** 데이터베이스의 **SQLAgentOperatorRole** 고정 데이터베이스 역할을 부여 받아야 합니다.  
   
  **SQLAgentOperatorRole**에 대 한 자세한 내용은 [고정 데이터베이스 역할 SQL Server 에이전트](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조 하세요.  
@@ -96,7 +96,7 @@ sp_help_proxy
 > [!NOTE]  
 >  **Sysadmin** 의 멤버가이 저장 프로시저를 실행 하는 경우에만 **credential_identity** 및 **user_sid** 열이 결과 집합에 반환 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-listing-information-for-all-proxies"></a>A. 모든 프록시에 대한 정보 나열  
  다음 예에서는 인스턴스의 모든 프록시에 대한 정보를 나열합니다.  

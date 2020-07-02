@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4b315c70-7265-4acd-b35b-a4dbb7881d98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 61a7bd0550a5f61aa8b3c1d15687aa4ba4b012b6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0d4aa527c1c1d7c77d637885e8d450a0a97188fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82806185"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750164"
 ---
 # <a name="log_shipping_primary_secondaries-transact-sql"></a>log_shipping_primary_secondaries(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   각 주 데이터베이스를 보조 데이터베이스로 매핑합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
 
@@ -37,7 +37,7 @@ ms.locfileid: "82806185"
 |**secondary_database**|**sysname**|로그 전달 구성의 보조 데이터베이스의 이름입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [로그 전달 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Transact-sql&#41;sp_add_log_shipping_primary_secondary &#40;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md)   
  [Transact-sql&#41;sp_delete_log_shipping_primary_secondary &#40;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md)   
  [Transact-sql&#41;sp_help_log_shipping_primary_secondary &#40;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-secondary-transact-sql.md)   

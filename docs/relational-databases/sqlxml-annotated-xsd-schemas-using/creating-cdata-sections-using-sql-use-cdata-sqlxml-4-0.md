@@ -21,31 +21,31 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aa359c1c1e855c3652d7c6486d3993f588bae46d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 700d2cb18bad966e1a2edfd1f11e5fde9ac1b040
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388198"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750857"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>sql:use-cdata를 사용하여 CDATA 섹션 만들기(SQLXML 4.0)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XML에서 CDATA 섹션은 태그 문자로 인식될 문자가 포함된 텍스트 블록을 이스케이프하는 데 사용됩니다.  
   
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 데이터베이스에는 XML 파서에서 태그 문자로 처리 되는 문자를 포함 하는 경우가 있습니다. 예를 들어 꺾쇠 괄호 (< 및 >), 작거나 같음 기호 (<=) 및 앰퍼샌드 (&)는 태그 문자로 처리 됩니다. 하지만 이러한 유형의 특수 문자를 CDATA 섹션에 래핑하여 태그 문자로 처리되지 않도록 할 수 있습니다. CDATA 섹션 내의 텍스트는 XML 파서에서 일반 텍스트로 처리됩니다.  
+ Microsoft의 데이터베이스에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 파서에서 태그 문자로 처리 되는 문자가 포함 될 수 있습니다. 예를 들어 꺾쇠 괄호 (< 및 >), 작거나 같음 기호 (<=) 및 앰퍼샌드 (&)는 태그 문자로 처리 됩니다. 하지만 이러한 유형의 특수 문자를 CDATA 섹션에 래핑하여 태그 문자로 처리되지 않도록 할 수 있습니다. CDATA 섹션 내의 텍스트는 XML 파서에서 일반 텍스트로 처리됩니다.  
   
- **Sql: use-cdata** 주석은에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 되는 데이터를 cdata 섹션에 래핑해야 함을 지정 하는 데 사용 됩니다. 즉, **sql: field** 에 지정 된 열의 값을 cdata 섹션으로 묶어야 하는지 여부를 나타냅니다. **Sql: use-cdata** 주석은 데이터베이스 열에 매핑되는 요소에만 지정할 수 있습니다.  
+ **Sql: use-cdata** 주석은에서 반환 되는 데이터를 cdata 섹션에 래핑해야 함을 지정 하는 데 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 즉, **sql: field** 에 지정 된 열의 값을 cdata 섹션으로 묶어야 하는지 여부를 나타냅니다. **Sql: use-cdata** 주석은 데이터베이스 열에 매핑되는 요소에만 지정할 수 있습니다.  
   
  **Sql: use-cdata** 주석은 부울 값 (0 = false, 1 = true)을 사용 합니다. 허용되는 값은 0, 1, true 및 false입니다.  
   
  이 주석은 **sql: url 인코딩** 또는 ID, IDREF, IDREFS, NMTOKEN 및 NMTOKENS 특성 유형에 사용할 수 없습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. 요소에 sql:use-cdata 지정  
- 다음 스키마에서 **sql: use-cdata** 는 ** \<Address>** 요소 내의 ** \<AddressLine1>** 에 대해 1 (True)로 설정 됩니다. 따라서 데이터가 CDATA 섹션으로 반환됩니다.  
+ 다음 스키마에서 **sql: use-cdata** 는 요소 내의에 대해 1 (True)로 설정 됩니다 **\<AddressLine1>** **\<Address>** . 따라서 데이터가 CDATA 섹션으로 반환됩니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

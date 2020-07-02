@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0aad616275d635ac32d6e81dbc5321db0db58b34
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 193760ec432a67b8cf428f7e0207d6fd8174a5c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68019945"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750503"
 ---
 # <a name="sp_revoke_login_from_proxy-transact-sql"></a>sp_revoke_login_from_proxy(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   보안 주체의 프록시 액세스 권한을 제거합니다.  
   
@@ -42,7 +42,7 @@ sp_revoke_login_from_proxy
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @name = ] 'name'`액세스 권한을 제거할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인, 서버 역할 또는 **msdb** 데이터베이스 역할의 이름입니다. *name* 은 **nvarchar (256)** 이며 기본값은 없습니다.  
+`[ @name = ] 'name'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]액세스 권한을 제거할 로그인, 서버 역할 또는 **msdb** 데이터베이스 역할의 이름입니다. *name* 은 **nvarchar (256)** 이며 기본값은 없습니다.  
   
 `[ @proxy_id = ] id`액세스 권한을 제거할 프록시의 id입니다. *Id* 또는 *proxy_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. *Id* 는 **int**이며 기본값은 NULL입니다.  
   
@@ -57,7 +57,7 @@ sp_revoke_login_from_proxy
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 사용자가 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 로그인 `terrid`가 프록시 `Catalog application proxy`에 액세스할 수 있는 권한을 취소합니다.  
   
 ```  

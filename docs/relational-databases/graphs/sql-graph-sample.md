@@ -15,18 +15,18 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1737ae8427df8d6d9bd6dbb9dea359da09f0c657
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b08fdf07bf73b8d485ce9334d8998e055454dcb2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68035867"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751150"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>T-sql을 사용 하 여 그래프 데이터베이스 만들기 및 일부 패턴 일치 쿼리 실행
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-이 샘플에서는 노드 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 및 가장자리가 포함 된 그래프 데이터베이스를 만든 다음 새 MATCH 절을 사용 하 여 일부 패턴과 일치 하 고 그래프를 통과 하는 스크립트를 제공 합니다. 이 샘플 스크립트는 두 Azure SQL Database 모두에서 작동 합니다.[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+이 샘플에서는 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 노드 및 가장자리가 포함 된 그래프 데이터베이스를 만든 다음 새 MATCH 절을 사용 하 여 일부 패턴과 일치 하 고 그래프를 통과 하는 스크립트를 제공 합니다. 이 샘플 스크립트는 두 Azure SQL Database 모두에서 작동 합니다.[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
 
 ## <a name="sample-schema"></a>샘플 스키마
 
@@ -163,7 +163,7 @@ go
 ```
 
 ## <a name="script-explanation"></a>스크립트 설명  
-이 스크립트는 새 T-sql 구문을 사용 하 여 노드 및에 지 테이블을 만듭니다. 문을 사용 하 여 `INSERT` 노드 및에 지 테이블에 데이터를 삽입 하는 방법과 패턴 일치 `MATCH` 및 탐색을 위해 절을 사용 하는 방법을 보여 줍니다.
+이 스크립트는 새 T-sql 구문을 사용 하 여 노드 및에 지 테이블을 만듭니다. 문을 사용 하 여 노드 및에 지 테이블에 데이터를 삽입 하는 방법과 `INSERT` `MATCH` 패턴 일치 및 탐색을 위해 절을 사용 하는 방법을 보여 줍니다.
 
 |명령    |메모
 |---  |---  |
