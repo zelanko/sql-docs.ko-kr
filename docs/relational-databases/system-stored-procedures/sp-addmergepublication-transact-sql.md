@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5d5b7870faed5423d4b12861d18f9bdb85e40c68
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 09e3c873ecdab8f967fb454854ae66b3a367ab87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826317"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786246"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   새 병합 게시를 만듭니다. 이 저장 프로시저는 게시되는 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -172,7 +172,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @publication_compatibility_level = ] backward_comp_level`게시의 이전 버전과의 호환성을 나타냅니다. *backward_comp_level* 은 **nvarchar (6)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|버전|  
+|값|Version|  
 |-----------|-------------|  
 |**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
@@ -200,7 +200,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @retention_period_unit = ] 'retention_period_unit'`보존 기간에 설정 된 보존 기간 단위를 지정 *합니다.* *retention_period_unit* 은 **nvarchar (10)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|버전|  
+|값|Version|  
 |-----------|-------------|  
 |**일** (기본값)|보존 기간(일)을 지정합니다.|  
 |**week**|보존 기간(주)을 지정합니다.|  
@@ -240,7 +240,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_AddMergePub](../../relational-databases/replication/codesnippet/tsql/sp-addmergepublication-t_1.sql)]  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_addmergepublication**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

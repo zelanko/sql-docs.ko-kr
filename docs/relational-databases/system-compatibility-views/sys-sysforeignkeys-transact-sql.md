@@ -1,5 +1,5 @@
 ---
-title: sysforeignkeys (Transact-sql) | Microsoft Docs
+title: sys.sysforeignkeys (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,22 +20,22 @@ helpviewer_keywords:
 ms.assetid: 41544236-1c46-4501-be88-18c06963b6e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: acbf543abeb8e35adb506e1fb381d2fa2018f113
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6b3d1e89e09c0243c1329c724b9907e7c5f50b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053454"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786354"
 ---
 # <a name="syssysforeignkeys-transact-sql"></a>sys.sysforeignkeys(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스의 테이블 정의에 있는 FOREIGN KEY 제약 조건에 관한 정보를 포함합니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**constid**|**int**|FOREIGN KEY 제약 조건의 ID입니다.|  
 |**fkeyid**|**int**|FOREIGN KEY 제약 조건이 있는 테이블의 개체 ID입니다.|  

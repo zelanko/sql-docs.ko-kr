@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c12e117682fe2e5286a6f4a1c650878ae0827010
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c31df96682d2d1413094572a2b1fab94cfbe54b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831639"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786176"
 ---
 # <a name="sp_dbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정한 미러링 성능 메트릭에 대해 경고 임계값을 추가하거나 변경합니다.  
 
@@ -86,7 +86,7 @@ sp_dbmmonitorchangealert database_name
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 각 성능 메트릭에 대한 임계값과 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]데이터베이스의 보존 기간을 설정합니다. 다음 표에서는 이 예에 사용된 값을 보여 줍니다.  
   
 |*alert_id*|성능 메트릭|경고 임계값|경고 사용 여부|  

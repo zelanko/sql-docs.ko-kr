@@ -1,5 +1,5 @@
 ---
-title: sys. sysfilegroups 그룹 (Transact-sql) | Microsoft Docs
+title: sys.sys파일 그룹 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,25 +20,25 @@ helpviewer_keywords:
 ms.assetid: e567fa07-31cd-43cc-b8c7-ba6108baca80
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5388533ed665548eaaac3c25976271750d1348c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57fc9a180df47b13608cb3687e5b932139c50ab7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053477"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786363"
 ---
 # <a name="syssysfilegroups-transact-sql"></a>sys.sysfilegroups(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스에 있는 각 파일 그룹에 대해 한 행씩 있습니다. 이 테이블에는 주 파일 그룹에 대한 항목이 적어도 한 개는 있습니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**groupid**|**smallint**|각 데이터베이스에 고유한 그룹 ID입니다.|  
-|**allocpolicy**|**smallint**|Reserved|  
+|**allocpolicy**|**smallint**|예약됨|  
 |**status**|**int**|0x8 = 읽기 전용<br /><br /> 0x10 = 기본값|  
 |**groupname**|**sysname**|파일 그룹의 이름입니다.|  
   

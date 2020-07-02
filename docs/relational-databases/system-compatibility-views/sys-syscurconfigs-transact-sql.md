@@ -1,5 +1,5 @@
 ---
-title: syscurconfigs (Transact-sql) | Microsoft Docs
+title: sys.syscurconfigs (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 454ab849-07a5-4b50-ba0a-6b1b14721f77
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b0fad344831d8073badb2618eb2c34a1cdc2161
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea035c3dc7ec911034fff20fda22b60ef0ad0108
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089185"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786409"
 ---
 # <a name="syssyscurconfigs-transact-sql"></a>sys.syscurconfigs(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  현재 구성 옵션 각각에 대한 항목을 포함합니다. 또한 이 뷰에는 구성 구조를 설명하는 네 개의 항목이 포함되어 있습니다. **syscurconfigs** 는 사용자가 쿼리할 때 동적으로 작성 됩니다. 자세한 내용은 [&#40;transact-sql&#41;를 구성 ](../../relational-databases/system-compatibility-views/sys-sysconfigures-transact-sql.md)합니다.  
+  현재 구성 옵션 각각에 대한 항목을 포함합니다. 또한 이 뷰에는 구성 구조를 설명하는 네 개의 항목이 포함되어 있습니다. **syscurconfigs** 는 사용자가 쿼리할 때 동적으로 작성 됩니다. 자세한 내용은 [sys.sys구성 &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysconfigures-transact-sql.md)을 참조 하십시오.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
@@ -39,7 +39,7 @@ ms.locfileid: "68089185"
 |-----------------|---------------|-----------------|  
 |**value**|**int**|사용자 수정이 가능한 변수 값입니다. RECONFIGURE가 실행된 경우에만 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 사용합니다.|  
 |**config**|**smallint**|구성 변수 번호입니다.|  
-|**주석의**|**nvarchar(255)**|구성 옵션에 대한 설명입니다.|  
+|**comment**|**nvarchar(255)**|구성 옵션에 대한 설명입니다.|  
 |**status**|**smallint**|옵션의 상태를 표시하는 비트맵입니다. 가능한 값은 다음과 같습니다.<br /><br /> 0 = 정적. 서버가 다시 시작될 때 설정이 적용됩니다.<br /><br /> 1 = 동적. RECONFIGURE 문이 실행될 때 변수가 적용됩니다.<br /><br /> 2 = 고급. **Show advanced options** 가 설정 된 경우에만 변수가 표시 됩니다.<br /><br /> 3 = 동적 및 고급입니다.|  
   
 ## <a name="see-also"></a>참고 항목  

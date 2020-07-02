@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab1630f6dd172410d26f48d0485b23d257c6d408
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3131a5e0a44cf0ccbdb4537dc8e409cc8b56be39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825997"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786103"
 ---
 # <a name="sp_table_privileges_ex-transact-sql"></a>sp_table_privileges_ex(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정한 연결된 서버에서 지정한 테이블에 대한 권한 정보를 반환합니다.  
   
@@ -71,10 +71,10 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 ## <a name="remarks"></a>설명  
  반환 되는 결과는 **TABLE_QUALIFIER**, **TABLE_OWNER**, **TABLE_NAME**및 **권한에**따라 정렬 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 지정한 연결된 서버 `Product`의 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 `Seattle1`로 시작되는 이름을 가진 테이블에 대한 권한 정보를 반환합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 연결 된 서버로 가정 됩니다.  
   
 ```  

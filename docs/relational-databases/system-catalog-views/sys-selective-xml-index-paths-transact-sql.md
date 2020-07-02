@@ -19,15 +19,15 @@ ms.assetid: 07a73d71-ec3e-4894-947a-5859ca62c606
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 9ff85273a1e970b3bb891d1816a96019dd4f3ae5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 55bb26edf9d51731a4a5986a8a6063f6214df1f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135187"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787076"
 ---
 # <a name="sysselective_xml_index_paths-transact-sql"></a>sys.selective_xml_index_paths(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 서비스 팩 1부터 사용할 수 있습니다. sys.selective_xml_index_paths의 각 행은 특정 선택적 XML 인덱스에 대한 승격 경로 하나를 나타냅니다.  
   
@@ -43,7 +43,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
  인덱스 sxi1에 해당하는 sys.selective_xml_index_paths에 새로운 두 행이 있습니다.  
 
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|XML 열이 포함된 테이블의 ID입니다.|  
 |**index_id**|**int**|선택적 XML 인덱스의 고유한 ID입니다.|  

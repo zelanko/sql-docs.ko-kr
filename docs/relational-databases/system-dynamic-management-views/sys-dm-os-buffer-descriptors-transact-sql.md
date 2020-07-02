@@ -20,15 +20,15 @@ ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2b1ed24045f609b2feff1bfef6f288cd97047cf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61a84a655bced5a053f47d0aae1493ec80dd9ff8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827901"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787017"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버퍼 풀에 있는 모든 데이터 페이지에 대한 정보를 반환합니다. 데이터베이스, 개체 또는 유형에 따라 버퍼 풀에서 데이터베이스 페이지를 배포하는 방식을 결정하는 데 이 뷰의 결과를 사용할 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 이 동적 관리 뷰는 버퍼 풀 확장 파일에서 데이터 페이지에 대한 정보를 반환합니다. 자세한 내용은 [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md)을 참조 하세요.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "82827901"
 |is_in_bpool_extension|**bit**|1 = 페이지가 버퍼 풀 확장에 있습니다. Null을 허용합니다.|  
 |pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
@@ -63,11 +63,11 @@ ms.locfileid: "82827901"
 |시작|대상|켜기|관계|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|다 대 일|  
-|sys.dm_os_buffer_descriptors|\<userdb> allocation_units|allocation_unit_id|다 대 일|  
-|sys.dm_os_buffer_descriptors|\<userdb> database_files|file_id|다 대 일|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys. allocation_units|allocation_unit_id|다 대 일|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys. database_files|file_id|다 대 일|  
 |sys.dm_os_buffer_descriptors|sys.dm_os_buffer_pool_extension_configuration|file_id|다 대 일|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-cached-page-count-for-each-database"></a>A. 각 데이터베이스에 대해 캐시된 페이지 수 반환  
  다음 예에서는 각 데이터베이스에 대해 로드된 페이지 수를 반환합니다.  

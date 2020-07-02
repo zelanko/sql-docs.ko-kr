@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9076d4bdda58a851e358371375b71f8934a945fe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 396e370e7cb271c516033eb160332ac749a27aca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830238"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787009"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   테이블 또는 뷰에 종속되는 뷰 및 프로시저, 뷰 또는 프로시저에 종속되는 테이블 및 뷰와 같은 데이터베이스 개체 종속성에 대한 정보를 표시합니다. 현재 데이터베이스 외부의 개체에 대한 참조는 보고되지 않습니다.  
   
@@ -63,17 +63,17 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>결과 집합  
  **sp_depends** 는 두 개의 결과 집합을 표시 합니다.  
   
- 다음 결과 집합은 * \< 개체>* 종속 된 개체를 표시 합니다.  
+ 다음 결과 집합은가 종속 된 개체를 표시 합니다 *\<object>* .  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|종속성이 있는 항목의 이름입니다.|  
 |**type**|**nvarchar (16)**|항목의 유형입니다.|  
-|**업데이트됨**|**nvarchar (7)**|항목의 업데이트 여부를 결정합니다.|  
+|**updated**|**nvarchar (7)**|항목의 업데이트 여부를 결정합니다.|  
 |**선택**|**nvarchar(8)**|SELECT 문에서 항목의 사용 여부를 결정합니다.|  
 |**column**|**sysname**|종속성이 있는 열 또는 매개 변수입니다.|  
   
- 다음 결과 집합은 * \< 개체>* 에 종속 된 개체를 표시 합니다.  
+ 다음 결과 집합은에 종속 된 개체를 표시 합니다 *\<object>* .  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

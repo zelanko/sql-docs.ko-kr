@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 69b751dc93ad4512498530ddd99cf4fc8edee62a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b9af4f3564c5834b856632db70bd6b12368a22c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826305"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786235"
 ---
 # <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent(Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   끌어오기 구독의 동기화를 예약하는 데 사용되는 새 에이전트 작업을 병합 게시에 추가합니다. 이 저장 프로시저는 구독 데이터베이스의 구독자에서 실행됩니다.  
   
@@ -154,8 +154,8 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**1**|한 번|  
 |**2**|주문형|  
 |**4**|매일|  
-|**20cm(8**|매주|  
-|**x**|매월|  
+|**8**|매주|  
+|**16**|매월|  
 |**32**|매월 상대적|  
 |**64**|자동 시작|  
 |**128**|되풀이|  
@@ -175,7 +175,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**5**|목요일|  
 |**6**|금요일|  
 |**7**|토요일|  
-|**20cm(8**|일|  
+|**8**|일|  
 |**9**|평일|  
 |**10**|주말|  
 |NULL(기본값)||  
@@ -184,11 +184,11 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 |값|Description|  
 |-----------|-----------------|  
-|**1**|처음|  
-|**2**|초|  
+|**1**|첫째|  
+|**2**|Second|  
 |**4**|셋째|  
-|**20cm(8**|넷째|  
-|**x**|마지막|  
+|**8**|넷째|  
+|**16**|마지막|  
 |NULL(기본값)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*에서 사용 하는 되풀이 비율입니다. *frequency_recurrence_factor* 은 **int**이며 기본값은 NULL입니다.  
@@ -198,9 +198,9 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|초|  
+|**2**|Second|  
 |**4**|Minute|  
-|**20cm(8**|시간|  
+|**8**|시간|  
 |NULL(기본값)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*에 대 한 간격입니다. *frequency_subday_interval* 은 **int**이며 기본값은 NULL입니다.  
@@ -255,7 +255,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @use_web_sync = ] use_web_sync`웹 동기화가 사용 하도록 설정 되어 있음을 나타냅니다. *use_web_sync* 은 **bit**이며 기본값은 0입니다. **1** 은 HTTP를 사용 하 여 끌어오기 구독을 인터넷을 통해 동기화 할 수 있도록 지정 합니다.  
   
-`[ @internet_url = ] 'internet_url'`복제 수신기 (REPLISAPI)의 위치입니다. DLL)을 동기화 합니다. *internet_url* 은 **nvarchar (260)** 이며 기본값은 NULL입니다. *internet_url* 은 형식의 정규화 된 url입니다 `http://server.domain.com/directory/replisapi.dll` . 서버가 포트 80 이외의 다른 포트에서 수신하도록 구성된 경우 포트 번호도 `http://server.domain.com:portnumber/directory/replisapi.dll` 형식으로 제공되어야 합니다. 여기서 `portnumber`는 포트를 나타냅니다.  
+`[ @internet_url = ] 'internet_url'`웹 동기화에 대 한 복제 수신기 (REPLISAPI.DLL)의 위치입니다. *internet_url* 은 **nvarchar (260)** 이며 기본값은 NULL입니다. *internet_url* 은 형식의 정규화 된 url입니다 `http://server.domain.com/directory/replisapi.dll` . 서버가 포트 80 이외의 다른 포트에서 수신하도록 구성된 경우 포트 번호도 `http://server.domain.com:portnumber/directory/replisapi.dll` 형식으로 제공되어야 합니다. 여기서 `portnumber`는 포트를 나타냅니다.  
   
 `[ @internet_login = ] 'internet_login'`는 HTTP 기본 인증을 사용 하 여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 병합 에이전트에서 사용 하는 로그인입니다. *internet_login* 는 **sysname**이며 기본값은 NULL입니다.  
   
@@ -296,7 +296,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_1_1.sql)]  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_addmergepullsubscription_agent**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

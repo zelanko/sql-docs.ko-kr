@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ff09552fcc8a79abcae877191b4456c0958d1ea2
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 9d9290b02c149889a488452d71ae800134d38f00
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807755"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786966"
 ---
 # <a name="sp_dropdistributiondb-transact-sql"></a>sp_dropdistributiondb(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   배포 데이터베이스를 삭제합니다. 다른 데이터베이스에 해당 물리적 파일이 사용되지 않는 경우에 한해 데이터베이스에 사용되는 물리적 파일을 삭제합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
   
@@ -55,7 +55,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributiondb-tr_1.sql)]  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_dropdistributiondb**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

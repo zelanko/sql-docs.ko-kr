@@ -13,15 +13,15 @@ ms.assetid: 12816656-940d-4724-acfb-e916eef2e644
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cbaa87cee9035a791d0d90a0c794bc54851789a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b939924d79f2abb0219410a1caab75ee4f9dd45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307307"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785450"
 ---
 # <a name="ibcpsession2-ole-db"></a>IBCPSession2(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   IBCPSession2 인터페이스는 각 열에 대해 IBCPSession::BCPColFmt를 호출하는 방법 대신 사용할 수 있는 멤버 함수를 제공하는 IBCPSession에 대한 확장입니다.  IBCPSession2는 IBCPSession에서 상속 하 고 [IBCPSession2:: Bcpset대량 모드](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-bcpsetbulkmode.md)의 새 메서드를 추가 합니다.  
   

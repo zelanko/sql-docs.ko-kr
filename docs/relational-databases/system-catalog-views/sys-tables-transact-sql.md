@@ -20,21 +20,21 @@ ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25661cc9d9166da61bd7cef8e3368c2a393a931e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fc6b21029c829194c5287b450e266119b08a934f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821292"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787096"
 ---
 # <a name="systables-transact-sql"></a>sys.tables(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 각 사용자 테이블마다 하나의 행을 반환합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|\<상속 된 열>||이 뷰가 상속 하는 열 목록은 [sys. 개체 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.|  
+|\<inherited columns>||이 뷰가 상속 하는 열 목록은 [sys. 개체 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.|  
 |lob_data_space_id|**int**|0이 아닌 값은 이 테이블의 BLOB(Binary Large Object) 데이터를 보관하는 데이터 공간(파일 그룹 또는 파티션 구성표)의 ID입니다. LOB 데이터 형식의 예로는 **varbinary (max)**, **varchar (max)**, **geography**또는 **xml**이 있습니다.<br /><br /> 0 = 테이블에 LOB 데이터가 없습니다.|  
 |filestream_data_space_id|**int**|FILESTREAM 파일 그룹 또는 FILESTREAM 파일 그룹으로 구성된 파티션 구성표의 데이터 공간 ID입니다.<br /><br /> FILESTREAM 파일 그룹의 이름을 보고 하려면 쿼리를 실행 `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables` 합니다.<br /><br /> sys.tables는 filestream_data_space_id = data_space_id에서 다음과 같은 뷰에 조인할 수 있습니다.<br /><br /> -sys. 파일 그룹<br /><br /> -sys. partition_schemes<br /><br /> -sys. 인덱스<br /><br /> -sys. allocation_units<br /><br /> -sys. fulltext_catalogs<br /><br /> -sys. data_spaces<br /><br /> -sys. destination_data_spaces<br /><br /> -sys. master_files<br /><br /> -sys. database_files<br /><br /> -backupfilegroup (filegroup_id에 조인)|  
 |max_column_id_used|**int**|이 테이블에 사용된 최대 열 ID입니다.|  
@@ -68,7 +68,7 @@ ms.locfileid: "82821292"
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 기본 키가 없는 모든 사용자 테이블을 반환합니다.  
   
 ```  

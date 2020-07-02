@@ -16,15 +16,15 @@ ms.assetid: c98a06f6-c205-42f0-9f2a-4668c6103bc8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11edc45464e53a1713b414cb870a25b0ae856cdd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: efe34b11620c269606f90e34c3e797b2e856418f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829500"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787023"
 ---
 # <a name="geo-replication-dynamic-management-views-and-functions-azure-sql-database"></a>지리적 복제 동적 관리 뷰 및 함수 (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   이 섹션에는 지역에서 복제에 대 한 정보를 표시 하는 다음 카탈로그 뷰가 포함 되어 있습니다.  
   

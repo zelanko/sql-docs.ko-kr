@@ -23,15 +23,15 @@ ms.assetid: 67ffb1a6-f38d-4712-ba64-96bdd41ec2b2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d95478cd558239030ccfb4091641258548705ba9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6142ed44d7937e780de33740451caa029db189b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297720"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785578"
 ---
 # <a name="data-at-execution-and-text-ntext-or-image-columns"></a>실행 시 데이터 및 text, ntext 또는 image 열
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   ODBC 실행 시 데이터는 애플리케이션에서 바인딩된 열 또는 매개 변수에 있는 대량의 데이터를 사용할 수 있도록 하는 기능입니다. 매우 큰 **text**, **ntext**또는 **image** 열을 검색할 때 응용 프로그램은 단순히 큰 버퍼를 할당 하 고, 열을 버퍼에 바인딩하고, 행을 인출 하지 못할 수 있습니다. 매우 큰 **text**, **ntext**또는 **image** 열을 업데이트할 때 응용 프로그램은 단순히 큰 버퍼를 할당 하 고 SQL 문에서 매개 변수 표식에 바인딩한 다음 문을 실행 하지 못할 수 있습니다. 이러한 경우 응용 프로그램은 실행 시 데이터 옵션과 함께 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) 또는 [sqlputdata](../../relational-databases/native-client-odbc-api/sqlputdata.md) 를 사용 해야 합니다.  
   

@@ -11,15 +11,15 @@ ms.assetid: 53deeb99-c088-4fde-844b-b2d91d6de1eb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c25d8700e001f5757f514e630bca6fe815d7349a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3be6a1d71b45039401f1b4c9e4dddd0bfac4b3ab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388552"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785123"
 ---
 # <a name="using-the-output-clause-with-ole-db-in-sql-server-native-client"></a>SQL Server Native Client의 OLE DB에서 OUTPUT 절 사용
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   INSERT, UPDATE, DELETE 또는 MERGE 명령에 OUTPUT 절을 사용하는 경우 영향을 받는 행 수를 사용할 수 없습니다. 애플리케이션이 OUTPUT 절에서 반환되는 행 집합의 행 수를 계산해야 합니다.  
   

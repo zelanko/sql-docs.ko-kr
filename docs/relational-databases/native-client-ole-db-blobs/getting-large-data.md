@@ -16,17 +16,17 @@ ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ba1762bdc54c5ffe3e3879d21edd5e48c096f03
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4927ffc7ded9a291e5910cd359cb59edea0bf3bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303624"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785566"
 ---
 # <a name="getting-large-data"></a>대규모 데이터 가져오기
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  일반적으로 소비자는 **ISequentialStream** 인터페이스 포인터를 통해 참조 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 되지 않는 데이터를 처리 하는 다른 코드에서 네이티브 클라이언트 OLE DB 공급자 저장소 개체를 만드는 코드를 격리 해야 합니다.  
+  일반적으로 소비자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ISequentialStream** 인터페이스 포인터를 통해 참조 되지 않는 데이터를 처리 하는 다른 코드에서 네이티브 클라이언트 OLE DB 공급자 저장소 개체를 만드는 코드를 격리 해야 합니다.  
   
  이 항목에서는 다음 함수와 함께 사용할 수 있는 기능에 대해 설명합니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81303624"
   
  행 집합 속성 그룹의 DBPROP_ACCESSORDER 속성이 DBPROPVAL_AO_SEQUENTIAL 또는 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 값 중 하나로 설정 된 경우, BLOB 데이터가 버퍼링 되지 않으므로 소비자는 **GetNextRows** 메서드를 호출 하 여 데이터의 단일 행만 인출 해야 합니다. DBPROP_ACCESSORDER 값이 DBPROPVAL_AO_RANDOM으로 설정되어 있으면 소비자가 **GetNextRows**에서 여러 데이터 행을 인출할 수 있습니다.  
   
- Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 소비자가 요청할 때까지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 데이터를 검색 하지 않습니다. 소비자는 모든 소규모 데이터를 하나의 접근자에 바인딩한 다음 필요에 따라 하나 이상의 임시 접근자를 사용하여 대규모 데이터 값을 검색해야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 소비자가 요청할 때까지에서 대량 데이터를 검색 하지 않습니다. 소비자는 모든 소규모 데이터를 하나의 접근자에 바인딩한 다음 필요에 따라 하나 이상의 임시 접근자를 사용하여 대규모 데이터 값을 검색해야 합니다.  
   
 ## <a name="example"></a>예제  
  이 예는 단일 열에서 대규모 데이터 값을 검색합니다.  

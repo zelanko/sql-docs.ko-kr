@@ -20,23 +20,23 @@ ms.assetid: 9da0da95-792e-48b4-9f60-47f0729c279c
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27a8f2ddee2e0ff0839317cf1652bcf353c0b66b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 489baa68c8fe37d4f240d26cb93d65b73016d7dc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67940294"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787177"
 ---
 # <a name="syscryptographic_providers-transact-sql"></a>sys.cryptographic_providers(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   등록된 각 암호화 공급자에 대해 하나의 행을 반환합니다.  
     
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|암호화 공급자의 ID 번호입니다.|  
 |**name**|**sysname**|암호화 공급자의 이름입니다.|  
-|**eid**|**uniqueidentifier**|고유한 공급자 GUID입니다.|  
+|**guid**|**uniqueidentifier**|고유한 공급자 GUID입니다.|  
 |**version**|**nvarchar(50)**|'*Aa.bb.cccc.dd*' 형식의 공급자 버전입니다.|  
 |**dll_path**|**nvarchar(512)**|EKM(Extensible Key Management) API(애플리케이션 프로그래밍 인터페이스)를 구현하는 DLL의 경로입니다.|  
 |**is_enabled**|**bit**|공급자가 서버에서 설정되어 있는지 여부입니다.<br /><br /> 0 = 설정 안 함(기본값)<br /><br /> 1 = 사용|  

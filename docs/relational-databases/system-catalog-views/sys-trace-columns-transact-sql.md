@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 5c48eb09-9e9b-45dd-b151-ca39b026ece5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d0d316a20064577f3c9aef4618d4ecdf5dea5e3f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e49dda63cd74e257331966b8f51dfac32a6f4b26
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831356"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787071"
 ---
 # <a name="systrace_columns-transact-sql"></a>sys.trace_columns(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Trace_columns** 카탈로그 뷰는 모든 추적 이벤트 열 목록을 포함 합니다. 지정된 버전의 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 이러한 열이 변경되지 않습니다.  
   

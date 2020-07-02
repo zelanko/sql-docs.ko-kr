@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8d9176624f661cb012fe8ed3124a1b868ec72195
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b7b68a7497dc3ed64eaf1b9047d1489e38f99be6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830207"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786958"
 ---
 # <a name="sp_dropdevice-transact-sql"></a>sp_dropdevice(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  인스턴스에서 데이터베이스 장치 또는 백업 장치를 [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] 삭제 하 여 **sysdevices**에서 항목을 삭제 합니다.  
+  인스턴스에서 데이터베이스 장치 또는 백업 장치를 [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] 삭제 하 고 **master.dbo.sys장치**에서 항목을 삭제 합니다.  
    
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,7 +41,7 @@ sp_dropdevice [ @logicalname = ] 'device'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @logicalname = ] 'device'`**Master.dbo.sysdevices.name**에 나열 된 데이터베이스 장치 또는 백업 장치의 논리적 이름입니다. *장치* 는 **sysname**이며 기본값은 없습니다.  
+`[ @logicalname = ] 'device'`**master.dbo.sysdevices.name**에 나열 된 데이터베이스 장치 또는 백업 장치의 논리적 이름입니다. *장치* 는 **sysname**이며 기본값은 없습니다.  
   
 `[ @delfile = ] 'delfile'`물리적 백업 장치 파일을 삭제할지 여부를 지정 합니다. *delfile* 은 **varchar (7)** 입니다. **Delfile**로 지정 하면 물리적 백업 장치 디스크 파일이 삭제 됩니다.  
   
@@ -57,7 +57,7 @@ sp_dropdevice [ @logicalname = ] 'device'
 ## <a name="permissions"></a>사용 권한  
  **diskadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `tapedump1` 테이프 덤프 디바이스를 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 삭제합니다.  
   
 ```  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6194e803367de5c66df6e270f196e6a8316ce203
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 98c966ecb91bebb4f11db49028ecf53a885cc888
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627117"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786211"
 ---
 # <a name="sp_addpullsubscription-transact-sql"></a>sp_addpullsubscription(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   스냅샷 또는 트랜잭션 게시에 끌어오기 구독을 추가합니다. 이 저장 프로시저는 끌어오기 구독을 만들 구독자의 데이터베이스에서 실행됩니다.  
   
@@ -85,7 +85,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addpullsubscription-t_1.sql)]  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_addpullsubscription**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

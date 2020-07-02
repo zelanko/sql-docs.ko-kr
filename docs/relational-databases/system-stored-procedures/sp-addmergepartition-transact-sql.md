@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0af6f62a45dd519f8a63839ae1435815569b93be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a4f4743efbd0ee3b7a57cb4fab02c98a2680a870
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831786"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786264"
 ---
 # <a name="sp_addmergepartition-transact-sql"></a>sp_addmergepartition(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   구독자에서 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 또는 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 값으로 필터링 되는 구독에 대해 동적으로 필터링 된 파티션을 만듭니다. 이 저장 프로시저는 게시된 데이터베이스의 게시자에서 실행되며 파티션을 수동으로 생성하는 데 사용됩니다.  
   
