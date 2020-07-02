@@ -19,15 +19,15 @@ ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e302d454ba0bf243f702b90b24cf7076ed97cb6
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 68df5b4d0191fc0d6a21471cf209177f0ce0e1b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669459"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762796"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   현재 데이터베이스에서 현재 사용자가 액세스할 수 있는 각 저장 프로시저와 함수에 대해 한 행을 반환합니다. 반환 값을 설명하는 열은 함수에만 적용됩니다. 저장 프로시저의 경우 이러한 열은 NULL이 됩니다.  
   

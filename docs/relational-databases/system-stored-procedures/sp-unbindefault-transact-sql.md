@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7fdce8d2fad56d56e13343bc3397353e72d3be1b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cc3e3af8e1b2333f68ea43fe9cacdfb4c3d39e40
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809676"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762778"
 ---
 # <a name="sp_unbindefault-transact-sql"></a>sp_unbindefault(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스의 열에서 또는 별칭 데이터 형식에서 기본값의 바인딩을 해제(제거)합니다.  
   
@@ -58,10 +58,10 @@ sp_unbindefault [ @objname = ] 'object_name'
 ## <a name="remarks"></a>설명  
  기본값의 텍스트를 표시 하려면 기본값의 이름을 매개 변수로 사용 하 여 **sp_helptext** 를 실행 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  테이블 열에서 기본값의 바인딩을 해제하려면 테이블에 대한 ALTER 사용 권한이 필요합니다. 별칭 데이터 형식에서 기본값의 바인딩을 해제하려면 유형에 대한 CONTROL 사용 권한 또는 유형이 속한 스키마에 대한 ALTER 사용 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-unbinding-a-default-from-a-column"></a>A. 열에서 기본값 바인딩 해제  
  다음 예에서는 `hiredate` 테이블의 `employees` 열에서 기본값의 바인딩을 해제합니다.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 40a6b569dc469f216d54e615fadd506e968db981
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 63e7422cc26106ab6a9eadd9232ed9d168afd691
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807579"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762662"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스 메일에는 메일 큐와 상태 큐의 두 가지 큐가 있습니다. 메일 큐는 전송 대기 중인 메일 항목을 저장합니다. 상태 큐는 이미 전송된 항목의 상태를 저장합니다. 이 저장 프로시저를 사용하여 메일 또는 상태 큐의 상태를 볼 수 있습니다. ** \@ Queue_type** 매개 변수를 지정 하지 않으면 저장 프로시저는 각 큐에 대해 하나의 행을 반환 합니다.  
   
@@ -57,10 +57,10 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ## <a name="remarks"></a>설명  
  데이터베이스 메일 문제를 해결 하는 경우 **sysmail_help_queue_sp** 를 사용 하 여 큐에 있는 항목 수, 큐의 상태 및 마지막으로 활성화 된 시간을 확인 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버만이 프로시저에 액세스할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 메일 및 상태 큐를 모두 반환합니다.  
   
 ```  

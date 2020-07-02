@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: be30abc9-c00d-446f-b1b4-1269772f37e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 92957ae8cb47f181d230d16b96c9d6e40b1ea107
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 75bf9ad8b7c1ddaa4d7f34314678b601375c953f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82805644"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762594"
 ---
 # <a name="msagent_parameters-transact-sql"></a>MSagent_parameters(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSagent_parameters** 테이블에는 에이전트 프로필과 연결 된 매개 변수가 포함 되어 있습니다. 매개 변수 이름은 에이전트에서 지원되는 것과 동일합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   

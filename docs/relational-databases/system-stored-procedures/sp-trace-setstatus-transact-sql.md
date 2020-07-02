@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98eaa39475b58c7fad5b20c4f6a65101d33b103d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b56b81563a693397156f0fe29fe7b3e6a430ef41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809853"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762788"
 ---
 # <a name="sp_trace_setstatus-transact-sql"></a>sp_trace_setstatus(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정한 추적의 현재 상태를 수정합니다.  
   
@@ -64,7 +64,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 |-----------------|-----------------|  
 |**0**|오류가 없습니다.|  
 |**1**|알 수 없는 오류입니다.|  
-|**20cm(8**|지정한 상태는 유효하지 않습니다.|  
+|**8**|지정한 상태는 유효하지 않습니다.|  
 |**9**|지정한 추적 핸들이 유효하지 않습니다.|  
 |**13**|메모리가 부족합니다. 지정한 동작을 수행할 메모리가 충분하지 않으면 반환됩니다.|  
   
@@ -75,7 +75,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
   
  추적 저장 프로시저 사용에 대한 예는 [추적 만들기&#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)를 참조하세요.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  사용자는 ALTER TRACE 권한이 있어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 955d6fa9-0b31-4335-a3cd-e4c4d90ad308
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cc87e363596a419960155f75356bbfcce5f21300
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b2f9f9d553896a2542894e9fdca6e86e9f5fbe2c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832447"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762606"
 ---
 # <a name="ihconstrainttypes-transact-sql"></a>IHconstrainttypes(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **IHconstrainttypes** 시스템 테이블에는 SQL Server 이외 게시자에 대해 지원 되는 비 SQL Server 제약 조건의 각 유형에 대 한 행이 하나씩 포함 되어 있습니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

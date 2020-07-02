@@ -20,15 +20,15 @@ ms.assetid: bffb91a3-492c-4375-bd2a-db8fc1a3ace4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae066013a49aa8bc22b227bf8a9b232e9b621ae5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e90629ef357d04b4161ca87d3d3f95a6e66ec487
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825047"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760280"
 ---
 # <a name="sysparameter_xml_schema_collection_usages-transact-sql"></a>sys.parameter_xml_schema_collection_usages(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   XML 스키마에서 유효성을 검사하는 각 매개 변수에 대해 하나의 행을 반환합니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82825047"
 |**parameter_id**|**int**|매개 변수의 ID입니다.  개체 내에서 고유합니다.|  
 |**xml_collection_id**|**int**|매개 변수의 유효성을 검사하는 XML 스키마 네임스페이스를 포함하는 XML 스키마 컬렉션의 ID입니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5c69ac9d3169b3cb407c98c76b1890c5a35188b4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bc41c237e81c943dacd5d0ecdfe4b9f7eec56d36
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813211"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764218"
 ---
 # <a name="log_shipping_monitor_error_detail-transact-sql"></a>log_shipping_monitor_error_detail(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   로그 전달 작업에 대한 오류 정보를 저장합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82813211"
 |**log_time**|**datetime**|레코드가 생성된 날짜와 시간입니다.|  
 |**log_time_utc**|**datetime**|레코드가 생성된 날짜와 시간(UTC)입니다.|  
 |**message**|**nvarchar**|메시지 내용입니다.|  
-|**원본**|**nvarchar**|오류 메시지 또는 이벤트의 원본입니다.|  
+|**source**|**nvarchar**|오류 메시지 또는 이벤트의 원본입니다.|  
 |**help_url**|**nvarchar**|오류에 대한 자세한 내용을 참조할 수 있는 URL(사용 가능한 경우)입니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -52,9 +52,9 @@ ms.locfileid: "82813211"
  에이전트 세션을 식별 하려면 **agent_id**, **agent_type**및 **session_id**열을 사용 합니다. **Log_time** 기준으로 정렬 하 여 기록 된 순서 대로 오류를 확인 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [로그 전달 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Transact-sql&#41;log_shipping_monitor_history_detail &#40;](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)   
- [Transact-sql&#41;sp_cleanup_log_shipping_history &#40;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
+ [sp_cleanup_log_shipping_history&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
  [Transact-sql&#41;sp_delete_log_shipping_primary_database &#40;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
  [Transact-sql&#41;sp_delete_log_shipping_secondary_database &#40;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
  [Transact-sql&#41;sp_refresh_log_shipping_monitor &#40;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   

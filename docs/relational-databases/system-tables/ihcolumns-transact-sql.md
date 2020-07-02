@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f862824d6fe4e35eef25cbca949971276f1d0acd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 47fcad03fb8329c3d39150aa0aaf9b5688e0456f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827302"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764252"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **IHcolumns** 시스템 테이블에는 게시 된 각 열에 대 한 행이 하나씩 포함 되어 있습니다. 이 테이블은 SQL Server 이외 게시자에서 열 데이터 형식이 어떻게 표현하여 게시하는지를 정의하며 근본적으로 SQL Server 이외 DBMS(데이터베이스 관리 시스템)과 SQL Server 간에 데이터 형식을 매핑하는 역할을 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f8910aae-2013-4645-880c-134577cbcbe0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0631825c8d6320ca5dd868869764c2d06e00d638
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 965db8bf7af993c37551ddbc5e7c7343a85a2950
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82805867"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764168"
 ---
 # <a name="log-shipping-tables-transact-sql"></a>로그 전달 테이블(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   다음 항목에서는 로그 전달 작업에 사용 되는 정보를 저장 하는 시스템 테이블에 대해 설명 합니다.  
   

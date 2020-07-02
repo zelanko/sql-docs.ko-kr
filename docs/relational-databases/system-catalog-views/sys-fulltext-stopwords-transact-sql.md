@@ -23,15 +23,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa89a799711c354da1ba61b27653ad25c046200a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1123009c0bfd73b1012476d30b6d633ee038f18c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070448"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760374"
 ---
 # <a name="sysfulltext_stopwords-transact-sql"></a>sys.fulltext_stopwords(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   데이터베이스의 모든 중지 목록에 속한 중지 단어당 한 개의 행을 포함합니다.  
  
@@ -39,7 +39,7 @@ ms.locfileid: "68070448"
 |-----------------|---------------|-----------------|  
 |**stoplist_id**|**int**|**stopword** 가 속한 중지 목록의 ID입니다. 이 ID는 데이터베이스 내에서 고유합니다.|  
 |**중지 단어**|**nvarchar (64)**|중지 단어 일치 항목으로 간주되는 용어입니다.|  
-|**언어도**|**sysname**|는 로캘 식별자 (**lcid**)의 값에 해당 하는 [fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)의 별칭 값 이거나 숫자 lcid의 문자열 표현입니다.|  
+|**language**|**sysname**|는 로캘 식별자 (**lcid**)의 값에 해당 하는 [fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)의 별칭 값 이거나 숫자 lcid의 문자열 표현입니다.|  
 |**language_id**|**int**|단어 분리에 사용되는 LCID입니다.|  
   
 ## <a name="permissions"></a>사용 권한  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 95b95a1d-b502-4838-825f-82a456487e25
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fe01417988e21951722b7dbe5e1716cb13abe866
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6bd62c1a6bfab1c1623662739fe98b04f4b28577
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832417"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764231"
 ---
 # <a name="ihpublishercolumnindexes-transact-sql"></a>IHpublishercolumnindexes(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **IHpublishercolumnindexes** 시스템 테이블은 [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) 시스템 테이블에 있는 SQL Server 되지 않은 게시의 열을 [IHpublisherindexes](../../relational-databases/system-tables/ihpublisherindexes-transact-sql.md) 시스템 테이블의 인덱스에 매핑합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

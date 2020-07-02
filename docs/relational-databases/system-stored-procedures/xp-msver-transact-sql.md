@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85552daa2dda14c6a7516c96f0f9fe6566f31111
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 385bae0bd40fd392f038ef4dd85204c853a81773
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73843896"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762632"
 ---
 # <a name="xp_msver-transact-sql"></a>xp_msver(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  에 대 한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전 정보를 반환 합니다. 서버에 대 한 실제 빌드 번호 및 서버 환경에 대 한 정보를 반환 하는 **xp_msver** 도 반환 합니다. **Xp_msver** 반환 되는 정보는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 일괄 처리, 저장 프로시저 등에서 사용 하 여 플랫폼 독립적인 코드의 논리를 향상 시킬 수 있습니다.  
+  에 대 한 버전 정보 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 반환 합니다. 서버에 대 한 실제 빌드 번호 및 서버 환경에 대 한 정보를 반환 하는 **xp_msver** 도 반환 합니다. **Xp_msver** 반환 되는 정보는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 일괄 처리, 저장 프로시저 등에서 사용 하 여 플랫폼 독립적인 코드의 논리를 향상 시킬 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,9 +42,9 @@ xp_msver [ optname ]
  *optname*  
  옵션의 이름이며 다음 값 중 하나를 사용할 수 있습니다.  
   
-|옵션/열 이름|Description|  
+|옵션/열 이름|설명|  
 |-------------------------|-----------------|  
-|**ProductName**|제품 이름; 예를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]들면입니다.|  
+|**제품**|제품 이름; 예를 들면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 입니다.|  
 |**ProductVersion**|제품 버전입니다.|  
 |**언어**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 언어 버전입니다.|  
 |**플랫폼**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 컴퓨터의 운영 체제 이름, 제조업체 이름 및 칩 패밀리 이름입니다.|  

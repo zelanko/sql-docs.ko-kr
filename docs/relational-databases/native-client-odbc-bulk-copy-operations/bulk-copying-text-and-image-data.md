@@ -16,15 +16,15 @@ ms.assetid: 87155bfa-3a73-4158-9d4d-cb7435dac201
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab694a8ba3a1976207ad1d0c6505cc953f39ff94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 593f0b17ead284940d6f22b5983d284ddd37d7d4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73785149"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760725"
 ---
 # <a name="bulk-copying-text-and-image-data"></a>텍스트 및 이미지 데이터 대량 복사
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   대용량 **text**, **ntext**및 **image** 값은 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) 함수를 사용 하 여 대량 복사 됩니다. *.Pdata* 포인터가 NULL로 설정 **된 text**, **ntext**또는 **image** 열에 대 한 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 코드를 사용 하 여 데이터가 **bcp_moretext**에 제공 됨을 나타냅니다. 대량 복사 된 각 행에서 각 **text**, **ntext**또는 **image** 열에 대해 제공 되는 정확한 데이터 길이를 지정 하는 것이 중요 합니다. 열에 대 한 데이터 길이가 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)에 지정 된 열 길이와 다른 경우 [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) 를 사용 하 여 길이를 적절 한 값으로 설정 합니다. [Bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 은 텍스트가 아닌 모든**텍스트**,**ntext**및**이미지가** 아닌 데이터를 모두 보냅니다. 그런 다음 **bcp_moretext** 를 호출 하 여 **text**, **ntext**또는 **image** 데이터를 별도의 단위로 보냅니다. 대량 복사 함수는 **bcp_moretext** 를 통해 전송 된 데이터의 길이가 최신 **bcp_collen** 나 **bcp_bind**에 지정 된 길이와 일치 하는 경우 현재 **text**, **ntext**또는 **image** 열에 대해 모든 데이터가 전송 되었음을 결정 합니다.  
   

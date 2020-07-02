@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f264554c-5514-4df2-aadb-6dcdc2dfcfea
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 720d439449870e2b0e620f67cf0321b5c5cde043
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4a561a2b6a00c87d213a08390ef3f12ab596d0c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807065"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762620"
 ---
 # <a name="database-maintenance-plan-tables-transact-sql"></a>데이터베이스 유지 관리 계획 테이블(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 섹션의 항목에서는 데이터베이스 유지 관리 계획에 사용되는 정보를 저장하는 시스템 테이블에 대해 설명합니다. 이러한 테이블에는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업그레이드된 인스턴스에 대한 정보가 유지됩니다.  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1fcee7ea96d97fa4334cc1837e0a839d4781618c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 21b3f78e4146051922d35faaf76c0a56e202fe3c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820210"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762732"
 ---
 # <a name="sp_update_agent_profile-transact-sql"></a>sp_update_agent_profile(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   복제 에이전트에서 사용하는 프로필을 업데이트합니다. 이 저장 프로시저는 배포 데이터베이스의 배포자에서 실행됩니다.  
   
@@ -57,7 +57,7 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ## <a name="remarks"></a>설명  
  **sp_update_agent_profile** 은 모든 유형의 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_update_agent_profile**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

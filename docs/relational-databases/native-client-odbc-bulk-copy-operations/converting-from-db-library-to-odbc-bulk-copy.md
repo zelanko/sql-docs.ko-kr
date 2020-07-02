@@ -17,17 +17,17 @@ ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7e14018ea62edb5dd262b87ddbea467d1872132
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0944552bdf8db7ef97a594887a8e84e2ed834a72
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73785192"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760736"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>DB-Library에서 ODBC 대량 복사로 변환
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client odbc 드라이버에서 지 원하는 대량 복사 함수는 db-library 대량 복사 함수와 비슷하며, 다음과 같은 경우를 제외 하 고 db-library 대량 복사 프로그램을 ODBC로 쉽게 변환할 수 있습니다.  
+  Native Client ODBC 드라이버에서 지 원하는 대량 복사 함수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] db-library 대량 복사 함수와 비슷하며, 다음과 같은 경우를 제외 하 고 db-library 대량 복사 프로그램을 ODBC로 쉽게 변환할 수 있습니다.  
   
 -   DB-Library 애플리케이션은 DBPROCESS 구조에 대한 포인터를 대량 복사 함수의 첫 번째 매개 변수로 전달합니다. ODBC 애플리케이션에서는 DBPROCESS 포인터가 ODBC 연결 핸들로 대체됩니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73785192"
         (void *)SQL_BCP_ON, SQL_IS_INTEGER);  
     ```  
   
--   Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC 드라이버는 db-library 메시지 및 오류 처리기를 지원 하지 않습니다. ODBC 대량 복사 함수에 의해 발생 한 오류 및 메시지를 얻으려면 **SQLGetDiagRec** 를 호출 해야 합니다. ODBC 버전의 대량 복사 함수는 SQL_SUCCESS 또는 SQL_ERROR와 같은 ODBC 스타일 반환 코드가 아니라 표준 대량 복사 반환 코드인 SUCCEED 또는 FAILED를 반환합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc 드라이버는 db-library 메시지 및 오류 처리기를 지원 하지 않습니다. odbc 대량 복사 함수에 의해 발생 한 오류 및 메시지를 얻으려면 **SQLGetDiagRec** 를 호출 해야 합니다. ODBC 버전의 대량 복사 함수는 SQL_SUCCESS 또는 SQL_ERROR와 같은 ODBC 스타일 반환 코드가 아니라 표준 대량 복사 반환 코드인 SUCCEED 또는 FAILED를 반환합니다.  
   
 -   DB-LIBRARY [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* 매개 변수에 대해 지정 된 값은 ODBC **bcp_bind**_cbdata_ 매개 변수와 다르게 해석 됩니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "73785192"
   
     -   DB-LIBRARY **dbconvert** 함수에서 지 원하는 모든 형식의 **datetime** 및 **smalldatetime** 문자열  
   
-    -   클라이언트 네트워크 유틸리티의 DB-LIBRARY 옵션 탭에서 **국가별 설정 사용** 확인란을 선택 하면 db-library 대량 복사 함수도 클라이언트 컴퓨터 레지스트리의 로캘 설정에 대해 정의 된 국가별 날짜 형식으로 날짜를 적용 합니다. **Options** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+    -   클라이언트 네트워크 유틸리티의 DB-LIBRARY **옵션** 탭에서 **국가별 설정 사용** 확인란을 선택 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] db-library 대량 복사 함수도 클라이언트 컴퓨터 레지스트리의 로캘 설정에 대해 정의 된 국가별 날짜 형식으로 날짜를 적용 합니다.  
   
      DB-LIBRARY 대량 복사 함수는 ODBC **datetime** 및 **smalldatetime** 형식을 허용 하지 않습니다.  
   

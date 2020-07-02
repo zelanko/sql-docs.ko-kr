@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 42e3cd2c0431a1d23f3d67f7f1e983421b9b1e9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43b89ff4421f7e015ae2320aca94b0c19d5dde52
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "72278336"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760268"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   FileTable의 파일 또는 디렉터리에 대한 UNC 경로를 반환합니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "72278336"
 |**1**|`\\computer_name`으로 시작하는 전체 UNC 경로를 반환합니다.|  
   
  *\@option*  
- 경로에 있는 서버 구성 요소의 형식을 지정하는 방법을 정의하는 정수 식입니다. 옵션은 다음 값 중 하나를 사용할 수 있습니다. * \@*  
+ 경로에 있는 서버 구성 요소의 형식을 지정하는 방법을 정의하는 정수 식입니다. * \@ 옵션* 은 다음 값 중 하나를 사용할 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -88,7 +88,7 @@ WHERE Name = N'document.docx';
   
 ## <a name="remarks"></a>설명  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 **GetFileNamespacePath** 함수를 호출 하 여 FileTable의 파일 또는 디렉터리에 대 한 UNC 경로를 가져오는 방법을 보여 줍니다.  
   
 ```  
