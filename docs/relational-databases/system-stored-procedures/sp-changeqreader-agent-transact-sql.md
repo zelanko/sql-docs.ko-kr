@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2258510d8e28230d238d4187cb3d454078d60842
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: faf3bd8ab39ac70a8edfcff805a7b8c1202dfa89
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829557"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771419"
 ---
 # <a name="sp_changeqreader_agent-transact-sql"></a>sp_changeqreader_agent(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   큐 판독기 에이전트의 보안 속성을 변경합니다. 이 저장 프로시저는 배포 데이터베이스의 배포자 또는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -55,7 +55,7 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
   
  에이전트 로그인 또는 암호를 변경한 후 에이전트를 중지하고 다시 시작해야 변경 내용이 적용됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_changeqreader_agent**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

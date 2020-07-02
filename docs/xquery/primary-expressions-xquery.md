@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: efa06923eeceff312def44ff13ab12b8371439c7
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 6c1186623b334d3eea465c632bc23ec58ba231ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529788"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765609"
 ---
 # <a name="primary-expressions-xquery"></a>기본 식(XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   XQuery 기본 식에는 리터럴, 변수 참조, 컨텍스트 항목 식, 생성자 및 함수 호출이 들어 있습니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "84529788"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 구문을 분석할 때 기본적으로 XML 버전 1.0을 사용합니다.  
   
-### <a name="examples"></a>예  
+### <a name="examples"></a>예제  
  다음 예에서는 리터럴과 엔터티 및 문자 참조의 사용법을 보여 줍니다.  
   
  `<'` 및 `'>` 문자에 특별한 의미가 있기 때문에 이 코드는 오류를 반환합니다.  

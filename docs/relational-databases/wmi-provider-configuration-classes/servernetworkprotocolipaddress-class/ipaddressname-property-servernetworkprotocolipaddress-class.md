@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1df24fe2-0873-4cd1-9151-2306d08418bc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e3dabb640d17d7d9b81273ce37382799a7d84389
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1bb86a3b0f51484183f1c09ff0013f1081e35e86
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660576"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768247"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolipaddress-class"></a>IpAddressName 속성(ServerNetworkProtocolIPAddress 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   IP 주소의 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,7 +37,7 @@ object.IpAddressName [= value]
   
 ## <a name="parts"></a>부분  
  *object*  
- 인스턴스의 네트워크 프로토콜에 대 한 IP 주소를 나타내는 [ServerNetworkProtocolIPAdress 클래스](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) 개체입니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ 인스턴스의 네트워크 프로토콜에 대 한 IP 주소를 나타내는 [ServerNetworkProtocolIPAdress 클래스](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) 개체입니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  IP 주소의 이름을 지정하는 문자열 값입니다.  

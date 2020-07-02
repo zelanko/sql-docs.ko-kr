@@ -19,15 +19,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 172d500e0b16f192eaea438b58b4dbcb8b710c29
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: cb675f7440f0718e2b981992a129bb2b3b97fd41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84524579"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764909"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>sql:overflow-field를 사용하여 사용되지 않은 데이터 검색(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 함수를 사용하여 XML 문서에서 데이터베이스로 레코드를 삽입하는 경우 원본 XML 문서에서 사용되지 않은 모든 데이터를 한 열에 저장할 수 있습니다. 주석이 추가 된 스키마를 사용 하 여 데이터베이스에서 데이터를 검색 하는 경우 **sql: 오버플로 필드** 특성을 지정 하 여 오버플로 데이터가 저장 되는 테이블의 열을 식별할 수 있습니다. **Sql: 오버플로 필드** 특성은에 지정할 수 있습니다 **\<element>** .  
   
  이 데이터는 다음과 같은 방법으로 검색할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "84524579"
   
 -   데이터베이스의 오버플로 열에 저장된 자식 요소와 해당 하위 항목은 스키마에 명시적으로 지정된 내용에 따라 자식 요소로 추가되며, 이때 순서는 유지되지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-sqloverflow-field-for-an-element"></a>A. 요소에 Specifying sql:overflow-field 지정  

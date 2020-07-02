@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 2e0dd780-6a71-4f4b-b7f7-6e063bec71d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cdc5edf1c752478c96cd0f7e4cb3eef441bd078c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0d228cb59a2bd0bff98715e0ae273217c8b57b30
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811970"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764360"
 ---
 # <a name="sysdm_hadr_availability_replica_cluster_states-transact-sql"></a>sys.dm_hadr_availability_replica_cluster_states(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터에 있는 모든 Always On 가용성 그룹(복제본 위치에 상관없음)의 각 Always On 가용성 복제본(조인 상태에 상관없음)에 대해 하나의 행을 반환합니다.  
   

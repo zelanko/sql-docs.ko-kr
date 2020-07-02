@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60a3b1d27b483bac16cf2f51ab3ac9222e8e9053
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bc0818b0406aaa322a9fc28563f54c06b88c732c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820609"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771169"
 ---
 # <a name="sp_create_plan_guide-transact-sql"></a>sp_create_plan_guide(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   쿼리 힌트 또는 실제 쿼리 계획을 데이터베이스의 쿼리와 연결하기 위한 계획 지침을 만듭니다. 계획 지침에 대한 자세한 내용은 [Plan Guides](../../relational-databases/performance/plan-guides.md)를 참조하십시오.  
   
@@ -143,7 +143,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 ## <a name="permissions"></a>사용 권한  
  OBJECT 유형의 계획 지침을 만들려면 `ALTER` 참조 된 개체에 대 한 권한이 필요 합니다. SQL 또는 TEMPLATE 유형의 계획 지침을 만들려면 `ALTER` 현재 데이터베이스에 대 한 권한이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-creating-a-plan-guide-of-type-object-for-a-query-in-a-stored-procedure"></a>A. 저장 프로시저에 있는 쿼리에 대해 OBJECT 유형의 계획 지침 만들기  
  다음 예에서는 애플리케이션 기반 저장 프로시저의 컨텍스트에서 실행된 쿼리와 일치하는 계획 지침을 만들고 해당 쿼리에 대해 `OPTIMIZE FOR` 힌트를 적용합니다.  

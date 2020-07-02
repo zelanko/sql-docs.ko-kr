@@ -21,20 +21,20 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1dd2800d89016223e172e11ebde2cc3f8332e7d4
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 4bc4f771d2afaefa3e214008c59c6200ebd29549
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215705"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764931"
 ---
 # <a name="mapping-xsd-data-types-to-xpath-data-types-sqlxml-40"></a>XSD 데이터 형식을 XPath 데이터 형식에 매핑(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Xsd 스키마에 대해 XPath 쿼리를 실행할 때 xsd **: type** 특성에 xsd 형식이 지정 된 경우 xpath는 쿼리를 처리할 때 지정 된 데이터 형식을 사용 합니다.  
   
  다음 표에서 볼 수 있는 것처럼 노드의 XPath 데이터 형식은 스키마의 XSD 데이터 형식에서 파생됩니다. EmployeeID 노드는 설명을 위해 사용되었습니다.  
   
-|XSD 데이터 형식|XDR 데이터 형식|해당<br /><br /> XPath 데이터 형식|SQL Server<br /><br /> 변환|  
+|XSD 데이터 형식|XDR 데이터 형식|해당<br /><br /> XPath 데이터 형식|SQL  Server<br /><br /> 변환|  
 |-------------------|-------------------|------------------------------------|--------------------------------------------|  
 |**Base64Binary**<br /><br /> **HexBinary**|**없음**<br /><br /> **base64bin**|**해당 없음**|없음<br /><br /> EmployeeID|  
 |**Boolean**|**boolean**|**boolean**|CONVERT(bit, EmployeeID)|  

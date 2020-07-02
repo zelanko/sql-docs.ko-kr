@@ -19,15 +19,15 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 72e363b05e8f14dda535abd70e4218c949c42c91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e85a74b203d270223d215ace08a58a0eea980fa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133067"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772981"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>server_resource_stats (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 Azure SQL Managed Instance에 대 한 CPU 사용량, IO 및 저장소 데이터를 반환 합니다. 데이터는 5분 간격 이내로 수집 및 집계됩니다. 15 초 보고 마다 하나의 행이 있습니다. 반환 되는 데이터에는 CPU 사용량, 저장소 크기, IO 사용률 및 관리 되는 인스턴스 SKU가 포함 됩니다. 기록 데이터는 약 14일 동안 보존됩니다.
 
@@ -62,7 +62,7 @@ Azure SQL Managed Instance에 대 한 CPU 사용량, IO 및 저장소 데이터�
 ## <a name="remarks"></a>설명  
  **Server_resource_stats** 에서 반환 되는 데이터는 실행 중인 서비스 계층/성능 수준에 대해 허용 되는 최대 한도의 백분율로 표시 되는 바이트 또는 메가바이트 (열 이름에 표시 됨 avg_cpu)에서 사용 되는 합계로 표시 됩니다.  
  
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 지난 1주일 동안 평균적으로 컴퓨팅 활용률의 80% 이상을 사용한 모든 데이터베이스를 반환합니다.  
   
 ```sql  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 46abd2a21441cdf911cecb9b21f02451400258f3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5ec2f3a3f300a6501a23b4bd88234571b0717d2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823993"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771280"
 ---
 # <a name="sp_column_privileges_ex-transact-sql"></a>sp_column_privileges_ex(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정한 연결된 서버에 있는 지정한 테이블에 대한 열 권한을 반환합니다.  
   
@@ -67,10 +67,10 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 |**PRIVILEGE**|**varchar (** 32 **)**|사용할 수 있는 열 사용 권한 중 하나입니다. 열 사용 권한은 다음 값(또는 구현이 정의될 때 데이터 원본이 지원하는 다른 값) 중 하나일 수 있습니다.<br /><br /> SELECT = **피부 여자** 는 열에 대 한 데이터를 검색할 수 있습니다.<br /><br /> INSERT = **피부 여자** 는 **피부 여자**에 의해 테이블에 새 행이 삽입 될 때이 열에 대 한 데이터를 제공할 수 있습니다.<br /><br /> UPDATE = **피부 여자** 는 열의 기존 데이터를 수정할 수 있습니다.<br /><br /> REFERENCES = **피부 여자** 는 기본 키/외래 키 관계에 있는 외래 테이블의 열을 참조할 수 있습니다. 기본 키/외래 키 관계는 테이블 제약 조건으로 정의됩니다.|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|**피부 여자** 가 다른 사용자에 게 사용 권한을 부여할 수 있는지 여부를 나타냅니다 .이는 "권한 부여 권한"이 라고도 합니다. YES, NO 또는 NULL이 될 수 있습니다. 알 수 없는 값 또는 NULL 값은 "권한 부여 권한"을 적용할 수 없는 데이터 원본을 의미합니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 연결된 서버 `HumanResources.Department`에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `Seattle1` 테이블에 대한 열 권한 정보를 반환합니다.  
   
 ```  

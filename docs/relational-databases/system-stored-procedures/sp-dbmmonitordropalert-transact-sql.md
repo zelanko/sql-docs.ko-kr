@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: fe4a134b-25bf-464e-a5c4-358de215b65a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 37877860454612e6ebc9b623b47a42606abe4646
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 96aafc2638de738db36a19d48e2ce963af0af702
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828404"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772260"
 ---
 # <a name="sp_dbmmonitordropalert-transact-sql"></a>sp_dbmmonitordropalert(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   임계값을 NULL로 설정하여 지정한 성능 메트릭에 대한 경고를 삭제합니다.  
   
@@ -69,7 +69,7 @@ sp_dbmmonitordropalert database_name
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 보존 기간 설정을 삭제합니다.  
   
 ```  

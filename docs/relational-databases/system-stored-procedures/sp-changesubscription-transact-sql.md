@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c88e0f545a19c1f486c5c6927c11fd2707112963
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b33103bc84e6354e99ac04e73fa20a0f99725a6a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824101"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771390"
 ---
 # <a name="sp_changesubscription-transact-sql"></a>sp_changesubscription(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   지연 업데이트 트랜잭션 복제와 관련된 스냅샷이나 트랜잭션 밀어넣기 구독 또는 끌어오기 구독의 속성을 변경합니다. 다른 모든 끌어오기 구독 유형의 속성을 변경 하려면 [sp_change_subscription_properties &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)를 사용 합니다. **sp_changesubscription** 는 게시 데이터베이스의 게시자에서 실행 됩니다.  
   
@@ -93,7 +93,7 @@ sp_changesubscription [ @publication = ] 'publication'
   
  에이전트 로그인 또는 암호를 변경한 후 에이전트를 중지하고 다시 시작해야 변경 내용이 적용됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_changesubscription**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

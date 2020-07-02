@@ -20,20 +20,20 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60aa4c8fa44fb9e4cd27c73ac69371594371445e
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: aabd650308ecab085b121bb5ac8f5253b681a92c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84884319"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773032"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 축 지정(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   다음 예에서는 XPath 쿼리에 축을 지정하는 방법을 보여 줍니다.  
   
  이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 샘플 스키마에 대 한 자세한 내용은 [예제 주석 XSD schema For XPath 예제 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)를 참조 하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-retrieve-child-elements-of-the-context-node"></a>A. 컨텍스트 노드의 자식 요소 검색  
  다음 XPath 쿼리는 **\<Contact>** 컨텍스트 노드의 모든 자식 요소를 선택 합니다.  

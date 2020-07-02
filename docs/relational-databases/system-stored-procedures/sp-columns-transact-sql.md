@@ -18,15 +18,15 @@ ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbc724b9178ec867768fde3dc3d9ff58add554e9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1ffce9dd6a06b433e183570767bf165c9e6b75d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826272"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771239"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   현재 환경에서 쿼리할 수 있는 지정된 개체에 대한 열 정보를 반환합니다.  
   
@@ -87,13 +87,13 @@ sp_columns [ @table_name = ] object
   
  <sup>1</sup> 자세한 내용은 Microsoft ODBC 설명서를 참조 하십시오.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  스키마에 대 한 SELECT 및 VIEW DEFINITION 권한이 필요 합니다.  
   
 ## <a name="remarks"></a>설명  
  **sp_columns** 구분 식별자에 대 한 요구 사항을 따릅니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 지정된 테이블의 열 정보를 반환합니다.  
   
 ```  

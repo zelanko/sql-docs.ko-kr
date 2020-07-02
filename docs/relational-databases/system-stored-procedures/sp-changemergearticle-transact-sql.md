@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6c59b4ba84981ff4cb1240d78e1d6d472be61289
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 97c6a7d309578ebe0cc6e93b5408ad6d9fad6296
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829657"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771508"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   병합 아티클의 속성을 변경합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -52,7 +52,7 @@ sp_changemergearticle [ @publication = ] 'publication'
   
  다음 표에서는 아티클의 속성 및 해당 속성의 값을 설명합니다.  
   
-|속성|값|Description|  
+|속성|값|설명|  
 |--------------|------------|-----------------|  
 |**allow_interactive_resolver**|**true**|아티클에 대해 대화형 해결 프로그램을 사용합니다.|  
 ||**false**|아티클에 대해 대화형 해결 프로그램을 사용하지 않습니다.|  
@@ -139,7 +139,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**1**|클라이언트 구독이 있는 구독자에서 변경이 허용되지만 변경 내용이 게시자로 업로드되지 않습니다.|  
 ||**2**|클라이언트 구독이 있는 구독자에서 변경이 허용되지 않습니다.|  
 |**subset_filterclause**||행 필터링을 지정하는 WHERE 절입니다. 테이블 아티클에만 적용됩니다.<br /><br /> 중요 성능상의 이유로과 같은 매개 변수가 있는 행 필터 절의 열 이름에는 함수를 적용 하지 않는 것이 좋습니다. ** \* \* \* \* ** `LEFT([MyColumn]) = SUSER_SNAME()` 필터 절에 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 를 사용 하 고 HOST_NAME 값을 재정의 하는 경우 [convert](../../t-sql/functions/cast-and-convert-transact-sql.md)를 사용 하 여 데이터 형식을 변환 해야 할 수 있습니다. 이 경우 모범 사례에 대 한 자세한 내용은 [매개 변수가 있는 행 필터](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)의 "HOST_NAME () 값 재정의" 섹션을 참조 하세요.|  
-|**고대비**||이전 버전의를 실행 하는 구독자에 사용 되는 백분율 값입니다 [!INCLUDE[ssEW](../../includes/ssew-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **임계값** 병합 에이전트 새 id 범위를 할당 하는 시기를 제어 합니다. 임계값에 지정된 백분율 값을 사용하는 경우 해당 병합 에이전트가 새 ID 범위를 만듭니다. **Identityrangemanagementoption** 가 **auto** 로 설정 되거나 **auto_identity_range** 이 **true**로 설정 된 경우 사용 됩니다. 테이블 아티클에만 적용됩니다. 자세한 내용은 [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)의 "병합 복제" 섹션을 참조 하세요.|  
+|**threshold**||이전 버전의를 실행 하는 구독자에 사용 되는 백분율 값입니다 [!INCLUDE[ssEW](../../includes/ssew-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **임계값** 병합 에이전트 새 id 범위를 할당 하는 시기를 제어 합니다. 임계값에 지정된 백분율 값을 사용하는 경우 해당 병합 에이전트가 새 ID 범위를 만듭니다. **Identityrangemanagementoption** 가 **auto** 로 설정 되거나 **auto_identity_range** 이 **true**로 설정 된 경우 사용 됩니다. 테이블 아티클에만 적용됩니다. 자세한 내용은 [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)의 "병합 복제" 섹션을 참조 하세요.|  
 |**verify_resolver_signature**|**1**|트러스트된 원본에서 제공된 것인지 판단하기 위해 사용자 지정 해결 프로그램의 디지털 서명을 확인합니다|  
 ||**0**|트러스트된 원본에서 제공된 것인지 판단하기 위해 사용자 지정 해결 프로그램의 디지털 서명을 확인을 하지 않습니다.|  
 |NULL(기본값)||*속성*에 대해 지원 되는 값 목록을 반환 합니다.|  
@@ -233,7 +233,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_changemergearticle](../../relational-databases/replication/codesnippet/tsql/sp-changemergearticle-tr_1.sql)]  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_changemergearticle**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

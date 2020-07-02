@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b06364adefd62b4267d43bac50d79f8f1d37958a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b228c97280a2152f14a2ea97d9b1ac56c567afdd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022095"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765219"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance 함수
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   지정한 SQL Server Express LocalDB 인스턴스를 시작합니다.  
   
  **헤더 파일:** sqlncli.h  

@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9eacc8a0dc5801ad2642dc7ffec0b31c3de040f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 76693483dd8dd2f7e063f31d3e5739cbec9e2b1e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022017"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765157"
 ---
 # <a name="localdbunshareinstance-function"></a>LocalDBUnshareInstance 함수
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   지정한 SQL Server Express LocalDB 인스턴스의 공유를 중지합니다.  
   
  **헤더 파일:** sqlncli.h  

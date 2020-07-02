@@ -21,15 +21,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 487ed2bbee997db22739bdeecd7e024b817ace80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7f1434cedf98b23cda736e9b956e6df0890b8f41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388113"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764915"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>sql:encode를 사용하여 BLOB 데이터에 대한 URL 참조 요청(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   주석이 추가된 XSD 스키마에서 특성(또는 요소)이 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 BLOB 열에 매핑된 경우 XML 내의 Base 64 인코딩 형식으로 데이터가 반환됩니다.  
   
  나중에 이진 형식으로 BLOB 데이터를 검색 하는 데 사용할 수 있는 데이터에 대 한 참조 (URI)를 반환 하려면 **sql:** encoding 주석을 지정 합니다. 단순 형식의 특성 또는 요소에 대해 **sql:** encoding을 지정할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "81388113"
 > [!NOTE]  
 >  BLOB 유형의 열은 키 또는 외래 키의 일부로 사용할 수 없습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. sql:encode를 지정하여 BLOB 데이터에 대한 URL 참조 얻기  

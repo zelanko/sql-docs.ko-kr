@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4aa5ea4d06ac5b8da69eec246387007ba5d03606
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da1735c17a4d87e085fbe1e8b5f960d14a70b86c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487512"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765430"
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord 개체
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **SqlDataRecord** 개체는 관련 메타데이터와 함께 하나의 데이터 행을 나타냅니다.  
   
  관리되는 저장 프로시저는 **SqlDataReader**에서 제공되지 않은 결과 집합을 클라이언트로 보낼 수 있습니다. **SqlDataRecord** 클래스와 함께 **SendResultsStart**개체의 **SendResultsRow**, **SendResultsEnd** 및 **SqlPipe** 메서드를 사용하면 저장 프로시저에서 사용자 지정 결과 집합을 클라이언트로 보낼 수 있습니다.  

@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 04554c7aa9f891aab414ae5ae77f3c92bb86ac4b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b7804207c887d95a719575406cfc85ae78d1bd7f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036053"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765231"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances 함수
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   지정된 버전의 모든 SQL Server Express LocalDB 인스턴스를 반환합니다.  
   
  **헤더 파일:** sqlncli.h  

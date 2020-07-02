@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 17be755b-673d-4cd4-9544-6ecb4220bed3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eaabc73c78b16a2babac681c87504da8d38a935a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b208b33cba633a168c9a0c2d77f71ae84d592ff2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826208"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772268"
 ---
 # <a name="sp_dbmmonitorchangemonitoring-transact-sql"></a>sp_dbmmonitorchangemonitoring(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스 미러링 모니터링 매개 변수의 값을 변경합니다.  
   
@@ -41,7 +41,7 @@ sp_dbmmonitorchangemonitoring parameter
 ```  
   
 ## <a name="arguments"></a>인수  
- *변수에*  
+ *매개 변수*  
  변경할 매개 변수의 식별자를 지정합니다. 현재 다음 매개 변수만 사용할 수 있습니다.  
   
  1 = 업데이트 기간  
@@ -64,7 +64,7 @@ sp_dbmmonitorchangemonitoring parameter
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 업데이트 기간을 5분으로 변경합니다.  
   
 ```  

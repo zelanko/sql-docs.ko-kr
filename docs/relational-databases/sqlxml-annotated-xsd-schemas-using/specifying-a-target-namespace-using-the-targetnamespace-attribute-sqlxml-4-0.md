@@ -21,15 +21,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3daeaabe86d91d0986fb764c3a60304ec5e09faf
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: bfa6234aae5e2744a88c4fcfb158575cb07000f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84885162"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764895"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>targetNamespace 특성을 사용하여 대상 네임스페이스 지정(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XSD 스키마를 작성할 때 XSD **targetNamespace** 특성을 사용 하 여 대상 네임 스페이스를 지정할 수 있습니다. 이 항목에서는 XSD **targetNamespace**, **Elementformdefault**및 **attributeformdefault** 특성의 작동 방식, 생성 되는 XML 인스턴스에 미치는 영향 및 네임 스페이스로 XPath 쿼리를 지정 하는 방법에 대해 설명 합니다.  
   
  **Xsd: targetNamespace** 특성을 사용 하 여 기본 네임 스페이스의 요소와 특성을 다른 네임 스페이스에 넣을 수 있습니다. 또한 로컬로 선언된 스키마 요소 및 특성을 접두사를 사용하여 명시적으로 또는 암시적으로(기본 설정) 네임스페이스에서 정규화된 것으로 표시할지 여부를 지정할 수도 있습니다. 요소에 **elementformdefault** 및 **attributeformdefault** 특성을 사용 하 여 **\<xsd:schema>** 로컬 요소 및 특성의 정규화를 전역적으로 지정 하거나 **form** 특성을 사용 하 여 개별 요소와 특성을 개별적으로 지정할 수 있습니다.  

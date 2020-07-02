@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d4f4b08f21d29fead3f2cebf477be69cfaf766ad
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a231ed2809f387f58ccedef9acb8555a6569e992
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831137"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772203"
 ---
 # <a name="sp_dropuser-transact-sql"></a>sp_dropuser(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스에서 데이터베이스 사용자를 제거합니다. **sp_dropuser** 는 이전 버전의와의 호환성을 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
@@ -61,7 +61,7 @@ sp_dropuser [ @name_in_db = ] 'user'
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 ALTER ANY USER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 현재 데이터베이스에서 `Albert` 사용자를 제거합니다.  
   
 ```  

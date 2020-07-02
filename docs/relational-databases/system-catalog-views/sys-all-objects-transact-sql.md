@@ -19,15 +19,15 @@ ms.assetid: 547e4be4-a8e4-48ce-9d8d-37b169985081
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ffd6d98cec5b495b395a915bd6f53308d474333c
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: da4440690913b3eb76724a83b4d95b321ebc591d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83731912"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764787"
 ---
 # <a name="sysall_objects-transact-sql"></a>sys.all_objects(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   모든 스키마 범위 사용자 정의 개체 및 시스템 개체의 UNION을 표시합니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "83731912"
 |is_published|**bit**|개체가 게시됩니다.|  
 |is_schema_published|**bit**|개체의 스키마만 게시됩니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

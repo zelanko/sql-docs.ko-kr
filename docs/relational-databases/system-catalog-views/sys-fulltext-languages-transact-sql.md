@@ -21,22 +21,22 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5af224150508f048d91345cba595517209f824d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 545b729a5d89a258c38d7eb180ee2f3400ebd67c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73981771"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764707"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  이 카탈로그 뷰는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 단어 분리기가 등록된 언어당 한 개의 행을 포함합니다. 각 행은 해당 언어의 LCID 및 이름을 표시합니다. 언어에 대 한 단어 분리기가 등록 되 면 해당 언어의 형태소 분석기, 의미 없는 단어 (중지 단어) 및 동의어 사전 파일과 같은 다른 언어 리소스를 전체 텍스트 인덱싱/쿼리 작업에 사용할 수 있게 됩니다. 전체 텍스트 쿼리 및 전체 **lcid** 텍스트 인덱스 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 **name** 또는 lcid 값을 지정할 수 있습니다.  
+  이 카탈로그 뷰는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 단어 분리기가 등록된 언어당 한 개의 행을 포함합니다. 각 행은 해당 언어의 LCID 및 이름을 표시합니다. 언어에 대 한 단어 분리기가 등록 되 면 해당 언어의 형태소 분석기, 의미 없는 단어 (중지 단어) 및 동의어 사전 파일과 같은 다른 언어 리소스를 전체 텍스트 인덱싱/쿼리 작업에 사용할 수 있게 됩니다. 전체 텍스트 쿼리 및 전체 텍스트 인덱스 문에 **name** 또는 **lcid** 값을 지정할 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
    
 |열|데이터 형식|Description|  
 |------------|---------------|-----------------|  
 |**lcid**|**int**|해당 언어의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows LCID(로캘 ID)입니다.|  
-|**name**|**sysname**|**Lcid** 의 값에 해당 하는 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 의 별칭 값 이거나 숫자 lcid의 문자열 표현입니다.|  
+|**name**|**sysname**|**Lcid** 의 값 또는 숫자 lcid의 문자열 표현에 해당 하 [sys.sys언어](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 의 별칭 값입니다.|  
   
 ## <a name="values-returned-for-default-languages"></a>기본 언어에 대해 반환되는 값  
  다음 표에서는 기본적으로 단어 분리기가 등록되는 언어의 값을 보여 줍니다.  

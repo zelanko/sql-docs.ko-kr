@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f38cb1b18b096fe73f9d6b587162e7fcbe6f69a8
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: c831a87004b410eeb5545fc98ce21ccee601f49d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529903"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772999"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 명시적 변환 함수 지정(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   다음 예에서는 XPath 쿼리에 명시적 변환 함수를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 샘플 스키마에 대 한 자세한 내용은 [예제 주석 XSD schema For XPath 예제 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)를 참조 하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. number() 명시적 변환 함수 사용  
  **Number ()** 함수는 인수를 숫자로 변환 합니다.  

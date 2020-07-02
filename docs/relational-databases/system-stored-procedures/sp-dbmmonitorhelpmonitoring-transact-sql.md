@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a085cf87-269f-454a-a146-21f80a113b72
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b16c77357795ed3c7e11454016663befcf4ae329
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d44bde22c00e2169d2f3aa74f935f18abae52923
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826177"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772244"
 ---
 # <a name="sp_dbmmonitorhelpmonitoring-transact-sql"></a>sp_dbmmonitorhelpmonitoring(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   현재 업데이트 기간을 반환합니다.  
   
@@ -48,10 +48,10 @@ sp_dbmmonitorhelpmonitoring
 ## <a name="result-sets"></a>결과 집합  
  현재 업데이트 기간, 즉 데이터베이스 미러링 상태 테이블에 대한 업데이트 간격(분)을 반환합니다. 1분에서 120분 사이의 값입니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 현재 업데이트 기간을 반환합니다.  
   
 ```  

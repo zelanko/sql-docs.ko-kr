@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: edc62024-4c4c-4970-b5fa-2e54a5aca631
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 33f68a55cb627099150ec14941fe5de81de53fc8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9ae897a8a945c477ce201b4037f3b05dbb13160e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388058"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765565"
 ---
 # <a name="string-search-in-xquery"></a>XQuery에서 문자열 검색
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 XML 문서에서 텍스트를 검색하는 방법을 보여 주는 예제 쿼리를 제공합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-find-feature-descriptions-that-contain-the-word-maintenance-in-the-product-catalog"></a>A. 제품 카탈로그에서 "maintenance"라는 단어가 포함된 기능 설명 찾기  
   
@@ -45,7 +45,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- 위의 쿼리에서 FLOWR 식의 `where` 는 `for` 식의 결과를 필터링 하 고 **contains ()** 조건을 만족 하는 요소만 반환 합니다.  
+ 위의 쿼리에서 `where` FLOWR 식의는 식의 결과를 필터링 `for` 하 고 **contains ()** 조건을 만족 하는 요소만 반환 합니다.  
   
  다음은 결과입니다.  
   

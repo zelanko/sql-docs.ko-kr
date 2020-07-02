@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f7b64251d139b34f0a23cec49ffbb4dcbf0384a0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2aa75e2f742cbafd64f5bb8d76d7cd8dbf4028ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826690"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771257"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정한 연결된 서버 테이블에 대해 각 열마다 한 행씩 열 정보를 반환합니다. *열* 이 지정 된 경우 **sp_columns_ex** 는 특정 열에 대해서만 열 정보를 반환 합니다.  
   
@@ -90,13 +90,13 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
  지정한 연결 된 서버의 OLE DB 공급자가 **IDBSchemaRowset** 인터페이스의 columns 행 집합을 지원 하지 않는 경우 빈 결과 집합을 반환 합니다. **sp_columns_ex**  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
 ## <a name="remarks"></a>설명  
  **sp_columns_ex** 구분 식별자에 대 한 요구 사항을 따릅니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 연결된 서버 `JobTitle`의 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 있는 `HumanResources.Employee` 테이블의 `Seattle1` 열에 대한 데이터 형식을 반환합니다.  
   
 ```  

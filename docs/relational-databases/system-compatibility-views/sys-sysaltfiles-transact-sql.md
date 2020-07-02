@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 698dec23-5336-4108-87a5-f8e407f8da09
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 891e88761cac47be83fb69debbbc5e4cb6c401c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c79b582eaf6ba6f4fef568af11110fcb6ea17c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006968"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764396"
 ---
 # <a name="syssysaltfiles-transact-sql"></a>sys.sysaltfiles(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   특별한 환경에서 사용되며 데이터베이스 내의 각 파일에 해당하는 행을 포함합니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68006968"
 |**성능**|**int**|예약되어 있습니다.|  
 |**dbid**|**smallint**|해당 파일이 속한 데이터베이스의 데이터베이스 ID입니다.|  
 |**name**|**sysname**|파일의 논리적 이름입니다.|  
-|**이름도**|**nvarchar(260)**|물리적 디바이스의 이름입니다. 여기에는 파일의 전체 경로가 포함됩니다.|  
+|**filename**|**nvarchar(260)**|물리적 디바이스의 이름입니다. 여기에는 파일의 전체 경로가 포함됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7b427dfa3756b83eb3d0a73f6ff5dd0be23b0c7
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 6a6f5a6dbe1db85dc5f25e9d68fa94dcd245e5a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84880712"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772923"
 ---
 # <a name="handling-namespaces-in-xquery"></a>XQuery의 네임스페이스 처리
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 쿼리에 있는 네임스페이스를 처리하기 위한 예제를 제공합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-declaring-a-namespace"></a>A. 네임스페이스 선언  
  다음 쿼리는 특정 제품 모델의 제조 단계를 검색합니다.  

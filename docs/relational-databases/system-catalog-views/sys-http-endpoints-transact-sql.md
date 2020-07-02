@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 16f59695-ecd9-457e-8874-055af63f8ea7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b64effb7ef97231ef4620c6dd2d19d5783aea943
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 38697ada64127d3bb9f8e3fc5858cd69f1698f85
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828480"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764509"
 ---
 # <a name="syshttp_endpoints-transact-sql"></a>sys.http_endpoints(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   HTTP 프로토콜을 사용하는 서버에 생성된 각 엔드포인트당 하나의 행을 포함합니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "82828480"
 |**default_logon_domain**|**nvarchar(128)**|BASIC 인증을 활성화한 경우 기본 로그인 도메인입니다. DEFAULT LOGON DOMAIN 옵션의 값입니다.<br /><br /> 지정되지 않았거나 BASIC 인증이 활성화되지 않았으면 NULL입니다.|  
 |**is_compression_enabled**|**bit**|1 = COMPRESSION = ENABLED 옵션이 설정되었습니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0bc087c6e55418a501459076a1f3f7862112a056
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5f7f5bfc20effb8e70168bc8375d3744f16fb8d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808327"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769433"
 ---
 # <a name="syssp_cdc_get_captured_columns-transact-sql"></a>sys.sp_cdc_get_captured_columns(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정한 캡처 인스턴스에서 추적한 캡처된 원본 열에 대한 변경 데이터 캡처 메타데이터 정보를 반환합니다. 변경 데이터 캡처는 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
@@ -74,10 +74,10 @@ sys.sp_cdc_get_captured_columns
   
  원본 테이블에 적용 된 DDL (데이터 정의 언어) 문에 대 한 정보를 얻으려면 [sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) 를 사용 합니다. 추적되는 원본 열의 구조를 수정하는 모든 DDL 변경이 결과 집합에 반환됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다. 다른 모든 사용자의 경우 원본 테이블에서 캡처된 모든 열에 대한 SELECT 권한이 필요하며 캡처 인스턴스에 대한 제어 역할이 정의된 경우 해당 데이터베이스 역할의 멤버 자격이 필요합니다. 호출자에게 원본 데이터를 볼 수 있는 권한이 없으면 함수는 오류 22981(개체가 없거나 액세스가 거부되었습니다)을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `HumanResources_Employee` 캡처 인스턴스의 캡처된 열에 대한 정보를 반환합니다.  
   
 ```  

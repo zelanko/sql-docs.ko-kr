@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b3f7597272a1547a11f2c76e65fab391e2fbcd05
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3e0d230046fa06ad220c24c0f33616be213b6563
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829609"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771445"
 ---
 # <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   선택한 병합 밀어넣기 구독에 대한 속성을 변경합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -80,7 +80,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
   
  에이전트 로그인 또는 암호를 변경한 후 에이전트를 중지하고 다시 시작해야 변경 내용이 적용됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_changemergesubscription**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

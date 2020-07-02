@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 371caa4c77e719491216fb685265c907bd8bfddd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f006cba8bfe0abecce995753863944f7d5bf0b71
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824031"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771309"
 ---
 # <a name="sp_check_subset_filter-transact-sql"></a>sp_check_subset_filter(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   테이블에 대해 필터 절이 유효한지 확인하는 데 사용됩니다. 이 저장 프로시저는 필터를 사전 계산 파티션과 함께 사용할 수 있는지 여부와 더불어 제공된 필터에 관한 정보를 반환합니다. 이 저장 프로시저는 게시가 포함된 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -68,7 +68,7 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
   
  테이블이 게시 되지 않은 경우에도 모든 테이블에 대해 **sp_check_subset_filter** 를 실행할 수 있습니다. 이 저장 프로시저는 필터링된 아티클을 정의하기 전에 필터 절을 확인하기 위해 사용할 수 있습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_check_subset_filter**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

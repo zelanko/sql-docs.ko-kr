@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3f7f148104b6bfce09e7f16a2aa0b3638821787d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2935ecccb9ce0421396d552787d38b0b80fb3c45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831231"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772234"
 ---
 # <a name="sp_delete_maintenance_plan_db-transact-sql"></a>sp_delete_maintenance_plan_db(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정된 데이터베이스에서 지정된 유지 관리 계획을 분리합니다.  
   
@@ -65,7 +65,7 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_delete_maintenance_plan_db**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  **Sp_add_maintenance_plan_db**를 사용 하 여 이전에 추가한 **AdventureWorks2012** 데이터베이스에서 유지 관리 계획을 삭제 합니다.  
   
 ```  

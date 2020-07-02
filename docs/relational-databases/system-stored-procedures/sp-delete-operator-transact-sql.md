@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27656c693409387eb65dea75800142255648a864
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 48f077ed6de8b901c0b923f1aa96083a3ce70606
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833353"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772166"
 ---
 # <a name="sp_delete_operator-transact-sql"></a>sp_delete_operator(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   운영자를 제거합니다.  
   
@@ -56,7 +56,7 @@ sp_delete_operator [ @name = ] 'name'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버는 **sp_delete_operator**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 운영자 `François Ajenstat`를 삭제합니다.  
   
 ```  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8ff791855f7e65652f64d18f3128831172da9229
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3806476ffec61c155121f3238fefa8e08f689ad2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828885"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772139"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스의 개체에 대한 사용자 권한 또는 문 사용 권한에 관한 정보가 포함된 보고서를 반환합니다.  
   
@@ -65,11 +65,11 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**소유자**|**sysname**|개체 소유자의 이름입니다.|  
-|**개체가**|**sysname**|개체 이름입니다.|  
+|**개체**|**sysname**|개체 이름입니다.|  
 |**피부 여자**|**sysname**|사용 권한이 부여된 보안 주체의 이름입니다.|  
 |**Grantor**|**sysname**|지정된 사람에게 사용 권한을 부여한 보안 주체의 이름입니다.|  
 |**ProtectType**|**nvarchar (10)**|보호의 유형 이름입니다.<br /><br /> GRANT  REVOKE|  
-|**작업**|**nvarchar(60)**|사용 권한의 이름입니다. 유효한 사용 권한 문은 개체의 유형에 따라 달라집니다.|  
+|**동작**|**nvarchar(60)**|사용 권한의 이름입니다. 유효한 사용 권한 문은 개체의 유형에 따라 달라집니다.|  
 |**열**|**sysname**|사용 권한의 유형입니다.<br /><br /> All  =  사용 권한이 개체의 모든 현재 열을 포함합니다.<br /><br /> New  =  사용 권한이 미래의 개체에서 (ALTER문을 사용하여)  변경할 수 있는 모든 새 열을 포함합니다.<br /><br /> All+New  =  All과 New의 조합입니다.<br /><br /> 사용 권한의 유형이 열에 적용되지 않는 경우에는 마침표를 반환합니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -92,9 +92,9 @@ EXEC sp_helprotect @grantorname = 'dbo';
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
- 반환되는 정보는 메타데이터에 대한 액세스 제한 사항에 따라 달라집니다. 보안 주체에 사용 권한이 없는 엔터티는 나타나지 않습니다.  자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
+ 반환되는 정보는 메타데이터에 대한 액세스 제한 사항에 따라 달라집니다. 보안 주체에 사용 권한이 없는 엔터티는 나타나지 않습니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-listing-the-permissions-for-a-table"></a>A. 테이블에 대한 사용 권한 나열  
  다음 예에서는 `titles` 테이블에 대한 사용 권한을 나열합니다.  

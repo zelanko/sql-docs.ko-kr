@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d69a2355f18a162f3e7a6b76b07bbb7cd6a597a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e7ccd7c93d42cb30eeb2fc24b79c358d519579b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75656620"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764767"
 ---
 # <a name="syscolumn_store_dictionaries-transact-sql"></a>sys.column_store_dictionaries(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   xVelocity 메모리 최적화 columnstore 인덱스에 사용되는 각 사전에 대한 행을 포함합니다. 사전은 일부 데이터 형식을 인코딩하는 데 사용되므로 columnstore 인덱스의 일부 열에만 사전이 있습니다. 사전은 모든 세그먼트의 기본 사전으로 있을 수 있으며 열 세그먼트의 하위 집합에 사용되는 다른 보조 사전으로 있을 수도 있습니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**hobt_id**|**bigint**|이 columnstore 인덱스가 있는 테이블에 대 한 힙 또는 B-트리 인덱스 (HoBT)의 ID입니다.|  
 |**column_id**|**int**|1로 시작 하는 columnstore 열의 ID입니다. 첫 번째 열에는 ID = 1, 두 번째 열에는 ID = 2 등이 있습니다.|  
@@ -44,7 +44,7 @@ ms.locfileid: "75656620"
 |**partition_id**|**bigint**|파티션 ID를 나타냅니다. 데이터베이스 내에서 고유합니다.|  
   
 ## <a name="permissions"></a>사용 권한  
-테이블에 대한 `VIEW DEFINITION` 권한이 필요합니다. 다음 열은 사용자에 게 사용 권한이 없는 `SELECT` 경우 null을 반환 합니다. last_id, entry_count, data_ptr.  
+테이블에 대한 `VIEW DEFINITION` 권한이 필요합니다. 다음 열은 사용자에 게 사용 권한이 없는 경우 null을 반환 합니다 `SELECT` . last_id, entry_count, data_ptr.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   

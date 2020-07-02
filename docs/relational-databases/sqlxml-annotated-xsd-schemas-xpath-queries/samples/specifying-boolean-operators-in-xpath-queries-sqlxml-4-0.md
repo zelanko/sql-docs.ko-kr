@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 41c521f2e8d1984ab8c10b8970c83c7ebe495f99
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 06d56d0537bfda3a2ce44033a30d0f8e429fc0c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84884182"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773015"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 부울 연산자 지정(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   다음 예에서는 XPath 쿼리에 부울 연산자를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 샘플 스키마에 대 한 자세한 내용은 [예제 주석 XSD schema For XPath 예제 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)를 참조 하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. OR 부울 연산자 지정  
  이 XPath 쿼리는 **\<Customer>** **CustomerID** 특성 값이 13 또는 31 인 컨텍스트 노드의 요소 자식을 반환 합니다.  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b3a2a2405b4ca22f780576135c66ee32d058ed10
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 80927c19376e97b25c21af1f93faedd5637eb8bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826280"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771205"
 ---
 # <a name="sp_copysubscription-transact-sql"></a>sp_copysubscription(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
     
 > [!IMPORTANT]  
@@ -59,7 +59,7 @@ sp_copysubscription [ @filename = ] 'file_name'
   
  **sp_copysubscription** 은 클라이언트 구독이 있는 데이터베이스에 대해서만 지원 되며 데이터베이스에 서버 구독이 있는 경우에는 실행할 수 없습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_copysubscription**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

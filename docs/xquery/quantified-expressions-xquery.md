@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f7c79cd185b88b8681460d2811f0d0ac4c20557
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 8e815f72ffeaa851c2002bbb92687726e70024db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215246"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765590"
 ---
 # <a name="quantified-expressions-xquery"></a>정량화된 식(XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   존재 및 범용 수량자는 두 가지 시퀀스에 적용되는 부울 연산자에 다른 의미 체계를 지정합니다. 다음 표에서는 이러한 수량자를 보여 줍니다.  
   

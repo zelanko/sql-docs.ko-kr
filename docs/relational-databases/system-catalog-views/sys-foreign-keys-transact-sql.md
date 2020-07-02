@@ -20,21 +20,21 @@ ms.assetid: e960df1a-13fc-43ee-ba91-34c1b719ac2c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b78466b0c2c20bc3b59fb372870bbad87aef0e74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 725af9bc78fd0bd708ecd38c8c37cef629b19e63
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133885"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764760"
 ---
 # <a name="sysforeign_keys-transact-sql"></a>sys.foreign_keys(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   개체 당 행을 포함 합니다. 여기서는 외래 키 제약 조건입니다. 여기에는 **sys. type** = F입니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**\<Sys. 개체에서 상속 된 열>**||이 뷰가 상속 하는 열 목록은 [sys. 개체 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.|  
+|**\<Columns inherited from sys.objects>**||이 뷰가 상속 하는 열 목록은 [sys. 개체 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.|  
 |**referenced_object_id**|**int**|참조된 개체의 ID입니다.|  
 |**key_index_id**|**int**|참조된 개체 내의 키 인덱스 ID입니다.|  
 |**is_disabled**|**bit**|FOREIGN KEY 제약 조건이 비활성화되어 있습니다.|  

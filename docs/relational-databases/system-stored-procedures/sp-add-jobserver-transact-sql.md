@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 046a5b9c4c162dd29c812d326f6d8a448e860604
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d1e36f70ffa9c9a400c62c01226c3815b4044a0d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819040"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772289"
 ---
 # <a name="sp_add_jobserver-transact-sql"></a>sp_add_jobserver(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정된 서버에 지정된 작업을 대상으로 정합니다.  
   
@@ -73,7 +73,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  **Sysadmin** 고정 서버 역할의 멤버만 여러 서버를 포함 하는 작업에 대해 **sp_add_jobserver** 를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-assigning-a-job-to-the-local-server"></a>A. 로컬 서버에 작업 할당  
  다음 예에서는 로컬 서버에서 실행할 `NightlyBackups` 작업을 할당합니다.  

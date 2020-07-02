@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 93a55b28325bd9b04af569120ad34baeb689e8f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b857472b72081c6368fa3c0a112c7d4729e2c72
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124657"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771110"
 ---
 # <a name="sp_enum_proxy_for_subsystem-transact-sql"></a>sp_enum_proxy_for_subsystem(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시가 하위 시스템에 액세스할 수 있는 권한을 나열합니다.  
   
@@ -56,7 +56,7 @@ sp_enum_proxy_for_subsystem
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**subsystem_id**|**int**|하위 시스템의 ID입니다.|  
 |**subsystem_name**|**sysname**|하위 시스템의 이름입니다.|  
@@ -76,7 +76,7 @@ sp_enum_proxy_for_subsystem
 ## <a name="permissions"></a>사용 권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-listing-all-associations"></a>A. 모든 연결 나열  
  다음 예에서는 현재 인스턴스의 프록시와 하위 시스템 간에 설정된 모든 사용 권한을 나열합니다.  

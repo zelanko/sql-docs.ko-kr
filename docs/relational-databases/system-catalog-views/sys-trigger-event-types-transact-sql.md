@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 054aed54-7151-4760-934a-149fa434f1ae
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 152fd6ca2798b9866b9a6fe9b439bfcc2c4d6a77
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e84c7c7161d88120eccd204c2e24bed508abba7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828127"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771605"
 ---
 # <a name="systrigger_event_types-transact-sql"></a>sys.trigger_event_types(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   트리거가 발생할 수 있는 각 이벤트 또는 이벤트 그룹당 한 개의 행을 반환합니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82828127"
 |**type_name**|**nvarchar (64)**|이벤트 또는 이벤트 그룹의 이름으로 [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) 문의 FOR 절에 지정할 수 있습니다.|  
 |**parent_type**|**int**|이벤트 또는 이벤트 그룹의 부모인 이벤트 그룹의 유형입니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

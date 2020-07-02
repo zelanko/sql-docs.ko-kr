@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 4bd73187-0aac-4f03-ac54-2b78e41917e5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 89db6e2a85e502b675db2006a682ff6b35fb4491
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b37d78138a3bea5abdffc9acdd8ea9b1ba392262
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022062"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765205"
 ---
 # <a name="localdbstopinstance-function"></a>LocalDBStopInstance 함수
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   지정한 SQL Server Express LocalDB 인스턴스의 실행을 중지합니다.  
   
  **헤더 파일:** sqlncli.h  

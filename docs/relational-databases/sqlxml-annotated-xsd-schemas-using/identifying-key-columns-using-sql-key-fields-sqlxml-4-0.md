@@ -23,15 +23,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4902cd16e1812740e6c2cc5e298cb0915ed119f
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: fd8b23a2aaba27e166a3a13636e2362b54781704
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215841"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764940"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>sql:key-fields(SQLXML 4.0)를 사용하여 키 열 식별
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XSD 스키마에 대해 XPath 쿼리가 지정된 경우 결과에서 올바른 중첩을 얻으려면 대부분 키 정보가 필요합니다. **Sql: 키-필드** 주석을 지정 하면 적절 한 계층이 생성 됩니다.  
   
 > [!NOTE]  
@@ -41,7 +41,7 @@ ms.locfileid: "84215841"
   
  요소에 요소와 자식 요소 사이에 정의 된가 포함 되어 있지만 부모 요소에 지정 된 테이블의 기본 키를 제공 하지 않는 경우 **sql: 키-필드** 주석을 사용 해야 합니다 **\<sql:relationship>** .  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. \<sql:relationship>에서 충분 한 정보를 제공 하지 않을 때 적절 한 중첩을 생성 합니다.  

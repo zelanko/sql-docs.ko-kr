@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 16d0b0c5-5cce-469b-aa3d-4b9248e0c085
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7380f847aa99024b772d7b415b5d7cfff643f499
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d1f2b0da2e6df26e0bd8d00339d95a7b4f87c424
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834048"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771635"
 ---
 # <a name="sysservices-transact-sql"></a>sys.services(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   이 카탈로그 뷰에는 데이터베이스의 각 서비스에 대한 행이 포함되어 있습니다.  
   

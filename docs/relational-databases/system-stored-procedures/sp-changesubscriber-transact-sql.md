@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9a3b575b39055976262858fcf527d1b892790a02
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2cd1e4126c1a9da57a6bda6195be78d996e101d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833408"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771379"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   구독자에 대한 옵션을 변경합니다. 구독자에 대한 모든 배포 태스크가 이 게시자로 업데이트됩니다. 이 저장 프로시저는 배포 데이터베이스의 **MSsubscriber_info** 테이블에 기록 합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -77,8 +77,8 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**1**|한 번|  
 |**2**|주문형|  
 |**4**|매일|  
-|**20cm(8**|매주|  
-|**x**|매월|  
+|**8**|매주|  
+|**16**|매월|  
 |**32**|매월 상대적|  
 |**64**|자동 시작|  
 |**128**|되풀이|  
@@ -89,11 +89,11 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 |값|Description|  
 |-----------|-----------------|  
-|**1**|처음|  
-|**2**|초|  
+|**1**|첫째|  
+|**2**|Second|  
 |**4**|셋째|  
-|**20cm(8**|넷째|  
-|**x**|마지막|  
+|**8**|넷째|  
+|**16**|마지막|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`지정 된 *frequency_type*동안 배포 작업이 되풀이 되는 빈도입니다. *frequency_recurrence_factor* 은 **int**이며 기본값은 NULL입니다.  
   
@@ -102,9 +102,9 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|초|  
+|**2**|Second|  
 |**4**|Minute|  
-|**20cm(8**|시간|  
+|**8**|시간|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequence_subday*에 대 한 간격입니다. *frequency_subday_interval* 은 **int**이며 기본값은 NULL입니다.  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d5c08e0a844348210ae011e395c04de5b4cdcdd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1b2fb1031c3090046bc509acc3c0cd1779db1836
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829580"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771428"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   게시의 속성을 변경합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -105,7 +105,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**snapshot_in_defaultfolder**|**true**|스냅샷 파일이 기본 스냅샷 폴더에 저장됩니다. *Alt_snapshot_folder*도 지정한 경우에는 스냅숏 파일이 기본 위치 및 대체 위치 모두에 저장 됩니다.|  
 ||**false**|스냅숏 파일은 *alt_snapshot_folder*에 지정 된 대체 위치에 저장 됩니다.|  
 |**status**|**active**|구독자는 게시가 생성되는 즉시 게시 데이터를 사용할 수 있습니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
-||**라**|게시가 생성되면 구독자가 게시 데이터를 사용할 수 없습니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
+||**inactive**|게시가 생성되면 구독자가 게시 데이터를 사용할 수 없습니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
 |**sync_method**|**native**|구독을 동기화할 때 모든 테이블의 기본 모드 대량 복사 출력을 사용합니다.|  
 ||**자의**|구독을 동기화할 때 모든 테이블의 문자 모드 대량 복사 출력을 사용합니다.|  
 ||**노드당**|모든 테이블의 기본 모드 대량 복사 프로그램 출력을 사용하지만 스냅샷을 생성하는 동안에는 테이블을 잠그지 않습니다. 스냅샷 복제에는 적합하지 않습니다.|  
@@ -160,7 +160,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_changepublication](../../relational-databases/replication/codesnippet/tsql/sp-changepublication-tra_1.sql)]  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_changepublication**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e965a11708b2d4bbb72903a05846cb14300a5c6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6fa9117891f9d9350e58a2c8233dcffe05c8cfc8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826103"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772124"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   특정 원격 또는 복제 서버나 두 유형의 서버 모두에 관한 정보를 보고합니다. 서버 이름, 서버의 네트워크 이름, 서버의 복제 상태, 서버의 ID, 데이터 정렬 이름을 제공합니다. 연결된 서버 연결 또는 쿼리 제한 시간 값도 제공합니다.  
   
@@ -41,7 +41,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @server = ] 'server'`정보를 보고할 서버입니다. *서버* 를 지정 하지 않으면는 **master.open**서버에 있는 모든 서버에 대해 보고 합니다. *서버* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @server = ] 'server'`정보를 보고할 서버입니다. *서버* 를 지정 하지 않으면 **master.sys**서버에 있는 모든 서버에 대해 보고 합니다. *서버* 는 **sysname**이며 기본값은 NULL입니다.  
   
 `[ @optname = ] 'option'`서버를 설명 하는 옵션입니다. *옵션* 은 **varchar (** 35 **)** 이며 기본값은 NULL이 고 다음 값 중 하나 여야 합니다.  
   
@@ -79,10 +79,10 @@ sp_helpserver [ [ @server = ] 'server' ]
 ## <a name="remarks"></a>설명  
  서버 상태가 두 개 이상일 수 있습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  사용 권한을 확인하지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-displaying-information-about-all-servers"></a>A. 모든 서버에 관한 정보 표시  
  다음 예에서는 매개 변수 없이 `sp_helpserver`를 사용하여 모든 서버에 관한 정보를 표시합니다.  

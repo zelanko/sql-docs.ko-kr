@@ -23,15 +23,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c4d5ed47b77d32fed9d8775bc43f9e052ce6fcb
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 380698d9d164012f8e0be53f19be6cef8b7c56e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882881"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773052"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>레코드 생성 프로세스(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   XML 대량 로드는 XML 입력 데이터를 처리하고 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 적절한 테이블로 사용할 수 있도록 레코드를 준비합니다. XML 대량 로드의 로직은 새 레코드를 생성할 시기, 레코드 필드로 복사할 자식 요소나 특성 값, 레코드가 완성되어 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 삽입할 수 있도록 보낼 준비가 끝나는 시기를 결정합니다.  
   
  XML 대량 로드는 전체 XML 입력 데이터를 메모리로 로드하지 않으며 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 데이터를 보내기 전에 전체 레코드 집합을 생성하지 않습니다. 이것은 XML 입력 데이터가 큰 문서일 수 있으며 전체 문서를 메모리로 로드하면 많은 비용이 들 수 있기 때문입니다. 대신 XML 대량 로드는 다음을 수행합니다.  

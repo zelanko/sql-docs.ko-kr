@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12ee833860c4131b6dc9634d7f1da926968c1e14
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2daa7d007783434e0994846e41300c31b3e35162
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824058"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771361"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   기존 구독자의 상태를 변경합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -75,7 +75,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |값|설명|  
 |-----------|-----------------|  
 |**active**|구독자가 동기화되어 데이터를 받습니다.|  
-|**라**|구독이 없는 구독자 항목이 있습니다.|  
+|**inactive**|구독이 없는 구독자 항목이 있습니다.|  
 |**예약한**|구독자가 데이터를 요청하고 있으나 아직 동기화되지 않았습니다.|  
   
 `[ @previous_status = ] 'previous_status'`구독의 이전 상태입니다. *previous_status* 는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수를 사용 하면 현재 해당 상태에 있는 모든 구독을 변경 하 여 특정 구독 집합에서 그룹 기능을 허용할 수 있습니다. 예를 들어 모든 활성 구독을 **구독**으로 다시 설정할 수 있습니다.  
@@ -90,11 +90,11 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 |값|Description|  
 |-----------|-----------------|  
-|**1**|처음|  
-|**2**|초|  
+|**1**|첫째|  
+|**2**|Second|  
 |**4**|셋째|  
-|**20cm(8**|넷째|  
-|**x**|마지막|  
+|**8**|넷째|  
+|**16**|마지막|  
 |NULL(기본값)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*에서 사용 하는 되풀이 비율입니다. *frequency_recurrence_factor* 은 **int**이며 기본값은 NULL입니다.  
@@ -104,9 +104,9 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|초|  
+|**2**|Second|  
 |**4**|Minute|  
-|**20cm(8**|시간|  
+|**8**|시간|  
 |NULL(기본값)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*에 대 한 간격입니다. *frequency_subday_interval* 은 **int**이며 기본값은 NULL입니다.  
@@ -161,7 +161,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
  **sp_changesubstatus** **Syssubscriptions** 테이블의 구독자 상태를 변경 된 상태로 변경 합니다. 필요한 경우 **sysarticles** 테이블의 문서 상태를 업데이트 하 여 활성 또는 비활성으로 표시 합니다. 필요한 경우 복제 된 테이블에 대해 **sysobjects** 테이블에서 복제 플래그를 설정 하거나 해제 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할의 멤버 또는 구독의 작성자만 **sp_changesubstatus**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

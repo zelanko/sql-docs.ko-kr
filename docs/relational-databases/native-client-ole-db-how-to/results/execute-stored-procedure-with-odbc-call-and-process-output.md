@@ -14,15 +14,15 @@ ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11e50e3937137b44c273d10914968dde2cfefdc5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf8ead74810e079a4c247fcfe2841a595b10868d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302230"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771677"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>ODBC 호출 및 프로세스 출력을 사용하여 저장 프로시저 실행
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 저장 프로시저는 정수 반환 코드 및 출력 매개 변수를 사용할 수 있습니다. 반환 코드와 출력 매개 변수는 서버의 마지막 패킷으로 전달되지 않으므로 행 집합이 완전히 해제될 때까지 애플리케이션에서 사용할 수 없습니다. 명령이 여러 결과를 반환하는 경우 **IMultipleResults::GetResult** 에서 DB_S_NORESULT를 반환하거나 **IMultipleResults** 인터페이스가 완전히 해제될 때 출력 매개 변수 데이터를 사용할 수 있습니다.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6613c4e94ce8c802e45fe003ac73e51b3f38072b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7f158839f45b3b890c0ae46aee1d74f4e6a3e59b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032813"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772951"
 ---
 # <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   고정 서버 역할의 사용 권한을 표시합니다.  
   
@@ -44,7 +44,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ## <a name="arguments"></a>인수  
 `[ @srvrolename = ] 'role'`사용 권한이 반환 되는 고정 서버 역할의 이름입니다. *role* 은 **sysname**이며 기본값은 NULL입니다. 역할을 지정하지 않으면 모든 고정 서버 역할의 사용 권한이 반환됩니다. *role* 은 다음 값 중 하나를 사용할 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**sysadmin**|시스템 관리자입니다.|  
 |**securityadmin**|보안 관리자입니다.|  

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: ee6b6a701d4ff81863973c4c8e098bd9ed49c967
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a26f9ab251bbea3de121a26035d397d17cee5f24
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124678"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771139"
 ---
 # <a name="sp_enum_login_for_proxy-transact-sql"></a>sp_enum_login_for_proxy(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   보안 주체와 프록시 간 연결을 나열합니다.  
   
@@ -42,7 +42,7 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @name = ] 'name'`프록시를 나열할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 주체, 로그인, 서버 역할 또는 **msdb** 데이터베이스 역할의 이름입니다. 이름은 **nvarchar (256)** 이며 기본값은 NULL입니다.  
+`[ @name = ] 'name'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]프록시를 나열할 보안 주체, 로그인, 서버 역할 또는 **msdb** 데이터베이스 역할의 이름입니다. 이름은 **nvarchar (256)** 이며 기본값은 NULL입니다.  
   
 `[ @proxy_id = ] id`정보를 나열할 프록시의 프록시 id입니다. *Proxy_id* 은 **int**이며 기본값은 NULL입니다. *Id* 또는 *proxy_name* 지정할 수 있습니다.  
   
@@ -58,7 +58,7 @@ sp_enum_login_for_proxy
 |**proxy_id**|**int**|프록시 ID입니다.|  
 |**proxy_name**|**sysname**|프록시 이름입니다.|  
 |**name**|**sysname**|연결할 보안 주체의 이름입니다.|  
-|**flags**|**int**|보안 주체의 유형입니다.<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인<br /><br /> **1** = 고정 시스템 역할<br /><br /> **2** = **msdb** 의 데이터베이스 역할|  
+|**flags**|**int**|보안 주체의 유형입니다.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인<br /><br /> **1** = 고정 시스템 역할<br /><br /> **2** = **msdb** 의 데이터베이스 역할|  
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>설명  
@@ -73,7 +73,7 @@ sp_enum_login_for_proxy
 ## <a name="permissions"></a>사용 권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-listing-all-associations"></a>A. 모든 연결 나열  
  다음 예에서는 현재 인스턴스의 로그인과 프록시 간에 설정된 모든 사용 권한을 나열합니다.  

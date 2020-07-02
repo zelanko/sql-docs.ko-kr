@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ef9a2fd87ac283ee2a7072cfccac838df7f16d04
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 547b524a35970f18cb1e3d1d4dbd3679267695a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829582"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771434"
 ---
 # <a name="sp_changepublication_snapshot-transact-sql"></a>sp_changepublication_snapshot(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   지정된 게시에 대한 스냅샷 에이전트의 속성을 변경합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -66,8 +66,8 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |**1**|한 번|  
 |**2**|주문형|  
 |**4**|매일|  
-|**20cm(8**|매주|  
-|**x**|매월|  
+|**8**|매주|  
+|**16**|매월|  
 |**32**|매월 상대적|  
 |**64**|자동 시작|  
 |**128**|되풀이|  
@@ -84,7 +84,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |**5**|목요일|  
 |**6**|금요일|  
 |**7**|토요일|  
-|**20cm(8**|일|  
+|**8**|일|  
 |**9**|평일|  
 |**10**|주말|  
 |NULL(기본값)||  
@@ -94,9 +94,9 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|초|  
+|**2**|Second|  
 |**4**|Minute|  
-|**20cm(8**|시간|  
+|**8**|시간|  
 |NULL(기본값)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*에 대 한 간격입니다. *frequency_subday_interval* 은 **int**이며 기본값은 NULL입니다.  
@@ -145,7 +145,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 ## <a name="remarks"></a>설명  
  **sp_changepublication_snapshot** 는 스냅숏 복제, 트랜잭션 복제 및 병합 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_changepublication_snapshot**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

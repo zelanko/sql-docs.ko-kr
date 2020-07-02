@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80cb0fbbd3c6052ebe2d129a31f582c4aa1ee1ef
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e4cdea3abd58e6eb9d61eeec3e7bba91e80c97db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824048"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771349"
 ---
 # <a name="sp_check_dynamic_filters-transact-sql"></a>sp_check_dynamic_filters(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   게시에 대해 매개 변수가 있는 행 필터 속성에 대한 정보, 특히 게시에 대한 필터링된 데이터 파티션을 생성하는 데 사용하는 함수와 이 게시에서 사전 계산 파티션만 사용하도록 한정하는지 여부를 표시합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -71,7 +71,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
   
  매개 변수가 있는 행 필터가 있는 것처럼 게시를 정의했는데 매개 변수가 있는 필터가 없으면 오류가 반환됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_check_dynamic_filters**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

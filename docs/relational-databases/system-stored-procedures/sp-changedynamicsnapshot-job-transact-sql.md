@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67aeb7243b52ef4675b9effea27d3c81c1078538
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2e506e2846de3d106cfc6e4eccd7519d428da4f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829627"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771521"
 ---
 # <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   매개 변수가 있는 행 필터를 사용하여 구독에 대한 스냅샷을 생성하는 에이전트 작업을 게시로 수정합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -64,8 +64,8 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**1**|한 번|  
 |**2**|주문형|  
 |**4**|매일|  
-|**20cm(8**|매주|  
-|**x**|매월|  
+|**8**|매주|  
+|**16**|매월|  
 |**32**|매월 상대적|  
 |**64**|자동 시작|  
 |**128**|되풀이|  
@@ -82,7 +82,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**5**|목요일|  
 |**6**|금요일|  
 |**7**|토요일|  
-|**20cm(8**|일|  
+|**8**|일|  
 |**9**|평일|  
 |**10**|주말|  
 |NULL(기본값)||  
@@ -92,9 +92,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|초|  
+|**2**|Second|  
 |**4**|Minute|  
-|**20cm(8**|시간|  
+|**8**|시간|  
 |NULL(기본값)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*에 대 한 간격입니다. *frequency_subday_interval* 은 **int**이며 기본값은 NULL입니다.  
@@ -103,11 +103,11 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 |값|Description|  
 |-----------|-----------------|  
-|**1**|처음|  
-|**2**|초|  
+|**1**|첫째|  
+|**2**|Second|  
 |**4**|셋째|  
-|**20cm(8**|넷째|  
-|**x**|마지막|  
+|**8**|넷째|  
+|**16**|마지막|  
 |NULL(기본값)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*에서 사용 하는 되풀이 비율입니다. *frequency_recurrence_factor* 은 **int**이며 기본값은 NULL입니다.  
@@ -135,7 +135,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
  에이전트 로그인 또는 암호를 변경한 후 에이전트를 중지하고 다시 시작해야 변경 내용이 적용됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_changedynamicsnapshot_job**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

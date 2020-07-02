@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6f00b788ecf6b6e4c02d4b8343ba14fa2c345e6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e6f664cc763e56135ddf1c35f5f0057d97ec2d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68056583"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771453"
 ---
 # <a name="sp_changeobjectowner-transact-sql"></a>sp_changeobjectowner(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스에 있는 개체의 소유자를 변경합니다.  
   
 > [!IMPORTANT]
->  이 저장 프로시저는에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]사용할 수 있는 개체에만 적용 됩니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [ALTER SCHEMA](../../t-sql/statements/alter-schema-transact-sql.md) 또는 [alter authorization](../../t-sql/statements/alter-authorization-transact-sql.md) 을 사용 하십시오. **sp_changeobjectowner** 스키마와 소유자를 모두 변경 합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 호환성을 유지하기 위해 이 저장 프로시저는 현재 소유자와 새 소유자가 모두 데이터베이스 사용자 이름과 동일한 이름의 스키마를 갖고 있을 경우에만 개체 소유자를 변경합니다.  
+>  이 저장 프로시저는에서 사용할 수 있는 개체에만 적용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 됩니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [ALTER SCHEMA](../../t-sql/statements/alter-schema-transact-sql.md) 또는 [alter authorization](../../t-sql/statements/alter-authorization-transact-sql.md) 을 사용 하십시오. **sp_changeobjectowner** 스키마와 소유자를 모두 변경 합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 호환성을 유지하기 위해 이 저장 프로시저는 현재 소유자와 새 소유자가 모두 데이터베이스 사용자 이름과 동일한 이름의 스키마를 갖고 있을 경우에만 개체 소유자를 변경합니다.  
 > 
 > [!IMPORTANT]
 >  새로운 사용 권한 요구 사항이 이 저장 프로시저에 추가되었습니다.  
@@ -47,7 +47,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ## <a name="arguments"></a>인수  
 `[ @objname = ] 'object'`현재 데이터베이스에 있는 기존 테이블, 뷰, 사용자 정의 함수 또는 저장 프로시저의 이름입니다. *object* 는 **nvarchar (776)** 이며 기본값은 없습니다. *개체* 는 기존 개체의 소유자를 사용 하 여 _existing_owner_형식으로 정규화 될 수 있습니다 **.** 스키마와 해당 소유자의 이름이 같은 경우 _개체_ 입니다.  
   
-`[ @newowner = ] 'owner_ '`개체의 새 소유자가 될 보안 계정의 이름입니다. *owner* 는 **sysname**이며 기본값은 없습니다. *owner* 는 현재 데이터베이스에 대 한 액세스 권한이 있는 유효한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 데이터베이스 사용자, 서버 역할, windows 로그인 또는 windows 그룹 이어야 합니다. 새 소유자가 해당하는 데이터베이스 수준의 보안 주체가 없는 Windows 사용자 또는 Windows 그룹이면 데이터베이스 사용자가 생성됩니다.  
+`[ @newowner = ] 'owner_ '`개체의 새 소유자가 될 보안 계정의 이름입니다. *owner* 는 **sysname**이며 기본값은 없습니다. *owner* 는 현재 데이터베이스에 대 한 액세스 권한이 있는 유효한 데이터베이스 사용자, 서버 역할, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 로그인 또는 windows 그룹 이어야 합니다. 새 소유자가 해당하는 데이터베이스 수준의 보안 주체가 없는 Windows 사용자 또는 Windows 그룹이면 데이터베이스 사용자가 생성됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -60,8 +60,8 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ## <a name="permissions"></a>사용 권한  
  **Db_owner** 고정 데이터베이스 역할의 멤버 자격 또는 **db_ddladmin** 고정 데이터베이스 역할과 **db_securityadmin** 고정 데이터베이스 역할의 멤버 자격과 개체에 대 한 CONTROL 권한도 필요 합니다.  
   
-## <a name="examples"></a>예  
- 다음 예에서는 `authors` 테이블의 소유자를로 `Corporate\GeorgeW`변경 합니다.  
+## <a name="examples"></a>예제  
+ 다음 예에서는 테이블의 소유자를 `authors` 로 변경 합니다 `Corporate\GeorgeW` .  
   
 ```  
 EXEC sp_changeobjectowner 'authors', 'Corporate\GeorgeW';  

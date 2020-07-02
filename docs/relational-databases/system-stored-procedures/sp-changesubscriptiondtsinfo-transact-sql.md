@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fd0d08a045f67b436bd732b01a2279c923fc9461
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d721bf729d99a60a32693ddbe609cfcee01ba701
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824084"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771363"
 ---
 # <a name="sp_changesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   구독의 DTS(데이터 변환 서비스) 패키지 속성을 변경합니다. 이 저장 프로시저는 구독 데이터베이스의 구독자에서 실행됩니다.  
   
@@ -57,7 +57,7 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ## <a name="remarks"></a>설명  
  **sp_changesubscriptiondtsinfo** 는 밀어넣기 구독에만 사용 되는 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할의 멤버 또는 구독의 작성자만 **sp_changesubscriptiondtsinfo**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

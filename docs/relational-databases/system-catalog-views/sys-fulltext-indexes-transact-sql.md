@@ -21,15 +21,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b240c74abde034f5008416994ca9cb497e6e64f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca20bc73e071fea4a1a0f01acf2c0701b15aca25
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133797"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764699"
 ---
 # <a name="sysfulltext_indexes-transact-sql"></a>sys.fulltext_indexes(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   테이블 형식 개체의 각 전체 텍스트 인덱스당 한 개의 행을 포함합니다.  
 
@@ -54,7 +54,7 @@ ms.locfileid: "68133797"
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `HumanResources.JobCandidate` 예제 데이터베이스의 `AdventureWorks2012` 테이블에서 전체 텍스트 인덱스를 사용합니다. 이 예에서는 전체 텍스트 인덱스에서 사용하는 중지 목록 ID, 테이블의 개체 ID 및 검색 속성 목록 ID를 반환합니다.  
   
 > [!NOTE]  

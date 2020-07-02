@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 292bd66b8c30cec9bc55442a3ab768dd23b731ff
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4c25e061e8eb303f936cc129efc6e630e7be5933
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831077"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772145"
 ---
 # <a name="sp_estimated_rowsize_reduction_for_vardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   VarDecimal 스토리지 형식이 테이블에 설정되어 있는 경우 평균 행 크기의 감소를 추정합니다. 이 숫자를 사용하여 테이블 크기의 전체 감소를 추정합니다. 통계 샘플링을 사용하여 평균 행 크기의 감소를 계산하므로 이 값은 하나의 추정값으로만 간주해야 합니다. 드물긴 하지만 VarDecimal 스토리지 형식을 설정한 후 행 크기가 증가할 수도 있습니다.  
   
@@ -70,7 +70,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 ## <a name="permissions"></a>사용 권한  
  테이블에 대한 CONTROL 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Production.WorkOrderRouting` 데이터베이스의 `AdventureWorks2012` 테이블이 압축된 경우의 행 크기 감소를 추정합니다.  
   
 ```  

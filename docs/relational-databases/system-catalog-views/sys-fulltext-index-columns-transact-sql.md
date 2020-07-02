@@ -22,16 +22,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c139a45df1031ac47750d995780f8e13ea64f2c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ffc3f9823bbdf176b639c28b805a997f868e364
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133810"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764740"
 ---
 # <a name="sysfulltext_index_columns-transact-sql"></a>sys.fulltext_index_columns(Transact SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   전체 텍스트 인덱스의 일부인 각 열에 대한 행을 포함합니다.    
  

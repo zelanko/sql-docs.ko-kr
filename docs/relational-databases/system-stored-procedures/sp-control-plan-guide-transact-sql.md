@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 137189bf0c49667b238c09ba2291463e3922cfde
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 25e3293a9f509667e6086144a43f8d8ccd9308eb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824843"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771249"
 ---
 # <a name="sp_control_plan_guide-transact-sql"></a>sp_control_plan_guide(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   계획 지침을 삭제하거나 활성화하거나 비활성화합니다.  
   
@@ -78,10 +78,10 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
   
  계획 지침은 일부 버전에서 사용할 수 없습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요. 그러나 모든 버전에서 DROP 또는 DROP ALL 옵션을 사용 하 여 **sp_control_plan_guide** 를 실행할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  ** @type = '** Object **'** 를 지정 하 여 만든 개체 유형의 계획 지침에서 **sp_control_plan_guide** 를 실행 하려면 계획 지침에서 참조 하는 개체에 대 한 ALTER 권한이 필요 합니다. 다른 모든 계획 지침에는 ALTER DATABASE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-enabling-disabling-and-dropping-a-plan-guide"></a>A. 계획 지침 활성화, 비활성화 및 삭제  
  다음 예에서는 계획 지침을 만들고 비활성화하고 활성화하고 삭제합니다.  

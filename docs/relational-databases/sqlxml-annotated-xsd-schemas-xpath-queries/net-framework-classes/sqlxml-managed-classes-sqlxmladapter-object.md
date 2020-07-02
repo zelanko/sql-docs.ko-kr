@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: abc83952a57d27ab6ec6053d7d9b1b50ec29fba7
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 77174c85a99bb441794248bcae0d5e50fcfa5055
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529922"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773045"
 ---
 # <a name="sqlxml-managed-classes---sqlxmladapter-object"></a>SQLXML 관리되는 클래스 - SqlXmlAdapter 개체
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   이 개체는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework에서 데이터 세트과의 상호 작용을 돕는 메서드를 제공합니다. 작업 예제는 [.Net 환경에서 SQLXML 기능에 액세스](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)를 참조 하세요.  
   
  SqlXmlAdapter 개체는 다음 메서드를 지원 합니다.  

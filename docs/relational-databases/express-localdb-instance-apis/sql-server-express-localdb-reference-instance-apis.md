@@ -10,15 +10,15 @@ ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a9290e2b9b64c04545c833a2d04620d87564026e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2122ff4cddd045b3d73567af660ddc925d4152ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68021953"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767789"
 ---
 # <a name="sql-server-express-localdb-reference---instance-apis"></a>SQL Server Express LocalDB 참조 - 인스턴스 API
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   기존 서비스 기반 SQL Server 환경에서는 단일 컴퓨터에 설치되는 개별 SQL Server 인스턴스가 실제로 분리됩니다. 즉, 각 인스턴스가 개별적으로 설치 및 제거되고, 별도의 이진 파일 집합을 사용하며, 별도의 서비스 프로세스에 따라 실행됩니다. SQL Server 인스턴스 이름을 사용하여 연결할 SQL Server 인스턴스를 지정합니다.  
   
  SQL Server Express LocalDB 인스턴스 API는 단순화 된 "light" 인스턴스 모델을 사용 합니다. 개별 LocalDB 인스턴스가 디스크와 레지스트리에서 분리되지만, 동일한 공유 LocalDB 이진 파일 집합을 사용합니다. 또한 LocalDB는 서비스를 사용하지 않으며, LocalDB 인스턴스는 LocalDB 인스턴스 API 호출을 통해 요청될 때 실행됩니다. LocalDB에서는 인스턴스 이름을 사용하여 작업할 LocalDB 인스턴스를 지정합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "68021953"
 ### <a name="named-instance-naming-rules"></a>명명된 인스턴스 명명 규칙  
  LocalDB 인스턴스 이름은 최대 128 자까지 사용할 수 있습니다. 제한은 **sysname** 데이터 형식에 의해 적용 됩니다. 이는 NetBIOS 이름이 16자의 ASCII 문자로 제한되는 기존 SQL Server 인스턴스 이름과 비교할 때 중요한 차이점입니다. 이러한 차이가 있는 이유는 LocalDB는 데이터베이스를 파일로 처리 하므로 파일 기반 의미 체계를 의미 하기 때문에 사용자가 인스턴스 이름을 자유롭게 선택할 수 있기 때문입니다.  
   
- LocalDB 인스턴스 이름은 파일 이름 구성 요소에 적합한 모든 유니코드 문자를 포함할 수 있습니다. 파일 이름 구성 요소에 잘못 된 문자가 포함 되는 경우 일반적으로 ASCII/Unicode 문자 1부터 31 까지의 문자, 따옴표 ("), 보다 작음\<(), 보다 큼 (>), 파이프 (|), 백스페이스 (\b), 탭 (\t), 콜론 (:), 별표 (*), 물음표 (?), 백슬래시 (\\) 및 슬래시 (/)를 전달 합니다. null 문자(\0)는 문자열 종료를 나타내는 데 사용되므로 허용됩니다. 첫 번째 null 문자 뒤의 모든 문자가 무시됩니다.  
+ LocalDB 인스턴스 이름은 파일 이름 구성 요소에 적합한 모든 유니코드 문자를 포함할 수 있습니다. 파일 이름 구성 요소에 잘못 된 문자가 포함 되는 경우 일반적으로 ASCII/유니코드 문자 1 ~ 31, 따옴표 ("), 보다 작음 ( \<), greater than (> ), 파이프 (|), 백스페이스 (\b), 탭 (\t), 콜론 (:), 별표 (*), 물음표 (?), 백슬래시 ( \\ ) 및 슬래시 (/) 문자가 포함 됩니다. null 문자(\0)는 문자열 종료를 나타내는 데 사용되므로 허용됩니다. 첫 번째 null 문자 뒤의 모든 문자가 무시됩니다.  
   
 > [!NOTE]  
 >  부적합한 문자 목록은 운영 체제에 따라 다르며 이후 릴리스에서 변경될 수 있습니다.  

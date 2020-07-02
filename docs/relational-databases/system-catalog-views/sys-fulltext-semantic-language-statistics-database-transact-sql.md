@@ -19,15 +19,15 @@ ms.assetid: 32e95614-ed88-4068-8c37-1e21544717bc
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: e1d2e60ce41cd3c57af209123471696cf02a03ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 993715676a6abd5d6687b7b1adbbeb3ab121d39f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133788"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764688"
 ---
 # <a name="sysfulltext_semantic_language_statistics_database-transact-sql"></a>sys.fulltext_semantic_language_statistics_database(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 현재 인스턴스에 설치되어 있는 의미 체계 언어 통계 데이터베이스에 대한 행을 반환합니다.  
   
@@ -53,8 +53,8 @@ ms.locfileid: "68133788"
 ### <a name="permissions"></a>사용 권한  
  사용자가 소유하고 있거나 사용 권한을 부여 받은 보안 개체에 대해서만 카탈로그 뷰의 메타데이터를 볼 수 있습니다.  
   
-## <a name="examples"></a>예  
- 다음 예에서는 현재 인스턴스에 등록 된 의미 체계 언어 통계 데이터베이스에 대 한 정보를 얻기 위해 **fulltext_semantic_language_statistics_database** 를 쿼리 하는 방법을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보여 줍니다.  
+## <a name="examples"></a>예제  
+ 다음 예에서는 현재 인스턴스에 등록 된 의미 체계 언어 통계 데이터베이스에 대 한 정보를 얻기 위해 **fulltext_semantic_language_statistics_database** 를 쿼리 하는 방법을 보여 줍니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ```  
 SELECT * FROM sys.fulltext_semantic_language_statistics_database;  

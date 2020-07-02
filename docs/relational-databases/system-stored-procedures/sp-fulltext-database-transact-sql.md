@@ -18,15 +18,15 @@ ms.assetid: eeb1e151-eb00-484c-8fd1-5641e621ffc6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 105582d8e172849d4296486557984550a032dd72
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ee0918a0b190b7b058f38eac4152dfb952f214bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833317"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771065"
 ---
 # <a name="sp_fulltext_database-transact-sql"></a>sp_fulltext_database(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 전체 텍스트 카탈로그에 영향을 미치지 않으며 이전 버전과의 호환성을 위해서만 지원됩니다. **sp_fulltext_database** 는 지정 된 데이터베이스에 대해 전체 텍스트 엔진을 사용 하지 않도록 설정 하지 않습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 사용자가 만든 모든 데이터베이스가 전체 텍스트 인덱스에 대해 항상 설정됩니다.  
   

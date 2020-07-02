@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6ec79ad00de37b7887164795752b350630193f8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 106c295d200ce823f80988be2276a927aba8126d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833976"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764459"
 ---
 # <a name="syssql_dependencies-transact-sql"></a>sys.sql_dependencies(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 식에서 참조된 엔터티 또는 다른 개체로의 참조가 정의된 문의 종속성당 한 개의 행을 포함합니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "82833976"
 |**is_select_all**|**bit**|개체가 SELECT * 절에서 사용되었습니다(개체 수준만 해당).|  
   
 ## <a name="permissions"></a>사용 권한  
- **public** 역할의 멤버 자격이 필요합니다.  자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
+ **public** 역할의 멤버 자격이 필요합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

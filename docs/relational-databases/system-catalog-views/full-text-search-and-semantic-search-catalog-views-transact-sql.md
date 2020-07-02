@@ -16,15 +16,15 @@ ms.assetid: b08ad2fd-e3d8-458f-96f1-678217e0f419
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 3c10554183501019f00c4f7877fabc102ee44108
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0272ab778c538b2fa8690493606a346d713fa6d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016564"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764812"
 ---
 # <a name="full-text-search-and-semantic-search-catalog-views-transact-sql"></a>전체 텍스트 검색 및 의미 체계 검색 카탈로그 뷰(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 섹션에서는 전체 텍스트 인덱스 및 의미 체계 인덱스에 대한 정보를 제공하는 카탈로그 뷰에 대해 설명합니다.  
   

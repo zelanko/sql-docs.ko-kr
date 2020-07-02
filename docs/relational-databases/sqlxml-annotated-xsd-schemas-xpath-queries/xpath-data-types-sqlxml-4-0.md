@@ -29,15 +29,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17ad196110a68a83618e5048f53bfa84fb7e0f51
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: eade5e3328993176f8795d27e511902a42468192
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306022"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764871"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 데이터 형식(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath 및 XSD (XML 스키마)는 데이터 형식이 매우 다릅니다. 예를 들어 XPath에는 정수나 날짜 데이터 형식이 없지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 XSD에는 이러한 데이터 형식이 많습니다. XSD는 시간 값에 나노초 정밀도를 사용하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 최대 1/300초의 정밀도를 사용합니다. 따라서 한 데이터 형식을 다른 데이터 형식에 매핑할 수 없는 경우도 있습니다. 데이터 형식을 XSD 데이터 형식에 매핑하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [데이터 형식 강제 변환 및 sql: datatype 주석 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)을 참조 하세요.  
   
  XPath에는 **문자열**, **숫자**및 **부울**의 세 가지 데이터 형식이 있습니다. **Number** 데이터 형식은 항상 IEEE 754 배정밀도 부동 소수점입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Float (53)** 데이터 형식은 XPath **번호**와 가장 비슷합니다. 그러나 **float (53)** 는 정확히 IEEE 754이 아닙니다. 예를 들어 NaN(Not-a-Number)과 무한대는 모두 사용되지 않습니다. 숫자가 아닌 문자열을 **숫자로** 변환 하려고 시도 하 고 0으로 나누려고 하면 오류가 발생 합니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "84306022"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 노드 집합에 대해 위치 선택을 수행하지 않습니다. 예를 들어 XPath 쿼리 `Customer[3]`는 세 번째 고객을 의미하는데 이러한 종류의 위치 선택이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 지원되지 않습니다. 따라서 XPath 사양에서 설명 하는 노드 집합-**문자열** 또는 노드 집합-**숫자** 변환이 구현 되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 XPath 사양에 "첫 번째" 의미 체계가 지정된 경우 항상 "임의" 의미 체계를 사용합니다. 예를 들어 W3C XPath 사양을 기반으로 하는 XPath 쿼리는 `Order[OrderDetail/@UnitPrice > 10.0]` **단가** 가 10.0 보다 큰 첫 번째 **orderdetail** 이 포함 된 주문을 선택 합니다. 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 XPath 쿼리는 **단가** 가 10.0 보다 큰 **orderdetail** 이 포함 된 주문을 선택 합니다.  
   
- **부울** 로 변환 하면 존재 테스트가 생성 됩니다. 따라서 XPath 쿼리는 `Products[@Discontinued=true()]` sql 식 "products. 단종 = 1"이 아니라 sql 식 "products. 단종 함은 null이 아닙니다."와 동일 합니다. 쿼리를 후자의 SQL 식과 동일 하 게 만들려면 먼저 노드 집합을 **숫자**와 같은**부울** 이 아닌 형식으로 변환 합니다. 예: `Products[number(@Discontinued) = true()]`.  
+ **부울** 로 변환 하면 존재 테스트가 생성 됩니다. 따라서 XPath 쿼리는 `Products[@Discontinued=true()]` sql 식 "products. 단종 = 1"이 아니라 sql 식 "products. 단종 함은 null이 아닙니다."와 동일 합니다. 쿼리를 후자의 SQL 식과 동일 하 게 만들려면 먼저 노드 집합을 **숫자**와 같은**부울** 이 아닌 형식으로 변환 합니다. 예: `Products[number(@Discontinued) = true()]`  
   
  대부분의 연산자는 노드 집합의 임의 노드 또는 특정 노드에 대해 TRUE이면 TRUE가 되도록 정의되어 있으므로 노드 집합이 비어 있으면 이러한 연산의 결과가 항상 FALSE입니다. 따라서 A가 비어 있으면 `A = B`와 `A != B`는 모두 FALSE이고 `not(A=B)`와 `not(A!=B)`는 TRUE입니다.  
   
@@ -133,7 +133,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 |number(X)|CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
 |boolean(X)|-|LEN (X) > 0|X != 0|-|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-convert-a-data-type-in-an-xpath-query"></a>A. XPath 쿼리에서 데이터 형식 변환  
  주석이 추가 된 XSD 스키마에 대해 지정 된 다음 XPath 쿼리에서 쿼리는 **EmployeeID** 특성 값이 E-1 인 모든 **Employee** 노드를 선택 합니다. 여기서 "e-"는 **sql: id-접두사** 주석을 사용 하 여 지정 된 접두사입니다.  

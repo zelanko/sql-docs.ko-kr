@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c15b8e79dc683c299a1a3f0407b401b2565faffb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e06efc20893454c4057b85ae2f3ca6d45cd150c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824019"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771325"
 ---
 # <a name="sp_check_join_filter-transact-sql"></a>sp_check_join_filter(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   두 테이블 간의 조인 필터를 확인하여 조인 필터 절이 유효한지 여부를 확인하는 데 사용됩니다. 또한 이 저장 프로시저는 제공된 조인 필터를 지정된 테이블의 사전 계산 파티션에서 사용할 수 있는지 여부를 비롯하여 이 필터에 대한 정보를 반환합니다. 이 저장 프로시저는 게시자에서 게시에 대해 실행됩니다. 자세한 내용은 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)를 참조하세요.  
   
@@ -69,7 +69,7 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
   
  **sp_check_join_filter** 는 게시 되지 않은 경우에도 관련 테이블에 대해 실행할 수 있습니다. 이 저장 프로시저는 두 아티클 간의 조인 필터를 정의하기 전 조인 필터 절을 확인하는 데 사용될 수 있습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_check_join_filter**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

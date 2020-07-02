@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65ec62997eb25564e19696a8df2895b980d728be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1232f5eb7917606d7f7e88c912be163d13de33ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827505"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767485"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   입력으로 제공되는 XML 텍스트를 읽고 MSXML 파서(Msxmlsql.dll)를 사용하여 이 텍스트의 구문을 분석한 다음 구문 분석된 문서를 사용할 수 있는 상태로 제공합니다. 이 구문 분석된 문서는 요소, 특성, 텍스트 및 주석 등 XML 문서의 다양한 노드를 트리로 나타낸 것입니다.  
   
@@ -71,7 +71,7 @@ OUTPUT
  [ *xpath_namespaces* ]  
  OPENXML의 행과 열 XPath 식에 사용되는 네임스페이스 선언을 지정합니다. *xpath_namespaces* 는 **char**, **nchar**, **varchar**, **nvarchar**, **text**, **ntext** 또는 **xml**과 같은 텍스트 매개 변수입니다.  
   
- 기본값은 ** \< root xmlns: mp = "urn: xml-metaprop" >** 입니다. *xpath_namespaces* 은 올바른 형식의 XML 문서를 통해 OPENXML의 xpath 식에 사용 된 접두사에 대 한 네임 스페이스 uri를 제공 합니다. *xpath_namespaces* 네임 스페이스 **urn: 스키마-xml-metaprop**;를 참조 하는 데 사용 해야 하는 접두사를 선언 합니다. 구문 분석 된 XML 요소에 대 한 메타 데이터를 제공 합니다. 이 기술을 사용하여 메타 속성 네임스페이스의 네임스페이스 접두사를 다시 정의할 수 있지만 이 네임스페이스는 손실되지 않습니다. *Xpath_namespaces* 에 이러한 선언이 포함 되지 않은 경우에도 접두사 **mp** 는 **urn: 스키마-microsoft-com: xml-metaprop** 에 대해 계속 유효 합니다.  
+ 기본값은 **\<root xmlns:mp="urn:schemas-microsoft-com:xml-metaprop">** 입니다. *xpath_namespaces* 은 올바른 형식의 XML 문서를 통해 OPENXML의 xpath 식에 사용 된 접두사에 대 한 네임 스페이스 uri를 제공 합니다. *xpath_namespaces* 네임 스페이스 **urn: 스키마-xml-metaprop**;를 참조 하는 데 사용 해야 하는 접두사를 선언 합니다. 구문 분석 된 XML 요소에 대 한 메타 데이터를 제공 합니다. 이 기술을 사용하여 메타 속성 네임스페이스의 네임스페이스 접두사를 다시 정의할 수 있지만 이 네임스페이스는 손실되지 않습니다. *Xpath_namespaces* 에 이러한 선언이 포함 되지 않은 경우에도 접두사 **mp** 는 **urn: 스키마-microsoft-com: xml-metaprop** 에 대해 계속 유효 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0 (성공) 또는 >0 (실패)  

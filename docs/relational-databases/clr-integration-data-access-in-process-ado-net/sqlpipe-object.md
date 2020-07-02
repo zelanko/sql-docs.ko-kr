@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b95788d37fa8f8c2e57c2b20aa222938c65dc6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 17a26c5897ff10ce636297151cef9f300f4f3056
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487537"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765419"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe 개체
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이전 버전에서는 결과나 출력 매개 변수를 호출 클라이언트로 보내는 저장 프로시저(또는 확장 저장 프로시저)를 작성하는 것이 일반적이었습니다.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저에서 0개 이상의 행을 반환하는 **SELECT** 문은 결과를 연결된 호출자의 "파이프"로 보냅니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "81487537"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행되는 CLR(공용 언어 런타임) 데이터베이스 개체의 경우 **Send** 개체의 **SqlPipe** 메서드를 사용하여 결과를 연결된 파이프로 보낼 수 있습니다. **Pipe** 개체의 **SqlContext** 속성에 액세스하여 **SqlPipe** 개체를 가져옵니다. **SqlPipe** 클래스는 개념상 ASP.NET에 있는 **Response** 클래스와 유사합니다. 자세한 내용은 .NET Framework 소프트웨어 개발 키트의 SqlPipe 클래스 참조 설명서를 참조하십시오.  
   
 ## <a name="returning-tabular-results-and-messages"></a>테이블 형식 결과 및 메시지 반환  
- **SqlPipe** 에는 3개의 오버로드가 있는 **Send** 메서드가 있습니다. 다음 창이 여기에 포함됩니다.  
+ **SqlPipe** 에는 3개의 오버로드가 있는 **Send** 메서드가 있습니다. 아래에 이 계정과 키의 예제가 나와 있습니다.  
   
 -   `void Send(string message)`  
   
@@ -41,7 +41,7 @@ ms.locfileid: "81487537"
   
  **Send** 메서드는 클라이언트 또는 호출자에게 직접 데이터를 보냅니다. 일반적으로 클라이언트에서 **SqlPipe**의 출력을 사용하지만, 중첩된 CLR 저장 프로시저의 경우 출력 소비자는 저장 프로시저일 수도 있습니다. 예를 들어 Procedure1은 명령 텍스트 "EXEC Procedure2"를 사용하여 SqlCommand.ExecuteReader()를 호출합니다. Procedure2도 관리되는 저장 프로시저입니다. 이제 Procedure2에서 SqlPipe.Send( SqlDataRecord )를 호출하면 행은 호출자가 아닌 Procedure1의 판독기로 보내집니다.  
   
- **Send** 메서드는의 [!INCLUDE[tsql](../../includes/tsql-md.md)]인쇄와 동일 하 게 정보 메시지로 클라이언트에 표시 되는 문자열 메시지를 보냅니다. **SqlDataRecord**를 사용하여 단일 행 결과 집합을 보내거나 **SqlDataReader**를 사용하여 다중 행 결과 집합을 보낼 수도 있습니다.  
+ **Send** 메서드는의 인쇄와 동일 하 게 정보 메시지로 클라이언트에 표시 되는 문자열 메시지를 보냅니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . **SqlDataRecord**를 사용하여 단일 행 결과 집합을 보내거나 **SqlDataReader**를 사용하여 다중 행 결과 집합을 보낼 수도 있습니다.  
   
  또한 **SqlPipe** 개체에는 **ExecuteAndSend** 메서드도 있습니다. 이 메서드를 사용하여 **SqlCommand** 개체로 전달된 명령을 실행하고 결과를 직접 호출자에게 보낼 수 있습니다. 전송된 명령에 오류가 있으면 예외를 파이프로 보내지만 호출 관리 코드에도 복사본을 보냅니다. 호출 코드에서 예외를 catch하지 않을 경우 해당 예외는 스택을 통해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드에 전파되고 출력에 두 번 나타납니다. 호출 코드에서 예외를 catch하지 않을 경우 파이프 소비자에게 오류가 표시되지만 중복 오류는 없습니다.  
   

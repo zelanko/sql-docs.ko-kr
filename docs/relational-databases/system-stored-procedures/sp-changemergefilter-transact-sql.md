@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 32ba968dc5e6ef78ff507b783e6212e4453586d3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a1f07445d119174ca441e7ed13be1851a6e2f058
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829594"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771484"
 ---
 # <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   일부 병합 필터 속성을 변경합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -88,7 +88,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  논리적 레코드를 사용하려면 게시 및 아티클이 여러 가지 요구 사항을 만족해야 합니다. 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)를 참조하세요.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_changemergefilter**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

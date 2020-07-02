@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f876d32b-c07f-4ccc-a691-5e580bc50c40
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6a6cf76aa0d08d72cef9aef0943a467c1f97e66d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a5be26557f6147f98641ebefcf4f7c71600cdea8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829481"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764289"
 ---
 # <a name="io-related-dynamic-management-views-and-functions-transact-sql"></a>I/O 관련 동적 관리 뷰 및 함수(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 섹션에서는 다음과 같은 동적 관리 개체에 대해 설명합니다.  
   

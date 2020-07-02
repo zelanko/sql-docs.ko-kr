@@ -18,15 +18,15 @@ ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a2535aff30c0a3071b641889f5e4a3f1433f88b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b362d3d3d839a624a7a04b0c2189446094387fea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823979"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771266"
 ---
 # <a name="sp_column_privileges-transact-sql"></a>sp_column_privileges(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   현재 환경 내의 단일 테이블에 대한 열 권한 정보를 반환합니다.  
   
@@ -74,10 +74,10 @@ sp_column_privileges [ @table_name = ] 'table_name'
 ## <a name="remarks"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 GRANT 문으로 사용 권한을 부여하고 REVOKE 문으로 사용 권한을 제거합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 특정 열에 대한 열 권한 정보를 반환하는 방법을 보여 줍니다.  
   
 ```  

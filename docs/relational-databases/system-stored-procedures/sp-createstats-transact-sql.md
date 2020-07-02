@@ -18,15 +18,15 @@ ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0cc6ff854079b740279127000a9edb04552245e1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 608f969ab70a0bd9a35b64918a29053caf26c385
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820559"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771159"
 ---
 # <a name="sp_createstats-transact-sql"></a>sp_createstats(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [CREATE statistics](../../t-sql/statements/create-statistics-transact-sql.md) 문을 호출 하 여 통계 개체의 첫 번째 열이 아닌 열에 대 한 단일 열 통계를 만듭니다. 단일 열 통계를 만들면 히스토그램의 수가 늘어나며 이에 따라 카디널리티 예상치, 쿼리 계획 및 쿼리 성능이 향상될 수 있습니다. 히스토그램은 통계 개체의 첫 번째 열에 있으며 다른 열에는 없습니다.  
   
@@ -67,10 +67,10 @@ sp_createstats
   
  테이블에 열이 하나인 경우 sp_createstats는 스파스 열에 대한 통계를 만들지 않습니다. 열 집합 및 스파스 열에 대 한 자세한 내용은 [열 집합 사용](../../relational-databases/tables/use-column-sets.md) 및 [스파스 열 사용](../../relational-databases/tables/use-sparse-columns.md)을 참조 하세요.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-create-single-column-statistics-on-all-eligible-columns"></a>A. 적합한 모든 열에 대한 단일 열 통계 만들기  
  다음 예에서는 현재 데이터베이스에 있는 적합한 모든 열에 대한 단일 열 통계를 만듭니다.  

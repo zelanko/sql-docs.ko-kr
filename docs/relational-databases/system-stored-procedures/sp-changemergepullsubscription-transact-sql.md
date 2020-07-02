@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2182e922599e81a2333fcbf4da5970b55d7e5bc4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fdd889b1c28b037f4ab1d4f609cf93b19617e5b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823478"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771463"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   병합 끌어오기 구독의 속성을 변경합니다. 이 저장 프로시저는 구독 데이터베이스의 구독자에서 실행됩니다.  
   

@@ -19,15 +19,15 @@ ms.assetid: eecd0d5f-d3dd-4d20-9586-19820410ad47
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2792bb40ec870f82694e82b291d55be4b9e9dddd
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: bdb5a36fe5e5f7c81e43ca43a76b59f52ad70674
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689562"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764849"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>SQLXML 4.0의 주석이 추가된 XSD 스키마
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   이 섹션에서는 SQLXML 4.0에서 주석이 추가된 XSD 스키마를 사용하는 방법에 대해 설명합니다. 이전 버전의 SQLXML에서는 XDR(XML-Data Reduced) 스키마를 통해 비슷한 기능이 제공되었습니다. 이 섹션에서는 레거시 애플리케이션을 위한 XDR 정보도 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  

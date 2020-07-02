@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c9d9eca16209dd9cfc5695ae56daf929d067ab6e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 17a554d6bccdfb067600f10122122bd542fe9c6b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831802"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771198"
 ---
 # <a name="sp_copysnapshot-transact-sql"></a>sp_copysnapshot(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   지정 된 게시의 스냅숏 폴더를 ** \@ destination_folder**에 나열 된 폴더로 복사 합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다. 이 저장 프로시저는 스냅샷을 CD-ROM과 같은 이동식 미디어에 복사할 경우 유용합니다.  
   

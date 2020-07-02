@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c3fda7373aba20102a7842ba955d1275bae8e842
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c776d68cb997f5f360e7b79180a8dfaea86fd6e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829652"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771501"
 ---
 # <a name="sp_changelogreader_agent-transact-sql"></a>sp_changelogreader_agent(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   로그 판독기 에이전트의 보안 속성을 변경합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -74,7 +74,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
   
  에이전트 로그인 또는 암호를 변경한 후 에이전트를 중지하고 다시 시작해야 변경 내용이 적용됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_changelogreader_agent**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

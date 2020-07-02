@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b41ca3a5-7222-4c22-a012-e66a577a82f6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f951aaee96bccf0c2876c781aaebdd2a009b51d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11af27e5b94f7fa95c66e13b198ff6134df23912
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140483"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772278"
 ---
 # <a name="sp_add_log_file_recover_suspect_db-transact-sql"></a>sp_add_log_file_recover_suspect_db(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   로그 공간 부족(9002 오류)으로 인해 데이터베이스를 완벽하게 복구하지 못했을 때 파일 그룹에 로그 파일을 추가합니다. 파일이 추가 된 후에는 **sp_add_log_file_recover_suspect_db** 주의 대상 설정을 해제 하 고 데이터베이스 복구를 완료 합니다. 매개 변수는 ALTER DATABASE *DATABASE_NAME* 로그 파일 추가와 동일 합니다.  
   
@@ -46,7 +46,7 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
 ## <a name="arguments"></a>인수  
 `[ @dbName = ] 'database'`데이터베이스의 이름입니다. *데이터베이스* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @name = ] 'logical_file_name'`는 파일을 참조할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 때에서 사용 되는 이름입니다. 이 이름은 서버에서 고유해야 합니다. *logical_file_name* 은 **nvarchar (260)** 이며 기본값은 없습니다.  
+`[ @name = ] 'logical_file_name'`는 파일을 참조할 때에서 사용 되는 이름입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이 이름은 서버에서 고유해야 합니다. *logical_file_name* 은 **nvarchar (260)** 이며 기본값은 없습니다.  
   
 `[ @filename = ] 'os_file_name'`운영 체제에서 파일에 사용 하는 경로 및 파일 이름입니다. 파일은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 설치된 서버에 있어야 합니다. *os_file_name* 은 **nvarchar (260)** 이며 기본값은 없습니다.  
   
@@ -69,7 +69,7 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
 ## <a name="permissions"></a>사용 권한  
  Execute 권한은 **sysadmin** 고정 서버 역할의 멤버에 게 기본적으로 부여 됩니다. 이 권한은 이전할 수 없습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `db1` 데이터베이스가 로그 공간이 부족(9002 오류)하여 복구하는 동안 주의 대상으로 표시되었습니다.  
   
 ```  

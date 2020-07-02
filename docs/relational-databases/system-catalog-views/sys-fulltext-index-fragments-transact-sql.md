@@ -23,15 +23,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 295d924422410bbf247d9b96d27b705fdfe3b5d3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 03b6557d2d17e0a2c9b9ad651ca71d903c8ea19a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133816"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764747"
 ---
 # <a name="sysfulltext_index_fragments-transact-sql"></a>sys.fulltext_index_fragments(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   *전체 텍스트 인덱스는 전체 텍스트 인덱스 조각* 이라고 하는 내부 테이블을 사용 하 여 반전 된 인덱스 데이터를 저장 합니다. 이 뷰를 사용하면 이러한 조각에 대한 메타데이터를 쿼리할 수 있습니다. 이 뷰에는 전체 텍스트 인덱스를 포함하는 모든 테이블의 각 전체 인덱스 조각에 대한 행이 들어 있습니다.  
  

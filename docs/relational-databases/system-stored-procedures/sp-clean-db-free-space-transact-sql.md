@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: faa96f7e-be92-47b1-8bc5-4dbba5331655
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cf21502e06d67edd2e9d5c3dcfdd3c5caa42704c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1622f7cd1d14e83d76ef9cebc716b2743e288395
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824017"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771299"
 ---
 # <a name="sp_clean_db_free_space-transact-sql"></a>sp_clean_db_free_space(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터 수정 루틴 때문에 데이터베이스 페이지에 남겨진 정보를 제거합니다. sp_clean_db_free_space는 데이터베이스의 모든 파일에서 모든 페이지를 정리합니다.  
   
@@ -60,10 +60,10 @@ sp_clean_db_free_space
   
  관련 [sp_clean_db_file_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md) 저장 프로시저는 단일 파일을 정리할 수 있습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  db_owner 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `AdventureWorks2012` 데이터베이스의 모든 잔여 정보를 정리하는 방법을 보여 줍니다.  
   
 ```  

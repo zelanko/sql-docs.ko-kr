@@ -18,15 +18,15 @@ ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a180f10f0b0ac4bb1836d529ac437d917b559e16
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 42985c60b7057904291bbf196e3faae27e77ae68
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820538"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771088"
 ---
 # <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   전체 텍스트 카탈로그를 만들고 삭제하며, 해당 카탈로그에 대한 인덱싱 동작을 시작하고 중지합니다. 각 데이터베이스에 여러 개의 전체 텍스트 카탈로그를 만들 수 있습니다.  
   
@@ -81,7 +81,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="permissions"></a>사용 권한  
  호출자는 **db_owner** 역할의 멤버 여야 합니다. 요청 된 작업에 따라 대상 전체 텍스트 카탈로그에서 호출자가 ALTER 또는 CONTROL 권한 ( **db_owner** )을 거부 해서는 안 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-create-a-full-text-catalog"></a>A. 전체 텍스트 카탈로그 만들기  
  이 예에서는 **AdventureWorks2012** 데이터베이스에 빈 전체 텍스트 카탈로그 **Cat_Desc**를 만듭니다.  

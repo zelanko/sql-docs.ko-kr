@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f7d0e9c5198b65a6e4ddce148dbafd46821e2f40
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 745ad11ccb8b06471ac07477739580558475e363
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830546"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771590"
 ---
 # <a name="sysdm_io_backup_tapes-transact-sql"></a>sys.dm_io_backup_tapes(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   백업과 연관된 테이프 디바이스 목록 및 탑재 요청 상태를 반환합니다.   
  
@@ -40,7 +40,7 @@ ms.locfileid: "82830546"
 |**mount_expiration_time**|**datetime**|탑재 요청이 만료(시간 초과)되는 시간입니다. 보류 중인 마운트가 없으면 NULL입니다 (**상태! = 2**). Null을 허용합니다.|  
 |**database_name**|**nvarchar(256)**|이 디바이스에 백업할 데이터베이스입니다. Null을 허용합니다.|  
 |**spid**|**int**|세션 ID입니다. 테이프의 사용자를 식별합니다. Null을 허용합니다.|  
-|**명령**|**int**|백업을 수행하는 명령입니다. Null을 허용합니다.|  
+|**command**|**int**|백업을 수행하는 명령입니다. Null을 허용합니다.|  
 |**command_desc**|**nvarchar(120)**|명령에 대한 설명입니다. Null을 허용합니다.|  
 |**media_family_id**|**int**|미디어 패밀리의 인덱스 (1* ... n*) *n* 은 미디어 세트의 미디어 패밀리 수입니다. Null을 허용합니다.|  
 |**media_set_name**|**nvarchar(256)**|미디어 세트를 만들 때 MEDIANAME 옵션으로 지정한 미디어 세트의 이름(있는 경우)입니다. Null을 허용합니다.|  

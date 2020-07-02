@@ -1,5 +1,5 @@
 ---
-title: syslockinfo (Transact-sql) | Microsoft Docs
+title: sys.syslockinfo (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c56aa86c20867cfe2cf1da520922d1c74f9c01c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 90573a28292ac4f4de973dc2a5a0c5e1f331d2f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053342"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764387"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   모든 허가된 잠금, 변환 중인 잠금, 대기 중인 잠금 요청에 대한 정보를 포함합니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68053342"
 |**req_refcnt**|**smallint**|잠금 참조 수입니다. 트랜잭션이 특정 리소스에 대한 잠금을 확인할 때마다 참조 수가 증가합니다. 참조 수가 0이 될 때까지 잠금을 해제할 수 없습니다.|  
 |**req_cryrefcnt**|**smallint**|나중에 사용하기 위해 예약되어 있습니다. 항상 0으로 설정합니다.|  
 |**req_lifetime**|**int**|잠금 사용 기간 비트맵입니다. 특정 쿼리 처리 전략을 수행하는 동안 쿼리 프로세서가 쿼리의 특정 단계를 완료할 때까지 리소스에 대한 잠금을 유지 관리해야 합니다. 잠금 사용 기간 비트맵은 쿼리 프로세서 및 트랜잭션 관리자가 쿼리의 특정 단계가 완료되었을 때 해제할 수 있는 잠금 그룹을 표시하는 데 사용됩니다. 비트맵의 특정 비트는 참조 수가 0인 경우에도 트랜잭션이 끝날 때까지 보유되는 잠금을 표시하는 데 사용됩니다.|  
-|**req_spid**|**int**|잠금을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 요청 하는 세션의 내부 프로세스 ID입니다.|  
+|**req_spid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 잠금을 요청 하는 세션의 내부 프로세스 ID입니다.|  
 |**req_ecid**|**int**|실행 컨텍스트 ID(ECID)입니다. 병렬 작업에서 특정 잠금을 소유하고 있는 스레드를 표시하는 데 사용합니다.|  
 |**req_ownertype**|**smallint**|다음은 잠금과 연관된 개체의 유형입니다.<br /><br /> 1 = 트랜잭션<br /><br /> 2 = 커서<br /><br /> 3 = 세션<br /><br /> 4 = ExSession<br /><br /> 3과 4는 각각 세션 잠금의 특별한 버전인 데이터베이스 추적 및 파일 그룹 잠금을 나타냅니다.|  
 |**req_transactionID**|**bigint**|**Syslockinfo** 및 profiler 이벤트에서 사용 되는 고유한 트랜잭션 ID|  

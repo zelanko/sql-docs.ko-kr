@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f32929b9cd5d2f69ae4ffbb8d13f7ec09d9972ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d440b710d5f8c5693308500c01b7339c33943b0f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064268"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767757"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>유니코드 데이터 및 서버 코드 페이지
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하십시오.  
@@ -34,13 +34,13 @@ ms.locfileid: "68064268"
  확장 저장 프로시저 API 애플리케이션에서 유니코드를 사용하는 경우 이 데이터를 확장 저장 프로시저 API로 전달하기 전에 유니코드 메타데이터 열 이름, 오류 메시지 등을 멀티바이트 데이터로 변환해야 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 확장 저장 프로시저는 설명된 유니코드 변환의 예를 제공합니다. 다음 사항에 유의하세요.  
+ 다음 확장 저장 프로시저는 설명된 유니코드 변환의 예를 제공합니다. 다음 사항에 유의합니다.  
   
 -   열이 SRVNVARCHAR에 설명 되어 있으므로 열 데이터는 **srv_describe** 에 유니코드 데이터로 전달 됩니다.  
   
 -   열 이름 메타 데이터는 멀티 바이트 데이터로 **srv_describe** 전달 됩니다.  
   
-     확장 저장 프로시저는 필드 매개 변수가 SRV_SPROC_CODEPAGE로 설정 된 **srv_pfield** 를 호출 하 여의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]멀티 바이트 코드 페이지를 가져옵니다.  
+     확장 저장 프로시저는 필드 매개 변수가 SRV_SPROC_CODEPAGE로 설정 된 **srv_pfield** 를 호출 하 여의 멀티 바이트 코드 페이지를 가져옵니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   오류 메시지는 멀티 바이트 데이터로 **srv_sendmsg** 전달 됩니다.  
   

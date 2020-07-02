@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: aa09b8ab-37db-4406-8973-acf503855fd2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 030e35fca5fc6a2dbc31a16fc1bc1cb0e5c9fea5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 22b99557c1fc6c35b065ffebb9d55f07717c7583
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660214"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768281"
 ---
 # <a name="protocolorder-property-clientnetworkprotocol-class"></a>ProtocolOrder 속성(ClientNetworkProtocol 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   [Setordervalue 메서드 (ClientNetworkProtocol 클래스)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md) 메서드에 지정 된 대로 현재 참조 되는 클라이언트 네트워크 프로토콜의 순서 번호를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,7 +37,7 @@ object.ProtocolOrder [= value]
   
 ## <a name="parts"></a>부분  
  *object*  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 사용 하는 네트워크 프로토콜을 나타내는 [clientnetworkprotocol 클래스](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) 개체입니다.  
+ 클라이언트에서 사용 하는 네트워크 프로토콜을 나타내는 [Clientnetworkprotocol 클래스](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) 개체입니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  **Ordervalue** 메서드에 의해 설정 된 대로 현재 참조 되는 클라이언트 네트워크 프로토콜의 순서 번호를 지정 하는 **uint32** 값입니다. 클라이언트 네트워크 프로토콜이 해제된 경우 이 값은 0입니다.  

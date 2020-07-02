@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 34473e6eb173a0aabc5c2067e50aeeec27ce5636
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b264f5276ad9d9f411fcdd14550130eb412a1b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68067746"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771559"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   의미상 유사한 내용의 두 문서(원본 문서 및 대응 문서) 간에 공통적인 키 구가 있는 0개 이상의 행으로 구성된 테이블을 반환합니다.  
   
@@ -71,10 +71,10 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="table-returned"></a>반환된 테이블  
  다음 표에서는 이 행 집합 함수가 반환하는 키 구에 대해 설명합니다.  
   
-|Column_name|Type|Description|  
+|Column_name|형식|설명|  
 |------------------|----------|-----------------|  
 |**키 구**|**VARCHAR**|원본 문서와 대응 문서 간의 유사성에 기여하는 키 구.|  
-|**점수**|**real**|두 문서 간에 유사성이 있는 다른 모든 키 구를 기준으로 한 이 키 구의 상대적 값입니다.<br /><br /> 이 값은 [0.0, 1.0] 범위의 소수 10진수 값입니다. 점수가 높을수록 유사성이 높으며 1.0이 최대 점수입니다.|  
+|**점수**|**실제로**|두 문서 간에 유사성이 있는 다른 모든 키 구를 기준으로 한 이 키 구의 상대적 값입니다.<br /><br /> 이 값은 [0.0, 1.0] 범위의 소수 10진수 값입니다. 점수가 높을수록 유사성이 높으며 1.0이 최대 점수입니다.|  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  자세한 내용은 [의미 체계 검색을 사용 하는 유사 및 관련 문서 찾기](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)를 참조 하세요.  
@@ -91,8 +91,8 @@ SEMANTICSIMILARITYDETAILSTABLE
 ### <a name="permissions"></a>사용 권한  
  전체 텍스트 및 의미 체계 인덱스를 만든 기본 테이블에 대한 SELECT 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예  
- 다음 예에서는 AdventureWorks2012 예제 데이터베이스의 **HumanResources 후보** 테이블에서 지정 된 후보 사이에 가장 높은 유사성 점수가 있는 5 개의 키 구를 검색 합니다. 및 @CandidateId @MatchedID 변수는 전체 텍스트 인덱스의 키 열에 있는 값을 나타냅니다.  
+## <a name="examples"></a>예제  
+ 다음 예에서는 AdventureWorks2012 예제 데이터베이스의 **HumanResources 후보** 테이블에서 지정 된 후보 사이에 가장 높은 유사성 점수가 있는 5 개의 키 구를 검색 합니다. @CandidateId및 @MatchedID 변수는 전체 텍스트 인덱스의 키 열에 있는 값을 나타냅니다.  
   
 ```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  

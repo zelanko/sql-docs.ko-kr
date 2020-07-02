@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8baa3c5a-cb40-42d0-b966-00e6d55368e8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85afab7ff3183953da0a4655c98733dd66fb138a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0bf08fc60ba8573fbaa80d12a2d93e03cbf9ee1d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827258"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768398"
 ---
 # <a name="mslogreader_agents-transact-sql"></a>MSlogreader_agents(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSlogreader_agents** 테이블에는 로컬 배포자에서 실행 되는 각 로그 판독기 에이전트에 대 한 행이 하나씩 포함 되어 있습니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

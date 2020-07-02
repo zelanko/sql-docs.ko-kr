@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 1d50e040-8602-4ffa-be8f-b8633fdfa7ff
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e35b0c9b806b435a4a98a319180801094068caf1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d26d5a7dd54adaae212a840e3183ff3f098d845
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022043"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765183"
 ---
 # <a name="localdbstoptracing-function"></a>LocalDBStopTracing 함수
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   현재 Windows 사용자가 소유한 모든 SQL Server Express LocalDB 인스턴스에 대해 API 호출 추적을 비활성화합니다.  
   
  **헤더 파일:** sqlncli.h  

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9f9947372ca0c92d7daaef19fafb2f7e3ee4a84f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9a7a07452a0dcb9ebfe91e7e51b10239b3eb3f15
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815025"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769633"
 ---
 # <a name="syssp_cdc_enable_db-transact-sql"></a>sys.sp_cdc_enable_db(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스에 대해 변경 데이터 캡처를 활성화합니다. 데이터베이스의 테이블에서 변경 데이터 캡처를 사용할 수 있도록 설정하려면 먼저 해당 데이터베이스에 대해 이 프로시저를 실행해야 합니다. 변경 데이터 캡처는 설정된 테이블에 적용된 삽입, 업데이트 및 삭제 작업을 기록하고 변경 내용의 세부 정보를 쉽게 사용할 수 있는 관계형 형식으로 만듭니다. 추적된 원본 테이블의 열 구조를 미러하는 열 정보가 대상 환경에 변경 내용을 적용하는 데 필요한 메타데이터와 함께 수정된 행에 대해 캡처됩니다.  
   
@@ -56,10 +56,10 @@ sys.sp_cdc_enable_db
   
  sys.sp_cdc_enable_db는 메타데이터 테이블 및 DDL 트리거를 포함하여 데이터베이스 차원 범위의 변경 데이터 캡처 개체를 만듭니다. 또한 cdc 스키마와 cdc 데이터베이스 사용자를 만들고, 데이터베이스 항목에 대 한 is_cdc_enabled 열을 [sys. 데이터베이스](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰에서 1로 설정 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  sysadmin 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 변경 데이터 캡처를 활성화합니다.  
   
 ```  

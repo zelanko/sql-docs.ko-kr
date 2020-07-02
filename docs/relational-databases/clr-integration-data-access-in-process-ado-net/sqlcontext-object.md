@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd6d3091b155ae829e368bdd182b3da8286c7194
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc3dc5787693345c531e7afb3384bf093dc17aa6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487542"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765439"
 ---
 # <a name="sqlcontext-object"></a>SqlContext 개체
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   프로시저 또는 함수를 호출하거나, CLR(공용 언어 런타임) 사용자 정의 형식의 메서드를 호출하거나, 사용자의 동작이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 언어로 정의된 트리거를 발생시키면 서버에서 관리 코드가 호출됩니다. 이러한 코드 실행은 사용자 연결의 일부로 요청되므로 서버에서 실행되는 코드에서 호출자의 컨텍스트에 대한 액세스가 필요합니다. 또한 특정 데이터 액세스 작업은 호출자의 컨텍스트에서 실행해야만 유효합니다. 예를 들어 트리거 작업에서 사용된 삽입되거나 삭제된 의사 테이블에 대한 액세스는 호출자의 컨텍스트에서만 유효합니다.  
   
- 호출자의 컨텍스트는 **sqlcontext** 개체에서 추상화 됩니다. **Sqltriggercontext** 메서드 및 속성에 대 한 자세한 내용은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK의 **Microsoft sql server server** 참조 설명서를 참조 하십시오.  
+ 호출자의 컨텍스트는 **sqlcontext** 개체에서 추상화 됩니다. **Sqltriggercontext** 메서드 및 속성에 대 한 자세한 내용은 SDK의 **Microsoft sql server server** 참조 설명서를 참조 하십시오. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]  
   
  **Sqlcontext** 는 다음 구성 요소에 대 한 액세스를 제공 합니다.  
   
@@ -39,10 +39,10 @@ ms.locfileid: "81487542"
 -   **WindowsIdentity**: **WindowsIdentity** 속성은 호출자의 Windows id를 검색 하는 데 사용 됩니다.  
   
 ## <a name="determining-context-availability"></a>컨텍스트 가용성 확인  
- **Sqlcontext** 클래스를 쿼리하여 현재 실행 중인 코드가 in-process로 실행 되 고 있는지 확인 합니다. 이렇게 하려면 **Sqlcontext** 개체의 **isavailable** 속성을 선택 합니다. **Isavailable** 속성은 읽기 전용 이며 호출 코드가 내부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 실행 되 고 있고 다른 **sqlcontext** 멤버에 액세스할 수 있는 경우 **True** 를 반환 합니다. **Isavailable** 속성이 **False**를 반환 하는 경우 다른 모든 **sqlcontext** 멤버가 사용 되는 경우 **InvalidOperationException**을 throw 합니다. **Isavailable** 에서 **False**를 반환 하는 경우 연결 문자열에 "context connection = true"가 있는 연결 개체를 열려고 하면 오류가 발생 합니다.  
+ **Sqlcontext** 클래스를 쿼리하여 현재 실행 중인 코드가 in-process로 실행 되 고 있는지 확인 합니다. 이렇게 하려면 **Sqlcontext** 개체의 **isavailable** 속성을 선택 합니다. **Isavailable** 속성은 읽기 전용 이며 호출 코드가 내부에서 **True** 실행 되 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고 있고 다른 **sqlcontext** 멤버에 액세스할 수 있는 경우 True를 반환 합니다. **Isavailable** 속성이 **False**를 반환 하는 경우 다른 모든 **sqlcontext** 멤버가 사용 되는 경우 **InvalidOperationException**을 throw 합니다. **Isavailable** 에서 **False**를 반환 하는 경우 연결 문자열에 "context connection = true"가 있는 연결 개체를 열려고 하면 오류가 발생 합니다.  
   
 ## <a name="retrieving-windows-identity"></a>Windows ID 검색  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내에서 실행되는 CLR 코드는 항상 프로세스 계정의 컨텍스트에서 호출됩니다. 코드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 id 대신 호출 하는 사용자의 id를 사용 하 여 특정 작업을 수행 해야 하는 경우 **Sqlcontext** 개체의 **WindowsIdentity** 속성을 통해 가장 토큰을 가져와야 합니다. **WindowsIdentity** 속성은 호출자의 **WindowsIdentity** [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows id를 나타내는 WindowsIdentity 인스턴스를 반환 하거나 인증을 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트가 인증 된 경우 null을 반환 합니다. **EXTERNAL_ACCESS** 또는 **UNSAFE** 권한으로 표시 된 어셈블리만이 속성에 액세스할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내에서 실행되는 CLR 코드는 항상 프로세스 계정의 컨텍스트에서 호출됩니다. 코드에서 프로세스 id 대신 호출 하는 사용자의 id를 사용 하 여 특정 작업을 수행 해야 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sqlcontext** 개체의 **WindowsIdentity** 속성을 통해 가장 토큰을 가져와야 합니다. **WindowsIdentity** 속성은 **WindowsIdentity** [!INCLUDE[msCoName](../../includes/msconame-md.md)] 호출자의 Windows id를 나타내는 WindowsIdentity 인스턴스를 반환 하거나 인증을 사용 하 여 클라이언트가 인증 된 경우 null을 반환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **EXTERNAL_ACCESS** 또는 **UNSAFE** 권한으로 표시 된 어셈블리만이 속성에 액세스할 수 있습니다.  
   
  **WindowsIdentity** 개체를 가져온 후 호출자는 클라이언트 계정을 가장 하 고 대신 작업을 수행할 수 있습니다.  
   

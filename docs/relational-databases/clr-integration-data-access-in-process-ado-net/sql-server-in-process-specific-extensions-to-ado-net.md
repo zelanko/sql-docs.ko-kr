@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 781b812e-eb14-472a-85fa-aa4cdb929bee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f3c1729d216a1456551da3699c286385694e558a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8265a79c58f94eea59b0776910eda6e4902d5989
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258174"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765450"
 ---
 # <a name="sql-server-in-process-specific-extensions-to-adonet"></a>ADO.NET에 대한 SQL Server In-Process 전용 확장
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   ADO.NET과 관련하여 In-Process에 사용하기 위해 특별히 고안된 네 가지 주요 기능 확장이 있습니다. 다음 항목에서는 이러한 확장에 대해 자세히 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  

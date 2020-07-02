@@ -1,5 +1,5 @@
 ---
-title: '명령줄 관리 도구: SqlLocalDB | Microsoft Docs'
+title: '명령줄 관리 도구: SqlLocalDB.exe | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ apilocation:
 ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a41daed808b51df59ba80e0113b84e46c501c9b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5c39272a1f8af7fce092f7aa31ac3a4f7ebd2263
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68126953"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765253"
 ---
 # <a name="command-line-management-tool-sqllocaldbexe"></a>명령줄 관리 도구: SqlLocalDB.exe
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   SqlLocalDB.exe는 사용자가 명령줄에서 LocalDB 인스턴스를 쉽게 관리할 수 있는 간단한 도구입니다. 이 도구는 LocalDB 인스턴스 API에 대한 단순 래퍼로 구현되어 있습니다. SQLCMD 등의 비슷한 여러 SQL Server 도구와 마찬가지로 매개 변수는 SqlLocalDB에 명령줄 인수로 전달되며 출력은 콘솔로 보내집니다.  
   
  SqlLocalDB를 사용하면 개발자는 API를 호출하는 코드를 작성할 필요 없이 LocalDB를 사용하거나 다른 도구를 이용하여 자동으로 작업을 수행할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "68126953"
 |||  
 |`trace\|t on\|off`|추적을 설정하고 해제합니다.|  
   
- SqlLocalDB에서는 공백을 구분 기호로 처리하므로 공백 및 공백 문자가 포함된 인스턴스 이름은 따옴표로 묶어야 합니다. 예를 들면 다음과 같습니다.  
+ SqlLocalDB에서는 공백을 구분 기호로 처리하므로 공백 및 공백 문자가 포함된 인스턴스 이름은 따옴표로 묶어야 합니다. 예를 들어:  
   
  `SqlLocalDB create "My instance name with spaces"`  
   
