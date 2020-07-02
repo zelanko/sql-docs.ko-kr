@@ -14,17 +14,17 @@ ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f00744ce2f0363e7fcf38820b20e2b631df7adc6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 940727c0b5b932017e9572a40e11a547a1f0a897
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301083"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773465"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  이 항목에서는 날짜/시간 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식을 지 원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB (Native Client) 형식에 대 한 정보를 제공 합니다.  
+  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜/시간 데이터 형식을 지 원하는 OLE DB (Native Client) 형식에 대 한 정보를 제공 합니다.  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>행 집합 및 매개 변수의 데이터 형식 매핑  
  OLE DB는 새 서버 유형 DBTYPE_DBTIME2 및 DBTYPE_DBTIMESTAMPOFFSET를 지원 하기 위한 두 가지 새 데이터 형식을 제공 합니다. 다음 표에서는 전체 서버 유형 매핑을 보여 줍니다.  
@@ -159,7 +159,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- 기본 스키마가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**이 아닌 **datetime2** 를 사용 하도록 업데이트 되는 경우 **sql_variant** 를 사용 하 고 **datetime** 의 제한 된 전체 자릿수를 사용 하는 Native Client로 마이그레이션하는 응용 프로그램은 업데이트 되어야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]기본 스키마가 **datetime**이 아닌 **datetime2** 를 사용 하도록 업데이트 되는 경우 **sql_variant** 를 사용 하 고 **datetime** 의 제한 된 전체 자릿수를 사용 하는 Native Client로 마이그레이션하는 응용 프로그램은 업데이트 되어야 합니다.  
   
  SSVARIANT의 액세스 매크로도 다음과 같은 추가를 통해 확장되었습니다.  
   
@@ -176,9 +176,9 @@ enum SQLVARENUM {
 |OLE DB 데이터 형식(*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식|참고|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
-|DBTYPE_DBTIMESTAMP|**datetime2**(p)|Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 DBCOLUMDESC *bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
-|DBTYPE_DBTIME2|**time**(p)|Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 DBCOLUMDESC *bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
-|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 DBCOLUMDESC *bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
+|DBTYPE_DBTIMESTAMP|**datetime2**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 DBCOLUMDESC *bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
+|DBTYPE_DBTIME2|**time**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 DBCOLUMDESC *bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
+|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 DBCOLUMDESC *bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
   
  애플리케이션은 *wType*에 DBTYPE_DBTIMESTAMP를 지정하면 *pwszTypeName*에 형식 이름을 지정하여 **datetime2**에 대한 매핑을 재정의할 수 있습니다. **datetime**을 지정하는 경우 *bScale*은 3이어야 합니다. **smalldatetime**을 지정하는 경우 *bScale*은 0이어야 합니다. *Bscale* 이 *Wtype* 및 *pwszTypeName*와 일치 하지 않는 경우 DB_E_BADSCALE 반환 됩니다.  
   

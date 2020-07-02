@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 522672192ab955ced5987184ed2f6ea2812a431a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: eff6790875749a36e2178888ec446b1e81fb579c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827559"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773847"
 ---
 # <a name="sp_help_jobsteplog-transact-sql"></a>sp_help_jobsteplog(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   특정 에이전트 작업 단계 로그에 대 한 메타 데이터를 반환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **sp_help_jobsteplog** 은 실제 로그를 반환 하지 않습니다.  
 
@@ -73,7 +73,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>설명  
  **sp_help_jobsteplog** **msdb** 데이터베이스에 있습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
@@ -86,7 +86,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
  **SQLAgentUserRole** 의 멤버는 자신이 소유한 작업 단계에 대 한 작업 단계 로그 메타 데이터만 볼 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returns-job-step-log-information-for-all-steps-in-a-specific-job"></a>A. 특정 작업의 모든 단계에 대한 작업 단계 로그 정보 반환  
  다음 예에서는 `Weekly Sales Data Backup`이라는 작업에 관한 모든 작업 단계 로그 정보를 반환합니다.  

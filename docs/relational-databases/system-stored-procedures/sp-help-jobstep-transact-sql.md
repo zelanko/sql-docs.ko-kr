@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55fcc73b489a781601a2a6c5bbe139ee449cd60d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b7313e3784c5af9922fb5301b339087510a98e91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827569"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773836"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 자동화된 작업을 수행하는 데 사용하는 작업의 단계에 대한 정보를 반환합니다.  
   
@@ -65,14 +65,14 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**step_id**|**int**|단계의 고유 식별자입니다.|  
 |**step_name**|**sysname**|작업 단계의 이름입니다.|  
 |**하위**|**nvarchar(40)**|단계 명령을 실행할 하위 시스템입니다.|  
-|**명령**|**nvarchar(max)**|단계에서 실행할 명령입니다.|  
+|**command**|**nvarchar(max)**|단계에서 실행할 명령입니다.|  
 |**flags**|**int**|단계 동작을 제어하는 값의 비트 마스크입니다.|  
 |**cmdexec_success_code**|**int**|**CmdExec** 단계의 경우 성공한 명령의 프로세스 종료 코드입니다.|  
 |**on_success_action**|**tinyint**|단계가 성공할 경우 수행되는 동작입니다.<br /><br /> **1** = 성공 보고 작업을 종료 합니다.<br /><br /> **2** = 실패를 보고 하는 작업을 종료 합니다.<br /><br /> **3** = 다음 단계로 이동 합니다.<br /><br /> **4** = 단계로 이동 합니다.|  
 |**on_success_step_id**|**int**|**On_success_action** 이 4 인 경우 실행할 다음 단계를 나타냅니다.|  
 |**on_fail_action**|**tinyint**|단계가 실패할 경우 수행되는 작업입니다. 값은 **on_success_action**와 동일 합니다.|  
 |**on_fail_step_id**|**int**|**On_fail_action** 이 4 인 경우 실행할 다음 단계를 나타냅니다.|  
-|**서버인**|**sysname**|예약되어 있습니다.|  
+|**server**|**sysname**|예약되어 있습니다.|  
 |**database_name**|**sysname**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 단계의 경우 명령이 실행되는 데이터베이스입니다.|  
 |**database_user_name**|**sysname**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 단계의 경우 명령이 실행되는 데이터베이스 사용자 컨텍스트입니다.|  
 |**retry_attempts**|**int**|단계가 성공하지 못한 경우에 명령을 재시도할 최대 횟수입니다.|  
@@ -89,7 +89,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>설명  
  **sp_help_jobstep** **msdb** 데이터베이스에 있습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
@@ -102,7 +102,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
  **SQLAgentUserRole** 의 멤버는 자신이 소유한 작업에 대 한 작업 단계만 볼 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-return-information-for-all-steps-in-a-specific-job"></a>A. 특정 작업의 모든 단계에 관한 정보 반환  
  다음 예에서는 `Weekly Sales Data Backup`이라는 작업의 모든 작업 단계를 반환합니다.  

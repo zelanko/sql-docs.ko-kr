@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a5347750-224c-40d9-ae12-57e7213b7db9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6abe1290b0d635a615a4c83709a8e208bab2b487
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1de331740a0c67642de314155bfdd4ee53ef8f3f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813469"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773789"
 ---
 # <a name="ihpublishercolumns-transact-sql"></a>IHpublishercolumns(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **IHpublishercolumns** 시스템 테이블은 게시자에 저장 된 메타 데이터를 나타냅니다. 이 테이블은 현재 배포자를 사용하여 SQL Server 이외 게시자에서 복제된 각 열당 한 개의 행을 포함합니다. **IHpublishercolumns** 의 데이터 형식 정보는 데이터가 게시 되는 비 SQL Server DBMS (데이터베이스 관리 시스템)에만 적용 됩니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

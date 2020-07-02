@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 77007246-f10b-4b87-8edf-7afc3c2096af
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9035598991b846fa36edf17631b9d9bf9ec878e3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 57a3e336b5b3183d10a6284ecb19d84eabcf1b4d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832375"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773764"
 ---
 # <a name="ihpublishers-transact-sql"></a>IHpublishers(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **IHpublishers** 시스템 테이블에는 현재 배포자를 사용 하 여 SQL Server 없는 각 게시자에 대 한 행이 하나씩 포함 되어 있습니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82832375"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|SQL Server 이외 게시자를 식별합니다.|  
-|**공급업체**|**sysname**|SQL Server 이외 데이터베이스 공급업체의 이름입니다.|  
+|**업체인**|**sysname**|SQL Server 이외 데이터베이스 공급업체의 이름입니다.|  
 |**publisher_guid**|**uniqueidentifier**|SQL Server 이외 게시자를 식별하는 GUID입니다.|  
 |**flush_request_time**|**datetime**|로그 판독기 에이전트가 해당 메타데이터 캐시를 업데이트해야 하는 아티클 메타데이터의 마지막 변경 날짜 및 시간을 표시합니다.|  
 |**version**|**sysname**|SQL Server 이외 게시자의 버전을 나타내는 텍스트 문자열입니다.|  

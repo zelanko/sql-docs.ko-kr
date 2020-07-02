@@ -10,17 +10,17 @@ ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82e9e3b1ed8487e864e91edfd3067f9fb97bbb71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 73d448e1a012fd27de748e810940b598b2b89044
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303837"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773207"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>문자 변환을 처리 시 ODBC 드라이버 동작 변경
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] NATIVE Client ODBC 드라이버 (SQLNCLI11)가 SQL_WCHAR * (NCHAR/NVARCHAR/NVARCHAR (max)) 및 SQL_CHAR\* (CHAR/VARCHAR/NARCHAR (max)) 변환의 수행 방법을 변경 했습니다. SQLGetData, SQLBindCol, SQLBindParameter와 같은 ODBC 함수는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client ODBC 드라이버 사용 시 길이/표시기 매개 변수로 (-4) SQL_NO_TOTAL을 반환합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 드라이버는 길이 값을 반환했으며 이는 부정확할 수 있습니다.  
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]Native CLIENT ODBC 드라이버 (SQLNCLI11.dll)는 SQL_WCHAR * (NCHAR/nvarchar/nvarchar (max)) 및 SQL_CHAR \* (CHAR/VARCHAR/NARCHAR (max)) 변환의 수행 방법을 변경 했습니다. SQLGetData, SQLBindCol, SQLBindParameter와 같은 ODBC 함수는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client ODBC 드라이버 사용 시 길이/표시기 매개 변수로 (-4) SQL_NO_TOTAL을 반환합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 드라이버는 길이 값을 반환했으며 이는 부정확할 수 있습니다.  
   
 ## <a name="sqlgetdata-behavior"></a>SQLGetData 동작  
  여러 가지 Windows 기능을 사용하여 버퍼 크기를 0으로 지정할 수 있고 반환된 길이가 반환된 데이터의 크기가 됩니다. 다음 패턴은 Windows 프로그래머에 공통적입니다.  
@@ -57,7 +57,7 @@ SQLGetData(hstmt, SQL_WCHAR, ....., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempt
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 버전|길이 또는 표시기 결과|설명|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 이하|6|드라이버는 CHAR를 WCHAR로 변환하면 길이 * 2로 수행될 수 있다고 잘못 가정합니다.|  
-|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client(버전 11.0.2100.60) 이상|-4(SQL_NO_TOTAL)|드라이버는 더 이상 CHAR에서 WCHAR로 또는 WCHAR에서 CHAR로의 변환이 (곱하기) \*2 또는 (나누기)/2 동작 이라고 가정 하지 않습니다.<br /><br /> **SQLGetData** 를 호출 하면 더 이상 예상한 변환의 길이가 반환 되지 않습니다. 드라이버가 CHAR에서 WCHAR 또는 WCHAR에서 CHAR로 변환을 검색하고 잘못될 수 있는 *2 또는 /2 동작 대신 (-4) SQL_NO_TOTAL을 반환합니다.|  
+|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client(버전 11.0.2100.60) 이상|-4(SQL_NO_TOTAL)|드라이버는 더 이상 CHAR에서 WCHAR로 또는 WCHAR에서 CHAR로의 변환이 (곱하기) \* 2 또는 (나누기)/2 동작 이라고 가정 하지 않습니다.<br /><br /> **SQLGetData** 를 호출 하면 더 이상 예상한 변환의 길이가 반환 되지 않습니다. 드라이버가 CHAR에서 WCHAR 또는 WCHAR에서 CHAR로 변환을 검색하고 잘못될 수 있는 *2 또는 /2 동작 대신 (-4) SQL_NO_TOTAL을 반환합니다.|  
   
  **SQLGetData** 를 사용 하 여 데이터 청크를 검색 합니다. (의사 코드가 다음과 같이 표시됨)  
   

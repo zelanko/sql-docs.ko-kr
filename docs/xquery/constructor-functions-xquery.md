@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 105ba6fb68e8d8031858fcf54dddc56b655ddcea
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 56dd5919565d1cbb7d0b95ae4476aef9140cecd0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529209"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773709"
 ---
 # <a name="constructor-functions-xquery"></a>생성자 함수(XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   지정된 입력으로부터 생성자 함수는 XSD에 기본 제공되거나 사용자 정의 원자 유형의 항목을 만듭니다.  
   
@@ -135,7 +135,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
   
 -   인수가 다른 유형의 리터럴인 경우 식은 컴파일 중에 평가됩니다. 값이 유형 제약 조건에 만족하지 않는 경우 빈 시퀀스가 반환됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 항목에서는 AdventureWorks 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. dateTime() XQuery 함수를 사용하여 이전 제품 설명 검색  

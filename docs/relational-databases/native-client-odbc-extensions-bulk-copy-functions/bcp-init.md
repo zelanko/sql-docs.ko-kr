@@ -19,15 +19,15 @@ ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b8e40091f88c4e9fc739f125a2e44715e62c9ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19914bb99a2812035e6833b389a62e6ed3139463
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782691"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774259"
 ---
 # <a name="bcp_init"></a>bcp_init
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 대량 복사 작업을 초기화합니다.  
 
@@ -70,7 +70,7 @@ RETCODE bcp_init (
  SUCCEED 또는 FAIL  
   
 ## <a name="remarks"></a>설명  
- 다른 대량 복사 함수를 호출 하기 전에 **bcp_init** 를 호출 합니다. **bcp_init** 는 워크스테이션과 간의 데이터 대량 복사에 필요한 초기화를 수행 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ 다른 대량 복사 함수를 호출 하기 전에 **bcp_init** 를 호출 합니다. **bcp_init** 는 워크스테이션과 간의 데이터 대량 복사에 필요한 초기화를 수행 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  대량 복사 함수에서 사용 하도록 설정 된 ODBC 연결 핸들을 사용 하 여 **bcp_init** 함수를 제공 해야 합니다. 핸들을 사용 하도록 설정 하려면 SQL_COPT_SS_BCP 설정 된 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 를 사용 하 여 할당 되었지만 연결 되지 않은 연결 핸들을 SQL_BCP_ON 합니다. 연결된 핸들에 특성을 할당하려고 하면 오류가 발생합니다.  
   
@@ -84,7 +84,7 @@ RETCODE bcp_init (
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 복사 대상일 때는 데이터 파일의 데이터베이스 테이블에 있는 각 열에 데이터가 있어야 하며, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 복사 원본일 때는 데이터베이스 테이블, 뷰 또는 SELECT 결과 집합의 모든 열에서 데이터 파일로 데이터가 복사됩니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 복사 대상일 때는 데이터 파일에 있는 열의 서수 위치가 데이터베이스 테이블에 있는 열의 서수 위치와 동일해야 하며, 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]복사 하는 경우 **bcp_exec** 는 데이터베이스 테이블에서 열의 서 수 위치를 기준으로 데이터를 배치 합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 복사 대상일 때는 데이터 파일에 있는 열의 서수 위치가 데이터베이스 테이블에 있는 열의 서수 위치와 동일해야 하며, 에서 복사 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **bcp_exec** 는 데이터베이스 테이블에서 열의 서 수 위치를 기준으로 데이터를 배치 합니다.  
   
 -   데이터베이스 데이터 형식의 길이가 가변적 (예: **varbinary (22)**) 이거나 데이터베이스 열에 null 값이 포함 될 수 있는 경우 데이터 파일의 데이터 앞에 길이/null 표시기가 표시 됩니다. 표시자의 길이는 데이터 형식 및 대량 복사 버전에 따라 다릅니다.  
   

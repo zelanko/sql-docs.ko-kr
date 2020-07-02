@@ -11,24 +11,24 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a90863fb061912dd0a6c44fe23ba2baa402662c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08a88db90322a3618cc53e60113f5d17ce749ec9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301026"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773409"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>이전 SQL Server 버전 관련 새로운 날짜 및 시간 기능(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  이 항목에서는 향상 된 날짜 및 시간 기능을 사용 하는 클라이언트 응용 프로그램이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의와 통신할 때 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], 그리고 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client를 사용 하 여 컴파일한 클라이언트가 향상 된 날짜 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 및 시간 기능을 지 원하는 서버에 명령을 보내는 경우 예상 되는 동작에 대해 설명 합니다.  
+  이 항목에서는 향상 된 날짜 및 시간 기능을 사용 하는 클라이언트 응용 프로그램이 이전 버전의와 통신할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , 그리고 이전 버전의 Native client를 사용 하 여 컴파일한 클라이언트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 향상 된 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 날짜 및 시간 기능을 지 원하는 서버에 명령을 보내는 경우 예상 되는 동작에 대해 설명 합니다.  
   
 ## <a name="down-level-client-behavior"></a>하위 수준 클라이언트 동작  
- 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client를 사용 하는 클라이언트 응용 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 프로그램은 새로운 날짜/시간 형식을 **nvarchar** 열로 표시 합니다. 열의 내용은 리터럴 표현입니다. 자세한 내용은 [OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)의 "데이터 형식: 문자열 및 리터럴" 섹션을 참조 하세요. 열 크기는 열에 지정된 전체 자릿수에 대한 최대 리터럴 길이입니다.  
+ 이전 버전의 Native Client를 사용 하는 클라이언트 응용 프로그램은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 새로운 날짜/시간 형식을 **nvarchar** 열로 표시 합니다. 열의 내용은 리터럴 표현입니다. 자세한 내용은 [OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)의 "데이터 형식: 문자열 및 리터럴" 섹션을 참조 하세요. 열 크기는 열에 지정된 전체 자릿수에 대한 최대 리터럴 길이입니다.  
   
  카탈로그 Api는 클라이언트에 반환 된 하위 수준 데이터 형식 코드 (예: **nvarchar**)와 일치 하는 메타 데이터 및 관련 된 하위 수준 표현 (예: 적절 한 리터럴 형식)을 반환 합니다. 그러나 반환되는 데이터 형식의 이름은 실제 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 형식 이름입니다.  
   
- 날짜/시간 형식에 대 한 스키마가 변경 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 된 (또는 이후) 서버에 대해 하위 수준 클라이언트 응용 프로그램이 실행 되는 경우 예상 되는 동작은 다음과 같습니다.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]날짜/시간 형식에 대 한 스키마가 변경 된 (또는 이후) 서버에 대해 하위 수준 클라이언트 응용 프로그램이 실행 되는 경우 예상 되는 동작은 다음과 같습니다.  
   
 |OLE DB 클라이언트 형식|SQL Server 2005 형식|SQL Server 2008(또는 이후 버전) 형식|결과 변환(서버에서 클라이언트로)|매개 변수 변환(클라이언트에서 서버로)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
@@ -59,12 +59,12 @@ ms.locfileid: "81301026"
  ICommandWithParameters:: GetParameterInfo 또는 스키마 행 집합을 통해 얻은 서버 메타 데이터를 사용 하 여 ICommandWithParameters:: SetParameterInfo를 통해 매개 변수 형식 정보를 설정 하는 응용 프로그램은 원본 형식의 문자열 표현이 대상 형식의 문자열 표현 보다 큰 클라이언트를 변환 하는 동안 실패 합니다. 예를 들어 클라이언트 바인딩에서 DBTYPE_DBTIMESTAMP를 사용 하 고 서버 열이 날짜인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client는 값을 "yyyy-mm-dd-mm hh: mm: ss"로 변환 하지만 서버 메타 데이터는 **nvarchar (10)** 로 반환 됩니다. 결과 오버플로는 DBSTATUS_E_CATCONVERTVALUE를 유발합니다. 행 집합 메타 데이터는 결과 집합 메타 데이터에서 설정 되므로 IRowsetChange으로 데이터를 변환 하는 경우에도 유사한 문제가 발생 합니다.  
   
 ### <a name="parameter-and-rowset-metadata"></a>매개 변수 및 행 집합 메타데이터  
- 이 섹션에서는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용 하 여 컴파일된 클라이언트의 매개 변수, 결과 열 및 스키마 행 집합에 대 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]한 메타 데이터에 대해 설명 합니다.  
+ 이 섹션에서는 이전 버전의 Native Client를 사용 하 여 컴파일된 클라이언트의 매개 변수, 결과 열 및 스키마 행 집합에 대 한 메타 데이터에 대해 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 합니다.  
   
 #### <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  DBPARAMINFO 구조는 *Prgparaminfo* 매개 변수를 통해 다음 정보를 반환 합니다.  
   
-|매개 변수 형식|wType|ulParamSize|bPrecision|bScale|  
+|매개 변수 유형|wType|ulParamSize|bPrecision|bScale|  
 |--------------------|-----------|-----------------|----------------|------------|  
 |date|DBTYPE_WSTR|10|~0|~0|  
 |time|DBTYPE_WSTR|8, 10..16|~0|~0|  
@@ -100,7 +100,7 @@ ms.locfileid: "81301026"
 |datetimeoffset|DBTYPE_WSTR|26, 28.34|~0|~0|  
   
 ### <a name="schema-rowsets"></a>스키마 행 집합  
- 이 섹션에서는 새 데이터 형식의 매개 변수, 결과 열 및 스키마 행 집합에 대한 메타데이터에 대해 설명합니다. 이 정보는 클라이언트 공급자가 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client 이전의 도구를 사용 하 여 개발 된 경우에 유용 합니다.  
+ 이 섹션에서는 새 데이터 형식의 매개 변수, 결과 열 및 스키마 행 집합에 대한 메타데이터에 대해 설명합니다. 이 정보는 클라이언트 공급자가 Native Client 이전의 도구를 사용 하 여 개발 된 경우에 유용 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
 #### <a name="columns-rowset"></a>COLUMNS 행 집합  
  날짜/시간 형식에 대해 다음 열 값이 반환됩니다.  
@@ -129,7 +129,7 @@ ms.locfileid: "81301026"
 #### <a name="provider_types-rowset"></a>PROVIDER_TYPES 행 집합  
  날짜/시간 형식에 대해 다음 행이 반환됩니다.  
   
-|형식 -><br /><br /> 열|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
+|형식 -><br /><br /> Column|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |TYPE_NAME|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  
@@ -154,7 +154,7 @@ ms.locfileid: "81301026"
 |IS_FIXEDLENGTH|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
   
 ## <a name="down-level-server-behavior"></a>하위 수준 서버 동작  
- 이전 버전 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]의 서버에 연결 된 경우에는 새 서버 유형 이름 (예: ICommandWithParameters:: SetParameterInfo 또는 ITableDefinition:: CreateTable)을 사용 하려고 하면 DB_E_BADTYPENAME 발생 합니다.  
+ 이전 버전의 서버에 연결 된 경우에는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 새 서버 유형 이름 (예: ICommandWithParameters:: SetParameterInfo 또는 ITableDefinition:: CreateTable)을 사용 하려고 하면 DB_E_BADTYPENAME 발생 합니다.  
   
  새 형식이 형식 이름을 사용하지 않고 매개 변수 또는 결과에 바인딩되고, 새 형식을 사용하여 서버 유형을 암시적으로 지정하거나 서버 유형에서 클라이언트 유형으로의 유효한 변환이 없는 경우 DB_E_ERRORSOCCURRED가 반환되고 DBBINDSTATUS_UNSUPPORTED_CONVERSION이 Execute에 사용된 접근자에 대한 바인딩 상태로 설정됩니다.  
   

@@ -11,15 +11,15 @@ ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3bad30dbe0257d341ad91e2ed60bf698ca52dc8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 46cf671dd8a261130676c13dca09b1b9ad33a3c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81295862"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773325"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>열 및 스파스 열의 카탈로그 메타데이터 표시(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   이 예제에서는 세 개의 열(스파스 열, 스파스 열이 아닌 열, 열 집합 열)이 포함된 테이블을 만듭니다. 그런 다음 열 및 스파스가 아닌 열과 열 집합 열의 카탈로그 메타데이터를 보여 주는 OLE DB 플래그를 표시합니다.  
   

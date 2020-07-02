@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 683b181b-0091-4a9c-86db-bc577af43cec
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 61379adc04eddaf276fae37879674b63833b76e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c341ae73981eb0d06a2a1e64e804db9f81297fdd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67990140"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773750"
 ---
 # <a name="integration-services-tables-transact-sql"></a>Integration Services 테이블(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  이 섹션의 항목에서는에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]사용 하는 정보를 저장 하는 msdb 데이터베이스의 시스템 테이블에 대해 설명 합니다.  
+  이 섹션의 항목에서는에서 사용 하는 정보를 저장 하는 msdb 데이터베이스의 시스템 테이블에 대해 설명 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [sysssislog](../../relational-databases/system-tables/sysssislog-transact-sql.md)  

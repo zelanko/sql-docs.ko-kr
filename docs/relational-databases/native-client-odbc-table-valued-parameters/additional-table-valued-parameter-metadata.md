@@ -14,17 +14,17 @@ ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b52f83e36c315ccd86d1516df9e11b913c80ba8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b9777fb07714eb0d3c23c6ad4e9385921746771
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304541"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773485"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>추가 테이블 반환 매개 변수 메타데이터
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  응용 프로그램은 테이블 반환 매개 변수에 대 한 메타 데이터를 검색 하기 위해 SQLProcedureColumns를 호출 합니다. 테이블 반환 매개 변수의 경우 SQLProcedureColumns는 단일 행을 반환 합니다. 테이블 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]매개 변수와 연결 된 테이블 형식에 대 한 스키마 및 카탈로그 정보를 제공 하기 위해 두 개의 추가 열 SS_TYPE_CATALOG_NAME 및 SS_TYPE_SCHEMA_NAME가 추가 되었습니다. ODBC 사양에 따라 SS_TYPE_CATALOG_NAME 및 SS_TYPE_SCHEMA_NAME은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 추가된 모든 드라이버별 열 앞에, 그리고 ODBC 자체에서 지정한 모든 열 뒤에 표시됩니다.  
+  응용 프로그램은 테이블 반환 매개 변수에 대 한 메타 데이터를 검색 하기 위해 SQLProcedureColumns를 호출 합니다. 테이블 반환 매개 변수의 경우 SQLProcedureColumns는 단일 행을 반환 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]테이블 반환 매개 변수와 연결 된 테이블 형식에 대 한 스키마 및 카탈로그 정보를 제공 하기 위해 두 개의 추가 열 SS_TYPE_CATALOG_NAME 및 SS_TYPE_SCHEMA_NAME가 추가 되었습니다. ODBC 사양에 따라 SS_TYPE_CATALOG_NAME 및 SS_TYPE_SCHEMA_NAME은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 추가된 모든 드라이버별 열 앞에, 그리고 ODBC 자체에서 지정한 모든 열 뒤에 표시됩니다.  
   
  다음 표에서는 테이블 반환 매개 변수에서 중요한 열을 나열합니다.  
   

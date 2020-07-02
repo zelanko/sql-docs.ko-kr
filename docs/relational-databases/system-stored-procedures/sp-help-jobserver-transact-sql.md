@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f16eb9ad600537ec5b7afe63474f78769c1b810b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 155f56340925a1c2c2d6a095085203492f20f016
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827580"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773850"
 ---
 # <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   주어진 작업의 서버에 관한 정보를 반환합니다.  
   
@@ -73,7 +73,7 @@ sp_help_jobserver
 |**last_outcome_message**|**nvarchar(1024)**|작업의 마지막 결과에 대해 설명합니다.|  
 |**last_run_outcome**|**int**|해당 서버에서 작업이 마지막으로 실행되었을 때의 결과입니다.<br /><br /> **0** = 실패<br /><br /> **1** = 성공<br /><br /> **3** = 취소 됨<br /><br /> **5** = 알 수 없음|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
@@ -86,7 +86,7 @@ sp_help_jobserver
   
  **SQLAgentUserRole** 의 멤버는 자신이 소유 하 고 있는 작업에 대 한 정보만 볼 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 마지막 실행 정보를 포함하여 `NightlyBackups` 작업에 대한 정보를 반환합니다.  
   
 ```  

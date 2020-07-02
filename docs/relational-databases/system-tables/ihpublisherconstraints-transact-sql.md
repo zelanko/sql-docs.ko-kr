@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 537b1e1a-7228-4680-aa27-5ad7072ea01e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f8b7409a15c9e8f3df4991b2b7d20737f5cd82c6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fa87169a0988336e8a00537a76126120fb95d196
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813343"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773773"
 ---
 # <a name="ihpublisherconstraints-transact-sql"></a>IHpublisherconstraints(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **IHpublisherconstraints** 시스템 테이블은 현재 배포자를 사용 하 여 SQL Server 이외 게시자에서 복제 된 각 제약 조건에 대해 하나의 행을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

@@ -11,19 +11,19 @@ ms.assetid: e65c9253-bd99-4dc3-9cb8-7613f754c966
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ab4d4956f4a5c54807afd316242cd95ddf6ee7e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 94bb860df5a9ee2f3b125f6e05c6ff5adb44db99
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301001"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773427"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>날짜 및 시간 기능 향상을 위한 OLE DB API 지원
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   다음 OLE DB API는 향상된 날짜/시간 기능을 지원합니다.  
   
-|함수|Description|  
+|함수|설명|  
 |--------------|-----------------|  
 |IAccessor::CreateAccessor|애플리케이션에서 **datetime**, **datetime2** 및 **smalldatetime** 값을 구분할 수 있도록 DBBINDING 구조체에 플래그가 추가됩니다. 자세한 내용은 [매개 변수 및 행 집합 메타데이터](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)를 참조하세요.|  
 |IBCPSession::BCPColFmt|자세한 내용은 [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 내용 &#40;OLE DB 및 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)를 참조 하세요.|  

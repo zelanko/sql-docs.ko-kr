@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 30ffe0203b3f9aacf23d811e48e6e6d8094a4ee2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 34cc7495b526b75f8da55046393aa45f3fd9a518
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827612"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773871"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]가 자동화된 작업을 수행하는 데 사용하는 작업의 일정에 관한 정보를 반환합니다.  
  
@@ -77,18 +77,18 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**active_start_time**|**int**|일정을 시작하는 시간입니다.|  
 |**active_end_time**|**int**|일정을 종료하는 시간입니다.|  
 |**date_created**|**datetime**|일정을 만든 날짜입니다.|  
-|**schedule_description**|**nvarchar(4000)**|**Msdb**의 값에서 파생 된 일정에 대 한 영어 설명입니다. *Include_description* **0**인 경우이 열에는 설명이 요청 되지 않았음을 나타내는 텍스트가 포함 됩니다.|  
+|**schedule_description**|**nvarchar(4000)**|**msdb.dbo.sys일정**의 값에서 파생 된 일정에 대 한 영어 설명입니다. *Include_description* **0**인 경우이 열에는 설명이 요청 되지 않았음을 나타내는 텍스트가 포함 됩니다.|  
 |**next_run_date**|**int**|일정이 다음에 작업을 실행할 날짜입니다.|  
 |**next_run_time**|**int**|일정이 다음에 작업을 실행할 시간입니다.|  
 |**schedule_uid**|**uniqueidentifier**|일정에 대한 식별자입니다.|  
 |**job_count**|**int**|반환된 작업 수입니다.|  
   
-> **참고: sp_help_jobschedule** **은 (는**) **dbo. sysjobschedules** 및 **dbo. sys일정** 시스템 테이블의 값을 반환 합니다. **sysjobschedules** 분 마다 업데이트를 예약 합니다. 이는 저장 프로시저에서 반환하는 값에 영향을 줄 수 있습니다.  
+> **참고: sp_help_jobschedule** 은 **dbo.sysjobschedules**dbo.sys**에서 시스템**테이블을 **예약** 합니다. **sysjobschedules** 분 마다 업데이트를 예약 합니다. 이는 저장 프로시저에서 반환하는 값에 영향을 줄 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
  **Sp_help_jobschedule** 매개 변수는 특정 조합 에서만 사용할 수 있습니다. *Schedule_id* 지정 된 경우에는 *job_id* 와 *job_name* 를 지정할 수 없습니다. 그렇지 않으면 *job_id* 또는 *job_name* 매개 변수를 *schedule_name*와 함께 사용할 수 있습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
@@ -101,7 +101,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
  **SQLAgentUserRole** 의 멤버는 자신이 소유한 작업 일정 속성만 볼 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-the-job-schedule-for-a-specific-job"></a>A. 특정 작업에 대한 작업 일정 반환  
  다음 예에서는 `BackupDatabase`라는 작업에 관한 일정 정보를 반환합니다.  
