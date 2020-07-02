@@ -13,15 +13,15 @@ ms.assetid: 430c029d-f8c1-4de7-a9dd-330e9b6bfc20
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a776392c756f033ec35c5abcc9e5f882941de3a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8b6c0077bfc59a05a044dde85cd676a2f8e1c06
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306214"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774363"
 ---
 # <a name="odbc-api-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 ODBC API 지원
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   다음 ODBC API는 향상된 날짜 및 시간 기능을 지원합니다.  
   

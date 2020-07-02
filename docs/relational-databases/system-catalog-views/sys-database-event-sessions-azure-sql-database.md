@@ -9,15 +9,15 @@ ms.assetid: 02c2cd71-d35e-4d4c-b844-92b240f768f4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 7384cf9bfcf08f307a4e81cb0cdebe78e8011ea3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2246ea5cb32aed2c49aa5d7a609362c9dffd1d73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823542"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785031"
 ---
 # <a name="sysdatabase_event_sessions-azure-sql-database"></a>sys.database_event_sessions(Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   현재 데이터베이스에 있는 이벤트 세션 정의를 모두 나열 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 합니다.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "82823542"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|이벤트 세션의 고유한 ID입니다. Null을 허용하지 않습니다.|  
 |name|**sysname**|이벤트 세션을 식별하기 위한 사용자 정의 이름입니다. 이름은 고유 합니다. Null을 허용하지 않습니다.|  
-|event_retention_mode|**nchar(1)**|이벤트 손실의 처리 방식을 결정합니다. 기본값은 S이며 Null을 허용하지 않습니다. 다음 중 하나일 수 있습니다.<br /><br /> S.는 Event_retention_mode_desc = ALLOW_SINGLE_EVENT_LOSS에 매핑됩니다.<br /><br /> 13. Event_retention_mode_desc = ALLOW_MULTIPLE_EVENT_LOSS에 매핑됩니다.<br /><br /> 14. Event_retention_mode_desc = NO_EVENT_LOSS에 매핑됩니다.|  
+|event_retention_mode|**nchar(1)**|이벤트 손실의 처리 방식을 결정합니다. 기본값은 S이며 Null을 허용하지 않습니다. 다음 중 하나일 수 있습니다.<br /><br /> S. Event_retention_mode_desc = ALLOW_SINGLE_EVENT_LOSS에 매핑됩니다.<br /><br /> 13. Event_retention_mode_desc = ALLOW_MULTIPLE_EVENT_LOSS에 매핑됩니다.<br /><br /> 14. Event_retention_mode_desc = NO_EVENT_LOSS에 매핑됩니다.|  
 |event_retention_mode_desc|**sysname**|이벤트 손실의 처리 방식을 설명합니다. 기본값은 ALLOW_SINGLE_EVENT_LOSS이며 Null을 허용하지 않습니다. 다음 중 하나일 수 있습니다.<br /><br /> ALLOW_SINGLE_EVENT_LOSS. 여러 이벤트가 세션에서 손실될 수 있습니다. 모든 이벤트 버퍼가 가득 찬 경우에만 한 개의 이벤트가 삭제됩니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 허용되는 성능 특성으로, 처리된 이벤트 스트림에서 데이터가 손실되는 것을 최소화합니다.<br /><br /> ALLOW_MULTIPLE_EVENT_LOSS. 가득 찬 이벤트 버퍼가 세션에서 손실될 수 있습니다. 손실되는 이벤트 수는 세션에 할당된 메모리 크기, 메모리 분할 및 버퍼에 있는 이벤트의 크기에 따라 달라집니다. 이 옵션은 이벤트 버퍼가 빠른 속도로 채워질 때 서버에 미치는 영향을 최소화하지만 많은 수의 이벤트가 세션에서 손실될 수 있습니다.<br /><br /> NO_EVENT_LOSS. 이벤트 손실이 허용되지 않습니다. 이 옵션을 사용하면 발생한 모든 이벤트가 보존되며, 이벤트 버퍼에 사용 가능한 공간이 생길 때까지 이벤트를 발생시키는 모든 태스크가 대기합니다. 따라서 이벤트 세션이 활성 상태인 동안에는 성능이 저하될 수 있습니다.|  
 |max_dispatch_latency|**int**|이벤트가 세션 대상에 전달되기 전에 메모리에 버퍼링될 시간(밀리초)을 나타냅니다. 유효한 값은 -1과 1 - 2147483648 범위의 숫자입니다. 값 -1은 발송 대기 시간이 무한대임을 나타냅니다. Null을 허용합니다.|  
 |max_memory|**int**|이벤트 버퍼링을 위해 세션에 할당되는 최대 메모리 양을 나타내며 기본값은 4MB입니다. Null을 허용합니다.|  

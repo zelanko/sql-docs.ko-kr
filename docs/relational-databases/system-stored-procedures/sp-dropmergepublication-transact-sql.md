@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27fb3a99167dce450a3d4f50e9d19036db8d896f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ff7b235f27b11749673019de222d555d57f364c1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830080"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783819"
 ---
 # <a name="sp_dropmergepublication-transact-sql"></a>sp_dropmergepublication(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   병합 게시 및 이와 연관된 스냅샷 에이전트를 삭제합니다. 병합 게시를 삭제하기 전에 반드시 모든 구독을 삭제해야 합니다. 게시에 있는 아티클은 자동으로 삭제됩니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -56,7 +56,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
   
  **sp_dropmergepublication** 는 게시와 연결 된 모든 아티클을 재귀적으로 삭제 한 다음 게시 자체를 삭제 합니다. 게시에 구독이 한 개 이상 있는 경우에는 게시를 제거할 수 없습니다. 구독을 제거 하는 방법에 대 한 자세한 내용은 [delete a Push subscription](../../relational-databases/replication/delete-a-push-subscription.md) 및 [Delete a Pull subscription](../../relational-databases/replication/delete-a-pull-subscription.md)을 참조 하세요.  
   
- 게시를 삭제 하기 위해 **sp_dropmergepublication** 를 실행 해도 게시 데이터베이스의 게시 된 개체 또는 구독 데이터베이스의 해당 개체는 제거 되지 않습니다. \<필요한 경우 DROP object>를 사용 하 여 이러한 개체를 수동으로 제거 합니다.  
+ 게시를 삭제 하기 위해 **sp_dropmergepublication** 를 실행 해도 게시 데이터베이스의 게시 된 개체 또는 구독 데이터베이스의 해당 개체는 제거 되지 않습니다. \<object>필요한 경우 DROP을 사용 하 여 이러한 개체를 수동으로 제거 합니다.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_dropmergepublication](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepublication-_1.sql)]  

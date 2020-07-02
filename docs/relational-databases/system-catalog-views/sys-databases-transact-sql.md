@@ -20,16 +20,16 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05901a97ea85deb6f45b5ee440d0eefaac1c8fd6
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 7bc0873bcafa37c0fa35118fcd033caae2049449
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529380"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785008"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 각 데이터베이스당 한 개의 행을 포함합니다.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "84529380"
   
  새 데이터베이스가 만들어지는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 서버의 `master` 데이터베이스에서 `sys.databases` 뷰를 사용합니다. 데이터베이스 복사가 시작 된 후 `sys.databases` `sys.dm_database_copies` 대상 서버의 데이터베이스에서 및 뷰를 쿼리하여 `master` 복사 진행에 대 한 자세한 정보를 검색할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-query-the-sysdatabases-view"></a>A. sys.databases 뷰 쿼리
 

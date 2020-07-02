@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bd1d131fadf2fb594b9ad2799791313d0136f39b
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: dc2a85c48e404fa717b001482bbe5fc8f8356e99
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689767"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775494"
 ---
 # <a name="numeric-values-functions---ceiling"></a>숫자 값 함수 - ceiling 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   소수점 부분이 없이 해당 인수의 값보다 작지 않은 가장 작은 수를 반환합니다. 인수가 빈 시퀀스이면 빈 시퀀스가 반환됩니다.  
   
@@ -48,7 +48,7 @@ fn:ceiling ( $arg as numeric?) as numeric?
   
  다른 유형을 사용하면 정적 오류가 발생합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 항목에서는 AdventureWorks 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
   
 ### <a name="a-using-the-ceiling-xquery-function"></a>A. ceiling() XQuery 함수 사용  
@@ -76,9 +76,9 @@ WHERE ProductModelID=7
   
 -   **명령은** **xml** 유형 열입니다. 따라서 [query () 메서드 (XML 데이터 형식)](../t-sql/xml/query-method-xml-data-type.md) 는 XQuery를 지정 하는 데 사용 됩니다. XQuery 문은 쿼리 메서드에 대한 인수로 지정됩니다.  
   
--   **... return** 은 루프 구문입니다. 쿼리에서 **for** 루프는 \< 요소> 위치 목록을 식별 합니다. **For** 루프의 **return** 문은 각 작업 센터 위치에 대해 생성 될 XML을 설명 합니다.  
+-   **... return** 은 루프 구문입니다. 쿼리에서 **for** 루프는 요소 목록을 식별 \<Location> 합니다. **For** 루프의 **return** 문은 각 작업 센터 위치에 대해 생성 될 XML을 설명 합니다.  
   
-    -   \<LocationID 및 LaborHrs 특성이 있는 위치> 요소입니다. 중괄호({ }) 안에 있는 해당 식은 문서에서 필요한 값을 검색합니다.  
+    -   \<Location>LocationID 및 LaborHrs 특성이 있는 요소입니다. 중괄호({ }) 안에 있는 해당 식은 문서에서 필요한 값을 검색합니다.  
   
     -   {$ i/@LotSize } 식은 문서에서 LotSize 특성 (있는 경우)을 검색 합니다.  
   

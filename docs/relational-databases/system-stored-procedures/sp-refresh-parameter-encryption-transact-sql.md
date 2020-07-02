@@ -19,15 +19,15 @@ ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 47f622c287eb0e32e1c5db2d33b64af2de3e379b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 87b905aa178aec6aa10d4d7585384183bdb5d6c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833147"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783012"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 현재 데이터베이스에서 지정 된 비 스키마 바운드 저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거의 매개 변수에 대 한 Always Encrypted 메타 데이터를 업데이트 합니다. 
 
@@ -80,7 +80,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 절로 정의 된 모듈의 경우 `EXECUTE AS` `IMPERSONATE` 지정 된 보안 주체에 대 한 권한이 필요 합니다. 일반적으로를 사용 하 여 모듈을 정의 하지 않으면 개체를 새로 고치면 해당 보안 주체가 변경 되지 않으며 `EXECUTE AS` , `EXECUTE AS USER` 보안 주체의 사용자 이름이 모듈이 생성 될 때와 다른 사용자로 확인 됩니다.
  
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 다음 예에서는 테이블 및 테이블을 참조 하는 프로시저를 만들고 Always Encrypted 구성한 다음 테이블을 변경 하 고 프로시저를 실행 하는 방법을 보여 줍니다 `sp_refresh_parameter_encryption` .  
 

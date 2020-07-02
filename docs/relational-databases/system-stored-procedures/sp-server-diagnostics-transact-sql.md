@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 044b5e79ba558dd5bb38331d9b2a07410a3a50de
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 6524de89a96f64d2eed6a9f01b38b492ffb0fc04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84294010"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783743"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 잠재적 오류를 감지하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 진단 데이터 및 상태 정보를 캡처합니다. 이 프로시저는 반복 모드로 실행되며 주기적으로 결과를 보냅니다. 일반 연결 또는 DAC 연결에서 호출할 수 있습니다.  
   
@@ -59,7 +59,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |열|데이터 형식|Description|  
 |------------|---------------|-----------------|  
 |**create_time**|**datetime**|행 만들기의 타임스탬프를 나타냅니다. 단일 행 집합의 각 행은 타임스탬프가 같습니다.|  
-|**component_type**|**sysname**|행에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 수준 구성 요소 또는 Always On 가용성 그룹에 대 한 정보가 포함 되어 있는지 여부를 나타냅니다.<br /><br /> 인스턴스<br /><br /> Always On: AvailabilityGroup|  
+|**component_type**|**sysname**|행에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 수준 구성 요소 또는 Always On 가용성 그룹에 대 한 정보가 포함 되어 있는지 여부를 나타냅니다.<br /><br /> instance<br /><br /> Always On: AvailabilityGroup|  
 |**component_name**|**sysname**|구성 요소의 이름이나 가용성 그룹의 이름을 나타냅니다.<br /><br /> 시스템<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> events<br /><br /> *\<name of the availability group>*|  
 |**상태**|**int**|구성 요소의 상태를 나타냅니다.<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|state 열을 설명합니다. state 열의 값에 해당하는 설명은 다음과 같습니다.<br /><br /> 0: 알 수 없음<br /><br /> 1: 정리<br /><br /> 2: 경고<br /><br /> 3: 오류|  
@@ -100,7 +100,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="permissions"></a>사용 권한  
 을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 상태 정보를 캡처하여 SQL Server 외부에 있는 파일에 저장하려면 확장 세션을 사용하는 것이 가장 좋습니다. 이렇게 하면 오류가 발생한 경우에도 계속 액세스할 수 있습니다. 다음 예에서는 이벤트 세션의 출력을 파일에 저장합니다.  
 ```sql  
 CREATE EVENT SESSION [diag]  

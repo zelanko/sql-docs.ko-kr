@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: be7d8a59-3c00-4f1b-b4b0-3dcd5572e002
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c834b8cbcff9ff86f42a2fbd921195c740e22aa2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: da5fdbf9cded1ea58e3d1dc2ab29cea6df0e9693
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832741"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775224"
 ---
 # <a name="sysserver_trigger_events-transact-sql"></a>sys.server_trigger_events(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   서버 수준(동기) 트리거가 시작되는 이벤트마다 한 행이 포함됩니다.  
   

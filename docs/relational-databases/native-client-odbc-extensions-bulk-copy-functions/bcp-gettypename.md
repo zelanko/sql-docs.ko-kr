@@ -18,15 +18,15 @@ ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2752a1708c5727567de470b49d4cbcc63f90923
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 12c4be2e1145d488ed057df5b206042b31bdb5b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782650"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774279"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   지정한 BCP 유형 토큰의 SQL 유형 이름을 반환합니다.  
   
@@ -72,7 +72,7 @@ RETCODE bcp_gettypename (
 |**SQLVARCHAR**|아니요|**varchar**|  
 |**SQLTEXT**|여기서는|**text**|  
 |**SQLBIGBINARY**|아니요|**binary**|  
-|**SQLBINARY**|아니요|**바이너리**|  
+|**SQLBINARY**|아니요|**이진**|  
 |**SQLBIGVARBINARY**|아니요|**Varbinary**|  
 |**SQLVARBINARY**|아니요|**Varbinary**|  
 |**SQLIMAGE**|여기서는|**이미지**|  
@@ -82,7 +82,7 @@ RETCODE bcp_gettypename (
 |**SQLFLTN**|여기서는|**float-null**|  
 |**SQLAOPSUM**|여기서는|**총합**|  
 |**SQLAOPAVG**|여기서는|**매출**|  
-|**SQLAOPCNT**|여기서는|**Count**|  
+|**SQLAOPCNT**|여기서는|**개수**|  
 |**SQLAOPMIN**|여기서는|**일별**|  
 |**SQLAOPMAX**|여기서는|**최대값**|  
 |**SQLDATETIM4**|여기서는|**smalldatetime**|  

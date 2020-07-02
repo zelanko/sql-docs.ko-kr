@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3dd772a1519ea856cac0302d31be9eb7d0f9d782
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df0cbdda40b8e473ce81bf95b7c38e1cd2ec75c0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283227"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783680"
 ---
 # <a name="sysmail_update_account_sp-transact-sql"></a>sysmail_update_account_sp(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   기존 데이터베이스 메일 계정의 정보를 변경합니다.  
  
@@ -64,7 +64,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @description = ] 'description'`계정에 대 한 새 설명입니다. *description* 은 **nvarchar (256)** 이며 기본값은 NULL입니다.  
   
-`[ @mailserver_name = ] 'server_name'`이 계정에 사용할 SMTP 메일 서버의 새 이름입니다. 를 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 컴퓨터에서 IP 주소에 대 한 *server_name* 를 확인할 수 있어야 합니다. *server_name* 는 **sysname**이며 기본값은 없습니다.  
+`[ @mailserver_name = ] 'server_name'`이 계정에 사용할 SMTP 메일 서버의 새 이름입니다. 를 실행 하는 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] IP 주소에 대 한 *server_name* 를 확인할 수 있어야 합니다. *server_name* 는 **sysname**이며 기본값은 없습니다.  
   
 `[ @mailserver_type = ] 'server_type'`메일 서버의 새 형식입니다. *server_type* 는 **sysname**이며 기본값은 없습니다. **' SMTP '** 값만 지원 됩니다.  
   
@@ -76,7 +76,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @password = ] 'password'`메일 서버에 로그온 하는 데 사용할 새 암호입니다. *password* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @use_default_credentials = ] use_default_credentials`[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 서비스의 자격 증명을 사용 하 여 메일을 SMTP 서버로 보낼지 여부를 지정 합니다. **use_default_credentials** 은 bit 이며 기본값은 없습니다. 이 매개 변수가 1이면 데이터베이스 메일은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 자격 증명을 사용합니다. 이 매개 변수가 0 이면 데이터베이스 메일는 SMTP 서버의 인증에 ** \@사용자 이름과** ** \@암호** 를 사용 합니다. ** \@사용자 이름** 및 ** \@암호가** NULL 이면 익명 인증을 사용 합니다. 이 매개 변수를 지정하기 전에 해당 SMTP 관리자에게 문의하세요.  
+`[ @use_default_credentials = ] use_default_credentials`서비스의 자격 증명을 사용 하 여 메일을 SMTP 서버로 보낼지 여부를 지정 합니다 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . **use_default_credentials** 은 bit 이며 기본값은 없습니다. 이 매개 변수가 1이면 데이터베이스 메일은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 자격 증명을 사용합니다. 이 매개 변수가 0 이면 데이터베이스 메일는 SMTP 서버의 인증에 ** \@ 사용자 이름과** ** \@ 암호** 를 사용 합니다. ** \@ 사용자 이름** 및 ** \@ 암호가** NULL 이면 익명 인증을 사용 합니다. 이 매개 변수를 지정하기 전에 해당 SMTP 관리자에게 문의하세요.  
   
 `[ @enable_ssl = ] enable_ssl`데이터베이스 메일 TLS (Transport Layer Security)를 사용 하 여 통신을 암호화할지 여부를 지정 합니다 (이전에는 SSL (SSL(Secure Sockets Layer))). SMTP 서버에 TLS가 필요한 경우이 옵션을 사용 합니다. **enable_ssl** 은 bit 이며 기본값은 없습니다.  
   
@@ -91,10 +91,10 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-changing-the-information-for-an-account"></a>A. 계정에 대한 정보 변경  
- 다음 예에서는 **msdb** 데이터베이스의 `AdventureWorks Administrator` 계정을 업데이트 합니다. 계정에 대한 정보는 제공된 값으로 설정됩니다.  
+ 다음 예에서는 `AdventureWorks Administrator` **msdb** 데이터베이스의 계정을 업데이트 합니다. 계정에 대한 정보는 제공된 값으로 설정됩니다.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_account_sp  

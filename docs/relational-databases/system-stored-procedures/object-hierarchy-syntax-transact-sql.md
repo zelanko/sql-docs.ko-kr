@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3405621d604e6450756520f6d93b66a51d4d66c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5cd7b04ebf16ce11791bf1d7caeb0d1012c5d9e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67941982"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783049"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>개체 계층 구조 구문(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Sp_OAGetProperty 및 sp_OASetProperty의 *propertyname* 매개 변수와 sp_OAMethod의 *methodname* 매개 변수는와 유사한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]개체 계층 구조 구문을 지원 합니다. 이 특수 구문을 사용할 때 이러한 매개 변수는 다음과 같은 일반적인 형식을 갖습니다.  
+  Sp_OAGetProperty 및 sp_OASetProperty의 *propertyname* 매개 변수와 sp_OAMethod의 *methodname* 매개 변수는와 유사한 개체 계층 구조 구문을 지원 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . 이 특수 구문을 사용할 때 이러한 매개 변수는 다음과 같은 일반적인 형식을 갖습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -67,7 +67,7 @@ ms.locfileid: "67941982"
   
  HRESULT 반환 코드에 대 한 자세한 내용은 [sp_OACreate &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md)를 참조 하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음은 SQL-DMO SQLServer 개체를 사용하는 개체 계층 구문의 예입니다.  
   
 ```  

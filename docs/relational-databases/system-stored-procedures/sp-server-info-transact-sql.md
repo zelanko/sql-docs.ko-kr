@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a83d216b0830b035da72ad579a2448a12f41adba
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a711624214b262560766f49e8294b36291ad9d91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810514"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783728"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 데이터베이스 게이트웨이 또는 기본 데이터 원본에 대해 특성 이름의 목록과 특성 값을 반환합니다.  
   
@@ -65,8 +65,8 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**13**|TABLE_LENGTH<br /><br /> 테이블 이름에 사용할 수 있는 최대 문자 수를 나타냅니다.|128|  
 |**14**|MAX_QUAL_LENGTH<br /><br /> 테이블 한정자 이름(세 부분으로 구성된 테이블 이름의 첫 번째 부분)에 사용할 수 있는 최대 길이를 나타냅니다.|128|  
 |**15**|COLUMN_LENGTH<br /><br /> 열 이름에 사용할 수 있는 최대 문자 수를 나타냅니다.|128|  
-|**x**|IDENTIFIER_CASE<br /><br /> 데이터베이스 내의 테이블, 열, 저장 프로시저(시스템 카탈로그 내의 개체)의 사용자 정의 이름에 대한 대/소문자 구분 여부를 나타냅니다.|SENSITIVE|  
-|**17@@**|TX_ISOLATION<br /><br /> 서버가 가정하는 초기 트랜잭션 격리 수준을 나타냅니다. 이 값은 SQL-92에 정의된 격리 수준에 해당합니다.|2|  
+|**16**|IDENTIFIER_CASE<br /><br /> 데이터베이스 내의 테이블, 열, 저장 프로시저(시스템 카탈로그 내의 개체)의 사용자 정의 이름에 대한 대/소문자 구분 여부를 나타냅니다.|SENSITIVE|  
+|**17**|TX_ISOLATION<br /><br /> 서버가 가정하는 초기 트랜잭션 격리 수준을 나타냅니다. 이 값은 SQL-92에 정의된 격리 수준에 해당합니다.|2|  
 |**개가**|COLLATION_SEQ<br /><br /> 해당 서버의 문자 집합 순서를 나타냅니다.|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**mb**|SAVEPOINT_SUPPORT<br /><br /> 기본 DBMS가 명명된 저장점을 지원하는지를 나타냅니다.|지원|  
 |**720**|MULTI_RESULT_SETS<br /><br /> 기본 데이터베이스 또는 게이트웨이가 여러 결과 집합을 지원하는지를 나타냅니다. 지원될 경우 게이트웨이를 통해 여러 결과 집합을 클라이언트에 반환하는 여러 문을 보낼 수 있습니다.|지원|  
@@ -90,7 +90,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ## <a name="remarks"></a>설명  
  **sp_server_info** 은 ODBC에서 **SQLGetInfo** 가 제공 하는 정보의 하위 집합을 반환 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  

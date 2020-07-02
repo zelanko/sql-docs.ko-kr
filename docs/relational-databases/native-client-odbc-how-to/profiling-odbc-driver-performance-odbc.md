@@ -11,15 +11,15 @@ ms.assetid: 0e6d7aed-28d2-419e-be6a-f60d3729bfd0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ed94b29d03fd2b95294bed28201b3bd3b63df45
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 31329a2612e4744badcbe9605c22af4761e51cfe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281998"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783282"
 ---
 # <a name="profiling-odbc-driver-performance-odbc"></a>ODBC 드라이버 성능 프로파일링(ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버에는 드라이버의 성능을 프로파일링하기 위한 두 개의 드라이버 관련 옵션이 있습니다.  
   

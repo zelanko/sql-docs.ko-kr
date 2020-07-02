@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58cb9c4b35329a24db954460097dca5f7d87e4f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8ba54cf16819164bb8d356cae0a5a1b7569a373
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68120258"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783925"
 ---
 # <a name="sysfn_get_sql-transact-sql"></a>sys.fn_get_sql(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정된 SQL 핸들에 대한 SQL 문의 텍스트를 반환합니다.  
   
@@ -55,7 +55,7 @@ sys.fn_get_sql ( SqlHandle )
   
 ## <a name="tables-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |dbid|**smallint**|데이터베이스 ID입니다. 임시 및 준비된 SQL 문의 경우 문이 컴파일된 데이터베이스의 ID입니다.|  
 |objectid|**int**|데이터베이스 개체의 ID입니다. 임시 SQL 문의 경우 NULL입니다.|  
@@ -68,7 +68,7 @@ sys.fn_get_sql ( SqlHandle )
   
  더 이상 캐시에 존재 하지 않는 핸들을 전달 하는 경우 fn_get_sq**l** 에서 빈 결과 집합을 반환 합니다. 유효하지 않은 핸들을 전달하는 경우 일괄 처리가 중지되고 오류 메시지가 반환됩니다.  
   
- 는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 8 KB 보다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 큰 문자열 리터럴을 사용 하 여 대량 복사 문 및 문과 같은 일부 문을 캐시할 수 없습니다. 이러한 문에 대한 핸들은 fn_get_sql을 사용하여 검색할 수 없습니다.  
+ 는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 8 KB 보다 큰 문자열 리터럴을 사용 하 여 대량 복사 문 및 문과 같은 일부 문을 캐시할 수 없습니다. 이러한 문에 대한 핸들은 fn_get_sql을 사용하여 검색할 수 없습니다.  
   
  암호를 포함할 수 있는 텍스트에 대해 결과 집합의 **텍스트** 열이 필터링 됩니다. 모니터링 되지 않는 보안 관련 저장 프로시저에 대 한 자세한 내용은 [추적 필터링](../../relational-databases/sql-trace/filter-a-trace.md)을 참조 하세요.  
   
@@ -81,7 +81,7 @@ sys.fn_get_sql ( SqlHandle )
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 VIEW SERVER STATE 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  데이터베이스 관리자는 다음 예에서처럼 fn_get_sql 함수를 사용하여 문제점 진단 프로세스에 도움을 줄 수 있습니다. 관리자는 문제점이 있는 세션 ID를 식별한 후에 해당 세션에 대한 SQL 핸들을 검색하고 해당 핸들을 사용하여 fn_get_sql 함수를 호출하고 시작 및 종료 오프셋을 사용하여 문제점이 있는 세션 ID의 SQL 텍스트를 확인할 수 있습니다.  
   
 ```  
@@ -95,7 +95,7 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [DBCC INPUTBUFFER &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
- [sysprocesses &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [Transact-sql&#41;&#40;프로세스sys.sys](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [sys.dm_exec_requests&#40;Transact-SQL&#41](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

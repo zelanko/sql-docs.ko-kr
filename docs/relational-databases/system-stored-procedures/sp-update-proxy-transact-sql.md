@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ec6c40abd080c86722565762fab3b4f9d30bd0c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 66ca1f35a5920f6f6d26bea0663e51d305fc1c3b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305310"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775157"
 ---
 # <a name="sp_update_proxy-transact-sql"></a>sp_update_proxy(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   기존 프록시의 속성을 변경합니다.  
   
@@ -65,16 +65,16 @@ sp_update_proxy
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- Proxy_name 또는 ** \@proxy_id** 를 지정 해야 합니다. ** \@** 두 인수가 모두 지정될 경우 두 인수는 같은 프록시를 참조해야 합니다. 그렇지 않으면 저장 프로시저가 실패합니다.  
+ ** \@ Proxy_name** 또는 ** \@ proxy_id** 를 지정 해야 합니다. 두 인수가 모두 지정될 경우 두 인수는 같은 프록시를 참조해야 합니다. 그렇지 않으면 저장 프로시저가 실패합니다.  
   
- 프록시에 대 한 자격 증명을 변경 하려면 ** \@credential_name** 또는 ** \@credential_id** 를 지정 해야 합니다. 두 인수를 모두 지정하면 두 인수는 같은 자격 증명을 참조해야 합니다. 그렇지 않으면 저장 프로시저가 실패합니다.  
+ 프록시에 대 한 자격 증명을 변경 하려면 ** \@ credential_name** 또는 ** \@ credential_id** 를 지정 해야 합니다. 두 인수를 모두 지정하면 두 인수는 같은 자격 증명을 참조해야 합니다. 그렇지 않으면 저장 프로시저가 실패합니다.  
   
  이 프로시저는 프록시를 변경하지만 프록시에 대한 액세스 권한은 변경하지 않습니다. 프록시에 대 한 액세스를 변경 하려면 **sp_grant_login_to_proxy** 및 **sp_revoke_login_from_proxy**를 사용 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 보안 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 프록시 `Catalog application proxy`에 설정된 값을 `0`으로 설정합니다.  
   
 ```  

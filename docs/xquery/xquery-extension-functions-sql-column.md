@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb52e949b706f7e1af51f1c067d38ce23bb777f2
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 6b3aeded0476c809bd1bcdfbfdacb4eac3381751
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881500"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775417"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery 확장 함수 - sql:column()
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   [Xml 내 관계형 데이터 바인딩](../t-sql/xml/binding-relational-data-inside-xml-data.md)항목에 설명 된 대로 [Xml 데이터 형식 메서드](../t-sql/xml/xml-data-type-methods.md) 를 사용 하 여 XQuery 내에 관계형 값을 노출 하는 경우 **sql: column (()** 함수를 사용할 수 있습니다.  
   
@@ -46,7 +46,7 @@ sql:column("columnName")
   
  **Sql: column ()** 함수는 조인 작업에서 지원 되지 않습니다. 대신 APPLY 연산을 사용할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-sqlcolumn-to-retrieve-the-relational-value-inside-xml"></a>A. sql:column()을 사용하여 XML 내의 관계형 값 검색  
  XML을 생성할 때 다음 예는 비-XML 관계형 열의 값을 검색하여 XML 및 관계형 데이터에 바인딩하는 방법을 보여 줍니다.  

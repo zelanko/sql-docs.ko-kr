@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2b0a50ee81aa2247d569dab8125924fd6a2c7cf7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 241f6df631098fedbf4b7f5a9849d9b7ea9f3fa0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831872"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775207"
 ---
 # <a name="sysdm_server_registry-transact-sql"></a>sys.dm_server_registry(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 현재 인스턴스에 대한 Windows 레지스트리에 저장된 구성 및 설치 정보를 반환합니다. 각 레지스트리 키에 대해 행을 하나씩 반환합니다. 이 동적 관리 뷰를 사용하면 호스트 컴퓨터에서 사용 가능한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 네트워크 구성 값 같은 정보를 반환할 수 있습니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82831872"
 ### <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-display-the-sql-server-services"></a>A. SQL Server 서비스 표시  
  다음 예에서는 SQL Server의 현재 인스턴스에 대한 SQL Server 및 SQL Server 에이전트 서비스의 레지스트리 키 값을 반환합니다.  

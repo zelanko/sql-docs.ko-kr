@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dd9644253302c6a577c6cc3923bb3a9e3a0d8c0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f488c50518f0a1dd06d72532f1e9edad865e26a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037385"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783668"
 ---
 # <a name="sysmail_update_principalprofile_sp-transact-sql"></a>sysmail_update_principalprofile_sp(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   보안 주체와 프로필 간 연결 정보를 업데이트합니다.  
   
@@ -55,24 +55,24 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
  이 저장 프로시저는 지정된 프로필이 데이터베이스 사용자의 기본 프로필인지 여부를 변경합니다. 데이터베이스 사용자는 기본 프라이빗 프로필을 하나만 가질 수 있습니다.  
   
  연결에 대 한 보안 주체 이름이 **public** 이거나 연결의 보안 주체 id가 **0**인 경우이 저장 프로시저는 공용 프로필을 변경 합니다. 기본 공개 프로필은 하나만 있을 수 있습니다.  
   
- ** \@Is_default** 가 '**1**'이 고 보안 주체가 둘 이상의 프로필과 연결 된 경우 지정 된 프로필이 보안 주체의 기본 프로필이 됩니다. 이전에 기본 프로필이던 프로필은 보안 주체와 계속 연결되어 있긴 하지만 더 이상 기본 프로필이 아닙니다.  
+ ** \@ Is_default** 가 '**1**'이 고 보안 주체가 둘 이상의 프로필과 연결 된 경우 지정 된 프로필이 보안 주체의 기본 프로필이 됩니다. 이전에 기본 프로필이던 프로필은 보안 주체와 계속 연결되어 있긴 하지만 더 이상 기본 프로필이 아닙니다.  
   
  **Sysmail_update_principalprofile_sp** 저장 프로시저는 **msdb** 데이터베이스에 있으며 **dbo** 스키마가 소유 합니다. 현재 데이터베이스가 **msdb**가 아닌 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 실행 해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  **1. 데이터베이스의 기본 공개 프로필로 프로필 설정**  
   
- 다음 예에서는 프로필 `General Use Profile` 을 **msdb** 데이터베이스의 사용자에 대 한 기본 공개 프로필로 설정 합니다.  
+ 다음 예에서는 프로필을 `General Use Profile` **msdb** 데이터베이스의 사용자에 대 한 기본 공개 프로필로 설정 합니다.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  
@@ -83,7 +83,7 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
   
  **2. 사용자의 기본 개인 프로필로 프로필 설정**  
   
- 다음 예에서는 **msdb** 데이터베이스의 `AdventureWorks Administrator` 보안 주체 `ApplicationUser` 에 대 한 기본 프로필로 프로필을 설정 합니다. 프로필은 보안 주체에 이미 연결되어 있어야 합니다. 이전에 기본 프로필이던 프로필은 보안 주체와 계속 연결되어 있긴 하지만 더 이상 기본 프로필이 아닙니다.  
+ 다음 예에서는 `AdventureWorks Administrator` `ApplicationUser` **msdb** 데이터베이스의 보안 주체에 대 한 기본 프로필로 프로필을 설정 합니다. 프로필은 보안 주체에 이미 연결되어 있어야 합니다. 이전에 기본 프로필이던 프로필은 보안 주체와 계속 연결되어 있긴 하지만 더 이상 기본 프로필이 아닙니다.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  

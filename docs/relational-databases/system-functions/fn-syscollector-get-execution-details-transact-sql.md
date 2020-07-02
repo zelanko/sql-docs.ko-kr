@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b2ed385026d2bd47912a1a95d237b2adedafa26d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44180a30c69a8da47cfad77c07f86ee6b9b8bfaa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042824"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775180"
 ---
 # <a name="fn_syscollector_get_execution_details-transact-sql"></a>fn_syscollector_get_execution_details(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정된 패키지에 대한 package_execution_id와 일치하는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 로그(sysssislog) 부분을 반환합니다. 테이블은 런타임에 패키지나 패키지의 태스크 및 컨테이너에 의해 생성되는 각 로깅 항목에 대해 한 개의 행을 포함합니다.  
   
@@ -44,7 +44,7 @@ fn_syscollector_get_execution_details ( log_id )
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |id|**int**|로깅 항목의 고유 식별자입니다.|  
 |event|**sysname**|로깅 항목을 생성한 이벤트의 이름입니다.|  

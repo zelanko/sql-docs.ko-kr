@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3698431316b86a40e70e144bfac23d81678db45c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68122630"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783093"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   보안 개체에 대해 보안 주체에 부여된 유효 사용 권한 목록을 반환합니다. 관련 함수를 [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md)합니다.  
   
@@ -51,7 +51,7 @@ fn_my_permissions ( securable , 'securable_class' )
 ## <a name="columns-returned"></a>반환되는 열  
  다음 표에서는 **fn_my_permissions** 반환 하는 열을 나열 합니다. 반환되는 각 행은 해당 보안 개체에 대해 현재 보안 컨텍스트가 가지는 사용 권한을 설명합니다. 쿼리가 실패하는 경우 NULL을 반환합니다.  
   
-|열 이름|유형|설명|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |entity_name|**sysname**|나열된 사용 권한이 유효하게 부여되는 보안 개체의 이름입니다.|  
 |subentity_name|**sysname**|보안 개체가 열인 경우 열 이름이며 그렇지 않은 경우에는 NULL입니다.|  
@@ -82,7 +82,7 @@ GO
   
  기본값을 *보안* 개체 또는 *securable_class*값으로 제공 하면 값은 NULL로 해석 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-listing-effective-permissions-on-the-server"></a>A. 서버에 대한 유효 사용 권한 나열  
  다음 예에서는 서버에 대한 호출자의 유효 사용 권한 목록을 반환합니다.  
@@ -131,7 +131,7 @@ GO
 ```  
   
 ### <a name="f-listing-effective-permissions-on-an-xml-schema-collection"></a>F. XML 스키마 컬렉션에 대한 유효 사용 권한 나열  
- 다음 예에서는 `ProductDescriptionSchemaCollection` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 있는 XML 스키마 컬렉션에 대 한 호출자의 유효 사용 권한 목록을 반환 합니다.  
+ 다음 예에서는 데이터베이스에 있는 XML 스키마 컬렉션에 대 한 호출자의 유효 사용 권한 목록을 반환 합니다 `ProductDescriptionSchemaCollection` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  
 USE AdventureWorks2012;  
@@ -166,6 +166,6 @@ GO
  [데이터베이스 엔진&#41;&#40;사용 권한 계층](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [fn_builtin_permissions &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [Transact-sql&#41;&#40;보안 카탈로그 뷰](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [EXECUTE AS&#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   
   

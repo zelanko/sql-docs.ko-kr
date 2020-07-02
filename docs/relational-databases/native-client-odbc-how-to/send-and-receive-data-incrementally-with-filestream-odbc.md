@@ -11,15 +11,15 @@ ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba9829fc2273959f2292d8a3e9ed8e3975c0a525
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d58e2658f4dde3cbbe083c73b203b1a3f803a13
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281823"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783246"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>FILESTREAM을 사용하여 데이터를 증분식으로 주고받기(ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   이 예제에서는 FILESTREAM 기능을 사용하여 SQLPutData 및 SQLGetData로 데이터를 증분식으로 주고받는 방법을 보여 줍니다.  
   
@@ -28,11 +28,11 @@ ms.locfileid: "81281823"
 ## <a name="example"></a>예제  
  이 샘플을 컴파일하고 실행하기 전에 FILESTREAM 지원을 설정합니다([FILESTREAM 사용 및 구성](../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
- 첫 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은이 예제에서 사용 하는 데이터베이스를 만듭니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에는 이 스크립트를 실행할 수 있는 쓰기 권한이 있어야 합니다(예: 로컬 시스템 계정으로 로그온).  
+ 첫 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) 코드 목록은이 예제에서 사용 하는 데이터베이스를 만듭니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에는 이 스크립트를 실행할 수 있는 쓰기 권한이 있어야 합니다(예: 로컬 시스템 계정으로 로그온).  
   
  두 번째 코드 목록은 C++ 코드입니다. 서버를 지정해야 합니다. C++ 코드 목록에서 "MyServer"를 유효한 서버 이름으로 변경합니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다. odbc32.lib, user32.lib, /D "_UNICODE", /D "UNICODE", odbc32.lib 및 /EHsc를 사용하여 C++ 코드 목록을 컴파일합니다.  
   
- 세 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은이 예제에서 사용 하는 데이터베이스를 삭제 합니다.  
+ 세 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) 코드 목록은이 예제에서 사용 하는 데이터베이스를 삭제 합니다.  
   
 ```sql
 USE master  

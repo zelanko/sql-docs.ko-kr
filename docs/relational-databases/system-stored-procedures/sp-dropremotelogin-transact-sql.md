@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: c316f48f3e590fcba419e125f8e327b25ee1ede6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 257592ce6bd3c8080a6f4244a7528e79259e5cfa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933829"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783785"
 ---
 # <a name="sp_dropremotelogin-transact-sql"></a>sp_dropremotelogin(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 로컬 서버에 대해 원격 저장 프로시저를 실행할 때 사용되는 로컬 로그인에 매핑된 원격 로그인을 제거합니다.  
   
@@ -65,7 +65,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 또는 **securityadmin** 고정 서버 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-dropping-all-remote-logins-for-a-remote-server"></a>A. 원격 서버에 대한 모든 원격 로그인 삭제  
  다음 예에서는 `ACCOUNTS`라는 원격 서버의 항목을 제거하여 로컬 서버의 로그인과 원격 서버의 원격 로그인 간의 모든 매핑을 제거합니다.  

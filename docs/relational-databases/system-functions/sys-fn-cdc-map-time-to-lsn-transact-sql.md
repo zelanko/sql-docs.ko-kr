@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f4f6820aeeca8b600631810ed35933d2519b495
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea779dfb66d9fce2053fcee0b6fd3eedbc26a4ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046336"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784851"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정 된 시간 동안 [cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) 시스템 테이블의 **START_LSN** 열에서 LSN (로그 시퀀스 번호) 값을 반환 합니다. 이 함수를 사용 하 여 날짜/시간 범위를 변경 데이터 캡처 열거 함수 cdc에 필요한 LSN 기반 범위에 체계적으로 매핑할 수 있습니다. [fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) 및 [cdc.](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) fn_cdc_get_net_changes_<capture_instance>하 여 해당 범위 내에서 데이터 변경 내용을 반환 합니다.  
   
@@ -75,13 +75,13 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
   
  `SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@begin_lsn, @end_lsn, 'all` `');`  
   
- 전날 자정 이후에 발생한 변경으로만 제한하기 위해 관계형 연산자 '`smallest greater than`'이 사용되었습니다. LSN 값이 서로 다른 여러 항목이 [cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) 테이블의 하 한 **tran_end_time** 값을 공유 하는 경우 함수는 모든 항목이 포함 되도록 가장 작은 LSN을 반환 합니다. 상한에 대해 '`largest less than or equal to`' 관계 연산자를 사용 하 여 해당 범위에 **tran_end_time** 값으로 자정을 포함 하는 항목을 포함 하 여 해당 날짜의 모든 항목을 포함 하는지 확인 합니다. LSN 값이 서로 다른 여러 항목이 상한으로 식별 된 **tran_end_time** 값을 공유 하는 경우 함수는 모든 항목이 포함 되도록 가장 큰 LSN을 반환 합니다.  
+ 전날 자정 이후에 발생한 변경으로만 제한하기 위해 관계형 연산자 '`smallest greater than`'이 사용되었습니다. LSN 값이 서로 다른 여러 항목이 [cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) 테이블의 하 한 **tran_end_time** 값을 공유 하는 경우 함수는 모든 항목이 포함 되도록 가장 작은 LSN을 반환 합니다. 상한에 대해 ' ' 관계 연산자를 사용 하 여 해당 범위에 tran_end_time 값으로 자정을 포함 하는 항목을 포함 하 여 해당 `largest less than or equal to` 날짜의 모든 **tran_end_time** 항목을 포함 하는지 확인 합니다. LSN 값이 서로 다른 여러 항목이 상한으로 식별 된 **tran_end_time** 값을 공유 하는 경우 함수는 모든 항목이 포함 되도록 가장 큰 LSN을 반환 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `sys.fn_cdc_map_time_lsn` 함수를 사용 하 여 [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) 테이블에 자정 보다 크거나 같은 **tran_end_time** 값이 있는 행이 있는지 여부를 확인 합니다. 예를 들어 이 쿼리는 캡처 프로세스가 전날 자정 때까지 커밋된 변경 내용을 이미 처리했는지 확인하여 해당 일의 변경 데이터 추출을 계속 진행하는 데 사용할 수 있습니다.  
+ 다음 예에서는 함수를 사용 하 여 `sys.fn_cdc_map_time_lsn` [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) 테이블에 자정 보다 크거나 같은 **tran_end_time** 값이 있는 행이 있는지 여부를 확인 합니다. 예를 들어 이 쿼리는 캡처 프로세스가 전날 자정 때까지 커밋된 변경 내용을 이미 처리했는지 확인하여 해당 일의 변경 데이터 추출을 계속 진행하는 데 사용할 수 있습니다.  
   
 ```  
 DECLARE @extraction_time datetime, @lsn binary(10);  

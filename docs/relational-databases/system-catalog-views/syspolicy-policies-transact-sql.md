@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9619f06273b60076f41ad217465d3aa134855135
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b95e5f5d33d44ad1b23dffbd9425a11fc439861
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68121160"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783912"
 ---
 # <a name="syspolicy_policies-transact-sql"></a>syspolicy_policies(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 각 정책 기반 관리 정책에 대해 하나의 행을 표시합니다. syspolicy_policies는 msdb 데이터베이스의 dbo 스키마에 속합니다. 다음 표에서는 syspolicy_policies 뷰의 열을 설명합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |policy_id|**int**|정책의 ID입니다.|  
 |name|**sysname**|정책의 이름입니다.|  

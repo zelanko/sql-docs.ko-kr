@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 5edb1162-625a-41e0-8ec9-1edc8ab9a74a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 886b874aeee47f71eb8b50dba27fdfdf8ea45c62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05be6f4b30e42ddc1213231a6d96a823dfc9f1cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68082687"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783095"
 ---
 # <a name="sysfn_msxe_read_event_stream-transact-sql"></a>sys.fn_MSxe_read_event_stream(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   확장 이벤트는 확장 이벤트 UI(사용자 인터페이스)에서 내부용으로 사용하는 TVF(테이블 반환 함수)를 제공합니다. 테이블에 고객이 사용 가능한 데이터는 제공되지 않습니다.  
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc4f44e1b1d935f1abbd49532149edf078f7d1f7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7df586e9459e1a0e4bd141718c76bb4042a8f40b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823524"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784976"
 ---
 # <a name="sysdatabase_mirroring_endpoints-transact-sql"></a>sys.database_mirroring_endpoints(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   ph x="1" /&gt; 인스턴스의 데이터베이스 미러링 엔드포인트에 대해 한 행을 포함합니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82823524"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**\<상속 된 열>**|-|는 **sys.debug** 에서 열을 상속 합니다. 자세한 내용은 [&#41;&#40;transact-sql ](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)을 참조 하세요.|  
+|**\<inherited columns>**|-|는 **sys.debug** 에서 열을 상속 합니다. 자세한 내용은 [&#41;&#40;transact-sql ](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)을 참조 하세요.|  
 |**role**|**tinyint**|미러링 역할. 다음 중 하나입니다.<br /><br /> **0** = 없음<br /><br /> **1** = 파트너<br /><br /> **2** = 미러링 모니터<br /><br /> **3** = 모두<br /><br /> 참고:이 값은 데이터베이스 미러링과만 관련이 있습니다.|  
 |**role_desc**|**nvarchar(60)**|미러링 역할 설명. 다음 중 하나입니다.<br /><br /> **NONE**<br /><br /> **당사자**<br /><br /> **감시**<br /><br /> **ALL**<br /><br /> 참고:이 값은 데이터베이스 미러링과만 관련이 있습니다.|  
 |**is_encryption_enabled**|**bit**|**1** 은 암호화가 사용 됨을 의미 합니다.<br /><br /> **0** 은 암호화가 사용 되지 않음을 의미 합니다.|  
@@ -47,7 +47,7 @@ ms.locfileid: "82823524"
 |**connection_auth_desc**|**nvarchar (60)**|이 엔드포인트에 연결하는 데 필요한 인증 유형 설명. 다음 중 하나입니다.<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> 인증서<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE|  
 |**certificate_id**|**int**|인증에 사용된 인증서 ID<br /><br /> 0 = Windows 인증 사용 중|  
 |**encryption_algorithm**|**tinyint**|암호화 알고리즘. 다음 중 하나입니다.<br /><br /> **0** -없음<br /><br /> **1** -RC4<br /><br /> **2** -AES<br /><br /> **3** -없음, RC4<br /><br /> **4** -없음, AES<br /><br /> **5** -RC4, AES<br /><br /> **6** -AES, RC4<br /><br /> **7** -없음, RC4, AES<br /><br /> **8** -없음, AES, RC4|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|암호화 알고리즘에 대한 설명. 다음 중 하나입니다.<br /><br /> 없음<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|암호화 알고리즘에 대한 설명. 다음 중 하나입니다.<br /><br /> NONE<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
   
 ## <a name="remarks"></a>설명  
   
@@ -59,7 +59,7 @@ ms.locfileid: "82823524"
   
 ## <a name="see-also"></a>참고 항목  
  [가용성 복제본 &#40;SQL Server를 추가 하거나 수정할 때 끝점 URL을 지정&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)   
- [availability_replicas &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
+ [sys.availability_replicas&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
  [database_mirroring &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
  [database_mirroring_witnesses &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
  [데이터베이스 미러링 끝점은 SQL Server을 &#40;&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   

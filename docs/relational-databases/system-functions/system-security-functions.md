@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: fa2c95df-1211-4330-adc6-9657e1a113e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dff237aca1c928e6921b99f62407848ba536d76e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a911b90617fdffca63711eb759eb088a5dd1645e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67950953"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783066"
 ---
 # <a name="system-security-functions"></a>시스템 보안 함수
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음과 같은 시스템 보안 함수를 제공합니다.  
   

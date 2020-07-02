@@ -18,21 +18,21 @@ ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e2942f60e1bb41edfcd2d474619867d35806660
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f48f5cf3bfc75bb8aa52d981a42aa83b8007e09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782330"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783386"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   **Bcp_setcolfmt** 함수는 [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)를 대체 합니다. 열 데이터 정렬을 지정할 때 **bcp_setcolfmt** 함수를 사용 해야 합니다. [bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md) 를 사용 하 여 두 개 이상의 열 형식을 지정할 수 있습니다.  
   
  이 함수를 사용하면 대량 복사 작업에서 열 형식을 융통성 있게 지정할 수 있습니다. 이 함수는 개별 열의 형식 특성을 설정하는 데 사용합니다. **Bcp_setcolfmt** 에 대 한 각 호출은 하나의 열 형식 특성을 설정 합니다.  
   
- **Bcp_setcolfmt** 함수는 사용자 파일에 있는 데이터의 원본 또는 대상 형식을 지정 합니다. 원본 형식으로 사용 하는 경우 **bcp_setcolfmt** 은의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]테이블에 대량 복사 하 여 데이터의 데이터 원본으로 사용 되는 기존 데이터 파일의 형식을 지정 합니다. 대상 형식으로 사용 되는 경우 데이터 파일은 **bcp_setcolfmt**에 지정 된 열 형식을 사용 하 여 생성 됩니다.  
+ **Bcp_setcolfmt** 함수는 사용자 파일에 있는 데이터의 원본 또는 대상 형식을 지정 합니다. 원본 형식으로 사용 하는 경우 **bcp_setcolfmt** 은의 테이블에 대량 복사 하 여 데이터의 데이터 원본으로 사용 되는 기존 데이터 파일의 형식을 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 대상 형식으로 사용 되는 경우 데이터 파일은 **bcp_setcolfmt**에 지정 된 열 형식을 사용 하 여 생성 됩니다.  
   
 ## <a name="syntax"></a>구문  
   

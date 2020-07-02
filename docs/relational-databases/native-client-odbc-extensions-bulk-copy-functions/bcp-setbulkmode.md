@@ -13,15 +13,15 @@ ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46da93307d28b5be6aec3fbcbff31322e96ea634
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f9935a3faa08b8aa14b4f8c80182a2a005853666
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782402"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783396"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   bcp_setbulkmode를 사용 하면 대량 복사 작업에서 열 형식을 지정 하 여 단일 함수 호출에 모든 열 특성을 설정할 수 있습니다.  
   
@@ -70,10 +70,10 @@ RETCODE bcp_setbulkmode (
   
 |속성|설명|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> 는 BCP의-c 옵션에 해당 합니다. EXE 및 **BCP_FMT_TYPE** 속성이 **sqlcharacter**로 설정 된 bcp_setcolfmt 합니다.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> 는 BCP의-w 옵션에 해당 합니다. EXE 및 bcp_setcolfmt **BCP_FMT_TYPE** 속성이 **sqlnchar**로 설정 됩니다.|  
-|BCP_OUT_NATIVE_TEXT_MODE|비문자 유형의 경우 네이티브 유형을 지정하고 문자 유형의 경우 유니코드를 지정합니다.<br /><br /> 는 BCP의-N 옵션에 해당 합니다. 열 형식이 문자열 (문자열이 아닌 경우 기본값) 인 경우 **BCP_FMT_TYPE** 속성이 **sqlnchar** 로 설정 된 EXE 및 bcp_setcolfmt|  
-|BCP_OUT_NATIVE_MODE|네이티브 데이터베이스 유형을 지정합니다.<br /><br /> 는 BCP의-n 옵션에 해당 합니다. EXE 및 bcp_setcolfmt **BCP_FMT_TYPE** 속성이 기본값으로 설정 됩니다.|  
+|BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> 는 BCP.EXE의-c 옵션에 해당 하 고 **BCP_FMT_TYPE** 속성이 **sqlcharacter**로 설정 된 bcp_setcolfmt 합니다.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> BCP.EXE의-w 옵션 및 **BCP_FMT_TYPE** 속성이 **sqlnchar**로 설정 된 bcp_setcolfmt에 해당 합니다.|  
+|BCP_OUT_NATIVE_TEXT_MODE|비문자 유형의 경우 네이티브 유형을 지정하고 문자 유형의 경우 유니코드를 지정합니다.<br /><br /> BCP.EXE의-N 옵션 및 열 유형이 문자열인 경우 (기본값은 문자열이 아닌 경우 기본값) **Sqlnchar** 로 설정 **BCP_FMT_TYPE** 된 bcp_setcolfmt에 해당 합니다.|  
+|BCP_OUT_NATIVE_MODE|네이티브 데이터베이스 유형을 지정합니다.<br /><br /> BCP.EXE의-n 옵션과 해당 **BCP_FMT_TYPE** 속성이 기본값으로 설정 된 bcp_setcolfmt에 해당 합니다.|  
   
  Bcp_setcolfmt, bcp_control 및 bcp_readfmt를 포함 하는 일련의 함수 호출에 bcp_setbulkmode를 사용 하면 안 됩니다. 예를 들어 bcp_control (BCPTEXTFILE) 및 bcp_setbulkmode를 호출 하면 안 됩니다.  
   

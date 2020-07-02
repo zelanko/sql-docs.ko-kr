@@ -11,15 +11,15 @@ ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ebd3d8439b70930039ec6fee37c7195dbb23ca0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d7ea543843d22433072867a30df814a6bd095f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281786"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783243"
 ---
 # <a name="support-for-large-udts"></a>큰 UDT에 대한 지원
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   이 예제 솔루션에는 두 개의 프로젝트가 포함되어 있습니다. 첫 번째 프로젝트는 C# 원본 코드에서 어셈블리(DLL)를 만듭니다. 이 어셈블리에는 CLR 유형이 포함되어 있습니다. 테이블이 데이터베이스에 추가됩니다. 테이블의 열은 어셈블리에 정의된 유형으로 지정됩니다. 기본적으로 이 예제에서는 master 데이터베이스를 사용합니다. 두 번째 프로젝트는 테이블에서 데이터를 읽는 네이티브 C 애플리케이션입니다.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "81281786"
 ## <a name="example"></a>예제  
  첫 번째 코드 목록은 C# 원본 코드입니다. 이 코드 목록을 LargeStringUDT.cs라는 파일에 붙여 넣고 DLL로 컴파일합니다. LargeStringUDT.dll을 C 드라이브의 루트 디렉터리에 복사합니다.  
   
- 두 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은 master 데이터베이스에서 어셈블리를 만듭니다.  
+ 두 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) 코드 목록은 master 데이터베이스에서 어셈블리를 만듭니다.  
   
  odbc32.lib 및 user32.lib를 사용하여 두 번째(C++) 코드 목록을 컴파일합니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81281786"
   
  이 예제는 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 명명된 인스턴스에 연결하려면 ODBC 데이터 원본의 정의를 변경하여 server\namedinstance 형식으로 인스턴스를 지정합니다. 기본적으로 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 는 명명된 인스턴스에 설치됩니다.  
   
- 네 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은 master 데이터베이스에서 어셈블리를 삭제 합니다.  
+ 네 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) 코드 목록은 master 데이터베이스에서 어셈블리를 삭제 합니다.  
   
 ```  
 // LargeStringUDT.cs  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e9f1e69c10e4930a4a039528cffc4dbb13a67548
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 5ebd9c4d2bae1c491d2bd7a23e52c83457942fb6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689477"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775471"
 ---
 # <a name="xqueries-handling-relational-data"></a>관계형 데이터에 대한 XQuery 처리
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Xml [데이터 형식 메서드](../t-sql/xml/xml-data-type-methods.md)중 하나를 사용 하 여 **xml** 유형의 열 또는 변수에 대해 XQuery를 지정 합니다. 여기에는 **query ()**, **value ()**, **exist ()** 또는 **modify ()** 가 포함 됩니다. XQuery는 XML을 생성하는 쿼리에서 식별된 XML 인스턴스에 대해 실행됩니다.  
   

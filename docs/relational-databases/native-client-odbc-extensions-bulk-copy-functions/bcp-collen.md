@@ -18,15 +18,15 @@ ms.assetid: faaf1f7a-81f2-4852-a178-56602c33673a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d26efd0d7ebd395dd4453e773bc5bb089ae3792
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c391185e26ec769eff93bc655b90d29012dd27ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73783197"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783441"
 ---
 # <a name="bcp_collen"></a>bcp_collen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   현재 대량 복사에 대한 프로그램 변수의 데이터 길이를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 설정합니다.  
   
@@ -54,7 +54,7 @@ RETCODE bcp_collen (
  SUCCEED 또는 FAIL  
   
 ## <a name="remarks"></a>설명  
- **Bcp_collen** 함수를 사용 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)를 사용 하 여 데이터를에 복사할 때 특정 열에 대해 프로그램 변수의 데이터 길이를 변경할 수 있습니다.  
+ **Bcp_collen** 함수를 사용 하면 bcp_sendrow를 사용 하 여 데이터를에 복사할 때 특정 열에 대해 프로그램 변수의 데이터 길이를 변경할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)  
   
  처음에는 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 를 호출할 때 데이터 길이가 결정 됩니다. **Bcp_sendrow** 호출 사이에 데이터 길이가 변경 되 고 길이 접두사나 종결자가 사용 되지 않는 경우 **bcp_collen** 를 호출 하 여 길이를 다시 설정할 수 있습니다. **Bcp_sendrow** 에 대 한 다음 호출에서는 **bcp_collen**에 대 한 호출로 설정 된 길이를 사용 합니다.  
   

@@ -18,15 +18,15 @@ ms.assetid: 322e3170-93f8-468a-a123-104ce7bd7fad
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19e8a8508a6be17b07b6db06c09fb46329c7fb06
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 99267f10764a7ab00bb0f6c0f29ddae2c7d6c087
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827377"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783620"
 ---
 # <a name="sp_xtp_flush_temporal_history-transact-sql"></a>sp_xtp_flush_temporal_history (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   메모리 내 준비 테이블에서 커밋된 모든 행을 디스크 기반 기록 테이블로 이동 하는 데이터 플러시 작업을 호출 합니다.  
 
@@ -50,7 +50,7 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
 ## <a name="return-code-values"></a>반환 코드 값  
  0 (성공) 또는 >0 (실패)  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  Db_owner 권한이 필요 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

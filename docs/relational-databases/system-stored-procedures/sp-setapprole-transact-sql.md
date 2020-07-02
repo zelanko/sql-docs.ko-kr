@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b158c4571deadadeaee23ffa6e46eb48a8c8446e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ba0a1d118ce62912e082b0553f000018e5d8233e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299611"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783721"
 ---
 # <a name="sp_setapprole-transact-sql"></a>sp_setapprole(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   현재 데이터베이스의 애플리케이션 역할과 연관된 사용 권한을 활성화합니다.  
   
@@ -58,11 +58,11 @@ sp_setapprole [ @rolename = ] 'role',
  난독 처리가 사용되지 않도록 지정합니다. 암호는 일반 텍스트로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 전달됩니다. 기본값입니다.  
   
  **@encrypt= ' odbc '**  
- Odbc **암호화** 기능을 사용 하 여에 암호를 보내기 전에 odbc에서 암호를 난독 처리 하도록 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]지정 합니다. 이 값은 ODBC 클라이언트 또는 SQL Server용 OLE DB 공급자를 사용하는 경우에만 지정할 수 있습니다.  
+ Odbc **암호화** 기능을 사용 하 여에 암호를 보내기 전에 odbc에서 암호를 난독 처리 하도록 지정 합니다 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . 이 값은 ODBC 클라이언트 또는 SQL Server용 OLE DB 공급자를 사용하는 경우에만 지정할 수 있습니다.  
   
 `[ @fCreateCookie = ] true | false`쿠키를 만들지 여부를 지정 합니다. **true** 는 암시적으로 1로 변환 됩니다. **false** 는 암시적으로 0으로 변환 됩니다.  
   
-`[ @cookie = ] @cookie OUTPUT`쿠키를 포함 하는 출력 매개 변수를 지정 합니다. 쿠키는 ** \@fCreateCookie** 의 값이 **true**인 경우에만 생성 됩니다. **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT`쿠키를 포함 하는 출력 매개 변수를 지정 합니다. 쿠키는 ** \@ fCreateCookie** 의 값이 **true**인 경우에만 생성 됩니다. **varbinary(8000)**  
   
 > [!NOTE]  
 > 현재 **sp_setapprole** 에 대한 쿠키 **OUTPUT** 매개 변수는 정확한 최대 길이인 **varbinary(8000)** 로 정의되어 있습니다. 그러나 현재 구현은 **varbinary(50)** 입니다. 애플리케이션은 계속해서 **varbinary(8000)** 를 예약하여 후속 릴리스에서 쿠키 반환 크기가 늘어날 경우에도 애플리케이션이 제대로 작동할 수 있도록 해야 합니다.
@@ -73,19 +73,19 @@ sp_setapprole [ @rolename = ] 'role',
   
 ## <a name="remarks"></a>설명
 
- **Sp_setapprole**를 사용 하 여 응용 프로그램 역할을 활성화 한 후에는 사용자가 서버에서 연결을 끊거나 **sp_unsetapprole**를 실행할 때까지 역할은 활성 상태로 유지 됩니다. **sp_setapprole** 는 직접 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문으로만 실행할 수 있습니다. **sp_setapprole** 는 다른 저장 프로시저 또는 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  
+ **Sp_setapprole**를 사용 하 여 응용 프로그램 역할을 활성화 한 후에는 사용자가 서버에서 연결을 끊거나 **sp_unsetapprole**를 실행할 때까지 역할은 활성 상태로 유지 됩니다. **sp_setapprole** 는 직접 문으로만 실행할 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . **sp_setapprole** 는 다른 저장 프로시저 또는 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  
   
  응용 프로그램 역할에 대 한 개요는 [응용 프로그램 역할](../../relational-databases/security/authentication-access/application-roles.md)을 참조 하세요.  
   
 > [!IMPORTANT]  
 > 네트워크를 통해 전송 될 때 응용 프로그램 역할 암호를 보호 하려면 응용 프로그램 역할을 사용 하도록 설정할 때 항상 암호화 된 연결을 사용 해야 합니다.
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC **Encrypt** 옵션은 **SqlClient**에서 지원 되지 않습니다. 자격 증명을 저장해야 할 경우에는 crypto API 함수를 사용하여 암호화합니다. 매개 변수 *암호* 는 단방향 해시로 저장 됩니다. 이전 버전의와의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]호환성을 유지 하기 위해 암호 복잡성 정책은 **sp_addapprole**에 의해 적용 되지 않습니다. 암호 복잡성 정책을 적용 하려면 [CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md)을 사용 합니다.  
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)]ODBC **encrypt** 옵션은 **SqlClient**에서 지원 되지 않습니다. 자격 증명을 저장해야 할 경우에는 crypto API 함수를 사용하여 암호화합니다. 매개 변수 *암호* 는 단방향 해시로 저장 됩니다. 이전 버전의와의 호환성을 유지 하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 암호 복잡성 정책은 **sp_addapprole**에 의해 적용 되지 않습니다. 암호 복잡성 정책을 적용 하려면 [CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md)을 사용 합니다.  
   
 ## <a name="permissions"></a>사용 권한
 
 **Public** 의 멤버 자격이 필요 하 고 역할에 대 한 암호를 알고 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-activating-an-application-role-without-the-encrypt-option"></a>A. 암호화 옵션을 사용하지 않고 애플리케이션 역할 활성화
 

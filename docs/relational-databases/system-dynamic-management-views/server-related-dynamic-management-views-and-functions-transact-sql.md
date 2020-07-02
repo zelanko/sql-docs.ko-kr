@@ -11,15 +11,15 @@ dev_langs:
 ms.assetid: d8f4e155-c2fb-4a1f-aa0d-e9790bdab925
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4a581c2366aa15a2cb6830e25a474bd787b571d7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f1ba084536b6826379091237d74152553dba50eb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832647"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784960"
 ---
 # <a name="server-related-dynamic-management-views-and-functions-transact-sql"></a>서버 관련 동적 관리 뷰 및 함수(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 섹션에서는 호스트 서버에 설치되어 있는 SQL Server, 전체 텍스트 및 SQL Server 에이전트 서비스와 연결된 동적 관리 뷰에 대해 다룹니다. 이러한 뷰를 사용하여 해당 서비스의 속성 정보를 반환할 수 있습니다. 또한 이러한 뷰는 구성, 설치 및 메모리 덤프 파일 정보를 포함합니다.  
   

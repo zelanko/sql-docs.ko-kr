@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 776e7b0c713e36f0d9f67112592dff6d24a46fbd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 933774af820c80abb70c5fbdad0441053533b451
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783713"
 ---
 # <a name="sp_serveroption-transact-sql"></a>sp_serveroption(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   원격 서버 및 연결된 서버용 서버 옵션을 설정합니다.  
   
@@ -73,10 +73,10 @@ sp_serveroption [@server = ] 'server'
 ## <a name="remarks"></a>설명  
  **데이터 정렬 호환** 옵션이 TRUE로 설정 된 경우 **데이터 정렬 이름이** 자동으로 NULL로 설정 됩니다. **데이터 정렬 이름이** null이 아닌 값으로 설정 된 경우 **데이터 정렬 호환** 이 자동으로 FALSE로 설정 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 ALTER ANY LINKED SERVER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스인 `SEATTLE3`에 해당하는 연결된 서버를 구성하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 로컬 인스턴스와 데이터 정렬이 호환되도록 합니다.  
   
 ```sql  

@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: af57bf0c-a265-410f-9bab-63b78569b4a6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dfde20205de71a302c7ba8151fc6171cecc05a08
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3182516451f88d25bbd2d6e1e08884f638dea02c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140676"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783979"
 ---
 # <a name="syslinked_logins-transact-sql"></a>sys.linked_logins(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   로컬 서버에서 연결된 해당 서버로의 분산 쿼리 및 RPC에서 사용할 수 있도록 연결된 서버 로그인 매핑당 한 행씩을 반환합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|**Sys. servers**의 서버 ID입니다.|  
 |**local_principal_id**|**int**|매핑이 적용되는 서버 보안 주체입니다.<br /><br /> 0 = 와일드카드 또는 공용입니다.|  

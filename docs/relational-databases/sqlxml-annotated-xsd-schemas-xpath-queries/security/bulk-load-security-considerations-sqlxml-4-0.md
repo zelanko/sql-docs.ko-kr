@@ -17,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd641fe3d3843fe853a16db4833d40bdcbec4e1a
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: 43cf00aef7e1ce571f41c08d4d9033aee7bd43a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84305942"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775259"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>대량 로드 보안 고려 사항(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   다음은 XML 대량 로드를 사용하기 위한 보안 지침입니다.  
   
 -   대량 로드 작업을 트랜잭션으로 수행 하도록 지정 하는 경우 **Tempfilepath** 속성을 사용 하 여 임시 파일을 만들 폴더를 지정 합니다.  

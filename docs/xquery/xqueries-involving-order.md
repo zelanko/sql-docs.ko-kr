@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36c7e512c1e691d0341cb802a61e57d46d4b076a
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 1171740ae04b4fc03609659fa27a711bf36fa6f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84880517"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775451"
 ---
 # <a name="xqueries-involving-order"></a>정렬 포함 XQuery
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   관계형 데이터베이스에는 시퀀스 개념이 없습니다. 예를 들어 "데이터베이스에서 첫 번째 고객 가져오기"와 같은 요청은 수행할 수 없습니다. 그러나 XML 문서를 쿼리하고 첫 번째 요소를 검색할 수 있습니다 \<Customer> . 그런 다음에는 항상 같은 고객을 검색할 수 있습니다.  
   
  이 항목에서는 문서에 노드가 표시되는 시퀀스에 기반한 쿼리에 대해 설명합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-retrieve-manufacturing-steps-at-the-second-work-center-location-for-a-product"></a>A. 제품에 대한 두 번째 작업 센터 위치에서 제조 단계 검색  
  특정 제품 모델에 대해 다음 쿼리는 두 번째 작업 센터 위치에서 제조 프로세스에 있는 작업 센터 위치의 시퀀스에 따라 제조 단계를 검색합니다.  

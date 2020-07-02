@@ -15,17 +15,17 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbe223d890d443508cd32f6ab73c039848c4372a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79428154"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776469"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database를 사용한 Graph 처리
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]다대다 관계를 모델링 하는 그래프 데이터베이스 기능을 제공 합니다. 그래프 관계는에 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 통합 되며를 기본 데이터베이스 관리 시스템으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하는 이점을 제공 합니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]다대다 관계를 모델링 하는 그래프 데이터베이스 기능을 제공 합니다. 그래프 관계는에 통합 되며를 기본 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 관리 시스템으로 사용 하는 이점을 제공 합니다.
 
 
 ## <a name="what-is-a-graph-database"></a>그래프 데이터베이스란?  
@@ -58,7 +58,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 노드 및 가장자리가 테이블로 저장 됩니다.  
 
 ### <a name="query-language-extensions"></a>쿼리 언어 확장  
-New `MATCH` 절은 그래프를 통해 패턴 일치 및 다중 홉 탐색을 지원 하기 위해 도입 되었습니다. 함수 `MATCH` 는 패턴 일치에 ASCII 아트 스타일 구문을 사용 합니다. 예를 들면 다음과 같습니다.  
+New `MATCH` 절은 그래프를 통해 패턴 일치 및 다중 홉 탐색을 지원 하기 위해 도입 되었습니다. `MATCH`함수는 패턴 일치에 ASCII 아트 스타일 구문을 사용 합니다. 예를 들면 다음과 같습니다.  
 
 ```   
 -- Find friends of John
@@ -68,12 +68,12 @@ WHERE MATCH(Person1-(Friends)->Person2)
 AND Person1.Name = 'John';
 ```   
  
-### <a name="fully-integrated-in-ssnoversion-engine"></a>엔진에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 완벽 하 게 통합 
-그래프 확장은 엔진에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 완벽 하 게 통합 됩니다. 동일한 저장소 엔진, 메타 데이터, 쿼리 프로세서 등을 사용 하 여 그래프 데이터를 저장 하 고 쿼리 합니다. 단일 쿼리에서 그래프 및 관계형 데이터에 대해 쿼리 합니다. 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술 (예: COLUMNSTORE, HA, R services 등)과 그래프 기능 결합 SQL graph 데이터베이스는 에서도 사용할 수 있는 모든 보안 및 규정 준수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]기능을 지원 합니다.
+### <a name="fully-integrated-in-ssnoversion-engine"></a>엔진에서 완벽 하 게 통합 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
+그래프 확장은 엔진에서 완벽 하 게 통합 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 동일한 저장소 엔진, 메타 데이터, 쿼리 프로세서 등을 사용 하 여 그래프 데이터를 저장 하 고 쿼리 합니다. 단일 쿼리에서 그래프 및 관계형 데이터에 대해 쿼리 합니다. 다른 기술 (예: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] columnstore, HA, R services 등)과 그래프 기능 결합 SQL graph 데이터베이스는 에서도 사용할 수 있는 모든 보안 및 규정 준수 기능을 지원 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.
  
 ### <a name="tooling-and-ecosystem"></a>도구 및 에코 시스템
 
-에서 제공 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기존 도구 및 에코 시스템을 활용 합니다. 백업 및 복원, 가져오기 및 내보내기와 같은 도구는 기본적으로 작동 합니다. SSIS, SSRS 또는 Power BI와 같은 다른 도구나 서비스는 관계형 테이블로 작업 하는 방법만 그래프 테이블에 사용할 수 있습니다.
+에서 제공 하는 기존 도구 및 에코 시스템을 활용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 백업 및 복원, 가져오기 및 내보내기와 같은 도구는 기본적으로 작동 합니다. SSIS, SSRS 또는 Power BI와 같은 다른 도구나 서비스는 관계형 테이블로 작업 하는 방법만 그래프 테이블에 사용할 수 있습니다.
 
 ## <a name="edge-constraints"></a>에지 제약 조건
 에 지 제약 조건은 그래프에 지 테이블에 정의 되 고 지정 된 가장자리 유형에 서 연결할 수 있는 노드 테이블 쌍입니다. 이렇게 하면 사용자가 graph 스키마를 더 효율적으로 제어할 수 있습니다. 에 지 제약 조건에 대 한 도움을 받아 사용자는 지정 된 edge가 연결할 수 있는 노드 유형을 제한할 수 있습니다. 

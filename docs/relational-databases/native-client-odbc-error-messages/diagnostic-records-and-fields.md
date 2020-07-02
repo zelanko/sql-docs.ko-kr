@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9cfea2db0ad0a5eadeede6df3f76ea3979243d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f0f2ac10fe68f5e51f72d12f3b5514ef293afda0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291856"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775960"
 ---
 # <a name="diagnostic-records-and-fields"></a>진단 레코드 및 필드
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   진단 레코드는 ODBC 환경, 연결, 문 또는 설명자 핸들과 연결되어 있습니다. ODBC 함수가 SQL_SUCCESS 또는 SQL_INVALID_HANDLE이 아닌 반환 코드를 생성하는 경우 해당 함수에서 호출된 핸들에 정보 또는 오류 메시지가 포함된 진단 레코드가 연결되어 있습니다. 이러한 레코드는 해당 핸들을 사용하여 다른 함수를 호출할 때까지 유지되며, 이때 레코드가 삭제됩니다. 한 번에 핸들에 연결할 수 있는 진단 레코드 수에는 제한이 없습니다.  
   
@@ -42,11 +42,11 @@ ms.locfileid: "81291856"
   
  ODBC 3. *x* 는 ODBC 2 보다 훨씬 더 많은 진단 정보를 지원 합니다. *x*. 이 정보는 **SQLGetDiagField**를 사용 하 여 검색 된 진단 레코드의 추가 필드에 저장 됩니다.  
   
- Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC 드라이버는 **SQLGetDiagField**를 사용 하 여 검색할 수 있는 드라이버별 진단 필드를 포함 합니다. 이러한 드라이버별 필드의 레이블은 sqlncli.h에서 정의됩니다. 해당 레이블을 사용하여 각 진단 레코드와 연결된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 상태, 심각도 수준, 서버 이름, 프로시저 이름 및 줄 번호를 검색합니다. 또한 sqlncli에는 응용 프로그램에서 *DiagIdentifier* 가 SQL_DIAG_DYNAMIC_FUNCTION_CODE로 설정 된 **SQLGetDiagField** 를 호출할 경우 transact-sql 문을 식별 하는 데 사용 하는 코드의 정의가 포함 되어 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버는 **SQLGetDiagField**를 사용 하 여 검색할 수 있는 드라이버별 진단 필드를 포함 합니다. 이러한 드라이버별 필드의 레이블은 sqlncli.h에서 정의됩니다. 해당 레이블을 사용하여 각 진단 레코드와 연결된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 상태, 심각도 수준, 서버 이름, 프로시저 이름 및 줄 번호를 검색합니다. 또한 sqlncli에는 응용 프로그램에서 *DiagIdentifier* 가 SQL_DIAG_DYNAMIC_FUNCTION_CODE로 설정 된 **SQLGetDiagField** 를 호출할 경우 transact-sql 문을 식별 하는 데 사용 하는 코드의 정의가 포함 되어 있습니다.  
   
  **SQLGetDiagField** 는 기본 드라이버에서 캐시 하는 오류 정보를 사용 하 여 ODBC 드라이버 관리자에 의해 처리 됩니다. ODBC 드라이버 관리자는 성공적으로 연결될 때까지 드라이버별 진단 필드를 캐시하지 않습니다. **SQLGetDiagField** 는 성공적으로 연결 되기 전에 드라이버별 진단 필드를 가져오기 위해 호출 되는 경우 SQL_ERROR를 반환 합니다. ODBC 연결 함수에서 SQL_SUCCESS_WITH_INFO를 반환할 경우 해당 연결 함수의 드라이버별 진단 필드를 아직 사용할 수 없습니다. Connect 함수 다음에 다른 ODBC 함수 호출을 수행한 후에만 드라이버별 진단 필드에 대해 **SQLGetDiagField** 호출을 시작할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 드라이버에서 보고 되는 대부분의 오류는 **SQLGetDiagRec**에서 반환 된 정보만 사용 하 여 효과적으로 진단할 수 있습니다. 하지만 일부 경우에서는 오류를 진단할 때 드라이버별 진단 필드에서 반환된 정보가 중요합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client odbc 드라이버를 사용 하 여 응용 프로그램에 대 한 odbc 오류 처리기를 코딩 하는 경우 **SQLGetDiagField** 를 사용 하 여 최소한 SQL_DIAG_SS_MSGSTATE을 검색 하 고 드라이버 관련 필드를 SQL_DIAG_SS_SEVERITY 하는 것이 좋습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드의 여러 위치에서 특정 오류가 발생할 수 있는 경우 SQL_DIAG_SS_MSGSTATE를 통해 Microsoft 지원 엔지니어가 오류 발생 위치를 구체적으로 확인할 수 있으므로 문제 진단에 도움이 됩니다.  
+ Native Client ODBC 드라이버에서 보고 되는 대부분의 오류는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLGetDiagRec**에서 반환 된 정보만 사용 하 여 효과적으로 진단할 수 있습니다. 하지만 일부 경우에서는 오류를 진단할 때 드라이버별 진단 필드에서 반환된 정보가 중요합니다. Native Client ODBC 드라이버를 사용 하 여 응용 프로그램에 대 한 ODBC 오류 처리기를 코딩 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLGetDiagField** 를 사용 하 여 최소한 SQL_DIAG_SS_MSGSTATE을 검색 하 고 드라이버 관련 필드를 SQL_DIAG_SS_SEVERITY 하는 것이 좋습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드의 여러 위치에서 특정 오류가 발생할 수 있는 경우 SQL_DIAG_SS_MSGSTATE를 통해 Microsoft 지원 엔지니어가 오류 발생 위치를 구체적으로 확인할 수 있으므로 문제 진단에 도움이 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [오류 및 메시지 처리](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  

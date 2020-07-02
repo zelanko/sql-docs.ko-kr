@@ -18,19 +18,19 @@ ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0e422be747c2b47dacb1feb97ba6c00fa1131fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1b2305336391a29de559fa01bd2d67c1a4621b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291458"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775951"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>쿼리에 대한 SQL 문 생성
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client odbc 드라이버는 서버 커서를 사용 하 여 odbc 사양에 정의 된 커서 기능을 구현 합니다. ODBC 응용 프로그램은 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 를 사용 하 여 다른 문 특성을 설정 하 여 커서 동작을 제어 합니다. 다음은 이러한 특성과 해당 기본값에 대한 설명입니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc 드라이버는 서버 커서를 사용 하 여 odbc 사양에 정의 된 커서 기능을 구현 합니다. ODBC 응용 프로그램은 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 를 사용 하 여 다른 문 특성을 설정 하 여 커서 동작을 제어 합니다. 다음은 이러한 특성과 해당 기본값에 대한 설명입니다.  
   
-|특성|기본값|  
+|attribute|기본값|  
 |---------------|-------------|  
 |SQL_ATTR_CONCURRENCY|SQL_CONCUR_READ_ONLY|  
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  
@@ -38,7 +38,7 @@ ms.locfileid: "81291458"
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
 |SQL_ATTR_ROW_ARRAY_SIZE|1|  
   
- SQL 문을 실행할 때 이러한 옵션을 기본값으로 설정 하면 Native Client ODBC 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버 커서를 사용 하 여 결과 집합을 구현 하지 않습니다. 대신 기본 결과 집합을 사용 합니다. SQL 문이 실행 될 때 이러한 옵션이 기본값에서 변경 된 경우 Native Client ODBC 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버 커서를 사용 하 여 결과 집합을 구현 하려고 합니다.  
+ SQL 문이 실행 될 때 이러한 옵션을 기본값으로 설정 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 드라이버는 서버 커서를 사용 하 여 결과 집합을 구현 하지 않고 대신 기본 결과 집합을 사용 합니다. SQL 문이 실행 될 때 이러한 옵션이 기본값에서 변경 된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 드라이버는 서버 커서를 사용 하 여 결과 집합을 구현 하려고 합니다.  
   
  기본 결과 집합을 사용할 때는 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 지원됩니다. 기본 결과 집합을 사용할 경우 실행할 수 있는 SQL 문의 유형에는 제한이 없습니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "81291458"
   
      둘 이상의 SELECT 문이 포함된 저장 프로시저를 실행하는 SQL 문. 여기에는 매개 변수나 변수를 채우는 SELECT 문도 포함됩니다.  
   
--   키워드가  
+-   키워드  
   
      FOR BROWSE 또는 INTO 키워드를 포함하는 SQL 문  
   
