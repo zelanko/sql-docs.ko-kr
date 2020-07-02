@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d9aaa6550c34518c0c153dfa91cf3a5e8b8c0be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251954"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662888"
 ---
 # <a name="pathname-transact-sql"></a>PathName(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   FILESTREAM BLOB(Binary Large Object)의 경로를 반환합니다. OpenSqlFilestream API는이 경로를 사용 하 여 응용 프로그램이 Win32 Api를 사용 하 여 BLOB 데이터를 작업 하는 데 사용할 수 있는 핸들을 반환 합니다. PathName은 읽기 전용입니다.  
   
@@ -45,7 +45,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  FILESTREAM 저장소 특성이 없는 **varbinary (max)** 또는 다른 데이터 형식의 열에 대해 PathName을 요청 하면 쿼리 컴파일 시간 오류가 발생 합니다.  
   
  *\@option*  
- 경로의 서버 구성 요소에 형식을 지정 하는 방법을 정의 하는 정수 [식](../../t-sql/language-elements/expressions-transact-sql.md) 입니다. 옵션은 다음 값 중 하나일 수 있습니다. * \@* 기본값은 0입니다.  
+ 경로의 서버 구성 요소에 형식을 지정 하는 방법을 정의 하는 정수 [식](../../t-sql/language-elements/expressions-transact-sql.md) 입니다. * \@ 옵션* 은 다음 값 중 하나일 수 있습니다. 기본값은 0입니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -69,7 +69,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-type"></a>반환 형식  
  **nvarchar(max)**  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  반환되는 값은 BLOB의 정규화된 논리적 또는 NETBIOS 경로입니다. PathName은 IP 주소를 반환하지 않습니다. FILESTREAM BLOB가 만들어지지 않은 경우 NULL이 반환됩니다.  
   
 ## <a name="remarks"></a>설명  
@@ -77,7 +77,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  FILESTREAM BLOB는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용해서만 만들 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-reading-the-path-for-a-filestream-blob"></a>A. FILESTREAM BLOB의 경로 읽기  
  다음 예에서는 `PathName` 변수에 `nvarchar(max)`을 할당합니다.  

@@ -1,5 +1,5 @@
 ---
-title: sys. xml_schema_facets (Transact-sql) | Microsoft Docs
+title: sys.xml_schema_facets (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 4402dde9-1877-4872-8550-140dc2a177d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fa9d06f18f1e5d401e730a8216d3bb43f4894e06
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 25b8b7b0600fce641369c6c184b2769d107362e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833861"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85678080"
 ---
 # <a name="sysxml_schema_facets-transact-sql"></a>sys.xml_schema_facets(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  **Xml_types**에 해당 하는 xml 형식 정의의 패싯 (제한) 당 행을 반환 합니다.  
+  **sys.xml_types**에 해당 하는 xml 형식 정의의 패싯 (제한) 당 한 개의 행을 반환 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

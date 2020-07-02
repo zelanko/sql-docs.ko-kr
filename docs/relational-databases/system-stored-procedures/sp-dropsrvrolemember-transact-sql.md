@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 2624ed4800a247b0847adc5839346758aa50f140
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 213b8301a471e00107ce7d3ac6bf493e6aea87c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67463569"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662469"
 ---
 # <a name="sp_dropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember(Transact-SQL)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 고정 서버 역할에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이나 Windows 사용자 또는 그룹을 제거합니다.
 
@@ -43,10 +43,10 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 
 ## <a name="arguments"></a>인수
 
-**[ @loginame = ]** '_로그인_'  
+**[ @loginame =]** '_로그인_'  
 고정 서버 역할에서 제거할 로그인의 이름입니다. *login* 은 **sysname**이며 기본값은 없습니다. *로그인* 이 있어야 합니다.  
 
-**[ @rolename = ]** '_role_'  
+**[ @rolename =]** '_role_'  
 서버 역할의 이름입니다. *role* 은 **sysname**이며 기본값은 NULL입니다. *role* 은 다음 값 중 하나 여야 합니다.  
 
 -   sysadmin  
@@ -78,7 +78,7 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 ## <a name="permissions"></a>사용 권한  
  sysadmin 고정 서버 역할의 멤버 자격 또는 서버에 대한 ALTER ANY LOGIN 권한 및 멤버를 삭제할 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예는 `JackO` 고정 서버 역할에서 `sysadmin` 로그인을 제거합니다.  
   
 ```sql

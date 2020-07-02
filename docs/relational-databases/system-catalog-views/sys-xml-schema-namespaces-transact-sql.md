@@ -1,5 +1,5 @@
 ---
-title: sys. xml_schema_namespaces (Transact-sql) | Microsoft Docs
+title: sys.xml_schema_namespaces (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3ed42dd6-929a-41de-80e8-d3a0a488bc7a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dde823a82557789f1f2c9142fcf91ca2335d8b6d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b4ba08afc2d0c4174b41b79181c438c9360a3758
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828089"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677936"
 ---
 # <a name="sysxml_schema_namespaces-transact-sql"></a>sys.xml_schema_namespaces(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   각 XSD 정의 XML 네임스페이스에 대해 행을 반환합니다. **Collection_id**, **namespace_id**및 **collection_id**와 같은 튜플을 고유 **합니다.**  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82828089"
 |**name**|**nvarchar(4000)**|XML 네임스페이스의 이름입니다. 빈 **이름** 은 대상 네임 스페이스를 나타냅니다.|  
 |**xml_namespace_id**|**int**|데이터베이스에서 XML 네임스페이스를 고유하게 식별하는 서수이며 1부터 시작합니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

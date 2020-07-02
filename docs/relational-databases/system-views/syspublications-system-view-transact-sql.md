@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f1724f86f9bfc34e505b9ba6ecddae4104270cd0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a1048a31ab0970165a82abb332e29c7f814e5f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68094776"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692637"
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications(시스템 뷰)(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Syspublications** 뷰는 게시 정보를 노출 합니다. 이 뷰는 배포 데이터베이스에 저장됩니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68094776"
 |**alt_snapshot_folder**|**nvarchar (510)**|스냅샷의 대체 폴더 위치를 지정합니다.|  
 |**pre_snapshot_script**|**nvarchar (510)**|**.Sql** 파일 위치에 대 한 포인터를 지정 합니다. 배포 에이전트는 구독자에서 스냅샷을 적용할 때 복제된 개체 스크립트를 실행하기 전에 프리 스냅샷 스크립트를 실행합니다.|  
 |**post_snapshot_script**|**nvarchar (510)**|**.Sql** 파일 위치에 대 한 포인터를 지정 합니다. 배포 에이전트는 초기 동기화 동안 기타 복제된 개체 스크립트 및 데이터를 적용한 후에 포스트 스냅샷 스크립트를 실행합니다.|  
-|**compress_snapshot**|**bit**|*Alt_snapshot_folder* 위치에 기록 되는 스냅숏이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 형식으로 압축 되도록 지정 합니다. **1** 은 스냅숏이 압축 됨을 의미 합니다.|  
+|**compress_snapshot**|**bit**|*Alt_snapshot_folder* 위치에 기록 되는 스냅숏이 CAB 형식으로 압축 되도록 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] . **1** 은 스냅숏이 압축 됨을 의미 합니다.|  
 |**ftp_address**|**sysname**|배포자용 FTP 서비스의 네트워크 주소입니다. 배포 에이전트가 선택할 게시 스냅샷 파일의 위치를 지정합니다.|  
 |**ftp_port**|**int**|배포자용 FTP 서비스의 포트 번호입니다. 배포 에이전트가 선택할 게시 스냅샷 파일의 위치를 지정합니다.|  
 |**ftp_subdirectory**|**nvarchar (510)**|게시가 FTP를 사용한 스냅샷 전파를 지원할 경우 배포 에이전트가 선택할 수 있는 스냅샷 파일의 위치를 지정합니다.|  
@@ -64,13 +64,13 @@ ms.locfileid: "68094776"
 |**centralized_conflicts**|**bit**|게시자에 충돌 레코드를 저장하는지 여부를 지정합니다.<br /><br /> **0** = 충돌을 일으킨 게시자와 구독자 모두에 충돌 레코드가 저장 됩니다.<br /><br /> **1** = 충돌 레코드가 게시자에 저장 됩니다.|  
 |**conflict_retention**|**int**|충돌 레코드 보존 기간을 일 수로 지정합니다.|  
 |**conflict_policy**|**int**|지연 업데이트 구독자 옵션을 사용할 때 수행하는 충돌 해결 정책을 지정합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **1** = 게시자가 충돌을 적용 합니다.<br /><br /> **2** = 구독자가 충돌을 적용 합니다.<br /><br /> **3** = 구독이 다시 초기화 됩니다.|  
-|**queue_type**|**int**|사용할 큐의 유형을 지정합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **1** =. msmq. 메시지 큐 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용 하 여 트랜잭션을 저장 합니다.<br /><br /> **2** = .sql-를 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하 여 트랜잭션을 저장 합니다.<br /><br /> 참고: 메시지 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 큐 사용은 더 이상 사용 되지 않으며 더 이상 지원 되지 않습니다.|  
+|**queue_type**|**int**|사용할 큐의 유형을 지정합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **1** =. msmq [!INCLUDE[msCoName](../../includes/msconame-md.md)] . 메시지 큐를 사용 하 여 트랜잭션을 저장 합니다.<br /><br /> **2** = .sql-를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션을 저장 합니다.<br /><br /> 참고: 메시지 큐 사용은 더 이상 사용 되지 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 않으며 더 이상 지원 되지 않습니다.|  
 |**ad_guidname**|**sysname**|게시를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory에 게시할지 여부를 지정합니다. 유효한 GUID(전역 고유 식별자)가 게시를 Active Directory에 게시하는지 여부를 지정하며 GUID는 Active Directory 게시 개체인 objectGUID에 해당합니다. NULL인 경우 게시는 Active Directory에 게시되지 않습니다.<br /><br /> 참고: Active Directory에 게시는 더 이상 지원 되지 않습니다.|  
-|**backward_comp_level**|**int**|데이터베이스 호환성 수준으로 다음 값 중 하나일 수 있습니다.<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|**backward_comp_level**|**int**|데이터베이스 호환성 수준으로 다음 값 중 하나일 수 있습니다.<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .|  
 |**allow_initialize_from_backup**|**bit**|구독자가 초기 스냅샷이 아닌 백업으로부터 이 게시에 대한 구독을 초기화할 수 있는지 여부를 지정합니다. **1** 은 백업에서 구독을 초기화할 수 있음을 의미 하 고 **0** 은 사용할 수 없음을 의미 합니다. 자세한 내용은 [스냅샷 없이 트랜잭션 구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.|  
 |**min_autonosync_lsn**|**binary (1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|게시에 대해 스키마 복제가 지원될지 여부를 나타냅니다.<br /><br /> **1** = 게시자에서 실행 된 DDL 문이 복제 됩니다.<br /><br /> **0** = DDL 문이 복제 되지 않음을 나타냅니다. 자세한 내용은 [게시 데이터베이스의 스키마 변경](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)을 참조하세요.|  
-|**options**|**int**|추가 게시 옵션을 지정하는 비트맵이며, 비트 옵션 값은 다음과 같습니다.<br /><br /> **0x1** -피어 투 피어 복제에 사용 됩니다.<br /><br /> **0x2** -피어 투 피어 복제에 대 한 로컬 변경 내용만 게시 합니다.<br /><br /> **0x4** -이외[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자에 사용할 수 있습니다.<br /><br /> **0x8** -피어 투 피어 충돌 검색을 사용 하도록 설정 합니다.|  
+|**options**|**int**|추가 게시 옵션을 지정하는 비트맵이며, 비트 옵션 값은 다음과 같습니다.<br /><br /> **0x1** -피어 투 피어 복제에 사용 됩니다.<br /><br /> **0x2** -피어 투 피어 복제에 대 한 로컬 변경 내용만 게시 합니다.<br /><br /> **0x4** -이외 구독자에 사용할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.<br /><br /> **0x8** -피어 투 피어 충돌 검색을 사용 하도록 설정 합니다.|  
 |**originator_id**|**smallint**|충돌 감지를 위해 피어 투 피어 복제 토폴로지의 각 노드를 식별합니다. 자세한 내용은 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)을 참조하세요.|  
   
 ## <a name="see-also"></a>참고 항목  

@@ -1,5 +1,5 @@
 ---
-title: syscacheobjects (Transact-sql) | Microsoft Docs
+title: Cacheobjects sys.sys(Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,26 +20,26 @@ helpviewer_keywords:
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df4b83cb7b1e69191e8964730a534c1b24fbac2c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b33ff1cb4b46334f0b42d81f87920ef666a82e81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010784"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663433"
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   캐시 사용 방법에 대한 정보를 포함합니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**bucketid**|**int**|버킷 ID입니다. 값은 0에서 디렉터리 크기 - 1까지의 범위를 나타냅니다. 디렉터리 크기는 해시 테이블의 크기입니다.|  
 |**cacheobjtype**|**nvarchar(17)**|캐시에 있는 개체의 유형입니다.<br /><br /> 컴파일된 계획<br /><br /> 실행 계획<br /><br /> 구문 분석 트리<br /><br /> 커서<br /><br /> 확장 저장 프로시저|  
-|**objtype**|**nvarchar(8)**|개체의 유형입니다.<br /><br /> 저장 프로시저<br /><br /> 준비된 문<br /><br /> 임시 쿼리 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 원격 프로시저 호출 대신 **sqlcmd** 또는 **osql** 유틸리티에서 언어 이벤트로 제출 됨)<br /><br /> ReplProc(복제 프로시저)<br /><br /> 트리거<br /><br /> 보기<br /><br /> 기본값<br /><br /> 사용자 테이블<br /><br /> 시스템 테이블<br /><br /> 확인<br /><br /> 규칙|  
+|**objtype**|**nvarchar(8)**|개체의 유형입니다.<br /><br /> 저장 프로시저<br /><br /> 준비된 문<br /><br /> 임시 쿼리 ( [!INCLUDE[tsql](../../includes/tsql-md.md)] 원격 프로시저 호출 대신 **sqlcmd** 또는 **osql** 유틸리티에서 언어 이벤트로 제출 됨)<br /><br /> ReplProc(복제 프로시저)<br /><br /> 트리거<br /><br /> 보기<br /><br /> 기본값<br /><br /> 사용자 테이블<br /><br /> 시스템 테이블<br /><br /> 확인<br /><br /> 규칙|  
 |**objid**|**int**|캐시에서 개체를 찾는 데 사용되는 기본 키 중 하나입니다. 데이터베이스 개체 (프로시저, 뷰, 트리거 등)의 경우 **sysobjects** 에 저장 된 개체 ID입니다. 임시 또는 준비 된 SQL과 같은 캐시 개체의 경우 **objid** 는 내부적으로 생성 된 값입니다.|  
 |**dbid**|**smallint**|캐시 개체가 컴파일된 데이터베이스의 ID입니다.|  
 |**dbidexec**|**smallint**|쿼리를 실행할 데이터베이스 ID입니다.<br /><br /> 대부분의 개체에 대해, **dbidexec** 는 **dbid**와 동일한 값을 갖습니다.<br /><br /> 시스템 보기의 경우에는 쿼리가 실행 되는 데이터베이스 ID가 **dbidexec** 입니다.<br /><br /> 임시 쿼리의 경우 **dbidexec** 는 0입니다. 즉, **dbidexec** 에는 **dbid**와 동일한 값이 있습니다.|  

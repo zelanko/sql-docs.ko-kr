@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2edfbd187835a321f513f3fb9d14aaa1aef65ec5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dbfd5f0fc29efd4d2f6a02d680c9a6df34c5392b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827967"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663026"
 ---
 # <a name="sysdm_hadr_database_replica_states-transact-sql"></a>sys.dm_hadr_database_replica_states(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   의 로컬 인스턴스에서 가용성 복제본을 호스팅하는 Always On 가용성 그룹에 참여 하는 각 데이터베이스에 대해 하나의 행을 반환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이 동적 관리 뷰는 주 복제본과 보조 복제본 모두에 대한 상태 정보를 표시합니다. 보조 복제본에서 이 뷰는 서버 인스턴스에 있는 모든 보조 데이터베이스에 대해 하나의 행을 반환합니다. 주 복제본에서 이 뷰는 각 주 데이터베이스에 대해 하나의 행과 해당 보조 데이터베이스에 대해 하나의 행을 반환합니다.  
   

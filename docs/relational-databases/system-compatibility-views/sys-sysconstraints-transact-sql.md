@@ -1,5 +1,5 @@
 ---
-title: sys. sysconstraints (Transact-sql) | Microsoft Docs
+title: sys.sys제약 조건 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: f2b2e2ad-ba24-48a1-913c-8ee4e0895dc4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dfd88dec92d2707b72c829aa53f2798d3d64fee3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3ee1ce24876eab6689da7432329a2788ce70c34
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089190"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663359"
 ---
 # <a name="syssysconstraints-transact-sql"></a>sys.sysconstraints(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스 내에서 제약 조건을 소유한 개체의 제약 조건 매핑을 포함합니다.  
   
@@ -40,10 +40,10 @@ ms.locfileid: "68089190"
 |**constid**|**int**|제약 조건 번호입니다.|  
 |**id**|**int**|제약 조건을 소유한 테이블의 ID입니다.|  
 |**colid**|**smallint**|제약 조건이 정의된 열의 ID입니다.<br /><br /> 0 = 테이블 제약 조건|  
-|**spare1**|**tinyint**|Reserved|  
+|**spare1**|**tinyint**|예약됨|  
 |**status**|**int**|상태를 나타내는 의사 비트 마스크입니다. 가능한 값은 다음과 같습니다.<br /><br /> 1 = PRIMARY KEY 제약 조건<br /><br /> 2 = UNIQUE KEY 제약 조건<br /><br /> 3 = FOREIGN KEY 제약 조건<br /><br /> 4 = CHECK 제약 조건<br /><br /> 5 = DEFAULT 제약 조건<br /><br /> 16 = 열 수준 제약 조건<br /><br /> 32 = 테이블 수준 제약 조건|  
-|**actions**|**int**|Reserved|  
-|**error**|**int**|Reserved|  
+|**actions**|**int**|예약됨|  
+|**error**|**int**|예약됨|  
   
 ## <a name="see-also"></a>참고 항목  
  [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

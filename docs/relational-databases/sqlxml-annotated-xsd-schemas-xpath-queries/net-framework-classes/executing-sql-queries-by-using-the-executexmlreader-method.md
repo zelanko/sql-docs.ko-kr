@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9acfa4eecb97902f20a0ba25762e2b14f2d5c756
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 214c7b27c06ba9b8ba19c86dcd8474da7f0c720f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387997"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649656"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>ExecuteXMLReader 메서드를 사용하여 SQL 쿼리 실행
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   ExecuteToStream 메서드를 사용 하는 대신 SqlXmlCommand 개체의 ExecuteXmlReader 메서드를 사용 하 여 명령을 실행할 수 있습니다. 이 메서드는 결과를 추가로 처리 하는 데 사용할 수 있는 XmlReader 개체를 반환 합니다 .이 예제에서는 요소 또는 특성 이름과 값을 인쇄 합니다.  
   
 > [!NOTE]  

@@ -15,21 +15,21 @@ ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: afaee239422b557b53117441f36c79d1180802db
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: 8dbebdd4908b4721ce91cd5994a6a25975ebdd42
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306102"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665511"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>SQLXML 4.0의 xml 데이터 형식 지원
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   부터 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 은 xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 사용 하 여 xml **xml** 형식의 데이터를 지원 합니다. 이 항목에서는 SQLXML 4.0에서 **xml** 데이터 형식의 인스턴스를 인식 하 고이에 대 한 지원을 구현 하는 방법에 대 한 정보를 제공 합니다.  
   
 ## <a name="working-with-xml-data-types"></a>xml 데이터 형식 작업  
  **Xml** 데이터 형식 열을 구현 하는 SQL 테이블을 사용 하는 방법에 대해 자세히 알아보려면 다음 예를 제공 합니다.  
   
-|Task|예제|항목|  
+|작업|예제|항목|  
 |----------|-------------|-----------|  
 |Xml 뷰에 **xml** 열을 매핑하고 포함 하는 방법|"XML 요소를 XML 데이터 형식 열에 매핑"|[SQLXML 4.0 &#40;테이블 및 열에 대 한 XSD 요소 및 특성의 기본 매핑&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
 |Updategram을 사용 하 여 **xml** 열에 데이터를 삽입 하는 방법|"XML 데이터 형식 열에 데이터 삽입"|[XML Updategrams &#40;SQLXML 4.0&#41;를 사용 하 여 데이터 삽입](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  

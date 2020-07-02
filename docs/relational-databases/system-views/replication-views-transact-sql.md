@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ae0c1245bdf9ff7fe1d1eb712745cbc15d2479af
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 01c5c21ef7886773e162fe1f17cbcbaae177075b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807932"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692667"
 ---
 # <a name="replication-views-transact-sql"></a>복제 뷰(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이러한 뷰에는의 복제에 사용 되는 정보가 포함 되어 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다. 뷰를 사용 하면 [복제 시스템 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)의 데이터에 쉽게 액세스할 수 있습니다. 사용자 데이터베이스가 게시 또는 구독 데이터베이스로 사용될 때 이 데이터베이스에 뷰가 생성됩니다. 복제 토폴로지에서 데이터베이스가 제거되면 사용자 데이터베이스에서 모든 복제 개체가 제거됩니다. 복제 메타 데이터에 액세스 하는 기본 방법은 [복제 저장 프로시저](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)를 사용 하는 것입니다.  
   

@@ -18,15 +18,15 @@ ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bf2dff5e5d7a3cb1581de9c0b15ff8a58dc6be7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d0c08c6e0d41781783cf7aaffd1f26d6e7b4e417
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827992"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676768"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   이 동적 관리 함수는를 @object_id 매개 변수로 사용 하 고 해당 ID를 가진 모듈의 첫 번째 결과 메타 데이터를 설명 합니다. 지정 된은 @object_id [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저나 트리거의 ID 일 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . 그 밖에 다른 개체(예: 뷰, 테이블, 함수 또는 CLR 프로시저)의 ID인 경우에는 결과의 오류 열에 오류가 지정됩니다.  
   
@@ -117,10 +117,10 @@ sys.dm_exec_describe_first_result_set_for_object
 |12|OBJECT_ID_NOT_SUPPORTED|@object_id함수에 전달 된이 (가) 지원 되지 않습니다 (예: 저장 프로시저가 아님).|  
 |13|OBJECT_ID_DOES_NOT_EXIST|@object_id함수에 전달 된를 시스템 카탈로그에서 찾을 수 없습니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  인수를 실행할 수 있는 권한이 필요 @tsql 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-metadata-with-and-without-browse-information"></a>A. 찾아보기 정보가 있는 메타데이터와 찾아보기 정보가 없는 메타데이터 반환  
  다음 예에서는 두 개의 결과 집합을 반환 하는 TestProc2 라는 저장 프로시저를 만듭니다. 그런 다음 **sys.dm_exec_describe_first_result_set**가 프로시저의 첫 번째 결과 집합(찾아보기 정보가 있는 결과 집합과 찾아보기 정보가 없는 결과 집합)에 대한 정보를 반환하는 것을 보여 줍니다.  

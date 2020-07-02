@@ -23,21 +23,21 @@ ms.assetid: c05fd873-aff2-4a89-9936-a54c2ea09996
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e000d4e4f7f46d57bb1ae9a4e5c370169eb1227f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c8faf838b12c82fd2dff25db87dbae96ff891e81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821327"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664035"
 ---
 # <a name="systable_types-transact-sql"></a>sys.table_types(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자 정의 테이블 형식의 속성을 표시합니다. 테이블 형식은 테이블 변수 또는 테이블 반환 매개 변수를 선언하는 데 사용할 수 있는 형식입니다. 각 테이블 형식에는 [sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 카탈로그 뷰에 대 한 외래 키인 **type_table_object_id** 있습니다. 이 ID 열을 사용 하 여 일반 테이블의 **object_id** 열과 비슷한 방식으로 다양 한 카탈로그 뷰를 쿼리하여 해당 열과 제약 조건과 같은 테이블 형식의 구조를 검색할 수 있습니다.    
  
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|*\<상속 된 열>*||이 뷰가 상속 하는 열 목록은 [sys. types &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)를 참조 하세요.|  
+|*\<inherited columns>*||이 뷰가 상속 하는 열 목록은 [sys. types &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)를 참조 하세요.|  
 |**type_table_object_id**|**int**|개체 ID입니다. 데이터베이스 내에서 고유합니다.|  
 |**is_memory_optimized**|**bit**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상<br /><br /> 가능한 값은 다음과 같습니다.<br /><br /> 0 = 메모리 최적화가 아닙니다.<br /><br /> 1 = 메모리 최적화입니다.<br /><br /> 0 값은 기본값입니다.<br /><br /> 테이블 형식은 항상 DURABILITY = SCHEMA_ONLY로 만들어집니다. 스키마만 디스크에 저장됩니다.|  
   

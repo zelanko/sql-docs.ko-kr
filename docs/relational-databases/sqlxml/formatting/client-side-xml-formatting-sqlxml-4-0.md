@@ -17,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1b03c1cb91c17e330d73f192bbd364c95591c721
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 526f47678e09f10bdd412bb35287d6363c41cabc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84530017"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666143"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 XML 서식 지정(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   이 항목에서는 클라이언트 쪽 XML 서식 지정에 대한 정보를 제공합니다. 클라이언트 쪽 서식 지정은 중간 계층의 XML 서식 지정을 의미합니다.  
   
 > [!NOTE]  
@@ -55,7 +55,7 @@ FROM   Person.Contact
   
  다음 표에서는 클라이언트 쪽 FOR XML에서 지정할 수 있는 모드를 보여 줍니다.  
   
-|클라이언트 쪽 FOR XML 모드|주석|  
+|클라이언트 쪽 FOR XML 모드|의견|  
 |-------------------------------|-------------|  
 |RAW|클라이언트 쪽 또는 서버 쪽 FOR XML에 지정될 경우 동일한 결과를 생성합니다.|  
 |NESTED|서버 쪽의 FOR XML AUTO 모드와 비슷합니다.|  

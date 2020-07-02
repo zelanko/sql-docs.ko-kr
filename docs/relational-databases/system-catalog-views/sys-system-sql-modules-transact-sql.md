@@ -1,5 +1,5 @@
 ---
-title: sys. system_sql_modules (Transact-sql) | Microsoft Docs
+title: sys.system_sql_modules (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,17 +20,17 @@ ms.assetid: ad3548bc-4780-4821-b962-b421d52daed9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd6f6d995fd1bbf4378525c2e767e0ce05bd908a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0462b231ee46a7e4ccce3bb498c6271d450c5e26
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821340"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664327"
 ---
 # <a name="syssystem_sql_modules-transact-sql"></a>sys.system_sql_modules(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  SQL 언어로 정의된 모듈을 포함하는 각 시스템 개체에 대해 행을 반환합니다. FN, IF, P, PC, TF, V 형식의 시스템 개체에는 연관된 SQL 모듈이 있습니다. 포함 하는 개체를 식별 하려면이 뷰를 [sys. system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)에 조인할 수 있습니다.  
+  SQL 언어로 정의된 모듈을 포함하는 각 시스템 개체에 대해 행을 반환합니다. FN, IF, P, PC, TF, V 형식의 시스템 개체에는 연관된 SQL 모듈이 있습니다. 포함 하는 개체를 식별 하려면이 뷰를 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)에 조인할 수 있습니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

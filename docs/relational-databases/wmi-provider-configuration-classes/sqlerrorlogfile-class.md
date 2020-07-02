@@ -10,15 +10,15 @@ ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0dd923f17fe0267edf40d07da982d0856ec4ba06
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 616fa99a342c33bf36df41d858a0b37b027ce2fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659049"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662386"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile 클래스
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일에 대한 정보를 보기 위한 속성을 제공합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -45,7 +45,7 @@ class SQLErrorLogFile
 |InstanceName|데이터 형식: **문자열**<br /><br /> 액세스 형식: 읽기 전용<br /><br /> 한정자: Key<br /><br /> <br /><br /> 로그 파일이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|  
 |LastModified|데이터 형식: **datetime**<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 로그 파일이 마지막으로 수정된 날짜입니다.|  
 |LogFileSize|데이터 형식: **uint32**<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 로그 파일의 크기(바이트)입니다.|  
-|속성|데이터 형식: **문자열**<br /><br /> 액세스 형식: 읽기 전용<br /><br /> 한정자: Key<br /><br /> <br /><br /> 로그 파일의 이름입니다.|  
+|Name|데이터 형식: **문자열**<br /><br /> 액세스 형식: 읽기 전용<br /><br /> 한정자: Key<br /><br /> <br /><br /> 로그 파일의 이름입니다.|  
   
 ## <a name="remarks"></a>설명  
   
@@ -56,7 +56,7 @@ class SQLErrorLogFile
 |네임스페이스|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일에 대한 정보를 검색합니다. 예제를 실행 하려면 \< *Instance_Name*>을 인스턴스 이름 (예: ' Instance1 ')으로 바꿉니다.  
+ 다음 예에서는 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일에 대한 정보를 검색합니다. 예제를 실행 하려면를 \<*Instance_Name*> 인스턴스 이름으로 바꿉니다 (예: ' Instance1 ').  
   
 ```  
 on error resume next  
@@ -75,7 +75,7 @@ WScript.Echo "Instance Name:  " & logFile.InstanceName & vbNewLine _
 Next   
 ```  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>의견  
  *InstanceName* 이 WQL 문에 제공 되지 않은 경우 쿼리는 기본 인스턴스에 대 한 정보를 반환 합니다. 예를 들어 다음 WQL 문은 기본 인스턴스(MSSQLSERVER)에서 모든 로그 파일에 대한 정보를 반환합니다.  
   
 ```  
@@ -83,16 +83,16 @@ Next
 ```  
   
 ## <a name="security"></a>보안  
- WMI를 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일에 연결 하려면 로컬 컴퓨터와 원격 컴퓨터 모두에 대 한 다음 권한이 있어야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]WMI를 통해 로그 파일에 연결 하려면 로컬 컴퓨터와 원격 컴퓨터 모두에 대 한 다음 권한이 있어야 합니다.  
   
 -   **Root\Microsoft\SqlServer\ComputerManagement10** WMI 네임 스페이스에 대 한 읽기 액세스입니다. 기본적으로 모든 사용자는 계정 사용 권한으로 읽기 액세스합니다.  
   
     > [!NOTE]  
     >  WMI 사용 권한을 확인 하는 방법에 대 한 자세한 내용은 [오프 라인 로그 파일 보기](../../relational-databases/logs/view-offline-log-files.md)항목의 보안 섹션을 참조 하세요.  
   
--   오류 로그를 포함하는 폴더에 대한 읽기 권한. 기본적으로 오류 로그는 다음 경로에 있습니다. 여기서 \< *Drive>* 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치한 \<드라이브를 나타내고 *InstanceName*>는 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이름입니다.  
+-   오류 로그를 포함하는 폴더에 대한 읽기 권한. 기본적으로 오류 로그는 다음 경로에 있습니다. 여기서 *는를 \<*Drive> 설치한 드라이브를 나타내고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \<*InstanceName*> 는 인스턴스의 이름입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     **드라이브>: Files\Microsoft SQL Server\MSSQL11. \<** **\< InstanceName> \MSSQL\Log**  
+     ** \<Drive> : Files\Microsoft SQL Server\MSSQL11** **. \<InstanceName> \MSSQL\Log**  
   
  방화벽을 통해 연결하는 경우 방화벽에 원격 대상 컴퓨터의 WMI에 대한 예외가 설정되어 있는지 확인합니다. 자세한 내용은 [Windows Vista부터 원격으로 WMI에 연결](https://go.microsoft.com/fwlink/?LinkId=178848)을 참조 하세요.  
   

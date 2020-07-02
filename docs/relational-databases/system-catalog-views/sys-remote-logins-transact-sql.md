@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 38477e91-d084-4df7-b1de-b930c5580189
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 371f8e2bf9a5d67d68e9c1d48502bf3fa2f81db6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f2f9d2ab67ab969aed2b505702c4c1400fee27a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67904573"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665383"
 ---
 # <a name="sysremote_logins-transact-sql"></a>sys.remote_logins(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   원격 로그인 매핑당 한 개의 행을 반환합니다. 이 카탈로그 뷰는 해당 서버에서 들어오는 로컬 로그인을 실제 로컬 로그인으로 매핑하는 데 사용됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|**Sys. servers**의 서버 ID입니다. 이 이름은 "원격" 서버의 연결에 의해 제공됩니다.|  
 |**remote_name**|**sysname**|연결이 제공하는 매핑할 로그인 이름입니다. NULL인 경우에는 연결에서 지정된 로그인 이름이 사용됩니다.|  

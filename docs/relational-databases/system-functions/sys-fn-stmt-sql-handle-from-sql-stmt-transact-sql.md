@@ -13,17 +13,17 @@ ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92ebff45c8599e6257ad22f563da6af5067d8e3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f7111f4e0f67e1102712c140737b68914feada6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059268"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652014"
 ---
 # <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>sys. fn_stmt_sql_handle_from_sql_stmt (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
-  지정 된 **stmt_sql_handle** 매개 변수화 형식 [!INCLUDE[tsql](../../includes/tsql-md.md)] (simple 또는 강제) 아래에 있는 문의 stmt_sql_handle를 가져옵니다. 이렇게 하면 텍스트를 알고 있을 때 **stmt_sql_handle** 를 사용 하 여 쿼리 저장소에 저장 된 쿼리를 참조할 수 있습니다.  
+  **stmt_sql_handle** [!INCLUDE[tsql](../../includes/tsql-md.md)] 지정 된 매개 변수화 형식 (simple 또는 강제) 아래에 있는 문의 stmt_sql_handle를 가져옵니다. 이렇게 하면 텍스트를 알고 있을 때 **stmt_sql_handle** 를 사용 하 여 쿼리 저장소에 저장 된 쿼리를 참조할 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,10 +57,10 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="columns-returned"></a>반환되는 열  
  다음 표에서는 fn_stmt_sql_handle_from_sql_stmt에서 반환 하는 열을 나열 합니다.  
   
-|열 이름|유형|설명|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |**statement_sql_handle**|**varbinary(64)**|SQL 핸들입니다.|  
-|**query_sql_text**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 텍스트입니다.|  
+|**query_sql_text**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]문의 텍스트입니다.|  
 |**query_parameterization_type**|**tinyint**|쿼리 매개 변수화 형식입니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -71,15 +71,15 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대 한 **EXECUTE** 권한과 쿼리 저장소 카탈로그 뷰에 대 한 **삭제** 권한이 필요 합니다.  
   
-## <a name="examples"></a>예  
- 다음 예에서는 문을 실행 한 다음를 사용 `sys.fn_stmt_sql_handle_from_sql_stmt` 하 여 해당 문의 SQL 핸들을 반환 합니다.  
+## <a name="examples"></a>예제  
+ 다음 예에서는 문을 실행 한 다음를 사용 하 여 `sys.fn_stmt_sql_handle_from_sql_stmt` 해당 문의 SQL 핸들을 반환 합니다.  
   
 ```  
 SELECT * FROM sys.databases;   
 SELECT * FROM sys.fn_stmt_sql_handle_from_sql_stmt('SELECT * FROM sys.databases', NULL);  
 ```  
   
- 함수를 사용 하 여 쿼리 저장소 데이터와 기타 동적 관리 뷰 간의 상관 관계를 바꿉니다. 다음 예제가 하는 일:  
+ 함수를 사용 하 여 쿼리 저장소 데이터와 기타 동적 관리 뷰 간의 상관 관계를 바꿉니다. 다음 예제를 참조하세요.  
   
 ```  
 SELECT qt.query_text_id, q.query_id, qt.query_sql_text, qt.statement_sql_handle,  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c92a9271575a725aef6981b97cb9b35c81829044
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a779585dedcfa5fef86d7c3db4543b9ec74df7bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828067"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677769"
 ---
 # <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 일부 기능 중 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 데이터베이스 파일의 정보를 저장하는 방법이 변경되었습니다. 이러한 기능은 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전으로 제한됩니다. 이러한 기능을 포함하는 데이터베이스는 이러한 기능이 지원되지 않는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전으로 이동할 수 없습니다. 현재 데이터베이스에서 사용할 수 있는 버전별 기능을 나열 하려면 dm_db_persisted_sku_features 동적 관리 뷰를 사용 합니다.
   
@@ -38,7 +38,7 @@ ms.locfileid: "82828067"
 |feature_name|**sysname**|데이터베이스에 설정되어 있지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 버전에서 지원되지 않는 기능의 외부 이름입니다. 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 사용 가능한 버전으로 마이그레이션하려면 먼저 이 기능을 제거해야 합니다.|  
 |feature_id|**int**|기능과 연관된 기능 ID입니다. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 VIEW DATABASE STATE 권한이 필요합니다.  
   
 ## <a name="remarks"></a>설명  

@@ -26,15 +26,15 @@ ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a2516d24b65e509ffc04c0f9979721ad6eefa22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11249fd563bd892c79edd4f3393c82f34b211684
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68082705"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652184"
 ---
 # <a name="sysfn_listextendedproperty-transact-sql"></a>sys.fn_listextendedproperty(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   데이터베이스 개체의 확장 속성 값을 반환합니다.  
  
@@ -118,7 +118,7 @@ WHERE o.name = 'Employee';
 ## <a name="permissions"></a>사용 권한  
  개체의 확장 속성을 나열하는 권한은 개체 유형에 따라 다릅니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-displaying-extended-properties-on-a-database"></a>A. 데이터베이스의 확장 속성 표시  
  다음 예에서는 데이터베이스 개체 자체에 설정된 모든 확장 속성을 표시합니다.  
@@ -142,7 +142,7 @@ GO
  `(1 row(s) affected)`  
   
 ### <a name="b-displaying-extended-properties-on-all-columns-in-a-table"></a>B. 테이블에 있는 모든 열의 확장 속성 표시  
- 다음 예에서는 `ScrapReason` 테이블의 열에 대 한 확장 속성을 나열 합니다. 이 속성은 `Production` 스키마에 포함되어 있습니다.  
+ 다음 예에서는 테이블의 열에 대 한 확장 속성을 나열 합니다 `ScrapReason` . 이 속성은 `Production` 스키마에 포함되어 있습니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -167,7 +167,7 @@ GO
  `(3 row(s) affected)`  
   
 ### <a name="c-displaying-extended-properties-on-all-tables-in-a-schema"></a>C. 스키마에 있는 모든 테이블의 확장 속성 표시  
- 다음 예에서는 `Sales` 스키마에 포함 된 모든 테이블에 대 한 확장 속성을 나열 합니다.  
+ 다음 예에서는 스키마에 포함 된 모든 테이블에 대 한 확장 속성을 나열 합니다 `Sales` .  
   
 ```  
 USE AdventureWorks2012;  

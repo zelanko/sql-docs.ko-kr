@@ -20,15 +20,15 @@ ms.assetid: 3dde0397-ef6f-4b3f-8250-3f25584eb62b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb6f8c3efcf1f4ac84e521c323933c491c40a63c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 390b7d0c1fd34827580562b16074028465cb8ae3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831457"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85678416"
 ---
 # <a name="sysplan_guides-transact-sql"></a>sys.plan_guides(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   데이터베이스 내의 각 계획 지침당 한 개의 행을 포함합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "82831457"
 |**scope_type_desc**|**nvarchar(60)**|계획 지침의 범위에 대한 설명입니다.<br /><br /> OBJECT<br /><br /> SQL<br /><br /> TEMPLATE|  
 |**scope_object_id**|**정수**|범위가 OBJECT인 경우 계획 지침의 범위를 정의하는 개체의 object_id입니다.<br /><br /> 계획 지침 범위가 OBJECT가 아니면 NULL입니다.|  
 |**scope_batch**|**nvarchar(max)**|**scope_type**이 SQL이면 일괄 처리 텍스트입니다.<br /><br /> 일괄 처리 형식이 SQL이 아니면 NULL입니다.<br /><br /> NULL 및 **SCOPE_TYPE** SQL 인 경우 **query_text** 의 값이 적용 됩니다.|  
-|**변수의**|**nvarchar(max)**|계획 지침과 연결된 매개 변수 목록을 정의하는 문자열입니다.<br /><br /> NULL = 계획 지침에 연결되는 매개 변수 목록이 없습니다.|  
+|**parameters**|**nvarchar(max)**|계획 지침과 연결된 매개 변수 목록을 정의하는 문자열입니다.<br /><br /> NULL = 계획 지침에 연결되는 매개 변수 목록이 없습니다.|  
 |**힌트가**|**nvarchar(max)**|계획 지침과 연결된 OPTION 절 힌트입니다.|  
   
 ## <a name="permissions"></a>사용 권한  

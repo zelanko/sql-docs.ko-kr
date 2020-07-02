@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 78b7e220-445b-4fdf-811b-7253f4f2b058
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4cec490522f8bacc774213ec1af5cce1af0eefef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 133d2b109c54271c2e94cba2e88831f8f7aecf16
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910248"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662875"
 ---
 # <a name="getpathlocator-transact-sql"></a>GetPathLocator(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   FileTable의 지정된 파일 또는 디렉터리에 대한 경로 로케이터 ID 값을 반환합니다.  
   
@@ -48,7 +48,7 @@ GetPathLocator(filenamespace_path)
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  자세한 내용은 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  파일 서버에서 FileTable로 파일을 마이그레이션할 때 **Getpathlocator** 함수를 사용할 수 있습니다. 이 시나리오에서는 파일을 FileTable로 이동한 다음 각 파일의 원래 UNC 경로를 FileTable UNC 경로로 바꿉니다. 전체 예제를 보려면 [filetable에 파일 로드](../../relational-databases/blob/load-files-into-filetables.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  

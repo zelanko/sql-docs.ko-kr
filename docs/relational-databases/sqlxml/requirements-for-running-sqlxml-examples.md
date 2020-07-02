@@ -17,15 +17,15 @@ ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c8cd9e57f2ca7b9da3f13ef0438b7aa8ffc01b3a
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: aefb58e8f483c22772bf228dc7707efff50ee47f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882122"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666167"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>SQLXML 예 실행을 위한 요구 사항
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [SQLXML 4.0 프로그래밍](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) 단원에서는 다양 한 예제를 제공 합니다. 이 항목에서는 이러한 예를 사용하여 작업 예제를 만들기 위한 요구 사항을 보여 줍니다.  
   
  SQLXML 4.0 예를 사용하여 작업 예제를 만들려면 다음이 설치되어 있어야 합니다.  

@@ -1,5 +1,5 @@
 ---
-title: sys. system_views (Transact-sql) | Microsoft Docs
+title: sys.system_views (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: a526c410-e7b5-4075-8103-e1f3c6837c3c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dbfca799f3c3dc4b3930f487fb45413c7711af48
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d53f54e18c464a61d0a4b5b6cfb4cdb0cc866642
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664118"
 ---
 # <a name="syssystem_views-transact-sql"></a>sys.system_views(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 포함된 각 시스템 뷰당 한 개의 행을 포함합니다. 모든 시스템 뷰는 **sys** 또는 **INFORMATION_SCHEMA**이라는 스키마에 포함 되어 있습니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|\<상속 된 열>||이 뷰가 상속 하는 열 목록은 [sys. 개체 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.|  
+|\<inherited columns>||이 뷰가 상속 하는 열 목록은 [sys. 개체 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.|  
 |**is_replicated**|**bit**|1 = 뷰가 복제됩니다.|  
 |**has_replication_filter**|**bit**|1 = 뷰에 복제 필터가 있습니다.|  
 |**has_opaque_metadata**|**bit**|1 = 뷰에 VIEW_METADATA 옵션이 지정되었습니다. 자세한 내용은 [CREATE VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)를 참조하세요.|  

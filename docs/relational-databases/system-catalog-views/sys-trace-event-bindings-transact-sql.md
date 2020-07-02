@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 22f534e1-4ed6-4b3e-9ead-1d1001a1b0f5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ffd175d3322ff0c36bfcbf6a98c2121dfae5bbc4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0d418d0b83951c0b9d91f858f54aab79f197be3d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821256"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663997"
 ---
 # <a name="systrace_event_bindings-transact-sql"></a>sys.trace_event_bindings(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Trace_event_bindings** 카탈로그 뷰에는 이벤트와 열의 가능한 모든 사용 조합 목록이 포함 되어 있습니다. **Trace_event_id** 열에 나열 된 각 이벤트에 대해 사용 가능한 모든 열이 **trace_column_id** 열에 나열 됩니다. 지정된 이벤트가 발생할 때마다 사용 가능한 모든 열이 채워지는 것은 아닙니다. 지정된 버전의 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 이러한 값이 변경되지 않습니다.  
   

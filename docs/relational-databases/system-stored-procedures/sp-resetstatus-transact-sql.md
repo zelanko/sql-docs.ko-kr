@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b892727f-ea3b-4b94-88d9-f2386ad4962c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 94c83711131fe1b08edee73db748a8152b9b56f0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 87895b3b93059c1c6dec0e859690c8172bb143bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824355"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652039"
 ---
 # <a name="sp_resetstatus-transact-sql"></a>sp_resetstatus(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   주의 대상 데이터베이스의 상태를 다시 설정합니다.  
   
@@ -53,10 +53,10 @@ sp_resetstatus [ @dbname = ] 'database'
   
  데이터베이스는 여러 가지 이유로 주의 대상이 됩니다. 운영 시스템에 의해 데이터베이스 리소스에 대한 액세스가 거부되거나 하나 이상의 데이터베이스 파일이 사용 불가능하거나 손상되어 주의 대상이 될 수 있습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  sysadmin 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `AdventureWorks2012` 데이터베이스의 상태를 다시 설정합니다.  
   
 ```  

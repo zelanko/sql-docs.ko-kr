@@ -21,15 +21,15 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 97339050b2bb6b81945b6bc7604befdfd45f360b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8dcde5de27764979cf2258d3d1895574a4ca4e54
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829545"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677910"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지정한 테이블 또는 뷰의 데이터 및 인덱스에 대한 크기 및 조각화 정보를 반환합니다. 인덱스의 경우 각 파티션에 있는 B-트리의 각 수준에 대해 행이 반환됩니다. 힙의 경우 각 파티션의 IN_ROW_DATA 할당 단위에 대해 행이 반환됩니다. LOB(Large Object) 데이터의 경우 각 파티션의 LOB_DATA 할당 단위에 대해 행이 반환됩니다. 테이블에 행-오버플로 데이터가 있는 경우 각 파티션의 ROW_OVERFLOW_DATA 할당 단위에 대해 행이 반환됩니다. xVelocity  메모리 액세스에 최적화된 columnstore  인덱스에 대한 정보를 반환하지 않습니다.  
   
@@ -221,7 +221,7 @@ GO
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  클러스터형 columnstore 인덱스에 데이터를 반환하지 않습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  다음 사용 권한이 필요합니다.  
   
 -   데이터베이스 내의 지정된 개체에 대한 CONTROL 권한  
@@ -236,7 +236,7 @@ GO
   
  자세한 내용은 [동적 관리 뷰 및 함수 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)를 참조 하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-information-about-a-specified-table"></a>A. 지정한 테이블에 대한 정보 반환  
  다음 예에서는 `Person.Address` 테이블의 모든 인덱스와 파티션에 대한 크기 및 조각화 통계를 반환합니다. 최대한의 성능을 발휘하고 반환되는 통계를 제한하기 위해 검색 모드를 `'LIMITED'`로 설정합니다. 이 쿼리를 실행하려면 최소한 `Person.Address` 테이블에 대한 CONTROL  권한이 필요합니다.  
@@ -425,7 +425,7 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;인덱스 관련 동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [인덱스 관련 동적 관리 뷰 및 함수 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [dm_db_index_operational_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [dm_db_index_usage_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [dm_db_partition_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
