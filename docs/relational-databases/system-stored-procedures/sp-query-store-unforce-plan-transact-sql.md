@@ -21,15 +21,15 @@ ms.assetid: a52f91d0-ff1e-46ad-ba36-b32d9623c9ab
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 594f274ab1958f23115c96737b2bd3b1f1dc7d4b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f119ac8f18ae5f9f5b869f237eda27e887e78f15
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826602"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758732"
 ---
 # <a name="sp_query_store_unforce_plan-transact-sql"></a>sp_query_store_unforce_plan (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   특정 쿼리에 대해 이전에 강제 적용 된 계획을 강제 적용할 수 없습니다.  
   
@@ -51,10 +51,10 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
   
 ## <a name="remarks"></a>설명  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에 대 한 **ALTER** 권한이 필요 합니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 쿼리 저장소의 쿼리에 대 한 정보를 반환 합니다.  
   
 ```sql  

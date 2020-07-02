@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 91667feca7974f66233b7549af9f75838d2ce32d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 431572ccdb71cbad37708932a3313a543026272c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831710"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757968"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스의 현재 VarDecimal 스토리지 형식 상태를 반환하거나 데이터베이스에 VarDecimal 스토리지 형식을 사용하도록 설정합니다.  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터는 사용자 데이터베이스가 항상 사용하도록 설정되어 있습니다. 데이터베이스에 VarDecimal 스토리지 형식을 사용하도록 설정하는 작업은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서만 필요합니다.  
   
@@ -86,7 +86,7 @@ FROM sys.objects
 GO  
 ```  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 코드에서는 `AdventureWorks2012` 데이터베이스에 압축을 설정하고 상태를 확인한 다음 `Sales.SalesOrderDetail` 테이블의 decimal 및 numeric 열을 압축합니다.  
   
 ```  

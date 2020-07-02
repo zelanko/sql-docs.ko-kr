@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5868120af1e98c4b2f3be78f2cf7927df53b42d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06629b059afffe3baa0a34caec1337d7bc3f2517
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68072659"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757994"
 ---
 # <a name="sp_addlogin-transact-sql"></a>sp_addlogin(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있도록 하는 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 만듭니다.  
   
@@ -51,30 +51,30 @@ sp_addlogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @loginame= ] '*로그인*'  
+ [ @loginame =] '*로그인*'  
  로그인 이름입니다. *login* 은 **sysname**이며 기본값은 없습니다.  
   
- [ @passwd= ] '*암호*'  
+ [ @passwd =] '*password*'  
  로그인 암호입니다. *password* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
- [ @defdb= ] '*데이터베이스*'  
+ [ @defdb =] '*database*'  
  로그인의 기본 데이터베이스(로그인한 다음 처음 연결되는 데이터베이스)입니다. *데이터베이스* 는 **sysname**이며 기본값은 **master**입니다.  
   
- [ @deflanguage= ] '*언어*'  
+ [ @deflanguage =] '*language*'  
  로그인의 기본 언어입니다. *language* 는 **sysname**이며 기본값은 NULL입니다. *Language* 를 지정 하지 않으면 새 로그인의 기본 *언어가* 서버의 현재 기본 언어로 설정 됩니다.  
   
- [ @sid= ] '*sid*'  
- 로그인의 SID(보안 ID)입니다. *sid* 는 **varbinary (16)** 이며 기본값은 NULL입니다. *Sid* 가 NULL 인 경우 시스템은 새 로그인에 대 한 sid를 생성 합니다. **Varbinary** 데이터 형식을 사용 하는 경우에도 NULL이 아닌 값은 정확히 16 바이트 여야 하며, 아직 존재 하지 않아야 합니다. 예 *sid* 를 들어, 서버 간에 로그인을 스크립팅 하거나 이동 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 경우와 로그인이 다른 서버에서 동일한 sid를 갖도록 하려면 sid를 지정 하는 것이 유용 합니다.  
+ [ @sid =] '*sid*'  
+ 로그인의 SID(보안 ID)입니다. *sid* 는 **varbinary (16)** 이며 기본값은 NULL입니다. *Sid* 가 NULL 인 경우 시스템은 새 로그인에 대 한 sid를 생성 합니다. **Varbinary** 데이터 형식을 사용 하는 경우에도 NULL이 아닌 값은 정확히 16 바이트 여야 하며, 아직 존재 하지 않아야 합니다. 예 *sid* 를 들어, 서버 간에 로그인을 스크립팅 하거나 이동 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 로그인이 다른 서버에서 동일한 sid를 갖도록 하려면 sid를 지정 하는 것이 유용 합니다.  
   
- [ @encryptopt= ] '*encryption_option*'  
+ [ @encryptopt =] '*encryption_option*'  
  암호를 일반 텍스트로 전달할지 아니면 일반 텍스트 암호의 해시로 전달할지 지정합니다. 암호화되지는 않습니다. 이 설명에서 "암호화"라는 단어는 이전 버전과의 호환성을 위해 사용합니다. 일반 텍스트 암호가 전달되면 전달된 암호는 해시됩니다. 해시된 암호는 저장됩니다. *encryption_option* 는 **varchar (20)** 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
-|NULL|암호를 일반 텍스트로 전달합니다. 이것이 기본값입니다.|  
+|NULL|암호를 일반 텍스트로 전달합니다. 기본값입니다.|  
 |**skip_encryption**|암호가 이미 해시되어 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 다시 해시하지 않고 값을 저장합니다.|  
 |**skip_encryption_old**|제공된 암호가 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 해시되었습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 다시 해시하지 않고 값을 저장합니다. 이 옵션은 업그레이드 목적으로만 제공됩니다.|  
   
@@ -82,7 +82,7 @@ sp_addlogin [ @loginame = ] 'login'
  0(성공) 또는 1(실패)  
   
 ## <a name="remarks"></a>설명  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인은 문자, 기호 및 숫자를 포함하여 1자에서 128자까지의 문자를 포함할 수 있습니다. 로그인에는 백슬래시 (\\)를 사용할 수 없습니다. sa 또는 public과 같은 예약 된 로그인 이름 이거나 이미 존재 합니다. 또는가 NULL 이거나 빈 문자열 (`''`) 인 경우  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인은 문자, 기호 및 숫자를 포함하여 1자에서 128자까지의 문자를 포함할 수 있습니다. 로그인은 백슬래시 ()를 포함할 수 없으며 \\ , sa 나 public 등의 예약 된 로그인 이름이 나 이미 존재 하거나, NULL 이거나 빈 문자열 () 일 수 없습니다 `''` .  
   
  기본 데이터베이스의 이름이 제공되는 경우에는 USE 문을 실행하지 않고도 지정된 데이터베이스에 연결할 수 있습니다. 그러나 데이터베이스 소유자가 [sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md) 또는 [sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)) 또는 [sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)를 사용 하 여 해당 데이터베이스에 대 한 액세스 권한을 부여할 때까지 기본 데이터베이스를 사용할 수 없습니다.  
   
@@ -90,7 +90,7 @@ sp_addlogin [ @loginame = ] 'login'
   
  서버의 기본 언어를 변경해도 기존 로그인의 기본 언어는 변경되지 않습니다. 서버의 기본 언어를 변경 하려면 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)을 사용 합니다.  
   
- 암호 해시를 표시 하지 않기 위해 **skip_encryption** 를 사용 하는 것은 로그인이에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]추가 될 때 암호가 이미 해시 된 경우에 유용 합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 암호를 해시 한 경우 **skip_encryption_old**를 사용 합니다.  
+ 암호 해시를 표시 하지 않기 위해 **skip_encryption** 를 사용 하는 것은 로그인이에 추가 될 때 암호가 이미 해시 된 경우에 유용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 이전 버전의에서 암호를 해시 한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **skip_encryption_old**를 사용 합니다.  
   
  사용자 정의 트랜잭션 내에서는 sp_addlogin을 실행할 수 없습니다.  
   
@@ -106,7 +106,7 @@ sp_addlogin [ @loginame = ] 'login'
 ## <a name="permissions"></a>사용 권한  
  ALTER ANY LOGIN 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-creating-a-sql-server-login"></a>A. SQL Server 로그인 만들기  
  다음 예에서는 `Victoria`라는 사용자에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 만듭니다. 암호는 `B1r12-36`이며 기본 데이터베이스는 지정하지 않습니다.  

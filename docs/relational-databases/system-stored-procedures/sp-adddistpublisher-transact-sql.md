@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 2f341a881ca33c66121d6b87ee30d437c621f973
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: ba76aefe1b3b4f18a596c25d136c4ec6914ce5a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627151"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760226"
 ---
 # <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   지정된 배포 데이터베이스를 사용하기 위해 게시자를 구성합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다. 이 저장 프로시저를 사용 하기 전에 [transact-sql sp_adddistributiondb&#41;&#40;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) transact-sql [&#40;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) sp_adddistributor 저장 프로시저를 실행 해야 합니다.  
   
@@ -106,7 +106,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/sp-adddistpublisher-tran_1.sql)]  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_adddistpublisher**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

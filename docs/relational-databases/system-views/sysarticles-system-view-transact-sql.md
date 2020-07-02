@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 18f8c9b3-cab7-4e8f-8754-11ac38c3f789
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f0d1f6c1036d946088e2cc1aa91c08f620c3f597
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d947bdcf0e777d96c18551fafae61d3db9a930b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68129544"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759987"
 ---
 # <a name="sysarticles-system-view-transact-sql"></a>sysarticles(시스템 뷰)(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Sysarticles** 뷰는 아티클 속성을 노출 합니다. 이 뷰는 배포 데이터베이스에 저장됩니다.  
   

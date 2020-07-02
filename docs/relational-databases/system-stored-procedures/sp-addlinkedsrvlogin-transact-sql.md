@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1bf39a9a1262f30e3c0bbd6fd2ea5892a55540dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ee38ac3c19c9f5d5b36f896c1018a16e98e37cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68072675"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758006"
 ---
 # <a name="sp_addlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로컬 인스턴스의 로그인과 원격 서버 보안 계정 간의 매핑을 만들거나 업데이트합니다.  
   
@@ -54,7 +54,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  로컬 서버의 로그인입니다. *locallogin* 은 **sysname**이며 기본값은 NULL입니다. NULL은 *rmtsrvname*에 연결 하는 모든 로컬 로그인에이 항목이 적용 되도록 지정 합니다. NULL이 아닌 경우 *locallogin* 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 Windows 로그인 일 수 있습니다. Windows 로그인은 직접적인 방법으로든 또는 액세스 권한이 있는 Windows 그룹의 멤버 자격을 이용한 방법으로든 반드시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스 권한을 보유해야 합니다.  
   
  `[ @rmtuser = ] 'rmtuser'`  
- 가 FALSE 인 경우 @useself *rmtsrvname* 에 연결 하는 데 사용 되는 원격 로그인입니다. 원격 서버가 Windows 인증을 사용 하지 않는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스인 경우 *rmtuser* 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인입니다. *rmtuser* 는 **sysname**이며 기본값은 NULL입니다.  
+ 가 FALSE 인 경우 *rmtsrvname* 에 연결 하는 데 사용 되는 원격 로그인입니다 @useself . 원격 서버가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 인증을 사용 하지 않는 인스턴스인 경우 *rmtuser* 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인입니다. *rmtuser* 는 **sysname**이며 기본값은 NULL입니다.  
   
  `[ @rmtpassword = ] 'rmtpassword'`  
  *Rmtuser*와 연결 된 암호입니다. *rmtpassword* 는 **sysname**이며 기본값은 NULL입니다.  
@@ -68,7 +68,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
 > [!NOTE]  
 >  연결된 서버의 테이블을 사용하여 최적의 쿼리 계획을 만들려면 연결된 서버로부터의 데이터 분포 통계를 쿼리 프로세서가 가지고 있어야 합니다. 테이블의 열에 대해 제한된 사용 권한을 가진 사용자는 유용한 모든 통계를 가져올 권한이 없으므로 덜 효율적인 쿼리 계획을 받게 되어 성능 저하 문제를 겪을 수 있습니다. 연결된 서버가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스라면 사용자는 모든 사용 가능한 통계를 얻기 위해 해당 테이블의 소유자 또는 연결된 서버에서 sysadmin 고정 서버 역할, db_owner 고정 데이터베이스 역할 또는 db_ddladmin 고정 데이터베이스 역할의 멤버여야 합니다. SQL Server 2012 SP1에서는 통계를 가져오기 위해 권한 제한을 수정하여 사용자가 SELECT 권한을 사용하여 DBCC SHOW_STATISTICS를 통해 통계에 액세스할 수 있게 되었습니다. 자세한 내용은 [transact-sql&#41;&#40;DBCC SHOW_STATISTICS ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)의 사용 권한 섹션을 참조 하세요.  
   
- sp_addlinkedserver를 실행하면 로컬 서버의 모든 로그인과 연결된 서버의 원격 로그인 간의 기본 매핑이 자동으로 생성됩니다. 기본 매핑은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 로컬 로그인 대신 연결된 서버에 연결할 때 해당 로그인의 사용자 자격 증명을 사용함을 나타냅니다. 이는 로컬 사용자 이름을 지정 하지 @useself 않고 연결 된 서버에 대해를 **true** 로 설정 하 여 sp_addlinkedsrvlogin를 실행 하는 것과 같습니다. 기본 매핑을 변경하거나 특정 로컬 로그인에 새 매핑을 추가하는 경우에만 sp_addlinkedsrvlogin을 사용합니다. 기본 매핑 또는 다른 매핑을 삭제하려면 sp_droplinkedsrvlogin을 사용합니다.  
+ sp_addlinkedserver를 실행하면 로컬 서버의 모든 로그인과 연결된 서버의 원격 로그인 간의 기본 매핑이 자동으로 생성됩니다. 기본 매핑은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 로컬 로그인 대신 연결된 서버에 연결할 때 해당 로그인의 사용자 자격 증명을 사용함을 나타냅니다. 이는 @useself 로컬 사용자 이름을 지정 하지 않고 연결 된 서버에 대해를 **true** 로 설정 하 여 sp_addlinkedsrvlogin를 실행 하는 것과 같습니다. 기본 매핑을 변경하거나 특정 로컬 로그인에 새 매핑을 추가하는 경우에만 sp_addlinkedsrvlogin을 사용합니다. 기본 매핑 또는 다른 매핑을 삭제하려면 sp_droplinkedsrvlogin을 사용합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 sp_addlinkedsrvlogin을 사용하여 미리 지정된 로그인 매핑을 만드는 대신 다음 조건이 모두 충족될 때 쿼리를 실행하는 사용자의 Windows 보안 자격 증명(Windows 로그인 이름 및 암호)을 사용하여 연결된 서버에 자동으로 연결할 수 있습니다.  
   
@@ -88,7 +88,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 ALTER ANY LOGIN 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-connecting-all-local-logins-to-the-linked-server-by-using-their-own-user-credentials"></a>A. 자체 사용자 자격 증명을 사용하여 연결된 서버에 모든 로컬 로그인 연결  
  다음 예에서는 로컬 서버의 모든 로그인이 자체 사용자 자격 증명을 사용하여 `Accounts` 연결된 서버에 연결되도록 하는 매핑을 만듭니다.  
@@ -97,7 +97,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
 EXEC sp_addlinkedsrvlogin 'Accounts';  
 ```  
   
- Or  
+ 또는  
   
 ```  
 EXEC sp_addlinkedsrvlogin 'Accounts', 'true';  

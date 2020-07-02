@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0bc8ea22699762927a026ae4cc811500c193555c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 715318b0b0ea38870317d05815845e1b6eaa3227
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68072748"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760184"
 ---
 # <a name="sp_addextendedproc-transact-sql"></a>sp_addextendedproc(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  새 확장 저장 프로시저의 이름을에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]등록 합니다.  
+  새 확장 저장 프로시저의 이름을에 등록 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [CLR 통합](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) 을 사용 하세요.  
@@ -51,14 +51,14 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
- 확장 저장 프로시저를 만든 후에는 **sp_addextendedproc**를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 추가 해야 합니다. 자세한 내용은 [SQL Server에 확장 저장 프로시저 추가](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)를 참조 하세요.  
+ 확장 저장 프로시저를 만든 후에는 sp_addextendedproc를 사용 하 여에 추가 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **sp_addextendedproc** 자세한 내용은 [SQL Server에 확장 저장 프로시저 추가](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)를 참조 하세요.  
   
  이 프로시저는 **master** 데이터베이스 에서만 실행할 수 있습니다. **Master**이외의 데이터베이스에서 확장 저장 프로시저를 실행 하려면 **master**를 사용 하 여 확장 저장 프로시저의 이름을 한정 합니다.  
   
- **sp_addextendedproc** 는 새 확장 저장 프로시저의 이름을로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]등록 하는 항목을 [sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 카탈로그 뷰에 추가 합니다. 또한 [sys. extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) 카탈로그 뷰에 항목을 추가 합니다.  
+ **sp_addextendedproc** 는 새 확장 저장 프로시저의 이름을로 등록 하는 항목을 [sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 카탈로그 뷰에 추가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 또한 [sys. extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) 카탈로그 뷰에 항목을 추가 합니다.  
   
 > [!IMPORTANT]  
 >  전체 경로에 등록되지 않은 기존 DLL은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드한 후에 작동하지 않습니다. 이 문제를 해결 하려면 **sp_dropextendedproc** 를 사용 하 여 DLL의 등록을 취소 한 다음 전체 경로를 지정 하 여 **sp_addextendedproc**에 다시 등록 합니다.  
@@ -66,7 +66,7 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_addextendedproc**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 **xp_hello** 확장 저장 프로시저를 추가 합니다.  
   
 ```  

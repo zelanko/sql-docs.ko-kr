@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: afaf4166facc16e7582f3978f3806d8d5a68fb0e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 64fef5a7f6d135961a6757a92d734e75f2114273
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831277"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760106"
 ---
 # <a name="sp_delete_backuphistory-transact-sql"></a>sp_delete_backuphistory(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정한 날짜보다 오래된 백업 세트의 항목을 삭제하여 백업 및 복원 기록 테이블의 크기를 줄입니다. 각 백업 또는 복원 작업을 수행한 후에 추가 행이 백업 및 복원 기록 테이블에 추가 됩니다. 따라서 **sp_delete_backuphistory**을 정기적으로 실행 하는 것이 좋습니다.  
   
@@ -74,7 +74,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버 자격이 필요 하지만 다른 사용자에 게 사용 권한을 부여할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 백업 및 복원 기록 테이블에서 2010년 1월 14일 오전 12시 이전의 모든 항목을 삭제합니다.  
   
 ```  

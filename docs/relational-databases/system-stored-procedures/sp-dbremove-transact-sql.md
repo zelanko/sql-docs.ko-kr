@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 20941c190dc2de90821e1e03a2dc3268dde20e8d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4aea3e333c2f47b8c2c949f93bf4f1adc773a8df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826134"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760121"
 ---
 # <a name="sp_dbremove-transact-sql"></a>sp_dbremove(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스 및 이에 연관된 모든 파일을 제거합니다.  
   
@@ -55,7 +55,7 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `sales`라는 데이터베이스 및 이와 연관된 모든 파일을 제거합니다.  
   
 ```  

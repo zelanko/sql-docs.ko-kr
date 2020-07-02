@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c6e023c1-2c32-4269-8d76-e442ea309e4b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3a44dd898b4ec4afcf161e398072edfbc3f6f815
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a0f7c33013324ea514a96df530608f67553c3e8d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820083"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760000"
 ---
 # <a name="msrepl_errors-transact-sql"></a>MSrepl_errors(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSrepl_errors** 테이블에는 확장 된 배포 에이전트 및 병합 에이전트 오류 정보가 포함 된 행이 포함 되어 있습니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

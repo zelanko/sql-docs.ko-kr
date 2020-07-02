@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fdb8e596405c9e205ec7a8cd907569644f8c9c5c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d843ff86e221a3e007d68f6f6d130f4fceb82f3f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820402"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756653"
 ---
 # <a name="sp_helpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   구독자에 관한 정보를 표시합니다. 이 저장 프로시저는 모든 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -54,9 +54,9 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**type**|**tinyint**|구독자의 유형입니다.<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 **1** = ODBC 데이터 원본|  
 |**로그인**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 대한 로그인 ID입니다.|  
 |**password**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 대한 암호입니다.|  
-|**commit_batch_size**|**int**|지원되지 않습니다.|  
-|**status_batch_size**|**int**|지원되지 않습니다.|  
-|**flush_frequency**|**int**|지원되지 않습니다.|  
+|**commit_batch_size**|**int**|지원 안 됨|  
+|**status_batch_size**|**int**|지원 안 됨|  
+|**flush_frequency**|**int**|지원 안 됨|  
 |**frequency_type**|**int**|배포 에이전트가 실행되는 빈도입니다.<br /><br /> **1** = 한 번<br /><br /> **2** = 요청 시<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** = 매월 상대적<br /><br /> **64** = 자동 시작<br /><br /> **128** = 되풀이|  
 |**frequency_interval**|**int**|*Frequency_type*에 의해 설정 된 빈도에 적용 되는 값입니다.|  
 |**frequency_relative_interval**|**int**|*Frequency_type* 가 **32** (매월 상대적)로 설정 된 경우 사용 되는 배포 에이전트의 날짜입니다.<br /><br /> **1** = 첫 번째<br /><br /> **2** = 초<br /><br /> **4** = 세 번째<br /><br /> **8** = 네 번째<br /><br /> **16** = 마지막|  
@@ -67,8 +67,8 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**active_end_time_of_day**|**int**|배포 에이전트가 마지막으로 실행되도록 예약된 시간이며 HHMMSS 형식으로 표시됩니다.|  
 |**active_start_date**|**int**|배포 에이전트가 처음으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다.|  
 |**active_end_date**|**int**|배포 에이전트가 마지막으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다.|  
-|**retryattempt**|**int**|지원되지 않습니다.|  
-|**retrydelay**|**int**|지원되지 않습니다.|  
+|**retryattempt**|**int**|지원 안 됨|  
+|**retrydelay**|**int**|지원 안 됨|  
 |**한**|**nvarchar(255)**|구독자에 관한 텍스트 설명입니다.|  
 |**security_mode**|**int**|구현된 보안 모드입니다.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증|  
 |**frequency_type2**|**int**|병합 에이전트가 실행되는 빈도입니다.<br /><br /> **1** = 한 번<br /><br /> **2** = 요청 시<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** = 매월 상대적<br /><br /> **64** = 자동 시작<br /><br /> **128** = 되풀이|  

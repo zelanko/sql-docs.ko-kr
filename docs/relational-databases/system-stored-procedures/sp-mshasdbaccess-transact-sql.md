@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a9a23b90-2c60-4460-80a7-d7e14cc5a6a8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9f605865b803aea86c08958462cfa85494a3bfc2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 835a62edd78dec85bb1d05fe40dfddbbf819bc6f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827545"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757854"
 ---
 # <a name="sp_mshasdbaccess-transact-sql"></a>sp_MShasdbaccess(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   사용자가 액세스할 수 있는 모든 데이터베이스의 이름과 소유자를 나열합니다.  
   
@@ -41,7 +41,7 @@ sp_MShasdbaccess
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  실행 권한은 **public** 역할에 부여 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

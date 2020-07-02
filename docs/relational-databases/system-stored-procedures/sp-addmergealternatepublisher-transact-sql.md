@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c577ed76bcf0e998e63421febadf1c01c13e07cb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e6ef8e5152fb715172f6c04854e342c46b759f25
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831858"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757975"
 ---
 # <a name="sp_addmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   동기화 파트너를 대체하기 위한 구독자 기능을 추가합니다. 게시 속성에서 구독자가 다른 게시자와 동기화할 수 있게 지정해야 합니다. 이 저장 프로시저는 구독 데이터베이스의 구독자에서 실행됩니다.  
   

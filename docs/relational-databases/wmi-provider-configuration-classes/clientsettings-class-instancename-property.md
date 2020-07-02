@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 58dacb4a-751a-491f-9adb-88ec6afc797c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7485a5603386b6eb0c3cf70964f8a0d4378eef8c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fa6ea7b3fb01512fb22a263fa1612d07976769a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660686"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759888"
 ---
 # <a name="clientsettings-class---instancename-property"></a>ClientSettings 클래스 - InstanceName 속성
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 인스턴스의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 이름을 가져옵니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+  클라이언트 인스턴스의 이름을 가져옵니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="syntax"></a>구문  
   

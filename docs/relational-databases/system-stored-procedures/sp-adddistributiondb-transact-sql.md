@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: ef595adcf3772dcac92c58764d99bca4374aeb0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13ba20770fd97d0db193ab492ae0958cf4c7ad35
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771348"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758034"
 ---
 # <a name="sp_adddistributiondb-transact-sql"></a>sp_adddistributiondb(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   새 배포 데이터베이스를 만들고 배포자 스키마를 설치합니다. 배포 데이터베이스는 복제에 사용하는 프로시저, 스키마 및 메타데이터를 저장합니다. 이 저장 프로시저는 배포 데이터베이스를 만들기 위해 master 데이터베이스의 배포자에서 실행되며 복제 배포를 사용하는 데 필요한 테이블 및 저장 프로시저를 설치합니다.  
   
@@ -55,7 +55,7 @@ sp_adddistributiondb [ @database= ] 'database'
 ## <a name="arguments"></a>인수  
 `[ @database = ] database'`만들 배포 데이터베이스의 이름입니다. *데이터베이스* 는 **sysname**이며 기본값은 없습니다. 지정한 데이터베이스가 이미 존재하지만 아직 배포 데이터베이스로 표시되지 않은 경우 배포를 활성화하는 데 필요한 개체가 설치되고 데이터베이스가 배포 데이터베이스로 표시됩니다. 지정한 데이터베이스가 이미 배포 데이터베이스로 활성화된 경우 오류가 반환됩니다.  
   
-`[ @data_folder = ] 'data_folder'_`배포 데이터베이스 데이터 파일을 저장 하는 데 사용 되는 디렉터리의 이름입니다. *data_folder* 는 **nvarchar (255)** 이며 기본값은 NULL입니다. NULL 인 경우의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 해당 인스턴스에 대 한 데이터 디렉터리 (예:)가 사용 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`됩니다.  
+`[ @data_folder = ] 'data_folder'_`배포 데이터베이스 데이터 파일을 저장 하는 데 사용 되는 디렉터리의 이름입니다. *data_folder* 는 **nvarchar (255)** 이며 기본값은 NULL입니다. NULL 인 경우의 해당 인스턴스에 대 한 데이터 디렉터리 ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예:)가 사용 됩니다 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` .  
   
 `[ @data_file = ] 'data_file'`데이터베이스 파일의 이름입니다. *data_file* 은 **nvarchar (255)** 이며 기본값은 **database**입니다. NULL인 경우 저장 프로시저는 데이터베이스 이름을 사용하여 새 파일 이름을 생성합니다.  
   
@@ -65,7 +65,7 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @log_file = ] 'log_file'`로그 파일의 이름입니다. *log_file* 는 **nvarchar (255)** 이며 기본값은 NULL입니다. NULL인 경우 저장 프로시저는 데이터베이스 이름을 사용하여 새 파일 이름을 생성합니다.  
   
-`[ @log_file_size = ] log_file_size`초기 로그 파일 크기 (MB)입니다. *log_file_size* 은 **int**이며 기본값은 0mb입니다. 즉,에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]허용 하는 가장 작은 로그 파일 크기를 사용 하 여 파일 크기가 생성 됩니다.  
+`[ @log_file_size = ] log_file_size`초기 로그 파일 크기 (MB)입니다. *log_file_size* 은 **int**이며 기본값은 0mb입니다. 즉,에서 허용 하는 가장 작은 로그 파일 크기를 사용 하 여 파일 크기가 생성 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 `[ @min_distretention = ] min_distretention`배포 데이터베이스에서 트랜잭션을 삭제 하기 전의 최소 보존 기간 (시간)입니다. *min_distretention* 은 **int**이며 기본값은 0 시간입니다.  
   
@@ -73,7 +73,7 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @history_retention = ] history_retention`기록을 보존할 시간입니다. *history_retention* 는 **int**이며 기본값은 48 시간입니다.  
   
-`[ @security_mode = ] security_mode`배포자에 연결할 때 사용 하는 보안 모드입니다. *security_mode* 은 **int**이며 기본값은 1입니다. **0** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 지정 합니다. **1** 은 Windows 통합 인증을 지정 합니다.  
+`[ @security_mode = ] security_mode`배포자에 연결할 때 사용 하는 보안 모드입니다. *security_mode* 은 **int**이며 기본값은 1입니다. **0** 은 인증을 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **1** 은 Windows 통합 인증을 지정 합니다.  
   
 `[ @login = ] 'login'`배포 데이터베이스를 만들기 위해 배포자에 연결할 때 사용 되는 로그인 이름입니다. *Security_mode* 가 **0**으로 설정 된 경우에 필요 합니다. *login*은 **sysname**이며 기본값은 NULL입니다.  
   

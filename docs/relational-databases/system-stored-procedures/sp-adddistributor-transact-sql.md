@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 5c82ffa7ad254fc56f1c544a714d8633b7d1a33c
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: af202181425b751d684d833946a52df036633afb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627175"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760232"
 ---
 # <a name="sp_adddistributor-transact-sql"></a>sp_adddistributor(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   [sys.sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) 테이블에 항목을 만들고 (없는 경우) 서버 항목을 배포자로 표시 하 고 속성 정보를 저장 합니다. 이 저장 프로시저는 서버를 배포자로 등록하고 표시하기 위해 master 데이터베이스의 배포자에서 실행됩니다. 원격 배포자의 경우도 마찬가지로, 원격 배포자를 등록하기 위해 master 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -65,7 +65,7 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/sp-adddistributor-transa_1.sql)]  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_adddistributor**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

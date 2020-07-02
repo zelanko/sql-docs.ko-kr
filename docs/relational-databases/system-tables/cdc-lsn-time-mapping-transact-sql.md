@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1cb7aedc-48a4-486e-9b91-d30c4bd4084e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 24f016444b3cf5cdb1b92f42810ea562e77e15de
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 417e57b6872ca5b54f7acefb28f65b2652f41da7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813909"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758693"
 ---
 # <a name="cdclsn_time_mapping-transact-sql"></a>cdc.lsn_time_mapping(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   변경 테이블에 행이 있는 각 트랜잭션에 대해 한 개의 행을 반환합니다. 이 테이블은 LSN(로그 시퀀스 번호) 커밋 값과 트랜잭션 커밋 시간을 매핑하는 데 사용됩니다. 변경 테이블 항목이 없는 경우에도 항목이 기록됩니다. 이렇게 하면 해당 테이블이 변경 작업이 적거나 없는 시간에 LSN 처리 완료를 기록할 수 있습니다.  
   

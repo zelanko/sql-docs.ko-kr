@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ae75aa570b20a21c31d75b66ddf5c01635eee51
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 32001d88c17358406b5b855cbb698c9d2686e40f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830578"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760255"
 ---
 # <a name="sysdm_hadr_instance_node_map-transact-sql"></a>sys.dm_hadr_instance_node_map(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Always On 가용성 그룹에 조인 된 가용성 복제본을 호스팅하는 모든 인스턴스에 대해 서버 인스턴스를 호스팅하는 WSFC (Windows Server 장애 조치 (Failover) 클러스터) 노드의 이름을 반환 합니다. 이러한 동적 관리 뷰는 다음과 같이 사용됩니다.  
   

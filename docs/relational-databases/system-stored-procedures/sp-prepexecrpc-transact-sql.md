@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 35d686f2-ef31-4eaa-baa9-9cef5d6c87c2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 26f298a102c69c8bc75721db531275379080005a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f35bd49fa9969d0d5f381d5e1cb7f905b9a0743b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830983"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760045"
 ---
 # <a name="sp_prepexecrpc-transact-sql"></a>sp_prepexecrpc(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   RPC 식별자를 사용하여 지정된 매개 변수가 있는 저장 프로시저 호출을 준비 및 실행합니다. sp_prepexecrpc은 TDS (tabular data stream) 패킷에서 ID = 14에 의해 호출 됩니다.  
   

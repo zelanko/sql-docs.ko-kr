@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 48f94f7fcf823a9ed9acc519e393369e44b45302
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53af39302f88f88633896e54301501ead8ff6f9a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771338"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760215"
 ---
 # <a name="sp_adddynamicsnapshot_job-transact-sql"></a>sp_adddynamicsnapshot_job(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   매개 변수가 있는 행 필터로 게시에 대한 필터링된 데이터 스냅샷을 생성하는 에이전트 작업을 만듭니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다. 관리자가 이 저장 프로시저를 사용하여 구독자에 대한 필터링된 데이터 스냅샷 작업을 수동으로 만들 수 있습니다.  
   
@@ -80,8 +80,8 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**1**|한 번|  
 |**2**|주문형|  
 |**4** (기본값)|매일|  
-|**20cm(8**|매주|  
-|**x**|매월|  
+|**8**|매주|  
+|**16**|매월|  
 |**32**|매월 상대적|  
 |**64**|자동 시작|  
 |**128**|되풀이|  
@@ -92,8 +92,8 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |--------------------------------|-------------------------------------|  
 |**1**|*frequency_interval* 사용 되지 않습니다.|  
 |**4** (기본값)|매일 *frequency_interval* 매일 (기본값)을 사용 합니다.|  
-|**20cm(8**|*frequency_interval* 은 [&#124; &#40;비트 or&#41; &#40;transact-sql&#41;](../../t-sql/language-elements/bitwise-or-transact-sql.md) 논리 연산자)와 결합 된 다음 중 하나 이상입니다.<br /><br /> **1** = 일요일 &#124; **2** = 월요일 &#124; **4** = 화요일 &#124; **8** = 수요일 &#124; **16** = 목요일 &#124; **32** = 금요일 &#124; **64** = 토요일|  
-|**x**|월의 *frequency_interval* 날짜|  
+|**8**|*frequency_interval* 은 [&#124; &#40;비트 or&#41; &#40;transact-sql&#41;](../../t-sql/language-elements/bitwise-or-transact-sql.md) 논리 연산자)와 결합 된 다음 중 하나 이상입니다.<br /><br /> **1** = 일요일 &#124; **2** = 월요일 &#124; **4** = 화요일 &#124; **8** = 수요일 &#124; **16** = 목요일 &#124; **32** = 금요일 &#124; **64** = 토요일|  
+|**16**|월의 *frequency_interval* 날짜|  
 |**32**|*frequency_interval* 은 다음 중 하나입니다.<br /><br /> **1** = 일요일 &#124; **2** = 월요일 &#124; **3** = 화요일 &#124; **4** = 수요일 &#124; **5** = 목요일 &#124; **6** = 금요일 &#124; **7** = 토요일 &#124; **8** = 일 &#124; **9** = 평일 &#124; **10** = 주말|  
 |**64**|*frequency_interval* 사용 되지 않습니다.|  
 |**128**|*frequency_interval* 사용 되지 않습니다.|  
@@ -103,9 +103,9 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|초|  
+|**2**|Second|  
 |**4** (기본값)|Minute|  
-|**20cm(8**|Hour|  
+|**8**|시간|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`각 작업 실행 사이에 발생 하는 *frequency_subday* 기간의 수입니다. *frequency_subday_interval* 은 **int**이며 기본값은 5입니다.  
   
@@ -113,11 +113,11 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 |값|설명|  
 |-----------|-----------------|  
-|**1** (기본값)|처음|  
-|**2**|초|  
+|**1** (기본값)|첫째|  
+|**2**|Second|  
 |**4**|셋째|  
-|**20cm(8**|넷째|  
-|**x**|마지막|  
+|**8**|넷째|  
+|**16**|마지막|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*에서 사용 하는 되풀이 비율입니다. *frequency_recurrence_factor* 은 **int**이며 기본값은 0입니다.  
   
@@ -135,7 +135,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**id**|**int**|[MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) 시스템 테이블에서 필터링 된 데이터 스냅숏 작업을 식별 합니다.|  
 |**dynamic_snapshot_jobname**|**sysname**|필터링된 데이터 스냅샷 작업의 이름입니다.|  
-|**dynamic_snapshot_jobid**|**uniqueidentifier**|배포자에서 에이전트 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업을 고유 하 게 식별 합니다.|  
+|**dynamic_snapshot_jobid**|**uniqueidentifier**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]배포자에서 에이전트 작업을 고유 하 게 식별 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

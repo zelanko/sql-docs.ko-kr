@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55a0c2509a52bb77a4f8ea9779210dac27bc86db
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7ac8b37eb3c21a9dbe7fa69eb6805a502993b7b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820425"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757897"
 ---
 # <a name="sp_get_redirected_publisher-transact-sql"></a>sp_get_redirected_publisher(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   복제 에이전트에서 배포자를 쿼리하여 원래 게시자가 리디렉션되었는지 여부를 확인하는 데 사용됩니다.  
   

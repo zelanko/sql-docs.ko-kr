@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: a50b989afef382a8315c29ea5257ad9b103e124c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b22bb48cd5bc48a3b1812dfd97fc2b56df8ba11
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68769221"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757988"
 ---
 # <a name="sp_addlogreader_agent-transact-sql"></a>sp_addlogreader_agent(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   지정된 데이터베이스에 대해 로그 판독기 에이전트를 추가합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -46,10 +46,10 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_login = ] 'job_login'`에이전트가 실행 되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정의 로그인입니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 NULL입니다. 이 Windows 계정은 에이전트가 배포자에 연결할 때 항상 사용됩니다.  
+`[ @job_login = ] 'job_login'`[!INCLUDE[msCoName](../../includes/msconame-md.md)]에이전트가 실행 되는 Windows 계정의 로그인입니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 NULL입니다. 이 Windows 계정은 에이전트가 배포자에 연결할 때 항상 사용됩니다.  
   
 > [!NOTE]
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시자의 경우에는 [sp_adddistpublisher &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)에 지정 된 것과 동일한 로그인 이어야 합니다.  
+>  이외 게시자의 경우에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [sp_adddistpublisher &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)에 지정 된 것과 동일한 로그인 이어야 합니다.  
   
 `[ @job_password = ] 'job_password'`에이전트를 실행 하는 Windows 계정의 암호입니다. *job_password* 는 **sysname**이며 기본값은 NULL입니다.  
   
@@ -58,7 +58,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
   
 `[ @job_name = ] 'job_name'`기존 에이전트 작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 에이전트가 새로 만든 작업(기본값) 대신 기존 작업을 사용하여 시작된 경우에만 지정됩니다.  
   
-`[ @publisher_security_mode = ] publisher_security_mode`게시자에 연결할 때 에이전트가 사용 하는 보안 모드입니다. *publisher_security_mode* 은 **smallint**이며 기본값은 **1**입니다. **0** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 지정 하 고, **1** 은 Windows 인증을 지정 합니다. 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에 대해 **0** 값을 지정 해야 합니다.  
+`[ @publisher_security_mode = ] publisher_security_mode`게시자에 연결할 때 에이전트가 사용 하는 보안 모드입니다. *publisher_security_mode* 은 **smallint**이며 기본값은 **1**입니다. **0** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 지정 하 고, **1** 은 Windows 인증을 지정 합니다. 비-게시자에 대해 **0** 값을 지정 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 `[ @publisher_login = ] 'publisher_login'`게시자에 연결할 때 사용 되는 로그인입니다. *publisher_login* 는 **sysname**이며 기본값은 NULL입니다. *publisher_security_mode* **0**인 경우 *publisher_login* 를 지정 해야 합니다. *PUBLISHER_LOGIN* NULL이 고 *publisher_security_mode* 가 **1**이면 게시자에 연결할 때 *job_login* 에 지정 된 Windows 계정이 사용 됩니다.  
   
@@ -67,7 +67,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 > [!IMPORTANT]  
 >  스크립트 파일에 인증 정보를 저장하지 않도록 합니다. 최상의 보안을 위해 런타임에 로그인 이름과 암호를 제공해야 합니다.  
   
-`[ @publisher = ] 'publisher'`이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'`이외 게시자의 이름입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에 이 매개 변수를 지정하지 않습니다.  
@@ -78,7 +78,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ## <a name="remarks"></a>설명  
  **sp_addlogreader_agent** 은 트랜잭션 복제에 사용 됩니다.  
   
- 데이터베이스를 사용 **sp_addlogreader_agent** 하는 게시를 만들기 전에 복제를 사용 하도록 설정 된 데이터베이스를이 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 업그레이드 한 경우 로그 판독기 에이전트를 추가 하려면 sp_addlogreader_agent를 실행 해야 합니다.  
+ 데이터베이스를 **sp_addlogreader_agent** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하는 게시를 만들기 전에 복제를 사용 하도록 설정 된 데이터베이스를이 버전의로 업그레이드 한 경우 로그 판독기 에이전트를 추가 하려면 sp_addlogreader_agent를 실행 해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_addlogreader_agent**을 실행할 수 있습니다.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 94f756a893fec14d171eb059cf4ad600f95a4927
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ac83a8be0496d0d00a8e07d608167365d287e5b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827197"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760013"
 ---
 # <a name="msrepl_commands-transact-sql"></a>MSrepl_commands(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSrepl_commands** 테이블에는 복제 된 명령의 행이 포함 되어 있습니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82827197"
 |**originator_id**|**int**|원게시자의 ID입니다.|  
 |**command_id**|**int**|명령의 ID입니다.|  
 |**partial_command**|**bit**|부분 명령인지 여부를 나타냅니다.|  
-|**명령**|**varbinary (1024)**|명령 값입니다.|  
+|**command**|**varbinary (1024)**|명령 값입니다.|  
 |**hashkey**|**int**|내부적으로만 사용됩니다.|  
 |**originator_lsn**|**varbinary(16)**|원본 게시에서 명령의 LSN을 식별합니다. 피어 투 피어 트랜잭션 복제에 사용됩니다.|  
   

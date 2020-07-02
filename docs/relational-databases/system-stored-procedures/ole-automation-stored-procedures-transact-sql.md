@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff16a833-01fe-4877-8aa6-55b72603ec2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e85a8d988b2f2f17cb77c08ca2c70da1a76164c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81820891cbd7d5dda273b633818f9ace057745ca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67941941"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758042"
 ---
 # <a name="ole-automation-stored-procedures-transact-sql"></a>OLE Automation 저장 프로시저(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 내에서 OLE Automation 개체를 사용할 수 있는 다음 시스템 저장 프로시저를 지원합니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이 서버의 보안 구성 중에 OLE Automation 저장 프로시저가 해제되기 때문에 OLE Automation 저장 프로시저에 대한 액세스를 차단합니다. 시스템 관리자는 sp_configure를 사용하여 OLE Automation 프로시저에 대한 액세스를 가능하게 할 수 있습니다. 자세한 내용은 [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)을 참조하세요.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4bca86b00ca5b2d84cc1c737ecf9d253a0451ea9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 084063f7209692bdf3ffd124b8e2b73194068686
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68126458"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760190"
 ---
 # <a name="sp_changedbowner-transact-sql"></a>sp_changedbowner(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스의 소유자를 변경합니다.  
   
@@ -43,11 +43,11 @@ sp_changedbowner [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @loginame= ] '*로그인*'  
- 현재 데이터베이스의 새 소유자의 로그인 ID입니다. *login* 은 **sysname**이며 기본값은 없습니다. *로그인* 은 이미 존재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 로그인 또는 Windows 사용자 여야 합니다. *로그인* 은 데이터베이스 내의 기존 사용자 보안 계정을 통해 데이터베이스에 이미 액세스할 수 있는 경우 현재 데이터베이스의 소유자가 될 수 없습니다. 이 문제를 방지하려면 먼저 현재 데이터베이스에서 사용자를 삭제해야 합니다.  
+ [ @loginame =] '*로그인*'  
+ 현재 데이터베이스의 새 소유자의 로그인 ID입니다. *login* 은 **sysname**이며 기본값은 없습니다. *로그인* 은 이미 존재 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 Windows 사용자 여야 합니다. *로그인* 은 데이터베이스 내의 기존 사용자 보안 계정을 통해 데이터베이스에 이미 액세스할 수 있는 경우 현재 데이터베이스의 소유자가 될 수 없습니다. 이 문제를 방지하려면 먼저 현재 데이터베이스에서 사용자를 삭제해야 합니다.  
   
- [ @map= ] *remap_alias_flag*  
- 로그인 *remap_alias_flag* 별칭이에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]제거 되었으므로 remap_alias_flag 매개 변수는 더 이상 사용 되지 않습니다. *Remap_alias_flag* 매개 변수를 사용 해도 오류가 발생 하지는 않지만 아무런 영향을 주지 않습니다.  
+ [ @map =] *remap_alias_flag*  
+ 로그인 별칭이에서 제거 되었으므로 *remap_alias_flag* 매개 변수는 더 이상 사용 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Remap_alias_flag* 매개 변수를 사용 해도 오류가 발생 하지는 않지만 아무런 영향을 주지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -66,7 +66,7 @@ sp_changedbowner [ @loginame = ] 'login'
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 TAKE OWNERSHIP 권한이 필요합니다. 새 소유자에 상응하는 사용자가 데이터베이스에 있으면 로그인에 대한 IMPERSONATE 권한이 필요하고, 그렇지 않으면 서버에 대한 CONTROL SERVER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Albert` 로그인을 현재 데이터베이스의 소유자로 만듭니다.  
   
 ```  

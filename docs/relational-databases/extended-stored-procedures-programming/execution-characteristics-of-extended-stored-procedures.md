@@ -13,22 +13,22 @@ ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 74ecd20f28e58e133b5710d3cbd9d18b27ca7756
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d991dbdf8029a6021f4cf27a9010dec83b94a5ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095984"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758128"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>확장 저장 프로시저의 실행 특징
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하십시오.  
   
  확장 저장 프로시저 실행에는 다음과 같은 세 가지 특징이 있습니다.  
   
--   확장 저장 프로시저 함수는의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보안 컨텍스트에서 실행 됩니다.  
+-   확장 저장 프로시저 함수는의 보안 컨텍스트에서 실행 됩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   확장 저장 프로시저 함수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 공간에서 실행됩니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "74095984"
   
 -  
   
- 확장 저장 프로시저 DLL을 로드 한 후에는가 중지 되거나 관리자가 DBCC *DLL_name* (무료)를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하 여 dll을 명시적으로 언로드할 때까지 dll이 서버의 주소 공간에 로드 된 상태로 유지 됩니다.  
+ 확장 저장 프로시저 DLL을 로드 한 후에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는가 중지 되거나 관리자가 DBCC *DLL_name* (무료)를 사용 하 여 dll을 명시적으로 언로드할 때까지 dll이 서버의 주소 공간에 로드 된 상태로 유지 됩니다.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 EXECUTE 문을 사용하여 확장 저장 프로시저를 저장 프로시저처럼 사용할 수 있습니다.  
   

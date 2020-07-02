@@ -18,15 +18,15 @@ ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2600543715bffaba36e29305b0893a9f17cca59c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd18fe45b25f4537c06de46c612f0508f9f86f9d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68072695"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758018"
 ---
 # <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   데이터베이스 개체에 새 확장 속성을 추가합니다.  
   
@@ -56,10 +56,10 @@ sp_addextendedproperty
  [ @name ] = {'*property_name*'}  
  추가할 속성의 이름입니다. *property_name* 는 **sysname** 이며 NULL 일 수 없습니다. 또한 이름은 영숫자가 아닌 문자열 또는 공백 및 이진 값을 포함할 수 있습니다.  
   
- [ @value= ] {'*value*'}  
+ [ @value =] {'*value*'}  
  속성과 연결할 값입니다. *값* 은 **sql_variant**이며 기본값은 NULL입니다. *value* 의 크기는 7,500바이트보다 클 수 없습니다.  
   
- [ @level0type= ] {'*level0_object_type*'}  
+ [ @level0type =] {'*level0_object_type*'}  
  수준 0 개체의 유형입니다. *level0_object_type* 는 **varchar (128)** 이며 기본값은 NULL입니다.  
   
  유효한 입력은 ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE, PLAN GUIDE 및 NULL입니다.  
@@ -67,18 +67,18 @@ sp_addextendedproperty
 > [!IMPORTANT]  
 >  수준 1 유형 개체의 확정 속성에서 USER를 수준 0 유형으로 지정하는 기능은 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 예정입니다. 대신 SCHEMA를 수준 0 유형으로 사용합니다. 예를 들어 테이블에 확장 속성을 정의할 때 사용자 이름 대신 테이블의 스키마를 지정합니다. TYPE을 수준 0 유형으로 지정하는 기능은 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 예정입니다. TYPE의 경우 수준 0 유형으로 SCHEMA를 사용하고 수준 1 유형으로 TYPE을 사용합니다.  
   
- [ @level0name= ] {'*level0_object_name*'}  
+ [ @level0name =] {'*level0_object_name*'}  
  지정된 수준 0 개체 유형의 이름입니다. *level0_object_name* 는 **sysname** 이며 기본값은 NULL입니다.  
   
- [ @level1type= ] {'*level1_object_type*'}  
+ [ @level1type =] {'*level1_object_type*'}  
  수준 1 개체의 유형입니다. *level1_object_type* 는 **varchar (128)** 이며 기본값은 NULL입니다. 유효한 입력은 AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SEQUENCE, 동의어, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION 및 NULL입니다.    
- [ @level1name= ] {'*level1_object_name*'}  
+ [ @level1name =] {'*level1_object_name*'}  
  지정된 수준 1 개체 유형의 이름입니다. *level1_object_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
- [ @level2type= ] {'*level2_object_type*'}  
+ [ @level2type =] {'*level2_object_type*'}  
  수준 2 개체의 유형입니다. *level2_object_type* 는 **varchar (128)** 이며 기본값은 NULL입니다. 유효한 입력은 COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER 및 NULL입니다.  
   
- [ @level2name= ] {'*level2_object_name*'}  
+ [ @level2name =] {'*level2_object_name*'}  
  지정된 수준 2 개체 유형의 이름입니다. *level2_object_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -106,7 +106,7 @@ sp_addextendedproperty
   
  사용자는 자신이 소유하거나 ALTER 또는 CONTROL 권한이 있는 개체에 확장 속성을 추가할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-adding-an-extended-property-to-a-database"></a>A. 데이터베이스에 확장 속성 추가  
  다음 예에서는 값이 `'Caption'` 인 `'AdventureWorks2012 Sample OLTP Database'` 속성 이름이 `AdventureWorks2012` 예제 데이터베이스에 추가됩니다.  

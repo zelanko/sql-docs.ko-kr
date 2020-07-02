@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3c2cba0fa65271a7668ae1945b458f26138fe36d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b9bd4367a4af33195ffdb3e233980f46205ca39a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833391"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760208"
 ---
 # <a name="sp_changedistributiondb-transact-sql"></a>sp_changedistributiondb(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   배포 데이터베이스의 속성을 변경합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f8413a44-8fcc-4899-84f2-b4afe0f8ec08
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7e13af6a3cd091fb9b00eb6fcf0f668695062b3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1e7a5a8b9a595450888b9bb60e0680f1a1a2156e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825885"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758612"
 ---
 # <a name="sysdbmaintplan_databases-transact-sql"></a>sysdbmaintplan_databases(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   이 테이블은 이전 버전의에서 업그레이드 된 인스턴스에 대 한 기존 정보를 유지 하기 위해 포함 되었습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이후 버전에서는 이 테이블의 내용을 변경하지 마십시오. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   

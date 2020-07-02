@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0951bd857b6fbf2e3bdc8f5bc1ff850f80c43bcd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 99e2db4ca29fc39a4cebbd0b2dfb0564a5837e80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820488"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760054"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   연결된 서버의 테이블에서 기본 키를 참조하는 외래 키를 반환합니다.  
   
@@ -87,10 +87,10 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ## <a name="remarks"></a>설명  
  **sp_foreignkeys** 는 *table_server*에 해당 하는 OLE DB 공급자의 **IDBSchemaRowset** 인터페이스 FOREIGN_KEYS 행 집합을 쿼리 합니다. *Table_name*, *table_schema*, *table_catalog*및 *열* 매개 변수는 반환 되는 행을 제한 하기 위해이 인터페이스에 전달 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 연결된 서버 `Department`의 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 있는 `Seattle1` 테이블에 대한 외래 키 정보를 반환합니다.  
   
 ```  

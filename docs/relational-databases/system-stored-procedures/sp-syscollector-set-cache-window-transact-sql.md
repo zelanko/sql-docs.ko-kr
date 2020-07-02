@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 660f2749-392f-46bf-89f3-27764d848507
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6f8ad01c5a287166e4196b78489d34f3fbbe31ce
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e4e37e40aea88ec90da7c95065f33f2becfe2b5f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828767"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760020"
 ---
 # <a name="sp_syscollector_set_cache_window-transact-sql"></a>sp_syscollector_set_cache_window(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   실패한 데이터 업로드의 시도 횟수를 설정합니다. 오류가 발생 시 업로드를 다시 시도하면 수집된 데이터의 손실 위험을 완화할 수 있습니다.  
 
@@ -56,10 +56,10 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
 ## <a name="remarks"></a>설명  
  캐시 시간대 구성을 변경하려면 먼저 데이터 수집기를 사용하지 않도록 설정해야 합니다. 데이터 수집기를 사용하면 이 저장 프로시저가 실패합니다. 자세한 내용은 [데이터 컬렉션 활성화 또는 비활성화](../../relational-databases/data-collection/enable-or-disable-data-collection.md)및 [데이터 컬렉션 관리](../../relational-databases/data-collection/manage-data-collection.md)를 참조 하세요.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행하려면 dc_admin(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 데이터 수집기를 사용하지 않도록 설정하고 3회까지 실패한 업로드의 데이터를 보존하는 캐시 시간대를 구성한 다음 데이터 수집기를 다시 사용하도록 설정합니다.  
   
 ```sql  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 67a1c039-c283-4a9c-bacc-b9b3973590c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 44b95598af67b4842595d9570bcd57135924d6ad
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0276cc54809643ed53bd2ae30813e925b4d84475
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819811"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757729"
 ---
 # <a name="sysschemaarticles-transact-sql"></a>sysschemaarticles(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   트랜잭션 및 스냅샷 게시에 대한 스키마 전용 아티클을 추적합니다. 이 테이블은 게시 데이터베이스에 저장됩니다.  
   

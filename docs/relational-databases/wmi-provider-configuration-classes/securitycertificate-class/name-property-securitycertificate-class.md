@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 797f338f-4d2d-4171-acad-6cc997a7a6c8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 48cfb1b071b3cc7a2ef653cc9b1149c64c954d65
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf5b36f4822a3eb318722dd3c0b8836cc04bb727
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660358"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756608"
 ---
 # <a name="name-property-securitycertificate-class"></a>Name 속성(SecurityCertificate 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   보안 인증서의 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  

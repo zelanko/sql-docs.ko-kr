@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c89a9ddc1020f29bbcd661ec4c9672ba37f7770
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 55d9c6bf2e64509872faf02fa653499a28efb300
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005705"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756727"
 ---
 # <a name="srv_paramlen-extended-stored-procedure-api"></a>srv_paramlen(확장 저장 프로시저 API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
@@ -57,7 +57,7 @@ n
 ## <a name="returns"></a>반환  
  매개 변수 데이터의 실제 길이(바이트)입니다. *n*번째 매개 변수가 없거나 원격 저장 프로시저가 없으면 -1이 반환되고, *n*번째 매개 변수가 NULL이면 0이 반환됩니다.  
   
- 매개 변수가 다음 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 시스템 데이터 형식 중 하나 이면이 함수는 다음 값을 반환 합니다.  
+ 매개 변수가 다음 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시스템 데이터 형식 중 하나 이면이 함수는 다음 값을 반환 합니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
 |새 데이터 형식|입력 데이터 길이|  
 |--------------------|-----------------------|  
@@ -68,7 +68,7 @@ n
 |**BIGVARBINARY**|**NULL:** 0<br /><br /> **0:** 1<br /><br /> **>= 255:** 255<br /><br /> **<255:** 실제 *len*|  
 |**NCHAR**|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
 |**VARCHAR**|**NULL:** 0<br /><br /> **0:** 1<br /><br /> **>= 255:** 255<br /><br /> **<255:** 실제 *len*|  
-|**N**|**NULL:** -1<br /><br /> **ZERO:** -1<br /><br /> **>= 255:** -1<br /><br /> 255:-1 ** \<**|  
+|**N**|**NULL:** -1<br /><br /> **ZERO:** -1<br /><br /> **>= 255:** -1<br /><br /> ** \< 255:** -1|  
   
  \*   실제 *len* = 멀티바이트 문자열(cch)의 길이  
   

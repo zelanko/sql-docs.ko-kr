@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a8c043ec-b504-4929-ac0e-8babaa99d989
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8efcbb99bfbb7d1b4492c7945304de65192804e6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b93680fd4a4688aa36243f0d09c491254e9aa378
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826202"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760161"
 ---
 # <a name="sp_db_increased_partitions"></a>sp_db_increased_partitions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정된 데이터베이스에 대해 최대 15,000개의 파티션을 지원하도록 설정 또는 해제합니다.  
   
@@ -53,7 +53,7 @@ sp_dp_increased_partitions
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  지정된 데이터베이스에 대한 ALTER DATABASE 권한이 필요합니다.  
   
   

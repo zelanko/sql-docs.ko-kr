@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 57b3016f0f5ee9f58e41ce6993af69c33aa3b742
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f92f64fe005bb49dd919f77e25931d5af025a8ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827780"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757875"
 ---
 # <a name="sp_help_agent_default-transact-sql"></a>sp_help_agent_default(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   매개 변수로 전달된 에이전트 유형에 대한 기본 구성 ID를 검색합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행될 수 있습니다.  
   
@@ -56,7 +56,7 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ## <a name="remarks"></a>설명  
  **sp_help_agent_default** 은 모든 유형의 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **replmonitor** 고정 데이터베이스 역할의 멤버만 **sp_help_agent_default**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

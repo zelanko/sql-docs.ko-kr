@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ae3f26f9-141c-47cf-afe4-14f99b6b9567
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c57c6457f22cd54b85b7523a5641ab776ccfd1a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 004743a1992b2862dc55428fca87c152ce914cc7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660155"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757542"
 ---
 # <a name="friendlyname-property-securitycertificate-class"></a>FriendlyName 속성(SecurityCertificate 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   보안 인증서의 대체 이름을 가져오거나 설정합니다.  
   
 ## <a name="syntax"></a>구문  

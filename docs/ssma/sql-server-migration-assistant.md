@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Jtoland
 ms.author: Jtoland
-ms.openlocfilehash: f03fdab2cf2f2593d43c16cef572614b36731ef9
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: a8349922c991877c8cf9139cfedf3f458c2d68b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84294030"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758435"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 
@@ -45,6 +45,7 @@ SSMA에 대해 지원 되는 대상 버전은 다음과 같습니다.
 - Windows 및 Linux의 SQL Server 2017
 - Windows 및 Linux의 SQL Server 2019
 - Azure SQL Database
+- Azure SQL Managed Instance
 - Azure SQL Data Warehouse * *
 
 * *이 대상은 Oracle 용 SSMA 에서만 지원 됩니다.

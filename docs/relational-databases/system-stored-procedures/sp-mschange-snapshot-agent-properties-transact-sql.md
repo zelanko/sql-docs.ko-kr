@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c3348590b002bb0ff5f154d983a56e3b66885073
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2e64d2f053696c16acbd72782501487adb726675
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828867"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756623"
 ---
 # <a name="sp_mschange_snapshot_agent_properties-transact-sql"></a>sp_MSchange_snapshot_agent_properties(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   이상 버전의 배포자에서 실행 되는 스냅숏 에이전트 작업의 속성을 변경 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . 이 저장 프로시저는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 인스턴스에서 게시자가 실행될 때 속성을 변경하는 데 사용됩니다. 이 저장 프로시저는 배포 데이터베이스의 배포자에서 실행됩니다.  
   
@@ -70,7 +70,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**1**|한 번|  
 |**2**|주문형|  
 |**4**|매일|  
-|**20cm(8**|매주|  
+|**8**|매주|  
 |**10**|매월|  
 |**720**|매월(frequency_interval에 상대적임)|  
 |**40**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 시작될 때|  
@@ -82,9 +82,9 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|초|  
+|**2**|Second|  
 |**4**|Minute|  
-|**20cm(8**|시간|  
+|**8**|시간|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*에 대 한 간격입니다. *frequency_subday_interval* 는 **int**이며 기본값은 없습니다.  
   
@@ -138,7 +138,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
   
  게시자가 이상 버전의 인스턴스에서 실행 되는 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [sp_changepublication_snapshot](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) 를 사용 하 여 스냅숏 에이전트 작업의 속성을 변경 해야 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  배포자에서 **sysadmin** 고정 서버 역할의 멤버만 **sp_MSchange_snapshot_agent_properties**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

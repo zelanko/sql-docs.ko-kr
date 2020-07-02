@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dbc1737f-261e-4017-b9cd-703b9fc4ac78
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e0aaa6b412f1ccbbc71e9e5b19f68a518912f333
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 30488b669265b66036b591191e8e528e1ef74b35
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812267"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757764"
 ---
 # <a name="mssubscription_articles-transact-sql"></a>MSsubscription_articles(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSsubscription_articles** 테이블에는 대기 중인 구독의 아티클에 대 한 정보가 포함 되어 있습니다. 이 테이블은 지연 업데이트와 장애 조치로 지연 업데이트를 사용하는 즉시 업데이트의 복제 유형에 대해서만 채워집니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "82812267"
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|이 아티클을 서비스하는 에이전트의 ID입니다.|  
 |**artid**|**int**|**Sysarticles** 테이블의 문서 ID입니다.|  
-|**자료**|**sysname**|**Sysarticles** 테이블의 아티클 이름입니다.|  
+|**문서**|**sysname**|**Sysarticles** 테이블의 아티클 이름입니다.|  
 |**dest_table**|**sysname**|**Sysarticles** 테이블에서 대상 테이블의 이름입니다.|  
 |**소유자도**|**sysname**|구독의 소유자입니다.|  
 |**cft_table**|**sysname**|지연 업데이트 복제 유형의 경우 이 아티클에 대한 충돌 테이블의 이름입니다.|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9d2b72df-cb21-414a-abef-917f13d4de62
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 429f1d7fc55b9585466ce1b58350653e7e98be1f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f8a1d51f7b130ef4d530433a6c3ff56ef05c3789
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659696"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759844"
 ---
 # <a name="getcurrentcertificate-method-sinstance-class"></a>GetCurrentCertificate 메서드(SInstance 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   현재 보안 인증서를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -41,7 +41,7 @@ object.GetCurrentCertificate(SHA)
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
 |*S*|메서드가 완료된 후 현재 보안 인증서를 지정하는 문자열 개체 값(출력 매개 변수)입니다.|  
   

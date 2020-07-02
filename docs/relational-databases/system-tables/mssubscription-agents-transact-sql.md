@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42b29858ff276b65a30b9f465d38407b606cb792
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 740610a9fa20d3c47472f3737548a4c22fe20a19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823372"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757776"
 ---
 # <a name="mssubscription_agents-transact-sql"></a>MSsubscription_agents(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSsubscription_agents** 테이블은 구독 속성을 추적 하기 위해 업데이트 가능한 구독의 배포 에이전트 및 트리거에서 사용 됩니다. 이 테이블은 구독 데이터베이스에 저장됩니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "82823372"
 |**last_sync_status**|**int**|현재 실행 중이거나 방금 실행된 배포 에이전트의 마지막 실행 상태입니다. 상태는 다음과 같을 수 있습니다.<br /><br /> **1** = 시작 됨<br /><br /> **2** = 성공<br /><br /> **3** = 진행 중<br /><br /> **4** = 유휴 상태입니다.<br /><br /> **5** = 다시 시도<br /><br /> **6** = 실패|  
 |**last_sync_summary**|**sysname**|현재 실행 중이거나 방금 실행된 배포 에이전트의 마지막 메시지입니다. 상태는 다음과 같을 수 있습니다.<br /><br /> **했어야.**<br /><br /> **열었습니다.**<br /><br /> **진행 중입니다.**<br /><br /> **유휴.**<br /><br /> **Retry.**<br /><br /> **통과.**|  
 |**last_sync_time**|**datetime**|*Last_sync_summary* 및 *last_sync_status* 열이 업데이트 된 날짜 및 시간입니다. SqlServer 에이전트 서비스 작업으로 실행되는 끌어오기 또는 익명 배포 에이전트는 이러한 열을 업데이트하지 않습니다. 이 경우에는 대신 기록 정보가 작업 기록 테이블에 기록됩니다.|  
-|**queue_server**|**sysname**|내부 전용입니다.|  
+|**queue_server**|**sysname**|내부적으로만 사용됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

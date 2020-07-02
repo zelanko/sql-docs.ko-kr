@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8dfa779a664d398a6fb619bf17bf67bb52ab1bb0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 936dddfc9faecc48f61ac61e390aca7b82533314
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005715"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756700"
 ---
 # <a name="srv_parammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen(확장 저장 프로시저 API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
@@ -57,7 +57,7 @@ n
 ## <a name="returns"></a>반환  
  매개 변수 데이터의 최대 길이(바이트)입니다. *n*번째 매개 변수가 없거나 원격 저장 프로시저가 없으면 -1이 반환됩니다.  
   
- 매개 변수가 다음 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 중 하나 이면이 함수는 다음 값을 반환 합니다.  
+ 매개 변수가 다음 데이터 형식 중 하나 이면이 함수는 다음 값을 반환 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |새 데이터 형식|입력 데이터 길이|  
 |--------------------|-----------------------|  
@@ -68,7 +68,7 @@ n
 |**BIGVARBINARY**|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
 |**NCHAR**|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
 |**VARCHAR**|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
-|**N**|**NULL:** -1<br /><br /> **ZERO:** -1<br /><br /> **>= 255:** -1<br /><br /> 255:-1 ** \<**|  
+|**N**|**NULL:** -1<br /><br /> **ZERO:** -1<br /><br /> **>= 255:** -1<br /><br /> ** \< 255:** -1|  
   
 ## <a name="remarks"></a>설명  
  각 원격 저장 프로시저 매개 변수에는 실제 데이터 길이와 최대 데이터 길이가 있습니다. Null 값을 사용할 수 없는 고정 길이의 표준 데이터 형식의 경우 실제 길이와 최대 길이가 같습니다. 가변 길이의 데이터 형식의 경우 데이터 길이가 다를 수 있습니다. 예를 들어 **varchar(30)** 로 선언한 매개 변수의 데이터 길이는 최대 10바이트입니다. 이 매개 변수의 실제 길이는 10이고 최대 길이는 30입니다. **srv_parammaxlen** 함수는 원격 저장 프로시저의 최대 데이터 길이를 가져옵니다. 매개 변수의 실제 길이를 가져오려면 **srv_paramlen**을 사용합니다.  

@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 21487ba46e53997ebb50403cc4eaf1ae54f0a103
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e400905801f3186f2eb54956bad612c17d686d14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029645"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757745"
 ---
 # <a name="sysssispackages-transact-sql"></a>sysssispackages(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]저장 되는 각 패키지에 대해 한 행을 포함 합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
+  에 저장 되는 각 패키지에 대해 한 행을 포함 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
   
 |열 이름|데이터 형식|Description|  
@@ -39,8 +39,8 @@ ms.locfileid: "68029645"
 |**folderid**|**uniqueidentifier**|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 패키지를 나열하는 논리적 폴더의 GUID입니다.|  
 |**ownersid**|**varbinary**|패키지를 만든 사용자의 고유 보안 식별자입니다.|  
 |**packagedata**|**image**|패키지입니다.|  
-|**packageformat**|**int**|패키지가 저장되는 형식입니다.<br /><br /> 값 2는 패키지가 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 형식으로 저장 됨을 나타냅니다.<br /><br /> 값 3은 패키지가 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]이상 형식으로 저장 됨을 나타냅니다.|  
-|**packagetype**|**int**|패키지를 만든 클라이언트입니다. 가능한 값은 다음과 같습니다.<br /><br /> 0(기본값)<br /><br /> 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사)<br /><br /> 3 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제)<br /><br /> 5 ([!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너)<br /><br /> 6(유지 관리 계획 디자이너 또는 마법사)<br /><br /> <br /><br /> 이 열의 값은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType> 열거형에 해당 합니다.|  
+|**packageformat**|**int**|패키지가 저장되는 형식입니다.<br /><br /> 값 2는 패키지가 형식으로 저장 됨을 나타냅니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .<br /><br /> 값 3은 패키지가 이상 형식으로 저장 됨을 나타냅니다 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
+|**packagetype**|**int**|패키지를 만든 클라이언트입니다. 가능한 값은 다음과 같습니다.<br /><br /> 0(기본값)<br /><br /> 1 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사)<br /><br /> 3 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제)<br /><br /> 5 ( [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너)<br /><br /> 6(유지 관리 계획 디자이너 또는 마법사)<br /><br /> <br /><br /> 이 열의 값은 열거형에 해당 합니다 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType> .|  
 |**vermajor**|**int**|패키지의 최신 주 버전입니다.|  
 |**verminor**|**int**|패키지의 최신 부 버전입니다.|  
 |**verbuild**|**int**|패키지의 최신 빌드입니다.|  

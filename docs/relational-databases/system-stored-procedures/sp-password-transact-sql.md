@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c02b9327dbff75e3c0816bb3eec19e3cb3135d50
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a81fb55802733d63612e0383c4ba9f5ce8061ec4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008925"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758775"
 ---
 # <a name="sp_password-transact-sql"></a>sp_password(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 대 한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 암호를 추가 하거나 변경 합니다.  
+  로그인에 대 한 암호를 추가 하거나 변경 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) 을 사용 해야 합니다.  
@@ -66,7 +66,7 @@ sp_password [ [ @old = ] 'old_password' , ]
   
  보안 주체는 자신의 암호를 변경할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-changing-the-password-of-a-login-without-knowing-the-old-password"></a>A. 이전 암호를 모른 채 로그인의 암호 변경  
  다음 예에서는 `ALTER LOGIN`을 사용하여 `Victoria` 로그인의 암호를 `B3r1000d#2-36`으로 변경하는 방법을 보여 줍니다. 이는 선호되는 방법입니다. 이 명령을 실행하고 있는 사용자는 CONTROL SERVER 권한을 가져야 합니다.  

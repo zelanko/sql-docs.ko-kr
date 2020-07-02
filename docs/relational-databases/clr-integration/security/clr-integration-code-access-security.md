@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 912db3acb6f6dc21952e99da31a1484a9745ed0b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2f28692cd1a5c3f60e823d6071244ae822fc557a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488316"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759040"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 통합 코드 액세스 보안
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   CLR(공용 언어 런타임)은 관리 코드에 대해 코드 액세스 보안이라는 보안 모델을 지원합니다. 이 모델에서는 코드 ID를 기반으로 어셈블리에 사용 권한이 부여됩니다. 자세한 내용은 .NET Framework 소프트웨어 개발 키트의 "코드 액세스 보안" 섹션을 참조하십시오.  
   
  어셈블리에 부여되는 사용 권한을 결정하는 보안 정책은 다음 세 위치에서 정의됩니다.  
@@ -89,12 +89,12 @@ ms.locfileid: "81488316"
  **안전 하지 않은** 어셈블리에는 **FullTrust**가 지정 됩니다.  
   
 > [!IMPORTANT]  
->  **SAFE** 는 외부 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]리소스에 액세스 하지 않고 계산 및 데이터 관리 작업을 수행 하는 어셈블리에 권장 되는 권한 설정입니다. **EXTERNAL_ACCESS** 외부 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]리소스에 액세스 하는 어셈블리에는 EXTERNAL_ACCESS를 사용 하는 것이 좋습니다. **EXTERNAL_ACCESS** 어셈블리는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본적으로 서비스 계정으로 실행 됩니다. **EXTERNAL_ACCESS** 코드에서 호출자의 Windows 인증 보안 컨텍스트를 명시적으로 가장할 수 있습니다. 기본값은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정으로 실행 하기 때문에 **EXTERNAL_ACCESS** 실행 권한은 서비스 계정으로 실행 하도록 신뢰할 수 있는 로그인에만 부여 해야 합니다. 보안 관점에서 **EXTERNAL_ACCESS** 와 **안전 하지 않은** 어셈블리는 동일 합니다. 그러나 **EXTERNAL_ACCESS** 어셈블리는 **안전** 하지 않은 어셈블리에 없는 다양 한 안정성 및 견고성 보호 기능을 제공 합니다. **UNSAFE** 를 지정 하면 어셈블리의 코드가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스 공간에 대해 잘못 된 작업을 수행할 수 있으므로의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]견고성과 확장성이 손상 될 수 있습니다. 에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]clr 어셈블리를 만드는 방법에 대 한 자세한 내용은 [Clr 통합 어셈블리 관리](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)를 참조 하세요.  
+>  **SAFE** 는 외부 리소스에 액세스 하지 않고 계산 및 데이터 관리 작업을 수행 하는 어셈블리에 권장 되는 권한 설정입니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . 외부 리소스에 액세스 하는 어셈블리에는 **EXTERNAL_ACCESS** 를 사용 하는 것이 좋습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . **EXTERNAL_ACCESS** 어셈블리는 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정으로 실행 됩니다. **EXTERNAL_ACCESS** 코드에서 호출자의 Windows 인증 보안 컨텍스트를 명시적으로 가장할 수 있습니다. 기본값은 서비스 계정으로 실행 하기 때문에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **EXTERNAL_ACCESS** 실행 권한은 서비스 계정으로 실행 하도록 신뢰할 수 있는 로그인에만 부여 해야 합니다. 보안 관점에서 **EXTERNAL_ACCESS** 와 **안전 하지 않은** 어셈블리는 동일 합니다. 그러나 **EXTERNAL_ACCESS** 어셈블리는 **안전** 하지 않은 어셈블리에 없는 다양 한 안정성 및 견고성 보호 기능을 제공 합니다. **UNSAFE** 를 지정 하면 어셈블리의 코드가 프로세스 공간에 대해 잘못 된 작업을 수행할 수 있으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 견고성과 확장성이 손상 될 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . 에서 CLR 어셈블리를 만드는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Clr 통합 어셈블리 관리](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)를 참조 하세요.  
   
 ## <a name="accessing-external-resources"></a>외부 리소스 액세스  
  UDT (사용자 정의 형식), 저장 프로시저 또는 다른 유형의 구문 어셈블리가 **SAFE** 권한 집합에 등록 된 경우 구문에서 실행 되는 관리 코드는 외부 리소스에 액세스할 수 없습니다. 그러나 **EXTERNAL_ACCESS** 또는 **UNSAFE** 권한 집합을 지정 하 고 관리 코드에서 외부 리소스에 액세스 하려고 하는 경우는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다음 규칙을 적용 합니다.  
   
-|다음과 같은 경우|작업|  
+|조건|결과|  
 |--------|----------|  
 |실행 컨텍스트가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인에 해당합니다.|외부 리소스에 액세스하려고 하면 거부되고 보안 예외가 발생합니다.|  
 |실행 컨텍스트가 Windows 로그인에 해당하고 원래 호출자입니다.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트에서 외부 리소스가 액세스됩니다.|  

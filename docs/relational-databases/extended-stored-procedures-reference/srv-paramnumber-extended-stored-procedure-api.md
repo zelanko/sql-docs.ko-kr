@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d7a6dbff-71d9-4297-8a4f-bfd2876fe204
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 564326044c2fe0f00a26d3c32c5ad3d36d0b6b85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f10d4a1bdfb2e3e7165596e5f3041c27440223bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005647"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756674"
 ---
 # <a name="srv_paramnumber-extended-stored-procedure-api"></a>srv_paramnumber(확장 저장 프로시저 API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
