@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a1dead02-be88-4b16-8cb2-db1284856764
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 881b7463400665d22baaa9b19f13cb5949df0830
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6417a0121a7e290d711690fb0150fdbe908827dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81485280"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637516"
 ---
 # <a name="context-connections-vs-regular-connections"></a>컨텍스트 연결 및 일반 연결
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   원격 서버에 연결할 때는 컨텍스트 연결 대신 항상 일반 연결을 사용하십시오. 컨텍스트 연결은 대개 저장 프로시저나 함수가 실행 중인 동일한 서버에 연결해야 하는 경우 사용합니다. 컨텍스트 연결을 사용하면 동일한 트랜잭션 공간에서 실행되므로 다시 인증할 필요가 없다는 장점이 있습니다.  
   
  또한 성능이 향상되고 리소스 사용량이 줄어드는 이점도 있습니다. 컨텍스트 연결은 in-process 전용 연결 이므로 네트워크 프로토콜 및 전송 계층을 무시 하 여 서버에 "직접 연결" 하 여 Transact-sql 문을 보내고 결과를 받을 수 있습니다. 인증 프로세스도 무시됩니다. 다음 그림에서는 일반 연결을 사용 하는 경우와 컨텍스트 연결을 사용 하는 경우 각 구성 요소가 서로 상호 작용 하는 방법 뿐만 아니라 **SqlClient** 관리 공급자의 기본 구성 요소를 보여 줍니다.  

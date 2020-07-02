@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3967b1e7c8e3b9da93d131a0b82eec1684009210
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c46a7e30f6f5163fba7b630e365f90e521a96e0c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816705"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645312"
 ---
 # <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   동적 업데이트 저장 프로시저를 만드는 CREATE PROCEDURE 문을 생성합니다. 사용자 지정 저장 프로시저 내의 UPDATE 문은 변경할 열을 나타내는 MCALL 구문에 따라 동적으로 작성됩니다. 구독 테이블의 인덱스 수가 증가하고 변경되는 열 수가 적을 때 이 저장 프로시저를 사용합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -48,7 +48,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_scriptdynamicupdproc**을 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 예에서는 **pubs** 데이터베이스의 **authors** 테이블에 *artid* 가 **1**로 설정 된 아티클을 만들고 UPDATE 문이 실행할 사용자 지정 프로시저 임을 지정 합니다.  
   
 ```  

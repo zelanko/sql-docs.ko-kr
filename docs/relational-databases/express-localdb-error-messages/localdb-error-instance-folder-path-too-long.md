@@ -9,15 +9,15 @@ ms.topic: reference
 ms.assetid: c178a308-8d99-47fc-8a49-5a480dc592f6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3db8328576d69fe32cea28d3596c5f9b1658d7b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08ea1c27612d0f0b47c545966fac22f1abd95c81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67995820"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85641830"
 ---
 # <a name="localdb_error_instance_folder_path_too_long"></a>LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>세부 정보  
   
@@ -27,7 +27,7 @@ ms.locfileid: "67995820"
 |이벤트 ID|260|  
 |이벤트 원본|SQL Server 로컬 데이터베이스 런타임 12.0|  
 |구성 요소|로컬 데이터베이스 런타임 API|  
-|메시지 텍스트|로컬 데이터베이스 인스턴스 폴더의 전체 경로 길이가 MAX_PATH보다 깁니다. 인스턴스는 인스턴스 이름\\ \><%% LOCALAPPDATA%% \ Microsoft\Microsoft SQL Server 로컬 db\instances 폴더에 저장 해야 합니다.|  
+|메시지 텍스트|로컬 데이터베이스 인스턴스 폴더의 전체 경로 길이가 MAX_PATH보다 깁니다. 인스턴스는 인스턴스 이름<%% LOCALAPPDATA%% \ Microsoft\Microsoft SQL Server 로컬 DB\Instances 폴더에 저장 해야 합니다. \\ \>|  
   
 ## <a name="explanation"></a>설명  
  인스턴스를 저장할 경로가 MAX_PATH보다 깁니다.  

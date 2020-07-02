@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 34fa326c5982ee36cf0ee00fb66c8bac1714c06a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 74a5865151cb283aed16efe8ef2ea2908a9f56c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626627"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   병합 복제에서 아티클로 사용될 테이블의 행에 대한 정보를 표시합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -56,7 +56,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|이 항목을 만든 데이터베이스의 이름입니다.|  
 |**db_nickname**|**binary(6)**|이 항목을 만든 데이터베이스의 애칭입니다.|  
 |**version**|**int**|항목의 버전입니다.|  
-|**current_state**|**nvarchar (9)**|행의 현재 상태에 대한 정보를 반환합니다.<br /><br /> **y** 행 데이터는 행의 현재 상태를 나타냅니다.<br /><br /> **n** 행 데이터가 행의 현재 상태를 나타내지 않습니다.<br /><br /> ** \< n/a>** -적용할 수 없습니다.<br /><br /> ** \< 알 수 없는>** -현재 상태를 확인할 수 없습니다.|  
+|**current_state**|**nvarchar (9)**|행의 현재 상태에 대한 정보를 반환합니다.<br /><br /> **y** 행 데이터는 행의 현재 상태를 나타냅니다.<br /><br /> **n** 행 데이터가 행의 현재 상태를 나타내지 않습니다.<br /><br /> **\<n/a>**-적용할 수 없습니다.<br /><br /> **\<unknown>**-현재 상태를 확인할 수 없습니다.|  
 |**rowversion_table**|**nchar (17)**|행 버전이 [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) 테이블이 나 [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) 테이블에 저장 되는지 여부를 나타냅니다.|  
 |**comment**|**nvarchar(255)**|현재 행 버전 항목에 대한 추가 정보입니다. 일반적으로 이 필드는 비어 있습니다.|  
   

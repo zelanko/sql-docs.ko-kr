@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: be45e7dd794ab7e03ffc70eb9b73109411fd3a02
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3001731959da3b253ee10f43c333b0c2a8b85380
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827457"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626588"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>공간 인덱스 저장 프로시저-인수 및 속성
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 공간 인덱스 저장 프로시저의 인수와 속성에 대해 설명합니다.  
   
@@ -297,13 +297,13 @@ ms.locfileid: "82827457"
  **Primary_Filter_Efficiency**  
  기본 필터에서 P 행을 선택 하 고 O가 행의 수를 출력 하는 경우이 값은 백분율로 표시 됩니다. 기본 필터의 효율성이 높을수록 보조 필터가 처리해야 하는 거짓 긍정의 수는 줄어듭니다. 이 속성은 핵심 속성입니다. 값이 **float입니다.**  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  사용자는 **public** 역할의 멤버 여야 합니다. 서버 및 개체에 대한 READ ACCESS 권한이 필요합니다. 모든 공간 인덱스 저장 프로시저에 적용됩니다.  
   
 ## <a name="remarks"></a>설명  
  NULL 값이 포함된 속성은 반환 집합에 포함되지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  예를 보려면 다음 항목을 참조하십시오.  
   
 -   [Transact-sql&#41;sp_help_spatial_geometry_index &#40;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  

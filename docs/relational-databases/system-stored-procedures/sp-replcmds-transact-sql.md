@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85dd8567599de98af1abb72394fef747bd2da6b5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c11132450e88326740af485a7293dd5a27b8326b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829985"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645651"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   복제용으로 표시된 트랜잭션에 대한 명령을 반환합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -48,7 +48,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |-----------------|---------------|-----------------|  
 |**문서 id**|**int**|아티클의 ID입니다.|  
 |**partial_command**|**bit**|부분 명령인지 여부를 나타냅니다.|  
-|**명령**|**varbinary (1024)**|명령 값입니다.|  
+|**command**|**varbinary (1024)**|명령 값입니다.|  
 |**xactid**|**binary(10)**|트랜잭션 ID입니다.|  
 |**xact_seqno**|**varbinary(16)**|트랜잭션 시퀀스 번호입니다.|  
 |**publication_id**|**int**|게시의 ID입니다.|  
@@ -56,7 +56,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**command_type**|**int**|명령의 유형입니다.|  
 |**originator_srvname**|**sysname**|트랜잭션이 시작된 서버입니다.|  
 |**originator_db**|**sysname**|트랜잭션이 시작된 데이터베이스입니다.|  
-|**pkHash**|**int**|내부 전용입니다.|  
+|**pkHash**|**int**|내부적으로만 사용됩니다.|  
 |**originator_publication_id**|**int**|트랜잭션이 시작된 게시의 ID입니다.|  
 |**originator_db_version**|**int**|트랜잭션이 시작된 데이터베이스의 버전입니다.|  
 |**originator_lsn**|**varbinary(16)**|원본 게시에서 명령의 LSN(로그 시퀀스 번호)을 식별합니다.|  

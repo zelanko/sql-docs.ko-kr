@@ -20,21 +20,21 @@ ms.assetid: 0f782d2f-7126-46ab-85b7-bcba44862231
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5dc2e47c49dc9d639489426fceab0b848c9def3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e3e7068e18e5a0315936593fca071132d49e833
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079321"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648912"
 ---
 # <a name="sysedge_constraints-transact-sql"></a>sys. edge_constraints (Transact-sql)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/applies-to-version/sqlserver2019.md)]
 
 에 지 제약 조건에 해당 하는 각 개체에 대해 하나의 행을 포함 합니다. 
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**\<Sys. 개체에서 상속 된 열>**||이 뷰가 상속 하는 열 목록은 [sys. 개체 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.|  
+|**\<Columns inherited from sys.objects>**||이 뷰가 상속 하는 열 목록은 [sys. 개체 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.|  
 |**is_disabled**|**bit**|1 = 가장자리 제약 조건이 disbled입니다.<br /><br /> 0 = 가장자리 제약 조건을 사용 합니다.|  
 |**is_not_trusted**|**bit**|1 = 시스템에서 가장자리 제약 조건을 확인 하지 않았습니다.<br /><br /> 0 = 시스템에서에 지 제약 조건을 확인 했습니다.|  
 |**delete_referential_action**|**tinyint**|이에 지 제약 조건에 정의 된 참조 동작입니다.<br /><br />0 = 작업 없음|  

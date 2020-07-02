@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0ed8dc099113822741d3d67df4797ef89bbbe682
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 75579103721fe8c89d85a0c222a631a9d98ac833
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82802928"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648055"
 ---
 # <a name="sysdm_xe_sessions-transact-sql"></a>sys.dm_xe_sessions(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   활성 확장 이벤트 세션에 대한 정보를 반환합니다. 이 세션은 이벤트, 동작 및 대상의 모음입니다.  
     
@@ -51,7 +51,7 @@ ms.locfileid: "82802928"
 |create_time|**datetime**|세션을 생성한 시간입니다. Null을 허용하지 않습니다.|  
 |largest_event_dropped_size|**int**|세션 버퍼에 맞지 않는 가장 큰 이벤트의 크기입니다. Null을 허용하지 않습니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  

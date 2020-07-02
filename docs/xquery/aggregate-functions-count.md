@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a359251dbb2bd2a2685e5d9fb91d5c1603950c25
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1b56d549d00fb0b76c530a5274adb6a9c82c80c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67986308"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643722"
 ---
 # <a name="aggregate-functions---count"></a>집계 함수 - count
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   *$Arg*에서 지정한 시퀀스에 포함 된 항목 수를 반환 합니다.  
   
@@ -41,7 +41,7 @@ fn:count($arg as item()*) as xs:integer
 ## <a name="remarks"></a>설명  
  *$Arg* 빈 시퀀스인 경우 0을 반환 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 항목에서는 AdventureWorks 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
   
 ### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A. count() XQuery 함수를 사용하여 제품 모델 제조의 작업 센터 위치 수 계산  
@@ -64,9 +64,9 @@ WHERE Production.ProductModel.ProductModelID=7
   
 -   [XQuery 프롤로그](../xquery/modules-and-prologs-xquery-prolog.md) 의 **namespace** 키워드는 네임 스페이스 접두사를 정의 합니다. 그러면 XQuery 본문에 접두사가 사용됩니다.  
   
--   이 쿼리는 <`NoOfWorkStations`> 요소를 포함 하는 XML을 생성 합니다.  
+-   이 쿼리는 <> 요소를 포함 하는 XML을 생성 합니다 `NoOfWorkStations` .  
   
--   XQuery 본문의 **count ()** 함수는 <`Location`> 요소 수를 계산 합니다.  
+-   XQuery 본문의 **count ()** 함수는 <> 요소 수를 계산 합니다 `Location` .  
   
  다음은 결과입니다.  
   

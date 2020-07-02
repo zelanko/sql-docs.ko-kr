@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 787dd47e-4210-439d-9c4a-57a727a0dbd8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f2c3947b7e037f27ba97d8a1b5ef892bcddcb999
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d5977b2d6c956249cd36bd1f82370f6f01c18417
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831374"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648761"
 ---
 # <a name="sysservice_contracts-transact-sql"></a>sys.service_contracts(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   이 카탈로그 뷰에는 데이터베이스의 각 계약에 대한 행이 포함되어 있습니다.  
   

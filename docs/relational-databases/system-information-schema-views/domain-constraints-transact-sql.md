@@ -19,15 +19,15 @@ ms.assetid: 436c4480-f1e3-403f-b2bd-de04539afe3c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 277791461943c669b2a768efd14aadd2170251b9
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 72c5bbbf2ad16061b87daf1a0346b7003b7648b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669550"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647507"
 ---
 # <a name="domain_constraints-transact-sql"></a>DOMAIN_CONSTRAINTS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   현재 사용자가 액세스할 수 있고 바인딩되어 있는 규칙이 있는 현재 데이터베이스의 각 별칭 데이터 형식당 한 개의 행을 반환합니다.  
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6e7b3631-38d5-4375-b565-21d2e3f36ae0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 995e2072be85128ab58b85213c255ee35c042d5b
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: a337cc615a8566040a654829c4a2853117efcf9c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84886863"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643517"
 ---
 # <a name="ordered-and-unordered-expressions-xquery"></a>순차 식 및 비순차 식(XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   기본적으로의 모든 작업에 대 한 정렬 모드 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 **정렬**됩니다. 따라서 **order by** 절을 사용 하지 않고 경로 식 및 FLWOR 식에서 반환 된 노드 시퀀스는 문서 순서로 되어 있습니다.  
   

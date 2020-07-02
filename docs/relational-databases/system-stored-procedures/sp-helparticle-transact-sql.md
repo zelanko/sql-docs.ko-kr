@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f840af0170278692de43b7933965500b304669b1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e863c10b3f2086d6318d6c53b599c7ad186572c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828354"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634230"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   아티클에 대한 정보를 표시합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다. Oracle 게시자의 경우 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
   
@@ -85,7 +85,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**@auto_identity_range**|**int**|자동 ID 범위 처리가 게시에서 생성될 때 활성화 여부를 나타내는 플래그입니다. **1** 은 자동 id 범위를 사용할 수 있음을 의미 합니다. **0** 은 사용할 수 없음을 의미 합니다.|  
 |**publisher_identity_range**|**int**|아티클의 *identityrangemanagementoption* 이 **auto** 로 설정 되어 있거나 **auto_identity_range** **true**로 설정 된 경우 게시자에 있는 id 범위의 범위 크기입니다.|  
 |**identity_range**|**bigint**|아티클의 *identityrangemanagementoption* 이 **auto** 로 설정 되어 있거나 **auto_identity_range** **true**로 설정 된 경우 구독자에서 id 범위의 범위 크기입니다.|  
-|**고대비**|**bigint**|배포 에이전트가 새로운 ID범위를 할당하는 시기를 나타내는 백분율 값입니다.|  
+|**threshold**|**bigint**|배포 에이전트가 새로운 ID범위를 할당하는 시기를 나타내는 백분율 값입니다.|  
 |**identityrangemanagementoption**|**int**|아티클에 대해 처리되는 ID 범위 관리를 나타냅니다.|  
 |**fire_triggers_on_snapshot**|**bit**|복제된 사용자 트리거를 초기 스냅샷이 적용될 때 실행할지 여부입니다.<br /><br /> **1** = 사용자 트리거가 실행 됩니다.<br /><br /> **0** = 사용자 트리거가 실행 되지 않습니다.|  
   
@@ -95,7 +95,7 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="remarks"></a>설명  
  **sp_helparticle** 는 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버, **db_owner** 고정 데이터베이스 역할 또는 현재 게시에 대 한 게시 액세스 목록의 멤버만 **sp_helparticle**을 실행할 수 있습니다.  
   
 ## <a name="example"></a>예제  

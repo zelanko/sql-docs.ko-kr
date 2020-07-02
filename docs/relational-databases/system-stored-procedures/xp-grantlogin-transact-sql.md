@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 957bbdc43c0f0adf3a545fee76e9f69df130d8f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81237214608b6fb0c04fa0857203d0488db375ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68116668"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633552"
 ---
 # <a name="xp_grantlogin-transact-sql"></a>xp_grantlogin(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Windows 그룹 또는 사용자에게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스 권한을 부여합니다.  
   
@@ -42,9 +42,9 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @loginame = ] 'login'`추가할 Windows 사용자 또는 그룹의 이름입니다. Windows 사용자 또는 그룹은 *도메인*\\*사용자*형식의 windows 도메인 이름으로 한정 되어야 합니다. *login* 은 **sysname**이며 기본값은 없습니다.  
+`[ @loginame = ] 'login'`추가할 Windows 사용자 또는 그룹의 이름입니다. Windows 사용자 또는 그룹은 *도메인*사용자 형식의 windows 도메인 이름으로 한정 되어야 합니다 \\ *User*. *login* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @logintype = ] 'logintype'`액세스 권한을 부여 받은 로그인의 보안 수준입니다. *logintype* 은 **varchar (5)** 이며 기본값은 NULL입니다. **관리자** 만 지정할 수 있습니다. **Admin** 이 지정 된 경우 *로그인* 에 대 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]한 액세스 권한이 부여 되 고 **sysadmin** 고정 서버 역할의 멤버로 추가 됩니다.  
+`[ @logintype = ] 'logintype'`액세스 권한을 부여 받은 로그인의 보안 수준입니다. *logintype* 은 **varchar (5)** 이며 기본값은 NULL입니다. **관리자** 만 지정할 수 있습니다. **Admin** 이 지정 된 경우 *로그인* 에 대 한 액세스 권한이 부여 되 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고 **sysadmin** 고정 서버 역할의 멤버로 추가 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

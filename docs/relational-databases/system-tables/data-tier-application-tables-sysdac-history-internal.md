@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 025c11a6d04f61378080c303a4935ce98e64f164
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0330c68c8399318b2db96a5f88880fdd566c9acd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833139"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85625760"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>데이터 계층 애플리케이션 테이블 - sysdac_history_internal
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   DAC(데이터 계층 애플리케이션)를 관리하기 위해 수행된 동작에 대한 정보를 포함합니다. 이 테이블은 **msdb** 데이터베이스의 **dbo** 스키마에 저장 됩니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "82833139"
 |-----------------|---------------|-----------------|  
 |**action_id**|**int**|동작의 식별자입니다.|  
 |**sequence_id**|**int**|동작 내의 단계를 식별합니다.|  
-|**instance_id**|**uniqueidentifier**|DAC 인스턴스의 식별자입니다. 이 열은 [&#40;transact-sql&#41;sysdac_instances ](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md) **instance_id** 열에 조인할 수 있습니다.|  
+|**instance_id**|**uniqueidentifier**|DAC 인스턴스의 식별자입니다. 이 열은 [transact-sql&#41;&#40;dac_instancesdbo.sys](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md) **instance_id** 열에 조인할 수 있습니다.|  
 |**action_type**|**tinyint**|동작 유형의 식별자입니다.<br /><br /> **0** = 배포<br /><br /> **1** = 만들기<br /><br /> **2** = 이름 바꾸기<br /><br /> **3** = 분리<br /><br /> **4** = 삭제|  
 |**action_type_name**|**varchar (19)**|동작 유형의 이름입니다.<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **분리**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|동작의 영향을 받는 개체의 유형에 대한 식별자입니다.<br /><br /> **0** = dacpac<br /><br /> **1** = 로그인<br /><br /> **2** = 데이터베이스|  
@@ -81,7 +81,7 @@ WHERE instance_id NOT IN
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 계층 응용 프로그램](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [sysdac_instances &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
+ [Transact-sql&#41;&#40;dac_instancesdbo.sys](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
  [Transact-sql&#41;sysdac_instances_internal &#40;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   
   

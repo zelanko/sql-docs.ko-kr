@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6190b070-a3ba-4925-bbe7-79229205dac7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b9df008c37a6efb645df4ceed46d30e6da452eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4e34da4d3a33feb885d9bda0eea54e6a8f25489f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078338"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647150"
 ---
 # <a name="catalog-stored-procedures-transact-sql"></a>카탈로그 저장 프로시저(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 ODBC 데이터 사전 기능을 구현하고 기본 시스템 테이블이 변경될 때 ODBC 애플리케이션이 영향을 받지 않도록 격리하는 다음과 같은 시스템 저장 프로시저를 지원합니다.  
   

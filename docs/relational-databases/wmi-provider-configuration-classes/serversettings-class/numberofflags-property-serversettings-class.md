@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: d720f093-0d67-4e6c-8231-78d9ab853a8f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 35162b8f8c359ba1e1eed9ef461773a3b87533a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5bb33b8e15009758d3b4892bc3b963c843e7616f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73657817"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85638815"
 ---
 # <a name="numberofflags-property-serversettings-class"></a>NumberOfFlags 속성(ServerSettings 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  인스턴스와 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]연결 된 일반 플래그의 수를 가져옵니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  인스턴스와 연결 된 일반 플래그의 수를 가져옵니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,7 +40,7 @@ object.NumberOfFlags [= value]
  [인스턴스의 서버 설정을 나타내는](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) ServerSettings 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
- 인스턴스와 연결 된 일반 플래그의 수를 지정 하는 **uint32** 값입니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ 인스턴스와 연결 된 일반 플래그의 수를 지정 하는 **uint32** 값입니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="remarks"></a>설명  
   

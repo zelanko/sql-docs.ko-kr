@@ -20,19 +20,19 @@ ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea116b0d4a70b647c6c3a719443f8e35f177169b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3aa9409d45586d996d28032df9e2af6e02ce36c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68102378"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635074"
 ---
 # <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes(TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 사용자 메모리 최적화 테이블을 저장하는 데 사용되는 각 내부 메모리 최적화 테이블에 대한 행을 포함합니다. 사용자 테이블 각각은 하나 이상의 내부 테이블에 해당합니다. 단일 테이블은 핵심 데이터 스토리지에 사용됩니다. 추가 내부 테이블은 메모리 최적화 테이블의 temporal, columnstore 인덱스 및 행 외부(LOB) 스토리지와 같은 기능을 지원하는 데 사용됩니다.
  
-| 열 이름  | 데이터 형식  | 설명 |
+| 열 이름  | 데이터 형식  | Description |
 | :------ |:----------| :-----|
 |object_id  |**int**|       사용자 테이블의 ID입니다. 사용자 테이블을 지원하는 데 필요한 내부 메모리 최적화 테이블(예: Hk/Columnstore 조합의 경우 행 외부 스토리지 또는 삭제된 행)에는 부모와 동일한 object_id가 있습니다. |
 |xtp_object_id  |**bigint**|    사용자 테이블을 지원하는 데 사용되는 내부 메모리 최적화 테이블에 해당되는 메모리 내 OLTP의 개체 ID입니다. 데이터베이스 내에서 고유하며 개체의 수명 주기 동안 변경할 수 있습니다. 
@@ -43,7 +43,7 @@ ms.locfileid: "68102378"
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-all-columns-that-are-stored-off-row"></a>A. 행 외부에서 저장된 모든 열 반환
 

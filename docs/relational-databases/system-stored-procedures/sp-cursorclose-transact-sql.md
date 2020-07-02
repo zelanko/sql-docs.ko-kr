@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9b7b44d-cdff-456e-97df-7031a3b9beb6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f21e6db8e9c1cb8ec33f9bddd9610d8179b3e5ac
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b2a0f6f23d38cb0841ba6e1b7891d9d32fc95b1f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820621"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646254"
 ---
 # <a name="sp_cursorclose-transact-sql"></a>sp_cursorclose(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   커서를 닫고 할당 취소 하며 연결 된 모든 리소스를 해제 합니다. 즉, 키 집합 또는 정적 **커서**를 지 원하는 데 사용 되는 임시 테이블을 삭제 합니다. sp_cursorclose은 TDS (tabular data stream) 패킷에서 ID = 9를 지정 하 여 호출 합니다.  
   

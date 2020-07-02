@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 859e214a0caccc9e515a5377d707aeb3d29c69da
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 98e5064c571a67afe445f265eaac693432cb5b38
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833132"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645449"
 ---
 # <a name="sp_replcounters-transact-sql"></a>sp_replcounters(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   게시된 각 데이터베이스에 대한 대기 시간, 처리량 및 트랜잭션 수에 관한 복제 통계를 반환합니다. 이 저장 프로시저는 모든 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -41,7 +41,7 @@ sp_replcounters
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**Database**|**sysname**|데이터베이스의 이름입니다.|  
+|**데이터베이스**|**sysname**|데이터베이스의 이름입니다.|  
 |**Replicated transactions**|**int**|배포 데이터베이스에 전달되기 위해 대기하고 있는 로그의 트랜잭션 수입니다.|  
 |**Replication rate trans/sec**|**float**|배포 데이터베이스로 전달된 초 당 평균 트랜잭션 수입니다.|  
 |**복제 대기 시간**|**float**|트랜잭션이 배포되기 전에 로그 내에 머무는 평균 시간을 초 단위로 표시한 것입니다.|  

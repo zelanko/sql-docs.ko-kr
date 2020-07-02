@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 90d675bf-56da-459a-9771-8cd13920a9fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8d0f4f9286f80ad7031663eb21e8677d99e1cc3
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: 548fde62cf6f07d2e31a68b7f702baa4bd9f916a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84305842"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643660"
 ---
 # <a name="arithmetic-expressions-xquery"></a>산술 식(XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   **Idiv**를 제외 하 고 모든 산술 연산자가 지원 됩니다. 다음 예에서는 산술 연산자의 기본 사용 방법을 보여 줍니다.  
   

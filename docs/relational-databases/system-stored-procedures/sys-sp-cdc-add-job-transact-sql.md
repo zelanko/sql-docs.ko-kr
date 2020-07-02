@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65f75b5f9830a19a973db0fffa06b7baf2bbdbae
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 194835abe2691a74116e51222fb069d941fd3c92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825967"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626270"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스의 변경 데이터 캡처 정리 또는 캡처 작업을 만듭니다.  
   
@@ -89,14 +89,14 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  정리 및 캡처 작업은 기본적으로 만들어지므로 이 저장 프로시저는 작업이 명시적으로 삭제되어 다시 만들어야 하는 경우에만 필요합니다.  
   
- 작업 이름이 **cdc입니다.** _ \< 데이터베이스 \_ 이름 \> _** \_ 정리** 또는 **cdc.** _ \< 데이터베이스 \_ 이름 \> _** \_ 캡처**, 여기서 *<database_name>* 는 현재 데이터베이스의 이름입니다. 이름이 같은 작업이 이미 있으면 이름에 마침표 (**.**)와 고유 식별자 (예: cdc)가 추가 됩니다. ** AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52)**.  
+ 작업 이름이 **cdc입니다.** _\<database\_name\>_ ** \_ 정리** 또는 **cdc.** _\<database\_name\>_ ** \_ capture**, 여기서 *<database_name>* 는 현재 데이터베이스의 이름입니다. 이름이 같은 작업이 이미 있으면 이름에 마침표 (**.**)와 고유 식별자 (예: cdc)가 추가 됩니다. ** AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52)**.  
   
  정리 또는 캡처 작업의 현재 구성을 보려면 [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)를 사용 합니다. 작업의 구성을 변경 하려면 [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)을 사용 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Db_owner** 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-creating-a-capture-job"></a>A. 캡처 작업 만들기  
  다음 예에서는 캡처 작업을 만듭니다. 이 예에서는 기존 정리 작업이 명시적으로 삭제되어 다시 만들어야 한다고 가정합니다. 작업은 기본값을 사용하여 만들어집니다.  

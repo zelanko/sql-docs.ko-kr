@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cb261fdfb745e935b94fc5c2944640c507674ece
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9385503d625c14932d520e4cf7390bf42612faff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816495"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85639860"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   사용자 정의 컬렉션 집합의 속성을 수정하거나 사용자 정의 컬렉션 집합의 이름을 바꾸는 데 사용합니다.  
   
@@ -119,7 +119,7 @@ sp_syscollector_update_collection_set
   
  컬렉션 집합이 실행 되 고 있으면 *schedule_uid* 및 *설명*만 업데이트할 수 있습니다. 컬렉션 집합을 중지 하려면 [sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md)을 사용 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행하려면 dc_admin 또는 dc_operator(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버여야 합니다. dc_operator는 이 저장 프로시저를 실행할 수 있지만 이 역할의 멤버가 변경할 수 있는 속성은 제한적입니다. 다음 속성은 dc_admin만 변경할 수 있습니다.  
   
 -   @new_name  
@@ -134,7 +134,7 @@ sp_syscollector_update_collection_set
   
 -   @days_until_expiration  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-renaming-a-collection-set"></a>A. 컬렉션 집합 이름 바꾸기  
  다음 예에서는 사용자 정의 컬렉션 집합의 이름을 바꿉니다.  
@@ -182,6 +182,6 @@ GO
  [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [데이터 수집](../../relational-databases/data-collection/data-collection.md)   
  [Transact-sql&#41;syscollector_collection_sets &#40;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
- [&#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+ [Transact-sql&#41;&#40;dbo.sys일정](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

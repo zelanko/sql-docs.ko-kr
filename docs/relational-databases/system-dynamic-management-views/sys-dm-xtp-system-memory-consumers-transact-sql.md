@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac86bea128939be70a3931183f23d4fdffa0d8c3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 12cfa8fa0ebde7fe2cb6d1a6e9402a0466a4895f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829020"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648030"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)]에 대한 시스템 수준 메모리 소비자를 보고합니다. 이러한 소비자에 대 한 메모리는 기본 풀 (할당이 사용자 스레드의 컨텍스트에 있는 경우) 또는 내부 풀 (할당이 시스템 스레드의 컨텍스트에 있는 경우)에서 제공 됩니다.  
   
@@ -48,13 +48,13 @@ select * from sys.dm_xtp_system_memory_consumers
 |allocated_bytes|**bigint**|이 소비자에 대해 예약된 바이트 수입니다.|  
 |used_bytes|**bigint**|이 소비자가 사용하는 바이트입니다. varheap 메모리 소비자에만 적용됩니다.|  
 |allocation_count|**int**|할당 수입니다.|  
-|partition_count|**int**|내부 전용입니다.|  
-|sizeclass_count|**int**|내부 전용입니다.|  
-|min_sizeclass|**int**|내부 전용입니다.|  
-|max_sizeclass|**int**|내부 전용입니다.|  
+|partition_count|**int**|내부적으로만 사용됩니다.|  
+|sizeclass_count|**int**|내부적으로만 사용됩니다.|  
+|min_sizeclass|**int**|내부적으로만 사용됩니다.|  
+|max_sizeclass|**int**|내부적으로만 사용됩니다.|  
 |memory_consumer_address|**varbinary**|소비자의 내부 주소입니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="user-scenario"></a>사용자 시나리오  

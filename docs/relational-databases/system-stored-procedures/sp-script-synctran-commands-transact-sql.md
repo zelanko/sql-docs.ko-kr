@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 965fc3fe168ecd6027c2c1fc2ebad92bc334e383
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e1b8659d7828feaab219ce5c2b883137f252314
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816853"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645367"
 ---
 # <a name="sp_script_synctran_commands-transact-sql"></a>sp_script_synctran_commands(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   업데이트할 수 있는 구독에 대해 구독자에 적용할 **sp_addsynctrigger** 호출을 포함 하는 스크립트를 생성 합니다. 게시의 각 아티클에 대해 하나의 **sp_addsynctrigger** 호출 합니다. 또한 생성 된 스크립트에는 대기 중인 게시를 처리 하는 데 필요한 **MSsubsciption_articles** 테이블을 만드는 **sp_addqueued_artinfo** 호출이 포함 되어 있습니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   

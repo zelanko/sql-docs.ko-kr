@@ -17,15 +17,15 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 931babcaa6e229d6114930bba5f06803aa25f59e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0151b29c6375cdefd2ad1a6430591cb98b51e08e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829686"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647070"
 ---
 # <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>활성 지역 복제-sp_wait_for_database_copy_sync
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   이 프로시저는 기본 및 보조 간 [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] 관계로 한정됩니다. **Sp_wait_for_database_copy_sync** 를 호출 하면 모든 커밋된 트랜잭션이 활성 보조 데이터베이스에서 복제 되 고 승인 될 때까지 응용 프로그램이 대기 합니다. 주 데이터베이스 에서만 **sp_wait_for_database_copy_sync** 를 실행 합니다.  
   
@@ -64,7 +64,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ## <a name="remarks"></a>설명  
  **Sp_wait_for_database_copy_sync** 호출 전에 커밋된 모든 트랜잭션이 활성 보조 데이터베이스에 전송 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 **sp_wait_for_database_copy_sync** 를 호출 하 여 모든 트랜잭션이 주 데이터베이스인 d b 0에서 대상 서버 ubfyu5ssyt의 활성 보조 데이터베이스로 전송 되도록 합니다.  
   
 ```  

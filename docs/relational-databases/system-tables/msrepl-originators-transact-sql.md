@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8a8cfbee720288fe848a5197e91d5ed0f455cb86
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e4396000a80305429ded759b964c1533d9ebc460
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824799"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633418"
 ---
 # <a name="msrepl_originators-transact-sql"></a>MSrepl_originators(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSrepl_originators** 테이블에는 트랜잭션이 시작 된 각 업데이트할 수 있는 구독자에 대 한 행이 하나씩 포함 되어 있습니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

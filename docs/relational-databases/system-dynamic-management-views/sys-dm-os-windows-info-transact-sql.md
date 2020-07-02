@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2f3dceed9572ef2e3a3999759ac120901408b893
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 71da34c0af430dbad8f5b6aeb24cc03cfdd1492d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811751"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648479"
 ---
 # <a name="sysdm_os_windows_info-transact-sql"></a>sys.dm_os_windows_info(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Windows 운영 체제 버전 정보를 표시하는 행을 반환합니다.  
   
@@ -40,13 +40,13 @@ ms.locfileid: "82811751"
 |**os_language_version**|**int**| Windows의 경우 운영 체제의 Windows LCID (로캘 식별자)를 반환 합니다. LCID 값 및 설명 목록은 [Microsoft에서 할당 한 로캘 id](https://go.microsoft.com/fwlink/?LinkId=208080)를 참조 하세요. NULL이 될 수 없습니다.|  
   
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
 기본적으로 dm_os_windows_info의 SELECT 권한은 public 역할에 부여 됩니다. 해지 된 경우 서버에 대 한 VIEW SERVER STATE 권한이 필요 합니다.  
 
 ## <a name="limitations-and-restrictions"></a>제한 사항
 Windows가 아닌 호스트에서 실행 되는 SQL 용 내용은 (예: Linux)를 확인 하려면 [transact-sql&#41;를 &#40;dm_os_host_info ](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)를 사용 합니다. 
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 **dm_os_windows_info** 뷰에서 모든 열을 반환 합니다.  
   
 ```  

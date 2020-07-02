@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3cdd234d99a02e4b7ecb72a7b0de6f47a268780c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f59e267be18b4cc16124ed4c52a4be7d5144b22a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826644"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648466"
 ---
 # <a name="sysdm_xe_object_columns-transact-sql"></a>sys.dm_xe_object_columns(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   모든 개체에 대한 스키마 정보를 반환합니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "82826644"
 |capabilities_desc|**nvarchar(256)**|해당 개체 열의 기능에 대한 설명입니다. 이 값은 다음 중 하나일 수 있습니다.<br /><br /> 필수. 부모 개체를 이벤트 세션에 바인딩하는 경우 값을 설정해야 합니다.<br /><br /> Null을 허용합니다.|  
 |description|**nvarchar (3072)**|해당 개체 열에 대한 설명입니다. Null을 허용합니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
 ### <a name="relationship-cardinalities"></a>관계 카디널리티  

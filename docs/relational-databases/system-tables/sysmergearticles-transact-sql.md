@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8328c332fe35b8e157c8631d90b8de67c6e96e17
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 79e19b531b7dfb10587ec6bdb4db71632066ef87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831947"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633385"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   로컬 데이터베이스에 정의된 각 병합 아티클에 대해 한 행을 포함합니다. 이 테이블은 게시 데이터베이스에 저장됩니다.  
   
@@ -86,8 +86,8 @@ ms.locfileid: "82831947"
 |**delete_tracking**|**bit**|삭제 내용을 복제하는지 여부를 나타냅니다.<br /><br /> **0** = 삭제가 복제 되지 않습니다.<br /><br /> **1** = 병합 복제에 대 한 기본 동작인 삭제가 복제 됩니다.<br /><br /> *Delete_tracking* 값이 **0**이면 구독자에서 삭제 된 행을 게시자에서 수동으로 제거 하 고 게시자에서 삭제 된 행을 구독자에서 수동으로 제거 해야 합니다.<br /><br /> 참고: 값 **0** 은 일치 하지 않습니다.|  
 |**compensate_for_errors**|**bit**|동기화 중에 오류가 발생할 경우 보정 동작을 수행하는지 여부를 나타냅니다.<br /><br /> **0** = 보정 동작을 사용할 수 없습니다.<br /><br /> **1** = 구독자 또는 게시자에서 적용할 수 없는 변경 내용은 항상 보정 동작을 수행 하 여 병합 복제의 기본 동작을 실행 취소 합니다.<br /><br /> 참고: 값 **0** 은 일치 하지 않습니다.|  
 |**pub_range**|**bigint**|게시자 ID의 범위 크기입니다.|  
-|**벗어납니다**|**bigint**|조정 시 구독자에게 할당되는 연속 ID 값의 크기입니다.|  
-|**고대비**|**int**|ID 범위 임계값 비율입니다.|  
+|**range**|**bigint**|조정 시 구독자에게 할당되는 연속 ID 값의 크기입니다.|  
+|**threshold**|**int**|ID 범위 임계값 비율입니다.|  
 |**stream_blob_columns**|**bit**|BLOB(Binary Large Object) 열을 복제할 때 데이터 스트림 최적화를 사용할지 여부를 지정합니다. **1** 은 최적화가 시도 됨을 의미 합니다.|  
 |**preserve_rowguidcol**|**bit**|복제에 기존 rowguid 열이 사용되는지 여부를 나타냅니다. 값 **1** 은 기존 ROWGUIDCOL 열이 사용 됨을 의미 합니다. **0** 은 복제가 ROWGUIDCOL 열을 추가 했음을 의미 합니다.|  
   

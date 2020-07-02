@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee0298a714394bdf90009657c3d5b7a4daafebcd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9619ee410e0df014961e9f46a7e536508e0616c1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814368"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85639485"
 ---
 # <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스 메일의 내부 테이블에서 전자 메일 메시지를 영구 삭제합니다.  
   
@@ -52,10 +52,10 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
   
  전자 메일을 삭제하면 해당 메시지와 관련된 첨부 파일도 삭제됩니다. 전자 메일을 삭제 해도 **sysmail_event_log**의 해당 항목은 삭제 되지 않습니다. [Sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) 를 사용 하 여 로그에서 항목을 삭제 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할 및 **DatabaseMailUserRole**의 멤버에 대해이 저장 프로시저를 실행할 수 있습니다. **Sysadmin** 고정 서버 역할의 멤버는이 프로시저를 실행 하 여 모든 사용자가 보낸 전자 메일을 삭제할 수 있습니다. **DatabaseMailUserRole** 의 멤버는 해당 사용자가 보낸 전자 메일만 삭제할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-deleting-all-e-mails"></a>A. 모든 전자 메일 삭제  
  다음 예에서는 데이터베이스 메일 시스템의 모든 전자 메일을 삭제합니다.  

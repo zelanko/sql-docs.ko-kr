@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98963dbab83ffea8590c213284b2540393d7c0fd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c4ba72a35ba3b8339a1ebc919327ce353b2c7697
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831854"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646941"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   관리 데이터 웨어하우스 core.snapshots 뷰에 행을 삽입합니다. 이 프로시저는 업로드 패키지가 관리 데이터 웨어하우스로 데이터를 업로드하기 시작할 때마다 호출됩니다.  
   
@@ -60,7 +60,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  컬렉션 집합의 인스턴스 이름입니다. *named_instance* 는 **sysname**이며 기본값은 없습니다.  
   
  [ @log_id =] *log_id*  
- 데이터를 수집한 서버의 컬렉션 집합 이벤트 로그에 매핑되는 고유 식별자입니다. *log_id* 는 **bigint** 이며 기본값은 없습니다. *Log_id*에 대 한 값을 가져오려면 msdb 데이터베이스에서 syscollector_execution_log 뷰를 쿼리 합니다.  
+ 데이터를 수집한 서버의 컬렉션 집합 이벤트 로그에 매핑되는 고유 식별자입니다. *log_id* 는 **bigint** 이며 기본값은 없습니다. *Log_id*에 대 한 값을 가져오려면 msdb 데이터베이스에서 dbo.syscollector_execution_log 뷰를 쿼리 합니다.  
   
  [ @snapshot_id =] *snapshot_id*  
  핵심 스냅숏 뷰에 삽입 되는 행의 고유 식별자입니다. *snapshot_id* **int** 이며 OUTPUT으로 반환 됩니다.  
@@ -82,7 +82,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="permissions"></a>사용 권한  
  **Mdw_writer** (실행 권한 포함) 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 디스크 사용량 컬렉션 집합의 스냅샷을 만들어 관리 데이터 웨어하우스에 추가한 다음 스냅샷 식별자를 반환합니다. 이 예에서는 기본 인스턴스가 사용됩니다.  
   
 ```  

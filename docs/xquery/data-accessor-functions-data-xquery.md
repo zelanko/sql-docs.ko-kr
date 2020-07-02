@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac340466d1d816139249e4b007c7b2bc733dd390
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: a5d0940f6e182d477d2c0660f4c93aaa9fedeb6f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881872"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643546"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>데이터 접근자 함수 - data(XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   *$Arg*에 지정 된 각 항목에 대해 형식화 된 값을 반환 합니다.  
   

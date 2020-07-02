@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ae48ceffec12ce840ab436cc80a46c036da329b6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 061321d6fdefb52890a54fb7e18aa0a618cd986f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626248"
 ---
 # <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sys.sp_cdc_cleanup_change_table(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정 된 *low_water_mark* 값을 기준으로 현재 데이터베이스의 변경 테이블에서 행을 제거 합니다. 이 저장 프로시저는 변경 테이블 정리 프로세스를 직접 관리하려는 사용자를 위해 제공됩니다. 이 프로시저는 변경 테이블에 있는 데이터의 모든 소비자에게 영향을 주므로 사용할 때 주의해야 합니다.  
   
@@ -86,7 +86,7 @@ sys.sp_cdc_cleanup_change_table
   
      이 저장 프로시저는 단일 캡처 인스턴스의 정리를 수행하므로 개별 캡처 인스턴스에 따라 정리 규칙을 조정하는 사용자 지정 정리 전략을 작성하는 데 사용할 수 있습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  

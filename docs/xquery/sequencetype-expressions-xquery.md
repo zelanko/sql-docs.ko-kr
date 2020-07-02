@@ -18,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 78cc79444a37216014e2eb99852c1cbeee7f4a93
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 909d3cb49879a94c466e58f83997e32c468d9df8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84886071"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643353"
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType 식(XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   XQuery에서는 값이 항상 시퀀스입니다. 값 유형을 시퀀스 유형이라고 합니다. 이 시퀀스 유형은 XQuery 식 **의 인스턴스에서** 사용할 수 있습니다. XQuery 식에서 유형을 참조해야 할 경우 XQuery 사양에 설명된 SequenceType 구문이 사용됩니다.  
   
  원자성 형식 이름은 XQuery 식 **으로 캐스트** 에도 사용할 수 있습니다. 에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SequenceTypes에 대 한 XQuery **cast as** 식 및 **인스턴스** 는 부분적으로 지원 됩니다.  
   
 ## <a name="instance-of-operator"></a>instance of 연산자  
- 연산자 **의 인스턴스** 를 사용 하 여 지정 된 식의 동적 또는 런타임 형식 값을 확인할 수 있습니다. 다음은 그 예입니다.  
+ 연산자 **의 인스턴스** 를 사용 하 여 지정 된 식의 동적 또는 런타임 형식 값을 확인할 수 있습니다. 예를 들면 다음과 같습니다.  
   
 ```  
   
@@ -326,7 +326,7 @@ select @x.query(' declare namespace CustOrders="Customers";
 -   **처리 명령 ()** 및 **문서 노드 ()** 시퀀스 형식의 경우 인수가 없는 폼만 허용 됩니다. 예를 들어 `processing-instruction()`은 사용할 수 있지만 `processing-instruction('abc')`은 사용할 수 없습니다.  
   
 ## <a name="cast-as-operator"></a>cast as 연산자  
- **Cast as** expression을 사용 하 여 값을 특정 데이터 형식으로 변환할 수 있습니다. 다음은 그 예입니다.  
+ **Cast as** expression을 사용 하 여 값을 특정 데이터 형식으로 변환할 수 있습니다. 예를 들면 다음과 같습니다.  
   
 ```  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 82259f4293d821882f64e8162e0e5ec48e0548d1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d9716985438a9e29c9ef8d72eb2ba3e77b8db42f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824376"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85639997"
 ---
 # <a name="sp_requestpeerresponse-transact-sql"></a>sp_requestpeerresponse(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   이 프로시저는 피어 투 피어 토폴로지의 노드에서 실행될 경우 토폴로지에서 노드를 하나씩 걸러서 응답을 요청합니다. 이 프로시저를 실행하고 해당 응답을 검토함으로써 이전의 모든 명령이 응답하는 노드에 전달되었음을 확인할 수 있습니다. 이 저장 프로시저는 모든 데이터베이스의 요청 노드에서 실행됩니다.  
   
@@ -55,7 +55,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
   
  사용자 정의 트랜잭션 내에서는 **sp_requestpeerresponse** 을 실행할 수 없습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_requestpeerresponse**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -20,15 +20,15 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50385161b417d02db2dc44ad1172910d31f198b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4dbeed2c84db6a94237df6878fba688c6ed08a66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905144"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85625948"
 ---
 # <a name="syssp_drop_trusted_assembly-transact-sql"></a>sys.sp_drop_trusted_assembly(Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 서버에 있는 신뢰할 수 있는 어셈블리 목록에서 어셈블리를 삭제 합니다.
 
@@ -43,7 +43,7 @@ sp_drop_trusted_assembly
 
 ## <a name="arguments"></a>인수
 
-[ @hash = ] '*value*'  
+[ @hash =] '*value*'  
 서버에 대 한 신뢰할 수 있는 어셈블리 목록에서 삭제할 어셈블리의 SHA2_512 해시 값입니다. 어셈블리가 서명 되지 않았거나 데이터베이스가 신뢰할 수 있는 것으로 표시 되지 않은 경우에도 clr strict security를 사용 하도록 설정 하면 신뢰할 수 있는 어셈블리가 로드 될 수 있습니다.
 
 ## <a name="remarks"></a>설명  
@@ -52,9 +52,9 @@ sp_drop_trusted_assembly
 
 ## <a name="permissions"></a>사용 권한
 
-`sysadmin` 고정 서버 역할 또는 `CONTROL SERVER` 권한의 멤버 자격이 필요 합니다.
+`sysadmin`고정 서버 역할 또는 권한의 멤버 자격이 필요 `CONTROL SERVER` 합니다.
 
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 
 다음 예에서는 서버에 대 한 신뢰할 수 있는 어셈블리 목록에서 어셈블리 해시를 삭제 합니다.  
 

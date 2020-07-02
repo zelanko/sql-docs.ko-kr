@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27f2d95a23a89c4e50924944709ba38a39a6ff2d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2c01cfb6e469ef33c897d581eadf2da757cdb06f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833722"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646877"
 ---
 # <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   보존 정책을 기준으로 관리 데이터 웨어하우스에서 데이터를 제거합니다. 이 프로시저는 지정된 인스턴스와 연결된 관리 데이터 웨어하우스에 대해 mdw_purge_data [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에 의해 매일 실행됩니다. 다음 저장 프로시저를 사용하여 관리 데이터 웨어하우스에서 데이터를 요청 시 제거할 수 있습니다.  
   
@@ -73,7 +73,7 @@ core.sp_purge_data
 ## <a name="permissions"></a>사용 권한  
  **Mdw_admin** (실행 권한 포함) 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-running-sp_purge_data-with-no-parameters"></a>A. 매개 변수 없이 sp_purge_data 실행  
  다음 예에서는 매개 변수를 지정하지 않고 core.sp_purge_data를 실행합니다. 따라서 모든 매개 변수에 대해 기본값 NULL이 연결된 동작과 함께 사용됩니다.  

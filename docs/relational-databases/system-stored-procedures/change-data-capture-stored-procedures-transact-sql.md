@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7da7068d-6388-465a-b708-a2f27ded1efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 128d62aceec5a847e721d6227372e1ff115706ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 65cafaf2a4ea26b620bbcf5932031a8781cb9a14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078234"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647014"
 ---
 # <a name="change-data-capture-stored-procedures-transact-sql"></a>변경 데이터 캡처 저장 프로시저(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   변경 데이터 캡처는 설정된 테이블에서 발생한 DML(데이터 조작 언어) 작업의 기록 레코드를 편리한 관계형 형식으로 사용할 수 있게 합니다. 다음 저장 프로시저를 사용하여 변경 데이터 캡처를 구성하고, 변경 데이터 캡처 에이전트 작업을 관리하고, 변경 데이터 소비자에 현재 메타데이터를 제공할 수 있습니다.  
   

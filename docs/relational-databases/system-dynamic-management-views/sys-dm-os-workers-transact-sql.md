@@ -20,15 +20,15 @@ ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf694bcd82d57b0c021797677674ceb418f875a2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3534afe09635fdc626c51b63469c801a0c3ac418
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811517"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648599"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   시스템의 각 작업자에 대해 행을 반환합니다. 작업자에 대 한 자세한 내용은 [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)를 참조 하세요. 
   
@@ -38,7 +38,7 @@ ms.locfileid: "82811517"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |worker_address|**varbinary(8)**|작업자의 메모리 주소입니다.|  
-|상태|**int**|내부 전용입니다.|  
+|상태|**int**|내부적으로만 사용됩니다.|  
 |is_preemptive|**bit**|1 = 작업자가 선점형 일정을 사용하여 실행되고 있습니다. 외부 코드를 실행 중인 작업자는 선점형 일정을 사용하여 실행됩니다.|  
 |is_fiber|**bit**|1 = 작업자가 경량 풀링을 사용하여 실행되고 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)백업 및 복원의 기본적인 백업 미디어 관련 용어를 소개합니다.|  
 |is_sick|**bit**|1 = 작업자가 spinlock을 획득하려고 하는 중 멈췄습니다. 이 비트가 설정된 경우 자주 액세스되는 개체에 경합 문제가 있음을 나타내는 것일 수 있습니다.|  
@@ -58,14 +58,14 @@ ms.locfileid: "82811517"
 |exception_severity|**int**|이 작업자에 마지막으로 발생한 예외의 심각도입니다.|  
 |exception_address|**varbinary(8)**|예외가 발생한 코드 주소입니다.|  
 |affinity|**bigint**|작업자의 스레드 선호도입니다. [Dm_os_threads &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)에서 스레드의 선호도와 일치 합니다.|  
-|state|**nvarchar(60)**|작업자 상태입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> INIT = 작업자가 현재 초기화되고 있습니다.<br /><br /> RUNNING = 작업자가 현재 선점형 모드나 비선점형 모드로 실행되고 있습니다.<br /><br /> RUNNABLE = 스케줄러에서 작업자를 실행할 준비가 되었습니다.<br /><br /> SUSPENDED = 작업자가 현재 일시 중지되어 이벤트에서 신호를 보낼 때까지 기다리고 있습니다.|  
+|state|**nvarchar(60)**|작업자 상태입니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> INIT = 작업자가 현재 초기화되고 있습니다.<br /><br /> RUNNING = 작업자가 현재 선점형 모드나 비선점형 모드로 실행되고 있습니다.<br /><br /> RUNNABLE = 스케줄러에서 작업자를 실행할 준비가 되었습니다.<br /><br /> SUSPENDED = 작업자가 현재 일시 중지되어 이벤트에서 신호를 보낼 때까지 기다리고 있습니다.|  
 |start_quantum|**bigint**|이 작업자의 현재 실행이 시작된 시간(밀리초)입니다.|  
 |end_quantum|**bigint**|이 작업자의 현재 실행이 종료된 시간(밀리초)입니다.|  
 |last_wait_type|**nvarchar(60)**|마지막 대기의 유형입니다. 대기 유형 목록은 [dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)을 참조 하십시오.|  
-|return_code|**int**|마지막 대기에서 반환된 값입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> 0 = 성공<br /><br /> 3 = 교착<br /><br /> 4 = 중간 시작<br /><br /> 258 = 시간 초과|  
-|quantum_used|**bigint**|내부 전용입니다.|  
-|max_quantum|**bigint**|내부 전용입니다.|  
-|boost_count|**int**|내부 전용입니다.|  
+|return_code|**int**|마지막 대기에서 반환된 값입니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> 0 = 성공<br /><br /> 3 = 교착<br /><br /> 4 = 중간 시작<br /><br /> 258 = 시간 초과|  
+|quantum_used|**bigint**|내부적으로만 사용됩니다.|  
+|max_quantum|**bigint**|내부적으로만 사용됩니다.|  
+|boost_count|**int**|내부적으로만 사용됩니다.|  
 |tasks_processed_count|**int**|이 작업자가 처리한 태스크 수입니다.|  
 |fiber_address|**varbinary(8)**|이 작업자와 연관된 파이버의 메모리 주소입니다.<br /><br /> NULL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 경량 풀링을 사용하도록 구성되지 않았습니다.|  
 |task_address|**varbinary(8)**|현재 태스크의 메모리 주소입니다. 자세한 내용은 [dm_os_tasks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)을 참조 하십시오.|  
@@ -81,11 +81,11 @@ ms.locfileid: "82811517"
   
  이벤트를 기다리고 있는 작업자가 신호를 받으면 해당 작업자가 실행 가능한 큐의 맨 처음에 배치됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 작업이 연속해서 1,000회 발생할 수 있습니다. 그런 다음 작업자가 큐 끝에 배치됩니다. 작업자를 큐 끝으로 이동하면 성능에 약간 영향을 줍니다.  
   
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서에는 `Server Admin` 역할 멤버 자격 또는 계정이 필요 합니다 `Azure Active Directory admin` .   
 
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 쿼리를 사용하여 SUSPENDED 또는 RUNNABLE 상태에서 작업자가 실행된 시간을 확인할 수 있습니다.  
   
 ```sql

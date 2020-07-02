@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: acb69343-d766-46ff-b771-0c7655c5231a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 17cb918665c7f09ee3a65d4fd45822eb28a28e82
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 72a125d48251d1f4a4ff95aad2fbd0113e5cd7f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826313"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646408"
 ---
 # <a name="sp_add_targetservergroup-transact-sql"></a>sp_add_targetservergroup(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정된 서버 그룹을 추가합니다.  
   
@@ -50,10 +50,10 @@ sp_add_targetservergroup [ @name = ] 'name'
 ## <a name="remarks"></a>설명  
  대상 서버 그룹은 대상 서버 컬렉션에서 작업을 대상화하는 간편한 방법을 제공합니다. 자세한 내용은 [sp_apply_job_to_targets](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)를 참조 하세요.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Servers Processing Customer Orders`라는 대상 서버 그룹을 만듭니다.  
   
 ```  

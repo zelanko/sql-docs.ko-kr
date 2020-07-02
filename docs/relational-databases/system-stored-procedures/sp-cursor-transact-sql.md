@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e99f8f657c3d35cc91ff92a9ae5d920271769b8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7550a640b723e77f3bfbc9b3473e762962ae2da3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820614"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646418"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   현재 위치 업데이트를 요청합니다. 이 프로시저는 커서의 인출 버퍼 내에서 하나 이상의 행에 대해 작업을 수행합니다. sp_cursor은 TDS (tabular data stream) 패킷에서 ID = 1을 지정 하 여 호출 합니다.  
   
@@ -50,7 +50,7 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  커서가 수행할 작업을 지정하는 필수 매개 변수입니다. *optype* 에는 다음 **int** 입력 값 중 하나가 필요 합니다.  
   
-|값|속성|설명|  
+|값|Name|설명|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|인출 버퍼에서 하나 이상의 행을 업데이트하는 데 사용됩니다.  *Rownum* 에 지정 된 행에 다시 액세스 하 여 업데이트 합니다.|  
 |0x0002|Delete|인출 버퍼에서 하나 이상의 행을 삭제하는 데 사용됩니다. *Rownum* 에 지정 된 행에 다시 액세스 하 여 삭제 합니다.|  
@@ -129,7 +129,7 @@ sp_cursor  cursor, optype, rownum, table
   
 2.  매개 변수를 사용 하 여 전체 UPDATE 또는 INSERT 문을 제출 하거나, 여러 매개 변수를 사용 하 여 UPDATE 또는 INSERT 문의 여러 부분을 제출할 수 있습니다. 그러면 SQL Server는 전체 문으로 작성 됩니다. 이 작업의 예는 이 항목 뒷부분의 예 섹션에 나와 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="alternative-value-parameter-uses"></a>다른 value 매개 변수 사용 방식  
  UPDATE의 경우:  
@@ -139,7 +139,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
->  업데이트 \< 테이블 이름> 지정 하면 *table* 매개 변수에 대해 지정 된 모든 값이 무시 됩니다.  
+>  UPDATE를 \<table name> 지정 하면 *table* 매개 변수에 대해 지정 된 모든 값이 무시 됩니다.  
   
  여러 매개 변수를 사용하는 경우에는 첫 번째 매개 변수가 다음 형식의 문자열이어야 합니다.  
   
@@ -149,7 +149,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `<column name> = expression  [,...n]`  
   
- 이 경우 \< 생성 된 update 문에서 테이블 이름> *테이블* 매개 변수에서 지정 하거나 기본값으로 지정 됩니다.  
+ 이 경우 \<table name> 생성 된 update 문의는 *table* 매개 변수에 의해 지정 되거나 기본값으로 지정 된입니다.  
   
  INSERT의 경우:  
   
@@ -158,7 +158,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ INSERT [INTO] <table name> ] VALUES ] ( <expression> [,...n] )`  
   
 > [!NOTE]  
->  INSERT * \< 테이블 이름>* 지정 하면 *table* 매개 변수에 대해 지정 된 모든 값이 무시 됩니다.  
+>  INSERT *\<table name>* 를 지정 하면 *table* 매개 변수에 대해 지정 된 모든 값이 무시 됩니다.  
   
  여러 매개 변수를 사용하는 경우에는 첫 번째 매개 변수가 다음 형식의 문자열이어야 합니다.  
   
@@ -168,7 +168,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- 단, VALUES를 지정한 경우는 예외입니다. 이 경우에는 마지막 식 다음에 후행 ")"가 있어야 합니다. 이 경우 생성 된 UPDATE 문에서 * \< 테이블 이름>* *테이블 매개 변수에서 지정* 하거나 기본값으로 지정 됩니다.  
+ 단, VALUES를 지정한 경우는 예외입니다. 이 경우에는 마지막 식 다음에 후행 ")"가 있어야 합니다. 이 경우 *\<table name>* 생성 된 UPDATE 문의는 *table* 매개 변수에 의해 지정 되거나 기본값으로 지정 된입니다.  
   
 > [!NOTE]  
 >  매개 변수 하나를 명명된 매개 변수인 "`@VALUES`"로 제출할 수 있습니다. 이 경우 다른 명명된 매개 변수는 사용할 수 없습니다.  

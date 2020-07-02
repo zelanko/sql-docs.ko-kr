@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1cb929158a6d17a7a7c16e5e303c403a2c03112
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e6accbb03bf4ed06f84f67263e89ab9c6bfa7654
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831811"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646044"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스에서 하나 이상의 행 버퍼를 인출합니다. 이 버퍼의 행 그룹을 커서의 *인출 버퍼*라고 합니다. sp_cursorfetch은 TDS (tabular data stream) 패킷에서 ID = 7을 지정 하 여 호출 합니다.  
   
@@ -46,7 +46,7 @@ sp_cursorfetch cursor
  *fetchtype*  
  인출할 커서 버퍼를 지정합니다. *fetchtype* 은 다음 정수 입력 값 중 하나를 필요로 하는 선택적 매개 변수입니다.  
   
-|값|속성|설명|  
+|값|Name|설명|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|*Nrows* 행의 첫 번째 버퍼를 인출 합니다. *Nrows* 가 0과 같으면 커서는 결과 집합 앞에 배치 되 고 행이 반환 되지 않습니다.|  
 |0x0002|NEXT|*Nrows* 행의 다음 버퍼를 인출 합니다.|  
@@ -55,7 +55,7 @@ sp_cursorfetch cursor
 |0x10|ABSOLUTE|*Rownum* 행부터 *nrows* 행의 버퍼를 인출 합니다.<br /><br /> 참고: FORWARD_ONLY는 한 방향 으로만 스크롤을 지원 하므로 동적 커서 또는 FORWARD_ONLY 커서에 대해 절대값을 사용 하 여 오류 메시지를 반환 합니다.|  
 |0x20|RELATIVE|현재 블록의 첫 번째 행에 있는 행의 *rownum* 값으로 지정 된 행부터 시작 하 여 *nrows* 행의 버퍼를 인출 합니다. 이 경우 *rownum* 은 음수일 수 있습니다.<br /><br /> 참고: FORWARD_ONLY는 한 방향 으로만 스크롤을 지원 하기 때문에 FORWARD_ONLY 커서에 대해 상대를 사용 하면 오류 메시지가 반환 됩니다.|  
 |0x80|REFRESH|기본 테이블의 버퍼를 다시 채웁니다.|  
-|0x100|INFO|커서에 대한 정보를 검색합니다. 이 정보는 *rownum* 및 *nrows* 매개 변수를 사용 하 여 반환 됩니다. 따라서 INFO를 지정 하면 *rownum* 및 *nrows* 가 출력 매개 변수가 됩니다.|  
+|0x100|정보|커서에 대한 정보를 검색합니다. 이 정보는 *rownum* 및 *nrows* 매개 변수를 사용 하 여 반환 됩니다. 따라서 INFO를 지정 하면 *rownum* 및 *nrows* 가 출력 매개 변수가 됩니다.|  
 |0x200|PREV_NOADJUST|PREV와 같이 사용되지만 결과 집합 맨 위가 중간에 나오면 결과가 달라질 수 있습니다.|  
 |0x400|SKIP_UPDT_CNCY|는 정보를 제외 하 고 다른 *fetchtype* 값 중 하 나와 함께 사용 해야 합니다.|  
   
@@ -153,7 +153,7 @@ sp_cursorfetch cursor
   
  커서의 선택 목록에 대한 메타데이터가 TDS 스트림에 반환되도록 요청하려면 RPC RETURN_METADATA 입력 플래그를 1로 설정합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-prev-to-change-a-cursor-position"></a>A. PREV를 사용하여 커서 위치 변경  
  h2 커서가 다음과 같은 내용의 결과 집합을 생성하며 현재 위치는 아래와 같다고 가정해 봅니다.  

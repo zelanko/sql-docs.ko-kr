@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 86e06938-9d0a-44e5-99e2-55c8ef5f2f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fb396d47da69724d16c0d72e1373527f9c5e700f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 892a1ff4570f209b89866e1287cb55691d9b6189
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68102433"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635299"
 ---
 # <a name="syslogin_token-transact-sql"></a>sys.login_token(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   로그인 토큰의 일부인 모든 각 서버 보안 주체당 한 개의 행을 반환합니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68102433"
 |**principal_id**|**int**|보안 주체의 ID입니다. 이 값은 서버 내에서 고유합니다.|  
 |**sid**|**varbinary(85)**|보안 주체의 SID(보안 ID)입니다. Windows 보안 주체 인 경우 **sid** = windows sid입니다. 로그인이 인증서에 매핑된 경우 인증서의 **sid** = GUID입니다.|  
 |**name**|**nvarchar(128)**|보안 주체의 이름입니다. 이 값은 서버 내에서 고유합니다.|  
-|**type**|**nvarchar(128)**|보안 주체 유형에 대한 설명입니다. 모든 유형은 **sid**로 매핑됩니다. 이 값은<br /><br /> SQL LOGIN<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> SERVER ROLE<br /><br /> LOGIN MAPPED TO CERTIFICATE<br /><br /> LOGIN MAPPED TO ASYMMETRIC KEY<br /><br /> 인증서<br /><br /> ASYMMETRIC KEY|  
+|**type**|**nvarchar(128)**|보안 주체 유형에 대한 설명입니다. 모든 유형은 **sid**로 매핑됩니다. 값은 다음 중 하나일 수 있습니다.<br /><br /> SQL LOGIN<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> SERVER ROLE<br /><br /> LOGIN MAPPED TO CERTIFICATE<br /><br /> LOGIN MAPPED TO ASYMMETRIC KEY<br /><br /> 인증서<br /><br /> ASYMMETRIC KEY|  
 |**보려면**|**nvarchar(128)**|보안 주체가 GRANT 또는 DENY 권한 평가에 참여하도록 지정하거나 인증자의 역할을 하도록 지정합니다.<br /><br /> 이 값은 다음 중 하나일 수 있습니다.<br /><br /> GRANT 또는 DENY<br /><br /> DENY ONLY<br /><br /> AUTHENTICATOR|  
   
 ## <a name="see-also"></a>참고 항목  

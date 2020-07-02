@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 431defb262bbc93fbf0925acd569ced9921fe533
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e87afd1d76eb4bfb9602e1b3d57dd62a43b65772
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824334"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85639881"
 ---
 # <a name="sp_resetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   스냅샷 배달을 다시 시작할 수 있도록 끌어오기 구독에 대한 스냅샷 배달 프로세스를 다시 설정합니다. 구독 데이터베이스의 구독자에서 실행됩니다.  
   
@@ -48,7 +48,7 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ## <a name="remarks"></a>설명  
  **Sp_resetsnapshotdeliveryprogress** **MSsnapshotdeliveryprogress** 테이블의 모든 행을 제거 합니다. 결과적으로 스냅샷 배달 프로세스의 이전 과정에 의해 구독 데이터베이스에 남겨진 모든 메타데이터도 함께 제거됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_resetsnapshotdeliveryprogress**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

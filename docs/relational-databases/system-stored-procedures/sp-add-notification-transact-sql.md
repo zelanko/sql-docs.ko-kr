@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 60bb289f0fd6d7b7dd1034630929998d32cc59d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fcf55efd5b50f73d15e0fc488cfe4298b99d9eb7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68115057"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646489"
 ---
 # <a name="sp_add_notification-transact-sql"></a>sp_add_notification(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   경고에 대한 알림을 설정합니다.  
   
@@ -56,7 +56,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
  **sp_add_notification** 는 **msdb** 데이터베이스에서 실행 해야 합니다.  
@@ -70,10 +70,10 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_add_notification**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 지정된 경고(`Test Alert`)에 전자 메일 알림을 추가합니다.  
   
-> **참고:** 이 예에서는가 `Test Alert` 이미 존재 하며 `François Ajenstat` 이는 유효한 연산자 이름 이라고 가정 합니다.  
+> **참고:** 이 예에서는가 `Test Alert` 이미 존재 하며이는 `François Ajenstat` 유효한 연산자 이름 이라고 가정 합니다.  
   
 ```  
 USE msdb ;  

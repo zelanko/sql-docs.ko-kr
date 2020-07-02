@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8901c46c5654b6c633e03d62e8eaec2a3e903e02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a6654fb7bd83f3c247c972c3c044af7b0a2d932
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022273"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645435"
 ---
 # <a name="sp_revoke_proxy_from_subsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   프록시의 하위 시스템 액세스 권한을 해제합니다.  
   
@@ -49,15 +49,15 @@ sp_revoke_proxy_from_subsystem
   
 `[ @subsystem_id = ] id`액세스 권한을 취소할 하위 시스템의 id 번호입니다. *Subsystem_id* 은 **int**이며 기본값은 NULL입니다. *Subsystem_id* 또는 *subsystem_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다. 다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|**2**|ActiveX 스크립트<br /><br /> ** \* 중요 \* \* ** [!INCLUDE[msCoName](../../includes/msconame-md.md)]의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이후 버전에서는 에이전트에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ActiveX 스크립팅 하위 시스템이 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.|  
+|**2**|ActiveX 스크립트<br /><br /> 중요 나중 버전 **의에서는 에이전트에서 ActiveX 스크립팅 하위 시스템이 제거 됩니다 \* \* . \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.|  
 |**3**|운영 체제(CmdExec)|  
 |**4**|Replication Snapshot Agent|  
 |**5**|복제 로그 판독기 에이전트|  
 |**6**|복제 배포 에이전트|  
 |**7**|Replication Merge Agent|  
-|**20cm(8**|복제 큐 판독기 에이전트|  
+|**8**|복제 큐 판독기 에이전트|  
 |**9**|Analysis Services 명령|  
 |**10**|Analysis Services 쿼리|  
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 실행|  
@@ -65,13 +65,13 @@ sp_revoke_proxy_from_subsystem
   
 `[ @subsystem_name = ] 'subsystem_name'`액세스 권한을 취소할 하위 시스템의 이름입니다. *Subsystem_name* 는 **sysname**이며 기본값은 NULL입니다. *Subsystem_id* 또는 *subsystem_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다. 다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX 스크립트|  
 |CmdExec|운영 체제(CmdExec)|  
 |스냅샷|Replication Snapshot Agent|  
 |LogReader|복제 로그 판독기 에이전트|  
-|배포|복제 배포 에이전트|  
+|분포|복제 배포 에이전트|  
 |병합|Replication Merge Agent|  
 |QueueReader|복제 큐 판독기 에이전트|  
 |ANALYSISQUERY|Analysis Services 명령|  
@@ -83,12 +83,12 @@ sp_revoke_proxy_from_subsystem
  하위 시스템 액세스 권한을 해제해도 프록시에 지정된 보안 주체의 권한은 변경되지 않습니다.  
   
 > [!NOTE]  
->  프록시를 참조 하는 작업 단계를 확인 하려면 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **SQL Server 에이전트** 에서 **프록시** 노드를 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 클릭 합니다. **프록시 계정 속성** 대화 상자에서 **참조** 페이지를 선택 하 여이 프록시를 참조 하는 모든 작업 단계를 확인 합니다.  
+>  프록시를 참조 하는 작업 단계를 확인 하려면 Microsoft의 **SQL Server 에이전트** 에서 **프록시** 노드를 마우스 오른쪽 단추로 클릭 한 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 다음 **속성**을 클릭 합니다. **프록시 계정 속성** 대화 상자에서 **참조** 페이지를 선택 하 여이 프록시를 참조 하는 모든 작업 단계를 확인 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_revoke_proxy_from_subsystem**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssIS](../../includes/ssis-md.md)]에 대한 `Catalog application proxy` 프록시의 액세스 권한을 해제합니다.  
   
 ```  

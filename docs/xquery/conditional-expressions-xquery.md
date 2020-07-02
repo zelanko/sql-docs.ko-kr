@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 76570b6b7cbb1ecb55a881d58683e158736e85d0
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: a73d468a5304182f90f0bfdd9c5c1799b1876415
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689708"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85638028"
 ---
 # <a name="conditional-expressions-xquery"></a>조건 식(XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   XQuery는 다음과 **같은 조건문을** 지원 합니다.  
   
@@ -40,7 +40,7 @@ else
   <expression3>  
 ```  
   
- `expression1`의 유효한 부울 값에 따라 `expression2`나 `expression3`이 계산됩니다. 예를 들어:  
+ `expression1`의 유효한 부울 값에 따라 `expression2`나 `expression3`이 계산됩니다. 예를 들면 다음과 같습니다.  
   
 -   테스트 식 `expression1`이 빈 시퀀스가 될 경우 결과는 False입니다.  
   

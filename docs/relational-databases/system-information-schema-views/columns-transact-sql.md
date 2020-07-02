@@ -19,15 +19,15 @@ ms.assetid: bbf7ac4a-7444-4351-a590-a9f71e0bc495
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4215b5f677061926b13ec5d7b5411454fb818bbb
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: fe57fda774997f8439c44a75fa917ecb3db3495e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670147"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647640"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   현재 데이터베이스에서 현재 사용자가 액세스할 수 있는 열마다 한 행을 반환합니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "83670147"
 |**DOMAIN_NAME**|**nvarchar (** 128 **)**|열이 사용자 정의 데이터 형식인 경우 이 열은 사용자 정의 데이터 형식의 이름이 됩니다. 다른 데이터 형식에 대해서는 NULL이 반환됩니다.|  
   
 ## <a name="remarks"></a>설명  
- INFORMATION_SCHEMA의 **ORDINAL_POSITION** 열 **입니다. 열** 뷰는 COLUMNS_UPDATED 함수에서 반환 된 열의 비트 패턴과 호환 되지 않습니다. COLUMNS_UPDATED와 호환 되는 비트 패턴을 얻으려면 INFORMATION_SCHEMA를 쿼리할 때 COLUMNPROPERTY 시스템 함수의 **ColumnID** 속성을 참조 해야 합니다 **. 열** 뷰입니다. 예를 들어:  
+ INFORMATION_SCHEMA의 **ORDINAL_POSITION** 열 **입니다. 열** 뷰는 COLUMNS_UPDATED 함수에서 반환 된 열의 비트 패턴과 호환 되지 않습니다. COLUMNS_UPDATED와 호환 되는 비트 패턴을 얻으려면 INFORMATION_SCHEMA를 쿼리할 때 COLUMNPROPERTY 시스템 함수의 **ColumnID** 속성을 참조 해야 합니다 **. 열** 뷰입니다. 예를 들면 다음과 같습니다.  
   
 ```  
 USE AdventureWorks2012;  
