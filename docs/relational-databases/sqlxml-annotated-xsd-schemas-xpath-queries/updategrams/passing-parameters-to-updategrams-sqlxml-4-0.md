@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 462b9b2b8cd5239e6185b59dfabc028c4d7d8d6a
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: ce7be0a6f01ac92f13f35e4410dc59601fdbdc01
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529811"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790560"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Updategram에 매개 변수 전달(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Updategram은 템플릿이므로 Updategram에 매개 변수를 전달할 수 있습니다. 템플릿에 매개 변수를 전달 하는 방법에 대 한 자세한 내용은 [Updategram 보안 고려 사항 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)를 참조 하세요.  
   
  Updategram을 사용하면 NULL을 매개 변수 값으로 전달할 수 있습니다. NULL 매개 변수 값을 전달 하려면 **nullvalue** 특성을 지정 합니다. 그러면 **nullvalue** 특성에 할당 된 값이 매개 변수 값으로 제공 됩니다. Updategram은 이 값을 NULL로 처리합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "84529811"
 > [!NOTE]  
 >  **\<sql:header>** 및에서는 **\<updg:header>** **nullvalue** 를 정규화 되지 않은 값으로 지정 해야 합니다. 반면에서는 **\<updg:sync>** **nullvalue** 를 정규화 된 값으로 지정 합니다 (예 **: updg: nullvalue**).  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예제를 사용 하 여 작업 예제를 만들려면 [SQLXML 예를 실행 하기 위한 요구 사항](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)에 지정 된 요구 사항을 충족 해야 합니다.  
   
  Updategram 예를 사용하기 전에 다음 사항을 확인하십시오.  

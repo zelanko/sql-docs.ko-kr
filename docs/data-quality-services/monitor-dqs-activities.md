@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: d9926eb251d109eb8ed9529a4ae739e8a1915b07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ba2bfe0a9979d94df43b923b7eff2ed68750e19a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245462"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85809958"
 ---
 # <a name="monitor-dqs-activities"></a>DQS 작업 모니터링
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 기술 자료 검색, 도메인 관리, 일치 정책, 데이터 정리, 데이터 일치 및 SSIS 정리 작업을 중앙에서 모니터링하는 방법에 대해 설명합니다.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "75245462"
 2.  **작업 목록 새로 고침** 아이콘을 클릭하여 필터링을 적용하고 필터링한 DQS 작업만 봅니다.  
   
 ##  <a name="view-dqs-activity-details"></a><a name="ActivityDetails"></a> DQS 작업 세부 정보 보기  
- 작업 모니터링 화면에서 작업 단계 및 프로파일러 정보와 같이 DQS 작업에 대한 세부 정보를 볼 수 있습니다. 이렇게 하려면  
+ 작업 모니터링 화면에서 작업 단계 및 프로파일러 정보와 같이 DQS 작업에 대한 세부 정보를 볼 수 있습니다. 이를 수행하려면:  
   
 1.  위쪽 창의 작업 표에서 DQS 작업을 선택합니다.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "75245462"
     -   **프로파일러**: 현재 및 이제까지의 작업에 대한 프로파일링 정보가 표시됩니다. 현재 작업의 경우 부분적이지만 일관된 정보가 포함됩니다. 해당 작업 세부 정보를 Excel 파일로 내보내면 작업의 프로파일링 정보를 excel 파일로 내보내게 됩니다. 이 정보는 내보낸 Excel 파일의 **프로파일러-원본** 및 **프로파일러-필드** 시트에서 사용할 수 있습니다.  
   
 ##  <a name="export-dqs-activity-details"></a><a name="Export"></a> DQS 작업 세부 정보 내보내기  
- 모니터링 화면의 작업 속성, 작업 프로세스 및 작업의 프로파일링 정보를 Excel 파일로 내보낼 수 있습니다. 이렇게 하려면  
+ 모니터링 화면의 작업 속성, 작업 프로세스 및 작업의 프로파일링 정보를 Excel 파일로 내보낼 수 있습니다. 이를 수행하려면:  
   
 1.  위쪽 창의 작업 표에서 작업을 선택합니다.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "75245462"
   
     |시트 이름|설명|  
     |----------------|-----------------|  
-    |작업|작업 표에서와 같이 작업에 대한 정보(열)가 포함됩니다.|  
+    |활동|작업 표에서와 같이 작업에 대한 정보(열)가 포함됩니다.|  
     |프로세스|**작업 단계** 탭에서와 같이 작업의 프로세스에 대한 정보(열)가 포함됩니다.|  
     |프로파일러 - 원본|**정리** 하위 유형의 경우 작업에 대해 레코드, 올바른 레코드, 수정된 레코드 및 잘못된 레코드와 같은 정보가 포함됩니다.<br /><br /> **기술 자료 검색**, **도메인 관리**, **일치 정책**및 **일치** 하위 유형의 경우 작업에 대해 레코드, 전체 값, 새 값, 고유 값 및 새로운 고유 값과 같은 정보가 포함됩니다.|  
     |프로파일러 - 필드|**정리** 및 **SSIS 정리** 하위 유형의 경우 작업에 대해 필드, 도메인, 수정된 값, 제안된 값, 완결성 및 정확도와 같은 정보가 포함됩니다.<br /><br /> **기술 자료 검색**, **도메인 관리**, **일치 정책**및 **일치** 하위 유형의 경우 작업에 대해 필드, 도메인, 새, 고유, 올바른 도메인 및 완결성과 같은 정보가 포함됩니다.|  

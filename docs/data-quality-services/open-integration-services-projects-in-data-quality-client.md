@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: a070f5a279cdddfb78d3188c210faf43661d5516
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc20a282743d83873b58914e4fa391b8402ce473
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75557848"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85809795"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>데이터 품질 클라이언트에서 Integration Services 프로젝트 열기
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Integration Services의 DQS 정리 구성 요소를 사용 하면 정리 프로젝트를 일괄 처리 모드로 실행할 수 있습니다. 그러나 경우에 따라 DQS의 데이터 품질 프로젝트에서 정리 작업의 **결과 관리 및 보기** 탭에 있는 정리 결과를 검토하는 방법과 유사한 방식으로 Integration Services 패키지의 정리 결과를 검토할 수도 있습니다. DQS는 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 의 Integration Services 프로젝트를 다른 데이터 품질 프로젝트와 마찬가지로 **프로젝트 열기** 화면에서 열 수 있도록 지원하고 Integration Services 프로젝트의 정리 결과에 대한 대화식 정리 환경을 제공합니다.  
   
@@ -47,11 +47,11 @@ ms.locfileid: "75557848"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 응용 프로그램을 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
   
-2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 **데이터 품질 프로젝트 열기**를 클릭 합니다. **프로젝트 열기** 화면이 나타납니다.  
+2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]홈 화면에서 **데이터 품질 프로젝트 열기**를 클릭 합니다. **프로젝트 열기** 화면이 나타납니다.  
   
 3.  **프로젝트 열기** 화면에서 다음 방법 중 하나로 Integration Services 프로젝트를 식별할 수 있습니다.  
   
-    1.  **프로젝트 이름**: Integration Services 프로젝트는 다음과 같은 명명 용어를 사용 하 여 나열 됩니다. "Package DQS Cleansing_*\<DATE>\<TIME>*_ {GUID}." [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 동일한 패키지를 올바르게 실행할 때마다 **프로젝트 열기** 화면에 새 프로젝트가 나열됩니다.  
+    1.  **프로젝트 이름**: Integration Services 프로젝트는 다음과 같은 명명 용어를 사용 하 여 나열 됩니다. "package.productname Cleansing_ *\<DATE>\<TIME>* _ {GUID}" [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 동일한 패키지를 올바르게 실행할 때마다 **프로젝트 열기** 화면에 새 프로젝트가 나열됩니다.  
   
     2.  **프로젝트 유형**: Integration Services 프로젝트는 **프로젝트 열기** 화면에서 **SSIS** 라는 프로젝트 형식을 가집니다.  
   

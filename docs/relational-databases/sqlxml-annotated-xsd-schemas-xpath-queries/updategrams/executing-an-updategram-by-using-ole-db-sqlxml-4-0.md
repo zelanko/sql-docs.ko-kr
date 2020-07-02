@@ -17,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9267699ff8edbaf0d615dbdb45a915e24e842b11
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: f96578432e6806651e335cfbdb3570e2e65f8cb6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215261"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790719"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>OLE DB를 사용하여 Updategram 실행(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   이 항목에서는 updategram을 실행 하기 위한 usingOLE DB의 작업 예제를 제공 합니다.  
   
 ## <a name="using-icommandstream-to-set-an-xml-command"></a>ICommandStream을 사용하여 XML 명령 설정  

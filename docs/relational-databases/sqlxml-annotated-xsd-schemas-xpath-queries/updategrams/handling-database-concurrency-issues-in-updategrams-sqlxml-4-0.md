@@ -22,15 +22,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbb10145e8d660fa02ebefefc09da4aa04eb1778
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 11e4a7a875dd2c9b9450619f389b2f082136c536
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215275"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790595"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Updategram의 데이터베이스 동시성 문제 처리(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   다른 데이터베이스 업데이트 메커니즘과 마찬가지로 updategram에서도 다중 사용자 환경에서 데이터의 동시 업데이트를 처리해야 합니다. Updategram은 선택한 필드 데이터의 스냅샷을 비교하는 방법으로 업데이트 대상 데이터를 데이터베이스에서 마지막으로 읽은 이후 다른 사용자 애플리케이션에서 해당 데이터를 변경했는지 여부를 확인하는 낙관적 동시성 제어를 사용합니다. Updategrams은 updategrams 블록에 이러한 스냅숏 값을 포함 **\<before>** 합니다. 데이터베이스를 업데이트 하기 전에 updategram은 블록에 지정 된 값을 **\<before>** 데이터베이스에 현재 있는 값과 비교 하 여 업데이트가 유효한 지 확인 합니다.  
   
  낙관적 동시성 제어는 updategram에 낮음(없음), 중간, 높음이라는 세 가지 보호 수준을 제공합니다. Updategram을 적절하게 지정하여 필요한 보호 수준을 결정할 수 있습니다.  

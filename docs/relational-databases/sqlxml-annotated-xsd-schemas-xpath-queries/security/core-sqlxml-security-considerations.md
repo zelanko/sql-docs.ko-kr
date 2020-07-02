@@ -14,15 +14,15 @@ ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eafd432d96ad17a3ec0187c6c0e58103a7c9c6b1
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 40f3ef6735bb2de27fd4fda07c3f508717f52515
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84883580"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790679"
 ---
 # <a name="core-sqlxml-security-considerations"></a>핵심 SQLXML 보안 고려 사항
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   다음은 데이터 액세스에 SQLXML을 사용하는 경우에 대한 보안 지침입니다.  
   
 -   SQLXMLOLEDB 공급자는 각 특정 인스턴스에 대해 사용 하거나 사용 하지 않도록 설정할 SQLXML 기능을 나타내는 플래그를 설정 하는 데 사용할 수 있는 **streamflags** 속성을 노출 합니다. 이 속성을 사용하여 SQLXML 사용을 사용자 지정하고 원하는 구성 요소만 사용되도록 설정할 수 있습니다. 자세한 내용은 [SQLXMLOLEDB Provider &#40;SQLXML 4.0&#41;](https://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110)를 참조 하세요.  

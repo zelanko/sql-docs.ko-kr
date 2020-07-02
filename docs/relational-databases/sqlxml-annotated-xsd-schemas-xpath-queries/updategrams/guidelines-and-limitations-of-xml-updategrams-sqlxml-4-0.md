@@ -14,15 +14,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f94a0dc61b5b8278193ea84beea750383bf3bbc6
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: fb774fd8dbb05b52e4f57fcf78d4ecd4c923ccb8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84883591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790646"
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>XML updategram에 대한 지침 및 제한 사항(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   XML updategram 사용 시 다음 사항에 유의하십시오.  
   
 -   Updategram를 사용 하 여 단일 쌍의 and 블록만 포함 하는 삽입 작업을 수행 하는 경우에는 **\<before>** **\<after>** 블록을 **\<before>** 생략할 수 있습니다. 반대로 삭제 작업의 경우에는 **\<after>** 블록을 생략할 수 있습니다.  

@@ -35,15 +35,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 305a167d233ee5a11348b0cc8a050dc2f61548ae
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 88e1f334629482182fb182dde60f715c0d122d25
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84883215"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790603"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 삽입(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Updategram는 레코드 인스턴스가 블록에 나타나지만 **\<after>** 해당 블록에는 없는 경우 삽입 작업을 나타냅니다 **\<before>** . 이 경우 updategram은 블록의 레코드를 **\<after>** 데이터베이스에 삽입 합니다.  
   
  삽입 작업에 대한 Updategram 형식은 다음과 같습니다.  

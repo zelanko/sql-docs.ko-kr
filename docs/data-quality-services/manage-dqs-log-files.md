@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 6edcf577b7783662a02efc3531ac02c2535ef078
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3e3de142823ebe0749e350c93b4891e20838ad5d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245423"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808842"
 ---
 # <a name="manage-dqs-log-files"></a>DQS 로그 파일 관리
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 로그 파일은 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]및 [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]관련 문제를 진단하고 해결하는 데 도움이 됩니다. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]및 [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)]에 대해 로그 파일이 개별적으로 생성됩니다.  
   

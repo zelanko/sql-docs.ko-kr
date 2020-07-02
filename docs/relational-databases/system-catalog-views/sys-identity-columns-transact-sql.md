@@ -20,15 +20,15 @@ ms.assetid: 97ee01e6-9c9e-4fd9-884b-68b4084669d5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49684671c25ea83fa7554bec7f80d0b16c30d4eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbdb7e8b57469dc025dbc9729758c72199dfb18d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122717"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790535"
 ---
 # <a name="sysidentity_columns-transact-sql"></a>sys.identity_columns(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   각 ID 열당 한 개의 행을 포함합니다.  
   
@@ -36,11 +36,11 @@ ms.locfileid: "68122717"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**\<sys. 열에서 상속 된 열>**||**Identity_columns** 뷰는 **sys. columns** 뷰의 모든 열을 반환 합니다. 또한 아래에 설명된 추가 열도 반환합니다. **Identity_columns** 뷰가 **sys.debug**에서 상속 하는 열에 대 한 설명은 [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)을 참조 하십시오.|  
+|**\<columns inherited from sys.columns>**||**Identity_columns** 뷰는 **sys. columns** 뷰의 모든 열을 반환 합니다. 또한 아래에 설명된 추가 열도 반환합니다. **Identity_columns** 뷰가 **sys.debug**에서 상속 하는 열에 대 한 설명은 [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)을 참조 하십시오.|  
 |**seed_value**|**sql_variant**|이 ID 열에 대한 초기값입니다. 초기값의 데이터 형식은 열의 데이터 형식과 같습니다.|  
 |**increment_value**|**sql_variant**|이 ID 열에 대한 증가값입니다. 초기값의 데이터 형식은 열의 데이터 형식과 같습니다.|  
 |**last_value**|**sql_variant**|이 ID 열에 대해 생성된 마지막 값입니다. 초기값의 데이터 형식은 열의 데이터 형식과 같습니다.|  
-|**is_not_for_replication**|**bit**|ID 열이 NOT FOR REPLICATION으로 선언되었습니다.|  
+|**is_not_for_replication**|**bit**|ID 열이 NOT FOR REPLICATION으로 선언되었습니다. **참고:** 이 열은 Azure Synapse Analytics에는 적용 되지 않습니다.|  
   
 > [!NOTE]  
 >  여러 테이블에서 사용할 수 있거나 테이블을 참조하지 않고 애플리케이션에서 호출할 수 있는 자동으로 증가하는 번호를 만들려면 [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)를 참조하세요.  
