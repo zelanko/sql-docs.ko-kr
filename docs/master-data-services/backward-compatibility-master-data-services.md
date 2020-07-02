@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 3f2ae84c-6666-460b-befe-bd72405c0778
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7c6236da4a424a3f328671e7a2a3556b47321748
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36ce24e70cebaf5774565d99693b88fb77d8e021
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728706"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813708"
 ---
 # <a name="backward-compatibility-master-data-services"></a>이전 버전과의 호환성(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   이 섹션에서는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]버전 간의 변경 사항에 대해 설명하며 더 이상 사용되지 않거나 후속 릴리스에서 제거될 예정인 기능을 포함합니다. 또한 Integration Services 기능을 비롯한 기존 애플리케이션의 동작을 중단시키거나 변경하는 것으로 알려진 제품 변경 사항에 대해서도 설명합니다.  
   

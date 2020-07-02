@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: bd627a2d-dc64-47e9-9a71-2d0ad04b4962
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a8072ca35b1676a5bace4fe60f70e7cfdbc0778b
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 0dac91e4f43d244e133511e792f29770949da905
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796320"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811947"
 ---
 # <a name="entity-sync-relationship-master-data-services"></a>엔터티 동기화 관계(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   엔터티 동기화는 엔터티 버전 간의 반복 가능한 단방향 동기화입니다. 엔터티 동기화를 통해 여러 모델 간에 엔터티 데이터를 공유할 수 있습니다. 정보의 단일 원본을 모델 하나에 보관하고 다른 모델에서 이 마스터 데이터를 다시 사용할 수 있습니다. 예를 들어 미국의 주 데이터를 모델 엔터티 하나에 저장하여 다른 모델에서 해당 데이터를 다시 사용할 수 있습니다.  
   

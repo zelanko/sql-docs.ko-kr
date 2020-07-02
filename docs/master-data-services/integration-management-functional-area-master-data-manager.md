@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3622c5bf25b049fbf7bcd2ad19d43bd31230459c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b859fe26c6daf5fd8b2b3135f833867a9c6d7020
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729104"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812941"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>통합 관리 기능 영역(마스터 데이터 관리자)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   통합 관리 기능 영역에서 관리자는 준비 테이블의 데이터를 가져와서 구독 시스템에 사용할 구독 뷰를 만들 수 있습니다. 관리자에 대한 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
   

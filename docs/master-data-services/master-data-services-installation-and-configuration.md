@@ -2,7 +2,7 @@
 title: 설치 및 구성
 description: Windows Server 2012 R2 컴퓨터에 MDS(Master Data Services)를 설치 하 고, MDS 데이터베이스 및 웹 사이트를 구성 하 고, 샘플 모델 및 데이터를 배포 하는 방법에 대해 알아봅니다.
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
@@ -11,16 +11,16 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f9a0a43bb913437e4818c46fc81c0794019639c7
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 777d0b497bae5e52c49fb95e1e7ff3e7387ea676
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796284"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834774"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 설치 및 구성
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   이 문서에서는 Windows Server 2012 R2 컴퓨터에 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 를 설치하고, MDS 데이터베이스 및 웹 사이트를 설정하고, 샘플 모델 및 데이터를 배포하는 방법을 설명합니다. MDS([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] )를 사용하면 조직에서 신뢰할 수 있는 버전의 데이터를 관리할 수 있습니다.   
   
@@ -130,7 +130,7 @@ ms.locfileid: "84796284"
   
 3.  **데이터베이스 서버** 페이지에서 SQL Server 인스턴스를 지정 합니다. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]Managed Instance SQL Server에 대 한 지원을 추가 합니다. **SQL Server 인스턴스** 값을 Azure SQL Database 관리 되는 인스턴스의 호스트로 설정 합니다. 예들 들어 `xxxxxx.xxxxxx.database.windows.net`입니다.
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]Managed Instance SQL Server에 대 한 지원을 추가 합니다. **SQL Server 인스턴스** 값을 Azure SQL Database 관리 되는 인스턴스의 호스트로 설정 합니다. 예: `xxxxxx.xxxxxx.database.windows.net`
 
 4. **인증 유형을** 선택한 다음 **연결 테스트** 를 클릭 하 여 선택한 인증 유형에 대 한 자격 증명을 사용 하 여 데이터베이스에 연결할 수 있는지 확인 합니다. **다음**을 클릭합니다.
 
@@ -209,7 +209,7 @@ ms.locfileid: "84796284"
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
   
-     For more information about the settings on the Web Configuration page, see [Web Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
+웹 구성 페이지의 설정에 대한 자세한 내용은 [웹 구성 페이지&#40;Master Data Services 구성 관리자&#41;](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)를 참조하세요.  
   
  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 를 사용하여 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스와 연결된 웹 애플리케이션 및 서비스에 대한 다른 설정을 지정할 수도 있습니다. 예를 들어 데이터를 로드하는 빈도나 유효성 검사 메일을 전송하는 빈도를 지정할 수 있습니다. 자세한 내용은 [시스템 설정&#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)을 참조하세요.  
   
@@ -217,9 +217,7 @@ ms.locfileid: "84796284"
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에는 다음 세 가지 샘플 모델 패키지가 포함되어 있습니다.   이러한 샘플 모델은 데이터를 포함합니다. **샘플 모델 패키지의 기본 위치는 %programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages입니다.**
   
 -   chartofaccounts_en.pkg  
-  
 -   customer_en.pkg  
-  
 -   product_en.pkg  
   
  MDSModelDeploy 도구를 사용하여 패키지를 배포합니다. MDSModelDeploy 도구의 기본 위치는 *드라이브*\Program Files\Microsoft SQL Server\ 140\Master Data Services\Configuration입니다.  
@@ -248,28 +246,26 @@ ms.locfileid: "84796284"
     >  `MDSModelDeploy listservices`  
     >   
     >  반환되는 값 목록의 첫 번째 서비스 값은 모델을 배포할 때 지정합니다.  
-    >
+
     > [!NOTE]
     > 샘플 모델의 메타데이터 정보에 대해 자세히 알아보려면 "c:\Program Files\Microsoft SQL Server\140\Master Data Services\Configuration"에서 추가 정보 파일을 참조하십시오.
-    >
    
      **chartofaccounts_en.pkg 샘플 모델을 배포하려면**  
   
-    ```  
+    ```console
     MDSModelDeploy deploynew -package chartofaccounts_en.pkg -model ChartofAccounts -service MDS1  
     ```  
   
      **customer_en.pkg 샘플 모델을 배포하려면**  
   
-    ```  
+    ```console
     MDSModelDeploy deploynew -package customer_en.pkg -model Customer -service MDS1  
     ```  
   
      **product_en.pkg 샘플 모델을 배포하려면**  
   
-    ```  
+    ```console
     MDSModelDeploy deploynew -package product_en.pkg -model Product -service MDS1  
-  
     ```  
   
      모델이 성공적으로 배포되면 **MDSModelDeploy 작업이 완료되었습니다.** 라는 메시지가 표시됩니다.  

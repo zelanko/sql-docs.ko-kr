@@ -12,16 +12,16 @@ keywords:
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 86b9a2ed9738790cf9747fbad104074393fd33d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9444eff3f471074c08a62c5aafa36a919f81c5ca
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729279"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813993"
 ---
 # <a name="entity-dependencies-explorer"></a>엔터티 종속성 탐색기
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   
 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016은 파생 계층을 먼저 정의할 필요 없이 해당 도메인 기반 특성(DBA) 값에 지정된 대로 모델 내의 엔터티 멤버 간의 관계를 시각화하는 대체 방법을 제공하는 새 탐색기 페이지, 엔터티 종속성을 추가합니다.   

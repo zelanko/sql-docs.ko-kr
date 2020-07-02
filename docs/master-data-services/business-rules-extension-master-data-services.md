@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4a8a5215438a7cbed7796c5b9afaae5f8d59db9a
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: c4d6ad76f68acb72072f04728e55793bad3aa9cd
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796534"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813677"
 ---
 # <a name="business-rules-extension-master-data-services"></a>비즈니스 규칙 확장(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 사용자 정의 SQL 스크립트를 미리 정의된 조건과 동작의 확장으로 적용할 수 있습니다.  
   
@@ -71,7 +71,7 @@ CREATE PROCEDURE [usr].[YourAction]
 |stg|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
 |usr|FULL|  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>전제 조건  
  이 절차를 수행하려면  
   
 -   시스템 관리 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -104,7 +104,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     4.  각 매개 변수에 값을 할당합니다.  
   
-    5.  **저장**을 클릭합니다.  
+    5.  **Save**을 클릭합니다.  
   
 8.  다음 단계를 수행하여 사용자 지정 스크립트를 동작으로 지정합니다.  
   
@@ -112,7 +112,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     2.  **연산자** 드롭다운 목록의 **사용자 정의 스크립트** 에서 사용자 정의 함수를 선택합니다.  
   
-    3.  **저장**을 클릭합니다.  
+    3.  **Save**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [비즈니스 규칙 &#40;MDS(Master Data Services)&#41;](../master-data-services/business-rules-master-data-services.md)   

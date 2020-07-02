@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 22a92035ea26a4341d4f912c3e6b5cdfaef75efa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6deb778d5b15ed76256fa0d22366f0be9eb25b02
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251703"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812536"
 ---
 # <a name="data-quality-projects-dqs"></a>데이터 품질 프로젝트(DQS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 데이터 품질 프로젝트는 기술 자료를 사용하여 *데이터 정리* 및 *데이터 일치* 작업을 수행한 다음 결과 데이터를 SQL Server 데이터베이스 또는 .csv 파일로 내보내 원본 데이터의 품질을 향상시킬 수 있는 수단입니다. 데이터 품질 프로젝트를 정리 프로젝트 또는 일치 프로젝트로 만들어 각 작업을 수행할 수 있습니다. 데이터 정리 및 일치에 대한 정보는 같은 기술 자료에 기본 제공될 수 있으므로 같은 기술 자료를 사용하여 정리 및 일치 프로젝트를 실행할 수 있습니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75251703"
  데이터 품질 프로젝트의 정리 작업에 대한 자세한 내용은 [Data Cleansing](../data-quality-services/data-cleansing.md)를 참조하세요.  
   
 ##  <a name="data-quality-project-matching-activity"></a><a name="Matching"></a> 데이터 품질 프로젝트: 일치 작업  
- 일치 데이터 품질 프로젝트를 사용하면 정확한 수치 및 근사치 일치를 확인하고 이를 통해 중복 데이터를 제거하는 방식으로 기술 자료의 일치 정책에 따라 일치 작업을 수행하여 데이터 중복을 방지할 수 있습니다. 따라서 일치를 실행하기 전에 데이터를 정리하는 것이 좋습니다. 이렇게 하려면  
+ 일치 데이터 품질 프로젝트를 사용하면 정확한 수치 및 근사치 일치를 확인하고 이를 통해 중복 데이터를 제거하는 방식으로 기술 자료의 일치 정책에 따라 일치 작업을 수행하여 데이터 중복을 방지할 수 있습니다. 따라서 일치를 실행하기 전에 데이터를 정리하는 것이 좋습니다. 이를 수행하려면:  
   
 1.  데이터 품질 프로젝트를 만들고 **정리** 작업을 선택한 다음 원본 데이터에 대해 데이터 정리 작업을 완료하고 SQL Server 데이터베이스의 테이블로 데이터를 내보냅니다.  
   

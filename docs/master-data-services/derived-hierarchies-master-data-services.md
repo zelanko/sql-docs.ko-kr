@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dd61751b4ade5a97caa025f44786d952e98f5dd0
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: a548312fd258040409a9cf74fc5cdc9a70536af8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796354"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813021"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>파생 계층(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 파생 계층은 모델의 엔터티 간에 이미 있는 도메인 기반 특성 관계에서 파생됩니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "84796354"
   
  이 유형의 계층에서는 유효하지 않은 수준으로 멤버를 이동할 수 없습니다. 예들 들어 하나의 Subcategory, Road Bikes에서 다른 Subcategory, Mountain Bikes로 Road-650 bike를 이동할 수 있지만 1 {Bikes}와 같은 Category 바로 아래로 Road-650을 이동할 수는 없습니다. 계층 트리에서 멤버를 이동할 때마다 이를 반영하여 해당 멤버의 도메인 기반 특성 값이 변경됩니다.  
   
-## <a name="notes"></a>메모  
+## <a name="notes"></a>참고  
  파생 계층 트리의 모든 멤버는 ID를 기준으로 정렬 됩니다. 정렬 순서는 변경할 수 없습니다.  
   
  멤버의 도메인 기반 특성이 비어 있거나 특성이 파생 계층에 사용되는 경우 해당 멤버는 계층에 표시되지 않습니다. 특성을 채워야 하는 비즈니스 규칙을 만드십시오. 자세한 내용은 [특성 값 요구&#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)를 참조하세요.  

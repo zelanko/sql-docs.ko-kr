@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9aab396644dde824668cda8717ed7d14b695bb6d
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 2c7e24a7d519d787882ec587fc33f624f1eb6472
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796255"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811488"
 ---
 # <a name="master-data-services-database"></a>Master Data Services 데이터베이스
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Master Data Services 데이터베이스에는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 시스템에 대한 모든 정보가 포함되어 있습니다. 이 데이터베이스는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 배포의 핵심입니다. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 기능은 다음과 같습니다.  
   

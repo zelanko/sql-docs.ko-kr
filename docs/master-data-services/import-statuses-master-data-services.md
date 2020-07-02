@@ -10,24 +10,24 @@ ms.topic: conceptual
 ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6fc49b96bbf9b1388c162b87c76ba31b1696991a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 40cc57e3d8ba66c36c52906f5d134325178a37e4
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728190"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812959"
 ---
 # <a name="import-statuses-master-data-services"></a>가져오기 상태(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   **준비 일괄 처리** 페이지의 **통합 관리** 기능 영역에서는 다음 상태가 표시될 수 있습니다.  
   
-|상태|Description|Status_ID|  
+|상태|설명|Status_ID|  
 |------------|-----------------|----------------|  
 |실행을 위해 대기|일괄 처리가 시작되지 않았습니다.|1|  
 |실행 중|일괄 처리가 진행 중입니다.|2|  
-|Completed|일괄 처리가 완료되었습니다.|3|  
+|완료됨|일괄 처리가 완료되었습니다.|3|  
 |지우기 위해 대기|일괄 처리가 완료되었으며 지워질 예정입니다.|4|  
 |선택 취소|일괄 처리가 지워졌습니다.|5|  
   

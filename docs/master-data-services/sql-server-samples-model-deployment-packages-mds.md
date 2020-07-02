@@ -13,18 +13,18 @@ keywords:
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 19b4cc9cc9282fff784059e6ac39bf74792f95a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 76ef4f409fd5a4072d27cdfa3e4180896534eaa0
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727882"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811382"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server 예제: 모델 배포 패키지(MDS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]을 설치할 때 데이터가 있는 샘플 모델 패키지가 포함됩니다. 이러한 패키지 파일의 기본 위치는 \<드라이브>\Program Files\Microsoft SQL Server\130\Master Data Services\Samples\Packages입니다.  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]을 설치할 때 데이터가 있는 샘플 모델 패키지가 포함됩니다. 이러한 패키지 파일의 기본 위치는 \<drive> FILES\MICROSOFT SQL Server\130\Master Data services\samples\packages입니다 .입니다.  
   
  샘플 모델 패키지를 배포하는 방법에 대한 지침은 [샘플 모델 및 데이터 배포](../master-data-services/master-data-services-installation-and-configuration.md#deploySample)를 참조하세요. [MDSModelDeploy 도구](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)를 사용하여 샘플 모델 패키지를 배포합니다.  
   

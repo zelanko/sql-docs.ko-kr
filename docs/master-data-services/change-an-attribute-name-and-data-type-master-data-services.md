@@ -13,20 +13,20 @@ ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: c5885c2aebb718f212ac22bee8773ceab2df2f6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb7d82f63f41baa88523f97e45a65635e1d49486
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729672"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813467"
 ---
 # <a name="change-an-attribute-name-and-data-type-master-data-services"></a>특성 이름 및 데이터 형식 변경(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 특성의 이름을 변경할 수 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>전제 조건  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "73729672"
   
 8.  **특성 유형** 목록에서 다른 유형을 선택합니다.  
   
-9. **저장**을 클릭합니다.  
+9. **Save**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [텍스트 특성 &#40;MDS(Master Data Services)를 만듭니다&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   

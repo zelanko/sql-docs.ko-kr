@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4645b9faca312eb5bee12eef1130893785c327d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6c70b57cb50ae8134fa04f2bab4073dced40091
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728560"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812028"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>알림을 보내도록 비즈니스 규칙 구성(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 특성 값 변경 내용을 사용자에게 알리려는 경우 알림을 보내도록 비즈니스 규칙을 구성할 수 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>전제 조건  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 와 **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. **사용자 및 그룹 권한** 기능 영역에 대한 권한이 없으면 알림을 보낼 사용자 및 그룹 목록을 볼 수 없습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "73728560"
   
 7.  드롭다운 목록에서 **알림 보내기** 확인란을 선택하고 메일 알림을 보낼 사용자나 그룹을 선택합니다.  
   
-8.  **저장**을 클릭합니다.  
+8.  **Save**을 클릭합니다.  
   
 9. **모두 게시**를 클릭합니다.  
   

@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b10dcb5c3f959612323e960c471a710e0b94b8dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c9f50c8c2518aaa863a14bad4a56b24693b362b7
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258863"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812258"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>기술 자료에 정보 추가
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에 정보를 추가할 수 있는 방법에 대해 설명합니다. 데이터 품질 작업을 수행하려면 먼저 데이터에 대한 정보가 있어야 합니다. 데이터 품질 기술 자료를 만들고 유지 관리하며 여기에 특정 유형의 데이터 원본과 관련된 정보를 추가하는 방식으로 이러한 정보를 얻을 수 있습니다. 기술 자료는 데이터 관련 지식의 리포지토리로서 데이터를 이해하고 데이터의 무결성을 유지하는 데 사용됩니다.  
   

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 065a8869eff0e88cee5bf0bb110a948f709743d7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 06e7b913533451aec82098bcd22b23a64bb3dc61
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251665"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814110"
 ---
 # <a name="dqs-administration"></a>dqs 관리
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )를 사용하면 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]에서 수행되는 여러 DQS 활동을 관리하고, DQS 활동과 관련된 서버 수준의 속성을 구성하고, 참조 데이터 서비스 설정을 구성하고, DQS 로그 설정을 구성할 수 있습니다. 이러한 작업은 **의** 관리 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]기능을 통해 수행됩니다. DQS의 보안 액세스(역할)에 따라 사용자에게는 이 영역의 특정 기능에 대한 액세스 권한이 부여되거나 거부됩니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "75251665"
 ### <a name="activity-monitoring"></a>작업 모니터링  
  **의** 활동 모니터링 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 에는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]에서 수행되는 각 활동에 대한 자세한 정보를 표시합니다. 이 화면은 데이터 관리자가 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 애플리케이션이 연결된 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 에서 수행되는 모든 작업에 대한 상위 수준의 모니터링을 수행하는 데 주로 사용됩니다. 이 화면에서는 시스템 수준 모니터링을 제공하지 않습니다. 또한 이 화면에서 DQS 관리자는 필요에 따라 실행 중인 활동을 종료하거나 활동 내에서 실행 중인 프로세스를 중지하여 활동 또는 활동 내의 프로세스를 제어할 수 있습니다. 데이터는 기술 자료 검색, 도메인 관리, 일치 정책, 정리, 일치, SSIS(SQL Server Integration Services) 기반 정리에 대해 표시됩니다.  
   
-### <a name="configuration"></a>구성  
+### <a name="configuration"></a>Configuration  
  **의** 구성 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 화면에서는 DQS 관리자가 다음 작업을 수행할 수 있습니다.  
   
 -   **참조 데이터**: 참조 데이터 서비스 공급자 구성: Azure Marketplace 또는 다이렉트 참조 데이터 서비스 공급자입니다. 참조 데이터 서비스 공급자를 설정한 후 기술 자료에서 도메인 관리 활동 중 참조 데이터와 함께 도메인/복합 도메인을 매핑하고 동일한 기술 자료를 데이터 품질 프로젝트의 정리 활동에 대해 사용할 수 있습니다. 또한 Azure Marketplace를 사용 하기 위해 인터넷에 연결 하기 위한 프록시 설정을 지정할 수 있습니다.  

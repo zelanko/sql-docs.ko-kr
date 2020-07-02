@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 817e15d2fe7e91f63628826f58d6a86dd4edbcb3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 78dcf9320312f93dd08495f21bf0f6cc1b71516b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727922"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811468"
 ---
 # <a name="reserved-words-master-data-services"></a>예약어(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 모델 개체 또는 멤버를 만들 때 일부 단어를 사용할 수 없습니다. 이러한 단어를 사용하면 오류가 발생할 수 있습니다.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "73727922"
   
 -   [모델](../master-data-services/reserved-words-master-data-services.md#models)  
   
--   [Entities](../master-data-services/reserved-words-master-data-services.md#entities)  
+-   [엔터티](../master-data-services/reserved-words-master-data-services.md#entities)  
   
 -   [명시적 계층](../master-data-services/reserved-words-master-data-services.md#exhierarchies)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73727922"
   
 -   **ID**  
   
--   **Code**  
+-   **코드**  
   
 -   **EnterUserName**  
   

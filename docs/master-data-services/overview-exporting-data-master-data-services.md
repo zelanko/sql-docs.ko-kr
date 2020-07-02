@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c0376e28c1d75585795b53373a10f4798347746a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b58dca3531ba535c48c6dc6134c660ca4fed7be
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728987"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812889"
 ---
 # <a name="overview-exporting-data-master-data-services"></a>개요: 데이터 내보내기(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   이 문서에서는 구독 뷰 형식 유형 및 모델 개체에 대한 변경 내용으로 인해 뷰를 편집해야 하는 경우를 확인하는 방법을 소개합니다.  
   
@@ -60,6 +60,6 @@ ms.locfileid: "73728987"
   
 -   [구독 뷰 형식&#40;Master Data Services&#41;](../master-data-services/subscription-view-formats-master-data-services.md)  
   
--   [보기](../relational-databases/views/views.md)  
+-   [뷰](../relational-databases/views/views.md)  
   
   

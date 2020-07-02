@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a43ffa259fd30d7aeaf4e2336780a2b92b2ef289
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 8618b0dfc4488f3862366ac873e8cd38e1086e51
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796403"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813397"
 ---
 # <a name="create-an-entity-master-data-services"></a>엔터티 만들기(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 멤버와 해당 특성을 포함할 엔터티를 만듭니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>전제 조건  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -61,27 +61,27 @@ ms.locfileid: "84796403"
   
      자세한 내용은 [엔터티 트랜잭션 로그 유형 변경&#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)을 참조하세요.  
   
-8.  (선택 사항) **코드 값 자동으로 만들기** 확인란을 선택합니다. 자세한 내용은 [MDS(Master Data Services)&#41;&#40;자동 코드 만들기 ](../master-data-services/automatic-code-creation-master-data-services.md)를 참조 하세요.  
+8.  선택 사항입니다. **코드 값 자동으로 만들기** 확인란을 선택합니다. 자세한 내용은 [MDS(Master Data Services)&#41;&#40;자동 코드 만들기 ](../master-data-services/automatic-code-creation-master-data-services.md)를 참조 하세요.  
   
-9. (선택 사항) **데이터 압축 사용** 확인란을 선택합니다. 행 압축 기능은 기본적으로 설정됩니다. 자세한 내용은 [Data Compression](../relational-databases/data-compression/data-compression.md)을 참조하세요.  
+9. 선택 사항입니다. **데이터 압축 사용** 확인란을 선택합니다. 행 압축 기능은 기본적으로 설정됩니다. 자세한 내용은 [Data Compression](../relational-databases/data-compression/data-compression.md)을 참조하세요.  
   
-10. **저장**을 클릭합니다.  
+10. **Save**을 클릭합니다.  
   
 ## <a name="grid-columns"></a>표 형태의 열  
  생성되는 각 엔터티에 대해 열이 13개 포함된 행이 표에 추가됩니다. 이러한 열은 다음과 같습니다.  
   
-|Name|Description|  
+|Name|설명|  
 |----------|-----------------|  
 |상태|엔터티 상태입니다. **저장** 을 클릭하면 엔터티가 업데이트되고 있음을 나타내는 다음 이미지가 표시됩니다.<br /><br /> ![상태 업데이트 아이콘](../master-data-services/media/mds-statusicon-updating.png "상태 업데이트 아이콘")<br /><br /> 엔터티를 만들거나 편집할 때 오류가 발생하면 다음 이미지가 표시됩니다.<br /><br /> ![오류 상태 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘")<br /><br /> 엔터티가 정상 상태이면 다음 이미지가 표시됩니다.<br /><br /> ![정상 상태 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘")|  
 |Name|엔터티 이름입니다.|  
-|Description|엔터티 설명입니다.|  
+|설명|엔터티 설명입니다.|  
 |준비 테이블|데이터 저장에 사용되는 테이블의 접두사 이름입니다.|  
 |트랜잭션 로그 유형|엔터티의 트랜잭션 로그 유형입니다.|  
 |코드 자동 생성|코드 자동 생성을 사용할지 여부를 지정합니다.|  
 |Data Compression|엔터티에 대해 데이터 압축을 사용할지 여부를 지정합니다.|  
 |동기화 대상|엔터티가 동기화 관계의 대상인지 여부를 지정합니다.|  
 |계층 사용|명시적 계층에 엔터티를 사용할지 여부를 지정합니다. 엔터티에 대해 명시적 계층을 하나 이상 만들면 이 열에는 예가 표시됩니다.|  
-|작성자|엔터티를 만든 사용자의 사용자 이름입니다.|  
+|만든 사람|엔터티를 만든 사용자의 사용자 이름입니다.|  
 |만든 날짜|엔터티를 만든 날짜와 시간입니다.|  
 |업데이트한 사람|엔터티를 마지막으로 업데이트한 사용자의 사용자 이름입니다.|  
 |Updated On|엔터티를 마지막으로 업데이트한 날짜 및 시간입니다.|  

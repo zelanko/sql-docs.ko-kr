@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8c17a3356949375ab6836db94a31910f5e54ca2a
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 2be9caff295a41dbb79c1062d2a3f132ea93141c
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796601"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812840"
 ---
 # <a name="add-a-user-master-data-services"></a>사용자 추가(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   웹 애플리케이션에 대한 사용 권한을 할당하는 프로세스를 시작하려면 **의** 사용자 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 목록에 사용자를 추가합니다. 목록의 사용자에게 하나 이상의 기능 영역과 모델 개체에 대한 사용 권한을 부여해야 해당 사용자가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에 액세스할 수 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>전제 조건  
  이 절차를 수행하려면  
   
 -   **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  

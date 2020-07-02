@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 65164c1732aefe6555aa19325a158793d07631a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7badbd43fd526ff66b599f04e6aeb36443cd3684
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728361"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811546"
 ---
 # <a name="delete-a-model-master-data-services"></a>모델 삭제(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델과 모든 관련 데이터를 제거하려면 모델을 삭제합니다.  
   
 > [!NOTE]  
 >  이 절차를 완료하면 모든 모델 버전의 모든 개체와 데이터가 영구적으로 삭제됩니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>전제 조건  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "73728361"
   
 6.  추가 확인 대화 상자에서 **확인**을 클릭합니다.  
   
- 표의 **상태** 열에는 모델에 대한 작업의 상태가 표시됩니다. **모델 저장** 단추를 클릭 하면 모델이 업데이트 중임을 나타내는 ![업데이트](../master-data-services/media/mds-model-status-updating.png "업데이트하는 중") 이미지가 표시 됩니다. 모델을 만들거나 편집할 때 오류가 발생 하면 ![오류](../master-data-services/media/mds-model-status-error.png "Error") 이미지가 표시 됩니다. 오류가 발생하지 않는 경우 모델은 정상 상태가 되며 ![확인](../master-data-services/media/mds-model-status-ok.png "확인") 이미지가 표시됩니다.  
+ 표의 **상태** 열에는 모델에 대한 작업의 상태가 표시됩니다. **모델 저장** 단추를 클릭 하면 모델이 업데이트 중임을 나타내는 ![업데이트](../master-data-services/media/mds-model-status-updating.png "업데이트") 이미지가 표시 됩니다. 모델을 만들거나 편집할 때 오류가 발생 하면 ![오류](../master-data-services/media/mds-model-status-error.png "오류") 이미지가 표시 됩니다. 오류가 발생하지 않는 경우 모델은 정상 상태가 되며 ![확인](../master-data-services/media/mds-model-status-ok.png "확인") 이미지가 표시됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [모델 &#40;MDS(Master Data Services)&#41;](../master-data-services/models-master-data-services.md)   

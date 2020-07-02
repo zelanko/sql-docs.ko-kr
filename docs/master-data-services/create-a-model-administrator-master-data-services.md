@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: eacd28629c8e4fdeb9de17147a315b172aa3bbd3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1a81be69eee7a0fa8ea61b4491a296552aca51ff
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78937688"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814050"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>모델 관리자 만들기(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 하나 이상의 모델에 있는 모든 개체에 대한 모든 권한을 사용자나 그룹에 부여하려면 모델 관리자를 만들면 됩니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "78937688"
   
 9. 그룹 또는 사용자를 관리자로 만들 각 모델에 대해 7단계와 8단계를 수행합니다.  
   
-10. **저장**을 클릭합니다.  
+10. **Save**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [관리자는 MDS(Master Data Services) &#40;&#41;](../master-data-services/administrators-master-data-services.md)   

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ab2b632307f966a0f8e37d290c3cc12d52cda064
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4849b2f16c691db08766ca451673d0960ee69222
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728725"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813715"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>비즈니스 규칙 조건(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 비즈니스 규칙 조건은 True일 때만 하나 이상의 동작이 수행되는 조건을 결정합니다.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "73728725"
   
 ## <a name="business-rule-conditions"></a>비즈니스 규칙 조건  
   
-|조건 이름|Description|  
+|조건 이름|설명|  
 |--------------------|-----------------|  
 |**같음**|선택한 특성이 특정 특성 또는 특정 특성 값과 **같거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
 |**같지 않음**|선택한 특성이 특정 특성 또는 특정 특성 값과 **같지 않거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
@@ -40,7 +40,7 @@ ms.locfileid: "73728725"
 |**제외할 시작 문자**|선택한 특성이 특정 특성 또는 특정 특성 값으로 **시작되지 않거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트 및 링크 값에 유효합니다.|  
 |**끝 문자**|선택한 특성이 특정 특성 또는 특정 특성 값으로 **끝나거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트 및 링크 값에 유효합니다.|  
 |**제외할 끝 문자**|선택한 특성이 특정 특성 또는 특정 특성 값으로 **끝나지 않거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트 및 링크 값에 유효합니다.|  
-|**에서는**|선택한 특성이 특정 특성 또는 특정 특성 값을 **포함하거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트 및 링크 값에 유효합니다.|  
+|**contains**|선택한 특성이 특정 특성 또는 특정 특성 값을 **포함하거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트 및 링크 값에 유효합니다.|  
 |**포함 하지 않음**|선택한 특성이 특정 특성 또는 특정 특성 값을 **포함하지 않거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트 및 링크 값에 유효합니다.|  
 |**패턴 포함**|선택한 특성이 특정 특성 또는 특정 특성 값의 **패턴을 포함하거나** , 비어 있습니다. 패턴은 .NET Framework 정규식을 사용하여 지정할 수 있습니다.<br /><br /> 정규식에 대한 자세한 내용은 MSDN Library의 [정규식 언어 요소](https://go.microsoft.com/fwlink/?LinkId=164401) 를 참조하십시오.<br /><br /> 이 조건은 텍스트 및 링크 값에 유효합니다.|  
 |**제외할 패턴**|선택한 특성이 특정 특성 또는 특정 특성 값의 **패턴을 포함하지 않거나** , 비어 있습니다. 패턴은 .NET Framework 정규식을 사용하여 지정할 수 있습니다.<br /><br /> 정규식에 대한 자세한 내용은 MSDN Library의 [정규식 언어 요소](https://go.microsoft.com/fwlink/?LinkId=164401) 를 참조하십시오.<br /><br /> 이 조건은 텍스트 및 링크 값에 유효합니다.|  

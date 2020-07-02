@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 6d8bdf65a4225bbb915c5596db641f4635775953
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07879417c216e6d66085539ed6c177891a4e8bfb
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255684"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811352"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>복합 도메인의 데이터 정리
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 복합 도메인 정리에 대한 정보를 제공합니다. 복합 도메인은 둘 이상의 단일 도메인으로 구성되며 여러 관련 용어로 구성된 데이터 필드에 매핑됩니다. 복합 도메인의 개별 도메인은 서로 공통된 정보 영역이 있어야 합니다. 복합 도메인에 대한 자세한 내용은 [Managing a Composite Domain](../data-quality-services/managing-a-composite-domain.md)를 참조하세요.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "75255684"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- 선언적 *Then* 도메인 간 규칙 **값이 다음 값과 같음**을 테스트하면 **복합 도메인 규칙 테스트** 대화 상자에 올바른 데이터를 표시하는 새 열 **다음으로 수정**이 포함됩니다. 정리 데이터 품질 프로젝트에서 이 선언적 도메인 간 규칙이 100% 신뢰도의 데이터를 변경하고, **이유** 열에 규칙 '*\<<Cross-Domain Rule Name>*’에 의해 수정됨 메시지가 표시됩니다. 도메인 간 규칙에 대한 자세한 내용은 [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md)를 참조하세요.  
+ 선언적 *Then* 도메인 간 규칙 **값이 다음 값과 같음**을 테스트하면 **복합 도메인 규칙 테스트** 대화 상자에 올바른 데이터를 표시하는 새 열 **다음으로 수정**이 포함됩니다. 정리 데이터 품질 프로젝트에서이 명확한 도메인 간 규칙은 데이터를 100% 신뢰도로 변경 하 고 **이유** 열에는 규칙 ' '에 의해 수정 된 다음 메시지가 표시 됩니다. *\<Cross-Domain Rule Name>* 도메인 간 규칙에 대한 자세한 내용은 [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md)를 참조하세요.  
   
 > [!NOTE]  
 >  선언적 도메인 간 규칙은 참조 데이터 서비스에 연결된 복합 도메인에 대해 작동하지 않습니다.  

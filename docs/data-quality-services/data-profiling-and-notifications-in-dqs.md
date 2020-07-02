@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 1e5c51996ba85b9645650f453a0e4ed18478ccf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ab254c9deaee5a9e31a89d2a44d281e83a2beead
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80607828"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812568"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>DQS의 데이터 프로파일링 및 알림
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 데이터 프로파일링은 기존 데이터 원본의 데이터를 분석하고 DQS 작업의 데이터에 대한 통계를 표시하는 프로세스입니다. 자동화된 데이터 품질 평가를 제공합니다. DQS 프로파일링은 DQS 기술 자료 관리 및 데이터 품질 프로젝트에 통합되어 있습니다. 동적 이며 조정 가능 합니다. 프로파일링에는 두 가지 주요 목표가 있습니다. 첫째는 데이터 품질 프로세스를 안내하고 의사 결정을 지원하는 것이고, 둘째는 프로세스의 효율성을 평가하는 것입니다. DQS 프로파일링 프로세스에는 다음과 같은 이점이 있습니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "80607828"
 ##  <a name="profiling-data-in-activity-monitoring"></a><a name="Monitoring"></a>작업 모니터링의 데이터 프로 파일링  
  기술 자료 검색, 일치 정책, 일치 및 정리 작업에 대 한 프로 파일링 정보는 Data Quality 클라이언트의 작업 페이지 뿐만 아니라 작업 모니터링 에서도 사용할 수 있습니다. 작업 모니터링은 현재 및 이전 작업에 대한 개요를 제공합니다. 작업의 속성 및 관련 계산 프로세스 외에도 각 작업에 대해 생성된 프로파일링 정보를 한 곳에서 볼 수 있습니다. 작업 테이블에서 특정 작업을 선택하여 아래 테이블에 프로파일링 결과를 표시할 수 있습니다. 또한 프로파일링 결과를 내보낼 수도 있습니다. 자세한 내용은 [DQS Administration](../data-quality-services/dqs-administration.md)을 참조하세요.  
   
-##  <a name="notifications"></a><a name="Notifications"></a>알림을  
+##  <a name="notifications"></a><a name="Notifications"></a> 알림  
  DQS에서는 프로파일링을 통해 중요한 통계와 메트릭을 수집하고 표시하는 것 외에도 표시된 프로파일링 통계에 따라 작업을 수행해야 할 시기를 알려 주는 알림을 생성합니다(설정된 경우). DQS에서는 알림을 사용 하 여 데이터 원본에 대 한 중요 한 사실을 강조 하 고 실행 된 목적과 현재 동작의 효율성을 표시 합니다. 알림은 팁과 권장 사항을 제공하여 특정 상태를 나타내고 기술 자료 검색, 데이터 정리 또는 데이터 일치 작업을 개선할 수 있는 방법을 권장합니다.  
   
  DQS 알림은 사용자가 관심을 가질만한 문제를 언급하거나 잠재적인 문제를 해결하는 데 사용됩니다. 알림에 대 한 작업 여부는 사용자의 용도에 따라 달라 집니다. 예를 들어 완결성과 정확도가 모두 100%인 상태에서 데이터 정리가 수정된 값이나 제안된 값을 생성하지 않은 경우 DQS에서 알림을 게시했다고 가정하겠습니다. 이 알림에서는 작업을 실행할 필요가 없다는 메시지가 표시될 것입니다. 그러나 작업을 실행하도록 선택할지 여부는 사용자가 결정할 일입니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "80607828"
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|태스크 설명|아티클|  
+|태스크 설명|기사|  
 |----------------------|-----------|  
 |DQS에서 알림을 설정 또는 해제하는 방법에 대해 설명합니다.|[DQS에서 프로파일링 알림 설정 또는 해제](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
   

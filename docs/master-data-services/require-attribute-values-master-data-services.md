@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0e4a49778b9c75c696d079549f586187b1204fd8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dea2c4f9392cbc70d73d1eb383e7e0e2d306a1d3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728937"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811893"
 ---
 # <a name="require-attribute-values-master-data-services"></a>특성 값 요구(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 마스터 데이터를 완전한 상태로 유지하려면 특성 값을 요구합니다.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "73728937"
   
 11. **특성** 드롭다운 목록에서 특성을 선택합니다.  
   
-12. **저장**을 클릭합니다. 새 행이 **Then** 표에 추가됩니다.  
+12. **Save**을 클릭합니다. 새 행이 **Then** 표에 추가됩니다.  
   
-13. **저장**을 클릭합니다.  
+13. **Save**을 클릭합니다.  
   
 14. **모두 게시**를 클릭합니다.  
   

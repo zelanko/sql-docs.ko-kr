@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 859eb2c829b7d6f35aa39cb2301a4a380c0d039e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: db37dd8b4eed5c887cfceceb382fe57aa0d2fc33
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729631"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812448"
 ---
 # <a name="create-a-changeset-master-data-services"></a>변경 집합 만들기(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   변경 집합은 마스터 데이터에 대해 보류 중인 변경 내용의 컬렉션입니다. 엔터티 변경 시 승인이 필요한 경우 보류 중인 변경 내용을 변경 집합에 저장한 다음 관리자의 승인을 받기 위해 제출해야 합니다.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "73729631"
   
 ## <a name="to-create-a-local-changeset"></a>로컬 변경 집합을 만들려면  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 홈 페이지에서 모델 및 버전을 선택 하 고 **탐색기**를 클릭 합니다.  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]홈 페이지에서 모델 및 버전을 선택 하 고 **탐색기**를 클릭 합니다.  
   
 2.  **엔터티** 메뉴에서 엔터티를 클릭합니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "73729631"
   
 ## <a name="to-create-a-changeset-for-approval"></a>승인을 위해 변경 집합을 만들려면  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 홈 페이지에서 모델 및 버전을 선택 하 고 **탐색기**를 클릭 합니다.  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]홈 페이지에서 모델 및 버전을 선택 하 고 **탐색기**를 클릭 합니다.  
   
 2.  **엔터티** 메뉴에서 엔터티를 클릭합니다.  
   

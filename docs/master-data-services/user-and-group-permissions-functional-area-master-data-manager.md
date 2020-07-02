@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e651a31bc37de8f90ecf18615c761100dbdfff2d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1e4c41bd4edd55fea00d20d89c7d1b944a868d8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727817"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813206"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>사용자 및 그룹 권한 기능 영역(마스터 데이터 관리자)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   사용자 및 그룹 권한 기능 영역에서 관리자는 기능 영역, 특성(모델 탭에서) 및 멤버(계층 멤버 탭에서)에 사용 권한을 부여할 수 있습니다. 개별 특성 값에 대한 사용자의 사용 권한을 확인하려면 겹치는 사용 권한을 확인합니다.  
   

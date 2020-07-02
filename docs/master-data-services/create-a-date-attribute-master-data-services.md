@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8ffc7c1e901e3c93701c4e94ed62b8e70dbb7c0a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbf5182a41c9b5c52a73e9d005c768b48cc1fae4
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728509"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811836"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>날짜 특성 만들기(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 사용자가 날짜를 특성 값으로 입력할 수 있게 하려면 날짜 특성을 만듭니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "73728509"
   
 12. 또는 특성 그룹의 변경 내용을 추적하려면 **변경 내용 추적 설정** 을 선택합니다. 자세한 내용은 [변경 내용 추적 그룹에 특성 추가&#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)를 참조하세요.  
   
-13. **저장**을 클릭합니다.  
+13. **Save**을 클릭합니다.  
   
 ## <a name="to-display-the-time-portion-of-a-datetime-value"></a>날짜/시간 값의 시간 부분을 표시하려면  
  사용자 인터페이스에서 날짜/시간 값의 시간 부분을 표시하도록 하려면 특성에 대한 적절한 입력 마스크를 선택해야 합니다. 이를 수행하는 Datetime 특성의 기본 제공 마스크가 없는 경우 시간을 표시할 수 있도록 하는 새 마스크를 추가할 수 있습니다. 이렇게 하려면 기본 제공 마스크가 저장되는 MDS 데이터베이스의 mdm.tblList 테이블에 행을 추가합니다. 행의 값은 다음과 같아야 합니다.  

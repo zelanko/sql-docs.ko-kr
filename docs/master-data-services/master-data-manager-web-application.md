@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0ce1a7470b6304b924f3fcc7ae0fcec70b08b634
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 99e82901a8d3dac593e60896fc663f03e8ec431a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796590"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812951"
 ---
 # <a name="master-data-manager-web-application"></a>마스터 데이터 관리자 웹 애플리케이션
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션은 주로 관리자가 관리 태스크를 수행하는 데 사용됩니다. 예를 들어 모델, 비즈니스 규칙 또는 여러 버전의 데이터를 만드는 일은 관리자만 수행할 수 있습니다. 관리자에 대한 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
   

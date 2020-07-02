@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: adb0a6798291148cc03c7e9a0a80ca8a59f3952f
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 056335a32c0e7f1ae02979190cdf64b0829177df
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796551"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813687"
 ---
 # <a name="business-rule-actions-master-data-services"></a>비즈니스 규칙 동작(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 비즈니스 규칙 동작은 비즈니스 규칙 조건 평가의 결과입니다. 조건이 True이면 동작이 시작됩니다.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "84796551"
 ## <a name="default-value-actions"></a>기본값 동작  
  **기본값** 동작은 지정한 특성의 기본값을 설정합니다. 사용 권한이 있는 사용자는 이러한 기본값을 변경할 수 있습니다.  
   
-|값 이름|Description|  
+|값 이름|설명|  
 |----------------|-----------------|  
 |**기본값**|선택한 특성이 **기본적으로** 특정 특성 또는 특정 특성 값으로 설정되거나, 비어 있습니다.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
 |**생성되는 값을 기본값으로 설정**|선택한 특성은 **생성되는 값을 기본값으로 설정** 합니다. 이 값은 입력하는 시작 값과 증분 값에 따라 결정됩니다.<br /><br /> 이 동작은 텍스트 및 숫자 값에 유효합니다.|  
@@ -39,9 +39,9 @@ ms.locfileid: "84796551"
 ## <a name="change-value-actions"></a>값 변경 동작  
  **값 변경** 동작은 지정된 특성 또는 특성 값을 업데이트합니다. 사용자는 새 값에 따른 동작이 True인 경우에만 이러한 값을 변경할 수 있습니다.  
   
-|값 이름|Description|  
+|값 이름|설명|  
 |----------------|-----------------|  
-|**같거나**|선택한 특성이 정의된 특성 값 또는 다른 특성으로 변경되거나, 비어 있습니다.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
+|**같음**|선택한 특성이 정의된 특성 값 또는 다른 특성으로 변경되거나, 비어 있습니다.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
 |**연결된 값과 같음**|선택한 특성이 연결된 값으로 변경됩니다. 이 값은 지정하는 여러 특성에 따라 결정됩니다.<br /><br /> 이 동작은 텍스트 및 링크 값에 유효합니다.|  
   
 ## <a name="validation-actions"></a>유효성 검사 동작  
@@ -49,7 +49,7 @@ ms.locfileid: "84796551"
   
  단, **필수** 및 **잘못됨** 동작은 예외입니다. 이러한 동작은 값 변경 동작과 함께 실행되어야 데이터의 유효성이 성공적으로 검사되고 버전이 커밋될 수 있습니다.  
   
-|유효성 검사 이름|Description|  
+|유효성 검사 이름|설명|  
 |---------------------|-----------------|  
 |**필수**|선택한 특성이 **필수**입니다. 즉, Null이거나 비어 있을 수 없습니다.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
 |**유효 하지 않음**|선택한 특성이 **잘못되었습니다**.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
@@ -68,7 +68,7 @@ ms.locfileid: "84796551"
 ## <a name="external-action"></a>외부 동작  
  **외부** 동작은 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]외부 애플리케이션과 상호 작용합니다.  
   
-|동작 이름|Description|  
+|동작 이름|설명|  
 |-----------------|-----------------|  
 |**워크플로 시작**|외부 워크플로를 시작합니다. 이 동작을 발생시킨 데이터가 워크플로로 전달됩니다. 자세한 내용은 [Master Data Services와 SharePoint 워크플로 통합](https://msdn.microsoft.com/library/gg690195.aspx)을 참조하십시오.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
   

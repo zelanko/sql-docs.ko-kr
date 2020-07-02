@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2890487c4bbdf23ca4f1d7fa13aa15764f8029d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dd1c6dc3673fc7ff00fec90eb85825e9e34f84d9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728866"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812942"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>사용자의 사용 권한 테스트(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 테스트 사용자를 만들고 사용 권한을 테스트하기 위해 웹 애플리케이션에 로그인할 수 있습니다. 사용자가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] URL에 액세스하려고 시도할 때 사용자의 자격 증명이 인증됩니다. Internet Explorer의 보안 설정에 따라 인증이 자동으로 진행되는지, 아니면 사용자 이름 및 암호를 입력해야 하는지 여부가 결정됩니다. 이 설정을 변경하려면 다음 단계를 수행하십시오.  
   

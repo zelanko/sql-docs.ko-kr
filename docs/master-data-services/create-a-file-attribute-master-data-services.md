@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ce0f10316be9aa9f9b2b23a24642d8cd7d0eda1b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18c64bacdec9e0d8640b5b5884a6dcaf04f99214
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175168"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813109"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>파일 특성 만들기(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 특성 값을 파일로 채우려면 파일 특성을 만듭니다.
 
@@ -38,7 +38,7 @@ ms.locfileid: "78175168"
 ## <a name="attribute-information"></a>특성 정보
  생성되는 각 특성에 대해 열이 7개 포함된 행이 표에 추가됩니다. 다음 표에서는 열을 설명합니다.
 
-|열|Description|
+|Column|설명|
 |------------|-----------------|
 |상태|특성 상태입니다.<br /><br /> 저장을 클릭 하면 특성이 업데이트 되 고 있음을 나타내는 ![상태 업데이트 이미지 아이콘이](../master-data-services/media/mds-statusicon-updating.png "상태 업데이트 아이콘") 표시 됩니다.<br /><br /> 특성을 만들거나 편집할 때 오류가 발생 하면 ![오류 상태 이미지 아이콘이](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘") 표시 됩니다.<br /><br /> 그렇지 않으면 상태가 정상 이며 ![ok 상태 이미지 아이콘이](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘") 표시 됩니다.|
 |Name|특성 이름입니다.|
@@ -88,7 +88,7 @@ ms.locfileid: "78175168"
 
 11. 또는 특성 그룹의 변경 내용을 추적하려면 **변경 내용 추적 설정** 을 선택합니다. 자세한 내용은 [변경 내용 추적 그룹에 특성 추가&#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)를 참조하세요.
 
-12. **저장**을 클릭합니다.
+12. **Save**을 클릭합니다.
 
 ## <a name="see-also"></a>참고 항목
  특성 [&#40;MDS(Master Data Services)](../master-data-services/attributes-master-data-services.md) 특성 [이름 및 데이터 &#40;형식을 변경](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)&#41;MDS(Master Data Services)&#41;[도메인 기반 특성](../master-data-services/create-a-domain-based-attribute-master-data-services.md) &#40;MDS(Master Data Services)&#41;[텍스트 특성을](../master-data-services/create-a-text-attribute-master-data-services.md) 만듭니다 &#40;MDS(Master Data Services)

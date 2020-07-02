@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: f4c0431afb7d1c2de0fc5e4fae5e7c7c25639002
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 98c6ef2767f7ac64567f3e0a3d31381935577c59
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255608"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813877"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Configure Advanced Settings for DQS Log Files
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   이 항목에서는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 및 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 로그 파일에 대해 로그 파일의 롤링 파일 크기 제한을 설정하거나, 이벤트의 타임스탬프 패턴을 설정하는 등 고급 설정을 구성하는 방법에 대해 설명합니다.  
   
@@ -115,7 +115,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
 >  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 로깅 설정 구성이 동적으로 생성되어 DQS_MAIN.Log 파일에 저장됩니다. SQL Server의 기본 인스턴스를 설치한 경우 이 파일은 대개 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log에 있습니다. 그러나 이 파일에서 직접 변경한 내용은 유지되지 않고 DQS_MAIN 데이터베이스의 A_CONFIGURATION 테이블에 있는 구성 설정이 이 변경 내용을 덮어씁니다.  
   
 ##  <a name="configure-data-quality-client-log-settings"></a><a name="DQSClient"></a>Data Quality Client 로그 설정 구성  
- [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 로그 설정 구성 파일 dqlog.client.xml은 일반적으로 C:\PROGRAM Files\Microsoft SQL server\130\tools\binn\dq\config에서 사용할 수 있습니다. XML 파일의 내용은 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 로그 구성 설정에 대해 이전에 수정한 xml 파일과 비슷합니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 로그 설정을 구성하려면  
+ [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]로그 설정 구성 파일 DQLog.Client.xml은 일반적으로 C:\Program FILES\MICROSOFT SQL server\130\tools\binn\dq\config에서 사용할 수 있습니다. XML 파일의 내용은 로그 구성 설정에 대해 이전에 수정한 XML 파일과 비슷합니다 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] . [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 로그 설정을 구성하려면  
   
 1.  XML 편집 도구나 메모장을 관리자로 실행합니다.  
   

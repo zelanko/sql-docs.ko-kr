@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 087d7c7636b456e9cba07eb16abdd135abb43c4e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ce315c95f6906ba4c886d597b0df3d8957d4358a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257755"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812500"
 ---
 # <a name="use-the-dqs-speller"></a>DQS 맞춤법 검사기 사용
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 맞춤법 검사기는 도메인에서 문자열 값의 구문, 맞춤법 및 문장 구조를 검사합니다. 맞춤법 검사기는 서버 쪽 엔진에 통합되지 않고 현재 흐름이나 상태에 영향을 주지 않는 독립 실행형의 클라이언트 쪽 기능입니다. 맞춤법 검사기는 잠재적 오류로 간주되는 문자열 값을 식별한 다음 사용자가 도메인 값을 수동으로 변경하는 위치와 동일한 위치에 빨간색 밑줄로 표시합니다. 이러한 위치에는 다음이 포함됩니다.  
   

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9b2421d38401b3d0ff6b1e33a7b07bd86a1ab22e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7ae4fa3f7249c604acaf9df1387282a4d459dce
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728880"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813189"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>버전 관리 기능 영역(마스터 데이터 관리자)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   버전 관리 기능 영역에서 관리자는 데이터 유효성을 검사하고, 트랜잭션을 검토하고 되돌리며, 버전 지정된 데이터 복사본을 만들고, 구독 시스템에 대해 데이터 버전에 플래그를 지정할 수 있습니다. 관리자에 대한 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
   

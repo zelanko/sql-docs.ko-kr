@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 02adc815ee969af43b56e51966ded1b1fde6f101
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f7be51122765131e8681c11a7c84759e173f1517
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244146"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813801"
 ---
 # <a name="perform-knowledge-discovery"></a>기술 자료 검색 수행
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   이 항목에서는 기술 자료 검색을 통해 기술 자료를 구축하는 방법에 대해 설명합니다. 검색 프로세스에서 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )는 컴퓨터 기반 프로세스를 통해 예제 데이터 원본의 데이터를 분석해서 얻은 정보를 기술 자료에 추가합니다. 이러한 정보는 기술 자료 검색 작업의 **도메인 값 관리** 단계 또는 도메인 관리 작업에서 수정하고 개선할 수 있습니다.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "75244146"
   
 8.  **Excel에서 도메인 값 가져오기**: **값 가져오기** 아이콘에 대해 아래쪽 화살표를 클릭한 다음 **Excel에서 도메인 값 가져오기**를 선택하여 Excel 스프레드시트에서 새 값을 추가합니다. 파일 이름을 입력하고 해당하는 경우 **첫 번째 행을 헤더로 사용하세요** 를 선택한 다음 **확인**을 클릭합니다. 자세한 내용은 [Excel 파일에서 도메인으로 값 가져오기](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)을 참조하세요.  
   
-9. **프로젝트 값 가져오기**: 데이터 품질 프로젝트에서 새 값을 추가하려면 **값 가져오기** 아이콘에 대해 아래쪽 화살표를 클릭하고 **프로젝트 값 가져오기**를 선택합니다. 파일 이름을 입력하고 해당하는 경우 **첫 번째 행을 헤더로 사용하세요** 를 선택한 다음 **확인**을 클릭합니다. 값을 가져올 프로젝트를 선택한 후 **확인**을 클릭합니다. 가져온 값이 표시됩니다. **마침**을 클릭합니다. 자세한 내용은 도메인에 프로젝트 값 가져오기를 참조하세요.  
+9. **프로젝트 값 가져오기**: 데이터 품질 프로젝트에서 새 값을 추가하려면 **값 가져오기** 아이콘에 대해 아래쪽 화살표를 클릭하고 **프로젝트 값 가져오기**를 선택합니다. 파일 이름을 입력하고 해당하는 경우 **첫 번째 행을 헤더로 사용하세요** 를 선택한 다음 **확인**을 클릭합니다. 값을 가져올 프로젝트를 선택한 후 **확인**을 클릭합니다. 가져온 값이 표시됩니다. **Finish**를 클릭합니다. 자세한 내용은 도메인에 프로젝트 값 가져오기를 참조하세요.  
   
 10. **선택한 도메인 값 삭제**: 값을 선택한 다음 **선택한 도메인 값 삭제** 단추를 클릭하여 하나 이상의 기존 값을 도메인에서 제거합니다. DQS_NULL 항목은 삭제할 수 없으므로 삭제할 값을 여러 개 선택한 경우 그중 DQS_NULL 항목이 포함되어 있으면 작업이 실패합니다.  
   

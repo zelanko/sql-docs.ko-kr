@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: b475a53d-269d-49f3-bb42-965c555f80be
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 61d03410e5217175335caf0ca37241b28c887989
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 448a8174acef464fa1badb5a25d019891dd53bc6
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729761"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812065"
 ---
 # <a name="approval-required-master-data-services"></a>승인 필요(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 관리자는 엔터티를 승인 필요 항목으로 설정할 수 있습니다. 이 엔터티를 변경할 때마다 엔터티 관리자 중 한 명이 변경 내용을 검토하고 승인해야 합니다.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "73729761"
 >   
 >  비즈니스 규칙을 통한 변경 역시 승인이 무시됩니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>전제 조건  
  이 절차를 수행하려면  
   
 -   시스템 관리 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  

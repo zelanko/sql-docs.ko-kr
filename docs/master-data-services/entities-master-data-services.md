@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1b3f7a2645af68f6470aa971feef46fa103556a0
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 5c40c4cd565d01e7918cecd7c2dc89015f13c9f9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796336"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811975"
 ---
 # <a name="entities-master-data-services"></a>엔터티(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   엔터티는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 모델에 포함된 개체입니다. 각 엔터티에는 관리하는 마스터 데이터의 행인 멤버가 들어 있습니다.  
   

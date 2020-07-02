@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 34060c3fc5416f7244b400b506faad9097d66880
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ffc5e2c36590fc1128eb1c073d51051fed2e4d1
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241797"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814098"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>도메인으로 정리 프로젝트 값 가져오기
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서는 데이터 품질 정리 프로젝트나 DQS 정리 구성 요소가 포함된 Integration Services 패키지에서 정리 프로세스 중에 수집된 데이터 품질 기술 자료를 도메인으로 가져올 수 있습니다. 이렇게 하면 신뢰할 수 있는 정보가 손실되지 않고 기술 자료가 지속적으로 개선됩니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "75241797"
   
 9. 특정 문자열을 검색하려면 **찾기** 입력란에 문자열을 입력합니다. 위쪽 또는 아래쪽 화살표를 클릭하여 검색 조건에 맞는 값 사이를 이동합니다. 이러한 값은 노란색으로 강조 표시됩니다.  
   
-10. **마침**을 클릭합니다.  
+10. **Finish**를 클릭합니다.  
   
     > [!NOTE]  
     >  **도메인 값** 탭의 값에 대한 작업 방법은 [Change Domain Values](../data-quality-services/change-domain-values.md)을 참조하세요.  

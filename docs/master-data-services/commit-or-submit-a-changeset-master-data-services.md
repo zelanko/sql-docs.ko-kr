@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: d323bbac-c8d4-4d2f-a7d2-a597e8b53e2d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4f45d9ced6b22ec2b0cf7007eee4549e595ec697
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d6656052194b23b0107641d3c59ba8a84544731
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728571"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813163"
 ---
 # <a name="commit-or-submit-a-changeset-master-data-services"></a>변경 집합 커밋 또는 제출(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   변경 집합은 마스터 데이터에 대해 보류 중인 변경 내용의 컬렉션입니다. 엔터티 변경 시 관리자의 승인이 필요하지 않으면 변경 집합을 커밋할 수 있습니다. 엔터티 변경 시 관리자의 승인이 필요하면 승인을 위해 변경 집합을 제출할 수 있습니다.  
   

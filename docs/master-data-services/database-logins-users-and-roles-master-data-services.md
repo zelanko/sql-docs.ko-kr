@@ -18,36 +18,36 @@ helpviewer_keywords:
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 54d0d7db0f76407836b266c3534198d0e177c679
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 0c2f275fe85c7813a64790f864b462aa3bfc6775
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812403"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>데이터베이스 로그인, 사용자 및 역할(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 데이터베이스를 호스팅하는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 인스턴스에 자동으로 설치되는 로그인, 사용자 및 역할이 포함되어 있습니다. 이러한 로그인, 사용자 및 역할은 수정하면 안 됩니다.  
   
 ## <a name="logins"></a>로그인  
   
-|로그인|Description|  
+|로그인|설명|  
 |-----------|-----------------|  
 |**mds_dlp_login**|UNSAFE 어셈블리 만들기를 허용합니다. 자세한 내용은 [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md)을 참조하세요.<br /><br /> -임의로 생성된 암호를 가진 비활성화된 로그인입니다.<br /><br /> - [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 경우 dbo에 매핑됩니다.<br /><br /> -msdb의 경우 mds_clr_user가 이 로그인에 매핑됩니다.|  
 |**mds_email_login**|알림에 사용되는 활성화된 로그인입니다.<br /><br /> msdb 및 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 경우 mds_email_user가 이 로그인에 매핑됩니다.|  
   
 ## <a name="msdb-users"></a>msdb 사용자  
   
-|사용자|Description|  
+|사용자|설명|  
 |----------|-----------------|  
 |**mds_clr_user**|사용되지 않습니다. mds_dlp_login에 매핑됩니다.|  
 |**mds_email_user**|알림에 사용됩니다.<br /><br /> -mds_email_login에 매핑됩니다.<br /><br /> -DatabaseMailUserRole 역할의 멤버입니다.|  
   
 ## <a name="master-data-services-database-users"></a>Master Data Services 데이터베이스 사용자  
   
-|사용자|Description|  
+|사용자|설명|  
 |----------|-----------------|  
 |**mds_email_user**|알림에 사용됩니다.<br /><br /> -mdm 스키마에 대한 SELECT 권한을 가집니다.<br /><br /> -mdm.MemberGetCriteria 사용자 정의 테이블 형식에 대한 EXECUTE 권한을 가집니다.<br /><br /> -mdm.udpNotificationQueueActivate 저장 프로시저에 대한 EXECUTE 권한을 가집니다.|  
 |**mds_schema_user**|mdm 및 mdq 스키마를 소유합니다. 기본 스키마는 mdm입니다.<br /><br /> 매핑되는 로그인이 없습니다.|  

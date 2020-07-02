@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4e01c6773ce28694e95f992f1af49a7cce19e969
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 112c046e6a3e0eb51b18ba397c718907fa0829c9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728080"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813300"
 ---
 # <a name="leaf-permissions-master-data-services"></a>리프 권한(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   리프 권한은 엔터티의 모든 리프 멤버에 대한 특성 값에 적용됩니다.  
   
@@ -37,12 +37,12 @@ ms.locfileid: "73728080"
   
 -   **이름** 및 **코드** 특성에 할당된 사용 권한은 적용되지 않습니다.  
   
-|사용 권한|Description|  
+|사용 권한|설명|  
 |----------------|-----------------|  
 |**읽기**|사용자는 리프 멤버, 특성을 읽을 수 있습니다.|  
 |**만들기**|사용자는 리프 멤버를 만들고 만드는 동안 특성 값을 할당할 수 있습니다.|  
-|**업데이트**|사용자는 리프 멤버 및 특성을 업데이트할 수 있습니다.|  
-|**Delete**|사용자는 리프 멤버를 삭제할 수 있습니다.|  
+|**Update**|사용자는 리프 멤버 및 특성을 업데이트할 수 있습니다.|  
+|**삭제**|사용자는 리프 멤버를 삭제할 수 있습니다.|  
 |**거부**|리프 멤버에 대한 모든 액세스를 거부 합니다.|  
   
  읽기, 만들기, 업데이트 및 삭제 권한을 결합할 수 있습니다. 만들기, 업데이트 및 삭제가 할당될 때 읽기 권한은 자동으로 할당됩니다.  
@@ -50,18 +50,18 @@ ms.locfileid: "73728080"
 ## <a name="attribute-permissions"></a>특성 사용 권한  
  특성 사용 권한은 특정 엔터티의 특성 값에 적용됩니다. 특성 사용 권한만 있는 사용자는 멤버를 추가하거나 제거할 수 없습니다.  
   
-|사용 권한|Description|  
+|사용 권한|설명|  
 |----------------|-----------------|  
 |**읽기**|사용자는 특성을 읽을 수 있습니다.|  
 |**만들기**|사용자는 멤버를 만들 때 값을 할당할 수 있습니다.|  
-|**업데이트**|사용자는 특성을 업데이트할 수 있습니다.|  
-|**Delete**|아무런 영향이 없습니다.|  
+|**Update**|사용자는 특성을 업데이트할 수 있습니다.|  
+|**삭제**|아무런 영향이 없습니다.|  
 |**거부**|특성이 표시되지 않습니다.<br /><br /> 참고: 이름 및 코드 특성에 대한 액세스를 명시적으로 거부할 수 없습니다.|  
   
 ### <a name="example"></a>예제  
  Product 엔터티에 대해 Subcategory 특성에 **업데이트** 권한을 할당합니다. 모든 다른 특성에 대한 사용 권한은 거부합니다.  
   
-|속성|코드|Subcategory(업데이트)|  
+|Name|코드|Subcategory(업데이트)|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|{5}산악 자전거|  
 |Mountain-100|BK-M201|{5}산악 자전거|  

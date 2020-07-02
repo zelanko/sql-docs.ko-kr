@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2794b4c7dc7d8196845a83509accca085f23f396
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9de8fba3f5a9ba04cccf475ed4a1ebcef1dced74
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728666"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813647"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>비즈니스 규칙 이름 변경(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 할당된 이름이 비즈니스 요구에 맞지 않으면 비즈니스 규칙 이름을 변경할 수 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>전제 조건  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "73728666"
   
 7.  비즈니스 규칙의 새 이름을 입력합니다.  
   
-8.  **저장**을 클릭합니다.  
+8.  **Save**을 클릭합니다.  
   
 9. **모두 게시**를 클릭합니다.  
   

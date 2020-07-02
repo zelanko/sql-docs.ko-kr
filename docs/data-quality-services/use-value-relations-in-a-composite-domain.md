@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 90937a98bb409c6f17bc542183cd024f408d71f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 03f90fb4e97ac7671ba4f09ff5dc6ad32bfcf84b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257760"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812518"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>복합 도메인의 값 관계 사용
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 기술 자료 검색 프로세스 중에 복합 도메인에 대해 발견된 값 조합을 보는 방법에 대해 설명합니다. 이 페이지에서는 값 조합의 발생 횟수를 보여줍니다. 복합 도메인에는 값 관리가 지원되지 않으므로 이러한 값에 대해 어떠한 작업도 수행할 수 없습니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "75257760"
     > [!NOTE]  
     >  **값** 테이블에서는 복합 도메인에 있는 각각의 값 조합을 보여 줍니다. 각 값은 값이 적용되는 단일 도메인에 표시됩니다. 값 관계 테이블은 기본적으로 빈도순으로 정렬되지만 다른 열을 클릭하여 해당 열을 기준으로 정렬할 수 있습니다. 빈도가 20보다 크거나 같은 해당 값만 표시됩니다.  
   
-6.  테이블의 값은 변경할 수 없습니다. 다른 작업을 수행한 경우 **마침** 을 클릭하여 도메인 관리 작업을 완료합니다. 그렇지 않은 경우 **취소**를 클릭합니다.  
+6.  테이블의 값은 변경할 수 없습니다. 다른 작업을 수행한 경우 **마침** 을 클릭하여 도메인 관리 작업을 완료합니다. 그렇지 않으면 **취소**를 클릭 합니다.  
   
 ##  <a name="follow-up-after-viewing-value-relations"></a><a name="FollowUp"></a>후속 작업: 값 관계를 본 후  
  값 관계를 본 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  

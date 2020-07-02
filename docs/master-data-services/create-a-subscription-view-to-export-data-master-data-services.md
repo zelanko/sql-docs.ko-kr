@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e46961fa67492667a697c34f727ae068744e5e63
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 381d089aa124f44161b3fd5f1102f7377719f142
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796427"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812771"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>구독 뷰를 만들어 데이터 내보내기(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   구독 뷰를 만들어 구독 시스템으로 Master Data Services 데이터를 내보낼 수 있습니다. 그러면 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 데이터의 뷰가 생성됩니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>전제 조건  
  이 절차를 수행하려면  
   
 -   **통합 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)을 참조하세요.  
@@ -61,21 +61,21 @@ ms.locfileid: "84796427"
   
 10. **형식** 목록에서 **명시적 수준** 또는 **파생 수준** 을 선택한 경우에는 뷰에 포함할 계층의 수준 수를 입력합니다.  
   
-11. **저장**을 클릭합니다.  
+11. **Save**을 클릭합니다.  
   
 ## <a name="view-information"></a>뷰 정보  
  생성되는 각 뷰에 대해 열이 10개 포함된 행이 표에 추가됩니다. 다음 표에서는 열을 설명합니다.  
   
-|열|Description|  
+|Column|설명|  
 |------------|-----------------|  
 |상태|보기 상태입니다.<br /><br /> **저장**을 클릭 하면 뷰가 업데이트 되 고 있음을 나타내는 ![상태 업데이트 이미지 아이콘이](../master-data-services/media/mds-statusicon-updating.png "상태 업데이트 아이콘") 표시 됩니다.<br /><br /> 뷰를 만들거나 편집할 때 오류가 발생 하면 ![오류 상태 이미지 아이콘이](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘") 표시 됩니다.<br /><br /> 그렇지 않으면 상태가 정상 이며 ![ok 상태 이미지 아이콘이](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘") 표시 됩니다.|  
 |Name|구독 뷰 이름입니다.|  
 |모델|모델 이름입니다.|  
-|버전|버전 이름입니다.|  
+|Version|버전 이름입니다.|  
 |버전|버전 플래그 이름입니다.|  
 |엔터티|파생 계층 이름입니다.|  
 |엔터티|엔터티 이름입니다.|  
-|형식|뷰의 데이터 형식을 지정합니다.|  
+|서식|뷰의 데이터 형식을 지정합니다.|  
 |Level|명시적 수준 또는 파생 수준 뷰 형식에만 사용되는 뷰의 수준 수를 지정합니다.|  
 |삭제된 멤버 포함|일시 삭제된 멤버가 뷰에 포함되는지 여부를 나타냅니다.|  
   

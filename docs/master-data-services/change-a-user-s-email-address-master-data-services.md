@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6b1941b6be24b926b870ad284b0aa8ce7242fba4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b9b7d6368d8ecf920784dbb1dbcdd9b043c00c2
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729688"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813641"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>사용자의 전자 메일 주소 변경(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 알림이 전송되는 전자 메일 주소와 알림 전자 메일의 기본 형식을 변경할 수 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>전제 조건  
  이 절차를 수행하려면  
   
 -   **사용자 및 그룹** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "73729688"
   
 5.  전자 메일 주소나 전자 메일 형식을 업데이트합니다.  
   
-6.  **저장**을 클릭합니다.  
+6.  **Save**을 클릭합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
   

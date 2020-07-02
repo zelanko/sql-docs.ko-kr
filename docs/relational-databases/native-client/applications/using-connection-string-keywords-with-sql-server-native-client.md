@@ -18,12 +18,12 @@ ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d214cd21d5e94097164a8b5ede9252a59c552f4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5082230054064f41134f553660999314b5b51897
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85656994"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834754"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>SQL Server Native Client에서 연결 문자열 키워드 사용
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
@@ -199,7 +199,8 @@ ms.locfileid: "85656994"
 |키워드|초기화 속성|Description|  
 |-------------|-----------------------------|-----------------|  
 |**애플리케이션 이름**|SSPROP_INIT_APPNAME|애플리케이션을 식별하는 문자열입니다.|  
-|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 가능한 값은 **ReadOnly** 및 **ReadWrite**입니다.<br /><br /> 기본값은 **ReadWrite**입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대 한 Native Client의 지원에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] [고가용성, 재해 복구를 위한 SQL Server Native Client 지원](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)을 참조 하세요.|  
+|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|"ApplicationIntent"의 동의어입니다.|
+|**ApplicationIntent**|SSPROP_INIT_APPLICATIONINTENT|서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 가능한 값은 **ReadOnly** 및 **ReadWrite**입니다.<br /><br /> 기본값은 **ReadWrite**입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대 한 Native Client의 지원에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] [고가용성, 재해 복구를 위한 SQL Server Native Client 지원](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)을 참조 하세요.|  
 |**자동 번역**|SSPROP_INIT_AUTOTRANSLATE|"AutoTranslate"에 대한 동의어입니다.|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|OEM/ANSI 문자 변환을 구성합니다. 인식되는 값은 "true"와 "false"입니다.|  
 |**Connect Timeout**|DBPROP_INIT_TIMEOUT|데이터 원본 초기화가 완료될 때까지 기다릴 시간(초)입니다.|  
@@ -249,7 +250,8 @@ ms.locfileid: "85656994"
   
 |키워드|초기화 속성|Description|  
 |-------------|-----------------------------|-----------------|  
-|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 가능한 값은 **ReadOnly** 및 **ReadWrite**입니다.<br /><br /> 기본값은 **ReadWrite**입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대 한 Native Client의 지원에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] [고가용성, 재해 복구를 위한 SQL Server Native Client 지원](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)을 참조 하세요.|  
+|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|"ApplicationIntent"의 동의어입니다.|
+|**ApplicationIntent**|SSPROP_INIT_APPLICATIONINTENT|서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 가능한 값은 **ReadOnly** 및 **ReadWrite**입니다.<br /><br /> 기본값은 **ReadWrite**입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대 한 Native Client의 지원에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] [고가용성, 재해 복구를 위한 SQL Server Native Client 지원](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)을 참조 하세요.|  
 |**애플리케이션 이름**|SSPROP_INIT_APPNAME|애플리케이션을 식별하는 문자열입니다.|  
 |**자동 번역**|SSPROP_INIT_AUTOTRANSLATE|"AutoTranslate"에 대한 동의어입니다.|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|OEM/ANSI 문자 변환을 구성합니다. 인식되는 값은 "true"와 "false"입니다.|  

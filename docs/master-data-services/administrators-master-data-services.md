@@ -1,5 +1,5 @@
 ---
-title: 관리자
+title: Administrators
 description: 모델 관리자, 엔터티 관리자 및 슈퍼 사용자 MDS(Master Data Services)의 관리자 유형에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c1a4393881b05c21a690c06bfa39fd2114da0b18
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: a8f4fd055394df55b96b8694621d430bbac6c320
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796606"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812838"
 ---
 # <a name="administrators-master-data-services"></a>관리자(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   이 문서에서는 모델 관리자, 엔터티 관리자, 슈퍼 사용자 등 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 관리자 유형을 설명합니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "84796606"
   
 ## <a name="comparing-administrator-types"></a>관리자 유형 비교  
   
-|관리자 유형|Description|  
+|관리자 유형|설명|  
 |------------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 슈퍼 사용자|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 할당된 사용 권한은 관리자의 액세스 권한 아무런 영향을 주지 않습니다.<br /><br /> 명시적으로 할당된 기능 영역 권한 또는 그룹에서 상속된 권한에 따라 슈퍼 사용자로 지정될 수 있습니다.<br /><br /> 모든 모델에 대한 모든 권한이 자동으로 부여됩니다.<br /><br /> 모든 기능 영역에 대한 액세스 권한을 자동으로 가집니다.|  
 |모델 관리자|명시적으로 할당된 관리 권한 또는 그룹에서 상속된 사용 권한에 따라 모델 관리자로 지정될 수 있습니다.<br /><br /> 액세스 권한이 부여된 기능 영역에 대해서만 액세스 권한을 가집니다.<br /><br /> 특정 모델의 모든 개체 및 멤버에 대한 모든 권한이 자동으로 부여됩니다.|  

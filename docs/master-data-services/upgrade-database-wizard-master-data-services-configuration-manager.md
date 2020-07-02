@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e6d5f9fd7dfe49b71424e13818de51d8c323676c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 45b1cf5e98c06780c698c2d58d0430e9cab95391
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728907"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812671"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>데이터베이스 업그레이드 마법사(Master Data Services 구성 관리자)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   **데이터베이스 업그레이드 마법사** 를 사용하여 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 업그레이드합니다.  
   

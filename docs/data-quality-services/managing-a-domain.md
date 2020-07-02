@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 40482e599244f0e5102195cd0e34c3718a06d149
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 79045109eab32818e6cddd43bc9acf7ae35dfe6d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258437"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812198"
 ---
 # <a name="managing-a-domain"></a>도메인 관리
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 도메인을 사용하는 방법에 대해 설명합니다. 도메인은 분석할 데이터 원본의 특정 필드에 있는 데이터를 의미 체계에 따라 표현한 것입니다. 도메인은 사용자가 데이터 원본에 대해 만드는 기술 자료의 일부이며, 샘플 데이터 원본을 분석하거나 데이터를 가져와 구축한 정보는 기술 자료에 정의된 도메인에 추가됩니다. 이러한 도메인의 정보는 나중에 데이터 품질 프로젝트에서 정리 및 일치를 수행할 때 사용됩니다. 도메인은 Data Quality Services에서 모든 작업의 핵심에 있습니다.  
   

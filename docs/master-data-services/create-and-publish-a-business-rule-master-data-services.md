@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2dfc03bc292d7c39024116eca9cf49a5179a5b7c
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 39fdd6cebd0c27ec4a27a4543129a659bcdb22a3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796402"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813049"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>비즈니스 규칙 만들기 및 게시(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 마스터 데이터의 정확성 유지를 위한 비즈니스 규칙을 만듭니다. 규칙을 만든 후 게시해야 데이터에 적용할 수 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>전제 조건  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "84796402"
   
 19. 모든 필수 필드에 내용을 입력합니다.  
   
-20. **저장**을 클릭합니다. 새 행이 **Then** 표에 추가됩니다.  
+20. **Save**을 클릭합니다. 새 행이 **Then** 표에 추가됩니다.  
   
 21. 필요에 따라 **Else** 동작을 추가하려면 다음 단계를 완료합니다.  
   
@@ -92,9 +92,9 @@ ms.locfileid: "84796402"
   
     4.  모든 필수 필드에 내용을 입력합니다.  
   
-    5.  **저장**을 클릭합니다. 새 행이 **Else** 표에 추가됩니다.  
+    5.  **Save**을 클릭합니다. 새 행이 **Else** 표에 추가됩니다.  
   
-22. **저장**을 클릭합니다. 새 행이 비즈니스 규칙 표에 추가됩니다.  
+22. **Save**을 클릭합니다. 새 행이 비즈니스 규칙 표에 추가됩니다.  
   
 23. **모두 게시**를 클릭합니다.  
   
@@ -103,11 +103,11 @@ ms.locfileid: "84796402"
 ## <a name="grid-columns"></a>표 형태의 열  
  생성되는 각 비즈니스 규칙에 대해 열이 6개 포함된 행이 표에 추가됩니다. 이러한 열은 다음과 같습니다.  
   
-|Name|Description|  
+|Name|설명|  
 |----------|-----------------|  
 |상태|**저장** 을 클릭하면 비즈니스 규칙이 업데이트되고 있음을 나타내는 다음 이미지가 표시됩니다.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> 비즈니스 규칙을 만들거나 편집할 때 오류가 발생하면 다음 이미지가 표시됩니다.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> 엔터티가 정상 상태이면 다음 이미지가 표시됩니다.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
 |Name|비즈니스 규칙 이름입니다.|  
-|Description|비즈니스 규칙 설명입니다.|  
+|설명|비즈니스 규칙 설명입니다.|  
 |비즈니스 규칙 상태|규칙이 정의되지 않았습니다./활성/제외됨/변경 보류 중/제외 보류 중/삭제 보류 중 하나입니다.|  
 |제외됨|비즈니스 규칙을 제외할지 여부를 지정합니다.|  
 |알림|전자 메일 알림을 보내도록 선택한 사용자 또는 그룹을 지정합니다.|  

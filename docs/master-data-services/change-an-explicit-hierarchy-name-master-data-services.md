@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3604fe0fa1a2b15385ebea9d31550fc984c14a42
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 31f93bbb8aa214a1353fce1a571f555c94055ccd
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728635"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812038"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>명시적 계층 이름 변경(Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 명시적 계층의 이름을 변경할 수 있습니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "73728635"
   
 6.  **이름** 상자에 계층의 업데이트된 이름을 입력합니다.  
   
-7.  **저장**을 클릭합니다.  
+7.  **Save**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [명시적 계층 &#40;MDS(Master Data Services)&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   

@@ -1,7 +1,7 @@
 ---
 title: 최단 경로 (SQL 그래프) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 18527b8a6d64a3dca27a0c5e8a99d36bf1d6d45a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b959348aaf7ca293a9d475a8b4eb6cb5cfdee7aa
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753255"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834637"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-sql)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver2019.md)]
@@ -62,7 +62,7 @@ LAST_NODE () 함수는 두 개의 임의 길이 트래버스 패턴의 체인을
 ## <a name="graph-path-aggregate-functions"></a>그래프 경로 집계 함수
 임의 길이 패턴과 관련 된 노드 및 가장자리가 해당 경로에서 이동한 노드 및 가장자리의 컬렉션을 반환 하기 때문에 사용자는 기존 attributename 구문을 사용 하 여 직접 특성을 프로젝션 할 수 없습니다. 중간 노드 또는에 지 테이블에서 특성 값을 프로젝션 해야 하는 쿼리의 경우, 트래버스 된 경로에서 다음 그래프 경로 집계 함수를 사용 합니다. STRING_AGG, LAST_VALUE, SUM, AVG, MIN, MAX 및 COUNT. SELECT 절에서 이러한 집계 함수를 사용 하는 일반적인 구문은 다음과 같습니다.
 
-```
+```syntaxsql
 <GRAPH_PATH_AGGREGATE_FUNCTION>(<expression> , <separator>)  <order_clause>
 
     <order_clause> ::=
@@ -95,8 +95,9 @@ STRING_AGG 함수는 식과 구분 기호를 입력으로 사용 하 고 문자�
 ### <a name="count"></a>개수
 이 함수는 경로에서 원하는 node/edge 특성의 null이 아닌 값의 개수를 반환 합니다. COUNT 함수는 \* 노드 또는에 지 테이블 별칭이 있는 ' ' 연산자를 지원 합니다. 노드 또는에 지 테이블 별칭이 없으면의 사용법이 \* 모호 하 고 오류가 발생 합니다.
 
-    {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
-
+```syntaxsql
+{  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
+```
 
 ### <a name="avg"></a>평균
 제공 된 노드/가장자리 특성 값 또는 트래버스 된 경로에 나타난 식의 평균을 반환 합니다.
@@ -120,7 +121,7 @@ LAST_NODE은 shortest_path 내 에서만 지원 됩니다.
 ### <a name="a--find-shortest-path-between-2-people"></a>A.  2 명 사이의 최단 경로 찾기
  다음 예제에서는 Jacob와 Alice 사이에서 가장 짧은 경로를 찾습니다. Graph 샘플 스크립트에서 만든 Person 노드 및 FriendOf edge가 필요 합니다. 
 
- ```
+```sql
 SELECT PersonName, Friends
 FROM (  
     SELECT
@@ -135,12 +136,12 @@ FROM (
     AND Person1.name = 'Jacob'
 ) AS Q
 WHERE Q.LastNode = 'Alice'
- ```
+```
 
  ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>B.  지정 된 노드에서 그래프의 다른 모든 노드로 최단 경로를 찾습니다. 
  다음 예에서는 그래프에서 Jacob가 연결 된 모든 사용자와 Jacob부터 모든 사람들까지 가장 짧은 경로를 찾습니다. 
 
- ```
+```sql
 SELECT
     Person1.name AS PersonName, 
     STRING_AGG(Person2.name, '->') WITHIN GROUP (GRAPH PATH) AS Friends
@@ -150,12 +151,12 @@ FROM
     Person FOR PATH  AS Person2
 WHERE MATCH(SHORTEST_PATH(Person1(-(fo)->Person2)+))
 AND Person1.name = 'Jacob'
- ```
+```
 
 ### <a name="c--count-the-number-of-hopslevels-traversed-to-go-from-one-person-to-another-in-the-graph"></a>C.  그래프의 한 사용자에서 다른 사용자로 이동 하기 위해 트래버스하는 홉/수준의 수를 계산 합니다.
  다음 예제에서는 Jacob와 Alice 사이의 최단 경로를 찾아 Jacob에서 Alice로 이동 하는 데 걸리는 홉 수를 인쇄 합니다. 
 
- ```
+```sql
  SELECT PersonName, Friends, levels
 FROM (  
     SELECT
@@ -171,12 +172,12 @@ FROM (
     AND Person1.name = 'Jacob'
 ) AS Q
 WHERE Q.LastNode = 'Alice'
- ```
+```
 
 ### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>D. 지정 된 사용자 로부터 받은 사용자 1-3 홉 찾기
 다음 예에서는 Jacob와 graph 1-3에서 연결 된 모든 사람 사이에서 가장 짧은 경로를 찾습니다. 
 
-```
+```sql
 SELECT
     Person1.name AS PersonName, 
     STRING_AGG(Person2.name, '->') WITHIN GROUP (GRAPH PATH) AS Friends
@@ -191,7 +192,7 @@ AND Person1.name = 'Jacob'
 ### <a name="e-find-people-exactly-2-hops-away-from-a-given-person"></a>E. 지정 된 사용자가 정확히 2 개의 홉을 찾습니다.
 다음 예제에서는 Jacob 사이에서 가장 짧은 경로를 검색 하 고, 그래프에서 정확히 2 개의 홉을 말합니다. 
 
-```
+```sql
 SELECT PersonName, Friends
 FROM (
     SELECT

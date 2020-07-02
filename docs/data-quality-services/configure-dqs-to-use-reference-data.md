@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 8dfc5a65659efe71fd3389a770af06f360f980bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 542e32606858604e59cdbf204bbf39eba6d214a6
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255647"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813868"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>참조 데이터를 사용하도록 DQS 구성
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   이 항목에서는 데이터를 정리하는 데 참조 데이터를 사용하도록 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )를 구성하는 방법에 대해 설명합니다. Azure Marketplace 또는 다이렉트 온라인 타사 참조 데이터 공급자의 참조 데이터를 사용할 수 있습니다.  
 
@@ -32,7 +32,7 @@ ms.locfileid: "75255647"
 ## <a name="before-you-begin"></a>시작하기 전에  
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
- Marketplace의 참조 데이터를 사용하려면 유효한 Marketplace 계정 키가 있어야 합니다. Marketplace 계정 키를 만드는 방법에 대 한 자세한 내용은 [계정 만들기](https://go.microsoft.com/fwlink/?LinkId=212936) ()https://go.microsoft.com/fwlink/?LinkId=212936)를 참조 하세요. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 **관리** 에서 **구성** 을 클릭한 다음 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 참조 데이터 **탭에서** DataMarket 계정 ID 만들기 **를 클릭하여** 내에서 Marketplace 계정 키를 만들 수도 있습니다.  
+ Marketplace의 참조 데이터를 사용하려면 유효한 Marketplace 계정 키가 있어야 합니다. Marketplace 계정 키를 만드는 방법에 대 한 자세한 내용은 [계정 만들기](https://go.microsoft.com/fwlink/?LinkId=212936) ()를 참조 하세요 https://go.microsoft.com/fwlink/?LinkId=212936) . [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 **관리** 에서 **구성** 을 클릭한 다음 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 참조 데이터 **탭에서** DataMarket 계정 ID 만들기 **를 클릭하여** 내에서 Marketplace 계정 키를 만들 수도 있습니다.  
   
 ###  <a name="security"></a><a name="Security"></a> 보안  
   
@@ -69,7 +69,7 @@ ms.locfileid: "75255647"
   
     3.  **범주** 상자에 새 다이렉트 참조 데이터 서비스 공급자가 제공한 데이터의 범주를 입력합니다.  
   
-    4.  스키마 상자에 다이렉트 참조 데이터 서비스 공급자에서 사용할 필드 문자열(열 이름)을 정의하는 스키마를 지정합니다. 필드 이름은 공백을 포함할 수 없으며, 필드는 쉼표로 구분되어야 합니다. 예: `FirstName, LastName, City, State`  
+    4.  스키마 상자에 다이렉트 참조 데이터 서비스 공급자에서 사용할 필드 문자열(열 이름)을 정의하는 스키마를 지정합니다. 필드 이름은 공백을 포함할 수 없으며, 필드는 쉼표로 구분되어야 합니다. 예: `FirstName, LastName, City, State`.  
   
     5.  **URI** 상자에 새 다이렉트 참조 데이터 서비스 공급자의 URI를 입력합니다. 보안 URI("https://"로 시작하는 주소)만 DQS에서 사용할 수 있습니다.  
   

@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 5e792a15670c50b918eabbf371258aa9b62cab82
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0f9b77a5df341bbf57d103797d5808b8b7a5d511
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242127"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812208"
 ---
 # <a name="change-domain-values"></a>도메인 값 변경
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 기술 자료의 메타데이터를 변경하고 보강하는 방법에 대해 설명합니다. 기술 자료 검색, 기술 자료로 정보 또는 도메인 가져오기, 기술 자료를 기반으로 다른 기술 자료 작성 등의 작업을 통해 기술 자료를 생성한 후 데이터 값을 대화식으로 변경할 수 있습니다. 기술 자료 생성은 컴퓨터 기반 프로세스를 활용할 뿐만 아니라 다음과 같이 사용자의 고유한 정보를 사용하여 데이터 값을 확인하고 변경하는 방법도 제공합니다.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "75242127"
   
 9. **Excel에서 도메인 값 가져오기**: Excel 스프레드시트에서 새 값을 추가하려면 **값 가져오기** 아이콘에 대해 아래쪽 화살표를 클릭한 다음 **Excel에서 도메인 값 가져오기**를 선택합니다. 파일 이름을 입력하고 해당하는 경우 **첫 번째 행을 헤더로 사용하세요** 를 선택한 다음 **확인**을 클릭합니다. 자세한 내용은 [Excel 파일에서 도메인으로 값 가져오기](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)을 참조하세요.  
   
-10. **프로젝트 값 가져오기**: 데이터 품질 프로젝트에서 새 값을 추가하려면 **값 가져오기** 아이콘에 대해 아래쪽 화살표를 클릭하고 **프로젝트 값 가져오기**를 선택합니다. 파일 이름을 입력하고 해당하는 경우 **첫 번째 행을 헤더로 사용하세요** 를 선택한 다음 **확인**을 클릭합니다. 값을 가져올 프로젝트를 선택한 후 **확인**을 클릭합니다. 가져온 값이 표시됩니다. **마침**을 클릭합니다. 자세한 내용은 도메인에 프로젝트 값 가져오기를 참조하세요.  
+10. **프로젝트 값 가져오기**: 데이터 품질 프로젝트에서 새 값을 추가하려면 **값 가져오기** 아이콘에 대해 아래쪽 화살표를 클릭하고 **프로젝트 값 가져오기**를 선택합니다. 파일 이름을 입력하고 해당하는 경우 **첫 번째 행을 헤더로 사용하세요** 를 선택한 다음 **확인**을 클릭합니다. 값을 가져올 프로젝트를 선택한 후 **확인**을 클릭합니다. 가져온 값이 표시됩니다. **Finish**를 클릭합니다. 자세한 내용은 도메인에 프로젝트 값 가져오기를 참조하세요.  
   
 11. **선택한 도메인 값 삭제**: 하나 이상의 기존 값을 도메인에서 제거하려면 값 테이블에서 값을 선택한 다음 **선택한 도메인 값 삭제** 아이콘을 클릭합니다. DQS_NULL 항목은 삭제할 수 없으므로 삭제할 값을 여러 개 선택한 경우 그중 DQS_NULL 항목이 포함되어 있으면 작업이 실패합니다.  
   

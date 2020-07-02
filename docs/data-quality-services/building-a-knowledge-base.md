@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b718cd04b5c6133d931a9bea03de0a78ebc7a886
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae84775172f7595adcb3e5de612ed74f4ccf45d9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258837"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812594"
 ---
 # <a name="building-a-knowledge-base"></a>기술 자료 구축
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료는 데이터 관련 정보의 리포지토리로서 데이터를 이해하고 데이터의 무결성을 유지하는 데 사용됩니다. 기술 자료는 데이터 필드의 데이터를 나타내는 각각의 도메인으로 구성됩니다. 기술 자료는 DQS에서 데이터베이스에 대해 데이터 정리 및 중복 제거를 수행하는 데 사용됩니다. 데이터 정리를 위해 기술 자료를 준비하려면 데이터 샘플에 대한 컴퓨터 기반 분석을 실행하고 도메인의 값을 대화식으로 관리하면 됩니다. DQS를 통해 정보를 가져오고, 규칙 및 관계를 만들고, 데이터 값을 직접 변경하고, 기본 데이터베이스를 활용할 수 있습니다.  
   
