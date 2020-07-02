@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ce6fe81cc037e8e704758155aa302c61418ce65b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3b12ffb31836bfde3cb29cf240dbfc5d9da66eac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824488"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729211"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   구독자에서 하나 이상의 구독에 관한 정보를 표시합니다. 이 저장 프로시저는 구독 데이터베이스의 구독자에서 실행됩니다.  
   
@@ -99,7 +99,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="remarks"></a>설명  
  **sp_helppullsubscription** 는 스냅숏 및 트랜잭션 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_helppullsubscription** 을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

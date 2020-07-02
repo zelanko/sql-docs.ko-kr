@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 88ec07ae0655f6a4617f15ed5f486a8fbb1b61d4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 66a4d334719707d8f906b6026737037d7ea28175
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820312"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725647"
 ---
 # <a name="sp_stop_job-transact-sql"></a>sp_stop_job(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 작업 실행을 중지하도록 지시합니다.  
 
@@ -64,9 +64,9 @@ sp_stop_job
 ## <a name="remarks"></a>설명  
  **sp_stop_job** 는 데이터베이스에 중지 신호를 보냅니다. 일부 프로세스는 즉시 중지 될 수 있으며 일부 프로세스는 중지 하기 전에 안정 된 지점 (또는 코드 경로에 대 한 진입점)에 도달 해야 합니다. BACK, RESTORE 및 일부 DBCC 명령과 같은 일부 장기 실행 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 완료되려면 시간이 오래 걸릴 수 있습니다. 이러한 작업을 실행 하는 경우 작업이 취소 되기 전에 약간의 시간이 걸릴 수 있습니다. 작업을 중지하면 작업 기록에 "취소된 작업" 항목이 기록됩니다.  
   
- 작업에서 현재 **CmdExec** 또는 **PowerShell**유형의 단계를 실행 하는 경우 실행 중인 프로세스 (예: myprogram .exe)가 강제로 중간에 종료 됩니다. 예기치 않은 종료로 인해 프로세스가 보유하고 있던 파일이 열리는 등 예기치 않은 상황이 발생할 수 있습니다. 따라서 작업에 **CmdExec** 또는 **PowerShell**유형의 단계가 포함 된 경우에는 극단적인 경우에만 **sp_stop_job** 을 사용 해야 합니다.  
+ 작업에서 현재 **CmdExec** 또는 **PowerShell**유형의 단계를 실행 하는 경우 실행 중인 프로세스 (예: MyProgram.exe)가 강제로 중간에 종료 됩니다. 예기치 않은 종료로 인해 프로세스가 보유하고 있던 파일이 열리는 등 예기치 않은 상황이 발생할 수 있습니다. 따라서 작업에 **CmdExec** 또는 **PowerShell**유형의 단계가 포함 된 경우에는 극단적인 경우에만 **sp_stop_job** 을 사용 해야 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
@@ -79,7 +79,7 @@ sp_stop_job
   
  **SQLAgentUserRole** 및 **SQLAgentReaderRole** 의 멤버는 자신이 소유한 작업만 중지할 수 있습니다. **SQLAgentOperatorRole** 의 멤버는 다른 사용자가 소유 하는 작업을 포함 하 여 모든 로컬 작업을 중지할 수 있습니다. **Sysadmin** 의 멤버는 모든 로컬 및 다중 서버 작업을 중지할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Weekly Sales Data Backup`이라는 작업을 중지합니다.  
   
 ```  

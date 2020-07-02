@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eda80b5efcee562050539bf9d50f46cc507f280e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9f7aa3059a6c67e236aa5b64fbc564addc62f586
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659150"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731458"
 ---
 # <a name="size-property-clientnetlibinfo-class"></a>Size 속성(ClientNetLibInfo 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   클라이언트 네트워크 라이브러리의 크기(KB)를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  

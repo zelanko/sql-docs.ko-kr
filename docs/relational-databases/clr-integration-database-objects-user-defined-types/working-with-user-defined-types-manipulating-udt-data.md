@@ -29,15 +29,15 @@ helpviewer_keywords:
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ff4b620f2f06243b23b4c540f4c99b3c3cafa41
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 17913dab743f1aaaa7672ce855aa85ce8434f3c0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486935"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727752"
 ---
 # <a name="working-with-user-defined-types---manipulating-udt-data"></a>사용자 정의 형식 작업 - UDT 데이터 조작
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[tsql](../../includes/tsql-md.md)]에서는 UDT(사용자 정의 형식) 열의 데이터를 수정할 때 INSERT, UPDATE 또는 DELETE 문에 대한 특별한 구문을 제공하지 않습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 또는 CONVERT 함수는 네이티브 데이터 형식을 UDT 형식으로 캐스트하는 데 사용됩니다.  
   
 ## <a name="inserting-data-in-a-udt-column"></a>UDT 열에 데이터 삽입  
@@ -101,7 +101,7 @@ ID xVal yVal
 ```  
   
 ## <a name="working-with-variables"></a>변수 작업  
- DECLARE 문에 변수를 사용하여 UDT 형식에 변수를 할당할 수 있습니다. 다음 문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] SET 문을 사용 하 여 값을 할당 하 고 변수에서 UDT의 **ToString** 메서드를 호출 하 여 결과를 표시 합니다.  
+ DECLARE 문에 변수를 사용하여 UDT 형식에 변수를 할당할 수 있습니다. 다음 문은 SET 문을 사용 하 여 값을 할당 [!INCLUDE[tsql](../../includes/tsql-md.md)] 하 고 변수에서 UDT의 **ToString** 메서드를 호출 하 여 결과를 표시 합니다.  
   
 ```sql  
 DECLARE @PointValue Point;  
@@ -223,7 +223,7 @@ SET PointValue.Y = 99
 WHERE ID = 3  
 ```  
   
- 바이트 순서를 **true**로 설정 하 여 udt가 정의 된 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 은 where 절에서 udt 열을 평가할 수 있습니다.  
+ 바이트 순서를 **true**로 설정 하 여 udt가 정의 된 경우은 [!INCLUDE[tsql](../../includes/tsql-md.md)] WHERE 절에서 udt 열을 평가할 수 있습니다.  
   
 ```sql  
 UPDATE dbo.Points  

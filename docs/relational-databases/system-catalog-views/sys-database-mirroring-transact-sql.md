@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 549c60eff284c4302f3695786bc87074c9b0d617
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 84fd6a1b23287b53115a21cd519244525d7939ab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821755"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725788"
 ---
 # <a name="sysdatabase_mirroring-transact-sql"></a>sys.database_mirroring(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있는 각 데이터베이스에 대해 한 행을 포함합니다. 데이터베이스가 ONLINE이 아니거나 데이터베이스 미러링이 설정되어 있지 않으면 database_id를 제외한 모든 열의 값이 NULL이 됩니다.  
   
@@ -46,13 +46,13 @@ ms.locfileid: "82821755"
 |**mirroring_role_desc**|**nvarchar(60)**|미러링에서 로컬 데이터베이스가 수행하는 역할에 대한 설명이며 다음 값 중 하나일 수 있습니다.<br /><br /> PRINCIPAL<br /><br /> MIRROR|  
 |**mirroring_role_sequence**|**int**|장애 조치 또는 강제 서비스로 인해 미러링 파트너가 주 서버 및 미러 서버 역할을 전환한 횟수입니다.<br /><br /> NULL= 데이터베이스가 액세스 가능하지 않거나 미러되지 않습니다.|  
 |**mirroring_safety_level**|**tinyint**|미러 데이터베이스 업데이트를 위한 보안 설정입니다.<br /><br /> 0 = 알 수 없는 상태<br /><br /> 1 = Off[비동기]<br /><br /> 2 = Full[동기]<br /><br /> NULL= 데이터베이스가 액세스 가능하지 않거나 미러되지 않습니다.|  
-|**mirroring_safety_level_desc**|**nvarchar(60)**|미러 데이터베이스 업데이트를 위한 트랜잭션 보안 설정이며 다음 값 중 하나일 수 있습니다.<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL|  
+|**mirroring_safety_level_desc**|**nvarchar(60)**|미러 데이터베이스 업데이트를 위한 트랜잭션 보안 설정이며 다음 값 중 하나일 수 있습니다.<br /><br /> 알 수 없음<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL|  
 |**mirroring_safety_sequence**|**int**|트랜잭션 보안 수준 변경 내용에 대한 시퀀스 번호를 업데이트합니다.<br /><br /> NULL= 데이터베이스가 액세스 가능하지 않거나 미러되지 않습니다.|  
 |**mirroring_partner_name**|**nvarchar(128)**|데이터베이스 미러링 파트너의 서버 이름입니다.<br /><br /> NULL= 데이터베이스가 액세스 가능하지 않거나 미러되지 않습니다.|  
 |**mirroring_partner_instance**|**nvarchar(128)**|다른 파트너의 인스턴스 이름 및 컴퓨터 이름입니다. 클라이언트는 파트너가 주 서버가 되면 이 정보를 사용하여 파트너에 연결합니다.<br /><br /> NULL= 데이터베이스가 액세스 가능하지 않거나 미러되지 않습니다.|  
 |**mirroring_witness_name**|**nvarchar(128)**|데이터베이스 미러링 모니터 서버의 이름입니다.<br /><br /> NULL = 미러링 모니터 서버가 없음|  
 |mirroring_witness_state|**tinyint**|데이터베이스의 데이터베이스 미러링 세션에 있는 미러링 모니터 서버의 상태이며 다음 값 중 하나일 수 있습니다.<br /><br /> 0 = 알 수 없음<br /><br /> 1 = 연결됨<br /><br /> 2 = 연결 끊김<br /><br /> NULL = 미러링 모니터가 없거나, 데이터베이스가 온라인 상태가 아니거나, 데이터베이스가 미러되지 않음|  
-|**mirroring_witness_state_desc**|**nvarchar(60)**|상태에 대한 설명이며 다음 값 중 하나일 수 있습니다.<br /><br /> UNKNOWN<br /><br /> CONNECTED<br /><br /> DISCONNECTED<br /><br /> NULL|  
+|**mirroring_witness_state_desc**|**nvarchar(60)**|상태에 대한 설명이며 다음 값 중 하나일 수 있습니다.<br /><br /> 알 수 없음<br /><br /> CONNECTED<br /><br /> DISCONNECTED<br /><br /> NULL|  
 |**mirroring_failover_lsn**|**numeric(25,0)**|두 파트너 모두의 디스크에 확정될 최신 트랜잭션 로그 레코드의 LSN(로그 시퀀스 번호)입니다. 장애 조치 (failover) 후에는 새 미러 서버가 새 주 데이터베이스와 새 미러 데이터베이스를 동기화 하기 시작 하는 조정 지점으로 파트너가 **mirroring_failover_lsn** 사용 됩니다.|  
 |**mirroring_connection_timeout**|**int**|미러링 연결 제한 시간(초)입니다. 이 값은 파트너 또는 미러링 모니터 서버가 사용할 수 없는 것으로 간주되기 전에 해당 서버의 응답을 대기하는 시간(초)입니다. 기본 제한 시간 값은 10초입니다.<br /><br /> NULL= 데이터베이스가 액세스 가능하지 않거나 미러되지 않습니다.|  
 |**mirroring_redo_queue**|**int**|미러에서 다시 실행할 최대 로그 크기입니다. mirroring_redo_queue_type을 기본 설정인 UNLIMITED로 설정하면 이 열은 NULL입니다. 데이터베이스가 온라인이 아닌 경우에도 이 열은 NULL입니다.<br /><br /> 그렇지 않으면 이 열에는 최대 로그 크기(MB)가 포함됩니다. 최대값에 도달하면 로그는 미러 서버가 처리할 수 있도록 주 서버에서 일시 대기합니다. 이 기능은 장애 조치 시간을 제한합니다.<br /><br /> 자세한 내용은 [역할 전환 중 서비스 중단 예측&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)프로세스를 통해 주 역할과 미러 역할을 서로 바꿀 수 있습니다.|  

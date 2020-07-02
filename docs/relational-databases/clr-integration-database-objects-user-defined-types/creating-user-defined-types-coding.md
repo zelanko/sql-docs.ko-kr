@@ -31,15 +31,15 @@ helpviewer_keywords:
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9d51cc0c33c8b656df176baa606a88a542ca4bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5339a0d52754c19024a3774962d947bb4240ccba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486962"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727819"
 ---
 # <a name="creating-user-defined-types---coding"></a>사용자 정의 형식 만들기 - 코딩
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   UDT(사용자 정의 형식) 정의를 코딩하는 경우 UDT를 클래스 또는 구조로 구현할지 여부와 선택한 형식 및 직렬화 옵션에 따라 다양한 기능을 구현해야 합니다.  
   
  이 단원의 예제에서는 **Point** UDT를 **구조체로** 구현 하는 방법에 대해 설명 합니다 **(또는 Visual Basic** ). **Point** UDT는 속성 프로시저로 구현 된 X 및 Y 좌표로 구성 됩니다.  
@@ -58,7 +58,7 @@ using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;  
 ```  
   
- SqlTypes **네임 스페이스는** UDT의 다양 한 특성에 필요한 개체를 포함 하 고, 어셈블리에 사용할 **System.Data.SqlTypes** 수 있는 네이티브 데이터 형식을 나타내는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클래스를 포함 합니다. 물론 어셈블리가 올바르게 작동하는 데 필요한 추가 네임스페이스가 있을 수도 있습니다. **Point** UDT는 또한 system.string 네임 스페이스를 사용 **하 여 문자열** 작업을 수행 합니다.  
+ **SqlTypes** 네임 스페이스는 UDT의 다양 한 특성에 필요한 개체를 포함 **하 고,** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 어셈블리에 사용할 수 있는 네이티브 데이터 형식을 나타내는 클래스를 포함 합니다. 물론 어셈블리가 올바르게 작동하는 데 필요한 추가 네임스페이스가 있을 수도 있습니다. **Point** UDT는 또한 system.string 네임 스페이스를 사용 **하 여 문자열** 작업을 수행 합니다.  
   
 > [!NOTE]  
 >  **/Clr: pure** 로 컴파일된 udt와 같은 Visual C++ 데이터베이스 개체는 실행을 지원 하지 않습니다.  
@@ -89,11 +89,11 @@ public struct Point : INullable
 ```  
   
 ## <a name="implementing-nullability"></a>Null 허용 여부 구현  
- 어셈블리의 특성을 올바르게 지정하는 것 외에도 UDT는 Null 허용 여부를 지원해야 합니다. 로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로드 되는 udt는 null을 인식 하지만 udt에서 null 값을 인식 하려면 Udt가 **SqlTypes** 을 구현 해야 합니다.  
+ 어셈블리의 특성을 올바르게 지정하는 것 외에도 UDT는 Null 허용 여부를 지원해야 합니다. 로 로드 되는 Udt는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] null을 인식 하지만 udt에서 null 값을 인식 하려면 udt가 **SqlTypes** 을 구현 해야 합니다.  
   
  CLR 코드 내에서 값이 null 인지 여부를 확인 하는 데 필요한 **IsNull**이라는 속성을 만들어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 UDT의 Null 인스턴스를 찾으면 일반적인 Null 처리 메서드를 사용하여 UDT가 유지됩니다. 서버는 필요하지 않은 경우 UDT 직렬화 또는 역직렬화하는 데 시간을 낭비하지 않으며 Null UDT를 저장하는 공간을 낭비하지 않습니다. 이 Null 검사는 CLR에서 UDT를 가져올 때마다 수행되므로 [!INCLUDE[tsql](../../includes/tsql-md.md)] IS NULL 구문을 사용한 Null UDT 검사가 항상 작동해야 합니다. **IsNull** 속성은 서버에서 인스턴스가 null 인지 여부를 테스트 하는 데도 사용 됩니다. 서버에서 UDT가 Null임을 확인하면 기본 Null 처리를 사용할 수 있습니다.  
   
- **IsNull** 의 **get ()** 메서드는 특별 한 대/소문자를 구분 하지 않습니다. **Point** 변수 ** \@p** 가 **Null**이면 ** \@p. IsNull** 은 기본적으로 "1"이 아닌 "Null"로 평가 됩니다. 이는 **IsNull get ()** 메서드의 **Sqlmethod (onnullcall)** 특성이 기본적으로 false 이기 때문입니다. 개체가 **Null**이기 때문에 속성이 요청 되 면 개체가 deserialize 되지 않고 메서드가 호출 되지 않으며 기본값 "Null"이 반환 됩니다.  
+ **IsNull** 의 **get ()** 메서드는 특별 한 대/소문자를 구분 하지 않습니다. **Point** 변수 ** \@ p** 가 **Null**이면 ** \@ p. IsNull** 은 기본적으로 "1"이 아닌 "Null"로 평가 됩니다. 이는 **IsNull get ()** 메서드의 **Sqlmethod (onnullcall)** 특성이 기본적으로 false 이기 때문입니다. 개체가 **Null**이기 때문에 속성이 요청 되 면 개체가 deserialize 되지 않고 메서드가 호출 되지 않으며 기본값 "Null"이 반환 됩니다.  
   
 ### <a name="example"></a>예제  
  다음 예에서 `is_Null` 변수는 프라이빗이며 UDT 인스턴스에 대해 Null 상태를 포함합니다. 코드에서 `is_Null`에 적합한 값을 유지해야 합니다. Udt에는 또한 UDT의 null 값 인스턴스를 반환 하는 **null** 이라는 정적 속성이 있어야 합니다. 이렇게 하면 인스턴스가 데이터베이스에서 실제로 Null인 경우 UDT에서 Null 값을 반환할 수 있습니다.  
@@ -156,7 +156,7 @@ FROM Points
 WHERE location.IsNull = 0;  
 ```  
   
- 두 쿼리 모두**Null** 이 아닌 위치에 있는 점의 id를 반환 합니다. 쿼리 1에서는 일반적인 Null 처리가 사용되며 UDT의 역직렬화가 필요하지 않습니다. 반면에 쿼리 2는**Null** 이 아닌 각 개체를 deserialize 하 고 CLR로 호출 하 여 **IsNull** 속성의 값을 가져와야 합니다. 분명히 **IS NULL** 을 사용 하면 성능이 향상 되 고 코드에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] UDT의 **IsNull** 속성을 읽는 이유가 없어야 합니다.  
+ 두 쿼리 모두**Null** 이 아닌 위치에 있는 점의 id를 반환 합니다. 쿼리 1에서는 일반적인 Null 처리가 사용되며 UDT의 역직렬화가 필요하지 않습니다. 반면에 쿼리 2는**Null** 이 아닌 각 개체를 deserialize 하 고 CLR로 호출 하 여 **IsNull** 속성의 값을 가져와야 합니다. 분명히 **IS NULL** 을 사용 하면 성능이 향상 되 고 코드에서 UDT의 **IsNull** 속성을 읽는 이유가 없어야 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  따라서 **IsNull** 속성의 용도는 무엇 인가요? 먼저 CLR 코드 내에서 값이 **Null** 인지 여부를 확인 해야 합니다. 두 번째로 서버에서 인스턴스가 **Null**인지 여부를 테스트 하는 방법이 필요 하므로이 속성은 서버에서 사용 됩니다. **Null**인지 확인 한 후에는 해당 네이티브 null 처리를 사용 하 여 처리할 수 있습니다.  
   
@@ -544,7 +544,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  **SqlMethodAttribute** 클래스는 메서드 정의를 표시 하는 데 사용할 수 있는 사용자 지정 특성을 제공 하 여 명확성을 지정 하 고, null 호출 동작을 지정 하 고, 메서드가 변경자 (mutator) 인지 여부를 지정 합니다. 이러한 속성에 대해서는 기본값이 사용되며, 사용자 지정 특성은 기본값이 아닌 값이 필요한 경우에만 사용됩니다.  
   
 > [!NOTE]  
->  **SqlMethodAttribute** 클래스는 **SqlFunctionAttribute** 클래스에서 상속 하므로 **SqlMethodAttribute** 는 **SqlFunctionAttribute**의 **FillRowMethodName** 및 **tabledefinition** 필드를 상속 합니다. 즉, 적합하지 않은 테이블 반환 메서드를 쓸 수 있음을 의미합니다. 메서드가 컴파일되고 어셈블리를 배포 하지만 **IEnumerable** 반환 형식에 대 한 오류가 런타임에 발생 합니다 .이는 어셈블리 ' assembly '\<\<\<의 클래스 ' 클래스> '에 있는 "메서드, 속성 또는 필드 ' 이름> '이 (가)> '의 반환 형식이 잘못 되었습니다." 라는 메시지와 함께 런타임에 발생 합니다.  
+>  **SqlMethodAttribute** 클래스는 **SqlFunctionAttribute** 클래스에서 상속 하므로 **SqlMethodAttribute** 는 **SqlFunctionAttribute**의 **FillRowMethodName** 및 **tabledefinition** 필드를 상속 합니다. 즉, 적합하지 않은 테이블 반환 메서드를 쓸 수 있음을 의미합니다. 메서드가 컴파일되고 어셈블리가 배포 되지만 **IEnumerable** 반환 형식에 대 한 오류는 런타임에 "' 어셈블리의 ' ' 클래스에 있는" 메서드, 속성 또는 필드 ' ' \<name> 의 \<class> 반환 형식이 잘못 되었습니다. "라는 메시지와 함께 발생 \<assembly> 합니다.  
   
  다음 표에서는 UDT 메서드에 사용할 수 있는 관련 **SqlMethodAttribute** 속성 중 일부에 대해 설명 하 고 해당 기본값을 나열 합니다.  
   
@@ -569,13 +569,13 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
 > [!NOTE]  
 >  변경자(mutator) 메서드는 쿼리에 사용할 수 없으며, 대입문이나 데이터 수정 문에서만 호출할 수 있습니다. 변경자 (mutator)로 표시 된 메서드가 **void** 를 반환 하지 않거나 Visual Basic의 **하위** 가 아닌 경우 CREATE TYPE은 오류와 함께 실패 합니다.  
   
- 다음 문은 **회전** 메서드가 있는 **삼각형** UDT가 있다고 가정 합니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] Update 문은 **Rotate** 메서드를 호출 합니다.  
+ 다음 문은 **회전** 메서드가 있는 **삼각형** UDT가 있다고 가정 합니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] update 문은 **Rotate** 메서드를 호출 합니다.  
   
 ```  
 UPDATE Triangles SET t.RotateY(0.6) WHERE id=5  
 ```  
   
- **회전** 메서드는 **sqlmethod** 특성을 **true** 로 설정 하 여 데코 **레이트 하는** 메서드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 변경자 (mutator) 메서드로 표시할 수 있도록 합니다. 또한이 코드는 **Onnullcall** 을 **false**로 설정 합니다 .이는 입력 매개 변수가 null 참조 인 경우 메서드가 null 참조 (Visual Basic의**Nothing** )를 반환 한다는 것을 서버에 나타냅니다.  
+ **회전** 메서드는 **sqlmethod** 특성을 **true** 로 설정 하 여 데코 **레이트 하는** 메서드를 변경자 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mutator) 메서드로 표시할 수 있도록 합니다. 또한이 코드는 **Onnullcall** 을 **false**로 설정 합니다 .이는 입력 매개 변수가 null 참조 인 경우 메서드가 null 참조 (Visual Basic의**Nothing** )를 반환 한다는 것을 서버에 나타냅니다.  
   
 ```vb  
 <SqlMethod(IsMutator:=True, OnNullCall:=False)> _  
@@ -601,7 +601,7 @@ public void Rotate(double anglex, double angley, double anglez)
  사용자 정의 형식으로 UDT를 구현할 때는 UDT 데이터 직렬화 및 역직렬화를 처리 하기 위해 IBinarySerialize 인터페이스를 구현 하는 **읽기** 및 **쓰기** 메서드를 구현 해야 합니다. 또한 **SqlUserDefinedTypeAttribute**의 **MaxByteSize** 속성을 지정 해야 합니다.  
   
 ### <a name="the-currency-udt"></a>Currency UDT  
- 에서 **Currency** 시작 하 여와 함께 설치할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]수 있는 CLR 샘플에는 Currency UDT가 포함 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]되어 있습니다.  
+ 에서 시작 하 여와 함께 설치할 수 있는 CLR 샘플에는 **Currency** UDT가 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
  **Currency** UDT는 특정 문화권의 통화 시스템에서 money의 금액 처리를 지원 합니다. 두 필드를 정의 해야 합니다. **CultureInfo**의 **문자열** 은 통화를 발급 한 사용자 (en-us, 예: en-us)를 지정 하 고 **CurrencyValue**에는 **10 진수** 금액을 지정 합니다.  
   
@@ -609,9 +609,9 @@ public void Rotate(double anglex, double angley, double anglez)
   
  CLR에서 실행되는 코드는 통화 값과 별도로 culture를 비교합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드의 경우 다음 동작에 의해 비교가 결정됩니다.  
   
-1.  **IsByteOrdered** 특성을 true로 설정 하 여 디스크 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 비교를 위해 지속형 이진 표현을 사용 하도록 지시 합니다.  
+1.  **IsByteOrdered** 특성을 true로 설정 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크에서 비교를 위해 지속형 이진 표현을 사용 하도록 지시 합니다.  
   
-2.  **Currency** udt에 대해 **Write** 메서드를 사용 하 여 udt가 디스크에 유지 되는 방식을 결정 하 고이에 따라 udt 값을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 비교 하 고 작업 순서를 지정 합니다.  
+2.  **Currency** udt에 대해 **Write** 메서드를 사용 하 여 udt가 디스크에 유지 되는 방식을 결정 하 고이에 따라 udt 값을 비교 하 고 작업 순서를 지정 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 3.  다음 이진 형식을 사용 하 여 **Currency** UDT를 저장 합니다.  
 

@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08c36963088684d415534e091a2764f576a86d22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07b1dc9d3f7beca9f048ec0e367c33922e388f32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488229"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727832"
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>사용자 정의 형식 액세스 - DataAdapters로 UDT 열 업데이트
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Udt (사용자 정의 형식)는 데이터를 검색 및 수정 **하는** **SqlDataAdapter** 및 데이터를 사용 하 여 지원 됩니다.  
   
 ## <a name="populating-a-dataset"></a>데이터 세트 채우기  
@@ -68,7 +68,7 @@ da.Fill(datTable);
   
 -   **SqlDataAdapter** 개체에 대 한 사용자 지정 **InsertCommand**, **UpdateCommand** 및 **DeleteCommand** 개체를 제공 합니다.  
   
--   명령 작성기 (**SqlCommandBuilder**)를 사용 하 여 자동으로 INSERT, UPDATE 및 DELETE 명령을 만듭니다. 충돌 감지를 위해 UDT가 포함 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 **timestamp** 열 (alias **rowversion**)을 추가 합니다. **Timestamp** 데이터 형식을 사용 하 여 테이블의 행을 버전 스탬프로 만들고 데이터베이스 내에서 고유 하 게 보장할 수 있습니다. 테이블의 값이 변경되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 변경이 적용되는 행의 8바이트 이진 숫자를 업데이트합니다.  
+-   명령 작성기 (**SqlCommandBuilder**)를 사용 하 여 자동으로 INSERT, UPDATE 및 DELETE 명령을 만듭니다. 충돌 감지를 위해 UDT가 포함 된 테이블에 **timestamp** 열 (alias **rowversion**)을 추가 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **Timestamp** 데이터 형식을 사용 하 여 테이블의 행을 버전 스탬프로 만들고 데이터베이스 내에서 고유 하 게 보장할 수 있습니다. 테이블의 값이 변경되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 변경이 적용되는 행의 8바이트 이진 숫자를 업데이트합니다.  
   
  기본 테이블에 **timestamp** 열이 없는 경우 **SqlCommandBuilder** 는 충돌 검색에 UDT를 고려 하지 않습니다. UDT는 비교가 가능할 수도 있고 불가능할 수도 있으므로 "원래 값 비교" 옵션을 사용하여 명령을 생성하는 경우 WHERE 절에 포함되지 않습니다.  
   

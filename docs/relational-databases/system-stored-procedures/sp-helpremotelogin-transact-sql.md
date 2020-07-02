@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d37cae4776a5a5fe67ed7e2265d9a23a28a725e8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3e277954a16e1e63d55e54b1eadb157c7f74a667
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824478"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729193"
 ---
 # <a name="sp_helpremotelogin-transact-sql"></a>sp_helpremotelogin(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   로컬 서버에서 정의된 특정 원격 서버 또는 모든 원격 서버에 대한 원격 로그인 정보를 보고합니다.  
   
@@ -64,10 +64,10 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 ## <a name="remarks"></a>설명  
  sp_helpserver를 사용하여 로컬 서버에 정의되어 있는 원격 서버 이름을 나열합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  사용 권한을 확인하지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-reporting-help-on-a-single-server"></a>A. 단일 서버에 관한 도움말 보고  
  다음 예에서는 `Accounts`라는 원격 서버의 모든 원격 사용자에 대한 정보를 표시합니다.  

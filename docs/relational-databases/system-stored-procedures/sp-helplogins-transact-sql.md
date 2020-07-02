@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c26bf0ff225a593a6427402fc15543edbfc15637
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 188013bc5566ea0423d4e395354b4cdfc2465fd0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818281"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733148"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   각 데이터베이스의 로그인 및 연관된 사용자에 관한 정보를 제공합니다.  
   
@@ -68,7 +68,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ## <a name="remarks"></a>설명  
  로그인을 제거 하기 전에 **sp_helplogins** 를 사용 하 여 로그인에 매핑된 사용자 계정을 식별 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Securityadmin** 고정 서버 역할의 멤버 자격이 필요 합니다.  
   
  지정 된 로그인에 매핑된 모든 사용자 계정을 식별 하려면 **sp_helplogins** 서버 내의 모든 데이터베이스를 확인 해야 합니다. 따라서 서버의 각 데이터베이스에 대해 다음 조건 중 최소한 하나를 만족해야 합니다.  
@@ -79,7 +79,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
   
  **Sp_helplogins** 데이터베이스에 액세스할 수 없는 경우 **sp_helplogins** 는 가능한 한 많은 정보를 반환 하 고 오류 메시지 15622을 표시 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `John`이라는 로그인에 대한 정보를 보고합니다.  
   
 ```  

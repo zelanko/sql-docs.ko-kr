@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 082fb2d1afdfa8824ea6f3d6e7bd3e4c484e281e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db27f240030115ea24d8d32e2ffa1d5e4bf8921e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388164"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729515"
 ---
 # <a name="comparison-expressions-xquery"></a>비교 식(XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   XQuery는 다음 유형의 비교 연산자를 제공합니다.  
   
@@ -80,7 +80,7 @@ set @x='<a>6</a>'
 select @x.query('/a[1] < "17"')  
 ```  
   
- 다음 쿼리는 AdventureWorks 예제 데이터베이스에 제공된 제품 카탈로그의 제품 모델에 대한 크기가 작은 사진을 반환합니다. 이 쿼리는 `PD:ProductDescription/PD:Picture/PD:Size`에서 반환되는 원자 값 시퀀스와 단일 시퀀스 "small"을 비교합니다. 비교가 True 이면 <그림\> 요소를 반환 합니다.  
+ 다음 쿼리는 AdventureWorks 예제 데이터베이스에 제공된 제품 카탈로그의 제품 모델에 대한 크기가 작은 사진을 반환합니다. 이 쿼리는 `PD:ProductDescription/PD:Picture/PD:Size`에서 반환되는 원자 값 시퀀스와 단일 시퀀스 "small"을 비교합니다. 비교가 True 이면 <그림 요소를 반환 합니다 \> .  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -91,7 +91,7 @@ FROM   Production.ProductModel
 WHERE  ProductModelID=19         
 ```  
   
- 다음 쿼리는 <number\> 요소의 전화 번호 시퀀스를 문자열 리터럴 "112-111-1111"과 비교 합니다. 이 쿼리는 AdditionalContactInfo 열에 있는 전화 번호 요소의 시퀀스를 비교하여 특정 고객에 대한 특정 전화 번호가 문서에 있는지 확인합니다.  
+ 다음 쿼리는 <number 요소의 전화 번호 시퀀스를 \> 문자열 리터럴 "112-111-1111"과 비교 합니다. 이 쿼리는 AdditionalContactInfo 열에 있는 전화 번호 요소의 시퀀스를 비교하여 특정 고객에 대한 특정 전화 번호가 문서에 있는지 확인합니다.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -104,7 +104,7 @@ FROM Person.Contact
 WHERE ContactID=1         
 ```  
   
- 쿼리에서 True를 반환합니다. 이는 번호가 문서에 있다는 의미입니다. 다음 쿼리는 위의 쿼리를 약간 수정한 버전입니다. 이 쿼리에서는 문서에서 검색한 전화 번호 값이 두 개의 전화 번호 값 시퀀스와 비교됩니다. 비교가 True 이면 <number\> 요소가 반환 됩니다.  
+ 쿼리에서 True를 반환합니다. 이는 번호가 문서에 있다는 의미입니다. 다음 쿼리는 위의 쿼리를 약간 수정한 버전입니다. 이 쿼리에서는 문서에서 검색한 전화 번호 값이 두 개의 전화 번호 값 시퀀스와 비교됩니다. 비교가 True 이면 <number \> 요소가 반환 됩니다.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -153,7 +153,7 @@ WHERE ContactID=1
   
  이러한 연산자는 단일 원자 값에서만 사용할 수 있습니다. 즉, 시퀀스를 피연산자 중 하나로 지정할 수 없습니다.  
   
- 예를 들어 다음 쿼리는 그림 \<크기가 "small" 인 제품 모델에 대 한 그림> 요소를 검색 합니다.  
+ 예를 들어 다음 쿼리는 \<Picture> 제품 모델에 대 한 요소를 검색 하며,이는 그림 크기가 "small:  
   
 ```  
 SELECT CatalogDescription.query('         
@@ -170,7 +170,7 @@ WHERE ProductModelID=19
   
 -   `declare namespace`는 다음에 쿼리에서 사용되는 네임스페이스 접두사를 정의합니다.  
   
--   \<크기> 요소 값을 지정 된 원자 값 "small"와 비교 합니다.  
+-   \<Size>요소 값을 지정 된 원자 값 "small"와 비교 합니다.  
   
 -   값 연산자는 원자성 값 에서만 작동 하기 때문에 **data ()** 함수는 노드 값을 검색 하는 데 암시적으로 사용 됩니다. 즉 `data($P/PD:Size) eq "small"`은 같은 결과를 생성합니다.  
   
@@ -225,7 +225,7 @@ ProductModelID       Result
   
 -   `>>`: **피연산자 1** 은 문서 순서에서 **피연산자 2** 를 따릅니다.  
   
- 다음 쿼리는 제품 카탈로그 설명에 특정 제품의 문서 순서 \<에서 \<유지 관리> 요소 앞에 표시 되는 보증> 요소가 있는 경우 True를 반환 합니다.  
+ 다음 쿼리는 제품 카탈로그 설명에 \<Warranty> \<Maintenance> 특정 제품의 문서 순서에서 요소 앞에 나타나는 요소가 있으면 True를 반환 합니다.  
   
 ```  
 WITH XMLNAMESPACES (  

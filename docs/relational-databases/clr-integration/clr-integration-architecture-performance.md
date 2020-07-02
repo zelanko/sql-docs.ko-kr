@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac12bf75588d70f12b4550260f9911796c1c3a56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8199df81aca3688855b771923f6fa19a0e4f33db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488164"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727632"
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR 통합 아키텍처 - 성능
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework CLR (공용 언어 런타임)과의 통합 성능을 향상 시키는 몇 가지 디자인 선택 사항에 대해 설명 합니다.  
   
 ## <a name="the-compilation-process"></a>컴파일 프로세스  
@@ -56,7 +56,7 @@ ms.locfileid: "81488164"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**varchar**와 같은 문자 데이터는 관리 되는 함수의 SqlString 또는 sqlchars 형식일 수 있습니다. SqlString 변수는 메모리에 전체 값의 인스턴스를 만듭니다. SqlChars 변수는 메모리에 전체 값의 인스턴스를 만들지 않고도 성능 및 확장성을 개선하는 데 사용할 수 있는 스트리밍 인터페이스를 제공합니다. LOB(큰 개체) 데이터의 경우 이러한 기능은 특히 중요합니다. 또한 **CreateReader ()** 에서 반환 된 스트리밍 인터페이스를 통해 서버 XML 데이터에 액세스할 수 있습니다.  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR 및 확장 저장 프로시저 비교  
- 관리되는 프로시저가 결과 집합을 클라이언트로 다시 보낼 수 있도록 지원하는 Microsoft.SqlServer.Server API(애플리케이션 프로그래밍 인터페이스)는 확장 저장 프로시저에서 사용되는 ODS(개방형 Data Services) API보다 성능이 우수합니다. 또한 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]system.xml api는에 도입 된 **xml**, **varchar (max)**, **nvarchar (max)** 및 **varbinary (MAX)** 와 같은 데이터 형식을 지원 하지만, ODS api는 새로운 데이터 형식을 지원 하도록 확장 되지 않았습니다.  
+ 관리되는 프로시저가 결과 집합을 클라이언트로 다시 보낼 수 있도록 지원하는 Microsoft.SqlServer.Server API(애플리케이션 프로그래밍 인터페이스)는 확장 저장 프로시저에서 사용되는 ODS(개방형 Data Services) API보다 성능이 우수합니다. 또한 **system.xml**api는에 도입 된 xml, **varchar (max)**, **nvarchar (max)** 및 **varbinary (max)** 와 같은 데이터 형식을 지원 하지만 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , ODS api는 새로운 데이터 형식을 지원 하도록 확장 되지 않았습니다.  
   
  관리 코드를 사용하면 메모리, 스레드 및 동기화와 같은 리소스 사용을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 관리합니다. 이러한 리소스를 노출하는 관리되는 API가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자를 기반으로 구현되기 때문입니다. 이와 달리 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 확장 저장 프로시저의 리소스 사용량을 보거나 제어할 수 없습니다. 예를 들어 확장 저장 프로시저가 CPU나 메모리 리소스를 너무 많이 소비하더라도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이를 감지하거나 제어할 수 없습니다. 반면에 관리 코드를 사용하면 지정된 스레드가 오랫동안 양보하지 않을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 이를 감지하여 다른 작업을 예약할 수 있도록 해당 태스크에 양보를 강요합니다. 따라서 관리 코드를 사용하면 확장성과 시스템 리소스 사용 효율이 개선됩니다.  
   

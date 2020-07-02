@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 576fe599772454cb0cc8a01bf28c530f5cdfb13b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb2b30da196f79fc10905ffb3ead95f8b5fca4d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278174"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733053"
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Sysmergeextendedarticlesview** 뷰는 아티클 정보를 제공 합니다. 이 뷰는 게시자의 게시 데이터베이스와 구독자의 구독 데이터베이스에 저장됩니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "72278174"
 |**identity_support**|**int**|자동 ID 범위 처리가 설정되었는지 여부를 지정합니다. **1** 은 id 범위 처리를 사용 하도록 설정 하 고 **0** 은 id 범위를 지원 하지 않음을 의미 합니다.|  
 |**destination_owner**|**sysname**|대상 개체의 소유자 이름입니다.|  
 |**before_image_objid**|**int**|추적 테이블의 개체 ID입니다. 파티션 변경 최적화를 활성화하도록 게시를 구성하면 추적 테이블에 특정 키 열 값이 포함됩니다.|  
-|**before_view_objid**|**int**|뷰 테이블의 개체 ID입니다. 뷰는 행이 삭제 또는 업데이트되기 전에 특정 구독자에 속했는지를 추적하는 테이블에 있습니다. * \@Keep_partition_changes* = **true**를 사용 하 여 게시를 만들 때만 적용 됩니다.|  
+|**before_view_objid**|**int**|뷰 테이블의 개체 ID입니다. 뷰는 행이 삭제 또는 업데이트되기 전에 특정 구독자에 속했는지를 추적하는 테이블에 있습니다. * \@ Keep_partition_changes*true를 사용 하 여 게시를 만들 때만 적용 됩니다  =  **true**.|  
 |**verify_resolver_signature**|**int**|해결 프로그램을 병합 복제에 사용하기 전에 디지털 서명을 확인할지 여부를 지정합니다.<br /><br /> **0** = 서명이 확인 되지 않습니다.<br /><br /> **1** = 서명을 확인 하 여 신뢰할 수 있는 원본에서 가져온 것인지 확인 합니다.|  
 |**allow_interactive_resolver**|**bit**|아티클에 대화형 해결 프로그램을 사용할지 여부를 지정합니다. **1** 은 대화형 해결 프로그램을 아티클에서 사용 하도록 지정 합니다.|  
 |**fast_multicol_updateproc**|**bit**|병합 에이전트를 사용하도록 설정하여 한 UPDATE 문에서 같은 행의 여러 열에 변경 사항을 적용했는지 여부를 지정합니다.<br /><br /> **0** = 변경 된 각 열에 대해 별도의 업데이트를 발급 합니다.<br /><br /> **1** = 한 문의 여러 열에 대 한 업데이트를 발생 시키는 UPDATE 문에서 실행 됩니다.|  
@@ -82,8 +82,8 @@ ms.locfileid: "72278174"
 |**delete_tracking**|**bit**|삭제 내용을 복제할지 여부를 나타냅니다.<br /><br /> **0** = 삭제가 복제 되지 않습니다.<br /><br /> **1** = 병합 복제에 대 한 기본 동작인 삭제가 복제 됩니다.<br /><br /> *Delete_tracking* 값이 **0**이면 구독자에서 삭제 된 행을 게시자에서 수동으로 제거 하 고 게시자에서 삭제 된 행을 구독자에서 수동으로 제거 해야 합니다.<br /><br /> 참고: 값 **0** 은 일치 하지 않습니다.|  
 |**compensate_for_errors**|**bit**|동기화 중에 오류가 발생할 경우 보정 동작이 수행될지 여부를 나타냅니다.<br /><br /> **0** = 보정 동작을 사용할 수 없습니다.<br /><br /> **1** = 구독자 또는 게시자에서 적용할 수 없는 변경 내용은 항상 보정 동작을 수행 하 여 병합 복제의 기본 동작을 실행 취소 합니다.<br /><br /> 참고: 값 **0** 은 일치 하지 않습니다.|  
 |**pub_range**|**bigint**|게시자 ID의 범위 크기입니다.|  
-|**벗어납니다**|**bigint**|조정 시 구독자에게 할당되는 연속 ID 값의 크기입니다.|  
-|**고대비**|**int**|ID 범위 임계값 비율입니다.|  
+|**range**|**bigint**|조정 시 구독자에게 할당되는 연속 ID 값의 크기입니다.|  
+|**threshold**|**int**|ID 범위 임계값 비율입니다.|  
 |**metadata_select_proc**|**sysname**|병합 복제 시스템 테이블의 메타데이터에 액세스하기 위해 사용하는 자동 생성 저장 프로시저의 이름입니다.|  
 |**stream_blob_columns**|**bit**|이진 대용량 개체 열을 복제할 때 데이터 스트림 최적화를 사용할지 지정합니다. **1** 은 최적화가 시도 됨을 의미 합니다.|  
 |**preserve_rowguidcol**|**bit**|복제에 기존 rowguid 열이 사용될지 여부를 나타냅니다. 값 **1** 은 기존 ROWGUIDCOL 열이 사용 됨을 의미 합니다. **0** 은 복제가 ROWGUIDCOL 열을 추가 했음을 의미 합니다.|  

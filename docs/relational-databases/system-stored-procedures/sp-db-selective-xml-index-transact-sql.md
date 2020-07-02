@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d34cc5e283a94a59d2c6a540ab42b7d520d895f7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: eeed1432c6f3c3ba4f6dcd80608c2c40bd0db374
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831693"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728208"
 ---
 # <a name="sp_db_selective_xml_index-transact-sql"></a>sp_db_selective_xml_index(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 선택적 XML 인덱스 기능을 설정 및 해제합니다. 매개 변수 없이 호출할 경우, 특정 데이터베이스에서 선택적 XML 인덱스가 설정되어 있으면 저장 프로시저에서 1을 반환합니다.  
   
@@ -55,7 +55,7 @@ Allowed values: 'on', 'off', 'true', 'false'
 ## <a name="return-code-values"></a>반환 코드 값  
  특정 데이터베이스에서 선택적 XML 인덱스를 사용 하는 경우 **1** 입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-enable-selective-xml-index-functionality"></a>A. 선택적 XML 인덱스 기능 설정  
  다음 예에서는 현재 데이터베이스에서 선택적 XML 인덱스를 설정합니다.  

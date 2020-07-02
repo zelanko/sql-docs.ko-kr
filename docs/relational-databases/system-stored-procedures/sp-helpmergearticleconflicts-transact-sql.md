@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8657fda01875b6c0ec78ecad0334f9f74b3e7eab
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 01bbcce9c632bce61cf0417b940d7b938c2dd6d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833167"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733107"
 ---
 # <a name="sp_helpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   충돌이 있는 게시 내의 아티클을 반환합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자 또는 병합 구독 데이터베이스의 구독자에서 실행됩니다.  
   
@@ -49,7 +49,7 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**자료**|**sysname**|아티클의 이름입니다.|  
+|**문서**|**sysname**|아티클의 이름입니다.|  
 |**source_owner**|**sysname**|원본 개체 소유자의 이름입니다.|  
 |**source_object**|**nvarchar (386)**|원본 개체의 이름입니다.|  
 |**conflict_table**|**nvarchar(258)**|삽입 또는 업데이트 충돌을 저장하고 있는 테이블의 이름입니다.|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 74860a8f4c8dee263ea7ee0eea75679c721d1fa5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28eb993cc6755d596d49e7930a3fd68b884b8f29
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68032985"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731717"
 ---
 # <a name="sp_addapprole-transact-sql"></a>sp_addapprole(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스에 애플리케이션 역할을 추가합니다.  
   
@@ -44,7 +44,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ## <a name="arguments"></a>인수  
 `[ @rolename = ] 'role'`새 응용 프로그램 역할의 이름입니다. *role* 은 **sysname**이며 기본값은 없습니다. *role* 은 올바른 식별자 여야 하며 현재 데이터베이스에 이미 존재할 수 없습니다.  
   
- 애플리케이션 역할 이름은 문자, 기호 및 숫자를 비롯하여 1자에서 128자까지의 문자를 포함할 수 있습니다. 역할 이름은 백슬래시 (\\)를 포함 하거나 NULL 또는 빈 문자열 (' ') 일 수 없습니다.  
+ 애플리케이션 역할 이름은 문자, 기호 및 숫자를 비롯하여 1자에서 128자까지의 문자를 포함할 수 있습니다. 역할 이름은 백슬래시 ()를 포함 \\ 하거나 NULL 또는 빈 문자열 (' ') 일 수 없습니다.  
   
 `[ @password = ] 'password'`응용 프로그램 역할을 활성화 하는 데 필요한 암호입니다. *password* 는 **sysname**이며 기본값은 없습니다. *암호* 는 NULL 일 수 없습니다.  
   
@@ -54,7 +54,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ## <a name="remarks"></a>설명  
  이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자 및 역할은 스키마와 완전히 구분되지 않았습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터 스키마는 역할과 완전히 구분됩니다. 이 새 아키텍처는 CREATE APPLICATION ROLE의 동작에 반영되었습니다. 이 문은 **sp_addapprole**를 대체 합니다.  
   
- 이전 버전과의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]호환성을 유지 하기 위해 **sp_addapprole** 은 다음을 수행 합니다.  
+ 이전 버전과의 호환성을 유지 하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sp_addapprole** 은 다음을 수행 합니다.  
   
 -   애플리케이션 역할과 이름이 같은 스키마가 아직 없으면 해당 스키마가 생성됩니다. 새 스키마는 애플리케이션 역할이 소유하고 애플리케이션 역할의 기본 스키마가 됩니다.  
   
@@ -72,8 +72,8 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 ALTER ANY APPLICATION ROLE 권한이 필요합니다. 새 역할과 이름 및 소유자가 같은 스키마가 아직 없으면 데이터베이스에 대한 CREATE SCHEMA 권한도 필요합니다.  
   
-## <a name="examples"></a>예  
- 다음 예에서는 현재 데이터베이스에 암호 `SalesApp` `x97898jLJfcooFUYLKm387gf3` 를 사용 하 여 새 응용 프로그램 역할을 추가 합니다.  
+## <a name="examples"></a>예제  
+ 다음 예에서는 `SalesApp` 현재 데이터베이스에 암호를 사용 하 여 새 응용 프로그램 역할을 추가 합니다 `x97898jLJfcooFUYLKm387gf3` .  
   
 ```  
 EXEC sp_addapprole 'SalesApp', 'x97898jLJfcooFUYLKm387gf3' ;  

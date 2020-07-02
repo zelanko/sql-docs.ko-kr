@@ -20,29 +20,29 @@ helpviewer_keywords:
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b19a9179cba2225a2209255ce48220669e4bbef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b20192a3804dfba713b04706d528738ceb8768c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486982"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727811"
 ---
 # <a name="creating-user-defined-types---requirements"></a>사용자 정의 형식 만들기 - 요구 사항
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치할 UDT (사용자 정의 형식)를 만들 때 몇 가지 중요 한 디자인 결정을 내려야 합니다. 대부분의 UDT는 구조로 만드는 것이 좋지만 클래스로 만드는 방법도 고려해 볼 수 있습니다. UDT 정의가 UDT 생성 사양에 맞아야만 UDT 정의를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 등록할 수 있습니다.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  에 설치할 UDT (사용자 정의 형식)를 만들 때 몇 가지 중요 한 디자인 결정을 내려야 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 대부분의 UDT는 구조로 만드는 것이 좋지만 클래스로 만드는 방법도 고려해 볼 수 있습니다. UDT 정의가 UDT 생성 사양에 맞아야만 UDT 정의를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 등록할 수 있습니다.  
   
 ## <a name="requirements-for-implementing-udts"></a>UDT 구현을 위한 요구 사항  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 UDT를 실행하려면 UDT 정의에서 다음 요구 사항을 구현해야 합니다.  
   
  UDT는 **SqlUserDefinedTypeAttribute**를 지정 해야 합니다. **SerializableAttribute** 사용은 선택 사항 이지만 권장 됩니다.  
   
--   UDT는 public **static** (Visual Basic에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] **공유** ) **Null** 메서드를 만들어 클래스나 구조체에서 **SqlTypes** 을 구현 해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 기본적으로 Null을 인식합니다. 이 작업은 UDT를 실행하는 코드에서 Null 값을 인식할 수 있도록 하는 데 필요합니다.  
+-   UDT는 public **static** ( **System.Data.SqlTypes.INullable** Visual Basic에서**공유** [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) **Null** 메서드를 만들어 클래스나 구조체에서 SqlTypes을 구현 해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 기본적으로 Null을 인식합니다. 이 작업은 UDT를 실행하는 코드에서 Null 값을 인식할 수 있도록 하는 데 필요합니다.  
   
 -   UDT에는의 구문 분석을 지 원하는 공용 **정적** (또는 **공유**) **구문 분석** 메서드와 개체의 문자열 표현으로 변환 하기 위한 공용 **ToString** 메서드가 포함 되어야 합니다.  
   
 -   사용자 정의 직렬화 형식의 UDT는 **IBinarySerialize** 인터페이스를 구현 하 고 **읽기** 및 **쓰기** 메서드를 제공 해야 합니다.  
   
--   UDT는 XmlIgnore를 **구현 해야 합니다. 또는**표준 Serialization이 필요한 경우 모든 public 필드와 속성은 xml Serializable 또는 **XmlIgnore** 특성을 사용 하 여 데코레이팅된 형식 이어야 합니다.  
+-   UDT는System.Xml를 구현 해야 합니다 **. Serialization. IXmlSerializable**또는 모든 public 필드와 속성은 표준 직렬화를 재정의 해야 하는 경우 **XmlIgnore** 특성을 사용 하 여 XML serializable 또는 데코레이팅된 형식 이어야 합니다.  
   
 -   UDT 개체의 직렬화가 하나만 있어야 합니다. 직렬화 또는 역직렬화 루틴에서 특정 개체의 표현을 두 개 이상 인식하면 유효성 검사가 실패합니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "81486982"
   
 -   UDT가 데이터 요소를 공용 필드나 속성 프로시저로 표시해야 합니다.  
   
--   공개 이름은 128 자 보다 길 수 없으며 [데이터베이스 식별자](../../relational-databases/databases/database-identifiers.md)에 정의 된 식별자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 명명 규칙을 따라야 합니다.  
+-   공개 이름은 128 자 보다 길 수 없으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [데이터베이스 식별자](../../relational-databases/databases/database-identifiers.md)에 정의 된 식별자의 명명 규칙을 따라야 합니다.  
   
 -   **sql_variant** 열은 UDT의 인스턴스를 포함할 수 없습니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "81486982"
 >  서버에서는 비교를 수행 하는 데 사용 되지 않지만, 단일 메서드인 **CompareTo**를 노출 하는 **system.string 인터페이스를** 선택적으로 구현할 수 있습니다. 이 인터페이스는 UDT 값을 정확하게 비교하거나 정렬해야 하는 경우에 클라이언트 쪽에서 사용됩니다.  
   
 ## <a name="native-serialization"></a>네이티브 직렬화  
- 만들려는 UDT의 종류에 따라 UDT에 적합한 직렬화 특성을 선택해야 합니다. **네이티브** serialization 형식은를 사용 하 여 디스크에 UDT의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 효율적인 기본 표현을 저장할 수 있는 매우 간단한 구조를 활용 합니다. UDT가 단순 하 고 다음 형식의 필드만 포함 하는 경우 **네이티브** 형식을 권장 합니다.  
+ 만들려는 UDT의 종류에 따라 UDT에 적합한 직렬화 특성을 선택해야 합니다. **네이티브** serialization 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용 하 여 디스크에 UDT의 효율적인 기본 표현을 저장할 수 있는 매우 간단한 구조를 활용 합니다. UDT가 단순 하 고 다음 형식의 필드만 포함 하는 경우 **네이티브** 형식을 권장 합니다.  
   
  **bool**, **byte**, **sbyte**, **short**, **ushort**, **int**, **uint**, **long**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
@@ -99,15 +99,15 @@ ms.locfileid: "81486982"
 >  UDT 필드를 인덱싱하려면 UDT 필드에 네이티브 직렬화를 사용하거나 필드를 지속형 필드로 만들어야 합니다.  
   
 ## <a name="serialization-attributes"></a>직렬화 특성  
- 특성은 직렬화를 사용하여 UDT의 스토리지 표현을 생성하고 UDT를 값으로 클라이언트에 전송하는 방법을 결정합니다. UDT를 만들 때 **SqlUserDefinedTypeAttribute** 를 지정 해야 합니다. **SqlUserDefinedTypeAttribute** 특성은 클래스가 udt 임을 나타내며 udt에 대 한 저장소를 지정 합니다. 필요 하지 않지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 **serialize** 할 수 있는 특성을 지정할 수 있습니다.  
+ 특성은 직렬화를 사용하여 UDT의 스토리지 표현을 생성하고 UDT를 값으로 클라이언트에 전송하는 방법을 결정합니다. UDT를 만들 때 **SqlUserDefinedTypeAttribute** 를 지정 해야 합니다. **SqlUserDefinedTypeAttribute** 특성은 클래스가 udt 임을 나타내며 udt에 대 한 저장소를 지정 합니다. 필요 하지 않지만는 **serialize** 할 수 있는 특성을 지정할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **SqlUserDefinedTypeAttribute** 에는 다음과 같은 속성이 있습니다.  
   
- **형식**  
+ **Format**  
  UDT의 데이터 **형식에 따라**네이티브 또는 **기본** 설정으로 사용할 수 있는 serialization 형식을 지정 합니다.  
   
  **IsByteOrdered**  
- 에서 **Boolean** UDT에 대 한 이진 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 비교를 수행 하는 방법을 결정 하는 부울 값입니다.  
+ **Boolean** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 UDT에 대 한 이진 비교를 수행 하는 방법을 결정 하는 부울 값입니다.  
   
  **IsFixedLength**  
  이 UDT의 모든 인스턴스 길이가 같은지 여부를 나타냅니다.  
@@ -146,13 +146,13 @@ ms.locfileid: "81486982"
 -   작거나 같음(<=)  
   
 ### <a name="implementing-nullability"></a>Null 허용 여부 구현  
- 어셈블리의 특성을 올바르게 지정하는 것 외에도 클래스는 Null 허용 여부를 지원해야 합니다. 로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로드 되는 udt는 null을 인식 하지만 udt에서 null 값을 인식 하려면 클래스에서 **inullable** 인터페이스를 구현 해야 합니다. UDT에서 null 허용 여부를 구현 하는 방법에 대 한 자세한 내용 및 예제는 [사용자 정의 형식 코딩](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)을 참조 하세요.  
+ 어셈블리의 특성을 올바르게 지정하는 것 외에도 클래스는 Null 허용 여부를 지원해야 합니다. 로 로드 되는 Udt는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] null을 인식 하지만 udt에서 null 값을 인식 하려면 클래스에서 **Inullable** 인터페이스를 구현 해야 합니다. UDT에서 null 허용 여부를 구현 하는 방법에 대 한 자세한 내용 및 예제는 [사용자 정의 형식 코딩](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)을 참조 하세요.  
   
 ### <a name="string-conversions"></a>문자열 변환  
  UDT와의 문자열 변환을 지원 하려면 클래스에서 **Parse** 메서드와 **ToString** 메서드를 제공 해야 합니다. **Parse** 메서드를 사용 하면 문자열을 UDT로 변환할 수 있습니다. **Static** 으로 선언 되 고 (또는 Visual Basic에서 **공유** 됨) **SqlString**형식의 매개 변수를 사용 해야 합니다. **구문 분석** 및 **ToString** 메서드를 구현 하는 방법에 대 한 자세한 내용 및 예제는 [사용자 정의 형식 코딩](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)을 참조 하세요.  
   
-## <a name="xml-serialization"></a>XML 직렬화  
- Udt는 XML serialization에 대 한 계약을 준수 하 여 **xml** 데이터 형식으로의 변환을 지원 해야 합니다. System.xml **네임 스페이스** 는 개체를 Xml 형식 문서 또는 스트림으로 serialize 하는 데 사용 되는 클래스를 포함 합니다. XML serialization 및 deserialization에 대 한 사용자 지정 서식을 제공 하는 **IXmlSerializable** 인터페이스를 사용 하 여 **xml** serialization을 구현 하도록 선택할 수 있습니다.  
+## <a name="xml-serialization"></a>XML Serialization  
+ Udt는 XML serialization에 대 한 계약을 준수 하 여 **xml** 데이터 형식으로의 변환을 지원 해야 합니다. **System.Xml입니다. Serialization** 네임 스페이스는 개체를 XML 형식 문서 또는 스트림으로 serialize 하는 데 사용 되는 클래스를 포함 합니다. XML serialization 및 deserialization에 대 한 사용자 지정 서식을 제공 하는 **IXmlSerializable** 인터페이스를 사용 하 여 **xml** serialization을 구현 하도록 선택할 수 있습니다.  
   
  Xml 직렬화는 UDT에서 **xml**로의 명시적 변환을 수행 하는 것 외에도 다음 작업을 수행할 수 있습니다.  
   

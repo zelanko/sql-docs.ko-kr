@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c9ad27602bbaa537fd74b1c6c730675c904f0b7e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2229da0158f746928be16ac190ecae2e36726da5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827620"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730047"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   다중 서버 관리 도메인 내의 서버에 관한 작업 관련 정보를 제공합니다.  
   
@@ -77,7 +77,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 |값|설명|  
 |-----------|-----------------|  
-|**0**|Failed|  
+|**0**|실패|  
 |**1**|성공|  
 |**2**|다시 시도(단계에만 적용됨)|  
 |**3**|취소됨|  
@@ -116,12 +116,12 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**operator_netsent**|**nvarchar (20)**|해당 작업에 관한 네트워크 메시지를 받는 운영자입니다. 단계 기록의 경우에는 NULL입니다.|  
 |**operator_paged**|**nvarchar (20)**|해당 작업에 관한 호출을 받는 운영자입니다. 단계 기록의 경우에는 NULL입니다.|  
 |**retries_attempted**|**int**|단계를 다시 시도하는 횟수입니다. 작업 기록의 경우에는 항상 0입니다.|  
-|**서버인**|**nvarchar(30)**|단계 또는 작업을 실행하는 서버입니다. 항상 (**local**)입니다.|  
+|**server**|**nvarchar(30)**|단계 또는 작업을 실행하는 서버입니다. 항상 (**local**)입니다.|  
   
 ## <a name="remarks"></a>설명  
  **sp_help_jobhistory** 는 지정 된 예약 된 작업의 기록이 포함 된 보고서를 반환 합니다. 매개 변수를 지정하지 않은 경우에는 보고서에 예정된 모든 작업에 관한 기록이 포함됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
@@ -134,7 +134,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
  **SQLAgentUserRole** 데이터베이스 역할의 멤버는 자신이 소유한 작업에 대 한 기록만 볼 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-listing-all-job-information-for-a-job"></a>A. 작업에 대한 모든 정보 나열  
  다음 예에서는 `NightlyBackups` 작업에 대한 모든 작업 정보를 나열합니다.  

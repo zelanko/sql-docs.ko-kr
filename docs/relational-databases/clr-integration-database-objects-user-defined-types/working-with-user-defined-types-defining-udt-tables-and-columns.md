@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: aea495f4-ce26-4952-b019-38f012625f3f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f46ebc5089a4cb2fdb974df52d9bc876f925da4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7fc857b99772983d925504357f641f89780fdd67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486896"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727769"
 ---
 # <a name="working-with-user-defined-types---defining-udt-tables-and-columns"></a>사용자 정의 형식 작업 - UDT 테이블 및 열 정의
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  UDT (사용자 정의 형식) 정의를 포함 하는 어셈블리를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 등록 한 후에는 열 정의에서 사용할 수 있습니다. 자세한 내용은 [CREATE TYPE(Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)을 참조하세요.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  UDT (사용자 정의 형식) 정의를 포함 하는 어셈블리를 데이터베이스에 등록 한 후에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 열 정의에서 사용할 수 있습니다. 자세한 내용은 [CREATE TYPE(Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)을 참조하세요.  
   
 ## <a name="creating-tables-with-udts"></a>UDT를 사용하여 테이블 만들기  
  테이블에 UDT 열을 만드는 데 사용하는 특별한 구문은 없습니다. UDT 이름을 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식처럼 열 정의에 사용하면 됩니다. 다음 CREATE TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 **ID** 라는 열이 있는 **Points**라는 테이블을 만듭니다 .이 열은 **int** id 열과 테이블의 기본 키로 정의 됩니다. 두 번째 열은 데이터 형식이 **Point**인 **pointvalue**로 지정 됩니다. 이 예에 사용 된 스키마 이름은 **dbo**입니다. 스키마 이름을 지정하려면 필요한 권한이 있어야 합니다. 스키마 이름을 생략하면 데이터베이스 사용자에 대한 기본 스키마가 사용됩니다.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9f84b6113f9f3904ca65831a00308ab56ee79daa
-ms.sourcegitcommit: a0ebbcb717f09d3614de5ce9eb9f3c00f0a45f81
+ms.openlocfilehash: 63bbcc23b30e34a66757b0a46d8955edd82a4728
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85409278"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729143"
 ---
 # <a name="adventureworks-sample-databases"></a>AdventureWorks 예제 데이터베이스
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 이 문서에서는 AdventureWorks 샘플 데이터베이스를 다운로드 하 고 SQL Server 및 Azure SQL Database으로 복원 하는 방법에 대 한 지침을 제공 하는 직접 링크를 제공 합니다. 
 

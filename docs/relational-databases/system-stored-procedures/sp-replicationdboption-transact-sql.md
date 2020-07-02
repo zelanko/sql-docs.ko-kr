@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4c0837db9666ab6b49aee30b81b5585cbf5d5ee0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 819c6c91b2fc57ca077b82797626cf255dcc6357
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056769"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725703"
 ---
 # <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   지정된 데이터베이스에 대한 복제 데이터베이스 옵션을 설정합니다. 이 저장 프로시저는 모든 데이터베이스의 게시자 또는 구독자에서 실행됩니다.  
   
@@ -45,11 +45,11 @@ sp_replicationdboption [ @dbname= ] 'db_name'
   
 `[ @optname = ] 'optname'`사용 하거나 사용 하지 않도록 설정 하는 복제 데이터베이스 옵션입니다. *optname* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**merge publish**|병합 게시용으로 데이터베이스를 사용할 수 있습니다.|  
 |**게시**|다른 유형의 게시용으로 데이터베이스를 사용할 수 있습니다.|  
-|**subscribe**|데이터베이스는 구독 데이터베이스입니다.|  
+|**구독**|데이터베이스는 구독 데이터베이스입니다.|  
 |**sync with backup**|통합 백업용으로 데이터베이스를 사용할 수 있습니다. 자세한 내용은 [트랜잭션 복제에 대해 통합 백업 사용 &#40;복제 Transact-sql 프로그래밍&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)을 참조 하세요.|  
   
 `[ @value = ] 'value'`지정 된 복제 데이터베이스 옵션을 사용 하거나 사용 하지 않도록 설정할지 여부입니다. *value* 는 **sysname**이며 **true** 또는 **false**일 수 있습니다. 이 값이 **false** 이 고 *optname* 가 **merge publish**이면 병합 게시 된 데이터베이스에 대 한 구독도 삭제 됩니다.  

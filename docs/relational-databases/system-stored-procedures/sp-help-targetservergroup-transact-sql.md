@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3329efc6ecb0ed19788138987a0f88210abeaaa3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bebc3fb183072976a35e4d4fc1cb06ce82fb3113
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820433"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728164"
 ---
 # <a name="sp_help_targetservergroup-transact-sql"></a>sp_help_targetservergroup(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정된 그룹의 모든 대상 서버를 나열합니다. 그룹을 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 모든 대상 서버 그룹에 관한 정보를 반환합니다.  
   
@@ -55,7 +55,7 @@ sp_help_targetservergroup
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행할 수 있는 권한은 기본적으로 **sysadmin** 고정 서버 역할에 대 한 것입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-listing-information-for-all-target-server-groups"></a>A. 모든 대상 서버 그룹에 대한 정보 나열  
  다음 예에서는 모든 대상 서버 그룹에 대한 정보를 나열합니다.  

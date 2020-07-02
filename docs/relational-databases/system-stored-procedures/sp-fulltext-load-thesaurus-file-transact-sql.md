@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac01c2d29dbe79d0a5702e1bd42730d0b31efcf2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b13792fb7a5d151987983a959751dd94f12e0a9b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827793"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731679"
 ---
 # <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   서버 인스턴스에서 LCID가 지정된 언어에 해당하는 동의어 사전 파일의 데이터를 구문 분석하고 로드하게 합니다. 이 저장 프로시저는 동의어 사전 파일을 업데이트한 후에 유용합니다. **Sp_fulltext_load_thesaurus_file** 를 실행 하면 지정 된 LCID의 동의어 사전을 사용 하는 전체 텍스트 쿼리를 다시 컴파일합니다.  
   
@@ -63,12 +63,12 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
   
  '**Update_languages**' [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)사용 하 여 전체 텍스트 검색에 등록 된 언어 목록을 업데이트 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버 또는 시스템 관리자만 **sp_fulltext_load_thesaurus_file** 저장 프로시저를 실행할 수 있습니다.  
   
  동의어 사전 파일은 시스템 관리자만 업데이트, 수정 또는 삭제할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-load-a-thesaurus-file-even-if-it-is-already-loaded"></a>A. 이미 로드되어 있더라도 동의어 사전 파일 로드  
  다음 예에서는 영어 동의어 사전 파일을 구문 분석하고 로드합니다.  

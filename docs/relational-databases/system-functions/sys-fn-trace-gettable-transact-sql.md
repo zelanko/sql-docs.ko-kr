@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18a6225bca9539f10c4dfea61e99d147cb188d4c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e870c1411382fc38494a899fa3621c80342c1a8e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059220"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730082"
 ---
 # <a name="sysfn_trace_gettable-transact-sql"></a>sys.fn_trace_gettable(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   하나 이상의 추적 파일의 내용을 테이블 형식으로 반환합니다.  
   
@@ -59,7 +59,7 @@ fn_trace_gettable ( 'filename' , number_files )
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 ALTER TRACE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-fn_trace_gettable-to-import-rows-from-a-trace-file"></a>A. fn_trace_gettable을 사용하여 추적 파일에서 행 가져오기  
  다음 예에서는 `fn_trace_gettable` 문의 `FROM` 절에서 `SELECT...INTO`을 호출합니다.  

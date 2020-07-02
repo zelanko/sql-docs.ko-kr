@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1972670a39dbd0fdb3f12b58df5116a83bf0a58d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fc69a273dfa331e558f076429be95c2462b551d8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827652"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730039"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동화된 작업을 수행하는 데 사용하는 작업에 대한 정보를 반환합니다.  
   
@@ -91,7 +91,7 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|일시 중지 상태입니다.|  
 |**7**|동작을 완전히 수행하였습니다.|  
   
-`[ @date_comparator = ] 'date_comparison'`*Date_created* 와 *date_modified*을 비교 하는 데 사용할 비교 연산자입니다. *date_comparison* 은 **char (1)** 이 고 =, \< 또는 > 수 있습니다.  
+`[ @date_comparator = ] 'date_comparison'`*Date_created* 와 *date_modified*을 비교 하는 데 사용할 비교 연산자입니다. *date_comparison* 은 **char (1)** 이 고 =, 일 수 있습니다 \<, or > .  
   
 `[ @date_created = ] date_created`작업을 만든 날짜입니다. *date_created*은 **datetime**이며 기본값은 NULL입니다.  
   
@@ -149,14 +149,14 @@ sp_help_job { [ @job_id = ] job_id
 |**step_id**|**int**|해당 작업에 관한 단계의 고유 ID입니다.|  
 |**step_name**|**sysname**|단계의 이름입니다.|  
 |**하위**|**nvarchar(40)**|단계 명령을 실행할 하위 시스템입니다.|  
-|**명령**|**nvarchar (3200)**|실행할 명령입니다.|  
+|**command**|**nvarchar (3200)**|실행할 명령입니다.|  
 |**flags**|**nvarchar(4000)**|단계 동작을 제어 하는 값의 **비트 마스크** 입니다.|  
 |**cmdexec_success_code**|**int**|**CmdExec** 단계의 경우 성공한 명령의 프로세스 종료 코드입니다.|  
 |**on_success_action**|**nvarchar(4000)**|단계가 성공할 경우 수행되는 작업입니다.<br /><br /> **1** = 성공으로 종료 합니다.<br /><br /> **2** = 실패로 종료<br /><br /> **3** = 다음 단계로 이동 합니다.<br /><br /> **4** = 단계로 이동 합니다.|  
 |**on_success_step_id**|**int**|**On_success_action** 이 **4**인 경우 실행할 다음 단계를 나타냅니다.|  
 |**on_fail_action**|**nvarchar(4000)**|단계가 실패한 경우에 수행할 동작입니다. 값은 **on_success_action**와 동일 합니다.|  
 |**on_fail_step_id**|**int**|**On_fail_action** 이 **4**인 경우 실행할 다음 단계를 나타냅니다.|  
-|**서버인**|**sysname**|예약되어 있습니다.|  
+|**server**|**sysname**|예약되어 있습니다.|  
 |**database_name**|**sysname**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 단계의 경우 명령이 실행될 데이터베이스입니다.|  
 |**database_user_name**|**sysname**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 단계의 경우 명령이 실행되는 데이터베이스 사용자 컨텍스트입니다.|  
 |**retry_attempts**|**int**|단계가 성공하지 못한 경우에 해당 단계를 실패로 간주하기 전에 명령을 재시도할 최대 횟수입니다.|  
@@ -208,7 +208,7 @@ sp_help_job { [ @job_id = ] job_id
 |**last_run_outcome**|**tinyint**|해당 서버에서 작업이 마지막으로 실행되었을 때의 결과입니다.<br /><br /> **0** = 실패<br /><br /> **1** = 성공<br /><br /> **3** = 취소 됨<br /><br /> **5** = 알 수 없음|  
 |**last_outcome_message**|**nvarchar(1024)**|해당 대상 서버에서 작업이 마지막으로 실행되었을 때의 결과 메시지입니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
@@ -221,7 +221,7 @@ sp_help_job { [ @job_id = ] job_id
   
  **SQLAgentUserRole** 의 멤버는 자신이 소유한 작업만 볼 수 있습니다. **Sysadmin**, **SQLAgentReaderRole**및 **SQLAgentOperatorRole** 의 멤버는 모든 로컬 및 다중 서버 작업을 볼 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-list-information-for-all-jobs"></a>A. 모든 작업에 관한 정보 나열  
  다음 예에서는 매개 변수 없이 `sp_help_job` 프로시저를 실행하여 `msdb` 데이터베이스에 현재 정의되어 있는 모든 작업에 대한 정보를 반환합니다.  

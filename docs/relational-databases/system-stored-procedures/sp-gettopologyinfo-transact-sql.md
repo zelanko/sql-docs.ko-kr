@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8bbe8a06-a4aa-4219-8402-12db6a4682c6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0f3bb48f4fc219f0bc6d4e46b8073d10fd255f1f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f847e529ef9f01b873393c2db67d7258ad912071
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820478"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731618"
 ---
 # <a name="sp_gettopologyinfo-transact-sql"></a>sp_gettopologyinfo(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   피어 투 피어 트랜잭션 복제 토폴로지에 대한 정보를 반환합니다. 이 절차를 실행 하기 전에 [sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md) 를 실행 하 여 정보를 수집 합니다.  
   

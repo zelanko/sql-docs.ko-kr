@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d597436277255441ad893215a3581580264d99a3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c5973cd5560f9c12bc38f58002cd6707fe71c714
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810225"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725613"
 ---
 # <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   사용자 정의 컬렉션 집합에 컬렉션 항목을 만듭니다. 컬렉션 항목은 수집할 데이터와 데이터를 수집할 빈도를 정의합니다.  
   
@@ -76,10 +76,10 @@ sp_syscollector_create_collection_item
   
  컬렉션 항목을 추가할 컬렉션 집합은 컬렉션 항목을 만들기 전에 중지해야 합니다. 시스템 컬렉션 집합에는 컬렉션 항목을 추가할 수 없습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행하려면 dc_admin(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Generic T-SQL Query Collector Type` 컬렉션 형식 기반의 컬렉션 항목을 만들어서 `Simple collection set test 2`라는 컬렉션 집합에 추가합니다. 지정 된 컬렉션 집합을 만들려면 [sp_syscollector_create_collection_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)에서 예제 B를 실행 합니다.  
   
 ```  

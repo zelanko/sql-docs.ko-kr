@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6084f17cca92211d1ec102fe941c98774c105e9a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6df2b3b8ac52211cc7a558724549870da8ff85e7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827608"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730028"
 ---
 # <a name="sp_help_jobcount-transact-sql"></a>sp_help_jobcount(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   일정이 연결된 작업 수를 제공합니다.  
   
@@ -58,7 +58,7 @@ sp_help_jobcount
 ## <a name="remarks"></a>설명  
  이 프로시저는 지정한 일정에 연결된 작업 수를 나열합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
@@ -71,7 +71,7 @@ sp_help_jobcount
   
  **Sysadmin** 의 멤버만 다른 사용자가 소유한 작업의 수를 볼 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `NightlyJobs` 일정에 연결된 작업 수를 나열합니다.  
   
 ```  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c0090d721c0367ab4e4ca5395c1032693624ad07
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1094ce4844686a6d0bebb11e6c95830dd783a843
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818066"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733122"
 ---
 # <a name="sp_helpmergearticlecolumn-transact-sql"></a>p_helpmergearticlecolumn(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   병합 게시에 대한 지정된 테이블 또는 뷰 아티클의 열 목록을 반환합니다. 저장 프로시저에는 열이 없으므로 저장 프로시저를 아티클로 지정한 경우에는 오류를 반환합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -48,7 +48,7 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**column_id**|**sysname**|열을 식별합니다.|  
 |**column_name**|**sysname**|테이블 또는 뷰의 열 이름입니다.|  
-|**published**|**bit**|열 이름이 게시되는지 여부를 나타냅니다.<br /><br /> **1** 은 열이 게시 되 고 있음을 지정 합니다.<br /><br /> **0** 은 게시 되지 않도록 지정 합니다.|  
+|**게시할지**|**bit**|열 이름이 게시되는지 여부를 나타냅니다.<br /><br /> **1** 은 열이 게시 되 고 있음을 지정 합니다.<br /><br /> **0** 은 게시 되지 않도록 지정 합니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

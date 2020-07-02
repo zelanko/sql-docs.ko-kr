@@ -33,16 +33,16 @@ helpviewer_keywords:
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e4383e245048035d4c05f7be3bedb7d3d13f835d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8918b20e02eb0d7045ad7e6603ed1f6cf4db40b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486943"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727782"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>SQL Server의 사용자 정의 형식 등록
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]UDT (사용자 정의 형식)를 사용 하려면 등록 해야 합니다. UDT를 등록하려면 해당 형식을 사용할 데이터베이스에 어셈블리를 등록하고 형식을 만듭니다. UDT는 범위가 단일 데이터베이스로 한정되며, 데이터베이스마다 동일한 어셈블리와 UDT를 등록하지 않는 한 여러 데이터베이스에 사용할 수 없습니다. UDT 어셈블리가 등록되고 형식이 만들어지면 [!INCLUDE[tsql](../../includes/tsql-md.md)]과 클라이언트 코드에 UDT를 사용할 수 있습니다. 자세한 내용은 [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)을 참조하세요.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  에서 UDT (사용자 정의 형식)를 사용 하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 등록 해야 합니다. UDT를 등록하려면 해당 형식을 사용할 데이터베이스에 어셈블리를 등록하고 형식을 만듭니다. UDT는 범위가 단일 데이터베이스로 한정되며, 데이터베이스마다 동일한 어셈블리와 UDT를 등록하지 않는 한 여러 데이터베이스에 사용할 수 없습니다. UDT 어셈블리가 등록되고 형식이 만들어지면 [!INCLUDE[tsql](../../includes/tsql-md.md)]과 클라이언트 코드에 UDT를 사용할 수 있습니다. 자세한 내용은 [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)을 참조하세요.  
   
 ## <a name="using-visual-studio-to-deploy-udts"></a>Visual Studio를 사용하여 UDT 배포  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio를 사용하면 UDT를 간편하게 배포할 수 있습니다. 그러나 배포 시나리오가 복잡하거나 높은 유연성이 요구되는 경우에는 이 항목에서 설명하는 대로 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용해야 합니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "81486943"
  SAFE 또는 EXTERNAL_ACCESS 권한 집합을 사용하여 CREATE ASSEMBLY를 실행하면 확인할 수 있으며 형식이 안전한지 여부에 대해 어셈블리 검사가 수행됩니다. 권한 집합을 지정하지 않으면 SAFE가 사용됩니다. UNSAFE 권한 집합을 사용한 코드는 검사되지 않습니다. 어셈블리 권한 집합에 대한 자세한 내용은 [Designing Assemblies](../../relational-databases/clr-integration/assemblies-designing.md)를 참조하십시오.  
   
 #### <a name="example"></a>예제  
- 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 SAFE 권한 집합을 사용 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 여 **AdventureWorks** 데이터베이스의에 Point 어셈블리를 등록 합니다. WITH PERMISSION_SET 절을 생략하면 어셈블리가 SAFE 권한 집합을 사용하여 등록됩니다.  
+ 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SAFE 권한 집합을 사용 하 여 **AdventureWorks** 데이터베이스의에 Point 어셈블리를 등록 합니다. WITH PERMISSION_SET 절을 생략하면 어셈블리가 SAFE 권한 집합을 사용하여 등록됩니다.  
   
 ```  
 USE AdventureWorks;  
@@ -91,7 +91,7 @@ FROM 0xfeac4 ... 21ac78
  어셈블리가 데이터베이스에 로드되면 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TYPE 문을 사용하여 형식을 만들 수 있습니다. 그러면 해당 데이터베이스에 사용 가능한 형식 목록에 해당 형식이 추가됩니다. 형식은 범위가 데이터베이스로 제한되므로 해당 형식을 만든 데이터베이스에만 사용할 수 있습니다. 데이터베이스에 해당 UDT가 이미 있으면 오류가 발생하며 CREATE TYPE 문이 실패합니다.  
   
 > [!NOTE]  
->  CREATE TYPE 구문은 네이티브 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 별칭 데이터 형식을 만드는 데도 사용 되며, 별칭 데이터 형식을 만드는 수단으로 **sp_addtype** 를 대체 하기 위한 것입니다. CREATE TYPE 구문의 일부 선택적 인수는 UDT 만들기와 관련이 있으며 기본 유형과 같은 별칭 데이터 형식을 만드는 데 사용할 수 없습니다.  
+>  CREATE TYPE 구문은 네이티브 별칭 데이터 형식을 만드는 데도 사용 되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , 별칭 데이터 형식을 만드는 수단으로 **sp_addtype** 를 대체 하기 위한 것입니다. CREATE TYPE 구문의 일부 선택적 인수는 UDT 만들기와 관련이 있으며 기본 유형과 같은 별칭 데이터 형식을 만드는 데 사용할 수 없습니다.  
   
  자세한 내용은 [CREATE TYPE &#40;transact-sql&#41;](../../t-sql/statements/create-type-transact-sql.md)를 참조 하세요.  
   
@@ -124,7 +124,7 @@ DROP ASSEMBLY Point;
 ### <a name="finding-udt-dependencies"></a>UDT 종속성 찾기  
  UDT 열 정의가 있는 테이블과 같은 종속 개체가 있으면 DROP TYPE 문이 실패합니다. 또한 WITH SCHEMABINDING 절을 사용하여 데이터베이스에 만든 함수, 저장 프로시저 또는 트리거가 있고 이러한 루틴에서 사용자 정의 형식의 변수 및 매개 변수를 사용하는 경우에도 실패합니다. 따라서 먼저 모든 종속 개체를 삭제한 다음 DROP TYPE 문을 실행해야 합니다.  
   
- 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리는 **ADVENTUREWORKS** 데이터베이스에서 UDT를 사용 하는 모든 열과 매개 변수를 찾습니다.  
+ 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리는 **AdventureWorks** 데이터베이스에서 UDT를 사용 하는 모든 열과 매개 변수를 찾습니다.  
   
 ```  
 USE Adventureworks;  
@@ -214,7 +214,7 @@ SELECT CAST(content AS varchar(8000))
   
  이러한 시나리오에서는 필요한 변환이 서버에서 자동으로 수행됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 함수나 CONVERT 함수를 사용하여 변환을 명시적으로 수행할 수는 없습니다.  
   
- 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **tempdb** 시스템 데이터베이스에 작업 테이블을 만들 때는 udt 사용에 대 한 작업을 수행할 필요가 없습니다. 여기에는 커서, 테이블 변수 및 **tempdb**를 투명 하 게 사용 하는 udt를 포함 하는 사용자 정의 테이블 반환 함수를 처리 하는 작업이 포함 됩니다. 그러나 UDT 열을 정의 하는 **tempdb** 에 임시 테이블을 명시적으로 만드는 경우에는 사용자 데이터베이스와 동일한 방식으로 **tempdb** 에 udt를 등록 해야 합니다.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 **tempdb** 시스템 데이터베이스에 작업 테이블을 만들 때는 udt 사용에 대 한 작업을 수행할 필요가 없습니다. 여기에는 커서, 테이블 변수 및 **tempdb**를 투명 하 게 사용 하는 udt를 포함 하는 사용자 정의 테이블 반환 함수를 처리 하는 작업이 포함 됩니다. 그러나 UDT 열을 정의 하는 **tempdb** 에 임시 테이블을 명시적으로 만드는 경우에는 사용자 데이터베이스와 동일한 방식으로 **tempdb** 에 udt를 등록 해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  

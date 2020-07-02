@@ -19,15 +19,15 @@ ms.assetid: 91dbc61b-e4c0-4826-976c-b2fce88b7793
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08d9a3d71cb099e171e4e8a850766e685319d556
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 73a524c1506a58bbb2173211049ee1f34c3cd89c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669488"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728233"
 ---
 # <a name="routine_columns-transact-sql"></a>ROUTINE_COLUMNS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   현재 데이터베이스에서 현재 사용자가 액세스할 수 있는 테이블 반환 함수에 의해 반환되는 각 열당 한 개의 행을 반환합니다.  
   

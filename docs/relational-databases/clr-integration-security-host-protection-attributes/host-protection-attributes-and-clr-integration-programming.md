@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2aeaeb5d4eb06d6d632a59300225d01cc4376369
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 593318f929f3e0cb7862aab957e8864a35a618e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488060"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727687"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>호스트 보호 특성 및 CLR 통합 프로그래밍
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   CLR(공용 언어 런타임)은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]부터 시작하여, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]와 같은 CLR 호스트에 유용할 수 있는 특성으로 .NET Framework의 일부인 관리되는 API(응용 프로그래밍 인터페이스)에 주석을 추가하는 메커니즘을 제공합니다. 이러한 HPA(호스트 보호 특성)의 예는 다음과 같습니다.  
   
 -   **Sharedstate**: API가 공유 상태 (예: 정적 클래스 필드)를 만들거나 관리 하는 기능을 노출 하는지 여부를 나타냅니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "81488060"
   
 -   **Externalprocessmgmt**-API가 호스트 프로세스를 제어 하는 방법을 제공 하는지 여부를 나타냅니다.  
   
- 이러한 특성을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 CAS(코드 액세스 보안)를 통해 호스팅된 환경에서 허용하지 않는 HPA 목록을 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CAS 요구 사항은 3 가지 권한 집합 ( **SAFE**, **EXTERNAL_ACCESS**또는 **UNSAFE**) 중 하나로 지정 됩니다. 이러한 세 가지 보안 수준 중 하나는 어셈블리를 서버에 등록할 때 **CREATE assembly** 문을 사용 하 여 지정 합니다. **SAFE** 또는 **EXTERNAL_ACCESS** 권한 집합 내에서 실행 되는 코드는 **HostProtectionAttribute** 특성이 적용 된 특정 형식이 나 멤버를 사용 하지 않아야 합니다. 자세한 내용은 [어셈블리 만들기](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md) 및 [CLR 통합 프로그래밍 모델 제한](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)을 참조 하세요.  
+ 이러한 특성을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 CAS(코드 액세스 보안)를 통해 호스팅된 환경에서 허용하지 않는 HPA 목록을 지정합니다. CAS 요구 사항은 3 가지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 권한 집합 ( **SAFE**, **EXTERNAL_ACCESS**또는 **UNSAFE**) 중 하나로 지정 됩니다. 이러한 세 가지 보안 수준 중 하나는 어셈블리를 서버에 등록할 때 **CREATE assembly** 문을 사용 하 여 지정 합니다. **SAFE** 또는 **EXTERNAL_ACCESS** 권한 집합 내에서 실행 되는 코드는 **HostProtectionAttribute** 특성이 적용 된 특정 형식이 나 멤버를 사용 하지 않아야 합니다. 자세한 내용은 [어셈블리 만들기](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md) 및 [CLR 통합 프로그래밍 모델 제한](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)을 참조 하세요.  
   
  **HostProtectionAttribute** 는 호스트에서 허용 하지 않을 수 있는 특정 코드 구문 (형식 또는 메서드)을 식별 하는 보안 권한이 아니라 안정성을 개선 하는 방법입니다. **HostProtectionAttribute** 를 사용 하면 호스트의 안정성을 보호 하는 데 도움이 되는 프로그래밍 모델이 적용 됩니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "81488060"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Externalprocessmgmt**, **externalprocessor**, **MayLeakOnAbort**, **securityinfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **sharedstate**, **Synchronization**또는 **UI**값을 사용 하 여 **HostProtectionResource** 열거형을 지정 하는 **HostProtectionAttribute** 가 있는 형식 또는 멤버의 사용을 허용 하지 않습니다. 이로 인해 상태를 공유할 수 있게 하거나, 동기화를 수행하거나, 종료할 때 리소스 누출을 일으키거나 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 무결성에 영향을 주는 멤버를 어셈블리가 호출할 수 없습니다.  
   
 ### <a name="disallowed-types-and-members"></a>허용되지 않는 유형 및 멤버  
- 다음 항목에서는에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **HostProtectionResource** 값이 허용 되지 않는 형식 및 멤버를 식별 합니다.  
+ 다음 항목에서는에서 **HostProtectionResource** 값이 허용 되지 않는 형식 및 멤버를 식별 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  이러한 항목에 있는 목록은 지원되는 어셈블리에서 생성되었습니다.  자세한 내용은 [Supported .NET Framework Libraries](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)을 참조하세요.  

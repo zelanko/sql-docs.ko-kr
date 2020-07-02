@@ -27,20 +27,20 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 108698da668928d4412eb7ba42621b539850b26c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04e60b218439a67e0fd0d57f6c36cc725217931b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488158"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727645"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 통합 아키텍처 - CLR 호스팅 환경
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   .NET Framework CLR(공용 언어 런타임)과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 통합을 사용하면 데이터베이스 프로그래머가 Visual C#, Visual Basic .NET, 및 Visual C++와 같은 언어를 사용할 수 있습니다. 프로그래머가 이러한 언어를 사용하여 작성할 수 있는 비즈니스 논리의 종류에는 함수, 저장 프로시저, 트리거, 데이터 형식, 집계 등이 포함됩니다.  
   
   CLR은 가비지 수집 메모리, 선점형 스레딩, 메타 데이터 서비스 (형식 리플렉션), 코드 안정성 및 코드 액세스 보안 기능을 제공 합니다. CLR에서는 메타데이터를 사용하여 클래스를 찾아 로드하고, 메모리에 인스턴스를 배치하고, 메서드 호출을 확인하고, 네이티브 코드를 생성하고, 보안을 강화하며, 런타임 컨텍스트 경계를 설정합니다.  
   
- CLR과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 모두 런타임 환경이지만 메모리, 스레드 및 동기화를 처리하는 방식에 있어서 서로 다릅니다. 이 문서에서는 모든 시스템 리소스를 균일 하 게 관리할 수 있도록 이러한 두 실행 시간을 통합 하는 방법을 설명 합니다. 또한이 문서에서는 사용자 코드에 안정적이 고 안전한 실행 환경을 제공 하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR CAS (코드 액세스 보안) 및 보안이 통합 되는 방법에 대해 설명 합니다.  
+ CLR과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 모두 런타임 환경이지만 메모리, 스레드 및 동기화를 처리하는 방식에 있어서 서로 다릅니다. 이 문서에서는 모든 시스템 리소스를 균일 하 게 관리할 수 있도록 이러한 두 실행 시간을 통합 하는 방법을 설명 합니다. 또한이 문서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 코드에 안정적이 고 안전한 실행 환경을 제공 하기 위해 CLR CAS (코드 액세스 보안) 및 보안이 통합 되는 방법에 대해 설명 합니다.  
   
 ## <a name="basic-concepts-of-clr-architecture"></a>CLR 아키텍처의 기본 개념  
  .NET Framework에서 프로그래머는 클래스의 구조(예: 클래스의 필드나 속성)와 메서드를 정의하여 클래스를 구현하는 고급 언어로 코드를 작성합니다. 이러한 메서드 일부는 정적 함수일 수 있습니다. 프로그램을 컴파일하면 어셈블리라는 파일이 생성되는데 이 어셈블리 파일에는 MSIL([!INCLUDE[msCoName](../../includes/msconame-md.md)] Intermediate Language)로 컴파일된 코드 및 종속 어셈블리에 대한 모든 참조가 포함된 매니페스트가 들어 있습니다.  
@@ -101,7 +101,7 @@ ms.locfileid: "81488158"
  이러한 특성을 사용하면 호스트에서는 호스팅 환경에서 허용하지 않는 HPA 목록(예: SharedState 특성)을 지정할 수 있습니다. 이렇게 하면 CLR에서는 금지 목록에 포함된 HPA로 주석이 지정된 API를 호출하는 사용자 코드를 거부합니다. 자세한 내용은 [호스트 보호 특성 및 CLR 통합 프로그래밍](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)을 참조 하세요.  
   
 ## <a name="how-sql-server-and-the-clr-work-together"></a>SQL Server와 CLR이 함께 작동하는 방법  
- 이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 CLR의 스레딩, 일정 관리, 동기화 및 메모리 관리 모델을 통합하는 방법에 대해 설명합니다. 특히 이 섹션에서는 확장성, 안정성 및 보안 목표 측면에서의 통합을 검사합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내에서 CLR을 호스팅하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 CLR의 운영 체제 역할을 합니다. CLR에서는 스레딩, 일정 예약, 동기화 및 메모리 관리를 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 구현된 하위 수준의 루틴을 호출합니다. 이러한 루틴은 나머지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔진에서 사용 하는 것과 동일한 기본 형식입니다. 이 방식을 사용하면 확장성, 안정성 및 보안상 여러 가지 이점을 얻을 수 있습니다.  
+ 이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 CLR의 스레딩, 일정 관리, 동기화 및 메모리 관리 모델을 통합하는 방법에 대해 설명합니다. 특히 이 섹션에서는 확장성, 안정성 및 보안 목표 측면에서의 통합을 검사합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내에서 CLR을 호스팅하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 CLR의 운영 체제 역할을 합니다. CLR에서는 스레딩, 일정 예약, 동기화 및 메모리 관리를 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 구현된 하위 수준의 루틴을 호출합니다. 이러한 루틴은 나머지 엔진에서 사용 하는 것과 동일한 기본 형식입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이 방식을 사용하면 확장성, 안정성 및 보안상 여러 가지 이점을 얻을 수 있습니다.  
   
 ###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>확장성: 일반 스레딩, 일정 예약 및 동기화  
  CLR에서는 사용자 코드를 실행하기 위한 경우나 내부적인 용도로 사용하기 위한 경우 모두 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] API를 호출하여 스레드를 만듭니다. 여러 스레드를 동기화하기 위해 CLR에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동기화 개체를 호출합니다. 이 방법을 사용 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스레드가 동기화 개체를 대기 중일 때 스케줄러에서 다른 작업을 예약할 수 있습니다. 예를 들어 CLR에서 가비지 수집을 시작하면 가비지 수집이 완료될 때까지 모든 스레드가 대기합니다. CLR 스레드 및 CLR 스레드에서 대기 중인 동기화 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스케줄러가 알고 있기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR과 관련되지 않은 다른 데이터베이스 태스크를 실행하는 스레드를 예약할 수 있습니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR 동기화 개체의 잠금과 관련된 교착 상태를 검색한 후 일반적인 기술을 사용하여 교착 상태를 해결할 수 있습니다.  

@@ -18,16 +18,16 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 author: VanMSFT
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7123c1bd3fee61a3d0671a0d8fbe27c2943ba7ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c21a740f3c4496db871b2602b001df80d3628ed8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124846"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727207"
 ---
 # <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   현재 데이터베이스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 역할에서 보안 계정을 제거합니다.  
   
@@ -65,12 +65,12 @@ sp_droprolemember 'role' ,
   
  고정 서버 역할에서 사용자를 제거하려면 sp_dropsrvrolemember를 사용합니다. public 역할에서는 사용자를 제거할 수 없으며 어떤 역할에서도 dbo는 제거할 수 없습니다.  
   
- Sp_helpuser를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 역할의 멤버를 확인 하 고 ALTER role을 사용 하 여 역할에 멤버를 추가 합니다.  
+ Sp_helpuser를 사용 하 여 역할의 멤버를 확인 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고 ALTER role을 사용 하 여 역할에 멤버를 추가 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  역할에 대한 ALTER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `JonB` 역할에서 `Sales`라는 사용자를 제거합니다.  
   
 ```sql

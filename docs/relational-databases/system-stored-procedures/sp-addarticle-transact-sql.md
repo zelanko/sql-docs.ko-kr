@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: e1360140898495518485394878cc74f04ee35923
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 35aa02236cf3e8a11d03539042ccdaf9049dd8f9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807593"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731710"
 ---
 # <a name="sp_addarticle-transact-sql"></a>sp_addarticle(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   아티클을 만들어 게시에 추가합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -232,7 +232,7 @@ sp_addarticle [ @publication = ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|아티클이 활성 상태입니다.|  
-|**20cm(8**|INSERT 문에 열 이름을 포함합니다.|  
+|**8**|INSERT 문에 열 이름을 포함합니다.|  
 |**16** (기본값)|매개 변수가 있는 문을 사용합니다.|  
 |**24**|INSERT 문에 열 이름도 포함하고 매개 변수가 있는 문도 사용합니다.|  
 |**64**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -389,7 +389,7 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-addarticle-transact-sql_1.sql)]  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_addarticle**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

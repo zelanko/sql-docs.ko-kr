@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2c95b74b5c1875f2a1f1db40ec42e3f3ada87a63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 144d563bf27f0d6133da0ab4facb26edd3a23d44
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942368"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731755"
 ---
 # <a name="sp_add_data_file_recover_suspect_db-transact-sql"></a>sp_add_data_file_recover_suspect_db(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   파일 그룹의 공간 부족(1105 오류)으로 인해 데이터베이스를 완벽하게 복구하지 못했을 때 파일 그룹에 데이터 파일을 추가합니다. 파일이 추가된 다음에는 이 저장 프로시저가 주의 대상 설정을 해제하고 데이터베이스를 완벽하게 복구합니다. 매개 변수는 ALTER DATABASE *DATABASE_NAME* 파일 추가와 동일 합니다.  
   
@@ -49,7 +49,7 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
   
 `[ @filegroup = ] 'filegroup_name_ '`파일을 추가할 파일 그룹입니다. *filegroup_name* 은 **nvarchar (260)** 이며 기본값은 주 파일을 나타내는 NULL입니다.  
   
-`[ @name = ] 'logical_file_name_ '`는에서 파일을 참조 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 데 사용 되는 이름입니다. 이 이름은 서버에서 고유해야 합니다. *logical_file_name* 은 **nvarchar (260)** 이며 기본값은 없습니다.  
+`[ @name = ] 'logical_file_name_ '`는에서 파일을 참조 하는 데 사용 되는 이름입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이 이름은 서버에서 고유해야 합니다. *logical_file_name* 은 **nvarchar (260)** 이며 기본값은 없습니다.  
   
 `[ @filename = ] 'os_file_name_ '`운영 체제에서 파일에 사용 하는 경로 및 파일 이름입니다. 파일은 반드시 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인스턴스에 있어야 합니다. *os_file_name* 은 **nvarchar (260)** 이며 기본값은 없습니다.  
   
@@ -67,12 +67,12 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="permissions"></a>사용 권한  
  Execute 권한은 **sysadmin** 고정 서버 역할의 멤버에 게 기본적으로 부여 됩니다. 이 권한은 이전할 수 없습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `db1` 데이터베이스가 `fg1` 파일 그룹에서 공간 부족(1105 오류)으로 인해 복구하는 동안 주의 대상으로 표시되었습니다.  
   
 ```  

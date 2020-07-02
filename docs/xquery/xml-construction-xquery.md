@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e285c82ce8c8b451fb673b6864391bd0e394ad8
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 16bffa4040e1a5068f83e9f68da981ed4aa0d7f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84520019"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730731"
 ---
 # <a name="xml-construction-xquery"></a>XML 생성(XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   XQuery에서는 **직접** 및 **계산** 된 생성자를 사용 하 여 쿼리 내에서 XML 구조를 생성할 수 있습니다.  
   

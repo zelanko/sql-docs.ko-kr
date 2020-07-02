@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 29c63a74-4db4-4068-bd57-9fb519b0c598
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d684fd74271b6c9c1d29f17e0570991c4668b4f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 430fd7536b48ba10b2a443500d5031fa8e08a4ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826538"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725594"
 ---
 # <a name="sp_syscollector_delete_collection_set-transact-sql"></a>sp_syscollector_delete_collection_set(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   사용자 정의 컬렉션 집합과 이 집합의 모든 컬렉션 항목을 삭제합니다.  
   
@@ -57,10 +57,10 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
   
  시스템 정의 컬렉션 집합은 삭제할 수 없습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행하려면 dc_admin(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 *collection_set_id*를 지정 하는 사용자 정의 컬렉션 집합을 삭제 합니다.  
   
 ```  

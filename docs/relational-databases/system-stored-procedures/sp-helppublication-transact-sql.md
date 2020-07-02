@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 59f47194e94e256ddb6e2ded61dc61198dea26b8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b4c5d3157c6683a793f30eccd878aa9e691c7023
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824511"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729217"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   게시에 관한 정보를 반환합니다. 게시의 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행 됩니다. Oracle 게시의 경우 이 저장 프로시저는 배포자에서 모든 데이터베이스에 대해 실행됩니다.  
   
@@ -112,7 +112,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_helppublication](../../relational-databases/replication/codesnippet/tsql/sp-helppublication-trans_1.sql)]  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  게시자에서 sysadmin 고정 서버 역할의 멤버 또는 게시 데이터베이스에 대한 db_owner 고정 데이터베이스 역할의 멤버 또는 PAL(게시 액세스 목록)의 사용자만 sp_helppublication을 실행할 수 있습니다.  
   
  이외 게시자의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 배포자에서 sysadmin 고정 서버 역할의 멤버 또는 배포 데이터베이스에 대 한 db_owner 고정 데이터베이스 역할의 멤버 또는 PAL의 사용자만 sp_helppublication를 실행할 수 있습니다.  

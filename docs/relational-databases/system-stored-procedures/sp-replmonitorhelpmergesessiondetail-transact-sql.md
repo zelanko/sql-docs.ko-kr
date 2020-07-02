@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d275b0666ae80ff933d7d236d0d04f2648b744fd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6e128b63ebe77467e7c3fd6ea2486f3fdc043334
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834290"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725720"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   병합 복제를 모니터링하는 데 사용되는 특정 복제 병합 에이전트 세션에 대한 자세한 아티클 수준 정보를 반환합니다. 결과 집합에는 세션 중에 동기화된 각 아티클에 대한 정보 행이 포함됩니다. 또한 세션 초기화를 나타내는 행과 세션의 업로드 및 다운로드 단계를 요약하는 행도 포함됩니다. 이 저장 프로시저는 배포 데이터베이스의 배포자 또는 구독 데이터베이스의 구독자에서 실행됩니다.  
   
@@ -48,7 +48,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |**M e**|**sysname**|동기화 중인 아티클의 이름입니다. 또한 **m e** 에는 아티클 정보를 나타내지 않는 결과 집합의 행에 대 한 요약 정보가 포함 되어 있습니다.|  
 |**되었고**|**decimal**|현재 실행 중이거나 실패한 세션에 대해 지정한 아티클 정보 행에 적용된 전체 변경 내용의 비율을 나타냅니다.|  
 |**RelativeCost**|**decimal**|아티클을 동기화하는 데 소요된 시간을 세션의 전체 동기화 시간에 대한 비율로 나타냅니다.|  
-|**기간**|**int**|에이전트 세션의 길이입니다.|  
+|**Duration**|**int**|에이전트 세션의 길이입니다.|  
 |**Inserts**|**int**|세션의 삽입 수입니다.|  
 |**업데이트**|**int**|세션의 업데이트 수입니다.|  
 |**Deletes**|**int**|세션의 삭제 수입니다.|  

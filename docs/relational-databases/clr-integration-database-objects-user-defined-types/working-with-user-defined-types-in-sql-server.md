@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 807376fb-1f1a-4f2a-8cf8-a622c5858634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0dd3ba726d4b23b5dc3b8aa58188b0c259a7c3f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4740338e5049862d31e4cd0cf5b25b90356a84c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486933"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727757"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>SQL 서버의 사용자 정의 형식 작업
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  일반 쿼리 구문을 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어에서의 UDT (사용자 정의 형식) 기능에 액세스할 수 있습니다. UDT는 데이터베이스 개체 정의에 사용하거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리, 함수 및 저장 프로시저의 변수, 그리고 함수 및 저장 프로시저의 인수로 사용할 수 있습니다.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 일반 쿼리 구문을 사용 하 여 언어에서의 UDT (사용자 정의 형식) 기능에 액세스할 수 있습니다. UDT는 데이터베이스 개체 정의에 사용하거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리, 함수 및 저장 프로시저의 변수, 그리고 함수 및 저장 프로시저의 인수로 사용할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [UDT 테이블 및 열 정의](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-defining-udt-tables-and-columns.md)  

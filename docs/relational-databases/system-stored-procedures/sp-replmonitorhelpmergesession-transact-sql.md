@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e31f785d1b1fa205a9498889f814a0a0bc32e9a8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 305b7a0e2c9d83fe33a6d571198b205f7452ba44
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834342"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725693"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   지정된 복제 병합 에이전트의 이전 세션에 대한 정보를 필터링 조건에 일치하는 각 세션당 한 행씩 반환합니다. 병합 복제 모니터링에 사용되는 이 저장 프로시저는 배포 데이터베이스의 배포자 또는 구독 데이터베이스의 구독자에서 실행됩니다.  
   
@@ -70,10 +70,10 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**Session_id**|**int**|에이전트 작업 세션의 ID입니다.|  
-|**Status**|**int**|에이전트 실행 상태입니다.<br /><br /> **1** = 시작<br /><br /> **2** = 성공<br /><br /> **3** = 진행 중<br /><br /> **4** = 유휴 상태<br /><br /> **5** = 다시 시도<br /><br /> **6** = 실패|  
+|**상태**|**int**|에이전트 실행 상태입니다.<br /><br /> **1** = 시작<br /><br /> **2** = 성공<br /><br /> **3** = 진행 중<br /><br /> **4** = 유휴 상태<br /><br /> **5** = 다시 시도<br /><br /> **6** = 실패|  
 |**StartTime**|**datetime**|에이전트 작업 세션이 시작된 시간입니다.|  
 |**EndTime**|**datetime**|에이전트 작업 세션이 완료된 시간입니다.|  
-|**기간**|**int**|해당 작업 세션에 소요된 총 시간(초)입니다.|  
+|**Duration**|**int**|해당 작업 세션에 소요된 총 시간(초)입니다.|  
 |**UploadedCommands**|**int**|에이전트 세션 중에 업로드된 명령 수입니다.|  
 |**DownloadedCommands**|**int**|에이전트 세션 중에 다운로드된 명령 수입니다.|  
 |**ErrorMessages**|**int**|에이전트 세션 중에 생성된 오류 메시지 수입니다.|  

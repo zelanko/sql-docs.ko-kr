@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bdc8aaa0-ff2d-40c2-84b2-4ba513ced279
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6f001943d989d55b824d70ddf2779cffa61463aa
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1b16ddb35ed3d8ec64eb783e904f3c9b6120cfbd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815039"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725633"
 ---
 # <a name="sp_subscription_cleanup-transact-sql"></a>sp_subscription_cleanup(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   구독자에서 구독이 삭제될 때 메타데이터를 삭제합니다. 동기화 트랜잭션 구독의 경우 즉시 업데이트 트리거도 포함됩니다. 이 저장 프로시저는 구독 데이터베이스의 구독자에서 실행됩니다.  
   
@@ -54,7 +54,7 @@ sp_subscription_cleanup [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>설명  
  **sp_subscription_cleanup** 는 트랜잭션 및 스냅숏 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_subscription_cleanup**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

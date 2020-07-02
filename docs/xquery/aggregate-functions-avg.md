@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e7b88b5e28794ff8bc27c02b64b49471af92a05
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: a5ee393faed7f88bb155527d2233285d142b3a09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882032"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726789"
 ---
 # <a name="aggregate-functions---avg"></a>집계 함수 - avg
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   일련의 숫자의 평균을 반환합니다.  
   
@@ -44,7 +44,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
  입력이 정적으로 비어 있으면 비어 있다는 것이 유추되어 정적 오류가 발생합니다.  
   
- **Avg ()** 함수는 계산 된 숫자의 평균을 반환 합니다. 다음은 그 예입니다.  
+ **Avg ()** 함수는 계산 된 숫자의 평균을 반환 합니다. 예를 들면 다음과 같습니다.  
   
  **sum(** *$arg* **) div count(** *$arg* **)**  
   

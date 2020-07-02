@@ -21,15 +21,15 @@ ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85678c5b03a77910c73bd5b8bac8d0e40d52c252
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9bd93e3ac61c81bf7e61f9fd98cd05685877f287
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291610"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730353"
 ---
 # <a name="allocating-a-statement-handle"></a>문 핸들 할당
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   애플리케이션에서 문을 실행하려면 먼저 문 핸들을 할당해야 합니다. *HandleType* 매개 변수가 SQL_HANDLE_STMT로 설정 되 고 연결 핸들을 가리키는 *InputHandle* **를 호출 하 여이** 를 수행 합니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "81291610"
   
  *Foption* 을 SQL_ATTR_QUERY_TIMEOUT로 설정 하 여 **SQLSetStmtAttr** 를 호출 하면 서버 및 사용자가 장기 실행 쿼리를 보호 하는 데 도움이 되는 쿼리 시간 제한 간격이 설정 됩니다.  
   
- *Foption* 을 SQL_ATTR_MAX_LENGTH로 설정 하 여 **SQLSetStmtAttr** 를 호출 하면 개별 문이 검색할 수 있는 **텍스트** 및 **이미지** 데이터의 양이 제한 됩니다. *Foption* 을 SQL_ATTR_MAX_ROWS로 설정 하 여 **SQLSetStmtAttr** 를 호출 하면 모든 응용 프로그램에 필요한 경우 행 집합을 처음 *n 개* 행으로 제한 합니다. SQL_ATTR_MAX_ROWS를 설정하면 드라이버가 서버에 대해 SET ROWCOUNT 문을 실행합니다. 이는 트리거와 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트를 포함 하 여 모든 문에 영향을 줍니다.  
+ *Foption* 을 SQL_ATTR_MAX_LENGTH로 설정 하 여 **SQLSetStmtAttr** 를 호출 하면 개별 문이 검색할 수 있는 **텍스트** 및 **이미지** 데이터의 양이 제한 됩니다. *Foption* 을 SQL_ATTR_MAX_ROWS로 설정 하 여 **SQLSetStmtAttr** 를 호출 하면 모든 응용 프로그램에 필요한 경우 행 집합을 처음 *n 개* 행으로 제한 합니다. SQL_ATTR_MAX_ROWS를 설정하면 드라이버가 서버에 대해 SET ROWCOUNT 문을 실행합니다. 이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 트리거와 업데이트를 포함 하 여 모든 문에 영향을 줍니다.  
   
  따라서 이러한 옵션을 설정할 때는 주의를 기울여야 합니다. 연결 핸들의 모든 문 핸들에 대한 SQL_ATTR_MAX_LENGTH 및 SQL_ATTR_MAX_ROWS 설정을 동일하게 지정하는 것이 좋습니다. 드라이버가 특정 문 핸들에서 이들 옵션 값이 다르게 설정된 다른 핸들로 전환하는 경우 설정을 변경하려면 드라이버가 적절한 SET TEXTSIZE 및 SET ROWCOUNT 문을 생성해야 합니다. 사용자 SQL 문은 일괄 처리의 첫 번째 문을 포함할 수 있으므로 드라이버는 이러한 문을 사용자 SQL 문과 동일한 일괄 처리에 배치할 수 없습니다. 드라이버는 SET TEXTSIZE 문과 SET ROWCOUNT 문을 별개의 일괄 처리로 보내야 하며 이 경우 추가 서버 왕복이 발생합니다.  
   

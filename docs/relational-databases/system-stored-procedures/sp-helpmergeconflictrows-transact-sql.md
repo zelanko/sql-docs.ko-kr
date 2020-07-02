@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b6963d3a2b28ba103c731f015fd352ff105cfb95
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7c223a76efe1eeadb5e9c8fd6ac4a3e5ec577d58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828945"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733104"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정한 충돌 테이블의 행을 반환합니다. 이 저장 프로시저는 충돌 테이블이 저장된 컴퓨터에서 실행됩니다.  
   
@@ -69,7 +69,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>설명  
  **sp_helpmergeconflictrows** 는 병합 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  배포 데이터베이스의 **sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할 및 **replmonitor** 역할의 멤버만 **sp_helpmergeconflictrows**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

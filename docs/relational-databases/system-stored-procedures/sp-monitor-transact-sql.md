@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55386d32348257db3f89feb81d6a6b0ff7292499
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7bb5e41265e3dd6b69ae1807837b2ac8bda9ba09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828323"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727172"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   에 대 한 통계 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 표시 합니다.  
   
@@ -43,7 +43,7 @@ sp_monitor
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |**last_run**|**Sp_monitor** 마지막으로 실행 된 시간입니다.|  
 |**current_run**|**Sp_monitor** 실행 되는 시간입니다.|  
@@ -64,10 +64,10 @@ sp_monitor
   
  각 열에 대해 *숫자*(*number*)-*number*% 또는 *number*(*number*) 형식으로 통계가 출력 됩니다. 첫 번째 *숫자* 는가 다시 시작 된 이후 경과 된 시간 (초) ( **cpu_busy**, **io_busy**및 **유휴**)의 수 또는 다른 변수에 대 한 총 수를 나타냅니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 괄호 안의 *숫자* 는 **sp_monitor** 가 마지막으로 실행 된 이후 경과 된 시간 (초) 또는 총 수를 나타냅니다. 백분율은 **sp_monitor** 마지막으로 실행 된 이후 경과 된 시간의 백분율입니다. 예를 들어 보고서가 4250 (215)-68%로 **cpu_busy** 표시 되는 경우, 마지막으로 시작 된 이후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 215 초, **sp_monitor** 마지막으로 실행 된 이후 초, cpu가 마지막으로 실행 된 이후 총 **sp_monitor** 시간에 대 한 68%가 시작 된 이후 cpu가 4250 사용 되는 것입니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 얼마나 많이 사용되었는지에 대한 정보를 보고합니다.  
   
 ```  

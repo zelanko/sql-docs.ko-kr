@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c212c587efbf32067d575f488416256f35312f2d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c59a7c87c2252497a8a7865c179939a601039157
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832641"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733179"
 ---
 # <a name="sp_helpfilegroup-transact-sql"></a>sp_helpfilegroup(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스와 연관된 파일 그룹의 이름과 특성을 반환합니다.  
   
@@ -58,7 +58,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**file_in_group**|**sysname**|파일 그룹에 있는 파일의 논리적 이름입니다.|  
 |**fileid**|**smallint**|파일의 숫자 ID입니다.|  
-|**이름도**|**nchar (260)**|디렉터리 경로를 포함한 파일의 물리적 이름입니다.|  
+|**filename**|**nchar (260)**|디렉터리 경로를 포함한 파일의 물리적 이름입니다.|  
 |**size**|**nvarchar (15)**|파일 크기(KB)입니다.|  
 |**크기**|**nvarchar (15)**|파일의 최대 크기입니다.<br /><br /> 파일이 증가할 수 있는 최대 크기입니다. 이 필드 값이 UNLIMITED이면 디스크가 꽉 찰 때까지 파일이 증가할 수 있음을 의미합니다.|  
 |**growth**|**nvarchar (15)**|파일의 증가분입니다. 공간이 새로 필요할 때마다 파일에 추가되는 공간의 양을 나타냅니다.<br /><br /> 0 = 파일은 고정 크기를 가지며 증가하지 않습니다.|  

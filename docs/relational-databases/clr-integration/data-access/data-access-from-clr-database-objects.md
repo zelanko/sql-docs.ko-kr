@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5fdd552b0954f0eda838743530ab94e73aa27067
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 749be1b26a7802119346434b016b376ea94910cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81485234"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727605"
 ---
 # <a name="data-access-from-clr-database-objects"></a>CLR 데이터베이스 개체에서 데이터 액세스
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  CLR (공용 언어 런타임) 루틴은 실행 되는 인스턴스에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 저장 된 데이터 뿐만 아니라 원격 인스턴스에 저장 된 데이터에 쉽게 액세스할 수 있습니다. 루틴을 사용하여 액세스할 수 있는 특정 데이터는 해당 코드가 실행 중인 사용자 컨텍스트에 의해 결정됩니다. 의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].NET Framework Data Provider ( **SqlClient**라고도 함)를 사용 하 여 CLR 데이터베이스 개체 내에서 데이터에 액세스할 수 있습니다. 이 공급자는 관리 클라이언트 및 중간 계층 애플리케이션에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터에 액세스하는 개발자가 사용하는 것과 동일한 공급자입니다. 이로 인해 클라이언트 및 중간 계층 응용 프로그램에서 ADO.NET 및 **SqlClient** 에 대 한 지식을 활용할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  CLR (공용 언어 런타임) 루틴은 실행 되는 인스턴스에 저장 된 데이터 뿐만 아니라 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 원격 인스턴스에 저장 된 데이터에 쉽게 액세스할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . 루틴을 사용하여 액세스할 수 있는 특정 데이터는 해당 코드가 실행 중인 사용자 컨텍스트에 의해 결정됩니다. 의 .NET Framework Data Provider (SqlClient 라고도 함)를 사용 하 여 CLR 데이터베이스 개체 내에서 데이터에 액세스할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 수 있습니다. **SqlClient** 이 공급자는 관리 클라이언트 및 중간 계층 애플리케이션에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터에 액세스하는 개발자가 사용하는 것과 동일한 공급자입니다. 이로 인해 클라이언트 및 중간 계층 응용 프로그램에서 ADO.NET 및 **SqlClient** 에 대 한 지식을 활용할 수 있습니다.  
   
 > [!NOTE]  
 >  기본적으로 사용자 정의 형식 메서드 및 사용자 정의 함수를 사용하여 데이터 액세스를 수행할 수는 없습니다. **SqlMethodAttribute** 또는 **SqlFunctionAttribute** 의 **DataAccess** 속성을 **dataaccesskind.read** 로 설정 하 여 UDT (사용자 정의 형식) 메서드나 사용자 정의 함수에서 읽기 전용 데이터 액세스를 사용 하도록 설정 해야 합니다. 데이터 수정 작업은 UDT 또는 사용자 정의 함수를 통해 수행할 수 없으며 이를 시도할 경우 실행 시에 예외가 throw됩니다.  

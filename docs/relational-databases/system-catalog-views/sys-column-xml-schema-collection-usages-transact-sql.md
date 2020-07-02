@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 4fd1ec7f-b9dc-4ddb-ab3a-0d59ab05ad20
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b120c992cdf1418cb6c4b5d5699e3990d4d9f342
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f443c4a8f581862926f5881799ee538952338d7f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825380"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725830"
 ---
 # <a name="syscolumn_xml_schema_collection_usages-transact-sql"></a>sys.column_xml_schema_collection_usages(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   XML 스키마에서 유효성을 검사하는 각 열에 대해 하나의 행을 반환합니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82825380"
 |**column_id**|**int**|열의 ID입니다. 개체 내에서 고유합니다.|  
 |**xml_collection_id**|**int**|열의 유효성을 검사하는 XML 스키마 네임스페이스를 포함하는 컬렉션의 ID입니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

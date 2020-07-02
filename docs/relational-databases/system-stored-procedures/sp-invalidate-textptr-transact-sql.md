@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f479daec811e9953bdb0b9e23727dd1a58ad15e4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b229db409520275fa1b043fa54c8ce6e6421096e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826017"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733058"
 ---
 # <a name="sp_invalidate_textptr-transact-sql"></a>sp_invalidate_textptr(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   트랜잭션에서 지정한 행 내부 텍스트 포인터 또는 모든 행 내부 텍스트 포인터를 무효화합니다. **sp_invalidate_textptr** 은 행 내부 텍스트 포인터에만 사용할 수 있습니다. 이러한 포인터는 **text in row** 옵션을 사용 하는 테이블에서 가져온 것입니다.  
   

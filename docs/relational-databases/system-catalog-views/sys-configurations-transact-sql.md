@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7986fc4286cf681507a80a72f2f308b6a96f413a
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 2cb91576a8ef3d8aaa4dd5e9369b8420e53ae52d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215855"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725819"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   시스템에 서버 차원의 구성 옵션 값마다 한 행을 포함합니다.  
 
@@ -62,7 +62,7 @@ select * from sys.configurations where value != value_in_use
 
 값이 구성 옵션에 대 한 변경 값과 동일 하지만 **value_in_use** 동일 하지 않은 경우 RECONFIGURE 명령이 실행 되지 않았거나 실패 했거나 서버 엔진을 다시 시작 해야 합니다.
 
-값과 value_in_use 동일 하지 않을 수 있는 구성 옵션이 있으며이는 예상 된 동작입니다. 예를 들어:
+값과 value_in_use 동일 하지 않을 수 있는 구성 옵션이 있으며이는 예상 된 동작입니다. 예를 들면 다음과 같습니다.
 
 "max server memory (MB)"-기본 구성 값 0은 value_in_use = 2147483647 "min server memory (MB)"로 표시 됩니다. 기본 구성 된 값 0은 value_in_use = 8 (32 비트) 또는 16 (64 비트)으로 표시 될 수 있습니다. 
 

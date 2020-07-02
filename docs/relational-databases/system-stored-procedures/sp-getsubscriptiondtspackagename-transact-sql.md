@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65f26504c37ac9845a454994ad60ae462759909b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 553ba3f86ce9917a3eb22991d09728611be21f13
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827756"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731646"
 ---
 # <a name="sp_getsubscriptiondtspackagename-transact-sql"></a>sp_getsubscriptiondtspackagename(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   데이터를 구독자로 보내기 전에 변환하는 데 사용되는 DTS(데이터 변환 서비스) 패키지의 이름을 반환합니다. 이 저장 프로시저는 모든 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -54,7 +54,7 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
 ## <a name="remarks"></a>설명  
  **sp_getsubscriptiondtspackagename** 는 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_getsubscriptiondtspackagename**을 실행할 수 있습니다.  
   
   

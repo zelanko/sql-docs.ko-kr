@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: a32826266a9e844b01b455116e18ae821f71e9c5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3f605d17348c651ef0fbc58ebd52b422bdba1896
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055311"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728193"
 ---
 # <a name="sp_grantlogin-transact-sql"></a>sp_grantlogin(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 만듭니다.  
   
@@ -42,7 +42,7 @@ sp_grantlogin [@loginame=] 'login'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @loginame = ] 'login'`Windows 사용자 또는 그룹의 이름입니다. Windows 사용자 또는 그룹은 *도메인*\\*사용자*형식의 windows 도메인 이름으로 한정 되어야 합니다. 예를 들면 **: london\joeb)** 입니다. *login* 은 **sysname**이며 기본값은 없습니다.  
+`[ @loginame = ] 'login'`Windows 사용자 또는 그룹의 이름입니다. Windows 사용자 또는 그룹은 *도메인* \\ *사용자*(예: **: london\joeb)**)의 windows 도메인 이름으로 한정 되어야 합니다. *login* 은 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -55,8 +55,8 @@ sp_grantlogin [@loginame=] 'login'
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 ALTER ANY LOGIN 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
- 다음 예에서는를 `CREATE LOGIN` 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 사용자 `Corporate\BobJ.` 에 대 한 로그인을 만듭니다 .이는 선호 되는 방법입니다.  
+## <a name="examples"></a>예제  
+ 다음 예에서는 `CREATE LOGIN` 를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 사용자에 대 한 로그인을 만듭니다 `Corporate\BobJ.` .이는 선호 되는 방법입니다.  
   
 ```sql
 CREATE LOGIN [Corporate\BobJ] FROM WINDOWS;  

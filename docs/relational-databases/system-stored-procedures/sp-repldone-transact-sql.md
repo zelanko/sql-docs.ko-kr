@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b89dcde2aab76fcb6760f2788503485ef42182ac
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: e627296cecad35b21c84b928f4474f6302e9214d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807884"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725738"
 ---
 # <a name="sp_repldone-transact-sql"></a>sp_repldone(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   서버에서 마지막으로 배포된 트랜잭션을 식별하는 레코드를 업데이트합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -66,10 +66,10 @@ sp_repldone [ @xactid= ] xactid
   
  **Sp_repltrans** 또는 **sp_replcmds**를 사용 하 여 필요한 *xactid* 및 *xact_seqno* 매개 변수를 가져올 수 있습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버는 **sp_repldone**을 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  *Xactid* 가 null이 고 *xact_seqno* 가 null이 고 *reset* 이 **1**이면 로그의 모든 복제 된 트랜잭션이 분산 된 것으로 표시 됩니다. 이러한 방법은 더 이상 유효하지 않은 트랜잭션 로그에 복제된 트랜잭션이 있는 상태에서 로그를 자를 때 유용합니다. 예를 들어 다음과 같습니다.  
   
 ```sql

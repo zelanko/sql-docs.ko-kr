@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f88c438206551e170810f467e7944b21232e245d
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 3713f0fadfe186c31a26f2f19adea88da2f28384
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529707"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729517"
 ---
 # <a name="context-functions---last-xquery"></a>컨텍스트 함수 - last(XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   현재 처리 중인 시퀀스의 항목 수를 반환합니다. 특히 시퀀스에서 마지막 항목의 정수 인덱스를 반환합니다. 시퀀스의 첫 번째 항목에는 인덱스 값 1이 있습니다.  
   
@@ -38,7 +38,7 @@ fn:last() as xs:integer
 ## <a name="remarks"></a>설명  
  SQL Server에서 **fn: last ()** 는 컨텍스트 종속 조건자의 컨텍스트에서만 사용할 수 있습니다. 특히 사용 시 대괄호(`[ ]`)로 묶어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 항목에서는 AdventureWorks 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
   
 ### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>A. last() XQuery 함수를 사용하여 마지막 두 제조 단계 검색  

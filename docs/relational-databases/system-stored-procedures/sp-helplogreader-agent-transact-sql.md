@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4c1afca8eed465c191fccb4d24e79a7bd95af9aa
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 31b4811542fa291fd1ff61368e6c5ac3ce9e714a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828931"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728135"
 ---
 # <a name="sp_helplogreader_agent-transact-sql"></a>sp_helplogreader_agent(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   게시 데이터베이스에 대한 로그 판독기 에이전트 작업의 속성을 반환합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -58,7 +58,7 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 ## <a name="remarks"></a>설명  
  **sp_helplogreader_agent** 은 트랜잭션 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  게시자에서 **sysadmin** 고정 서버 역할의 멤버 또는 게시 데이터베이스에 대 한 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_helplogreader_agent**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -19,15 +19,15 @@ ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4097629a1642c952384ed96ac8349f241237332b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2878d206d4bc90d801e1e8f42f4f3f2c04d2c121
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818525"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733202"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 특정 대체 언어 또는 모든 언어에 관한 정보를 보고합니다.  
   
@@ -41,7 +41,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @language = ] 'language'`정보를 표시할 대체 언어의 이름입니다. *language* 는 **sysname**이며 기본값은 NULL입니다. *Language* 를 지정 하면 지정 된 언어에 대 한 정보가 반환 됩니다. Language를 지정 하지 않으면 **sys.syslanguages** 호환성 보기의 모든 언어에 대 한 정보가 반환 됩니다.  
+`[ @language = ] 'language'`정보를 표시할 대체 언어의 이름입니다. *language* 는 **sysname**이며 기본값은 NULL입니다. *Language* 를 지정 하면 지정 된 언어에 대 한 정보가 반환 됩니다. Language를 지정 하지 않으면 **sys.sys언어** 호환성 보기의 모든 언어에 대 한 정보가 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -56,7 +56,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |**업그레이드할**|**int**|이 언어에 대한 최신 업그레이드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전입니다.|  
 |**name**|**sysname**|언어 이름입니다.|  
 |**alias**|**sysname**|언어의 대체 이름입니다.|  
-|**개월**|**nvarchar(372)**|월 이름입니다.|  
+|**months**|**nvarchar(372)**|월 이름입니다.|  
 |**shortmonths**|**nvarchar(132)**|월의 짧은 이름입니다.|  
 |**일별로**|**nvarchar(217)**|요일 이름입니다.|  
 |**lcid**|**int**|언어의 Windows 로캘 ID입니다.|  
