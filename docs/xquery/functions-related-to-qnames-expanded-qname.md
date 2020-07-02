@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 295427f0b5b7dc9fe42ad363bb95ebab0a1be1eb
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 88bbf5697112fd80f8ffea629a1ad2b9e99977fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689337"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720048"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>QNames 관련 함수 - expanded-QName
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   *$ParamURI* 에 지정 된 네임 스페이스 URI와 *$paramLocal*에 지정 된 로컬 이름을 사용 하 여 xs: QName 형식의 값을 반환 합니다. *$ParamURI* 빈 문자열 이거나 빈 시퀀스인 경우 네임 스페이스를 나타냅니다.  
   
@@ -50,7 +50,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   기존의 QName 유형 값을 수정하거나 비교할 수 있습니다. 예를 들어는 `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")`> <요소의 값을 확장 된 `e` **qname ()** 함수에서 반환 된 qname과 비교 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 항목에서는 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 합니다.  
   
 ### <a name="a-replacing-a-qname-type-node-value"></a>A. QName 유형 노드 값 바꾸기  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 45837533806f2294665abbb242627a39d041e6d6
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: a0945ffa8845c901662acb29c3ed04826870d0ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529807"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722601"
 ---
 # <a name="path-expressions---specifying-predicates"></a>경로 식 - 조건자 지정
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   [XQuery의 경로 식](../xquery/path-expressions-xquery.md)항목에 설명 된 대로 경로 식의 축 단계에는 다음 구성 요소가 포함 됩니다.  
   
@@ -124,7 +124,7 @@ WHERE ProductModelID=7
   
 1.  조건자 식의 값이 비어 있는 시퀀스인 경우 해당 조건자의 진리 값은 False입니다.  
   
-     예를 들어:  
+     예를 들면 다음과 같습니다.  
   
     ```  
     SELECT Instructions.query('  

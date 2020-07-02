@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0722ccd8c4f18fd16ed4abdb3630e80bc7d5de53
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9c4cef3b1a088f0ae0a085fd4769a8e252713df4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824784"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725388"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   알려진 각 구독자당 한 개의 행을 포함합니다. 게시자에서는 로컬 테이블에 해당합니다. 이 테이블은 게시 및 구독 데이터베이스에 저장됩니다.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "82824784"
 |partition_id|**int**|구독이 속한 사전 계산 파티션을 식별합니다.|  
 |cleanedup_unsent_changes|**bit**|보내지 않은 변경 사항에 대한 메타데이터가 구독자에서 정리되었음을 식별합니다.|  
 |replica_version|**int**|구독이 속한 구독자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 식별합니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
-|supportability_mode|**int**|내부 전용입니다.|  
-|application_name|**nvarchar(128)**|내부 전용입니다.|  
-|subscriber_number|**int**|내부 전용입니다.|  
+|supportability_mode|**int**|내부적으로만 사용됩니다.|  
+|application_name|**nvarchar(128)**|내부적으로만 사용됩니다.|  
+|subscriber_number|**int**|내부적으로만 사용됩니다.|  
 |last_makegeneration_datetime|**datetime**|Makegeneration 프로세스가 게시자에 대해 실행 한 마지막 **날짜/시간** 입니다. 자세한 내용은 [Replication 병합 에이전트](../../relational-databases/replication/agents/replication-merge-agent.md)의-MakeGenerationInterval 매개 변수를 참조 하세요.|  
   
 ## <a name="see-also"></a>참고 항목  

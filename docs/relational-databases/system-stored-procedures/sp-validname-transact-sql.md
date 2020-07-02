@@ -18,15 +18,15 @@ ms.assetid: d51c53c2-1332-407f-b725-4983f2e710eb
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c559c8a6af6add669e1cc4630b7bcfc9fc0aacc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86b1c7ec67a19e18dcc5daa6d14e55acc9b34c64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936733"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722982"
 ---
 # <a name="sp_validname-transact-sql"></a>sp_validname(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자 이름을 확인합니다. **Nchar**, **nvarchar**또는 **ntext** 데이터 형식을 사용 하 여 저장할 수 있는 유니코드 데이터를 포함 하 여 모든 이진이 아닌 및 0이 아닌 데이터는 식별자 이름에 대해 유효한 문자로 허용 됩니다.  
   

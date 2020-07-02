@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e1f6123c-669e-469b-ac9a-a464d78ad60c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 224d19231eae84658580e17666221d6b76d99f69
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aed4c953f7f9c14b899f034d58f74d2ceb22862a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018444"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720414"
 ---
 # <a name="policy-based-management-views-transact-sql"></a>정책 기반 관리 뷰(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   정책 기반 관리에는 정책 기반 관리 정책, 조건, 식, 그룹 및 필터에 대한 정보를 표시하는 다음 뷰가 있습니다. 다음 뷰는 msdb 데이터베이스에 있으며 dbo 스키마가 소유합니다.  
   

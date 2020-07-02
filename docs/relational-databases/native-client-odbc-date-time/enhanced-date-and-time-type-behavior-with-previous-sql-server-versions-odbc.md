@@ -13,15 +13,15 @@ ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e5147a8eef08c70605bf13f6c1cb04887d0d926
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a73fbe7709e30156f198205a21644153fad10240
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301900"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725180"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>이전 버전 SQL Server에 대한 향상된 날짜 및 시간 형식 동작(ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   이 항목에서는 향상된 날짜 및 시간 기능을 사용하는 클라이언트 애플리케이션이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]와 통신할 경우 및 Microsoft Data Access Components, Windows Data Access Components 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client를 사용하는 클라이언트 애플리케이션이 향상된 날짜 및 시간 기능을 지원하는 서버에 명령을 보낼 경우 예상되는 동작에 대해 설명합니다.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "81301900"
   
  SQLDescribeCol, SQLDescribeParam, SQGetDescField 및 SQLColAttribute에서 반환 된 문 메타 데이터는 형식 이름을 포함 하 여 모든 측면에서 하위 수준 형식과 일치 하는 메타 데이터를 반환 합니다. 이러한 하위 수준 형식의 예는 **nvarchar**입니다.  
   
- 날짜/시간 형식에 대 한 스키마가 변경 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 된 (또는 이후) 서버에 대해 하위 수준 클라이언트 응용 프로그램이 실행 되는 경우 예상 되는 동작은 다음과 같습니다.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]날짜/시간 형식에 대 한 스키마가 변경 된 (또는 이후) 서버에 대해 하위 수준 클라이언트 응용 프로그램이 실행 되는 경우 예상 되는 동작은 다음과 같습니다.  
   
 |SQL Server 2005 형식|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)](또는 이후 버전) 형식|ODBC 클라이언트 형식|결과 변환(SQL에서 C로 변환)|매개 변수 변환(C에서 SQL로 변환)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  

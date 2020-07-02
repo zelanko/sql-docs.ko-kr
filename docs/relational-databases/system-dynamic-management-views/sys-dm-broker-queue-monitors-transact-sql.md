@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0ece2e3c42c549b248ef85e05f2f7b471a7d40ff
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: df75ccbec2cd245942a06f13da698fda1505d6ac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824757"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720330"
 ---
 # <a name="sysdm_broker_queue_monitors-transact-sql"></a>sys.dm_broker_queue_monitors(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   인스턴스의 큐 모니터에 대한 행을 반환합니다. 한 큐 모니터에 대해 한 행을 반환합니다 큐 모니터는 큐 활성화를 관리합니다.  
   
@@ -40,10 +40,10 @@ ms.locfileid: "82824757"
 |**last_activated_time**|**datetime**|이 큐 모니터에서 마지막으로 저장 프로시저를 활성화한 시간입니다. NULL을 허용합니다.|  
 |**tasks_waiting**|**int**|이 큐에 대해 RECEIVE 문 내에서 현재 대기하고 있는 세션 수입니다. NULL을 허용합니다.<br /><br /> 참고:이 수에는 큐 모니터가 세션을 시작 했는지 여부에 관계 없이 receive 문을 실행 하는 모든 세션이 포함 됩니다. RECEIVE와 함께 WAITFOR를 사용하는 경우 해당됩니다. 기본적으로 이러한 태스크는 메시지가 큐에 도착할 때까지 대기하고 있습니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-current-status-queue-monitor"></a>A. 현재 상태 큐 모니터  
  이 시나리오에서는 모든 메시지 큐의 현재 상태를 제공합니다.  

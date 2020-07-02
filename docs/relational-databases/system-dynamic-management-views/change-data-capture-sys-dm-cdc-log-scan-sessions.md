@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55b69995dc6fb639acad84c561ce3530af991c6e
-ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
+ms.openlocfilehash: dd6f2d08b44a8e3a3b99dcd3fdc8484e2d0f5b04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82872731"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720356"
 ---
 # <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>변경 데이터 캡처-sys. dm_cdc_log_scan_sessions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스의 각 로그 검색 세션에 대해 한 개의 행을 반환합니다. 반환된 마지막 행은 현재 세션을 나타냅니다. 이 뷰를 사용하면 현재 로그 검색 세션에 대한 상태 정보, 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 마지막으로 시작된 이후의 모든 세션에 대한 집계 정보를 반환할 수 있습니다.  
    
@@ -61,7 +61,7 @@ ms.locfileid: "82872731"
 ## <a name="permissions"></a>사용 권한  
  **Sys. dm_cdc_log_scan_sessions** 동적 관리 뷰를 쿼리하려면 VIEW DATABASE STATE 권한이 필요 합니다. 동적 관리 뷰 사용 권한에 대 한 자세한 내용은 [동적 관리 뷰 및 함수 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)를 참조 하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 현재 세션에 대한 정보를 반환합니다.  
   
 ```  

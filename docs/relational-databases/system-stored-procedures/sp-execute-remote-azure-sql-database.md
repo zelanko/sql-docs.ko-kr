@@ -15,15 +15,15 @@ ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 32655955bc150a57a6f15ebccdcf30187d3128fe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9d257f5b52c6dfea82868b69570f2655675bb7ca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820578"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720285"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote(Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)]단일 원격 Azure SQL Database 또는 행 분할 체계에서 분할 역할을 하는 데이터베이스 집합에 대해 문을 실행 합니다.  
   
@@ -81,7 +81,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
   
  `sp_execute_remote`[sp_executesql &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md)와 유사 하 게 사용할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 ### <a name="simple-example"></a>간단한 예  
  다음 예에서는 원격 데이터베이스에 대해 간단한 SELECT 문을 만들고 실행 합니다.  
   

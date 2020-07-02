@@ -14,15 +14,15 @@ ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a696107a82b5f64109b115e3e1c360d81117344
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9634cf553750045c6c773ee9f804dc5358883852
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298344"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725107"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>대량 복사 서식 파일 만들기(ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   이 예제에서는 대량 복사 함수를 사용하여 데이터 파일과 서식 파일을 모두 만드는 방법을 보여 줍니다. 이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "81298344"
   
  이 예제는 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 명명된 인스턴스에 연결하려면 ODBC 데이터 원본의 정의를 변경하여 server\namedinstance 형식으로 인스턴스를 지정합니다. 기본적으로 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] 는 명명된 인스턴스에 설치됩니다.  
   
- 첫 번째 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록을 실행 하 여 예제에서 사용할 테이블을 만듭니다.  
+ 첫 번째 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)] ) 코드 목록을 실행 하 여 예제에서 사용할 테이블을 만듭니다.  
   
  odbc32.lib 및 odbcbcp.lib를 사용하여 두 번째(C++) 코드 목록을 컴파일합니다.  
   
- 세 번째 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록을 실행 하 여 예제에서 사용한 테이블을 삭제 합니다.  
+ 세 번째 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)] ) 코드 목록을 실행 하 여 예제에서 사용한 테이블을 삭제 합니다.  
   
 ```  
 use AdventureWorks  

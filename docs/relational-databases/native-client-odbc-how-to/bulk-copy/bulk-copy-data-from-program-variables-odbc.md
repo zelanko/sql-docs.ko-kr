@@ -14,15 +14,15 @@ ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ebabedb2c801881a4dc908ead93515dc9119fc3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62951ec956282201ae2b61a82c6a72dcd2831307
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299614"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725143"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>프로그램 변수에서 데이터 대량 복사(ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   이 샘플에서는 **bcp_bind** 및 **bcp_sendrow**를 사용 하 여 프로그램 변수에서 SQL Server로 데이터를 대량 복사 하는 대량 복사 함수를 사용 하는 방법을 보여 줍니다. 이 예제를 간소화하기 위해 오류 검사 코드는 제거했습니다.  
   
@@ -65,11 +65,11 @@ ms.locfileid: "81299614"
   
  이 예제는 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 명명된 인스턴스에 연결하려면 ODBC 데이터 원본의 정의를 변경하여 server\namedinstance 형식으로 인스턴스를 지정합니다. 기본적으로 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] 는 명명된 인스턴스에 설치됩니다.  
   
- 첫 번째 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록을 실행 하 여 예제에서 사용 하는 테이블을 만듭니다.  
+ 첫 번째 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)] ) 코드 목록을 실행 하 여 예제에서 사용 하는 테이블을 만듭니다.  
   
  odbc32.lib 및 odbcbcp.lib를 사용하여 두 번째(C++) 코드 목록을 컴파일합니다. MSBuild.exe를 사용하여 빌드한 경우 먼저 Bcpfmt.fmt 및 Bcpodbc.bcp를 프로젝트 디렉터리에서 .exe가 있는 디렉터리에 복사한 다음 .exe를 호출합니다.  
   
- 세 번째 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록을 실행 하 여 예제에서 사용한 테이블을 삭제 합니다.  
+ 세 번째 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)] ) 코드 목록을 실행 하 여 예제에서 사용한 테이블을 삭제 합니다.  
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  

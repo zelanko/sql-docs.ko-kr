@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: c40bc75a-73f3-4d3f-82e1-4c023dfe958f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 96ee4f06c35a229fdebd6469e2c23b0343f4d29f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e56798156950b4d616ee1df3ceab5ccf7306567c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829747"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720399"
 ---
 # <a name="spatial-data-catalog-views"></a>공간 데이터 카탈로그 뷰
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 섹션에서는 공간 데이터에 대한 정보를 제공하는 카탈로그 뷰에 대해 설명합니다.  
   

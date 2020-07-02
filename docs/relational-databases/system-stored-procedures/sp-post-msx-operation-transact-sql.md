@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2d9cc791a0bcd01b2af64ce61771d7460eda4b21
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d27a763efe79c9ab7f4809416b7bbc57f08e4044
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831014"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720255"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   대상 서버를 다운로드 하 여 실행할 **sysdownloadlist** 시스템 테이블에 작업 (행)을 삽입 합니다.  
   

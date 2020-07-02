@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c757e46f861d6652b3c8c151c3e002dba13e84ef
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 9fa783dfb2ac1d7e3cbca735c9f2a2cbca19dbda
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689489"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720027"
 ---
 # <a name="functions-on-string-values---upper-case"></a>문자열 값 함수 - upper-case
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   이 함수는 *$arg* 의 각 문자를 해당 하는 대문자로 변환 합니다. 유니코드 코드 포인트에 대한 Microsoft Windows 이진 대/소문자 변환은 문자를 대문자로 변환하는 방법을 지정합니다. 이 표준은 유니코드 표준 코드 포인트 표준의 매핑과 다릅니다.  
   
@@ -45,7 +45,7 @@ fn:upper-case($arg as xs:string?) as xs:string
 ## <a name="remarks"></a>설명  
  *$Arg* 값이 비어 있으면 길이가 0 인 문자열이 반환 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. 문자열을 대문자로 변경  
  다음 예에서는 입력 문자열 ' abcDEF! '를 변경 합니다. @4 대문자로  

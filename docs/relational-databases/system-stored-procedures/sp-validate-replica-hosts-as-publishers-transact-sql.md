@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9375be2a2af2b7653b3f0f036405533f1571ff3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 58d93574b2e9b71b47e9c145619e9fb153c6e91d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75320011"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723041"
 ---
 # <a name="sp_validate_replica_hosts_as_publishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **sp_validate_replica_hosts_as_publishers** 은 현재 주 복제본 뿐만 아니라 모든 보조 복제본의 유효성을 검사할 수 있는 **sp_validate_redirected_publisher** 의 확장입니다. **sp_validate_replicat_hosts_as_publisher** 는 전체 Always On 복제 토폴로지의 유효성을 검사 합니다. 이중 홉 보안 오류 (21892)를 방지 하기 위해 원격 데스크톱 세션을 사용 하 여 배포자에서 직접 **sp_validate_replica_hosts_as_publishers** 를 실행 해야 합니다.  
   
@@ -41,7 +41,7 @@ sp_validate_replica_hosts_as_publishers
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @original_publisher = ] 'original_publisher'`원래 데이터베이스를 게시 한 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이름입니다. *original_publisher* 는 **sysname**이며 기본값은 없습니다.  
+`[ @original_publisher = ] 'original_publisher'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]원래 데이터베이스를 게시 한 인스턴스의 이름입니다. *original_publisher* 는 **sysname**이며 기본값은 없습니다.  
   
 `[ @publisher_db = ] 'publisher_db'`게시 되는 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
   
@@ -54,7 +54,7 @@ sp_validate_replica_hosts_as_publishers
  없음  
   
 ## <a name="remarks"></a>설명  
- 게시자 및 게시 데이터베이스에 대 한 항목이 없는 경우 **sp_validate_redirected_publisher** 는 출력 매개 변수 * \@redirected_publisher*에 대해 null을 반환 합니다. 그렇지 않고 게시자 및 게시 데이터베이스에 대한 항목이 있는 경우에는 성공 및 실패 모두에 대해 연결된 리디렉션된 게시자가 반환됩니다.  
+ 게시자 및 게시 데이터베이스에 대 한 항목이 없는 경우 **sp_validate_redirected_publisher** 는 출력 매개 변수 * \@ redirected_publisher*에 대해 null을 반환 합니다. 그렇지 않고 게시자 및 게시 데이터베이스에 대한 항목이 있는 경우에는 성공 및 실패 모두에 대해 연결된 리디렉션된 게시자가 반환됩니다.  
   
  유효성 검사가 성공 하면 **sp_validate_redirected_publisher** 는 성공 표시를 반환 합니다.  
   

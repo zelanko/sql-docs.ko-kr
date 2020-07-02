@@ -20,23 +20,23 @@ ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0a0789ebd9a5aa4bd10605d69afa59a586ce75b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b68fbc20fb220af49036890edc2b67d1a4f7b65
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155542"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724678"
 ---
 # <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage(Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   **참고: Azure SQL Database V11 적용 됩니다.**  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버에 있는 데이터베이스의 수, 유형 및 기간을 나열 합니다.  
+ 서버에 있는 데이터베이스의 수, 유형 및 기간을 나열 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 합니다.  
   
  **Database_usage** 뷰에는 다음 열이 포함 되어 있습니다.  
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |time|사용 이벤트가 발생한 날짜입니다.|  
 |sku|데이터베이스의 서비스 계층 형식: **Web**, **Business**, **Basic**, **Standard**, **Premium**|  

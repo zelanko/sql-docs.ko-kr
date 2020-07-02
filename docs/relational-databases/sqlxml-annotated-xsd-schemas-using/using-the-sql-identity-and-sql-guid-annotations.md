@@ -25,16 +25,16 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f581c1a5c0d925d48df5a16d95cdb141e2d48f83
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2d1d8c72851c945f178bb9e206ad536a23f24891
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388102"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724756"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>sql:identity 및 sql:guid 주석 사용
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터베이스 열에 매핑되는 노드의 XSD 스키마에 **sql: identity** 및 **sql: guid** 주석을 지정할 수 있습니다. Updategram 형식은 **updg: identity** 및 **updg: guid** 특성을 지원 하지만 DiffGram 형식은 지원 하지 않습니다. **Updg: identity** 특성은 id 유형 열을 업데이트 하는 동작을 정의 합니다. **Updg: guid** 특성을 사용 하면에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] guid 값을 가져와 updategram에서 사용할 수 있습니다. 자세한 내용 및 작업 예제는 [XML Updategrams을 사용 하 여 데이터 삽입 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)을 참조 하세요.  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  의 데이터베이스 열에 매핑되는 노드의 XSD 스키마에 **sql: identity** 및 **sql: guid** 주석을 지정할 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Updategram 형식은 **updg: identity** 및 **updg: guid** 특성을 지원 하지만 DiffGram 형식은 지원 하지 않습니다. **Updg: identity** 특성은 id 유형 열을 업데이트 하는 동작을 정의 합니다. **Updg: guid** 특성을 사용 하면에서 guid 값을 가져와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] updategram에서 사용할 수 있습니다. 자세한 내용 및 작업 예제는 [XML Updategrams을 사용 하 여 데이터 삽입 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)을 참조 하세요.  
   
  **Sql: identity** 및 **sql: guid** 주석은이 기능을 diffgram로 확장 합니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "81388102"
  **Sql: identity** 및 **sql: guid** 주석은 복합 콘텐츠 요소에 정의 될 수 있습니다.  
   
 ## <a name="sqlidentity-annotation"></a>sql:identity 주석  
- ID 형식 데이터베이스 열에 매핑되는 노드의 XSD 스키마에서 **sql: identity** 주석을 지정할 수 있습니다. 이 주석에 대해 지정 된 값은 updategram에 제공 된 값을 사용 하 여 열을 수정 하거나 값을 무시 하 여 ID 유형 열이 업데이트 되는 방법을 정의 합니다 .이 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 열에 대해 생성 된 값이 사용 됩니다.  
+ ID 형식 데이터베이스 열에 매핑되는 노드의 XSD 스키마에서 **sql: identity** 주석을 지정할 수 있습니다. 이 주석에 대해 지정 된 값은 updategram에 제공 된 값을 사용 하 여 열을 수정 하거나 값을 무시 하 여 ID 유형 열이 업데이트 되는 방법을 정의 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .이 경우이 열에 대해 생성 된 값이 사용 됩니다.  
   
  **Sql: identity** 주석에는 다음 두 값을 할당할 수 있습니다.  
   

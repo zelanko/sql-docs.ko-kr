@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9202f357ebf09bef666edfe9a9e18d6dc685545
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 0f6e179612b11b1238d017fb81db2f6fbc6b661a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84886590"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720070"
 ---
 # <a name="functions-on-string-values---lower-case"></a>문자열 값 함수 - lower-case
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   소문자 함수는 *$arg* 의 각 문자를 해당 하는 소문자로 변환 합니다. 유니코드 코드 포인트에 대한 Microsoft Windows 이진 대/소문자 변환은 문자를 소문자로 변환하는 방법을 지정합니다. 이 표준은 유니코드 코드 포인트 표준에 대한 매핑과 같지 않습니다.  
   
@@ -45,7 +45,7 @@ fn:lower-case($arg as xs:string?) as xs:string
 ## <a name="remarks"></a>설명  
  *$Arg* 값이 비어 있으면 길이가 0 인 문자열이 반환 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. 문자열을 대문자로 변경  
  다음 예에서는 입력 문자열 ' abcDEF! '를 변경 합니다. @4 소문자로  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c644814b-4e40-44d7-b6b4-5954b0d4db7c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 940bd63d1d0cfb5abbc0081deee7cd57bfd3c5a4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2b929b9d01468a18175aa99470f425418bfcfe89
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812686"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725449"
 ---
 # <a name="mspeer_topologyrequest-transact-sql"></a>MSpeer_topologyrequest(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   피어 투 피어 복제에서 게시에 대한 토폴로지 상태 요청을 추적하기 위해 사용됩니다. 이 테이블은 게시 데이터베이스에 저장됩니다.  
   

@@ -13,15 +13,15 @@ ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0d1e6e4fa9c88fc67b15a076a6c96a742fd7fdc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c4f0ff3a5cc18845bc2fcc2bec682c6bd8e2db4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304811"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724663"
 ---
 # <a name="sysinternal_partitions-transact-sql"></a>sys. internal_partitions (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   디스크 기반 테이블의 columnstore 인덱스에 대 한 내부 데이터를 추적 하는 각 행 집합에 대해 하나의 행을 반환 합니다. 이러한 행 집합은 columnstore 인덱스에 대 한 내부 이며 삭제 된 행, 행 그룹 매핑 및 델타 저장소 행 그룹을 추적 합니다. 각 테이블 파티션에 대 한 데이터를 추적 합니다. 모든 테이블에는 하나 이상의 파티션이 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]columnstore 인덱스를 다시 작성할 때마다 행 집합을 다시 만듭니다.   
   
@@ -41,12 +41,12 @@ ms.locfileid: "72304811"
 |optimize_for_sequential_key|**bit**|1 = 파티션에서 마지막 페이지 삽입 최적화를 사용 하도록 설정 했습니다.<br><br>0 = 기본값 파티션에서 마지막 페이지 삽입 최적화를 사용 하지 않도록 설정 했습니다.|
   
 ## <a name="permissions"></a>사용 권한  
- `public` 역할의 멤버 자격이 필요합니다.  자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
+ `public` 역할의 멤버 자격이 필요합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]columnstore 인덱스를 만들거나 다시 작성할 때마다 새 columnstore 내부 인덱스를 다시 만듭니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-view-all-of-the-internal-rowsets-for-a-table"></a>A. 테이블에 대 한 내부 행 집합 모두 보기  
  이 예에서는 테이블에 대 한 모든 내부 columnstore 행 집합을 반환 합니다. Hobt_id를 사용 하 여 특정 행 집합에 대 한 자세한 정보를 찾을 수도 있습니다.  

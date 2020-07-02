@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d374b244b265d6bc46ca9e6073f9a688fcd2b4a5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c6a542e44f33a64b5cdd4727aab891592338b880
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824768"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724621"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   서버의 각 애플리케이션 도메인에 대해 행을 반환합니다. 응용 프로그램 도메인 (**AppDomain**)은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 응용 프로그램에 대 한 격리 단위인 CLR (공용 언어 런타임)의 구문입니다. 이 뷰를 사용 하 여에서 실행 중인 CLR 통합 개체를 이해 하 고 문제를 해결할 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82824768"
   
  자세한 내용은 [응용 프로그램 도메인](https://go.microsoft.com/fwlink/p/?LinkId=299658)을 참조 하세요.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**appdomain_address**|**varbinary(8)**|**AppDomain**의 주소입니다. 사용자가 소유 하는 모든 관리 되는 데이터베이스 개체는 항상 동일한 **AppDomain**에 로드 됩니다. 이 열을 사용 하 여 **dm_clr_loaded_assemblies**에서이 **AppDomain** 에 현재 로드 된 모든 어셈블리를 조회할 수 있습니다.|  
 |**appdomain_id**|**int**|**AppDomain**의 ID입니다. 각 **AppDomain** 에는 고유한 ID가 있습니다.|  
@@ -58,13 +58,13 @@ ms.locfileid: "82824768"
   
 ## <a name="appdomain-initialization"></a>AppDomain 초기화  
   
-|주|설명|  
+|시스템 상태|설명|  
 |-----------|-----------------|  
 |E_APPDOMAIN_CREATING|**AppDomain** 을 만들고 있습니다.|  
   
 ## <a name="appdomain-usage"></a>AppDomain 사용  
   
-|주|설명|  
+|시스템 상태|설명|  
 |-----------|-----------------|  
 |E_APPDOMAIN_SHARED|여러 사용자가 런타임 **AppDomain** 을 사용할 준비가 되었습니다.|  
 |E_APPDOMAIN_SINGLEUSER|**AppDomain** 은 DDL 작업에서 사용할 준비가 되었습니다. 공유된 AppDomain이 DDL 작업이 아닌 CLR 통합 실행에 사용된다는 점에서 E_APPDOMAIN_SHARED와 다릅니다. 이러한 AppDomain은 동시에 실행되는 다른 작업과 격리됩니다.|  
@@ -72,7 +72,7 @@ ms.locfileid: "82824768"
   
 ## <a name="appdomain-cleanup"></a>AppDomain 정리  
   
-|주|설명|  
+|시스템 상태|설명|  
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 일반적으로 관리 되는 데이터베이스 개체를 포함 하는 어셈블리가 변경 되거나 삭제 되었기 때문에 CLR이 **AppDomain**을 언로드하기 위해 요청 했습니다.|  
 |E_APPDOMAIN_UNLOADED|CLR이 **AppDomain**을 언로드 했습니다. 이는 일반적으로 **Threadabort**, **OutOfMemory**또는 사용자 코드의 처리 되지 않은 예외로 인 한 에스컬레이션 프로시저의 결과입니다.|  
@@ -80,10 +80,10 @@ ms.locfileid: "82824768"
 |E_APPDOMAIN_DESTROY|**AppDomain** 이에 의해 소멸 되 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.|  
 |E_APPDOMAIN_ZOMBIE|**Appdomain** 이에 의해 소멸 되었지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **appdomain** 에 대 한 모든 참조가 정리 되지 않았습니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예제에서는 지정 된 어셈블리에 대 한 **AppDomain** 의 세부 정보를 보는 방법을 보여 줍니다.  
   
 ```  

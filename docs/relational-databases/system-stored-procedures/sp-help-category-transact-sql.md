@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c09dfe73df914a38e53a39b99c99388590c8d9c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8d34f37256e36049b4766a4059068a2e7bd6cfd3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827770"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724578"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정된 클래스의 작업, 경고 또는 운영자에 관한 정보를 제공합니다.  
    
@@ -54,7 +54,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 |값|설명|  
 |-----------|-----------------|  
-|**LOCAL**|로컬 작업 범주입니다.|  
+|**로컬**|로컬 작업 범주입니다.|  
 |**MULTI -SERVER**|다중 서버 작업 범주입니다.|  
 |**NONE**|**JOB**이 아닌 다른 클래스에 대 한 범주입니다.|  
   
@@ -87,7 +87,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
  매개 변수가 지정되지 않은 경우에는 결과 집합이 모든 작업 범주에 관한 정보를 제공합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
@@ -98,7 +98,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
  이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-local-job-information"></a>A. 로컬 작업 정보 반환  
  다음 예에서는 로컬로 관리되는 작업에 대한 정보를 반환합니다.  

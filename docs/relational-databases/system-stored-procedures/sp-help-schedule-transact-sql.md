@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ce8c1514a0c62eeb11743d86dd6922cf4995c63c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2b14900e32c32a5de50998580a8d0de9ed7eacfb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828411"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720306"
 ---
 # <a name="sp_help_schedule-transact-sql"></a>sp_help_schedule(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   일정에 관한 정보를 나열합니다.  
   
@@ -80,7 +80,7 @@ sp_help_schedule
 ## <a name="remarks"></a>설명  
  매개 변수를 제공 하지 않으면 **sp_help_schedule** 는 인스턴스의 모든 일정에 대 한 정보를 나열 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
@@ -93,7 +93,7 @@ sp_help_schedule
   
  **SQLAgentUserRole** 의 멤버는 자신이 소유한 일정만 볼 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-listing-information-for-all-schedules-in-the-instance"></a>A. 인스턴스의 모든 일정에 대한 정보 나열  
  다음 예에서는 인스턴스에 있는 모든 일정에 대한 정보를 나열합니다.  

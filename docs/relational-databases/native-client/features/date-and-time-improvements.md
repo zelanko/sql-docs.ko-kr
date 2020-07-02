@@ -10,15 +10,15 @@ ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37dc1e40d9af24fd327ce12711f1006c01020e45
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b5ddc38c789041c55e34c83015d047d6c6c7eec9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303877"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719666"
 ---
 # <a name="date-and-time-improvements"></a>날짜 및 시간 기능 향상
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 추가된 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]Native Client의 date 및 time 데이터 형식 지원에 대해 설명합니다.  
   
@@ -26,7 +26,7 @@ ms.locfileid: "81303877"
   
  이 기능을 보여 주는 예제 애플리케이션에 대한 자세한 내용은 [SQL Server 데이터 프로그래밍 예제](https://msftdpprodsamples.codeplex.com/)를 참조하십시오.  
   
-## <a name="usage"></a>사용법  
+## <a name="usage"></a>사용  
  다음 섹션에서는 새 date 및 time 형식을 사용하는 다양한 방법에 대해 설명합니다.  
   
 ### <a name="use-date-as-a-distinct-data-type"></a>고유 데이터 형식으로 Date 사용  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b8c58657eda708965821c4739f76b49c558c8e76
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 387e4a0a30f5681391bb5891dc772f7c9f04790c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832590"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723080"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   추적에 이벤트 또는 이벤트 열을 추가하거나 제거합니다. **sp_trace_setevent** 는 중지 된 기존 추적 에서만 실행할 수 있습니다 (*상태* **0**). 존재 하지 않거나 *상태가* **0**이 아닌 추적에서이 저장 프로시저를 실행 하면 오류가 반환 됩니다.  
   
@@ -53,7 +53,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 |이벤트 번호|이벤트 이름|설명|  
 |------------------|----------------|-----------------|  
-|0-9|Reserved|Reserved|  
+|0-9|예약됨|예약됨|  
 |10|RPC:Completed|RPC(원격 프로시저 호출)가 완료되면 발생합니다.|  
 |11|RPC:Starting|RPC가 시작되면 발생합니다.|  
 |12|SQL:BatchCompleted|[!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리가 완료되면 발생합니다.|  
@@ -73,8 +73,8 @@ sp_trace_setevent [ @traceid = ] trace_id
 |26|Lock:Cancel|리소스 잠금 획득이 교착 상태 등에 의해 취소되었음을 나타냅니다.|  
 |27|Lock:Timeout|필요한 리소스의 차단 잠금을 보유한 다른 트랜잭션으로 인해 페이지 등 리소스 잠금에 대한 요청 시간이 초과되었음을 나타냅니다. 제한 시간은 @ 함수에 의해 결정 @LOCK_TIMEOUT 되며 set LOCK_TIMEOUT 문으로 설정할 수 있습니다.|  
 |28|Degree of Parallelism Event(7.0 Insert)|SELECT, INSERT 또는 UPDATE 문이 실행되기 전에 발생합니다.|  
-|29-31|Reserved|이벤트 28을 대신 사용합니다.|  
-|32|Reserved|Reserved|  
+|29-31|예약됨|이벤트 28을 대신 사용합니다.|  
+|32|예약됨|예약됨|  
 |33|예외|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 예외가 발생했음을 나타냅니다.|  
 |34|SP:CacheMiss|저장 프로시저가 프로시저 캐시에서 발견되지 않는 때를 나타냅니다.|  
 |35|SP:CacheInsert|항목이 프로시저 캐시에 삽입되는 때를 나타냅니다.|  
@@ -90,20 +90,20 @@ sp_trace_setevent [ @traceid = ] trace_id
 |45|SP:StmtCompleted|저장 프로시저 내의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 실행을 완료했음을 나타냅니다.|  
 |46|Object:Created|CREATE INDEX, CREATE TABLE 및 CREATE DATABASE 문 등을 위해 개체가 만들어졌음을 나타냅니다.|  
 |47|Object:Deleted|DROP INDEX 및 DROP TABLE 문 등에서 개체가 삭제되었음을 나타냅니다.|  
-|48|Reserved||  
-|49|Reserved||  
+|48|예약됨||  
+|49|예약됨||  
 |50|SQL Transaction|[!INCLUDE[tsql](../../includes/tsql-md.md)] BEGIN, COMMIT, SAVE 및 ROLLBACK TRANSACTION 문을 추적합니다.|  
 |51|Scan:Started|테이블 또는 인덱스 검색이 시작된 때를 나타냅니다.|  
 |52|Scan:Stopped|테이블 또는 인덱스 검색이 중지된 때를 나타냅니다.|  
 |53|CursorOpen|커서가 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 ODBC, OLE DB 또는 DB-Library에 의해 열린 때를 나타냅니다.|  
 |54|TransactionLog|트랜잭션이 트랜잭션 로그에 기록되는 시기를 추적합니다.|  
 |55|Hash Warning|버퍼 파티션에서 처리되지 않는 해시 조인, 해시 집계, 해시 통합, 해시 중복 제외 등의 해시 작업이 대체 계획으로 되돌려졌음을 나타냅니다. 이는 재귀 깊이, 데이터 기울기, 추적 플래그 또는 비트 계산에 의해 발생할 수 있습니다.|  
-|56-57|Reserved||  
+|56-57|예약됨||  
 |58|Auto Stats|인덱스 통계 자동 업데이트가 발생했음을 나타냅니다.|  
 |59|Lock:Deadlock Chain|교착 상태로 끝난 각 이벤트에 대해 만들어집니다.|  
 |60|Lock:Escalation|페이지 잠금이 TABLE 또는 HoBT 잠금으로 에스컬레이션 또는 변환되는 경우처럼 미세 잠금이 성긴 잠금으로 변환되었음을 나타냅니다.|  
 |61|OLE DB Errors|OLE DB 오류가 발생하였음을 나타냅니다.|  
-|62-66|Reserved||  
+|62-66|예약됨||  
 |67|Execution Warnings|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문이나 저장 프로시저 실행 중에 발생한 경고를 나타냅니다.|  
 |68|Showplan Text (Unencoded)|실행된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 계획 트리를 표시합니다.|  
 |69|Sort Warnings|정렬 작업이 메모리에 적합하지 않음을 나타냅니다. 인덱스 만들기와 연관된 정렬 작업은 포함하지 않으며 SELECT 문에 사용된 ORDER BY 절 등 쿼리 내의 정렬 작업만 포함합니다.|  
@@ -127,9 +127,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 |96|Showplan Text|쿼리 최적화 프로그램에서 SQL 문의 쿼리 계획 트리를 표시합니다. **TextData** 열에는이 이벤트에 대 한 실행 계획이 포함 되지 않습니다.|  
 |97|Showplan All|실행된 SQL 문의 전체 컴파일 시간 정보와 쿼리 계획을 표시합니다. **TextData** 열에는이 이벤트에 대 한 실행 계획이 포함 되지 않습니다.|  
 |98|Showplan Statistics Profile|실행된 SQL 문의 전체 실행 시간 정보와 쿼리 계획을 표시합니다. **TextData** 열에는이 이벤트에 대 한 실행 계획이 포함 되지 않습니다.|  
-|99|Reserved||  
+|99|예약됨||  
 |100|RPC Output Parameter|모든 RPC에 대한 매개 변수의 출력 값을 생성합니다.|  
-|101|Reserved||  
+|101|예약됨||  
 |102|Audit Database Scope GDR|데이터베이스 사용 권한 부여와 같은 데이터베이스 전용 동작에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자가 문 사용 권한에 대한 GRANT, DENY 또는 REVOKE를 실행할 때마다 발생합니다.|  
 |103|Audit Object GDR Event|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자가 개체 사용 권한에 대한 GRANT, DENY, REVOKE를 실행할 때마다 발생합니다.|  
 |104|Audit Addlogin Event|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Sp_addlogin** 및 **sp_droplogin**에 대해 로그인이 추가 되거나 제거 될 때 발생 합니다.|  
@@ -172,15 +172,15 @@ sp_trace_setevent [ @traceid = ] trace_id
 |141|Broker:Message Classify|[!INCLUDE[ssSB](../../includes/sssb-md.md)]가 메시지 라우팅을 지정하면 발생합니다.|  
 |142|Broker:Transmission|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 전송 계층에서 오류가 발생했음을 나타냅니다. 오류 번호 및 상태 값이 오류의 원본을 나타냅니다.|  
 |143|Broker:Queue Disabled|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐에서 다섯 번의 트랜잭션 롤백이 연속적으로 발생하여 포이즌 메시지가 감지되었음을 나타냅니다. 이벤트에 포이즌 메시지를 포함하는 큐의 큐 ID 및 데이터베이스 ID가 들어 있습니다.|  
-|144-145|Reserved||  
+|144-145|예약됨||  
 |146|Showplan XML Statistics Profile|SQL 문을 실행하면 발생합니다. 실행 계획 연산자를 식별하고 컴파일 시간 데이터를 모두 표시합니다. 이 이벤트의 **이진** 열에는 인코딩된 실행 계획이 포함 됩니다. SQL Server 프로파일러를 사용하여 추적을 열고 실행 계획을 확인할 수 있습니다.|  
 |148|Deadlock Graph|잠금 획득 시도가 교착 상태의 일부이고 교착 상태가 발생하여 해당 시도가 취소되면 발생합니다. 교착 상태에 대한 XML 설명을 제공합니다.|  
 |149|Broker:Remote Message Acknowledgement|[!INCLUDE[ssSB](../../includes/sssb-md.md)]가 메시지 승인을 보내거나 받으면 발생합니다.|  
 |150|Trace File Close|추적 파일 롤오버 중에 추적 파일이 닫히면 발생합니다.|  
-|151|Reserved||  
+|151|예약됨||  
 |152|Audit Change Database Owner|ALTER AUTHORIZATION을 사용하여 데이터베이스의 소유자를 변경하고 이 작업을 수행하도록 사용 권한을 선택하면 발생합니다.|  
 |153|Audit Schema Object Take Ownership Event|ALTER AUTHORIZATION을 사용하여 개체에 소유자를 할당하고 이 작업을 수행하도록 사용 권한을 선택하면 발생합니다.|  
-|154|Reserved||  
+|154|예약됨||  
 |155|FT:Crawl Started|전체 텍스트 탐색(채우기)이 시작되면 발생합니다. 작업자 태스크로 탐색 요청이 선택되는지를 확인하는 데 사용합니다.|  
 |156|FT:Crawl Stopped|전체 텍스트 탐색(채우기)이 중지되면 발생합니다. 탐색이 성공적으로 완료되거나 오류가 발생하는 경우에 중지됩니다.|  
 |157|FT:Crawl Aborted|전체 텍스트 탐색 중에 예외가 생성되면 발생합니다. 일반적으로 전체 텍스트 탐색이 중지되도록 합니다.|  
@@ -221,7 +221,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |194|OLEDB Provider Information|분산 쿼리가 실행되어 공급자 연결에 해당하는 정보를 수집하면 발생합니다.|  
 |195|Mount Tape|테이프 탑재 요청을 받으면 발생합니다.|  
 |196|Assembly Load|CLR 어셈블리 로드 요청이 수행되면 발생합니다.|  
-|197|Reserved||  
+|197|예약됨||  
 |198|XQuery Static Type|XQuery 식이 실행되면 발생합니다. 이 이벤트 클래스는 XQuery 식의 정적 유형을 제공합니다.|  
 |199|QN: subscription|쿼리 등록을 구독할 수 없으면 발생합니다. **TextData** 열에는 이벤트에 대 한 정보가 포함 되어 있습니다.|  
 |200|QN: parameter table|활성 구독에 대한 정보가 내부 매개 변수 테이블에 저장됩니다. 이 이벤트 클래스는 매개 변수 테이블을 만들거나 삭제하면 발생합니다. 일반적으로 이러한 테이블은 데이터베이스를 다시 시작할 때 생성되거나 삭제됩니다. **TextData** 열에는 이벤트에 대 한 정보가 포함 되어 있습니다.|  
@@ -240,7 +240,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  다음 표에서는 이벤트에 추가될 수 있는 열을 나열합니다.  
   
-|열 번호|열 이름|Description|  
+|열 번호|열 이름|설명|  
 |-------------------|-----------------|-----------------|  
 |1|**TextData**|추적에서 캡처한 이벤트 클래스에 의존하는 텍스트 값입니다.|  
 |2|**BinaryData**|추적에서 캡처된 이벤트 클래스에 의존하는 이진 값입니다.|  
@@ -254,7 +254,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |10|**ApplicationName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 애플리케이션의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|  
 |11|**LoginName**|클라이언트의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름입니다.|  
 |12|**SPID**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 클라이언트와 관련된 프로세스에 할당한 서버 프로세스 ID입니다.|  
-|13|**기간**|이벤트에 의해 사용된 경과 시간(마이크로초)입니다. 이 데이터 열은 Hash Warning 이벤트로 채워지지 않습니다.|  
+|13|**Duration**|이벤트에 의해 사용된 경과 시간(마이크로초)입니다. 이 데이터 열은 Hash Warning 이벤트로 채워지지 않습니다.|  
 |14|**StartTime**|사용 가능한 경우 이벤트가 시작된 시간입니다.|  
 |15|**EndTime**|이벤트가 종료된 시간입니다. 이 열은 **SQL:BatchStarting** 또는 **SP:Starting**과 같은 시작하는 이벤트 클래스의 경우 채워지지 않습니다. 또한 **해시 경고** 이벤트로 채워지지 않습니다.|  
 |16|**나타납니다**|이벤트 대신 서버에서 수행한 논리적 디스크 읽기 수입니다. 이 열은 **Lock: Released** 이벤트로 채워지지 않습니다.|  
@@ -271,7 +271,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |27|**EventClass**|기록되고 있는 이벤트 클래스의 유형입니다.|  
 |28|**ObjectType**|개체 유형(테이블, 함수 또는 저장 프로시저 등)|  
 |29|**NestLevel**|이 저장 프로시저가 실행하고 있는 중첩 수준입니다. [@ @NESTLEVEL &#40;transact-sql&#41;](../../t-sql/functions/nestlevel-transact-sql.md)을 참조 하세요.|  
-|30|**State**|오류 발생 시의 서버 상태입니다.|  
+|30|**상태**|오류 발생 시의 서버 상태입니다.|  
 |31|**오류**|오류 번호입니다.|  
 |32|**모드**|획득된 잠금의 잠금 모드입니다. 이 열은 **Lock: Released** 이벤트로 채워지지 않습니다.|  
 |33|**Handle**|이벤트에 참조된 개체의 핸들입니다.|  
@@ -302,7 +302,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |58|**OwnerID**|잠금을 소유하는 개체의 유형입니다. 잠금 이벤트 전용입니다.|  
 |59|**ParentName**|개체가 포함된 스키마의 이름입니다.|  
 |60|**IsSystem**|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다.<br /><br /> **1** = 시스템<br /><br /> **0** = 사용자|  
-|61|**이동**|저장 프로시저나 일괄 처리 내에 있는 문의 시작 오프셋입니다.|  
+|61|**Offset**|저장 프로시저나 일괄 처리 내에 있는 문의 시작 오프셋입니다.|  
 |62|**SourceDatabaseID**|개체의 원본이 있는 데이터베이스의 ID입니다.|  
 |63|**Sqlhandle 대해**|임시 쿼리 또는 데이터베이스의 텍스트 및 SQL 개체의 개체 ID를 기반으로 하는 64비트 해시입니다. 이 값을 **sys. dm_exec_sql_text ()** 에 전달 하 여 연결 된 sql 텍스트를 검색할 수 있습니다.|  
 |64|**SessionLoginName**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **을 사용하여** 에 연결하고 **Login2**로 문을 실행하는 경우 **SessionLoginName** 은 **Login1**을 표시하고 **LoginName** 은 **Login2**를 표시합니다. 이 데이터 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|  

@@ -19,15 +19,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e4936f662e5b557ee8ab44962c2b1fcde761d74
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 211e14cbc8f965a660a087346a437d814489b7c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84884753"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724721"
 ---
 # <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>주석 해석 - sql:limit-field 및 sql:limit-value
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   XML 대량 로드는 해당 정의별로 **sql:limit-field** 및 **sql:limit-value** 주석을 처리합니다. 자세한 내용은 [sql을 사용 하 여 값 필터링: limit 필드 및 sql: limit 값 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)를 참조 하세요.  
   
  예를 들어 데이터베이스에 다음과 같은 테이블이 포함된다고 가정합니다.  

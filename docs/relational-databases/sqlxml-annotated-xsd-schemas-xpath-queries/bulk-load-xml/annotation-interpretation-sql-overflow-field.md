@@ -17,22 +17,22 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8909a0eee54667ea74af44e774bb5262599084b
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 3b6ba41157e7e13651eb5810502a41e7c8abde67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689235"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724697"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>주석 해석 - sql:overflow-field
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   스키마에서 열을 오버플로 열로 식별하여 XML 문서에서 사용되지 않은 데이터를 모두 받을 수 있습니다. 이 열은 **sql: 오버플로 필드** 주석을 사용 하 여 스키마에 지정 됩니다. 오버플로 열을 여러 개 지정할 수도 있습니다.  
   
  **Sql: 오버플로 필드가** 정의 된 XML 노드 (요소 또는 특성)가 범위에 들어올 때마다 오버플로 열이 활성화 되 고 소비 되지 않은 데이터를 수신 합니다. 노드가 범위를 벗어나면 오버플로 열이 더 이상 활성화되지 않고 XML 대량 로드를 통해 이전 오버플로 필드(있는 경우)가 활성화됩니다.  
   
  오버플로 열에 데이터를 저장 하는 경우 XML 대량 로드는 **sql: 오버플로 필드가** 정의 된 부모 요소의 여는 태그와 닫는 태그를 저장 합니다.  
   
- 예를 들어 다음 스키마는 ** \< 고객>** 및 ** \< CustOrder>** 요소에 대해 설명 합니다. 이러한 각 요소는 오버플로 열을 식별합니다.  
+ 예를 들어, 다음 스키마는 및 요소에 대해 설명 합니다 **\<Customers>** **\<CustOrder>** . 이러한 각 요소는 오버플로 열을 식별합니다.  
   
 ```  
 <?xml version="1.0" ?>  
@@ -76,9 +76,9 @@ ms.locfileid: "83689235"
 </xsd:schema>  
 ```  
   
- 스키마에서 ** \< Customer>** 요소는 Cust 테이블에 매핑되고 ** \< Order>** 요소는 CustOrder 테이블에 매핑됩니다.  
+ 스키마에서 **\<Customer>** 요소는 Cust 테이블에 매핑되고 **\<Order>** 요소는 CustOrder 테이블에 매핑됩니다.  
   
- ** \< Customer>** 와 ** \< Order>** 요소는 모두 오버플로 열을 식별 합니다. 따라서 XML 대량 로드는 CustOrder 테이블의 오버플로 열에 있는 ** \< Order>** 요소의 모든 하위 요소와 특성 및 모든 소비 되지 않은 자식 요소와 특성을 ** \<>** 해당 테이블의 오버플로 열에 저장 합니다.  
+ **\<Customer>** 및 요소는 모두 **\<Order>** 오버플로 열을 식별 합니다. 따라서 XML 대량 로드는 요소에 있는 모든 자식 요소와 특성을 **\<Customer>** Cust 테이블의 오버플로 열에 저장 하 고 **\<Order>** CustOrder 테이블의 오버플로 열에서 요소의 소비 되지 않은 모든 자식 요소와 특성을 저장 합니다.  
   
 ### <a name="to-test-a-working-sample"></a>작업 예제를 테스트하려면  
   

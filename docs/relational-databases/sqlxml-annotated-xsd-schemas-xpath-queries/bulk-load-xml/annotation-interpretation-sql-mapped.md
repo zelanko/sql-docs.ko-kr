@@ -19,15 +19,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20fec5c2625c87b2add23738b5b9d22ccfc77c4f
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: b38ef4e89db99239759ad0809a5b4828fd1906e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84884885"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724713"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>주석 해석 - sql:mapped
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   XML 대량 로드는 XSD 스키마의 **sql: 매핑** 주석을 예상 대로 처리 합니다. 즉, 매핑 스키마가 모든 요소나 특성에 대해 **sql: mapped = "false"** 를 지정 하는 경우 xml 대량 로드는 관련 데이터를 해당 열에 저장 하지 않습니다.  
   
  XML 대량 로드는 매핑되지 않은 요소 및 특성 (스키마에 설명 되어 있지 않거나 **sql: mapped = "false"** 로 XSD 스키마에 주석이 추가 되어 있기 때문)을 무시 합니다. 이러한 열이 **sql: 오버플로-필드**를 사용 하 여 지정 된 경우 매핑되지 않은 모든 데이터는 오버플로 열로 이동 합니다.  

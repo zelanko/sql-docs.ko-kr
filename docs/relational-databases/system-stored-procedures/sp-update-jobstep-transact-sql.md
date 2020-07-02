@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa6a12a45a5c0609b4b717ccdf90af63ea53776b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 02697937d5a0402edbaf959ed52731010eab1ce6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833124"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723074"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   자동 동작을 수행하기 위해 사용되는 작업의 단계에 대한 설정을 변경합니다.  
   
@@ -124,8 +124,8 @@ sp_update_jobstep
 |**0** (기본값)|출력 파일을 덮어씁니다.|  
 |**2**|출력 파일에 추가합니다.|  
 |**4**|Transact-SQL 작업 단계 출력을 단계 기록에 씁니다.|  
-|**20cm(8**|테이블에 로그를 씁니다(기존 기록을 덮어씀).|  
-|**x**|테이블에 로그를 씁니다(기존 기록에 추가).|  
+|**8**|테이블에 로그를 씁니다(기존 기록을 덮어씀).|  
+|**16**|테이블에 로그를 씁니다(기존 기록에 추가).|  
   
 `[ @proxy_id = ] proxy_id`작업 단계가 실행 되는 프록시의 ID입니다. *proxy_id* 은 **int**형식 이며 기본값은 NULL입니다. *Proxy_id* 지정 되지 않은 경우 *proxy_name* 지정 되지 않고 *user_name* 지정 되지 않은 경우 작업 단계는 에이전트의 서비스 계정으로 실행 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -154,7 +154,7 @@ sp_update_jobstep
   
  작업 단계에서 프록시에 액세스해야 할 경우 작업 단계를 만든 사람에게 작업 단계의 프록시에 대한 액세스 권한이 있어야 합니다. Transact-SQL을 제외한 모든 하위 시스템에서는 프록시 계정이 필요합니다. **Sysadmin** 의 멤버는 모든 프록시에 액세스할 수 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프록시에 대 한 에이전트 서비스 계정을 사용할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Weekly Sales Data Backup` 작업의 첫 번째 단계에 대한 재시도 횟수를 변경합니다. 이 예를 실행한 후 재시도 횟수는 `10`이 됩니다.  
   
 ```  

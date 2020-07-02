@@ -15,15 +15,15 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01fdd3727c25df2985009936c742bc20265f8f74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 46d4d6598a2a1c4f7c7bb7d8eca7ac3deb6962d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304413"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724935"
 ---
 # <a name="conversions-ole-db"></a>변환(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   이 섹션에서는 **datetime** 값과 **datetimeoffset** 값을 서로 변환하는 방법에 대해 설명합니다. 이 섹션에 설명된 변환은 OLE DB에서 이미 제공하거나 OLE DB의 일관된 확장입니다.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "81304413"
   
 -   **datetime** 및 **datetimeoffset** 문자열의 형식은 다음과 같습니다.  
   
-     *yyyy*-*mm*mm-*dd*[ *hh*:*mm*:*ss*[.* 9999999*] [± *hh*:*mm*]]  
+     *yyyy* - *mm* - *dd*[ *hh*:*mm*:*ss*[.* 9999999*] [± *hh*:*mm*]]  
   
 -   **시간** 문자열의 형식은 다음과 같습니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "81304413"
   
 -   **날짜** 문자열의 형식:  
   
-     *yyyy*-*mm*mm-*dd*  
+     *yyyy* - *mm* - *dd*  
   
 > [!NOTE]  
 >  이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client와 SQLOLEDB에서는 OLE 변환을 구현했으며 이 경우 표준 변환은 실패했습니다. 그 결과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 이상에서 수행하는 변환 중 일부는 OLE DB 사양과 다릅니다.  

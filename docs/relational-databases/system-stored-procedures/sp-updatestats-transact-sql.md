@@ -18,15 +18,15 @@ ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d2bab967400244e35ac33bf96a1be72ae21e375
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 4449e2a518ab1bfd12563070a80514d890eae48c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83806849"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723063"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 `UPDATE STATISTICS`현재 데이터베이스에 있는 모든 사용자 정의 테이블 및 내부 테이블에 대해 실행 됩니다.  
   
@@ -57,11 +57,11 @@ sp_updatestats [ [ @resample = ] 'resample']
   
 호환성 수준이 90 미만인 데이터베이스의 경우 **sp_updatestats** 를 실행 해도 특정 통계에 대 한 최신 NORECOMPUTE 설정이 유지 되지 않습니다. 호환성 수준이 90 이상인 데이터베이스의 경우 sp_updatestats는 특정 통계에 대 한 최신 NORECOMPUTE 옵션을 유지 합니다. 통계 업데이트를 비활성화하고 다시 활성화하는 방법은 [통계](../../relational-databases/statistics/statistics.md)를 참조하세요.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
 
 **Sp_updatestats**를 실행 하려면 사용자가 데이터베이스의 소유자 ( `dbo` 역할의 멤버가 아니라 `db_owner` ) 이거나 sysadmin 고정 서버 역할의 멤버 여야 합니다.
 
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 테이블에 대한 통계를 업데이트합니다.  
   
 ```sql  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7bd195499313eaa24afd12ab424ae3bf832841b1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e01cc51b12d92fefbca760541d433fbf27bb0191
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824904"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724648"
 ---
 # <a name="syscollector_execution_log_full-transact-sql"></a>syscollector_execution_log_full(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   실행 로그가 꽉 찬 경우 컬렉션 집합 또는 패키지에 대한 정보를 제공합니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "82824904"
 |log_id|**bigint**|각 컬렉션 집합의 실행을 식별합니다. 이 뷰와 자세한 다른 로그를 조인하는 데 사용됩니다. Null을 허용합니다.|  
 |parent_log_id|**bigint**|부모 패키지 또는 컬렉션 집합을 식별합니다. Null을 허용하지 않습니다. ID는 부모-자식 관계로 연결되어 있으므로 어떤 패키지가 어떤 컬렉션 집합에서 시작되었는지 파악할 수 있습니다. 이 뷰는 로그 항목을 부모-자식 연결로 그룹화하고 패키지의 이름을 들여쓰기로 처리하여 호출 체인을 명확히 볼 수 있도록 합니다.|  
 |name|**nvarchar(4000)**|이 로그 항목이 나타내는 컬렉션 집합 또는 패키지의 이름입니다. Null을 허용합니다.|  
-|상태|**smallint**|컬렉션 집합 또는 패키지의 현재 상태를 나타냅니다. Null을 허용합니다.<br /><br /> 값은 다음과 같습니다.<br /><br /> 0 = 실행 중<br /><br /> 1 = 완료<br /><br /> 2 = 실패|  
+|상태|**smallint**|컬렉션 집합 또는 패키지의 현재 상태를 나타냅니다. Null을 허용합니다.<br /><br /> 값:<br /><br /> 0 = 실행 중<br /><br /> 1 = 완료<br /><br /> 2 = 실패|  
 |runtime_execution_mode|**smallint**|컬렉션 집합 활동이 데이터 수집이었는지 데이터 업로드였는지를 나타냅니다. Null을 허용합니다.|  
 |start_time|**datetime**|컬렉션 집합 또는 패키지가 시작된 시간입니다. Null을 허용합니다.|  
 |last_iteration_time|**datetime**|패키지를 계속 실행하기 위해 패키지에서 마지막으로 스냅샷을 캡처한 시간입니다. Null을 허용합니다.|  
@@ -46,7 +46,7 @@ ms.locfileid: "82824904"
 |package_execution_id|**uniqueidentifier**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 로그 테이블에 대한 링크를 제공합니다. Null을 허용합니다.|  
 |collection_set_id|**int**|msdb의 데이터 컬렉션 구성 테이블에 대한 링크를 제공합니다. Null을 허용합니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Dc_operator**에 대 한 SELECT가 필요 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

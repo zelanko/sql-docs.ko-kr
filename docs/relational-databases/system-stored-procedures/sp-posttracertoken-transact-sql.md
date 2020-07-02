@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42401f5d99d7cf89563a0088260ab21e9df9fd67
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0f5bc0b6e7960faac9d68469750c445e469896e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831030"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720217"
 ---
 # <a name="sp_posttracertoken-transact-sql"></a>sp_posttracertoken(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   이 프로시저는 추적 프로그램 토큰을 게시자의 트랜잭션 로그에 게시하고 대기 시간 통계 추적 프로세스를 시작합니다. 추적 프로그램 토큰이 트랜잭션 로그에 기록될 때, 기록된 토큰을 로그 판독기 에이전트에서 선택할 때, 선택된 토큰을 배포 에이전트에서 적용할 때 각각 정보가 기록됩니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다. 자세한 내용은 [트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)을 참조하세요.  
   

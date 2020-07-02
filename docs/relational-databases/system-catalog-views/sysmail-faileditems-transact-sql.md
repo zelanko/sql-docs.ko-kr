@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc783b97430f5ddc456ebba82dd76a50c6d3cd2a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 90bd083c621bb99677c70aaceaab4038b9c15d9e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824075"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724626"
 ---
 # <a name="sysmail_faileditems-transact-sql"></a>sysmail_faileditems(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **실패** 상태에 있는 각 데이터베이스 메일 메시지에 대해 하나의 행을 포함 합니다. 이 뷰를 사용하여 성공적으로 보내지 못한 메시지를 확인할 수 있습니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "82824075"
 ## <a name="remarks"></a>설명  
  **Sysmail_faileditems** 보기를 사용 하 여 데이터베이스 메일에서 보내지 않은 메시지를 확인할 수 있습니다. 데이터베이스 메일 문제를 해결할 때 이 뷰를 통해 보내지 못한 메시지의 속성을 보면 문제의 근원을 확인하는 데 도움이 될 수 있습니다. 오류의 원인을 보려면 [sysmail_event_log &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md) 뷰에서 실패 한 메시지에 대 한 항목을 참조 하세요.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 및 **databasemailuserrole** 데이터베이스 역할에 부여 됩니다. **Sysadmin** 고정 서버 역할의 멤버에 의해 실행 되는 경우이 보기에는 실패 한 모든 메시지가 표시 됩니다. 다른 모든 사용자는 자신이 제출한 메시지 중 실패한 메시지만 볼 수 있습니다.  
   
   
