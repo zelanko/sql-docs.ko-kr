@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d27ca972fa5a20fbb22a6786e6be2ca3cf8c8153
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2def277c877311fc5bfaa77bbab5923563d39a75
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830497"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716650"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   각 복제 트랜잭션 또는 변경 데이터 캡처 트랜잭션에 대한 정보를 반환합니다.  
 
@@ -43,7 +43,7 @@ ms.locfileid: "82830497"
 |**열**|**int**|트랜잭션 내 복제된 명령의 ID입니다.|  
 |**xdesid**|**nvarchar (64)**|트랜잭션 ID입니다.|  
 |**artcache_table_address**|**varbinary(8)**|이 트랜잭션에 대해 마지막으로 사용된 캐시된 테이블 아티클 구조의 메모리 내 주소입니다.|  
-|**서버인**|**nvarchar (514)**|서버 이름입니다.|  
+|**server**|**nvarchar (514)**|서버 이름입니다.|  
 |**server_len_in_bytes**|**smallint**|서버 이름의 문자 길이(바이트)입니다.|  
 |**database**|**nvarchar (514)**|데이터베이스 이름|  
 |**db_len_in_bytes**|**smallint**|데이터베이스 이름의 문자 길이(바이트)입니다.|  

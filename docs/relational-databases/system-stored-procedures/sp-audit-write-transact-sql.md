@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ba751e5872f4f6fa4973674170d54a0dbc75f75a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 371bbb36abd6362c9724604a102f590869a74cc2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833433"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716177"
 ---
 # <a name="sp_audit_write-transact-sql"></a>sp_audit_write(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **USER_DEFINED_AUDIT_GROUP**에 사용자 정의 감사 이벤트를 추가 합니다. **USER_DEFINED_AUDIT_GROUP** 을 사용 하지 않는 경우 **sp_audit_write** 무시 됩니다.  
   
@@ -61,7 +61,7 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
 ## <a name="permissions"></a>사용 권한  
  **Public** 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-creating-a-user-defined-audit-event-with-informational-text"></a>A. 정보 텍스트를 포함하여 사용자 정의 감사 이벤트 만들기  
  다음 예에서는 ID가 27인 감사 이벤트, succeeded 값 0, 그리고 선택적으로 포함되는 정보 텍스트를 작성합니다.  

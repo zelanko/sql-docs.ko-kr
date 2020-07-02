@@ -18,15 +18,15 @@ ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9e0d3152c6d60faff4c1c42410374287bd7d111
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 87fbcab87999c83c688ec4fa9e46f1aeed033bcf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030909"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716425"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   현재 데이터베이스의 데이터베이스 역할에 데이터베이스 사용자, 데이터베이스 역할, Windows 로그인 또는 Windows 그룹을 추가합니다.  
   
@@ -43,10 +43,10 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ```    
   
 ## <a name="arguments"></a>인수  
- [ @rolename= ] '*role*'  
+ [ @rolename =] '*role*'  
  현재 데이터베이스에 있는 데이터베이스 역할의 이름입니다. *role* 은 **sysname**이며 기본값은 없습니다.  
   
- [ @membername= ] '*security_account*'  
+ [ @membername =] '*security_account*'  
  역할에 추가될 보안 계정입니다. *security_account* 는 **sysname**이며 기본값은 없습니다. *security_account* 는 데이터베이스 사용자, 데이터베이스 역할, windows 로그인 또는 windows 그룹이 될 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -72,10 +72,10 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
  고정 데이터베이스 역할에 멤버를 추가하려면 db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-adding-a-windows-login"></a>A. Windows 로그인 추가  
- 다음 예에서는 Windows 로그인 `Contoso\Mary5` 을 사용자 `AdventureWorks2012` `Mary5`로 데이터베이스에 추가 합니다. 그런 다음 `Mary5` 사용자를 `Production` 역할에 추가합니다.  
+ 다음 예에서는 Windows 로그인을 `Contoso\Mary5` `AdventureWorks2012` 사용자로 데이터베이스에 추가 합니다 `Mary5` . 그런 다음 `Mary5` 사용자를 `Production` 역할에 추가합니다.  
   
 > [!NOTE]  
 >  `Contoso\Mary5`는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `Mary5` 데이터베이스 사용자로 알려져 있기 때문에 `Mary5` 사용자 이름을 지정해야 합니다. `Contoso\Mary5`라는 로그인이 없으면 문이 실패합니다. 사용자 도메인의 로그인을 사용하여 테스트하세요.  
@@ -97,10 +97,10 @@ EXEC sp_addrolemember 'Production', 'Mary5';
 ## <a name="examples-sspdw"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-adding-a-windows-login"></a>C. Windows 로그인 추가  
- 다음 예에서는 로그인 `LoginMary` 을 사용자 `AdventureWorks2008R2` `UserMary`로 데이터베이스에 추가 합니다. 그런 다음 `UserMary` 사용자를 `Production` 역할에 추가합니다.  
+ 다음 예에서는 로그인을 `LoginMary` `AdventureWorks2008R2` 사용자로 데이터베이스에 추가 합니다 `UserMary` . 그런 다음 `UserMary` 사용자를 `Production` 역할에 추가합니다.  
   
 > [!NOTE]  
->  로그인 `LoginMary` 은 `UserMary` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 데이터베이스 사용자로 알려져 있기 때문에 사용자 이름을 `UserMary` 지정 해야 합니다. `Mary5`라는 로그인이 없으면 문이 실패합니다. 로그인과 사용자는 일반적으로 동일한 이름을 갖습니다. 이 예에서는 다른 이름을 사용 하 여 로그인에 영향을 주는 작업과 사용자를 구분 합니다.  
+>  로그인은 `LoginMary` 데이터베이스에서 데이터베이스 사용자로 알려져 있기 때문에 `UserMary` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 사용자 이름을 `UserMary` 지정 해야 합니다. `Mary5`라는 로그인이 없으면 문이 실패합니다. 로그인과 사용자는 일반적으로 동일한 이름을 갖습니다. 이 예에서는 다른 이름을 사용 하 여 로그인에 영향을 주는 작업과 사용자를 구분 합니다.  
   
 ```  
 -- Uses AdventureWorks  

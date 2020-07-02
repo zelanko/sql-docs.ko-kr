@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b209f6d46c47de5a604eee3c14c681a333bcdec8
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 1f2fc71e138fc2377d8f09c50250bbfe39077686
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529977"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718159"
 ---
 # <a name="aggregate-functions---min"></a>집계 함수 - min
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   원자 값의 시퀀스에서 반환 *$arg*, 값이 다른 항목 보다 작은 항목 하나를 반환 합니다.  
   
@@ -46,7 +46,7 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
  **Min ()** 함수는 시퀀스에서 입력 시퀀스의 다른 값 보다 작은 값 하나를 반환 합니다. xs:string 값의 경우 기본 Unicode Codepoint Collation이 사용됩니다. Xdt: untypedAtomic 값을 xs: double로 캐스팅할 수 없는 경우 값은 *$arg*입력 시퀀스에서 무시 됩니다. 입력이 동적으로 계산된 빈 시퀀스이면 빈 시퀀스가 반환됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 항목에서는 AdventureWorks 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
   
 ### <a name="a-using-the-min-xquery-function-to-find-the-work-center-location-that-has-the-fewest-labor-hours"></a>A. min() XQuery 함수를 사용하여 노동 시간이 최소인 업무 센터 위치 찾기  

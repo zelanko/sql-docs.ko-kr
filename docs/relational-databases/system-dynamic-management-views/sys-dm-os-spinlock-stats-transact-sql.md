@@ -22,16 +22,16 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: eae0057441fe6bc356c7cea6c1e6ded829bbb9e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8343a5aa5d8e95474fb87c1b6a39e2a013323295
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265695"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718779"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 유형별로 구성 된 모든 spinlock 대기에 대 한 정보를 반환 합니다.  
   
@@ -47,14 +47,14 @@ ms.locfileid: "68265695"
 
 
 ## <a name="permissions"></a>사용 권한  
-에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.    
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.    
   
 ## <a name="remarks"></a>설명  
  
  sys. dm_os_spinlock_stats를 사용 하 여 spinlock 경합의 원본을 식별할 수 있습니다. 경우에 따라 spinlock 경합을 해결 하거나 줄일 수 있습니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 고객 지원 서비스에 연락해야 할 경우도 있습니다.  
   
- 다음과 같이를 사용 `DBCC SQLPERF` 하 여 dm_os_spinlock_stats의 내용을 다시 설정할 수 있습니다.  
+ 다음과 같이를 사용 하 여 dm_os_spinlock_stats의 내용을 다시 설정할 수 있습니다. `DBCC SQLPERF`  
   
 ```  
 DBCC SQLPERF ('sys.dm_os_spinlock_stats', CLEAR);  
@@ -71,7 +71,7 @@ GO
    
  다음 표에는 가장 일반적인 spinlock 형식 중 일부에 대 한 간략 한 설명이 나와 있습니다.  
   
-|Spinlock 유형|Description|  
+|Spinlock 유형|설명|  
 |-----------------|-----------------|  
 |ABR|내부적으로만 사용됩니다.|
 |ADB_CACHE|내부적으로만 사용됩니다.|
@@ -307,7 +307,7 @@ GO
 |SOS_ACTIVEDESCRIPTOR|내부적으로만 사용됩니다.|
 |SOS_BLOCKALLOCPARTIALLIST|내부적으로만 사용됩니다.|
 |SOS_BLOCKDESCRIPTORBUCKET|내부적으로만 사용됩니다.|
-|SOS_CACHESTORE|계획 캐시 또는 임시 테이블 캐시와 같은 SQL Server의 다양 한 메모리 내 캐시에 대 한 액세스를 동기화 합니다. 이 spinlock 유형에 대 한 경합은 경합에 있는 특정 캐시에 따라 다를 수 있습니다. 이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] spinlock 유형 문제 해결에 도움이 필요 하면 고객 지원 서비스에 문의 하십시오. |
+|SOS_CACHESTORE|계획 캐시 또는 임시 테이블 캐시와 같은 SQL Server의 다양 한 메모리 내 캐시에 대 한 액세스를 동기화 합니다. 이 spinlock 유형에 대 한 경합은 경합에 있는 특정 캐시에 따라 다를 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]이 spinlock 유형 문제 해결에 도움이 필요 하면 고객 지원 서비스에 문의 하십시오. |
 |SOS_CACHESTORE_CLOCK|내부적으로만 사용됩니다.|
 |SOS_CLOCKALG_INTERNODE_SYNC|내부적으로만 사용됩니다.|
 |SOS_DEBUG_HOOK|내부적으로만 사용됩니다.|

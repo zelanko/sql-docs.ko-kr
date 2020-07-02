@@ -18,15 +18,15 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad5239e2761ed1cc788f7826a054ac0e038d9e79
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7b90b91773ab0497452e0c12c5f485a36f81b6e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824298"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719182"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   첫 번째 또는 마지막으로 실행되는 AFTER 트리거를 지정합니다. 첫 번째 트리거와 마지막 트리거 사이에 실행되는 AFTER 트리거는 정의되지 않은 순서로 실행됩니다.  
   
@@ -52,8 +52,8 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
 |값|설명|  
 |-----------|-----------------|  
-|**기본**|트리거가 첫 번째로 실행됩니다.|  
-|**마지막**|트리거가 마지막으로 실행됩니다.|  
+|**첫째**|트리거가 첫 번째로 실행됩니다.|  
+|**최신**|트리거가 마지막으로 실행됩니다.|  
 |**없음**|트리거가 정의되지 않은 순서로 실행됩니다.|  
   
 `[ @stmttype = ] 'statement_type'`트리거를 실행 하는 SQL 문을 지정 합니다. *statement_type* 는 **varchar (50)** 이며 [!INCLUDE[tsql](../../includes/tsql-md.md)] [DDL 이벤트](../../relational-databases/triggers/ddl-events.md)에 나열 된 INSERT, UPDATE, DELETE, LOGON 또는 statement 이벤트 일 수 있습니다. 이벤트 그룹은 지정할 수 없습니다.  
@@ -99,14 +99,14 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
  둘 이상의 문 형식에 대해 동일한 트리거를 첫 번째 또는 마지막 순서로 지정 해야 하는 경우 각 문 형식에 대해 **sp_settriggerorder** 를 실행 해야 합니다. 또한 트리거를 해당 문 형식에 대해 실행할 **첫 번째** 트리거나 **마지막** 트리거로 지정할 수 있으려면 먼저 문 형식에 대해 트리거를 먼저 정의 해야 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  서버 범위(ON ALL SERVER)의 DDL 트리거 또는 로그온 트리거의 순서를 설정하려면 CONTROL SERVER 권한이 필요합니다.  
   
  데이터베이스 범위(ON DATABASE)의 DDL 트리거 순서를 설정하려면 ALTER ANY DATABASE DDL TRIGGER 권한이 필요합니다.  
   
  DML 트리거의 순서를 설정하려면 트리거가 정의된 테이블 또는 뷰에 대한 ALTER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-setting-the-firing-order-for-a-dml-trigger"></a>A. DML 트리거의 실행 순서 설정  
  다음 예에서는 `uSalesOrderHeader` 트리거를 `UPDATE` 테이블에서 `Sales.SalesOrderHeader` 작업이 발생한 후 실행되는 첫 번째 트리거로 지정합니다.  

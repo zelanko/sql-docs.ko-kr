@@ -20,15 +20,15 @@ ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08193bd8f9b6dfd3aace80315c75bbb88e076f3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbba738f10f570af693cc126cb20f0f857e405aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255838"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718908"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   데이터베이스의 각 인증서에 대해 행을 반환합니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "75255838"
 |**제목**|**nvarchar(4000)**|이 인증서의 주체입니다.|  
 |**expiry_date**|**datetime**|인증서 만료 날짜입니다.|  
 |**start_date**|**datetime**|인증서가 유효하게 되는 날짜입니다.|  
-|**지문**|**varbinary(32)**|인증서의 SHA-1 해시입니다. SHA-1 해시는 전역적으로 고유합니다.|  
+|**n**|**varbinary(32)**|인증서의 SHA-1 해시입니다. SHA-1 해시는 전역적으로 고유합니다.|  
 |**attested_by**|**nvarchar(260)**|시스템에서만 사용됩니다.|  
 |**pvt_key_last_backup_date**|**datetime**|인증서의 개인 키를 마지막으로 내보낸 날짜와 시간입니다.|  
   

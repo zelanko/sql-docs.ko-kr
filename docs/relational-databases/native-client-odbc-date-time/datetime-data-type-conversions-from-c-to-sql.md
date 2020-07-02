@@ -13,19 +13,19 @@ ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f8161ea07e394192e972caf4f772d9e7def36e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97867fb2debffab4684aaef302773ebe531d820b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301794"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719018"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>날짜/시간 데이터 형식을 C에서 SQL로 변환
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  이 항목에서는 C 형식을 날짜/시간 형식으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변환할 때 고려해 야 할 문제에 대해 설명 합니다.  
+  이 항목에서는 C 형식을 날짜/시간 형식으로 변환할 때 고려해 야 할 문제에 대해 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
- 다음 표에서 설명하는 변환은 클라이언트에서 수행되는 변환에 해당합니다. 클라이언트에서 서버에 정의 된 것과 다른 매개 변수에 대해 소수 자릿수 초의 소수 자릿수를 지정 하는 경우 클라이언트 변환에 성공할 수 있지만 **Sqlexecute** 또는 **sqlexecutedirect** 를 호출 하면 서버에서 오류를 반환 합니다. 특히 ODBC는 소수 자릿수 초의 잘림을 오류로 처리 하는 반면, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동작은 반올림 하는 것입니다. 예를 들어, **datetime2 (6)** 에서 **datetime2 (2)** 로 이동 하면 반올림이 발생 합니다. datetime 열 값은 1/300초로 반올림되며 smalldatetime 열은 서버에 의해 0초로 설정됩니다.  
+ 다음 표에서 설명하는 변환은 클라이언트에서 수행되는 변환에 해당합니다. 클라이언트에서 서버에 정의 된 것과 다른 매개 변수에 대해 소수 자릿수 초의 소수 자릿수를 지정 하는 경우 클라이언트 변환에 성공할 수 있지만 **Sqlexecute** 또는 **sqlexecutedirect** 를 호출 하면 서버에서 오류를 반환 합니다. 특히 ODBC는 소수 자릿수 초의 잘림을 오류로 처리 하는 반면, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예를 들어 **datetime2 (6)** 에서 **datetime2 (2)** 로 이동할 때 반올림이 발생 합니다. datetime 열 값은 1/300초로 반올림되며 smalldatetime 열은 서버에 의해 0초로 설정됩니다.  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -81,7 +81,7 @@ ms.locfileid: "81301794"
   
     ||||  
     |-|-|-|  
-    |유형|암시된 소수 자릿수<br /><br /> 0|암시된 소수 자릿수<br /><br /> 1.9|  
+    |형식|암시된 소수 자릿수<br /><br /> 0|암시된 소수 자릿수<br /><br /> 1.9|  
     |SQL_C_TYPE_TIMESTAMP|19|21..29|  
   
      그러나 SQL_C_TYPE_TIMESTAMP의 경우에는 소수 자릿수 초를 데이터 손실 없이 3자리로 나타낼 수 있고 열 크기가 23 이상인 경우 소수 자릿수 초의 자릿수는 정확히 3자리로 생성됩니다. 이 동작은 이전 ODBC 드라이버를 사용하여 개발된 애플리케이션과의 호환성을 보장합니다.  

@@ -17,15 +17,15 @@ ms.assetid: d352c91a-6e08-4e50-9f3e-a37892d9c2cc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2402c093c2abd43f4896fd2760dc9ad02b55e0f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6307248741606d6e4793f8b84e973704d1279cfd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303773"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719581"
 ---
 # <a name="creating-a-driver-application---multithreaded-applications"></a>드라이버 애플리케이션 만들기 - 다중 스레드 애플리케이션
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 다중 스레드 드라이버입니다. 다중 스레드 애플리케이션을 작성하면 여러 ODBC 호출을 처리하기 위해 비동기 호출을 사용하는 방법을 대신할 수 있습니다. 스레드는 동기 ODBC 호출을 실행할 수 있으며 다른 스레드는 첫 번째 스레드가 호출에 대한 응답을 대기하면서 차단되는 동안 처리될 수 있습니다. 이 모델을 사용하면 네트워크 트래픽 및 SQL_STILL_EXECUTING을 테스트하기 위한 ODBC 함수의 반복적인 호출로 인해 발생하는 오버헤드 문제를 해결할 수 있기 때문에 비동기 호출을 실행하는 것보다 효율적입니다.  
   

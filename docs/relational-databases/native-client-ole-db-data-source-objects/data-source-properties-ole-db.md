@@ -16,24 +16,24 @@ ms.assetid: 6e14fefc-4e0b-4847-a833-4cf0abe65d50
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c05c16a608081e33a06007830416560f3ef30b9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bb5ed483983a4051082b867fbe5eb0289d7a5f17
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297317"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715253"
 ---
 # <a name="data-source-properties-ole-db"></a>데이터 원본 속성(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 다음과 같이 데이터 원본 속성을 구현 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 다음과 같이 데이터 원본 속성을 구현 합니다.  
   
 |속성 ID|Description|  
 |-----------------|-----------------|  
 |DBPROP_CURRENTCATALOG|R/W: 읽기/쓰기 기본값: 없음<br /><br /> 설명: DBPROP_CURRENTCATALOG 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 세션의 현재 데이터베이스를 보고 합니다. 속성 값을 설정하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] USE *database* 문을 사용하여 현재 데이터베이스를 설정하는 것과 동일한 효과가 있습니다.<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터는 [sp_defaultdb](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md)를 호출하고 데이터베이스 이름을 소문자로 지정하면 데이터베이스가 원래 대/소문자가 섞인 이름으로 만들어진 경우에도 DBPROP_CURRENTCATALOG가 이름을 소문자로 반환합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 DBPROP_CURRENTCATALOG가 대/소문자가 섞인 이름을 반환했습니다.|  
-|DBPROP_MULTIPLECONNECTIONS|R/W: 읽기/쓰기 기본값: VARIANT_FALSE<br /><br /> 설명: 연결이 행 집합을 생성하지 않거나 서버 커서가 아닌 행 집합을 생성하는 명령을 실행 중인 상태에서 사용자가 다른 명령을 실행하는 경우 DBPROP_MULTIPLECONNECTIONS가 VARIANT_TRUE이면 새 명령을 실행하기 위해 새 연결이 생성됩니다.<br /><br /> DBPROP_MULTIPLECONNECTION [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VARIANT_FALSE 되거나 연결에서 트랜잭션이 활성 상태인 경우에는 Native Client OLE DB 공급자가 다른 연결을 만들지 않습니다. Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 DBPROP_MULTIPLECONNECTIONS VARIANT_FALSE 경우 DB_E_OBJECTOPEN을 반환 하 고 활성 트랜잭션이 있는 경우 E_FAIL를 반환 합니다. 트랜잭션 및 잠금은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 연결별로 관리합니다. 두 번째 연결이 생성되면 분리된 연결에 대한 명령은 잠금을 공유하지 않습니다. 한 명령이 다른 명령을 차단하지 않도록 다른 명령이 요청한 행의 잠금은 유지됩니다. 여러 세션을 만들 때도 마찬가지입니다.<br /><br /> 각 세션이 별도의 연결을 가집니다.|  
+|DBPROP_MULTIPLECONNECTIONS|R/W: 읽기/쓰기 기본값: VARIANT_FALSE<br /><br /> 설명: 연결이 행 집합을 생성하지 않거나 서버 커서가 아닌 행 집합을 생성하는 명령을 실행 중인 상태에서 사용자가 다른 명령을 실행하는 경우 DBPROP_MULTIPLECONNECTIONS가 VARIANT_TRUE이면 새 명령을 실행하기 위해 새 연결이 생성됩니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DBPROP_MULTIPLECONNECTION VARIANT_FALSE 되거나 연결에서 트랜잭션이 활성 상태인 경우에는 Native Client OLE DB 공급자가 다른 연결을 만들지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 DBPROP_MULTIPLECONNECTIONS VARIANT_FALSE 경우 DB_E_OBJECTOPEN을 반환 하 고 활성 트랜잭션이 있는 경우 E_FAIL를 반환 합니다. 트랜잭션 및 잠금은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 연결별로 관리합니다. 두 번째 연결이 생성되면 분리된 연결에 대한 명령은 잠금을 공유하지 않습니다. 한 명령이 다른 명령을 차단하지 않도록 다른 명령이 요청한 행의 잠금은 유지됩니다. 여러 세션을 만들 때도 마찬가지입니다.<br /><br /> 각 세션이 별도의 연결을 가집니다.|  
   
- 공급자별 속성 집합 DBPROPSET_SQLSERVERDATASOURCE에서 Native Client OLE DB 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음과 같은 추가 데이터 원본 속성을 정의 합니다.  
+ 공급자별 속성 집합 DBPROPSET_SQLSERVERDATASOURCE에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 다음과 같은 추가 데이터 원본 속성을 정의 합니다.  
   
 |속성 ID|Description|  
 |-----------------|-----------------|  

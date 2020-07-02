@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 664f503aa6d3c6d3d0f8c32d83fc2ea9f238ff3b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 223f1feb346a48a2afaae9e89437ba1b06bcd2c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829726"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717400"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   트랜잭션 또는 스냅샷 게시에 있는 아티클의 속성을 변경합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -53,7 +53,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  다음 표에서는 아티클의 속성 및 해당 속성의 값을 설명합니다.  
   
-|속성|값|Description|  
+|속성|값|설명|  
 |--------------|------------|-----------------|  
 |**creation_script**||대상 테이블을 만드는 데 사용하는 아티클 스키마 스크립트의 경로 및 이름입니다. 기본값은 NULL입니다.|  
 |**del_cmd**||실행할 DELETE 문입니다. 그렇지 않은 경우에는 로그에서 만들어집니다.|  
@@ -124,11 +124,11 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**no column names**|복제된 INSERT 문에 열 이름이 포함되지 않습니다.|  
 ||**no dts horizontal partitions**|아티클에 대한 수평 분할이 변환 가능한 구독에 의해 정의되지 않습니다.|  
 ||**없음**|[Sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md) 테이블에서 모든 상태 옵션을 지우고 아티클을 비활성으로 표시 합니다.|  
-||**변수의**|매개 변수가 있는 명령을 사용하여 변경 내용을 구독자에게 전파합니다. 이것은 새 아티클에 대한 기본 설정입니다.|  
+||**parameters**|매개 변수가 있는 명령을 사용하여 변경 내용을 구독자에게 전파합니다. 이것은 새 아티클에 대한 기본 설정입니다.|  
 ||**문자열 리터럴**|문자열 리터럴 값을 사용하여 변경 내용을 구독자에게 전파합니다.|  
 |**sync_object**||동기화 출력 파일 생성에 사용하는 테이블 또는 뷰의 이름입니다. 기본값은 NULL입니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
 |**스페이스가**||Oracle 데이터베이스에서 게시된 아티클에 대한 로깅 테이블에서 사용되는 테이블스페이스를 식별합니다. 자세한 내용은 [Oracle 테이블스페이스 관리](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)를 참조하세요.|  
-|**고대비**||배포 에이전트가 새 ID 범위를 할당하는 시점을 제어하는 비율 값입니다. 피어 투 피어 복제의 경우에는 지원되지 않습니다.|  
+|**threshold**||배포 에이전트가 새 ID 범위를 할당하는 시점을 제어하는 비율 값입니다. 피어 투 피어 복제의 경우에는 지원되지 않습니다.|  
 |**type**||Oracle 게시자에 대해서는 지원되지 않습니다.|  
 ||**logbased**|로그 기반 아티클입니다.|  
 ||**logbased manualboth**|수동 필터 및 수동 뷰가 있는 로그 기반 아티클입니다. 이 옵션을 사용 하려면 *sync_object* 및 *필터* 속성도 설정 해야 합니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
@@ -233,7 +233,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_changearticle**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

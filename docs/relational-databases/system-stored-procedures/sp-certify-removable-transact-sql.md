@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 64621f1d675fc7cd4e64b690b1e440a1dbad2d1c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b873931c5d09f3c54f61e872f8ea6646408c1a04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826687"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715961"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   이동식 미디어에 배포할 수 있도록 데이터베이스가 제대로 구성되었는지 확인하고 사용자에게 발생한 모든 문제를 보고합니다.  
   
@@ -79,10 +79,10 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  이 저장 프로시저는 사용자 및 사용자 권한에 관한 것만 확인합니다. 데이터베이스에 그룹을 추가하고 이 그룹에 권한을 부여할 수 있습니다. 자세한 내용은 [GRANT&#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  Execute 권한은 **sysadmin** 고정 서버 역할의 멤버로 제한 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `inventory` 데이터베이스를 제거할 준비가 되었음을 증명합니다.  
   
 ```  

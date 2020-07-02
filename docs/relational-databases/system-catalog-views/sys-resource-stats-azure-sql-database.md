@@ -19,15 +19,15 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e88d3916f5122564b443bc3c439200526b1f2d5e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a72bb16eddc55f5cf741a7809665b44ada4a7a30
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246908"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717578"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats(Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Azure SQL Database의 CPU 사용량 및 스토리지 데이터를 반환합니다. 데이터는 5분 간격 이내로 수집 및 집계됩니다. 각 사용자 데이터베이스에 대해 리소스 소비가 변경 된 5 분 마다 하나의 행이 있습니다. 반환 되는 데이터에는 CPU 사용량, 저장소 크기 변경 및 데이터베이스 SKU 수정이 포함 됩니다. 변경 내용이 없는 유휴 데이터베이스는 5 분 간격으로 행을 가질 수 없습니다. 기록 데이터는 약 14일 동안 보존됩니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "75246908"
   
  다음 표에는 v12 서버에서 사용할 수 있는 열이 설명되어 있습니다.  
   
-|열|데이터 형식|설명|  
+|열|데이터 형식|Description|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime**|5 분 보고 간격의 시작을 나타내는 UTC 시간입니다.|  
 |end_time|**datetime**|5 분 보고 간격의 끝을 나타내는 UTC 시간입니다.|  
@@ -68,7 +68,7 @@ ms.locfileid: "75246908"
   
  이 데이터에 대 한 자세한 보기를 보려면 사용자 데이터베이스에서 **dm_db_resource_stats** 동적 관리 뷰를 사용 합니다. 이 뷰는 15초마다 데이터를 캡처하고 1시간 동안 기록 데이터를 유지합니다.  자세한 내용은 [dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)를 참조 하세요.  
 
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 지난 1주일 동안 평균적으로 컴퓨팅 활용률의 80% 이상을 사용한 모든 데이터베이스를 반환합니다.  
   
 ```sql  

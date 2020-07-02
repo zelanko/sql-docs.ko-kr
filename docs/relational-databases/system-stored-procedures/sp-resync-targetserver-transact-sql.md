@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6aa435a7c0a65634323f6c3f90874cd3694fa876
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8275c27eac96a5cb6d88e7bd5e9e50d9a878a6be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816850"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718652"
 ---
 # <a name="sp_resync_targetserver-transact-sql"></a>sp_resync_targetserver(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정한 대상 서버에서 모든 다중 서버 작업을 다시 동기화합니다.  
   
@@ -51,10 +51,10 @@ sp_resync_targetserver
 ## <a name="remarks"></a>설명  
  **sp_resync_targetserver** 대상 서버에 대 한 현재 명령 집합을 삭제 하 고 대상 서버에서 다운로드할 새 집합을 게시 합니다. 새로운 집합은 모든 다중 서버를 삭제하는 명령과 서버에서 현재 대상이 되는 각 작업에 대한 삽입으로 구성됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행할 수 있는 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `SEATTLE1` 대상 서버를 다시 동기화합니다.  
   
 ```  

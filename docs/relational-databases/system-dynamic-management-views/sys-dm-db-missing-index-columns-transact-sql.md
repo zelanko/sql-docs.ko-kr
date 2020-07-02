@@ -21,15 +21,15 @@ ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b917a22efd85cf1dcc83f358d334683c579ee6d4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 23574f5bf194ca0d3bdc6b301cdb17b7be933ecd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829475"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718829"
 ---
 # <a name="sysdm_db_missing_index_columns-transact-sql"></a>sys.dm_db_missing_index_columns(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   공간 인덱스를 제외하고 인덱스가 없는 데이터베이스 테이블 열에 대한 정보를 반환합니다. **dm_db_missing_index_columns** 은 동적 관리 함수입니다.  
 
@@ -62,10 +62,10 @@ sys.dm_db_missing_index_columns(index_handle)
 ## <a name="transaction-consistency"></a>트랜잭션 일관성  
  트랜잭션이 테이블을 만들거나 삭제하면 삭제된 개체에 대한 누락된 인덱스 정보가 포함된 행이 이 동적 관리 개체에서 제거되어 트랜잭션 일관성이 유지됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  이 동적 관리 함수를 쿼리하려면 사용자에게 VIEW SERVER STATE 권한이나 VIEW SERVER STATE 권한을 나타내는 사용 권한을 부여해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Address` 테이블에 대한 쿼리를 실행한 다음 인덱스가 없는 테이블 열을 반환하도록 `sys.dm_db_missing_index_columns` 동적 관리 뷰를 사용하여 쿼리를 실행합니다.  
   
 ```  

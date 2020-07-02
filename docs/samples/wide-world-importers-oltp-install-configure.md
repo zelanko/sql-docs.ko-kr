@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 355eaa254fcc7bb6cd4aa9a39c2cbcb269d88396
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d37575864666c5aa2b8c47484b5bcac798b3e9a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487072"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718668"
 ---
 # <a name="installation-and-configuration"></a>설치 및 구성
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Wide 세계 가져오기 OLTP 데이터베이스 설치 및 구성 지침
 
 ## <a name="prerequisites"></a>전제 조건
@@ -64,7 +64,7 @@ Bacpac를 새 SQL Database 가져오려면 Management Studio를 사용할 수 �
 5. **데이터베이스 설정** 에서 데이터베이스 이름을 *WideWorldImporters* 로 변경 하 고 사용할 대상 버전 및 서비스 목표를 선택 합니다.
 6. **다음** 을 클릭 하 고 **마침** 을 클릭 하 여 배포를 시작 합니다. P1에서 완료 하는 데 몇 분이 걸립니다. 낮은 가격 책정 계층을 원하는 경우 새 P1 데이터베이스로 가져온 다음 가격 책정 계층을 원하는 수준으로 변경 하는 것이 좋습니다.
 
-## <a name="configuration"></a>구성
+## <a name="configuration"></a>Configuration
 
 ### <a name="full-text-indexing"></a>전체 텍스트 인덱싱
 

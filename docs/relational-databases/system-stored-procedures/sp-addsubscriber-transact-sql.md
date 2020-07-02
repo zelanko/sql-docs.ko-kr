@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf49c44ca3de4325c8d5c6ecab22adc3ac0614cf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 462fe9e3634ea1dfa844fe4a97f1086bdef82cba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833635"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716365"
 ---
 # <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
 
   새 구독자를 게시자에 추가하여 게시한 내용을 받을 수 있도록 합니다. 이 저장 프로시저는 스냅샷 및 트랜잭션 게시를 위한 게시 데이터베이스의 게시자에서 실행됩니다. 원격 배포자를 사용하는 병합 게시의 경우에는 이 저장 프로시저가 배포자에서 실행됩니다.  
   
@@ -106,8 +106,8 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |**1**|한 번|  
 |**2**|주문형|  
 |**4**|매일|  
-|**20cm(8**|매주|  
-|**x**|매월|  
+|**8**|매주|  
+|**16**|매월|  
 |**32**|매월 상대적|  
 |**64** (기본값)|자동 시작|  
 |**128**|되풀이|  
@@ -124,11 +124,11 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 |값|설명|  
 |-----------|-----------------|  
-|**1** (기본값)|처음|  
-|**2**|초|  
+|**1** (기본값)|첫째|  
+|**2**|Second|  
 |**4**|셋째|  
-|**20cm(8**|넷째|  
-|**x**|마지막|  
+|**8**|넷째|  
+|**16**|마지막|  
   
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다. 속성은 이제 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)를 실행할 때 구독 별로 지정 됩니다. 값을 지정하면 해당 값은 이 구독자에서 구독을 만들 때 기본값으로 사용되며 경고 메시지가 반환됩니다.  
@@ -143,9 +143,9 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |값|설명|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|초|  
+|**2**|Second|  
 |**4** (기본값)|Minute|  
-|**20cm(8**|시간|  
+|**8**|시간|  
   
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다. 속성은 이제 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)를 실행할 때 구독 별로 지정 됩니다. 값을 지정하면 해당 값은 이 구독자에서 구독을 만들 때 기본값으로 사용되며 경고 메시지가 반환됩니다.  

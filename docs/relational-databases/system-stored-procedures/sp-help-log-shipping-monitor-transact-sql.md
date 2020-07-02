@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d2b8fc2ac96821427aaf0ef2550fb6624a923d7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6bf5b4c74b39c9326382089579e111b118235170
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68000937"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715847"
 ---
 # <a name="sp_help_log_shipping_monitor-transact-sql"></a>sp_help_log_shipping_monitor(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   주 서버, 보조 서버 또는 모니터 서버에 등록된 주 데이터베이스 및 보조 데이터베이스의 상태와 기타 정보를 포함하는 결과 집합을 반환합니다.  
   
@@ -50,7 +50,7 @@ sp_help_log_shipping_monitor
 |-----------------|---------------|-----------------|  
 |**status**|**bit**|로그 전달 데이터베이스 에이전트의 전체 상태입니다.<br /><br /> **0** = 정상 및 에이전트 안 함 오류<br /><br /> **1** = 그렇지 않으면입니다.|  
 |**is_primary**|**bit**|이 행이 주 데이터베이스에 대한 행인지 여부를 나타냅니다.<br /><br /> **1** = 주 데이터베이스에 대 한 행입니다.<br /><br /> **0** = 보조 데이터베이스에 대 한 행입니다.|  
-|**서버인**|**sysname**|이 데이터베이스가 상주하는 주 서버 또는 보조 서버의 이름입니다.|  
+|**server**|**sysname**|이 데이터베이스가 상주하는 주 서버 또는 보조 서버의 이름입니다.|  
 |**database_name**|**sysname**|데이터베이스 이름입니다.|  
 |**time_since_last_backup**|**int**|마지막 로그 백업 이후에 경과한 시간(분)입니다.<br /><br /> NULL = 정보를 사용할 수 없거나 관련이 없습니다.|  
 |**last_backup_file**|**nvarchar (500)**|마지막 로그 백업 파일의 이름입니다.<br /><br /> NULL = 정보를 사용할 수 없거나 관련이 없습니다.|  
@@ -71,7 +71,7 @@ sp_help_log_shipping_monitor
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [로그 전달 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

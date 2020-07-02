@@ -20,21 +20,21 @@ ms.assetid: 940ebc5e-44ba-4dae-8b29-da94f2d1d6c4
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2212ebe8551f27c880ebf0c674f4b8d134617b07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af931a3ac76186b0ac583155b0d45e4dbe7ed055
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942500"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718873"
 ---
 # <a name="syscheck_constraints-transact-sql"></a>sys.check_constraints(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   CHECK 제약 조건에 해당 하는 각 개체에 대 한 행을 포함 합니다. 여기에는 **sys. type** = ' C '가 포함 됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**\<Sys. 개체에서 상속 된 열>**||이 뷰가 상속 하는 열 목록은 [sys. 개체 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.|  
+|**\<Columns inherited from sys.objects>**||이 뷰가 상속 하는 열 목록은 [sys. 개체 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.|  
 |**is_disabled**|**bit**|CHECK 제약 조건이 비활성화되었습니다.|  
 |**is_not_for_replication**|**bit**|CHECK 제약 조건이 NOT FOR REPLICATION 옵션으로 생성되었습니다.|  
 |**is_not_trusted**|**bit**|시스템에서 모든 행에 대해 CHECK 제약 조건을 확인하지는 않았습니다.|  

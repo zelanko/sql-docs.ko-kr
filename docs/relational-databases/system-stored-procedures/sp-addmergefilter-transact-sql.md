@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 76b5b8b5aa9f867c1dcf4b47940fce117c35bc69
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0ac36d85a08763903cb42a5b48d0280a6366a1e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831824"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716572"
 ---
 # <a name="sp_addmergefilter-transact-sql"></a>sp_addmergefilter(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   다른 테이블과의 조인을 기반으로 하는 파티션을 만들기 위해 새 병합 필터를 추가합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a87ba30f69027849ea5444163291465dec00d9be
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 4ff31939ce763f91ca706dfe9e7966b2a7b42f7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627615"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716353"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
 
   게시에 구독을 추가하고 구독자 상태를 설정합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -313,7 +313,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
  **sync_type** 옵션 *replication support only*, *initialize with backup*또는 *initialize from lsn*을 선택할 때는 설치 스크립트가 배포 데이터베이스에 기록되도록 **sp_addsubscription**을 실행한 후 로그 판독기 에이전트를 실행해야 합니다. 로그 판독기 에이전트는 **sysadmin** 고정 서버 역할의 멤버인 계정으로 실행되어야 합니다. **sync_type** 옵션이 *Automatic*으로 설정된 경우 특별한 로그 판독기 에이전트 동작이 필요하지 않습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  sysadmin 고정 서버 역할 또는 db_owner 고정 데이터베이스 역할의 멤버만 sp_addsubscription을 실행할 수 있습니다. 끌어오기 구독의 경우 게시 액세스 목록의 로그인이 있는 사용자는 sp_addsubscription을 실행할 수 있습니다.  
   
 ## <a name="example"></a>예제  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f8e753f4961d33251120151bff6db1f8cd5e14c
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 96240f605762be382065268fa39198baeeaaa53f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215755"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717177"
 ---
 # <a name="path-expressions---specifying-axis"></a>경로 식 - 축 지정
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   경로 식의 축 단계는 다음 구성 요소를 포함합니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "84215755"
   
  상대 경로 식 `child::root/child::Location/attribute::LocationID`에는 세 단계가 있습니다. 처음 두 단계는 각각 `child` 축을 지정하고 세 번째 단계는 `attribute` 축을 지정합니다. **Production 모델** 테이블의 제조 지침 XML 문서에 대해 실행 될 때 식은 `LocationID` \<Location> 요소의 요소 노드 자식에 대 한 특성을 반환 합니다 \<root> .  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 항목의 쿼리 예는 **AdventureWorks** 데이터베이스의 **xml** 유형 열에 대해 지정 됩니다.  
   
 ### <a name="a-specifying-a-child-axis"></a>A. child 축 지정  

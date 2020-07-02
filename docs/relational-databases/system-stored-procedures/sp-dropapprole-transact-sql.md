@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 36c3aaf72390ac5005ff5577000820f07ac5856d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 740bfcf83aca712dcaeb7189b226d880f7ae5a02
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001036"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717303"
 ---
 # <a name="sp_dropapprole-transact-sql"></a>sp_dropapprole(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스에서 애플리케이션 역할을 제거합니다.  
   
@@ -55,7 +55,7 @@ sp_dropapprole [@rolename = ] 'role'
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 ALTER ANY APPLICATION ROLE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 현재 데이터베이스에서 `SalesApp` 애플리케이션 역할을 제거합니다.  
   
 ```sql

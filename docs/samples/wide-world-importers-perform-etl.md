@@ -10,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 98ce2b9aa11b2e1381da1f16455df8a2c0d3f243
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1dfba407449b9517af2ed899f49387732c48353b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487432"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718527"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL 워크플로
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 데이터가 변경 되 면 *WWI_Integration* ETL 패키지를 사용 하 여 WideWorldImporters 데이터베이스에서 WideWorldImportersDW 데이터베이스로 데이터를 마이그레이션합니다. 패키지가 정기적으로 실행 됩니다 (일반적으로 매일).
 
 패키지는 SQL Server Integration Services을 사용 하 여 대량 T-sql 작업을 오케스트레이션 (Integration Services의 개별 변환 대신) 하 여 높은 성능을 보장 합니다.
@@ -59,11 +59,11 @@ ms.locfileid: "81487432"
    5. **배포** 를 선택 하 여 마법사를 완료 합니다.
 
 2. ETL 프로세스에 대 한 SQL Server 에이전트 작업을 만듭니다.
-   1. Management Studio에서 **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭 한 다음 **새** > **작업**을 선택 합니다.
+   1. Management Studio에서 **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭 한 다음 **새**  >  **작업**을 선택 합니다.
    2. 이름을 입력 합니다 (예: *WIDEWORLDIMPORTERS ETL*).
    3. **SQL Server Integration Services 패키지**형식의 **작업 단계** 를 추가 합니다.
    4. Integration Services 카탈로그가 있는 서버를 선택 하 고 *매일 ETL* 패키지를 선택 합니다.
-   5. **구성** > **연결 관리자**에서 원본 및 대상에 대 한 연결이 올바르게 구성 되어 있는지 확인 합니다. 기본값은 로컬 인스턴스에 연결 하는 것입니다.
+   5. **구성**  >  **연결 관리자**에서 원본 및 대상에 대 한 연결이 올바르게 구성 되어 있는지 확인 합니다. 기본값은 로컬 인스턴스에 연결 하는 것입니다.
    6. **확인** 을 선택 하 여 작업을 만듭니다.
 
 3. 작업을 실행 하거나 예약 합니다.

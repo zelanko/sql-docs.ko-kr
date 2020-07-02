@@ -13,24 +13,24 @@ ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fa94f57a783fc4bdb12f17baa0dbbcb54f61ee4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 571affb61db00386bc7e325c5491e5364d526ee2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301834"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719007"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>향상된 날짜 및 시간 형식에 대한 대량 복사 변경 사항(OLE DB 및 ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   이 항목에서는 대량 복사 기능을 지원하기 위한 날짜/시간 개선 사항에 대해 설명합니다. 이 항목의 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 OLE DB 및 ODBC 둘 모두에 적용됩니다.  
   
 ## <a name="format-files"></a>서식 파일  
  서식 파일을 대화형으로 빌드할 경우 다음 표에서는 날짜/시간 형식을 지정하는 데 사용되는 입력 및 해당되는 호스트 파일 데이터 형식 이름을 보여 줍니다.  
   
-|파일 스토리지 유형|호스트 파일 데이터 형식|프롬프트에 대 한 응답: "필드의 파일 저장 유형 입력 <field_name> [\<기본>]:"|  
+|파일 스토리지 유형|호스트 파일 데이터 형식|프롬프트에 대 한 응답: "필드의 파일 저장 유형을 입력 <field_name> [ \<default> ]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
-|DateTime|SQLDATETIME|d|  
+|DateTime|SQLDATETIME|일|  
 |Smalldatetime|SQLDATETIM4|D|  
 |Date|SQLDATE|de|  
 |시간|SQLTIME|te|  

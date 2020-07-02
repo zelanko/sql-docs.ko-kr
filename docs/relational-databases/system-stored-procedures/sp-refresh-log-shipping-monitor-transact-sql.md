@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b375c1861d532445cd39d42f59f0a8d753e53b85
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1db9dfdcb7941db0c253bf0b1c3f65b767a5cdec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828840"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719260"
 ---
 # <a name="sp_refresh_log_shipping_monitor-transact-sql"></a>sp_refresh_log_shipping_monitor(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   이 저장 프로시저는 지정된 로그 전달 에이전트에 대해 주어진 주 서버 또는 보조 서버에서 최신 정보로 원격 모니터 테이블을 새로 고칩니다. 이 프로시저는 주 서버나 보조 서버에서 호출됩니다.  
   
@@ -74,11 +74,11 @@ sp_refresh_log_shipping_monitor
   
  **sp_refresh_log_shipping_monitor** 는 주 서버 또는 보조 서버에 있는 **master** 데이터베이스에서 실행 해야 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [로그 전달 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

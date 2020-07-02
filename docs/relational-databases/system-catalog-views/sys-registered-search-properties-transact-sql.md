@@ -24,15 +24,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 055e64c743c453fb6362d45587b395bf6f3d77bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 09b95722f47442b2d5d749d8ba36888fb9605f58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68067896"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717614"
 ---
 # <a name="sysregistered_search_properties-transact-sql"></a>sys.registered_search_properties(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   현재 데이터베이스에서 검색 속성 목록에 있는 각 검색 속성에 대한 행을 포함합니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68067896"
 > [!NOTE]  
 >  검색 속성 목록 소유자는 목록에 대한 REFERENCE 또는 CONTROL 권한을 부여할 수 있습니다. CONTROL 권한을 가진 사용자는 다른 사용자에게 REFERENCE 권한을 부여할 수도 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 등록된 검색 속성의 메타데이터를 모두 나열합니다.  
   
 ```  

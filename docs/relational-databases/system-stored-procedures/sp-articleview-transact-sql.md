@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7d5a65254061160374120ef1d7cf54974f7a3dc2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4a906e3b74e4682883dbddaf89ba58b5d4069936
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833507"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716221"
 ---
 # <a name="sp_articleview-transact-sql"></a>sp_articleview(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   테이블을 수직 또는 수평으로 필터링할 때 게시된 아티클을 정의하는 뷰를 만듭니다. 이 뷰는 대상 테이블에 대한 스키마 및 데이터의 필터링된 원본으로 사용됩니다. 이 저장 프로시저로는 구독되지 않은 아티클만 수정할 수 있습니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   

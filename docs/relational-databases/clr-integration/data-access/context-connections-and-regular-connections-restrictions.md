@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fac92658366cceffc3d4fac5ba650f9a14501185
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5491e736bfa075c4cc9f001bc2515184de865ee2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81485365"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717903"
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>컨텍스트 연결 및 일반 연결 - 제한 사항
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 컨텍스트 및 일반 연결을 통해 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스에서 실행 되는 코드와 관련 된 제한 사항을 설명 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  이 항목에서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 컨텍스트 및 일반 연결을 통해 프로세스에서 실행 되는 코드와 관련 된 제한 사항을 설명 합니다.  
   
 ## <a name="restrictions-on-context-connections"></a>컨텍스트 연결에 대한 제한 사항  
  애플리케이션을 개발할 때는 컨텍스트 연결에 적용되는 다음과 같은 제한 사항을 고려해야 합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "81485365"
   
 -   "context connection=true"를 사용하는 경우 다른 연결 문자열 키워드를 사용할 수 없습니다.  
   
--   **SqlConnection** 속성은 인스턴스의 이름이 아니라 "context connection = true" 인 **SqlConnection** 에 대 한 연결 문자열이 있는 경우 null을 반환 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   **SqlConnection** 속성은 인스턴스의 이름이 아니라 "context connection = true" 인 **SqlConnection** 에 대 한 연결 문자열이 있는 경우 null을 반환 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   명령이 컨텍스트 연결에 대해 실행되는 경우에는 **SqlCommand.CommandTimeout** 속성을 설정해도 아무 영향이 없습니다.  
   

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: b3f24bf0-6b02-496b-b08e-327f7b320bc5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c2b86b50b6792cf8a2c921dd0e61826282cee74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b933588a8d58b2f48c95e5bb0c2f1ede47944bbc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660613"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717219"
 ---
 # <a name="instancename-property-servernetworkprotocolproperty-class"></a>InstanceName 속성(ServerNetworkProtocolProperty 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  서버 네트워크 프로토콜이 설치 된 인스턴스의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이름을 가져옵니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서버 네트워크 프로토콜이 설치 된 인스턴스의 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   

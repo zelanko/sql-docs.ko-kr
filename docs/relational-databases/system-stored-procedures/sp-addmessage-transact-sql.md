@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c046d562164e47ed72580801196756714547755e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b44560cfd5c97abf536b372d534aaec59318f021
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820724"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716560"
 ---
 # <a name="sp_addmessage-transact-sql"></a>sp_addmessage(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   새 사용자 정의 오류 메시지를 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스에 저장합니다. **Sp_addmessage** 를 사용 하 여 저장 한 메시지는 **시스템** 카탈로그 뷰를 사용 하 여 볼 수 있습니다.  
   
@@ -77,7 +77,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ## <a name="permissions"></a>사용 권한  
 **Sysadmin** 또는 **serveradmin** 고정 서버 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-defining-a-custom-message"></a>A. 사용자 지정 메시지 정의  
  다음 예에서는 **sys. 메시지**에 사용자 지정 메시지를 추가 합니다.  

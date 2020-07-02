@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8108896e5ef7599c3441e922c54ba606d65d5fe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a6f56713f2ac50a5e367f23a7987b62e2fb9a78b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828863"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719247"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   OLE Automation 오류 정보를 얻습니다.  
   
@@ -69,10 +69,10 @@ sp_OAGetErrorInfo [ objecttoken ]
 ## <a name="result-sets"></a>결과 집합  
  출력 매개 변수가 지정되지 않으면 오류 정보는 클라이언트에 결과 집합으로 반환됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |------------------|---------------|-----------------|  
 |**오류**|**binary (4)**|오류 번호의 이진 표시입니다.|  
-|**소스**|**nvarchar (nn)**|오류의 원본입니다.|  
+|**원본**|**nvarchar (nn)**|오류의 원본입니다.|  
 |**설명**|**nvarchar (nn)**|오류 설명입니다.|  
 |**Helpfile**|**nvarchar (nn)**|원본에 대한 도움말 파일입니다.|  
 |**HelpID**|**int**|도움말 원본 파일에 있는 도움말 컨텍스트 ID입니다.|  
@@ -86,7 +86,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |-----------------------|------------------|  
 |**잘못된 변수 형식(0x80020008)**|메서드 매개 변수로 전달 된 값의 데이터 형식이 [!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 메서드 매개 변수의 데이터 형식과 일치 하지 않거나, NULL 값이 메서드 매개 변수로 전달 되었습니다.|  
 |**알 수 없는 이름(0x8002006)**|지정한 개체에 대해 지정한 속성 또는 메서드 이름이 없습니다.|  
-|**잘못된 클래스 문자열(0x800401f3)**|지정된 ProgID 또는 CLSID가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 OLE 개체로 등록되어 있지 않습니다. 사용자 지정 OLE 자동화 서버를 **sp_OACreate**를 사용 하 여 인스턴스화하려면 먼저 등록 해야 합니다. 이 작업은 in-process (.dll) 서버에 대해 Regsvr32 유틸리티를 사용 하거나 로컬 (.exe) 서버에 **/REGSERVER** 명령줄 스위치를 사용 하 여 수행할 수 있습니다.|  
+|**잘못된 클래스 문자열(0x800401f3)**|지정된 ProgID 또는 CLSID가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 OLE 개체로 등록되어 있지 않습니다. 사용자 지정 OLE 자동화 서버를 **sp_OACreate**를 사용 하 여 인스턴스화하려면 먼저 등록 해야 합니다. 이 작업은 in-process (.dll) 서버에 대 한 Regsvr32.exe 유틸리티를 사용 하거나 로컬 (.exe) 서버에 대 한 **/REGSERVER** 명령줄 스위치를 사용 하 여 수행할 수 있습니다.|  
 |**서버 실행 실패(0x80080005)**|지정된 OLE 개체가 로컬 OLE 서버(.exe 파일)로 등록되어 있지만 .exe 파일을 찾거나 시작할 수 없습니다.|  
 |**지정한 모듈을 찾을 수 없음(0x8007007e)**|지정된 OLE 개체가 종속 OLE 서버(.dll 파일)로 등록되어 있지만 .dll 파일을 찾거나 로드할 수 없습니다.|  
 |**형식 불일치(0x80020005)**|반환된 속성 값 또는 메서드 반환 값을 저장하는 데 사용한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 지역 변수의 데이터 형식이 속성 또는 메서드 반환 값의 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 데이터 형식과 일치하지 않습니다. 또는 속성 또는 메서드 반환 값을 요청했으나 값이 반환되지 않았습니다.|  
@@ -94,10 +94,10 @@ sp_OAGetErrorInfo [ objecttoken ]
   
  HRESULT 반환 코드를 처리 하는 방법에 대 한 자세한 내용은 [OLE 자동화 반환 코드 및 오류 정보](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)를 참조 하세요.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버 자격 또는이 저장 프로시저에 대 한 execute 권한이 필요 합니다. `Ole Automation Procedures`OLE 자동화와 관련 된 시스템 프로시저를 사용 하려면 구성을 사용 하도록 **설정** 해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음은 OLE Automation 오류 정보를 표시하는 예입니다.  
   
 ```  

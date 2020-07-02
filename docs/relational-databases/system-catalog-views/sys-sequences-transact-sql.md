@@ -21,21 +21,21 @@ ms.assetid: 0e1b0e32-1cce-40f7-83c8-860ec660138a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5afddee7cf2d8d5e61db8833df45b839e6f70eca
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4a6588e142fb17f0b90dfb302dda242255513ed3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815841"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717568"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   데이터베이스의 각 시퀀스 개체에 대한 행을 포함합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|\<상속 된 열>||는 [sys. 개체](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)의 모든 열을 상속 합니다.|  
+|\<inherited columns>||는 [sys. 개체](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)의 모든 열을 상속 합니다.|  
 |**start_value**|**NULL이 아님 sql_variant**|시퀀스 개체의 시작 값입니다. ALTER SEQUENCE를 사용하여 시퀀스 개체가 다시 시작될 경우 이 값에서 다시 시작됩니다. 시퀀스 개체를 순환 하는 경우 **start_value**가 아닌 **minimum_value** 또는 **maximum_value**으로 진행 됩니다.|  
 |**increment**|**NULL이 아님 sql_variant**|각각의 생성되는 값 다음에 시퀀스 개체를 늘리는 데 사용되는 값입니다.|  
 |**minimum_value**|**NULL sql_variant**|시퀀스 개체가 생성할 수 있는 최소값입니다. 이 값에 도달하면 시퀀스 개체가 값을 더 생성하려고 할 때 오류를 반환하거나 CYCLE 옵션이 지정되는 경우 다시 시작됩니다. MINVALUE가 지정 되지 않은 경우이 열은 시퀀스 생성기의 데이터 형식에서 지 원하는 최소값을 반환 합니다.|  
@@ -51,8 +51,8 @@ ms.locfileid: "82815841"
 |**is_exhausted**|**비트 NOT NULL**|0은 시퀀스에서 값을 더 생성할 수 있다는 의미이며, 1은 시퀀스 개체가 MAXVALUE 매개 변수에 도달했고 시퀀스가 CYCLE로 설정되지 않았다는 의미입니다. ALTER SEQUENCE를 사용하여 시퀀스가 다시 시작될 때까지 NEXT VALUE FOR 함수가 오류를 반환합니다.|  
 |**last_used_value**|**NULL sql_variant**|[Next Value For](../../t-sql/functions/next-value-for-transact-sql.md) 함수에 의해 생성 된 마지막 값을 반환 합니다. SQL Server 2017 이상에 적용 됩니다.|  
   
-## <a name="permissions"></a>권한  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서는 사용자가 소유하고 있거나 일부 사용 권한이 부여된 보안 개체의 경우에만 카탈로그 뷰의 메타데이터를 볼 수 있도록 제한됩니다.  자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
+## <a name="permissions"></a>사용 권한  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서는 사용자가 소유하고 있거나 일부 사용 권한이 부여된 보안 개체의 경우에만 카탈로그 뷰의 메타데이터를 볼 수 있도록 제한됩니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)   

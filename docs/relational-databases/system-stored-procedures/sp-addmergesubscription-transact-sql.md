@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af9bd2035106502da6ccb83a9a8818ca6bd0c47a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 96cd2abcc3e9bc76b2dd32026fedfe6ad774c19b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820712"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716590"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   밀어넣기 또는 끌어오기 병합 구독을 만듭니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -94,7 +94,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |-----------|-----------------|  
 |**1**|한 번|  
 |**4**|매일|  
-|**20cm(8**|매주|  
+|**8**|매주|  
 |**10**|매월|  
 |**720**|매월(frequency_interval에 상대적임)|  
 |**40**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 시작될 때|  
@@ -111,7 +111,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**5**|목요일|  
 |**6**|금요일|  
 |**7**|토요일|  
-|**20cm(8**|일|  
+|**8**|일|  
 |**9**|평일|  
 |**10**|주말|  
 |NULL(기본값)||  
@@ -120,11 +120,11 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 |값|Description|  
 |-----------|-----------------|  
-|**1**|처음|  
-|**2**|초|  
+|**1**|첫째|  
+|**2**|Second|  
 |**4**|셋째|  
-|**20cm(8**|넷째|  
-|**x**|마지막|  
+|**8**|넷째|  
+|**16**|마지막|  
 |NULL(기본값)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*에서 사용 하는 되풀이 비율입니다. *frequency_recurrence_factor*은 **int**이며 기본값은 NULL입니다.  
@@ -134,9 +134,9 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|초|  
+|**2**|Second|  
 |**4**|Minute|  
-|**20cm(8**|시간|  
+|**8**|시간|  
 |NULL(기본값)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`각 병합 사이에 *frequency_subday* 발생 하는 빈도입니다. *frequency_subday_interval* 은 **int**이며 기본값은 NULL입니다.  

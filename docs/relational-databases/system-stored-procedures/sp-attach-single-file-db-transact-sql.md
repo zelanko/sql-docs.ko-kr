@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1baea0e1b64310f832648b8944881c827c4b7be8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3d3a7a396c381facb76eb3abcc0d7fe67e5991ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833472"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716190"
 ---
 # <a name="sp_attach_single_file_db-transact-sql"></a>sp_attach_single_file_db(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   데이터 파일이 한 개만 있는 데이터베이스를 현재 서버에 연결합니다. **sp_attach_single_file_db** 는 여러 데이터 파일과 함께 사용할 수 없습니다.  
   
@@ -74,7 +74,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ## <a name="permissions"></a>사용 권한  
  데이터베이스가 연결 될 때 사용 권한이 처리 되는 방법에 대 한 자세한 내용은 [CREATE database &#40;SQL Server transact-sql&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조 하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]를 분리한 다음 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]의 파일 하나를 현재 서버에 연결합니다.  
   
 ```  

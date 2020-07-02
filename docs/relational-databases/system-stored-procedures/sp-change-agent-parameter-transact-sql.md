@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f22b2446713274503071e615690aaf7a03fc33d2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 86a450e69eb72724b64b9a2861e3cd282ebf87a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824839"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715953"
 ---
 # <a name="sp_change_agent_parameter-transact-sql"></a>sp_change_agent_parameter(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   [MSagent_parameters](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) 시스템 테이블에 저장 된 복제 에이전트 프로필의 매개 변수를 변경 합니다. 이 저장 프로시저는 에이전트가 실행되고 있는 모든 데이터베이스의 배포자에서 실행될 수 있습니다.  
   
@@ -216,7 +216,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **UseInprocLoader**  
   
--   **유효성 검사**  
+-   **유효화**  
   
 -   **ValidateInterval**  
   
@@ -248,7 +248,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ## <a name="remarks"></a>설명  
  **sp_change_agent_parameter** 은 모든 유형의 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_change_agent_parameter**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

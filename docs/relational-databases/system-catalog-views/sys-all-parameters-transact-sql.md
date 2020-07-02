@@ -20,15 +20,15 @@ ms.assetid: eecbb68e-9b4c-4243-94e2-8096a9cc7892
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc5c7fff4b0226012e82d103dc9f52d84036c218
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3651de5aba112eb48fcb49a066ab409c396d6f14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82822179"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718934"
 ---
 # <a name="sysall_parameters-transact-sql"></a>sys.all_parameters(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   사용자 정의 개체나 시스템 개체에 속하는 모든 매개 변수의 합집합을 표시합니다.  
   
@@ -57,6 +57,6 @@ ms.locfileid: "82822179"
  [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server 시스템 카탈로그 쿼리 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys. Transact-sql&#41;&#40;매개 변수](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)   
- [system_parameters &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md)  
+ [Transact-sql&#41;&#40;tem_parameterssys.sys](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md)  
   
   

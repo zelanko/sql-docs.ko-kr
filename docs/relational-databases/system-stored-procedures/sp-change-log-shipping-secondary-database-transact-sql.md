@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d0bd62fe3462441d4eab9d3d89bce20cf1144131
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d584b2db0e66b2affad0e061098f75fc9258fbdb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909562"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715917"
 ---
 # <a name="sp_change_log_shipping_secondary_database-transact-sql"></a>sp_change_log_shipping_secondary_database(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   보조 데이터베이스 설정을 변경합니다.  
   
@@ -69,7 +69,7 @@ sp_change_log_shipping_secondary_database
   
 `[ @buffer_count = ] 'buffer_count'`백업 또는 복원 작업에 사용 되는 버퍼의 총 수입니다. *buffer_count* 은 **int** 이며 기본값은-1입니다.  
   
-`[ @max_transfer_size = ] 'max_transfer_size'`에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 장치로 발급 하는 최대 입력 또는 출력 요청의 크기 (바이트)입니다. *max_transfersize* 는 **int** 이며 NULL 일 수 있습니다.  
+`[ @max_transfer_size = ] 'max_transfer_size'`에서 백업 장치로 발급 하는 최대 입력 또는 출력 요청의 크기 (바이트)입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *max_transfersize* 는 **int** 이며 NULL 일 수 있습니다.  
   
 `[ @restore_threshold = ] 'restore_threshold'`복원 작업 간 허용 되는 시간 (분)으로, 경고가 생성 됩니다. *restore_threshold* 는 **int** 이며 NULL 일 수 없습니다.  
   
@@ -95,7 +95,7 @@ sp_change_log_shipping_secondary_database
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 예에서는 **sp_change_log_shipping_secondary_database** 를 사용 하 여 **logshipadventureworks**데이터베이스에 대 한 보조 데이터베이스 매개 변수를 업데이트 하는 방법을 보여 줍니다.  
   
 ```  
@@ -111,7 +111,7 @@ EXEC master.dbo.sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [로그 전달 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

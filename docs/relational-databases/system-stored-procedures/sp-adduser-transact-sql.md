@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a2984479c8a1be35f8ccfa63d14b3250939f56c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e7ba3827b9a659c0100805d0a9895fad503b2a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68117899"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716292"
 ---
 # <a name="sp_adduser-transact-sql"></a>sp_adduser(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스에 새 사용자를 추가합니다.  
   
@@ -44,7 +44,7 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @loginame = ] 'login'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 Windows 로그인의 이름입니다. *login* 은 **sysname**이며 기본값은 없습니다. *로그인* 은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 Windows 로그인 이어야 합니다.  
+`[ @loginame = ] 'login'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로그인 또는 Windows 로그인의 이름입니다. *login* 은 **sysname**이며 기본값은 없습니다. *로그인* 은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 Windows 로그인 이어야 합니다.  
   
 `[ @name_in_db = ] 'user'`새 데이터베이스 사용자의 이름입니다. *사용자* 는 **sysname**이며 기본값은 NULL입니다. *사용자* 를 지정 하지 않으면 새 데이터베이스 사용자의 이름에 대 한 기본값은 *로그인* 이름입니다. *사용자* 를 지정 하면 데이터베이스에서 서버 수준 로그인 이름과 다른 이름을 사용 합니다.  
   
@@ -76,7 +76,7 @@ GO
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 소유권이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-adding-a-database-user"></a>A. 데이터베이스 사용자 추가  
  다음 예에서는 `Vidur`라는 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 사용하여 `Recruiting` 데이터베이스 사용자를 현재 데이터베이스의 기존 `Vidur` 역할에 추가합니다.  

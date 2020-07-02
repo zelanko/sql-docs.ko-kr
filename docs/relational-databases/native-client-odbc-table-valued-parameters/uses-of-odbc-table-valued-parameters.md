@@ -14,15 +14,15 @@ ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e88092c6566d9e5838f8a2cb59cd7c23564af9b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5be9838e0c4e989c6b802d9c74e240a0d01c354b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297747"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715325"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>ODBC 테이블 반환 매개 변수 사용
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   이 항목에서는 ODBC에서 테이블 반환 매개 변수를 사용하는 기본 사용자 시나리오를 설명합니다.  
   

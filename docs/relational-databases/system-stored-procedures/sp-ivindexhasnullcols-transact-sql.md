@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6f83837e6676cfd99f2403b4bfecd301915d263a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 482998563530a2b3a735be883a353e519eb64d60
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834393"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715169"
 ---
 # <a name="sp_ivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   인덱싱된 뷰의 클러스터형 인덱스가 고유하며 인덱싱된 뷰를 사용하여 트랜잭션 게시를 만들려는 경우 Null이 될 수 있는 열을 포함하고 있지 않은지 확인합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   

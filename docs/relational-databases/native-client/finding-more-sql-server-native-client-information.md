@@ -13,15 +13,15 @@ ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b006892685105b97a50dd9e0e7e33beca7e2f44
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c821204ffb618b4f44cad67a83a1f6485bc40a73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388382"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719602"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>SQL Server Native Client 추가 정보 찾기
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 및 다른 데이터 액세스 프로그래밍 유형에 대한 자세한 내용은 다음 온라인 리소스를 참조하십시오.  
   

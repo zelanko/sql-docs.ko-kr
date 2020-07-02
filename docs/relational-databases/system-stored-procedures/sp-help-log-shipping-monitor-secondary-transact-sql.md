@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b1acf456bda88eeee0493d3f9d7ccc063a5bda50
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f7c3f1a4406ec64417c96fbc11387eb1b07f4eb4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001004"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715873"
 ---
 # <a name="sp_help_log_shipping_monitor_secondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   모니터 테이블에서 보조 데이터베이스에 대한 정보를 반환합니다.  
   
@@ -51,9 +51,9 @@ sp_help_log_shipping_monitor_secondary
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열|Description|  
+|Column|설명|  
 |------------|-----------------|  
-|**secondary_server**|로그 전달 구성 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에 있는의 보조 인스턴스의 이름입니다.|  
+|**secondary_server**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]로그 전달 구성에 있는의 보조 인스턴스의 이름입니다 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .|  
 |**secondary_database**|로그 전달 구성의 보조 데이터베이스의 이름입니다.|  
 |**secondary_id**|로그 전달 구성의 보조 서버의 ID입니다.|  
 |**primary_server**|로그 전달 구성의 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 대한 주 인스턴스 이름입니다.|  
@@ -76,7 +76,7 @@ sp_help_log_shipping_monitor_secondary
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [로그 전달 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

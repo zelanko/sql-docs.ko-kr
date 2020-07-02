@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 561305cd-c803-48af-9eec-2c19f4d311ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 541f24693598d20925dd37d4970c6d9916945793
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d205888982349bc58669653aa5ff5cb6d9d902b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032007"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717670"
 ---
 # <a name="database-engine-extended-stored-procedures---programming"></a>데이터베이스 엔진 확장 저장 프로시저 프로그래밍
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  

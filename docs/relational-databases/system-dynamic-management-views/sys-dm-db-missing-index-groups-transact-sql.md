@@ -21,15 +21,15 @@ ms.assetid: 9cc00acd-d83d-49f8-be72-5b2aebed246b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c92162cb78043b078e38dac63e22a3ca3267251c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a5ca04c0774e639edb06edac4762ed6beeb7af58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828088"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718810"
 ---
 # <a name="sysdm_db_missing_index_groups-transact-sql"></a>sys.dm_db_missing_index_groups(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   이 DMV는 공간 인덱스를 제외 하 고 특정 인덱스 그룹에 누락 된 인덱스에 대 한 정보를 반환 합니다. 
   
@@ -48,7 +48,7 @@ ms.locfileid: "82828088"
   >[!NOTE]
   >이 DMV의 결과 집합은 600 개 행으로 제한 됩니다. 각 행에는 누락 된 인덱스가 하나 있습니다. 인덱스가 600 개를 초과 하는 경우 기존 누락 된 인덱스를 처리 하 여 최신 인덱스를 볼 수 있도록 해야 합니다.
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  이 동적 관리 뷰를 쿼리하려면 사용자에게 VIEW SERVER STATE 권한이나 VIEW SERVER STATE 권한을 나타내는 사용 권한을 부여해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

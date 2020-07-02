@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 804e5723732f4879451c885a0aa719d6822925a1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b84eb615704799d0e63aa139b28356203512ea28
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833572"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716281"
 ---
 # <a name="sp_altermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스에서 사용자 정의 메시지 또는 시스템 메시지의 상태를 변경합니다. 사용자 정의 메시지는 **sys. messages** 카탈로그 뷰를 사용 하 여 볼 수 있습니다.  
 
@@ -65,7 +65,7 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
 ## <a name="permissions"></a>사용 권한  
  **Serveradmin** 고정 서버 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 기존 메시지 `55001`을 Windows 애플리케이션 로그에 기록합니다.  
   
 ```  

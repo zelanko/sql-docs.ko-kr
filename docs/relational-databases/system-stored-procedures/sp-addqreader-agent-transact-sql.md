@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0347a7346e42e212775267fc5849360abaa75423
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1758f6cd269c911ea582577721d29e6534910e91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820649"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716457"
 ---
 # <a name="sp_addqreader_agent-transact-sql"></a>sp_addqreader_agent(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   지정된 배포자에 대한 큐 판독기 에이전트를 추가합니다. 이 저장 프로시저는 배포 데이터베이스의 배포자 또는 게시 데이터베이스의 게시자에서 실행됩니다.  
   

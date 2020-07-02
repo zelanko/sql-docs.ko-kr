@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 821d4127-3ce5-4474-8561-043404a20d81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c2503e5d3b94b5bc73d9bf2427e0162ba2eda2fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d25c8d57608357530e9344a41d23771d198ed23
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304906"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717276"
 ---
 # <a name="sp_help_spatial_geography_index_xml-transact-sql"></a>sp_help_spatial_geography_index_xml(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **지리** 공간 인덱스에 대해 지정 된 속성 집합의 이름과 값을 반환 합니다. 인덱스의 핵심 속성 집합만 반환하거나 인덱스의 속성을 모두 반환하도록 선택할 수 있습니다.  
   
@@ -57,7 +57,7 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
  NULL 값이 포함된 속성은 반환 집합에 포함되지 않습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는를 `sp_help_spatial_geography_index_xml` 사용 하 여 ** \@qs**의 지정 된 쿼리 샘플에 대 한 테이블 **geography_col** 에 정의 된 **SIndx_SpatialTable_geography_col2** 공간 인덱스를 조사 합니다. 이 예에서는 지정된 인덱스의 핵심 속성을 선택한 속성의 이름과 값을 표시하는 XML 조각으로 반환합니다.  
+ 다음 예에서는 `sp_help_spatial_geography_index_xml` 를 사용 하 여 ** \@ qs**의 지정 된 쿼리 샘플에 대 한 테이블 **geography_col** 에 정의 된 **SIndx_SpatialTable_geography_col2** 공간 인덱스를 조사 합니다. 이 예에서는 지정된 인덱스의 핵심 속성을 선택한 속성의 이름과 값을 표시하는 XML 조각으로 반환합니다.  
   
  그러면 [XQuery](../../xquery/xquery-basics.md) 가 결과 집합에서 실행 되어 특정 속성을 반환 합니다.  
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: 5fea5badf14ce9863f07dff189f1665788ec5fb6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 41378ba13c6c85059313595161aeeb4226c6731e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70873776"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718738"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex(Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 Azure SQL Database에 대 한 리소스 풀 통계의 마지막 32 분 (128 개 합계)에 대 한 스냅숏을 20 초 간격으로 반환 합니다.
   
@@ -68,8 +68,8 @@ Azure SQL Database에 대 한 리소스 풀 통계의 마지막 32 분 (128 개 
 |**max_request_cpu_msec**| bigint |단일 요청에 대한 최대 CPU 사용량(밀리초)입니다. Null을 허용하지 않습니다.|
 |**max_concurrent_request**| int |최대 동시 요청 수에 대한 현재 설정입니다. Null을 허용하지 않습니다.|
 |**max_io**| int |그룹에 대 한 최대 IO 제한입니다.|
-|**max_global_io**| int |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.
-|**max_queued_io**| int |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|
+|**max_global_io**| int |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.
+|**max_queued_io**| int |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|
 |**max_log_rate_kb**| bigint |리소스 그룹 수준에서 최대 로그 속도 (초당 킬로바이트 바이트)입니다.|
 |**max_session**| int |그룹에 대 한 세션 제한입니다.|
 |**max_worker**| int |그룹에 대 한 작업자 한도입니다.|
@@ -86,7 +86,7 @@ Azure SQL Database에 대 한 리소스 풀 통계의 마지막 32 분 (128 개 
 > [!IMPORTANT]
 > 이 DMV에 의해 표시 되는 대부분의 데이터는 내부 사용을 위한 것 이며 변경 될 수 있습니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 다음 예에서는 사용자 풀의 각 스냅숏에서 최대 로그 속도 데이터 및 사용량을 반환 합니다.
 

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d752015dab48058af18cb981a009691f407da171
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 387761d2275025f70a769cf3068693d08dbecc58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814439"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718627"
 ---
 # <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스 메일 프로필을 사용 하는 msdb 데이터베이스 보안 주체에 대 한 사용 권한을 부여 합니다. 데이터베이스 보안 주체는 SQL Server 인증 사용자, Windows 사용자 또는 Windows 그룹에 매핑되어야 합니다.
   
@@ -63,10 +63,10 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
   
  **Sysmail_add_principalprofile_sp** 저장 프로시저는 **msdb** 데이터베이스에 있으며 **dbo** 스키마가 소유 합니다. 현재 데이터베이스가 **msdb**가 아닌 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 실행 해야 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  **1. 연결 생성 및 기본 프로필 설정**  
   
  다음 예에서는 라는 프로필과 `AdventureWorks Administrator Profile` **msdb** 데이터베이스 사용자 간의 연결을 만듭니다 `ApplicationUser` . 이 프로필은 해당 사용자의 기본 프로필입니다.  

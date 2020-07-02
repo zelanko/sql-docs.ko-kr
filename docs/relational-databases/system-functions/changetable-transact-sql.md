@@ -19,15 +19,15 @@ ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11295f953e2f3e4e237838dfdb158fd01c9fa645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1a5d247ae5e8e4cceb53bd3a093cabdff399d509
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042904"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718717"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   테이블에 대한 변경 내용 추적 정보를 반환합니다. 이 문을 사용하여 테이블에 대한 모든 변경 내용이나 특정 행에 대한 변경 내용 추적 정보를 반환할 수 있습니다.  
   
@@ -101,7 +101,7 @@ CHANGETABLE (
 |SYS_CHANGE_OPERATION|**nchar(1)**|다음과 같은 변경 형식을 지정합니다.<br /><br /> **U** = 업데이트<br /><br /> **I** = 삽입<br /><br /> **D** = 삭제|  
 |SYS_CHANGE_COLUMNS|**varbinary(4100)**|last_sync_version(기준) 이후에 변경된 열을 나열합니다. 계산 열은 변경 된 것으로 표시 되지 않습니다.<br /><br /> 다음 조건 중 하나가 충족되는 경우 값은 NULL입니다.<br /><br /> 열 변경 내용 추적을 사용할 수 없는 경우<br /><br /> 작업이 삽입 또는 삭제 작업인 경우<br /><br /> 모든 비기본 키 열이 단일 작업에서 업데이트된 경우. 이 이진 값을 직접 해석하면 안 됩니다. 대신 [CHANGE_TRACKING_IS_COLUMN_IN_MASK ()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)를 사용 합니다.|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|[WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) 절을 INSERT, UPDATE 또는 DELETE 문의 일부로 사용 하 여 선택적으로 지정할 수 있는 컨텍스트 정보를 변경 합니다.|  
-|\<기본 키 열 값>|사용자 테이블 열과 같음|추적된 테이블의 기본 키 값입니다. 이러한 값은 사용자 테이블의 각 행을 고유하게 식별합니다.|  
+|\<primary key column value>|사용자 테이블 열과 같음|추적된 테이블의 기본 키 값입니다. 이러한 값은 사용자 테이블의 각 행을 고유하게 식별합니다.|  
   
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
  VERSION을 지정하면 다음 열이 있는 하나의 행이 반환됩니다.  
@@ -110,7 +110,7 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|행과 연관된 현재 변경 버전 값입니다.<br /><br /> 변경 내용 추적 보존 기간보다 긴 기간 동안 변경된 내용이 없거나, 변경 내용 추적이 사용된 이후 변경된 행이 없을 경우 이 값은 NULL입니다.|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|WITH 절을 INSERT, UPDATE 또는 DELETE 문의 일부로 사용하여 선택적으로 지정할 수 있는 컨텍스트 정보를 변경합니다.|  
-|\<기본 키 열 값>|사용자 테이블 열과 같음|추적된 테이블의 기본 키 값입니다. 이러한 값은 사용자 테이블의 각 행을 고유하게 식별합니다.|  
+|\<primary key column value>|사용자 테이블 열과 같음|추적된 테이블의 기본 키 값입니다. 이러한 값은 사용자 테이블의 각 행을 고유하게 식별합니다.|  
   
 ## <a name="remarks"></a>설명  
  CHANGETABLE 함수는 일반적으로 쿼리의 FROM 절에서 테이블인 것처럼 사용할 수 있습니다.  
@@ -148,7 +148,7 @@ CHANGETABLE (
   
 -   VIEW CHANGE TRACKING  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-rows-for-an-initial-synchronization-of-data"></a>A. 데이터의 초기 동기화에 대한 행 반환  
  다음 예제에서는 테이블 데이터의 초기 동기화에 대한 데이터를 가져오는 방법을 보여 줍니다. 쿼리는 모든 행 데이터 및 연관된 버전을 반환합니다. 그러면 동기화된 데이터를 포함하는 시스템에 이 데이터를 추가하거나 삽입할 수 있습니다.  

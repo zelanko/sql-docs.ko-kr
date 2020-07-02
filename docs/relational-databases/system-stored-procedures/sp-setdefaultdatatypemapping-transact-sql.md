@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1acd5a12274c00bf2829b2219055d5a1ecf9eff
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 65728d55db4202fa979f4b7c8cbce5b1718d7660
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824316"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719194"
 ---
 # <a name="sp_setdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS (데이터베이스 관리 시스템)가 아닌 기존 데이터 형식 매핑을 기본값으로 표시 합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
   
@@ -114,7 +114,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
  기본 데이터 형식 매핑은 지정된 DBMS를 포함하는 모든 복제 토폴로지에 적용됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_setdefaultdatatypemapping**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 757d842dfe0521bd8195bf85e02a3ed0eee2b5b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 89331997d21992f71141d08c01a8b8ff0ed5782f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68045799"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715915"
 ---
 # <a name="sp_change_log_shipping_secondary_primary-transact-sql"></a>sp_change_log_shipping_secondary_primary(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   보조 데이터베이스 설정을 변경합니다.  
   
@@ -47,7 +47,7 @@ sp_change_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @primary_server = ] 'primary_server'`로그 전달 구성 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에 있는의 주 인스턴스 이름입니다. *primary_server* 는 **sysname** 이며 NULL 일 수 없습니다.  
+`[ @primary_server = ] 'primary_server'`[!INCLUDE[msCoName](../../includes/msconame-md.md)]로그 전달 구성에 있는의 주 인스턴스 이름입니다 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . *primary_server* 는 **sysname** 이며 NULL 일 수 없습니다.  
   
 `[ @primary_database = ] 'primary_database'`주 서버에 있는 데이터베이스의 이름입니다. *primary_database* 는 **sysname**이며 기본값은 없습니다.  
   
@@ -84,7 +84,7 @@ sp_change_log_shipping_secondary_primary
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [로그 전달 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

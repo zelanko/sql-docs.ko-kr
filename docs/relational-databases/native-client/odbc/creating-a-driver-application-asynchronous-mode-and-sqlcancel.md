@@ -19,15 +19,15 @@ ms.assetid: f31702a2-df76-4589-ac3b-da5412c03dc2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 014314eebdeabc137f9f1735e899f7d111105ed4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60c52af16c1bd29fc3f682efa06a58a40f2513b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303759"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719595"
 ---
 # <a name="creating-a-driver-application---asynchronous-mode-and-sqlcancel"></a>드라이버 애플리케이션 만들기 - 비동기 모드 및 SQLCancel
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   일부 ODBC 함수는 동기적 또는 비동기적으로 작동할 수 있습니다. 애플리케이션에서는 문 핸들이나 연결 핸들에 대해 비동기 작업을 설정할 수 있습니다. 연결 핸들에 대해 비동기 작업 옵션을 설정하면 연결 핸들의 모든 문 핸들에도 적용됩니다. 애플리케이션에서는 다음 문을 사용하여 비동기 작업을 설정하거나 해제합니다.  
   

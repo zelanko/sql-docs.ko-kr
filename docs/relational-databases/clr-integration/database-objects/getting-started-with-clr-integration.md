@@ -25,22 +25,22 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca0e048d09b838663895d31de155d84c6294ed01
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6b560aa650140e4b94bbea4491fb28e5f1bf656f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487092"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717900"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 통합으로 작업 시작
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
 
-이 항목에서는 .NET Framework CLR (공용 언어 런타임)과의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 통합을 사용 하 여 데이터베이스 개체를 컴파일하는 데 필요한 네임 스페이스 및 라이브러리에 대 한 개요를 제공 합니다. 또한 이 항목에서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#으로 작성된 간단한 CLR 저장 프로시저를 작성, 컴파일 및 실행하는 방법도 보여 줍니다.  
+이 항목에서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .NET Framework CLR (공용 언어 런타임)과의 통합을 사용 하 여 데이터베이스 개체를 컴파일하는 데 필요한 네임 스페이스 및 라이브러리에 대 한 개요를 제공 합니다. 또한 이 항목에서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#으로 작성된 간단한 CLR 저장 프로시저를 작성, 컴파일 및 실행하는 방법도 보여 줍니다.  
   
 ## <a name="required-namespaces"></a>필수 네임스페이스  
 
-기본 CLR 데이터베이스 개체를 개발 하는 데 필요한 구성 요소 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는와 함께 설치 됩니다. CLR 통합 기능은 .NET Framework의 일부인 system.data.dll이라는 어셈블리에서 제공되며 이 어셈블리는 GAC(전역 어셈블리 캐시)와 .NET Framework 디렉터리에 있습니다. 이 어셈블리에 대한 참조는 일반적으로 명령줄 도구와 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio에 자동으로 추가되므로 직접 추가하지 않아도 됩니다.  
+기본 CLR 데이터베이스 개체를 개발 하는 데 필요한 구성 요소는와 함께 설치 됩니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . CLR 통합 기능은 .NET Framework의 일부인 system.data.dll이라는 어셈블리에서 제공되며 이 어셈블리는 GAC(전역 어셈블리 캐시)와 .NET Framework 디렉터리에 있습니다. 이 어셈블리에 대한 참조는 일반적으로 명령줄 도구와 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio에 자동으로 추가되므로 직접 추가하지 않아도 됩니다.  
   
 system.data.dll 어셈블리에는 CLR 데이터베이스 개체를 컴파일하는 데 필요한 다음과 같은 네임스페이스가 들어 있습니다.  
   
@@ -92,7 +92,7 @@ End Class
   
 이 간단한 프로그램에는 공용 클래스에 대한 정적 메서드 하나가 포함되어 있습니다. 이 메서드는 간단한 문자 메시지를 출력 하기 위해 관리 되는 데이터베이스 개체를 만들기 위해 **[Sqlcontext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** 및 **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)** 라는 두 개의 새로운 클래스를 사용 합니다. 또한 이 메서드는 "Hello world!"라는 문자열을 out 매개 변수 값으로 할당합니다. 이 메서드는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 저장 프로시저로 선언한 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 저장 프로시저와 같은 방식으로 실행할 수 있습니다.  
   
-이 프로그램을 라이브러리로 컴파일한 후에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로드 하 고 저장 프로시저로 실행 합니다.  
+이 프로그램을 라이브러리로 컴파일한 후에 로드 하 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 고 저장 프로시저로 실행 합니다.  
   
 ## <a name="compile-the-hello-world-stored-procedure"></a>"Hello World" 저장 프로시저 컴파일  
 
@@ -138,7 +138,7 @@ EXTERNAL NAME helloworld.HelloWorldProc.HelloWorld
 -- EXTERNAL NAME helloworld.[MyNS.HelloWorldProc].HelloWorld  
 ```  
   
-프로시저가 만들어지면 [!INCLUDE[tsql](../../../includes/tsql-md.md)]로 작성된 일반적인 저장 프로시저와 마찬가지로 프로시저를 실행할 수 있습니다. 다음 명령을 실행하십시오.  
+프로시저가 만들어지면 [!INCLUDE[tsql](../../../includes/tsql-md.md)]로 작성된 일반적인 저장 프로시저와 마찬가지로 프로시저를 실행할 수 있습니다. 다음 명령을 실행합니다.  
   
 ```sql
 DECLARE @J nchar(25)  

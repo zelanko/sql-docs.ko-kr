@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ce01a218fd2185c5904baf41014bc0c7caa5ec25
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4f0e89192e985463ecfbce622629a35215f5ec36
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830215"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717337"
 ---
 # <a name="sp_drop_agent_parameter-transact-sql"></a>sp_drop_agent_parameter(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSagent_parameters** 테이블의 프로필에서 매개 변수를 하나 또는 모두 삭제 합니다. 이 저장 프로시저는 에이전트가 실행되고 있는 모든 데이터베이스의 배포자에서 실행될 수 있습니다.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 09f0b37d417374509a69a5362a759ff2558a8228
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bd963a39dddaca5cd2558ea95853fdebf366e2ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829971"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719228"
 ---
 # <a name="sp_refreshview-transact-sql"></a>sp_refreshview(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   비스키마 바운드 뷰에 대한 메타데이터를 업데이트합니다. 뷰가 종속된 기본 개체가 변경되면 뷰의 영구 메타데이터가 최신 상태를 유지하지 못할 수 있습니다.  
   
@@ -50,7 +50,7 @@ sp_refreshview [ @viewname = ] 'viewname'
 ## <a name="permissions"></a>사용 권한  
  뷰에 대한 ALTER 권한이 필요하고 뷰 열이 참조하는 CLR(공용 언어 런타임) 사용자 정의 형식 및 XML 스키마 컬렉션에 대한 REFERENCES 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-updating-the-metadata-of-a-view"></a>A. 뷰의 메타데이터 업데이트  
  다음 예에서는 `Sales.vIndividualCustomer` 뷰의 메타데이터를 새로 고칩니다.  

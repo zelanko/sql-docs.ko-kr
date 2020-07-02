@@ -18,15 +18,15 @@ ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b1552f566852f90b3526645313a160f2446b868e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e886acbd91ff2882c7dd304227ae0b7f1d6afd9d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828503"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716113"
 ---
 # <a name="sp_bindefault-transact-sql"></a>sp_bindefault(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   열 또는 별칭 데이터 형식에 기본값을 바인딩합니다.  
   
@@ -66,10 +66,10 @@ sp_bindefault [ @defname = ] 'default' ,
   
  기본값을 열에 바인딩하면 관련 정보가 **sys. columns** 카탈로그 뷰에 추가 됩니다. 별칭 데이터 형식에 기본값을 바인딩하면 관련 정보가 **sys. types** 카탈로그 뷰에 추가 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  사용자는 테이블을 소유 하거나 **sysadmin** 고정 서버 역할의 멤버 이거나 고정 데이터베이스 역할을 **db_ddladmin** **db_owner** 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-binding-a-default-to-a-column"></a>A. 열에 기본값 바인딩  
  `today`라는 기본값이 CREATE DEFAULT에 의해 현재 데이터베이스에 정의되었으며, 다음 예에서는 이 기본값을 `HireDate` 테이블의 `Employee` 열에 바인딩합니다. `Employee` 열의 데이터가 제공되지 않은 채로 `HireDate` 테이블에 행이 추가될 때마다 열은 `today`라는 기본값을 할당받게 됩니다.  

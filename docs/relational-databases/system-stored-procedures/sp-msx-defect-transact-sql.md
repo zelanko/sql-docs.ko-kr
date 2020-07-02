@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1bc6139afdf99fad7a6abcf5134e3341e7a8082c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 102698d7efffa753510f3e3b9af6fe40e35408fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828819"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715165"
 ---
 # <a name="sp_msx_defect-transact-sql"></a>sp_msx_defect(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   다중 서버 작업에서 현재 서버를 제거합니다.  
   
@@ -59,7 +59,7 @@ EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defec
 ## <a name="remarks"></a>설명  
  **Sp_msx_defect** 정상적으로 완료 되 면 메시지가 반환 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 사용자가 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

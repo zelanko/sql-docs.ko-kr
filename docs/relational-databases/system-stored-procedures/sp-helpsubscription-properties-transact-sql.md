@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cf8c3510ffbd2d40c882061cc81bb8f6a80d294f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ebef567c36028f63317be3e00ea4c8078a765b6f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815432"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719472"
 ---
 # <a name="sp_helpsubscription_properties-transact-sql"></a>sp_helpsubscription_properties(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) 테이블에서 보안 정보를 검색 합니다. 이 저장 프로시저는 구독자에서 실행됩니다.  
   
@@ -96,7 +96,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ## <a name="remarks"></a>설명  
  **sp_helpsubscription_properties** 는 스냅숏 복제, 트랜잭션 복제 및 병합 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_helpsubscription_properties**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

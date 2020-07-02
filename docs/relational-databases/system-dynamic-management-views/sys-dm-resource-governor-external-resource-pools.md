@@ -3,7 +3,7 @@ title: sys. dm_resource_governor_external_resource_pools (Transact-sql) | Micros
 ms.custom: ''
 ms.date: 07/24/2019
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.reviewer: ''
 ms.topic: language-reference
 f1_keywords:
@@ -20,15 +20,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cf77a073a1432df839bfd13046c66018496e79f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a143d4f7052995dddd8bc9cc5239b8ccc7a366f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68468516"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718750"
 ---
 # <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>sys. dm_resource_governor_external_resource_pools (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 현재 외부 리소스 풀 상태, 리소스 풀의 현재 구성 및 리소스 풀 통계에 대 한 정보를 반환 합니다. 
   

@@ -20,22 +20,22 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 98d71c76b927e0dcb7cfdf87459f15eb82ef3c9e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b2c90c3a6e6251da7b8e318a57002f224e074ac5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824669"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717480"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status(Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   현재 지역 복제 연속 복사 관계에 참여 하 고 있는 각 사용자 데이터베이스 (V11)에 대 한 행을 반환 합니다. 지정된 주 데이터베이스에 대해 둘 이상의 연속 복사 관계가 시작된 경우 이 테이블에는 각 활성 보조 데이터베이스에 대한 행이 하나씩 포함됩니다.  
   
 SQL Database V12를 사용 하는 경우 V11에만 적용 *dm_continuous_copy_status* 되므로 [dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) 를 사용 해야 합니다.
 
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**copy_guid**|**uniqueidentifier**|복제본 데이터베이스의 고유 ID입니다.|  
 |**partner_server**|**sysname**|연결된 SQL Database 서버의 이름입니다.|  

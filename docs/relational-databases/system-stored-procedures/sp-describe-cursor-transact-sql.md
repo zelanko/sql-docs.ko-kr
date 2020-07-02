@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 417f2c7d63b129fda187068325702b9ff9768895
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b361bdcf6daf9ad1efaf3a752228366ee661d1a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831206"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717372"
 ---
 # <a name="sp_describe_cursor-transact-sql"></a>sp_describe_cursor(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   서버 커서의 특성을 보고합니다.  
   
@@ -97,7 +97,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 ## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 전역 커서를 열고 `sp_describe_cursor`를 사용하여 커서의 특성에 대해 보고합니다.  
   
 ```  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc0867408dfd7b950029b1a66163dcccbddb4f21
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 185a125c2197a7f5788c69a432315b46b1969369
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811157"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716635"
 ---
 # <a name="sysdm_tcp_listener_states-transact-sql"></a>sys.dm_tcp_listener_states(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   각 TCP 수신기에 대한 동적 상태 정보를 포함하는 행을 반환합니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82811157"
 |**listener_id**|**int**|수신기의 내부 ID입니다. Null을 허용하지 않습니다.<br /><br /> 기본 키입니다.|  
 |**ip_address**|**nvarchar (48)**|온라인 상태이고 현재 수신 중인 수신기 IP 주소입니다. IPv4 및 IPv6가 허용됩니다. 수신기에서 두 주소 유형을 모두 처리하는 경우 별도로 나열됩니다. IPv4 와일드 카드는 "0.0.0.0"으로 표시 됩니다. IPv6 와일드 카드는 "::"으로 표시 됩니다.<br /><br /> Null을 허용하지 않습니다.|  
 |**is_ipv4**|**bit**|IP 주소 유형<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
-|**포트인**|**int**|수신기가 수신 중인 포트 번호입니다. Null을 허용하지 않습니다.|  
+|**port**|**int**|수신기가 수신 중인 포트 번호입니다. Null을 허용하지 않습니다.|  
 |**type**|**tinyint**|수신기 유형이며 다음 중 하나입니다.<br /><br /> 0 =[!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = 데이터베이스 미러링<br /><br /> Null을 허용하지 않습니다.|  
 |**type_desc**|**nvarchar (20)**|**형식**에 대 한 설명 이며 다음 중 하나입니다.<br /><br /> TSQL<br /><br /> SERVICE_BROKER<br /><br /> DATABASE_MIRRORING<br /><br /> Null을 허용하지 않습니다.|  
 |**상태**|**tinyint**|가용성 그룹 수신기의 상태이며 다음 중 하나입니다.<br /><br /> 1 = 온라인. 수신기가 요청을 수신 및 처리 중입니다.<br /><br /> 2 = 다시 시작 보류 중. 수신기가 오프라인 상태이며 다시 시작을 보류 중입니다.<br /><br /> 가용성 그룹 수신기가 서버 인스턴스와 동일한 포트를 수신 중인 경우 두 수신기의 상태는 항상 동일합니다.<br /><br /> Null을 허용하지 않습니다.<br /><br /> 참고:이 열의 값은 TSD_listener 개체에서 제공 됩니다. TDS_listener가 오프라인 상태이면 상태에 대해 쿼리할 수 없으므로 이 열은 오프라인 상태를 지원하지 않습니다.|  

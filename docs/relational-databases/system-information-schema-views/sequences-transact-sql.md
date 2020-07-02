@@ -17,16 +17,16 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ca2b9f7c93b9473c6dbafd309a1a6075031d06f
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: 5ad17bb63dc60accb220799d62a81e625f20d5c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767393"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716614"
 ---
 # <a name="sequences-transact-sql"></a>시퀀스 (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 현재 데이터베이스에서 현재 사용자가 액세스할 수 있는 각 시퀀스에 대해 하나의 행을 반환 합니다.
 

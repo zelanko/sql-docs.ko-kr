@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9a079a279c9d342033086c565203f85ad360e753
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ec133e7424a6c2a947b5f0f7a6ed52505c37fb1d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828502"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716071"
 ---
 # <a name="sp_bindsession-transact-sql"></a>sp_bindsession(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   세션을 동일한 인스턴스의 다른 세션에 바인딩 또는 바인딩 해제 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 합니다. 세션을 바인딩하면 두 개 이상의 세션이 같은 트랜잭션에 참가할 수 있으며 ROLLBACK TRANSACTION 또는 COMMIT TRANSACTION이 실행될 때까지 잠금을 공유할 수 있습니다.  
   
@@ -76,7 +76,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;sp_getbindtoken &#40;](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
+ [sp_getbindtoken&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
  [srv_getbindtoken &#40;확장 저장 프로시저 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

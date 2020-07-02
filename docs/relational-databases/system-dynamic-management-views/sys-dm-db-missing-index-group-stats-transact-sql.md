@@ -21,15 +21,15 @@ ms.assetid: c2886986-9e07-44ea-a350-feeac05ee4f4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e91971d13b26d6a156307b2a0288de236456c880
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2879f5678c315d3e3921813a5d26a6c6034aa05f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828103"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718815"
 ---
 # <a name="sysdm_db_missing_index_group_stats-transact-sql"></a>sys.dm_db_missing_index_group_stats(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   공간 인덱스를 제외한 누락된 인덱스 그룹에 대한 요약 정보를 반환합니다.  
   
@@ -58,10 +58,10 @@ ms.locfileid: "82828103"
   >[!NOTE]
   >이 DMV의 결과 집합은 600 개 행으로 제한 됩니다. 각 행에는 누락 된 인덱스가 하나 있습니다. 인덱스가 600 개를 초과 하는 경우 기존 누락 된 인덱스를 처리 하 여 최신 인덱스를 볼 수 있도록 해야 합니다.
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  이 동적 관리 뷰를 쿼리하려면 사용자에게 VIEW SERVER STATE 권한이나 VIEW SERVER STATE 권한을 나타내는 사용 권한을 부여해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 **sys.dm_db_missing_index_group_stats** 동적 관리 뷰를 사용하는 방법을 보여 줍니다.  
   
 ### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>A. 사용자 쿼리 성능이 가장 많이 향상될 것으로 예상되는 누락된 인덱스 10개 찾기  
@@ -86,7 +86,7 @@ INNER JOIN sys.dm_db_missing_index_details AS mid
 WHERE migs.group_handle = 24;  
 ```  
   
- 이 쿼리는 인덱스가 누락된 데이터베이스, 스키마 및 테이블의 이름을 제공합니다. 또한 인덱스 키로 사용해야 하는 열의 이름을 제공합니다. CREATE INDEX DDL 문을 작성 하 여 누락 된 인덱스를 구현 하는 경우 \< CREATE index 문의 ON *table_name*> 절에 먼저 같음 열을 나열 하 고 같지 않음 열을 나열 합니다. 포괄 열은 CREATE INDEX 문의 INCLUDE 절에 나열해야 합니다. 같음 열에 효율적인 순서를 결정하려면 선택도를 기준으로 열을 정렬합니다. 즉, 가장 많이 선택되는 열을 먼저 나열합니다(열 목록에서 맨 왼쪽).  
+ 이 쿼리는 인덱스가 누락된 데이터베이스, 스키마 및 테이블의 이름을 제공합니다. 또한 인덱스 키로 사용해야 하는 열의 이름을 제공합니다. CREATE INDEX DDL 문을 작성 하 여 누락 된 인덱스를 구현 하는 경우 CREATE INDEX 문의 ON 절에 먼저 같음 열을 나열 하 고 같지 않음 열을 나열 \<*table_name*> 합니다. 포괄 열은 CREATE INDEX 문의 INCLUDE 절에 나열해야 합니다. 같음 열에 효율적인 순서를 결정하려면 선택도를 기준으로 열을 정렬합니다. 즉, 가장 많이 선택되는 열을 먼저 나열합니다(열 목록에서 맨 왼쪽).  
   
 ## <a name="see-also"></a>참고 항목  
  [dm_db_missing_index_columns &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   

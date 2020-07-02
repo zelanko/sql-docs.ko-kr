@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ea2b5a6120395ad287a372b9d0edb3de7cb2b71
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ab5a5937b2f3baf3b97aeacbee79424f9a701d3b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831037"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719267"
 ---
 # <a name="sp_marksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   현재 열려 있는 트랜잭션을 지정된 구독자에 대한 구독 수준 유효성 검사 트랜잭션으로 표시합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   

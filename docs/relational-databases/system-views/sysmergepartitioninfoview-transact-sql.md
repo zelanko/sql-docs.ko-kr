@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 40b1ebc5319c13b5aa84a28e1a5c5546dd62bd03
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9ae92407c52d84acaebbe157568e6d6476e4aa73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68094823"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717258"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Sysmergepartitioninfoview** 뷰는 테이블 아티클에 대 한 분할 정보를 제공 합니다. 이 뷰는 게시자의 게시 데이터베이스와 구독자의 구독 데이터베이스에 저장됩니다.  
   
@@ -86,8 +86,8 @@ ms.locfileid: "68094823"
 |**delete_tracking**|**bit**|삭제 내용을 복제할지 여부를 나타냅니다.<br /><br /> **0** = 삭제가 복제 되지 않습니다.<br /><br /> **1** = 병합 복제에 대 한 기본 동작인 삭제가 복제 됩니다.<br /><br /> *Delete_tracking* 값이 **0**이면 구독자에서 삭제 된 행을 게시자에서 수동으로 제거 하 고 게시자에서 삭제 된 행을 구독자에서 수동으로 제거 해야 합니다.<br /><br /> 참고: 값 **0** 은 일치 하지 않습니다.|  
 |**compensate_for_errors**|**bit**|동기화 중에 오류가 발생할 경우 보정 동작이 수행될지 여부를 나타냅니다.<br /><br /> **0** = 보정 동작을 사용할 수 없습니다.<br /><br /> **1** = 구독자 또는 게시자에서 적용할 수 없는 변경 내용은 항상 보정 동작을 수행 하 여 병합 복제의 기본 동작을 실행 취소 합니다.<br /><br /> 참고: 값 **0** 은 일치 하지 않습니다.|  
 |**pub_range**|**bigint**|게시자 ID의 범위 크기입니다.|  
-|**벗어납니다**|**bigint**|조정 시 구독자에게 할당되는 연속 ID 값의 크기입니다.|  
-|**고대비**|**int**|ID 범위 임계값 비율입니다.|  
+|**range**|**bigint**|조정 시 구독자에게 할당되는 연속 ID 값의 크기입니다.|  
+|**threshold**|**int**|ID 범위 임계값 비율입니다.|  
 |**stream_blob_columns**|**bit**|BLOB(Binary Large Object) 열에 대한 스트리밍 최적화 사용 여부를 나타냅니다. **1** 은 최적화가 시도 됨을 의미 합니다.|  
 |**preserve_rowguidcol**|**bit**|복제에 기존 rowguid 열이 사용될지 여부를 나타냅니다. 값 **1** 은 기존 ROWGUIDCOL 열이 사용 됨을 의미 합니다. **0** 은 복제가 ROWGUIDCOL 열을 추가 했음을 의미 합니다.|  
 |**partition_view_id**|**int**|구독자 파티션을 정의하는 뷰를 식별합니다.|  

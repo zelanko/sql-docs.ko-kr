@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 755ba9552945e0e983fa5eef6cc53de1c29be5e3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 35de5fe106b437429265fcce03d49a9cb1b61401
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827641"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715187"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 런타임 상태에 대한 정보를 표시합니다.  
   
@@ -78,13 +78,13 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>설명  
  이 프로시저는 작업의 현재 상태에 대한 스냅샷을 제공합니다. 반환된 결과는 요청을 처리하는 당시의 정보를 나타냅니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서는 에이전트 서비스가 시작될 때마다 세션 ID를 만듭니다. 세션 id는 테이블 **msdb**. i d.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서는 에이전트 서비스가 시작될 때마다 세션 ID를 만듭니다. 세션 id는 테이블 **msdb.dbo.sys세션**에 저장 됩니다.  
   
  *Session_id* 제공 되지 않으면 가장 최근의 세션에 대 한 정보가 나열 됩니다.  
   
  *Job_name* 또는 *job_id* 제공 되지 않은 경우에는 모든 작업에 대 한 정보가 나열 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
@@ -97,7 +97,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
  **Sysadmin** 의 멤버만 다른 사용자가 소유한 작업에 대 한 작업을 볼 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 현재 사용자가 볼 수 있는 권한을 가진 모든 작업의 동작을 나열합니다.  
   
 ```  

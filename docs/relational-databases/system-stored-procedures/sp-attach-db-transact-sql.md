@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b800997c3f978b0bf06472f7e72dd24743956fa8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f42ab54f6e571e0cafa0498f852bbe52d3b43ef8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833493"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716204"
 ---
 # <a name="sp_attach_db-transact-sql"></a>sp_attach_db(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   서버에 데이터베이스를 연결합니다.  
   
@@ -85,7 +85,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="permissions"></a>사용 권한  
  데이터베이스가 연결 될 때 사용 권한이 처리 되는 방법에 대 한 자세한 내용은 [CREATE database &#40;SQL Server transact-sql&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조 하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]의 파일을 현재 서버에 연결합니다.  
   
 ```  

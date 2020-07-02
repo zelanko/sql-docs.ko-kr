@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: e6472fae-870d-4fb3-84d0-0c8f6599d1d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c80c41a6ef0a9bd9b057effc0cae950584a3dfd6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 144e72c366a96e48eabc0d03b6fcea3d59a6882c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659148"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715819"
 ---
 # <a name="instancename-property-sinstance-class"></a>InstanceName 속성(SInstance 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  인스턴스의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]이름을 가져옵니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  인스턴스의 이름을 가져옵니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="syntax"></a>구문  
   

@@ -14,17 +14,17 @@ ms.assetid: e31d5ca5-2103-498f-954c-1ee93e217186
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 94a9b8517ebd2539250995fea896c53a376fc65d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8be645c807a86e90dd4e71a8d46c11d995b61319
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301766"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718977"
 ---
 # <a name="date-and-time-improvements-odbc"></a>날짜 및 시간 기능 향상(ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에는 새로운 날짜 및 시간 데이터 형식이 도입되었습니다. 이 섹션에서는 이러한 새로운 형식이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 확장에서 어떤 방식으로 나타나는지 설명합니다. 새 날짜 및 시간 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 대 한 Native Client 지원에 대 한 개요는 [날짜 및 시간 기능 향상](../../relational-databases/native-client/features/date-and-time-improvements.md)을 참조 하세요. ODBC 날짜/시간 지원을 보여 주는 예제는 [날짜 및 시간 형식 사용](../../relational-databases/native-client-odbc-how-to/use-date-and-time-types.md)을 참조 하세요.  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에는 새로운 날짜 및 시간 데이터 형식이 도입되었습니다. 이 섹션에서는 이러한 새로운 형식이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 확장에서 어떤 방식으로 나타나는지 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]새 날짜 및 시간 데이터 형식에 대 한 Native Client 지원에 대 한 개요는 [날짜 및 시간 기능 향상](../../relational-databases/native-client/features/date-and-time-improvements.md)을 참조 하세요. ODBC 날짜/시간 지원을 보여 주는 예제는 [날짜 및 시간 형식 사용](../../relational-databases/native-client-odbc-how-to/use-date-and-time-types.md)을 참조 하세요.  
   
  날짜 및 시간 데이터 형식에 대한 일반적인 정보는 [datetime&#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)을 참조하세요.  
   

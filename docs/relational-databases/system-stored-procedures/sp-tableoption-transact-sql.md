@@ -18,15 +18,15 @@ ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2e822d1ca6aff1e91a848f839b824bb4476fc5a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 84e6c530b4887502346b69adcf2590bce9d0e8fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834219"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718686"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   사용자 정의 테이블의 옵션 값을 설정합니다. sp_tableoption를 사용 하 여 **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, **text**, **ntext**, **image**또는 large 사용자 정의 형식 열이 있는 테이블의 행 내부 동작을 제어할 수 있습니다.  
   
@@ -106,7 +106,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ## <a name="permissions"></a>사용 권한  
  sp_tableoption을 실행하려면 테이블에 대한 ALTER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-storing-xml-data-out-of-the-row"></a>A. xml 데이터를 행 외부에 저장  
  다음 예에서는 테이블의 **xml** 데이터를 행 외부에 저장 하도록 지정 합니다 `HumanResources.JobCandidate` .  

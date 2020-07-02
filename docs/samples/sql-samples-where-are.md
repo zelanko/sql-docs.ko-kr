@@ -9,16 +9,16 @@ ms.technology: samples
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 457cc9b1aa1055992322fb34ccc95b042f167604
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ea8f0ae2c998b02343ae3a7575325afe2ef6820
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74318980"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718586"
 ---
 # <a name="sql-samples"></a>SQL 샘플
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 샘플 데이터베이스의 위치 및 Microsoft SQL 제품에 대 한 코드 샘플입니다.
 
@@ -26,9 +26,9 @@ ms.locfileid: "74318980"
 
 SQL 제품에 대 한 코드 샘플은 [Microsoft SQL Server 샘플](https://github.com/microsoft/sql-server-samples) GitHub 리포지토리에 있습니다. 각 샘플에는 샘플을 실행 하 고 사용 하는 방법을 설명 하는 추가 정보 파일이 포함 되어 있습니다. 샘플 리포지토리의 주요 추가 정보는에 기여 하는 방법을 설명 합니다. 
 
-샘플과 템플릿은 모두 MIT 라이선스에 따라 사용이 허가 됩니다. 루트에 있는 license.txt 파일을 참조 하세요.
+샘플과 템플릿은 모두 MIT 라이선스에 따라 사용이 허가 됩니다. 루트에서 license.txt 파일을 참조 하세요.
 
-질문에 대 한 sqlserversamples@microsoft.com전자 메일:.
+질문에 대 한 전자 메일: sqlserversamples@microsoft.com .
 
 
 ## <a name="wideworldimporters-sample-database"></a>WideWorldImporters 예제 데이터베이스
@@ -49,7 +49,7 @@ AdventureWorks 데이터베이스는 [설치](adventureworks-install-configure.m
 
 
 ## <a name="azure-samples-and-templates"></a>Azure 샘플 및 템플릿
-.NET, Java, Python, node.js, PHP 및 Ruby의 Github에서 사용할 수 있는 다양 한 Microsoft Azure 코드 샘플과 예제가 있습니다. 또한 Azure Resource Manager를 사용 하면 선언적 템플릿을 사용 하 여 응용 프로그램을 프로 비전 할 수 있습니다. 단일 템플릿에서 여러 서비스를 해당 종속성과 함께 배포할 수 있습니다. 동일한 템플릿을 사용하여 애플리케이션 수명 주기의 각 단계 중에 애플리케이션을 반복해서 배포합니다.
+.NET, Java, Python, Node.js, PHP, Ruby의 Github에서 사용할 수 있는 다양 한 Microsoft Azure 코드 샘플과 예제가 있습니다. 또한 Azure Resource Manager를 사용 하면 선언적 템플릿을 사용 하 여 응용 프로그램을 프로 비전 할 수 있습니다. 단일 템플릿에서 여러 서비스를 해당 종속성과 함께 배포할 수 있습니다. 동일한 템플릿을 사용하여 애플리케이션 수명 주기의 각 단계 중에 애플리케이션을 반복해서 배포합니다.
 
 - [Azure 샘플](https://github.com/Azure-Samples)
 - [Azure Quickstart 템플릿](https://azure.microsoft.com/resources/templates/)

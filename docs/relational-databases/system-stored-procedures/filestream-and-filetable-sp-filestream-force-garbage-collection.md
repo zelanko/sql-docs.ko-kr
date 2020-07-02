@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cbf1658fd1567d9cdd3c35e02195435b6e86adcc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bc56f1434c0b1670495d30accdb70e0456295b01
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830404"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717434"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   FILESTREAM 가비지 수집기를 실행하고 불필요한 FILESTREAM 파일을 삭제합니다.  
   
@@ -85,7 +85,7 @@ GC (가비지 수집)는 로그 잘림에 의존 합니다. 따라서 전체 복
 ## <a name="permissions"></a>사용 권한  
  db_owner 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `FSDB` 데이터베이스의 FILESTREAM 컨테이너에 대해 가비지 수집기를 실행합니다.  
   
 ### <a name="a-specifying-no-container"></a>A. 컨테이너 지정 안 함  

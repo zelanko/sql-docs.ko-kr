@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e4f5b003eccda5fdada81e49d2a1f5347591869
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 695a45248185fe2c064cf94a9cf616efce475ecf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831810"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716065"
 ---
 # <a name="sp_browsereplcmds-transact-sql"></a>sp_browsereplcmds(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   배포 데이터베이스에 복제되어 저장된 결과 집합을 읽을 수 있는 버전으로 반환합니다. 이 결과 집합은 진단 도구에서 사용됩니다. 이 저장 프로시저는 배포 데이터베이스의 배포자에서 실행됩니다.  
   
@@ -73,11 +73,11 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**article_id**|**int**|아티클의 ID입니다.|  
 |**type**|**int**|명령의 유형입니다.|  
 |**partial_command**|**bit**|부분 명령인지 여부를 나타냅니다.|  
-|**hashkey**|**int**|내부 전용입니다.|  
+|**hashkey**|**int**|내부적으로만 사용됩니다.|  
 |**originator_publication_id**|**int**|트랜잭션이 시작된 게시의 ID입니다.|  
 |**originator_db_version**|**int**|트랜잭션이 시작된 데이터베이스의 버전입니다.|  
 |**originator_lsn**|**varbinary(16)**|원본 게시에서 명령의 LSN(로그 시퀀스 번호)을 식별합니다. 피어 투 피어 트랜잭션 복제에 사용됩니다.|  
-|**명령**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 명령입니다.|  
+|**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 명령입니다.|  
 |**command_id**|**int**|[MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)명령의 ID입니다.|  
   
  긴 명령은 결과 집합에서 여러 행으로 분할될 수 있습니다.  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4fd1c7bf329334bee0d8b3c29ba5d1d97909818e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: db8a79e723d76cdf54377618cc94cb6a4b5431d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826011"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715176"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   지정된 게시에서 각 아티클에 대한 아티클 유효성 검사 요청을 시작합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -56,7 +56,7 @@ sp_publication_validation [ @publication = ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**0**|COUNT(*)를 사용하여 전체 개수를 계산합니다.|  
-|**1**|는 **sysindexes 행**에서 빠르게 계산 합니다. [Sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) 에서 행을 계산 하는 것은 실제 테이블의 행 수를 계산 하는 것 보다 훨씬 빠릅니다. 그러나이 경우에는 [sys.debug](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) 가 지연 업데이트 되므로 행 개수가 정확 하지 않을 수 있습니다.|  
+|**1**|는 **sysindexes 행**에서 빠르게 계산 합니다. [sys.sys인덱스](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) 의 행 수를 계산 하는 것은 실제 테이블의 행 수를 계산 하는 것 보다 훨씬 빠릅니다. 그러나 [sys.sys인덱스](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) 는 지연 업데이트 되므로 행 개수가 정확 하지 않을 수 있습니다.|  
 |**2** (기본값)|먼저 빠른 방법을 시도함으로써 조건부로 빠른 계산 방법을 수행합니다. 빠른 방법의 결과에 차이점이 있는 경우 전체 방법으로 전환합니다. *Expected_rowcount* 가 NULL이 고 저장 프로시저를 사용 하 여 값을 가져오는 경우에는 항상 전체 개수 (*)가 사용 됩니다.|  
   
 `[ @shutdown_agent = ] 'shutdown_agent'`유효성 검사가 완료 되 면 즉시 배포 에이전트 종료 해야 하는지 여부입니다. *shutdown_agent* 은 **bit**이며 기본값은 **0**입니다. **0**인 경우 복제 에이전트가 종료 되지 않습니다. **1**인 경우 마지막 아티클의 유효성을 검사 한 후 복제 에이전트가 종료 됩니다.  
@@ -76,7 +76,7 @@ sp_publication_validation [ @publication = ] 'publication'
   
  응용 프로그램에 즉시 업데이트 하는 구독자가 있는 경우 **sp_publication_validation** 는 의사 오류를 감지할 수 있습니다. **sp_publication_validation** 는 먼저 게시자에서 행 개수 또는 체크섬을 계산한 다음 구독자에서 계산 합니다. 즉시 업데이트 트리거는 행 개수 또는 체크섬이 게시자에서 완료된 다음에 구독자의 업데이트를 게시자로 전파할 수 있으므로 행 개수 또는 체크섬이 구독자에서 완료되기 전에 값을 변경할 수 있습니다. 게시의 유효성을 검사하는 동안 구독자 및 게시자에서 값이 변경되지 않았는지 확인하려면 유효성 검사 동안 게시자에서 MS DTC(Microsoft Distributed Transaction Coordinator) 서비스를 중지하십시오.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_publication_validation**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

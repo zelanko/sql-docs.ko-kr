@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 88becd0d5a137d88b446e18fa0ef0798524bc0c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7dc40a463ef04568097923c2a9804b0b25860372
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659458"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717222"
 ---
 # <a name="setprotocolsorder-method-clientnetworkprotocol-class"></a>SetProtocolsOrder 메서드(ClientNetworkProtocol 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   프로토콜 목록의 순서를 변경합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,11 +37,11 @@ object.SetProtocolsOrder(ProtocolOrderList)
   
 ## <a name="parts"></a>부분  
  *object*  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 사용 하는 네트워크 프로토콜을 나타내는 [clientnetworkprotocol 클래스](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) 개체입니다.  
+ 클라이언트에서 사용 하는 네트워크 프로토콜을 나타내는 [Clientnetworkprotocol 클래스](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) 개체입니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
 |*ProtocolOrderList*|클라이언트 네트워크 프로토콜을 새로운 순서로 나열하는 string[] 형식의 배열입니다.|  
   

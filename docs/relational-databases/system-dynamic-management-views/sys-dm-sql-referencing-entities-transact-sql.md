@@ -20,15 +20,15 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3557f9f77a310a9e72e8a9fb1e11a6976256d2d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9d0c2366e0d05fb7d3abe6488d8a2f8ff969f011
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811427"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717445"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   이름별로 다른 사용자 정의 엔터티를 참조하는 현재 데이터베이스의 각 엔터티에 대해 한 개의 행을 반환합니다. 두 엔터티 간의 종속성은 *참조 된 엔터티*라고 하는 한 엔터티가 *참조 엔터티*라고 하는 다른 엔터티의 지속형 SQL 식에서 이름별로 표시 될 때 생성 됩니다. 예를 들어 UDT(사용자 정의 형식)가 참조 엔터티로 지정된 경우 이 함수는 정의에서 이름별로 해당 유형을 참조하는 각 사용자 정의 엔터티를 반환합니다. 지정된 엔터티를 참조하는 다른 데이터베이스의 엔터티는 반환하지 않습니다. 이 함수는 master 데이터베이스 컨텍스트에서 실행되어 서버 수준 DDL 트리거를 참조 엔터티로 반환해야 합니다.  
   
@@ -102,7 +102,7 @@ sys.dm_sql_referencing_entities (
 |엔터티 유형|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
 |테이블|예*|예|  
-|View|예|예|  
+|보기|예|예|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|예|예|  
 |CLR 저장 프로시저|예|예|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|예|예|  
@@ -122,7 +122,7 @@ sys.dm_sql_referencing_entities (
   
  ** 정수 값 1보다 큰 번호가 있는 저장 프로시저는 참조 엔터티나 참조된 엔터티로 추적되지 않습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
   
 ### <a name="sskatmai---sssql11"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
@@ -140,7 +140,7 @@ sys.dm_sql_referencing_entities (
   
 -   참조 엔터티가 서버 수준 DDL 트리거인 경우 서버에 대한 VIEW ANY DEFINITION이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>A. 지정된 엔터티를 참조하는 엔터티 반환  
  다음 예에서는 지정된 테이블을 참조하는 현재 데이터베이스의 엔터티를 반환합니다.  

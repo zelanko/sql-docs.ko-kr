@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3447b9111ec6d6a6fd6a4084f884647cbd38eec2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 68540299b14af875f6625771d9d47f81f048f43d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820688"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716532"
 ---
 # <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   지정된 게시에 대해 스냅샷 에이전트를 만듭니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -65,8 +65,8 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |-----------|-----------------|  
 |**1**|한 번|  
 |**4** (기본값)|매일|  
-|**20cm(8**|매주|  
-|**x**|매월|  
+|**8**|매주|  
+|**16**|매월|  
 |**32**|매월(frequency_interval에 따라 달라짐)|  
 |**64**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 시작될 때|  
 |**128**|컴퓨터가 유휴 상태일 때 실행|  
@@ -77,8 +77,8 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |------------------------------|-----------------------------------|  
 |**1**|*frequency_interval* 사용 되지 않습니다.|  
 |**4** (기본값)|매일 *frequency_interval* 매일 (기본값)을 사용 합니다.|  
-|**20cm(8**|*frequency_interval* 은 [&#124; (비트 or)](../../t-sql/language-elements/bitwise-or-transact-sql.md) 논리 연산자와 결합 된 다음 중 하나 이상입니다.<br /><br /> **1** = 일요일 &#124;<br /><br /> **2** = 월요일 &#124;<br /><br /> **4** = 화요일 &#124;<br /><br /> **8** = 수요일 &#124;<br /><br /> **16** = 목요일 &#124;<br /><br /> **32** = 금요일 &#124;<br /><br /> **64** = 토요일|  
-|**x**|월의 *frequency_interval* 날짜|  
+|**8**|*frequency_interval* 은 [&#124; (비트 or)](../../t-sql/language-elements/bitwise-or-transact-sql.md) 논리 연산자와 결합 된 다음 중 하나 이상입니다.<br /><br /> **1** = 일요일 &#124;<br /><br /> **2** = 월요일 &#124;<br /><br /> **4** = 화요일 &#124;<br /><br /> **8** = 수요일 &#124;<br /><br /> **16** = 목요일 &#124;<br /><br /> **32** = 금요일 &#124;<br /><br /> **64** = 토요일|  
+|**16**|월의 *frequency_interval* 날짜|  
 |**32**|*frequency_interval* 은 다음 중 하나입니다.<br /><br /> **1** = 일요일 &#124;<br /><br /> **2** = 월요일 &#124;<br /><br /> **3** = 화요일 &#124;<br /><br /> **4** = 수요일 &#124;<br /><br /> **5** = 목요일 &#124;<br /><br /> **6** = 금요일 &#124;<br /><br /> **7** = 토요일 &#124;<br /><br /> **8** = 일 &#124;<br /><br /> **9** = 평일 &#124;<br /><br /> **10** = 주말|  
 |**64**|*frequency_interval* 사용 되지 않습니다.|  
 |**128**|*frequency_interval* 사용 되지 않습니다.|  
@@ -88,9 +88,9 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|초|  
+|**2**|Second|  
 |**4** (기본값)|Minute|  
-|**20cm(8**|시간|  
+|**8**|시간|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*에 대 한 간격입니다. *frequency_subday_interval* 은 **int**이며 기본값은 5 분 간격을 의미 하는 5입니다.  
   

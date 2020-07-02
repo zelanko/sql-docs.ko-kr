@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: af799e38-2d16-49b2-bcf5-6f9199af899e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a814539e3b04135a5d97ad4d4d7b31546c88e62d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a9e60d1bca57e68da621eaef448cc9a83ede5aa7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832744"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717552"
 ---
 # <a name="sysserver_assembly_modules-transact-sql"></a>sys.server_assembly_modules(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   TA 유형의 서버 수준 트리거에 대한 어셈블리 모듈마다 한 행씩 포함합니다. 이 뷰에서는 어셈블리 트리거를 기본 CLR 구현으로 매핑합니다. 이 관계를 **sys. server_triggers**에 조인할 수 있습니다. 어셈블리는 **master** 데이터베이스에 로드 되어야 합니다. 튜플(object_id)은 관계에 대한 키입니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82832744"
 |**assembly_id**|**int**|이 모듈이 생성된 어셈블리의 ID입니다. 어셈블리는 master 데이터베이스에 로드되어야 합니다.|  
 |**assembly_class**|**sysname**|이 모듈을 정의하는 어셈블리 내 클래스의 이름입니다.|  
 |**assembly_method**|**sysname**|이 모듈을 정의하는 클래스 내 메서드의 이름입니다. AF(집계 함수)의 경우 NULL입니다.|  
-|**execute_as_principal_id**|**int**|EXECUTE AS 서버 보안 주체의 ID입니다.<br /><br /> 기본값은 NULL이며 EXECUTE AS CALLER인 경우에도 NULL입니다.<br /><br /> EXECUTE AS SELF as SELF as principal> 경우 지정 된 보안 주체의 ID입니다 \< .<br /><br /> -2 = EXECUTE AS OWNER|  
+|**execute_as_principal_id**|**int**|EXECUTE AS 서버 보안 주체의 ID입니다.<br /><br /> 기본값은 NULL이며 EXECUTE AS CALLER인 경우에도 NULL입니다.<br /><br /> EXECUTE as SELF EXECUTE as를 실행 하는 경우 지정 된 보안 주체의 ID \<principal> 입니다.<br /><br /> -2 = EXECUTE AS OWNER|  
   
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  

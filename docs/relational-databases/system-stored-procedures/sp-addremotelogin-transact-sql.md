@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: eb45ce1c3e1786eb5a9a3cd630741dd4df773c40
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b4a3586625fa0a20d59ca0222ea1abbde6a6fef5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030963"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716429"
 ---
 # <a name="sp_addremotelogin-transact-sql"></a>sp_addremotelogin(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   로컬 서버에 새 원격 로그인 ID를 추가합니다. 이렇게 하면 원격 서버에서 원격 프로시저 호출을 연결 및 실행할 수 있습니다.  
   
@@ -45,13 +45,13 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
   
 ## <a name="arguments"></a>인수  
  [ @remoteserver **=** ] **'**_remoteserver_**'**  
- 원격 로그인을 적용할 원격 서버의 이름입니다. *remoteserver* 는 **sysname**이며 기본값은 없습니다. *Remoteserver* 만 지정 하면 *remoteserver* 의 모든 사용자가 로컬 서버에 있는 동일한 이름의 기존 로그인에 매핑됩니다. 서버는 로컬 서버에서 인식할 수 있어야 합니다. 서버는 sp_addserver를 사용하여 추가합니다. *Remoteserver* 의 사용자가 원격 저장 프로시저를 실행 하기 위해를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 하는 로컬 서버에 연결 하는 경우 *remoteserver*에서 자체 로그인과 일치 하는 로컬 로그인으로 연결 합니다. *remoteserver* 는 원격 프로시저 호출을 시작 하는 서버입니다.  
+ 원격 로그인을 적용할 원격 서버의 이름입니다. *remoteserver* 는 **sysname**이며 기본값은 없습니다. *Remoteserver* 만 지정 하면 *remoteserver* 의 모든 사용자가 로컬 서버에 있는 동일한 이름의 기존 로그인에 매핑됩니다. 서버는 로컬 서버에서 인식할 수 있어야 합니다. 서버는 sp_addserver를 사용하여 추가합니다. *Remoteserver* 의 사용자가 원격 저장 프로시저를 실행 하기 위해를 실행 하는 로컬 서버에 연결 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *remoteserver*에서 자체 로그인과 일치 하는 로컬 로그인으로 연결 합니다. *remoteserver* 는 원격 프로시저 호출을 시작 하는 서버입니다.  
   
  [ @loginame **=** ] **'**_로그인_**'**  
- 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있는 사용자의 로그인 ID입니다. *login*은 **sysname**이며 기본값은 NULL입니다. *로그인*은의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로컬 인스턴스에 이미 존재 해야 합니다. *Login* 을 지정 하면 *remoteserver* 의 모든 사용자가 해당 하는 특정 로컬 로그인에 매핑됩니다. *Remoteserver* 의 사용자가의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로컬 인스턴스에 연결 하 여 원격 저장 프로시저를 실행 하는 경우 *로그인*으로 연결 합니다.  
+ 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있는 사용자의 로그인 ID입니다. *login*은 **sysname**이며 기본값은 NULL입니다. *로그인*은의 로컬 인스턴스에 이미 존재 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Login* 을 지정 하면 *remoteserver* 의 모든 사용자가 해당 하는 특정 로컬 로그인에 매핑됩니다. *Remoteserver* 의 사용자가의 로컬 인스턴스에 연결 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원격 저장 프로시저를 실행 하는 경우 *로그인*으로 연결 합니다.  
   
  [ @remotename **=** ] **'**_remote_name_**'**  
- 원격 서버에 있는 사용자의 로그인 ID입니다. *remote_name* 는 **sysname**이며 기본값은 NULL입니다. *remoteserver*에 *remote_name* 있어야 합니다. *Remote_name* 지정 하면 특정 사용자 *remote_name* 로컬 서버의 *로그인* 에 매핑됩니다. *Remoteserver* 에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *remote_name* 의 로컬 인스턴스에 연결 하 여 원격 저장 프로시저를 실행 하면 *로그인*으로 연결 됩니다. *Remote_name* 의 로그인 id는 원격 서버 *로그인*의 로그인 id와 다를 수 있습니다.  
+ 원격 서버에 있는 사용자의 로그인 ID입니다. *remote_name* 는 **sysname**이며 기본값은 NULL입니다. *remoteserver*에 *remote_name* 있어야 합니다. *Remote_name* 지정 하면 특정 사용자 *remote_name* 로컬 서버의 *로그인* 에 매핑됩니다. *Remoteserver* 에 대 한 *remote_name* 의 로컬 인스턴스에 연결 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원격 저장 프로시저를 실행 하면 *로그인*으로 연결 됩니다. *Remote_name* 의 로그인 id는 원격 서버 *로그인*의 로그인 id와 다를 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -64,7 +64,7 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
 ## <a name="permissions"></a>사용 권한  
  sysadmin 및 securityadmin 고정 서버 역할의 멤버만이 sp_addremotelogin을 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-mapping-one-to-one"></a>A. 일 대 일 매핑  
  다음 예에서는 `ACCOUNTS` 원격 서버와 로컬 서버의 사용자 로그인이 동일한 경우에 로컬 이름에 원격 이름을 매핑합니다.  

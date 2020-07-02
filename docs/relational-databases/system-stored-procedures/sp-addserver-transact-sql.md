@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8578cccba27f38999ef786e1fb48b46445ad682c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 73f9bb5e2201b9c8b7577c54228e038310e7a141
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833663"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716378"
 ---
 # <a name="sp_addserver-transact-sql"></a>sp_addserver(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 로컬 인스턴스 이름을 정의합니다. 를 호스팅하는 컴퓨터의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이름이 변경 되 면 **sp_addserver** 를 사용 하 여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 새 컴퓨터 이름에 대 한 인스턴스를 알립니다. 이 프로시저는 해당 컴퓨터에서 호스팅되는 모든 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에서 실행해야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스 이름은 변경할 수 없습니다. 명명된 인스턴스의 인스턴스 이름을 변경하려면 원하는 이름의 새 인스턴스를 설치하고 이전 인스턴스에서 데이터베이스 파일을 분리한 다음 새 인스턴스에 데이터베이스를 연결하고 이전 인스턴스를 삭제합니다. 또는 클라이언트 별칭 이름을 클라이언트 컴퓨터에서 만들어 서버 컴퓨터에서 인스턴스의 이름을 변경하지 않고 다른 서버 및 인스턴스 이름 또는 **서버:포트** 조합으로 연결을 리디렉션할 수 있습니다.
 
@@ -69,7 +69,7 @@ sp_addserver [ @server = ] 'server' ,
 ## <a name="permissions"></a>사용 권한
  **setupadmin** 고정 서버 역할의 멤버 자격이 필요합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
  다음 예에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 를 호스팅하는 컴퓨터 이름의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 항목을 `ACCOUNTS`로 변경합니다.
 
 ```

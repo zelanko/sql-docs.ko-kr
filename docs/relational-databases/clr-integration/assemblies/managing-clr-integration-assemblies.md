@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: bdbbf325-14f6-460e-a35a-d3861d3c961e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19b90d7994aa4b75a294f24345d43333d13a22df
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f26a05c999a683bacbda6ffc0cb9da23b20595bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81484802"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717918"
 ---
 # <a name="managing-clr-integration-assemblies"></a>CLR 통합 어셈블리 관리
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  관리 코드는 컴파일한 다음 어셈블리라는 단위로 배포합니다. 어셈블리는 DLL이나 실행 파일(.exe)로 패키지됩니다. 실행 파일은 독립적으로 실행할 수 있는 반면 DLL은 기존 애플리케이션 내에서 호스팅해야 합니다. 관리 되는 DLL 어셈블리를에 로드 하 여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]호스팅할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 어셈블리를 프로세스에 로드하여 사용하려면 먼저 CREATE ASSEMBLY 문을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 어셈블리를 등록해야 합니다. ALTER ASSEMBLY 문을 사용하여 어셈블리를 최신 버전에서 업데이트하거나 DROP ASSEMBLY 문을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 제거할 수도 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  관리 코드는 컴파일한 다음 어셈블리라는 단위로 배포합니다. 어셈블리는 DLL이나 실행 파일(.exe)로 패키지됩니다. 실행 파일은 독립적으로 실행할 수 있는 반면 DLL은 기존 애플리케이션 내에서 호스팅해야 합니다. 관리 되는 DLL 어셈블리를에 로드 하 여 호스팅할 수 있습니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 어셈블리를 프로세스에 로드하여 사용하려면 먼저 CREATE ASSEMBLY 문을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 어셈블리를 등록해야 합니다. ALTER ASSEMBLY 문을 사용하여 어셈블리를 최신 버전에서 업데이트하거나 DROP ASSEMBLY 문을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 제거할 수도 있습니다.  
   
  어셈블리 정보는 어셈블리가 설치 된 데이터베이스의 **sys. assembly_files** 테이블에 저장 됩니다. **Assembly_files** 테이블에는 다음 열이 포함 되어 있습니다.  
   
-|열|Description|  
+|Column|설명|  
 |------------|-----------------|  
 |assembly_id|어셈블리에 대해 정의되는 식별자입니다. 해당 어셈블리와 관련한 모든 개체에 이 번호가 할당됩니다.|  
 |name|개체 이름입니다.|  

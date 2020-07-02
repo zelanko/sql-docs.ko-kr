@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 22957ce497f47c56ace0f264cc2068014a2f43af
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: f9ff6619109e198a50d15c21aecbe958a6183d2d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627374"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716460"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   밀어넣기 구독을 동기화하기 위한 새로 예약된 에이전트 작업을 트랜잭션 게시에 추가합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -106,8 +106,8 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**1**|한 번|  
 |**2**|주문형|  
 |**4**|매일|  
-|**20cm(8**|매주|  
-|**x**|매월|  
+|**8**|매주|  
+|**16**|매월|  
 |**32**|매월 상대적|  
 |**64** (기본값)|자동 시작|  
 |**128**|되풀이|  
@@ -124,8 +124,8 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**1** (기본값)|첫째|  
 |**2**|Second|  
 |**4**|셋째|  
-|**20cm(8**|넷째|  
-|**x**|마지막|  
+|**8**|넷째|  
+|**16**|마지막|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*에서 사용 하는 되풀이 비율입니다. *frequency_recurrence_factor* 은 **int**이며 기본값은 0입니다.  
   
@@ -136,7 +136,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**1**|한 번|  
 |**2**|Second|  
 |**4** (기본값)|Minute|  
-|**20cm(8**|시간|  
+|**8**|시간|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*에 대 한 간격입니다. *frequency_subday_interval* 은 **int**이며 기본값은 5입니다.  
   
@@ -182,7 +182,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/sp-addpushsubscription-a_1.sql)]  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_addpushsubscription_agent**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

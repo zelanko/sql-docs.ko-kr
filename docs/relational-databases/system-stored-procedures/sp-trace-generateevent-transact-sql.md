@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5c5807225c2bda185b61050433cc3378b25b6fe1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 86f1702d2b5444ded603c9e34ec01ae8b95133dc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809873"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719177"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용자 정의 이벤트를 만듭니다.  
   
@@ -67,10 +67,10 @@ sp_trace_generateevent [ @eventid = ] event_id
   
  모든 SQL 추적 저장 프로시저 (**sp_trace_xx**)의 매개 변수는 엄격 하 게 형식화 됩니다. 이러한 매개 변수가 정확한 입력 매개 변수 데이터 형식으로 호출되지 않으면 인수 설명에서 지정한 대로 저장 프로시저는 오류를 반환합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  사용자는 ALTER TRACE 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 예제 테이블에 사용자 구성 이벤트를 만듭니다.  
   
 ```  
@@ -94,7 +94,7 @@ you were capturing the event id=82, you will see it in the Profiler output.
 INSERT INTO user_config_test VALUES(1, 'abc');  
 ```  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
  [fn_trace_geteventinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [Transact-sql&#41;sp_trace_setevent &#40;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [SQL 추적](../../relational-databases/sql-trace/sql-trace.md)  

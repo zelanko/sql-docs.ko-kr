@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 21f2bf7a43bd391044deb03d08cc86ebc9a772bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 67cf4522b88e9922027a671feeda02b3305dbfc3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828243"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718637"
 ---
 # <a name="sp_replshowcmds-transact-sql"></a>sp_replshowcmds(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   복제용으로 표시된 트랜잭션에 대한 명령을 읽을 수 있는 형식으로 반환합니다. **sp_replshowcmds** 는 클라이언트 연결 (현재 연결 포함)이 로그에서 복제 된 트랜잭션을 읽지 않는 경우에만 실행할 수 있습니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -49,7 +49,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 |**publisher_database_id**|**int**|게시자 데이터베이스의 ID 이며 항상 **0**입니다.|  
 |**article_id**|**int**|아티클의 ID입니다.|  
 |**type**|**int**|명령의 유형입니다.|  
-|**명령**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 명령입니다.|  
+|**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 명령입니다.|  
   
 ## <a name="remarks"></a>설명  
  **sp_replshowcmds** 은 트랜잭션 복제에 사용 됩니다.  
@@ -63,7 +63,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 > [!NOTE]  
 >  **sp_replshowcmds** 는 복제 관련 문제를 해결 하기 위해서만 실행 해야 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_replshowcmds**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

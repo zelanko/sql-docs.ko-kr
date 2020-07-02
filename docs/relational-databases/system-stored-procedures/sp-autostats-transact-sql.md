@@ -18,15 +18,15 @@ ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b56b53b90bc8c66b72d68de4b83def5712cdc54
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ef219cd00c8603fce6c03e92bb5f540bd954e81a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833410"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716160"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   인덱스, 통계 개체, 테이블 또는 인덱싱된 뷰에 대한 자동 통계 업데이트 옵션 AUTO_UPDATE_STATISTICS를 표시하거나 변경합니다.  
   
@@ -82,7 +82,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ## <a name="permissions"></a>사용 권한  
  AUTO_UPDATE_STATISTICS 옵션을 변경 하려면 **db_owner** 고정 데이터베이스 역할의 멤버 자격 또는 *table_name*에 대 한 ALTER 권한이 필요 합니다. AUTO_UPDATE_STATISTICS 옵션을 표시 하려면 **public** 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-display-the-status-of-all-statistics-on-a-table"></a>A. 테이블의 모든 통계에 대한 상태 표시  
  다음은 `Product` 테이블의 모든 통계에 대한 상태를 표시합니다.  

@@ -18,15 +18,15 @@ ms.assetid: e486d39b-771d-488d-a786-7136433a2203
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c01290f0f95a7e240931a9398ab7acea1b287be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 546e980aeb021f57a0267d1f668f7acd181b4dcf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824407"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719273"
 ---
 # <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   현재 데이터베이스의 지정된 테이블에 정의된 DML 트리거의 유형을 반환합니다. sp_helptrigger은 DDL 트리거와 함께 사용할 수 없습니다. 대신 [시스템 저장 프로시저](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) 카탈로그 뷰를 쿼리 합니다.  
   
@@ -68,10 +68,10 @@ sp_helptrigger [ @tabname = ] 'table'
 |**isinsteadof**|**int**|1=INSTEAD OF 트리거입니다.<br /><br /> 0=INSTEAD OF 트리거가 아닙니다.|  
 |**trigger_schema**|**sysname**|트리거가 속한 스키마의 이름입니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  테이블에 대 한 [메타 데이터 표시 유형 구성](../../relational-databases/security/metadata-visibility-configuration.md) 권한이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `sp_helptrigger`를 실행하여 `Person.Person` 테이블의 트리거에 대한 정보를 출력합니다.  
   
 ```  

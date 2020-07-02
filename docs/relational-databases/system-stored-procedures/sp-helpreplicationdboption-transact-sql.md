@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84f009a2f2184ce2974f837006471d2b9bb97346
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0376653d2466bf756ba76575f90841f78956ade7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824451"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718680"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   게시자에서 데이터베이스가 복제를 사용할 수 있도록 설정되었는지 여부를 표시합니다. 이 저장 프로시저는 모든 데이터베이스의 게시자에서 실행됩니다. *Oracle 게시자에 대해서는 지원되지 않습니다.*  
   
@@ -70,7 +70,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ## <a name="remarks"></a>설명  
  **sp_helpreplicationdboption** 은 스냅숏, 트랜잭션 및 병합 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버는 모든 데이터베이스에 대해 **sp_helpreplicationdboption** 를 실행할 수 있습니다. **Db_owner** 고정 데이터베이스 역할의 멤버는 해당 데이터베이스에 대해 **sp_helpreplicationdboption** 을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

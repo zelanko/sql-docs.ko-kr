@@ -18,17 +18,17 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4a4cfe5c86d39766bcd322b879172b00b33eb68
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 583536c1b69951b18e6d30910f4e4d9d44b8d99f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73593709"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717363"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
-  지정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 된 문과 해당 매개 변수를 분석 하 여 Always Encrypted 기능을 사용 하 여 보호 되는 데이터베이스 열에 해당 하는 매개 변수를 확인 합니다. 암호화 된 열에 해당 하는 매개 변수에 대 한 암호화 메타 데이터를 반환 합니다.  
+  지정 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 해당 매개 변수를 분석 하 여 Always Encrypted 기능을 사용 하 여 보호 되는 데이터베이스 열에 해당 하는 매개 변수를 확인 합니다. 암호화 된 열에 해당 하는 매개 변수에 대 한 암호화 메타 데이터를 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,21 +40,21 @@ sp_describe_parameter_encryption
 ```  
   
 ## <a name="arguments"></a>인수  
- [ \@tsql =] ' SQL_batch transact-sql '  
+ [ \@ tsql =] ' transact-sql SQL_batch '  
  하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. SQL_batch는 nvarchar (n) 또는 nvarchar (max) 일 수 있습니다.  
   
- [ \@params =] N'parameters'  
- params는 transact-sql 일괄 처리에 대 한 매개 변수에 대 한 선언 문자열을 제공 합니다 .이는 sp_executesql와 비슷합니다. * \@* 매개 변수는 nvarchar (n) 또는 nvarchar (max) 일 수 있습니다.  
+ [ \@ params =] N'parameters '  
+ * \@ Params* 는 transact-sql 일괄 처리에 대 한 매개 변수에 대 한 선언 문자열을 제공 합니다 .이는 sp_executesql와 비슷합니다. 매개 변수는 nvarchar (n) 또는 nvarchar (max) 일 수 있습니다.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)]_Batch에 포함 된 모든 매개 변수의 정의를 포함 하는 하나의 문자열입니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 은 추가 매개 변수 정의를 나타내는 자리 표시자입니다. 문에 지정 된 모든 매개 변수는 * \@params*에 정의 되어야 합니다. 문의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리에 매개 변수가 없는 경우 * \@params* 가 필요 하지 않습니다. NULL이 이 매개 변수의 기본값입니다.  
+ _Batch에 포함 된 모든 매개 변수의 정의를 포함 하는 하나의 문자열입니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 은 추가 매개 변수 정의를 나타내는 자리 표시자입니다. 문에 지정 된 모든 매개 변수는 * \@ params*에 정의 되어야 합니다. 문의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리에 매개 변수가 없는 경우 * \@ params* 가 필요 하지 않습니다. NULL이 이 매개 변수의 기본값입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  0은 성공을 나타냅니다. 다른 모든 항목은 실패를 표시 합니다.  
   
 ## <a name="result-sets"></a>결과 집합  
  **sp_describe_parameter_encryption** 는 두 개의 결과 집합을 반환 합니다.  
   
--   데이터베이스 열에 대해 구성 된 암호화 키를 설명 하는 결과 집합입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 지정 된 문의 매개 변수는에 해당 합니다.  
+-   데이터베이스 열에 대해 구성 된 암호화 키를 설명 하는 결과 집합입니다. 지정 된 문의 매개 변수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에 해당 합니다.  
   
 -   특정 매개 변수를 암호화 하는 방법을 설명 하는 결과 집합입니다. 이 결과 집합은 첫 번째 결과 집합에 설명 된 키를 참조 합니다.  
   
@@ -77,19 +77,19 @@ sp_describe_parameter_encryption
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|결과 집합에 있는 행의 Id입니다.|  
-|**parameter_name**|**sysname**|Params 인수에 지정 된 매개 변수 중 하나의 이름입니다. * \@*|  
+|**parameter_name**|**sysname**|* \@ Params* 인수에 지정 된 매개 변수 중 하나의 이름입니다.|  
 |**column_encryption_algorithm**|**tinyint**|열에 대해 구성 된 암호화 알고리즘을 나타내는 코드입니다. 매개 변수는에 해당 합니다. 현재 지원 되는 값은 **AEAD_AES_256_CBC_HMAC_SHA_256**의 경우 2입니다.|  
 |**column_encryption_type**|**tinyint**|열에 대해 구성 된 암호화 유형을 나타내는 코드입니다. 매개 변수는에 해당 합니다. 지원되는 값은<br /><br /> 0-일반 텍스트 (열이 암호화 되지 않음)<br /><br /> 1-임의 암호화<br /><br /> 2-결정적 암호화|  
 |**column_encryption_key_ordinal**|**int**|첫 번째 결과 집합의 행에 대 한 코드입니다. 참조 된 행은 열에 대해 구성 된 열 암호화 키를 설명 하 고 매개 변수는에 해당 합니다.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|유형 정규화 알고리즘의 버전 번호입니다.|  
   
 ## <a name="remarks"></a>설명  
- Always Encrypted [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 지 원하는 클라이언트 드라이버는 **sp_describe_parameter_encryption** 를 자동으로 호출 하 여 응용 프로그램에서 실행 한 매개 변수가 있는 쿼리에 대 한 암호화 메타 데이터를 검색 합니다. 그런 다음, 드라이버는 암호화 메타 데이터를 사용 하 여 Always Encrypted로 보호 되는 데이터베이스 열에 해당 하는 매개 변수의 값을 암호화 하 고, 데이터베이스 엔진에 쿼리를 보내기 전에 응용 프로그램에서 전송한 일반 텍스트 매개 변수 값을 암호화 된 매개 변수 값으로 대체 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Always Encrypted를 지 원하는 클라이언트 드라이버는 **sp_describe_parameter_encryption** 를 자동으로 호출 하 여 응용 프로그램에서 실행 한 매개 변수가 있는 쿼리에 대 한 암호화 메타 데이터를 검색 합니다. 그런 다음, 드라이버는 암호화 메타 데이터를 사용 하 여 Always Encrypted로 보호 되는 데이터베이스 열에 해당 하는 매개 변수의 값을 암호화 하 고, 데이터베이스 엔진에 쿼리를 보내기 전에 응용 프로그램에서 전송한 일반 텍스트 매개 변수 값을 암호화 된 매개 변수 값으로 대체 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에서 **VIEW ANY COLUMN ENCRYPTION key** Definition 및 **VIEW ANY COLUMN MASTER KEY definition** 권한이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ```sql  
 CREATE COLUMN MASTER KEY [CMK1]  

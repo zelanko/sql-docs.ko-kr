@@ -21,19 +21,19 @@ ms.assetid: 630d4caa-9bea-4cd3-a5b1-01098b0855fc
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 87af4645a052001ddfc2d0540b6b40e75e3dbb20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b721b35f68518ee0c2863544c42a8fa11d99f3a8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68067847"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717601"
 ---
 # <a name="sysregistered_search_property_lists-transact-sql"></a>sys.registered_search_property_lists(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스에 각 검색 속성 목록당 한 개의 행을 포함합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**property_list_id**|**int**|속성 목록의 ID입니다.|  
 |**name**|**sysname**|속성 목록의 이름입니다.|  
@@ -50,7 +50,7 @@ ms.locfileid: "68067847"
 > [!NOTE]  
 >  검색 속성 목록 소유자는 목록에 대한 REFERENCE 또는 CONTROL 권한을 부여할 수 있습니다. CONTROL 권한을 가진 사용자는 다른 사용자에게 REFERENCE 권한을 부여할 수도 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 검색 속성 목록의 ID와 이름을 표시합니다.  
   
 ```  

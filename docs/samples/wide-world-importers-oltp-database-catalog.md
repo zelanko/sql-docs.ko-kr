@@ -10,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d4502a64a3822741c1928fcf6faee69d80d893d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9dc40928fddda2708a23a7fc927627cf0e9450d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112407"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718580"
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters 데이터베이스 카탈로그
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 WideWorldImporters 데이터베이스에는 차량 및 냉 기에 대 한 센서 데이터 뿐만 아니라 판매 및 구매에 대 한 모든 트랜잭션 정보 및 일일 데이터가 포함 되어 있습니다.
 
 ## <a name="schemas"></a>스키마
@@ -29,7 +29,7 @@ WideWorldImporters는 데이터를 저장 하 고, 사용자가 데이터에 액
 
 이러한 스키마는 데이터를 포함 합니다. 다른 모든 스키마에는 많은 테이블이 필요 하며 응용 프로그램 스키마에 있습니다.
 
-|스키마|설명|
+|스키마|Description|
 |-----------------------------|---------------------|
 |애플리케이션|응용 프로그램 전체 사용자, 연락처 및 매개 변수 여기에는 여러 스키마에서 사용 하는 데이터를 포함 하는 참조 테이블도 포함 됩니다.|
 |구매|공급 업체의 재고 항목 구매 및 공급 업체에 대 한 세부 정보입니다.|  
@@ -82,7 +82,7 @@ WideWorldImporters는 데이터를 저장 하 고, 사용자가 데이터에 액
 
 |테이블|설명|
 |-----------------------------|---------------------|
-|Suppliers|Suppliers (조직)에 대 한 주 엔터티 테이블|
+|공급업체|Suppliers (조직)에 대 한 주 엔터티 테이블|
 |SupplierCategories|공급 업체에 대 한 범주 (예: novelties, 장난감, 옷, 패키징 등)|
 |SupplierTransactions|공급 업체와 관련 된 모든 금융 트랜잭션 (송장, 지불)|
 |PurchaseOrders|공급자 구매 주문의 세부 정보|
@@ -155,7 +155,7 @@ WideWorldImporters는 적은 수의 스키마를 사용 하 여 데이터베이�
 
 이 `Website` 스키마에는 웹 프런트 엔드에서 사용할 수 있는 저장 프로시저가 포함 되어 있습니다.
 
-`Reports` 및 `PowerBI` 스키마는 reporting services 및 PowerBI 용도로 사용 됩니다. 이 샘플의 모든 확장은 보고 용도로 이러한 스키마를 사용 하는 것이 좋습니다.
+`Reports`및 `PowerBI` 스키마는 reporting Services 및 PowerBI 용도로 사용 됩니다. 이 샘플의 모든 확장은 보고 용도로 이러한 스키마를 사용 하는 것이 좋습니다.
 
 ### <a name="website-schema"></a>웹 사이트 스키마
 
@@ -163,12 +163,12 @@ WideWorldImporters는 적은 수의 스키마를 사용 하 여 데이터베이�
 
 |절차|목적|
 |-----------------------------|---------------------|
-|ActivateWebsiteLogon|사용자 `Application.People`가 웹 사이트에 액세스할 수 있도록 허용 합니다.|
+|ActivateWebsiteLogon|사용자가 `Application.People` 웹 사이트에 액세스할 수 있도록 허용 합니다.|
 |ChangePassword|외부 인증 메커니즘을 사용 하지 않는 사용자의 경우 사용자의 암호를 변경 합니다.|
 |InsertCustomerOrders|주문 줄을 포함 하 여 하나 이상의 고객 주문 삽입을 허용 합니다.|
 |InvoiceCustomerOrders|송장을 발부 하 고 송장을 처리할 주문 목록을 가져옵니다.|
 |RecordColdRoomTemperatures|는 센서 데이터 목록을 테이블 반환 매개 변수 (TVP)로 사용 하 고 데이터를 `Warehouse.ColdRoomTemperatures` temporal 테이블에 적용 합니다.|
-|RecordVehicleTemperature|는 JSON 배열을 사용 하 고 업데이트 `Warehouse.VehicleTemperatures`하는 데 사용 합니다.|
+|RecordVehicleTemperature|는 JSON 배열을 사용 하 고 업데이트 하는 데 사용 `Warehouse.VehicleTemperatures` 합니다.|
 |SearchForCustomers|이름 또는 이름의 일부 (회사 이름 또는 사람 이름)로 고객을 검색 합니다.|
 |SearchForPeople|이름 또는 이름의 일부로 사용자를 검색 합니다.|
 |SearchForStockItems|이름 또는 이름 또는 마케팅 주석의 일부로 재고 항목을 검색 합니다.|
@@ -181,7 +181,7 @@ WideWorldImporters는 적은 수의 스키마를 사용 하 여 데이터베이�
 
 ### <a name="dataloadsimulation-schema"></a>DataLoadSimulation 스키마
 
-판매 및 구매를 삽입 하는 작업을 시뮬레이션 합니다. 주 저장 프로시저는 현재 `PopulateDataToCurrentDate`날짜까지 샘플 데이터를 삽입 하는 데 사용 되는입니다.
+판매 및 구매를 삽입 하는 작업을 시뮬레이션 합니다. 주 저장 프로시저는 `PopulateDataToCurrentDate` 현재 날짜까지 샘플 데이터를 삽입 하는 데 사용 되는입니다.
 
 |절차|목적|
 |-----------------------------|---------------------|
@@ -200,12 +200,12 @@ WideWorldImporters는 적은 수의 스키마를 사용 하 여 데이터베이�
 |-----------------------------|---------------------|
 |AddRoleMemberIfNonexistant|멤버가 역할에 아직 없는 경우 역할에 멤버를 추가 합니다.|
 |Configuration_ApplyAuditing|감사를 추가 합니다. 서버 감사는 standard edition 데이터베이스에 적용 됩니다. enterprise edition에 대 한 추가 데이터베이스 감사가 추가 됩니다.|
-|Configuration_ApplyColumnstoreIndexing|Columnstore 인덱싱을 및에 `Sales.OrderLines` 적절 `Sales.InvoiceLines` 하 게 다시 인덱스에 적용 합니다.|
-|Configuration_ApplyFullTextIndexing|, `Application.People` `Sales.Customers`, 및 `Warehouse.StockItems`에 전체 텍스트 인덱스를 적용 합니다. `Purchasing.Suppliers` , `Website.SearchForPeople` `Website.SearchForSuppliers` `Website.SearchForStockItems`,,를 `Website.SearchForStockItemsByTags` 전체 텍스트 인덱싱을 사용 하는 대체 프로시저로 바꿉니다. `Website.SearchForCustomers`|
-|Configuration_ApplyPartitioning|및에 `Sales.CustomerTransactions` 테이블 분할을 `Purchasing.SupplierTransactions`적용 하 고 인덱스를 다시 정렬 합니다.|
+|Configuration_ApplyColumnstoreIndexing|Columnstore 인덱싱을 및에 `Sales.OrderLines` 적절 하 게 다시 인덱스에 적용 `Sales.InvoiceLines` 합니다.|
+|Configuration_ApplyFullTextIndexing|,, 및에 전체 텍스트 인덱스를 적용 `Application.People` `Sales.Customers` `Purchasing.Suppliers` `Warehouse.StockItems` 합니다. `Website.SearchForPeople`,, `Website.SearchForSuppliers` , `Website.SearchForCustomers` `Website.SearchForStockItems` 를 `Website.SearchForStockItemsByTags` 전체 텍스트 인덱싱을 사용 하는 대체 프로시저로 바꿉니다.|
+|Configuration_ApplyPartitioning|및에 테이블 분할을 적용 하 `Sales.CustomerTransactions` `Purchasing.SupplierTransactions` 고 인덱스를 다시 정렬 합니다.|
 |Configuration_ApplyRowLevelSecurity|행 수준 보안을 적용 하 여 영업 지역 관련 역할별로 고객을 필터링 합니다.|
 |Configuration_ConfigureForEnterpriseEdition|Columnstore 인덱싱, 전체 텍스트, 메모리 내 polybase 및 분할을 적용 합니다.|
-|Configuration_EnableInMemory|메모리 최적화 파일 그룹 (Azure에서 작업 하지 않는 경우)을 추가 하 `Warehouse.ColdRoomTemperatures`고 `Warehouse.VehicleTemperatures` ,를 메모리 내 항목으로 대체 하 `Website.OrderIDList`고, 데이터 `Website.OrderList` `Website.OrderLineList`를 마이그레이션하고,,, `Website.SensorDataList` , 메모리 최적화 된 해당 항목을 포함 하는 테이블 형식을 다시 `Website.InvoiceCustomerOrders`만들고 `Website.InsertCustomerOrders`, 프로시저 `Website.RecordColdRoomTemperatures` 를 삭제 하 고 다시 만든 다음 이러한 테이블 형식을 사용 합니다.|
+|Configuration_EnableInMemory|메모리 최적화 파일 그룹 (Azure에서 작업 하지 않는 경우)을 추가 하 `Warehouse.ColdRoomTemperatures` 고,를 메모리 내 항목으로 대체 하 고, 데이터를 마이그레이션하고,,,, 메모리 최적화 된 해당 항목을 포함 하는 `Warehouse.VehicleTemperatures` `Website.OrderIDList` `Website.OrderList` `Website.OrderLineList` `Website.SensorDataList` 테이블 형식을 다시 만들고, 프로시저를 삭제 하 고 다시 `Website.InvoiceCustomerOrders` `Website.InsertCustomerOrders` `Website.RecordColdRoomTemperatures` 만든 다음 이러한 테이블 형식을 사용 합니다.|
 |Configuration_RemoveAuditing|감사 구성을 제거 합니다.|
 |Configuration_RemoveRowLevelSecurity|행 수준 보안 구성 (연결 된 테이블을 변경 하는 데 필요 함)을 제거 합니다.|
 |CreateRoleIfNonExistant|아직 존재 하지 않는 경우 데이터베이스 역할을 만듭니다.|

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65a1f4d2098e55c7007bd04e2fef00bcbac30ffc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 12d66cfa4668c8ca91d82d00cfa5abd4504e76eb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824427"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719287"
 ---
 # <a name="sp_helprolemember-transact-sql"></a>sp_helprolemember(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스에 있는 역할의 직접 멤버에 관한 정보를 반환합니다.  
   

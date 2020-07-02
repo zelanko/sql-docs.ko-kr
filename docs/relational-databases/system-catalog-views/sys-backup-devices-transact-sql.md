@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b5f70fa8b486688a6c83133781b63d188742e345
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5587ec9d2df061ebc7e979e55010f9945628127e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816203"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718896"
 ---
 # <a name="sysbackup_devices-transact-sql"></a>sys.backup_devices(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Sp_addumpdevice** 를 사용 하 여 등록 하거나에서 만든 각 백업 장치에 대 한 행을 포함 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 합니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82816203"
 |**type_desc**|**nvarchar(60)**|백업 디바이스 유형에 대한 설명입니다.<br /><br /> DISK<br /><br /> DISKETTE(사용되지 않음)<br /><br /> TAPE<br /><br /> PIPE(사용되지 않음)<br /><br /> VIRTUAL_DEVICE(타사 백업 공급업체에서 선택적으로 사용)<br /><br /> 일반적으로 DISK와 TAPE만 사용됩니다.|  
 |**physical_name**|**nvarchar(260)**|백업 디바이스의 물리적 파일 이름 또는 경로입니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

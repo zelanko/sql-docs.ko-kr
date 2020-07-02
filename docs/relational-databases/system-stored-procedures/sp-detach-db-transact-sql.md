@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 25d292ed7f45d921d2fc9eafbc1d2d5fe5912dbe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d9eaae9a00a125a2ffe2f290e2bd772eb40d84c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830233"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717360"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   서버 인스턴스에서 현재 사용하지 않는 데이터베이스를 분리하고, 필요한 경우 분리하기 전에 모든 테이블에서 UPDATE STATISTICS를 실행합니다.  
   
@@ -68,7 +68,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 > [!NOTE]  
 >  모든 로그인 계정의 기본 데이터베이스를 보는 방법에 대 한 자세한 내용은 [sp_helplogins &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)을 참조 하십시오. 필요한 권한이 있는 경우 [ALTER login](../../t-sql/statements/alter-login-transact-sql.md) 을 사용 하 여 새 기본 데이터베이스를 로그인에 할당할 수 있습니다.  
   
-## <a name="restrictions"></a>제한  
+## <a name="restrictions"></a>제한 사항  
  다음 중 하나라도 해당하는 경우 데이터베이스를 분리할 수 없습니다.  
   
 -   데이터베이스가 현재 사용되고 있는 경우. 자세한 내용은 이 항목의 뒷부분에 나오는 "배타적 액세스 권한 얻기"를 참조하십시오.  
@@ -120,7 +120,7 @@ GO
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버 자격 또는 데이터베이스의 **db_owner** 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] *skipchecks가* 가 true로 설정 된 데이터베이스를 분리 합니다.  
   
 ```  

@@ -10,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2fb0c990c03e0dfbf1cd279efa7a249bb5bc9645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: adc2e7d74f8479384bd9f34b5442e796e4b74d66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112386"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718542"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Microsoft SQL 용 와이드 세계 가져오기 샘플 데이터베이스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 SQL Server 및 Azure SQL Database에 대 한 WideWorldImporters 예제 데이터베이스에서 해결 된 가상의 회사 전체 가져오기 및 워크플로에 대 한 개요입니다.  
 
 WWI (와이드 세계 가져오기)는 샌프란시스코 베이 영역에서 작동 하는 도매 새로 움 상품 가져오기 및 배포자입니다.
@@ -61,7 +61,7 @@ SQL Server Analysis Services는 차원 데이터 모델의 데이터에서 분�
 
 이 회사는 11 월 1 일에 시작 하는 재무 연도를 사용 합니다.
 
-## <a name="terms-of-use"></a>사용 조건
+## <a name="terms-of-use"></a>사용 약관
 
 예제 데이터베이스 및 예제 코드에 대 한 라이선스는 다음에 설명 되어 있습니다. [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 

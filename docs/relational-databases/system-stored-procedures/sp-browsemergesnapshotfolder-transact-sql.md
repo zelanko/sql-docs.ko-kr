@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e248642f-5fea-4ed7-be1a-36ff75abcfde
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a89cf408bd1acdd19ae982dfc0afa92c3c6cbe02
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5c930347c18dc257b5a6c51d2b013d2429b269fe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828449"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715994"
 ---
 # <a name="sp_browsemergesnapshotfolder-transact-sql"></a>sp_browsemergesnapshotfolder(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   병합 게시에 대해 가장 최근에 생성된 스냅샷의 전체 경로를 반환합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -55,7 +55,7 @@ sp_browsemergesnapshotfolder [@publication= ] 'publication'
   
  **sp_browsemergesnapshotfolder** 는 병합 스냅숏 파일이 생성 되는 디렉터리를 결정 하는 데 유용 합니다. 이 폴더/경로 및 그 내용은 이동식 미디어에 복사될 수 있고 스냅샷은 대체 스냅샷 위치에서 구독을 동기화하는 데 사용될 수 있습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_browsemergesnapshotfolder**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

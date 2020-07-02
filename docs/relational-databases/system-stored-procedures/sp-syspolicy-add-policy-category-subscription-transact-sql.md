@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 795a806b1b945407a2db947f6037c435efe68b56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9f4f60a56dff14fd06318899fdf89c5602f7029b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010516"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718644"
 ---
 # <a name="sp_syspolicy_add_policy_category_subscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정된 데이터베이스에 정책 범주 구독을 추가합니다.  
   
@@ -48,7 +48,7 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
   
 `[ @policy_category = ] 'policy_category'`구독할 정책 범주의 이름입니다. *policy_category* 는 **sysname**이며 필수입니다.  
   
- *Policy_category*에 대 한 값을 가져오려면 syspolicy_policy_categories 시스템 뷰를 쿼리 합니다.  
+ *Policy_category*에 대 한 값을 가져오려면 msdb.dbo.syspolicy_policy_categories 시스템 뷰를 쿼리 합니다.  
   
 `[ @policy_category_subscription_id = ] policy_category_subscription_id`범주 구독의 식별자입니다. *policy_category_subscription_id* 은 **int**이며 OUTPUT으로 반환 됩니다.  
   
@@ -63,7 +63,7 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저는 현재 저장 프로시저 소유자의 컨텍스트에서 실행됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 'Table Naming Policies'라는 정책 범주를 구독하도록 지정된 데이터베이스를 구성합니다.  
   
 ```  

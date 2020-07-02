@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb90ec6a3d5413d22f4721491d3b151a7e28ac05
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8aec9e25008c8dfe3b14bbe838f8122bb93fb756
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833438"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717408"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   배포 게시자의 속성을 변경합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
   
@@ -53,7 +53,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
  
  다음 표에서는 게시자의 속성 및 해당 속성 값을 설명합니다.  
   
-|속성|값|Description|  
+|속성|값|설명|  
 |--------------|------------|-----------------|  
 |**active**|**true**|게시자를 활성화합니다.|  
 ||**false**|게시자를 비활성화합니다.|  

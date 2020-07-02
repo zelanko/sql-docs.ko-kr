@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 01bca0b4e0c8d98d0a31451686f0396af99ed430
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af15f93b869fed56bed19a495c64810b0f2436c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112316"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718593"
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters 데이터 생성
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 WideWorldImporters 및 WideWorldImportersDW 데이터베이스의 릴리스 버전에는 데이터베이스가 생성 된 날부터 2013 년 1 월 1 일 까지의 데이터가 있습니다.
 
 이러한 예제 데이터베이스를 사용 하는 경우 최신 샘플 데이터를 포함 하는 것이 좋습니다.
@@ -41,7 +41,7 @@ WideWorldImporters 및 WideWorldImportersDW 데이터베이스의 릴리스 버�
 
     이 문은 예제 판매 및 구매 데이터를 데이터베이스에 현재 날짜로 추가 합니다. 일별 데이터 생성의 진행 상태를 표시 합니다. 데이터 생성은 데이터를 필요로 하는 모든 연도에 대해 약 10 분이 소요 될 수 있습니다. 데이터 생성의 임의 요소로 인해 실행 간에 생성 되는 데이터에는 약간의 차이가 있습니다.
 
-    매일 주문에 대해 생성 되는 데이터의 양을 늘리거나 줄이려면 매개 변수의 `@AverageNumberOfCustomerOrdersPerDay`값을 변경 합니다. 및 `@SundayPercentageOfNormalWorkDay` 매개 변수 `@SaturdayPercentageOfNormalWorkDay` 를 사용 하 여 주말의 주문 볼륨을 확인 합니다.
+    매일 주문에 대해 생성 되는 데이터의 양을 늘리거나 줄이려면 매개 변수의 값을 변경 `@AverageNumberOfCustomerOrdersPerDay` 합니다. 및 매개 변수를 사용 `@SaturdayPercentageOfNormalWorkDay` `@SundayPercentageOfNormalWorkDay` 하 여 주말의 주문 볼륨을 확인 합니다.
 
 ## <a name="import-generated-data-in-wideworldimportersdw"></a>WideWorldImportersDW에서 생성 된 데이터 가져오기
 
@@ -63,7 +63,7 @@ WideWorldImportersDW는 성능 테스트를 위해 데이터 크기를 임의로
 
 문제 중 하나는 다운로드 크기를 쉽게 다운로드할 수 있는 크기를 유지 하는 것입니다. 하지만 SQL Server 성능 기능을 보여 줄 수 있을 정도로 커야 합니다. 예를 들어 많은 수의 행으로 작업 하는 경우에만 columnstore 인덱스에 대 한 상당한 이점을 얻을 수 있습니다. 
 
-프로시저를 `Application.Configuration_PopulateLargeSaleTable` 사용 하 여 `Fact.Sale` 테이블의 행 수를 늘릴 수 있습니다. 2012 년 1 월 2013 1 일에 시작 하는 기존 세계 넓은 가져오기 데이터와의 충돌을 방지 하기 위해 행이 달력 년에 삽입 됩니다.
+프로시저를 사용 `Application.Configuration_PopulateLargeSaleTable` 하 여 테이블의 행 수를 늘릴 수 있습니다 `Fact.Sale` . 2012 년 1 월 2013 1 일에 시작 하는 기존 세계 넓은 가져오기 데이터와의 충돌을 방지 하기 위해 행이 달력 년에 삽입 됩니다.
 
 ### <a name="procedure-details"></a>프로시저 세부 정보
 
@@ -77,6 +77,6 @@ WideWorldImportersDW는 성능 테스트를 위해 데이터 크기를 임의로
 
 #### <a name="result"></a>결과
 
-대략 필요한 행 수가 2012 년의 `Fact.Sale` 테이블에 삽입 됩니다. 프로시저는 매일 행 수를 5만로 제한 합니다. 이 제한을 변경할 수 있지만 이러한 제한을 통해 테이블의 실수로 인 한 overinflations 방지할 수 있습니다.
+대략 필요한 행 수가 `Fact.Sale` 2012 년의 테이블에 삽입 됩니다. 프로시저는 매일 행 수를 5만로 제한 합니다. 이 제한을 변경할 수 있지만 이러한 제한을 통해 테이블의 실수로 인 한 overinflations 방지할 수 있습니다.
 
 또한이 프로시저는 클러스터형 columnstore 인덱싱이 아직 적용 되지 않은 경우이를 적용 합니다.

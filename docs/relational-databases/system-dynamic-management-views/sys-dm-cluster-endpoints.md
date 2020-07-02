@@ -19,15 +19,15 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 41d360ef2d0e9808f1ef4af49b14354cff637a14
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 95f251db2efe471455d18f4735be99ecee962a7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824744"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717503"
 ---
 # <a name="sysdm_cluster_endpoints-transact-sql"></a>sys. dm_cluster_endpoints (Transact-sql)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx_md](../../includes/applies-to-version/sqlserver2019.md)]
 
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -36,7 +36,7 @@ ms.locfileid: "82824744"
 |엔드포인트(endpoint)|`sysname`|끝점 url 또는 연결 특성입니다. Null을 허용하지 않습니다. |
 |protocol_desc|`sysname`|끝점 프로토콜에 대 한 설명 |
 
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.
 

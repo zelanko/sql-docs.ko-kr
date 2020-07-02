@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e75d1d43c37d0e758b02025df4f601c87f44f2e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 140765eacad1d035f9e8640330701711a358991b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816817"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719206"
 ---
 # <a name="sp_setnetname-transact-sql"></a>sp_setnetname(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   의 원격 인스턴스에 대 한 실제 네트워크 컴퓨터 이름으로 **sys. servers** 의 네트워크 이름을 설정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이 프로시저를 사용하여 잘못된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자를 포함하는 네트워크 이름을 가진 컴퓨터에 원격 저장 프로시저 호출을 실행할 수 있습니다.  
   
@@ -73,10 +73,10 @@ EXEC sp_setnetname 'rpcserv2', 'sqlserv2';
 > [!NOTE]  
 >  **Sp_setnetname** 를 사용 하 여 연결 된 서버를 로컬 서버에 다시 가리키는 것은 지원 되지 않습니다. 이런 방법으로 참조된 서버는 분산 트랜잭션에 참여할 수 없습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 및 **setupadmin** 고정 서버 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 원격 저장 프로시저 호출을 실행하는 데 사용되는 일반적인 관리 시퀀스를 보여 줍니다.  
   
 ```  

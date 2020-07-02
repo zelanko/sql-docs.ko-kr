@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d465515d6446c16fc9186b03eafc9a287571bc5e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3e355af1188960696170e0ad7a01175e55504e22
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824678"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717467"
 ---
 # <a name="sysdm_cryptographic_provider_algorithms-transact-sql"></a>sys.dm_cryptographic_provider_algorithms(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   EKM(확장 가능 키 관리) 공급자가 지원하는 알고리즘을 반환합니다.  
   
@@ -52,10 +52,10 @@ sys.dm_cryptographic_provider_algorithms ( provider_id )
 |key_type|**nvarchar(128)**|키 입력을 표시합니다. ASYMMETRIC KEY 또는 SYMMETRIC KEY를 반환합니다.|  
 |key_length|**int**|키 길이(비트)를 나타냅니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  사용자는 공용 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예제에서는 ID 번호 `1234567`과 함께 공급자에 대한 공급자 옵션을 표시합니다.  
   
 ```  

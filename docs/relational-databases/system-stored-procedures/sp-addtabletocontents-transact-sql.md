@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 429b908f01c7b0436f05622544b2aa8b241a6211
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2ad62613462575fb1bb33bf472e367d8f7640b03
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833598"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716334"
 ---
 # <a name="sp_addtabletocontents-transact-sql"></a>sp_addtabletocontents(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   원본 테이블을 검사하여 현재 추적 테이블에 없는 행이 있을 경우 병합 추적 테이블에 이 행에 대한 참조를 추가합니다. **Bcp**를 사용 하 여 대량의 데이터를 대량 로드 한 경우이 옵션을 사용 하 여 병합 추적 트리거를 실행 하지 않습니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   

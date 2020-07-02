@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 244811989bd5ab58a3ab1f6ffdfcf82649af1916
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 02ba9c11d9c74daa6cc88051ada7037edc16f35b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68045826"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715933"
 ---
 # <a name="sp_change_log_shipping_primary_database-transact-sql"></a>sp_change_log_shipping_primary_database(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   주 데이터베이스 설정을 변경합니다.  
   
@@ -110,8 +110,8 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
- 이 예에서는 **sp_change_log_shipping_primary_database** 를 사용 하 여 주 데이터베이스 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]와 연관 된 설정을 업데이트 하는 방법을 보여 줍니다.  
+## <a name="examples"></a>예제  
+ 이 예에서는 **sp_change_log_shipping_primary_database** 를 사용 하 여 주 데이터베이스와 연관 된 설정을 업데이트 하는 방법을 보여 줍니다 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  
 EXEC master.dbo.sp_change_log_shipping_primary_database   
@@ -128,7 +128,7 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [로그 전달 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [log_shipping_primary_databases&#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   

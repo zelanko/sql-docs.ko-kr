@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73f6af5cb03c19c106e55b074c402aa2cf4f4c65
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c7924044720c001951ac80e303ac8fe19fc3e489
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830585"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718768"
 ---
 # <a name="sysdm_hadr_database_replica_cluster_states-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터의 각 Always On 가용성 그룹에 있는 Always On 가용성 그룹에서 가용성 데이터베이스의 상태를 파악하는 데 필요한 정보가 들어 있는 행을 반환합니다. 다음 질문에 대답 하려면 **dm_hadr_database_replica_states** 를 쿼리 하세요.  
   

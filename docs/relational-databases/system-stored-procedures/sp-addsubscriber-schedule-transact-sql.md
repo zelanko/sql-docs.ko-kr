@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 96ab4f3fa8d3b756a40b4ca0aa347f2827aab66e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fb643c0be953bcff19341f681654f2565be3d9e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833690"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716377"
 ---
 # <a name="sp_addsubscriber_schedule-transact-sql"></a>sp_addsubscriber_schedule(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   배포 에이전트 및 병합 에이전트에 대한 일정을 추가합니다. 이 저장 프로시저는 모든 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -65,8 +65,8 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**1**|한 번|  
 |**2**|주문형|  
 |**4**|매일|  
-|**20cm(8**|매주|  
-|**x**|매월|  
+|**8**|매주|  
+|**16**|매월|  
 |**32**|매월 상대적|  
 |**64** (기본값)|자동 시작|  
 |**128**|되풀이|  
@@ -77,11 +77,11 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 |값|설명|  
 |-----------|-----------------|  
-|**1** (기본값)|처음|  
-|**2**|초|  
+|**1** (기본값)|첫째|  
+|**2**|Second|  
 |**4**|셋째|  
-|**20cm(8**|넷째|  
-|**x**|마지막|  
+|**8**|넷째|  
+|**16**|마지막|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*에서 사용 하는 되풀이 비율입니다. *frequency_recurrence_factor* 은 **int**이며 기본값은 **0**입니다.  
   
@@ -90,9 +90,9 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |값|설명|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|초|  
+|**2**|Second|  
 |**4** (기본값)|Minute|  
-|**20cm(8**|시간|  
+|**8**|시간|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*에 대 한 간격입니다. *frequency_subday_interval* 은 **int**이며 기본값은 **5**입니다.  
   
