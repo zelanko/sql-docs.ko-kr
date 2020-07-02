@@ -20,15 +20,15 @@ ms.assetid: 066bd9ac-6554-4297-88fe-d740de1f94a8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1083c3510ed8aeb74f1be1610d8b46b009559567
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3fbd009d47d7019994359c480c55c251950d0940
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825133"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734847"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   테이블, 뷰 또는 테이블 반환 함수와 같은 테이블 형식 개체의 인덱스 또는 힙당 하나의 행을 포함합니다.  
   
@@ -58,10 +58,10 @@ ms.locfileid: "82825133"
 > [!NOTE]
 > **Optimize_for_sequential_key** 비트 SQL SERVER 2019 CTP 3.1 이상 버전 에서만 지원 됩니다.
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 데이터베이스의 테이블에 대 한 모든 인덱스를 반환 합니다 `Production.Product` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
 ```  
@@ -91,7 +91,7 @@ GO
  [Transact-sql&#41;&#40;개체 카탈로그 뷰](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [index_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [xml_indexes &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
+ [Transact-sql&#41;sys.xml_indexes &#40;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [sys. 개체 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [key_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
  [sys. 파일 그룹 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f6ad28ace9f8b3a1b4852c54e3e4f427bd22c06d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 43951ff65e904bcb0802f84793f9f2101bfd14e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824454"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736943"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   특정 게시, 아티클, 구독자 또는 구독자 집합과 연관된 구독 정보를 나열합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -67,7 +67,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**구독자**|**sysname**|구독자의 이름입니다.|  
 |**게시물**|**sysname**|게시의 이름입니다.|  
-|**자료**|**sysname**|아티클의 이름입니다.|  
+|**문서**|**sysname**|아티클의 이름입니다.|  
 |**대상 데이터베이스**|**sysname**|복제된 데이터가 있는 대상 데이터베이스의 이름입니다.|  
 |**구독 상태**|**tinyint**|구독 상태입니다.<br /><br /> **0** = 비활성<br /><br /> **1** = 구독 됨<br /><br /> **2** = 활성|  
 |**동기화 형식**|**tinyint**|구독 동기화 유형입니다.<br /><br /> **1** = 자동<br /><br /> **2** = 없음|  
@@ -100,7 +100,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>설명  
  **sp_helpsubscription** 는 스냅숏 및 트랜잭션 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  실행 권한은 기본적으로 **public** 역할로 사용 됩니다. 자신이 만든 구독에 대한 정보만 반환됩니다. 모든 구독에 대 한 정보는 게시자에서 **sysadmin** 고정 서버 역할의 멤버 또는 게시 데이터베이스에 대 한 **db_owner** 고정 데이터베이스 역할의 멤버에 게 반환 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

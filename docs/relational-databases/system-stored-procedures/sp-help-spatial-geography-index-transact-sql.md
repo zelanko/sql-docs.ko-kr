@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c9bf5675-eafc-4d71-bfdb-da963384fa0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73bb564880cae238cdbaa7e3c13a1f18ab95dc99
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1864aec83a60c83a1ff10bb0c5e3f814631c27fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304879"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733258"
 ---
 # <a name="sp_help_spatial_geography_index-transact-sql"></a>sp_help_spatial_geography_index(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **지리** 공간 인덱스에 대해 지정 된 속성 집합의 이름과 값을 반환 합니다. 결과는 테이블 형식으로 반환됩니다. 인덱스의 핵심 속성 집합만 반환하거나 인덱스의 속성을 모두 반환하도록 선택할 수 있습니다.  
   
@@ -53,7 +53,7 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="remarks"></a>설명  
   
 ## <a name="example"></a>예제  
- 다음 예에서는를 `sp_help_spatial_geography_index` 사용 하 여 ** \@qs**의 지정 된 쿼리 샘플에 대 한 테이블 **geography_col** 에 정의 **SIndx_SpatialTable_geography_col2** **지리** 공간 인덱스를 조사 합니다. 이 예에서는 지정된 인덱스의 핵심 속성만 반환합니다.  
+ 다음 예에서는 `sp_help_spatial_geography_index` 를 사용 하 여 ** \@ qs**의 지정 된 쿼리 샘플에 대 한 테이블 **geography_col** 에 정의 **SIndx_SpatialTable_geography_col2** **지리** 공간 인덱스를 조사 합니다. 이 예에서는 지정된 인덱스의 핵심 속성만 반환합니다.  
   
 ```  
 declare @qs geography  

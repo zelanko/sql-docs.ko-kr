@@ -18,15 +18,15 @@ ms.assetid: 00ab3cfd-2736-4fc0-b1b2-16dd49fb2fe5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b4f84f187ea3f511b8dddcc79c712dfd7809748d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cc07dec5878e0d31a325aa75af483ab4b1b04e58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824434"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736973"
 ---
 # <a name="sp_helpstats-transact-sql"></a>sp_helpstats(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   지정된 테이블의 열과 인덱스에 대한 통계 정보를 반환합니다.  
   
@@ -54,7 +54,7 @@ sp_helpstats[ @objname = ] 'object_name'
 ## <a name="result-sets"></a>결과 집합  
  다음 표에서는 결과 집합의 열을 설명합니다.  
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |**statistics_name**|통계의 이름입니다. **Sysname** 을 반환 하 고 null 일 수 없습니다.|  
 |**statistics_keys**|통계가 기반을 두고 있는 키입니다. **Nvarchar (2078)** 를 반환 하며 null 일 수 없습니다.|  

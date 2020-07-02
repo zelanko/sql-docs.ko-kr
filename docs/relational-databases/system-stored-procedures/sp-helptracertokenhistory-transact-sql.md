@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36809be121087741d2a23becf41a32b2ffe9f5cd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9242f547d8f44e09341183a30a49afef4d2c4f52
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826061"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736923"
 ---
 # <a name="sp_helptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   추적 프로그램 토큰에 대한 자세한 대기 시간 정보를 각 구독자당 한 개의 행과 함께 반환합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자 또는 배포 데이터베이스의 배포자에서 실행됩니다.  
   
@@ -74,7 +74,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-helptracertokenhistor_1.sql)]  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  게시 데이터베이스의 **sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할의 멤버 또는 배포 데이터베이스의 **db_owner** 고정 데이터베이스 역할 또는 **replmonitor** 역할이 **sp_helptracertokenhistory**실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

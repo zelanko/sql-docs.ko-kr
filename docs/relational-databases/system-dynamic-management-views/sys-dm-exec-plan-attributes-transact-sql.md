@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1c3e0e4f48037f471ad260f709879ea7ce8ff5e8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7ffabc2f8bb48b006ec1224a3ae81ac49d6c21f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829460"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734788"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   계획 핸들로 지정한 계획의 각 계획 특성에 대해 행을 하나씩 반환합니다. 이 테이블 반환 함수를 사용하여 계획의 현재 동시 실행 수 또는 캐시 키 값과 같은 특정 계획에 대한 정보를 가져올 수 있습니다.  
   
 > [!NOTE]  
->  이 함수를 통해 반환 되는 일부 정보는 [syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) 이전 버전과의 호환성 뷰에 매핑됩니다.
+>  이 함수를 통해 반환 되는 정보 중 일부는 [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) 의 이전 버전과의 호환성 보기에 매핑됩니다.
 
 ## <a name="syntax"></a>구문  
 ```  
@@ -47,7 +47,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |특성|**varchar(128)**|이 계획과 연결된 특성의 이름입니다. 이 항목의 바로 아래 표에는 가능한 특성, 해당 데이터 형식 및 해당 설명이 나열 되어 있습니다.|  
-|value|**sql_variant**|이 계획과 연결된 특성의 값입니다.|  
+|값|**sql_variant**|이 계획과 연결된 특성의 값입니다.|  
 |is_cache_key|**bit**|특성이 계획에 대한 캐시 조회 키의 일부로 사용되는지 여부를 나타냅니다.|  
 
 위의 표에서 **특성** 에는 다음 값을 사용할 수 있습니다.
@@ -59,7 +59,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |dbid|**int**|계획이 참조하는 엔터티를 포함하는 데이터베이스의 ID입니다.<br /><br /> 임시 또는 준비된 계획의 경우 일괄 처리가 실행된 데이터베이스 ID입니다.|  
 |dbid_execute|**int**|**리소스** 데이터베이스에 저장 된 시스템 개체의 경우 캐시 된 계획이 실행 되는 데이터베이스 ID입니다. 다른 모든 경우에는 0입니다.|  
 |user_id|**int**|값 -2는 전송된 일괄 처리가 암시적 이름 확인에 의존하지 않으며 여러 사용자들 간에 공유될 수 있음을 의미합니다. 이는 선호되는 방법입니다. 기타 값은 모두 데이터베이스에 쿼리를 전송하는 사용자의 사용자 ID를 나타냅니다.| 
-|language_id|**smallint**|캐시 개체를 만든 연결의 언어 ID입니다. 자세한 내용은 [sys.syslanguages &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)를 참조 하세요.|  
+|language_id|**smallint**|캐시 개체를 만든 연결의 언어 ID입니다. 자세한 내용은 [sys.sys언어 &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)를 참조 하세요.|  
 |date_format|**smallint**|캐시 개체를 만든 연결의 날짜 형식입니다. 자세한 내용은 [SET DATEFORMAT&#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md)을 참조하세요.|  
 |date_first|**tinyint**|날짜의 첫 번째 값입니다. 자세한 내용은 [SET DATEFIRST&#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md)를 참조하세요.|  
 |상태|**int**|캐시 조회 키의 일부인 내부 상태 비트입니다.|  
@@ -78,7 +78,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |sql_handle|**varbinary**(64)|일괄 처리의 SQL 핸들입니다.|  
 |merge_action_type|**smallint**|MERGE 문의 결과로 사용되는 트리거 실행 계획의 유형입니다.<br /><br /> 0은 비 트리거 계획, MERGE 문의 결과로 실행되지 않는 트리거 계획 또는 DELETE 동작만 지정하는 MERGE 문의 결과로 실행되는 트리거 계획을 나타냅니다.<br /><br /> 1은 MERGE 문의 결과로 실행되는 INSERT 트리거 계획을 나타냅니다.<br /><br /> 2는 MERGE 문의 결과로 실행되는 UPDATE 트리거 계획을 나타냅니다.<br /><br /> 3은 해당 INSERT 또는 UPDATE 동작을 포함하는 MERGE 문의 결과로 실행되는 DELETE 트리거 계획을 나타냅니다.<br /><br /> 동작을 연계하여 실행되는 중첩 트리거의 경우 이 값은 연계를 유발하는 MERGE 문의 동작입니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
@@ -121,7 +121,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |옵션|값|  
 |------------|-----------|  
-|없음|0|  
+|None|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  
@@ -138,7 +138,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |IN PLACE|8192|  
 |FOR *select_statement*|16384|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-the-attributes-for-a-specific-plan"></a>A. 특정 계획에 대한 특성 반환  
  다음 예에서는 지정된 계획에 대한 모든 계획 특성을 반환합니다. 지정된 계획에 대한 계획 핸들을 얻기 위해 먼저 `sys.dm_exec_cached_plans` 동적 관리 뷰가 쿼리됩니다. 두 번째 쿼리에서는 `<plan_handle>`을 첫 번째 쿼리의 계획 핸들 값으로 대체합니다.  

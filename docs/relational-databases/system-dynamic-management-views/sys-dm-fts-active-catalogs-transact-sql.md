@@ -20,20 +20,20 @@ ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 31dd240f15d9d778cbab43f6b4b1bfda2e4e1857
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a7b691103a32b49ab7ef017a9820500b7ab0526
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265973"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734583"
 ---
 # <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   서버에서 일부 채우기 작업이 진행 중인 전체 텍스트 카탈로그에 대한 정보를 반환합니다.  
   
 > [!NOTE]
->  다음 열은의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이후 버전에서 제거 될 예정입니다. is_paused, previous_status, previous_status_description, row_count_in_thousands, 상태, status_description 및 worker_count. 향후 개발 작업에서는 이러한 열을 사용하지 않도록 하고 현재 이러한 열을 사용하는 애플리케이션은 수정하십시오.  
+>  다음 열은의 이후 버전에서 제거 될 예정입니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . is_paused, previous_status, previous_status_description, row_count_in_thousands, 상태, status_description 및 worker_count. 향후 개발 작업에서는 이러한 열을 사용하지 않도록 하고 현재 이러한 열을 사용하는 애플리케이션은 수정하십시오.  
   
  
 |열 이름|데이터 형식|Description|  
@@ -56,12 +56,12 @@ ms.locfileid: "68265973"
 |**is_importing**|**bit**|전체 텍스트 카탈로그를 가져올 것인지 여부를 나타냅니다.<br /><br /> 1 = 카탈로그를 가져옵니다.<br /><br /> 2 = 카탈로그를 가져오지 않습니다.|  
   
 ## <a name="remarks"></a>설명  
- Is_importing 열은의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]새 열입니다.  
+ Is_importing 열은의 새 열 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 입니다.  
   
 ## <a name="permissions"></a>사용 권한  
 
-에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
    
 ## <a name="physical-joins"></a>물리적 조인  
  ![이 동적 관리 뷰의 유효 조인](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "이 동적 관리 뷰의 유효 조인")  
@@ -73,7 +73,7 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이�
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|일 대 일|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|일 대 일|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 현재 데이터베이스의 활성 전체 텍스트 카탈로그에 대한 정보를 반환합니다.  
   
 ```  

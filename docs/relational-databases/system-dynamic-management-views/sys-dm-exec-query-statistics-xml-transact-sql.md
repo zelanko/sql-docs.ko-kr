@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e2bd7a4ce174d547d0cb8d0f9bcb89d23e6543db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6304e6381b9bbfcc17b218122631d06293e15830
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78180096"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734713"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>sys. dm_exec_query_statistics_xml (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 진행 중인 요청에 대 한 쿼리 실행 계획을 반환 합니다. 이 DMV를 사용 하 여 임시 통계를 사용 하 여 실행 계획 XML을 검색 합니다. 
 
@@ -55,7 +55,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |query_plan|**xml**|부분 통계를 포함 하 *plan_handle* 로 지정 된 쿼리 실행 계획의 런타임 실행 계획 표현을 포함 합니다. 실행 계획은 XML 형식입니다. 임시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 저장 프로시저 호출, 사용자 정의 함수 호출 등이 포함된 각 일괄 처리에 대해 계획 하나가 생성됩니다. Null을 허용합니다.|
 
 ## <a name="remarks"></a>설명
-이 시스템 함수는 s p 1 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 사용할 수 있습니다. KB [3190871](https://support.microsoft.com/help/3190871) 을 참조 하세요.
+이 시스템 함수는 s p 1부터 사용할 수 있습니다 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] . KB [3190871](https://support.microsoft.com/help/3190871) 을 참조 하세요.
 
 이 시스템 함수는 **표준** 및 **경량** 쿼리 실행 통계 프로 파일링 인프라에서 작동 합니다. 자세한 내용은 [쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조하세요.  
 
@@ -63,23 +63,23 @@ sys.dm_exec_query_statistics_xml(session_id)
   
 -   지정 된 *session_id* 에 해당 하는 쿼리 계획이 더 이상 실행 되지 않는 경우 반환 된 테이블의 **query_plan** 열은 null입니다. 예를 들어 계획 핸들이 캡처 된 시간과 **sys. dm_exec_query_statistics_xml**와 함께 사용 될 때 사이에 지연이 있는 경우이 문제가 발생할 수 있습니다.  
     
-**Xml** 데이터 형식에서 허용 되는 중첩 수준 수의 제한으로 인해 **dm_exec_query_statistics_xml** 는 128 수준의 중첩 된 요소를 충족 하거나 초과 하는 쿼리 계획을 반환할 수 없습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 상태로 인해 쿼리 계획을 반환하지 못했으므로 오류 6335가 발생합니다. 서비스 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 팩 2 이상 버전에서 **QUERY_PLAN** 열은 NULL을 반환 합니다.   
+**Xml** 데이터 형식에서 허용 되는 중첩 수준 수의 제한으로 인해 **dm_exec_query_statistics_xml** 는 128 수준의 중첩 된 요소를 충족 하거나 초과 하는 쿼리 계획을 반환할 수 없습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 상태로 인해 쿼리 계획을 반환하지 못했으므로 오류 6335가 발생합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]서비스 팩 2 이상 버전에서 **query_plan** 열은 NULL을 반환 합니다.   
 
 ## <a name="permissions"></a>사용 권한  
-에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]서버에 `VIEW SERVER STATE` 대 한 권한이 필요 합니다.  
-Premium [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.
+에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `VIEW SERVER STATE` 서버에 대 한 권한이 필요 합니다.  
+[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.
 
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. 실행 중인 일괄 처리에 대 한 라이브 쿼리 계획 및 실행 통계 보기  
- 다음 예에서는 **dm_exec_requests** 를 쿼리하여 흥미로운 쿼리를 찾고 출력에서 해당 `session_id` 쿼리를 복사 합니다.  
+ 다음 예에서는 **dm_exec_requests** 를 쿼리하여 흥미로운 쿼리를 찾고 출력에서 해당 쿼리를 복사 합니다. `session_id`  
   
 ```sql  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
- 그런 다음 라이브 쿼리 계획 및 실행 통계를 얻으려면 시스템 함수 `session_id` **sys. dm_exec_query_statistics_xml**로 복사 된를 사용 합니다.  
+ 그런 다음 라이브 쿼리 계획 및 실행 통계를 얻으려면 `session_id` 시스템 함수 **sys. dm_exec_query_statistics_xml**로 복사 된를 사용 합니다.  
   
 ```sql  
 --Run this in a different session than the session in which your query is running.

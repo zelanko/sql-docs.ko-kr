@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fc92c675902309179865593b03f51a385f61621e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 753ee7cc87546c180a911ffef9c54efe143f1faf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828848"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734323"
 ---
 # <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   OLE 개체의 속성 값을 구합니다.  
   
@@ -94,10 +94,10 @@ sp_OAGetProperty objecttoken , propertyname
 ## <a name="remarks"></a>설명  
  **Sp_OAMethod** 를 사용 하 여 속성 값을 가져올 수도 있습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버 자격 또는이 저장 프로시저에 대 한 execute 권한이 필요 합니다. `Ole Automation Procedures`OLE 자동화와 관련 된 시스템 프로시저를 사용 하려면 구성을 사용 하도록 **설정** 해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-a-local-variable"></a>A. 지역 변수 사용  
  다음 예에서는 `HostName` 이전에 만든 **SQLServer** 개체의 속성을 가져와 지역 변수에 저장 합니다.  

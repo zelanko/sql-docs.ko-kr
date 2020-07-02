@@ -20,15 +20,15 @@ ms.assetid: 439b7299-dce3-4d26-b1c7-61be5e0df82a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb36dddcab514692a7d6b59dee969846430d75b5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 35d2682709e1f9d19fe51dfae331e0999c0e3570
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823442"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733575"
 ---
 # <a name="extended-properties-catalog-views---sysextended_properties"></a>확장 속성 카탈로그 뷰-sys. extended_properties
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   현재 데이터베이스의 각 확장 속성당 한 개의 행을 반환합니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82823442"
 |major_id|**int**|확장 속성이 존재하는 항목의 ID입니다. 이 ID는 해당 클래스에 따라 해석됩니다. 대부분의 항목에서 이 ID는 클래스가 나타내는 대상의 ID입니다. 비표준 major_id에 대한 해석 방식은 다음과 같습니다.<br /><br /> class가 0이면 major_id는 항상 0입니다.<br /><br /> class가 1, 2 또는 7이면 major_id는 object_id입니다.|  
 |minor_id|**int**|확장 속성이 존재하는 항목의 보조 ID입니다. 이 ID는 해당 클래스에 따라 해석됩니다. 대부분 항목의 경우 이 값은 0이며 그렇지 않은 경우 ID는 다음과 같습니다.<br /><br /> class = 1인 열의 경우 minor_id는 column_id이고, 그렇지 않은 개체의 경우 0입니다.<br /><br /> class = 2이면 minor_id는 parameter_id입니다.<br /><br /> class = 7이면 minor _id는 index_id입니다.|  
 |name|**sysname**|고유한 class, major_id 및 minor_id를 가진 속성 이름입니다.|  
-|value|**sql_variant**|확장 속성의 값입니다.|  
+|값|**sql_variant**|확장 속성의 값입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  

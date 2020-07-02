@@ -17,15 +17,15 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 279f1a8fbe3ec78dc0cae30d9879615b169075bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3bd7aa786466f3bde9aa42d75437d2406ef1e808
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75656995"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734754"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys. dm_exec_query_plan_stats (Transact-sql)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 이전에 캐시 된 쿼리 계획에 대해 마지막으로 알려진 실제 실행 계획에 해당 하는를 반환 합니다.
 
@@ -62,7 +62,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
 |**query_plan**|**xml**|*Plan_handle*로 지정 된 실제 쿼리 실행 계획의 마지막으로 알려진 런타임 실행 계획 표현을 포함 합니다. 실행 계획은 XML 형식입니다. 임시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 저장 프로시저 호출, 사용자 정의 함수 호출 등이 포함된 각 일괄 처리에 대해 계획 하나가 생성됩니다.<br /><br /> 열이 Null 값을 허용합니다.| 
 
 ## <a name="remarks"></a>설명
-이 시스템 함수는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4부터 사용할 수 있습니다.
+이 시스템 함수는 CTP 2.4부터 사용할 수 있습니다 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] .
 
 이는 옵트인 기능이며 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451을 사용하도록 설정해야 합니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5부터 데이터베이스 수준에서 이를 수행하려면 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)의 LAST_QUERY_PLAN_STATS 옵션을 참조하세요.
 
@@ -84,31 +84,31 @@ Sys. dm_exec_query_plan_stats의 실행 계획 출력은 다음 정보를 포함
     **하거나**    
 -   이 쿼리는 일반적으로 OLTP 워크 로드의 일부로 분류 되어 충분히 간단 합니다.
 
-<sup>1</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5부터이는 루트 노드 연산자 (SELECT)만 포함 하는 실행 계획을 나타냅니다. CTP [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 2.4의 경우이는를 통해 `sys.dm_exec_cached_plans`사용 가능한 캐시 된 계획을 나타냅니다.
+<sup>1</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5부터이는 루트 노드 연산자 (SELECT)만 포함 하는 실행 계획을 나타냅니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]CTP 2.4의 경우이는를 통해 사용 가능한 캐시 된 계획을 나타냅니다 `sys.dm_exec_cached_plans` .
 
 다음 조건에서는 **sys. dm_exec_query_plan_stats**에서 **출력이 반환 되지 않습니다** .
 
 -   *Plan_handle* 를 사용 하 여 지정한 쿼리 계획이 계획 캐시에서 제거 되었습니다.     
-    **디스크나**    
+    **OR**    
 -   첫 번째 장소에서 쿼리 계획을 캐시할 수 없습니다. 자세한 내용은 [실행 계획 캐싱 및 다시 사용 ](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)을 참조 하세요.
   
 > [!NOTE] 
-> **Xml** 데이터 형식에서 허용 되는 중첩 수준 수의 제한으로 인해 **dm_exec_query_plan** 는 128 수준의 중첩 된 요소를 충족 하거나 초과 하는 쿼리 계획을 반환할 수 없습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는이 조건으로 인해 쿼리 계획에서 반환 하는 [오류 6335이 발생 했습니다](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). 서비스 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 팩 2 이상 버전에서 **QUERY_PLAN** 열은 NULL을 반환 합니다.  
+> **Xml** 데이터 형식에서 허용 되는 중첩 수준 수의 제한으로 인해 **dm_exec_query_plan** 는 128 수준의 중첩 된 요소를 충족 하거나 초과 하는 쿼리 계획을 반환할 수 없습니다. 이전 버전의에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 조건으로 인해 쿼리 계획에서 반환 하는 [오류 6335이 발생 했습니다](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]서비스 팩 2 이상 버전에서 **query_plan** 열은 NULL을 반환 합니다.  
 
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 `VIEW SERVER STATE` 권한이 필요합니다.  
 
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-looking-at-last-known-actual-query-execution-plan-for-a-specific-cached-plan"></a>A. 특정 캐시 된 계획에 대 한 마지막으로 알려진 실제 쿼리 실행 계획 보기  
- 다음 예에서는 **dm_exec_cached_plans** 를 쿼리하여 흥미로운 요금제를 찾고 출력 `plan_handle` 에서 복사 합니다.  
+ 다음 예에서는 **dm_exec_cached_plans** 를 쿼리하여 흥미로운 요금제를 찾고 출력에서 복사 합니다. `plan_handle`  
   
 ```sql  
 SELECT * FROM sys.dm_exec_cached_plans;  
 GO  
 ```  
   
-그런 다음 마지막으로 알려진 실제 쿼리 실행 계획을 가져오려면 시스템 함수 `plan_handle` **sys. dm_exec_query_plan_stats**로 복사 된를 사용 합니다.  
+그런 다음 마지막으로 알려진 실제 쿼리 실행 계획을 가져오려면 `plan_handle` 시스템 함수 **sys. dm_exec_query_plan_stats**로 복사 된를 사용 합니다.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_query_plan_stats(< copied plan_handle >);  

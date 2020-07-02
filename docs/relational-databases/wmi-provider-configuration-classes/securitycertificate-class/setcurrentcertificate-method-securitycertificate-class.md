@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 04b1a76a-932d-4824-8506-e346afe7554e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 17d637c2b5b4a8f65a2d2e843cdf439d856fdd3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de53ad9b1159428bf2695b6322a97ed83b3adeaa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659399"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736630"
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>SetCurrentCertificate 메서드(SecurityCertificate 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   현재 보안 인증서를 설정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -41,7 +41,7 @@ object.SetCurrentCertificate(SHA , SQLInstance)
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
 |*S*|필요한 보안 인증서의 SHA(Secure Hash Algorithm) 지문을 지정하는 문자열 값입니다.|  
 |*SQLInstance*|인증서가 필요한 인스턴스를 지정하는 문자열 값입니다.|  

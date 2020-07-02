@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 35a1418e416e32ab5b8dc9647c4a9aa24700b624
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a50ed63856e9998066db0b4d0791feb79478726c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388614"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734162"
 ---
 # <a name="xquery-language-reference-sql-server"></a>XQuery 언어 참조(SQL Server)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[tsql](../includes/tsql-md.md)]는 **xml** 데이터 형식을 쿼리 하는 데 사용 되는 XQuery 언어의 하위 집합을 지원 합니다. 이 XQuery 구현은 XQuery에 대한 2004년 7월 초안을 따릅니다. 이 언어는 Microsoft를 비롯한 주요 데이터베이스 공급업체의 참여 하에 W3C(World Wide Web Consortium)에서 개발 중에 있습니다. W3C 사양은 W3C 권장 사양이 되기 전에 향후 개정을 거칠 수 있기 때문에 이 구현은 최종 권장 사양과 다를 수 있습니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 지원되는 XQuery의 하위 집합에 대한 의미 및 구문에 대해 간단히 설명합니다.  
   
  자세한 내용은 [W3C XQuery 1.0 언어 사양](https://go.microsoft.com/fwlink/?LinkId=48846)을 참조 하세요.  
   
- XQuery는 구조화되었거나 반구조화된 XML 데이터를 쿼리할 수 있는 언어입니다. 에서 제공 하는 **xml** 데이터 형식 지원을 사용 [!INCLUDE[ssDE](../includes/ssde-md.md)]하면 문서를 데이터베이스에 저장 한 다음 XQuery를 사용 하 여 쿼리할 수 있습니다.  
+ XQuery는 구조화되었거나 반구조화된 XML 데이터를 쿼리할 수 있는 언어입니다. 에서 제공 하는 **xml** 데이터 형식 지원을 사용 하면 [!INCLUDE[ssDE](../includes/ssde-md.md)] 문서를 데이터베이스에 저장 한 다음 XQuery를 사용 하 여 쿼리할 수 있습니다.  
   
  XQuery는 기존의 XPath 쿼리 언어를 기반으로 더 나은 반복 성능 및 정렬 결과를 위한 지원이 추가되었으며 필요한 XML을 생성할 수 있는 기능이 지원됩니다. XQuery는 XQuery 데이터 모델에서 작동합니다. 이러한 모델은 XML 문서에 대한 추상적 표현이며 XQuery 결과는 형식화되거나 형식화되지 않을 수 있습니다. 유형 정보는 W3C XML 스키마 언어에서 제공되는 유형을 기반으로 합니다. 형식화 정보가 제공되지 않은 경우 XQuery는 데이터를 형식화되지 않은 것으로 처리합니다. 이는 XPath 버전 1.0에서 XML을 처리하는 방법과 비슷합니다.  
   
@@ -53,7 +53,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- XQuery에는 네임 스페이스 선언 `declare namespace``AWMI=...`, 및 쿼리 식가 `/AWMI:root/AWMI:Location[@LocationID=10]`포함 되어 있습니다.  
+ XQuery에는 네임 스페이스 선언, `declare namespace``AWMI=...` 및 쿼리 식가 포함 되어 있습니다 `/AWMI:root/AWMI:Location[@LocationID=10]` .  
   
  XQuery는 **xml** 유형의 명령 열에 대해 지정 됩니다. Xml 데이터 형식의 [query () 메서드](../t-sql/xml/query-method-xml-data-type.md) 는 XQuery를 지정 하는 데 사용 됩니다.  
   
@@ -66,7 +66,7 @@ WHERE ProductModelID=7
 |||  
   
 > [!NOTE]  
->  이 섹션의 구성은 W3C(World Wide Web Consortium) XQuery 초안 사양을 기반으로 합니다. 이 섹션에서 제공되는 일부 다이어그램은 이 사양에서 가져온 것입니다. 이 섹션에서는 Microsoft XQuery 구현과 W3C 사양을 비교하고 Microsoft XQuery와 W3C의 다른 점을 설명하고 지원되지 않는 W3C 기능에 대해 설명합니다. W3C 사양은에서 [http://www.w3.org/TR/2004/WD-xquery-20040723](https://go.microsoft.com/fwlink/?LinkId=48846)사용할 수 있습니다.  
+>  이 섹션의 구성은 W3C(World Wide Web Consortium) XQuery 초안 사양을 기반으로 합니다. 이 섹션에서 제공되는 일부 다이어그램은 이 사양에서 가져온 것입니다. 이 섹션에서는 Microsoft XQuery 구현과 W3C 사양을 비교하고 Microsoft XQuery와 W3C의 다른 점을 설명하고 지원되지 않는 W3C 기능에 대해 설명합니다. W3C 사양은에서 사용할 수 있습니다 [http://www.w3.org/TR/2004/WD-xquery-20040723](https://go.microsoft.com/fwlink/?LinkId=48846) .  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 92c8656b-f7fd-4904-9796-acc9ffed4106
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7b49f8be9ead1b94d9320f4a912f7e20d7891c53
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0a59ec7b385ca6c1b51967ec9a49f3d96d5b3e1c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827670"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738539"
 ---
 # <a name="sp_help_fulltext_columns-transact-sql"></a>sp_help_fulltext_columns(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   전체 텍스트 인덱싱하기 위해 지정한 열을 반환합니다.  
   
@@ -63,10 +63,10 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 |**FULLTEXT_BLOBTP_COLID**|**int**|문서 유형 열의 ID입니다. 이 값은 전체 텍스트 인덱싱된 열이 **varbinary (max)** 또는 **image** 열인 경우에만 적용할 수 있습니다.|  
 |**FULLTEXT_LANGUAGE**|**sysname**|열의 전체 텍스트 검색에 사용된 언어입니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  실행 권한은 기본적으로 **public** 역할의 멤버로 설정됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Document` 테이블에서 전체 텍스트 인덱싱을 위해 지정된 열에 대한 정보를 반환합니다.  
   
 ```  

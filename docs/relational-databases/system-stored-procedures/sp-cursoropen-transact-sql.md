@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f439fa61b8bfecfba9d03589af0d09ff737f3bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b09864e65bb0c46370ee0f8c3d09994f94027d6d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831773"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733343"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   커서를 엽니다. sp_cursoropen 커서 및 커서 옵션과 연결 된 SQL 문을 정의한 다음 커서를 채웁니다. sp_cursoropen는 문과 DECLARE_CURSOR의 조합에 해당 [!INCLUDE[tsql](../../includes/tsql-md.md)] 합니다. 이 프로시저는 TDS(Tabular Data Stream) 패킷에서 ID =2를 지정하여 호출합니다.  
   
@@ -201,7 +201,7 @@ sp_cursoropen cursor OUTPUT, stmt
 ## <a name="rpc-considerations"></a>RPC 고려 사항  
  커서 선택 목록 메타데이터가 TDS 스트림에 반환되도록 요청하기 위해 RPC RETURN_METADATA 입력 플래그를 0x0001로 설정할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="bound_param-parameter"></a>bound_param 매개 변수  
  5번째 매개 변수 다음의 모든 매개 변수는 문 계획에 입력 매개 변수로 전달됩니다. 이러한 첫 번째 매개 변수는 다음 형식의 문자열이어야 합니다.  

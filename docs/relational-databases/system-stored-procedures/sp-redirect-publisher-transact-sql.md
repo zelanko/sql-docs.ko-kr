@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60cd08c7ddf8ab520b6ff5e8ffb588b1a8f118c9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 54a53c3e1678215ad2eb1410a00da4904d0f84e7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828255"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734307"
 ---
 # <a name="sp_redirect_publisher-transact-sql"></a>sp_redirect_publisher(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   기존 게시자/데이터베이스 쌍에 대한 리디렉션된 게시자를 지정합니다. 게시자 데이터베이스가 Always On 가용성 그룹에 속하는 경우 리디렉션된 게시자는 가용성 그룹에 연결 된 가용성 그룹 수신기 이름입니다.  
   
@@ -57,7 +57,7 @@ sp_redirect_publisher
   
  원래 게시자의 게시 데이터베이스가 주 복제본의 가용성 그룹에서 제거 된 경우 * \@ redirected_publisher* 매개 변수의 값을 지정 하지 않고 **sp_redirect_publisher** 을 실행 하 여 게시자/데이터베이스 쌍에 대 한 리디렉션을 제거 합니다. 에서 게시자를 리디렉션하는 방법에 대 한 자세한 내용은 [SQL Server&#41;&#40;AlwaysOn 게시 데이터베이스 유지 관리 ](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)를 참조 하세요.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  호출자는 **sysadmin** 고정 서버 역할의 멤버 이거나 배포 데이터베이스에 대 한 **db_owner** 고정 데이터베이스 역할의 멤버 이거나 게시자 데이터베이스에 연결 된 정의 된 게시에 대 한 게시 액세스 목록의 멤버 여야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -20,21 +20,21 @@ ms.assetid: c962c619-e18f-4315-9251-8d9862462299
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 883469cb57a9735ccfc27ecaafa85fedd41cf9b3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0af2974f9f2372430bcb6a1672e2bcaa8b5dadf1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733488"
 ---
 # <a name="syscomputed_columns-transact-sql"></a>sys.computed_columns(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   **Sys.** 열에 있는 각 열에 대해 계산 열을 포함 하는 행을 포함 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**\<상속 된 열>**||**Computed_columns** 뷰는 **sys. columns** 뷰의 모든 열을 반환 합니다. 또한 아래에 설명된 추가 열도 반환합니다. **Computed_columns** 뷰가 **sys.debug**에서 상속 하는 열에 대 한 설명은 [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)을 참조 하십시오. **Is_computed** 열의 값은 항상 **computed_columns** 뷰에서 1로 설정 됩니다.|  
+|**\<Inherited columns>**||**Computed_columns** 뷰는 **sys. columns** 뷰의 모든 열을 반환 합니다. 또한 아래에 설명된 추가 열도 반환합니다. **Computed_columns** 뷰가 **sys.debug**에서 상속 하는 열에 대 한 설명은 [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)을 참조 하십시오. **Is_computed** 열의 값은 항상 **computed_columns** 뷰에서 1로 설정 됩니다.|  
 |**정의**|**nvarchar(max)**|이 계산 열을 정의하는 SQL 텍스트입니다.|  
 |**uses_database_collation**|**bit**|1 = 열 정의는 정확한 평가를 위해 데이터베이스의 기본 데이터 정렬에 의존합니다. 그렇지 않으면 0입니다. 이러한 종속성으로 인해 데이터베이스의 기본 데이터 정렬을 바꿀 수 없습니다.|  
 |**is_persisted**|**bit**|계산 열이 유지됩니다.|  

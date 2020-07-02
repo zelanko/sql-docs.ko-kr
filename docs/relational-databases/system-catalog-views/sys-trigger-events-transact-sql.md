@@ -20,15 +20,15 @@ ms.assetid: 92540447-131c-491c-b033-c064c7d950e1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a4a15ab9d38297ee1376d70a817efcf603d47df
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 71eefe5aca3271ca76f996ec255ce2f34c3a9ab1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833888"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733442"
 ---
 # <a name="systrigger_events-transact-sql"></a>sys.trace_events(Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   트리거가 실행되는 각 이벤트당 한 개의 행을 포함합니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82833888"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**\<Sys. events>에서 상속 된 열**|해당 사항 없음|는 [sys.debug](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)의 **object_id**, **형식** **type_desc** 열을 상속 합니다.|  
+|**\<Columns inherited from sys.events>**|해당 없음|는 [sys.debug](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)의 **object_id**, **형식** **type_desc** 열을 상속 합니다.|  
 |**is_first**|**bit**|트리거가 해당 이벤트에 대해 처음 실행되도록 표시됩니다.|  
 |**is_last**|**bit**|트리거가 해당 이벤트에 대해 마지막에 실행되도록 표시됩니다.|  
 |**event_group_type**|**int**|트리거가 생성되는 이벤트 그룹 또는 Null(이벤트 그룹에 생성되지 않은 경우)입니다.|  

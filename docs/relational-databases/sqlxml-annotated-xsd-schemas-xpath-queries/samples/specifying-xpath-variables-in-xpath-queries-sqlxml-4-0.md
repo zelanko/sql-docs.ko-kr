@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 56169fafb9d5705360899fb38757abaf599f96a9
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 624062a1ef50f4610e3b91d2197901219113fe53
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529867"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733669"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 XPath 변수 지정(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   다음 예에서는 XPath 쿼리에 XPath 변수를 전달하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 샘플 스키마에 대 한 자세한 내용은 [예제 주석 XSD schema For XPath 예제 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)를 참조 하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-use-the-xpath-variables"></a>A. XPath 변수 사용  
  샘플 템플릿은 XPath 쿼리 두 개로 구성되며 각 XPath 쿼리는 하나의 매개 변수를 사용합니다. 템플릿에는 이러한 매개 변수의 기본값도 지정되어 있습니다. 기본값은 매개 변수 값을 지정하지 않은 경우에 사용됩니다. 에는 기본값이 지정 된 두 개의 매개 변수가 지정 됩니다 **\<sql:header>** .  

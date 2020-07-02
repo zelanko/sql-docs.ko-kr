@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58fb650f9750e81b5e86b86cb5f630a843173930
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8dc6c2294d089ca86f571eec5f348c4270782740
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658998"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734303"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>SqlServiceAdvancedProperty 클래스
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   [SqlServiceAdvancedProperty 클래스](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 는 [sqlservice 클래스](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 개체에서 참조 하는 서비스의 고급 속성을 나타냅니다.  
   
  [AdvancedProperties 속성 (SqlService 클래스)](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/advancedproperties-property-sqlservice-class.md) 은 [SqlServiceAdvancedProperty 클래스](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 개체의 배열을 참조 합니다.  

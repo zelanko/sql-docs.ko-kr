@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4cc8fd7a20da6d0bf56d68b690bf35341cb6a63e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2b57d657f0f6b1113db6b36bfa7c559110f77e84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812141"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734727"
 ---
 # <a name="sysdm_exec_query_plan-transact-sql"></a>sys.dm_exec_query_plan(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 계획 핸들로 지정한 일괄 처리에 대한 XML 형식의 실행 계획을 반환합니다. 계획 핸들로 지정된 계획은 캐시되거나 현재 실행 중일 수 있습니다.  
   
@@ -81,13 +81,13 @@ sys.dm_exec_query_plan(plan_handle)
 > **Xml** 데이터 형식에서 허용 되는 중첩 수준 수의 제한으로 인해 **dm_exec_query_plan** 는 128 수준의 중첩 된 요소를 충족 하거나 초과 하는 쿼리 계획을 반환할 수 없습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 상태로 인해 쿼리 계획을 반환하지 못했으므로 오류 6335가 발생합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]서비스 팩 2 이상 버전에서 **query_plan** 열은 NULL을 반환 합니다.   
 > [Dm_exec_text_query_plan &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) 동적 관리 함수를 사용 하 여 쿼리 계획의 출력을 텍스트 형식으로 반환할 수 있습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Dm_exec_query_plan**를 실행 하려면 사용자가 **sysadmin** 고정 서버 역할의 멤버 이거나 `VIEW SERVER STATE` 서버에 대 한 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 **sys.dm_exec_query_plan** 동적 관리 뷰를 사용하는 방법을 보여줍니다.  
   
- XML 실행 계획을 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기에서 다음 쿼리를 실행하고 **sys.dm_exec_query_plan**에 의해 반환된 테이블의 **query_plan** 열에서 **ShowPlanXML**을 클릭합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 보고서 요약 창에 XML 실행 계획이 표시됩니다. XML 실행 계획을 파일에 저장 하려면 **query_plan** 열에서 **showplan XML** 을 마우스 오른쪽 단추로 클릭 하 고 다른 이름 **으로 결과 저장**을 클릭 하 고 파일 이름을 \<>. Sqlplan (예: myxmlshowplan. sqlplan)으로 *file_name* 지정 합니다.  
+ XML 실행 계획을 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기에서 다음 쿼리를 실행하고 **sys.dm_exec_query_plan**에 의해 반환된 테이블의 **query_plan** 열에서 **ShowPlanXML**을 클릭합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 보고서 요약 창에 XML 실행 계획이 표시됩니다. XML 실행 계획을 파일에 저장 하려면 **query_plan** 열에서 **showplan XML** 을 마우스 오른쪽 단추로 클릭 하 고 다른 이름 **으로 결과 저장**을 클릭 하 고 파일 이름을. sqlplan로 지정 합니다 ( \<*file_name*> 예: myxmlshowplan. sqlplan).  
   
 ### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>A. 실행 속도가 느린 Transact-SQL 쿼리 또는 일괄 처리에 대한 캐시된 쿼리 계획 검색  
  임시 일괄 처리, 저장 프로시저, 사용자 정의 함수 등 다양한 유형의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리에 대한 쿼리 계획은 계획 캐시라는 메모리 영역에서 캐시됩니다. 캐시된 쿼리 계획 각각은 계획 핸들이라는 고유 식별자로 식별됩니다. **sys.dm_exec_query_plan** 동적 관리 뷰에 이 계획 핸들을 지정하여 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 또는 일괄 처리에 대한 실행 계획을 검색할 수 있습니다.  

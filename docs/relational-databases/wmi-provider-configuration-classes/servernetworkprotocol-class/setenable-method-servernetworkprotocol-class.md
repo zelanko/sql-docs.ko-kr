@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a287950b-086f-4b6d-a2d8-4d3973bd1b21
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 264a1cdfb9d9b6cc981bf446a5d7fe189485e914
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f4852945c8b0685a6fe3f4d2ca5b26d5ad07143
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660653"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738488"
 ---
 # <a name="setenable-method-servernetworkprotocol-class"></a>SetEnable 메서드(ServerNetworkProtocol 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   서버 네트워크 프로토콜을 설정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,7 +37,7 @@ object.SetEnable()
   
 ## <a name="parts"></a>부분  
  *object*  
- 인스턴스에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]사용 하는 네트워크 프로토콜을 나타내는 [servernetworkprotocol 클래스](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md) 개체입니다.  
+ 인스턴스에서 사용 하는 네트워크 프로토콜을 나타내는 [Servernetworkprotocol 클래스](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md) 개체입니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  **uint32** 값으로, 0은 서비스가 수정되었음을 나타내고 1은 요청이 지원되지 않음을 나타내며 다른 모든 숫자는 오류를 나타냅니다.  

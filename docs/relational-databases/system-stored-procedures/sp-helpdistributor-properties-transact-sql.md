@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c3c044f9cd63f5942fdc212b2321628ac1b2c21
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: eca0c3f3c03438c9bcc6a715bf06b4aa58f8690a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828944"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733243"
 ---
 # <a name="sp_helpdistributor_properties-transact-sql"></a>sp_helpdistributor_properties(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   배포자 속성을 반환합니다. 이 저장 프로시저는 배포 데이터베이스의 배포자에서 실행됩니다.  
   
@@ -48,7 +48,7 @@ sp_helpdistributor_properties
 ## <a name="remarks"></a>설명  
  **sp_helpdistributor_properties** 은 모든 유형의 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버, 배포 데이터베이스에 대 한 **db_owner** 또는 **replmonitor** 고정 데이터베이스 역할의 멤버 및이 배포자를 사용 하는 게시에 대 한 PAL (게시 액세스 목록)의 사용자만 **sp_helpdistributor_properties**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

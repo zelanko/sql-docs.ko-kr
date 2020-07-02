@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cc6bad2dc55c611d45b728de4a23cf60c4b151cc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a75bc4a684382bb80d1602202f6eba18d799cdfd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660455"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736601"
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate 클래스
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [SecurityCertificate 클래스](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) 는 보안 인증서를 나타냅니다. 인증서는 해당 개인 키를 보유 하는 인스턴스에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]공개 키 값을 바인딩하는 디지털 서명 된 문입니다. 인증서는 인증 기관에서 발급합니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  [SecurityCertificate 클래스](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) 는 보안 인증서를 나타냅니다. 인증서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 해당 개인 키를 보유 하는 인스턴스에 공개 키 값을 바인딩하는 디지털 서명 된 문입니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . 인증서는 인증 기관에서 발급합니다.  
   
  [SecurityCertificate 클래스](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md)를 사용하여 다음 태스크를 수행할 수 있습니다.  
   

@@ -20,15 +20,15 @@ ms.assetid: 24747239-cd78-4d55-a00a-19233a457f42
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d45436070618e446921c610a9e82b0cc35271c8d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0f14acaaf8e4f92a603270619c181e9d97108c5d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265912"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734518"
 ---
 # <a name="sysdm_fts_memory_pools-transact-sql"></a>sys.dm_fts_memory_pools(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   전체 텍스트 탐색이나 전체 텍스트 탐색 범위에 대해 전체 텍스트 Gatherer 구성 요소에서 사용할 수 있는 공유 메모리 풀에 대한 정보를 반환합니다.  
    
@@ -42,8 +42,8 @@ ms.locfileid: "68265912"
   
 ## <a name="permissions"></a>사용 권한  
 
-에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
  
 ## <a name="physical-joins"></a>물리적 조인  
  ![이 동적 관리 뷰의 유효 조인](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-memory-pools-1.gif "이 동적 관리 뷰의 유효 조인")  
@@ -54,7 +54,7 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이�
 |----------|--------|------------------|  
 |dm_fts_memory_buffers.pool_id|dm_fts_memory_pools.pool_id|다 대 일|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 프로세스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 Gatherer 구성 요소가 소유한 총 공유 메모리를 반환합니다.  
   
 ```  

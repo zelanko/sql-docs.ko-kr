@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bace0824a7c8411e267186c3e9919ba2eb4be15c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 51f6125602813dda2fdc8dbddceaa93ccc5edea2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812036"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738627"
 ---
 # <a name="sysdm_hadr_availability_group_states-transact-sql"></a>sys.dm_hadr_availability_group_states(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   의 로컬 인스턴스에서 가용성 복제본을 소유 하는 각 Always On 가용성 그룹에 대해 하나의 행을 반환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 각 행에는 지정된 가용성 그룹의 상태를 정의하는 상태가 표시됩니다.  
   

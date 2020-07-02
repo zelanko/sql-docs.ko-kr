@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b4e2b27e9c284676c576586c125309fa8116531d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6195682217af76a27342c3592e69cccc74655210
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833795"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734477"
 ---
 # <a name="sysdm_hadr_cluster-transact-sql"></a>sys.dm_hadr_cluster(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   에 대해 사용 하도록 설정 된 인스턴스를 호스팅하는 WSFC (Windows Server 장애 조치 (Failover) 클러스터링) 노드에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] wsfc 쿼럼이 있는 경우 **dm_hadr_cluster** 는 쿼럼에 대 한 클러스터 이름 및 정보를 제공 하는 행을 반환 합니다. WSFC 노드에 쿼럼이 없으면 반환되는 행이 없습니다.  
  > [!TIP]

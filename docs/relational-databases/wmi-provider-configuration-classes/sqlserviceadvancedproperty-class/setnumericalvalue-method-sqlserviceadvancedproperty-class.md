@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 950ed1e8-0538-4db4-807c-a2c36f43cf6b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e93cfbb28276b15906296323539937009213632
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ff97153595698a12a3ee95922e31a83a0cf5ee17
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659984"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736567"
 ---
 # <a name="setnumericalvalue-method-sqlserviceadvancedproperty-class"></a>SetNumericalValue 메서드(SqlServiceAdvancedProperty 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   속성의 숫자 값을 설정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -41,7 +41,7 @@ object.SetNumericalValue(NumValue)
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
 |*NumValue*|고급 속성의 값을 지정하는 **uint32** 값입니다.|  
   

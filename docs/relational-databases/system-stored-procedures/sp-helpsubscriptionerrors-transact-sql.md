@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c41294867de508ed39815b16183d5151c55197a4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b974356db48a7621103d24894a39e9f0a3037e63
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826081"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736948"
 ---
 # <a name="sp_helpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   지정된 구독에 대한 모든 트랜잭션 복제 오류를 반환합니다. 이 저장 프로시저는 배포 데이터베이스의 배포자에서 실행됩니다.  
   
@@ -72,7 +72,7 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>설명  
  **sp_helpsubscriptionerrors** 는 스냅숏 및 트랜잭션 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_helpsubscriptionerrors**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -18,15 +18,15 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9682535c82f8a579259993e82560dfe6bc930f93
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8144e6a134edf3331b34f5c91f6d676e6a9302f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061358"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733398"
 ---
 # <a name="systrusted_assemblies-transact-sql"></a>sys.trusted_assemblies(Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 서버에 대해 신뢰할 수 있는 각 어셈블리에 대 한 행을 포함 합니다.
 
@@ -44,7 +44,7 @@ ms.locfileid: "68061358"
 
 ## <a name="remarks"></a>설명  
 
-**Sp_add_trusted_assembly를 추가 하** 고 trusted_assemblies를 추가 **해야** 합니다 .를 사용 하 여에서 `sys.trusted_assemblies`어셈블리를 추가 하거나 제거 합니다.
+**Sp_add_trusted_assembly를 추가 하** 고 trusted_assemblies를 추가 **해야** 합니다 .를 사용 하 여에서 어셈블리를 추가 하거나 제거 `sys.trusted_assemblies` 합니다.
 
 ## <a name="see-also"></a>참고 항목  
   [sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md) [sys. sp_drop_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) [drop assembly &#40;transact-sql&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  

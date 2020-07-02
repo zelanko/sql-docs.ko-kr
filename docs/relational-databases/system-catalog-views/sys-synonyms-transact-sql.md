@@ -20,21 +20,21 @@ ms.assetid: d6e88ca6-6e3d-4f56-bd3e-d85e26be5499
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 321178f73fdad8ce9ceb73080b2ec9030b554f81
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7d91e3bb92b7053817eac6de8f0388200ac7f420
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833897"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733472"
 ---
 # <a name="syssynonyms-transact-sql"></a>sys.synonyms(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   각 동의어 개체에 대 한 행을 포함 합니다. 여기에는 **sys.debug** = SN이 있습니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**\<Sys. 개체에서 상속 된 열>**||이 뷰가 상속 하는 열 목록은 [sys. 개체 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.|  
+|**\<Columns inherited from sys.objects>**||이 뷰가 상속 하는 열 목록은 [sys. 개체 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.|  
 |**base_object_name**|**nvarchar (1035)**|이 동의어의 사용자가 리디렉션되는 개체의 따옴표 붙은 전체 이름입니다.|  
   
 ## <a name="permissions"></a>사용 권한  

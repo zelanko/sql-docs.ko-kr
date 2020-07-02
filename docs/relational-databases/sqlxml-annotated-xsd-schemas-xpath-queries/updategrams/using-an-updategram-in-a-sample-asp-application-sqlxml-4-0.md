@@ -16,15 +16,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96b2454ef4440318c7a386caab9b703ddecf9f83
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 61ad2bae525acfe7b461e2e89bf9477ff73513ab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529830"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733638"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>예제 ASP 애플리케이션에서 Updategram 사용(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   이 ASP(Active Server Pages) 애플리케이션을 사용하여 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 AdventureWorks 예제 데이터베이스의 Person.Contact 테이블에 있는 고객 정보를 업데이트할 수 있습니다. 이 애플리케이션에서는 다음 작업을 수행합니다.  
   
 -   사용자에게 연락처 ID를 입력하도록 요청합니다.  

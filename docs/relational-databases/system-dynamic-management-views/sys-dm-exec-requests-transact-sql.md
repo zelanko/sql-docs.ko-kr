@@ -20,16 +20,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8e1cf6bdf4270759a94761e67b94009576ef6ad
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: 44c20aeed09468b9f2e0cc7047364f563e463daf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84941084"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734693"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 에서 실행 되는 각 요청에 대 한 정보를 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 요청에 대 한 자세한 내용은 [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)를 참조 하세요.
    
@@ -109,7 +109,7 @@ ms.locfileid: "84941084"
 Always On 시나리오에서 보조 복제본이 **읽기**전용으로 설정 된 경우 보조 복제본에 대 한 연결은를 추가 하 여 연결 문자열 매개 변수에 응용 프로그램 의도를 지정 해야 합니다 `applicationintent=readonly` . 그렇지 않으면 권한이 있는 경우에도에 대 한 액세스 검사는 `sys.dm_exec_requests` 가용성 그룹의 데이터베이스에 대해 전달 되지 않습니다 `VIEW SERVER STATE` .
 
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-finding-the-query-text-for-a-running-batch"></a>A. 실행 중인 일괄 처리에 대한 쿼리 텍스트 찾기
 

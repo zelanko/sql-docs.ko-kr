@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 0f9f7f7d-f8ab-426e-a85d-4eda3a241eb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a0929d4a0b88a954a0beef9789b3aeb7d9ab092d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 93aaf92104db30c13d5cfdd8474935009cf4de88
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660325"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736615"
 ---
 # <a name="servernetworkprotocol-class"></a>ServerNetworkProtocol 클래스
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [Servernetworkprotocol 클래스](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md) 는 네트워크를 통해 클라이언트와 통신할 수 있도록 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 하는 인스턴스에 설치 된 네트워크 프로토콜을 나타냅니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  [Servernetworkprotocol 클래스](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md) 는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네트워크를 통해 클라이언트와 통신할 수 있도록 하는 인스턴스에 설치 된 네트워크 프로토콜을 나타냅니다.  
   
  [Servernetworkprotocol 클래스](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md)를 사용 하 여 다음을 수행할 수 있습니다.  
   

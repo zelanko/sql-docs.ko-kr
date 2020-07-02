@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b76ae96-737a-4000-a6b6-fcc8772c2af4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8d86c5566aa7d97f1aea0d4cc8e6e9e9140001c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4e727ed1f9d8d204e81b09e853c1d9ae70b23449
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82805493"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736787"
 ---
 # <a name="msmerge_conflicts_info-transact-sql"></a>MSmerge_conflicts_info(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_conflicts_info** 테이블은 병합 게시에 대 한 구독을 동기화 할 때 발생 하는 충돌을 추적 합니다. 충돌에 대 한 행 데이터 손실는 충돌이 발생 한 아티클의 [MSmerge_conflict_publication_article](../../relational-databases/system-tables/msmerge-conflict-publication-article-transact-sql.md) 테이블에 저장 됩니다. 이 테이블은 게시 데이터베이스의 게시자와 구독 데이터베이스의 구독자에 저장됩니다.  
   

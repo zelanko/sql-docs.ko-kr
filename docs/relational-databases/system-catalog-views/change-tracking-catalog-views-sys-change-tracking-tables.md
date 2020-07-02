@@ -21,15 +21,15 @@ ms.assetid: 97ec69b6-0d49-4d98-82f0-d3e77ba1ad2b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c88edbec34a76b585d114c63b411621fd63d70c3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 56eafcd6edf4dbce67e86ad0a799b409e5e82868
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823647"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733595"
 ---
 # <a name="change-tracking-catalog-views---syschange_tracking_tables"></a>변경 내용 추적 카탈로그 뷰-sys. change_tracking_tables
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   변경 내용 추적이 설정된 현재 데이터베이스의 각 테이블에 대해 한 개의 행을 반환합니다.  
    
@@ -41,7 +41,7 @@ ms.locfileid: "82823647"
 |cleanup_version|**bigint**|정리가 변경 내용 추적 정보를 제거한 최대 버전입니다.|  
 |min_valid_version|**bigint**|테이블에 사용할 수 있는 변경 내용 추적 정보의 최소 유효한 버전입니다.<br /><br /> 이 행에 연결된 테이블의 변경 내용을 가져올 경우 last_sync_version 값은 이 열에 보고된 버전보다 크거나 같아야 합니다. 자세한 내용은 [CHANGE_TRACKING_MIN_VALID_VERSION &#40;transact-sql&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)를 참조 하세요.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

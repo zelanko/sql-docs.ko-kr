@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4f1e6d9b7f9bce06a8003b56fc6767c992636957
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3ab8827795c2d65bcd6044102567d9b265c319f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831090"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733283"
 ---
 # <a name="sp_enumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   보류 중인 모든 스키마 변경의 목록을 반환합니다. 이 저장 프로시저는 [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md)와 함께 사용할 수 있습니다 .이를 통해 관리자는 선택한 보류 중인 스키마 변경 내용이 복제 되지 않도록 건너뛸 수 있습니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f77b7a36e51d08aa3ae82b5d42e28b0173d750cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2a07c87dea5be1a3d66c5e24996a120323d09ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659023"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738463"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent 클래스
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일에서 이벤트를 보기 위한 속성을 제공합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -58,7 +58,7 @@ class SQLErrorLogEvent
 |네임스페이스|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 지정된 로그 파일에서 로깅된 모든 이벤트의 값을 검색하는 방법을 보여 줍니다. 예제를 실행 하려면 \< *Instance_Name*>을 ' Instance1 '과 같은 인스턴스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이름으로 바꾸고 ' File_Name '을 오류 로그 파일의 이름 (예: ' ')으로 바꿉니다.  
+ 다음 예에서는 지정된 로그 파일에서 로깅된 모든 이벤트의 값을 검색하는 방법을 보여 줍니다. 예제를 실행 하려면을 \<*Instance_Name*> ' Instance1 '과 같은의 인스턴스 이름으로 바꾸고, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ' File_Name '을 오류 로그 파일의 이름 (예: ' ')으로 바꿉니다.  
   
 ```  
 on error resume next  
@@ -78,21 +78,21 @@ WScript.Echo "Instance Name: " & logEvent.InstanceName & vbNewLine _
 Next  
 ```  
   
-## <a name="comments"></a>주석  
- *InstanceName* 또는 *FileName* 이 WQL 문에 제공 되지 않은 경우 쿼리는 기본 인스턴스와 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일에 대 한 정보를 반환 합니다. 예를 들어 다음 WQL 문은 기본 인스턴스(MSSQLSERVER)의 현재 로그 파일(ERRORLOG)에서 모든 로그 이벤트를 반환합니다.  
+## <a name="comments"></a>의견  
+ *InstanceName* 또는 *FileName* 이 WQL 문에 제공 되지 않은 경우 쿼리는 기본 인스턴스와 현재 로그 파일에 대 한 정보를 반환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 예를 들어 다음 WQL 문은 기본 인스턴스(MSSQLSERVER)의 현재 로그 파일(ERRORLOG)에서 모든 로그 이벤트를 반환합니다.  
   
 ```  
 "SELECT * FROM SqlErrorLogEvent"  
 ```  
   
 ## <a name="security"></a>보안  
- WMI를 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일에 연결 하려면 로컬 컴퓨터와 원격 컴퓨터 모두에 대 한 다음 권한이 있어야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]WMI를 통해 로그 파일에 연결 하려면 로컬 컴퓨터와 원격 컴퓨터 모두에 대 한 다음 권한이 있어야 합니다.  
   
 -   **Root\Microsoft\SqlServer\ComputerManagement10** WMI 네임 스페이스에 대 한 읽기 액세스입니다. 기본적으로 모든 사용자는 계정 사용 권한으로 읽기 액세스합니다.  
   
--   오류 로그를 포함하는 폴더에 대한 읽기 권한. 기본적으로 오류 로그는 다음 경로에 있습니다. 여기서 \< *Drive>* 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치한 \<드라이브를 나타내고 *InstanceName*>는 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이름입니다.  
+-   오류 로그를 포함하는 폴더에 대한 읽기 권한. 기본적으로 오류 로그는 다음 경로에 있습니다. 여기서 *는를 \<*Drive> 설치한 드라이브를 나타내고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \<*InstanceName*> 는 인스턴스의 이름입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     **드라이브>: Files\Microsoft SQL Server\MSSQL13. \<** **\< InstanceName> \MSSQL\Log**  
+     ** \<Drive> : Files\Microsoft SQL Server\MSSQL13** **. \<InstanceName> \MSSQL\Log**  
   
  방화벽을 통해 연결하는 경우 방화벽에 원격 대상 컴퓨터의 WMI에 대한 예외가 설정되어 있는지 확인합니다. 자세한 내용은 [Windows Vista부터 원격으로 WMI에 연결](https://go.microsoft.com/fwlink/?LinkId=178848)을 참조 하세요.  
   

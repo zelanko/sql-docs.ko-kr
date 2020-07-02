@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 9abc595c-346d-42dc-a227-a73cd0a356eb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c50aa211af4a359357ae2d3aa9b892e9fc51983f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9ed21f6458cfeb7b9a812a179339029846209344
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823448"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733563"
 ---
 # <a name="external-operations-catalog-views-transact-sql"></a>외부 작업 카탈로그 뷰 (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   데이터 원본, 파일 형식 및 테이블과 같은 외부 데이터 개체의 카탈로그 뷰는 다음과 같습니다. 이러한 뷰를 사용 하 여 PolyBase 작업에서 사용 되는 Hadoop 테이블과 같은 항목의 상태를 쿼리할 수 있습니다.  
   

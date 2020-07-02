@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 640d292dfbef7adae9fc99b53cb3b450f698b651
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8829d5f259f9a2e2b26b1e3252907ba9bd0b25dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085122"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733251"
 ---
 # <a name="sp_help_spatial_geometry_histogram-transact-sql"></a>sp_help_spatial_geometry_histogram(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   공간 인덱스의 경계 상자 및 표 매개 변수의 키 지정을 용이하게 합니다.  
   
@@ -65,10 +65,10 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  테이블 값이 반환됩니다. 다음 표에서는 테이블의 열 내용에 대해 설명합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|각 셀의 고유한 ID를 나타내며 1부터 셉니다.|  
-|**셀씩**|**geometry**|각 셀을 나타내는 사각의 다각형입니다. 셀 셰이프는 공간 인덱싱에 사용된 셀 셰이프와 동일합니다.|  
+|**셀씩**|**기하학**|각 셀을 나타내는 사각의 다각형입니다. 셀 셰이프는 공간 인덱싱에 사용된 셀 셰이프와 동일합니다.|  
 |**row_count**|**bigint**|셀에 접해 있거나 셀을 포함하는 공간 개체 수를 나타냅니다.|  
   
 ## <a name="permissions"></a>사용 권한  
@@ -79,7 +79,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
   
  경계 상자를 벗어나거나 경계 상자 테두리에 접해 있는 개체의 수가 포함된 결과 집합에 행이 추가로 삽입될 수 있습니다. 이 행의 **cellid** 은 0이 고이 행의 **셀** 에는 경계 상자를 나타내는 **LineString** 이 포함 됩니다. 이 행은 경계 상자 밖의 전체 공간을 나타냅니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 예제 테이블을 만든 다음 테이블에 대해 **sp_help_spatial_geometry_histogram** 를 호출 합니다.  
   
  `USE AdventureWorksDW2012`  

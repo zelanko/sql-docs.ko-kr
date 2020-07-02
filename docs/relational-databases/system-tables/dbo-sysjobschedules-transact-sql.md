@@ -1,5 +1,5 @@
 ---
-title: dbo. sysjobschedules (Transact-sql) | Microsoft Docs
+title: dbo.sysjobschedules (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ccdafec7-2a9b-4356-bffb-1caa3a12db59
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e417a597b6cd7fbb2ccb0aa7131fb17ed458370a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b6b138f2c0f724f003c796574798dcccc82122ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827337"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736860"
 ---
 # <a name="dbosysjobschedules-transact-sql"></a>dbo.sysjobschedules(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행할 작업에 관한 일정 정보를 포함합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
@@ -41,6 +41,6 @@ ms.locfileid: "82827337"
 |**next_run_time**|**int**|작업을 실행하도록 예약된 시간입니다. 시간 형식은 HHMMSS이며 24시간제를 사용합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [&#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+ [Transact-sql&#41;&#40;dbo.sys일정](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

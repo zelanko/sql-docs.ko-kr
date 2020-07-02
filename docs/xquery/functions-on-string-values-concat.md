@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02d3762f419789732406564606ad7a3b990e30fd
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: f6fadf3bed15869ccd3d3307dcfe8b70c53d5310
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881813"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737868"
 ---
 # <a name="functions-on-string-values---concat"></a>문자열 값 함수 - concat
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   0개 이상의 문자열을 인수로 허용하고 이러한 각 인수의 값을 연결하여 만든 문자열을 반환합니다.  
   

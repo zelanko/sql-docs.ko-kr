@@ -28,15 +28,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e4cfa5ef312bc9048a53405a6c1083183b10054
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 01fd8e99d6eb770c2f5680ead1e2c4d9b9ec98b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529783"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733657"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 업데이트(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   기존 데이터를 업데이트 하는 경우 및 블록을 모두 지정 해야 합니다 **\<before>** **\<after>** . 및 블록에 지정 된 요소는 **\<before>** **\<after>** 원하는 변경을 설명 합니다. Updategram은 블록에 지정 된 요소를 사용 하 여 **\<before>** 데이터베이스의 기존 레코드를 식별 합니다. 블록의 해당 요소는 **\<after>** 업데이트 작업을 실행 한 후 레코드를 찾는 방법을 표시 합니다. 이 정보를 통해 updategram는 블록과 일치 하는 SQL 문을 만듭니다 **\<after>** . 그런 다음 Updategram은 이 문을 사용하여 데이터베이스를 업데이트합니다.  
   
  다음은 업데이트 작업을 위한 Updategram 형식입니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "84529783"
   
  블록에서 하나의 요소를 지정 하 **\<before>** 고 블록에 해당 요소를 하나만 지정 하는 경우 **\<after>** **updg: id** 를 사용 하지 않아도 됩니다. 그러나 모호성을 방지 하려면 **updg: id** 를 지정 하는 것이 좋습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  Updategram 예를 사용하기 전에 다음 사항을 확인하십시오.  
   
 -   대부분의 예에서는 기본 매핑을 사용합니다. 즉, Updategram에 매핑 스키마가 지정되지 않습니다. 매핑 스키마를 사용 하는 updategram의 추가 예제는 [Updategram &#40;SQLXML 4.0&#41;에서 주석이 추가 된 매핑 스키마 지정 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)을 참조 하세요.  

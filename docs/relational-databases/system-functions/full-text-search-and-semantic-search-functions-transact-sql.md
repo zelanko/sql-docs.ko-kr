@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a61a3694-7604-4583-962e-fc30f771c6fa
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 58bf5650a5ab06783ad0c889bc3286184a7d73ed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cdf480d27a0cc0a1b1b646a5c902d7994ad88b5e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042747"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734368"
 ---
 # <a name="full-text-search-and-semantic-search-functions-transact-sql"></a>전체 텍스트 Search 및 의미 체계 Search 함수(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 섹션에서는 전체 텍스트 검색 및 의미 체계 검색과 관련된 시스템 함수에 대해 설명합니다.  
   

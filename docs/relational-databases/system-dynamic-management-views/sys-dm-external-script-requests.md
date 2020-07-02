@@ -20,15 +20,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 80b468006ba3ec4c479514059b3b89f65e500b37
-ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
+ms.openlocfilehash: a6fa4a695dd8d15efa6ba2f3a6c7e1ef66d3dfa3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85469348"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734616"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 외부 스크립트를 실행 중인 각 활성 작업자 계정 행을 반환합니다.
   
@@ -79,7 +79,7 @@ external_script_request_id  |language  |degree_of_parallelism  |external_user_na
 ---------|---------|---------|---------
 183EE6FC-7399-4318-AA2E-7A6C68E435A8     |     R    |      1   |  MSSQLSERVER01
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 + [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
 + [실행 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  

@@ -19,16 +19,16 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: fa60c1785e0740dde4bc6b3755dea36db8a5a21a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0552dbdce5da12db4fedadecb5a4bd7e9c55c278
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900915"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738661"
 ---
 # <a name="sysdm_fts_parser-transact-sql"></a>sys.dm_fts_parser(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정 된 [단어 분리기](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md), [동의어 사전](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)및 [중지 목록](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) 조합을 쿼리 문자열 입력에 적용 한 후 최종 토큰화 결과를 반환 합니다. 토큰화 결과는 지정된 쿼리 문자열에 대한 전체 텍스트 엔진의 출력과 같습니다.  
   
@@ -61,11 +61,11 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |1|중요<br /><br /> "카페" 및 "카페"와 같은 단어는 다르게 처리 됩니다.|  
   
 > [!NOTE]  
->  전체 텍스트 카탈로그에 대해이 값의 현재 설정을 보려면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 다음 문을 `SELECT fulltextcatalogproperty('`실행 합니다. *catalog_name*`', 'AccentSensitivity');`.  
+>  전체 텍스트 카탈로그에 대해이 값의 현재 설정을 보려면 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행 합니다. `SELECT fulltextcatalogproperty('` *catalog_name* `', 'AccentSensitivity');` .  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |키워드(keyword)|**varbinary(128)**|단어 분리기에서 반환된 특정 키워드의 16진수 표현입니다. 이러한 표현은 키워드를 전체 텍스트 인덱스에 저장하는 데 사용됩니다. 이 값은 사람이 읽을 수 없지만, 지정 된 키워드를 전체 텍스트 인덱스의 내용을 반환 하는 다른 동적 관리 뷰 (예: [dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) 및 [dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md))에서 반환 되는 출력에 사용할 경우 유용 합니다.<br /><br /> **참고:** OxFF는 파일이 나 데이터 집합의 끝을 나타내는 특수 문자를 나타냅니다.|  
 |group_id|**int**|지정된 용어가 생성된 논리 그룹을 차별화하는 데 유용한 정수 값을 포함합니다. 예를 들어 '`Server AND DB OR FORMSOF(THESAURUS, DB)"`'는 다음 group_id 값을 영어로 생성합니다.<br /><br /> 1: 서버<br />2: DB<br />3: DB|  
@@ -80,7 +80,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  CONTAINSTABLE은 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 및 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)와 같은 전체 텍스트 조건자의 구문 및 기능과 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 및 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)와 같은 함수를 지원 합니다. **dm_fts_parser**  
   
 ## <a name="using-unicode-for-parsing-special-characters"></a>유니코드를 사용하여 특수 문자 구문 분석  
- 쿼리 문자열을 구문 분석할 때 쿼리 문자열을 유니코드로 지정 하지 않는 한, **dm_fts_parser** 은 연결 된 데이터베이스의 데이터 정렬을 사용 합니다. 따라서 ü 또는 ç와 같은 특수 문자가 포함 된 비유니코드 문자열의 경우 데이터베이스의 데이터 정렬에 따라 예기치 않은 결과가 발생할 수 있습니다. 데이터베이스 데이터 정렬과 독립적으로 쿼리 문자열을 처리 `N`하려면 문자열 `N'`앞에를 *query_string*`'`합니다.  
+ 쿼리 문자열을 구문 분석할 때 쿼리 문자열을 유니코드로 지정 하지 않는 한, **dm_fts_parser** 은 연결 된 데이터베이스의 데이터 정렬을 사용 합니다. 따라서 ü 또는 ç와 같은 특수 문자가 포함 된 비유니코드 문자열의 경우 데이터베이스의 데이터 정렬에 따라 예기치 않은 결과가 발생할 수 있습니다. 데이터베이스 데이터 정렬과 독립적으로 쿼리 문자열을 처리 하려면 문자열 앞에를 `N` `N'` *query_string* `'` 합니다.  
   
  자세한 내용은 이 항목의 뒷부분에 나오는 "3. 특수 문자가 포함된 문자열의 출력 표시"를 참조하십시오.  
   
@@ -126,7 +126,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버 자격과 지정 된 중지 목록에 대 한 액세스 권한이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-displaying-the-output-of-a-given-word-breaker-for-a-keyword-or-phrase"></a>A. 키워드 또는 구에 대해 지정된 단어 분리기의 출력 표시  
  다음 예에서는 아래의 쿼리 문자열에 대해 LCID가 1033인 영어 단어 분리기를 사용하여 출력을 반환합니다. 여기서 중지 목록은 사용되지 않습니다.  

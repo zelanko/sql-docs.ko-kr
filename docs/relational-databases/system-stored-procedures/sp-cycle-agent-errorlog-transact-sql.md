@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8fcb9bad5548107ef3a9294f22696abeacbdedcd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b51893b5676222a713b81409e3778904e4fc9580
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826255"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733298"
 ---
 # <a name="sp_cycle_agent_errorlog-transact-sql"></a>sp_cycle_agent_errorlog(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   현재의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그 파일을 닫고 서버를 다시 시작하는 것처럼 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그 확장 번호를 순환시킵니다. 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그에는 새 로그가 생성되었음을 나타내는 줄이 포함됩니다.  
   
@@ -49,10 +49,10 @@ sp_cycle_agent_errorlog
   
  이 저장 프로시저는 **msdb** 데이터베이스에서 실행 해야 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sp_cycle_agent_errorlog** 에 대 한 실행 권한은 **sysadmin** 고정 서버 역할의 멤버로 제한 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그를 순환시킵니다.  
   
 ```  

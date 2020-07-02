@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f9adbc21b0c226746c879bf1b32377c93b2d76c1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c2495cf2bc8941e2c619255f4328eba6be1942a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829268"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736729"
 ---
 # <a name="msmerge_identity_range_allocations-transact-sql"></a>MSmerge_identity_range_allocations(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_identity_range_allocations** 테이블은 게시 된 아티클에 대 한 id 범위 할당 기록을 게시자와 구독자 모두에 추적 하는 데 사용 됩니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82829268"
 |**publisher_id**|**smallint**|게시자의 ID입니다.|  
 |**publisher_db**|**nvarchar(128)**|게시 데이터베이스의 이름입니다.|  
 |**게시물**|**nvarchar(128)**|게시의 이름입니다.|  
-|**자료**|**nvarchar(128)**|아티클의 이름입니다.|  
+|**문서**|**nvarchar(128)**|아티클의 이름입니다.|  
 |**구독자**|**nvarchar(128)**|구독자 이름입니다.|  
 |**subscriber_db**|**nvarchar(128)**|구독 데이터베이스의 이름입니다.|  
 |**is_pub_range**|**bit**|게시자에 ID 범위가 할당되었는지 여부를 나열합니다.|  

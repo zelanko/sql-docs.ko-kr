@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5dfb1efc93efe8c4b59d649466f8b0c0af0a64a6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7d4cad38c515815f5cc4e30424156311388c7420
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812829"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736849"
 ---
 # <a name="mslogreader_history-transact-sql"></a>MSlogreader_history(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSlogreader_history** 테이블에는 로컬 배포자와 연결 된 로그 판독기 에이전트에 대 한 기록 행이 포함 되어 있습니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

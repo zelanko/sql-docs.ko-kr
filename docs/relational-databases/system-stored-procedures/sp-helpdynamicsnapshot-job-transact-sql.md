@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 866f05904cfa1b6c7b3ce6b20a59a5be3096be2b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a155e7031a78cac6dcea4ca380f7b496d59170f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810735"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733220"
 ---
 # <a name="sp_helpdynamicsnapshot_job-transact-sql"></a>sp_helpdynamicsnapshot_job(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   필터링된 데이터 스냅샷을 생성하는 에이전트 작업에 대한 정보를 반환합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -84,7 +84,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
   
  모든 기본 매개 변수 값이 사용되는 경우에는 전체 게시 데이터베이스에 대한 모든 분할 데이터 스냅샷 작업의 정보가 반환됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버, **db_owner** 고정 데이터베이스 역할 및 게시에 대 한 게시 액세스 목록의 멤버만 **sp_helpdynamicsnapshot_job**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 22a45505d5b79e7431902331d1dbca5ef0facbbf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0ede8e0515decf06304694fa3a907cc468b16de1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830597"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734593"
 ---
 # <a name="sysdm_filestream_non_transacted_handles-transact-sql"></a>sys.dm_filestream_non_transacted_handles(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   FileTable 데이터와 연결된 현재 열려 있는 비트랜잭션 파일 핸들을 표시합니다.  
   

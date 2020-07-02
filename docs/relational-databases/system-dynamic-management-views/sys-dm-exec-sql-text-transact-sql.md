@@ -20,15 +20,15 @@ ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de6ed0a0b8f91157b61c7d38564c8ab0941f1c6c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b2a7a5e9f8410ab8ca66f0621d6a2c955258c28c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830641"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734665"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   지정 된 *sql_handle*에 의해 식별 되는 SQL 일괄 처리의 텍스트를 반환 합니다. 이 테이블 반환 함수는 시스템 함수 **fn_get_sql**을 대체합니다.  
   
@@ -95,7 +95,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 > [!NOTE]
 > 임시 쿼리에 대 한 *sql_handle* 에서 **dbid** 를 확인할 수 없습니다. 임시 쿼리에 대해 **dbid** 를 결정 하려면 *plan_handle* 를 대신 사용 합니다.
   
-## <a name="examples"></a>예 
+## <a name="examples"></a>예제 
 
 ### <a name="a-conceptual-example"></a>A. 개념 예
 다음은 직접 또는 **CROSS APPLY**를 사용 하 여 **sql_handle** 를 전달 하는 방법을 보여 주는 기본 예제입니다.

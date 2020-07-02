@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb3ab70170f1b96bcfd62a9d7108792871ccd5d7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3a31eb5fa85ab7634d6fc65ac446607117ec70ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828964"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738516"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정된 데이터베이스 또는 모든 데이터베이스에 관한 정보를 보고합니다.  
   
@@ -62,7 +62,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**name**|**nchar(128)**|논리적 파일 이름입니다.|  
 |**fileid**|**smallint**|파일의 ID입니다.|  
-|**이름도**|**nchar (260)**|운영 체제 파일 이름(물리적 파일 이름)입니다.|  
+|**filename**|**nchar (260)**|운영 체제 파일 이름(물리적 파일 이름)입니다.|  
 |**그룹별로**|**nvarchar(128)**|파일이 속한 파일 그룹입니다.<br /><br /> NULL = 로그 파일이며 파일 그룹에 속하지 않습니다.|  
 |**size**|**nvarchar (18)**|파일 크기(MB)입니다.|  
 |**크기**|**nvarchar (18)**|파일이 증가할 수 있는 최대 크기입니다. 이 필드 값이 UNLIMITED이면 디스크가 꽉 찰 때까지 파일이 증가할 수 있음을 의미합니다.|  
@@ -72,12 +72,12 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ## <a name="remarks"></a>설명  
  결과 집합의 **상태** 열에는 데이터베이스에서 ON으로 설정 된 옵션이 보고 됩니다. 모든 데이터베이스 옵션은 **상태** 열에서 보고 되지 않습니다. 현재 데이터베이스 옵션 설정의 전체 목록을 보려면 **sys.debug** 카탈로그 뷰를 사용 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  단일 데이터베이스를 지정 하는 경우 데이터베이스에서 **public** 역할의 멤버 자격이 필요 합니다. 데이터베이스를 지정 하지 않으면 **master** 데이터베이스에서 **public** 역할의 멤버 자격이 필요 합니다.  
   
  데이터베이스에 액세스할 수 없는 경우 **sp_helpdb** 오류 메시지 15622 및 가능한 데이터베이스에 대 한 정보를 표시 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-information-about-a-single-database"></a>A. 단일 데이터베이스에 대한 정보 반환  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대한 정보를 표시합니다.  

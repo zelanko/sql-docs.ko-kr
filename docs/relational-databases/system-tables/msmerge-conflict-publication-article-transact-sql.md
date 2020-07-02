@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: dc4490b4-02d8-4dfc-98f5-0cf8de8e11be
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 070b8cfe44190f89db8e7adf142debbc29e64d15
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 013e2d1512744d236ac3d8bdd5611e1a2427c2f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829248"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736803"
 ---
 # <a name="msmerge_conflict_publication_article-transact-sql"></a>MSmerge_conflict_publication_article (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_conflict_publication_article** 테이블에는 충돌 하거나 데이터 일치성을 얻기 위해 실행 취소 된 행 변경 내용에 대 한 정보가 포함 되어 있습니다. 게시 안에 각 복제 테이블에 대한 충돌 테이블이 존재하는데 충돌 테이블 이름 끝에 게시 및 아티클 이름이 붙습니다. 이러한 아티클별 충돌 테이블은 충돌 기록을 위해 사용하는 데이터베이스에 존재하는데 대체로 게시 데이터베이스에 존재하지만 충돌을 분산하여 기록할 때는 구독 데이터베이스에 존재할 수도 있습니다.  
   

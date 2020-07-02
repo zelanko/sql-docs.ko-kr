@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 287acb7986b3e518260f82278f8079391932ab6f
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: be33120bd19561055095fb81f4a4595edbcf394f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262137"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734353"
 ---
 # <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>sys. fn_hadr_backup_is_preferred_replica (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   현재 복제본이 기본 백업 복제본인지 확인하는 데 사용됩니다.  
   
@@ -61,7 +61,7 @@ END
   
 ```  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-sysfn_hadr_backup_is_preferred_replica"></a>A. sys.fn_hadr_backup_is_preferred_replica 사용  
  다음 예에서는 현재 데이터베이스가 기본 백업 복제본인 경우 1을 반환합니다.  
@@ -78,8 +78,8 @@ GO
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;를 사용 하 여 가용성 그룹 함수 Always On &#40;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [Always On 가용성 그룹 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Transact-sql&#41;&#40;가용성 그룹 만들기](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [ALTER AVAILABILITY GROUP &#40;Transact-sql&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
+ [CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [활성 보조: 보조 복제본에 대 한 백업 &#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) [Always On 가용성 그룹 카탈로그 뷰 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)      
   
   

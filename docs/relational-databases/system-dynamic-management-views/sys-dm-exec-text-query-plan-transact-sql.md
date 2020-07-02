@@ -20,15 +20,15 @@ ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 082de052d40cc41a81ea7a0963b2e3174338b8a5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3608a821be446c864dfac54b99e131a982a80dc2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824588"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734653"
 ---
 # <a name="sysdm_exec_text_query_plan-transact-sql"></a>sys.dm_exec_text_query_plan(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 또는 일괄 처리 내 특정 문에 대한 텍스트 형식의 실행 계획을 반환합니다. 계획 핸들로 지정된 쿼리 계획은 캐시되거나 현재 실행 중일 수 있습니다. 이 테이블 반환 함수는 [dm_exec_query_plan &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)와 유사 하지만 다음과 같은 차이점이 있습니다.  
   
@@ -104,10 +104,10 @@ sys.dm_exec_text_query_plan
   
 임시 쿼리가 [단순](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) [매개 변수화 또는 강제 매개 변수화](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)를 사용 하는 경우 **query_plan** 열에는 문 텍스트만 포함 되 고 실제 쿼리 계획은 포함 되지 않습니다. 쿼리 계획을 반환하려면 매개 변수가 있는 준비된 쿼리의 계획 핸들에 대한 **sys.dm_exec_text_query_plan**을 호출합니다. [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) 뷰의 **sql** 열 또는 [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) 동적 관리 뷰의 텍스트 열을 참조하여 쿼리가 매개 변수화되었는지 여부를 확인할 수 있습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **sys.dm_exec_text_query_plan**을 실행하려면 **sysadmin** 고정 서버 역할의 멤버이거나 해당 서버에서 VIEW SERVER STATE 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-retrieving-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>A. 실행 속도가 느린 Transact-SQL 쿼리 또는 일괄 처리에 대한 캐시된 쿼리 계획 검색  
  [!INCLUDE[tsql](../../includes/tsql-md.md)]에 대한 특정 연결에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 또는 일괄 처리가 오랫동안 실행되는 경우 이 쿼리나 일괄 처리에 대한 실행 계획을 검색하여 지연 원인을 알아낼 수 있습니다. 다음 예에서는 실행 속도가 느린 쿼리나 일괄 처리에 대한 실행 계획을 검색하는 방법을 보여 줍니다.  

@@ -20,19 +20,19 @@ ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ce44d14573000e9880fb1daf3a1ddb42746ee85
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: eff5e947caed2471d63c980418688f6945c78b21
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151969"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734678"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 인증된 세션당 행 하나를 반환합니다. sys.dm_exec_sessions는 모든 활성 사용자 연결 및 내부 태스크에 대한 정보를 표시하는 서버 범위 뷰입니다. 이 정보에는 클라이언트 버전, 클라이언트 프로그램 이름, 클라이언트 로그인 시간, 로그인 사용자, 현재 세션 설정 등이 포함됩니다. sys.dm_exec_sessions를 사용하여 우선 현재 시스템 로드를 보고 원하는 세션을 확인한 다음 다른 동적 관리 뷰 또는 동적 관리 함수를 사용하여 해당 세션에 대한 자세한 내용을 볼 수 있습니다.  
   
- Dm_exec_connections, dm_exec_sessions 및 sys. dm_exec_requests 동적 관리 뷰는 [sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) 시스템 테이블에 매핑됩니다.  
+ Dm_exec_connections, dm_exec_sessions 및 sys. dm_exec_requests 동적 관리 뷰는 [sys.sys프로세스](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) 시스템 테이블에 매핑됩니다.  
   
 > **참고:** 또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_exec_sessions**을 사용 합니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "83151969"
 |logical_reads|**bigint**|세션에서 수행된 논리적 읽기 수입니다. Null을 허용하지 않습니다.|  
 |is_user_process|**bit**|시스템 세션인 경우에는 0이고, 그렇지 않으면 1입니다. Null을 허용하지 않습니다.|  
 |text_size|**int**|세션에 대한 TEXTSIZE 설정입니다. Null을 허용하지 않습니다.|  
-|언어|**nvarchar(128)**|세션에 대한 LANGUAGE 설정입니다. Null을 허용합니다.|  
+|language|**nvarchar(128)**|세션에 대한 LANGUAGE 설정입니다. Null을 허용합니다.|  
 |date_format|**nvarchar (3)**|세션에 대한 DATEFORMAT 설정입니다. Null을 허용합니다.|  
 |date_first|**smallint**|세션에 대한 DATEFIRST 설정입니다. Null을 허용하지 않습니다.|  
 |quoted_identifier|**bit**|세션에 대한 QUOTED_IDENTIFIER 설정입니다. Null을 허용하지 않습니다.|  
@@ -122,7 +122,7 @@ ms.locfileid: "83151969"
 |sys.dm_exec_sessions|[dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|일 대 영 또는 일 대 다|  
 |sys.dm_exec_sessions|[sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|session_id|일 대 일|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-finding-users-that-are-connected-to-the-server"></a>A. 서버에 연결된 사용자 찾기  
  다음 예에서는 서버에 연결되는 사용자를 찾고 각 사용자에 대한 세션 수를 반환합니다.  

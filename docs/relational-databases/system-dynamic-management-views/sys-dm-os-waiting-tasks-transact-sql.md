@@ -20,15 +20,15 @@ ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ab32f364725d11a606ac698fdefb7f9f95a312d
-ms.sourcegitcommit: 05fdc50006a9abdda79c3a4685b075796068c4fa
+ms.openlocfilehash: 0cd7cab9ed1edc9a62398c119b3b5cc72006c5af
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84748250"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734462"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   특정 리소스에서 대기 중인 태스크의 대기 큐에 대한 정보를 반환합니다. 작업에 대 한 자세한 내용은 [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)를 참조 하세요.
    

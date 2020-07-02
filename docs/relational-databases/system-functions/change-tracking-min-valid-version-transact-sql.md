@@ -19,15 +19,15 @@ ms.assetid: 5a43d23f-adcf-4c0b-95ad-07cee03c1f9d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5bb0baec2284d17d84c7a8c3dddd13de3fa69510
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 23e91a60672e400d658403533433a97694407a39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042937"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734408"
 ---
 # <a name="change_tracking_min_valid_version-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) 함수를 사용 하는 경우 지정 된 테이블에서 변경 내용 추적 정보를 가져오는 데 사용할 수 있는 클라이언트의 최소 버전을 반환 합니다.  
     
@@ -66,7 +66,7 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
   
 -   개체 ID로 지정한 테이블에 대한 권한이 부족한 경우  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 지정한 버전이 유효한 버전인지 여부를 확인합니다. 예제에는 `dbo.Employees` 테이블의 유효한 최소 버전을 가져와 `@last_sync_version` 변수 값과 비교합니다. `@last_sync_version` 값이 `@min_valid_version` 값보다 작으면 변경된 행 목록이 유효하지 않습니다.  
   
 > [!NOTE]  

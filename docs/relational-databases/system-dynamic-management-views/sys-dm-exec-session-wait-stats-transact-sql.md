@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d668fbabc20ef6e7acf8b38064378f74a3b15c6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f553207a348511a98a331eb54a7090b217bc04fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833779"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734666"
 ---
 # <a name="sysdm_exec_session_wait_stats-transact-sql"></a>sys. dm_exec_session_wait_stats (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   각 세션에 대해 실행 된 스레드에서 발생 한 모든 대기에 대 한 정보를 반환 합니다. 이 뷰를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 세션과 특정 쿼리 및 일괄 처리의 성능 문제를 진단할 수 있습니다.  이 뷰는 [transact-sql&#41;&#40;dm_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) 에 대해 집계 되는 것과 동일한 정보를 세션을 반환 하지만 **session_id** 수도 제공 합니다.  
   

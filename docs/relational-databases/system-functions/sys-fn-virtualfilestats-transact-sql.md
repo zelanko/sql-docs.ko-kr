@@ -21,17 +21,17 @@ ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aade9e02515e0d18e4edae188d72e5edafebbd3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b805e9db3c9a5472f78cffd24624cf0a26a463dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059204"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738599"
 ---
 # <a name="sysfn_virtualfilestats-transact-sql"></a>sys.fn_virtualfilestats(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  로그 파일을 포함하여 데이터베이스 파일의 I/O 통계를 반환합니다. 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 정보는 [dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) 동적 관리 뷰에서 사용할 수도 있습니다.  
+  로그 파일을 포함하여 데이터베이스 파일의 I/O 통계를 반환합니다. 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 정보는 [dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) 동적 관리 뷰에서 사용할 수도 있습니다.  
 
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,11 +51,11 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|데이터베이스 ID입니다.|  
 |**FileId**|**smallint**|파일의 ID입니다.|  
-|**타임스탬프**|**bigint**|데이터를 사용한 시점의 데이터베이스 타임스탬프입니다. **int** 이전 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]버전의 int. |  
+|**없으면**|**bigint**|데이터를 사용한 시점의 데이터베이스 타임스탬프입니다. **int** 이전 버전의 int [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] . |  
 |**NumberReads**|**bigint**|파일에 대해 읽기가 실행된 횟수입니다.|  
 |**BytesRead**|**bigint**|파일에 대해 실행된 읽기의 바이트 수입니다.|  
 |**IoStallReadMS**|**bigint**|사용자가 파일에 대한 읽기 I/O가 완료될 때까지 대기한 총 시간(밀리초)입니다.|  
@@ -72,7 +72,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 ## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-displaying-statistical-information-for-a-database"></a>A. 데이터베이스에 대한 통계 정보 표시  
  다음 예에서는 ID가 `1`인 데이터베이스의 파일 ID 1에 대한 통계 정보를 표시합니다.  
@@ -84,7 +84,7 @@ GO
 ```  
   
 ### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>B. 명명된 데이터베이스 및 파일에 대한 통계 정보 표시  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 예제 데이터베이스의 로그 파일에 대한 통계 정보를 표시합니다. 시스템 함수 `DB_ID` 는 *database_id* 매개 변수를 지정 하는 데 사용 됩니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 예제 데이터베이스의 로그 파일에 대한 통계 정보를 표시합니다. 시스템 함수는 `DB_ID` *database_id* 매개 변수를 지정 하는 데 사용 됩니다.  
   
 ```sql  
 SELECT *  

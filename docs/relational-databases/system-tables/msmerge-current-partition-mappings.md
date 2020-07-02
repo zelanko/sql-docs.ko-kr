@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a3088840-5a30-40f5-8e8a-aa03afc4905f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 319b4a3008f398327459a0c90d7d69a4d6d97aef
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 82e4d489647838e6a0a84b98f82493a76b28417a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832305"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736741"
 ---
 # <a name="msmerge_current_partition_mappings"></a>MSmerge_current_partition_mappings
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_current_partition_mappings** 테이블은 지정 된 변경 된 행이 속한 각 파티션 id에 대해 하나의 행을 저장 합니다. 이 테이블은 게시 데이터베이스에 저장됩니다.  
   

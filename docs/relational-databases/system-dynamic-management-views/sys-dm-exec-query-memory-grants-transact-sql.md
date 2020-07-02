@@ -20,15 +20,15 @@ ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50c336c329f5e610d90637f80ef8ef24569bb204
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: f39ef72cb01ecef7fca9d26cc87d003807089e16
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83731893"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734760"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   메모리 부여를 요청 하 고 메모리 부여를 기다리고 있는 모든 쿼리에 대 한 정보를 반환 합니다. 메모리 부여가 필요 없는 쿼리는이 뷰에 나타나지 않습니다. 예를 들어 sort 및 hash join 연산에는 쿼리 실행을 위한 메모리 부여가 있지만 **ORDER by** 절이 없는 쿼리에는 메모리 부여가 없습니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "83731893"
 |**max_used_worker_count**|**bigint**|현재까지 사용 된 최대 [작업자 스레드](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) 수입니다.<br /><br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**reserved_node_bitmap**|**bigint**|[작업자 스레드가](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) 예약 된 NUMA 노드의 비트맵입니다.<br /><br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 46fab234-1542-49be-8edf-aa101e728acf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 712ee7d1f4f841de507ee56095cb47307b05b45b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e91b41815f39e27bc368a4d61ce84fc23635f160
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829087"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734833"
 ---
 # <a name="sysdatabase_recovery_status-transact-sql"></a>sys.database_recovery_status(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스당 하나의 행을 포함합니다. 데이터베이스가 열려 있지 않으면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 해당 데이터베이스를 시작하려고 합니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "82829087"
 |**first_recovery_fork_guid**|**uniqueidentifier**|복구 분기 시작 지점의 식별자입니다.<br /><br /> NULL= 데이터베이스가 오프라인이거나 데이터베이스를 시작할 수 없습니다.|  
 |**fork_point_lsn**|**numeric(25,0)**|**First_recovery_fork_guid** (! =)이 같지 않은 경우 fork_point_lsn **recovery_fork_guid**은 **fork_point_lsn** 현재 분기 지점의 로그 시퀀스 번호입니다. 그렇지 않으면 값은 NULL입니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

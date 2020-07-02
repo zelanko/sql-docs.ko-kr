@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: feaf2a222df364a41e51969a2c95a978f2d0a289
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04cedd0df5552ee19f7fc98ecdd94ff2d9dc88fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900952"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734558"
 ---
 # <a name="sysdm_fts_index_keywords_position_by_document-transact-sql"></a>sys. dm_fts_index_keywords_position_by_document (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   인덱싱된 문서에서 키워드 위치 정보를 반환 합니다.  
   
@@ -49,7 +49,7 @@ OBJECT_ID('table_name')
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열|데이터 형식|설명|  
+|열|데이터 형식|Description|  
 |------------|---------------|-----------------|  
 |키워드(keyword)|**varbinary(128)**|키워드를 나타내는 이진 문자열입니다.|  
 |display_term|**nvarchar(4000)**|사람이 인식할 수 있는 키워드 형식입니다. 이 형식은 전체 텍스트 인덱스에 저장되는 내부 형식에서 파생됩니다.|  
@@ -63,8 +63,8 @@ OBJECT_ID('table_name')
 ## <a name="permissions"></a>사용 권한  
  전체 텍스트 인덱스가 적용되는 열에 대한 SELECT 권한 및 CREATE FULLTEXT CATALOG 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
- 다음 예에서는 `Production.Document` `AdventureWorks` 예제 데이터베이스에 있는 테이블의 전체 텍스트 인덱스에서 키워드를 반환 합니다.  
+## <a name="examples"></a>예제  
+ 다음 예에서는 예제 데이터베이스에 있는 테이블의 전체 텍스트 인덱스에서 키워드를 반환 합니다 `Production.Document` `AdventureWorks` .  
   
 ```  
 USE AdventureWorks2012;  

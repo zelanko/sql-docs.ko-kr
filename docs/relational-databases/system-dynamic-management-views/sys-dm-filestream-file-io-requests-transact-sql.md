@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7b44d76ad893775216e6566add3636603ea7dce
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e27de1c2b303474117a0ea442dde81606a9f48f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830628"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734600"
 ---
 # <a name="sysdm_filestream_file_io_requests-transact-sql"></a>sys.dm_filestream_file_io_requests(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   지정된 시간에 NSO(네임스페이스 소유자)에 의해 처리 중인 I/O 요청의 목록을 표시합니다.  
   

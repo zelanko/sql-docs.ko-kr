@@ -20,15 +20,15 @@ ms.assetid: 323ac9ea-fc52-4b8c-8a7e-e0e44f8ed86c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4811f9a3f7178c77699c30a2a334787eed9e41e0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b6bafc58de30a97a18c0b1cbfa9ee07b0e4224b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829737"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733512"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   뷰 또는 테이블과 같이 열을 갖고 있는 개체의 각 열에 대한 행을 반환합니다. 다음은 열을 갖고 있는 개체 형식의 목록입니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "82829737"
 
 
  
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
@@ -94,6 +94,6 @@ ms.locfileid: "82829737"
  [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server 시스템 카탈로그 쿼리 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [all_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [system_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-system-columns-transact-sql.md)  
+ [Transact-sql&#41;&#40;tem_columnssys.sys](../../relational-databases/system-catalog-views/sys-system-columns-transact-sql.md)  
   
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d7e4ac0e338ac556c88c8cc22d6a87a53c67d51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7c93aec2d5246073073fefaaaf4b21d3d542416a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487490"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737657"
 ---
 # <a name="clr-integration-and-transactions"></a>CLR 통합 및 트랜잭션
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **System.Transactions** 네임스페이스는 이미 통합된 ADO.NET 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR(공용 언어 런타임)과 완전히 통합되는 트랜잭션 프레임워크를 제공합니다. **System.object** 와 ADO.NET는 함께 작동 하 여 관리 되는 응용 프로그램에서 로컬 및 분산 트랜잭션의 사용을 확장 하 고 간소화 합니다.  
   
 > [!NOTE]  

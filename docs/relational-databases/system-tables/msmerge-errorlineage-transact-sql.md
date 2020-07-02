@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3bcbd328-c958-4cd4-a573-3c35539fa919
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cab5283d83079f3a9a17dbf6f23dde1228019473
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d1dc2fa3c04c01588b587be3014029202912ddf2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82805341"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736747"
 ---
 # <a name="msmerge_errorlineage-transact-sql"></a>MSmerge_errorlineage(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_errorlineage** 테이블은 구독자에서 삭제 되었지만 해당 삭제가 게시자에 전파 되지 않은 행을 포함 합니다. 이 테이블은 게시 및 구독 데이터베이스에 저장됩니다.  
   

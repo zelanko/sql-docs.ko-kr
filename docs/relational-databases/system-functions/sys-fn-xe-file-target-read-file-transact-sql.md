@@ -22,20 +22,20 @@ ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 126b05adab3a07099f6c9110e18e54910f5b2f25
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b4ee24b0ee74540a967c713579365c68aa849dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "73982987"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738566"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   확장 이벤트 비동기 파일 대상에서 만든 파일을 읽습니다. 행당 하나의 이벤트가 XML 형식으로 반환됩니다.  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]XEL [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 및 xem 형식으로 생성 된 추적 결과를 허용 합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]확장 이벤트는 XEL 형식의 추적 결과만 지원 합니다. XEL 형식의 추적 결과를 읽으려면 SQL Server Management Studio를 사용하는 것이 좋습니다.    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]XEL 및 XEM 형식으로 생성 된 추적 결과를 허용 합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]확장 이벤트는 XEL 형식의 추적 결과만 지원 합니다. XEL 형식의 추적 결과를 읽으려면 SQL Server Management Studio를 사용하는 것이 좋습니다.    
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,7 +67,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |module_guid|**uniqueidentifier**|이벤트 모듈 GUID입니다. Null을 허용하지 않습니다.|  
 |package_guid|**uniqueidentifier**|이벤트 패키지 GUID입니다. Null을 허용하지 않습니다.|  
@@ -79,12 +79,12 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 
   
 ## <a name="remarks"></a>설명  
- 에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **fn_xe_file_target_read_file** 를 실행 하 여 대량 결과 집합을 읽으면 오류가 발생할 수 있습니다. **결과 파일** 모드 (**Ctrl + Shift + F**)를 사용 하 여 많은 결과 집합을 파일로 내보내고 대신 다른 도구를 사용 하 여 파일을 읽습니다.  
+ 에서 **fn_xe_file_target_read_file** 를 실행 하 여 대량 결과 집합을 읽으면 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 오류가 발생할 수 있습니다. **결과 파일** 모드 (**Ctrl + Shift + F**)를 사용 하 여 많은 결과 집합을 파일로 내보내고 대신 다른 도구를 사용 하 여 파일을 읽습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-retrieving-data-from-file-targets"></a>A. 파일 대상에서 데이터 가져오기  
  다음 예에서는 모든 파일의 행을 모두 가져옵니다. 이 예에서 파일 대상과 메타파일은 C:\ 드라이브의 추적 폴더에 있습니다.  

@@ -24,15 +24,15 @@ ms.assetid: 73a5faeb-dabf-4895-acb5-a9651b646065
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b73fff4ba541e0f9b25c1b8dc84419dd5db1b2b
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 924f390643b142029229f81593ce6d00fc9c87ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529949"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733678"
 ---
 # <a name="sqlxml-40-net-framework-support---managed-classes"></a>SQLXML 4.0 .NET Framework 지원 - 관리되는 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스에서 XML 데이터에 액세스하고 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 환경으로 데이터를 가져와서 처리한 후 업데이트를 다시 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 보내는 애플리케이션을 작성하는 데 사용할 수 있는 기능을 지원합니다. 
   
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 관리되는 클래스는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 내에서 SQLXML 4.0의 기능을 공개합니다. SQLXML 관리되는 클래스를 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 XML 데이터에 액세스하고, .NET Framework 환경으로 데이터를 가져오며, 데이터를 처리하고, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 업데이트를 DiffGram으로 다시 보내 적용하는 C# 애플리케이션을 작성할 수 있습니다. SQLXML 관리되는 클래스를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스로 업데이트를 적용할 때는 매핑 스키마를 사용해야 합니다. 작업 예제는 [.Net 환경에서 SQLXML 기능에 액세스](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)를 참조 하세요.  

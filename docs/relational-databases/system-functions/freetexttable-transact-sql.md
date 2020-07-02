@@ -22,17 +22,17 @@ ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ab1797fabd8fb7d77eab85c97604b77e72f25c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae1f88ba7694f99546382d9b1450aea4c555f4d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042766"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734385"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  문자 기반 데이터 형식이 포함 된 전체 텍스트 인덱싱된 열 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 검색을 수행 하기 위해 SELECT 문의 [FROM 절](../../t-sql/queries/from-transact-sql.md) 에 사용 되는 함수입니다. 이 함수는 지정 된 *freetext_string*에 있는 텍스트의 의미와 일치 하는 값을 포함 하는 값을 포함 하는 열에 대해 0 개 이상의 행이 포함 된 테이블을 반환 합니다. FREETEXTTABLE은 일반 테이블 이름처럼 참조됩니다.  
+  [FROM clause](../../t-sql/queries/from-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 기반 데이터 형식이 포함 된 전체 텍스트 인덱싱된 열에 대해 전체 텍스트 검색을 수행 하기 위해 SELECT 문의 FROM 절에 사용 되는 함수입니다. 이 함수는 지정 된 *freetext_string*에 있는 텍스트의 의미와 일치 하는 값을 포함 하는 값을 포함 하는 열에 대해 0 개 이상의 행이 포함 된 테이블을 반환 합니다. FREETEXTTABLE은 일반 테이블 이름처럼 참조됩니다.  
   
  FREETEXTTABLE는 [FREETEXT &#40;transact-sql&#41;](../../t-sql/queries/freetext-transact-sql.md)와 동일한 종류의 일치에 유용 합니다.  
   
@@ -84,7 +84,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
  문자열로 지정하는 경우 *language_term*은 [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 호환성 뷰의 **alias** 열 값에 해당합니다.  문자열은 '*language_term*'과 같이 작은따옴표로 묶어야 합니다. 정수로 지정하는 경우 *language_term*은 언어를 식별하는 실제 LCID입니다. 16진수 값으로 지정하는 경우 *language_term*은 0x로 시작하는 16진수 LCID 값입니다. 16진수 값은 앞에 오는 0을 포함하여 8자리 수를 초과할 수 없습니다.  
   
- 값이 DBCS (더블 바이트 문자 집합) 형식인 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 경우는이를 유니코드로 변환 합니다.  
+ 값이 DBCS (더블 바이트 문자 집합) 형식인 경우는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이를 유니코드로 변환 합니다.  
   
  지정된 언어가 잘못되었거나 해당 언어에 해당하는 리소스가 설치되지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 오류를 반환합니다. 중립 언어 리소스를 사용하려면 0x0을 *language_term*으로 지정합니다.  
   
@@ -101,7 +101,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
 ## <a name="permissions"></a>사용 권한  
  FREETEXTTABLE은 지정된 테이블이나 테이블에서 참조되는 열에 대해 적절한 SELECT 권한이 있는 사용자만 호출할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-simple-example"></a>A. 간단한 예  
  다음 예에서는 3 개의 군을 나열 하 고 플래그에 색을 나열 하는 두 개의 열로 이루어진 간단한 테이블을 만들고 채웁니다. 이 예제에서는 테이블에 대 한 전체 텍스트 카탈로그 및 인덱스를 만들고 채웁니다. 그런 다음 **FREETEXTTABLE** 구문을 보여 줍니다.  
@@ -125,7 +125,7 @@ SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Yellow');
 ```  
   
 ### <a name="b-using-freetext-in-an-inner-join"></a>B. INNER JOIN에 FREETEXT 사용  
- 다음 예에서는의 `high level of performance`의미와 일치 하는 설명이 포함 된 제품의 설명 및 순위를 반환 합니다.  
+ 다음 예에서는의 의미와 일치 하는 설명이 포함 된 제품의 설명 및 순위를 반환 합니다 `high level of performance` .  
   
 ```  
 USE AdventureWorks2012;  

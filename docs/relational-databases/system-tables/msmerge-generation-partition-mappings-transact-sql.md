@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 443a4024-ce48-4772-9ee5-95bd6fb6476b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c53f1f39ebd4517f6b0c7b75b7844825e513ed6f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 59adf719aa4647e8382b8c06fa838d7acf2b3feb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829281"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736757"
 ---
 # <a name="msmerge_generation_partition_mappings-transact-sql"></a>MSmerge_generation_partition_mappings(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_generation_partition_mappings** 테이블은 병합 게시의 파티션에 대 한 변경 내용을 추적 하는 데 사용 됩니다. 이 테이블은 게시 데이터베이스와 구독 데이터베이스에 저장됩니다.  
   

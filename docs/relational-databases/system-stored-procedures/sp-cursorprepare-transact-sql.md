@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 641086797c9d6b8ddf6a86a83de1b5d7b69dcb39
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 21710c1cda732c09eed0a71da2286a12b8496783
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831720"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733333"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   커서 문이나 일괄 처리를 실행 계획으로 컴파일하되 커서를 만들지는 않습니다. 컴파일된 문은 나중에 sp_cursorexecute에서 사용할 수 있습니다. Sp_cursorexecute와 결합 된이 프로시저는 sp_cursoropen와 동일한 기능을 수행 하지만 두 단계로 분할 됩니다. sp_cursorprepare은 TDS (tabular data stream) 패킷에서 ID = 3을 지정 하 여 호출 합니다.  
   
@@ -111,11 +111,11 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
   
 |값|설명|  
 |-----------|-----------------|  
-|0|Success|  
+|0|성공|  
 |0x0001|실패|  
 |1FF6|메타데이터를 반환할 수 없습니다.<br /><br /> 참고:이 이유는 문이 결과 집합을 생성 하지 않기 때문입니다. 예를 들어 INSERT 또는 DDL 문입니다.|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   다음은 sp_cursorprepare 및를 사용 하는 예제 sp_cursorexecute
 
 ```sql
@@ -144,7 +144,7 @@ exec sp_cursorclose @p2
  
  *Stmt* 매개 변수화 되 고 *scrollopt* PARAMETERIZED_STMT 값이 ON 이면 문자열 형식은 다음과 같습니다.  
   
- { * \< 지역 변수 이름> * * \< 데이터 형식>* } [,... *n* ]  
+ { *\<local variable name>**\<data type>* } [ ,... *n* ]  
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_cursorexecute &#40;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5894a32b-c2d8-4bba-8f9d-d09e5cd65f71
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3f02c14e01a7b7dc58f9cd236c65c34cfeb771c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2cd249a527eee10d46e32e2ee4897c7f1875d199
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660336"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736587"
 ---
 # <a name="protocolname-property-servernetworkprotocol-class"></a>ProtocolName 속성(ServerNetworkProtocol 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   서버 네트워크 프로토콜의 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,7 +37,7 @@ object.ProtocolName [= value]
   
 ## <a name="parts"></a>부분  
  *object*  
- 인스턴스에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]사용 하는 네트워크 프로토콜을 나타내는 [servernetworkprotocol 클래스](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md) 개체입니다.  
+ 인스턴스에서 사용 하는 네트워크 프로토콜을 나타내는 [Servernetworkprotocol 클래스](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md) 개체입니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  서버 네트워크 프로토콜의 이름을 지정하는 문자열입니다.  

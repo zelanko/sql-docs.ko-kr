@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 0686bc5a-c206-41ef-b40a-79a8259d51d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5a0cc56c8a942a430958f301831b16d9eb079a20
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 60922201a6ec819fe1e90b43acc3d0c8e8469167
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829111"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733503"
 ---
 # <a name="sysavailability_read_only_routing_lists-transact-sql"></a>sys.availability_read_only_routing_lists(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   WSFC 장애 조치(Failover) 클러스터의 Always On 가용성 그룹에서 각각의 가용성 복제본의 읽기 전용 라우팅 목록에 대한 행을 반환합니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "82829111"
 |**routing_priority**|**int**|라우팅 우선 순위입니다(1이 우선 순위가 가장 높고 2가 그 다음으로 높음).|  
 |**read_only_replica_id**|**uniqueidentifier**|읽기 전용 작업이 라우팅될 가용성 복제본의 고유한 ID입니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

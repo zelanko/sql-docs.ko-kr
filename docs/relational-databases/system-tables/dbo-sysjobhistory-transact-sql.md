@@ -1,5 +1,5 @@
 ---
-title: dbo. sysjobhistory (Transact-sql) | Microsoft Docs
+title: dbo.sysjobhistory (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/24/2019
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ff3c872b195123608c12515fb3c19a03c3e3f44
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 43c35f7963ec7b817f6bcf98f95f950c4fc0a5fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807126"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736885"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 예약된 작업 실행에 대한 정보를 포함합니다.
   
@@ -53,7 +53,7 @@ ms.locfileid: "82807126"
 |**operator_id_netsent**|**int**|작업이 완료되었을 때 메시지로 알리는 대상이 되는 운영자의 ID입니다.|  
 |**operator_id_paged**|**int**|작업이 완료되었을 때 호출기로 알리는 대상이 되는 운영자의 ID입니다.|  
 |**retries_attempted**|**int**|작업 또는 단계를 다시 시도하는 횟수입니다.|  
-|**서버인**|**sysname**|작업이 실행된 서버의 이름입니다.|  
+|**server**|**sysname**|작업이 실행된 서버의 이름입니다.|  
   
   ## <a name="example"></a>예제
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리는 **run_time** 및 **run_duration** 열을 보다 사용자에 게 친숙 한 형식으로 변환 합니다.  에서 스크립트를 실행 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 합니다.

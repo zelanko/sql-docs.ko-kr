@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: a6fb85b2-b010-4ca9-b65f-4402917076ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6da1ec838a3c3f52778400b23c804e18388b79ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 94161328366e96e051039824ca46ef20d7431825
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059078"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738545"
 ---
 # <a name="system-metadata-functions"></a>시스템 메타데이터 함수
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음과 같은 메타데이터 함수를 제공합니다.  
   

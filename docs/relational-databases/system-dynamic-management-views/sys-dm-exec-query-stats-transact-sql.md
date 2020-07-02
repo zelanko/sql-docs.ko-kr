@@ -20,15 +20,15 @@ ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a04468a272cb3d344ef55074e60d2dca4eec9bb9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a2df86c9850dddb7532602476d2ce9ffcaebad62
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833855"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734699"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 캐시된 쿼리 계획에 대한 집계 성능 통계를 반환합니다. 이 뷰에는 캐시된 계획 내의 쿼리 문당 하나의 행이 포함되어 있습니다. 행의 유효 기간은 계획 자체와 연결되어 있습니다. 캐시에서 계획이 제거되면 이 뷰에서도 해당 행이 제거됩니다.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "82833855"
 ## <a name="remarks"></a>설명  
  쿼리가 완료되면 뷰의 통계가 업데이트됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-finding-the-top-n-queries"></a>A. TOP N 쿼리 찾기  
  다음 예제는 평균 CPU 시간별로 상위 5개의 쿼리에 대한 정보를 반환합니다. 이 예에서는 논리적으로 동일한 쿼리를 누적 리소스 소비량에 따라 그룹화할 수 있도록 쿼리 해시에 따라 쿼리를 집계합니다.  

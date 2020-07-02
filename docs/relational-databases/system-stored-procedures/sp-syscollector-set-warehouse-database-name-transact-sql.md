@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a85aca1b-8135-4c81-9a05-da5aec76f1ed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 856f0a65acd7fddae37c980906a4aaedba9807c1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8779b04b7431978d687189cc6dd2536fe4a32370
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828207"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736898"
 ---
 # <a name="sp_syscollector_set_warehouse_database_name-transact-sql"></a>sp_syscollector_set_warehouse_database_name(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   관리 데이터 웨어하우스에 연결하는 데 사용되는 연결 문자열에 정의되는 데이터베이스 이름을 지정합니다.  
   
@@ -51,10 +51,10 @@ sp_syscollector_set_warehouse_database_name [ @database_name = ] 'database_name'
   
  현재 데이터베이스 이름을 보려면 [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) 시스템 뷰를 쿼리 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행하려면 dc_admin(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 관리 데이터 웨어하우스의 이름을 `RemoteMDW`로 설정합니다.  
   
 ```  

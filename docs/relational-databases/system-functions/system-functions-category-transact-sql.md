@@ -14,15 +14,15 @@ ms.assetid: 8ad860e7-e054-4186-80a2-03977e42531d
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 02f7cd14d631f6b6a246e34a978a458e9c5b1563
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c86e7920fadb2447fd0daa134370f4bd70ddc71
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "73849598"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738558"
 ---
 # <a name="system-functions-by-category-for-transact-sql"></a>Transact-sql의 범주별 시스템 함수
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 다음과 같은 시스템 함수 그룹을 제공 합니다.  
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 7cbb9171-3310-4aae-8458-755c882d6462
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9398862ba3c86496ce235efc53b750d2c5f91ccf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4d4590c88082a2788039c2e0ea2d1789703b4501
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832782"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733481"
 ---
 # <a name="sysconversation_priorities-transact-sql"></a>sys.conversation_priorities(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   다음 표와 같이 현재 데이터베이스에 생성된 각 대화 우선 순위마다 한 행을 포함합니다. 
   
@@ -45,7 +45,7 @@ ms.locfileid: "82832782"
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 계약과 로컬 서비스 이름을 보여 주는 조인을 사용하여 대화 우선 순위를 나열합니다.  
   
 ```  

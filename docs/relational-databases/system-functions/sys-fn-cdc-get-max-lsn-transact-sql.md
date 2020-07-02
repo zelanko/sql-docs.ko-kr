@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 93f3a4c8-b91f-4ebb-8e96-9397bb3a1c43
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c51a69eb3604b937b9bf2aaf9a09aa383f2c1490
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e53bd1b53dded0515696daa4c422161b07c5027c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046455"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734363"
 ---
 # <a name="sysfn_cdc_get_max_lsn-transact-sql"></a>sys.fn_cdc_get_max_lsn(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [Lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) 시스템 테이블의 start_lsn 열에서 최대 LSN (로그 시퀀스 번호)을 반환 합니다. 이 함수를 사용하면 원하는 캡처 인스턴스에 대한 변경 데이터 캡처 시간대의 상위 엔드포인트를 반환할 수 있습니다.  
   
@@ -52,7 +52,7 @@ sys.fn_cdc_get_max_lsn ()
 ## <a name="permissions"></a>사용 권한  
  public 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-the-maximum-lsn-value"></a>A. 최대 LSN 값 반환  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 모든 캡처 인스턴스에 대한 최대 LSN을 반환합니다.  

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c08fd2235750a8a7be99b5290813331141ddf0de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3d7a464f3faba633dd09be12ef4c3d006ef19ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68055368"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738590"
 ---
 # <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   SQL 추적에서 반환된 사용 권한 비트 마스크를 사용 권한 이름 테이블로 변환합니다.  
   
@@ -43,7 +43,7 @@ sys.fn_translate_permissions ( level , perms )
 ```  
   
 ## <a name="arguments"></a>인수  
- *저수준*  
+ *수준*  
  사용 권한이 적용되는 보안 개체 종류입니다. *level* 은 **nvarchar (60)** 입니다.  
   
  *perms*  
@@ -59,7 +59,7 @@ sys.fn_translate_permissions ( level , perms )
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="example"></a>예제  
- 다음 쿼리에서는를 `sys.fn_builtin_permissions` 사용 하 여 인증서에 적용 되는 사용 권한을 표시 한 `sys.fn_translate_permissions` 다음를 사용 하 여 사용 권한 비트 마스크의 결과를 반환 합니다.  
+ 다음 쿼리에서는를 사용 하 여 `sys.fn_builtin_permissions` 인증서에 적용 되는 사용 권한을 표시 한 다음를 사용 하 여 `sys.fn_translate_permissions` 사용 권한 비트 마스크의 결과를 반환 합니다.  
   
 ```  
 SELECT * FROM sys.fn_builtin_permissions('CERTIFICATE');  

@@ -16,15 +16,15 @@ ms.assetid: cca3dcf0-2a7e-465a-84de-7ce055360eb6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 07c56e5f6367459cc054a9882432c5bfd04f1c5b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: b6f149f8d1d714839d356d3675a19656f2ea7d53
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967714"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734904"
 ---
 # <a name="communicating-with-sql-server-odbc"></a>SQL Server와 통신(ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   ODBC 응용 프로그램에서 인스턴스와 통신 하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경 및 연결 핸들을 할당 하 고 데이터 원본에 연결 해야 합니다. 연결이 설정되면 애플리케이션에서는 서버에 쿼리를 보내고 모든 결과 집합을 처리할 수 있습니다. 데이터 원본 사용을 마치면 애플리케이션은 데이터 원본에 대한 연결을 끊고 연결 핸들을 해제한 후 연결 핸들이 모두 해제되면 환경 핸들을 해제합니다.  
   

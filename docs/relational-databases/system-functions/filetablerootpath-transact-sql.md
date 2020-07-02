@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 10b4aa19b86530213f852ea90f959a1d7ef6c74f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1311ddfe90beafa3f3d89b27e510eac34aa5ae94
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251235"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734404"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   특정 FileTable 또는 현재 데이터베이스에 대한 루트 수준 UNC 경로를 반환합니다.  
   
@@ -41,7 +41,7 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
  FileTable의 이름입니다. *FileTable_name* 은 **nvarchar**형식입니다. 선택적 매개 변수입니다. 기본값은 현재 데이터베이스입니다. *Schema_name* 지정도 선택 사항입니다. *FileTable_name* 에 대해 NULL을 전달 하 여 기본 매개 변수 값을 사용할 수 있습니다.  
   
  *\@option*  
- 경로에 있는 서버 구성 요소의 형식을 지정하는 방법을 정의하는 정수 식입니다. 옵션은 다음 값 중 하나를 사용할 수 있습니다. * \@*  
+ 경로에 있는 서버 구성 요소의 형식을 지정하는 방법을 정의하는 정수 식입니다. * \@ 옵션* 은 다음 값 중 하나를 사용할 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -89,7 +89,7 @@ WHERE Name = N'document.docx';
   
 -   현재 데이터베이스의 루트 경로를 가져올 수 있는 권한이 **db_datareader** 이상입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 **FileTableRootPath** 함수를 호출 하는 방법을 보여 줍니다.  
   
 ```  

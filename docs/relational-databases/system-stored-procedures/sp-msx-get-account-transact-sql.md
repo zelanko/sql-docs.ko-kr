@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e0fbfe21194dbfa30c54942352d9bd28d6df45b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 82c26d20933562b05bb95796140dcc51bbc0777d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828849"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734335"
 ---
 # <a name="sp_msx_get_account-transact-sql"></a>sp_msx_get_account(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   대상 서버가 마스터 서버에 로그인하는 데 사용하는 자격 증명에 대한 정보를 나열합니다.  
   
@@ -54,10 +54,10 @@ sp_msx_get_account
 ## <a name="remarks"></a>설명  
  이 대상 서버에 대해 지정된 자격 증명이 없으면 빈 결과 집합을 반환합니다. 자격 증명을 설정하려면 sp_msx_set_account를 사용하십시오.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  sysadmin 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 이 대상 서버가 마스터 서버에 로그인하는 데 사용하는 자격 증명에 대한 정보를 나열합니다.  
   
 ```  

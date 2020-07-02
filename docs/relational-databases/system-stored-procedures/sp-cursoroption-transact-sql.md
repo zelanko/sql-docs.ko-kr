@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 560c425c5bda4ee1f9dd7ecf454c65d3ba7eab1e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0bc0c7973ad8ac653c2d9e7f613a3ec0325c12fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831727"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733317"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   커서 옵션을 설정 하거나 sp_cursoropen 저장 프로시저에서 만든 커서 정보를 반환 합니다. sp_cursoroption은 TDS (tabular data stream) 패킷에서 ID = 8을 지정 하 여 호출 합니다.  
   
@@ -45,7 +45,7 @@ sp_cursoroption cursor, code, value
  *code*  
  커서 반환 값의 여러 요인을 규정하는 데 사용됩니다. *코드* 에는 다음 **int** 입력 값 중 하나가 필요 합니다.  
   
-|값|속성|설명|  
+|값|Name|설명|  
 |-----------|----------|-----------------|  
 |0x0001|TEXTPTR_ONLY|지정된 특정 텍스트 또는 이미지 열에 대해 실제 데이터가 아닌 텍스트 포인터를 반환합니다.<br /><br /> TEXTPTR_ONLY 사용 하 여 텍스트 포인터를 blob 개체에 대 한 *핸들로* 사용할 수 있습니다 .이 개체는 나중에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 DBLIB 시설 (예: [!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT 또는 DBLIB dbwritetext)을 사용 하 여 선택적으로 검색 하거나 업데이트할 수 있습니다.<br /><br /> "0" 값을 할당하면 선택 목록에 있는 모든 텍스트 및 이미지 열이 데이터가 아닌 텍스트 포인터를 반환합니다.|  
 |0x0002|CURSOR_NAME|*값* 에 지정 된 이름을 커서에 할당 합니다. 이렇게 하면 ODBC가 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_cursoropen를 통해 열린 커서에 대해 위치 지정 UPDATE/DELETE 문을 사용할 수 있습니다.<br /><br /> 문자열은 원하는 문자나 유니코드 데이터 형식으로 지정할 수 있습니다.<br /><br /> [!INCLUDE[tsql](../../includes/tsql-md.md)]위치 지정 update/delete 문은 기본적으로 fat 커서의 첫 번째 행에서 작동 하므로 위치 지정 update/delete 문을 실행 하기 전에 SP_CURSOR SETPOSITION을 사용 하 여 커서를 배치 해야 합니다.|  

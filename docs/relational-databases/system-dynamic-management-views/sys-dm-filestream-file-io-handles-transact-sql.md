@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e5be48c81dc5851ee43668ef8ca141409acecd7d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0dd71c3d191728b04e2311017d1e446ebecaf6db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830609"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734610"
 ---
 # <a name="sysdm_filestream_file_io_handles-transact-sql"></a>sys.dm_filestream_file_io_handles(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   NSO(네임스페이스 소유자)가 인식하는 파일 핸들을 표시합니다. **Opensqlfilestream** 을 사용 하 여 클라이언트에서 가져온 Filestream 핸들이이 뷰에 표시 됩니다.  
   

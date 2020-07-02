@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d849e7d43cc73ca6153375f5e5b3772944af1f7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cb2b1fb97504b50f2c26ddbfe26f67888f507328
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828997"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733228"
 ---
 # <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   배포자, 배포 데이터베이스, 작업 디렉터리 및 에이전트 사용자 계정에 대 한 정보를 나열 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 이 저장 프로시저는 게시 데이터베이스를 포함한 모든 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -100,12 +100,12 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
  **Sp_helpdistributor**를 실행할 때 하나 이상의 출력 매개 변수가 지정 된 경우 NULL로 설정 된 모든 출력 매개 변수에는 종료 시 값이 할당 되 고 결과 집합이 반환 되지 않습니다. 출력 매개 변수가 지정되지 않으면 결과 집합이 반환됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  게시자에서 **sysadmin** 고정 서버 역할의 멤버 및 게시 데이터베이스의 **db_owner** 고정 데이터베이스 역할의 멤버에 게 반환 되는 결과 집합 열 또는 출력 매개 변수는 다음과 같습니다.  
   
 |결과 집합 열|출력 매개 변수|  
 |-----------------------|----------------------|  
-|account|**\@account**|  
+|account|**\@계정일**|  
 |min distrib retention|**\@min_distretention**|  
 |max distrib retention|**\@max_distretention**|  
 |history retention|**\@history_retention**|  
