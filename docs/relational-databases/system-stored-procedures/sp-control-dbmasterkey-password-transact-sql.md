@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 620a174f50d133c4a1dd34ed54c74abb7ee06a71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b30529fbb5d4b80b0835ddb502c9a2c964ca8776
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81012449"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85870625"
 ---
 # <a name="sp_control_dbmasterkey_password-transact-sql"></a>sp_control_dbmasterkey_password(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   데이터베이스 마스터 키를 여는 데 필요한 암호가 포함된 자격 증명을 추가 또는 삭제합니다.  
   
@@ -47,10 +47,10 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  마스터 키의 암호를 지정합니다. *password* 는 **nvarchar**입니다.  
   
  @action= N'add '  
- 지정된 데이터베이스에 대한 자격 증명이 자격 증명 저장소에 추가되도록 지정합니다. 자격 증명에는 데이터베이스 마스터 키의 암호가 포함됩니다. 에 @action 전달 되는 값은 **nvarchar**입니다.  
+ 지정된 데이터베이스에 대한 자격 증명이 자격 증명 저장소에 추가되도록 지정합니다. 자격 증명에는 데이터베이스 마스터 키의 암호가 포함됩니다. 에 전달 되는 값은 @action **nvarchar**입니다.  
   
  @action= N'drop '  
- 지정된 데이터베이스에 대한 자격 증명이 자격 증명 저장소에서 삭제되도록 지정합니다. 에 @action 전달 되는 값은 **nvarchar**입니다.  
+ 지정된 데이터베이스에 대한 자격 증명이 자격 증명 저장소에서 삭제되도록 지정합니다. 에 전달 되는 값은 @action **nvarchar**입니다.  
   
 ## <a name="remarks"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 키 암호화 및 암호 해독을 위한 데이터베이스 마스터 키가 필요한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 인스턴스의 서비스 마스터 키로 데이터베이스 마스터 키의 암호를 해독하려고 시도합니다. 암호 해독에 실패하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 마스터 키가 필요한 데이터베이스와 패밀리 GUID가 동일한 마스터 키 자격 증명을 자격 증명 저장소에서 검색합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 암호 해독이 성공하거나 남은 자격 증명이 없을 때까지 일치하는 각 자격 증명을 사용하여 데이터베이스 마스터 키의 암호화를 해독하려고 시도합니다.  
@@ -82,7 +82,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 ## <a name="examples"></a>예  
   
 ### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>A. AdventureWorks2012 마스터 키에 대한 자격 증명 만들기  
- 다음 예에서는 `AdventureWorks2012` 데이터베이스 마스터 키에 대한 자격 증명을 만들고 마스터 키 암호를 자격 증명에 암호로 저장합니다. 에 `sp_control_dbmasterkey_password` 전달 되는 모든 매개 변수는 **nvarchar**데이터 형식 이어야 하므로 텍스트 문자열은 캐스팅 연산자 `N`를 사용 하 여 변환 됩니다.  
+ 다음 예에서는 `AdventureWorks2012` 데이터베이스 마스터 키에 대한 자격 증명을 만들고 마스터 키 암호를 자격 증명에 암호로 저장합니다. 에 전달 되는 모든 매개 변수는 `sp_control_dbmasterkey_password` **nvarchar**데이터 형식 이어야 하므로 텍스트 문자열은 캐스팅 연산자를 사용 하 여 변환 됩니다 `N` .  
   
 ```  
 EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',   

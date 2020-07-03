@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b873931c5d09f3c54f61e872f8ea6646408c1a04
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d1ba13cd3ae77a13e329c39fea22a9ee9550ed47
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715961"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85873158"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이동식 미디어에 배포할 수 있도록 데이터베이스가 제대로 구성되었는지 확인하고 사용자에게 발생한 모든 문제를 보고합니다.  
   
@@ -82,7 +82,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ## <a name="permissions"></a>사용 권한  
  Execute 권한은 **sysadmin** 고정 서버 역할의 멤버로 제한 됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `inventory` 데이터베이스를 제거할 준비가 되었음을 증명합니다.  
   
 ```  

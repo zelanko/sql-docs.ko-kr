@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6accbb03bf4ed06f84f67263e89ab9c6bfa7654
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3729587261ab090548ad93f5a1000f621239557
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646044"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85868953"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스에서 하나 이상의 행 버퍼를 인출합니다. 이 버퍼의 행 그룹을 커서의 *인출 버퍼*라고 합니다. sp_cursorfetch은 TDS (tabular data stream) 패킷에서 ID = 7을 지정 하 여 호출 합니다.  
   
@@ -153,7 +153,7 @@ sp_cursorfetch cursor
   
  커서의 선택 목록에 대한 메타데이터가 TDS 스트림에 반환되도록 요청하려면 RPC RETURN_METADATA 입력 플래그를 1로 설정합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-using-prev-to-change-a-cursor-position"></a>A. PREV를 사용하여 커서 위치 변경  
  h2 커서가 다음과 같은 내용의 결과 집합을 생성하며 현재 위치는 아래와 같다고 가정해 봅니다.  

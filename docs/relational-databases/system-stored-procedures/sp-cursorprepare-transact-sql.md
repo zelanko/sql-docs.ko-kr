@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 21710c1cda732c09eed0a71da2286a12b8496783
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 130446e1f92fd735c3ab83a8f515fcf36fb63948
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733333"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85868819"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   커서 문이나 일괄 처리를 실행 계획으로 컴파일하되 커서를 만들지는 않습니다. 컴파일된 문은 나중에 sp_cursorexecute에서 사용할 수 있습니다. Sp_cursorexecute와 결합 된이 프로시저는 sp_cursoropen와 동일한 기능을 수행 하지만 두 단계로 분할 됩니다. sp_cursorprepare은 TDS (tabular data stream) 패킷에서 ID = 3을 지정 하 여 호출 합니다.  
   
@@ -115,7 +115,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x0001|실패|  
 |1FF6|메타데이터를 반환할 수 없습니다.<br /><br /> 참고:이 이유는 문이 결과 집합을 생성 하지 않기 때문입니다. 예를 들어 INSERT 또는 DDL 문입니다.|  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   다음은 sp_cursorprepare 및를 사용 하는 예제 sp_cursorexecute
 
 ```sql

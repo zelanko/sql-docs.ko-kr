@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7869fed1b04a16a57750fcfd91d18e1b0c0d18a7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 268226d28b134ffe13a5acfca3baf47bde655baf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738529"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85866742"
 ---
 # <a name="sp_dbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   서버 인스턴스의 모든 미러된 데이터베이스에 대한 미러링 상태를 정기적으로 업데이트하는 데이터베이스 미러링 모니터 작업을 만듭니다.  
   
@@ -63,7 +63,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 업데이트 기간을 `3`분으로 지정하여 모니터링을 시작합니다.  
   
 ```  

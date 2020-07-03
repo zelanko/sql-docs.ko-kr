@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: faf3bd8ab39ac70a8edfcff805a7b8c1202dfa89
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e3ecfc002a04cb499898b63976e7a094b4a05fd5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771419"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85871379"
 ---
 # <a name="sp_changeqreader_agent-transact-sql"></a>sp_changeqreader_agent(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   큐 판독기 에이전트의 보안 속성을 변경합니다. 이 저장 프로시저는 배포 데이터베이스의 배포자 또는 게시 데이터베이스의 게시자에서 실행됩니다.  
   

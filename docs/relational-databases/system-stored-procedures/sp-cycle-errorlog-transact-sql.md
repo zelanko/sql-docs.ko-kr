@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 482b9af4ee76e6f8aea185440924eb579fabd71c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad631a10998f3628084581ea25faa53151f12af0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733313"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85868253"
 ---
 # <a name="sp_cycle_errorlog-transact-sql"></a>sp_cycle_errorlog(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   현재의 오류 로그 파일을 닫고 서버를 다시 시작하는 것처럼 오류 로그 확장 번호를 순환시킵니다. 새 오류 로그는 버전, 저작권에 관한 정보 및 새 로그가 작성되었음을 표시하는 행을 포함합니다.  
   
@@ -50,7 +50,7 @@ sp_cycle_errorlog
 ## <a name="permissions"></a>사용 권한  
  **Sp_cycle_errorlog** 에 대 한 실행 권한은 **sysadmin** 고정 서버 역할의 멤버로 제한 됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그를 순환시킵니다.  
   
 ```  

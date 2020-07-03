@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5ec2f3a3f300a6501a23b4bd88234571b0717d2a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec17e4482a07d90ccf65e98f6697cc6b12e5fac1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771280"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85871031"
 ---
 # <a name="sp_column_privileges_ex-transact-sql"></a>sp_column_privileges_ex(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   지정한 연결된 서버에 있는 지정한 테이블에 대한 열 권한을 반환합니다.  
   
@@ -70,7 +70,7 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 연결된 서버 `HumanResources.Department`에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `Seattle1` 테이블에 대한 열 권한 정보를 반환합니다.  
   
 ```  

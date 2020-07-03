@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 40fe5e8e82d1a4e7b4f2f32d55f27b191d9aee8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ab1a8338a25394b3a750e09e0b0da6c6099c97ee
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760157"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85865854"
 ---
 # <a name="sp_dbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   여러 가지 주요 데이터베이스 미러링 모니터 성능 메트릭 중 하나 또는 모두에 대한 경고 임계값 정보를 반환합니다.  
  
@@ -82,7 +82,7 @@ sp_dbmmonitorhelpalert database_name
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 보내지 않은 가장 오래된 트랜잭션 성능 메트릭에 대한 경고의 사용 여부를 나타내는 행을 반환합니다.  
   
 ```  

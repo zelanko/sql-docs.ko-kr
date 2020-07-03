@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: faa96f7e-be92-47b1-8bc5-4dbba5331655
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1622f7cd1d14e83d76ef9cebc716b2743e288395
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ea9690011e963e6374b562f37d64573546a170c3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771299"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85871115"
 ---
 # <a name="sp_clean_db_free_space-transact-sql"></a>sp_clean_db_free_space(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터 수정 루틴 때문에 데이터베이스 페이지에 남겨진 정보를 제거합니다. sp_clean_db_free_space는 데이터베이스의 모든 파일에서 모든 페이지를 정리합니다.  
   
@@ -63,7 +63,7 @@ sp_clean_db_free_space
 ## <a name="permissions"></a>사용 권한  
  db_owner 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `AdventureWorks2012` 데이터베이스의 모든 잔여 정보를 정리하는 방법을 보여 줍니다.  
   
 ```  

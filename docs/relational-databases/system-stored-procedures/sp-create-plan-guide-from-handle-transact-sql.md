@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5f4141dc0a7c424ce1ccee021da7cf82c2a6b44b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2a43abe560238f13f76cebc837adaac6a536f7fb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771185"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85869859"
 ---
 # <a name="sp_create_plan_guide_from_handle-transact-sql"></a>sp_create_plan_guide_from_handle(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   계획 캐시의 쿼리 계획에서 한 개 이상의 계획 지침을 만듭니다. 이 저장 프로시저를 사용하여 쿼리 최적화 프로그램이 항상 지정한 쿼리에 특정 쿼리 계획을 사용하도록 할 수 있습니다. 계획 지침에 대한 자세한 내용은 [Plan Guides](../../relational-databases/performance/plan-guides.md)를 참조하십시오.  
   
@@ -74,7 +74,7 @@ CROSS APPLY sys.dm_exec_sql_text(sql_handle) AS st;
   
  계획 지침을 만들 문이 포함된 행에서 결과 집합의 `objtype` 열을 검사하십시오. `Proc` 값은 계획 지침이 OBJECT 유형임을 나타냅니다. `AdHoc` 또는 `Prepared`와 같은 다른 값은 결과 지침이 SQL 유형임을 나타냅니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-creating-a-plan-guide-from-a-query-plan-in-the-plan-cache"></a>A. 계획 캐시의 쿼리 계획에서 계획 지침 만들기  
  다음 예에서는 계획 캐시에서 쿼리 계획을 지정하여 단일 SELECT 문에 대한 계획 지침을 만듭니다. 이 예에서는 계획 지침이 만들어지는 간단한 `SELECT` 문을 실행하여 시작합니다. 이 쿼리의 계획은 `sys.dm_exec_sql_text` 및 `sys.dm_exec_text_query_plan` 동적 관리 뷰를 사용하여 검사됩니다. 그런 다음 쿼리와 관련된 계획 캐시에서 쿼리 계획을 지정하여 쿼리에 대한 계획 지침을 만듭니다. 이 예에서 마지막 문은 계획 지침의 존재를 확인합니다.  

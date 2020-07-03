@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5bd9def04c3d80bdc57ac4e7fe9a9d67be49a3c2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6fb182115af1ff2c3190939d63c209a7d98bed44
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771221"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85870873"
 ---
 # <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   피어 투 피어 트랜잭션 복제 토폴로지에 관련된 게시에 대한 충돌 감지를 구성합니다. 자세한 내용은 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)을 참조하세요. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   

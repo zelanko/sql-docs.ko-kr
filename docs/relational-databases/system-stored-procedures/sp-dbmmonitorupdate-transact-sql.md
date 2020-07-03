@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5b9c53913cc6f399109da7a84cd8ec7f68957a8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e7247f5357ae02e0a81f3682d5d952d01584473
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760144"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85865612"
 ---
 # <a name="sp_dbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   각 미러된 데이터베이스에 대한 새 테이블 행을 삽입하여 데이터베이스 미러링 모니터 상태 테이블을 업데이트하고 현재 보존 기간보다 오래된 행을 자릅니다. 기본 보존 기간은 7일(168시간)입니다. 테이블을 업데이트할 때 **sp_dbmmonitorupdate** 는 성능 메트릭을 계산 합니다.  
   
@@ -64,7 +64,7 @@ sp_dbmmonitorupdate [ database_name ]
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대한 미러링 상태만 업데이트합니다.  
   
 ```  

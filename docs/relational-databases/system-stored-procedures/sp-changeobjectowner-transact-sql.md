@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1e6f664cc763e56135ddf1c35f5f0057d97ec2d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: df232018259055697bb6624ee96a8fc980b3bef3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771453"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85871746"
 ---
 # <a name="sp_changeobjectowner-transact-sql"></a>sp_changeobjectowner(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스에 있는 개체의 소유자를 변경합니다.  
   
@@ -60,7 +60,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ## <a name="permissions"></a>사용 권한  
  **Db_owner** 고정 데이터베이스 역할의 멤버 자격 또는 **db_ddladmin** 고정 데이터베이스 역할과 **db_securityadmin** 고정 데이터베이스 역할의 멤버 자격과 개체에 대 한 CONTROL 권한도 필요 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 테이블의 소유자를 `authors` 로 변경 합니다 `Corporate\GeorgeW` .  
   
 ```  

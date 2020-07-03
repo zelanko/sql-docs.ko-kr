@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 219e03a156641e14d0a165a342684d8cfdb659fd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c153f9de2f5f1db662c851926a83d51ed4b8b515
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760114"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85865134"
 ---
 # <a name="sp_defaultdb-transact-sql"></a>sp_defaultdb(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   로그인에 대 한 기본 데이터베이스를 변경 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
@@ -57,7 +57,7 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ## <a name="permissions"></a>사용 권한  
  ALTER ANY LOGIN 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `Victoria`에 대한 기본 데이터베이스로 설정합니다.  
   
 ```  

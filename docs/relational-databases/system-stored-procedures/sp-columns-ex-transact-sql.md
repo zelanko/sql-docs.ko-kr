@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2aa75e2f742cbafd64f5bb8d76d7cd8dbf4028ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 77608294b06025d5c265e67f71f9b0b228732729
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771257"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85871109"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   지정한 연결된 서버 테이블에 대해 각 열마다 한 행씩 열 정보를 반환합니다. *열* 이 지정 된 경우 **sp_columns_ex** 는 특정 열에 대해서만 열 정보를 반환 합니다.  
   
@@ -96,7 +96,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ## <a name="remarks"></a>설명  
  **sp_columns_ex** 구분 식별자에 대 한 요구 사항을 따릅니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 연결된 서버 `JobTitle`의 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 있는 `HumanResources.Employee` 테이블의 `Seattle1` 열에 대한 데이터 형식을 반환합니다.  
   
 ```  

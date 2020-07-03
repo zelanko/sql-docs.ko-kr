@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d584b2db0e66b2affad0e061098f75fc9258fbdb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 086e914f9d05ada8985cdd8f017ef4a47003d1ae
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715917"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85872689"
 ---
 # <a name="sp_change_log_shipping_secondary_database-transact-sql"></a>sp_change_log_shipping_secondary_database(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   보조 데이터베이스 설정을 변경합니다.  
   
@@ -95,7 +95,7 @@ sp_change_log_shipping_secondary_database
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  이 예에서는 **sp_change_log_shipping_secondary_database** 를 사용 하 여 **logshipadventureworks**데이터베이스에 대 한 보조 데이터베이스 매개 변수를 업데이트 하는 방법을 보여 줍니다.  
   
 ```  

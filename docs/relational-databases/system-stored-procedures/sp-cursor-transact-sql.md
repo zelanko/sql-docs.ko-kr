@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7550a640b723e77f3bfbc9b3473e762962ae2da3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a92b502368756fd86fc4facda7c0726260d88fea
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646418"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85869690"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   현재 위치 업데이트를 요청합니다. 이 프로시저는 커서의 인출 버퍼 내에서 하나 이상의 행에 대해 작업을 수행합니다. sp_cursor은 TDS (tabular data stream) 패킷에서 ID = 1을 지정 하 여 호출 합니다.  
   
@@ -129,7 +129,7 @@ sp_cursor  cursor, optype, rownum, table
   
 2.  매개 변수를 사용 하 여 전체 UPDATE 또는 INSERT 문을 제출 하거나, 여러 매개 변수를 사용 하 여 UPDATE 또는 INSERT 문의 여러 부분을 제출할 수 있습니다. 그러면 SQL Server는 전체 문으로 작성 됩니다. 이 작업의 예는 이 항목 뒷부분의 예 섹션에 나와 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="alternative-value-parameter-uses"></a>다른 value 매개 변수 사용 방식  
  UPDATE의 경우:  

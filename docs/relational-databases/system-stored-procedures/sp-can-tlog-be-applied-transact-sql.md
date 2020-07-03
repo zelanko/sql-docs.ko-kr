@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4a20968cb7ee9c46c8c30c4ff635d307c91b7edd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2369c2db6003229ee54f9d7ef04784a470493faf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715976"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85873828"
 ---
 # <a name="sp_can_tlog_be_applied-transact-sql"></a>sp_can_tlog_be_applied(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   트랜잭션 로그 백업을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 적용할 수 있는지 여부를 확인합니다. **sp_can_tlog_be_applied** 를 사용 하려면 데이터베이스가 복원 중 상태 여야 합니다.  
   
@@ -57,7 +57,7 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_can_tlog_be_applied**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `@MyBitVar` 지역 변수를 선언하여 결과를 저장합니다.  
   
 ```  

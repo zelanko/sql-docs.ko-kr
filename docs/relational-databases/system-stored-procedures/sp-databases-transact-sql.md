@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d18b7657ca1274a2058ef25543309bffb97de851
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 862101470f004c1e3681bd91745e9e2d10aab6bc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760170"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85867483"
 ---
 # <a name="sp_databases-transact-sql"></a>sp_databases(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있거나 데이터베이스 게이트웨이를 통해 액세스할 수 있는 데이터베이스를 나열합니다.  
   
@@ -57,7 +57,7 @@ sp_databases
 ## <a name="permissions"></a>사용 권한  
  CREATE DATABASE, ALTER ANY DATABASE 또는 VIEW ANY DEFINITION 권한이 필요하며 데이터베이스에 대한 액세스 권한이 있어야 합니다. VIEW ANY DEFINITION 권한은 거부될 수 없습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `sp_databases`를 실행하는 방법을 보여 줍니다.  
   
 ```sql  

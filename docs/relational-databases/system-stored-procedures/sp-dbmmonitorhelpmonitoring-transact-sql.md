@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a085cf87-269f-454a-a146-21f80a113b72
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d44bde22c00e2169d2f3aa74f935f18abae52923
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 19e8530d1cef60be0193865972b6a19e3c91a49c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772244"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85865782"
 ---
 # <a name="sp_dbmmonitorhelpmonitoring-transact-sql"></a>sp_dbmmonitorhelpmonitoring(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   현재 업데이트 기간을 반환합니다.  
   
@@ -51,7 +51,7 @@ sp_dbmmonitorhelpmonitoring
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 현재 업데이트 기간을 반환합니다.  
   
 ```  

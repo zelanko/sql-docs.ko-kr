@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2b5c067b42d61c2dae1dbe247a6212611d155348
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 135937bbdac930d3ee90259c7e5b0f4faaab098f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716138"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85874141"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   일괄 처리에 포함 된 매개 변수에 대 한 정보를 포함 하는 행 집합을 반환 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . **sp_batch_params** 지정 된 일괄 처리만 구문 분석 하 고 포함 된 매개 변수 값에 대 한 정보를 반환 합니다. 일괄 처리를 실행하거나 실행 환경을 수정하지는 않습니다.  
   
@@ -65,7 +65,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ## <a name="permissions"></a>사용 권한  
  **Sp_batch_params** 를 실행할 수 있는 권한은 **public**에 부여 됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `sp_batch_params`로 전달되는 쿼리를 보여 줍니다. 결과 집합에는 포함된 매개 변수 값의 목록이 나열됩니다.  
   
 ```  

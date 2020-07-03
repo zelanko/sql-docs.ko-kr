@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f9260aad5b07e57ff3d95b8943d85a15756077d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ba7a6785952152632a9435269bc7b4a9b236ad38
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771477"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85872514"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   병합 게시의 속성을 변경합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   

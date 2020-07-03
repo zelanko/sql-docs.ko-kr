@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 25e3293a9f509667e6086144a43f8d8ccd9308eb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 08121eb48e637f2cb6bc404407f7a37d41dbeb2d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771249"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85870136"
 ---
 # <a name="sp_control_plan_guide-transact-sql"></a>sp_control_plan_guide(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   계획 지침을 삭제하거나 활성화하거나 비활성화합니다.  
   
@@ -81,7 +81,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
 ## <a name="permissions"></a>사용 권한  
  ** @type = '** Object **'** 를 지정 하 여 만든 개체 유형의 계획 지침에서 **sp_control_plan_guide** 를 실행 하려면 계획 지침에서 참조 하는 개체에 대 한 ALTER 권한이 필요 합니다. 다른 모든 계획 지침에는 ALTER DATABASE 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-enabling-disabling-and-dropping-a-plan-guide"></a>A. 계획 지침 활성화, 비활성화 및 삭제  
  다음 예에서는 계획 지침을 만들고 비활성화하고 활성화하고 삭제합니다.  

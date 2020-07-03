@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 155653adbfdb7902eb30e82dbade7fa3589ae00f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 02ced681f1ae950ae9fadbce4c3f481e4e7e0e55
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715970"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85873717"
 ---
 # <a name="sp_catalogs-transact-sql"></a>sp_catalogs(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   지정되어 있는 연결된 서버의 카탈로그 목록을 반환합니다. 이것은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터베이스와 동일합니다.  
   
@@ -51,7 +51,7 @@ sp_catalogs [ @server_name = ] 'linked_svr'
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `OLE DB ODBC Linked Server #3`이라는 연결된 서버에 대한 카탈로그 정보를 반환합니다.  
   
 > [!NOTE]  

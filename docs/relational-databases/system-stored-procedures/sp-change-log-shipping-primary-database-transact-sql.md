@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 02ba9c11d9c74daa6cc88051ada7037edc16f35b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 81a6a9fc318534df9f2ce9c2e89fb978fb15b260
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715933"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85873079"
 ---
 # <a name="sp_change_log_shipping_primary_database-transact-sql"></a>sp_change_log_shipping_primary_database(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   주 데이터베이스 설정을 변경합니다.  
   
@@ -110,7 +110,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  이 예에서는 **sp_change_log_shipping_primary_database** 를 사용 하 여 주 데이터베이스와 연관 된 설정을 업데이트 하는 방법을 보여 줍니다 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  
