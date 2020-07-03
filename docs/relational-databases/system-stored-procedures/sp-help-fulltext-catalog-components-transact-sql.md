@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6fae0542a38a215d79228674fa6b2a9fbe4b9eb7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fb7cbf41a439c5221892142178d1341a9284f555
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728197"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901484"
 ---
 # <a name="sp_help_fulltext_catalog_components-transact-sql"></a>sp_help_fulltext_catalog_components(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스의 모든 전체 텍스트 카탈로그에 사용된 필터, 단어 분리기, 프로토콜 처리기 등 모든 구성 요소의 목록을 반환합니다.  
   
@@ -47,7 +47,7 @@ sp_help_fulltext_catalog_components
 |-----------------|---------------|-----------------|  
 |**전체 텍스트 카탈로그 이름**|**int**|전체 텍스트 카탈로그의 이름입니다.|  
 |**전체 텍스트 카탈로그 id**|**sysname**|전체 텍스트 카탈로그의 ID입니다.|  
-|**componenttype**|**sysname**|구성 요소의 유형입니다. 다음 중 하나<br /><br /> Assert<br /><br /> 프로토콜 처리기<br /><br /> 단어 분리기|  
+|**componenttype**|**sysname**|구성 요소의 유형입니다. 다음 중 하나<br /><br /> 필터<br /><br /> 프로토콜 처리기<br /><br /> 단어 분리기|  
 |**componentname**|**sysname**|구성 요소의 이름입니다.|  
 |**가**|**uniqueidentifier**|구성 요소의 클래스 식별자입니다.|  
 |**fullpath**|**nvarchar(256)**|구성 요소 위치에 대한 경로입니다.<br /><br /> NULL = 호출자가 **serveradmin** 고정 서버 역할의 멤버가 아닙니다.|  

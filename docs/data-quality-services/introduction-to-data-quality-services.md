@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: a934bdcd73fc7b879da4e76525481103fd187a98
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 0564da5fc907db5f684f96b716ad1cb39ef007ce
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812108"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901617"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 소개
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 제공되는 데이터 품질 솔루션을 통해 데이터 관리자 또는 IT 전문가는 데이터의 품질을 유지 관리하고 데이터가 비즈니스 용도에 적합한지 보장할 수 있습니다. DQS는 컴퓨터 기반 방식과 대화형 방식 모두를 사용하여 데이터 원본의 무결성과 품질을 관리할 수 있게 해주는 지식 기반 솔루션입니다. DQS를 사용하면 데이터에 대한 지식을 검색, 구축 및 관리할 수 있습니다. 그런 후 이러한 지식을 사용하여 데이터 정리, 일치 및 프로파일링을 수행할 수 있습니다. 또한 DQS 데이터 품질 프로젝트에서 참조 데이터 공급자의 클라우드 기반 서비스를 활용할 수도 있습니다.  
   

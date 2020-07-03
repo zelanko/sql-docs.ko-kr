@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2d5a9063447752406a2898f6d72ea6e43ff316ba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0fd6122ec99d4f5788fbe9f2b33478df7723f238
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733387"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900972"
 ---
 # <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스 메일로 제출된 각 첨부 파일당 한 개의 행을 포함합니다. 이 뷰를 사용하여 데이터베이스 메일 첨부 파일에 대한 정보를 볼 수 있습니다. 데이터베이스 메일에서 처리 하는 모든 전자 메일을 검토 하려면 [transact-sql&#41;&#40;sysmail_allitems ](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)사용 합니다.  
   

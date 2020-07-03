@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b13c44a7-6d49-4d50-abe1-e657fc52bb05
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ed3bca383e5f6ad1960274145327f915c6e8ca5c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9e6f8200b1c49bfe5e4977dc1e8f093537fc950e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85663769"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900576"
 ---
 # <a name="syspolicy_policy_execution_history-transact-sql"></a>syspolicy_policy_execution_history(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   정책이 실행된 시간, 각 실행의 결과 및 오류가 있는 경우 오류에 대한 자세한 내용을 표시합니다. 다음 표에서는 syspolicy_policy_execution_history 뷰의 열을 설명합니다.  
   

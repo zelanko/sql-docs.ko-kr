@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b905d3f362aa16e36caa0795357c1ec1619d5ec7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 049b1183ad21e481ca47368b3dfe916d0ee41185
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715842"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899460"
 ---
 # <a name="sp_helpuser-transact-sql"></a>sp_helpuser(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스에서 데이터베이스 수준의 보안 주체 정보를 보고합니다.  
   
@@ -84,7 +84,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
   
  반환되는 정보는 메타데이터에 대한 액세스 제한 사항에 따라 달라집니다. 보안 주체에 사용 권한이 없는 엔터티는 나타나지 않습니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-listing-all-users"></a>A. 모든 사용자 나열  
  다음 예에서는 현재 데이터베이스에 있는 사용자를 모두 나열합니다.  

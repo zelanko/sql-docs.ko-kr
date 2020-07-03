@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 05a1563188b5a8332c547901247ef43e07b1efa5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5b9277918b8ed869e121e3cf1fe3389bf402b2a0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646128"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901467"
 ---
 # <a name="sp_primarykeys-transact-sql"></a>sp_primarykeys(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   지정된 원격 테이블의 기본 키 열을 각 키 열당 한 개의 행으로 반환합니다.  
   
@@ -72,7 +72,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `LONDON1` 테이블에 대해 `HumanResources.JobCandidate` 서버에서 기본 키 열을 반환합니다.  
   
 ```  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6fa9117891f9d9350e58a2c8233dcffe05c8cfc8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe5e3bd8d7d5ce0046a908f16ae860bc68386054
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772124"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899475"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   특정 원격 또는 복제 서버나 두 유형의 서버 모두에 관한 정보를 보고합니다. 서버 이름, 서버의 네트워크 이름, 서버의 복제 상태, 서버의 ID, 데이터 정렬 이름을 제공합니다. 연결된 서버 연결 또는 쿼리 제한 시간 값도 제공합니다.  
   
@@ -82,7 +82,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 ## <a name="permissions"></a>사용 권한  
  사용 권한을 확인하지 않습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-displaying-information-about-all-servers"></a>A. 모든 서버에 관한 정보 표시  
  다음 예에서는 매개 변수 없이 `sp_helpserver`를 사용하여 모든 서버에 관한 정보를 표시합니다.  

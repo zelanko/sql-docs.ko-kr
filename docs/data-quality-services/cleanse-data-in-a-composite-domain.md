@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 07879417c216e6d66085539ed6c177891a4e8bfb
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: cb8b752d47113c546358ba0e22c77df08cad24c6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811352"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901138"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>복합 도메인의 데이터 정리
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 복합 도메인 정리에 대한 정보를 제공합니다. 복합 도메인은 둘 이상의 단일 도메인으로 구성되며 여러 관련 용어로 구성된 데이터 필드에 매핑됩니다. 복합 도메인의 개별 도메인은 서로 공통된 정보 영역이 있어야 합니다. 복합 도메인에 대한 자세한 내용은 [Managing a Composite Domain](../data-quality-services/managing-a-composite-domain.md)를 참조하세요.  
   

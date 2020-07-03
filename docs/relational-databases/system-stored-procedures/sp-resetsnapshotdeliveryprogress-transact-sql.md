@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e87afd1d76eb4bfb9602e1b3d57dd62a43b65772
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 918bd98410de1c82de9098dab5f6e74c32ebf7f1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639881"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901396"
 ---
 # <a name="sp_resetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   스냅샷 배달을 다시 시작할 수 있도록 끌어오기 구독에 대한 스냅샷 배달 프로세스를 다시 설정합니다. 구독 데이터베이스의 구독자에서 실행됩니다.  
   

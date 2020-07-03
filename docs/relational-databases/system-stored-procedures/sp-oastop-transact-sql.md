@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: aa9eab66-c4f7-4ec7-9f0d-5d24d16da654
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 479c56544f99a910feac66220d85404d2c3b0b86
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1abb0f8f6407fe2674002821484e58cdbdd183b1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758753"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901450"
 ---
 # <a name="sp_oastop-transact-sql"></a>sp_OAStop(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   서버 차원의 OLE Automation 저장 프로시저 실행 환경을 중지합니다.  
   
@@ -49,7 +49,7 @@ sp_OAStop
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버 자격 또는이 저장 프로시저에 대 한 execute 권한이 필요 합니다. `Ole Automation Procedures`OLE 자동화와 관련 된 시스템 프로시저를 사용 하려면 구성을 사용 하도록 **설정** 해야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 공유 OLE Automation 실행 환경을 중지합니다.  
   
 ```  

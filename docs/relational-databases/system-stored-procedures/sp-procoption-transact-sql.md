@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b8ac7eae727206e0ad9b236229dbfca009529e3d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8a7a4942e3109ec244cb7a16f4ef6a513b1cdcff
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645829"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901443"
 ---
 # <a name="sp_procoption-transact-sql"></a>sp_procoption(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   저장 프로시저의 자동 실행을 설정하거나 해제합니다. 자동으로 실행되도록 설정된 저장 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 시작될 때마다 실행됩니다.  
   
@@ -56,7 +56,7 @@ sp_procoption [ @ProcName = ] 'procedure'
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 프로시저의 자동 실행을 설정합니다.  
   
 ```  

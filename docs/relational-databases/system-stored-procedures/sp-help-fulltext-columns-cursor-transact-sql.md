@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 26054e76-53b7-4004-8d48-92ba3435e9d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 63a1e13c4ebb0948a0372c612d6536f0ec2c74c2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1ed545d31cd5f05fa8360d2cf73a88787f98df45
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728152"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901472"
 ---
 # <a name="sp_help_fulltext_columns_cursor-transact-sql"></a>sp_help_fulltext_columns_cursor(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   커서를 사용하여 전체 텍스트 인덱싱에 등록된 열을 반환할 수 있습니다.  
   
@@ -69,7 +69,7 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ## <a name="permissions"></a>사용 권한  
  실행 권한은 기본적으로 **public** 역할의 멤버로 설정됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 데이터베이스의 모든 테이블에서 전체 텍스트를 인덱싱하기 위해 지정된 열에 관한 정보를 반환합니다.  
   
 ```  

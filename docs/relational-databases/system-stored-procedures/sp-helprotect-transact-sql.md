@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3806476ffec61c155121f3238fefa8e08f689ad2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8f170c15cdc75c8832adae7fae4147829b3b4bb9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772139"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899493"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스의 개체에 대한 사용자 권한 또는 문 사용 권한에 관한 정보가 포함된 보고서를 반환합니다.  
   
@@ -94,7 +94,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
   
  반환되는 정보는 메타데이터에 대한 액세스 제한 사항에 따라 달라집니다. 보안 주체에 사용 권한이 없는 엔터티는 나타나지 않습니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-listing-the-permissions-for-a-table"></a>A. 테이블에 대한 사용 권한 나열  
  다음 예에서는 `titles` 테이블에 대한 사용 권한을 나열합니다.  

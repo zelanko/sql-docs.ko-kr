@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2615b71c19011b42bb8497ef07096cc27084409b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: e77d3966476bba662f864cb2f81dbbfa983d4740
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85810666"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900457"
 ---
 # <a name="create-a-domain-rule"></a>도메인 규칙 만들기
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 도메인 규칙을 만드는 방법에 대해 설명합니다. 도메인 규칙은 도메인 값의 유효성 검사, 수정 및 표준화를 수행하는 데 사용되는 조건입니다. 도메인 값이 정확하고 비즈니스 요구 사항에 맞는 것으로 간주되려면 도메인 규칙이 도메인 전체에서 유효해야 합니다. 도메인 규칙은 도메인 값의 유효성을 검사하는 데 사용되는 유효성 검사 규칙을 포함할 수 있지만 데이터 품질 프로젝트의 데이터를 수정하는 데 사용되지는 않습니다. 규칙은 또한 유효한 데이터에 대해 적용되고 데이터 수정에 사용되는 표준화 규칙을 포함합니다.  
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 146bf10a-c898-4676-a2a1-673fb1cee7a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e0e65f06ccecd01ae9396b2c64962040a446aeb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 213c4ec07b733b355de8cd7cdb0ae0b14f165584
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85663351"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900525"
 ---
 # <a name="syssysconfigures-transact-sql"></a>sys.sysconfigures(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   사용자가 설정한 각 구성 옵션당 한 개의 행을 포함합니다. **sysconfigures** 에는의 최신 시작 이전에 정의 된 구성 옵션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 그 이후에 설정 된 동적 구성 옵션이 포함 되어 있습니다.  
   

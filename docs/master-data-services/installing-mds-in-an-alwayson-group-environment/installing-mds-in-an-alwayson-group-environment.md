@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cf37f6c9951107e901b05b21f4b7947bcfa381bb
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: f17290773a3becf0b33b28eb5e95bf914d53af06
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85440970"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901721"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services에 대한 고가용성 및 재해 복구
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 이 문서에서는 Always On 가용성 그룹 구성에 호스트 되는 MDS (Master Data Service)에 대 한 솔루션을 설명 합니다. 이 문서에서는 SQL 2016 Always On AG (가용성 그룹)에 SQL 2016 MDS(Master Data Services)를 설치 하 고 구성 하는 방법을 설명 합니다. 이 솔루션은 주로 SQL Server 데이터베이스에 호스트된 MDS 백엔드 데이터의 고가용성 및 재해 복구를 향상하는 데 사용됩니다.
 
@@ -91,7 +91,7 @@ ms.locfileid: "85440970"
 
 WSFC는 애플리케이션 및 서비스의 고가용성을 향상시키는 기능입니다. 해당 인스턴스에서 실행 중인 Microsoft 장애 조치(Failover) 클러스터 서비스와 독립적인 Windows Server 인스턴스의 그룹으로 구성됩니다. Windows Server 인스턴스(때때로 노드라고도 함)가 연결되어 있어 서로 통신할 수 있으며 실패 감지를 수행할 수 있습니다. WSFC는 오류 감지 및 장애 조치 기능을 제공합니다. 클러스터의 노드 또는 서비스가 실패하고 오류가 감지되면 다른 노드가 자동 또는 수동으로 시작되어 실패한 노드에서 호스트된 서비스를 제공합니다. 따라서 사용자는 중단이 최소화된 서비스를 경험하게 되며, 서비스 가용성이 향상됩니다.  
 
-### <a name="prerequisites"></a>전제 조건
+### <a name="prerequisites"></a>사전 요구 사항
 
 모든 인스턴스에서 Windows Server 운영 체제를 설치하고 모든 업데이트를 패치합니다.
 
@@ -208,7 +208,7 @@ AG는 데이터베이스 수준의 가용성을 제공 합니다. AG(사용자 �
 
 FCIs는 인스턴스 수준의 고가용성을 제공 합니다. SQL Server 서비스와 관련 서비스는 WSFC에서 리소스로 등록 됩니다. 또한 FCI 솔루션은 WFC 클러스터의 모든 노드에 사용할 수 있어야 하는 SAN 또는 SMB 파일 공유와 같이 대칭 공유 디스크 스토리지가 필요합니다.
    
-### <a name="prerequisites"></a>전제 조건
+### <a name="prerequisites"></a>사전 요구 사항
 
 - 모든 노드에서 SQL Server를 설치합니다. 자세한 내용은 [SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server.md)를 참조하세요.
 
@@ -313,7 +313,7 @@ AG는 기존 데이터베이스에서만 만들 수 있습니다. 따라서 한 
 
    b. MDSSQLServer와 같은 **수신기 DNS 이름**을 입력합니다.
 
-   c. **포트** 텍스트 상자에 기본 SQL 포트 1433을 입력합니다.
+   다. **포트** 텍스트 상자에 기본 SQL 포트 1433을 입력합니다.
 
    d. **네트워크 모드** 텍스트 상자에 DHCP를 입력하고 **다음**을 클릭하여 계속합니다.
 
@@ -390,7 +390,7 @@ AG는 기존 데이터베이스에서만 만들 수 있습니다. 따라서 한 
 
 이 백서에서는 AG의 일부로 MDS(Master Data Services) 백 엔드 데이터베이스를 설정 하 고 구성 하는 방법을 살펴보았습니다. 이 구성은 Master Data Services 백 엔드 데이터베이스에 고가용성 및 재해 복구를 제공합니다. 이 구성을 구현 하려면 Windows Server 장애 조치 (Failover) 클러스터, AG 및 MDS(Master Data Services)를 설치 하 고 구성 해야 합니다.
 
-## <a name="feedback"></a>피드백
+## <a name="feedback"></a>사용자 의견
 
 이 백서가 도움이 되었습니까? 문서 맨 위에 있는 **주석**을 클릭하여 여러분의 의견을 보내주세요. 
 

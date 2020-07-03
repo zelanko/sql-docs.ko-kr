@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e80d631e4470e04d0ab5ab7edf6883350335586e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 68ef84e8efb3606042afbcf8579cf285a2077ab7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724638"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901046"
 ---
 # <a name="sysmail_event_log-transact-sql"></a>sysmail_event_log(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스 메일 시스템이 반환한 각 Windows 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메시지당 한 개의 행을 포함합니다. 이 컨텍스트의 메시지는 전자 메일 메시지가 아니라 오류 메시지와 같은 메시지를 참조 합니다. 데이터베이스 메일 구성 마법사의 **시스템 매개 변수 구성** 대화 상자 또는 [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md) 저장 프로시저를 사용 하 여 **로깅 수준** 매개 변수를 구성 하 여 반환 되는 메시지를 결정할 수 있습니다.  
   

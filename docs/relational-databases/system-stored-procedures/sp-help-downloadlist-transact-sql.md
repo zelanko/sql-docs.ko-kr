@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dee2cdf797bb3336bdf2645c42435ae441c63607
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bc658776dddbf79362e3ab4c90ba052abb193e63
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724558"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901506"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   제공 된 작업에 대 한 **sysdownloadlist** 시스템 테이블의 모든 행 또는 작업이 지정 되지 않은 경우 모든 행을 나열 합니다.  
   
@@ -100,7 +100,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행할 수 있는 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `sysdownloadlist` 작업에 대한 행을 `NightlyBackups`에 나열합니다.  
   
 ```  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 78c3fb8530875120aac2936f36770d9de936332d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 45fea43b9d7d35fd674a566982d67b4043403d06
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783901"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900604"
 ---
 # <a name="syspolicy_conditions-transact-sql"></a>syspolicy_conditions(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 각 정책 기반 관리 조건에 대해 한 행을 표시합니다. syspolicy_ conditions는 msdb 데이터베이스의 dbo 스키마에 속합니다. 다음 표에서는 syspolicy_conditions 뷰의 열을 설명합니다.  
   

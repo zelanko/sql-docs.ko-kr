@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e0abc3934e1cfec8e37a4b1f3060a7aeef38a06e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db4ae46a9436ceb960a32764a95467116ce537e0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626937"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899520"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   구독자에 있는 끌어오기 구독에 대한 정보를 반환합니다. 이 저장 프로시저는 구독 데이터베이스의 구독자에서 실행됩니다.  
   

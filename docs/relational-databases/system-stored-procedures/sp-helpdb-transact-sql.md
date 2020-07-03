@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3a31eb5fa85ab7634d6fc65ac446607117ec70ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3fda6aba2ce361e814a0196db6138b38f13ce359
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738516"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899574"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   지정된 데이터베이스 또는 모든 데이터베이스에 관한 정보를 보고합니다.  
   
@@ -77,7 +77,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
  데이터베이스에 액세스할 수 없는 경우 **sp_helpdb** 오류 메시지 15622 및 가능한 데이터베이스에 대 한 정보를 표시 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-returning-information-about-a-single-database"></a>A. 단일 데이터베이스에 대한 정보 반환  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대한 정보를 표시합니다.  

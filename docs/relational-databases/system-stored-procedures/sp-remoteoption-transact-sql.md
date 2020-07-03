@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c9a7309b-eab7-4192-a414-e282581af4e5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f448e7027b69d81f9f2690eff1b431837320aa51
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 01f87d00c1f0a8cc9ff7ca492092738a96f98c06
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725753"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901413"
 ---
 # <a name="sp_remoteoption-transact-sql"></a>sp_remoteoption(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 로컬 서버에서 정의된 원격 로그인에 대한 옵션을 변경하거나 표시합니다.  
   

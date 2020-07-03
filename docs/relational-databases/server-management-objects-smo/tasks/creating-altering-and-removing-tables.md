@@ -13,15 +13,15 @@ ms.assetid: ff0bcfff-812f-4999-b0c7-736a97804c2b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b90e081c86aaee9fda1363185263fd6e53d4378f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3f98b77fd740b31cbc3f9334f58d4a48586031e0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095636"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900780"
 ---
 # <a name="creating-altering-and-removing-tables"></a>테이블 생성, 변경 및 제거
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects(SMO)에서 테이블은 <xref:Microsoft.SqlServer.Management.Smo.Table> 개체로 표시됩니다. SMO 개체 계층 구조에서 <xref:Microsoft.SqlServer.Management.Smo.Table> 개체는 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체 아래에 있습니다.  
   
 ## <a name="example"></a>예제  

@@ -16,17 +16,17 @@ ms.assetid: 1e0e736a-c709-4d89-aeb2-b32dcfd641fa
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2d92f83980c52ab09e846345f9197349c836f0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2ee6c9bdd036d79eb6af1c1d353272a88251e181
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148679"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901076"
 ---
 # <a name="working-with-data-types"></a>데이터 형식 사용
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  데이터는 정의된 길이가 있는 문자열, 특정 정확성이 있는 숫자 또는 해당 규칙 집합이 있는 다른 개체인 사용자 정의 데이터 형식과 같은 다양한 유형과 크기로 제공됩니다. 개체 <xref:Microsoft.SqlServer.Management.Smo.DataType> 는에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]올바르게 처리 될 수 있도록 데이터 형식을 분류 합니다. <xref:Microsoft.SqlServer.Management.Smo.DataType> 개체는 데이터를 허용하는 개체와 연결되어 있습니다. 다음 SMO([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects) 개체는 <xref:Microsoft.SqlServer.Management.Smo.DataType> 개체 속성으로 정의되어야 하는 데이터를 허용합니다.  
+  데이터는 정의된 길이가 있는 문자열, 특정 정확성이 있는 숫자 또는 해당 규칙 집합이 있는 다른 개체인 사용자 정의 데이터 형식과 같은 다양한 유형과 크기로 제공됩니다. <xref:Microsoft.SqlServer.Management.Smo.DataType>개체는에서 올바르게 처리 될 수 있도록 데이터 형식을 분류 합니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . <xref:Microsoft.SqlServer.Management.Smo.DataType> 개체는 데이터를 허용하는 개체와 연결되어 있습니다. 다음 SMO([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects) 개체는 <xref:Microsoft.SqlServer.Management.Smo.DataType> 개체 속성으로 정의되어야 하는 데이터를 허용합니다.  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Column>  
   
@@ -50,7 +50,7 @@ ms.locfileid: "70148679"
   
 -   개체 생성자에 <xref:Microsoft.SqlServer.Management.Smo.DataType> 인라인을 지정합니다.  
   
--   <xref:Microsoft.SqlServer.Management.Smo.DataType> 클래스의 정적 멤버 중 하나를 사용 합니다 (예: **Int**). 실제로 <xref:Microsoft.SqlServer.Management.Smo.DataType> 개체의 인스턴스를 반환 합니다.  
+-   클래스의 정적 멤버 중 하나를 사용 <xref:Microsoft.SqlServer.Management.Smo.DataType> 합니다 (예: **Int**). 실제로 개체의 인스턴스를 반환 <xref:Microsoft.SqlServer.Management.Smo.DataType> 합니다.  
   
  <xref:Microsoft.SqlServer.Management.Smo.DataType> 개체에는 데이터 형식을 정의하는 몇 가지 속성이 있습니다. 예를 들어 <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> 속성을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 지정합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 나타내는 상수 값은 <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> 열거형으로 표시됩니다. 이것은 **varchar**, **nchar**, **currency**, **integer**, **float**및 **datetime**과 같은 데이터 형식을 참조합니다.  
   
@@ -95,7 +95,7 @@ dt = new DataType(SqlDataType.Decimal, 10, 2);
 ## <a name="constructing-a-datatype-object-by-using-the-default-constructor-in-visual-basic"></a>Visual Basic의 기본 생성자를 사용하여 DataType 개체 생성  
  이 코드 예제에서는 기본 생성자를 사용하여 여러 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 기반으로 하는 데이터 형식 인스턴스를 만드는 방법을 보여 줍니다. 그런 다음 속성을 사용하여 데이터 형식을 지정합니다.  
   
- **참고** <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>, 및 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType>XML 형식에는 모두 개체를 식별 하기 위한 이름 값이 필요 합니다.  
+ **참고** <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>, <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType> 및 XML 형식에는 모두 개체를 식별 하기 위한 이름 값이 필요 합니다.  
   
 ```VBNET
 'Declare and create a DataType object variable.
@@ -110,7 +110,7 @@ dt.MaximumLength = 100
 ## <a name="constructing-a-datatype-object-by-using-the-default-constructor-in-visual-c"></a>Visual C#의 기본 생성자를 사용하여 DataType 개체 생성  
  이 코드 예제에서는 기본 생성자를 사용하여 여러 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 기반으로 하는 데이터 형식 인스턴스를 만드는 방법을 보여 줍니다. 그런 다음 속성을 사용하여 데이터 형식을 지정합니다.  
   
- **참고** <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>, 및 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType>XML 형식에는 모두 개체를 식별 하기 위한 이름 값이 필요 합니다.  
+ **참고** <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>, <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType> 및 XML 형식에는 모두 개체를 식별 하기 위한 이름 값이 필요 합니다.  
   
 ```csharp  
 {   

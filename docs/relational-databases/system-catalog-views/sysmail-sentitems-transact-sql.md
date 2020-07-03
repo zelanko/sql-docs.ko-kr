@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e869cd092dd242caff859298b97502693abe2116
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 382be73e4047c1d75b5ab95d1b3959cb05af68c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812129"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901185"
 ---
 # <a name="sysmail_sentitems-transact-sql"></a>sysmail_sentitems(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   데이터베이스 메일에서 보내는 각 메시지당 한 개의 행을 포함합니다. 성공적으로 전송 된 메시지를 확인 하려는 경우 **sysmail_sentitems** 를 사용 합니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "82812129"
 ## <a name="remarks"></a>설명  
  데이터베이스 메일 문제를 해결할 때는 이 뷰를 통해 성공적으로 보낸 메시지의 특성을 보고 문제의 근원을 확인할 수 있습니다. 데이터베이스 메일은 메시지가 SMTP 메일 서버로 성공적으로 제출되면 해당 메시지를 보낸 것으로 표시합니다. 보통 전자 메일은 몇 분 안에 도착하지만 SMTP 서버 문제로 인해 지연될 수 있습니다. 데이터베이스 메일은 SMTP 메일 서버에서 메시지를 수신하면 해당 메시지를 보낸 것으로 표시합니다. 배달할 수 없는 수신인 전자 메일 주소와 같이 SMTP 메일 서버에서 발생하는 전자 메일 오류는 데이터베이스 메일로 반환됩니다. 이러한 전자 메일은 배달되지 않아도 보낸 것으로 기록됩니다. 이러한 유형의 오류는 SMTP 서버에서 해결합니다. 또한 SMTP 메일 서버는 데이터베이스 메일 계정의 회신 전자 메일 주소로 배달할 수 없는 메시지 알림을 보냅니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 및 **databasemailuserrole** 데이터베이스 역할에 부여 됩니다. **Sysadmin** 고정 서버 역할의 멤버에 의해 실행 되는 경우이 뷰는 보낸 모든 메시지를 표시 합니다. 그 밖의 다른 사용자는 자신이 보낸 메시지만 볼 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

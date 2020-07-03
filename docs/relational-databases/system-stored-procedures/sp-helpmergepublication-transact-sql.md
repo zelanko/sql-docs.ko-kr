@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d9e821b1ea7688ed80adba7385e465366e7f69e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a0e396b4ee38ddd2c6e76158d9cb8abfb9b601a8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772972"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899556"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   병합 게시에 대한 정보를 반환합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
