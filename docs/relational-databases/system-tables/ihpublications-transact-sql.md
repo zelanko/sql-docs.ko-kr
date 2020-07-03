@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8185249a40c11a031be8206a4a1ea016ed50faa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3297f557e170a9f9cb8f67d10b9339997fa184d4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764238"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890293"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **IHpublications** 시스템 테이블은 현재 배포자를 사용 하 여 SQL Server 게시가 아닌 각 게시에 대해 하나의 행을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

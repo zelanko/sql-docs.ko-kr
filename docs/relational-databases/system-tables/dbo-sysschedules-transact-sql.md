@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 09ece580c45e1ec93b183f2d830c9daf68287ab1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 397fecaadad721529671a69daaf1c704e28268ea
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750250"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890395"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 일정에 대한 정보를 포함합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "85750250"
 |**64** (SQL Server 에이전트 서비스가 시작 될 때 시작)|**freq_interval** 사용 되지 않음 (**0**)|  
 |**128** (컴퓨터가 유휴 상태일 때 실행)|**freq_interval** 사용 되지 않음 (**0**)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참조  
  [Transact-sql&#41;&#40;dbo.sysjobschedules](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   
   

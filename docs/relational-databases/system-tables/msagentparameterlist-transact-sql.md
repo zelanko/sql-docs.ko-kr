@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4ea571a0-078d-4e13-95ee-f3d4bbd4dfb2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e240ab373316f72d41f472542907e3feb83cbbd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f03817f9e7b13e21eb7513de4a4d96216b700460
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725494"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890066"
 ---
 # <a name="msagentparameterlist-transact-sql"></a>MSagentparameterlist(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **Msagentparameterlist** 테이블은 복제 에이전트 매개 변수 정보를 포함 하며 지정 된 에이전트 유형에 설정할 수 있는 매개 변수를 지정 하는 데 사용 됩니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   

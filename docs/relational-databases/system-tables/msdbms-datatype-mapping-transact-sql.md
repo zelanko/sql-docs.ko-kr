@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 13289a0b-dfb0-4771-ad80-4c5f83cded99
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fd52cabfd282c70a9c3cd2c1d1cc8bd52e02ff3f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3004de66d8bf911056f62b0d4fbdfb55b969871
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725457"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890034"
 ---
 # <a name="msdbms_datatype_mapping-transact-sql"></a>MSdbms_datatype_mapping(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSdbms_datatype_mapping** 테이블은 원본 dbms (데이터베이스 관리 시스템)의 데이터 형식에서 대상 dbms의 하나 이상의 특정 데이터 형식으로 사용할 수 있는 데이터 형식 매핑을 포함 합니다. 이 테이블은 **msdb** 데이터베이스에 저장 되며 다른 유형의 데이터베이스 복제에 사용 됩니다.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9ec21119-35f1-4e39-abaa-b2c790c485b1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bb88096faf336edf7a42e9f65a72b6435c2f855c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 86483129d7fad394327cb436ee34602b3e4cccaa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773781"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890210"
 ---
 # <a name="ihsubscriptions-transact-sql"></a>IHsubscriptions(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **IHsubscriptions** 시스템 테이블은 현재 배포자를 사용 하 여 SQL Server 되지 않은 게시자의 게시에 대 한 각 구독에 대해 하나의 행을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

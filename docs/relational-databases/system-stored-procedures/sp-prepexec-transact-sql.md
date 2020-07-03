@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab7c13befad3c1780e067639838efa7434c57f53
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3bc3e9a74a29564ad8c531223be371f47fd09662
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645896"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891529"
 ---
 # <a name="sp_prepexec-transact-sql"></a>sp_ prepexec(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   매개 변수가 있는 문을 준비 하 고 실행 [!INCLUDE[tsql](../../includes/tsql-md.md)] 합니다. sp_prepexec sp_prepare 및 sp_execute의 기능을 결합 합니다. 이 작업은 TDS (tabular data stream) 패킷에서 ID = 13에 의해 호출 됩니다.  
   
@@ -52,7 +52,7 @@ sp_prepexec handle OUTPUT, params , stmt
  *bound_param*  
  추가 매개 변수의 선택적 사용을 나타냅니다. *bound_param* 는 모든 데이터 형식의 입력 값을 호출 하 여 사용 중인 추가 매개 변수를 지정 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 간단한 문을 준비 하 고 실행 합니다.  
   
 ```  
@@ -66,7 +66,7 @@ EXEC sp_prepexec @Out output,
 EXEC sp_unprepare @Out;  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참조  
  [sp_prepare &#40;SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
  [Transact-sql&#41;sp_execute &#40;](../../relational-databases/system-stored-procedures/sp-execute-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

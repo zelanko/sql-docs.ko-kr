@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 595898809144af584bad34afe120f36291c88b7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 86f2432073b580dfa59b92683d4401cb53296b02
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736833"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889883"
 ---
 # <a name="msmerge_articlehistory-transact-sql"></a>MSmerge_articlehistory(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_articlehistory** 테이블은 병합 에이전트 동기화 세션 중에 아티클의 변경 내용을 추적 하 고 변경 된 각 아티클에 대해 한 행을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3906e38fbcce8edccf9e0a7bda3be0ed93e110b0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8eaed22600fe2c5c548d2e40b3e496ee81c92faf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784817"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889727"
 ---
 # <a name="msmerge_sessions-transact-sql"></a>MSmerge_sessions(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_sessions** 테이블에는 이전 병합 에이전트 작업 세션의 결과가 포함 된 기록 행이 포함 됩니다. 병합 에이전트가 실행될 때마다 이 테이블에 새 행이 추가됩니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

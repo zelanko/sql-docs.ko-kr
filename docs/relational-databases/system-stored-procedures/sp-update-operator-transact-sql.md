@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b8075648f4f3ce87b0ee34ba28479d1f8e20cd50
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8966e5d423a24be8c7d7329f270368ea20e9ef7b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775167"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891299"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   경고 및 작업에 사용하기 위해 운영자(알림 수신자)에 관한 정보를 업데이트합니다.  
   
@@ -114,7 +114,7 @@ sp_update_operator
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행할 수 있는 권한은 기본적으로 sysadmin 고정 서버 역할의 멤버로 설정됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 운영자의 상태를 설정으로 업데이트하고 호출 가능한 날을 월요일부터 금요일, 오전 8시부터 오후 5시까지로 설정합니다.  
   
 ```  

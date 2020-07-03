@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5eb67d59-a19d-4dba-9d2b-657f87818f6b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7690239969a50dc50e580eae4bb6a622f104aecf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6bb1a749b5bc293c306136f806cd6558b1192688
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773800"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890303"
 ---
 # <a name="ihindextypes-transact-sql"></a>IHindextypes(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **IHindextypes** 시스템 테이블에는 SQL Server 이외 게시자에 대해 지원 되는 SQL Server이 아닌 인덱스 형식에 대 한 행이 하나씩 포함 되어 있습니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

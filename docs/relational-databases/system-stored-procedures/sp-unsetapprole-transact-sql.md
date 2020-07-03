@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 700bab92fde35f26ba1ce6ca956fabd72f130e31
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 18fe415653a912bda012e786b0a65e5f5b30dd3c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762741"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891365"
 ---
 # <a name="sp_unsetapprole-transact-sql"></a>sp_unsetapprole(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   애플리케이션 역할을 비활성화하고 이전의 보안 컨텍스트로 되돌립니다.  
   
@@ -56,7 +56,7 @@ sp_unsetapprole @cookie
 ## <a name="permissions"></a>사용 권한  
  **Public** 의 멤버 자격이 필요 하 고 응용 프로그램 역할이 활성화 되었을 때 저장 된 쿠키에 대 한 지식이 필요 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="activating-an-application-role-with-a-cookie-then-reverting-to-the-previous-context"></a>쿠키를 사용하여 애플리케이션 역할을 활성화한 다음 이전 컨텍스트로 되돌리기  
  다음 예에서는 `Sales11` 암호로 `fdsd896#gfdbfdkjgh700mM` 애플리케이션 역할을 활성화하고 쿠키를 만듭니다. 이 예에서는 현재 사용자의 이름을 반환 하 고 **sp_unsetapprole**를 실행 하 여 원래 컨텍스트로 되돌립니다.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 71998653-4a02-446d-b6f7-50646a29e8a2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 569c2594d060513de99586db64b075be52ed46a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7662330df991745bf46126beb9ce5b7964353246
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639514"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890943"
 ---
 # <a name="sysmail_delete_profile_sp-transact-sql"></a>sysmail_delete_profile_sp(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스 메일에서 사용하는 메일 프로필을 삭제합니다.  
   
@@ -59,7 +59,7 @@ sysmail_delete_profile_sp  { [ @profile_id = ] profile_id | [ @profile_name = ] 
 ## <a name="permissions"></a>사용 권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `AdventureWorks Administrator`라는 프로필을 삭제합니다.  
   
 ```  

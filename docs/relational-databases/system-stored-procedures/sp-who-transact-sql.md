@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b46db697c7f8d6a7f402d98093323f47ece47d69
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bfcf04c0f6dd7455bac9beaa65b29eb1b2a8f9cc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722948"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891214"
 ---
 # <a name="sp_who-transact-sql"></a>sp_who(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   인스턴스의 현재 사용자, 세션 및 프로세스에 대 한 정보를 제공 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 합니다. 유휴 상태가 아닌 프로세스, 특정 사용자에게 속한 프로세스 또는 특정 세션에 속하는 프로세스만 반환하도록 이 정보를 필터링할 수 있습니다.  
   
@@ -59,7 +59,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 |------------|---------------|-----------------|  
 |**spid**|**smallint**|세션 ID입니다.|  
 |**ecid**|**smallint**|특정 세션 ID와 연결된 지정된 스레드의 실행 컨텍스트 ID입니다.<br /><br /> ECID = {0, 1, 2, 3, ... *n*}, 여기서 0은 항상 주 또는 부모 스레드를 나타내고 {1, 2, 3, ... *n*}은 하위 스레드를 나타냅니다.|  
-|**status**|**nchar(30)**|프로세스 상태입니다. 사용 가능한 값은<br /><br /> **유휴**상태. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 세션을 다시 설정하고 있습니다.<br /><br /> **실행 중**. 세션에서 일괄 처리를 하나 이상 실행하고 있습니다. MARS(Multiple Active Result Sets)를 설정하면 세션에서 여러 개의 일괄 처리를 실행할 수 있습니다. 자세한 내용은 [MARS&#40;Multiple Active Result Sets&#41; 사용](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)을 참조하세요.<br /><br /> **배경**. 세션에서 교착 상태 감지와 같은 백그라운드 태스크를 실행하고 있습니다.<br /><br /> **롤백**. 세션에서 트랜잭션 롤백을 진행하고 있습니다.<br /><br /> **보류 중**. 세션이 작업자 스레드를 사용할 수 있을 때까지 기다리고 있습니다.<br /><br /> 실행 **가능.** 세션의 태스크는 시간 퀀텀을 얻기 위해 기다리는 동안 스케줄러의 실행 가능한 큐에 있습니다.<br /><br /> **spinloop**. 세션의 태스크가 spinlock을 사용할 수 있을 때까지 기다리고 있습니다.<br /><br /> **일시 중단 됨**. 세션이 I/O와 같은 이벤트가 완료되기를 기다리고 있습니다.|  
+|**status**|**nchar(30)**|프로세스 상태입니다. 가능한 값은 다음과 같습니다.<br /><br /> **유휴**상태. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 세션을 다시 설정하고 있습니다.<br /><br /> **실행 중**. 세션에서 일괄 처리를 하나 이상 실행하고 있습니다. MARS(Multiple Active Result Sets)를 설정하면 세션에서 여러 개의 일괄 처리를 실행할 수 있습니다. 자세한 내용은 [MARS&#40;Multiple Active Result Sets&#41; 사용](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)을 참조하세요.<br /><br /> **배경**. 세션에서 교착 상태 감지와 같은 백그라운드 태스크를 실행하고 있습니다.<br /><br /> **롤백**. 세션에서 트랜잭션 롤백을 진행하고 있습니다.<br /><br /> **보류 중**. 세션이 작업자 스레드를 사용할 수 있을 때까지 기다리고 있습니다.<br /><br /> 실행 **가능.** 세션의 태스크는 시간 퀀텀을 얻기 위해 기다리는 동안 스케줄러의 실행 가능한 큐에 있습니다.<br /><br /> **spinloop**. 세션의 태스크가 spinlock을 사용할 수 있을 때까지 기다리고 있습니다.<br /><br /> **일시 중단 됨**. 세션이 I/O와 같은 이벤트가 완료되기를 기다리고 있습니다.|  
 |**loginame**|**nchar(128)**|특정 프로세스와 연결된 로그인 이름입니다.|  
 |**hostname**|**nchar(128)**|각 프로세스의 호스트 또는 컴퓨터 이름입니다.|  
 |**blk**|**char (5)**|프로세스를 차단하기 위한 세션 ID입니다(존재하는 경우). 없는 경우 이 열은 0이 됩니다.<br /><br /> 분리된 분산 트랜잭션이 지정된 세션 ID와 연결된 트랜잭션을 차단하는 경우 이 열은 분리된 트랜잭션을 차단하기 위한 값으로 '-2'를 반환합니다.|  
@@ -79,7 +79,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 실행되는 모든 세션을 볼 수 있으려면 해당 서버에 대한 VIEW SERVER STATE 권한이 필요합니다. 그렇지 않으면 현재 세션만 사용자에게 표시됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-listing-all-current-processes"></a>A. 현재 프로세스 모두 나열  
  다음 예에서는 매개 변수 없이 `sp_who`를 사용하여 현재 사용자를 모두 보고합니다.  

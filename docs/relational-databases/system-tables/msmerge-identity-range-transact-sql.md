@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 493a2028-88a0-4e83-ad89-ae5661d9f477
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc93ee74d92afadcf302a39ff066ba7e7218240f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d4b83d497e70182d8980ec043396b79d7c65ec49
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736703"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889774"
 ---
 # <a name="msmerge_identity_range-transact-sql"></a>MSmerge_identity_range(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_identity_range** 테이블은 복제에서 자동으로 이러한 범위 할당을 관리 하는 게시에 대 한 구독에 대 한 id 열에 할당 된 숫자 범위를 추적 하는 데 사용 됩니다. 이 테이블은 게시 및 구독 데이터베이스에 저장됩니다.  
   

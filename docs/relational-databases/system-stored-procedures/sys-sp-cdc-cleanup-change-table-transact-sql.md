@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 061321d6fdefb52890a54fb7e18aa0a618cd986f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ac10ff9accd4cac39caef8139406319701026e79
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626248"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891175"
 ---
 # <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sys.sp_cdc_cleanup_change_table(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   지정 된 *low_water_mark* 값을 기준으로 현재 데이터베이스의 변경 테이블에서 행을 제거 합니다. 이 저장 프로시저는 변경 테이블 정리 프로세스를 직접 관리하려는 사용자를 위해 제공됩니다. 이 프로시저는 변경 테이블에 있는 데이터의 모든 소비자에게 영향을 주므로 사용할 때 주의해야 합니다.  
   

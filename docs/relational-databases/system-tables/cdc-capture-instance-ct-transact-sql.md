@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 15fe17913bfb00d983772a84f625ff41e690f263
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce584b558be168a81e21da0762f6ea26ed798b05
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750349"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890655"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>cdc. &lt; capture_instance &gt; _CT (transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   원본 테이블에서 변경 데이터 캡처를 활성화할 때 생성된 변경 테이블입니다. 이 테이블은 원본 테이블에 대해 수행된 각 삽입 및 삭제 작업당 한 개의 행을, 업데이트 작업당 두 개의 행을 반환합니다. 원본 테이블이 활성화될 때 변경 테이블의 이름이 지정되지 않을 경우 이름이 파생됩니다. 이름 형식은 cdc입니다. _CT *capture_instance* *capture_instance* 은 원본 테이블의 스키마 이름이 고 *schema_table*형식으로 된 원본 테이블 이름입니다. 예를 들어 **AdventureWorks** 예제 데이터베이스의 테이블 **Person 주소** 에 변경 데이터 캡처가 설정 되어 있으면 파생 된 변경 테이블 이름은 cdc가 됩니다 **. Person_Address_CT**.  
   

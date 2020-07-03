@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7c44934f2c034d2a89d3cfdd80175f297d1138e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 27568d450bed5a937931164ed1c04cd09d0b7c2f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783692"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890937"
 ---
 # <a name="sysmail_delete_profileaccount_sp-transact-sql"></a>sysmail_delete_profileaccount_sp(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스 메일 프로필에서 계정을 제거합니다.  
   
@@ -66,7 +66,7 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ## <a name="permissions"></a>사용 권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `Audit Account` 프로필에서 `AdventureWorks Administrator` 계정을 제거합니다.  
   
 ```  

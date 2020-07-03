@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 55665bd2-9e1d-4efc-8f60-c63a24f66b28
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 45fb7bb9af3ece5c562412e3673dbeecd47d3b38
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d6b60abffcb4831223ee35ac530c979865e03e05
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753918"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889971"
 ---
 # <a name="msdistribution_history-transact-sql"></a>MSdistribution_history(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSdistribution_history** 테이블에는 로컬 배포자와 연결 된 배포 에이전트에 대 한 기록 행이 포함 되어 있습니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

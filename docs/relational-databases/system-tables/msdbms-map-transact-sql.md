@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: df67e691-3a50-450a-99c5-8c4a041749ae
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8d1f6b6a078aa8adf8e62663491714f14f7b0944
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1deb0171bb62c50e43a1d1b072bf79126e79420b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762560"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890013"
 ---
 # <a name="msdbms_map-transact-sql"></a>MSdbms_map(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSdbms_map** 테이블에는 원본 데이터 형식 정보와 원본 및 대상 DBMS 쌍의 기본 대상 데이터 형식 정보에 대 한 링크가 포함 되어 있습니다. 이 테이블은 **msdb** 데이터베이스에 저장 되며 유형이 다른 게시에 사용 됩니다.  
   

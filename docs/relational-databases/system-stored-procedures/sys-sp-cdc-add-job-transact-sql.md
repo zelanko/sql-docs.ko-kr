@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 194835abe2691a74116e51222fb069d941fd3c92
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 68737e96c3c2c90592b1cccf807675ae5518ee4d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626270"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891197"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스의 변경 데이터 캡처 정리 또는 캡처 작업을 만듭니다.  
   
@@ -96,7 +96,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ## <a name="permissions"></a>사용 권한  
  **Db_owner** 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-creating-a-capture-job"></a>A. 캡처 작업 만들기  
  다음 예에서는 캡처 작업을 만듭니다. 이 예에서는 기존 정리 작업이 명시적으로 삭제되어 다시 만들어야 한다고 가정합니다. 작업은 기본값을 사용하여 만들어집니다.  

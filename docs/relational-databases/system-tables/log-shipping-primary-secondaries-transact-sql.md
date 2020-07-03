@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4b315c70-7265-4acd-b35b-a4dbb7881d98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d4aa527c1c1d7c77d637885e8d450a0a97188fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 57c7ec652ff3a4c2643aa1a6cdf1dba2b7845ad2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750164"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890147"
 ---
 # <a name="log_shipping_primary_secondaries-transact-sql"></a>log_shipping_primary_secondaries(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   각 주 데이터베이스를 보조 데이터베이스로 매핑합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
 

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 475d08ae-eb8b-49de-afd6-33c96ab8004d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4a7053329a33317eb952f6608652df20891b0187
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4c0c516062e05fe71250f8f309c12a5a3d3c89a0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736709"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889811"
 ---
 # <a name="msmerge_genhistory-transact-sql"></a>MSmerge_genhistory(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_genhistory** 테이블에는 구독자가 알고 있는 각 세대에 대 한 하나의 행 (보존 기간 내)이 포함 되어 있습니다. 교환 기간 동안 공통 generation을 보내지 못하게 하고 백업에서 복원한 구독자를 다시 동기화하는 데 사용됩니다. 이 테이블은 게시 및 구독 데이터베이스에 저장됩니다.  
   

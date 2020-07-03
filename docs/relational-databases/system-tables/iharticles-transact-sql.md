@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 78d6dfdd7497bf8937e7f2c37e8460d883f43760
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 252b68ea2f6512f2acbc9bbb7555eae172a641ef
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753962"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890334"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **IHarticles** 시스템 테이블에는 현재 배포자를 사용 하 여 SQL Server 이외 게시자에서 복제 되는 각 아티클에 대 한 행이 하나씩 포함 되어 있습니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

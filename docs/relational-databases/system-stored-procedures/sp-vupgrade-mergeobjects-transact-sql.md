@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1341450581e420e87a4f68e35613587afb9d3ac9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e2237feb8ba1be19df876cedc480b15cc430a30
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722995"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891222"
 ---
 # <a name="sp_vupgrade_mergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   병합 복제의 데이터 변경 내용을 추적하고 적용하는 데 사용되는 아티클별 트리거, 저장 프로시저 및 뷰를 다시 생성합니다. 다음과 같은 경우 이 프로시저를 실행합니다.  
   

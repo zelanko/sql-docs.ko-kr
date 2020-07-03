@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f94e292f9376abe583cc16ecef93437192d9568d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b3332c82cdfefad09c4230ae52560f7bdf4e65b3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758707"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890624"
 ---
 # <a name="cdcddl_history-transact-sql"></a>cdc.ddl_history(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   변경 데이터 캡처가 활성화된 테이블에 적용된 각 DDL(데이터 정의 언어) 변경에 대해 한 개의 행을 반환합니다. 이 테이블을 사용하면 원본 테이블에서 DDL 변경이 발생한 시점과 변경 내용을 확인할 수 있습니다. DDL 변경이 발생하지 않은 원본 테이블의 경우 이 테이블에 항목이 없습니다.  
   

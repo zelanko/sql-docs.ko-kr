@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af2feda317d3cbcbf7391179c0797291644eca26
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 80736db0e2356d3592744393ff8964ac6f6073c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719216"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891500"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   복제를 사용하면 트랜잭션 복제에서 사용되는 하나 이상의 기본 프로시저를 사용자 정의 사용자 지정 저장 프로시저로 바꿀 수 있습니다. 이러한 저장 프로시저는 복제된 테이블에서 스키마 변경이 발생하면 다시 생성됩니다. **sp_register_custom_scripting** [!INCLUDE[tsql](../../includes/tsql-md.md)] 새 사용자 정의 사용자 지정 저장 프로시저에 대 한 정의를 스크립팅 하기 위해 스키마 변경이 발생할 때 실행 되는 저장 프로시저 또는 스크립트 파일을 sp_register_custom_scripting 등록 합니다. 새 사용자 정의 사용자 지정 저장 프로시저는 테이블에 대한 새 스키마를 반영해야 합니다. **sp_register_custom_scripting** 는 게시 데이터베이스의 게시자에서 실행 되 고 스키마 변경이 발생할 때 등록 된 스크립트 파일 또는 저장 프로시저가 구독자에서 실행 됩니다.  
   

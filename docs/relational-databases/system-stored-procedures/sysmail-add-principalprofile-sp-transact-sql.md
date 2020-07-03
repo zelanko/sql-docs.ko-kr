@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 387761d2275025f70a769cf3068693d08dbecc58
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dac2c362e2aac2b09969ba7193e44b06facebb51
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718627"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891022"
 ---
 # <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스 메일 프로필을 사용 하는 msdb 데이터베이스 보안 주체에 대 한 사용 권한을 부여 합니다. 데이터베이스 보안 주체는 SQL Server 인증 사용자, Windows 사용자 또는 Windows 그룹에 매핑되어야 합니다.
   
@@ -66,7 +66,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ## <a name="permissions"></a>사용 권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  **1. 연결 생성 및 기본 프로필 설정**  
   
  다음 예에서는 라는 프로필과 `AdventureWorks Administrator Profile` **msdb** 데이터베이스 사용자 간의 연결을 만듭니다 `ApplicationUser` . 이 프로필은 해당 사용자의 기본 프로필입니다.  

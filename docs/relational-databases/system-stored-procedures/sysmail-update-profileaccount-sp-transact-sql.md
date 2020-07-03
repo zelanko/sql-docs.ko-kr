@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 24c6674c35bdbe626cc703e84e773d33d3b7f47a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: af6578c98acfdd9fe5dea664ecea4cf21aa74f85
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783656"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890799"
 ---
 # <a name="sysmail_update_profileaccount_sp-transact-sql"></a>sysmail_update_profileaccount_sp(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스 메일 프로필 내에서 계정의 시퀀스 번호를 업데이트합니다.  
   
@@ -70,7 +70,7 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ## <a name="permissions"></a>사용 권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `Admin-BackupServer` `AdventureWorks Administrator` **msdb** 데이터베이스의 프로필 내에서 계정의 시퀀스 번호를 변경 합니다. 이 코드를 실행하면 계정의 시퀀스 번호는 `3`이 되고 처음 두 계정이 실패하면 해당 계정이 시도된다는 의미입니다.  
   
 ```  

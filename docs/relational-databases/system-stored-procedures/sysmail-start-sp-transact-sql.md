@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e26409c4bbf3f5bff6332bce1804da3b60751e82
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e2986749f21982e5eee75772e794a9461545b967
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762636"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890836"
 ---
 # <a name="sysmail_start_sp-transact-sql"></a>sysmail_start_sp(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   외부 프로그램이 사용하는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 개체를 시작하여 데이터베이스 메일을 시작합니다.  
   
@@ -60,7 +60,7 @@ sysmail_start_sp
 ## <a name="permissions"></a>사용 권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 **msdb** 데이터베이스에서 데이터베이스 메일를 시작 하는 방법을 보여 줍니다. 이 예에서는 데이터베이스 메일이 설정되었다고 가정합니다.  
   
 ```  

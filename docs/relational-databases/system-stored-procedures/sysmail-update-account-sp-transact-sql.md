@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: df0cbdda40b8e473ce81bf95b7c38e1cd2ec75c0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d50c251d2486b53611c2f2fccfc7e8c2bfa352d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783680"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890843"
 ---
 # <a name="sysmail_update_account_sp-transact-sql"></a>sysmail_update_account_sp(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   기존 데이터베이스 메일 계정의 정보를 변경합니다.  
  
@@ -91,7 +91,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-changing-the-information-for-an-account"></a>A. 계정에 대한 정보 변경  
  다음 예에서는 `AdventureWorks Administrator` **msdb** 데이터베이스의 계정을 업데이트 합니다. 계정에 대한 정보는 제공된 값으로 설정됩니다.  

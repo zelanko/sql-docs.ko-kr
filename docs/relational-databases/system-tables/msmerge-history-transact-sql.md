@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 936195ad-ca07-41a8-a1a0-6699b6e63403
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9ca908d080a77eb580f945856c3bc2a28a066f4a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4a67943dd52f12fac1d7afa3d25e58ccaa85d79f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736722"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889793"
 ---
 # <a name="msmerge_history-transact-sql"></a>MSmerge_history(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_history** 테이블에는 이전 병합 에이전트 작업 세션의 결과에 대 한 자세한 설명이 포함 된 기록 행이 포함 되어 있습니다. 이 테이블은 에이전트가 출력한 각 줄당 한 개의 행을 포함하며 배포 데이터베이스와 각 구독 데이터베이스에 사용됩니다. 배포 데이터베이스의 경우 이 테이블에는 배포자를 사용하는 모든 병합 게시 및 구독에 대한 기록이 포함되고, 각 구독 데이터베이스의 경우 이 테이블에는 구독자가 구독하는 게시에 대한 기록이 포함됩니다.  
   

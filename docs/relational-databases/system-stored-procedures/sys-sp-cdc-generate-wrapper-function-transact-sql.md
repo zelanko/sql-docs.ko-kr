@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3c65ee865a5c4e4bccd11c12846de1a1ca8b5035
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 68dbfaed63677a7d64c489646592fe35745ff3b1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626031"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891121"
 ---
 # <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 있는 변경 데이터 캡처 쿼리 함수에 대한 래퍼 함수를 만드는 스크립트를 생성합니다. 생성된 래퍼에서 지원되는 API를 사용하면 쿼리 간격을 날짜/시간 간격으로 지정할 수 있습니다. 이렇게 하면 변경 데이터 캡처 기술을 사용하여 증분 로드를 결정하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 디자이너가 개발하는 웨어하우징 애플리케이션을 비롯한 많은 웨어하우징 애플리케이션에서 함수 사용이 용이해집니다.  
   
@@ -75,7 +75,7 @@ sys.sp_cdc_generate_wrapper_function
 ## <a name="remarks"></a>설명  
  캡처 인스턴스에 대한 모든 변경 쿼리를 래핑하는 함수를 만드는 스크립트는 항상 생성됩니다. 캡처 인스턴스가 순 변경 쿼리를 지원하는 경우 이 쿼리에 대한 래퍼를 생성하는 스크립트도 생성됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `sys.sp_cdc_generate_wrapper_function`을 사용하여 모든 변경 데이터 캡처 함수에 대한 래퍼를 만드는 방법을 보여 줍니다.  
   
 ```  

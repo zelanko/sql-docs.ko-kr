@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 23da49150e2066228247be012e065a1533895c58
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4a87fca28491075c9a75945b7a452c02b270d95b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768402"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891055"
 ---
 # <a name="syssp_cdc_start_job-transact-sql"></a>sys.sp_cdc_start_job(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스의 변경 데이터 캡처 정리 또는 캡처 작업을 시작합니다.  
   
@@ -55,7 +55,7 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
 ## <a name="permissions"></a>사용 권한  
  db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-starting-a-capture-job"></a>A. 캡처 작업 시작  
  다음 예에서는 `AdventureWorks2012` 데이터베이스의 캡처 작업을 시작합니다. 기본 작업 유형이 **캡처**이기 때문에 *job_type* 값을 지정 하지 않아도 됩니다.  

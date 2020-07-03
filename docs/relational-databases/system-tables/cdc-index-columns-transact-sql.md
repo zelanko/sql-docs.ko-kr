@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 256ec8a5-3031-40a8-9fdb-99db42ea453d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 219e3c75b0c89c0707d772df86810419089bfe8f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fcd54786ee9f1746429232619dd605a5587a60b8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790323"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890611"
 ---
 # <a name="cdcindex_columns-transact-sql"></a>cdc.index_columns(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   변경 테이블과 관련된 각 인덱스 열에 대해 하나의 행을 반환합니다. 인덱스 열은 변경 데이터 캡처에서 원본 테이블의 행을 고유하게 식별하는 데 사용됩니다. 기본적으로 원본 테이블의 기본 키 열이 포함되지만 원본 테이블에서 변경 데이터 캡처가 사용되는 경우 원본 테이블에 고유한 인덱스가 지정되어 있으면 해당 인덱스의 열이 대신 사용됩니다. 순 변경 추적이 설정된 경우에는 원본 테이블에 기본 키 또는 고유 인덱스가 있어야 합니다. 자세한 내용은 [sp_cdc_enable_table &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)을 참조 하십시오.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7905ab0197c4286013f5a407570cdeaa39b3b009
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db6f15fe8ce2f515bf79211e6db49a135eb6fb3f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85625985"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890974"
 ---
 # <a name="sysmail_delete_log_sp-transact-sql"></a>sysmail_delete_log_sp(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스 메일 로그에서 이벤트를 삭제합니다. 로그의 모든 이벤트를 삭제하거나 날짜나 유형 기준에 맞는 이벤트만을 삭제할 수 있습니다.  
   
@@ -56,7 +56,7 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저에 액세스할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-deleting-all-events"></a>A. 모든 이벤트 삭제  
  다음 예에서는 데이터베이스 메일 로그의 모든 이벤트를 삭제합니다.  

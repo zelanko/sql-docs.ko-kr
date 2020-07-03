@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ac6461e522973b43926b66b6e525526ae6952d85
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 08db9ea2487f51267e7c1f1e4bac4fd807b59fcd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755512"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890713"
 ---
 # <a name="xp_sqlmaint-transact-sql"></a>xp_sqlmaint(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **Sqlmaint**스위치를 포함 하는 문자열을 사용 하 여 **sqlmaint** 유틸리티를 호출 합니다. **Sqlmaint** 유틸리티는 하나 이상의 데이터베이스에서 유지 관리 작업 집합을 수행 합니다.  
   
@@ -56,7 +56,7 @@ xp_sqlmaint 'switch_string'
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `xp_sqlmaint`가 무결성 검사를 수행하고 보고서 파일을 만들며, `sqlmaint`를 업데이트하기 위해 `msdb.dbo.sysdbmaintplan_history`를 호출합니다.  
   
 ```  

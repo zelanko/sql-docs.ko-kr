@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab7241fe17306fedf25c1562bcabe366d7754e84
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4194de86ec5ba51455f37d75bccf574d4316762f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749295"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891291"
 ---
 # <a name="sp_update_schedule-transact-sql"></a>sp_update_schedule(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 일정에 대한 설정을 변경합니다.  
   
@@ -143,7 +143,7 @@ sp_update_schedule
   
  **Sysadmin** 의 멤버만 다른 사용자가 소유한 일정을 수정할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `NightlyJobs` 일정의 활성화된 상태를 `0`으로 변경하고 소유자를 `terrid`로 설정합니다.  
   
 ```  

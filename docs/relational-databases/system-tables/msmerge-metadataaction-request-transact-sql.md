@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 747a8f7717ba9d0778c506166df583d98f99386d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aee900d9f34fb1e8f64db3687d6121a72a9e3b96
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736692"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889734"
 ---
 # <a name="msmerge_metadataaction_request-transact-sql"></a>MSmerge_metadataaction_request(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_metadataaction_request** 테이블은 필요한 각 보정 작업에 대해 하나의 행을 저장 합니다. 웹 동기화를 사용 하 여 오류가 발생 하 고 동기화를 다시 시도해 야 하는 경우에는 **MSmerge_metadataaction_request**로 항목이 생성 됩니다. 다음 병합의 업로드 단계 동안 동기화 중인 게시에 속한 모든 아티클에 대한 요청은 이 테이블에서 검색되어 업로드됩니다. 동기화가 성공적으로 완료 되 면 **MSmerge_metadataaction_request** 테이블의 해당 행이 삭제 됩니다. 이 테이블은 게시 데이터베이스의 게시자와 구독 데이터베이스의 구독자에 저장됩니다.  
   

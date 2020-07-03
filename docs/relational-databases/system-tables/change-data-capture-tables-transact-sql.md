@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: a4372d0b-50ca-4e58-80f6-2ed3cb52a84a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d23c366cab021fa04a5e651abd0b51276c2788d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c61cc87f293b589f9c3726fcff5c3408774f34bf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764254"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890593"
 ---
 # <a name="change-data-capture-tables-transact-sql"></a>변경 데이터 캡처 테이블(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   변경 데이터 캡처를 사용하면 테이블에 대한 변경 추적이 가능하므로 테이블에 적용된 DML(데이터 조작 언어) 및 DDL(데이터 정의 언어) 변경 내용을 데이터 웨어하우스에 증분 로드할 수 있습니다. 이 섹션의 항목에서는 변경 데이터 캡처 작업에 사용되는 정보를 저장하는 시스템 테이블에 대해 설명합니다.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: da51b0f8-5ad0-4aeb-96ed-2b3672a2a6e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5deea8cedba0f78577d58bf975b8b9646c42010f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d9fe5404014340326de8eb975edd09630c58d10d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736812"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889869"
 ---
 # <a name="msmerge_altsyncpartners-transact-sql"></a>MSmerge_altsyncpartners(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_altsyncpartners** 테이블은 게시자에 대 한 현재 동기화 파트너의 연결을 추적 합니다. 이 테이블은 게시 및 구독 데이터베이스에 저장됩니다.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 26b26690d1120ce66dd116ed7908a68fe594e077
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 06335bd3ddc5e656d32cf481cfa181143a79cb31
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753930"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889987"
 ---
 # <a name="msdistpublishers-transact-sql"></a>MSdistpublishers(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **Msdistpublishers** 테이블은 로컬 배포자에서 지 원하는 각 원격 게시자에 대해 하나의 행을 포함 합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
 |열 이름|데이터 형식|Description|  

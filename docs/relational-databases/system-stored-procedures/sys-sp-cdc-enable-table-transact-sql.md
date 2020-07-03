@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dd907c83ad7c2fc2751134003f820d43a1023129
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cb3fc807a0c0af8c27f6464571a7556615a1797d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626220"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891109"
 ---
 # <a name="syssp_cdc_enable_table-transact-sql"></a>sys.sp_cdc_enable_table(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스에서 지정된 원본 테이블에 대해 변경 데이터 캡처를 활성화합니다. 테이블에서 변경 데이터 캡처를 사용할 수 있도록 설정하면 해당 테이블에 적용된 각 DML(데이터 조작 언어) 작업의 레코드가 트랜잭션 로그에 기록됩니다. 변경 데이터 캡처 프로세스는 로그에서 이 정보를 검색하고 일련의 함수를 사용하여 액세스하는 변경 테이블에 이 정보를 기록합니다.  
   
@@ -122,7 +122,7 @@ sys.sp_cdc_enable_table
 ## <a name="permissions"></a>사용 권한  
  **Db_owner** 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-enabling-change-data-capture-by-specifying-only-required-parameters"></a>A. 필요한 매개 변수만 지정하여 변경 데이터 캡처 활성화  
  다음 예에서는 `HumanResources.Employee` 테이블에 대해 변경 데이터 캡처를 활성화합니다. 필요한 매개 변수만 지정됩니다.  

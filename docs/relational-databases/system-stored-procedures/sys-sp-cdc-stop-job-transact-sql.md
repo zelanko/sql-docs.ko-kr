@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9da8540af26be55056ca72dea16ed2e1cbe626e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1a42ace7fc657f0f8637c2e5316c2c952917df7d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768468"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891033"
 ---
 # <a name="syssp_cdc_stop_job-transact-sql"></a>sys.sp_cdc_stop_job(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스의 변경 데이터 캡처 정리 또는 캡처 작업을 중지합니다.  
   
@@ -55,7 +55,7 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ## <a name="permissions"></a>사용 권한  
  db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `AdventureWorks2012` 데이터베이스의 정리 작업을 중지합니다.  
   
 ```  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 08bd20c8-c6be-4be2-be9f-2b5e1d7bee43
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bb1097facd4da22b74e76c480c11011269590b39
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 935796cb328807eb4413991eeac97a95bd9b9384
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762760"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891385"
 ---
 # <a name="sp_unregistercustomresolver-transact-sql"></a>sp_unregistercustomresolver(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이전에 등록된 비즈니스 논리 모듈을 등록 취소합니다. 비즈니스 논리는 COM 구성 요소 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 어셈블리 형식일 수 있습니다. 이 저장 프로시저는 사용자 지정 비즈니스 논리가 등록된 배포자에서 실행됩니다.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1c775e48-9898-4149-b9d1-04d465f23438
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ba7b3396a9ac54a2d5d68c040a93122d4651a8b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 98cf21802910299e73b4839e93451080993228db
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773728"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890206"
 ---
 # <a name="log_shipping_monitor_alert-transact-sql"></a>log_shipping_monitor_alert(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   로그 전달에 대한 경고 작업 ID를 저장합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.   
   

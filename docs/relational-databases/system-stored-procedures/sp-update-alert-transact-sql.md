@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6559be1c680c45b75154cea222ddfece355f49cb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36b04c00625792fc34b3fc833ea07a3ea2e71dab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762747"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891368"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   기존 경고의 설정을 업데이트합니다.  
   
@@ -135,7 +135,7 @@ sp_update_alert
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행 하려면 사용자가 **sysadmin** 고정 서버 역할의 멤버 여야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `Test Alert`의 enabled 설정을 `0`으로 변경합니다.  
   
 ```  

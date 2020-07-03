@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eeb6fd370bfd107864845439086138fff3d379c2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36cb1003bcb0884bce069a7f41b3264d045e86e1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85644845"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891449"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   추적에 필터를 적용합니다. **sp_trace_setfilter** 는 중지 된 기존 추적 에서만 실행할 수 있습니다 (*상태* **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]존재 하지 않거나 *상태가* **0**이 아닌 추적에서이 저장 프로시저를 실행 하는 경우 오류를 반환 합니다.  
   
@@ -101,7 +101,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="permissions"></a>사용 권한  
  사용자는 ALTER TRACE 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 추적 `1`에 필터 3개를 설정합니다. `N'SQLT%'` 및 `N'MS%'` 필터는 한 열(`AppName`, 값 `10`)에서 "`LIKE`" 비교 연산자를 사용하여 실행됩니다. `N'joe'` 필터는 다른 열(`UserName`, 값 `11`)에서 "`EQUAL`" 비교 연산자를 사용하여 실행됩니다.  
   
 ```  

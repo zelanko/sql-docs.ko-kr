@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 385bae0bd40fd392f038ef4dd85204c853a81773
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 995668cb4b36e7086c2777d9cb7cd663e7d33ef4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762632"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890752"
 ---
 # <a name="xp_msver-transact-sql"></a>xp_msver(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   에 대 한 버전 정보 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 반환 합니다. 서버에 대 한 실제 빌드 번호 및 서버 환경에 대 한 정보를 반환 하는 **xp_msver** 도 반환 합니다. **Xp_msver** 반환 되는 정보는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 일괄 처리, 저장 프로시저 등에서 사용 하 여 플랫폼 독립적인 코드의 논리를 향상 시킬 수 있습니다.  
   

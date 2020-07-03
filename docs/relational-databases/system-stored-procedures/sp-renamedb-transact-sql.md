@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a707a2dc0f7e4350e4447550d218f243ed07f8da
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a947bd670e57660f1f523c56f7422a28eacc39e0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826559"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891482"
 ---
 # <a name="sp_renamedb-transact-sql"></a>sp_renamedb(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   데이터베이스의 이름을 변경합니다.  
   
@@ -49,7 +49,7 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 0이 아닌 수(실패)  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sysadmin** 또는 **dbcreator** 고정 서버 역할의 멤버 자격이 필요 합니다.  
   
 ## <a name="examples"></a>예  

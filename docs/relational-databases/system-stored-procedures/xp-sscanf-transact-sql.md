@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa9c260f8c1f280132d6c1aa0dc02b9d6c0bd63e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a980f048d6a8f5fae333381f07be3c889ad70366
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755505"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890705"
 ---
 # <a name="xp_sscanf-transact-sql"></a>xp_sscanf(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   문자열에서 각 포맷 인수가 지정한 인수 위치로 데이터를 읽습니다.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 516a8ddbbd91cb9bd0947d1e1076680430ce9aa4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c5cada1c85156a1f6e3c0822813fb79825a7d1c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758714"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890635"
 ---
 # <a name="cdcchange_tables-transact-sql"></a>cdc.change_tables(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스 내의 각 변경 테이블에 대해 한 개의 행을 반환합니다. 변경 테이블은 원본 테이블에서 변경 데이터 캡처를 사용하도록 설정할 때 생성됩니다. 시스템 테이블은 직접 쿼리하지 않는 것이 좋습니다. 대신, [sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) 저장 프로시저를 실행 합니다.  
 

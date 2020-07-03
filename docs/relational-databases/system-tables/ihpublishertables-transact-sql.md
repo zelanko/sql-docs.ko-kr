@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7d16ac39-633a-4fe2-8f22-1d9afc191ee9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6440eff0121b54f0b7747bef04649dada0599f4c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b0d04f3fea97e4943fbbaecf83637141afce482f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755472"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890230"
 ---
 # <a name="ihpublishertables-transact-sql"></a>IHpublishertables(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **IHpublishertables** 시스템 테이블은 게시자에 저장 된 메타 데이터를 나타냅니다. 이 테이블은 현재 배포자를 사용하여 SQL Server 이외 게시자에서 게시되는 각 원본 테이블당 한 개의 행을 포함합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

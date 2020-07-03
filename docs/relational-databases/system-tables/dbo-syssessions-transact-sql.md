@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 187819b6-c7f4-4a26-b74c-0a89e96695cf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 91da4b73125c61f23d027bf99d2550a1d449a7a1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 13d57b4c36d238cb8e6893ff912e7052ba2e079f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750265"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890379"
 ---
 # <a name="dbosyssessions-transact-sql"></a>dbo.syssessions(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 시작할 때마다 새 세션을 만듭니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 세션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 다시 시작되거나 갑자기 중지될 경우 작업 상태를 보존할 수 있습니다. **Syssessions** 테이블의 각 행에는 한 세션에 대 한 정보가 포함 되어 있습니다. **Sysjobactivity** 테이블을 사용 하 여 각 세션이 끝날 때 작업 상태를 볼 수 있습니다.  
   

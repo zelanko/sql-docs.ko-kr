@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b56b81563a693397156f0fe29fe7b3e6a430ef41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 16c47007b5b6b2d31f4cc575e9ad2b8b50526a4a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762788"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891407"
 ---
 # <a name="sp_trace_setstatus-transact-sql"></a>sp_trace_setstatus(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   지정한 추적의 현재 상태를 수정합니다.  
   
@@ -48,7 +48,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
   
  다음 표에서는 지정할 수 있는 상태를 보여 줍니다.  
   
-|상태|Description|  
+|Status|Description|  
 |------------|-----------------|  
 |**0**|지정한 추적을 중지합니다.|  
 |**1**|지정한 추적을 시작합니다.|  

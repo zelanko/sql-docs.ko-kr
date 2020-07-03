@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bfad414f-2bda-4bf5-9507-56a1e743dfc4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73af981371ecbadf92936016316222c061a14b8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: feb13050f5b508298ec45d5fde4ffde9aa510c9d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640070"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891593"
 ---
 # <a name="sp_mergesubscription_cleanup-transact-sql"></a>sp_mergesubscription_cleanup(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   게시자에서 지정 된 병합 밀어넣기 구독을 제거한 후 **sysmergesubscriptions** 및 **sysmergearticles** 에서 트리거와 항목과 같은 메타 데이터를 제거 합니다. 이 저장 프로시저는 구독 데이터베이스의 구독자에서 실행됩니다.  
   

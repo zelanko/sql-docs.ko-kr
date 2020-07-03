@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 62d1fbfffeb23e823e89ecc1a22f44c54f8245a1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7935bc8e0472b90d22a93190f5af81c8e5910e67
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768902"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891091"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스에서 변경 데이터 캡처가 활성화된 각 테이블에 대한 변경 데이터 캡처 구성을 반환합니다. 각 원본 테이블당 최대 두 개의 열, 각 캡처 인스턴스당 한 개의 열을 반환할 수 있습니다. 변경 데이터 캡처는 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
@@ -88,7 +88,7 @@ sys.sp_cdc_help_change_data_capture
 ## <a name="permissions"></a>사용 권한  
  *Source_schema* 및 *source_name* NULL 인 경우 호출자의 권한 부여는 결과 집합에 포함 되는 활성화 된 테이블을 결정 합니다. 호출자는 캡처 인스턴스의 모든 캡처된 열에 대해 SELECT 권한을 가지고 있어야 하며 포함할 테이블 정보에 대해 정의된 제어 역할의 멤버여야 합니다. db_owner 데이터베이스 역할의 멤버는 정의된 모든 캡처 인스턴스에 대한 정보를 볼 수 있습니다. 설정된 특정 테이블에 대한 정보가 요청되면 동일한 SELECT 및 멤버 자격 조건이 명명된 테이블에 적용됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-returning-change-data-capture-configuration-information-for-a-specified-table"></a>A. 지정된 테이블에 대한 변경 데이터 캡처 구성 정보 반환  
  다음 예에서는 `HumanResources.Employee` 테이블에 대한 변경 데이터 캡처 구성을 반환합니다.  

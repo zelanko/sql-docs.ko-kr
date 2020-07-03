@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ba23e3be348ef22c279c536ced254099a96c307
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aee1a088e4b2c95b33f8bdb4002853877d8c1275
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753975"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890522"
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 활동 및 상태를 기록합니다.  이 테이블은 **msdb** 데이터베이스에 저장 됩니다.
   

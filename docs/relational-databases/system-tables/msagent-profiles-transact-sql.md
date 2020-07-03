@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4ab1b2ae-b6d9-42b7-9b31-98547dbb7f99
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bd255e174a02463d1cdc05c047f97c1befba1ceb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bde828bdb5d99b132373b847daeb9f8126a85f7a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762576"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890070"
 ---
 # <a name="msagent_profiles-transact-sql"></a>MSagent_profiles(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSagent_profiles** 테이블에는 정의 된 각 복제 에이전트 프로필에 대 한 행이 하나씩 포함 되어 있습니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   

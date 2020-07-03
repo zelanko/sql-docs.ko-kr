@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ffe3197f74e274792ee1a3f97d700492a018bef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9faada50dc5e48f0b3835f65c69a2a1d130e7594
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85633750"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890771"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Windows  명령 셸을 생성하고 실행을 위해 문자열로 전달합니다. 모든 출력은 텍스트 행으로 반환됩니다.  
   
@@ -118,7 +118,7 @@ REVERT ;
   
 ```  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-returning-a-list-of-executable-files"></a>A. 실행 파일의 목록 반환  
  다음 예에서는 디렉터리 명령을 실행하는 `xp_cmdshell` 확장 저장 프로시저를 보여 줍니다.  

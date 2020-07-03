@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: c5150d18-e8b7-48a7-ada7-77c583af6e41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab37b30d501f84d3637df1410405c7554c5c8e22
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1b6ac4c1c037c186e1fe6fc20ad1b3ef0cfba976
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750325"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890419"
 ---
 # <a name="dbosysnotifications-transact-sql"></a>dbo.sysnotifications(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   각 알림에 대해 한 행을 포함합니다.  
   

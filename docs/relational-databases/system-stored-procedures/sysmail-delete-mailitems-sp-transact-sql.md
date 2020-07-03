@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9619ee410e0df014961e9f46a7e536508e0616c1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 052e97d1d744656c223e000adca7028fd11b7e0d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639485"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890958"
 ---
 # <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스 메일의 내부 테이블에서 전자 메일 메시지를 영구 삭제합니다.  
   
@@ -55,7 +55,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할 및 **DatabaseMailUserRole**의 멤버에 대해이 저장 프로시저를 실행할 수 있습니다. **Sysadmin** 고정 서버 역할의 멤버는이 프로시저를 실행 하 여 모든 사용자가 보낸 전자 메일을 삭제할 수 있습니다. **DatabaseMailUserRole** 의 멤버는 해당 사용자가 보낸 전자 메일만 삭제할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-deleting-all-e-mails"></a>A. 모든 전자 메일 삭제  
  다음 예에서는 데이터베이스 메일 시스템의 모든 전자 메일을 삭제합니다.  

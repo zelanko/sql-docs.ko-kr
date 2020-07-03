@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6008ef89-eeb9-46dc-93a2-f7623298cf0f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fc84090e08c3c8890a4613e6f73e1914209c0ba7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c20316355a0b86e4dbe85337e15586795a7f73cd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750172"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890223"
 ---
 # <a name="ihpublisherindexes-transact-sql"></a>IHpublisherindexes(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **IHpublisherindexes** 시스템 테이블은 현재 배포자를 사용 하 여 SQL Server 이외 게시자에서 복제 된 각 인덱스에 대해 하나의 행을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8e3ca89ab5974dbe53b12a2b5b369958ab38755c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3156ac4443bd116767ece63c37cbe0ff51198984
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720164"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890992"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스 메일의 구성 설정을 변경합니다. **Sysmail_configure_sp** 지정 된 구성 설정은 전체 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 적용 됩니다.  
   
@@ -75,7 +75,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="permissions"></a>사용 권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  **1. 각 계정을 10번씩 다시 시도하도록 데이터베이스 메일 설정**  
   
  다음 예에서는 계정에 연결할 수 없는 것으로 간주하기 전에 각 계정을 10번씩 다시 시도하도록 데이터베이스 메일을 설정합니다.  
