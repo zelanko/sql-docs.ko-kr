@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0cc9b40a-36ce-485b-9bc2-d4abd5aa6727
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ffce4df9f6e5dbc366401d5a9d2e6112429deb6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad67ea6744256e3bcc041c736fbe6fe516773b11
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757804"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889409"
 ---
 # <a name="msreplmonthresholdmetrics-transact-sql"></a>MSreplmonthresholdmetrics(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSreplmonthresholdmetrics** 테이블은 복제 모니터링을 위해 제공 되는 메트릭을 정의 합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   

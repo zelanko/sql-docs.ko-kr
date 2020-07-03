@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: de06c349-82a8-48c6-b602-b5d6938514f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ff9929289da5236a07b5461195d54c90d01d5fbe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3c1870e9fba39995f7f8634076c658d8ef044999
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752682"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889532"
 ---
 # <a name="msrepl_backup_lsns-transact-sql"></a>MSrepl_backup_lsns(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSrepl_backup_lsns** 테이블에는 배포 데이터베이스의 ' sync with backup ' 옵션을 지원 하기 위한 트랜잭션 LSN (로그 시퀀스 번호)이 포함 되어 있습니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

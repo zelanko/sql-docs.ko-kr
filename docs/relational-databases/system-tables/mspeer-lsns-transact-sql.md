@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f4c3ec9cb14dc9c3e84167ad87f36f93f710f3be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 231653b004da7e3429f81997500f2ece51e77f8b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773699"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889661"
 ---
 # <a name="mspeer_lsns-transact-sql"></a>MSpeer_lsns(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **Mspeer_lsns** 테이블은 피어 투 피어 복제 토폴로지의 구독에 각 트랜잭션을 매핑하는 데 사용 됩니다. 이 테이블은 피어 투 피어 복제 토폴로지 내의 모든 게시 데이터베이스와 피어 투 피어 게시에 대한 모든 구독자의 구독 데이터베이스에 저장됩니다. 이러한 유형의 트랜잭션 복제 토폴로지에 대 한 자세한 내용은 [피어 투 피어 트랜잭션 복제](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)를 참조 하세요. 이 테이블은 게시 데이터베이스에 저장됩니다.  
   

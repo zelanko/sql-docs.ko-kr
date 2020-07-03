@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5894a32b-c2d8-4bba-8f9d-d09e5cd65f71
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2cd249a527eee10d46e32e2ee4897c7f1875d199
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 84847b16e1762e55af4f0aeb2729a3dcbd4ba70a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736587"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888711"
 ---
 # <a name="protocolname-property-servernetworkprotocol-class"></a>ProtocolName 속성(ServerNetworkProtocol 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   서버 네트워크 프로토콜의 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  

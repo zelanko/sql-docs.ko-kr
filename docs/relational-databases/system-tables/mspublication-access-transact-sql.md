@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7bebe47e-3153-4579-8092-5723667a24c6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c22e44c6ad72c36552c6b749bbc0ceab5d6a75d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 065d87e17e143621fa34bea48836b0b6db582e0d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725435"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889623"
 ---
 # <a name="mspublication_access-transact-sql"></a>MSpublication_access(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSpublication_access** 테이블은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 특정 게시 또는 게시자에 대 한 액세스 권한이 있는 각 로그인에 대 한 행을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

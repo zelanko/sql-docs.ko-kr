@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5f9582f9377c1ae9cdcbefb00e772f456e1018e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3bdbfed403a8b85a195134e053a151905efa128f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757822"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889427"
 ---
 # <a name="msreplication_queue-transact-sql"></a>MSreplication_queue(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSreplication_queue** 테이블은 복제 프로세스에서 SQL 기반 큐에 대기 중인 모든 업데이트 구독이 실행 하는 대기 중인 명령을 저장 하는 데 사용 됩니다. 이 테이블은 구독 데이터베이스에 저장됩니다.  
   

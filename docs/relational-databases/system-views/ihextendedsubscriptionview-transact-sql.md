@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 124756a4-463a-4a81-bf5b-de7e8ffc7a62
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7c9804cbcdfdf5e88a9e8e0725d8388ce0ea63d0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 909aa160bdd5f7b5f60255e1187f07ab6ef1b3fc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755467"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889202"
 ---
 # <a name="ihextendedsubscriptionview-transact-sql"></a>IHextendedSubscriptionView(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **IHextendedSubscriptionView** 뷰는 구독에 대 한 정보를 SQL Server 되지 않은 게시에 노출 합니다. 이 뷰는 **배포** 데이터베이스에 저장 됩니다.  
   

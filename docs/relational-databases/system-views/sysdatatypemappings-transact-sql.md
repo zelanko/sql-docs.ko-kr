@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8a60a558b94b80ac09c752ca6ae2f2afd5b0ef05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ae1637f0019979d4f915ddb084c6e90fa4e8274e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758598"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889136"
 ---
 # <a name="sysdatatypemappings-transact-sql"></a>sysdatatypemappings(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **Msdb.dbo.sysdatatypemappings** 뷰는 SQL SERVER 아닌 DBMS (데이터베이스 관리 시스템)의 데이터 형식과 SQL Server 데이터 형식 간의 매핑을 표시 하는 데 사용 됩니다. 이 뷰는 **msdb** 데이터베이스에 저장 됩니다.  
   

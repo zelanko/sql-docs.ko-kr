@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 48c24a82f886cade6b89e4f47772678e00e3c362
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eb31a5a858bb93c8ca503ba5e72687306c8750e7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639359"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889684"
 ---
 # <a name="msmerge_subscriptions-transact-sql"></a>MSmerge_subscriptions(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_subscriptions** 테이블은 구독자에서 병합 에이전트 서비스를 제공 하는 각 구독에 대해 하나의 행을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

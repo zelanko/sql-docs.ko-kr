@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5842e1a0f7ca48fc415528b0d2b63ca8ed033446
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d0ec6418e25b59afb3a82ed8b6b97f4e2ceadc6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757809"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889467"
 ---
 # <a name="msreplication_subscriptions-transact-sql"></a>MSreplication_subscriptions(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSreplication_subscriptions** 테이블에는 로컬 구독자 데이터베이스를 제공 하는 각 배포 에이전트에 대 한 복제 정보 행이 하나씩 포함 되어 있습니다. 이 테이블은 구독 데이터베이스에 저장됩니다.  
   

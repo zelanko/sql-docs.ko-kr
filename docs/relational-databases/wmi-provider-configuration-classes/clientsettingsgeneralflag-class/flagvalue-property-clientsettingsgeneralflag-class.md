@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7af9e5b2-1b99-4eea-8a49-1129c0d46086
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7fe1a3cd78e430b1fcbf4dd14d12097273438a6f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8fab0d841283c5ff818e85c8388b9b5fb2dd421d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755408"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888820"
 ---
 # <a name="flagvalue-property-clientsettingsgeneralflag-class"></a>FlagValue 속성(ClientSettingsGeneralFlag 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   플래그의 값을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  

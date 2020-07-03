@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c1f53d0f-4080-43ff-be38-2b10395c68c9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4f3e81b10ae8805161db6067d4363317a5c93fcb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d54a534ac63dee6e07220327c5b4890f08deefb0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751620"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889657"
 ---
 # <a name="mspeer_originatorid_history-transact-sql"></a>MSpeer_originatorid_history(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   토폴로지에 정의된 각 송신자 ID에 대한 행을 하나씩 포함합니다. 여기에는 더 이상 활성화되지 않는 노드의 ID도 포함됩니다. 이 테이블은 지정된 송신자 ID가 아직 사용되지 않았는지 확인하기 위해 충돌 감지를 수행할 노드를 새로 구성할 때 사용됩니다. 이 테이블은 게시 데이터베이스에 저장됩니다. 충돌 감지에 대 한 자세한 내용은 [피어 투 피어 복제에서 충돌 검색](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)을 참조 하세요.  
   

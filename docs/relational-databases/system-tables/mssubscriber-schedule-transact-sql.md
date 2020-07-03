@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6e2c1c4f898dcfd94619fe0e85bea15bd026f83b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c5b4a3ac4c00dcb90d62961554d7bc4d12911f6f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757782"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889375"
 ---
 # <a name="mssubscriber_schedule-transact-sql"></a>MSsubscriber_schedule(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSsubscriber_schedule** 테이블에는 각 게시자/구독자 쌍에 대 한 기본 병합 및 트랜잭션 동기화 일정이 포함 되어 있습니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

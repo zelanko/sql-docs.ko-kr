@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a94f45171d54d7abb4a81c0bf55ff35b2511a6bc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f4cd21fcc026e48c0e0f4ca68ada16bf55855662
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722898"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889390"
 ---
 # <a name="mssnapshotdeliveryprogress-transact-sql"></a>MSsnapshotdeliveryprogress(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSsnapshotdeliveryprogress** 테이블은 스냅숏이 적용 될 때 구독자에 성공적으로 배달 된 파일을 추적 하는 데 사용 됩니다. 이 데이터는 병합 에이전트가 세션 중에 파일을 모두 배달하지 못한 경우 파일 배달을 다시 시작하는 데 사용되어 다음에 병합 에이전트가 실행될 때 같은 파일을 다시 배달하지 않도록 합니다. 이 테이블은 구독 데이터베이스의 구독자에 저장됩니다.  
   

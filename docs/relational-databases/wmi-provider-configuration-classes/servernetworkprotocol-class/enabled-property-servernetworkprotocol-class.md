@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a514822a-91f1-4aca-9175-2b96cff29700
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 32ad06a57dccfa2f36e7990d38d5bafa7310144f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 755ef436a63a421fa2ee7ffaa335dee452d40d8b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750071"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888814"
 ---
 # <a name="enabled-property-servernetworkprotocol-class"></a>Enabled 속성(ServerNetworkProtocol 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   서버 네트워크 프로토콜이 설정되었는지 여부를 지정하는 부울 속성을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  

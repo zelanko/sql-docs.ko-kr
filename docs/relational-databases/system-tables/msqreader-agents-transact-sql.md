@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dfa1f45e-c531-4385-a097-0a9edd1d7eab
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c3919d40f7c1d52125f071f96844f6881fac955f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 19ed795647a89a3d9fbfb2082a28a50a5554938b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751595"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889564"
 ---
 # <a name="msqreader_agents-transact-sql"></a>MSqreader_agents(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSqreader_agents** 테이블에는 로컬 배포자에서 실행 되는 각 큐 판독기 에이전트에 대 한 행이 하나씩 포함 되어 있습니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85861db94b619da764323269eaf5f45badf93e28
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fedcf6dd9d4b30b92a6a98d97f49c0b3361f38ca
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722909"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889401"
 ---
 # <a name="mssnapshot_history-transact-sql"></a>MSsnapshot_history(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSsnapshot_history** 테이블에는 로컬 배포자와 연결 된 스냅숏 에이전트에 대 한 기록 행이 포함 되어 있습니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   

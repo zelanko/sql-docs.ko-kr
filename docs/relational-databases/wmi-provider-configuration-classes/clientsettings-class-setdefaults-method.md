@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee4fec9752a83fdda757b6ac50f5afddcdcb1efa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fd88ef9b93dd20a7cf77e70dddb8a2733ee5a4ea
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759896"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888866"
 ---
 # <a name="clientsettings-class---setdefaults-method"></a>ClientSettings 클래스 - SetDefaults 메서드
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기존 데이터를 덮어쓰는 옵션을 사용 하 여 클라이언트 인스턴스에 대 한 모든 기본값을 설정 합니다.  
   
 ## <a name="syntax"></a>구문  

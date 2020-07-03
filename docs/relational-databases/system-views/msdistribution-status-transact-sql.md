@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 90d447de-3a4a-4f3e-aeab-e8fff6348361
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7d293451c70c7d9e61b321fc48f0497a65dd5ee5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: df060b429b48eb1e1a99c48dbb2789fce3e10833
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736643"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889161"
 ---
 # <a name="msdistribution_status-transact-sql"></a>MSdistribution_status(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSdistribution_status** 뷰는 배포 데이터베이스의 상태 명령에 대 한 추가 정보를 제공 합니다. 이 뷰는 배포 데이터베이스에 저장됩니다.  
   

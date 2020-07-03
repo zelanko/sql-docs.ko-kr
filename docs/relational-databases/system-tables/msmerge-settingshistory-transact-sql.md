@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 89a936fa8dad5df860f72295c93c915b055a3c48
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cfcec38c71b1822c51d8ee08227f57f78ef185ae
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784811"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889717"
 ---
 # <a name="msmerge_settingshistory-transact-sql"></a>MSmerge_settingshistory(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_settingshistory** 테이블은 병합 복제에 대 한 아티클 및 게시 속성에 대 한 변경 기록을 유지 관리 하는 데 사용 되며 병합 복제 토폴로지에 대 한 각 변경 내용에 대해 행이 하나씩 있습니다. 또한 이 테이블에는 초기 속성 설정이 이루어진 시간에 대한 정보도 저장됩니다. 이 테이블은 게시 및 구독 데이터베이스에 저장됩니다.  
   
