@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b2825efb9d6b0b16c0e68f2f5744b4371bc59e5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a9e801649cceee2aacdda530fa47c53db500bad6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734447"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898515"
 ---
 # <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>cdc. fn_cdc_get_net_changes_ &lt; capture_instance &gt; (transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   지정 된 LSN (로그 시퀀스 번호) 범위 내에서 변경 된 각 원본 행에 대해 하나의 순 변경 행을 반환 합니다.  
   
@@ -93,7 +93,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 
  행의 고유 식별자를 수정 하면 fn_cdc_get_net_changes는 DELETE 및 INSERT 명령을 사용 하 여 초기 UPDATE 명령을 표시 합니다.  이 동작은 변경 전후에 키를 추적 하는 데 필요 합니다.
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 함수를 사용 하 여 `cdc.fn_cdc_get_net_changes_HR_Department` `HumanResources.Department` 특정 시간 간격 동안 원본 테이블에 대 한 순 변경 내용을 보고 합니다.  
   
  먼저 `GETDATE` 함수를 사용하여 시간 간격의 시작을 표시합니다. 원본 테이블에 여러 DML 문이 적용된 후 `GETDATE` 함수를 다시 호출하여 시간 간격의 끝을 식별합니다. 그런 다음 [fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) 함수를 사용 하 여 시간 간격을 lsn 값에 의해 제한 되는 변경 데이터 캡처 쿼리 범위에 매핑합니다. 마지막으로 `cdc.fn_cdc_get_net_changes_HR_Department` 함수를 쿼리하여 원본 테이블에서 해당 시간 간격에 수행된 순 변경을 가져옵니다. 삽입된 후 삭제된 행은 함수가 반환하는 결과 집합에 나타나지 않습니다. 쿼리 창 내에서 추가된 후 삭제된 행은 원본 테이블에서 시간 간격 동안 순 변경을 생성하지 않기 때문입니다. 이 예를 실행 하려면 먼저 [sp_cdc_enable_table &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)에서 예제 B를 실행 해야 합니다.  

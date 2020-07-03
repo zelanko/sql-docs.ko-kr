@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa7c9997a8044181c5d60d1efd19c057fc433814
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9355cc5c9aeafc6da302a12af3e276d8f5b35c97
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754445"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899026"
 ---
 # <a name="systcp_endpoints-transact-sql"></a>sys.tcp_endpoints(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   시스템 내의 각 TCP 엔드포인트당 한 개의 행을 포함합니다. **Sys. tcp_endpoints** 에서 설명 하는 끝점은 연결 권한을 부여 하 고 취소 하는 개체를 제공 합니다. 포트 및 IP 주소와 관련해서 표시되는 정보는 프로토콜을 구성하는 데 사용되지 않으며 실제 프로토콜 구성과 일치하지 않을 수도 있습니다. 프로토콜을 보고 구성하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용합니다.  
   

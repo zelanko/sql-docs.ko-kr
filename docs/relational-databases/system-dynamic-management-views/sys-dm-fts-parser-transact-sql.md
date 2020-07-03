@@ -19,16 +19,16 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 0552dbdce5da12db4fedadecb5a4bd7e9c55c278
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 171d63913c0d46b1d344082a5784c7507111a39b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738661"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898841"
 ---
 # <a name="sysdm_fts_parser-transact-sql"></a>sys.dm_fts_parser(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   지정 된 [단어 분리기](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md), [동의어 사전](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)및 [중지 목록](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) 조합을 쿼리 문자열 입력에 적용 한 후 최종 토큰화 결과를 반환 합니다. 토큰화 결과는 지정된 쿼리 문자열에 대한 전체 텍스트 엔진의 출력과 같습니다.  
   
@@ -126,7 +126,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버 자격과 지정 된 중지 목록에 대 한 액세스 권한이 필요 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-displaying-the-output-of-a-given-word-breaker-for-a-keyword-or-phrase"></a>A. 키워드 또는 구에 대해 지정된 단어 분리기의 출력 표시  
  다음 예에서는 아래의 쿼리 문자열에 대해 LCID가 1033인 영어 단어 분리기를 사용하여 출력을 반환합니다. 여기서 중지 목록은 사용되지 않습니다.  

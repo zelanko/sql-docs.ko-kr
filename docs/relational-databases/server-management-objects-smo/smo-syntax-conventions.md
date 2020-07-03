@@ -16,19 +16,19 @@ ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6e5c8f9d87fe511964d5657c57c70fe4379225e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5047719be180ff311f606f43c1f91fdb5fa6824e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148572"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897161"
 ---
 # <a name="smo-syntax-conventions"></a>SMO 구문 표기 규칙
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SMO (Management Objects) 표기 규칙은 Visual Studio .NET 참조 자료 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 사용 되는 규칙을 기반으로 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SMO (Management Objects) 표기 규칙은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio .net 참조 자료에서 사용 되는 규칙을 기반으로 합니다.  
   
-|규칙|사용 대상|  
+|규칙|사용 목적|  
 |----------------|--------------|  
 |대문자|운영 체제 수준에서 사용하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 매크로 이름 및 용어, 텍스트의 파일 이름|  
 |`monospace`|예제 명령줄 및 프로그램 코드입니다.|  

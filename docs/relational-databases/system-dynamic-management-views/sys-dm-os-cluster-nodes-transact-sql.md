@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 384cfd63e613b419f87cac7ca60454ddd8a3c90c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2ca978e746ce9d702b8ec4e3ebc8680a702d49f2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754211"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898830"
 ---
 # <a name="sysdm_os_cluster_nodes-transact-sql"></a>sys.dm_os_cluster_nodes(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   장애 조치(failover) 클러스터 인스턴스 구성에 있는 각 노드에 대해 행을 하나씩 반환합니다. 현재 인스턴스가 장애 조치(failover) 클러스터형 인스턴스인 경우에는 이 장애 조치(failover) 클러스터 인스턴스(이전의 "가상 서버"에 해당)가 정의된 노드의 목록을 반환합니다. 현재 서버 인스턴스가 장애 조치(failover) 클러스터형 인스턴스가 아닌 경우에는 빈 행 집합을 반환합니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "85754211"
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 sys. dm_os_cluster_nodes를 사용하여 클러스터형 서버 인스턴스의 노드를 반환합니다.  
   
 ```  

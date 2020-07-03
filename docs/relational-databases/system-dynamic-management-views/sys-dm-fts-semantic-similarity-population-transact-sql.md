@@ -18,15 +18,15 @@ ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: ea4f2fbd33bf3eb1e9e6a2e2b079ef78796f6f61
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a148750db907ebf43d6976d4d574145516e13d65
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738641"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898821"
 ---
 # <a name="sysdm_fts_semantic_similarity_population-transact-sql"></a>sys.dm_fts_semantic_similarity_population(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   연결된 의미 체계 인덱스가 있는 각 테이블의 각 유사성 인덱스에 대해 문서 유사성 인덱스 채우기와 관련된 상태 정보가 들어 있는 하나의 행을 반환합니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "85738641"
 ### <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 연결된 의미 체계 인덱스가 있는 모든 테이블에 대한 문서 유사성 인덱스 채우기의 상태를 쿼리하는 방법을 보여 줍니다.  
   
 ```  

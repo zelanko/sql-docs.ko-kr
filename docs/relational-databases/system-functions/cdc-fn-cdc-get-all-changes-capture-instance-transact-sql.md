@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e05ef7753ae6375382bfd2bd6e199b6cabffd63
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4946bff122f64da126291bb797effe60c361663f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85647996"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898547"
 ---
 # <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   지정한 LSN(로그 시퀀스 번호) 내 원본 테이블에 적용된 각 변경에 대해 한 개의 행을 반환합니다. 해당 간격 동안 원본 행이 여러 번 변경된 경우에는 반환된 결과 집합에 각 변경이 표시됩니다. 변경 데이터를 반환하는 것 외에 4개의 메타데이터 열은 다른 데이터 원본에 해당 변경을 적용하는 데 필요한 정보를 제공합니다. 행 필터링 옵션은 결과 집합에 반환되는 행 및 메타데이터 열의 내용을 제어합니다. 행 필터 옵션이 'all'로 지정된 경우 각 변경에는 변경을 식별하기 위한 하나의 행이 있습니다. 'all update old' 옵션을 지정하면 업데이트 작업이 두 행으로 표시됩니다. 그 중 한 행에는 업데이트하기 전에 캡처한 열의 값이 포함되고 다른 행에는 업데이트한 후에 캡처한 열의 값이 포함됩니다.  
   
@@ -84,7 +84,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
  **__ $ Operation** 이 1 이거나 **__ $ operation** 이 3 인 경우에는 **image**, **text**및 **ntext** 데이터 형식의 열에 항상 NULL 값이 할당 됩니다. 업데이트 중에 열이 변경 되지 **않은 경우** **varbinary (max)**, **varchar (max)** 또는 **nvarchar (MAX)** 데이터 형식의 열에는 NULL 값이 할당 됩니다. **__ $ Operation** 이 1 인 경우에는 삭제 시 이러한 열에 해당 값이 할당 됩니다. 캡처 인스턴스에 포함된 계산 열은 항상 NULL 값을 갖습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]변경 데이터 캡처 쿼리 함수를 사용 하는 방법을 보여 주는 몇 가지 템플릿을 사용할 수 있습니다. 이러한 템플릿은의 **보기** 메뉴에서 사용할 수 있습니다 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . 자세한 내용은 [템플릿 탐색기](../../ssms/template/template-explorer.md)를 참조 하세요.  
   
  이 예에서는 `Enumerate All Changes for Valid Range Template`을 보여 줍니다. 이 템플릿은 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 HumanResources.Department 원본 테이블에 대해 정의된 `cdc.fn_cdc_get_all_changes_HR_Department` 함수를 사용하여 `HR_Department` 캡처 인스턴스에서 현재 사용할 수 있는 모든 변경 내용을 보고합니다.  

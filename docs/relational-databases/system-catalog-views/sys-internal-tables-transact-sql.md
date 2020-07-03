@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf1406488424febe0ea98a686b91068fe2d07eda
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 58e6166060c5e2099051403361b2eb2c51ad4c18
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725775"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898912"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   내부 테이블인 각 개체당 한 개의 행을 반환합니다. 내부 테이블은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 다양한 기능을 지원하기 위해 자동으로 생성됩니다. 예를 들어 기본 XML 인덱스를 만들면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 내부 테이블을 만들어 단편 형태의 XML 문서 데이터를 저장합니다. 내부 테이블은 모든 데이터베이스의 **sys** 스키마에 표시 되 고 해당 기능을 나타내는 고유한 시스템 생성 이름 (예: **xml_index_nodes_2021582240_32001** 또는 **queue_messages_1977058079**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "85725775"
   
 -   XML 인덱스, 공간 인덱스 및 전체 텍스트 인덱스의 내부 테이블에 사용 되는 페이지는 **index_size** 열에 포함 됩니다. 테이블이 나 인덱싱된 뷰 이름을 지정 하면 해당 개체에 대 한 XML 인덱스, 공간 인덱스 및 전체 텍스트 인덱스에 대 한 페이지가 **예약** 된 열 및 **index_size**에 포함 됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 카탈로그 뷰를 사용하여 내부 테이블 메타데이터를 쿼리하는 방법을 보여 줍니다.  
   
 ### <a name="a-show-internal-tables-that-inherit-columns-from-the-sysobjects-catalog-view"></a>A. sys.objects 카탈로그 뷰에서 열을 상속하는 내부 테이블 표시  

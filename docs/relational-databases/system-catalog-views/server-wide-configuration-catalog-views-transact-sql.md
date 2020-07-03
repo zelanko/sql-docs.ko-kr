@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fa039662-6eb6-47d9-952c-229a4dffa81d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a54f82c38250561fd4f2cb8872ceb187a3e21fc1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 54b4af56ca64b44f991cf7388ede86b7413106ad
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738781"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898900"
 ---
 # <a name="server-wide-configuration-catalog-views-transact-sql"></a>서버 차원의 구성 카탈로그 뷰(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 섹션에서 다음과 같은 카탈로그 뷰를 설명합니다.  
   

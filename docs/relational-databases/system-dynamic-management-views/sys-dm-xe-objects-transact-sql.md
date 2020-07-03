@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f89b6d7e2e4843ba252f884f02a6944de57a8326
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f4e4a404c2bc2ac49ad9916cef668e1eb1656ab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648394"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898588"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이벤트 패키지에 의해 표시되는 각 개체에 대해 한 행을 반환합니다. 개체는 다음 중 하나일 수 있습니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "85648394"
  |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(60)**|개체 이름입니다. 이름은 특정 개체 유형에 대 한 패키지 내에서 고유 합니다. Null을 허용하지 않습니다.|  
-|object_type|**nvarchar(60)**|개체의 유형. object_type은 다음 중 하나입니다.<br /><br /> event<br /><br /> action<br /><br /> 대상<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> Null을 허용하지 않습니다.|  
+|object_type|**nvarchar(60)**|개체의 유형. object_type은 다음 중 하나입니다.<br /><br /> event<br /><br /> action<br /><br /> 대상<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> 형식<br /><br /> Null을 허용하지 않습니다.|  
 |package_guid|**uniqueidentifier**|해당 동작을 표시하는 패키지의 GUID입니다. sys.dm_xe_packages.package_id와의 다 대 일 관계를 갖습니다. Null을 허용하지 않습니다.|  
 |description|**nvarchar(256)**|동작에 대한 설명입니다. 설명은 패키지 작성자가 설정 합니다. Null을 허용하지 않습니다.|  
 |capabilities|**int**|개체의 기능을 설명하는 비트맵입니다. Null을 허용합니다.|  

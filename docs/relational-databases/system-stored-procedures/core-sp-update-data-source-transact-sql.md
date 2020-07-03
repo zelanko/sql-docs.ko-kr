@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 49859c498b0c2cb8550d7153334252a35d5d0e42
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6b25dfb47c49bd53a4544649d8e10e4c092d04de
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646870"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898216"
 ---
 # <a name="coresp_update_data_source-transact-sql"></a>core.sp_update_data_source(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   관리 데이터 웨어하우스 core.source_info_internal 테이블에서 기존 행을 업데이트하거나 새 행을 삽입합니다. 이 프로시저는 업로드 패키지에서 관리 데이터 웨어하우스로 데이터를 업로드하기 시작할 때마다 데이터 수집기 런타임 구성 요소에서 호출됩니다.  
   
@@ -77,7 +77,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="permissions"></a>사용 권한  
  **Mdw_writer** (실행 권한 포함) 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 데이터 원본(이 경우에는 디스크 사용 컬렉션 집합)을 업데이트하고 만료 기간(일)을 설정한 다음 원본의 식별자를 반환합니다. 이 예에서는 기본 인스턴스가 사용됩니다.  
   
 ```  

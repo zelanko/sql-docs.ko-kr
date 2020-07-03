@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 83c182ad-4713-439b-8769-9b7408aec8b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 50f1699f857bafed3aa904ce03b31b2c5e9bd00b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d3650074475fef2ed74dd589a53c78ce7090676
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738580"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898433"
 ---
 # <a name="sysfn_cdc_decrement_lsn-transact-sql"></a>sys.fn_cdc_decrement_lsn(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   지정된 LSN를 기준으로 시퀀스의 이전 LSN(로그 시퀀스 번호)을 반환합니다.  
   
@@ -54,7 +54,7 @@ sys.fn_cdc_decrement_lsn ( lsn_value )
 ## <a name="permissions"></a>사용 권한  
  **Public** 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `sys.fn_cdc_decrement_lsn`을 사용하여 최대 LSN 값보다 작은 LSN 값을 갖는 변경 데이터 행을 반환하는 쿼리에서 LSN 상한을 설정합니다.  
   
 ```  

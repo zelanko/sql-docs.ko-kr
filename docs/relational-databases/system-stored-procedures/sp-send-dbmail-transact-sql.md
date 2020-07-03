@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42dbd7a5bf6e1bc7b705bcf017987da959faa114
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 63b7029c69fff73615d34bd723b97290b2557afb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827528"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899200"
 ---
 # <a name="sp_send_dbmail-transact-sql"></a>sp_send_dbmail(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   지정된 수신자에게 전자 메일 메시지를 보냅니다. 이 메시지에는 쿼리 결과 집합, 첨부 파일 등이 포함될 수 있습니다. 데이터베이스 메일 큐에 메일이 성공적으로 배치 되 면 **sp_send_dbmail** 는 메시지의 **mailitem_id** 반환 합니다. 이 저장 프로시저는 **msdb** 데이터베이스에 있습니다.  
   
@@ -91,7 +91,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 -   낮음  
   
--   정상  
+-   보통  
   
 -   높은  
   
@@ -99,7 +99,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 `[ @sensitivity = ] 'sensitivity'`메시지의 민감도입니다. 매개 변수의 형식은 **varchar (12)** 입니다. 매개 변수에 포함할 수 있는 값은 다음과 같습니다.  
   
--   정상  
+-   보통  
   
 -   Personal  
   
@@ -180,7 +180,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  트랜잭션 컨텍스트 없이 **sp_send_dbmail** 를 실행 하는 경우 데이터베이스 메일는 암시적 트랜잭션을 시작 하 고 커밋합니다. 기존 트랜잭션 내에서 **sp_send_dbmail** 를 실행 하는 경우 데이터베이스 메일 사용자에 게 변경 내용을 커밋하거나 롤백해야 합니다. 내부 트랜잭션은 시작되지 않습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Sp_send_dbmail** 에 대 한 실행 권한은 기본적으로 **msdb** 데이터베이스에 있는 **databasemailuser** 데이터베이스 역할의 모든 멤버에 게 부여 됩니다. 그러나 메시지를 보내는 사용자에 게 요청에 대해 프로필을 사용할 수 있는 권한이 없는 경우에는 **sp_send_dbmail** 에서 오류를 반환 하 고 메시지를 보내지 않습니다.  
   
 ## <a name="examples"></a>예  

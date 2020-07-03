@@ -13,16 +13,16 @@ keywords:
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6e5e80c3e4e9437efa41b43e7bf6469d06432745
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 741a967b3fde6c5e3b5e3de87ac54a1142c93bfe
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796274"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896979"
 ---
 # <a name="web-application-requirements-master-data-services"></a>웹 애플리케이션 요구 사항(MDS(Master Data Services))
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 은 IIS(인터넷 정보 서비스)에서 호스트하는 웹 애플리케이션입니다. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]은 IE(Internet Explorer) 9 이상에서만 사용할 수 있습니다. IE 8 이하 버전, Microsoft Edge 및 Chrome은 지원되지 않습니다.  
 
@@ -73,7 +73,7 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
   
 ### <a name="accounts-and-permissions"></a>계정 및 사용 권한  
   
-|Type|Description|  
+|형식|설명|  
 |----------|-----------------|  
 |Windows 계정|웹 서버 컴퓨터에 로그온할 때는 Windows 역할, 역할 서비스 및 기능을 구성하고 애플리케이션 풀, 웹 사이트 및 웹 애플리케이션을 로컬 컴퓨터의 IIS에서 작성 및 관리할 수 있는 사용 권한을 가진 Windows 계정을 사용해야 합니다.|  
 |서비스 계정|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 에서 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]웹 애플리케이션을 만들 경우 애플리케이션이 실행되는 애플리케이션 풀의 ID를 지정해야 합니다. 이 계정은 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스를 만들 때 지정한 서비스 계정과 다를 수 있습니다.<br /><br /> 이 ID는 도메인 사용자 계정이어야 하며 데이터베이스 액세스를 위해 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스의 mds_exec 데이터베이스 역할에 추가됩니다. 자세한 내용은 [데이터베이스 로그인, 사용자 및 역할](../../master-data-services/database-logins-users-and-roles-master-data-services.md)을 참조하세요. 또한 이 계정은 파일 시스템의 임시 컴파일 디렉터리인 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] MDSTempDir **에 대한 사용 권한이 부여되는**Windows 그룹인 **MDS_ServiceAccounts**에 추가됩니다. 자세한 내용은 [폴더 및 파일 사용 권한&#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)을 참조하세요.|  

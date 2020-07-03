@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 5b1c858a-ca43-4e2b-9d67-8654daaf0cc5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e079f473cbf08dc1a67f031d973149be0e987a2a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 03937eba8daecfab8e25735fd01b072cf71d87d3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762806"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898308"
 ---
 # <a name="sysfn_trace_geteventinfo-transact-sql"></a>sys.fn_trace_geteventinfo(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   추적할 이벤트에 대한 정보를 반환합니다.  
   
@@ -61,7 +61,7 @@ fn_trace_geteventinfo ( trace_id )
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 ALTER TRACE 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 추적 번호 2에 대한 정보를 반환합니다.  
   
 ```  

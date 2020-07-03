@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2a78a6d30b9e79364178401f4d9d2ef52aceace
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c6a777b64fbebc9a97762949ccbd895d052c6260
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728241"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898404"
 ---
 # <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>sys.fn_cdc_get_min_lsn(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [Change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) 시스템 테이블에서 지정 된 캡처 인스턴스에 대 한 start_lsn 열 값을 반환 합니다. 이 값은 캡처 인스턴스에 대한 유효성 간격의 하위 엔드포인트를 나타냅니다.  
   
@@ -56,7 +56,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
 ## <a name="permissions"></a>사용 권한  
  sysadmin 고정 서버 역할 또는 db_owner 고정 데이터베이스 역할의 멤버여야 합니다. 다른 모든 사용자의 경우 원본 테이블에서 캡처된 모든 열에 대한 SELECT 권한이 필요하며 캡처 인스턴스에 대한 제어 역할이 정의된 경우 해당 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-returning-the-minimum-lsn-value-for-a-specified-capture-instance"></a>A. 지정된 캡처 인스턴스에 대한 최소 LSN 값 반환  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `HumanResources_Employee` 캡처 인스턴스에 대한 최소 LSN 값을 반환합니다.  

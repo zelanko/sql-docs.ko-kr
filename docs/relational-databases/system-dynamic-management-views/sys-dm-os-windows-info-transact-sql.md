@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 71da34c0af430dbad8f5b6aeb24cc03cfdd1492d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 26cf5253d95a1c716c3c2ecfc1be0d9f99897832
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648479"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898725"
 ---
 # <a name="sysdm_os_windows_info-transact-sql"></a>sys.dm_os_windows_info(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Windows 운영 체제 버전 정보를 표시하는 행을 반환합니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "85648479"
 ## <a name="limitations-and-restrictions"></a>제한 사항
 Windows가 아닌 호스트에서 실행 되는 SQL 용 내용은 (예: Linux)를 확인 하려면 [transact-sql&#41;를 &#40;dm_os_host_info ](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)를 사용 합니다. 
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 **dm_os_windows_info** 뷰에서 모든 열을 반환 합니다.  
   
 ```  

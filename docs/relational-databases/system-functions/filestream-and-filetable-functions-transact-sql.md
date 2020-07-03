@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 71f729df-d340-4cf9-9a6d-305fcb39b009
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ffef051395e52a5d0c2d9e458c64633632ecba59
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 595c4a12b32c6c456a1de27f8164c0ebf3629691
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771569"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898484"
 ---
 # <a name="filestream-and-filetable-functions-transact-sql"></a>Filestream 및 FileTable 함수(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 섹션에서는 FILESTREAM 및 FileTable 기능과 관련된 시스템 함수에 대해 설명합니다.  
   

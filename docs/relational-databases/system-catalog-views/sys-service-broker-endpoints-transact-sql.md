@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a59beeb51d59b00fbd902045f0f1aaebc9322a64
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 86a7fb5a83fe8e12f6721328e69c45e40e57eb46
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752904"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897902"
 ---
 # <a name="sysservice_broker_endpoints-transact-sql"></a>sys.service_broker_endpoints(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 카탈로그 뷰에는 각 Service Broker 엔드포인트에 대한 행이 포함되어 있습니다. 이 뷰의 모든 행에는 TCP 구성 메타 데이터를 포함 하는 **tcp_endpoints** 뷰에 동일한 **endpoint_id** 의 해당 행이 있습니다. TCP는 Service Broker에 유일하게 허용되는 프로토콜입니다.  
   

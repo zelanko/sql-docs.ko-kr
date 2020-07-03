@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d9716985438a9e29c9ef8d72eb2ba3e77b8db42f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: adcf5709bc3bf086123324095a796e024a08911e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639997"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899284"
 ---
 # <a name="sp_requestpeerresponse-transact-sql"></a>sp_requestpeerresponse(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 프로시저는 피어 투 피어 토폴로지의 노드에서 실행될 경우 토폴로지에서 노드를 하나씩 걸러서 응답을 요청합니다. 이 프로시저를 실행하고 해당 응답을 검토함으로써 이전의 모든 명령이 응답하는 노드에 전달되었음을 확인할 수 있습니다. 이 저장 프로시저는 모든 데이터베이스의 요청 노드에서 실행됩니다.  
   

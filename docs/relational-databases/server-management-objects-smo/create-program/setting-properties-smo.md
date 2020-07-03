@@ -15,17 +15,17 @@ ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ffcdda8e1c6a3c85703ad7f3d6ed94ca0ca91fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fdf4d998eb87cc213f7ce6b3068c4bc142790e5a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148712"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899060"
 ---
 # <a name="setting-properties---smo"></a>속성 설정 - SMO
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  속성은 개체에 대한 설명 정보를 저장하는 값입니다. 예를 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 들어 구성 옵션은 <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> 개체의 속성으로 표시 됩니다. 속성 컬렉션을 사용하여 직접 또는 간접적으로 속성에 액세스할 수 있습니다. 속성에 직접 액세스하는 경우 다음 구문을 사용합니다.  
+  속성은 개체에 대한 설명 정보를 저장하는 값입니다. 예를 들어 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 옵션은 <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> 개체의 속성으로 표시 됩니다. 속성 컬렉션을 사용하여 직접 또는 간접적으로 속성에 액세스할 수 있습니다. 속성에 직접 액세스하는 경우 다음 구문을 사용합니다.  
   
  `objInstance.PropertyName`  
   
@@ -62,7 +62,7 @@ ms.locfileid: "70148712"
 
   
 ## <a name="getting-and-setting-a-property-in-visual-basic"></a>Visual Basic에서 속성 가져오기 및 설정  
- 이 <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> 코드 예제에서는 <xref:Microsoft.SqlServer.Management.Smo.Information> 개체의 속성을 가져오는 방법과 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 속성의 속성을 <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> 열거 형식의 **executesql** 멤버로 설정 하는 방법을 보여 줍니다.  
+ 이 코드 예제에서는 <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> 개체의 속성을 가져오는 방법과 <xref:Microsoft.SqlServer.Management.Smo.Information> <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> 속성의 속성을 <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 열거 형식의 **executesql** 멤버로 설정 <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> 하는 방법을 보여 줍니다.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -75,7 +75,7 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql
 ```
   
 ## <a name="getting-and-setting-a-property-in-visual-c"></a>Visual C#에서 속성 가져오기 및 설정  
- 이 <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> 코드 예제에서는 <xref:Microsoft.SqlServer.Management.Smo.Information> 개체의 속성을 가져오는 방법과 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 속성의 속성을 <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> 열거 형식의 **executesql** 멤버로 설정 하는 방법을 보여 줍니다.  
+ 이 코드 예제에서는 <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> 개체의 속성을 가져오는 방법과 <xref:Microsoft.SqlServer.Management.Smo.Information> <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> 속성의 속성을 <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 열거 형식의 **executesql** 멤버로 설정 <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> 하는 방법을 보여 줍니다.  
   
 ```csharp  
 {   
@@ -154,7 +154,7 @@ tb.Create();
 ```  
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>Visual Basic에서 개체의 모든 속성 반복  
- 이 코드 예제는 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 개체의 **속성** 컬렉션을 반복 하 여 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 출력 화면에 표시 합니다.  
+ 이 코드 예제는 개체의 **속성** 컬렉션을 반복 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 하 여 출력 화면에 표시 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 합니다.  
   
  이 예에서 <xref:Microsoft.SqlServer.Management.Smo.Property> 개체는 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 키워드이기도 하기 때문에 대괄호 안에 있습니다.  
   
@@ -178,7 +178,7 @@ Next
 ```
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-c"></a>Visual C#에서 개체의 모든 속성 반복  
- 이 코드 예제는 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 개체의 **속성** 컬렉션을 반복 하 여 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 출력 화면에 표시 합니다.  
+ 이 코드 예제는 개체의 **속성** 컬렉션을 반복 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 하 여 출력 화면에 표시 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 합니다.  
   
 ```csharp  
 {   

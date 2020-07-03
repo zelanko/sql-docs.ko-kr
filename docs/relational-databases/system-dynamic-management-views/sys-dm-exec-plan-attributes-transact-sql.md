@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ffabc2f8bb48b006ec1224a3ae81ac49d6c21f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9b616e6186e9d5e19f353df1053d479e0d0afdd6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734788"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898896"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   계획 핸들로 지정한 계획의 각 계획 특성에 대해 행을 하나씩 반환합니다. 이 테이블 반환 함수를 사용하여 계획의 현재 동시 실행 수 또는 캐시 키 값과 같은 특정 계획에 대한 정보를 가져올 수 있습니다.  
   
@@ -138,7 +138,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |IN PLACE|8192|  
 |FOR *select_statement*|16384|  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-returning-the-attributes-for-a-specific-plan"></a>A. 특정 계획에 대한 특성 반환  
  다음 예에서는 지정된 계획에 대한 모든 계획 특성을 반환합니다. 지정된 계획에 대한 계획 핸들을 얻기 위해 먼저 `sys.dm_exec_cached_plans` 동적 관리 뷰가 쿼리됩니다. 두 번째 쿼리에서는 `<plan_handle>`을 첫 번째 쿼리의 계획 핸들 값으로 대체합니다.  

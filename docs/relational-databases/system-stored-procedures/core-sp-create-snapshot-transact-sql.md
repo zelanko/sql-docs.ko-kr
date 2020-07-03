@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c4ba72a35ba3b8339a1ebc919327ce353b2c7697
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6b3ffe874615e58d276428548cb1c2ad318f111d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646941"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898234"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   관리 데이터 웨어하우스 core.snapshots 뷰에 행을 삽입합니다. 이 프로시저는 업로드 패키지가 관리 데이터 웨어하우스로 데이터를 업로드하기 시작할 때마다 호출됩니다.  
   
@@ -82,7 +82,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="permissions"></a>사용 권한  
  **Mdw_writer** (실행 권한 포함) 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 디스크 사용량 컬렉션 집합의 스냅샷을 만들어 관리 데이터 웨어하우스에 추가한 다음 스냅샷 식별자를 반환합니다. 이 예에서는 기본 인스턴스가 사용됩니다.  
   
 ```  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7e0d440a453b0481a4440ec432669d3981b9da8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8ddc9e534b5f0e434dd9c0ca980da82eddb8006a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754008"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898278"
 ---
 # <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   지정된 계획 지침의 유효성을 확인할 수 있습니다. sys.fn_validate_plan_guide 함수는 계획 지침이 쿼리에 적용될 때 발생하는 첫 번째 오류 메시지를 반환합니다. 계획 지침이 유효하면 빈 행 집합이 반환됩니다. 데이터베이스의 물리적 디자인을 변경한 후에 계획 지침이 잘못될 수 있습니다. 예를 들어 계획 지침이 특정 인스턴스를 지정한 이후 해당 인스턴스가 삭제되면 쿼리가 더 이상 계획 지침을 사용할 수 없습니다.  
   
@@ -60,7 +60,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
  SQL 범위 또는 TEMPLATE 범위의 계획 지침에는 데이터베이스에 대한 ALTER 권한과 계획 지침에 제공된 쿼리나 일괄 배치를 컴파일할 수 있는 권한이 필요합니다. 예를 들어 일괄 처리에 SELECT 문이 있으면 참조 개체의 SELECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-validating-all-plan-guides-in-a-database"></a>A. 데이터베이스에 있는 모든 계획 지침 확인  
  다음 예에서는 현재 데이터베이스에 있는 모든 계획 지침의 유효성을 확인합니다. 빈 결과 집합이 반환되면 모든 계획 지침을 사용할 수 있습니다.  

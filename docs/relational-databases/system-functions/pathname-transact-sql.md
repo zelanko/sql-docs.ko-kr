@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d9aaa6550c34518c0c153dfa91cf3a5e8b8c0be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 348069dcab86747bccd179f85fd343e5c9d2c47f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662888"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898457"
 ---
 # <a name="pathname-transact-sql"></a>PathName(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   FILESTREAM BLOB(Binary Large Object)의 경로를 반환합니다. OpenSqlFilestream API는이 경로를 사용 하 여 응용 프로그램이 Win32 Api를 사용 하 여 BLOB 데이터를 작업 하는 데 사용할 수 있는 핸들을 반환 합니다. PathName은 읽기 전용입니다.  
   
@@ -77,7 +77,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  FILESTREAM BLOB는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용해서만 만들 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-reading-the-path-for-a-filestream-blob"></a>A. FILESTREAM BLOB의 경로 읽기  
  다음 예에서는 `PathName` 변수에 `nvarchar(max)`을 할당합니다.  

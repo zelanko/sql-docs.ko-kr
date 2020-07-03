@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8275c27eac96a5cb6d88e7bd5e9e50d9a878a6be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 868e203866890c1f13405ddc7ed3949487e821da
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718652"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899246"
 ---
 # <a name="sp_resync_targetserver-transact-sql"></a>sp_resync_targetserver(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   지정한 대상 서버에서 모든 다중 서버 작업을 다시 동기화합니다.  
   
@@ -54,7 +54,7 @@ sp_resync_targetserver
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행할 수 있는 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `SEATTLE1` 대상 서버를 다시 동기화합니다.  
   
 ```  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3698431316b86a40e70e144bfac23d81678db45c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9bb57e2d01c4942955e838cf358444636bf7aedb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783093"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898347"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   보안 개체에 대해 보안 주체에 부여된 유효 사용 권한 목록을 반환합니다. 관련 함수를 [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md)합니다.  
   
@@ -82,7 +82,7 @@ GO
   
  기본값을 *보안* 개체 또는 *securable_class*값으로 제공 하면 값은 NULL로 해석 됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-listing-effective-permissions-on-the-server"></a>A. 서버에 대한 유효 사용 권한 나열  
  다음 예에서는 서버에 대한 호출자의 유효 사용 권한 목록을 반환합니다.  

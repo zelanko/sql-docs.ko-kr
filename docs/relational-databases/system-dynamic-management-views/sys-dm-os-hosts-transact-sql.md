@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a313ff3b-1fe9-421e-b94b-cea19c43b0e5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ee5170d56dee11f66da07655aec9b71e4d5e478
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3e3d49d77dbee94bb365d58b7012c45cdaddf4f7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754171"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898795"
 ---
 # <a name="sysdm_os_hosts-transact-sql"></a>sys.dm_os_hosts(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 등록되어 있는 모든 호스트를 반환합니다. 이 뷰는 이러한 호스트에서 사용하는 리소스도 반환합니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "85754171"
 |sys.dm_os_hosts. default_memory_clerk_address|sys.dm_os_memory_clerks. memory_clerk_address|일 대 일|  
 |sys.dm_os_hosts. host_address|sys.dm_os_memory_clerks. host_address|일 대 일|  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 호스팅된 구성 요소에서 커밋된 총 메모리 양을 확인합니다.  
   
 ||  

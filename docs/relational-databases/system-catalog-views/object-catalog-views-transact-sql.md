@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: e8670a6b-e15c-4126-8d2d-c9cfb968a12d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 048b6420ecced28a796aa21bc3e10e2ed32c8c0d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: daa8c79e9216785ef0e1433f501ae05ee2c22957
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733553"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897981"
 ---
 # <a name="object-catalog-views-transact-sql"></a>개체 카탈로그 뷰(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 섹션에서는 다음 카탈로그 뷰에 대 한 링크를 제공 합니다.
 

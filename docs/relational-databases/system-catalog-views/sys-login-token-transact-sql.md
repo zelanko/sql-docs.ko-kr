@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 86e06938-9d0a-44e5-99e2-55c8ef5f2f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 892a1ff4570f209b89866e1287cb55691d9b6189
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d8b230ba7e9c243db61648f0257f606faa4e7f50
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85635299"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899038"
 ---
 # <a name="syslogin_token-transact-sql"></a>sys.login_token(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   로그인 토큰의 일부인 모든 각 서버 보안 주체당 한 개의 행을 반환합니다.  
   

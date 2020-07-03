@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0d185a16-2b16-4958-884f-efe675e2e551
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b3c700d5b5bc9c6e68f6ecab7186446c681b9d90
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5029929c9e355c34d3e1937eb3f5f15eb5c8ab84
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716563"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898136"
 ---
 # <a name="full-text-search-and-semantic-search-stored-procedures-transact-sql"></a>전체 텍스트 검색 및 의미 체계 검색 저장 프로시저(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 전체 텍스트 인덱스 및 의미 체계 인덱스를 구현 하 고 쿼리 하는 데 사용 되는 다음과 같은 시스템 저장 프로시저를 지원 합니다.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a81fb55802733d63612e0383c4ba9f5ce8061ec4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f65a56aaca4e2ede491f41cb6c2aca84dc1c988e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758775"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899306"
 ---
 # <a name="sp_password-transact-sql"></a>sp_password(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   로그인에 대 한 암호를 추가 하거나 변경 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
@@ -66,7 +66,7 @@ sp_password [ [ @old = ] 'old_password' , ]
   
  보안 주체는 자신의 암호를 변경할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-changing-the-password-of-a-login-without-knowing-the-old-password"></a>A. 이전 암호를 모른 채 로그인의 암호 변경  
  다음 예에서는 `ALTER LOGIN`을 사용하여 `Victoria` 로그인의 암호를 `B3r1000d#2-36`으로 변경하는 방법을 보여 줍니다. 이는 선호되는 방법입니다. 이 명령을 실행하고 있는 사용자는 CONTROL SERVER 권한을 가져야 합니다.  
