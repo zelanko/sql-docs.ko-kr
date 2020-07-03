@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b4a3586625fa0a20d59ca0222ea1abbde6a6fef5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 007b31ebb5ec7f35f6bf3b1f9fd4f76ff8c47f9e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716429"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85876782"
 ---
 # <a name="sp_addremotelogin-transact-sql"></a>sp_addremotelogin(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   로컬 서버에 새 원격 로그인 ID를 추가합니다. 이렇게 하면 원격 서버에서 원격 프로시저 호출을 연결 및 실행할 수 있습니다.  
   
@@ -64,7 +64,7 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
 ## <a name="permissions"></a>사용 권한  
  sysadmin 및 securityadmin 고정 서버 역할의 멤버만이 sp_addremotelogin을 실행할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-mapping-one-to-one"></a>A. 일 대 일 매핑  
  다음 예에서는 `ACCOUNTS` 원격 서버와 로컬 서버의 사용자 로그인이 동일한 경우에 로컬 이름에 원격 이름을 매핑합니다.  

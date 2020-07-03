@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 11aa73828caba66637d5d5b87a478dca851bdaf9
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 7c7f644b94c405fa4072ecd7d7c448f6ea865404
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151959"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879970"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   SQL 에이전트 작업에 대 한 일정을 만듭니다.  
   
@@ -72,8 +72,8 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |-----------|-----------------|  
 |**1**|한 번|  
 |**4**|매일|  
-|**20cm(8**|매주|  
-|**x**|매월|  
+|**8**|매주|  
+|**16**|매월|  
 |**32**|매월 *frequency_interval 기준입니다.*|  
 |**64**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 시작할 때 실행됩니다.|  
 |**128**|컴퓨터가 유휴 상태일 때 실행됩니다.|  
@@ -106,11 +106,11 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 |값|설명(단위)|  
 |-----------|--------------------------|  
-|**1**|처음|  
-|**2**|초|  
+|**1**|첫째|  
+|**2**|Second|  
 |**4**|셋째|  
-|**20cm(8**|넷째|  
-|**x**|마지막|  
+|**8**|넷째|  
+|**16**|마지막|  
   
  *frequency_relative_interval* 간격의 발생을 나타냅니다. 예를 들어 *frequency_relative_interval* 이 **2**로 설정 되어 있고 *frequency_type* 가 **32**로 설정 되어 있고 *frequency_interval* **3**으로 설정 된 경우 예약 된 작업은 매월 두 번째 화요일에 발생 합니다.  
   

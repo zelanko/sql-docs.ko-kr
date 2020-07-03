@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dd95d96e-8963-4aa9-bdcc-3e4b1bc002d3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2fc6d9e9aa0e4da2e2e2652d5d34b833cd7b2a56
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ca0d81b9e8c08fc25c86303d4f3fe7cf02013498
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730067"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879932"
 ---
 # <a name="sp_add_log_shipping_alert_job-transact-sql"></a>sp_add_log_shipping_alert_job(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 저장 프로시저는 이 서버에서 경고 작업을 만들었는지 여부를 확인합니다. 경고 작업이 없는 경우이 저장 프로시저는 경고 작업을 만들고 해당 작업 ID를 **log_shipping_monitor_alert** 테이블에 추가 합니다. 경고 작업은 기본적으로 활성화되며 2분마다 한 번씩 실행됩니다.  
   
@@ -54,7 +54,7 @@ sp_add_log_shipping_alert_job
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  이 예제에서는 경고 작업 ID를 만드는 **sp_add_log_shipping_alert_job** 를 실행 하는 방법을 보여 줍니다.  
   
 ```  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fcf55efd5b50f73d15e0fc488cfe4298b99d9eb7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7492c9cd086d63a00909fc64bde87c39aaf2c096
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646489"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879389"
 ---
 # <a name="sp_add_notification-transact-sql"></a>sp_add_notification(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   경고에 대한 알림을 설정합니다.  
   
@@ -70,7 +70,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_add_notification**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 지정된 경고(`Test Alert`)에 전자 메일 알림을 추가합니다.  
   
 > **참고:** 이 예에서는가 `Test Alert` 이미 존재 하며이는 `François Ajenstat` 유효한 연산자 이름 이라고 가정 합니다.  
@@ -86,7 +86,7 @@ EXEC dbo.sp_add_notification
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참조  
  [Transact-sql&#41;sp_delete_notification &#40;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [Transact-sql&#41;sp_help_notification &#40;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
  [Transact-sql&#41;sp_update_notification &#40;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: acb69343-d766-46ff-b771-0c7655c5231a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 72a125d48251d1f4a4ff95aad2fbd0113e5cd7f3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 550f09426f294ecef58398a2bd3b5f03028e0eef
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646408"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85878567"
 ---
 # <a name="sp_add_targetservergroup-transact-sql"></a>sp_add_targetservergroup(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   지정된 서버 그룹을 추가합니다.  
   
@@ -53,7 +53,7 @@ sp_add_targetservergroup [ @name = ] 'name'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `Servers Processing Customer Orders`라는 대상 서버 그룹을 만듭니다.  
   
 ```  

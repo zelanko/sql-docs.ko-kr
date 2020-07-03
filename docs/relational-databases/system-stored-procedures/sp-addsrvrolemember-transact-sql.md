@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dd138745e4be6010b8390bb1a9283e26b8ac2523
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3077ba01cb982a5f4a3517f5d73b5d9e4436484b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716392"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85876438"
 ---
 # <a name="sp_addsrvrolemember-transact-sql"></a>sp_addsrvrolemember(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   고정 서버 역할의 멤버로서 로그인을 추가합니다.  
   
@@ -80,7 +80,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ## <a name="permissions"></a>사용 권한  
  새 멤버를 추가할 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 Windows 로그인을 `Corporate\HelenS` `sysadmin` 고정 서버 역할에 추가 합니다.  
   
 ```  

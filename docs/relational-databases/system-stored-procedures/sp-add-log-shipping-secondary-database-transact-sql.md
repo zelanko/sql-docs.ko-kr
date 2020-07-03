@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3ec2f258b02df154c2c629f19f8ea99f1a3950d4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: de65ab447394d17c6400f77c58986e111839e9b4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85647363"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879843"
 ---
 # <a name="sp_add_log_shipping_secondary_database-transact-sql"></a>sp_add_log_shipping_secondary_database(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   로그 전달을 위한 보조 데이터베이스를 설정합니다.  
   
@@ -107,7 +107,7 @@ sp_add_log_shipping_secondary_database
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  이 예에서는 **sp_add_log_shipping_secondary_database** 저장 프로시저를 사용 하 여 주 서버 TRIBECA에 있는 주 데이터베이스를 사용 하 여 로그 전달 구성에서 데이터베이스 **로깅할 adventureworks** 를 보조 데이터베이스로 추가 하는 방법을 보여 줍니다 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  

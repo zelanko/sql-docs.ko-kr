@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 080933e13c2f72deef536885b9d3b5c1c4c7593b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 466cff492c5547357409cee1b11c7a6542971ae5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821100"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85878691"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   경고 및 작업과 함께 사용할 운영자(알림 수신자)를 만듭니다.  
   
@@ -58,7 +58,7 @@ sp_add_operator [ @name = ] 'name'
   
 `[ @email_address = ] 'email_address'`운영자의 전자 메일 주소입니다. 이 문자열은 전자 메일 시스템으로 직접 전달됩니다. *email_address* 은 **nvarchar (100)** 이며 기본값은 NULL입니다.  
   
- *Email_address*에 대 한 실제 전자 메일 주소나 별칭을 지정할 수 있습니다. 다음은 그 예입니다.  
+ *Email_address*에 대 한 실제 전자 메일 주소나 별칭을 지정할 수 있습니다. 예를 들어:  
   
  '**jdoe**' 또는 '**jdoe \@ xyz.com**'  
   
@@ -86,8 +86,8 @@ sp_add_operator [ @name = ] 'name'
 |**1**|일요일|  
 |**2**|월요일|  
 |**4**|화요일|  
-|**20cm(8**|수요일|  
-|**x**|목요일|  
+|**8**|수요일|  
+|**16**|목요일|  
 |**32**|금요일|  
 |**64**|토요일|  
   

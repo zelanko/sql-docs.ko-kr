@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d8d8626c8f4b3d256899514d14494b119ee8149c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1b4d469d8afd6946b35cce503efd6db6cdfcb3a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716319"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85876221"
 ---
 # <a name="sp_addtype-transact-sql"></a>sp_addtype(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   별칭 데이터 형식을 만듭니다.  
   
@@ -96,7 +96,7 @@ sp_addtype [ @typename = ] type,
 ## <a name="permissions"></a>사용 권한  
  **Db_owner** 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-creating-an-alias-data-type-that-does-not-allow-for-null-values"></a>A. NULL 값을 허용하지 않는 별칭 데이터 형식 만들기  
  다음 예에서는 `ssn` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제공 된 **varchar** 데이터 형식을 기반으로 하는 (주민 등록 번호) 라는 별칭 데이터 형식을 만듭니다. `ssn` 데이터 형식은 11자리의 주민 등록 번호(999-99-9999)를 보유하는 열에 사용됩니다. 이 열은 NULL이 될 수 없습니다.  
