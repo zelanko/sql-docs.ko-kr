@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dc3c6a85-0711-4688-bf4f-91168c57af28
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b29cf5b1f0b10965c0545c91b84d13a8caea361c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 346c714dea89d171431527dfa42e8503aa30e5f4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731409"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888512"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>SetDefaults 메서드(SInstance 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]기존 데이터를 덮어쓰는 옵션을 사용 하 여 인스턴스에 대 한 모든 기본값을 설정 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 합니다.  
   
 ## <a name="syntax"></a>구문  

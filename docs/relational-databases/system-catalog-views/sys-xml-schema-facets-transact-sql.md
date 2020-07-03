@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 4402dde9-1877-4872-8550-140dc2a177d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 25b8b7b0600fce641369c6c184b2769d107362e9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: da383231d80e111f022ab97fc29e1c72a5224d02
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85678080"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887856"
 ---
 # <a name="sysxml_schema_facets-transact-sql"></a>sys.xml_schema_facets(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **sys.xml_types**에 해당 하는 xml 형식 정의의 패싯 (제한) 당 한 개의 행을 반환 합니다.  
   

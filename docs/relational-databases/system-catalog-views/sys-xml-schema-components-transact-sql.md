@@ -19,15 +19,15 @@ ms.assetid: 70142d3a-f8b5-4ee2-8287-3935f0f67aa2
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 12e0064d70c535ff3a777bfef38e85e2f7c2a724
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d41e37c37b37d34fdbf82469b9a9b457d23b793c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754344"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887870"
 ---
 # <a name="sysxml_schema_components-transact-sql"></a>sys.xml_schema_components(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   각 XML 스키마 구성 요소에 대해 행을 반환합니다. 쌍 (**collection_id**, **namespace_id**)은 포함 하는 네임 스페이스에 대 한 복합 외래 키입니다. 명명 된 구성 요소의 경우 **symbol_space**, **name**, **scoping_xml_component_id**, **is_qualified**, **xml_namespace_id** **xml_collection_id** 값은 고유 합니다.  
   

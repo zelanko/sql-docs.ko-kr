@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5dc38fc39a0f4d876adc99a0aff87d2acaad1545
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 75521866bd7fb151921e972bf4ee1d49089dd5a6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789562"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885914"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>CLR(공용 언어 런타임) 통합을 사용하여 데이터베이스 개체 작성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 .NET Framework CLR(공용 언어 런타임)을 통합하여 데이터베이스 개체를 작성할 수 있습니다. 내에서 실행 되는 관리 코드를 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] "CLR 루틴" 이라고 합니다. 이러한 루틴에는 다음과 같은 항목이 포함됩니다.  
   
 -   스칼라 반환 사용자 정의 함수(스칼라 UDF)  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 692eda0029e60121422244f8829bac9785269423
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bf1f87043075fdf44adec9d61f379f20d898c2fa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775636"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888161"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>서버 이벤트용 WMI 공급자에 WQL 사용
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   관리 애플리케이션은 서버 이벤트용 WMI 공급자를 통해 WQL(WMI Query Language) 문을 실행하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트에 액세스합니다. WQL은 몇 가지 WMI 관련 확장 기능이 포함된 SQL(구조적 쿼리 언어)의 단순화된 일부입니다. WQL을 사용할 경우 애플리케이션은 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스, 데이터베이스 또는 데이터베이스 개체(현재 지원되는 유일한 개체는 큐임)에 대해 이벤트 유형을 검색합니다. 서버 이벤트 용 WMI 공급자는 데이터베이스 범위 또는 개체 범위 이벤트 알림의 경우 대상 데이터베이스에 생성 되는 이벤트 알림이나 서버 범위 이벤트 알림의 경우 **master** 데이터베이스에 생성 되는 이벤트 알림으로 쿼리를 변환 합니다.  
   
  예를 들어 다음 WQL 쿼리를 살펴보십시오.  
@@ -115,7 +115,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
  데이터베이스 범위 또는 개체 범위 이벤트 알림은 지정 된 데이터베이스에 생성 되며, [event_notifications](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md) 카탈로그 뷰를 사용 하 여 메타 데이터에 대해 쿼리할 수 있습니다. 카탈로그 뷰에 해당 데이터베이스 이름을 접두사로 추가해야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-querying-for-events-at-the-server-scope"></a>A. 서버 범위에서 이벤트 쿼리  
  다음 WQL 쿼리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 발생하는 `SERVER_MEMORY_CHANGE` 추적 이벤트의 모든 이벤트 속성을 검색합니다.  

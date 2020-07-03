@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d03a5a5171175b18719a218315863d04a82f893a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1a4ef3abd90b4e75ce584816846f30c5bc8553a4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85633179"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888130"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>서버 이벤트용 WMI 공급자 작업
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 서버 이벤트용 WMI 공급자를 사용하여 프로그래밍하기 전에 고려해야 할 사항에 대한 지침을 제공합니다.  
   
 ## <a name="enabling-service-broker"></a>Service Broker 사용  

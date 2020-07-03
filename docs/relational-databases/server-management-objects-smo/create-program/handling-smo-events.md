@@ -16,15 +16,15 @@ ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 893fb08f2d32c7ae9d80321c1d849010660cc308
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 155bcf3e74e08d63aa714282aba42de3f6784e54
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148722"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883032"
 ---
 # <a name="handling-smo-events"></a>SMO 이벤트 처리
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   이벤트 처리기 및 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 사용하여 구독할 수 있는 서버 이벤트 유형이 있습니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "70148722"
   
  이벤트를 처리하려면 이벤트 처리기 클래스를 작성해야 합니다. 이벤트 처리기 클래스는 여러 개의 이벤트 처리기 함수를 포함할 수 있고, 이벤트를 처리하려면 이 클래스를 설치해야 합니다. 이벤트 처리기 함수는 이벤트에 대 한 정보를 보고 하는 데 사용할 수 있는 이벤트에 대 한 정보를 *ServerEventNotificatificationArgs* 매개 변수에서 받습니다.  
   
- 처리할 수 있는 데이터베이스 및 서버 이벤트의 유형은 <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> 클래스 및 <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>클래스에 나열 됩니다.  
+ 처리할 수 있는 데이터베이스 및 서버 이벤트의 유형은 클래스 및 클래스에 나열 됩니다 <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet> .  
   
 ## <a name="example"></a>예제  
 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  

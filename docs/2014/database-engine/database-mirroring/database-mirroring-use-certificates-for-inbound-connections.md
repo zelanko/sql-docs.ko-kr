@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bbd9c6fa86e3ef26f0779795ddeacda67976ec21
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: c05397dfbd1740293c4b154ace1ed5704cec11a9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84934224"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85886002"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용(Transact-SQL)
   이 항목에서는 인증서를 사용하여 데이터베이스 미러링의 인바운드 연결을 인증하도록 서버 인스턴스를 구성하는 단계에 대해 설명합니다. 인바운드 연결을 설정하려면 먼저 각 서버 인스턴스에서 아웃바운드 연결을 구성해야 합니다. 자세햔 내용은 [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)을 참조하세요.  
@@ -45,7 +45,7 @@ ms.locfileid: "84934224"
   
      다음 예에서는 HOST_A에 있는 서버 인스턴스의 **master** 데이터베이스에서 HOST_B 시스템에 대한 로그인을 만듭니다. 이 예에서 로그인 이름은 `HOST_B_login`입니다. 예제 암호를 자신의 암호로 대체합니다.  
   
-    ```  
+    ```sql  
     USE master;  
     CREATE LOGIN HOST_B_login   
        WITH PASSWORD = '1Sample_Strong_Password!@#';  
@@ -56,8 +56,8 @@ ms.locfileid: "84934224"
   
      이 서버 인스턴스에서 사용자를 보려면 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행합니다.  
   
-    ```  
-    SELECT * FROM sys.server_principals  
+    ```sql  
+    SELECT * FROM sys.server_principals;  
     ```  
   
      자세한 내용은 [sys.server_principals&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)를 참조하세요.  
@@ -66,7 +66,7 @@ ms.locfileid: "84934224"
   
      다음 예에서는 이전 단계에서 만든 로그인에 대해 사용자 `HOST_B_user`를 만듭니다.  
   
-    ```  
+    ```sql  
     USE master;  
     CREATE USER HOST_B_user FOR LOGIN HOST_B_login;  
     GO  
@@ -76,7 +76,7 @@ ms.locfileid: "84934224"
   
      이 서버 인스턴스에서 로그인을 보려면 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행합니다.  
   
-    ```  
+    ```sql  
     SELECT * FROM sys.sysusers;  
     ```  
   
@@ -92,7 +92,7 @@ ms.locfileid: "84934224"
   
      다음 예에서는 HOST_B의 인증서를 HOST_A에 있는 해당 사용자와 연결합니다.  
   
-    ```  
+    ```sql  
     USE master;  
     CREATE CERTIFICATE HOST_B_cert  
        AUTHORIZATION HOST_B_user  
@@ -104,8 +104,8 @@ ms.locfileid: "84934224"
   
      이 서버 인스턴스에서 인증서를 보려면 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행합니다.  
   
-    ```  
-    SELECT * FROM sys.certificates  
+    ```sql  
+    SELECT * FROM sys.certificates;  
     ```  
   
      자세한 내용은 [sys.certificates&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)를 참조하세요.  
@@ -114,7 +114,7 @@ ms.locfileid: "84934224"
   
      예를 들어 HOST_B에 있는 원격 서버 인스턴스에 대해 HOST_A에서 로컬 로그인에 연결할 권한을 부여하려면 즉, `HOST_B_login`에 연결하려면 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용합니다.  
   
-    ```  
+    ```sql  
     USE master;  
     GRANT CONNECT ON ENDPOINT::Endpoint_Mirroring TO [HOST_B_login];  
     GO  
@@ -132,13 +132,13 @@ ms.locfileid: "84934224"
 > [!NOTE]  
 >  이 예제에서는 [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용 &#40;Transact-SQL &#41;](database-mirroring-use-certificates-for-outbound-connections.md)의 코드 조각으로 만든 HOST_A 인증서가 포함된 인증서 파일을 사용합니다.  
   
-```  
+```sql  
 USE master;  
 --On HOST_B, create a login for HOST_A.  
 CREATE LOGIN HOST_A_login WITH PASSWORD = 'AStrongPassword!@#';  
 GO  
 --Create a user, HOST_A_user, for that login.  
-CREATE USER HOST_A_user FOR LOGIN HOST_A_login  
+CREATE USER HOST_A_user FOR LOGIN HOST_A_login;  
 GO  
 --Obtain HOST_A certificate. (See the note   
 --   preceding this example.)  
@@ -148,7 +148,7 @@ CREATE CERTIFICATE HOST_A_cert
    FROM FILE = 'C:\HOST_A_cert.cer';  
 GO  
 --Grant CONNECT permission for the server instance on HOST_A.  
-GRANT CONNECT ON ENDPOINT::Endpoint_Mirroring TO HOST_A_login  
+GRANT CONNECT ON ENDPOINT::Endpoint_Mirroring TO HOST_A_login;  
 GO  
 ```  
   

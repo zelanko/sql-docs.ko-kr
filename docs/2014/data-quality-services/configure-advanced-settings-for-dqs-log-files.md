@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6b4054be2d956bccecd1d64dc807671caf8f980f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: 998f1079044f530a824600fede88c99ca91f793e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84937994"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85886044"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Configure Advanced Settings for DQS Log Files
   이 항목에서는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 및 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 로그 파일에 대해 로그 파일의 롤링 파일 크기 제한을 설정하거나, 이벤트의 타임스탬프 패턴을 설정하는 등 고급 설정을 구성하는 방법에 대해 설명합니다.  
@@ -38,8 +38,8 @@ ms.locfileid: "84937994"
 ##  <a name="configure-data-quality-server-log-settings"></a><a name="DQSServer"></a>Data Quality 서버 로그 설정 구성  
  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 로그 설정은 DQS_MAIN 데이터베이스의 A_CONFIGURATION 테이블에서 **ServerLogging** 행의 **VALUE** 열에 XML 형식으로 나타납니다. 다음 SQL 쿼리를 실행하여 구성 정보를 볼 수 있습니다.  
   
-```  
-select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'  
+```sql  
+select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'; 
 ```  
   
  로깅의 구성 설정을 변경하려면 **ServerLogging** 행의 **VALUE**[!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 열에서 알맞은 정보를 업데이트해야 합니다. 이 예에서는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 로그 설정을 업데이트하여 롤링 파일 크기 제한을 25000KB로 설정합니다(기본값은 20000KB).  
@@ -50,7 +50,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 3.  쿼리 편집기 창에서 다음 SQL 문을 복사합니다.  
   
-    ```  
+    ```sql  
     -- Begin the transaction.  
     BEGIN TRAN  
     GO  
@@ -96,14 +96,13 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 5.  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 로깅 구성 변경 내용을 적용하려면 다음 Transact-SQL 문을 실행해야 합니다. 새 쿼리 편집기 창을 열고 다음 Transact-SQL 문을 붙여 넣습니다.  
   
-    ```  
+    ```sql  
     USE [DQS_MAIN]  
     GO  
     DECLARE @return_value int  
     EXEC @return_value = [internal_core].[RefreshLogSettings]  
     SELECT 'Return Value' = @return_value  
     GO  
-  
     ```  
   
 6.  F5 키를 눌러 문을 실행합니다. **결과** 창에서 문이 성공적으로 실행되었는지 확인합니다.  

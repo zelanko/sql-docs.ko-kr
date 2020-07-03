@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5892c9b080604af2e46a96685f4667e4d12dcfe1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8b555be42db6d364cf6efe6fcd161fc5b6a5ea64
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784714"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888382"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>SetServiceAccount 메서드(SqlService 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   서비스 인스턴스가 실행되는 사용자 이름과 암호를 변경합니다.  
   
 ## <a name="syntax"></a>구문  

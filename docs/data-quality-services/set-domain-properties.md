@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: c11a5700d0e376cfc6bbe10c22a6530ffcfd799d
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: aa3a1cbd9b6846b7e70275069ce7422507032952
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813757"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883325"
 ---
 # <a name="set-domain-properties"></a>도메인 속성 설정
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 도메인 속성을 설정하는 방법에 대해 설명합니다.  
   

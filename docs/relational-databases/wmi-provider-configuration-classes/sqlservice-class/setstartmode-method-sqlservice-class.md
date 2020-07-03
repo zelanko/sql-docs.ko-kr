@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e65c75be329d2f2c26ac97060333a05f198e0141
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 15cfa1eddcd9a32b51984d3833c288fc006d395b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727042"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888349"
 ---
 # <a name="setstartmode-method-sqlservice-class"></a>SetStartMode 메서드(SqlService 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   서비스 인스턴스의 시작 모드를 수정합니다.  
   
 ## <a name="syntax"></a>구문  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7349fb87-b973-4160-a2be-cab73abf5b31
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f9c3bf8260f52a6960a3a5af7f98baa616dca857
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b28c8e5091aaaa0c0387e9cfdd8723dae5ddc908
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725329"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888506"
 ---
 # <a name="setcurrentcertificate-method-sinstance-class"></a>SetCurrentCertificate 메서드(SInstance 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   현재 보안 인증서를 설정합니다.  
   
 ## <a name="syntax"></a>구문  

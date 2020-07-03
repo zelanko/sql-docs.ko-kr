@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5769ffe206c1fc84107707acc980ab94c51ac932
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f2482e9af7451463c03bb5deb2e63c7261ec5361
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85676601"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882038"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   다양한 데이터베이스에서 열려 있는 커서에 대한 정보를 반환합니다.  
   
@@ -103,7 +103,7 @@ dm_exec_cursors (session_id | 0 )
 |로컬|커서 범위를 커서가 생성된 일괄 처리, 저장 프로시저, 트리거에 대해 로컬로 지정합니다.|  
 |전역|커서 범위를 연결에 대해 전역으로 지정합니다.|  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-detecting-old-cursors"></a>A. 오래된 커서 검색  
  다음 예에서는 지정한 36시간을 초과하여 서버에서 열려 있는 커서에 대한 정보를 반환합니다.  

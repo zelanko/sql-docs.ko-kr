@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ab254c9deaee5a9e31a89d2a44d281e83a2beead
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: af0464a307d77531c5d11624dc86a836ddf77711
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812568"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882552"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>DQS의 데이터 프로파일링 및 알림
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 데이터 프로파일링은 기존 데이터 원본의 데이터를 분석하고 DQS 작업의 데이터에 대한 통계를 표시하는 프로세스입니다. 자동화된 데이터 품질 평가를 제공합니다. DQS 프로파일링은 DQS 기술 자료 관리 및 데이터 품질 프로젝트에 통합되어 있습니다. 동적 이며 조정 가능 합니다. 프로파일링에는 두 가지 주요 목표가 있습니다. 첫째는 데이터 품질 프로세스를 안내하고 의사 결정을 지원하는 것이고, 둘째는 프로세스의 효율성을 평가하는 것입니다. DQS 프로파일링 프로세스에는 다음과 같은 이점이 있습니다.  
   

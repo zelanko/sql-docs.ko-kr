@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 99b88645431345e3f070941d02ba046ff2e12ca4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 044fbfcaefe52f897842684d4224222232577d21
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738450"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888250"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>구성 관리용 WMI 공급자 클래스
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   구성 관리용 WMI(Windows Management Instrumentation) 공급자는 다음 클래스를 위한 기능을 제공합니다.  
   
  [CInstance 클래스](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md)  

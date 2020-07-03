@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 9ef9a8b9-c470-4a61-b0c4-ee24ad871d63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f4e89842cfe911773fc56b3cf0b277962118729d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 23c8596a1dc2d4cfa75f01b123d1f11cffcfe546
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772964"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882940"
 ---
 # <a name="sysserver_sql_modules-transact-sql"></a>sys.server_sql_modules(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   TR 유형의 서버 수준 트리거에 대한 SQL 모듈 집합을 포함합니다. 이 관계를 sys.server_triggers에 조인할 수 있습니다. 튜플(object_id)은 관계의 키입니다.  
   

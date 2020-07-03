@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f0a2a3bb9e44bf669ddb41cabd20c0181a71447b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e9eeb0516aab43760476f37406d6396a5bb9220d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753694"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888400"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>AdvancedProperties 속성(SqlService 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   **Sqlservice** 개체에 대 한 고급 속성을 포함 하는 개체 참조의 배열을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  

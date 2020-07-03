@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 87af29b64e7185148ead0f089d539bc0519911a5
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: e83f8c2f75725c5de0dc7fa6e3e78666568fad8f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84937774"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85886009"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>DQS 데이터베이스 분리 및 연결
   이 항목에서는 DQS 데이터베이스를 분리 및 연결하는 방법에 대해 설명합니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "84937774"
 ###  <a name="limitations-and-restrictions"></a><a name="Limitations"></a> 제한 사항  
  제한 사항 목록은 [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md)의 데이터베이스를 분리하는 방법에 대해 설명합니다.  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 전제 조건  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
   
 -   DQS에서 실행 중인 작업이나 프로세스가 없는지 확인합니다. 이는 **작업 모니터링** 화면을 사용하여 확인할 수 있습니다. 이 화면을 사용하는 방법은 [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)을 참조하세요.  
   
@@ -82,14 +82,13 @@ ms.locfileid: "84937774"
   
 9. 쿼리 편집기 창에서 다음 SQL 문을 복사합니다.  
   
-    ```  
+    ```sql  
     ALTER DATABASE [DQS_MAIN] SET TRUSTWORTHY ON;  
     EXEC sp_configure 'clr enabled', 1;  
     RECONFIGURE WITH OVERRIDE  
     ALTER DATABASE [DQS_MAIN] SET ENABLE_BROKER  
     ALTER AUTHORIZATION ON DATABASE::[DQS_MAIN] TO [##MS_dqs_db_owner_login##]  
     ALTER AUTHORIZATION ON DATABASE::[DQS_PROJECTS] TO [##MS_dqs_db_owner_login##]  
-  
     ```  
   
 10. F5 키를 눌러 문을 실행합니다. 결과 창에서 문이 성공적으로 실행되었는지 확인합니다. 다음 메시지가 표시됩니다. `Configuration option 'clr enabled' changed from 1 to 1. Run the RECONFIGURE statement to install.`  

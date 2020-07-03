@@ -13,16 +13,16 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42acad11884fa9edc779d6aa52a94ccf38ee5444
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 577b6e8dfcf74407f4c233f4330e9f653de7e4d1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095513"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882987"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>인덱스 생성, 변경 및 제거
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects(SMO) 계층 구조에서 인덱스는 <xref:Microsoft.SqlServer.Management.Smo.Index> 개체로 표시됩니다. 인덱싱된 열은 <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> 속성으로 표현된 <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A> 개체 모음으로 표시됩니다.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "74095513"
  제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>Visual Basic에서 비클러스터형 복합 인덱스 만들기  
- 이 코드 예제는 복합 비클러스터형 인덱스를 만드는 방법을 보여 줍니다. 복합 인덱스를 위해 두 개 이상의 열을 인덱스에 추가합니다. 비클러스터형 인덱스 <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> 의 경우 속성을 **False** 로 설정 합니다.  
+ 이 코드 예제는 복합 비클러스터형 인덱스를 만드는 방법을 보여 줍니다. 복합 인덱스를 위해 두 개 이상의 열을 인덱스에 추가합니다. <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>비클러스터형 인덱스의 경우 속성을 **False** 로 설정 합니다.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -89,7 +89,7 @@ End Class
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-c"></a>Visual C#에서 비클러스터형 복합 인덱스 만들기  
- 이 코드 예제는 복합 비클러스터형 인덱스를 만드는 방법을 보여 줍니다. 복합 인덱스를 위해 두 개 이상의 열을 인덱스에 추가합니다. 비클러스터형 인덱스 <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> 의 경우 속성을 **False** 로 설정 합니다.  
+ 이 코드 예제는 복합 비클러스터형 인덱스를 만드는 방법을 보여 줍니다. 복합 인덱스를 위해 두 개 이상의 열을 인덱스에 추가합니다. <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>비클러스터형 인덱스의 경우 속성을 **False** 로 설정 합니다.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -147,7 +147,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-powershell"></a>PowerShell에서 비클러스터형 복합 인덱스 만들기  
- 이 코드 예제는 복합 비클러스터형 인덱스를 만드는 방법을 보여 줍니다. 복합 인덱스를 위해 두 개 이상의 열을 인덱스에 추가합니다. 비클러스터형 인덱스 <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> 의 경우 속성을 **False** 로 설정 합니다.  
+ 이 코드 예제는 복합 비클러스터형 인덱스를 만드는 방법을 보여 줍니다. 복합 인덱스를 위해 두 개 이상의 열을 인덱스에 추가합니다. <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>비클러스터형 인덱스의 경우 속성을 **False** 로 설정 합니다.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and to the  

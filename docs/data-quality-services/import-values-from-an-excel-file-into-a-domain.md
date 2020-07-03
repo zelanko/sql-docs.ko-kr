@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ff2e139b9cbb1a4711873ae1cc5e9b3f0ac28e41
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 2ead2196e2eaa48ee1bdd76e1ca18c3e4e11085d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812096"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882809"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Excel 파일에서 도메인으로 값 가져오기
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 Excel 파일의 값을 도메인으로 가져오는 방법에 대해 설명합니다. Excel 파일을 사용하여 도메인 값을 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션으로 가져오면 기술 자료 생성 프로세스가 간소화되어 시간과 노력을 절감할 수 있습니다. 이 방법을 사용하면 Excel 파일이나 텍스트 파일로 올바른 데이터 값 목록을 가진 사용자가 해당 값을 도메인으로 가져올 수 있습니다. Excel 파일에서 도메인이나 기술 자료로 도메인 값을 가져올 수 있습니다. 기술 자료로 도메인을 가져오는 방법에 대 한 자세한 내용은 [기술 자료 검색에서 Excel 파일에서 도메인 가져오기](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) 를 참조 하세요. Excel 파일로의 내보내기는 지원 되지 않습니다.  
   

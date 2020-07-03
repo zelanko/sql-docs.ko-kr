@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: d3bd6b89713edad4429dc0a93aa96cf041a9562a
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 79765f589dcc649bdb2d12bd9dda0d4c955ae916
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84539685"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883929"
 ---
 # <a name="relational-query-designer-ssas"></a>관계형 쿼리 디자이너(SSAS)
   관계형 쿼리 디자이너를 사용 하면 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 관계형 데이터베이스와에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] 검색할 데이터를 지정 하는 쿼리를 만들 수 있습니다 [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] . 그래픽 쿼리 디자이너를 사용하여 메타데이터를 탐색하고 쿼리를 대화형으로 작성하며 쿼리 결과를 볼 수 있습니다.  텍스트 기반 쿼리 디자이너를 사용하면 그래픽 쿼리 디자이너로 만든 쿼리를 보거나 쿼리를 수정할 수 있습니다. 파일 또는 보고서에서 기존 쿼리를 가져올 수도 있습니다.  
@@ -219,7 +219,7 @@ ms.locfileid: "84539685"
 #### <a name="example"></a>예제  
  다음 쿼리는 `ContactType` 테이블의 이름 목록을 반환합니다.  
   
-```  
+```sql  
 SELECT Name FROM ContactType  
 ```  
   
@@ -242,7 +242,7 @@ SELECT Name FROM ContactType
 #### <a name="example"></a>예제  
  다음 쿼리는 `uspGetWhereUsedProductID` 저장 프로시저를 호출합니다. 저장 프로시저에 입력 매개 변수가 있는 경우에는 쿼리를 실행할 때 매개 변수 값을 제공해야 합니다.  
   
-```  
+```sql  
 uspGetWhereUsedProductID  
 ```  
   

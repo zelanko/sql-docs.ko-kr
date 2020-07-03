@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e765fbd-f339-473c-8537-22f478e79696
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9ec69415e270770360b6901d8c3117790b5e16d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b378f5a57b964521e511c99a7432017183076177
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717950"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885955"
 ---
 # <a name="altering-an-assembly"></a>어셈블리 변경
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 등록된 어셈블리를 ALTER ASSEMBLY 문을 사용하여 최신 버전에서 업데이트할 수 있습니다. 어셈블리를 업데이트하려면 ALTER ASSEMBLY 문을 다음 구문과 함께 사용합니다.  
   
 ```  

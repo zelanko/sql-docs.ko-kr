@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ef58ef70135368bd6a87c24a6157086e0e914d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4afe6fdb10e16bf3507b8d4a102e01f8095a3640
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787154"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882023"
 ---
 # <a name="sysdatabase_audit_specifications-transact-sql"></a>sys.database_audit_specifications(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   서버 인스턴스에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit의 데이터베이스 감사 사양 정보를 포함합니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|Name|**sysname**|감사 사양의 이름입니다.|  
+|이름|**sysname**|감사 사양의 이름입니다.|  
 |database_specification_id|**int**|데이터베이스 사양의 ID입니다.|  
 |create_date|**datetime**|감사 사양을 만든 날짜입니다.|  
 |modified_date|**datetime**|감사 사양을 마지막으로 수정한 날짜입니다.|  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5b098d42c8e770496b67f365dd8ccd7bd8ad640
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 3405cf5aaf6e25c8d2efc3c0e4753b52e63f2372
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84528419"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882124"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>SQL Server 트랜잭션 잠금 및 행 버전 관리 지침
 
@@ -231,7 +231,7 @@ GO
   
      가상 읽기는 두 개의 동일한 쿼리가 실행되고 두 번째 쿼리에서 반환된 행 컬렉션이 다른 경우 발생하는 상황입니다. 아래의 예에서는 이러한 상황이 발생하는 경우를 보여 줍니다. 아래의 두 트랜잭션이 동시에 실행되고 있다고 가정합니다. 두 번째 트랜잭션의 INSERT 문이 두 트랜잭션에서 사용하는 데이터를 변경하기 때문에 첫 번째 트랜잭션의 두 SELECT 문에서 서로 다른 결과를 반환할 수 있습니다.  
   
-    ```  
+    ```sql  
     --Transaction 1  
     BEGIN TRAN;  
     SELECT ID FROM dbo.employee  
@@ -240,10 +240,9 @@ GO
     SELECT ID FROM dbo.employee  
     WHERE ID > 5 and ID < 10;  
     COMMIT;  
-  
     ```  
   
-    ```  
+    ```sql  
     --Transaction 2  
     BEGIN TRAN;  
     INSERT INTO dbo.employee  
@@ -325,8 +324,8 @@ GO
 |**커밋되지 않은 읽기**|예|예|예|  
 |**커밋된 읽기**|예|예|예|  
 |**반복 읽기**|예|예|예|  
-|**스냅샷**|예|예|예|  
-|**가능**|예|예|예|  
+|**스냅샷**|아니요|아니요|아니요|  
+|**직렬화 가능**|아니요|아니요|아니요|  
   
  각 트랜잭션 격리 수준에서 제어하는 특정 종류의 잠금 또는 행 버전 관리에 대한 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)을 참조하십시오.  
   
@@ -474,13 +473,13 @@ GO
   
 ||기존의 허가 모드||||||  
 |------|---------------------------|------|------|------|------|------|  
-|**요청 모드**|**되었습니다**|**S**|**U**|**IX**|**SIX**|**X**|  
-|**내재된 공유(IS)**|예|예|예|예|예|예|  
-|**공유(S)**|예|예|예|예|예|예|  
-|**업데이트(U)**|예|예|예|예|예|예|  
+|**요청 모드**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
+|**내재된 공유(IS)**|예|예|예|예|예|아니요|  
+|**공유(S)**|예|예|예|아니요|아니요|예|  
+|**업데이트(U)**|예|예|예|아니요|아니요|예|  
 |**의도 배타(IX)**|예|예|예|예|예|예|  
-|**의도 배타 공유(SIX)**|예|예|예|예|예|예|  
-|**배타적(X)**|예|예|예|예|예|예|  
+|**의도 배타 공유(SIX)**|예|예|예|아니요|아니요|아니요|  
+|**배타적(X)**|아니요|아니요|아니요|아니요|아니요|아니요|  
   
 > [!NOTE]  
 >  의도 배타(IX) 잠금은 모든 행이 아닌 일부 행만 업데이트하기 위한 것이므로 IX 잠금 모드와 호환됩니다. 일부 행을 읽거나 업데이트하려고 하는 다른 트랜잭션도 허용됩니다. 단, 해당 행을 다른 트랜잭션이 업데이트하고 있지 않아야 합니다. 두 트랜잭션이 같은 행을 업데이트하려고 시도하는 경우 두 트랜잭션 모두에 테이블 및 페이지 수준의 IX 잠금이 부여됩니다. 하지만 한 트랜잭션에 행 수준의 X 잠금이 부여되므로 다른 트랜잭션은 행 수준 잠금이 제거될 때까지 대기해야 합니다.  
@@ -507,7 +506,7 @@ GO
   
 -   모드는 사용된 혼합 잠금 모드를 나타냅니다. 키 범위 잠금 모드는 두 부분으로 구성됩니다. 첫 번째는 인덱스 범위(Range*T*)를 잠그는 데 사용하는 잠금 유형을 나타내고 두 번째는 특정 키(*K*)를 잠그는 데 사용하는 잠금 유형을 나타냅니다. 두 부분은 범위*T*K와 같이 하이픈 (-)으로 연결 됩니다 - *K*.  
   
-    |범위|행|모드|설명|  
+    |범위|행|Mode|설명|  
     |-----------|---------|----------|-----------------|  
     |RangeS|S|RangeS-S|공유 범위, 공유 리소스 잠금. 직렬화 가능한 범위 검색입니다.|  
     |RangeS|U|RangeS-U|공유 범위, 업데이트 리소스 잠금, 직렬화 가능한 업데이트 검색입니다.|  
@@ -523,12 +522,12 @@ GO
 |------|---------------------------|------|------|------|------|------|------|  
 |**요청 모드**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
 |**공유(S)**|예|예|예|예|예|예|예|  
-|**업데이트(U)**|예|예|예|예|예|예|예|  
-|**배타적(X)**|예|예|예|예|예|예|예|  
-|**RangeS-S**|예|예|예|예|예|예|예|  
-|**RangeS-U**|예|예|예|예|예|예|예|  
-|**RangeI-N**|예|예|예|예|예|예|예|  
-|**RangeX-X**|예|예|예|예|예|예|예|  
+|**업데이트(U)**|예|예|예|예|예|예|아니요|  
+|**배타적(X)**|예|아니요|아니요|예|예|예|아니요|  
+|**RangeS-S**|예|예|예|예|예|아니요|아니요|  
+|**RangeS-U**|예|예|예|예|예|아니요|예|  
+|**RangeI-N**|예|예|예|예|예|예|아니요|  
+|**RangeX-X**|아니요|아니요|아니요|아니요|아니요|아니요|아니요|  
   
 #### <a name="conversion-locks"></a>변환 잠금  
 
@@ -572,7 +571,7 @@ GO
 
  범위 검색 쿼리가 직렬화 가능인지 확인하려면 같은 트랜잭션 내에서 같은 쿼리를 실행할 때마다 같은 결과를 반환해야 합니다. 다른 트랜잭션에서는 범위 스캔 쿼리 내에 새 행을 추가하면 안됩니다. 그렇지 않으면 이러한 행은 가상 삽입이 됩니다. 예를 들어 다음 쿼리는 앞 그림의 테이블과 인덱스를 사용합니다.  
   
-```  
+```sql  
 SELECT name  
     FROM mytable  
     WHERE name BETWEEN 'A' AND 'C';  
@@ -587,7 +586,7 @@ SELECT name
 
  트랜잭션 내의 쿼리가 존재하지 않는 행을 선택하려고 하면 같은 트랜잭션 내에서 나중에 쿼리를 실행해도 같은 결과를 반환해야 합니다. 다른 트랜잭션도 존재하지 않는 행을 삽입할 수 없습니다. 다음과 같은 쿼리를 예로 들 수 있습니다.  
   
-```  
+```sql 
 SELECT name  
     FROM mytable  
     WHERE name = 'Bill';  
@@ -599,7 +598,7 @@ SELECT name
 
  트랜잭션 내에서 값을 삭제할 때는 트랜잭션이 삭제 작업을 수행하는 동안 값이 속하는 범위를 잠글 필요가 없습니다. 삭제된 키 값을 트랜잭션이 끝날 때까지 잠그기만 해도 직렬화 기능이 유지됩니다. 다음과 같은 DELETE 문을 예로 들 수 있습니다.  
   
-```  
+```sql  
 DELETE mytable  
     WHERE name = 'Bob';  
 ```  
@@ -612,7 +611,7 @@ DELETE mytable
 
  트랜잭션 내에서 값을 삽입할 때는 트랜잭션이 삽입 작업을 수행하는 동안 값이 속하는 범위를 잠글 필요가 없습니다. 삽입된 키 값을 트랜잭션이 끝날 때까지 잠그기만 해도 직렬화 기능이 유지됩니다. 다음과 같은 INSERT 문을 예로 들 수 있습니다.  
   
-```  
+```sql  
 INSERT mytable VALUES ('Dan');  
 ```  
   
@@ -976,7 +975,7 @@ deadlock-list
   
  다음 [!INCLUDE[tsql](../includes/tsql-md.md)] 문은 이후에 나오는 예제에서 사용되는 테스트 개체를 만듭니다.  
   
-```  
+```sql  
 -- Create a test table.  
 CREATE TABLE TestTable  
     (col1        int);  
@@ -998,7 +997,7 @@ GO
   
  트랜잭션에서 `SELECT` 문이 실행됩니다. `HOLDLOCK` 잠금 힌트로 인해 이 문은 해당 테이블에 대해 IS(내재된 공유) 잠금을 획득하여 유지합니다. 이 그림에서는 행 잠금 및 페이지 잠금이 무시됩니다. IS 잠금은 트랜잭션에 할당된 파티션에 대해서만 획득할 수 있습니다. 이 예에서는 파티션 ID 7에 대해 IS 잠금을 획득했다고 가정합니다.  
   
-```  
+```sql  
 -- Start a transaction.  
 BEGIN TRANSACTION  
     -- This SELECT statement will acquire an IS lock on the table.  
@@ -1011,7 +1010,7 @@ BEGIN TRANSACTION
   
  트랜잭션이 시작되고 이 트랜잭션에서 실행되는 `SELECT` 문이 테이블에 대한 S(공유) 잠금을 획득 및 유지합니다. S 잠금은 모든 파티션에 대해 확보되므로 각 파티션에 대해 하나씩 잠금이 생성되어 여러 테이블이 잠기게 됩니다. 예를 들어 CPU가 16개인 시스템에서 잠금 파티션 ID 0-15까지 16개의 잠금이 생성됩니다. S 잠금은 세션 1의 트랜잭션에 의해 파티션 ID 7에 확보된 IS 잠금과 호환되므로 트랜잭션 간에 차단이 발생하지 않습니다.  
   
-```  
+```sql  
 BEGIN TRANSACTION  
     SELECT col1  
         FROM TestTable  
@@ -1022,7 +1021,7 @@ BEGIN TRANSACTION
   
  세션 1에서 아직 활성화되어 있는 트랜잭션에서 다음 `SELECT` 문이 실행됩니다. X(배타적) 테이블 잠금 힌트로 인해 트랜잭션이 테이블에 대해 X 잠금을 획득하려 합니다. 그러나 세션 2의 트랜잭션에 의해 확보된 S 잠금이 파티션 ID 0에서 X 잠금을 차단합니다.  
   
-```  
+```sql  
 SELECT col1  
     FROM TestTable  
     WITH (TABLOCKX);  
@@ -1034,7 +1033,7 @@ SELECT col1
   
  트랜잭션에서 `SELECT` 문이 실행됩니다. `HOLDLOCK` 잠금 힌트로 인해 이 문은 해당 테이블에 대해 IS(내재된 공유) 잠금을 획득하여 유지합니다. 이 그림에서는 행 잠금 및 페이지 잠금이 무시됩니다. IS 잠금은 트랜잭션에 할당된 파티션에 대해서만 획득할 수 있습니다. 이 예에서는 파티션 ID 6에 대해 IS 잠금을 획득했다고 가정합니다.  
   
-```  
+```sql  
 -- Start a transaction.  
 BEGIN TRANSACTION  
     -- This SELECT statement will acquire an IS lock on the table.  
@@ -1049,7 +1048,7 @@ BEGIN TRANSACTION
   
  아직 X 잠금이 획득되지 않은 파티션 ID 7-15에서 다른 트랜잭션이 계속 잠금을 획득할 수 있습니다.  
   
-```  
+```sql  
 BEGIN TRANSACTION  
     SELECT col1  
         FROM TestTable  
@@ -1314,7 +1313,7 @@ BEGIN TRANSACTION
   
  세션 1:  
   
-```  
+```sql  
 USE AdventureWorks2012;  -- Or the 2008 or 2008R2 version of the AdventureWorks database.  
 GO  
   
@@ -1337,7 +1336,7 @@ BEGIN TRANSACTION;
   
  세션 2:  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -1359,7 +1358,7 @@ BEGIN TRANSACTION;
   
  세션 1:  
   
-```  
+```sql  
     -- Reissue the SELECT statement - this shows  
     -- the employee having 48 vacation hours.  The  
     -- snapshot transaction is still reading data from  
@@ -1371,7 +1370,7 @@ BEGIN TRANSACTION;
   
  세션 2:  
   
-```  
+```sql  
 -- Commit the transaction; this commits the data  
 -- modification.  
 COMMIT TRANSACTION;  
@@ -1380,7 +1379,7 @@ GO
   
  세션 1:  
   
-```  
+```sql  
     -- Reissue the SELECT statement - this still   
     -- shows the employee having 48 vacation hours  
     -- even after the other transaction has committed  
@@ -1415,7 +1414,7 @@ GO
   
  세션 1:  
   
-```  
+```sql  
 USE AdventureWorks2012;  -- Or any earlier version of the AdventureWorks database.  
 GO  
   
@@ -1442,7 +1441,7 @@ BEGIN TRANSACTION;
   
  세션 2:  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -1465,7 +1464,7 @@ BEGIN TRANSACTION;
   
  세션 1:  
   
-```  
+```sql  
     -- Reissue the SELECT statement - this still shows  
     -- the employee having 48 vacation hours.  The  
     -- read-committed transaction is still reading data   
@@ -1479,7 +1478,7 @@ BEGIN TRANSACTION;
   
  세션 2:  
   
-```  
+```sql  
 -- Commit the transaction.  
 COMMIT TRANSACTION;  
 GO  
@@ -1488,7 +1487,7 @@ GO
   
  세션 1:  
   
-```  
+```sql  
     -- Reissue the SELECT statement which now shows the   
     -- employee having 40 vacation hours.  Being   
     -- read-committed, this transaction is reading the   
@@ -1518,7 +1517,7 @@ GO
   
  다음 [!INCLUDE[tsql](../includes/tsql-md.md)] 문은 READ_COMMITTED_SNAPSHOT을 설정합니다.  
   
-```  
+```sql  
 ALTER DATABASE AdventureWorks2012  
     SET READ_COMMITTED_SNAPSHOT ON;  
 ```  
@@ -1527,7 +1526,7 @@ ALTER DATABASE AdventureWorks2012
   
  다음 [!INCLUDE[tsql](../includes/tsql-md.md)] 문은 ALLOW_SNAPSHOT_ISOLATION을 설정합니다.  
   
-```  
+```sql  
 ALTER DATABASE AdventureWorks2012  
     SET ALLOW_SNAPSHOT_ISOLATION ON;  
 ```  
@@ -1557,7 +1556,7 @@ ALTER DATABASE AdventureWorks2012
   
 -   다음 코드 예제에서는 `READ_COMMITTED_SNAPSHOT` 데이터베이스 옵션을 `ON`으로 설정하여 행 버전 관리를 사용하는 커밋된 읽기를 보여 줍니다.  
   
-    ```  
+    ```sql  
     ALTER DATABASE AdventureWorks2012  
         SET READ_COMMITTED_SNAPSHOT ON;  
     ```  
@@ -1566,14 +1565,14 @@ ALTER DATABASE AdventureWorks2012
   
 -   다음 코드 예에서는 `ALLOW_SNAPSHOT_ISOLATION` 데이터베이스 옵션을 `ON`으로 설정하여 스냅샷 격리를 보여 줍니다.  
   
-    ```  
+    ```sql  
     ALTER DATABASE AdventureWorks2012  
         SET ALLOW_SNAPSHOT_ISOLATION ON;  
     ```  
   
      스냅샷 격리로 실행되는 트랜잭션은 스냅샷이 설정된 데이터베이스의 테이블에 액세스할 수 있습니다. 스냅샷이 설정되지 않은 테이블에 액세스하려면 격리 수준을 변경해야 합니다. 예를 들어 다음 코드 예제에서는 스냅샷 트랜잭션으로 실행되는 동안 두 테이블을 조인하는 `SELECT` 문을 보여 줍니다. 한 테이블은 스냅샷 격리가 설정되지 않은 데이터베이스에 속합니다. 스냅샷 격리에서 `SELECT` 문을 실행하면 실행이 실패합니다.  
   
-    ```  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
     BEGIN TRAN  
         SELECT t1.col5, t2.col5  
@@ -1584,7 +1583,7 @@ ALTER DATABASE AdventureWorks2012
   
      다음 코드 예제에서는 트랜잭션 격리 수준을 커밋된 읽기로 변경하도록 수정된 동일한 `SELECT` 문을 보여 줍니다. 이렇게 변경하면 `SELECT` 문이 성공적으로 실행됩니다.  
   
-    ```  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
     BEGIN TRAN  
         SELECT t1.col5, t2.col5  
@@ -1618,7 +1617,7 @@ ALTER DATABASE AdventureWorks2012
   
      예를 들어 데이터베이스 관리자가 다음 `ALTER INDEX` 문을 실행합니다.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     ALTER INDEX AK_Employee_LoginID  
@@ -1648,7 +1647,7 @@ ALTER DATABASE AdventureWorks2012
   
  현재 LOCK_TIMEOUT 설정을 확인 하려면 @ 함수를 실행 합니다 @LOCK_TIMEOUT .  
   
-```  
+```sql  
 SELECT @@lock_timeout;  
 GO  
 ```  
@@ -1671,7 +1670,7 @@ GO
   
  다음 예에서는 `SERIALIZABLE` 격리 수준을 설정합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;  
@@ -1688,7 +1687,7 @@ GO
   
  현재 설정된 트랜잭션 격리 수준을 확인하려면 다음 예와 같이 `DBCC USEROPTIONS` 문을 사용합니다. 이 결과 집합은 사용 중인 컴퓨터의 결과 집합과 다를 수 있습니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;  
@@ -1736,7 +1735,7 @@ GO
   
  다음 예와 같이 트랜잭션 격리 수준이 `SERIALIZABLE`로 설정되고 테이블 수준 잠금 힌트인 `NOLOCK`이 `SELECT` 문과 함께 사용되면 일반적으로 직렬화 가능 트랜잭션을 유지 관리하는 데 사용되는 키 범위 잠금이 적용되지 않습니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;  
@@ -1793,7 +1792,7 @@ GO
   
  다음 예에서는 중첩된 트랜잭션의 용도를 보여 줍니다. `TransProc` 프로시저는 프로시저를 실행하는 프로세스의 트랜잭션 모드에 관계없이 트랜잭션을 강제 실행합니다. 트랜잭션이 활성 중일 때 `TransProc`를 호출하면 `TransProc`에서 중첩된 트랜잭션이 대부분 무시되고 바깥쪽 트랜잭션에서 수행된 최종 동작을 기준으로 INSERT 문이 커밋 또는 롤백됩니다. 처리 중인 트랜잭션이 없는 프로세스에서 `TransProc`를 실행하면 실제로 프로시저 마지막에서 COMMIT TRANSACTION이 INSERT 문이 커밋됩니다.  
   
-```  
+```sql  
 SET QUOTED_IDENTIFIER OFF;  
 GO  
 SET NOCOUNT OFF;  

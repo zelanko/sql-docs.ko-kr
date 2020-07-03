@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: f7be51122765131e8681c11a7c84759e173f1517
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 9f1d6865a4c432694201c9b5a666fff3fd46d117
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813801"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883404"
 ---
 # <a name="perform-knowledge-discovery"></a>기술 자료 검색 수행
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 기술 자료 검색을 통해 기술 자료를 구축하는 방법에 대해 설명합니다. 검색 프로세스에서 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )는 컴퓨터 기반 프로세스를 통해 예제 데이터 원본의 데이터를 분석해서 얻은 정보를 기술 자료에 추가합니다. 이러한 정보는 기술 자료 검색 작업의 **도메인 값 관리** 단계 또는 도메인 관리 작업에서 수정하고 개선할 수 있습니다.  
   

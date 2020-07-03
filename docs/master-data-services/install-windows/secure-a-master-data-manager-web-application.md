@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c87fd72a7257615ab83a7e9845fdd4c6a80d70f7
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: 542828e26b82d0df0174886f706117feb8ad2322
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83731589"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883831"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>마스터 데이터 관리자 웹 애플리케이션의 보안 설정
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   HTTPS를 사용하여 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션의 보안을 설정할 수 있습니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "83731589"
   
 7.  **확인**을 클릭합니다.  
   
-8.  (선택 사항) 사용자가 HTTPS를 통해서만 사이트에 액세스할 수 있도록 HTTP를 제거하려면 목록에서 **http**가 포함된 행을 클릭합니다. **제거** 를 클릭하고 확인 대화 상자에서 **예**를 클릭합니다.  
+8.  선택 사항입니다. 사용자가 HTTPS를 통해서만 사이트에 액세스할 수 있도록 HTTP를 제거하려면 목록에서 **http**가 포함된 행을 클릭합니다. **제거** 를 클릭하고 확인 대화 상자에서 **예**를 클릭합니다.  
   
     > [!IMPORTANT]  
     >  HTTP를 제거한 후 basicHttp 및 wsHttpBinding 구성을 변경해야 합니다.  

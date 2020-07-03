@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: b8e18cff-a9e6-4386-98ce-1cd855506e03
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7d4bdd76786d4c70b0c27bf60c1a51f08828d1b2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a29e6db2af545f919ad176f3b7453e237b08888b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825098"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883813"
 ---
 # <a name="sysmaster_key_passwords-transact-sql"></a>sys.master_key_passwords(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   **Sp_control_dbmasterkey_password** 저장 프로시저를 사용 하 여 추가한 각 데이터베이스 마스터 키 암호에 대해 하나의 행을 반환 합니다. 마스터 키를 보호하는 데 사용된 암호는 자격 증명 저장소에 저장됩니다. 자격 증명 이름은 다음 형식을 따릅니다. # #DBMKEY_<database_family_guid>_<random_password_guid> # #. 암호는 자격 증명 암호로 저장됩니다. **Sp_control_dbmasterkey_password**를 사용 하 여 추가 된 각 암호에 대해 **sys. 자격 증명**에 행이 있습니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82825098"
 |**credential_id**|**int**|암호가 속한 자격 증명의 ID입니다. 이 ID는 서버 인스턴스 내에서 고유합니다.|  
 |**family_guid**|**uniqueidentifier**|생성 시 원래 데이터베이스의 고유 ID입니다. 이 GUID는 데이터베이스를 복원하거나 연결한 경우뿐만 아니라 데이터베이스 이름을 변경한 경우에도 동일하게 유지됩니다.<br /><br /> 서비스 마스터 키에의 한 자동 암호 해독에 실패 하면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **family_guid** 을 사용 하 여 데이터베이스 마스터 키를 보호 하는 데 사용 되는 암호를 포함할 수 있는 자격 증명을 식별 합니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

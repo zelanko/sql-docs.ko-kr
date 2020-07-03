@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 5257e054-be61-4a55-b699-708366a759af
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cca345024fcf34cee4abd3695621c9548cee6121
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca89eb84abc1826a91b4ee8ef285246f6c3de719
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728014"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882323"
 ---
 # <a name="change-sets-and-approval-mds-add-in-for-excel"></a>변경 집합 및 승인(Excel용 MDS 추가 기능)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Excel용 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 추가 기능에서 변경 집합의 엔터티에 보류 중인 변경 내용을 저장할 수 있습니다. 보류 중인 변경 내용을 보고 수정하기 위해 기존 변경 집합을 적용할 수 있으며 기존 변경 집합을 커밋할 수 있습니다.  
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84fd6a1b23287b53115a21cd519244525d7939ab
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 188a4c98b8f179cafd184a2add60055d7b36e4b5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725788"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883607"
 ---
 # <a name="sysdatabase_mirroring-transact-sql"></a>sys.database_mirroring(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있는 각 데이터베이스에 대해 한 행을 포함합니다. 데이터베이스가 ONLINE이 아니거나 데이터베이스 미러링이 설정되어 있지 않으면 database_id를 제외한 모든 열의 값이 NULL이 됩니다.  
   

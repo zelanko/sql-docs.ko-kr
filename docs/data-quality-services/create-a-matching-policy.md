@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: de3733023aef2975b2276e2a804e0eec503a0930
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: c18d8d44bb595e4bfaad66296331d8dab403535e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811342"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881959"
 ---
 # <a name="create-a-matching-policy"></a>일치 정책 만들기
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에 일치 정책을 만드는 방법에 대해 설명합니다. 예제 데이터에서 일치 정책 작업을 실행하여 DQS에서 일치 프로세스를 준비할 수 있습니다. 이 작업에서는 정책에서 하나 이상의 일치 규칙을 만들고 테스트한 다음, 일치 규칙을 공개적으로 사용할 수 있도록 기술 자료를 게시합니다. 기술 자료에는 하나의 일치 정책만 있을 수 있지만 해당 정책에 여러 일치 규칙이 포함되어 있을 수 있습니다.  
   

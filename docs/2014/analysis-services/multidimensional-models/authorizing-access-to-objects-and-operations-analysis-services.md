@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: d17fa458e1699ab73bb8105fa2cc4cccc44dd597
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 34a91283d735730bcc5f011377b1f1e729e7e753
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544668"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883355"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>개체 및 작업에 대한 액세스 승인(Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 내의 큐브, 차원 및 마이닝 모델에 대한 비관리자 사용자 액세스는 하나 이상의 데이터베이스 역할의 구성원 자격을 통해 부여됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리자는 이러한 데이터베이스 역할을 만들고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체에 대한 읽기 또는 읽기/쓰기 권한을 부여한 다음 각 역할에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 및 그룹을 추가합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "84544668"
   
 2.  다음 쿼리를 입력하고 F5 키를 눌러 실행합니다.  
   
-    ```  
+    ```sql  
     Select * from $SYSTEM.DBSCHEMA_CATALOGS  
     ```  
   
@@ -72,7 +72,7 @@ ms.locfileid: "84544668"
   
  사용자 ID에 따라 권한을 다르게 설정할 수도 있습니다. 이를 종종 동적 보안이라고 하며, [UserName&#40;MDX&#41;](/sql/mdx/username-mdx) 함수를 사용하여 구현됩니다.  
   
-## <a name="best-practices"></a>모범 사례  
+## <a name="best-practices"></a>최선의 구현 방법  
  권한을 잘 관리하기 위해 다음과 유사한 방법을 제안합니다.  
   
 1.  역할을 관리하는 사람은 누구라도 역할에서 허용하는 것을 알 수 있도록 기능별 역할(예: dbadmin, cubedeveloper, processadmin)을 만듭니다. 다른 곳에서 설명한 것처럼, 모델 정의에 역할을 정의하여 이러한 역할을 이후 솔루션 배포에 대해서 유지할 수 있습니다.  

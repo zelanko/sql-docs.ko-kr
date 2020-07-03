@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: b0f9ffab-6ac7-49d5-8369-477fa6b1c02b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 43b62d07d41a40619f85fd615e9c901d7172dfe8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: beb4638b5fa9c1e2030f5a5fa5e42a784a165ab6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760351"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883792"
 ---
 # <a name="sysmodule_assembly_usages-transact-sql"></a>sys.module_assembly_usages(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   모듈에서 어셈블리로의 각 참조에 대해 하나의 행을 반환합니다.  
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: af799e38-2d16-49b2-bcf5-6f9199af899e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a9e60d1bca57e68da621eaef448cc9a83ede5aa7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cfbeafd7ef52674adbd8fc6898baf663373b91a9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717552"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887881"
 ---
 # <a name="sysserver_assembly_modules-transact-sql"></a>sys.server_assembly_modules(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   TA 유형의 서버 수준 트리거에 대한 어셈블리 모듈마다 한 행씩 포함합니다. 이 뷰에서는 어셈블리 트리거를 기본 CLR 구현으로 매핑합니다. 이 관계를 **sys. server_triggers**에 조인할 수 있습니다. 어셈블리는 **master** 데이터베이스에 로드 되어야 합니다. 튜플(object_id)은 관계에 대한 키입니다.  
   

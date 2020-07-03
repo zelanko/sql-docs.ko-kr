@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 878552c37b9d8d0345969e47f297df85089ce184
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6818c721d6f555ea2cf8e03aa7ed664fe10c04cd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784685"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888332"
 ---
 # <a name="sqlservicetype-property-sqlservice-class"></a>SqlServiceType 속성(SqlService 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   관리되는 서비스의 유형을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -45,7 +45,7 @@ object.SqlServiceType [= value]
 ## <a name="remarks"></a>설명  
  반환 값은 다음 중 하나일 수 있습니다.  
   
-|Type|정의|  
+|유형|정의|  
 |----------|----------------|  
 |*1*|MSSQLSERVER는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스입니다.|  
 |*2*|SQLSERVERAGENT는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스입니다.|  

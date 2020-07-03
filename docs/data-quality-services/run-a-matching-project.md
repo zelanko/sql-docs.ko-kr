@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 4f560af1a8163fae126ea3b6c63cd6b1be48afb7
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 0a8a71349a5948c4ac162b82bd92d3b022446cb0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813787"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883327"
 ---
 # <a name="run-a-matching-project"></a>일치 프로젝트 실행
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 데이터 일치를 수행하는 방법에 대해 설명합니다. 일치 프로세스에서는 일치 정책의 일치 규칙에 따라 일치 레코드 클러스터를 확인하고 Survivorship 규칙에 따라 각 클러스터에서 하나의 레코드를 존속 레코드로 지정한 후 결과를 내보냅니다. 일치 프로세스(중복 제거라고도 함)는 DQS의 컴퓨터 기반 프로세스에서 수행되지만, 대화형으로 일치 규칙을 만들고 여러 선택 항목에서 Survivorship 규칙을 선택하여 일치 프로세스를 제어할 수 있습니다.  
   

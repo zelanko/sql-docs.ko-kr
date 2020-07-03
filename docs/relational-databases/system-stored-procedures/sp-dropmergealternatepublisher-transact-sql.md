@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: faa13d2547d28666e2695e4332f32eaf472472ec
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 684a11fd102d7404543377afebb31780752ecd95
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783860"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884113"
 ---
 # <a name="sp_dropmergealternatepublisher-transact-sql"></a>sp_dropmergealternatepublisher(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   병합 게시에서 대체 게시자를 제거합니다. 이 저장 프로시저는 구독 데이터베이스의 구독자에서 실행됩니다.  
   

@@ -17,19 +17,19 @@ ms.assetid: 7d2f0bcf-f1ae-45b8-bc3f-7aea4fae7e45
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b55c30746542a09a84f4b8eacde8e78f3dae8ed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fd92f97c8f73b650108b7b09f14d97268082ffd3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148742"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883618"
 ---
 # <a name="creating-smo-programs"></a>SMO 프로그램 만들기
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   SMO([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects) 개체의 일반적인 프로그래밍에는 메서드 실행, 속성 설정 및 컬렉션 조작과 같이 모든 개체가 공유하는 공통적인 영역이 포함됩니다.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[SQL Server 인스턴스에 연결](../../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 연결을 설정하는 가장 기본적인 SMO 프로그램입니다. Windows 인증과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 수행하는 방법을 보여 줍니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 로컬 및 원격 인스턴스에 연결하는 방법을 보여 주는 예제도 포함되어 있습니다.|  
 |[SQL Server 인스턴스에서 연결 끊기](../../../relational-databases/server-management-objects-smo/create-program/disconnecting-from-an-instance-of-sql-server.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 끊는 방법을 보여 주는 프로그램입니다.|  

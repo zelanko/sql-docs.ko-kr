@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fd1633699f6035d03066bcbd38f6ce3882b9cb68
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ab864d3e2fbfb10e98347ac40b0b5f74f08729cb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784678"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888235"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>VBScript를 사용하여 구성 관리용 WMI 공급자 액세스
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 섹션에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 컴퓨터에서 실행 중인 설치 된 인스턴스의 버전을 나열 하는 VBScript 프로그램을 만드는 방법을 설명 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  이 코드 예제에서는 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스와 해당 버전을 나열합니다.  

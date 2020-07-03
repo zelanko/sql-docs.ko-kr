@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2ff0439ff6b418006f3da5f0356169574509ebb7
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: 0e6ca6b5ed0eb94b7293dfd5aab6623ea2a61454
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84932834"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885989"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>메모리 액세스에 최적화된 테이블에서 LOB 열 구현
   메모리 액세스에 최적화 된 테이블에는 행 외부 또는 LOB (large object) 저장소가 없습니다 .이 제한 사항은 SQL Server 2016 이상에서 제거 되었으며, [메모리 내 OLTP에 대해 지원 되는 데이터 형식](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)참조) 행 크기 제한은 8060 바이트입니다. 다음 두 가지 방법으로 큰 이진 또는 문자열 값을 저장할 수 있습니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "84932834"
   
  다음 예제에서는 이진 LOB 값을 여러 행으로 분할하고 행을 메모리 최적화 테이블에 삽입합니다.  
   
-<pre><code>tsql  
+```sql  
 create table BlobTable_inmem (  
    BlobId binary(16) not null,  
    SegmentationId int not null,  
@@ -75,7 +75,8 @@ where BlobId = @BlobId
 order by SegmentationId  
   
 select @Blob  
-go</code></pre>  
+go
+```
   
  그 대신 LOB 열에 대한 디스크 기반 테이블을 정의할 수 있습니다. 디스크 기반 테이블에는 메모리 최적화 테이블의 각 행에 해당하는 행이 있으며 해당 행에 대한 모든 LOB 값도 있습니다. 다음 예제에서는 직원에 대한 데이터를 메모리 최적화 테이블에 저장하고, 각 직원의 사진은 디스크 기반 테이블에 저장합니다.  
   

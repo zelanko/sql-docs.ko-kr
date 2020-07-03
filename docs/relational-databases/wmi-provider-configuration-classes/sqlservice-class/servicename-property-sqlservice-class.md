@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8ac7387b-c3ae-4e45-b2cc-ebab3f83bfb2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 28809f8ceb0e6540c1eda8f63ef0fa08ca7a9761
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7a279d9447f31965935a4bb600f96b5982b1387f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784726"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888370"
 ---
 # <a name="servicename-property-sqlservice-class"></a>ServiceName 속성(SqlService 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   서비스의 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  

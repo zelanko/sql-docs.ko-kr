@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5491e736bfa075c4cc9f001bc2515184de865ee2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 17f95da5b152dd73939dcdf8552f72c20f199f20
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717903"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882193"
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>컨텍스트 연결 및 일반 연결 - 제한 사항
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 컨텍스트 및 일반 연결을 통해 프로세스에서 실행 되는 코드와 관련 된 제한 사항을 설명 합니다.  
   
 ## <a name="restrictions-on-context-connections"></a>컨텍스트 연결에 대한 제한 사항  
