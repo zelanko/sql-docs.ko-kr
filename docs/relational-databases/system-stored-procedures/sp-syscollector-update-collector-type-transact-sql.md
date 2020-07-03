@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d68443daf5f6e694dc0da8e838dfad897739af05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f315b95b100315691d1ace30a3fe3bb2e9788d27
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790342"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892795"
 ---
 # <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   컬렉션 항목에 대한 수집기 형식을 업데이트합니다. 수집기 형식의 이름과 GUID가 지정되면 컬렉션 및 업로드 패키지, 매개 변수 스키마, 매개 변수 포맷터 스키마 등의 수집기 형식 구성을 업데이트합니다.  
   

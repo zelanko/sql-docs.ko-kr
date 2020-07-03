@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6df2b3b8ac52211cc7a558724549870da8ff85e7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a697489367d085714fd9ab1ab5c6245ca04b9ee1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730028"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893682"
 ---
 # <a name="sp_help_jobcount-transact-sql"></a>sp_help_jobcount(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   일정이 연결된 작업 수를 제공합니다.  
   
@@ -71,7 +71,7 @@ sp_help_jobcount
   
  **Sysadmin** 의 멤버만 다른 사용자가 소유한 작업의 수를 볼 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `NightlyJobs` 일정에 연결된 작업 수를 나열합니다.  
   
 ```  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 660f2749-392f-46bf-89f3-27764d848507
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e4e37e40aea88ec90da7c95065f33f2becfe2b5f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ab32a3bad6b394932ccf5e48200b7da40ee5d32f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760020"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892837"
 ---
 # <a name="sp_syscollector_set_cache_window-transact-sql"></a>sp_syscollector_set_cache_window(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   실패한 데이터 업로드의 시도 횟수를 설정합니다. 오류가 발생 시 업로드를 다시 시도하면 수집된 데이터의 손실 위험을 완화할 수 있습니다.  
 
@@ -59,7 +59,7 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행하려면 dc_admin(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 데이터 수집기를 사용하지 않도록 설정하고 3회까지 실패한 업로드의 데이터를 보존하는 캐시 시간대를 구성한 다음 데이터 수집기를 다시 사용하도록 설정합니다.  
   
 ```sql  

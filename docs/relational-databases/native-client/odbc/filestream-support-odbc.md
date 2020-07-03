@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0148158217909c0989ccd1c7833df3bd4f0a0dca
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8615bee01595b827e7238d0dc7c0df8c4434090a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787821"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894988"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM 지원(ODBC)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 ODBC에서는 향상된 FILESTREAM 기능을 지원합니다. 이 기능에 대 한 자세한 내용은 [FILESTREAM 지원](../../../relational-databases/native-client/features/filestream-support.md)을 참조 하세요. FILESTREAM에 대 한 ODB 지원을 보여 주는 샘플은 [ODBC&#41;&#40;filestream을 사용 하 여 증분 방식으로 데이터 전송 및 수신 ](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)을 참조 하세요.  
   
@@ -101,7 +101,7 @@ ODBCError(henv, hdbc, hstmt, NULL, true); exit(-1);
 }  
 ```  
   
-### <a name="insert"></a>삽입  
+### <a name="insert"></a>Insert  
   
 ```  
 void insertFilestream(LPCWSTR srcFilePath) {  

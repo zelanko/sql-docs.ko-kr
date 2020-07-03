@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fc69a273dfa331e558f076429be95c2462b551d8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6fe10c33c617833754ac23592528519aeabec1d5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730039"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893716"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동화된 작업을 수행하는 데 사용하는 작업에 대한 정보를 반환합니다.  
   
@@ -221,7 +221,7 @@ sp_help_job { [ @job_id = ] job_id
   
  **SQLAgentUserRole** 의 멤버는 자신이 소유한 작업만 볼 수 있습니다. **Sysadmin**, **SQLAgentReaderRole**및 **SQLAgentOperatorRole** 의 멤버는 모든 로컬 및 다중 서버 작업을 볼 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-list-information-for-all-jobs"></a>A. 모든 작업에 관한 정보 나열  
  다음 예에서는 매개 변수 없이 `sp_help_job` 프로시저를 실행하여 `msdb` 데이터베이스에 현재 정의되어 있는 모든 작업에 대한 정보를 반환합니다.  

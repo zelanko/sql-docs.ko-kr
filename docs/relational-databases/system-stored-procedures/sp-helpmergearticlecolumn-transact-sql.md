@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1094ce4844686a6d0bebb11e6c95830dd783a843
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7dc556d25cdac393c13df81af4eee54664ff0acb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733122"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891638"
 ---
 # <a name="sp_helpmergearticlecolumn-transact-sql"></a>p_helpmergearticlecolumn(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   병합 게시에 대한 지정된 테이블 또는 뷰 아티클의 열 목록을 반환합니다. 저장 프로시저에는 열이 없으므로 저장 프로시저를 아티클로 지정한 경우에는 오류를 반환합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   

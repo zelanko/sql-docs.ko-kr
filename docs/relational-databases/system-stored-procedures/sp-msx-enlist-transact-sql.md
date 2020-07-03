@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 99f0eba106e13f222419edc43bf9745bbb3247bc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 551d0796ce534f77d4994064a9af032f34f81f04
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772120"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893470"
 ---
 # <a name="sp_msx_enlist-transact-sql"></a>sp_msx_enlist(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   마스터 서버에서 사용 가능한 서버 목록에 현재 서버를 추가합니다.  
   
@@ -56,7 +56,7 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행할 수 있는 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 현재 서버를 `AdventureWorks1` 마스터 서버에 참여시킵니다. 현재 서버의 위치는 `Building 21, Room 309, Rack 5`입니다.  
   
 ```  

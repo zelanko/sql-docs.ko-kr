@@ -18,15 +18,15 @@ ms.assetid: 0fc83e35-0caa-49a3-a4b6-a1890d4f46ef
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2a8868c1654f93b3288509e3a099e5f41eb8208e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a28fc7481c310ebd1f051f620fbcc7d691653301
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830033"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891932"
 ---
 # <a name="sp_dropserver-transact-sql"></a>sp_dropserver(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 알려진 원격 서버 및 연결된 서버 목록에서 서버를 제거합니다.  
   
@@ -40,7 +40,7 @@ sp_dropserver [ @server = ] 'server'
 ```  
   
 ## <a name="arguments"></a>인수  
- *서버인*  
+ *server*  
  제거할 서버입니다. *server* 은 **sysname**이며 기본값은 없습니다. *서버* 가 있어야 합니다.  
   
  *droplogins*  

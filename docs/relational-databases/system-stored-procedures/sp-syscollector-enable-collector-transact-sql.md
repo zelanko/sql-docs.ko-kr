@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 53ff2b0d-b7da-4e3d-8f3d-35e857bc3720
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b44e17d9e8625fbeb6ecd0e25b767e396c4c92d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 49ba4abf13978e16dc4a868843d23348dd38e64f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725528"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892894"
 ---
 # <a name="sp_syscollector_enable_collector-transact-sql"></a>sp_syscollector_enable_collector(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   데이터 수집기를 사용하도록 설정합니다. 데이터 수집기는 서버마다 하나뿐이므로 매개 변수가 필요하지 않습니다.  
   
@@ -51,7 +51,7 @@ dbo.sp_syscollector_enable_collector
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행하려면 **dc_admin** 또는 **dc_operator** (EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 데이터 수집기를 사용하도록 설정합니다.  
   
 ```sql  

@@ -13,17 +13,17 @@ ms.assetid: 4037a866-4826-4c1f-890c-e7e3658adf13
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73dbbb93c226c145dc16f5148f903900b602760e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e62b90ee9d5d3eaa15747435395510629e2e5feb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70911223"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892421"
 ---
 # <a name="using-messages"></a>메시지 사용
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  SMO에서 시스템 메시지는 **서버** 개체에 속하는 <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> 개체로 표시 됩니다. 시스템 메시지는 수정할 수 없으므로 **SystemMessage** 개체 속성은 읽기 전용입니다.  
+  SMO에서 시스템 메시지는 <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> **서버** 개체에 속하는 개체로 표시 됩니다. 시스템 메시지는 수정할 수 없으므로 **SystemMessage** 개체 속성은 읽기 전용입니다.  
   
  사용자 정의 메시지는 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> 개체를 통해 SMO에서 프로그래밍 방식으로 표시됩니다. 전체 컬렉션을 반복하여 기존 사용자 정의 메시지를 검색할 수 있습니다. 새 사용자 정의 메시지는 새 **UserDefinedMessage** 개체를 인스턴스화하고 적절한 속성을 설정하여 만들 수 있습니다.  
   

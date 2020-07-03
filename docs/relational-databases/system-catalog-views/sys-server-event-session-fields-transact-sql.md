@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 29fc1b3b62b78ef6a0380087c878a34773df7c13
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 33aaf6a258c81dbf615f439b20031b23c01840fa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85664696"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893739"
 ---
 # <a name="sysserver_event_session_fields-transact-sql"></a>sys.server_event_session_fields(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이벤트 및 대상에 명시적으로 설정된 각 사용자 지정 가능 열에 대해 한 행을 반환합니다.  
   

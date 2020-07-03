@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36ac5833a4bf714c6f4b294f15f0cf6aca6fb64d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3e986d5d998864a343eab31e238a8f7df56a5d0c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750423"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892623"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   지정한 연결된 서버에서 테이블에 대한 테이블 정보를 반환합니다.  
   
@@ -88,7 +88,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 연결된 서버 `HumanResources`에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `LONDON2` 스키마에 포함되어 있는 테이블에 관한 정보를 반환합니다.  
   
 ```  

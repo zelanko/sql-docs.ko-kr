@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: e7d2c5df-0e17-4e94-9d41-d36c7ee60662
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ad4f0c6087d40253334011c1ffe7f7bc514be68b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 269a41d74092a9cc1e5d69b6f8b515bee6bbf94b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754427"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894775"
 ---
 # <a name="systrace_events-transact-sql"></a>sys.trace_events(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **Sys. trace_events** 카탈로그 뷰에는 모든 SQL 추적 이벤트 목록이 포함 되어 있습니다. 이러한 추적 이벤트는 지정된 버전의 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 대해 변경되지 않습니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "85754427"
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참조  
  [Transact-sql&#41;&#40;개체 카탈로그 뷰](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [sys.debug &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)   
  [trace_categories &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   

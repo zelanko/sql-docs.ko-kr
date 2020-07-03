@@ -13,19 +13,19 @@ ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0aa54692cf300a8d52d767092881ab30bc62d80f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 252741c7997909b4f48fe5be0180277738ad5919
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70911214"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894076"
 ---
 # <a name="using-user-defined-tables"></a>사용자 정의 테이블 사용
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   사용자 정의 테이블은 테이블 형식의 정보를 나타냅니다. 이들은 테이블 형식 데이터를 저장 프로시저나 사용자 정의 함수로 전달할 때 매개 변수로 사용할 수 있습니다. 데이터베이스 테이블의 열 표시에는 사용자 정의 테이블을 사용할 수 없습니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Database> 개체에는 <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> 개체를 참조하는 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> 속성이 있습니다. 해당 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 컬렉션의 각 개체에는 사용자 정의 테이블의 열을 나열 하 <xref:Microsoft.SqlServer.Management.Smo.Column> 는 개체의 컬렉션을 참조 하는 **Columns** 속성이 있습니다. 사용자 정의 테이블에 열을 추가하려면 Add 메서드를 사용합니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.Database> 개체에는 <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> 개체를 참조하는 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> 속성이 있습니다. <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>해당 컬렉션의 각 개체에는 **Columns** <xref:Microsoft.SqlServer.Management.Smo.Column> 사용자 정의 테이블의 열을 나열 하는 개체의 컬렉션을 참조 하는 Columns 속성이 있습니다. 사용자 정의 테이블에 열을 추가하려면 Add 메서드를 사용합니다.  
   
  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 개체를 사용하여 새 사용자 정의 테이블을 정의할 때 여러 열과 이 열들 중 하나를 기반으로 하는 기본 키를 제공해야 합니다.  
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6fbae3f0c8e504227538f5fdd83ccce223fd1351
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 040ed7a26a96e22fe2959159b8d7495c49fc0f63
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764681"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893776"
 ---
 # <a name="sysfunction_order_columns-transact-sql"></a>sys.function_order_columns(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   입력 mon CLR (언어 런타임) 테이블 반환 함수의 **순서** 식에 포함 되는 열 마다 한 행을 반환 합니다.  
 

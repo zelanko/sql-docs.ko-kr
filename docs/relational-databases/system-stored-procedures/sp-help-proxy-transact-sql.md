@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9c59c6347317d193eafe43c511c0ece3831e29c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 051f41139627420e825feffb292a02905917705d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750530"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891700"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   하나 이상의 프록시에 대한 정보를 나열합니다.  
   
@@ -96,7 +96,7 @@ sp_help_proxy
 > [!NOTE]  
 >  **Sysadmin** 의 멤버가이 저장 프로시저를 실행 하는 경우에만 **credential_identity** 및 **user_sid** 열이 결과 집합에 반환 됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-listing-information-for-all-proxies"></a>A. 모든 프록시에 대한 정보 나열  
  다음 예에서는 인스턴스의 모든 프록시에 대한 정보를 나열합니다.  

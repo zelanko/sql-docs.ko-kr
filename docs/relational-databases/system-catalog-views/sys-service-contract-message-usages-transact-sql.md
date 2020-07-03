@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: f783e662-126c-4595-8e22-f9d05191f5d0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8c60eca5c6306703f2ffd0ca7428422d8827851
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6b388925ae325018307905188529d0b38a09be32
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85664521"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894947"
 ---
 # <a name="sysservice_contract_message_usages-transact-sql"></a>sys.service_contract_message_usages(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 카탈로그 뷰에는 각 계약-메시지 유형 쌍에 대한 행이 포함되어 있습니다.  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5c638c37da5907295cf4f8ef0dbb63d7eef17f05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9cd0ff590213b5dd687235328696d4956b0bb224
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762771"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892559"
 ---
 # <a name="sp_unregister_custom_scripting-transact-sql"></a>sp_unregister_custom_scripting(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 저장 프로시저는 [!INCLUDE[tsql](../../includes/tsql-md.md)] [sp_register_custom_scripting](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)를 실행 하 여 등록 된 사용자 정의 사용자 지정 저장 프로시저 또는 스크립트 파일을 제거 합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   

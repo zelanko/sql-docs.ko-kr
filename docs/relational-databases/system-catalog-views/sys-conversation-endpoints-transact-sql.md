@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cc9649154ae3464d89590d88de40abf9f4325949
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d371f877c35d1a7935b3a98e00695b03a0a1c961
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754455"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892203"
 ---
 # <a name="sysconversation_endpoints-transact-sql"></a>sys.conversation_endpoints(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ph x="1" /&gt; 대화의 각 상대는 대화 엔드포인트가 나타냅니다. 이 카탈로그 뷰에는 데이터베이스에 있는 각 대화 엔드포인트에 대한 행이 포함되어 있습니다.  
   

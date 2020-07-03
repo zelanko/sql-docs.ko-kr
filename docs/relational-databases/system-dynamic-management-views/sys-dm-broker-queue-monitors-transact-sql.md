@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: df75ccbec2cd245942a06f13da698fda1505d6ac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1df4b4387d79cc6e8b2dc59b7a5a00f61a6d07f5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720330"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894591"
 ---
 # <a name="sysdm_broker_queue_monitors-transact-sql"></a>sys.dm_broker_queue_monitors(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   인스턴스의 큐 모니터에 대한 행을 반환합니다. 한 큐 모니터에 대해 한 행을 반환합니다 큐 모니터는 큐 활성화를 관리합니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "85720330"
 ## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-current-status-queue-monitor"></a>A. 현재 상태 큐 모니터  
  이 시나리오에서는 모든 메시지 큐의 현재 상태를 제공합니다.  

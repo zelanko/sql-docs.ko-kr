@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 43fef1a35d36446cdf402b145c0afec68c9eb47d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3988bd0d9197b675c41115ba2b384b10cb35e851
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639540"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892585"
 ---
 # <a name="sp_unbindrule-transact-sql"></a>sp_unbindrule(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스의 열에서 또는 별칭 데이터 형식에서 규칙을 바인딩 해제합니다.  
   
@@ -63,7 +63,7 @@ sp_unbindrule [ @objname = ] 'object_name'
 ## <a name="permissions"></a>사용 권한  
  테이블 열에서 규칙을 바인딩 해제하려면 테이블에 대한 ALTER 권한이 필요합니다. 별칭 데이터 형식에서 규칙을 바인딩 해제하려면 형식에 대한 CONTROL 권한 또는 형식이 속한 스키마에 대한 ALTER 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-unbinding-a-rule-from-a-column"></a>A. 열에서 규칙 바인딩 해제  
  다음 예에서는 `startdate` 테이블의 `employees` 열에서 규칙을 바인딩 해제합니다.  

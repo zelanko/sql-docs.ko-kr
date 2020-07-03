@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: cb46be347590d3fb61d05476616e6c0a52e1ed41
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: ebae9f75ac25698582b7f3e4c78c2fb773bd803e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84929094"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891990"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>가용성 그룹의 Azure에 SQL Server 관리 백업 설정
   이 항목은 AlwaysOn 가용성 그룹에 참여하는 데이터베이스를 위해 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]을 구성하는 방법에 대한 자습서입니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "84929094"
   
 6.  ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Node1에서 AGTestDB에 대해 설정 및 구성:** SQL Server Management Studio 시작 하 고 가용성 데이터베이스가 설치 된 노드 1의 인스턴스에 연결 합니다. 필요에 따라 데이터베이스 이름, 스토리지 URL, SQL 자격 증명 및 보존 기간 값을 수정한 후 쿼리 창에서 다음 문을 실행합니다.  
   
-    ```  
+    ```sql  
     Use msdb;  
     GO  
     EXEC smart_admin.sp_set_db_backup   
@@ -92,14 +92,13 @@ ms.locfileid: "84929094"
                     ,@encryptor_name='MyBackupCert'  
                     ,@enable_backup=1;  
     GO  
-  
     ```  
   
      암호화에 대 한 인증서를 만드는 방법에 대 한 자세한 내용은 [암호화 된 백업 만들기](../relational-databases/backup-restore/create-an-encrypted-backup.md)의 **백업 인증서 만들기** 단계를 참조 하세요.  
   
 7.  ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 노드 2의 AGTestDB에 대해 설정 및 구성:** SQL Server Management Studio을 시작 하 고 가용성 데이터베이스가 설치 된 노드 2의 인스턴스에 연결 합니다. 필요에 따라 데이터베이스 이름, 스토리지 URL, SQL 자격 증명 및 보존 기간 값을 수정한 후 쿼리 창에서 다음 문을 실행합니다.  
   
-    ```  
+    ```sql  
     Use msdb;  
     GO  
     EXEC smart_admin.sp_set_db_backup   
@@ -111,15 +110,14 @@ ms.locfileid: "84929094"
                     ,@encryptor_name='MyBackupCert'  
                     ,@enable_backup=1;  
     GO  
-  
     ```  
   
      [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 이 설정되었습니다. 데이터베이스에서 백업 작업이 실행을 시작하려면 최대 15분이 필요합니다. 백업은 기본 백업 복제본에서 실행됩니다.  
   
 8.  **확장 이벤트 기본 구성 검토:**  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]에서 백업을 예약 하는 데 사용 하는 복제본에서 다음 transact-sql 문을 실행 하 여 확장 이벤트 구성을 검토 합니다. 이는 데이터베이스가 속한 가용성 그룹에 대한 기본 백업 복제본 설정입니다.  
   
-    ```  
-    SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
+    ```sql  
+    SELECT * FROM smart_admin.fn_get_current_xevent_settings(); 
     ```  
   
      Admin, Operational 및 Analytical 채널 이벤트가 기본적으로 설정되어 있고 해제할 수 없습니다. 수동 작업이 필요한 이벤트를 모니터링하기에 충분해야 합니다.  디버그 이벤트를 설정할 수 있지만 이러한 채널에는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]에서 문제를 발견 및 해결하는 데 사용하는 정보와 디버그 이벤트가 포함되어 있습니다. 자세한 내용은 [Azure에 대 한 관리 되는 백업 SQL Server 모니터링](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)을 참조 하세요.  
@@ -132,11 +130,10 @@ ms.locfileid: "84929094"
   
     3.  **백업 오류 및 경고를 수신하도록 이메일 알림 설정:** 쿼리 창에서 다음 Transact-SQL 문을 실행합니다.  
   
-        ```  
+        ```sql  
         EXEC msdb.smart_admin.sp_set_parameter  
         @parameter_name = 'SSMBackup2WANotificationEmailIds',  
         @parameter_value = '<email>'  
-  
         ```  
   
          자세한 내용 및 전체 샘플 스크립트는 [Azure에 대 한 관리 되는 백업 SQL Server 모니터링](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)을 참조 하세요.  
@@ -145,7 +142,7 @@ ms.locfileid: "84929094"
   
 11. **상태 모니터링:**  이전에 구성한 메일 알림을 통해 모니터링하거나 기록된 이벤트를 적극적으로 모니터링할 수 있습니다. 다음은 이벤트를 표시하는 데 사용하는 예제 Transact-SQL 문입니다.  
   
-    ```  
+    ```sql  
     --  view all admin events  
     Use msdb;  
     Go  
@@ -166,18 +163,16 @@ ms.locfileid: "84929094"
   
     SELECT * from @eventresult  
     WHERE event_type LIKE '%admin%'  
-  
     ```  
   
-    ```  
+    ```sql  
     -- to enable debug events  
     Use msdb;  
     Go  
-             EXEC smart_admin.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
-  
+    EXEC smart_admin.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
     ```  
   
-    ```  
+    ```sql  
     --  View all events in the current week  
     Use msdb;  
     Go  
@@ -187,7 +182,6 @@ ms.locfileid: "84929094"
     SET @endofweek = DATEADD(Day, 7-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)  
   
     EXEC smart_admin.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek;  
-  
     ```  
   
  이 섹션에서는 데이터베이스에서 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 을 처음 구성하는 단계에 대해 설명합니다. 동일한 시스템 저장 프로시저 smart_admin를 사용 하 여 기존 구성을 수정할 수 있습니다 **. sp_set_db_backup** 하 고 새 값을 제공 합니다. 자세한 내용은 [Azure에 대 한 관리 되는 백업-보존 및 저장소 설정 SQL Server](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)을 참조 하세요.  

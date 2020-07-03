@@ -16,15 +16,15 @@ ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15b5e67dcb5d272eacec84f83734a5db667be975
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 40b45a3b761a2846df714b6d93ed928839cad865
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095163"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894105"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>권한 부여, 취소 및 거부
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> 개체는 일련의 권한 또는 개별 서버 권한을 <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet> 개체에 할당하는 데 사용됩니다. 서버 수준 권한의 경우 피부여자가 로그온을 참조합니다. Windows에 의해 인증된 로그온이 Windows 사용자 이름으로 나열됩니다. 이 코드 예제를 실행하면 피부여자로부터 권한이 취소되고 <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A> 메서드로 권한이 제거되었는지 확인합니다.  
   

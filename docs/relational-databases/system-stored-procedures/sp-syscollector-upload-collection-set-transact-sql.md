@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: eed9232c-2b0a-4b6a-8ba0-76b7c99f48dc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 18e7f6ffa3e4796341a6d9e00774f0affa0931eb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 793b042f64dae7aa96341ee0794057f940ce4d72
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639850"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892786"
 ---
 # <a name="sp_syscollector_upload_collection_set-transact-sql"></a>sp_syscollector_upload_collection_set(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   컬렉션 집합이 활성화되어 있으면 컬렉션 집합 데이터의 업로드를 시작합니다.  
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b99676242133179bbfc26421c5d740b95c7c16d8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2322ed6f6f8a732a6bffd0f75946764c52e04265
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85652197"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894755"
 ---
 # <a name="change-data-capture---sysdm_cdc_errors"></a>변경 데이터 캡처-sys. dm_cdc_errors
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   변경 데이터 캡처 로그 검색 세션 중 발생한 각 오류마다 한 개의 행을 반환합니다.  
  

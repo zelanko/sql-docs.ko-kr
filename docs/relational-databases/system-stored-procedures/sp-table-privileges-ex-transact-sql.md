@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3131a5e0a44cf0ccbdb4537dc8e409cc8b56be39
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3e8529a1a3be2bed8ddbea1ff475b21801a34424
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786103"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892640"
 ---
 # <a name="sp_table_privileges_ex-transact-sql"></a>sp_table_privileges_ex(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   지정한 연결된 서버에서 지정한 테이블에 대한 권한 정보를 반환합니다.  
   
@@ -74,7 +74,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 지정한 연결된 서버 `Product`의 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 `Seattle1`로 시작되는 이름을 가진 테이블에 대한 권한 정보를 반환합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 연결 된 서버로 가정 됩니다.  
   
 ```  

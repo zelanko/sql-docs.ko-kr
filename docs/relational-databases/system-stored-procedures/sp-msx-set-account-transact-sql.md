@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27c5b993817e063caf08ca55e03a31ebaacc17b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e9e0e355c033c0ee33dd8c503875d03a163f998b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731611"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893454"
 ---
 # <a name="sp_msx_set_account-transact-sql"></a>sp_msx_set_account(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   대상 서버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 마스터 서버 계정 이름과 암호를 설정합니다.  
   
@@ -57,7 +57,7 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ## <a name="permissions"></a>사용 권한  
  Execute 권한은 **sysadmin** 고정 서버 역할의 멤버에 게 기본적으로 **sp_msx_set_account** 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 이 서버가 `MsxAccount` 자격 증명을 사용하여 마스터 서버에 로그인하도록 설정합니다.  
   
 ```  

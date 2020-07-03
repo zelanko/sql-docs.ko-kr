@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 99e2db4ca29fc39a4cebbd0b2dfb0564a5837e80
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04df50dc8378dc346079c807f8e517f1e6bbecdd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760054"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891886"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   연결된 서버의 테이블에서 기본 키를 참조하는 외래 키를 반환합니다.  
   
@@ -90,7 +90,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 연결된 서버 `Department`의 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 있는 `Seattle1` 테이블에 대한 외래 키 정보를 반환합니다.  
   
 ```  

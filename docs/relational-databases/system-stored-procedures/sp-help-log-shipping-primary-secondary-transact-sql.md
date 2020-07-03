@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bc0044b4-7831-4ff9-8856-825c76aa9893
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25d3c2133ee02bc25a869ad3a465081de4d7d38e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a52339c2ff0b609b2c9f0dab4a3a893135be2d31
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634494"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893643"
 ---
 # <a name="sp_help_log_shipping_primary_secondary-transact-sql"></a>sp_help_log_shipping_primary_secondary(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 저장 프로시저는 지정한 주 데이터베이스에 대해 모든 보조 데이터베이스에 관한 정보를 반환합니다.  
   
@@ -58,7 +58,7 @@ sp_help_log_shipping_primary_secondary
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 **sp_help_log_shipping_primary_secondary** 를 사용 하 여 주 데이터베이스와 연관 된 보조 데이터베이스 목록을 검색 하는 방법을 보여 줍니다 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  

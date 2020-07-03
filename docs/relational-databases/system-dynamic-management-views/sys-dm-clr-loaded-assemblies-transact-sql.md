@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d9c45fa084aa6e7231ebb62a01d0192dc1e2c200
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eb2a7ffc194741e546e10261711af3f78b697a77
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738735"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894620"
 ---
 # <a name="sysdm_clr_loaded_assemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   서버 주소 공간으로 로드되는 각각의 관리되는 사용자 어셈블리에 대해 행을 반환합니다. 이 뷰를 사용 하 여에서 실행 중인 CLR 통합 관리 되는 데이터베이스 개체를 이해 하 고 문제를 해결할 수 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "85738735"
 ## <a name="remarks"></a>설명  
  **Dm_clr_loaded_assemblies 뷰 appdomain_address** 에는 **dm_clr_appdomains appdomain_address**와 다 대 일 관계가 있습니다. **Dm_clr_loaded_assemblies 뷰 assembly_id** 에는 **assembly_id**와 일 대 다 관계가 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 로드되어 있는 현재 데이터베이스의 모든 어셈블리에 대한 세부 정보를 표시하는 방법을 보여 줍니다.  
   
 ```  

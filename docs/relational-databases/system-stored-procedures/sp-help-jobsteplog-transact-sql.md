@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eff6790875749a36e2178888ec446b1e81fb579c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ef843202631d632b2a3712554cf67c9eca0878e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773847"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891803"
 ---
 # <a name="sp_help_jobsteplog-transact-sql"></a>sp_help_jobsteplog(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   특정 에이전트 작업 단계 로그에 대 한 메타 데이터를 반환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **sp_help_jobsteplog** 은 실제 로그를 반환 하지 않습니다.  
 
@@ -86,7 +86,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
  **SQLAgentUserRole** 의 멤버는 자신이 소유한 작업 단계에 대 한 작업 단계 로그 메타 데이터만 볼 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-returns-job-step-log-information-for-all-steps-in-a-specific-job"></a>A. 특정 작업의 모든 단계에 대한 작업 단계 로그 정보 반환  
  다음 예에서는 `Weekly Sales Data Backup`이라는 작업에 관한 모든 작업 단계 로그 정보를 반환합니다.  

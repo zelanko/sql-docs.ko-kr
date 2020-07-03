@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 188013bc5566ea0423d4e395354b4cdfc2465fd0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f88a0248d6e3afbfb3b654bd56de01cecfc7f872
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733148"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891687"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   각 데이터베이스의 로그인 및 연관된 사용자에 관한 정보를 제공합니다.  
   
@@ -79,7 +79,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
   
  **Sp_helplogins** 데이터베이스에 액세스할 수 없는 경우 **sp_helplogins** 는 가능한 한 많은 정보를 반환 하 고 오류 메시지 15622을 표시 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `John`이라는 로그인에 대한 정보를 보고합니다.  
   
 ```  

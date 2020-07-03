@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e8b2c1a1ec0bb6c1417fa68720f2d345c6bc4ccb
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 068ae31abe61fac86d740fe3e03787fd32dde465
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813848"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894222"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>DQS 로그 파일에 대한 심각도 수준 구성
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]를 사용하여 다양한 작업 및 모듈의 심각도를 구성하는 방법에 대해 설명합니다. 심각도는 DQS에서 발생하는 이벤트의 강도를 정의합니다. DQS 이벤트의 심각도는 다음과 같습니다(심각도 내림차순 정렬).  
   

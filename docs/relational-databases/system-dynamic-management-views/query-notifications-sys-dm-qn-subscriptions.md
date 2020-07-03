@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c748dd4980fb7b3b142893f5a04dd36f1676f8a6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c83d70ad2bb534d9d17104316aecd40a4b21fe05
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85635010"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894694"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>쿼리 알림-sys. dm_qn_subscriptions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   서버에서 활성 쿼리 알림 구독에 관한 정보를 반환합니다. 이 뷰를 사용하여 서버 또는 지정된 데이터베이스의 활성 구독을 확인하거나 지정된 서버 보안 주체를 확인할 수 있습니다.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "85635010"
 > [!NOTE]  
 >  사용자에게 VIEW SERVER STATE 권한이 없다면 이 뷰는 현재 사용자가 소유한 구독에 관한 정보를 반환합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-return-active-query-notification-subscriptions-for-the-current-user"></a>A. 현재 사용자에 대한 활성 쿼리 알림 구독 반환  
  다음 예에서는 현재 사용자의 활성 쿼리 알림 구독을 반환합니다. 사용자에게 VIEW SERVER STATE 권한이 있을 경우 서버의 모든 활성 구독이 반환됩니다.  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d7086db16eab9935624546965652834313a467db
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: afc7da4e28ef7f32ca4a2b4ea762e5a5af442471
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84927889"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891975"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>클러스터형 columnstore 인덱스 사용
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 클러스터형 columnstore 인덱스를 사용하는 태스크입니다.
@@ -88,8 +88,8 @@ GO
 
  다음 예제에서는 1,048,577행을 파티션으로 로드하는 결과를 보여 줍니다. 결과에는 columnstore에 COMPRESSED 행 그룹이 하나 있고(열 세그먼트로 압축됨) deltastore에 행이 1개 있습니다.
 
-```
-SELECT * FROM sys.column_store_row_groups
+```sql
+SELECT * FROM sys.column_store_row_groups;
 ```
 
  ![일괄 처리 로드를 위한 행 그룹 및 deltastore](../../2014/database-engine/media/sql-server-pdw-columnstore-batchload.gif "일괄 처리 로드를 위한 행 그룹 및 deltastore")

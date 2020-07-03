@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3fe885be9072f24c18e6115efcf511faea2d8908
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b9fad9d93a1c0d4781f792fedfe3fe7649e17c98
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634369"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891730"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   지정된 운영자에 관한 경고 목록 또는 지정된 경고에 관한 운영자 목록을 보고합니다.  
   
@@ -103,7 +103,7 @@ sp_help_notification
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 사용자가 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-listing-alerts-for-a-specific-operator"></a>A. 특정 운영자에 대한 경고 나열  
  다음 예에서는 `François Ajenstat`라는 운영자가 받는 모든 종류의 알림에 관한 경고를 모두 반환합니다.  

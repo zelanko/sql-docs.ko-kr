@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 3f605d17348c651ef0fbc58ebd52b422bdba1896
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: de02d84d781c5db2d86902034b500c6b4a02ea2f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728193"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891815"
 ---
 # <a name="sp_grantlogin-transact-sql"></a>sp_grantlogin(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 만듭니다.  
   
@@ -55,7 +55,7 @@ sp_grantlogin [@loginame=] 'login'
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 ALTER ANY LOGIN 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `CREATE LOGIN` 를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 사용자에 대 한 로그인을 만듭니다 `Corporate\BobJ.` .이는 선호 되는 방법입니다.  
   
 ```sql

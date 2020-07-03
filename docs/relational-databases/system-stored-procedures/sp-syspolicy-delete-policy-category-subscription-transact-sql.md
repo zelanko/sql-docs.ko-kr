@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eeab0120-c869-4c95-a79d-6dc418d0b23a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8b0060ea0bee5dc987f4f1188d7e4853c2d7e22c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 75390e920074059885ace32333426eb2fa642c49
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85633842"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892745"
 ---
 # <a name="sp_syspolicy_delete_policy_category_subscription-transact-sql"></a>sp_syspolicy_delete_policy_category_subscription(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   특정 데이터베이스의 정책 범주 구독을 삭제합니다.  
   
@@ -61,7 +61,7 @@ INNER JOIN msdb.dbo.syspolicy_policy_categories AS b
 ON a.policy_category_id = b.policy_category_id;  
 ```  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 ID가 1인 정책 범주 구독을 삭제합니다.  
   
 ```  

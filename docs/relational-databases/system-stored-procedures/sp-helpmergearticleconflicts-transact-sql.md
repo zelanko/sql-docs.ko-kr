@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 01bbcce9c632bce61cf0417b940d7b938c2dd6d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 776f46d1f2e61c0f866352ee9c373e4619a2e282
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733107"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893558"
 ---
 # <a name="sp_helpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   충돌이 있는 게시 내의 아티클을 반환합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자 또는 병합 구독 데이터베이스의 구독자에서 실행됩니다.  
   

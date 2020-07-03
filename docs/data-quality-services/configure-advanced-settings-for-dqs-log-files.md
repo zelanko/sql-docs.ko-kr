@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 98c6ef2767f7ac64567f3e0a3d31381935577c59
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 95ddeb5c193e8b45cda0670419c890e503bbe05b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813877"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894233"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Configure Advanced Settings for DQS Log Files
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 및 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 로그 파일에 대해 로그 파일의 롤링 파일 크기 제한을 설정하거나, 이벤트의 타임스탬프 패턴을 설정하는 등 고급 설정을 구성하는 방법에 대해 설명합니다.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 387e4a0a30f5681391bb5891dc772f7c9f04790c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7d1f047fed74a212358ef7c1af61034d021661ef
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723080"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892590"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   추적에 이벤트 또는 이벤트 열을 추가하거나 제거합니다. **sp_trace_setevent** 는 중지 된 기존 추적 에서만 실행할 수 있습니다 (*상태* **0**). 존재 하지 않거나 *상태가* **0**이 아닌 추적에서이 저장 프로시저를 실행 하면 오류가 반환 됩니다.  
   

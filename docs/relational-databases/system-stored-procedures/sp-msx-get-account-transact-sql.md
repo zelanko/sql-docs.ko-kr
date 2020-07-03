@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 82c26d20933562b05bb95796140dcc51bbc0777d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ddb3d983b37bdad5db334073fe168b518aaee77a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734335"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893459"
 ---
 # <a name="sp_msx_get_account-transact-sql"></a>sp_msx_get_account(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   대상 서버가 마스터 서버에 로그인하는 데 사용하는 자격 증명에 대한 정보를 나열합니다.  
   
@@ -57,7 +57,7 @@ sp_msx_get_account
 ## <a name="permissions"></a>사용 권한  
  sysadmin 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 이 대상 서버가 마스터 서버에 로그인하는 데 사용하는 자격 증명에 대한 정보를 나열합니다.  
   
 ```  

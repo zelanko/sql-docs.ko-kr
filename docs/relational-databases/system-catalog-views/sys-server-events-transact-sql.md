@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 996f6c9b-6426-4847-95d9-6b77541422be
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 50dd13235c0b583b7e3c3f5869b9df60648f1549
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0f5e753b2d5db8d75739f8e65c909f593f8b6e77
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648838"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894956"
 ---
 # <a name="sysserver_events-transact-sql"></a>sys.server_events(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   서버 수준의 이벤트 알림 또는 서버 수준 DDL 트리거를 실행시키는 각 이벤트당 한 개의 행을 포함합니다. 열 **object_id** 및 **형식** 은 서버 이벤트를 고유 하 게 식별 합니다.  
 

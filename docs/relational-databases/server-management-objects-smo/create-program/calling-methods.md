@@ -16,17 +16,17 @@ ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 471549e5a42f8d08a62da37c4e98e66bc9b67413
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c551a16c2dbe53eb834f12a71927b84481894cd9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148768"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894118"
 ---
 # <a name="calling-methods"></a>메서드 호출
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  메서드는 데이터베이스에서 **검사점** 을 실행 하거나 인스턴스에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]대해 열거 된 로그온 목록을 요청 하는 등 개체와 관련 된 특정 태스크를 수행 합니다.  
+  메서드는 데이터베이스에서 **검사점** 을 실행 하거나 인스턴스에 대해 열거 된 로그온 목록을 요청 하는 등 개체와 관련 된 특정 태스크를 수행 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 합니다.  
   
  메서드는 개체에 대해 작업을 수행하며 매개 변수를 사용할 수 있고 반환 값을 갖는 경우도 있습니다. 반환 값은 단순한 데이터 형식, 복잡한 개체 또는 여러 멤버가 포함된 구조일 수 있습니다.  
   

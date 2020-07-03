@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2dc82e34234082013b1c590008ef610f1492f9a2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cc11f219d98e4b8018bc7d763345feb279790e13
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733073"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893244"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   사용자 정의 클러스터형 및 비클러스터형 인덱스 또는 클러스터형 인덱스가 없는 테이블에 대한 잠금 옵션 값을 설정합니다.  
   
@@ -82,7 +82,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="permissions"></a>사용 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-setting-an-option-on-a-specific-index"></a>A. 특정 인덱스에 대한 옵션 설정  
  다음 예에서는 테이블의 인덱스에 대 한 페이지 잠금을 허용 하지 `IX_Customer_TerritoryID` `Customer` 않습니다.  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7b69de24d9b92e82d624a694800988cdf74180c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 092866e2f8efd69ad0baccc73984dcf8a7db051c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771101"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891897"
 ---
 # <a name="sp_enumdsn-transact-sql"></a>sp_enumdsn(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   특정 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 계정으로 실행 중인 서버에 대해 정의된 모든 ODBC 및 OLE DB 데이터 원본 이름의 목록을 반환합니다. 이 저장 프로시저는 모든 데이터베이스의 게시자에서 실행됩니다.  
   

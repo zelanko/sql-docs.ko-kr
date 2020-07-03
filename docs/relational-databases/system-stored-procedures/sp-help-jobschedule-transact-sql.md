@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 34cc7495b526b75f8da55046393aa45f3fd9a518
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 07a07efac0a8908d0916049df594c273594ed4d4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773871"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893661"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]가 자동화된 작업을 수행하는 데 사용하는 작업의 일정에 관한 정보를 반환합니다.  
  
@@ -101,7 +101,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
  **SQLAgentUserRole** 의 멤버는 자신이 소유한 작업 일정 속성만 볼 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-returning-the-job-schedule-for-a-specific-job"></a>A. 특정 작업에 대한 작업 일정 반환  
  다음 예에서는 `BackupDatabase`라는 작업에 관한 일정 정보를 반환합니다.  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60208e714595338e68f0d1946cc2e767df45e409
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 83633a43c0c01a234ce43769954d5d2d52ad9d35
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85769688"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892874"
 ---
 # <a name="sp_syscollector_set_warehouse_instance_name-transact-sql"></a>sp_syscollector_set_warehouse_instance_name(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   관리 데이터 웨어하우스에 연결하는 데 사용되는 연결 문자열의 인스턴스 이름을 지정합니다.  
   
@@ -56,7 +56,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행하려면 dc_admin(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  이 예에서는 원격 서버에서 관리 데이터 웨어하우스 인스턴스를 사용하도록 데이터 수집기를 구성하는 방법을 보여 줍니다. 이 예에서 원격 서버의 이름은 `RemoteSERVER`이며 데이터베이스는 기본 인스턴스에 설치되어 있습니다.  
   
 ```  

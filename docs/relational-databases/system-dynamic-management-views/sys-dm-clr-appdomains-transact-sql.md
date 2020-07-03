@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c6a542e44f33a64b5cdd4727aab891592338b880
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c3c0351bd541738e2540cc1a0624cf0ca9836c5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724621"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893984"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   서버의 각 애플리케이션 도메인에 대해 행을 반환합니다. 응용 프로그램 도메인 (**AppDomain**)은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 응용 프로그램에 대 한 격리 단위인 CLR (공용 언어 런타임)의 구문입니다. 이 뷰를 사용 하 여에서 실행 중인 CLR 통합 개체를 이해 하 고 문제를 해결할 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -83,7 +83,7 @@ ms.locfileid: "85724621"
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예제에서는 지정 된 어셈블리에 대 한 **AppDomain** 의 세부 정보를 보는 방법을 보여 줍니다.  
   
 ```  

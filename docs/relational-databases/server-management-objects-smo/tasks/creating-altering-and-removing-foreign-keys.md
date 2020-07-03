@@ -13,21 +13,21 @@ ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c37f43e82bdad11909695d5a2799b5065c7cb5b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5f8867e5f59c225cec4bccce6bd0de86822509a7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095549"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894377"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>외래 키 생성, 변경 및 제거
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects(SMO)에서 외래 키는 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 개체로 표시됩니다.  
   
  SMO에서 외래 키를 만들려면 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 개체의 생성자에 외래 키가 정의되는 테이블을 지정해야 합니다. 이 테이블에서 외래 키가 될 열을 적어도 하나 이상 선택해야 합니다. 이를 위해 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> 개체 변수를 만들고 외래 키 열의 이름을 지정합니다. 그런 다음 참조되는 테이블과 참조되는 열을 지정합니다. 열을 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> **Columns** 개체 속성에 추가 하려면 메서드를 사용 합니다.  
   
- 외래 키를 나타내는 열은 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 개체의 **columns** 개체 속성에 나열 됩니다. 외래 키에서 참조되는 기본 키는 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> 속성에 지정된 테이블에 있는 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> 속성으로 표시됩니다.  
+ 외래 키를 나타내는 열은 개체의 **columns** 개체 속성에 나열 됩니다 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> . 외래 키에서 참조되는 기본 키는 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> 속성에 지정된 테이블에 있는 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> 속성으로 표시됩니다.  
   
 ## <a name="example"></a>예제  
  제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  

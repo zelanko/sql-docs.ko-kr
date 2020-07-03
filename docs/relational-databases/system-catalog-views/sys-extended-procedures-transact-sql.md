@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bcc9d30d457e9042f2a667a7a71f846f6e07eb63
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4baab44b81ff3e2a2b4a4c6a653527190140f24b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738762"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892183"
 ---
 # <a name="sysextended_procedures-transact-sql"></a>sys.extended_procedures(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   확장 저장 프로시저 인 각 개체에 대 한 행을 포함 합니다. 여기에는 **sys. type** = X가 있습니다. 확장 저장 프로시저는 **master** 데이터베이스에 설치 되기 때문에 해당 데이터베이스 컨텍스트에서만 볼 수 있습니다. 다른 데이터베이스 컨텍스트의 **sys. extended_procedures** 뷰에서 선택 하면 빈 결과 집합이 반환 됩니다.  
 

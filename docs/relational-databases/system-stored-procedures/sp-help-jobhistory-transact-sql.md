@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2229da0158f746928be16ac190ecae2e36726da5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a04d651467b8ccff057d3dcec0cb824edae73b12
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730047"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893694"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   다중 서버 관리 도메인 내의 서버에 관한 작업 관련 정보를 제공합니다.  
   
@@ -134,7 +134,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
  **SQLAgentUserRole** 데이터베이스 역할의 멤버는 자신이 소유한 작업에 대 한 기록만 볼 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-listing-all-job-information-for-a-job"></a>A. 작업에 대한 모든 정보 나열  
  다음 예에서는 `NightlyBackups` 작업에 대한 모든 작업 정보를 나열합니다.  

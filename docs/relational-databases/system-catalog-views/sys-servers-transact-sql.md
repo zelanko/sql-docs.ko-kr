@@ -20,15 +20,15 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 89e8424532f12a4111e5a535a8016f3a4fe5ac6a
-ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
+ms.openlocfilehash: c4ebbcdb8fa1f13d7c0d40c4ac66ac1d3453dffb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85196038"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894937"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   등록 된 원격 서버 또는 등록 된 원격 서버 당 행과 **server_id** = 0 인 로컬 서버에 대 한 행을 포함 합니다.  
 
@@ -41,7 +41,7 @@ ms.locfileid: "85196038"
 |**data_source**|**nvarchar(4000)**|OLE DB 데이터 원본 연결 속성입니다.|  
 |**location**|**nvarchar(4000)**|OLE DB 위치 연결 속성입니다. 이 속성이 없으면 NULL입니다.|  
 |**provider_string**|**nvarchar(4000)**|OLE DB 공급자 문자열 연결 속성입니다.<br /><br /> 호출자에 게 권한이 없는 경우는 NULL입니다 `ALTER ANY LINKED SERVER` .|  
-|**카탈로그용**|**sysname**|카탈로그 연결 속성을 OLE DB 합니다. 이 속성이 없으면 NULL입니다.|  
+|**카탈로그**|**sysname**|카탈로그 연결 속성을 OLE DB 합니다. 이 속성이 없으면 NULL입니다.|  
 |**connect_timeout**|**int**|연결 제한 시간(초)이며 제한 시간이 없으면 0입니다.|  
 |**query_timeout**|**int**|쿼리 제한 시간(초)이며 제한 시간이 없으면 0입니다.|  
 |**is_linked**|**bit**|0 = 다른 RPC 및 분산 트랜잭션 동작을 통해 **sp_addserver**를 사용 하 여 추가 된 이전 스타일의 서버입니다.<br /><br /> 1 = 표준 연결된 서버입니다.|  

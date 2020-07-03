@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a85aca1b-8135-4c81-9a05-da5aec76f1ed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8779b04b7431978d687189cc6dd2536fe4a32370
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 86b5037b1aa581dd99385c9be13ea58ee8a571dd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736898"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892850"
 ---
 # <a name="sp_syscollector_set_warehouse_database_name-transact-sql"></a>sp_syscollector_set_warehouse_database_name(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   관리 데이터 웨어하우스에 연결하는 데 사용되는 연결 문자열에 정의되는 데이터베이스 이름을 지정합니다.  
   
@@ -54,7 +54,7 @@ sp_syscollector_set_warehouse_database_name [ @database_name = ] 'database_name'
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행하려면 dc_admin(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 관리 데이터 웨어하우스의 이름을 `RemoteMDW`로 설정합니다.  
   
 ```  

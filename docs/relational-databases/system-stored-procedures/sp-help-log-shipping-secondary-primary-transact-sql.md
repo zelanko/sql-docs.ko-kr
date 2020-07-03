@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1310fdaf-edb5-4294-9739-7fb37c2c2cb5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c8876dd3a23d9efb1c658d2412efb169daef1b62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7aaa40e2542c3010e697e370cd4124982b35d41e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634395"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893625"
 ---
 # <a name="sp_help_log_shipping_secondary_primary-transact-sql"></a>sp_help_log_shipping_secondary_primary(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 저장 프로시저는 보조 서버에서 지정된 주 데이터베이스의 설정을 검색합니다.  
   

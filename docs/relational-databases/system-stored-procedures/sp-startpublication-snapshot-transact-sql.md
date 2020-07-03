@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2cf568ee-0679-4d19-a394-27210bff61e5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0355aeab92cdf7fd7700d52ca793a606692c943c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4138757f6be1d20c11e9b65111ef28b1b1d93119
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725671"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893005"
 ---
 # <a name="sp_startpublication_snapshot-transact-sql"></a>sp_startpublication_snapshot(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   게시를 위한 초기 스냅샷을 생성하는 스냅샷 에이전트 작업을 시작하는 데 사용됩니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   

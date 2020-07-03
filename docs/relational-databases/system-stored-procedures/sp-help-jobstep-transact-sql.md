@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7313e3784c5af9922fb5301b339087510a98e91
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 560ab640738ef89d22917bf03e8d6553029eb646
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773836"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891793"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 자동화된 작업을 수행하는 데 사용하는 작업의 단계에 대한 정보를 반환합니다.  
   
@@ -102,7 +102,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
  **SQLAgentUserRole** 의 멤버는 자신이 소유한 작업에 대 한 작업 단계만 볼 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-return-information-for-all-steps-in-a-specific-job"></a>A. 특정 작업의 모든 단계에 관한 정보 반환  
  다음 예에서는 `Weekly Sales Data Backup`이라는 작업의 모든 작업 단계를 반환합니다.  

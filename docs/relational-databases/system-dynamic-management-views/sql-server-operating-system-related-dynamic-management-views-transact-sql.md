@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3030c86a-0a74-4fed-ac0f-392e244cb965
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1e42b3dda674a235c764c03df313bac5d1081d3e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 163d3502303ee046a8b931bc81271594c874ca3f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730109"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894641"
 ---
 # <a name="sql-server-operating-system-related-dynamic-management-views-transact-sql"></a>SQL Server 운영 체제 관련 동적 관리 뷰(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 섹션에서는 SQLOS (운영 체제)와 연결 된 DMV (동적 관리 뷰)에 대해 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. SQLOS는에 특정 한 운영 체제 리소스를 관리 하는 일을 담당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.
 

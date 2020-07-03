@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: cfb67f59d7a383d7ca7376c30435462c9a6199d7
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 485287015a24f394d565d83bc813265f8d92db6f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85814133"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894171"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching---data-quality-services-dqs"></a>정리 및 일치-DQS (Data Quality Services)에 대 한 임계값 구성
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 컴퓨터 기반 정리 및 일치 작업 중에 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 사용할 임계값을 구성하는 방법에 대해 설명합니다.  
   

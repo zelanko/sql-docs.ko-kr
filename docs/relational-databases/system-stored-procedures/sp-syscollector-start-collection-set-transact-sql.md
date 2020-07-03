@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e67e43a7725e7b7ae7ef76d8b48c26a7038c86d0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 56fa6b114d58512f9cdec9c3da2575539af0d03b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85633812"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892843"
 ---
 # <a name="sp_syscollector_start_collection_set-transact-sql"></a>sp_syscollector_start_collection_set(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   수집기가 이미 활성화되어 있고 컬렉션 집합이 실행 중이 아니면 컬렉션 집합을 시작합니다. 수집기를 사용 하도록 설정 하지 않은 경우 [sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md) 를 실행 하 여 수집기를 사용 하도록 설정한 다음이 저장 프로시저를 사용 하 여 컬렉션 집합을 시작 합니다.  
 
@@ -62,7 +62,7 @@ sp_syscollector_start_collection_set
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행하려면 dc_operator 고정 데이터베이스 역할의 멤버 자격이 필요합니다. 컬렉션 집합에 프록시 계정이 없는 경우에는 sysadmin 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 해당 식별자를 사용하여 컬렉션 집합을 시작합니다.  
   
 ```  

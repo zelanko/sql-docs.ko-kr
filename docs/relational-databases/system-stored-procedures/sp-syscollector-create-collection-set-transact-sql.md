@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1efb90e4dd03b0a14e30202375893a82e4c80a98
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 227c25b9e64e2630fe16b946383c37fd2989caaa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725618"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892966"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   새 컬렉션 집합을 만듭니다. 이 저장 프로시저를 사용하여 데이터 컬렉션용 사용자 지정 컬렉션 집합을 만들 수 있습니다.  
   
@@ -118,7 +118,7 @@ sp_syscollector_create_collection_set
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행하려면 dc_admin(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-creating-a-collection-set-by-using-default-values"></a>A. 기본값을 사용하여 컬렉션 집합 만들기  
  다음 예에서는 필수 매개 변수만 지정하여 컬렉션 집합을 만듭니다. `@collection_mode`는 필수 사항은 아니지만 기본 컬렉션 모드(캐시된 모드)를 사용하려면 일정 ID 또는 일정 이름을 지정해야 합니다.  

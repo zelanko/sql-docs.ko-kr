@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3a06adaa2f533094b7527dcb1fb7fb7ece8cf8d4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dd2a18570770f8a7eeecc1fc9b15c7cacf3e3eb4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85644900"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892860"
 ---
 # <a name="sp_syscollector_set_cache_directory-transact-sql"></a>sp_syscollector_set_cache_directory(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   수집된 데이터를 관리 데이터 웨어하우스에 업로드하기 전에 저장할 디렉터리를 지정합니다.  
   
@@ -53,7 +53,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행하려면 dc_admin(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 데이터 수집기를 사용 하지 않도록 설정 하 고 데이터 수집기의 캐시 디렉터리를로 설정한 `D:\tempdata` 다음 데이터 수집기를 사용 하도록 설정 합니다.  
   
 ```sql  

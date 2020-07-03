@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ed310262b4f233a8642bbbab382a6d0b30a311e4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8b29b5d7698fdaceced322e30048c6c789f076e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752796"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891676"
 ---
 # <a name="sp_help_targetserver-transact-sql"></a>sp_help_targetserver(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   모든 대상 서버를 나열합니다.  
   
@@ -65,7 +65,7 @@ sp_help_targetserver
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 사용자가 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-listing-information-for-all-registered-target-servers"></a>A. 등록된 모든 대상 서버에 대한 정보 나열  
  다음 예에서는 등록된 모든 대상 서버에 대한 정보를 나열합니다.  

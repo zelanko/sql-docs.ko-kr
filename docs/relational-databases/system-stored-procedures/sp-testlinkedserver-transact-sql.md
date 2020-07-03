@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e63ca7d4-47d6-455e-9aac-421f9683dadc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27fd5a01211fabd1399fe45f2c30b043368d5f0a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 01ae2d33ab38b5a3f2720b817a036cd152f2c47f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750414"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892614"
 ---
 # <a name="sp_testlinkedserver-transact-sql"></a>sp_testlinkedserver(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   연결된 서버와의 연결을 테스트합니다. 테스트가 실패하는 경우 절차에서 오류 이유와 함께 예외가 발생합니다.  
   
@@ -47,7 +47,7 @@ sp_testlinkedserver [ @servername ] = servername
 ## <a name="permissions"></a>사용 권한  
  사용 권한이 선택되어 있지 않지만 호출자는 적절한 로그인 매핑이 있어야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `SEATTLESales`라는 연결된 서버를 만든 다음 연결을 테스트합니다.  
   
 ```  

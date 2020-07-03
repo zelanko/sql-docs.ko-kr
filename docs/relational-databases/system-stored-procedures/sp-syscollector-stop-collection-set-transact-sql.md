@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eb3d3e7aaa8816c6bc5514cd37c64c4b02550f35
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 46e8735e48925464d2dc715979a75998b97bd673
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85644859"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892799"
 ---
 # <a name="sp_syscollector_stop_collection_set-transact-sql"></a>sp_syscollector_stop_collection_set(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   컬렉션 집합을 중지합니다.  
   
@@ -63,7 +63,7 @@ sp_syscollector_stop_collection_set
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행하려면 dc_operator(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 해당 식별자를 사용하여 컬렉션 집합을 중지합니다.  
   
 ```  

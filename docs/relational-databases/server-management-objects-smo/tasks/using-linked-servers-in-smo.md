@@ -13,19 +13,19 @@ ms.assetid: 0ea8837b-2596-4df1-b065-3bb717c9f22c
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c55ef4914c02aca954a15930e754194e5b3419cc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7c8ad7a4069ab35db2016a84279f80e707fad8f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148387"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892384"
 ---
 # <a name="using-linked-servers-in-smo"></a>SMO에서 연결된 서버 사용
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   연결된 서버는 원격 서버의 OLE DB 데이터 원본을 나타냅니다. 원격 OLE DB 데이터 원본은 <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> 개체를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다.  
   
- OLE DB 공급자를 사용 하 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 여 현재 인스턴스에 원격 데이터베이스 서버를 연결할 수 있습니다. SMO에서 연결된 서버는 <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> 개체로 표시됩니다. <xref:Microsoft.SqlServer.Management.Smo.LinkedServer.LinkedServerLogins%2A> 속성은 <xref:Microsoft.SqlServer.Management.Smo.LinkedServerLogin> 개체 모음을 참조합니다. 이들은 연결된 서버와 연결을 설정하는 데 필요한 로그온 자격 증명을 저장합니다.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB 공급자를 사용 하 여 현재 인스턴스에 원격 데이터베이스 서버를 연결할 수 있습니다. SMO에서 연결된 서버는 <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> 개체로 표시됩니다. <xref:Microsoft.SqlServer.Management.Smo.LinkedServer.LinkedServerLogins%2A> 속성은 <xref:Microsoft.SqlServer.Management.Smo.LinkedServerLogin> 개체 모음을 참조합니다. 이들은 연결된 서버와 연결을 설정하는 데 필요한 로그온 자격 증명을 저장합니다.  
   
 ## <a name="ole-db-providers"></a>OLE-DB 공급자  
  SMO에서 설치된 OLE-DB 공급자는 <xref:Microsoft.SqlServer.Management.Smo.OleDbProviderSettings> 개체 모음으로 표시됩니다.  

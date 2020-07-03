@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 155f56340925a1c2c2d6a095085203492f20f016
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 93511eedfe434419270cccf6c5b4c3c685a8eeef
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773850"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893673"
 ---
 # <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   주어진 작업의 서버에 관한 정보를 반환합니다.  
   
@@ -86,7 +86,7 @@ sp_help_jobserver
   
  **SQLAgentUserRole** 의 멤버는 자신이 소유 하 고 있는 작업에 대 한 정보만 볼 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 마지막 실행 정보를 포함하여 `NightlyBackups` 작업에 대한 정보를 반환합니다.  
   
 ```  

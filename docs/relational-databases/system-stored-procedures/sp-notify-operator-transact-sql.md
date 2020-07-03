@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d7ad757900a8f9814920c076fe8d7f9f43e0bb35
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 07f18ad85f759340d43825ce8c6a95c11696d2f0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771091"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893445"
 ---
 # <a name="sp_notify_operator-transact-sql"></a>sp_notify_operator(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스 메일을 사용하여 운영자에게 전자 메일 메시지를 보냅니다.  
   
@@ -82,7 +82,7 @@ sp_notify_operator
   
  이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조하세요.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `François Ajenstat` 데이터베이스 메일 프로필을 사용하여 운영자 `AdventureWorks Administrator`에게 알림 전자 메일을 보냅니다. 전자 메일의 제목은 `Test Notification`입니다. 전자 메일 메시지에는 "This is a test of notification via e-mail."이라는 문장이 포함되어 있습니다.  
   
 ```  
@@ -97,7 +97,7 @@ EXEC dbo.sp_notify_operator
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참조  
  [Transact-sql&#41;&#40;저장 프로시저 SQL Server 에이전트](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_add_operator &#40;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [Transact-sql&#41;sp_help_operator &#40;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   

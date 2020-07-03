@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ddace1cc-ff23-4b61-8efb-8ded3df438bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 47a29016ff2d92eecd6d2efdd9b2750305af4bd1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b8e210356b970bc0abe1644d8a5912cec39c1d9a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750429"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892649"
 ---
 # <a name="sp_syspolicy_set_config_enabled-transact-sql"></a>sp_syspolicy_set_config_enabled(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   정책 기반 관리를 사용하도록 또는 사용하지 않도록 설정합니다.  
   
@@ -57,7 +57,7 @@ sp_syspolicy_set_config_enabled [ @value = ] value
 > [!IMPORTANT]  
 >  자격 증명의 승격 가능: Policy관리자 역할 역할의 사용자는 서버 트리거를 만들고 인스턴스 작업에 영향을 줄 수 있는 정책 실행을 예약할 수 있습니다 [!INCLUDE[ssDE](../../includes/ssde-md.md)] . 예를 들어 PolicyAdministratorRole 역할의 사용자는 대부분의 개체가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 생성되지 않도록 할 수 있는 정책을 만들 수 있습니다. 이렇게 자격 증명을 승격할 수 있기 때문에 PolicyAdministratorRole 역할은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성을 제어할 수 있도록 신뢰할 수 있는 사용자에게만 부여되어야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 정책 기반 관리를 사용하도록 설정합니다.  
   
 ```  

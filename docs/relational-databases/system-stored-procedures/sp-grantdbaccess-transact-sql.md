@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 85ab6ead295b4459890a61deccdac3dc2775033a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4fa8894b5c7ac33d8847bc28f2fac7a3c1020362
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646007"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891825"
 ---
 # <a name="sp_grantdbaccess-transact-sql"></a>sp_grantdbaccess(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스에 데이터베이스 사용자를 추가합니다.  
   
@@ -58,7 +58,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ## <a name="permissions"></a>사용 권한  
  **Db_owner** 고정 데이터베이스 역할 또는 **db_accessadmin** 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `CREATE USER` 를 사용 하 여 Windows 로그인에 대 한 데이터베이스 사용자를 현재 데이터베이스에 추가 합니다 `Edmonds\LolanSo` . 새 사용자의 이름은 `Lolan`입니다. 데이터베이스 사용자를 만드는 경우 기본적으로 이 방법이 사용됩니다.  
   
 ```sql

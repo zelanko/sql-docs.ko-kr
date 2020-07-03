@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 94dcbd7a3b2933d41994bbefda40aff755e978a3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 363d89a420d6fd927293fc39525e1a95d7ebd4b0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645929"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893427"
 ---
 # <a name="sp_oadestroy-transact-sql"></a>sp_OADestroy(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   생성된 OLE 개체를 삭제합니다.  
   
@@ -53,7 +53,7 @@ sp_OADestroy objecttoken
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버 자격 또는이 저장 프로시저에 대 한 execute 권한이 필요 합니다. `Ole Automation Procedures`OLE 자동화와 관련 된 시스템 프로시저를 사용 하려면 구성을 사용 하도록 **설정** 해야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 이전에 만든 **SQLServer** 개체를 삭제 합니다.  
   
 ```  
