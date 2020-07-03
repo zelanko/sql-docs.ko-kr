@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0363296a-3082-48a9-9eb5-a1020b2f541a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 831c4d0970244aa0f41db1b3a97b5a1bc2c88bec
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7eb84e9d50a797e52aca749cf590ca95b4f3e835
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753820"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881398"
 ---
 # <a name="sysdbmaintplans-transact-sql"></a>sysdbmaintplans(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 테이블은 이전 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업그레이드된 인스턴스에 대한 기존 정보를 유지하기 위해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이 테이블의 내용을 변경하지 않습니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   

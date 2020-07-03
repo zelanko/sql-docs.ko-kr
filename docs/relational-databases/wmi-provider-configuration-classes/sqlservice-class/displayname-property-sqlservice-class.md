@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 49c408aa-6eb4-45cd-8d5c-60f065f24f5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 103ce1463ccc1a11914422300a6f603f8f8b7ab4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c63a1b6a1b9eab925cb841ea1ac451ea65184c6b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733031"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880635"
 ---
 # <a name="displayname-property-sqlservice-class"></a>DisplayName 속성(SqlService 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   서비스의 표시 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  

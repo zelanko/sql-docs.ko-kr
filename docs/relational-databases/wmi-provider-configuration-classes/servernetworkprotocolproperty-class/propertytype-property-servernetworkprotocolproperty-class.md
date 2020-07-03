@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d4932eaf-da7c-4b09-8298-ffb6333dfba2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 70e2d96a10819e31fd52f3163c32494ab5b6efee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 74ad7baea446386659ab8a3774bcd313c8a6807d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755340"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880785"
 ---
 # <a name="propertytype-property-servernetworkprotocolproperty-class"></a>PropertyType 속성(ServerNetworkProtocolProperty 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   속성의 유형을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  

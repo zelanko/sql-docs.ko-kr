@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bdcc6a86cb0498afadf6f899c47dd201fdc05831
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b3c3626bb567c99b6e43708962bfadd39cdb0f43
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772158"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881685"
 ---
 # <a name="sp_fulltext_semantic_unregister_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 기존 의미 체계 언어 통계 데이터베이스의 등록을 취소하고 연결된 모든 메타데이터를 삭제합니다.  
   
@@ -68,7 +68,7 @@ GO
 ### <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 **sp_fulltext_semantic_unregister_language_statistics_db**를 호출 하 여 의미 체계 언어 통계 데이터베이스를 등록 취소 하는 방법을 보여 줍니다.  
   
 ```sql  

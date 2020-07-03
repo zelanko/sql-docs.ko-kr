@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b7fbb9e9-85c1-475b-8e49-7c82fb3740aa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 757de27d6d697a27011cba529c730e26a8fb1a4d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cc036845ba0aad6c9c3f12cdcf0a4b19df221922
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755391"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880968"
 ---
 # <a name="expirationdate-property-securitycertificate-class"></a>ExpirationDate 속성(SecurityCertificate 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   보안 인증서의 유효 기간 끝 날짜를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  

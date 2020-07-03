@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 14fb45e2d5b7acad7cd0925ec32a9f56f10ddf55
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 31e95bf970f4050315ed1b74b7bb87d3ed3788fd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730061"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881644"
 ---
 # <a name="sp_getbindtoken-transact-sql"></a>sp_getbindtoken(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   트랜잭션에 대한 고유한 식별자를 반환합니다. 이 고유 식별자는 sp_bindsession을 사용하여 세션을 바인딩하는 데 필요한 문자열입니다.  
   
@@ -52,7 +52,7 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
  None  
   
 ## <a name="remarks"></a>설명  
- sp_getbindtoken은 활성 트랜잭션 내에서 저장 프로시저를 실행 하는 경우에만 유효한 토큰을 반환 합니다. 그렇지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 오류 메시지를 반환합니다. 예를 들면 다음과 같습니다.  
+ sp_getbindtoken은 활성 트랜잭션 내에서 저장 프로시저를 실행 하는 경우에만 유효한 토큰을 반환 합니다. 그렇지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 오류 메시지를 반환합니다. 예를 들어:  
   
 ```  
 -- Declare a variable to hold the bind token.  
@@ -65,7 +65,7 @@ Cannot get a transaction token if there is no transaction active.
 Reissue the statement after a transaction has been started.  
 ```  
   
- Sp_getbindtoken를 사용 하 여 열린 트랜잭션 내부에 분산 트랜잭션 연결을 등록 하면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동일한 토큰을 반환 합니다. 예를 들면 다음과 같습니다.  
+ Sp_getbindtoken를 사용 하 여 열린 트랜잭션 내부에 분산 트랜잭션 연결을 등록 하면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동일한 토큰을 반환 합니다. 예를 들어:  
   
 ```  
 USE AdventureWorks2012;  
@@ -107,7 +107,7 @@ PKb'gN5<9aGEedk_16>8U=5---/5G=--
 ## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 바인드 토큰을 가져오고 이름을 표시하는 방법을 보여 줍니다.  
   
 ```  

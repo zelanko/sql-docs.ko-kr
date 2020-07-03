@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ae4203442a4596a8e52ab7212c21c7cc24759d50
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8443d522edc8eeddeea51c775d2d29e6286e84cc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751577"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881391"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스에 정의된 각 병합 게시당 한 개의 행을 포함합니다. 이 테이블은 게시 및 구독 데이터베이스에 저장됩니다.  
   

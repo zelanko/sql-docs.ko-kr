@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6d857b8d-77ed-4014-b1b0-e0e3d5e943c8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1de77feeab3934700f82d3bf458fa9a27fbd1c55
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 59a22566ab25d667652ae47b8e27dc170893a55e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758526"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880493"
 ---
 # <a name="servicename-property-sqlserviceadvancedproperty-class"></a>ServiceName 속성(SqlServiceAdvancedProperty 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   고급 속성과 연결된 관리되는 서비스의 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cb2b30da196f79fc10905ffb3ead95f8b5fca4d5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c0a45eec2d5acc20d52bdc8d5a7f8a185e6c9d8c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733053"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881247"
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **Sysmergeextendedarticlesview** 뷰는 아티클 정보를 제공 합니다. 이 뷰는 게시자의 게시 데이터베이스와 구독자의 구독 데이터베이스에 저장됩니다.  
   

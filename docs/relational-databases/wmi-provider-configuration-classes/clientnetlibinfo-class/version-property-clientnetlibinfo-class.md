@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d9bb861dc061b5a2049e6b0bc2fa5fa737ae6c70
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9cf538491ecbdeb38dbc225d90abac68d919c02c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722836"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881113"
 ---
 # <a name="version-property-clientnetlibinfo-class"></a>Version 속성(ClientNetLibInfo 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   클라이언트 네트워크 라이브러리 파일의 버전을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  

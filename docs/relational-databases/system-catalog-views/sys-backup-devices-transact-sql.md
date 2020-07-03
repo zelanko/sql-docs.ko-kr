@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5587ec9d2df061ebc7e979e55010f9945628127e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c5f00465f2f907d80472c19465d373a555417329
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718896"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880027"
 ---
 # <a name="sysbackup_devices-transact-sql"></a>sys.backup_devices(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **Sp_addumpdevice** 를 사용 하 여 등록 하거나에서 만든 각 백업 장치에 대 한 행을 포함 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 합니다.  
   

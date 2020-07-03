@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7a7cc8cc-9fb8-4bf5-b483-2150d633ee10
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3014658abcfe20056353643e0ddd9e82afec4fb8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 34d8fdd62efe73117df61101cc70c587d44d9eec
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768193"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880859"
 ---
 # <a name="setdisable-method-servernetworkprotocolipaddress-class"></a>SetDisable 메서드(ServerNetworkProtocolIPAddress 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   IP 주소를 해제합니다.  
   
 ## <a name="syntax"></a>구문  

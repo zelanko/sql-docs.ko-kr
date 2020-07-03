@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3fa3ef35a4462eb4cf45df1f4f292be12fb18b25
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1699ac7afd32bc94ffcdf432e1bb8f0d00960ed
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758546"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881053"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>SupportAlias 속성(ClientNetworkProtocol 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [Setordervalue 메서드 (ClientNetworkProtocol 클래스)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md) 에서 지정한 현재 네트워크 프로토콜이 별칭을 지원 하는지 여부를 지정 하는 부울 속성을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  

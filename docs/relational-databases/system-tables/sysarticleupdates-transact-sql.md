@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11a53bcd-a215-4d0b-9db8-233981d3ef5d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d768ad25879397ed73b6216dbb8b0c1f615dbd7c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 929a2322b9f3299a3f191515eace7cfdef7bc4d3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758631"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881377"
 ---
 # <a name="sysarticleupdates-transact-sql"></a>sysarticleupdates(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   즉시 업데이트 구독을 지원하는 각 아티클에 대해 한 행을 포함합니다. 이 테이블은 복제된 데이터베이스에 저장됩니다.  
   

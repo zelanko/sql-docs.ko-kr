@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 70c59031b56b4ec7a5f670ecc3a9c5692181d8d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 86fdfa8fe60e16cbfa9bfd0364953ec1df84a20f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733192"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881558"
 ---
 # <a name="sp_helpfile-transact-sql"></a>sp_helpfile(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스와 연결된 파일의 물리적 이름 및 특성을 반환합니다. 서버에 첨부하거나 서버에서 분리할 파일의 이름을 결정하는 데 이 저장 프로시저를 사용합니다.  
   

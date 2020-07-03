@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f91d1c6c-3132-47f6-926c-88f56848cafe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 839cf17adc25edb296992989756501b120b99a6e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a106c5e60570d553c00d6ec077caacf43a716eee
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725379"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881332"
 ---
 # <a name="sysmergesubsetfilters-transact-sql"></a>sysmergesubsetfilters(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   분할된 아티클의 조인 필터 정보를 포함합니다. 이 테이블은 게시 및 구독 데이터베이스에 저장됩니다.  
   

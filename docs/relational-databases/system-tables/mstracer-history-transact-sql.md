@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 97237a0c-d574-4b17-8a94-1a8730b31d98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 82b0bf1e251d1a2a8b900845b93001296f814e80
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8c9f554d57935921c068ad25cb51991c47cdbd2a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758654"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881485"
 ---
 # <a name="mstracer_history-transact-sql"></a>MStracer_history(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MStracer_history** 테이블은 구독자에서 수신 된 모든 추적 프로그램 토큰의 레코드를 유지 관리 합니다. 이 테이블은 배포 데이터베이스에 저장되며 성능 모니터링을 위해 복제에 사용됩니다.  
   

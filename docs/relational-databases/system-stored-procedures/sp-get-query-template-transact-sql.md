@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0da844225d9a87cbc0c7b6cf06d1bbea108f2d61
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b277a07075f8584cdb6a52dd6c221931b1685b6a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757902"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881652"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   매개 변수가 있는 쿼리 형식을 반환합니다. 반환된 결과는 강제 매개 변수화를 사용한 매개 변수가 있는 형식의 쿼리 결과와 비슷합니다. sp_get_query_template은 주로 TEMPLATE 계획 지침을 만들 때 사용됩니다.  
   
@@ -63,7 +63,7 @@ sp_get_query_template
 ## <a name="permissions"></a>사용 권한  
  public 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 두 상수 리터럴 값이 포함된 쿼리를 매개 변수가 있는 형식으로 반환합니다.  
   
 ```  

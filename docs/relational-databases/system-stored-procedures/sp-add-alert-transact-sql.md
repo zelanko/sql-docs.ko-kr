@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e917afd75495ed2e6c2506bc0c012d4bfa7a8e4e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d2bdee46efa339776a3d6baf92e616c56026c0b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727225"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880019"
 ---
 # <a name="sp_add_alert-transact-sql"></a>sp_add_alert(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   경고를 작성합니다.  
   
@@ -147,7 +147,7 @@ sp_add_alert [ @name = ] 'name'
 ## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버만 **sp_add_alert**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 시작할 때 `Back up the AdventureWorks2012 Database` 작업을 실행하는 경고(Test Alert)를 추가합니다.  
   
 > [!NOTE]  

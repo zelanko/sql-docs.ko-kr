@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e34bc48b469ab0dd575e6f4a87ede90187101b82
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0f95ba436a40bc6bf864c6be9a8f4b944e688b5b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727192"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881699"
 ---
 # <a name="sp_fulltext_semantic_register_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 현재 인스턴스에서 미리 채워진 의미 체계 언어 통계 데이터베이스를 등록합니다.  
   
@@ -80,7 +80,7 @@ GO
 ### <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 **sp_fulltext_semantic_register_language_statistics_db**를 호출 하 여 의미 체계 언어 통계 데이터베이스를 등록 하는 방법을 보여 줍니다.  
   
 ```sql  

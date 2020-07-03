@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0b0a5f08-b95e-4626-bf81-309da7a0aacd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36ee271b89f707b18ff5a438a8d868048efca864
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 259c5a1696203b06c0c67a87f6dedc00c29d66ce
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784735"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880585"
 ---
 # <a name="resumeservice-method-sqlservice-class"></a>ResumeService 메서드(SqlService 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   서비스를 재개된 상태로 지정합니다.  
   
 ## <a name="syntax"></a>구문  

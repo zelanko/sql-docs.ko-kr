@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b273aa48-8188-4213-8e2c-311543c3236f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b367510fa87b9e31c2e7b3848de8456829010e74
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0822c2de02de9ef0a420f0066d058fad200b4a88
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758626"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881473"
 ---
 # <a name="mstracer_tokens-transact-sql"></a>MStracer_tokens(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MStracer_tokens** 테이블은 게시에 삽입 된 추적 프로그램 토큰 레코드의 레코드를 유지 관리 합니다. 이 테이블은 배포 데이터베이스에 저장되며 성능 모니터링을 위해 복제에 사용됩니다.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 144d563bf27f0d6133da0ab4facb26edd3a23d44
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce146a12cb794952cc218a3dadb22318b700460c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731755"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879987"
 ---
 # <a name="sp_add_data_file_recover_suspect_db-transact-sql"></a>sp_add_data_file_recover_suspect_db(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   파일 그룹의 공간 부족(1105 오류)으로 인해 데이터베이스를 완벽하게 복구하지 못했을 때 파일 그룹에 데이터 파일을 추가합니다. 파일이 추가된 다음에는 이 저장 프로시저가 주의 대상 설정을 해제하고 데이터베이스를 완벽하게 복구합니다. 매개 변수는 ALTER DATABASE *DATABASE_NAME* 파일 추가와 동일 합니다.  
   
@@ -72,7 +72,7 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
 ## <a name="permissions"></a>사용 권한  
  Execute 권한은 **sysadmin** 고정 서버 역할의 멤버에 게 기본적으로 부여 됩니다. 이 권한은 이전할 수 없습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `db1` 데이터베이스가 `fg1` 파일 그룹에서 공간 부족(1105 오류)으로 인해 복구하는 동안 주의 대상으로 표시되었습니다.  
   
 ```  

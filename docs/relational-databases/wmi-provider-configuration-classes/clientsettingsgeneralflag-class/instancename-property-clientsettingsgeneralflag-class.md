@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7de3c043-6c5a-4663-b960-a80492444a99
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 48b7216ba97e6d9fb5f271770e94fdb8b819d11c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f8e9149859c0b8e457781f0daee8fa3c7b46e6d1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768262"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880998"
 ---
 # <a name="instancename-property-clientsettingsgeneralflag-class"></a>InstanceName 속성(ClientSettingsGeneralFlag 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   클라이언트 인스턴스의 이름을 가져옵니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="syntax"></a>구문  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b666426cd7f1d7eb2395ec4a67f0b166564de17d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 85d6031a98359cf83d0c161efd22f31a2bbe6dc7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733011"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880609"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>ErrorControl 속성(SqlService 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   시스템을 시작할 때 서비스가 시작되지 않은 경우 오류의 심각도를 가져오거나 설정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -45,13 +45,13 @@ object.ErrorControl [= value]
  무시  
  사용자에게 오류를 알리지 않습니다.  
   
- 정상  
+ 보통  
  사용자에게 오류를 알립니다.  
   
  심각  
  마지막으로 성공한 올바른 구성으로 시스템을 다시 시작합니다.  
   
- 중요  
+ 위험  
  올바른 구성으로 시스템을 다시 시작합니다.  
   
  알 수 없음  

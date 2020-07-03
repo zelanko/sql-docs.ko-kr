@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 04201e9127f5de173767f7b2071088f2bd4f2828
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 94eeb0baeae20327650d0291e0ca4f1725abb1d9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772175"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881733"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   요청된 개체의 현재 크기를 반환하고 요청된 압축 상태에 대한 개체 크기를 예상합니다. 전체 테이블 또는 테이블 일부에 대해 압축을 계산할 수 있습니다. 여기에는 힙, 클러스터형 인덱스, 비클러스터형 인덱스, columnstore 인덱스, 인덱싱된 뷰, 테이블 및 인덱스 파티션이 포함 됩니다. 행, 페이지, columnstore 또는 columnstore 보관 압축을 사용 하 여 개체를 압축할 수 있습니다. 테이블, 인덱스 또는 파티션이 이미 압축된 경우 이 절차에 따라 테이블, 인덱스 또는 파티션이 다시 압축되는 경우의 크기를 예상할 수 있습니다.  
   
@@ -135,7 +135,7 @@ sp_estimate_data_compression_savings
 > [!NOTE]  
 > Columnstore 원본 개체에서 rowstore 압축 (NONE, ROW 또는 PAGE)을 추정 하는 경우 rowstore (비클러스터형) 인덱스에서 지원 되는 제한은 원본 인덱스에 32 개 보다 많은 열이 포함 되지 않아야 합니다.
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `Production.WorkOrderRouting` 압축을 사용하여 압축할 경우 `ROW` 테이블 크기를 계산합니다.  
   
 ```sql  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8cce1f1fd046d2b93f41f010b82a067c5a936670
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d17675f8443db2a726ceb72237d184d665f9d7e8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790359"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881541"
 ---
 # <a name="sp_setsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   문제를 해결 하는 동안 사용 되어 배포 에이전트 LSN (로그 시퀀스 번호)을 사용 하 여 마지막으로 배달 된 트랜잭션을 지정 하 여 다음 트랜잭션에 배달 될 수 있도록 합니다. 다시 시작할 때 배포 에이전트는 배포 데이터베이스 캐시 (msrepl_commands)에서이 워터 마크 (LSN) 보다 큰 트랜잭션을 반환 합니다. 이 저장 프로시저는 구독 데이터베이스의 구독자에서 실행됩니다. SQL Server 이외 게시자에 대해서는 지원되지 않습니다.  
   

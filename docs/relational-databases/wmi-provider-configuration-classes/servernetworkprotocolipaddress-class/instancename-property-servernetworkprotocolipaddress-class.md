@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e23e2b64-2a74-474f-a425-39ca439ac37a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af397ecb708a8876b779bb2fe27ba7dca83f82f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 17a996b70a402e1088dd9f65b28f9985344653db
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768259"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880901"
 ---
 # <a name="instancename-property-servernetworkprotocolipaddress-class"></a>InstanceName 속성(ServerNetworkProtocolIPAddress 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서버 네트워크 프로토콜이 설치 된 인스턴스의 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  

@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 076d5ade1f4951183578b1b46761d49dafbce8be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 251c9992285084123df7afb3c27678c2886b531c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70810547"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880002"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   작업, 경고 또는 운영자의 지정된 범주를 서버에 추가합니다. 대체 방법은 [SQL Server Management Studio를 사용 하 여 작업 범주 만들기](/sql/ssms/agent/create-a-job-category)를 참조 하세요.
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
  > [!IMPORTANT]  
- > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)대부분의 SQL Server 에이전트 기능은 현재 지원 되지 않습니다. 자세한 내용은 [Azure SQL Database Managed Instance t-sql 차이점 SQL Server을](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) 참조 하세요.
+ > 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
   
 ## <a name="syntax"></a>구문  
   
@@ -59,7 +59,7 @@ sp_add_category
 |-----------|-----------------|  
 |LOCAL|로컬 작업 범주|  
 |다중 서버|다중 서버 작업 범주|  
-|없음|JOB이 아닌 다른 클래스에 대 한 범주입니다 **.**|  
+|NONE|JOB이 아닌 다른 클래스에 대 한 범주입니다 **.**|  
   
 `[ @name = ] 'name'`추가할 범주의 이름입니다. 이름은 지정한 클래스 내에서 고유해야 합니다. *name* 은 **sysname**이며 기본값은 없습니다.  
   
@@ -67,7 +67,7 @@ sp_add_category
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
  **sp_add_category** 는 **msdb** 데이터베이스에서 실행 해야 합니다.  
@@ -93,8 +93,8 @@ GO
  [Transact-sql&#41;sp_delete_category &#40;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [Transact-sql&#41;sp_help_category &#40;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [Transact-sql&#41;sp_update_category &#40;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [sysjobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
- [&#40;Transact-sql&#41;의 dbo. sysjobservers](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
+ [Transact-sql&#41;&#40;작업dbo.sys](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
+ [dbo.sysjobservers &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

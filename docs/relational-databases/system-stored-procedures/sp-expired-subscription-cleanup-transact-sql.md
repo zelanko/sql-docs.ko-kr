@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6abc29fe-d77a-4673-9d99-ae31c688012c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ad794e82a82f2bafc6cee427febcddd5a047b3d0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 279334fee40c24cbc0423eca58cd5386dbdb4bdc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634840"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881713"
 ---
 # <a name="sp_expired_subscription_cleanup-transact-sql"></a>sp_expired_subscription_cleanup(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   모든 게시의 모든 구독 상태를 확인하고 만료된 구독을 삭제합니다. 이 저장 프로시저는 모든 데이터베이스의 게시자에서 또는 이외 게시자에 대 한 배포 데이터베이스의 배포자에서 실행 됩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

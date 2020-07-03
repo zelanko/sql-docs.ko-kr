@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 553ba3f86ce9917a3eb22991d09728611be21f13
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b52cc85ed5576ab40599141b551382a288c537f7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731646"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881602"
 ---
 # <a name="sp_getsubscriptiondtspackagename-transact-sql"></a>sp_getsubscriptiondtspackagename(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   데이터를 구독자로 보내기 전에 변환하는 데 사용되는 DTS(데이터 변환 서비스) 패키지의 이름을 반환합니다. 이 저장 프로시저는 모든 데이터베이스의 게시자에서 실행됩니다.  
   

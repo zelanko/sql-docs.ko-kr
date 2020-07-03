@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 545bc84b8b68f89428912aba635c87ce23dcbd22
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3a4dd6763c738d87aac706e3d1f648a101068dad
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757924"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881670"
 ---
 # <a name="sp_get_distributor-transact-sql"></a>sp_get_distributor(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   배포자가 서버에 설치되어 있는지 확인합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자를 찾고 있는 컴퓨터에서 실행됩니다.  
   

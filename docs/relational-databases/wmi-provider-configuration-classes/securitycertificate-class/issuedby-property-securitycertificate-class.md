@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9fcf9c62-01a8-4be2-9d10-5b1b796b397c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 62bd64f6be26e9eecda402c96939397ecd723f00
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 54932f9bc2ebd8c1ddcfd4589e3df863bf6be433
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752602"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880939"
 ---
 # <a name="issuedby-property-securitycertificate-class"></a>IssuedBy 속성(SecurityCertificate 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   보안 인증서를 발급한 개체를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  

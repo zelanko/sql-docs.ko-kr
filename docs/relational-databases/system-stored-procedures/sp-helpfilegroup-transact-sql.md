@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c59a7c87c2252497a8a7865c179939a601039157
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 52032429764fe55a636e91cca59ed59b733bfc3a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733179"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881553"
 ---
 # <a name="sp_helpfilegroup-transact-sql"></a>sp_helpfilegroup(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스와 연관된 파일 그룹의 이름과 특성을 반환합니다.  
   

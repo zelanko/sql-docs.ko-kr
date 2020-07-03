@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9ffdbc39-93f5-48fb-859a-86a3ad545827
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 963a67031276def579d6a5b9c74d3e0239363ae0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0bdbdd4bde2436eb11962790e65bb65daa938500
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722769"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880758"
 ---
 # <a name="removecertificate-method-serversettings-class"></a>RemoveCertificate 메서드(ServerSettings 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   현재 보안 인증서를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에서 제거합니다.  
   
 ## <a name="syntax"></a>구문  

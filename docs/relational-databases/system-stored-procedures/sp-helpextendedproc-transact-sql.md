@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7866b9d64a6064cac23382ea3bb33f4fc355cd80
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bf7e95f30eb4a6abdc61b47b5f64b20f0ed4b27a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733209"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881582"
 ---
 # <a name="sp_helpextendedproc-transact-sql"></a>sp_helpextendedproc(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   현재 정의되어 있는 확장 저장 프로시저와 프로시저(함수)가 속한 DLL(동적 링크 라이브러리)의 이름을 보고합니다.  
   
@@ -60,7 +60,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ## <a name="permissions"></a>사용 권한  
  **Sp_helpextendedproc** 를 실행할 수 있는 권한은 **public**에 부여 됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-reporting-help-on-all-extended-stored-procedures"></a>A. 모든 확장 저장 프로시저에 관한 도움말 보고  
  다음 예에서는 모든 확장 저장 프로시저에 관해 보고합니다.  

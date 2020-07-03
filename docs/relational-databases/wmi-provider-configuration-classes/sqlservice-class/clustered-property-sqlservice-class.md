@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f714e7f5-c2db-45c6-9536-6ca2cb5b42aa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 56e48d1305c77cfc3950abdc0f116b8fd9c7c31d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 084ade8f77570a04c1f11e3183a2a6102d0388bc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759858"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880664"
 ---
 # <a name="clustered-property-sqlservice-class"></a>Clustered 속성(SqlService 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   서비스가 클러스터형 인스턴스에 속하는지 여부를 지정하는 부울 속성 값을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  

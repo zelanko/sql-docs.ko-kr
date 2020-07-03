@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b736415400adfdfbdc21a3a217c03673cbe91130
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a3d30a00c08dd90cf98e565eff46cfa58928c72
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783783"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881768"
 ---
 # <a name="sp_droprole-transact-sql"></a>sp_droprole(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스에서 데이터베이스 역할을 제거합니다.  
   
@@ -61,7 +61,7 @@ sp_droprole [ @rolename= ] 'role'
 ## <a name="permissions"></a>사용 권한  
  역할에 대한 CONTROL 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `Sales` 애플리케이션 역할을 제거합니다.  
   
 ```  

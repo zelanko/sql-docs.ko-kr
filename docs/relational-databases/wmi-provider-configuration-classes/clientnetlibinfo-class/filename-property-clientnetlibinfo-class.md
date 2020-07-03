@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5b478582-9389-4923-a914-0df2d8333b0e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4794ccfa85f9cc5f2e9508db4959170a0a63523c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3b9a1af2378098e382f229b01e3c2a6f517d5d8f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731503"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881163"
 ---
 # <a name="filename-property-clientnetlibinfo-class"></a>FileName 속성(ClientNetLibInfo 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   클라이언트 네트워크 라이브러리 파일의 파일 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  

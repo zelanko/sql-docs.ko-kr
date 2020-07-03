@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f1ed86d0b24c8479c0d3a3546845a74d5b518a36
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 435d2e2a5b290e8307b322831a96a1e55847339b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757931"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881691"
 ---
 # <a name="sp_fulltext_service-transact-sql"></a>sp_fulltext_service(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 전체 텍스트 검색의 서버 속성을 변경합니다.  
   
@@ -71,7 +71,7 @@ sp_fulltext_service [ [@action=] 'action'
 ## <a name="permissions"></a>사용 권한  
  **Serveradmin** 고정 서버 역할의 멤버 또는 시스템 관리자만 **sp_fulltext_service**을 실행할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-updating-the-list-of-registered-languages"></a>A. 등록된 언어 목록 업데이트  
  다음 예에서는 전체 텍스트 검색에 등록된 언어 목록을 업데이트합니다.  

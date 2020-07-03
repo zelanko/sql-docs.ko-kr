@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fc6851a9467f0d3f9e3a9becb2f3e3aa6fdb88c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cf4ad48531567972d8fc9b1916d6c5f56bb28f68
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645290"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881507"
 ---
 # <a name="sp_setreplfailovermode-transact-sql"></a>sp_setreplfailovermode(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   지연 업데이트를 장애 조치(Failover)로 사용하고 즉시 업데이트를 기본 사용하도록 설정된 구독에 대한 장애 조치 실행 모드를 설정할 수 있도록 합니다. 이 저장 프로시저는 구독 데이터베이스의 구독자에서 실행됩니다. 장애 조치 (failover) 모드에 대 한 자세한 내용은 [트랜잭션 복제를 위한 업데이트할](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)수 있는 구독을 참조 하세요.  
   

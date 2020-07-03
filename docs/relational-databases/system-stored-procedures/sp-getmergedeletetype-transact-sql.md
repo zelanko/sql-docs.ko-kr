@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 00a7499fb3050a5ab13fa3e9b454b4335200f55a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 406eb51a43b350a5e6f0f2d4723baab40a62ce5e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731662"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881613"
 ---
 # <a name="sp_getmergedeletetype-transact-sql"></a>sp_getmergedeletetype(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   병합 삭제 유형을 반환합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자 또는 구독 데이터베이스의 구독자에서 실행됩니다.  
   

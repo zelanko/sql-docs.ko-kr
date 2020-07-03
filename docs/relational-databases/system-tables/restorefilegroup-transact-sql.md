@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 3aa15c55-6b72-4f76-97d7-bd88391d105c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1ec328e5bbab35c6b462901e1c419915a11b8161
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 74e3e445af4ffe9db6ede0d0e5fb3f457317fbd0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757758"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881442"
 ---
 # <a name="restorefilegroup-transact-sql"></a>restorefilegroup(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   복원된 각 파일 그룹에 대해 하나의 행을 포함합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
