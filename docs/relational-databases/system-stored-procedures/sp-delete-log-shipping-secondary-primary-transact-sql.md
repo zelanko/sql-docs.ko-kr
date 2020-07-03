@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 507fc744-73d9-4cb7-8d2a-bcff88841c6a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 654438872c4f202f8406bc035f0371f6ace536c9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a7897600a89a0dab7839dc283a75e0e385ee5787
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750584"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85863017"
 ---
 # <a name="sp_delete_log_shipping_secondary_primary-transact-sql"></a>sp_delete_log_shipping_secondary_primary(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 저장 프로시저는 보조 서버에서 지정된 주 서버에 대한 정보를 제거하고 보조 서버에서 복사 및 복원 작업을 제거합니다.  
   

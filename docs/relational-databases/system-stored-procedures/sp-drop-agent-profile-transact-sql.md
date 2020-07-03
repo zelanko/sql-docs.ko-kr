@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b884f9ef-ae89-4cbc-a917-532c3ff6ed41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 57815e94737837ec9beb096f1a1840ffc46ad6a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 94687e1da630f4bd8bfa153e5bcd16d316b68d74
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717319"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85860408"
 ---
 # <a name="sp_drop_agent_profile-transact-sql"></a>sp_drop_agent_profile(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSagent_profiles** 테이블에서 프로필을 삭제 합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
   

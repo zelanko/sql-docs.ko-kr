@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4dc25d35d1037b3fae934ab6112ea2afdf40ca7a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4489e34ec83bd3981e464e72cb8e72885fcc994f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790385"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85862191"
 ---
 # <a name="sp_delete_targetserver-transact-sql"></a>sp_delete_targetserver(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   사용할 수 있는 대상 서버의 목록에서 지정된 서버를 제거합니다.  
    
@@ -59,7 +59,7 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행 하려면 사용자에 게 **sysadmin** 고정 서버 역할을 부여 해야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 사용할 수 있는 작업 서버에서 `LONDON1`이라는 서버를 제거합니다.  
   
 ```  
@@ -71,7 +71,7 @@ EXEC dbo.sp_delete_targetserver
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참조  
  [Transact-sql&#41;sp_help_targetserver &#40;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
  [Transact-sql&#41;sp_msx_defect &#40;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

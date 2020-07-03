@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1546737884a815e77cf7f6a0337dd4933348018b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 05682482a720bbf14a17497299676ac6a0cc23d4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772201"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85862637"
 ---
 # <a name="sp_delete_notification-transact-sql"></a>sp_delete_notification(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   특정 경고 및 운영자에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 알림 정의를 제거합니다.  
   
@@ -57,7 +57,7 @@ sp_delete_notification
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행 하려면 사용자에 게 **sysadmin** 고정 서버 역할을 부여 해야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `François Ajenstat` 경고가 발생하는 경우 운영자 `Test Alert`에게 보낸 알림을 제거합니다.  
   
 ```  

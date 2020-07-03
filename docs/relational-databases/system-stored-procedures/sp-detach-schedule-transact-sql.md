@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b183a121981cc32ca7cdd3857c4e9ee10fa7f83e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 19988c59d020d0f77d1f23bf0a210f2ae1488933
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717350"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85860817"
 ---
 # <a name="sp_detach_schedule-transact-sql"></a>sp_detach_schedule(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   일정과 작업 간 연결을 제거합니다.  
   
@@ -79,7 +79,7 @@ sp_detach_schedule
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자가 일정을 소유하는지 여부를 확인합니다. **Sysadmin** 고정 서버 역할의 멤버만 다른 사용자가 소유한 작업의 일정을 분리할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `'NightlyJobs'` 일정과 `'BackupDatabase'` 작업 간 연결을 제거합니다.  
   
 ```  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6f36b63f-3d18-4d42-9469-2febb6926530
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b47506b193f2ec6a813aa4bfd97eabf81fcf3745
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9d993720a85508751b734322454d2f2d98be469c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772220"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85862652"
 ---
 # <a name="sp_delete_maintenance_plan-transact-sql"></a>sp_delete_maintenance_plan(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   지정된 유지 관리 계획을 삭제합니다.  
   
@@ -55,7 +55,7 @@ sp_delete_maintenance_plan [ @plan_id = ] 'plan_id'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_delete_maintenance_plan**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  **Sp_add_maintenance_plan**를 사용 하 여 만든 유지 관리 계획을 삭제 합니다.  
   
 ```  

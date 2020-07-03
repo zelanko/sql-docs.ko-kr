@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5d6c7f07-a163-48fa-8c1f-abc252043dde
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b95711af5a6ee39c89d9b33834c0609a01c2b030
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cd6fe49ce56f5df6dffd8616b1ddc6015ed25fb1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750596"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85863640"
 ---
 # <a name="sp_delete_log_shipping_alert_job-transact-sql"></a>sp_delete_log_shipping_alert_job(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   작업은 있지만 모니터링할 주 데이터베이스나 보조 데이터베이스가 더 이상 없는 경우 로그 전달 모니터 서버에서 경고 작업을 제거합니다.  
   
@@ -54,7 +54,7 @@ sp_delete_log_shipping_alert_job
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  이 예제에서는 경고 작업을 삭제 하 **sp_delete_log_shipping_alert_job** 를 실행 하는 방법을 보여 줍니다.  
   
 ```  

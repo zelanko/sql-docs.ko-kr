@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: db80f152-e8af-4303-95b6-3a3a7b664374
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4a902cc7ad691da5159dc3308aa69045fdc2f169
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9f1091617da94dc13894de0b219fb362c59083af
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85692699"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85861528"
 ---
 # <a name="sp_denylogin-transact-sql"></a>sp_denylogin(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Windows 사용자 또는 Windows 그룹이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하는 것을 방지합니다.  
   
@@ -55,7 +55,7 @@ sp_denylogin [ @loginame = ] 'login'
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 **sp_denylogin** 를 사용 하 여 Windows 사용자가 `CORPORATE\GeorgeV` 서버에 연결 하지 못하도록 하는 방법을 보여 줍니다.  
   
 ```  

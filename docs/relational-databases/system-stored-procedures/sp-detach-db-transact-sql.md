@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d9eaae9a00a125a2ffe2f290e2bd772eb40d84c6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee5261834a0eeb11b4f7f6a21ab5110c0d42fd48
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717360"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85861117"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   서버 인스턴스에서 현재 사용하지 않는 데이터베이스를 분리하고, 필요한 경우 분리하기 전에 모든 테이블에서 UPDATE STATISTICS를 실행합니다.  
   
@@ -120,7 +120,7 @@ GO
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버 자격 또는 데이터베이스의 **db_owner** 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] *skipchecks가* 가 true로 설정 된 데이터베이스를 분리 합니다.  
   
 ```  

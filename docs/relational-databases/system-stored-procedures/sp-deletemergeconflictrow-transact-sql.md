@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8710aa297b01634d5307dbd3c057b9d51fe8f6f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9ab3528c496722877310c13d073158bd20969bc4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85693257"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85861779"
 ---
 # <a name="sp_deletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   충돌 테이블 또는 [MSmerge_conflicts_info &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) 테이블에서 행을 삭제 합니다. 이 저장 프로시저는 충돌 테이블이 저장된 컴퓨터의 모든 데이터베이스에서 실행될 수 있습니다.  
   

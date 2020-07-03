@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d8dd838e-64aa-419f-9ccb-ff04908cf3e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12bdf7bcba85f4fc695a8090d44eeccfb5b58593
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2d6f00cf5fcc0cad2c5b6874b7302d00655e7a76
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720298"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85862367"
 ---
 # <a name="sp_delete_targetservergroup-transact-sql"></a>sp_delete_targetservergroup(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   지정된 대상 서버 그룹을 삭제합니다.  
   
@@ -50,7 +50,7 @@ sp_delete_targetservergroup [ @name = ] 'name'
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 대상 서버 그룹 `Servers Processing Customer Orders`를 제거합니다.  
   
 ```  

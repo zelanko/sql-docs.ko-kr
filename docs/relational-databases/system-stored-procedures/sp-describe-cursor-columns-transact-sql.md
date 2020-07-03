@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 11dde97040adf3005c7e417a38f66088b8f3f7d5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2fe6880bb3669639b92c8625b21f942f1b454bf9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717495"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85861435"
 ---
 # <a name="sp_describe_cursor_columns-transact-sql"></a>sp_describe_cursor_columns(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   서버 커서의 결과 집합에 있는 열의 특성을 보고합니다.  
   
@@ -95,7 +95,7 @@ sp_describe_cursor_columns
 ## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 전역 커서를 열고 `sp_describe_cursor_columns`를 사용하여 커서에 사용되는 열에 대해 보고합니다.  
   
 ```  

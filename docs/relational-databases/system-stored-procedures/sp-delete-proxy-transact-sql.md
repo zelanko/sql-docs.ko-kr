@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 355940ed8d91576fce7068e0400a533dee1f3406
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d037718577e57887e8ba27787fade5b8d08abc28
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750563"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85862532"
 ---
 # <a name="sp_delete_proxy-transact-sql"></a>sp_delete_proxy(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   지정한 프록시를 제거합니다.  
   
@@ -58,7 +58,7 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버만 **sp_delete_proxy**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `Catalog application proxy`라는 프록시를 삭제합니다.  
   
 ```  
