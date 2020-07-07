@@ -19,15 +19,14 @@ ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d6efd10e3b7cb385c576cf8644ec945736765ae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: fdd669732bb26fcf14bde80efeb51673aeb3ce3e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634814"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012696"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql(Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   여러 번 사용할 수 있거나 동적으로 빌드된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이나 일괄 처리를 실행합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리는 포함 매개 변수를 포함할 수 있습니다.  
   
@@ -134,10 +133,10 @@ SELECT @max_title;
   
 -   정수 매개 변수는 해당 네이티브 형식으로 지정됩니다. 유니코드로 캐스팅할 필요가 없습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  public 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-executing-a-simple-select-statement"></a>A. 단순 SELECT 문 실행  
  다음은 `SELECT`이라는 포함 매개 변수를 포함한 단순 `@level` 문을 만들고 실행하는 예입니다.  

@@ -18,15 +18,14 @@ ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d5eded47338315fa69bcb7a9dd270108f69574c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 2c280be43be2ef4f14e57321cb96420e6cf51eb6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757952"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012680"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys(Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   현재 환경에 대한 논리적 외래 키 정보를 반환합니다. 이 프로시저는 사용할 수 없는 외래 키를 포함한 외래 키 관계를 보여 줍니다.  
   
@@ -67,7 +66,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
  외래 키가 있는 테이블 한정자의 이름입니다. *fktable_qualifier* 는 **sysname**이며 기본값은 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 한정자는 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -100,10 +99,10 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
 sp_fkeys 저장 프로시저는 ODBC에서 SQLForeignKeys와 같습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  `SELECT`스키마에 대 한 권한이 필요 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `HumanResources.Department` 데이터베이스의 `AdventureWorks2012` 테이블에 대한 외래 키 목록을 검색합니다.  
   
 ```sql  

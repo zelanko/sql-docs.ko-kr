@@ -20,15 +20,14 @@ ms.assetid: 42605c80-126f-460a-befb-a0b7482fae6a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb1d43e7cfd9892b7146ecbe551ecb7b42625981
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 19a338aa9f5d20dd9a6d089cdf4b56bcf1a4b541
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783935"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012916"
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats(Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스의 테이블, 인덱스 및 인덱싱된 뷰에 대한 각 통계 개체의 행을 포함합니다. 모든 인덱스에는 동일한 이름 및 ID (**index_id**stats_id)를 사용 하는 해당 통계 행이  =  **stats_id**있지만 모든 통계 행에 해당 하는 인덱스가 없습니다.  
   
@@ -47,10 +46,10 @@ ms.locfileid: "85783935"
 |**is_temporary**|**bit**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 통계가 임시 통계인지 여부를 나타냅니다. 임시 통계는 읽기 전용 액세스가 가능하도록 설정된 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 보조 데이터베이스를 지원합니다.<br /><br /> 0 = 통계가 임시 통계가 아닙니다.<br /><br /> 1 = 통계가 임시 통계입니다.|  
 |**is_incremental**|**bit**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상<br /><br /> 통계를 증분 통계로 만들지 여부를 나타냅니다.<br /><br /> 0 = 통계가 증분되지 않습니다.<br /><br /> 1 = 통계가 증분됩니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `HumanResources.Employee` 테이블에 대한 모든 통계 및 통계 열을 반환합니다.  
   
 ```sql  

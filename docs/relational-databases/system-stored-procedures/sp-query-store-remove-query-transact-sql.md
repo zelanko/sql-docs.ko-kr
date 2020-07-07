@@ -21,15 +21,14 @@ ms.assetid: cc39ca92-3cba-478e-beef-65560aa84007
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58bd6bfbb98ab8f75c8959af71bd5c3658790676
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 1751940417d7bf95d2745f46c9acb7f1eb8839a7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651892"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012629"
 ---
 # <a name="sp_query_store_remove_query-transact-sql"></a>sp_query_store_remove_query (Transact-sql)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   쿼리 저장소에서 관련 된 모든 계획 및 런타임 통계를 비롯 하 여 쿼리를 제거 합니다.  
   
@@ -50,10 +49,10 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
   
 ## <a name="remarks"></a>설명  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  데이터베이스에 대 한 **ALTER** 권한이 필요 합니다.
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 쿼리 저장소의 쿼리에 대 한 정보를 반환 합니다.  
   
 ```  

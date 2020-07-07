@@ -18,16 +18,15 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 author: VanMSFT
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c21a740f3c4496db871b2602b001df80d3628ed8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 8be7e84ccd80d80c1345adec3450e5bc8e0f4da6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727207"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012704"
 ---
 # <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember(Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   현재 데이터베이스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 역할에서 보안 계정을 제거합니다.  
   
@@ -67,10 +66,10 @@ sp_droprolemember 'role' ,
   
  Sp_helpuser를 사용 하 여 역할의 멤버를 확인 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고 ALTER role을 사용 하 여 역할에 멤버를 추가 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  역할에 대한 ALTER 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `JonB` 역할에서 `Sales`라는 사용자를 제거합니다.  
   
 ```sql

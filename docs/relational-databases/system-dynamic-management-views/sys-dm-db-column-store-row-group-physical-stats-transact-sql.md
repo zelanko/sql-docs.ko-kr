@@ -20,16 +20,15 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e48fcab681c651c0a843f34065f9e459cb6722ea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: db8bfa11e87e4a8f595c559444907aef3c3e3e81
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754250"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012884"
 ---
 # <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>sys. dm_db_column_store_row_group_physical_stats (Transact-sql)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 현재 데이터베이스의 모든 columnstore 인덱스에 대 한 현재 행 그룹 수준 정보를 제공 합니다.  
 
@@ -60,10 +59,10 @@ ms.locfileid: "85754250"
 ## <a name="results"></a>결과  
  현재 데이터베이스의 각 행 그룹 한 개의 행을 반환 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
 `CONTROL`테이블에 대 한 권한과 `VIEW DATABASE STATE` 데이터베이스에 대 한 사용 권한이 필요 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-calculate-fragmentation-to-decide-when-to-reorganize-or-rebuild-a-columnstore-index"></a>A. 조각화를 계산 하 여 columnstore 인덱스를 다시 구성 하거나 다시 작성 하는 시기를 결정 합니다.  
  Columnstore 인덱스의 경우 삭제 된 행의 비율은 행 그룹의 조각화에 대해 좋은 척도입니다. 조각화가 20% 이상인 경우 삭제 된 행을 제거 합니다. 더 많은 예제는 [인덱스 다시 구성 및 다시 작성](~/relational-databases/indexes/reorganize-and-rebuild-indexes.md)을 참조 하세요.  

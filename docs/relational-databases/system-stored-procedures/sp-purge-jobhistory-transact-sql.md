@@ -18,15 +18,14 @@ ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 47952d7c246a0de94d4515774e89a185c0460f2a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: db00bdaaf3414da7bf639331f47b4872992e016c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783015"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012674"
 ---
 # <a name="sp_purge_jobhistory-transact-sql"></a>sp_purge_jobhistory(Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   작업에 대한 기록 레코드를 제거합니다.  
   
@@ -61,14 +60,14 @@ sp_purge_jobhistory
 ## <a name="remarks"></a>설명  
  **Sp_purge_jobhistory** 성공적으로 완료 되 면 메시지가 반환 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  기본적으로 **sysadmin** 고정 서버 역할 또는 **SQLAgentOperatorRole** 고정 데이터베이스 역할의 멤버만이 저장 프로시저를 실행할 수 있습니다. **Sysadmin** 의 멤버는 모든 로컬 및 다중 서버 작업에 대 한 작업 기록을 제거할 수 있습니다. **SQLAgentOperatorRole** 의 멤버는 모든 로컬 작업에 대 한 작업 기록만 제거할 수 있습니다.  
   
  **SQLAgentUserRole** 멤버 및 **SQLAgentReaderRole**멤버를 비롯 한 다른 사용자는 **sp_purge_jobhistory**에 대 한 EXECUTE 권한을 명시적으로 부여 해야 합니다. 이러한 사용자는 이 저장 프로시저에 대해 EXECUTE 권한을 부여 받은 다음에도 각자 소유한 작업에 대한 기록만 제거할 수 있습니다.  
   
  **SQLAgentUserRole**, **SQLAgentReaderRole**및 **SQLAgentOperatorRole** 고정 데이터베이스 역할은 **msdb** 데이터베이스에 있습니다. 사용 권한에 대 한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조 하세요.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-remove-history-for-a-specific-job"></a>A. 특정 작업의 기록 제거  
  다음 예에서는 `NightlyBackups`이라는 작업의 기록을 제거합니다.  
