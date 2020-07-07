@@ -11,15 +11,14 @@ ms.assetid: 8801f091-2241-4085-87b7-33e031328c9c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2f57706d78cc42af2641e8729f56ac2f0889f60
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 43f69fae38a08bfec0ca0a084ac2f4480fbe334e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773279"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011182"
 ---
 # <a name="filestream-and-ole-db"></a>Filestream 및 OLE DB
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   이 섹션에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB를 FILESTREAM 기능과 함께 사용하는 방법을 보여 주는 다음 4개의 예제가 포함되어 있습니다.  
   

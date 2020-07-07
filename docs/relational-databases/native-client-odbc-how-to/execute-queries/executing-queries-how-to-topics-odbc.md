@@ -13,15 +13,14 @@ ms.assetid: 3594c908-192e-41ea-9db0-7045da8812b5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 854bd2c4241ff3ac88af62eb891dc667553197c1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: e65015b0adf3f2306b30c4d50a09bba5deb5c5f2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725072"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009442"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>쿼리 실행 방법 도움말 항목(ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ODBC 애플리케이션에서 SQL 문을 실행하려면 문 핸들 할당, 문 특성 설정, SQL 문 준비 및 실행 작업을 수행해야 합니다.  
   

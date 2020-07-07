@@ -4,22 +4,31 @@ description: 각 릴리스에 대 한 Oracle (OracleToSQL)에 대 한 변경 SQL
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 6/2/2020
+ms.date: 7/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: 5d1a12d41d7d25154998f39be136266631b6d421
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
-ms.translationtype: MT
+ms.openlocfilehash: c0465466a00eb9e7c1eb3b75035d136687672fef
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779560"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011291"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Oracle 용 SSMA의 새로운 기능 (OracleToSQL)
 
 이 문서에서는 각 릴리스의 Oracle 변경 내용에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v811"></a>SSMA v 8.11
+
+Oracle 용 SSMA의 v 8.11 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
+
+* 문의 하위 쿼리 지원 `INSERT ... VALUES`
+* 문의 변환 향상 `COMMIT`
+* 절 변환에서 버그 수정 `CONNECT BY LEVEL`
+* 업데이트 된 파서 오류 복구 논리가 줄어듭니다.
+* 대화형 Azure Active Directory 인증에 MSAL.NET 라이브러리 사용
 
 ## <a name="ssma-v810"></a>SSMA v 8.10
 

@@ -20,16 +20,15 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bc0873bcafa37c0fa35118fcd033caae2049449
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 2ddaba7c9c36e09fef32b7e14af4429d37d2b963
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785008"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011950"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases(Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 각 데이터베이스당 한 개의 행을 포함합니다.  
   
@@ -121,7 +120,7 @@ ms.locfileid: "85785008"
 |**is_result_set_caching_on**|**bit**|1 = is_result_set_caching_on on입니다.</br>0 = is_result_set_caching_on 꺼짐</br>**적용**대상: Azure SQL Data Warehouse Gen2. 이 기능을 모든 지역에 롤아웃하는 동안 인스턴스에 배포 된 버전 및 기능 가용성에 대 한 최신 [AZURE SQL DW 릴리스 정보](/azure/sql-data-warehouse/release-notes-10-0-10106-0) 를 확인 하세요.|
 |**is_memory_optimized_enabled**|**bit**|[하이브리드 버퍼 풀](../../database-engine/configure-windows/hybrid-buffer-pool.md)과 같은 특정 메모리 내 기능을 데이터베이스에 사용할 수 있는지 여부를 나타냅니다. 는 [메모리 내 OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)의 가용성 또는 구성 상태를 반영 하지 않습니다. <br />**적용**대상: SQL Server 2019 (15. x) 이상 및 Azure SQL Database|
   
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>권한
 
  의 호출자 `sys.databases` 가 데이터베이스의 소유자가 아니고 데이터베이스가 또는이 아닌 경우 `master` `tempdb` 해당 행을 보는 데 필요한 최소 권한은 `ALTER ANY DATABASE` 또는 `VIEW ANY DATABASE` 데이터베이스의 서버 수준 권한 또는 `CREATE DATABASE` 사용 권한 `master` 입니다. 호출자가 연결 된 데이터베이스는 항상에서 볼 수 있습니다 `sys.databases` .  
   
@@ -134,7 +133,7 @@ ms.locfileid: "85785008"
   
  새 데이터베이스가 만들어지는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 서버의 `master` 데이터베이스에서 `sys.databases` 뷰를 사용합니다. 데이터베이스 복사가 시작 된 후 `sys.databases` `sys.dm_database_copies` 대상 서버의 데이터베이스에서 및 뷰를 쿼리하여 `master` 복사 진행에 대 한 자세한 정보를 검색할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-query-the-sysdatabases-view"></a>A. sys.databases 뷰 쿼리
 

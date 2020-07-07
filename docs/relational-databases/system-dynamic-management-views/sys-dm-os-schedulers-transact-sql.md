@@ -20,15 +20,14 @@ ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ff8932afd459a9fcb836a4a41b176b0a0871a78
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 8ee5f6aca36766edd915b4b1b53c54a83c6b5a63
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734503"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012044"
 ---
 # <a name="sysdm_os_schedulers-transact-sql"></a>sys.dm_os_schedulers(Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   각 스케줄러가 개별 프로세서에 매핑되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 스케줄러당 하나의 행을 반환합니다. 이 뷰를 사용하여 스케줄러 상태를 모니터링하거나 런어웨이 태스크를 식별할 수 있습니다. 스케줄러에 대 한 자세한 내용은 [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)를 참조 하세요.  
   
@@ -67,11 +66,11 @@ ms.locfileid: "85734503"
 |ideal_workers_limit|**int**|**적용**대상: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상 <br><br> 스케줄러에 가장 적합 한 작업자 수 현재 작업 자가 부하가 분산 된 작업 로드로 인 한 제한을 초과 하는 경우 유휴 상태가 되 면 잘립니다. Null을 허용하지 않습니다.|
 |pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>권한
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
 
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-monitoring-hidden-and-nonhidden-schedulers"></a>A. 숨겨진 스케줄러 및 숨겨지지 않은 스케줄러 모니터링  
  다음 쿼리에서는 모든 스케줄러에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 태스크 및 작업자 상태를 출력합니다. 이 쿼리는 다음 조건을 충족시키는 컴퓨터 시스템에서 실행되었습니다.  

@@ -18,15 +18,14 @@ ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcbdaa46ab388bc641120bdcccb454468d102eb2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: b548a1ee0edd7bbd5b83fd3692937ac349a2d540
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773365"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010542"
 ---
 # <a name="information-in-error-interfaces"></a>오류 인터페이스의 정보
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 OLE DB 정의 오류 인터페이스 **IErrorInfo**, **Ierrorrecords**및 **ISQLErrorInfo**에 일부 오류 및 상태 정보를 보고 합니다.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "85773365"
 |---------------------|-----------------|  
 |**GetDescription**|설명적인 오류 메시지 문자열입니다.|  
 |**GetGUID**|오류를 정의한 인터페이스의 GUID입니다.|  
-|**GetHelpContext**|지원 안 됨 항상 0을 반환합니다.|  
+|**GetHelpContext**|지원되지 않습니다. 항상 0을 반환합니다.|  
 |**GetHelpFile**|지원되지 않습니다. 항상 NULL을 반환합니다.|  
 |**GetSource**|"Microsoft SQL Server Native Client" 문자열입니다.|  
   
@@ -52,7 +51,7 @@ ms.locfileid: "85773365"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 다음과 같이 **ISQLErrorInfo:: GetSQLInfo** 매개 변수를 지원 합니다.  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*pbstrSQLState*|오류의 SQLSTATE 값을 반환합니다. SQLSTATE 값은 SQL-92, ODBC 및 ISO SQL, API 사양에서 정의됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 구현 별 SQLSTATE 값을 정의 하지 않습니다.|  
 |*plNativeError*|사용 가능한 경우 **master.dbo.sysmessages**의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 번호를 반환합니다. Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자 데이터 원본을 성공적으로 초기화 한 후 네이티브 오류를 사용할 수 있습니다. 시도 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 항상 0을 반환 합니다.|  

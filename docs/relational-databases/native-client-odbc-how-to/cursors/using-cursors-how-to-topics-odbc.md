@@ -13,15 +13,14 @@ ms.assetid: 4e07d2a6-f389-4685-841c-71e34f948816
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0a87ab71ef062ad78c4b466bd2e75a6a36d4fdf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: d7d065eabd4256826235e9400c76d203ab8c0e5f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783310"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009488"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>커서 사용 방법 도움말 항목(ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   커서를 사용하려면 먼저 ODBC 커서 동작을 제어하는 연결 및 문 특성을 설정해야 합니다. 커서를 사용하면 애플리케이션에서 각 인출 시 여러 행을 검색하고 커서의 현재 위치에서 UPDATE, INSERT 또는 DELETE 문을 실행할 수 있습니다.  
   

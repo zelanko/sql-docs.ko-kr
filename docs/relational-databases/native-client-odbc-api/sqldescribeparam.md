@@ -14,15 +14,14 @@ ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7612fc4da7cb12b4e38f20404cbf9481d610877c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: ba04422ef9763202701dfa147ff5da4bfc214018
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789328"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011874"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   SQL 문의 매개 변수를 설명 하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT odbc 드라이버는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 준비 된 ODBC 문 핸들에 대해 SQLDescribeParam가 호출 될 때 SELECT 문을 작성 하 고 실행 합니다. 결과 집합의 메타데이터에 따라 준비된 문의 매개 변수 특징이 결정됩니다. SQLDescribeParam는 SQLExecute 또는 SQLExecDirect에서 반환할 수 있는 오류 코드를 반환할 수 있습니다.  
   

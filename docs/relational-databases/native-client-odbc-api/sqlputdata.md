@@ -14,15 +14,14 @@ ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 241c7e6bd0bfbd3b0239e610606a26b50f6e112d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 8a9648fac10c5bc6d5e893bad123bbe02c38bc29
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751925"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009908"
 ---
 # <a name="sqlputdata"></a>SQLPutData
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   SQLPutData를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_LONGVARCHAR (**텍스트**), SQL_WLONGVARCHAR (**ntext**) 또는 SQL_LONGVARBINARY (**이미지**) 열에 대해 65535 바이트 이상의 데이터 (버전 4.21 a) 또는 400 KB의 데이터 (SQL Server 버전 6.0 이상)를 전송 하는 경우 다음과 같은 제한 사항이 적용 됩니다.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "85751925"
 ## <a name="diagnostics"></a>진단  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQLPutData에 대해 하나의 Native Client 특정 SQLSTATE가 있습니다.  
   
-|SQLSTATE|오류|설명|  
+|SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |22026|문자열 데이터, 길이가 일치하지 않음|전송할 데이터 길이 (바이트)를 응용 프로그램에서 지정 하는*경우 (예*SQL_LEN_DATA_AT_EXEC: *n* 이 0 보다 큰 경우)에는 sqlputdata를 통해 응용 프로그램에서 제공 하는 총 바이트 수가 지정 된 길이와 일치 해야 합니다.|  
   

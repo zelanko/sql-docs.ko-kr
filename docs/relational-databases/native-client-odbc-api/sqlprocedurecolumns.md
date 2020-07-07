@@ -14,15 +14,14 @@ ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 96c68eac12677109975fce5beea04eec071e70b1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 748e5df362231c4871b3777436d755227d2ec1b8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787974"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011158"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **SQLProcedureColumns** 는 모든 저장 프로시저의 반환 값 특성을 보고 하는 하나의 행을 반환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -32,7 +31,7 @@ ms.locfileid: "85787974"
   
  다음 표에서는 결과 집합에서 반환 되는 열과 Native Client ODBC 드라이버를 통해 **udt** 및 **xml** 데이터 형식을 처리 하도록 확장 하는 방법을 보여 줍니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|열 이름|설명|  
+|열 이름|Description|  
 |-----------------|-----------------|  
 |SS_UDT_CATALOG_NAME|UDT(사용자 정의 형식)를 포함하는 카탈로그의 이름을 반환합니다.|  
 |SS_UDT_SCHEMA_NAME|UDT가 포함된 스키마의 이름을 반환합니다.|  

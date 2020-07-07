@@ -20,15 +20,14 @@ ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e051d7351e5279bef3980d8fc8bfd77d20984eff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 87b2f2e94e137f6a710c19b6f461e4c0cfe12d30
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775250"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011970"
 ---
 # <a name="sysdatabase_permissions-transact-sql"></a>sys.database_permissions(Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   데이터베이스에 있는 각 사용 권한이나 열 예외 권한에 대해 행을 반환합니다. 열에는 해당 개체 수준 사용 권한과는 다른 모든 사용 권한에 대한 행이 있습니다. 열 사용 권한이 해당 개체 사용 권한과 동일한 경우 해당 개체에 대 한 행이 없으며 적용 되는 권한은 개체의 사용 권한입니다.  
   
@@ -128,12 +127,12 @@ ms.locfileid: "85775250"
 |VWCT|VIEW CHANGE TRACKING|TABLE, SCHEMA|  
 |VWDS|VIEW DATABASE STATE|DATABASE|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  모든 사용자는 자산의 권한을 볼 수 있습니다. 다른 사용자에 대한 사용 권한을 보려면 로그인할 때 VIEW DEFINITION, ALTER ANY USER, 또는 사용 권한이 필요합니다. 사용자 정의 역할을 보려면 ALTER ANY ROLE 또는 역할(예: 공용)의 멤버 자격이 필요합니다.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-listing-all-the-permissions-of-database-principals"></a>A: 데이터베이스 보안 주체의 모든 사용 권한 나열  
  다음 쿼리는 데이터베이스 보안 주체에 대해 명시적으로 부여되거나 거부된 사용 권한을 나열합니다.  

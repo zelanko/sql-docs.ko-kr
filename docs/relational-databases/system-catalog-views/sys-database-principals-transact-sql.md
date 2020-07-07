@@ -20,15 +20,14 @@ ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 634d0d69698503a4bc483c9803858e5cda4b515d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 8773d6a3a8b65520fad6342477300f8818e9ac4d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754476"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011965"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>sys.database_principals(Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 각 주체에 대해 행을 반환합니다.  
   
@@ -54,10 +53,10 @@ ms.locfileid: "85754476"
  *PasswordLastSetTime* 속성은 지원 되는 모든 SQL Server 구성에서 사용할 수 있지만 다른 속성은 SQL Server Windows Server 2003 이상에서 실행 중이 고 CHECK_POLICY와 CHECK_EXPIRATION 모두 사용 하도록 설정 된 경우에만 사용할 수 있습니다. 자세한 내용은 [암호 정책](../../relational-databases/security/password-policy.md) 을 참조 하세요.
 Principal_id의 값은 보안 주체가 삭제 된 경우 다시 사용 될 수 있으므로 계속 해 서 늘어난 것이 보장 되지 않습니다.
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  모든 사용자는 자신의 사용자 이름, 시스템 사용자 및 고정 데이터베이스 역할을 볼 수 있습니다. 다른 사용자를 보려면 사용자에 대한 ALTER ANY USER 또는 사용 권한이 필요합니다. 사용자 정의 역할을 보려면 ALTER ANY ROLE 또는 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-listing-all-the-permissions-of-database-principals"></a>A: 데이터베이스 보안 주체의 모든 사용 권한 나열  
  다음 쿼리는 데이터베이스 보안 주체에 대해 명시적으로 부여되거나 거부된 사용 권한을 나열합니다.  

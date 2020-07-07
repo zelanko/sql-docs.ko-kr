@@ -20,15 +20,14 @@ ms.assetid: 096e3659-edeb-4440-a016-f847acd6166b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c7187880c26fe7f6561d355ea6925cc7229ea39
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: a537df51bc83c966480a8c191c3a2c66a7a778ed
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649197"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011937"
 ---
 # <a name="sysdefault_constraints-transact-sql"></a>sys.default_constraints(Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   기본 정의 인 각 개체에 대 한 행을 포함 합니다 (CREATE DEFAULT 문 대신 CREATE TABLE 또는 ALTER TABLE 문의 일부로 만듦 **).**  
   
@@ -39,10 +38,10 @@ ms.locfileid: "85649197"
 |**정의**|**nvarchar(max)**|이 기본값을 정의하는 SQL 식입니다.|  
 |**is_system_named**|**bit**|1 = 시스템에서 이름을 생성했습니다.<br /><br /> 0 = 사용자가 제공한 이름입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `VacationHours` 테이블의 `HumanResources.Employee` 열에 적용된 DEFAULT 제약 조건의 정의를 반환합니다.  
   
 ```  

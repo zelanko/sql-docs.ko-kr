@@ -14,15 +14,14 @@ ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62951ec956282201ae2b61a82c6a72dcd2831307
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 4928c4b4cc06b4ad7824f1b581c972369eb8c7cc
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725143"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009982"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>프로그램 변수에서 데이터 대량 복사(ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   이 샘플에서는 **bcp_bind** 및 **bcp_sendrow**를 사용 하 여 프로그램 변수에서 SQL Server로 데이터를 대량 복사 하는 대량 복사 함수를 사용 하는 방법을 보여 줍니다. 이 예제를 간소화하기 위해 오류 검사 코드는 제거했습니다.  
   

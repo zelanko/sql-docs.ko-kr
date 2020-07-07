@@ -14,15 +14,14 @@ ms.assetid: e60101ae-a5f5-432f-a32a-d8e6fb0cbde8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63b69877406263c867addc1a4ea61619b9a47ae2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: c5267592f6366faf42b3109019a0bb40f6e2f4da
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751777"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012365"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **SQLStatistics** 는 정적 커서에 대해 실행할 수 있습니다. 업데이트 가능한 커서(키 집합 또는 동적 커서)에 대해 **SQLStatistics** 를 실행하려고 하면 커서 유형이 변경되었음을 나타내는 SQL_SUCCESS_WITH_INFO가 반환됩니다.  
   

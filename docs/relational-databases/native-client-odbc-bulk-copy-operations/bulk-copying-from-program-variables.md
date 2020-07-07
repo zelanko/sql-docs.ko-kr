@@ -19,15 +19,14 @@ ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b22b180eb2467455e4dce34906ab7481801c139d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 543d14bf67cfc4587c315090533c1066646493c7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760745"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012330"
 ---
 # <a name="bulk-copying-from-program-variables"></a>프로그램 변수에서 대량 복사
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   프로그램 변수에서 직접 대량 복사를 수행할 수 있습니다. 행의 데이터를 보유할 변수를 할당하고 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 를 호출하여 대량 복사를 시작한 후 각 열에 대해 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 를 호출하여 열과 연결될 프로그램 변수의 위치와 서식을 지정합니다. 각 변수에 데이터를 채운 다음 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 를 호출하여 데이터 행 하나를 서버에 전송합니다. 모든 행을 서버에 전송할 때까지 변수에 데이터를 채우고 **bcp_sendrow** 를 호출하는 과정을 반복한 후 [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) 을 호출하여 작업이 완료되었음을 지정합니다.  
   

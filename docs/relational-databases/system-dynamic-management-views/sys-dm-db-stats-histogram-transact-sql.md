@@ -20,15 +20,14 @@ ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9c203cef9234c070bcefcc82bea396734123d4f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 50b5ae0a00161b00c432f0ea88c1cd08c45b4219
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738710"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011884"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 현재 데이터베이스에서 지정한 데이터베이스 개체 (테이블 또는 인덱싱된 뷰)의 통계 히스토그램을 반환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . `DBCC SHOW_STATISTICS WITH HISTOGRAM`와 비슷합니다.
 
@@ -87,11 +86,11 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  쿼리 최적화 프로그램은 통계적 중요성에 따라 히스토그램 단계를 정의합니다. 또한 히스토그램의 단계 수를 최소화하면서 경계 값 간의 차이를 최대화하기 위해 최대 차이 알고리즘을 사용합니다. 최대 단계 수는 200개입니다. 히스토그램 단계 수는 경계 지점이 200개 미만인 열에서도 고유 값의 개수보다 적을 수 있습니다. 예를 들어 100개의 고유 값을 가진 열의 히스토그램에 100개 미만의 경계 지점이 있을 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
 
 사용자가 통계 열에 대한 select 권한이 있거나 테이블을 소유하거나 `sysadmin` 고정 서버 역할, `db_owner` 고정 데이터베이스 역할, 또는 `db_ddladmin` 고정 데이터베이스 역할의 멤버여야 합니다.
 
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
 
 ### <a name="a-simple-example"></a>A. 간단한 예    
 다음 예에서는 간단한 테이블을 만들고 채웁니다. 는 열에 대 한 통계를 만듭니다 `Country_Name` .

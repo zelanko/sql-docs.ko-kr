@@ -14,15 +14,14 @@ ms.assetid: d19a7097-48d9-409a-aff9-277891b7aca7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df9a4ca772571a5ea0022cf13a8f2062768184b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 66af5f470d5b2d32fbdae29d08b92bccb6e1b101
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785371"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011165"
 ---
 # <a name="irowsetfastload-ole-db"></a>IRowsetFastLoad(OLE DB)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **IRowsetFastLoad** 인터페이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 기반 대량 복사 작업에 대한 지원을 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자 소비자는 인터페이스를 사용 하 여 기존 테이블에 데이터를 빠르게 추가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
@@ -30,7 +29,7 @@ ms.locfileid: "85785371"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|메서드|설명|  
+|방법|Description|  
 |------------|-----------------|  
 |[IRowsetFastLoad::Commit&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md)|일괄 삽입되는 행의 끝을 표시하고 행을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 씁니다.|  
 |[IRowsetFastLoad::InsertRow&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-insertrow-ole-db.md)|대량 복사 행 집합에 행을 추가합니다.|  

@@ -16,15 +16,14 @@ ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 510ec428f43f20715ab85d1f1f5e719e11863a74
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: 192e3b98e7091ba337fa1b0090c6add2a255a97a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894826"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012285"
 ---
 # <a name="smo-object-model-namespaces"></a>SMO 개체 모델 네임스페이스
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects(SMO)에는 다양한 네임스페이스가 있습니다. 각 네임스페이스는 SMO의 서로 다른 기능 영역을 나타냅니다.  
   

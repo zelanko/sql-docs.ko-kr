@@ -14,15 +14,14 @@ ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c18c4106c5fab5f6f1c75276db8c211f9873c8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: e10fa48bccc1c6c8c6ae3a25e10e805f514c0d2a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751834"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012377"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 혼합(키 집합/동적) 커서 모델을 지원하지 않습니다. SQL_ATTR_KEYSET_SIZE를 사용하여 키 집합 크기를 0이 아닌 값으로 설정하려고 하면 오류가 발생합니다.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "85751834"
 ### <a name="sql_sopt_ss_cursor_options"></a>SQL_SOPT_SS_CURSOR_OPTIONS  
  SQL_SOPT_SS_CURSOR 특성은 드라이버가 커서에 드라이버별 성능 옵션을 사용할지 여부를 지정합니다. 이러한 옵션을 설정 하면 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) 를 사용할 수 없습니다. 기본 설정은 SQL_CO_OFF입니다. *ValuePtr* 값은 SQLLEN 유형입니다.  
   
-|*값*|설명|  
+|*값*|Description|  
 |----------------------|-----------------|  
 |SQL_CO_OFF|기본값 빠른 앞 으로만 이동 가능한 읽기 전용 커서 및 자동 인출 사용 하지 않도록 설정 하 여 앞 으로만 이동 가능한 읽기 전용 커서에서 **SQLGetData** 를 사용 하도록 설정 합니다. SQL_SOPT_SS_CURSOR_OPTIONS가 SQL_CO_OFF로 설정되면 커서 유형이 변경되지 않습니다. 즉, 빠른 정방향 전용 커서는 빠른 정방향 전용 커서로 유지됩니다. 커서 유형을 변경 하려면 응용 프로그램이 **SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE를 사용 하 여 다른 커서 유형을 설정 해야 합니다.|  
 |SQL_CO_FFO|빠른 전진 전용, 읽기 전용 커서를 사용 하도록 설정 하 고 앞 으로만 이동 가능한 읽기 전용 커서에서 **SQLGetData** 를 사용 하지 않도록 설정 합니다.|  
@@ -64,7 +63,7 @@ ms.locfileid: "85751834"
 ### <a name="sql_sopt_ss_defer_prepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  SQL_SOPT_SS_DEFER_PREPARE 특성은 **Sqlexecute**, [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) 또는 [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 가 실행 될 때까지 문이 즉시 준비 되거나 지연 되는지 여부를 결정 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 및 이전 버전에서는 이 속성이 무시됩니다(준비 지연이 지원되지 않음). *ValuePtr* 값은 SQLLEN 유형입니다.  
   
-|*값*|설명|  
+|*값*|Description|  
 |----------------------|-----------------|  
 |SQL_DP_ON|기본값 [Sqlprepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360)를 호출한 후에는 **sqlprepare** 가 호출 되거나 메타 속성 작업 (**SQLDescribeCol** 또는 **SQLDescribeParam**)이 실행 될 때까지 문 준비가 지연 됩니다.|  
 |SQL_DP_OFF|**Sqlprepare** 를 실행 하는 즉시 문이 준비 됩니다.|  
@@ -74,7 +73,7 @@ ms.locfileid: "85751834"
   
  *ValuePtr* 값은 SQLLEN 유형입니다.  
   
-|*값*|설명|  
+|*값*|Description|  
 |----------------------|-----------------|  
 |SQL_RE_OFF|기본값 드라이버가 날짜, 시간 및 통화 데이터를 문자열 데이터로 변환할 때 클라이언트 로캘 설정을 사용하지 않습니다.|  
 |SQL_RE_ON|드라이버가 날짜, 시간 및 통화 데이터를 문자열 데이터로 변환할 때 클라이언트 로캘 설정을 사용합니다.|  
@@ -89,7 +88,7 @@ ms.locfileid: "85751834"
 ### <a name="sql_sopt_ss_textptr_logging"></a>SQL_SOPT_SS_TEXTPTR_LOGGING  
  SQL_SOPT_SS_TEXTPTR_LOGGING 특성은 **텍스트** 또는 **이미지** 데이터를 포함 하는 열에 대 한 작업 로깅을 설정/해제 합니다. *ValuePtr* 값은 SQLLEN 유형입니다.  
   
-|*값*|설명|  
+|*값*|Description|  
 |----------------------|-----------------|  
 |SQL_TL_OFF|**Text** 및 **image** 데이터에 대해 수행 되는 작업의 로깅을 사용 하지 않도록 설정 합니다.|  
 |SQL_TL_ON|기본값 **Text** 및 **image** 데이터에 대해 수행 되는 작업의 로깅을 사용 하도록 설정 합니다.|  
@@ -97,7 +96,7 @@ ms.locfileid: "85751834"
 ### <a name="sql_sopt_ss_hidden_columns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
  SQL_SOPT_SS_HIDDEN_COLUMNS 특성은 결과 집합에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT FOR BROWSE 문의 숨겨진 열을 노출합니다. 드라이버는 기본적으로 이러한 열을 노출하지 않습니다. *ValuePtr* 값은 SQLLEN 유형입니다.  
   
-|*값*|설명|  
+|*값*|Description|  
 |----------------------|-----------------|  
 |SQL_HC_OFF|기본값 결과 집합에서 FOR BROWSE 열을 숨깁니다.|  
 |SQL_HC_ON|FOR BROWSE 열을 공개합니다.|  
@@ -131,7 +130,7 @@ ms.locfileid: "85751834"
   
  SQL_SOPT_SS_NAME_SCOPE의 형식은 SQLULEN입니다.  
   
-|*값*|설명|  
+|*값*|Description|  
 |----------------------|-----------------|  
 |SQL_SS_NAME_SCOPE_TABLE|기본값<br /><br /> 테이블 반환 매개 변수를 사용할 때 실제 테이블의 메타데이터가 반환되도록 지정합니다.<br /><br /> 스파스 열 기능을 사용 하는 경우 SQLColumns는 스파스 **column_set**의 멤버가 아닌 열만 반환 합니다.|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|애플리케이션이 실제 테이블이 아니라 테이블 형식의 메타데이터를 요구한다는 것을 나타냅니다. 카탈로그 함수가 테이블 형식의 메타데이터를 반환해야 합니다. 그런 다음 응용 프로그램은 테이블 반환 매개 변수의 TYPE_NAME를 *TableName* 매개 변수로 전달 합니다.|  

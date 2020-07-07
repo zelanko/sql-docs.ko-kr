@@ -13,15 +13,14 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2358894c1303856fc3e1b9db06bca1f7e9427509
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: d67e41f3dfaed9ef59e586368d8b80dda2936669
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787698"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010508"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>큰 CLR 사용자 정의 형식(OLE DB)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   이 항목에서는 큰 CLR(공용 언어 런타임) UDT(사용자 정의 형식)를 지원하기 위한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 OLE DB 변경 내용에 대해 설명합니다.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "85787698"
   
  UDT에 대해 다음 열도 정의됩니다.  
   
-|열 식별자|형식|설명|  
+|열 식별자|Type|Description|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 열의 경우 UDT가 정의된 카탈로그의 이름입니다.|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 열의 경우 UDT가 정의된 스키마의 이름입니다.|  
@@ -105,7 +104,7 @@ ms.locfileid: "85787698"
   
  UDT에 대해 다음 추가 열이 정의됩니다.  
   
-|열 식별자|형식|설명|  
+|열 식별자|Type|Description|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 열의 경우 UDT가 정의된 카탈로그의 이름입니다.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 열의 경우 UDT가 정의된 스키마의 이름입니다.|  

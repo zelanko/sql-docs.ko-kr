@@ -11,15 +11,14 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08a88db90322a3618cc53e60113f5d17ce749ec9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 70cfdccd5ba5c51e0ecdbb1106397364daf70aa4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773409"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010583"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>이전 SQL Server 버전 관련 새로운 날짜 및 시간 기능(OLE DB)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   이 항목에서는 향상 된 날짜 및 시간 기능을 사용 하는 클라이언트 응용 프로그램이 이전 버전의와 통신할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , 그리고 이전 버전의 Native client를 사용 하 여 컴파일한 클라이언트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 향상 된 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 날짜 및 시간 기능을 지 원하는 서버에 명령을 보내는 경우 예상 되는 동작에 대해 설명 합니다.  
   
@@ -32,19 +31,19 @@ ms.locfileid: "85773409"
   
 |OLE DB 클라이언트 형식|SQL Server 2005 형식|SQL Server 2008(또는 이후 버전) 형식|결과 변환(서버에서 클라이언트로)|매개 변수 변환(클라이언트에서 서버로)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|DateTime|Date|확인|확인|  
+|DBTYPE_DBDATE|DateTime|날짜|정상|정상|  
 |DBTYPE_DBTIMESTAMP|||시간 필드가 0으로 설정됩니다.|시간 필드가 0이 아닌 경우 문자열 잘림이 발생 하 여 IRowsetChange가 실패 합니다.|  
-|DBTYPE_DBTIME||Time(0)|확인|확인|  
+|DBTYPE_DBTIME||Time(0)|정상|정상|  
 |DBTYPE_DBTIMESTAMP|||날짜 필드가 현재 날짜로 설정됩니다.|소수 자릿수 초가 0이 아닌 경우 문자열 잘림이 발생 하 여 IRowsetChange가 실패 합니다.<br /><br /> 날짜는 무시됩니다.|  
-|DBTYPE_DBTIME||Time(7)|실패-시간 리터럴이 잘못 되었습니다.|확인|  
-|DBTYPE_DBTIMESTAMP|||실패-시간 리터럴이 잘못 되었습니다.|확인|  
-|DBTYPE_DBTIMESTAMP||Datetime2 (3)|확인|확인|  
-|DBTYPE_DBTIMESTAMP||Datetime2 (7)|확인|확인|  
-|DBTYPE_DBDATE|Smalldatetime|Date|확인|확인|  
+|DBTYPE_DBTIME||Time(7)|실패-시간 리터럴이 잘못 되었습니다.|정상|  
+|DBTYPE_DBTIMESTAMP|||실패-시간 리터럴이 잘못 되었습니다.|정상|  
+|DBTYPE_DBTIMESTAMP||Datetime2 (3)|정상|정상|  
+|DBTYPE_DBTIMESTAMP||Datetime2 (7)|정상|정상|  
+|DBTYPE_DBDATE|Smalldatetime|날짜|정상|정상|  
 |DBTYPE_DBTIMESTAMP|||시간 필드가 0으로 설정됩니다.|시간 필드가 0이 아닌 경우 문자열 잘림 때문에 IRowsetChange가 실패 합니다.|  
-|DBTYPE_DBTIME||Time(0)|확인|확인|  
+|DBTYPE_DBTIME||Time(0)|정상|정상|  
 |DBTYPE_DBTIMESTAMP|||날짜 필드가 현재 날짜로 설정됩니다.|소수 자릿수 초가 0이 아닌 경우 문자열 잘림이 발생 하 여 IRowsetChange가 실패 합니다.<br /><br /> 날짜는 무시됩니다.|  
-|DBTYPE_DBTIMESTAMP||Datetime2(0)|확인|확인|  
+|DBTYPE_DBTIMESTAMP||Datetime2(0)|정상|정상|  
   
  표에서 정상은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 동작하는 경우 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)](또는 이후 버전)에서도 계속 동작함을 의미합니다.  
   
