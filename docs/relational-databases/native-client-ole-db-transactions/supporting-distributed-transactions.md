@@ -19,15 +19,14 @@ ms.assetid: d250b43b-9260-4ea4-90cc-57d9a2f67ea7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19378c7ead1ca34a6e3c2b42cb0b725560fabd8f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: b4bd02bccb53448a4039f7f27caf820a931df335
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85658204"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005818"
 ---
 # <a name="supporting-distributed-transactions"></a>분산 트랜잭션 지원
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자 소비자는 **ITransactionJoin:: JoinTransaction** 메서드를 사용 하 여 MS DTC (Microsoft DTC(Distributed Transaction Coordinator))에서 조정 하는 분산 트랜잭션에 참여할 수 있습니다.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "85658204"
   
  분산 트랜잭션의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 다음과 같이 **ITransactionJoin:: JoinTransaction** 매개 변수를 구현 합니다.  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|MS DTC 트랜잭션 개체에 대한 포인터입니다.|  
 |*IsoLevel*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자가 무시 합니다. MS DTC 통합 트랜잭션의 격리 수준은 소비자가 MS DTC로부터 트랜잭션 개체를 가져올 때 결정됩니다.|  

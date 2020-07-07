@@ -14,15 +14,14 @@ ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b09c9edcd684135e4cd72d0e09407c12c9cbfd5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 3881a7c5004e4141124b5440a74812decbd014e2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789215"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003498"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 드라이버별 연결 특성을 정의합니다. 일부 특성은 **SQLGetConnectAttr**에서 사용할 수 있으며, 이 함수를 사용하여 현재 설정을 보고합니다. 이러한 특성에 대해 보고되는 값은 연결을 설정하거나 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)을 사용하여 특성을 설정할 때까지 보장되지 않습니다.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "85789215"
 > [!NOTE]  
 >  표준 ODBC 연결 특성 SQL_ATTR_CONNECTION_DEAD는 가장 최근 연결 상태를 반환합니다. 이 상태는 현재 연결 상태가 아닐 수도 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|서버에 대한 연결이 손실되었습니다.|  
 |SQL_CD_FALSE|연결이 열려 있으며 문 처리에 사용할 수 있습니다.|  
@@ -50,7 +49,7 @@ ms.locfileid: "85789215"
   
  자세한 내용은 [확장 이벤트 로그에서 진단 정보에 액세스](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)를 참조 하세요.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |SQL_ERROR|연결하지 못했습니다.|  
 |SQL_SUCCESS|연결이 성공했습니다. 출력 버퍼에서 클라이언트 연결 ID를 찾습니다.|  
@@ -69,7 +68,7 @@ ms.locfileid: "85789215"
 ## <a name="sql_copt_ss_user_data"></a>SQL_COPT_SS_USER_DATA  
  SQL_COPT_SS_USER_DATA 특성은 사용자 데이터 포인터를 검색합니다. 사용자 데이터는 클라이언트 소유의 메모리에 저장되고 연결별로 기록됩니다. 사용자 데이터 포인터가 설정되지 않은 경우 NULL 포인터인 SQL_UD_NOTSET가 반환됩니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|사용자 데이터 포인터가 설정되어 있지 않습니다.|  
 |다른 모든 값|사용자 데이터에 대한 포인터입니다.|  

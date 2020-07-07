@@ -14,15 +14,14 @@ ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e80eeb64344c062d06c55e1eae1a85d8e5f0e02
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 853f8bae81b4d3039d4e06e4f0ec67ee22f3c5c3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719752"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004337"
 ---
 # <a name="metadata---catalog"></a>메타데이터 - 카탈로그
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   이 항목에서는 **Sqlcolumns** 및 **SQLProcedureColumns**에서 반환 하는 열 메타 데이터와 **SQLGetTypeInfo**에서 반환 하는 데이터 형식 메타 데이터에 대해 설명 합니다.  
   

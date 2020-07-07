@@ -4,22 +4,30 @@ description: 각 릴리스에 대 한 DB2 (DB2ToSQL)에 대 한 변경 SQL Serve
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 6/2/2020
+ms.date: 7/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: 18e7ba16dcbcc44155172f239accbfe26fe86fc2
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
-ms.translationtype: MT
+ms.openlocfilehash: c35b67bebc63c47750b856d5a2ec2d45666c90b8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779055"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003872"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>D b 2 용 SSMA의 새로운 기능 (DB2ToSQL)
 
 이 문서에서는 각 릴리스의 DB2 변경에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v811"></a>SSMA v 8.11
+
+D b 2 용 SSMA의 v 8.11 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
+
+* I 용 DB2 지원 (v 7.1 이상)
+* 및의 번역 `SQLSTATE``SQLCODE`
+* 함수 내의 주는 연산자에 대 한 변환 오류 메시지
+* 대화형 Azure Active Directory 인증에 MSAL.NET 라이브러리 사용
 
 ## <a name="ssma-v810"></a>SSMA v 8.10
 

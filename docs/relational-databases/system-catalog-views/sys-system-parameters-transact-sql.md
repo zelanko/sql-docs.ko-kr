@@ -20,15 +20,14 @@ ms.assetid: 0d135c5f-68b5-4009-a0da-35e6abfee0ff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb412eaaa2efc36c80e16183e7e55bfe48f765a7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 17a3ee1566145684ee7c4c24cde7f066ac54a841
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85664394"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002710"
 ---
 # <a name="syssystem_parameters-transact-sql"></a>sys.system_parameters(Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   매개 변수가 있는 각 시스템 개체당 한 개의 행을 포함합니다.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "85664394"
 |**default_value**|**sql_variant**|**Has_default_value** 1 인 경우이 열의 값은 매개 변수의 기본값입니다. 그렇지 않으면 NULL입니다.|  
 |**xml_collection_id**|**int**|매개 변수의 데이터 형식이 **xml** 이 고 xml이 입력 된 경우 0이 아닙니다. 이 값은 매개 변수의 유효성 검사 XML 스키마 네임스페이스를 포함하는 컬렉션의 ID입니다.<br /><br /> 0 = XML 스키마 컬렉션이 없습니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

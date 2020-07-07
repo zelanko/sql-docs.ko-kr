@@ -16,15 +16,14 @@ ms.assetid: fa36e1af-ed98-4abc-97c1-c4cc5d227b29
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73cd53e5b9c83fe77027b8260d46bc5b989e91a6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 14c2a982d1d1744eb8ee0da40203b86d62bfaccd
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775942"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001411"
 ---
 # <a name="direct-execution"></a>직접 실행
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   직접 실행은 가장 기본적인 문 실행 방법입니다. 응용 프로그램은 문을 포함 하는 문자열을 작성 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 하 고 **Sqlexecdirect** 함수를 사용 하 여 실행을 위해 전송 합니다. 서버에서 문이 수신되면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 문을 실행 계획으로 컴파일한 다음 실행 계획을 즉시 실행합니다.  
   

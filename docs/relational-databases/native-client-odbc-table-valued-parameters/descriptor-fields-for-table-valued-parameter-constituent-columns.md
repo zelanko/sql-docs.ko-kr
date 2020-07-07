@@ -13,29 +13,28 @@ ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fc2ea564bff8899b3df82fd5d82297b7997c08c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 8c8d5468bbd9888905a39e2ba1aceac148201c97
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783209"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001104"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>테이블 반환 매개 변수 구성 열의 설명자 필드
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   이 섹션에서 설명 하는 테이블 반환 매개 변수 설명자 필드는 IPD (구현 매개 변수 설명자)의 핸들과 함께 [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md) 및 [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md) 를 사용 하 여 조작 합니다.  
   
 ## <a name="remarks"></a>설명  
  SQL_DESC_AUTO_UNIQUE_VALUE는 테이블 반환 매개 변수뿐 아니라 다른 기능에 대해서도 사용됩니다.  
   
-|특성 이름|형식|설명|  
+|특성 이름|Type|Description|  
 |--------------------|----------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|SQL_TRUE는 해당 열이 ID 열임을 나타냅니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는이 정보를 사용 하 여 성능을 최적화할 수 있지만 응용 프로그램은 id 열에 대해이 정보를 설정할 필요가 없습니다.|  
 ||||
 
  APD(애플리케이션 매개 변수 설명자) 및 IPD의 모든 매개 변수 유형에는 다음과 같은 특성이 추가됩니다.  
   
-|특성 이름|형식|설명|  
+|특성 이름|Type|Description|  
 |--------------------|----------|-----------------|  
 |SQL_CA_SS_COLUMN_COMPUTED|SQLSMALLINT|SQL_TRUE는 해당 열이 계산 열임을 나타냅니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는이 정보를 사용 하 여 성능을 최적화할 수 있지만 응용 프로그램에서 계산 열에 대해이 정보를 설정할 필요는 없습니다.<br /><br /> 테이블 반환 매개 변수 열이 아닌 바인딩에 대해서는 이 특성이 무시됩니다.|  
 |SQL_CA_SS_COLUMN_IN_UNIQUE_KEY|SQLSMALLINT|SQL_TRUE는 테이블 반환 매개 변수 열이 고유 키에 참여함을 나타냅니다. 이 경우 쿼리 성능이 향상될 수 있습니다. 테이블 반환 매개 변수 열이 아닌 바인딩에 대해서는 이 특성이 무시됩니다.|  

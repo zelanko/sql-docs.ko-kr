@@ -17,15 +17,14 @@ ms.assetid: 813f1397-fa0b-45ec-a718-e13fe2fb88ac
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3b704311699b4b41b66223865000573c425a9d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 743d58eee394d0ff0b6303aa5de34ae32fed4cb4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783226"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001404"
 ---
 # <a name="effects-of-iso-options"></a>ISO 옵션의 효과
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ODBC 표준은 ISO 표준과 거의 일치하며, ODBC 애플리케이션은 ODBC 드라이버가 표준 동작을 수행할 것으로 예상합니다. Native Client ODBC 드라이버는 해당 동작이 ODBC 표준에 정의 된 것과 더 밀접 하 게 일치 하도록 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 항상 연결 하는 SQL Server 버전에서 사용할 수 있는 ISO 옵션을 사용 합니다.  
   

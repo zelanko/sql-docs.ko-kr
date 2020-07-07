@@ -13,15 +13,14 @@ ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a73fbe7709e30156f198205a21644153fad10240
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: b96e7807fd29e417616f2aec406d6a07f37ccf6f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725180"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004340"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>이전 버전 SQL Server에 대한 향상된 날짜 및 시간 형식 동작(ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   이 항목에서는 향상된 날짜 및 시간 기능을 사용하는 클라이언트 애플리케이션이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]와 통신할 경우 및 Microsoft Data Access Components, Windows Data Access Components 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client를 사용하는 클라이언트 애플리케이션이 향상된 날짜 및 시간 기능을 지원하는 서버에 명령을 보낼 경우 예상되는 동작에 대해 설명합니다.  
   
@@ -36,19 +35,19 @@ ms.locfileid: "85725180"
   
 |SQL Server 2005 형식|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)](또는 이후 버전) 형식|ODBC 클라이언트 형식|결과 변환(SQL에서 C로 변환)|매개 변수 변환(C에서 SQL로 변환)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|DateTime|Date|SQL_C_TYPE_DATE|확인|확인 (1)|  
+|DateTime|날짜|SQL_C_TYPE_DATE|정상|확인 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|시간 필드가 0으로 설정됩니다.|정상(2)<br /><br /> 시간 필드가 0 이외의 값이면 실패합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
-||Time(0)|SQL_C_TYPE_TIME|확인|확인 (1)|  
+||Time(0)|SQL_C_TYPE_TIME|정상|확인 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|날짜 필드가 현재 날짜로 설정됩니다.|정상(2)<br /><br /> 날짜가 무시됩니다. 초 소수 부분이 0 이외의 값이면 실패합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
 ||Time(7)|SQL_C_TIME|실패-시간 리터럴이 잘못 되었습니다.|확인 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|실패-시간 리터럴이 잘못 되었습니다.|확인 (1)|  
-||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|확인|확인 (1)|  
-||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|확인|클라이언트 변환 시 값이 1/300초로 반올림됩니다.|  
-|Smalldatetime|Date|SQL_C_TYPE_DATE|확인|확인|  
+||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|정상|확인 (1)|  
+||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|정상|클라이언트 변환 시 값이 1/300초로 반올림됩니다.|  
+|Smalldatetime|날짜|SQL_C_TYPE_DATE|정상|정상|  
 |||SQL_C_TYPE_TIMESTAMP|시간 필드가 0으로 설정됩니다.|정상(2)<br /><br /> 시간 필드가 0 이외의 값이면 실패합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
-||Time(0)|SQL_C_TYPE_TIME|확인|확인|  
+||Time(0)|SQL_C_TYPE_TIME|정상|정상|  
 |||SQL_C_TYPE_TIMESTAMP|날짜 필드가 현재 날짜로 설정됩니다.|정상(2)<br /><br /> 날짜가 무시됩니다. 초 소수 부분이 0 이외의 값이면 실패합니다.<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
-||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|확인|확인|  
+||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|정상|정상|  
 |||||
 
 ## <a name="key-to-symbols"></a>기호 설명  

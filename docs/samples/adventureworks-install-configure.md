@@ -10,21 +10,20 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 63bbcc23b30e34a66757b0a46d8955edd82a4728
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: a2332a81105124d9060b2416ae1c9b8699376393
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729143"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004766"
 ---
 # <a name="adventureworks-sample-databases"></a>AdventureWorks 예제 데이터베이스
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 이 문서에서는 AdventureWorks 샘플 데이터베이스를 다운로드 하 고 SQL Server 및 Azure SQL Database으로 복원 하는 방법에 대 한 지침을 제공 하는 직접 링크를 제공 합니다. 
 
 예제에 대 한 자세한 내용은 [샘플 GitHub 리포지토리](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases)를 참조 하세요. 
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 - [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019) 또는 [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) 또는 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)

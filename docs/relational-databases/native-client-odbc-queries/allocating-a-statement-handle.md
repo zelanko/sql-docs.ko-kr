@@ -21,15 +21,14 @@ ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bd93e3ac61c81bf7e61f9fd98cd05685877f287
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: f3ff0249ecbe1193a67014dc5c2ad28e79cae7d4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730353"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001460"
 ---
 # <a name="allocating-a-statement-handle"></a>문 핸들 할당
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   애플리케이션에서 문을 실행하려면 먼저 문 핸들을 할당해야 합니다. *HandleType* 매개 변수가 SQL_HANDLE_STMT로 설정 되 고 연결 핸들을 가리키는 *InputHandle* **를 호출 하 여이** 를 수행 합니다.  
   

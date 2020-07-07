@@ -19,15 +19,14 @@ ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4190b13819bddc6a4bdc40d2eae4e09f1a98e7a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: b52f6b4efc831acb9786b1448ad02a1903345cc3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715268"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002764"
 ---
 # <a name="data-source-objects-ole-db"></a>데이터 원본 개체(OLE DB)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client는와 같은 데이터 저장소에 대 한 링크를 설정 하는 데 사용 되는 OLE DB 인터페이스 집합에 대해 데이터 원본 이라는 용어를 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. Native Client 소비자의 첫 번째 작업은 공급자의 데이터 원본 개체의 인스턴스를 만드는 것입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

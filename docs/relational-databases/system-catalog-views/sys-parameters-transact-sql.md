@@ -21,15 +21,14 @@ ms.assetid: 24e2764b-c8e5-4322-97a4-7407d8b8a92b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 377c3f0c569815dbd348020610a6dddb7f01d745
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: d8cc1175448ad9797484247a96df830b9b019da1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760304"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004794"
 ---
 # <a name="sysparameters-transact-sql"></a>sys.parameters(Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   매개 변수를 받는 개체의 각 매개 변수당 하나의 행을 포함합니다. 개체가 스칼라 함수인 경우 반환 값을 설명하는 단일 행도 있으며 해당 행의 **parameter_id** 값은 0이 됩니다.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "85760304"
 |**is_readonly**|**bit**|1 = 매개 변수가 읽기 전용인 경우, 그렇지 않으면 0입니다.|  
 |**is_nullable**|**bit**|1 = 매개 변수가 null을 허용합니다. (기본값).<br /><br /> 0 = 고유하게 컴파일된 저장 프로시저를 보다 효율적으로 실행할 수 있도록 매개 변수가 null을 허용하지 않습니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

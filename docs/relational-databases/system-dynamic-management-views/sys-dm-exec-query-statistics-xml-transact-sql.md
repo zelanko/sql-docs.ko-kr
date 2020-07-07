@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 6304e6381b9bbfcc17b218122631d06293e15830
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 3b1621a89d38e8e241b69aadfb3f2016b63cdb7d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734713"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005200"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>sys. dm_exec_query_statistics_xml (Transact-sql)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 진행 중인 요청에 대 한 쿼리 실행 계획을 반환 합니다. 이 DMV를 사용 하 여 임시 통계를 사용 하 여 실행 계획 XML을 검색 합니다. 
 
@@ -65,11 +64,11 @@ sys.dm_exec_query_statistics_xml(session_id)
     
 **Xml** 데이터 형식에서 허용 되는 중첩 수준 수의 제한으로 인해 **dm_exec_query_statistics_xml** 는 128 수준의 중첩 된 요소를 충족 하거나 초과 하는 쿼리 계획을 반환할 수 없습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 상태로 인해 쿼리 계획을 반환하지 못했으므로 오류 6335가 발생합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]서비스 팩 2 이상 버전에서 **query_plan** 열은 NULL을 반환 합니다.   
 
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `VIEW SERVER STATE` 서버에 대 한 권한이 필요 합니다.  
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.
 
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. 실행 중인 일괄 처리에 대 한 라이브 쿼리 계획 및 실행 통계 보기  
  다음 예에서는 **dm_exec_requests** 를 쿼리하여 흥미로운 쿼리를 찾고 출력에서 해당 쿼리를 복사 합니다. `session_id`  

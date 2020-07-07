@@ -25,15 +25,14 @@ ms.assetid: fbec2efa-5fe9-4121-9b34-60497b0b2aca
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1883f6d4f70aa085ad5d69c595e59f37664b98cb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: e28fae709bc81a10c6ad23228d12532172841488
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787188"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003074"
 ---
 # <a name="syscolumn_master_keys-transact-sql"></a>sys.column_master_keys(Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   [CREATE MASTER key](../../t-sql/statements/create-column-master-key-transact-sql.md) 문을 사용 하 여 추가한 각 데이터베이스 마스터 키에 대해 하나의 행을 반환 합니다. 각 행은 단일 열 마스터 키 (CMK)를 나타냅니다.  
     
@@ -43,14 +42,14 @@ ms.locfileid: "85787188"
 |**column_master_key_id**|**int**|열 마스터 키의 ID입니다.|  
 |**create_date**|**datetime**|열 마스터 키가 만들어진 날짜입니다.|  
 |**modify_date**|**datetime**|열 마스터 키가 마지막으로 수정 된 날짜입니다.|  
-|**key_store_provider_name**|**sysname**|CMK를 포함 하는 열 마스터 키 저장소에 대 한 공급자의 이름입니다. 허용된 값은<br /><br /> MSSQL_CERTIFICATE_STORE-열 마스터 키 저장소가 인증서 저장소 인 경우<br /><br /> 열 마스터 키 저장소가 사용자 지정 형식인 경우 사용자 정의 값입니다.|  
-|**key_path**|**nvarchar(4000)**|키의 열 마스터 키 저장소 관련 경로입니다. 경로의 형식은 열 마스터 키 저장소 유형에 따라 달라 집니다. 예:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> 사용자 지정 열 마스터 키 저장소의 경우 개발자는 사용자 지정 열 마스터 키 저장소에 대 한 키 경로를 정의 해야 합니다.|  
+|**key_store_provider_name**|**sysname**|CMK를 포함 하는 열 마스터 키 저장소에 대 한 공급자의 이름입니다. 허용된 값은 다음과 같습니다.<br /><br /> MSSQL_CERTIFICATE_STORE-열 마스터 키 저장소가 인증서 저장소 인 경우<br /><br /> 열 마스터 키 저장소가 사용자 지정 형식인 경우 사용자 정의 값입니다.|  
+|**key_path**|**nvarchar(4000)**|키의 열 마스터 키 저장소 관련 경로입니다. 경로의 형식은 열 마스터 키 저장소 유형에 따라 달라 집니다. 예제:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> 사용자 지정 열 마스터 키 저장소의 경우 개발자는 사용자 지정 열 마스터 키 저장소에 대 한 키 경로를 정의 해야 합니다.|  
 |**allow_enclave_computations**|**bit**|열 마스터 키가 enclave로 설정 되어 있는지 여부를 나타냅니다 .이 마스터 키로 암호화 된 열 암호화 키를 서버 쪽 secure enclaves 내에서 계산 하는 데 사용할 수 있습니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.|  
 |**서명**|**varbinary(max)**|**Key_path**에서 참조 하는 열 마스터 키를 사용 하 여 생성 된 **key_path** 및 **allow_enclave_computations**의 디지털 서명입니다.|
 
 
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **VIEW ANY COLUMN MASTER KEY** 권한이 필요 합니다.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  

@@ -19,15 +19,14 @@ ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87b905aa178aec6aa10d4d7585384183bdb5d6c9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: e4d6914ce4b46a7fc787b496ebf6b23036b9c21c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783012"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002138"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-sql)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 현재 데이터베이스에서 지정 된 비 스키마 바운드 저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거의 매개 변수에 대 한 Always Encrypted 메타 데이터를 업데이트 합니다. 
 
@@ -48,7 +47,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 `[ @name = ] 'module_name'`저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거의 이름입니다. *module_name* 은 clr (공용 언어 런타임) 저장 프로시저 또는 clr 함수가 될 수 없습니다. *module_name* 은 스키마 바인딩될 수 없습니다. *module_name* 는 이며 `nvarchar` 기본값은 없습니다. *module_name* 은 여러 부분으로 구성 된 식별자가 될 수 있지만 현재 데이터베이스의 개체만 참조할 수 있습니다.
 
-`[ @namespace = ] ' < class > '`는 지정 된 모듈의 클래스입니다. *MODULE_NAME* DDL 트리거 인 경우 `<class>` 가 필요 합니다. `<class>`은 `nvarchar(20)`입니다. 유효한 입력은 `DATABASE_DDL_TRIGGER` 및 `SERVER_DDL_TRIGGER` 입니다.    
+`[ @namespace = ] ' < class > '`는 지정 된 모듈의 클래스입니다. *MODULE_NAME* DDL 트리거 인 경우 `<class>` 가 필요 합니다. `<class>`는 `nvarchar(20)` 입니다. 유효한 입력은 `DATABASE_DDL_TRIGGER` 및 `SERVER_DDL_TRIGGER` 입니다.    
 
 ## <a name="return-code-values"></a>반환 코드 값  
 
@@ -70,7 +69,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 > [!NOTE]
 >  을 실행 하면 개체와 연결 된 모든 서명이 삭제 됩니다 `sp_refresh_parameter_encryption` .
 
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>권한
 
 `ALTER`모듈에 대 한 권한과 `REFERENCES` 개체에서 참조 하는 모든 CLR 사용자 정의 형식 및 XML 스키마 컬렉션에 대 한 사용 권한이 필요 합니다.   
 
@@ -80,7 +79,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 절로 정의 된 모듈의 경우 `EXECUTE AS` `IMPERSONATE` 지정 된 보안 주체에 대 한 권한이 필요 합니다. 일반적으로를 사용 하 여 모듈을 정의 하지 않으면 개체를 새로 고치면 해당 보안 주체가 변경 되지 않으며 `EXECUTE AS` , `EXECUTE AS USER` 보안 주체의 사용자 이름이 모듈이 생성 될 때와 다른 사용자로 확인 됩니다.
  
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 예에서는 테이블 및 테이블을 참조 하는 프로시저를 만들고 Always Encrypted 구성한 다음 테이블을 변경 하 고 프로시저를 실행 하는 방법을 보여 줍니다 `sp_refresh_parameter_encryption` .  
 

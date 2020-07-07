@@ -16,15 +16,14 @@ ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4927ffc7ded9a291e5910cd359cb59edea0bf3bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: e9ba0351a3ea398661642a2e737a58fb7adecf8d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785566"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005841"
 ---
 # <a name="getting-large-data"></a>대규모 데이터 가져오기
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   일반적으로 소비자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ISequentialStream** 인터페이스 포인터를 통해 참조 되지 않는 데이터를 처리 하는 다른 코드에서 네이티브 클라이언트 OLE DB 공급자 저장소 개체를 만드는 코드를 격리 해야 합니다.  
   

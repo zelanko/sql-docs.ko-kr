@@ -12,16 +12,15 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 07/01/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 90821de148c245038b01eda3ebbe5c0b09379255
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
-ms.translationtype: MT
+ms.openlocfilehash: 0be2ffbfb7160d5be8f5ebb2a2ed688103a54b4d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834814"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004616"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>테이블 반환 매개 변수 및 열 값에 대한 바인딩 및 데이터 전송
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 다른 매개 변수와 마찬가지로 테이블 반환 매개 변수 (TVP)는 서버에 전달 되기 전에 바인딩되어야 합니다. 응용 프로그램은 SQLSetDescField 또는 SQLSetDescRec에 대 한 SQLBindParameter 또는 이와 동등한 호출을 사용 하 여 다른 매개 변수를 바인딩하는 것과 동일한 방식으로 테이블 반환 매개 변수를 바인딩합니다. 테이블 반환 매개 변수의 서버 데이터 형식은 SQL_SS_TABLE입니다. C 형식은 SQL_C_DEFAULT 또는 SQL_C_BINARY로 지정할 수 있습니다.  
 

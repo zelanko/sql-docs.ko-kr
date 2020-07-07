@@ -21,15 +21,14 @@ ms.assetid: a5dbc842-71a0-4f62-b5e0-f560a99b7f8c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21985354853f826ed4b535cfb516fe7611998153
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: e95d7fbc8b510ec596932852174b27a2ba40f9f9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85652357"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002305"
 ---
 # <a name="systypes-transact-sql"></a>sys.types(Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   각 시스템 및 사용자 정의 형식당 한 개의 행을 포함합니다.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "85652357"
 |**rule_object_id**|**int**|[Sp_bindrule](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)를 사용 하 여 형식에 바인딩된 독립 실행형 규칙의 ID입니다.<br /><br /> 0 = 규칙이 없습니다.|  
 |**is_table_type**|**bit**|유형이 테이블임을 나타냅니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

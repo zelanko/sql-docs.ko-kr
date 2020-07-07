@@ -16,15 +16,14 @@ ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60319a7911ec1545dd1bd634a2e6c5a8be86c0bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: b189b1faa38c9b9e40fb13c3dd55e57c4f9318d8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730848"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006037"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl(OLE DB)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   대량 복사 작업에 대한 옵션을 설정합니다.  
   
@@ -44,7 +43,7 @@ HRESULT BCPControl(
   
  *eOption*에 가능한 값:  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |BCP_OPTION_ABORT|이미 진행 중인 대량 복사 작업을 중지합니다. 다른 스레드에서 값이 BCP_OPTION_ABORT인 *eOption* 인수와 함께 **BCPControl** 메서드를 호출하여 실행 중인 대량 복사 작업을 중지할 수 있습니다. *iValue* 인수는 무시됩니다.|  
 |BCP_OPTION_BATCH|일괄 처리당 행 수입니다. 기본값은 0으로, 데이터를 추출할 때 테이블에 있는 모든 행 수를 나타내거나 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 복사할 때 사용자 데이터 파일에 있는 모든 행 수를 나타냅니다. 1보다 작은 값을 지정하면 BCP_OPTION_BATCH는 기본값으로 다시 설정됩니다.|  

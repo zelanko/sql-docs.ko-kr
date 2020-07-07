@@ -11,15 +11,14 @@ ms.assetid: f4c9eb0a-173c-4c66-8dd8-6f7176b2657f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17878d3cf3777baf91258ba2be74322f3bf4eeb0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: ce194b0cfadb4ec9fecb207848d1f784cede0259
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787131"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003048"
 ---
 # <a name="sysdatabase_event_session_events-azure-sql-database"></a>sys.database_event_session_events(Azure SQL Database)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   이벤트 세션의 각 이벤트에 대한 행을 반환합니다.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "85787131"
 |predicate|**nvarchar (3000)**|이벤트에 적용되는 조건자 식입니다. Null을 허용합니다.|  
 |predicate_xml|**nvarchar (3000)**|이벤트에 적용되는 XML 조건자 식입니다. Null을 허용합니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  서버에 대한 VIEW DATABASE STATE 권한이 필요합니다.  
   
 ## <a name="remarks"></a>설명  

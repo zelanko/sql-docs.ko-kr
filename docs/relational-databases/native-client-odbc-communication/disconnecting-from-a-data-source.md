@@ -24,15 +24,14 @@ ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2a949cbd38229abda7c604f70fd58d5b5cee3b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 6c7c429b230c068cd2d6b134036ffd1e40053f45
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719829"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005871"
 ---
 # <a name="disconnecting-from-a-data-source"></a>데이터 원본에서 연결 끊기
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   응용 프로그램이 데이터 원본 사용을 마치면 **Sqldisconnect**를 호출 합니다. **Sqldisconnect** 는 연결에 할당 된 모든 문을 해제 하 고 데이터 원본에서 드라이버의 연결을 끊습니다. 연결을 끊은 후 응용 프로그램은 [Sqlfreehandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) 을 호출 하 여 연결 핸들을 해제할 수 있습니다. 종료 하기 전에 응용 프로그램은 **Sqlfreehandle** 을 호출 하 여 환경 핸들을 해제 합니다.  
   
