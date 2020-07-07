@@ -15,15 +15,14 @@ ms.assetid: 2febe2ae-fdc1-490e-a79f-c516bc8e7c3f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b0ac749816383c14398dfae666ebab5fa2509366
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: f4bf13437fa739f00b771dd10b97c6f3b70b3c4b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774395"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006505"
 ---
 # <a name="cursor-rowset-size"></a>커서 행 집합 크기
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ODBC 커서는 한 번에 한 행씩만 인출하도록 제한되지 않습니다. **Sqlfetch** 또는 [sqlfetchscroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)에 대 한 각 호출에서 여러 행을 검색할 수 있습니다. Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 같은 클라이언트/서버 데이터베이스 작업을 할 때는 한 번에 여러 행을 인출하는 것이 효율적입니다. 인출 시 반환 되는 행 수는 행 집합 크기 라고 하며 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)의 SQL_ATTR_ROW_ARRAY_SIZE을 사용 하 여 지정 됩니다.  
   

@@ -15,16 +15,15 @@ ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6b0608265b44e7ccebd95491554739524bac390
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: 1a0c23d91785a453bcbf7857211e524b15a4ec3f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894409"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008591"
 ---
 # <a name="installing-smo"></a>SMO 설치
 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 이 페이지에서는 응용 프로그램에서 사용할 SMO를 설치 하 고 SMO를 사용 하기 위한 시스템 요구 사항에 대 한 정보를 제공 합니다.
 

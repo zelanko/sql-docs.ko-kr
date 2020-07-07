@@ -13,15 +13,14 @@ ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d449e0cf945875c93ed70c4115a2258fdcd61b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 72707085af2cdc39b2e2ef24804613af7a68f171
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724911"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006418"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>결과 처리 방법 도움말 항목(OLE DB)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   OLE DB 애플리케이션에서 결과를 처리하려면 먼저 결과 집합의 특징을 확인한 다음 데이터를 프로그램 변수로 가져와야 합니다. 명령에서 저장 프로시저를 실행하는 경우 저장 프로시저의 반환 코드 및 출력 매개 변수를 처리하는 방법도 알아야 합니다.  
   

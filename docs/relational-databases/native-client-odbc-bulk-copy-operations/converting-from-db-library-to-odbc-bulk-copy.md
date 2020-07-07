@@ -17,15 +17,14 @@ ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0944552bdf8db7ef97a594887a8e84e2ed834a72
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 09726fbbbb1ba1ecd1516dc56ae084897aafff5c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760736"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006607"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>DB-Library에서 ODBC 대량 복사로 변환
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Native Client ODBC 드라이버에서 지 원하는 대량 복사 함수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] db-library 대량 복사 함수와 비슷하며, 다음과 같은 경우를 제외 하 고 db-library 대량 복사 프로그램을 ODBC로 쉽게 변환할 수 있습니다.  
   

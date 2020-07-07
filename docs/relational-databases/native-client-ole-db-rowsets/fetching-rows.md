@@ -17,15 +17,14 @@ ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37018708e8f54b37041a5c25c8a8e0ec5a79ee68
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: f74d247ef06762d4ca5a9533e04b784aac4c477a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724833"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007871"
 ---
 # <a name="fetching-rows"></a>행 인출
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **IRowset** 인터페이스는 기본 행 집합 인터페이스입니다. **IRowset** 인터페이스는 순차적으로 행을 인출하고, 해당 행에서 데이터를 가져오고, 행을 관리하기 위한 메서드를 제공합니다. 소비자는 모든 기본 행 집합 작업에 **IRowset**의 메서드를 사용합니다. 여기에는 행 인출 및 해제, 열 값 가져오기 등이 포함됩니다.  
   

@@ -13,15 +13,14 @@ ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23d2a9c63416eee53e7f873b36ea9bd284af9b80
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 321aeb76c64d0d8917daff93abcd9f78682a1024
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755666"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006590"
 ---
 # <a name="process-odbc-errors-odbc"></a>프로세스 ODBC 오류(ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ODBC 메시지를 검색 하는 데는 두 개의 ODBC 함수 호출 ( [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 및 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md))을 사용할 수 있습니다. **SQLState**, **pfNative**및 **ErrorMessage** 진단 필드에 있는 기본 ODBC 관련 정보를 가져오려면 SQL_NO_DATA를 반환할 때까지 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 를 호출합니다. 각 진단 레코드에 대해 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 를 호출하여 개별 필드를 검색할 수 있습니다. 드라이버별 필드는 모두 **SQLGetDiagField**를 사용하여 검색해야 합니다.  
   
@@ -29,7 +28,7 @@ ms.locfileid: "85755666"
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>설명  
+### <a name="description"></a>Description  
  이 예제에서는 표준 ODBC 정보용 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 을 호출하는 간단한 오류 처리기를 보여 줍니다. 그런 다음 유효한 연결이 있는지 테스트하고, 있을 경우 **SQLGetDiagField** ODBC 드라이버별 진단 필드에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 호출합니다. 이 예제는 IA64에서 지원되지 않습니다.  
   
  이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  

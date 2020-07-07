@@ -17,15 +17,14 @@ ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42f1adda80e8b47e2cea7faebdc374df29d29a39
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: 6d682ca3d6768da16d43c3c09471a6c722561dd3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895970"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008627"
 ---
 # <a name="files-and-version-numbers"></a>파일 및 버전 번호
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   필요한 모든 SMO (SQL Server Management Object) 구성 요소가 Microsoft Sql Server Server NuGet 패키지에 포함 되어 있습니다. SMO는 몇 개의 관리되는 어셈블리에 구현됩니다. 클라이언트나 서버에서 SMO 애플리케이션을 개발할 수 있습니다.  
 
@@ -34,7 +33,7 @@ ms.locfileid: "85895970"
 > > 
 > > 따라서 이러한 버전의 어셈블리를 GAC (전역 어셈블리 캐시) **에 설치 하면 안 됩니다** . 이렇게 하면 Management Studio 같은 다른 응용 프로그램이 중단 될 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
   
-|파일|설명|  
+|파일|Description|  
 |-----------|-----------------|  
 |Microsoft.SqlServer.ConnectionInfo.dll|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결 지원을 포함합니다.|  
 |Microsoft.SqlServer.ServiceBrokerEnum.dll|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Service Broker 프로그래밍 지원을 포함합니다. 이 파일은 Service Broker에 액세스하는 프로그램에만 필요합니다.|  

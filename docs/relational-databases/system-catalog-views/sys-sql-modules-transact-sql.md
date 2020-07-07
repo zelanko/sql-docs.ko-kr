@@ -20,15 +20,14 @@ ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd05afece6814beb84e3fa079b02f661f14990bd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 35364b70b54c0837f5cdbcc3b747a6c066c7beb9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783949"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008356"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules(Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   고유 하 게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴파일된 스칼라 사용자 정의 함수를 포함 하 여의 SQL 언어로 정의 된 모듈인 각 개체에 대해 하나의 행을 반환 합니다. P, RF, V, TR, FN, IF, TF 및 R 유형의 개체에는 연결된 SQL 모듈이 있습니다. 이 뷰에는 독립 실행형 기본값인 유형 D 개체에 대한 SQL 모듈 정의도 있습니다. 이러한 유형에 대 한 설명은 [sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 카탈로그 뷰의 **type** 열을 참조 하세요.  
   
@@ -55,10 +54,10 @@ ms.locfileid: "85783949"
   
  이 정보는 [dm_db_uncontained_entities &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)에도 설명 되어 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 현재 데이터베이스의 각 모듈에 대한 이름, 유형 및 정의를 반환합니다.  
   
 ```  

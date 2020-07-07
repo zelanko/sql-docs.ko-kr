@@ -20,15 +20,14 @@ ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a8d59db8fbc621d70c4a933c7e0ae2b0afbe475a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: 9981601da461fb126024863fc0e794d04195c103
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894964"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008360"
 ---
 # <a name="using-encryption"></a>암호화 사용
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   SMO에서 서비스 마스터 키는 <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> 개체로 표시됩니다. <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Server> 속성에서 참조하며, <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> 메서드를 사용하여 다시 생성할 수 있습니다.  
   

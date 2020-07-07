@@ -11,15 +11,14 @@ ms.assetid: 2f986436-aaf2-4eaf-9809-df849d97d4fb
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0854a081a5dc10c88f2e70e0208b2ea135e7e31f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: 72147bbb3349839a8dd20ff7153b456f43a0c908
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897183"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006432"
 ---
 # <a name="backward-compatibility-in-smo"></a>SMO의 이전 버전과의 호환성
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 작성된 SMO 애플리케이션은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 SMO를 사용하여 다시 컴파일할 수 있습니다.  
   

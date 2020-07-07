@@ -14,15 +14,14 @@ ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e306a3277a540f0d5da79e76aeefc2440fd81730
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: 14c874cace96bddb95fbc650e3d4193800b5b8d5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880073"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008612"
 ---
 # <a name="getting-started-in-smo"></a>SMO 시작
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 이 페이지에서는 SMO (SQL Server 관리 개체) 사용을 시작 하는 데 도움이 되는 항목에 대 한 링크를 제공 합니다. Smo 개체 계층 구조, smo에서 프로그램 작성, SMO 및 다른 프로그래밍 언어 및 특정 프로그래밍 작업에 대해 설명 하는 항목을 다룹니다.  
  

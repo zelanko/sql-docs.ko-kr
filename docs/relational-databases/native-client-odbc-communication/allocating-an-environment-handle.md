@@ -16,15 +16,14 @@ ms.assetid: 15c1b428-ea6d-4672-894c-f0e289e2da3f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ec79644005e599fc17bada65c49d6f1516539fb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: d36f0f2c1f2b98ef70f3a7460c5565307cc0a3d7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734923"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007137"
 ---
 # <a name="allocating-an-environment-handle"></a>환경 핸들 할당
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   애플리케이션에서 ODBC 함수를 호출하려면 먼저 ODBC 환경을 초기화하고 환경 핸들을 할당해야 합니다. 이 핸들은 전역 컨텍스트 핸들이고 ODBC의 다른 핸들에 대한 자리 표시자입니다. 이 작업을 수행 하려면 *HandleType* 매개 변수를 SQL_HANDLE_ENV로 설정 하 고 *InputHandle* 를 SQL_NULL_HANDLE으로 설정 하 여 **SQLAllocHandle** 를 호출 합니다.  
   

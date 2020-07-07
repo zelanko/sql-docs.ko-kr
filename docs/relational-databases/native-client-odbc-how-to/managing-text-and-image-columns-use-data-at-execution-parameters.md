@@ -13,15 +13,14 @@ ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df8b2579ea846663a36cec4290d67fa407468282
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: ee2daaa43c4453db0020f3400ba126b2afcfd5e0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755676"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007912"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>텍스트 및 이미지 열 관리 - Data-at-Execution 매개 변수 사용
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
     
 ### <a name="to-use-data-at-execution-text-ntext-or-image-parameters"></a>실행 시 데이터 text, ntext 또는 image 매개 변수를 사용하려면  

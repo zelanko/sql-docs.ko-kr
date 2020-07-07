@@ -20,15 +20,14 @@ ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dfbb10c989300f33a551cb4686e7467eaf90a604
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 43cc81a77f697334b3afb557e7b2e26ac0184427
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754047"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008588"
 ---
 # <a name="sysdm_os_nodes-transact-sql"></a>sys.dm_os_nodes(Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SQLOS라는 내부 구성 요소는 하드웨어 프로세서 위치와 비슷한 노드 구조를 만듭니다. 이러한 구조는 [소프트 NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md) 를 사용 하 여 변경 하 여 사용자 지정 노드 레이아웃을 만들 수 있습니다.  
 
@@ -61,7 +60,7 @@ SQLOS라는 내부 구성 요소는 하드웨어 프로세서 위치와 비슷�
 |cpu_count |**int** |이 노드에 사용할 수 있는 Cpu 수입니다. |
 |pdw_node_id|**int**|이 배포가 설정 된 노드의 식별자입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>권한
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   

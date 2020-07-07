@@ -16,15 +16,14 @@ ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f715e9459c5ada54b941c23cf32f259bfc338f37
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 547d833e31e5f2862aace68c87e72b6e73055dce
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760713"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006534"
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>빠른 정방향 전용 커서(ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   의 인스턴스에 연결 된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 드라이버는 앞 으로만 이동 가능한 읽기 전용 커서에 대해 성능 최적화를 지원 합니다. 빠른 정방향 전용 커서는 기본 결과 집합과 매우 유사한 방식으로 드라이버 및 서버에서 내부적으로 구현됩니다. 정방향 전용 커서는 높은 성능 외에도 다음과 같은 특성이 있습니다.  
   

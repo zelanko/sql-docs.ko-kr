@@ -18,15 +18,14 @@ ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 87fbcab87999c83c688ec4fa9e46f1aeed033bcf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: b6afbbc9cc5a1300048b043ab92e0152e68ed03a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716425"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007450"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember(Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   현재 데이터베이스의 데이터베이스 역할에 데이터베이스 사용자, 데이터베이스 역할, Windows 로그인 또는 Windows 그룹을 추가합니다.  
   
@@ -61,7 +60,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
  데이터베이스 역할에 멤버를 추가할 경우에만 sp_addrolemember를 사용하십시오. 서버 역할에 멤버를 추가 하려면 [sp_addsrvrolemember &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)를 사용 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  멤버를 유연한 데이터베이스 역할에 추가하려면 다음 항목 중 하나가 필요합니다.  
   
 -   Db_securityadmin 또는 db_owner 고정 데이터베이스 역할의 멤버 자격  
@@ -72,7 +71,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
  고정 데이터베이스 역할에 멤버를 추가하려면 db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-adding-a-windows-login"></a>A. Windows 로그인 추가  
  다음 예에서는 Windows 로그인을 `Contoso\Mary5` `AdventureWorks2012` 사용자로 데이터베이스에 추가 합니다 `Mary5` . 그런 다음 `Mary5` 사용자를 `Production` 역할에 추가합니다.  

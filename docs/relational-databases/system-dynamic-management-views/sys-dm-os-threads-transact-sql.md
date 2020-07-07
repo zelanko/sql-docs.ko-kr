@@ -20,15 +20,14 @@ ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c57cc3e4be2683ec0dee5e9cc209718bf97b3859
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 53957ed65247124927e248c4e9aad104362ec84e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752859"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008561"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads(Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에서 실행되고 있는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 운영 체제 스레드를 목록으로 반환합니다.  
   
@@ -65,7 +64,7 @@ ms.locfileid: "85752859"
 |processor_group|**smallint**|**적용 대상**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 이상<br /><br /> 프로세서 그룹 ID입니다.|  
 |pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>권한
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
@@ -74,7 +73,7 @@ ms.locfileid: "85752859"
 
 Linux에서 SQL 엔진의 작동 방식으로 인해이 정보 중 일부는 Linux 진단 데이터와 일치 하지 않습니다. 예를 들어는, `os_thread_id` `ps` `top` 또는 procfs (/proc/)와 같은 도구의 결과와 일치 하지 않습니다 `pid` .  이는 SQL Server 구성 요소와 운영 체제 간의 레이어인 SQLPAL (Platform 추상화 계층) 때문입니다.
 
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  시작 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 스레드를 시작한 다음 작업자를 해당 스레드에 연결합니다. 그러나 확장 저장 프로시저와 같은 외부 구성 요소가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에서 스레드를 시작할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이러한 스레드를 제어하지 않습니다. dm_os_threads 프로세스에서 리소스를 사용 하는 rogue 스레드에 대 한 정보를 제공할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
  다음 쿼리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 시작하지 않은 스레드를 실행하는 작업자와 실행 소요 시간을 확인하는 데 사용됩니다.  

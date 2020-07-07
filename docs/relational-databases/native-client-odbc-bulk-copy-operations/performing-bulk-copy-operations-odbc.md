@@ -18,15 +18,14 @@ ms.assetid: 5c793405-487c-4f52-88b8-0091d529afb3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 53d25ed32ab657c1e73c3f38e19f4284c7d702d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 55736dd07331a12fe2ec2c5495e860e26ef908af
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734944"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007178"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>대량 복사 작업 수행(ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ODBC 표준에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사 작업을 직접 지원하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상 버전의 인스턴스에 연결되어 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사 작업을 수행하는 DB-Library 함수를 지원합니다. 이 드라이버 관련 확장은 대량 복사 함수를 사용하는 기존 DB-Library 애플리케이션에 대해 편리한 업그레이드 경로를 제공합니다. 특별한 대량 복사 지원은 다음 파일에 포함되어 있습니다.  
   

@@ -17,15 +17,14 @@ ms.assetid: 4b24139f-788b-45a6-86dc-ae835435d737
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2060bf646e8f9aff44ee4e8e5ccc474fa9df5e4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 1b558b9bdab0a7f582cf446b020ebaa76a07ce4f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754512"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007160"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>대량 복사 일괄 처리 크기 관리
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   대량 복사 작업에서 일괄 처리의 주요 목적은 트랜잭션의 범위를 정의하는 것입니다. 일괄 처리 크기를 설정하지 않으면 대량 복사 함수에서 전체 대량 복사를 하나의 트랜잭션으로 간주합니다. 일괄 처리 크기를 설정하면 각 일괄 처리에서 일괄 처리가 완료될 때 커밋되는 하나의 트랜잭션이 구성됩니다.  
   

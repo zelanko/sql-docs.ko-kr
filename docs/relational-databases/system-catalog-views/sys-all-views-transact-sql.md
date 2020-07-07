@@ -20,15 +20,14 @@ ms.assetid: d8829213-fce2-41c6-9ab2-aaab5836c941
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 655d3874f65f6ad6f81b660d6ee6569e4fd08dfe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 8a659d2dc9f6d7f7338546153036a9cfc0fa4db6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649395"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006301"
 ---
 # <a name="sysall_views-transact-sql"></a>sys.all_views(Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   모든 사용자 정의 및 시스템 뷰의 UNION을 표시합니다.  
   
@@ -42,7 +41,7 @@ ms.locfileid: "85649395"
 |**with_check_option**|**bit**|1 = 뷰 정의에 WITH CHECK OPTION이 지정되었습니다.|  
 |**is_date_correlation_view**|**bit**|1 = datetime 열 간 상관 관계 정보를 저장하기 위한 뷰가 시스템에서 자동으로 생성됩니다. DATE_CORRELATION_OPTIMIZATION을 **ON**으로 설정 하 여이 뷰를 만들 수 있습니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
