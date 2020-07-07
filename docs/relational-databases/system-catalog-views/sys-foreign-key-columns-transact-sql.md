@@ -20,15 +20,14 @@ ms.assetid: 7247f065-5441-4bcf-9f25-c84a03290dc6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93f7f96b3283df7e5f0087dec7277692e3485fc9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 08a787de950bb66430799977bed3fb488470ef1d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790551"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85979282"
 ---
 # <a name="sysforeign_key_columns-transact-sql"></a>sys.foreign_key_columns(Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   외래 키를 구성하는 각 열 또는 열 집합당 한 개의 행을 포함합니다.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "85790551"
 |**referenced_object_id**|**int**|후보 키가 있는 참조되는 개체의 ID입니다.|  
 |**referenced_column_id**|**int**|참조되는 열(후보 키 열)의 ID입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

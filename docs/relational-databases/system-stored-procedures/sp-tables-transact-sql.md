@@ -18,15 +18,14 @@ ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03a1d909dc1d3a89b68895e05953cc0ed0da2a7b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 92ea113cfde897e2735be4ae1a3cc35b6bb788fc
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725506"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85984972"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables(Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   현재 환경에서 쿼리할 수 있는 개체의 목록을 반환합니다. 즉, 동의어 개체를 제외한 테이블 또는 보기입니다.  
   
@@ -64,7 +63,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 `[ @fUsePattern = ] 'fUsePattern'`밑줄 (_), 백분율 (%) 및 대괄호 ([또는]) 문자를 와일드 카드 문자로 해석할지 여부를 결정 합니다. 유효한 값은 0(패턴 일치 해제)과 1(패턴 일치 설정)입니다. *fUsePattern* 는 **bit**이며 기본값은 1입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -83,10 +82,10 @@ sp_tables [ [ @table_name = ] 'name' ]
   
  **sp_tables** 는 ODBC의 **sqltables** 와 동일 합니다. 반환 된 결과는 **TABLE_TYPE**, **TABLE_QUALIFIER**, **TABLE_OWNER**및 **TABLE_NAME**를 기준으로 정렬 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-returning-a-list-of-objects-that-can-be-queried-in-the-current-environment"></a>A. 현재 환경에서 쿼리할 수 있는 개체 목록 반환  
  다음 예에서는 현재 환경에서 쿼리할 수 있는 개체 목록을 반환합니다.  

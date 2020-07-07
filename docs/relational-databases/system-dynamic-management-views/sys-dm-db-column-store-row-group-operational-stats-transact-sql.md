@@ -13,15 +13,14 @@ ms.assetid: 31b71c68-50a0-4fd8-a7fe-2d2292be1163
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9430c5c42f9b871457fdaae1386e198a176a0bba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 7cd826eac32d08e4933c1883f6b4cab3706aad2d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754245"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85985122"
 ---
 # <a name="sysdm_db_column_store_row_group_operational_stats-transact-sql"></a>sys. dm_db_column_store_row_group_operational_stats (Transact-sql)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Columnstore 인덱스의 압축 된 행 그룹에 대 한 현재 행 수준 i/o, 잠금 및 액세스 방법 작업을 반환 합니다. 행 그룹를 사용 하 여 사용자 쿼리가 columnstore 인덱스의 압축 된 또는 파티션에 대 한 읽기 또는 쓰기를 대기 해야 하는 시간을 추적 하 고, 상당한 i/o 작업 또는 핫 스폿이 발생 하는 행 그룹을 식별할 수 **있습니다 dm_db_column_store_row_group_operational_stats.**  
   
@@ -41,7 +40,7 @@ ms.locfileid: "85754245"
 |**rowgroup_lock_wait_count**|**bigint**|마지막 SQL 다시 시작 이후 데이터베이스 엔진이이 행 그룹 잠금에서 대기한 누적 횟수입니다.|  
 |**rowgroup_lock_wait_in_ms**|**bigint**|마지막 SQL 다시 시작 이후 데이터베이스 엔진이이 행 그룹 잠금에서 대기한 누적 시간 (밀리초)입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  다음 사용 권한이 필요합니다.  
   
 -   Object_id에 지정 된 테이블에 대 한 CONTROL 권한  
