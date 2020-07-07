@@ -19,15 +19,14 @@ ms.assetid: 06ded0ca-7d21-4400-864a-b801e855b257
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c758dcded1b449dda890e3ba96c26c87dda9622d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 3ba42e693487fdf2bc9c7cb9565ee2448d6b3f9b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784871"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000433"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS(Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   현재 데이터베이스에서 현재 사용자가 액세스할 수 있는 사용자 정의 함수 또는 저장 프로시저의 각 매개 변수당 한 개의 행을 반환합니다. 함수의 경우에도 이 뷰는 반환 값 정보를 담은 한 행을 반환합니다.  
   

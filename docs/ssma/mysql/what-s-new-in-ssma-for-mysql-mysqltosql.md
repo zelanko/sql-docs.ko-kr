@@ -4,22 +4,27 @@ description: 각 릴리스에 대 한 MySQL (MySQLToSQL)에 대 한 변경 SQL S
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 6/2/2020
+ms.date: 7/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: ce77e0e9a3421fab7f1fc031bbf55e8a84c235df
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
-ms.translationtype: MT
+ms.openlocfilehash: 1c0292d05624e2d3cb8640d719fc2c0e29474cb0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84778065"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000376"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>MySQL용 SSMA의 새로운 기능(MySQLToSql)
 
 이 문서에서는 각 릴리스의 MySQL 변경 내용에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v811"></a>SSMA v 8.11
+
+MySQL 용 SSMA의 v 8.11 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
+
+* 대화형 Azure Active Directory 인증에 MSAL.NET 라이브러리 사용
 
 ## <a name="ssma-v810"></a>SSMA v 8.10
 
