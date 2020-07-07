@@ -15,15 +15,14 @@ ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55f91748efb8ad5b46abf8c36f407bf4a52b2a52
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 5d87c4a4537683d9dbb9817a0a3c022f23f2b846
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724967"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998203"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 구조
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Sqlncli에 정의 된 **Ssvariant** 구조는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLEDB 공급자의 DBTYPE_SQLVARIANT 값에 해당 합니다.  
   
@@ -55,7 +54,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
   
  다음 표에서는 **SSVARIANT** 구조의 멤버를 설명합니다.  
   
-|멤버|OLE DB 유형 표시기|OLE DB C 데이터 형식|vt 값|의견|  
+|멤버|OLE DB 유형 표시기|OLE DB C 데이터 형식|vt 값|주석|  
 |------------|---------------------------|------------------------|--------------|--------------|  
 |vt|SSVARTYPE|||**SSVARIANT** 구조에 포함된 값 유형을 지정합니다.|  
 |bTinyIntVal|DBTYPE_UI1|**바이트만**|**VT_SS_UI1**|에서는 **tinyint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원 합니다.|  

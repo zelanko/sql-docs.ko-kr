@@ -18,15 +18,14 @@ ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ffce9dd6a06b433e183570767bf165c9e6b75d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 83f46ddd70061ef0f0647c902221b7f906917048
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771239"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999899"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns(Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   현재 환경에서 쿼리할 수 있는 지정된 개체에 대한 열 정보를 반환합니다.  
   
@@ -58,7 +57,7 @@ sp_columns [ @table_name = ] object
 `[ \@ODBCVer = ] ODBCVer`사용 중인 ODBC의 버전입니다. *ODBCVer* 는 **int**이며 기본값은 2입니다. 이 값은 ODBC 버전 2를 나타내며 유효한 값은 2 또는 3입니다. 버전 2와 3의 동작 차이에 대 한 자세한 내용은 ODBC **Sqlcolumns** 사양을 참조 하십시오.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="result-sets"></a>결과 집합  
  **Sp_columns** 카탈로그 저장 프로시저는 ODBC의 **sqlcolumns** 와 동일 합니다. 반환 되는 결과는 **TABLE_QUALIFIER**, **TABLE_OWNER**및 **TABLE_NAME**순으로 정렬 됩니다.  
@@ -87,13 +86,13 @@ sp_columns [ @table_name = ] object
   
  <sup>1</sup> 자세한 내용은 Microsoft ODBC 설명서를 참조 하십시오.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  스키마에 대 한 SELECT 및 VIEW DEFINITION 권한이 필요 합니다.  
   
 ## <a name="remarks"></a>설명  
  **sp_columns** 구분 식별자에 대 한 요구 사항을 따릅니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 지정된 테이블의 열 정보를 반환합니다.  
   
 ```  

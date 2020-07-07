@@ -20,15 +20,14 @@ ms.assetid: ab8ddde8-1cea-4b41-a7e4-697e6ddd785a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9c180e31958c6d1a6c9cdd728de5ea9a2e6b32ba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 60b42cfd1fe3e8c57849b4a8501667c7f6ee96d2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734782"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000264"
 ---
 # <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys.dm_exec_procedure_stats(Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   캐시된 저장 프로시저에 대한 집계 성능 통계를 반환합니다. 이 뷰에는 캐시된 각 저장 프로시저 계획에 대해 하나의 행이 반환되며 행의 유효 기간은 저장 프로시저가 캐시에 남아 있는 기간과 같습니다. 캐시에서 저장 프로시저가 제거되면 이 뷰에서도 해당 행이 제거됩니다. 이때 Performance Statistics SQL 추적 이벤트가 **sys.dm_exec_query_stats**와 유사하게 발생합니다.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "85734782"
   
  <sup>1</sup> 통계 수집을 사용 하는 경우 고유 하 게 컴파일된 저장 프로시저의 경우 작업자 시간이 밀리초 단위로 수집 됩니다. 쿼리가 밀리초 미만 단위로 실행되는 경우 값은 0이 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
@@ -90,7 +89,7 @@ ms.locfileid: "85734782"
 ## <a name="remarks"></a>설명  
  저장 프로시저의 실행이 완료되면 뷰에 있는 통계가 업데이트됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 평균 경과 시간으로 식별된 상위 10개의 저장 프로시저에 대한 정보를 반환합니다.  
   
 ```sql  

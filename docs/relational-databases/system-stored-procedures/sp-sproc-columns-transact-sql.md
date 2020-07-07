@@ -18,15 +18,14 @@ ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff8bf43db68acb2d29d8fe5310b86290391050e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: c26e1b6272f4c3cdf6a1e8ed644ab9d03052948a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645157"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999887"
 ---
 # <a name="sp_sproc_columns-transact-sql"></a>sp_sproc_columns(Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   현재 환경 내의 저장 프로시저 또는 사용자 정의 함수에 대한 열 정보를 반환합니다.  
   
@@ -61,7 +60,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 `[ @fUsePattern = ] 'fUsePattern'`밑줄 (_), 백분율 (%) 및 대괄호 ([]) 문자를 와일드 카드 문자로 해석할지 여부를 결정 합니다. 유효한 값은 0(패턴 일치 해제)과 1(패턴 일치 설정)입니다. *fUsePattern* 는 **bit**이며 기본값은 1입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -91,7 +90,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 ## <a name="remarks"></a>설명  
  **sp_sproc_columns** 은 ODBC의 **SQLProcedureColumns** 와 동일 합니다. 반환 되는 결과는 **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**, **PROCEDURE_NAME**및 매개 변수가 프로시저 정의에 표시 되는 순서에 따라 정렬 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  

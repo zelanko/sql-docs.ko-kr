@@ -16,15 +16,14 @@ ms.assetid: 118a7cac-4c0d-44fd-b63e-3d542932d239
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 618fabb71d61aeee4543f7c2c869aa02f7b3e987
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 7c765f45b986640fd6b6a1bf1cf491e783e38ae2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85657094"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998878"
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>SQL Server Native Client와 함께 ADO 사용
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]MARS (multiple active result sets), 쿼리 알림, udt (사용자 정의 형식) 또는 새로운 **xml** 데이터 형식과 같은에 도입 된 새 기능을 활용 하기 위해 ADO (ADO(ActiveX Data Objects))를 사용 하는 기존 응용 프로그램은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 데이터 액세스 공급자로 사용 해야 합니다.  
   
@@ -61,7 +60,7 @@ con.ConnectionString = "Provider=SQLNCLI11;" _
 con.Open  
 ```  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 섹션에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자와 함께 ADO를 사용 하는 방법에 대 한 예제를 제공 합니다.  
   
 ### <a name="retrieving-xml-column-data"></a>XML 열 데이터 검색  

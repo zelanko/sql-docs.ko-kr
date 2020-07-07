@@ -23,16 +23,15 @@ ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f53f49e8418b8fb178a8fd1689c3bc64a8b0a0a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: a9fe9717342edb8f02cdc503b6efb8e47b755bb9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733624"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85997317"
 ---
 # <a name="system-catalog-views-transact-sql"></a>시스템 카탈로그 뷰 (Transact-sql)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 카탈로그 뷰는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 사용하는 정보를 반환합니다. 카탈로그 뷰는 카탈로그 메타데이터에 대한 가장 일반적인 인터페이스이며 정보를 획득 및 변환하고 사용자 지정 형태로 제공하는 데 가장 효과적인 방법을 제공하므로 카탈로그 뷰를 사용하는 것이 좋습니다. 사용자가 이용할 수 있는 모든 카탈로그 메타데이터는 카탈로그 뷰를 통해 표시됩니다.
 

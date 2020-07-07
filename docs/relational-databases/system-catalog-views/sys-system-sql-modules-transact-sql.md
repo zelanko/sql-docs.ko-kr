@@ -20,15 +20,14 @@ ms.assetid: ad3548bc-4780-4821-b962-b421d52daed9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0462b231ee46a7e4ccce3bb498c6271d450c5e26
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 2754beba5dba55e1af19a293f9a181a737c229fa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85664327"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999118"
 ---
 # <a name="syssystem_sql_modules-transact-sql"></a>sys.system_sql_modules(Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   SQL 언어로 정의된 모듈을 포함하는 각 시스템 개체에 대해 행을 반환합니다. FN, IF, P, PC, TF, V 형식의 시스템 개체에는 연관된 SQL 모듈이 있습니다. 포함 하는 개체를 식별 하려면이 뷰를 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)에 조인할 수 있습니다.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "85664327"
 |**null_on_null_input**|**bit**|0 = NULL 입력에 NULL 출력을 만들어내도록 모듈을 만들지 않았습니다.<br /><br /> 항상 0을 반환합니다.|  
 |**execute_as_principal_id**|**int**|항상 NULL을 반환합니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

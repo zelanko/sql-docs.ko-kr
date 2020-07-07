@@ -12,21 +12,20 @@ ms.assetid: 473b5d14-171b-4a16-9195-acf36d3f786c
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5fa2412e61e30852497ffa00493ea6dbe244989a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: d91fdabce5350614d504b7dfdf990e2dd54b8b48
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001117"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999123"
 ---
 # <a name="syspdw_nodes_tables-transact-sql"></a>sys. pdw_nodes_tables (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   보안 주체가 소유 하 고 있거나 일부 사용 권한이 부여 된 각 테이블 개체에 대 한 행을 포함 합니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|\<상속 된 열>||이 뷰가 상속 하는 열 목록은 [sys. 개체](../system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)를 참조 하세요.||  
+|\<inherited columns>||이 뷰가 상속 하는 열 목록은 [sys. 개체](../system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.||  
 |lob_data_space_id|**int**||항상 0입니다.|  
 |filestream_data_space_id|**int**|FILESTREAM 파일 그룹의 데이터 공간 ID 또는[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**int**|이 테이블에 사용 되는 최대 열 ID입니다.||  
@@ -42,7 +41,7 @@ ms.locfileid: "68001117"
 |is_tracked_by_cdc|**bit**|1 = 테이블에 변경 데이터 캡처가 설정 되어 있습니다.|항상 0입니다. CDC를 지원 하지 않습니다.|  
 |lock_escalation|**tinyint**|테이블에 대 한 LOCK_ESCALATION 옵션 값: 2 = AUTO|항상 2입니다.|  
 |lock_escalation_desc|**nvarchar(60)**|Lock_escalation 옵션에 대 한 텍스트 설명입니다.|항상 ꞌ 자동 ꞌ입니다.|  
-|pdw_node_id|**int**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 노드의 고유 식별자입니다.|NOT NULL|  
+|pdw_node_id|**int**|노드의 고유 식별자 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 입니다.|NOT NULL|  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Data Warehouse 및 병렬 Data Warehouse 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  

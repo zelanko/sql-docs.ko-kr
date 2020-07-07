@@ -16,15 +16,14 @@ ms.assetid: b57decda-b0c1-4ef6-8c81-491956de2890
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d43e1678e4b2cb144f37b0c7e1f44b93a9630b8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: abb6354302554f215e59e9bb721b818946e9af81
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734865"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998477"
 ---
 # <a name="fetching-blob-data-using-irowgetcolumns-and-isequentialstream"></a>IRow::GetColumns 및 ISequentialStream을 사용하여 BLOB 데이터 인출
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   다음 함수는 **IRow::GetColumns** 및 **ISequentialStream**을 사용하여 대형 데이터를 인출합니다.  
   

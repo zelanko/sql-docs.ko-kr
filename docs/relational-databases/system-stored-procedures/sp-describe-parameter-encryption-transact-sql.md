@@ -18,15 +18,14 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 583536c1b69951b18e6d30910f4e4d9d44b8d99f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: ccba808ada0276933608b9297b6c416c11cdb194
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717363"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998953"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-sql)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   지정 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 해당 매개 변수를 분석 하 여 Always Encrypted 기능을 사용 하 여 보호 되는 데이터베이스 열에 해당 하는 매개 변수를 확인 합니다. 암호화 된 열에 해당 하는 매개 변수에 대 한 암호화 메타 데이터를 반환 합니다.  
   
@@ -86,10 +85,10 @@ sp_describe_parameter_encryption
 ## <a name="remarks"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Always Encrypted를 지 원하는 클라이언트 드라이버는 **sp_describe_parameter_encryption** 를 자동으로 호출 하 여 응용 프로그램에서 실행 한 매개 변수가 있는 쿼리에 대 한 암호화 메타 데이터를 검색 합니다. 그런 다음, 드라이버는 암호화 메타 데이터를 사용 하 여 Always Encrypted로 보호 되는 데이터베이스 열에 해당 하는 매개 변수의 값을 암호화 하 고, 데이터베이스 엔진에 쿼리를 보내기 전에 응용 프로그램에서 전송한 일반 텍스트 매개 변수 값을 암호화 된 매개 변수 값으로 대체 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  데이터베이스에서 **VIEW ANY COLUMN ENCRYPTION key** Definition 및 **VIEW ANY COLUMN MASTER KEY definition** 권한이 필요 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ```sql  
 CREATE COLUMN MASTER KEY [CMK1]  
