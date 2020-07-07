@@ -18,15 +18,14 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: b959348aaf7ca293a9d475a8b4eb6cb5cfdee7aa
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
-ms.translationtype: MT
+ms.openlocfilehash: 334b4ee83df73284abe7d20cdff66675d42039d5
+ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834637"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86032566"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-sql)
-[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
 
   반복적으로 또는 반복적으로 검색 되는 그래프의 검색 조건을 지정 합니다. SELECT 문에서 그래프 노드 및에 지 테이블과 일치 하는 항목 내에 SHORTEST_PATH를 사용할 수 있습니다. 
   
@@ -85,7 +84,7 @@ STRING_AGG 함수는 식과 구분 기호를 입력으로 사용 하 고 문자�
 ### <a name="last_value"></a>LAST_VALUE
 트래버스 된 경로에서 마지막 노드의 특성을 프로젝션 하려면 LAST_VALUE 집계 함수를 사용할 수 있습니다. Edge 테이블 별칭을이 함수에 대 한 입력으로 제공 하면 노드 테이블 이름 또는 별칭만 사용할 수 있습니다.
 
-**마지막 노드**: 마지막 노드는 일치 조건자의 화살표 방향에 관계 없이 트래버스 된 경로에서 마지막으로 표시 되는 노드를 참조 합니다. 예: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. 여기서 경로의 마지막 노드는 마지막으로 방문한 P 노드가 됩니다. 
+**마지막 노드**: 마지막 노드는 일치 조건자의 화살표 방향에 관계 없이 트래버스 된 경로에서 마지막으로 표시 되는 노드를 참조 합니다. 예: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )` 여기서 경로의 마지막 노드는 마지막으로 방문한 P 노드가 됩니다. 
 
 반면 마지막 노드는이 패턴에 대 한 출력 그래프 경로의 마지막 n 번째 노드입니다.`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
@@ -115,7 +114,7 @@ LAST_NODE은 shortest_path 내 에서만 지원 됩니다.
 경우에 따라 홉 수가 더 많은 쿼리에 대해 잘못 된 계획이 생성 될 수 있으며이로 인해 쿼리 실행 시간이 더 높아질 수 있습니다. Hash join 힌트를 사용 하면 도움이 될 수 있습니다.    
 
 
-## <a name="examples"></a>예제 
+## <a name="examples"></a>예 
 여기에 표시 된 예제 쿼리의 경우 [SQL Graph 샘플](./sql-graph-sample.md) 에서 만든 노드와에 지 테이블을 사용 합니다.
 
 ### <a name="a--find-shortest-path-between-2-people"></a>A.  2 명 사이의 최단 경로 찾기

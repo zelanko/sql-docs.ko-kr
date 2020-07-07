@@ -22,15 +22,14 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55e5892b9183ab2455cee7aa39a34de0d7bb28bf
-ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
-ms.translationtype: MT
+ms.openlocfilehash: 0394d8c13ec3aa9b458813556c80645841b5576b
+ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107043"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86032516"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에서 사용할 수 있고 소비하는 리소스 및 컴퓨터에 대한 기타 유용한 정보를 반환합니다.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "85107043"
 |**cores_per_socket** |**int** | **적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 이상.<br /><br />시스템에서 사용할 수 있는 소켓 당 프로세서 수를 지정 합니다. |  
 |**numa_node_count** |**int** | **적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 이상.<br /><br />시스템에서 사용할 수 있는 numa 노드 수를 지정 합니다. 이 열에는 실제 numa 노드 뿐만 아니라 소프트 numa 노드도 포함 됩니다. |  
   
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>권한
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
