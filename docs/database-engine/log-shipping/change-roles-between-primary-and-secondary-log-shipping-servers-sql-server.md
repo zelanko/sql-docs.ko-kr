@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e06d382258d6d98b7f54ff9dd3f4840a04274d81
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b2a032663343223bcfab58075343e61c72e1df7c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258998"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696783"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>주 로그 전달 서버와 보조 로그 전달 서버 간 역할 변경(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   보조 서버로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 전달 구성에 대해 장애 조치(Failover)를 수행한 후에 주 데이터베이스로 작동하도록 보조 데이터베이스를 구성할 수 있습니다. 그러면 필요할 때 주 데이터베이스와 보조 데이터베이스를 바꿀 수 있습니다.  
   
 ## <a name="performing-the-initial-role-change"></a>초기 역할 변경 수행  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2d9a354b23a751a657ca10acc7e6cc19c6b586b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 27556251ca186661928de29b8a1f6dd4ac0e9fb0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137423"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85694959"
 ---
 # <a name="database-mail"></a>데이터베이스 메일
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   데이터베이스 메일은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 또는 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)에서 이메일 메시지를 보내는 엔터프라이즈 솔루션입니다. 데이터베이스 메일을 사용하여 데이터베이스 애플리케이션에서 전자 메일 메시지를 사용자에게 보낼 수 있습니다. 메시지에는 쿼리 결과와 네트워크상의 리소스 파일이 포함될 수 있습니다.  
   
 > [!NOTE] 

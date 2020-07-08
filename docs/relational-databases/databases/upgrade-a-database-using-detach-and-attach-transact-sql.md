@@ -1,9 +1,7 @@
 ---
 title: 분리 및 연결을 사용하여 데이터베이스 업그레이드(Transact-SQL)
-ms.custom: seo-dt-2019
-ms.date: 11/26/2018
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
@@ -17,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8e26f678ae13fac11c39569d15e26c0e79e46deb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-dt-2019
+ms.openlocfilehash: cbaa67dbde197e1e59df92380945a0d969180add
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095533"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85694722"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>분리 및 연결을 사용하여 데이터베이스 업그레이드(Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 이 항목에서는 분리 및 연결 작업을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 데이터베이스를 업그레이드하는 방법에 대해 설명합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 연결하면 데이터베이스를 바로 사용할 수 있으며 자동으로 업그레이드됩니다. 데이터베이스가 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]의 이전 버전으로 사용되지 않도록 합니다. 그러나 메타데이터 업그레이드는 데이터베이스의 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 설정에 영향을 주지 않습니다. 이 항목 뒷부분의 [업그레이드 후 데이터베이스 호환성 수준](#dbcompat)에서 자세한 정보를 참조하세요.  
   
  **항목 내용**  

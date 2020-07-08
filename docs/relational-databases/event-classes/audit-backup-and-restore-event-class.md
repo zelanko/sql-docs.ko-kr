@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 08b0b5fe-298a-483f-b50a-73919a2513ce
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9fb1de6376895c6c35bbbb7ec957837ae166250f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 07e448a8d63b7047ecafe19aa6f7adfbb535338d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903551"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85693813"
 ---
 # <a name="audit-backup-and-restore-event-class"></a>감사 백업 및 이벤트 클래스 복원
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **Audit Backup/Restore** 이벤트 클래스는 백업 또는 복원 명령이 실행될 때마다 발생합니다.  
   
 ## <a name="audit-backuprestore-event-class-data-columns"></a>Audit Backup/Restore 이벤트 클래스 데이터 열  

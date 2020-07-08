@@ -12,15 +12,15 @@ ms.assetid: 6e0633dc-889e-49ef-bace-3c50958db2dd
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 202baede7eed746a581a11d165fe6d7b0fb5afdd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bad68dc1125b50d956b1580751d5911d031a37bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903601"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85693797"
 ---
 # <a name="audit-addlogin-event-class"></a>Audit Addlogin 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Audit Addlogin** 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 추가되거나 제거될 때 발생합니다.  
   
  로그인이 추가될 때 기본 데이터베이스 같은 추가 속성을 설정하면 이러한 속성에 대한 정보가 이 이벤트의 **TextData** 열에 나타나게 됩니다. 로그인을 추가하는 동안 이러한 속성을 설정하면 **Audit Login Change Property 이벤트** 가 발생합니다.  

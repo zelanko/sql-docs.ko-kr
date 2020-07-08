@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 657dedcf4944a2540d1237b53fa8ea822c31ae3f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b54f60e71344bc04271378fbd84214b31bd9503c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68031637"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692496"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>2단원: 계층적 테이블의 데이터 만들기 및 관리
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 1단원에서는 **hierarchyid** 데이터 형식을 사용하여 기존 테이블을 수정한 다음 기존 데이터 표현으로 **hierarchyid** 열을 채웠습니다. 이 단원에서는 계층 메서드를 사용하여 새 테이블에 처음부터 데이터를 삽입합니다. 그런 다음 계층 메서드를 사용하여 데이터를 쿼리하고 조작합니다. 
 
 ## <a name="prerequisites"></a>사전 요구 사항  
@@ -289,7 +289,7 @@ Marketing Assistant인 **Wanida** (**EmployeeID** 269)는 **Sariya**에게 보�
    
   
 ## <a name="reorder-data-in-a-hierarchical-table-using-hierarchical-methods"></a>계층 메서드를 사용하여 계층적 테이블의 데이터 다시 정렬
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 계층을 다시 구성하는 것은 일반적인 유지 관리 태스크입니다. 이 태스크에서는 UPDATE 문을 [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) 메서드와 함께 사용하여 먼저 단일 행을 계층의 새 위치로 이동합니다. 그런 다음 전체 하위 트리를 새 위치로 이동합니다.  
   
 `GetReparentedValue` 메서드는 두 개의 인수를 사용합니다. 첫 번째 인수는 수정할 계층 부분을 설명합니다. 예를 들어 계층이 **/1/4/2/3/** 인 경우 **/1/4/** 섹션을 변경하여 계층을 **/2/1/2/3/** 으로 만들고 마지막 두 노드(**2/3/** )는 변경하지 않으려면 변경되는 노드( **/1/4/** )를 첫 번째 인수로 제공해야 합니다. 두 번째 인수는 새 계층 구조 수준(이 예제의 경우 **/2/1/** )을 제공합니다. 두 인수의 수준 수가 같을 필요는 없습니다.  

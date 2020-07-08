@@ -12,15 +12,15 @@ ms.assetid: 8cfacc82-cee8-4199-a69e-acedecfc0b3b
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f28fc04c8728e8911ad04ac83432c25a1f5755cc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28009f6a84ef11668b84ae5fd8ff5c6f08a6a9aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903508"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85693330"
 ---
 # <a name="audit-change-audit-event-class"></a>Audit Change Audit 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Audit Change Audit** 이벤트 클래스는 감사 추적을 수정할 때마다 발생합니다.  
   
 ## <a name="audit-change-audit-event-class-data-columns"></a>Audit Change Audit 이벤트 클래스 데이터 열  

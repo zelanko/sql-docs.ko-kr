@@ -12,15 +12,15 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 1e449c95c6dd087eaa70de48b1fb79ac8d7b6f6c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1e2443340670272324445f7c09b7c5c475064ea1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763204"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85694927"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>데이터베이스 메일을 사용하도록 SQL Server 에이전트 메일 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 데이터베이스 메일로 알림 및 경고를 보내도록 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에이전트를 구성하는 방법에 대해 설명합니다.  데이터베이스 메일을 사용하도록 설정하고 구성하는 방법은 [데이터베이스 메일 구성](../../relational-databases/database-mail/configure-database-mail.md)을 참조하세요.  [!INCLUDE[tsql](../../includes/tsql-md.md)]사용에 대한 예제는 [데이터베이스 메일 프로필 만들기](../../relational-databases/database-mail/create-a-database-mail-profile.md)를 참조하세요.
   
 -   **시작하기 전 주의 사항:**  

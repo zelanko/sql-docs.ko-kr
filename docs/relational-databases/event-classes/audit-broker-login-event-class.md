@@ -12,15 +12,15 @@ ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aa7eb86c744206c0501cf98ecdb56423d734799c
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 9b78ae1ad6fafcf4be86cd2d32e936d2ef018ed8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529433"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85693641"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 **Audit Broker Login** 이벤트를 만들어 Service Broker 전송 보안과 관련된 감사 메시지를 보고합니다.  
   
 ## <a name="audit-broker-login-event-class-data-columns"></a>Audit Broker Login 이벤트 클래스 데이터 열  

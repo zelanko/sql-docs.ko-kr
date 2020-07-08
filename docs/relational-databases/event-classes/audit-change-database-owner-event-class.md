@@ -12,15 +12,15 @@ ms.assetid: 2f1dd4fc-2540-423c-80ad-c5bc712c42e0
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc4b50bdc589a609bf10f207333b82a4a98d4c23
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d9d850cc7b19d3470fe4e57f4b81e7b6eda13cd0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099549"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85693230"
 ---
 # <a name="audit-change-database-owner-event-class"></a>Audit Change Database Owner 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Audit Change Database Owner** 이벤트 클래스는 ALTER AUTHORIZATION 문을 사용하여 데이터베이스 소유자를 변경하고 이 작업에 필요한 사용 권한이 확인된 경우 발생합니다.  
   
 ## <a name="audit-change-database-owner-event-class-data-columns"></a>Audit Change Database Owner 이벤트 클래스 데이터 열  
