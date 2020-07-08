@@ -15,16 +15,16 @@ ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 32474836bfbf61f74370724f0750732e11542e9e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 91b5915324fc95d9199b4ec1d9aaa2ca0fee89d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284943"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653679"
 ---
 # <a name="distribution-agent-security"></a>배포 에이전트 보안
 ::: moniker range=">=sql-server-2014||=sqlallproducts-allversions" 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 **배포 에이전트 보안** 대화 상자를 사용하여 배포 에이전트를 실행하는 Windows 계정을 지정할 수 있습니다. 배포 에이전트는 밀어넣기 구독을 위한 배포자 또는 끌어오기 구독을 위한 구독자에서 실행됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정으로 에이전트 프로세스가 실행되기 때문에 이 계정을 *프로세스 계정*이라고도 합니다. 이 대화 상자에서 사용 가능한 추가 옵션은 대화 상자에 액세스하는 방법에 따라 달라집니다.  
   
 -   새 구독 마법사에서 이 대화 상자에 액세스하는 경우 배포 에이전트를 구독자(밀어넣기 구독의 경우) 또는 배포자(끌어오기 구독의 경우)에 연결하는 컨텍스트도 지정할 수 있습니다. Windows 계정을 가장하거나 지정한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정의 컨텍스트에서 연결을 설정할 수 있습니다.  
@@ -105,7 +105,7 @@ Persist Security Info=False;Connection Pooling=True;
 ::: moniker-end
   
 ::: monikerRange="azuresqldb-mi-current"
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 **배포 에이전트 보안** 대화 상자를 사용하여 배포 에이전트를 실행할 SQL 인증 계정을 지정할 수 있습니다. 배포 에이전트는 밀어넣기 구독을 위한 배포자 또는 끌어오기 구독을 위한 구독자에서 실행됩니다.  이 대화 상자에서 사용 가능한 추가 옵션은 대화 상자에 액세스하는 방법에 따라 달라집니다.  
   
 -   새 구독 마법사에서 이 대화 상자에 액세스하는 경우 배포 에이전트를 구독자(밀어넣기 구독의 경우) 또는 배포자(끌어오기 구독의 경우)에 연결하는 컨텍스트도 지정할 수 있습니다. SQL Server 인증 계정을 사용하여 연결해야 합니다. 

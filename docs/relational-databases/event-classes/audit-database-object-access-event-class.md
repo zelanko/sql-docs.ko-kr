@@ -12,15 +12,15 @@ ms.assetid: 0294ba51-6085-4de2-a52d-dac1a87fbd4d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9091dde65ff39668a7cde9595cf31251d8b43eef
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8e4d40ab803dd280fc0a05a21bf08c35d9f2e88
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67912162"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630616"
 ---
 # <a name="audit-database-object-access-event-class"></a>Audit Database Object Access 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Audit Database Object Access** 이벤트 클래스는 스키마 등의 데이터베이스 개체에 액세스하면 발생합니다.  
   
 ## <a name="audit-database-object-access-event-class-data-columns"></a>Audit Database Object Access 이벤트 클래스 데이터 열  

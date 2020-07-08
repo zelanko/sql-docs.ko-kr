@@ -12,15 +12,15 @@ ms.assetid: 2aaab211-3aba-4dbd-90b7-095d997b1f62
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b045ca8fd9d93ab2c088d898bd86fafe7acfc60
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5551c6547fd93d0d6dce0565e152ba65650b6be7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048634"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640386"
 ---
 # <a name="multipoint"></a>MultiPoint
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **MultiPoint** 는 1개 이상의 점 컬렉션입니다. **MultiPoint** 인스턴스의 경계는 비어 있습니다.  
   
 ## <a name="examples"></a>예  

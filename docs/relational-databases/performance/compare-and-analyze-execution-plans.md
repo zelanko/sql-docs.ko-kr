@@ -18,15 +18,15 @@ ms.assetid: bcd6f094-c613-4835-ae19-4caaadb4bb17
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 4b300d1fbc144f25b3f725f34e49d961953c434c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0689bf7815074048c810a47b5784b7bfa8831b8a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72289335"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655757"
 ---
 # <a name="compare-and-analyze-execution-plans"></a>실행 계획 비교 및 분석
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 이 섹션에서는 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을(를) 사용하여 실행 계획을 비교하고 분석하는 방법을 설명합니다. 이 기능은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v17.4부터 사용할 수 있습니다.  
   
 실행 계획은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램에서 선택한 데이터 검색 방법을 그래픽으로 표시합니다. 실행 계획은 [SET SHOWPLAN_ALL](../../t-sql/statements/set-showplan-all-transact-sql.md) 또는 [SET SHOWPLAN_TEXT](../../t-sql/statements/set-showplan-text-transact-sql.md) 문으로 생성되는 테이블 형식이 아닌 아이콘으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 특정 문과 쿼리 실행 비용을 표시합니다. 이러한 그래픽 표시는 쿼리의 성능 특성을 이해하는 데 매우 유용합니다. 

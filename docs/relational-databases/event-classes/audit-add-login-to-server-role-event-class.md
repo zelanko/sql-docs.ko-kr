@@ -12,15 +12,15 @@ ms.assetid: 7a8ed1c3-a98f-4f93-a6ba-e3901d941db9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a42276012f3ef3151f453951b0f5ec55c7736f8e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fee1a8c326fe1d6dab4ea26ff6a48fe259651de0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903670"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635728"
 ---
 # <a name="audit-add-login-to-server-role-event-class"></a>Audit Add Login to Server Role 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Audit Add Login to Server Role** 이벤트 클래스는 고정 서버 역할에서 로그인이 추가되거나 제거될 때마다 발생합니다. 이 이벤트 클래스는 **sp_addsrvrolemember** 및 **sp_dropsrvrolemember** 저장 프로시저에 대해 사용됩니다.  
   
 ## <a name="audit-add-login-to-server-role-event-class-data-columns"></a>Audit Add Login to Server Role 이벤트 클래스 데이터 열  

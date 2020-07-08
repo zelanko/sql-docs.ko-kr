@@ -17,15 +17,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 59e3c8713aac6648d7419e405d424b8b4080030a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68053567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629244"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 조건자 **CONTAINS** 및 **FREETEXT**와 **SELECT** 문에서 행 집합 반환 함수 **CONTAINSTABLE** 및 **FREETEXTTABLE**을 사용하여 전체 텍스트 쿼리를 작성합니다. 이 문서에서는 각 조건자 및 함수의 예제를 제공하여 최적의 사용 방법을 선택할 수 있습니다.
 
 -   단어 및 구를 일치시키려면 **CONTAINS** 및 **CONTAINSTABLE**을 사용합니다.
@@ -33,7 +33,7 @@ ms.locfileid: "68053567"
 
 ## <a name="examples-of-each-predicate-and-function"></a><a name="examples_simple"></a> 각 조건자 및 함수의 예제
 
-다음 예제에서는 AdventureWorks 샘플 데이터베이스를 사용합니다. AdventureWorks의 최종 릴리스는 [SQL Server 2016 CTP3용 AdventureWorks 데이터베이스 및 스크립트](https://www.microsoft.com/download/details.aspx?id=49502)를 참조하세요. 예제 쿼리를 실행하기 위해 전체 텍스트 검색을 설정할 수도 있습니다. 자세한 내용은 [전체 텍스트 검색 시작](get-started-with-full-text-search.md)을 참조하세요. 
+다음 예제에서는 AdventureWorks 샘플 데이터베이스를 사용합니다. AdventureWorks의 최종 릴리스는 [SQL Server 2016 CTP3용 AdventureWorks 데이터베이스 및 스크립트](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)를 참조하세요. 예제 쿼리를 실행하기 위해 전체 텍스트 검색을 설정할 수도 있습니다. 자세한 내용은 [전체 텍스트 검색 시작](get-started-with-full-text-search.md)을 참조하세요. 
 
 ### <a name="example---contains"></a>예제 - CONTAINS  
 다음 예에서는 가격이 `$80.99`이고 `"Mountain"`이라는 단어가 포함된 모든 제품을 검색합니다.
@@ -175,7 +175,7 @@ CONTAINS 또는 FREETEXT 조건자에 네 부분으로 된 이름을 사용하�
 ## <a name="specific-types-of-searches"></a><a name="examples_specific"></a> 특정 형식의 검색
 
 ###  <a name="search-for-a-specific-word-or-phrase-simple-term"></a><a name="Simple_Term"></a> 특정 단어 또는 구(단순 단어) 검색  
- [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)또는 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)을 사용하여 테이블에서 특정 단어 또는 구를 검색할 수 있습니다. 예를 들어 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 **ProductReview** 테이블을 검색하여 "학습 곡선"이라는 구가 포함된 제품 설명을 모두 찾으려면 CONTAINS 조건자를 다음과 같이 사용할 수 있습니다.  
+ [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)또는 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)을 사용하여 테이블에서 특정 단어 또는 구를 검색할 수 있습니다. 예를 들어 **데이터베이스의**ProductReview[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블을 검색하여 "학습 곡선"이라는 구가 포함된 제품 설명을 모두 찾으려면 CONTAINS 조건자를 다음과 같이 사용할 수 있습니다.  
   
 ```sql
 USE AdventureWorks2012  
@@ -227,7 +227,7 @@ GO
 ###  <a name="search-for-inflectional-forms-of-a-specific-word-generation-term"></a><a name="Inflectional_Generation_Term"></a> 특정 단어의 굴절형(생성 단어) 검색  
 [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)또는 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 을 사용하여 동사의 여러 시제나 변화 또는 명사의 단수형과 복수형을 모두 검색(굴절형 검색)하거나, 특정 단어의 동의어 형태를 모두 검색(동의어 검색)할 수 있습니다.  
   
-다음 예제에서는 `AdventureWorks` 데이터베이스의 `ProductReview` 테이블에 있는 `Comments` 열에서 "foot"의 모든 형태("foot", "feet" 등)를 검색합니다. 
+다음 예제에서는 `Comments` 데이터베이스의 `ProductReview` 테이블에 있는 `AdventureWorks` 열에서 "foot"의 모든 형태("foot", "feet" 등)를 검색합니다. 
   
 ```sql  
 USE AdventureWorks2012  

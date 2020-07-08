@@ -12,15 +12,15 @@ ms.assetid: 6f19fe7c-a452-4323-b957-7e17d13bf8fd
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3cf22c17cc0b76e9ea05b8f600ae6b695d615777
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4ada916f172ff1245dbac49806ecf787c9e1dd23
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68007003"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635460"
 ---
 # <a name="tm-save-tran-starting-event-class"></a>TM: Save Tran Starting 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   TM: Save Tran Starting 이벤트 클래스는 SAVE TRANSACTION 요청이 시작 중임을 나타냅니다. 이 요청은 트랜잭션 관리 인터페이스를 통해 클라이언트에서 보냅니다.  
   
 ## <a name="tm-save-tran-starting-event-class-data-columns"></a>TM: Save Tran Starting 이벤트 클래스 데이터 열  

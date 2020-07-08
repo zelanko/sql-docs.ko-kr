@@ -12,15 +12,15 @@ ms.assetid: e9b023db-6944-4035-9a83-300f34a58454
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c14ba04bc487552f99f955d75df947b3676bbf44
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fda4e9cce7d090873ea016e7df71f52fa5ba2f19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118188"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85641988"
 ---
 # <a name="log-file-auto-grow-event-class"></a>Log File Auto Grow 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Log File Auto Grow** 이벤트 클래스는 로그 파일이 자동으로 증가했음을 나타냅니다. 이 이벤트는 ALTER DATABASE 문의 명시적인 실행으로 로그 파일이 증가하는 경우에는 트리거되지 않습니다.  
   
  로그 파일 증가를 모니터링하는 추적에 **Log File Auto Grow** 이벤트 클래스를 포함시키십시오. 추적에 이 이벤트 클래스를 포함시켜도 로그 파일이 자동으로 자주 증가하지 않는 이상 발생하는 오버헤드의 양은 적습니다.  

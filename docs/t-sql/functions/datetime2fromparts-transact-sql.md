@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - DATETIME2FROMPARTS function
 ms.assetid: 632b757d-d2d1-43a5-b870-792a779ae204
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 400de28e3191b953c1f44dfdf0777678f031e140
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5d0ac01a61b82ff48c52709be22a97253435a2c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68119133"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631910"
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -61,7 +61,7 @@ DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precisi
 소수 자릿수 초 값을 지정하는 정수 식입니다.
   
 *전체 자릿수*  
-`DATETIME2FROMPARTS`에서 반환하는 **datetime2** 값의 전체 자릿수를 지정하는 정수 식입니다.
+**에서 반환하는** datetime2`DATETIME2FROMPARTS` 값의 전체 자릿수를 지정하는 정수 식입니다.
   
 ## <a name="return-types"></a>반환 형식
 **datetime2(** *precision* **)**

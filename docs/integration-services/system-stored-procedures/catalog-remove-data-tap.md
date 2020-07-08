@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: b77db3e6-478c-441a-a838-82c4de750275
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc76e5f5d710dfe088a27376af4f3938257a0ec7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b46bd78709861b4967bdb9657f445d35d819e3f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296825"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637589"
 ---
 # <a name="catalogremove_data_tap"></a>catalog.remove_data_tap 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   실행 중인 구성 요소 출력에서 데이터 탭을 제거합니다. 데이터 탭의 고유 식별자는 실행 인스턴스와 연결되어 있습니다.  
   

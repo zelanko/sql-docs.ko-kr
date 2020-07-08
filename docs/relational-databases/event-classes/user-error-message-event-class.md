@@ -12,15 +12,15 @@ ms.assetid: d7594261-ccd9-487c-9678-11875ba57fb7
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d094f7d89cfb3faf17551bb3068a5bcf17e24d3d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a15ff8c6a947dffc6415720f1ac04880c5031c20
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087547"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635422"
 ---
 # <a name="user-error-message-event-class"></a>User Error Message 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   User Error Message 이벤트 클래스는 오류 또는 예외 발생 시 사용자에게 나타나는 오류 메시지를 표시합니다. 오류 메시지 텍스트는 TextData 필드에 나타납니다.  
   
 ## <a name="user-error-message-event-class-data-columns"></a>User Error Message 이벤트 클래스 데이터 열  

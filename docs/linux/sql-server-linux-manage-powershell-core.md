@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-ms.openlocfilehash: 497791ba9eb066621a468ec954a0d3bc27d2cfcb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f70d69e58d513abcba8f27bbda53ab09d5e00ab
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216623"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807654"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>PowerShell Core를 사용하여 SQL Server on Linux 관리
 
@@ -204,7 +204,7 @@ SqlServer 모듈에는 현재 Windows PowerShell에서 사용할 수 있는 109�
 
 ```powershell
 Get-Command -Module SqlServer -CommandType Cmdlet |
-SORT -Property Noun |
+Sort-Object -Property Noun |
 SELECT Name
 ```
 

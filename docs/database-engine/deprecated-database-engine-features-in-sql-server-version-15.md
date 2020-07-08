@@ -14,16 +14,16 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-ver15'
-ms.openlocfilehash: 21cfc7abed9be868840335615803b053c0e9e428
-ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
+ms.openlocfilehash: ffcd04d0368043fae2a8341f4ef9a8845b409514
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550072"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659541"
 ---
 # <a name="deprecated-database-engine-features-in-sssqlv15-md"></a>[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]에서 사용되지 않는 데이터베이스 엔진 기능
 
-[!INCLUDE[tsql-appliesto-sssver15-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-sssver15-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver2019.md)]
 
 SQL Server 2019에서는 어떤 기능도 사용 중단되지 않습니다.
 

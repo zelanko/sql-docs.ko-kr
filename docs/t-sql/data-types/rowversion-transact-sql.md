@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6c79f2e87ccb6706eab6621cc72bb2fa45b7e9e6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2962d457ce079bd0ec2164f9fdd2a982b983f14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77179284"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85638134"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 데이터베이스 내에서 자동으로 생성된 고유 이진 숫자를 표시하는 데이터 형식입니다. 일반적으로 **rowversion**은 버전이 표시되는 테이블 행에 대한 메커니즘으로 사용됩니다. 스토리지 크기는 8바이트입니다. **rowversion** 데이터 형식은 증가하는 숫자일 뿐이며 날짜 또는 시간을 보존하지 않습니다. 날짜 또는 시간을 기록하려면 **datetime2** 데이터 형식을 사용합니다.
   

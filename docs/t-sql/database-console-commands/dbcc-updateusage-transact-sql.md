@@ -33,15 +33,15 @@ helpviewer_keywords:
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7d983f2e7e370ec9fe385e6d46602c4703ca6d1e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fa1bd6767a81142e115e02d242a54b9715bf78f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68040457"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643854"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 카탈로그 뷰의 부정확한 페이지와 행 개수를 보고하고 수정합니다. 이러한 부정확성으로 인해 sp_spaceused 시스템 저장 프로시저에서 정확하지 않은 공간 사용 보고서를 반환할 수 있습니다.
   
@@ -49,7 +49,7 @@ ms.locfileid: "68040457"
   
 ## <a name="syntax"></a>구문  
   
-```sql
+```syntaxsql
 DBCC UPDATEUSAGE   
 (   { database_name | database_id | 0 }   
     [ , { table_name | table_id | view_name | view_id }   
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="c-updating-page-or-row-counts-or-both-for-the-employee-table"></a>C. Employee 테이블의 페이지나 행 개수 또는 두 가지를 모두 업데이트  
-다음 예제에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `Employee` 테이블에 대해 업데이트된 페이지 또는 행 수 정보를 보고합니다.
+다음 예제에서는 `Employee` 데이터베이스의 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블에 대해 업데이트된 페이지 또는 행 수 정보를 보고합니다.
   
 ```sql
 DBCC UPDATEUSAGE (AdventureWorks2012,'HumanResources.Employee');  

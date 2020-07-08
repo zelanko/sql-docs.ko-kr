@@ -18,17 +18,17 @@ helpviewer_keywords:
 - default nullability
 - database nullability [SQL Server]
 ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: ecade310bc922ad933a9467754054e165dc7b52b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d67d058e089ce00308382d0b52ecc102b062cba2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826907"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631593"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   이 세션에서 데이터베이스의 기본 Null 허용 여부를 반환합니다.  
   

@@ -12,15 +12,17 @@ ms.assetid: da996305-181b-4cec-8388-c3b66677ed27
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aa33ba9ef7b956e94a66137f6a3c342034542b9a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d7d4d938bb2f214b540c4795b4318693a1cfdb1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903717"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635881"
 ---
 # <a name="attention-event-class"></a>Attention 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+
   **Attention** 이벤트 클래스는 취소, 클라이언트 인터럽트 요청, 클라이언트 연결 끊어짐 등의 attention 이벤트가 발생했음을 나타냅니다. 취소 작업은 데이터 액세스 드라이버 제한 시간 구현의 일부라고 할 수 있습니다.  
   
 ## <a name="attention-event-class-data-columns"></a>Attention 이벤트 클래스 데이터 열  

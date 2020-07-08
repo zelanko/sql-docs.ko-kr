@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: bed788b0-a68e-4fb1-b001-03bf09ff868e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 91d3a7b23602b631d51904fa5e2b68821725d77e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9936cf11b0b8a71989f41cf6e7834bfe845cf7ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67987179"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85656275"
 ---
 # <a name="sql-server-clr-object"></a>SQL Server, CLR 개체
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **SQLServer:CLR** 개체는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CLR(공용 언어 런타임)을 모니터링하는 카운터를 제공합니다.  
   
  다음 테이블에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **CLR** 카운터에 대해 설명합니다.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 246c24d261879880a079191210841fefef62549f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ee08e8278b2b302f91360a8f74690050c28ba556
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633589"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85644015"
 ---
 # <a name="read-database-engine-by-using-csharp"></a>CSharp를 사용하여 읽기(데이터베이스 엔진)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Read는 전달된 **BinaryReader**에서 **SqlHierarchyId**의 이진 표현을 읽고 **SqlHierarchyId** 개체를 해당 값으로 설정합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 Read를 호출할 수 없습니다. 대신 CAST 또는 CONVERT를 사용합니다.
   

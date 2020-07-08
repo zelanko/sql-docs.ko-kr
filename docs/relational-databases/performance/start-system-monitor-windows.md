@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 8a3de3bf8c09149c21357a6d6b8c3e1aed4f995c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58027f9fa617b5fb77fc02f1268197930ea169cf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113298"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655214"
 ---
 # <a name="start-system-monitor-windows"></a>시스템 모니터 시작(Windows)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   시스템 모니터를 사용하여 시스템 리소스의 사용률을 모니터링할 수 있습니다. 실시간 성능 데이터를 카운터 형식으로 수집하고 표시합니다. 프로세서 및 메모리 사용과 같은 서버 리소스에 대한 카운터를 사용할 수 있습니다. 또한 잠금 및 트랜잭션과 같은 다양한 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에 대해 사용할 수 있습니다.  
   
 ## <a name="start-system-monitor-in-windows"></a>Windows에서 시스템 모니터링 시작  

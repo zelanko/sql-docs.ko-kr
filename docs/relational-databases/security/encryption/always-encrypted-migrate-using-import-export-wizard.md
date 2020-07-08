@@ -16,15 +16,15 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c8e23b3f5f291d120a099cae7f3e3e057db8da95
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 42898b255427c5f3d870a21e17e2cdeb17039919
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595788"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627322"
 ---
 # <a name="migrate-data-to-or-from-columns-using-always-encrypted-with-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사로 Always Encrypted를 사용하여 열 간에 데이터 마이그레이션 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 [SQL Server 가져오기 및 내보내기 마법사](../../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)는 원본에서 대상으로 데이터를 복사할 수 있는 도구입니다. 이 문서에서는 원본 및/또는 대상이 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)로 보호된 열을 포함하는 SQL Server 데이터베이스일 경우 SQL Server 가져오기 및 내보내기 마법사를 사용하는 방법을 설명합니다.
 

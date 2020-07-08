@@ -12,15 +12,15 @@ ms.assetid: 106ffe8d-da60-4b1f-8866-6cef6a5931ad
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b450584bec0117f0b741ee7f650f1c146e930b07
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5562f531fc9485bc344f8e3b1dcc4e36dd47acb4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67913436"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642406"
 ---
 # <a name="audit-server-object-management-event-class"></a>Audit Server Object Management 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Audit Server Object Management** 이벤트 클래스는 서버 개체에 대한 CREATE, ALTER 또는 DROP이 있는 경우에 발생합니다.  
   
 ## <a name="audit-server-object-management-event-class-data-columns"></a>Audit Server Object Management 이벤트 클래스 데이터 열  

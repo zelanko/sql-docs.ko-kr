@@ -12,15 +12,15 @@ ms.assetid: b9321143-3f29-4a19-8471-7085669282ef
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f37620479cd2960f6908430a12c6388dee4d8e64
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f8d3a11521b55663318db72663a58980ca07775b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68116127"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85641944"
 ---
 # <a name="missing-column-statistics-event-class"></a>Missing Column Statistics 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Missing Column Statistics 이벤트 클래스는 최적화 프로그램에 유용한 열 통계가 사용할 수 없는 상태임을 나타냅니다.  
   
  Missing Column Statistics 이벤트 클래스를 모니터링하면 쿼리가 사용하는 열에 대해 누락된 통계가 있는지 알 수 있습니다. 누락된 통계는 최적화 프로그램이 비효율적인 쿼리 계획을 선택하는 원인이 됩니다.  

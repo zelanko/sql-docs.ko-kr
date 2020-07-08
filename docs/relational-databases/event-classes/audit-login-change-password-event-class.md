@@ -12,15 +12,15 @@ ms.assetid: c6dbe5e5-b523-4b7c-94f0-eb1dfbce2056
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 434c98eebc7c4651e194f698c7d748f858b55b50
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 956f2eea9863f171db203925bfea0243574a0e75
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67897583"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629964"
 ---
 # <a name="audit-login-change-password-event-class"></a>Audit Login Change Password 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Audit Login Change Password** 이벤트 클래스는 사용자가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 암호를 변경할 때마다 발생합니다.  
   
 ## <a name="audit-login-change-password-event-class-data-columns"></a>Audit Login Change Password 이벤트 클래스 데이터 열  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e49ef1ad379f675ca457f8cd9c82a5e4ecc3fd04
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 71f51e9076b4f5c4be8a0875df323deeaaf80068
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68107127"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629679"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Disk Space Requirements for Index DDL Operations
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   디스크 공간은 인덱스를 생성, 다시 작성 또는 삭제할 때 고려해야 할 주요 사항입니다. 디스크 공간이 부족하면 성능이 저하되거나 인덱스 작업이 실패할 수도 있습니다. 이 항목에서는 인덱스 DDL(데이터 정의 언어) 작업에 필요한 디스크 공간을 결정하는 데 도움이 되는 일반 정보를 제공합니다.  
   

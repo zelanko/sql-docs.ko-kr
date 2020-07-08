@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b001e9e53c30ba57b2a56b0bd57571668ae2770c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 66e0df2599b8ada5f1c7dc3018e8021e2ee03df7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321781"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85654046"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>비즈니스 논리 처리기 디버깅(복제 프로그래밍)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   비즈니스 논리 처리기를 사용하여 병합 구독이 동기화될 때 사용자 지정 비즈니스 논리를 호출할 수 있습니다. 자세한 내용은 [병합 동기화 중 비즈니스 논리 실행](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)을 참조하세요.  
   
  병합 복제 조정자(replrec.dll)는 비즈니스 논리가 포함된 관리 코드 어셈블리를 호출합니다. 대부분의 경우 replrec.dll과 사용자 지정 비즈니스 논리는 병합 에이전트가 실행되는 컴퓨터(끌어오기 구독의 경우 구독자, 밀어넣기 구독의 경우 배포자)에서 실행됩니다. 웹 동기화 또는 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자의 경우 조정자와 사용자 지정 비즈니스 논리는 웹 서버에서 실행됩니다.  

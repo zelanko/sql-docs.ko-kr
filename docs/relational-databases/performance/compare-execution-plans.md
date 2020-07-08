@@ -17,15 +17,15 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: cc42584c6b3f07961e83e53b8b5165243060256f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a7e1b2c3b56086e6b08e0f14c49505796921faeb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76910246"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655735"
 ---
 # <a name="compare-execution-plans"></a>실행 계획 비교
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 계획 비교 기능을 사용하여 실제 그래픽 실행 계획 간의 유사점과 차이점을 비교하는 방법을 설명합니다. 이 기능은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v16부터 사용할 수 있습니다.
   
 > [!NOTE]

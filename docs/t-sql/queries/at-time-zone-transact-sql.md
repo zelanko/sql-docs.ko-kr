@@ -16,12 +16,12 @@ ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: fa6c6e8fbee0d28e797a8d528b8eefb9b02a23ab
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: a315658aa6d4278e12dbccd13bfa4817dec36976
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152088"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807871"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE(Transact-SQL)
 
@@ -31,7 +31,7 @@ ms.locfileid: "83152088"
 
 **AT TIME ZONE** 구현은 표준 시간대 전반에 **datetime** 값을 변환하기 위해 Windows 메커니즘을 따릅니다.  
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
 
 ## <a name="syntax"></a>구문
 

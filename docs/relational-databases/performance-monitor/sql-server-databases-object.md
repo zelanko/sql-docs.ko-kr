@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a8114722ac95c1404a45d8c85bf1736e541fa0ae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da5bdd3fe0ea6e53e3943054470011040e9fe0c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093598"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655954"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, Databases 개체
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   SQL Server의 **SQLServer:Databases** 개체는 대량 복사 작업, 백업 및 복원 처리량, 트랜잭션 로그 동작을 모니터링하기 위해 카운터를 제공합니다. 트랜잭션 및 트랜잭션 로그를 모니터링하면 데이터베이스에서 사용자 작업이 일어나는 횟수와 트랜잭션 로그가 얼마나 기록되었는지 확인할 수 있습니다. 사용자 작업의 양은 데이터베이스의 성능을 결정하고 로그 크기, 잠금 및 복제에 영향을 줍니다. 낮은 수준의 로그 작업을 모니터링하여 사용자 작업 및 리소스 사용을 측정하면 성능 병목 상태를 분석할 때 유용합니다.  
   
  개별 데이터베이스를 나타내는 **Databases** 개체의 여러 가지 인스턴스를 동시에 모니터링할 수도 있습니다.  

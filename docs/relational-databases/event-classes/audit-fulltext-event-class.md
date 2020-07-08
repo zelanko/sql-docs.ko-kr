@@ -10,15 +10,15 @@ ms.assetid: 95e4c5fd-e16f-446e-b42b-105495a8f39a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d77321058cbe0a45bfa9ab168cf92ed9b1c3e8ca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8bab0dc383ba6d427656cddf14b0ab253d6b313
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67897599"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630031"
 ---
 # <a name="audit-fulltext-event-class"></a>Audit Fulltext 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Audit Fulltext** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 전체 텍스트 필터 데몬 프로세스에 연결되어 통신할 때 발생합니다.  
   
 ## <a name="audit-fulltext-event-class-data-columns"></a>Audit Fulltext 이벤트 클래스 데이터 열  

@@ -1,10 +1,8 @@
 ---
 title: JSON_VALUE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/21/2019
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -17,13 +15,14 @@ helpviewer_keywords:
 ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 262830dfa4bf32dfb49638b3f0d730ea8aeadde5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f4cd163d4ccbb622deb4278d4f0f0b2490d404e8
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77037009"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423074"
 ---
 # <a name="json_value-transact-sql"></a>JSON_VALUE(Transact-SQL)
 
@@ -37,7 +36,7 @@ ms.locfileid: "77037009"
   
 ## <a name="syntax"></a>구문  
   
-```
+```syntaxsql
 JSON_VALUE ( expression , path )  
 ```  
   
@@ -122,7 +121,7 @@ ORDER BY JSON_VALUE(jsonInfo,'$.info.address[0].town')
 ### <a name="example-2"></a>예제 2
  다음 예에서는 JSON 속성 `town`의 값을 로컬 변수로 추출합니다.  
   
-```sql  
+```sql
 DECLARE @jsonInfo NVARCHAR(MAX)
 DECLARE @town NVARCHAR(32)
 

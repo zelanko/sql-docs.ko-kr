@@ -12,15 +12,15 @@ ms.assetid: 3eae548f-61af-4f91-ae6f-af5c8a152543
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4fe3060d0eb7a6c75333345f1770e2512371049
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 87a295cf1d803e6193b192d62d1f87975a5b241a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089370"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642192"
 ---
 # <a name="existingconnection-event-class"></a>ExistingConnection 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   ExistingConnection 이벤트 클래스는 추적이 시작될 때의 기존 사용자 연결 속성을 나타냅니다. 서버에서는 기존 사용자 연결당 하나의 ExistingConnection 이벤트를 발생시킵니다.  
   
 ## <a name="existing-connection-event-class-data-columns"></a>Existing Connection 이벤트 클래스 데이터 열  

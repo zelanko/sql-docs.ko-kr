@@ -17,15 +17,15 @@ ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 91e4ceeba2e8ec18569c22a886623977402e478a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63d70982c38a84b4765331c4a978cc276fe749ac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284102"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653544"
 ---
 # <a name="distributor-information-publications"></a>배포자 정보, 게시
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **게시** 탭은 왼쪽 창에서 선택한 배포자에서의 모든 게시에 대한 요약 정보를 제공합니다.  
   
 배포자에서 지원하는 게시에 대해 표시되는 정보에는 게시자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 있는 열이 포함됩니다. 그 밖에 표시되는 게시 정보는 복제 모니터의 게시자 뷰에서 게시를 볼 때 제공되는 게시 정보와 같습니다. **게시** 탭의 열에 대한 자세한 내용은 [Publisher Information, Publications](../../relational-databases/replication/publisher-information-publications.md)를 참조하십시오.  

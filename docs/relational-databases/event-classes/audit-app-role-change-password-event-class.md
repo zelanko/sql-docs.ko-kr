@@ -12,15 +12,15 @@ ms.assetid: 28a76c12-e997-48bb-bb0e-9624237a188e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b23b9f20814c5cd00aa977223e9a5a4e6d3b5924
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: edc8aec7c4027fb55ace2fc8256d8f2b3439c2f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903589"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635556"
 ---
 # <a name="audit-app-role-change-password-event-class"></a>Audit App Role Change Password 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Audit App Role Change Password** 이벤트 클래스는 애플리케이션 역할에 대한 암호가 변경될 때마다 발생합니다.  
   
 ## <a name="audit-app-role-change-password-event-class-data-columns"></a>Audit App Role Change Password 이벤트 클래스 데이터 열  
