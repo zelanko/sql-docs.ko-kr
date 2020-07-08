@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 38e8146d-86bf-48c9-a436-2269bdadb27d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0eeb0558d898c4f12e1d3848e7220c7b7143c996
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 98b49873b2774151c0ff23d7e7a7dfab9ccf9388
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042495"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85704969"
 ---
 # <a name="static-aggregate-geography-methods"></a>정적 지리 집계 메서드
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 OGC(Open Geospatial Consortium)의 정적 지리 메서드에 대한 확장으로 다음과 같은 집계 메서드를 지원합니다.  
   

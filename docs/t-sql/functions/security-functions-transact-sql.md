@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 7773a87d-2f1b-4951-a225-baf159a7291b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ad3ad143a6c1f8b786f2054b1537d393afc49e13
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 494212a1a203bebf2ab37252ae00781648e68627
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68111320"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714971"
 ---
 # <a name="security-functions-transact-sql"></a>보안 함수(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   다음 보안 함수는 보안 관리에 유용한 정보를 반환합니다. 추가 기능은 [암호화 함수&#40;Transact-SQL&#41;](../../t-sql/functions/cryptographic-functions-transact-sql.md)에 나열되어 있습니다.  
   

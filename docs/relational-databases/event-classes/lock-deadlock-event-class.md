@@ -12,15 +12,15 @@ ms.assetid: 3e0394bc-6ea8-4533-845c-76782bec73c2
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ba1146dfe62067ba6371eec6a2b621eb2897852
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2614d7805573b74485f3872dfa6d16a2ab961f74
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118297"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717787"
 ---
 # <a name="lockdeadlock-event-class"></a>Lock:Deadlock 이벤트 클래스
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Lock:Deadlock 이벤트 클래스는 잠금을 얻으려고 시도하는 동안 교착 상태가 발생하여 이 시도가 취소될 때 생성됩니다.  
   
  Lock:Deadlock 이벤트 클래스를 사용하여 교착 상태 발생 시기와 관련된 개체를 모니터링할 수 있습니다. 이 정보를 사용하면 교착 상태로 인해 애플리케이션 성능이 심하게 저하되는지 여부를 확인할 수 있습니다. 그러면 애플리케이션 코드를 조사하여 교착 상태를 최소화하도록 변경할 수 있는지 알 수 있습니다.  

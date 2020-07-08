@@ -13,15 +13,15 @@ ms.assetid: 2b4d88d0-62be-45c0-bea8-c5900d553d31
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c1f01d9a51a46090237a609cab538ea1ea92841
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b5c9f0878d2a35dc82565a799b3c09725b65dd4a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089619"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716975"
 ---
 # <a name="deprecation-final-support-event-class"></a>Deprecation Final Support 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Deprecation Final Support** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다음 번 주요 릴리스에서 제거할 기능을 사용할 때 발생합니다. 애플리케이션을 오랫동안 유지하려면 **Deprecation Final Support** 이벤트 클래스 또는 **Deprecation Announcement** 이벤트 클래스가 발생되는 기능을 사용하지 마십시오. 곧 사용이 중단될 예정인 기능을 사용하는 애플리케이션은 최대한 빨리 수정하십시오.  
   
 ## <a name="deprecation-final-support-event-class-data-columns"></a>Deprecation Final Support 이벤트 클래스 데이터 열  

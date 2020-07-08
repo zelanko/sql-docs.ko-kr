@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46a6f7c08b540b6180326350a6e0aadb933a7ef5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 499b62d172ebcf2fef29c9f32a038921d2e2d30c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121807"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706184"
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   트랜잭션 내에서 저장점을 설정합니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68121807"
 
  ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }  
 [ ; ]  
@@ -49,7 +49,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## <a name="arguments"></a>인수  
  *savepoint_name*  
- 저장점에 할당된 이름입니다. 저장점 이름은 식별자에 적용되는 규칙을 준수해야 하지만 길이는 32자로 제한됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 대/소문자를 구분하지 않는 경우에도 *savepoint_name*은 항상 대/소문자를 구분합니다.  
+ 저장점에 할당된 이름입니다. 저장점 이름은 식별자에 적용되는 규칙을 준수해야 하지만 길이는 32자로 제한됩니다. *인스턴스에서 대/소문자를 구분하지 않는 경우에도*savepoint_name[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 항상 대/소문자를 구분합니다.  
   
  @*savepoint_variable*  
  유효한 저장점 이름이 포함된 사용자 정의 변수의 이름입니다. 변수는 **char**, **varchar**, **nchar** 또는 **nvarchar** 데이터 형식으로 선언해야 합니다. 변수에 32자 이상 전달할 수 있지만 전달된 문자의 처음부터 32자까지만 사용됩니다.  

@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 1ae88554-f291-45bc-a186-6f41d9cd0fca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3efa12b744d331949fc0af18f555e603f18e33ab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dab1c1ec84672a4ab199113549cff55852b96491
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68123095"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715455"
 ---
 # <a name="mssqlserver_4186"></a>MSSQLSERVER_4186
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>세부 정보  
   
-|||  
-|-|-|  
+| attribute | 값 |  
+| :-------- | :---- |  
 |제품 이름|SQL Server|  
 |이벤트 ID|4186|  
 |이벤트 원본|MSSQLSERVER|  
@@ -41,7 +41,7 @@ ms.locfileid: "68123095"
   
 -   해당 정의에서 사용자 또는 시스템 데이터 액세스를 수행하는 사용자 정의 함수가 포함된 계산 열  
   
-### <a name="examples"></a>예  
+### <a name="examples"></a>예제  
 **하위 쿼리에 의해 정의되는 뷰 열**  
   
 다음 예에서는 열 `State`를 정의하기 위해 선택 목록에 있는 하위 쿼리를 사용하는 뷰를 만듭니다. 그러면 UPDATE 문이 OUTPUT 절의 `State` 열을 참조하지만 선택 목록의 하위 쿼리로 인해 실패합니다.  

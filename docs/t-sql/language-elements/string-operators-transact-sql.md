@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ee4e715d-d8f1-4d0e-81b3-04573ec9f13c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 345cb7d09b7b1356751eb8b8b69ecf737805f2c8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fe2fe0e18d480ec6ff094b2436e6368a47744f49
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121646"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706106"
 ---
 # <a name="string-operators-transact-sql"></a>문자열 연산자(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음과 같은 문자열 연산자를 제공합니다. 문자열 연결 연산자는 다음 데이터 형식 중 두 개 이상을 하나의 식으로 결합할 수 있습니다. 
 * 문자 또는 이진 문자열

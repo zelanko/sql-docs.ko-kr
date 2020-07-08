@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8fd770d8f1af098d4328df12a11cdcff609f2328
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f226dd4b96774de236a3938662be2bf506db8cad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71974399"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706435"
 ---
 # <a name="fetch-transact-sql"></a>FETCH(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 커서에서 특정 행을 검색합니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "71974399"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 FETCH   
           [ [ NEXT | PRIOR | FIRST | LAST   
                     | ABSOLUTE { n | @nvar }   
@@ -68,7 +68,7 @@ FETCH
  *n* 또는 \@*nvar*가 양수인 경우 커서 맨 앞에서 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 \@*nvar*가 음수인 경우에는 커서 맨 뒤에서 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 \@*nvar*가 0이면 행이 반환되지 않습니다. *n*은 정수 상수여야 하며 \@*nvar*는 **smallint**, **tinyint** 또는 **int**이어야 합니다.  
   
  RELATIVE { *n*| \@*nvar*}  
- *n* 또는 \@*nvar*이 양수인 경우에는 현재 행에서 위로 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 \@*nvar*이 음수인 경우에는 현재 행에서 앞으로 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 \@*nvar*가 0인 경우에는 현재 행을 반환합니다. *n* 또는 \@*nvar*가 음수로 설정되거나 첫 번째 인출에 있는 0이 커서에 대해 수행되도록 `FETCH RELATIVE`가 지정된 경우 행은 반환되지 않습니다. *n*은 정수 상수여야 하며 \@*nvar*는 **smallint**, **tinyint** 또는 **int**이어야 합니다.  
+ *n* 또는 \@*nvar*이 양수인 경우에는 현재 행에서 위로 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 \@*nvar*이 음수인 경우에는 현재 행에서 앞으로 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 \@*nvar*가 0인 경우에는 현재 행을 반환합니다. `FETCH RELATIVE`n*또는*\@nvar*가 음수로 설정되거나 첫 번째 인출에 있는 0이 커서에 대해 수행되도록* 가 지정된 경우 행은 반환되지 않습니다. *n*은 정수 상수여야 하며 \@*nvar*는 **smallint**, **tinyint** 또는 **int**이어야 합니다.  
   
  GLOBAL  
  *cursor_name*이 전역 커서를 참조하도록 지정합니다.  
@@ -91,7 +91,7 @@ FETCH
   
 -   `DYNAMIC`, `FORWARD_ONLY` 또는 `FAST_FORWARD`를 지정하지 않고 `KEYSET`, `STATIC` 또는 `SCROLL` 중 하나를 지정하는 경우 모든 `FETCH` 옵션이 지원됩니다.  
   
--   `DYNAMIC SCROLL` 커서는 `ABSOLUTE`를 제외한 모든 `FETCH` 옵션을 지원합니다.  
+-   `DYNAMIC SCROLL` 커서는 `FETCH`를 제외한 모든 `ABSOLUTE` 옵션을 지원합니다.  
   
  `@@FETCH_STATUS` 함수는 마지막 `FETCH` 문의 상태를 보고합니다. sp_describe_cursor에 의해 반환되는 커서의 fetch_status 열에도 동일한 정보가 기록됩니다. 해당 데이터에 대해 어떠한 작업을 수행하려고 시도하기 전에 반드시 이 상태 정보를 사용하여 `FETCH` 문에서 반환되는 데이터의 유효성을 확인해야 합니다. 자세한 내용은 [@@FETCH_STATUS&#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)을 참조하세요.  
   

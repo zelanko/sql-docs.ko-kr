@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9ec1a44a84392ef0331e9fe243817bd782e6b1e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d47b798f9af00fc3cae3699001b645fc5564b4b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81630978"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706205"
 ---
 # <a name="return-transact-sql"></a>RETURN(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   쿼리나 프로시저를 무조건 종료합니다. RETURN은 즉각적이고 완전하며 프로시저, 일괄 처리, 문 블록에서 아무 때나 종료하는 데 사용할 수 있습니다. RETURN 다음에 있는 문은 실행되지 않습니다.  
   

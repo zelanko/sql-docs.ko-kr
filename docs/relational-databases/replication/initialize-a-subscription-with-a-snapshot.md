@@ -13,16 +13,16 @@ ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bb09b6d532e6b7db7310e0d375609665d9c45db5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44ccd31700ab6bb3bf3500e93febc0209d9fa9ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216014"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716790"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>스냅샷으로 구독 초기화
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 이 문서는 복제 게시가 초기화될 때 진행되는 프로세스에 대해 설명합니다. 초기 스냅샷이 구독자에 적용됩니다.
 

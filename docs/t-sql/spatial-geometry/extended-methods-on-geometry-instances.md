@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6472c5e1-d37f-4919-a903-177e90cbfe1b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 81b74eec0ea22cd6c88cc896af6537fa893ed925
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3904de5f819db856ceaa7a3bf8b8e62882f5d92c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68081170"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85700331"
 ---
 # <a name="extended-methods-on-geometry-instances"></a>geometry 인스턴스의 확장 메서드
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 OGC(Open Geospatial Consortium) geometry 인스턴스의 여러 확장 메서드를 지원합니다.  
   

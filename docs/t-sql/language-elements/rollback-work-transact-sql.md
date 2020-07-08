@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 2071dbd3-53d5-4510-be8d-26e80f2553b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa0687784a5a0a48ea2c7c610c6553391254c836
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 31a95060be1802cbbef306d039f1f2da61a972a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81630606"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706195"
 ---
 # <a name="rollback-work-transact-sql"></a>ROLLBACK WORK(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   사용자가 지정한 트랜잭션을 시작 부분으로 롤백합니다.  
   

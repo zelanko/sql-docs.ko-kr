@@ -12,15 +12,15 @@ ms.assetid: aaa3c5c4-2d3a-4832-a473-ce9bd4fb1c17
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92d7ba023176aabd08179638fbccfd37540d345f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb77b88d58807a1a1b2bafca59dee0a802b5c434
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68085349"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717707"
 ---
 # <a name="spcacheremove-event-class"></a>SP:CacheRemove 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   SP:CacheRemove 이벤트 클래스는 저장 프로시저가 계획 캐시에서 제거되었음을 나타냅니다.  
   
 ## <a name="spcacheremove-event-class-data-columns"></a>SP:CacheRemove 이벤트 클래스 데이터 열  

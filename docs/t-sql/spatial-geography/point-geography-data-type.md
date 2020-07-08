@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b122ee434979bb25c9a1fb0fa1c67887f5cb3eba
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 36b39355ad9d2983945fcc7710d23b5e18e792d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826607"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705813"
 ---
 # <a name="point-geography-data-type"></a>Point(geography 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 해당 위도 및 경도 값과 SRID(Spatial Reference ID)로부터 **Point** 인스턴스를 나타내는 **geography** 인스턴스를 생성합니다.
   

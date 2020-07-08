@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e22d0c36c3a5ce614357566079ec81dc54b7c70e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1083504e4b3075a3e3ec8429c1ab0b5a664f2998
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68022203"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714940"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   세션의 SET 옵션 설정을 반환합니다.  
   
@@ -53,7 +53,7 @@ SESSIONPROPERTY (option)
 |CONCAT_NULL_YIELDS_ NULL|연결된 결과를 null 값으로 다룰 것인지 또는 빈 문자열 값으로 다룰 것인지를 제어합니다.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |NUMERIC_ROUNDABORT|식에서 반올림하여 전체 자릿수 손실이 생길 때 오류 메시지 및 경고의 생성 여부를 지정합니다.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |QUOTED_IDENTIFIER|식별자와 리터럴 문자열을 구분하는 따옴표의 사용 방법에 대한 ISO 규칙을 따를 것인지 여부를 지정합니다.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
-|\<다른 문자열>|NULL = 입력이 잘못되었습니다.|  
+|\<Any other string>|NULL = 입력이 잘못되었습니다.|  
   
 ## <a name="return-types"></a>반환 형식  
  **sql_variant**  
@@ -61,7 +61,7 @@ SESSIONPROPERTY (option)
 ## <a name="remarks"></a>설명  
  SET 옵션은 서버 수준, 데이터베이스 수준 및 사용자 지정 옵션을 결합하여 구성됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `CONCAT_NULL_YIELDS_NULL` 옵션의 설정 상태를 반환하는 방법을 보여 줍니다.  
   
 ```  

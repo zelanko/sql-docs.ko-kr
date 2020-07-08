@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: edd92f08-76fb-4fd7-a4b6-8520d6a81df1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a26896076c0c9ee12eae61a3e324090379b10df2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 55057a5cf385468fc7e01d813e451ac152c31c92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68122132"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706297"
 ---
 # <a name="logical-operators-transact-sql"></a>논리 연산자(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   논리 연산자는 조건의 진위 여부를 테스트합니다. 논리 연산자도 비교 연산자처럼 TRUE, FALSE 또는 UNKNOWN 값의 **Boolean** 데이터 형식을 반환합니다.  
   

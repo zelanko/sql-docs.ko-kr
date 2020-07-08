@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c0982bb3ffaf6c21ee8bff0b7cffc0bc472fb1d9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 61b076459edf728475f5f8a15fed8ade5f3b47ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634247"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705962"
 ---
 # <a name="table-value-constructor-transact-sql"></a>테이블 값 생성자(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   테이블에 생성할 행 값 식의 집합을 지정합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 값 생성자를 사용하면 단일 DML  문에 여러 데이터 행을 지정할 수 있습니다. 테이블 값 생성자는 INSERT ...의 VALUES 절로 지정할 수 있습니다. VALUES 문 또는 MERGE 문의 USING 절 또는 FROM 절의 파생 테이블로 사용됩니다.
   

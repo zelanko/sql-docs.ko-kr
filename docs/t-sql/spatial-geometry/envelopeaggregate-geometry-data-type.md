@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: c4c15abe-0fe9-441d-9d42-6572e264869c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: aec6618297f0ed38bfea5e730a452d4ccc9fae9b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5c82d456f6c51b60f095178608e976303f0f6c48
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68081186"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85700281"
 ---
 # <a name="envelopeaggregate-geometry-data-type"></a>EnvelopeAggregate(geometry 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 지정된 **geometry** 개체 집합에 대한 경계 상자를 반환합니다.
   

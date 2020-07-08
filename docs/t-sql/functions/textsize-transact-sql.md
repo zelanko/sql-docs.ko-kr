@@ -19,17 +19,17 @@ helpviewer_keywords:
 - '@@TEXTSIZE function'
 - text size returned [SQL Server]
 ms.assetid: 4308a7b9-8e8f-49e9-8246-8224e32f4953
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: b4389320436559504e6a9618565dad3198e91353
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 8a3fd16fc891f1996014e7deee016d696e7ff51c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099020"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714659"
 ---
 # <a name="x40x40textsize-transact-sql"></a>&#x40;&#x40;TEXTSIZE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [TEXTSIZE](../../t-sql/statements/set-textsize-transact-sql.md) 옵션의 현재 값을 반환합니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68099020"
  **integer**  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `SELECT`를 사용하여 `SET``TEXTSIZE` 문을 통해 값이 변경되기 이전과 이후의 `@@TEXTSIZE` 값을 표시합니다.  
+ 다음 예에서는 `SELECT`를 사용하여 `@@TEXTSIZE` 문을 통해 값이 변경되기 이전과 이후의 `SET``TEXTSIZE` 값을 표시합니다.  
   
 ```  
 -- Set the TEXTSIZE option to the default size of 4096 bytes.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 817a6325b956f5fc4214597b0b8bc46f6aff49f3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: acbc28abde35089acbb76af886b1e9a8c27ed9a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042513"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705265"
 ---
 # <a name="starea-geography-data-type"></a>STArea(geography 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **geography** 인스턴스의 전체 표면을 반환합니다. STArea()의 결과는 **geography** 인스턴스의 Spatial Reference Identifier에 사용되는 측정 단위의 제곱입니다. 예를 들어 인스턴스의 SRID가 4326이면 STArea()는 제곱 미터로 결과를 반환합니다.  
   

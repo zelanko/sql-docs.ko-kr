@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1cc6427e01055a3aa97f8f79f9270dc22579255
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3fbe10ec2f0d36a94b2c00ad07d71a510c2975c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140263"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706609"
 ---
 # <a name="comparison-operators-transact-sql"></a>비교 연산자(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   비교 연산자는 두 식이 동일한지 여부를 테스트합니다. 비교 연산자는 **text**, **ntext** 또는 **image** 데이터 형식의 식을 제외한 모든 식에 사용할 수 있습니다. 다음 표에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 비교 연산자를 나열합니다.  
   

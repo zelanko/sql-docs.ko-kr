@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 75b459554382b3bc7f73d6b3554a5ba10bf5294a
-ms.sourcegitcommit: 69f93dd1afc0df76c3b4d9203adae0ad7dbd7bb2
+ms.openlocfilehash: 516c2c3efefd0c9a1384823b8eb1f6c04abd29c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82598739"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705975"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **text**, **ntext** 또는 **image** 열에서 **text**, **ntext** 또는 **image** 값을 읽습니다. 지정한 오프셋에서 읽기 시작하여 지정한 바이트 수만큼 읽습니다.  
   

@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: f5c79546-7f99-46a2-bf92-bd4ac8a50bf8
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 82b550d8e814f225614feb7b758ce37d2292f816
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6f06565e0c49d9ae677dc9a063efa4ef746c0ecc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042667"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705861"
 ---
 # <a name="ogc-static-geography-methods"></a>OGC 정적 지리 메서드
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 OGC(Open Geospatial Consortium)의 정적 지리 메서드를 지원합니다.  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e81ef89165b3af5af0f8c48ca0338086c5c934a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 274eabcf6db0902f18bc8d6348e9b5e5a2314d12
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929533"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706569"
 ---
 # <a name="compound-operators-transact-sql"></a>복합 연산자(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   복합 연산자는 특정 연산을 실행하고 원래 값을 연산 결과로 설정합니다. 예를 들어 @x 변수가 35일 경우 @x += 2는 원래 값 @x에서 2를 더하고 @x를 새 값(37)으로 설정합니다.  
   

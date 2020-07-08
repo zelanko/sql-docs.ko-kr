@@ -12,15 +12,15 @@ ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98bf70f1bc26b4b3dd3182024aa62ed41dd3bbab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d139be67f2dceef498267376cf5cb74d8eabb164
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910971"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717753"
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Sort Warnings 이벤트 클래스는 정렬 작업이 메모리에 맞지 않음을 나타냅니다. 여기에는 인덱스 만들기와 관련된 정렬 작업이 포함되지 않으며 SELECT 문에 사용된 ORDER BY 절과 같은 쿼리 내의 정렬 작업만 포함됩니다.  
   
  정렬 작업을 포함하는 쿼리에서 EventSubClass 데이터 열 값이 2인 Sort Warnings 이벤트 클래스를 생성하면 데이터를 정렬할 때 데이터에 대한 패스가 여러 개 필요하기 때문에 쿼리 성능이 저하될 수 있습니다. 쿼리를 자세히 조사하여 정렬 작업을 제거할 수 있는지 확인하십시오.  
