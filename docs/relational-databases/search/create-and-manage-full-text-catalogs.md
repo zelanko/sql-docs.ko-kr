@@ -13,15 +13,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed7e7f31da9cacaf4862c29ada9c98df9559f9c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6999d409c81f19e0a8ae3903fe220e0c75235c8d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903858"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85678680"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>전체 텍스트 카탈로그 만들기 및 관리
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 전체 텍스트 카탈로그는 전체 텍스트 인덱스 그룹에 대한 논리적 컨테이너입니다. 전체 텍스트 인덱스를 만들려면 먼저 전체 텍스트 카탈로그를 만들어야 합니다.
 
 전체 텍스트 카탈로그는 어떠한 파일 그룹에도 속하지 않는 가상 개체입니다.

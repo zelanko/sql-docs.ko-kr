@@ -18,15 +18,15 @@ ms.assetid: 681ef31d-ceb9-4da5-86bf-bf1240df950f
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 15b8116b0677ebfccece9c13a49480d6702c6c54
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 08e28c4ded842a27d69d23de530345cdbf4ffa79
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631350"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85686200"
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 현재 사용자 데이터베이스에 대한 로그인 및 방화벽 규칙 정보가 포함된 데이터베이스 인증 캐시를 비웁니다. master 데이터베이스는 로그인 및 방화벽 규칙 정보에 대한 물리적 스토리지를 포함하기 때문에 이 명령문은 논리 master 데이터베이스에 적용되지 않습니다. 명령문을 실행하는 사용자 또는 현재 연결된 다른 사용자는 연결된 상태로 유지됩니다. (DBCC FLUSHAUTHCACHE는 현재 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]에 지원되지 않습니다.)
  

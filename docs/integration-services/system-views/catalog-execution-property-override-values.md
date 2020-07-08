@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: 83cbdd6f-ddde-47bf-abde-36bd24272621
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5ad38c81101d983f70130bd0df5526ccba785f57
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a94fef8c3b8202503f0af4c58f1b9b732102225e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296560"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85672345"
 ---
 # <a name="catalogexecution_property_override_values"></a>catalog.execution_property_override_values 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   패키지 실행 중 설정된 속성 재정의 값을 표시합니다.  
   

@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 618499b25914ea4f521fa694ac14b9e9049ca330
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4180093e97237b5b433714ad437447065235e54
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296694"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85673642"
 ---
 # <a name="catalogvalidate_project-ssisdb-database"></a>catalog.validate_project(SSISDB 데이터베이스)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에 있는 프로젝트의 유효성을 비동기적으로 검사합니다.  
   

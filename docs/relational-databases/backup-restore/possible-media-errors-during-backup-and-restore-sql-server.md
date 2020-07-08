@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 85b6077e5dfa2d70ecbbe6aead13fd02dbdf43b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c364c7dca1e8ea7a74a526bdb69dc8a7b3cf296d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180163"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670110"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>백업 및 복원 중 발생 가능한 미디어 오류(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 오류가 검색되면 데이터베이스를 복구할 수 있는 옵션을 제공합니다. 중요한 새 오류 검색 메커니즘을 사용하면 백업 작업으로 만들고 복원 작업으로 유효성을 검사할 수 있는 백업 체크섬을 만들 수 있습니다. 작업에서 오류를 검사할지 여부 및 오류 발생 시 작업을 중지할지 아니면 계속할지를 제어할 수 있습니다. 백업에 백업 체크섬이 들어 있으면 RESTORE 문과 RESTORE VERIFYONLY 문으로 오류를 검사할 수 있습니다.  
   
 > [!NOTE]  

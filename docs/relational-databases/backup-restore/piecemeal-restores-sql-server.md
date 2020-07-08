@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 9fb2e77a9d32e48965e491a2bc0549fb7c9ad400
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61054ac32e13c16a77c1ad27400be6b978cebe7f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824102"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670239"
 ---
 # <a name="piecemeal-restores-sql-server"></a>증분 복원(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 엔터프라이즈 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](온라인 복원) 또는 표준 버전(오프라인 복원)의 데이터베이스에 여러 개의 파일 또는 파일 그룹이 있는 경우 및 단순 모델에서 읽기 전용 파일 그룹인 경우에 대해서만 다룹니다.  
   
  증분 복원과 메모리 최적화 테이블에 대한 자세한 내용은 [메모리 최적화 테이블이 있는 데이터베이스의 증분 복원](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)을 참조하세요.  

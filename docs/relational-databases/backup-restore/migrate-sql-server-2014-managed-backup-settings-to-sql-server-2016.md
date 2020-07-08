@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: ae937ebb-24ff-4a33-be3c-8f85328dfc75
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 47e44701e2e573ab58ba603b8acabb21635697a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6b5b2a0c1aa13b634d23628ff693e8ef42226df5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180971"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670770"
 ---
 # <a name="migrate-managed-backup-settings"></a>관리형 백업 설정 마이그레이션
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 에서 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 으로 마이그레이션할 때의 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]관련 마이그레이션 고려 사항에 대해 설명합니다.  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 에서는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 절차 및 기본 동작이 변경되었습니다. 다음 섹션에서는 기능 변경 내용 및 해당 의미에 대해 설명합니다.  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d5d371a8d94b49a40fa105f06457519a03ed7ac5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6579e091911dc5e6a6c41bc27a567300f6fe2390
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829797"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670451"
 ---
 # <a name="online-restore-sql-server"></a>온라인 복원(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   온라인 복원은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition에서만 지원됩니다. 이 버전에서 기본적으로 파일, 페이지 또는 증분 복원은 온라인 상태입니다. 이 항목에서는 데이터베이스에 여러 개의 파일 또는 파일 그룹이 있는 경우 및 단순 복구 모델에서 데이터베이스에 읽기 전용 파일 그룹만 있는 경우와 관련된 내용을 다룹니다.  
   
  데이터베이스가 온라인 상태인 데이터 복원을 *온라인 복원*이라고 합니다. 데이터베이스는 주 파일 그룹이 온라인 상태일 때마다 하나 이상의 보조 파일 그룹이 오프라인 상태일 경우에도 온라인 상태로 간주됩니다. 복구 모델에서는 데이터베이스가 온라인 상태일 때 오프라인인 파일을 복원할 수 있습니다. 전체 복구 모델에서도 데이터베이스가 온라인 상태일 때 페이지를 복원할 수 있습니다.  

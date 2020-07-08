@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a8e85c35552a8bcbf4190bd3ce36b4a65be96789
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd72346d7539909c4769dd13390f9702ff75e24c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295298"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85674606"
 ---
 # <a name="catalogset_execution_property_override_value"></a>catalog.set_execution_property_override_value 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그의 실행 인스턴스에 대한 속성 값을 설정합니다.  
   

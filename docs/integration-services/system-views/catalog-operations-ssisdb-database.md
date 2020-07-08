@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d2cae61482de6b3269122249b310166987cfb44b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68e848fac38e304514341973fb2e413085e8020c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296549"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85671769"
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations(SSISDB 데이터베이스)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에 있는 모든 작업에 대한 자세한 정보를 표시합니다.  
   

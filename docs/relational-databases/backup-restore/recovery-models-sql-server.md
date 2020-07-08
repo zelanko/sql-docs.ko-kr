@@ -29,15 +29,15 @@ helpviewer_keywords:
 ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c7d04f6a6ed9a1e09c3ca278e1481000abc6cab8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 884477b0b1d62d7616448645cb740cc99e329c53
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180884"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669779"
 ---
 # <a name="recovery-models-sql-server"></a>복구 모델(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원 작업은 데이터베이스 복구 모델의 컨텍스트 내에서 수행됩니다. 복구 모델은 트랜잭션 로그 유지 관리를 제어합니다. *복구 모델* 은 트랜잭션이 로깅되는 방법, 트랜잭션 로그에 백업이 필요하며 허용되는지 여부 및 사용 가능한 복원 작업의 종류를 제어하는 데이터베이스 속성입니다. 사용할 수 있는 복구 모델은 3가지로 단순, 전체 및 대량 로그 복구 모델입니다. 일반적으로 데이터베이스는 전체 복구 모델이나 단순 복구 모델을 사용합니다. 데이터베이스는 언제든지 다른 복구 모델로 전환이 가능합니다.  
   
  **항목 내용:**  

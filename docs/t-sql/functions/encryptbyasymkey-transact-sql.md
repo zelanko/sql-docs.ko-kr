@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fb027b2fb06ac46b8e76068828a0ba71c12f127a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: de84d9fd01f49661dc099d166829d19e39559904
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636350"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682055"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 이 함수는 비대칭 키를 사용하여 데이터를 암호화합니다.  
   

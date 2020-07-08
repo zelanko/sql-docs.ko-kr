@@ -12,16 +12,16 @@ ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3330b9b44f2794daf8e9cd45e9806991a6a815de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d0be5e9b2a86f49fdb80b36ac33cb51a6df4ddae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67999763"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85679501"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation 이벤트 클래스
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 **Broker:Conversation** 이벤트를 생성하여 Service Broker 대화의 진행을 보고합니다.  
   

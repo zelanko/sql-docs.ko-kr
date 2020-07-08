@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cb2c87f45597f8192bf3d4db0555187685daa46a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e67c362ba45a7b70b252eb011ec0ee1e24e54888
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635069"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682438"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 이 함수는 대칭 키를 사용하여 데이터의 암호를 해독합니다.  
   

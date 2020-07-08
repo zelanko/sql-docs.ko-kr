@@ -12,16 +12,16 @@ ms.assetid: 6595bef6-9d40-42eb-a934-735622dd23fb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f63d4ed3b2f87d6062dee9ebf5b5ad002f0907c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c767f77683c46151fd0d9804a35f838d88ca0f0a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67999743"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85679309"
 ---
 # <a name="brokerconversation-group-event-class"></a>Broker:Conversation Group 이벤트 클래스
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 Service Broker에서 새 대화 그룹을 만들거나 기존 대화 그룹을 삭제할 때 **Broker:Conversation Group** 이벤트를 생성합니다.  
   

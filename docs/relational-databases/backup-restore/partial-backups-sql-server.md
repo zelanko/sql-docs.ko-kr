@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fe6b6bb1-38d0-46c4-bab8-31df14e8999c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7f37c55278762a30314d2ece3c631c84f0ab777a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5781f32050dc2afe09bd5c0b2f1c11b9d818022
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180176"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670502"
 ---
 # <a name="partial-backups-sql-server"></a>부분 백업(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복구 모델은 부분 백업을 지원하므로 이 항목에서는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 관련된 내용을 다룹니다. 그러나 부분 백업은 하나 이상의 읽기 전용 파일 그룹을 포함하는 초대형 데이터베이스를 백업할 경우의 유연성 향상을 위해 단순 복구 모델에서 사용하도록 디자인되었습니다.  
   
  부분 백업은 읽기 전용 파일 그룹을 제외할 때마다 유용하게 사용할 수 있습니다. *부분 백업* 은 전체 데이터베이스 백업과 유사하지만 부분 백업에 모든 파일 그룹이 포함되지는 않습니다. 대신 읽기/쓰기 데이터베이스의 경우 부분 백업은 주 파일 그룹, 모든 읽기/쓰기 파일 그룹, 하나 이상의 읽기 전용 파일(선택 사항)의 데이터를 포함합니다. 읽기 전용 데이터베이스의 부분 백업에는 주 파일 그룹만 포함됩니다.  

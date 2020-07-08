@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: 2fd8c020-1c77-4702-8e6b-efa6a348daab
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7dac194c0ceb54eeb716b9cf5ec676e7fe120d8f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e0c752f5872a6385af49753cbd24604adcb1c747
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296512"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85671929"
 ---
 # <a name="catalogobject_versions-ssisdb-database"></a>catalog.object_versions(SSISDB 데이터베이스)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에 있는 개체의 버전을 표시합니다. 이 릴리스에서는 프로젝트 버전만 이 뷰에서 지원됩니다.  
   

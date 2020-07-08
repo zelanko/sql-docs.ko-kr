@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 086b4503289c01f8b0022633361e7ce72dff73e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 78f1e4d38eca18dab090f97d25b9c733228cfbc3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295247"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85671276"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations(SSISDB 데이터베이스)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에 있는 모든 프로젝트 및 패키지 유효성 검사에 대한 자세한 정보를 표시합니다.  
   

@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: 271fd405-246a-4852-bfbe-f557241ce6ea
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ecc8678da81b9d4559f36d3cb70a88a7444f87e5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdb3a128753ca5e6be23eadf1c0b4fb91e9654c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295266"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85674213"
 ---
 # <a name="catalogstartup"></a>catalog.startup 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   SSISDB 카탈로그에 대한 작업의 상태를 유지 관리합니다.  
   

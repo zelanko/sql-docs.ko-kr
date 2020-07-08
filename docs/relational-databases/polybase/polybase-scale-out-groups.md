@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 65e9ae2e44816ca761594acd3e2e907d7bd938a3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ea789049116c79e3242a5d1fed1f1fb8f020d1f
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217097"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818225"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 스케일 아웃 그룹
 
@@ -58,10 +58,6 @@ PolyBase 엔진은 PolyBase 쿼리 뒤에 있는 주요 구성 요소입니다. 
   
 PolyBase 데이터 이동 서비스는 PolyBase 엔진에서 지침을 수신하고 헤드 및 컴퓨팅 노드의 SQL Server 인스터스 사이 및 HDFS 와 SQL Server 사이에서 데이터를 전송합니다.
   
-## <a name="editions-availability"></a>버전 가용성  
-
-SQL Server를 설치한 후에 인스턴스가 헤드 노드 또는 컴퓨팅 노드로 지정될 수 있습니다. 실행 중인 SQL Server PolyBase의 버전에 따라 선택이 달라질 수 있습니다. Enterprise Edition 설치 시 인스턴스는 헤드 노드 또는 컴퓨팅 노드로 지정될 수 있습니다. Standard Edition에서 인스턴스는 컴퓨팅 노드로만 지정될 수 있습니다.
-
 ## <a name="next-steps"></a>다음 단계
 
 PolyBase 스케일 아웃 그룹을 구성하려면 다음 안내서를 참조하세요.

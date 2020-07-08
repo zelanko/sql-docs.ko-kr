@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aea0d3c07482c7c54dc5adb8956b290791f29111
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6c675adc3577654067e5db162666d63aaf239756
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295173"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85671650"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages(SSISDB 데이터베이스)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **SSISDB** 카탈로그에 표시된 모든 패키지에 대한 자세한 정보를 표시합니다.  
   

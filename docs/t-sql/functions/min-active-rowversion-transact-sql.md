@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - MIN_ACTIVE_ROWVERSION function [Transact-SQL]
 ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 8fcd041edda3e8575e3dfc05615d2e23f6da20fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7b0e3e12eee099191da6ea0db231c0f2f99f8c48
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68130265"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681920"
 ---
 # <a name="min_active_rowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   현재 데이터베이스의 비활성 **rowversion** 값을 반환합니다. **rowversion** 값이 아직 커밋되지 않은 트랜잭션에서 사용되는 경우에는 활성 상태입니다. 자세한 내용은 [rowversion &#40;Transact-SQL&#41;](../../t-sql/data-types/rowversion-transact-sql.md)을 참조하세요.  
   
@@ -52,7 +52,7 @@ MIN_ACTIVE_ROWVERSION
  MIN_ACTIVE_ROWVERSION 함수는 트랜잭션 격리 수준에 있는 변경 내용의 영향을 받지 않습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `MIN_ACTIVE_ROWVERSION` 및 `@@DBTS`를 사용하여 **rowversion** 값을 반환합니다. 데이터베이스에 활성 트랜잭션이 없으면 값이 달라집니다.  
+ 다음 예에서는 **및**를 사용하여 `MIN_ACTIVE_ROWVERSION`rowversion`@@DBTS` 값을 반환합니다. 데이터베이스에 활성 트랜잭션이 없으면 값이 달라집니다.  
   
 ```  
 -- Create a table that has a ROWVERSION column in it.  

@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: db299b45-557d-4c62-8e14-355cdb051f63
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ca82bdc8a04ffee4426ffb934a9e9a4ddaf4654f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7beb83a2170624391dccb01f299c8710cf336644
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296604"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85672059"
 ---
 # <a name="catalogextended_operation_info-ssisdb-database"></a>catalog.extended_operation_info(SSISDB 데이터베이스)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에 있는 모든 작업에 대한 확장 정보를 표시합니다.  
   

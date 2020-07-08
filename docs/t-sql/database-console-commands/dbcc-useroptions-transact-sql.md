@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 565ab112-7af1-4c18-a579-07cdb332f539
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: dc8f12ae745acd0410fb309dc4c3dc9b65e7a382
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2972088ba9191df93fcb7236753513a7ac9db1fe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68040451"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85685262"
 ---
 # <a name="dbcc-useroptions-transact-sql"></a>DBCC USEROPTIONS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 현재 연결에 설정된 SET 옵션을 반환합니다.
   

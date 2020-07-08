@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - DATETIMEOFFSETFROMPARTS function
 ms.assetid: 463da1f4-b4b6-45a3-9a95-ea1f99575542
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 786729a6bfcae37e3c2fb1aa9a9e85839ca9c127
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 21004da03ef694633b28518777c2ed2f0ac59d06
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68119114"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85683350"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -68,7 +68,7 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 표준 시간대 오프셋의 분 부분을 지정하는 정수 식입니다.  
   
 *전체 자릿수*  
-`DATETIMEOFFSETFROMPARTS`가 반환하는 **datetimeoffset** 값의 전체 자릿수를 지정하는 정수 리터럴 값입니다.  
+**가 반환하는** datetimeoffset`DATETIMEOFFSETFROMPARTS` 값의 전체 자릿수를 지정하는 정수 리터럴 값입니다.  
   
 ## <a name="return-types"></a>반환 형식
 **datetimeoffset(** *precision* **)**  

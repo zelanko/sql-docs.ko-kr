@@ -10,26 +10,26 @@ ms.topic: language-reference
 ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 341d48d35404cd8d18c3f1474693305b7fadb3cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e492091be9fc2f363b5f105893e888301b1e0e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296716"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85674252"
 ---
 # <a name="catalogstart_execution-ssisdb-database"></a>catalog.start_execution(SSISDB 데이터베이스)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그의 실행 인스턴스를 시작합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```sql  
-catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry_count]  
+catalog.start_execution [ @execution_id = ] execution_id [, [ @retry_count = ] retry_count]  
 ```  
   
 ## <a name="arguments"></a>인수  

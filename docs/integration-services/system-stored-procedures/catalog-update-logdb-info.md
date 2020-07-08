@@ -10,26 +10,26 @@ ms.topic: language-reference
 author: haoqian
 ms.author: haoqian
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4a1717afb32a5763c6fc73a86151b041069b467c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c4797b3452f64f7fee7a8d5653c13812d0af716
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68038605"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85674130"
 ---
 # <a name="catalogupdate_logdb_info-ssisdb-database"></a>catalog.update_logdb_info(SSISDB 데이터베이스)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/applies-to-version/sqlserver2017.md)]
 
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 스케일 아웃 로깅 정보를 업데이트합니다.
 
 ## <a name="syntax"></a>구문
 
 ```sql
-catalog.update_logdb_info [@server_name = ] server_name, [@connection_string = ] connection_string
+catalog.update_logdb_info [ @server_name = ] server_name, [ @connection_string = ] connection_string
 ```
 
 ## <a name="arguments"></a>인수

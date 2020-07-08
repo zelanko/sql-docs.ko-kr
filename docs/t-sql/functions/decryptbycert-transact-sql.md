@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9653e799a543dd95a7d6fb033e0a8d5b9a4484a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d0b4363e41169ccec1da20780cc18ca3c3f57dff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71314528"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682659"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 이 함수는 인증서의 프라이빗 키를 사용하여 암호화된 데이터의 암호를 해독합니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "71314528"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }   
     [ , { 'cert_password' | @cert_password } ] )  
@@ -67,7 +67,7 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
 `DECRYPTBYCERT`는 인증서에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
-이 예제는 인증서 `JanainaCert02`로 원래 암호화된 데이터로 표시되는 `[AdventureWorks2012].[ProtectedData04]`에서 행을 선택합니다. 예제는 먼저 인증서 `pGFD4bb925DGvbd2439587y`의 암호로 인증서 `JanainaCert02`의 프라이빗 키를 암호 해독합니다. 그런 다음, 예제에서는 이 프라이빗 키로 암호 텍스트를 암호 해독합니다. 예제는 암호가 해독된 데이터를 **varbinary**에서 **nvarchar**로 변환합니다.  
+이 예제는 인증서 `[AdventureWorks2012].[ProtectedData04]`로 원래 암호화된 데이터로 표시되는 `JanainaCert02`에서 행을 선택합니다. 예제는 먼저 인증서 `JanainaCert02`의 암호로 인증서 `pGFD4bb925DGvbd2439587y`의 프라이빗 키를 암호 해독합니다. 그런 다음, 예제에서는 이 프라이빗 키로 암호 텍스트를 암호 해독합니다. 예제는 암호가 해독된 데이터를 **varbinary**에서 **nvarchar**로 변환합니다.  
 
 ```  
 SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  

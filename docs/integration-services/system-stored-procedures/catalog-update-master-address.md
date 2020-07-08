@@ -10,26 +10,26 @@ ms.topic: language-reference
 author: haoqian
 ms.author: haoqian
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d9373bcb994614a1726801c6cd8c85a9bc46bced
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: afcd5083c5b0132d2594c45690b10f2a69371e70
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68038569"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85673986"
 ---
 # <a name="catalogupdate_master_address-ssisdb-database"></a>catalog.update_master_address(SSISDB 데이터베이스)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/applies-to-version/sqlserver2017.md)]
 
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 스케일 아웃 마스터 엔드포인트를 업데이트합니다.
 
 ## <a name="syntax"></a>구문
 
 ```sql
-catalog.update_master_address [@MasterAddress = ] masterAddress
+catalog.update_master_address [ @MasterAddress = ] masterAddress
 ```
 
 ## <a name="arguments"></a>인수

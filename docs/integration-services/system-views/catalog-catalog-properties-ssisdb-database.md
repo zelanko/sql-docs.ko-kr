@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9b5f7628f0284cb4662f0cf88bff1fd80cb2014e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5ce65841f4834278a2bf27086f0c5222afe85988
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295226"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85673498"
 ---
 # <a name="catalogcatalog_properties-ssisdb-database"></a>catalog.catalog_properties(SSISDB 데이터베이스)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그의 속성을 표시합니다.  
   

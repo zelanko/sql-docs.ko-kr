@@ -10,32 +10,32 @@ ms.topic: language-reference
 ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 36d73a0248be0bd8f9a0873e5ae8445ee68af2e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8c9263e3855fcb9617baf3d9d3d7e0a55d079316
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295275"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85674532"
 ---
 # <a name="catalogset_object_parameter_value-ssisdb-database"></a>catalog.set_object_parameter_value(SSISDB 데이터베이스)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그의 매개 변수 값을 설정합니다. 이 값을 환경 변수에 연결하거나, 할당된 다른 값이 없는 경우 기본적으로 사용되는 리터럴 값을 할당합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```sql  
-catalog.set_object_parameter_value [@object_type =] object_type   
-    , [@folder_name =] folder_name   
-    , [@project_name =] project_name   
-    , [@parameter_name =] parameter_name   
-    , [@parameter_value =] parameter_value   
- [  , [@object_name =] object_name ]  
- [  , [@value_type =] value_type ]  
+catalog.set_object_parameter_value [ @object_type = ] object_type   
+    , [ @folder_name = ] folder_name   
+    , [ @project_name = ] project_name   
+    , [ @parameter_name = ] parameter_name   
+    , [ @parameter_value = ] parameter_value   
+ [  , [ @object_name = ] object_name ]  
+ [  , [ @value_type = ] value_type ]  
 ```  
   
 ## <a name="arguments"></a>인수  

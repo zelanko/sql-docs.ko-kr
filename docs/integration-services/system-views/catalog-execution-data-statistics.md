@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 97d78f4a96a87b6ffe373335167b796ea5a2de3d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 65b3853db8fb20ef3c2a21846db59ce0981485cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296585"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85672784"
 ---
 # <a name="catalogexecution_data_statistics"></a>catalog.execution_data_statistics 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 뷰는 지정된 패키지 실행에 대해 데이터 흐름 구성 요소가 다운스트림 구성 요소에 데이터를 전송할 때마다 행을 표시합니다. 이 뷰의 정보를 사용하여 구성 요소에 대한 데이터 처리량을 계산할 수 있습니다.  
   

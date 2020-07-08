@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: a6ccd884-108f-4fb6-95ad-00b9cb65d5d6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e1eea2f9e83069b18b47b1563e60a0c31c0bfcb0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba8d5f185968cc46809e03654f6fe4c0f8b4f6de
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296683"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85673624"
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>저장 프로시저(Integration Services 카탈로그)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 섹션에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 인스턴스에 배포된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 관리하는 데 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저에 대해 설명합니다.  
   
