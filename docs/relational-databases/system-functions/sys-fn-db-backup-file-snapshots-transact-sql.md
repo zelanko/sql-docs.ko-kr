@@ -12,15 +12,14 @@ dev_langs:
 ms.assetid: 45010ff2-219f-4086-9ea4-016a6c17cddd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5159b72cb91cfdcf21129c6216cab4cf0e8d4dea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
-ms.translationtype: MT
+ms.openlocfilehash: d6944817524a339eb8e48aa223c291cef1de1879
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68120266"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052756"
 ---
 # <a name="sysfn_db_backup_file_snapshots-transact-sql"></a>sys. fn_db_backup_file_snapshots (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   데이터베이스 파일에 연결 된 Azure 스냅숏을 반환 합니다. 지정 된 데이터베이스를 찾을 수 없거나 데이터베이스 파일이 Microsoft Azure Blob storage 서비스에 저장 되어 있지 않은 경우에는 행이 반환 되지 않습니다. 이 시스템 함수를 **sp_delete_backup_file_snapshot** 시스템 저장 프로시저와 함께 사용 하 여 분리 된 백업 스냅숏을 식별 하 고 삭제 합니다. 자세한 내용은 [Azure에서 데이터베이스 파일에 대한 파일-스냅샷 Backup](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
   
@@ -40,7 +39,7 @@ sys.fn_db_backup_file_snapshots
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |file_id|**int**|데이터베이스의 파일 ID입니다. Null을 허용하지 않습니다.|  
 |snapshot_time|**nvarchar(260)**|REST API에서 반환 하는 스냅숏의 타임 스탬프입니다. 스냅숏이 없으면 NULL을 반환 합니다.|  

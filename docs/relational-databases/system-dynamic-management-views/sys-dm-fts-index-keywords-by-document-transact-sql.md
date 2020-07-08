@@ -22,15 +22,14 @@ ms.assetid: 793b978b-c8a1-428c-90c2-a3e49d81b5c9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86ab3a31f53f480713ae27a70bfe59d3817af017
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: b1517198208c6282aabd29e39d425dc8ae5afb9e
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078557"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091587"
 ---
 # <a name="sysdm_fts_index_keywords_by_document-transact-sql"></a>sys.dm_fts_index_keywords_by_document(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   지정된 테이블에 연결된 전체 텍스트 인덱스의 문서 수준 내용에 대한 정보를 반환합니다.  
   
@@ -80,7 +79,7 @@ sys.dm_fts_index_keywords_by_document
   
 -   모든 전체 텍스트 인덱스에서 키워드가 나타나는 횟수  
   
-     ([SUM](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) WHERE **키워드**=*keyword_value* )  
+     ([SUM](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) WHERE **키워드** = *keyword_value* )  
   
 -   지정된 문서 또는 행에서 키워드가 나타나는 횟수  
   
@@ -90,7 +89,7 @@ sys.dm_fts_index_keywords_by_document
   
  권장한 대로 전체 텍스트 키 열이 integer 데이터 형식이면 document_id가 기본 테이블의 전체 텍스트 키 값에 직접 매핑됩니다.  
   
- 반대로 전체 텍스트 키 열이 integer 이외의 데이터 형식을 사용하면 document_id가 기본 테이블의 전체 텍스트 키를 나타내지 않습니다. 이 경우 dm_fts_index_keywords_by_document에서 반환 하는 기본 테이블의 행을 식별 하려면 [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)에서 반환 된 결과와이 뷰에 조인 해야 합니다. 이 뷰를 조인하려면 먼저 저장 프로시저의 출력을 임시 테이블에 저장해야 합니다. 그런 다음 dm_fts_index_keywords_by_document의 document_id 열을 이 저장 프로시저에서 반환된 DocId 열과 조인할 수 있습니다. **타임 스탬프** 열은에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]자동으로 생성 되기 때문에 삽입 시 값을 받을 수 없습니다. 따라서 **timestamp** 열을 **varbinary (8)** 열로 변환 해야 합니다. 다음 예에서는 이 단계를 보여 줍니다. 이 예에서 *table_id* 은 테이블의 id 이며, *database_name* 은 데이터베이스의 이름이 고 *table_name* 는 테이블의 이름입니다.  
+ 반대로 전체 텍스트 키 열이 integer 이외의 데이터 형식을 사용하면 document_id가 기본 테이블의 전체 텍스트 키를 나타내지 않습니다. 이 경우 dm_fts_index_keywords_by_document에서 반환 하는 기본 테이블의 행을 식별 하려면 [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)에서 반환 된 결과와이 뷰에 조인 해야 합니다. 이 뷰를 조인하려면 먼저 저장 프로시저의 출력을 임시 테이블에 저장해야 합니다. 그런 다음 dm_fts_index_keywords_by_document의 document_id 열을 이 저장 프로시저에서 반환된 DocId 열과 조인할 수 있습니다. **타임 스탬프** 열은에서 자동으로 생성 되기 때문에 삽입 시 값을 받을 수 없습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 따라서 **timestamp** 열을 **varbinary (8)** 열로 변환 해야 합니다. 다음 예에서는 이 단계를 보여 줍니다. 이 예에서 *table_id* 은 테이블의 id 이며, *database_name* 은 데이터베이스의 이름이 고 *table_name* 는 테이블의 이름입니다.  
   
 ```  
 USE database_name;  
@@ -113,13 +112,13 @@ GO
 ## <a name="permissions"></a>사용 권한  
  전체 텍스트 인덱스가 적용되는 열에 대한 SELECT 권한 및 CREATE FULLTEXT CATALOG 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-displaying-full-text-index-content-at-the-document-level"></a>A. 문서 수준의 전체 텍스트 인덱스 내용 표시  
  다음 예에서는 `HumanResources.JobCandidate` 예제 데이터베이스의 `AdventureWorks2012` 테이블에 문서 수준의 전체 텍스트 인덱스 내용을 표시합니다.  
   
 > [!NOTE]  
->  `HumanResources.JobCandidate` [TRANSACT-SQL&#41;&#40;전체 텍스트 인덱스 만들기 ](../../t-sql/statements/create-fulltext-index-transact-sql.md)에서 테이블에 대해 제공 된 예를 실행 하 여이 인덱스를 만들 수 있습니다.  
+>  `HumanResources.JobCandidate` [Transact-sql&#41;&#40;전체 텍스트 인덱스 만들기 ](../../t-sql/statements/create-fulltext-index-transact-sql.md)에서 테이블에 대해 제공 된 예를 실행 하 여이 인덱스를 만들 수 있습니다.  
   
 ```  
 SELECT * FROM sys.dm_fts_index_keywords_by_document(db_id('AdventureWorks'),   

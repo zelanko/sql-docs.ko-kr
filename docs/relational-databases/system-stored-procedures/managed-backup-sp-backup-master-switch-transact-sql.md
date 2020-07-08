@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 1ed2b2b2-c897-41cc-bed5-1c6bc47b9dd2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 242ef833cbb5a6a54b52fba0d1f435a7ca475cf0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: eb140e5ff831373d2725bca82c70655c5745a658
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830368"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053539"
 ---
 # <a name="managed_backupsp_backup_master_switch-transact-sql"></a>managed_backup. sp_backup_master_switch (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 일시 중지하거나 다시 시작합니다.  
   
@@ -58,7 +57,7 @@ EXEC managed_backup.sp_backup_master_switch
 ### <a name="permissions"></a>사용 권한  
  **ALTER ANY CREDENTIAL** 권한 및 **sp_delete_backuphistory**저장 프로시저에 대 한 **EXECUTE** 권한이 있는 **db_backupoperator** 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  인스턴스에서 실행 중인 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 일시 중지하는 데 다음 예를 사용할 수 있습니다.  
   
 ```  

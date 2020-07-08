@@ -10,11 +10,11 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: e2c45c4aea17448af7ed496c1c56b8629c30e429
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7e898fa94dda37342765001ba87283b986ac9eb1
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85978845"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091767"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Access 용 SSMA의 새로운 기능 (AccessToSQL)
 
@@ -213,7 +213,7 @@ Access 용 SSMA의 2016 년 3 월 preview 릴리스는 SQL Server 2016로 마이
 Access 용 SSMA의 1 월 2016 유지 관리 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
 
 * GUID 필드의 기본값에 대 한 잘못 된 함수를 수정 했습니다 (RFC 3894811).
-* SQL Database (Azure)로 레코드 가져오기에 대 한 중단 문제를 해결 했습니다 (RFC 4919573).
+* SQL Database (Azure)로 레코드를 가져올 때 시스템이 응답을 중지 하는 문제를 해결 했습니다 (RFC 4919573).
 * SSMA에 보기 로그 메뉴 항목을 추가 했습니다 (RFC 5706203).
 * 원격 분석 추가.
 

@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 35882067-3072-47ff-9024-ca453c0f49a7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1e89e4901cf8e0bb5674038bfd8fe74bc637511
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 8e903c3b41a8a191122fdf8499ee6b4c82dbe308
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814797"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053039"
 ---
 # <a name="syssp_rda_get_rpo_duration-transact-sql"></a>sys. sp_rda_get_rpo_duration (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   지정 시간 복원이 필요한 경우 원격 Azure 데이터베이스를 전체 복원할 수 있도록 SQL Server 준비 테이블에 유지 되는 마이그레이션된 데이터의 시간을 가져옵니다. 
   
@@ -44,7 +43,7 @@ sp_rda_get_rpo_duration @durationinhours output
  *\@durationinhours*    
   현재 스트레치 사용 데이터베이스에 대해 SQL Server 유지 하는 마이그레이션된 데이터의 시간 (null이 아닌 정수 값) 수입니다.    
     
-## <a name="permissions"></a>권한    
+## <a name="permissions"></a>사용 권한    
  Db_owner 권한이 필요 합니다.    
     
 ## <a name="remarks"></a>설명    

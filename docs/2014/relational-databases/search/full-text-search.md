@@ -11,12 +11,11 @@ helpviewer_keywords:
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 49751128273fd052dd0ecd9423238f6c71a15925
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
-ms.translationtype: MT
+ms.openlocfilehash: 16303c34d44a056f1f505a2d1876b2ee23df994c
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85063318"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091897"
 ---
 # <a name="full-text-search"></a>전체 텍스트 검색
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 의 전체 텍스트 검색을 사용하면 사용자와 애플리케이션이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 문자 기반 데이터에 대해 전체 텍스트 쿼리를 실행할 수 있습니다. 테이블에 대해 전체 텍스트 쿼리를 실행하려면 먼저 데이터베이스 관리자가 해당 테이블에 대한 전체 텍스트 인덱스를 만들어야 합니다. 전체 텍스트 인덱스에는 테이블에 있는 하나 이상의 문자 기반 열이 포함됩니다. 이러한 열의 데이터 형식은 `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml` 또는 `varbinary(max)` 및 FILESTREAM 중 하나일 수 있습니다. 각 전체 텍스트 인덱스는 테이블의 열을 하나 이상 인덱싱하며, 각 열은 특정 언어를 사용할 수 있습니다.
@@ -48,7 +47,7 @@ ms.locfileid: "85063318"
 
  전체 텍스트 쿼리는 대/소문자를 구분하지 않습니다. 예를 들어 "Aluminum" 또는 "aluminum"을 검색하면 동일한 결과가 반환됩니다.
 
- 전체 텍스트 쿼리는 일부 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE) 집합을 사용합니다. 그러나 전체 텍스트 쿼리의 구조는 지정된 비즈니스 시나리오의 검색 목표에 따라 달라집니다. 다음은 그 예입니다.
+ 전체 텍스트 쿼리는 일부 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE) 집합을 사용합니다. 그러나 전체 텍스트 쿼리의 구조는 지정된 비즈니스 시나리오의 검색 목표에 따라 달라집니다. 예를 들어:
 
 -   e-비즈니스 - 웹 사이트에서 제품 검색
 
@@ -149,7 +148,7 @@ ms.locfileid: "85063318"
  [항목 내용](#top)
 
 ##  <a name="linguistic-components-and-language-support-in-full-text-search"></a><a name="components"></a>전체 텍스트 검색의 언어 구성 요소 및 언어 지원
- 전체 텍스트 검색에서 영어, 스페인어, 중국어, 일본어, 아랍어, 벵골어 및 힌디어를 포함하여 거의 50개의 언어를 지원합니다. 지원되는 전체 텍스트 언어의 전체 목록은 [sys.fulltext_languages&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)를 참조하세요. 전체 텍스트 인덱스에 있는 각 열은 전체 텍스트 검색에서 지원하는 언어에 해당하는 Windows LCID(로캘 ID)와 연결됩니다. 예를 들어 LCID 1033은 영어(미국)에 해당하고 LCID 2057은 영어(영국)에 해당합니다. 지원되는 각 전체 텍스트 언어에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 해당 언어로 저장되는 전체 텍스트 데이터의 인덱싱 및 쿼리를 지원하는 언어 구성 요소를 제공합니다.
+ 전체 텍스트 검색은 영어, 스페인어, 중국어, 일본어, 아랍어, 벵골어 및 힌디어와 같은 거의 50의 다양 한 언어를 지원 합니다. 지원되는 전체 텍스트 언어의 전체 목록은 [sys.fulltext_languages&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)를 참조하세요. 전체 텍스트 인덱스에 있는 각 열은 전체 텍스트 검색에서 지원하는 언어에 해당하는 Windows LCID(로캘 ID)와 연결됩니다. 예를 들어 LCID 1033은 영어(미국)에 해당하고 LCID 2057은 영어(영국)에 해당합니다. 지원되는 각 전체 텍스트 언어에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 해당 언어로 저장되는 전체 텍스트 데이터의 인덱싱 및 쿼리를 지원하는 언어 구성 요소를 제공합니다.
 
  다음과 같은 언어별 구성 요소가 있습니다.
 
@@ -234,5 +233,3 @@ ms.locfileid: "85063318"
 -   [전체 텍스트 검색 DDL, 함수, 저장 프로시저 및 뷰](../views/views.md)
 
  [항목 내용](#top)
-
-

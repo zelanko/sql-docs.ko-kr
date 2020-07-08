@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 2382a547-c0c9-4e1d-87c9-d8526192eb5a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 41c689d03ebae3afe16dc51d8a47c54e923d3a82
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: ec61c7797a707b3c0d6dd41c0d2e36fb4cc0a945
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68067757"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052785"
 ---
 # <a name="managed_backupfn_backup_instance_config-transact-sql"></a>managed_backup. fn_backup_instance_config (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   SQL Server 인스턴스에 대한 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 기본 구성 설정이 포함된 행을 하나 반환합니다.  
   
@@ -44,7 +43,7 @@ managed_backup.fn_backup_db_config ()
 ```  
   
 ##  <a name="arguments"></a><a name="Arguments"></a>인수의  
- None  
+ 없음  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
@@ -63,7 +62,7 @@ managed_backup.fn_backup_db_config ()
 ### <a name="permissions"></a>사용 권한  
  **ALTER ANY CREDENTIAL** 권한이 있는 **db_backupoperator** 데이터베이스 역할의 멤버 자격이 필요 합니다. 사용자에 게 **VIEW ANY DEFINITION** 권한이 거부 되어서는 안 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 코드가 실행되는 인스턴스에 대한 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 기본 구성 설정을 반환합니다.  
   
 ```  

@@ -20,19 +20,18 @@ ms.assetid: efa20414-2c6b-45a2-a7a9-60110a24da18
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11f39b29817716799ec693d6161135010c35a233
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: decb7b7ce4d1c2937c5c787e92c7c35472f30133
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133032"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091727"
 ---
 # <a name="sysserver_role_members-transact-sql"></a>sys.server_role_members(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   각 고정 및 사용자 정의 서버 역할의 각 멤버에 대해 행을 반환합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**role_principal_id**|**int**|역할의 서버 보안 주체 ID입니다.|  
 |**member_principal_id**|**int**|멤버의 서버 보안 주체 ID입니다.|  
@@ -42,9 +41,9 @@ ms.locfileid: "68133032"
 ## <a name="permissions"></a>사용 권한  
  로그인은 자체 서버 역할 멤버 자격을 볼 수 있으며 고정 서버 역할의 멤버 principal_id를 볼 수 있습니다. 모든 서버 역할 멤버 자격을 보려면 **서버 역할에 대 한 VIEW DEFINITION** 권한 또는 **securityadmin** 고정 서버 역할의 멤버 자격이 필요 합니다.  
   
-  자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
+ 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 역할 및 해당 멤버의 이름과 ID를 반환합니다.  
   
 ```  

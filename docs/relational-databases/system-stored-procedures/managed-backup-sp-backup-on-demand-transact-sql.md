@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bb2bda2d58504033469e8ed0f6455784efb113b8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 5b2ee41dcc94e0bc84b6a5347ba84609b73e3335
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830455"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053526"
 ---
 # <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup. sp_backup_on_demand (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   지정된 데이터베이스 백업을 수행하려면 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 요청합니다.  
   
@@ -63,7 +62,7 @@ EXEC managed_backup.sp_backup_on_demand
 ### <a name="permissions"></a>사용 권한  
  **ALTER ANY CREDENTIAL** 권한 및 **sp_delete_backuphistory**저장 프로시저에 대 한 **EXECUTE** 권한이 있는 **db_backupoperator** 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 ' TestDB ' 데이터베이스에 대 한 데이터베이스 백업 요청을 만듭니다. 이 데이터베이스에는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 설정되어 있습니다.  
   
 ```  

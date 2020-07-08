@@ -20,15 +20,14 @@ ms.assetid: c8fcced8-c780-49dc-99bd-6beb3ca532c4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e89252effd6e8fbb14d800837328c9ff8042e0d3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 9dedfbbb19fe186758d865f97271410ddcd5d27d
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827951"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091642"
 ---
 # <a name="sysdm_io_cluster_shared_drives-transact-sql"></a>sys.dm_io_cluster_shared_drives(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   이 뷰에서는 현재 서버 인스턴스가 클러스터형 서버인 경우 각 공유 드라이브의 이름을 반환합니다. 현재 서버 인스턴스가 클러스터형 인스턴스가 아닌 경우 빈 행 집합을 반환합니다.  
   
@@ -46,10 +45,10 @@ ms.locfileid: "82827951"
 > [!NOTE]  
 >  이 뷰는 이후 릴리스에서 더 이상 사용되지 않습니다. 대신 [dm_io_cluster_valid_path_names &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md) 를 사용 하는 것이 좋습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 VIEW SERVER STATE 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 sys.dm_io_cluster_shared_drives를 사용하여 클러스터형 서버 인스턴스의 공유 드라이브를 결정합니다.  
   
 ```  
@@ -62,7 +61,7 @@ SELECT * FROM sys.dm_io_cluster_shared_drives;
   
  --------\-  
   
- m  
+ 분  
   
  n  
   

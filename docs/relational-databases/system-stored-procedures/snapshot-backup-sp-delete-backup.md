@@ -12,15 +12,14 @@ dev_langs:
 ms.assetid: 808e50ae-ff6e-4520-9ce2-530591d3d59b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 49eb0906a9a5af1fec2abfeec3ef58845b605e69
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: edb0740ce1bbc0009996849e39bf495c23ba29b0
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67941829"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053719"
 ---
 # <a name="sp_delete_backup-transact-sql"></a>sp_delete_backup (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   지정 된 데이터베이스에서 스냅숏 백업 집합을 구성 하는 모든 스냅숏과 백업 파일을 삭제 합니다. 이 시스템 저장 프로시저는 스냅숏 백업 집합을 관리 하는 유일한 권장 방법입니다. 자세한 내용은 [Azure에서 데이터베이스 파일에 대한 파일-스냅샷 Backup](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
   

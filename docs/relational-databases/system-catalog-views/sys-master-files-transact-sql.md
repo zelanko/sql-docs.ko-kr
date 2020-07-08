@@ -20,15 +20,14 @@ ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2baa122d56582cfdf0bef780434f9f5ba98711ca
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 1c30a4bba2eed0e8709b7d99d745dd51607080b9
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825151"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091817"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   master로 저장된 데이터베이스의 각 파일당 한 개의 행을 포함합니다. 시스템 차원의 단일 뷰입니다.  
   
@@ -69,7 +68,7 @@ ms.locfileid: "82825151"
 > [!NOTE]  
 >  대형 인덱스를 삭제하거나 다시 작성할 때 또는 대형 테이블을 삭제하거나 자를 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 트랜잭션이 커밋될 때까지 실제 페이지 할당 해제 및 관련 잠금을 연기합니다. 삭제 작업이 지연되어도 할당된 공간이 즉시 해제되지는 않습니다. 따라서 큰 개체를 삭제하거나 자른 직후 sys.master_files가 반환한 값은 실제 사용 가능한 디스크 공간과 다를 수 있습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  해당 행을 보는 데 필요한 최소 권한은 CREATE DATABASE, ALTER ANY DATABASE 또는 VIEW ANY DEFINITION입니다.  
   
 ## <a name="see-also"></a>참고 항목  

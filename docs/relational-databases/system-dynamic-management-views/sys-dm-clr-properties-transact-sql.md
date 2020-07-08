@@ -20,15 +20,14 @@ ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cb9cfc6e645e9777a697e62183db874c47cfeb4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: a61484691e4e5a2ea5ca4c08b6382b501f1cc851
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824730"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091881"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   호스팅된 CLR의 버전 및 상태를 포함하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR(공용 언어 런타임) 통합과 관련된 각 속성에 대해 행을 반환합니다. 호스팅된 CLR은 [CREATE assembly](../../t-sql/statements/create-assembly-transact-sql.md), [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md)또는 [DROP assembly](../../t-sql/statements/drop-assembly-transact-sql.md) 문을 실행 하거나 CLR 루틴, 형식 또는 트리거를 실행 하 여 초기화 됩니다. **Dm_clr_properties** 뷰에서는 사용자 clr 코드 실행이 서버에서 사용 하도록 설정 되었는지 여부를 지정 하지 않습니다. [Clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) 옵션이 1로 설정 된 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 저장 프로시저를 사용 하 여 사용자 CLR 코드를 실행할 수 있습니다.  
   
@@ -71,12 +70,12 @@ ms.locfileid: "82824730"
 ## <a name="remarks"></a>설명  
  CLR 통합 기능의 향상 된 기능으로 인해이 뷰의 속성 및 값이의 이후 버전에서 변경 될 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
   
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
 
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 호스팅된 CLR에 대한 정보를 검색합니다.  
   
 ```  

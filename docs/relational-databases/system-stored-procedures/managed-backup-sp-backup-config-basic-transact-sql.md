@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 684a538030aae91cd50125c82d4a5aee401764eb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 67ed480e1d34e688413cd7242bd25501dcd3074a
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830386"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052939"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]특정 데이터베이스 또는 인스턴스에 대 한 기본 설정을 구성 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -75,7 +74,7 @@ EXEC managed_backup.sp_backup_config_basic
 ### <a name="permissions"></a>사용 권한  
  **ALTER ANY CREDENTIAL** 권한 및 **sp_delete_backuphistory** 저장 프로시저에 대 한 **EXECUTE** 권한이 있는 **db_backupoperator** 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  최신 Azure PowerShell 명령을 사용 하 여 저장소 계정 컨테이너와 SAS URL을 모두 만들 수 있습니다. 다음 예제에서는 mystorageaccount 저장소 계정에 새 컨테이너 mycontainer를 만든 다음 모든 권한을 사용 하 여이 컨테이너에 대 한 SAS URL을 가져옵니다.  
   
 ```powershell  

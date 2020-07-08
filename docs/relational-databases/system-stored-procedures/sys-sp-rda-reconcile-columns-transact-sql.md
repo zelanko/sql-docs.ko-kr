@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8410cde58d5f6bcf6b2a48fcc7169210a41afe0a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: a528609b8ab33f913a45e9bd61a1409bc3927930
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814687"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053125"
 ---
 # <a name="syssp_rda_reconcile_columns-transact-sql"></a>sys. sp_rda_reconcile_columns (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   원격 Azure 테이블의 열을 스트레치 사용 SQL Server 테이블의 열로 조정 합니다.  
     
@@ -50,7 +49,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ## <a name="return-code-values"></a>반환 코드 값  
  0 (성공) 또는 >0 (실패)  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  Db_owner 권한이 필요 합니다.  
    
 ## <a name="remarks"></a>설명  

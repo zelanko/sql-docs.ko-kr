@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 504085ff53415a7cf84bdb4aabf5eff567391a0c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: be9e80c522cc68cd4438e34d96564a7e49196152
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827403"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053023"
 ---
 # <a name="syssp_rda_reconcile_indexes-transact-sql"></a>sys. sp_rda_reconcile_indexes (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   원격 테이블의 인덱스를 조정 하는 스키마 태스크를 큐에 대기 시킵니다. 이 작업이 성공적으로 완료 되 면 원격 테이블에는 로컬 스트레치 사용 테이블에 존재 하는 것과 동일한 인덱스가 있습니다.  
   

@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4e9f5e12a56fe825909dd991c4b3253d3d90608c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 82bcad58a97fa41938f127c0a814c312c4e22ec9
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827827"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052726"
 ---
 # <a name="sp_polybase_leave_group-transact-sql"></a>sp_polybase_leave_group (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   스케일 아웃 계산을 위해 PolyBase 그룹에서 SQL Server 인스턴스를 제거 합니다. 
  
@@ -41,7 +40,7 @@ sp_polybase_leave_group;
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한이 필요 합니다.  
   
 ## <a name="remarks"></a>설명  

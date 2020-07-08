@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 95d3adaa-bb9d-4833-b8b4-3d9fd4f9c82a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4133f8bb64d5d7e2e2b511c2128b9ddbca1fa550
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
-ms.translationtype: MT
+ms.openlocfilehash: cff78d30f768360c55b212742770d8caded6f5ee
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910241"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053455"
 ---
 # <a name="managed_backupfn_get_current_xevent_settings-transact-sql"></a>managed_backup. fn_get_current_xevent_settings (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   스마트 관리에서 지원되는 각 확장 이벤트 유형에 대해 1개 행을 반환합니다.  
   
@@ -48,7 +47,7 @@ smart_admin.fn_get_current_xevent_settings ()
 ## <a name="table-returned"></a>반환된 테이블  
  확장 이벤트의 Admin, Analytic 및 Operational 채널은 기본적으로 사용하도록 설정되며 구성할 수 없습니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |Event_name|NVARCHAR(128)|확장 이벤트 유형|  
 |is_configurable|NVARCHAR(128)|이 이벤트는 이벤트를 구성할 수 있는 경우 **True** 로 설정 되 고, 그렇지 않으면 **False**로 설정 됩니다.|  
@@ -59,7 +58,7 @@ smart_admin.fn_get_current_xevent_settings ()
 ### <a name="permissions"></a>사용 권한  
  함수에 대 한 **SELECT** 권한이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 현재 상태와 함께 모든 확장 이벤트를 반환합니다.  
   
 ```  

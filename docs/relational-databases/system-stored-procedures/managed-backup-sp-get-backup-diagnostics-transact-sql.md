@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d107b78c9b982285c19b678bebbc027facebe1e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 572cc4eb126114697d4fc4ecfeb9589458c46baa
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830427"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053499"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup. sp_get_backup_diagnostics (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   스마트 관리에 기록된 확장 이벤트를 반환합니다.  
   
@@ -59,7 +58,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ||||  
 |-|-|-|  
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |event_type|NVARCHAR (512)|확장 이벤트 유형|  
 |이벤트|NVARCHAR (512)|이벤트 로그의 요약입니다.|  
 |타임스탬프|timestamp|이벤트 발생 시 표시되는 이벤트의 타임스탬프입니다.|  
@@ -69,7 +68,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 ### <a name="permissions"></a>사용 권한  
  저장 프로시저에 대 한 **EXECUTE** 권한이 필요 합니다. 또한이 권한이 필요한 다른 시스템 개체를 내부적으로 호출 하기 때문에 **VIEW SERVER STATE** 권한도 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 이전 30분 동안 기록된 모든 이벤트를 반환합니다.  
   
 ```  

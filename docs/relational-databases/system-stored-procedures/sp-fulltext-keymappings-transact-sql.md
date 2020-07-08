@@ -20,15 +20,14 @@ ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc68be51382b72dee1b143a3535d631ae93dbb7c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 2281586bfe77b7cadaa2b3a8f7ae7a9b18c655ab
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833280"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091795"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   문서 ID(DocId)와 전체 텍스트 키 값 간의 매핑을 반환합니다. DocId 열에는 전체 텍스트 인덱싱된 테이블의 특정 전체 텍스트 키 값에 매핑되는 **bigint** 정수 값이 포함 됩니다. 검색 조건을 만족하는 DocId 값이 전체 텍스트 엔진에서 데이터베이스 엔진으로 전달되고 여기서 쿼리되는 기본 테이블의 전체 텍스트 키 값에 매핑됩니다. 전체 텍스트 키 열은 테이블의 특정 열에 필요한 고유 인덱스입니다.  
   
@@ -86,7 +85,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 -   NULL이 아닐 수 있는 매개 변수에 대해 NULL이 발생한 경우  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 > [!NOTE]  
 >  이 섹션의 예에서는 `Production.ProductReview` 예제 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블을 사용합니다. `ProductReview` [Transact-sql&#41;&#40;전체 텍스트 인덱스 만들기 ](../../t-sql/statements/create-fulltext-index-transact-sql.md)에서 테이블에 대해 제공 된 예를 실행 하 여이 인덱스를 만들 수 있습니다.  

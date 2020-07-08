@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab377b42943c943f710d83661642423cfc070949
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 4edd3cfc40225b4b040c73fb0d3ba929d16debc5
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814563"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053589"
 ---
 # <a name="syssp_rda_test_connection-transact-sql"></a>sys. sp_rda_test_connection (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   SQL Server에서 원격 Azure 서버로의 연결을 테스트 하 고 데이터 마이그레이션을 방해할 수 있는 문제를 보고 합니다.  
   
@@ -71,14 +70,14 @@ EXECUTE sys.sp_rda_test_connection
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |link_state|int|**Link_state_desc**값에 해당 하는 다음 값 중 하나입니다.<br /><br /> -0<br />-1<br />-2<br />-3<br />-4|  
-|link_state_desc| varchar(32)|**Link_state**의 앞에 있는 값에 해당 하는 다음 값 중 하나입니다.<br /><br /> -정상<br />     SQL Server와 원격 Azure 서버가 정상입니다.<br />-ERROR_AZURE_FIREWALL<br />     Azure 방화벽에서 SQL Server와 원격 Azure 서버 간의 연결을 방지 하 고 있습니다.<br />-ERROR_NO_CONNECTION<br />     SQL Server 원격 Azure 서버에 연결할 수 없습니다.<br />-ERROR_AUTH_FAILURE<br />     인증 오류가 발생 하 여 SQL Server와 원격 Azure 서버 간의 연결을 방지 하 고 있습니다.<br />-오류<br />     인증 문제, 연결 문제 또는 방화벽 문제로 인 한 오류는 SQL Server와 원격 Azure 서버 간의 연결을 방지 하는 것입니다.|  
+|link_state_desc|varchar(32)|**Link_state**의 앞에 있는 값에 해당 하는 다음 값 중 하나입니다.<br /><br /> -정상<br />     SQL Server와 원격 Azure 서버가 정상입니다.<br />-ERROR_AZURE_FIREWALL<br />     Azure 방화벽에서 SQL Server와 원격 Azure 서버 간의 연결을 방지 하 고 있습니다.<br />-ERROR_NO_CONNECTION<br />     SQL Server 원격 Azure 서버에 연결할 수 없습니다.<br />-ERROR_AUTH_FAILURE<br />     인증 오류가 발생 하 여 SQL Server와 원격 Azure 서버 간의 연결을 방지 하 고 있습니다.<br />-오류<br />     인증 문제, 연결 문제 또는 방화벽 문제로 인 한 오류는 SQL Server와 원격 Azure 서버 간의 연결을 방지 하는 것입니다.|  
 |error_number|int|오류 번호입니다. 오류가 없으면이 필드는 NULL입니다.|  
 |error_message|nvarchar(1024)|오류 메시지입니다. 오류가 없으면이 필드는 NULL입니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  Db_owner 권한이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="check-the-connection-from-sql-server-to-the-remote-azure-server"></a>SQL Server에서 원격 Azure 서버에 대 한 연결 확인  
   
@@ -92,7 +91,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|2|ERROR_NO_CONNECTION|*\<연결 관련 오류 번호>*|*\<연결 관련 오류 메시지>*|  
+|2|ERROR_NO_CONNECTION|*\<connection-related error number>*|*\<connection-related error message>*|  
   
 ### <a name="check-the-azure-firewall"></a>Azure 방화벽 확인  
   
@@ -108,7 +107,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|1|ERROR_AZURE_FIREWALL|*\<방화벽 관련 오류 번호>*|*\<방화벽 관련 오류 메시지>*|  
+|1|ERROR_AZURE_FIREWALL|*\<firewall-related error number>*|*\<firewall-related error message>*|  
   
 ### <a name="check-authentication-credentials"></a>인증 자격 증명 확인  
   
@@ -124,7 +123,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|3|ERROR_AUTH_FAILURE|*\<인증 관련 오류 번호>*|*\<인증 관련 오류 메시지>*|  
+|3|ERROR_AUTH_FAILURE|*\<authentication-related error number>*|*\<authentication-related error message>*|  
   
 ### <a name="check-the-status-of-the-remote-azure-server"></a>원격 Azure 서버의 상태를 확인 합니다.  
   

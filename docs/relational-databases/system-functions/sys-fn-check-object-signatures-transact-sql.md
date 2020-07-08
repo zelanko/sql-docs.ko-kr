@@ -20,15 +20,14 @@ ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
-ms.translationtype: MT
+ms.openlocfilehash: 497e27859a299fbee1a9ab91ac3d0f7625d04afe
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046313"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091519"
 ---
 # <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   모든 서명 가능한 개체의 목록을 반환하고 개체가 지정된 인증서 또는 비대칭 키로 서명되었는지를 나타냅니다. 개체가 지정된 인증서 또는 비대칭 키로 서명된 경우 개체의 서명이 유효한지 여부도 반환됩니다.  
   
@@ -45,7 +44,7 @@ fn_ check_object_signatures (
 ```  
   
 ## <a name="arguments"></a>인수  
- {'\@*클래스*'}  
+ { '\@ *클래스*'}  
  제공되는 지문의 유형을 식별합니다.  
   
 -   '인증서'  
@@ -60,7 +59,7 @@ fn_ check_object_signatures (
 ## <a name="tables-returned"></a>반환된 테이블  
  다음 표에서는 **fn_check_object_signatures** 반환 하는 열을 나열 합니다.  
   
-|열|유형|Description|  
+|Column|형식|Description|  
 |------------|----------|-----------------|  
 |type|**nvarchar(120)**|유형 설명 또는 어셈블리를 반환합니다.|  
 |entity_id|**int**|평가 중인 개체의 개체 ID를 반환합니다.|  
@@ -73,7 +72,7 @@ fn_ check_object_signatures (
 ## <a name="permissions"></a>사용 권한  
  인증서 또는 비대칭 키에 대한 VIEW DEFINITION이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `master` 데이터베이스에 대한 스키마 서명 인증서를 찾고, 개체가 해당 스키마 서명 인증서로 서명되고 유효한 서명을 가진 경우 `is_signed` 값 1과 `is_signature_valid` 값 1을 반환합니다.  
   
 ```  

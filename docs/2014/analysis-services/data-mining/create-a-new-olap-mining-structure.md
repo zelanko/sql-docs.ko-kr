@@ -13,12 +13,11 @@ helpviewer_keywords:
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 1e36f718ebef46a63b52f309ccd28eed15a8e2b4
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
-ms.translationtype: MT
+ms.openlocfilehash: 195805ac2257df8a7f1951d761c83432ff7d0578
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84523789"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091597"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>새 OLAP 마이닝 구조 만들기
   의 데이터 마이닝 마법사를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 모델의 데이터를 사용 하는 마이닝 구조를 만들 수 있습니다. OLAP 큐브를 기반으로 하는 마이닝 모델은 팩트 테이블의 열과 값, 차원 및 측정값 그룹을 분석 특성으로 사용할 수 있습니다.  
@@ -102,7 +101,7 @@ ms.locfileid: "84523789"
   
     -   **필터 식**: 필터 조건으로 사용할 값 또는 식을 입력하거나 드롭다운 목록을 사용하여 지정된 계층 수준의 멤버 목록에서 값을 선택합니다.  
   
-         예를 들어 [Geography]를 차원으로 선택하고 [Region Country Name]을 계층 수준으로 선택한 경우 드롭다운 목록에는 필터 조건으로 사용할 수 있는 모든 유효한 국가가 포함되어 있습니다. 여러 항목을 선택 할 수 있습니다. 결과적으로 마이닝 구조의 데이터가 이러한 지리적인 영역의 큐브 데이터로 제한됩니다.  
+         예를 들어 [Geography]를 차원으로 선택 하 고 [Region Country Name]을 계층 수준으로 선택한 경우 드롭다운 목록에는 필터 조건으로 사용할 수 있는 모든 유효한 국가/지역이 포함 됩니다. 여러 항목을 선택 할 수 있습니다. 결과적으로 마이닝 구조의 데이터가 이러한 지리적인 영역의 큐브 데이터로 제한됩니다.  
   
     -   **매개 변수**: 이 확인란을 무시합니다. 이 대화 상자에서는 여러 큐브 필터링 시나리오를 지원하며 이 옵션은 마이닝 구조 작성과 관련되어 있지 않습니다.  
   
@@ -130,5 +129,3 @@ ms.locfileid: "84523789"
   
 ## <a name="see-also"></a>참고 항목  
  [마이닝 구조 태스크 및 방법](mining-structure-tasks-and-how-tos.md)  
-  
-  

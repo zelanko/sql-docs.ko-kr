@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 06690f79bf2cc708a83ec272906b3f4be09fe03d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 06aa5b76b321206a936340cc5bfd8715dbf14f52
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807839"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053036"
 ---
 # <a name="syssp_rda_set_query_mode-transact-sql"></a>sys. sp_rda_set_query_mode (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   현재 스트레치 사용 데이터베이스 및 해당 테이블에 대 한 쿼리가 로컬 및 원격 데이터 (기본값) 또는 로컬 데이터만 반환할지 여부를 지정 합니다.  
   
@@ -46,7 +45,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
   
 -   **LOCAL_ONLY** 스트레치 사용 테이블에 대 한 쿼리는 로컬 데이터만 반환 합니다.  
   
--   **LOCAL_AND_REMOTE** 스트레치 사용 테이블에 대 한 쿼리는 로컬 및 원격 데이터를 모두 반환 합니다. 기본 동작입니다.  
+-   **LOCAL_AND_REMOTE** 스트레치 사용 테이블에 대 한 쿼리는 로컬 및 원격 데이터를 모두 반환 합니다. 이것은 기본적인 동작입니다.  
   
  [ @force =] * \@ force*  
  는 유효성 검사 없이 쿼리 모드를 변경 하려는 경우 1로 설정할 수 있는 선택적 비트 값입니다.  
@@ -54,7 +53,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
 ## <a name="return-code-values"></a>반환 코드 값  
  0 (성공) 또는 >0 (실패)  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  Db_owner 권한이 필요 합니다.  
   
 ## <a name="remarks"></a>설명  

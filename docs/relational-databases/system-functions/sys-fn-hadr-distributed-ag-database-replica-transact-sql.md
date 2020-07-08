@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: 0e6202a1-e872-4f53-99d7-c16b6f712efc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2acff9f5d78549fe1e00397d566053ec19f628a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
-ms.translationtype: MT
+ms.openlocfilehash: d7b894919a4149d37181d543b8d58fc820aad10b
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68120237"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053037"
 ---
 # <a name="sysfn_hadr_distributed_ag_database_replica-transact-sql"></a>sys. fn_hadr_distributed_ag_database_replica (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   로컬 가용성 그룹의 데이터베이스에 분산 가용성 그룹의 데이터베이스를 매핑하는 데 사용 됩니다.  
    
@@ -50,11 +49,11 @@ sys.fn_hadr_distributed_ag_database_replica( lag_Id, database_id )
 ## <a name="tables-returned"></a>반환된 테이블  
  다음 정보를 반환합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**group_database_id**|**uniqueidentifier**|로컬 가용성 그룹에 있는 데이터베이스의 ID입니다.|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="using-sysfn_hadr_distributed_ag_database_replica"></a>Sys. fn_hadr_distributed_ag_database_replica 사용  
  다음 예에서는 분산형 가용성 그룹의 데이터베이스 ID를 전달 합니다. 로컬 가용성 그룹에 연결 된 데이터베이스 ID를 사용 하 여 테이블을 반환 합니다.  
@@ -71,7 +70,7 @@ GO
  [Transact-sql&#41;를 사용 하 여 가용성 그룹 함수 Always On &#40;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [Always On 가용성 그룹 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Always On 가용성 그룹 &#40;분산 가용성 그룹&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)   
- [Transact-sql&#41;&#40;가용성 그룹 만들기](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   

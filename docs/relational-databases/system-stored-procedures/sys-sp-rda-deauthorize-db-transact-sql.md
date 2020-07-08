@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 2e362e15-2cd5-4856-9f0b-54df56b0866b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eec07109c8f3697eb4738f30d3c201c6addc15a8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: bc01f07e3a07200970066e6ed505b29b3ccb9c09
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814897"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053406"
 ---
 # <a name="syssp_rda_deauthorize_db-transact-sql"></a>sys. sp_rda_deauthorize_db (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   로컬 스트레치 사용 데이터베이스와 원격 Azure 데이터베이스 간의 인증 된 연결을 제거 합니다. 원격 데이터베이스에 연결할 수 없거나 일관 되지 않은 상태에 있을 때 데이터베이스의 모든 스트레치 사용 테이블에 대 한 쿼리 동작을 변경 하려는 경우 **sp_rda_deauthorize_db** 를 실행 합니다.  
   
@@ -39,7 +38,7 @@ sp_rda_deauthorize_db
 ## <a name="return-code-values"></a>반환 코드 값  
  0 (성공) 또는 >0 (실패)  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  Db_owner 권한이 필요 합니다.  
   
 ## <a name="remarks"></a>설명  

@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 95c80c5b-9252-4612-9ea7-544c48834fd2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3588f12006de3f7a9e79f6743ae8dffbe01f42c2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 8e00939df070233efd2087a8534aaa711be01b3d
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807944"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053480"
 ---
 # <a name="syssp_rda_set_rpo_duration-transact-sql"></a>sys. sp_rda_set_rpo_duration (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   지정 시간 복원이 필요한 경우 원격 Azure 데이터베이스를 전체 복원할 수 있도록 SQL Server 준비 테이블에 유지 되는 마이그레이션된 데이터의 시간을 설정 합니다.    
     
@@ -47,7 +46,7 @@ sp_rda_set_rpo_duration [ @duration_hrs = ] duration_hrs
  > [!NOTE]
  > 값이 높을수록 SQL Server에 더 많은 저장 공간이 필요 합니다.
     
-## <a name="permissions"></a>권한    
+## <a name="permissions"></a>사용 권한    
  Db_owner 권한이 필요 합니다.    
     
 ## <a name="remarks"></a>설명    

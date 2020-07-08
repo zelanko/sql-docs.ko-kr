@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ccb6e35354629391aecddbdfaa968adf743645b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 786028df8e421580b5a994175223d21a20d44f41
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830394"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053514"
 ---
 # <a name="managed_backupsp_backup_config_advanced-transact-sql"></a>managed_backup. sp_backup_config_advanced (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   에 대 한 고급 설정을 구성 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 합니다.  
   
@@ -83,7 +82,7 @@ EXEC managed_backup.sp_backup_config_advanced
 ### <a name="permissions"></a>사용 권한  
  **ALTER ANY CREDENTIAL** 권한 및 **sp_delete_backuphistory** 저장 프로시저에 대 한 **EXECUTE** 권한이 있는 **db_backupoperator** 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 SQL Server 인스턴스에 대 한 고급 구성 옵션을 설정 합니다 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .  
   
 ```sql

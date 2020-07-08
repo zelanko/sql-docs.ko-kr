@@ -23,15 +23,14 @@ ms.assetid: 257f3b8d-93c0-4444-87f1-ea211bd8cad0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da218e1afeec389d69b1727160a420c889225783
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
-ms.translationtype: MT
+ms.openlocfilehash: 0ec290179cdbf3e61f0e5033acbf3156dbc6441a
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059186"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091667"
 ---
 # <a name="sysfn_virtualservernodes-transact-sql"></a>sys.fn_virtualservernodes(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스를 실행할 수 있는 장애 조치(Failover) 클러스터형 인스턴스 노드의 목록을 반환합니다. 이 정보는 장애 조치 클러스터링 환경에서 유용하게 사용됩니다.  
   
@@ -48,14 +47,14 @@ fn_virtualservernodes()
 ```  
   
 ## <a name="tables-returned"></a>반환된 테이블  
- 현재 서버가 클러스터형 서버인 경우 **fn_virtualservernodes** 는이 인스턴스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 정의 된 장애 조치 (failover) 클러스터형 인스턴스 노드 목록을 반환 합니다.  
+ 현재 서버가 클러스터형 서버인 경우 **fn_virtualservernodes** 는이 인스턴스가 정의 된 장애 조치 (failover) 클러스터형 인스턴스 노드 목록을 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
  현재 서버 인스턴스가 클러스터형 서버가 아닌 경우 **fn_virtualservernodes** 는 빈 행 집합을 반환 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 대해 VIEW SERVER STATE 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `fn_virtualservernodes`를 사용하여 클러스터형 서버 인스턴스에서 쿼리합니다.  
   
 ```  

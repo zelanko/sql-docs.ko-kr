@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7a1a2ad1b617ba30f5c271ced52399bf176cb527
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 3eab417e1d959c990e53aca3119546a73a3e1aad
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830357"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052919"
 ---
 # <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup. sp_set_parameter (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   지정된 스마트 관리 시스템 매개 변수의 값을 설정합니다.  
   
@@ -73,7 +72,7 @@ EXEC managed_backup.sp_set_parameter
 ### <a name="permissions"></a>사용 권한  
  **Managed_backup. sp_set_parameter** 저장 프로시저에 대 한 **EXECUTE** 권한이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 operational 및 debug 확장 이벤트를 사용하도록 설정합니다.  
   
 ```  

@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: bda29952-4b8b-4295-ab78-f24dcb0b03c6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 17b8ba389066d273b05d9aaa49e26b394f55a0ef
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 9f1266fb9967dc429160377bcc1b42d227be5222
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808331"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052913"
 ---
 # <a name="stretch-database-extended-stored-procedures-transact-sql"></a>Stretch Database 확장 저장 프로시저 (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
  이 섹션에서는 Stretch Database와 관련 된 확장 저장 프로시저에 대해 설명 합니다.  
   

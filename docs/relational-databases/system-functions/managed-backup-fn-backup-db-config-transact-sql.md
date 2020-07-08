@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a23f8eb64ae99b999cdf6b16f1c888383a88c147
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 4147d01936fbdd3a14e479a7b560d5368a5110ec
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68067785"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053713"
 ---
 # <a name="managed_backupfn_backup_db_config-transact-sql"></a>managed_backup. fn_backup_db_config (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 구성 설정으로 0개, 1개 또는 그 이상의 행을 반환합니다. 지정된 데이터베이스에 대한 1개 행을 반환하거나 인스턴스에서 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 사용하여 구성된 모든 데이터베이스에 대한 정보를 반환합니다.  
   
@@ -44,7 +43,7 @@ managed_backup.fn_backup_db_config ('database_name' | '' | NULL)
   
 ##  <a name="arguments"></a><a name="Arguments"></a>인수의  
  @db_name  
- 데이터베이스의 이름입니다. 매개 @db_name 변수는 **SYSNAME**입니다. 빈 문자열 또는 NULL 값이 이 매개 변수에 전달되면 SQL Server 인스턴스의 모든 데이터베이스에 대한 정보가 반환됩니다.  
+ 데이터베이스의 이름입니다. @db_name매개 변수는 **SYSNAME**입니다. 빈 문자열 또는 NULL 값이 이 매개 변수에 전달되면 SQL Server 인스턴스의 모든 데이터베이스에 대한 정보가 반환됩니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
@@ -67,8 +66,8 @@ managed_backup.fn_backup_db_config ('database_name' | '' | NULL)
 ### <a name="permissions"></a>사용 권한  
  **ALTER ANY CREDENTIAL** 권한이 있는 **db_backupoperator** 데이터베이스 역할의 멤버 자격이 필요 합니다. 사용자에 게 **VIEW ANY DEFINITION** 권한이 거부 되어서는 안 됩니다.  
   
-## <a name="examples"></a>예  
- 다음 예에서는 ' TestDB '에 대 한 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 구성을 반환 합니다.  
+## <a name="examples"></a>예제  
+ 다음 예에서는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ' TestDB '에 대 한 구성을 반환 합니다.  
   
  각 코드 조각에 대해 언어 특성 필드에서 'tsql'을 선택합니다.  
   

@@ -18,19 +18,18 @@ ms.assetid: 765069b7-60fd-414c-875f-3455460b75cd
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 65e42e6303b467abd38ddadb6be0c0d0fece46e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: b91a01714f7c7784f5ec227362c66c9468f44df5
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018195"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053620"
 ---
 # <a name="stretch-database-catalog-views---sysremote_data_archive_tables"></a>Stretch Database 카탈로그 뷰-sys. remote_data_archive_tables
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   스트레치 사용 로컬 테이블의 데이터를 저장 하는 각 원격 테이블에 대해 하나의 행을 포함 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|스트레치 사용 로컬 테이블의 개체 ID입니다.|  
 |**remote_database_id**|**int**|원격 데이터베이스의 자동 생성 된 로컬 식별자입니다.|  

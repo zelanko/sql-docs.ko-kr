@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bc2bfdbd8714bf4211373e921c1b054ed224feb3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: f5f155837f1e5dd9057c376152ceae56bce33d74
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155812"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053439"
 ---
 # <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup. fn_get_health_status (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   지정된 기간 동안 확장 이벤트에서 보고한 집계된 오류 수의 행을 0개, 1개 또는 그 이상 포함하는 테이블을 반환합니다.  
   
@@ -45,10 +44,10 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 ##  <a name="arguments"></a><a name="Arguments"></a>인수의  
  [@begin_time]  
- 집계된 오류 수가 계산되는 기간의 시작입니다.  @begin_time 매개 변수가 DATETIME입니다. 기본값은 NULL입니다. 값이 NULL인 경우 함수는 현재 시간 30분 전부터 보고된 이벤트를 처리합니다.  
+ 집계된 오류 수가 계산되는 기간의 시작입니다.  @begin_time매개 변수가 DATETIME입니다. 기본값은 NULL입니다. 값이 NULL인 경우 함수는 현재 시간 30분 전부터 보고된 이벤트를 처리합니다.  
   
  [ @end_time]  
- 집계된 오류 수가 계산되는 기간의 끝입니다. @end_time 매개 변수는 DATETIME 이며 기본값은 NULL입니다. 값이 NULL인 경우 함수는 현재 시간까지의 확장 이벤트를 처리합니다.  
+ 집계된 오류 수가 계산되는 기간의 끝입니다. @end_time매개 변수는 DATETIME 이며 기본값은 NULL입니다. 값이 NULL인 경우 함수는 현재 시간까지의 확장 이벤트를 처리합니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
@@ -70,7 +69,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
 ### <a name="permissions"></a>사용 권한  
  함수에 대 한 **SELECT** 권한이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 -   다음 예에서는 실행된 시간 이전의 마지막 30분 동안 집계된 오류 수를 반환합니다.  
   

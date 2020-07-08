@@ -15,12 +15,11 @@ helpviewer_keywords:
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: f2018c557b8fd7dffdceb14c0a872595a3ce21da
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
-ms.translationtype: MT
+ms.openlocfilehash: 27545026fcf426e024237ff837ce078fed3c4a00
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544347"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091577"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>세계화 팁과 모범 사례(Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** 다차원 전용  
@@ -69,7 +68,7 @@ ms.locfileid: "84544347"
   
      대만에서는 획수에 따른 권장 정렬 순서 Chinese_Taiwan_Stroke(SQL Server 2000), Chinese_Taiwan_Stroke_90(SQL Server 2005) 또는 Chinese_Traditional_Stroke_Count_100(SQL Server 2008 이상)으로 중국어 번체를 확인하는 것이 더 일반적입니다.  
   
-     다른 지역 (예: 홍콩, 마카오)은 중국어 번체도 사용 합니다. 홍콩에서는 데이터 정렬로 Chinese_Hong_Kong_Stroke_90(SQL Server 2005)을 확인하는 것이 일반적입니다. 마카오 Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 이상)가 매우 자주 사용 됩니다.  
+     기타 지역 (예: 홍콩 특별 행정구 및 마카오 특별 행정구)에서는 중국어 번체도 사용 합니다. 홍콩에서는 데이터 정렬로 Chinese_Hong_Kong_Stroke_90(SQL Server 2005)을 확인하는 것이 일반적입니다. 마카오 Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 이상)가 매우 자주 사용 됩니다.  
   
 -   일본어에서 가장 자주 사용되는 데이터 정렬은 Japanese_CI_AS입니다. Japanese_XJIS_100은 [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213)를 지원하는 설치에서 사용됩니다. Japanese_BIN2는 일반적으로 Windows 이외의 플랫폼에서 또는 SQL Server 관계형 데이터베이스 엔진 이외의 데이터 원본에서 가져온 데이터를 사용한 데이터 마이그레이션 프로젝트에서 확인됩니다.  
   
@@ -159,7 +158,5 @@ ms.locfileid: "84544347"
     ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Analysis Services Multiidimensional에 대 한 세계화 시나리오](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [다차원 Analysis Services에 대 한 세계화 시나리오](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [국가별 Transact-SQL 문 작성](../relational-databases/collations/write-international-transact-sql-statements.md)  
-  
-  

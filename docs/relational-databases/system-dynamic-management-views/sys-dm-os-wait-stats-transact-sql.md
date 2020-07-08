@@ -20,11 +20,11 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee313bdcda6b005a3f3a80725908244d3a496b67
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d4a381c891c7cab2f4c14baaf87e9c5108cea714
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011604"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091547"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "86011604"
 |signal_wait_time_ms|**bigint**|대기 스레드가 신호를 받은 시간과 실행을 시작한 시간 사이의 차이입니다.|  
 |pdw_node_id|**int**|이 배포가 설정 된 노드의 식별자입니다. <br/> **적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
@@ -87,7 +87,7 @@ GO
   
  다음 표에서는 태스크에서 발생한 대기 유형을 나열합니다.  
 
-|형식 |Description| 
+|형식 |설명| 
 |-------------------------- |--------------------------| 
 |ABR |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| | 
 |AM_INDBUILD_ALLOCATION |내부적으로만 사용됩니다. <br />**적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
@@ -166,8 +166,8 @@ GO
 |CONNECTION_ENDPOINT_LOCK |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이상| 
 |COUNTRECOVERYMGR |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
 |CREATE_DATINISERVICE |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
-|CXCONSUMER |소비자 스레드가 생산자 스레드가 행을 보낼 때까지 대기 하는 경우 병렬 쿼리 계획에서 발생 합니다. 이는 병렬 쿼리 실행의 일반적인 부분입니다. <br /> **적용 대상**: (s p 2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 부터 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3),[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |쿼리 프로세서 교환 반복기를 동기화 할 때와 행을 생성 및 사용 하는 경우 병렬 쿼리 계획에서 발생 합니다. 대기 시간이 너무 길고 쿼리 튜닝(예: 인덱스 추가)으로 시간을 줄일 수 없는 경우에는 병렬 처리 비용 임계값을 조정하거나 병렬 처리 수준을 낮추세요.<br /> **참고:** S p 2부터 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] cxpacket는 쿼리 프로세서 교환 반복기 동기화 및 소비자 스레드에 대 한 행 생성만 참조 합니다. 소비자 스레드는 CXCONSUMER 대기 형식으로 개별적으로 추적 됩니다.| 
+|CXCONSUMER<a name="cxconsumer"></a>|소비자 스레드 (부모)가 생산자 스레드가 행을 보낼 때까지 대기 하는 경우 병렬 쿼리 계획에서 발생 합니다. CXCONSUMER 대기는 생산자 스레드에서 행을 모두 실행 하는 Exchange 반복기에 의해 발생 합니다. 이는 병렬 쿼리 실행의 일반적인 부분입니다. <br /> **적용 대상**: (s p 2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 부터 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3),[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET<a name="cxpacket"></a>|쿼리 프로세서 교환 반복기를 동기화 할 때와 행을 생성 및 사용 하는 경우 병렬 쿼리 계획에서 발생 합니다. 예를 들어 인덱스를 추가 하는 등의 방법으로 대기 중인 경우 쿼리를 튜닝 하 여 줄일 수 없는 경우 병렬 처리에 대 한 비용 임계값을 조정 하거나 최대 병렬 처리 수준 (MaxDOP)을 낮출 수 있습니다.<br /> **참고:** S p 2부터 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] cxpacket는 쿼리 프로세서 교환 반복기와 행을 생성할 때만 동기화 하는 것을 말합니다. 소비자 스레드가 너무 느리면 Exchange Iterator 버퍼가 가득 차서 CXPACKET wait를 발생 시킬 수 있습니다. 소비자 스레드는 CXCONSUMER 대기 형식으로 개별적으로 추적 됩니다.| 
 |CXROWSET_SYNC |병렬 범위 검색 중에 발생합니다.| 
 |DAC_INIT |관리자 전용 연결이 초기화되는 동안 발생합니다.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
@@ -1024,7 +1024,7 @@ GO
   
  잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참조  
     
  [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [dm_exec_session_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   

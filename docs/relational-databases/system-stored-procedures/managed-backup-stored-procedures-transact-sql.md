@@ -12,15 +12,14 @@ dev_langs:
 ms.assetid: bc9d5273-b47d-4c32-a3af-839d963e0548
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e5ba6557f90143f06b9a3d92e1e2595e280044fe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 739c95d16b28bac2f5e5b53975fe72f872e984e0
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830349"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052739"
 ---
 # <a name="managed-backup-stored-procedures-transact-sql"></a>Managed Backup 저장 프로시저 (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   다음 저장 프로시저를 사용 하 여를 구성할 수 있습니다 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .  
   

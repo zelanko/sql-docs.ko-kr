@@ -20,15 +20,14 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0eb367dd29a96f5819563f0b10e036b7274c4303
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 5cd91cd99d70a90e3aaec5972ddcdccf472a18f1
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827381"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091864"
 ---
 # <a name="backupset-transact-sql"></a>backupset(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   각 백업 세트마다 하나의 행을 포함합니다. *백업 세트*에는 하나의 성공한 백업 작업의 백업이 포함됩니다. RESTORE, RESTORE FILELISTONLY, RESTORE HEADERONLY 및 RESTORE VERIFYONLY 문은 지정한 백업 디바이스의 미디어 세트 내에 있는 단일 백업 세트에서 작동합니다.  
   

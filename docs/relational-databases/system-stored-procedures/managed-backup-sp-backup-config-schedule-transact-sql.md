@@ -20,17 +20,16 @@ helpviewer_keywords:
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e7bb477901dee22c70bb47cd0eaf7da5eb163b7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 04e152b8ae15e4e0a810fb5ed945b4c8c69afe5b
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77507538"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053467"
 ---
 # <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup. sp_backup_config_schedule (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  의 자동 또는 사용자 지정 일정 옵션 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 구성 합니다.  
+  의 자동 또는 사용자 지정 일정 옵션을 구성 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 합니다.  
     
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,19 +57,19 @@ EXEC managed_backup.sp_backup_config_schedule
  ' 매일 ' 또는 ' 매주 '로 설정할 수 있는 관리 되는 백업 작업의 빈도 유형입니다.  
   
  @days_of_week  
- 가 주별로 설정 된 경우 @full_backup_freq_type 백업에 대 한 요일입니다. ' 월요일 '과 같은 전체 문자열 이름을 지정 합니다.  또한 파이프로 구분 된 두 개 이상의 일 이름을 지정할 수 있습니다. 예: N'Monday | 수요일 | 금요일 '.  
+ 가 주별로 설정 된 경우 백업에 대 한 요일입니다 @full_backup_freq_type . ' 월요일 '과 같은 전체 문자열 이름을 지정 합니다.  또한 파이프로 구분 된 두 개 이상의 일 이름을 지정할 수 있습니다. 예: N'Monday | 수요일 | 금요일 '.  
   
  @backup_begin_time  
- 백업 기간의 시작 시간입니다. @backup_begin_time 및 @backup_duration를 조합 하 여 정의 하는 시간 창 외부에서는 백업이 시작 되지 않습니다.  
+ 백업 기간의 시작 시간입니다. 및를 조합 하 여 정의 하는 시간 창 외부에서는 백업이 시작 되지 않습니다 @backup_begin_time @backup_duration .  
   
  @backup_duration  
- 백업 시간 기간의 기간입니다. 및 @backup_begin_time @backup_duration에 정의 된 기간 동안에는 백업이 완료 될 수도 없습니다. 이 기간에 시작 되었지만 기간을 초과 하는 백업 작업은 취소 되지 않습니다.  
+ 백업 시간 기간의 기간입니다. 및에 정의 된 기간 동안에는 백업이 완료 될 수도 없습니다 @backup_begin_time @backup_duration . 이 기간에 시작 되었지만 기간을 초과 하는 백업 작업은 취소 되지 않습니다.  
   
  @log_backup_freq  
- 이는 트랜잭션 로그 백업의 빈도를 결정 합니다. 이러한 백업은 데이터베이스 백업에 지정 된 일정 대신 정기적으로 수행 됩니다. @log_backup_freq`0:00` 는 분 또는 시간 일 수 있으며 로그 백업이 없음을 나타내는 유효 합니다. 로그 백업을 사용 하지 않도록 설정 하는 것은 단순 복구 모델을 사용 하는 데이터베이스에만 적합 합니다.  
+ 이는 트랜잭션 로그 백업의 빈도를 결정 합니다. 이러한 백업은 데이터베이스 백업에 지정 된 일정 대신 정기적으로 수행 됩니다. @log_backup_freq는 분 또는 시간 일 수 있으며 `0:00` 로그 백업이 없음을 나타내는 유효 합니다. 로그 백업을 사용 하지 않도록 설정 하는 것은 단순 복구 모델을 사용 하는 데이터베이스에만 적합 합니다.  
   
 > [!NOTE]  
->  복구 모델이 단순에서 전체로 변경 되는 경우의 `0:00` log_backup_freq을 0이 아닌 값으로 다시 구성 해야 합니다.  
+>  복구 모델이 단순에서 전체로 변경 되는 경우의 log_backup_freq을 `0:00` 0이 아닌 값으로 다시 구성 해야 합니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
