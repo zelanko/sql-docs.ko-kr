@@ -12,15 +12,15 @@ ms.assetid: a6b1df2a-06ed-4fc3-8a84-f0becd5810d5
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bde8e1552b13f165d928f1e9275512e22426f9f4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 91899bddfc872487d29866c3c854563f22353827
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68078851"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780176"
 ---
 # <a name="lockacquired-event-class"></a>Lock:Acquired 이벤트 클래스
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Lock:Acquiredevent 클래스는 데이터 페이지와 같은 리소스에 대한 잠금 획득이 이루어졌음을 나타냅니다.  
   
  Lock:Acquired 및 Lock:Released 이벤트 클래스를 사용하여 개체 잠금 시기, 사용하는 잠금 유형 및 잠금 보유 기간을 모니터링할 수 있습니다. 장기간 보유되는 잠금은 경합 문제를 발생시킬 수 있으므로 면밀히 관찰해야 합니다. 예를 들어 애플리케이션에서 테이블의 행에 대한 잠금을 획득하고 사용자 입력을 기다릴 수 있습니다. 사용자 입력 대기 시간이 길어지는 경우 이러한 잠금으로 인해 다른 사용자가 차단될 수 있습니다. 이런 경우 필요할 경우에만 잠금 요청을 하고 잠금이 획득된 경우 사용자 입력이 필요하지 않도록 애플리케이션을 다시 디자인해야 합니다.  

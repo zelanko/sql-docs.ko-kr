@@ -12,15 +12,15 @@ ms.assetid: 1be023e8-7a98-4400-b9e7-b24f6a3fc5ca
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f9bd0669cc8da25a5660462bf8e1ded0ff3e5f7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 48c8ccc9abe64035834766044c6b86879fb03b3f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68064856"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85779575"
 ---
 # <a name="sqlbatchcompleted-event-class"></a>SQL:BatchCompleted 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   SQL:BatchCompleted 이벤트 클래스는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리가 완료되었음을 나타냅니다.  
   
 ## <a name="sqlbatchcompleted-event-class-data-columns"></a>SQL:BatchCompleted 이벤트 클래스 데이터 열  

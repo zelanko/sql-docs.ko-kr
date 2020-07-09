@@ -12,15 +12,15 @@ ms.assetid: ef55e579-080d-4650-a7fc-4dd03ed8e391
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e7419cd00043903d37fb739d52ba6b1a95f1945a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2450f77d60dfdb16d8d0e6e82fb363c8c7678f87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68064920"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780152"
 ---
 # <a name="spstarting-event-class"></a>SP:Starting 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   SP:Starting 이벤트 클래스는 저장 프로시저의 실행이 시작되었음을 나타냅니다.  
   
 ## <a name="spstarting-event-class-data-columns"></a>SP:Starting 이벤트 클래스 데이터 열  

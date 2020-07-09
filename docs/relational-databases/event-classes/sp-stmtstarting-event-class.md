@@ -12,15 +12,15 @@ ms.assetid: 73550597-a3f3-4454-8678-0bf39db80a7f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0926ebc430df541eca9eb22e2c02b7d8021f2de4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ed8c54439788f0f63a49b601b92071969b1659c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68064899"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85779729"
 ---
 # <a name="spstmtstarting-event-class"></a>SP:StmtStarting 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   SP:StmtStarting 이벤트 클래스는 저장 프로시저 내의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 시작되었음을 나타냅니다.  
   
 ## <a name="spstmtstarting-event-class-data-columns"></a>SP:StmtStarting 이벤트 클래스 데이터 열  

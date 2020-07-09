@@ -12,15 +12,15 @@ ms.assetid: 654fb295-f0a5-4d66-93e0-5d43e4d7d535
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96dc31f7129caedf65b52a457846dd651b345751
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6737979fc99057e2a85ee6a5494f1c65a5ee7e19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68064818"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85778766"
 ---
 # <a name="sqlfulltextquery-event-class"></a>SQL:FullTextQuery 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   SQL:FullTextQuery 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 전체 텍스트 쿼리를 실행할 때 발생합니다. 이 이벤트 클래스를 추적에 포함하여 전체 텍스트 카탈로그와 연결된 문제를 모니터링할 수 있습니다.  
   
  SQL:FullTextQuery 이벤트 클래스를 포함할 경우 오버헤드 양이 증가됩니다. 이런 이벤트가 자주 발생할 경우 추적으로 인해 성능이 심각하게 저하될 수도 있습니다. 이러한 오버헤드를 최소화하려면 짧은 기간 동안 특정 문제를 모니터링하는 추적에 대해 이 이벤트 클래스의 사용을 제한해야 합니다.  

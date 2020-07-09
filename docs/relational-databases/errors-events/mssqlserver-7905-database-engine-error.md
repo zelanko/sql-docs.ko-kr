@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: cf19fbbb-7158-45f2-8778-8f3cad7f574a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b379a690019121ea98ff8e8b001f18814dbf6ebe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 252415c6bf4ef2dfdfb7ae5c0858b661df546aa8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951500"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780184"
 ---
 # <a name="mssqlserver_7905"></a>MSSQLSERVER_7905
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>세부 정보  
   
-|||  
-|-|-|  
+| attribute | 값 |  
+| :-------- | :---- |  
 |제품 이름|SQL Server|  
 |이벤트 ID|7905|  
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBCC2_FS_INVALID_ROWSET_DIRECTORY|  
-|메시지 텍스트|데이터베이스 오류: 디렉터리 'DIRECTORY'이(가) 잘못된 Filestream 디렉터리입니다.|  
+|메시지 텍스트|데이터베이스 오류: 디렉터리 'DIRECTORY'이(가) 잘못된 FileStream 디렉터리입니다.|  
   
 ## <a name="explanation"></a>설명  
 'ghost'와 같은 특수한 행 집합 디렉터리 이름을 제외하고, 행 집합 디렉터리의 이름은 파티션의 파티션 ID입니다. 행 집합 디렉터리 이름을 파티션 ID로 변환할 수 없는 경우 이 디렉터리는 잘못된 열 집합 디렉터리입니다.  
