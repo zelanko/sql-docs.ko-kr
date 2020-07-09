@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6daa11e30654beed9d4ad4c4d316b075a812b324
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c4daa39922e25c67479ad4f49c28fa860303e6d4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828700"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784393"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Windows가 시작된 이후에 지정한 컴퓨터에서 이 함수가 이전에 생성한 모든 GUID보다 큰 GUID를 만듭니다. Windows를 다시 시작한 후 GUID가 더 낮은 범위에서 다시 시작될 수 있지만 여전히 전역적으로 고유합니다. GUID 열이 행 식별자로 사용되는 경우 NEWSEQUENTIALID를 사용하면 NEWID 함수를 사용할 때보다 더 빠를 수 있습니다. 그 이유는 NEWID 함수의 경우 임의 작업이 발생하고 캐시된 데이터 페이지를 거의 사용하지 않기 때문입니다. 또한 NEWSEQUENTIALID를 사용하면 데이터 및 인덱스 페이지를 완전히 채울 수 있습니다.  
   

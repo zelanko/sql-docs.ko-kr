@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d52fa3912bffd084a8f95e79963abcd99158cdd4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99a8157c9285a7e6950e493f15c1b22f8c9d2eba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822391"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784107"
 ---
 # <a name="configure-database-mirrroing-security-wizard-mirror-server-instance"></a>데이터베이스 미러링 보안 구성 마법사: 미러 서버 인스턴스
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 페이지를 사용하여 미러 데이터베이스가 있는 서버 인스턴스에 대한 정보를 지정할 수 있습니다.  
   
 > [!IMPORTANT]  

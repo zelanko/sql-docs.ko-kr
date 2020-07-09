@@ -2,19 +2,19 @@
 title: SSIS Scale Out 로깅을 위한 계정 변경 | Microsoft Docs
 description: 이 문서에서는 SSIS Scale Out 로깅을 위해 사용자 계정을 변경하는 방법을 설명합니다
 ms.custom: performance
-ms.date: 12/13/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.reviewer: maghan
-ms.openlocfilehash: 81c1770da78d1d469d1b6ad3a01100abaa9ec829
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f5e6ab35e67f675c20349a7e968ff9d8d7131c68
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748606"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785611"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>Scale Out 로깅을 위한 계정 변경
 
@@ -38,12 +38,12 @@ Scale Out 로깅에 사용되는 계정을 변경하려면 다음을 수행합�
 ## <a name="3-update-the-logging-information-in-ssisdb"></a>3. SSISDB에서 로깅 정보 업데이트
 다음 예제와 같이 SQL Server 이름 및 연결 문자열을 매개 변수로 사용하여 `[catalog].[update_logdb_info]` 저장 프로시저를 호출합니다.
 
-    ```sql
-    SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
-    SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
-    EXEC [internal].[update_logdb_info] @serverName, @connectionString
-    GO
-    ```
+```sql
+SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
+SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
+EXEC [internal].[update_logdb_info] @serverName, @connectionString
+GO
+```
 
 ## <a name="4-restart-the-scale-out-worker-service"></a>4. Scale Out 작업자 서비스 다시 시작
 Scale Out 작업자 서비스를 다시 시작하여 변경 내용을 적용합니다.

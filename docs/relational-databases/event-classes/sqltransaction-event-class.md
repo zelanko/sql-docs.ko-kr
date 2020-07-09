@@ -12,15 +12,15 @@ ms.assetid: 4e175aa3-4f3d-4b23-a423-4a7a1bd4e84e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0bd97699f68e26ba32510749993a0cc1e224c507
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3b39975d4eca135a80ffa05f4f2c0abfd6767d20
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68043336"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790962"
 ---
 # <a name="sqltransaction-event-class"></a>SQLTransaction 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   SQLTransaction 이벤트 클래스를 사용하여 트랜잭션이 시작되고 완료되는 시기와 특히 애플리케이션, 트리거 또는 저장 프로시저를 테스트하는 시기를 모니터링할 수 있습니다.  
   
 ## <a name="sqltransaction-event-class-data-columns"></a>SQLTransaction 이벤트 클래스 데이터 열  

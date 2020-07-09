@@ -11,16 +11,16 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4065dd97c2109a30c90f8de01c50c11894a91f68
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 7b32ac9e1d88953cd8c8fccf3e010d01d5a6bcc5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728429"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783501"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>빠른 시작: SQL Server의 확장 이벤트
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 확장 이벤트는 사용자가 SQL Server 문제를 모니터링하고 해결하는 데 필요한 데이터를 수집할 수 있도록 하는 간단한 성능 모니터링 시스템입니다. 확장 이벤트 아키텍처에 대해 자세히 알아보려면 [확장 이벤트 개요](extended-events.md)를 참조하세요.  이 문서는 확장 이벤트를 사용해 본 적이 없고 몇 분 내에 이벤트 세션을 만들려는 SQL 개발자를 대상으로 합니다. 확장 이벤트를 사용하면 SQL 시스템 및 애플리케이션의 내부 작업에 대한 세부 정보를 볼 수 있습니다. 확장 이벤트 세션을 만들 때는 다음을 지정합니다.
 

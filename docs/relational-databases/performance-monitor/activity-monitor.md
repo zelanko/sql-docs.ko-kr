@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 184ead5d82ddad99e3fae781cd41b46569c1dead
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 45d2e41fa88d0ea586832ab91a927832b82ab0fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907487"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787498"
 ---
 # <a name="activity-monitor"></a>작업 모니터
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 작업 모니터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스와 이러한 프로세스가 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 미치는 영향에 대한 정보를 표시합니다.  
   
 작업 모니터는 다음과 같은 확장 및 축소 가능한 창이 있는 탭 문서 창입니다. **개요**, **프로세스**, **리소스 대기**, **데이터 파일 I/O**, **비용이 높은 최근 쿼리** 및 **비용이 높은 활성 쿼리** 창이 있습니다. 창을 확장하면 작업 모니터는 인스턴스에서 정보를 쿼리합니다. 창을 축소하면 해당 창에 대한 모든 쿼리 작업이 중지됩니다. 하나 이상의 창을 동시에 확장하여 인스턴스에 대한 여러 종류의 작업을 볼 수 있습니다.  

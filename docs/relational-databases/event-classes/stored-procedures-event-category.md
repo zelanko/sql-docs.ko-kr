@@ -14,15 +14,15 @@ ms.assetid: 71bebaa3-a05a-4695-b349-078cecd0949a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 431ec504fdcf977af23cf5340e39052ff4416d01
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 766ea798faa2df28520fa93c852add32e6778c80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68043305"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790971"
 ---
 # <a name="stored-procedures-event-category"></a>Stored Procedures 이벤트 범주
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Stored Procedures** 이벤트 범주는 일반 저장 프로시저 이벤트를 포함합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ab394b7eed0a284b8ed74e5333b01f27283469ca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 296cdb3433ff0e40ea73987ef5a53b985a550f1f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67987369"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787403"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server, Access Methods 개체
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **Access Methods**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 데이터베이스 내의 논리 페이지에 액세스하는 방법을 모니터링하는 카운터를 제공합니다. 디스크에 있는 데이터베이스 페이지에 대한 실제 액세스는 **Buffer Manager** 카운터를 사용하여 모니터링됩니다. 데이터베이스에 저장된 데이터에 액세스하는 방법을 모니터링하면 인덱스를 추가/수정하거나, 파티션을 추가/이동하거나, 파일 또는 파일 그룹을 추가하거나, 인덱스를 조각 모음하거나, 쿼리를 다시 작성하여 쿼리 성능을 향상시킬 수 있는지 확인하는 데 도움이 됩니다. 또한 **Access Methods** 카운터를 사용하면 데이터베이스에 있는 데이터, 인덱스, 여유 공간의 양을 모니터링하여 각 서버 인스턴스에 대한 데이터 볼륨 및 조각화 상태를 나타낼 수 있습니다. 과도한 인덱스 조각화는 성능을 저하시킬 수 있습니다.  
   
  데이터 볼륨, 조각화 및 사용법에 대한 자세한 내용을 보려면 다음 동적 관리 뷰를 사용합니다.  

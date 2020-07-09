@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 9a715f4b-8f37-4654-85a5-bfb89c09708b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3d732c555ad470ff01d469f44d27a264abb2f891
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 461bed154720f1e17fb4aeff92a4ba2993b16538
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557791"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785062"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>조건 열기 대화 상자, 종속 정책 페이지
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 대화 상자를 사용하여 이 정책 기반 관리 조건을 현재 참조하는 정책 목록을 표시할 수 있습니다. 조건과 패싯 및 정책 간의 관계는 [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)를 참조하세요.  
   
 ## <a name="options"></a>옵션  

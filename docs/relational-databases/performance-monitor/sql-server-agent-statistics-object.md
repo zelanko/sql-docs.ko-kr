@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: ebe92bfa-0721-48aa-9ba6-e7904ad265a1
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 12bd415093b8ea35ee82d6d8be2d1591a4f4fbfd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff7d2c619a1dad619676092b8f2c937890d681f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67987262"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787369"
 ---
 # <a name="sql-server-agent-statistics-object"></a>SQL Server 에이전트, Statistics 개체
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   SQL Server 에이전트 **Statistics** 성능 개체에는 SQL Server 에이전트에 관한 정보를 보고하는 성능 카운터가 포함되어 있습니다.  
   
  다음 표에서는 **SQLAgent:Statistics** 카운터를 나열합니다.  

@@ -12,15 +12,15 @@ ms.assetid: 34a35b0e-7bd1-480d-8cc8-00614adae84e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bae04195dff799ccf81fcf3986f8e29e05dafbd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ccc5659d1fd9bd07a847c8719851b5fbb5f6b425
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118162"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790954"
 ---
 # <a name="tm-begin-tran-starting-event-class"></a>TM: Begin Tran Starting 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   TM: Begin Tran Starting 이벤트 클래스는 BEGIN TRANSACTION 요청이 시작되고 있음을 나타냅니다. 이 요청은 트랜잭션 관리 인터페이스를 통해 클라이언트에서 보냅니다.  
   
 ## <a name="tm-begin-tran-starting-event-class-data-columns"></a>TM: Begin Tran Starting 이벤트 클래스 데이터 열  

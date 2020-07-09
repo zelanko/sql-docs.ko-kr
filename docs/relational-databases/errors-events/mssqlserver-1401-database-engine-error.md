@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 02928770-aa63-4509-8713-406c73e4cedc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 81b05138940f89da7540762e4f6f68f952fff4aa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c656780c4ef64584f9ce6c28a183a9c9b821619
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68002734"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781067"
 ---
 # <a name="mssqlserver_1401"></a>MSSQLSERVER_1401
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>세부 정보  
   
-|||  
-|-|-|  
+| attribute | 값 |  
+| :-------- | :---- |  
 |제품 이름|SQL Server|  
 |이벤트 ID|1401|  
 |이벤트 원본|MSSQLSERVER|  

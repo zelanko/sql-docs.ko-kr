@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 171527b02674a5a02420f5cb002fddd7e7f31ac6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 363014bcba5e726f55bed758aad9a4aaae0780fe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216055"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787290"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>PolyBase 모니터링 및 문제 해결
 
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/applies-to-version/sqlserver.md)]
 
 PolyBase 문제를 해결하려면 이 항목에 나와 있는 기술을 사용합니다.
 

@@ -12,15 +12,15 @@ ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c82db194aa2cdd0eb0a162ee358512f2023adb58
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 715d385cde6d3f4e8339472c079947c54c149d82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68043343"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790992"
 ---
 # <a name="sqlstmtcompleted-event-class"></a>SQL:StmtCompleted 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   SQL:StmtCompleted 이벤트 클래스는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 완료되었음을 나타냅니다.  
   
 ## <a name="sqlstmtcompleted-event-class-data-columns"></a>SQL:StmtCompleted 이벤트 클래스 데이터 열  

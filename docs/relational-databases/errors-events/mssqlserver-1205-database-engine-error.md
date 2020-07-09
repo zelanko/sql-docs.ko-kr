@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 9fe3f67c-df3c-4642-a3a4-ccc0e138b632
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 402d3a3cdb3d1c8eb52feaede9ff1115e745c563
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 04c7e2f08c0ab21d399275732726de26a94e8cf0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68116027"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781212"
 ---
 # <a name="mssqlserver_1205"></a>MSSQLSERVER_1205
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>세부 정보  
   
-|||  
-|-|-|  
+| attribute | 값 |  
+| :-------- | :---- |  
 |제품 이름|SQL Server|  
 |이벤트 ID|1205|  
 |이벤트 원본|MSSQLSERVER|  
@@ -33,7 +33,7 @@ ms.locfileid: "68116027"
 |메시지 텍스트|트랜잭션(프로세스 ID %d)이 %.*ls 리소스에서 다른 프로세스와의 교착 상태가 발생하여 실행이 중지되었습니다. 트랜잭션을 다시 실행하십시오.|  
   
 ## <a name="explanation"></a>설명  
-리소스가 별도의 트랜잭션에서 충돌하는 순서대로 액세스되면 교착 상태가 발생합니다. 다음은 그 예입니다.  
+리소스가 별도의 트랜잭션에서 충돌하는 순서대로 액세스되면 교착 상태가 발생합니다. 예를 들면 다음과 같습니다.  
   
 -   Transaction2가 **Table2.Row2**를 업데이트하는 동안 Transaction1이 **Table1.Row1**을 업데이트합니다.  
   

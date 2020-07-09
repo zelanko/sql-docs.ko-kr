@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2271bbdd9a5b61fdfbf4985ca68acbffbc0b0b9d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2f1989f65dfae7d772dfd7d14a9fb3dd285b0a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73843700"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784536"
 ---
 # <a name="ident_current-transact-sql"></a>IDENT_CURRENT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 지정된 테이블 또는 뷰에 대해 생성된 마지막 ID 값을 반환합니다. 생성된 마지막 ID 값은 임의의 세션 및 범위에 대한 값일 수 있습니다.  
   
