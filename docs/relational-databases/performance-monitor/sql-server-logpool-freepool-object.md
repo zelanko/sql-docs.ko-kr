@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 8ffd569b-045f-4c3f-a473-4a491d6a1d80
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 508f0cfa001107ad43536525d65311bf3a294f4c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c51fb2a86cb33facfa7b54fe35deb6efe9cdef71
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093420"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775835"
 ---
 # <a name="sql-server-logpool-freepool-object"></a>SQL Server, LogPool FreePool 개체
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 **SQLServer:LogPool FreePool** 성능 개체는 로그 풀 내 사용 가능한 풀에 대한 통계 카운터를 제공합니다.
 
 다음 표에서는 SQL Server **LogPool FreePool** 성능 개체에 대해 설명합니다.

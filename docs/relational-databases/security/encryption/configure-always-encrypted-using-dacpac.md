@@ -12,15 +12,15 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df18a2ca6f79982db41b5188283bf1721b518e31
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc10c556999d843456728289acb72bddb3b0784e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595748"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765134"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>DAC package로 Always Encrypted를 사용하여 열 암호화 구성 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 DACPAC라고도 하는 [DAC(데이터 계층 애플리케이션) 패키지](../../data-tier-applications/data-tier-applications.md)는 테이블 및 테이블 내 열을 비롯한 모든 SQL Server 개체를 정의하는 SQL Server 데이터베이스 배포의 이식 가능한 단위입니다. DACPAC를 데이터베이스에 게시하는 경우(DACPAC를 사용하여 데이터베이스를 업그레이드하는 경우) DACPAC의 스키마와 일치하도록 대상 데이터베이스의 스키마가 업데이트를 가져옵니다. SQL Server Management Studio, [PowerShell](../../data-tier-applications/upgrade-a-data-tier-application.md#UpgradeDACPowerShell) 또는 [sqlpackage](../../../tools/sqlpackage.md#publish-parameters-properties-and-sqlcmd-variables)에서 [데이터 계층 애플리케이션 업그레이드 마법사](../../data-tier-applications/upgrade-a-data-tier-application.md#UsingDACUpgradeWizard)를 사용하여 DACPAC를 게시할 수 있습니다.
 

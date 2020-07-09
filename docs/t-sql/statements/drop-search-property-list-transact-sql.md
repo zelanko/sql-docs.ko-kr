@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 746d2f33d780e4eada7accabdd029998c9e61742
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c89d9cf87f48b7dc6ad47edda24611aad8a135b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68070178"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766136"
 ---
 # <a name="drop-search-property-list-transact-sql"></a>DROP SEARCH PROPERTY LIST(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   검색 속성 목록이 현재 데이터베이스의 어떠한 전체 텍스트 인덱스와도 연결되지 않은 경우 현재 데이터베이스에서 속성 목록을 삭제합니다.  
   

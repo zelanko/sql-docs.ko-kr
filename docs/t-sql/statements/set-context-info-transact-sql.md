@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12bdcb5de42e7a3f78455cd0a3bc0046f89b18bc
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c86a2c5f9bc0ff1a65922f8dcda404fae645e569
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634425"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765862"
 ---
 # <a name="set-context_info-transact-sql"></a>SET CONTEXT_INFO(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   128바이트까지의 이전 정보를 현재 연결 또는 현재 세션과 연결합니다.  
   

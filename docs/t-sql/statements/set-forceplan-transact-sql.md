@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af335cdb4342572184a7a6ced846d1792be39d5b
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 02ed9e434ad527fa9e9c6c6ec34b464a522be7ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634379"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765800"
 ---
 # <a name="set-forceplan-transact-sql"></a>SET FORCEPLAN(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   FORCEPLAN이 ON으로 설정되어 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 쿼리의 FROM 절에 테이블이 나타나는 순서대로 조인을 처리합니다. 또한 FORCEPLAN을 ON으로 설정하면 쿼리 계획을 구성하는 데 다른 유형의 조인이 필요하거나 조인 힌트 또는 쿼리 힌트로 요청되지 않은 경우 중첩 루프 조인이 강제로 사용됩니다.  
   

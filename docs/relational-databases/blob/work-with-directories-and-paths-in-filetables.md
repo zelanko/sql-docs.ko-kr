@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bce7416918ec17d0fbea13a1df01f8dec2cb9729
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 4ab8501b5b0753143ce5bfe2b289211729c35821
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999533"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765460"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>FileTable에서 디렉터리 및 경로 작업
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   파일이 FileTable에 저장되는 디렉터리 구조에 대해 설명합니다.  
   
 ##  <a name="how-to-work-with-directories-and-paths-in-filetables"></a><a name="HowToDirectories"></a> 방법: FileTable에서 디렉터리 및 경로 작업  
@@ -97,9 +97,9 @@ GO
 |-|-|-|  
 |*is_directory* **value**|*file_stream* **value**|**동작**|  
 |FALSE|NULL|이는 시스템 정의 제약 조건에 의해 catch되는 잘못된 조합입니다.|  
-|FALSE|\<값>|항목은 파일을 나타냅니다.|  
+|FALSE|\<value>|항목은 파일을 나타냅니다.|  
 |TRUE|NULL|항목은 디렉터리를 나타냅니다.|  
-|TRUE|\<값>|이는 시스템 정의 제약 조건에 의해 catch되는 잘못된 조합입니다.|  
+|TRUE|\<value>|이는 시스템 정의 제약 조건에 의해 catch되는 잘못된 조합입니다.|  
   
 ##  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="alwayson"></a> AlwaysOn 가용성 그룹에 VNN(가상 네트워크 이름) 사용  
  FILESTREAM 또는 FileTable 데이터가 포함된 데이터베이스가 AlwaysOn 가용성 그룹에 속하는 경우  

@@ -13,15 +13,15 @@ ms.assetid: f7d97977-0e2b-40c6-a4ce-2d5bc32a91a7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 236f933cb4799e675ea74c0e5c0664fc7455847f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e08733a79e3088e9ae186d768843b9c958406184
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76285270"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774023"
 ---
 # <a name="configure-distribution-wizard"></a>Configure Distribution Wizard
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   이 섹션에서는 배포 구성 마법사의 다음 페이지에 대한 정보를 제공합니다.  
   
 -   [배포자](../../relational-databases/replication/distributor.md)  

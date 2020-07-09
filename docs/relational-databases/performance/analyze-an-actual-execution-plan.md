@@ -15,16 +15,16 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 5c94d2d60bf851742aca68d5b7bc25ea4d8afd9c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 089cc2fd9a2131ab18fea01262f9bc0d476355e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72289326"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773139"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>실제 실행 계획 분석
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 계획 분석 기능을 사용하여 실제 그래픽 실행 계획을 분석하는 방법에 대해 설명합니다. 이 기능은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v17.4부터 사용할 수 있습니다. 일반적으로 [최신 버전의 SSMS를 설치](../../ssms/download-sql-server-management-studio-ssms.md)하는 것이 좋습니다.
 

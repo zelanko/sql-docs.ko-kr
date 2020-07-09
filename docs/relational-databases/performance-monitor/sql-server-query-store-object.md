@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 620e79cd69c11c6f5de32d3ef0ae97af489f9398
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: e9d94bb7b7002b1e83a6e5dbc5566f77a4093274
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81304844"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775777"
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server, 쿼리 저장소 개체
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 쿼리 저장소 개체는 저장 프로시저, 임시 및 준비된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문, 트리거 등의 개체에 대한 쿼리 텍스트, 실행 계획 및 런타임 통계를 저장하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 리소스 사용률을 모니터링하는 카운터를 제공합니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "81304844"
 |쿼리 저장소 인스턴스|Description|  
 |--------------------------|-----------------|  
 |**_Total**|이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 쿼리 저장소의 정보입니다.|  
-|\<데이터베이스 이름>|이 데이터베이스에 대한 쿼리 저장소 정보입니다.|  
+|\<database name>|이 데이터베이스에 대한 쿼리 저장소 정보입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
 

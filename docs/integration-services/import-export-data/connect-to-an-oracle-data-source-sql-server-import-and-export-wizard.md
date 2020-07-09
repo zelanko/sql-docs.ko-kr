@@ -1,7 +1,7 @@
 ---
 title: Oracle 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: integration-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: faa8517c24a3db78ee7e7b53ff0151be93a87ba2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c114a5e17c95d21d999819e73dcfd53f84179802
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285431"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773553"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Oracle 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
 
@@ -36,6 +36,7 @@ ms.locfileid: "71285431"
 |---|---|
 |서버 이름|**데이터 원본**|
 |인증(로그인) 정보|**사용자 ID** 및 **암호** 또는 **통합 보안**|
+|||
 
 목록의 **ConnectionString** 필드에 연결 문자열을 입력할 필요가 없습니다. Oracle 서버 이름(**Data Source**) 및 로그인 정보에 대한 개별 값을 입력하면 마법사는 개별 속성과 값에서 연결 문자열을 어셈블합니다. 
 
@@ -70,9 +71,9 @@ Oracle 서버의 이름입니다.
 ### <a name="connection-string-format"></a>연결 문자열 형식
 다음은 일반적인 연결 문자열의 형식입니다.
 
-    ```
-    Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
-    ```
+```console
+Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
+```
 
 ### <a name="enter-the-connection-string"></a>연결 문자열 입력
 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **ConnectionString** 필드에 연결 문자열을 입력하거나 **Dsn** 필드에 DSN 이름을 입력합니다. 연결 문자열을 입력하면 마법사에서 문자열을 구문 분석하고 개별 속성과 해당 값을 목록에 표시합니다.

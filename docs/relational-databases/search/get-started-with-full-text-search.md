@@ -15,15 +15,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0394fdfaf25042eef28c4f350b6ca2bf141b14e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: e1df3f06d5973f5ec0002da4c67b82519435a61d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81288257"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767591"
 ---
 # <a name="get-started-with-full-text-search"></a>전체 텍스트 검색 시작
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 SQL Server 데이터베이스는 기본적으로 전체 텍스트를 사용하도록 설정되어 있습니다. 하지만 전체 텍스트 쿼리를 실행하려면 먼저 전체 텍스트 카탈로그를 만들고 검색할 테이블 또는 인덱싱된 뷰에서 전체 텍스트 인덱스를 만들어야 합니다.
 
 ## <a name="set-up-full-text-search-in-two-steps"></a>두 단계로 전체 텍스트 검색 설정

@@ -11,15 +11,15 @@ ms.assetid: 605eb49a-225c-4186-a341-e90403c82b60
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 645ba643f4fdbb606f974b6c5772c65be23b3d5f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0166e4ede7f493869ccc7bed83369131c17e54e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287375"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767685"
 ---
 # <a name="replication-language-reference"></a>복제 언어 참조
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   복제 언어 참조에는 다음과 같은 섹션이 포함되어 있습니다.  
   

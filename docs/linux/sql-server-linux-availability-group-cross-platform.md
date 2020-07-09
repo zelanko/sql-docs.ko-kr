@@ -10,16 +10,16 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 651467463e0563c9da00e23115ffb7bc4f151d23
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2eec1f7f24f8465fb5d2bd4406de4c11aef8a518
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77479678"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773594"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Windows 및 Linux에서 SQL Server Always On 가용성 그룹 구성(플랫폼 간)
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/applies-to-version/sqlserver2017.md)]
 
 이 문서에서는 Windows Server의 복제본 1개와 Linux 서버의 복제본 1개를 사용하여 Always On AG(가용성 그룹)를 만드는 단계를 설명합니다. 복제본이 서로 다른 운영 체제에 있기 때문에 이 구성은 플랫폼 간에 지원됩니다. 한 플랫폼에서 다른 플랫폼으로 마이그레이션하거나 DR(재해 복구)하려는 경우 이 구성을 사용합니다. 플랫폼 간 구성을 관리할 클러스터 솔루션이 없기 때문에 이 구성은 고가용성을 지원하지 않습니다. 
 

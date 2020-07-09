@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: c7bcc697-0930-4630-acae-d8ccbfa4414c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d96f0ecf3f847e0beb8ae893bceffdd0fde5c6d2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 908f4b2ecf6a75e54ccb2752d1d4864192124503
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633013"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765750"
 ---
 # <a name="set-offsets-transact-sql"></a>SET OFFSETS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 지정한 키워드의 오프셋(문 시작에 대한 상대적 위치)을 반환합니다.  
   

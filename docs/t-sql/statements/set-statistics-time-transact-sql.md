@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 90eb59652bf64e6e3be4edaa3cce2f0bf3c02df7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 12e5acfd9436a4295ded63e7db8572dd27ce6e39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67897996"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765675"
 ---
 # <a name="set-statistics-time-transact-sql"></a>SET STATISTICS TIME(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   각 문을 구문 분석, 컴파일 및 실행하는 데 필요한 시간(밀리초)을 표시합니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67897996"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 SET STATISTICS TIME { ON | OFF }  
 ```  
@@ -50,7 +50,7 @@ SET STATISTICS TIME { ON | OFF }
   
  SET STATISTICS TIME 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
   
- **lightweight pooling** 구성 옵션을 설정하면 활성화되는 파이버 모드에서는 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 정확한 통계를 제공할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]lightweight pooling**구성 옵션을 설정하면 활성화되는 파이버 모드에서는 Microsoft**가 정확한 통계를 제공할 수 없습니다.  
   
  SET STATISTICS TIME을 ON으로 설정해 쿼리를 실행하면 **sysprocesses** 테이블의 **cpu** 열만 업데이트됩니다. SET STATISTICS TIME이 OFF인 경우에는 **0**이 반환됩니다.  
   
@@ -62,7 +62,7 @@ SET STATISTICS TIME { ON | OFF }
 ## <a name="examples"></a>예  
  다음 예에서는 서버 실행, 구문 분석 및 컴파일 시간을 보여 줍니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO         
 SET STATISTICS TIME ON;  

@@ -12,15 +12,15 @@ ms.assetid: 6753ef30-890f-47a3-b0b6-8abb184e1d83
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d81c5865b062e0817c41cef504994f1d6a5c437c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58d6b43d2ffc2ea3c41ebe9a17b5cb9dc5d01471
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68009524"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765245"
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Degree of Parallelism (7.0 Insert) 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Degree of Parallelism (7.0 Insert)** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 SELECT, INSERT, UPDATE 또는 DELETE 문을 각각 실행할 때 발생합니다.  
   
  이 이벤트 클래스가 추적에 포함되면 이러한 이벤트가 자주 발생할 경우 수반되는 오버헤드의 크기로 인해 성능이 크게 저하될 수 있습니다. 오버헤드 발생을 최소화하려면 특정 문제를 간단히 모니터링하는 추적에서만 이 이벤트 클래스를 사용하십시오.  

@@ -25,23 +25,23 @@ helpviewer_keywords:
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3cf335242bd0f0e33939c0a72c19390d90252103
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 84d113230152bdade11192db086f44911028a474
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67941844"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765689"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 의해 생성된 디스크 작동 크기에 대한 정보가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 표시되도록 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문에 의해 생성된 디스크 작동 크기에 대한 정보가 [!INCLUDE[tsql](../../includes/tsql-md.md)]에 표시되도록 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 SET STATISTICS IO { ON | OFF }  
 ```  
@@ -75,7 +75,7 @@ SET STATISTICS IO { ON | OFF }
 ## <a name="examples"></a>예  
  다음 예에서는 문을 처리할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 논리적 및 물리적 읽기 수를 보여 줍니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO         
 SET STATISTICS IO ON;  

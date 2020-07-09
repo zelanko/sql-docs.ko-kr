@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f5433d6082f2860805368f636383eb2e17959e77
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: de9035c84862bcde78c3a6f42133d8cbd52ae9b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048866"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764967"
 ---
 # <a name="event-notifications"></a>이벤트 알림
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이벤트 알림은 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스에 이벤트 정보를 보냅니다. 이벤트 알림은 다양한 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL(데이터 언어 정의) 문과 SQL 추적 이벤트에 대한 응답으로 실행되어 이러한 이벤트에 대한 정보를 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스로 보냅니다.  
   
  이벤트 알림을 사용하여 다음을 수행할 수 있습니다.  

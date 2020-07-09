@@ -12,15 +12,15 @@ ms.assetid: 5c9bd070-4e4c-4281-b896-1e61a4bd403e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 419a967edbfc6b184facb3ef3dae833ef1eb8196
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c3e260feb3554feab5811647367ebb6aa9374192
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67999533"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762977"
 ---
 # <a name="cursorclose-event-class"></a>CursorClose 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   커서 닫기 이벤트는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 닫히고 커서의 할당을 취소할 때 발생합니다. **CursorClose** 이벤트 클래스는 API(애플리케이션 프로그래밍 인터페이스) 커서에서 발생하는 커서 닫기 이벤트를 설명합니다. 이 이벤트 클래스는 ODBC, OLE DB 또는 DB-Library에 의해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 커서 문이 닫힐 때 발생합니다.  
   
  커서 성능을 기록하는 추적에 **CursorClose** 이벤트 클래스를 포함시킵니다. 발생한 오버헤드의 크기는 추적 중 데이터베이스에 커서가 얼마나 자주 사용되는지에 따라 달라집니다. 커서가 광범위하게 사용되는 경우에는 추적으로 인해 성능이 상당히 저하될 수 있습니다.  

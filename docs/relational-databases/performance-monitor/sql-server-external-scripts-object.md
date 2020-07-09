@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8a75ccce-b174-4937-bc92-8e413b55afe1
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 36093a4cd91943b3db214dcb9cdeb55bda7399c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d1a481dfc14e3c84df78f2950a140f1bb14c059
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093515"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775873"
 ---
 # <a name="sql-server-external-scripts-object"></a>SQL Server, 외부 스크립트 개체
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **의** SQLServer:외부 스크립트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 외부 스크립트를 실행하는 것과 연관된 동작을 모니터링하는 카운터를 제공합니다. 외부 스크립트를 실행하는 방법은 [sp_execute_external_script&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 참조하세요.  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0c4060aa1508da72d9b0bd0eb23977074ecac067
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba537e2dd0d188eb95e9194bb33c654c66dfcb9b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67913251"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763081"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Auto Stats** 이벤트 클래스는 인덱스 및 열 통계가 자동으로 업데이트되었음을 나타냅니다.  **Auto Stats**는 통계가 최적화 프로그램에서 사용하기 위해 로드되는 경우에 발생합니다.
   
 ## <a name="auto-stats-event-class-data-columns"></a>Auto Stats 이벤트 클래스 데이터 열  

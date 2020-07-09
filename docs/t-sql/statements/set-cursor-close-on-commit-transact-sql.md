@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 7b976154-98ce-4a06-bbae-7e59c34211f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 392a50a23bd33235bb5a89eb95d585ebd5531527
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7226b42823ff51a00a22124b1fd1851c1943b97c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929106"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765844"
 ---
 # <a name="set-cursor_close_on_commit-transact-sql"></a>SET CURSOR_CLOSE_ON_COMMIT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] COMMIT TRANSACTION 문의 동작을 제어합니다. 이 설정의 기본값은 OFF입니다. 즉, 트랜잭션을 커밋할 때 서버가 커서를 닫지 않습니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67929106"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }  
 ```  
@@ -62,7 +62,7 @@ SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }
   
  이 설정에 대한 현재 설정을 보려면 다음 쿼리를 실행합니다.  
   
-```  
+```sql
 DECLARE @CURSOR_CLOSE VARCHAR(3) = 'OFF';  
 IF ( (4 & @@OPTIONS) = 4 ) SET @CURSOR_CLOSE = 'ON';  
 SELECT @CURSOR_CLOSE AS CURSOR_CLOSE_ON_COMMIT;  
@@ -74,7 +74,7 @@ SELECT @CURSOR_CLOSE AS CURSOR_CLOSE_ON_COMMIT;
 ## <a name="examples"></a>예  
  다음 예에서는 트랜잭션에서 커서를 정의하고 트랜잭션이 커밋된 후 커서 사용을 시도합니다.  
   
-```  
+```sql
 -- SET CURSOR_CLOSE_ON_COMMIT  
 -------------------------------------------------------------------------------  
 SET NOCOUNT ON;  

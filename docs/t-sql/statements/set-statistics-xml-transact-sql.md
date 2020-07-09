@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 015ba90a6f2cad79483e52d5caa23ad06784c055
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd616d55c63cb2e1a4ce78fa587b3dc79d315ff1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68004718"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765660"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하고 해당 문이 실행된 방법에 대한 자세한 정보를 잘 정의된 XML 문서 형식으로 생성하도록 합니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68004718"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 SET STATISTICS XML { ON | OFF }  
 ```  
@@ -60,7 +60,7 @@ SET STATISTICS XML { ON | OFF }
  SET STATISTICS PROFILE과 SET STATISTICS XML은 서로 유사합니다. 전자는 텍스트 출력을 생성하고 후자는 XML 출력을 생성합니다. 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 새 쿼리 실행 계획 정보가 SET STATISTICS PROFILE 문이 아니라 SET STATISTICS XML 문을 통해서만 표시됩니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **실제 실행 계획 포함**을 선택하면 이 SET 옵션에서 XML 실행 계획 출력을 생성하지 않습니다. 이 SET 옵션을 사용하기 전에 **실제 실행 계획 포함** 단추의 선택을 취소하세요.  
+>  **에서** 실제 실행 계획 포함[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 선택하면 이 SET 옵션에서 XML 실행 계획 출력을 생성하지 않습니다. 이 SET 옵션을 사용하기 전에 **실제 실행 계획 포함** 단추의 선택을 취소하세요.  
   
 ## <a name="permissions"></a>사용 권한  
  SET STATISTICS XML을 사용하여 출력을 보려면 다음 권한이 있어야 합니다.  
@@ -74,7 +74,7 @@ SET STATISTICS XML { ON | OFF }
 ## <a name="examples"></a>예  
  다음 두 문에서는 SET STATISTICS XML 설정을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 쿼리에서 인덱스 사용을 분석하고 최적화하는 방법을 보여 줍니다. 첫 번째 쿼리에서는 인덱싱된 열의 WHERE 절에 Equals(=) 비교 연산자를 사용합니다. 두 번째 쿼리에서는 WHERE 절에 LIKE 연산자를 사용합니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 클러스터형 인덱스 검색을 사용하여 WHERE 절 조건을 충족하는 데이터를 찾을 수 있습니다. 처음 인덱싱된 쿼리의 경우에는 **EstimateRows** 및 **EstimatedTotalSubtreeCost** 특성의 값이 더 작습니다. 즉, 인덱싱된 쿼리가 인덱싱되지 않은 쿼리에 비해 훨씬 빨리 처리되고 리소스도 더 적게 사용한다는 의미입니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET STATISTICS XML ON;  

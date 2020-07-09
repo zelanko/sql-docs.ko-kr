@@ -12,15 +12,15 @@ ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45c72a45776abb6a6f3215560d2b1aafd974d720
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e7851febee7a47c57a5e376cfe5b92ed2999927
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093700"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773529"
 ---
 # <a name="cursoropen-event-class"></a>CursorOpen 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **CursorOpen** 이벤트 클래스는 API(애플리케이션 프로그래밍 인터페이스) 커서에서 발생하는 커서 열기 이벤트를 설명합니다. 커서 열기 이벤트는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 SQL 문을 커서 및 커서 옵션과 연결되도록 정의할 때 발생하여 커서를 채웁니다.  
   
  커서 성능을 기록하는 추적에 **CursorOpen** 이벤트 클래스를 포함시키십시오. **CursorOpen** 이벤트 클래스가 추적에 포함되는 경우 발생하는 오버헤드의 양은 추적 중 데이터베이스에 대해 커서가 사용된 빈도에 따라 달라집니다. 커서를 광범위하게 사용할 경우 추적을 수행하면 성능이 크게 저하될 수 있습니다.  

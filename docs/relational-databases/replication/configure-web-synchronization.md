@@ -32,15 +32,15 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e00888943ae196cfb5b579368a7b05d80c4f1182
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: da05c6156a401eee4eaba87c6888281b2f28c773
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529125"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773972"
 ---
 # <a name="configure-web-synchronization"></a>웹 동기화 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 병합 복제를 위한 웹 동기화 옵션을 사용하면 인터넷에서 HTTPS 프로토콜을 사용하여 데이터를 복제할 수 있습니다. 웹 동기화를 사용하려면 먼저 다음 구성 동작을 수행해야 합니다.  
   

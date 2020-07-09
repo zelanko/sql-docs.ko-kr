@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 01336bc87411fec167a3f78dfd3bf397a93b6d2c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f40d6d4afd6195e65ded4e010268251a5bda8b0b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67947792"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774239"
 ---
 # <a name="sql-server-xtp-databases"></a>SQL Server XTP 데이터베이스
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 **SQL Server XTP 데이터베이스** 성능 개체는 메모리 내 OLTP 데이터베이스 관련 카운터를 제공합니다.
 

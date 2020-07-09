@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6c63b9efc61e18c5b5bc52dcdcbd93af0d9fbbfa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93106e092c6f0b78f54a24af97ce5b0aa4101880
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68009375"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774097"
 ---
 # <a name="view-policies-dialog-box"></a>정책 보기 대화 상자
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 대화 상자를 사용하여 이 대상에 적용되는 정책을 볼 수 있습니다. 이 대화 상자에는 관련 정책, 해당 정책 범주 및 정책에 대한 정보가 표시됩니다.  
   
 ## <a name="options"></a>옵션  

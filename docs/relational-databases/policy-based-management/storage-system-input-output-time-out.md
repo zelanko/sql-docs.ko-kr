@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ff921952-b935-4bb0-b587-bba6cd15a090
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 594b725b873124042dfa8afdc9253499d703999b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 97dccd39e74cdadad30edee265d8ec2183b183be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021625"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774153"
 ---
 # <a name="storage-system-input-output-time-out"></a>스토리지 시스템 입/출력 시간 초과
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 규칙은 시스템 이벤트 로그에서 EventId 9를 검사합니다. 이 메시지는 스토리지 시스템에서 I/O 시간 초과가 발생했음을 나타냅니다.  
   
 ## <a name="best-practices-recommendations"></a>최선의 구현 방법 권장 사항  

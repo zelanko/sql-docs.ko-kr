@@ -12,15 +12,15 @@ ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cfcbafc4e178d01dd35ddeebfcc83ffab4cf1edf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db1b52180a644c4350b66833f559845ab0f9c181
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001818"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762953"
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **CursorExecute** 이벤트 클래스는 API(애플리케이션 프로그래밍 인터페이스) 커서에서 발생하는 커서 실행 이벤트를 설명합니다. 커서 실행 이벤트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 커서 준비 이벤트로 만들어진 실행 계획의 커서를 만들고 채울 때 발생합니다.  
   
  커서 성능을 기록하는 추적에 **CursorExecute** 이벤트 클래스를 포함합니다. 추적에 **CursorExecute** 이벤트 클래스가 포함될 경우 발생하는 오버헤드 양은 추적 중에 데이터베이스에 사용되는 커서 빈도에 따라 달라집니다. 커서를 광범위하게 사용할 경우 추적을 수행하면 성능이 크게 저하될 수 있습니다.  

@@ -2,7 +2,7 @@
 title: ODBC 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs
 description: SQL Server 가져오기 및 내보내기 마법사에서 사용할 ODBC 연결 문자열을 만들거나 ODBC DSN을 구성하는 방법
 ms.custom: ''
-ms.date: 12/31/2019
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: integration-services
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2b9979f7d82ef153ed3c447b5d47bf7424ca9443
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73259121c31fcfc74352bf47938fcf28b294b894
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75608032"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773584"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>ODBC 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
 
@@ -93,9 +93,9 @@ ms.locfileid: "75608032"
 
 이 예에서는 Microsoft SQL Server에 연결하는 다음 연결 문자열을 사용합니다. 사용되는 데이터베이스 예제는 **WideWorldImporters**이며, 로컬 머신의 SQL Server에 연결합니다.
 
-    ```
-    Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
-    ```
+```console
+Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+```
 
 **데이터 원본 선택** 또는 **대상 선택** 페이지의 **ConnectionString** 필드에서 연결 문자열을 입력합니다. 연결 문자열을 입력하면 마법사에서 문자열을 구문 분석하고 개별 속성과 해당 값을 목록에 표시합니다.
 
@@ -140,7 +140,7 @@ ms.locfileid: "75608032"
 
 10. [메모장] 또는 다른 텍스트 편집기를 사용하여 저장된 파일을 엽니다. 다음은 SQL Server 예제의 내용입니다.
 
-    ```   
+    ```console
     [ODBC]  
     DRIVER=ODBC Driver 13 for SQL Server  
     TrustServerCertificate=No  
@@ -155,9 +155,9 @@ ms.locfileid: "75608032"
 
     파일 DSN 샘플에서 필요한 값을 조합하면 다음 연결 문자열이 있습니다.
     
-        ```
-        DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
-        ```
+    ```console
+    DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+    ```
 
     일반적으로 작동하는 연결 문자열을 만드는 데 ODBC 데이터 원본 관리자에서 만든 DSN 설정이 모두 필요하지는 않습니다.  
     -   ODBC 드라이버는 항상 지정해야 합니다.
