@@ -52,15 +52,15 @@ ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 16eec6102718561133a441bfb592cd37de6263ec
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ebe21e82e6065aa28e4967b7d2f4d13f0fafe9d6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826813"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003824"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 스칼라 함수(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [ 문에서 ](https://go.microsoft.com/fwlink/?LinkID=88579)ODBC 스칼라 함수[!INCLUDE[tsql](../../includes/tsql-md.md)]를 사용할 수 있습니다. 이러한 문은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 해석되고, 저장 프로시저 및 사용자 정의 함수에 사용될 수 있습니다. 여기에는 문자열, 숫자, 시간, 날짜, 간격, 시스템 함수가 포함됩니다.  
   
@@ -109,9 +109,9 @@ ms.locfileid: "82826813"
   
 ```  
 CREATE PROCEDURE dbo.ODBCprocedure  
-    (  
-    @string_exp nvarchar(4000)  
-    )  
+(  
+    @string_exp NVARCHAR(4000)  
+)  
 AS  
 SELECT {fn OCTET_LENGTH( @string_exp )};  
 ```  
@@ -121,13 +121,13 @@ SELECT {fn OCTET_LENGTH( @string_exp )};
   
 ```  
 CREATE FUNCTION dbo.ODBCudf  
-    (  
-    @string_exp nvarchar(4000)  
-    )  
-RETURNS int  
+(  
+    @string_exp NVARCHAR(4000)  
+)  
+RETURNS INT  
 AS  
 BEGIN  
-DECLARE @len int  
+DECLARE @len INT  
 SET @len = (SELECT {fn OCTET_LENGTH( @string_exp )})  
 RETURN(@len)  
 END ;  
@@ -156,7 +156,7 @@ SELECT {fn CURRENT_DATE( )};
 SELECT {fn CURRENT_TIME(6)};  
 -- Returns 10:27:11.973000  
   
-DECLARE @date_exp nvarchar(30) = '2007-04-21 01:01:01.1234567';  
+DECLARE @date_exp NVARCHAR(30) = '2007-04-21 01:01:01.1234567';  
 SELECT {fn DAYNAME( @date_exp )};  
 -- Returns Saturday  
 SELECT {fn DAYOFMONTH( @date_exp )};  
@@ -184,9 +184,9 @@ SELECT {fn WEEK( @date_exp )};
   
 ```  
 CREATE PROCEDURE dbo.ODBCprocedure  
-    (  
-    @string_exp nvarchar(4000)  
-    )  
+(  
+    @string_exp NVARCHAR(4000)  
+)  
 AS  
 SELECT {fn BIT_LENGTH( @string_exp )};  
 ```  
@@ -196,13 +196,13 @@ SELECT {fn BIT_LENGTH( @string_exp )};
   
 ```  
 CREATE FUNCTION dbo.ODBCudf  
-    (  
-    @string_exp nvarchar(4000)  
-    )  
-RETURNS int  
+(  
+    @string_exp NVARCHAR(4000)  
+)  
+RETURNS INT  
 AS  
 BEGIN  
-DECLARE @len int  
+DECLARE @len INT  
 SET @len = (SELECT {fn BIT_LENGTH( @string_exp )})  
 RETURN(@len)  
 END ;  
@@ -216,7 +216,7 @@ SELECT dbo.ODBCudf('Returns the length in bits.');
  다음 SELECT 문에서는 ODBC 함수를 사용합니다.  
   
 ```  
-DECLARE @string_exp nvarchar(4000) = 'Returns the length.';  
+DECLARE @string_exp NVARCHAR(4000) = 'Returns the length.';  
 SELECT {fn BIT_LENGTH( @string_exp )};  
 -- Returns 304  
   
@@ -227,7 +227,7 @@ SELECT {fn CURRENT_DATE( )};
 SELECT {fn CURRENT_TIME(6)};  
 -- Returns the time  
   
-DECLARE @date_exp nvarchar(30) = '2007-04-21 01:01:01.1234567';  
+DECLARE @date_exp NVARCHAR(30) = '2007-04-21 01:01:01.1234567';  
 SELECT {fn DAYNAME( @date_exp )};  
 -- Returns Saturday  
 SELECT {fn DAYOFMONTH( @date_exp )};  
@@ -250,4 +250,3 @@ SELECT {fn WEEK( @date_exp )};
   
 ## <a name="see-also"></a>참고 항목  
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
-  

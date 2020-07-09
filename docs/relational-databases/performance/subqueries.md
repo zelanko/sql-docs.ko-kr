@@ -16,15 +16,15 @@ ms.assetid: bfc97432-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2d4bb708142d4471381a1579baa943d11357823
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a455e6a8bf07b41a35b9c71f9d024278d0387e65
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113280"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002319"
 ---
 # <a name="subqueries-sql-server"></a>하위 쿼리(SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
  
 하위 쿼리는 `SELECT`, `INSERT`, `UPDATE` 또는 `DELETE` 문이나 다른 하위 쿼리 내부에 중첩된 쿼리입니다. 하위 쿼리는 식이 허용되는 모든 위치에서 사용할 수 있습니다. 다음 예에서 하위 쿼리는 SELECT 문에서 MaxUnitPrice라는 열 식으로 사용됩니다.
 

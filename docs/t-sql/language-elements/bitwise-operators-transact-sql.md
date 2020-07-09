@@ -17,15 +17,15 @@ ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0274f5235b51470d31a4904d5230c5b5ca14ecc5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d96dbfc519a831508b7e56fad1b6909a37f672d3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943066"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004006"
 ---
 # <a name="bitwise-operators-transact-sql"></a>비트 연산자(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   비트 연산자는 두 식 사이의 비트 조작을 수행합니다. 이 때 식에는 정수 데이터 형식에 속하는 모든 데이터 형식을 사용할 수 있습니다.  
   비트 연산자는 두 개의 정수 값을 이진 비트로 변환하고, AND, OR 또는 NOT 연산을 각 비트에서 수행하여 결과를 생성합니다. 그런 다음, 결과를 정수로 변환합니다.  

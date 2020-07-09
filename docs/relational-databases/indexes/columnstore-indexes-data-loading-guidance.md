@@ -11,16 +11,16 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a91cffde531d7d72564df6935a48aff91dae8187
-ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
+ms.openlocfilehash: 9113071199d8561f2f4521bd8563e7cab275fc34
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550217"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007532"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Columnstore 인덱스 - 데이터 로드 지침
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 표준 SQL 대량 로드와 trickle insert 메서드를 사용하여 columnstore 인덱스에 데이터를 로드하는 작업에 대한 옵션 및 권장 사항입니다. 분석을 위한 준비 과정으로 데이터를 인덱스로 이동하기 때문에 columnstore 인덱스에 데이터를 로드하는 작업은 데이터 웨어하우징 프로세스의 필수 요소입니다.
   

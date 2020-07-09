@@ -23,15 +23,15 @@ ms.assetid: 1f05474c-0377-48cb-b567-9d85d0c40479
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5209f679888833a532849a694f0683c6d1283b13
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3c50b74397779a144168e02d46dc3035f5165313
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68122243"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007326"
 ---
 # <a name="lt-less-than-or-equal-to-transact-sql"></a>&lt;=(작거나 같음)(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   두 식을 비교합니다(비교 연산자). Null  이 아닌 식을 비교하는 경우 왼쪽 피연산자의 값이 오른쪽 피연산자의 값보다 작거나 같으면 결과는 TRUE이고 그렇지 않으면 결과는 FALSE입니다.  
   

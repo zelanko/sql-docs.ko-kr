@@ -18,18 +18,18 @@ helpviewer_keywords:
 - tied rows [SQL Server]
 - ranking rows
 ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89cfdcb49734897dbc41552158c9faad850f331a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 569e02b434d3e2f8d919b30fb91dc922f0588a5c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68135920"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005933"
 ---
 # <a name="dense_rank-transact-sql"></a>DENSE_RANK(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 이 함수는 순위 값에 격차가 없이 결과 집합 파티션 내에서 각 행의 순위를 반환합니다. 특정 행의 순위는 바로 앞 해당 특정 행의 순위 값에 1을 더한 수입니다.  
   
@@ -58,7 +58,7 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
   
 `DENSE_RANK`는 비결정적입니다. 자세한 내용은 [결정적 및 비결정 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-ranking-rows-within-a-partition"></a>A. 파티션 내의 행 순위 지정  
 이 예에서는 재고 수량을 기준으로 지정한 인벤토리 위치의 제품에 순위를 부여합니다. `DENSE_RANK`는 `LocationID`로 결과 집합을 분할하고 `Quantity`로 논리적으로 결과 집합의 순서를 정합니다. 제품 494와 495는 수량이 동일합니다. 모두가 동일한 수량 값을 갖기 때문에 모두가 1의 순위 값을 갖습니다.  

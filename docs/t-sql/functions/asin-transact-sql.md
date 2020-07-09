@@ -17,18 +17,18 @@ helpviewer_keywords:
 - sine
 - arcsine
 ms.assetid: 6256dd7d-83d5-486e-a933-1d59afc7e417
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: adafa9fcbb8bb3130fc4d52c6c9ca49a5e638a1d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 572936a187f4331744ead22ec7790c57bcd0e32d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68040305"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002271"
 ---
 # <a name="asin-transact-sql"></a>ASIN(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 지정된 **float** 식을 사인 값으로 가지는 각도를 라디안 단위로 반환하는 기능입니다. 이를 **아크사인**이라고도 합니다.
   
@@ -36,13 +36,13 @@ ms.locfileid: "68040305"
   
 ## <a name="syntax"></a>구문  
   
-```sql
+```syntaxsql
 ASIN ( float_expression )  
 ```  
   
 ## <a name="arguments"></a>인수  
 *float_expression*  
-**float** 형식 또는 float로 암시적으로 변환할 수 있는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. -1.00에서 1.00까지의 값만 유효합니다. 값이 이 범위를 벗어나면 NULL이 반환되고 ASIN에서 도메인 오류가 보고됩니다.
+[float](../../t-sql/language-elements/expressions-transact-sql.md) 형식 또는 float로 암시적으로 변환할 수 있는 형식의 **식**입니다. -1.00에서 1.00까지의 값만 유효합니다. 값이 이 범위를 벗어나면 NULL이 반환되고 ASIN에서 도메인 오류가 보고됩니다.
   
 ## <a name="return-types"></a>반환 형식
 **float**

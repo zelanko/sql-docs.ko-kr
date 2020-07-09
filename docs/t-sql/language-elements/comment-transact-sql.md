@@ -22,15 +22,15 @@ ms.assetid: 676ea8c2-52c1-4ef6-9354-320f1a091153
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7e9aaab99194646874c0823abb61100cdc524aa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d8432437ffab7f0b98593015f42aaa9c9bdaa366
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78261712"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005036"
 ---
 # <a name="---comment-transact-sql"></a>-- (주석)(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   사용자가 제공하는 텍스트를 나타냅니다. 주석은 별도의 줄에 입력되고 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령줄 끝에 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 중첩될 수 있습니다. 서버는 주석을 평가하지 않습니다.  
   

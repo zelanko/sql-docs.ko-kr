@@ -19,18 +19,18 @@ helpviewer_keywords:
 - pattern searching [SQL Server]
 - PATINDEX function
 ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51b18437976a9ecb192a69602ecbdc97054b9b47
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c9599ddcade6c62a21245ef16cc89034df1524c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76831832"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003806"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   유효한 모든 텍스트 및 문자 데이터 형식으로 지정한 식에서 패턴이 처음 나타나는 시작 위치를 반환하거나 패턴을 찾지 못하면 0을 반환합니다.  
   
@@ -53,7 +53,7 @@ PATINDEX ( '%pattern%' , expression )
  일반적으로 지정된 패턴이 검색되는 열을 나타내는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *식*은 문자열 데이터 형식 범주입니다.  
   
 ## <a name="return-types"></a>반환 형식  
-*식*의 데이터 형식이 **varchar(max)** 또는 **nvarchar(max)** 이면 **bigint**, 그렇지 않으면 **int**입니다.  
+**식**의 데이터 형식이 *varchar(max)* 또는 **nvarchar(max)** 이면 **bigint**, 그렇지 않으면 **int**입니다.  
   
 ## <a name="remarks"></a>설명  
 *패턴* 또는 *식*이 NULL인 경우 PATINDEX에서 NULL을 반환합니다.  
@@ -85,7 +85,7 @@ position
 ```
   
 ### <a name="b-using-a-pattern-with-patindex"></a>B. PATINDEX와 함께 패턴 사용  
-다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `ensure` 테이블에 있는 `DocumentSummary` 열의 특정 행에서 `Document` 패턴이 시작하는 위치를 찾습니다.  
+다음 예에서는 `ensure` 데이터베이스에서 `DocumentSummary` 테이블에 있는 `Document` 열의 특정 행에서 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 패턴이 시작하는 위치를 찾습니다.  
   
 ```sql  
 SELECT position = PATINDEX('%ensure%',DocumentSummary)  
@@ -158,7 +158,7 @@ position
 다음 예에서는 변수를 사용하여 *패턴* 매개 변수로 값을 전달합니다. 이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스를 사용합니다.  
   
 ```sql  
-DECLARE @MyValue varchar(10) = 'safety';   
+DECLARE @MyValue VARCHAR(10) = 'safety';   
 SELECT position = PATINDEX('%' + @MyValue + '%', DocumentSummary)   
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  

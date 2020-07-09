@@ -37,15 +37,15 @@ ms.assetid: 0b6f2b6f-3aa3-4767-943f-43df3c3c5cfd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc10141cc2b6c069894868b2a153abc31c4c250c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 86469f1f2b4a8e2d97b79315e2ceb5f4bf690cff
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155826"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006294"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   하나 이상의 테이블 정의 및 해당 테이블의 모든 데이터, 인덱스, 트리거, 제약 조건 및 권한 지정을 제거합니다. 삭제된 테이블을 참조하는 뷰나 저장 프로시저는 [DROP VIEW](../../t-sql/statements/drop-view-transact-sql.md) 또는 [DROP PROCEDURE](../../t-sql/statements/drop-procedure-transact-sql.md)를 사용하여 명시적으로 삭제해야 합니다. 테이블에 대한 종속성을 보고하려면 [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)를 사용하세요.  
   
@@ -53,14 +53,14 @@ ms.locfileid: "70155826"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 DROP TABLE [ IF EXISTS ] { database_name.schema_name.table_name | schema_name.table_name | table_name } [ ,...n ]  
 [ ; ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -113,14 +113,14 @@ DROP TABLE ProductVendor1 ;
 ```  
   
 ### <a name="b-dropping-a-table-in-another-database"></a>B. 다른 데이터베이스에서 테이블 삭제  
- 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 `SalesPerson2` 테이블을 삭제합니다. 이 예는 서버 인스턴스의 모든 데이터베이스에서 실행할 수 있습니다.  
+ 다음 예에서는 `SalesPerson2` 데이터베이스에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블을 삭제합니다. 이 예는 서버 인스턴스의 모든 데이터베이스에서 실행할 수 있습니다.  
   
 ```  
 DROP TABLE AdventureWorks2012.dbo.SalesPerson2 ;  
 ```  
   
 ### <a name="c-dropping-a-temporary-table"></a>C. 임시 테이블 삭제  
- 다음 예에서는 임시 테이블을 만들고 존재 여부를 테스트한 다음 테이블을 삭제하고 다시 존재 여부를 테스트합니다. 이 예에서는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]으로 시작하는 사용 가능한 **IF EXISTS** 구문을 사용하지 않습니다.  
+ 다음 예에서는 임시 테이블을 만들고 존재 여부를 테스트한 다음 테이블을 삭제하고 다시 존재 여부를 테스트합니다. 이 예에서는 **으로 시작하는 사용 가능한** IF EXISTS[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 구문을 사용하지 않습니다.  
   
 ```  
 CREATE TABLE #temptable (col1 int);  

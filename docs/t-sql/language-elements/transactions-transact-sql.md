@@ -21,15 +21,15 @@ ms.assetid: 1485c375-921a-42af-a871-bb333cc08d3e
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c8e70e80cf7e2ddedce7a56c7d7bc92ed3b161b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a706c73c12ad35480380f8d558837f30f3ad3542
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072158"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007566"
 ---
 # <a name="transactions-transact-sql"></a>트랜잭션(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   트랜잭션은 작업의 한 단위입니다. 트랜잭션이 성공하면 트랜잭션 동안 이루어진 모든 데이터 수정은 커밋되고 데이터베이스의 영구적인 부분이 됩니다. 트랜잭션에 오류가 발생하여 취소되거나 롤백되면 모든 데이터 수정은 지워집니다.  
   

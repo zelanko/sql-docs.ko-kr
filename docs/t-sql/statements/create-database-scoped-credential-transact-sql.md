@@ -22,16 +22,16 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9579c639e1c731c30a145a856a889796795c90b8
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 03472ee65dde26bc749457d7e58d05ce97e77e4d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151521"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010326"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 데이터베이스 자격 증명을 만듭니다. 데이터베이스 자격 증명은 서버 로그인 또는 데이터베이스 사용자에 매핑되지 않습니다. 자격 증명은 데이터베이스가 액세스가 필요한 작업을 수행할 때 언제든 외부 위치에 액세스하기 위해 데이터베이스에서 사용됩니다.
 
@@ -87,7 +87,7 @@ IDENTITY가 Windows 사용자인 경우 암호는 해당 사용자의 암호일 
 
 데이터베이스에 대한 **CONTROL** 권한이 필요합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>A. 애플리케이션에 대한 데이터베이스 범위 자격 증명 만들기
 

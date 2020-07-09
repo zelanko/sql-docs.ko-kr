@@ -17,32 +17,32 @@ helpviewer_keywords:
 - logarithm of expression
 - LOG function
 ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 477007c014a538070a939d22facc475aada34976
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d0acbc4f5244852f988047e9ec1798201fefc30e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215993"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008825"
 ---
 # <a name="log-transact-sql"></a>LOG(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지정된 **float** 식의 자연 로그를 반환합니다.  
+  **에서 지정된** float[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식의 자연 로그를 반환합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server, Azure SQL Database  
   
 LOG ( float_expression [, base ] )  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure Synapse SQL 
   
 LOG ( float_expression )  
@@ -50,7 +50,7 @@ LOG ( float_expression )
   
 ## <a name="arguments"></a>인수  
  *float_expression*  
- **float** 형식 또는 **float**로 암시적으로 변환되는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ [float](../../t-sql/language-elements/expressions-transact-sql.md) 형식 또는 **float**로 암시적으로 변환되는 형식의 **식**입니다.  
   
  *base*  
  로그 밑을 설정하는 선택적 정수 인수입니다.  
@@ -70,11 +70,11 @@ LOG ( float_expression )
 ## <a name="examples"></a>예  
   
 ### <a name="a-calculating-the-logarithm-for-a-number"></a>A. 수의 로그를 계산합니다.  
- 다음 예에서는 지정된 **float** 식의 `LOG`를 계산하는 방법을 보여 줍니다.  
+ 다음 예에서는 지정된 `LOG`float**식의**를 계산하는 방법을 보여 줍니다.  
   
 ```  
-DECLARE @var float = 10;  
-SELECT 'The LOG of the variable is: ' + CONVERT(varchar, LOG(@var));  
+DECLARE @var FLOAT = 10;  
+SELECT 'The LOG of the variable is: ' + CONVERT(VARCHAR, LOG(@var));  
 GO  
 ```  
   
@@ -106,7 +106,7 @@ SELECT LOG (EXP (10));
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-calculating-the-logarithm-for-a-number"></a>C. 수의 로그를 계산합니다.  
- 다음 예에서는 지정된 **float** 식의 `LOG`를 계산하는 방법을 보여 줍니다.  
+ 다음 예에서는 지정된 `LOG`float**식의**를 계산하는 방법을 보여 줍니다.  
   
 ```  
 SELECT LOG(10);  

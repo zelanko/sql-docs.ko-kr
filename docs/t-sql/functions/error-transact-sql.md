@@ -17,18 +17,18 @@ helpviewer_keywords:
 - errors [SQL Server], Transact-SQL
 - error numbers [SQL Server]
 ms.assetid: c8b43477-b6c0-49bf-a608-394a0b6cc7a2
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8834e05acdbb3a38fb8688e96c75935da6778563
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fe41d7e680b358f3a5c775b0e10181281409b39
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74762879"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010366"
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   최근에 실행된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 오류 번호를 반환합니다.  
   
@@ -71,7 +71,7 @@ GO
 ```  
   
 ### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. @@ERROR를 사용하여 조건부로 프로시저 종료  
- 다음 예에서는 `IF...ELSE` 문을 사용하여 저장 프로시저에서 `DELETE` 문 뒤의 `@@ERROR`를 테스트합니다. `@@ERROR` 변수의 값은 호출하는 프로그램으로 보내진 반환 코드를 결정하고 프로시저의 성공 여부를 나타냅니다.  
+ 다음 예에서는 `IF...ELSE` 문을 사용하여 저장 프로시저에서 `@@ERROR` 문 뒤의 `DELETE`를 테스트합니다. `@@ERROR` 변수의 값은 호출하는 프로그램으로 보내진 반환 코드를 결정하고 프로시저의 성공 여부를 나타냅니다.  
   
 ```sql  
 USE AdventureWorks2012;  

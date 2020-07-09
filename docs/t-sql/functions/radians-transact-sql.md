@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - RADIANS function
 ms.assetid: e9f69951-ecda-45d9-8909-dcb716b1b1c0
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05093c47ea7e05845f237e0e7c9c3df2c7d59fd6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 02a7590fa122dbfbd23c8a647ad800becfdc932c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914238"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003813"
 ---
 # <a name="radians-transact-sql"></a>RADIANS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   숫자 식을 도 단위로 입력하면 라디안을 반환합니다.  
   
@@ -34,13 +34,13 @@ ms.locfileid: "67914238"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 RADIANS ( numeric_expression )  
 ```  
   
 ## <a name="arguments"></a>인수  
  *numeric_expression*  
- **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ [bit](../../t-sql/language-elements/expressions-transact-sql.md) 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 **expression**입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  *numeric_expression*과 같은 유형을 반환합니다.  
@@ -68,34 +68,34 @@ GO
   
 ```  
 -- First value is -45.01.  
-DECLARE @angle float  
+DECLARE @angle FLOAT  
 SET @angle = -45.01  
 SELECT 'The RADIANS of the angle is: ' +  
-   CONVERT(varchar, RADIANS(@angle))  
+   CONVERT(VARCHAR, RADIANS(@angle))  
 GO  
 -- Next value is -181.01.  
-DECLARE @angle float  
+DECLARE @angle FLOAT  
 SET @angle = -181.01  
 SELECT 'The RADIANS of the angle is: ' +  
-   CONVERT(varchar, RADIANS(@angle))  
+   CONVERT(VARCHAR, RADIANS(@angle))  
 GO  
 -- Next value is 0.00.  
-DECLARE @angle float  
+DECLARE @angle FLOAT  
 SET @angle = 0.00  
 SELECT 'The RADIANS of the angle is: ' +  
-   CONVERT(varchar, RADIANS(@angle))  
+   CONVERT(VARCHAR, RADIANS(@angle))  
 GO  
 -- Next value is 0.1472738.  
-DECLARE @angle float  
+DECLARE @angle FLOAT  
 SET @angle = 0.1472738  
 SELECT 'The RADIANS of the angle is: ' +  
-    CONVERT(varchar, RADIANS(@angle))  
+    CONVERT(VARCHAR, RADIANS(@angle))  
 GO  
 -- Last value is 197.1099392.  
-DECLARE @angle float  
+DECLARE @angle FLOAT  
 SET @angle = 197.1099392  
 SELECT 'The RADIANS of the angle is: ' +  
-   CONVERT(varchar, RADIANS(@angle))  
+   CONVERT(VARCHAR, RADIANS(@angle))  
 GO  
 ```  
   

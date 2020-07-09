@@ -11,15 +11,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 99c3baf7bc52d5c0123cb5aeccef963578ebac68
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c2f1b8e4a711081bb998c6417c90e28b7638e508
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980435"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001187"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database에서 데이터 가져오기 및 내보내기
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 다양한 메서드를 사용하여 SQL Server 및 Azure SQL Database에서 데이터를 가져오고 내보낼 수 있습니다. 이러한 메서드는 Transact-SQL 문, 명령줄 도구 및 마법사를 포함합니다.
 
 다양한 데이터 형식에서 데이터를 가져오고 내보낼 수도 있습니다. 이러한 형식은 플랫 파일, Excel, 주요 관계형 데이터베이스 및 다양한 클라우드 서비스를 포함합니다.

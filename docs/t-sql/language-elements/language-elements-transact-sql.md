@@ -13,15 +13,15 @@ ms.assetid: e9b8daff-b72f-4a53-907d-5a83a78785ec
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8aeaab6c13f16d8fc6b1f0cbe4f9f664c1c5418e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd664349d144046a5589c494717d5b44471fdc31
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68122247"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007332"
 ---
 # <a name="language-elements-transact-sql"></a>언어 요소(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음 언어 요소를 지원합니다.  
   

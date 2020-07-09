@@ -34,15 +34,15 @@ ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23c27d4d8eafac26b33af45f95377ced5dd0f7ec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0eca253ab85302555b84e35a3118b1e8a0873402
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981920"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007346"
 ---
 # <a name="kill-transact-sql"></a>KILL(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 세션 ID 또는 작업 단위(UOW)를 기반으로 하는 사용자 프로세스를 종료합니다. 지정한 세션 ID 또는 UOW에 실행 취소할 작업이 많은 경우 KILL 문을 완료하는 데 시간이 걸릴 수 있습니다. 특히 프로세스에서 긴 트랜잭션을 롤백하는 경우 프로세스를 완료하는 데 시간이 더 오래 걸립니다.  
   
@@ -78,7 +78,7 @@ JOIN sys.dm_exec_connections AS conn
 ```  
   
 _UOW_  
-**적용 대상**: ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
 분산 트랜잭션의 UOW(작업 단위) ID를 식별합니다. _UOW_는 sys.dm_tran_locks 동적 관리 뷰의 request_owner_guid 열에서 구할 수 있는 GUID입니다. _UOW_는 오류 로그나 MS DTC 모니터를 통해 가져올 수도 있습니다. 분산 트랜잭션 모니터링 방법은 MS DTC 설명서를 참조하세요.  
   
@@ -127,7 +127,7 @@ KILL _session ID_|_UOW_ WITH STATUSONLY 문이 실행되기 전에 세션 ID 또
   
 **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** KILL DATABASE CONNECTION 권한이 필요합니다. 서버 수준 보안 주체 로그인에 KILL DATABASE CONNECTION이 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-kill-to-stop-a-session"></a>A. KILL을 사용하여 세션 종료  
  다음 예에서는 세션 ID `53`을 종료하는 방법을 보여 줍니다.  

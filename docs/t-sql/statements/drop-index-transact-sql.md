@@ -32,15 +32,15 @@ ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dab01be570e871cfb1aed5c28bba91f81b55c559
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4d6e1349f98bdf5b98d1d70ff68d50014f0dcdde
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635314"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009249"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   현재 데이터베이스에서 하나 이상의 관계형 인덱스, 공간 인덱스, 필터링된 인덱스 또는 XML 인덱스를 제거합니다. 클러스터형 인덱스를 삭제하고 MOVE TO 옵션을 지정하여 결과 테이블을 단일 트랜잭션으로 다른 파일 그룹이나 파티션 구성표로 이동할 수 있습니다.  
   
@@ -266,7 +266,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 ## <a name="permissions"></a>사용 권한  
  DROP INDEX를 실행하려면 최소한 테이블 또는 뷰에 대한 ALTER 권한이 필요합니다. 이 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할에 부여됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-dropping-an-index"></a>A. 인덱스 삭제  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `ProductVendor` 테이블의 `IX_ProductVendor_VendorID` 인덱스를 삭제합니다.  

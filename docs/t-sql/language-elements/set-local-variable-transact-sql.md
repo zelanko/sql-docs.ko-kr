@@ -18,15 +18,15 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 770ef448094e764bcc1ca970354941c0d1d03d4c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 701893d6f3f1ded5b3d66684a66b8640b876242b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072277"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004999"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 DECLARE @*local_variable* 문을 사용하여 이전에 만든 지정된 지역 변수를 지정된 값으로 설정합니다.  
   
@@ -35,7 +35,7 @@ DECLARE @*local_variable* 문을 사용하여 이전에 만든 지정된 지역 
 ## <a name="syntax"></a>구문  
 SQL Server 및 Azure SQL Database에 대한 구문:
 
-```sql    
+```syntaxsql
 SET   
 { @local_variable  
     [ . { property_name | field_name } ] = { expression | udt_name { . | :: } method_name }  
@@ -61,7 +61,7 @@ SET
 }   
 ```  
 Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스용 구문:  
-```sql  
+```syntaxsql
 SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression  
 ```  
   
@@ -288,7 +288,7 @@ GO
 ```  
   
 ### <a name="h-assigning-a-value-to-a-user-defined-type-variable-by-invoking-a-method-of-the-type"></a>H. 사용자 정의 형식의 메서드를 호출하여 사용자 정의 형식 변수에 값 할당  
-다음 예제에서는 형식의 `SetXY` 메서드를 호출하여 **point** 사용자 정의 형식의 값을 설정합니다.  
+다음 예제에서는 형식의 **메서드를 호출하여**point`SetXY` 사용자 정의 형식의 값을 설정합니다.  
   
 ```  
 DECLARE @p Point;  

@@ -2,7 +2,7 @@
 title: 서식 파일을 사용하여 테이블 열 건너뛰기(SQL Server) | Microsoft 문서
 description: 이 문서에서는 원본 데이터 파일에 건너뛴 열의 데이터가 없는 경우 서식 파일을 사용하여 테이블 열 가져오기를 건너뛰는 방법을 설명합니다.
 ms.custom: ''
-ms.date: 02/15/2018
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a568d1bfbfb461a8749699e0f7e175ed2c002f9e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5a83155dd566812248e37d509e34600a1beeb677
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980420"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007195"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>서식 파일을 사용하여 테이블 열 건너뛰기(SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 이 문서에서는 원본 데이터 파일에 건너뛴 열의 데이터가 없는 경우 서식 파일을 사용하여 테이블 열 가져오기를 건너뛰는 방법을 설명합니다. 데이터 파일에는 대상 테이블의 열 수보다 적은 수의 필드가 포함될 수 있습니다. 즉, 대상 테이블에서 다음 두 조건 중 하나 이상이 사실인 경우에만 열 가져오기를 건너뛸 수 있습니다.
 -   건너뛴 열이 Null을 허용합니다.
@@ -46,7 +46,7 @@ GO
   
 이 아티클의 예에서는 샘플 데이터 파일 `myTestSkipCol2.dat`도 사용합니다. 대상 테이블에는 세 개의 열이 있지만 이 데이터 파일에는 두개의 필드만 포함됩니다.
 
-```  
+```
 1,DataForColumn3  
 1,DataForColumn3  
 1,DataForColumn3  
@@ -221,9 +221,9 @@ GO
 
 `OPENROWSET(BULK...)`를 사용하여 XML 서식 파일로 테이블 열을 건너뛰려면 다음과 같이 선택 목록과 대상 테이블에 명시적인 열 목록을 제공해야 합니다.  
   
-    ```sql
-    INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...) 
-    ```
+```sql
+INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...) 
+```
 
 다음 예에서는 `OPENROWSET` 대량 행 집합 공급자와 `myTestSkipCol2.xml` 서식 파일을 사용합니다. 또한 `myTestSkipCol2.dat` 데이터 파일을 `myTestSkipCol` 테이블로 대량 가져옵니다. 이 문에는 필요에 따라 SELECT 목록과 대상 테이블의 명시적인 열 목록이 있습니다.  
   

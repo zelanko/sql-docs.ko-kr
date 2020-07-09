@@ -17,18 +17,18 @@ helpviewer_keywords:
 - tangent
 - ATN2 function
 ms.assetid: 014b291e-7cd7-4c39-b20d-5db3a9f0505d
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 993020892a992800a8fb8fab2c7801fe7caf9493
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28ba622527afb105cf63625de307f1b5f0ec43b1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68040188"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002251"
 ---
 # <a name="atn2-transact-sql"></a>ATN2(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 원점에서 점 (y, x)까지의 광선과 양의 X축 사이의 각도(라디안)를 반환합니다. 여기서 x와 y는 지정한 두 float 식의 값입니다.
   
@@ -36,13 +36,13 @@ ms.locfileid: "68040188"
   
 ## <a name="syntax"></a>구문  
   
-```sql
+```syntaxsql
 ATN2 ( float_expression , float_expression )  
 ```  
   
 ## <a name="arguments"></a>인수  
 *float_expression*  
-**float** 데이터 형식의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
+[float](../../t-sql/language-elements/expressions-transact-sql.md) 데이터 형식의 **expression**입니다.
   
 ## <a name="return-types"></a>반환 형식
 **float**

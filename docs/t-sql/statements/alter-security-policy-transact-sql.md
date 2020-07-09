@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4cded7e52fac941998ad9ddf5f7ab694e3687581
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7066f26887982ac5973a1e326effda43ce6abbe0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626706"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000672"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 보안 정책을 변경합니다.  
   
@@ -104,7 +104,7 @@ ALTER ANY SECURITY POLICY 권한이 필요합니다.
 -   정책에 바인딩되는 대상 테이블에 대한 REFERENCES 권한.  
 -   인수로 사용하는 대상 테이블의 모든 열에 대한 REFERENCES 권한.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음 예는 **ALTER SECURITY POLICY** 구문의 사용을 보여줍니다. 완벽한 보안 정책 시나리오의 예를 보려면 [행 수준 보안](../../relational-databases/security/row-level-security.md)을 참조하세요.  
   
 ### <a name="a-adding-an-additional-predicate-to-a-policy"></a>A. 정책에 추가적인 조건자 추가  

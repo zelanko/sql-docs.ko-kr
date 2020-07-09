@@ -31,15 +31,15 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f13bbee1fdde92c55c98a0c2478d0dec4db5e96a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fca606be32cc3b9e73defd52a30257ad09c0e099
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75884001"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007316"
 ---
 # <a name="like-transact-sql"></a>LIKE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   특정 문자열이 지정된 패턴과 일치하는지를 확인합니다. 패턴은 일반 문자와 와일드카드 문자를 포함할 수 있습니다. 패턴 일치에서 일반 문자는 문자열에 지정된 문자와 정확하게 일치해야 합니다. 그러나 와일드카드 문자는 문자열에서 어느 한 부분만 일치하면 됩니다. LIKE 연산자에 와일드카드 문자를 사용할 경우 = 및 != 문자열 비교 연산자를 사용하는 것보다 훨씬 융통성이 있습니다. 문자열 데이터 형식의 인수가 하나라도 있을 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 가능할 경우 이를 문자열 데이터 형식으로 변환합니다.  
   
@@ -47,13 +47,13 @@ ms.locfileid: "75884001"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 match_expression [ NOT ] LIKE pattern [ ESCAPE escape_character ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 match_expression [ NOT ] LIKE pattern  
@@ -164,7 +164,7 @@ WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row
 ## <a name="using-the--wildcard-character"></a>% 와일드카드 문자 사용  
  LIKE '5%' 기호를 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 숫자 5 다음 0개 이상의 문자가 이어지는 문자열을 검색합니다.  
   
- 예를 들어 다음 쿼리는 모두 `dm` 문자로 시작하므로 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 모든 동적 관리 뷰를 보여 줍니다.  
+ 예를 들어 다음 쿼리는 모두 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 문자로 시작하므로 `dm` 데이터베이스에서 모든 동적 관리 뷰를 보여 줍니다.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -268,7 +268,7 @@ Gail                  Westover             305-555-0100
 ```
 
 ### <a name="c-using-the-escape-clause"></a>C. ESCAPE 절 사용  
- 다음 예에서는 `ESCAPE` 절과 이스케이프 문자를 사용하여 `mytbl2` 테이블의 `c1` 열에서 `10-15%`와 정확히 일치하는 문자열을 찾는 방법을 보여 줍니다.  
+ 다음 예에서는 `ESCAPE` 절과 이스케이프 문자를 사용하여 `10-15%` 테이블의 `c1` 열에서 `mytbl2`와 정확히 일치하는 문자열을 찾는 방법을 보여 줍니다.  
   
 ```sql
 USE tempdb;  
@@ -343,7 +343,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the-_-wildcard-character"></a>G. LIKE와 _ 와일드 카드 문자 사용  
- 다음 예제에서는 `DimEmployee` 테이블에서 지역 코드가 `6`으로 시작해 `2`로 끝나는 모든 전화 번호를 찾습니다. 전화 열 값의 모든 후속 문자와 일치하도록 검색 패턴 끝에 % 와일드카드 문자가 포함됩니다.  
+ 다음 예제에서는 `6` 테이블에서 지역 코드가 `2`으로 시작해 `DimEmployee`로 끝나는 모든 전화 번호를 찾습니다. 전화 열 값의 모든 후속 문자와 일치하도록 검색 패턴 끝에 % 와일드카드 문자가 포함됩니다.  
   
 ```sql  
 -- Uses AdventureWorks  

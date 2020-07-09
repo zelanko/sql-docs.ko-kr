@@ -27,15 +27,15 @@ ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 473166d89ec44c9f5fa2c13ad9da6031f951da57
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3f9dfe52c4a55d260b32879a803d771271ac2034
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633734"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003636"
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>GRANT 데이터베이스 보안 주체 사용 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스 사용자, 데이터베이스 역할 또는 애플리케이션 역할에 대한 사용 권한을 부여합니다.  
   
@@ -167,7 +167,7 @@ GRANT permission [ ,...n ]
   
  db_owner 고정 데이터베이스 역할의 멤버와 같이 데이터베이스에 대한 CONTROL 사용 권한이 부여된 사용자는 데이터베이스의 모든 보안 개체에 대한 사용 권한을 부여할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-granting-control-permission-on-a-user-to-another-user"></a>A. 다른 사용자에게 사용자에 대한 CONTROL 권한 부여  
  다음 예에서는 사용자 `CONTROL`에게 사용자 `AdventureWorks2012`의 `Wanida`에 대한 `RolandX` 권한을 부여합니다.  

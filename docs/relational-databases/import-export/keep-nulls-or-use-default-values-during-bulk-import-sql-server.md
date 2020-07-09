@@ -22,15 +22,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9c4a92c1d98bfc7af773cac1be7aedb7113c5b28
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ca3b994cb831e78807b8aeb44c5fe6f8fc454f41
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980386"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001208"
 ---
 # <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>대량 가져오기 수행 중 null 유지 또는 기본값 사용(SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 기본적으로 데이터를 테이블로 가져올 때 [bcp](../../tools/bcp-utility.md) 명령 및 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 문은 해당 테이블의 열에 대해 정의된 기본값을 유지합니다.  예를 들어 데이터 파일에 null 필드가 있으면 열의 기본값이 대신 로드됩니다.  [bcp](../../tools/bcp-utility.md) 명령 및 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 문을 사용하면 Null 값을 유지하도록 지정할 수 있습니다.
 

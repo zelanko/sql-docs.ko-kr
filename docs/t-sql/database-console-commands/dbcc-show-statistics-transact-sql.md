@@ -33,15 +33,15 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 350ece68d98f8333eb6281a5cbb6fdacf792e51a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d3c9b007bd8714814cedeb33c78684f82bd6dd1e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632354"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003431"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 DBCC SHOW_STATISTICS는 테이블 또는 인덱싱된 뷰에 대한 현재 쿼리 최적화 통계를 표시합니다. 쿼리 최적화 프로그램은 통계를 사용하여 쿼리 결과의 카디널리티 또는 행 수를 예상함으로써 고품질의 쿼리 계획을 생성할 수 있습니다. 예를 들어 쿼리 최적화 프로그램은 카디널리티 예상치를 통해 쿼리 계획에서 index scan 연산자 대신 index seek 연산자를 선택하여 리소스가 많이 소요되는 index scan을 피함으로써 쿼리 성능을 개선할 수 있습니다.
   
@@ -167,8 +167,9 @@ DBCC SHOW_STATISTICS ( table_name , target )
 -   통계 개체 내의 열이 SELECT 권한 외에 동적 데이터 마스킹 규칙을 사용하여 마스킹되는 경우 사용자는 UNMASK 권한이 있어야 합니다.
 
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 이전 버전의 경우 사용자는 테이블의 소유자이거나 `sysadmin` 고정 서버 역할, `db_owner` 고정 데이터베이스 역할 또는 `db_ddladmin` 고정 데이터베이스 역할의 멤버여야 합니다.
-[!NOTE]
-이전 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 동작으로 동작을 다시 변경하려면 traceflag 9485를 사용합니다.
+
+ > [!NOTE]
+ > 이전 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 동작으로 동작을 다시 변경하려면 traceflag 9485를 사용합니다.
   
 ## <a name="permissions-for-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 사용 권한  
 DBCC SHOW_STATISTICS에는 다음 중 하나의 테이블이나 멤버 자격에 대한 SELECT 권한이 필요합니다.

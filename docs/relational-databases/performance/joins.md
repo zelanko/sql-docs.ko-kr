@@ -17,15 +17,15 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c7f2ff4782923eef9ee4d91fa0a7c69239e298c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287477"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009684"
 ---
 # <a name="joins-sql-server"></a>조인(SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 메모리 내 정렬 및 해시 조인 기술을 사용하여 정렬, 교집합, 합집합 및 차집합 연산을 수행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이러한 유형의 쿼리 계획을 사용하여 종형 스토리지이라고 하는 수직 테이블 분할을 지원합니다.   
 

@@ -19,18 +19,18 @@ helpviewer_keywords:
 - schema-scoped objects [SQL Server]
 - objects [SQL Server], schema-scoped
 ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e319c3875adc616d6a855b7fdca0ff24ff880522
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 41478a2f5e3a47d41669dd092146109876b22cfd
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982506"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005075"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   현재 데이터베이스의 스키마 범위 개체에 대한 정보를 반환합니다. 스키마 범위 개체 목록에 대해서는 [sys.objects&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조하십시오. DDL(데이터 정의 언어) 트리거 및 이벤트 알림과 같이 스키마 범위가 아닌 개체에 대해서는 이 함수를 사용할 수 없습니다.  
   
@@ -201,7 +201,7 @@ GO
 ```  
   
 ### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>B. 스칼라 반환 사용자 정의 함수가 결정적인지 확인  
- 다음 예에서는 **money** 값을 반환하는 사용자 정의 스칼라 반환 함수 `ufnGetProductDealerPrice`가 결정적인지 여부를 테스트하는 방법을 보여 줍니다.  
+ 다음 예에서는 `ufnGetProductDealerPrice`money**값을 반환하는 사용자 정의 스칼라 반환 함수**가 결정적인지 여부를 테스트하는 방법을 보여 줍니다.  
   
 ```  
 USE AdventureWorks2012;  

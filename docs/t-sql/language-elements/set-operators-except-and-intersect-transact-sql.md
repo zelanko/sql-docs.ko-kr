@@ -23,15 +23,15 @@ ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7469e9b19650c88986d4f0658d28a7e0481abf2a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a76fa18b50c62127208db9430fafcfb5668225c1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81630258"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004986"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>집합 연산자 - EXCEPT 및 INTERSECT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 두 쿼리의 결과를 비교하여 고유한 행을 반환합니다.  
   
@@ -101,7 +101,7 @@ EXCEPT 또는 INTERSECT 작업에 사용될 때 결과 집합에서 빠른 정�
 ## <a name="examples"></a>예  
 다음 예제에서는 `INTERSECT` 및 `EXCEPT` 연산자를 사용하는 방법을 보여 줍니다. 첫 번째 쿼리는 해당 결과를 `Production.Product` 및 `INTERSECT`와 비교하기 위해 `EXCEPT` 테이블의 모든 값을 반환합니다.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -111,7 +111,7 @@ FROM Production.Product ;
   
 다음 쿼리는 `INTERSECT` 연산자의 왼쪽과 오른쪽에 있는 두 쿼리에 의해 반환된 고유한 값을 반환합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -124,7 +124,7 @@ FROM Production.WorkOrder ;
   
 다음 쿼리는 오른쪽 쿼리에 없는 고유한 값을 `EXCEPT` 연산자의 왼쪽에 있는 쿼리에서 반환합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -137,7 +137,7 @@ FROM Production.WorkOrder ;
   
 다음 쿼리는 오른쪽 쿼리에 없는 고유한 값을 `EXCEPT` 연산자의 왼쪽에 있는 쿼리에서 반환합니다. 테이블은 위의 예제와 반대로 바뀝니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -151,7 +151,7 @@ FROM Production.Product ;
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 다음 예제에서는 `INTERSECT` 및 `EXCEPT` 연산자의 사용 방법을 보여 줍니다. 첫 번째 쿼리는 해당 결과를 `FactInternetSales` 및 `INTERSECT`와 비교하기 위해 `EXCEPT` 테이블의 모든 값을 반환합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   
@@ -161,7 +161,7 @@ FROM FactInternetSales;
   
 다음 쿼리는 `INTERSECT` 연산자의 왼쪽과 오른쪽에 있는 두 쿼리에 의해 반환된 고유한 값을 반환합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   
@@ -176,7 +176,7 @@ ORDER BY CustomerKey;
   
 다음 쿼리는 오른쪽 쿼리에 없는 고유한 값을 `EXCEPT` 연산자의 왼쪽에 있는 쿼리에서 반환합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   

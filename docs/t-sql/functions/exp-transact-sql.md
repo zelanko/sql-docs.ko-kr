@@ -16,18 +16,18 @@ helpviewer_keywords:
 - exponential functions
 - EXP function
 ms.assetid: 5a9b8c52-6fb6-4e33-8b02-a878785b2f51
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 638e9960af007710b7c9a891109597db14227092
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aefe95893f9fc352b4c4b1909b849679fd302ab8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071589"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010345"
 ---
 # <a name="exp-transact-sql"></a>EXP(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   지정한 **float** 식의 지수 값을 반환합니다.  
   
@@ -35,13 +35,13 @@ ms.locfileid: "68071589"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 EXP ( float_expression )  
 ```  
   
 ## <a name="arguments"></a>인수  
  *float_expression*  
- **float** 형식 또는 **float**로 암시적으로 변환되는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ [float](../../t-sql/language-elements/expressions-transact-sql.md) 형식 또는 **float**로 암시적으로 변환되는 형식의 **식**입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **float**  
@@ -59,9 +59,9 @@ EXP ( float_expression )
  다음 예에서는 변수를 선언하고 텍스트 설명과 함께 지정된 변수(`10`)의 지수 값을 반환하는 방법을 보여 줍니다.  
   
 ```  
-DECLARE @var float  
+DECLARE @var FLOAT  
 SET @var = 10  
-SELECT 'The EXP of the variable is: ' + CONVERT(varchar,EXP(@var))  
+SELECT 'The EXP of the variable is: ' + CONVERT(VARCHAR, EXP(@var))  
 GO  
 ```  
   
@@ -77,7 +77,7 @@ The EXP of the variable is: 22026.5
  다음 예에서는 `20`의 자연 로그 값을 구한 후 그 값의 지수 값을 계산하고, 다시 `20`의 지수 값을 구한 후 그 값의 자연 로그 값을 계산하여 반환합니다. 이 함수는 서로 역함수 관계에 있으며 두 함수의 반환 값은 모두 `20`입니다.  
   
 ```  
-SELECT EXP( LOG(20)), LOG( EXP(20))  
+SELECT EXP(LOG(20)), LOG(EXP(20))  
 GO  
 ```  
   

@@ -11,16 +11,16 @@ ms.assetid: 2e110984-7703-4806-a24b-b41e8c3018c6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01db1809ae4a16183673291c135e178dfac5cd7d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5fa4380b412e5f77ea8940395250975ed19d8200
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68139628"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002052"
 ---
 # <a name="memory-optimized-system-versioned-temporal-tables-performance"></a>메모리 액세스에 최적화된 시스템 버전 관리 임시 테이블 성능
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 이 항목에서는 시스템 버전 메모리 최적화 temporal 테이블을 사용할 때 고려해야 하는 몇 가지 성능 관련 사항에 대해 설명합니다.
 

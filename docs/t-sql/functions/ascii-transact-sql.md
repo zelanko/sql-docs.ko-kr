@@ -18,18 +18,18 @@ helpviewer_keywords:
 - code [SQL Server], ASCII
 - leftmost character of expression
 ms.assetid: 45c2044a-0593-4805-8bae-0fad4bde2e6b
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b982d357668703a54b06124a8bb3edf0c963463
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 37c3298f693754943e355f91ee6e6b15bb6ab66a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74119191"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002284"
 ---
 # <a name="ascii-transact-sql"></a>ASCII(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 문자 식에서 가장 왼쪽 문자의 ASCII 코드 값을 반환합니다.
   
@@ -37,19 +37,19 @@ ms.locfileid: "74119191"
   
 ## <a name="syntax"></a>구문  
   
-```sql
+```syntaxsql
 ASCII ( character_expression )  
 ```  
   
 ## <a name="arguments"></a>인수  
 *character_expression*  
-**char** 또는 **varchar** 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
+[char](../../t-sql/language-elements/expressions-transact-sql.md) 또는 **varchar** 형식의 **식**입니다.
   
 ## <a name="return-types"></a>반환 형식
  **int**  
   
 ## <a name="remarks"></a>설명
-ASCII는 **A**merican **S**tandard **C**ode for **I**nformation **I**nterchange를 나타냅니다. 최신 컴퓨터에 대한 문자 인코딩 표준으로 사용합니다. ASCII 문자 목록은 [ASCII](https://www.wikipedia.org/wiki/ASCII)의 **인쇄 가능 문자** 섹션을 참조하세요.
+ASCII는 **A**merican **S**tandard **C**ode for **I**nformation **I**nterchange를 나타냅니다. 최신 컴퓨터에 대한 문자 인코딩 표준으로 사용합니다. ASCII 문자 목록은 **ASCII**의 [인쇄 가능 문자](https://www.wikipedia.org/wiki/ASCII) 섹션을 참조하세요.
 
 ASCII는 7비트 문자 집합입니다. 확장 ASCII 또는 상위 ASCII는 `ASCII` 함수에서 처리하지 않는 8비트 문자 집합입니다. 
 

@@ -21,15 +21,15 @@ ms.assetid: 52fd6e8d-650c-4f66-abcf-67765aa5aa83
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 07125650ddbe4c37ffd1522ceadadced8d899b61
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bb85e014f600ea2d88f4022694a490ef5d4a8c6c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828627"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003681"
 ---
 # <a name="rtrim-transact-sql"></a>RTRIM(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   후행 공백을 모두 잘라낸 문자열을 반환합니다.  
   
@@ -55,7 +55,7 @@ RTRIM ( character_expression )
 ### <a name="a-simple-example"></a>A. 간단한 예  
  다음 예는 문장 끝에 공백이 있는 문자열을 받아 문장 끝에 공백이 없는 텍스트를 반환합니다.  
   
-```  
+```sql  
 SELECT RTRIM('Removes trailing spaces.   ');  
 ```  
   
@@ -66,7 +66,7 @@ SELECT RTRIM('Removes trailing spaces.   ');
 ### <a name="b-simple-example"></a>2\. 간단한 예  
  다음 예에서는 `RTRIM`을 사용하여 후행 공백을 제거하는 방법을 보여 줍니다. 여기에서는 해당 공백이 제거되었음을 보여 주기 위해 첫 번째 문자열에 다른 문자열이 연결되어 있습니다.  
   
-```  
+```sql  
 SELECT RTRIM('Four spaces are after the period in this sentence.    ') + 'Next string.';  
 ```  
   
@@ -77,7 +77,7 @@ SELECT RTRIM('Four spaces are after the period in this sentence.    ') + 'Next s
 ### <a name="c-using-rtrim-with-a-variable"></a>C. 변수에 RTRIM 사용  
  다음 예에서는 `RTRIM`을 사용하여 문자 변수에서 후행 공백을 제거하는 방법을 보여 줍니다.  
   
-```  
+```sql  
 DECLARE @string_to_trim varchar(60);  
 SET @string_to_trim = 'Four spaces are after the period in this sentence.    ';  
 SELECT @string_to_trim + ' Next string.';  
@@ -87,18 +87,11 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```sql   
- -------------------------------------------------------------------------  
- Four spaces are after the period in this sentence.     Next string.  
- 
- (1 row(s) affected)`  
- 
- -------------------------------------------------------------------------  
- Four spaces are after the period in this sentence. Next string.  
- 
- (1 row(s) affected)
- ```  
-  
+```
+Four spaces are after the period in this sentence.     Next string.
+
+Four spaces are after the period in this sentence. Next string.
+```
 
   
 ## <a name="see-also"></a>참고 항목  
