@@ -18,21 +18,21 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3724c25854bd98a98b077fb59897ba4da250aee1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f3cd8777a05d285c49ae314c4e39aed42b5dc184
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68329295"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011422"
 ---
 # <a name="datediff_big-transact-sql"></a>DATEDIFF_BIG(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 이 기능은 지정된 *startdate*와 *enddate* 사이에 지정된 *datepart* 경계의 수(부호 있는 큰 정수 값으로)를 반환합니다.
   
-모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식 및 함수에 대한 개요는 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)을 참조하세요.
+모든 [의 날짜 및 시간 데이터 형식 및 함수에 대한 개요는 ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;[!INCLUDE[tsql](../../includes/tsql-md.md)]을 참조하세요.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -88,15 +88,15 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 서명된 **bigint**  
   
 ## <a name="return-value"></a>Return Value  
-*startdate*와 *enddate* 사이의 **bigint** 차이를 반환하며, *datepart*에 설정된 국가로 표시됩니다.
+**startdate**와 *enddate* 사이의 *bigint* 차이를 반환하며, *datepart*에 설정된 국가로 표시됩니다.
   
-**bigint**에 대한 범위를 벗어난 반환 값의 경우(-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807) `DATEDIFF_BIG`에서 오류를 반환합니다. **int**을 반환하여 **분** 이상의 정밀도로 오버플로할 수 있는 `DATEDIFF`와 달리, `DATEDIFF_BIG`은 *enddate*와 *startdate* 간의 차이가 292년, 3개월, 10일, 23시간, 47분 및 16.8547758초를 넘는 **나노초** 정밀도를 사용하는 경우에만 오버플로할 수 있습니다.
+**bigint**에 대한 범위를 벗어난 반환 값의 경우(-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807) `DATEDIFF_BIG`에서 오류를 반환합니다. `DATEDIFF`int**을 반환하여** 분**이상의 정밀도로 오버플로할 수 있는**와 달리, `DATEDIFF_BIG`은 **enddate**와 *startdate* 간의 차이가 292년, 3개월, 10일, 23시간, 47분 및 16.8547758초를 넘는 *나노초* 정밀도를 사용하는 경우에만 오버플로할 수 있습니다.
   
 *startdate* 및 *enddate* 모두에 시간 값만 할당되고 *datepart*가 시간 *datepart*가 아니면 `DATEDIFF_BIG`는 0을 반환합니다.
   
 `DATEDIFF_BIG`은 반환 값을 계산하기 위해 *startdate* 또는 *enddate*의 표준 시간대 오프셋 구성 요소를 사용하지 않습니다.
   
-*startdate* 또는 *enddate*에 사용된 **smalldatetime** 값의 경우 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)은 분 단위까지만 정확하므로 `DATEDIFF_BIG`은 반환 값에서 초와 밀리초를 항상 0으로 설정합니다.
+**startdate** 또는 *enddate*에 사용된 *smalldatetime* 값의 경우 `DATEDIFF_BIG`smalldatetime[은 분 단위까지만 정확하므로 ](../../t-sql/data-types/smalldatetime-transact-sql.md)은 반환 값에서 초와 밀리초를 항상 0으로 설정합니다.
   
 날짜 데이터 형식의 변수에 시간 값만 할당된 경우 `DATEDIFF_BIG`은 누락된 날짜 부분 값을 기본값인 `1900-01-01`로 설정합니다. 시간 또는 날짜 데이터 형식의 변수에 날짜 값만 할당될 경우 `DATEDIFF_BIG`는 누락된 시간 부분 값을 기본값인 `00:00:00`으로 설정합니다. *startdate* 또는 *enddate* 중 하나는 시간 부분만 있고 다른 하나는 날짜 부분만 있는 경우 `DATEDIFF_BIG`는 누락된 시간 및 날짜 부분을 기본값으로 설정합니다.
   
@@ -119,13 +119,13 @@ SELECT DATEDIFF_BIG(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:0
 ```
   
 ## <a name="remarks"></a>설명  
-`SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` 및 `ORDER BY` 절에서 `DATEDIFF_BIG`를 사용합니다.
+`DATEDIFF_BIG`, `SELECT <list>`, `WHERE`, `HAVING` 및 `GROUP BY` 절에서 `ORDER BY`를 사용합니다.
   
 `DATEDIFF_BIG`는 문자열 리터럴을 **datetime2** 형식으로 암시적으로 캐스팅합니다. 즉 `DATEDIFF_BIG`는 데이터가 문자열로 전달될 때 형식 YDM을 지원하지 않습니다. YDM 형식을 사용하려면 문자열을 **datetime** 또는 **smalldatetime** 형식으로 명시적으로 캐스팅해야 합니다.
   
 `SET DATEFIRST` 지정은 `DATEDIFF_BIG`에 영향을 주지 않습니다. `DATEDIFF_BIG`은 항상 일요일을 한 주의 첫 날로 사용하여 함수가 결정적으로 작동하게 합니다.
 
-*enddate*와 *startdate* 간의 차이가 **bigint**의 범위를 벗어난 값을 반환하는 경우 `DATEDIFF_BIG`는 **나노초**의 정밀도로 오버플로할 수 있습니다.
+`DATEDIFF_BIG`enddate**와** startdate*간의 차이가*bigint*의 범위를 벗어난 값을 반환하는 경우* 는 **나노초**의 정밀도로 오버플로할 수 있습니다.
   
 ## <a name="examples"></a>예 
   

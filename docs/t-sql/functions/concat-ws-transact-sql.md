@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - CONCAT_WS function
 ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f2865bfbe4e2629e93ba5e142c9fd46139670f6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e1f046767dba460063a71769091f010840848c2e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82804884"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011538"
 ---
 # <a name="concat_ws-transact-sql"></a>CONCAT_WS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
 
 이 함수는 둘 이상의 문자열 값을 엔드투엔드 방식으로 연결하거나 조인한 결과 문자열을 반환합니다. 첫 번째 함수 인수에 지정된 구분 기호와 연결된 해당 문자열 값을 구분합니다. (`CONCAT_WS`는 *구분 기호를 이용한 연결*을 나타냅니다.)
 

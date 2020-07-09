@@ -20,18 +20,18 @@ helpviewer_keywords:
 - number of group items
 - COUNT function [Transact-SQL]
 ms.assetid: 28d39da6-bc2e-46c7-858c-b1721c938830
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4cec9afec24b1ef184b9f37795903017c6d3b00
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e0c4ebccf102051d3144ca8a9955bfa0f1aef1ee
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026494"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011496"
 ---
 # <a name="count-transact-sql"></a>COUNT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 이 함수는 그룹에 있는 항목의 수를 반환합니다. `COUNT`은 [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md) 함수처럼 작동합니다. 이러한 함수는 해당 반환 값의 데이터 형식만이 다릅니다. `COUNT`은 항상 **int** 데이터 형식 값을 반환합니다. `COUNT_BIG`은 항상 **bigint** 데이터 형식 값을 반환합니다.
   
@@ -39,7 +39,7 @@ ms.locfileid: "68026494"
   
 ## <a name="syntax"></a>구문  
   
-```sql
+```syntaxsql
 
 -- Aggregation Function Syntax  
 COUNT ( { [ [ ALL | DISTINCT ] expression ] | * } )  
@@ -56,7 +56,7 @@ DISTINCT
 `COUNT`이 Null이 아닌 고유한 값의 수를 반환하도록 지정합니다.
   
 *expression*  
-**image**, **ntext** 또는 **text**를 제외한 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. `COUNT`이 식에서 집계 함수 또는 하위 쿼리를 지원하지 않습니다.
+[image](../../t-sql/language-elements/expressions-transact-sql.md), **ntext** 또는 **text**를 제외한 형식의 **식**입니다. `COUNT`이 식에서 집계 함수 또는 하위 쿼리를 지원하지 않습니다.
   
 \*  
 `COUNT`이 반환할 총 테이블 행 개수를 결정하는 모든 행을 계산해야 한다고 지정합니다. `COUNT(*)`에는 매개 변수가 없으며 DISTINCT의 사용을 지원하지 않습니다. `COUNT(*)`은 특정 열에 대한 정보를 사용하지 않도록 정의되어 있으므로 *expression* 매개 변수가 필요하지 않습니다. `COUNT(*)`은 지정한 테이블에서 행의 수를 반환하고 중복 행을 유지합니다. 각 행은 개별적으로 계산되며 Null 값을 가진 행도 포함됩니다.
@@ -136,7 +136,7 @@ GO
 ```
   
 ### <a name="d-using-the-over-clause"></a>D. OVER 절 사용  
-이 예제에서는 `OVER` 절에서 `MIN`, `MAX`, `AVG` 및 `COUNT` 함수를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스 `HumanResources.Department` 테이블에서 각 부서에 대해 집계된 값을 반환합니다.
+이 예제에서는 `MIN` 절에서 `MAX`, `AVG`, `COUNT` 및 `OVER` 함수를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스 `HumanResources.Department` 테이블에서 각 부서에 대해 집계된 값을 반환합니다.
   
 ```sql
 SELECT DISTINCT Name  
@@ -235,7 +235,7 @@ TotalCount  Average Sales Quota
 ```
   
 ### <a name="h-using-count-with-having"></a>H. HAVING과 함께 COUNT 사용  
-이 예제에서는 `HAVING` 절과 함께 `COUNT`를 사용하여 각각 15명 이상의 직원이 있는 회사의 부서를 반환합니다.
+이 예제에서는 `COUNT` 절과 함께 `HAVING`를 사용하여 각각 15명 이상의 직원이 있는 회사의 부서를 반환합니다.
   
 ```sql
 USE ssawPDW;  
@@ -257,7 +257,7 @@ Production      179
 ```
   
 ### <a name="i-using-count-with-over"></a>9\. OVER와 함께 COUNT 사용  
-이 예제에서는 `OVER` 절과 함께 `COUNT`를 사용하여 지정된 각 판매 주문에 포함된 제품의 수를 반환합니다.
+이 예제에서는 `COUNT` 절과 함께 `OVER`를 사용하여 지정된 각 판매 주문에 포함된 제품의 수를 반환합니다.
   
 ```sql
 USE ssawPDW;  

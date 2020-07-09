@@ -32,16 +32,16 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03690af5e9ec4ce835372378ca3bdf13eff3073a
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: c7694d4675d37045b7b463e950d1811cec197ee4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152040"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011946"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>인덱스를 다시 구성하거나 다시 빌드하여 인덱스 조각화 해결
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 이 문서에서는 인덱스 조각 모음이 수행되는 방식과 이것이 쿼리 성능에 미치는 영향에 대해 설명합니다. [하나의 인덱스에 대해 존재하는 조각화의 양](#detecting-the-amount-of-fragmentation)을 확인한 후에는 원하는 도구에서 Transact-SQL 명령을 실행하거나 SQL Server Management Studio를 사용하여 [인덱스를 다시 빌드](#reorganize-an-index)하거나 [인덱스를 다시 빌드](#rebuild-an-index)하여 인덱스를 조각 모음할 수 있습니다.
 

@@ -20,18 +20,18 @@ helpviewer_keywords:
 - LTRIM function
 - blank characters [SQL Server]
 ms.assetid: 369ed340-1a09-4597-a9eb-6720156cd39a
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f3e52b291c9a91e1135d41ab6843ef97f53d17d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0d0f66102bd21a7d53b8fcc12083a12a2a2a26b8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68130381"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010884"
 ---
 # <a name="ltrim-transact-sql"></a>LTRIM(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   선행 공백을 제거한 문자 식을 반환합니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68130381"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 LTRIM ( character_expression )  
 ```  
   

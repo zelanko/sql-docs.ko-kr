@@ -19,18 +19,18 @@ helpviewer_keywords:
 - CURRENT_USER
 - users [SQL Server], names
 ms.assetid: 29248949-325b-4063-9f55-5a445fb35c6e
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6901afbb6d0faa26c4977c15a3836bdeab68bb4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a912321662150a17062db6921276b61c28fa1f8e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73844619"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011460"
 ---
 # <a name="current_user-transact-sql"></a>CURRENT_USER(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 이 함수는 현재 사용자의 이름을 반환합니다. 이 함수는 `USER_NAME()`과 동일합니다.
   
@@ -46,7 +46,7 @@ CURRENT_USER
 **sysname**
   
 ## <a name="remarks"></a>설명  
-`CURRENT_USER`는 현재 보안 컨텍스트의 이름을 반환합니다. `EXECUTE AS`에 대한 호출로 컨텍스트가 전환된 후 `CURRENT_USER`가 실행되면 `CURRENT_USER`가 가장된 컨텍스트의 이름을 반환합니다. Windows 보안 주체가 그룹 멤버 자격으로 데이터베이스에 액세스한 경우 `CURRENT_USER`는 그룹 이름 대신 Windows 보안 주체의 이름을 반환합니다.
+`CURRENT_USER`는 현재 보안 컨텍스트의 이름을 반환합니다. `CURRENT_USER`에 대한 호출로 컨텍스트가 전환된 후 `EXECUTE AS`가 실행되면 `CURRENT_USER`가 가장된 컨텍스트의 이름을 반환합니다. Windows 보안 주체가 그룹 멤버 자격으로 데이터베이스에 액세스한 경우 `CURRENT_USER`는 그룹 이름 대신 Windows 보안 주체의 이름을 반환합니다.
   
 현재 사용자의 로그인을 반환하는 방법에 대해 알아보려면 [SUSER_NAME&#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) 및 [SYSTEM_USER&#40;Transact- SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)를 참조하세요.
   
@@ -61,7 +61,7 @@ GO
 ```  
   
 ### <a name="b-using-current_user-as-a-default-constraint"></a>B. CURRENT_USER를 DEFAULT 제약 조건으로 사용  
-이 예에서는 판매 행의 `order_person` 열에 대한 `DEFAULT` 제약 조건으로 `CURRENT_USER`를 사용하는 테이블을 만듭니다.
+이 예에서는 판매 행의 `CURRENT_USER` 열에 대한 `DEFAULT` 제약 조건으로 `order_person`를 사용하는 테이블을 만듭니다.
   
 ```sql
 USE AdventureWorks2012;  
