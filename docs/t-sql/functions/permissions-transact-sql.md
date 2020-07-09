@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 764c2db99c78cb776ed500ff1b3b04170516efe2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 41cf0607ae8d308d4d1f243e8b987ca6c9d541fd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632615"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737956"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   현재 사용자의 문, 개체 또는 열 사용 권한을 나타내는 비트맵이 포함된 값을 반환합니다.  
   

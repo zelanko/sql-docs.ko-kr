@@ -28,16 +28,16 @@ helpviewer_keywords:
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54e1dcd9735610f7cc8f109f00aa56fa7728ce04
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 01221e7bf5ff8b6bc0b8bb1a32f2aca66e8c6ed8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68495437"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706139"
 ---
 # <a name="backslash-line-continuation-transact-sql"></a>백슬래시(줄 연속 문자)(Transact SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 `\`는 가독성을 높이기 위해 긴 문자열 상수, 문자 또는 이진을 둘 이상의 줄로 나눕니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "68495437"
 ## <a name="remarks"></a>설명  
 이 명령은 문자열의 첫째 섹션과 계속되는 섹션을 백슬래시 없이 한 문자열로 반환합니다. 백슬래시 뒤의 새 줄은 줄 바꿈 문자(U+000A) 또는 캐리지 리턴(U+000D)와 줄 바꿈(U+000A)의 조합(이 순서 유지)이어야 합니다. 
 
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 
 ### <a name="a-splitting-a-character-string"></a>A. 문자열 분할  
 

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5bc1bdb1ece65113422af1e9a8ebe09de0db1fa1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1b0dff24ff83cd577bfdb572a16582bbdc6b6863
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67930304"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748680"
 ---
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine(geometry 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 원호 세그먼트가 포함된 **geometry** 인스턴스의 다각형 근사값을 반환합니다.
   

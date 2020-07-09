@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eba1643f-07c4-4500-8643-b7e90f908147
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: dbc1bd923b0e86acfd0fbae995bd6fdbd16816a2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 41a0f923e997951e52b23ed0b1c2860a8c1532b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042027"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736115"
 ---
 # <a name="stisclosed-geography-data-type"></a>STIsClosed(geography 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   주어진 **geography** 인스턴스의 시작점 및 끝점이 동일하면 1을 반환합니다. 포함된 각 **geography** 인스턴스가 닫혀 있으면 **geography** 컬렉션 형식에 대해 1을 반환합니다. 인스턴스가 닫혀 있지 않으면 0을 반환합니다.  
   

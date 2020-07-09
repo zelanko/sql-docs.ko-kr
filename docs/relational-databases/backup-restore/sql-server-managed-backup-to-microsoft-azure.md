@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0f256060c923198e2ecb1d3741ebd7276d98b923
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 1501b60e9c858bac62b48dfa7b3875d0d93d5115
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922271"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737675"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure로의 SQL Server 관리형 백업
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 Microsoft Azure Blob Storage에 대한 SQL Server 백업을 관리하고 자동화합니다. SQL Server에서 데이터베이스의 트랜잭션 작업에 따라 백업 일정을 결정하도록 선택할 수 있습니다. 또는 고급 옵션을 사용하여 일정을 정의할 수 있습니다. 보존 설정은 백업이 Azure Blob 스토리지에 저장되는 기간을 결정합니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 지정한 보존 기간 동안 지정 시간 복원을 지원합니다.  
   

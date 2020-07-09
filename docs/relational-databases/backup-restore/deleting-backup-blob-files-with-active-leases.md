@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 716daad4f639fffa3970d80b97502731c32514cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f51c01570aa5149e24ca1cb37af4b6bafe35ee0f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179209"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737818"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>활성 임대가 있는 백업 Blob 파일 삭제
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Microsoft Azure Storage로 백업하거나 Microsoft Azure Storage에서 복원할 때 SQL Server는 Blob에 대한 단독 액세스를 잠그기 위해 무한 임대를 획득합니다. 백업 또는 복원 프로세스가 성공적으로 완료되면 임대가 해제됩니다. 백업 또는 복원에 실패하면 백업 프로세스에서는 잘못된 모든 Blob을 정리하려고 합니다. 하지만 오랫동안 지속된 네트워크 연결 오류로 인해 백업이 실패한 경우에는 백업 프로세스에서 blob에 액세스할 수 없으므로 blob이 분리됩니다. 즉, 임대가 해제될 때까지 Blob을 쓰거나 삭제할 수 없습니다. 이 항목에서는 임대를 해제(중단)하고 Blob을 삭제하는 방법을 설명합니다.
   

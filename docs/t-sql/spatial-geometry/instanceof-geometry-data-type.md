@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7eee6c8aa847a199f7b1547f61bbcd523039644f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9622a762b8ac7e40dfcbd61c9ff4acdbe2aef67c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101240"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748886"
 ---
 # <a name="instanceof-geometry-data-type"></a>InstanceOf(geometry 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **geometry** 인스턴스가 지정된 형식과 동일한 경우 테스트하는 메서드입니다. **geometry** 인스턴스의 형식이 지정된 형식과 동일한 경우 1을 반환합니다. 또한 이 메서드는 지정된 형식이 인스턴스 형식의 상위 항목이면 1을 반환합니다. 그렇지 않으면 이 메서드는 0을 반환합니다.
   

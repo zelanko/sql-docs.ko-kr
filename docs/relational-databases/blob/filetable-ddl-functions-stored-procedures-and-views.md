@@ -1,5 +1,6 @@
 ---
 title: FileTable 함수, 저장 프로시저, 뷰 | Microsoft Docs
+descriptions: Learn which Transact-SQL statements and which SQL Server functions, stored procedures, and views have been added or changed to support the FileTable feature.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 7e2e0f7f-94a8-4178-8bc7-d2e14ac8528c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6f429d40b3bc93a4897cf23c5f9985fbf71c9016
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 548bb412a8fc5d7a3ccae46ea42575b8a8dcaf46
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252715"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85744323"
 ---
 # <a name="filetable-ddl-functions-stored-procedures-and-views"></a>FileTable DDL, 함수, 저장 프로시저 및 뷰
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 FileTable 기능을 지원하기 위해 추가되거나 변경된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터베이스 개체를 나열합니다.  
   
  다음 표의 상태 열은 항목이 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 신규 항목인지, 아니면 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 있었지만 의미 체계 검색을 지원하기 위해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에서 변경되었는지를 나타냅니다.  

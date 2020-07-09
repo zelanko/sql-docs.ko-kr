@@ -13,15 +13,15 @@ ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db274ccde27abf92617e0eadf95b1971e740705a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e8962776175617293c1acdc979852232dbca95c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72251298"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737117"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>메모리 내 OLTP와 쿼리 저장소 사용
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 저장소를 사용하면 메모리 내 OLTP에서 실행 중인 작업에 대한 기본 컴파일 코드의 성능을 모니터링할 수 있습니다.  
 컴파일 및 런타임 통계는 디스크 기반 작업과 동일한 방식으로 수집 및 표시됩니다.   

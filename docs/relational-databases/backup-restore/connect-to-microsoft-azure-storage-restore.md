@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7c6564d9dc63a4d2e35ac306db91cead15f024c6
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: d3a46b4af5ef064c675f16f20278c7f91afc73c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220460"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748444"
 ---
 # <a name="connect-to-microsoft-azure-storage-restore"></a>Microsoft Azure 스토리지에 연결(복원)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   대화 상자를 사용하면 Azure Storage 계정에서 파일 스토리지를 검색하기 위해 Azure Storage 계정 정보에 대한 연결을 지정할 수 있습니다. 필요한 정보를 지정한 후 **연결**을 클릭하여 Azure Storage에 대한 연결을 설정합니다.  
   
 ## <a name="azure-storage-account"></a>Azure Storage 계정  

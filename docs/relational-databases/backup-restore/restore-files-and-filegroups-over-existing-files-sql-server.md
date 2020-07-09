@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b5d477202b26c06ed2507ebd87dc908ad4a845c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5fe155516996d9f5761ccb2b8b1d1071fb975bbe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180744"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737701"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>기존 파일에서 파일 및 파일 그룹 복원(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 기존 파일에 대해 파일 및 파일 그룹을 복원하는 방법에 대해 설명합니다.  
   

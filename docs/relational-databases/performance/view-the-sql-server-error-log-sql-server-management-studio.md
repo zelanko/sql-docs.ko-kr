@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f6410575af0d05b8d407ba9f52cc116fbe2ac733
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a10948a63d119ec86c156b79d925f1b905b152f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165468"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737081"
 ---
 # <a name="view-the-sql-server-error-log-in-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)에서 SQL Server 오류 로그 보기
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에는 문제 해결에 사용할 수 있는 사용자 정의 이벤트와 특정 시스템 이벤트가 포함됩니다. 
 
 ## <a name="view-the-logs"></a>로그 보기

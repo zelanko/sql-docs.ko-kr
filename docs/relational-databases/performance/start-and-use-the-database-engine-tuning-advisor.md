@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 898c59cab6038b7025066906ea74ffd5b9222815
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 00441600bb5d2059686f6fe2bc388146e880d4ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73983266"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737152"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자 시작 및 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 데이터베이스 엔진 튜닝 관리자를 시작 및 사용하는 방법에 대해 설명합니다. 데이터베이스 튜닝 후 결과를 보고 작업하는 방법은 [데이터베이스 엔진 튜닝 관리자의 출력 보기 및 작업](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)을 참조하세요.  
   
 ##  <a name="initialize-the-database-engine-tuning-advisor"></a><a name="Initialize"></a> 데이터베이스 엔진 튜닝 관리자 초기화  

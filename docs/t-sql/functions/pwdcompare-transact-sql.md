@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4d0feb6b3254ddff640a41de8e0b833739225761
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 613eb5742f295b1169befca8ba988ed8282076e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73168772"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737923"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   암호를 해시하고 해당 해시를 기존 암호의 해시와 비교합니다. PWDCOMPARE를 사용하여 빈 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 암호 또는 일반적인 약한 암호를 검색할 수 있습니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "73168772"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 PWDCOMPARE ( 'clear_text_password'  
    , password_hash   
@@ -50,7 +50,7 @@ PWDCOMPARE ( 'clear_text_password'
  암호의 암호화 해시입니다. *password_hash*는 **varbinary(128)** 입니다.  
   
  *version*  
- *password_hash*가 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상으로 마이그레이션되었지만 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 시스템으로 변환되지 않은 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 이전의 로그인 값을 나타내는 경우 1로 설정할 수 있으며 사용되지 않는 매개 변수입니다. *버전*은 **int**입니다.  
+ *password_hash*가 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 이상으로 마이그레이션되었지만 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 시스템으로 변환되지 않은 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 이전의 로그인 값을 나타내는 경우 1로 설정할 수 있으며 사용되지 않는 매개 변수입니다. *버전*은 **int**입니다.  
   
 > [!CAUTION]  
 >  이 매개 변수는 이전 버전과의 호환성을 위해 제공되지만 지금 암호 해시 BLOB이 해당 버전 설명을 포함하고 있으므로 무시됩니다. [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  

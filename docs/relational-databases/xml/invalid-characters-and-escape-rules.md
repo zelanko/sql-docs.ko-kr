@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e723e3f50db5090279ec6531906018471076af7f
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: 592aa9b31ce957500210a9a4d3caa7f780bf588d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388632"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738433"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>잘못된 문자 및 이스케이프 규칙
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   이 항목에서는 FOR XML 절에서 잘못된 XML 문자를 처리하는 방법에 대해 설명하고 XML 이름의 잘못된 문자에 대한 이스케이프 규칙을 나열합니다.  
   
 ## <a name="for-xml-and-invalid-characters"></a>XML 및 잘못된 문자의 경우  

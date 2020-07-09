@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 67795c64-d8d3-48dc-93ef-3c8a9274deb6
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4264aabaca1fe1b13427fc11cf3cd1b7ccc59e99
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: df20fa04f8d60760b5587a48d2a5563a19ef3f21
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066608"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736211"
 ---
 #  <a name="asgml---geography-data-type"></a>AsGml(geography 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **geography** 인스턴스의 GML(Geography Markup Language) 표현을 반환합니다.  
   

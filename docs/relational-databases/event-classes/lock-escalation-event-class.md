@@ -13,15 +13,15 @@ ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: faad3614a308efc8dfa8994b176cec148520522a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ec405817bc9ce89dd150adfcc2887ba2c703d556
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118279"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737212"
 ---
 # <a name="lockescalation-event-class"></a>Lock:Escalation 이벤트 클래스
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **Lock:Escalation** 이벤트 클래스는 행 잠금이 개체 잠금으로 변환되는 것과 같이 미세 잠금이 성긴 잠금으로 변환되었음을 나타냅니다. 에스컬레이션 이벤트 클래스는 이벤트 ID 60입니다.  
   
 ## <a name="lockescalation-event-class-data-columns"></a>Lock:Escalation 이벤트 클래스 데이터 열  

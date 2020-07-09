@@ -39,15 +39,15 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fb7ea877ba1a3beaabb6cbab8854b4f37a5f6558
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3c52311482f8ad7107e384e3ed8e20100c094243
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095710"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737633"
 ---
 # <a name="configure-database-mail"></a>데이터베이스 메일 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 데이터베이스 메일 구성 마법사를 사용하여 데이터베이스 메일을 활성화 및 구성하고, 템플릿을 사용하여 데이터베이스 메일 구성 스크립트를 만드는 방법에 대해 설명합니다.  
   
 -   **시작하기 전 주의 사항:**  [제한 사항](#Restrictions), [보안](#Security)  

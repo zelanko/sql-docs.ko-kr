@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5725b95df233f46e9e003f6c2af155ae943ba2b1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 56f2efd4fe6b84cb7758c0da723d9c11c51afc21
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101037"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748834"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce(geometry 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 지정된 **기하 도형** 인스턴스의 근사값을 반환합니다. 근사값은 지정된 허용 오차를 가진 인스턴스에서 Douglas-Peucker 알고리즘 확장을 실행하여 생성됩니다.
   

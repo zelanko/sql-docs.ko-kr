@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a84e0a0d50de36d5aa9e98a36f3ff250d77aedfe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f680bae8939aa6c4f6648c6076616564cd7d195c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179037"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737769"
 ---
 # <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>예제: 데이터베이스의 증분 복원(전체 복구 모델)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   증분 복원 시퀀스는 주 파일 그룹에서 시작하여 모든 읽기/쓰기가 가능한 모든 보조 파일 그룹의 순서로 파일 그룹 수준에서 데이터베이스를 복원하고 복구합니다.  
   

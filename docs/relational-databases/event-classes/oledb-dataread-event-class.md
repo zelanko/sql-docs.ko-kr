@@ -12,15 +12,15 @@ ms.assetid: fb6869ba-3199-4e32-a650-60a5dda2571e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8987894318819ffd6a91f52462366b8175ce3cf7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 03ed5dd006df07c218f6891308dbf979883bb9e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115852"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737170"
 ---
 # <a name="oledb-dataread-event-class"></a>OLEDB DataRead 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   OLEDB DataRead 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 분산 쿼리 및 원격 저장 프로시저 실행을 위해 OLE DB 공급자를 호출할 때 발생합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 언제 OLE DB 공급자에 데이터 요청 호출을 하는지 모니터링하는 추적에 이 이벤트 클래스를 포함시키십시오.  
   
  OLEDB DataRead 클래스가 추적에 포함되면 발생하는 오버헤드의 양이 늘어납니다. 따라서 짧은 시간 동안 특정 문제를 모니터링하는 추적에 대해 이 이벤트 클래스의 사용을 제한하는 것이 좋습니다.  

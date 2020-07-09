@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 974086bc61e2f40819c77693a6033aac512893ac
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a017eb6d2f9267408387413782a83488fa39d542
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829762"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748457"
 ---
 # <a name="connect-to-a-microsoft-azure-subscription"></a>Microsoft Azure 구독에 연결
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 **Microsoft 구독에 연결** 을 사용하여 SQL Server의 인스턴스가 포함된 기존 Azure blob 컨테이너를 등록합니다.  대화 상자를 통해 Azure blob 컨테이너에 저장된 액세스 정책 및 공유 액세스 서명을 만든 다음 SQL Server 자격 증명을 만듭니다.  이 대화 상자는 SQL Server Management Studio의 백업 또는 복원 작업 및 URL 디바이스가 관련된 작업을 사용할 때 표시됩니다.
 
 ## <a name="limitation"></a>제한 사항

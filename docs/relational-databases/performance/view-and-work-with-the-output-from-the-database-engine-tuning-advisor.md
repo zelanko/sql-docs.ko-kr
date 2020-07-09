@@ -26,16 +26,16 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 26ed3efa0738579d9abfde909f161105d95f91a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 75a8ee28972b2b80fc1244a80b35b7c9d5d6daee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165486"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737093"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>DTA(데이터베이스 엔진 튜닝 관리자)의 출력 보기 및 작업
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스 엔진 튜닝 관리자는 데이터베이스를 튜닝할 때 요약, 권장 구성, 보고서 및 튜닝 로그를 만듭니다. 튜닝 로그 출력을 사용하여 데이터베이스 엔진 튜닝 관리자 튜닝 세션의 문제를 해결할 수 있습니다. 요약, 권장 구성 및 보고서를 사용하여 튜닝 권장 구성을 구현하거나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 필요한 쿼리 성능이 향상될 때까지 튜닝을 계속합니다. 데이터베이스 튜닝 관리자를 사용하여 작업을 만들고 데이터베이스를 튜닝하는 방법은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요.  
   

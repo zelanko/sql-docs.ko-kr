@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 6e18a0eb-bb36-4348-90d9-8b1ecf095064
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e1ccc5aa9619c96fd75400531041442138e0b4f3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d1e6123b99308e053a3235d5e9fe8cd22a4daaa8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828640"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736443"
 ---
 # <a name="rowcount_big-transact-sql"></a>ROWCOUNT_BIG(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   최근 실행한 문의 영향을 받은 행 수를 반환합니다. 이 함수는 ROWCOUNT_BIG의 반환 유형이 **bigint**라는 점만 제외하고 [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md)처럼 작동합니다.  
   

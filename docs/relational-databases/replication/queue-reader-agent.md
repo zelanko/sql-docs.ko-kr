@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: f02d24b6-dcb5-4126-b56e-fab41cfe4337
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2987497ade73542890b0e90e6c09c1fdd44870ee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f39bd1423977048c36e00dfae049293c1bcab689
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021255"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737068"
 ---
 # <a name="queue-reader-agent"></a>큐 판독기 에이전트
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **큐 판독기 에이전트** 대화 상자에서는 상태, 기록, 정보 메시지 및 모든 오류 메시지를 포함한 큐 판독기 에이전트에 대한 자세한 정보를 표시합니다.  
   
 ## <a name="options"></a>옵션  

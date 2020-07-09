@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0320cbd20242f19bab7c7990f4bad13458e403e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b78da062fb43d04afb53b8e4743ad222d873fe32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67930143"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748715"
 ---
 # <a name="stcrosses-geometry-data-type"></a>STCrosses(geometry 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 **geometry** 인스턴스가 다른 **geometry** 인스턴스와 교차하면 1을 반환합니다. 그렇지 않으면 0을 반환합니다.
   

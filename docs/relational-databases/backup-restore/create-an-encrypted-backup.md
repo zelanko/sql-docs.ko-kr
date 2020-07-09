@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a3a7d08c93b42b8b8cd236dae775b28cc5040751
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a235ae2c396334d7dbd7c27efb582bf8c1890219
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179270"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748433"
 ---
 # <a name="create-an-encrypted-backup"></a>암호화된 백업 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 Transact-SQL을 사용하여 암호화된 백업을 만드는 데 필요한 단계에 대해 설명합니다.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]사용에 대한 예는 [전체 데이터베이스 백업 만들기(SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)를 참조하세요. 
   
 ## <a name="backup-to-disk-with-encryption"></a>암호화하여 디스크에 백업  

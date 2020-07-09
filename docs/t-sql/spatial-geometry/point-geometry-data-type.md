@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7a2e593a-4d4c-4214-b0c5-02d1ac46bc66
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3a0c9f31f0e724c56c22a46653eb56d51f2616fe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da858d3f778a6e1177975107418f6640d68d086b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101033"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748845"
 ---
 # <a name="point-geometry-data-type"></a>Point(geometry 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 해당 X 값, Y 값 및 SRID의 **Point** 인스턴스를 나타내는 **geometry** 인스턴스를 생성합니다.
   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6e080919-4b64-46cd-8dd2-254a9c232e53
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 91bcf58df4f8dd9651f077c200d69eea2c1f7660
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9c3a365a2bd2d6b244ca2394c8a871aee4ce87ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101049"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748851"
 ---
 # <a name="parse-geometry-data-type"></a>Parse(geometry 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현의 **geometry** 인스턴스를 반환합니다. SRID(Spatial Reference ID) 0을 매개 변수로 가정한다는 점을 제외하고 `Parse()`는 [STGeomFromText()](../../t-sql/spatial-geometry/parse-geometry-data-type.md)와 동일합니다. 입력은 Z(높이) 값과 M(측정값) 값을 선택적으로 포함할 수 있습니다.
   

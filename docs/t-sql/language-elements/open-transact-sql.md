@@ -21,23 +21,23 @@ helpviewer_keywords:
 ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70f3b23244095b79dc8340d3060e6d30d5009a2a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d3fa064e31405ca8096f058195fae2c931d75993
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121933"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736347"
 ---
 # <a name="open-transact-sql"></a>OPEN(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  DECLARE CURSOR 또는 SET *cursor_variable* 문에 지정된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 커서를 열고 커서를 채웁니다.  
+  DECLARE CURSOR 또는 SET [!INCLUDE[tsql](../../includes/tsql-md.md)]cursor_variable[!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 지정된 *문을 실행하여* 서버 커서를 열고 커서를 채웁니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }  
 ```  

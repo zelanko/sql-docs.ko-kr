@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 737f39bb-8750-4ffb-8594-23febc2f1075
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f511c6fa7a0d41b0f072981898216fde050d1742
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d3c89b8573f7694093027073199788560f664f31
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68127373"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748697"
 ---
 # <a name="stdifference-geometry-data-type"></a>STDifference(geometry 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 다른 **geometry** 인스턴스 내에 없는 특정 **geometry** 인스턴스에서 점 집합을 나타내는 개체를 반환합니다.
   

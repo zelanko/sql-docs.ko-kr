@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 74960d25-83c2-4ad6-9318-098c348ea977
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 48f8b8a53f22c4f4e102606ca4e5133b95536be2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 094d695aa1bb8f035b08f4c45f411b95d5fc4a2d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101076"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748865"
 ---
 # <a name="ogc-static-geometry-methods"></a>OGC 정적 기하 도형 메서드
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]은 OGC(Open Geospatial Consortium)의 정적 기하 도형 메서드를 지원합니다.  
   

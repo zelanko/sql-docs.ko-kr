@@ -12,15 +12,15 @@ ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92550c1282689e2d6091a5af2b588a3c36b9b2d2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 19dd9d5c8f4a5c9c4d37a6f7ce54f061d8bc0e47
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118272"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737181"
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Lock:Timeout(timeout &gt; 0) 이벤트 클래스
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **Lock:Timeout(timeout > 0)** 이벤트 클래스는 페이지 등의 특정 리소스에 대해 다른 트랜잭션이 차단 잠금을 보유 중이기 때문에 해당 리소스에 대한 잠금 요청 시간이 초과되었음을 나타냅니다. 이 이벤트 클래스는 제한 시간 값이 0인 이벤트를 포함하지 않는다는 점만 제외하면 **Lock:Timeout** 이벤트 클래스와 동일하게 동작합니다.  
   
  제한 시간 값이 0인 잠금 검색 및 다른 프로세스를 사용하는 추적에 **Lock:Timeout(timeout > 0)** 이벤트 클래스를 포함하세요. 이렇게 하면 제한 시간 값이 0인 경우를 제외하고 실제 시간 초과가 발생한 부분을 확인할 수 있습니다.  

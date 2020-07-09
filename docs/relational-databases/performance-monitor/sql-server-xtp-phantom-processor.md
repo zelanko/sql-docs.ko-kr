@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 0f691b3d-a8fd-4459-ad21-2cfc8574a8c0
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f9f7f51b2d0ede3bb49bb152ab08cbb2a7eb2732
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bb3c619edfc1fae76e8b497c46a882fbfc42ffd2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68114029"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85743168"
 ---
 # <a name="sql-server-xtp-phantom-processor"></a>SQL Server XTP 가상 프로세서
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   SQL Server XTP 가상 프로세서 성능 개체에는 메모리 내 OLTP 엔진의 가상 처리 하위 시스템과 관련된 카운터가 포함됩니다. 이 구성 요소는 SERIALIZABLE 격리 수준에서 실행되는 트랜잭션에서 가상 행을 검색하고 동시성 시나리오에서 제약 조건 유효성을 검사합니다.  
   

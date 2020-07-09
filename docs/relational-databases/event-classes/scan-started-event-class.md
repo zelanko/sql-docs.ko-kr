@@ -12,15 +12,15 @@ ms.assetid: 9a0cc475-e6ee-430c-975c-73716d81d563
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 123c377ba95ec985f2f934c072c873151715f891
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93dd4a65fdea78623a69ecd9dc12f49d59e42c0e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911268"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737165"
 ---
 # <a name="scanstarted-event-class"></a>Scan:Started 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Scan:Started 이벤트 클래스는 테이블 또는 인덱스 검색이 시작될 때 발생합니다.  
   
 ## <a name="scanstarted-event-class-data-columns"></a>Scan:Started 이벤트 클래스 데이터 열  

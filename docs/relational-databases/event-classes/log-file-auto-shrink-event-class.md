@@ -12,15 +12,15 @@ ms.assetid: 4bf82a13-9985-4f20-9ef8-0083f104d124
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a65f8ab02309f11438dcbe5af0984ac930a060b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af32d9a61ef21e6bc09e114c4b8d55e56b7f0d2d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118148"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737193"
 ---
 # <a name="log-file-auto-shrink-event-class"></a>Log File Auto Shrink 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Log File Auto Shrink** 이벤트 클래스는 자동으로 축소되는 로그 파일을 나타냅니다. 로그 파일이 명시적인 ALTER DATABASE 문 때문에 축소하는 경우 이 이벤트는 트리거되지 않습니다.  
   
  로그 파일의 축소를 모니터링하는 추적에 **Log File Auto Shrink** 이벤트 클래스를 포함시킵니다. 이 이벤트 클래스가 추적에 포함되면 해당 파일이 자주 축소되지 않는 경우 발생되는 오버헤드의 크기가 줄어들게 됩니다.  

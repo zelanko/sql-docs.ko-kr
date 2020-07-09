@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: f263c9e4-a7db-4888-a458-70ae99b1f729
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ff4114aef15313606ac6cf03c7f7d56d407dcf3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f6cec9d492b00943eafa2bcfc7c5914e4932ff46
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295412"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748526"
 ---
 # <a name="catalogget_project-ssisdb-database"></a>catalog.get_project(SSISDB 데이터베이스)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 프로젝트의 이진 스트림을 검색합니다.  
   

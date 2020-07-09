@@ -25,16 +25,16 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3c6943d24ec3c1803490cea29c1a415dbb5d3bdc
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 28519681f18d13fb11a93df9ffd852243c503a0b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151200"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738075"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 OLE DB 데이터 원본에서 원격 데이터를 액세스하는 데 필요한 모든 연결 정보를 포함합니다. 이 방법은 OLE DB를 사용하여 원격 데이터에 연결하고 액세스하는 일회성의 임시 방법이며 연결된 서버에서 테이블을 액세스하는 방법의 대안입니다. OLE DB 데이터 원본을 자주 참조하려면 연결된 서버를 사용합니다. 자세한 내용은 [연결된 서버&#40;데이터베이스 엔진&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)를 참조하세요. `OPENROWSET` 함수는 쿼리의 FROM 절에서 테이블 이름인 것처럼 참조될 수 있습니다. `OPENROWSET` 함수는 OLE DB 공급자의 기능에 따라 `INSERT`, `UPDATE` 또는 `DELETE` 문의 대상 테이블로 참조될 수도 있습니다. 쿼리는 여러 결과 집합을 반환할 수 있지만 `OPENROWSET`은 첫 번째 결과 집합만 반환할 수 있습니다.
 
@@ -46,9 +46,9 @@ OLE DB 데이터 원본에서 원격 데이터를 액세스하는 데 필요한 
 
 ```syntaxsql
 OPENROWSET
-( { 'provider_name' , { 'datasource' ; 'user_id' ; 'password'
-   | 'provider_string' }
-   , {   <table_or_view> | 'query' }
+( { 'provider_name' 
+    , { 'datasource' ; 'user_id' ; 'password' | 'provider_string' }
+    , {   <table_or_view> | 'query' }
    | BULK 'data_file' ,
        { FORMATFILE = 'format_file_path' [ <bulk_options> ]
        | SINGLE_BLOB | SINGLE_CLOB | SINGLE_NCLOB }

@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 40ee955b5f8cc683d2ec4f875c688f5575a0a44a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d3804de9de13720d5d7813d54bf5f8962b5e2992
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179241"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748419"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>자격 증명 만들기 - Azure 스토리지 인증
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **URL로 백업 - 자격 증명 만들기** 대화 상자를 사용하여 새 SQL 자격 증명을 만듭니다.  
   
  이 대화 상자를 사용하여 자격 증명을 만들 때 로컬 인증서 저장소에 추가된 Azure 관리 인증서 또는 컴퓨터에 다운로드된 게시 프로필을 제공하여 구독 및 스토리지 계정 정보의 유효성을 검사해야 합니다.  

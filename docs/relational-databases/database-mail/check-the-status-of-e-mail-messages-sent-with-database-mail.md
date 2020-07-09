@@ -15,15 +15,15 @@ ms.assetid: eb290f24-b52f-46bc-84eb-595afee6a5f3
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4d3fc240c155632a764025dbd8519385a9d4c6c2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 72111583066aa73d94ccf70905f26cc35a359344
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095723"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737641"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>데이터베이스 메일을 통해 보낸 전자 메일 메시지의 상태 확인
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 데이터베이스 메일로 보낸 전자 메일 메시지의 상태를 확인하는 방법에 대해 설명합니다.  
   
 -   **시작하기 전 주의 사항:**  

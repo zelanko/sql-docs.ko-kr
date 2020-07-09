@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 78ab5f6e-2f13-4788-937e-8892ef4e2345
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 807eec350627d64a642abc1043977d67069cc0d4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b7c5e5667222a7d7591c61670f2058276035c299
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087230"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749357"
 ---
 # <a name="import-policies-dialog-box"></a>정책 가져오기 대화 상자
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 대화 상자를 사용하여 XML 파일로 저장된 하나 이상의 정책과 해당 참조 조건을 현재 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스로 가져올 수 있습니다.  
   
 ## <a name="options"></a>옵션  

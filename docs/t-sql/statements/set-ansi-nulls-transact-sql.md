@@ -1,7 +1,7 @@
 ---
 title: SET ANSI_NULLS(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/04/2017
+ms.date: 06/24/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -24,33 +24,30 @@ helpviewer_keywords:
 ms.assetid: aae263ef-a3c7-4dae-80c2-cc901e48c755
 author: CarlRabeler
 ms.author: carlrab
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 651af5040782bc729d5bca48fa2285e14e709e10
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current || azuresqldb-current'
+ms.openlocfilehash: b9f4070d078a389a18ff34785c85464cdf1986da
+ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929174"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353170"
 ---
 # <a name="set-ansi_nulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 Null 값과 함께 사용될 경우 Equals(=)와 Not Equal To(<>) 비교 연산자의 ISO 호환 동작을 지정합니다.  
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 Null 값과 함께 사용될 경우 Equals(=)와 Not Equal To(<>) 비교 연산자의 ISO 호환 동작을 지정합니다.  
   
-> [!IMPORTANT]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 ANSI_NULLS가 ON으로 설정되고 명시적으로 이 옵션을 OFF로 설정한 애플리케이션에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.
-  
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 -- Syntax for SQL Server
 
 SET ANSI_NULLS { ON | OFF }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
 
 SET ANSI_NULLS ON
@@ -106,7 +103,7 @@ SELECT @ANSI_NULLS AS ANSI_NULLS;
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 Equals(`=`)와 Not Equal To(`<>`) 비교 연산자를 사용하여 테이블의 `NULL` 및 Null이 아닌 값에 비교를 수행합니다. 또한 `IS NULL`이 `SET ANSI_NULLS` 설정의 영향을 받지 않는다는 것을 보여 줍니다.  
   
 ```sql  

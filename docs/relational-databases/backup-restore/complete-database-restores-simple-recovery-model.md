@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 1b95797a5725a620d545b51ac2afb5b55464cbb9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e2ad92efd8a02f783885a72299bae6bfd77b44bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829786"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748490"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>전체 데이터베이스 복원(단순 복구 모델)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   전체 데이터베이스 복원의 목적은 전체 데이터베이스를 복원하는 것입니다. 복원하는 동안 전체 데이터베이스는 오프라인 상태가 됩니다. 데이터베이스의 일부를 온라인에 연결하기 전에 데이터베이스의 모든 부분의 지정 시간이 같고 커밋되지 않은 트랜잭션이 없는 일치하는 지점으로 모든 데이터를 복구합니다.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "82829786"
 ##  <a name="overview-of-database-restore-under-the-simple-recovery-model"></a><a name="Overview"></a> 단순 복구 모델에서의 데이터베이스 복원 개요  
  단순 복구 모델에서는 차등 데이터베이스 백업을 복원할지 여부에 따라 전체 데이터베이스 복원이 하나 또는 두 개의 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 문으로 이루어집니다. 전체 데이터베이스 백업만 사용하는 경우 다음 그림과 같이 최신 백업을 복원하면 됩니다.  
   
- ![전체 데이터베이스 백업만 복원](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.gif "전체 데이터베이스 백업만 복원")  
+ ![전체 데이터베이스 백업만 복원](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.png "전체 데이터베이스 백업만 복원")  
   
  또한 차등 데이터베이스 백업을 사용하는 경우 데이터베이스를 복구하지 않고 가장 최근의 전체 데이터베이스 백업을 복원한 다음 가장 최근의 차등 데이터베이스 백업을 복원하고 데이터베이스를 복구합니다. 다음 그림에서는 이 프로세스를 보여 줍니다.  
   
- ![전체 및 차등 데이터베이스 백업 복원](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.gif "전체 및 차등 데이터베이스 백업 복원")  
+ ![전체 및 차등 데이터베이스 백업 복원](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.png "전체 및 차등 데이터베이스 백업 복원")  
   
 > [!NOTE]  
 >  데이터베이스 백업을 다른 서버 인스턴스로 복원하려면 [백업 및 복원으로 데이터베이스 복사](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)를 참조하세요.  

@@ -11,21 +11,20 @@ helpviewer_keywords:
 ms.assetid: b528bb49-340c-4a81-9c8d-cefce6562f16
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9593cfdc08161d3352c59332970aee668a89f4f0
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 1010c56f0279e45096d896582cc17f368a8cd7ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81727944"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85636707"
 ---
 # <a name="mssqlserver_9004"></a>MSSQLSERVER_9004
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>세부 정보  
   
-|||  
-|-|-|  
+| attribute | 값 |  
+| :-------- | :---- |  
 |제품 이름|SQL Server|  
 |이벤트 ID|9004|  
 |이벤트 원본|MSSQLSERVER|  
@@ -51,7 +50,7 @@ ms.locfileid: "81727944"
   
 -   **백업에서 복구**:  이 문제에서 복구하려면 알려진 양호한 백업에서 복원하세요. 데이터베이스 또는 로그 백업의 로그 부분에 손상된 내용이 포함되어 있으면 RESTORE 시 9004 오류가 발생할 수 있습니다. 이 경우 백업의 트랜잭션 로그가 손상된 것입니다.
   
--   **로그를 다시 작성**:  백업에서 복원할 수 없는 경우 트랜잭션 로그를 다시 작성하여 데이터베이스를 온라인 상태로 만들 수 있습니다. 트랜잭션 로그를 다시 작성할 경우 발생하는 결과를 정확하게 이해해야 합니다. 여기에는  데이터베이스에서 트랜잭션 일관성 손실이 포함됩니다. 트랜잭션 로그를 다시 작성하는 방법에 대한 자세한 내용은 [데이터베이스 응급 모드에서 오류 해결](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md#resolving-errors-in-database-emergency-mode)을 참조하세요.
+-   **로그를 다시 작성**:  백업에서 복원할 수 없는 경우 트랜잭션 로그를 다시 작성하여 데이터베이스를 온라인 상태로 만들 수 있습니다. 트랜잭션 로그를 다시 작성할 경우 발생하는 결과를 정확하게 이해해야 합니다. 여기에는 데이터베이스에서 트랜잭션 일관성 손실이 포함됩니다. 트랜잭션 로그를 다시 작성하는 방법에 대한 자세한 내용은 [데이터베이스 응급 모드에서 오류 해결](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md#resolving-errors-in-database-emergency-mode)을 참조하세요.
   
 -   **시스템 문제에 대한 로그를 확인**: 또한 시스템 이벤트 및 오류 로그에서 문제를 일으킬 수 있는 시스템 내부 문제를 확인합니다.  
   

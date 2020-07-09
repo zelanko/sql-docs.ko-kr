@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 122630048b7e4ff9cef34c49bfde68177020630f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dbbc15d64e2bc6ae3ad20689303e42712ffa17fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077907"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738223"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid 데이터 형식 메서드 참조
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **hierarchyid** 데이터 형식은 가변 길이의 시스템 데이터 형식입니다. **hierarchyid**는 계층에서의 위치를 나타내는 데 사용됩니다. **hierarchyid** 형식의 열은 자동으로 트리를 나타내지 않습니다. 애플리케이션에 따라 원하는 행 간 관계가 값에 반영되도록 **hierarchyid** 값이 생성되어 할당됩니다.
   

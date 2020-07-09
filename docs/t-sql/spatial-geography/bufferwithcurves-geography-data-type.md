@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 6f0e5927216d6bc0ff1acbb2146d7f23c31012ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 079b3ba5345dc5bf31a336b473f24e546873f417
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066548"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736220"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves(geography 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   호출하는 **geography** 인스턴스와의 거리가 *distance* 매개 변수보다 작거나 같은 모든 점의 집합을 나타내는 **geography** 인스턴스를 반환합니다.  
   

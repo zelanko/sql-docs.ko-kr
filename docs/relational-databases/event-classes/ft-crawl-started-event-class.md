@@ -12,15 +12,15 @@ ms.assetid: 2535b856-97e8-4fb2-8ba0-5d5446355fa6
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f559d5e46f06e8bdf33687713ce2dc0c5c49cb78
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 258b2de1778476482a2939f8ef7f4e4f464b923d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089346"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737375"
 ---
 # <a name="ftcrawl-started-event-class"></a>FT:Crawl Started 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **FT:Crawl Started** 이벤트 클래스는 전체 텍스트 탐색(채우기)을 시작했음을 나타냅니다. 이 이벤트 클래스를 사용하여 작업자 태스크에 의해 실제로 탐색 요청이 선택되는지 확인할 수 있습니다.  
   
 ## <a name="ft-crawl-started-event-class-data-columns"></a>FT: Crawl Started 이벤트 클래스 데이터 열  

@@ -12,15 +12,15 @@ ms.assetid: dbc91bf7-687c-4083-9694-02f3e102c175
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3804c83c328a7fc067d2aed964eb7b9635cfb386
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ebe0c2680347336172c108753f237279648b0259
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089331"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737233"
 ---
 # <a name="ftcrawl-stopped-event-class"></a>FT:Crawl Stopped 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **:Crawl Stopped** 이벤트 클래스는 전체 텍스트 탐색(채우기)이 중지되었음을 나타냅니다. 중지되는 이유는 탐색이 완료되었거나 오류가 발생했기 때문입니다.  
   
 ## <a name="ftcrawl-stopped-event-class-data-columns"></a>FT:Crawl Stopped 이벤트 클래스 데이터 열  

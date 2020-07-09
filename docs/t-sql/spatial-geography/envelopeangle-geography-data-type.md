@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14a7ba15-168c-4b08-ba3d-951d73092ac7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: e3289956dd79c852eef6534ad1f72623ad4dcaa6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9406d8a5913c850d492c588b49d6cff8c6cec5e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066460"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736153"
 ---
 # <a name="envelopeangle-geography-data-type"></a>EnvelopeAngle(geography 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   `EnvelopeCenter()`에서 반환하는 지점과 **geography** 인스턴스에 있는 지점 사이의 최대 각도를 도 단위로 반환합니다.  
   

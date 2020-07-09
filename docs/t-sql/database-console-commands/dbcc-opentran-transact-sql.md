@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 02a90a155bcfcc2ad2294fb03c4e8b832701e36c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e7ccef337d7b693561ec2d328fcc3a2f8afae72c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632406"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748922"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 DBCC OPENTRAN은 로그 잘림을 발생하지 못하게 할 수 있는 활성 트랜잭션을 식별하는 데 도움이 됩니다. DBCC OPENTRAN은 지정된 데이터베이스의 트랜잭션 로그 내에서 가장 오래된 활성 트랜잭션과 가장 오래된 분산 및 비분산 복제 트랜잭션에 대한 정보를 표시합니다. 로그에 존재하는 활성 트랜잭션이 있거나 데이터베이스에 복제 정보가 포함된 경우에만 결과가 표시됩니다. 로그에 활성 트랜잭션이 없을 경우 정보 메시지가 표시됩니다.
   

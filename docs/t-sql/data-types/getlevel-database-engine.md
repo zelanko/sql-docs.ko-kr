@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f05c80a78417a8b5153345466eadcd49fa810228
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c834f32ff09946e50622203b61460f43e0c7b71
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077995"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738208"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel(데이터베이스 엔진)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 트리에서 노드 *this*의 깊이를 나타내는 정수를 반환합니다.
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ac8532f2cc5d8e2f50c0408ce983a61626748fb1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9e5a0920c0e56685885345d730f481bb7eba1ee8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066546"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736199"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance(geography 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 지정된 허용 오차를 고려하여 **geography** 인스턴스와의 거리가 지정된 값보다 작거나 같은 모든 요소 값의 합집합을 나타내는 기하학적 개체를 반환합니다.  
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 90dc61256f973ce8a16d50b547c0fca41b242465
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 86f7046fed39d95748c1f0ba7a7bbf5eb045cc5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179269"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748410"
 ---
 # <a name="deferred-transactions-sql-server"></a>지연된 트랜잭션(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise에서는 손상된 트랜잭션이 롤백(실행 취소)에 필요한 데이터가 데이터베이스 시작 시 오프라인 상태인 경우에 지연될 수 있습니다. *지연된 트랜잭션* 은 롤포워드 단계가 완료될 때 커밋되지 않으며, 오류로 인해 롤백할 수 없는 트랜잭션입니다. 트랜잭션을 롤백할 수 없으므로 해당 트랜잭션은 지연됩니다.  
   
 > [!NOTE]  

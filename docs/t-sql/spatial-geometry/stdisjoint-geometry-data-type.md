@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 90acdb21-e826-4d81-afe8-45a71f33282a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a001a70db2b7154a6c753ae1e26209bcd868b03d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 918445176065566676268978280929dc5bba3456
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68107829"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748665"
 ---
 # <a name="stdisjoint-geometry-data-type"></a>STDisjoint(geometry 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   **geometry** 인스턴스가 다른 **geometry** 인스턴스와 공간적으로 분리되어 있으면 1을 반환합니다. 그렇지 않으면 0을 반환합니다.  
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: b4f4791d-646e-4632-9980-baae9cb1aade
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: aadc5cd4d2eeb1e16c554a60b6fe862d7a8536fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc4ecbdd67658c0081ddddc14e82f3b79da160ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180731"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737668"
 ---
 # <a name="restore-files-to-a-new-location-sql-server"></a>새 위치로 파일 복원(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 파일을 새 위치에 복원하는 방법에 대해 설명합니다.  
   

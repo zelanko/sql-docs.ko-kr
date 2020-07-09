@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ee5e7fd6511a624b05b4d6c7d03c1f2dcd288054
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4693990f7dc2a32f1d1a4c1462d35af9830de530
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288027"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737418"
 ---
 # <a name="common-errors-with-database-mail"></a>일반적인 데이터베이스 메일 오류 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 이 문서에서는 데이터베이스 메일에서 발생하는 몇 가지 일반적인 오류와 그 솔루션에 대해 설명합니다.
 

@@ -12,15 +12,15 @@ ms.topic: conceptual
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c3bc0a8e805b8a416cba9e7bf7786cfc9840e046
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 1e49a379ed12123c684497d84804c9ebd1ebf9ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220482"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748475"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure로의 SQL Server 관리형 백업용 고급 옵션 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   다음 자습서는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에 대한 고급 옵션 설정 방법을 설명합니다. 이러한 절차는 제공되는 기능에서 필요한 경우에만 필요합니다. 그렇지 않으면 기본 동작에 따라 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을(를) 사용할 수 있습니다.  
   
  각 시나리오에서 백업은 `database_name` 매개 변수를 사용하여 지정됩니다. `database_name` 이 NULL 또는 *인 경우 변경하면 인스턴스 수준의 기본 설정에 영향을 줍니다. 또한, 인스턴스 수준 설정은 변경 이후 생성된 새로운 데이터베이스에도 영향을 줍니다.  

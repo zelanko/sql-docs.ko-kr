@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dee9d807-faad-45b8-b3f3-7e8aa7d07147
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: da1c2fd6f1e6732f28f79196b433b8e46a595a85
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e18c2348b5d4fe1a791d2a30c691d393a37bdcd1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066436"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736139"
 ---
 # <a name="envelopecenter-geography-data-type"></a>EnvelopeCenter(geography 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **geography** 인스턴스에 대한 경계 원의 중심으로 사용할 수 있는 지점을 반환합니다.  
   

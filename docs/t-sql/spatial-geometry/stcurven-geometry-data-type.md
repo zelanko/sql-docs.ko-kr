@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9b9e958085af5f70d4dedb1f9a44866c04918343
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1816630332b7691d9d85216df7ac242baa65f4bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67930139"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748705"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN(geometry 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 **LineString**, **CircularString**, **CompoundCurve** 또는 **MultiLineString**인 **geography** 인스턴스에서 지정된 곡선을 반환합니다.
   

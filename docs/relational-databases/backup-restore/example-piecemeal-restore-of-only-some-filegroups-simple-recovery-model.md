@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7ad026c-5355-4308-9560-0dc843940d4f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1673e3999b6a37ea6383b940bb5e7b66ac922984
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 67d0cf696f149b0105dfe53c15a80fc81bced1f7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179108"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737745"
 ---
 # <a name="example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model"></a>예제: 일부 파일 그룹만 증분 복원(단순 복구 모델)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 읽기 전용 파일 그룹이 있는 단순 복구 모델에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 관련된 내용을 다룹니다.  
   

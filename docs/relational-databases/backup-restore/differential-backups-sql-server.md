@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cf10fdcdee4d3fcca3cf3e119bf18bb341352edb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9452fc4f3ca4a0ccfa4983b8e47f97f47108eb75
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179198"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737809"
 ---
 # <a name="differential-backups-sql-server"></a>차등 백업(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 백업 및 복원 항목은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 관련됩니다.  
   
  차등 백업은 가장 최근에 수행한 이전 전체 데이터 백업을 기반으로 합니다. 차등 백업은 전체 백업 이후 변경된 데이터만 캡처합니다. 차등 백업의 기반이 되는 전체 백업을 차등의 *기반* 이라고 합니다. 복사 전용 백업을 제외한 전체 백업은 데이터베이스 백업, 부분 백업 및 파일 백업을 포함한 일련의 차등 백업에 대한 기반으로 사용할 수 있습니다. 파일 차등 백업에 대한 기반 백업은 전체 백업, 파일 백업 또는 부분 백업에 포함될 수 있습니다.  

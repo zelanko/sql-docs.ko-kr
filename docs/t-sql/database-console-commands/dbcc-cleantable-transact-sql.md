@@ -26,21 +26,21 @@ helpviewer_keywords:
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 8cb3c1c0eba5c39083b6a6b39b4040639909808c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 706025b8be4a8b48f022a752ac60686e51cc7692
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101972"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738180"
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 테이블 또는 인덱싱된 뷰의 삭제된 가변 길이 열에서 공간을 반환합니다.
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
-```sql
+```syntaxsql
   
 DBCC CLEANTABLE  
 (  
@@ -86,7 +86,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## <a name="examples"></a>예  
 ### <a name="a-using-dbcc-cleantable-to-reclaim-space"></a>A. DBCC CLEANTABLE을 사용하여 공간 반환  
-다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스의 `Production.Document` 테이블에 대해 DBCC CLEANTABLE을 실행합니다.
+다음 예에서는 `Production.Document` 예제 데이터베이스의 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블에 대해 DBCC CLEANTABLE을 실행합니다.
   
 ```sql  
 DBCC CLEANTABLE (AdventureWorks2012,'Production.Document', 0)  

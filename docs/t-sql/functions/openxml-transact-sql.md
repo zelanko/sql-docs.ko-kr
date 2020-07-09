@@ -17,17 +17,17 @@ helpviewer_keywords:
 - rowsets [SQL Server], XML documents
 - XML [SQL Server], rowset views
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d9dacd09604661f9880533fcdcafd2fb7ab9ab12
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: c9f0034e6f3fb620bd55410d345c1c2291db280f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914592"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738066"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   OPENXML은 XML 문서에 대한 행 집합 뷰를 제공합니다. OPENXML이 행 집합 공급자이므로 테이블, 뷰 또는 OPENROWSET 함수 등의 행 집합 공급자가 있을 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 OPENXML을 사용할 수 있습니다.  
   
@@ -68,9 +68,9 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  행 집합에 있는 열의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다. 열 형식이 특성의 기본 **xml** 데이터 형식과 다른 경우 형식 강제 변환이 발생합니다.  
   
  *ColPattern*  
- 선택 사항이며 XML 노드를 열에 매핑하는 방법을 설명하는 일반 XPath 패턴입니다. *ColPattern*을 지정하지 않으면 기본 매핑(*flags*에 지정된 대로 **특성 중심** 또는 **요소 중심** 매핑)이 수행됩니다.  
+ 선택 사항이며 XML 노드를 열에 매핑하는 방법을 설명하는 일반 XPath 패턴입니다. *ColPattern*을 지정하지 않으면 기본 매핑(**flags**에 지정된 대로 **특성 중심** 또는 *요소 중심* 매핑)이 수행됩니다.  
   
- *ColPattern*으로 지정된 XPath 패턴은 *flags*로 표시된 기본 매핑을 덮어쓰거나 향상시키도록 매핑의 특수한 특성(**특성 중심** 및 **요소 중심** 매핑의 경우)을 지정하는 데 사용합니다.  
+ *ColPattern*으로 지정된 XPath 패턴은 **flags**로 표시된 기본 매핑을 덮어쓰거나 향상시키도록 매핑의 특수한 특성(**특성 중심** 및 *요소 중심* 매핑의 경우)을 지정하는 데 사용합니다.  
   
  *ColPattern*으로 지정된 일반 XPath 패턴은 메타 속성도 지원합니다.  
   
@@ -102,7 +102,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 ### <a name="a-using-a-simple-select-statement-with-openxml"></a>A. 단순 SELECT 문에 OPENXML 사용  
  다음 예는 `sp_xml_preparedocument`를 사용하여 XML 이미지의 내부 표현을 만듭니다. `SELECT` 행 집합 공급자를 사용하는 `OPENXML` 문은 XML 문서의 내부 표현에 대해 실행됩니다.  
   
- *flag* 값이 `1`로 설정됩니다. 이 값은 **특성 중심** 매핑을 나타냅니다. 따라서 XML 특성이 행 집합의 열에 매핑됩니다. `/ROOT/Customer`로 지정된 *rowpattern*은 처리할 `<Customers>` 노드를 식별합니다.  
+ *flag* 값이 `1`로 설정됩니다. 이 값은 **특성 중심** 매핑을 나타냅니다. 따라서 XML 특성이 행 집합의 열에 매핑됩니다. *로 지정된* rowpattern`/ROOT/Customer`은 처리할 `<Customers>` 노드를 식별합니다.  
   
  열 이름이 XML 특성 이름과 일치하므로 선택적인 *ColPattern*(열 패턴) 매개 변수는 지정되지 않습니다.  
   
@@ -143,7 +143,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- *flags*가 `2`로 설정되고 **요소 중심** 매핑을 나타내는 동일한 `SELECT` 문이 실행되면, XML 문서에 `CustomerID` 또는 `ContactName` 이름의 요소가 없으므로 XML 문서의 두 고객 모두에 대한 `CustomerID` 및 `ContactName`의 값이 NULL로 반환됩니다.  
+ `SELECT`flags*가* 로 설정되고 `2`요소 중심**매핑을 나타내는 동일한** 문이 실행되면, XML 문서에 `CustomerID` 또는 `ContactName` 이름의 요소가 없으므로 XML 문서의 두 고객 모두에 대한 `CustomerID` 및 `ContactName`의 값이 NULL로 반환됩니다.  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
@@ -161,7 +161,7 @@ NULL       NULL
   
 -   행 집합의 `OrderID`, `CustomerID` 및 `OrderDate`는 XML 문서에서 *rowpattern*으로 식별된 노드의 부모 특성에 매핑됩니다.  
   
--   행 집합의 `ProdID` 열은 `ProductID` 특성에 매핑되며, 행 집합의 `Qty` 열은 *rowpattern*으로 식별된 노드의 `Quantity` 특성에 매핑됩니다.  
+-   행 집합의 `ProdID` 열은 `ProductID` 특성에 매핑되며, 행 집합의 `Qty` 열은 `Quantity`rowpattern*으로 식별된 노드의*  특성에 매핑됩니다.  
   
  **요소 중심** 매핑이 *flags* 매개 변수에 지정되더라도 *ColPattern*에 지정된 매핑이 이 매핑을 덮어씁니다.  
   
@@ -190,11 +190,11 @@ EXEC sp_xml_preparedocument @idoc OUTPUT, @doc;
 -- SELECT stmt using OPENXML rowset provider  
 SELECT *  
 FROM   OPENXML (@idoc, '/ROOT/Customer/Order/OrderDetail',2)   
-         WITH (OrderID       int         '../@OrderID',   
-               CustomerID  varchar(10) '../@CustomerID',   
-               OrderDate   datetime    '../@OrderDate',   
-               ProdID      int         '@ProductID',   
-               Qty         int         '@Quantity');  
+         WITH (OrderID       int         '../@OrderID',
+               CustomerID  varchar(10) '../@CustomerID',
+               OrderDate   datetime    '../@OrderDate',
+               ProdID      int         '@ProductID',
+               Qty         int         '@Quantity');
   
 ```  
   
