@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2decc7e78b599ebcd0c16e3373a0b62401d09428
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28d9540c331ac5a250acc24abbd173f7ddf87e5f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75720847"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882569"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>Always On 가용성 그룹이 포함된 읽기-배율 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 가용성 그룹은 SQL Server에 고가용성 기능을 제공하고 통합된 확장 솔루션을 제공하는 포괄적인 솔루션입니다. 일반적인 데이터베이스 애플리케이션에서는 여러 클라이언트가 다양한 유형의 작업을 실행합니다. 경우에 따라 리소스 제약으로 인해 병목 현상이 발생할 수 있습니다. 
 

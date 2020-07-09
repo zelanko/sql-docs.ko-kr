@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d94799898517b2d75ce6a1add308f0831b112ce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b327105398388615aa507ceaf30734347fbf2683
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68132820"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882590"
 ---
 # <a name="set-remote_proc_transactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   로컬 트랜잭션이 활성 트랜잭션일 때 원격 저장 프로시저를 실행하면 MS DTC([!INCLUDE[tsql](../../includes/tsql-md.md)] Distributed Transaction Manager)에서 관리하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 분산 트랜잭션이 시작되도록 지정합니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68132820"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 SET REMOTE_PROC_TRANSACTIONS { ON | OFF }   
 ```  
@@ -60,7 +60,7 @@ SET REMOTE_PROC_TRANSACTIONS { ON | OFF }
   
  REMOTE_PROC_TRANSACTIONS 옵션을 OFF로 설정하면 원격 저장 프로시저가 로컬 트랜잭션의 일부로 호출되지 않습니다. 원격 저장 프로시저에서 수정한 내용은 저장 프로시저가 완료될 때 커밋되거나 롤백됩니다. 이후 원격 저장 프로시저를 호출한 연결에서 실행한 COMMIT TRANSACTION이나 ROLLBACK TRANSACTION 문은 프로시저에서 완료한 처리에 영향을 주지 않습니다.  
   
- REMOTE_PROC_TRANSACTIONS 옵션은 **sp_addserver**를 사용하여 원격 서버로 정의된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 호출되는 원격 저장 프로시저에만 영향을 주는 호환성 옵션입니다. 이 옵션은 **sp_addlinkedserver**를 사용하여 연결된 서버로 정의된 인스턴스에서 저장 프로시저를 실행하는 분산 쿼리에는 적용되지 않습니다.  
+ REMOTE_PROC_TRANSACTIONS 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_addserver**를 사용하여 원격 서버로 정의된**  인스턴스에 대해 호출되는 원격 저장 프로시저에만 영향을 주는 호환성 옵션입니다. 이 옵션은 **sp_addlinkedserver**를 사용하여 연결된 서버로 정의된 인스턴스에서 저장 프로시저를 실행하는 분산 쿼리에는 적용되지 않습니다.  
   
  SET REMOTE_PROC_TRANSACTIONS 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
   

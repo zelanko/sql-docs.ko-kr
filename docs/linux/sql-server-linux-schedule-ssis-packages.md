@@ -8,16 +8,16 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ac7648287b4e4b609f4dd4f25b1b07a512065364
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c0526dea857f7ed3cb354e74bf3580d4e6a06669
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68065157"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882630"
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>cron을 사용하여 Linux에서 SQL Server Integration Services 패키지 실행 예약
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Windows에서 SSIS(SQL Server Integration Services)와 SQL Server를 실행하는 경우 SQL Server 에이전트를 사용하여 SSIS 패키지 실행을 자동화할 수 있습니다. 그러나 Linux에서 SQL Server와 SSIS를 실행하는 경우에는 SQL Server 에이전트 유틸리티를 사용하여 Linux에서 작업을 예약할 수 없습니다. 대신, Linux 플랫폼에서 주로 사용되는 cron 서비스를 통해 패키지 실행을 자동화합니다.
 

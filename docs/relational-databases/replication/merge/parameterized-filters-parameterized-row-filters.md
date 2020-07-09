@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3dee5b4c6522afd93591d1e8aa0c94052d41d9bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8e7d5eae242525d57618050516f6368f016e3d89
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71711062"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882298"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>매개 변수가 있는 필터 - 매개 변수가 있는 행 필터
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   매개 변수가 있는 행 필터를 사용하면 여러 게시를 만들지 않고도 데이터의 여러 파티션을 서로 다른 구독자로 보낼 수 있습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 매개 변수가 있는 행 필터를 동적 필터라고 불렀습니다. 파티션은 테이블에 있는 행의 하위 집합입니다. 게시된 테이블의 각 행은 매개 변수가 있는 필터를 만들 때 선택한 설정에 따라 하나의 파티션에만 속하거나(겹치지 않는 파티션 생성) 두 개 이상의 파티션에 속할 수 있습니다(겹치는 파티션 생성).  
   
  겹치지 않는 파티션을 구독 간에 공유하게 하거나 지정된 파티션을 한 구독에서만 받도록 제한할 수 있습니다. 파티션의 동작을 제어하는 설정은 나중에 이 항목의 "적절한 필터링 옵션 사용"에서 설명합니다. 이 설정을 사용하면 매개 변수가 있는 필터링을 애플리케이션 및 성능 요구 사항에 알맞게 조정할 수 있습니다. 일반적으로 겹치는 파티션은 유연성이 뛰어나고, 단일 구독으로 복제되는 겹치지 않는 파티션은 성능이 뛰어납니다.  

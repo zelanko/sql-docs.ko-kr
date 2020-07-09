@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92c78d36559a8cb08a7f3368012a94ce3048c93c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d8ae9d5fee06ae9db1415b53c41a1d1d23633824
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822186"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882365"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>문제 해결: 가용성 그룹 초과 RPO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   비동기 커밋 보조 복제본에 대한 가용성 그룹에 강제 수동 장애 조치(failover)를 수행한 후 데이터 손실이 RPO(복구 지점 목표)보다 많은 것을 발견할 수 있습니다. 또는 [Always On 가용성 그룹에 대한 성능 모니터링](monitor-performance-for-always-on-availability-groups.md)의 방법을 사용하여 비동기 커밋 보조 복제본의 잠재적 데이터 손실을 계산할 때 RPO 초과를 발견할 수 있습니다.  
   
  동기 커밋 보조 복제본은 데이터 손실 없음을 보증하지만 비동기 커밋 보조 복제본의 잠재적 데이터 손실은 보조 복제본에 확정되어 아직 대기 중인 로그의 양에 따라 달라집니다.  

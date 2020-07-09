@@ -2,7 +2,7 @@
 title: 트랜잭션 복제 관련 오류 찾기
 description: 트랜잭션 복제를 사용하여 오류를 찾고 식별하는 방법과 복제 관련 문제를 해결하기 위한 문제 해결 방법을 설명합니다.
 ms.custom: seo-lt-2019
-ms.date: 04/27/2018
+ms.date: 07/01/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -12,15 +12,15 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9a079838d343ba8de93e270d01d704eb32219ee9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7c818e48c916a8ad3da7dfda7eaad6230c16ebd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286993"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882276"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>문제 해결사: SQL Server 트랜잭션 복제를 사용하여 오류 찾기 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 복제 오류를 해결하는 것은 트랜잭션 복제 작동 방법에 대한 기본적인 이해 없이는 불편을 느낄 수 있습니다. 게시를 만드는 첫 번째 단계는 스냅샷 에이전트가 스냅샷을 만들어 스냅샷 폴더에 저장하게 하는 것입니다. 다음으로 배포 에이전트가 스냅샷을 구독자에게 적용합니다. 
 
@@ -77,8 +77,10 @@ ms.locfileid: "76286993"
 
     ![액세스가 거부된 스냅샷 에이전트 오류](media/troubleshooting-tran-repl-errors/snapshot-access-denied.png)
 
-        The replication agent had encountered an exception.
-        Exception Message: Access to path '\\node1\repldata.....' is denied.
+    ```console
+    The replication agent had encountered an exception.
+    Exception Message: Access to path '\\node1\repldata.....' is denied.
+    ```
 
 스냅샷 폴더에 Windows 권한이 올바르게 구성되지 않은 경우 스냅샷 에이전트의 “액세스가 거부됨” 오류가 표시됩니다. 스냅샷이 저장되는 폴더에 대한 사용 권한을 확인해야 하며, 스냅샷 에이전트를 실행하는 데 사용된 계정이 공유에 액세스할 수 있는 권한이 있는지 확인합니다.  
 
@@ -108,10 +110,12 @@ ms.locfileid: "76286993"
     
     ![로그 판독기 에이전트에 대한 오류 세부 정보](media/troubleshooting-tran-repl-errors/log-reader-error.png)
 
-       Status: 0, code: 20011, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.
-       The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.
-       Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
-       Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
+    ```console
+    Status: 0, code: 20011, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.
+    The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.
+    Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
+    Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
+    ```
 
 6. 오류는 일반적으로 게시자 데이터베이스의 소유자가 올바로 설정되어 있지 않은 경우에 발생합니다. 이는 데이터베이스가 복원되는 경우 발생할 수 있습니다. 이를 확인하려면
 
@@ -127,7 +131,7 @@ ms.locfileid: "76286993"
 
     ```sql
     -- set the owner of the database to 'sa' or a specific user account, without the brackets. 
-    EXEC sp_changedbowner '<useraccount>'
+    EXECUTE sp_changedbowner '<useraccount>'
     -- example for sa: exec sp_changedbowner 'sa'
     -- example for user account: exec sp_changedbowner 'sqlrepro\administrator' 
     ```
@@ -158,9 +162,11 @@ ms.locfileid: "76286993"
 2. **배포자에서 구독자로 연결 기록** 대화 상자가 열리고, 에이전트에 발생한 오류에 대한 설명이 표시됩니다. 
 
      ![배포 에이전트에 대한 오류 세부 정보](media/troubleshooting-tran-repl-errors/dist-history-error.png)
-    
-        Error messages:
-        Agent 'NODE1\SQL2016-AdventureWorks2012-AdvWorksProductTrans-NODE2\SQL2016-7' is retrying after an error. 89 retries attempted. See agent job history in the Jobs folder for more details.
+
+    ```console
+    Error messages:
+    Agent 'NODE1\SQL2016-AdventureWorks2012-AdvWorksProductTrans-NODE2\SQL2016-7' is retrying after an error. 89 retries attempted. See agent job history in the Jobs folder for more details.
+    ```
 
 3. 이 오류는 배포 에이전트가 다시 시도 중이라는 것을 나타냅니다. 자세한 정보를 찾으려면 배포 에이전트에 대한 작업 기록을 확인합니다. 
 
@@ -175,9 +181,11 @@ ms.locfileid: "76286993"
 5. 오류 항목 중 하나를 선택하고 창 아래쪽에서 오류 텍스트를 확인합니다.  
 
     ![배포 에이전트에 대한 잘못된 암호를 나타내는 오류 텍스트](media/troubleshooting-tran-repl-errors/dist-pw-wrong.png)
-    
-        Message:
-        Unable to start execution of step 2 (reason: Error authenticating proxy NODE1\repl_distribution, system error: The user name or password is incorrect.)
+
+    ```console
+    Message:
+    Unable to start execution of step 2 (reason: Error authenticating proxy NODE1\repl_distribution, system error: The user name or password is incorrect.)
+    ```
 
 6. 이 오류는 배포 에이전트에서 사용한 암호가 잘못되었음을 나타냅니다. 이를 확인하려면
 
@@ -194,11 +202,13 @@ ms.locfileid: "76286993"
     **복제 모니터** > **세부 정보 보기**에서 구독을 마우스 오른쪽 단추로 클릭하여 **구독자에게 배포** 기록을 엽니다. 이제 여기에는 오류가 다르게 표시됩니다. 
 
     ![배포 에이전트가 연결할 수 없음을 나타내는 오류](media/troubleshooting-tran-repl-errors/dist-agent-cant-connect.png)
-           
-        Connecting to Subscriber 'NODE2\SQL2016'        
-        Agent message code 20084. The process could not connect to Subscriber 'NODE2\SQL2016'.
-        Number:  18456
-        Message: Login failed for user 'NODE2\repl_distribution'.
+
+    ```console
+    Connecting to Subscriber 'NODE2\SQL2016'        
+    Agent message code 20084. The process could not connect to Subscriber 'NODE2\SQL2016'.
+    Number:  18456
+    Message: Login failed for user 'NODE2\repl_distribution'.
+    ```
 
 8. 이 오류는 사용자 **NODE2\repl_distribution**에 대한 로그인이 실패했으므로 배포 에이전트가 구독자에게 연결할 수 없음을 나타냅니다. 더 자세히 조사하려면 구독자에 연결하고 개체 탐색기의 **관리** 노드에 있는 *현재*SQL 오류 로그를 엽니다. 
 
@@ -234,8 +244,10 @@ ms.locfileid: "76286993"
 
 1. **명령** 상자에서 새 줄을 시작하고, 다음 텍스트를 입력하고 **확인**을 선택합니다. 
 
-       -Output C:\Temp\OUTPUTFILE.txt -Outputverboselevel 3
-    
+    ```console
+    -Output C:\Temp\OUTPUTFILE.txt -Outputverboselevel 3
+    ```
+
     선호도에 따라 위치 및 자세한 표시 수준을 수정할 수 있습니다.
 
     ![작업 단계에 대한 속성에서 자세한 정보 출력](media/troubleshooting-tran-repl-errors/verbose.png)

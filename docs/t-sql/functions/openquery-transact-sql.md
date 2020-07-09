@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e160a51471c33f24bf266d2a68d93def33aed04e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 265654db2e2523b5cd54e4a07b6889e5d312f748
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832140"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882453"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   지정한 연결된 서버에서 지정한 통과 쿼리를 실행합니다. 이 서버는 OLE DB 데이터 원본입니다. OPENQUERY는 테이블 이름처럼 쿼리의 FROM 절에서 참조될 수 있습니다. 또한 OPENQUERY는 INSERT, UPDATE 또는 DELETE 문의 대상 테이블로 참조될 수도 있습니다. 이것은 OLE DB 공급자 기능에 종속됩니다. 쿼리는 여러 결과 집합을 반환할 수 있지만 OPENQUERY는 첫 번째 것만 반환합니다.  
   
