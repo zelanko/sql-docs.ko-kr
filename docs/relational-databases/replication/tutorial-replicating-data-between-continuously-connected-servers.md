@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 603846718e4e21c7af8ee81d94210d12242c35c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 15b114b66462be069b4c67d3bedc662af6c6cbfd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321930"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720701"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>자습서: 두 개의 완전히 연결된 서버 간 복제 구성(트랜잭션)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 트랜잭션 복제는 계속 연결되는 서버 간에 데이터를 이동할 때 발생하는 문제를 해결하는 좋은 방법입니다. 복제 마법사를 사용하면 복제 토폴로지를 쉽게 구성하고 관리할 수 있습니다. 
 
 이 자습서에서는 계속 연결되는 서버에 대해 트랜잭션 복제 토폴로지를 구성하는 방법을 보여줍니다. 트랜잭션 복제가 작동하는 방법에 대한 자세한 내용은 [트랜잭션 복제 개요](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication)를 참조하세요. 

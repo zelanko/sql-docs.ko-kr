@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 59444faf-bcb6-4421-a3df-8715753e453b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6d793f394b9ffdf329eefbd73889d3233476372b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8da7a2f89bbe0a63cb438b464a217805cfa97db6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68129807"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719503"
 ---
 # <a name="topologies-for-web-synchronization"></a>Topologies for Web Synchronization
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   다양한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 웹 동기화 복제 토폴로지를 선택할 수 있습니다. 웹 동기화를 구성하는 일반적인 방법은 다음과 같습니다.  
   
 -   단일 서버  

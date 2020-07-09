@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ca0a64c6e7c9859ccb3f6d8697fb123134c3f31f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1cdacdc6209af2f1763f27bfc28419279e1d5a58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321970"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722032"
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Microsoft 복제 충돌 뷰어 및 대화형 해결 프로그램
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 섹션에는 병합 복제 및 트랜잭션 복제에 대한 복제 충돌 뷰어의 정보와 병합 복제에 대한 대화형 해결 프로그램의 정보가 포함되어 있습니다.  
   
 -   [Microsoft 복제 충돌 뷰어&#40;병합 복제&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-merge-replication.md)  

@@ -10,16 +10,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: a15cd01067c42c027bb327ef39d928978666abd3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ec09eca0568d1213fce850362be7c889af3a3258
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216022"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722234"
 ---
 # <a name="configure-polybase-to-access-external-data-in-teradata"></a>Teradata의 외부 데이터에 액세스하도록 PolyBase 구성
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 문서에서는 SQL Server 인스턴스에서 PolyBase를 사용하여 Teradata에서 외부 데이터를 쿼리하는 방법을 설명합니다.
 

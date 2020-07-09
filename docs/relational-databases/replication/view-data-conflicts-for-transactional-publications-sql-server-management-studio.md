@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9b385de9eee9fd1073c2161d0db57fd0287f959c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f95994ac6c663020074c5ef3971c1e0a895b3a10
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321870"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720576"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>트랜잭션 게시의 데이터 충돌 확인(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 복제 충돌 뷰어에서 피어 투 피어 트랜잭션 복제와 지연 업데이트 구독이 포함된 트랜잭션 복제의 충돌을 볼 수 있습니다. 충돌 감지 및 해결 방법은 [피어 투 피어 복제에서 충돌 검색](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md) 및 [지연 업데이트 충돌 해결 옵션 설정&#40;SQL Server Management Studio&#41;](../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)을 참조하세요.  
   
  충돌 데이터의 가용성은 복제 유형 및 충돌 보존 기간에 따라 달라집니다.  

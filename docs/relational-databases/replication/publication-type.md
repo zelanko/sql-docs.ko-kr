@@ -13,15 +13,15 @@ ms.assetid: 1b77a466-479c-4356-b539-a644cec507b5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0a31e90cb5cf94cd40a76b96d33208e81d27f6db
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c086fa93025d9c6263f14b7f1c1b0ea865f66c56
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286570"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720854"
 ---
 # <a name="publication-type"></a>게시 유형
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   복제에서는 다음과 같은 게시 유형을 제공합니다.  
   
 -   스냅샷 게시  

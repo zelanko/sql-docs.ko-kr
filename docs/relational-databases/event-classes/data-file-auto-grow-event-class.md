@@ -12,15 +12,15 @@ ms.assetid: 63701c20-7886-454a-936f-7aea9d042cf7
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc3e8cf22c4f90e75556fe44e42b0d3cf1a94d8b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 80cbbaab89417573c8da438176d23955c9fe2279
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68092929"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719860"
 ---
 # <a name="data-file-auto-grow-event-class"></a>Data File Auto Grow 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Data File Auto Grow** 이벤트 클래스는 데이터 파일 크기가 자동으로 증가했음을 나타냅니다. 데이터 파일이 ALTER DATABASE 문을 통해 명시적으로 증가하는 경우에는 이 이벤트가 트리거되지 않습니다.  
   
  데이터 파일의 증가를 모니터링하는 추적에 **Data File Auto Grow** 이벤트 클래스를 포함합니다.  

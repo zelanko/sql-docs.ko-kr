@@ -14,15 +14,15 @@ ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 39be2638f1d85e610e5898f9a4c33c7129764424
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 35138719e779da2301ab635e29e9adcaacf2fdec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321528"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722025"
 ---
 # <a name="replication-conflict-viewer-transactional-replication"></a>복제 충돌 뷰어(트랜잭션 복제)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   복제 충돌 뷰어에서는 지연 업데이트 구독을 사용하는 트랜잭션 복제 및 피어 투 피어 트랜잭션 복제에서 동기화 중 발생한 충돌을 볼 수 있습니다. 자세한 내용은 [트랜잭션 게시의 데이터 충돌 확인&#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)을 참조하세요.  
   
 > [!NOTE]  

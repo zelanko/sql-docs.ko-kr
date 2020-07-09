@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 8e9a13a0-6b24-47c6-9d83-3cbaf08f673d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d89c8a18804722a3d7727b56833c2513ec994518
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3cf65d8667e0fcedcb148e926a80969ec7a05642
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67895254"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720670"
 ---
 # <a name="updatable-subscriptions"></a>업데이트할 수 있는 구독
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   복제된 데이터는 읽기 전용으로 취급되어야 하지만 트랜잭션 복제를 사용하면 업데이트할 수 있는 구독을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자에서 복제된 데이터를 수정할 수 있습니다. 구독자에서 데이터를 수정해야 하는 경우 요구 사항에 따라 다음 옵션 중 하나를 선택합니다.  
   
 |업데이트할 수 있는 구독 유형|요구 사항|  

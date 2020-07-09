@@ -14,15 +14,15 @@ ms.assetid: 7073350c-f667-4f70-88e9-152c9a1b08dd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f93f4bb75bf225f7ccf7a3d377ef495a3cb99854
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bd437fedc203d0099b2cb8df732b858fbdffd95c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286634"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720933"
 ---
 # <a name="publication-information-all-subscriptions-transactional-publication"></a>게시 정보, 모든 구독(트랜잭션 게시)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **모든 구독** 탭은 선택한 트랜잭션 게시의 모든 구독에 대한 정보를 표시합니다.  
   
 ## <a name="options"></a>옵션  

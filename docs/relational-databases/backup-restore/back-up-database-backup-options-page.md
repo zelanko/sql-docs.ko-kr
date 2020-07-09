@@ -14,15 +14,15 @@ f1_keywords:
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2d9b831b3350c6a895c86868180a1134f871c8d5
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: a4932a229d2d883a8d5b2be84795a96aafd5bba3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220628"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719983"
 ---
 # <a name="back-up-database-backup-options-page"></a>데이터베이스 백업(백업 옵션 페이지)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **데이터베이스 백업** 대화 상자의 **백업 옵션** 페이지를 사용하여 데이터베이스 백업 옵션을 확인하거나 수정할 수 있습니다.  
   
  **SQL Server Management Studio를 사용하여 백업을 만들려면**  

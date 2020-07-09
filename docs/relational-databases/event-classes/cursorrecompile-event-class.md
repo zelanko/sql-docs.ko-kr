@@ -12,15 +12,15 @@ ms.assetid: ab351c50-eed4-493a-87ed-89ec10933477
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb9f3a891fa81345d7ae9d167419a02356a035af
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 39da2d65e56199a78204bb5ab1cc95e07c4a7014
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093677"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719867"
 ---
 # <a name="cursorrecompile-event-class"></a>CursorRecompile 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **CursorRecompile** 이벤트 클래스는 API(애플리케이션 프로그래밍 인터페이스) 커서에서 발생하는 커서 다시 컴파일 이벤트를 나타냅니다. CursorRecompile 이벤트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 스키마 변경으로 인해 Transact-SQL 커서를 다시 컴파일할 때 발생합니다.  
   
  커서의 성능을 기록하는 추적에 **CursorRecompile** 이벤트 클래스를 포함시키십시오. **CursorRecompile** 이벤트 클래스를 추적에 포함하는 경우 발생되는 오버헤드의 양은 추적 중 데이터베이스에 대해 커서가 사용되는 빈도에 따라 달라집니다. 커서를 광범위하게 사용할 경우 추적을 수행하면 성능이 크게 저하될 수 있습니다.  

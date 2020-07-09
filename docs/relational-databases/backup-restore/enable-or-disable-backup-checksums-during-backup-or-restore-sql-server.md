@@ -3,7 +3,6 @@ title: 백업 체크섬 사용 | 사용 안 함
 description: 이 문서에서는 SQL Server에서 SQL Server Management Studio 또는 Transact-SQL을 사용하여 데이터베이스에 대해 백업 체크섬을 사용 또는 사용 안 함으로 설정하는 방법을 보여 줍니다.
 ms.custom: ''
 ms.date: 03/17/2017
-ms.description: Enable or disable backup checksums during backup or restore of SQL Server databases.
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a3552fc8ccc44522d7bd2a520d5b9ad646ee586d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3675b4557bae7a394ef5b1b3ac47d2d1da9b2af3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179215"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718148"
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>백업 또는 복원 중 백업 체크섬 사용 또는 사용 안 함(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 데이터베이스를 백업하거나 복원할 때 백업 체크섬을 설정 또는 해제하는 방법에 대해 설명합니다.  
   

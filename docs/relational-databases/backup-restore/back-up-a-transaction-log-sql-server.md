@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b40463d35a7d6468e93b2a32b44dffb1aefed182
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 1e01e01544a0417210a8f2e3a40bb10398875c37
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220648"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719967"
 ---
 # <a name="back-up-a-transaction-log"></a>트랜잭션 로그 백업
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 트랜잭션 로그를 백업하는 방법에 대해 설명합니다.  
 
 ## <a name="before-you-begin"></a>시작하기 전에

@@ -16,15 +16,15 @@ ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3f343f8f4e2aa38e12144684f0ab5fe6ed8f1237
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eef7e0322edef41e7b5b12b53a0fe52a818f6be4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179298"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718113"
 ---
 # <a name="copy-only-backups"></a>복사 전용 백업
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 *복사 전용 백업*은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 시퀀스와 독립적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업입니다. 일반적으로 백업을 수행하면 데이터베이스가 변경되므로 이후 백업이 복원되는 방식에 영향을 주게 됩니다. 그러나 백업 전체에 영향을 주지 않고 특별한 용도로 백업을 수행한 다음 데이터베이스에 대한 프로시저를 복원하는 것이 유용할 수도 있습니다. 이러한 용도로 복사 전용 백업이 제공됩니다.
   

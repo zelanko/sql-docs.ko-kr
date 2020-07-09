@@ -14,15 +14,15 @@ ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8ed2edb85ea142aa6dd02995784dc96a958ee6a5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 60d826f519af20e51bc23e8a503975e8222da1bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286621"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720942"
 ---
 # <a name="publication-information-tracer-tokens-sql-server-2005-and-later"></a>게시 정보, 추적 프로그램 토큰(SQL Server 2005 이상)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **추적 프로그램 토큰** 탭을 사용하여 연결 유효성을 검사하고 트랜잭션 복제를 사용하는 시스템의 대기 시간을 측정할 수 있습니다. 토큰(적은 양의 데이터)은 게시 데이터베이스의 트랜잭션 로그에 기록되고, 일반적인 복제된 트랜잭션인 것처럼 표시되고, 시스템을 통해 전달되며 다음을 계산할 수 있습니다.  
   
 -   게시자에서 커밋된 트랜잭션과 배포자의 배포 데이터베이스에서 삽입된 해당 명령 사이의 경과 시간  

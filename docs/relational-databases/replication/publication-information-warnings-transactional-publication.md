@@ -14,15 +14,15 @@ ms.assetid: 4d4baf1d-d0a1-4d09-bec7-137811f43f09
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: feb8b788b19e20293272922bea3e671f7fc2c3b3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6370aac279b57e2176806287d53674e7b87f5fe3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286600"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720905"
 ---
 # <a name="publication-information-warnings-transactional-publication"></a>게시 정보, 경고(트랜잭션 게시)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **경고** 탭은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전을 실행하는 배포자에서 사용할 수 있습니다. **경고** 탭을 사용하면 선택한 게시에 대해 다음 태스크를 수행할 수 있습니다.  
   
 -   복제 모니터에 경고를 표시하도록 설정  

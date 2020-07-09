@@ -17,15 +17,15 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ddcead69006fdee32598590192e777984ea3fcd7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e4252d018df169f6fac238b4cb0b39991f9c8996
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76761897"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719039"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>연결된 서버 만들기(SQL Server 데이터베이스 엔진)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 연결된 서버를 만들고 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 데이터에 액세스하는 방법을 보여 줍니다. 연결된 서버를 만들면 여러 원본의 데이터로 작업할 수 있습니다. 연결된 서버는 반드시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 인스턴스일 필요는 없지만 이것이 일반적인 시나리오입니다.  
   

@@ -3,7 +3,6 @@ title: Azure로의 관리형 백업 사용
 description: 데이터베이스 및 인스턴스 수준에서 Microsoft Azure로 SQL Server 관리형 백업을 사용하도록 설정하고, 알림을 설정하고, 백업 활동을 모니터링하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
-ms.description: Enable SQL Server managed backup to Azure
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -12,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3e4729b5576b7c3558c99369cc80a68a236f2cf9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49d427b7e07d46e604bfbc46c06022414c486c43
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179164"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718105"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>Azure로의 SQL Server 관리형 백업 사용
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목은 데이터베이스 및 인스턴스 수준에서 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 기본 설정으로 사용하는 방법에 대해 설명합니다. 또한 전자 메일 알림을 설정하고 백업 활동을 모니터링하는 방법에 대해서도 설명합니다.  
   
  이 자습서는 Azure PowerShell을 사용합니다. 자습서를 시작하기 전에 [Azure PowerShell을 다운로드 및 설치](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)하십시오.  

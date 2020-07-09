@@ -40,15 +40,15 @@ helpviewer_keywords:
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bba300b88a8028bee1793247a80d93fd4c6fe691
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b4585af3758327ea21834918a89142d8101b8745
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68020118"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85721228"
 ---
 # <a name="new-publication-wizard"></a>New Publication Wizard
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 섹션에서는 새 게시 마법사의 다음 페이지에 대한 정보를 제공합니다.  
   
 -   [Oracle 게시자](../../relational-databases/replication/oracle-publisher.md)  

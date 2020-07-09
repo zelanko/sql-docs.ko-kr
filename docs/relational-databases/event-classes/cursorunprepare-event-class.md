@@ -12,15 +12,15 @@ ms.assetid: 34055a2f-7d0f-4e13-a62e-7ee5b6c23b86
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 174cd2a4bc07d5de1cd664f715b9442846073502
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4748a1232f22f41f3ed079d90c980d7476f595e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68092943"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719842"
 ---
 # <a name="cursorunprepare-event-class"></a>CursorUnprepare 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **CursorUnprepare** 이벤트 클래스는 API(애플리케이션 프로그래밍 인터페이스) 커서에서 발생하는 커서 준비 취소 이벤트에 대한 정보를 제공합니다. 커서 준비 취소 이벤트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 실행 계획을 삭제할 때 발생합니다.  
   
  커서 성능을 기록하는 추적에 **CursorUnprepare** 이벤트 클래스를 포함합니다. 추적에 **CursorUnprepare** 이벤트 클래스가 포함되면 발생한 오버헤드 양은 추적하는 동안 데이터베이스에 대한 커서 사용 빈도에 따라 결정됩니다. 커서가 광범위하게 사용되는 경우에는 추적으로 인해 성능이 상당히 저하될 수 있습니다.  

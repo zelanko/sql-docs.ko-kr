@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5389413091f57a5a0dfdad887edad675ee68ff64
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1e94646c6cab4a143fb87db9443d219d79262f39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68136928"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720560"
 ---
 # <a name="change-workload-group-settings"></a>작업 그룹 설정 변경
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용하여 작업 그룹 설정을 변경할 수 있습니다.  
   
 -   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [사용 권한](#Permissions)  

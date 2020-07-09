@@ -1,8 +1,7 @@
 ---
 title: FOR JSON이 특수 문자 및 제어 문자를 이스케이프 처리하는 방법
-ms.date: 03/16/2017
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,18 +9,19 @@ helpviewer_keywords:
 ms.assetid: 4ba90025-5a09-4f0a-836a-54c886324530
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5654a27a5457fe1d89fe76241c576f831dc9bf55
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 939e9d4782fec818df387844841f58e9e45f0da6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095781"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722253"
 ---
 # <a name="how-for-json-escapes-special-characters-and-control-characters-sql-server"></a>FOR JSON이 특수 문자 및 제어 문자를 이스케이프 처리하는 방법(SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   이 항목에서는 SQL Server **SELECT**의 **FOR JSON** 절이 특수 문자를 이스케이프 처리하고 JSON 출력에서 제어 문자를 표시하는 방법에 대해 설명합니다.  
 

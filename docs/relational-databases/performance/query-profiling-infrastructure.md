@@ -17,15 +17,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: e4c2a2e56f9dab75bfe3873e721ccfca0bd16df3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: add476168eabf5255bb4cbdce59bd763d05faf4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77705908"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719558"
 ---
 # <a name="query-profiling-infrastructure"></a>쿼리 프로파일링 인프라
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]은 쿼리 실행 계획에 대한 런타임 정보에 액세스하는 기능을 제공합니다. 성능 문제가 발생할 때 가장 중요한 작업 중 하나는 실행 중인 워크로드와 리소스 사용량의 변화를 정확하게 이해하는 것입니다. 이를 위해 [실제 실행 계획](../../relational-databases/performance/display-an-actual-execution-plan.md)에 액세스하는 것이 중요합니다.
 

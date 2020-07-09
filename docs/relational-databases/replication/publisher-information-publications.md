@@ -13,15 +13,15 @@ ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5c7af0d388deef7b0f8249de759b688c4f49124d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f5d897beb238b53e632044aee838f5ee6295ef48
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287502"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719532"
 ---
 # <a name="publisher-information-publications"></a>게시자 정보, 게시
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **게시** 탭은 왼쪽 창에서 선택한 게시자에서의 모든 게시에 대한 요약 정보를 제공합니다.  
   
 ## <a name="options"></a>옵션  

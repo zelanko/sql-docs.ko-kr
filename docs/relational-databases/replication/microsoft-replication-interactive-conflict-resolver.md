@@ -14,15 +14,15 @@ ms.assetid: d3d4a480-782b-4b1d-b839-565c8cf6cb24
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5eca59b2277eefc351b63013dbc614eac9ed0b65
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 557627ae2524131c277361967e6564704f691397
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722013"
 ---
 # <a name="microsoft-replication-interactive-conflict-resolver"></a>Microsoft 복제 상호 충돌 해결 프로그램
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   상호 충돌 해결 프로그램은 Windows 동기화 관리자로 동기화하는 병합 구독에 사용할 수 있습니다. 상호 충돌 해결 프로그램을 사용하여 데이터 충돌 결과를 확인, 비교, 편집 및 선택할 수 있습니다. 또한 복제에는 충돌 결과를 커밋한 다음 충돌 결과를 보고 수정할 수 있는 충돌 뷰어가 포함되어 있습니다. 상호 충돌 해결 프로그램을 사용하여 동기화 중에 결과를 선택할 수 있습니다.  
   
 > [!NOTE]  

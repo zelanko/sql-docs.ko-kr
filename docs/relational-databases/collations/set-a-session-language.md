@@ -22,15 +22,15 @@ ms.assetid: de7f2c90-8f4f-4cfc-94cc-4933a7fd2bde
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 201dbacf7ce2dde7cb3da387bbfd79070e1790ed
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d2acf936682a9c220d08df637778169e9a5b5840
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140874"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719901"
 ---
 # <a name="set-a-session-language"></a>세션 언어 설정
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   세션 언어를 사용하여 언어 및 문화 기본 설정을 기반으로 다음과 같은 요소가 서버에 표시되는 방식을 설정할 수 있습니다.  
   
 -   오류 및 기타 시스템 메시지에 사용될 언어입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 지역화된 모든 언어로 모든 시스템 오류 문자열 및 메시지의 복사본을 여러 개 만들 수 있습니다. 이러한 메시지는 [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) 카탈로그 뷰를 사용하여 볼 수 있습니다. 해당 언어 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하면 이러한 시스템 메시지가 해당 언어로 변환됩니다. 기본적으로 이러한 메시지의 영어(미국) 집합이 포함됩니다. 또한 [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)를 사용하여 특정 언어의 사용자 정의 메시지를 추가할 수 있습니다.  

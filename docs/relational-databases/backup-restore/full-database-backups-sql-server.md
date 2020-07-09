@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ece8a9d031b5b85c7da672a50e56666f3814cd20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3abf911faf82a4a20ed99c2f89d4171300981de0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179089"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718049"
 ---
 # <a name="full-database-backups-sql-server"></a>전체 데이터베이스 백업(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   전체 데이터베이스 백업은 전체 데이터베이스를 백업합니다. 이 백업은 전체 데이터베이스 백업이 복원된 후 전체 데이터베이스가 복구될 수 있도록 트랜잭션 로그의 일부를 포함합니다. 전체 데이터베이스 백업은 백업 완료 시점의 데이터베이스를 나타냅니다.  
   
 > [!TIP]  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2374100459ea4e6ee05a8bba8e77919ec9185898
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: cfcb0ba165b7657a640bb509dc71dfaa441fd015
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529132"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720548"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>병합 복제에 대한 웹 동기화
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   병합 복제에 대한 웹 동기화를 사용하면 HTTPS 프로토콜을 사용하여 데이터를 복제할 수 있으며 다음 시나리오에서도 유용합니다.  
   
 -   인터넷을 통해 모바일 사용자로부터 데이터 동기화  

@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 92794414-6e54-437a-88b6-3bf02d3802f6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d7097c59f77b95a561420183e2e899c0672dc5e7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c7643560c893824247271f1eb56f2def90754c83
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67908119"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720894"
 ---
 # <a name="publication-peer-to-peer-replication"></a>게시(피어 투 피어 복제)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **게시** 페이지는 피어 투 피어 복제에 대해 설정되어 있는 트랜잭션 게시를 표시합니다. 게시는 **게시 속성** 대화 상자의 **구독 옵션** 페이지에서 설정합니다.  
   
 ## <a name="options"></a>옵션  

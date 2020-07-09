@@ -14,15 +14,15 @@ f1_keywords:
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: eff34ba4721f036aceca6c6617177881017744e1
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: f0c5b5b8df782652565247c7c050b1c1edc6a8b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220604"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719947"
 ---
 # <a name="back-up-database-media-options-page"></a>데이터베이스 백업(미디어 옵션 페이지)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **데이터베이스 백업** 대화 상자의 **미디어 옵션** 페이지를 사용하여 데이터베이스 미디어 옵션을 확인하거나 수정할 수 있습니다.  
   
  **SQL Server Management Studio를 사용하여 백업을 만들려면**  

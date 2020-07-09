@@ -15,15 +15,15 @@ ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 85f175d82c84351e0abc42038c378beab35167f7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7256bc010e5320d63502cce834996f2be01c2a08
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68769274"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720615"
 ---
 # <a name="validate-subscription"></a>구독 유효성 검사
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   **구독 유효성 검사** 대화 상자를 사용하여 다음에 구독에 대한 병합 에이전트가 실행될 때 병합 게시에 대한 해당 구독의 유효성을 검사하도록 지정할 수 있습니다. 유효성 검사 결과는 복제 모니터에 표시됩니다. 자세한 내용은 [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md)을 참조하세요.  
   
  또한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시를 마우스 오른쪽 단추로 클릭하고 **모든 구독 유효성 검사**를 클릭하여 병합 게시에 대한 모든 구독의 유효성을 검사할 수 있습니다.  

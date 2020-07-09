@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 9bef3565-5f13-42ac-8723-ebe55b0c11e6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 41e709bcbc533c3cf7ff294dd2b07a6c638a0c52
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d12b863ad925a80a3403df4861faafeddaf230d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321352"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720917"
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>게시 정보, 경고(병합 게시, SQL Server 2005 이상)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **경고** 탭은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전을 실행하는 배포자에서 사용할 수 있습니다. **경고** 탭을 사용하면 선택한 게시에 대해 다음 태스크를 수행할 수 있습니다.  
   
 -   경고 사용  

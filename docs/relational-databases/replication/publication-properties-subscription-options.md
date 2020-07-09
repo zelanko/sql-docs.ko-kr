@@ -13,15 +13,15 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1052379affba718d49879c85e395b0117671075a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cad5a65d4988dcc942f571e58abf576d8ba8e05a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286577"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720867"
 ---
 # <a name="publication-properties-subscription-options"></a>게시 속성, 구독 옵션
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **게시 속성** 대화 상자의 **구독 옵션** 페이지를 사용하여 구독과 연결된 게시 수준 속성을 보고 설정할 수 있습니다. 속성은 다음 범주로 그룹화됩니다.  
   
 -   모든 게시에 적용되는 속성  

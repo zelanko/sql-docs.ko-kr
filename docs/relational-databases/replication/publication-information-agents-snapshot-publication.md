@@ -14,15 +14,15 @@ ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6a99255f0e9e87236773a0ca7a9e9c4b44cfcf1c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fd8ffd7e05c259130f83ca700a393b5493dd573d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286667"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720982"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>게시 정보, 에이전트(스냅샷 게시)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **에이전트** 탭은 선택한 게시에 대한 스냅샷 에이전트의 요약 정보를 표시합니다.  
   
 ## <a name="options"></a>옵션  

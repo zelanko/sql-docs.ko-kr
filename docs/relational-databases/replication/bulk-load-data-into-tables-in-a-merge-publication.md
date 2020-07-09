@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 16e6498a-b449-4051-aec4-ea814a2ad993
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f5b6deb043b12dc90a6543f7ef394046b00aaf5e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cc2a57e7ce3323b2982ab862f73e0188174e8aa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710289"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722190"
 ---
 # <a name="bulk-load-data-into-tables-in-a-merge-publication"></a>병합 게시에서 데이터를 테이블로 대량 로드
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [bcp 유틸리티](../../tools/bcp-utility.md) 또는 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 명령을 사용하여 데이터를 테이블로 로드할 경우 기본적으로 [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) 시스템 테이블의 추적 데이터를 유지 관리하는 병합 복제 트리거가 발생하지 않습니다. 데이터가 로드될 때 병합 복제 트리거가 강제로 발생하도록 하거나 복제 저장 프로시저를 사용하여 대량 복사 작업을 수행한 후 생성된 복제 메타데이터를 프로그래밍 방식으로 삽입할 수 있습니다.  
   
 ### <a name="to-bulk-load-data-into-tables-published-by-merge-replication-using-the-bcp-utility"></a>bcp 유틸리티를 사용하여 병합 복제를 통해 게시된 테이블로 데이터를 대량으로 로드하려면  

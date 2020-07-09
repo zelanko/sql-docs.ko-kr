@@ -14,15 +14,15 @@ ms.assetid: 38ef2f54-53bb-4053-876d-86f8f06a4519
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f896520f56e96aa1d79f80fea49b835980a7442d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a3dcf73e70c1181b01df2e8cd43ac8e45713543
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286680"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720972"
 ---
 # <a name="publication-information-agents-transactional-publication"></a>게시 정보, 에이전트(트랜잭션 게시)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **에이전트** 탭은 선택한 게시에 대한 에이전트의 요약 정보를 표시합니다. 스냅샷 에이전트 및 로그 판독기 에이전트에 대한 정보는 모든 트랜잭션 게시에 대해 표시됩니다. 큐 판독기 에이전트에 대한 정보는 지연 업데이트 구독이 설정된 트랜잭션 게시에 대해 표시됩니다.  
   
 ## <a name="options"></a>옵션  

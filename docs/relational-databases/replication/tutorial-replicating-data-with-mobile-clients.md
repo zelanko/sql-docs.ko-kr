@@ -14,15 +14,15 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84a07ef89bc42538a5043a46ed3bcd23bc588caf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4110d523762a147a569caaf03d71dbdc4567c5c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321857"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720697"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>자습서: 서버와 모바일 클라이언트 간의 복제 구성(병합)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 병합 복제는 가끔씩만 연결되는 중앙 서버와 모바일 클라이언트 간에 데이터를 이동할 때 발생하는 문제를 해결하는 좋은 방법입니다. 복제 마법사를 사용하여 병합 복제 토폴로지를 쉽게 구성하고 관리할 수 있습니다. 
 
 이 자습서에서는 모바일 클라이언트에 대해 복제 토폴로지를 구성하는 방법에 대해 설명합니다. 병합 복제에 대한 자세한 내용은 [병합 복제의 개요](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication)를 참조하세요.

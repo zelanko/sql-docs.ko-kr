@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 91e176fe-c838-44e9-b4fc-2814a0551ca3
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 975dca6fe0151b5bd1fc1d72b9d14e47a57413d2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fede0215ef21ee7680068629a990ec1a9dd3417f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67915209"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718958"
 ---
 # <a name="sql-server-xtp-io-governor"></a>SQL Server XTP IO 관리자
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server XTP IO 관리자 성능 개체에는 메모리 내 OLTP IO 속도 관리자와 관련된 카운터가 포함되어 있습니다.
 

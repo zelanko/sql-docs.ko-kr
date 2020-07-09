@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5d364f28e1d27d9eeb758c174e7e8062e7540873
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2effd97ab34bd59d0dbebf283bff398508f21cbb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180210"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718024"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>suspect_pages 테이블 관리(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suspect_pages [!INCLUDE[tsql](../../includes/tsql-md.md)]테이블을 관리하는 방법에 대해 설명합니다. 주의 대상 페이지에 대한 정보를 유지 관리하는 데 사용되는 **suspect_pages** 테이블은 복원이 필요한지 여부를 결정하는 데 사용됩니다. [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 테이블은 [msdb 데이터베이스](../../relational-databases/databases/msdb-database.md)에 상주합니다.  
   
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 데이터 페이지를 읽으려고 할 때 다음 오류 중 하나가 발생하면 페이지가 "주의 대상"으로 간주됩니다.  

@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a371ac7f8cad6f90f83c7408b315fa35d571d1f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1fd961b275f6b392e9284312675c873f16fecd27
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179047"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718062"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일-스냅샷 백업에서는 Azure 스냅샷을 사용하여 Azure Blob 스토리지 서비스를 통해 저장된 데이터베이스 파일을 거의 즉시 백업하고 더욱 신속하게 복원합니다. 이 기능을 사용하면 백업 및 복원 정책을 단순화할 수 있습니다. 라이브 데모는 [지정 시간 복원 데모](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)를 참조하세요. Azure 블로그 스토리지 서비스를 사용하여 데이터베이스 파일을 저장하는 자세한 방법은 [Microsoft Azure의 SQL Server 데이터 파일](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)을 참조하세요.  
   
  ![스냅샷 백업 아키텍처 다이어그램](../../relational-databases/backup-restore/media/snapshotbackups.PNG "스냅샷 백업 아키텍처 다이어그램")  

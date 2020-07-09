@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 97521f50bd002cc67a3d73dbfde3999f4ea3dabc
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: d47d3f31533dc7cabd4195ad585068474fe446eb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220618"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719977"
 ---
 # <a name="back-up-database-general-page"></a>데이터베이스 백업(일반 페이지)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **데이터베이스 백업** 대화 상자의 **일반** 페이지를 사용하여 데이터베이스 백업 작업에 대한 설정을 확인하거나 수정할 수 있습니다.  
   
  기본 백업 개념에 대한 자세한 내용은 [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)를 참조하세요.  

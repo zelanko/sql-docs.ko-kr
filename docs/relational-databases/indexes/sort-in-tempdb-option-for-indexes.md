@@ -18,15 +18,15 @@ ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03dbb54a41ef319b7a44185cee00d5de7d46b126
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 80c0651be14f30f14d95b949d5d3f941df5c7cda
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67909538"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722328"
 ---
 # <a name="sort_in_tempdb-option-for-indexes"></a>인덱스에 대한 SORT_IN_TEMPDB 옵션
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   인덱스를 만들거나 다시 만들 때 SORT_IN_TEMPDB 옵션을 ON으로 설정하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 **tempdb** 를 사용하여 인덱스를 만드는 데 사용되는 중간 정렬 결과를 저장하도록 지시할 수 있습니다. 이 옵션을 사용하면 인덱스를 만드는 데 사용되는 임시 디스크 공간이 늘어나지만 **tempdb** 가 사용자 데이터베이스와 다른 디스크 집합에 있을 때 인덱스를 만들거나 다시 만드는 데 필요한 시간이 줄어듭니다. **tempdb**에 대한 자세한 내용은 [인덱스 생성 메모리 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)를 참조하십시오.  
   
