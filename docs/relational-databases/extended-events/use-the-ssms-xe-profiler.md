@@ -16,16 +16,16 @@ ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: yualan
 ms.author: alayu
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fe9f63f1ae9b007da18f1b81ed23cd1c49bbfcbd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9cd63ae6c84ce09b70246aae91c16446017f6cfc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79487551"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756820"
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>SSMS XEvent Profiler 사용
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 XEvent Profiler는 확장 이벤트의 라이브 뷰어 창이 표시되는 SSMS(SQL Server Management Studio) 기능입니다. 이 개요에서는 이 프로파일러를 사용하는 이유, 주요 기능 및 확장 이벤트를 보기 시작하기 위한 지침을 설명합니다.
 
 ## <a name="why-would-i-use-the-xevent-profiler"></a>XEvent Profiler를 왜 사용해야 합니까?

@@ -12,15 +12,15 @@ ms.assetid: 7894850c-91fe-47c0-a03c-baacbc10d29c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 215dcf690d9c8434d6df459db96460f3841f74a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0d8aa24365c721937e6dfa7e99e99ee4dced5ea5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67913360"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756086"
 ---
 # <a name="audit-server-principal-management-event-class"></a>Audit Server Principal Management 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Audit Server Principal Management** 이벤트 클래스는 서버 보안 주체가 생성, 변경 또는 삭제될 때 발생합니다.  
   
 ## <a name="audit-server-principal-management-event-class-data-columns"></a>Audit Server Principal Management 이벤트 클래스 데이터 열  

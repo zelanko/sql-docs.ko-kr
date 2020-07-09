@@ -12,15 +12,15 @@ ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23ce9be8428799a963addda5510e3528f94fb86b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7a69d13beae131a6635c51c305c8d87c1c35127
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115860"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753347"
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **OLEDB Call** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 분산 쿼리 및 원격 저장 프로시저를 위해 OLE DB 공급자를 호출할 때 발생합니다.  
   
  **OLEDB Call** 이벤트 클래스는 데이터를 요청하지 않는 호출이나 **QueryInterface** 메서드를 사용하지 않는 호출을 모니터링 할 때만 추적에 포함시키십시오. **OLEDB Call** 이벤트 클래스를 추적에 포함할 때 발생하는 오버헤드의 정도는 추적 중 데이터베이스에 대한 OLE DB 호출의 빈도에 따라 달라집니다. 호출이 자주 발생할 경우 추적으로 인해 성능이 심각하게 저하될 수도 있습니다.  

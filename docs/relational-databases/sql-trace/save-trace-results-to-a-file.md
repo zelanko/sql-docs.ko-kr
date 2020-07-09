@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 74f80667-62f3-4e14-bb1a-f0c2b6ef3402
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1506c13655187ad29d27f96f5fa1b73d01f67620
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 056c31859fcd9eb70bb0ccf7d3ec86c3ffdcc070
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70846817"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750949"
 ---
 # <a name="save-trace-results-to-a-file"></a>파일에 추적 결과 저장
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   추적 결과를 파일에 저장할 수 있습니다. 추적 파일은 추적 결과가 기록된 파일입니다. 추적 파일은 로컬 디렉터리(예: C:\\*foldername*\\*filename.trc*) 또는 네트워크 디렉터리(예: \\\computername\sharename\filename.trc)에서 찾을 수 있습니다.  
   
  추적 파일을 사용하여 다음 작업을 할 수 있습니다.  

@@ -10,16 +10,16 @@ ms.topic: reference
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2db8a1ca2d96046c9eb3d3d5e8dd393b0342334d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e61edcb1f8c1dd9844d887818d208cde1615d5ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79487571"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756792"
 ---
 # <a name="system-objects-that-support-extended-events"></a>확장 이벤트를 지원하는 시스템 개체
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 현재 문서에는 확장 이벤트와 관련된 다른 문서에 연결된 링크가 있습니다. 이러한 문서에서는 다음 내용에 관해 설명합니다.
 

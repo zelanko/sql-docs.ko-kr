@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 85e5416df62423ddbfaffb3f8490687cda1349eb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 959ac9ec61bc420d67e51b6f6de7733f95036861
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68109907"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749527"
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>고급 편집(조건) 대화 상자
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **고급 편집** 대화 상자를 사용하여 정책 기반 관리 조건에 대한 복잡한 식을 만들 수 있습니다.  
   
 ## <a name="options"></a>옵션  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8f7160513cd23e16f06dbba27851920b66bf72c8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: de603ecc1d221dad96c7aaf70330198f7732c60c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68119824"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759592"
 ---
 # <a name="parse-database-engine"></a>Parse(데이터베이스 엔진)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Parse는 **hierarchyid**의 정식 문자열 표현을 **hierarchyid** 값으로 변환합니다. Parse는 문자열 형식에서 **hierarchyid**로 변환될 때 암시적으로 호출됩니다. [ToString](../../t-sql/data-types/tostring-database-engine.md)과 반대로 작동합니다. Parse()는 정적 메서드입니다.
   

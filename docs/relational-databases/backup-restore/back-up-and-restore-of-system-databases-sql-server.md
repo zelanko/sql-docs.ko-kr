@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d16e3159f3881df1a904e9d3a6c39bc04667ce9d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7444bd163ad453a2aac3c598ab0cc8575c09eb0d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826503"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754587"
 ---
 # <a name="backuprestoresystemdatabases-sql-server"></a>백업 및 복원: 시스템 데이터베이스(SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 서버 인스턴스의 작업에 필수적인*시스템 데이터베이스*라는 시스템 수준 데이터베이스의 집합을 유지 관리합니다. 모든 중요한 업데이트 후에는 여러 시스템 데이터베이스를 백업해야 합니다. 항상 백업해야 하는 시스템 데이터베이스에는 **msdb**, **master**및 **model**이 있습니다. 데이터베이스가 서버 인스턴스에서 복제를 사용할 경우 **배포** 시스템 데이터베이스도 백업해야 하며 이러한 시스템 데이터베이스를 백업하면 하드 디스크 손실과 같은 시스템 오류 이벤트에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템을 복원 및 복구할 수 있습니다.  
   

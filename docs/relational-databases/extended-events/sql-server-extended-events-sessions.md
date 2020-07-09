@@ -1,7 +1,7 @@
 ---
 title: SQL Server Extended Events Sessions
 description: SQL Server 확장 이벤트 세션은 확장 이벤트 엔진을 호스트하는 SQL Server 프로세스에서 생성됩니다. 세션 상태와 세션 콘텐츠에 대해 알아봅니다.
-ms.date: 03/14/2017
+ms.date: 05/26/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,16 +15,16 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cce8dfb0d96059f577adb4e86e6fc5556d9fd90c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fec4a507a8a40cb38bf9b5faf58545aa89a55167
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79487671"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756839"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트 세션은 확장 이벤트 엔진을 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에서 생성됩니다. 확장 이벤트 세션의 다음과 같은 요소는 확장 이벤트 인프라 및 일반적인 프로세스를 파악할 수 있는 컨텍스트를 제공합니다.  
   
@@ -34,9 +34,9 @@ ms.locfileid: "79487671"
   
 ## <a name="session-states"></a>세션 상태  
  다음 그림에서는 확장 이벤트 세션의 다양한 상태를 보여 줍니다.  
-  
- ![확장 이벤트 세션 상태](../../relational-databases/extended-events/media/xesessionstate.gif "확장 이벤트 세션 상태")  
-  
+
+![확장 이벤트 세션 상태](../../relational-databases/extended-events/media/xesessionstate.png "확장 이벤트 세션 상태")
+
  위 그림을 보면 이벤트 세션에 대해 다른 DDL 명령이 실행됨에 따라 세션 상태가 바뀜을 알 수 있습니다. 다음 표에서는 이러한 상태 변경을 설명합니다.  
   
 |그림 레이블|DDL 문|Description|  

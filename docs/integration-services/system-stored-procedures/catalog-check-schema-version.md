@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: e0d5e9f5-59c6-4118-87b5-4aa5c37a7df6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7d7ec8899e880220dc2011014501a883fafa4470
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eaa4293c13362a68b40855997143d135baaaa29d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295619"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749733"
 ---
 # <a name="catalogcheck_schema_version"></a>catalog.check_schema_version 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   SSISDB 카탈로그 스키마와 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 이진 파일(ISServerExec 및 SQLCLR 어셈블리)이 호환되는지 여부를 결정합니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "71295619"
 ## <a name="syntax"></a>구문  
   
 ```sql  
-catalog.check_schema_version [@use32bitruntime = ] use32bitruntime  
+catalog.check_schema_version [ @use32bitruntime = ] use32bitruntime  
 ```  
   
 ## <a name="arguments"></a>인수  

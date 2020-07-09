@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: f79e824b-1525-45de-8ede-513563af41b6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3aea62a27635e5d923edd26936480d5d9ff9a37a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a7590bab8546dbc43e07cd88f6892d6cae6d4eda
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180688"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759094"
 ---
 # <a name="select-backup-destination"></a>백업 대상 선택
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **백업 대상 선택** 대화 상자를 사용하여 디바이스를 백업 대상으로 선택할 수 있습니다. 디스크 또는 논리적 백업 디바이스를 백업 대상으로 사용할 수 있습니다.  
   

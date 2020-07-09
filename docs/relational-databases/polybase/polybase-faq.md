@@ -8,16 +8,16 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.openlocfilehash: 0df90e30d88941d431da486fc7790b072a3eba77
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5083228cc44b859faec866eca7d36aae9626e8fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216063"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760448"
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ## <a name="polybase-vs-linked-servers"></a>PolyBase 및 연결된 서버
 다음 표에서는 PolyBase와 연결된 서버 기능 간의 차이점을 보여 줍니다.

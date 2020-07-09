@@ -18,17 +18,17 @@ helpviewer_keywords:
 - services [SQL Server], full-text search properties
 - test
 ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 28f6224a414510fe6b97727a300976bb27e951cb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 385bdc1eef159fab35808516f3b5f55626235bba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826922"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752376"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   전체 텍스트 엔진의 속성과 관련된 정보를 반환합니다. 이 속성은 **sp_fulltext_service**를 사용하여 설정하고 검색할 수 있습니다.  
   

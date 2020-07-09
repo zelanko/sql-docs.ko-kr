@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0407934e060a6398bbe862ba7c208ece37496732
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 248057224ed371dd36474491fd26615f9d069234
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628783"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85761941"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE(Transact-SQL) SET HADR 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 보조 데이터베이스에서 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 옵션 설정에 대해 ALTER DATABASE 구문을 제공합니다. ALTER DATABASE 문당 하나의 SET HADR 옵션만 허용됩니다. 이러한 옵션은 보조 복제본에만 사용할 수 있습니다.  
   

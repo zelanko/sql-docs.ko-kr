@@ -13,15 +13,15 @@ ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57abfdd5679e4ab68f83959f44fce143056c2c7e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f739a8344eacaaa3e0057608b79bf60c88d1b29
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048660"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751065"
 ---
 # <a name="linestring"></a>LineString
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **LineString** 은 일련의 점과 이 점을 연결하는 선분을 나타내는 1차원 개체입니다.  
   
 ## <a name="linestring-instances"></a>LineString 인스턴스  

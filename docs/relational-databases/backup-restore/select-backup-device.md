@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 7887c9fd-15ce-4cc8-b069-845c1d09088c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 15b444c21be67be97f66e7855cfeb4c37eadbd22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8870de514e6f59010405a644d62dd6c611658f3e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180694"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759081"
 ---
 # <a name="select-backup-device"></a>백업 디바이스 선택
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **백업 디바이스 선택** 대화 상자를 사용하여 복원 작업에 사용할 논리적 백업 디바이스를 선택할 수 있습니다.  
   
  논리적 백업 디바이스는 운영 체제가 제공하는 물리적 디바이스인 테이프 드라이브 또는 디스크 드라이브에 해당하는 사용자 정의된 논리적 디바이스입니다.  

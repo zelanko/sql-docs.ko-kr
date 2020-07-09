@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: cddb71a35ac762ed602dd93e9e50f463da3e41f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 427f24bdce5c7af4d0bd9c6b5c0c030112f8a5a1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67947921"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758905"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server, User Settable 개체
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Microsoft **의** User Settable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 사용하면 사용자 지정 카운터 인스턴스를 만들 수 있습니다. 사용자 지정 카운터 인스턴스를 사용하여 사용자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 고유한 구성 요소 같이 기존 카운터로 모니터링할 수 없는 서버 측면(예: 로그된 고객의 주문 수나 제품 정보)를 모니터링할 수 있습니다.  
   
  **User Settable** 개체는 **사용자 카운터 1** 에서 **사용자 카운터 10**까지 10개의 쿼리 카운터 인스턴스를 가집니다. 이러한 카운터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저 **sp_user_counter1** 에서 **sp_user_counter10**까지 매핑됩니다. 사용자 애플리케이션에서 이러한 저장 프로시저를 실행할 때 저장 프로시저로 설정된 값이 시스템 모니터에 표시됩니다. 카운터는 특정 제품에 대한 주문이 하루에 발생하는 횟수를 계산하는 저장 프로시저와 같은 모든 단일 정수 값을 모니터링할 수 있습니다.  

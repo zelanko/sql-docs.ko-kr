@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 544f4194-253e-4c57-96ca-31c16301434f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a52cf852edc4a03a72ba9cb71a4ccd50a3963ada
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bbac0c31618e419c7d67c3feba861e5e69008ee8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245447"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758201"
 ---
 # <a name="view-the-state-of-a-mirrored-database-sql-server-management-studio"></a>미러된 데이터베이스의 상태 보기(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   데이터베이스 미러링 세션 동안 **데이터베이스 속성** 대화 상자의 **미러링** 페이지에서 상태를 확인할 수 있습니다.  
   
 ### <a name="to-view-the-status-of-a-database-mirroring-session"></a>데이터베이스 미러링 세션 상태를 보려면  
@@ -37,7 +37,7 @@ ms.locfileid: "75245447"
   
     |상태|설명|  
     |------------|-----------------|  
-    |\<비어 있음>|데이터베이스 미러링 세션이 없으며 **미러링** 페이지에 대해 보고할 활동이 없습니다.|  
+    |\<blank>|데이터베이스 미러링 세션이 없으며 **미러링** 페이지에 대해 보고할 활동이 없습니다.|  
     |일시 중지됨|주 데이터베이스가 실행되고 있지만 미러 서버로 로그를 보내지 않습니다. 데이터베이스의 미러 복사본을 사용할 수 없습니다.|  
     |연결 없음|주 서버 인스턴스는 해당 파트너나 미러링 모니터 서버 인스턴스(있는 경우)에 연결할 수 없습니다.|  
     |동기화 중|미러 데이터베이스의 내용이 주 데이터베이스의 내용보다 오래된 것입니다. 주 서버 인스턴스에서 로그 레코드를 미러 서버 인스턴스로 보내면 미러 서버 인스턴스에서 변경 사항을 미러 데이터베이스에 적용하여 롤포워드합니다.<br /><br /> 데이터베이스 미러링 세션을 시작할 때는 미러 데이터베이스와 주 데이터베이스가 동기화하는 중입니다.|  

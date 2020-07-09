@@ -12,15 +12,15 @@ ms.assetid: 30df7ba9-1e5f-432b-b90b-4310ef0473c0
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 765d6c69831a485978f2ae55941d59de579f672b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 83f5442ab8cd6858fa95c29c2e37acf63c0f89f2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095319"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753314"
 ---
 # <a name="xquery-static-type-event-class"></a>XQuery Static Type 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   XQuery Static Type 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 XQuery 식을 실행할 때 발생합니다. 이 이벤트 클래스는 XQuery 식의 정적 유형을 제공합니다.  
   
 ## <a name="xquery-static-type-event-class-data-columns"></a>XQuery Static Type 이벤트 클래스 데이터 열  

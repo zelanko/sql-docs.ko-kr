@@ -14,15 +14,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: b2c743d23ae9c9ee730c3c1daa8d41709e44fd6f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0372e215646640f1f587964cddd8a302894e633d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75728564"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754491"
 ---
 # <a name="performance-dashboard"></a>성능 대시보드
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 버전 17.2 이상에는 성능 대시보드가 포함되어 있습니다. 이 대시보드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]부터 시작) 및 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] Managed Instance의 성능 상태에 대한 빠른 인사이트를 시각적으로 제공하도록 설계되었습니다. 
 

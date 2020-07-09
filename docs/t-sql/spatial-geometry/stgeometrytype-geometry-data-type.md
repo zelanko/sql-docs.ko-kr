@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 224cdc83-aa83-4ad4-bb82-b7481031e910
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7aa87371bda53f1c329b0b30a490450cd7d9cba5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9b8c68f34d74e512e17ac75bc4ff9b4b326852b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67950181"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762477"
 ---
 # <a name="stgeometrytype-geometry-data-type"></a>STGeometryType(geometry 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **geometry** 인스턴스로 표현된 OGC(Open Geospatial Consortium) 형식 이름을 반환합니다.
   

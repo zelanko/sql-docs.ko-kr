@@ -17,15 +17,15 @@ ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5e3c8d9876545e1e68a9795b7c327ac1e47e2d6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ce1e904ac0d3d5b329fce676218e3133bda60d81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74096011"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757695"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>여러 행의 데이터를 처리하기 위한 DML 트리거 만들기
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   DML 트리거 코드를 작성할 때는 트리거를 실행시키는 단일 문이 여러 행의 데이터에 영향을 줄 수 있다는 점을 고려해야 합니다. 이 동작은 여러 행에 영향을 줄 수 있는 UPDATE 및 DELETE 트리거의 경우에 일반적입니다. 기본 INSERT 문은 한 행만 추가하기 때문에 INSERT 트리거의 경우에는 일반적이지 않습니다. 그러나 INSERT INTO (*table_name*) SELECT 문으로 INSERT 트리거를 실행할 수 있기 때문에 여러 행을 삽입하는 경우 단일 트리거를 호출할 수도 있습니다.  
   
  DML 트리거 함수가 한 테이블의 요약 값을 자동으로 다시 계산하여 계속 계산하기 위해 그 결과를 다른 테이블에 저장하는 경우 특히 다중 행을 고려해야 합니다.  

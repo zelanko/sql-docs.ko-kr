@@ -12,15 +12,15 @@ ms.assetid: 49364423-6aa9-40f3-914a-eca37be12b88
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85f631d55d93701738edca23f127ad4e0b212e34
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 210cafe436036219cf3ece8ec67d7db0ff7ee5da
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089640"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756046"
 ---
 # <a name="deprecation-event-category"></a>Deprecation 이벤트 범주
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Deprecation** 이벤트 범주에는 일반적인 사용 중단 알림 이벤트가 포함됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  

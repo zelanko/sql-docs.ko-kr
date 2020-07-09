@@ -13,15 +13,15 @@ ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 263f7025bf89b3bb1751d2eb6677c90dbbfb442e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ac76c82401a1f9796ce411d2eb15303f8f7013c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048684"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751070"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **GeometryCollection** 은 1개 이상의 **geometry** 또는 **geography** 인스턴스 컬렉션입니다. **GeometryCollection** 은 비워 둘 수 있습니다.  
   
 ## <a name="geometrycollection-instances"></a>GeometryCollection 인스턴스  

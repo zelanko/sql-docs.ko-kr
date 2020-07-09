@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 20c2fa0b-656b-4519-b34c-cc8f094290d4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1eb57ac476d430d5bc79c71ce5c6a12087155366
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f64b10f4ce73c886ce229c9c859bd6de9693cc80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089006"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762288"
 ---
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves(geometry 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 이 메서드는 인스턴스가 1차원 공간 데이터 형식일 때 **geometry** 인스턴스의 곡선 수를 반환합니다. 1차원 공간 데이터 형식에는 **LineString**, **CircularString** 및 **CompoundCurve**가 포함됩니다. `STNumCurves`()는 단순 형식에서만 작동하며 **MultiLineString**과 같은 **geometry** 컬렉션에서는 작동하지 않습니다.
   

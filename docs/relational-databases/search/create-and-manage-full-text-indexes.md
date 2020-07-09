@@ -13,15 +13,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a76112a515f33bc169883c60de68742239c8d4e1
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 6d51f0b31729d6b061c7e8cfd82b5047796c6daa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81304444"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758074"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>전체 텍스트 인덱스 만들기 및 관리
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 이 항목에서는 SQL Server에서 전체 텍스트 인덱스를 만들고, 채우고, 관리하는 방법을 설명합니다.
   
 ## <a name="prerequisite---create-a-full-text-catalog"></a>필수 조건 - 전체 텍스트 카탈로그 만들기

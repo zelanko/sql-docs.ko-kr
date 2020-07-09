@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14edbb22-df7b-4b8a-b16c-ac477a5d32c1
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 46ed6c4f4d01b6c4ce1851c24a678617967560a7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 18c9c3f647bd2121ac7edf65011e0ac6a0038789
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67950058"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762417"
 ---
 # <a name="stisclosed-geometry-data-type"></a>STIsClosed(geometry 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 주어진 **geometry** 인스턴스의 시작점 및 끝점이 동일하면 1을 반환합니다. 포함된 각 **geometry** 인스턴스가 닫혀 있으면 **geometrycollection** 형식에 대해 1을 반환하고, 인스턴스가 닫혀 있지 않으면 0을 반환합니다.
   

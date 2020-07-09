@@ -10,26 +10,26 @@ ms.topic: language-reference
 ms.assetid: 1f68f157-c4e9-412c-92b3-53a2faaba29b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 69a0a462f4c265e6992f27286377f7bcaa3b2dad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6354ca6d5326e4b38e18f38be3b6e5095ad8d1b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71281155"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749645"
 ---
 # <a name="catalogdelete_environment_reference-ssisdb-database"></a>catalog.delete_environment_reference(SSISDB 데이터베이스)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그의 프로젝트에서 환경 참조를 삭제합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```sql  
-delete_environment_reference [ @reference_id = ] reference_id  
+catalog.delete_environment_reference [ @reference_id = ] reference_id  
 ```  
   
 ## <a name="arguments"></a>인수  

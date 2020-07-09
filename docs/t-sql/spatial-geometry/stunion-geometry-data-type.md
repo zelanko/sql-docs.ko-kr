@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5b168118-137d-402f-9173-fee3f365a89c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 868b344a18494e4b92cd3ee5944cb80ad15ab845
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2fab8310cf59a2d6209f6c4111241071c648df46
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066225"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762128"
 ---
 # <a name="stunion-geometry-data-type"></a>STUnion(geometry 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 **geometry** 인스턴스와 다른 **geometry** 인스턴스의 합집합을 나타내는 개체를 반환합니다.
   

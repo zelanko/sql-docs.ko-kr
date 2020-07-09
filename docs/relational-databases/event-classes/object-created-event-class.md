@@ -12,15 +12,15 @@ ms.assetid: 57536924-5e66-4b09-a76d-8fcea2131771
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 333e6ab1e529b130a81fd8b5622016cd4f9f9d10
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc33fb281f0056925397d763f4e7b888a7293f50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115919"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756003"
 ---
 # <a name="objectcreated-event-class"></a>Object:Created 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Object:Created 이벤트 클래스는 CREATE INDEX, CREATE TABLE, CREATE DATABASE 문 등을 사용하여 개체가 생성되었음을 나타냅니다.  
   
  이 이벤트 클래스를 사용하여 때때로 임시 저장 프로시저를 만드는 ODBC 애플리케이션 등을 사용하여 개체가 생성되는지 여부를 확인할 수 있습니다. LoginName 및 NTUserName 데이터 열을 모니터링하면 개체를 생성, 삭제 또는 액세스하는 사용자의 이름을 확인할 수 있습니다.  

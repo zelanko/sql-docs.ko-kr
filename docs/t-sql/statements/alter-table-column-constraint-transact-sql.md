@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f45cb5b270bff9b2609ca0228c4e37a06314d368
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a54784e777f85fea73036df3f0c6ec0b23be878e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982003"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760983"
 ---
 # <a name="alter-table-column_constraint-transact-sql"></a>ALTER TABLE column_constraint(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)을 사용하여 테이블에 추가된 새 열 정의의 일부인 PRIMARY KEY, FOREIGN KEY, UNIQUE 또는 CHECK 제약 조건의 속성을 지정합니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "73982003"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 [ CONSTRAINT constraint_name ]   
 {   
     [ NULL | NOT NULL ]   
@@ -132,7 +132,7 @@ ms.locfileid: "73982003"
   
  **Vendor** 테이블의 행에 대해 DELETE 문을 실행하고 **ProductVendor.VendorID**에 대해 ON DELETE CASCADE 동작을 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 **ProductVendor** 테이블에 하나 이상의 종속 행이 있는지 확인합니다. **ProductVendor** 테이블에 종속 행이 있는 경우 삭제되며 **Vendor** 테이블에서 참조된 행도 삭제됩니다.  
   
- 반대로 NO ACTION을 지정한 경우 **ProductVendor** 테이블에 **Vendor** 행을 참조하는 행이 하나 이상 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류가 발생하고 참조된 행의 삭제 동작이 롤백됩니다.  
+ 반대로 NO ACTION을 지정한 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]ProductVendor**테이블에**Vendor**행을 참조하는 행이 하나 이상 있으면**에서 오류가 발생하고 참조된 행의 삭제 동작이 롤백됩니다.  
   
  ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
  변경된 테이블의 행에 참조 관계가 있고 참조된 행이 부모 테이블에서 업데이트될 경우 해당 행에 대해 발생할 동작을 지정합니다. 기본값은 NO ACTION입니다.  
@@ -157,7 +157,7 @@ ms.locfileid: "73982003"
   
  **Vendor** 테이블의 행에 대해 UPDATE 문을 실행하고 **ProductVendor.VendorID**에 대해 ON UPDATE CASCADE 동작을 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]는 **ProductVendor** 테이블에 하나 이상의 종속 행이 있는지 확인합니다. **ProductVendor** 테이블에 종속 행이 있는 경우 업데이트되며 **Vendor** 테이블에서 참조된 행도 업데이트됩니다.  
   
- 반대로 NO ACTION을 지정한 경우 **ProductVendor** 테이블에 **Vendor** 행을 참조하는 행이 하나 이상 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류가 발생하고 참조된 행의 업데이트 동작이 롤백됩니다.  
+ 반대로 NO ACTION을 지정한 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]ProductVendor**테이블에**Vendor**행을 참조하는 행이 하나 이상 있으면**에서 오류가 발생하고 참조된 행의 업데이트 동작이 롤백됩니다.  
   
  NOT FOR REPLICATION  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
