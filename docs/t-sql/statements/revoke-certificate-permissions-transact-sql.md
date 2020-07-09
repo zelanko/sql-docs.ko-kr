@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cc2fb34ad30905b579ab0371f54e1fbc17bf87ab
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1aab98d77a5b52e6b75683126d78e52e38baa7e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633092"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735415"
 ---
 # <a name="revoke-certificate-permissions-transact-sql"></a>REVOKE 인증서 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   인증서에 대한 사용 권한을 취소합니다.  
   

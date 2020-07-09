@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1da1a6aa4b7a98a7ac76c32effc116efdc7020d1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 630bbbdfe62e19897ce625af92b1c16069443abe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140779"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733881"
 ---
 # <a name="configure-properties-of-a-data-collector"></a>데이터 수집기의 속성 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 데이터 수집기의 속성을 구성하는 방법에 대해 설명합니다.  
   
 ## <a name="data-collection-properties-general-tab"></a>데이터 컬렉션 속성(일반 탭)  

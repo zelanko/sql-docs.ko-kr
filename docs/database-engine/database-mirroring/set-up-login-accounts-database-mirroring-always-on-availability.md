@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 851b2aa7dfb7a3c492182840d7d57045a5a72e8a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6545a639b9bcdfafcc1bdfdd67930014beab00e7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252774"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735131"
 ---
 # <a name="set-up-login-accounts---database-mirroring-always-on-availability"></a>로그인 계정 설정 - 데이터베이스 미러링 또는 Always On 가용성 그룹
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   두 서버 인스턴스가 서로의 [데이터베이스 미러링 엔드포인트](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) 포인트에 연결할 수 있으려면 각 인스턴스의 로그인 계정에 다른 인스턴스에 대한 액세스가 필요합니다. 또한 각 로그인 계정에는 다른 인스턴스의 데이터베이스 미러링 엔드포인트에 대한 CONNECT 권한도 있어야 합니다.  
   

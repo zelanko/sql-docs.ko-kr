@@ -12,15 +12,15 @@ ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
 author: CarlRabeler
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a49c0a75a67e524475a8a1db7c4905c6490c85fc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 429077aaa011b0de85af351d748baa5484c6e5e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412541"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734994"
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 SQL Server 관리 개체 지원
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 이 항목에서는 메모리 내 OLTP를 지원하는 SMO(SQL Server 관리 개체) 항목을 설명합니다.  
 
 ## <a name="smo-types-and-members"></a>SMO 형식 및 멤버

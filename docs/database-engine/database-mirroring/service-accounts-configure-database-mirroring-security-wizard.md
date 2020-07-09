@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: d58d8f93-7888-4d66-af4d-969ef6a2dbee
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8c8a83b68febee5e00a80bd9977713a786b70f9a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 04f55c8081f6c2a6aa7cfcc1b1d9c1ac8d9d31fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822455"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735146"
 ---
 # <a name="configure-database-mirroring-security-wizard-service-accounts"></a>데이터베이스 미러링 보안 구성 마법사: 서비스 계정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Windows 인증을 사용할 때 서버 인스턴스가 다른 계정을 사용할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 서비스 계정을 지정합니다. 이러한 서비스 계정은 모두 같은 도메인 또는 트러스트된 도메인에 있는 도메인 계정이어야 합니다.  
   
  모든 서버 인스턴스가 동일한 도메인 계정을 사용하거나 인증서 기반 인증을 사용하는 경우 필드를 비워 둡니다. **마침**을 클릭하기만 하면 마법사가 자동으로 현재 마법사 계정을 기반으로 계정을 구성합니다.  

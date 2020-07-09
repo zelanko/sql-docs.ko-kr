@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a22aafc778b7f64cb3e1e526c60efb49cbbd7f5c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8ed8a3fae8e6568458cc9d7219b6c0a0ce3ceab8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633080"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735385"
 ---
 # <a name="revoke-full-text-permissions-transact-sql"></a>REVOKE 전체 텍스트 사용 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   전체 텍스트 카탈로그 또는 전체 텍스트 중지 목록에 대한 사용 권한을 취소합니다.  
   

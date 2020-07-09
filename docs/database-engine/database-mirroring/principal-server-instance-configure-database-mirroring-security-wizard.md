@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 58af27d7-c5dd-4669-be6b-b472bc2c8ef4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8d48c59b06202f898fdf61746aee9f62ca155da6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b6afefac893920b3a11dcb4cb763e8f6cae6f0a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75255958"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735211"
 ---
 # <a name="principal-server-instance-configure-database-mirroring-security-wizard"></a>주 서버 인스턴스(데이터베이스 미러링 보안 구성 마법사)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 페이지를 사용하여 주 데이터베이스의 서버 인스턴스에 대한 정보를 지정할 수 있습니다. 주 데이터베이스는 미러링 세션을 시작하는 데이터베이스의 복사본입니다. 세션이 시작된 후 주 데이터베이스는 사용자 변경 내용을 받아들이는 데이터베이스의 복사본입니다. 장애 조치(Failover)가 일어나면 주 역할과 미러링 역할이 서로 바뀌므로 처음의 주 데이터베이스가 주 데이터베이스로 유지되지 않을 수도 있습니다.  
   
  **SQL Server Management Studio를 사용하여 데이터베이스 미러링을 구성하려면**  

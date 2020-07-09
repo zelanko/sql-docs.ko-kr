@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8d4ecd428d8d9d76ff4e9a543321d461b3983708
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 70930149f26088d6c95bad6205b4421850292602
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822526"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735200"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션에서 미러링 모니터 서버 제거(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 데이터베이스 미러링 세션에서 미러링 모니터 서버를 제거하는 방법에 대해 설명합니다. 데이터베이스 소유자는 데이터베이스 미러링 세션 중에 언제든지 미러링 모니터를 해제할 수 있습니다.  
   
  **항목 내용**  

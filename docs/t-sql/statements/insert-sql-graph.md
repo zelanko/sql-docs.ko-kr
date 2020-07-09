@@ -17,17 +17,17 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c4cfba19dc16e043ba6325fb6c9acb1665a597f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5c9f43a8c3739652cabfbe4abe21fca7612e9d38
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071168"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735470"
 ---
 # <a name="insert-sql-graph"></a>INSERT(SQL Graph)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 `node` 또는 `edge` 테이블에 새 행을 하나 이상 추가합니다. 
+`node`의 `edge` 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 새 행을 하나 이상 추가합니다. 
 
 > [!NOTE]   
 >  표준 Transact-SQL 문의 경우 [INSERT TABLE(Transact SQL)](../../t-sql/statements/insert-transact-sql.md)을 참조하세요.
@@ -37,7 +37,7 @@ ms.locfileid: "68071168"
 ## <a name="insert-into-node-table-syntax"></a>노드 테이블 구문에 INSERT 
 노드 테이블에 삽입하는 구문은 일반 테이블과 동일합니다. 
 
-```sql
+```syntaxsql
 [ WITH <common_table_expression> [ ,...n ] ]  
 INSERT   
 {  

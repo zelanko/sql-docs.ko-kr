@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a70e2ee6-59b0-4543-b883-e9cbae6199be
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8275b212995e700c5798a9df6eda87f69e970813
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7d9682f27a4218fc1b50c5eef4ebc975fcbbb874
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633758"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735658"
 ---
 # <a name="grant-asymmetric-key-permissions-transact-sql"></a>GRANT 비대칭 키 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   비대칭 키에 대한 사용 권한을 부여합니다.  
   

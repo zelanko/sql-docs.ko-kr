@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: d8d3a22e-1ff8-48a4-891f-4c8619437e24
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7657c18708e9b54c33f15142c57782da671037f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d03b67e5a047d615a53e1053d39b75d41f7cbc09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903937"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733823"
 ---
 # <a name="mssqlserver_605"></a>MSSQLSERVER_605
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>세부 정보  
   
-|||  
-|-|-|  
+| attribute | 값 |  
+| :-------- | :---- |  
 |제품 이름|SQL Server|  
 |이벤트 ID|605|  
 |이벤트 원본|MSSQLSERVER|  
@@ -45,7 +45,7 @@ ms.locfileid: "67903937"
   
 -   운영 체제에서 I/O 작업이 완료되었다고 너무 빨리 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 알리는 경우. 실제 데이터 손상이 없는 경우에도 오류 메시지가 표시됩니다.  
   
-최적화 프로그램 힌트 NOLOCK을 사용하여 쿼리를 실행하거나 트랜잭션 격리 수준을 READ UNCOMMITTED로 설정하는 경우. NOLOCK 또는 READ UNCOMMITTED를 사용하는 쿼리에서 다른 사용자가 이동하거나 변경 중인 데이터를 읽으려고 하면 605 오류가 발생합니다. 일시적 605 오류인지 확인하려면 나중에 쿼리를 다시 실행합니다. 자세한 내용은 기술 자료 문서 [235880](https://support.microsoft.com/kb/235880/en-us) "You receive an "Error 605" error message when you run a query with the optimizer hint NOLOCK or you set the transaction isolation level to READ UNCOMMITTED in SQL Server."("SQL Server에서 최적화 프로그램 힌트 NOLOCK를 사용하여 쿼리를 실행하거나 트랜잭션 격리 수준을 READ UNCOMMITTED로 설정하면 "오류 605" 오류 메시지가 나타난다")를 참조하세요.  
+최적화 프로그램 힌트 NOLOCK을 사용하여 쿼리를 실행하거나 트랜잭션 격리 수준을 READ UNCOMMITTED로 설정하는 경우. NOLOCK 또는 READ UNCOMMITTED를 사용하는 쿼리에서 다른 사용자가 이동하거나 변경 중인 데이터를 읽으려고 하면 605 오류가 발생합니다. 일시적 605 오류인지 확인하려면 나중에 쿼리를 다시 실행합니다. 자세한 내용은 이 KB 문서 [235880](https://support.microsoft.com/kb/235880/en-us): "SQL Server에서 최적화 프로그램 힌트 NOLOCK를 사용하여 쿼리를 실행하거나 트랜잭션 격리 수준을 READ UNCOMMITTED로 설정하면 "오류 605" 오류 메시지가 나타난다"를 참조하십시오.  
   
 일반적으로 데이터에 액세스하는 동안 오류가 발생했는데 후속 DBCC CHECKDB 작업이 오류 없이 완료되면 일시적 605 오류일 가능성이 큽니다.  
   

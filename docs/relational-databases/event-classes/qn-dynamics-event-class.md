@@ -12,15 +12,15 @@ ms.assetid: 3c1ffa0c-c9e5-40a6-a26b-28339f60ebc3
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 575ca341e19d36055d7780fd1deec8d05e370111
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 913db56e174656c6d50d559924aa5c8022bbd546
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940612"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733709"
 ---
 # <a name="qndynamics-event-class"></a>QN:Dynamics 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   QN:Dynamics 이벤트 클래스는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 쿼리 알림을 지원하기 위해 수행하는 백그라운드 작업에 대한 정보를 보고합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]내에서 백그라운드 스레드는 구독 제한 시간, 시작될 보류 중인 구독 및 매개 변수 테이블 소멸을 모니터링합니다.  
   
 ## <a name="qndynamics-event-class-data-columns"></a>QN:Dynamics 이벤트 클래스 데이터 열  

@@ -1,7 +1,6 @@
 ---
 title: 컬렉션 세트 로그 보기(SSMS)
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -12,15 +11,16 @@ helpviewer_keywords:
 ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f2b3ec4e0c7ec6a9335c9e37558123eca77995a3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 3b347a88187e7f7b961c8ad86b50b334e0837333
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056429"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733829"
 ---
 # <a name="view-collection-set-logs-sql-server-management-studio"></a>컬렉션 세트 로그 보기(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 모든 컬렉션 집합 로그 또는 개별 컬렉션 집합 로그를 볼 수 있습니다.  
   
 ### <a name="to-view-collection-set-logs"></a>컬렉션 집합 로그를 보려면  

@@ -12,15 +12,15 @@ ms.assetid: ef9759f8-5613-4884-9257-86b609313f69
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb11261f8ff099874ebadbdaffb02b5c8706aa02
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c65beb690edf055b1cf3730d08e8d3ecb02841c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940705"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733765"
 ---
 # <a name="plan-guide-unsuccessful-event-class"></a>Plan Guide Unsuccessful 이벤트 클래스
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Plan Guide Unsuccessful 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 계획 지침이 포함된 쿼리 또는 일괄 처리에 대한 실행 계획을 만들지 못했음을 나타냅니다. 이 경우 계획 지침을 사용하지 않은 채 계획이 컴파일됩니다. 다음과 같은 경우 이 이벤트가 발생합니다.  
   

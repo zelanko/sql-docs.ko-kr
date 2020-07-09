@@ -1,7 +1,6 @@
 ---
 title: 'Progress Report: Online Index Operation 이벤트 클래스'
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -12,15 +11,16 @@ ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c87be1a2a80f9bd2f31077e6b6154720c58193b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 69f03978dd362f706216d4d21cb1225ad2a8d10d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056124"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733730"
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>Progress Report: Online Index Operation 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Progress Report: Online Index Operation 이벤트 클래스는 온라인 인덱스 작성 작업을 진행하는 동안 온라인 인덱스 작성 진행률을 나타냅니다.  
   
 ## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Progress Report: Online Index Operation 이벤트 클래스 데이터 열  

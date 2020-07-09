@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1f6a1c47cf5672cdf0f9a22be6a252cfc8cdbe87
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1b6a98658ec6d550ff9255361cc343bb617fac46
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244373"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735221"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>데이터베이스 미러링을 위한 필수 구성 요소, 제한 사항 및 권장 사항
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)]을 대신 사용합니다.  

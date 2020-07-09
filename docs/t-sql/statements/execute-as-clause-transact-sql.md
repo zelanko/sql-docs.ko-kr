@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2dfba9eef86ab77ec114bc74712d9573fb5e4c48
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f48d933dec2dc87d0171641146f652a4e881045e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155056"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735681"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS 절(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자 정의 모듈인 함수(인라인 테이블 반환 함수 제외), 프로시저, 큐 및 트리거의 실행 컨텍스트를 정의할 수 있습니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "70155056"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 -- SQL Server Syntax  
 Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
 { EXEC | EXECUTE } AS { CALLER | SELF | OWNER | 'user_name' }   
@@ -58,7 +58,7 @@ Queues
 { EXEC | EXECUTE } AS { SELF | OWNER | 'user_name' }   
 ```  
   
-```  
+```syntaxsql
   
 -- Azure SQL Database Syntax  
 Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
@@ -101,7 +101,7 @@ DDL Triggers with Database Scope
  실행 컨텍스트의 사용자 ID는 메타데이터에 저장되고 **sys.sql_modules** 또는 **sys.assembly_modules** 카탈로그 뷰의 **execute_as_principal_id** 열에 표시될 수 있습니다.  
   
  **'** *login_name* **'**  
- 모듈 내부의 문이 *login_name*에 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 컨텍스트에서 실행되도록 지정합니다. 모듈 내의 모든 개체에 대한 사용 권한은 *login_name*과 비교 검증됩니다. *login_name*은 서버 범위의 DDL 트리거 또는 로그온 트리거에만 지정할 수 있습니다.  
+ 모듈 내부의 문이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]login_name*에 지정된*  로그인의 컨텍스트에서 실행되도록 지정합니다. 모듈 내의 모든 개체에 대한 사용 권한은 *login_name*과 비교 검증됩니다. *login_name*은 서버 범위의 DDL 트리거 또는 로그온 트리거에만 지정할 수 있습니다.  
   
  *login_name*은 그룹, 역할, 인증서 또는 키이거나 NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService 또는 NT AUTHORITY\LocalSystem과 같은 기본 제공 계정이 될 수 없습니다.  
   

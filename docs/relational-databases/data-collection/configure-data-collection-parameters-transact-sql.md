@@ -1,7 +1,6 @@
 ---
 title: 데이터 컬렉션 매개 변수 구성(T-SQL)
-ms.custom: seo-lt-2019
-ms.date: 03/04/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,15 +10,16 @@ helpviewer_keywords:
 ms.assetid: 850905b6-35d2-4ed1-ab51-de64daa832b2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b7d8d45273fc9ac79a5dd65cfb168868e76f55cd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 47d18830d262bc817061aa3637cc3a4871accfd3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056457"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733893"
 ---
 # <a name="configure-data-collection-parameters-transact-sql"></a>데이터 컬렉션 매개 변수 구성(Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   사용자 지정 컬렉션 집합을 만들기 전에 먼저 데이터 컬렉션 매개 변수를 구성해야 합니다. 데이터 수집기에서 제공하는 저장 프로시저를 사용하여 이를 구성할 수 있습니다. 이 태스크를 수행하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 쿼리 편집기를 사용하여 다음 절차를 수행해야 합니다.  
   
 > [!NOTE]  

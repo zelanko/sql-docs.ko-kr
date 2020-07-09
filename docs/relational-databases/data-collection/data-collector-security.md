@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f81ec185224818060faed79ecf18e08a1743ea7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1b2e6e607a49ea4888e6f5f5ec9ad5148e9f790b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140737"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733850"
 ---
 # <a name="data-collector-security"></a>데이터 수집기 보안
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   데이터 수집기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 구현하는 역할 기반 보안 모델을 사용합니다. 이 모델을 사용하면 데이터베이스 관리자가 해당 태스크를 수행하는 데 반드시 필요한 사용 권한만 있는 보안 컨텍스트에서 다양한 데이터 수집기 태스크를 실행할 수 있습니다. 이 방법은 저장 프로시저 또는 뷰를 사용해야만 액세스할 수 있는 내부 테이블 관련 작업에도 사용됩니다. 내부 테이블에 대한 사용 권한이 부여되지 않는 대신, 해당 테이블에 액세스하는 데 사용되는 저장 프로시저 또는 뷰의 사용자에 대해 사용 권한을 확인합니다.  
   
 > [!IMPORTANT]  

@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1e8fa047a65663f918bfcce4a92692f1c443f77a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 888be4bfe27530a726d7352494959af05fe240e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73064658"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735820"
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   데이터베이스에 대한 전체 텍스트 카탈로그를 만듭니다. 전체 텍스트 카탈로그 하나에 전체 텍스트 인덱스는 여러 개 있을 수 있지만 각 전체 텍스트 인덱스는 전체 텍스트 카탈로그 하나에만 속할 수 있습니다. 각 데이터베이스에는 전체 텍스트 카탈로그가 없거나 하나 이상 포함될 수 있습니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "73064658"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 CREATE FULLTEXT CATALOG catalog_name  
      [ON FILEGROUP filegroup ]  
@@ -79,7 +79,7 @@ CREATE FULLTEXT CATALOG catalog_name
  ACCENT_SENSITIVITY = {ON|OFF}  
  전체 텍스트 인덱싱에 대해 카탈로그의 악센트 구분 여부를 지정합니다. 이 속성이 변경되면 인덱스를 다시 만들어야 합니다. 기본값은 데이터베이스 데이터 정렬에 지정된 악센트 구분을 사용하는 것입니다. 데이터베이스 데이터 정렬을 표시하려면 **sys.databases** 카탈로그 뷰를 사용합니다.  
   
- 전체 텍스트 카탈로그의 현재 악센트 구분 속성 설정을 확인하려면 *catalog_name*에 대해 **accentsensitivity** 속성 값을 가진 FULLTEXTCATALOGPROPERTY 함수를 사용합니다. 반환된 값이 '1'인 경우 전체 텍스트 카탈로그는 악센트를 구분하며 반환된 값이 '0'인 경우 카탈로그는 악센트를 구분하지 않습니다.  
+ 전체 텍스트 카탈로그의 현재 악센트 구분 속성 설정을 확인하려면 **catalog_name**에 대해 *accentsensitivity* 속성 값을 가진 FULLTEXTCATALOGPROPERTY 함수를 사용합니다. 반환된 값이 '1'인 경우 전체 텍스트 카탈로그는 악센트를 구분하며 반환된 값이 '0'인 경우 카탈로그는 악센트를 구분하지 않습니다.  
   
  AS DEFAULT  
  카탈로그를 기본 카탈로그로 지정합니다. 전체 텍스트 카탈로그를 명시적으로 지정하지 않고 전체 텍스트 인덱스를 만든 경우 기본 카탈로그가 사용됩니다. 이미 AS DEFAULT로 표시된 기존의 전체 텍스트 카탈로그가 있을 경우 새 카탈로그를 AS DEFAULT로 설정하면 이 카탈로그가 기본 전체 텍스트 카탈로그가 됩니다.  

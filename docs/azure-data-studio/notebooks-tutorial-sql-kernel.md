@@ -4,21 +4,21 @@ description: 이 자습서에서는 SQL Server Notebook을 만들고 실행하�
 author: markingmyname
 ms.author: maghan
 ms.reviewer: mikeray, alayu
-ms.topic: conceptual
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.topic: tutorial
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.custom: ''
 ms.date: 03/30/2020
-ms.openlocfilehash: 70136c114fe1d4e9421400eff5f171a70289098c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64e5bcfa188707e784d33a6504b120c4ce0ea553
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82178700"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735321"
 ---
 # <a name="create-and-run-a-sql-server-notebook"></a>SQL Server Notebook 만들기 및 실행
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 이 자습서에서는 SQL Server를 사용하여 Azure Data Studio에서 Notebook을 만들고 실행하는 방법을 보여 줍니다.
 

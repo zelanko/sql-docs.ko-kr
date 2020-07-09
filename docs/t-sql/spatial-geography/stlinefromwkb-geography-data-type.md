@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8ac2b772-6673-4ba1-a7ab-3b4b5841560b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 2d24050e9344c3dd351f852e624e6a1453432ebc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1920a71912fee4e9508769e3edb92370018c3991
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67952248"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736065"
 ---
 # <a name="stlinefromwkb-geography-data-type"></a>STLineFromWKB(geography 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 OGC(Open Geospatial Consortium) WKB(Well-Known Binary) 표현의 **LineString geography** 인스턴스를 반환합니다.
   

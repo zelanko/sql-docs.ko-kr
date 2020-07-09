@@ -27,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2693b552008760025977a4c0ed0d3f3c3065713a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 30e57f094256004d90d82df175fff9f9e2e17ddd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67912612"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735792"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   현재 데이터베이스에서 지정된 열 값에 기반하여 테이블 또는 인덱스의 행을 파티션에 매핑하는 함수를 만듭니다. 분할된 테이블 또는 인덱스를 만드는 첫 번째 단계는 CREATE PARTITION FUNCTION을 사용하는 것입니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 테이블이나 인덱스 하나에 파티션을 최대 15,000개까지 포함할 수 있습니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67912612"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 CREATE PARTITION FUNCTION partition_function_name ( input_parameter_type )  
 AS RANGE [ LEFT | RIGHT ]   
 FOR VALUES ( [ boundary_value [ ,...n ] ] )   
@@ -73,7 +73,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  *boundary_value*에 제공된 값 개수가 14,999개를 초과하지 않도록 지정합니다. 생성되는 파티션 수는 *n* + 1개입니다. 값은 순서대로 나열되지 않아도 됩니다. 값이 순서대로 나열되지 않은 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 값을 정렬하여 함수를 만들고 값이 순서대로 제공되지 않았다는 경고를 반환합니다. *n*에 중복 값이 있는 경우 데이터베이스 엔진에서 오류를 반환합니다.  
   
  **LEFT** | RIGHT  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 간격 값을 왼쪽에서 오른쪽으로 오름차순으로 정렬할 때 *boundary_value* [ **,** _...n_ ]이 각 경계 값 간격의 왼쪽과 오른쪽 중 어느 쪽에 속하는지 지정합니다. 지정하지 않은 경우 LEFT가 기본값입니다.  
+ *에서 간격 값을 왼쪽에서 오른쪽으로 오름차순으로 정렬할 때* boundary_value **[** ,  ...n[!INCLUDE[ssDE](../../includes/ssde-md.md)] ]이 각 경계 값 간격의 왼쪽과 오른쪽 중 어느 쪽에 속하는지 지정합니다. 지정하지 않은 경우 LEFT가 기본값입니다.  
   
 ## <a name="remarks"></a>설명  
  파티션 함수의 범위는 함수가 생성된 데이터베이스로 제한됩니다. 해당 데이터베이스 내에서 파티션 함수는 다른 함수와 서로 다른 네임스페이스에 있습니다.  

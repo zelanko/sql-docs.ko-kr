@@ -1,7 +1,7 @@
 ---
 title: Hadoop 연결 관리자 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5149f7e470720a2efc99c522bd905a4a1a13f2c6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4cf042d2ab9c2d3e7c492fa008282cbcbe730f8e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903790"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735113"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 연결 관리자
 
@@ -83,7 +83,7 @@ SSIS 컴퓨터에서 다음을 수행합니다.
 
     Kerberos 영역은 Windows 도메인과 다르므로 컴퓨터가 작업 그룹의 구성원으로 구성되어 있어야 합니다. 다음 예제와 같이 Kerberos 영역을 설정하고 KDC 서버를 추가합니다. 필요에 따라 `REALM.COM`을 해당하는 고유한 영역으로 바꿉니다.
 
-    ```    
+    ```console
     C:> Ksetup /setdomain REALM.COM`
     C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
     ```
@@ -92,7 +92,7 @@ SSIS 컴퓨터에서 다음을 수행합니다.
 
 2.  **Ksetup** 명령으로 구성을 확인합니다. 출력이 다음 샘플과 유사하게 표시됩니다.
 
-    ```
+    ```console
     C:> Ksetup
     default realm = REALM.COM (external)
     REALM.com:
@@ -114,7 +114,7 @@ KDC 서버에서 다음을 수행합니다.
 
 1.  **krb5.conf** 파일에서 KDC 구성을 편집합니다. 다음 구성 템플릿을 참조하여 KDC가 Windows 도메인을 신뢰하도록 허용합니다. 기본적으로 이 구성은 **/etc/krb5.conf**에 있습니다.
 
-    ```
+    ```console
     [logging]
     default = FILE:/var/log/krb5libs.log
     kdc = FILE:/var/log/krb5kdc.log
@@ -162,7 +162,7 @@ KDC 서버에서 다음을 수행합니다.
 
 1.  다음 **Ksetup** 명령을 실행하여 영역 항목을 추가합니다.
 
-    ```
+    ```console
     C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
@@ -201,10 +201,10 @@ KDC 서버에서 다음을 수행합니다.
 
 다음 **Ksetup** 명령을 실행하여 영역 항목을 추가합니다.
 
-    ```
-    C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
-    C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
-    ```
+```console
+C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
+C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
+```
 
 ## <a name="see-also"></a>참고 항목  
  [Hadoop 하이브 태스크](../../integration-services/control-flow/hadoop-hive-task.md)   

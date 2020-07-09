@@ -21,15 +21,15 @@ ms.assetid: 501f2c8a-6aeb-41af-bf0b-974d17af33c0
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 865a46c90fb45b6e41dc5ca202133e7b3a22dd53
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: cd9c09ba45558daae53f7a1b4e26395e32edd5c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633728"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735613"
 ---
 # <a name="grant-database-scoped-credential-permissions-transact-sql"></a>GRANT Database Scoped Credential Permissions(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
   데이터베이스 범위 자격 증명에 대한 사용 권한을 부여합니다. 
   

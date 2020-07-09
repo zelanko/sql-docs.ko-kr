@@ -1,7 +1,6 @@
 ---
 title: 컬렉션 세트 일정 보기 또는 변경
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -18,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e38b03a9e903666593567bf34eaa50c578de6825
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8e72be7c753db0871191e44bbc431d755ddfa193
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055326"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733807"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>컬렉션 집합 일정 보기 또는 변경(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 컬렉션 집합 일정을 보거나 변경할 수 있습니다.  
   
  컬렉션 모드가 캐시되거나 캐시되지 않은지에 따라 일정을 변경할 수 있는 방법이 결정됩니다. 캐시된 모드에서는 컬렉션과 업로드에 별도의 일정을 사용합니다. 캐시되지 않은 모드에서는 컬렉션과 업로드에 동일한 일정을 사용합니다. 각 시스템 데이터 컬렉션 집합에 대한 컬렉션 모드의 유형은 다음과 같습니다.  
@@ -110,10 +110,11 @@ ms.locfileid: "74055326"
  **데이터 컬렉션 및 업로드**  
  데이터를 수집하고 관리 데이터 웨어하우스에 업로드하는 방법을 지정합니다. 다음 옵션 중 하나를 선택합니다.  
   
-|||  
-|-|-|  
+| 옵션 | Description |
+| :----- | :---------- |
 |**캐시되지 않음. 동일한 일정에 따라 데이터를 수집 및 업로드합니다.**|이 옵션을 선택할 경우 다음 중 하나를 지정합니다.<br /><br /> **일정**. 일정에 따라 데이터가 수집되고 업로드됩니다. **선택** 을 클릭하여 미리 정의된 일정 목록에서 선택하거나 **새로 만들기** 를 클릭하여 새 일정을 만듭니다.<br /><br /> **요청 시**. 요청 시 데이터가 수집되고 업로드됩니다.|  
 |**캐시됨. 컬렉션 빈도 집합에 따라 데이터를 수집 및 캐시합니다. 캐시된 데이터는 별도의 일정에 따라 업로드합니다.**|지정된 컬렉션 빈도에 따라 데이터를 수집 및 캐시합니다. 수집된 데이터는 별도의 일정에 따라 업로드합니다.|  
+|||
   
  **컬렉션 빈도(초)**  
  컬렉션 집합에 있는 컬렉션 항목을 표시합니다. 각 컬렉션 항목에 대해 다음과 같은 정보가 제공됩니다.  
@@ -133,11 +134,12 @@ ms.locfileid: "74055326"
  **수집된 데이터를 관리 데이터 웨어하우스에 보유할 기간 지정**  
  수집된 데이터의 보유 기간을 지정합니다. 다음 옵션 중 하나를 선택합니다.  
   
-|||  
-|-|-|  
+| 옵션 | Description |
+| :----- | :---------- |
 |**데이터 보유 기간**|이 옵션은 기본적으로 선택되어 있으며 기본 보유 기간은 14일입니다.|  
 |**데이터 무기한 보유**|데이터 보유 기간에 시간 제한이 없습니다.|  
-  
+|||
+
  **업로드 페이지**  
   
  이 페이지를 사용하여 이 컬렉션 집합에 의해 수집되는 데이터의 업로드 일정을 구성할 수 있습니다.  

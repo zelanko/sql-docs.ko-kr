@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ebe6db6130b3d9f058c1c8c65572263348f3dd99
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a9e988529cc5a59786504be8566e55a4449a5ee6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72689839"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732864"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>데이터 형식 동의어(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 데이터 형식 동의어는 ISO 호환성을 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함되었습니다. 다음 표에서는 동의어 및 동의어가 매핑되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식을 나열합니다.
   

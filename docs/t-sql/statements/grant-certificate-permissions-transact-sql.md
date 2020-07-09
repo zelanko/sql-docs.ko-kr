@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 94ba7d38e8191c9284aaff41853925dba704903c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 261f2c20c60c138708791d73319da2bb153a23c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633780"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735647"
 ---
 # <a name="grant-certificate-permissions-transact-sql"></a>GRANT 인증서 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 인증서에 대한 사용 권한을 부여합니다. 
   

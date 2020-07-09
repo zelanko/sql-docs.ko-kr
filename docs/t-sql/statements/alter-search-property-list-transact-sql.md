@@ -23,21 +23,21 @@ helpviewer_keywords:
 ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f9caf29596f3a5cf610e02ffcf4f27bfacbce668
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5397d5d20edb6f989714f8ffff4dcdd15c41e3c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001640"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735973"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   지정된 검색 속성 목록에 대해 지정한 검색 속성을 추가하거나 삭제합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 ALTER SEARCH PROPERTY LIST list_name  
 {  
    ADD 'property_name'  
@@ -71,7 +71,7 @@ SELECT name FROM sys.registered_search_property_lists;
  *property_name*  
  전체 텍스트 쿼리에서 속성을 식별하는 데 사용할 이름을 지정합니다. *property_name*은 속성 집합 내에서 해당 속성을 고유하게 식별해야 합니다. 속성 이름은 내부에 공백을 포함할 수 있습니다. *property_name*의 최대 길이는 256자입니다. "작성자"나 "집 주소"와 같은 친숙한 단어 또는 **System.Author**나 **System.Contact.HomeAddress**와 같은 Windows 정식 속성 이름을 이 이름에 사용할 수 있습니다.  
   
- 개발자는 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 조건자에 있는 속성을 식별하기 위해 *property_name*에 지정된 값을 사용해야 합니다. 따라서 속성을 추가할 때는 지정된 속성 집합 GUID(*property_set_guid*) 및 속성 식별자(*property_int_id*)로 정의된 속성을 의미 있게 나타내는 값을 지정해야 합니다. 속성 이름에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  
+ 개발자는 *CONTAINS* 조건자에 있는 속성을 식별하기 위해 [property_name](../../t-sql/queries/contains-transact-sql.md)에 지정된 값을 사용해야 합니다. 따라서 속성을 추가할 때는 지정된 속성 집합 GUID(*property_set_guid*) 및 속성 식별자(*property_int_id*)로 정의된 속성을 의미 있게 나타내는 값을 지정해야 합니다. 속성 이름에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  
   
  현재 데이터베이스의 검색 속성 목록에 현재 존재하는 속성의 이름을 보려면 다음과 같이 [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) 카탈로그 뷰를 사용하십시오.  
   

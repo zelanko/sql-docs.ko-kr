@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a5e11aef47752b1e58543b593f15df3d1dd470f6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 12de5cfddd99d6f25745e5b682b7f645dbbadb8f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827147"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734201"
 ---
 # <a name="asymkeyproperty-transact-sql"></a>ASYMKEYPROPERTY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 이 함수는 비대칭 키의 속성을 반환합니다.
   
