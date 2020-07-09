@@ -20,34 +20,36 @@ helpviewer_keywords:
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b365aac0e21261edb3620e1cd58a656747b274a1
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 291c076d78b227487c6c4267343de5cffc7a3d63
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636067"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813900"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   애플리케이션 역할의 이름, 암호 또는 기본 스키마를 변경합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>구문
   
 ```syntaxsql
   
-ALTER APPLICATION ROLE application_role_name   
+ALTER APPLICATION ROLE application_role_name
     WITH <set_item> [ ,...n ]  
   
-<set_item> ::=   
-    NAME = new_application_role_name   
+<set_item> ::=
+    NAME = new_application_role_name
     | PASSWORD = 'password'  
     | DEFAULT_SCHEMA = schema_name  
 ```  
   
-## <a name="arguments"></a>인수  
+## <a name="arguments"></a>인수
+
  *application_role_name*  
  수정할 애플리케이션 역할의 이름입니다.  
   
@@ -60,8 +62,9 @@ ALTER APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA =*schema_name*  
  서버에서 개체 이름을 확인할 때 첫 번째로 검색할 스키마를 지정합니다. *schema_name*은 데이터베이스에 존재하지 않는 스키마일 수 있습니다.  
   
-## <a name="remarks"></a>설명  
- 새 애플리케이션 역할 이름이 데이터베이스에 이미 있는 경우 문이 실패합니다. 애플리케이션 역할의 이름, 암호 또는 기본 스키마가 변경된 경우에도 역할과 연결된 ID는 변경되지 않습니다.  
+## <a name="remarks"></a>설명
+
+새 애플리케이션 역할 이름이 데이터베이스에 이미 있는 경우 문이 실패합니다. 애플리케이션 역할의 이름, 암호 또는 기본 스키마가 변경된 경우에도 역할과 연결된 ID는 변경되지 않습니다.  
   
 > [!IMPORTANT]  
 >  암호 만료 정책은 애플리케이션 역할 암호에 적용되지 않습니다. 따라서 강력한 암호를 선택할 때는 특히 주의해야 합니다. 애플리케이션 역할을 호출하는 애플리케이션은 해당 암호를 저장해야 합니다.  

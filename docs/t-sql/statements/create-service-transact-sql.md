@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 761a04baca38ee1301c8f51d8b69564f409fac1e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ade19ba855f4a11bcc354959865f9bc33416240e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70745392"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881942"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   새 서비스를 만듭니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스는 특정 태스크나 작업 집합의 이름입니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서는 이 서비스 이름을 사용하여 메시지를 라우팅하고 데이터베이스 내의 올바른 큐에 메시지를 전달하고 대화에 대한 계약을 적용합니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "70745392"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 CREATE SERVICE service_name  
    [ AUTHORIZATION owner_name ]  
    ON QUEUE [ schema_name. ]queue_name  
@@ -50,7 +50,7 @@ CREATE SERVICE service_name
  생성할 서비스의 이름입니다. 새 서비스는 현재 데이터베이스에 생성되며 AUTHORIZATION 절에서 지정한 주체가 소유합니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다. *service_name*은 유효한 **sysname**이어야 합니다.  
   
 > [!NOTE]  
-> *service_name*에 ANY 키워드를 사용하는 서비스를 만들지 마십시오. `CREATE BROKER PRIORITY`에서 서비스 이름에 `ANY`를 지정하면 모든 서비스에 대해 우선순위가 고려됩니다. 이러한 규칙은 이름이 ANY인 서비스로 제한되지 않습니다.  
+> *service_name*에 ANY 키워드를 사용하는 서비스를 만들지 마십시오. `ANY`에서 서비스 이름에 `CREATE BROKER PRIORITY`를 지정하면 모든 서비스에 대해 우선순위가 고려됩니다. 이러한 규칙은 이름이 ANY인 서비스로 제한되지 않습니다.  
   
  AUTHORIZATION *owner_name*  
  서비스 소유자를 지정된 데이터베이스 사용자 또는 역할로 설정합니다. 현재 사용자가 **dbo** 또는 **sa**일 경우 *owner_name*은 유효한 사용자 또는 역할의 이름일 수 있습니다. 그렇지 않으면 *owner_name*은 현재 사용자 이름, 현재 사용자가 IMPERSONATE 권한을 갖는 사용자의 이름, 현재 사용자가 속해 있는 역할 이름 중 하나여야 합니다.  

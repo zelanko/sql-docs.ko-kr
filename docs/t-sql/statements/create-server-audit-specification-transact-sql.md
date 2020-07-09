@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f3655effe5c77938af28079391d8f6e7fa800699
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 54382ecc642f68570c4d4ffcb4156b32232da192
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632561"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881955"
 ---
 # <a name="create-server-audit-specification-transact-sql"></a>CREATE SERVER AUDIT SPECIFICATION(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 기능을 사용하여 서버 감사 사양 개체를 만듭니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
   

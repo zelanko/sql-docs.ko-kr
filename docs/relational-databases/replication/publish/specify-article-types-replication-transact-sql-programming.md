@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3adcfa7c18259df1b063ff95f86d4f7721b45091
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5814caf6381ce80f66c375c3a3e13fd23ff17bc5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321204"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880207"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>아티클 유형 정의(복제 Transact-SQL 프로그래밍)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   복제를 위한 기본 아티클 유형은 테이블 아티클이지만 뷰, 저장 프로시저, 사용자 정의 함수 및 저장 프로시저 실행을 포함한 다른 데이터베이스 개체를 아티클로 게시할 수 있습니다. 아티클을 정의할 때 복제 저장 프로시저를 사용하여 아티클 유형을 프로그래밍 방식으로 지정할 수 있습니다. 사용되는 저장 프로시저는 복제 유형 및 아티클 유형에 따라 다릅니다.  
   
 > [!NOTE]  

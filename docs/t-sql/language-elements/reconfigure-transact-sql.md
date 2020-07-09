@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ee52f585af8930afcba301a5aba12df4eb47173
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 240bc2359a3c0c66fc6f95c2392ae78740865a1d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072385"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880413"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **sp_configure** 시스템 저장 프로시저로 변경한 구성 옵션의 현재 구성 값(**sp_configure** 결과 집합의 **sp_configure** 열)을 업데이트합니다. 구성 옵션에 따라 현재 실행 중인 값을 업데이트하려면 서버를 중지하고 다시 시작해야 하기 때문에 RECONFIGURE에서는 변경된 구성 값에 대해 현재 실행 중인 값(**sp_configure** 결과 집합의 **sp_configure** 열)을 항상 업데이트하지는 않습니다.    
     

@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 8cb409823bad1370c38b6dc99f04c7e49d58796a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4132d5ec459f5fb180ebea94665449cefa7e961a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982413"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882007"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 모든 데이터베이스의 트랜잭션 로그 공간 사용량 통계를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 대기 및 래치 통계를 다시 설정하는데 사용할 수도 있습니다.
   

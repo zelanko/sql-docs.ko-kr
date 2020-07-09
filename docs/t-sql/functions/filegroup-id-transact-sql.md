@@ -19,17 +19,17 @@ helpviewer_keywords:
 - IDs [SQL Server], filegroups
 - names [SQL Server], filegroups
 ms.assetid: 852a76d8-9e61-4a31-84ee-c7edb84a061c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 9902a85fbede75926bfbcb3dd48e19f622c19ea3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: beb3e7ed1733bc3cb2f7a3c136de1168e3722df9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071485"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85858443"
 ---
 # <a name="filegroup_id-transact-sql"></a>FILEGROUP_ID(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 함수는 지정된 파일 그룹 이름에 해당하는 파일 그룹 ID를 반환합니다.  
   
@@ -42,7 +42,7 @@ FILEGROUP_ID ( 'filegroup_name' )
 ```  
   
 ## <a name="arguments"></a>인수  
-*filegroup_name*은 반환될 파일 그룹 ID `FILEGROUP_ID`를 포함하는 파일 그룹 이름을 나타내는 **sysname** 형식의 식입니다.  
+*filegroup_name*은 반환될 파일 그룹 ID **를 포함하는 파일 그룹 이름을 나타내는** sysname`FILEGROUP_ID` 형식의 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
 **int**  

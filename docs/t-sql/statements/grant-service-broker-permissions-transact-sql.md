@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b93555f32556670909767200cafc34135c4da65e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: eb76fda1e2c94486203d3fb4ac23f13e13475b84
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633650"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880372"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT Service Broker 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Service Broker 계약, 메시지 유형, 원격 바인딩, 경로 또는 서비스에 대한 사용 권한을 부여합니다.  
   

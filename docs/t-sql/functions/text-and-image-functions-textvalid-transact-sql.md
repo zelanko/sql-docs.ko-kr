@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 456b429023d4a63349b8c37e5432ff7ed920debd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b70bba03159f652945f4919e02d89e452153cafc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832883"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881980"
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>텍스트 및 이미지 함수 - TEXTVALID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   특정 텍스트 포인터가 유효한지 여부를 확인하는 **text**, **ntext** 또는 **image** 함수입니다.  
   
