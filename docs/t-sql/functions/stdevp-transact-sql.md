@@ -17,18 +17,18 @@ helpviewer_keywords:
 - expressions [SQL Server], statistical standard deviation
 - statistical standard deviation
 ms.assetid: 29f2a906-d084-4464-abc3-4b275ed19442
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d76080b714d2ede1f2368ab2a98e8d3a216bf85
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: add6610b1f46d1d84bfb37b176061b0db952d00b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67906910"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85995544"
 ---
 # <a name="stdevp-transact-sql"></a>STDEVP(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   지정한 식에 있는 모든 값의 모집단에 대한 통계적 표준 편차를 반환합니다.  
   
@@ -69,7 +69,7 @@ STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-stdevp"></a>A: STDEVP 사용  
- 다음은 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `SalesPerson` 테이블에 있는 모든 보너스 값의 모집단에 대한 표준 편차를 반환하는 예입니다.  
+ 다음은 `SalesPerson` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에 있는 모든 보너스 값의 모집단에 대한 표준 편차를 반환하는 예입니다.  
   
 ```  
 SELECT STDEVP(Bonus)  
@@ -80,7 +80,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-using-stdevp"></a>B: STDEVP 사용  
- 다음 예에서는 `dbo.FactSalesQuota` 테이블의 판매 할당량 값의 `STDEVP`를 반환합니다. 첫 번째 열은 모든 고유 값의 표준 편차를 포함하고 두 번째 열은 중복 값을 포함한 모든 값의 표준 편차를 포함합니다.  
+ 다음 예에서는 `STDEVP` 테이블의 판매 할당량 값의 `dbo.FactSalesQuota`를 반환합니다. 첫 번째 열은 모든 고유 값의 표준 편차를 포함하고 두 번째 열은 중복 값을 포함한 모든 값의 표준 편차를 포함합니다.  
   
 ```  
 -- Uses AdventureWorks  

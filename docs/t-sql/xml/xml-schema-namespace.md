@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ee9873d8-dd3a-4bff-a10c-68bbadbdf1a6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: bb3b19e67a4a85ef3f7a26d7ad792e7e39459302
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c5749c942f5da62dee1cc1f4bb0345c6165bd649
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67948020"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902214"
 ---
 # <a name="xml_schema_namespace"></a>xml_schema_namespace
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   지정한 XML 스키마 컬렉션에서 모든 스키마 또는 특정 스키마를 다시 만듭니다. 이 함수는 **xml** 데이터 형식을 반환합니다.  
   
@@ -55,13 +55,13 @@ xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespa
  **xml**  
   
 ## <a name="remarks"></a>설명  
- [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 또는 [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)을 사용하여 데이터베이스의 XML 스키마 구성 요소를 가져오는 경우에는 유효성 검사에 사용된 스키마의 특성이 유지됩니다. 따라서 다시 만든 스키마가 원래 스키마 문서와 구문적으로 동일하지 않을 수 있습니다. 특히 설명, 공백 및 주석이 손실되고 암시적인 유형 정보가 명시적으로 변경됩니다. 예를 들어 \<xs:element name="e1" />은 \<xs:element name="e1" type="xs:anyType"/>이 됩니다. 또한 네임스페이스 접두사가 유지되지 않습니다.  
+ [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 또는 [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)을 사용하여 데이터베이스의 XML 스키마 구성 요소를 가져오는 경우에는 유효성 검사에 사용된 스키마의 특성이 유지됩니다. 따라서 다시 만든 스키마가 원래 스키마 문서와 구문적으로 동일하지 않을 수 있습니다. 특히 설명, 공백 및 주석이 손실되고 암시적인 유형 정보가 명시적으로 변경됩니다. 예를 들어 \<xs:element name="e1" />는 \<xs:element name="e1" type="xs:anyType"/>가 됩니다. 또한 네임스페이스 접두사가 유지되지 않습니다.  
   
  네임스페이스 매개 변수를 지정하는 경우 결과 스키마 문서에는 다른 스키마 문서, DDL 단계 또는 둘 모두에 추가된 경우를 비롯하여 해당 네임스페이스의 모든 스키마 구성 요소에 대한 정의가 포함됩니다.  
   
  이 함수는 **sys.sys** XML 스키마 컬렉션에서 XML 스키마 문서를 생성하는 데 사용할 수 없습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `ProductDescriptionSchemaCollection` 데이터베이스의 production 관계형 스키마에서 XML 스키마 컬렉션인 `AdventureWorks`을 검색합니다.  
   
 ```  

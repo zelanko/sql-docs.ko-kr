@@ -9,16 +9,16 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c787409d4e8772d89fc748d39c605506f5dcb520
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff058b2e326399fa6d04503d984d540fba8efc1b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216204"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896973"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Linux 호스트의 SQL Server를 Active Directory 도메인에 가입
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 문서에서는 SQL Server Linux 호스트 머신을 AD(Active Directory) 도메인에 가입시키는 방법에 관한 일반 지침을 제공합니다. 기본 제공 SSSD 패키지를 사용하거나 타사 Active Directory 공급자를 사용하는 두 가지 방법이 있습니다. 타사 도메인 가입 제품의 예로는 [PBIS(PowerBroker Identity Services)](https://www.beyondtrust.com/), [One Identity](https://www.oneidentity.com/products/authentication-services/) 및 [Centrify](https://www.centrify.com/)가 있습니다. 이 가이드에는 Active Directory 구성을 확인하는 단계가 포함되어 있습니다. 그러나 타사 유틸리티를 사용할 때 머신을 도메인에 가입시키는 방법을 설명하지 않습니다.
 

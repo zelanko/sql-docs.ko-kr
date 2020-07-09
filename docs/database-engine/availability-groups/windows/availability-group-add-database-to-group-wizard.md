@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1dfb6540724cf3dae9b39c4e388b4f2e2aacb734
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 15fd7cae3cfc50d9c659ea189c9fd162529d3ff6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934885"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900866"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>'가용성 그룹 마법사'를 사용하여 Always On 가용성 그룹에 데이터베이스 추가
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   가용성 그룹에 데이터베이스 추가 마법사를 사용하여 기존 Always On 가용성 그룹에 하나 이상의 데이터베이스를 손쉽게 추가할 수 있습니다.  
   
 > [!NOTE]  

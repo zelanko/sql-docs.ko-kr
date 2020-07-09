@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 5d181d1b6ddfea034716ebb048768cd7d43fbc61
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 23bb125d8744cf51f6b72187b6a251e27fb84f05
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70847584"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896889"
 ---
 # <a name="iclientvirtualdeviceset2mapbufferhandle-vdi"></a>IClientVirtualDeviceSet2::MapBufferHandle (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 **MapBufferHandle** 함수는 일부 다른 프로세스에서 가져온 버퍼 핸들에서 유효한 버퍼 주소를 가져오는 데 사용됩니다.
 

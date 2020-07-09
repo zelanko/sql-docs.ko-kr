@@ -27,20 +27,20 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - time [SQL Server], system
 ms.assetid: 8423c753-cebe-4edd-871d-0138e092199f
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7213174c47bb466f34b896560060c140086b325a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d16c5437c5ea1247f3db7c52a549c63b89ecbaac
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68117518"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85993627"
 ---
 # <a name="sysdatetimeoffset-transact-sql"></a>SYSDATETIMEOFFSET(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된 **datetimeoffset(7)** 값을 반환합니다. 여기에는 표준 시간대 오프셋이 포함됩니다.  
+  **인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된**datetimeoffset(7)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값을 반환합니다. 여기에는 표준 시간대 오프셋이 포함됩니다.  
   
  모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식 및 함수에 대한 개요는 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)을 참조하세요.  
   

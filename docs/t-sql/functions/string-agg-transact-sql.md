@@ -13,18 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - STRING_AGG function
 ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d67efc13e326808b570fc33f054f922e74d5923e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 34af1cc4319135e7f2e30ed0c287a6567e420f64
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77478488"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85995379"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
+
+<!--[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]-->
+
+[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
 
 문자열 식의 값을 연결하고 그 사이에 구분 기호 값을 추가합니다. 구분 기호는 문자열 끝에 추가되지 않습니다. 
  
@@ -32,7 +35,7 @@ ms.locfileid: "77478488"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 STRING_AGG ( expression, separator ) [ <order_clause> ]
 
 <order_clause> ::=   
@@ -50,7 +53,7 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 <order_clause>   
 또는 `WITHIN GROUP` 절을 사용하여 연결된 결과의 순서를 지정합니다.
 
-```
+```syntaxsql
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
 <order_by_expression_list>   
@@ -96,7 +99,7 @@ FROM Person.Person;
 |--- |
 |Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
 
-`name` 셀에 있는 `NULL` 값은 결과에 반환되지 않습니다.   
+`NULL` 셀에 있는 `name` 값은 결과에 반환되지 않습니다.   
 
 > [!NOTE]  
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor를 사용하는 경우 **표 형태로 결과 표시** 옵션으로 캐리지 리턴을 구현할 수 없습니다. 결과 집합을 올바르게 보려면 **텍스트로 결과 표시**로 전환하세요.       
@@ -162,7 +165,7 @@ GROUP BY a.articleId, title;
 |177 |Dogs continue to be more popular than cats |polls,animals|
 
 > [!NOTE]
-> `STRING_AGG` 함수가 `SELECT` 목록의 유일한 항목이 아닌 경우 `GROUP BY` 절이 필요합니다.
+> `GROUP BY` 함수가 `STRING_AGG` 목록의 유일한 항목이 아닌 경우 `SELECT` 절이 필요합니다.
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. 도시별 이메일 목록 생성
 

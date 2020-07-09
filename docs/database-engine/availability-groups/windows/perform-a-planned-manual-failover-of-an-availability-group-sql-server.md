@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2346c770c5fec742d7c5805f028bd87bebaf71b1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 646db60d22175c298a686bed903fdd9246c2a59f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287207"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897027"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Always On 가용성 그룹의 계획된 수동 장애 조치(failover) 수행(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에서 데이터 손실 없이 수동 장애 조치(failover)를 수행하는 방법(*계획된 수동 장애 조치(failover)*)에 대해 설명합니다. 가용성 그룹은 가용성 복제본의 수준에서 장애 조치(Failover)됩니다. AlwaysOn 가용성 그룹 장애 조치(Failover)처럼 계획된 수동 장애 조치는 보조 복제본을 기본 역할로 전환합니다. 동시에 장애 조치(Failover)는 이전 주 복제본을 보조 역할로 전환합니다.  
   
 계획된 수동 장애 조치(Failover)는 주 복제본과 대상 보조 복제본이 동기 커밋 모드에서 실행 중이고 현재 동기화된 경우에만 지원됩니다. 계획된 수동 장애 조치(Failover)는 대상 보조 복제본의 가용성 그룹에 조인된 보조 데이터베이스의 모든 데이터를 유지합니다. 이전 주 복제본이 보조 역할로 전환되면 해당 데이터베이스는 보조 데이터베이스가 됩니다. 그런 다음 새 기본 데이터베이스와 동기화되기 시작합니다. 데이터베이스가 모두 SYNCHRONIZED 상태로 전환된 후 새로운 보조 복제본은 향후 계획 수동 장애 조치(failover)의 대상 역할을 수행할 수 있습니다.  

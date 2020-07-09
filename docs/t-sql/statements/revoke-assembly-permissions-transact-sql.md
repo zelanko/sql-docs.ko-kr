@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f88e9da1-2c0b-4bdd-9ec5-44467707cb46
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 46f0299d314921a135f439c685e1139b9cac7d01
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 34a96fda9eea349abef5b53701556148ae56225a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634750"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897070"
 ---
 # <a name="revoke-assembly-permissions-transact-sql"></a>REVOKE 어셈블리 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   어셈블리에 대한 사용 권한을 취소합니다.  
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 28de1be430d02a9288b0a1fe27567965fb0a32e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68a0f5f6a52baff0a4baaaad2741bf9ad9a6288e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140885"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901603"
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>XML DML(XML 데이터 수정 언어)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   XML DML(XML 데이터 수정 언어)은 XQuery 언어의 확장 언어입니다. W3C에 의해 정의된 바와 같이 XQuery 언어에는 DML(데이터 조작 언어) 부분이 부족합니다. 이 항목에서 설명되는 XML DML과 XQuery 언어는 **xml** 데이터 형식에 대해 사용할 수 있는 완벽한 기능의 쿼리 및 데이터 조작 언어를 제공합니다.  
   

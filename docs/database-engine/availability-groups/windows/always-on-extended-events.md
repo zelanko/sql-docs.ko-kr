@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6fdf58703d448e07c9be063b616f90c72f2411d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ce4c3e7568c9c8c135228beccc926924d08affd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67991561"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900946"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 확장 이벤트 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   SQL Server는 Always On 가용성 그룹 관련 확장 이벤트를 정의합니다. 세션에서 이 확장 이벤트를 모니터링하면 가용성 그룹 문제를 해결할 때 근본적인 원인 진단에 도움을 줄 수도 있습니다. 다음 쿼리를 사용하여 가용성 그룹 확장 이벤트를 볼 수 있습니다.  
   
 ```sql  

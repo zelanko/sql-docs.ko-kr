@@ -7,16 +7,16 @@ ms.date: 08/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: a39e0a743053db694efc2d0e8176e659d7e376d1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5f2e8502956b808556c0ac6ddb83f95a61cbe5c9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68995872"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900114"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Linux에서 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성하는 방법
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 문서에서는 Linux에서 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성하는 방법을 설명합니다.
 

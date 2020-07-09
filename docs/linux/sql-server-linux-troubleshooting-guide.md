@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: a4103e22facbb717b6797b91d8b218cc6ce4b0b7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c2c191fa05f1c584c9e45e88cd5bd5b0e3b7851
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288117"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897219"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>SQL Server on Linux 문제 해결
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 문서에서는 Linux 또는 Docker 컨테이너에서 실행되는 Microsoft SQL Server 문제를 해결하는 방법을 설명합니다. SQL Server on Linux 문제를 해결하는 경우 [SQL Server on Linux 릴리스 정보](sql-server-linux-release-notes.md)에서 지원되는 기능 및 알려진 제한 사항을 검토해야 합니다.
 

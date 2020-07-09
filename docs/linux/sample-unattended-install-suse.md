@@ -8,16 +8,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 392d8d477a2e136d54e6f0f06608eb0ebeda12a5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9944a6065d89a49e5bf1a0ccec2d4d681fbae748
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73593515"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900155"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>샘플: SUSE Linux Enterprise Server를 위한 무인 SQL Server 설치 스크립트
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 샘플 Bash 스크립트는 대화형 입력 없이 SLES(SUSE Linux Enterprise Server) v12 SP2에 SQL Server 2017을 설치합니다. 이 스크립트는 데이터베이스 엔진, SQL Server 명령줄 도구 및 SQL Server 에이전트를 설치하는 예를 제공하고, 설치 후 단계를 수행합니다. 필요에 따라 전체 텍스트 검색을 설치하고 관리자를 만들 수 있습니다.
 

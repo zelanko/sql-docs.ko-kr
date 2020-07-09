@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 901059ea6aa203dfcf21878c35eb1bc0214408b9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: ebe94614467e4b4c3d3ef2b9eb52287cdcc3feb7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81301644"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897042"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>Always On 가용성 그룹의 강제 수동 장애 조치(failover) 수행(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 PowerShell을 사용하여 Always On 가용성 그룹에서 강제 장애 조치(failover)(데이터 손실 가능)를 수행하는 방법을 설명합니다. 강제 장애 조치(failover)는 [예정된 수동 장애 조치(failover)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) 가 가능하지 않을 때 재해 복구용으로만 사용하기 위한 수동 장애 조치(failover)의 한 형태입니다. 동기화되지 않은 보조 복제본으로 강제 장애 조치(failover)를 수행하면 데이터 손실이 발생할 수 있습니다. 따라서 서비스를 즉시 가용성 그룹으로 복원해야 하고 데이터 손실 위험을 감수할 수 있는 경우에만 강제 장애 조치(failover)를 수행하는 것이 좋습니다.  
   
  강제 장애 조치(failover) 후 가용성 그룹이 장애 조치된 장애 조치failover) 대상은 새로운 주 복제본이 됩니다. 남은 보조 복제본에 있는 보조 데이터베이스는 일시 중지되기 때문에 수동으로 다시 시작해야 합니다. 이전의 주 복제본을 사용할 수 있게 되면 이 복제본은 보조 역할로 전환됩니다. 따라서 이전의 주 데이터베이스는 보조 데이터베이스가 되고 SUSPENDED 상태로 전환됩니다. 지정된 보조 데이터베이스를 다시 시작하기 전에 해당 데이터베이스에서 손실된 데이터를 복구할 수도 있습니다. 그러나 보조 데이터베이스 중 하나라도 일시 중지되어 있는 동안에는 지정된 주 데이터베이스에서 트랜잭션 로그 잘림이 지연됩니다.  

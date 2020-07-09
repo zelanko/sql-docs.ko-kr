@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 448688a54a245cadffa4c0c916d146e7c3e7e115
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e61dd8343e95ca5b5322235fb431f3dc5a5624cc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321990"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900823"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>병합 복제 백업 및 복원 전략
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   병합 복제의 경우 다음 데이터베이스를 정기적으로 백업합니다.  
   
 -   게시자의 게시 데이터베이스  

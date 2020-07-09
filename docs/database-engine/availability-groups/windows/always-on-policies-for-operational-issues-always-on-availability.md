@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ac339e638377778065f158b4cbd20280d5d4bb65
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e8b43794783253ced81466ac7974e40c0ec05840
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244056"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900934"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Always On 가용성 그룹의 운영 문제에 대한 정책 기반 관리
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Always On 가용성 그룹 상태 모델은 미리 정의된 PBM(정책 기반 관리) 정책 집합을 평가합니다. 이를 사용하여 SQL Server에서 가용성 그룹 및 가용성 복제본과 해당 데이터베이스의 상태를 볼 수 있습니다.  
   

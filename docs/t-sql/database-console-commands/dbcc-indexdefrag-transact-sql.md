@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7372051d8dfb23430f834ca159125822c6892956
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d1894e33de743e8e4b7f4053b7b77746cca3e124
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68116528"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901666"
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 지정된 테이블 또는 뷰의 인덱스를 조각 모음합니다.
   
@@ -44,7 +44,7 @@ ms.locfileid: "68116528"
   
 ## <a name="syntax"></a>구문  
   
-```sql
+```syntaxsql
 DBCC INDEXDEFRAG  
 (  
     { database_name | database_id | 0 }   
@@ -113,7 +113,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## <a name="examples"></a>예  
 ### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>A. DBCC INDEXDEFRAG를 사용하여 인덱스 조각 모음 수행  
-다음 예제에서는 `AdventureWorks` 데이터베이스의 `Production.Product` 테이블에서 `PK_Product_ProductID` 인덱스의 모든 파티션을 조각 모음합니다.
+다음 예제에서는 `PK_Product_ProductID` 데이터베이스의 `Production.Product` 테이블에서 `AdventureWorks` 인덱스의 모든 파티션을 조각 모음합니다.
   
 ```sql  
 DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID);  

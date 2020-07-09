@@ -3,20 +3,20 @@ title: Linux에서 SQL Server의 로그 전달 구성
 description: 이 자습서에서는 로그 전달을 사용하여 Linux의 SQL Server 인스턴스를 보조 인스턴스에 복제하는 방법에 대한 기본 예제를 보여 줍니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/19/2017
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 8bc7fa51eeb5d02400b15556a3bec06ce721c1de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d32d85ef52ac5e6dc687ed32e7283540240ce2b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73240703"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897205"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Linux에서 로그 전달 시작
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 SQL Server 로그 전달은 주 서버의 데이터베이스가 하나 이상의 보조 서버에 복제되는 HA 구성입니다. 간단히 말해서 원본 데이터베이스의 백업이 보조 서버로 복원됩니다. 그런 다음, 주 서버가 트랜잭션 로그 백업을 주기적으로 만들고, 보조 서버에서 데이터베이스의 보조 복사본을 업데이트하여 복원합니다. 
 
@@ -85,11 +85,13 @@ SQL Server 로그 전달은 주 서버의 데이터베이스가 하나 이상의
 
 -   자격 증명을 저장할 파일을 만듭니다. mssql Samba 계정에 대해 최근에 설정한 암호를 사용합니다. 
 
+    ```console
         vim /var/opt/mssql/.tlogcreds
         #Paste the following in .tlogcreds
         username=mssql
         domain=<domain>
         password=<password>
+    ```
 
 -   다음 명령을 실행하여 탑재할 빈 디렉터리를 만들고 권한 및 소유권을 올바르게 설정합니다.
     ```bash   
@@ -102,8 +104,10 @@ SQL Server 로그 전달은 주 서버의 데이터베이스가 하나 이상의
 
 -   공유를 유지하기 위해 etc/fstab에 다음 줄을 추가합니다. 
 
+    ```console
         //<ip_address_of_primary_server>/tlogs /var/opt/mssql/tlogs cifs credentials=/var/opt/mssql/.tlogcreds,ro,uid=mssql,gid=mssql 0 0
-        
+    ```
+
 -   공유를 탑재합니다.
     ```bash   
     sudo mount -a
@@ -118,11 +122,12 @@ SQL Server 로그 전달은 주 서버의 데이터베이스가 하나 이상의
     TO DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
     GO
     ```
+
     ```sql
     DECLARE @LS_BackupJobId AS uniqueidentifier 
     DECLARE @LS_PrimaryId   AS uniqueidentifier 
     DECLARE @SP_Add_RetCode As int 
-    EXEC @SP_Add_RetCode = master.dbo.sp_add_log_shipping_primary_database 
+    EXECUTE @SP_Add_RetCode = master.dbo.sp_add_log_shipping_primary_database 
              @database = N'SampleDB' 
             ,@backup_directory = N'/var/opt/mssql/tlogs' 
             ,@backup_share = N'/var/opt/mssql/tlogs' 
@@ -142,7 +147,7 @@ SQL Server 로그 전달은 주 서버의 데이터베이스가 하나 이상의
     DECLARE @LS_BackUpScheduleUID   As uniqueidentifier 
     DECLARE @LS_BackUpScheduleID    AS int 
 
-    EXEC msdb.dbo.sp_add_schedule 
+    EXECUTE msdb.dbo.sp_add_schedule 
             @schedule_name =N'LSBackupSchedule' 
             ,@enabled = 1 
             ,@freq_type = 4 
@@ -157,19 +162,19 @@ SQL Server 로그 전달은 주 서버의 데이터베이스가 하나 이상의
             ,@schedule_uid = @LS_BackUpScheduleUID OUTPUT 
             ,@schedule_id = @LS_BackUpScheduleID OUTPUT 
 
-    EXEC msdb.dbo.sp_attach_schedule 
+    EXECUTE msdb.dbo.sp_attach_schedule 
             @job_id = @LS_BackupJobId 
             ,@schedule_id = @LS_BackUpScheduleID  
 
-    EXEC msdb.dbo.sp_update_job 
+    EXECUTE msdb.dbo.sp_update_job 
             @job_id = @LS_BackupJobId 
             ,@enabled = 1 
             
     END 
 
-    EXEC master.dbo.sp_add_log_shipping_alert_job 
+    EXECUTE master.dbo.sp_add_log_shipping_alert_job 
 
-    EXEC master.dbo.sp_add_log_shipping_primary_secondary 
+    EXECUTE master.dbo.sp_add_log_shipping_primary_secondary 
             @primary_database = N'SampleDB' 
             ,@secondary_server = N'<ip_address_of_secondary_server>' 
             ,@secondary_database = N'SampleDB' 
@@ -190,7 +195,7 @@ SQL Server 로그 전달은 주 서버의 데이터베이스가 하나 이상의
     DECLARE @LS_Secondary__SecondaryId  AS uniqueidentifier 
     DECLARE @LS_Add_RetCode As int 
 
-    EXEC @LS_Add_RetCode = master.dbo.sp_add_log_shipping_secondary_primary 
+    EXECUTE @LS_Add_RetCode = master.dbo.sp_add_log_shipping_secondary_primary 
             @primary_server = N'<ip_address_of_primary_server>' 
             ,@primary_database = N'SampleDB' 
             ,@backup_source_directory = N'/var/opt/mssql/tlogs/' 
@@ -209,7 +214,7 @@ SQL Server 로그 전달은 주 서버의 데이터베이스가 하나 이상의
     DECLARE @LS_SecondaryCopyJobScheduleUID As uniqueidentifier 
     DECLARE @LS_SecondaryCopyJobScheduleID  AS int 
 
-    EXEC msdb.dbo.sp_add_schedule 
+    EXECUTE msdb.dbo.sp_add_schedule 
             @schedule_name =N'DefaultCopyJobSchedule' 
             ,@enabled = 1 
             ,@freq_type = 4 
@@ -224,14 +229,14 @@ SQL Server 로그 전달은 주 서버의 데이터베이스가 하나 이상의
             ,@schedule_uid = @LS_SecondaryCopyJobScheduleUID OUTPUT 
             ,@schedule_id = @LS_SecondaryCopyJobScheduleID OUTPUT 
 
-    EXEC msdb.dbo.sp_attach_schedule 
+    EXECUTE msdb.dbo.sp_attach_schedule 
             @job_id = @LS_Secondary__CopyJobId 
             ,@schedule_id = @LS_SecondaryCopyJobScheduleID  
 
     DECLARE @LS_SecondaryRestoreJobScheduleUID  As uniqueidentifier 
     DECLARE @LS_SecondaryRestoreJobScheduleID   AS int 
 
-    EXEC msdb.dbo.sp_add_schedule 
+    EXECUTE msdb.dbo.sp_add_schedule 
             @schedule_name =N'DefaultRestoreJobSchedule' 
             ,@enabled = 1 
             ,@freq_type = 4 
@@ -246,7 +251,7 @@ SQL Server 로그 전달은 주 서버의 데이터베이스가 하나 이상의
             ,@schedule_uid = @LS_SecondaryRestoreJobScheduleUID OUTPUT 
             ,@schedule_id = @LS_SecondaryRestoreJobScheduleID OUTPUT 
 
-    EXEC msdb.dbo.sp_attach_schedule 
+    EXECUTE msdb.dbo.sp_attach_schedule 
             @job_id = @LS_Secondary__RestoreJobId 
             ,@schedule_id = @LS_SecondaryRestoreJobScheduleID  
             
@@ -255,7 +260,7 @@ SQL Server 로그 전달은 주 서버의 데이터베이스가 하나 이상의
     IF (@@ERROR = 0 AND @LS_Add_RetCode = 0) 
     BEGIN 
 
-    EXEC @LS_Add_RetCode2 = master.dbo.sp_add_log_shipping_secondary_database 
+    EXECUTE @LS_Add_RetCode2 = master.dbo.sp_add_log_shipping_secondary_database 
             @secondary_database = N'SampleDB' 
             ,@primary_server = N'<ip_address_of_primary_server>' 
             ,@primary_database = N'SampleDB' 
@@ -272,11 +277,11 @@ SQL Server 로그 전달은 주 서버의 데이터베이스가 하나 이상의
     IF (@@error = 0 AND @LS_Add_RetCode = 0) 
     BEGIN 
 
-    EXEC msdb.dbo.sp_update_job 
+    EXECUTE msdb.dbo.sp_update_job 
             @job_id = @LS_Secondary__CopyJobId 
             ,@enabled = 1 
 
-    EXEC msdb.dbo.sp_update_job 
+    EXECUTE msdb.dbo.sp_update_job 
             @job_id = @LS_Secondary__RestoreJobId 
             ,@enabled = 1 
 
@@ -291,7 +296,7 @@ SQL Server 로그 전달은 주 서버의 데이터베이스가 하나 이상의
     USE msdb ;  
     GO  
 
-    EXEC dbo.sp_start_job N'LSBackup_SampleDB' ;  
+    EXECUTE dbo.sp_start_job N'LSBackup_SampleDB' ;  
     GO  
     ```
 
@@ -301,9 +306,9 @@ SQL Server 로그 전달은 주 서버의 데이터베이스가 하나 이상의
     USE msdb ;  
     GO  
 
-    EXEC dbo.sp_start_job N'LSCopy_SampleDB' ;  
+    EXECUTE dbo.sp_start_job N'LSCopy_SampleDB' ;  
     GO  
-    EXEC dbo.sp_start_job N'LSRestore_SampleDB' ;  
+    EXECUTE dbo.sp_start_job N'LSRestore_SampleDB' ;  
     GO  
     ```
  - 다음 명령을 실행하여 로그 전달 장애 조치(failover)가 작동하는지 확인합니다.

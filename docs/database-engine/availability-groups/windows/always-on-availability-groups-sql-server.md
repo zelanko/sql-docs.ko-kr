@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6eae33bebd834a79a62bd94c5dbe75f4c431b0ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 227c37385fd1c9b3b65ad45d891b3be7eb300739
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68014822"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900428"
 ---
 # <a name="always-on-availability-groups-a-high-availability-and-disaster-recovery-solution"></a>Always On 가용성 그룹: 고가용성 및 재해 복구 솔루션
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능은 데이터베이스 미러링에 대한 엔터프라이즈 수준의 대안을 제공하는 고가용성 및 재해 복구 솔루션입니다. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에 도입된 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 엔터프라이즈 사용자 데이터베이스 집합의 가용성을 극대화합니다. *가용성 그룹* 은 함께 장애 조치(Failover)되는 사용자 데이터베이스( *가용성 데이터베이스*라고 함)의 불연속 집합에 대한 장애 조치(Failover) 환경을 지원합니다. 가용성 그룹은 읽기/쓰기 주 데이터베이스 집합과 1~8개의 해당 보조 데이터베이스 집합을 지원합니다. 필요한 경우 보조 데이터베이스에 대해 읽기 전용 액세스를 설정하거나 일부 백업 작업에 사용되도록 설정할 수 있습니다.  
   

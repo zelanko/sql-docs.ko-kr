@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: 52db0986bb6af34e1dc034d95146a96d3fdcf246
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 29d655fc1a63513db073520981398d2b5a66c529
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000124"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900141"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Windows의 PowerShell을 사용하여 SQL Server on Linux 관리
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 문서에서는 [SQL Server PowerShell](../powershell/sql-server-powershell.md)을 소개하고 SQL Server on Linux에서 사용하는 방법에 관한 몇 가지 예제를 안내합니다. SQL Server에 대한 PowerShell 지원은 현재 Windows, MacOS 및 Linux에서 사용할 수 있습니다. 이 문서에서는 Windows 머신을 사용하여 Linux의 원격 SQL Server 인스턴스에 연결하는 과정을 안내합니다.
 

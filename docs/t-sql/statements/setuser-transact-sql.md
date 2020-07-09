@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7293db962cb8e74e234a0a168afa1600ee29fd67
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2a1c3460d3633ddb8b17582eea53a2c8d740b2ff
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633571"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899900"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **sysadmin** 고정 서버 역할 또는 데이터베이스 소유자가 다른 사용자로 가장할 수 있도록 합니다.  
   

@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - GET_FILESTREAM_TRANSACTION_CONTEXT FILESTREAM [SQL Server]
 ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 7d284cb8c39307a6ee2568bd8e4fa5fa0df2c3e5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fcb526d6737624aee12e900f3b9b7db1f2e7f69e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940103"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898993"
 ---
 # <a name="get_filestream_transaction_context-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   세션의 현재 트랜잭션 컨텍스트를 나타내는 토큰을 반환합니다. 애플리케이션은 이 토큰을 사용하여 FILESTREAM 파일 시스템 스트리밍 작업을 트랜잭션에 바인딩합니다. FILESTREAM 토픽의 목록은 [Binary Large Object&#40;Blob&#41; 데이터&#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)를 참조하세요.  
   
@@ -50,7 +50,7 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
  GET_FILESTREAM_TRANSACTION_CONTEXT를 호출하면 호출자에게 트랜잭션 기간 동안 트랜잭션에 대한 파일 시스템 액세스 권한이 부여됩니다. 다른 사용자가 파일 시스템을 통해 트랜잭션에 액세스할 수 있도록 하려면 EXECUTE AS를 사용하여 GET_FILESTREAM_TRANSACTION_CONTEXT를 다른 사용자로 실행합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 트랜잭션에 `GET_FILESTREAM_TRANSACTION_CONTEXT`를 사용하여 트랜잭션 컨텍스트를 구합니다.  
+ 다음 예에서는 `GET_FILESTREAM_TRANSACTION_CONTEXT` 트랜잭션에 [!INCLUDE[tsql](../../includes/tsql-md.md)]를 사용하여 트랜잭션 컨텍스트를 구합니다.  
   
 ```csharp  
 using System;  

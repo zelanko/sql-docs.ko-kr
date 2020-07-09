@@ -19,18 +19,18 @@ helpviewer_keywords:
 - data types [SQL Server], names
 - TYPE_NAME function
 ms.assetid: e4075a2e-5f70-440f-986b-9ec8434e07c1
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33f282c79c15a8b9548d799ef86e026fd7357d00
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a63503c34b4796866e72a4baa1774722c399cd05
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68098701"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85992248"
 ---
 # <a name="type_name-transact-sql"></a>TYPE_NAME(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   지정된 형식 ID의 정규화되지 않은 형식 이름을 반환합니다.  
   
@@ -62,7 +62,7 @@ TYPE_NAME ( type_id )
  시스템 함수는 선택 목록, WHERE 절 및 식이 허용되는 모든 곳에서 사용될 수 있습니다. 자세한 내용은 [식 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) 및 [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `Vendor` 테이블에 있는 각 열의 개체 이름, 열 이름 및 형식 이름을 반환합니다.  
+ 다음 예에서는 `Vendor` 데이터베이스의 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블에 있는 각 열의 개체 이름, 열 이름 및 형식 이름을 반환합니다.  
   
 ```  
 SELECT o.name AS obj_name, c.name AS col_name,  

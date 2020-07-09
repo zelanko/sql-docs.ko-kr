@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 89f95d15-33c6-4768-bccd-9dbf8c4f49a9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b2c42ee67fe0c01570eadd6e3aa1d23019672172
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0acd1eb801ac96b0d95eb6a9c0ce8371b802aa16
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67968337"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899864"
 ---
 # <a name="data-synchronization-state-of-some-availability-database-is-not-healthy"></a>일부 가용성 데이터베이스의 데이터 동기화 상태가 정상이 아님
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="introduction"></a>소개  
   

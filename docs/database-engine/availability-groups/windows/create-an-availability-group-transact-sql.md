@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 44e05f6f4e2210ee6dcb70d9c272e3144c245e14
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 99e3ea99dc2cd41e6bd818a50c32944b07bc4996
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925187"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901026"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>T-SQL(Transact-SQL)을 사용하여 Always On 가용성 그룹 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 기능이 설정된 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 인스턴스에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하여 가용성 그룹을 만들고 구성하는 방법을 설명합니다. *가용성 그룹* 은 단일 단위로 장애 조치(Failover)될 사용자 데이터베이스 집합과 장애 조치(Failover)를 지원하는 장애 조치(Failover) 파트너 집합( *가용성 복제본*이라고 함)을 정의합니다.  
   
 > [!NOTE]  

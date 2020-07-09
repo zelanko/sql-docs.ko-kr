@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: c75cd206557547f55d47eec0a7aec52cc0069b71
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a125eaaa4fa61acaa037e518dbcfb0bd177e1a3d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70847514"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896822"
 ---
 # <a name="iservervirtualdevicesendcommand-vdi"></a>IServerVirtualDevice::SendCommand (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 **SendCommand** 함수는 IServerVirtualDeviceSet2::OpenDevice에서 반환된 가상 디바이스 개체를 사용하여 클라이언트에 명령을 보냅니다.
 

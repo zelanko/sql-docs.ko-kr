@@ -17,15 +17,15 @@ ms.assetid: a41b92a5-1061-4e4d-bb3b-a180b73c88fa
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 94d617f0da60b73ecfc7a0dcdd4530a3a36f3ca7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b6fd33150c41b692c803348f3246a165b785f0a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67927363"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85990602"
 ---
 # <a name="arithmetic-operators-transact-sql"></a>산술 연산자(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 산술 연산자는 둘 이상의 데이터 형식이 포함된 두 개의 식에서 수치 연산을 실행합니다. 이 연산자는 숫자 데이터 형식 범주에서 실행됩니다. 데이터 형식 범주에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하십시오.  
   

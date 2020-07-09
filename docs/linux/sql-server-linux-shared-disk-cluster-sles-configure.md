@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 70701d5c0103da089444177db1143066d0c862cd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d2032c14f435b48fa181f2fcab388d417ebea7d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68032226"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897242"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>SQL Server의 SLES 공유 디스크 클러스터 구성
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 가이드에서는 SLES(SUSE Linux Enterprise Server)에서 SQL Server에 대해 2노드 공유 디스크 클러스터를 만들기 위한 지침을 제공합니다. 클러스터링 계층은 [Pacemaker](https://clusterlabs.org/)를 토대로 빌드된 SUSE [HAE(고가용성 확장)](https://www.suse.com/products/highavailability)를 기반으로 합니다. 
 

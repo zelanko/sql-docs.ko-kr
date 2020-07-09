@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - TRIM function
 ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9707f0b23d9461418536c2b9f9015623124d5436
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67f77472faf201a3c36597c226bac139ddfd310f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70059842"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85992416"
 ---
 # <a name="trim-transact-sql"></a>TRIM(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
 
 문자열의 시작 또는 끝에서 공백 문자 `char(32)` 및 기타 지정되지 않은 문자를 제거합니다.  
 
@@ -88,10 +88,10 @@ SELECT TRIM( '.,! ' FROM  '     #     test    .') AS Result;
 
 ## <a name="see-also"></a>참고 항목
 
- [LEFT&#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
- [LTRIM&#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
- [RIGHT&#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
- [RTRIM&#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
- [STRING_SPLIT&#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
- [SUBSTRING&#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
- [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
+- [LEFT&#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+- [LTRIM&#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+- [RIGHT&#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
+- [RTRIM&#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+- [STRING_SPLIT&#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
+- [SUBSTRING&#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
+- [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

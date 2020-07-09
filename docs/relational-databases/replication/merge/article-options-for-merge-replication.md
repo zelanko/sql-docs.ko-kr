@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 670abd41-d204-4cd7-a371-7664e603a0ce
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 478e6b9bb6f8300a845ae8fe9e3202f750f525eb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 692ff343154ae53d53cce4bf385e7e1e6350bb03
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68106110"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897171"
 ---
 # <a name="article-options-for-merge-replication"></a>병합 복제를 위한 아티클 옵션
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   애플리케이션의 요구에 맞게 복제 동작을 사용자 지정할 수 있는 여러 가지 병합 테이블 아티클 옵션이 있습니다. 병합 복제를 사용하여 다음을 수행할 수 있습니다.  
   
 -   행 필터, 조인 필터 및 열 필터를 사용합니다. 테이블 아티클을 필터링하여 게시할 데이터 파티션을 만들 수 있습니다. 자세한 내용은 [게시된 데이터 필터링](../../../relational-databases/replication/publish/filter-published-data.md)을 참조하세요.  

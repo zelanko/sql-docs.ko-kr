@@ -10,16 +10,16 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: e97f535dedd2b6ee25abfc886d1f08272697c549
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 14b0ff1c40ae8e809f7ad5b39e482bd3f76774ec
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287507"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899644"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker에서 SQL Server 컨테이너 이미지 구성
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 문서에서는 Docker에서 [mssql-server-linux 컨테이너 이미지](https://hub.docker.com/_/microsoft-mssql-server)를 구성하고 사용하는 방법을 설명합니다. 
 
@@ -400,7 +400,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' 
 ```
 
 ```PowerShell
-sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
    -p 1433:1433 --name sql1 `
    -e "TZ=America/Los_Angeles" `
    -d mcr.microsoft.com/mssql/server:2017-latest 
@@ -418,7 +418,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' 
 ```
 
 ```PowerShell
-sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
    -p 1433:1433 --name sql1 `
    -e "TZ=America/Los_Angeles" `
    -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04

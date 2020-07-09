@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 3ff0c862e93cd3b552b29c4eec8ab91931c809c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 493239906f83b74735f9fcd4b6673fb2748abfff
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75656630"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897295"
 ---
 # <a name="configure-rhel-failover-cluster-instance-fci-cluster-for-sql-server"></a>SQL Server의 RHEL FCI(장애 조치 클러스터 인스턴스) 클러스터 구성
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 가이드에서는 Red Hat Enterprise Linux에서 SQL Server의 2노드 공유 디스크 장애 조치 클러스터를 만들기 위한 지침을 제공합니다. 클러스터링 계층은 [Pacemaker](https://clusterlabs.org/) 위에 빌드된 RHEL(Red Hat Enterprise Linux) [HA 추가 기능](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)을 기반으로 합니다. SQL Server 인스턴스는 두 노드 중 하나에서 활성화됩니다.
 
@@ -373,7 +373,7 @@ STONITH 디바이스는 펜싱 에이전트를 제공합니다. [Azure의 Red Ha
    mssqlha  (ocf::mssql:fci): Started sqlfcivm1
    
    PCSD Status:
-    slqfcivm1: Online
+    sqlfcivm1: Online
     sqlfcivm2: Online
    
    Daemon Status:

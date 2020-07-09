@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 10ead33635c1fc1e263252ec3ae0a3f86b173679
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af1d83b298059ef035478c6f8b60b96af80a31e2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822095"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900448"
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>IP 주소 추가 대화 상자(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   이 F1 도움말 항목에서는 **IP 주소 추가** 대화 상자의 옵션에 대해 설명합니다. 이 대화 상자는 **새 가용성 그룹 수신기** 대화 상자 및 **의** 또는 **의** 복제본 선택 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 페이지에 있는 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 수신기 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]탭에서 액세스합니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  

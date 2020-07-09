@@ -16,16 +16,16 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 70486130ebdd5b8fd0f8481f3c94558036b4dbac
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6f3f80b726b155f94851326660d47da5cbac1018
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79434150"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900281"
 ---
 # <a name="supported-version--edition-upgrades-sql-server-2016"></a>지원되는 버전 업그레이드(SQL Server 2016)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 업그레이드할 수 있습니다. 이 문서에서는 이러한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 지원되는 업그레이드 경로 및 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]에 대해 지원되는 버전 업그레이드에 대해 설명합니다.  
   

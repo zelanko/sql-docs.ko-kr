@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: aeac57c5ae6facfeb092592c2f3dca851bb9b87b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 92416e1dc528880767ccebd1873707e0a1259a31
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217103"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901262"
 ---
 # <a name="polybase-query-scenarios"></a>PolyBase 쿼리 시나리오
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 이 아티클에서는 SQL Server(2016부터)의 [PolyBase](../../relational-databases/polybase/polybase-guide.md) 기능을 사용하는 쿼리의 예제를 제공합니다. 이러한 예제를 사용하기 전에 먼저 PolyBase를 설치 및 구성해야 합니다. 자세한 내용은 [PolyBase 개요](polybase-guide.md)를 참조하세요.
   

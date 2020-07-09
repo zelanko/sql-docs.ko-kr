@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5521d4cf-740c-4ede-98b6-4ba90b84e32d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 60e344a5dfd16445ab4bf5f5e3e98d4467802494
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b416b915c011ecd4222dc9a3d708786f58852fe9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636425"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901645"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 함수는 암호화된 데이터를 암호 해독합니다. 이렇게 하려면 먼저 별도 비대칭 키로 대칭 키를 암호 해독한 다음, 첫 번째 "단계"에서 추출한 대칭 키로 암호화된 데이터를 암호 해독합니다.  
   

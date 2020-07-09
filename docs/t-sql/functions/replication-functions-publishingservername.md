@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: e7c278e5-ab23-419e-ab3e-3bb20b0636df
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 41f7269bf46be7a969f0b345f5e293be0e9997df
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 586dd6e2315e5041b8aebda601d8200030717b0a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823728"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899145"
 ---
 # <a name="replication-functions---publishingservername"></a>복제 함수 - PUBLISHINGSERVERNAME
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스 미러링 세션에 참여하는 게시된 데이터베이스의 원래 게시자 이름을 반환합니다. 이 함수는 게시 데이터베이스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자 인스턴스에서 실행됩니다. 이 함수를 사용하여 게시된 데이터베이스의 원래 게시자를 확인할 수 있습니다.  
   

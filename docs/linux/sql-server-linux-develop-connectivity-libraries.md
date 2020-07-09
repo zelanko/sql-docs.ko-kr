@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
-ms.openlocfilehash: a4ed76cde2cd8ff8b9d862b981dcbed2361c6ae8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 063ef8f06b6a93e54f7189c1a68cbfa176f21208
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73049739"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896544"
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>Microsoft SQL Server의 연결 라이브러리 및 프레임워크
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 C#, Java, Node.js, PHP 및 Python과 같은 프로그래밍 언어를 빠르게 시작하고 SQL Server on Linux나 macOS 기반 Windows 또는 Docker를 사용하여 앱을 빌드하려면 [시작 자습서](https://aka.ms/sqldev)를 확인하세요.
 

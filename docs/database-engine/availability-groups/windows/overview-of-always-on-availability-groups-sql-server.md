@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fea53e375cac2d1eb1489d4ca89c5424cfdf52e7
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 545cb4fd872602e9af2f600c7b1cca7ee42a07b0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925317"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896395"
 ---
 # <a name="what-is-an-always-on-availability-group"></a>Always On 가용성 그룹이란?
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
  이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에서 하나 이상의 가용성 그룹을 구성하고 관리하는 데 중심이 되는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]개념을 소개합니다. 가용성 그룹에서 제공하는 이점의 요약과 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 용어의 개요는 [Always On 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)을 참조하세요.  
   

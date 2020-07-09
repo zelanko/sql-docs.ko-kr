@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 19718f762a7352865c5b9741ee42ec8cfe965eb8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bd425438dc4a06faea489ac9cba4b607492fcde8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79434526"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900406"
 ---
 # <a name="what-is-an-availability-group-listener"></a>가용성 그룹 수신기란?  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 가용성 그룹 수신기는 Always On 가용성 그룹의 주 복제본 또는 보조 복제본에 있는 데이터베이스에 액세스하기 위해 클라이언트가 연결할 수 있는 VNN(가상 네트워크 이름)입니다. 수신기를 사용하면 클라이언트가 SQL Server의 실제 인스턴스 이름을 몰라도 복제본에 연결할 수 있습니다. 수신기가 트래픽을 라우팅하기 때문에 장애 조치(failover) 후에 클라이언트 연결 문자열을 수정하지 않아도 됩니다. 
 

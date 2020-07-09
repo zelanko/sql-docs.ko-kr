@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
-ms.openlocfilehash: e7affa88f1856571d0b2142f7dcfdf762ed79197
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 185d62a67309f9e76e5f738494ee2137e2ef4a73
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68129347"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897760"
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>SQL Server on Linux로 데이터베이스 및 정형 데이터 마이그레이션 
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Linux에서 실행되는 SQL Server로 데이터베이스 및 데이터를 마이그레이션할 수 있습니다. 사용할 방법은 원본 데이터 및 특정 시나리오에 따라 달라집니다. 다음 섹션에서는 다양한 마이그레이션 시나리오에 대한 모범 사례를 제공합니다.
 

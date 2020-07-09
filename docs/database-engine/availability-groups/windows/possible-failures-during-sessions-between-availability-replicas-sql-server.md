@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 501ec8bc3e7ad039e3864ce8a9a1767c6961848c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d39284d132610e1ab68312823ca1d06d540bc492
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75235650"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897004"
 ---
 # <a name="determine-possible-reason-for-connectivity-failures-between-availability-replicas"></a>"가용성 복제본 간의 연결 실패에 대한 가능한 원인 확인
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 물리적 문제, 운영 체제 문제 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문제로 인해 두 가용성 복제본 사이의 세션에서 오류가 발생할 수 있습니다. 가용성 복제본은 Sqlservr.exe에서 사용하는 구성 요소를 정기적으로 검사하여 구성 요소가 올바르게 작동하는지 아니면 실패했는지 확인하지 않습니다. 하지만 일부 오류 유형의 경우 영향을 받는 구성 요소가 Sqlservr.exe에 오류를 보고합니다. 다른 구성 요소에서 보고된 오류를 *하드 오류*라고 합니다. 확인되지 않는 다른 오류를 감지하기 위해 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 자체적으로 세션 제한 시간 메커니즘을 구현합니다. 세션 제한 시간(초)을 지정합니다. 이 제한 시간은 서버 인스턴스가 다른 인스턴스로부터 PING 메시지를 받기까지 기다리는 최대 시간으로, 이 시간이 경과하면 해당 인스턴스의 연결이 끊어진 것으로 간주됩니다. 두 가용성 복제본 사이에서 세션 제한 시간이 발생하면 가용성 복제본은 오류가 발생했다고 가정하고 *소프트 오류*를 선언합니다.  
   
 > [!IMPORTANT]  

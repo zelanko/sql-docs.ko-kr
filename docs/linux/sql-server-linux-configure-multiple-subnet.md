@@ -9,16 +9,16 @@ ms.date: 12/01/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: af017cf5d36075fdba6de31aa841e980cc20e175
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d6cd6b4cdd25c6da0a7d034e2f980ad583a6561b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76911017"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901552"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>다중 서브넷 Always On 가용성 그룹 및 장애 조치(failover) 클러스터 인스턴스 구성
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Always On AG(가용성 그룹) 또는 FCI(장애 조치(failover) 클러스터 인스턴스)가 둘 이상의 사이트에 걸쳐 있는 경우 각 사이트에는 일반적으로 자체 네트워킹이 있습니다. 이는 각 사이트에 자체 IP 주소 지정이 있다는 의미이기도 합니다. 예를 들어 사이트 A의 주소는 192.168.1.*x*로 시작하고 사이트 B의 주소는 192.168.2.*x*로 시작합니다. 여기서 *x*는 서버에 고유한 IP 주소 부분입니다. 네트워킹 계층에 라우팅이 없으면 이러한 서버는 서로 통신할 수 없습니다. 이 시나리오를 처리하는 두 가지 방법은 두 개의 서브넷을 연결하는 VLAN이라고 하는 네트워크를 설정하거나 서브넷 간에 라우팅을 구성하는 것입니다.
 

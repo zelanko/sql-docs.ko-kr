@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: tbd
-ms.openlocfilehash: 31f8931f6e0eddc67b2e58ae794631a9ae6555b7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d2e759d5cfa0f7b1fa918bde8547d3cbee2439af
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077455"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896512"
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Linux에서 SQL 에이전트와 함께 DB 메일 및 메일 경고 사용
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 다음 단계에서는 Linux에서 DB 메일을 설정하고 SQL Server 에이전트(**mssql-server-agent**)와 함께 사용하는 방법을 보여 줍니다. 
 

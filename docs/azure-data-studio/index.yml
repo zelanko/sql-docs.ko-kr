@@ -1,0 +1,77 @@
+### YamlMime:Landing
+title: Azure Data Studio
+summary: Azure Data Studio를 사용하여 SQL Server, Azure SQL Database, PostgreSQL, Jupyter Notebook 등을 실행하는 방법을 알아보세요.
+metadata:
+  title: Azure Data Studio
+  summary: Azure Data Studio를 사용하여 SQL Server, Azure SQL Database, PostgreSQL, Jupyter Notebook 등을 실행하는 방법을 알아보세요.
+  ms.prod: sql
+  ms.technology: azure-data-studio
+  ms.topic: landing-page
+  author: markingmyname
+  ms.author: maghan
+  ms.date: 05/09/2020
+  ms.openlocfilehash: b5020185efafd9e166c8d3dd627ee61a955a0d27
+  ms.sourcegitcommit: 812f572d13616c1bd085b0648603736ba1bc20d1
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 05/27/2020
+  ms.locfileid: "84112336"
+landingContent:
+- title: Azure Data Studio 정보
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure Data Studio란?
+      url: what-is.md
+  - linkListType: download
+    links:
+    - text: Azure Data Studio 다운로드
+      url: download-azure-data-studio.md
+    - text: Azure Data Studio 릴리스 정보
+      url: release-notes-azure-data-studio.md
+- title: 빠른 시작
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: SQL Server 연결 및 쿼리
+      url: quickstart-sql-server.md
+    - text: Azure SQL 데이터베이스 연결 및 쿼리
+      url: quickstart-sql-database.md
+    - text: Azure SQL Data Warehouse에서 데이터 연결 및 쿼리
+      url: quickstart-sql-dw.md
+    - text: PostgreSQL에서 데이터 연결 및 쿼리
+      url: quickstart-postgres.md
+- title: Azure Data Studio 기능
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Kerberos 사용
+      url: enable-kerberos.md
+    - text: Azure Data Studio에서 인사이트 위젯을 사용하여 서버 및 데이터베이스 관리
+      url: insight-widgets.md
+    - text: 사용자 및 작업 영역 설정 수정
+      url: settings.md
+- title: Notebooks
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Azure Data Studio의 Notebook
+      url: notebooks-guidance.md
+    - text: SQL 커널을 사용하는 방법
+      url: notebooks-tutorial-sql-kernel.md
+    - text: Azure Data Studio에서 Notebook을 관리하는 방법
+      url: notebooks-manage-sql-server.md
+    - text: Azure Data Studio의 Kqlmagic 확장
+      url: notebooks-kqlmagic.md
+- title: 확장
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Azure Data Studio의 기능 확장
+      url: extensions.md
+    - text: Azure Data Studio 확장을 만들어 기능 확장
+      url: extension-authoring.md
+    - text: PostgreSQL 확장
+      url: postgres-extension.md
+    - text: PowerShell 편집기 지원
+      url: powershell-extension.md

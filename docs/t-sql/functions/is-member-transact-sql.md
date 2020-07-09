@@ -27,15 +27,15 @@ ms.assetid: 77cb68a0-19b7-4fe1-ab17-e5587699631b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 731a14b999955df633bbb24fc535e7f6d415020e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ab3e4b428cd3f8d5c899558ac2c4e1c5089d2cb1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632063"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85981723"
 ---
 # <a name="is_member-transact-sql"></a>IS_MEMBER(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   현재 사용자가 지정된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 그룹 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 역할의 멤버인지 여부를 표시합니다. Azure Active Directory 그룹에는 IS_MEMBER 함수가 지원되지 않습니다.  
   

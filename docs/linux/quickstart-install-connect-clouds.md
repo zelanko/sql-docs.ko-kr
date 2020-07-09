@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 402466ab44a5f3795c0031ecdaa33cb863279839
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cb24499b411d288e1e79b49d202fba63b251a805
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73594552"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897539"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>빠른 시작: 클라우드에서 SQL Server 실행
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 빠른 시작에서는 선택한 클라우드에서 RHEL(Red Hat Enterprise Linux), SLES(SUSE Linux Enterprise Server) 또는 Ubuntu에 SQL Server를 설치합니다. [Azure Portal 에서 Linux SQL Server 가상 머신 프로비저닝](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)으로 이동하여 Azure에서 SQL Server on Linux를 실행합니다.
 

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6a95082cd732b644105c14c4ba598f859f48456e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4b21deb3019a2d31c16a61f98ad9a1953ad65174
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68014700"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897369"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>가용성 그룹 모니터링(Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하여 가용성 그룹, 복제본 및 연결된 데이터베이스를 모니터링할 수 있도록 여러 카탈로그 및 동적 관리 뷰와 서버 속성을 제공합니다. [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT 문을 사용하여 뷰를 통해 가용성 그룹과 해당 복제본 및 데이터베이스를 모니터링할 수 있습니다. 지정된 가용성 그룹에 대해 반환되는 정보는 연결된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 주 복제본을 호스팅 중인지 아니면 보조 복제본을 호스팅 중인지에 따라 다릅니다.  
   
 > [!TIP]  

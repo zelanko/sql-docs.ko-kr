@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e2083d5f8602c28028da90cf4ecd1ed809115c7f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 848ac8820ec5150c8c3fc058f77ffa4261ed8aa2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822671"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902358"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Always On 가용성 그룹 대시보드 사용(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   데이터베이스 관리자는 Always On 가용성 그룹 대시보드를 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 가용성 그룹과 해당 가용성 복제본 및 데이터베이스에 대한 상태를 한 눈에 볼 수 있습니다. 가용성 그룹 대시보드의 일반적인 몇 가지 용도는 다음과 같습니다.  
   

@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ff428ab60ad51cfdf2cd19454c34e90644f30b5d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 333ff3e79bc92d82a224caf8af24fb9dc76a6082
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75235435"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897015"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>정책 평가 결과 페이지(Always On 대시보드)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Always On 대시보드의 **정책 평가 결과** 페이지를 사용하여 현재 정책 문제를 확인할 수 있습니다.  
     

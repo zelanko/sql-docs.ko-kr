@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: be0896b3-f793-44c9-9390-1c6e58f33b2b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 40782bb4779bc2cad0b758cf5ab2c56862d9c35b
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 84007df861dec2dc6a126edb3fa5cc95585312a7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634519"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902262"
 ---
 # <a name="deny-assembly-permissions-transact-sql"></a>DENY 어셈블리 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   어셈블리에 대한 사용 권한을 거부합니다.  
   

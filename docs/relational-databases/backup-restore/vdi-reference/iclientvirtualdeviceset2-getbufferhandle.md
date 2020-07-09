@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 844ddad21eaf3fb579d6a0981f2a042238e92372
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cf187379aaa664e536710859e08bf084b14657d1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70847334"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896904"
 ---
 # <a name="iclientvirtualdeviceset2getbufferhandle-vdi"></a>IClientVirtualDeviceSet2::GetBufferHandle (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 일부 애플리케이션은 **IClientVirtualDevice2::GetCommand**에서 반환된 버퍼에서 작동할 두 개 이상의 프로세스가 필요할 수 있습니다. 이 경우 명령을 수신하는 프로세스는 **GetBufferHandle**을 사용하여 버퍼를 식별하는 프로세스 독립 핸들을 가져올 수 있습니다. 그런 다음, 이 핸들은 동일한 가상 디바이스 세트가 열려 있는 다른 프로세스에 전달될 수 있습니다. 해당 프로세스는 IClientVirtualDeviceSet2::MapBufferHandle을 사용하여 버퍼의 주소를 가져옵니다. 각 프로세스는 서로 다른 주소에서 버퍼를 매핑할 수 있으므로 이 주소는 파트너에 있는 주소와 다를 수 있습니다.
 

@@ -8,16 +8,16 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 51dc2ba27e346dea75f1bd347491d4932695fd43
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0266318c73c9bb912da4251f2988f00e1c588a62
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077528"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898040"
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>ssis-conf를 사용하여 Linux에서 SQL Server Integration Services 구성
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Red Hat Enterprise Linux 및 Ubuntu용 SSIS(SQL Server Integration Services)를 설치할 때 `ssis-conf` 구성 스크립트를 실행합니다. SSIS 설치에 대한 자세한 내용은 [Linux에서 SSIS(SQL Server Integration Services) 설치](sql-server-linux-setup-ssis.md)를 참조하세요.
 

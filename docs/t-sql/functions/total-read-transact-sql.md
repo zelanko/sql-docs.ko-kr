@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: b505fbe9-9569-4f3d-80b9-b64b5109ac98
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 46c805a182b6c4673e138c838d6cfb2805fde765
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e7af6087a9a02db4b1362d26c49aab12639c002
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824153"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897640"
 ---
 # <a name="x40x40total_read-transact-sql"></a>&#x40;&#x40;TOTAL_READ (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 마지막으로 시작된 이후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 캐시가 아니라 디스크를 읽은 횟수를 반환합니다.  
   

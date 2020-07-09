@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 661181e4c8298b2c3e65bf6b022eee718800c118
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 917b6aa6dc76a949d5880c14a5c4bb9498f3ae44
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626488"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899812"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스에서 하나 이상의 사용자 정의 기본값을 제거합니다.  
   

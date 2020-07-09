@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8f8a436035c18f7bd6e5a1867ebe92433e4e5951
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8cde9d19b4f8b1c04290f6b36006b83aadc0e5ea
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321903"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900796"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Oracle 게시자에 대한 관리 고려 사항
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Oracle 게시자를 구성하고 복제 변경 내용 추적 메커니즘을 설정한 후에도 Oracle 데이터베이스 시스템의 관리자는 표준 Oracle 데이터베이스 유틸리티를 사용하고 일반 시스템 관리 태스크를 수행할 수 있습니다. 그러나 특정 관리 태스크 수행 시 게시된 데이터에 미치는 영향을 알아두어야 합니다.  
   
  복제에 대해 게시된 열을 삭제 또는 수정하거나 복제 개체를 삭제 또는 수정하는 경우를 제외하고 다음 고려 사항은 스냅샷 게시에 적용되지 않습니다.  

@@ -21,20 +21,20 @@ helpviewer_keywords:
 - SYSUTCDATETIME function [SQL Server]
 - time [SQL Server], system
 ms.assetid: f14fc2cd-9ea8-4daf-88f4-418cf523ab55
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fda203cc50956c5aad76d998a663cfb61710871e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 27c2ab86d376e9fd2753c4c9fca3c51d5886ec8e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68117478"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85993435"
 ---
 # <a name="sysutcdatetime-transact-sql"></a>SYSUTCDATETIME(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된 **datetime2** 값을 반환합니다. 날짜와 시간은 UTC 시간(Coordinated Universal Time)으로 반환됩니다. 소수 자릿수 초의 전체 자릿수는 1-7자리입니다. 기본 전체 자릿수는 7자리입니다.  
+  **인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된**datetime2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값을 반환합니다. 날짜와 시간은 UTC 시간(Coordinated Universal Time)으로 반환됩니다. 소수 자릿수 초의 전체 자릿수는 1-7자리입니다. 기본 전체 자릿수는 7자리입니다.  
   
 > [!NOTE]  
 >  SYSDATETIME 및 SYSUTCDATETIME에는 GETDATE 및 GETUTCDATE보다 많은 소수 자릿수 초의 전체 자릿수가 있습니다. SYSDATETIMEOFFSET에는 시스템 표준 시간대 오프셋이 포함되어 있습니다. SYSDATETIME, SYSUTCDATETIME 및 SYSDATETIMEOFFSET은 날짜 및 시간 유형 중 하나의 변수에 할당할 수 있습니다.  

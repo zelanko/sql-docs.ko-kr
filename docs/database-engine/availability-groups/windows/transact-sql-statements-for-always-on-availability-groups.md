@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5ef8cd17f7a6db5058fd10d26de9f8674846ed03
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b61b7a4bd994283bbed79d3e41a3b1c94052d015
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822206"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900725"
 ---
 # <a name="transact-sql-statements-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 Transact-SQL 문
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 배포와 지정된 가용성 그룹, 가용성 복제본 및 가용성 데이터베이스의 생성 및 관리를 지원하는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 문을 소개합니다.  
   

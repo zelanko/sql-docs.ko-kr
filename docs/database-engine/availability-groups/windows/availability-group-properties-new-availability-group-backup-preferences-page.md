@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cebacaf07ca7e678095a661267b02fe04d8513d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e71c01cfcabaf074b255b1afabd6e72b9fc9e14
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822476"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900410"
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>가용성 그룹 속성: 새 가용성 그룹(백업 기본 설정 페이지)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   이 대화 상자를 사용하여 선택한 가용성 그룹의 백업 기본 설정을 보고 변경할 수 있습니다.  
   
  **가용성 그룹 속성을 보려면**  

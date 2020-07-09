@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 64f427de0a2b2735671a885ca550c76386ce0177
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2bb5b61567c782709b6761c636a6fcf5fcbad4be
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67991497"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900892"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group"></a>Always On 가용성 그룹에 데이터베이스 추가
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 PowerShell을 사용하여 Always On 가용성 그룹에 데이터베이스를 추가하는 방법을 설명합니다.  
   
 

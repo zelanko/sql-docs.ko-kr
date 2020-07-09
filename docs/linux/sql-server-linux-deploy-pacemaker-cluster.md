@@ -8,16 +8,16 @@ ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ee3b4aac2e1bcdcc37de17a569f080d3b9bc87cc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da852f20d9109c5c4e2988cbdfc3915fe226718f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077470"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896523"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>SQL Server on Linux용 Pacemaker 클러스터 배포
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 자습서에서는 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Always On AG(가용성 그룹) 또는 FCI(장애 조치(failover) 클러스터 인스턴스)용 Linux Pacemaker 클러스터를 배포하는 데 필요한 작업을 설명합니다. 긴밀하게 결합된 Windows Server/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 스택과는 달리, Linux에서 AG(가용성 그룹)를 구성하고 Pacemaker 클러스터를 만드는 작업은 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]를 설치하기 전이나 설치 후에 수행할 수 있습니다. AG 또는 FCI 배포의 Pacemaker 부분에 대한 리소스 통합 및 구성은 클러스터가 구성된 후에 수행됩니다.
 > [!IMPORTANT]

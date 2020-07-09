@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: cd89359ecbcc920fe03ed4b2bc7d90fd01592476
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e674061244eb5e4a03717e8b3030c89412792e2b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70847564"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896859"
 ---
 # <a name="iclientvirtualdeviceset2openinsecondaryex-vdi"></a>IClientVirtualDeviceSet2::OpenInSecondaryEx (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 **OpenInSecondaryEx** 함수는 보조 클라이언트에서 가상 디바이스 세트를 엽니다. 기본 클라이언트는 이미 CreateEx 및 GetConfiguration을 사용하여 가상 디바이스 세트를 설정했어야 합니다.
 

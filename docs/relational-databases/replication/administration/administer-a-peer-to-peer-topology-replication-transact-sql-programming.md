@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4d0fa941-f9ea-4a14-aed9-34df593fc6f2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 712a0514bf4fb9e4c66e0d6f7b0475ec5a957dde
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a7d8e2bc3c1c58ab4ff141ff2366aeef45c52bc6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75322200"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897960"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>피어 투 피어 토폴로지 관리(복제 Transact-SQL 프로그래밍)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   피어 투 피어 토폴로지를 관리하는 것은 일반적인 트랜잭션 복제 토폴로지를 관리하는 것과 비슷하지만 특별히 고려해야 하는 영역도 많이 있습니다. 피어 투 피어 토폴로지 관리에서 주요한 차이점은 몇 가지 변경 작업의 경우 시스템을 *정지*해야 한다는 점입니다. 시스템 정지 과정에서는 모든 노드에서 게시된 테이블에 대한 작업을 중지하고 각 노드가 다른 모든 노드의 변경 내용을 받았는지 확인합니다. 자세한 내용은 [복제 토폴로지 정지&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)를 참조하세요.  
   
 > [!NOTE]  

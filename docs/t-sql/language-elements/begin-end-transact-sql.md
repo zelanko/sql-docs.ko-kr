@@ -24,15 +24,15 @@ ms.assetid: fc2c7f76-f1f9-4f91-beef-bc8ef0da2feb
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad484c4e830dde52a9845c0d45293463d240d977
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 82a5b3d8ee0f037fc8ea2909d333ea7de13841fa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138251"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85990581"
 ---
 # <a name="beginend-transact-sql"></a>BEGIN...END(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 그룹을 실행할 수 있도록 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 묶습니다. BEGIN과 END는 흐름 제어 언어 키워드입니다.  
   

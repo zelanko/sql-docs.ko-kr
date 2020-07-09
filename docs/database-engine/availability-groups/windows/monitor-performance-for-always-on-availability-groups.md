@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3730a4a6cff31098df9d081457fb233727096de5
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 951a6967e51d877efdd68b4f4a6f118c5ec1e6e7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922360"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897343"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 성능 모니터링
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Always On 가용성 그룹의 성능 양상은 중요 업무용 데이터베이스의 SLA(서비스 수준 약정)를 유지하기 위해 중요합니다. 가용성 그룹이 로그를 보조 복제본에 전달하는 방법을 이해하면 성능이 떨어지는 가용성 그룹 또는 복제본에서 가용성 구현의 RTO(복구 시간 목표) 및 RPO(복구 지점 목표)를 예측하고 병목 상태를 식별하는 데 도움이 될 수 있습니다. 이 문서에서는 동기화 프로세스를 설명하고 몇몇 주요 메트릭을 계산하는 방법을 보여 주고 몇 가지 일반적인 성능 문제 해결 시나리오에 대한 링크를 제공합니다.  
    
 ##  <a name="data-synchronization-process"></a>데이터 동기화 프로세스  

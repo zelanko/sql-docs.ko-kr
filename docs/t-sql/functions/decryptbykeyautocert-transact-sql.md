@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4c48b72262b4a7ffc7b79f40415c3a965276522d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: cc3da50d9d0be3c206c6d3e8556021a3b988ad2e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635557"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901658"
 ---
 # <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 함수는 대칭 키로 데이터의 암호를 해독합니다. 해당 대칭 키는 자동으로 인증서의 암호를 해독합니다.  
 

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 1379afba-6480-454b-9c65-5e64cb4f3415
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 89dcba875d2255b5b414887406ad84702e4ba1ad
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b893108ba79952fe803fceea64387c06f05190ee
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632281"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898010"
 ---
 # <a name="dbcc-traceoff-transact-sql"></a>DBCC TRACEOFF(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 지정한 추적 플래그를 해제합니다.
   

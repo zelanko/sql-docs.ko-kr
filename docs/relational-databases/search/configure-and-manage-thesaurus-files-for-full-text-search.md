@@ -1,6 +1,6 @@
 ---
 title: 전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리
-ms.date: 12/04/2017
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -14,15 +14,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d97b66622254ad911cb7bf557c1a7368b4f3d40
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056198"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897996"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 검색 쿼리는 전체 텍스트 검색 *동의어 사전*을 사용하여 사용자 지정 용어의 동의어를 검색할 수 있습니다. 각 동의어 사전은 특정 언어에 대한 동의어 집합을 정의합니다. 전체 텍스트 데이터에 맞게 동의어 사전을 개발하면 해당 데이터에 대한 전체 텍스트 쿼리의 범위를 효과적으로 넓힐 수 있습니다.
 
 동의어 사전 검색은 모든 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 및 [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 쿼리와 `FORMSOF THESAURUS` 절을 지정하는 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 및 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 쿼리에 대해 수행됩니다.
@@ -52,30 +52,30 @@ ms.locfileid: "74056198"
 ##  <a name="location-of-thesaurus-files"></a><a name="location"></a> 동의어 사전 파일의 위치  
  동의어 사전 파일의 기본 위치는 다음과 같습니다.  
   
-     <SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\  
+`<SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\`
   
- 이 기본 위치에는 다음 파일이 포함되어 있습니다.  
+이 기본 위치에는 다음 파일이 포함되어 있습니다.  
   
 -   **언어별** 동의어 사전 파일  
 
     설치 프로그램은 위의 위치에 빈 동의어 사전 파일을 설치합니다. 지원되는 각 언어에 대해 별도의 파일이 제공됩니다. 시스템 관리자는 이러한 파일을 사용자 지정할 수 있습니다.  
   
-     동의어 사전 파일의 기본 파일 이름은 다음 형식을 사용합니다.  
+    동의어 사전 파일의 기본 파일 이름은 다음 형식을 사용합니다.  
   
-         'ts' + <three-letter language-abbreviation> + '.xml'  
+    `'ts' + <three-letter language-abbreviation> + '.xml'`
   
-     특정 언어에 대한 동의어 사전 파일의 이름은 레지스트리의 다음 값에 지정됩니다.
+    특정 언어에 대한 동의어 사전 파일의 이름은 레지스트리의 다음 값에 지정됩니다.
      
-        HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance-name>\MSSearch\<language-abbrev>  
+    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance-name>\MSSearch\<language-abbrev>`
   
 -   **전역** 동의어 사전 파일  
   
-     빈 전역 동의어 사전 파일인 tsGlobal.xml  
+    빈 전역 동의어 사전 파일인 tsGlobal.xml  
 
 ### <a name="change-the-location-of-a-thesaurus-file"></a>동의어 사전 파일의 위치 변경 
 레지스트리 키를 변경하여 동의어 사전 파일의 위치와 이름을 바꿀 수 있습니다. 각 언어에 대해 동의어 사전 파일의 위치는 레지스트리의 다음 값에 지정됩니다.  
   
-    HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance name>\MSSearch\Language\<language-abbreviation>\TsaurusFile  
+`HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance name>\MSSearch\Language\<language-abbreviation>\TsaurusFile`
   
  전역 동의어 사전 파일은 LCID 0의 중립 언어에 해당합니다. 이 값은 관리자만 변경할 수 있습니다.  
 

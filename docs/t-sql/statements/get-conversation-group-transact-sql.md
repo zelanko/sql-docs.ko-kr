@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d0ede71391f31096191255c5a8fee2051ad6f696
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3fe4dd0be7b453bfa01feac2b60f1ec6a915320b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72252190"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899170"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   다음에 받을 메시지에 대한 대화 그룹 식별자를 반환하고 해당 메시지를 포함하는 대화에 대한 대화 그룹을 잠급니다. 대화 그룹 식별자는 메시지 자체를 받기 전에 대화 상태 정보를 검색하는 데 사용할 수 있습니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "72252190"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 [ WAITFOR ( ]  
    GET CONVERSATION GROUP @conversation_group_id  
@@ -77,7 +77,7 @@ ms.locfileid: "72252190"
 ## <a name="remarks"></a>설명  
   
 > [!IMPORTANT]  
->  GET CONVERSATION GROUP 문이 일괄 처리 또는 저장 프로시저에서 첫 번째 문이 아닌 경우 이전 문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 종결자인 세미콜론( **;** )으로 종결되어야 합니다.  
+>  GET CONVERSATION GROUP 문이 일괄 처리 또는 저장 프로시저에서 첫 번째 문이 아닌 경우 이전 문은  **문 종결자인 세미콜론(** ;[!INCLUDE[tsql](../../includes/tsql-md.md)])으로 종결되어야 합니다.  
   
  GET CONVERSATION GROUP 문에 지정된 큐를 사용할 수 없으면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 오류가 발생하여 문이 실패합니다.  
   

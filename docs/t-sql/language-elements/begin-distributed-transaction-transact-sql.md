@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ed317ca117ddce0c5eb6a7bd084a109668501f0e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f81dd17da405d1fe9b3dd6e73e569df91e10d4e2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632701"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898946"
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] Distributed Transaction Coordinator(MS DTC)에서 관리되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 분산 트랜잭션을 시작하도록 지정합니다.  
     

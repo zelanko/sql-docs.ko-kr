@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 5f87b375773b9c81b29b3b5cac11ea97121c45df
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 785513f99dd669850110aa7b62a0e9f4fd6efd3d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70847384"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896923"
 ---
 # <a name="iclientvirtualdeviceset2close-vdi"></a>IClientVirtualDeviceSet2::Close (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 **Close** 함수는 IClientVirtualDeviceSet2::Create에서 만든 가상 디바이스 세트를 닫습니다. 그러면 가상 디바이스 세트에 연결된 모든 리소스가 해제됩니다.
 

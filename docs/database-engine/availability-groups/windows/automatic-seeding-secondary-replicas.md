@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9a6ca6bf2fd3f17ecc9d252f4ed992c6a609866a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288547"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900900"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>자동 시드를 사용하여 Always On 가용성 그룹의 보조 복제본을 초기화합니다.
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server 2012 및 2014에서 SQL Server Always On 가용성 그룹의 보조 복제본을 초기화하는 유일한 방법은 백업, 복사 및 복원을 사용하는 것입니다. SQL Server 2016에서는 보조 복제본을 초기화하는 *자동 시드* 기능을 새로 도입했습니다. 자동 시드는 VDI를 사용하여 구성된 엔드포인트를 사용하는 가용성 그룹의 각 데이터베이스에 대한 보조 복제본으로 백업을 스트리밍하기 위해 로그 스트림 전송을 사용합니다. 새로운 이 기능은 가용성 그룹을 처음 만드는 중에 또는 데이터베이스를 추가할 때 사용할 수 있습니다. 자동 시드는 Always On 가용성 그룹을 지원하는 모든 버전의 SQL Server에 포함되어 있으며, 기존 가용성 그룹과 [분산 가용성 그룹](distributed-availability-groups.md) 모두에서 사용할 수 있습니다.
 

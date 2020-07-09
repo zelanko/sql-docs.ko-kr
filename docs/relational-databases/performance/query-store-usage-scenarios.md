@@ -13,15 +13,15 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b01305a689f7dbe7937560350200d3e81a1785dd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a694e18dd4ade720283beea6fc57d5dd4e919d7d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288457"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85989797"
 ---
 # <a name="query-store-usage-scenarios"></a>쿼리 저장소 사용 시나리오
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   쿼리 저장소는 예측 가능한 워크로드 성능을 추적하고 보장하는 것이 중요한 광범위한 시나리오에서 사용될 수 있습니다. 다음은 고려할 수 있는 몇 가지 예입니다.  
   

@@ -22,15 +22,15 @@ ms.assetid: b61d7f8d-5a51-49b7-91dd-f6190a5a0fb9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb5211a2d45ef1a5495d1df57143190f1d5f6419
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4acc2dfb88767dd246dc8e8c5af413235a8bb803
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67927374"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85991207"
 ---
 # <a name="and-transact-sql"></a>AND(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   두 개의 부울 식을 결합하여 두 식이 모두 **TRUE**일 때만 **TRUE**를 반환합니다. 문에 두 개 이상의 논리 연산자가 사용될 경우 **AND** 연산자가 먼저 계산됩니다. 계산 순서를 변경하려면 괄호를 사용합니다.  
   
@@ -38,13 +38,13 @@ ms.locfileid: "67927374"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 boolean_expression AND boolean_expression  
 ```  
   
 ## <a name="arguments"></a>인수  
  *boolean_expression*  
- **TRUE**, **FALSE** 또는 **UNKNOWN**의 부울 값을 반환하는 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ [TRUE](../../t-sql/language-elements/expressions-transact-sql.md), **FALSE** 또는 **UNKNOWN**의 부울 값을 반환하는 유효한 **식**입니다.  
   
 ## <a name="result-types"></a>결과 형식  
  **Boolean**  
@@ -83,7 +83,7 @@ IF 1 = 1 AND 2 = 2
 BEGIN  
    PRINT 'First Example is TRUE'  
 END  
-ELSE PRINT 'First Example is FALSE';  
+ELSE PRINT 'First Example is FALSE' ;  
 GO  
   
 IF 1 = 1 AND 2 = 17  

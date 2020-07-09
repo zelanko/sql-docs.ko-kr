@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a62145645a965d46c8da076eca14cd8a3dd85857
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f16a93231cf8b3bc6f3ad224703e3902ff3cb9b7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934964"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900926"
 ---
 # <a name="identify-waits-associated-with-availability-groups"></a>가용성 그룹과 연결된 대기 식별
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Always On 가용성 그룹 대기 시간의 문제를 해결할 때 DMV(동적 관리 뷰) [sys.dm_os_wait_stats&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)에서 가용성 그룹 관련 대기 유형을 사용하여 누적에 대해 대기 통계를 모니터링할 수 있습니다.  
   
  대기 통계 사용에 대한 일반적인 정보는 [SQL Server 2005 대기 및 큐](https://technet.microsoft.com/library/cc966413.aspx)를 참조하세요. 해당 문서는 SQL Server 2005에 대해 작성되었지만 해당 정보는 SQL Server 이후 버전에 적용될 수 있습니다.  

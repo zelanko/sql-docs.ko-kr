@@ -22,18 +22,18 @@ helpviewer_keywords:
 - totals [SQL Server], SUM
 - summary values [SQL Server]
 ms.assetid: 9af94d0f-55d4-428f-a840-ec530160f379
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2f549af8bd9e594d14407fe16186ee5d308e546
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 11e511a6074919eb0d731ad798537fb4ecc0889a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68117627"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85994226"
 ---
 # <a name="sum-transact-sql"></a>SUM(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   식의 모든 값 또는 DISTINCT 값의 합계를 반환합니다. SUM은 숫자 열에서만 사용할 수 있습니다. Null 값은 무시됩니다.  
   
@@ -107,7 +107,7 @@ White           19.00                 6.7926
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. OVER 절 사용  
- 다음 예에서는 OVER 절과 함께 SUM 함수를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `Sales.SalesPerson` 테이블에 있는 각 지역에 대해 연간 매출의 누적 합계를 구합니다. 데이터는 `TerritoryID`를 기준으로 분할되고 `SalesYTD`를 기준으로 논리적으로 정렬됩니다. 즉, SUM 함수는 판매 연도를 기준으로 각 지역에 대해 계산됩니다. `TerritoryID` 1의 경우 2005년도에 대한 두 개의 행이 있습니다. 이 두 행은 해당 연도의 두 영업 사원과 매출을 나타냅니다. 이 두 행의 누적 매출이 계산된 다음, 2006년도 매출을 나타내는 세 번째 행이 계산에 포함됩니다.  
+ 다음 예에서는 OVER 절과 함께 SUM 함수를 사용하여 `Sales.SalesPerson` 데이터베이스에서 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에 있는 각 지역에 대해 연간 매출의 누적 합계를 구합니다. 데이터는 `TerritoryID`를 기준으로 분할되고 `SalesYTD`를 기준으로 논리적으로 정렬됩니다. 즉, SUM 함수는 판매 연도를 기준으로 각 지역에 대해 계산됩니다. `TerritoryID` 1의 경우 2005년도에 대한 두 개의 행이 있습니다. 이 두 행은 해당 연도의 두 영업 사원과 매출을 나타냅니다. 이 두 행의 누적 매출이 계산된 다음, 2006년도 매출을 나타내는 세 번째 행이 계산에 포함됩니다.  
   
 ```  
 SELECT BusinessEntityID, TerritoryID   

@@ -9,16 +9,16 @@ ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 729aacf69f8aa36964f33c0bcb282351a67ab444
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3db39ed328ca37cbc0eb03b2ce4f8cdbcda268dd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635426"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902312"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>AKS(Azure Kubernetes Services)를 사용하여 Kubernetes에 SQL Server 컨테이너 배포
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 HA(고가용성)를 위한 영구적 스토리지를 사용하여 AKS(Azure Kubernetes Service)의 Kubernetes에서 SQL Server 인스턴스를 구성하는 방법을 알아봅니다. 이 솔루션은 복원력을 제공합니다. SQL Server 인스턴스가 실패하면 Kubernetes가 새 Pod에서 자동으로 다시 만듭니다. Kubernetes는 노드 실패에 대한 복원력도 제공합니다.
 
@@ -160,12 +160,15 @@ Kubernetes 클러스터에서 [영구적 볼륨](https://kubernetes.io/docs/conc
 1. 배포를 설명하는 매니페스트(YAML 파일)를 만듭니다. 다음 예제에서는 SQL Server 컨테이너 이미지를 기반으로 하는 컨테이너를 포함하여 배포를 설명합니다.
 
    ```yaml
-   apiVersion: apps/v1beta1
+   apiVersion: apps/v1
    kind: Deployment
    metadata:
      name: mssql-deployment
    spec:
      replicas: 1
+     selector:
+        matchLabels:
+          app: mssql
      template:
        metadata:
          labels:

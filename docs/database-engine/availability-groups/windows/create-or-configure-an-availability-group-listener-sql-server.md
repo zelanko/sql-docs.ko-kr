@@ -16,15 +16,15 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 6674f818d9983de56b4b015cb446b2c8f2931b84
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a056f29bfba78c7ea64a0c1e4c99612aae3ebcff
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79434160"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899893"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 수신기 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 *,* 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 PowerShell을 사용하여 Always On 가용성 그룹에 대한 단일 [!INCLUDE[tsql](../../../includes/tsql-md.md)]가용성 그룹 수신기 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 만들거나 구성하는 방법에 대해 설명합니다.  
   
 > [!IMPORTANT]  
@@ -279,6 +279,7 @@ Get-ClusterResource yourListenerName | Set-ClusterParameter RegisterAllProviders
 Get-ClusterResource yourListenerName | Set-ClusterParameter HostRecordTTL 300  
 Stop-ClusterResource yourListenerName  
 Start-ClusterResource yourListenerName  
+Start-Clustergroup yourListenerGroupName
 ```  
   
  장애 조치(Failover) 중 복구 시간에 대한 자세한 내용은 [Client Recovery Latency During Failover](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md#DNS)을 참조하세요.  
