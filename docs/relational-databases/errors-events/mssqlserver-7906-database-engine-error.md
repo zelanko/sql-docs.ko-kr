@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 9638a764-4ac1-40ae-a614-2726ebcc6ba4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0320795493df3c4d0283e3d82a2235e9f1f08914
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 25966577f568b6b807e6039a951300368b0ad971
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951435"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637225"
 ---
 # <a name="mssqlserver_7906"></a>MSSQLSERVER_7906
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>세부 정보  
   
-|||  
-|-|-|  
+| attribute | 값 |  
+| :-------- | :---- |  
 |제품 이름|SQL Server|  
 |이벤트 ID|7906|  
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBCC2_FS_INVALID_TOP_LEVEL_FILE|  
-|메시지 텍스트|데이터베이스 오류: 파일 'FILE'이(가) 잘못된 Filestream 파일입니다.|  
+|메시지 텍스트|데이터베이스 오류: 파일 'FILE'이 잘못된 Filestream 파일입니다.|  
   
 ## <a name="explanation"></a>설명  
 Filestream 데이터 공간 바로 아래에는 'filestream.hdr'과 같은 일부 특수한 파일을 제외한 다른 파일이 있을 수 없습니다.  

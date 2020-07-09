@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
 author: RothJa
 ms.author: jroth
-ms.openlocfilehash: a46dd56f8891235b7caae471bd4801b27bfc4306
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 8fed086b5553e8c8f4368f7ef671c074fe342362
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664930"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729815"
 ---
 # <a name="xml-data-sql-server"></a>XML 데이터(SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 반구조화된 데이터 관리를 위한 다양한 애플리케이션을 개발할 수 있는 강력한 플랫폼을 제공합니다. XML에 대한 지원은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 모든 구성 요소에 통합되어 있고 해당되는 지원은 다음과 같습니다.  
   
 -   **xml** 데이터 형식. XML 값은 XML 스키마의 컬렉션에 따라 형식화되거나 형식화되지 않은 상태로 유지될 수 있는 **xml** 데이터 형식의 열에 기본적으로 저장될 수 있습니다. XML 열을 인덱싱할 수 있습니다.  

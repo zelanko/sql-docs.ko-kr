@@ -12,15 +12,15 @@ ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb89f83f0a916a9d56443e7494ce5e8284350bb8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b364e3d4234cac7b7b3522822aaf2c12e31e6b3b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940623"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727423"
 ---
 # <a name="qnparameter-table-event-class"></a>QN:Parameter Table 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   QN:Parameter table 이벤트는 매개 변수 테이블에 대한 참조 수를 만들고 보관하며 매개 변수 정보를 저장하는 내부 테이블을 삭제하는 데 필요한 작업에 대한 정보를 보고합니다. 이 이벤트는 또한 매개 변수 테이블에 대한 사용 개수를 다시 설정하기 위한 내부 작업도 보고합니다.  
   
 ## <a name="qnparameter-table-event-class-data-columns"></a>QN:Parameter table 이벤트 클래스 데이터 열  

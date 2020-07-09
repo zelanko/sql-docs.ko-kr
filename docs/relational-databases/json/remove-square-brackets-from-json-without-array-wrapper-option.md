@@ -1,8 +1,7 @@
 ---
 title: JSON에서 대괄호 제거 - WITHOUT_ARRAY_WRAPPER 옵션
-ms.date: 06/02/2016
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,17 +9,18 @@ helpviewer_keywords:
 ms.assetid: aa86c2d1-458e-465f-abfa-75470137d054
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7de18ecb5bf47c8d1fc03f95716bbebfb27cf7ae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d4e2757f8ae471ae4e050612fb4e1e8d20fe550
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74096099"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730399"
 ---
 # <a name="remove-square-brackets-from-json---without_array_wrapper-option"></a>JSON에서 대괄호 제거 - WITHOUT_ARRAY_WRAPPER 옵션
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 기본적으로 **FOR JSON** 절의 JSON 출력을 둘러싸고 있는 대괄호를 제거하려면 **WITHOUT_ARRAY_WRAPPER** 옵션을 지정합니다. 이 옵션에 단일 행 결과를 사용하여 단일 요소가 있는 배열 대신 단일 JSON 개체를 출력으로 생성합니다.
 

@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: c67b72f1-0a1e-42f0-878a-84e85efc915b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f32f03c7059cdb2410bc40312ce7d32555003e4e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 83f65e243a719756c254f663c5cc91898d28f2de
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71284530"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729420"
 ---
 # <a name="integration-services-language-reference"></a>Integration Services 언어 참조
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   이 섹션에서는 [!INCLUDE[tsql](../includes/tsql-md.md)] 인스턴스에 배포된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 관리하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] API에 대해 설명합니다.  
   

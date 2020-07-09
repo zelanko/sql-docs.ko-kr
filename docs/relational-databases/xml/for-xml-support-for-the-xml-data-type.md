@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 87c9ee4bff2206508cb3100604c84219b1cea1d5
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: 230492cc44948b169d52a09ee628c424e9840e82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81387977"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729891"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml 데이터 형식에 대한 FOR XML 지원
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   FOR XML 쿼리가 SELECT 절에서 **xml** 유형의 열을 지정하는 경우 ELEMENTS 지시어를 지정했는지 여부에 관계없이 열 값은 반환된 XML의 요소로 매핑됩니다. **xml** 유형의 열에 있는 XML 선언은 직렬화되지 않습니다.  
   
  예를 들어 다음 쿼리는 `BusinessEntityID`xml `FirstName`유형의 `LastName` 열에서 `AdditionalContactInfo` , **및** 열과 전화 번호와 같은 고객 연락 정보를 검색합니다.  

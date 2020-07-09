@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9224e9050ecf01255151e5ec8e11ecaf282d7387
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c237be1e705fa5d6b13722ae3ef5bf47f0f9436c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68051222"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731018"
 ---
 # <a name="value-method-xml-data-type"></a>value() 메서드(xml 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   XML에 대해 XQuery를 수행하고 SQL 유형의 값을 반환합니다. 이 메서드는 스칼라 값을 반환합니다.  
   

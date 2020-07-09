@@ -12,15 +12,15 @@ ms.assetid: 4916167e-8541-43b4-900e-ec8e6adcbc34
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f457c1a3d5699adf92f50e212bb8e3cd83200cc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c88de8efa99b8942ef509873fb6f95c32f454bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940521"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727407"
 ---
 # <a name="qnsubscription-event-class"></a>QN:Subscription 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   QN:Subscription 이벤트는 알림 구독에 대한 정보를 보고합니다.  
   
 ## <a name="qnsubscription-event-class-data-columns"></a>QN:Subscription 이벤트 클래스 데이터 열  

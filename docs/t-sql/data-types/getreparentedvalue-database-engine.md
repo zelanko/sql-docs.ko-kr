@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8ff469d92165d12bac6d10bed6682d29ea162eb7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2fe15544cd689004eb2fcc56ae4083651e6c02ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72278362"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732795"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue(데이터베이스 엔진)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 루트에서 _newRoot_까지의 경로 다음에 _oldRoot_에서 시작되는 경로가 오는 노드를 반환합니다.
   

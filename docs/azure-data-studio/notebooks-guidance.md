@@ -5,20 +5,20 @@ author: yualan
 ms.author: alayu
 ms.reviewer: achatter, maghan, mikeray
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.custom: seo-lt-2019
 ms.date: 03/30/2020
-ms.openlocfilehash: 480b5df927adddd38b8f9f2ea13fa25c3f653606
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0376dd04bdd340fe7aa8281debbd49d0cbcb869f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82178624"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729503"
 ---
 # <a name="notebooks-with-sql-server-in-azure-data-studio"></a>Azure Data Studio에서 SQL Server와 함께 Notebook 사용
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Jupyter Notebook은 라이브 코드, 수식, 시각화 및 내레이션 텍스트를 포함하는 문서를 만들고 공유할 수 있는 오픈 소스 웹 애플리케이션입니다. 사용에는 데이터 정리 및 변환, 숫자 시뮬레이션, 통계 모델링, 데이터 시각화 및 기계 학습이 포함됩니다.
 

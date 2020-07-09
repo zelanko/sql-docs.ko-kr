@@ -13,15 +13,15 @@ ms.assetid: dc664d80-fbe3-4586-aba8-a71fa62d14f0
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b8b61a52420752c2409edfd4ed580a07a79d492d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c44303cdfde6549c908e024a199f7b4635b46c7f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288290"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730241"
 ---
 # <a name="ltagentnamegt-agent-location"></a>&lt;AgentName&gt; 에이전트 위치
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   병합 에이전트(병합 구독의 경우) 및 배포 에이전트(트랜잭션 구독 및 스냅샷 구독의 경우)는 배포자 또는 구독자에서 실행됩니다. 에이전트가 배포자에서 실행되는 경우 구독을 밀어넣기 구독이라고 하고 에이전트가 구독자에서 실행되는 경우 구독을 끌어오기 구독이라고 합니다. 밀어넣기 및 끌어오기 구독에 대한 자세한 내용은 [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)을 참조하세요. 마법사를 통해 만든 구독은 모두 두 유형 중 하나가 됩니다. 두 가지 유형의 구독을 모두 만들려면 마법사를 두 번 실행해야 합니다.  
   
 > [!NOTE]  

@@ -12,15 +12,15 @@ ms.assetid: 06fe5f07-a0dd-4968-b123-56b124a86020
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3f3e67ed262cfd83bbbc52174e704bf4cc3d4c3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a84c7f73458264789d7d5043ebaae109a3c03207
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68007001"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728313"
 ---
 # <a name="user-configurable-event-class"></a>User-Configurable 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   User-Configurable 이벤트 범주를 사용하여 사용자 정의 이벤트를 모니터링할 수 있습니다. 다른 이벤트 범주의 시스템 제공 이벤트 클래스에서 모니터링할 수 없는 이벤트를 모니터링하도록 사용자 정의 이벤트 클래스를 만듭니다. 예를 들어 테스트 중인 애플리케이션의 진행률을 모니터링하도록 사용자 정의 이벤트를 만들 수 있습니다. 애플리케이션이 실행될 때 미리 정의한 지점에서 이벤트를 생성하여 애플리케이션의 현재 실행 지점을 판단하도록 할 수 있습니다.  
   
 ## <a name="user-configurable-event-class-data-columns"></a>User-Configurable 이벤트 클래스 데이터 열  

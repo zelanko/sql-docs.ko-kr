@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - CONNECTIONPROPERTY statement
 ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: a5cf9d02986587ed3e5234343306d6d73c7203a7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 94eb8e6d45606da75c6661a78b5f296940248388
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832276"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732587"
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 서버에 들어오는 요청의 경우 이 함수는 해당 요청을 지원하는 고유한 연결의 연결 속성에 대한 정보를 반환합니다.
   
@@ -50,12 +50,12 @@ CONNECTIONPROPERTY ( property )
 |local_tcp_port|**int**|TCP 전송을 사용하는 연결인 경우 이 연결이 대상으로 하는 서버 TCP 포트를 반환합니다. Null을 허용합니다.|  
 |client_net_address|**varchar(48)**|이 서버에 연결하려는 클라이언트의 주소를 요청합니다. Null을 허용합니다.|  
 |physical_net_transport|**nvarchar(40)**|이 연결에서 사용하는 물리적 전송 프로토콜을 반환합니다. 연결에 MARS(Multiple Active Result Sets)가 설정된 경우 정확합니다.|  
-|\<다른 문자열>||잘못된 입력에 NULL을 반환합니다.|  
+|\<Any other string>||잘못된 입력에 NULL을 반환합니다.|  
   
 ## <a name="remarks"></a>설명  
 **local_net_address** 및 **local_tcp_port**는 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에서 NULL을 반환합니다.
   
-반환된 값은 [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md) 동적 관리 뷰에서 해당 열에 대해 표시되는 옵션과 일치합니다. 다음은 그 예입니다.
+반환된 값은 [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md) 동적 관리 뷰에서 해당 열에 대해 표시되는 옵션과 일치합니다. 예를 들면 다음과 같습니다.
   
 ```sql
 SELECT   

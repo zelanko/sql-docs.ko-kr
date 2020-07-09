@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 67488a92a14a2533c9ba6ef14941b11b8bcbb8c2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b03b93f91aa615d8366b9d022a9560480373a404
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68127122"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727569"
 ---
 # <a name="use-the-copy-database-wizard"></a>데이터베이스 복사 마법사 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 데이터베이스 복사 마법사는 서버 가동을 중지시키지 않고 데이터베이스 및 특정 서버 개체를 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  인스턴스에서 다른 인스턴스로 이동하거나 복사합니다. 이 마법사를 사용하여 다음을 수행할 수 있습니다. 
   
 -   원본 서버 및 대상 서버 선택  

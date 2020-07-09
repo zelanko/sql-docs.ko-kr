@@ -17,17 +17,17 @@ helpviewer_keywords:
 - CHECKSUM_AGG function
 - groups [SQL Server], checksum values
 ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 4bb400a4a34644391f4748c51a83ce78d58685a8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0fd4b0459552330fcbc17b4e3409b1106abc8bd7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823311"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732689"
 ---
 # <a name="checksum_agg-transact-sql"></a>CHECKSUM_AGG(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 이 함수는 그룹에 있는 값의 체크섬을 반환합니다. `CHECKSUM_AGG`는 Null 값을 무시합니다. [OVER 절](../../t-sql/queries/select-over-clause-transact-sql.md)은 `CHECKSUM_AGG` 다음에 올 수 있습니다.
   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 52430735-51f4-46d1-a308-9aecf8648fda
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5c98ef9c726d2db5b5ec06d71a00de08288098a0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7182961996510fcded86a3e1d218d482eb834e63
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68051284"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731063"
 ---
 # <a name="modify-method-xml-data-type"></a>modify() 메서드(xml 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   XML 문서의 내용을 수정합니다. 이 메서드를 사용하면 **xml** 형식의 변수 또는 열의 콘텐츠를 수정할 수 있습니다. 이 메서드는 XML DML 문을 사용하여 XML 데이터에서 노드를 삽입, 업데이트 또는 삭제합니다. UPDATE 문의 SET 절에서는 **xml** 데이터 형식의 **modify()** 메서드만 사용할 수 있습니다.  
   

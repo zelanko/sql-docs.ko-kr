@@ -20,15 +20,15 @@ ms.assetid: e94aa576-4c0c-4c54-ad05-6c3432cc615b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 224b7023df4187702c14b41f17caad7c0b53b911
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63eada30892325c60d438e3bca11343c76e1c9da
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78256865"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730273"
 ---
 # <a name="display-the-estimated-execution-plan"></a>예상 실행 계획 표시
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 그래픽 예상 실행 계획을 작성하는 방법에 대해 설명합니다. 예상 실행 계획이 작성되면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 또는 일괄 처리가 실행되지 않습니다. 이 때문에 예상 실행 계획에는 실제 리소스 사용량 메트릭 또는 런타임 경고와 같은 런타임 정보가 포함되지 않습니다. 대신 쿼리가 실제로 실행되었을 때 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]이 사용할 가능성이 가장 큰 쿼리 실행 계획과 계획에서 몇 가지 작업을 통과하는 예상 행 수가 생성된 실행 계획에 표시됩니다.  
   
  이 기능을 사용하려면 사용자가 그래픽 실행 계획을 생성하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 실행하기 위한 적절한 권한을 갖고 있어야 하며 쿼리가 참조하는 모든 데이터베이스에 대한 SHOWPLAN 권한이 허용되어야 합니다.  

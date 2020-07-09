@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: bc8173d8be0c5f5c3194667935e3cc7af4f1cca9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b26d8a7fa1c72a3c31f43d6d8e99bfceedde96a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67930739"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731203"
 ---
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML(geography 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 GML(Geography Markup Language)의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하위 집합에 표현이 지정된 경우 **geography** 인스턴스를 생성합니다.
   

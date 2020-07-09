@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: da6d7934951b683976a1a55f116def120bc515a0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9b08bb0737507f6d4fbeb8ec62b932fa6e674b08
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000437"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729650"
 ---
 # <a name="tostring-database-engine"></a>ToString(데이터베이스 엔진)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 *this*를 논리적으로 표현한 문자열을 반환합니다. ToString은 **hierarchyid**에서 문자열 형식으로 변환될 때 암시적으로 호출됩니다. [Parse&#40;데이터베이스 엔진&#41;](../../t-sql/data-types/parse-database-engine.md)와 반대로 작동합니다.
   

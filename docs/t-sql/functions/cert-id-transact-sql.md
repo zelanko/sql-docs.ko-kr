@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 59cc06f5-272e-4936-8afe-afba7aba8eea
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 10f97749970337435b14ff0d1dc14df42ad48daf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8c3c6361737f8aefd3e6e9eac0af7caf29684b97
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68040132"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732747"
 ---
 # <a name="cert_id-transact-sql"></a>CERT_ID(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 이 함수는 인증서의 ID 값을 반환합니다.
   

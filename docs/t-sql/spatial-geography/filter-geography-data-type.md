@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 82a8f54a-3a47-4e20-b13a-b148029c5448
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b00d10e27e515cb30d32cdd08d7d10e69ac55b0e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 79f35b2f228905d9d929d5198f20502d8c7197f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67930281"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731165"
 ---
 # <a name="filter-geography-data-type"></a>Filter(geography 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   인덱스를 사용할 수 있다고 가정하는 경우 **geography** 인스턴스가 다른 **geography** 인스턴스와 교차하는지 확인하는 빠른 인덱스 전용 교차법을 제공하는 메서드입니다.  
   

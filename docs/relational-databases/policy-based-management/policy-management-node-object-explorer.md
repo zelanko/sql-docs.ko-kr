@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6fc55d4d0e68d83db7c7684d9c0d5cee3982a6c2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7fcd37d6584b38c50b35248124ade0a146af956d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086909"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730257"
 ---
 # <a name="policy-management-node-object-explorer"></a>정책 관리 노드(개체 탐색기)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 섹션에서는 **에 있는 개체 탐색기의** 정책 관리 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]노드에 대한 다음 F1 도움말 항목을 제공합니다.  
   
 -   [새 조건 만들기 또는 조건 열기 대화 상자, 일반 페이지](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)  

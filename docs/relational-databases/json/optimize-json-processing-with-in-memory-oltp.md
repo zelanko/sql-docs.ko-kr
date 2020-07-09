@@ -1,24 +1,24 @@
 ---
 title: 메모리 내 OLTP를 통해 JSON 처리 최적화
-ms.date: 07/18/2017
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: d9c5adb1-3209-4186-bc10-8e41a26f5e57
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2b02d5b987958abc8dd97e48f86e7b44636efad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 30a31cb80a9aea2f99824dbf7912714870059be3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74096076"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730411"
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>메모리 내 OLTP를 통해 JSON 처리 최적화
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 SQL Server 및 Azure SQL Database를 통해 JSON으로 서식이 지정된 텍스트로 작업할 수 있습니다. JSON 데이터를 처리하는 쿼리의 성능을 향상하려면 표준 문자열 열(NVARCHAR 형식)을 사용하여 메모리 최적화 테이블에 JSON 문서를 저장할 수 있습니다. 메모리 최적화 테이블에 JSON 데이터를 저장하면 잠금 해제된 메모리 내 데이터 액세스를 활용하여 쿼리 성능이 향상됩니다.
 
@@ -146,7 +146,6 @@ AS BEGIN
     FROM xtp.Product
         JOIN OPENJSON(@ProductIds)
             ON ProductID = value
-
 END;
 
 CREATE PROCEDURE xtp.UpdateProductData(@ProductId int, @Property nvarchar(100), @Value nvarchar(100))
@@ -157,7 +156,6 @@ AS BEGIN
     UPDATE xtp.Product
     SET Data = JSON_MODIFY(Data, @Property, @Value)
     WHERE ProductID = @ProductId;
-
 END
 ```
 

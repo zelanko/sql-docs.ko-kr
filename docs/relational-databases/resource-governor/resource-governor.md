@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 41c77ad93bf129fa84f5d039b64a63593a335aee
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: cc24afebe163f3fbab8c7f1a2317b62d8c818223
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849841"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729292"
 ---
 # <a name="resource-governor"></a>관리
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]리소스 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 워크로드 및 시스템 리소스 소비량을 관리하는 데 사용할 수 있는 기능입니다. Resource Governor를 사용하면 CPU, 물리적 I/O, 들어오는 애플리케이션 요청에 사용할 수 있는 메모리 양의 한도를 지정할 수 있습니다.  
   
 ## <a name="benefits-of-resource-governor"></a>리소스 관리자의 이점  

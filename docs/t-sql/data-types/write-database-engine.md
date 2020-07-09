@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7c554334-d2d9-4eae-a4ae-097aa4020e1a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d026e01ee6675d0af462492469913d280124cc31
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e68559c2f795a16bd9257d53a92f1cb5899d711
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000362"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729616"
 ---
 # <a name="write-database-engine"></a>Write(데이터베이스 엔진)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Write는 전달된 **BinaryWriter**에 **SqlHierarchyId**의 이진 표현을 씁니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 Write를 호출할 수 없습니다. 대신 CAST 또는 CONVERT를 사용합니다.
   

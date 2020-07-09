@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6446ad935f2388f2fd2d8df898232f897e475cc3
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: b018053582e6bddafe744be1d9a0411132fc3e06
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849821"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730882"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>리소스 관리자를 사용하여 백업 압축을 통해 CPU 사용량 제한(Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   기본적으로 압축을 사용하여 백업하면 CPU 사용량이 크게 늘어나고 압축 프로세스로 사용되는 추가 CPU는 동시 작업에 악영향을 줄 수 있습니다. 따라서 CPU 경합이 발생하면 CPU 사용량이[Resource Governor](../../relational-databases/resource-governor/resource-governor.md) 로 제한되는 세션에서 우선 순위가 낮은 압축 백업을 만들 수 있습니다. 이 항목에서는 이와 같은 경우에 CPU 사용량을 제한하는 리소스 관리자 작업 그룹에 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자의 세션을 매핑하는 방법으로 이러한 세션을 분류하는 시나리오를 제공합니다.  
   

@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1e9bd20f7b0176c3d57bdd032f9c7f47d6729ba6
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 79fb6976eb128e31965290df302a222bcf55177e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220583"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728533"
 ---
 # <a name="backup-devices-sql-server"></a>백업 디바이스(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 백업 작업 중에 백업되는 데이터인 *백업*은 물리적 백업 디바이스에 기록됩니다. 이 물리적 백업 디바이스는 미디어 세트의 첫 번째 백업을 디바이스에 기록할 때 초기화됩니다. 하나 이상의 백업 디바이스 세트에서의 백업이 미디어 세트 하나를 구성합니다.  
    
 ##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> 용어 및 정의  

@@ -12,15 +12,15 @@ ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bdc25063da64321b0be4cbcbd078e8cf5792c932
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a9c1d26fb993544fd58ecb6dd9e33f6d6fd26cd2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68100250"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727405"
 ---
 # <a name="qntemplate-event-class"></a>QN:Template 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   QN:Template 이벤트는 쿼리 템플릿의 내부 사용에 대한 정보를 보고합니다. 여기서 쿼리 템플릿이란 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 알리기 위해 쿼리 정의를 공유하는 데 사용하는 메커니즘을 말합니다. 이러한 템플릿은 매개 변수 테이블과 함께 만들어집니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 쿼리 템플릿이 만들어지거나 사용되거나 소멸될 때 이러한 유형의 이벤트를 만듭니다.  
   
 ## <a name="qntemplate-event-class-data-columns"></a>QN:Template 이벤트 클래스 데이터 열  

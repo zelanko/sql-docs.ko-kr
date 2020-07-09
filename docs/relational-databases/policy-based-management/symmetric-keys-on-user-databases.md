@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 3333ab5b-2518-4753-a0a8-57df5e5af74f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 71e52cf9d65eb21df0553f5601bd4aefb3727175
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd650742e2781388d0d0941b80c6c9a9d60a801c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021513"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727313"
 ---
 # <a name="symmetric-keys-on-user-databases"></a>사용자 데이터베이스의 대칭 키
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 규칙은 길이가 128바이트 미만인 키에 RC2 또는 RC4 암호화 알고리즘이 사용되지 않는지 검사합니다.  
   
 ## <a name="best-practices-recommendations"></a>최선의 구현 방법 권장 사항  

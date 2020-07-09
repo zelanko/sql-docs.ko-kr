@@ -15,16 +15,16 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c72de4a0070595b9e1a371d5309d4e1d3e43853
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: 36c7637d1408a8d37764bf18997d341db959d8e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588249"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730292"
 ---
 # <a name="cardinality-estimation-sql-server"></a>카디널리티 추정(SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 비용을 기반으로 하는 쿼리 최적화 프로그램입니다. 즉, 가장 낮은 예상 처리 비용으로 실행할 수 있는 쿼리 계획을 선택합니다. 쿼리 최적화 프로그램에서는 다음 두 가지 주요 요소를 기반으로 쿼리 계획 실행 비용을 결정합니다.
 

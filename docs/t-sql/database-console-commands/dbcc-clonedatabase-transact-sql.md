@@ -37,15 +37,15 @@ ms.assetid: ''
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: d924bcf411bd31779fbc1b2abfb93e493c07a81b
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2f1214064c11537f4752f9ec824123c3d601a1c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635888"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730741"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 쿼리 최적화 프로그램과 관련된 성능 문제를 조사하기 위해 DBCC CLONEDATABASE를 사용하여 데이터베이스의 스키마 전용 클론을 생성합니다.
 

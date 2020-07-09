@@ -5,20 +5,20 @@ author: garyericson
 ms.author: garye
 ms.reviewer: mikeray, alayu, maghan
 ms.topic: tutorial
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: 8d0666c74f464535d2de08dd44e92c521cfcd73f
-ms.sourcegitcommit: 4f4ca7075a73a7a4d7196dcb279c58e15c2daf37
+ms.openlocfilehash: e4c431cba395b8e0c732fa7ac4ab96942cac7144
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82196795"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728856"
 ---
 # <a name="create-and-run-a-python-notebook"></a>Python 노트북 만들기 및 실행
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 이 자습서에서는 Python 커널을 사용하여 Azure Data Studio에서 Notebook을 만들고 실행하는 방법을 보여 줍니다.
 

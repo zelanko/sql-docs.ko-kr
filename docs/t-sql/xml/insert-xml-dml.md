@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c005ad315a3bcbeb1048d16cb10e30035512ac6c
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: fc19088f8ee34202b5157015ac9ef71a8d24922c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606642"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731072"
 ---
 # <a name="insert-xml-dml"></a>insert(XML DML)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   *Expression1*에 의해 식별된 하나 이상의 노드를 *Expression2*에 의해 식별된 자식 노드 또는 노드의 형제로 삽입합니다.  
   
@@ -55,7 +55,7 @@ insert
  *Expression2*  
  노드를 식별합니다. *Expression1*에 식별된 노드는 *Expression2*에 의해 식별된 노드에 상대적으로 삽입됩니다. 이 식은 현재 참조되는 문서에 있는 노드에 대해 참조를 반환하는 XQuery 식일 수 있습니다. 두 개 이상의 노드가 반환되면 삽입이 실패합니다. *Expression2*가 빈 시퀀스를 반환하는 경우 삽입이 수행되지 않고 오류가 반환되지 않습니다. *Expression2*가 정적으로 단일 항목이 아닌 경우 정적 오류가 반환됩니다. *Expression2*는 처리 지침, 주석 또는 특성일 수 없습니다. *Expression2*는 구성된 노드가 아닌 문서에 있는 기존 노드에 대한 참조여야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-inserting-element-nodes-into-the-document"></a>A. 문서에 요소 노드 삽입  
  다음 예에서는 문서에 요소를 삽입하는 방법을 보여 줍니다. 먼저 XML 문서가 **xml** 형식의 변수에 할당됩니다. 그런 다음, 여러 **insert** XML DML 문을 통해 예에서 요소 노드가 문서에 삽입되는 방법을 보여 줍니다. 각 삽입 이후 SELECT 문으로 결과를 표시합니다.  
