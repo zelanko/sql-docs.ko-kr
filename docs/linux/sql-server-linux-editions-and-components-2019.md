@@ -24,16 +24,16 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: b1ebc05fcae4bbf6065b0821101618b7eb64f541
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: d84f7a508d9ae6d46ba529d8139ecc8c0deaf3e8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002778"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894036"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux 버전 및 지원되는 기능
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 문서에서는 SQL Server 2019 on Linux의 다양한 버전에서 지원하는 기능을 자세히 설명합니다. Windows에서 지원되는 SQL Server 버전 및 기능에 대해서는 [SQL Server 2019 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)를 참조하세요.  
   

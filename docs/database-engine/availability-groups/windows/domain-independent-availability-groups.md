@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b57d3443ab83ead35d92615ad6c718cde6977097
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b50f2cda111a38ffd6ba67dbbf0fb9fc74192168
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000227"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894490"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>도메인 독립 가용성 그룹 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Always On AG(가용성 그룹)에는 기본 WSFC(Windows Server 장애 조치 클러스터)가 필요합니다. Windows Server 2012 R2를 통해 WSFC를 배포하는 경우 노드라고도 하는 WSFC에 참여하는 서버가 반드시 동일한 도메인에 가입되어야 합니다. AD DS(Active Directory Domain Services)에 대한 자세한 내용은 [여기](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx)를 참조하세요.
 

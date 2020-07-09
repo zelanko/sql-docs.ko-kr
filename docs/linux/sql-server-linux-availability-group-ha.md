@@ -10,16 +10,16 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 2fea849a46dea302dccba3ae8648db3654c35798
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28a9541c1369202b8bd322cc23201e8d531f913e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558478"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892250"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>가용성 그룹 구성의 고가용성 및 데이터 보호
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 문서에서는 Linux 서버의 SQL Server Always On 가용성 그룹에 대해 지원되는 배포 구성을 제공합니다. 가용성 그룹은 고가용성 및 데이터 보호를 지원합니다. 자동 오류 탐지, 자동 장애 조치(failover) 및 장애 조치(failover) 후의 투명한 재연결은 고가용성을 제공합니다. 동기화된 복제본은 데이터 보호를 제공합니다. 
 

@@ -9,16 +9,16 @@ ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: e026fd9dd9bd0aa9cf78f5cf6d15303b0063ade5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ba7827a637c1317500894fcfda85cd1d5122cce7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750808"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888117"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 읽기 확장 구성
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Windows에서 읽기 배율 작업에 대한 SQL Server Always On 가용성 그룹을 구성할 수 있습니다. 가용성 그룹에 대한 아키텍처는 다음과 같은 두 종류가 있습니다.
 * 고가용성을 위한 아키텍처는 클러스터 관리자를 사용하여 향상 된 비즈니스 연속성을 제공하고 읽기 가능한 보조 복제본을 포함할 수 있습니다. 이 고가용성 아키텍처를 만들려면 [Windows에서 가용성 그룹의 생성 및 구성](creation-and-configuration-of-availability-groups-sql-server.md)을 참조하세요. 

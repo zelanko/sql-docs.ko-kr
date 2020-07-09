@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: 50f6e9a2b3292cb94f335092ef590ba6fb9ea422
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93e65b7ab401479cc126e8428295cb0f0715eae4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216818"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896266"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio를 사용하여 SQL Server on Linux 데이터베이스 만들기
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 SSDT(SQL Server Data Tools)를 통해 Visual Studio는 SQL Server on Linux를 위한 강력한 개발 및 DLM(데이터베이스 수명 주기 관리) 환경으로 전환됩니다. 원본 제어 프로젝트에서 데이터베이스를 개발, 빌드, 테스트 및 게시할 수 있습니다. 애플리케이션 코드를 개발하는 것과 같습니다.
 

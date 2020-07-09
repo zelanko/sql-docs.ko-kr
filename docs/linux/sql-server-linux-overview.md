@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 31904a43dba642c73620a66bcf4abaa066b5ef82
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 38cdca8bea1c524ac4b8c964871ac04d5b221506
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73531275"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887867"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 ::: moniker range="= sql-server-2017 || = sqlallproducts-allversions"
 SQL Server 2017부터 SQL Server가 Linux에서 실행됩니다. 운영 체제에 관계없이 많은 유사한 기능과 서비스를 포함하는 동일한 SQL Server 데이터베이스 엔진입니다.

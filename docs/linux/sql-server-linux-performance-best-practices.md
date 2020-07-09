@@ -8,16 +8,16 @@ ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 548ab73e97b9bccb6a64a95b7294d3d5ca63493d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c3b0715547e8658f83d544578e91b554854a5ad
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286847"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887835"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>SQL Server on Linux의 성능 모범 사례 및 구성 지침
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 문서에서는 SQL Server on Linux에 연결하는 데이터베이스 애플리케이션의 성능을 최대화하기 위한 모범 사례 및 권장 사항을 제공합니다. 이 권장 사항은 Linux 플랫폼에서 실행하는 경우에 해당됩니다. 인덱스 디자인과 같은 일반적인 SQL Server 권장 사항은 모두 그대로 적용됩니다.
 
@@ -31,7 +31,7 @@ ms.locfileid: "79286847"
 
 - **노드 및/또는 CPU에 대해 PROCESS AFFINITY 사용**
 
-   `ALTER SERVER CONFIGURATION`을 사용하여 Linux 운영 체제에서 SQL Server(일반적으로 모든 NODE 및 CPU에 사용됨)에 사용되는 모든 **NUMANODE** 및/또는 CPU에 대해 `PROCESS AFFINITY`를 설정하는 것이 좋습니다. 프로세서 선호도는 효율적인 Linux 및 SQL 예약 동작을 유지 관리하는 데 도움이 됩니다. **NUMANODE** 옵션을 사용하는 것이 가장 간단한 방법입니다. 컴퓨터에 NUMA 노드가 하나뿐인 경우에도 **PROCESS AFFINITY**를 사용해야 합니다.  **PROCESS AFFINITY**를 설정하는 방법에 대한 자세한 내용은 [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) 설명서를 참조하세요.
+   `ALTER SERVER CONFIGURATION`을 사용하여 Linux 운영 체제에서 SQL Server(일반적으로 모든 NODE 및 CPU에 사용됨)에 사용되는 모든 `PROCESS AFFINITY`NUMANODE**및/또는 CPU에 대해**를 설정하는 것이 좋습니다. 프로세서 선호도는 효율적인 Linux 및 SQL 예약 동작을 유지 관리하는 데 도움이 됩니다. **NUMANODE** 옵션을 사용하는 것이 가장 간단한 방법입니다. 컴퓨터에 NUMA 노드가 하나뿐인 경우에도 **PROCESS AFFINITY**를 사용해야 합니다.  [PROCESS AFFINITY](../t-sql/statements/alter-server-configuration-transact-sql.md)를 설정하는 방법에 대한 자세한 내용은 **ALTER SERVER CONFIGURATION** 설명서를 참조하세요.
 
 - **여러 tempdb 데이터 파일 구성**
 
@@ -43,7 +43,7 @@ ms.locfileid: "79286847"
 
 - **mssql-conf를 사용하여 메모리 한도 설정**
 
-   Linux 운영 체제가 충분한 실제 메모리를 사용할 수 있도록 하기 위해 SQL Server 프로세스는 기본적으로 물리적 RAM의 80%만 사용합니다. 물리적 RAM 양이 많은 일부 시스템의 경우 20%도 상당한 크기일 수 있습니다. 예를 들어 RAM이 1TB인 시스템에서 기본 설정을 사용할 경우 약 200GB RAM이 사용되지 않는 상태로 유지됩니다. 이런 상황에서는 메모리 한도를 더 큰 값으로 구성하는 것이 좋습니다. SQL Server에 표시되는 메모리(MB 단위)를 제어하는 [memory.memorylimitmb](sql-server-linux-configure-mssql-conf.md#memorylimit) 설정과 **mssql-conf** 도구는 설명서를 참조하세요.
+   Linux 운영 체제가 충분한 실제 메모리를 사용할 수 있도록 하기 위해 SQL Server 프로세스는 기본적으로 물리적 RAM의 80%만 사용합니다. 물리적 RAM 양이 많은 일부 시스템의 경우 20%도 상당한 크기일 수 있습니다. 예를 들어 RAM이 1TB인 시스템에서 기본 설정을 사용할 경우 약 200GB RAM이 사용되지 않는 상태로 유지됩니다. 이런 상황에서는 메모리 한도를 더 큰 값으로 구성하는 것이 좋습니다. SQL Server에 표시되는 메모리(MB 단위)를 제어하는 **memory.memorylimitmb** 설정과 [mssql-conf](sql-server-linux-configure-mssql-conf.md#memorylimit) 도구는 설명서를 참조하세요.
 
    이 설정을 변경하는 경우 값을 너무 높게 설정하지 않도록 주의합니다. 충분한 메모리를 유지하지 않으면 Linux 운영 체제와 기타 Linux 애플리케이션에서 문제가 발생할 수 있습니다.
 
@@ -162,7 +162,7 @@ vm.transparent_hugepages=madvice
 그리고 수정 이후 mssql 프로필을 활성 상태로 만듭니다.
 ```bash
 tuned-adm off
-tuned-amd profile mssql
+tuned-adm profile mssql
 ```
 
 ### <a name="swapfile"></a>swapfile

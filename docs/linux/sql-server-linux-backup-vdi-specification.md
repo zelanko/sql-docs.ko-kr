@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: c2dafa8f1c0811771cbbc684b24d2c92e989dff5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ee533d9a0c3dace8f7fe8ec8e0c615b444ea91d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68810974"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892279"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server on Linux VDI 클라이언트 SDK 사양
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 문서에서는 SQL Server on Linux VDI(가상 디바이스 인터페이스) 클라이언트 SDK에서 제공하는 인터페이스에 대해 설명합니다. ISV(Independent Software Vendor)는 가상 백업 디바이스 API(애플리케이션 프로그래밍 인터페이스)를 사용하여 SQL Server를 해당 제품에 통합합니다. 일반적으로 Linux 기반 VDI는 Windows 기반 VDI와 비슷하게 동작하며 변경 내용은 다음과 같습니다.
 

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1fc2de8b-e7e0-4c61-9a02-4776a7d93ab7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61dad1f375a60fa22f4ee38f7023b5836bc3d5a5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 84b4d21dd9f4c01827569824f652662e7ec6bd9f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121911"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883377"
 ---
 # <a name="operators-transact-sql"></a>연산자(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   연산자는 한 개 이상의 식을 대상으로 수행되는 동작을 지정하는 기호입니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 사용하는 연산자 범주를 나열합니다.  
   

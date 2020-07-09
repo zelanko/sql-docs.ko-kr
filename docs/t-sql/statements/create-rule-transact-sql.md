@@ -29,15 +29,15 @@ helpviewer_keywords:
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6bdac95bb120fc56366eb6cfd5ed80f4c60b04e2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a862161b34edb675fc38086d75713d35840c39c8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632589"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892505"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   규칙이라는 개체를 만듭니다. 열 또는 별칭 데이터 형식에 바인딩된 경우 규칙은 해당 열에 삽입할 수 있는 값을 지정합니다.  
   

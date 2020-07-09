@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4505fed51589e2666dd2aa28e8ee42c4aac27f94
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: c60b0dbb40c41a7d41971bffc0f44b89ad77eaaa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528497"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882734"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Always On 가용성 그룹 수신기에 연결 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   
 [가용성 그룹 수신기를 구성](create-or-configure-an-availability-group-listener-sql-server.md)한 후에는 연결 문자열을 업데이트하여 Always On 가용성 그룹 수신기에 연결해야 합니다. 그러면 장애 조치(failover)할 때마다 뒤이어 연결 문자열을 수동으로 업데이트하지 않고도 애플리케이션의 트래픽이 의도한 복제본으로 자동 라우팅됩니다. 
   

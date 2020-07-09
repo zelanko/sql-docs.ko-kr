@@ -25,16 +25,16 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: c7394bf48f6bc32664e7d0a96af96ac0f3d1116f
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 860d2a8c903a918e95ef38214e25a18efc3590d2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402676"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893090"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux의 SQL Server 2017 버전 및 지원되는 기능
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 문서에서는 SQL Server 2017 on Linux의 다양한 버전에서 지원하는 기능을 자세히 설명합니다. Windows의 SQL Server 버전 및 지원되는 기능에 대해서는 [SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)를 참조하세요.  
   
@@ -229,7 +229,6 @@ Developer, Enterprise Core 및 Evaluation Edition에서 지원하는 기능의 �
 | &nbsp; | 경고 |
 | &nbsp; | 로그 판독기 에이전트 |
 | &nbsp; | 관리되는 백업 |
-| &nbsp; | MSX/TSX를 사용하는 다중 서버 관리 |
 | **고가용성** | 데이터베이스 미러링  |
 | **보안** | 확장 가능 키 관리 |
 | &nbsp; | 연결된 서버의 AD 인증 | 

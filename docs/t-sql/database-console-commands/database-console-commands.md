@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 02265d6f-44fb-4e28-af58-115ba1ef6c75
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: dcf26d7720a8ca35be9202d0e5765b338ec6a59b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3e4c1911eb90d2878d51eeb91961042db8ca2917
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70211203"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884000"
 ---
 # <a name="database-console-commands"></a>데이터베이스 콘솔 명령
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음 관리 명령을 제공합니다.
   

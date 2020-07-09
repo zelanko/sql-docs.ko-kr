@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 2847ef10bd52d69375fa4f13f1d003eb4159961f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d2b0a5d12f256236a0d79c372c44e9b7d0cd2fb3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70847474"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892035"
 ---
 # <a name="iservervirtualdeviceset2close-vdi"></a>IServerVirtualDeviceSet2::Close (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 **Close** 함수는 IServerVirtualDeviceSet2::Open에 의해 열린 가상 디바이스 세트를 닫습니다. 그러면 가상 디바이스와 연결된 모든 리소스가 해제됩니다. IServerVirtualDeviceSet2 핸들은 이 함수가 결과를 반환한 후에는 유용하지 않으며 COM으로 반환되어야 합니다.
 

@@ -32,15 +32,15 @@ helpviewer_keywords:
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a7fd96aa94cbc9e0812308f37b107c5fee3d8855
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d7b84efd22c7d5d240d041f7da408e6d84604448
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632034"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895518"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   타이머를 시작합니다. 시간 제한이 만료되면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]은 대화에 대한 로컬 큐에 형식 `https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer`의 메시지를 넣습니다.  
   

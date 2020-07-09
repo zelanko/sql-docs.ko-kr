@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 18d02267ee7093e4e79deb5985abb236898dbe84
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cee7b5274347e26b595f81d78b51946c7d5ce39b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80342860"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896174"
 ---
 # <a name="basic-always-on-availability-groups-for-a-single-database"></a>단일 데이터베이스에 대한 기본 Always On 가용성 그룹
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Always On 기본 가용성 그룹은 SQL Server 2016 및 SQL Server 2017 Standard Edition에 대한 고가용성 솔루션을 제공합니다. 기본 가용성 그룹은 단일 데이터베이스에 장애 조치(failover) 환경을 지원합니다. 기존의(고급) Enterprise Edition [Always On 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)과 매우 유사하게 생성 및 관리됩니다. 기본 가용성 그룹의 차이점과 제한 사항은 이 문서에 요약되어 있습니다.  
   

@@ -20,17 +20,17 @@ helpviewer_keywords:
 - identification numbers [SQL Server], files
 - file names [SQL Server], FILE_IDEX
 ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 59b44b3356a0f71074543eb35107040ff8c47982
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e369ae57024b88ee65c4a81217661314e5533d47
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071500"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895782"
 ---
 # <a name="file_idex-transact-sql"></a>FILE_IDEX(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 함수는 현재 데이터베이스의 데이터, 로그 또는 전체 텍스트 파일의 지정된 논리적 이름에 대한 파일 ID를 반환합니다. 
   
@@ -52,7 +52,7 @@ FILE_IDEX ( file_name )
 오류 발생 시 **NULL**  
   
 ## <a name="remarks"></a>설명  
-*file_name*은 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 또는 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 카탈로그 뷰의 **name** 열에 표시되는 논리적 파일 이름과 일치합니다.  
+*file_name*은 **sys.master_files** 또는 [sys.database_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 카탈로그 뷰의 [name](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 열에 표시되는 논리적 파일 이름과 일치합니다.  
   
 SELECT 목록, WHERE 절 또는 식 사용을 지원하는 모든 위치에서 `FILE_IDEX`를 사용합니다. 자세한 내용은 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  
   

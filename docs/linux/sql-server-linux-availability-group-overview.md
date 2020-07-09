@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: e4979fbb4e2dbbccf7ed11b744051373b0750d1f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ec35aff528e1ca35d145f400edeb2ca46a7df85
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558642"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883937"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Linux의 Always On 가용성 그룹
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 문서에서는 Linux 기반 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 설치에서 Always On AG(가용성 그룹)의 특징을 설명합니다. 또한 Linux 및 WSFC(Windows Server 장애 조치(failover) 클러스터) 기반 AG의 차이에 대해 설명합니다. AG는 WSFC를 제외하고 Windows 및 Linux에서 동일하게 작동하므로 AG의 기본 사항에 대해서는 [Windows 기반 설명서](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)를 참조하세요.
 

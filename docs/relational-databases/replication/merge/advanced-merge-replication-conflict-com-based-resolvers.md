@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ec508dbaf274816ecf32f8eaa0a8047baa60e2a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5fee5fdcc962d1d310f36196b20f1936b85516c1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033392"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892022"
 ---
 # <a name="advanced-merge-replication-conflict---com-based-resolvers"></a>고급 병합 복제 충돌 - COM 기반 해결 프로그램
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 와 함께 제공되는 모든 COM 기반 해결 프로그램은 업데이트 충돌을 처리하고 표시가 된 곳에서 삽입 및 삭제 충돌도 처리합니다. 모든 해결 프로그램은 열 추적을 처리하며 대부분의 경우 행 추적도 처리합니다. 이러한 해결 프로그램 및 다른 모든 COM 기반 해결 프로그램은 처리할 수 있는 충돌 유형을 선언하며 병합 에이전트는 다른 모든 충돌 유형에 대해 기본 해결 프로그램을 사용합니다.  
   
  해결 프로그램은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]설치 과정 중에 설치됩니다. **sp_enumcustomresolvers** 저장 프로시저를 실행하면 컴퓨터에 등록된 모든 충돌 해결 프로그램을 볼 수 있습니다. 프로시저를 실행하면 별개의 결과 집합에 각 해결 프로그램의 설명 및 GUID(Globally unique identifier)가 표시됩니다.  

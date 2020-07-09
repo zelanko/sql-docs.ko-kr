@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f2dfa25c21592affd2b348b14c32c12d7751aeb9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 9dac7df96ce86dc83959a6dcbde2383a0db5907c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626201"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895487"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   새 계약을 만듭니다. 계약은 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화에 사용되는 메시지 유형을 정의하며 해당 유형의 메시지를 보낼 수 있는 대화 상대도 결정합니다. 각 대화는 계약을 따릅니다. 시작 서비스는 대화가 시작될 때 대화에 대한 계약을 지정합니다. 대상 서비스는 대상 서비스가 받아들이는 대화에 대한 계약을 지정합니다.  
   

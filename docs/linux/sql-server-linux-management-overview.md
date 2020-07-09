@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-ms.openlocfilehash: e38e51eb1db6c335175b2fc55636532df88ac27d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 51feab9c5cc38f1e9b67b3de68ce29c597cdb83a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000050"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883908"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>SQL Server on Linux를 관리할 올바른 도구 선택
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 다양한 방법으로 SQL Server on Linux를 관리할 수 있습니다. 다음 섹션에서는 추가 리소스에 대한 포인터를 사용하여 다양한 관리 도구 및 기술에 대해 간략히 설명합니다.
 

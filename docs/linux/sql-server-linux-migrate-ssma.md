@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
-ms.openlocfilehash: 86e56d998959b4cc425626de249d66597262b50a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ced5df4a63cf6fbfed9e47a59a5c7f626de3874b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558424"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882711"
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant-ssma"></a>SSMA(SQL Server Migration Assistant)를 사용하여 Linux로의 데이터베이스 마이그레이션 자동화
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 문서에서는 데이터베이스를 Microsoft Access, DB2, MySQL, Oracle 및 Sybase에서 SQL Server on Linux로 쉽게 마이그레이션하는 데 도움이 되는 [SSMA(SQL Server Migration Assistant)](https://msdn.microsoft.com/library/mt613434.aspx)를 소개합니다. SSMA는 Windows 애플리케이션이므로 Linux의 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 머신이 있는 경우 SSMA를 사용합니다. 
 

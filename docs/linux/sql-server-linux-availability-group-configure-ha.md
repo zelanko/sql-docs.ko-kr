@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 2e234e0057db852b6b741a0103412bbacd108287
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d15d295b36ae14e81a3e39272e1c3af71cb51d2d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558401"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892315"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Linux에서 고가용성을 위한 SQL Server Always On 가용성 그룹 구성
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 문서에서는 Linux에서 고가용성을 위한 SQL Server Always On AG(가용성 그룹)를 만드는 방법을 설명합니다. AG의 구성 유형에는 두 가지가 있습니다. ‘고가용성’ 구성은 클러스터관리자를 사용하여 비즈니스 연속성을 제공합니다.  이 구성에는 읽기 확장 복제본도 포함될 수 있습니다. 이 문서에서는 고가용성을 위한 AG를 만드는 방법을 설명합니다.
 

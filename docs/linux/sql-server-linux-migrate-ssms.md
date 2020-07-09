@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.openlocfilehash: 8602f17b88400f7b0dbac6b4015dbfaf6f85fd65
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f83f95fa17e99c20754bbde9d1d4a7fb388df74b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216653"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887838"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Windows에서 SSMS 또는 SqlPackage를 사용하여 Linux에서 데이터베이스 내보내기 및 가져오기
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 문서에서는 SSMS([SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)) 및 [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx)를 사용하여 Linux의 SQL Server에서 데이터베이스를 내보내고 가져오는 방법을 보여 줍니다. SSMS 및 SqlPackage.exe는 Windows 애플리케이션이므로 Linux의 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터가 있는 경우 이 기술을 사용합니다.
 

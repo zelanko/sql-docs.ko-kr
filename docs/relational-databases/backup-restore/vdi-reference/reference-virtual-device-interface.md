@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 2b4556734044ad5bd688f8d5b286885450897b42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0bacc2d49424aa9f8266a993a58546a80385aced
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70847154"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893086"
 ---
 # <a name="virtual-device-interface-vdi-reference"></a>VDI(가상 디바이스 인터페이스) 참조
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 이 섹션에는 타사 백업 소프트웨어 공급업체용으로 작성된 SQL Server 애플리케이션 프로그래밍 인터페이스의 사양이 나와 있습니다.
 

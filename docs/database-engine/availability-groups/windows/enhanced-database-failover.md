@@ -2,9 +2,8 @@
 title: 가용성 그룹에 대한 향상된 장애 조치(failover)
 description: Always On 가용성 그룹의 데이터베이스가 더 이상 트랜잭션을 쓸 수 있는 경우 장애 조치(failover)를 트리거하는 향상된 데이터베이스 장애 조치(failover)를 활성화하는 단계입니다.
 ms.custom: seodec18
-ms.date: 09/25/2017
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: mikeray
 ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +11,17 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 ms.assetid: ''
 author: MashaMSFT
+ms.reviewer: mikeray
 ms.author: mathoma
-ms.openlocfilehash: 9acd444e1ded8ab0530f605280e7aaa5c5dec907
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d994548398bd47414f8564aeee48e2c3105aca5f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822241"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894437"
 ---
 # <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>Always On 가용성 그룹의 데이터베이스에 대해 향상된 데이터베이스 장애 조치(failover) 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server 2012 및 2014에서 주 복제본의 가용성 그룹에 참여하는 데이터베이스에서 트랜잭션을 쓸 수 있는 기능이 손실되면, 복제본이 동기화되고 자동 장애 조치를 수행하도록 구성되어 있어도 장애 조치가 트리거되지 않습니다.
 

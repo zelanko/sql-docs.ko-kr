@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6f7f07070842dbdc9903d7654cea3d76c2e0a8e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71713276"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896109"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 분산 트랜잭션 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)]은 가용성 그룹의 데이터베이스를 포함하여 모든 분산 트랜잭션을 지원합니다. 이 문서에서는 분산 트랜잭션에 대한 가용성 그룹을 구성하는 방법에 대해 설명합니다.  
 

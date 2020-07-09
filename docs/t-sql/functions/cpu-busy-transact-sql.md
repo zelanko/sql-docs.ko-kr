@@ -21,17 +21,17 @@ helpviewer_keywords:
 - statistical information [SQL Server], CPU
 - CPU [SQL Server], activity
 ms.assetid: 81ae0e64-79fa-4a74-9aa5-37045c4cd211
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: a3ecaf4a142cdb2c722340b546b84873bd5a962d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5f763ac74b32fd641791a45d1805b95a99230fbb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823964"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895815"
 ---
 # <a name="x40x40cpu_busy-transact-sql"></a>&#x40;&#x40;CPU_BUSY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 함수는 최신 시작 이후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 활성 작업에서 소비한 시간을 반환합니다. `@@CPU_BUSY`는 CPU 시간 증가값 또는 "틱"에서 측정된 결과를 반환합니다. 이 값은 모든 CPU에 대해 누적됩니다. 따라서 실제 경과 시간을 초과할 수 있습니다. 마이크로초로 변환하려면 [@@TIMETICKS](./timeticks-transact-sql.md)를 곱합니다.
   

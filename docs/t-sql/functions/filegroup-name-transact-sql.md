@@ -22,17 +22,17 @@ helpviewer_keywords:
 - names [SQL Server], filegroups
 - viewing filegroup names
 ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fb566c311d57f9ba04f79798f0d4f50e910456bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 329b354b5b5e3fe66637962d2808742083c4cfac
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071454"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895750"
 ---
 # <a name="filegroup_name-transact-sql"></a>FILEGROUP_NAME(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 함수는 지정한 파일 그룹 ID에 해당하는 파일 그룹 이름을 반환합니다.  
   
@@ -56,7 +56,7 @@ FILEGROUP_NAME ( filegroup_id )
 *filegroup_id*는 **sys.filegroups** 카탈로그 뷰의 **data_space_id** 열에 해당합니다.  
   
 ## <a name="examples"></a>예  
-이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 파일 그룹 ID `1`의 파일 그룹 이름을 반환합니다.  
+이 예에서는 `1` 데이터베이스에 있는 파일 그룹 ID [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]의 파일 그룹 이름을 반환합니다.  
   
 ```  
 SELECT FILEGROUP_NAME(1) AS [Filegroup Name];  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a6b8b37c-0015-4596-898c-51a567659e2e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5f8d098a6a06605a6d3b1d611d58e2dc75e97591
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1ccb7e5313ed36ad6fd3b08b030a9e60d3118bf6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634113"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894541"
 ---
 # <a name="revoke-search-property-list-permissions-transact-sql"></a>REVOKE 검색 속성 목록 사용 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   검색 속성 목록에 대한 사용 권한을 취소합니다.  
   

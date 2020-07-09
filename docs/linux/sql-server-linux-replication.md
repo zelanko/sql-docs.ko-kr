@@ -10,16 +10,16 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: f0e1acd5af76f5b0b075879fc1c5122713caed55
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cdd37963a419b33bb84353dee98c928179473bcb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75002043"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882650"
 ---
 # <a name="sql-server-replication-on-linux"></a>Linux의 SQL Server 복제
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 [!INCLUDE[SQL Server 2017](../includes/sssqlv14-md.md)]([CU18](https://support.microsoft.com/help/4527377)) 이상에서는 SQL Server on Linux 인스턴스의 SQL Server 복제를 지원합니다.
 

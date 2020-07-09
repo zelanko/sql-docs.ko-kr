@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7dadc40a-1287-4f31-8487-434ee477144d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dba855440971ba74ce15fb108e1ac88ebeb1cd24
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 889cdb18a323e64cf1b94bcde57eaf77c37e89d4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914572"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892555"
 ---
 # <a name="original_db_name-transact-sql"></a>ORIGINAL_DB_NAME(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   사용자가 데이터베이스 연결 문자열에 지정한 데이터베이스 이름을 반환합니다. 이 데이터베이스는 **sqlcmd-d** 옵션(USE *database*)을 사용하여 지정됩니다. ODBC(Open Database Connectivity) 데이터 원본 식(initial catalog = *databasename*)을 사용하여 지정할 수도 있습니다.  
   

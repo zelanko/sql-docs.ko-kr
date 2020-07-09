@@ -8,16 +8,16 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e6230ee4efebc4b1af873a61e9f2ebfc191df171
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 72ad1ca9c97834ad38b579b904f29db71cf0686d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943813"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882723"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>SSIS를 사용하여 Linux에서 데이터 추출, 변환 및 로드
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 문서에서는 Linux에서 SSIS(SQL Server Integration Services) 패키지를 실행하는 방법을 설명합니다. SSIS는 여러 원본 및 형식에서 데이터를 추출하여 변환 및 정리한 다음, 여러 대상으로 데이터를 로드하여 복잡한 데이터 통합 문제를 해결합니다. 
 
