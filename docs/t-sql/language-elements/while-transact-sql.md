@@ -22,15 +22,15 @@ ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3ee098b61c233bb3012ab1505553873c30edd5d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 500b2bddd1cb583672583e238668c5c5d0d773b5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095874"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998564"
 ---
 # <a name="while-transact-sql"></a>WHILE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
   SQL 문 또는 문 블록의 반복 실행을 위한 조건을 설정합니다. 문은 지정된 조건이 true인 한 반복적으로 실행됩니다. WHILE 루프 내의 문 실행은 BREAK와 CONTINUE 키워드를 사용하여 루프 내에서 제어할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "74095874"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 WHILE Boolean_expression   
@@ -47,7 +47,7 @@ WHILE Boolean_expression
   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 WHILE Boolean_expression   
@@ -57,7 +57,7 @@ WHILE Boolean_expression
   
 ## <a name="arguments"></a>인수  
  *Boolean_expression*  
- **TRUE** 또는 **FALSE**를 반환하는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 부울 식이 SELECT 문을 포함하는 경우에는 SELECT 문을 괄호로 묶어야 합니다.  
+ [TRUE](../../t-sql/language-elements/expressions-transact-sql.md) 또는 **FALSE**를 반환하는 **식**입니다. 부울 식이 SELECT 문을 포함하는 경우에는 SELECT 문을 괄호로 묶어야 합니다.  
   
  {*sql_statement* | *statement_block*}  
  문 블록에 정의된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이나 문 그룹입니다. 문 블록을 정의하려면 흐름 제어 키워드인 BEGIN 및 END를 사용하세요.  

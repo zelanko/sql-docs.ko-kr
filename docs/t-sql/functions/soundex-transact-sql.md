@@ -22,15 +22,15 @@ ms.assetid: 8f1ed34e-8467-4512-a211-e0f43dee6584
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db101aad22430dac56e352f606522c0d8f3e0fd3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 55486ff2c68d47248f7980bbe5269cf665638221
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82803800"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000474"
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   두 문자열의 유사성을 평가하기 위한 4자의 SOUNDEX 코드를 반환합니다.  
   
@@ -70,7 +70,7 @@ SOUNDEX ( character_expression )
 ## <a name="examples"></a>예  
  다음 예에서는 SOUNDEX 함수 및 관련된 DIFFERENCE 함수를 보여 줍니다. 첫 번째 예에서는 모든 자음에 대해 표준 `SOUNDEX` 값이 반환됩니다. `SOUNDEX` 및 `Smith`에 대해 `Smythe`를 반환하면 모든 모음, 문자 `y`, 이중 문자 및 문자 `h`가 포함되지 않으므로 똑같은 결과가 반환됩니다.  
   
-```  
+```sql
 -- Using SOUNDEX  
 SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');  
 ```  
@@ -78,16 +78,12 @@ SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Latin1_General 데이터 정렬에 유효합니다.  
   
 ```  
-  
------ -----   
 S530  S530    
-  
-(1 row(s) affected)  
 ```  
   
  `DIFFERENCE` 함수는 `SOUNDEX` 패턴 결과의 차이를 비교합니다. 다음 예에서는 모음만 다른 두 문자열을 보여 줍니다. 반환되는 차이는 `4`(가능한 최저 차이)입니다.  
   
-```  
+```sql
 -- Using DIFFERENCE  
 SELECT DIFFERENCE('Smithers', 'Smythers');  
 GO  
@@ -96,15 +92,12 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Latin1_General 데이터 정렬에 유효합니다.  
   
 ```  
------------   
 4             
-  
-(1 row(s) affected)  
 ```  
   
  다음 예에서는 문자열의 자음이 다르므로 반환되는 차이는 `2`이며 더 많은 차이가 납니다.  
   
-```  
+```sql
 SELECT DIFFERENCE('Anothers', 'Brothers');  
 GO  
 ```  
@@ -112,10 +105,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Latin1_General 데이터 정렬에 유효합니다.  
   
 ```  
------------   
 2             
-  
-(1 row(s) affected)  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

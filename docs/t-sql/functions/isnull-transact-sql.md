@@ -19,18 +19,18 @@ helpviewer_keywords:
 - null values [SQL Server], replacement values
 - ISNULL function
 ms.assetid: 6f3e5802-864b-4e77-9862-657bb5430b68
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b49310a633c822f8c57f66cc36951dfebe2c0707
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bb356779514e175a56644a8c020746bd110e3893
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73843641"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999806"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 NULL을 지정된 대체 값으로 바꿉니다.  
   
@@ -38,7 +38,7 @@ NULL을 지정된 대체 값으로 바꿉니다.
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 ISNULL ( check_expression , replacement_value )  
 ```  
   
@@ -170,7 +170,7 @@ ORDER BY ResellerName;
 |  허용 가능 매출 및 서비스  |     0.0000         |
   
 ### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>F. WHERE 절에서 NULL 테스트를 위해 IS NULL 사용  
- 다음 예에서는 `Weight` 열에 `NULL`이 있는 모든 제품을 찾는 방법을 보여 줍니다. `IS`와 `NULL` 사이에 공백이 있습니다.  
+ 다음 예에서는 `NULL` 열에 `Weight`이 있는 모든 제품을 찾는 방법을 보여 줍니다. `IS`와 `NULL` 사이에 공백이 있습니다.  
   
 ```  
 -- Uses AdventureWorks  

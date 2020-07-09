@@ -19,18 +19,18 @@ helpviewer_keywords:
 - last time statistics updated
 - stats update date
 ms.assetid: f9ec3101-1e41-489d-b519-496a0d6089fb
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d6e0b563d7c75a46c8fd8ea0731c046d3159d94
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 22055e7e653ffd9be74ddc7c3c381af5de44f870
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73843326"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85996091"
 ---
 # <a name="stats_date-transact-sql"></a>STATS_DATE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   테이블 또는 인덱싱된 뷰의 통계에 대한 가장 최근의 업데이트 날짜를 반환합니다.  
   
@@ -57,9 +57,9 @@ STATS_DATE ( object_id , stats_id )
 ## <a name="remarks"></a>설명  
  시스템 함수는 SELECT 목록, WHERE 절 및 식이 사용되는 모든 위치에서 사용할 수 있습니다.  
  
- 통계 업데이트 날짜는 [히스토그램](../../relational-databases/statistics/statistics.md#histogram) 및 [밀도 벡터](../../relational-databases/statistics/statistics.md#density)와 함께 메타데이터가 아닌 [통계 BLOB 개체](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)에 저장됩니다. 통계 데이터를 생성하기 위해 읽은 데이터가 없으면 통계 BLOB이 만들어지지 않고 날짜를 사용할 수 없습니다. 이 경우는 조건자가 행을 반환하지 않는 필터링된 통계 또는 빈 테이블에 대해 필터링된 통계에 해당하는 경우입니다.
+ 통계 업데이트 날짜는 [히스토그램](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) 및 [밀도 벡터](../../relational-databases/statistics/statistics.md#histogram)와 함께 메타데이터가 아닌 [통계 BLOB 개체](../../relational-databases/statistics/statistics.md#density)에 저장됩니다. 통계 데이터를 생성하기 위해 읽은 데이터가 없으면 통계 BLOB이 만들어지지 않고 날짜를 사용할 수 없습니다. 이 경우는 조건자가 행을 반환하지 않는 필터링된 통계 또는 빈 테이블에 대해 필터링된 통계에 해당하는 경우입니다.
  
- 통계가 인덱스에 대응하면 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 카탈로그 뷰의 *stats_id* 값은 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 카탈로그 뷰의 *index_id* 값과 동일합니다.
+ 통계가 인덱스에 대응하면 *sys.stats* 카탈로그 뷰의 [stats_id](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 값은 *sys.indexes* 카탈로그 뷰의 [index_id](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 값과 동일합니다.
   
 ## <a name="permissions"></a>사용 권한  
  db_owner 고정 데이터베이스 역할의 멤버이어야 하거나, 테이블이나 인덱싱된 뷰의 메타데이터를 볼 수 있는 권한이 필요합니다.  
@@ -79,7 +79,7 @@ WHERE object_id = OBJECT_ID('Person.Address');
 GO  
 ```  
   
- 통계가 인덱스에 대응하면 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 카탈로그 뷰의 *stats_id* 값은 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 카탈로그 뷰의 *index_id* 값과 같으며 다음 쿼리는 이전 쿼리와 동일한 결과를 반환합니다. 통계가 인덱스에 대응하지 않으면 통계는 sys.indexes 결과가 아닌 sys.stats 결과에 포함됩니다.  
+ 통계가 인덱스에 대응하면 *sys.stats* 카탈로그 뷰의 [stats_id](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 값은 *sys.indexes* 카탈로그 뷰의 [index_id](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 값과 같으며 다음 쿼리는 이전 쿼리와 동일한 결과를 반환합니다. 통계가 인덱스에 대응하지 않으면 통계는 sys.indexes 결과가 아닌 sys.stats 결과에 포함됩니다.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -140,7 +140,7 @@ WHERE s.object_id = OBJECT_ID('dbo.DimCustomer');
 GO  
 ```  
   
- 통계가 인덱스에 대응하면 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 카탈로그 뷰의 *stats_id* 값은 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 카탈로그 뷰의 *index_id* 값과 같으며 다음 쿼리는 이전 쿼리와 동일한 결과를 반환합니다. 통계가 인덱스에 대응하지 않으면 통계는 sys.indexes 결과가 아닌 sys.stats 결과에 포함됩니다.  
+ 통계가 인덱스에 대응하면 *sys.stats* 카탈로그 뷰의 [stats_id](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 값은 *sys.indexes* 카탈로그 뷰의 [index_id](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 값과 같으며 다음 쿼리는 이전 쿼리와 동일한 결과를 반환합니다. 통계가 인덱스에 대응하지 않으면 통계는 sys.indexes 결과가 아닌 sys.stats 결과에 포함됩니다.  
   
 ```sql  
 USE AdventureWorksPDW2012;  

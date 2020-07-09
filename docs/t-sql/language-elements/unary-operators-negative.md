@@ -19,15 +19,15 @@ ms.assetid: d6c14d14-d379-403b-82db-c197ad58c896
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 992d0b8d0a2b3781af732aaa83983882a9938112
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8f1da28f3633bfc42d6e0c1f90cf2d3ea89d991d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072140"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998882"
 ---
 # <a name="unary-operators---negative"></a>단항 연산자 - 음수
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   숫자 식의 음수 값을 반환합니다(단항 연산자). 단항 연산자는 숫자 데이터 형식 범주에 속하는 데이터 형식의 한 식에 대해서만 연산을 수행합니다.   
   
@@ -43,7 +43,7 @@ ms.locfileid: "68072140"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 - numeric_expression  
 ```  
   
@@ -136,7 +136,7 @@ SELECT TOP (1) - ( - 17) FROM DimEmployee;
 ```  
   
 ### <a name="e-returning-the-negative-of-a-column"></a>E. 열의 음수 반환  
- 다음 예에서는 `dimEmployee` 테이블의 각 직원에 대해 `BaseRate` 값의 음수를 반환합니다.  
+ 다음 예에서는 `BaseRate` 테이블의 각 직원에 대해 `dimEmployee` 값의 음수를 반환합니다.  
   
 ```  
 USE ssawPDW;  
