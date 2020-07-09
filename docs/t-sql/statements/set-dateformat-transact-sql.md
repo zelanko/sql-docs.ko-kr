@@ -27,15 +27,15 @@ ms.assetid: da217878-7ec4-477e-aa13-604073c948f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ba990b7438201d459be8052bd119f5689b9af88
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: fbaa56a5e2c40523e925fa46a4e92e4fde283461
+ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634359"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86032507"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   날짜 문자열을 해석하기 위해 월, 일 및 연도 날짜 부분의 순서를 설정합니다. 이러한 문자열은 **date**, **smalldatetime**, **datetime**, **datetime2** 또는 **datetimeoffset** 형식입니다.  
   
@@ -74,13 +74,13 @@ SET DATEFORMAT { format | @format_var }
 -- Set date format to day/month/year.  
 SET DATEFORMAT dmy;  
 GO  
-DECLARE @datevar datetime2 = '31/12/2008 09:01:01.1234567';  
+DECLARE @datevar DATETIME2 = '31/12/2008 09:01:01.1234567';  
 SELECT @datevar;  
 GO  
 -- Result: 2008-12-31 09:01:01.123  
 SET DATEFORMAT dmy;  
 GO  
-DECLARE @datevar datetime2 = '12/31/2008 09:01:01.1234567';  
+DECLARE @datevar DATETIME2 = '12/31/2008 09:01:01.1234567';  
 SELECT @datevar;  
 GO  
 -- Result: Msg 241: Conversion failed when converting date and/or time -- from character string.  

@@ -10,27 +10,23 @@ ms.topic: language-reference
 ms.assetid: 0aec1e34-f30b-4e5f-bba1-c26665cf2da6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b35576dc6a583f21f88547b40bc68ff23644cc72
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b7239a3ce8d5995320c5b5546b38e82e1b9c4282
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295483"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053739"
 ---
 # <a name="catalogdelete_customized_logging_level"></a>catalog.delete_customized_logging_level 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   기존 사용자 지정 로깅 수준을 삭제합니다. 사용자 지정 로깅 수준에 대한 자세한 내용은 [Integration Services &#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   
 ```sql  
-delete_customized_logging_level [ @level_name = ] level_name  
-  
+catalog.delete_customized_logging_level [ @level_name = ] level_name
 ```  
   
 ## <a name="arguments"></a>인수  

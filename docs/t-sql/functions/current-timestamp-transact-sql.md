@@ -28,18 +28,18 @@ helpviewer_keywords:
 - CURRENT_TIMESTAMP function [SQL Server]
 - time [SQL Server], system
 ms.assetid: c724d9cc-7b1f-4c71-bdf5-08bc52b33afc
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15d684788ee14713c0a6fb2e8d742d7a81a6eed7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67deb9c3b2ee4c924b8d0cf173c7a8c9e9156ee6
+ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026415"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86032580"
 ---
 # <a name="current_timestamp-transact-sql"></a>CURRENT_TIMESTAMP(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 이 함수는 현재 데이터베이스 시스템 타임스탬프를 데이터베이스 표준 시간대 오프셋 없이 **datetime** 값으로 반환합니다. `CURRENT_TIMESTAMP`는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되는 컴퓨터의 운영 체제에서 이 값을 끌어냅니다.
   
@@ -48,7 +48,7 @@ ms.locfileid: "68026415"
   
 이 함수는 ANSI SQL의 [GETDATE](../../t-sql/functions/getdate-transact-sql.md)와 동등합니다.
   
-[!INCLUDE[tsql](../../includes/tsql-md.md)]의 모든 날짜 및 시간 데이터 형식과 함수에 대한 개요는 [날짜 및 시간 데이터 형식과 함수](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)를 참조하세요.
+[의 모든 날짜 및 시간 데이터 형식과 함수에 대한 개요는 ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)날짜 및 시간 데이터 형식과 함수[!INCLUDE[tsql](../../includes/tsql-md.md)]를 참조하세요.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -65,7 +65,7 @@ CURRENT_TIMESTAMP
 **datetime**
   
 ## <a name="remarks"></a>설명  
-[!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 **datetime** 식을 참조할 수 있는 모든 곳에서 `CURRENT_TIMESTAMP`를 참조할 수 있습니다.
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 `CURRENT_TIMESTAMP`datetime**식을 참조할 수 있는 모든 곳에서**를 참조할 수 있습니다.
   
 `CURRENT_TIMESTAMP`는 비결정 함수입니다. 이 열을 참조하는 뷰와 식은 인덱싱될 수 없습니다.
   
@@ -94,12 +94,12 @@ GETUTCDATE()       2007-04-30 20:10:02.047
 ### <a name="b-get-the-current-system-date"></a>B. 현재 시스템의 날짜 가져오기  
   
 ```sql
-SELECT CONVERT (date, SYSDATETIME())  
-    ,CONVERT (date, SYSDATETIMEOFFSET())  
-    ,CONVERT (date, SYSUTCDATETIME())  
-    ,CONVERT (date, CURRENT_TIMESTAMP)  
-    ,CONVERT (date, GETDATE())  
-    ,CONVERT (date, GETUTCDATE());  
+SELECT CONVERT (DATE, SYSDATETIME())  
+    ,CONVERT (DATE, SYSDATETIMEOFFSET())  
+    ,CONVERT (DATE, SYSUTCDATETIME())  
+    ,CONVERT (DATE, CURRENT_TIMESTAMP)  
+    ,CONVERT (DATE, GETDATE())  
+    ,CONVERT (DATE, GETUTCDATE());  
   
 /* Returned   
 SYSDATETIME()      2007-05-03  
@@ -114,12 +114,12 @@ GETUTCDATE()       2007-05-04
 ### <a name="c-get-the-current-system-time"></a>C. 현재 시스템의 시간 가져오기  
   
 ```sql
-SELECT CONVERT (time, SYSDATETIME())  
-    ,CONVERT (time, SYSDATETIMEOFFSET())  
-    ,CONVERT (time, SYSUTCDATETIME())  
-    ,CONVERT (time, CURRENT_TIMESTAMP)  
-    ,CONVERT (time, GETDATE())  
-    ,CONVERT (time, GETUTCDATE());  
+SELECT CONVERT (TIME, SYSDATETIME())  
+    ,CONVERT (TIME, SYSDATETIMEOFFSET())  
+    ,CONVERT (TIME, SYSUTCDATETIME())  
+    ,CONVERT (TIME, CURRENT_TIMESTAMP)  
+    ,CONVERT (TIME, GETDATE())  
+    ,CONVERT (TIME, GETUTCDATE());  
   
 /* Returned  
 SYSDATETIME()      13:18:45.3490361  
