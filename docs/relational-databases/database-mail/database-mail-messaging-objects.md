@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8eb132920a6b51303e5725ecdb770dd742972f42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9df112777d7005479e515082859375d95d62839c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70809942"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726484"
 ---
 # <a name="database-mail-messaging-objects"></a>데이터베이스 메일 메시징 개체
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **msdb** 데이터베이스는 데이터베이스 메일 호스트 데이터베이스입니다. 이 데이터베이스에는 데이터베이스 메일 지원을 위한 저장 프로시저와 메시징 개체가 있습니다. Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에는 데이터베이스 메일을 사용하고 프로필과 계정을 만들어 관리하고 데이터베이스 메일 옵션을 구성하기 위한 데이터베이스 메일 구성 마법사가 포함되어 있습니다.  
   
 ##  <a name="objects-in-msdb-database"></a><a name="ComponentsAndConcepts"></a>**msdb** 데이터베이스의 개체  

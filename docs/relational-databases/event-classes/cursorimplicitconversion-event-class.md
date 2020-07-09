@@ -12,15 +12,15 @@ ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f64b5ae594f766b7182bdde427c5138245721a83
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f10d8be98d0eda99da5873f6b8e4799d64d01bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001836"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726295"
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **CursorImplicitConversion** 이벤트 클래스는 API(애플리케이션 프로그래밍 인터페이스) 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 커서에서 발생하는 커서 암시적 변환 이벤트를 의미합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 요청된 유형의 서버 커서에서 지원되지 않는 Transact-SQL 문을 실행할 때 커서 암시적 변환 이벤트가 발생합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 커서 유형이 변경되었음을 나타내는 오류를 반환합니다.  
   
  커서 성능을 기록하는 추적에 **CursorImplicitConversion** 이벤트 클래스를 포함합니다.  

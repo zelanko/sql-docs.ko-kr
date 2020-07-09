@@ -18,15 +18,15 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 872f5207f673c5047475220b1da01a41678c1c6d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f3274fa08c121fc9dfd3ee4c5268c975eca2661
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056145"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725983"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   전체 텍스트 인덱스가 너무 확장되지 않도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 검색에 도움이 되지 않지만 자주 사용되는 문자열을 무시하는 메커니즘이 있습니다. 이렇게 무시된 문자열을 *중지 단어*라고 합니다. 인덱스를 만드는 동안 전체 텍스트 엔진은 전체 텍스트 인덱스에서 중지 단어를 생략합니다. 즉, 전체 텍스트 쿼리는 중지 단어에서 검색하지 않습니다.  
    
 **중지 단어**를 참조하세요. 중지 단어는 특정 언어에서 의미 있는 단어일 수 있습니다. 예를 들어 영어의 경우 "a", "and", "is" 및 "the"와 같은 단어는 검색에 도움이 되지 않으므로 전체 텍스트 인덱스에서 제외됩니다. 또한 중지 단어는 언어적 의미가 없는 *토큰*일 수 있습니다.  

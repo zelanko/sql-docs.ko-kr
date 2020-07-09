@@ -12,15 +12,15 @@ ms.assetid: 967586bf-d5f1-466c-82ab-8c461bfb6222
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0494453c41ec36c674bb3058119dd160d1208f7b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b29de1f27861d418c7ef8c909f9e29a7784b75a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67913441"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726267"
 ---
 # <a name="audit-server-alter-trace-event-class"></a>Audit Server Alter Trace 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Audit Server Alter Trace** 이벤트 클래스는 ALTER TRACE 권한을 확인하는 모든 문에 대해 발생합니다. ALTER TRACE를 확인하는 문에는 추적을 만들고 구성하거나 추적에 필터를 설정하는 데 사용되는 문이 들어 있습니다.  
   
 ## <a name="audit-server-alter-trace-event-class-data-columns"></a>Audit Server Alter Trace 이벤트 클래스 데이터 열  

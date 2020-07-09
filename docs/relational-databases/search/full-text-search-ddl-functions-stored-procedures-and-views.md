@@ -11,15 +11,15 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 2b8909ca44ef6de5f162521234b0bdfa20d5c9ea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a54c93eb9e0c9964698e44451aa4be5e13e07d9f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056095"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723090"
 ---
 # <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>전체 텍스트 검색 DDL, 함수, 저장 프로시저 및 뷰
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   속성 검색 기능을 포함하여 전체 텍스트 검색을 지원하는 Transact-SQL 문 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 개체를 나열합니다.  
   
  사용되지 않는 개체는 이 목록에 포함되지 않습니다.  

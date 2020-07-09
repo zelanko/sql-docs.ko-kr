@@ -12,15 +12,15 @@ ms.assetid: cc0560d9-bbb9-4263-a1f3-827c80167f8c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fefb0d64710fda5c499747fb9f3205563240a6a4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9a0e3cfda6f67bff76ce001cdf4b98bfdac0b215
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67897454"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726367"
 ---
 # <a name="audit-login-gdr-event-class"></a>Audit Login GDR 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Audit Login GDR** 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 로그인 권한이 추가되거나 제거될 때마다 발생합니다. 이 이벤트 클래스는 **sp_grantlogin**, **sp_revokelogin**및 **sp_denylogin** 저장 프로시저에서 사용됩니다.  
   
  이 이벤트 클래스는 나중 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 수 있으므로 대신 **Audit Server Principal Management** 이벤트 클래스를 사용하는 것이 좋습니다.  

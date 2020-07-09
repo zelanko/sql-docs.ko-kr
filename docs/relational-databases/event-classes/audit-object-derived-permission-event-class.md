@@ -12,15 +12,15 @@ ms.assetid: cf61b789-a326-47f9-9d0c-19470782328f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7207b300db3c5e9274e7c85011cf7520deb8132a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6bec9b17bd81481c68d5fdebac8f850ac8aedcf0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67897406"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726329"
 ---
 # <a name="audit-object-derived-permission-event-class"></a>Audit Object Derived Permission 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Audit Object Derived Permission** 이벤트 클래스는 특정 개체에 대해 CREATE, ALTER 또는 DROP 명령이 실행된 경우 이를 기록합니다. 이 이벤트는 해당 개체에 직접 연결된 권한이나 소유자가 없는 경우에만 발생합니다.  
   
  이 이벤트 클래스는 나중 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 수 있으므로 대신 **Audit Schema Object Management** 이벤트 클래스를 사용하는 것이 좋습니다.  

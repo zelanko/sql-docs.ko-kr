@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: f318dcaf176212414ccd0a82c006fa545a8a846f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 710a9796ae2eb68da9d95c7d9a075bba8b7a7482
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929797"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726135"
 ---
 # <a name="reading-pages"></a>페이지 읽기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 SQL Server [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스의 I/O에는 논리적 읽기 수 및 물리적 읽기 수가 포함되어 있습니다. 논리적 읽기는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 이 [버퍼 캐시](../relational-databases/memory-management-architecture-guide.md)에서 페이지를 요청할 때마다 발생합니다. 페이지가 현재 버퍼 캐시에 없는 경우 물리적 읽기가 먼저 디스크의 페이지를 캐시로 복사합니다.
 

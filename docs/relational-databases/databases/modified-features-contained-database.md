@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3c85d6e423c63337be4d2eaf2f96c420a4f6ad33
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2ac376cdb7fd57506470b03facdc16b415098b7a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68067337"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726402"
 ---
 # <a name="modified-features-contained-database"></a>수정된 기능(포함된 데이터베이스)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   다음 기능은 부분적으로 포함된 데이터베이스에서 지원하도록 수정되었습니다. 일반적으로 기능은 데이터베이스 경계를 넘지 않도록 수정됩니다.  
   
  자세한 내용은 [Contained Databases](../../relational-databases/databases/contained-databases.md)을 참조하세요.  

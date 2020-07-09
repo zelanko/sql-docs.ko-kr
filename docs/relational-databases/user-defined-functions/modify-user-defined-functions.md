@@ -11,15 +11,15 @@ ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 391c4f3013754e4b641241bacb025c63a68cb68e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 36d40f917621a5efce6d794338c1d221fad92025
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72906675"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722891"
 ---
 # <a name="modify-user-defined-functions"></a>사용자 정의 함수 수정
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 사용자 정의 함수를 수정할 수 있습니다. 아래 설명과 같이 사용자 정의 함수를 수정하면 함수의 권한이 변경되거나 종속 함수, 저장 프로시저 또는 트리거에 영향을 주지 않습니다.  
   
  **항목 내용**  

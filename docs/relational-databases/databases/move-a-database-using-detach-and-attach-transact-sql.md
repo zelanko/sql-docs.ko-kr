@@ -1,7 +1,6 @@
 ---
 title: 분리 및 연결을 사용하여 데이터베이스 이동(Transact-SQL)
-ms.custom: seo-dt-2019
-ms.date: 03/14/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 517814aa9878206fa46c4ce8ea775cda18265ede
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-dt-2019
+ms.openlocfilehash: e26ca45fb3851926959795675e1dd38a7f3f3a14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095259"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726413"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>분리 및 연결을 사용하여 데이터베이스 이동(Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 분리된 데이터베이스를 다른 위치로 이동하고 동일한 서버 인스턴스나 다른 서버 인스턴스에 다시 연결하는 방법에 대해 설명합니다. 하지만 데이터베이스를 이동할 때는 분리 및 연결 작업 대신 계획된 ALTER DATABASE 재배치 프로시저를 사용하는 것이 좋습니다. 자세한 내용은 [Move User Databases](../../relational-databases/databases/move-user-databases.md)을 참조하세요.  
   
 > [!IMPORTANT]  
@@ -51,7 +51,7 @@ ms.locfileid: "74095259"
   
 1.  다음 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 문을 실행하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스를 분리합니다.  
   
-    ```  
+    ```sql
     USE master;  
     GO  
     EXEC sp_detach_db @dbname = N'AdventureWorks2012';  
@@ -67,7 +67,7 @@ ms.locfileid: "74095259"
   
 3.  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하여 이동된 데이터베이스와 필요에 따라 해당 로그를 연결합니다.  
   
-    ```  
+    ```sql
     USE master;  
     GO  
     CREATE DATABASE MyAdventureWorks   

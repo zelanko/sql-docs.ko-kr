@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 21beeaa0-4b9e-48da-be63-1b9ff14e03d2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6b188b7ec3b108a32a52ce888d4dfb1b5a064804
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9503a9de44f26a4f005669b2bf6d27e761dab25a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929783"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726124"
 ---
 # <a name="add-non-sql-server-subscriber"></a>SQL Server 이외 구독자 추가
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   복제에서는 Oracle 및 IBM DB2 구독자의 스냅샷 및 트랜잭션 게시에 대한 밀어넣기 구독 생성을 지원합니다.  
   
 ## <a name="options"></a>옵션  

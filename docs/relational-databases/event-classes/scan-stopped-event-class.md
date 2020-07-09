@@ -12,15 +12,15 @@ ms.assetid: b6b20ae9-aebb-454a-b639-6b7bb2f9339b
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24dbc405279229de14aa6e08cafc18dd0942ba3c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 169ac0c40eca0d4d436772e4281b210346b6288d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911236"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726214"
 ---
 # <a name="scanstopped-event-class"></a>Scan:Stopped 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Scan:Stopped 이벤트 클래스는 테이블 또는 인덱스 검색이 중지될 때 발생합니다.  
   
 ## <a name="scanstopped-event-class-data-columns"></a>Scan:Stopped 이벤트 클래스 데이터 열  

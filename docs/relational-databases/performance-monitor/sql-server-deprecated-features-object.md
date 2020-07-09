@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2dd802097e083adb633549174dbc420b5967fb10
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 69c415d66ca3f490f0a3b293090ccac36bf9cc51
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093589"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724782"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, Deprecated Features 개체
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 SQLServer:Deprecated Features 개체는 사용되지 않는 기능으로 지정된 기능을 모니터링하는 카운터를 제공합니다. 이 카운터는 경우에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 마지막으로 시작된 이후로 사용되지 않는 기능이 발견된 횟수를 나열하는 사용 카운트를 제공합니다.  
   

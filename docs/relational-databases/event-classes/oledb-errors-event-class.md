@@ -12,15 +12,15 @@ ms.assetid: 0ce1e906-5d92-42f2-ab38-8771ad5ca008
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bd355a313b3f25424c2c392d13a5d0cdb15287f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 64df0d85fb8e4bb9e3ea54c7d8613a1a39ac3406
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115838"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726238"
 ---
 # <a name="oledb-errors-event-class"></a>OLEDB Errors 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   OLEDB Errors 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 OLE DB 공급자에 대한 호출이 오류를 반환하는 경우 발생합니다. OLE DB 공급자의 실패한 HRESULT를 보려면 이 이벤트 클래스를 추적에 포함시킵니다.  
   
  OLEDB Errors 이벤트 클래스가 추적에 포함되면 추적하는 동안 데이터베이스에 대해 발생하는 OLE DB 공급자 오류 빈도에 따라 오버헤드의 양이 달라집니다. 이런 오류가 자주 발생할 경우 추적으로 인해 성능이 크게 저하될 수 있습니다.  

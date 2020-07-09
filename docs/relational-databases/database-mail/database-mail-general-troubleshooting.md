@@ -1,9 +1,7 @@
 ---
 title: 일반 데이터베이스 메일 문제 해결
-ms.custom: seo-dt-2019
-ms.date: 04/22/2019
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
@@ -13,15 +11,16 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fb063b3af008ad7e734197a0d4360c9d83535cd3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 92496d6c02903ad6c7c14c5b2fd134797f608997
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74094556"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726512"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>일반 데이터베이스 메일 문제 해결 단계 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 데이터베이스 메일의 문제 해결 과정은 데이터베이스 메일 시스템의 다음과 같은 일반적인 영역에 대한 확인이 포함됩니다. 이 절차는 논리적 순서로 나열했으나 어떤 순서로도 검사할 수 있습니다.
 

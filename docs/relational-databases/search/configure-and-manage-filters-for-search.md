@@ -13,15 +13,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5dd9719ea0f10b3bbac6aae5171a2c941cdf7e1a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6dc1e17228e9ccf5f4f7bf17d8083ffd7a9f390d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093299"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725995"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>검색 필터 구성 및 관리
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **varbinary**, **varbinary(max)** , **image** 또는 **xml** 데이터 형식 열의 문서를 인덱싱하려면 추가 처리가 필요합니다. 이러한 처리를 수행하려면 필터를 사용해야 합니다. 필터는 문서에서 서식이 제거된 텍스트 정보를 추출합니다. 그런 다음 필터는 테이블 열과 연결된 언어의 단어 분리기 구성 요소에 텍스트를 보냅니다.  
  
 ## <a name="filters-and-document-types"></a>필터 및 문서 유형

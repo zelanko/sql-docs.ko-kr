@@ -12,15 +12,15 @@ ms.assetid: 0aad4563-8caf-4971-92af-55992bc5ff2c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f393ab9c995e800772561b093af5947526ee183f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95ed07b8bfc4f59e6c11cac11722a37aa5c565fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911039"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726160"
 ---
 # <a name="showplan-text-unencoded-event-class"></a>Showplan Text (Unencoded) 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Showplan Text (Unencoded) 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 SQL 문을 실행할 때 발생합니다. 이 이벤트 클래스는 Showplan Text 이벤트 클래스와 동일하지만 해당 이벤트 정보의 형식이 이진 데이터가 아닌 문자열입니다.  
   
  Showplan All, Showplan XML 또는 Showplan XML Statistics Profile 이벤트 클래스에서 사용할 수 있는 정보의 일부만 포함되어 있습니다.  

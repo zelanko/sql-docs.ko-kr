@@ -13,15 +13,15 @@ ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b221a39ea46c0bb853aacfbeaa020d67b53ebbca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d5614e25efc21f4c3b4f4f54249bc26397acbfa3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68126992"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725896"
 ---
 # <a name="sequence-properties-general-page"></a>시퀀스 속성(일반 페이지)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   시퀀스 개체를 만들고 해당 속성을 지정합니다. 시퀀스는 시퀀스를 만들 때 사용된 사양에 따라 숫자 값의 시퀀스를 생성하는 사용자 정의 스키마 바운드 개체입니다. 숫자 값의 시퀀스는 정의된 간격에 따라 오름차순이나 내림차순으로 생성되며, 시퀀스가 모두 사용되면 다시 시작(순환)되도록 구성할 수 있습니다. ID 열과 달리 시퀀스는 특정 테이블과 연결되지 않습니다. 애플리케이션에서는 시퀀스 개체를 참조하여 다음 값을 검색합니다. 시퀀스와 테이블 간의 관계는 애플리케이션에서 제어합니다. 사용자 애플리케이션에서는 시퀀스 개체를 참조하고 여러 행 및 테이블에서 값을 조정합니다.  
   
  행을 삽입할 때 생성되는 ID 열 값과는 달리 애플리케이션에서는 [NEXT VALUE FOR 함수](../../t-sql/functions/next-value-for-transact-sql.md)를 호출하여 행을 삽입하지 않고도 다음 시퀀스 번호를 가져올 수 있습니다. 여러 시퀀스 번호를 한 번에 가져오려면 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) 를 사용합니다.  

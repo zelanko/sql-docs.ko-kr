@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 14c350e4b55e3c03c0016fd6aa61b3eef7a7a9c3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4ae1dddb8ac5b84bea8a602264c43797b2b041e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79190594"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726028"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>자습서: 복제를 위한 SQL Server 준비(게시자, 배포자, 구독자)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 복제 토폴로지를 구성하기 전에 보안을 계획해야 합니다. 이 자습서에서는 복제 토폴로지의 보안을 강화하는 방법에 대해 설명합니다. 또한 데이터를 복제하는 첫 번째 단계인 배포를 구성하는 방법도 보여 줍니다. 다른 자습서를 사용하기 전에 먼저 이 자습서를 완료해야 합니다.  
   
 > [!NOTE]  

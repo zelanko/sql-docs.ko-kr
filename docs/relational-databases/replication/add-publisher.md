@@ -15,15 +15,15 @@ ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d84df39c307177dc2e7fcbab9c9cdf177b580a73
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bd972c1825deb947537473096653fc33e07a92fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286900"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726090"
 ---
 # <a name="add-publisher"></a>게시자 추가
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **게시자 추가** 대화 상자를 사용하여 복제 모니터의 왼쪽 창에 하나 이상의 게시자를 추가할 수 있습니다. 게시자를 추가한 후 왼쪽 창에서 게시자를 선택하면 오른쪽 창에 해당 게시자에 대한 정보가 표시됩니다.  
   
 ## <a name="options"></a>옵션  

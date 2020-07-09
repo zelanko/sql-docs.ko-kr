@@ -12,15 +12,15 @@ ms.assetid: 8e22de84-8890-414a-93e4-aebfaa057d7f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 67e40d00fa989d3e2a8779b1b25c14476da89215
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0744a0988ff3026d307e7606bb29b20b12460a2b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911028"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726139"
 ---
 # <a name="showplan-xml-event-class"></a>Showplan XML 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Showplan XML 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 SQL 문을 실행할 때 발생합니다. Showplan 연산자를 식별하려면 Showplan XML 이벤트 클래스를 포함시키십시오. 이 이벤트 클래스는 각 이벤트를 정의된 XML 문서로 저장합니다.  
   
  Showplan XML 이벤트 클래스가 추적에 포함되어 있는 경우 오버헤드로 인해 성능이 크게 저하될 수 있습니다. Showplan XML은 쿼리가 최적화될 때 생성되는 쿼리 계획을 저장합니다. 오버헤드 발생을 최소화하려면 이 이벤트 클래스의 용도를 특정 문제를 단기간 모니터링하는 추적으로 제한하십시오.  

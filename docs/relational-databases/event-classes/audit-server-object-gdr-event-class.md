@@ -12,15 +12,15 @@ ms.assetid: 117fedca-c1c4-469a-929a-9ea332c83d25
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9169fc1f4d5eb4041c38117db8f9b1bd50f705a3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2bde177d88d2d1050e288bb991a5b670160f8cd5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67913449"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726263"
 ---
 # <a name="audit-server-object-gdr-event-class"></a>Audit Server Object GDR 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Audit Server Object GDR** 이벤트 클래스는 Microsoft SQL Server에서 사용자가 서버 개체 사용 권한에 대해 GRANT, REVOKE 또는 DENY를 실행할 때마다 발생합니다.  
   
 ## <a name="audit-server-object-gdr-event-class-data-columns"></a>Audit Server Object GDR 이벤트 클래스 데이터 열  

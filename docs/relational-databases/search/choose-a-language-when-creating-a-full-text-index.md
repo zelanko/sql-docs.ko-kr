@@ -19,16 +19,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 05a5e9c01e46a83e0ba6a2bc206fd6f10328e9c6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 882a7e1acfa8baf49b90e0ebda8d3cef212d511a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093386"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726024"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>전체 텍스트 인덱스 생성 시 언어 선택
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   전체 텍스트 인덱스를 만들 때는 인덱싱된 열에 대한 열 수준 언어를 지정해야 합니다. 지정된 언어의 [단어 분리기 및 형태소 분석기](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) 는 인덱싱된 열에 대한 전체 텍스트 쿼리에 사용됩니다. 전체 텍스트 인덱스를 만들기 위해 열 언어를 선택할 때 고려할 몇 가지 사항이 있습니다. 이러한 고려 사항은 전체 텍스트 엔진으로 텍스트를 토큰화한 다음 인덱싱하는 방법과 관련이 있습니다.  
   

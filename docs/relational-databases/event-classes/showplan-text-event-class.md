@@ -12,15 +12,15 @@ ms.assetid: f36c73b2-a1d1-4513-9594-78818f3fcb0d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f41511d90850670ae4d5325ce4db200bb65a9d0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 20ad4337407a46d91adbbeb080b662a2e4e99f28
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911056"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726174"
 ---
 # <a name="showplan-text-event-class"></a>Showplan Text 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Showplan Text 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 SQL 문을 실행할 때 발생합니다. Showplan All, Showplan XML Statistics Profile 또는 Showplan XML 이벤트 클래스에서 사용할 수 있는 정보의 일부만 포함하고 있습니다.  
   
  추적에 Showplan Text 이벤트 클래스가 포함되면 오버헤드로 인해 성능이 크게 저하될 수 있습니다. 이 문제를 최소화하려면 단기간 동안 특정 문제를 모니터링하는 추적에서만 이 이벤트 클래스를 사용하십시오. Showplan Text는 다른 Showplan 이벤트 클래스만큼 많은 오버헤드를 발생시키지는 않습니다.  

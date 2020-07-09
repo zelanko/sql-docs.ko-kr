@@ -19,15 +19,15 @@ ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 62d63c65ce1fae63fa9453a0dc37ddc134a87012
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1cd1d720f5f5e9a9896e341a31d604405ae7d0d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287997"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722879"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>사용자 정의 함수 만들기(데이터베이스 엔진)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 사용자 정의 함수를 만드는 방법에 대해 설명합니다.  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  

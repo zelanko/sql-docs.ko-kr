@@ -12,15 +12,15 @@ ms.assetid: b0153a31-5794-410b-8816-d9f1290a5b36
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe3e008c989e530b1b5fbb72bb6422fa3659a433
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 97b8412b0491e99d4449d12b0316ac949b973d62
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089601"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726252"
 ---
 # <a name="errorlog-event-class"></a>ErrorLog 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   ErrorLog 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 메시지가 기록되었음을 나타냅니다.  
   
 ## <a name="errorlog-event-class-data-columns"></a>ErrorLog 이벤트 클래스 데이터 열  

@@ -12,15 +12,15 @@ ms.assetid: bb1dc446-5e6c-43d6-9db8-78c76cc2e01f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 480d2d238a82039fd04c1c960e74b0c9da57449e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 582efa7068b9e4ebadc4cdfd9f10ee93eb2774df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911101"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726187"
 ---
 # <a name="showplan-all-for-query-compile-event-class"></a>Showplan All for Query Compile 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Showplan All for Query Compile 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 SQL 문을 컴파일할 때 발생합니다. 실행 계획 연산자를 식별하려면 이 이벤트 클래스를 포함합니다. 여기서 설명하는 내용은 Showplan XML For Query Compile 이벤트 클래스에서 사용할 수 있는 정보의 일부입니다.  
   
  Showplan All for Query Compile 이벤트 클래스는 완전한 컴파일 시간 데이터를 표시하므로 추적에 Showplan All for Query Compile을 포함시키면 상당한 성능 오버헤드가 발생할 수 있습니다. 이 문제를 최소화하려면 단기간 동안 특정 문제를 모니터링하는 추적에서만 이 이벤트 클래스를 사용하십시오.  

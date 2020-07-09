@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 48d0581df76c6f6b5c4cd291981cf01e13f5eb79
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: db9345dd3411a28d2bfd72b64b4917c93d6567b4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220608"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725222"
 ---
 # <a name="back-up-files-and-filegroups"></a>파일 및 파일 그룹 백업
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 파일 및 파일 그룹을 백업하는 방법에 대해 설명합니다. 데이터베이스 크기와 성능 요구 사항으로 인해 전체 데이터베이스 백업이 불가능할 경우 이를 대신하여 파일 백업을 만들 수 있습니다. *파일 백업* 에는 하나 이상의 파일(또는 파일 그룹)에 있는 모든 데이터가 포함됩니다.
   
 파일 백업에 대한 자세한 내용은 [전체 파일 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) 및 [차등 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)을 참조하세요.  
