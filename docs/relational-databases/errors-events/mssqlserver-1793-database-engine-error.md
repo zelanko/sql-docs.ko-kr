@@ -9,20 +9,20 @@ ms.topic: language-reference
 ms.assetid: 808db1d0-acc1-41d0-9287-8a5455001a02
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f1c1e83836ad9e6312d33e64c48810ec3f10c9d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52547eb1067d52078fec7f97cf2560ff745ba03d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137187"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780697"
 ---
 # <a name="mssqlserver_1793"></a>MSSQLSERVER_1793
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>세부 정보  
   
-|||  
-|-|-|  
+| attribute | 값 |  
+| :-------- | :---- |  
 |제품 이름|SQL Server|  
 |이벤트 ID|1793|  
 |이벤트 원본|MSSQLSERVER|  
