@@ -12,15 +12,15 @@ ms.assetid: 47345015-f861-451e-97c4-6e1cb81d1922
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a1778cbb88fcd6a4142e800cd45109602509125d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f87d950f4fe876e6b04e1df1f529d22126058113
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899496"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197130"
 ---
 # <a name="sysdm_pdw_dms_external_work-transact-sql"></a>sys. dm_pdw_dms_external_work (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]외부 작업의 모든 DMS (데이터 이동 서비스) 단계에 대 한 정보를 포함 하는 시스템 뷰입니다.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "67899496"
 |step_index|**int**|이 DMS 작업자를 호출 하는 쿼리 단계입니다.<br /><br /> 이 보기의 키를 request_id, step_index 및 dms_step_index 구성 합니다.|[Dm_pdw_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)step_index와 동일 합니다.|  
 |dms_step_index|**int**|DMS 계획의 현재 단계입니다.<br /><br /> 이 보기의 키를 request_id, step_index 및 dms_step_index 구성 합니다.|[Dm_pdw_dms_workers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md)dms___step_index와 동일 합니다.|  
 |pdw_node_id|**int**|DMS 작업자를 실행 하는 노드입니다.|[Dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)node_id와 동일 합니다.|  
-|형식(type)|**nvarchar(60)**|이 노드가 실행 중인 외부 작업의 유형입니다.<br /><br /> 파일 분할은 여러 개의 작은 부분으로 분할 된 외부 Hadoop 파일의 작업입니다.|' 파일 분할 '|  
+|형식|**nvarchar(60)**|이 노드가 실행 중인 외부 작업의 유형입니다.<br /><br /> 파일 분할은 여러 개의 작은 부분으로 분할 된 외부 Hadoop 파일의 작업입니다.|' 파일 분할 '|  
 |work_id|**int**|파일 분할 ID입니다.|0 보다 크거나 같습니다.<br /><br /> Compute 노드당 고유 합니다.|  
 |input_name|**nvarchar(60)**|읽고 있는 입력의 문자열 이름입니다.|Hadoop 파일의 경우 Hadoop 파일 이름입니다.|  
 |read_location|**bigint**|읽기 위치의 오프셋입니다.||  

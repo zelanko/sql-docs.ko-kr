@@ -12,15 +12,15 @@ ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 298a24276ff9c1d73a7b15ddc977d0623af70af3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3e51acd0ef179d4bb9bf85bed34593f9676db063
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68127479"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196791"
 ---
 # <a name="syspdw_index_mappings-transact-sql"></a>sys. pdw_index_mappings (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   는 인덱스를 포함 하는 테이블 **object_id** 의 고유 조합과 해당 테이블 내의 특정 인덱스 **index_id** 에 의해 반영 되는 논리 인덱스를 계산 노드에서 사용 되는 실제 이름에 매핑합니다.  
   

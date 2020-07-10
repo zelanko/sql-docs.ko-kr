@@ -12,28 +12,28 @@ ms.assetid: 2625466b-d0ef-4c71-bedc-6d13491a8351
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b333af29e3d39c0f4ce59ea68602f652c042003f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f47fb9d9047e02fde6a7e8a7f758e455e3fc789
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899414"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197105"
 ---
 # <a name="sysdm_pdw_exec_connections-transact-sql"></a>sys. dm_pdw_exec_connections (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 이 인스턴스에 대해 설정된 연결에 대한 정보와 각 연결에 대한 세부 정보를 반환합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|session_id|**int**|이 연결과 연관된 세션을 식별합니다. 를 `SESSION_ID()` 사용 하 여 `session_id` 현재 연결의를 반환 합니다.|  
+|session_id|**int**|이 연결과 연관된 세션을 식별합니다. `SESSION_ID()`를 사용 하 여 `session_id` 현재 연결의를 반환 합니다.|  
 |connect_time|**datetime**|연결이 설정된 타임스탬프입니다. Null을 허용하지 않습니다.|  
 |encrypt_option|**nvarchar(40)**|TRUE (연결이 암호화 됨) 또는 FALSE (연결이 enctypred 아님)를 나타냅니다.|  
 |auth_scheme|**nvarchar(40)**|이 연결에 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows 인증 체계를 지정합니다. Null을 허용하지 않습니다.|  
 |client_id|**varchar(48)**|이 서버에 연결 하는 클라이언트의 IP 주소입니다. Null을 허용합니다.|  
-|sql_spid|**int**|연결의 서버 프로세스 ID입니다. 를 `@@SPID` 사용 하 여 `sql_spid` 현재 연결의를 반환 합니다. 용도 대부분의 경우를 `session_id` 대신 사용 합니다.|  
+|sql_spid|**int**|연결의 서버 프로세스 ID입니다. `@@SPID`를 사용 하 여 `sql_spid` 현재 연결의를 반환 합니다. 용도 대부분의 경우를 `session_id` 대신 사용 합니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  서버에 대 한 **VIEW SERVER STATE** 권한이 필요 합니다.  
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  

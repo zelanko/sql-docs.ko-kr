@@ -12,15 +12,15 @@ ms.assetid: 944eac31-5691-432b-b9f5-f1e11c05191f
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 06f905b4750801080c6b645601261bfe96f1ee0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ce09955508fa3743be9d8ef600e05f0e36c4467
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899442"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197098"
 ---
 # <a name="sysdm_pdw_errors-transact-sql"></a>sys. dm_pdw_errors (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   요청 또는 쿼리를 실행 하는 동안 발생 한 모든 오류에 대 한 정보를 저장 합니다.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "67899442"
 |-----------------|---------------|-----------------|-----------|  
 |error_id|**nvarchar (36)**|이 보기의 키입니다.<br /><br /> 오류와 연결 된 고유 숫자 id입니다.|시스템의 모든 쿼리 오류에서 고유 합니다.|  
 |source|**nvarchar (64)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|형식(type)|**nvarchar(4000)**|발생한 오류의 유형입니다.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|형식|**nvarchar(4000)**|발생한 오류의 유형입니다.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |create_time|**datetime**|오류가 발생 한 시간입니다.|현재 시간 보다 작거나 같습니다.|  
 |pwd_node_id|**int**|관련 된 특정 노드의 식별자입니다 (있는 경우). 노드 id에 대 한 자세한 내용은 [dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)을 참조 하십시오.||  
 |session_id|**nvarchar(32)**|관련 된 세션의 식별자입니다 (있는 경우). 세션 id에 대 한 자세한 내용은 [dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)을 참조 하십시오.||  

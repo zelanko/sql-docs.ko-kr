@@ -13,15 +13,15 @@ ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1be02aa5a19e49788aafdfdb9b6f818a66968283
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 848893f9e6c7aeb36299037404a88e9b069c012c
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68054838"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197028"
 ---
 # <a name="sp_special_columns_100-sql-data-warehouse"></a>sp_special_columns_100 (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   테이블의 행을 고유하게 식별하는 열의 최적 집합을 반환합니다. 또한 트랜잭션에 의해 행의 값이 업데이트될 때 자동으로 업데이트되는 열을 반환합니다.  
   
@@ -43,31 +43,31 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @table_name=] '*table_name*'  
+ [ @table_name =] '*table_name*'  
  카탈로그 정보를 반환하는 데 사용되는 테이블의 이름입니다. *name* 은 **sysname**이며 기본값은 없습니다. 와일드카드 패턴 일치는 지원되지 않습니다.  
   
- [ @table_owner=] '*table_owner*'  
+ [ @table_owner =] '*table_owner*'  
  카탈로그 정보를 반환하는 데 사용하는 테이블의 소유자입니다. *owner* 는 **sysname**이며 기본값은 NULL입니다. 와일드카드 패턴 일치는 지원되지 않습니다. *Owner* 를 지정 하지 않은 경우 기본 DBMS의 기본 테이블 표시 규칙이 적용 됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정된 이름의 테이블을 소유한 경우 해당 테이블의 열이 반환됩니다. *Owner* 를 지정 하지 않은 경우 현재 사용자가 지정 된 *이름의*테이블을 소유 하 고 있지 않은 경우이 프로시저는 데이터베이스 소유자가 소유한 지정 된 *이름의* 테이블을 찾습니다. 테이블이 있으면 해당 열이 반환됩니다.  
   
- [ @qualifier=] '*한정자*'  
+ [ @qualifier =] '*한정자*'  
  테이블 한정자의 이름입니다. *한정자* 는 **sysname**이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 테이블 (*qualifier.owner.name*)에 대 한 세 부분으로 구성 되는 이름을 지원 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
- [ @col_type=] '*col_type*'  
+ [ @col_type =] '*col_type*'  
  열 유형입니다. *col_type* 은 **char (** 1 **)** 이 고 기본값은 r입니다. r 유형은 열에서 값을 검색 하 여 지정 된 테이블의 모든 행을 고유 하 게 식별할 수 있는 최적의 열 또는 열 집합을 반환 합니다. 열은 이 목적을 위해 특별히 구성된 의사 열 또는 테이블의 고유한 인덱스 열이 될 수 있습니다. V 유형은 지정된 테이블에 열이 있는 경우 해당 열을 반환합니다. 이 열은 트랜잭션에 의해 행의 값이 업데이트될 때 데이터 원본에 의해 자동으로 업데이트됩니다.  
   
- [ @scope=] '*범위*'  
+ [ @scope =] '*범위*'  
  ROWID에 필요한 최소 범위입니다. *범위* 는 **char (** 1 **)** 이며 기본값은 T입니다. C 범위는 ROWID가 해당 행에 있을 때만 유효 하도록 지정 합니다. T 범위는 전체 트랜잭션에 대해 ROWID가 유효하도록 지정합니다.  
   
- [ @nullable=] '*nullable*'  
+ [ @nullable =] '*nullable*'  
  특수 열이 Null 값을 허용할 수 있는지 여부입니다. *nullable* 은 **char (** 1 **)** 이며 기본값은 U입니다. O는 null 값을 허용 하지 않는 특수 열을 지정 합니다. U는 부분적으로 Null을 허용하는 열을 지정합니다.  
   
- [ @ODBCVer=] '*ODBCVer*'  
+ [ @ODBCVer =] '*ODBCVer*'  
  사용하고 있는 ODBC 버전입니다. *ODBCVer* 은 **int (** 4 **)** 이며 기본값은 2입니다. 이 값은 ODBC 버전 2를 나타냅니다. ODBC 버전 2.0과 ODBC 버전 3.0의 차이에 대한 자세한 내용은 ODBC 버전 3.0에 관한 ODBC SQLSpecialColumns 사양을 참조하십시오.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- None  
+ 없음  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -85,7 +85,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 ## <a name="remarks"></a>설명  
  sp_special_columns는 ODBC의 SQLSpecialColumns와 동일합니다. 반환되는 값은 SCOPE에 의해 순서가 정해집니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

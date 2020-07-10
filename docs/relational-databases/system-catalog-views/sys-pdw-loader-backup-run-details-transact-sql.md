@@ -12,17 +12,17 @@ ms.assetid: 04fc004f-ee15-4d7a-be08-78357aa99b55
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dead5962987f7fb132f21bb4e3517f7cc9249601
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0a0837b713f5c17f9bfb0357b9b1d999a1338e71
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68127652"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197177"
 ---
 # <a name="syspdw_loader_backup_run_details-transact-sql"></a>sys. pdw_loader_backup_run_details (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  에는 [pdw_loader_backup_runs &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md),의 진행 중 및 완료 된 백업 및 복원 작업에 대 한 정보 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및의 지속적인 백업, 복원 및 로드 작업 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대 한 자세한 정보가 포함 되어 있습니다. 이 정보는 시스템을 다시 시작해도 유지됩니다.  
+  에는 [pdw_loader_backup_runs &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md),의 진행 중 및 완료 된 백업 및 복원 작업에 대 한 정보 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및의 지속적인 백업, 복원 및 로드 작업에 대 한 자세한 정보가 포함 되어 있습니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이 정보는 시스템을 다시 시작해도 유지됩니다.  
   
 |열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
@@ -32,7 +32,7 @@ ms.locfileid: "68127652"
 |start_time|**datetime**|이 특정 노드에서 작업이 시작 된 시간입니다.||  
 |end_time|**datetime**|이 특정 노드에서 작업이 끝난 시간입니다 (있는 경우).||  
 |total_elapsed_time|**int**|이 특정 노드에서 작업이 실행 된 총 시간입니다.|Total_elapsed_time 정수 24.8 (밀리초)의 최대값을 초과 하는 경우 오버플로로 인 한 구체화 실패가 발생 합니다.<br /><br /> 최대 값 (밀리초)은 24.8 일에 해당 합니다.|  
-|진행률|**int**|비율로 표시 되는 작업의 진행률입니다.|0~100|  
+|progress|**int**|비율로 표시 되는 작업의 진행률입니다.|0~100|  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Data Warehouse 및 병렬 Data Warehouse 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  

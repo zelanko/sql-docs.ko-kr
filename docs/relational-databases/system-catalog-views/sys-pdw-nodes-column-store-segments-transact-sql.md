@@ -13,20 +13,20 @@ author: julieMSFT
 ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: bea8e0d51b2918d7280f4afdb8b9d02f6b757827
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fc1e04718ea9db16d3b0c2a1cc59b14f906c6f31
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401677"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197192"
 ---
 # <a name="syspdw_nodes_column_store_segments-transact-sql"></a>sys. pdw_nodes_column_store_segments (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 Columnstore 인덱스의 각 열에 대해 행을 하나씩 포함합니다.
 
-| 열 이름                 | 데이터 형식  | 설명                                                  |
+| 열 이름                 | 데이터 형식  | Description                                                  |
 | :-------------------------- | :--------- | :----------------------------------------------------------- |
 | **partition_id**            | **bigint** | 파티션 ID를 나타냅니다. 데이터베이스 내에서 고유합니다.     |
 | **hobt_id**                 | **bigint** | 이 Columnstore 인덱스를 가진 테이블의 B-트리 인덱스(hobt) 또는 힙의 ID입니다. |
@@ -44,7 +44,7 @@ Columnstore 인덱스의 각 열에 대해 행을 하나씩 포함합니다.
 | **max_data_id**             | **bigint** | 열 세그먼트의 최대 데이터 ID입니다.                       |
 | **null_value**              | **bigint** | Null을 나타내는 데 사용되는 값입니다.                               |
 | **on_disk_size**            | **bigint** | 세그먼트의 크기(바이트)입니다.                                    |
-| **pdw_node_id**             | **int**    | [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 노드의 고유 식별자입니다. |
+| **pdw_node_id**             | **int**    | 노드의 고유 식별자 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 입니다. |
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
@@ -80,7 +80,7 @@ ORDER BY    table_nm
 ,           sm.name ;
 ```
 
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>권한
 
 **VIEW SERVER STATE** 권한이 필요합니다.
 

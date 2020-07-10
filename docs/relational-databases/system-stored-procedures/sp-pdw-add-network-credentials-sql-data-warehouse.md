@@ -12,15 +12,15 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: a4f4fac6f7b7dc1f7809042bd9b784b754bec1a2
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: c7be9d3eb55800c2fa5c4f155aff6fd81301490c
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627487"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197335"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   그러면에서 네트워크 자격 증명 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 을 저장 하 고 서버에 연결 합니다. 예를 들어이 저장 프로시저를 사용 하 여 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 대상 서버에서 데이터베이스 백업 및 복원 작업을 수행 하거나 TDE에 사용 되는 인증서의 백업을 만들 수 있도록 적절 한 읽기/쓰기 권한을 부여할 수 있습니다.  
   
@@ -53,7 +53,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **ALTER SERVER STATE** 권한이 필요 합니다.  
   
 ## <a name="error-handling"></a>오류 처리  

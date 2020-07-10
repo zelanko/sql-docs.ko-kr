@@ -12,15 +12,15 @@ ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4d559f7fb03b632fc5cfca573b2fedc72506fead
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e5e3982f0e8a2470878e06cded3f814871cc0aa
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899404"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197089"
 ---
 # <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys. dm_pdw_exec_sessions (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   어플라이언스에서 현재 또는 최근에 열려 있는 모든 세션에 대 한 정보를 보관 합니다. 세션 마다 하나의 행을 나열 합니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67899404"
 |is_transactional|**bit**|세션이 현재 트랜잭션 내에 있는지 여부를 캡처합니다.|자동 커밋의 경우 0, 트랜잭션의 경우 1입니다.|  
 |client_id|**nvarchar(255)**|세션에 대 한 클라이언트 정보를 캡처합니다.|모든 유효한 문자열입니다.|  
 |app_name|**nvarchar(255)**|선택적으로 연결 프로세스의 일부로 설정 된 응용 프로그램 이름 정보를 캡처합니다.|모든 유효한 문자열입니다.|  
-|sql_spid|**int**|SPID의 id 번호입니다. 이 세션 `session_id` 을 사용 합니다. `sql_spid` 열을 사용 하 여 **dm_pdw_nodes_exec_sessions**에 조인 합니다.<br /><br /> ** \* 경고 \* \* ** 이 열에는 닫힌 Spid가 포함 됩니다.||  
+|sql_spid|**int**|SPID의 id 번호입니다. `session_id`이 세션을 사용 합니다. 열을 사용 `sql_spid` 하 여 **dm_pdw_nodes_exec_sessions**에 조인 합니다.<br /><br /> 경고이 열에는 닫힌 spid가 포함 됩니다. ** \* \* \* \* **||  
   
  이 보기에 의해 유지 되는 최대 행에 대 한 자세한 내용은 [용량 제한](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) 항목에서 메타 데이터 섹션을 참조 하세요.  
   

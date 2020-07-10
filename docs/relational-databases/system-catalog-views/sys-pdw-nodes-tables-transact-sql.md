@@ -12,18 +12,19 @@ ms.assetid: 473b5d14-171b-4a16-9195-acf36d3f786c
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d91fdabce5350614d504b7dfdf990e2dd54b8b48
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 78af01169c643acfc82f7a3db035ae32518695bd
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999123"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196871"
 ---
 # <a name="syspdw_nodes_tables-transact-sql"></a>sys. pdw_nodes_tables (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   보안 주체가 소유 하 고 있거나 일부 사용 권한이 부여 된 각 테이블 개체에 대 한 행을 포함 합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |\<inherited columns>||이 뷰가 상속 하는 열 목록은 [sys. 개체](../system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.||  
 |lob_data_space_id|**int**||항상 0입니다.|  

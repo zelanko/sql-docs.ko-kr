@@ -12,27 +12,27 @@ ms.assetid: 268c77b7-1d71-4197-a2ed-5e2b2b8fc260
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 201af9001703bb8f1dfbdaf2c41151697b945df3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b5e9e05e65a7121f30bfc0fc296229e943a8cd9
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68059398"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197387"
 ---
 # <a name="syspdw_nodes_columns-transact-sql"></a>sys. pdw_nodes_columns (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   사용자 정의 테이블 및 사용자 정의 뷰의 열을 표시 합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|이 열이 속한 개체의 ID입니다.||  
-|name|**sysname**|열의 이름입니다. 개체에서 고유 합니다.||  
+|이름|**sysname**|열의 이름입니다. 개체에서 고유 합니다.||  
 |column_id|**int**|열의 ID입니다. 개체에서 고유 합니다.||  
 |system_type_id|**tinyint**|열의 시스템 유형 ID입니다.||  
 |user_type_id|**int**|열의 유형에 대한 사용자 정의 ID입니다.||  
 |max_length|**smallint**|열의 최대 길이(바이트)입니다.|지원 되지 않는 열 형식에-1 (유효 하지 않음)을 포함 합니다.|  
-|자릿수|**tinyint**|숫자 기반일 경우에는 열의 전체 자릿수이고, 그렇지 않으면 0입니다.||  
+|정밀도|**tinyint**|숫자 기반일 경우에는 열의 전체 자릿수이고, 그렇지 않으면 0입니다.||  
 |소수 자릿수|**tinyint**|숫자 기반일 경우에는 열의 소수 자릿수이고, 그렇지 않으면 0입니다.||  
 |collation_name|**sysname**|문자 기반일 경우에는 열의 데이터 정렬 이름이고, 그렇지 않으면 NULL입니다.||  
 |is_nullable|**bit**|1 = 열이 Null 값을 허용합니다.||  
@@ -51,7 +51,7 @@ ms.locfileid: "68059398"
 |rule_object_id|**int**|열에 바인딩된 독립 실행형 규칙의 ID입니다. <br />0 = 독립 실행형 규칙이 없습니다.|항상 0입니다.|  
 |is_sparse|**bit**|1 = 열이 스파스 열입니다.|항상 0입니다.|  
 |is_column_set|**bit**|1 = 열이 열 집합입니다.|항상 0입니다.|  
-|pdw_node_id|**int**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 노드의 고유 식별자입니다.|NOT NULL|  
+|pdw_node_id|**int**|노드의 고유 식별자 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 입니다.|NOT NULL|  
   
 ## <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한이 필요합니다.  

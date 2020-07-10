@@ -11,22 +11,22 @@ dev_langs:
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: bbf63d4553630cce6d1d890f2d353442c14d6afd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 399389b3b3decb92a9184d10dc2b8ca90232e114
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401620"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197281"
 ---
 # <a name="sql-and-parallel-data-warehouse-dynamic-management-views"></a>SQL 및 병렬 데이터 웨어하우스 동적 관리 뷰
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 이 항목에서는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] dmv (동적 관리 뷰)를 나열 합니다.  
   
  모든 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] dmv는 **sys. dm_pdw**로 시작 합니다.  
   
 ## <a name="sssdw-and-sspdw-dynamic-management-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 동적 관리 뷰  
- 다음 동적 관리 뷰는 및 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 모두 적용 됩니다.  
+ 다음 동적 관리 뷰는 및에 모두 적용 됩니다 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] .  
   
  [dm_pdw_dms_cores &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-cores-transact-sql.md)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "74401620"
  [dm_pdw_waits &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)
 
 ## <a name="sssdw-dynamic-management-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]동적 관리 뷰 
- 다음 동적 관리 뷰는에 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 만 적용 됩니다.
+ 다음 동적 관리 뷰는에만 적용 됩니다 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .
  
 [dm_pdw_nodes_exec_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-plan-transact-sql.md)  
 
@@ -80,7 +80,7 @@ ms.locfileid: "74401620"
  [dm_workload_management_workload_groups_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md) (미리 보기)
 
 ## <a name="sspdw-dynamic-management-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]동적 관리 뷰  
- 다음 동적 관리 뷰는에 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 만 적용 됩니다.  
+ 다음 동적 관리 뷰는에만 적용 됩니다 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] .  
   
  [dm_pdw_component_health_active_alerts &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md)  
   

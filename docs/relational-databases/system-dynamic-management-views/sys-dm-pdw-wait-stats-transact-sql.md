@@ -12,17 +12,17 @@ ms.assetid: cfb8d905-c34f-44de-9574-dde81e170916
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2d5815783528b89716cc8bfb426ea7c1b274802e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 28fb7ffe37631fc7f77333683f6bda4ccf1ddedf
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088729"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197034"
 ---
 # <a name="sysdm_pdw_wait_stats-transact-sql"></a>sys. dm_pdw_wait_stats (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  서로 다른 노드에서 실행 되 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 인스턴스와 관련 된 OS 상태와 관련 된 정보를 보유 합니다. 대기 유형 및 해당 설명의 목록은 [sys. dm_os_wait_stats](https://msdn.microsoft.com/library/ms179984\(v=sql.120\).aspx)를 참조 하세요.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]서로 다른 노드에서 실행 되는 인스턴스와 관련 된 OS 상태와 관련 된 정보를 보유 합니다. 대기 유형 및 해당 설명의 목록은 [sys. dm_os_wait_stats](https://msdn.microsoft.com/library/ms179984\(v=sql.120\).aspx)를 참조 하세요.  
   
 |열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  

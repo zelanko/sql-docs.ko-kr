@@ -12,31 +12,31 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b1cbdc63907933f173c7d32a2dde3151dd4db7af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e65d2212dea9f8d2bbe9aad1854a2b8cd904dd3
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74399871"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197345"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  에서는 클러스터 된 columnstore 인덱스 정보를 사용 하 여 관리자가에서 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]시스템 관리를 결정 하도록 지원 합니다. **pdw_nodes_column_store_row_groups** 에는 실제로 저장 된 총 행 수 (삭제 된 것으로 표시 된 행 수 포함)와 삭제 된 것으로 표시 된 행 수에 대 한 열이 있습니다. **Pdw_nodes_column_store_row_groups** 를 사용 하 여 삭제 된 행의 비율이 높은 행 그룹을 확인 하 고 다시 작성 해야 합니다.  
+  에서는 클러스터 된 columnstore 인덱스 정보를 사용 하 여 관리자가에서 시스템 관리를 결정 하도록 지원 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 합니다. **pdw_nodes_column_store_row_groups** 에는 실제로 저장 된 총 행 수 (삭제 된 것으로 표시 된 행 수 포함)와 삭제 된 것으로 표시 된 행 수에 대 한 열이 있습니다. **Pdw_nodes_column_store_row_groups** 를 사용 하 여 삭제 된 행의 비율이 높은 행 그룹을 확인 하 고 다시 작성 해야 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|기본 테이블의 ID입니다. 이는 계산 노드의 물리적 테이블 이며, 컨트롤 노드의 논리 테이블에 대 한 object_id이 아닙니다. 예를 들어 object_id은 sys. tables의 object_id와 일치 하지 않습니다.<br /><br /> Sys. tables에 조인 하려면 pdw_index_mappings를 사용 합니다.|  
 |**index_id**|**int**|*Object_id* 테이블에 대 한 클러스터형 columnstore 인덱스의 ID입니다.|  
 |**partition_number**|**int**|행 그룹 *row_group_id*를 보유 하는 테이블 파티션의 ID입니다. *Partition_number* 를 사용 하 여이 DMV를 sys 파티션에 조인할 수 있습니다.|  
 |**row_group_id**|**int**|이 행 그룹의 ID입니다. 이 번호는 파티션 내에서 고유합니다.|  
 |**dellta_store_hobt_id**|**bigint**|델타 행 그룹은 hobt_id, 행 그룹 유형이 델타가 아니면 NULL입니다. 델타 행 그룹이란 새 레코드를 수락하는 읽기/쓰기 행 그룹입니다. 델타 행 그룹은 **열림** 상태를 가집니다. 델타 행 그룹은 columnstore 형식으로 압축되지 않았고 여전히 rowstore 형식입니다.|  
-|**state**|**tinyint**|state_description과 연결된 ID 번호입니다.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
+|**상태**|**tinyint**|state_description과 연결된 ID 번호입니다.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
 |**state_desccription**|**nvarchar(60)**|행 그룹의 영구 상태 설명:<br /><br /> OPEN-새 레코드를 수락 하는 읽기/쓰기 행 그룹입니다. 열린 행 그룹은 columnstore 형식으로 압축되지 않았고 여전히 rowstore 형식입니다.<br /><br /> CLOSED-튜플 이동 프로세스가 아직 압축 하지 않은 채 채워져 있지만 아직 압축 하지 않은 행 그룹입니다.<br /><br /> 압축-채워지고 압축 된 행 그룹입니다.|  
 |**total_rows**|**bigint**|행 그룹에 물리적으로 저장된 총 행 수입니다. 일부는 삭제되었을 수도 있지만 그대로 저장되어 있습니다. 행 그룹의 최대 행 수는 1,048,576개(16진수 FFFFF)입니다.|  
 |**deleted_rows**|**bigint**|삭제 되도록 표시 된 행 그룹에 물리적으로 저장 된 행의 수입니다.<br /><br /> 델타 행 그룹의 경우 항상 0입니다.|  
 |**size_in_bytes**|**int**|이 행 그룹에 있는 모든 페이지의 조합 된 크기 (바이트)입니다. 이 크기에는 메타 데이터 또는 공유 사전을 저장 하는 데 필요한 크기가 포함 되지 않습니다.|  
-|**pdw_node_id**|**int**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 노드의 고유 id입니다.|  
+|**pdw_node_id**|**int**|노드의 고유 id [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 입니다.|  
 |**distribution_id**|**int**|분포의 고유 id입니다.|
   
 ## <a name="remarks"></a>설명  
@@ -50,7 +50,7 @@ ms.locfileid: "74399871"
   
  다 채워진 columnstore 행 그룹은 압축되며, 새 행을 수락하지 않습니다. 압축된 그룹에서 행을 삭제하면 삭제된 것으로 표시되고 행 자체는 그대로 유지됩니다. 압축된 그룹을 업데이트할 때는 압축된 그룹의 삭제 또는 열린 그룹에 대한 삽입을 이용합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **VIEW SERVER STATE** 권한이 필요합니다.  
   
 ## <a name="examples-sssdw-and-sspdw"></a>예: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
