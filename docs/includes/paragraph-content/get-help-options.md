@@ -1,4 +1,4 @@
-## <a name="get-help"></a>도움말 보기
+## <a name="image-typeicon-sourcemediainfo-tippng-borderfalse-get-help"></a>:::image type="icon" source="../media/info-tip.png" border="false":::도움말 보기
 
 - [UserVoice: SQL Server 개선을 위한 제안이 있나요?](https://feedback.azure.com/forums/908035-sql-server)
 - [설정 및 업그레이드: MSDN 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
