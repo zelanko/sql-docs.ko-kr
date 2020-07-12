@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 086daab53f1863c019e0214b77096a5a00e8b25c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8b53d4da153087e222c70711c847e010ca702f31
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764778"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279188"
 ---
 # <a name="sysavailability_groups-transact-sql"></a>sys.availability_groups(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,12 @@ ms.locfileid: "85764778"
 |**basic_features**|**bit**|기본 가용성 그룹 인지 여부를 지정 합니다. 자세한 내용은 [기본 가용성 그룹&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)을 참조하세요.|  
 |**dtc_support**|**bit**|이 가용성 그룹에 대해 DTC 지원을 사용할 수 있는지 여부를 지정 합니다. **CREATE AVAILABILITY GROUP** 의 **DTC_SUPPORT** 옵션은이 설정을 제어 합니다.|  
 |**db_failover**|**bit**|가용성 그룹에서 데이터베이스 상태에 대 한 장애 조치 (failover)를 지원 하는지 여부를 지정 합니다. **CREATE AVAILABILITY GROUP** 의 **DB_FAILOVER** 옵션은이 설정을 제어 합니다.|  
-|**is_distributed**|**bit**|분산 가용성 그룹 인지 여부를 지정 합니다. 자세한 내용은 [분산된 가용성 그룹&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)을 참조하세요.|  
+|**is_distributed**|**bit**|분산 가용성 그룹 인지 여부를 지정 합니다. 자세한 내용은 [분산된 가용성 그룹&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)을 참조하세요.|
+|**cluster_type**|**tinyint**|0: Windows Server 장애 조치 (failover) 클러스터 <br/><br/>1: 외부 클러스터 (예: Linux Pacemaker)<br/><br/>2: 없음|
+|**cluster_type_desc**|**nvarchar(60)**|클러스터 유형에 대 한 텍스트 설명|
+|**required_synchronized_secondaries_to_commit**|**int**| 커밋이 완료 되려면 동기화 된 상태 여야 하는 보조 복제본의 수입니다.|
+|**sequence_number**|**bigint**|가용성 그룹 구성 시퀀스를 식별 합니다. 가용성 그룹 주 복제본이 그룹의 구성을 업데이트할 때마다 점진적으로 증가 합니다.|
+|**is_contained**|**bit**|1: 고가용성을 위해 구성 된 빅 데이터 클러스터 마스터 인스턴스입니다. <br/><br/> 0: 다른 모든.|
   
 ## <a name="failure-condition-level--values"></a>오류 조건 수준 값  
  다음 표에서는 **failure_condition_level** 열에 대 한 가능한 오류 조건 수준을 설명 합니다.  

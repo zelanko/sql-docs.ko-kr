@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7a8839f1ae540ac9e5f29e144f7f57fb754e50ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: abeb377b614619e8c6359db7ae1d5b388cf2dd82
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287333"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279554"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 함수
 **규칙**  
@@ -71,7 +71,7 @@ SQLRETURN SQLSetPos(
   
  자세한 내용은 "설명"을 참조 하십시오.  
   
- **반환**  
+## <a name="returns"></a>반환  
   
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR 또는 SQL_INVALID_HANDLE입니다.  
   
@@ -80,7 +80,7 @@ SQLRETURN SQLSetPos(
   
  SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR (01xxx SQLSTATEs 제외)를 반환할 수 있는 모든 SQLSTATEs의 경우 하나 이상의 행 작업에서 오류가 발생 하는 경우 SQL_SUCCESS_WITH_INFO가 반환 되 고 단일 행 작업에서 오류가 발생 하면 SQL_ERROR 반환 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |01001|커서 작업 충돌|*작업* 인수가 SQL_DELETE 또는 SQL_UPDATE 되었으며 행 또는 둘 이상의 행이 삭제 되거나 업데이트 되지 않았습니다. 하나 이상의 행에 대 한 업데이트에 대 한 자세한 내용은 **SQLSetStmtAttr**의 SQL_ATTR_SIMULATE_CURSOR *특성* 에 대 한 설명을 참조 하십시오. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.<br /><br /> *작업* 인수가 SQL_DELETE 또는 SQL_UPDATE 되었으며 낙관적 동시성 때문에 작업이 실패 했습니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
@@ -102,7 +102,7 @@ SQLRETURN SQLSetPos(
 |40003|문 완료를 알 수 없음|이 함수를 실행 하는 동안 연결 된 연결에 실패 하 여 트랜잭션의 상태를 확인할 수 없습니다.|  
 |42000|구문 오류 또는 액세스 위반|드라이버가 인수 *작업*에서 요청 된 작업을 수행 하는 데 필요한 행을 잠글 수 없습니다.<br /><br /> 드라이버가 *LockType*인수에서 요청 된 행을 잠글 수 없습니다.|  
 |44000|WITH CHECK OPTION 위반|*작업* 인수가 SQL_UPDATE 되었으며 **WITH CHECK OPTION**을 지정 하 여 만든 표시 된 테이블에서 파생 된 테이블이 나 표시 된 테이블에 대 한 업데이트가 수행 되었습니다 .이 경우 업데이트의 영향을 받는 하나 이상의 행이 표시 된 테이블에 더 이상 표시 되지 않습니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* MessageText* 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류|드라이버에서 함수 실행 또는 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY008|작업 취소됨|*StatementHandle*에 대해 비동기 처리를 사용 하도록 설정 했습니다. 함수가 호출 되었으며 실행이 완료 되기 전에 *StatementHandle*에서 **Sqlcancel** 또는 **Sqlcancelhandle** 이 호출 되 고 *StatementHandle*에서 함수가 다시 호출 되었습니다.<br /><br /> 함수가 호출 되 고 실행이 완료 되기 전에 **sqlcancel** 또는 **sqlcancelhandle** 이 다중 스레드 응용 프로그램의 다른 스레드에서 *StatementHandle* 호출 되었습니다.|  
 |HY010|함수 시퀀스 오류|(DM) *StatementHandle*연결 된 연결 핸들에 대해 비동기적으로 실행 되는 함수가 호출 되었습니다. SQLSetPos 함수가 호출 될 때이 비동기 함수는 계속 실행 중입니다.<br /><br /> (DM) 지정한 *StatementHandle* 가 실행 된 상태가 아닙니다. 함수가 먼저 **Sqlexecdirect**, **sqlexecute**또는 catalog 함수를 호출 하지 않고 호출 되었습니다.<br /><br /> (DM) *StatementHandle* 에 대해 비동기적으로 실행 되는 함수 (이 함수 아님)가 호출 되었으며이 함수가 호출 될 때 계속 실행 중입니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**, **SQLBulkOperations**또는 **SQLSetPos** 가 *StatementHandle* 에 대해 호출 되 고 SQL_NEED_DATA 반환 되었습니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대해 데이터를 보내기 전에 호출 되었습니다.<br /><br /> (DM) 드라이버 *는 ODBC 2.x* 드라이버 이며 **sqlfetch** 를 호출한 후에 *StatementHandle* 에 대 한 **SQLSetPos** 가 호출 되었습니다.|  
@@ -120,7 +120,7 @@ SQLRETURN SQLSetPos(
 |IM017|비동기 알림 모드에서는 폴링을 사용할 수 없습니다.|알림 모델을 사용할 때마다 폴링은 사용 하지 않도록 설정 됩니다.|  
 |IM018|이 핸들에서 이전 비동기 작업을 완료 하기 위해 **SQLCompleteAsync** 가 호출 되지 않았습니다.|핸들에 대 한 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드가 설정 된 경우에는 핸들에 대해 **SQLCompleteAsync** 를 호출 하 여 사후 처리를 수행 하 고 작업을 완료 해야 합니다.|  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
   
 > [!CAUTION]
 >  문에 대 한 자세한 내용은에서 **SQLSetPos** 를 호출 하 *고 ODBC 2.x* 응용 프로그램과의 호환성을 위해 수행 해야 하는 작업을 참조 하세요. [블록 커서, 스크롤 가능 커서 및 이전 버전과의 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)을 참조 하세요.  
@@ -146,7 +146,7 @@ SQLRETURN SQLSetPos(
 ## <a name="operation-argument"></a>Operation 인수  
  *작업* 인수는 다음 작업을 지원 합니다. 데이터 원본에서 지원 되는 옵션을 확인 하기 위해 응용 프로그램은 커서의 형식에 따라 SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 또는 SQL_STATIC_CURSOR_ATTRIBUTES1 정보 형식으로 **SQLGetInfo** 를 호출 합니다.  
   
-|*연산*<br /><br /> 인수|작업(Operation)|  
+|*연산*<br /><br /> 인수|작업|  
 |------------------------------|---------------|  
 |SQL_POSITION|드라이버는 *RowNumber*에서 지정 된 행에 커서를 놓습니다.<br /><br /> SQL_ATTR_ROW_OPERATION_PTR statement 특성이 가리키는 행 상태 배열의 내용은 SQL_POSITION *작업*에서 무시 됩니다.|  
 |SQL_REFRESH|드라이버는 *RowNumber* 에서 지정 된 행에 커서를 놓고 해당 행에 대 한 행 집합 버퍼의 데이터를 새로 고칩니다. 드라이버가 행 집합 버퍼의 데이터를 반환 하는 방법에 대 한 자세한 내용은 **SQLBindCol**의 행 단위 및 열 단위 바인딩에 대 한 설명을 참조 하세요.<br /><br /> SQL_REFRESH *작업* 을 사용 하 여 **SQLSetPos** 는 현재 인출 된 행 집합 내에서 행의 상태와 내용을 업데이트 합니다. 여기에는 책갈피를 새로 고치는 작업이 포함 됩니다. 버퍼의 데이터는 새로 고쳐지고 refetched (사방)은 새로 고쳐지지 않으므로 행 집합의 멤버 자격은 고정 되어 있습니다. 이는 SQL_FETCH_RELATIVE의 *Fetch방향이* 포함 된 **sqlfetchscroll** 에 대 한 호출에 의해 수행 되는 새로 고침과는 다르며, *RowNumber* 는 0과 같으며,이는 결과 집합에서 행 집합을 refetches 하 여 해당 작업이 드라이버 및 커서에서 지원 되는 경우 삭제 된 데이터를 표시 하 고 삭제 된 데이터를 제거할 수 있습니다.<br /><br /> **SQLSetPos** 를 성공적으로 새로 고치면 SQL_ROW_DELETED의 행 상태가 변경 되지 않습니다. 행 집합에서 삭제 된 행은 다음 인출까지 삭제 된 것으로 계속 표시 됩니다. 커서에서 압축을 지 원하는 경우 (후속 **Sqlfetch** 또는 **sqlfetchscroll** 에서 삭제 된 행을 반환 하지 않는) 다음 인출 시 행이 사라집니다.<br /><br /> **SQLSetPos** 로 새로 고침을 수행 하면 추가 된 행이 표시 되지 않습니다. 이 동작은 현재 행 *집합을 새로* 고치는 **Sqlfetchscroll scroll** 및 0과 동일한 *RowNumber* 와는 달리, 이러한 작업이 커서에서 지원 되는 경우 추가 된 레코드 또는 팩 삭제 된 레코드를 표시 합니다.<br /><br /> **SQLSetPos** 를 성공적으로 새로 고치면 SQL_ROW_ADDED의 행 상태가 SQL_ROW_SUCCESS (행 상태 배열이 있는 경우)로 변경 됩니다.<br /><br /> **SQLSetPos** 를 사용 하 여 새로 고치면 SQL_ROW_UPDATED의 행 상태가 행의 새 상태 (행 상태 배열이 있는 경우)로 변경 됩니다.<br /><br /> 행의 **SQLSetPos** 작업에서 오류가 발생 하는 경우 행 상태 배열이 있으면 행 상태가 SQL_ROW_ERROR로 설정 됩니다.<br /><br /> SQL_CONCUR_ROWVER 또는 SQL_CONCUR_VALUES의 SQL_ATTR_CONCURRENCY statement 특성을 사용 하 여 열린 커서의 경우 **SQLSetPos** 를 사용 하 여 새로 고치면 행이 변경 되었음을 감지 하기 위해 데이터 원본에서 사용 하는 낙관적 동시성 값을 업데이트할 수 있습니다. 이 경우 행 집합 버퍼를 서버에서 새로 고칠 때마다 커서 동시성을 보장 하는 데 사용 되는 행 버전 또는 값이 업데이트 됩니다. 이는 새로 고쳐지는 각 행에 대해 발생 합니다.<br /><br /> SQL_ATTR_ROW_OPERATION_PTR statement 특성이 가리키는 행 상태 배열의 내용은 SQL_REFRESH *작업*에서 무시 됩니다.|  
@@ -222,9 +222,9 @@ SQLRETURN SQLSetPos(
   
 1.  **SQLBindCol**를 사용 하 여 바인딩된 데이터 및 길이/표시기 버퍼에 값을 배치 합니다.  
   
-    -   표준 열의 경우 응용 프로그램이 * \*targetvalueptr* 버퍼에 새 열 값을, * \*StrLen_or_IndPtr* 버퍼에 해당 값의 길이를 배치 합니다. 행을 업데이트 하지 않아야 하는 경우 응용 프로그램은 행 작업 배열의 해당 행 요소에 SQL_ROW_IGNORE을 배치 합니다.  
+    -   표준 열의 경우 응용 프로그램이 * \* targetvalueptr* 버퍼에 새 열 값을, * \* StrLen_or_IndPtr* 버퍼에 해당 값의 길이를 배치 합니다. 행을 업데이트 하지 않아야 하는 경우 응용 프로그램은 행 작업 배열의 해당 행 요소에 SQL_ROW_IGNORE을 배치 합니다.  
   
-    -   실행 시 데이터 열의 경우 응용 프로그램에서 열 번호와 같은 응용 프로그램 정의 값을 * \*targetvalueptr* 버퍼에 배치 합니다. 나중에이 값을 사용 하 여 열을 식별할 수 있습니다.  
+    -   실행 시 데이터 열의 경우 응용 프로그램에서 열 번호와 같은 응용 프로그램 정의 값을 * \* targetvalueptr* 버퍼에 배치 합니다. 나중에이 값을 사용 하 여 열을 식별할 수 있습니다.  
   
          응용 프로그램은 SQL_LEN_DATA_AT_EXEC (*길이*) 매크로의 결과를 **StrLen_or_IndPtr* 버퍼에 저장 합니다. 열의 SQL 데이터 형식이 SQL_LONGVARBINARY, SQL_LONGVARCHAR 또는 long 데이터 원본 관련 데이터 형식이 고 드라이버에서 **SQLGetInfo**의 SQL_NEED_LONG_DATA_LEN 정보 형식에 대해 "Y"를 반환 하는 경우 *길이* 는 매개 변수에 대해 전송 되는 데이터 바이트 수입니다. 그렇지 않으면 음수가 아닌 값 이어야 하며 무시 됩니다.  
   
@@ -234,7 +234,7 @@ SQLRETURN SQLSetPos(
   
     -   실행 시 데이터 열이 있는 경우 함수는 SQL_NEED_DATA을 반환 하 고 3 단계로 진행 합니다.  
   
-3.  **Sqlparamdata** 를 호출 하 여 처리할 첫 번째 실행 시 데이터 열에 대 한 * \*targetvalueptr* 버퍼의 주소를 검색 합니다. **Sqlparamdata** 는 SQL_NEED_DATA를 반환 합니다. 응용 프로그램이 * \*targetvalueptr* 버퍼에서 응용 프로그램 정의 값을 검색 합니다.  
+3.  **Sqlparamdata** 를 호출 하 여 처리할 첫 번째 실행 시 데이터 열에 대 한 * \* targetvalueptr* 버퍼의 주소를 검색 합니다. **Sqlparamdata** 는 SQL_NEED_DATA를 반환 합니다. 응용 프로그램이 * \* targetvalueptr* 버퍼에서 응용 프로그램 정의 값을 검색 합니다.  
   
     > [!NOTE]  
     >  실행 시 데이터 매개 변수는 실행 시 데이터 열과 유사 하지만 **Sqlparamdata** 에서 반환 되는 값은 서로 다릅니다.  
@@ -245,7 +245,7 @@ SQLRETURN SQLSetPos(
     > [!NOTE]  
     >  실행 시 데이터 열은 **SQLSetPos**로 행을 업데이트할 때 **sqlputdata** 를 사용 하 여 데이터를 전송 하는 행 집합의 열입니다. **SQLBindCol**와 바인딩됩니다. **Sqlparamdata** 에서 반환 되는 값은 처리 중인 **Targetvalueptr* 버퍼의 행 주소입니다.  
   
-4.  **Sqlputdata** 를 한 번 이상 호출 하 여 열에 대 한 데이터를 보냅니다. **Sqlputdata**에 지정 된 * \*targetvalueptr* 버퍼에 모든 데이터 값을 반환할 수 없는 경우 두 번 이상 호출 해야 합니다. 문자, 이진 또는 데이터 원본 관련 데이터 형식이 있는 열에 문자 C 데이터를 전송 하거나 문자, 이진 또는 데이터 원본 관련 데이터 형식이 있는 열에 이진 C 데이터를 보내는 경우에만 동일한 열에 대 한 **Sqlputdata** 를 여러 번 호출할 수 있습니다.  
+4.  **Sqlputdata** 를 한 번 이상 호출 하 여 열에 대 한 데이터를 보냅니다. **Sqlputdata**에 지정 된 * \* targetvalueptr* 버퍼에 모든 데이터 값을 반환할 수 없는 경우 두 번 이상 호출 해야 합니다. 문자, 이진 또는 데이터 원본 관련 데이터 형식이 있는 열에 문자 c 데이터를 전송 하거나 문자, 이진 또는 데이터 원본 관련 데이터 형식이 있는 열에 이진 c 데이터를 보내는 경우에만 동일한 열에 대 한 **sqlputdata** 를 여러 번 호출할 수 있습니다.  
   
 5.  **Sqlparamdata** 를 다시 호출 하 여 열에 대해 모든 데이터가 전송 되었음을 알립니다.  
   
@@ -312,7 +312,7 @@ SQLRETURN SQLSetPos(
 ## <a name="ignoring-a-column-in-a-bulk-operation"></a>대량 작업에서 열 무시  
  하나 이상의 읽기 전용 열에 대 한 업데이트를 시도 하 여 발생 하는 불필요 한 처리 진단을 방지 하기 위해 응용 프로그램은 바인딩된 길이/표시기 버퍼의 값을 SQL_COLUMN_IGNORE로 설정할 수 있습니다. 자세한 내용은 [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)를 참조 하세요.  
   
-## <a name="code-example"></a>코드 예  
+## <a name="code-example"></a>코드 예제  
  다음 예제에서 응용 프로그램을 사용 하면 사용자가 ORDERS 테이블을 검색 하 고 주문 상태를 업데이트할 수 있습니다. 커서는 행 집합 크기가 20 인 키 집합을 기반으로 하며 행 버전을 비교 하는 낙관적 동시성 제어를 사용 합니다. 각 행 집합을 인출 하면 응용 프로그램에서 해당 행 집합을 출력 하 고 사용자가 주문 상태를 선택 하 고 업데이트할 수 있습니다. 응용 프로그램은 **SQLSetPos** 를 사용 하 여 커서를 선택한 행에 배치 하 고 해당 행의 위치 업데이트를 수행 합니다. 명확 하 게 하기 위해 오류 처리는 생략 됩니다.  
   
 ```cpp  

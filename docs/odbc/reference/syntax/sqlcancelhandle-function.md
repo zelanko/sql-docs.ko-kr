@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 059ed283032feb96ca5e6b12520682ccb034752a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3f9dcb6ccdef290b937b1317271758dddc0e848
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299668"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279603"
 ---
 # <a name="sqlcancelhandle-function"></a>SQLCancelHandle 함수
 **규칙**  
- 소개 된 버전: ODBC 3.8  
-  
- 표준 준수: 없음  
+ 소개 된 버전: ODBC 3.8 표준 준수: 없음  
   
  대부분의 ODBC 3.8 이상 드라이버가이 함수를 구현 하는 것으로 예상 됩니다. 드라이버가 그렇지 않으면 *핸들* *매개 SQL_ERROR* 변수에서 연결 핸들을 사용 하 여 **SQLCANCELHANDLE** 을 호출 하면 IM001 및 message ' 드라이버는 문 핸들을 사용 하 여 **Sqlcancelhandle** 을 호출 하 고, 드라이버 관리자에 의해 **sqlcancel** 호출에 매핑되고, 드라이버가 **sqlcancel**을 구현 하는 경우 처리 될 수 있으므로이 함수를 사용 하 여 문 핸들을 사용 하는 sqlcancelhandle을 호출 하면이 응용 프로그램은 **SQLGetFunctions** 를 사용 하 여 드라이버가 **sqlcancelhandle**을 지원 하는지 확인할 수 있습니다.  
   
@@ -58,10 +56,10 @@ SQLRETURN SQLCancelHandle(
   
  다음 표에서는 **Sqlcancelhandle** 에서 일반적으로 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 항목에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* MessageText* 버퍼에서 [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류|드라이버에서 함수 실행 또는 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY010|함수 시퀀스 오류|비동기 방식으로 실행 되 고, *핸들과*연결 된 문 핸들 중 하나에 대해 문 관련 함수가 호출 되었으며, *HandleType* 가 SQL_HANDLE_DBC로 설정 되었습니다. **Sqlcancelhandle** 이 호출 될 때 비동기 함수가 실행 되 고 있습니다.<br /><br /> (DM) *HandleType* 인수가 SQL_HANDLE_STMT 되었습니다. 연결 된 연결 핸들에 대해 비동기적으로 실행 되는 함수가 호출 되었습니다. 이 함수가 호출 될 때 함수는 계속 실행 중입니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**또는 **SQLMoreResults** 가 *핸들과* 연결 된 문 핸들 중 하나에 대해 호출 되 고 *HandleType* 가 SQL_HANDLE_DBC로 설정 되 고 SQL_PARAM_DATA_AVAILABLE 반환 됩니다. 이 함수는 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에 호출 되었습니다.<br /><br /> **SQLBrowseConnect** 가 *ConnectionHandle*에 대해 호출 되 고 SQL_NEED_DATA 반환 되었습니다. 이 함수는 검색 프로세스가 완료 되기 전에 호출 되었습니다.|  
 |HY013|메모리 관리 오류|메모리 부족 상태로 인해 기본 메모리 개체에 액세스할 수 없기 때문에 함수 호출을 처리할 수 없습니다.|  
@@ -72,7 +70,7 @@ SQLRETURN SQLCancelHandle(
   
  *HandleType* 가 SQL_HANDLE_STMT로 설정 된 **sqlcancelhandle** 이 호출 되 면 **sqlcancel**함수에서 반환 될 수 있는 모든 SQLSTATE를 반환할 수 있습니다.  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  이 함수는 **Sqlcancel** 과 비슷하지만 문 핸들 뿐 아니라 연결 또는 문 핸들을 매개 변수로 사용할 수 있습니다. *HandleType* 가 SQL_HANDLE_STMT 경우 드라이버 관리자는 **Sqlcancelhandle** 호출을 **sqlcancel** 호출에 매핑합니다. 이렇게 하면 응용 프로그램에서 **Sqlcancelhandle** 을 사용 하 여 **sqlcancelhandle**을 구현 하지 않는 경우에도 문 작업을 취소할 수 있습니다.  
   
  문 작업을 취소 하는 방법에 대 한 자세한 내용은 [Sqlcancel 함수](../../../odbc/reference/syntax/sqlcancel-function.md)를 참조 하세요.  
@@ -109,4 +107,4 @@ SQLRETURN SQLCancelHandle(
 ## <a name="see-also"></a>참고 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)   
- [비동기 실행(폴링 메서드)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
+ [비동기 실행 (폴링 방법)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

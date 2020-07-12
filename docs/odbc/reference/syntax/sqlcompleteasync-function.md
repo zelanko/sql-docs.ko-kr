@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4e09d61ef516e846798dd3af2d07dafa78af4605
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f56def542b71906d1e9432d724fdab8143ccb346
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299658"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279591"
 ---
 # <a name="sqlcompleteasync-function"></a>SQLCompleteAsync 함수
 **규칙**  
- 소개 된 버전: ODBC 3.8  
-  
- 표준 준수: 없음  
+ 소개 된 버전: ODBC 3.8 표준 준수: 없음  
   
  **요약**  
  **SQLCompleteAsync** 를 사용 하면 알림 또는 폴링 기반 처리를 사용 하 여 비동기 함수가 완료 되는 시점을 확인할 수 있습니다. 비동기 작업에 대 한 자세한 내용은 [비동기 실행](../../../odbc/reference/develop-app/asynchronous-execution.md)을 참조 하세요.  
@@ -72,8 +70,8 @@ SQLRETURN SQLCompleteAsync(
   
 -   SQL_NO_DATA: 알림 모드에서 비동기 작업이 진행 되 고 있지 않거나 드라이버 관리자에 게 응용 프로그램에 대 한 알림이 표시 되지 않았습니다. 폴링 모드에서는 비동기 작업이 진행 되 고 있지 않습니다.  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  폴링 기반 비동기 처리 모드에서는 **SQLCompleteAsync** 가 SQL_SUCCESS를 반환할 때 *AsyncRetCodePtr* 가 SQL_STILL_EXECUTING 수 있습니다. 응용 프로그램은 *AsyncRetCodePtr* 가 SQL_STILL_EXECUTING 되지 않을 때까지 폴링을 유지 해야 합니다. 알림 기반 비동기 처리 모드에서는 *AsyncRetCodePtr* 가 SQL_STILL_EXECUTING 되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [비동기 실행(폴링 메서드)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
+ [비동기 실행 (폴링 방법)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c5f00465f2f907d80472c19465d373a555417329
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f9299bdefc1c0c21d7144719139a0fb5fdd9a7d2
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880027"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279329"
 ---
 # <a name="sysbackup_devices-transact-sql"></a>sys.backup_devices(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "85880027"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|백업 디바이스의 이름입니다. 세트에서 고유합니다.|  
-|**type**|**tinyint**|백업 디바이스의 유형입니다.<br /><br /> 2 = 디스크<br /><br /> 3 = 디스켓(사용되지 않음)<br /><br /> 5 = 테이프<br /><br /> 6 = 파이프(사용되지 않음)<br /><br /> 7 = 가상 디바이스(타사 백업 공급업체에서 선택적으로 사용)<br /><br /> 일반적으로 디스크(2)와 테이프(5)만 사용됩니다.|  
-|**type_desc**|**nvarchar(60)**|백업 디바이스 유형에 대한 설명입니다.<br /><br /> DISK<br /><br /> DISKETTE(사용되지 않음)<br /><br /> TAPE<br /><br /> PIPE(사용되지 않음)<br /><br /> VIRTUAL_DEVICE(타사 백업 공급업체에서 선택적으로 사용)<br /><br /> 일반적으로 DISK와 TAPE만 사용됩니다.|  
+|**type**|**tinyint**|백업 디바이스의 유형입니다.<br /><br /> 2 = 디스크<br /><br /> 3 = 디스켓(사용되지 않음)<br /><br /> 5 = 테이프<br /><br /> 6 = 파이프(사용되지 않음)<br /><br /> 7 = 가상 디바이스(타사 백업 공급업체에서 선택적으로 사용)<br /><br /> 9 = URL<br /><br />일반적으로 디스크 (2) 및 URL (9)만 사용 됩니다.|  
+|**type_desc**|**nvarchar(60)**|백업 디바이스 유형에 대한 설명입니다.<br /><br /> DISK<br /><br /> DISKETTE(사용되지 않음)<br /><br /> TAPE<br /><br /> PIPE(사용되지 않음)<br /><br /> VIRTUAL_DEVICE(타사 백업 공급업체에서 선택적으로 사용)<br /><br /> URL <br /><br /> 일반적으로 디스크와 URL만 사용 됩니다.|  
 |**physical_name**|**nvarchar(260)**|백업 디바이스의 물리적 파일 이름 또는 경로입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

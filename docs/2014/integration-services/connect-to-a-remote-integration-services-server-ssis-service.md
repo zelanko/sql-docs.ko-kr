@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9487aff1-44d8-42c1-8176-bb9891d4632d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 48369c2691386bc41675571c892302e3e4b7ece1
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: a106a07f985dcc8d263304f574a911b84222903c
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85434660"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279479"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>원격 Integration Services 서버에 연결(SSIS 서비스)
     
@@ -96,13 +96,6 @@ ms.locfileid: "85434660"
   
 ## <a name="connecting-by-using-a-local-account"></a>로컬 계정을 사용하여 연결  
  클라이언트 컴퓨터에서 로컬 Windows 계정으로 작업하는 경우 동일한 이름 및 암호와 적절한 권한이 있는 로컬 계정이 원격 컴퓨터에 있는 경우에만 원격 컴퓨터의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에 연결할 수 있습니다.  
-  
-## <a name="by-default-the-ssis-service-does-not-support-delegation"></a>기본적으로 위임이 지원되지 않는 SSIS 서비스  
-기본적으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스는 자격 증명 위임을 지원 하지 않거나 이중 홉이 라고도 합니다. 이 시나리오에서는 클라이언트 컴퓨터에서 작업 중이고 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스가 두 번째 컴퓨터에서 실행 중이며 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 세 번째 컴퓨터에서 실행 중이라고 가정합니다. 먼저 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 가 클라이언트 컴퓨터에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스가 실행 중인 두 번째 컴퓨터로 자격 증명을 성공적으로 전달합니다. 그러나 그런 다음 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스는 두 번째 컴퓨터에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가 실행 중인 세 번째 컴퓨터에 자격 증명을 위임할 수 없습니다.
-
-SQL Server 서비스 계정에 **모든 서비스에 대한 위임용으로 이 사용자 트러스트(Kerberos만)** 권한을 부여하여 자격 증명을 위임할 수 있으며 하위 프로세스로 Integration Services 서비스(ISServerExec.exe)가 시작됩니다. 이 권한을 부여하기 전에 조직의 보안 요구 사항을 충족하는지 여부를 고려해야 합니다.
-
-자세한 내용은 [Getting Cross Domain Kerberos and Delegation working with SSIS Package](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/)(SSIS 패키지로 도메인 간 Kerberos 및 위임 가져오기)를 참조하세요.
   
 ## <a name="see-also"></a>참고 항목  
  [SSIS 서비스 액세스에 대한 Windows 방화벽 구성](../../2014/integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)  

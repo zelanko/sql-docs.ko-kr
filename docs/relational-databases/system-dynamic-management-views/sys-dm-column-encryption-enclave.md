@@ -9,19 +9,19 @@ ms.topic: language-reference
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d10bef0df04501c177086b6c89b3f67dec3bab10
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f41a5f704a50924a882e220786ac8cafc090237a
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73599246"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279567"
 ---
 # <a name="sysdm_column_encryption_enclave-transact-sql"></a>sys.dm_column_encryption_enclave(Transact-SQL)
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 Always Encrypted의 secure enclave에 대 한 성능 카운터를 반환 합니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](../security/encryption/always-encrypted-enclaves.md)를 참조하세요.
 
-를 마지막으로 다시 시작한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]후 enclave가 구성 되어 올바르게 초기화 된 경우 뷰에는 정확히 한 개의 행이 포함 됩니다. Enclave이 구성 되지 않았거나 올바르게 초기화 되지 않은 경우 뷰는 행을 반환 하지 않습니다. 
+를 마지막으로 다시 시작한 후 enclave가 구성 되어 올바르게 초기화 된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 뷰에는 정확히 한 개의 행이 포함 됩니다. Enclave이 구성 되지 않았거나 올바르게 초기화 되지 않은 경우 뷰는 행을 반환 하지 않습니다. 
 
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
