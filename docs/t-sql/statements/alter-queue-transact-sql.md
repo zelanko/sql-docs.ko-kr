@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 253828eba55e919d7363bb56896560de1de38b25
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c712c08c6ad766a701fc47d45fae8ce69008d40
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982051"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895630"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   큐의 속성을 변경합니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "73982051"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 ALTER QUEUE <object>   
    queue_settings  
    | queue_action  
@@ -171,7 +171,7 @@ WITH
 ## <a name="permissions"></a>사용 권한  
  큐를 변경할 수 있는 권한은 기본적으로 큐의 소유자, db_ddladmin 또는 db_owner 고정 데이터베이스 역할의 멤버 및 sysadmin 고정 서버 역할의 멤버로 설정됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-making-a-queue-unavailable"></a>A. 큐를 사용할 수 없게 설정  
  다음 예에서는 `ExpenseQueue` 큐에서 메시지를 받을 수 없도록 설정합니다.  

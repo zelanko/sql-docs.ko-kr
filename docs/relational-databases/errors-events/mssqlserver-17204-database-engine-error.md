@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_17204 | Microsoft 문서
 ms.custom: ''
-ms.date: 04/04/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 40db66f9-dd5e-478c-891e-a06d363a2552
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a810913a3e0a76d6a5b30a342f70441c7639bd7b
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 63f8e2729492d66eb498b0634e015a0a3d4638ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728464"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780796"
 ---
 # <a name="mssqlserver_17204"></a>MSSQLSERVER_17204
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>세부 정보  
   
-|||  
-|-|-|  
+| attribute | 값 |
+| :-------- | :---- |
 |제품 이름|SQL Server|  
 |이벤트 ID|17204|  
 |이벤트 원본|MSSQLSERVER|  
@@ -75,7 +75,7 @@ FCB::Open failed: Could not open file c:\Program Files\Microsoft SQL Server\MSSQ
 
 
 ## <a name="user-action"></a>사용자 동작  
-1. 17204 오류를 해결하려면 연결된 운영 체제 오류 코드를 이해하고 해당 오류를 진단해야 합니다. 운영 체제 오류 상태가 해결되면 데이터베이스(예를 들어 ALTER DATABASE SET ONLINE을 사용) 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작하여 영향을 받은 데이터베이스를 온라인 상태로 만들 수 있습니다. 운영 체제 오류를 해결할 수 없는 경우도 있습니다. 그러면 특정 교정 작업을 수행해야 합니다. 이 섹션에서는 이러한 작업에 대해 설명합니다.
+1. 17204 오류를 해결하려면 연결된 운영 체제 오류 코드를 이해하고 해당 오류를 진단해야 합니다. 운영 체제 오류 상태가 해결되면 데이터베이스(예를 들어 ALTER DATABASE SET ONLINE을 사용) 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작하여 영향을 받은 데이터베이스를 온라인 상태로 만들 수 있습니다. 운영 체제 오류를 해결할 수 없는 경우도 있습니다. 그러면 특정 정정 작업을 수행해야 합니다. 이 섹션에서는 이러한 작업에 대해 설명합니다.
 1. 17204 오류 메시지에 오류 코드만 포함되고 오류 설명이 없는 경우에는 운영 체제 셸에서 net helpmsg <error code> 명령을 사용하여 오류 코드를 해결할 수 있습니다. 오류 코드로 8자리 상태 코드가 반환되는 경우 [HRESULT를 Win32 오류 코드로 변환하는 방법은 무엇인가요?](https://devblogs.microsoft.com/oldnewthing/20061103-07/?p=29133)와 같은 정보 소스를 참조하여 이러한 상태 코드가 어떤 OS 오류인지 확인합니다.
 1. `Access is Denied` 운영 체제 오류 = 5가 반환되는 경우 다음 방법을 고려하세요.
    -  Windows 탐색기에서 파일의 속성을 보고 파일에 설정된 권한을 확인합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Windows 그룹을 사용하여 다양한 파일 리소스에 Access Control을 프로비전합니다. [SQLServerMSSQLUser$ComputerName$MSSQLSERVER 또는 SQLServerMSSQLUser$ComputerName$InstanceName 같은 이름을 가진] 적절한 그룹에 오류 메시지에서 언급된 데이터베이스 파일에 필요한 권한이 있는지 확인합니다. 자세한 내용은 [데이터베이스 엔진 액세스에 대한 파일 시스템 권한 구성](../../2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)을 검토하세요. Windows 그룹에 실제로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 계정 또는 서비스 SID가 포함되어 있는지 확인합니다.

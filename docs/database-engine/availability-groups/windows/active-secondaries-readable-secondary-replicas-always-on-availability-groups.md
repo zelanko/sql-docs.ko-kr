@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7433fa5404db80a04f5800faad35dcadffee432e
-ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
+ms.openlocfilehash: 006a18f65350cd94e0070834e21b1ee846883770
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82784653"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882996"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Always On 가용성 그룹의 보조 복제본으로 읽기 전용 워크로드 오프로드
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 활성 보조 기능에는 하나 이상의 보조 복제본(*읽기 가능한 보조 복제본*)에 대한 읽기 전용 액세스 지원이 포함됩니다. 읽을 수 있는 보조 복제본은 동기 커밋 가용성 모드나 비동기 커밋 가용성 모드가 될 수 있습니다. 읽기 가능한 보조 복제본은 해당 보조 데이터베이스 모두에 대한 읽기 전용 액세스를 허용합니다. 하지만 읽기 가능한 보조 데이터베이스는 읽기 전용으로 설정되지 않습니다. 이러한 데이터베이스는 동적입니다. 해당 주 데이터베이스에서 변경 내용이 발생하면 보조 데이터베이스도 변경됩니다. 일반적인 보조 복제본의 경우 보조 데이터베이스의 내구성이 있는 메모리 액세스에 최적화된 테이블을 포함한 데이터는 거의 실시간 데이터입니다. 또한 전체 텍스트 인덱스는 보조 데이터베이스와 동기화됩니다. 대부분의 경우 주 데이터베이스와 해당하는 보조 데이터베이스 간의 데이터 대기 시간은 몇 초 이내입니다.  
   
@@ -60,9 +60,13 @@ ms.locfileid: "82784653"
      데이터베이스 관리자는 하나 이상의 복제본을 보조 역할로 실행할 때 모든 연결을 허용하거나(읽기 전용 액세스의 경우에만) 읽기 전용 연결만 허용하도록 구성해야 합니다.  
   
     > [!NOTE]  
-    >  필요한 경우 데이터베이스 관리자는 임의의 가용성 복제본을 주 역할로 실행할 때 읽기 전용 연결을 제외하도록 구성할 수도 있습니다.  
+    >  필요한 경우 데이터베이스 관리자는 임의의 가용성 복제본을 주 역할로 실행할 때 읽기 전용 연결을 제외하도록 구성할 수도 있습니다.
   
      자세한 내용은 이 항목 뒷부분에 있는 [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)와 같은 시스템 데이터베이스, 사용자 데이터베이스를 비롯하여 보조 복제본을 호스트하는 서버 인스턴스의 읽기/쓰기 데이터베이스에는 데이터를 쓸 수 있습니다.  
+  
+    >[!WARNING]
+    >  SQL Server의 동일한 주요 빌드에 있는 복제본만 읽을 수 있습니다. 자세한 내용은 [롤링 업그레이드 기본 사항](upgrading-always-on-availability-group-replica-instances.md#rolling-upgrade-basics-for-always-on-ags)을 참조하세요.
+  
   
 -   **가용성 그룹 수신기**  
   
@@ -186,7 +190,7 @@ ms.locfileid: "82784653"
 -   접미사 _readonly_database_statistic은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 생성하는 통계용으로 예약되어 있습니다. 따라서 주 데이터베이스에서 통계를 만들 때 이 접미사를 사용할 수 없습니다. 자세한 내용은 [통계](../../../relational-databases/statistics/statistics.md)를 참조하세요.  
   
 ##  <a name="accessing-memory-optimized-tables-on-a-secondary-replica"></a><a name="bkmk_AccessInMemTables"></a> 보조 복제본에서 메모리 최적화 테이블 액세스  
- 보조 복제본의 메모리 최적화 테이블에 사용할 수 있는 트랜잭션 격리 수준은 주 복제본의 경우와 동일합니다. 세션 수준 격리 수준을 READ COMMITTED로 설정하고 데이터베이스 수준 옵션 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT을 ON으로 설정하는 것이 좋습니다. 다음은 그 예입니다.  
+ 보조 복제본의 메모리 최적화 테이블에 사용할 수 있는 트랜잭션 격리 수준은 주 복제본의 경우와 동일합니다. 세션 수준 격리 수준을 READ COMMITTED로 설정하고 데이터베이스 수준 옵션 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT을 ON으로 설정하는 것이 좋습니다. 예를 들면 다음과 같습니다.  
   
 ```sql  
 ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  

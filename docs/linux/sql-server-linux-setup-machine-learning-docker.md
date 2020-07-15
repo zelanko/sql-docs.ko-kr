@@ -9,22 +9,22 @@ manager: cgronlun
 ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c5bb573a3d8d5e93b51bb0536b5fc2171987a0ee
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: c07c92b65fe8ebed54ac75f3b9180bbd39534109
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269422"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882515"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-docker"></a>Docker에 SQL Server Machine Learning Services(Python 및 R) 설치
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 문서에서는 Docker에 SQL Server Machine Learning Services를 설치하는 방법을 설명합니다. Machine Learning Services를 사용하여 데이터베이스에서 R 또는 Python 스크립트를 실행할 수 있습니다. 미리 빌드된 컨테이너는 Machine Learning Services와 함께 제공하지 않습니다. [GitHub에서 제공되는 예제 템플릿](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)을 사용하여 SQL Server 컨테이너에서 새로 만들 수 있습니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 - Git 명령줄 인터페이스.
 
@@ -36,7 +36,7 @@ ms.locfileid: "83269422"
 
 다음 명령은 `mssql-docker` git 리포지토리를 로컬 디렉터리로 복제합니다.
 
-1. Linux/Mac에서 Bash 터미널을 열거나 Windows에서 Linux용 Windows 하위 시스템 터미널을 엽니다.
+1. Linux 또는 Mac에서 Bash 터미널을 엽니다.
 
 2. mssql-docker 리포지토리의 로컬 복사본을 보관할 디렉터리를 만듭니다.
 
@@ -65,10 +65,12 @@ ms.locfileid: "83269422"
 3. 명령 실행:
 
     ```bash
-    docker runs -d -e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y -e SA_PASSWORD=<your_sa_password> -v OS>:/var/opt/mssql -p 1433:1433 mssql-server-mlservices
+    docker run -d -e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y -e MSSQL_SA_PASSWORD=<password> -v <directory on the host OS>:/var/opt/mssql -p 1433:1433 mssql-server-mlservices
     ```
-
-    `SA_PASSWORD=<your_sa_password>`에서 `<your_sa_password>`를 변경하고 `-v` 경로를 변경합니다. 
+  
+    > [!NOTE]
+    > MSSQL_PID에 다음 값을 사용할 수 있습니다. Developer(무료), Express (무료), Enteprise(유료), Standard(유료). 유료 버전을 사용하는 경우 라이선스를 구입했는지 확인하세요. (password)를 실제 암호로 바꿉니다. -v를 사용한 볼륨 탑재는 선택 사항입니다. (directory on the host OS)를 데이터베이스 데이터 및 로그 파일을 탑재하려는 실제 디렉터리로 바꿉니다.
+    
 
 4. 다음 명령을 실행하여 확인합니다.
 
@@ -89,30 +91,19 @@ ms.locfileid: "83269422"
    export ACCEPT_EULA_ML='Y'
    export PATH_TO_MSSQL='/home/mssql/'
    ```
-
-2. run.sh 스크립트 실행:
-
-   ```bash
-   ./run.sh
-   ```
-
-   이 명령은 Developer Edition(기본값)을 사용하여 Machine Learning Services가 포함된 SQL Server 컨테이너를 만듭니다. SQL Server 포트 **1433**은 호스트에서 포트 **1401**로 공개됩니다.
-
+  
    > [!NOTE]
    > 컨테이너에서 프로덕션 SQL Server 버전을 실행하는 프로세스는 약간 다릅니다. 자세한 내용은 [Docker에서 SQL Server 컨테이너 이미지 구성](sql-server-linux-configure-docker.md)을 참조하세요. 동일한 컨테이너 이름 및 포트를 사용하는 경우 이 연습의 나머지 부분은 프로덕션 컨테이너에서도 계속 작동합니다.
 
-3. Docker 컨테이너를 보려면 `docker ps` 명령 실행:
+2. Docker 컨테이너를 보려면 `docker ps` 명령 실행:
 
    ```bash
    sudo docker ps -a
    ```
 
-4. **STATUS** 열이 **Up**의 상태를 표시하는 경우, SQL Server는 컨테이너에서 실행되며 **PORTS** 열에 지정된 포트에서 수신을 대기합니다. SQL Server 컨테이너의 **상태** 열이 **Exited**를 표시하는 경우, [구성 가이드의 문제 해결 섹션](sql-server-linux-configure-docker.md#troubleshooting)을 참조하세요.
+3. **STATUS** 열이 **Up**의 상태를 표시하는 경우, SQL Server는 컨테이너에서 실행되며 **PORTS** 열에 지정된 포트에서 수신을 대기합니다. SQL Server 컨테이너의 **상태** 열이 **Exited**를 표시하는 경우, [구성 가이드의 문제 해결 섹션](sql-server-linux-configure-docker.md#troubleshooting)을 참조하세요.
 
-   ```bash
-   $ sudo docker ps -a
-   ```
-
+ 
     출력:
 
     ```

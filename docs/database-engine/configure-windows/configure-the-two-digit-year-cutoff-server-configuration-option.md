@@ -1,5 +1,6 @@
 ---
-title: two digit year cutoff 서버 구성 옵션 구성 | Microsoft Docs
+title: 두 자리 연도 구분 서버 구성 옵션 구성 | Microsoft Docs
+description: "\"두 자리 연도 구분\" 옵션에 대해 알아봅니다. SQL Server가 두 자리 연도를 네 자리 연도로 변환하는 방법을 파악합니다."
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - two digit year cutoff option
 - four-digit years [SQL Server]
 ms.assetid: d94e81b6-f2e6-47ef-b497-ec3d827a1646
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2c33209236b866816ce1c597ab5cfe1a8971d976
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8aa50fbd2eaa934c13704dc218084655c0f0f089
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012294"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764034"
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>two digit year cutoff 서버 구성 옵션 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 두 자리 연도 구분 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **두 자리 연도 구분** 옵션은 두 자리 연도를 네 자리 연도로 해석할 구분 연도를 1753부터 9999까지의 정수 중에서 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 기본 시간 범위는 1950-2049입니다. 즉, 구분 연도가 2049년임을 나타냅니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 두 자리 숫자 49를 2049년으로, 두 자리 숫자 50을 1950년으로, 두 자리 숫자 99를 1999년으로 해석합니다. 이전 버전과의 호환성을 위해 기본값 설정을 그대로 두세요.  
   

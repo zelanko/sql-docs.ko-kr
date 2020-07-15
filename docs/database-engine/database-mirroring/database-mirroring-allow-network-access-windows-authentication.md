@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 미러링 - 네트워크 액세스 허용 - Windows 인증 | Microsoft Docs
+description: Windows 인증을 사용하여 두 SQL Server 인스턴스의 데이터베이스 미러링 엔드포인트를 연결하는 방법을 알아봅니다. 이 경우 수동 구성이 필요할 수 있습니다.
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 28c8fec5-5feb-4c84-8d72-f2bd1ae3b40d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8dbae060ee2fa2714bc7fd624a1f3aafc80959ae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9e5afd2b469b580ca3a183cff940887847729792
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951987"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789719"
 ---
 # <a name="database-mirroring---allow-network-access---windows-authentication"></a>데이터베이스 미러링 - 네트워크 액세스 허용 - Windows 인증
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Windows 인증을 사용하여 두 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 데이터베이스 미러링 엔드포인트를 연결하려면 다음과 같은 조건에서 로그인 계정의 수동 구성이 필요합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 동일 도메인 또는 신뢰할 수 있는 도메인에서 다른 도메인 계정을 사용하여 서비스로 실행될 경우 각 계정의 로그인을 각 원격 서버 인스턴스에서 **마스터** 로 만들어야 하며, 해당 로그인에는 해당 엔드포인트에 대한 CONNECT 권한이 부여되어 있어야 합니다.  

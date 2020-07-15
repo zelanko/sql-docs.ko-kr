@@ -1,5 +1,6 @@
 ---
 title: query governor cost limit 서버 구성 옵션 구성 | Microsoft Docs
+description: 쿼리 관리자 비용 제한 옵션에 대해 알아봅니다. 이 옵션을 사용하여 SQL Server가 특정 시간 이내에 완료될 것으로 예상하는 쿼리로 실행을 제한하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - query governor cost limit option [SQL Server]
 - time [SQL Server], query run time
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 133f98c2a050c6c271f4bfdcb7565d9ccaa33354
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 016ca109ae4ad609637a1919c29515dea2548083
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012416"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785880"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>query governor cost limit 서버 구성 옵션 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 관리자 비용 제한 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. 쿼리 관리자 비용 제한 옵션은 쿼리 실행 제한 시간에 대한 상한값을 지정합니다. 쿼리 비용이란 특정 하드웨어 구성에서 쿼리를 완료하는 데 필요한 예상 소요 시간(초)입니다. 이 옵션의 기본값은 0이며, 이 값은 쿼리 관리자 설정을 해제합니다. 기본값을 사용하면 시간 제한 없이 모든 쿼리를 실행할 수 있습니다. 0이나 음수가 아닌 값을 지정하면 쿼리 관리자가 그 값을 초과하는 예상 비용을 갖는 쿼리의 실행을 허용하지 않습니다.  
   

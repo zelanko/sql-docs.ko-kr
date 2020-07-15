@@ -40,16 +40,16 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a011f82fc465be79f18a45e71e1dc7e62710d31e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f92ce95ce8427773c57b34511e3ab458e67d8358
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631583"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767098"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 사용자 정의 함수를 만듭니다. 사용자 정의 함수는 매개 변수를 허용하고 복잡한 계산 등의 동작을 수행하며 해당 동작의 결과를 값으로 반환하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CLR(공용 언어 런타임) 루틴입니다. 반환 값은 단일 스칼라 값이나 테이블일 수 있습니다. 이 문을 사용하여 다음과 같은 상황에서 다시 사용할 수 있는 루틴을 만들 수 있습니다.
 
@@ -326,7 +326,7 @@ TABLE TVF(테이블 반환 함수)의 반환 값을 테이블로 지정합니다
 
 *select_stmt* 인라인 TVF(테이블 반환 함수)의 반환 값을 정의하는 단일 SELECT 문입니다.
 
-ORDER (\<order_clause>) 테이블 반환 함수에서 결과가 반환되는 순서를 지정합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 “[CLR 테이블 반환 함수에서 정렬 순서 사용](#using-sort-order-in-clr-table-valued-functions)” 섹션을 참조하세요.
+ORDER(\<order_clause>) 테이블 반환 함수에서 결과가 반환되는 순서를 지정합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 “[CLR 테이블 반환 함수에서 정렬 순서 사용](#using-sort-order-in-clr-table-valued-functions)” 섹션을 참조하세요.
 
 EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 이상)
@@ -352,7 +352,7 @@ EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*
 > - 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR 코드를 실행할 수 없습니다. 공용 언어 런타임 모듈을 참조하는 데이터베이스 개체를 생성, 수정 및 삭제할 수 있지만 [clr enabled 옵션](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)을 설정할 때까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이러한 참조를 실행할 수 없습니다. 이 옵션을 설정하려면 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용합니다.
 > - 포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.
 
-*\<* table_type_definition *>* ( { \<column_definition> \<column_constraint>| \<computed_column_definition> } [ \<table_constraint> ] [ ,...*n* ] ) [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수의 테이블 데이터 형식을 정의합니다. 테이블 선언에는 열 정의와 열 또는 테이블 제약 조건이 포함됩니다. 테이블은 항상 주 파일 그룹에 포함됩니다.
+*\<*table_type_definition*>* ( { \<column_definition> \<column_constraint>| \<computed_column_definition> } [ \<table_constraint> ] [ ,...*n* ] ) [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수의 테이블 데이터 형식을 정의합니다. 테이블 선언에는 열 정의와 열 또는 테이블 제약 조건이 포함됩니다. 테이블은 항상 주 파일 그룹에 포함됩니다.
 
 *\< clr_table_type_definition >* ( { *column_name**data_type* } [ ,...*n* ] ) **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]([일부 지역에서는 미리 보기로 제공됨](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).
 
@@ -368,7 +368,7 @@ SCHEMABINDING SCHEMABINDING 인수는 고유하게 컴파일된 사용자 정의
 
 EXECUTE AS EXECUTE AS는 고유하게 컴파일된 사용자 정의 스칼라 함수에 필요합니다.
 
-**\<function_option>::= and \<clr_function_option>::=**
+**\<function_option>::= 및 \<clr_function_option>::=**
 
 함수에 다음 옵션 중 하나 이상이 포함되도록 지정합니다.
 
@@ -437,7 +437,7 @@ CLR 테이블 반환 함수에는 IDENTITY를 지정할 수 없습니다.
 
 *increment* 테이블의 연속된 행에 대해 *seed* 값에 더할 정수 값입니다.
 
- **\< column_constraint >::= and \< table_constraint>::=**
+ **\< column_constraint >::= 및 \< table_constraint>::=**
 
 지정된 열 또는 테이블에 대한 제약 조건을 정의합니다. CLR 함수의 경우 NULL 유형의 제약 조건만 허용됩니다. 명명된 제약 조건도 허용되지 않습니다.
 
@@ -501,7 +501,7 @@ CLR 함수에 매개 변수를 지정할 경우 매개 변수는 이전에 *scal
 - 참조가 아닌 값을 기준으로 모든 매개 변수를 받습니다.
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 함수에 지정된 유형과 호환되는 매개 변수 유형을 사용합니다.
 
-CLR 함수의 반환 데이터 형식이 테이블 유형(RETURNS TABLE)을 지정하는 경우 \<method_specifier>에서 메서드의 반환 데이터 형식은 **IEnumerator** 또는 **IEnumerable** 형식이어야 하며 함수를 만든 이가 인터페이스를 구현하는 것으로 간주됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수와 달리 CLR 함수는 \<table_type_definition>에 PRIMARY KEY, UNIQUE 또는 CHECK 제약 조건을 포함할 수 없습니다. \<table_type_definition>에 지정된 열의 데이터 형식은 실행 시 \<method_specifier>의 메서드가 반환한 결과 집합의 해당 열의 형식과 일치해야 합니다. 함수를 만들 때는 이러한 형식 확인이 수행되지 않습니다.
+CLR 함수의 반환 데이터 형식이 테이블 유형(RETURNS TABLE)을 지정하는 경우 \<method_specifier>의 메서드 반환 데이터 형식은 **IEnumerator** 또는 **IEnumerable** 형식이어야 하며 함수를 만든 이가 인터페이스를 구현하는 것으로 간주됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수와 달리 CLR 함수는 \<table_type_definition>에 PRIMARY KEY, UNIQUE 또는 CHECK 제약 조건을 포함할 수 없습니다. \<table_type_definition>에 지정된 열의 데이터 형식은 실행 시점에서 \<method_specifier>의 메서드가 반환한 결과 집합의 해당 열 형식과 일치해야 합니다. 함수를 만들 때는 이러한 형식 확인이 수행되지 않습니다.
 
 CLR 함수 프로그래밍 방법은 [CLR 사용자 정의 함수](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)를 참조하세요.
 
@@ -605,7 +605,7 @@ SELECT 쿼리에도 `ORDER BY`를 지정하고 쿼리를 실행해야 `ORDER` �
 
 데이터베이스에 대한 `CREATE FUNCTION` 권한과 함수가 생성되는 스키마에 대한 `ALTER` 권한이 필요합니다. 함수가 사용자 정의 형식을 지정하면 해당 유형에 대한 `EXECUTE` 권한이 필요합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 > [!NOTE]
 > UDF에 대한 자세한 예제 및 성능 고려 사항은 [사용자 정의 함수 만들기&#40;데이터베이스 엔진&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)를 참조하세요.

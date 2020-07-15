@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 1eb71c17-fe15-430b-8916-e4e312dcf9c0
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: cc9716cbd1e27c6589b964c3c3d6208105f4863c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aeac2877165b3d0b00d33fd62e8e81086d951f0b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101956"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894880"
 ---
 # <a name="dbcc-dllname-free-transact-sql"></a>DBCC dllname(FREE)(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 지정된 확장 저장 프로시저 DLL을 메모리에서 언로드합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -64,7 +64,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ## <a name="permissions"></a>사용 권한  
 **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음 예에서는 `xp_sample`을 xp_sample.dll로 구현하고 실행했다고 가정합니다. DBCC \<*dllname*>(FREE)은 `xp_sample` 확장 프로시저와 연결된 xp_sample.dll 파일을 언로드합니다.
   
 ```sql  

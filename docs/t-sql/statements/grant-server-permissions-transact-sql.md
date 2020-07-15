@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5eeda80431c403fd1178399b4c2c3500154acd48
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 668a7355cd1a2530b9f60a624391c2199724a62b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050795"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880387"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT 서버 사용 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   서버에 대한 사용 권한을 부여합니다. 
   
@@ -33,7 +33,7 @@ ms.locfileid: "68050795"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 GRANT permission [ ,...n ]   
     TO <grantee_principal> [ ,...n ] [ WITH GRANT OPTION ]  
@@ -58,9 +58,9 @@ GRANT permission [ ,...n ]
  *permission*  
  서버에 대해 부여할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
- \<grantee_principal>에 대해 사용 권한을 부여할 보안 주체를 지정합니다.  
+ TO \<grantee_principal> 사용 권한을 부여할 보안 주체를 지정합니다.  
   
- \<grantor_principal>로서 이 쿼리를 실행하는 보안 주체가 사용 권한을 부여하는 권한을 부여할 수 있는 보안 주체를 지정합니다.  
+ AS \<grantor_principal> 이 쿼리를 실행하는 보안 주체의 사용 권한 부여 권한이 파생되는 다른 보안 주체를 지정합니다.  
   
  WITH GRANT OPTION  
  지정된 사용 권한을 다른 보안 주체에게 부여할 수 있는 권한도 이 보안 주체에 제공됨을 나타냅니다.  
@@ -142,7 +142,7 @@ GRANT permission [ ,...n ]
 ## <a name="permissions"></a>사용 권한  
  사용 권한을 부여한 사용자 또는 AS 옵션으로 지정한 보안 주체에게 GRANT OPTION을 통한 사용 권한이 있거나 부여할 사용 권한을 포함하는 상위 사용 권한이 있어야 합니다. sysadmin 고정 서버 역할의 멤버는 모든 사용 권한을 부여할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-granting-a-permission-to-a-login"></a>A. 로그인에 사용 권한 부여  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `CONTROL SERVER`에 대해 `TerryEminhizer` 권한을 부여합니다.  

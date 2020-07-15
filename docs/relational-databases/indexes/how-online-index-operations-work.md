@@ -18,15 +18,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: database-engine, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2dd4970cc25e382706f63ed94b7bcc3700549d9f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a61295dcadd884f2b54d23bd74dfee66cd866dc4
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67909750"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812648"
 ---
 # <a name="how-online-index-operations-work"></a>온라인 인덱스 작동 방식
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   이 항목에서는 온라인 인덱스 작업 중에 존재하는 구조에 대해 설명하고 이러한 구조와 관련된 작업을 보여 줍니다.  
   
@@ -65,12 +65,14 @@ ms.locfileid: "67909750"
 |빌드<br /><br /> 주 단계|대량 로드 작업의 대상으로 데이터가 검색, 정렬, 병합 및 삽입됩니다.<br /><br /> 동시 사용자 선택, 삽입, 업데이트 및 삭제 작업이 기존 인덱스와 작성된 모든 새 인덱스에 적용됩니다.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
 |최종<br /><br /> 짧은 단계|이 단계를 시작하기 전에 커밋되지 않은 모든 업데이트 트랜잭션이 완료되어야 합니다. 획득한 잠금에 따라 이 단계가 완료될 때까지 짧은 기간 동안 새로운 사용자 읽기 또는 쓰기 트랜잭션이 모두 차단됩니다.<br /><br /> 시스템 메타데이터가 업데이트되어 원본이 대상으로 대체됩니다.<br /><br /> 필요한 경우 원본이 삭제됩니다. 예를 들어 클러스터형 인덱스를 다시 작성하거나 삭제하면 원본이 삭제됩니다.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> 비클러스터형 인덱스를 만드는 경우 테이블에 대한 S\*<br /><br /> 원본 구조(인덱스 또는 테이블)가 삭제되는 경우 SCH-M(스키마 수정)\*|  
   
- \* 인덱스 작업은 커밋되지 않은 모든 업데이트 트랜잭션이 완료될 때까지 대기한 후 테이블에 대한 S 잠금이나 SCH-M 잠금을 획득합니다.  
+ \* 인덱스 작업은 커밋되지 않은 모든 업데이트 트랜잭션이 완료될 때까지 대기한 후 테이블에 대한 S 잠금이나 SCH-M 잠금을 획득합니다. 장기 실행 쿼리가 수행되는 경우 온라인 인덱스 작업은 쿼리가 완료될 때까지 대기 상태가 됩니다.
   
  ** 리소스 잠금 INDEX_BUILD_INTERNAL_RESOURCE는 인덱스 작업이 진행 중인 동안 원본과 기존 구조에 대한 동시 DDL(데이터 정의 언어) 작업이 실행되지 못하게 합니다. 예를 들어 이 잠금으로 인해 동일한 테이블에 대한 두 인덱스를 동시에 다시 작성할 수 없습니다. 이 리소스 잠금은 Sch-M 잠금과 연관되지만 이 리소스 잠금으로 인해 데이터 조작 문이 실행되지 않는 것은 아닙니다.  
   
  위의 표에서는 단일 인덱스를 포함하는 온라인 인덱스 작업의 작성 단계 중에 획득되는 단일 공유(S) 잠금을 보여 줍니다. 하나 이상의 비클러스터형 인덱스를 포함하는 테이블에 대한 초기 클러스터형 인덱스를 만드는 경우와 같이 클러스터형 인덱스와 비클러스터형 인덱스를 작성하거나 다시 작성하는 경우에는 먼저 단기 S 잠금 두 개가 획득된 후 장기 IS(내재된 공유) 잠금이 획득됩니다. 먼저 클러스터형 인덱스 작성에 대한 S 잠금을 획득하고 클러스터형 인덱스 작성이 완료되면 비클러스터형 인덱스 작성을 위한 두 번째 단기 S 잠금을 획득합니다. 비클러스터형 인덱스가 작성된 후 온라인 인덱스 작업의 최종 단계까지 S 잠금이 IS 잠금으로 다운그레이드됩니다.  
-  
+
+잠금을 사용하고 관리하는 자세한 방법은 [인수](../../t-sql/statements/alter-table-index-option-transact-sql.md#arguments)를 참조하세요.
+
 ### <a name="target-structure-activities"></a>대상 구조 작업  
  다음 표에서는 인덱스 작업의 각 단계에서 대상 구조와 관련된 작업과 해당 잠금 전략에 대해 설명합니다.  
   
@@ -91,4 +93,6 @@ ms.locfileid: "67909750"
   
  [온라인 인덱스 작업에 대한 지침](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
-  
+## <a name="next-steps"></a>다음 단계
+
+[ALTER TABLE 인덱스 옵션](../../t-sql/statements/alter-table-index-option-transact-sql.md#arguments)

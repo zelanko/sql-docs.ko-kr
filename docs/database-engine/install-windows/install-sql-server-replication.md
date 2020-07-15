@@ -1,5 +1,6 @@
 ---
 title: SQL Server 복제 설치 | Microsoft Docs
+description: SQL Server 설치 마법사를 사용하거나 명령 프롬프트 창에서 복제 구성 요소를 설치합니다.
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,16 +17,16 @@ ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 336566cdcdedd378199716cc1369e148e0239863
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e5635065e77921b661d5b60e5ebcd0aad850295b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67991053"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883492"
 ---
 # <a name="install-sql-server-replication"></a>SQL Server 복제 설치
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 복제 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사 또는 명령 프롬프트를 사용하여 설치할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 설치할 때나 기존 인스턴스를 수정할 때 복제를 설치할 수 있습니다.  
   

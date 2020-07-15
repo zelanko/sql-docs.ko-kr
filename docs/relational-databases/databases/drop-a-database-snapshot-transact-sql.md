@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 스냅샷 삭제(Transact-SQL) | Microsoft 문서
+description: SQL Server에서 Transact-SQL을 사용하여 스냅샷을 삭제하는 방법을 알아봅니다. 이 방법은 SQL Server에서 그리고 스냅샷에서 사용한 스파스 파일에서 스냅샷을 삭제합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ad70ec97-d5fb-41aa-b72a-915e74b61b76
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0738c1e661c679022a6a635af756003fdd98dfe0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9ae40c8d9b4a93ff1f035953207caae5addb56b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086021"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756160"
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>데이터베이스 스냅샷 삭제(Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   데이터베이스 스냅샷을 삭제하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터베이스 스냅샷이 삭제되고 스냅샷에 사용된 스파스 파일도 삭제됩니다. 또한 데이터베이스 스냅샷에 대한 모든 사용자 연결이 종료됩니다.  
   
 ## <a name="security"></a>보안  

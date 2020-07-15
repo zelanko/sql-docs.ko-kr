@@ -1,6 +1,6 @@
 ---
 title: 미러링 모니터가 데이터베이스 가용성에 미치는 영향
-description: 데이터베이스 미러링이 쿼럼 및 데이터베이스 가용성에 미치는 영향에 대해 설명합니다.
+description: 데이터베이스 미러링이 쿼럼 및 데이터베이스 가용성에 미치는 영향을 알아봅니다. 쿼럼을 사용하면 한 번에 한 파트너만 데이터베이스를 소유할 수 있습니다.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6bbf98cbd0fc863c8e6ceaf7eeb5a0e9192055c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c28e70d2f66dffc00ff2ac9138f97dc8d0e08991
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822687"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789663"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>쿼럼: 미러링 모니터가 데이터베이스 가용성에 미치는 영향(데이터베이스 미러링)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   데이터베이스 미러링 세션에 대해 미러링 모니터 서버를 설정할 때마다 *쿼럼* 이 필요합니다. 쿼럼은 데이터베이스 미러링 세션에서 둘 이상의 서버 인스턴스가 서로 연결될 때 존재하는 관계입니다. 일반적으로 쿼럼은 3개의 상호 연결된 서버 인스턴스를 포함합니다. 미러링 모니터 서버가 설정된 경우 쿼럼이 있어야만 데이터베이스를 사용할 수 있습니다. 쿼럼은 자동 장애 조치(Failover)를 지원하는 보안 우선 모드를 위해 디자인되었으므로 한 번에 하나의 파트너만 데이터베이스를 소유할 수 있습니다.  
   
  특정 서버 인스턴스의 연결이 미러링 세션에서 끊어지면 해당 인스턴스는 쿼럼을 잃습니다. 연결된 서버 인스턴스가 없는 경우 세션이 쿼럼을 잃고 데이터베이스를 사용할 수 없게 됩니다. 다음 3가지 유형의 쿼럼이 지원됩니다.  

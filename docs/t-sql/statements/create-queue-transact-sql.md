@@ -25,16 +25,16 @@ helpviewer_keywords:
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b1446d4b43524a1e670084812279284d86eb1b0b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c307a383d97691a49f437822e4a92cf64fcfb832
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71326092"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892515"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 데이터베이스에 새 큐를 만듭니다. 큐는 메시지를 저장합니다. 서비스에 대한 메시지가 도착하면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 이 메시지를 서비스에 연결된 큐에 넣습니다.
 
@@ -42,7 +42,7 @@ ms.locfileid: "71326092"
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 CREATE QUEUE <object>
    [ WITH
      [ STATUS = { ON | OFF } [ , ] ]
@@ -86,7 +86,7 @@ ACTIVATION은 이 큐에 있는 메시지를 처리하기 위해 시작해야 �
 
 STATUS(활성화)는 [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서 저장 프로시저를 시작할지 여부를 지정합니다. STATUS = ON이면 현재 실행 중인 프로시저 수가 MAX_QUEUE_READERS보다 작고, 큐에 도착하는 메시지가 저장 프로시저의 메시지 수신 속도보다 빠른 경우 큐에서 PROCEDURE_NAME에 지정된 저장 프로시저를 시작합니다. STATUS = OFF이면 큐에서 저장 프로시저를 시작하지 않습니다. 이 절을 지정하지 않은 경우 기본값은 ON입니다.
 
-PROCEDURE_NAME = \<procedure>은 이 큐에 있는 메시지를 처리하기 위해 시작할 저장 프로시저의 이름을 지정합니다. 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 합니다.
+PROCEDURE_NAME = \<procedure>는 이 큐에 있는 메시지를 처리하기 위해 시작할 저장 프로시저의 이름을 지정합니다. 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 합니다.
 
 *database_name*(프로시저)은 저장 프로시저가 포함된 데이터베이스의 이름입니다.
 
@@ -154,7 +154,7 @@ ON *filegroup |* [**DEFAULT**]는 이 큐를 만들 파일 그룹[!INCLUDE[ssNoV
 
 큐에 대한 `RECEIVE` 권한은 기본적으로 큐의 소유자, `db_owner` 고정 데이터베이스 역할의 멤버 또는 `sysadmin` 고정 서버 역할의 멤버로 설정됩니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-creating-a-queue-with-no-parameters"></a>A. 매개 변수 없이 큐 만들기
 

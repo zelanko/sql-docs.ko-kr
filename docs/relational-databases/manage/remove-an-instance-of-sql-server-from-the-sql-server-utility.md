@@ -1,5 +1,6 @@
 ---
 title: SQL Server 유틸리티에서 SQL Server 인스턴스 제거 | Microsoft 문서
+description: SQL Server 유틸리티에서 SQL Server 인스턴스를 제거하는 방법을 알아봅니다. 이 작업을 위해 PowerShell 스크립트를 실행하거나 SQL Server Management Studio를 사용할 수 있습니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 785c056b50ed3594fe9886eb9c6a9ec79f7895c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c1b0f36dd95146ec93819177b91d8abed1f0cc8c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908654"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773502"
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>SQL Server 유틸리티에서 SQL Server 인스턴스 제거
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스를 제거하려면 다음 단계를 수행하세요. 이 절차를 수행하면 UCP 목록 뷰에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 제거되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 데이터 컬렉션이 중지됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 제거되는 것은 아닙니다.  
   
 > [!IMPORTANT]  
@@ -30,7 +31,7 @@ ms.locfileid: "72908654"
   
 2.  목록 뷰의 **SQL Server 인스턴스 이름** 열에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 제거할 인스턴스를 선택합니다. 제거할 인스턴스를 마우스 오른쪽 단추로 클릭하고 **Managed Instance 제거...** 를 선택합니다.  
   
-3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 관리자 권한이 있는 자격 증명을 지정합니다. **연결...** 을 클릭하고 **서버에 연결** 대화 상자의 정보를 확인한 다음, **연결**을 클릭합니다. **관리되는 인스턴스 제거** 대화 상자에 로그인 정보가 표시됩니다.  
+3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 관리자 권한이 있는 자격 증명을 지정합니다. **연결…** 을 클릭하고 **서버에 연결** 대화 상자의 정보를 확인한 다음, **연결**을 클릭합니다. **관리되는 인스턴스 제거** 대화 상자에 로그인 정보가 표시됩니다.  
   
 4.  작업을 수행하려면 **확인**을 클릭합니다. 작업을 취소하려면 **취소**를 클릭합니다.  
 

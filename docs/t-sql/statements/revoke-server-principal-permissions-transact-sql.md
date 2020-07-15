@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5510106a1b37e43210d043856825cfff56763e05
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 489b6c35f523c6f19d5b763cc54e5aeb6ace1e4f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634121"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894536"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>REVOKE 서버 보안 주체 사용 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 대해 부여되거나 거부된 사용 권한을 취소합니다.  
   
@@ -112,7 +112,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
   
  서버 역할의 경우 서버 역할에 대한 CONTROL 권한 또는 서버에 대한 ALTER ANY SERVER ROLE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-revoking-impersonate-permission-on-a-login"></a>A. 로그인에 대한 IMPERSONATE 권한 취소  
  다음 예에서는 사용자 `AdvWorks\YoonM`에서 생성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `WanidaBenshoof`에 대한 `IMPERSONATE` 권한을 취소합니다.  

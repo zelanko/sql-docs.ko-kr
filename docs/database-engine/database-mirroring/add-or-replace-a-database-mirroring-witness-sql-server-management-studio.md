@@ -1,6 +1,6 @@
 ---
 title: 미러링 모니터 추가 또는 바꾸기(SSMS)
-description: SSMS(SQL Server Management Studio)를 사용하여 데이터베이스 미러링 모니터를 추가하거나 바꾸는 방법에 대해 알아봅니다.
+description: 데이터베이스 미러링 엔드포인트에서 Windows 인증을 사용하는 경우 SQL Server Management Studio를 사용하여 데이터베이스 미러링 모니터 서버를 추가하거나 교체하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 61e7be7b4e1f61f243d896d5073ae469bebe6940
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4cf7d77550f96c72867ecc8133df3cb4f64b7300
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75247501"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763931"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>데이터베이스 미러링 모니터 서버 추가 또는 바꾸기(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   데이터베이스 미러링 엔드포인트에서 Windows 인증을 사용하는 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 미러링 모니터 서버를 추가하거나 바꿀 수 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 미러링 모니터 서버를 추가하면 운영 모드도 자동 장애 조치(Failover)가 있는 보호 우선 모드로 변경됩니다.  
   
 > [!NOTE]  

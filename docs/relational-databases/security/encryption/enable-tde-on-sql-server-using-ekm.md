@@ -1,5 +1,6 @@
 ---
 title: EKM을 사용하여 SQL Server에서 TDE를 사용하도록 설정 | Microsoft 문서
+description: Transact-SQL에서 확장 가능 키 관리 모듈의 비대칭 키를 사용하여 데이터베이스 키를 보호하도록 SQL Server에서 투명한 데이터 암호화를 사용하도록 설정합니다.
 ms.custom: ''
 ms.date: 07/25/2019
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 2507328ccc1d2a8baa47e97353c17ccc0345d3d7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 205f1f3bbb4268545848903aa8b71915f746c601
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957437"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882167"
 ---
 # <a name="enable-tde-on-sql-server-using-ekm"></a>EKM을 사용하여 SQL Server에서 TDE를 사용하도록 설정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   이 문서에서는 EKM(확장 가능 키 관리) 모듈에 저장된 비대칭 키를 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에 사용하여 데이터베이스 암호화 키를 보호하기 위해 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 TDE(투명한 데이터 암호화)를 사용하도록 설정하는 방법에 대해 설명합니다.  
   
  TDE는 데이터베이스 암호화 키라는 대칭 키를 사용하여 전체 데이터베이스의 스토리지를 암호화합니다. 또한 master 데이터베이스의 데이터베이스 마스터 키로 보호되는 인증서를 사용하여 데이터베이스 암호화 키를 보호할 수도 있습니다. 데이터베이스 마스터 키를 사용하여 데이터베이스 암호화 키를 보호하는 방법은 [TDE&#40;투명한 데이터 암호화&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하세요. Azure VM에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]이 실행 중인 경우 TDE 구성 방법은 [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리&#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)를 참조하세요. Azure 주요 자격 증명 모음의 키를 사용하여 TDE를 구성하는 방법은 [SQL 암호화 기능을 통해 SQL Server 커넥터 사용](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)을 참조하세요. 

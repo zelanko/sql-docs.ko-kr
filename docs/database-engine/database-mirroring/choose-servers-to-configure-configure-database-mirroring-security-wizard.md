@@ -1,6 +1,6 @@
 ---
 title: '보안 구성 마법사: 서버 선택'
-descriptoin: Describes the properties found on the the 'Choose Servers' page of the 'Configure Database Mirroring Security Wizard'.
+description: ‘데이터베이스 미러링 보안 구성 마법사’의 ‘서버 선택’ 페이지에 있는 속성을 설명합니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 59e23ff3-d7ee-4e32-9629-0b54d3a258f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cfb2396e97c4cceee534472c07c285aa2a8a371e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 84ab26e4de120d64e398bff50cf4a5c409e4cd83
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822315"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763634"
 ---
 # <a name="configure-database-mirroring-wizard-choose-servers-to-configure"></a>데이터베이스 미러링 구성 마법사: 구성할 서버 선택 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 페이지를 사용하여 지금 구성할 서버 인스턴스를 지정할 수 있습니다. 마법사를 계속하려면 서버 인스턴스를 적어도 하나 이상 선택해야 합니다.  
   
  서버 인스턴스에 대한 확인란을 선택 취소하면 해당 인스턴스가 변경되지 않지만 해당 인스턴스에 대한 정보를 입력하라는 메시지가 나타나고 이 정보가 다른 서버 인스턴스 구성의 일부로 저장됩니다. 예를 들어 미러링 모니터 서버 인스턴스에 대한 확인란을 선택 취소하면 주 서버 인스턴스와 미러 서버 인스턴스에 저장된 보안 구성의 일부로 해당 계정에 대한 로그인을 만들어야 하기 때문에 미러링 모니터 서버의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정을 입력하라는 메시지가 나타납니다.  

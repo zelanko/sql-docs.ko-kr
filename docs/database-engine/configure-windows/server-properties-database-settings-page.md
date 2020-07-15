@@ -1,5 +1,6 @@
 ---
 title: 서버 속성(데이터베이스 설정 페이지) | Microsoft Docs
+description: SQL Server의 데이터베이스 설정을 파악합니다. 백업 동작, 채우기 비율, 파일 위치 및 기타 속성을 제어하는 옵션에 대해 알아봅니다.
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -8,20 +9,20 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.databasesettings.f1
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.custom: ''
 ms.date: 05/23/2019
-ms.openlocfilehash: d6d7982384d8e83db35e35feb2e106ddae727fac
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: a4f5a0dacaeeeadf0446df9e4d3cdf54fcad7be2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152052"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784126"
 ---
 # <a name="server-properties---database-settings-page"></a>서버 속성 - 데이터베이스 설정 페이지
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 페이지를 사용하여 데이터베이스 설정을 보거나 수정할 수 있습니다.  
   
 ## <a name="options"></a>옵션
@@ -73,7 +74,7 @@ ms.locfileid: "83152052"
 
 데이터베이스당 최대 복구 시간을 분 단위로 설정합니다. 기본값 0을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 구성합니다. 실제로 이 옵션은 1분 미만의 복구 시간이 소요되고 활성 데이터베이스에 대해 약 1분 간격으로 검사점이 실행됩니다. 자세한 내용은 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)을(를) 참조하세요.  
   
-### <a name="data"></a>data
+### <a name="data"></a>데이터
 
 데이터 파일의 기본 위치를 지정합니다. 새 기본 위치로 이동하려면 찾아보기 단추를 클릭합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작해야 적용됩니다.  
   

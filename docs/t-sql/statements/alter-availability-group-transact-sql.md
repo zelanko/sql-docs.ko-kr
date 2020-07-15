@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13f5c8c892729abe0ba0e0a79185b360f0098d07
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: d1c21bafa36dc929ef5dbc5f6e57bce27cc791b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150600"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762021"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 기존 Always On 가용성 그룹을 변경합니다. 대부분의 ALTER AVAILABILITY GROUP 인수는 현재 주 복제본에서만 지원됩니다. 그러나 JOIN, FAILOVER 및 FORCE_FAILOVER_ALLOW_DATA_LOSS 인수는 보조 복제본에서만 지원됩니다.  
   
@@ -467,7 +467,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  강제 장애 조치(failover)에 대한 제한 사항, 사전 요구 사항 및 권장 사항과 강제 장애 조치(failover) 시 가용성 그룹의 이전 주 데이터베이스에 미치는 영향에 대한 자세한 내용은 [가용성 그룹의 강제 수동 장애 조치(failover) 수행&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)을 참조하세요.  
   
- ADD LISTENER **‘** _dns\_name_ **’(** \<add_listener_option> **)**  
+ ADD LISTENER **'** _dns\_name_ **'(** \<add_listener_option> **)**  
  이 가용성 그룹의 새 가용성 그룹 수신기를 정의합니다. 주 복제본에서만 지원되며,  
   
 > [!IMPORTANT]
@@ -557,25 +557,25 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
 > [!IMPORTANT]  
 >  프로덕션 환경에서는 DHCP를 사용하지 않는 것이 좋습니다. 중단 시간이 있고 DHCP IP 임대가 만료되는 경우 수신기 DNS 이름과 연결되고 클라이언트 연결에 영향을 주는 새 DHCP 네트워크 IP 주소를 등록하기 위해 추가 시간이 필요합니다. 그러나 가용성 그룹의 기본 기능을 확인하고 애플리케이션과 통합하기 위해 DHCP를 개발 및 테스트 환경에 설정하는 것은 좋습니다.  
   
- 다음은 그 예입니다.  
+ 예를 들면 다음과 같습니다.  
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
  WITH IP **(** { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')**  |  **('** _ipv6\_address_ **')** } [ **,** ..._n_ ] **)** [ **,** PORT **=** _listener\_port_ ]  
  DHCP를 사용하는 대신 가용성 그룹 수신기가 하나 이상의 고정 IP 주소를 사용할지 여부를 지정합니다. 여러 서브넷에서 가용성 그룹을 만들려면 각 서브넷의 수신기 구성에 하나의 고정 IP 주소가 필요합니다. 지정된 서브넷에 대해 고정 IP 주소는 IPv4 주소이거나 IPv6 주소일 수 있습니다. 새 가용성 그룹에 대한 가용성 복제본을 호스팅할 각 서브넷의 고정 IP 주소를 얻으려면 네트워크 관리자에게 문의하십시오.  
   
- 다음은 그 예입니다.  
+ 예를 들면 다음과 같습니다.  
   
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
  *ipv4_address*  
- 가용성 그룹 수신기에 대해 네 부분으로 된 IPv4 주소를 지정합니다. `10.120.19.155`)을 입력합니다.  
+ 가용성 그룹 수신기에 대해 네 부분으로 된 IPv4 주소를 지정합니다. 예들 들어 `10.120.19.155`입니다.  
   
  *ipv4_mask*  
- 가용성 그룹 수신기에 대해 네 부분으로 된 IPv4 마스크를 지정합니다. `255.255.254.0`)을 입력합니다.  
+ 가용성 그룹 수신기에 대해 네 부분으로 된 IPv4 마스크를 지정합니다. 예들 들어 `255.255.254.0`입니다.  
   
  *ipv6_address*  
- 가용성 그룹 수신기의 IPv6 주소를 지정합니다. `2001::4898:23:1002:20f:1fff:feff:b3a3`)을 입력합니다.  
+ 가용성 그룹 수신기의 IPv6 주소를 지정합니다. 예들 들어 `2001::4898:23:1002:20f:1fff:feff:b3a3`입니다.  
   
  PORT **=** *listener_port*  
  WITH IP 절에서 지정된 가용성 그룹 수신기에서 사용될 포트 번호(*listener_port*)를 지정합니다. PORT는 선택적입니다.  
@@ -584,7 +584,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  예: `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER **’** _dns\_name_ **’(** \<modify\_listener\_option\> **)**  
+ MODIFY LISTENER **'** _dns\_name_ **'(** \<modify\_listener\_option\> **)**  
  이 가용성 그룹의 기존 가용성 수신기를 수정합니다. 주 복제본에서만 지원되며,  
   
  \<modify\_listener\_option\>  
@@ -619,7 +619,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
 ### <a name="permissions"></a>사용 권한  
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.  또한 ALTER ANY DATABASE 권한이 필요합니다.   
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ###  <a name="a-joining-a-secondary-replica-to-an-availability-group"></a><a name="Join_Secondary_Replica"></a> 1. 가용성 그룹에 보조 복제본 조인  
  다음 예에서는 현재 연결된 보조 복제본을 `AccountsAG` 가용성 그룹에 조인합니다.  

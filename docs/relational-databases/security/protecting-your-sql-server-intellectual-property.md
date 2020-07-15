@@ -1,5 +1,6 @@
 ---
 title: SQL Server 지적 재산 보호 | Microsoft 문서
+description: 고객에게 배포되는 SQL Server 데이터 애플리케이션에서 지적 재산을 보호하는 방법을 확인합니다.
 ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: afe179023f72ec509af5828bb89afb51f93b53a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dc6b2c88fc2405aea99ac8ce7de9c38cf43c99aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67986594"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773882"
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>SQL Server 지적 재산 보호
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 소프트웨어 개발자는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 데이터 애플리케이션을 고객에게 배포하는 방법을 자주 질문하지만 고객이 직접 애플리케이션을 분석하고 분해할 수 없도록 합니다. 여기에서 중요한 점은 지적 재산권 보호는 법적 문제이며 이러한 보호는 사용권 계약을 기반으로 한다는 점입니다. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]가 다른 사람이 관리하는 컴퓨터에 설치되어 있으면 기본적으로 일부 측면을 제어할 수 없습니다. 
 

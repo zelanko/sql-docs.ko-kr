@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 05039c9634d62366cc8730a90a80bc4c2d3ab76f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1ca0b3f46cba5fc2e64babbba4dd591b8fb0b095
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633532"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786557"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 현재 데이터베이스의 지정한 테이블에서 특정 제약 조건이나 모든 제약 조건의 무결성을 확인합니다.
   
@@ -90,7 +90,7 @@ DBCC CHECKCONSTRAINTS는 FOREIGN KEY와 CHECK 제약 조건의 무결성을 검�
   
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상
   
-*table_name* 또는 *table_id*가 지정되고 시스템 버전 관리가 설정된 경우, DBCC CHECKCONSTRAINTS는 지정된 테이블에서 temporal 데이터 일관성 검사도 수행합니다. *NO_INFOMSGS*를 지정하지 않은 경우, 이 명령은 별도 줄의 출력에서 각 일관성 위반을 반환합니다. 출력의 형식은 ([pkcol1] [pkcol2]...) = (\<pkcol1_value>, \<pkcol2_value >...) 및 \<temporal 테이블 레코드의 문제점은 무엇입니까>입니다.
+*table_name* 또는 *table_id*가 지정되고 시스템 버전 관리가 설정된 경우, DBCC CHECKCONSTRAINTS는 지정된 테이블에서 temporal 데이터 일관성 검사도 수행합니다. *NO_INFOMSGS*를 지정하지 않은 경우, 이 명령은 별도 줄의 출력에서 각 일관성 위반을 반환합니다. 출력의 형식은 ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...) 및 \<what is wrong with temporal table record>가 됩니다.
   
 |확인|검사 실패 시 출력에서 추가 정보|  
 |-----------|-----------------------------------------------|  
@@ -114,7 +114,7 @@ DBCC CHECKCONSTRAINTS는 다음 열이 있는 행 집합을 반환합니다.
 ## <a name="permissions"></a>사용 권한  
 **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-checking-a-table"></a>A. 테이블 검사  
 다음은 `Table1` 데이터베이스에 있는 `AdventureWorks` 테이블의 제약 조건 무결성을 검사하는 예입니다.

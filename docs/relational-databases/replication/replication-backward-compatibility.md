@@ -1,5 +1,6 @@
 ---
 title: 복제의 이전 버전과의 호환성 | Microsoft 문서
+description: 업그레이드하기 전이나 복제 토폴로지에 여러 SQL Server 버전이 있는 경우 이러한 리소스에서 복제의 이전 버전과의 호환성을 검토합니다.
 ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: sql
@@ -19,15 +20,15 @@ ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 265f7fa72b6cdcd59ff7c74ec456e533471ddd0a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4ef157ef3c8a95bd08cc8dd2d8567dbc6e8ec6ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287408"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767714"
 ---
 # <a name="replication-backward-compatibility"></a>복제의 이전 버전과의 호환성
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 업그레이드하는 경우 또는 복제 토폴로지에 둘 이상의 SQL Server 버전이 있는 경우 이전 버전과의 호환성을 이해하는 것이 중요합니다. 
 

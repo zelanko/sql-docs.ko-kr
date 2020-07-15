@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 208af6ed-b271-4ab8-803e-7666025385c8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 58a6ff1dda1e0694e17d891502c7dca9ebb31c8a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 12d33f5618d4f1478f5e09df536b2f0c695ddddc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68060578"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781375"
 ---
 # <a name="mssqlserver_10737"></a>MSSQLSERVER_10737
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>세부 정보  
   
-|||  
-|-|-|  
+| attribute | 값 |  
+| :-------- | :---- |  
 |제품 이름|MSSQLSERVER|  
 |이벤트 ID|10737|  
 |이벤트 원본|MSSQLSERVER|  
@@ -33,5 +33,5 @@ ms.locfileid: "68060578"
 |메시지 텍스트|ALTER TABLE REBUILD 또는 ALTER INDEX REBUILD 문에서 DATA_COMPRESSION 절에 지정된 파티션이 있으면 PARTITION=ALL을 지정해야 합니다. PARTITION=ALL 절은 DATA_COMPRESSION 절에 하위 집합만 지정된 경우에도 테이블 또는 인덱스의 모든 파티션이 다시 작성되도록 지원하는 데 사용됩니다.|  
   
 ## <a name="user-action"></a>사용자 동작  
-ALTER TABLE 또는 ALTER INDEX 문에 PARTITION=ALL 절을 추가하거나 REBUILD PARTITION = \<partition-number-expr> WITH (DATA_COMPRESSION={ON | OFF})를 사용하여 특정 파티션을 다시 작성하세요.  
+ALTER TABLE 또는 ALTER INDEX 문에 PARTITION=ALL 절을 추가하거나 REBUILD PARTITION = \<partition-number-expr> WITH (DATA_COMPRESSION={ON | OFF})를 사용하여 특정 파티션을 다시 빌드합니다.  
   

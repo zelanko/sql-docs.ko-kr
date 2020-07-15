@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 67a36e80059c58fe1666ba147b0b8a5df94e2044
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 16cd0a4dd5d32d47a471c98392b62989201650d6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922214"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896014"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 문 - 인수(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 항목에서는 RESTORE {DATABASE|LOG} 문과 관련 보조 명령문 세트의 구문 섹션에 설명된 다음 인수를 설명합니다. RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY 및 RESTORE VERIFYONLY. 대부분의 인수는 이러한 6개의 문에 사용되는 경우에만 지원됩니다. 각 인수에 대한 지원은 인수 설명에 나와 있습니다.  
   
@@ -116,15 +116,15 @@ PAGE
  [ **,** ...*n* ]  
  여러 개의 파일 및 파일 그룹과 페이지를 쉼표로 구분된 목록에 지정할 수 있음을 나타내는 자리 표시자입니다. 사용할 수 있는 숫자에는 제한이 없습니다.  
   
-FROM { \<backup_device&gt; [ **,** ...*n* ]| \<database_snapshot&gt; } 일반적으로 백업을 복원할 백업 디바이스를 지정합니다. 또는 RESTORE DATABASE 문의 FROM 절에서 데이터베이스를 되돌릴 데이터베이스 스냅샷의 이름을 지정할 수도 있습니다. 이런 경우 WITH 절은 사용할 수 없습니다.  
+FROM { \<backup_device> [ **,** ...*n* ]| \<database_snapshot> } 일반적으로 백업을 복원할 백업 장치를 지정합니다. 또는 RESTORE DATABASE 문의 FROM 절에서 데이터베이스를 되돌릴 데이터베이스 스냅샷의 이름을 지정할 수도 있습니다. 이런 경우 WITH 절은 사용할 수 없습니다.  
   
  FROM 절을 생략하면 백업이 복원되지 않습니다. 대신 데이터베이스가 복원됩니다. 이렇게 하면 NORECOVERY 옵션으로 복원된 데이터베이스를 복구하거나 대기 중인 서버로 전환할 수 있습니다. FROM 절을 생략하면 WITH 절에서 NORECOVERY, RECOVERY 또는 STANDBY를 지정해야 합니다.  
   
- \<backup_device&gt; [ **,** ...*n* ] 복원 작업에 사용할 논리적 또는 물리적 백업 디바이스를 지정합니다.  
+ \<backup_device> [ **,** ...*n* ] 복원 작업에 사용할 논리적 또는 물리적 백업 디바이스를 지정합니다.  
   
  **지원 요소:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
- \<backup_device&gt;::= 다음과 같이 백업 작업에 사용할 논리적 백업 디바이스나 물리적 백업 디바이스를 지정합니다.  
+ \<backup_device>::= 다음과 같이 백업 작업에 사용할 논리적 백업 장치나 물리적 백업 장치를 지정합니다.  
   
  { _logical\_backup\_device\_name_ |  **@** _logical\_backup\_device\_name\_var_ }  
  데이터베이스가 복원되는 **sp_addumpdevice**에서 만든 백업 디바이스의 논리적 이름입니다. 이 논리적 이름은 식별자에 대한 규칙을 따라야 합니다. 변수( **@** _logical\_backup\_device\_name\_var_)로 제공한 경우 백업 디바이스 이름은 문자열 상수( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_)나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
@@ -469,7 +469,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
   
  데이터베이스 미러링에 변경 데이터 캡처를 사용하는 방법은 [변경 데이터 캡처 및 기타 SQL Server 기능](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md)을 참조하세요.  
   
-#### <a name="service_broker_with_options"></a>\<service_broker_WITH_options>  
+#### \<service_broker_WITH_options>  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 메시지 배달을 사용 또는 사용하지 않도록 설정하거나 새 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 식별자를 설정합니다. 이 옵션은 백업을 만들 때 데이터베이스에 대해 [!INCLUDE[ssSB](../../includes/sssb-md.md)]를 사용하도록 설정(활성화)한 경우에만 적용됩니다.  
   
  { ENABLE_BROKER  | ERROR_BROKER_CONVERSATIONS  | NEW_BROKER }  
@@ -484,7 +484,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  NEW_BROKER  
  데이터베이스에 새 Service Broker 식별자가 할당되도록 지정합니다. 데이터베이스는 새 Service Broker가 될 것으로 간주되기 때문에 데이터베이스 내의 기존 대화는 종료 대화 메시지 없이 즉시 제거됩니다. 이전 Service Broker 식별자를 참조하는 경로는 새 식별자로 다시 만들어야 합니다.  
   
-#### <a name="point_in_time_with_options"></a>\<point_in_time_WITH_options>  
+#### \<point_in_time_WITH_options>  
  **지원 요소:**  [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md) 및 전체 또는 대량 로그된 복구 모델에 한함.  
   
  STOPAT, STOPATMARK 또는 STOPBEFOREMARK 절에 대상 복구 지점을 지정 데이터베이스를 특정 지정 시간 또는 트랜잭션으로 복원할 수 있습니다. 지정된 시간 또는 트랜잭션은 항상 로그 백업에서 복원됩니다. 복원 순서의 모든 RESTORE LOG 문에서 동일한 STOPAT, STOPATMARK 또는 STOPBEFOREMARK 절에 대상 시간이나 트랜잭션을 지정해야 합니다.  
@@ -614,7 +614,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
   
 -   [RESTORE VERIFYONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  예를 보려면 다음 항목을 참조하십시오.  
   
 -   [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  

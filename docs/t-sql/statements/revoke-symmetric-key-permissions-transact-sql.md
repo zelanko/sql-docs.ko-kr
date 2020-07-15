@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5adf46b8464541db3068dc439cd382e1562dfe7f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ead3a0c0b9feeeffff7491995c63926ec64ad5f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634076"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765939"
 ---
 # <a name="revoke-symmetric-key-permissions-transact-sql"></a>REVOKE 대칭 키 사용 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   대칭 키에 대해 부여 및 거부된 사용 권한을 취소합니다.  
    
@@ -73,7 +73,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  { TO | FROM } \<*database_principal*>  
  사용 권한을 취소할 보안 주체를 지정합니다.  
   
- \<database_principal>로서 이 쿼리를 실행하는 보안 주체가 사용 권한을 부여하는 권한을 취소할 수 있는 다른 보안 주체를 지정합니다.  
+ AS \<database_principal> 이 쿼리를 실행하는 보안 주체가 사용 권한을 취소하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다.  
   
  *Database_user*  
  데이터베이스 사용자를 지정합니다.  
@@ -117,7 +117,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="permissions"></a>사용 권한  
  대칭 키에 대한 CONTROL 권한 또는 데이터베이스에 대한 ALTER ANY SYMMETRIC KEY 권한이 필요합니다. AS 옵션을 사용하는 경우 지정한 보안 주체가 대칭 키를 소유해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 사용자 `ALTER` 및 `SamInventory42`가 `HamidS` 권한을 부여한 다른 보안 주체로부터 대칭 키 `HamidS`에 대한 `ALTER` 권한을 취소합니다.  
   
 ```  

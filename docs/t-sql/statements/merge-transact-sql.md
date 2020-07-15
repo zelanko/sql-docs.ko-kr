@@ -24,20 +24,20 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ff70ad2a8aa50c0e4121a6a597b8e150d0f35a54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 48dabb9e01a3b5dbddaa07cbe7534321207f1d0f
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82181100"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834674"
 ---
 # <a name="merge-transact-sql"></a>MERGE(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 원본 테이블과의 조인 결과를 기반으로 대상 테이블에서 삽입, 업데이트 또는 삭제 작업을 실행합니다. 예를 들어 원본 테이블과의 차이점에 따라 대상 테이블에서 행을 삽입, 업데이트 및 삭제하여 두 테이블을 동기화합니다.  
   
-**성능 팁:** MERGE 문에 대해 설명된 조건부 동작은 두 테이블에 일치하는 특성이 복합적으로 혼합되어 있는 경우 가장 효과적입니다. 예를 들어, 행이 없는 경우 행을 삽입하고 행이 일치하지 않는 경우 행을 업데이트합니다. 다른 테이블의 행을 기반으로 한 테이블을 단순히 업데이트하는 경우 기본 INSERT, UPDATE 및 DELETE 문을 사용하여 성능 및 확장성을 향상합니다. 다음은 그 예입니다.   
+**성능 팁:** MERGE 문에 대해 설명된 조건부 동작은 두 테이블에 일치하는 특성이 복합적으로 혼합되어 있는 경우 가장 효과적입니다. 예를 들어, 행이 없는 경우 행을 삽입하고 행이 일치하지 않는 경우 행을 업데이트합니다. 다른 테이블의 행을 기반으로 한 테이블을 단순히 업데이트하는 경우 기본 INSERT, UPDATE 및 DELETE 문을 사용하여 성능 및 확장성을 향상합니다. 예를 들면 다음과 같습니다.  
   
 ```sql
 INSERT tbl_A (col, col2)  
@@ -78,41 +78,12 @@ MERGE
     { [ <table_hint_limited> [ ,...n ] ]  
     [ [ , ] INDEX ( index_val [ ,...n ] ) ] }  
 }  
-  
-<table_source> ::=
-{  
-    table_or_view_name [ [ AS ] table_alias ] [ <tablesample_clause> ]
-        [ WITH ( table_hint [ [ , ]...n ] ) ]
-  | rowset_function [ [ AS ] table_alias ]
-        [ ( bulk_column_alias [ ,...n ] ) ]
-  | user_defined_function [ [ AS ] table_alias ]  
-  | OPENXML <openxml_clause>
-  | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]
-  | <joined_table>
-  | <pivoted_table>
-  | <unpivoted_table>
-}  
-  
+
 <merge_search_condition> ::=  
     <search_condition>  
   
 <merge_matched>::=  
     { UPDATE SET <set_clause> | DELETE }  
-  
-<set_clause>::=  
-SET  
-  { column_name = { expression | DEFAULT | NULL }  
-  | { udt_column_name.{ { property_name = expression  
-                        | field_name = expression }  
-                        | method_name ( argument [ ,...n ] ) }  
-    }  
-  | column_name { .WRITE ( expression , @Offset , @Length ) }  
-  | @variable = expression  
-  | @variable = column = expression  
-  | column_name { += | -= | *= | /= | %= | &= | ^= | |= } expression  
-  | @variable { += | -= | *= | /= | %= | &= | ^= | |= } expression  
-  | @variable = column { += | -= | *= | /= | %= | &= | ^= | |= } expression  
-  } [ ,...n ]
   
 <merge_not_matched>::=  
 {  
@@ -122,58 +93,7 @@ SET
 }  
   
 <clause_search_condition> ::=  
-    <search_condition>  
-  
-<search condition> ::=  
-    MATCH(<graph_search_pattern>) | <search_condition_without_match> | <search_condition> AND <search_condition>
-
-<search_condition_without_match> ::=
-    { [ NOT ] <predicate> | ( <search_condition_without_match> )
-    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition_without_match> ) } ]
-[ ,...n ]  
-
-<predicate> ::=
-    { expression { = | < > | ! = | > | > = | ! > | < | < = | ! < } expression
-    | string_expression [ NOT ] LIKE string_expression
-  [ ESCAPE 'escape_character' ]
-    | expression [ NOT ] BETWEEN expression AND expression
-    | expression IS [ NOT ] NULL
-    | CONTAINS
-  ( { column | * } , '< contains_search_condition >' )
-    | FREETEXT ( { column | * } , 'freetext_string' )
-    | expression [ NOT ] IN ( subquery | expression [ ,...n ] )
-    | expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
-  { ALL | SOME | ANY} ( subquery )
-    | EXISTS ( subquery ) }
-
-<graph_search_pattern> ::=
-    { <node_alias> {
-                      { <-( <edge_alias> )- }
-                    | { -( <edge_alias> )-> }
-                    <node_alias>
-                   }
-    }
-  
-<node_alias> ::=
-    node_table_name | node_table_alias
-
-<edge_alias> ::=
-    edge_table_name | edge_table_alias
-
-<output_clause>::=  
-{  
-    [ OUTPUT <dml_select_list> INTO { @table_variable | output_table }  
-        [ (column_list) ] ]  
-    [ OUTPUT <dml_select_list> ]  
-}  
-  
-<dml_select_list>::=  
-    { <column_name> | scalar_expression }
-        [ [AS] column_alias_identifier ] [ ,...n ]  
-  
-<column_name> ::=  
-    { DELETED | INSERTED | from_table_name } . { * | column_name }  
-    | $action  
+    <search_condition> 
 ```  
   
 ## <a name="arguments"></a>인수
@@ -205,9 +125,9 @@ MERGE 문은 원본과 대상 테이블 모두에 전체 테이블 검색을 수
 테이블을 참조하기 위한 대체 이름입니다.  
   
 USING \<table_source>  
-\<merge_search condition>을 기반으로 *target_table*의 데이터 행과 일치하는 데이터 원본을 지정합니다. 이 결과는 MERGE 문의 WHEN 절에서 수행할 동작을 나타냅니다. \<table_source>는 원격 테이블이나 원격 테이블에 액세스하는 파생 테이블일 수 있습니다.
+\<merge_search condition>을 기준으로 *target_table*의 데이터 행과 일치하는 데이터 원본을 지정합니다. 이 결과는 MERGE 문의 WHEN 절에서 수행할 동작을 나타냅니다. \<table_source>는 원격 테이블이나 원격 테이블에 액세스하는 파생 테이블일 수 있습니다.
   
-\<table_source>는 [!INCLUDE[tsql](../../includes/tsql-md.md)] [테이블 값 생성자](../../t-sql/queries/table-value-constructor-transact-sql.md)를 사용해서 여러 행을 지정하여 테이블을 생성하는 파생 테이블일 수 있습니다.  
+\<table_source>는 [!INCLUDE[tsql](../../includes/tsql-md.md)] [테이블 값 생성자](../../t-sql/queries/table-value-constructor-transact-sql.md)를 사용해 여러 행을 지정하여 테이블을 생성하는 파생 테이블일 수 있습니다.  
   
 이 절의 구문 및 인수에 대한 자세한 내용은 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)을 참조하세요.  
   
@@ -220,13 +140,13 @@ ON \<merge_search_condition>
 WHEN MATCHED THEN \<merge_matched>  
 \<table_source> ON \<merge_search_condition>에서 반환되는 행과 일치하고 추가 검색 조건을 만족하는 *target_table의 모든 행이 \<merge_matched> 절에 따라 업데이트되거나 삭제되도록 지정합니다.  
   
-MERGE 문에는 최대 두 개의 WHEN MATCHED 절이 포함될 수 있습니다. WHEN MATCHED 절을 두 개 지정할 경우 첫 번째 절과 함께 AND \<search_condition> 절을 지정해야 합니다. 지정된 행에 대해 두 번째 WHEN MATCHED 절은 첫 번째 WHEN MATCHED 절이 적용되지 않은 경우에만 적용됩니다. WHEN MATCHED 절이 두 개 있는 경우 하나는 UPDATE 동작을 지정해야 하고 다른 하나는 DELETE 동작을 지정해야 합니다. UPDATE가 \<merge_matched> 절에 지정되어 있고 \<merge_search_condition>을 기반으로 둘 이상의 \<table_source> 행이 *target_table*의 행과 일치하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 오류를 반환합니다. MERGE 문은 동일한 행을 여러 번 업데이트하거나 업데이트하고 삭제할 수 없습니다.  
+MERGE 문에는 최대 두 개의 WHEN MATCHED 절이 포함될 수 있습니다. WHEN MATCHED 절을 두 개 지정할 경우 첫 번째 절과 함께 AND \<search_condition> 절을 지정해야 합니다. 지정된 행에 대해 두 번째 WHEN MATCHED 절은 첫 번째 WHEN MATCHED 절이 적용되지 않은 경우에만 적용됩니다. WHEN MATCHED 절이 두 개 있는 경우 하나는 UPDATE 동작을 지정해야 하고 다른 하나는 DELETE 동작을 지정해야 합니다. UPDATE가 \<merge_matched> 절에 지정되어 있고 \<merge_search_condition>을 기준으로 둘 이상의 \<table_source> 행이 *target_table*의 행과 일치하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 오류를 반환합니다. MERGE 문은 동일한 행을 여러 번 업데이트하거나 업데이트하고 삭제할 수 없습니다.  
   
 WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
 \<table_source> ON \<merge_search_condition>에서 반환되는 행 중 *target_table*의 행과 일치하지 않지만 추가 검색 조건(있을 경우)을 충족하는 모든 행에 대해 *target_table*에 행이 삽입되도록 지정합니다. 삽입할 값은 \<merge_not_matched> 절에 지정됩니다. MERGE 문에는 WHEN NOT MATCHED [ BY TARGET ] 절이 하나만 포함될 수 있습니다.
 
 WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
-\<table_source> ON \<merge_search_condition>에서 반환되는 행과 일치하지 않고 추가 검색 조건을 만족하는 *target_table의 모든 행이 \<merge_matched>절에 따라 업데이트되거나 삭제되도록 지정합니다.  
+\<table_source> ON \<merge_search_condition>에서 반환되는 행과 일치하지 않고 추가 검색 조건을 만족하는 *target_table의 모든 행이 \<merge_matched> 절에 따라 업데이트되거나 삭제되도록 지정합니다.  
   
 MERGE 문에는 최대 두 개의 WHEN NOT MATCHED BY SOURCE 절이 포함될 수 있습니다. 절을 두 개 지정할 경우 첫 번째 절과 함께 AND \<clause_search_condition> 절을 지정해야 합니다. 지정된 행에 대해 두 번째 WHEN NOT MATCHED BY SOURCE 절은 첫 번째 WHEN MATCHED 절이 적용되지 않은 경우에만 적용됩니다. WHEN NOT MATCHED BY SOURCE 절이 두 개 있는 경우 하나는 UPDATE 동작을 지정해야 하고 다른 하나는 DELETE 동작을 지정해야 합니다. \<clause_search_condition>에서는 대상 테이블의 열만 참조할 수 있습니다.  
   
@@ -279,10 +199,10 @@ DEFAULT VALUES
   
 이 절에 대한 자세한 내용은 [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)을 참조하세요.  
   
-\<search condition>  
-\<merge_search_condition> 또는 \<clause_search_condition>을 지정하도록 검색 조건을 지정합니다. 이 절의 인수에 대한 자세한 내용은 [검색 조건 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)을 참조하세요.  
+\<search_condition>  
+\<merge_search_condition> 또는 \<clause_search_condition>을 지정하는 검색 조건을 지정합니다. 이 절의 인수에 대한 자세한 내용은 [검색 조건 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)을 참조하세요.  
 
-\<그래프 검색 패턴>  
+\<graph search pattern>  
 그래프 일치 패턴을 지정합니다. 이 절의 인수에 대한 자세한 내용은 [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)을 참조하세요.
   
 ## <a name="remarks"></a>설명
@@ -395,7 +315,7 @@ MERGE 문을 사용하여 `OPENROWSET(BULK…)` 절을 테이블 원본으로 �
 - [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md) 동적 관리 함수의 merge_action_type 특성을 사용하여 MERGE 문의 결과로 사용되는 트리거 실행 계획의 유형을 반환할 수 있습니다.
 - SQL 추적을 사용하여 다른 DML(데이터 조작 언어) 문에 대해 사용하는 것과 동일한 방식으로 MERGE 문에 대한 문제 해결 데이터를 수집할 수 있습니다. 자세한 내용은 [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)을(를) 참조하세요.
 
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 
 ### <a name="a-using-merge-to-do-insert-and-update-operations-on-a-table-in-a-single-statement"></a>A. MERGE를 사용하여 단일 문에서 테이블에 INSERT 및 UPDATE 작업 수행
 

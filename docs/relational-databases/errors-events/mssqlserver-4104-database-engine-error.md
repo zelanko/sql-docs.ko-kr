@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_4104 | Microsoft 문서
+description: 지정된 여러 부분으로 구성된 식별자를 기존 엔터티로 매핑할 수 없습니다. 오류에 대한 설명과 가능한 해결 방법을 확인합니다.
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -11,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 52dc32d8-97ad-4ef0-834d-2e68f215d007
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 27f6dfb6a41bab31fb716671f431115468d8bd86
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9d3cac9c566928baac5a32fe0aa318fbb823c57d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68120589"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763070"
 ---
 # <a name="mssqlserver_4104"></a>MSSQLSERVER_4104
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>세부 정보  
   
-|||  
-|-|-|  
+| attribute | 값 |  
+| :-------- | :---- |  
 |제품 이름|SQL Server|  
 |이벤트 ID|4104|  
 |이벤트 원본|MSSQLSERVER|  

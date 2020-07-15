@@ -22,23 +22,23 @@ helpviewer_keywords:
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2bc1c2c7951efceca6d50a30098284f2bc3ef132
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a1f87c0c69a990ffa98a560998068b95b52df319
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982586"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766985"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지정한 테이블 및 열에 공간 인덱스를 만듭니다. 인덱스는 테이블에 데이터를 넣기 전에 만들 수 있습니다. 정규화된 데이터베이스 이름을 지정하여 다른 데이터베이스에 있는 테이블이나 뷰에 인덱스를 만들 수도 있습니다. 공간 인덱스를 사용하려면 클러스터형 기본 키를 포함할 테이블이 필요합니다. 공간 인덱스에 대한 자세한 내용은 [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)를 참조하세요.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지정한 테이블 및 열에 공간 인덱스를 만듭니다. 인덱스는 테이블에 데이터를 넣기 전에 만들 수 있습니다. 정규화된 데이터베이스 이름을 지정하여 다른 데이터베이스에 있는 테이블이나 뷰에 인덱스를 만들 수도 있습니다. 공간 인덱스를 사용하려면 클러스터형 기본 키를 포함할 테이블이 필요합니다. 공간 인덱스는 인덱싱된 뷰에 지정할 수 없습니다. 공간 인덱스에 대한 자세한 내용은 [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)를 참조하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
-```
+```syntaxsql
 CREATE SPATIAL INDEX index_name
   ON <object> ( spatial_column_name )  
     {  
@@ -489,7 +489,7 @@ CREATE SPATIAL INDEX 문에는 각 옵션을 한 번씩만 지정할 수 있으�
 ## <a name="permissions"></a>사용 권한
 사용자는 테이블 또는 뷰에 대해 `ALTER` 권한이 있거나 sysadmin 고정 서버 역할 또는 `db_ddladmin` 및 `db_owner` 고정 데이터베이스 역할의 구성원이어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>A. geometry 열에 공간 인덱스 만들기
 다음 예에서는 **geometry** 형식 열 `geometry_col`을 포함하는 `SpatialTable` 테이블을 만듭니다. 그런 다음 `SIndx_SpatialTable_geometry_col1`에 공간 인덱스 `geometry_col`을 만듭니다. 이 예에서는 기본 공간 분할 구성표를 사용하며 경계 상자를 지정합니다.  

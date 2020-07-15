@@ -1,5 +1,6 @@
 ---
 title: CPU 사용 정책에서 노이즈 줄이기(SQL Server 유틸리티) | Microsoft 문서
+description: SQL Server 유틸리티 결과에서 노이즈 및 원치 않는 위반을 줄이기 위한 전략을 살펴봅니다. 프로세서 사용률 보고서에 영향을 주는 정책 옵션을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a9fc6db57277044267a89cc89e6c196c782ea920
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3617249a1309a86c5ff0a083f3c0db15ee91299d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115345"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773546"
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>CPU 사용 정책에서 노이즈 줄이기(SQL Server 유틸리티)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 리소스 사용 정책에서 노이즈 및 원치 않는 위반이 보고되는 것을 줄이려면 다음 정책을 사용합니다.  
   
 ## <a name="how-frequently-should-processor-utilization-be-in-violation-before-it-is-reported-as-overutilized"></a>프로세서 사용이 얼마나 자주 위반되면 사용 과다로 보고됩니까?  

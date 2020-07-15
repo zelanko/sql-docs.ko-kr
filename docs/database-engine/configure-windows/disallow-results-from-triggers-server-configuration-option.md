@@ -1,5 +1,6 @@
 ---
 title: disallow results from triggers 서버 구성 옵션 | Microsoft Docs
+description: "'disallow results from triggers' 옵션에 대해 알아봅니다. 이 옵션을 사용하여 결과 집합을 처리하도록 설계되지 않은 애플리케이션 관련 문제를 방지하는 방법을 확인합니다."
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - result sets [SQL Server], triggers
 - disallow results from triggers option
 ms.assetid: 47149073-307d-47a5-b7d2-66a737d3231d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 28bf3b201d54798f26c9e887e86a9d0bed78ee15
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8cbe799b72a88da9785e778cb0688fe3ff1a3f44
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011864"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772528"
 ---
 # <a name="disallow-results-from-triggers-server-configuration-option"></a>disallow results from triggers 서버 구성 옵션
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **disallow results from triggers** 옵션을 사용하여 트리거에서 결과 집합을 반환하는지 여부를 제어할 수 있습니다. 결과 집합을 반환하는 트리거는 트리거가 작동하지 않는 애플리케이션에 예기치 않은 동작을 유발할 수도 있습니다.  
   
@@ -31,7 +32,7 @@ ms.locfileid: "68011864"
   
  1로 설정하면 **disallow results from triggers** 옵션이 ON으로 설정됩니다. 이 옵션의 기본 설정은 0(OFF)입니다. 이 옵션을 1(ON)로 설정하면 트리거가 결과 집합을 반환하지 못하며 사용자에게 다음 오류 메시지가 표시됩니다.  
   
- "메시지 524, 수준 16, 상태 1, 프로시저 \<프로시저 이름>, 줄 \<줄#>  
+ "Msg 524, 수준 16, 상태 1, 프로시저 \<Procedure Name>, 줄 \<Line#>  
   
  "트리거가 결과 집합을 반환했으며 서버 옵션 'disallow_results_from_triggers'가 True입니다."  
   

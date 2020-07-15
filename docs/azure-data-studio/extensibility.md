@@ -1,25 +1,24 @@
 ---
 title: 확장성을 통해 다른 기능 추가
-titleSuffix: Azure Data Studio
 description: Azure Data Studio의 기능을 확장하기 위한 확장성 모델 및 핵심 확장 영역에 대해 알아보세요.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8ca24836766307584c43e1636bb33f5bd198f585
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: 6409dd44381b1d927b07f8ecee043465eacdd14e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82107894"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774654"
 ---
-# <a name="getting-started-with-name-sos-extensibility"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] 확장 시작
+# <a name="azure-data-studio-extensibility"></a>Azure Data Studio 확장성
 
-[!INCLUDE[name-sos](../includes/name-sos.md)]에는 사용자 환경을 사용자 지정하고 해당 사용자 지정을 전체 사용자 커뮤니티에서 사용할 수 있도록 하는 여러 확장성 메커니즘이 있습니다. 핵심 [!INCLUDE[name-sos](../includes/name-sos.md)] 플랫폼은 Visual Studio Code를 토대로 구축되므로 대부분의 Visual Studio Code 확장성 API를 사용할 수 있습니다. 또한 데이터 관리 관련 활동에 대한 추가 확장 지점도 제공했습니다.
+Azure Data Studio에는 사용자 환경을 사용자 지정하고 해당 사용자 지정을 전체 사용자 커뮤니티에서 사용할 수 있도록 하는 여러 확장성 메커니즘이 있습니다. 핵심 Azure Data Studio 플랫폼은 Visual Studio Code를 기반으로 하므로 대부분의 Visual Studio Code 확장성 API를 사용할 수 있습니다. 또한 데이터 관리 관련 활동에 대한 추가 확장 지점도 제공했습니다.
 
 몇 가지 주요 확장 지점은 다음과 같습니다.
 
@@ -32,7 +31,7 @@ ms.locfileid: "82107894"
 
 ## <a name="visual-studio-code-extensibility-apis"></a>Visual Studio Code 확장성 API
 
-핵심 [!INCLUDE[name-sos](../includes/name-sos.md)] 플랫폼은 Visual Studio Code를 토대로 구축되었으므로 Visual Studio Code 확장성 API에 대한 자세한 내용은 Visual Studio Code 웹 사이트의 [확장 작성](https://code.visualstudio.com/docs/extensions/overview) 및 [확장 API](https://code.visualstudio.com/docs/extensionAPI/overview) 설명서에 제공됩니다.
+핵심 Azure Data Studio 플랫폼은 Visual Studio Code를 기반으로 하므로 Visual Studio Code 확장성 API에 대한 자세한 내용은 Visual Studio Code 웹 사이트의 [확장 작성](https://code.visualstudio.com/docs/extensions/overview) 및 [확장 API](https://code.visualstudio.com/docs/extensionAPI/overview) 설명서에서 찾을 수 있습니다.
 
 ## <a name="manage-dashboard-tab-panel-contributions"></a>대시보드 탭 패널 기여 관리
 

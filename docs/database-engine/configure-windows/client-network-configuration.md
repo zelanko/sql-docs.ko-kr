@@ -1,5 +1,6 @@
 ---
 title: 클라이언트 네트워크 구성 | Microsoft Docs
+description: 클라이언트 컴퓨터가 네트워크의 SQL Server 인스턴스에 연결하는 방법을 알아봅니다. 클라이언트를 관리하는 데 사용할 수 있는 도구에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - client connections [SQL Server]
 - network connections [SQL Server], client configuration
 ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4fcbb9e6ee0f68433034cd2c3a29f565e05359e9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 65e9cff3efd309e25104e0f283a1902d8a0392e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012967"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759172"
 ---
 # <a name="client-network-configuration"></a>클라이언트 네트워크 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   클라이언트 소프트웨어를 사용하면 클라이언트 컴퓨터를 네트워크상에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있습니다. "클라이언트"는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]과 같은 서버에서 제공하는 서비스를 사용하는 프런트 엔드 애플리케이션입니다. 이 애플리케이션을 호스팅하는 컴퓨터를 *클라이언트 컴퓨터*라고 합니다.  
   
  가장 간단한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와 동일한 시스템에 있을 수 있습니다. 그러나 대개 클라이언트는 네트워크를 통해 하나 이상의 원격 서버에 연결합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 클라이언트/서버 아키텍처를 사용하여 네트워크 상의 여러 클라이언트 및 서버를 원활하게 관리할 수 있습니다. 대부분의 상황에서는 기본 클라이언트 구성으로 충분합니다.  

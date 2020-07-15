@@ -1,6 +1,6 @@
 ---
 title: 가용성 그룹에서 Azure VM을 보조 복제본으로 구성
-description: Azure 복제본 추가 마법사를 사용하여 하이브리드 IT에서 새 Azure VM을 만들고 새로운 또는 기존 Always On 가용성 그룹에 대한 보조 복제본으로 구성할 수 있습니다.
+description: Azure 복제본 추가 마법사를 사용하여 하이브리드 IT에서 Azure VM을 만들고 새로운 또는 기존 Always On 가용성 그룹에 대한 보조 복제본으로 구성할 수 있습니다.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2eb45257f2641b1e4e9f94865784f8910ebf27fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93f20096c1ccce60b5ea0e2299725a4037f71ae3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822665"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894181"
 ---
 # <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>가용성 그룹에서 Azure VM을 보조 복제본으로 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Azure 복제본 추가 마법사를 사용하여 하이브리드 IT에서 새 Azure VM을 만들고 새로운 또는 기존 Always On 가용성 그룹에 대한 보조 복제본으로 구성할 수 있습니다.  
   
 

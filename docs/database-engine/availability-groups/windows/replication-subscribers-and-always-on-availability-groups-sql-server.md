@@ -1,6 +1,6 @@
 ---
 title: 복제 구독자 및 가용성 그룹(SQL Server)
-description: SQL Server Always On 가용성 그룹을 사용하여 복제 구독자를 구성하는 방법에 대해 알아봅니다.
+description: 복제 구독자인 데이터베이스를 포함하는 Always On 가용성 그룹이 SQL Server에서 장애 조치(failover)되면 어떻게 되는지를 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 08/08/2019
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: eefcde46b462718cefbc7f4dc53f055f34834694
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cc3c6fdff473202222a83006a6d1a0ff217aed8a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75235567"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893137"
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>복제 구독자 및 Always On 가용성 그룹(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   복제 구독자인 데이터베이스를 포함하는 Always On 가용성 그룹이 장애 조치(Failover)되면 복제 구독은 실패할 수 있습니다. 트랜잭션 복제 밀어넣기 구독자의 경우 AG 수신기 이름을 사용하여 구독이 생성되었다면 장애 조치(failover) 후에 배포 에이전트가 자동으로 계속 복제합니다. 트랜잭션 복제 풀 구독자의 경우 AG 수신기 이름을 사용하여 구독이 생성되었고 원래 구독자 서버가 실행 중이라면 장애 조치(failover) 후에 배포 에이전트가 자동으로 계속 복제합니다. 이는 배포 에이전트 작업이 원래 구독자 서버(AG의 주 복제본)에서만 생성되기 때문입니다. 병합 구독자의 경우 복제 관리자가 복제를 다시 만들어 수동으로 구독자를 다시 구성해야 합니다.  
   

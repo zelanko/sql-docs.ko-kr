@@ -19,15 +19,15 @@ ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f9ca6fc85701a0056074d4ce3a1ff76abfe1cfb4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68476296"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760803"
 ---
 # <a name="index-properties-f1-help"></a>인덱스 속성 F1 도움말
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   이 항목의 섹션에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 이용할 수 있는 다양한 인덱스 속성을 참조합니다.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "68476296"
  인덱스 키에 참여하는 열이 테이블 또는 뷰 열에 NULL 값을 저장하도록 허용할지 여부를 나타냅니다.  
   
  **추가**  
- 인덱스 키에 열을 추가합니다. **추가**를 클릭하면 나타나는 ‘\<테이블 이름>**에서 열 선택**’ 대화 상자에서 테이블 열을 선택합니다.  공간 인덱스의 경우 열을 하나 선택하면 이 단추가 흐리게 표시됩니다.  
+ 인덱스 키에 열을 추가합니다. **추가**를 클릭하면 나타나는 *\<table name>* **에서 열 선택** 대화 상자에서 테이블 열을 선택합니다. 공간 인덱스의 경우 열을 하나 선택하면 이 단추가 흐리게 표시됩니다.  
   
  **제거**  
  선택된 열을 인덱스 키에 참여하는 열에서 제거합니다.  

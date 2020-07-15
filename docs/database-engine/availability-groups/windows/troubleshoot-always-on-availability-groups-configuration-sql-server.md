@@ -1,6 +1,6 @@
 ---
 title: 가용성 그룹에 대한 일반적인 문제 및 해결 방법
-description: SQL Server에서 Always On 가용성 그룹에 대한 일반적인 문제를 파악하고 해결하는 방법을 알아봅니다.
+description: SQL Server에서 Always On 가용성 그룹에 대한 서버 인스턴스 구성과 관련된 일반적인 문제를 해결합니다.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 068ccbd9e7f4d94ebba52ffc824efb70b9623f06
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 5e4972b2e6207a2ffcd33be6f0a95a848d8d8bdc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925347"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882407"
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Always On 가용성 그룹 구성 문제 해결(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 서버 인스턴스를 구성하는 것과 관련된 일반적인 문제를 해결하는 데 유용한 정보를 제공합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 사용할 수 없거나, 계정이 잘못 구성되거나, 데이터베이스 미러링 엔드포인트가 없거나, 엔드포인트에 액세스할 수 없거나(SQL Server 오류 1418), 네트워크 액세스 권한이 없거나, 데이터베이스 조인 명령이 실패(SQL Server 오류 35250)하는 경우가 일반적인 구성 문제에 해당합니다.  
   

@@ -1,5 +1,6 @@
 ---
 title: 최소 구성으로 SQL Server 시작 | Microsoft Docs
+description: SQL Server에서의 최소 구성 시작 옵션 관련 세부 사항을 확인합니다. 사용하는 시점 및 방법을 확인하고 이를 사용하여 기능을 제한하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 01/20/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - minimal configuration [SQL Server]
 - starting SQL Server, minimal configuration
 ms.assetid: 4d733c99-28b3-42d8-b7f6-7b943b548173
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0c919ad9202c99c7b010b6aee9c921e76784eb24
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e6e301cd7dc29cc5e2a2cffc34066369ed67d57a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79027958"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763993"
 ---
 # <a name="start-sql-server-with-minimal-configuration"></a>최소 구성으로 SQL Server 시작
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   서버를 시작할 수 없게 하는 구성 문제가 있는 경우 최소 구성 시작 옵션을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스를 시작할 수 있습니다. 이 옵션은 시작 옵션 **-f**입니다. 최소 구성으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 시작하면 자동으로 서버가 단일 사용자 모드로 배치됩니다.  
   

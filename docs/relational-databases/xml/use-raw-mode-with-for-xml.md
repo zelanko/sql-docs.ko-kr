@@ -1,5 +1,6 @@
 ---
 title: FOR XML에서 RAW 모드 사용 | Microsoft 문서
+description: SQL 쿼리에서 RAW 모드를 FOR XML 절과 함께 사용하여 결과 XML 데이터를 변환하는 방법을 알아봅니다.
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,16 +19,16 @@ ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1c82fc52acaf8d3bbd351463803ae682ccfebc1b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: eaaa138461a2e3c96acf1b475de860ac0deeb1c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664951"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784670"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>FOR XML에서 RAW 모드 사용
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 RAW 모드는 쿼리 결과 집합의 각 행을 일반 식별자 \<row>가 있는 XML 요소 또는 선택적으로 제공된 요소 이름으로 변환합니다. 기본적으로 행 집합에서 NULL이 아닌 각 열 값은 \<row> 요소의 특성으로 매핑됩니다. ELEMENTS 지시어가 FOR XML 절에 추가된 경우 각 열 값은 \<row> 요소의 하위 요소로 매핑됩니다. ELEMENTS 지시어와 함께 선택적으로 XSINIL 옵션을 지정하여 결과 집합의 NULL 열 값을 `xsi:nil="true"` 특성이 있는 요소로 매핑할 수 있습니다.
   
@@ -38,19 +39,19 @@ RAW 모드는 쿼리 결과 집합의 각 행을 일반 식별자 \<row>가 있�
 ## <a name="in-this-section"></a>섹션 내용  
  이 섹션에는 다음 예제가 포함되어 있습니다.  
   
--   [예제: 제품 모델 정보를 XML로 검색](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
+-   [예: 제품 모델 정보를 XML로 검색](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
   
--   [예제: ELEMENTS 지시어를 사용하여 XSINIL 지정](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
+-   [예: ELEMENTS 지시어를 사용하여 XSINIL 지정](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   
 -   [XMLDATA 및 XMLSCHEMA를 사용하여 결과로 스키마 요청](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
--   [예제: 이진 데이터 검색](../../relational-databases/xml/example-retrieving-binary-data.md)  
+-   [예: 이진 데이터 검색](../../relational-databases/xml/example-retrieving-binary-data.md)  
   
--   [예제: &#60;행&#62; 요소 이름 바꾸기](../../relational-databases/xml/example-renaming-the-row-element.md)  
+-   [예: &#60;행&#62; 요소 이름 바꾸기](../../relational-databases/xml/example-renaming-the-row-element.md)  
   
--   [예제: FOR XML로 생성된 XML에 대한 루트 요소 지정](../../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
+-   [예: FOR XML로 생성된 XML에 대한 루트 요소 지정](../../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
--   [예제: XMLType 열 쿼리](../../relational-databases/xml/example-querying-xmltype-columns.md)  
+-   [예: XMLType 열 쿼리](../../relational-databases/xml/example-querying-xmltype-columns.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   

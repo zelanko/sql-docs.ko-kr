@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e7cf36879a08f50095a158311179b9ae303d4ebc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 83b5031ac62e79005b4c6fb2d6d3aaf76607444b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74901870"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766928"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 현재 데이터베이스에 별칭 데이터 형식 또는 사용자 정의 형식을 만듭니다. 별칭 데이터 형식의 구현은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 시스템 형식을 기반으로 합니다. 사용자 정의 형식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임)에서 어셈블리의 클래스를 통해 구현됩니다. 사용자 정의 형식을 구현에 바인딩하기 위해서는 우선 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md)를 사용하여 해당 형식의 구현을 포함하는 CLR 어셈블리를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 등록해야 합니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "74901870"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 -- User-defined Data Type Syntax    
 CREATE TYPE [ schema_name. ] type_name  
 {   
@@ -121,7 +121,7 @@ column_name AS computed_column_expression
      [ CLUSTERED | NONCLUSTERED ]   (column [ ASC | DESC ] [ ,... n ] )} }  
 ```  
   
-```  
+```syntaxsql
 -- User-defined Memory Optimized Table Types Syntax  
 CREATE TYPE [schema_name. ] type_name  
 AS TABLE ( { <column_definition> [ ,... n ] }  
@@ -268,7 +268,7 @@ column_name <data_type>
   
  **public** 데이터베이스 역할은 **sp_addtype**을 사용하여 만든 사용자 정의 형식과는 달리 CREATE TYPE을 사용하여 만든 형식에 대해서는 자동으로 REFERENCES 권한을 받지 못합니다. 이 권한은 별도로 허가해야 합니다.  
   
- 사용자 정의 테이블 형식에서 *column_name* \<데이터 형식>에 사용되는 구조적 사용자 정의 형식은 해당 테이블 형식이 정의된 데이터베이스 스키마 범위의 일부입니다. 데이터베이스 내의 다른 범위에 있는 구조적 사용자 정의 형식에 액세스하려면 두 부분으로 된 이름을 사용하세요.  
+ 사용자 정의 테이블 형식의 경우 *column_name* \<data type>에서 사용하는 구조적 사용자 정의 형식은 해당 테이블 형식이 정의된 데이터베이스 스키마 범위의 일부입니다. 데이터베이스 내의 다른 범위에 있는 구조적 사용자 정의 형식에 액세스하려면 두 부분으로 된 이름을 사용하세요.  
   
  사용자 정의 테이블 형식에서 계산 열에 대한 기본 키는 PERSISTED 및 NOT NULL이어야 합니다.  
   
@@ -284,7 +284,7 @@ column_name <data_type>
   > 사용자 정의 형식을 사용하는 열을 사용하여 테이블을 만드는 사용자는 사용자 정의 형식에 대한 REFERENCES 권한이 필요합니다.
   > 이 테이블을 TempDB에서 만들어야 할 경우 테이블을 만들기 **전**마다 REFERENCES 권한을 명시적으로 부여하거나 이 데이터 형식 및 REFERENCES 권한을 모델 데이터베이스에 추가해야 합니다. 작업을 실행하면 이 데이터 형식 및 사용 권한이 TempDB에서 영구적으로 지원됩니다. 그렇지 않으면 SQL Server를 다시 시작할 경우 사용자 정의 데이터 형식 및 사용 권한이 사라집니다. 자세한 내용은 [CREATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/create-table-transact-sql?view=sql-server-2017#permissions-1)을 참조하세요.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-creating-an-alias-type-based-on-the-varchar-data-type"></a>A. varchar 데이터 형식을 기반으로 별칭 유형 만들기  
  다음 예에서는 시스템이 제공하는 `varchar` 데이터 형식을 기반으로 별칭 유형을 만드는 방법을 보여 줍니다.  

@@ -1,7 +1,8 @@
 ---
 title: Server Core에 SQL Server 설치 | Microsoft Docs
+description: Server Core 설치에 SQL Server를 설치할 수 있습니다. Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 환경을 제공합니다.
 ms.custom: ''
-ms.date: 09/05/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,16 +11,16 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 95b6a5bfd44aafe8b76bf04d42a71808718172ab
-ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
+ms.openlocfilehash: edde54e4f64f55bac2b3e25912a256b3c3b99bdd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82872793"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883558"
 ---
 # <a name="install-sql-server-on-server-core"></a>Server Core에 SQL Server 설치
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Server Core 설치에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치할 수 있습니다.   
   
@@ -27,7 +28,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
   
  현재 지원되는 운영 체제 목록은 [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)을 참조하세요.
 
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
   
 |요구 사항|설치 방법|  
 |-----------------|--------------------|  
@@ -65,7 +66,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
 ## <a name="supported-scenarios"></a>지원되는 시나리오  
  다음 표에서는 Server Core에 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]을 설치하는 데 지원되는 시나리오 매트릭스를 보여 줍니다.  
   
-|||  
+| 설치 | 유효한 대상 |  
 |-|-|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전|모든 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 64비트 버전 |  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 언어|모든 언어|  
@@ -118,7 +119,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
   
      명령 프롬프트 설치 옵션을 사용하여 특정 기능을 설치하려면 /FEATURES  매개 변수를 사용하여 부모 기능 또는 기능 값을 지정하십시오. 다음은 명령줄 매개 변수를 사용한 예입니다.  
   
-    ```  
+    ```console
     Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /TCPENABLED=1 /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
@@ -129,44 +130,44 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
     - [!INCLUDE[ssDE](../../includes/ssde-md.md)]설치 
     
     다음 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]을 포함하는 새로운 독립 실행형 인스턴스를 설치하는 방법을 보여 줍니다.  
-  
-        ```  
-        ; SQL Server Configuration File  
-        [OPTIONS]  
-  
-        ; Specifies a Setup work flow, like INSTALL, UNINSTALL, or UPGRADE. This is a required parameter.   
-  
-        ACTION="Install"  
-  
-        ; Specifies features to install, uninstall, or upgrade. The lists of features include SQLEngine, FullText, Replication, AS, IS, and Conn.   
-  
-        FEATURES=SQLENGINE  
-  
-        ; Specify a default or named instance. MSSQLSERVER is the default instance for non-Express editions and SQLExpress for Express editions. This parameter is required when installing the ssNoVersion Database Engine, and Analysis Services (AS).  
-  
-        INSTANCENAME="MSSQLSERVER"  
-  
-        ; Specify the Instance ID for the ssNoVersion features you have specified. ssNoVersion directory structure, registry structure, and service names will incorporate the instance ID of the ssNoVersion instance.   
-  
-        INSTANCEID="MSSQLSERVER"  
-  
-        ; Account for ssNoVersion service: Domain\User or system account.   
-  
-        SQLSVCACCOUNT="NT Service\MSSQLSERVER"  
-  
-        ; Windows account(s) to provision as ssNoVersion system administrators.   
-  
-        SQLSYSADMINACCOUNTS="\<DomainName\UserName>"  
-  
-        ; Accept the License agreement to continue with Installation  
-  
-        IAcceptSQLServerLicenseTerms="True"  
-  
-        ```  
-  
+
+    ```console
+    ; SQL Server Configuration File  
+    [OPTIONS]  
+    
+    ; Specifies a Setup work flow, like INSTALL, UNINSTALL, or UPGRADE. This is a required parameter.   
+    
+    ACTION="Install"  
+    
+    ; Specifies features to install, uninstall, or upgrade. The lists of features include SQLEngine, FullText, Replication, AS, IS, and Conn.   
+    
+    FEATURES=SQLENGINE  
+    
+    ; Specify a default or named instance. MSSQLSERVER is the default instance for non-Express editions and SQLExpress for Express editions. This parameter is required when installing the ssNoVersion Database Engine, and Analysis Services (AS).  
+    
+    INSTANCENAME="MSSQLSERVER"  
+    
+    ; Specify the Instance ID for the ssNoVersion features you have specified. ssNoVersion directory structure, registry structure, and service names will incorporate the instance ID of the ssNoVersion instance.   
+    
+    INSTANCEID="MSSQLSERVER"  
+    
+    ; Account for ssNoVersion service: Domain\User or system account.   
+    
+    SQLSVCACCOUNT="NT Service\MSSQLSERVER"  
+    
+    ; Windows account(s) to provision as ssNoVersion system administrators.   
+    
+    SQLSYSADMINACCOUNTS="\<DomainName\UserName>"  
+    
+    ; Accept the License agreement to continue with Installation  
+    
+    IAcceptSQLServerLicenseTerms="True"  
+    
+    ```
+
     -   연결 구성 요소 설치 다음 예에서는 연결 구성 요소를 설치하는 방법을 보여 줍니다.  
   
-        ```  
+        ```console
         ; SQL Server Configuration File  
         [OPTIONS]  
   
@@ -188,7 +189,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
   
         다음 예에서는 Server  Core에서 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 의 모든 지원되는 기능을 설치하는 방법을 보여 줍니다.  
   
-        ```  
+        ```console
         ; SQL Server Configuration File  
         [OPTIONS]  
         ; Specifies a Setup work flow, like INSTALL, UNINSTALL, or UPGRADE. This is a required parameter.   
@@ -242,13 +243,13 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
   
          명령 프롬프트에 구성 파일을 지정하기  
   
-        ```  
+        ```console
         Setup.exe /QS /ConfigurationFile=MyConfigurationFile.INI  
         ```  
   
          구성 파일 대신 명령 프롬프트에 암호 지정하기  
   
-        ```  
+        ```console
         Setup.exe /QS /SQLSVCPASSWORD="************" /ASSVCPASSWORD="************"  /ConfigurationFile=MyConfigurationFile.INI  
         ```  
   
@@ -265,12 +266,12 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
 
 원격 연결을 설정하려면 SQLCMD.exe를 로컬로 사용하고 Server Core 인스턴스에 대해 다음 문을 실행합니다.  
 
-   ```Transact-SQL
-   EXEC sys.sp_configure N'remote access', N'1'  
-   GO
-   RECONFIGURE WITH OVERRIDE
-   GO
-   ```  
+```sql
+EXEC sys.sp_configure N'remote access', N'1'  
+GO
+RECONFIGURE WITH OVERRIDE
+GO
+```  
   
 ### <a name="enable-and-start-the-ssnoversion-browser-service"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] browser service  
  Browser 서비스는 기본적으로 해제되어 있습니다.  Server Core에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 해제된 경우 명령 프롬프트에서 다음 명령을 실행하여 설정합니다.  
@@ -308,7 +309,7 @@ $Tcp
   
  기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 제거하려면:  
   
-```  
+```console
 Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERVER  
 ```  
   

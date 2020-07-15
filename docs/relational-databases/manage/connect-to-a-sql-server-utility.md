@@ -1,5 +1,6 @@
 ---
 title: SQL Server 유틸리티에 연결 | Microsoft 문서
+description: SQL Server 리소스 상태를 관리할 수 있도록 SQL Server 유틸리티에 연결하는 방법을 알아봅니다. SSMS(SQL Server Management Studio)를 통해 연결할 수 있습니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: b9b90b8d-241f-4b74-ac14-de7b10ea1821
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 08811675cce441406534da3c31e2d01f314a2c20
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d2ea96cc97f84a342c12ea841a263c8bf06adc0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115427"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776013"
 ---
 # <a name="connect-to-a-sql-server-utility"></a>SQL Server 유틸리티에 연결
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 연결하려면 먼저 UCP(유틸리티 제어 지점)를 만들어야 합니다. 자세한 내용은 [SQL Server 유틸리티 기능 및 태스크](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 상태를 보고 관리하려면 SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 연결합니다.  

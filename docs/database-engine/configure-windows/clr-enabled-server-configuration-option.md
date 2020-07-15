@@ -1,5 +1,6 @@
 ---
 title: clr enabled 서버 구성 옵션 | Microsoft Docs
+description: clr enabled 옵션을 사용하여 SQL Server에서 사용자 어셈블리를 실행할 수 있는지 여부를 지정하는 방법을 알아봅니다. 공용 언어 런타임 실행이 지원되지 않는 경우를 알아봅니다.
 ms.custom: ''
 ms.date: 06/20/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - assemblies [CLR integration], verifying can run
 - clr enabled option
 ms.assetid: 0722d382-8fd3-4fac-b4a8-cd2b7a7e0293
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 71392e537cb034976b3c47d819897356e3bb58cb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 56ddc21a660ba8316a9c311546e4ced48067f270
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71682086"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759164"
 ---
 # <a name="clr-enabled-server-configuration-option"></a>clr enabled 서버 구성 옵션
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   clr enabled 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자 어셈블리를 실행할 수 있는지 여부를 지정합니다. clr enabled 옵션은 다음 값을 제공합니다. 
   

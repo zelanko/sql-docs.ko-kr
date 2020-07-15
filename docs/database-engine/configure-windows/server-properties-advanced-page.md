@@ -1,5 +1,6 @@
 ---
 title: 서버 속성(고급 페이지) | Microsoft Docs
+description: SQL Server 고급 서버 설정을 파악합니다. FILESTREAM 옵션, 다양한 임계값, 전체 텍스트 업그레이드 대안 및 기타 설정에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.advanced.f1
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 1672b245f061f521c9114bca71f723fe75553c96
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 796c722db124b9eda448652dc29f5571ea41b747
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025595"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771806"
 ---
 # <a name="server-properties---advanced-page"></a>서버 속성 - 고급 페이지
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 페이지를 사용하여 고급 서버 설정을 확인하거나 수정할 수 있습니다.  
   
  **서버 속성 페이지를 보려면**  

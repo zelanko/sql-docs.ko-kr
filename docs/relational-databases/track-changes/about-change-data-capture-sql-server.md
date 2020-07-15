@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e360df3a5e29aae987b90c97c0c983af6cd0f8a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d87d1a080fe85bd2be3805b113c5799667d47b0b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75952454"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889153"
 ---
 # <a name="about-change-data-capture-sql-server"></a>변경 데이터 캡처 정보(SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!NOTE]
 > CDC는 이제 Linux의 SQL Server 2017(CU18부터) 및 Linux의 SQL Server 2019에 대해 지원됩니다.
@@ -48,7 +48,7 @@ ms.locfileid: "75952454"
   
  원본 테이블에 적용되는 각 삽입 또는 삭제 작업은 변경 테이블 내에 단일 행으로 나타납니다. 삽입 작업의 결과로 생성되는 행의 데이터 열에는 삽입 이후의 열 값이 포함되며 삭제 작업의 결과로 생성되는 행의 데이터 열에는 삭제 이전의 열 값이 포함됩니다. 업데이트 작업의 경우 하나의 행 항목에서 업데이트 이전의 열 값을 식별하고 다른 행 항목에서 업데이트 이후의 열 값을 식별해야 합니다.  
   
- 변경 테이블의 각 행에는 변경 작업을 해석할 수 있도록 추가 메타데이터도 포함됩니다. 열 __$start_lsn은 변경 내용에 할당된 커밋 LSN(로그 시퀀스 번호)을 식별합니다. 커밋 LSN은 동일한 트랜잭션 내에서 커밋된 변경 내용을 식별할 뿐만 아니라 해당 트랜잭션을 정렬합니다. 열 \_\_$seqval을 사용하여 동일한 트랜잭션 내에서 발생하는 추가 변경 내용을 정렬할 수 있습니다. 열 \_\_$operation은 변경 내용과 연결된 작업을 기록합니다. 1 = 삭제, 2 = 삽입, 3 = 업데이트(이미지 이전) 및 4 = 업데이트(이미지 이후)입니다. 열 \_\_$update_mask는 캡처된 각 열에 대해 1비트가 정의된 가변 비트 마스크입니다. 삽입 및 삭제 항목의 경우 업데이트 마스크에는 항상 모든 비트가 설정됩니다. 그러나 업데이트 행의 경우에는 변경된 열에 해당하는 비트만 설정됩니다.  
+ 변경 테이블의 각 행에는 변경 작업을 해석할 수 있도록 추가 메타데이터도 포함됩니다. 열 __$start_lsn은 변경 내용에 할당된 커밋 LSN(로그 시퀀스 번호)을 식별합니다. 커밋 LSN은 동일한 트랜잭션 내에서 커밋된 변경 내용을 식별할 뿐만 아니라 해당 트랜잭션을 정렬합니다. 열 \_\_$seqval을 사용하여 동일한 트랜잭션 내에서 발생하는 추가 변경 내용을 정렬할 수 있습니다. 열 \_\_$operation은 변경 내용과 관련된 1 = 삭제, 2 = 삽입, 3 = 업데이트(이전 이미지) 및 4 = 업데이트(이후 이미지) 작업을 기록합니다. 열 \_\_$update_mask는 캡처된 각 열에 대해 1비트가 정의된 가변 비트 마스크입니다. 삽입 및 삭제 항목의 경우 업데이트 마스크에는 항상 모든 비트가 설정됩니다. 그러나 업데이트 행의 경우에는 변경된 열에 해당하는 비트만 설정됩니다.  
   
 ## <a name="change-data-capture-validity-interval-for-a-database"></a>데이터베이스에 대한 변경 데이터 캡처 유효성 간격  
  데이터베이스에 대한 변경 데이터 캡처 유효성 간격은 캡처 인스턴스에 변경 데이터를 사용할 수 있는 시간입니다. 유효성 간격은 데이터베이스 테이블에 대한 첫 번째 캡처 인스턴스가 만들어질 때 시작되어 현재 시간까지 지속됩니다.  

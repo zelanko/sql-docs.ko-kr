@@ -3,21 +3,21 @@ title: SQL Server 2017 on Linux 릴리스 정보
 description: 이 문서에는 Linux에서 실행되는 SQL Server 2017에 대한 릴리스 정보 및 지원되는 기능이 포함됩니다. 최신 릴리스 및 여러 이전 릴리스에 대한 릴리스 정보가 포함됩니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/10/2020
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 0decf0cbaf3d64353e76c4927369503add744808
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: be72cfb4fd0645af7ca07ae8c1042ec41bf75052
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81298263"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882703"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>SQL Server 2017 on Linux 릴리스 정보
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 다음 릴리스 정보는 Linux에서 실행되는 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]에 적용됩니다. 이 문서는 각 릴리스에 대한 섹션으로 나뉩니다. GA 릴리스에는 자세한 지원 가능성 및 알려진 문제가 나열되어 있습니다. 각 CU(누적 업데이트) 또는 GDR(일반 배포 릴리스)에는 CU 변경 내용을 설명하는 지원 문서 링크 및 Linux 패키지 다운로드 링크가 있습니다.
 
@@ -46,6 +46,7 @@ ms.locfileid: "81298263"
 
 | 해제               | 버전       | 릴리스 날짜 |
 |-----------------------|---------------|--------------|
+| [CU21](#CU21)         | 14.0.3335.7   | 2020-07-01   |
 | [CU20](#CU20)         | 14.0.3294.2   | 2020-04-10   |
 | [CU19](#CU19)         | 14.0.3281.6   | 2020-02-05   |
 | [CU18](#CU18)         | 14.0.3257.3   | 2019-12-09   |
@@ -81,6 +82,27 @@ CU 리포지토리(**mssql-server-2017**)를 구성한 경우에는 새 설치�
 - [전체 텍스트 검색 패키지 설치](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services 설치](sql-server-linux-setup-ssis.md)
 - [SQL Server 에이전트 사용](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu21-july-2020"></a><a id="CU21"></a> CU21(2020년 7월)
+
+이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU21(누적 업데이트 21) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3335.7입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 <https://support.microsoft.com/help/4557397>을 참조하세요.
+
+### <a name="package-details"></a>패키지 세부 정보
+
+수동 또는 오프라인 패키지 설치의 경우 다음 표의 정보를 사용하여 RPM 및 Debian 패키지를 다운로드할 수 있습니다.
+
+> [!NOTE]
+> **Ubuntu 18.04** 및 **RHEL 8**은 CU20부터 SQL Server 2017에서 지원됩니다.
+>
+> Ubuntu에 대한 오프라인 패키지 설치 링크는 SSIS 패키지(Ubuntu 18.04에는 사용할 수 없음)를 제외하고 Ubuntu 18.04 패키지를 가리킵니다. Ubuntu 16.04 패키지를 찾고 있는 경우 다운로드 경로 <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/>을 참조하세요.
+>
+> Red Hat에 대한 오프라인 패키지 설치 링크는 SSIS 패키지(RHEL 8에는 사용할 수 없음)를 제외하고 RHEL 8 패키지를 가리킵니다. RHEL 7 패키지를 찾고 있는 경우 다운로드 경로 <https://packages.microsoft.com/rhel/7/mssql-server-2017/>을 참조하세요.
+
+| 패키지 | 패키지 버전 | 다운로드 |
+|-----|-----|-----|
+| Red Hat RPM 패키지 | 14.0.3335.7-17 | [엔진 RPM 패키지](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-14.0.3335.7-17.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-ha-14.0.3335.7-17.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-fts-14.0.3335.7-17.x86_64.rpm)</br>[SSIS 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 패키지 | 14.0.3335.7-17 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3335.7-17.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3335.7-17.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3335.7-17.x86_64.rpm) | 
+| Ubuntu 18.04 Debian 패키지 | 14.0.3335.7-17 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3335.7-17_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3335.7-17_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3335.7-17_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a name="cu20-april-2020"></a><a id="CU20"></a> CU20(2020년 4월)
 
@@ -583,7 +605,7 @@ sudo systemctl start mssql-server
    sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
    ```
 
-- mssql-conf 설치 프로그램을 실행하고 영어 이외의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치를 수행할 때 잘못된 확장 문자가 지역화된 텍스트 “SQL Server를 구성하는 중...” 뒤에 표시됩니다. 또는 라틴어 이외 설치의 경우 문장이 완전히 누락될 수 있습니다. 누락된 문장에는 다음 지역화된 문자열이 표시되어야 합니다. “라이선싱 PID가 처리되었습니다. 새 버전은 [\<Name\> edition]입니다.” 이 문자열은 정보를 제공하기 위한 출력일 뿐이며 다음 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 누적 업데이트에서 모든 언어에 대해 이 문제를 해결할 예정입니다. 이 문제는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 성공적인 설치에 영향을 주지 않습니다. 
+- mssql-conf 설치 프로그램을 실행하고 영어 이외의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치를 수행할 때 잘못된 확장 문자가 지역화된 텍스트 “SQL Server를 구성하는 중...” 뒤에 표시됩니다. 또는 라틴어 이외 설치의 경우 문장이 완전히 누락될 수 있습니다. 누락된 문장에는 다음 지역화된 문자열이 표시되어야 합니다. “라이선싱 PID가 처리되었습니다. 새 버전은 [\<Name\> edition]"입니다. 이 문자열은 정보를 제공하기 위한 출력일 뿐이며 다음 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 누적 업데이트에서 모든 언어에 대해 이 문제를 해결할 예정입니다. 이 문제는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 성공적인 설치에 영향을 주지 않습니다. 
 
 #### <a name="full-text-search"></a>전체 텍스트 검색
 

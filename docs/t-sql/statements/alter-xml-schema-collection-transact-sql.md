@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2ae87d5c125ae3eac01013843c9fe2db183b9c1c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 832b8a0c0d66a1e9754366e7735ebbac84b3ac7b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68055966"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895556"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   기존 XML 스키마 컬렉션에 새 스키마 구성 요소를 추가합니다.  
   
@@ -91,7 +91,7 @@ ALTER XML SCHEMA COLLECTION MyColl ADD '
 ## <a name="permissions"></a>사용 권한  
  XML SCHEMA COLLECTION을 변경하려면 해당 컬렉션에 대한 ALTER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-creating-xml-schema-collection-in-the-database"></a>A. 데이터베이스에 XML 스키마 컬렉션 만들기  
  다음 예에서는 XML 스키마 컬렉션 `ManuInstructionsSchemaCollection`을 만듭니다. 이 컬렉션에는 스키마 네임스페이스가 하나만 있습니다.  
@@ -187,7 +187,7 @@ CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;
  CREATE XML SCHEMA COLLECTION은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 인식되는 스키마 구성 요소만 저장합니다. XML 스키마의 모든 내용이 데이터베이스에 저장되지는 않습니다. 따라서 XML 스키마 컬렉션을 제공된 방식과 똑같이 되돌리려면 XML 스키마를 데이터베이스 열 또는 컴퓨터의 다른 폴더에 저장하는 것이 좋습니다.  
   
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. 스키마 컬렉션에 여러 개의 스키마 네임스페이스 지정  
- XML 스키마 컬렉션을 만들 때 XML 스키마를 여러 개 지정할 수 있습니다. 다음은 그 예입니다.  
+ XML 스키마 컬렉션을 만들 때 XML 스키마를 여러 개 지정할 수 있습니다. 예를 들면 다음과 같습니다.  
   
 ```  
 CREATE XML SCHEMA COLLECTION N'  

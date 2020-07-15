@@ -1,5 +1,6 @@
 ---
 title: remote login timeout 서버 구성 옵션 구성 | Microsoft Docs
+description: "\"원격 로그인 제한 시간\" 옵션에 대해 알아봅니다. SQL Server가 원격 서버에 연결하는 데 할당할 수 있는 시간(초)을 제한하는 방법을 알아봅니다."
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - remote login timeout option
 ms.assetid: 077adebe-0e3f-42a5-a75e-5e6d04847e2b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0c21a98e1bdd9a16a2f42e8c03bba1a6e1327931
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ad4989bc64fa9460a97a0e4363deddb74605e9e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012322"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785689"
 ---
 # <a name="configure-the-remote-login-timeout-server-configuration-option"></a>remote login timeout 서버 구성 옵션 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 원격 로그인 제한 시간 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **원격 로그인 제한 시간** 옵션은 원격 서버에 대한 로그인에 실패하여 원래 상태로 되돌아오기까지 기다리는 시간(초)을 지정합니다. 예를 들어 원격 서버에 로그인을 시도하고 있는데 해당 서버가 다운된 경우 **원격 로그인 제한 시간** 을 사용하면 컴퓨터가 로그인 시도를 중단할 때까지 무한정 기다리지 않아도 됩니다. 이 옵션의 기본값은 10초입니다. 값을 0으로 설정하면 무한정 기다릴 수 있습니다.  
   

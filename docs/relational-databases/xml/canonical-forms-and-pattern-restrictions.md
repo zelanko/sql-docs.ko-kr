@@ -1,5 +1,6 @@
 ---
 title: 정규 형식 및 패턴 제한 사항 | Microsoft 문서
+description: 기본 값 형식의 정식 표현이 XSD 패턴 패싯의 패턴 제한을 따르지 않는 경우 발생하는 문제를 방지하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a3720cfa4ee72df832b77ad4cab08013ddc8e0c7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1e6042ae1a63b61cd47fa42470c0707877625c5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664765"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775627"
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>정규 형식 및 패턴 제한 사항
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XSD 패턴 패싯을 사용하면 단순 유형의 어휘 영역을 제한할 수 있습니다. 어휘 표현이 둘 이상 있는 형식에 패턴 제한을 적용한 경우 일부 값으로 인해 유효성 검사 후 예기치 않은 동작이 발생할 수 있습니다.  
   
  이러한 동작은 이러한 값의 어휘 표현이 데이터베이스에 저장되지 않기 때문에 발생합니다. 따라서 출력으로 직렬화될 때 값이 해당 정규 표현으로 변환됩니다. 문서에 있는 값의 정규 형식이 값 형식에 대한 패턴 제한을 준수하지 않는 경우 사용자가 이 값을 다시 삽입하려고 하면 해당 문서는 거부됩니다.  

@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: a42d031ee66ee455af91dbcce233140a7ab0a171
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: c929e689f68def3b267dced2001468814d8747d0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001103"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892323"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu 클러스터 및 가용성 그룹 리소스 구성
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 문서에서는 Ubuntu에서 3개 노드 클러스터를 만들고 이전에 만든 가용성 그룹을 클러스터의 리소스로 추가하는 방법을 설명합니다. 고가용성을 위해 Linux의 가용성 그룹에는 세 개의 노드가 필요합니다. [가용성 그룹 구성의 고가용성 및 데이터 보호](sql-server-linux-availability-group-ha.md)를 참조하세요.
 
@@ -187,7 +187,7 @@ sudo apt-get install mssql-server-ha
 
 ## <a name="create-availability-group-resource"></a>가용성 그룹 리소스 만들기
 
-가용성 그룹 리소스를 만들려면 `pcs resource create` 명령을 사용하고 리소스 속성을 설정합니다. 아래 명령은 이름이 `ag1`인 가용성 그룹에 대해 `ocf:mssql:ag` 마스터/슬레이브 유형 리소스를 만듭니다. 
+가용성 그룹 리소스를 만들려면 `pcs resource create` 명령을 사용하고 리소스 속성을 설정합니다. 아래 명령은 이름이 `ag1`인 가용성 그룹에 대해 `ocf:mssql:ag` 마스터/종속 유형 리소스를 만듭니다. 
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s master meta notify=true

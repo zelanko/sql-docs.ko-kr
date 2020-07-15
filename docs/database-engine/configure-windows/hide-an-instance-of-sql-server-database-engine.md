@@ -1,5 +1,6 @@
 ---
 title: SQL Server 데이터베이스 엔진의 인스턴스 숨기기 | Microsoft Docs
+description: SQL Server 데이터베이스 엔진의 인스턴스를 숨기는 방법을 알아봅니다. 클라이언트 컴퓨터는 SQL Server Browser 서비스를 사용하여 숨겨진 인스턴스를 찾을 수 없습니다.
 ms.custom: ''
 ms.date: 08/19/2015
 ms.prod: sql
@@ -11,24 +12,24 @@ helpviewer_keywords:
 - Database Engine [SQL Server], hiding instances
 - hiding instances of Database Engine
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 28d7a01ce3c11ce332de7e7af70ff0c57746e840
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5be741205c17d32e9a2ddb253574c8dd50e4c4fe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71682096"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772448"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진의 인스턴스 숨기기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스를 숨기는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 사용하여 컴퓨터에 설치된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스를 열거합니다. 이렇게 하면 클라이언트 애플리케이션에서 서버를 검색하고 클라이언트가 같은 컴퓨터에 있는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 여러 인스턴스를 구분할 수 있습니다. 다음 절차를 통해 SQL Server Browser 서비스에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 찾아보기 **단추를 사용하여 인스턴스를 찾으려고 하는 클라이언트 컴퓨터에** 인스턴스를 노출하지 않도록 할 수 있습니다.  
   
 ##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> SQL Server 구성 관리자 사용  
   
 #### <a name="to-hide-an-instance-of-the-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진의 인스턴스를 숨기려면  
   
-1.  **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 확장하고 *\<서버 인스턴스>* **에 대한 프로토콜**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
+1.  **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 확장하고 *\<server instance>* 에 대한 **프로토콜**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
 2.  **플래그** 탭의 **인스턴스 숨기기** 상자에서 **예**를 선택한 다음 **확인** 을 클릭하여 대화 상자를 닫습니다. 변경 내용이 새 연결에 대해 즉시 적용됩니다.  
   

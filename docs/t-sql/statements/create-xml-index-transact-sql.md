@@ -27,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9c2ec7cb59dea73647cee47a0f60032afdd5faff
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a0f885f15371460e79df287738fce96ac9ce2d7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634557"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766889"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   지정된 테이블에 XML 인덱스를 만듭니다. 인덱스는 테이블에 데이터를 넣기 전에 만들 수 있습니다. 정규화된 데이터베이스 이름을 지정하여 다른 데이터베이스에 있는 테이블에 XML 인덱스를 만들 수도 있습니다.  
   
@@ -243,7 +243,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 ## <a name="additional-remarks-on-index-creation"></a>인덱스 작성에 대한 추가 주의 사항  
  인덱스 작성에 대한 자세한 내용은 [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)에서 “주의 사항” 섹션을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-creating-a-primary-xml-index"></a>A. 기본 XML 인덱스 만들기  
  다음 예에서는 `CatalogDescription` 테이블의 `Production.ProductModel` 열에 기본 XML 인덱스를 만듭니다.  

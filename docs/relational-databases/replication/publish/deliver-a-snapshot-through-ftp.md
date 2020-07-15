@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c6ec9ac5c4e868a9022a11cc153c9638cab737dc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c2ff609e78a0076cd3d6c0ff15348869cc717cfe
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710998"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893282"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>FTP를 통해 스냅샷 배달
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 FTP를 통해 스냅샷을 배달하는 방법에 대해 설명합니다.  
 
 기본적으로 스냅샷은 UNC(Universal Naming Convention) 공유로 정의된 폴더에 저장됩니다. 복제 시 UNC 공유 대신 FTP(파일 전송 프로토콜) 공유를 지정할 수도 있습니다. FTP를 사용하려면 FTP 서버를 구성한 다음 FTP를 사용할 하나의 게시와 하나 이상의 구독을 구성합니다. FTP 서버 구성 방법은 인터넷 정보 서비스(IIS) 설명서를 참조하십시오. 게시에 FTP 정보를 지정하면 해당 게시에 대한 구독은 기본적으로 FTP를 사용합니다. FTP는 IIS를 실행하는 컴퓨터가 방화벽에 의해 배포자와 분리되어 있는 경우에만 웹 동기화에 사용됩니다. 이 경우 FTP는 IIS를 실행 중인 컴퓨터와 배포자의 스냅샷을 전송하는 데 사용할 수 있습니다. 스냅샷을 구독자에게 전송할 때는 항상 HTTPS를 사용합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "71710998"
   
 -   스냅샷 에이전트는 지정한 디렉터리에 대해 쓰기 권한이 있어야 하며 배포 에이전트 또는 병합 에이전트는 읽기 권한이 있어야 합니다. 끌어오기 구독을 사용하는 경우 공유 디렉터리를 \\\ftpserver\home\snapshots과 같이 UNC(Universal Naming Convention) 경로로 지정해야 합니다. 자세한 내용은 [스냅샷 폴더 보안 설정](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
   
 -   FTP(파일 전송 프로토콜)를 사용하여 스냅샷 파일을 전송하려면 먼저 FTP 서버를 구성해야 합니다. 자세한 내용은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 인터넷 정보 서비스(IIS) 설명서를 참조하세요.  
   
@@ -47,11 +47,11 @@ ms.locfileid: "71710998"
  가능한 경우 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 스크립트 파일에 자격 증명을 저장하는 경우에는 이 파일에 보안을 설정해야 합니다.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- FTP 서버를 구성한 후 **게시 속성 \<게시>** 대화 상자에서 이 서버에 대한 디렉터리 및 보안 정보를 지정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+ FTP 서버를 구성한 후 **게시 속성 \<Publication>** 대화 상자에서 이 서버에 대한 디렉터리 및 보안 정보를 지정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="to-specify-ftp-information"></a>FTP 정보를 지정하려면  
   
-1.  **게시 속성 - \<게시&gt;** 대화 상자의 다음 두 페이지 중 하나에서 **구독자가 FTP(파일 전송 프로토콜)를 사용하여 스냅샷 파일을 다운로드하도록 허용**을 선택합니다.  
+1.  **게시 속성 - \<Publication>** 대화 상자의 다음 두 페이지 중 하나에서 **구독자가 FTP(파일 전송 프로토콜)를 사용하여 스냅숏 파일을 다운로드하도록 허용**을 선택합니다.  
   
     -   **FTP 스냅샷** 페이지 - [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이전 버전을 실행하는 구독자에 대한 병합 게시와 스냅샷 및 트랜잭션 게시의 경우  
   

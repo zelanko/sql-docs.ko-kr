@@ -1,5 +1,6 @@
 ---
 title: 서버 속성(연결 페이지) | Microsoft Docs
+description: SQL Server의 연결 설정에 대해 알아봅니다. 지연된 제약 조건 검사, NULL 처리 및 기타 동작을 결정하는 옵션에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 15ab408465890a13fc6e87efd2f2e15e8f8a7fad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4c92cc173544c1cd7985b3bf58d7ebd22ea100b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025492"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759146"
 ---
 # <a name="server-properties---connections-page"></a>서버 속성 - 연결 페이지
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 페이지를 사용하여 연결 옵션을 확인하거나 수정할 수 있습니다.  
   
 ## <a name="connections"></a>Connections  

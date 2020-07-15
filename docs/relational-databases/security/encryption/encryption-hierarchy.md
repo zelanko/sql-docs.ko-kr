@@ -1,5 +1,6 @@
 ---
 title: 암호화 계층 | Microsoft 문서
+description: SQL Server의 계층적 암호화 및 키 관리 인프라에 대해 알아봅니다. 확장 가능 키 관리 모듈에 키를 저장합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 672631b7ef5e6453e49b269d035586949f03ece6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 805a468d462a28c3e43bddc32cfd2673546a26e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957428"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764997"
 ---
 # <a name="encryption-hierarchy"></a>암호화 계층
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 계층적 암호화 및 키 관리 인프라로 데이터를 암호화합니다. 각 계층은 인증서, 비대칭 키 및 대칭 키 조합을 사용하여 해당 계층의 하위 계층을 암호화합니다. 비대칭 키 및 대칭 키는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 외부의 EKM(확장 가능 키 관리) 모듈에 저장할 수 있습니다.  
   
  다음 그림에서는 암호화 계층의 각 계층이 그 아래의 계층을 암호화하는 모습과 가장 일반적인 암호화 구성을 보여 줍니다. 계층의 시작 부분에 대한 액세스는 일반적으로 암호로 보호됩니다.  

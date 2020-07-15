@@ -1,5 +1,6 @@
 ---
 title: SQL Server Management Studio를 사용하여 Always Encrypted 키 프로비저닝 | Microsoft Docs
+description: SQL Server Management Studio를 사용하여 Always Encrypted 열 마스터 키와 열 암호화 키를 프로비전하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 13bb5944c5907f3bebc9f01eb969b4b8979f8c97
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8b84de259222b9e2bde8c9b99f67328ea317e645
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287127"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765146"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 Always Encrypted 키 프로비저닝
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 이 문서에서는 [SSMS(SQL Server Management Studio)](../../../ssms/download-sql-server-management-studio-ssms.md)를 사용하여 Always Encrypted 키의 열 마스터 키와 열 암호화 키를 프로비저닝하는 방법을 설명합니다.
 

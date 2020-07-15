@@ -1,5 +1,6 @@
 ---
 title: 경로가 data()로 지정된 열 이름 | Microsoft 문서
+description: 경로가 data()로 지정된 열 이름이 포함된 XML 쿼리에 대해 알아봅니다.
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0b738e44-6108-4417-a9a4-abeb7680d899
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fc2d5d801eb99f2097655c94c15cef16038b3ca4
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 71cddb62a7277d32d9f43f499c83f3df9e9f69d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664707"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775595"
 ---
 # <a name="column-names-with-the-path-specified-as-data"></a>경로가 data()로 지정된 열 이름
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 열 이름으로 지정된 경로가 "data()"일 경우 생성된 XML에서 해당 값이 원자 값으로 처리됩니다. 직렬화의 다음 항목도 원자성 값이면 공백 문자가 XML에 추가됩니다. 이 특징은 목록 유형의 요소와 특성 값을 만들 때 유용합니다. 다음 쿼리는 제품 모델 ID, 이름 및 해당 제품 모델에 속한 제품 목록을 검색합니다.  
   

@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1de8413f3888c3fe91f7b8557956490a1065c4fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1409125ca324117a3b7bba1792ff0a3f3361fe05
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180471"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768079"
 ---
 # <a name="sql-server-backup-to-url"></a>URL에 대한 SQL Server 백업
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   이 항목에서는 Microsoft Azure Blob Storage 서비스를 백업 대상으로 사용하는 데 필요한 개념, 요구 사항 및 구성 요소를 소개합니다. 백업 및 복원 기능은 디스크나 테이프를 사용하는 경우와 동일하거나 비슷하지만 몇 가지 차이점이 있습니다. 이러한 차이점과 몇 가지 코드 예제가 이 항목에서 소개됩니다.  
   
@@ -50,7 +50,7 @@ Blob Storage에 대용량 데이터베이스를 백업하는 경우에는 [관�
   
  **컨테이너:** 컨테이너에서는 그룹화된 Blob 집합을 제공하며 Blob을 무제한으로 저장할 수 있습니다. Microsoft Azure Blob Storage 서비스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 쓰려면 적어도 루트 컨테이너가 만들어져 있어야 합니다. 컨테이너에서 공유 액세스 서명 토큰을 생성하고 특정 컨테이너의 개체에 대한 액세스 권한만 부여할 수 있습니다.  
   
- **Blob:** 모든 형식과 크기의 파일입니다. Microsoft Azure Blob Storage 서비스에는 블록 Blob과 페이지 Blob이라는 두 가지 유형의 Blob을 저장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에서는 사용되는 TRANSACT-SQL 구문에 따라 Blob 유형 중 하나를 사용할 수 있습니다. Blob에는 https://\<storage account>.blob.core.windows.net/\<container>/\<blob> URL 형식을 사용하여 주소를 지정할 수 있습니다. Microsoft Azure Blob Storage 서비스에 대한 자세한 내용은 [.NET에서 Blob Storage 서비스를 사용하는 방법](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)을 참조하세요. 페이지 및 블록 Blob에 대한 자세한 내용은 [블록 및 페이지 Blob 이해](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx)를 참조하세요.  
+ **Blob:** 모든 형식과 크기의 파일입니다. Microsoft Azure Blob Storage 서비스에는 블록 Blob과 페이지 Blob이라는 두 가지 유형의 Blob을 저장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에서는 사용되는 TRANSACT-SQL 구문에 따라 Blob 유형 중 하나를 사용할 수 있습니다. 다음 URL 형식으로 Blob에 주소를 지정할 수 있습니다. https://\<storage account>.blob.core.windows.net/\<container>/\<blob>. Microsoft Azure Blob Storage 서비스에 대한 자세한 내용은 [.NET에서 Blob Storage 서비스를 사용하는 방법](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)을 참조하세요. 페이지 및 블록 Blob에 대한 자세한 내용은 [블록 및 페이지 Blob 이해](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx)를 참조하세요.  
   
  ![Azure Blob Storage](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Azure Blob Storage")  
   
@@ -59,7 +59,7 @@ Blob Storage에 대용량 데이터베이스를 백업하는 경우에는 [관�
 ###  <a name="ssnoversion-components"></a><a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소  
  **URL:** URL은 고유한 백업 파일에 대한 URI(Uniform Resource Identifier)를 지정합니다. URL은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 파일의 위치와 이름을 제공하는 데 사용됩니다. URL은 컨테이너가 아닌 실제 Blob을 가리켜야 합니다. Blob이 없으면 만들어집니다. 기존 blob이 지정된 경우에는 “WITH FORMAT” 옵션을 지정하여 blob에서 기존 백업 파일을 덮어쓰지 않으면 BACKUP이 실패합니다.  
   
- 샘플 URL 값은 http[s]://ACCOUNTNAME.blob.core.windows.net/\<CONTAINER>/\<FILENAME.bak>입니다. HTTPS는 필수 사항은 아니지만 권장 사항입니다.  
+ 다음은 샘플 URL 값입니다. http[s]://ACCOUNTNAME.blob.core.windows.net/\<CONTAINER>/\<FILENAME.bak>. HTTPS는 필수 사항은 아니지만 권장 사항입니다.  
   
  **자격 증명:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명은 SQL Server 외부의 리소스에 연결하는 데 필요한 인증 정보를 저장하는 데 사용되는 개체입니다. 여기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원 프로세스에서는 자격 증명을 사용하여 Microsoft Azure Blob Storage 서비스와 해당 컨테이너 및 blob 개체의 인증을 받습니다. 자격 증명은 스토리지 계정 및 스토리지 계정 **액세스 키** 값 또는 컨테이너 URL 및 해당 공유 액세스 서명 토큰을 저장합니다. 자격 증명이 만들어지면 BACKUP/RESTORE 문의 구문에 따라 blob의 유형 및 필요한 자격 증명이 결정됩니다.  
   
@@ -196,7 +196,7 @@ Blob Storage에 대용량 데이터베이스를 백업하는 경우에는 [관�
   
  Restore 인수에 대한 자세한 내용은 [RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)를 참조하세요.  
   
-##  <a name="back-up-up-with-ssms"></a><a name="BackupTaskSSMS"></a> SSMS를 사용하여 백업  
+##  <a name="back-up-with-ssms"></a><a name="BackupTaskSSMS"></a> SSMS를 사용하여 백업  
 SQL Server 자격 증명을 사용하여 SQL Server Management Studio의 백업 태스크를 통해 데이터베이스를 URL에 백업할 수 있습니다.  
   
 > [!NOTE]  

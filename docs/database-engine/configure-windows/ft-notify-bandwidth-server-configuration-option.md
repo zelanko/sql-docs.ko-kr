@@ -1,5 +1,6 @@
 ---
 title: ft notify bandwidth 서버 구성 옵션 | Microsoft Docs
+description: "\"ft notify bandwidth\" 옵션에 대해 알아봅니다. 이 옵션이 소형 메모리 버퍼의 풀에서 SQL Server가 유지 관리하는 버퍼 수에 어떻게 영향을 주는지 확인합니다."
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - small memory buffers
 - memory [SQL Server], buffers
 ms.assetid: 9ca284c5-f3e0-4a67-a132-fff376ff0ffe
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6b0589f5b3622d4271f6307427f49d804b76c4e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cb6bf13a1f8e71f419350946d156f2504274b6d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67998073"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772466"
 ---
 # <a name="ft-notify-bandwidth-server-configuration-option"></a>ft notify bandwidth 서버 구성 옵션
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **ft notify bandwidth** 옵션을 사용하여 작은 메모리 버퍼의 풀이 증가할 수 있는 최대 크기를 지정할 수 있습니다. 작은 메모리 버퍼의 크기는 64KB입니다. 매개 변수 값은 전체 텍스트 메모리 관리자가 작은 버퍼 풀에서 유지해야 하는 *최대* 버퍼 수를 지정합니다. **max** 값이 0인 경우 작은 버퍼 풀의 버퍼 수에 대한 상한값이 없습니다.  
   

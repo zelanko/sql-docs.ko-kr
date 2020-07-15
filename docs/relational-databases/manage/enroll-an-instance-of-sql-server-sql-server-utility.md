@@ -1,5 +1,6 @@
 ---
 title: SQL Server 인스턴스 등록(SQL Server 유틸리티) | Microsoft 문서
+description: SQL Server 인스턴스를 기존 SQL Server 유틸리티에 등록하여 인스턴스 성능 및 구성 모니터링을 시작합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dda51dd5449719aedd7697310c1f7befe3ee1390
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1e3f26672d208d848a2cf76707fb92d7b72d5e11
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115417"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776006"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>SQL Server 인스턴스 등록(SQL Server 유틸리티)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 등록하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리되는 인스턴스로서 성능과 구성을 모니터링할 수 있습니다. UCP(유틸리티 제어 지점)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에서 15분마다 구성 및 성능 정보를 수집합니다. 이 정보는 UCP의 UMDW(유틸리티 관리 데이터 웨어하우스)에 저장됩니다. UMDW의 파일 이름은 sysutility_mdw입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 데이터를 정책과 비교하면 리소스 사용 병목 현상과 통합 기회를 식별하는 데 도움이 됩니다.  
   
  이 릴리스에서 UCP 및 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스는 다음 요구 사항을 충족해야 합니다.  
@@ -170,7 +171,7 @@ ms.locfileid: "68115417"
 >   
 >  Transact-SQL 문 또는 일괄 처리를 실행하는 동안 예외가 발생했습니다. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  추가 정보:  Windows NT 그룹/사용자 ‘\<DomainName\AccountName>’에 대한 정보를 가져올 수 없습니다. 오류 코드 0x5. (Microsoft SQL Server, 오류: 15404)  
+>  추가 정보:  Windows NT 그룹/사용자 '\<DomainName\AccountName>'에 대한 정보를 가져올 수 없습니다. 오류 코드 0x5. (Microsoft SQL Server, 오류: 15404)  
 >   
 >  이 문제를 해결하는 자세한 내용은 [SQL Server 유틸리티 문제 해결](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)을 참조하세요.  
   

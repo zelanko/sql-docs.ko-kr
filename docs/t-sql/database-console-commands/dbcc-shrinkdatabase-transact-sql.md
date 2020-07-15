@@ -28,15 +28,15 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 1bda4ebd946bfd8adf31190c36125075d50dc28d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e36315d58721fc6c50393b0bff10c7e8a2e3dee0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68073158"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757206"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 지정한 데이터베이스에 있는 데이터 및 로그 파일의 크기를 축소합니다.
   
@@ -44,7 +44,7 @@ ms.locfileid: "68073158"
   
 ## <a name="syntax"></a>구문  
   
-```sql
+```syntaxsql
 DBCC SHRINKDATABASE   
 ( database_name | database_id | 0   
      [ , target_percent ]   
@@ -130,7 +130,7 @@ DBCC SHRINKDATABASE는 즉시 각 물리적 로그 파일을 대상 크기로 �
   
 ## <a name="best-practices"></a>모범 사례  
 데이터베이스를 축소할 때는 다음을 고려하세요.
--   축소 작업은 작업 후에 가장 효과적입니다. 이 작업은 테이블 잘라내기 또는 테이블 삭제 작업과 같은 사용되지 않는 공간을 만듭니다.  
+-   축소 작업은 테이블 잘라내기 또는 테이블 삭제 작업과 같이 사용되지 않는 공간이 생기는 작업을 수행한 후에 가장 효과적입니다.
 -   대부분의 데이터베이스에는 정기적인 일상 작업에 사용 가능한 일정 여유 공간이 필요합니다. 데이터베이스가 반복적으로 축소되고 데이터베이스 크기가 다시 커질 수 있습니다. 이러한 증가는 축소 공간이 기본 작업에 필수임을 나타냅니다. 이러한 경우 데이터베이스를 반복해서 축소하는 것은 불필요한 작업입니다.  
 -   축소 작업은 데이터베이스 인덱스의 조각화 상태를 보존하지 않으며 일반적으로 조각화 정도를 어느 정도까지 늘리기도 합니다. 이 결과는 데이터베이스를 반복해서 축소하지 않아야 하는 또 다른 이유입니다.  
 -   특정 요구 사항이 없으면 AUTO_SHRINK 데이터베이스 옵션을 ON으로 설정하지 마세요.  
@@ -154,7 +154,7 @@ timestamp 15 or with timestamps older than 109 to finish.
 ## <a name="permissions"></a>사용 권한  
 **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-shrinking-a-database-and-specifying-a-percentage-of-free-space"></a>A. 데이터베이스 축소 및 여유 공간의 백분율 지정  
 다음 예제에서는 `UserDB` 사용자 데이터베이스의 데이터 및 로그 파일 크기를 줄여서 데이터베이스에 10%의 여유 공간을 허용합니다.  

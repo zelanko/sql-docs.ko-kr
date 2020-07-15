@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ba0e9f1edc59b6f1b51bff6afa040fa489cd9858
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 054782a6b6dd4ee381c0a70b857a945c72a66372
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631708"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760952"
 ---
 # <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)을 사용하여 만든 제약 조건 정의의 일부인 색인에 적용할 수 있는 옵션 집합을 지정합니다.  
   
@@ -219,11 +219,11 @@ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...*n*
   
 \<partition_number_expression>은 다음과 같은 방법으로 지정할 수 있습니다.  
   
--   파티션 번호를 지정합니다(예: ON PARTITIONS (2)).  
--   여러 개별 파티션의 파티션 번호를 쉼표로 구분하여 지정합니다(예: ON PARTITIONS (1,5)).  
--   범위와 개별 파티션을 모두 지정합니다(예: ON PARTITIONS (2,4,6 TO 8)).  
+-   파티션의 번호를 지정합니다(예: ON PARTITIONS(2).  
+-   여러 개별 파티션의 파티션 번호를 쉼표로 구분하여 지정합니다. 예를 들면 다음과 같습니다. ON PARTITIONS(1, 5).  
+-   범위와 개별 파티션을 모두 지정합니다. 예를 들면 다음과 같습니다. ON PARTITIONS(2, 4, 6~8).  
   
-\<range>는 단어 TO로 구분된 파티션 번호로 지정할 수 있습니다(예: ON PARTITIONS (6 TO 8)).  
+\<range>는 TO라는 단어로 구분된 파티션 번호로 지정할 수 있습니다. 예를 들면 다음과 같습니다. ON PARTITIONS(6~8).  
   
  여러 파티션에 대해 서로 다른 데이터 압축 유형을 설정하려면 DATA_COMPRESSION 옵션을 두 번 이상 지정합니다. 예를 들면 다음과 같습니다.  
   

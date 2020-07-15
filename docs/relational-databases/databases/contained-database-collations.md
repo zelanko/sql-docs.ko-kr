@@ -1,5 +1,6 @@
 ---
 title: 포함된 데이터베이스 데이터 정렬 | Microsoft 문서
+description: 포함된 데이터베이스와 포함되지 않은 데이터베이스에서 데이터 정렬이 어떻게 작동하는지 알아봅니다. 포함된 컨텍스트와 포함되지 않은 컨텍스트에서 세션이 교차 할 때 발생할 수 있는 문제를 확인합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 1850f5d85baf418e0ce872f641a920514156101f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 054bb22c1dfe2f1497af6e74bea0cfc0bca158b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137377"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763630"
 ---
 # <a name="contained-database-collations"></a>포함된 데이터베이스 데이터 정렬
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   여러 가지 속성이 대/소문자 구분, 악센트 구분 및 사용되는 기본 언어를 비롯한 텍스트 데이터의 같음 의미 체계 및 정렬 순서에 영향을 줍니다. 이러한 사항은 데이터에 대한 데이터 정렬 선택을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 전달됩니다. 데이터 정렬에 대한 자세한 내용은 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
   
  데이터 정렬은 사용자 테이블에 저장된 데이터에 적용될 뿐만 아니라 메타데이터, 임시 개체, 변수 이름 등 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 처리하는 모든 텍스트에 적용됩니다. 이러한 항목의 처리 방식은 포함되지 않은 데이터베이스인지 여부에 따라 다릅니다. 이러한 변경 내용은 대부분의 사용자에게는 영향을 미치지 않지만 인스턴스 독립 및 일관성을 제공하는 데 도움이 됩니다. 하지만 이로 인해 일부 혼란이 발생할 수도 있고 포함된 데이터베이스와 포함되지 않은 데이터베이스에 모두 액세스하는 세션의 경우에는 문제가 될 수도 있습니다.  

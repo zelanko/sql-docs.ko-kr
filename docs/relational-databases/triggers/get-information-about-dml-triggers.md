@@ -17,15 +17,15 @@ ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64ad4f4ac71b88966f3ff9a963332619d7663917
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: abd315f75626b337c2183f34121aeb7660e0ed66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909284"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786880"
 ---
 # <a name="get-information-about-dml-triggers"></a>DML 트리거에 대한 정보 가져오기
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 DML 트리거에 대한 정보를 얻는 방법에 대해 설명합니다. 이 정보에는 테이블에 있는 트리거의 유형, 이름, 소유자 및 작성 또는 수정 날짜가 포함될 수 있습니다. 트리거를 만들었을 때 암호화하지 않은 경우 트리거의 정의를 얻을 수 있습니다. 이 정의를 사용하여 테이블에 정의된 트리거가 해당 테이블에 어떠한 영향을 주는지를 이해할 수 있습니다. 또한 특정 트리거가 사용하는 개체를 찾을 수 있습니다. 이 정보를 사용하면 데이터베이스에서 변경되거나 삭제될 때 트리거에 영향을 주는 개체를 식별할 수 있습니다.  
   
  **항목 내용**  
@@ -49,7 +49,7 @@ ms.locfileid: "72909284"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
  OBJECT_DEFINITION, OBJECTPROPERTY, **sp_helptext**  
- **public** 역할의 멤버 자격이 필요합니다. 개체 소유자나 ALTER, CONTROL, TAKE OWNERSHIP 또는 VIEW DEFINITION 권한 중 하나를 부여받은 사람은 사용자 개체의 정의를 볼 수 있습니다. 이 권한은 **db_owner**, **db_ddladmin**및 **db_securityadmin** 고정 데이터베이스 역할의 멤버가 암시적으로 보유합니다.  
+ **public** 역할의 멤버 자격이 필요합니다. 개체 소유자나 ALTER, CONTROL, TAKE OWNERSHIP 또는 VIEW DEFINITION 권한 중 하나를 부여 받은 사람은 사용자 개체의 정의를 볼 수 있습니다. 이 권한은 **db_owner**, **db_ddladmin**및 **db_securityadmin** 고정 데이터베이스 역할의 멤버가 암시적으로 보유합니다.  
   
  **sys.sql_expression_dependencies**  
  데이터베이스에 대한 VIEW DEFINITION 권한과 데이터베이스의 **sys.sql_expression_dependencies** 에 대한 SELECT 권한이 필요합니다. 기본적으로 SELECT 권한은 **db_owner** 고정 데이터베이스 역할의 멤버에게만 부여됩니다. SELECT와 VIEW DEFINITION 권한을 다른 사용자에게 부여하면 피부여자는 데이터베이스의 모든 종속성을 볼 수 있습니다.  
@@ -72,9 +72,9 @@ ms.locfileid: "72909284"
   
 3.  **트리거**를 확장하고 원하는 트리거를 마우스 오른쪽 단추로 클릭한 다음 **종속성 보기**를 클릭합니다.  
   
-4.  **개체 종속성** 창에서 DML 트리거에 종속되는 개체를 보려면 **\<DML 트리거 이름>에 종속된 개체**를 선택합니다. 개체가 **종속성** 영역에 나타납니다.  
+4.  **개체 종속성** 창에서 DML 트리거에 종속되는 개체를 보려면 **\<DML trigger name>에 종속된 개체**를 선택합니다. 개체가 **종속성** 영역에 나타납니다.  
   
-     DML이 종속되는 개체를 보려면 **\<DML 트리거 이름>이(가) 종속된 개체**를 선택합니다. 개체가 **종속성** 영역에 나타납니다. 각 노드를 확장하여 모든 개체를 표시합니다.  
+     DML이 종속되는 개체를 보려면 **\<DML trigger name>이 종속된 개체**를 선택합니다. 개체가 **종속성** 영역에 나타납니다. 각 노드를 확장하여 모든 개체를 표시합니다.  
   
 5.  **종속성** 영역에 나타나는 개체에 대한 정보를 얻으려면 개체를 클릭합니다. **선택한 개체** 필드에서 **이름**, **유형**및 **종속성 유형** 상자에 정보가 제공됩니다.  
   

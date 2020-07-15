@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 08/07/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: language-reference
 f1_keywords:
 - ALTER_EXTERNAL_RESOURCE_POOL_TSQL
@@ -17,15 +17,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ebab091b0e674339141c4ee2ea6d7c7993ccbabf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d1759d67fda0f9cef5290a4b93a5b3b712b49a73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68893678"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85761922"
 ---
 # <a name="alter-external-resource-pool-transact-sql"></a>ALTER EXTERNAL RESOURCE POOL(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 외부 프로세스에서 사용할 수 있는 리소스를 지정하는 Resource Governor 외부 풀을 변경합니다. 
 
@@ -41,7 +41,7 @@ ms.locfileid: "68893678"
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 [ WITH (
     [ MAX_CPU_PERCENT = value ]
@@ -87,12 +87,12 @@ MAX_PROCESSES =*value*
 
 리소스 풀에 대한 일반 정보는 [Resource Governor 리소스 풀](../../relational-databases/resource-governor/resource-governor-resource-pool.md), [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md) 및 [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)을 참조합니다.  
 
-컴퓨터 학습 작업을 제어하는 외부 리소스 풀의 사용 관련 정보는 [SQL Server에서의 기계 학습에 대한 리소스 관리](../../advanced-analytics/r/resource-governance-for-r-services.md)를 참조 하십시오...
+컴퓨터 학습 작업을 제어하는 외부 리소스 풀의 사용 관련 정보는 [SQL Server에서의 기계 학습에 대한 리소스 관리](../../machine-learning/administration/resource-governor.md)를 참조 하십시오...
 ## <a name="permissions"></a>사용 권한
 
 `CONTROL SERVER` 권한이 필요합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 다음 명령문은 CPU 사용량을 50% 및 최대 메모리를 컴퓨터에서 사용 가능한 메모리의 25%로 제한하는 외부 풀을 변경합니다.
   
@@ -110,7 +110,7 @@ GO
 
 ## <a name="see-also"></a>참고 항목
 
-+ [SQL Server에서 머신 러닝을 위한 리소스 거버넌스](../../advanced-analytics/r/resource-governance-for-r-services.md)
++ [SQL Server에서 머신 러닝을 위한 리소스 거버넌스](../../machine-learning/administration/resource-governor.md)
 + [외부 스크립트 설정 서버 구성 옵션](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
 + [CREATE EXTERNAL RESOURCE POOL&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)
 + [DROP EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)

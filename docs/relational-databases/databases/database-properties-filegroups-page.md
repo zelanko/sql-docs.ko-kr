@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 속성(파일 그룹 페이지) | Microsoft 문서
+description: 데이터베이스 속성 대화 상자의 파일 그룹 탭을 사용하여 데이터베이스의 파일 그룹을 보거나 새 파일 그룹을 추가하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fd94228e072f670e2bf32a46281f195bdf9b80ef
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f44fd1c87cb1ed27e0d2d52fe658e97ec2edda7e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099626"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756224"
 ---
 # <a name="database-properties-filegroups-page"></a>데이터베이스 속성(파일 그룹 페이지)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 페이지를 사용하여 파일 그룹을 확인하거나 선택한 데이터베이스에 새 파일 그룹을 추가할 수 있습니다. 파일 그룹 유형은 *행* 파일 그룹, FILESTREAM 데이터 및 메모리 최적화 파일 그룹으로 구분됩니다.  
   
  행 파일 그룹에는 일반 데이터 파일 및 로그 파일이 있고, FILESTREAM 데이터 파일 그룹에는 FILESTREAM 데이터 파일이 있습니다. 이러한 데이터 파일은 FILESTREAM 스토리지를 사용할 경우 BLOB(Binary Large Object) 데이터가 파일 시스템에 저장되는 방식에 대한 정보를 저장합니다. 옵션은 두 가지 파일 그룹 유형에서 동일합니다.  

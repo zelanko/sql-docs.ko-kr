@@ -1,5 +1,6 @@
 ---
 title: 하이브리드 버퍼 풀 | Microsoft Docs
+description: 하이브리드 버퍼 풀이 메모리 버스를 통해 영구 메모리 장치에 액세스하게 하는 방법을 확인합니다. 이 SQL Server 2019 기능을 설정하거나 해제하고 모범 사례를 확인합니다.
 ms.custom: ''
 ms.date: 10/31/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: e2aafb77145fbe22a980ef158cfa7c78db6288d2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73f4abc0c1b2a7cd6943ab6b216133812c145d19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216262"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772425"
 ---
 # <a name="hybrid-buffer-pool"></a>하이브리드 버퍼 풀
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 하이브리드 버퍼 풀을 사용하면 버퍼 풀 개체가 휘발성 DRAM에 캐시된 데이터 페이지의 복사본 대신, PMEM(영구 메모리) 디바이스에 있는 데이터베이스 파일의 데이터 페이지를 참조할 수 있습니다. 이 기능은 [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)]에 도입되었습니다.
 
@@ -94,12 +95,12 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 ## <a name="best-practices-for-hybrid-buffer-pool"></a>하이브리드 버퍼 풀 모범 사례
 
-Windows에서 PMEM 디바이스를 포맷할 때 NTFS에 가능한 가장 큰 할당 단위 크기(Windows Server 2019에서 2MB)를 사용하고 디바이스에서 DAX(Direct Access)에 적합하게 포맷되었는지 확인합니다.
+ - Windows에서 PMEM 디바이스를 포맷할 때 NTFS에 가능한 가장 큰 할당 단위 크기(Windows Server 2019에서 2MB)를 사용하고 디바이스에서 DAX(Direct Access)에 적합하게 포맷되었는지 확인합니다.
 
-Windows에서 [메모리의 잠긴 페이지](./enable-the-lock-pages-in-memory-option-windows.md)를 사용합니다.
+ - Windows에서 [메모리의 잠긴 페이지](./enable-the-lock-pages-in-memory-option-windows.md)를 사용합니다.
 
-파일 크기가 2MB의 배수여야 합니다(modulo 2MB가 0이어야 함).
+ - 파일 크기가 2MB의 배수여야 합니다(modulo 2MB가 0이어야 함).
 
-하이브리드 버퍼 풀의 서버 범위 설정을 사용하지 않도록 설정한 경우에는 모든 사용자 데이터베이스에서 이 기능이 사용되지 않습니다.
+ - 하이브리드 버퍼 풀의 서버 범위 설정을 사용하지 않도록 설정한 경우에는 모든 사용자 데이터베이스에서 이 기능이 사용되지 않습니다.
 
-하이브리드 버퍼 풀의 서버 범위 설정을 사용하도록 설정한 경우, 데이터베이스 범위 설정을 사용하여 개별 사용자 데이터베이스에 대해 기능을 해제할 수 있습니다.
+ - 하이브리드 버퍼 풀의 서버 범위 설정을 사용하도록 설정한 경우, 데이터베이스 범위 설정을 사용하여 개별 사용자 데이터베이스에 대해 기능을 해제할 수 있습니다.

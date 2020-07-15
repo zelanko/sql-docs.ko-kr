@@ -1,5 +1,6 @@
 ---
 title: 기존 열을 XML 열로 변경 | Microsoft 문서
+description: ALTER TABLE 문을 사용하여 문자열 유형 열을 xml 데이터 형식 열로 변경하는 방법을 알아봅니다.
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 20d18e12da4738f5af674eb2e90c4344ffa2b535
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 801b762b80dd081e309d8c7d8569b0302d505dbd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664721"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775614"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>기존 열을 XML 열로 변경
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 ALTER TABLE 문은 **xml** 데이터 형식을 지원합니다. 예를 들어 모든 문자열 유형 열을 **xml** 데이터 형식으로 변경할 수 있습니다. 이 경우 열에 포함된 문서는 올바른 형식이어야 합니다. 또한 열 유형을 문자열에서 형식화된 xml로 변경할 경우 지정된 XSD 스키마에 대해 열에 있는 문서의 유효성을 검사합니다.  
   
@@ -35,7 +36,7 @@ ALTER TABLE T
   ALTER COLUMN Col2 xml;
 ```  
   
-`xml` 유형 열을 형식화되지 않은 XML에서 형식화된 XML로 변경할 수 있습니다. 다음은 그 예입니다.  
+`xml` 유형 열을 형식화되지 않은 XML에서 형식화된 XML로 변경할 수 있습니다. 예를 들면 다음과 같습니다.  
   
 ```sql
 CREATE TABLE T (Col1 int primary key, Col2 xml);

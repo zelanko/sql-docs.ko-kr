@@ -17,15 +17,15 @@ ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8feec11884ae31e34cbc5497bf818991e59b39dd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dc50eb9e0f045edc0948ce2416625643ce0a8942
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909790"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758857"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>XML 형식으로 실행 계획 저장
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 실행 계획을 XML 파일로 저장하고 열어서 볼 수 있습니다.  
   
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 실행 계획 기능을 사용하거나 XML 실행 계획 SET 옵션을 사용하려면 사용자에게 실행 계획을 생성할 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 실행하는 데 적합한 권한이 있어야 하며 쿼리에서 참조하는 모든 데이터베이스에 대한 SHOWPLAN 권한을 부여해야 합니다.  
@@ -68,9 +68,9 @@ ms.locfileid: "72909790"
   
 4.  **결과** 창에서 쿼리 계획을 포함하는 **Microsoft SQL Server XML Showplan** 을 마우스 오른쪽 단추로 클릭한 다음 **다른 이름으로 결과 저장**을 클릭합니다.  
   
-5.  **표 또는 텍스트>** 결과\< **저장** 대화 상자의 **파일 형식** 상자에서 **모든 파일(\*.\*)** 을 클릭합니다.  
+5.  \<Grid or Text> **결과** **저장** 대화 상자의 **다른 이름으로 저장** 상자에서 **모든 파일(\*.\*)** 을 선택합니다.  
   
-6.  **파일 이름** 상자에 \<name **>.sqlplan** 형식으로 이름을 입력한 후 **저장**을 클릭합니다.  
+6.  **파일 이름** 상자에 \<name**>.sqlplan** 형식으로 이름을 입력한 후 **저장**을 클릭합니다.  
 
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>SQL Server Management Studio 옵션을 사용하여 실행 계획을 저장하려면  
   
@@ -82,7 +82,7 @@ ms.locfileid: "72909790"
   
 3.  **다른 이름으로 저장** 대화 상자에서 **파일 형식**이 **실행 계획 파일(\*.sqlplan)** 로 설정되어 있는지 확인합니다.  
   
-4.  **파일 이름** 상자에 \<name **>.sqlplan** 형식으로 이름을 입력한 후 **저장**을 클릭합니다.  
+4.  **파일 이름** 상자에 \<name**>.sqlplan** 형식으로 이름을 입력한 후 **저장**을 클릭합니다.  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>SQL Server Management Studio에서 저장된 XML 쿼리 계획을 열려면  
   

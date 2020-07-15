@@ -1,24 +1,24 @@
 ---
 title: 가용성 그룹 장애 조치(failover) 관리 - SQL Server on Linux
 description: 이 문서에서는 자동 장애 조치(failover), 계획된 수동 장애 조치 및 강제 수동 장애 조치와 같은 장애 조치 유형에 대해 설명합니다. 자동 장애 조치와 계획된 수동 장애 조치에서는 모든 데이터가 보존됩니다.
-author: MikeRayMSFT
-ms.author: mikeray
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 635c567722fd5744aa56a16a6f48e8c4284f8ba8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 60dbfed32581a7646da590004c839fc7cf3d316f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216852"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892299"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux의 Always On 가용성 그룹 장애 조치(failover)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 AG(가용성 그룹)의 컨텍스트 내에서는 일반적으로 가용성 복제본의 주 역할과 보조 역할을 장애 조치(failover)라는 프로세스에서 서로 바꿀 수 있습니다. 자동 장애 조치(데이터가 손실되지 않음), 계획된 수동 장애 조치(데이터가 손실되지 않음)와 *강제 장애 조치(failover)* 라고 불리는 강제 수동 장애 조치(데이터가 손실될 수 있음)의 세 가지 형태가 있습니다. 자동 및 계획된 수동 장애 조치는 모든 데이터를 보존합니다. AG는 가용성 복제본의 수준에서 장애 조치됩니다. 즉, AG는 해당 보조 복제본 중 하나(현재 장애 조치(failover) 대상)로 장애 조치(failover)됩니다. 
 
@@ -81,14 +81,29 @@ AG(가용성 그룹)의 컨텍스트 내에서는 일반적으로 가용성 복�
 수동 장애 조치(failover)로 인해 생성되는 제약 조건의 예입니다. 
  `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
+   > [!NOTE]
+   > Red Hat Enterprise Linux 8.x 및 Ubuntu 18.04에서 Pacemaker 클러스터의 AG 리소스 이름은 리소스 관련 명명법이 승격 가능한 복제를 사용하도록 진화하고 있으므로 *ag_cluster-clone*과 비슷할 수 있습니다. 
+
 - **RHEL/Ubuntu 예제**
 
    다음 명령에서 `cli-prefer-ag_cluster-master`는 제거해야 하는 제약 조건의 ID입니다. `sudo pcs constraint list --full`은 이 ID를 반환합니다. 
    
    ```bash
+   sudo pcs resource clear ag_cluster-master  
+   ```
+   또는
+   
+   ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
-   
+  
+   다음과 같이 한 줄에서 자동 생성된 제약 조건의 이동 및 삭제를 모두 수행할 수 있습니다. 다음 예제에서는 Red Hat Enterprise Linux 8.x에 따라 복제라는 용어를 사용합니다. 
+  
+   ```bash
+   sudo pcs resource move ag_cluster-clone --master nodeName2 && sleep 30 && sudo pcs resource clear ag_cluster-clone
+
+   ```
+  
 - **SLES 예제**
 
    다음 명령에서 `cli-prefer-ms-ag_cluster`는 제약 조건의 ID입니다. `crm config show`은 이 ID를 반환합니다. 
@@ -117,13 +132,13 @@ AG(가용성 그룹)의 컨텍스트 내에서는 일반적으로 가용성 복�
 
 1. AG 리소스가 더 이상 클러스터에서 관리되지 않는지 확인합니다. 
 
-      - 대상 클러스터 노드에서 리소스를 비관리형 모드로 설정합니다. 이 명령은 리소스 모니터링 및 관리를 중지하도록 리소스 에이전트에 신호를 보냅니다. 다음은 그 예입니다. 
+      - 대상 클러스터 노드에서 리소스를 비관리형 모드로 설정합니다. 이 명령은 리소스 모니터링 및 관리를 중지하도록 리소스 에이전트에 신호를 보냅니다. 예를 들면 다음과 같습니다. 
       
       ```bash
       sudo pcs resource unmanage <resourceName>
       ```
 
-      - 리소스 모드를 비관리리형 모드로 설정하지 못하는 경우에는 리소스를 삭제합니다. 다음은 그 예입니다.
+      - 리소스 모드를 비관리리형 모드로 설정하지 못하는 경우에는 리소스를 삭제합니다. 예를 들면 다음과 같습니다.
 
       ```bash
       sudo pcs resource delete <resourceName>
@@ -162,7 +177,7 @@ AG(가용성 그룹)의 컨텍스트 내에서는 일반적으로 가용성 복�
 
 ## <a name="database-level-monitoring-and-failover-trigger"></a>데이터베이스 수준 모니터링 및 장애 조치(failover) 트리거
 
-`CLUSTER_TYPE=EXTERNAL`의 경우 장애 조치(failover) 트리거 의미 체계는 WSFC와 다릅니다. AG가 WSFC의 SQL Server 인스턴스에 있는 경우 데이터베이스의 `ONLINE` 상태에서 전환하면 AG 상태에서 오류가 보고됩니다. 이에 대한 응답으로 클러스터 관리자가 장애 조치(failover) 작업을 트리거합니다. Linux에서 SQL Server 인스턴스는 클러스터와 통신할 수 없습니다. 데이터베이스 상태 모니터링은 ‘외부에서’ 수행됩니다.  사용자가 AG를 만들 때 `DB_FAILOVER=ON` 옵션을 설정하여 데이터베이스 수준 장애 조치(failover) 모니터링 및 장애 조치(failover)를 설정한 경우 클러스터는 모니터링 작업을 실행할 때마다 데이터베이스 상태가 `ONLINE`인지 확인합니다. 클러스터는 `sys.databases`에서 상태를 쿼리합니다. 상태가 `ONLINE`과 다른 경우에는 자동으로 장애 조치(failover)를 트리거합니다(자동 장애 조치(failover) 조건이 충족되는 경우). 실제 장애 조치(failover) 시간은 sys.databases에서 업데이트되는 데이터베이스 상태뿐 아니라 모니터링 작업 빈도에 따라 달라집니다.
+`CLUSTER_TYPE=EXTERNAL`의 경우 장애 조치(failover) 트리거 의미 체계는 WSFC와 다릅니다. AG가 WSFC의 SQL Server 인스턴스에 있는 경우 데이터베이스의 `ONLINE` 상태에서 전환하면 AG 상태에서 오류가 보고됩니다. 이에 대한 응답으로 클러스터 관리자가 장애 조치(failover) 작업을 트리거합니다. Linux에서 SQL Server 인스턴스는 클러스터와 통신할 수 없습니다. 데이터베이스 상태 모니터링은 ‘외부에서’ 수행됩니다. 사용자가 AG를 만들 때 `DB_FAILOVER=ON` 옵션을 설정하여 데이터베이스 수준 장애 조치(failover) 모니터링 및 장애 조치(failover)를 설정한 경우 클러스터는 모니터링 작업을 실행할 때마다 데이터베이스 상태가 `ONLINE`인지 확인합니다. 클러스터는 `sys.databases`에서 상태를 쿼리합니다. 상태가 `ONLINE`과 다른 경우에는 자동으로 장애 조치(failover)를 트리거합니다(자동 장애 조치(failover) 조건이 충족되는 경우). 실제 장애 조치(failover) 시간은 sys.databases에서 업데이트되는 데이터베이스 상태뿐 아니라 모니터링 작업 빈도에 따라 달라집니다.
 
 자동 장애 조치(failover)에는 하나 이상의 동기 복제본이 필요합니다.
 

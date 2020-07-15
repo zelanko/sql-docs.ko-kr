@@ -1,5 +1,6 @@
 ---
 title: 가용성 그룹에 대한 압축 튜닝 | Microsoft Docs
+description: SQL Server가 네트워크 트래픽을 줄이고 CPU 부하를 증가시키고 대기 시간을 유발할 수 있는 가용성 그룹 데이터 스트림을 압축하는 방식을 알아봅니다.
 ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3891d30ef5bfffb19ca1d4bfcaab290e3903816b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f8af4702abe127dc0bf5b53be7618515c21cd13c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013670"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888009"
 ---
 # <a name="tune-compression-for-availability-group"></a>가용성 그룹에 대한 압축 조정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 기본적으로 SQL Server는 가용성 그룹에 적절한 데이터 스트림을 압축합니다. 압축은 네트워크 트래픽을 줄이고 CPU 부하를 증가시키며 대기 시간을 유도할 수 있습니다. 압축을 사용하도록 설정하려면 sysadmin 고정 서버 역할이 있는 멤버여야 합니다. 다음 표는 SQL Server가 가용성 그룹 로그 스트림에 대해 압축을 사용하는 경우를 보여 줍니다.
 
 | 시나리오 | 압축 설정
@@ -24,6 +25,7 @@ ms.locfileid: "68013670"
 | 동기-커밋 복제본 | 압축되지 않음
 | 비동기-커밋 복제본 | Compressed
 | 자동 시드 중 | 압축되지 않음
+| 데이터베이스에서 TDE 사용  | 압축되지 않음
 
 ## <a name="trace-flags-for-availability-group-compression"></a>가용성 그룹 압축에 대한 추적 플래그 
 

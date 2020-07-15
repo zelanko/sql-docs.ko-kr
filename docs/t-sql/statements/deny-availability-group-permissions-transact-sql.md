@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: bda60b36-a0b9-4c20-80c1-6a5cb1d638a5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dc29fadcbe0fe3a3f2eca8616b89e9ec3e45a7a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f1d843feede96fbecb75575f3899491931c95598
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258308"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766799"
 ---
 # <a name="deny-availability-group-permissions-transact-sql"></a>가용성 그룹 사용 권한 거부(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 AlwaysOn 가용성 그룹에 대한 사용 권한을 거부합니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "75258308"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name  
         TO < server_principal >  [ ,...n ]  
     [ CASCADE ]  
@@ -95,7 +95,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ## <a name="permissions"></a>사용 권한  
  가용성 그룹에 대한 CONTROL 권한 또는 서버에 대한 ALTER ANY AVAILABILITY GROUP 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-denying-view-definition-permission-on-an-availability-group"></a>A. 가용성 그룹에 대한 VIEW DEFINITION 권한 거부  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `VIEW DEFINITION`에 대해 가용성 그룹 `MyAg`에 대한 `ZArifin` 권한을 거부합니다.  

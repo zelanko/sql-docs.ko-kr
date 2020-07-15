@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 미러링 모니터링(SQL Server) | Microsoft Docs
+description: 데이터베이스 미러링 모니터 작업을 포함하여 데이터베이스 미러링 모니터, 시스템 저장 프로시저, 데이터베이스 미러링 모니터링 작동 방식에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bcc63d87bc71fa2497e1282364f87272438bbf97
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f8479b88d100f9687469ad615d0b92c50aedb6ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70212293"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771831"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>데이터베이스 미러링 모니터링(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 섹션에서는 데이터베이스 미러링 모니터 및 **sp_dbmmonitor** 시스템 저장 프로시저를 소개하고 **데이터베이스 미러링 모니터 작업**을 포함하는 데이터베이스 미러링 모니터링의 작동 방법에 대해 설명하며 데이터베이스 미러링 세션에 대한 모니터링 정보를 간단하게 설명합니다. 또한 이 섹션에서는 미리 정의된 데이터베이스 미러링 이벤트 집합에 대해 경고 임계값을 정의하는 방법과 데이터베이스 미러링 이벤트에 대해 경고를 설정하는 방법을 소개합니다.  
   
  미러링 세션 중에 미러된 데이터베이스를 모니터링하여 데이터 흐름 여부와 상태를 확인할 수 있습니다. 서버 인스턴스에 있는 하나 이상의 미러된 데이터베이스에 대한 모니터링을 설정하고 관리하려면 데이터베이스 미러링 모니터나 **sp_dbmmonitor** 시스템 저장 프로시저를 사용합니다.  
@@ -131,7 +132,7 @@ ms.locfileid: "70212293"
      시스템 관리자는 **sp_dbmmonitorresults** 시스템 저장 프로시저를 사용하여 상태 테이블을 볼 수 있으며 이전 15초 내에 업데이트되지 않은 경우 필요에 따라 업데이트할 수 있습니다. 이 프로시저는 **sp_dbmmonitorupdate** 프로시저를 호출한 다음 프로시저 호출에서 요청된 양에 따라 기록 행을 하나 이상 반환합니다. 결과 집합의 상태에 대한 자세한 내용은 [sp_dbmmonitorresults&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)을 참조하세요.  
   
 #### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>데이터베이스 미러링 상태 모니터링(dbm_monitor 멤버가 사용하는 경우)  
- 앞에서 설명한 것처럼 **sp_dbmmonitorupdate** 는 처음 실행될 때 **msdb** 데이터베이스에 **dbm_monitor** 고정 데이터베이스 역할을 만듭니다. **dbm_monitor** 고정 데이터베이스 역할의 멤버는 데이터베이스 미러링 모니터 또는 **sp_dbmmonitorresults** 저장 프로시저를 사용하여 기존 미러링 상태를 볼 수 있습니다. 그러나 이러한 사용자는 상태 테이블을 업데이트할 수 없습니다. 표시되는 상태의 수명을 알아보려면 사용자가 **상태** 페이지에서 **주 로그 (**_\<시간>_**)** 및 **미러 로그 (**_\<시간>_**)** 레이블의 시간을 확인하면 됩니다.  
+ 앞에서 설명한 것처럼 **sp_dbmmonitorupdate** 는 처음 실행될 때 **msdb** 데이터베이스에 **dbm_monitor** 고정 데이터베이스 역할을 만듭니다. **dbm_monitor** 고정 데이터베이스 역할의 멤버는 데이터베이스 미러링 모니터 또는 **sp_dbmmonitorresults** 저장 프로시저를 사용하여 기존 미러링 상태를 볼 수 있습니다. 그러나 이러한 사용자는 상태 테이블을 업데이트할 수 없습니다. **상태** 페이지의 **주 로그(** _\<time>_ **)** 및 **미러 로그(** _\<time>_ **)** 레이블의 시간을 확인하여 표시된 상태의 기간을 알 수 있습니다.  
   
  **dbm_monitor** 고정 데이터베이스 역할의 멤버는 **데이터베이스 미러링 모니터 작업** 을 사용하여 정기적으로 상태 테이블을 업데이트합니다. 작업이 없거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 중지된 경우 상태가 점점 유효하지 않게 되어 미러링 세션의 구성을 더 이상 반영할 수 없습니다. 예를 들어 장애 조치(failover) 후에 파트너가 동일한 역할(주 서버 또는 미러 서버)을 공유하는 것으로 표시되거나 현재 주 서버가 미러 서버로 표시되고 현재 미러 서버가 주 서버로 표시될 수 있습니다.  
   

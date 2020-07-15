@@ -27,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44fc9e7e1c15ae2bd5eb4471d1ee5e396274faa0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68100457"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763218"
 ---
 # <a name="move-system-databases"></a>시스템 데이터베이스 이동
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 시스템 데이터베이스를 이동하는 방법에 대해 설명합니다. 시스템 데이터베이스 이동은 다음과 같은 경우에 유용할 수 있습니다.  
   
@@ -189,7 +189,7 @@ ms.locfileid: "68100457"
 
   
 ##  <a name="moving-the-resource-database"></a><a name="Resource"></a> 리소스 데이터베이스 이동  
- Resource 데이터베이스의 위치는 \<*드라이브*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\입니다. 데이터베이스는 이동할 수 없습니다.  
+ 리소스 데이터베이스의 위치는 \<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\입니다. 데이터베이스는 이동할 수 없습니다.  
   
 ##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> 후속 작업: 모든 시스템 데이터베이스를 이동한 후  
  모든 시스템 데이터베이스를 새 드라이브 또는 볼륨으로 이동했거나 다른 드라이브 문자를 사용하는 다른 서버에 이동한 경우 다음과 같이 업데이트하세요.  

@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 미러링 설정(SQL Server) | Microsoft Docs
+description: 데이터베이스 미러링 세션의 개요를 비롯하여 SQL Server에서 데이터베이스 미러링을 설정하기 위한 사전 요구 사항, 권장 사항 및 단계에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 43c964db4c0231d15101f58b7af088bc239fe152
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 290d968f4b0333357b7f8ed3e61aa50c962c2461
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048092"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789626"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>데이터베이스 미러링 설정(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 섹션에서는 데이터베이스 미러링을 설정하기 위한 사전 요구 사항, 권장 사항 및 단계에 대해 설명합니다. 데이터베이스 미러링에 대한 소개는 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.  
   
 > [!IMPORTANT]  
@@ -93,9 +94,9 @@ ms.locfileid: "68048092"
         >  성능 우선 모드에서는 WITNESS를 OFF로 설정해야 합니다. 자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
   
 > [!NOTE]  
->  Microsoft Windows 인증을 사용하여 데이터베이스 미러링을 설정하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하는 예제는 [예제: Windows 인증을 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)을 참조하세요.  
+>  Microsoft Windows 인증을 사용하여 데이터베이스 미러링을 설정하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하는 예는 [예제: Windows 인증을 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)을 참조하세요.  
 >   
->  Microsoft Windows 인증을 사용하여 데이터베이스 미러링을 설정하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하는 예제는 [예: 인증서를 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)을 참조하세요.  
+>  인증서 기반 보안을 사용하여 데이터베이스 미러링을 설정하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하는 예는 [예제: 인증서를 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)을 참조하세요.  
   
   
 ##  <a name="in-this-section"></a><a name="InThisSection"></a> 섹션 내용  
@@ -111,10 +112,10 @@ ms.locfileid: "68048092"
  [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)  
  데이터베이스 미러링을 설정하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 단계에 대해 설명합니다.  
   
- [예제: Windows 인증을 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)  
+ [예: Windows 인증을 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)  
  Windows 인증을 사용하여 미러링 모니터 서버가 있는 데이터베이스 미러링 세션을 만드는 데 필요한 모든 단계의 예를 포함합니다.  
   
- [예제: 인증서를 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+ [예: 인증서를 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
  인증서 기반 인증을 사용하여 미러링 모니터 서버가 있는 데이터베이스 미러링 세션을 만드는 데 필요한 모든 단계의 예를 포함합니다.  
   
  [데이터베이스 미러링 또는 Always On 가용성 그룹에 대한 로그인 계정 설정&#40;SQL Server&#41;](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  

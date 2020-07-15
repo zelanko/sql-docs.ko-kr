@@ -1,25 +1,24 @@
 ---
 title: 확장 만들기
-titleSuffix: Azure Data Studio
 description: 확장을 만들고 Azure Data Studio에 추가하는 방법 알아보기
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: d0c43df8b24a33f3763dc5ff3a80e989b9b85038
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: adfff7f2aa0fbda1b5e8bdacaddfaef36d16342f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959604"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774634"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Azure Data Studio 확장을 만들어 기능 확장
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]의 확장을 사용하면 기본 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 설치에 더 많은 기능을 쉽게 추가할 수 있습니다.
+Azure Data Studio의 확장을 사용하면 기본 Azure Data Studio 설치에 다른 기능을 쉽게 추가할 수 있습니다.
 
 확장은 Azure Data Studio 팀(Microsoft) 및 타사 커뮤니티(사용자)가 제공합니다.
 
@@ -43,7 +42,7 @@ Azure Data Studio를 확장하는 데 관심이 있는 경우 고유한 확장�
 
 **확장성 참조**
 
-Azure Data Studio 확장성에 대해 자세히 알아보려면 [확장성 개요](extensibility.md)를 참조하세요. 기존 [샘플](https://github.com/Microsoft/azuredatastudio/tree/master/samples)에서 API 사용 방법의 예제를 확인할 수도 있습니다.
+Azure Data Studio 확장성에 대해 자세히 알아보려면 [확장성 개요](extensibility.md)를 참조하세요. 기존 [샘플](https://github.com/Microsoft/azuredatastudio/tree/main/samples)에서 API 사용 방법의 예제를 확인할 수도 있습니다.
 
 
 ## <a name="debug-an-extension"></a>확장 디버그
@@ -70,7 +69,7 @@ Visual Studio Code 확장 [Azure Data Studio 디버그](https://github.com/kevcu
 
 Azure Data Studio에 새 확장을 게시하려면
 
-1. [https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json ) 에 확장을 추가합니다.
+1. https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json 에 확장을 추가합니다.
 2. 현재 타사 확장을 호스트하는 기능이 지원되지 않으므로 확장을 다운로드하는 대신, 다운로드 페이지를 검색하는 옵션이 Azure Data Studio에 제공됩니다. 확장의 다운로드 페이지를 설정하려면 “Microsoft.AzureDataStudio.DownloadPage” 자산 값을 설정합니다.
 3. 릴리스/확장 분기에 대한 PR을 만듭니다.
 4. 팀에 검토 요청을 보냅니다.

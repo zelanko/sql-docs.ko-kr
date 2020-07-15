@@ -1,5 +1,6 @@
 ---
 title: '문제 해결: 가용성 그룹 초과 RTO(SQL Server) | Microsoft Docs'
+description: SQL Server에서 장애 조치(failover)가 복구 시간 목표보다 오래 걸리는 경우 Always On 가용성 그룹에 대한 장애 조치(failover) 문제를 해결하는 방법을 알아봅니다.
 ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 959361d64316618ce6b7ccc997f7ef958b1259f5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013755"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888020"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>문제 해결: 가용성 그룹 초과 RTO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   가용성 그룹에 데이터 손실 없이 자동 장애 조치(failover) 또는 계획된 수동 장애 조치(failover) 후 장애 조치 시간이 RTO(복구 시간 목표)를 초과하는 것을 발견할 수 있습니다. 또는 [Always On 가용성 그룹에 대한 성능 모니터링](monitor-performance-for-always-on-availability-groups.md)의 방법을 사용하여 동기 커밋 보조 복제본(예: 자동 장애 조치(failover) 파트너)의 장애 조치 시간을 예상할 때 RTO 초과를 발견할 수 있습니다.  
   
  자동 장애 조치가 아직 완료되지 않은 경우 [SQL Server 2012 Always On 환경에서 자동 장애 조치(failover) 문제 해결](https://support.microsoft.com/kb/2833707)을 참조하세요.  

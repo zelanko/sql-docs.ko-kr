@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 엔진 서비스 시작 옵션 | Microsoft Docs
+description: SQL Server 데이터베이스 엔진 시작 옵션에 대해 알아봅니다. 사용 방법에 대한 팁을 확인하고 각 옵션의 용도에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 08/01/2019
 ms.prod: sql
@@ -23,18 +24,18 @@ helpviewer_keywords:
 - startup parameters [SQL Server]
 - starting SQL Server, parameters
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4518428d6dd583e5d9fe2a4da06f052b8b75da70
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f5cd9b549123545920c890616945156b37fd762b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252866"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772625"
 ---
 # <a name="database-engine-service-startup-options"></a>데이터베이스 엔진 서비스 시작 옵션
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 시작 옵션은 시작하는 동안 필요한 특정 파일 위치를 지정하고 일부 서버 차원의 조건을 지정합니다. 일반적으로 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 문제가 발생하거나 예외적인 문제가 발생하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고객 지원 서비스에서 시작 옵션을 사용하도록 지시하는 경우가 아니면 시작 옵션을 지정할 필요가 없습니다.  
   

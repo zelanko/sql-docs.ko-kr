@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 미러링 및 로그 전달(SQL Server) | Microsoft Docs
+description: 필요한 대상 서버 수를 포함하여 SQL Server에서 로그 전달 및 데이터베이스 미러링을 결합하기 위한 고려 사항에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0aecc0f5bb867699bef16ff9f2947fe99a2cf1ec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fd18ca39f11525f3fd91f759ff34f4ce6ebd0dbb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006467"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789703"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>데이터베이스 미러링 및 로그 전달(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   지정된 데이터베이스를 미러링하거나 로그를 전달할 수 있으며 동시에 미러링하고 로그를 전달할 수도 있습니다. 사용할 방법을 선택하려면 다음을 고려합니다.  
   
 -   얼마나 많은 대상 서버가 필요하십니까?  

@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7883a99a223af67f536a0991bb0ba48f30211bc6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ce6f6005e3e2b6966a4bc9e457b1ee552ea017f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071362"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85761869"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX(선택적 XML 인덱스)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   기존 선택적 XML 인덱스를 수정합니다. ALTER INDEX 문은 다음 항목 중 하나 이상을 변경합니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68071362"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 ALTER INDEX index_name  
     ON <table_object>   
     [WITH XMLNAMESPACES ( <xmlnamespace_list> )]  
@@ -147,7 +147,7 @@ identifier
 ### <a name="permissions"></a>사용 권한  
  ALTER INDEX를 실행하려면 테이블 또는 뷰에 대한 ALTER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 ALTER INDEX 문을 보여 줍니다. 이 문은 인덱스의 XQuery 부분에 `'/a/b/m'` 경로를 추가하고 [CREATE SELECTIVE XML INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md) 항목의 예에서 만든 인덱스의 SQL 부분에서 `'/a/b/e'` 경로를 삭제합니다. 삭제할 경로는 해당 경로를 만들 때 지정한 경로 이름으로 식별됩니다.  
   
 ```sql  

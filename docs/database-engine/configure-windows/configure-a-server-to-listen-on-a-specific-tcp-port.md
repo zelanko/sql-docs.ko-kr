@@ -1,5 +1,6 @@
 ---
 title: 특정 TCP 포트에서 수신 대기하도록 서버 구성 | Microsoft Docs
+description: SQL Server 구성 관리자를 사용하여 기본 포트인 1433이 아닌 특정 고정 포트에서 수신 대기하도록 데이터베이스 엔진을 구성하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 04/25/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - dynamic ports [SQL Server]
 - TCP/IP [SQL Server], port numbers
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 48736a721cad475c6956e1715a3912481bc83c40
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 15d1d1ab04adb47772706f8b1495b8ddef8b4fa3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012923"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789839"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>특정 TCP 포트에서 수신 대기하도록 서버 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 SQL Server 구성 관리자를 사용하여 특정 고정 포트에서 수신할 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스를 구성하는 방법에 대해 설명합니다. 설정된 경우 기본 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스는 TCP 포트 1433에서 수신합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 의 명명된 인스턴스는 [동적 포트](../../tools/configuration-manager/tcp-ip-properties-ip-addresses-tab.md)로 구성됩니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 시작되면 해당 인스턴스가 사용 가능한 포트를 선택함을 의미합니다. 방화벽을 통해 명명된 인스턴스에 연결할 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 특정 포트에서 수신하도록 구성하면 방화벽에서 해당 포트를 열 수 있습니다.  
 
@@ -44,7 +45,7 @@ ms.locfileid: "68012923"
   
 #### <a name="to-assign-a-tcpip-port-number-to-the-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진에 TCP/IP 포트 번호를 할당하려면  
   
-1.  SQL Server 구성 관리자의 콘솔 창에서 **SQL Server 네트워크 구성**, **\<인스턴스 이름>에 대한 프로토콜**을 차례로 펼친 다음 **TCP/IP**를 두 번 클릭합니다.  
+1.  SQL Server 구성 관리자의 콘솔 창에서 **SQL Server 네트워크 구성**, **\<instance name>에 대한 프로토콜**을 차례로 펼친 다음 **TCP/IP**를 두 번 클릭합니다.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 여는 동안 문제가 발생하는 경우 [SQL Server 구성 관리자](../../relational-databases/sql-server-configuration-manager.md)를 참조하세요.  
@@ -63,7 +64,7 @@ ms.locfileid: "68012923"
   
 5.  콘솔 창에서 **SQL Server 서비스**를 클릭합니다.  
   
-6.  세부 정보 창에서 **SQL Server(** \<인스턴스 이름> **)** 를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 중지하고 다시 시작합니다.  
+6.  세부 정보 창에서 **SQL Server(** \<instance name> **)** 를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 중지하고 다시 시작합니다.  
   
 ## <a name="connecting"></a>Connecting  
 특정 포트에서 수신하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 구성한 후에 특정 포트를 통해 클라이언트 애플리케이션과 연결하는 세 가지 방법은 다음과 같습니다.  

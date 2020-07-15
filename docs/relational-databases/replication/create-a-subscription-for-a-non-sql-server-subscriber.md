@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b64985281c98d15399e7cd561a05746e0634f057
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cecd24ccf5aba44beff0a258ee75cf26722358f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75322021"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773900"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>SQL Server 이외 구독자에 대한 구독 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 SQL Server 이외 구독자에 대한 구독을 만드는 방법에 대해 설명합니다. 트랜잭션 복제와 스냅샷 복제는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자로의 데이터 게시를 지원합니다. 지원되는 구독자 플랫폼에 대한 자세한 내용은 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)에서 SQL Server 이외 구독자에 대한 구독을 만드는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -47,7 +47,7 @@ ms.locfileid: "75322021"
   
          스냅샷 에이전트에서[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 적합한 스냅샷 및 초기화 스크립트를 생성하려면[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 대한 게시를 설정한 다음 스냅샷을 만듭니다.  
   
-3.  **게시 속성 - \<PublicationName>** 대화 상자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 대한 게시를 사용하도록 설정합니다. 이 단계에 대한 자세한 내용은 [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) 을 참조하세요.  
+3.  **게시 속성 - \<PublicationName>** 대화 상자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 대한 게시를 설정합니다. 이 단계에 대한 자세한 내용은 [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) 을 참조하세요.  
   
 4.  새 구독 마법사를 사용하여 구독을 만듭니다. 이 항목에는 이 단계에 대한 자세한 정보를 제공합니다.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "75322021"
   
 2.  게시를 마우스 오른쪽 단추로 클릭한 다음 **스냅샷 에이전트 상태 보기**를 클릭합니다.  
   
-3.  **스냅샷 에이전트 상태 보기 - \<게시&gt;** 대화 상자에서 **시작**을 클릭합니다.  
+3.  **스냅샷 에이전트 상태 보기 - \<Publication>** 대화 상자에서 **시작**을 클릭합니다.  
   
  스냅샷 에이전트에서 스냅샷 생성을 마치면 "[100%] 17개 아티클의 스냅샷이 생성되었습니다"라는 메시지가 표시됩니다.  
   

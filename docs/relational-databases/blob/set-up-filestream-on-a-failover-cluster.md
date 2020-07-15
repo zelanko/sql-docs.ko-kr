@@ -1,5 +1,6 @@
 ---
 title: 장애 조치(Failover) 클러스터에서 FILESTREAM 설정 | Microsoft 문서
+description: SQL Server의 장애 조치(failover) 클러스터에 FILESTREAM을 설정하는 방법과 설정하기 전에 사용 설정해야 하는 기능을 알아봅니다.
 ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6721f780-20b7-4109-8ddb-ac327310699e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3ef524c6ee823b80b25fa5cf5ee4584ba8b8d00c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58ea828b434abbaaa939df25b9f6c59d26e3d144
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67912191"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765470"
 ---
 # <a name="set-up-filestream-on-a-failover-cluster"></a>장애 조치(Failover) 클러스터에서 FILESTREAM 설정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 장애 조치(Failover) 클러스터에서 FILESTREAM을 사용하는 방법에 대해 설명합니다. 이 절차를 시도하기 전에 [장애 조치(Failover) 클러스터링](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 을 이해하고 FILESTREAM을 사용하도록 설정해야 합니다. FILESTREAM을 사용하도록 설정하는 방법은 [FILESTREAM 사용 및 구성](../../relational-databases/blob/enable-and-configure-filestream.md)을 참조하세요.  
   
 ### <a name="to-set-up-filestream-on-a-failover-cluster"></a>장애 조치 클러스터에서 FILESTREAM을 설정하려면  

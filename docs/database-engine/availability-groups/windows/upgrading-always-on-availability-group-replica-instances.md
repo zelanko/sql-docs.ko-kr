@@ -1,6 +1,6 @@
 ---
 title: 가용성 그룹 복제본 업그레이드
-dsecription: Describes how to upgrade replicas that are participating in an Always On availability group.
+description: 롤링 업그레이드를 수행하여 SQL Server 업그레이드 동안 주 복제본의 가동 중지 시간을 줄이는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 01/10/2018
 ms.prod: sql
@@ -10,33 +10,33 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 77fba513e72982920c399002555e5b96745e8492
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0acb31fb6669213aed14721eb52c55b457ec1f2f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822195"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894191"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Always On 가용성 그룹 복제본 인스턴스 업그레이드
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Always On AG(가용성 그룹)를 호스트하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 신규 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 버전, 신규 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 팩 또는 누적 업데이트로 업그레이드하거나 신규 Windows 서비스 팩 또는 누적 업데이트를 설치하려는 경우 롤링 업그레이드를 수행하여 주 복제본을 단일 수동 장애 조치(failover)에만 적용하여 가동 중지 시간을 단축할 수 있습니다(또는 원본 주 복제본이 실패하는 경우 두 개의 수동 장애 조치(failover)). 업그레이드 프로세스 동안 읽기 전용 작업 또는 장애 조치(failover)에서는 보조 복제본을 사용할 수 없고 업그레이드 이후에는 주 복제본 노드에서의 작업 크기에 따라 보조 복제본이 주 복제본 노드를 따라잡기 위해서는 약간의 시간이 걸릴 수 있습니다(이로 인해 높은 네트워크 트래픽이 예상됨). 또한 최신 버전의 SQL Server를 실행하는 보조 복제본에 대한 초기 장애 조치(failover) 이후에, 가용성 그룹의 데이터베이스는 업그레이드 프로세스를 거쳐 최신 버전으로 업데이트됩니다. 이 기간 동안 이러한 데이터베이스에 대해 읽기가 가능한 복제본은 없습니다. 초기 장애 조치(failover) 후 가동 중지 시간은 가용성 그룹의 데이터베이스 수에 따라 달라집니다. 원래 주 데이터베이스로 장애 복구(failback)를 계획하는 경우, 이 단계는 장애 복구 시 반복되지 않습니다.
   
 >[!NOTE]  
 >이 문서는 SQL Server 업그레이드에 대한 설명으로 제한됩니다. WSFC(Windows Server Failover Cluster) 클러스터를 포함하는 운영 체제 업그레이드를 다루지 않습니다. Windows Server 2012 R2 이전의 운영 체제에서는 장애 조치(Failover) 클러스터를 호스팅하는 Windows 운영 체제 업그레이드가 지원되지 않습니다. Windows Server 2012 R2에서 실행되는 클러스터 노드를 업그레이드하려면 [클러스터 운영 체제 롤링 업그레이드](https://docs.microsoft.com/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade)를 참조하세요.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 시작하기 전에 다음과 같은 중요한 정보를 검토하십시오.  
   
-- [지원되는 버전 및 버전 업그레이드](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): 사용자의 Windows 운영 체제 버전 및 SQL Server 버전에서 SQL Server 2016으로 업그레이드할 수 있는지 확인합니다. 예를 들어, SQL Server 2005 인스턴스에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]로 직접 업그레이드할 수 없습니다.  
+- [지원되는 버전 및 에디션 업그레이드](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): 사용 중인 Windows 운영 체제 버전 및 SQL Server 버전에서 SQL Server 2016으로 업그레이드할 수 있는지 확인합니다. 예를 들어, SQL Server 2005 인스턴스에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]로 직접 업그레이드할 수 없습니다.  
   
-- [데이터베이스 엔진 업그레이드 방법 선택](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): 올바른 순서로 업그레이드하려면 지원되는 버전 및 버전 업그레이드에 대한 검토와 사용자 환경에 설치된 기타 구성 요소를 바탕으로 적절한 업그레이드 방법 및 단계를 선택합니다.  
+- [데이터베이스 엔진 업그레이드 방법 선택](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): 올바른 순서로 업그레이드하려면 지원되는 버전 및 에디션 업그레이드에 대한 검토 및 환경에 설치된 기타 구성 요소를 기반으로 적합한 업그레이드 방법 및 단계를 선택합니다.  
   
 - [데이터베이스 엔진 업그레이드 계획 및 테스트](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): 릴리스 정보 및 알려진 업그레이드 문제, 업그레이드 전 검사 목록을 검토한 후 업그레이드 계획을 개발하고 테스트합니다.  
   
-- [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 설치하기 위한 소프트웨어 요구 사항을 검토합니다. 추가 소프트웨어가 필요한 경우 가동 중지 시간을 최소화하기 위해 업그레이드 프로세스를 시작하기 전에 각 노드에 설치하십시오.  
+- [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 설치를 위한 소프트웨어 요구 사항을 검토합니다. 추가 소프트웨어가 필요한 경우 가동 중지 시간을 최소화하기 위해 업그레이드 프로세스를 시작하기 전에 각 노드에 설치하십시오.  
 
-- [AG 데이터베이스에 변경 데이터 캡처 또는 복제가 사용되고 있는지 확인](#special-steps-for-change-data-capture-or-replication): AG의 데이터베이스에 CDC(변경 데이터 캡처)가 활성화된 경우 이러한 [지침](#special-steps-for-change-data-capture-or-replication)을 완수하세요.
+- [변경 데이터 캡처 또는 복제가 AG 데이터베이스에 사용되는지 확인](#special-steps-for-change-data-capture-or-replication): CDC(변경 데이터 캡처)를 위해 AG의 데이터베이스가 활성화되어 있는 경우, 다음 [지침](#special-steps-for-change-data-capture-or-replication)을 완료합니다.
 
 >[!NOTE]  
 >동일한 AG의 SQL Server 인스턴스 혼합 버전은 롤링 업그레이드 외부에서 지원되지 않으며, 업그레이드가 신속하게 이루어져야 하므로 장기간 해당 상태로 있어서는 안됩니다. SQL Server 2016을 업그레이드하기 위한 다른 옵션은 분산 가용성 그룹을 사용하는 것입니다.

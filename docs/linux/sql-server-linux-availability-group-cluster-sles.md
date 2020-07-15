@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 89f8616b13f80642a62922d9a1e1023f153b23cb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6c5ecf91349a94acb2b18156f28056ce04da3a1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558448"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892329"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SQL Server 가용성 그룹에 대해 SLES 클러스터 구성
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 가이드에서는 SLES(SUSE Linux Enterprise Server) 12 SP2에서 SQL Server의 3노드 클러스터를 만드는 방법을 설명합니다. 고가용성을 위해 Linux의 가용성 그룹에는 세 개의 노드가 필요합니다. [가용성 그룹 구성의 고가용성 및 데이터 보호](sql-server-linux-availability-group-ha.md)를 참조하세요. 클러스터링 계층은 [Pacemaker](https://clusterlabs.org/)를 토대로 빌드된 SUSE [HAE(고가용성 확장)](https://www.suse.com/products/highavailability)를 기반으로 합니다. 
 
@@ -28,6 +28,7 @@ ms.locfileid: "75558448"
 >[!NOTE]
 >이때 Linux의 Pacemaker와 SQL Server의 통합은 Windows의 WSFC와 같이 결합되지 않습니다. Linux의 SQL Server 서비스는 클러스터를 인식하지 못합니다. Pacemaker가 가용성 그룹 리소스를 포함하여 클러스터 리소스의 모든 오케스트레이션을 제어합니다. Linux에서는 sys.dm_hadr_cluster와 같은 클러스터 정보를 제공하는 Always On 가용성 그룹 DMV(동적 관리 뷰)를 사용하지 않아야 합니다. 또한 가상 네트워크 이름은 WSFC에만 해당되며, Pacemaker에는 동일한 항목이 없습니다. 수신기를 만들어 장애 조치(failover) 후의 투명한 재연결에 사용할 수는 있지만, 다음 섹션에서 설명하는 것처럼 가상 IP 리소스를 만드는 데 사용되는 IP와 함께 수신기 이름을 DNS 서버에 수동으로 등록해야 합니다.
 
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
 ## <a name="roadmap"></a>로드맵
 
@@ -48,7 +49,7 @@ ms.locfileid: "75558448"
 
 5. [가용성 그룹을 클러스터의 리소스로 추가합니다](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server). 
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 다음 엔드투엔드 시나리오를 완료하려면 3노드 클러스터를 배포할 머신 3대가 필요합니다. 다음 단계에서는 이러한 서버를 구성하는 방법을 간략하게 설명합니다.
 
@@ -313,8 +314,8 @@ commit
 1. 사용자가 노드 1에서 노드 2로의 리소스 마이그레이션을 가용성 그룹 마스터에 실행합니다.
 2. 노드 1에서 가상 IP 리소스가 중지됩니다.
 3. 노드 2에서 가상 IP 리소스가 시작됩니다. 이때 노드 2는 여전히 장애 조치(failover) 전 보조 복제본이지만, IP 주소가 일시적으로 노드 2를 가리킵니다. 
-4. 노드 1의 가용성 그룹 마스터가 슬레이브로 수준이 내려갑니다.
-5. 노드 2의 가용성 그룹 슬레이브가 마스터로 수준이 올라갑니다. 
+4. 노드 1의 가용성 그룹 마스터가 수준이 내려갑니다.
+5. 노드 2의 가용성 그룹이 마스터로 수준이 올라갑니다. 
 
 IP 주소가 일시적으로 장애 조치(failover) 이전 보조 복제본이 있는 노드를 가리키지 않도록 하려면 정렬 제약 조건을 추가합니다. 정렬 제약 조건을 추가하려면 한 노드에서 다음 명령을 실행합니다. 
 

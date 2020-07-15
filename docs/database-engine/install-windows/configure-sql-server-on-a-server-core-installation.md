@@ -1,5 +1,6 @@
 ---
 title: Server Core 설치 구성
+description: 이 문서에서는 Server Core 설치 시 SQL Server를 구성하는 방법과 문제 해결 도구에 대해 자세히 설명합니다.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ce38e546aa77e375d65a9f95f708718d283a53b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1791807519f8e7a6fb47c8ec838f7f9da112a3ed
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251593"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883258"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Server Core 설치 시 SQL Server 구성
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 이 문서에서는 Server Core 설치에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 구성하는 방법에 대한 자세한 내용을 다룹니다.  
 
@@ -109,7 +110,7 @@ Net 서비스를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
   
 5. **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구성 관리자**를 두 번 클릭합니다.  
   
-6. **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구성 관리자**에서 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스**를 클릭하고, **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<인스턴스 이름>)를 마우스 오른쪽 단추로 클릭한 다음 [속성]을 클릭합니다. 여기서 \<인스턴스 이름>은 Always On 가용성 그룹을 사용하도록 설정하려는 로컬 서버 인스턴스의 이름입니다.  
+6. **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구성 관리자**에서 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스**를 클릭하고 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<instance name>)를 마우스 오른쪽 단추로 클릭한 다음 [속성]을 클릭합니다. 여기서 \<instance name>은 Always On 가용성 그룹을 사용하도록 설정하려는 로컬 서버 인스턴스의 이름입니다.  
   
 7. **AlwaysOn 고가용성** 탭을 선택합니다.  
   
@@ -215,17 +216,17 @@ $Tcp
 |[dtexec 유틸리티](../../integration-services/packages/dtexec-utility.md)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 구성 및 실행하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[dtutil 유틸리티](../../integration-services/dtutil-utility.md)|SSIS 패키지를 관리하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[osql 유틸리티](../../tools/osql-utility.md)|명령 프롬프트에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있습니다.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlagent90 애플리케이션](../../tools/sqlagent90-application.md)|명령 프롬프트에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 시작하는 데 사용합니다.|\<드라이브>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*instance_name*>\MSSQL\Binn|  
+|[sqlagent90 애플리케이션](../../tools/sqlagent90-application.md)|명령 프롬프트에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 시작하는 데 사용합니다.|\<drive>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*instance_name*>\MSSQL\Binn|  
 |[sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)|명령 프롬프트에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있습니다.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[SQLdiag 유틸리티](../../tools/sqldiag-utility.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 고객 서비스 지원 센터에 제공할 진단 정보를 수집하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlmaint 유틸리티](../../tools/sqlmaint-utility.md)|이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 만든 데이터베이스 유지 관리 계획을 실행하는 데 사용합니다.|\<드라이브>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.MSSQLSERVER\MSSQL\Binn|  
+|[sqlmaint 유틸리티](../../tools/sqlmaint-utility.md)|이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 만든 데이터베이스 유지 관리 계획을 실행하는 데 사용합니다.|\<drive>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.MSSQLSERVER\MSSQL\Binn|  
 |[sqlps 유틸리티](../../tools/sqlps-utility.md)|PowerShell 명령 및 스크립트를 실행하는 데 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 공급자 및 cmdlet을 로드하고 등록합니다.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlservr 애플리케이션](../../tools/sqlservr-application.md)|문제 해결을 위해 명령 프롬프트에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 시작 및 중지하는 데 사용합니다.|\<드라이브>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.MSSQLSERVER\MSSQL\Binn|  
+|[sqlservr 애플리케이션](../../tools/sqlservr-application.md)|문제 해결을 위해 명령 프롬프트에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 시작 및 중지하는 데 사용합니다.|\<drive>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.MSSQLSERVER\MSSQL\Binn|  
   
 ##  <a name="use-troubleshooting-tools"></a><a name="BKMK_troubleshoot"></a> 문제 해결 도구 사용  
  [SQLdiag 유틸리티](../../tools/sqldiag-utility.md) 를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 기타 서버 유형에서 로그 및 데이터 파일을 수집할 수 있으며 이러한 파일을 사용하여 지속적으로 서버를 모니터링하거나 특정 서버 문제를 해결할 수 있습니다. SQLdiag는 Microsoft 고객 지원 서비스에서 진단 정보를 빠르고 간편하게 수집할 수 있도록 지원하는 유틸리티입니다.  
   
- [SQLdiag 유틸리티](../../tools/sqldiag-utility.md) 문서에 지정된 구문을 사용하여 Server Core의 관리자 명령 프롬프트에서 유틸리티를 시작할 수 있습니다.  
+ 문서에 지정된 구문을 사용하여 Server Core의 관리자 명령 프롬프트에서 유틸리티를 시작할 수 있습니다. [SQLdiag 유틸리티](../../tools/sqldiag-utility.md).  
   
 ## <a name="see-also"></a>참고 항목  
  [Server Core에 SQL Server 설치](../../database-engine/install-windows/install-sql-server-on-server-core.md)   

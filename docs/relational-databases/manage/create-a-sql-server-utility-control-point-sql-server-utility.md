@@ -1,5 +1,6 @@
 ---
 title: SQL Server 유틸리티 제어 지점 만들기(SQL Server 유틸리티) | Microsoft 문서
+description: SQL Server 유틸리티 제어 지점(UCP)를 만들어 리소스 사용 병목 현상 및 통합 기회를 식별하는 데 도움을 받으세요.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b342e77c542cd9f3357bccd4b97f3a876d1f5f1d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3203785a5850d2ac8a0d635ed9f899daeb2c52fe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115694"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776021"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>SQL Server 유틸리티 제어 지점 만들기(SQL Server 유틸리티)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   엔터프라이즈에서는 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티를 사용할 수 있으며 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티가 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 데이터 계층 애플리케이션을 관리할 수 있습니다. 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에는 UCP(유틸리티 제어 지점)가 하나씩 있습니다. 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티를 위한 새 UCP를 만들어야 합니다. 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스와 데이터 계층 애플리케이션은 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 멤버이며 단일 UCP에 의해 관리됩니다.  
   
  UCP는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에서 15분마다 구성 및 성능 정보를 수집합니다. 이 정보는 UCP의 UMDW(유틸리티 관리 데이터 웨어하우스)에 저장됩니다. UMDW의 파일 이름은 sysutility_mdw입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 데이터를 정책과 비교하면 리소스 사용 병목 현상과 통합 기회를 식별하는 데 도움이 됩니다.  

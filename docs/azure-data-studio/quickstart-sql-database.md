@@ -1,31 +1,30 @@
 ---
 title: Azure SQL 데이터베이스 연결 및 쿼리
-titleSuffix: Azure Data Studio
 description: 이 빠른 시작에서는 Azure Data Studio를 사용하여 SQL 데이터베이스에 연결하고 쿼리를 실행하는 방법을 보여 줍니다.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: 2ed7841c3e6205ad0a6df4f232f021aeb24983cd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73e910b6d199a4918eafca067a95136e31ac079c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957077"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771953"
 ---
-# <a name="quickstart-use-name-sos-to-connect-and-query-azure-sql-database"></a>빠른 시작: [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 Azure SQL 데이터베이스 연결 및 쿼리
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>빠른 시작: Azure Data Studio를 사용한 Azure SQL 데이터베이스 연결 및 쿼리
 
-이 빠른 시작에서는 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 Azure SQL Database 서버에 연결합니다. 그런 다음, T-SQL(Transact-SQL) 문을 실행하여 다른 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자습서에서 사용되는 TutorialDB 데이터베이스를 만들고 쿼리합니다.
+이 빠른 시작에서는 Azure Data Studio를 사용하여 Azure SQL Database 서버에 연결합니다. 그런 다음, T-SQL(Transact-SQL) 문을 실행하여 다른 Azure Data Studio 자습서에서 사용되는 TutorialDB 데이터베이스를 만들고 쿼리합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
-이 빠른 시작을 완료하려면 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 및 Azure SQL Database 서버가 필요합니다.
+이 빠른 시작을 완료하려면 Azure Data Studio 및 Azure SQL Database 서버가 필요합니다.
 
-- [[!INCLUDE[name-sos](../includes/name-sos-short.md)] 설치](download.md)
+- [Azure Data Studio 설치](download.md)
 
 Azure SQL Server가 없는 경우 다음 Azure SQL Database 빠른 시작 중 하나를 완료합니다. 이후 단계를 위해 정규화된 서버 이름과 로그인 자격 증명을 기억합니다.
 
@@ -36,9 +35,9 @@ Azure SQL Server가 없는 경우 다음 Azure SQL Database 빠른 시작 중 �
 
 ## <a name="connect-to-your-azure-sql-database-server"></a>Azure SQL Database 서버에 연결
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 Azure SQL Database 서버에 대한 연결을 설정합니다.
+Azure Data Studio를 사용하여 Azure SQL Database 서버에 대한 연결을 설정합니다.
 
-1. [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 처음 실행하면 **시작** 페이지가 열립니다. **시작** 페이지가 표시되지 않으면 **도움말** > **시작**을 선택합니다. **새 연결**을 선택하여 **연결** 창을 엽니다.
+1. Azure Data Studio를 처음 실행하면 **시작** 페이지가 열립니다. **시작** 페이지가 표시되지 않으면 **도움말** > **시작**을 선택합니다. **새 연결**을 선택하여 **연결** 창을 엽니다.
    
    ![새 연결 아이콘](media/quickstart-sql-database/new-connection-icon.png)
 
@@ -51,7 +50,7 @@ Azure SQL Server가 없는 경우 다음 Azure SQL Database 빠른 시작 중 �
    | **사용자 이름** | 서버 관리자 계정 사용자 이름 | 서버를 만드는 데 사용된 계정의 사용자 이름입니다. |
    | **암호(SQL 로그인)** | 서버 관리자 계정 암호 | 서버를 만드는 데 사용된 계정의 암호입니다. |
    | **암호를 저장하시겠습니까?** | Yes 또는 No | 암호를 매번 입력하지 않으려면 **예**를 선택합니다. |
-   | **데이터베이스 이름** | ‘비워 둠’  | 여기서는 서버에만 연결합니다. |
+   | **데이터베이스 이름** | ‘비워 둠’ | 여기서는 서버에만 연결합니다. |
    | **서버 그룹** | <Default> 선택 | 직접 만든 특정 서버 그룹으로 이 필드를 설정할 수 있습니다. | 
 
    ![새 연결 아이콘](media/quickstart-sql-database/new-connection-screen.png)  
@@ -66,7 +65,7 @@ Azure SQL Server가 없는 경우 다음 Azure SQL Database 빠른 시작 중 �
 
 ## <a name="create-the-tutorial-database"></a>자습서 데이터베이스 만들기
 
-다음 섹션에서는 다른 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자습서에서 사용되는 TutorialDB 데이터베이스를 만듭니다.
+다음 섹션에서는 다른 Azure Data Studio 자습서에서 사용되는 TutorialDB 데이터베이스를 만듭니다.
 
 1. **서버** 사이드바에서 Azure SQL Server를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 선택합니다.
 

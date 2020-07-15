@@ -1,5 +1,6 @@
 ---
 title: 로그 전달 정보(SQL Server) | Microsoft Docs
+description: 주 서버 인스턴스의 주 데이터베이스에서 보조 데이터베이스로 트랜잭션 로그 백업을 전달하는 SQL Server 로그 전달에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -25,16 +26,16 @@ ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a50c5344f8742a8483d952b8cab3b03d8d666b31
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3909f2e2ce97bcfb02efe850cf4d9456ed396464
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68057916"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883498"
 ---
 # <a name="about-log-shipping-sql-server"></a>로그 전달 정보(SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 전달을 사용하면 *주 서버* 인스턴스의 *주 데이터베이스* 에서 별도의 *보조 서버* 인스턴스에 있는 하나 이상의 *보조 데이터베이스* 로 트랜잭션 로그 백업을 자동으로 보낼 수 있습니다. 트랜잭션 로그 백업은 각 보조 데이터베이스에 개별적으로 적용됩니다. *모니터 서버*라는 선택적인 세 번째 서버 인스턴스는 백업 및 복원 작업의 기록과 상태를 기록하고 예약된 대로 작업이 실행되지 않으면 선택적으로 경고를 발생시킵니다.  
   

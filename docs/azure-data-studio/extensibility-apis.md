@@ -1,25 +1,24 @@
 ---
 title: 확장성 API
-titleSuffix: Azure Data Studio
 description: Azure Data Studio의 확장성 API에 대해 알아보기
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8a4ebe26cbbf768222c7b97b95fa7df238faded3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c94935e7d8b1a72b6a99f83618fb0e8855379ed8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75001898"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774647"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 확장성 API
 
-[!INCLUDE[name-sos](../includes/name-sos.md)]는 확장 프로그램이 개체 탐색기와 같은 Azure Data Studio의 다른 부분과 상호 작용하는 데 사용할 수 있는 API를 제공합니다. 이러한 API는 [`src/sql/azdata.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/azdata.d.ts) 파일에서 사용할 수 있으며 아래에 설명되어 있습니다.
+Azure Data Studio는 확장 프로그램이 개체 탐색기와 같은 Azure Data Studio의 다른 부분과 상호 작용하는 데 사용할 수 있는 API를 제공합니다. 이러한 API는 [`src/sql/azdata.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/main/src/sql/azdata.d.ts) 파일에서 사용할 수 있으며 아래에 설명되어 있습니다.
 
 ## <a name="connection-management"></a>연결 관리
 `azdata.connection`
@@ -159,6 +158,6 @@ vscode.commands.registerCommand('mssql.objectexplorer.interact', () => {
 
 ## <a name="proposed-apis"></a>제안된 API
 
-확장을 통해 대화 상자, 마법사 및 설명서 탭에 사용자 지정 UI를 표시할 수 있도록 하기 위해 제안된 API를 추가했습니다. 이러한 API는 언제든지 변경할 수 있지만 [제안된 API 유형 파일](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/azdata.proposed.d.ts)에서 자세한 설명서를 참조하세요. 이러한 API 중 일부를 사용하는 방법의 예제는 ["sqlservices" 샘플 확장](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices)에서 찾을 수 있습니다.
+확장을 통해 대화 상자, 마법사 및 설명서 탭에 사용자 지정 UI를 표시할 수 있도록 하기 위해 제안된 API를 추가했습니다. 이러한 API는 언제든지 변경할 수 있지만 [제안된 API 유형 파일](https://github.com/Microsoft/azuredatastudio/blob/main/src/sql/azdata.proposed.d.ts)에서 자세한 설명서를 참조하세요. 이러한 API 중 일부를 사용하는 방법의 예제는 ["sqlservices" 샘플 확장](https://github.com/Microsoft/azuredatastudio/tree/main/samples/sqlservices)에서 찾을 수 있습니다.
 
 

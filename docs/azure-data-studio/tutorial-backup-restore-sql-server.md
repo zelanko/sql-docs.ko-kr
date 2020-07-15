@@ -1,25 +1,24 @@
 ---
 title: 데이터베이스 백업 및 복원
-titleSuffix: Azure Data Studio
 description: Azure Data Studio를 사용하여 데이터베이스를 백업 및 복원하는 방법을 알아봅니다.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: bdf3bb3151cfac9f68a9765a2c59232b9fb59f56
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ddb8cf9f3c0f73fde9f2fbbc30a7c6f6464d6cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287217"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758291"
 ---
-# <a name="backup-and-restore-databases-using-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 데이터베이스 백업 및 복원
+# <a name="backup-and-restore-databases-using-azure-data-studio"></a>Azure Data Studio를 사용하여 데이터베이스 백업 및 복원
 
-이 자습서에서는 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 다음을 수행하는 방법을 알아봅니다.
+이 자습서에서는 Azure Data Studio를 사용하여 다음을 수행하는 방법을 알아봅니다.
 > [!div class="checklist"]
 > * 데이터베이스 백업 
 > * 백업 상태 보기
@@ -27,7 +26,7 @@ ms.locfileid: "79287217"
 > * 데이터베이스 복원
 > * 복원 작업의 상태 보기
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 자습서에는 SQL Server *TutorialDB*가 필요합니다. *TutorialDB* 데이터베이스를 만들려면 다음 빠른 시작 중 하나를 완료합니다.
 

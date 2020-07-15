@@ -8,21 +8,21 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 3ddc3ffa91b62956fdfef91ff3c19a784fc2fe2b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8520c3741102597ac3b7e93aceabc3ec6c114230
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216662"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883923"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Windows에서 SQL Server Management Studio를 사용하여 SQL Server on Linux 관리
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 문서에서는 [SSMS(SQL Server Management Studio)](../ssms/sql-server-management-studio-ssms.md)를 소개하고 몇 가지 일반적인 작업을 안내합니다. SSMS는 Windows 애플리케이션이므로 Linux의 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 머신이 있는 경우 SSMS를 사용합니다.
 
 > [!TIP]
-> SSMS를 실행할 Windows 머신이 없는 경우 새 [Azure Data Studio](../azure-data-studio/index.md)을 고려합니다. 이 항목은 SQL Server를 관리하기 위한 도구를 제공하고 Linux 및 Windows에서 실행됩니다.
+> SSMS를 실행할 Windows 머신이 없는 경우 새 [Azure Data Studio](../azure-data-studio/index.yml)을 고려합니다. 이 항목은 SQL Server를 관리하기 위한 도구를 제공하고 Linux 및 Windows에서 실행됩니다.
 
 [SSMS(SQL Server Management Studio)](../ssms/sql-server-management-studio-ssms.md)는 Microsoft에서 개발 및 관리를 위해 체험용으로 제공하는 SQL 도구 모음의 일부입니다. SSMS는 SQL Server의 모든 구성 요소를 액세스, 구성, 관리, 운영 및 개발하기 위한 통합 환경입니다. 온-프레미스, Docker 컨테이너 및 클라우드의 모든 플랫폼에서 실행되는 SQL Server에 연결할 수 있습니다. 또한 Azure SQL Database 및 Azure SQL Data Warehouse에 연결합니다. SSMS는 수많은 풍부한 스크립트 편집기와 광범위한 그래픽 도구 그룹을 결합하여 기술 수준에 상관없이 모든 개발자와 관리자에게 SQL Server에 대한 액세스 권한을 제공합니다.
 
@@ -58,7 +58,7 @@ SQL Server로 작업하는 경우 항상 최신 버전의 SSML(SQL Server Manage
    | 설정 | Description |
    |-----|-----|
    | **서버 유형** | 기본값은 데이터베이스 엔진입니다. 이 값을 변경하지 마세요. |
-   | **서버 이름** | 대상 Linux SQL Server 머신의 이름 또는 IP 주소를 입력합니다. |
+   | **서버 이름** | 대상 Linux SQL Server 머신의 이름 또는 IP 주소를 입력하고 `IP,port` 형식으로 포팅합니다. |
    | **인증** | SQL Server on Linux의 경우 **SQL Server 인증**을 사용합니다. |
    | **로그인** | 서버의 데이터베이스에 대한 액세스 권한이 있는 사용자의 이름을 입력합니다(예: 설치하는 동안 생성된 기본 **SA** 계정). |
    | **암호** | 지정된 사용자의 암호를 입력합니다(**SA** 계정의 경우 설치하는 동안 이 암호를 만들었음). |
@@ -103,9 +103,9 @@ Transact-SQL 쿼리를 사용하여 거의 모든 관리 작업을 수행할 수
 
 1. SQL Server on Linux에서 SSMS 시작 및 서버에 연결
 
-2. 개체 탐색기에서 ‘데이터베이스’ 폴더를 마우스 오른쪽 단추로 클릭한 다음, *새 데이터베이스...”를 클릭합니다. 
+2. 개체 탐색기에서 ‘데이터베이스’ 폴더를 마우스 오른쪽 단추로 클릭한 다음, *새 데이터베이스...”를 클릭합니다.
 
-3. ‘새 데이터베이스’ 대화 상자에서 새 데이터베이스의 이름을 입력한 다음, ‘확인’을 클릭합니다.  
+3. ‘새 데이터베이스’ 대화 상자에서 새 데이터베이스의 이름을 입력한 다음, ‘확인’을 클릭합니다. 
 
 새 데이터베이스가 서버에서 생성되었습니다. T-SQL을 사용하여 새 데이터베이스를 만들려면 [CREATE DATABASE(SQL Server Transact-SQL)](../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.
 
@@ -113,11 +113,11 @@ Transact-SQL 쿼리를 사용하여 거의 모든 관리 작업을 수행할 수
 
 1. SQL Server on Linux에서 SSMS 시작 및 서버에 연결
 
-2. 개체 탐색기에서 ‘데이터베이스’ 폴더를 확장하여 서버에 있는 모든 데이터베이스 목록을 표시합니다. 
+2. 개체 탐색기에서 ‘데이터베이스’ 폴더를 확장하여 서버에 있는 모든 데이터베이스 목록을 표시합니다.
 
-3. 개체 탐색기에서 삭제하려는 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음, ‘삭제’를 클릭합니다. 
+3. 개체 탐색기에서 삭제하려는 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음, ‘삭제’를 클릭합니다.
 
-4. ‘개체 삭제’ 대화 상자에서 ‘기존 연결 닫기’를 선택한 후 ‘다음’을 클릭합니다.   
+4. ‘개체 삭제’ 대화 상자에서 ‘기존 연결 닫기’를 선택한 후 ‘다음’을 클릭합니다.  
 
 데이터베이스가 서버에서 삭제되었습니다. T-SQL을 사용하여 데이터베이스를 삭제하려면 [DROP DATABASE(SQL Server Transact-SQL)](../t-sql/statements/drop-database-transact-sql.md)를 참조하세요.
 
@@ -127,7 +127,7 @@ Transact-SQL 쿼리를 사용하여 거의 모든 관리 작업을 수행할 수
 
 1. SQL Server on Linux에서 SSMS 시작 및 서버에 연결
 
-1. 개체 탐색기에서 ‘서버’ 노드를 마우스 오른쪽 단추로 클릭한 후 ‘작업 모니터’를 클릭합니다.  
+1. 개체 탐색기에서 ‘서버’ 노드를 마우스 오른쪽 단추로 클릭한 후 ‘작업 모니터’를 클릭합니다. 
 
 작업 모니터는 다음 정보가 포함된 확장 및 축소 가능한 창을 표시합니다.
 

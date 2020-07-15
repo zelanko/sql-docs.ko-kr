@@ -1,5 +1,6 @@
 ---
 title: 포함된 데이터베이스 | Microsoft 문서
+description: 포함된 데이터베이스, 부분적으로 포함된 데이터베이스의 이점 및 제한 사항, SQL Server 2019가 데이터베이스를 격리하는 방식에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e42d7dbfe00ff957511d9853e39febd29b7aab66
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ee26ff95b5317d65e71fbdb91e39a2d56e9f5f95
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137333"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756340"
 ---
 # <a name="contained-databases"></a>포함된 데이터베이스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   *포함된 데이터베이스* 는 다른 데이터베이스 및 해당 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 격리된 데이터베이스입니다.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 인스턴스에서 데이터베이스를 격리하는 방법은 네 가지가 있습니다.  
   

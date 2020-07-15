@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff383fface773da790fd52c498e861ee402dc862
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557938"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882059"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>SQL Server 커넥터, 부록
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터에 대한 추가 정보는 이 항목에서 제공됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터에 대한 자세한 내용은 [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 단계](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md) 및 [SQL 암호화 기능을 통해 SQL Server 커넥터 사용](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)을 참조하세요.  
   
@@ -147,13 +147,13 @@ ms.locfileid: "75557938"
 
 요약하면 다음 단계와 같습니다.  
   
-* 자격 증명 모음 키를 백업합니다(Backup-AzureKeyVaultKey Powershell cmdlet 사용).  
+* 자격 증명 모음 키를 백업합니다(Backup-AzureKeyVaultKey PowerShell cmdlet 사용).  
 * 자격 증명 모음이 실패하는 경우 동일한 지역*에서 새 자격 증명 모음을 만듭니다. 이 자격 증명 모음을 만드는 사용자는 SQL Server의 서비스 사용자 설정과 같은 기본 디렉터리에 있어야 합니다.  
-* 새 자격 증명 모음에 키를 복원합니다(Restore-AzureKeyVaultKey Powershell cmdlet 사용하면 이전과 동일한 이름으로 키를 복원할 수 있습니다). 동일한 이름의 키가 이미 있는 경우 복원이 실패합니다.  
+* 새 자격 증명 모음에 키를 복원합니다(Restore-AzureKeyVaultKey PowerShell cmdlet 사용하면 이전과 동일한 이름으로 키를 복원할 수 있습니다). 동일한 이름의 키가 이미 있는 경우 복원이 실패합니다.  
 * 이 새 자격 증명 모음을 사용할 수 있도록 SQL Server 서비스 사용자에게 권한을 부여합니다.  
 * 새 자격 증명 모음 이름이 반영되도록 데이터베이스 엔진에서 사용하는 SQL Server 자격 증명을 수정합니다(필요할 경우).  
   
-키 백업은 동일한 지역 또는 국가(미국, 캐나다, 일본, 오스트레일리아, 인도, APAC, 유럽, 브라질, 중국, 미국 정부 또는 독일) 클라우드에 있는 경우 Azure 지역에서 복원할 수 있습니다.  
+키 백업은 동일한 지리적 지역 또는 미국, 캐나다, 일본, 오스트레일리아, 인도, APAC, 유럽, 브라질, 중국, 미국 정부, 독일 등의 국가별 클라우드에 있다면 다양한 Azure 지역에서 복원할 수 있습니다.  
   
   
 ##  <a name="b-frequently-asked-questions"></a><a name="AppendixB"></a> 2. 질문과 대답  
@@ -167,7 +167,7 @@ ms.locfileid: "75557938"
   
 ### <a name="on-configuring-ssnoversion"></a>구성에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
-**SQL Server 커넥터에서 액세스해야 하는 엔드포인트는 무엇인가요?** 커넥터는 허용 목록에 포함되어야 하는 두 개의 엔드포인트와 통신합니다. Https의 경우 이러한 다른 서비스에 대한 아웃바운드 통신에 필요한 유일한 포트는 443입니다.
+**SQL Server 커넥터에서 액세스해야 하는 엔드포인트는 무엇인가요?** 커넥터는 허용해야 하는 두 개의 엔드포인트와 통신합니다. Https의 경우 이러한 다른 서비스에 대한 아웃바운드 통신에 필요한 유일한 포트는 443입니다.
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/* :443
 

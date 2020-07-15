@@ -1,5 +1,6 @@
 ---
 title: network packet size 서버 구성 옵션 구성 | Microsoft Docs
+description: 클라이언트와 서버 간에 요청 및 결과를 전송할 때 네트워크 패킷 크기 옵션을 사용하여 SQL Server에서 사용되는 패킷 크기를 설정하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - packets [SQL Server], size
 - network packet size option
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: b749231e6be3560ceadf24a51cc1f5cb880c24b3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8c87703d399f9f8906c4a3c4a7ea0703d092c333
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81288303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785897"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>network packet size 서버 구성 옵션 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 네트워크 패킷 크기 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **네트워크 패킷 크기** 옵션은 전체 네트워크에서 사용되는 패킷 크기(바이트)를 설정합니다. 패킷은 클라이언트와 서버 간에 요청 및 결과를 전송하는 고정된 크기의 데이터 청크입니다. 기본 패킷 크기는 4,096바이트입니다.  
   

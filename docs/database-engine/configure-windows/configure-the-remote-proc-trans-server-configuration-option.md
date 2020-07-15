@@ -1,5 +1,6 @@
 ---
 title: remote proc trans 서버 구성 옵션 구성 | Microsoft Docs
+description: "\"remote proc trans\" 옵션에 대해 알아봅니다. MS DTC 트랜잭션을 통해 서버 간 프로시저 작업을 보호하는 방법을 확인합니다."
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - remote proc trans option
 - distributed transactions [SQL Server], enforcing
 ms.assetid: cfbc6158-ab96-44b4-87eb-ea278c1b0c6b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 9a372bf572373d0c3557ec4e40a32ba937d57d88
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 466e0106b93196fd260d36c31f6f8d0a94e7bea9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012309"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785717"
 ---
 # <a name="configure-the-remote-proc-trans-server-configuration-option"></a>remote proc trans 서버 구성 옵션 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 원격 프로시저 트랜잭션 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **remote proc trans** 옵션을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] MS DTC(Distributed Transaction Coordinator) 트랜잭션을 통한 서버 간 프로시저 동작을 보호할 수 있습니다.  
   

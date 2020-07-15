@@ -1,6 +1,6 @@
 ---
 title: 가용성 그룹에 복제본 추가(SSMS)
-ms.description: Add a replica to an Always On availability group using the wizard found in SQL Server Management Studio.
+description: SQL Server Management Studio의 마법사를 사용하여 Always On 가용성 그룹에 복제본을 추가합니다.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: afca5e00f95056fc201f37260088c90004ff3d1f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1df0c28e1d7919b1694802b2b5f024cf5e6dcf6f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244978"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880241"
 ---
 # <a name="add-a-replica-to-your-always-on-availability-group-using-the-availability-group-wizard-in-sql-server-management"></a>SQL Server management의 가용성 그룹 마법사를 사용하여 Always On 가용성 그룹에 복제본 추가
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   **가용성 그룹에 복제본 추가 마법사**를 사용하여 기존 Always On 가용성 그룹에 새 보조 복제본을 추가할 수 있습니다.  
   
 > [!NOTE]  
@@ -70,9 +70,9 @@ ms.locfileid: "75244978"
   
 3.  보조 복제본을 추가할 가용성 그룹을 마우스 오른쪽 단추로 클릭하고 **복제본 추가** 명령을 선택합니다. 그러면 복제본을 가용성 그룹에 추가 마법사가 시작됩니다.  
   
-4.  **기존 보조 복제본에 연결** 페이지에서 가용성 그룹의 모든 보조 복제본에 연결합니다. 자세한 내용은 [기존 보조 복제본 페이지로 연결&#40;복제본 추가 마법사: 데이터베이스 추가 마법사&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)을 참조하세요.  
+4.  **기존 보조 복제본에 연결** 페이지에서 가용성 그룹의 모든 보조 복제본에 연결합니다. 자세한 내용은 [기존 보조 복제본 페이지로 연결&#40;복제본 추가 마법사: 데이터베이스 추가 마법사&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)를 참조하세요.  
   
-5.  **복제본 선택** 페이지에서 가용성 그룹에 대해 하나 이상의 새 보조 복제본을 지정하고 구성합니다. 이 페이지에는 세 개의 탭이 있습니다. 다음 표에서는 이러한 탭을 보여 줍니다. 자세한 내용은 [복제본 페이지 지정&#40;새 가용성 그룹 마법사: 복제본 추가 마법사&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)을 참조하세요.  
+5.  **복제본 선택** 페이지에서 가용성 그룹에 대해 하나 이상의 새 보조 복제본을 지정하고 구성합니다. 이 페이지에는 세 개의 탭이 있습니다. 다음 표에서는 이러한 탭을 보여 줍니다. 자세한 내용은 [복제본 페이지 지정&#40;새 가용성 그룹 마법사: 복제본 추가 마법사&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)를 참조하세요.  
   
     |탭|간략한 설명|  
     |---------|-----------------------|  
@@ -116,7 +116,7 @@ ms.locfileid: "75244978"
      마법사가 완료되면 **닫기** 를 클릭하여 종료합니다.  
   
 > [!IMPORTANT]  
->  복제본을 추가한 후에 [가용성 그룹에 보조 복제본 추가&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)를 참조하세요.  
+>  복제본을 추가한 후 "후속 작업: [가용성 그룹에 보조 복제본 추가&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)의 복제본 추가 후" 섹션을 참조하세요.  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   

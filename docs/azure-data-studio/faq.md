@@ -1,30 +1,28 @@
 ---
-title: FAQ
-titleSuffix: Azure Data Studio
+title: Azure Data Studio FAQ
 description: Azure Data Studio에 대한 FAQ(질문과 대답)입니다.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dfcab918073fedd80def91d3556e15f632a62edc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959544"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774614"
 ---
-# <a name="azure-data-studio-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] FAQ
+# <a name="azure-data-studio-faq"></a>Azure Data Studio FAQ
 
 ## <a name="what-is-azure-data-studio"></a>Azure Data Studio란?
 
 Azure Data Studio는 Windows, macOS 및 Linux에서 온-프레미스 및 클라우드 데이터 플랫폼의 Azure Data 제품군을 사용하는 데이터 전문가를 위한 새로운 오픈 소스 플랫폼 간 데스크톱 환경입니다. 이전에는 SQL Operations Studio라는 미리 보기 이름으로 릴리스되었던 Azure Data Studio는 매우 빠른 IntelliSense, 코드 조각, 원본 제어 통합 및 통합 터미널을 사용하여 최신 편집기 환경을 제공합니다. 데이터 플랫폼 사용자를 대상으로 설계되었으며 쿼리 결과 세트의 기본 제공 차트 기능과 사용자 지정이 가능한 대시보드를 포함합니다.
 
 연구를 통해 사용자들이 SQL Server Management Studio를 사용하여 다른 작업을 수행하는 것보다 쿼리 편집에 훨씬 더 많은 시간을 투입하고 있다는 사실이 확인되었습니다. 이러한 이유로 Azure Data Studio는 가장 많이 사용되는 기능에 좀 더 주안점을 두고, 추가 환경을 선택적 확장으로 제공하도록 디자인되었습니다. 이를 통해 모든 사용자는 가장 자주 사용하는 워크플로로 환경을 사용자 지정할 수 있습니다.
-
 
 ## <a name="how-much-does-azure-data-studio-cost"></a>Azure Data Studio 비용은 얼마나 되나요?
 
@@ -59,8 +57,8 @@ Azure Data Studio 및 해당 데이터 공급자용 소스 코드는 GitHub에�
 *Azure Data Studio를 사용하는 경우:*
 
 - 쿼리 편집 또는 실행에 대부분의 시간을 보내고 있습니다.
-- 결과 세트를 빠르게 차트로 만들고 시각화하는 기능이 필요합니다.
-- sqlcmd 또는 Powershell을 사용하여 통합 터미널을 통해 대부분의 관리 작업을 실행할 수 있습니다.
+- 결과 집합을 빠르게 차트로 만들고 시각화하는 기능이 필요합니다.
+- sqlcmd 또는 PowerShell을 사용하여 통합 터미널을 통해 대부분의 관리 작업을 실행할 수 있습니다.
 - 마법사 환경이 별로 필요하지 않습니다.
 - 심층 관리 또는 플랫폼 관련 구성을 수행할 필요가 없습니다.
 - macOS 또는 Linux에서 실행해야 합니다.
@@ -82,49 +80,49 @@ Azure Data Studio 및 해당 데이터 공급자용 소스 코드는 GitHub에�
 
 |기능|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Azure 로그인|yes|yes|
-|대시보드|yes| |
-|확장|yes| |
-|통합 터미널|yes||
-|개체 탐색기|yes|yes|
-|개체 스크립팅|yes|yes|
-|프로젝트 시스템|yes||
-|테이블에서 선택|yes|yes|
-|원본 코드 제어|yes||
-|작업창|yes||
-|테마|yes||
-|어둡게 모드|yes||
+|Azure 로그인|예|예|
+|대시보드|예| |
+|확장|예| |
+|통합 터미널|예||
+|개체 탐색기|예|예|
+|개체 스크립팅|예|예|
+|프로젝트 시스템|예||
+|테이블에서 선택|예|예|
+|원본 코드 제어|예||
+|작업창|예||
+|테마|예||
+|어둡게 모드|예||
 |Azure Resource Explorer|미리 보기||
-|스크립트 생성 마법사||yes
-|DACPAC 가져오기\내보내기||yes|
-|개체 속성||yes|
-|테이블 디자이너||yes|
+|스크립트 생성 마법사||예
+|DACPAC 가져오기\내보내기||예|
+|개체 속성||예|
+|테이블 디자이너||예|
 
 ### <a name="query-editor"></a>쿼리 편집기
 
 |기능|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|차트 뷰어|yes||
-|CSV, JSON, XLSX로 결과 내보내기|yes||
-|IntelliSense|yes|yes|
-|코드 조각|yes|yes|
-|플랜 표시|미리 보기|yes|
-|클라이언트 통계||yes|
-|활성 쿼리 통계||yes|
-|쿼리 옵션||yes|
-|파일로 결과 저장||yes|
-|텍스트로 결과 표시||yes|
-|공간 뷰어||yes|
-|SQLCMD||yes|
-|T-SQL 디버거||yes|
+|차트 뷰어|예||
+|CSV, JSON, XLSX로 결과 내보내기|예||
+|IntelliSense|예|예|
+|코드 조각|예|예|
+|플랜 표시|미리 보기|예|
+|클라이언트 통계||예|
+|활성 쿼리 통계||예|
+|쿼리 옵션||예|
+|파일로 결과 저장||예|
+|텍스트로 결과 표시||예|
+|공간 뷰어||예|
+|SQLCMD||예|
+|T-SQL 디버거||예|
 
 ### <a name="operating-system-support"></a>운영 체제 지원
 
 |기능|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Windows|yes|yes|
-|macOS|yes||
-|Linux|yes||
+|Windows|예|예|
+|macOS|예||
+|Linux|예||
 
 ### <a name="data-engineering"></a>데이터 엔지니어링
 
@@ -138,29 +136,29 @@ Azure Data Studio 및 해당 데이터 공급자용 소스 코드는 GitHub에�
 
 |기능|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|백업/복원|yes|yes|
-|플랫 파일 가져오기|미리 보기|yes|
-|SQL 에이전트|미리 보기|yes|
-|SQL 프로파일러|미리 보기|yes|
-|Always On||yes|
-|Always Encrypted||yes|
-|데이터 복사 마법사||yes|
-|데이터 튜닝 관리자||yes|
-|데이터베이스 다이어그램||yes|
-|오류 로그 뷰어||yes|
-|유지 관리 계획||yes|
-|다중 서버 쿼리||yes|
-|정책 기반 관리||yes|
-|PolyBase||yes|
-|쿼리 저장소||yes|
-|등록된 서버||yes|
-|복제||yes|
-|보안 관리||yes|
-|Service Broker||yes|
-|SQL 메일||yes|
-|Template Explorer||yes|
-|취약성 평가||yes|
-|XEvent 관리||yes|
+|백업/복원|예|예|
+|플랫 파일 가져오기|미리 보기|예|
+|SQL 에이전트|미리 보기|예|
+|SQL 프로파일러|미리 보기|예|
+|Always On||예|
+|Always Encrypted||예|
+|데이터 복사 마법사||예|
+|데이터 튜닝 관리자||예|
+|데이터베이스 다이어그램||예|
+|오류 로그 뷰어||예|
+|유지 관리 계획||예|
+|다중 서버 쿼리||예|
+|정책 기반 관리||예|
+|PolyBase||예|
+|쿼리 저장소||예|
+|등록된 서버||예|
+|복제||예|
+|보안 관리||예|
+|Service Broker||예|
+|SQL 메일||예|
+|Template Explorer||예|
+|취약성 평가||예|
+|XEvent 관리||예|
 
 
 ## <a name="azure-data-studio-is-missing-a-feature-that-is-in-ssmsssdt-will-you-add-it"></a>Azure Data Studio에 SSMS/SSDT 기능이 없습니다. 추가하시겠습니까?

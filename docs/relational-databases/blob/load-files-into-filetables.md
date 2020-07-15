@@ -1,5 +1,6 @@
 ---
 title: FileTable로 파일 로드 | Microsoft 문서
+description: 파일을 다양한 방식으로 저장할 때 SQL Server의 FileTable로 파일을 로드하고 마이그레이션하는 방법을 알아봅니다. 대량 로드 작업 관련 내용을 읽어보세요.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: de6e6a237c0aa80e2793f33373ec664dfe93f953
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8be4fbed43f4d54fb199b687a3409337ded3ff3b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908705"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767963"
 ---
 # <a name="load-files-into-filetables"></a>FileTable로 파일 로드
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   파일을 FileTable로 로드 또는 마이그레이션하는 방법에 대해 설명합니다.  
   
 ##  <a name="loading-or-migrating-files-into-a-filetable"></a><a name="BasicsLoadNew"></a> FileTable로 파일 로드 또는 마이그레이션  

@@ -1,6 +1,6 @@
 ---
 title: 가용성 그룹 데이터베이스 다시 시작
-description: SSMS(SQL Server Management Studio), Transact-SQL(T-SQL) 또는 SQL PowerShell을 사용하여 Always On 가용성 그룹 내에서 일시 중지된 데이터베이스를 다시 시작하는 단계입니다.
+description: SQL Server에서 SQL Server Management Studio, Transact-SQL 또는 PowerShell을 사용하여 Always On 가용성 그룹에서 일시 중단된 가용성 데이터베이스를 다시 시작합니다.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 64a0bf6fff2869834f30a9e0e7a6694088550c8e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c8e44e677210316a74f44d8300ad0e10d8feece9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822608"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893124"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>가용성 데이터베이스 재개(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 의 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 일시 중지된 가용성 데이터베이스를 재개할 수 있습니다. 일시 중지된 데이터베이스를 재개하면 데이터베이스는 SYNCHRONIZING 상태가 됩니다. 주 데이터베이스를 재개하면 주 데이터베이스를 일시 중지함에 따라 함께 일시 중지된 보조 데이터베이스도 재개됩니다. 보조 데이터베이스가 보조 복제본을 호스팅하는 서버 인스턴스에서 로컬로 일시 중지된 경우 해당 보조 데이터베이스를 로컬로 재개해야 합니다. 지정된 보조 데이터베이스와 해당 주 데이터베이스가 SYNCHRONIZING 상태이면 보조 데이터베이스에서 데이터 동기화가 재개됩니다.  
   
 > [!NOTE]  

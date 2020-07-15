@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f375d81d77fb943f6cfe1b911ab8bcc9f385533
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4793260717225b731f6675098a8fa187884de206
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321249"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882181"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>매개 변수가 있는 필터로 병합 게시에 대한 파티션 관리
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 매개 변수가 있는 필터로 병합 게시에 대한 파티션을 관리하는 방법에 대해 설명합니다. 매개 변수가 있는 행 필터를 사용하여 겹치지 않는 파티션을 생성할 수 있습니다. 이러한 파티션을 제한하여 특정 파티션을 하나의 구독에서만 받도록 할 수 있습니다. 이러한 경우 구독자 수가 많으면 파티션 수가 많아지고 이에 따라 동일한 수의 분할된 스냅샷이 필요합니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
  **항목 내용**  
@@ -53,7 +53,7 @@ ms.locfileid: "75321249"
   
 #### <a name="to-create-a-partition"></a>파티션을 만들려면  
   
-1.  **게시 속성 - \<게시>** 대화 상자의 **데이터 파티션** 페이지에서 **추가**를 클릭합니다.  
+1.  **게시 속성 - \<Publication>** 대화 상자의 **데이터 파티션** 페이지에서 **추가**를 클릭합니다.  
   
 2.  **데이터 파티션 추가** 대화 상자에서 만들려는 파티션에 연결된 **HOST_NAME()** 및/또는 **SUSER_SNAME()** 값을 입력합니다.  
   

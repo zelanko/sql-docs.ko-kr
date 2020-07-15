@@ -1,29 +1,28 @@
 ---
 title: 사용자 및 작업 영역 설정
-titleSuffix: Azure Data Studio
 description: 사용자 및 작업 영역 설정을 수정하여 Azure Data Studio를 사용자 지정하는 방법입니다.
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: a874aaf9ec136ff9ea27cbeaa92011a07f3718c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 00c7248050d3bf7e0d5d31df6a1e628dbcc03605
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287067"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758380"
 ---
 # <a name="modify-user-and-workspace-settings"></a>사용자 및 작업 영역 설정 수정
 
-설정을 통해 원하는 대로 쉽게 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 구성할 수 있습니다. [!INCLUDE[name-sos](../includes/name-sos-short.md)]의 거의 모든 편집기, 사용자 인터페이스 및 기능 동작 부분에 수정할 수 있는 옵션이 있습니다.
+설정을 통해 원하는 대로 Azure Data Studio를 쉽게 구성할 수 있습니다. Azure Data Studio의 거의 모든 편집기, 사용자 인터페이스 및 기능 동작 부분에 수정할 수 있는 옵션이 있습니다.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]에서는 다음과 같은 두 가지 설정 범위를 제공합니다.
+Azure Data Studio는 설정에 대해 두 가지 범위를 제공합니다.
 
-* **사용자** 이러한 설정은 사용자가 여는 모든 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 인스턴스에 전역적으로 적용됩니다.
+* **사용자** 이러한 설정은 사용자가 여는 모든 Azure Data Studio 인스턴스에 전역적으로 적용됩니다.
 * **작업 영역** 작업 영역 설정은 컴퓨터의 폴더와 관련된 설정이며, 탐색기 사이드바에 폴더가 열려 있는 경우에만 사용할 수 있습니다. 이 범위에서 정의한 설정은 사용자 범위를 재정의합니다.
 
 ## <a name="creating-user-and-workspace-settings"></a>사용자 및 작업 영역 설정 만들기
@@ -36,9 +35,10 @@ ms.locfileid: "79287067"
 
 ![예제 설정](media/settings/sample-settings.png)
 
-수정한 `settings.json` 파일을 저장한 후에는 [!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 설정 변경 내용이 다시 로드됩니다.
+수정한 `settings.json` 파일이 저장되면 Azure Data Studio가 설정 변경 내용을 다시 로드합니다.
 
->**참고:** 작업 영역 설정은 팀 전체에서 프로젝트 관련 설정을 공유하는 데 유용합니다.
+> [!NOTE] 
+> 작업 영역 설정은 팀 전체에서 프로젝트 관련 설정을 공유하는 데 유용합니다.
 
 ## <a name="settings-file-locations"></a>설정 파일 위치
 
@@ -48,7 +48,7 @@ ms.locfileid: "79287067"
 * **Mac** `$HOME/Library/Application Support/azuredatastudio/User/settings.json`
 * **Linux** `$HOME/.config/azuredatastudio/User/settings.json`
 
-작업 영역 설정 파일은 프로젝트의 `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` 폴더 아래에 있습니다.
+작업 영역 설정 파일은 프로젝트의 `.Azure Data Studio` 폴더 아래에 있습니다.
 
 ## <a name="hot-exit"></a>Hot Exit
 
@@ -63,4 +63,4 @@ Azure Data Studio는 기본적으로 종료될 때 저장하지 않은 파일 �
 
 ## <a name="additional-resources"></a>추가 리소스
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]는 Visual Studio Code의 사용자 및 작업 영역 설정 기능을 상속하기 때문에 설정에 대한 자세한 내용을 [Visual Studio Code 설정](https://code.visualstudio.com/docs/getstarted/settings) 문서에서 참조할 수 있습니다.
+Azure Data Studio는 Visual Studio Code의 사용자 및 작업 영역 설정 기능을 상속하기 때문에 설정에 대한 자세한 내용을 [Visual Studio Code 설정](https://code.visualstudio.com/docs/getstarted/settings) 문서에서 참조할 수 있습니다.

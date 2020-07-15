@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 371657ed68c4b52cbf2cac75569fd8b1ab764e05
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: aa73be808ed074ffcdb412119a676a1a4ce7f8f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632141"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767122"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 이벤트 원본, 이벤트 세션 대상 및 이벤트 세션 옵션을 식별하는 확장 이벤트 세션을 만듭니다.
 
@@ -127,7 +127,7 @@ ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,** ...*
 
 동작은 sys.dm_xe_objects 뷰에 object_type 'action'으로 표시됩니다.
 
-WHERE \<predicate_expression>은 이벤트 처리 여부를 확인하는 데 사용할 조건자 식을 지정합니다. \<predicate_expression>이 true일 경우 이벤트가 세션에 대한 동작과 대상에 의해 추가로 처리됩니다. \<predicate_expression>이 false일 경우 세션에 대한 동작과 대상에 의해 이벤트가 처리되기 전에 세션을 통해 이벤트가 삭제됩니다. 조건자 식은 3000자로 제한되며 문자열 인수를 제한합니다.
+WHERE \<predicate_expression> 이벤트 처리 여부를 확인하는 데 사용할 조건자 식을 지정합니다. \<predicate_expression>이 true일 경우 이벤트가 세션에 대한 동작과 대상에 의해 추가로 처리됩니다. \<predicate_expression>이 false일 경우 세션에 대한 동작과 대상에 의해 이벤트가 처리되기 전에 세션을 통해 이벤트가 삭제됩니다. 조건자 식은 3000자로 제한되며 문자열 인수를 제한합니다.
 
 *event_field_name* 조건자 원본을 식별하는 이벤트 필드의 이름입니다.
 
@@ -143,7 +143,7 @@ WHERE \<predicate_expression>은 이벤트 처리 여부를 확인하는 데 사
 - *event_package_name*은 조건자 개체가 포함된 패키지입니다.
 - *predicate_compare_name*은 sys.dm_xe_objects 뷰에서 object_type 'pred_compare'로 정의된 전역 원본입니다.
 
-*number***decimal**을 포함한 모든 숫자 유형입니다. 단, 사용 가능한 실제 메모리가 부족한 경우나 값이 너무 커서 64비트 정수로 표현할 수 없는 숫자는 제외됩니다.
+*number* **decimal** 을 포함한 모든 숫자 유형입니다. 단, 사용 가능한 실제 메모리가 부족한 경우나 값이 너무 커서 64비트 정수로 표현할 수 없는 숫자는 제외됩니다.
 
 '*string*' 조건자 비교에 필요한 ANSI 또는 유니코드 문자열입니다. 조건자 비교 함수에 대해서는 암시적 문자열 유형 변환이 수행되지 않습니다. 잘못된 유형을 전달하면 오류가 발생합니다.
 
@@ -158,7 +158,7 @@ SET { *target_parameter_name*= \<value> [, ...*n*] } 대상 매개 변수를 설
 > [!IMPORTANT]
 > 링 버퍼 대상을 사용하는 경우 XML 출력의 데이터 잘림을 피하려면 max_memory 대상 매개 변수를 2048KB로 설정하는 것이 좋습니다. 다양한 대상 유형을 사용할 경우에 대한 자세한 내용은 [SQL Server 확장 이벤트 대상](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)을 참조하세요.
 
-WITH ( \<event_session_options> [ ,...*n*] ) 는 이벤트 세션에 사용할 옵션을 지정합니다.
+WITH ( \<event_session_options> [ ,...*n*] ) 이벤트 세션에 사용할 옵션을 지정합니다.
 
 MAX_MEMORY =*size* [ KB | **MB** ] 이벤트 버퍼링을 위해 세션에 할당할 최대 메모리 양을 지정하며 기본값은 4MB입니다. *크기*는 정수이며 KB 또는 MB 값일 수 있습니다. 최대 크기는 2GB(2048MB보다 작음)를 초과할 수 없습니다. 그러나 GB 범위의 메모리 값은 사용하지 않는 것이 좋습니다.
 
@@ -209,7 +209,7 @@ ON 시작 시 이벤트 세션이 시작됩니다.
 SQL Server에서 `ALTER ANY EVENT SESSION` 권한이 필요합니다.
 SQL Database에서 데이터베이스의 `ALTER ANY DATABASE EVENT SESSION` 권한이 필요합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="sql-server-example"></a>SQL Server 예제
 

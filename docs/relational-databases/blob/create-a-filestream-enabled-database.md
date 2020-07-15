@@ -1,5 +1,6 @@
 ---
 title: FILESTREAM 사용 데이터베이스 만들기 | Microsoft 문서
+description: 데이터베이스를 만들거나 변경할 때 CONTAINS FILESTREAM 절을 사용하여 FILESTREAM을 지원하도록 데이터베이스를 구성합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0fc16356-76f7-44b8-a58b-f0b7c43694ec
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 033e90cbccbb6db9a454183ae982ed2a898c2054
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0d5f43aa7846f20ad6c3d723b1415450bbc0915f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908759"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768024"
 ---
 # <a name="create-a-filestream-enabled-database"></a>FILESTREAM 사용 데이터베이스 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 FILESTREAM을 지원하는 데이터베이스를 만드는 방법을 보여 줍니다. FILESTREAM이 특별한 유형의 파일 그룹을 사용하므로 데이터베이스를 만들 때 하나 이상의 파일 그룹에 대해 CONTAINS FILESTREAM 절을 지정해야 합니다.  
   
  FILESTREAM 파일 그룹은 두 개 이상의 파일을 포함할 수 있습니다. 여러 파일을 포함하는 FILESTREAM 파일 그룹을 만드는 방법을 보여 주는 코드 예제는 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  

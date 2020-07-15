@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2881c4ee5145506158585611f61219983b764936
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2424982eebaed7a4d9b3d73ea7d4475b7ec758c2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066110"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892573"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   어셈블리의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카탈로그 속성을 수정하여 어셈블리를 변경합니다. ALTER ASSEMBLY는 어셈블리의 구현을 유지하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 모듈의 최신 복사본으로 어셈블리를 새로 고치고 어셈블리와 연관된 파일을 추가하거나 제거합니다. 어셈블리는 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md)를 사용하여 만듭니다.  
 
@@ -42,7 +42,7 @@ ms.locfileid: "68066110"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 ALTER ASSEMBLY assembly_name  
     [ FROM <client_assembly_specifier> | <assembly_bits> ]  
     [ WITH <assembly_option> [ ,...n ] ]  
@@ -192,7 +192,7 @@ ALTER ASSEMBLY assembly_name
   
  어셈블리 권한 집합에 대한 자세한 내용은 [Designing Assemblies](../../relational-databases/clr-integration/assemblies-designing.md)를 참조하십시오.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-refreshing-an-assembly"></a>A. 어셈블리 새로 고치기  
  다음 예에서는 `ComplexNumber` 어셈블리를 어셈블리의 구현을 유지하는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 모듈의 최신 복사본으로 업데이트합니다.  

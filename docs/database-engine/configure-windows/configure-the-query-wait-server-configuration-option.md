@@ -1,5 +1,6 @@
 ---
 title: query wait 서버 구성 옵션 구성 | Microsoft Docs
+description: 쿼리 대기 옵션에 대해 알아봅니다. 이 옵션을 사용하여 제한 시간이 초과되기 전까지 SQL Server 쿼리가 리소스를 대기하는 시간(초)을 지정하는 방법을 확인합니다.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - time [SQL Server], query wait time
 - query wait option [SQL Server]
 ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: bcba6def4229175c46a981dd03037006bfba2aa2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cdf9a2f14547eeda95b49a3f7705823e62f8b538
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012374"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785855"
 ---
 # <a name="configure-the-query-wait-server-configuration-option"></a>query wait 서버 구성 옵션 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 대기 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. 정렬이나 해시처럼 메모리를 많이 사용하는 쿼리를 실행하면 실행에 필요한 충분한 메모리가 확보될 때까지 쿼리가 대기됩니다. **쿼리 대기** 옵션은 리소스에 대한 쿼리의 최대 대기 제한 시간을 초 단위(0 - 2147483647)로 지정합니다. 이 옵션의 기본값은 -1입니다. 즉, 제한 시간이 예상 쿼리 비용의 25배로 계산됩니다.  
   

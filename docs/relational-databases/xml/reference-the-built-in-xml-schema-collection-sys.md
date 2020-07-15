@@ -1,5 +1,6 @@
 ---
 title: 기본 제공 XML 스키마 컬렉션 참조(sys) | Microsoft 문서
+description: 만드는 모든 데이터베이스에 대해 미리 정의된 기본 제공 XML 스키마 컬렉션 시스템을 참조하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 249b9d920a15e9eb2b3e85532df7df144b9d4c84
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 152e26ed07bc9da524d74695e13c58962719d317
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67995288"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757503"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>기본 제공 XML 스키마 컬렉션 참조(sys)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   사용자가 만드는 모든 데이터베이스의 **sys** 관계형 스키마에는 미리 정의된 **sys** XML 스키마 컬렉션이 있습니다. 이 스키마 컬렉션에는 이러한 미리 정의된 스키마가 포함되며 사용자가 만든 다른 XML 스키마 컬렉션으로부터 이러한 스키마를 액세스할 수 있습니다. 이러한 미리 정의된 스키마에 사용되는 접두사는 XQuery에서 의미를 갖습니다. 예약된 접두사는 **xml** 뿐입니다.  
   
 ```  

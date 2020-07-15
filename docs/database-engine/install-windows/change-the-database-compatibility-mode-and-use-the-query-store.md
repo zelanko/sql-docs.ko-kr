@@ -1,5 +1,6 @@
 ---
 title: 업그레이드 후 쿼리 저장소 사용
+description: 이 문서에서는 SQL Server 업그레이드에서 쿼리 저장소를 사용하여 기준선을 설정하고 데이터베이스 호환성 수준을 변경하는 방법을 설명합니다.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cdb24eff5efa62058aa2c20ecec0a85d43c83ae0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 91b08dcd61e6e038f03bd4af22707fc0f518fdc4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251544"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895389"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>데이터베이스 호환성 수준 변경 및 쿼리 저장소 사용
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상에서 [데이터베이스 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)이 변경된 경우에만 일부 변경 내용이 활성화됩니다. 이 작업은 여러 가지 이유로 수행되었습니다.  
   

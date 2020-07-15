@@ -1,5 +1,6 @@
 ---
 title: SQL Server Management Studio를 사용하여 Always Encrypted 키 순환 | Microsoft Docs
+description: SQL Server Management Studio를 사용하여 Always Encrypted 열 마스터 키 및 열 암호화 키를 순환하는 작업을 알아봅니다.
 ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d0a96f061f01749194cd3f0d1be1aae5443ff8a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d213b41fe392bbc82f663360879b7d67b07675be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595708"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767547"
 ---
 # <a name="rotate-always-encrypted-keys-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 Always Encrypted 키 순환
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 이 문서에서는 [SSMS(SQL Server Management Studio)](../../../ssms/download-sql-server-management-studio-ssms.md)를 사용하여 Always Encrypted 열 마스터 키 및 열 암호화 키를 순환하는 작업을 설명합니다.
 
@@ -56,7 +57,7 @@ SQL Server Management Studio에서 이전 열 마스터 키로 보호된 열 암
 
 ### <a name="step-3-configure-your-applications-with-the-new-column-master-key"></a>3단계: 새 열 마스터 키로 애플리케이션 구성
 
-이 단계에서는 순환할 열 마스터 키로 보호된 데이터베이스 열(즉, 순환할 열 마스터 키로 암호화된 열 암호화 키로 암호화된 데이터베이스 열)을 쿼리하는 모든 클라이언트 애플리케이션이 새 열 마스터 키에 액세스할 수 있는지 확인해야 합니다. 이 단계는 새 열 마스터 키가 있는 키 저장소의 유형에 따라 달라집니다. 다음은 그 예입니다.
+이 단계에서는 순환할 열 마스터 키로 보호된 데이터베이스 열(즉, 순환할 열 마스터 키로 암호화된 열 암호화 키로 암호화된 데이터베이스 열)을 쿼리하는 모든 클라이언트 애플리케이션이 새 열 마스터 키에 액세스할 수 있는지 확인해야 합니다. 이 단계는 새 열 마스터 키가 있는 키 저장소의 유형에 따라 달라집니다. 예를 들면 다음과 같습니다.
 
 - 새 열 마스터 키가 Windows 인증서 저장소에 저장된 인증서인 경우 데이터베이스에서 열 마스터 키의 키 경로에 지정된 위치와 동일한 인증서 저장소 위치(*현재 사용자* 또는 *로컬 컴퓨터*)에 인증서를 배포해야 합니다. 애플리케이션에서 인증서에 액세스할 수 있어야 합니다.
   - 인증서가 *현재 사용자* 인증서 저장소 위치에 저장된 경우 인증서를 애플리케이션 Windows ID(사용자)의 현재 사용자 저장소로 가져와야 합니다.

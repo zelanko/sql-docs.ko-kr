@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6c72c58b0a23f8215d303addfbb2ec9fb65c4489
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 10ef5b2c2e873d3f17085137134aabd8db57b059
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321640"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893788"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>복제 에이전트의 명령 프롬프트 매개 변수 보기 및 수정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  복제 에이전트는 명령줄 매개 변수를 받는 실행 파일입니다. 기본적으로 에이전트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 실행되므로 **작업 속성 - \<Job>** 대화 상자를 사용하여 이러한 매개 변수를 보고 수정할 수 있습니다. 이 대화 상자는 **의** 작업 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 폴더 및 복제 모니터의 **에이전트** 탭에서 사용할 수 있습니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)을 참조하세요.  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  복제 에이전트는 명령줄 매개 변수를 받는 실행 파일입니다. 기본적으로 에이전트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 실행되므로 **작업 속성 - \<Job>** 대화 상자를 사용하여 이러한 매개 변수를 확인한 다음 수정할 수 있습니다. 이 대화 상자는 **의** 작업 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 폴더 및 복제 모니터의 **에이전트** 탭에서 사용할 수 있습니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)을 참조하세요.  
   
 > [!NOTE]  
 >  에이전트 매개 변수에 대한 변경 사항은 다음에 에이전트가 시작될 때 적용됩니다. 에이전트가 연속적으로 실행되는 경우에는 에이전트를 중단했다가 다시 시작해야 합니다.  
@@ -43,9 +43,9 @@ ms.locfileid: "75321640"
 |SQL Server 이외 구독자의 밀어넣기 구독에 대한 배포 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
 |큐 판독기 에이전트|**[\<Distributor>].\<integer>**|[Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|  
   
- \*Oracle 게시에서 밀어넣기 구독의 경우 **\<Publisher>-\<PublicationDatabase>가 아닌 **\<Publisher>-\<Publisher**>입니다.**  
+ \*Oracle 게시에 대한 밀어넣기 구독의 경우 **\<Publisher>-\<PublicationDatabase>** 가 아닌 **\<Publisher>-\<Publisher**>입니다.  
   
- \*\*Oracle 게시에서 끌어오기 구독에 대한 작업 이름은 **\<Publisher>-\<PublicationDatabase>가 아닌** **Publisher>-\<DistributionDatabase\<>입니다.**  
+ \*\*Oracle 게시에 대한 끌어오기 구독의 경우 **\<Publisher>-\<PublicationDatabase>** 가 아닌 **\<Publisher>-\<DistributionDatabase**>입니다.  
   
 ### <a name="to-view-and-modify-replication-agent-command-line-parameters-from-management-studio"></a>Management Studio에서 복제 에이전트 명령줄 매개 변수를 확인한 다음 수정하려면  
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5ce5f0625cf4a57e974fe7faf9eac677a2c629db
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 64e7dc7e271b50b5dc23b97be81b420df2176fdd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321222"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882085"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 매개 변수가 있는 행 필터를 정의하고 수정하는 방법에 대해 설명합니다.  
   
  테이블 아티클을 만들 때 매개 변수가 있는 행 필터를 사용할 수 있습니다. 이러한 필터에서는 게시할 해당 데이터를 선택하기 위해 [WHERE](../../../t-sql/queries/where-transact-sql.md) 절을 사용합니다. 정적 행 필터와는 달리 해당 절에 리터럴 값을 지정하는 대신 [SUSER_SNAME](../../../t-sql/functions/suser-sname-transact-sql.md) 및 [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md) 시스템 함수를 하나 또는 둘 모두 지정합니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
@@ -55,11 +55,11 @@ ms.locfileid: "75321222"
 -   성능상의 이유로 `LEFT([MyColumn]) = SUSER_SNAME()`과 같은 매개 변수가 있는 행 필터 절의 열 이름에는 함수를 적용하지 않는 것이 좋습니다. 필터 절에 HOST_NAME을 사용하고 HOST_NAME 값을 재지정할 경우 CONVERT를 사용하여 데이터 형식을 변환해야 할 수 있습니다. 이를 위한 최선의 구현 방법은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)항목의 "HOST_NAME() 값 재정의" 섹션을 참조하십시오.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- 새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **행 필터** 페이지에서 매개 변수가 있는 행 필터를 정의, 수정 및 삭제합니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md) 및 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+ 새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<Publication>** 대화 상자의 **행 필터** 페이지에서 매개 변수가 있는 행 필터를 정의, 수정 및 삭제합니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md) 및 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="to-define-a-parameterized-row-filter"></a>매개 변수가 있는 행 필터를 정의하려면  
   
-1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 의 **행 필터** 페이지에서 **추가**를 클릭하고 **필터 추가**를 클릭합니다.  
+1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<Publication>** 의 **행 필터** 페이지에서 **추가**를 클릭하고 **필터 추가**를 클릭합니다.  
   
 2.  **필터 추가** 대화 상자의 드롭다운 목록 상자에서 필터링할 테이블을 선택합니다.  
   
@@ -89,11 +89,11 @@ ms.locfileid: "75321222"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  **게시 속성 - \<게시>** 대화 상자에 있는 경우 **확인**을 클릭하여 대화 상자를 저장하고 닫습니다.  
+6.  **게시 속성 - \<Publication>** 대화 상자에서 **확인**을 클릭하여 저장하고 대화 상자를 닫습니다.  
   
 #### <a name="to-modify-a-parameterized-row-filter"></a>매개 변수가 있는 행 필터를 수정하려면  
   
-1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 필터를 선택하고 **편집**을 클릭합니다.  
+1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<Publication>** 대화 상자의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 필터를 선택하고 **편집**을 클릭합니다.  
   
 2.  **필터 편집** 대화 상자에서 필터를 수정합니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "75321222"
   
 #### <a name="to-delete-a-parameterized-row-filter"></a>매개 변수가 있는 행 필터를 삭제하려면  
   
-1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 필터를 선택하고 **삭제**를 클릭합니다.  
+1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<Publication>** 대화 상자의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 필터를 선택하고 **삭제**를 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  복제 저장 프로시저를 사용하여 매개 변수가 있는 행 필터를 프로그래밍 방식으로 만들거나 수정할 수 있습니다.  

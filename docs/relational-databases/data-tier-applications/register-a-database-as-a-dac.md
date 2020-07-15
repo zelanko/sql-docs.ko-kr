@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 726955115dc956f2ad16e39775610deb16c445a1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 431745d461d6977cf873cbdb83eebe5929694043
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68134684"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781656"
 ---
 # <a name="register-a-database-as-a-dac"></a>DAC로 데이터베이스 등록
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **데이터 계층 애플리케이션 등록 마법사** 또는 Windows PowerShell 스크립트를 사용하여 기존 데이터베이스의 개체를 설명하는 DAC(데이터 계층 애플리케이션)를 작성하고 이 DAC 정의를 **msdb** 시스템 데이터베이스(**의** master [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)])에 등록할 수 있습니다.  
   
 -   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [사용 권한](#Permissions)  
@@ -136,7 +136,7 @@ ms.locfileid: "68134684"
   
  **DAC 등록** - DAC를 등록하기 위해 수행한 각 동작의 성공 또는 실패를 보고합니다. 정보를 검토하여 각 동작의 성공 또는 실패를 확인합니다. 오류가 발생한 동작에는 모두 **결과** 열에 링크가 있습니다. 링크를 선택하면 해당 동작의 오류에 대한 보고서가 표시됩니다.  
   
- **보고서 저장** - 등록 보고서를 HTML 파일로 저장하려면 이 단추를 선택합니다. 파일은 모든 동작에서 생성된 모든 오류를 비롯하여 각 동작의 상태를 보고합니다. 기본 폴더는 Windows 계정의 Documents 폴더에 있는 **SQL Server Management Studio\DAC Packages** 폴더입니다. 파일 이름의 형식은 \<DACPackageName>_RegisterDACReport_yyyymmdd.html이며, 여기서 \<*DACPackageName*>은 배포할 패키지의 이름이고 *yyyy*는 현재 연도, *mm*은 현재 월, *dd*는 현재 날짜입니다.  
+ **보고서 저장** - 등록 보고서를 HTML 파일로 저장하려면 이 단추를 선택합니다. 파일은 모든 동작에서 생성된 모든 오류를 비롯하여 각 동작의 상태를 보고합니다. 기본 폴더는 Windows 계정의 Documents 폴더에 있는 **SQL Server Management Studio\DAC Packages** 폴더입니다. 파일 이름은 \<DACPackageName>_RegisterDACReport_yyyymmdd.html 형식입니다. 여기서 \<*DACPackageName*>은 배포되는 패키지의 이름이고, *yyyy* = 현재 연도, *mm* = 현재 월, *dd* = 현재 날짜입니다.  
   
  **마침** - 마법사를 종료합니다.  
   

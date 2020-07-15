@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8f9480787ced42ad66602bb34db98d1c2d53bd35
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7b196cfca92a9a6cda8170b413a2b3701f09d22f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321980"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883281"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>업데이트 가능한 트랜잭션 구독에 대한 업데이트 모드 전환
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 업데이트된 트랜잭션 구독에 대한 업데이트 모드를 전환하는 방법에 대해 설명합니다. 새 구독 마법사를 사용하여 업데이트할 수 있는 구독에 대한 모드를 지정합니다. 이 마법사를 사용할 때 모드를 설정하는 방법은 [끌어오기 구독 속성 보기 및 수정](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)을 참조하세요.  
   
  **항목 내용**  
@@ -69,11 +69,11 @@ ms.locfileid: "75321980"
 
 #### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>끌어오기 구독에 대한 업데이트 모드를 설정하려면  
   
-1.  **구독 속성 - \<Publisher>: \<PublicationDatabase>** 대화 상자에서 **구독자 업데이트 방법** 옵션에 대해 **즉시 변경 내용 복제** 또는 **변경 내용 대기** 중 하나를 선택합니다.  
+1.  **구독 속성 - \<Publisher>: \<PublicationDatabase>** 대화 상자에서 **구독자 업데이트 방법** 옵션에 대해 **즉시 변경 내용 복제** 또는 **변경 내용 대기** 값을 선택합니다.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- **구독 속성 - \<Publisher>: \<PublicationDatabase>** 대화 상자에 액세스 하는 방법은 [끌어오기 구독 속성 보기 및 수정](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)을 참조하세요.  
+ **구독 속성 - \<Publisher>: \<PublicationDatabase>** 대화 상자에 액세스하는 방법은 [끌어오기 구독 속성 보기 및 수정](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)을 참조하세요.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   

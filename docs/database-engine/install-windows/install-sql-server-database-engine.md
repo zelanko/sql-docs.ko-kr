@@ -1,5 +1,6 @@
 ---
 title: SQL Server 데이터베이스 엔진 설치 | Microsoft Docs
+description: SQL Server 설치 마법사의 설치할 구성 요소에서 SQL Server 데이터베이스 엔진을 선택하면 설치할 수 있는 기능을 알아보세요.
 ms.custom: ''
 ms.date: 07/26/2019
 ms.prod: sql
@@ -12,16 +13,16 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 91a8515417d25c2ef9f23d1698811a5f872227db
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 79356d7b1a193b57625ceae1f545442b4ac80f23
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664276"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883253"
 ---
 # <a name="install-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진 설치
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 ## <a name="overview"></a>개요
 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소는 데이터 저장, 처리 및 보안 유지를 위한 핵심 서비스입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 기업에서 수요가 높아지고 있는 대부분의 데이터 소비형 애플리케이션의 요구 사항을 만족시키기 위해 액세스 제어 및 빠른 트랜잭션 처리를 제공합니다.  

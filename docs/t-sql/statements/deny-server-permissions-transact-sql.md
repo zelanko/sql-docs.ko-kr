@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: de59423c368bc966fab3958fbeb4b04888f4e2a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 32a379b4b8df00f4929fad6bcef53d4504c5324d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68114777"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766668"
 ---
 # <a name="deny-server-permissions-transact-sql"></a>DENY 서버 사용 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   서버에 대한 사용 권한을 거부합니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68114777"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 DENY permission [ ,...n ]   
     TO <grantee_principal> [ ,...n ]  
     [ CASCADE ]  
@@ -64,7 +64,7 @@ DENY permission [ ,...n ]
  TO \<server_principal>  
  사용 권한이 거부된 보안 주체를 지정합니다.  
   
- AS \<grantor_principal >  
+ AS \<grantor_principal>  
  이 쿼리를 실행하는 보안 주체가 사용 권한을 거부하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다.
 권한의 거부자로서 기록된 보안 주체가 해당 문을 실행하는 사용자 이외의 다른 보안 주체여야 한다는 것을 표시하려면 AS 주절을 사용합니다. 예를 들어 Mary라는 사용자가 principal_id 12이고 Raul이라는 사용자는 principal 15라고 가정해 보겠습니다. Mary는 `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`을 실행합니다. 이제 sys.database_permissions 테이블은 해당 문을 실제로 사용자 13(Mary)가 실행했지만 거부 문의 grantor_prinicpal_id가 15(Raul)임을 표시합니다.
   
@@ -147,7 +147,7 @@ DENY permission [ ,...n ]
 ## <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한 또는 보안 개체의 소유권이 필요합니다. AS 절을 사용하는 경우 지정된 보안 주체가 사용 권한을 거부할 보안 개체를 소유해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-denying-connect-sql-permission-to-a-sql-server-login-and-principals-to-which-the-login-has-regranted-it"></a>A. SQL Server 로그인 및 이 로그인이 사용 권한을 다시 부여한 보안 주체에 대해 CONNECT SQL 권한 거부  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `CONNECT SQL` 및 이 사용자가 사용 권한을 부여한 보안 주체에 대해 `Annika` 권한을 거부합니다.  

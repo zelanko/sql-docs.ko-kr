@@ -1,5 +1,6 @@
 ---
 title: Always Encrypted를 위한 키 관리 개요 | Microsoft Docs
+description: Always Encrypted가 SQL Server의 데이터를 보호하는 데 사용하는 두 가지 유형의 암호화 키인 열 암호화 키 및 열 마스터 키를 관리하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bfeb8126553a1a5990ed7ccfd8a836117f3328b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288737"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784012"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted를 위한 키 관리 개요
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 
 [상시 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 는 사용자 데이터를 암호화하는 키와 데이터를 암호화하는 키를 암호화하는 다른 키 등 두 가지 유형의 암호화 키를 사용하여 데이터를 보호합니다. 열 암호화 키는 사용자 데이터를 암호화하고, 열 마스터 키는 열 암호화 키를 암호화합니다. 이 문서에서는 이러한 암호화 키 관리의 개요를 자세히 설명합니다.  
@@ -58,7 +59,7 @@ ms.locfileid: "79288737"
 ## <a name="managing-keys-with-role-separation"></a>역할 구분을 사용하여 키 관리
 상시 암호화 키가 역할 구분을 사용하여 관리되는 경우 조직 내의 서로 다른 사용자가 보안 관리자 및 DBA 역할을 맡습니다. 역할 구분을 사용하는 키 관리 프로세스에서는 DBA가 키 또는 실제 키를 포함하는 키 저장소에 액세스할 수 없고, 보안 관리자가 중요한 데이터를 포함하는 데이터베이스에 액세스할 수 없습니다. 역할 구분을 사용하는 키 관리는 조직의 DBA가 중요한 데이터에 액세스할 수 없도록 하려는 경우에 권장됩니다. 
 
-**참고:** 보안 관리자는 일반 텍스트 키를 생성하고 사용하므로 데이터베이스 시스템을 호스트하는 컴퓨터나 DBA 또는 악의적 사용자가 될 수 있는 다른 사용자가 액세스할 수 있는 컴퓨터에서 해당 태스크를 수행하면 안 됩니다. 
+**참고:** 보안 관리자는 일반 텍스트 키를 생성하고 사용하므로, 데이터베이스 시스템을 호스팅하는 컴퓨터나 DBA 또는 악의적 사용자가 될 수 있는 다른 사용자가 액세스할 수 있는 컴퓨터에서 작업을 수행하면 안 됩니다. 
 
 ## <a name="managing-keys-without-role-separation"></a>역할 구분을 사용하지 않고 키 관리
 상시 암호화 키가 역할 구분을 사용하지 않고 관리되는 경우 한 사람이 보안 관리자 및 DBA 역할을 모두 맡을 수 있으므로 해당 사용자가 키/키 저장소와 키 메타데이터를 둘 다 액세스하고 관리할 수 있어야 합니다. 역할 구분을 사용하지 않는 키 관리는 DevOps 모델을 사용하는 조직이나 데이터베이스가 클라우드에서 호스트되고 클라우드 관리자(온-프레미스 DBA 아님)가 중요한 데이터에 액세스할 수 없도록 제한하는 것이 주요 목표인 경우에 권장됩니다.

@@ -1,6 +1,6 @@
 ---
 title: '가용성 그룹 마법사: 가용성 그룹 옵션 지정'
-ms.description: Describes the options found on the 'Specify Availability Group Name' page of the Availability Group Wizard within SQL Server Management Studio.
+description: SQL Server Management Studio 내 가용성 그룹 마법사의 '가용성 그룹 이름 지정' 페이지에 있는 옵션을 설명합니다.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 63995b32f91419ef59184251299b5238d553905a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 202493fb2ee8a05408f82927f82f2b696aa19331
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822571"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883093"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 가용성 그룹 옵션 지정 페이지
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 **가용성 그룹 이름 지정** 페이지의 옵션에 대해 설명합니다. 이 항목은 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 의 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 및 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]모두에 사용됩니다.  
   
 ##  <a name="specify-availability-group-options"></a><a name="PageOptions"></a> 가용성 그룹 옵션 지정  

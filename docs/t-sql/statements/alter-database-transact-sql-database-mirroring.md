@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b19fa67007f68373d2d24fb1bfdfe1a6709adfd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b778cf08b4d017916ea9249eeddeb1cdf6afb422
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628945"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895664"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE(Transact-SQL) 데이터베이스 미러링
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 > [!NOTE]
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)]을 대신 사용합니다.
@@ -72,7 +72,7 @@ SET { <partner_option> | <witness_option> }
 
 *database_name* 수정할 데이터베이스의 이름입니다.
 
-PARTNER \<partner_option> 데이터베이스 미러링 세션의 장애 조치(failover) 파트너 및 해당 동작을 정의하는 데이터베이스 속성을 제어합니다. SET PARTNER 옵션에는 주 서버 또는 미러 서버로 제한되는 옵션과 어느 파트너에든 설정할 수 있는 옵션이 있습니다. 자세한 내용은 다음의 개별 PARTNER 옵션을 참조하십시오. SET PARTNER 절은 지정된 파트너에 관계없이 데이터베이스 복사본 양쪽 모두에 영향을 줍니다.
+PARTNER \<partner_option> 데이터베이스 미러링 세션의 장애 조치 파트너 및 이들의 동작을 정의하는 데이터베이스 속성을 제어합니다. SET PARTNER 옵션에는 주 서버 또는 미러 서버로 제한되는 옵션과 어느 파트너에든 설정할 수 있는 옵션이 있습니다. 자세한 내용은 다음의 개별 PARTNER 옵션을 참조하십시오. SET PARTNER 절은 지정된 파트너에 관계없이 데이터베이스 복사본 양쪽 모두에 영향을 줍니다.
 
 SET PARTNER 문을 실행하려면 두 파트너의 엔드포인트에 대한 STATE가 STARTED로 설정되어 있어야 합니다. 또한 각 파트너 서버 인스턴스에 대한 데이터베이스 미러링 엔드포인트의 ROLE이 PARTNER 또는 ALL로 설정되어 있어야 합니다. 엔드포인트 지정 방법에 대한 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)를 참조하세요. 서버 인스턴스에 대한 데이터베이스 미러링 엔드포인트의 역할 및 상태를 확인하려면 해당 인스턴스에서 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하세요.
 
@@ -96,7 +96,7 @@ TCP **://** _\<system-address>_ **:** _\<port>_
 라는 설치 관리자 실행 파일에 포함됩니다. 여기서
 
 - *\<system-address>* 는 대상 컴퓨터 시스템을 명확하게 식별하는 시스템 이름, 정규화된 도메인 이름 또는 IP 주소 등의 문자열입니다.
-- *\<port&gt;* 는 파트너 서버 인스턴스의 미러링 엔드포인트와 연결된 포트 번호입니다.
+- *\<port>* 는 파트너 서버 인스턴스의 미러링 엔드포인트와 연결된 포트 번호입니다.
 
 자세한 내용은 [서버 네트워크 주소 지정 - 데이터베이스 미러링](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)을 참조하세요.
 
@@ -187,7 +187,7 @@ OFF 데이터베이스 미러링 세션에서 미러링 모니터를 제거합�
 
 ## <a name="remarks"></a>설명
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-creating-a-database-mirroring-session-with-a-witness"></a>A. 미러링 모니터가 있는 데이터베이스 미러링 세션 만들기
 

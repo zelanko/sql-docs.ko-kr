@@ -1,5 +1,6 @@
 ---
 title: c2 audit mode 서버 구성 옵션 | Microsoft Docs
+description: 시스템 활동을 프로파일링하고 가능한 보안 정책 위반을 추적하는 데 도움이 되는 SQL Server 구성 옵션인 C2 감사 모드에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - C2 Audit Mode option
 - recording attempts
 ms.assetid: 5a8d73a6-c4f6-4967-ba11-ecbcfc90b9cc
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 52e39eda53e08a4267ac97faa3b691ffcd7acaad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d92dcad571574310c1b64a9992a54b166fe8ad8e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013005"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759208"
 ---
 # <a name="c2-audit-mode-server-configuration-option"></a>c2 audit mode 서버 구성 옵션
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   C2 Audit Mode는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 통해 구성하거나 **sp_configure** 에 **c2 audit mode**옵션을 사용하여 구성할 수 있습니다. 이 옵션을 선택하면 문과 개체에 대해 실패한 액세스 시도와 성공한 액세스 시도를 모두 기록하도록 서버가 구성됩니다. 이 정보는 시스템 동작을 파악하고 보안 정책 위반을 추적하는 데 도움이 됩니다.  
   

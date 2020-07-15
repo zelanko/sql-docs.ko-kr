@@ -1,5 +1,6 @@
 ---
 title: min memory per query 서버 구성 옵션 구성 | Microsoft Docs
+description: 중첩 트리거 옵션에 대해 알아봅니다. 이 옵션을 사용하여 SQL Server에서 계단식 배열할 수 있는 AFTER 트리거의 수준 수를 설정하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - nested triggers option
 ms.assetid: 29d7372b-d406-4a5b-80c6-a2d231d25211
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2ac59b4fb2923aacd377bb974e49dd8edebf5587
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9b236dc0cb810a6ba8d63ef7c68367eab2252b8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012499"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758258"
 ---
 # <a name="configure-the-nested-triggers-server-configuration-option"></a>nested triggers 서버 구성 옵션 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 중첩 트리거 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **중첩 트리거** 옵션은 AFTER 트리거가 캐스케이드될 수 있는지 여부를 제어합니다. 즉 한 동작이 다른 트리거를 시작하고, 이 트리거가 또 다른 트리거를 시작하는 과정이 반복될 수 있는지 여부를 제어합니다. **nested triggers** 를 0으로 설정하면 AFTER 트리거를 중첩할 수 없습니다. **nested triggers** 를 1(기본값)로 설정하면 AFTER 트리거를 32 수준까지 중첩할 수 있습니다. INSTEAD OF 트리거는 이 옵션 설정에 관계없이 중첩할 수 있습니다.  
   

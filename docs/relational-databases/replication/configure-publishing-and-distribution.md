@@ -1,5 +1,6 @@
 ---
 title: 게시 및 배포 구성 | Microsoft 문서
+description: SQL Server Management Studio, Transact-SQL 또는 복제 관리 개체를 사용하여 SQL Server에서 게시 및 배포를 구성하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 09/23/2018
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f4f51850fe288f2bbbd6d0e70a123a03f84344ac
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0e39946071c85dff0c1e29f6f36e6bafe910f77d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76285130"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774005"
 ---
 # <a name="configure-publishing-and-distribution"></a>게시 및 배포 구성
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 게시 및 배포를 구성하는 방법에 대해 설명합니다.
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에 
@@ -32,7 +33,7 @@ ms.locfileid: "76285130"
 자세한 내용은 [복제 보안 설정 보기 및 수정](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)을 참조하세요.
 
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용 
-새 게시 마법사나 배포 구성 마법사를 사용하여 배포를 구성합니다. 배포자를 구성한 다음 **배포자 속성 - \<배포자>** 대화 상자에서 속성을 확인하고 수정합니다. `db_owner` 고정 데이터베이스 역할의 멤버가 게시를 만들 수 있도록 배포자를 구성하려는 경우 또는 게시자가 아닌 원격 배포자를 구성하려는 경우 배포 구성 마법사를 사용합니다.
+새 게시 마법사나 배포 구성 마법사를 사용하여 배포를 구성합니다. 배포자를 구성한 다음 **배포자 속성 - \<Distributor>** 대화 상자에서 속성을 확인하고 수정합니다. `db_owner` 고정 데이터베이스 역할의 멤버가 게시를 만들 수 있도록 배포자를 구성하려는 경우 또는 게시자가 아닌 원격 배포자를 구성하려는 경우 배포 구성 마법사를 사용합니다.
 
 #### <a name="to-configure-distribution"></a>배포를 구성하려면 
 
@@ -77,7 +78,7 @@ ms.locfileid: "76285130"
 
    - 결과 집합의 `distribution db installed` 값이 `0`인 경우 master 데이터베이스의 배포자에서 [sp_adddistributiondb&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)를 실행합니다. 이때 `@database`에 배포 데이터베이스의 이름을 지정합니다. 필요에 따라 `@max_distretention`에 최대 트랜잭션 보존 기간을 지정하고 `@history_retention`에 기록 보존 기간을 지정할 수 있습니다. 새 데이터베이스를 만드는 경우 원하는 데이터베이스 속성 매개 변수를 지정합니다.
 
-2. 배포자에서 [sp_adddistpublisher&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)를 실행하여 `@working_directory`에 기본 스냅샷 폴더로 사용할 UNC 공유를 지정합니다. 게시자에 연결할 때 배포자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하면 `0`에 `@security_mode` 값을 지정하고 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 `@login` `@password` 로그인 정보를 지정해야 합니다.
+2. 배포자에서 [sp_adddistpublisher&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)를 실행하여 `@working_directory`에 기본 스냅샷 폴더로 사용할 UNC 공유를 지정합니다. 게시자에 연결할 때 배포자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하면 `@security_mode`에 `0` 값을 지정하고 `@login` 및 `@password`에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 정보를 지정해야 합니다.
 
    SQL Database Managed Instance의 배포자에는 `@working_directory`에 대한 Azure storage 계정 및 `@storage_connection_string`에 대한 스토리지 액세스 키를 사용합니다. 
 

@@ -1,5 +1,6 @@
 ---
 title: remote access 서버 구성 옵션 구성 | Microsoft Docs
+description: 사용되지 않는 원격 액세스 옵션의 대안에 대해 알아봅니다. SQL Server 연결 문제를 해결하는 다른 원본을 확인합니다.
 ms.custom: ''
 ms.date: 08/11/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - remote servers [SQL Server], stored procedure execution
 ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 52d6f73b585f3d0857186bef9c6c440e8655adc1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fba193e5f6493e722bd1171c333b4aa2e700ff50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012345"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785804"
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>remote access 서버 구성 옵션 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 항목은 "원격 액세스" 기능에 대한 내용입니다. 이 구성 옵션은 잘 알려지지 않고 사용되지 않는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통신 기능이며 사용되지 않을 가능성이 높습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하는 데 문제가 있어 이 페이지에 도달한 경우 대신, 다음 항목 중 하나를 참조하세요.  
   

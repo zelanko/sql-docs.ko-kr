@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5f1920374f62f98eed81323eca05ce1e45e66fc6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fbc22ea4b3673d6ed4d0d4ee581da8fadb473fb8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433760"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888055"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>복제, 변경 내용 추적 및 변경 데이터 캡처 - Always On 가용성 그룹
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제, CDC(변경 데이터 캡처) 및 CT(변경 내용 추적)는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 지원됩니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하면 고가용성 및 추가 데이터베이스 복구 기능을 제공할 수 있습니다.  
   
@@ -190,7 +190,7 @@ Always On 가용성 그룹의 일부인 데이터베이스에서 변경 데이�
 ##  <a name="prerequisites-restrictions-and-considerations-for-using-replication"></a><a name="Prereqs"></a> 복제 사용을 위한 필수 구성 요소, 제한 사항 및 고려 사항  
  이 섹션에서는 필수 구성 요소, 제한 사항 및 권장 사항을 비롯하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 사용하여 복제를 배포할 때의 고려 사항에 대해 설명합니다.  
   
-### <a name="prerequisites"></a>사전 요구 사항  
+### <a name="prerequisites"></a>필수 구성 요소  
   
 -   트랜잭션 복제를 사용할 때 게시 데이터베이스가 가용성 그룹에 있으면 게시자와 배포자 모두 최소한 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]를 실행해야 합니다. 구독자는 낮은 수준의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용할 수 있습니다.  
   
@@ -208,20 +208,24 @@ Always On 가용성 그룹의 일부인 데이터베이스에서 변경 데이�
 |||||  
 |-|-|-|-|  
 ||**게시자**|**배포자**|**구독자**|  
-|**트랜잭션**|yes<br /><br /> 참고: 양방향 및 상호 트랜잭션 복제에 대한 지원을 포함하지 않습니다.|yes|yes| 
+|**트랜잭션**|예<br /><br /> 참고: 양방향 및 상호 트랜잭션 복제에 대한 지원을 포함하지 않습니다.|예|예| 
 |**P2P**|예|예|예|  
-|**병합**|yes|예|예|  
-|**스냅샷**|yes|예|yes|
+|**병합**|예|예|예|  
+|**스냅샷**|예|예|예|
   
  **배포자 데이터베이스는 데이터베이스 미러링과 함께 사용할 수 없습니다.  
   
 ### <a name="considerations"></a>고려 사항  
   
--   배포 데이터베이스는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 또는 데이터베이스 미러링과 함께 사용할 수 없습니다. 복제 구성이 배포자가 구성되는 SQL Server 인스턴스에 연결되므로 배포 데이터베이스를 미러링하거나 복제할 수 없습니다. 배포자에 대해 고가용성을 제공하려면 SQL Server 장애 조치(Failover) 클러스터를 사용합니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
+-   배포 데이터베이스는 데이터베이스 미러링과 함께 사용할 수 없지만 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 특정 제한 하에서는 지원되기도 합니다. 자세한 내용은 [배포 가용성 그룹 구성](../../../relational-databases/replication/configure-distribution-availability-group.md#limitations-or-exclusions)을 참조하세요. 복제 구성이 배포자가 구성되는 SQL Server 인스턴스에 연결되므로 배포 데이터베이스를 미러링하거나 복제할 수 없습니다. 또한 SQL Server 장애 조치(failover) 클러스터를 사용하여 배포자에 고가용성을 제공할 수도 있습니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
   
 -   보조 데이터베이스에 대한 구독자 장애 조치(Failover)는 지원되지만 병합 복제 구독자에게는 수동 절차입니다. 절차는 미러링된 구독자 데이터베이스를 장애 조치하는 데 사용되는 방법과 동일합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]참여 시 트랜잭션 복제 구독자는 특수 조작이 필요하지 않습니다. 가용성 그룹에 참여하려면 구독자가 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 이상을 실행해야 합니다.  자세한 내용은 [복제 구독자 및 Always On 가용성 그룹(SQL Server)](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)을 참조하세요.
   
 -   로그인, 작업, 연결된 서버를 포함하여 데이터베이스 외부에 있는 메타데이터 및 개체는 보조 복제본에 전파되지 않습니다. 장애 조치(Failover) 후 새로운 주 데이터베이스에 메타데이터 및 개체가 필요한 경우 이를 수동으로 복사해야 합니다. 자세한 내용은 [가용성 그룹의 데이터베이스에 대한 로그인 및 작업 관리&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md)라는 프로세스에서 서로 바꿀 수 있습니다.  
+
+### <a name="distributed-availability-groups"></a>분산된 가용성 그룹
+
+가용성 그룹의 게시자 또는 배포 데이터베이스는 분산된 가용성 그룹의 일부로 구성할 수 없습니다. 가용성 그룹의 게시자 데이터베이스와 가용성 그룹의 배포 데이터베이스는 모두 수신기 엔드포인트가 있어야 올바르게 구성하고 사용할 수 있습니다. 그러나 분산된 가용성 그룹에 수신기 엔드포인트를 구성할 수는 없습니다.
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **복제**  

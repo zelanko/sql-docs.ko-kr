@@ -1,27 +1,26 @@
 ---
 title: 재사용 가능한 코드 조각 만들기
-titleSuffix: Azure Data Studio
 description: Azure Data Studio에서 SQL 코드 조각을 만들고 사용하는 방법 알아보기
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 09a8432d10a70bb8530654d76bce874f735788a6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8e2c6883840513fb9f09f8dc58080d36402bdf9f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959709"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774691"
 ---
-# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 코드 조각을 만들고 사용하여 T-SQL(Transact-SQL) 스크립트를 빠르게 만들 수 있습니다.
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-azure-data-studio"></a>Azure Data Studio에서 코드 조각을 만들고 사용하여 T-SQL(Transact-SQL) 스크립트를 빠르게 만들 수 있습니다.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]의 코드 조각은 데이터베이스 및 데이터베이스 개체를 쉽게 만들 수 있도록 하는 템플릿입니다. 
+Azure Data Studio의 코드 조각은 데이터베이스 및 데이터베이스 개체를 쉽게 만들 수 있는 템플릿입니다. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]에서는 올바른 구문을 빠르게 생성하는 데 도움이 되는 여러 T-SQL 코드 조각을 제공합니다. 
+Azure Data Studio에서는 올바른 구문을 빠르게 생성하는 데 도움이 되는 여러 T-SQL 코드 조각을 제공합니다. 
 
 사용자 정의 코드 조각을 만들 수도 있습니다.
 
@@ -51,14 +50,14 @@ ms.locfileid: "67959709"
 
 사용자 고유의 코드 조각을 정의할 수 있습니다. 편집을 위해 SQL 코드 조각 파일을 열려면
 
-1. ‘명령 팔레트’를 열고(**Shift+Ctrl+P**) *snip*를 입력한 후 **기본 설정:  사용자 코드 조각 열기**를 선택합니다.
+1. ‘명령 팔레트’를 열고(**Shift+Ctrl+P**) *snip*를 입력한 후 **기본 설정: 사용자 코드 조각 열기**를 선택합니다.
 
    ![템플릿 필드 바꾸기](media/code-snippets/user-snippets.png)
 
 1. **SQL**을 선택합니다.
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)]는 Visual Studio Code에서 해당 코드 조각 기능을 상속하므로 이 문서에서는 특별히 SQL 코드 조각 사용 방법을 설명합니다. 자세한 내용은 Visual Studio Code 설명서에서 [사용자 고유의 코드 조각 만들기](https://code.visualstudio.com/docs/editor/userdefinedsnippets)를 참조하세요. 
+   > Azure Data Studio는 Visual Studio Code에서 해당 코드 조각 기능을 상속하므로 이 문서에서는 특별히 SQL 코드 조각 사용 방법을 설명합니다. 자세한 내용은 Visual Studio Code 설명서에서 [사용자 고유의 코드 조각 만들기](https://code.visualstudio.com/docs/editor/userdefinedsnippets)를 참조하세요. 
 
    ![템플릿 필드 바꾸기](media/code-snippets/select-sql.png)
 

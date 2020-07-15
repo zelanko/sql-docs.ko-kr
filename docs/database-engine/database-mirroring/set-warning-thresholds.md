@@ -1,5 +1,6 @@
 ---
 title: 경고 임계값 설정 | Microsoft Docs
+description: 경고 임계값 설정 대화 상자를 사용하여 SQL Server에서 선택한 미러된 데이터베이스의 경고 임계값을 설정 및 구성하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13b4922d1fba2d41878217cadc8d47d45928b4ef
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d94a2c804f67657581f5ead059e6951f410e05f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025210"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789645"
 ---
 # <a name="set-warning-thresholds"></a>경고 임계값 설정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 대화 상자를 사용하여 **데이터베이스 미러링 모니터** 대화 상자의 탐색 트리에서 선택한 데이터베이스에 대한 하나 이상의 경고 임계값을 설정 및 구성할 수 있습니다.  
   
  이 대화 상자는 두 서버 인스턴스에 연결을 시도합니다. 이러한 연결은 비동기적으로 설정됩니다. 이 대화 상자에는 각 파트너의 연결 상태가 표시됩니다. 파트너가 연결되지 않은 경우 **연결**을 클릭할 수 있습니다.  
@@ -73,10 +74,10 @@ ms.locfileid: "68025210"
 |**보내지 않은 가장 오래된 트랜잭션 기간이 임계값을 초과하는 경우 경고**|임계값은 Send Queue에서 미러 서버 인스턴스로 아직 보내지 않은 트랜잭션의 시간(분)을 나타냅니다. 이 값은 시간을 기준으로 발생 가능한 데이터 손실을 측정하는 데 도움이 됩니다.|  
 |**미러 커밋 오버헤드가 임계값을 초과하는 경우 경고**|임계값은 트랜잭션당 지연 시간(밀리초)을 나타냅니다(보호 우선 모드에만 관련됨). 이 지연 시간은 주 서버 인스턴스에서 미리 서버 인스턴스가 트랜잭션 로그 레코드를 Redo Queue에 쓸 때까지 대기하는 동안 발생한 오버헤드 양입니다.|  
   
- **‘** \<서버 인스턴스> **’에서 활성화됨**   
+ **'** *\<server instance>* **'에서 활성화됨**  
  빈 확인란은 서버 인스턴스에서 경고가 현재 비활성화되었음을 나타냅니다. 경고를 활성화하려면 해당 확인란을 클릭합니다.  
   
- **‘** \<서버 인스턴스>’ **임계값**   
+ **'** *\<server instance>* **'에서의 임계값**  
  경고가 활성화된 경우 이 열의 왼쪽에서 임계값을 설정합니다. 상태 테이블을 업데이트할 때 지정된 임계값에 도달한 경우 이벤트가 발생합니다. 값을 구성한 후 임계값을 비활성화하면 해당 값은 이 필드에 남아 있으며 경고를 다시 활성화할 경우 사용됩니다.  
   
  경고가 활성화되지 않은 경우 이 필드는 비활성 상태입니다.  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: baa8ac4db20eab2ce24ec3bb3963cd847f707fa4
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: 8de8c84c20c410283372cb68cd871c55f9b0d043
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219352"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891982"
 ---
 # <a name="optimize-parameterized-row-filters"></a>매개 변수가 있는 행 필터 최적화
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 매개 변수가 있는 행 필터를 최적화하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -50,19 +50,19 @@ ms.locfileid: "81219352"
  다음 설정을 사용하여 매개 변수가 있는 행 필터를 최적화할 수 있습니다.  
   
  **Partition Options**  
- **아티클 속성 - \<Article>** 대화 상자 또는 **필터 추가** 대화 상자의 **속성** 페이지에서 이 옵션을 설정합니다. 두 대화 상자는 새 게시 마법사 및 **게시 속성 - \<게시>** 대화 상자에서 사용할 수 있습니다. **아티클 속성 - \<Article>** 대화 상자에서는 **필터 추가** 대화 상자에서 사용할 수 없는 이 옵션에 대한 추가 값을 지정할 수 있습니다.  
+ **아티클 속성 - \<Article>** 대화 상자 또는 **필터 추가** 대화 상자의 **속성** 페이지에서 이 옵션을 설정합니다. 두 대화 상자는 새 게시 마법사 및 **게시 속성 - \<Publication>** 대화 상자에서 사용할 수 있습니다. **아티클 속성 - \<Article>** 대화 상자에서는 **필터 추가** 대화 상자에서 사용할 수 없는 이 옵션에 대해 값을 추가로 지정할 수 있습니다.  
   
  **파티션 미리 계산**  
- 게시의 아티클이 일련의 요구 사항을 충족하는 경우 이 옵션은 기본적으로 **True** 로 설정됩니다. 이러한 요구 사항에 대한 자세한 내용은 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)를 참조하세요. **게시 속성 - \<게시>** 대화 상자의 **구독 옵션** 페이지에서 이 옵션을 수정합니다.  
+ 게시의 아티클이 일련의 요구 사항을 충족하는 경우 이 옵션은 기본적으로 **True** 로 설정됩니다. 이러한 요구 사항에 대한 자세한 내용은 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)를 참조하세요. **게시 속성 - \<Publication>** 대화 상자의 **구독 옵션** 페이지에서 이 옵션을 수정합니다.  
   
  **동기화 최적화**  
- **파티션 미리 계산** 이 **False** 로 설정된 경우에만 이 옵션을 **True**로 설정해야 합니다. **게시 속성 - \<게시>** 대화 상자의 **구독 옵션** 페이지에서 이 옵션을 설정합니다.  
+ **파티션 미리 계산** 이 **False** 로 설정된 경우에만 이 옵션을 **True**로 설정해야 합니다. **게시 속성 - \<Publication>** 대화 상자의 **구독 옵션** 페이지에서 이 옵션을 설정합니다.  
   
- 새 게시 마법사 사용 및 **게시 속성 - \<게시>** 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md) 및 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+ 새 게시 마법사 사용 및 **게시 속성 - \<Publication>** 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md) 및 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="to-set-partition-options-in-the-add-filter-or-edit-filter-dialog-box"></a>필터 추가 또는 필터 편집 대화 상자에서 파티션 옵션을 설정하려면  
   
-1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **행 필터** 페이지에서 **추가**를 클릭하고 **필터 추가**를 클릭합니다.  
+1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<Publication>** 대화 상자의 **행 필터** 페이지에서 **추가**를 클릭하고 **필터 추가**를 클릭합니다.  
   
 2.  매개 변수가 있는 필터를 만듭니다. 자세한 내용은 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하세요.  
   
@@ -76,11 +76,11 @@ ms.locfileid: "81219352"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  **게시 속성 - \<게시>** 대화 상자에 있는 경우 **확인**을 클릭하여 대화 상자를 저장하고 닫습니다.  
+5.  **게시 속성 - \<Publication>** 대화 상자에서 **확인**을 클릭하여 저장하고 대화 상자를 닫습니다.  
   
 #### <a name="to-set-partition-options-in-the-article-properties---article-dialog-box"></a>아티클 속성 - \<Article> 대화 상자에서 파티션 옵션을 설정하려면  
   
-1.  새 게시 마법사의 **아티클** 페이지 또는 **게시 속성 - \<게시>** 대화 상자에서 테이블을 선택하고 **아티클 속성**을 클릭합니다.  
+1.  새 게시 마법사의 **아티클** 페이지 또는 **게시 속성 - \<Publication>** 대화 상자에서 테이블을 선택한 다음 **아티클 속성**을 클릭합니다.  
   
 2.  **선택한 테이블 아티클 속성 설정** 또는 **모든 테이블 아티클 속성 설정**을 클릭합니다.  
   
@@ -98,11 +98,11 @@ ms.locfileid: "81219352"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  **게시 속성 - \<게시>** 대화 상자에 있는 경우 **확인**을 클릭하여 대화 상자를 저장하고 닫습니다.  
+5.  **게시 속성 - \<Publication>** 대화 상자에서 **확인**을 클릭하여 저장하고 대화 상자를 닫습니다.  
   
 #### <a name="to-set-precompute-partitions"></a>파티션 미리 계산을 설정하려면  
   
-1.  **게시 속성 - \<게시>** 대화 상자의 **구독 옵션** 페이지에서 **파티션 사전 계산** 옵션의 값을 선택합니다. 다음과 같은 경우 이 속성은 읽기 전용입니다.  
+1.  **게시 속성 - \<Publication>** 대화 상자의 **구독 옵션** 페이지에서 **파티션 사전 계산** 옵션의 값을 선택합니다. 다음과 같은 경우 이 속성은 읽기 전용입니다.  
   
     -   게시가 사전 계산 파티션의 요구 사항을 충족시키지 못합니다.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "81219352"
   
 #### <a name="to-set-optimize-synchronization"></a>동기화 최적화를 설정하려면  
   
-1.  **게시 속성 - \<게시>** 대화 상자의 **구독 옵션** 페이지에서 **동기화 최적화** 옵션에 대해 `True` 값을 선택합니다.  
+1.  **게시 속성 - \<Publication>** 대화 상자의 **구독 옵션** 페이지에서 **동기화 최적화** 옵션에 대해 `True` 값을 선택합니다.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e13715681f5b86647662a37b982878b3ad77468
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 4b0cd86318c4ff884ba31fed56e31202c70990ff
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925291"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896125"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 CLUSTER.LOG 생성 및 분석
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   장애 조치(failover) 클러스터 리소스로서 SQL Server, WSFC(Windows Server 장애 조치(Failover) 클러스터) 서비스 클러스터 및 SQL Server 리소스 DLL(hadrres.dll) 간에는 SQL Server 내에서 모니터링할 수 없는 외부 상호 작용이 있습니다. WSFC 로그 CLUSTER.LOG는 WSFC 클러스터 또는 SQL Server 리소스 DLL의 문제를 진단할 수 있습니다. 
   
 ## <a name="generate-cluster-log"></a>클러스터 로그 생성  
@@ -59,9 +59,9 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
 |ID|원본|CLUSTER.LOG의 예|  
 |----------------|------------|------------------------------|  
-|`[RES]` 및 `[hadrag]` 접두사를 포함하는 메시지|hadrres.dll(Always On 리소스 DLL)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] SQL Server 가용성 그룹 \<ag>: `[hadrag]` 오프라인 요청.<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] SQL Server 가용성 그룹 \<ag>: `[hadrag]` 임대 스레드 종료<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] SQL Server 가용성 그룹 \<ag>: `[hadrag]` 무료 SQL 명령문<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] SQL Server 가용성 그룹 \<ag>: `[hadrag]` SQL Server에서 연결 끊기|  
+|`[RES]` 및 `[hadrag]` 접두사를 포함하는 메시지|hadrres.dll(Always On 리소스 DLL)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] SQL Server 가용성 그룹 \<ag>: `[hadrag]` 오프라인 요청.<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] SQL Server 가용성 그룹 \<ag>: `[hadrag]` 임대 스레드 종료<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] SQL Server 가용성 그룹 \<ag>: `[hadrag]` 무료 SQL 문<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] SQL Server 가용성 그룹 \<ag>: `[hadrag]` SQL Server에서 연결 끊기|  
 |`[RHS]` 접두사를 포함한 메시지|RHS.EXE(리소스 호스팅 하위 시스템, hadrres.dll의 호스트 프로세스)|00000c40.00000a34::2011/08/10-18:42:29.498 INFO  [RHS] 리소스 ag가 오프라인 상태가 되었습니다. RHS는 RCM에 대한 리소스 상태를 보고할 것입니다.|  
-|`[RCM]` 접두사를 포함한 메시지|리소스 제어 메시지(클러스터 서비스)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO  [RCM] rcm::RcmGroup::Move: 먼저 그룹 'ag'를 오프라인으로 만듭니다...<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO  [RCM] TransitionToState(ag) Online-->OfflineCallIssued.|  
+|`[RCM]` 접두사를 포함한 메시지|리소스 제어 메시지(클러스터 서비스)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO  [RCM] rcm::RcmGroup::Move: 먼저 그룹 'ag'을 오프라인으로 전환하는 중...<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO  [RCM] TransitionToState(ag) Online-->OfflineCallIssued.|  
 |RcmApi/ClusAPI|대부분의 경우 SQL Server를 의미하는 API 호출이 작업을 요청|000011d0.00000f80::2011/08/05-13:47:42.465 INFO  [RCM] rcm::RcmApi::MoveGroup: (ag, 2)|  
   
 ## <a name="debug-always-on-resource-dll-in-isolation"></a>분리 상태에서 Always On 리소스 DLL 디버그  
@@ -69,7 +69,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
  가용성 그룹을 다른 클러스터 리소스 DLL(다른 가용성 그룹 포함)과 분리하려면 다음을 수행하여 별도의 rhs.exe 프로세스 내에서 hadrres.dll을 실행합니다.  
   
-1.  **레지스트리 편집기**를 열고 다음 키를 탐색합니다. HKEY_LOCAL_MACHINE\Cluster\Resources. 이 키는 각각 서로 다른 GUID를 가진 모든 리소스에 대한 키를 포함합니다.  
+1.  **레지스트리 편집기**를 열고 다음 키로 이동합니다. HKEY_LOCAL_MACHINE\Cluster\Resources. 이 키는 각각 서로 다른 GUID를 가진 모든 리소스에 대한 키를 포함합니다.  
   
 2.  가용성 그룹 이름과 일치하는 **이름**을 포함한 리소스 키를 찾습니다.  
   

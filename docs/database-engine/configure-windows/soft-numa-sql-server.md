@@ -1,5 +1,6 @@
 ---
 title: soft-NUMA(SQL Server) | Microsoft Docs
+description: SQL Server 2014 SP2 이상 버전의 soft-NUMA에 대해 알아봅니다. 자동 soft-NUMA를 사용하는 방법과 soft-NUMA를 사용하도록 SQL Server를 수동으로 구성하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 02/13/2018
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee31095ad1650ce17af6ddaa19237cd3ae73486d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e65fb9a246013c756e5c2642836e57efcb1dd58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288097"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789758"
 ---
 # <a name="soft-numa-sql-server"></a>soft-NUMA(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 최신 프로세서에는 소켓당 여러 코어가 있습니다. 일반적으로 각 소켓은 단일 NUMA 노드로 표시됩니다. SQL Server 데이터베이스 엔진은 여러 내부 구조를 분할하며 NUMA 노드에 따라 서비스 스레드를 분할합니다.  소켓당 10개 이상의 코어를 포함하고 있는 프로세서의 경우 소프트웨어 NUMA를 사용하여 하드웨어 NUMA 노드를 분할하면 일반적으로 확장성 및 성능이 향상됩니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 soft-NUMA(소프트웨어 기반 NUMA) 이전에는 레지스트리를 편집하여 노드 구성 선호도 마스크를 추가해야 했으며 인스턴스가 아닌 호스트 수준에서 구성했습니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 서비스가 시작될 때 데이터베이스 인스턴스 수준에서 soft-NUMA가 자동으로 구성됩니다.  
   

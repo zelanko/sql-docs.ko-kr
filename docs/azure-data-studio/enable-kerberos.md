@@ -1,29 +1,28 @@
 ---
-title: Active Directory 인증 사용(Kerberos)
-titleSuffix: Azure Data Studio
+title: Windows 인증을 사용하여 SQL Server에 연결(Kerberos)
 description: Kerberos에서 Azure Data Studio에 대해 Active Directory 인증을 사용할 수 있도록 하는 방법을 알아봅니다.
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
-author: meet-bhagdev
-ms.author: meetb
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8aa4502fca51ef8dc15fceb119297915a64bc682
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c2e6b303217d420d439d510fc3fc24886657684b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957067"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774664"
 ---
-# <a name="connect-name-sos-to-your-sql-server-using-windows-authentication---kerberos"></a>Windows 인증을 사용하여 SQL Server에 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 연결 - Kerberos 
+# <a name="connect-azure-data-studio-to-your-sql-server-using-windows-authentication---kerberos"></a>Windows 인증을 사용하여 Azure Data Studio를 SQL Server에 연결 - Kerberos
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]에서는 Kerberos를 사용하여 SQL Server에 연결할 수 있도록 지원합니다.
+Azure Data Studio는 Kerberos를 사용하여 SQL Server에 연결할 수 있도록 지원합니다.
 
-macOS 또는 Linux에서 통합 인증(Windows 인증)을 사용하려면 현재 사용자를 Windows 도메인 계정에 연결하는 **Kerberos 티켓**을 설정해야 합니다. 
+macOS 또는 Linux에서 통합 인증(Windows 인증)을 사용하려면 현재 사용자를 Windows 도메인 계정에 연결하는 **Kerberos 티켓**을 설정해야 합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 - Kerberos 도메인 컨트롤러를 쿼리하기 위해 Windows 도메인에 가입된 머신에 액세스할 수 있어야 합니다.
 - Kerberos 인증을 허용하도록 SQL Server가 구성되어 있어야 합니다. Unix에서 실행되는 클라이언트 드라이버의 경우 Kerberos를 사용한 통합 인증만 지원됩니다. 자세한 내용은 [Kerberos 통합 인증을 사용하여 SQL Server에 연결](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)을 참조하세요. 연결하려는 각 SQL Server 인스턴스에 대해 등록된 SPN이 있어야 합니다. 자세한 내용은 [서비스 사용자 이름 등록](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)을 참조하세요.
@@ -59,7 +58,7 @@ The command completed successfully
 sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
 ```
 
-AD 도메인 컨트롤러의 IP 주소가 dns-nameserver로 나열되도록 `/etc/network/interfaces` 파일을 편집합니다. 다음은 그 예입니다. 
+AD 도메인 컨트롤러의 IP 주소가 dns-nameserver로 나열되도록 `/etc/network/interfaces` 파일을 편집합니다. 예를 들면 다음과 같습니다. 
 
 ```/etc/network/interfaces
 <...>
@@ -167,7 +166,7 @@ klist
 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 ```
 
-## <a name="connect-using-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 연결
+## <a name="connect-using-azure-data-studio"></a>Azure Data Studio를 사용하여 연결
 
 * 새 연결 프로필을 만듭니다.
 
@@ -175,4 +174,4 @@ krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 
 * 연결 프로필을 완료하고 **연결**을 클릭합니다.
 
-성공적으로 연결되면 서버가 ‘서버’ 사이드바에 표시됩니다. 
+성공적으로 연결되면 서버가 ‘서버’ 사이드바에 표시됩니다.

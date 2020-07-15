@@ -17,16 +17,16 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9fcc5f3ebca860e35365bd640a3473b478e06b49
-ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
+ms.openlocfilehash: 33b12c2b68c067db1a47159c201f5cd04a9b1c45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550170"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759138"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017에서 사용되지 않는 데이터베이스 엔진 기능
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
   이 항목에서는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 에서 계속 제공되지만 더 이상 사용되지 않는 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]기능에 대해 설명합니다. 새 애플리케이션에는 이러한 기능을 사용하면 안 됩니다.  
   
@@ -264,7 +264,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 | 사용되지 않는 기능 | 대체 기능 | 기능 이름 |
 |--------------------|-------------|--------------|
-| *Microsoft.SQLServer. Management.Smo.Information* 클래스<br /><br />*Microsoft.SQLServer. Management.Smo.Settings* 클래스<br /><br />*Microsoft.SQLServer.Management. Smo.DatabaseOptions* 클래스<br /><br />*Microsoft.SqlServer.Management.Smo. DatabaseDdlTrigger.NotForReplication* 속성 | *Microsoft.SqlServer.  Management.Smo.Server* 클래스<br /><br />Microsoft.SqlServer.  ‘Management.Smo.Server 클래스’<br /><br />Microsoft.SqlServer. Management.Smo.Database* 클래스<br /><br />None | None |
+| *Microsoft.SQLServer. Management.Smo.Information* 클래스<br /><br />*Microsoft.SQLServer. Management.Smo.Settings* 클래스<br /><br />*Microsoft.SQLServer.Management. Smo.DatabaseOptions* 클래스<br /><br />*Microsoft.SqlServer.Management.Smo. DatabaseDdlTrigger.NotForReplication* 속성 | *Microsoft.SqlServer.  Management.Smo.Server* 클래스<br /><br />Microsoft.SqlServer.‘Management.Smo.Server 클래스’<br /><br />Microsoft.SqlServer. Management.Smo.Database* 클래스<br /><br />None | None |
 
 ### <a name="sql-server-agent"></a>SQL Server 에이전트
 

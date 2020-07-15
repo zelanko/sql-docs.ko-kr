@@ -1,5 +1,6 @@
 ---
 title: 유지 관리 계획 마법사 사용 | Microsoft 문서
+description: SQL Server에서 유지 관리 계획 마법사를 사용하여 단일 서버 또는 다중 서버 유지 관리 계획을 만드는 방법을 알아봅니다.
 ms.date: 06/20/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -34,15 +35,15 @@ helpviewer_keywords:
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8f7a42e7885e2c985cd8d0b65e336b912014c40f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d2ec2dd6935d535bcef0ebb566bf0d0f8f09d6a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758985"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>유지 관리 계획 마법사 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 유지 관리 계획 마법사를 사용하여 단일 서버 또는 다중 서버 유지 관리 계획을 만드는 방법에 대해 설명합니다. 유지 관리 계획 마법사는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 정기적으로 실행할 수 있는 유지 관리 계획을 만듭니다. 이를 통해 백업, 데이터베이스 무결성 확인 또는 지정된 간격으로 데이터베이스 통계 업데이트와 같은 다양한 데이터베이스 관리 태스크를 수행할 수 있습니다.  
     
  

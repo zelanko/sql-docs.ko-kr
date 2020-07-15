@@ -1,5 +1,6 @@
 ---
 title: 밀어넣기 구독 만들기 | Microsoft Docs
+description: SQL Server Management Studio, Transact-SQL 또는 복제 관리 개체를 사용하여 SQL Server에서 밀어넣기 구독을 만드는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 6eca1e80614772a1aa65faa60351fb73f83ba433
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d02267b12a80abb7784b552eb8d71fcca89aa8a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70059297"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773951"
 ---
 # <a name="create-a-push-subscription"></a>밀어넣기 구독 만들기
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 밀어넣기 구독을 만드는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 대해 밀어넣기 구독을 만드는 방법에 대한 자세한 내용은 [SQL Server 이외 구독자에 대한 구독 만들기](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)를 참조하세요.  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
@@ -74,7 +75,7 @@ ms.locfileid: "70059297"
   
 3. **로컬 구독** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 구독**을 선택합니다.  
   
-4. 새 구독 마법사의 **게시** 페이지에 있는 **게시자** 드롭다운 목록에서 **\<SQL Server 게시자 찾기>** 또는 **\<Oracle 게시자 찾기>** 를 선택합니다.  
+4. 새 구독 마법사의 **게시** 페이지에 있는 **게시자** 드롭다운 목록에서 **\<Find SQL Server Publisher>** 또는 **\<Find Oracle Publisher>** 를 선택합니다.  
   
 5. **서버에 연결** 대화 상자에서 게시자에 연결합니다.  
   
@@ -112,7 +113,7 @@ ms.locfileid: "70059297"
    - 이 구독에 대한 배포 에이전트 작업 일정. 자세한 내용은 [동기화 일정 지정](../../relational-databases/replication/specify-synchronization-schedules.md)을 참조하세요.  
   
 > [!IMPORTANT]
-> 게시자에서 원격 배포자를 사용하여 밀어넣기 구독을 만드는 경우 ‘job_login’ 및 ‘job_password’를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 보내집니다.   이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)를 참조하세요.  
+> 게시자에서 원격 배포자를 사용하여 밀어넣기 구독을 만드는 경우 ‘job_login’ 및 ‘job_password’를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 보내집니다.  이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)를 참조하세요.  
   
 #### <a name="to-create-a-push-subscription-to-a-merge-publication"></a>병합 게시에 밀어넣기 구독을 만들려면  
   
@@ -148,7 +149,7 @@ ms.locfileid: "70059297"
    - 이 구독에 대한 병합 에이전트 작업 일정. 자세한 내용은 [동기화 일정 지정](../../relational-databases/replication/specify-synchronization-schedules.md)을 참조하세요.  
   
 > [!IMPORTANT]
-> 게시자에서 원격 배포자를 사용하여 밀어넣기 구독을 만드는 경우 ‘job_login’ 및 ‘job_password’를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 보내집니다.   이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)를 참조하세요.  
+> 게시자에서 원격 배포자를 사용하여 밀어넣기 구독을 만드는 경우 ‘job_login’ 및 ‘job_password’를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 보내집니다.  이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)를 참조하세요.  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  다음은 트랜잭션 게시에 밀어넣기 구독을 만드는 예입니다. 로그인 및 암호 값은 **sqlcmd** 스크립팅 변수를 통해 런타임에 제공됩니다.  

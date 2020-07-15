@@ -1,6 +1,6 @@
 ---
 title: 보조 가용성 그룹 복제본에 변경 내용이 표시되지 않음
-ms.description: Troubleshoot to determine why changes occurring on a primary replica are not reflected on the secondary replica for an Always On availability group.
+description: 주 복제본의 변경 내용이 Always On 가용성 그룹의 보조 복제본에 반영되지 않은 이유를 확인하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 55dc6787960fbb4979bbe0d21f27f0fa43437662
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: 67131a066a9885547e04ff58c80cd9f05d365051
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243010"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888003"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>주 복제본의 변경 내용이 Always On 가용성 그룹의 보조 복제본에 반영되지 않은 이유 확인
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   클라이언트 애플리케이션에서 주 복제본에 대한 업데이트를 성공적으로 완료하지만 보조 복제본 쿼리는 변경 내용이 반영되지 않았음을 보여줍니다. 이 경우 가용성에 정상 동기화 상태가 있음을 가정합니다. 대부분의 경우에서 이 동작은 몇 분 후 자체적으로 해결합니다.  
   
  변경 내용이 몇 분 후에도 보조 복제본에 여전히 반영되지 않는 경우 동기화 작업 흐름에 병목 상태가 있을 수 있습니다. 병목 상태의 위치는 보조 복제본이 동기 커밋 또는 비동기 커밋으로 설정되어 있는지 여부에 따라 달라집니다.  
@@ -127,6 +127,6 @@ from sys.dm_hadr_database_replica_states
  다시 실행 스레드가 실제로 뒤처진 경우 보조 복제본에 대해 성능 저하의 근본 원인을 조사해야 합니다. 보고 워크로드와의 I/O 경합이 있는 경우 [Resource Governor](~/relational-databases/resource-governor/resource-governor.md)를 사용하여 보고 워크로드가 실행되는 I/O 사이클을 간접적으로 제어하는 데 사용되는 CPU 사이클을 어느 정도 제어할 수 있습니다. 예를 들어 보고 워크로드가 CPU의 10%를 사용하지만 워크로드가 I/O 경계인 경우 Resource Governor를 사용하여 CPU 리소스 사용량을 5%로 제한하면 읽기 워크로드를 제한하여 I/O에 대한 영향을 최소화할 수 있습니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- [SQL Server 2008의 성능 문제 해결](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx) 
+ [SQL Server 2008의 성능 문제 해결](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx)
   
   

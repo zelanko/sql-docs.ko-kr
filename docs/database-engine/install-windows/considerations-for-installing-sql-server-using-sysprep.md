@@ -1,5 +1,6 @@
 ---
 title: SysPrep을 사용하여 SQL Server 설치
+description: SQL Server SysPrep을 사용하여 컴퓨터에 독립 실행형 SQL Server 인스턴스를 준비하고 나중에 구성을 완료할 수 있습니다.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 448906ca9a9dcb1a29b4cfab323e610909546171
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67c6dd12c7c4829c2dc615ce8e440f8518d5fd09
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251574"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883229"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>SysPrep을 사용하여 SQL Server 설치 시 고려 사항
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep을 사용하여 컴퓨터에 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 준비하고 나중에 구성을 완료할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep은 두 단계로 된 과정을 통해 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 구성합니다. 단계는 다음과 같습니다.  
   

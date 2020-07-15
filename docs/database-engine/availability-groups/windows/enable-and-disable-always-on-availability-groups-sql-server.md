@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 77e07cd5493220f14b177292e9065c355fca866f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28ea3041fbd2389a64d3cb8933fd11eaa6786144
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000174"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894472"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>Always On 가용성 그룹 기능을 사용하거나 사용하지 않도록 설정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   먼저 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하도록 설정해야만 서버 인스턴스에서 가용성 그룹을 사용할 수 있습니다. 가용성 그룹을 만들고 구성하려면 먼저 하나 이상의 가용성 그룹에 대한 가용성 복제본을 호스팅할 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 의 각 인스턴스에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능을 사용하도록 설정해야 합니다.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68000174"
   
 2.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-3.  **SQL Server 구성 관리자**에서 **SQL Server 서비스**를 클릭하고 SQL Server( **\<** _인스턴스 이름_ **>)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 여기서 **\<** _인스턴스 이름_ **>** 은 Always On 가용성 그룹을 사용하도록 설정할 로컬 서버 인스턴스의 이름입니다.  
+3.  **SQL Server 구성 관리자**에서 **SQL Server 서비스**를 클릭하고 ( **\<**_instance name_**>)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 여기서 **\<**_instance name_**>** 은 AlwaysOn 가용성 그룹을 사용하도록 설정할 로컬 서버 인스턴스의 이름입니다.  
   
 4.  **Always On 고가용성** 탭을 선택합니다.  
   
@@ -181,7 +181,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-3.  **SQL Server 구성 관리자**에서 **SQL Server 서비스**를 클릭하고 SQL Server( **\<** _인스턴스 이름_ **>)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 여기서 **\<** _인스턴스 이름_ **>** 은 Always On 가용성 그룹을 사용하지 않도록 설정할 로컬 서버 인스턴스의 이름입니다.  
+3.  **SQL Server 구성 관리자**에서 **SQL Server 서비스**를 클릭하고 SQL Server( **\<**_instance name_**>)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 여기서 **\<**_instance name_**>** 은 AlwaysOn 가용성 그룹을 사용하지 않도록 설정할 로컬 서버 인스턴스의 이름입니다.  
   
 4.  **Always On 고가용성**탭에서 **Always On 가용성 그룹 사용** 확인란의 선택을 취소하고 **확인**을 클릭합니다.  
   

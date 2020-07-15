@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e8523831fd181c17bd8fcff1698d85f46c824e2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c9759a56800cd03c107fb9f578e9af2dbe86d1d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73983323"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760932"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   이전에 CREATE TRIGGER 문을 사용해 만든 DML, DDL 또는 LOGON 트리거의 정의를 수정합니다. 트리거는 CREATE TRIGGER를 사용하여 만듭니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문으로 직접 만들거나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임)에서 만들어지고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 업로드되는 어셈블리의 메서드로 만들 수 있습니다. ALTER TRIGGER 문에 사용되는 매개 변수에 대한 자세한 내용은 [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)를 참조하세요.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73983323"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
 
@@ -107,7 +107,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >
     assembly_name.class_name.method_name  
 ```  
   
-```  
+```syntaxsql
 -- Azure SQL Database Syntax   
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)   
   
@@ -244,7 +244,7 @@ AS { sql_statement
   
  서버 범위(ON ALL SERVER)로 정의된 DDL 트리거 또는 LOGON 트리거를 변경하려면 해당 서버에 대한 CONTROL SERVER 권한이 필요합니다. 데이터베이스 범위(ON DATABASE)로 정의된 DDL 트리거를 변경하려면 현재 데이터베이스에 대한 ALTER ANY DATABASE DDL TRIGGER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 사용자가 `SalesPersonQuotaHistory` 테이블에 데이터를 추가 또는 변경하려고 시도하면 클라이언트에 사용자 정의 메시지를 인쇄하는 AdventureWorks 2012 데이터베이스의 DML 트리거를 만드는 방법을 보여 줍니다. 그런 다음 `ALTER TRIGGER` 작업에만 해당 트리거를 적용하도록 `INSERT`를 사용하여 트리거를 수정합니다. 이 트리거는 테이블에 행을 삽입하거나 업데이트하는 사용자에게 `Compensation` 부서에도 해당 사실을 통지하도록 알려 줍니다.  
   
 ```  

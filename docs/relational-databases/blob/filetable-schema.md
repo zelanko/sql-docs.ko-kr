@@ -1,5 +1,6 @@
 ---
 title: FileTable 스키마 | Microsoft 문서
+description: 디렉터리 구조를 사용하여 파일을 저장하는 SQL Server 기능인 사전 정의 및 고정형 FileTable 스키마에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d5f53246717621e2482a352d25cf2a24fd24f2f3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 49199c617f916413e79a5c6ffc71e6c4f21a69e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68125174"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767977"
 ---
 # <a name="filetable-schema"></a>FileTable 스키마
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   FileTable의 미리 정의된 고정 스키마에 대해 설명합니다.  
   
 |파일 특성 이름|type|크기|기본값|Description|파일 시스템 접근성|  

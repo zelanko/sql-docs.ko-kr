@@ -1,5 +1,6 @@
 ---
 title: 서버 인증 모드 변경 | Microsoft Docs
+description: SQL Server에서 서버 인증 모드를 변경하는 방법을 알아봅니다. 이 작업을 위해 SQL Server Management Studio 또는 Transact-SQL을 사용할 수 있습니다.
 ms.custom: ''
 ms.date: 02/18/2020
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - server authentication mode [SQL Server]
 - modifying server authentication mode
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a8ffafae40991d6134925481409b5898b06c20c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 67fe4768a07460ebac0b533b6e886ab565d82029
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759226"
 ---
 # <a name="change-server-authentication-mode"></a>서버 인증 모드 변경
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 서버 인증 모드를 변경하는 방법에 대해 설명합니다. 설치하는 동안 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 **Windows 인증 모드** 또는 **SQL Server 및 Windows 인증 모드**로 설정됩니다. 설치 후 언제든지 인증 모드를 변경할 수 있습니다.
 
 설치 중에 **Windows 인증 모드** 를 선택하면 sa 로그인이 해제되며 설치 프로그램에서 암호를 할당합니다. 나중에 인증 모드를 **SQL Server 및 Windows 인증 모드**로 변경해도 sa 로그인은 계속 해제되어 있습니다. sa 로그인을 사용하려면 ALTER LOGIN 문을 사용하여 sa 로그인을 설정하고 새 암호를 할당합니다. sa 로그인은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용한 서버 연결만 허용합니다.

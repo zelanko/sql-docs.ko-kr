@@ -1,5 +1,6 @@
 ---
 title: remote data archive 서버 구성 옵션 구성 | Microsoft Docs
+description: SQL Server에서 원격 데이터 보관 옵션을 사용하여 서버의 데이터베이스 및 테이블을 Stretch에 사용할 수 있는지 여부를 지정하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: b5817b5a-f39a-4faf-b11e-a47b54fd9f32
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fda2594b2dc61a78eb5900ef6d1b735dac5b44e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc53b5392d6bd493b634e9e2c8a4a92613eb8c32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012333"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785749"
 ---
 # <a name="configure-the-remote-data-archive-server-configuration-option"></a>원격 데이터 보관 서버 구성 옵션 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **remote data archive** 옵션을 사용하여 서버의 데이터베이스 및 테이블을 Stretch에 사용할 수 있는지 여부를 지정합니다. 자세한 내용은 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)를 참조하십시오.  
   

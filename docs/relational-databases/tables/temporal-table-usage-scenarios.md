@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eaac8c264caf9009006853e0f02e258ad5d7408f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e6a000df12b44b2da1913f45febfaa93e39f7af1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165746"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881220"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Temporal 테이블 사용 시나리오
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 임시 테이블은 일반적으로 데이터 변경 기록을 추적하는 데 필요한 시나리오에서 유용합니다. 생산성이 상당히 높아지므로 다음 사용 사례에서 Temporal 테이블 사용을 고려하는 것이 좋습니다.
 
@@ -141,8 +141,8 @@ AT TIME ZONE을 사용하는 것은 시스템 버전 관리된 테이블이 사�
 
 > [!TIP]
 > FOR SYSTEM_TIME이 포함된 임시 절에 지정된 필터링 조건은 SARG 가능합니다. 예를 들어 SQL Server는 기본 클러스터행 인덱스를 활용하여 검색(scan) 작업 대신 찾기(seek)를 수행할 수 있습니다.
-> 기록 테이블을 직접 쿼리하는 경우 \<기간 열> {< | > | =, ...} date_condition AT TIME ZONE ‘UTC’ 형태로 필터를 지정하여 필터링 조건도 SARG 가능하도록 확인합니다.
-> AT TIME ZONE을 기간 열에 적용하면 SQL Server에서는 테이블/인덱스 검색을 수행하지만 이 작업은 비용이 매우 많이 들 수 있습니다. 쿼리에서 \<기간 열> AT TIME ZONE ‘\<표준 시간대>’ > {< | > | =, ...} date_condition과 같은 조건 형식은 사용하지 마세요.
+> 기록 테이블을 직접 쿼리하는 경우 \<period column> {< | > | =, ...} 형태로 필터를 지정하여 필터링 조건도 SARG 가능하도록 확인합니다.
+> AT TIME ZONE을 기간 열에 적용하면 SQL Server에서는 테이블/인덱스 검색을 수행하지만 이 작업은 비용이 매우 많이 들 수 있습니다. 쿼리에서 \<period column> AT TIME ZONE '\<your time zone>' > {< | > | =, ...} date_condition과 같은 조건 형식은 사용하지 마세요.
 
 참고 항목: [시스템 버전 임시 테이블의 데이터 쿼리](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)
 

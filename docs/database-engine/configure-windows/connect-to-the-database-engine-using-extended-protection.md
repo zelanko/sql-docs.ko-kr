@@ -1,5 +1,6 @@
 ---
 title: 확장된 보호를 사용하여 데이터베이스 엔진에 연결 | Microsoft Docs
+description: 확장된 보호가 서비스 바인딩 및 채널 바인딩을 사용하여 인증 릴레이 공격을 방지하는 방식을 살펴봅니다. 이 기능을 사용하도록 설정하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 05/21/2019
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5216b324477f1af7fb727af3462ccce8d64e6a64
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9f54a62d7110f86087f796b6dc1f9a6c688d89d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012104"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772632"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>확장된 보호를 사용하여 데이터베이스 엔진에 연결
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 **버전부터는** 확장된 보호 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]가 지원됩니다. **인증에 대한 확장된 보호** 는 운영 체제에서 구현하는 네트워크 구성 요소의 기능입니다. **확장된 보호** 는 Windows 7 및 Windows Server 2008 R2에서 지원됩니다. **확장된 보호** 는 이전 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 운영 체제의 경우에는 서비스 팩에 포함되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장된 보호 **를 사용하여 연결하면**의 보안이 강화됩니다.  
   
 > [!IMPORTANT]  
@@ -86,7 +87,7 @@ ms.locfileid: "68012104"
   
 1.  **시작** 메뉴에서 **모든 프로그램**을 선택하고 **Microsoft SQL Server** 를 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-2.  **SQL Server 네트워크 구성**을 확장한 다음, _\<_InstanceName*>* 에 대한 **프로토콜**을 마우스 오른쪽 단추로 클릭한 다음, **속성**을 클릭합니다.  
+2.  **SQL Server 네트워크 구성**을 확장한 다음, _\<_InstanceName*>*에 대한 **프로토콜**을 마우스 오른쪽 단추로 클릭한 다음, **속성**을 클릭합니다.  
   
 3.  채널 바인딩과 서비스 바인딩 둘 다에 대해 **고급** 탭에서 **확장된 보호** 를 적절한 설정으로 지정합니다.  
   

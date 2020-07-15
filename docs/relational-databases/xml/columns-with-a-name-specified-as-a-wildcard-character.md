@@ -1,5 +1,6 @@
 ---
 title: 와일드카드 문자를 사용하여 열 지정(SQLXML) | Microsoft Docs
+description: 와일드카드 문자로 지정된 열 이름이 XQuery의 결과에 미치는 영향에 대해 알아봅니다.
 ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,16 +13,16 @@ ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 0820b0d43c51dd7aeabf773f5f9809b7a8005d68
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 915bd2824f6e3a706587769413c0f116df859f06
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664689"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775587"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>이름이 와일드카드 문자로 지정된 열
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 지정된 열 이름이 와일드카드 문자(\*)이면 열 이름이 지정되지 않은 경우처럼 열 내용이 삽입됩니다. 이 열이 비-**xml** 유형 열이면 다음 예에서와 같이 열 내용이 텍스트 노드로 삽입됩니다.  
   

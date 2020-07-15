@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 88c43b8d37861e52b5bda5afc0a38753f2b70d6e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6b4f57e1593d9f8335f62095cf309ee85f74e1a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321837"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773917"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Create a Snapshot for a Merge Publication with Parameterized Filters
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 매개 변수가 있는 필터로 병합 게시에 대한 스냅샷을 만드는 방법에 대해 설명합니다.  
 
 병합 게시에서 매개 변수가 있는 행 필터를 사용하면 복제 시 각 구독이 두 부분으로 구성된 스냅샷으로 초기화됩니다. 먼저 복제에 필요한 모든 개체와 게시된 개체의 스키마를 포함하는 스키마 스냅샷이 생성되는데 이때 데이터는 제외됩니다. 그런 다음 스키마 스냅샷의 개체 및 스키마와 구독의 파티션에 속한 데이터를 포함하는 스냅샷으로 각 구독을 초기화합니다. 둘 이상의 구독이 주어진 파티션(동일한 스키마와 데이터)을 받는다면 해당 파티션에 대한 스냅샷은 단 한 번만 생성됩니다. 동일한 스냅샷에서 여러 개의 구독이 초기화됩니다. 매개 변수가 있는 행 필터에 대한 자세한 내용은 [매개 변수가 있는 행 필터](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
@@ -59,7 +59,7 @@ ms.locfileid: "75321837"
 -   게시에 있는 여러 아티클에 대한 필터링 시 각 구독에 고유하면서도 겹치지 않는 파티션이 생성될 경우 메타데이터는 병합 에이전트가 실행될 때마다 정리됩니다. 따라서 분할된 스냅샷은 더 빨리 만료됩니다. 이 옵션을 사용할 경우 구독자가 스냅샷 생성 및 배달을 시작하도록 허용하는 것을 고려해야 합니다. 
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- **게시 속성 - \<게시&gt;** 대화 상자의 **데이터 파티션** 페이지에서 파티션에 대한 스냅샷을 생성합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요. 구독자가 스냅샷 생성 및 배달을 시작하고 스냅샷을 생성하도록 허용할 수 있습니다.  
+ **게시 속성 - \<Publication>** 대화 상자의 **데이터 파티션** 페이지에서 파티션 스냅샷을 생성합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요. 구독자가 스냅샷 생성 및 배달을 시작하고 스냅샷을 생성하도록 허용할 수 있습니다.  
   
  하나 이상의 파티션에 대한 스냅샷을 생성하기 전에 다음을 수행해야 합니다.  
   
@@ -75,19 +75,19 @@ ms.locfileid: "75321837"
   
 3.  스냅샷을 생성할 게시를 마우스 오른쪽 단추로 클릭한 다음 **스냅샷 에이전트 상태 보기**를 클릭합니다.  
   
-4.  **스냅샷 에이전트 상태 보기 - \<게시&gt;** 대화 상자에서 **시작**을 클릭합니다.  
+4.  **스냅샷 에이전트 상태 보기 - \<Publication>** 대화 상자에서 **시작**을 클릭합니다.  
   
      스냅샷 에이전트에서 스냅샷 생성을 마치면 "[100%] 17개 아티클의 스냅샷이 생성되었습니다"라는 메시지가 표시됩니다.  
   
 #### <a name="to-allow-subscribers-to-initiate-snapshot-generation-and-delivery"></a>구독자가 스냅샷 생성 및 배달을 시작하도록 허용하려면  
   
-1.  **게시 속성 - \<게시&gt;** 대화 상자의 **데이터 파티션** 페이지에서 **새 구독자가 동기화할 때 필요한 경우 자동으로 파티션 정의 및 스냅샷 생성**을 선택합니다.  
+1.  **게시 속성 - \<Publication>** 대화 상자의 **데이터 파티션** 페이지에서 **새 구독자가 동기화할 때 필요한 경우 자동으로 파티션 정의 및 스냅샷 생성**을 선택합니다.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 #### <a name="to-generate-and-refresh-snapshots"></a>스냅샷을 생성하고 새로 고치려면  
   
-1.  **게시 속성 - \<게시>** 대화 상자의 **데이터 파티션** 페이지에서 **추가**를 클릭합니다.  
+1.  **게시 속성 - \<Publication>** 대화 상자의 **데이터 파티션** 페이지에서 **추가**를 클릭합니다.  
   
 2.  스냅샷을 만들 파티션과 연결된 **HOST_NAME()** 및/또는 **SUSER_SNAME()** 값을 입력합니다.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "75321837"
   
     2.  기본으로 제공되는 스냅샷 새로 고침 일정을 그대로 적용하거나 **변경** 을 클릭하여 다른 일정을 지정합니다.  
   
-4.  **확인**을 클릭합니다. 그러면 **게시 속성 - \<게시>** 대화 상자로 돌아갑니다.  
+4.  **확인**을 클릭합니다. 그러면 **게시 속성 - \<Publication>** 대화 상자로 돌아갑니다.  
   
 5.  속성 표에서 파티션을 선택한 다음 **선택한 스냅샷 지금 생성**을 클릭합니다.  
   

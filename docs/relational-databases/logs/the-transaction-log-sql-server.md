@@ -1,5 +1,6 @@
 ---
 title: 트랜잭션 로그(SQL Server) | Microsoft 문서
+description: 트랜잭션 로그에 대해 알아봅니다. 모든 SQL Server 데이터베이스는 시스템 오류가 발생할 경우 필요한 모든 트랜잭션 및 데이터베이스 수정 내용을 기록합니다.
 ms.custom: ''
 ms.date: 10/23/2019
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 74220a441301bdb44c00a6e6a998861df2c6ce02
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287807"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834764"
 ---
 # <a name="the-transaction-log-sql-server"></a>트랜잭션 로그(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에는 각 트랜잭션에 의해 적용된 모든 트랜잭션 및 데이터베이스 수정 내용을 기록하는 트랜잭션 로그가 있습니다.
   
 트랜잭션 로그는 데이터베이스의 중요한 구성 요소입니다. 시스템 오류가 발생한 경우 데이터베이스를 일관된 상태로 다시 전환하려면 이 로그가 필요합니다. 
@@ -133,7 +134,7 @@ ms.locfileid: "79287807"
   
  전체 복구 모델에서 전체 로깅되는 다음 작업은 단순 및 대량 로그 복구 모델에서 최소 로깅됩니다.  
   
--   대량 가져오기 작업([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)및 [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)) 테이블로 대량 가져오기 작업이 최소한으로 기록되는 경우에 대한 자세한 내용은 [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)을 참조하십시오.  
+-   대량 가져오기 작업([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)) 테이블로 대량 가져오기 작업이 최소한으로 기록되는 경우에 대한 자세한 내용은 [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)을 참조하십시오.  
   
 트랜잭션 복제를 사용하는 경우 대량 로그 복구 모델에서도 `BULK INSERT` 작업이 모두 기록됩니다.  
   
@@ -157,8 +158,11 @@ ms.locfileid: "79287807"
         > [!WARNING]
         > `DBCC DBREINDEX` 문은 **사용되지 않으므로** 새 애플리케이션에 사용하지 마세요.  
   
+        > [!NOTE]
+        > 인덱스 빌드 작업은 최소 로깅을 사용하지만 동시에 실행되는 백업이 있는 경우 지연될 수 있습니다. 이 지연은 단순 복구 모델 또는 대량 로그된 복구 모델을 사용하는 경우 최소로 로그되는 버퍼 풀 페이지의 동기화 요구 사항 때문에 발생합니다. 
+      
     -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 새 힙 다시 빌드(해당 사항이 있을 경우) `DROP INDEX` 작업 중의 인덱스 페이지 할당 취소는 **항상** 모두 로깅됩니다.
-  
+
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
 **트랜잭션 로그 관리**  
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 8a7c149fbc59691519c1a85afe1ff64cc6da579a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bde2baadb2a7cf5c6a11330443ab8e3c883455a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823682"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759120"
 ---
 # <a name="restore-pages-sql-server"></a>페이지 복원(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 페이지를 복원하는 방법에 대해 설명합니다. 페이지 복원의 목표는 전체 데이터베이스를 복원하지 않고 하나 이상의 손상된 페이지를 복원하는 것입니다. 일반적으로 복원 후보 페이지는 페이지에 액세스할 때 발생한 오류 때문에 "주의 대상"으로 표시됩니다. 주의 대상 페이지는 [msdb](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 데이터베이스의 **suspect_pages** 테이블에서 확인할 수 있습니다.  
   

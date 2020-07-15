@@ -1,8 +1,8 @@
 ---
-title: 데이터베이스 분리 및 연결(SQL Server) | Microsoft 문서
+title: 데이터베이스 분리 및 연결(SQL Server)
 description: SQL Server 데이터베이스의 데이터 및 트랜잭션 로그 파일을 분리했다 다시 연결하여 데이터베이스를 다른 인스턴스로 변경하거나 데이터베이스를 이동할 수 있습니다.
 ms.custom: ''
-ms.date: 11/26/2018
+ms.date: 06/30/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a43fcc0dade0c030546e76bf36f242973f918d2e
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: e9922e70d8ee4327bfb01c9c8657e8fabfe6a28c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138173"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756284"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>데이터베이스 분리 및 연결(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 데이터베이스의 데이터 및 트랜잭션 로그 파일은 분리할 수 있으며 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스나 다른 인스턴스에 다시 연결할 수 있습니다. 데이터베이스 분리 및 연결은 데이터베이스를 같은 컴퓨터의 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 변경하거나 데이터베이스를 이동하는 경우 유용합니다.  
   
   
@@ -63,7 +63,13 @@ ms.locfileid: "82138173"
   
     > [!NOTE]  
     > 데이터베이스 스냅샷은 분리하거나 연결할 수 없습니다.  
+
+-   데이터베이스가 Always On 가용성 그룹의 일부입니다.  
   
+    가용성 그룹에서 제거될 때까지 데이터베이스를 분리할 수 없습니다. 자세한 내용은 [Always On 가용성 그룹에서 주 데이터베이스 제거](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)를 참조하세요.
+  
+
+
 -   데이터베이스가 데이터베이스 미러링 세션에서 미러되고 있는 경우.  
   
     데이터베이스는 세션이 종료된 후에야 분리될 수 있습니다. 자세한 내용은 [데이터베이스 미러링 제거&#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)를 참조하세요.  

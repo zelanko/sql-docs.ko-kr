@@ -1,25 +1,24 @@
 ---
 title: 5개의 가장 느린 쿼리 샘플 위젯 사용
-titleSuffix: Azure Data Studio
 description: 이 자습서에서는 데이터베이스 대시보드에서 5개의 가장 느린 쿼리 샘플 위젯을 사용하도록 설정하는 방법을 보여 줍니다.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
-ms.date: 08/02/2019
-ms.openlocfilehash: 3f940f0f18df676eae2ca101a2eccaa2be7169e2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.date: 06/01/2020
+ms.openlocfilehash: f4e8e76583a90ce64a9f99ef3c94875b2c1fc6dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957047"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774544"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>자습서: 데이터베이스 대시보드에 *5개의 가장 느린 쿼리* 샘플 위젯 추가
 
-이 자습서에서는 [!INCLUDE[name-sos](../includes/name-sos-short.md)]의 기본 제공 샘플 위젯 중 하나를 ‘데이터베이스 대시보드’에 추가하여 데이터베이스의 가장 느린 5개 쿼리를 빠르게 확인하는 프로세스를 보여 줍니다.  또한 [!INCLUDE[name-sos](../includes/name-sos-short.md)]의 기능을 사용하여 느린 쿼리 및 쿼리 계획의 세부 정보를 보는 방법도 알아봅니다. 이 자습서에서는 다음 방법을 알아봅니다.
+이 자습서에서는 Azure Data Studio의 기본 제공 샘플 위젯 중 하나를 데이터베이스 대시보드에 추가하여 데이터베이스의 가장 느린 5개 쿼리를 빠르게 확인하는 프로세스를 보여 줍니다. 또한 Azure Data Studio의 기능을 사용하여 느린 쿼리 및 쿼리 계획의 세부 정보를 보는 방법도 알아봅니다. 이 자습서에서는 다음 방법을 알아봅니다.
 
 > [!div class="checklist"]
 > * 데이터베이스에서 쿼리 저장소 사용
@@ -27,9 +26,9 @@ ms.locfileid: "74957047"
 > * 데이터베이스의 가장 느린 쿼리에 대한 세부 정보 보기
 > * 느린 쿼리에 대한 쿼리 실행 계획 보기
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]에는 기본 제공되는 몇 가지 인사이트 위젯이 있습니다. 이 자습서에서는 *query-data-store-db-insight* 위젯을 추가하는 방법을 보여 주지만, 위젯을 추가하는 단계는 기본적으로 동일합니다.
+Azure Data Studio에는 기본 제공되는 몇 가지 인사이트 위젯이 있습니다. 이 자습서에서는 *query-data-store-db-insight* 위젯을 추가하는 방법을 보여 주지만, 위젯을 추가하는 단계는 기본적으로 동일합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 자습서를 완료하려면 SQL Server 또는 Azure SQL Database *TutorialDB*가 필요합니다. *TutorialDB* 데이터베이스를 만들려면 다음 빠른 시작 중 하나를 완료합니다.
 
@@ -39,7 +38,7 @@ ms.locfileid: "74957047"
 
 ## <a name="turn-on-query-store-for-your-database"></a>데이터베이스의 쿼리 저장소 설정
 
-이 예제의 위젯을 사용하려면 ‘쿼리 저장소’를 사용하도록 설정해야 합니다. 
+이 예제의 위젯을 사용하려면 ‘쿼리 저장소’를 사용하도록 설정해야 합니다.
 
 1. **서버** 사이드바에서 **TutorialDB** 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 선택합니다.
 
@@ -51,15 +50,15 @@ ms.locfileid: "74957047"
 
 ## <a name="add-the-slow-queries-widget-to-your-database-dashboard"></a>데이터베이스 대시보드에 느린 쿼리 위젯 추가
 
-대시보드에 ‘느린 쿼리 위젯’을 추가하려면 ‘사용자 설정’ 파일에서 *dashboard.database.widgets* 설정을 편집합니다.  
+대시보드에 ‘느린 쿼리 위젯’을 추가하려면 ‘사용자 설정’ 파일에서 *dashboard.database.widgets* 설정을 편집합니다. 
 
-1. **Ctrl+Shift+P**를 눌러 ‘명령 팔레트’를 열고 ‘사용자 설정’을 엽니다.  
+1. **Ctrl+Shift+P**를 눌러 ‘명령 팔레트’를 열고 ‘사용자 설정’을 엽니다. 
 
-2. 검색 상자에 ‘설정’을 입력하고 **기본 설정:  사용자 설정 열기**를 선택합니다.
+2. 검색 상자에 ‘설정’을 입력하고 **기본 설정: 사용자 설정 열기**를 선택합니다.
 
    ![사용자 설정 열기 명령](./media/tutorial-qds-sql-server/open-user-settings.png)
 
-3. 설정 검색 상자에 ‘대시보드’를 입력하고 **dashboard.database.widgets**로 이동하여 ‘settings.json에서 편집’을 클릭합니다.  
+3. 설정 검색 상자에 ‘대시보드’를 입력하고 **dashboard.database.widgets**로 이동하여 ‘settings.json에서 편집’을 클릭합니다. 
 
    ![설정 검색](./media/tutorial-qds-sql-server/search-settings.png)
 
@@ -101,7 +100,7 @@ ms.locfileid: "74957047"
 
 5. **Ctrl+S**를 눌러 수정한 **사용자 설정**을 저장합니다.
 
-6. **서버** 사이드바의 **TutorialDB**로 이동하여 ‘데이터베이스 대시보드’를 열고 마우스 오른쪽 단추를 클릭한 후 **관리**를 선택합니다. 
+6. **서버** 사이드바의 **TutorialDB**로 이동하여 ‘데이터베이스 대시보드’를 열고 마우스 오른쪽 단추를 클릭한 후 **관리**를 선택합니다.
 
    ![대시보드 열기](./media/tutorial-qds-sql-server/insight-open-dashboard.png)
 
@@ -117,9 +116,7 @@ ms.locfileid: "74957047"
 
    ![인사이트 세부 정보 대화 상자](./media/tutorial-qds-sql-server/insight-details-dialog.png)
 
-3. **항목 세부 정보**에서 **query_sql_txt** 오른쪽에 있는 셀을 마우스 오른쪽 단추로 클릭하고 **셀 복사**를 클릭합니다.
-
-4. **인사이트** 창을 닫습니다.
+3. **인사이트** 창을 닫습니다.
 
 ## <a name="view-the-query-plan"></a>쿼리 계획 보기
 

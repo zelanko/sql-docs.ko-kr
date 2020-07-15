@@ -1,23 +1,22 @@
 ---
 title: 서버 그룹
-titleSuffix: Azure Data Studio
 description: Azure Data Studio의 서버 그룹에 대한 자세한 정보
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: a1edfb7566d47b8c02dbd53fcccbd7441239a949
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dfdc9f3c80b61d65d164b8328122a4785b37ba54
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959305"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758396"
 ---
-# <a name="server-groups-in-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]의 서버 그룹
+# <a name="server-groups-in-azure-data-studio"></a>Azure Data Studio의 서버 그룹
 
 서버 그룹은 사용하는 서버 및 데이터베이스에 대한 연결을 구성하는 방법을 제공합니다. 서버 그룹을 만들면 구성 세부 정보가 *사용자 설정* 에 저장됩니다.
 

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c0bb4dfc3a0ac9109b210cfe02fb6a2e743f0ce5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7a2bbbbc6bb18e3239091e0d2902bf65b85deec2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907960"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883220"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Oracle 게시자 문제 해결
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 Oracle 게시자를 구성 및 사용할 때 발생할 수 있는 여러 가지 문제를 나열합니다.  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>Oracle 클라이언트 및 네트워킹 소프트웨어와 관련된 오류가 발생했습니다.  
@@ -67,9 +67,9 @@ ms.locfileid: "72907960"
 ## <a name="the-oracle-publisher-is-associated-with-another-distributor"></a>Oracle 게시자가 다른 배포자와 연결되어 있습니다.  
  Oracle 게시자는 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에만 연결할 수 있습니다. Oracle 게시자에 배포자가 연결되어 있는 경우 다른 배포자를 사용하려면 먼저 기존 배포자를 삭제해야 합니다. 기존 배포자를 먼저 삭제하지 않으면 다음 오류 메시지 중 하나가 표시됩니다.  
   
--   "Oracle 서버 인스턴스 '\<*OraclePublisherName*'은 '\<*SQLServerDistributorName*>'를 배포자로 사용하도록 이전에 구성되었습니다. '\<*NewSQLServerDistributorName*>'을 배포자로 사용하려면 Oracle 서버 인스턴스의 현재 복제 구성을 제거하여 해당 서버 인스턴스의 모든 게시를 삭제해야 합니다."  
+-   "'\<*SQLServerDistributorName*>'을(를) 배포자로 사용하도록 Oracle 서버 인스턴스 '\<*OraclePublisherName*>'이(가) 구성되어 있습니다. '\<*NewSQLServerDistributorName*>'을(를) 배포자로 사용하려면 Oracle 서버 인스턴스의 현재 복제 구성을 제거하여 해당 서버 인스턴스의 모든 게시를 삭제해야 합니다."  
   
--   "Oracle 서버 '\<*OracleServerName*>'는 배포자 '\<*SQLServerDistributorName*>.*\<DistributionDatabaseName>*'에 대한 게시자 '\<*OraclePublisherName*>'으로 이미 정의되었습니다. 게시자를 삭제하거나 공용 동의어 ' *\<SynonymName>* '을 삭제하고 다시 만드세요."  
+-   "Oracle 서버 '\<*OracleServerName*>'은(는) 배포자 '\<*SQLServerDistributorName*>. *\<DistributionDatabaseName>* '에서 이미 게시자 '\<*OraclePublisherName*>'(으)로 정의되어 있습니다. 게시자를 삭제하거나 공용 동의어 ' *\<SynonymName>* '을(를) 삭제하고 다시 만드십시오."  
   
  Oracle 게시자를 삭제하면 Oracle 데이터베이스의 복제 개체가 자동으로 정리됩니다. 그러나 어떤 경우에는 Oracle 복제 개체를 수동으로 정리해야 합니다. 복제에 의해 생성된 Oracle 복제 개체를 수동으로 정리하려면 다음을 수행하십시오.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "72907960"
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>연결된 서버로의 중복 로그인과 관련된 SQL Server 오류 21642가 발생했습니다.  
  Oracle 게시자를 처음 구성하면 게시자와 배포자 간 연결에 대해 연결된 서버 항목이 생성됩니다. 연결된 서버의 이름은 Oracle TNS 서비스 이름과 동일합니다. 이름이 동일한 연결된 서버를 만들면 다음 오류 메시지가 표시됩니다.  
   
- "유형이 다른 게시자에는 연결된 서버가 필요합니다. 연결된 서버 ' *\<LinkedServerName>* '가 이미 있습니다. 연결된 서버를 제거하거나 다른 게시자 이름을 선택하십시오."  
+ "유형이 다른 게시자에는 연결된 서버가 필요합니다. 이름이 ' *\<LinkedServerName>* '인 연결된 서버가 이미 있습니다. 연결된 서버를 제거하거나 다른 게시자 이름을 선택하십시오."  
   
  이 오류는 연결된 서버를 직접 만들거나 이전에 삭제한 Oracle 게시자와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자 간 관계를 다시 구성하려고 하는 경우 발생할 수 있습니다. 게시자를 다시 구성하는 동안 이 오류가 표시되면 [sp_dropserver&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)를 사용하여 연결된 서버를 삭제하세요.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "72907960"
   
 2.  **실행** 대화 상자에 **regedit**를 입력한 다음 **확인**을 클릭합니다.  
   
-3.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<InstanceName>* \Providers로 이동합니다.  
+3.  Navigate to HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<InstanceName>* \Providers.  
   
      Providers 아래에는 OraOLEDB.Oracle 폴더가 있어야 하며 이 폴더 내에 이름이 **AllowInProcess**이고 값이 **1**인 DWORD 값이 있어야 합니다.  
   
@@ -206,7 +206,7 @@ ms.locfileid: "72907960"
 ## <a name="oracle-error-ora-01555"></a>Oracle 오류 ORA-01555  
  다음 Oracle 데이터베이스 오류는 스냅샷 복제와는 관계가 없으며 Oracle에서 일관된 읽기를 수행할 수 있는 데이터 뷰를 생성하는 방식과 관련되어 있습니다.  
   
- "ORA-01555: 너무 오래된 스냅샷"  
+ "ORA-01555: Snapshot too old"  
   
  Oracle에서는 롤백 세그먼트라는 개체를 사용하여 SQL 문이 실행된 시점에서 일관된 읽기를 수행할 수 있는 데이터 뷰를 생성합니다. 다른 동시 세션에서 롤백 정보를 덮어쓰는 경우 "snapshot too old" 오류가 발생할 수 있습니다. Oracle 9i 이전에서는 이 오류의 발생 빈도를 줄이기 위해 롤백 세그먼트의 크기 및/또는 수를 늘리고 큰 트랜잭션을 특정 롤백 세그먼트에 할당하는 방법이 권장되었습니다.  
   

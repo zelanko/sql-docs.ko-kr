@@ -1,5 +1,6 @@
 ---
 title: SQL 기록기 서비스 | Microsoft Docs
+description: SQL 기록기 서비스에 대해 알아봅니다. 이 서비스가 볼륨 섀도 복사본 서비스 프레임워크를 통해 SQL Server에서 추가 백업 및 복원 기능을 제공하는 방법을 확인합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 - MSDE Writer
 - VSS
 ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 79b0ba2bad207b92e0227ed5c8d3999dab335df6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 940bdce1d104627850aed3532754429c5ceef050
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71816671"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764014"
 ---
 # <a name="sql-writer-service"></a>SQL 기록기 서비스
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   SQL 기록기 서비스는 볼륨 섀도 복사본 서비스 프레임워크를 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 백업 및 복원을 위한 추가 기능을 제공합니다.  
   
  SQL 기록기 서비스는 자동으로 설치되며 VSS(볼륨 섀도 복사본 서비스) 애플리케이션이 백업 또는 복원을 요청할 때 실행되어야 합니다. 서비스를 구성하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 서비스 애플릿을 사용합니다. SQL 기록기 서비스는 모든 운영 체제에 설치됩니다.  

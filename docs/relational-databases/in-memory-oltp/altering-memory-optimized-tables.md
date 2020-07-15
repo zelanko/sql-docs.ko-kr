@@ -1,5 +1,6 @@
 ---
 title: 메모리 액세스에 최적화된 테이블 변경 | Microsoft 문서
+description: ALTER TABLE 문을 사용하여 메모리 최적화 테이블에서 스키마 및 인덱스 변경을 수행하는 방법을 알아봅니다. ADD, DROP, ALTER 작업을 단일 문으로 결합합니다.
 ms.custom: ''
 ms.date: 10/22/2018
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d65b6931053c7eccbb96093fb2cd840f8277cb7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db339d9063378b29f6902f7e52e3006ac57295b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951290"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776075"
 ---
 # <a name="altering-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 변경
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 ALTER TABLE 문을 사용하여 메모리 최적화 테이블에서 스미카 및 인덱스를 변경할 수 있습니다. 메모리 최적화 테이블에 대한 SQL Server 2016 및 Azure SQL Database ALTER TABLE 작업은 오프라인이므로 작업이 진행되는 동안 테이블을 쿼리할 수 없습니다. 데이터베이스 애플리케이션을 계속 실행할 수 있으며, 수정 프로세스가 완료될 때까지 테이블에 액세스 중인 작업이 차단됩니다. 여러 ADD, DROP 또는 ALTER 작업을 단일 ALTER TABLE 문에 결합할 수 없습니다.
 
@@ -70,7 +71,7 @@ ALTER TABLE 구문은 테이블 스키마를 변경하거나 인덱스를 추가
   - 새 행 외부 열을 만듭니다.
   - *예외:* 이미 행 외부 형식인 열을 늘리면 최적화된 방식으로 기록됩니다.
   
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 다음 예는 기존 해시 인덱스의 버킷 수를 수정합니다. 여기서 해시 인덱스가 새 버킷 수로 다시 빌드되며 해시 인덱스의 다른 속성은 그대로 유지됩니다.  
 

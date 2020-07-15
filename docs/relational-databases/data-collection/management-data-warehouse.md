@@ -1,5 +1,6 @@
 ---
 title: 관리 데이터 웨어하우스 | Microsoft 문서
+description: SQL Server의 관리 데이터 웨어하우스는 대상 서버에서 수집되는 데이터를 포함하는 관계형 데이터베이스입니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8723d9750eb03eda14a7983cba8919ea8e92eb81
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3699812972a7119552a53b76c73a373a89dc0622
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68133618"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758103"
 ---
 # <a name="management-data-warehouse"></a>관리 데이터 웨어하우스
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   관리 데이터 웨어하우스는 데이터 컬렉션 대상인 서버에서 수집되는 데이터를 포함하는 관계형 데이터베이스입니다. 이 데이터를 사용하여 시스템 데이터 컬렉션 집합의 보고서를 생성하고 사용자 지정 보고서를 만들 수도 있습니다.  
   
  데이터 수집기 인프라는 데이터베이스 관리자가 정의하는 보존 정책을 구현하기 위해 필요한 작업 및 유지 관리 계획을 정의합니다.  

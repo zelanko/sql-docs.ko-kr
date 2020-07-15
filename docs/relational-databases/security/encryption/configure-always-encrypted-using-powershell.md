@@ -1,5 +1,6 @@
 ---
 title: PowerShell을 사용하여 상시 암호화 구성 | Microsoft 문서
+description: Azure SQL Database와 SQL Server 모두에서 Always Encrypted를 구성하는 cmdlet을 제공하는 SqlServer PowerShell 모듈을 가져오고 사용하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c90ea22849dd1d0437cdf058f639bbe546ccab9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93cc3ccad555d366593632b3fc9975d070a67a0b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73594412"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765127"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>PowerShell을 사용하여 상시 암호화 구성
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 SqlServer PowerShell 모듈은 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)를 구성하기 위한 cmdlet을 제공합니다.
 
@@ -30,7 +31,7 @@ Always Encrypted의 주요 목표는 데이터베이스 시스템이 손상된 �
 
  추가 권장 사항을 보려면 [키 관리에 대한 보안 고려 사항](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)을 참조하세요.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 SQL Server 인스턴스를 호스트하는 컴퓨터가 아닌 보안 컴퓨터에 [SqlServer 모듈](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/sqlserver) 을 설치합니다. PowerShell 갤러리에서 직접 모듈을 설치할 수 있습니다.  자세한 내용은 [다운로드](../../../ssms/download-sql-server-ps-module.md) 지침을 참조하세요.
 

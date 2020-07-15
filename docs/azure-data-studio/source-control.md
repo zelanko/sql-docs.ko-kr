@@ -1,38 +1,33 @@
 ---
 title: 원본 제어
-titleSuffix: Azure Data Studio
 description: Azure Data Studio에서 원본 제어를 구성하는 방법을 알아봅니다.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: c278bcf6cff451396b3d677b203f207b68fd6dc5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4f586e355ad31422c75a5abb10a4c7e42f5eda6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959285"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758371"
 ---
-#  <a name="using-source-control-in-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 원본 제어 사용
+# <a name="source-control-in-azure-data-studio"></a>Azure Data Studio의 소스 제어
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]에서는 버전/원본 제어를 위해 Git을 지원합니다.
+Azure Data Studio는 버전/소스 제어를 위해 Git를 지원합니다.
 
+## <a name="git-support-in-azure-data-studio"></a>Azure Data Studio에서 Git 지원
 
-## <a name="git-support-in-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]의 Git 지원
-
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]는 Git SCM(원본 제어 관리자)과 함께 제공되지만, 먼저 [Git(버전 2.0.0 이상)을 설치](https://git-scm.com/download)해야 이러한 기능을 사용할 수 있습니다. 
-
-
+Azure Data Studio는 Git SCM(소스 제어 관리자)과 함께 제공되지만, 먼저 [Git(버전 2.0.0 이상)을 설치](https://git-scm.com/download)해야 이러한 기능을 사용할 수 있습니다. 
 
 ## <a name="open-an-existing-git-repository"></a>기존 Git 리포지토리 열기
 
 1. **파일** 메뉴에서 **폴더 열기...** 를 선택합니다.
 2. git에서 추적한 파일이 포함된 폴더로 이동한 다음, **폴더 선택**을 클릭합니다. 여기서 로컬 리포지토리의 하위 폴더를 선택해도 됩니다.
-
 
 ## <a name="initialize-a-new-git-repository"></a>새로운 git 리포지토리 초기화
 
@@ -46,8 +41,8 @@ ms.locfileid: "67959285"
 
 ## <a name="working-with-git-repositories"></a>Git 리포지토리 작업
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]는 VS Code에서 Git 구현을 상속받지만, 현재 추가 SCM 공급자를 지원하지 않습니다. 리포지토리를 열거나 초기화한 후의 Git 작업에 대한 자세한 내용은 [VS Code의 Git 지원](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support)을 참조하세요.
-
+Azure Data Studio는 VS Code에서 Git 구현을 상속받지만, 현재 추가 SCM 공급자를 지원하지 않습니다. 리포지토리를 열거나 초기화한 후의 Git 작업에 대한 자세한 내용은 [VS Code의 Git 지원](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support)을 참조하세요.
 
 ## <a name="additional-resources"></a>추가 리소스
+
 - [Git 설명서](https://git-scm.com/documentation)

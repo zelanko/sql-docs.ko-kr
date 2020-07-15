@@ -30,19 +30,19 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 12d392c73d1e68bee57bb0a534bd65d39e48946d
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: fc69b2a0615745966971ad83da2b0acadf3b2488
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262151"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773154"
 ---
 # <a name="use-sql-server-objects"></a>SQL Server 개체 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 실행하는 컴퓨터의 작업을 모니터링하기 위해 시스템 모니터에서 사용할 수 있는 개체 및 카운터를 제공합니다. 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금이나 Windows 프로세스와 같은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스를 말합니다. 각 개체에는 모니터링할 개체의 여러 요소를 결정하는 하나 이상의 카운터가 포함됩니다. 예를 들어 **SQL Server Locks** 개체에는 **Number of Deadlocks/sec** 및 **Lock Timeouts/sec**이라는 카운터가 포함됩니다.  
   
- 지정된 유형의 리소스가 컴퓨터에 여러 개 존재할 경우 일부 개체는 여러 인스턴스를 갖습니다. 예를 들어 **Processor** 개체 유형은 시스템에 프로세서가 여러 개 있는 경우 인스턴스를 여러 개 갖게 됩니다. **Databases** 개체 유형은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 각 데이터베이스에 대해 인스턴스를 하나씩 갖습니다. 일부 개체 유형(예: **Memory Manager** 개체)은 인스턴스를 하나만 갖습니다. 개체 유형이 인스턴스를 여러 개 가지는 경우 카운터를 추가해 각 인스턴스의 통계를 추적할 수 있고, 대부분의 경우 모든 인스턴스를 한 번에 추적할 수 있습니다. 기본 인스턴스용 카운터는 **SQLServer:** _\<개체 이름>_ 형식으로 표시됩니다. 명명된 인스턴스용 카운터는 **MSSQL$** _\<인스턴스 이름>_ **:** _\<카운터 이름>_ 또는**SQLAgent$** _\<인스턴스 이름>_ **:** _\<카운터 이름>_ 형식으로 표시됩니다.  
+ 지정된 유형의 리소스가 컴퓨터에 여러 개 존재할 경우 일부 개체는 여러 인스턴스를 갖습니다. 예를 들어 **Processor** 개체 유형은 시스템에 프로세서가 여러 개 있는 경우 인스턴스를 여러 개 갖게 됩니다. **Databases** 개체 유형은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 각 데이터베이스에 대해 인스턴스를 하나씩 갖습니다. 일부 개체 유형(예: **Memory Manager** 개체)은 인스턴스를 하나만 갖습니다. 개체 유형이 인스턴스를 여러 개 가지는 경우 카운터를 추가해 각 인스턴스의 통계를 추적할 수 있고, 대부분의 경우 모든 인스턴스를 한 번에 추적할 수 있습니다. 기본 인스턴스에 대한 카운터는 **SQLServer:** _\<object name>_ 형식으로 표시됩니다. 명명된 인스턴스에 대한 카운터는 **MSSQL$** _\<instance name>_ **:** _\<counter name>_ 또는 **SQLAgent$** _\<instance name>_ **:** _\<counter name>_ 형식으로 표시됩니다.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 카운터 값은 WPC(Windows Performance Counter) 엔진을 사용하여 생성됩니다. 일부 카운터 값은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 의해 직접 계산되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 WPC 엔진에 베이스 값을 제공하면 백분율과 같은 필요한 계산을 수행합니다. [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) 동적 관리 뷰는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 생성된 원래 값과 함께 모든 카운터를 제공합니다. `cntr_type` 열은 카운터의 형식을 나타냅니다. WPC 엔진이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카운터를 처리하는 방식은 이 형식에 따라 달라집니다. 성능 카운터 형식에 대한 자세한 내용은 [WMI 설명서](https://docs.microsoft.com/windows/win32/wmisdk/wmi-performance-counter-types)를 참조하세요.
   

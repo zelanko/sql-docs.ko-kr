@@ -1,5 +1,6 @@
 ---
 title: 동기화 일정 지정 | Microsoft 문서
+description: SQL Server Management Studio, Transact-SQL 또는 복제 관리 개체를 사용하여 SQL Server에서 동기화 일정을 지정하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f240938196d50b76b182e994000727c4f3e30d58
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6dbdad85561116fb3dd6a3c003bb7bf9967c00b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287132"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783118"
 ---
 # <a name="specify-synchronization-schedules"></a>동기화 일정 지정
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 동기화 일정을 지정하는 방법에 대해 설명합니다. 구독을 만드는 경우 구독에 대한 복제 에이전트를 실행하는 시기를 제어하는 동기화 일정을 정의할 수 있습니다. 일정 매개 변수를 지정하지 않으면 기본 일정이 사용됩니다.  
   
  구독은 배포 에이전트(스냅샷 및 트랜잭션 복제의 경우) 또는 병합 에이전트(병합 복제의 경우)에 의해 동기화됩니다. 에이전트는 지속적으로 실행하거나 수요에 따라 실행하거나 일정에 따라 실행할 수 있습니다.  
@@ -54,9 +55,9 @@ ms.locfileid: "76287132"
 |끌어오기 구독에 대한 배포 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>** <sup>2</sup>|  
 |SQL Server 이외 구독자의 밀어넣기 구독에 대한 배포 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
   
- <sup>1</sup> Oracle 게시에서 밀어넣기 구독의 경우 **\<Publisher>-\<PublicationDatabase>** 가 아닌 **\<Publisher>-\<Publisher**>입니다.  
+ <sup>1</sup> Oracle 게시에 대한 밀어넣기 구독의 경우 **\<Publisher>-\<PublicationDatabase>** 가 아닌 **\<Publisher>-\<Publisher**>입니다.  
   
- <sup>2</sup> Oracle 게시에서 끌어오기 구독에 대한 작업 이름은 **\<Publisher>-\<PublicationDatabase>** 가 아닌 **\<Publisher>-\<DistributionDatabase**>입니다.  
+ <sup>2</sup> Oracle 게시에 대한 끌어오기 구독의 경우, **\<Publisher>-\<PublicationDatabase>** 가 아닌 **\<Publisher>-\<DistributionDatabase**>입니다.  
   
 #### <a name="to-specify-synchronization-schedules"></a>동기화 일정을 지정하려면  
   
@@ -66,9 +67,9 @@ ms.locfileid: "76287132"
   
     -   **요청 시에만 실행**  
   
-    -   **\<일정 정의...>**  
+    -   **\<Define Schedule...>**  
   
-2.  **\<일정 정의...>** 를 선택하면 **작업 일정 속성** 대화 상자에서 일정을 지정한 다음, **확인**을 클릭합니다.  
+2.  **\<Define Schedule...>** 를 선택하면 **작업 일정 속성** 대화 상자에서 일정을 지정한 다음 **확인**을 클릭합니다.  
   
 3.  마법사를 완료합니다.  
 
@@ -169,7 +170,7 @@ ms.locfileid: "76287132"
   
 1.  트랜잭션 게시에 대한 새 끌어오기 구독을 만듭니다. 자세한 내용은 [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
   
-2.  구독자에서 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행합니다. **\@publisher**, **\@publisher_db**, **\@publication**을 지정하고 [!INCLUDE[msCoName](../../includes/msconame-md.md)]**job_name\@ 및** **password\@에 구독자에서 배포 에이전트가 실행되는**  Windows 자격 증명을 지정합니다. 구독을 동기화하는 배포 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
+2.  구독자에서 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행합니다. **\@publisher**, **\@publisher_db**, **\@publication**을 지정하고 **\@job_name** 및 **\@password**에 구독자에서 배포 에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 자격 증명을 지정합니다. 구독을 동기화하는 배포 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대한 밀어넣기 구독의 동기화 일정을 정의하려면  
   

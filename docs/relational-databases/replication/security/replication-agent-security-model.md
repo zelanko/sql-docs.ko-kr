@@ -1,5 +1,6 @@
 ---
 title: 복제 에이전트 보안 모델 | Microsoft 문서
+description: SQL Server에서는 복제 에이전트 보안 모델을 사용하여 복제 에이전트를 실행 및 연결하는 계정을 세부적으로 제어할 수 있습니다.
 ms.custom: ''
 ms.date: 04/26/2018
 ms.prod: sql
@@ -20,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bd0cafe74b558dc86f6709b23e2f1195ecada520
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 59657ae7be557bfd2c9036f2cba84f3019d4cf0a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68768472"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882068"
 ---
 # <a name="replication-agent-security-model"></a>복제 에이전트 보안 모델
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  복제 에이전트 보안 모델을 사용하여 복제 에이전트를 실행 및 연결하는 계정을 세밀하게 제어할 수 있습니다. 즉, 각 에이전트에 대해 다른 계정을 지정할 수 있습니다. 계정을 지정하는 방법에 대한 자세한 내용은 [복제에 대한 ID 및 액세스 제어](../../../relational-databases/replication/security/identity-and-access-control-replication.md)를 참조하세요.  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  복제 에이전트 보안 모델을 사용하여 복제 에이전트를 실행 및 연결하는 계정을 세부적으로 제어할 수 있습니다. 즉, 각 에이전트에 대해 다른 계정을 지정할 수 있습니다. 계정을 지정하는 방법에 대한 자세한 내용은 [복제에 대한 ID 및 액세스 제어](../../../relational-databases/replication/security/identity-and-access-control-replication.md)를 참조하세요.  
 
 에이전트가 실행되는 Windows 계정이 없으므로 복제 에이전트 보안 모델은 Azure SQL Database 관리형 인스턴스에 대해 약간 다릅니다. 대신, SQL Server 인증을 통해 모든 작업을 수행해야 합니다. 
   
@@ -38,11 +39,11 @@ ms.locfileid: "68768472"
   
  복제 에이전트는 모든 실행 파일처럼 Windows 계정의 컨텍스트에서 실행됩니다. 이 에이전트는 이 계정을 사용하여 Windows 통합 보안 연결을 설정합니다. 에이전트를 실행하는 계정은 에이전트를 시작하는 방법에 따라 달라집니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업에서 에이전트 시작(기본값): [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업을 사용하여 복제 에이전트를 시작하면 복제를 구성할 때 지정한 계정의 컨텍스트에서 에이전트가 실행됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 및 복제에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "SQL Server 에이전트의 에이전트 보안" 섹션을 참조하십시오. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 실행하는 계정에 필요한 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 구성](../../../ssms/agent/configure-sql-server-agent.md)을 참조하세요.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업에서 에이전트 시작(기본값) - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업을 사용하여 복제 에이전트를 시작하면 복제를 구성할 때 지정한 계정의 컨텍스트에서 에이전트가 실행됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 및 복제에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "SQL Server 에이전트의 에이전트 보안" 섹션을 참조하십시오. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 실행하는 계정에 필요한 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 구성](../../../ssms/agent/configure-sql-server-agent.md)을 참조하세요.  
   
--   MS-DOS 명령줄에서 직접 또는 스크립트를 통해 에이전트 시작: 명령줄에서 에이전트를 실행하는 사용자 계정의 컨텍스트에서 에이전트가 실행됩니다.  
+-   MS-DOS 명령줄에서 직접 또는 스크립트를 통해 에이전트 시작 - 명령줄에서 에이전트를 실행하는 사용자 계정의 컨텍스트에서 에이전트가 실행됩니다.  
   
--   RMO(복제 관리 개체) 또는 ActiveX 컨트롤을 사용하는 애플리케이션에서 에이전트 시작: RMO 또는 ActiveX 컨트롤을 호출하는 애플리케이션의 컨텍스트에서 에이전트가 실행됩니다.  
+-   RMO(복제 관리 개체) 또는 ActiveX 컨트롤을 사용하는 애플리케이션에서 에이전트 시작 - RMO 또는 ActiveX 컨트롤을 호출하는 애플리케이션의 컨텍스트에서 에이전트가 실행됩니다.  
   
     > [!NOTE]  
     >  ActiveX 컨트롤은 더 이상 사용되지 않습니다.  
@@ -80,9 +81,9 @@ ms.locfileid: "68768472"
 |SQL Server 이외 구독자의 밀어넣기 구독에 대한 배포 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
 |큐 판독기 에이전트|**[\<Distributor>].\<integer>**|  
   
- \*Oracle 게시물에 대한 밀어넣기 구독의 경우 작업 이름은 **\<Publisher>-\<PublicationDatabase>** 가 아닌 **\<Publisher>-\<Publisher**>입니다.  
+ \*Oracle 게시에 대한 밀어넣기 구독의 경우 작업 이름은 **\<Publisher>-\<PublicationDatabase>** 가 아닌 **\<Publisher>-\<Publisher**>입니다.  
   
- \*\*Oracle 게시물에 대한 끌어오기 구독의 경우 작업 이름은 **\<Publisher>-\<PublicationDatabase>** 가 아닌 **\<Publisher>-\<DistributionDatabase**>입니다.  
+ \*\*Oracle 게시에 대한 끌어오기 구독의 경우 작업 이름은 **\<Publisher>-\<PublicationDatabase>** 가 아닌 **\<Publisher>-\<DistributionDatabase**>입니다.  
   
  복제를 구성할 때는 에이전트를 실행해야 하는 계정을 지정합니다. 그러나 모든 작업 단계는 *프록시*의 보안 컨텍스트에서 실행되므로 복제는 사용자가 지정하는 에이전트 계정에 대해 다음 매핑을 내부적으로 수행합니다.  
   

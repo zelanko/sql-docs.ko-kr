@@ -1,7 +1,7 @@
 ---
 title: SQL Server on Linux에 대한 연결 암호화
 description: 이 문서에서는 SQL Server on Linux에 대한 연결 암호화를 설명합니다.
-ms.date: 01/30/2018
+ms.date: 06/29/2020
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
@@ -10,16 +10,16 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 975a312988a7df4bdb4fb2858d7b0fcbe95cea33
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 53da117e95d235b0de22b8265439721b94346024
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71016858"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894010"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>SQL Server on Linux에 대한 연결 암호화
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux에서는 TLS(전송 계층 보안)를 사용하여 클라이언트 애플리케이션과 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 간에 네트워크를 통해 전송되는 데이터를 암호화할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 Windows 및 Linux에서 동일한 TLS 프로토콜인 TLS 1.2, 1.1 및 1.0을 지원합니다. 그러나 TLS를 구성하는 단계는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 실행되는 운영 체제에만 해당합니다.  
 
@@ -44,33 +44,37 @@ TLS는 클라이언트 애플리케이션에서 [!INCLUDE[ssNoVersion](../includ
 > [!NOTE]
 > 이 예제에서는 자체 서명된 인증서를 사용합니다. 프로덕션 시나리오에는 이 인증서를 사용하면 안 됩니다. CA 인증서를 사용해야 합니다. 
 
-        openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
-        sudo chown mssql:mssql mssql.pem mssql.key 
-        sudo chmod 600 mssql.pem mssql.key   
-        sudo mv mssql.pem /etc/ssl/certs/ 
-        sudo mv mssql.key /etc/ssl/private/ 
+```bash
+openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
+sudo chown mssql:mssql mssql.pem mssql.key 
+sudo chmod 600 mssql.pem mssql.key   
+sudo mv mssql.pem /etc/ssl/certs/ 
+sudo mv mssql.key /etc/ssl/private/ 
+```
 
 - **SQL Server 구성**
 
-        systemctl stop mssql-server 
-        cat /var/opt/mssql/mssql.conf 
-        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
-        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
-        sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
-        sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
+```bash
+systemctl stop mssql-server 
+cat /var/opt/mssql/mssql.conf 
+sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
+sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
+sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
+sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
+```
 
 - **클라이언트 머신(Windows, Linux 또는 macOS)에 인증서 등록**
 
     -   CA 서명 인증서를 사용하는 경우 사용자 인증서 대신 CA(인증 기관) 인증서를 클라이언트 머신에 복사해야 합니다. 
     -   자체 서명된 인증서를 사용하는 경우 배포에 대해 각각 다음 폴더에 .pem 파일을 복사하고 명령을 실행하여 사용하도록 설정합니다. 
-        - **Ubuntu**: 인증서를 ```/usr/share/ca-certificates/```에 복사하고, 확장명을 .crt로 변경하고, dpkg-reconfigure ca-certificates를 사용하여 시스템 CA 인증서로 사용하도록 설정합니다. 
-        - **RHEL**: 인증서를 ```/etc/pki/ca-trust/source/anchors/```에 복사하고 ```update-ca-trust```를 사용하여 시스템 CA 인증서로 사용하도록 설정합니다.
-        - **SUSE**: 인증서를 ```/usr/share/pki/trust/anchors/```에 복사하고 ```update-ca-certificates```를 사용하여 시스템 CA 인증서로 사용하도록 설정합니다.
+        - **Ubuntu**: 인증서를 `/usr/share/ca-certificates/`에 복사하고 확장명을 .crt로 바꾼 다음 `dpkg-reconfigure ca-certificates`를 사용하여 시스템 CA 인증서로 사용하도록 설정합니다. 
+        - **RHEL**: 인증서를 `/etc/pki/ca-trust/source/anchors/`에 복사하고 `update-ca-trust`를 사용하여 시스템 CA 인증서로 사용하도록 설정합니다.
+        - **SUSE**: 인증서를 `/usr/share/pki/trust/anchors/`에 복사하고 `update-ca-certificates`를 사용하여 시스템 CA 인증서로 사용하도록 설정합니다.
         - **Windows**:  [현재 사용자] -> [신뢰할 수 있는 루트 인증 기관] -> [인증서]에서 .pem 파일을 인증서로 가져옵니다.
         - **macOS**: 
-           - 인증서를 ```/usr/local/etc/openssl/certs```에 복사합니다.
-           - 다음 명령을 실행하여 해시 값 ```/usr/local/Cellar/openssl/1.0.2l/openssl x509 -hash -in mssql.pem -noout```를 가져옵니다.
-           - 인증서의 이름을 value로 바꿉니다. 예: ```mv mssql.pem dc2dd900.0``` dc2dd900.0이 ```/usr/local/etc/openssl/certs```에 있는지 확인합니다.
+           - 인증서를 `/usr/local/etc/openssl/certs`에 복사합니다.
+           - 다음 명령을 실행하여 해시 값 `/usr/local/Cellar/openssl/1.0.2l/openssl x509 -hash -in mssql.pem -noout`를 가져옵니다.
+           - 인증서의 이름을 value로 바꿉니다. 예: `mv mssql.pem dc2dd900.0` dc2dd900.0이 `/usr/local/etc/openssl/certs`에 있는지 확인합니다.
     
 -   **연결 문자열 예** 
 
@@ -79,51 +83,61 @@ TLS는 클라이언트 애플리케이션에서 [!INCLUDE[ssNoVersion](../includ
   
     - **SQLCMD** 
 
-            sqlcmd  -S <sqlhostname> -N -U sa -P '<YourPassword>' 
+        `sqlcmd  -S <sqlhostname> -N -U sa -P '<YourPassword>'`
+
     - **ADO.NET** 
 
-            "Encrypt=True; TrustServerCertificate=False;" 
+        `"Encrypt=True; TrustServerCertificate=False;"`
+
     - **ODBC** 
 
-            "Encrypt=Yes; TrustServerCertificate=no;" 
+        `"Encrypt=Yes; TrustServerCertificate=no;"`
+
     - **JDBC** 
-    
-            "encrypt=true; trustServerCertificate=false;" 
+
+        `"encrypt=true; trustServerCertificate=false;"`
 
 ## <a name="server-initiated-encryption"></a>서버 시작 암호화 
 
 - **인증서 생성**(/CN은 SQL Server 호스트의 정규화된 도메인 이름과 일치해야 함)
-        
-        openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
-        sudo chown mssql:mssql mssql.pem mssql.key 
-        sudo chmod 600 mssql.pem mssql.key   
-        sudo mv mssql.pem /etc/ssl/certs/ 
-        sudo mv mssql.key /etc/ssl/private/ 
+
+```bash
+openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
+sudo chown mssql:mssql mssql.pem mssql.key 
+sudo chmod 600 mssql.pem mssql.key   
+sudo mv mssql.pem /etc/ssl/certs/ 
+sudo mv mssql.key /etc/ssl/private/ 
+```
 
 - **SQL Server 구성**
 
-        systemctl stop mssql-server 
-        cat /var/opt/mssql/mssql.conf 
-        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
-        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
-        sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
-        sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
-        
+```bash
+systemctl stop mssql-server 
+cat /var/opt/mssql/mssql.conf 
+sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
+sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
+sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
+sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
+```
+
 -   **연결 문자열 예** 
 
     - **SQLCMD**
 
-            sqlcmd  -S <sqlhostname> -U sa -P '<YourPassword>' 
+        `sqlcmd  -S <sqlhostname> -U sa -P '<YourPassword>'`
+
     - **ADO.NET** 
 
-            "Encrypt=False; TrustServerCertificate=False;" 
+        `"Encrypt=False; TrustServerCertificate=False;"`
+
     - **ODBC** 
 
-            "Encrypt=no; TrustServerCertificate=no;"  
+        `"Encrypt=no; TrustServerCertificate=no;"`
+
     - **JDBC** 
-    
-            "encrypt=false; trustServerCertificate=false;" 
-            
+
+        `"encrypt=false; trustServerCertificate=false;"`
+
 > [!NOTE]
 > 클라이언트가 CA에 연결하여 인증서의 신뢰성을 검사할 수 없는 경우 **TrustServerCertificate**를 True로 설정합니다.
 

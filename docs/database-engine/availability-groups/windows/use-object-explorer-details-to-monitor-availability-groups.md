@@ -1,5 +1,6 @@
 ---
 title: 개체 탐색기 정보를 사용하여 가용성 그룹 모니터링 | Microsoft Docs
+description: SQL Server Management Studio를 사용하여 기존 Always On 가용성 그룹, 가용성 복제본 및 가용성 데이터베이스를 모니터링하고 관리하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d0296e1427d4af206e101513bd54b0d67f7ff46
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e7ee1430cd764c02c05f2bf3f8f935d397a6155a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013635"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894165"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>개체 탐색기 정보를 사용하여 가용성 그룹 모니터링
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 **의** 개체 탐색기 정보 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 창을 사용하여 기존 Always On 가용성 그룹, 가용성 복제본 및 가용성 데이터베이스를 모니터링하고 관리하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
@@ -95,7 +96,7 @@ ms.locfileid: "68013635"
 |값|Description|  
 |-----------|-----------------|  
 |**동기화되지 않음**|데이터베이스가 동기화되지 않았거나 가용성 그룹에 아직 조인되지 않았습니다.|  
-|**동기화됨**|데이터베이스가 현재 주 복제본 또는 마지막 주 복제본(있는 경우)의 주 데이터베이스와 동기화되어 있습니다.<br /><br /> 참고: 성능 모드에서 데이터베이스는 절대 동기화된 상태가 되지 않습니다.|  
+|**동기화됨**|데이터베이스가 현재 주 복제본 또는 마지막 주 복제본(있는 경우)의 주 데이터베이스와 동기화되어 있습니다.<br /><br /> 참고: 성능 모드에서는 데이터베이스가 절대 Synchronized 상태로 되지 않습니다.|  
 |**NULL**|알 수 없는 상태입니다. 이 값은 로컬 서버 인스턴스가 WSFC 장애 조치(Failover) 클러스터와 통신할 수 없는 경우(즉, 로컬 노드가 WSFC 쿼럼의 일부가 아닌 경우)에 발생합니다.|  
   
 > [!NOTE]  

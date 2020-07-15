@@ -1,6 +1,6 @@
 ---
 title: 가용성 그룹 장애 조치(failover)
-description: SSMS(SQL Server Management Studio), T-SQL(Transact-SQL) 또는 SQL PowerShell을 사용하여 Always On 가용성 그룹의 계획된 수동 장애 조치(failover) 또는 강제 수동 장애 조치를 수행하는 방법을 설명합니다.
+description: SQL Server Management Studio, Transact-SQL 또는 SQL PowerShell을 사용하여 Always On 가용성 그룹의 계획된 장애 조치(failover)/강제 수동 장애 조치(failover)를 수행하는 방법을 설명합니다.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -20,21 +20,21 @@ helpviewer_keywords:
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5a98049201636bf521ae7162bd4ac0de71d74725
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d5010c559ffc7e1f89ebce87129c0b16a6853753
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74821939"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882397"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>가용성 그룹 장애 조치(Failover) 마법사 사용(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 대해 계획된 수동 장애 조치(failover) 또는 강제 수동 장애 조치(강제 장애 조치)를 수행하는 방법을 설명합니다. 가용성 그룹은 가용성 복제본의 수준에서 장애 조치(Failover)됩니다. SYNCHRONIZED 상태의 보조 복제본으로 장애 조치하는 경우 마법사는 계획된 수동 장애 조치(데이터가 손실되지 않음)를 수행합니다. UNSYNCHRONIZED 또는 NOT SYNCHRONIZING 상태의 보조 복제본으로 장애 조치하는 경우 마법사는 *강제 장애 조치*(데이터가 손실될 수 있음)로 강제 수동 장애 조치를 수행합니다. 두 형태의 수동 장애 조치는 현재 연결되어 있는 보조 복제본을 주 역할로 전환합니다. 계획된 수동 장애 조치는 이전의 주 복제본을 보조 역할로 전환합니다. 강제 장애 조치가 끝난 후 이전의 주 복제본은 온라인 상태가 되면 보조 역할로 전환됩니다.  
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
  첫 번째 계획된 수동 장애 조치를 시작하기 전에 [가용성 그룹의 계획된 수동 장애 조치(Failover) 수행&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 대해 계획된 수동 장애 조치(failover) 또는 강제 수동 장애 조치(강제 장애 조치)를 수행하는 방법을 설명합니다.  
   
- 첫 번째 강제 장애 조치를 시작하기 전에 [가용성 그룹의 강제 수동 장애 조치(failover) 수행&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 대해 계획된 수동 장애 조치(failover) 또는 강제 수동 장애 조치(강제 장애 조치)를 수행하는 방법을 설명합니다.  
+ 첫 번째 강제 장애 조치(failover)를 시작하기 전에 "시작하기 전 주의 사항" 및 "후속 작업: [가용성 그룹의 강제 수동 장애 조치(failover) 수행&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)의 강제 장애 조치(failover) 후의 필수 작업" 세션을 참조하세요.  
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
@@ -78,7 +78,7 @@ ms.locfileid: "74821939"
   
      자세한 내용은 [결과 페이지&#40;Always On 가용성 그룹 마법사&#41;](../../../database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md)또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 대해 계획된 수동 장애 조치(failover) 또는 강제 수동 장애 조치(강제 장애 조치)를 수행하는 방법을 설명합니다.  
   
-11. 강제 장애 조치 작업이 끝나면 [가용성 그룹의 강제 수동 장애 조치(failover) 수행&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 대해 계획된 수동 장애 조치(failover) 또는 강제 수동 장애 조치(강제 장애 조치)를 수행하는 방법을 설명합니다.  
+11. 강제 장애 조치(failover) 작업이 끝나면 "후속 작업: [가용성 그룹의 강제 수동 장애 조치(failover) 수행&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)의 강제 장애 조치(failover) 후의 필수 작업" 세션을 참조하세요.  
   
 ## <a name="help-for-pages-that-are-exclusive-to-this-wizard"></a>이 마법사에만 있는 페이지에 대한 도움말  
  이 섹션에서는 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]에만 있는 페이지에 대해 설명합니다.  

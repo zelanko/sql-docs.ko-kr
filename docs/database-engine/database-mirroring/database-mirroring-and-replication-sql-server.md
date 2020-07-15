@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 미러링 및 복제(SQL Server) | Microsoft Docs
+description: 복제와 함께 데이터베이스 미러링을 사용하여 SQL Server에서 게시 데이터베이스의 가용성을 높이는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e957d0ae199375ffe13a756cc1a8b0872aa962e3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d54e8831218a64d854ae6b42955f59de8728518
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68661437"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789687"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>데이터베이스 미러링 및 복제(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   데이터베이스 미러링은 게시 데이터베이스의 가용성을 제공하기 위해 복제와 함께 사용될 수 있습니다. 데이터베이스 미러링에는 일반적으로 서로 다른 컴퓨터에 있는 두 개의 단일 데이터베이스 복사본이 사용됩니다. 클라이언트는 항상 하나의 데이터베이스 복사본만 사용할 수 있습니다. 이 복사본을 주 데이터베이스라고 합니다. 클라이언트가 주 데이터베이스에 수행한 업데이트는 미러 데이터베이스라고 하는 다른 데이터베이스 복사본에 적용됩니다. 미러링에는 주 데이터베이스에 대해 수행된 모든 삽입, 업데이트 또는 삭제 작업의 트랜잭션 로그를 미러 데이터베이스에 적용하는 작업이 포함됩니다.  
   
  미러에 대한 복제 장애 조치(Failover)는 게시 데이터베이스에서 완전히 지원되지만 구독 데이터베이스에서는 지원이 제한적으로 제공됩니다. 배포 데이터베이스에서는 데이터베이스 미러링이 지원되지 않습니다. 복제를 다시 구성할 필요 없이 배포 데이터베이스나 구독 데이터베이스를 복구하는 방법은 [복제된 데이터베이스 백업 및 복원](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)을 참조하세요.   

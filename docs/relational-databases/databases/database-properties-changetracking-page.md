@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 속성(변경 내용 추적 페이지) | Microsoft 문서
+description: 데이터베이스 속성 대화 상자의 ChangeTracking 탭을 사용하여 데이터베이스의 변경 내용 추적 설정을 보거나 수정하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 9b929640-bc62-449b-9b06-b5a77b8cf372
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2661424dcfe87f7151bbd92b2dfbf76861913fbb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b0abdb96d6d01ac1d630e8489013c381518573b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099627"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756235"
 ---
 # <a name="database-properties-changetracking-page"></a>데이터베이스 속성(변경 내용 추적 페이지)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   이 페이지를 사용하여 선택한 데이터베이스의 변경 내용 추적 설정을 확인하거나 수정할 수 있습니다. 이 페이지에서 사용할 수 있는 옵션에 대한 자세한 내용은 [변경 내용 추적 설정 및 해제&#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)를 참조하세요.  
   
 ## <a name="options"></a>옵션  

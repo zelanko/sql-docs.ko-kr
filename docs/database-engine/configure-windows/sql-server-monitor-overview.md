@@ -1,5 +1,6 @@
 ---
 title: SQL Server 모니터 개요 | Microsoft Docs
+description: SQL Server 모니터에 대해 알아봅니다. SQL Server 복제 모니터 및 데이터베이스 미러링 모니터 모듈을 사용하는 방법을 알아봅니다. 사용에 필요한 권한을 살펴봅니다.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Monitor [SQL Server]
 ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a6f5e2b2bcd92c0a17ccada2ca755cbc14b9d647
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1bb99ef49e22c578ec1ebd8cc715a6e70e5bb6df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68032494"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771797"
 ---
 # <a name="sql-server-monitor-overview"></a>SQL Server 모니터 개요
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   SQL Server 모니터는 모니터링 기능을 수행하지 않지만 이 기능을 수행하는 모듈을 호스팅합니다. SQL Server 모니터 모듈에는 복제 모니터와 데이터베이스 미러링 모니터가 있습니다.  
   
  이러한 모듈 중 하나를 사용하려면 **이동** 메뉴에서 해당 모듈을 선택합니다. 현재 선택한 모듈에서 탐색 창과 세부 정보 창의 내용, 세부 정보 창의 사용자 상호 작용, 내용과 상태에 대한 쿼리 등을 소유합니다.  

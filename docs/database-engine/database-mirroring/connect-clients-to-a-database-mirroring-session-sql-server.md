@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b43cbcb051a1c6be2d26288a427d7a75e89a7f70
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8da63d8ff15d03b55586a72a578d6074fa2a5473
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258878"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789772"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션에 클라이언트 연결(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   데이터베이스 미러링 세션에 연결하기 위해 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 또는 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용할 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스에 대해 구성하면 두 데이터 액세스 공급자가 모두 데이터베이스 미러링을 완전하게 지원합니다. 미러된 데이터베이스 사용 시 프로그래밍 고려 사항에서 대한 자세한 내용은 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)을 참조하십시오. 또한 현재 주 서버 인스턴스를 사용할 수 있어야 하며 서버 인스턴스에 클라이언트 로그인이 만들어져 있어야 합니다. 자세한 내용은 [분리된 사용자 문제 해결&#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)을 실행합니다. 클라이언트에서 데이터베이스 미러링 세션에 연결할 때는 미러링 모니터 서버 인스턴스가 있어도 사용되지 않습니다.  
   
   
@@ -88,7 +88,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Server 특성  
  연결 문자열에는 초기 파트너 이름을 제공하는 **Server** 특성이 있어야 합니다. 이 특성은 현재 주 서버 인스턴스를 식별합니다.  
   
- 서버 인스턴스를 식별하는 가장 간단한 방법은 *<server_name>* [ **\\** _<SQL_Server_instance_name>_ ]과 같이 해당 이름을 지정하는 것입니다. 다음은 그 예입니다.  
+ 서버 인스턴스를 식별하는 가장 간단한 방법은 *<server_name>* [ **\\** _<SQL_Server_instance_name>_ ]과 같이 해당 이름을 지정하는 것입니다. 예를 들면 다음과 같습니다.  
   
  `Server=Partner_A;`  
   
@@ -101,7 +101,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  연결 문자열에서 포트가 아닌 명명된 인스턴스 이름을 지정하는 경우 SQL Server Browser 쿼리가 필요합니다.  
   
- IP 주소와 포트를 지정하기 위해 **Server** 특성은 `Server=` *<ip_address>* `,` *\<포트>* 형식을 사용합니다. 예를 들면 다음과 같습니다.  
+ IP 주소와 포트를 지정하기 위해 **Server** 특성은 `Server=` *<ip_address>* `,` *\<port>* 형식을 사용합니다. 예를 들면 다음과 같습니다.  
   
 ```  
 Server=123.34.45.56,4724;   

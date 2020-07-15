@@ -1,5 +1,6 @@
 ---
 title: 병합 복제 | Microsoft 문서
+description: 병합 복제는 게시 데이터베이스 개체 및 데이터의 스냅샷을 사용하고 게시자 및 트리거가 있는 구독자에서 수정 사항을 추적합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0392ff8153a5125dadc20eefa96a6a9dfc521f6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 56858009571329d545a75f12d6a6364d3967bd59
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033213"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882311"
 ---
 # <a name="merge-replication"></a>병합 복제
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   병합 복제는 트랜잭션 복제와 마찬가지로 일반적으로 게시 데이터베이스 개체 및 데이터의 스냅샷으로 시작합니다. 게시자 및 구독자에서 발생한 후속 데이터 변경 및 스키마 수정은 트리거로 추적합니다. 구독자는 네트워크에 연결될 때 게시자와 동기화하여 마지막 동기화 이후 게시자와 구독자 간에 변경된 모든 행을 교환합니다.  
   
  병합 복제는 일반적으로 서버-클라이언트 간 환경에 사용됩니다. 병합 복제는 다음 상황에 적합합니다.  

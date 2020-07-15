@@ -1,5 +1,6 @@
 ---
 title: XML 스키마 컬렉션에 대한 사용 권한 부여 | Microsoft 문서
+description: XML 스키마 컬렉션을 만들 권한 및 XML 스키마 컬렉션 개체에 대한 권한을 부여하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6210235ba7f5537732745434878c778733e98370
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e400caa800f4e3dcb38750513216918d2b8b1d3f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665115"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772108"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>XML 스키마 컬렉션에 대한 사용 권한 부여
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XML 스키마 컬렉션을 만들 권한 및 XML 스키마 컬렉션 개체에 대한 권한을 부여할 수 있습니다.  
   
 ## <a name="granting-permission-to-create-an-xml-schema-collection"></a>XML 스키마 컬렉션을 만들 권한 부여  
@@ -64,7 +65,7 @@ ms.locfileid: "80665115"
   
 -   **xml** 유형 열, 변수 및 매개 변수를 형식화하거나 제약하는 XML 스키마 컬렉션에 대해 보안 주체가 삽입하거나 업데이트한 값의 유효성을 검사하려면 EXECUTE 권한이 필요합니다. 이 권한은 이러한 열 및 변수에 저장된 XML을 쿼리할 때도 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예의 시나리오에서는 XML 스키마 권한의 작동 방식을 보여 줍니다. 각 예에서는 필요한 테스트 데이터베이스, 관계형 스키마 및 로그인을 만듭니다. 이러한 로그인에는 필요한 XML 스키마 컬렉션 권한이 부여됩니다. 각 예에서는 종료 시 필요한 정리를 수행합니다.  
   
 ### <a name="a-granting-permissions-to-create-an-xml-schema-collection"></a>A. XML 스키마 컬렉션을 만들 권한 부여  

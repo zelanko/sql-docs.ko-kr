@@ -1,24 +1,68 @@
 ---
 title: 릴리스 정보
 description: Azure Data Studio 릴리스 정보
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.reviewer: maghan, sstein
+ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 04/30/2020
-ms.openlocfilehash: d7c54fbbb959085206cb993d4b9e9087ac8c3a50
-ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
+ms.date: 06/15/2020
+ms.openlocfilehash: 09b894fb6604c912bafaa0fc2856134fe970a721
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619676"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758411"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio의 릴리스 정보
 
 **[최신 릴리스 다운로드 및 설치](download.md)**
+
+## <a name="june-2020"></a>2020년 6월
+
+2020년 6월 15일 &nbsp; / &nbsp; 버전: 1.19.0
+
+&nbsp;
+
+| 변경 | 세부 정보 |
+| :----- | :------ |
+| Azure Portal 통합에 Azure Data Studio가 추가됨 | 이제 사용자는 Azure SQL DB 연결과 Azure Postgres 등에서 Azure Portal을 바로 열 수 있습니다. |
+| 새로운 Notebook 기능 | &bull; &nbsp; 새로운 Notebook 도구 모음 <br/> &bull; &nbsp; 새로운 셀 편집 도구 모음 <br/> &bull; &nbsp; Python 종속성 마법사 UX 업데이트 <br/> &bull; &nbsp; Notebook에서의 간격 개선 |
+| SQL 평가 API 확장 발표 | 이 확장은 ADS에 SQL Server 모범 사례 평가를 추가합니다. 이전에는 PowerShell SqlServer 모듈과 SMO에서만 사용할 수 있었던 SQL 평가 API를 노출하여 사용자가 SQL Server 인스턴스를 평가하고 SQL Server 팀의 추천을 받을 수 있게 합니다. SQL 평가 API와 관련 기능에 관한 자세한 내용은 [이 문서를 참조하세요.](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview?view=sql-server-ver15) |
+| [Machine Learning 확장 개선](https://go.microsoft.com/fwlink/?linkid=2129918) | 이제 Azure SQL Managed Instance를 지원합니다. |
+| 데이터 가상화 확장 개선 | 이제 MongoDB 및 Teradata를 지원합니다. |
+| Postgres 확장 버그 수정 | Azure MFA를 수정했습니다. |
+| 버그 및 이슈 해결 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2020+Release%22+is%3Aclosed)를 참조하세요. |
+| &nbsp; | &nbsp; |
+
+## <a name="may-2020-hotfix"></a>2020년 5월(핫픽스)
+
+2020년 5월 27일 &nbsp; / &nbsp; 버전: 1.18.1
+
+&nbsp;
+
+| 변경 | 세부 정보 |
+| :----- | :------ |
+| “현재 쿼리 실행” 키바인드가 정상적으로 작동하지 않는 버그 #10538 수정 | [#10538](https://github.com/microsoft/azuredatastudio/issues/10538)  |
+| v1.18에서 신규 또는 기존 sql 파일을 열 수 없는 #10537 버그 수정 | [#10537](https://github.com/microsoft/azuredatastudio/issues/10537)  |
+| &nbsp; | &nbsp; |
+
+## <a name="may-2020"></a>2020년 5월
+
+2020년 5월 20일 &nbsp; / &nbsp; 버전: 1.18.0
+
+&nbsp;
+
+| 변경 | 세부 정보 |
+| :----- | :------ |
+| Redgate SQL 프롬프트 확장 발표 | 이 확장을 사용하면 Azure Data Studio 내에서 직접 서식 스타일을 관리할 수 있으므로 IDE에서 나가지 않고 스타일을 만들고 편집할 수 있습니다. |
+| Machine Learning 확장 발표 | 이 확장을 이용하면 다음 작업을 할 수 있습니다. <br/> &bull; &nbsp; Azure Data Studio에서 SQL Server 기계 학습 서비스를 사용하여 Python 및 R 패키지를 관리합니다.<br/> &bull; &nbsp; ONNX 모델을 사용하여 Azure SQL Edge에서 예측을 수행합니다.<br/> &bull; &nbsp; Azure SQL Edge 데이터베이스에서 ONNX 모델을 확인합니다. <br/> &bull; &nbsp; 파일이나 Azure Machine Learning에서 ONNX 모델을 Azure SQL Edge 데이터베이스로 가져옵니다. <br/> &bull; &nbsp; 실험을 실행할 Notebook을 만듭니다. |
+| 새로운 Notebook 기능 | &bull; &nbsp; Python 종속성을 쉽게 설치할 수 있도록 새로운 Python 종속성 마법사 추가 <br/> &bull; &nbsp; Markdown 도구 모음에 밑줄 지원 추가 |
+| Always Encrypted에 대한 매개 변수화 | 암호화된 데이터베이스 열을 기준으로 삽입, 업데이트 또는 필터링하는 쿼리를 실행할 수 있습니다.|
+| 버그 및 이슈 해결 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22May+2020+Release%22+is%3Aclosed)를 참조하세요. |
+| &nbsp; | &nbsp; |
 
 ## <a name="april-2020-hotfix"></a>2020년 4월(핫픽스)
 
@@ -191,7 +235,7 @@ ms.locfileid: "82619676"
 ### <a name="known-issues"></a>알려진 문제
 
 - Notebooks
-    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Notebook을 잘못 직렬화할 때 드물게 발생
+  - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Notebook을 잘못 직렬화할 때 드물게 발생
 
 ## <a name="september-2019"></a>2019년 9월
 
@@ -211,8 +255,7 @@ ms.locfileid: "82619676"
 ### <a name="known-issues"></a>알려진 문제
 
 - Notebooks
-    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Notebook을 잘못 직렬화할 때 드물게 발생
-
+  - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Notebook을 잘못 직렬화할 때 드물게 발생
 
 ## <a name="august-2019"></a>2019년 8월
 
@@ -224,7 +267,7 @@ ms.locfileid: "82619676"
 | :----- | :------ |
 | SandDance 1.3.1 확장의 릴리스 | &bull; &nbsp; 스마트 차트 검색 <br/>&bull; &nbsp; 3D 시각화 <br/> &bull; &nbsp; 데이터 필터링 |
 | Notebook 기능 개선 | &bull; &nbsp; 인라인으로 코드 또는 텍스트 셀 추가 <br/>&bull; &nbsp; SQL 결과 표를 마우스 오른쪽 단추로 클릭하여 결과를 CSV, JSON 등으로 저장하는 기능 추가됨 <br/> &bull; &nbsp; JSON을 더 빠르게 로드할 수 있도록 Notebook 로드 성능 개선 <br/> &bull; &nbsp; 전체 개선 사항 목록은 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed)에서 확인할 수 있음 |
-| SQL Server 2019 지원 |  이 릴리스에서는 다음을 포함하여 추가 SQL Server 2019 빅 데이터 클러스터 기능을 지원합니다. <br/> &bull; &nbsp; 개체 매핑 페이지에서 테이블 및 열 정보를 로드하는 데 걸리는 시간 단축됨 <br/> &bull; &nbsp; 연결 정보 페이지에서 기존 데이터베이스 범위 자격 증명을 로드할 때 발생하는 버그 수정됨 <br/> &bull; &nbsp; PROSE 구문 분석에 사용되는 기본 샘플 크기 커짐 | 
+| SQL Server 2019 지원 |  이 릴리스에서는 다음을 포함하여 추가 SQL Server 2019 빅 데이터 클러스터 기능을 지원합니다. <br/> &bull; &nbsp; 개체 매핑 페이지에서 테이블 및 열 정보를 로드하는 데 걸리는 시간이 단축됨 <br/> &bull; &nbsp; 연결 정보 페이지에서 기존 데이터베이스 범위 자격 증명을 로드할 때 발생하는 버그 수정됨 <br/> &bull; &nbsp; PROSE 구문 분석에 사용되는 기본 샘플 크기 커짐 | 
 | Dacpac 확장이 이제 AAD를 지원합니다. | 
 | Visual Studio Code 7월 릴리스 병합 1.37 | 최신 개선 사항은 [여기](https://code.visualstudio.com/updates/v1_37)에서 확인할 수 있습니다. |
 | 버그 및 이슈 해결 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1)를 참조하세요. |
@@ -374,7 +417,7 @@ ms.locfileid: "82619676"
 
 | 변경 | 세부 정보 |
 | :----- | :------ |
-| 1\.3.8에서 발견된 몇 가지 문제가 해결됨 | [GitHub의 1월 핫픽스 릴리스](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1)를 참조하세요.<br/><br/>자세한 내용은 다음을 참조하세요.<br/>&bull; &nbsp; [GitHub의 변경 로그](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)<br/>&bull; &nbsp; [GitHub의 릴리스](https://github.com/Microsoft/azuredatastudio/releases) |
+| 1\.3.8에서 발견된 몇 가지 문제가 해결됨 | [GitHub의 1월 핫픽스 릴리스](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1)를 참조하세요.<br/><br/>자세한 내용은 다음을 참조하세요.<br/>&bull; &nbsp; [GitHub의 변경 로그](https://github.com/Microsoft/azuredatastudio/blob/main/CHANGELOG.md)<br/>&bull; &nbsp; [GitHub의 릴리스](https://github.com/Microsoft/azuredatastudio/releases) |
 | &nbsp; | &nbsp; |
 
 ## <a name="january-2019"></a>2019년 1월
@@ -445,7 +488,7 @@ ms.locfileid: "82619676"
 - [이슈 #2851](https://github.com/Microsoft/azuredatastudio/issues/2851) 해결: TimeSeries 차트가 올바르게 렌더링되지 않음
 - [이슈 #2996](https://github.com/Microsoft/azuredatastudio/issues/2996) 해결: 갑작스러운 세션 변경으로 인한 일시적 테이블 손실
 
-자세한 내용은 [변경 로그](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md) 및 [릴리스](https://github.com/Microsoft/azuredatastudio/releases)를 참조하세요.
+자세한 내용은 [변경 로그](https://github.com/Microsoft/azuredatastudio/blob/main/CHANGELOG.md) 및 [릴리스](https://github.com/Microsoft/azuredatastudio/releases)를 참조하세요.
 
 ## <a name="september-2018-ga-release"></a>2018년 9월(GA 릴리스)
 
@@ -477,16 +520,16 @@ Azure Data Studio(이전 SQL Operations Studio)의 일반 공급 릴리스
 
 ### <a name="bug-fixes-september-2018"></a>버그 수정, 2018년 9월
 
-- [이슈 #2647](https://github.com/Microsoft/azuredatastudio/issues/143) 해결: 차트 기능이 훨씬 퇴보함
+- [이슈 #2647](https://github.com/Microsoft/azuredatastudio/issues/143) 해결: 차트 기능이 크게 퇴보함
 - [이슈 #2648](https://github.com/Microsoft/azuredatastudio/issues/143) 해결: JSON을 반환하는 SELECT가 전체 열에 하이퍼링크를 지정함
 
-자세한 내용은 [변경 로그](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md) 및 [릴리스](https://github.com/Microsoft/azuredatastudio/releases)를 참조하세요.
+자세한 내용은 [변경 로그](https://github.com/Microsoft/azuredatastudio/blob/main/CHANGELOG.md) 및 [릴리스](https://github.com/Microsoft/azuredatastudio/releases)를 참조하세요.
 
 ## <a name="august-2018"></a>2018년 8월
 
 2018년 8월 30일 &nbsp; / &nbsp; 버전: 0.32.8 &nbsp; / &nbsp; 공개 미리 보기
 
-‘8월 공개 미리 보기’에서는 기존 시나리오에서 버그 수정, 제품 안정화 및 간극 완화에 중점을 둡니다. 
+‘8월 공개 미리 보기’에서는 기존 시나리오에서 버그 수정, 제품 안정화 및 간극 완화에 중점을 둡니다.
 
 _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https://github.com/Microsoft/azuredatastudio/issues/1971), [#2372](https://github.com/Microsoft/azuredatastudio/issues/2372))이 포함되어 있습니다.
 
@@ -523,7 +566,7 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 - [이슈 #1782](https://github.com/Microsoft/azuredatastudio/issues/1782) 해결: 데이터 편집: Esc 키를 눌러도 셀이 원래 값으로 돌아가지 않음
 - [이슈 #1836](https://github.com/Microsoft/azuredatastudio/issues/1836) 해결: .sql 파일이 SQL Operations Studio와 연결되지 않음
 - [이슈 #1850](https://github.com/Microsoft/azuredatastudio/issues/1850) 해결: N’’을 입력하면 N’’’으로 자동 완성됨
-- [이슈 #1985](https://github.com/Microsoft/azuredatastudio/issues/1985) 해결 : 쿼리 결과 그리드에서 복사할 때 1열씩 벗어남
+- [이슈 #1985](https://github.com/Microsoft/azuredatastudio/issues/1985) 해결 : 쿼리 결과 그리드에서 복사할 때 한 열씩 벗어남
 - [이슈 #1998](https://github.com/Microsoft/azuredatastudio/pull/1998) 해결: 정보 대화 상자에 VS Code 버전 추가
 - [이슈 #2042](https://github.com/Microsoft/azuredatastudio/pull/2042) 해결: 에이전트: sql 파일에서 쿼리를 가져오는 단추를 사용할 수 있음
 - [이슈 #2091](https://github.com/Microsoft/azuredatastudio/issues/2091) 해결: Ctrl+C 바로 가기를 사용하여 결과 창에서 복사할 수 없음
@@ -583,10 +626,10 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 
 | 변경 | 세부 정보 |
 | :----- | :------ |
-| **SQL Operations Studio용 SQL Server Profiler ‘미리 보기’** 확장 최초 릴리스  | &nbsp; |
+| **SQL Operations Studio용 SQL Server Profiler ‘미리 보기’** 확장 최초 릴리스 | &nbsp; |
 | 새 **SQL Data Warehouse** 확장에는 데이터 웨어하우스에 대한 인사이트를 제공하는, 사용자 지정 가능한 다양한 기능의 대시보드 위젯이 포함되어 있음 | 이 확장을 통해 데이터 웨어하우스를 관리 및 튜닝하여 일관된 성능을 제공하도록 최적화하는 다양한 방법을 구현할 수 있습니다. |
 | **데이터 편집 “필터링 및 정렬”** 지원 | &nbsp; |
-| **SQL Operations Studio용 SQL Server 에이전트 ‘미리 보기’** 확장의 작업 및 작업 기록 뷰 개선  | &nbsp; |
+| **SQL Operations Studio용 SQL Server 에이전트 ‘미리 보기’** 확장의 작업 및 작업 기록 뷰 개선 | &nbsp; |
 | **마법사 및 대화 상자 UI 빌더 프레임워크** 확장성 API가 향상됨 | &nbsp; |
 | VS Code 플랫폼 소스 코드가 업데이트됨 | 다음 릴리스가 통합되었습니다.<br/>&bull; &nbsp; [2018년 3월(1.22)](https://code.visualstudio.com/updates/v1_22)<br/>&bull; &nbsp; [2018년 4월(1.23)](https://code.visualstudio.com/updates/v1_23) |
 | &nbsp; | &nbsp; |
@@ -690,7 +733,7 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 
 자세한 내용은 [Visual Studio Code 2월 릴리스 정보](https://code.visualstudio.com/updates/v1_21) 및 [Visual Studio Code 1월 릴리스 정보](https://code.visualstudio.com/updates/v1_20)를 확인하세요.
 
-자세한 내용은 [변경 로그](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)를 참조하세요.
+자세한 내용은 [변경 로그](https://github.com/Microsoft/azuredatastudio/blob/main/CHANGELOG.md)를 참조하세요.
 
 ## <a name="march-2018"></a>2018년 3월
 
@@ -748,10 +791,10 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 | 변경 | 세부 정보 |
 | :----- | :------ |
 | 연결 대화 상자에서 저장된 서버 연결을 사용할 수 있음 | &nbsp; |
-| Hot Exit 사용. Hot Exit는 기본적으로 사용되지 않습니다. 사용하도록 설정하려면 [Hot Exit 설정](settings.md#hot-exit)을 참조하세요. | &nbsp; |
-| 서버 그룹 기반의 탭 색 지정 탭 색 지정은 기본적으로 꺼져 있습니다. 사용하도록 설정하려면 [탭 색 설정](settings.md#tab-color)을 참조하세요. | &nbsp; |
-| 연결 대화 상자에서 ‘서버 이름’을 ‘서버’로 변경   | &nbsp; |
-| 손상된 ‘현재 쿼리 실행’ 명령 수정  | &nbsp; |
+| Hot Exit 사용. Hot Exit는 기본적으로 해제됩니다. 사용하도록 설정하는 방법은 [Hot Exit 설정](settings.md#hot-exit)을 참조하세요. | &nbsp; |
+| 서버 그룹 기반의 탭 색 지정 탭 색 지정은 기본적으로 해제됩니다. 사용하도록 설정하는 방법은 [탭 색 설정](settings.md#tab-color)을 참조하세요. | &nbsp; |
+| 연결 대화 상자에서 ‘서버 이름’을 ‘서버’로 변경  | &nbsp; |
+| 손상된 ‘현재 쿼리 실행’ 명령 수정 | &nbsp; |
 | 끌어서 놓기 중단 스크립팅 버그 수정 | &nbsp; |
 | 잘못된 고정된 시작 메뉴 아이콘 수정 | &nbsp; |
 | 누락된 Azure 계정 브랜딩 아이콘 수정 | &nbsp; |
@@ -770,8 +813,8 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 | 이제 Azure SQL Database 및 Azure SQL Data Warehouse에 대한 연결을 지원하는 방화벽 규칙 만들기 대화 상자를 사용할 수 있음 | &nbsp; |
 | Windows 설치 프로그램과 Linux DEB 및 RPM 설치 패키지가 추가됨 | &nbsp; |
 | 대시보드 관리 시각적 레이아웃 편집기 | &nbsp; |
-| ‘Alter로 스크립트’ 및 ‘Execute로 스크립트’ 명령   | &nbsp; |
-| ‘실제 계획을 사용하여 현재 쿼리 실행’ 명령  | &nbsp; |
+| ‘Alter로 스크립트’ 및 ‘Execute로 스크립트’ 명령  | &nbsp; |
+| ‘실제 계획을 사용하여 현재 쿼리 실행’ 명령 | &nbsp; |
 | VS Code 1.18.1 편집기 플랫폼 통합 | &nbsp; |
 | VSIX 확장 파일의 사이드로드 사용 | &nbsp; |
 | “GO N” 일괄 처리 반복 구문 지원 | &nbsp; |
@@ -781,7 +824,7 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 
 2017년 11월 15일 &nbsp; / &nbsp; 버전: 0.23.6
 
-- [!INCLUDE[name-sos](../includes/name-sos-short.md)] 최초 릴리스
+- Azure Data Studio의 초기 릴리스입니다.
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -791,6 +834,6 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 - [Azure SQL Database 연결 및 쿼리](quickstart-sql-database.md)
 - [Azure Data Warehouse 연결 및 쿼리](quickstart-sql-dw.md)
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]에 참가:
+Azure Data Studio에 참여:
 
 - [https://github.com/Microsoft/azuredatastudio](https://github.com/Microsoft/azuredatastudio)

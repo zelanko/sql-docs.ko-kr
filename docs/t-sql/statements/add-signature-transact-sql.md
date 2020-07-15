@@ -1,14 +1,11 @@
 ---
-title: ADD SIGNATURE(Transact-SQL) | Microsoft Docs
-ms.date: 05/15/2017
+title: ADD SIGNATURE(Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
 - ADD SIGNATURE
 - ADD_SIGNATURE_TSQL
-dev_langs:
-- TSQL
 helpviewer_keywords:
 - ADD SIGNATURE statement
 - adding digital signatures
@@ -17,39 +14,45 @@ helpviewer_keywords:
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 284f5fb33d8842747805a27c68522929ddfbc59d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/10/2020
+ms.openlocfilehash: 4b5781ba73a340c72befdcde81559ac22d45a6a7
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634918"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813170"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  저장 프로시저, 함수, 어셈블리 또는 트리거에 디지털 서명을 추가하고 연대 서명도 추가합니다.  
-  
-  
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>구문  
-  
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+
+저장 프로시저, 함수, 어셈블리 또는 트리거에 디지털 서명을 추가하고 연대 서명도 추가합니다.
+
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+## <a name="syntax"></a>구문
+
 ```syntaxsql
-ADD [ COUNTER ] SIGNATURE TO module_class::module_name   
-    BY <crypto_list> [ ,...n ]  
+ADD [ COUNTER ] SIGNATURE TO module_class::module_name
+    BY <crypto_list> [ ,...n ]
   
 <crypto_list> ::=  
     CERTIFICATE cert_name  
-    | CERTIFICATE cert_name [ WITH PASSWORD = 'password' ]  
-    | CERTIFICATE cert_name WITH SIGNATURE = signed_blob   
+    | CERTIFICATE cert_name [ WITH PASSWORD = 'password' ]
+    | CERTIFICATE cert_name WITH SIGNATURE = signed_blob
     | ASYMMETRIC KEY Asym_Key_Name  
-    | ASYMMETRIC KEY Asym_Key_Name [ WITH PASSWORD = 'password'.]  
-    | ASYMMETRIC KEY Asym_Key_Name WITH SIGNATURE = signed_blob  
-```  
-  
-## <a name="arguments"></a>인수  
- *module_class*  
- 서명을 추가할 모듈의 클래스입니다. 스키마 범위 모듈에 대한 기본값은 OBJECT입니다.  
+    | ASYMMETRIC KEY Asym_Key_Name [ WITH PASSWORD = 'password'.]
+    | ASYMMETRIC KEY Asym_Key_Name WITH SIGNATURE = signed_blob
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
+
+*module_class*  
+서명을 추가할 모듈의 클래스입니다. 스키마 범위 모듈에 대한 기본값은 OBJECT입니다.  
   
  *module_name*  
  서명하거나 연대 서명할 저장 프로시저, 함수, 어셈블리 또는 트리거의 이름입니다.  
@@ -66,8 +69,9 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  ASYMMETRIC KEY *Asym_Key_Name*  
  저장 프로시저, 함수, 어셈블리 또는 트리거에 서명하거나 연대 서명하는 데 사용할 비대칭 키의 이름입니다.  
   
-## <a name="remarks"></a>설명  
- 서명하거나 연대 서명할 모듈과 모듈에 서명하는 데 사용되는 인증서 또는 비대칭 키가 있어야 합니다. 모듈의 모든 문자는 서명 계산에 포함됩니다. 여기에는 선행 캐리지 리턴과 줄 바꿈도 포함됩니다.  
+## <a name="remarks"></a>설명
+
+서명하거나 연대 서명할 모듈과 모듈에 서명하는 데 사용되는 인증서 또는 비대칭 키가 있어야 합니다. 모듈의 모든 문자는 서명 계산에 포함됩니다. 여기에는 선행 캐리지 리턴과 줄 바꿈도 포함됩니다.  
   
  모듈에 서명하거나 연대 서명하는 데 사용되는 인증서와 비대칭 키의 수는 제한되지 않습니다.  
   
@@ -75,14 +79,14 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
  모듈에 EXECUTE AS 절이 포함되어 있으면 보안 주체의 SID(보안 ID)도 서명 프로세스의 일부로 포함됩니다.  
   
-> [!CAUTION]  
->  모듈 서명은 사용 권한을 부여하는 용도로만 사용해야 하며 사용 권한을 거부하거나 취소하는 용도로 사용하면 안 됩니다.  
+> [!CAUTION]
+> 모듈 서명은 사용 권한을 부여하는 용도로만 사용해야 하며 사용 권한을 거부하거나 취소하는 용도로 사용하면 안 됩니다.  
   
  인라인 테이블 반환 함수에 서명할 수 없습니다.  
   
  서명 정보는 sys.crypt_properties 카탈로그 뷰에 표시됩니다.  
   
-> [!WARNING]  
+> [!WARNING]
 >  서명 절차를 다시 만들 때 원래 일괄 처리의 모든 문은 다시 만들기 일괄 처리와 일치해야 합니다. 공백이나 주석이라도 일괄 처리 일부가 다를 경우 결과 서명이 달라집니다.  
   
 ## <a name="countersignatures"></a>연대 서명  
@@ -92,18 +96,20 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 -   procSelectT1이 T1에 액세스할 수 있도록 procSelectT1에 서명을 하면 Alice가 procSelectT1을 직접 호출할 수 있으므로 ProcSelectT1ForAlice를 호출하지 않아도 됩니다.  
   
--   Alice에 대해 procSelectT1에 대한 EXECUTE 권한을 거부할 수도 있지만, 이렇게 하면 Alice가 ProcSelectT1ForAlice를 통해 procSelectT1을 호출할 수 없게 됩니다.  
+-   Alice에 대해 procSelectT1에 대한 EXECUTE 권한을 거부할 수 있지만, 이렇게 하면 Alice가 ProcSelectT1ForAlice를 통해 procSelectT1을 호출할 수 없게 됩니다.
   
 -   ProcSelectT1ForAlice에 서명을 해도 procSelectT1을 호출하는 과정에서 서명이 손실되기 때문에 그 자체로는 작업이 수행되지 않습니다.  
   
 그러나 ProcSelectT1ForAlice에 서명하는 데 사용된 것과 같은 인증서로 procSelectT1에 연대 서명을 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 호출 체인 전체에 대해 서명을 유지하며 T1에 대한 액세스를 허용합니다. 연대 서명은 아무런 권한을 부여하지 않으므로 Alice가 procSelectT1을 직접 호출하려고 시도해도 T1에는 액세스할 수 없습니다. 아래의 3번 예에서는 이 예에 사용할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 보여 줍니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 개체에 대한 ALTER 권한과 인증서 또는 비대칭 키에 대한 CONTROL 권한이 필요합니다. 연결된 프라이빗 키가 암호로 보호되어 있으면 사용자도 암호가 있어야 합니다.  
+
+개체에 대한 ALTER 권한과 인증서 또는 비대칭 키에 대한 CONTROL 권한이 필요합니다. 연결된 프라이빗 키가 암호로 보호되어 있으면 사용자도 암호가 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
-### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>A. 인증서를 사용하여 저장 프로시저에 서명  
+### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>A. 인증서를 사용하여 저장 프로시저에 서명
+
  다음 예에서는 `HumanResources.uspUpdateEmployeeLogin` 인증서를 사용하여 `HumanResourcesDP` 저장 프로시저에 서명합니다.  
   
 ```  
@@ -113,8 +119,9 @@ ADD SIGNATURE TO HumanResources.uspUpdateEmployeeLogin
 GO  
 ```  
   
-### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>B. 서명된 BLOB을 사용하여 저장 프로시저에 서명  
- 다음 예에서는 새 데이터베이스를 만들고 예에서 사용할 인증서를 만듭니다. 예에서는 간단한 저장 프로시저를 만들어 서명하고 `sys.crypt_properties`에서 서명 BLOB을 검색합니다. 서명이 삭제된 후 다시 추가됩니다. 예에서는 WITH SIGNATURE 구문을 사용하여 프로시저에 서명합니다.  
+### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>B. 서명된 BLOB을 사용하여 저장 프로시저에 서명
+
+다음 예에서는 새 데이터베이스를 만들고 예에서 사용할 인증서를 만듭니다. 예에서는 간단한 저장 프로시저를 만들어 서명하고 `sys.crypt_properties`에서 서명 BLOB을 검색합니다. 서명이 삭제된 후 다시 추가됩니다. 예에서는 WITH SIGNATURE 구문을 사용하여 프로시저에 서명합니다.  
   
 ```  
 CREATE DATABASE TestSignature ;  
@@ -159,8 +166,9 @@ ADD SIGNATURE TO [sp_signature_demo]
 GO  
 ```  
   
-### <a name="c-accessing-a-procedure-using-a-countersignature"></a>C. 연대 서명을 사용하여 프로시저 액세스  
- 다음 예에서는 연대 서명을 통해 개체 액세스를 제어하는 방법을 보여 줍니다.  
+### <a name="c-accessing-a-procedure-using-a-countersignature"></a>C. 연대 서명을 사용하여 프로시저 액세스
+
+다음 예에서는 연대 서명을 통해 개체 액세스를 제어하는 방법을 보여 줍니다.  
   
 ```  
 -- Create tesT1 database  
@@ -245,8 +253,7 @@ DROP LOGIN Alice;
   
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [sys.crypt_properties&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [DROP SIGNATURE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>참고 항목
+
+- [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)
+- [DROP SIGNATURE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)

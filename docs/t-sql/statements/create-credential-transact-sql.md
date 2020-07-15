@@ -24,16 +24,16 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 94b2e39d9767a8f75660b533231e5fe4ac16d8de
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5a83ae08c7392dcd26b22c304442c2872dc9213d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633264"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881925"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 서버 수준 자격 증명을 만듭니다. 자격 증명은 SQL Server 외부의 리소스에 연결하는 데 필요한 인증 정보가 포함된 레코드입니다. 대부분의 자격 증명에는 Windows 사용자 및 암호가 들어 있습니다. 예를 들어 일부 위치에 데이터베이스 백업을 저장 하면 해당 위치에 액세스할 수 있는 특별 자격 증명을 제공하기 위해 SQL Server를 요청할 수 있습니다. 자세한 내용은 [자격 증명(데이터베이스 엔진)](../../relational-databases/security/authentication-access/credentials-database-engine.md)을 참조하세요.
 
@@ -65,9 +65,9 @@ IDENTITY **=’** _identity\_name_ **’** 서버 외부에 연결할 때 사용
 
 SECRET **=’** _secret_ **’** 나가는 인증에 필요한 암호를 지정합니다.
 
-Azure Key Vault에 액세스하기 위해 자격 증명을 사용하는 경우, **CREATE CREDENTIAL**의 **SECRET** 인수에는 사이에 공백 없이 함께 전달할 Azure Active Directory에 포함된 **Service Principal**의 *\<Client ID>* (하이픈 없이) 및 *\<Secret>* 가 필요합니다. 아래의 예 3을 참조하세요. 자격 증명이 SAS(공유 액세스 서명)를 사용하는 경우 **IDENTITY**는 SAS 토큰입니다. 아래의 예 4를 참조하십시오. Azure 컨테이너에 저장된 액세스 정책 및 공유 액세스 서명 만들기에 대한 자세한 내용은 [1단원: Azure 컨테이너에 저장된 액세스 정책 및 공유 액세스 서명 만들기](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#1---create-stored-access-policy-and-shared-access-storage)를 참조하세요.
+Azure Key Vault에 액세스하기 위해 자격 증명을 사용하는 경우, **CREATE CREDENTIAL**의 **SECRET** 인수에는 사이에 공백 없이 함께 전달할 Azure Active Directory에 포함된 **Service Principal**의 *\<Client ID>* (하이픈 없음) 및 *\<Secret>* 이 필요합니다. 아래의 예 3을 참조하세요. 자격 증명이 SAS(공유 액세스 서명)를 사용하는 경우 **IDENTITY**는 SAS 토큰입니다. 아래의 예 4를 참조하십시오. Azure 컨테이너에 저장된 액세스 정책 및 공유 액세스 서명 만들기에 대한 자세한 내용은 [1단원: Azure 컨테이너에 저장된 액세스 정책 및 공유 액세스 서명 만들기](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#1---create-stored-access-policy-and-shared-access-storage)를 참조하세요.
 
-FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name* ‘EKM(Enterprise Key Management) 공급자’의 이름을 지정합니다.  Key Management에 대한 자세한 내용은 [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)를 참조하세요.
+FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name* ‘EKM(Enterprise Key Management) 공급자’의 이름을 지정합니다. Key Management에 대한 자세한 내용은 [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)를 참조하세요.
 
 ## <a name="remarks"></a>설명
 
@@ -85,7 +85,7 @@ IDENTITY가 Windows 사용자인 경우 암호는 해당 사용자의 암호일 
 
 **ALTER ANY CREDENTIAL** 권한이 필요합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-basic-example"></a>A. 기본 예
 
@@ -117,7 +117,7 @@ ADD CREDENTIAL CredentialForEKM;
 다음 예제에서는 **Microsoft Azure Key Vault용 SQL Server 커넥터**를 사용하여 Azure Key Vault에 액세스할 때 사용하기 위하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명을 만듭니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 커넥터를 사용하는 완전한 예에 대해서는 [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)를 참조하세요.
 
 > [!IMPORTANT]
-> **CREATE CREDENTIAL** 의 **IDENTITY** 인수에는 키 자격 증명 모음 이름이 필요합니다. **CREATE CREDENTIAL**의 **SECRET** 인수에는 사이에 공백 없이 함께 전달할 *\<Client ID>* (하이픈 없이) 및 *\<Secret>* 이 필요합니다.
+> **CREATE CREDENTIAL** 의 **IDENTITY** 인수에는 키 자격 증명 모음 이름이 필요합니다. **CREATE CREDENTIAL**의 **SECRET** 인수에는 사이에 공백 없이 함께 전달할 *\<Client ID>* (하이픈 없음) 및 *\<Secret>* 이 필요합니다.
 
  다음 예제에서 **클라이언트 ID** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`)는 하이픈이 제거되어 문자열 `EF5C8E094D2A4A769998D93440D8115D` 로 입력되어 있으며 **암호** 는 문자열 *SECRET_DBEngine*으로 표현되었습니다.
 

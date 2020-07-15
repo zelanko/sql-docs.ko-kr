@@ -1,37 +1,34 @@
 ---
 title: 바로 가기 키 만들기 및 사용자 지정
-titleSuffix: Azure Data Studio
 description: Azure Data Studio에서 바로 가기 키를 만들고 사용자 지정하는 방법을 알아봅니다.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8e577f50152eb5f86b81caa23cc493b92bbab270
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da7ca6132a8727d4ea77b3549f1e4d6199741b3a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959478"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774576"
 ---
-# <a name="keyboard-shortcuts-in-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos.md)]의 바로 가기 키
+# <a name="keyboard-shortcuts-in-azure-data-studio"></a>Azure Data Studio에서의 바로 가기 키
 
-이 문서에서는 [!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 바로 가기 키를 빠르게 살펴보고 편집하고 만드는 단계를 제공합니다.
+이 문서에서는 Azure Data Studio에서 바로 가기 키를 빠르게 살펴보고 편집하고 만드는 단계를 제공합니다.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]는 Visual Studio Code에서 키 바인딩 기능을 상속 받으므로 고급 사용자 지정, 다양한 키보드 레이아웃 사용 등에 대한 자세한 내용은 [Visual Studio Code의 키 바인딩](https://code.visualstudio.com/docs/getstarted/keybindings) 문서를 참조하세요. 일부 키 바인딩 기능은 사용하지 못할 수도 있습니다. 예를 들어 키맵 확장은 [!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 지원되지 않습니다.
-
+Azure Data Studio는 Visual Studio Code에서 키 바인딩 기능을 상속 받으므로 고급 사용자 지정, 다양한 키보드 레이아웃 사용 등에 대한 자세한 내용은 [Visual Studio Code의 키 바인딩](https://code.visualstudio.com/docs/getstarted/keybindings) 문서를 참조하세요. 일부 키 바인딩 기능은 사용하지 못할 수도 있습니다. 예를 들어 키맵 확장은 Azure Data Studio에서 지원되지 않습니다.
 
 ## <a name="open-the-keyboard-shortcuts-editor"></a>바로 가기 키 편집기 열기
 
 현재 정의된 바로 가기 키를 모두 보려면 다음을 수행합니다.
 
-**파일** 메뉴에서 **바로 가기 키** 편집기를 엽니다. **파일** > **기본 설정** > **바로 가기 키**(Mac에서는 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  > **기본 설정** > **바로 가기 키**)를 선택하면 됩니다.
+**파일** 메뉴에서 **바로 가기 키** 편집기를 엽니다. **파일** > **기본 설정** > **바로 가기 키**(Mac에서는 **Azure Data Studio** > **기본 설정** > **바로 가기 키**)를 선택하면 됩니다.
 
 **바로 가기 키** 편집기에는 현재 키 바인딩뿐만 아니라 바로 가기 키가 정의되지 않은 사용 가능한 명령도 표시됩니다. **바로 가기 키** 편집기를 사용하여 키 바인딩을 쉽게 변경, 제거, 다시 설정 및 새로 정의할 수 있습니다.  
-
 
 ## <a name="edit-existing-keyboard-shortcuts"></a>기존 바로 가기 키 편집
 
@@ -41,11 +38,11 @@ ms.locfileid: "67959478"
    > [!TIP]
    > 관련된 바로 가기 키를 모두 반환하려면 키, 명령, 원본 등으로 검색합니다.
 
-1. 원하는 항목을 마우스 오른쪽 단추로 클릭하고 **키 바인딩 변경**을 선택합니다.
+2. 원하는 항목을 마우스 오른쪽 단추로 클릭하고 **키 바인딩 변경**을 선택합니다.
 
    ![바로 가기 키 편집](media/keyboard-shortcuts/change-keybinding.png)
 
-1. 원하는 키 조합을 누르고 **Enter** 키를 눌러 저장합니다. 
+3. 원하는 키 조합을 누르고 **Enter** 키를 눌러 저장합니다. 
 
    ![바로 가기 키 저장](media/keyboard-shortcuts/save-keybinding.png)
 
@@ -57,6 +54,4 @@ ms.locfileid: "67959478"
 
    ![바로 가기 키 만들기](media/keyboard-shortcuts/add-keybinding.png)
 
-1. 원하는 키 조합을 누르고 **Enter** 키를 눌러 저장합니다.
-
-
+2. 원하는 키 조합을 누르고 **Enter** 키를 눌러 저장합니다.

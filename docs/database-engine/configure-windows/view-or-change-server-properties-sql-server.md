@@ -1,6 +1,6 @@
 ---
 title: 서버 속성 보기 또는 변경(SQL Server) | Microsoft Docs
-ms.custom: ''
+description: SQL Server Management Studio, Transact-SQL 또는 SQL Server 구성 관리자를 사용하여 SQL Server 인스턴스의 속성을 보거나 변경하는 방법을 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -16,40 +16,26 @@ helpviewer_keywords:
 - servers [SQL Server], viewing
 - Connection Properties dialog box
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a604ee89ed33f30d15e5402cba8d04668c7528f6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.custom: contperfq4
+ms.openlocfilehash: 846d393640e02365348f5ffd7057c0142163f5d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67945761"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763980"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>서버 속성 보기 또는 변경(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]인스턴스의 속성을 보거나 변경하는 방법에 대해 설명합니다.  
-  
- **항목 내용**  
-  
--   **시작하기 전 주의 사항:**  
-  
-     [제한 사항](#Restrictions)  
-  
-     [보안](#Security)  
-  
--   **서버 속성을 보거나 변경하려면:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [SQL Server 구성 관리자](#PowerShellProcedure)  
-  
--   **후속 작업:**  [서버 속성을 변경한 후](#FollowUp)  
-  
-##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
-  
-###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
+
+단계는 도구에 따라 달라집니다.
++ [SQL Server Management Studio](#SSMSProcedure)  
++ [Transact-SQL](#TsqlProcedure)  
++ [SQL Server 구성 관리자](#PowerShellProcedure)  
+    
+## <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   sp_configure를 사용할 때는 구성 옵션을 설정한 뒤에 RECONFIGURE 또는 RECONFIGURE WITH OVERRIDE를 실행해야 합니다. RECONFIGURE WITH OVERRIDE 문은 각별한 주의가 필요한 구성 옵션에 주로 사용되지만 모든 구성 옵션에 사용할 수 있으며 RECONFIGURE 대신 사용할 수 있습니다.  
   
@@ -58,14 +44,13 @@ ms.locfileid: "67945761"
   
 -   일부 속성 페이지는 WMI(Windows Management Instrumentation)를 통해 얻은 정보를 표시합니다. 이러한 페이지를 표시하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 실행 중인 컴퓨터에 WMI가 설치되어 있어야 합니다.  
   
-###  <a name="security"></a><a name="Security"></a> 보안  
+## <a name="server-level-roles"></a><a name="Security"></a> 서버 수준 역할  
   
-####  <a name="permissions"></a><a name="Permissions"></a> 권한  
- 자세한 내용은 [서버 수준 역할](../../relational-databases/security/authentication-access/server-level-roles.md)을 참조하세요.  
+자세한 내용은 [서버 수준 역할](../../relational-databases/security/authentication-access/server-level-roles.md)을 참조하세요.  
   
- 매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 RECONFIGURE 문을 실행하는 두 매개 변수를 사용하여 **sp_configure** 를 실행하려면 사용자에게 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
+매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 RECONFIGURE 문을 실행하는 두 매개 변수를 사용하여 **sp_configure** 를 실행하려면 사용자에게 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+## <a name="sql-server-management-studio"></a><a name="SSMSProcedure"></a>SQL Server Management Studio  
   
 #### <a name="to-view-or-change-server-properties"></a>서버 속성을 보거나 변경하려면  
   
@@ -73,9 +58,9 @@ ms.locfileid: "67945761"
   
 2.  **서버 속성** 대화 상자에서 해당 페이지에 대한 서버 정보를 보거나 변경할 페이지를 클릭합니다. 일부 속성은 읽기 전용입니다.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="transact-sql"></a><a name="TsqlProcedure"></a>Transact-SQL  
   
-#### <a name="to-view-server-properties-by-using-the-serverproperty-built-in-function"></a>SERVERPROPERTY 기본 제공 함수를 사용하여 서버 속성을 보려면  
+### <a name="to-view-server-properties-by-using-the-serverproperty-built-in-function"></a>SERVERPROPERTY 기본 제공 함수를 사용하여 서버 속성을 보려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
@@ -88,7 +73,7 @@ ms.locfileid: "67945761"
     GO  
     ```  
   
-#### <a name="to-view-server-properties-by-using-the-sysservers-catalog-view"></a>sys.servers 카탈로그 뷰를 사용하여 서버 속성을 보려면  
+### <a name="to-view-server-properties-by-using-the-sysservers-catalog-view"></a>sys.servers 카탈로그 뷰를 사용하여 서버 속성을 보려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
@@ -105,7 +90,7 @@ ms.locfileid: "67945761"
   
     ```  
   
-#### <a name="to-view-server-properties-by-using-the-sysconfigurations-catalog-view"></a>sys.configurations 카탈로그 뷰를 사용하여 서버 속성을 보려면  
+### <a name="to-view-server-properties-by-using-the-sysconfigurations-catalog-view"></a>sys.configurations 카탈로그 뷰를 사용하여 서버 속성을 보려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
@@ -122,7 +107,7 @@ ms.locfileid: "67945761"
   
     ```  
   
-#### <a name="to-change-a-server-property-by-using-sp_configure"></a>sp_configure를 사용하여 서버 속성을 변경하려면  
+### <a name="to-change-a-server-property-by-using-sp_configure"></a>sp_configure를 사용하여 서버 속성을 변경하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
@@ -145,23 +130,24 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="using-sql-server-configuration-manager"></a><a name="PowerShellProcedure"></a> SQL Server 구성 관리자 사용  
+## <a name="sql-server-configuration-manager"></a><a name="PowerShellProcedure"></a>SQL Server 구성 관리자  
  일부 서버 속성은 SQL Server 구성 관리자를 사용하여 보거나 변경할 수 있습니다. 예를 들어 SQL Server 인스턴스의 버전 및 에디션을 보거나 오류 로그 파일이 저장된 위치를 변경할 수 있습니다. [서버 관련 동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md)를 쿼리하여 이러한 속성을 볼 수도 있습니다.  
   
-#### <a name="to-view-or-change-server-properties"></a>서버 속성을 보거나 변경하려면  
+### <a name="to-view-or-change-server-properties"></a>서버 속성을 보거나 변경하려면  
   
 1.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
 2.  **SQL Server 구성 관리자**에서 **SQL Server 서비스**를 클릭합니다.  
   
-3.  세부 정보 창에서 **SQL Server(\<** _instancename_ **>)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+3.  세부 정보 창에서 **SQL Server(\<**_instancename_**>)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  **SQL Server(\<** _instancename_ **>) 속성** 대화 상자에서 **서비스** 탭 또는 **고급** 탭의 서버 속성을 변경한 다음 **확인**을 클릭합니다.  
+4.  **SQL Server(\<**_instancename_**>) 속성 대화** 상자의 **서비스** 탭 또는 **고급** 탭에서 서버 속성을 변경한 다음 **확인**을 클릭합니다.  
   
-##  <a name="follow-up-after-you-change-server-properties"></a><a name="FollowUp"></a> 후속 작업: 서버 속성을 변경한 후  
- 일부 속성의 경우 변경 내용을 적용하려면 서버를 다시 시작해야 할 수도 있습니다.  
+## <a name="restart-after-changes"></a><a name="FollowUp"></a>변경 후 다시 시작
+
+일부 속성의 경우 변경 내용을 적용하려면 서버를 다시 시작해야 할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="next-steps"></a>다음 단계  
  [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SERVERPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   

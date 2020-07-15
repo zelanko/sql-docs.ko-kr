@@ -1,5 +1,6 @@
 ---
 title: 종료 메시지 브로드캐스트(명령 프롬프트) | Microsoft Docs
+description: Net send 명령을 사용하여 SQL Server에서 메시지를 브로드캐스팅하는 방법을 알아봅니다. 현재 SQL Server에 연결된 사용자를 확인하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - default instances [SQL Server], broadcasting shutdown messages
 - stopping SQL Server
 ms.assetid: 9f20ccd5-d952-431d-ba12-339911af9430
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 89fcc63741b4322501c640453971c67d5a9a02fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 85d2bac016287afd060cdf727eeea47a6b78d725
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013143"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759210"
 ---
 # <a name="broadcast-a-shutdown-message-command-prompt"></a>종료 메시지 브로드캐스트(명령 프롬프트)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 **net send** 명령을 사용하여 종료 메시지를 브로드캐스팅하는 방법에 대해 설명합니다. 사용자가 제시간에 태스크를 완료할 수 있도록 메시지에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 중지 시간을 포함시키세요.  
   
 ##  <a name="SSMSProcedure"></a>  

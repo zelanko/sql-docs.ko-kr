@@ -1,5 +1,6 @@
 ---
 title: FILESTREAM(SQL Server) | Microsoft 문서
+description: 파일 시스템에 데이터를 저장하는 SQL Server 기능인 FILESTREAM에 대해 알아봅니다. FILESTREAM이 데이터를 저장하고, 보안을 제공하고, 데이터에 액세스하는 방법에 대해 읽어 보세요.
 ms.custom: ''
 ms.date: 01/11/2018
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: c56f702b6946662657f35fd7e0c8e6b9bc791c36
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 180e13a7a8e5d85aa43ae47d7e9ae955d421991b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287287"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893800"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 FILESTREAM을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]기반 애플리케이션에서 문서 및 이미지와 같은 구조화되지 않은 데이터를 파일 시스템에 저장할 수 있습니다. 애플리케이션은 풍부한 스트리밍 API 및 파일 시스템의 성능을 활용할 수 있고 동시에 구조화되지 않은 데이터와 해당되는 구조화된 데이터 간에 트랜잭션 일관성을 유지할 수 있습니다.  
   

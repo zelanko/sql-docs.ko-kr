@@ -1,5 +1,6 @@
 ---
 title: 유지 관리 계획 | Microsoft 문서
+description: SQL Server 데이터베이스를 최적화하고 정기적으로 백업하며 불일치를 제거하는 워크플로를 만드는 유지 관리 계획에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f773e5188716e7f74fc75567b0c6e000607d47c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb0036acec4ec0c416f6fa01ccf99663be741514
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115876"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789462"
 ---
 # <a name="maintenance-plans"></a>유지 관리 계획
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   유지 관리 계획은 데이터베이스를 최적화하고 정기적으로 백업하며 불일치를 제거하는 데 필요한 태스크의 워크플로를 만듭니다. 유지 관리 계획 마법사에서도 중요한 유지 관리 계획을 만들지만 이러한 계획을 수동으로 만들면 유연성을 향상시킬 수 있습니다.  
   
 ## <a name="benefits-of-maintenance-plans"></a>유지 관리 계획의 이점  

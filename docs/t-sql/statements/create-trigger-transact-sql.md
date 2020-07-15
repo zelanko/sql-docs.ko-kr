@@ -28,15 +28,15 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 ms.reviewer: mathoma
-ms.openlocfilehash: b272bed73c4b51070fd1b5c9840f39db210501ab
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 70a32b0f5c3a80d4d3c5af0cad7adcd1e15f5088
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635538"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766948"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 DML, DDL 또는 LOGON 트리거를 만듭니다. 트리거는 데이터베이스 서버에서 이벤트가 발생하면 자동으로 실행되는 특수한 종류의 저장 프로시저입니다. DML 트리거는 DML(데이터 조작 언어) 이벤트를 통해 데이터를 수정하려는 경우에 실행됩니다. DML 이벤트는 테이블이나 뷰에 대한 INSERT, UPDATE 또는 DELETE 문입니다. 테이블 행이 영향을 받는지 여부에 관계없이 유효한 이벤트가 실행될 때 이 트리거가 실행됩니다. 자세한 내용은 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)을 참조하세요.  
@@ -264,7 +264,8 @@ DDL 및 LOGON 트리거는 [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functio
   
 메모리 최적화 테이블의 트리거의 경우, 최상위 수준에서 허용되는 *sql_statement*는 ATOMIC 블록뿐입니다. ATOMIC 블록 내에서 허용되는 T-SQL은 네이티브 프로시저 내에서 허용되는 T-SQL로 제한됩니다.  
   
-\< method_specifier > **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
+\< method_specifier > 
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
 CLR 트리거의 경우 트리거와 바인딩할 어셈블리의 메서드를 지정합니다. 이 메서드는 인수가 없어야 하며 void를 반환해야 합니다. *class_name*은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 어셈블리 표시 유형이 있는 어셈블리의 클래스로 존재해야 합니다. 클래스가 마침표 '.'를 사용하여 네임스페이스 부분을 구분하는 네임스페이스로 한정된 이름을 가질 경우 클래스 이름은 [ ] 또는 " " 구분 기호를 사용하여 구분되어야 합니다. 클래스는 중첩 클래스일 수 없습니다.  
   
@@ -411,7 +412,7 @@ DML 트리거를 만들려면 트리거를 만들 테이블이나 뷰에 대한 
   
 서버 범위(ON ALL SERVER)의 DDL 트리거 또는 LOGON 트리거를 만들려면 해당 서버에 대한 CONTROL SERVER 권한이 필요합니다. 데이터베이스 범위(ON DATABASE)의 DDL 트리거를 만들려면 현재 데이터베이스에 대한 ALTER ANY DATABASE DDL TRIGGER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-a-dml-trigger-with-a-reminder-message"></a>A. 미리 알림 메시지로 DML 트리거 사용  
 다음 DML 트리거는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Customer` 테이블에 데이터를 추가하거나 변경하려고 할 때 클라이언트에 메시지를 출력합니다.  

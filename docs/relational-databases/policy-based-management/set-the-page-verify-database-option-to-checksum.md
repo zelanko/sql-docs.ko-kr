@@ -1,5 +1,6 @@
 ---
 title: PAGE_VERIFY 데이터베이스 옵션을 CHECKSUM으로 설정 | Microsoft 문서
+description: PAGE_VERIFY 옵션이 CHECKSUM인지를 확인합니다. 이 옵션은 데이터-파일 무결성을 위한 SQL Server 데이터베이스 엔진의 체크섬 계산 여부를 제어합니다.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 686b9a4a-ea61-4263-9ab8-f444a3077679
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6d0491eb44eb2880927aef006ccc705230ab1940
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5f296dc9aedf96c3258dc256d9bc8fc8fdf05f12
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021652"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774169"
 ---
 # <a name="set-the-page_verify-database-option-to-checksum"></a>PAGE_VERIFY 데이터베이스 옵션을 CHECKSUM으로 설정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 규칙은 PAGE_VERIFY 데이터베이스 옵션이 CHECKSUM으로 설정되었는지 검사합니다. PAGE_VERIFY 데이터베이스 옵션에 CHECKSUM을 설정하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 페이지를 디스크에 쓸 때 전체 페이지 내용에 대한 체크섬이 계산되어 페이지 헤더에 값이 저장됩니다. 디스크에서 페이지를 읽으면 체크섬이 다시 계산되어 페이지 헤더에 저장된 체크섬 값과 비교됩니다. 이를 통해 높은 수준의 데이터 파일 무결성을 제공할 수 있습니다.  
   
 ## <a name="best-practices-recommendations"></a>최선의 구현 방법 권장 사항  

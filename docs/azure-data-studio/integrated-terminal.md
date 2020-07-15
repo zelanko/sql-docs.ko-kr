@@ -1,25 +1,24 @@
 ---
 title: 통합 터미널
-titleSuffix: Azure Data Studio
 description: Azure Data Studio의 통합 터미널에 대해 알아봅니다.
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ecd96299a29619bdf52894b36782f6d71e3a0c19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959534"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774590"
 ---
 # <a name="integrated-terminal"></a>통합 터미널
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 처음에는 작업 영역의 루트에서 시작하여 통합 터미널을 열 수 있습니다. 이 기능을 사용하면 빠른 명령줄 작업을 수행하기 위해 창을 전환하거나 기존 터미널의 상태를 변경할 필요가 없기 때문에 편리할 수 있습니다.
+Azure Data Studio에서는 처음에는 작업 영역의 루트에서 시작하여 통합 터미널을 열 수 있습니다. 이 기능을 사용하면 빠른 명령줄 작업을 수행하기 위해 창을 전환하거나 기존 터미널의 상태를 변경할 필요가 없기 때문에 편리할 수 있습니다.
 
 터미널을 열려면 다음을 수행합니다.
 
@@ -30,7 +29,7 @@ ms.locfileid: "67959534"
 ![터미널](media/integrated-terminal/terminal-screen.png)
 
 > [!NOTE]
-> [!INCLUDE[name-sos](../includes/name-sos-short.md)] 외부에서 작업하려는 경우 탐색기 **명령 프롬프트에서 열기** 명령(Mac 또는 Linux에서는 **터미널에서 열기**)을 사용하여 여전히 외부 셸을 열 수 있습니다.
+> Azure Data Studio 외부에서 작업하려는 경우 탐색기 **명령 프롬프트에서 열기** 명령(Mac 또는 Linux에서는 **터미널에서 열기**)을 사용하여 여전히 외부 셸을 열 수 있습니다.
 
 ## <a name="managing-multiple-terminals"></a>여러 터미널 관리
 
@@ -66,7 +65,7 @@ Windows에서 셸을 올바르게 구성하려면 올바른 실행 파일을 찾
 > 통합 터미널로 사용하려면 `stdin/stdout/stderr`을 리디렉션할 수 있도록 셸 실행 파일이 콘솔 애플리케이션이어야 합니다.
 
 > [!TIP]
-> 통합 터미널 셸은 [!INCLUDE[name-sos](../includes/name-sos-short.md)]의 사용 권한으로 실행되고 있습니다. 관리자 권한이나 다른 사용 권한으로 셸 명령을 실행해야 하는 경우 터미널 내에서 `runas.exe` 등의 플랫폼 유틸리티를 사용할 수 있습니다.
+> 통합 터미널 셸은 Azure Data Studio의 사용 권한으로 실행되고 있습니다. 관리자 권한이나 다른 사용 권한으로 셸 명령을 실행해야 하는 경우 터미널 내에서 `runas.exe` 등의 플랫폼 유틸리티를 사용할 수 있습니다.
 
 ### <a name="shell-arguments"></a>셸 인수
 
@@ -118,7 +117,7 @@ Windows에서 셸을 올바르게 구성하려면 올바른 실행 파일을 찾
 
 ### <a name="run-selected-text"></a>선택한 텍스트 실행
 
-`runSelectedText` 명령을 사용하려면 편집기에서 텍스트를 선택한 다음, **** **명령 팔레트**(**Ctrl+Shift+P**)를 통해 터미널:활성 터미널에서 선택한 텍스트 실행 명령을 실행합니다. 터미널에서 선택한 텍스트를 실행하려고 합니다.
+`runSelectedText` 명령을 사용하려면 편집기에서 텍스트를 선택한 다음, **명령 팔레트**(**Ctrl+Shift+P**)를 통해 **터미널:활성 터미널에서 선택한 텍스트 실행** 명령을 실행합니다. 터미널에서 선택한 텍스트를 실행하려고 합니다.
 
 ![선택한 텍스트 실행](media/integrated-terminal/terminal_run_selected.png)
 
@@ -149,5 +148,5 @@ Linux 및 Windows에서 **Ctrl+F**를 통해 찾기 위젯을 시작하는 대�
 
 ### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>터미널에서 키 바인딩 강제 적용
 
-통합 터미널에 포커스가 설정된 경우 키 입력이 터미널 자체에 전달되고 사용되기 때문에 작동하지 않는 키 바인딩이 많습니다. 이 문제를 해결하기 위해 `terminal.integrated.commandsToSkipShell` 설정을 사용할 수 있습니다. 이 설정은 키 바인딩이 셸에서 처리되지 않고 대신 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 키 바인딩 시스템에서 처리되는 명령 이름 배열을 포함합니다. 기본적으로, 자주 사용하는 일부 키 바인딩뿐만 아니라 모든 터미널 키 바인딩이 포함됩니다.
+통합 터미널에 포커스가 설정된 경우 키 입력이 터미널 자체에 전달되고 사용되기 때문에 작동하지 않는 키 바인딩이 많습니다. 이 문제를 해결하기 위해 `terminal.integrated.commandsToSkipShell` 설정을 사용할 수 있습니다. 이 설정은 키 바인딩이 셸에서 처리되지 않고 대신 Azure Data Studio 키 바인딩 시스템에서 처리되는 명령 이름 배열을 포함합니다. 기본적으로, 자주 사용하는 일부 키 바인딩뿐만 아니라 모든 터미널 키 바인딩이 포함됩니다.
 

@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d779af4f450fe444181df995a8dab26b102c3038
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 4328e0ae41a5d830cae37544bec972936ff39b53
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220428"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787560"
 ---
 # <a name="manage-partition-wizard"></a>파티션 관리 마법사 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **파티션 관리 마법사** 를 사용하여 파티션 전환이나 슬라이딩 윈도우(Sliding Window) 시나리오의 구현을 통해 기존 파티션 테이블을 관리하고 수정할 수 있습니다. 이 마법사는 파티션 관리를 용이하게 하고 테이블로 또는 테이블로부터의 정기적인 데이터 마이그레이션을 단순화합니다.  
   
 ### <a name="to-start-the-manage-partition-wizard"></a>파티션 관리 마법사를 시작하려면  
@@ -76,7 +76,7 @@ ms.locfileid: "82220428"
 ### <a name="sliding-window-scenario"></a>슬라이딩 윈도우(Sliding Window) 시나리오  
  슬라이딩 윈도우(Sliding Window) 시나리오에서 파티션을 관리하려면 **슬라이딩 윈도우 시나리오에서 분할된 데이터 관리**를 선택합니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **파티션 전환용 준비 테이블 만들기**  
  분할된 기존 테이블로 또는 분할된 기존 테이블에서 내부 전환하거나 외부 전환할 데이터의 준비 테이블을 만듭니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "82220428"
 ##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> 파티션 내부 전환 옵션 선택 페이지  
  **파티션 내부 전환 옵션 선택** 페이지를 사용하여 분할된 테이블로 내부 전환할 준비 테이블을 선택할 수 있습니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **모든 파티션 표시**  
  분할된 테이블의 현재 파티션을 포함한 모든 파티션을 표시하려면 선택합니다.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "82220428"
 ##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> 파티션 외부 전환 옵션 선택 페이지  
  **파티션 외부 전환 옵션 선택** 페이지를 사용하여 분할된 테이블에서 외부 전환할 분할된 데이터를 저장하기 위한 파티션 및 준비 테이블을 선택할 수 있습니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **파티션 표**  
  선택한 파티션의 파티션 이름, **왼쪽 경계**, **오른쪽 경계**, **파일 그룹**및 **행 개수** 를 표시합니다.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "82220428"
   
  원본 파티션에 존재하는 준비 테이블에 동일한 인덱스를 만들 수도 있습니다. 준비 테이블에는 원본 파티션의 요소를 기반으로 하는 제약 조건이 자동으로 포함됩니다. 이 제약 조건은 일반적으로 원본 파티션의 경계 값에서 생성됩니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **준비 테이블 이름**  
  준비 테이블에 대한 이름을 만들거나 입력란에 표시되는 기본 이름을 사용합니다.  
   
@@ -259,7 +259,7 @@ ms.locfileid: "82220428"
 ##  <a name="summary-page"></a><a name="Summary"></a> 요약 페이지  
  **요약** 페이지를 사용하여 이전 페이지에서 선택한 옵션을 검토할 수 있습니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **선택 항목 검토**  
  마법사의 각 페이지에서 사용자가 선택한 항목을 표시합니다. 이전에 선택한 옵션을 확장하고 보려면 노드를 클릭합니다.  
   

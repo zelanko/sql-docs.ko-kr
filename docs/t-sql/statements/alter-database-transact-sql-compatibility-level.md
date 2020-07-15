@@ -24,16 +24,16 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba279273a8e0a477f24cc204abee7f29e2420e1e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 51889da6d3ce13b6815767fc7651d6d0ac203eca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629245"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85761970"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE(Transact-SQL) 호환성 수준
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 지정된 버전의 SQL 엔진과 호환되도록 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 쿼리 처리 동작을 설정합니다. 다른 ALTER DATABASE 옵션은 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
 
@@ -292,7 +292,7 @@ SQL Server 2017 이전의 SQL Server 이전 버전에서 추적 플래그 4199�
 |전체 텍스트 조건자는 `OUTPUT` 절에서 허용됩니다.|전체 텍스트 조건자는 `OUTPUT` 절에서 허용되지 않습니다.|낮음|
 |`CREATE FULLTEXT STOPLIST`, `ALTER FULLTEXT STOPLIST` 및 `DROP FULLTEXT STOPLIST`는 지원되지 않습니다. 시스템 중지 목록은 자동으로 새로운 전체 텍스트 인덱스와 연결됩니다.|`CREATE FULLTEXT STOPLIST`, `ALTER FULLTEXT STOPLIST` 및 `DROP FULLTEXT STOPLIST`는 지원됩니다.|낮음|
 |`MERGE`는 예약 키워드가 아닙니다.|MERGE는 완전 예약 키워드입니다. `MERGE` 문은 호환성 수준 100 및 90 모두에서 지원됩니다.|낮음|
-|INSERT 문에서 \<dml_table_source> 인수를 사용하면 구문 오류가 발생합니다.|중첩된 INSERT, UPDATE, DELETE 또는 MERGE 문에서 OUTPUT 절의 결과를 캡처하고 그 결과를 대상 테이블이나 뷰에 삽입할 수 있습니다. 이 작업은 INSERT 문의 \<dml_table_source> 인수를 사용하여 수행됩니다.|낮음|
+|INSERT 문의 \<dml_table_source> 인수를 사용하면 구문 오류가 발생합니다.|중첩된 INSERT, UPDATE, DELETE 또는 MERGE 문에서 OUTPUT 절의 결과를 캡처하고 그 결과를 대상 테이블이나 뷰에 삽입할 수 있습니다. INSERT 문의 \<dml_table_source> 인수를 사용하여 이 작업을 수행합니다.|낮음|
 |`NOINDEX`가 지정되지 않으면 `DBCC CHECKDB` 또는 `DBCC CHECKTABLE`은 단일 테이블이나 인덱싱된 뷰 및 해당하는 모든 비클러스터형 XML 인덱스에 대해 물리적 일관성 검사와 논리적 일관성 검사를 모두 수행합니다. 공간 인덱스는 지원되지 않습니다.|`NOINDEX`가 지정되지 않으면 `DBCC CHECKDB` 또는 `DBCC CHECKTABLE`은 단일 테이블 및 해당하는 모든 비클러스터형 인덱스에 대해 물리적 일관성 검사와 논리적 일관성 검사를 모두 수행합니다. 그러나 XML 인덱스, 공간 인덱스 및 인덱싱된 뷰에 대해서는 기본적으로 물리적 일관성 검사만 수행됩니다.<br /><br /> `WITH EXTENDED_LOGICAL_CHECKS`를 지정하면 인덱싱된 뷰, XML 인덱스 및 공간 인덱스에 대해 논리적 검사가 수행됩니다. 기본적으로 물리적 일관성 검사는 논리적 일관성 검사 전에 수행됩니다. `NOINDEX`도 지정할 경우 논리적 검사만 수행됩니다.|낮음|
 |DML(데이터 조작 언어)로 OUTPUT 절을 사용하는 경우 문 실행 중에 런타임 오류가 발생하면 전체 트랜잭션이 종료되고 롤백됩니다.|DML(데이터 조작 언어) 문으로 `OUTPUT` 절을 사용하는 경우 명령문 실행 중에 런타임 오류가 발생하면 `SET XACT_ABORT` 설정에 따라 동작이 결정됩니다. `SET XACT_ABORT`가 OFF로 설정된 경우 `OUTPUT` 절을 사용하는 DML 문에서 문 중단 오류가 발생하면 해당 문은 종료되지만 일괄 처리의 실행이 계속되고 트랜잭션이 롤백되지 않습니다. `SET XACT_ABORT`가 ON으로 설정된 경우 OUTPUT 절을 사용하는 DML 문에서 런타임 오류가 발생하면 항상 일괄 처리가 종료되고 트랜잭션이 롤백됩니다.|낮음|
 |CUBE 및 ROLLUP은 예약 키워드가 아닙니다.|`CUBE` 및 `ROLLUP`은 GROUP BY 절에서 예약 키워드입니다.|낮음|
@@ -333,7 +333,7 @@ SQL Server 2017 이전의 SQL Server 이전 버전에서 추적 플래그 4199�
 
 데이터베이스에 대한 `ALTER` 권한이 필요합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-changing-the-compatibility-level"></a>A. 호환성 수준 변경
 

@@ -17,15 +17,15 @@ ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6aee1619c5abaab84f4b201507c179f3ce7e8d1
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: e186d1da5ab42b25c120303a545c9164d949ad45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220708"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786472"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>힙(클러스터형 인덱스가 없는 테이블)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   힙이란 클러스터형 인덱스가 없는 테이블입니다. 힙으로 저장된 테이블에서 하나 이상의 비클러스터형 인덱스를 만들 수 있습니다. 데이터는 순서를 지정하지 않고 힙에 저장됩니다. 일반적으로 데이터는 처음에 행이 테이블에 삽입되는 순서대로 저장되지만 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 힙 안의 데이터를 이동하여 행을 효율적으로 저장할 수 있습니다. 따라서 데이터 순서는 예측할 수 없습니다. 힙에서 반환되는 행의 순서를 지정하려면 `ORDER BY` 절을 사용해야 합니다. 행을 저장할 영구 논리 순서를 지정하려면 테이블에서 클러스터형 인덱스를 만들어 테이블이 힙이 되지 않도록 합니다.  
   
@@ -33,8 +33,15 @@ ms.locfileid: "82220708"
 > 클러스터형 인덱스를 만들지 않고 테이블을 힙으로 두면 좋은 몇 가지 이유가 있지만, 힙을 효율적으로 사용하려면 고급 기술이 요구됩니다. 힙을 테이블로 두어야 할 이유가 없는 한 대부분의 테이블에는 신중하게 선택된 클러스터형 인덱스가 있어야 합니다.  
   
 ## <a name="when-to-use-a-heap"></a>힙을 사용하는 경우  
-테이블을 힙으로 저장하면 파일 번호, 데이터 페이지 번호 및 페이지의 슬롯으로 구성된 8바이트 RID(행 식별자)에 대한 참조(FileID:PageID:SlotID)로 개별 행이 식별됩니다. 행 ID는 작고 효율적인 구조입니다. 데이터 전문가는 비클러스터형 인덱스를 통해 항상 데이터에 액세스하고 RID가 클러스터형 인덱스 키보다 작은 경우에 힙을 사용합니다. 힙은 다음과 같은 경우에도 사용됩니다.   
- 
+테이블을 힙으로 저장하면 파일 번호, 데이터 페이지 번호 및 페이지의 슬롯으로 구성된 8바이트 RID(행 식별자)에 대한 참조(FileID:PageID:SlotID)로 개별 행이 식별됩니다. 행 ID는 작고 효율적인 구조입니다. 
+
+순서가 지정되지 않은 대량 삽입 작업의 준비 테이블로 힙을 사용할 수 있습니다. 엄격한 순서를 적용하지 않고 데이터가 삽입되기 때문에 삽입 작업은 일반적으로 클러스터형 인덱스에 대한 동등한 삽입보다 빠릅니다. 힙의 데이터를 읽고 최종 대상으로 처리하는 경우 읽기 쿼리에서 사용되는 검색 조건자를 포함하는 좁은 비클러스터형 인덱스를 만드는 것이 유용할 수 있습니다. 
+
+> [!NOTE]  
+> 데이터는 데이터 페이지 순서대로 힙에서 검색 되지만 데이터가 삽입되는 순서와 반드시 일치하지는 않습니다. 
+
+데이터 전문가는 비클러스터형 인덱스를 통해 항상 데이터에 액세스하고 RID가 클러스터형 인덱스 키보다 작은 경우에도 힙을 사용합니다. 
+
 테이블이 힙이고 비클러스터형 인덱스가 없는 경우 행을 찾으려면 전체 테이블을 읽어야(테이블 검색) 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 힙에서 직접 RID를 찾을 수 없습니다. 테이블이 작은 경우에는 이렇게 하는 것이 문제가 되지 않을 수도 있습니다.  
   
 ## <a name="when-not-to-use-a-heap"></a>힙을 사용하지 않는 경우  

@@ -1,5 +1,6 @@
 ---
 title: cross db ownership chaining 서버 구성 옵션 | Microsoft Docs
+description: SQL Server에서 "데이터베이스 간 소유권 체인" 옵션을 사용하는 방법을 알아봅니다. 데이터베이스 간 소유권 체인을 켜고 끄기 위한 고려 사항을 확인합니다.
 ms.custom: ''
 ms.date: 08/15/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - cross db ownership chaining option
 - chaining ownership
 ms.assetid: 7b2d49f2-b91c-4aee-a52b-6cc49bed03af
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 9d3ee24f8bf3d698314b5eb32a166ef7080622b2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: eefc2b48f43aa91afa982775829648d76856b392
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012045"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772619"
 ---
 # <a name="cross-db-ownership-chaining-server-configuration-option"></a>cross db ownership chaining 서버 구성 옵션
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **cross db ownership chaining** 옵션을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 데이터베이스 간 소유권 체인을 구성할 수 있습니다.  
   

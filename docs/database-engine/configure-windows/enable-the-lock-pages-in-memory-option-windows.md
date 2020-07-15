@@ -1,5 +1,6 @@
 ---
 title: 메모리에 페이지 잠금 옵션 설정(Windows) | Microsoft Docs
+description: "\"메모리에 페이지 잠금\" 옵션을 설정하는 방법을 알아봅니다. 어떻게 이 옵션을 사용하여 데이터를 디스크에 페이징하는 대신 실제 메모리에 유지하여 성능을 향상시킬 수 있는지 확인합니다."
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Lock Pages in Memory option
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 8041f5f057962af79d75f121423233d3d6a3a806
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6390c4a4bb4d8ea2ed9b5e5be1712eb7e782a29b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011767"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772479"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Lock Pages in Memory 옵션 설정(Windows)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 Windows 정책은 데이터를 실제 메모리에 유지하는 프로세스를 사용하여 시스템이 디스크의 가상 메모리로 데이터를 페이징하지 않도록 방지할 수 있는 계정을 결정합니다.  
   
 > [!NOTE]  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 05f0d6d99ca4e5274882ec5d4e751ba658b62a1e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2416295cd79ae7b4e4da53ef71bcf7dfbf0702f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68114797"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766678"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY 개체 사용 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   보안 개체의 OBJECT 클래스 멤버에 대한 사용 권한을 거부합니다. OBJECT 클래스의 멤버에는 테이블, 뷰, 테이블 반환 함수, 저장 프로시저, 확장 저장 프로시저, 스칼라 함수, 집계 함수, 서비스 큐 및 동의어에 대한 사용 권한이 있습니다.  
 
@@ -32,7 +32,7 @@ ms.locfileid: "68114797"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 DENY <permission> [ ,...n ] ON   
     [ OBJECT :: ][ schema_name ]. object_name [ ( column [ ,...n ] ) ]  
         TO <database_principal> [ ,...n ]   
@@ -60,11 +60,11 @@ DENY <permission> [ ,...n ] ON
  ALL  
  ALL을 거부하더라도 일부 가능한 사용 권한은 거부되지 않습니다. ALL을 거부하는 것은 지정된 개체에 적용할 수 있는 모든 ANSI-92 사용 권한을 거부하는 것과 동일합니다. ALL의 의미는 다음과 같이 달라집니다.  
   
- - 스칼라 함수 사용 권한: EXECUTE, REFERENCES.  
- - 테이블 반환 함수 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
- - 저장 프로시저 사용 권한: EXECUTE.  
- - 테이블 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
- - 뷰 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ - 스칼라 함수 사용 권한: EXECUTE, REFERENCES  
+ - 테이블 반환 함수 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE  
+ - 저장 프로시저 사용 권한: EXECUTE  
+ - 테이블 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE  
+ - 뷰 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE  
   
 PRIVILEGES  
  ANSI-92 호환성을 위해 포함되었습니다. ALL의 동작을 변경하지 않습니다.  
@@ -136,7 +136,7 @@ PRIVILEGES
   
  AS 절을 사용하는 경우 지정된 보안 주체가 사용 권한을 거부할 개체를 소유해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음 예에서는 모두 AdventureWorks 데이터베이스를 사용합니다.
   
 ### <a name="a-denying-select-permission-on-a-table"></a>A. 테이블에 대한 SELECT 권한 거부  

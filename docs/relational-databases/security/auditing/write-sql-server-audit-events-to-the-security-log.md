@@ -1,5 +1,6 @@
 ---
 title: 보안 로그에 SQL Server Audit 이벤트 쓰기 | Microsoft 문서
+description: Windows 보안 로그에 SQL Server Audit 이벤트를 쓰는 방법을 확인합니다. 해당 로그 사용 관련 제한 사항을 알아봅니다.
 ms.custom: ''
 ms.date: 09/21/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0c998b4d5ed5988d5a5e2a01bf0cbd611157f665
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68228106bcd2620cb684bd61efec353fdb49585c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095098"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884836"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>보안 로그에 SQL Server Audit 이벤트 쓰기  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 보안 수준이 높은 환경에서는 Windows 보안 로그에 개체 액세스를 기록하는 이벤트를 쓰는 것이 좋습니다. 다른 감사 위치도 지원되지만 변조될 가능성이 높습니다.  
   

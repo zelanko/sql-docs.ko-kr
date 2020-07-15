@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 수명 주기 관리 | Microsoft 문서
+description: SQL Server에서 데이터베이스 수명 주기 관리를 사용하여 데이터베이스 및 데이터 자산의 성능과 보호, 가용성 및 비용을 관리하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -31,15 +32,15 @@ ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ed1f0716e3919e88ad7dfd1ae6c54f8e702761f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3c36813bee6c6b75d869bc4f04d47665c206cfcc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155493"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781603"
 ---
 # <a name="database-lifecycle-management"></a>데이터베이스 수명 주기 관리
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
   DLM(데이터베이스 수명 주기 관리)은 정책을 기반으로 하는 데이터베이스 및 데이터 자산 관리 방법입니다. DLM은 제품이 아니지만 데이터베이스 애플리케이션의 데이터베이스 스키마, 데이터 및 메타데이터를 관리하는 포괄적인 접근 방식입니다. DLM에 대한 신중한 사전 접근 방식을 통해 조직에서는 적절한 수준의 성능, 보고, 가용성 및 비용에 따라 데이터 리소스를 관리할 수 있습니다.  
   
  DLM은 프로젝트 디자인과 의도에 대한 논의로 시작하여, 데이터베이스 개발, 테스트, 빌드, 배포, 유지 관리, 모니터링 및 백업 작업으로 이어지고, 데이터베이스 보관으로 끝납니다. 이 항목에서는 데이터베이스 개발로 시작하여 빌드, 배포 및 모니터링 작업으로 이어지는 DLM의 단계를 간략하게 설명합니다. 여기에는 데이터베이스 관리 작업과 가져오기/내보내기, 백업, 마이그레이션, 동기화 등의 데이터 이식성 작업도 포함됩니다.  

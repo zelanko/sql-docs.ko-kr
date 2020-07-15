@@ -1,7 +1,7 @@
 ---
 title: STX(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/03/2017
+ms.date: 06/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2aef77e8-0460-43f9-bad6-2aae6d8c36f9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 8a6b8896dadf8abc17d2fb3b3836d53815b7d3f8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b870071f474203a699494993f56f87109f9baf43
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066165"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762114"
 ---
 # <a name="stx-geometry-data-type"></a>STX(geometry 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **Point** 인스턴스의 X 좌표 속성입니다.
   
@@ -39,14 +39,14 @@ ms.locfileid: "68066165"
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식: **float**  
   
- CLR 형식: **SqlDouble**  
+ CLR 유형: **SqlDouble**  
   
 ## <a name="remarks"></a>설명  
  **geometry** 인스턴스가 점이 아닌 경우 이 속성의 값은 Null입니다.  
   
  이 속성은 읽기 전용입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Point` 인스턴스를 만들고 `STX`를 사용하여 인스턴스의 X 좌표를 검색합니다.  
   
 ```  

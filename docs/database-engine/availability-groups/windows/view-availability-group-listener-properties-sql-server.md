@@ -1,6 +1,6 @@
 ---
 title: 가용성 그룹 수신기 속성 보기
-description: 'SSMS(SQL Server Management Studio), T-SQL(Transact-SQL) 또는 SQL PowerShell을 사용하여 Always On 가용성 그룹 수신기의 속성을 보는 방법을 설명합니다. '
+description: SQL Server에서 SQL Server Management Studio, Transact-SQL 또는 PowerShell을 사용하여 Always On 가용성 그룹 수신기의 속성을 보는 방법을 설명합니다.
 ms.custom: seo-lt-2019
 ms.date: 07/11/2016
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74f8a0823f281a9260ba2d8ba322ac97c0e7056b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2f148deff16e26b8eec4d3c34b0e602e5e7f06e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74821775"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893825"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>가용성 그룹 수신기 속성 보기(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 *에서* 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)] Always On 가용성 그룹 수신기 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 속성을 보는 방법에 대해 설명합니다.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  

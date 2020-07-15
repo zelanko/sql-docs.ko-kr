@@ -1,5 +1,6 @@
 ---
 title: SQL Server에 로그인 | Microsoft Docs
+description: SQL Server 인스턴스에 로그인하는 다양한 방법을 알아봅니다. 다양한 환경에서 서버 이름에 사용하는 형식에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 - logging in [SQL Server]
 - logins [SQL Server]
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6b64ac7463e9a1e3ef62d87d5cf9d6096be275cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ec03d8cd7b6e29bf3241b1646ec7c2e92c41b39a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67998009"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789803"
 ---
 # <a name="logging-in-to-sql-server"></a>SQL Server로 로그인
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   그래픽 관리 도구를 사용하거나 명령 프롬프트에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 로그인할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 같은 그래픽 관리 도구를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 인스턴스에 로그인할 때 필요에 따라 서버 이름, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 및 암호를 제공하라는 메시지가 표시됩니다. Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 로그인하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용자의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정을 사용하여 자동으로 로그인합니다. 혼합 모드 인증([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 인증 모드)에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행 중인 상태에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 로그인하도록 선택한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인과 암호를 제공해야 합니다. 가능하면 Windows 인증을 사용하세요.  
@@ -85,7 +86,7 @@ WHERE session_id = @@SPID;
   
 -   [SQL Server 데이터베이스 엔진에 대한 연결 문제를 해결하는 방법](https://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
   
--   [SQL 연결 문제를 해결하는 단계](https://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
+-   [SQL 연결 문제를 해결하는 단계](https://docs.microsoft.com/archive/blogs/sql_protocols/steps-to-troubleshoot-sql-connectivity-issues)  
   
 ## <a name="related-content"></a>관련 내용  
  [인증 모드 선택](../../relational-databases/security/choose-an-authentication-mode.md)  

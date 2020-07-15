@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 엔진 인스턴스(SQL Server) | Microsoft Docs
+description: 데이터베이스 엔진 인스턴스에 대해 알아봅니다. 속성을 구성하고 프로토콜을 사용하는 등 인스턴스에서 수행할 수 있는 작업에 대한 정보를 확인합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2d5f89f5e3aa801386642bfb75470cef15db6e96
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f5364e0120c6bb4cbd9d6f7bbf5dfa021a5591f2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012048"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772597"
 ---
 # <a name="database-engine-instances-sql-server"></a>데이터베이스 엔진 인스턴스(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스는 운영 체제 서비스로 실행되는 **sqlservr.exe** 실행 파일의 복사본입니다. 각 인스턴스는 여러 시스템 데이터베이스와 하나 이상의 사용자 데이터베이스를 관리합니다. 각 컴퓨터에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 여러 인스턴스를 실행할 수 있습니다. 애플리케이션은 인스턴스가 관리하는 데이터베이스에서 작업을 수행하기 위해 인스턴스에 연결합니다.  
   
 ## <a name="instances"></a>인스턴스  

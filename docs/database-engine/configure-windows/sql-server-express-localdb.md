@@ -1,5 +1,6 @@
 ---
 title: SQL Server Express LocalDB | Microsoft Docs
+description: SQL Server Express LocalDB에 대해 알아봅니다. 개발자는 Transact-SQL 코드 작성과 테스트에 이 경량 데이터베이스 엔진을 사용할 수 있습니다.
 ms.custom: ''
 ms.date: 04/17/2019
 ms.prod: sql
@@ -14,18 +15,18 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 6f954ae7a2b2316acd70450db4f986b80b6ef73d
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 51bc81253c63834e2fa9b4238ef9bf62f19f1ce9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528267"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771783"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Microsoft SQL Server Express LocalDB는 개발자를 대상으로 하는 [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-version-15.md) 기능입니다. SQL Server Express with Advanced Services에서 사용할 수 있습니다.
 
@@ -52,7 +53,7 @@ LocalDB는 SQL Server Express 설치 중에 선택하는 기능이며, 미디어
 
 ## <a name="description"></a>Description
 
-LocalDB 설치 프로그램은 `SqlLocalDB.msi` 프로그램을 사용하여 컴퓨터에 필요한 파일을 설치합니다. 설치가 끝나면 LocalDB는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 만들고 열 수 있는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 인스턴스가 됩니다. 데이터베이스의 시스템 데이터베이스 파일은 로컬 AppData 경로에 저장되는데, 이 경로는 일반적으로 숨겨져 있습니다. `C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\`)을 입력합니다. 사용자 데이터베이스 파일은 일반적으로 `C:\Users\<user>\Documents\` 폴더와 같은 사용자가 지정하는 위치에 저장됩니다.
+LocalDB 설치 프로그램은 `SqlLocalDB.msi` 프로그램을 사용하여 컴퓨터에 필요한 파일을 설치합니다. 설치가 끝나면 LocalDB는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 만들고 열 수 있는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 인스턴스가 됩니다. 데이터베이스의 시스템 데이터베이스 파일은 로컬 AppData 경로에 저장되는데, 이 경로는 일반적으로 숨겨져 있습니다. 예들 들어 `C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\`입니다. 사용자 데이터베이스 파일은 일반적으로 `C:\Users\<user>\Documents\` 폴더와 같은 사용자가 지정하는 위치에 저장됩니다.
 
 애플리케이션에 LocalDB를 포함하는 방법에 대한 자세한 내용은 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [로컬 데이터 개요](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110)), [Visual Studio에서 데이터베이스 만들기 및 테이블 추가](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)를 참조하세요.
 
@@ -117,13 +118,13 @@ REM Gather information about the instance of LocalDB
 
 |||
 |-|-|
-|속성|`LocalDBApp1`|
-|버전|\<현재 버전>|
+|Name|`LocalDBApp1`|
+|버전|\<Current Version>|
 |공유 이름|""|
-|소유자|"\<Windows 사용자>"|
+|소유자|"\<Your Windows User>"|
 |자동 만들기|예|
 |시스템 상태|실행 중|
-|마지막 시작 시간|\<날짜 및 시간>|
+|마지막 시작 시간|\<Date and Time>|
 |인스턴스 파이프 이름|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|
 
 >[!NOTE]

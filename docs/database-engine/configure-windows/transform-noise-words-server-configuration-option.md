@@ -1,5 +1,6 @@
 ---
 title: transform noise words 서버 구성 옵션 | Microsoft Docs
+description: "\"transform noise words\" 옵션에 대해 알아봅니다. 의미 없는 단어(중지 단어)를 포함하는 일부 SQL Server 전체 텍스트 쿼리에서 이 옵션이 유용한 이유를 확인합니다."
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - full-text search [SQL Server], stopwords
 - stopwords [full-text search]
 ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: df23777c7e9ec22b629133c98da27c8a23ab6ccb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 401637b4c23ddbcd2918f4d0d3cf5ff224bea8cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68038825"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763972"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>transform noise words 서버 구성 옵션
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   의미 없는 단어, 즉 **중지 단어** 로 인해 전체 텍스트 쿼리의 부울 연산에서 행이 반환되지 않을 경우 오류 메시지가 표시되지 않도록 하려면 [transform noise words](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)서버 구성 옵션을 사용합니다. 이 옵션은 부울 연산 또는 NEAR 연산에 의미 없는 단어가 들어 있는 CONTAINS 조건자를 사용하는 전체 텍스트 쿼리에 유용합니다. 다음 표에서는 이 옵션에 사용할 수 있는 값을 설명합니다.  
   

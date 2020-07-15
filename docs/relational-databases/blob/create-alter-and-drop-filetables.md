@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bb0dd2a0196fbc832b0d0afeb0f02889ac1369a4
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: c0df880a36a0822c3c397be4f2ed9aa14d47c2bc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000197"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768014"
 ---
 # <a name="create-alter-and-drop-filetables"></a>FileTable 만들기, 변경 및 삭제
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   새 FileTable을 만들거나 기존 FileTable을 변경 또는 삭제하는 방법에 대해 설명합니다.  
   
 ##  <a name="creating-a-filetable"></a><a name="BasicsCreate"></a> FileTable 만들기  
@@ -176,7 +176,7 @@ GO
 |CHECK 제약 조건|시스템 정의 CHECK 제약 조건이 다음 요구 사항을 적용합니다.<br /><br /> 유효한 파일 이름<br /><br /> 유효한 파일 특성<br /><br /> 부모 개체는 디렉터리여야 합니다.<br /><br /> 파일 조작 중에는 네임스페이스 계층 구조가 잠깁니다.|  
   
  **시스템 정의 제약 조건에 대한 명명 규칙**  
- 위에서 설명한 시스템 정의 제약 조건은 **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** 형식입니다. 여기서 각 항목은 다음을 나타냅니다.  
+ 위에서 설명한 시스템 정의 제약 조건은 **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** 형식으로 명명되며 여기서  
   
 -   *<constraint_type>* 은 CK(확인 제약 조건), DF(기본 제약 조건), FK(외래 키), PK(기본 키) 또는 UQ(고유 제약 조건)입니다.  
   

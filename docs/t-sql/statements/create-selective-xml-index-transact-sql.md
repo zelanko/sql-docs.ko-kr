@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7eb8bb64e79fbd575e3b470c8e5312e58c0544ac
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 81bfeb64f7acded533c78d5937160dacb86af652
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633910"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767033"
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   지정한 테이블 및 XML 열에 새 선택적 XML 인덱스를 만듭니다. 선택적 XML 인덱스는 자주 쿼리하는 노드의 하위 집합만 인덱싱하여 XML 인덱싱 및 쿼리의 성능을 향상시킵니다. 또한 보조 선택적 XML 인덱스를 만들 수도 있습니다. 자세한 내용은 [보조 선택적 XML 인덱스 만들기, 변경 및 삭제](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)를 참조하세요.  
   
@@ -132,7 +132,7 @@ identifier
 ### <a name="permissions"></a>사용 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 선택적 XML 인덱스를 만드는 구문을 보여 줍니다. 또한 이 예에서는 선택적 최적화 힌트를 사용하여 인덱싱할 경로를 설명하는 구문의 여러 변형도 보여 줍니다.  
   
 ```  

@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 백업 태스크(유지 관리 계획) | Microsoft 문서
+description: 데이터베이스 백업 태스크를 사용하여 SQL Server에서 유지 관리 계획에 백업 태스크를 추가하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 60183a9777098728ee258274a19aca4d65885b87
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f1a233cdd69f069ae425de644dfe8b6d1475dd86
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115832"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774401"
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>유지 관리 계획을 위한 데이터베이스 백업 태스크의 옵션
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **데이터베이스 백업 태스크** 대화 상자를 사용하여 유지 관리 계획에 백업 작업을 추가할 수 있습니다. 데이터베이스 백업은 시스템이나 하드웨어 상의 장애 또는 사용자의 오류로 인해 데이터베이스가 손상되어 백업 복사본을 복원해야 하는 경우를 대비하기 위한 중요한 작업입니다. 이 태스크를 통해 전체 백업, 차등 백업, 파일 및 파일 그룹 백업, 트랜잭션 로그 백업을 수행할 수 있습니다.  
   
  **데이터베이스 백업 태스크를 만들려면**  
@@ -38,7 +39,7 @@ ms.locfileid: "68115832"
  이 태스크를 수행할 때 사용할 새 서버 연결을 만듭니다. 아래에서는 **새 연결** 대화 상자에 대해 설명합니다.  
   
  **데이터베이스**  
- 이 태스크의 영향을 받는 데이터베이스를 지정합니다. 이 옵션을 선택하면 **모든 데이터베이스**, **모든 시스템 데이터베이스**, **모든 사용자 데이터베이스**, **다음 데이터베이스**옵션을 제공하는 드롭다운 목록이 표시됩니다.  
+ 이 태스크의 영향을 받는 데이터베이스를 지정합니다. 이 옵션을 선택하면 **모든 데이터베이스**, **모든 시스템 데이터베이스**, **모든 사용자 데이터베이스**, **다음 데이터베이스** 옵션을 제공하는 드롭다운 목록이 표시됩니다.  
   
  **모든 데이터베이스**  
  모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대해 유지 관리 태스크를 실행하는 유지 관리 계획을 생성합니다.  
@@ -126,7 +127,7 @@ ms.locfileid: "68115832"
  Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
   
  **특정 사용자 이름 및 암호 사용**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
   
  **사용자 이름**  
  인증 시 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 입력합니다. 이 옵션은 사용할 수 없습니다.  

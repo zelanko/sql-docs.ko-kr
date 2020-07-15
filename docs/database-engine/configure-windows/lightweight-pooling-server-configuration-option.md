@@ -1,5 +1,6 @@
 ---
 title: lightweight pooling 서버 구성 옵션 | Microsoft Docs
+description: "\"lightweight pooling\" 옵션에 대해 알아봅니다. 과도한 컨텍스트 전환을 사용하는 대칭적 다중 관리 환경에서 이 옵션을 사용하면 처리량이 개선되는 이유를 확인합니다."
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 - reducing overhead
 - overhead [SQL Server]
 ms.assetid: 2dc11b61-d065-4126-8e00-acf40390f9fb
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5d18b51a3868534089c88dc1c951148711e0d0c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 13efd00252dac50756a243475816a5a2e4119110
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67998040"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772433"
 ---
 # <a name="lightweight-pooling-server-configuration-option"></a>경량 풀링 서버 구성 옵션
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **경량 풀링** 옵션을 사용하여 SMP(대칭적 다중 처리) 환경에서 가끔 발생하는 과도한 컨텍스트 전환과 관련된 시스템 오버헤드를 줄이는 방법을 제공할 수 있습니다. 과도한 컨텍스트 전환이 일어나면 lightweight pooling이 컨텍스트 전환을 인라인으로 수행하여 사용자/커널 링 전환을 줄임으로써 처리량을 향상시킬 수 있습니다.  
   

@@ -1,5 +1,6 @@
 ---
 title: 클러스터형 인덱스의 크기 예측 | Microsoft 문서
+description: 이 절차를 사용하여 SQL Server에서 클러스터형 인덱스에 데이터를 저장하는 데 필요한 공간의 크기를 예측할 수 있습니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -23,16 +24,16 @@ ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8c785e98a06e31448c22422f85f3be34efcffa6f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 986996ff2ec54ce6a7e43924fb94ede81593c212
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68051114"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756151"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>클러스터형 인덱스의 크기 예측
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   다음 단계를 사용하여 클러스터형 인덱스에 데이터를 저장하는 데 필요한 공간을 예측할 수 있습니다.  
   

@@ -1,5 +1,6 @@
 ---
 title: 복제 보안을 위한 최선의 구현 방법 | Microsoft 문서
+description: 다양한 환경에서 SQL Server에서의 복제 연결의 보안을 유지하는 최선의 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2c5e66e7ff2b36cd63acb4d05b6503f0bbc33a4a
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: f2b45cde8e2ab16e97e17a72a51cd147203c2e51
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528747"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893779"
 ---
 # <a name="replication-security-best-practices"></a>복제 보안을 위한 최선의 구현 방법
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   단일 도메인의 인트라넷에서부터 트러스트되지 않은 도메인 간이나 인터넷을 통해 데이터에 액세스하는 애플리케이션에 이르기까지의 분산 환경에서 복제는 데이터를 이동합니다. 따라서 이러한 다양한 환경에서 복제 연결의 보안을 유지하는 최선의 방법을 이해하는 것이 중요합니다.  
   
  다음 정보는 모든 환경에서의 복제와 관련이 있습니다.  

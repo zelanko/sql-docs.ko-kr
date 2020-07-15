@@ -1,6 +1,6 @@
 ---
 title: 데이터베이스 미러링 및 데이터베이스 스냅샷
-description: 데이터베이스 미러링과 함께 데이터베이스 스냅샷을 사용하는 경우의 상호 운용성을 알아봅니다.
+description: 데이터베이스 미러링과 함께 데이터베이스 스냅샷을 사용하여 SQL Server에서 보고를 오프로드하는 경우의 상호 운용성을 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a184bdf227b412ea5464c86058d33903fa7d8d7a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b0a3e349633184bf838f2d9dc599d8355db6b100
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258807"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789714"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>데이터베이스 미러링 및 데이터베이스 스냅샷(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   가용성 목적으로 유지 관리 중인 미러 데이터베이스를 활용하여 보고 작업을 오프로드할 수 있습니다. 미러 데이터베이스를 보고 용도로 사용하려면 미러 데이터베이스에서 데이터베이스 스냅샷을 만들고 클라이언트 연결 요청을 가장 최근의 스냅샷으로 지정할 수 있습니다. 데이터베이스 스냅샷은 스냅샷이 만들어진 시점에 존재하던 원본 데이터베이스의 정적, 읽기 전용, 트랜잭션 일치 스냅샷입니다. 미러 데이터베이스에서 데이터베이스 스냅샷을 만들려면 데이터베이스가 동기화된 미러링 상태여야 합니다.  
   
  미러 데이터베이스와 달리 데이터베이스 스냅샷은 클라이언트에서 액세스할 수 있습니다. 미러 서버가 주 서버와 통신하고 있는 한, 보고 클라이언트를 스냅샷에 연결하도록 지시할 수 있습니다. 데이터베이스 스냅샷은 정적이기 때문에 새로운 데이터를 사용할 수 없습니다. 사용자가 비교적 최근 데이터를 사용하려면 정기적으로 새 데이터베이스 스냅샷을 만들고 애플리케이션에서 들어오는 클라이언트 연결을 최신 스냅샷으로 지정하도록 해야 합니다.  

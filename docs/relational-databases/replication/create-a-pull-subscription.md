@@ -1,5 +1,6 @@
 ---
 title: 끌어오기 구독 만들기 | Microsoft 문서
+description: SQL Server Management Studio, Transact-SQL 또는 복제 관리 개체를 사용하여 SQL Server에서 끌어오기 구독을 만드는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ab4bb319460e3666c638b40a63b5676b81048dd1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f2cf1f98203b89e25fa3b6c5d165c40798163df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284865"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773931"
 ---
 # <a name="create-a-pull-subscription"></a>끌어오기 구독 만들기
 
@@ -33,7 +34,7 @@ No article in 2016+ should ever have the moniker 'sql-server-2014' on its metada
 Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation deserves further investigation.
 -->
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 끌어오기 구독을 만드는 방법에 대해 설명합니다.  
   
  P2P 복제에 대한 끌어오기 구독 설정은 스크립트를 통해서는 가능하지만 마법사를 통해서는 사용할 수 없습니다.  
@@ -81,7 +82,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
 3.  **로컬 구독** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 구독**을 클릭합니다.  
   
-4.  새 구독 마법사의 **게시** 페이지에 있는 **게시자** 드롭다운 목록에서 **\<SQL Server 게시자 찾기>** 또는 **\<Oracle 게시자 찾기>** 를 선택합니다.  
+4.  새 구독 마법사의 **게시** 페이지에 있는 **게시자** 드롭다운 목록에서 **\<Find SQL Server Publisher>** 또는 **\<Find Oracle Publisher>** 를 선택합니다.  
   
 5.  **서버에 연결** 대화 상자에서 게시자에 연결합니다.  
   

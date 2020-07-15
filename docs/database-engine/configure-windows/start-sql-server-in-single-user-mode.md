@@ -1,5 +1,6 @@
 ---
 title: 단일 사용자 모드로 SQL Server 시작 | Microsoft Docs
+description: SQL Server의 단일 사용자 모드에 대해 알아봅니다. 이 모드가 유용한 경우와 이 모드에서 시작 옵션 "-m"을 사용하여 SQL Server 인스턴스를 시작하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 09/20/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - starting SQL Server, single-user mode
 - single-user mode [SQL Server]
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 1cb488b6ce3dc21567b4f64738f9c26910c61f17
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 31b0075dfa6b3f4fa380e8b43054d0c98ebd8d81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68037159"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764006"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>단일 사용자 모드로 SQL Server 시작
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   특정 상황에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 옵션 -m **을 사용하여**의 인스턴스를 단일 사용자 모드로 시작해야 합니다. 예를 들어 서버 구성 옵션을 변경하거나 손상된 master 데이터베이스 또는 다른 시스템 데이터베이스를 복구하려고 할 수도 있습니다. 두 가지 동작 모두 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 단일 사용자 모드로 시작해야 합니다.  
   
  단일 사용자 모드로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작하면 컴퓨터에서 로컬 Administrators 그룹의 모든 멤버가 sysadmin 고정 서버 역할의 멤버로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있습니다. 자세한 내용은 [시스템 관리자가 잠겨 있는 경우 SQL Server에 연결](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)을 참조하세요.  
@@ -61,7 +62,7 @@ ms.locfileid: "68037159"
   
 4.  클러스터 관리자 또는 장애 조치(failover) 클러스터 관리 콘솔에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스가 여전히 오프라인 상태인지 확인합니다.  
   
-5.  이제 SQLCMD -E -S\<servername> 명령을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하고 필요한 작업을 수행합니다.  
+5.  이제 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결합니다. SQLCMD -E -S\<servername>.  
   
 6.  작업이 완료되면 명령 프롬프트를 닫고 클러스터 관리자를 통해 SQL 및 기타 리소스를 다시 온라인 상태로 만듭니다.  
   

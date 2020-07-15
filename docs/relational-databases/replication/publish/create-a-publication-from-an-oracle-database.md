@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8b43b3b2f67554a59388ccd6a50485e4c71d9e1a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cdb8847a7aaf7aaa9b21a64ed6736738da6df9dc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908594"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882207"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Oracle 데이터베이스에서 게시 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]의 Oracle 데이터베이스에서 구독을 만드는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -45,7 +45,7 @@ ms.locfileid: "72908594"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  새 게시 마법사를 사용하여 Oracle 데이터베이스에서 스냅샷 또는 트랜잭션 게시를 만듭니다.  
   
- 처음으로 Oracle 데이터베이스에서 게시를 만들 때는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에서 Oracle 게시자를 식별해야 합니다. 같은 데이터베이스의 후속 게시에 대해서는 이 작업을 수행할 필요가 없습니다. 새 게시 마법사나 **배포자 속성 - \<배포자>** 대화 상자에서 Oracle 게시자를 식별할 수 있습니다. 이 항목에서는 **배포자 속성 - \<배포자>** 대화 상자를 보여 줍니다.  
+ 처음으로 Oracle 데이터베이스에서 게시를 만들 때는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에서 Oracle 게시자를 식별해야 합니다. 같은 데이터베이스의 후속 게시에 대해서는 이 작업을 수행할 필요가 없습니다. 새 게시 마법사 또는 **배포자 속성 - \<Distributor>** 대화 상자에서 Oracle 게시자를 식별할 수 있습니다. 이 항목에서는 **배포자 속성 - \<Distributor>** 대화 상자를 보여 줍니다.  
   
 #### <a name="to-identify-the-oracle-publisher-at-the-sql-server-distributor"></a>SQL Server 배포자에서 Oracle 게시자를 식별하려면  
   
@@ -53,7 +53,7 @@ ms.locfileid: "72908594"
   
 2.  **복제** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **배포자 속성**을 클릭합니다.  
   
-3.  **배포자 속성 - \<배포자>** 대화 상자의 **게시자** 페이지에서 **추가**를 클릭하고 **Oracle 게시자 추가**를 클릭합니다.  
+3.  **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 **추가**를 클릭하고 **Oracle 게시자 추가**를 클릭합니다.  
   
 4.  **서버에 연결** 대화 상자에서 **옵션** 단추를 클릭합니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "72908594"
   
      **전체** 옵션은 Oracle 게시에 대해 지원되는 완전한 기능 집합을 스냅샷 및 트랜잭션 게시에 제공하도록 디자인되었습니다. **게이트웨이** 옵션은 복제가 시스템 간의 게이트웨이로 사용되는 경우 성능을 향상시킬 수 있도록 특정 디자인 최적화를 제공합니다. 동일한 테이블을 여러 트랜잭션 게시에 게시하려는 경우에는 **게이트웨이** 옵션을 사용할 수 없습니다. **게이트웨이**를 선택하면 트랜잭션 게시의 경우 특정 테이블이 한 번만 나타날 수 있지만 스냅샷 게시의 경우에는 이러한 제한이 없습니다.  
   
-7.  **연결**을 클릭하면 Oracle 게시자에 연결되고 이 게시자가 복제용으로 구성됩니다. **서버에 연결** 대화 상자가 닫히고 **배포자 속성 - \<배포자>** 대화 상자로 돌아갑니다.  
+7.  **연결**을 클릭하면 Oracle 게시자에 연결되고 이 게시자가 복제용으로 구성됩니다. **서버에 연결** 대화 상자가 닫히고 **배포자 속성 - \<Distributor>** 대화 상자로 돌아갑니다.  
   
     > [!NOTE]  
     >  네트워크 구성에 문제가 있는 경우 이 시점에 오류가 표시됩니다. Oracle 데이터베이스 연결에 문제가 있으면 [Troubleshooting Oracle Publishers](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)의 "SQL Server 배포자가 Oracle 데이터베이스 인스턴스에 연결할 수 없습니다" 섹션을 참조하세요.  

@@ -1,5 +1,6 @@
 ---
 title: 포함된 데이터베이스의 보안 모범 사례 | Microsoft 문서
+description: SQL Server의 USER WITH PASSWORD 인증 프로세스 관련 항목을 비롯한 포함된 데이터베이스에 대한 고유한 위협을 이해하고 완화합니다.
 ms.custom: ''
 ms.date: 03/14/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: jaszymas
-ms.openlocfilehash: 4d7b428534462779abeb72c65b05f551bfd4b0eb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 20b864e61050b4bd49582d5579f222091e8c7329
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75246132"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759003"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>포함된 데이터베이스의 보안 모범 사례
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   포함된 데이터베이스에는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 관리자가 이해하고 완화해야 하는 고유한 위협 요소가 있습니다. 대부분의 위협 요소는 **수준에서 데이터베이스 수준으로 인증 경계를 이동하는** USER WITH PASSWORD [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인증 프로세스와 관련되어 있습니다.  
   

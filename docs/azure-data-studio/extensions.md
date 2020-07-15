@@ -1,28 +1,26 @@
 ---
 title: 확장 추가
-titleSuffix: Azure Data Studio
 description: 확장 Marketplace에서 Azure Data Studio로 확장 추가
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 10/03/2019
-ms.openlocfilehash: 6f0a2ab021873a2a9414bfbcdb7aed63c2d31056
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e74d0dd7b904cba5b332eb20163c96237ac6d6e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72166725"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774623"
 ---
-# <a name="extend-the-functionality-of-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]의 기능 확장
+# <a name="extend-the-functionality-of-azure-data-studio"></a>Azure Data Studio의 기능 확장
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]의 확장을 사용하면 기본 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 설치에 더 많은 기능을 쉽게 추가할 수 있습니다. 
+Azure Data Studio의 확장을 사용하면 기본 Azure Data Studio 설치에 다른 기능을 쉽게 추가할 수 있습니다.
 
 확장은 Azure Data Studio 팀(Microsoft) 및 타사 커뮤니티(사용자)가 제공합니다. 확장을 만드는 방법에 대한 자세한 내용은 [확장 작성](extension-authoring.md)을 참조하세요.
-
 
 ## <a name="add-azure-data-studio-extensions"></a>Azure Data Studio 확장 추가
 

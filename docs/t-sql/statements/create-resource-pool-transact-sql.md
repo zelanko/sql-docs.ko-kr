@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d2c0278199684db2355d76c624ed6349e8aefda
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b043443f84ceb3b98484f88f4384c9e8e0a10442
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633963"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892527"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 리소스 관리자 리소스 풀을 만듭니다. 리소스 풀은 데이터베이스 엔진 인스턴스의 물리적 리소스(메모리, CPU 및 IO)의 하위 집합을 나타냅니다. 데이터베이스 관리자는 리소스 관리자를 사용하여 서버 리소스를 최대 64개의 리소스 풀에 배치할 수 있습니다. 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서는 리소스 관리자를 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
@@ -81,7 +81,7 @@ AFFINITY {SCHEDULER = AUTO | ( \<scheduler_range_spec> ) | NUMANODE = (\<NUMA_no
   
 리소스 풀을 특정 스케줄러에 연결합니다. 기본값은 AUTO입니다.  
   
-AFFINITY SCHEDULER = **(** \<scheduler_range_spec> **)** 은 리소스 풀을 지정된 ID로 확인된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 일정에 매핑합니다. 이러한 ID는 [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)의 scheduler_id 열에 있는 값에 매핑됩니다. 
+AFFINITY SCHEDULER = **(** \<scheduler_range_spec> **)** 은 지정된 ID로 식별된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 일정에 리소스 풀을 매핑합니다. 이러한 ID는 [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)의 scheduler_id 열에 있는 값에 매핑됩니다. 
   
 AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** 을 사용하면 리소스 풀의 선호도가 지정된 NUMA 노드 또는 노드 범위에 해당하는 물리적 CPU에 매핑되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스케줄러로 설정됩니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 사용하여 물리적 NUMA 구성과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스케줄러 ID 간의 매핑을 검색할 수 있습니다. 
   
@@ -123,7 +123,7 @@ MAX_IOPS_PER_VOLUME =*value*
 ## <a name="permissions"></a>사용 권한  
 `CONTROL SERVER` 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 ### <a name="1-shows-how-to-create-a-resource-pool"></a>1. 리소스 풀을 만드는 방법을 보여 줍니다.
 
 다음 예에서는 "bigPool"이라는 리소스 풀을 만들었습니다. 이 풀은 기본 리소스 관리자 설정을 사용합니다.  

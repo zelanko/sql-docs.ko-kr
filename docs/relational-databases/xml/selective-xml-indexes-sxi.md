@@ -1,5 +1,6 @@
 ---
 title: SXI(선택적 XML 인덱스) | Microsoft 문서
+description: SXI(선택적 XML 인덱스)를 사용하여 쿼리 성능을 개선하고, 빠른 인덱싱을 지원하고, XML 인덱스의 스토리지 비용을 줄이는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 548bb347bb71c9819f8a36213ce896aec92e3b50
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1330b409b40bfeea9b265d93e6f6b55cc1b674da
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665062"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757498"
 ---
 # <a name="selective-xml-indexes-sxi"></a>SXI(선택적 XML 인덱스)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   선택적 XML 인덱스는 일반 XML 인덱스 외에 추가로 제공되는 또 다른 유형의 XML 인덱스입니다. 선택적 XML 인덱스 기능의 목적은 다음과 같습니다  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 XML 데이터에 대한 쿼리 성능을 향상시킵니다.  
@@ -120,7 +121,7 @@ FOR
   
 -   base64Binary 및 hexBinary와 같은 이진 XS 유형이 있는 노드의 인덱싱  
   
--   끝에 `*` 와일드카드 문자가 포함된 XPath 식을 사용하여 인덱싱할 노드 지정. 예를 들면 다음과 같습니다.  `/a/b/c/*`, `/a//b/*`또는 `/a/b/*:c`  
+-   끝에 `*` 와일드카드 문자가 포함된 XPath 식을 사용하여 인덱싱할 노드 지정. 예: `/a/b/c/*`, `/a//b/*` 또는 `/a/b/*:c`.  
   
 -   자식, 특성 또는 하위 항목 이외의 모든 축 인덱싱. `//<step>` 은 특별한 경우로 허용됩니다.  
   

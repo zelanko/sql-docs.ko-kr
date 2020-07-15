@@ -1,5 +1,6 @@
 ---
 title: SQL Server PowerShell 설치 | Microsoft Docs
+description: 이 문서에서는 PowerShell 지원이 필요한 SQL Server 기능을 선택할 경우 설치 프로그램에서 설치하는 SQL Server PowerShell 구성 요소에 대해 설명합니다.
 ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f445d1b28c7f76274a2a64e813805f820d005aa6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ad18b9f946bbf7fb8817f84a2bb06274edc8753
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74200478"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883535"
 ---
 # <a name="install-sql-server-powershell"></a>SQL Server PowerShell 설치
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 PowerShell 구성 요소를 자동으로 구성합니다.  
 

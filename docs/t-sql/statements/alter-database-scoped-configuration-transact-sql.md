@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: 5c43d6da25aa93b146346ff45057edba9445ebab
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a37a0b4c0f474323680213d3719ae85cff7a5ecc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629177"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895686"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 
@@ -37,7 +37,7 @@ ms.locfileid: "81629177"
 
 이 명령은 **개별 데이터베이스** 수준에서 여러 데이터베이스 구성 설정을 사용하도록 설정합니다. 
 
-다음 설정은 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터)에서 지원됩니다. 
+다음 설정은 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원됩니다([인수](#arguments) 섹션의 각 설정에 대한 **적용 대상** 줄로 표시됨). 
 
 - 프로시저 캐시를 지웁니다.
 - 주 데이터베이스의 경우 MAXDOP 매개 변수를 해당 데이터베이스에 가장 적합한 임의 값(1,2, ...)으로 설정하고 사용되는 보조 데이터베이스(예: 보고 쿼리용)에는 다른 값(예: 0)을 설정합니다.
@@ -56,6 +56,7 @@ ms.locfileid: "81629177"
 - 새 `String or binary data would be truncated` 오류 메시지를 활성화하거나 비활성화합니다.
 - [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)에서 마지막 실제 실행 계획의 수집을 활성화하거나 비활성화합니다.
 - 일시 중지된 다시 시작 가능 인덱스 작업이 SQL Server 엔진에서 자동으로 중단되기 전에 일시 중지되는 시간(분)을 지정합니다.
+- 비동기 통계 업데이트를 위한 낮은 우선 순위 잠금 대기를 사용하거나 사용하지 않도록 설정
 
 이 설정은 Azure Synapse Analytics(이전의 SQL DW)에서만 사용할 수 있습니다.
 - 사용자 데이터베이스의 호환성 수준 설정
@@ -101,6 +102,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
     | PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time>
     | ISOLATE_SECURITY_POLICY_CARDINALITY  = { ON | OFF }
+    | ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY = { ON | OFF }
 }
 ```
 
@@ -110,8 +112,8 @@ ALTER DATABASE SCOPED CONFIGURATION
 > -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK`가 `BATCH_MODE_MEMORY_GRANT_FEEDBACK`로 변경됨
 > -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS`가 `BATCH_MODE_ADAPTIVE_JOINS`로 변경됨
 
-```syntaxsql
--- Synatx for Azure Synapse Analytics (Formerly SQL DW)
+```SQL
+-- Syntax for Azure Synapse Analytics (Formerly SQL DW)
 
 ALTER DATABASE SCOPED CONFIGURATION
 {
@@ -121,7 +123,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 
 < set_options > ::=
 {
-    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 } -- Preview 
+    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 } 
 }
 ```
 
@@ -397,7 +399,7 @@ ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 
 RLS([행 수준 보안](../../relational-databases/security/row-level-security.md)) 조건자가 전체 사용자 쿼리 실행 계획의 카디널리티에 영향을 주는지 아닌지를 제어할 수 있습니다. ISOLATE_SECURITY_POLICY_CARDINALITY가 ON이면 RLS 조건자는 실행 계획의 카디널리티에 영향을 주지 않습니다. 예를 들어 쿼리를 실행하는 특정 사용자에 대해 결과를 10개 행으로 제한하는 RLS 조건자와 100만 개의 행이 포함된 테이블이 있다고 가정합니다. 이 데이터베이스 범위 구성을 OFF로 설정할 경우 이 조건자의 예상 카디널리티는 10이 됩니다. 이 데이터베이스 범위 구성이 ON이면 쿼리 최적화는 100만 개의 행을 추정합니다. 대부분의 워크로드에는 기본값을 사용하는 것이 좋습니다.
 
-DW_COMPATIBILITY_LEVEL (Preview) **=** {**AUTO** | 10 | 20 }
+DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
 
 **적용 대상**: Azure Synapse Analytics만(이전의 SQL DW)
 
@@ -405,13 +407,19 @@ DW_COMPATIBILITY_LEVEL (Preview) **=** {**AUTO** | 10 | 20 }
 
 |호환성 수준    |   주석|  
 |-----------------------|--------------|
-|**AUTO**| 기본값  해당 값은 지원되는 최신 호환성 수준과 같습니다.|
+|**AUTO**| 기본값  해당 값은 Synapse Analytics 엔진에 의해 자동으로 업데이트됩니다.  현재 값은 20입니다.|
 |**10**| 호환성 수준 지원이 도입되기 전의 Transact-SQL 및 쿼리 처리 동작을 실행합니다.|
 |**20**| 제어된 Transact-SQL 및 쿼리 처리 동작을 포함하는 첫 번째 호환성 수준입니다. |
 
+ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF**}
+
+**적용 대상**: Azure SQL Database만(공개 미리 보기로 제공되는 기능)
+
+비동기 통계 업데이트를 사용하는 경우 이 구성을 사용하도록 설정하면 백그라운드 통계 업데이트 요청이 낮은 우선 순위의 큐에 대한 Sch-M 잠금을 대기하여 높은 동시성 시나리오에서 다른 세션을 차단하지 않도록 합니다. 자세한 내용은 [AUTO_UPDATE_STATISTICS_ASYNC](../../relational-databases/statistics/statistics.md#auto_update_statistics_async)를 참조하세요.
+
 ## <a name="permissions"></a><a name="Permissions"></a> 권한
 
-데이터베이스에 `ALTER ANY DATABASE SCOPE CONFIGURATION`이 필요합니다. 이 사용 권한은 데이터베이스에서 CONTROL 권한이 있는 사용자에 의해 부여될 수 있습니다.
+데이터베이스에 `ALTER ANY DATABASE SCOPED CONFIGURATION`이 필요합니다. 이 사용 권한은 데이터베이스에서 CONTROL 권한이 있는 사용자에 의해 부여될 수 있습니다.
 
 ## <a name="general-remarks"></a>일반적인 주의 사항
 
@@ -419,7 +427,7 @@ DW_COMPATIBILITY_LEVEL (Preview) **=** {**AUTO** | 10 | 20 }
 
 이 명령문을 실행하면 현재 데이터베이스에서 프로시저 캐시를 지웁니다. 즉, 모든 쿼리를 다시 컴파일해야 합니다.
 
-3부분으로 된 이름 쿼리의 경우 현재 데이터베이스 컨텍스트에서 컴파일되는 SQL 모듈(예: 프로시저, 함수, 트리거)이 아닌 쿼리의 현재 데이터베이스 연결에 대한 설정이 적용되므로 존재하는 데이터베이스의 옵션을 사용합니다.
+3부분으로 된 이름 쿼리의 경우 다른 데이터베이스 컨텍스트에서 컴파일되는 SQL 모듈(예: 프로시저, 함수, 트리거)이 아닌 쿼리의 현재 데이터베이스 연결에 대한 설정이 적용되므로 존재하는 데이터베이스의 옵션을 사용합니다. 마찬가지로 통계를 비동기적으로 업데이트할 때 통계가 있는 데이터베이스에 대한 ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY 설정이 적용됩니다.
 
 `ALTER_DATABASE_SCOPED_CONFIGURATION` 이벤트는 DDL 트리거를 시작하는 데 사용할 수 있는 DDL 이벤트로 추가되며 `ALTER_DATABASE_EVENTS` 트리거 그룹의 자식입니다.
 
@@ -470,7 +478,7 @@ DW_COMPATIBILITY_LEVEL (Preview) **=** {**AUTO** | 10 | 20 }
 
 [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 시스템 뷰는 데이터베이스 내에서 범위 구성에 대한 정보를 제공합니다. 데이터베이스 범위 구성 옵션은 서버 차원의 기본 설정으로 재정의되면 sys.database_scoped_configurations에 나타납니다. [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 시스템 뷰는 서버 차원의 설정을 표시합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 이 예제에서는 ALTER DATABASE SCOPED CONFIGURATION의 사용을 보여 줍니다.
 

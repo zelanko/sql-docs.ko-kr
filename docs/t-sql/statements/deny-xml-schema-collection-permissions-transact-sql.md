@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 159969a7-8313-41bc-bb19-c55af76597e6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6cb1bdea194ffa898ec3aa75f0d8380e13e6f28b
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 79651726714c3dd861a46f88688be6bbd5726a1e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631043"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766585"
 ---
 # <a name="deny-xml-schema-collection-permissions-transact-sql"></a>DENY XML 스키마 컬렉션 사용 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   XML 스키마 컬렉션에 대한 사용 권한을 거부합니다.  
   
@@ -112,7 +112,7 @@ DENY permission  [ ,...n ] ON
 ## <a name="permissions"></a>사용 권한  
  XML 스키마 컬렉션에 대한 CONTROL이 필요합니다. AS 옵션을 사용하는 경우 지정한 보안 주체가 XML 스키마 컬렉션을 소유해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 사용자 `EXECUTE`에 대해 XML 스키마 컬렉션 `Invoices4`에 대한 `Wanida` 권한을 거부합니다. XML 스키마 컬렉션 `Invoices4`는 `Sales` 데이터베이스의 `AdventureWorks2012` 스키마에 위치합니다.  
   
 ```  

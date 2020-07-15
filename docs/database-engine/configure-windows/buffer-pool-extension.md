@@ -1,5 +1,6 @@
 ---
 title: 버퍼 풀 확장 | Microsoft Docs
+description: 버퍼 풀 확장에 대해 알아보고 향상된 I/O 처리량 등의 이점을 살펴봅니다. 이 기능을 설정할 때 따라야 하는 모범 사례를 확인합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 8083433f2b9e5af63abac4e4fba59d06e42dd86f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 13c6c2a0f4b2b96911a05b0ec9d8fdd2325ffa9b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76918348"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759187"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 도입된 버퍼 풀 확장은 I/O 처리량을 크게 향상하기 위해 비휘발성 RAM(즉, 반도체 드라이브) 확장을 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 버퍼 풀에 원활하게 통합할 수 있는 기능을 제공합니다. 버퍼 풀 확장은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서만 제공됩니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
 ## <a name="benefits-of-the-buffer-pool-extension"></a>버퍼 풀 확장의 이점  
@@ -26,7 +27,7 @@ ms.locfileid: "76918348"
   
  데이터 및 인덱스 페이지는 디스크에서 버퍼 풀로 읽히고 수정된 페이지(더티 페이지라고도 함)는 디스크에 다시 쓰여집니다. 서버 및 데이터베이스 검사점에서 메모리가 부족하면 버퍼 캐시에 있는 핫(활성) 더티 페이지가 캐시에서 제거되고 기계식 디스크에 쓰여진 다음 다시 캐시에서 읽힙니다. 일반적으로 이러한 I/O 작업은 4KB 데이터에서 16KB 데이터 정도의 작은 임의 읽기 및 쓰기입니다. 작은 임의 I/O 패턴은 잦은 검색을 유발하기 때문에 기계식 디스크 충돌 경합이 발생하고, I/O 대기 시간이 증가하며, 시스템의 총 I/O 처리량이 감소합니다.  
   
- 이러한 I/O 병목 상태를 해결하는 일반적인 방법은 DRAM이나 고성능 SAS 스핀들을 추가하는 것입니다. 이러한 방법은 도움이 되지만 중요한 단점이 있습니다. DRAM은 데이터 스토리지 드라이브보다 더 비싸며, 스핀들 추가는 하드웨어 구입 비용을 증가시킵니다. 또한 전력 소비가 많고 구성 요소의 오류 발생 가능성이 높아 운영 비용이 증가합니다.  
+ 이러한 I/O 병목 상태를 해결하는 일반적인 방법은 DRAM이나 고성능 SAS 스핀들을 추가하는 것입니다. 이러한 옵션은 유용하지만 중요한 단점이 있습니다. DRAM은 데이터 스토리지 드라이브보다 더 비싸며, 스핀들 추가는 하드웨어 구입 비용을 증가시킵니다. 또한 전력 소비가 많고 구성 요소의 오류 발생 가능성이 높아 운영 비용이 증가합니다.  
   
  버퍼 풀 확장 기능은 비휘발성 스토리지(일반적으로 SSD)로 버퍼 풀 캐시를 확장합니다. 이 확장 덕분에 버퍼 풀은 더 큰 데이터베이스 작업 집합을 수용할 수 있고, 그에 따라 RAM과 SSD 간의 I/O 페이징이 강제로 수행됩니다. 따라서 작은 임의 I/O가 기계식 디스크에서 SSD로 효과적으로 오프로드됩니다. SSD의 더 낮은 대기 시간과 향상된 임의 I/O 성능 덕분에 버퍼 풀 확장은 I/O 처리량을 크게 향상합니다.  
   

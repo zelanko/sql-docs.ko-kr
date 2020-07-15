@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_207 | Microsoft 문서
+description: 잘못된 열 이름과 관련된 SQL Server의 쿼리 오류입니다. 오류에 대한 설명과 가능한 해결 방법을 확인합니다.
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -11,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: d1ab00c7-0331-437a-84fe-bae53b82feec
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0fa8c6371ba5889cde5afe2c66b036a1ec8c031d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52115e3354d576e6d490e369f307cc119e611aa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68056814"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780567"
 ---
 # <a name="mssqlserver_207"></a>MSSQLSERVER_207
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>세부 정보  
   
-|||  
-|-|-|  
+| attribute | 값 |  
+| :-------- | :---- |  
 |제품 이름|SQL Server|  
 |이벤트 ID|207|  
 |이벤트 원본|MSSQLSERVER|  
@@ -115,7 +116,7 @@ ms.locfileid: "68056814"
     GROUP BY Year;  
     ```  
   
--   MERGE 문의 WHEN NOT MATCHED BY SOURCE 절이 참조하는 값에 액세스할 수 없습니다. WHEN NOT MATCHED BY SOURCE 절의 원본 테이블에서 하나 이상의 행을 반환하도록 MERGE 문을 수정합니다. 예를 들어 이 절에 지정된 검색 조건을 추가하거나 수정해야 할 수 있습니다. 또는 절을 수정하여 원본 테이블을 참조하지 않는 값을 지정할 수 있습니다. `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`)을 입력합니다.  
+-   MERGE 문의 WHEN NOT MATCHED BY SOURCE 절이 참조하는 값에 액세스할 수 없습니다. WHEN NOT MATCHED BY SOURCE 절의 원본 테이블에서 하나 이상의 행을 반환하도록 MERGE 문을 수정합니다. 예를 들어 이 절에 지정된 검색 조건을 추가하거나 수정해야 할 수 있습니다. 또는 절을 수정하여 원본 테이블을 참조하지 않는 값을 지정할 수 있습니다. 예들 들어 `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`입니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [MERGE&#40;Transact-SQL&#41;](~/t-sql/statements/merge-transact-sql.md)  

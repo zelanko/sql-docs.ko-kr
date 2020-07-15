@@ -1,5 +1,6 @@
 ---
 title: SQL Server 감사 동작 그룹 및 동작 | Microsoft 문서
+description: SQL Server 감사에서의 서버 수준, 데이터베이스 수준과 감사 수준 작업 그룹 및 개별 작업에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 10/19/2016
 ms.prod: sql
@@ -21,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: 43e294d7252afc3297012dbb60b5bcbfb86ba586
-ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
+ms.openlocfilehash: cd25caf80cffef2810139ce1a2ab63269e5ec6ad
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82872782"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885599"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 감사 동작 그룹 및 동작
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 기능을 통해 서버 수준 및 데이터베이스 수준의 이벤트 그룹과 개별 이벤트를 감사할 수 있습니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit는 0개 이상의 감사 동작 항목으로 구성되어 있습니다. 이러한 감사 동작 항목은 동작 그룹(예: Server_Object_Change_Group) 또는 개별 동작(예: 테이블에 대한 SELECT 작업)일 수 있습니다.  
@@ -109,7 +110,7 @@ ms.locfileid: "82872782"
 |SERVER_OPERATION_GROUP|설정, 리소스, 외부 액세스, 권한 부여 변경 등의 보안 감사 작업이 사용되면 발생하는 이벤트입니다. [Audit Server Operation Event Class](../../../relational-databases/event-classes/audit-server-operation-event-class.md)와 동일합니다.|  
 |SERVER_PERMISSION_CHANGE_GROUP|서버 범위의 사용 권한에 대해 GRANT, REVOKE 또는 DENY가 실행되면 발생하는 이벤트입니다. [Audit Server Scope GDR Event Class](../../../relational-databases/event-classes/audit-server-scope-gdr-event-class.md)와 동일합니다.|  
 |SERVER_PRINCIPAL_CHANGE_GROUP|서버 보안 주체가 생성, 변경 또는 삭제되면 발생하는 이벤트입니다. [Audit Server Principal Management Event Class](../../../relational-databases/event-classes/audit-server-principal-management-event-class.md)와 동일합니다.<br /><br /> 보안 주체가 sp_defaultdb 또는 sp_defaultlanguage 저장 프로시저나 ALTER LOGIN 문을 실행하면 발생하는 이벤트입니다. [Audit Addlogin Event Class](../../../relational-databases/event-classes/audit-addlogin-event-class.md)와 동일합니다.<br /><br /> sp_addlogin 및 sp_droplogin 저장 프로시저에 대해 발생하는 이벤트입니다. 또한 [Audit Login Change Property Event Class](../../../relational-databases/event-classes/audit-login-change-property-event-class.md)와 동일합니다.<br /><br /> sp_grantlogin 또는 sp_revokelogin 저장 프로시저에 대해 발생하는 이벤트입니다. [Audit Login GDR Event Class](../../../relational-databases/event-classes/audit-login-gdr-event-class.md)와 동일합니다.|  
-|SERVER_PRINCIPAL_IMPERSONATION_GROUP|서버 범위 내에 EXECUTE AS \<login>과 같은 가장이 있으면 발생하는 이벤트입니다. [Audit Server Principal Impersonation Event Class](../../../relational-databases/event-classes/audit-server-principal-impersonation-event-class.md)와 동일합니다.|  
+|SERVER_PRINCIPAL_IMPERSONATION_GROUP|서버 범위 내에 EXECUTE AS \<login> 같은 가장이 있으면 발생하는 이벤트입니다. [Audit Server Principal Impersonation Event Class](../../../relational-databases/event-classes/audit-server-principal-impersonation-event-class.md)와 동일합니다.|  
 |SERVER_ROLE_MEMBER_CHANGE_GROUP|고정 서버 역할에서 로그인이 추가 또는 제거될 때마다 발생하는 이벤트입니다. 이 이벤트는 sp_addsrvrolemember 및 sp_dropsrvrolemember 저장 프로시저에 대해 발생합니다. [Audit Add Login to Server Role 이벤트 클래스](../../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md)와 동일합니다.|  
 |SERVER_STATE_CHANGE_GROUP|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 상태가 수정되면 발생하는 이벤트입니다. [Audit Server Starts and Stops Event Class](../../../relational-databases/event-classes/audit-server-starts-and-stops-event-class.md)와 동일합니다.|  
 |SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP|보안 주체가 포함된 데이터베이스에 성공적으로 로그인했음을 나타냅니다.|  
@@ -149,7 +150,7 @@ ms.locfileid: "82872782"
 |DATABASE_OWNERSHIP_CHANGE_GROUP|ALTER AUTHORIZATION 문을 사용하여 데이터베이스 소유자를 변경하고 변경 작업에 필요한 권한을 확인하면 발생하는 이벤트입니다. [Audit Change Database Owner Event Class](../../../relational-databases/event-classes/audit-change-database-owner-event-class.md)와 동일합니다.|  
 |DATABASE_PERMISSION_CHANGE_GROUP|데이터베이스 사용 권한 부여와 같은 데이터베이스 전용 이벤트에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 모든 사용자가 문 사용 권한에 대해 GRANT, REVOKE 또는 DENY를 실행할 때마다 발생하는 이벤트입니다. [Audit Database Scope GDR Event Class](../../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md)와 동일합니다.|  
 |DATABASE_PRINCIPAL_CHANGE_GROUP|사용자 같은 보안 주체가 데이터베이스에서 생성, 변경 또는 삭제되면 발생하는 이벤트입니다. [Audit Database Principal Management Event Class](../../../relational-databases/event-classes/audit-database-principal-management-event-class.md)와 동일합니다. 또한 더 이상 사용되지 않는 sp_grantdbaccess, sp_revokedbaccess, sp_adduser 및 sp_dropuser 저장 프로시저에 대해 발생하는 [Audit Add DB User 이벤트 클래스](../../../relational-databases/event-classes/audit-add-db-user-event-class.md)와 동일합니다.<br /><br /> 이 이벤트는 더 이상 사용되지 않는 sp_addrole 및 sp_droprole 저장 프로시저를 사용하여 데이터베이스 역할을 추가 또는 제거할 때마다 발생합니다. [Audit Add Role 이벤트 클래스](../../../relational-databases/event-classes/audit-add-role-event-class.md)와 동일합니다.|  
-|DATABASE_PRINCIPAL_IMPERSONATION_GROUP|데이터베이스 범위 내에 EXECUTE AS \<user>와 같은 가장이 있으면 발생하는 이벤트입니다. [Audit Database Principal Impersonation Event Class](../../../relational-databases/event-classes/audit-database-principal-impersonation-event-class.md)와 동일합니다.|  
+|DATABASE_PRINCIPAL_IMPERSONATION_GROUP|데이터베이스 범위 내에 EXECUTE AS \<user> 같은 가장이 있으면 발생하는 이벤트입니다. [Audit Database Principal Impersonation Event Class](../../../relational-databases/event-classes/audit-database-principal-impersonation-event-class.md)와 동일합니다.|  
 |DATABASE_ROLE_MEMBER_CHANGE_GROUP|데이터베이스 역할에서 로그인이 추가 또는 제거될 때마다 발생하는 이벤트입니다. 이 이벤트 클래스는 sp_addrolemember, sp_changegroup 및 sp_droprolemember 저장 프로시저에서 사용됩니다. [Audit Add Member to DB Role 이벤트 클래스](../../../relational-databases/event-classes/audit-add-member-to-db-role-event-class.md)와 동일합니다.|  
 |DBCC_GROUP|보안 주체가 모든 DBCC 명령을 실행할 때마다 발생하는 이벤트입니다. [Audit DBCC Event Class](../../../relational-databases/event-classes/audit-dbcc-event-class.md)와 동일합니다.|  
 |FAILED_DATABASE_AUTHENTICATION_GROUP|보안 주체가 포함된 데이터베이스 로그온을 시도했으나 실패했음을 나타냅니다. 이 클래스의 이벤트는 연결 풀에서 다시 사용된 연결 또는 새 연결에 의해 발생합니다. 발생합니다.|  

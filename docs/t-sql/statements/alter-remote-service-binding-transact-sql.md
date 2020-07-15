@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80a1df40d0c7bd5122d64ccc0d63fa2753844804
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b4485b8a5100ac59c3b5012d7318754a4ce4b091
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81627154"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895640"
 ---
 # <a name="alter-remote-service-binding-transact-sql"></a>ALTER REMOTE SERVICE BINDING(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   원격 서비스 바인딩에 연결된 사용자를 변경하거나 바인딩에 대한 익명 인증 설정을 변경합니다.  
   
@@ -62,7 +62,7 @@ ALTER REMOTE SERVICE BINDING binding_name
   
  원격 서비스 바인딩에 대한 AUTHORIZATION을 변경하려면 ALTER AUTHORIZATION 문을 사용합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `APBinding` 계정의 인증서를 사용하여 메시지를 암호화하도록 원격 서비스 바인딩 `SecurityAccount`을 변경합니다.  
   
 ```  

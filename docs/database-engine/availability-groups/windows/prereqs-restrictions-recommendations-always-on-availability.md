@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e2cbdf8467ac119b4fa5831a73a03cf1a54f956c
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 8688a67d4fecaba0857f0fc1ac0e763ebbb18267
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925307"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892408"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   이 문서에서는 호스트 컴퓨터, WSFC(Windows Server 장애 조치 클러스터), 서버 인스턴스 및 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항을 포함하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 배포할 때 고려해야 할 사항에 대해 설명합니다. 이러한 각 구성 요소에 대한 보안 고려 사항과 필요한 권한이 있는 경우 알려줍니다.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "82925307"
   
 3.  **Get-ClusterResource** cmdlet을 사용하여 네트워크 이름 리소스를 찾은 다음에 아래와 같이 **Set-ClusterParameter** cmdlet을 사용하여 **HostRecordTTL** 값을 설정합니다.  
   
-     Get-ClusterResource “ *\<NetworkResourceName>* ” | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
+     Get-ClusterResource " *\<NetworkResourceName>* " | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
   
      다음 PowerShell 예제에서는 `SQL Network Name (SQL35)`라는 네트워크 이름 리소스에 대해 HostRecordTTL을 300초로 설정합니다.  
   
@@ -267,7 +267,7 @@ ms.locfileid: "82925307"
   
 -   **장애 조치(Failover) 클러스터 관리자를 사용하여 가용성 그룹을 조작하지 마세요**. SQL Server 장애 조치(Failover) 클러스터 인스턴스(FCI)의 상태는 SQL Server와 WSFC(Windows 장애 조치(failover) 클러스터) 간에 공유되며, SQL Server 클러스터에 관해 클러스터에 보다 더 자세한 상태 정보를 유지합니다. 관리 모델은 SQL Server가 트랜잭션을 구동해야 하며, 상태에 대한 클러스터의 보기를 SQL Server의 상태 뷰와 동기화 상태로 유지할 책임을 집니다. 클러스터의 상태가 SQL Server 외부에서 변경되는 경우 WSFC와 SQL Server 간에 상태가 동기화되지 않을 수 있으며 이로 인해 예기치 않은 동작이 발생할 수 있습니다.
   
-     다음은 그 예입니다.  
+     예를 들면 다음과 같습니다.  
   
     -   가능한 소유자와 같은 가용성 그룹 속성을 변경하지 마세요.  
   

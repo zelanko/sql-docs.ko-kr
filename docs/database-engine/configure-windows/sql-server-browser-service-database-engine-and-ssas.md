@@ -1,5 +1,6 @@
 ---
 title: SQL Server Browser 서비스(데이터베이스 엔진 및 SSAS) | Microsoft Docs
+description: SQL Server Browser에 대해 알아봅니다. 이 서비스는 SQL Server 리소스에 대한 요청을 수신 대기하고 설치된 SQL Server 인스턴스에 대한 정보를 제공합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - Browser Service
 - SQL Server Browser service
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 19479786362d6773339cc30953451f02e466c2ec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 57d41e12084ca4a9873abeaeb3275ee671ae45d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79375560"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789749"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server Browser 서비스(데이터베이스 엔진 및 SSAS)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 프로그램은 Windows 서비스로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에 대해 들어오는 요청을 수신 대기하고 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 정보를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser를 사용할 수 있습니다.  
   
 -   사용할 수 있는 서버 목록 찾아보기  
@@ -126,7 +127,7 @@ ms.locfileid: "79375560"
  숨겨진 인스턴스는 공유 메모리 연결만 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 `HideInstance` 플래그를 설정하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser에서 이 서버 인스턴스에 대한 정보를 사용하여 응답할 수 없음을 나타내십시오.  
   
 ### <a name="using-a-firewall"></a>방화벽 사용  
- 방화벽이 설치된 서버의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스와 통신하려면 UDP 포트 1434 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 사용되는 1433 등의 TCP 포트를 여십시오. 방화벽 작업 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 “방법: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 액세스를 허용하도록 방화벽 구성”을 참조하십시오.  
+ 방화벽이 설치된 서버의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스와 통신하려면 UDP 포트 1434 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 사용되는 1433 등의 TCP 포트를 여십시오. 방화벽 작업 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "방법: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 액세스를 허용하도록 방화벽 구성"을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [네트워크 프로토콜 및 네트워크 라이브러리](../../sql-server/install/network-protocols-and-network-libraries.md)  

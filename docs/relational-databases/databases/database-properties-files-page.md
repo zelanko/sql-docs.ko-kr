@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 속성(파일 페이지) | Microsoft 문서
+description: 데이터베이스의 속성을 확인 또는 수정하는 방법과 SQL Server Management Studio에서 새 데이터베이스를 만드는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ f1_keywords:
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f3c0493192381bc3dedbf23ab1e01c0142e88be4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ddd5b76d37f170ed195c6b08f6debcb0f032e77
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099616"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756181"
 ---
 # <a name="database-properties-files-page"></a>데이터베이스 속성(파일 페이지)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 페이지를 사용하여 새 데이터베이스를 만들 수 있으며 선택한 데이터베이스의 속성을 확인하거나 수정할 수 있습니다. 이 항목은 **새 데이터베이스(일반 페이지)** 와 기존 데이터베이스의 **데이터베이스 속성(파일 페이지)** 에 적용됩니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **데이터베이스 이름**  
  데이터베이스 이름을 추가하거나 표시합니다.  
   
@@ -47,7 +48,7 @@ ms.locfileid: "68099616"
  Filestream 데이터 파일 그룹에 파일 (컨테이너)을 추가하려면 FILESTREAM을 사용해야 합니다. [서버 속성(고급 페이지)](../../database-engine/configure-windows/server-properties-advanced-page.md) 대화 상자를 사용하여 FILESTREAM을 설정할 수 있습니다.  
   
  **파일 그룹**  
- 목록에서 파일이 속한 파일 그룹을 선택합니다. 기본 파일 그룹은 PRIMARY입니다. **\<새 파일 그룹>** 을 선택하고 **새 파일 그룹** 대화 상자에 파일 그룹에 대한 정보를 입력하여 새 파일 그룹을 만들 수 있습니다. 새 파일 그룹은 **파일 그룹** 페이지에서도 만들 수 있습니다. 기존 파일의 파일 그룹은 수정할 수 없습니다.  
+ 목록에서 파일이 속한 파일 그룹을 선택합니다. 기본 파일 그룹은 PRIMARY입니다. **\<new filegroup>** 을 선택하고 **새 파일 그룹** 대화 상자에 파일 그룹에 대한 정보를 입력하여 새 파일 그룹을 만들 수 있습니다. 새 파일 그룹은 **파일 그룹** 페이지에서도 만들 수 있습니다. 기존 파일의 파일 그룹은 수정할 수 없습니다.  
   
  메모리 최적화 파일 그룹에 파일(컨테이너)을 추가할 경우 **파일 그룹** 필드에 데이터베이스의 메모리 최적화 파일 그룹 이름이 채워집니다.  
   

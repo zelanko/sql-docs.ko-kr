@@ -1,7 +1,8 @@
 ---
 title: 고유하게 컴파일된 T-SQL 모듈의 기능
+description: 저장 프로시저 및 스칼라 사용자 정의 함수와 같은 고유하게 컴파일된 T-SQL 모듈의 본문에서 T-SQL 노출 영역 및 지원되는 기능에 대해 알아봅니다.
 ms.custom: seo-dt-2019
-ms.date: 10/23/2017
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,36 +12,20 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 472a654a0bee8b386c6573c8ab1ed8fdb0b4cf8d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 172e3a271086564c0ae4da7fd01a3084d65a85e5
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286667"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834724"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
   이 항목에서는 저장 프로시저([CREATE PROCEDURE(Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)), 스칼라 사용자 정의 함수, 인라인 테이블 반환 함수, 트리거 등 고유하게 컴파일된 T-SQL 모듈의 본문에서 지원되는 기능 및 T-SQL 노출 영역 목록을 제공합니다.  
 
  네이티브 모듈 정의와 관련하여 지원되는 기능은 [고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 DDL](../../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md)을 참조하세요.  
-
--   [네이티브 모듈의 쿼리 노출 영역](#qsancsp)  
-
--   [데이터 수정](#dml)  
-
--   [흐름 제어 언어](#cof)  
-
--   [지원되는 연산자](#so)  
-
--   [고유하게 컴파일된 모듈의 기본 제공 함수](#bfncsp)  
-
--   [감사](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#auditing)  
-
--   [테이블 및 쿼리 힌트](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#tqh)  
-
--   [정렬의 제한 사항](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#los)  
 
  고유하게 컴파일된 모듈에서 지원되지 않는 구문에 대한 자세한 내용과 지원되지 않는 일부 기능을 해결하는 방법은 [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)를 참조하세요. 지원되지 않는 기능에 대한 자세한 내용은 [메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)을 참조하세요.  
 
@@ -66,7 +51,7 @@ SELECT 절:
     - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]부터 고유하게 컴파일된 모듈에서 DISTINCT 연산자가 지원됩니다.
 
-              DISTINCT aggregates are not supported.  
+        - DISTINCT 집계는 지원되지 않습니다.  
 
 -   UNION 및 UNION ALL
     - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
@@ -76,9 +61,9 @@ SELECT 절:
 
 FROM 절:  
 
--   FROM \<메모리 액세스에 최적화된 테이블 또는 테이블 변수>  
+-   FROM \<memory optimized table or table variable>  
 
--   FROM \<고유하게 컴파일된 인라인 TVF>  
+-   FROM \<natively compiled inline TVF>  
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN 및 INNER JOIN
     - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
@@ -169,7 +154,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   [TRY...CATCH&#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)  
 
-               To achieve optimal performance, use a single TRY/CATCH block for an entire natively compiled T-SQL module.  
+    - 성능을 최적화하려면 고유하게 컴파일된 전체 T-SQL 모듈에 대해 단일 TRY/CATCH 블록을 사용합니다.  
 
 -   [THROW&#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)  
 
@@ -178,13 +163,13 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 ##  <a name="supported-operators"></a><a name="so"></a> 지원되는 연산자  
  지원되는 연산자는 다음과 같습니다.  
 
--   [비교 연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)(예: >, \<, >=, <=)  
+-   [비교 연산자 &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)(예: >, \<, >=, <=)  
 
 -   단항 연산자(+, -).  
 
 -   이항 연산자(*, /, +, -, %(모듈로))  
 
-               The plus operator (+) is supported on both numbers and strings.  
+    - 더하기 연산자(+)는 숫자 및 문자열에서 모두 지원됩니다.  
 
 -   논리 연산자(AND, OR, NOT).  
 
@@ -244,7 +229,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 ##  <a name="limitations-on-sorting"></a><a name="los"></a> 정렬의 제한 사항  
  [TOP&#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 및 [ORDER BY 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)을 사용하는 쿼리에서는 8,000개 이상의 행을 정렬할 수 있습니다. 하지만 [ORDER BY 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)이 없을 경우, [TOP&#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)은 최대 8,000개까지만 행을 정렬할 수 있습니다. 조인이 있으면 이러한 행 수가 더 줄어듭니다.  
 
- 쿼리에서 [TOP&#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 연산자와 [ORDER BY 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)을 모두 사용하는 경우 TOP 연산자에 대해 최대 8192행을 지정할 수 있습니다. 8192행보다 더 많이 지정하면 다음 오류 메시지가 나타납니다. **메시지 41398, 수준 16, 상태 1, 프로시저 *\<procedureName>* , 줄 *\<lineNumber>* TOP 연산자는 최대 8192개의 행을 반환할 수 있습니다. *\<number>* 개가 요청되었습니다.**  
+ 쿼리에서 [TOP&#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 연산자와 [ORDER BY 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)을 모두 사용하는 경우 TOP 연산자에 대해 최대 8192행을 지정할 수 있습니다. 8192행보다 더 많이 지정하면 다음 오류 메시지가 나타납니다. **메시지 41398, 수준 16, 상태 1, 프로시저 *\<procedureName>* , 줄 *\<lineNumber>* TOP 연산자는 최대 8,192행을 반환할 수 있으며 *\<number>* 행이 요청되었습니다.**  
 
  TOP 절을 사용하지 않는 경우 ORDER BY를 사용하여 몇 행이든 정렬할 수 있습니다.  
 

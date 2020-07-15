@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8ae39654a19c73c71c602801b3aa5f594f7d0828
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc784bc678dd5ebf52b06edc2af99e7efac08aaf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908154"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882238"
 ---
 # <a name="specify-merge-replication-properties"></a>병합 복제 속성 지정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 이 항목에서는 병합 복제의 다양한 속성을 지정하는 방법을 설명합니다. 
 
 ## <a name="merge-article-is-download-only"></a>병합 문서는 다운로드 전용입니다.
@@ -38,13 +38,13 @@ ms.locfileid: "72908154"
   
 #### <a name="on-the-properties-tab-of-the-article-properties"></a>문서 속성의 속성 탭에서  
   
-1.  새 게시 마법사의 **아티클** 페이지 또는 **게시 속성 - \<게시>** 대화 상자에서 테이블을 선택하고 **아티클 속성**을 클릭합니다.    
+1.  새 게시 마법사의 **아티클** 페이지 또는 **게시 속성 - \<Publication>** 대화 상자에서 테이블을 선택한 다음 **아티클 속성**을 클릭합니다.    
 2.  **선택한 테이블 아티클 속성 설정** 또는 **모든 테이블 아티클 속성 설정**을 클릭합니다.  
   
-3.  **아티클 속성 - \<Article>** 대화 상자의 **속성** 탭에 있는 **대상 개체** 섹션에서 **동기화 방향**에 대해 다음 값 중 하나를 지정합니다.    
+3.  **아티클 속성 - \<Article>** 대화 상자의 **속성** 탭에 있는 **대상 개체** 섹션에서 **동기화 방향**으로 다음 값 중 하나를 지정합니다.    
     -   **구독자로 다운로드 전용, 구독자 변경 금지**    
     -   **구독자로 다운로드 전용, 구독자 변경 허용**    
-4.  **게시 속성 - \<게시>** 대화 상자에 있는 경우 **확인**을 클릭하여 대화 상자를 저장하고 닫습니다.  
+4.  **게시 속성 - \<Publication>** 대화 상자에서 **확인**을 클릭하여 저장하고 대화 상자를 닫습니다.  
 
 ###  <a name="use-transact-sql"></a>Transact-SQL 사용  
   
@@ -84,16 +84,16 @@ ms.locfileid: "72908154"
   
 #### <a name="enable-interactive-conflict-resolution-for-an-article"></a>문서에 대해 대화형 충돌 해결 사용  
   
-1.  새 게시 마법사의 **아티클** 페이지 또는 **게시 속성 - \<게시>** 대화 상자에서 테이블을 선택합니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md) 및 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.   
+1.  새 게시 마법사의 **아티클** 페이지 또는 **게시 속성 - \<Publication>** 대화 상자에서 테이블을 선택합니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md) 및 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.   
 2.  **아티클 속성**을 클릭한 다음 **선택한 테이블 아티클 속성 설정** 또는 **모든 테이블 아티클 속성 설정**을 클릭합니다.    
 3.  **아티클 속성 - \<Article>** 또는 **아티클 속성 - \<ArticleType>** 페이지에서 **해결 프로그램** 탭을 클릭합니다.    
 4.  **요청 시 동기화 중 구독자가 대화형으로 충돌 해결**을 선택합니다.    
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]    
-6.  **게시 속성 - \<게시>** 대화 상자에 있는 경우 **확인**을 클릭하여 대화 상자를 저장하고 닫습니다.  
+6.  **게시 속성 - \<Publication>** 대화 상자에서 **확인**을 클릭하여 저장하고 대화 상자를 닫습니다.  
   
 #### <a name="specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>구독에서 대화형 충돌 해결 기능을 사용하도록 지정  
   
-1.  **구독 속성 - \<Subscriber>: \<SubscriptionDatabase>** 대화 상자에서 **대화형으로 충돌 해결** 옵션에 **True** 값을 지정합니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 및 [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)을 참조하세요.   
+1.  **구독 속성 - \<Subscriber>: \<SubscriptionDatabase>** 대화 상자에서 **대화형으로 충돌 해결** 옵션의 값으로 **True**를 지정합니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 및 [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)을 참조하세요.   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ###  <a name="use-transact-sql"></a>Transact-SQL 사용  
@@ -127,14 +127,14 @@ ms.locfileid: "72908154"
 -   행 및 열 수준 추적을 사용하면 충돌 해결이 항상 행 수준에서 수행되고 적용되는 행이 무시되는 행을 덮어씁니다. 병합 복제를 사용하면 충돌을 추적하고 논리적 레코드 수준에서 충돌이 해결되도록 지정할 수도 있지만 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서는 이러한 옵션을 사용할 수 없습니다. 복제 저장 프로시저에서 이러한 옵션을 설정하는 방법은 [병합 테이블 아티클 간의 논리적 레코드 관계 정의](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)를 참조하세요.  
   
 ### <a name="use-sql-server-management-studio"></a>SQL Server Management Studio 사용  
- 새 게시 마법사 및 **게시 속성 - \<게시>** 대화 상자에서 사용할 수 있는 **아티클 속성** 대화 상자의 **속성** 탭에서 병합 아티클에 대한 행 또는 열 수준 추적을 지정합니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md) 및 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+ 새 게시 마법사 및 **게시 속성 - \<Publication>** 대화 상자에서 사용할 수 있는 **아티클 속성** 대화 상자의 **속성** 탭에서 병합 아티클에 대한 행 또는 열 수준 추적을 지정합니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md) 및 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="specify-row--or-column-level-tracking"></a>행 또는 열 수준 추적 지정  
   
-1.  새 게시 마법사의 **아티클** 페이지 또는 **게시 속성 - \<게시>** 대화 상자에서 테이블을 선택합니다.  
+1.  새 게시 마법사의 **아티클** 페이지 또는 **게시 속성 - \<Publication>** 대화 상자에서 테이블을 선택합니다.  
 2.  **아티클 속성**을 클릭한 다음 **선택한 테이블 아티클 속성 설정** 또는 **모든 테이블 아티클 속성 설정**을 클릭합니다.   
-3.  **아티클 속성 \<Article>** 대화 상자의 **속성** 탭에서 **추적 수준** 속성에 대해 **행 수준 추적** 또는 **열 수준 추적** 중 하나를 선택합니다.   
-4.  **게시 속성 - \<게시>** 대화 상자에 있는 경우 **확인**을 클릭하여 대화 상자를 저장하고 닫습니다.  
+3.  **문서 속성 \<Article>** 대화 상자의 **속성** 탭에서 **추적 수준** 속성에 대해 다음 값 중 하나를 선택합니다. **행 수준 추적** 또는 **열 수준 추적**.   
+4.  **게시 속성 - \<Publication>** 대화 상자에서 **확인**을 클릭하여 저장하고 대화 상자를 닫습니다.  
   
 ### <a name="use-transact-sql"></a>Transact-SQL 사용  
   

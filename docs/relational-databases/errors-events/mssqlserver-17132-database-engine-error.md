@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_17132 | Microsoft 문서
+description: SQL Server 컴퓨터에서 클라이언트 로그인 패킷을 처리하지 못했습니다. 오류에 대한 설명과 가능한 해결 방법을 확인합니다.
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -11,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: d1d198bd-6730-4394-bd5f-28f320c01a38
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 335ba6a544023fd4eec16cd7461e2e17c224020f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4767ba217eab0d8cdbc6a9dc80f751868322f21f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68131799"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780843"
 ---
 # <a name="mssqlserver_17132"></a>MSSQLSERVER_17132
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>세부 정보  
   
-|||  
-|-|-|  
+| attribute | 값 |  
+| :-------- | :---- |  
 |제품 이름|SQL Server|  
 |이벤트 ID|17132|  
 |이벤트 원본|MSSQLSERVER|  

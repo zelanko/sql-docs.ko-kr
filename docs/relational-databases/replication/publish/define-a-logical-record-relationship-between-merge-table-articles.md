@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8df94f31b6a036677f5d62ae60ffb4cf53a082be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e066a82da2994c14a23ad647c103402232a7d1c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321235"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882087"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>병합 테이블 아티클 간의 논리적 레코드 관계 정의
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 테이블 아티클 간 논리적 레코드 관계를 정의하는 방법에 대해 설명합니다.  
   
  병합 복제를 사용하면 서로 다른 테이블에 있는 관련 행 간의 관계를 정의할 수 있습니다. 그러면 동기화 중에 이러한 행을 하나의 트랜잭션 단위로 처리할 수 있습니다. 논리적 레코드는 조인 필터 관계가 있는지 여부와 관계없이 두 아티클 간에 정의할 수 있습니다. 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)를 참조하세요.  
@@ -52,13 +52,13 @@ ms.locfileid: "75321235"
 -   게시에 대한 구독이 초기화된 후 논리적 레코드를 추가, 수정 또는 삭제한 경우에는 변경 내용을 적용한 후에 새 스냅샷을 생성하고 모든 구독을 다시 초기화해야 합니다. 속성 변경 요구 사항에 대한 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- 새 게시 마법사 및 **게시 속성 - \<게시>** 대화 상자에서 사용할 수 있는 **조인 추가** 대화 상자에서 논리적 레코드를 정의합니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md) 및 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+ 새 게시 마법사 및 **게시 속성 - \<Publication>** 대화 상자에서 사용할 수 있는 **조인 추가** 대화 상자에서 논리적 레코드를 정의합니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md) 및 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
  논리적 레코드가 병합 게시의 조인 필터에 적용되고 게시가 사전 계산 파티션을 사용하기 위한 요구 사항을 따르는 경우에만 **조인 추가** 대화 상자에서 논리적 레코드를 정의할 수 있습니다. 조인 필터에 적용되지 않는 논리적 레코드를 정의하고 논리적 레코드 수준에서 충돌 감지 및 해결을 설정하려면 저장 프로시저를 사용해야 합니다.  
   
 #### <a name="to-define-a-logical-record-relationship"></a>논리적 레코드 관계를 정의하려면  
   
-1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 행 필터를 선택합니다.  
+1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<Publication>** 대화 상자의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 행 필터를 선택합니다.  
   
      논리적 레코드 관계는 조인 필터와 연결된 행 필터를 확장합니다. 따라서 조인 필터로 확장하기 전에 행 필터를 정의한 다음 논리적 레코드 관계를 적용해야 합니다. 한 조인 필터를 정의한 후에 다른 조인 필터를 사용하여 이 조인 필터를 확장할 수 있습니다. 조인 필터 정의 방법은 [병합 아티클 사이에서 조인 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)을 참조하세요.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75321235"
   
 3.  **조인 추가** 대화 상자에서 조인 필터를 정의한 다음 **논리적 레코드**확인란을 선택합니다.  
   
-4.  **게시 속성 - \<게시>** 대화 상자에 있는 경우 **확인**을 클릭하여 대화 상자를 저장하고 닫습니다.  
+4.  **게시 속성 - \<Publication>** 대화 상자에서 **확인**을 클릭하여 저장하고 대화 상자를 닫습니다.  
   
 #### <a name="to-delete-a-logical-record-relationship"></a>논리적 레코드 관계를 삭제하려면  
   
@@ -74,7 +74,7 @@ ms.locfileid: "75321235"
   
      논리적 레코드 관계만 삭제하려면  
   
-    1.  새 게시 마법사의 **행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 논리적 레코드 관계와 연결된 조인 필터를 선택하고 **편집**을 클릭합니다.  
+    1.  새 게시 마법사의 **행 필터** 페이지 또는 **게시 속성 - \<Publication>** 대화 상자의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 논리적 레코드 관계와 연결된 조인 필터를 선택하고 **편집**을 클릭합니다.  
   
     2.  **조인 편집** 대화 상자에서 **논리적 레코드**확인란 선택을 취소합니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "75321235"
   
      논리적 레코드 관계 및 이와 관련된 조인 필터를 함께 삭제하려면  
   
-    -   새 게시 마법사의 **행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **필터링된 테이블** 창에서 필터를 선택하고 **삭제**를 클릭합니다. 삭제하는 조인 필터가 다른 조인에 의해 확장된 경우 해당 조인 또한 삭제됩니다.  
+    -   새 게시 마법사의 **행 필터** 페이지 또는 **게시 속성 - \<Publication>** 대화 상자의 **필터링된 테이블** 창에서 필터를 선택하고 **삭제**를 클릭합니다. 삭제하는 조인 필터가 다른 조인에 의해 확장된 경우 해당 조인 또한 삭제됩니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  복제 저장 프로시저를 사용하여 아티클 간 논리적 레코드 관계를 프로그래밍 방식으로 지정할 수 있습니다.  

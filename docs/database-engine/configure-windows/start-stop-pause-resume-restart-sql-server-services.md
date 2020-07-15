@@ -1,5 +1,6 @@
 ---
 title: SQL Server 서비스 시작, 중지, 일시 중지, 계속 및 다시 시작
+description: 다양한 SQL Server 서비스를 시작, 중지, 일시 중지, 재개 또는 다시 시작하는 방법을 알아봅니다. 이러한 작업에 Transact-SQL, PowerShell 및 기타 도구를 사용하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/05/2020
 ms.prod: sql
@@ -37,19 +38,19 @@ helpviewer_keywords:
 - administering SQL Server, starting and stopping services
 - Management Studio [SQL Server], starting or stopping services
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 50f57be62b93d201e472cee0d1d7a6adda67ad97
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: ca8891058091bca9862fbdbf81bfa51cc17d250a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81287963"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763985"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>SQL Server 서비스 시작, 중지, 일시 중지, 계속 및 다시 시작
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 문서에서는 SQL Server 구성 관리자, SSMS(SQL Server Management Studio), 명령 프롬프트의 net 명령, Transact-SQL 또는 PowerShell을 사용하여 SQL Server 데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스를 시작, 중지, 일시 중지, 계속 또는 다시 시작하는 방법을 설명합니다.
 
@@ -71,7 +72,7 @@ SQL Server 리소스에 관한 들어오는 요청을 수신 대기하고 컴퓨
 
 ### <a name="additional-information"></a>추가 정보
 
-- 데이터베이스 엔진 서비스를 일시 중지하면 새 사용자는 데이터베이스 엔진에 연결할 수 없지만, 이미 연결된 사용자는 연결이 끊어질 때까지 계속해서 작업할 수 있습니다. 사용자가 작업을 완료할 때까지 기다렸다가 서비스를 중지하려면 일시 중지를 사용합니다. 이렇게 하면 사용자가 진행 중인 트랜잭션을 완료할 수 있습니다. ‘계속’을 사용하면 데이터베이스 엔진에서 새 연결을 다시 허용할 수 있습니다.  SQL Server 에이전트 서비스는 일시 중지하거나 계속할 수 없습니다.  
+- 데이터베이스 엔진 서비스를 일시 중지하면 새 사용자는 데이터베이스 엔진에 연결할 수 없지만, 이미 연결된 사용자는 연결이 끊어질 때까지 계속해서 작업할 수 있습니다. 사용자가 작업을 완료할 때까지 기다렸다가 서비스를 중지하려면 일시 중지를 사용합니다. 이렇게 하면 사용자가 진행 중인 트랜잭션을 완료할 수 있습니다. ‘계속’을 사용하면 데이터베이스 엔진에서 새 연결을 다시 허용할 수 있습니다. SQL Server 에이전트 서비스는 일시 중지하거나 계속할 수 없습니다.  
 
 - SQL Server 구성 관리자와 SSMS에서는 다음 아이콘을 사용하여 서비스의 현재 상태를 표시합니다.  
 
@@ -187,7 +188,7 @@ Microsoft Windows **net** 명령을 사용하여 Microsoft SQL Server 서비스�
 
 ### <a name="to-start-a-named-instance-of-the-database-engine"></a><a name="dbNamed"></a> 데이터베이스 엔진의 명명된 인스턴스를 시작하려면 다음을 수행합니다.
 
-- 명령 프롬프트에서 다음 명령 중 하나를 입력합니다. *\<instancename>* 을 관리할 인스턴스의 이름으로 바꿉니다.  
+- 명령 프롬프트에서 다음 명령 중 하나를 입력합니다. *\<instancename>* 을 관리할 인스턴스 이름으로 바꿉니다.  
   
     **net start “SQL Server (** *instancename* **)”**
   

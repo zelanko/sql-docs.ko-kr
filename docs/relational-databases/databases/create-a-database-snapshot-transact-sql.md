@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 스냅샷 만들기(Transact-SQL) | Microsoft 문서
+description: Transact-SQL을 사용하여 SQL Server 데이터베이스 스냅샷을 만드는 방법을 알아봅니다. 스냅샷을 만들기 위한 필수 구성 요소 및 모범 사례에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 652ef86f26f92068465668cadeccf8e193db1f90
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 232b3af50be2c00cc1685e031b335c1b798a42b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71708284"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763541"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Create a Database Snapshot (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 스냅샷은 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용해서만 만들 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 데이터베이스 스냅샷 만들기를 지원하지 않습니다.  
   
   

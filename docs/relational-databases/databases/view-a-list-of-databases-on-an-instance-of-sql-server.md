@@ -1,6 +1,6 @@
 ---
 title: SQL Server의 데이터베이스 목록 보기
-ms.custom: seo-lt-2019
+description: SQL Server Management Studio 또는 Transact-SQL을 사용하여 SQL Server 인스턴스에서 데이터베이스 목록을 보는 방법을 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,15 +20,16 @@ ms.assetid: 7ee7a789-db36-4be9-8a0e-0362a1e152dd
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f6333815c8d741c69bd4d0ea651f6b31489881f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 5c22331de5c4848c28125d8c46d8eced7acc8cab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056437"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758998"
 ---
-# <a name="view-list-of-databases-on-sql-server"></a>SQL Server의 데이터베이스 목록 보기
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="view-list-of-databases-on-sql-server"></a>SQL Server의 데이터베이스 목록 보기     
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]인스턴스에서 데이터베이스 목록을 보는 방법에 대해 설명합니다.  
   
  **항목 내용**  

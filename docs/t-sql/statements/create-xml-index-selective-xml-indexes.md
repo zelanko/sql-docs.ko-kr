@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c63162f11794299e0708c71219a639de9566456e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 902cebc510572b8900acf6f12666398ef9d147b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635470"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766911"
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX(선택적 XML 인덱스)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   기존 선택적 XML 인덱스로 이미 인덱싱된 단일 경로에서 새 보조 선택적 XML 인덱스를 만듭니다. 또한 주 선택적 XML 인덱스를 만들 수도 있습니다. 자세한 내용은 [선택적 XML 인덱스 만들기, 변경 및 삭제](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)를 참조하세요.  
   
@@ -69,7 +69,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
  *index_name*  
  만들 새 인덱스의 이름입니다. 인덱스 이름은 테이블에서 고유해야 하지만 데이터베이스 내에서 고유할 필요는 없습니다. 인덱스 이름은 [식별자](../../relational-databases/databases/database-identifiers.md) 규칙을 따라야 합니다.  
   
- ON *\<table_object>* 은 인덱싱할 XML 열이 포함된 테이블입니다. 다음 형식을 사용할 수 있습니다.  
+ ON *\<table_object>* 인덱싱할 XML 열이 포함된 테이블입니다. 다음 형식을 사용할 수 있습니다.  
   
 -   `database_name.schema_name.table_name`  
   
@@ -83,7 +83,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
  USING XML INDEX *sxi_index_name*  
  기존 선택적 XML 인덱스의 이름입니다.  
   
- FOR **(** \<xquery_or_sql_values_path> **)** 보조 선택적 XML 인덱스를 만드는 인덱싱된 경로의 이름입니다. 인덱싱할 경로는 CREATE SELECTIVE XML INDEX 문에서 할당된 이름입니다. 자세한 내용은 [CREATE SELECTIVE XML INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md)를 참조하세요.  
+ FOR **(** \<xquery_or_sql_values_path> **)** 보조 선택적 XML 인덱스를 만들 인덱싱된 경로의 이름입니다. 인덱싱할 경로는 CREATE SELECTIVE XML INDEX 문에서 할당된 이름입니다. 자세한 내용은 [CREATE SELECTIVE XML INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md)를 참조하세요.  
   
  WITH \<index_options> 인덱스 옵션에 대한 자세한 내용은 [CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)를 참조하세요.  
   
@@ -98,7 +98,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
 ### <a name="permissions"></a>사용 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `pathabc`경로에서 보조 선택적 XML 인덱스를 만듭니다. 인덱싱할 경로는 [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md)에서 할당된 이름입니다.  
   
 ```  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 09eb8b767ce5995dede2b69efca3423a91c02b31
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1ddf8e31e274280f2fb53ee3b2a8f5c5a8e1884f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631860"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895573"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 현재 서버에 대한 전역 구성 설정을 수정합니다.  
   
@@ -294,9 +294,9 @@ HYBRID_BUFFER_POOL = ON | OFF <br>
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] 리소스 DLL은 로컬 시스템 계정으로 실행됩니다. 따라서 로컬 시스템 계정에는 진단 로그 옵션의 지정된 경로에 대한 읽기 및 쓰기 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
-|Category|중요한 구문 요소|  
+|범주|중요한 구문 요소|  
 |--------------|------------------------------|  
 |[프로세스 선호도 설정](#Affinity)|CPU  • NUMANODE  • AUTO|  
 |[진단 로그 옵션 설정](#Diagnostic)|ON  • OFF  • PATH  • MAX_SIZE|  

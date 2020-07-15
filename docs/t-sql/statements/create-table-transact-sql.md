@@ -46,16 +46,16 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3645b913b4e806d964a2da420d987ca10b2217f0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 384b474180e17eaed9827da2d2e2b2f9157c6f4b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81297343"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766960"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 새 테이블을 만듭니다.
 
@@ -1044,7 +1044,7 @@ CREATE TABLE을 사용하여 분할된 테이블을 만들기 전에 테이블�
 
 모든 사용자가 tempdb에 임시 테이블을 만들 수 있습니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-create-a-primary-key-constraint-on-a-column"></a>A. 열에 PRIMARY KEY 제약 조건 만들기
 

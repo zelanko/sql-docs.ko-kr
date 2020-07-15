@@ -1,6 +1,6 @@
 ---
 title: SSMS의 새 가용성 그룹 대화 상자
-description: 이 문서에는 SQL Server Management Studio의 ‘새 가용성 그룹’ 대화 상자를 사용하여 Always On 가용성 그룹을 구성하는 방법에 대한 정보가 포함되어 있습니다.
+description: SQL Server Management Studio의 새 가용성 그룹 대화 상자를 사용하여 Always On 가용성 그룹을 구성하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2c53998ea56c02e43a62573b31767c1beea78a8d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a576ea3ed8aa89f8a0ff8bc77fcacaa895660892
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74821958"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882384"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>새 가용성 그룹 대화 상자 사용(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 **의** 새 가용성 그룹 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 사용하도록 설정된 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다. *가용성 그룹* 은 단일 단위로 장애 조치(Failover)될 사용자 데이터베이스 집합과 장애 조치(Failover)를 지원하는 장애 조치(Failover) 파트너 집합( *가용성 복제본*이라고 함)을 정의합니다.  
   
 > [!NOTE]  
@@ -45,7 +45,7 @@ ms.locfileid: "74821958"
 -   보조 복제본을 가용성 그룹에 조인할 수 없습니다.    
 -   초기 데이터 동기화를 수행할 수 없습니다.  
   
- 이러한 구성 작업에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 [후속 작업: 가용성 그룹을 만든 후](#FollowUp)를 참조하세요.  
+ 이러한 구성 태스크에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [후속 작업: 가용성 그룹을 만든 후](#FollowUp)를 참조하세요.  
   
 ##  <a name="permissions"></a><a name="Permissions"></a> 권한  
  CREATE AVAILABILITY GROUP 서버 권한, ALTER ANY AVAILABILITY GROUP 권한, CONTROL SERVER 권한 중 하나와 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "74821958"
     > [!TIP]  
     >  복제본을 추가했지만 호스트 서버 인스턴스에 연결할 수 없는 경우 해당 복제본을 제거하고 새 복제본을 추가합니다. 자세한 내용은 [가용성 그룹에서 보조 복제본 제거&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md) 및 [가용성 그룹에 보조 복제본 추가&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)를 참조하세요.  
   
-8.  대화 상자의 **페이지 선택** 창에서 **백업 기본 설정**을 클릭합니다. 그런 다음 **백업 기본 설정** 페이지에서 복제본 역할에 따라 백업을 실행할 위치를 지정하고 이 가용성 그룹에 대한 가용성 복제본을 호스팅할 각 서버 인스턴스에 백업 속성을 할당합니다. 자세한 내용은 [가용성 그룹 속성: 새 가용성 그룹&#40;일반 페이지&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md)을 참조하세요.  
+8.  대화 상자의 **페이지 선택** 창에서 **백업 기본 설정**을 클릭합니다. 그런 다음 **백업 기본 설정** 페이지에서 복제본 역할에 따라 백업을 실행할 위치를 지정하고 이 가용성 그룹에 대한 가용성 복제본을 호스팅할 각 서버 인스턴스에 백업 속성을 할당합니다. 자세한 내용은 [가용성 그룹 속성: 새 가용성 그룹 &#40;백업 기본 설정 페이지&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md)를 참조하세요.  
   
 9. 가용성 그룹을 만들려면 **확인**을 클릭합니다. 이렇게 하면 지정된 데이터베이스가 사전 요구 사항을 충족하는지 여부가 확인됩니다.  
   

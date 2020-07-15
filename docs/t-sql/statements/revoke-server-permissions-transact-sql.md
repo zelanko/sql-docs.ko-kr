@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: eada4b2dbd5a76418ec8de9f988a6291e175da5f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 39617f16278c74f978d604cfee02d01e408c5854
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914268"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894554"
 ---
 # <a name="revoke-server-permissions-transact-sql"></a>REVOKE 서버 사용 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   서버 수준의 GRANT 및 DENY 권한을 제거합니다.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67914268"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]   
     { TO | FROM } <grantee_principal> [ ,...n ]  
@@ -143,7 +143,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한 또는 sysadmin 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-revoking-a-permission-from-a-login"></a>A. 로그인에서 사용 권한 취소  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `VIEW SERVER STATE`에서 `WanidaBenshoof` 권한을 취소합니다.  

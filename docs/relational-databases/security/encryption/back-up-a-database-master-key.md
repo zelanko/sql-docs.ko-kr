@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 마스터 키 백업 | Microsoft 문서
+description: Transact-SQL을 사용하여 SQL Server에서 데이터베이스 마스터 키를 백업하는 방법을 알아봅니다. 이 필수 키는 다른 키와 인증서를 암호화합니다.
 ms.custom: ''
 ms.date: 01/02/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 55db3923f26acaad667e444afb13ae0d86bcc59e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 922b921649892673f51876c6e2336e05244a1e17
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957507"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892433"
 ---
 # <a name="back-up-a-database-master-key"></a>데이터베이스 마스터 키 백업
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 데이터베이스 마스터 키를 백업하는 방법에 대해 설명합니다. 데이터베이스 마스터 키는 데이터베이스 내의 다른 키와 인증서를 암호화하는 데 사용됩니다. 데이터베이스 마스터 키가 삭제되거나 손상된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 해당 마스터 키를 해독하지 못할 수 있으며 해당 마스터 키를 사용하여 암호화한 데이터는 사실상 손실됩니다. 그러므로 데이터베이스 마스터 키를 백업하고 이 백업을 안전한 오프 사이트 위치에 저장해야 합니다.  
   
 ## <a name="before-you-begin"></a>시작하기 전에  
