@@ -12,15 +12,15 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 21e6d25305bd6abf4a3dc4555f2148a2fe385187
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ac7b9a500bb87dca74082c9d16874131eb82402d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121593"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197408"
 ---
 # <a name="transactions-sql-data-warehouse"></a>트랜잭션(SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   트랜잭션은 완전히 커밋되거나 롤백되는 하나 이상의 데이터베이스 문 그룹입니다. 각각의 트랜잭션은 ACID(원자성, 일관성, 격리성 및 내구성)입니다. 트랜잭션이 성공하면 그 안의 모든 문이 커밋됩니다. 트랜잭션이 실패하면 그룹의 문 중 하나 이상이 실패하는 것이며 전체 그룹이 롤백됩니다.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68121593"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 BEGIN TRANSACTION [;]  
 COMMIT [ TRAN | TRANSACTION | WORK ] [;]  
 ROLLBACK [ TRAN | TRANSACTION | WORK ] [;]  
@@ -78,7 +78,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  런타임 문 오류 이외의 오류로 인해 명시적 트랜잭션이 제대로 완료되지 않은 경우 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서는 자동으로 트랜잭션을 롤백하고 해당 트랜잭션에 보유 중인 모든 리소스를 해제합니다. 예를 들어, 클라이언트와 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 인스턴스 간의 네트워크 연결이 끊어진 경우 네트워크에서 이 인스턴스에게 연결이 끊어진 것을 알릴 때 이 연결에 대한 커밋되지 않은 모든 트랜잭션은 롤백됩니다.  
   
- 일괄 처리에서 런타임 문 오류가 발생할 경우 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 **ON**으로 설정된[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT**와 일관되게 작동하며 전체 트랜잭션이 롤백됩니다. **XACT_ABORT** 설정에 대한 자세한 내용은 [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx)를 참조하세요.  
+ 일괄 처리에서 런타임 문 오류가 발생할 경우 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ON**으로 설정된** **XACT_ABORT**와 일관되게 작동하며 전체 트랜잭션이 롤백됩니다. **XACT_ABORT** 설정에 대한 자세한 내용은 [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx)를 참조하세요.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  한 세션은 특정 시점에 한 트랜잭션만 실행할 수 있고 저장 지점과 중첩 트랜잭션은 지원되지 않습니다.  

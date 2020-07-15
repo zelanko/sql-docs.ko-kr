@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b9c74591bbd4b149c9a83fb703213a4ef34318e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa8594033c004bed2f37204d9de96a75bcfb83f3
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85761912"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301851"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,7 +65,9 @@ ALTER FULLTEXT INDEX ON table_name
 [;]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *table_name*  
  전체 텍스트 인덱스에 있는 열을 포함하는 테이블 또는 인덱싱된 뷰의 이름입니다. 선택적으로 데이터베이스 및 테이블 소유자 이름을 지정할 수 있습니다.  
   
