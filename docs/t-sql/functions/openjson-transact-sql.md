@@ -1,10 +1,8 @@
 ---
 title: OPENJSON(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2020
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -17,13 +15,14 @@ helpviewer_keywords:
 ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: b34693e5e1d4643773888ebeec9b11c8c62605e9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: cd78371a838d257065eece76d69e1c3e89acc1f7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632297"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738086"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON(Transact-SQL)
 
@@ -266,7 +265,7 @@ OPENJSON 함수가 반환하는 열은 WITH 옵션에 따라 달라집니다.
 }
 ```  
 
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="example-1---convert-a-json-array-to-a-temporary-table"></a>예 1 - JSON 배열을 임시 테이블로 변환
 
@@ -403,8 +402,8 @@ CROSS APPLY OPENJSON ( root.value) AS TheValues
 
 ## <a name="see-also"></a>참고 항목
 
- [JSON 경로 식&#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [OPENJSON을 사용하여 JSON 데이터를 행과 열로 변환&#40;SQL Server&#41;](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)   
- [기본 스키마와 함께 OPENJSON 사용&#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-the-default-schema-sql-server.md)   
- [명시적 스키마와 함께 OPENJSON 사용&#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md)  
+- [JSON 경로 식&#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+- [OPENJSON을 사용하여 JSON 데이터를 행과 열로 변환&#40;SQL Server&#41;](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)   
+- [기본 스키마와 함께 OPENJSON 사용&#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-the-default-schema-sql-server.md)   
+- [명시적 스키마와 함께 OPENJSON 사용&#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md)  
   

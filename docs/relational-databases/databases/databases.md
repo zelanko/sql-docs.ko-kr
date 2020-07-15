@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 | Microsoft 문서
+description: 데이터베이스 스키마, 테이블, 파일 그룹, 로그인 및 역할에 대해 알아봅니다. SQL Server Management Studio 도구를 사용하여 데이터베이스 작업을 수행하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2763a57a55a65d049be595d2286343eb5ba323ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 85c45ef2facc4a477c0851c2f2e89a7960eda001
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68109717"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630770"
 ---
 # <a name="databases"></a>데이터베이스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 데이터베이스는 구조화된 데이터의 특정 집합이 저장되는 테이블 모음으로 구성됩니다. 테이블에는 행과 열의 모음이 들어 있습니다. 행은 레코드나 튜플이라고도 하고 열은 특성이라고도 합니다. 테이블의 각 열에는 날짜, 이름, 달러 금액 및 숫자와 같은 특정 유형의 정보가 저장됩니다.  
   
 ## <a name="basic-information-about-databases"></a>데이터베이스에 대한 기본 정보  

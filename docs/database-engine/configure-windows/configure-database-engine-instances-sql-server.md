@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 엔진 인스턴스 구성(SQL Server) | Microsoft Docs
+description: 성능 및 가용성 요구 사항을 충족하도록 데이터베이스 엔진 인스턴스를 구성할 수 있는 SQL Server 구성 작업에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 84e36fcb-2c78-48e8-8e4b-bf784a3ee557
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4eee1bc0ed571516463541fe1fcc38e27dcafd98
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b2b3900c41067e7f46f392ceab913f1d8d096816
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012794"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751931"
 ---
 # <a name="configure-database-engine-instances-sql-server"></a>데이터베이스 엔진 인스턴스 구성(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   인스턴스에서 호스팅하는 데이터베이스에 대해 정의된 성능 및 가용성 요구 사항에 맞게 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 각 인스턴스를 구성해야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에는 리소스 사용과 같은 동작 및 감사 또는 트리거 재귀와 같은 기능의 가용성을 제어하는 구성 옵션이 있습니다.  
   
 ## <a name="instance-configuration"></a>인스턴스 구성  

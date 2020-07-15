@@ -1,5 +1,6 @@
 ---
 title: 메모리 액세스에 최적화된 테이블에 대한 통계 | Microsoft 문서
+description: 쿼리 최적화 프로그램이 메모리 최적화 테이블의 열에 대한 통계를 사용하여 메모리 내 OLTP의 쿼리 성능을 향상시키는 쿼리 계획을 만드는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 10/23/2016
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4a86f94a141b1f15e2bfb7e9ff3c4428f5b33707
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 47e5ae11ff712dae493b4f836998138f42f06f67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76909773"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734957"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 통계
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   쿼리 최적화 프로그램에서는 열에 대한 통계를 사용하여 쿼리 성능을 향상시키는 쿼리 계획을 만듭니다. 통계는 데이터베이스의 테이블에서 수집되어 데이터베이스 메타데이터에 저장됩니다.  
   
@@ -49,7 +50,7 @@ ms.locfileid: "76909773"
 
 3. 업데이트된 통계를 활용하기 위해 고유하게 컴파일된 저장 프로시저를 수동으로 다시 컴파일합니다.
 
-통계에 대한 일회성 스크립트:  낮은 호환성 수준에서 만든 메모리 최적화 테이블에 대해 다음 Transact-SQL 스크립트를 한 번 실행하여 메모리 최적화 모든 테이블의 통계를 업데이트하고 향후 통계 자동 업데이트를 사용하도록 설정합니다(AUTO_UPDATE_STATISTICS가 데이터베이스에 사용하도록 설정된 것으로 가정).
+통계에 대한 일회성 스크립트: 낮은 호환성 수준에서 만든 메모리 최적화 테이블에 대해 다음 Transact-SQL 스크립트를 한 번 실행하여 메모리 최적화 모든 테이블의 통계를 업데이트하고 향후 통계 자동 업데이트를 사용하도록 설정합니다(AUTO_UPDATE_STATISTICS가 데이터베이스에 사용하도록 설정된 것으로 가정).
 
 ```
 -- Assuming AUTO_UPDATE_STATISTICS is already ON for your database:
@@ -74,7 +75,7 @@ GO
 -- UPDATE STATISTICS [dbo].[MyMemoryOptimizedTable];
 ```
 
-자동 업데이트가 사용하도록 설정되어 있는지 확인:  다음 스크립트는 메모리 최적화 테이블에 대한 통계에 자동 업데이트가 사용되는지 여부를 확인합니다. 이전 스크립트를 실행한 후 모든 통계 개체에 대한 `1` 열에 `auto-update enabled` 가 반환됩니다.
+자동 업데이트가 사용하도록 설정되어 있는지 확인: 다음 스크립트는 메모리 최적화 테이블에 대한 통계에 자동 업데이트가 사용되는지 여부를 확인합니다. 이전 스크립트를 실행한 후 모든 통계 개체에 대한 `1` 열에 `auto-update enabled` 가 반환됩니다.
 
 ```
 SELECT 

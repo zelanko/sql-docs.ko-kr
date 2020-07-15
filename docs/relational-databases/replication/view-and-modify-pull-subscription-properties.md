@@ -19,15 +19,15 @@ ms.assetid: 1601e54f-86f0-49e8-b023-87a5d1def033
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 024f76fd4f87f353908fc634ec486f579f2e7e79
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eb0303d6279b8495d1f2f9480c6ac99486f124cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286930"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720639"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>끌어오기 구독 속성 보기 및 수정
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 끌어오기 구독 속성을 보고 수정하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -41,7 +41,7 @@ ms.locfileid: "76286930"
      [RMO(복제 관리 개체)](#RMOProcedure)  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- **구독 속성 - \<Publisher>: \<PublicationDatabase>** 대화 상자의 게시자 또는 구독자에서 끌어오기 구독 속성을 볼 수 있으며, 이 대화 상자는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 제공됩니다. 구독자에서 더 많은 속성을 볼 수 있으며 구독자에서 속성을 수정할 수 있습니다. 복제 모니터에서 사용 가능한 **모든 구독** 탭의 게시자에서 속성을 볼 수도 있습니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)을 참조하세요.  
+ **구독 속성 - \<Publisher>: \<PublicationDatabase>** 대화 상자의 게시자 또는 구독자에서 끌어오기 구독 속성을 볼 수 있으며, 이 대화 상자는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 제공됩니다. 구독자에서 더 많은 속성을 볼 수 있으며 구독자에서 속성을 수정할 수 있습니다. 복제 모니터에서 사용 가능한 **모든 구독** 탭의 게시자에서 속성을 볼 수도 있습니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)을 참조하세요.  
   
 #### <a name="to-view-pull-subscription-properties-from-the-publisher-in-management-studio"></a>Management Studio의 게시자에서 끌어오기 구독 속성을 보려면  
   

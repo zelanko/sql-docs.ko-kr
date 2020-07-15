@@ -10,20 +10,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5d74fd03a75b9b583eb92d34c45e7e0004ff9912
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7592100b7f8faec7dcfba35977e6b1cb5865854c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215882"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85741769"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>MongoDB의 외부 데이터에 액세스하도록 PolyBase 구성
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 문서에서는 SQL Server 인스턴스에서 PolyBase를 사용하여 MongoDB에서 외부 데이터를 쿼리하는 방법을 설명합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 PolyBase를 설치하지 않은 경우 [PolyBase 설치](polybase-installation.md)를 참조하세요.
 
@@ -75,20 +75,19 @@ MongoDB 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 참
 >외부 데이터 원본을 만든 후에는 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 명령을 사용하여 해당 원본 위에 쿼리 가능 테이블을 만들 수 있습니다. 
 
 ## <a name="flattening"></a>평면화
- 평면화는 MongoDB 문서 컬렉션에서 중첩되고 반복되는 데이터에 사용할 수 있습니다. 사용자는 `create an external table`을 활성화하고 데이터를 중첩 및/또는 반복하는 MongoDB 문서 콜렉션을 통해 관계형 스키마를 명시적으로 지정해야 합니다. 향후 중요 시점에 mongo 문서 컬렉션에 대해 자동 스키마 감지를 사용하도록 설정할 예정입니다.
-JSON 중첩/반복 데이터 형식은 다음과 같이 평면화됩니다.
+평면화는 MongoDB 문서 컬렉션에서 중첩되고 반복되는 데이터에 사용할 수 있습니다. 사용자는 `create an external table`을 활성화하고 데이터를 중첩 및/또는 반복하는 MongoDB 문서 콜렉션을 통해 관계형 스키마를 명시적으로 지정해야 합니다. JSON 중첩/반복 데이터 형식은 다음과 같이 평면화됩니다.
 
 * 개체: 정렬되지 않은 키/값 컬렉션을 중괄호로 묶습니다(중첩).
 
-   - 각 개체 키에 대한 테이블 열을 생성합니다.
+   - SQL Server는 각 개체 키에 대한 테이블 열을 생성합니다.
 
      * 열 이름: objectname_keyname
 
 * 배열: 쉼표로 구분한 정렬된 값을 대괄호로 묶습니다(반복).
 
-   - 각 배열 항목에 대해 새 테이블 행을 추가합니다.
+   - SQL Server는 각 배열 항목에 대해 새 테이블 행을 추가합니다.
 
-   - 배열 항목 인덱스를 저장하기 위해 배열당 1개의 열을 만듭니다.
+   - SQL Server는 배열 항목 인덱스를 저장하기 위해 배열당 1개의 열을 만듭니다.
 
      * 열 이름: arrayname_index
 
@@ -100,7 +99,7 @@ JSON 중첩/반복 데이터 형식은 다음과 같이 평면화됩니다.
 
 * 반복되는 필드가 여러 개 있으면 생성되는 행 수가 폭발적으로 증가할 수 있습니다.
 
-예를 들어, 비관계형 JSON 형식에 저장된 MongoDB 예제 데이터 세트 식당 컬렉션을 평가합니다. 각 식당에는 다른 날짜에 할당된 중첩된 주소 필드 및 등급 배열이 있습니다. 아래 그림은 중첩된 주소 및 중첩-반복 등급을 갖는 일반적인 식당을 보여 줍니다.
+예를 들어 SQL Server는 비관계형 JSON 형식에 저장된 MongoDB 예제 데이터 세트 식당 컬렉션을 평가합니다. 각 식당에는 다른 날짜에 할당된 중첩된 주소 필드 및 등급 배열이 있습니다. 아래 그림은 중첩된 주소 및 중첩-반복 등급을 갖는 일반적인 식당을 보여 줍니다.
 
 ![MongoDB 평면화](../../relational-databases/polybase/media/mongo-flattening.png "MongoDB 식당 평면화")
 

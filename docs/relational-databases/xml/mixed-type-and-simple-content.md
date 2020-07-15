@@ -1,5 +1,6 @@
 ---
 title: 혼합 형식 및 단순 내용 | Microsoft 문서
+description: SQL Server에서는 혼합 형식을 단순 내용으로 제한하는 XML 스키마를 만들 수 없음을 보여주는 예제를 확인합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6ea1f11d-e64b-4ebb-ab68-4eb6e4027665
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 97a9382e1a66fde35c1d7a860a6aeafac7f53759
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 990ead43919e80a910860ee15a3758a36e2a1f93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665096"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715133"
 ---
 # <a name="mixed-type-and-simple-content"></a>혼합 형식 및 단순 내용
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 혼합 형식을 단순 내용으로 제한할 수 없습니다.  
   
 ## <a name="example"></a>예제  

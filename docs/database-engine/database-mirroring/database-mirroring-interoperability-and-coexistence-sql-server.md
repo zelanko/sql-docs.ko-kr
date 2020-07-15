@@ -1,6 +1,6 @@
 ---
 title: '데이터베이스 미러링: 상호 운용성 및 공존성'
-description: SQL Server 데이터베이스 미러링 및 전체 텍스트 카탈로그, 데이터베이스 스냅샷, 로그 전달, 복제, 장애 조치(failover) 클러스터 인스턴스 등의 다른 SQL Server 기능의 상호 운용성 및 공존성에 대해 알아봅니다.
+description: SQL Server 데이터베이스 미러링과 전체 텍스트 카탈로그, 데이터베이스 스냅샷 등 기타 SQL Server 기능의 상호 운용성 및 공존성에 대해 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 89fef397-e0cf-4e08-b598-25b8d4170523
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 045aa94292a4633b8d61e95491d603e0d9897d0d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b70007c2beaa26d93107f167013a240fe0fa5864
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254165"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751913"
 ---
 # <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>데이터베이스 미러링: 상호 운용성 및 공존성(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   데이터베이스 미러링은 다음의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]기능 또는 구성 요소와 함께 사용할 수 있습니다.  
   
 -   [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server 장애 조치(failover) 클러스터링)](../../database-engine/database-mirroring/database-mirroring-and-sql-server-failover-cluster-instances.md)  

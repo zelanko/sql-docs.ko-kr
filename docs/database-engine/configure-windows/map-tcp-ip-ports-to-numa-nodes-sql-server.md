@@ -1,5 +1,6 @@
 ---
 title: NUMA 노드에 TCP IP 포트 매핑(SQL Server) | Microsoft Docs
+description: SQL Server 구성 관리자를 사용하여 TCP/IP 포트를 NUMA(Non-Uniform Memory Access) 노드에 매핑하는 방법을 알아봅니다. 노드 식별 비트맵을 만드는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 - TCP/IP [SQL Server], NUMA support
 - non-uniform memory access
 ms.assetid: 07727642-0266-4cbc-8c55-3c367e4458ca
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 48c645bd85034f226650cf5e98ddd18a6b8efa9e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e6926fba5e248b51df28b342b5c7d49ecf497f89
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67997980"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85680950"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>NUMA 노드에 TCP IP 포트 매핑(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 TCP/IP 포트를 NUMA(Non-Uniform Memory Access) 노드로 매핑하는 방법에 대해 설명합니다. 시작할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 오류 로그에 노드 정보를 씁니다.  
   
  사용할 노드의 번호를 확인하려면 오류 로그나 **sys.dm_os_schedulers** 뷰의 노드 정보를 확인하세요. 한 개 또는 여러 개의 노드에 TCP/IP 주소와 포트를 설정하려면 포트 번호 뒤에서 괄호 안에 노드 확인 비트맵(선호도 마스크)을 추가합니다. 십진수나 16진수 형식으로 노드를 지정할 수 있습니다. 비트맵을 만들려면 먼저 76543210처럼 0부터 시작하여 오른쪽에서 왼쪽으로 노드 번호를 매깁니다. 사용할 노드에 1을 지정하고 사용하지 않을 노드에 0을 지정하여 노드 목록의 이진 표현을 만드세요. 예를 들어 NUMA 노드 0, 2, 5를 사용하려면 00100101을 지정합니다.  
@@ -49,7 +50,7 @@ ms.locfileid: "67997980"
   
 #### <a name="to-map-a-tcpip-port-to-a-numa-node"></a>NUMA 노드에 TCP/IP 포트를 매핑하려면  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **SQL Server 네트워크 구성**을 확장한 다음 ‘**인스턴스 이름>’** 에 대한 프로토콜*을 클릭합니다.\<*  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **SQL Server 네트워크 구성**을 확장한 다음 *\<instance name>* 에 대한 **프로토콜**을 클릭합니다.  
   
 2.  세부 정보 창에서 **TCP/IP**를 두 번 클릭합니다.  
   

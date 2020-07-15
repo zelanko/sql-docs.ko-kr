@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0a9954e823ae66017c3a6105f0f0ec27964b7043
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f65e1888ed37eef6ad899063eb3d9ee87d2da6f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75246173"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735628"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>가용성 그룹 사용 권한 부여(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   AlwaysOn 가용성 그룹에 대한 사용 권한을 부여합니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "75246173"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name  
         TO < server_principal >  [ ,...n ]  
     [ WITH GRANT OPTION ]  
@@ -97,7 +97,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ## <a name="permissions"></a>사용 권한  
  가용성 그룹에 대한 CONTROL 권한 또는 서버에 대한 ALTER ANY AVAILABILITY GROUP 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-granting-view-definition-permission-on-an-availability-group"></a>A. 가용성 그룹에 대한 VIEW DEFINITION 권한 부여  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `VIEW DEFINITION`에 가용성 그룹 `MyAg`에 대한 `ZArifin` 권한을 부여합니다.  

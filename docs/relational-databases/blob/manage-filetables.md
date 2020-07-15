@@ -1,5 +1,6 @@
 ---
 title: FileTable 관리 | Microsoft 문서
+description: FileTable을 관리하는 데 사용할 수 있는 일반적인 관리 작업을 살펴보고 FileTable 보안, 백업 및 감사에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ef64d09c7f99f5081ebd1cbcdd7418614c3b41f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3ebab9c25ea864c20c6fbf0d4c601f9f01cd7e20
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908751"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631267"
 ---
 # <a name="manage-filetables"></a>FileTable 관리
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   FileTable을 관리하는 데 사용되는 일반적인 관리 태스크에 대해 설명합니다.  
   
 ##  <a name="how-to-get-a-list-of-filetables-and-related-objects"></a><a name="HowToEnumerate"></a> 방법: FileTable 및 관련 개체 목록 가져오기  

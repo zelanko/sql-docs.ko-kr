@@ -1,5 +1,6 @@
 ---
 title: 서버 속성(프로세서 페이지) | Microsoft Docs
+description: SQL Server의 프로세서 설정에 대해 알아봅니다. 작업자 스레드 수, 프로세서 할당 및 기타 속성을 제어하는 옵션을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.processor.f1
 ms.assetid: cc1581a2-492b-41f0-bda5-17909b65c4f7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 42eaf4bc1742c5d9ff101c308d6c120ceb8f3ef8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a3652ee3b01383d8d029bb0eb7aeefaa4f8cc045
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026124"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726597"
 ---
 # <a name="server-properties---processors-page"></a>서버 속성 - 프로세서 페이지
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 페이지를 사용하여 프로세서 옵션을 확인하거나 수정할 수 있습니다. 프로세서 선호도 설정은 프로세서가 두 개 이상 설치되어 있는 경우에만 활성화됩니다.  
   
 ## <a name="options"></a>옵션  

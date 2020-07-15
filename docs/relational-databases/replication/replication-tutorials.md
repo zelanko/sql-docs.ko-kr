@@ -1,5 +1,6 @@
 ---
 title: 복제 자습서 | Microsoft 문서
+description: 이 자습서를 사용하여 SQL Server에서 복제를 위해 서버를 준비한 다음 트랜잭션 및 병합 복제를 구성하는 방법을 알아볼 수 있습니다.
 ms.custom: ''
 ms.date: 04/09/2018
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 3df80893c54978060387c7ff96cb975b34740534
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 811723fa85d059b5e750135bf551f723c5c137dc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287342"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716715"
 ---
 # <a name="replication-tutorials"></a>복제 자습서
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 복제는 서버 간에 데이터 또는 데이터의 하위 집합을 이동시키는 강력한 솔루션입니다. 트랜잭션 복제를 사용하여 완전히 연결된 서버 간에 데이터를 복제할 수 있습니다. 병합 복제를 사용하여 가끔 연결되는 서버와 클라이언트 간에 데이터를 복제할 수도 있습니다. 이 문서에서 복제를 위해 서버를 준비하는 데 도움이 되는 자습서를 찾은 다음, 트랜잭션 및 병합 복제 복제를 구성하는 방법을 알아볼 수 있습니다. 
   
 복제 자습서에서 "게시자"는 복제되고 있는 원본 데이터가 포함된 서버를 가리킵니다. "구독자"는 대상 서버를 가리킵니다. 게시자와 구독자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 같은 인스턴스를 공유할 수 있지만 반드시 이렇게 해야 하는 것은 아닙니다. 자세한 내용은 [복제 게시 모델 개요](../../relational-databases/replication/publish/replication-publishing-model-overview.md)를 참조하세요.  

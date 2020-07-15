@@ -2,7 +2,7 @@
 title: CREATE DATABASE(Transact-SQL) | Microsoft Docs
 description: SQL Server, Azure SQL Database, Azure Synapse Analytics 및 Analytics Platform System의 데이터베이스 구문 만들기
 ms.custom: ''
-ms.date: 03/16/2020
+ms.date: 06/10/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 91d278d564ab6647ad1a585c0641dcc17a8dd8f8
-ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
+ms.openlocfilehash: 095e8f93377d75c411c63150203699908dee2d26
+ms.sourcegitcommit: 7679d0c5cc0edd35274a2b29e4d09347bfbefac6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82987449"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84664729"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -195,7 +195,8 @@ Windows 데이터 정렬 이름 및 SQL 데이터 정렬 이름에 대한 자세
 > [!NOTE]
 > 포함된 데이터베이스는 포함되지 않은 데이터베이스와 다른 방식으로 데이터가 정렬됩니다. 자세한 내용은 [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)을 참조하세요.
 
-WITH \<option> **\<filestream_options>**
+WITH \<option>
+ **\<filestream_options>**
 
 NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
@@ -207,7 +208,8 @@ NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **적용 대상**: [!INCL
 |READONLY|비트랜잭션 프로세스에서 이 데이터베이스의 FILESTREAM 데이터를 읽을 수 있습니다.|
 |FULL|FILESTREAM FileTable에 대한 전체 비트랜잭션 액세스를 사용할 수 있습니다.|
 
-DIRECTORY_NAME = \<directory_name> **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
+DIRECTORY_NAME = \<directory_name>
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
 
 Windows 호환 디렉터리 이름입니다. 이 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 Database_Directory 이름 중에서 고유해야 합니다. 고유성 비교는 대/소문자를 구분하며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬 설정과 관계가 없습니다. 데이터베이스에 FileTable을 만들기 전에 이 옵션을 설정해야 합니다.
 
@@ -266,7 +268,7 @@ CONTAINMENT가 PARTIAL로 설정된 경우에만 다음 옵션을 사용할 수 
 
   이 옵션을 지정하면 트랜잭션 로그 버퍼는 스토리지 클래스 메모리(NVDIMM-N 비휘발성 스토리지)로 지원되는 디스크 디바이스에 있는 볼륨에서 생성되며 영구적 로그 버퍼라고도 합니다. 자세한 내용은 [스토리지 클래스 메모리를 사용하는 트랜잭션 커밋 대기 시간 가속화](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) 를 참조하세요. **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 이상.
 
-FOR ATTACH [ WITH \< attach_database_option > ] 기존 운영 체제 파일 집합을 [연결](../../relational-databases/databases/database-detach-and-attach-sql-server.md)하여 데이터베이스를 만들도록 지정합니다. 여기에는 주 파일을 지정하는 \<filespec> 항목이 반드시 필요합니다. 또한 데이터베이스를 처음 만들었거나 마지막으로 연결했을 때 경로가 다른 파일에 대한 \<filespec> 항목이 필요합니다. 이러한 파일에는 반드시 \<filespec> 항목을 지정해야 합니다.
+FOR ATTACH [ WITH \< attach_database_option > ] 기존 운영 체제 파일 집합을 [연결](../../relational-databases/databases/database-detach-and-attach-sql-server.md)하여 데이터베이스를 만들도록 지정합니다. 여기에는 주 파일을 지정하는 \<filespec> 항목이 반드시 필요합니다. 또한 데이터베이스를 처음 만들었거나 마지막으로 연결했을 때의 경로와 다른 경로를 가진 파일의 \<filespec> 항목이 필요합니다. 이러한 파일에는 반드시 \<filespec> 항목을 지정해야 합니다.
 
 FOR ATTACH를 사용하려면 다음과 같은 조건을 충족해야 합니다.
 
@@ -288,7 +290,7 @@ FOR ATTACH에 RESTRICTED_USER 옵션을 지정할 수 있습니다. RESTRICTED_U
 
 데이터베이스에서 [!INCLUDE[ssSB](../../includes/sssb-md.md)]를 사용하는 경우 다음과 같이 FOR ATTACH 절에 WITH \<service_broker_option>을 사용합니다.
 
-\<service_broker_option> 데이터베이스에 대해 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 메시지 배달 및 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 식별자를 제어합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)] 옵션은 FOR ATTACH 절을 사용할 때만 지정할 수 있습니다.
+\<service_broker_option> 데이터베이스의 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 메시지 배달 및 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 식별자를 제어합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)] 옵션은 FOR ATTACH 절을 사용할 때만 지정할 수 있습니다.
 
 ENABLE_BROKER 지정된 데이터베이스에 대해 [!INCLUDE[ssSB](../../includes/sssb-md.md)]를 사용할 수 있도록 지정합니다. 즉, 메시지 배달이 시작되고 sys.databases 카탈로그 뷰에서 is_broker_enabled가 True로 설정됩니다. 데이터베이스에 기존 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 식별자가 유지됩니다.
 
@@ -409,10 +411,10 @@ DEFAULT 명명한 파일 그룹을 데이터베이스의 기본 파일 그룹으
 
 ON **(** NAME **=** _logical\_file\_name_ **,** FILENAME **='** _os\_file\_name_ **')** [ **,** ... *n* ] 데이터베이스 스냅샷을 만들기 위해 원본 데이터베이스의 파일 목록을 지정합니다. 스냅샷이 동작하려면 모든 데이터 파일을 개별적으로 지정해야 합니다. 그러나 데이터베이스 스냅샷에는 로그 파일이 허용되지 않습니다. FILESTREAM 파일 그룹은 데이터베이스 스냅샷에서 지원되지 않습니다. FILESTREAM 데이터 파일이 CREATE DATABASE ON 절에 포함되어 있으면 문이 실패하고 오류가 발생합니다.
 
-NAME, FILENAME 및 각 값에 대한 내용은 해당하는 \<filespec> 값의 설명을 참조하십시오.
+NAME, FILENAME 및 각 값에 대한 설명은 해당 \<filespec> 값의 설명을 참조하세요.
 
 > [!NOTE]
-> 데이터베이스 스냅샷을 만들 때는 다른 \<filespec&gt; 옵션 및 PRIMARY 키워드를 사용할 수 없습니다.
+> 데이터베이스 스냅샷을 만들 때는 다른 \<filespec> 옵션 및 PRIMARY 키워드를 사용할 수 없습니다.
 
 AS SNAPSHOT OF *source_database_name* 만들고 있는 데이터베이스를 *source_database_name*에 지정된 원본 데이터베이스의 데이터베이스 스냅샷으로 지정합니다. 스냅샷 및 원본 데이터베이스는 같은 인스턴스에 있어야 합니다.
 
@@ -509,7 +511,7 @@ GO
 > [!NOTE]
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)]은 데이터 및 로그 파일 권한을 설정하지 않습니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-creating-a-database-without-specifying-files"></a>A. 파일을 지정하지 않고 데이터베이스 만들기
 
@@ -887,6 +889,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
       | 'GP_Fsv2_72'
       | 'GP_S_Gen5_1' | 'GP_S_Gen5_2' | 'GP_S_Gen5_4' | 'GP_S_Gen5_6' | 'GP_S_Gen5_8'
       | 'GP_S_Gen5_10' | 'GP_S_Gen5_12' | 'GP_S_Gen5_14' | 'GP_S_Gen5_16'
+      | 'GP_S_Gen5_18' | 'GP_S_Gen5_20' | 'GP_S_Gen5_24' | 'GP_S_Gen5_32' | 'GP_S_Gen5_40'
       | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6'
       | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24'
       | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14'
@@ -913,6 +916,7 @@ CREATE DATABASE database_name
       | 'GP_Fsv2_72'
       | 'GP_S_Gen5_1' | 'GP_S_Gen5_2' | 'GP_S_Gen5_4' | 'GP_S_Gen5_6' | 'GP_S_Gen5_8'
       | 'GP_S_Gen5_10' | 'GP_S_Gen5_12' | 'GP_S_Gen5_14' | 'GP_S_Gen5_16'
+      | 'GP_S_Gen5_18' | 'GP_S_Gen5_20' | 'GP_S_Gen5_24' | 'GP_S_Gen5_32' | 'GP_S_Gen5_40'
       | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6'
       | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24'
       | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14'
@@ -1020,15 +1024,21 @@ DTU 모델에 대한 MAXSIZE 값은 지정된 경우 지정된 서비스 계층�
 |:----- | ------: |-------: |-------: |-------: |
 |최대 vCore 수|10|12|14|16|
 
+**범용 - 서버리스 컴퓨팅 - Gen5(3부)**
+
+|MAXSIZE|GP_S_Gen5_18|GP_S_Gen5_20|GP_S_Gen5_24|GP_S_Gen5_32|GP_S_Gen5_40|
+|:----- | ------: |-------: |-------: |-------: |--------: |
+|최대 vCore 수|18|20|24|32|40|
+
 **중요 비즈니스용 - 프로비저닝된 컴퓨팅 - Gen4(1부)**
 
-|성능 수준|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
+|컴퓨팅 크기(서비스 목표)|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
 |:--------------- | ------: |-------: |-------: |-------: |-------: |-------: |
 |최대 데이터 크기(GB)|1024|1024|1024|1024|1024|1024|
 
 **중요 비즈니스용 - 프로비저닝된 컴퓨팅 - Gen4(2부)**
 
-|성능 수준|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
+|컴퓨팅 크기(서비스 목표)|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
 |:--------------- | ------: |-------: |-------: |--------: |--------: |--------: |
 |최대 데이터 크기(GB)|1024|1024|1024|1024|1024|1024|
 
@@ -1061,15 +1071,15 @@ SERVICE_OBJECTIVE
 
 - **단일 및 풀링된 데이터베이스**
 
-  - 성능 수준을 지정합니다. 서비스 목표의 사용 가능한 값은 `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `GP_Fsv2_72`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80`, `BC_M_128`입니다.
+  - 컴퓨팅 크기(서비스 목표)를 지정합니다. 서비스 목표의 사용 가능한 값은 `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `GP_Fsv2_72`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80`, `BC_M_128`입니다.
 
 - **서버리스 데이터베이스인 경우**
 
-  - 성능 수준을 지정합니다. 서비스 목표의 사용 가능한 값은 `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6`, `GP_S_Gen5_8`, `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16`입니다.
+  - 컴퓨팅 크기(서비스 목표)를 지정합니다. 서비스 목표의 사용 가능한 값은 `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6`, `GP_S_Gen5_8`, `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16`, `GP_S_Gen5_18`, `GP_S_Gen5_20`, `GP_S_Gen5_24`, `GP_S_Gen5_32`, `GP_S_Gen5_40`입니다.
 
 - **하이퍼스케일 서비스 계층의 단일 데이터베이스인 경우**
 
-  - 성능 수준을 지정합니다. 서비스 목표의 사용 가능한 값은 `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`입니다.
+  - 컴퓨팅 크기(서비스 목표)를 지정합니다. 서비스 목표의 사용 가능한 값은 `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`입니다.
 
 서비스 목표 설명과 크기, 버전 및 서비스 목표 조합 등의 정보에 대한 자세한 내용은 [Azure SQL Database 서비스 계층](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers)을 참조하세요. 지정된 SERVICE_OBJECTIVE를 EDITION에서 지원하지 않는 경우 오류가 표시됩니다. SERVICE_OBJECTIVE 값을 한 계층에서 다른 계층으로 변경하려면(예: S1에서 P1로 변경), EDITION 값도 변경해야 합니다. 서비스 목표 설명과 크기, 버전 및 서비스 목표 조합 등의 정보에 대한 자세한 내용은 [Azure SQL Database 서비스 계층 및 성능 수준](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [DTU 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) 및 [vCore 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요. PRS 서비스 목표에 대한 지원이 제거되었습니다. 질문에 대해서는, 이메일 별칭(premium-rs@microsoft.com)을 사용하세요.
 
@@ -1128,7 +1138,7 @@ AS COPY OF [source_server_name.]source_database_name **적용 대상:** 단일 �
 
 **`CREATE DATABASE ... AS COPY OF` 구문 사용 관련 추가 요구 사항:** 로컬 서버에 문을 실행하는 로그인은 적어도 `db_owner` 원본 서버에 있어야 합니다. 로그인이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 기반으로 하는 경우, 로컬 서버의 문을 실행하는 로그인에는 동일한 이름과 암호를 사용하여 원본 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버에서 일치하는 로그온이 있어야 합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="simple-example"></a>간단한 예
 
@@ -1180,7 +1190,7 @@ CREATE DATABASE db1 ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = S3M100 ) ) ;
 
 ### <a name="creating-a-copy-of-a-database-on-another-server"></a>다른 서버에서 데이터베이스 복사본 만들기
 
-다음 예에서는 단일 데이터베이스의 P2 성능 수준에 db_copy라는 이름의 db_original 데이터베이스의 복사본을 만듭니다. 이것은 db_original이 단일 데이터베이스의 탄력적 풀 또는 성능 수준에 관계없이 적용됩니다.
+다음 예에서는 단일 데이터베이스의 P2 컴퓨팅 크기(서비스 목표)에 db_copy라는 이름의 db_original 데이터베이스의 복사본을 만듭니다. 이것은 db_original이 단일 데이터베이스의 탄력적 풀 또는 컴퓨팅 크기(서비스 목표)에 관계없이 적용됩니다.
 
 **적용 대상:** 단일 및 풀링된 데이터베이스만.
 
@@ -1189,7 +1199,7 @@ CREATE DATABASE db_copy
   AS COPY OF ozabzw7545.db_original ( SERVICE_OBJECTIVE = 'P2' );
 ```
 
-다음 예에서는 ep1이라는 이름의 탄력적 풀에 db_copy라는 이름의 db_original 데이터베이스의 복사본을 만듭니다. 이것은 db_original이 단일 데이터베이스의 탄력적 풀 또는 성능 수준에 관계없이 적용됩니다. Db_original이 다른 이름을 가진 탄력적 풀에 있으면 db_copy는 여전히 ep1에 생성됩니다.
+다음 예에서는 ep1이라는 이름의 탄력적 풀에 db_copy라는 이름의 db_original 데이터베이스의 복사본을 만듭니다. 이것은 db_original이 단일 데이터베이스의 탄력적 풀 또는 컴퓨팅 크기(서비스 목표)에 관계없이 적용됩니다. Db_original이 다른 이름을 가진 탄력적 풀에 있으면 db_copy는 여전히 ep1에 생성됩니다.
 
 **적용 대상:** 단일 및 풀링된 데이터베이스만.
 
@@ -1269,7 +1279,7 @@ Windows 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE(T
 - 로컬 Azure SQL Server에 대한 Azure AD 관리자
 - 로그인은 `dbcreator` 데이터베이스 역할의 멤버입니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="simple-example"></a>간단한 예
 
@@ -1341,7 +1351,7 @@ Windows 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE(T
 
 데이터베이스의 rowstore 데이터에 허용되는 최대 크기입니다. Rowstore 테이블, columnstore 인덱스의 deltastore 또는 클러스터형 columnstore 인덱스의 비클러스터형 인덱스에 저장된 데이터는 MAXSIZE보다 커질 수 없습니다. columnstore 형식으로 압축된 데이터는 크기 제한이 없으며 MAXSIZE에 의해 제한되지 않습니다.
 
-SERVICE_OBJECTIVE 성능 수준을 지정합니다. Azure Synapse의 서비스 목표에 대한 자세한 내용은 [DWU(데이터 웨어하우스 단위)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)를 참조하세요.
+SERVICE_OBJECTIVE 컴퓨팅 크기(서비스 목표)를 지정합니다. Azure Synapse의 서비스 목표에 대한 자세한 내용은 [DWU(데이터 웨어하우스 단위)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)를 참조하세요.
 
 ## <a name="general-remarks"></a>일반적인 주의 사항
 

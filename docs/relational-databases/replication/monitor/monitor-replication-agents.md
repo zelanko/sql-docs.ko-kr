@@ -1,5 +1,6 @@
 ---
 title: 복제 에이전트 모니터링 | Microsoft 문서
+description: SQL Server 복제 모니터는 복제 작업에 대한 구조적 뷰를 제공하며 특정 에이전트에 대한 정보를 찾을 수 있게 해 줍니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: fd19ef065c98022d0f8fecd8e4fd044007759005
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7984491281088f345e3e263356c6dad323d2cf5a
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288070"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807607"
 ---
 # <a name="monitor-replication-agents"></a>복제 에이전트 모니터링
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "76288070"
   
     -   큐 판독기 에이전트  
   
-     이러한 에이전트와 연결된 정보 및 태스크는 **에이전트** (각 게시자 및 구독에 대해 사용 가능) 및 **경고** (각 게시에 대해 사용 가능) 탭을 통해 액세스할 수 있습니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
+     이러한 에이전트와 연결된 정보 및 작업은 **에이전트**(각 게시자 및 구독에 대해 사용 가능) 및 **경고**(각 게시에 대해 사용 가능) 탭을 통해 액세스할 수 있습니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
 -   다음 에이전트는 복제 모니터에서 구독과 연결됩니다.  
   
@@ -47,7 +48,7 @@ ms.locfileid: "76288070"
   
     -   병합 에이전트  
   
-     이러한 에이전트와 연결된 정보 및 태스크는 **구독 조사 목록** (각 게시자에 대해 사용 가능) 또는 **모든 구독** (각 게시에 대해 사용 가능) 탭을 통해 액세스할 수 있습니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
+     이러한 에이전트와 연결된 정보 및 작업은 **구독 조사 목록**(각 게시자에 대해 사용 가능) 또는 **모든 구독** 탭(각 게시에 대해 사용 가능)을 통해 액세스할 수 있습니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
 ## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>SQL Server Management Studio를 사용하여 복제 에이전트 모니터링  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]는 복제 에이전트 모니터링을 위한 다음 대화 상자를 제공합니다.  

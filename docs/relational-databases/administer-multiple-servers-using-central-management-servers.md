@@ -1,5 +1,6 @@
 ---
 title: 중앙 관리 서버를 사용하여 여러 서버 관리
+description: 중앙 관리 서버를 지정하고 서버 그룹을 만들어 SQL Server에서 여러 서버를 관리하는 방법을 알아봅니다.
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +18,15 @@ ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a2e2da55bd04ba29cf1c6ef81757488f8d50fd24
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc7868735a05a81afe324755d880cc9e63353c7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055614"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754575"
 ---
 # <a name="administer-multiple-servers-using-central-management-servers"></a>중앙 관리 서버를 사용하여 여러 서버 관리
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
   중앙 관리 서버를 지정하고 서버 그룹을 만들어 여러 서버를 관리할 수 있습니다.  
   
 ## <a name="what-is-a-central-management-server-and-server-groups"></a>중앙 관리 서버와 서버 그룹이란?  

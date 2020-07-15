@@ -1,5 +1,6 @@
 ---
 title: 복제 유형 | Microsoft 문서
+description: 분산 애플리케이션에서 사용하도록 SQL Server에서 제공하는 다양한 유형의 복제에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: c1655e8d-d14c-455a-a7f9-9d2f43e88ab4
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: aa6cc0eb253c0f21a1b66870f9dac2607f65e2e3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c581a9d715e231fc593100549b3704b531292ed2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68769304"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720682"
 ---
 # <a name="types-of-replication"></a>복제 유형
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 분산 애플리케이션에서 사용할 수 있는 다음 유형의 복제를 제공합니다.  
 
 | **형식** | **설명** |

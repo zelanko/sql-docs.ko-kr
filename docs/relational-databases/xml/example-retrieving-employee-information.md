@@ -1,5 +1,6 @@
 ---
-title: '예제: 직원 정보 검색 | Microsoft 문서'
+title: '예제: 직원 정보 검색 | Microsoft Docs'
+description: FOR XML EXPLICIT가 있는 쿼리를 사용하여 데이터베이스에서 직원 정보를 XML로 검색하는 방법 예제를 확인합니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d3e123a5195d9eb6a5dd489c635cdd687b42f720
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 827334e3e132128ed78f612788c96e8ad15f5443
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006782"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632775"
 ---
 # <a name="example-retrieving-employee-information"></a>예제: 직원 정보 검색
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   이 예에서는 각 직원에 대한 직원 ID와 직원 이름을 검색합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 employeeID는 Employee 테이블의 BusinessEntityID 열로부터 가져올 수 있습니다. 직원 이름은 Person 테이블로부터 가져올 수 있습니다. BusinessEntityID 열을 사용하면 테이블을 조인할 수 있습니다.  
   
  FOR XML EXPLICIT 변환으로 다음과 같이 XML을 생성한다고 가정해 보십시오.  

@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 미러링 모니터 서버 | Microsoft Docs
+description: SQL Server 데이터베이스 미러링에서 자동 장애 조치(failover)의 미러링 모니터 함수에 대해 알아봅니다. 미러링 모니터 서버는 파트너와는 달리 데이터베이스를 제공하지 않습니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4dcb3d5669e62836f859252749469703bf26d29e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e462bc2367d7f5a3112580848b6a32126c604f46
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68043891"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754693"
 ---
 # <a name="database-mirroring-witness"></a>Database Mirroring Witness
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   자동 장애 조치(Failover)를 지원하려면 데이터베이스 미러링 세션을 보호 우선 모드로 구성해야 하며 *미러링 모니터 서버*라는 세 번째 서버 인스턴스가 있어야 합니다. 미러링 모니터 서버는 보호 우선 모드에 있는 미러 서버가 자동 장애 조치의 시작 여부를 인식할 수 있도록 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 선택적 인스턴스입니다. 미러링 모니터 서버는 두 파트너와는 달리 데이터베이스를 제공하지 않습니다. 미러링 모니터 서버는 자동 장애 조치(Failover)를 지원하는 역할만 수행합니다.  
   
 > [!NOTE]  
@@ -63,7 +64,7 @@ ms.locfileid: "68043891"
   
 -   미러 서버와 미러링 모니터 서버 및 주 서버와의 연결이 끊어진 경우에는 주 서버의 상태에 관계없이 자동 장애 조치를 수행할 수 없습니다.  
   
- 둘 이상의 서버 인스턴스가 연결되어 있어야 하는 요구 사항을 *쿼럼*이라고 합니다. 쿼럼을 사용하면 한 번에 하나의 파트너만 데이터베이스를 제공할 수 있습니다. 쿼럼 작동 방식과 쿼럼이 세션에 미치는 영향에 대한 자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)라는 세 번째 서버 인스턴스가 있어야 합니다.  
+ 둘 이상의 서버 인스턴스가 연결되어 있어야 하는 요구 사항을 *쿼럼*이라고 합니다. 쿼럼을 사용하면 한 번에 하나의 파트너만 데이터베이스를 제공할 수 있습니다. 쿼럼 작동 방법과 쿼럼이 세션에 미치는 영향에 대한 자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
   
 ##  <a name="to-add-or-remove-a-witness"></a><a name="AddRemoveWitness"></a> 미러링 모니터 서버를 추가하거나 제거하려면  
  **미러링 모니터 서버를 추가하려면**  

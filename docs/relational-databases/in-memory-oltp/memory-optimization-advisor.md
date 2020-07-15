@@ -1,5 +1,6 @@
 ---
 title: 메모리 최적화 관리자 | Microsoft 문서
+description: SQL Server Management Studio의 메모리 최적화 관리자를 활용하여 디스크 기반 테이블을 메모리 최적화 테이블로 마이그레이션할 수 있습니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a148e1725d1ce74d206e85cd9a8fd2b88f18eb0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9579587e39b4becd16be9bcae1e206703eb4720c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050195"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730860"
 ---
 # <a name="memory-optimization-advisor"></a>메모리 최적화 관리자
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   트랜잭션 성능 분속 보고서( [메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)참조)는 메모리 내 OLTP를 사용하도록 변환할 경우 효과를 얻을 수 있는 데이터베이스 테이블을 알려 줍니다. 메모리 내 OLTP를 사용하도록 포팅할 테이블을 식별한 후 SQL Server Management Studio의 메모리 최적화 관리자를 사용하여 디스크 기반 테이블을 메모리 액세스에 최적화된 테이블로 마이그레이션할 수 있습니다.  
   

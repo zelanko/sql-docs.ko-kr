@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - EOMONTH function
 ms.assetid: 1d060d8e-3297-4244-afef-57df2f8f92e2
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33677a8613631c757fa038741b9a407466eccd55
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3092c848f11ba62301755d9c112b49d6fb4d2fa7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827017"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732400"
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -53,15 +53,16 @@ EOMONTH ( start_date [, month_to_add ] )
 ## <a name="remarks"></a>설명  
 `EOMONTH` 함수는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 서버 이상 버전에 대해서는 원격으로 실행할 수 있습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이전 버전의 서버에 대해서는 원격으로 실행할 수 없습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-eomonth-with-explicit-datetime-type"></a>A. 명시적 datetime 형식을 사용하는 EOMONTH  
   
-```  
+```sql 
 DECLARE @date DATETIME = '12/1/2011';  
 SELECT EOMONTH ( @date ) AS Result;  
 GO  
-```  
+```
+
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
@@ -74,13 +75,13 @@ Result
 
 ### <a name="b-eomonth-with-string-parameter-and-implicit-conversion"></a>B. 문자열 매개 변수 및 암시적 변환을 사용하는 EOMONTH  
   
-```  
+```sql
 DECLARE @date VARCHAR(255) = '12/1/2011';  
 SELECT EOMONTH ( @date ) AS Result;  
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
 Result  
@@ -92,13 +93,7 @@ Result
   
 ### <a name="c-eomonth-with-and-without-the-month_to_add-parameter"></a>C. month_to_add 매개 변수를 사용하거나 사용하지 않는 EOMONTH  
   
-참고: 이러한 결과 집합에 표시된 값은 실행 날짜를 반환합니다.
-        
-        12/01/2011
-        
-        and
-        
-        12/31/2011
+이러한 결과 집합에 표시된 값은 `12/01/2011`과 `12/31/2011` 사이의 실행 날짜(두 날짜 포함)를 반영합니다.
 
 ```sql  
 DECLARE @date DATETIME = GETDATE();  
@@ -128,7 +123,4 @@ Last Month
 2011-11-30  
   
 (1 row(s) affected)  
-```  
-  
-  
-
+```

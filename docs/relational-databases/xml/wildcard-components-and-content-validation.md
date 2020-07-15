@@ -1,5 +1,6 @@
 ---
 title: 와일드카드 구성 요소 및 콘텐츠 유효성 검사 | Microsoft 문서
+description: XML 요소 및 특성 와일드 카드 구성 요소를 사용하여 콘텐츠 모델에 표시되는 항목의 유연성을 향상시키는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b8613bed755158854851483faf3ea6af4fb60402
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e1fac8a7a0e7eafc4b3bb04809ad51ee2f1b970e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665352"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729817"
 ---
 # <a name="wildcard-components-and-content-validation"></a>와일드카드 구성 요소 및 콘텐츠 유효성 검사
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   와일드카드 구성 요소는 콘텐츠 모델에 나타나는 형식의 유연성을 향상시키는 데 사용됩니다. 이러한 구성 요소는 XSD 언어에서 다음과 같은 방식으로 지원됩니다.  
   
--   요소 와일드카드 구성 요소: 이러한 구성 요소는 **\<xsd:any>** 요소로 표시됩니다.  
+-   요소 와일드카드 구성 요소: 이러한 구성 요소는 **\<xsd:any>** 요소로 표현됩니다.  
   
--   특성 와일드카드 구성 요소: 이러한 구성 요소는 **\<xsd:anyAttribute>** 요소로 표시됩니다.  
+-   특성 와일드카드 구성 요소: 이러한 구성 요소는 **\<xsd:anyAttribute>** 요소로 표현됩니다.  
   
  **\<xsd:any>** 및 **\<xsd:anyAttribute>** 와일드카드 문자 요소는 모두 **processContents** 특성의 사용을 지원합니다. 이렇게 하면 XML 애플리케이션에서 이러한 와일드카드 문자 요소와 관련된 문서 내용에 대한 유효성 검사를 처리하는 방법을 나타내는 값을 지정할 수 있습니다. 다음은 다양한 값과 해당 기능에 대한 설명입니다.  
   

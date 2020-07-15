@@ -1,5 +1,6 @@
 ---
 title: ID 열 복제 | Microsoft 문서
+description: SQL Server에서 복제는 모든 게시 및 구독 유형에서 ID 열을 처리합니다. 열을 수동으로 관리하거나 복제에서 관리하게 합니다.
 ms.custom: ''
 ms.date: 10/04/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a7feb252e98be7cc820b074bcb3c3b2c6ff4ff5d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8547753f7b00a4bfb057cc3587036022ee4c4e0a
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287595"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807170"
 ---
 # <a name="replicate-identity-columns"></a>ID 열 복제
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

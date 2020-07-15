@@ -15,16 +15,16 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cdff5b987e6ff86a148cdb8d8ad317e9c14a543f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4a20924d617f3c0333d548a3134f2bfc211dab7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433970"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733693"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows용 이벤트 추적 대상
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   ETW(Windows용 이벤트 추적)를 대상으로 사용하려면 먼저 ETW에 대한 실무 지식을 갖추고 있는 것이 좋습니다. ETW 추적은 확장 이벤트와 함께 사용되거나 확장 이벤트의 이벤트 소비자로 사용됩니다. 다음 외부 링크를 클릭하면 ETW에 대한 배경 지식을 제공하는 항목으로 연결됩니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "79433970"
     > [!IMPORTANT]  
     >  첫 번째 세션이 시작되면 파일 경로를 변경할 수 없습니다.  
   
--   MOF(Managed Object Format) 파일은 *\<설치 경로*\Microsoft SQL Server\Shared에 있습니다. 자세한 내용은 MSDN의 [Managed Object Format](https://go.microsoft.com/fwlink/?LinkId=92851) 을 참조하십시오.
+-   MOF(Managed Object Format) 파일은 *\<your install path>* \Microsoft SQL Server\Shared에 있습니다. 자세한 내용은 MSDN의 [Managed Object Format](https://go.microsoft.com/fwlink/?LinkId=92851) 을 참조하십시오.
 
 <!-- ?LinkId=92851  ==  https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-
 -->

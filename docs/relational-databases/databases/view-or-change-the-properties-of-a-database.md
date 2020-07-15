@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스의 속성 보기 또는 변경 | Microsoft 문서
+description: SQL Server Management Studio 또는 Transact-SQL을 사용하여 SQL Server에서 데이터베이스의 속성을 보거나 변경하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 01/05/2018
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 9e8ac097-84b7-46c7-85e3-c1e79f94d747
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc1e6d1021e1e7cf30a683d8c81c625a56b9766c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 65eed15f9270c2a64ee5588f71b1fed37650905b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68127064"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642618"
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>데이터베이스의 속성 보기 또는 변경
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]데이터베이스의 속성을 보거나 변경하는 방법에 대해 설명합니다. 데이터베이스 속성을 변경하면 수정 사항이 즉시 반영됩니다.  
   
@@ -64,7 +65,7 @@ ms.locfileid: "68127064"
 3.  **데이터베이스 속성** 대화 상자에서 해당 정보를 확인할 페이지를 선택합니다. 예를 들어 데이터 파일 및 로그 파일 정보를 보려면 **파일** 페이지를 선택합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
- Transact-SQL은 데이터베이스의 속성을 확인하고 변경하는 여러 방법을 제공합니다. 데이터베이스의 속성을 보려는 경우 [DATABASEPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) 함수 및 [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰를 사용할 수 있습니다. 데이터베이스의 속성을 변경하려는 경우에는 사용 중인 환경에 적합한 ALTER DATABASE 문 버전([ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) 또는 [ALTER DATABASE(Azure SQL Database))](../../t-sql/statements/alter-database-azure-sql-database.md)을 사용할 수 있습니다. 데이터베이스 범위 속성을 보려면 [sys.database_scoped_configurations&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 카탈로그 뷰를 사용하고 데이터베이스 범위 속성을 변경하려면 [ALTER DATABASE SCOPED CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 문을 사용합니다.  
+ Transact-SQL은 데이터베이스의 속성을 확인하고 변경하는 여러 방법을 제공합니다. 데이터베이스의 속성을 보려는 경우 [DATABASEPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) 함수 및 [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰를 사용할 수 있습니다. 데이터베이스의 속성을 변경하려는 경우 사용 중인 환경에 적합한 버전의 ALTER DATABASE  문([ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) 또는 [ALTER DATABASE(Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md))을 사용할 수 있습니다. 데이터베이스 범위 속성을 보려면 [sys.database_scoped_configurations&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 카탈로그 뷰를 사용하고 데이터베이스 범위 속성을 변경하려면 [ALTER DATABASE SCOPED CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 문을 사용합니다.  
   
 #### <a name="to-view-a-property-of-a-database-by-using-the-databasepropertyex-function"></a>DATABASEPROPERTYEX 함수를 사용하여 데이터베이스의 속성을 보려면  
   

@@ -1,5 +1,6 @@
 ---
 title: 메모리 액세스에 최적화된 파일 그룹 | Microsoft 문서
+description: SQL Server에서 메모리 최적화 테이블을 만들기 전에 데이터 파일 및 델타 파일용 컨테이너가 있는 메모리 최적화 파일 그룹을 만드는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 265419b25df79ce491567cf563188ac70cdccc42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 636bc0ebcfbd85f9da38ecff6cd1ff4a966164c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68024957"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715355"
 ---
 # <a name="the-memory-optimized-filegroup"></a>메모리 액세스에 최적화된 파일 그룹
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   메모리 최적화 테이블을 만들려면 먼저 메모리 최적화 파일 그룹을 만들어야 합니다. 메모리 최적화 파일 그룹에는 컨테이너가 하나 이상 포함되어 있고, 각 컨테이너에는 데이터 파일이나 델타 파일, 또는 둘 다 포함되어 있습니다.  
   
  `SCHEMA_ONLY` 테이블의 데이터 행이 유지되지 않고 메모리 최적화 테이블의 메타데이터와 고유하게 컴파일된 저장 프로시저가 기존 카탈로그에 저장되지만 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진에는 메모리 최적화 테이블이 있는 데이터베이스에 대한 균일한 환경을 제공하기 위해 `SCHEMA_ONLY` 메모리 최적화 테이블에 대해 메모리 최적화 파일 그룹이 여전히 필요합니다.  
@@ -31,7 +32,7 @@ ms.locfileid: "68024957"
     ALTER DATABASE imoltp ADD FILEGROUP imoltp_mod CONTAINS MEMORY_OPTIMIZED_DATA  
     ```  
   
--   `MEMORY_OPTIMIZED_DATA` 파일 그룹에 하나 이상의 컨테이너를 추가해야 합니다. 다음은 그 예입니다.  
+-   `MEMORY_OPTIMIZED_DATA` 파일 그룹에 하나 이상의 컨테이너를 추가해야 합니다. 예를 들면 다음과 같습니다.  
   
     ```sql  
     ALTER DATABASE imoltp ADD FILE (name='imoltp_mod1', filename='c:\data\imoltp_mod1') TO FILEGROUP imoltp_mod  

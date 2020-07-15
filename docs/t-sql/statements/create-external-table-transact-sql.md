@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee3ae71f906b56fa91698d5238e2391d928d8be2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8b208b63dd096f35faa151f6f739d5e20cc3917b
+ms.sourcegitcommit: 38639b67a135ca1a50a8e38fa61a089efe90e3f1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633373"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454506"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE(Transact-SQL)
 
@@ -93,7 +93,7 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 만들려는 테이블의 한 부분에서 세 부분으로 이루어진 이름입니다. 외부 테이블의 경우 SQL은 Hadoop 또는 Azure Blob 스토리지에서 참조되는 파일이나 폴더에 대한 기본 통계와 함께 메타데이터만 저장합니다. 실제 데이터가 이동되거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장되지 않습니다.
 
-\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, Null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
 
 데이터 형식 및 열 수를 포함한 열 정의는 외부 파일의 데이터와 일치해야 합니다. 불일치가 있는 경우 실제 데이터를 쿼리할 때 파일 행이 거부됩니다.
 
@@ -107,7 +107,7 @@ SQL Server에서는 CREATE EXTERNAL TABLE 문이 경로 및 폴더가 없으면 
 
 ![외부 테이블에 대한 재귀적 데이터](../../t-sql/statements/media/aps-polybase-folder-traversal.png "외부 테이블에 대한 재귀적 데이터")
 
-기본값을 변경하고 루트 폴더에서 읽기만 하려면 core-site.xml 구성 파일에서 특성 \<polybase.recursive.traversal>을 'false'로 설정합니다. 이 파일은 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` 아래에 있습니다. `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`)을 입력합니다.
+기본값을 변경하고 루트 폴더에서 읽기만 하려면 core-site.xml 구성 파일에서 \<polybase.recursive.traversal> 특성을 'false'로 설정합니다. 이 파일은 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` 아래에 있습니다. 예들 들어 `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`입니다.
 
 DATA_SOURCE = *external_data_source_name* 외부 데이터의 위치를 포함하는 외부 데이터 원본의 이름을 지정합니다. 이 위치는 HDFS(Hadoop 파일 시스템), Azure Storage blob 컨테이너 또는 Azure Data Lake Store입니다. 외부 데이터 원본을 만들려면 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 사용합니다.
 
@@ -218,7 +218,7 @@ SCHEMARESOLUTION 개체에 대한 공유 잠금입니다.
 
 외부 테이블에 대한 데이터 파일은 Hadoop 또는 Azure Blob 스토리지에 저장됩니다. 이러한 데이터 파일은 사용자 고유의 프로세스에 의해 만들어지고 관리됩니다. 외부 데이터의 보안을 관리하는 것은 사용자의 책임입니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-create-an-external-table-with-data-in-text-delimited-format"></a>A. 텍스트로 구분된 형식의 데이터를 사용하여 외부 테이블 만들기
 
@@ -610,7 +610,7 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 만들려는 테이블의 한 부분에서 세 부분으로 이루어진 이름입니다. 외부 테이블의 경우 SQL은 Azure SQL Database에서 참조되는 파일이나 폴더에 대한 기본 통계와 함께 메타데이터만 저장합니다. 실제 데이터가 이동되거나 Azure SQL Database에 저장되지 않습니다.
 
-\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, Null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
 
 > [!NOTE]
 > `Text`, `nText` 및 `XML`은(는) Azure SQL Database의 외부 테이블에 있는 열에서 지원되지 않는 데이터 형식입니다.
@@ -685,7 +685,7 @@ SELECT FROM EXTERNAL TABLE과 같은 임시 쿼리 시나리오에서 SQL Databa
 
 SCHEMARESOLUTION 개체에 대한 공유 잠금입니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-create-external-table-for-azure-sql-database"></a>A. Azure SQL Database용 외부 테이블 만들기
 
@@ -756,7 +756,7 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 만들려는 테이블의 한 부분에서 세 부분으로 이루어진 이름입니다. 외부 테이블의 경우, Azure Data Lake, Hadoop 또는 Azure Blob 스토리지에서 참조되는 파일이나 폴더에 대한 기본 통계와 함께 메타데이터만 해당합니다. 외부 테이블을 만들 때 실제 데이터가 이동하거나 저장되지 않습니다.
 
-\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, Null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
 
 > [!NOTE]
 > `Text`, `nText` 및`XML` 은 Azure SQL Warehouse의 외부 테이블에 있는 열에서 지원되지는 않는 데이터 형식입니다.
@@ -771,7 +771,7 @@ LOCATION = '*folder_or_filepath*' Azure Data Lake, Hadoop 또는 Azure Blob 스�
 
 ![외부 테이블에 대한 재귀적 데이터](../../t-sql/statements/media/aps-polybase-folder-traversal.png "외부 테이블에 대한 재귀적 데이터")
 
-기본값을 변경하고 루트 폴더에서 읽기만 하려면 core-site.xml 구성 파일에서 특성 \<polybase.recursive.traversal>을 'false'로 설정합니다. 이 파일은 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` 아래에 있습니다. `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`)을 입력합니다.
+기본값을 변경하고 루트 폴더에서 읽기만 하려면 core-site.xml 구성 파일에서 \<polybase.recursive.traversal> 특성을 'false'로 설정합니다. 이 파일은 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` 아래에 있습니다. 예들 들어 `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`입니다.
 
 DATA_SOURCE = *external_data_source_name* 외부 데이터의 위치를 포함하는 외부 데이터 원본의 이름을 지정합니다. 이 위치는 Azure Data Lake에 있습니다. 외부 데이터 원본을 만들려면 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 사용합니다.
 
@@ -829,7 +829,9 @@ reason 파일과 data 파일에는 모두 CTAS 문과 연결된 queryID가 있�
 - **ALTER ANY SCHEMA**
 - **ALTER ANY EXTERNAL DATA SOURCE**
 - **ALTER ANY EXTERNAL FILE FORMAT**
-- **CONTROL DATABASE**
+
+> [!NOTE]
+> CONTROL DATABASE 권한은 마스터 키, 데이터베이스 범위 자격 증명 및 외부 데이터 원본을 만드는 경우에만 필요합니다.
 
 참고로 외부 데이터 원본을 만드는 로그인은 Hadoop 또는 Azure Blob Storage에 있는 외부 데이터 원본에 대한 읽기 및 쓰기 권한을 가져야 합니다.
 
@@ -879,7 +881,7 @@ Data Warehouse의 PolyBase에는 테이블 정의에 의해 유효한 단일 행
 
 SCHEMARESOLUTION 개체에 대한 공유 잠금입니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-importing-data-from-adls-into-azure-ssdw"></a>A. Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]로 ADLS의 데이터 가져오기
 
@@ -982,7 +984,7 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 만들려는 테이블의 한 부분에서 세 부분으로 이루어진 이름입니다. 외부 테이블의 경우 Analytics Platform System은 Hadoop 또는 Azure Blob 스토리지에서 참조되는 파일이나 폴더에 대한 기본 통계와 함께 메타데이터만 저장합니다. 실제 데이터가 이동되거나 Analytics Platform System에 저장되지 않습니다.
 
-\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, Null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
 
 데이터 형식 및 열 수를 포함한 열 정의는 외부 파일의 데이터와 일치해야 합니다. 불일치가 있는 경우 실제 데이터를 쿼리할 때 파일 행이 거부됩니다.
 
@@ -996,7 +998,7 @@ Analytics Platform System에서는 [CREATE EXTERNAL TABLE AS SELECT](create-exte
 
 ![외부 테이블에 대한 재귀적 데이터](../../t-sql/statements/media/aps-polybase-folder-traversal.png "외부 테이블에 대한 재귀적 데이터")
 
-기본값을 변경하고 루트 폴더에서 읽기만 하려면 core-site.xml 구성 파일에서 특성 \<polybase.recursive.traversal>을 'false'로 설정합니다. 이 파일은 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` 아래에 있습니다. `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`)을 입력합니다.
+기본값을 변경하고 루트 폴더에서 읽기만 하려면 core-site.xml 구성 파일에서 \<polybase.recursive.traversal> 특성을 'false'로 설정합니다. 이 파일은 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` 아래에 있습니다. 예들 들어 `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`입니다.
 
 DATA_SOURCE = *external_data_source_name* 외부 데이터의 위치를 포함하는 외부 데이터 원본의 이름을 지정합니다. 이 위치는 Hadoop 또는 Azure Blob Storage입니다. 외부 데이터 원본을 만들려면 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 사용합니다.
 
@@ -1103,7 +1105,7 @@ SCHEMARESOLUTION 개체에 대한 공유 잠금입니다.
 
 외부 테이블에 대한 데이터 파일은 Hadoop 또는 Azure Blob 스토리지에 저장됩니다. 이러한 데이터 파일은 사용자 고유의 프로세스에 의해 만들어지고 관리됩니다. 외부 데이터의 보안을 관리하는 것은 사용자의 책임입니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-join-hdfs-data-with-analytics-platform-system-data"></a>A. Analytics Platform System 데이터로 HDFS 데이터 조인
 

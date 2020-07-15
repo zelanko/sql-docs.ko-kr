@@ -1,5 +1,6 @@
 ---
 title: 데이터 동기화 | Microsoft 문서
+description: 복제본의 데이터 동기화는 SQL Server의 게시자와 구독자 간에 데이터 및 스키마 변경 사항이 전파되는 것을 의미합니다.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -22,15 +23,15 @@ ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b458b4555276f4e9f6af1ce72e5981e06c984407
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a6c7ba7deddb6b2728a846cb454917ee6b065bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287015"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716683"
 ---
 # <a name="synchronize-data"></a>데이터 동기화
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   데이터 동기화란 초기 스냅샷이 구독자에 적용된 후 게시자와 구독자 간에 데이터 및 스키마 변경 내용이 전파되는 프로세스를 말합니다. 동기화는 다음과 같은 방식으로 발생할 수 있습니다.  
   
 -   계속 - 트랜잭션 복제에 일반적임  

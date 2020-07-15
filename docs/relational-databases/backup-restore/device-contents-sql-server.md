@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1c9819b7853121c006180d0a988dbc83e905505f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0c79fa26bb75373811b179ff73462d15f9791b87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179192"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748052"
 ---
 # <a name="device-contents-sql-server"></a>디바이스 내용(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 대화 상자를 사용하여 백업 정보를 확인할 수 있습니다. 이 정보에는 디바이스, 미디어, 미디어 세트 및 백업 세트에 대한 설명이 포함됩니다.  
   
  **SQL Server Management Studio를 사용하여 백업 디바이스의 내용을 보려면**  
@@ -59,7 +59,7 @@ ms.locfileid: "82179192"
 |------------|------------|  
 |**이름**|백업 세트의 이름입니다.|  
 |**형식**|수행된 백업 유형: 전체, 차등 또는 트랜잭션 로그일 수 있습니다.|  
-|**구성 요소**|백업된 구성 요소: 데이터베이스, 파일 또는 *\<blank>* (트랜잭션 로그의 경우)일 수 있습니다.|  
+|**구성 요소**|백업된 구성 요소: 데이터베이스, 파일 또는 *\<blank>* (트랜잭션 로그의 경우)가 될 수 있습니다.|  
 |**Server**|백업 작업을 수행한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 이름입니다.|  
 |**Database**|백업한 데이터베이스 이름입니다.|  
 |**위치**|볼륨에 있는 백업 세트의 위치입니다.|  

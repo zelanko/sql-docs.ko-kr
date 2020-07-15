@@ -1,5 +1,6 @@
 ---
-title: '예제: ELEMENT 지시어 지정 | Microsoft 문서'
+title: '예제: ELEMENT 지시어 지정 | Microsoft Docs'
+description: SQL 쿼리에서 ELEMENT 지시어를 지정하여 요소 중심 XML을 생성하는 방법의 예제를 살펴봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9b07ece5aab18649cd9c98f1028d05131b6c7687
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: d6e8f74e0d5d8d90afa09c733e5b46b47b533995
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664770"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632617"
 ---
 # <a name="example-specifying-the-element-directive"></a>예제: ELEMENT 지시어 지정
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   이 예에서는 직원 정보를 검색하고 다음과 같이 요소 중심 XML을 생성합니다.  
   
 ```  

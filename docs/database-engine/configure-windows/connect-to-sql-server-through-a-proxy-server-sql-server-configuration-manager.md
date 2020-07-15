@@ -1,5 +1,6 @@
 ---
 title: 프록시 서버를 통해 SQL Server에 연결(SQL Server 구성 관리자) | Microsoft Docs
+description: SQL Server 구성 관리자를 사용하여 프록시 서버를 통해 SQL Server에 연결하는 방법을 알아봅니다. 원격 WinSock(RWS)을 사용하여 원격으로 수신 대기하는 방법을 확인합니다.
 ms.custom: ''
 ms.date: 12/15/2016
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - Microsoft Proxy Server [SQL Server]
 - local address tables [SQL Server]
 ms.assetid: 39714de0-2a1f-4179-9091-5c3fa4612545
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 65313b589892a2a72edc50c017914272c6a31925
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7be0c8d6be720da45072922f2d5399f9ad0b6877
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012143"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728627"
 ---
 # <a name="connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager"></a>프록시 서버를 통해 SQL Server에 연결(SQL Server 구성 관리자)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 프록시 서버를 통해 SQL Server에 연결하는 방법에 대해 설명합니다. 원격 WinSock(RWS)를 통해 원격으로 수신하려면 수신 노드 주소가 LAT 항목의 범위 밖에 있도록 프록시 서버에 대해 로컬 주소 테이블(LAT)을 정의하십시오.  
   

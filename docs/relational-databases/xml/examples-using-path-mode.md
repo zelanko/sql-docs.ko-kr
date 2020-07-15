@@ -1,5 +1,6 @@
 ---
-title: '예제: PATH 모드 사용 | Microsoft 문서'
+title: '예제: PATH 모드 사용 | Microsoft Docs'
+description: SELECT 쿼리에서 XML을 생성하기 위해 PATH 모드를 사용하는 예제를 살펴봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: dd4b9487f6a185b76b5f4ee52d7a39f349906d46
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 74e447caefd30eba8ccfc9ab27db2c74d2f63c20
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943373"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729955"
 ---
 # <a name="examples-using-path-mode"></a>예제: PATH 모드 사용
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   다음 예에서는 SELECT 쿼리에서 XML을 생성할 때 PATH 모드를 사용하는 방법을 보여 줍니다. 이러한 쿼리는 대부분 ProductModel 테이블의 Instructions 열에 저장된 자전거 제조 지침 XML 문서에 대해 지정됩니다.  
   
 ## <a name="specifying-a-simple-path-mode-query"></a>간단한 PATH 모드 쿼리 지정  

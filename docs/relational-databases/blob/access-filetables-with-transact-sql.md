@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL을 사용하여 FileTable에 액세스 | Microsoft 문서
+description: FileTable에서 Transact-SQL DML(데이터 조작 언어) 명령이 작동하는 방식을 알아봅니다. DML 작업 중에 적용되는 시스템 정의 제약 조건을 확인합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c86ab8b3f29699e807c61b571832c106ab235710
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f6b0b0d1f7dd6467487266206756af8f82c66bf4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68018895"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85744395"
 ---
 # <a name="access-filetables-with-transact-sql"></a>Transact-SQL을 사용하여 FileTable에 액세스
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   FileTable에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] DML(데이터 조작 언어) 명령이 작동하는 방식에 대해 설명합니다.  
   
 ##  <a name="insert-operations-on-filetables"></a><a name="BasicsInsert"></a> FileTable에 대한 INSERT 작업  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 67f0b04b6ac0ce0fc9d8e20ac8b8088061a6ab0a
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: e2d32824b62cf54132c6168e5f44d93fa0cd6289
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82108004"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726152"
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 로컬 테이블, 분할된 테이블 및 여러 서버에 분산된 테이블과 같은 다양한 데이터 스토리지 아키텍처의 쿼리를 처리합니다. 다음 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 실행 계획 캐싱을 통해 쿼리를 처리하고 쿼리 재사용을 최적화하는 방법에 대해 설명합니다.
 

@@ -1,5 +1,6 @@
 ---
 title: PowerShell을 사용하여 Always Encrypted 키 프로비전 | Microsoft Docs
+description: SqlServer PowerShell 모듈을 사용하여 Always Encrypted에 대한 키를 프로비전하여 암호화 키와 데이터베이스에 대한 제어 액세스를 제공하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/26/2019
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 3bdf8629-738c-489f-959b-2f5afdaf7d61
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2748ffa055927670b840a17590dc4e29436deb30
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc9baa4cb8d27c458b92eb952a7121906dcfb1ab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73594468"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627104"
 ---
 # <a name="provision-always-encrypted-keys-using-powershell"></a>PowerShell을 사용하여 Always Encrypted 키 프로비전
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
     
 이 문서에서는 [SqlServer PowerShell 모듈](../../../relational-databases/scripting/sql-server-powershell-provider.md)을 사용하여 상시 암호화 키를 프로비전하는 단계를 제공합니다. [역할 구분이 있거나 없는 경우](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#KeyManagementRoles)모두 키 저장소에 실제 암호화 액세스 키에 대한 액세스 권한이 있는 사용자 및 데이터베이스에 대한 액세스 권한이 있는 사용자를 제어함으로써 PowerShell을 사용하여 상시 암호화 키를 프로비전할 수 있습니다. 

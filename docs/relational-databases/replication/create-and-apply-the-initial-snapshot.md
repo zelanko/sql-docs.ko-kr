@@ -1,5 +1,6 @@
 ---
 title: 초기 스냅샷 만들기 및 적용 | Microsoft 문서
+description: SQL Server Management Studio, Transact-SQL 또는 복제 관리 개체를 사용하여 SQL Server에서 초기 스냅샷을 만들고 적용하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 11/20/2018
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6f5bb78720f864a5fddcbe957f36290e097984ea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1ac8f70f642faaa7b9cb9c1afa4ec721b8876599
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76285014"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85654335"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Create and Apply the Initial Snapshot
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 초기 스냅샷을 만들고 적용하는 방법에 대해 설명합니다. 매개 변수가 있는 필터를 사용하는 병합 게시에는 두 부분으로 구성된 스냅샷이 필요합니다. 자세한 내용은 [매개 변수가 있는 필터로 병합 게시에 대한 스냅샷 만들기](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
   스냅샷은 복제가 생성된 후 스냅샷 에이전트에서 생성됩니다. 생성 방법은 다음과 같습니다.  
   
@@ -50,13 +51,13 @@ ms.locfileid: "76285014"
 
  배포 구성 마법사의 **스냅샷 폴더** 페이지에서 기본 스냅샷 위치를 지정합니다. 이 마법사 사용에 대한 자세한 내용은 [게시 및 배포 구성](../../relational-databases/replication/configure-publishing-and-distribution.md)을 참조하세요. 배포자로 구성되어 있지 않은 서버에서 게시를 만드는 경우 새 게시 마법사의 **스냅샷 폴더** 페이지에서 기본 스냅샷 위치를 지정합니다. 이 마법사를 사용하는 방법에 대한 자세한 내용은 [게시 만들기](../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
- **배포자 속성 - \<Distributor&gt;** 대화 상자의 **게시자** 페이지에서 기본 스냅샷 위치를 수정합니다. 자세한 내용은 [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)을 참조하세요. **게시 속성 - \<게시&gt;** 대화 상자에서 각 게시에 대한 스냅샷 폴더를 설정합니다. 자세한 내용은 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+ **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 기본 스냅샷 위치를 수정합니다. 자세한 내용은 [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)을 참조하세요. **게시 속성 - \<Publication>** 대화 상자에서 각 게시에 대한 스냅샷 폴더를 설정합니다. 자세한 내용은 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 ### <a name="modify-the-default-snapshot-location"></a>기본 스냅샷 위치 수정  
   
-1.  **배포자 속성 - \<Distributor&gt;** 대화 상자의 **게시자** 페이지에서 기본 스냅샷 위치를 변경하려는 게시자의 속성 단추( **...** )를 클릭합니다.  
+1.  **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 기본 스냅샷 위치를 변경하려는 게시자의 속성 단추( **...** )를 클릭합니다.  
   
-2.  **게시자 속성 - \<Publisher&gt;** 대화 상자에서 **기본 스냅샷 폴더** 속성에 대한 값을 입력합니다.  
+2.  **게시자 속성 - \<Publisher>** 대화 상자에서 **기본 스냅샷 폴더 속성**에 대한 값을 입력합니다.  
   
     > [!NOTE]  
     >  스냅샷 에이전트는 지정한 디렉터리에 대해 쓰기 권한이 있어야 하며 배포 에이전트 또는 병합 에이전트는 읽기 권한이 있어야 합니다. 끌어오기 구독을 사용하는 경우 공유 디렉터리를 \\\computername\snapshot과 같이 UNC(범용 명명 규칙) 경로로 지정해야 합니다. 자세한 내용은 [스냅샷 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
@@ -71,7 +72,7 @@ ms.locfileid: "76285014"
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 게시자에 연결한 다음 해당 서버 노드를 확장합니다.    
 2.  **복제** 폴더를 확장한 다음 **로컬 게시** 폴더를 확장합니다.    
 3.  스냅샷을 생성할 게시를 마우스 오른쪽 단추로 클릭한 다음 **스냅샷 에이전트 상태 보기**를 클릭합니다.    
-4.  **스냅샷 에이전트 상태 보기 - \<게시&gt;** 대화 상자에서 **시작**을 클릭합니다.    
+4.  **스냅샷 에이전트 상태 보기 - \<Publication>** 대화 상자에서 **시작**을 클릭합니다.    
  스냅샷 에이전트에서 스냅샷 생성을 마치면 "[100%] 17개 아티클의 스냅샷이 생성되었습니다"라는 메시지가 표시됩니다.  
   
 ### <a name="in-replication-monitor"></a>복제 모니터에서  

@@ -30,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2122954c2ce126441eba6d5d05db69e9a8bfa30e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4b4eb7bcfc5711d041a354f4187e506ee130a0ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75952434"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706026"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 절(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   INSERT, UPDATE, DELETE 또는 MERGE 문의 영향을 받는 각 행의 정보 또는 각 행을 기반으로 하는 식을 반환합니다. 이러한 결과를 처리 애플리케이션에 반환하여 확인 메시지, 보관 및 기타 애플리케이션 요구 사항을 충족시키는 데 사용할 수 있습니다. 결과를 테이블 또는 테이블 변수에 삽입할 수도 있습니다. 또한 중첩된 INSERT, UPDATE, DELETE 또는 MERGE 문에서 OUTPUT 절의 결과를 캡처하고 그 결과를 대상 테이블이나 뷰에 삽입할 수 있습니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75952434"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 <OUTPUT_CLAUSE> ::=  
 {  
@@ -133,13 +133,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- 명시적 열 참조입니다. 수정되는 테이블에 대한 모든 참조는 INSERTED 또는 DELETED 접두사로 적절히 한정되어야 합니다(예: INSERTED **.** _column\_name_).  
+ 명시적 열 참조입니다. 수정되는 테이블에 대한 모든 참조는 INSERTED 또는 DELETED 접두사로 적절히 한정되어야 합니다. 예: INSERTED **.** _column\_name_.  
   
  $action  
- MERGE 문에만 사용할 수 있습니다. 해당 행에서 수행된 작업에 따라 각 행에 대해 'INSERT', 'UPDATE' 또는 'DELETE' 값 중 하나를 반환하는 MERGE 문의 OUTPUT 절에 **nvarchar(10)** 형식의 열을 지정합니다.  
+ MERGE 문에만 사용할 수 있습니다. 각 행에 대해 세 개의 값 중 하나를 반환하는 MERGE 문의 OUTPUT 절에 **nvarchar(10)** 형식의 열을 지정합니다. 이 열은 해당 행에서 수행한 동작에 따라 ‘INSERT’, ‘UPDATE’ 또는 ‘DELETE’ 중 하나를 각 행의 값으로 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- OUTPUT \<dml_select_list> 절 및 OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } 절은 단일 INSERT, UPDATE, DELETE 또는 MERGE 문에서 정의할 수 있습니다.  
+ OUTPUT \<dml_select_list> 절과 OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } 절은 단일 INSERT, UPDATE, DELETE 또는 MERGE 문에서 정의할 수 있습니다.  
   
 > [!NOTE]  
 >  다르게 지정되지 않는 이상 OUTPUT 절에 대한 참조는 OUTPUT 절 및 OUTPUT INTO 절 모두를 참조합니다.  
@@ -311,7 +311,7 @@ DROP TABLE dbo.table1;
   
  INSERT 권한은 \<output_table>에 지정된 모든 테이블에 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-output-into-with-a-simple-insert-statement"></a>A. 간단한 INSERT 문과 함께 OUTPUT INTO 사용  
  다음 예제에서는 `ScrapReason` 테이블에 행을 삽입하고, `OUTPUT` 절을 사용하여 명령문의 결과를 `@MyTableVar``table` 변수에 반환합니다. `ScrapReasonID` 열은 IDENTITY 속성을 사용해 정의되기 때문에 이 열의 값은 `INSERT` 문에서 지정되지 않습니다. 하지만 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 의해 생성된 해당 열의 값은 `OUTPUT` 열의 `inserted.ScrapReasonID` 절에서 반환됩니다.  

@@ -1,5 +1,6 @@
 ---
 title: 게시 데이터베이스의 스키마 변경 | Microsoft 문서
+description: 복제는 게시된 개체에 대한 다양한 스키마 변경을 지원합니다. 기본적으로 모든 SQL Server 구독자에게 전파 되는 스키마 변경 사항에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 79f0e12422f299a78e28c5ca21c370d7a973771a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e0da92258088cde7dec9d4981e270e87e09f67a
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287690"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807625"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>게시 데이터베이스의 스키마 변경
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -109,7 +110,7 @@ ms.locfileid: "76287690"
   
 -   삭제할 열은 데이터베이스에 있는 모든 게시 아티클의 필터 절에 사용할 수 없습니다.  
   
--   다음과 같이 게시된 아티클에서 열을 삭제할 때는 데이터베이스에 영향을 줄 수 있는 열의 제약 조건, 인덱스 또는 속성을 다음은 그 예입니다.  
+-   다음과 같이 게시된 아티클에서 열을 삭제할 때는 데이터베이스에 영향을 줄 수 있는 열의 제약 조건, 인덱스 또는 속성을 예를 들면 다음과 같습니다.  
   
     -   트랜잭션 게시 아티클에서 기본 키에 사용되는 열은 복제에 사용되므로 삭제할 수 없습니다.  
   

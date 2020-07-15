@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 0fc954228aff75940e66f976f19d1414118e1a8e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ed0403c1713ed3e7267f06d0bf765c7c449aac1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558518"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725953"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>SQL 암호화 기능을 통해 SQL Server 커넥터 사용
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Azure 주요 자격 증명 모음으로 보호되는 비대칭 키를 사용하는 일반적인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화 작업에는 다음 세 가지 영역이 포함됩니다.  
   
 -   Azure 주요 자격 증명 모음에서 비대칭 키를 사용한 투명한 데이터 암호화  
@@ -53,12 +53,14 @@ Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 �
         - **전역 Azure**를 사용하는 경우 `IDENTITY` 인수를 파트 2의 Azure Key Vault 이름으로 바꿉니다.
         - **프라이빗 Azure 클라우드** (예: Azure Government, Azure 중국 21Vianet 또는 Azure 독일)를 사용하는 경우 `IDENTITY` 인수를 파트 2, 3단계에서 반환된 자격 증명 모음 URI로 바꿉니다. 자격 증명 모음 URI에 "https://"를 포함하지 마세요.   
   
-    -   `SECRET` 인수의 첫 번째 부분을 1부의 Azure Active Directory **클라이언트 ID** 로 바꿉니다. 이 예제에서 **클라이언트 ID** 는 `EF5C8E094D2A4A769998D93440D8115D`입니다.  
+    -   `SECRET` 인수의 첫 번째 부분을 1부의 Azure Active Directory **클라이언트 ID** 로 바꿉니다. 이 예제에서 **클라이언트 ID** 는 `EF5C8E094D2A4A769998D93440D8115D`입니다.
   
         > [!IMPORTANT]  
         >  **클라이언트 ID**에서 하이픈을 제거해야 합니다.  
   
-    -   `SECRET` 인수의 두 번째 부분을 파트 1의 **클라이언트 암호** 를 사용하여 완성합니다. 이 예제에서 파트 1의 **클라이언트 암호** 는 `Replace-With-AAD-Client-Secret`입니다. `SECRET` 인수의 최종 문자열은 *하이픈 없는*문자 및 숫자의 긴 시퀀스가 됩니다.  
+    -   `SECRET` 인수의 두 번째 부분을 파트 1의 **클라이언트 암호**를 사용하여 완성합니다. 이 예제에서 파트 1의 **클라이언트 암호**는 `ReplaceWithAADClientSecret`입니다. 
+  
+    -   SECRET 인수의 최종 문자열은 하이픈 없는 문자 및 숫자의 긴 시퀀스가 됩니다.
   
     ```sql  
     USE master;  
@@ -67,7 +69,7 @@ Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 �
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
-        SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
+        SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplaceWithAADClientSecret'   
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;  
     ```  
   

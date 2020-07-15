@@ -1,5 +1,6 @@
 ---
 title: WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가 | Microsoft 문서
+description: WITH XMLNAMESPACES 절을 사용하여 쿼리에 네임스페이스를 추가하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -21,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b575cfdf7f35326d661ef9ef312601c7b9b8bca3
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: df623b61194f04f673d72b0b13ae4ffa8eaca5aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664750"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752591"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [WITH XMLNAMESPACES(Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md) 는 다음과 같은 방식으로 네임스페이스 URI를 지원합니다.  
   
 -   [FOR XML을 사용하는 XML 생성](../../relational-databases/xml/for-xml-sql-server.md) 쿼리 시 URI 매핑에 대한 네임스페이스 접두사를 사용할 수 있도록 만듭니다.  
@@ -219,7 +220,7 @@ WHERE CatalogDescription.exist('
     ) = 1  
 ```  
   
- 이전 쿼리에서 **query()** 및 **exist()** 메서드는 모두 해당 프롤로그에서 같은 네임스페이스를 선언합니다. 다음은 그 예입니다.  
+ 이전 쿼리에서 **query()** 및 **exist()** 메서드는 모두 해당 프롤로그에서 같은 네임스페이스를 선언합니다. 예를 들면 다음과 같습니다.  
   
 ```  
 declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  

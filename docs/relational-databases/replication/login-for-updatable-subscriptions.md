@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3bdb3585647e64ad1a175900263628b607eb0041
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d242fc31411bc0fdb05cca1f65355f49acec575a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710364"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640430"
 ---
 # <a name="login-for-updatable-subscriptions"></a>업데이트할 수 있는 구독에 대한 로그인
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   즉시 업데이트를 위해 이 마법사의 **업데이트할 수 있는 구독** 페이지에서 **복제**를 선택한 경우 게시자에 연결할 때 사용할 구독자로 계정을 지정해야 합니다. 
   
  이 연결은 구독자에서 발생되는 트리거에 사용되고 게시자로 변경 내용을 전파합니다. 이 계정은 **업데이트할 수 있는 구독** 페이지에서 **변경 내용 대기 및 가능 시 커밋**을 선택한 경우에도 필요합니다. 기본적으로 새 구독 마법사는 필요한 경우 즉시 업데이트로 전환할 수 있는 기능으로 지연 업데이트를 구성합니다.  

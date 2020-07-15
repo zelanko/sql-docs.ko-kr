@@ -16,15 +16,15 @@ helpviewer_keywords:
 - CUME_DIST function
 - analytic functions, CUME_DIST
 ms.assetid: 491b07f3-9ffd-4cdd-93e5-5abb636fc5ef
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 05906cfd0e72531bf332ebca4215df047eb8e3fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 21ee42a6901d24a0dcdd01c5c096a73cca4d95e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026465"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732463"
 ---
 # <a name="cume_dist-transact-sql"></a>CUME_DIST(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -44,7 +44,7 @@ CUME_DIST( )
 ## <a name="arguments"></a>인수  
 OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_)  
 
-_partition\_by\_clause_는 FROM 절 결과 집합을 함수가 적용되는 파티션으로 나눕니다. _partition\_by\_clause_ 인수를 지정하지 않는 경우 `CUME_DIST`는 모든 쿼리 결과 집합 행을 단일 그룹으로 처리합니다. _order\_by\_clause_는 작업이 발생하는 논리적 순서를 결정합니다. `CUME_DIST`에는 _order\_by\_clause_가 필요합니다. `CUME_DIST`는 OVER 구문의 \<행 또는 범위 절>을 허용하지 않습니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.
+_partition\_by\_clause_는 FROM 절 결과 집합을 함수가 적용되는 파티션으로 나눕니다. _partition\_by\_clause_ 인수를 지정하지 않는 경우 `CUME_DIST`는 모든 쿼리 결과 집합 행을 단일 그룹으로 처리합니다. _order\_by\_clause_는 작업이 발생하는 논리적 순서를 결정합니다. `CUME_DIST`에는 _order\_by\_clause_가 필요합니다. `CUME_DIST`에서는 OVER 구문의 \<rows or range clause>는 허용되지 않습니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.
   
 ## <a name="return-types"></a>반환 형식
 **float(53)**
@@ -54,7 +54,7 @@ _partition\_by\_clause_는 FROM 절 결과 집합을 함수가 적용되는 파�
   
 `CUME_DIST`는 비결정적입니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 이 예제에서는 `CUME_DIST` 함수를 사용하여 지정한 부서 내 각 직원의 연봉을 백분율로 계산합니다. `CUME_DIST`는 동일한 부서에서 현재 직원보다 연봉이 적거나 같은 직원의 백분율을 나타내는 값을 반환합니다. `PERCENT_RANK` 함수는 부서 내 직원의 연봉을 백분율 순위로 계산합니다. 부서별로 결과 집합 행을 분할하기 위해 예제에서는 _partition\_by\_clause_ 값을 지정합니다. OVER 절의 ORDER BY 절은 각 파티션의 행을 논리적으로 정렬합니다. SELECT 문의 ORDER BY 절은 결과 집합의 표시 순서를 결정합니다.
   
 ```sql

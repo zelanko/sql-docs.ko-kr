@@ -1,5 +1,6 @@
 ---
 title: OPENXML에서 value() 및 nodes() 메서드 사용 | Microsoft 문서
+description: SQL 쿼리에서 value() 및 nodes() 메서드 또는 OpenXML() 메서드를 사용하여 XML 값의 행 집합을 추출하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 685ce50021a9bd06dc075198f008336b2c150a6b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a719b990c78af4429958fffb6027daf5d578a682
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665260"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738367"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>OPENXML에서 value() 및 nodes() 사용
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **SELECT** 절에서 **xml** 데이터 형식에 여러 **value()** 메서드를 사용하여 추출된 값의 행 집합을 생성할 수 있습니다. **nodes()** 메서드는 추가 쿼리에 사용할 수 있는 선택된 각 노드에 대해 내부 참조를 생성합니다. **nodes()** 메서드와 **value()** 메서드를 조합하면 일부 행이 있고 해당 생성 시 사용된 경로 식이 복잡한 경우 행 집합을 더욱 효율적으로 생성할 수 있습니다.  
   
  **nodes()** 메서드는 특수한 **xml** 데이터 형식의 인스턴스를 생성하며 각 인스턴스에는 서로 다른 선택 노드에 대한 컨텍스트 집합이 있습니다. 이러한 종류의 XML 인스턴스는 **query()** , **value()** , **nodes()** 및 **exist()** 메서드를 지원하며 **count(\*)** 집계에 사용될 수 있습니다. 다른 용도로 사용하면 오류가 발생합니다.  
   
-## <a name="example-using-nodes"></a>예: nodes() 사용  
+## <a name="example-using-nodes"></a>예제: nodes() 사용  
  저자의 성과 이름을 추출한다고 가정해 보십시오. 이때 이름은 "David"가 아닙니다. 또한 이 정보를 FirstName 및 LastName의 두 열이 포함된 행 집합으로 추출합니다. **nodes()** 및 **value()** 메서드를 사용하면 다음과 같이 이 작업을 수행할 수 있습니다.  
   
 ```  
@@ -41,7 +42,7 @@ WHERE  nref.exist('first-name[. != "David"]') = 1
   
  SQL Server 2000은 **OpenXml()** 을 사용하여 XML 인스턴스로부터 행 집합을 생성하는 기능을 제공합니다. 행 집합에 대한 관계형 스키마를 지정하고 XML 인스턴스 내의 값이 행 집합의 열로 매핑되는 방식을 지정할 수 있습니다.  
   
-## <a name="example-using-openxml-on-the-xml-data-type"></a>예: xml 데이터 형식에서 OpenXml() 사용  
+## <a name="example-using-openxml-on-the-xml-data-type"></a>예제: xml 데이터 형식에서 OpenXml() 사용  
  다음에 표시된 것과 같이 **OpenXml()** 을 사용하여 이전 예의 쿼리를 다시 작성할 수 있습니다. 이러한 작업은 각 XML 인스턴스를 XML 변수로 읽고 OpenXML을 여기에 적용하는 커서를 만들어서 수행합니다.  
   
 ```  

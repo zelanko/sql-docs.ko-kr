@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 간 쿼리 | Microsoft 문서
+description: 데이터베이스 간 쿼리에서 메모리 최적화 테이블 변수를 사용하여 SQL Server에서 특정 데이터베이스의 데이터를 다른 데이터베이스에 있는 메모리 최적화 테이블로 옮기는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 08/04/2016
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 93eae89743c2a4563317614a18e4bf5f46248071
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2ff96199ed01fe06524ec38f8df2a0cce6380b8d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68031978"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723304"
 ---
 # <a name="cross-database-queries"></a>데이터베이스 간 쿼리
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 메모리 최적화 테이블은 데이터베이스 간 트랜잭션을 지원하지 않습니다. 메모리 최적화 테이블에도 액세스하는 동일한 쿼리 또는 동일한 트랜잭션에서 다른 데이터베이스에 액세스할 수 없습니다. 데이터베이스의 테이블에서 다른 데이터베이스에 있는 메모리 최적화 테이블로 데이터를 쉽게 복사할 수 없습니다.  
   

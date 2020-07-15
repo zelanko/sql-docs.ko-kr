@@ -1,5 +1,6 @@
 ---
 title: 중첩 AUTO 모드 쿼리를 사용하여 형제 생성 | Microsoft 문서
+description: EXPLICIT 모드를 사용하는 대신 중첩 AUTO 모드 쿼리를 사용하여 XML 형제를 생성하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e278a3ab3f81e1a858830868b310c678f603e0ea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f65bb2dab5e00a52943a58686d6f5d448391903
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67986589"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85691322"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>중첩 AUTO 모드 쿼리를 사용하여 형제 생성
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   다음 예에서는 중첩된 AUTO 모드 쿼리를 사용하여 형제를 생성하는 방법을 보여 줍니다. 이러한 XML을 생성하는 다른 방법은 EXPLICIT 모드를 사용하는 것 뿐입니다. 하지만 이 방법은 복잡할 수 있습니다.  
   
 ## <a name="example"></a>예제  

@@ -18,16 +18,16 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 08e432e0470074a5861c070d26110478353817b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75325515"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727067"
 ---
 # <a name="create-indexed-views"></a>인덱싱된 뷰 만들기
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 이 문서에서는 뷰에서 인덱스를 만드는 방법을 설명합니다. 뷰에 만들어지는 첫 번째 인덱스는 고유 클러스터형 인덱스여야 합니다. 고유 클러스터형 인덱스가 만들어진 후에 비클러스터형 인덱스를 더 만들 수 있습니다. 뷰에 고유 클러스터형 인덱스를 만들면 클러스터형 인덱스가 있는 테이블의 저장 방식과 마찬가지로 데이터베이스에 뷰가 저장되므로 쿼리 성능이 향상됩니다. 쿼리 최적화 프로그램은 인덱싱된 뷰를 사용하여 쿼리 실행 속도를 높일 수 있습니다. 최적화 프로그램이 인덱싱된 뷰를 대신 사용하므로 쿼리에서 해당 뷰를 참조할 필요가 없습니다.
 
@@ -92,7 +92,7 @@ SET 옵션 및 결정적 함수 요구 사항 외에 다음 요구 사항을 충
 - 인덱스를 만들 때 `IGNORE_DUP_KEY` 옵션은 끄기(기본 설정)로 설정되어야 합니다.
 - 테이블은 뷰 정의에서 _schema_ **.** _tablename_ 처럼 두 부분으로 구성된 이름으로 참조되어야 합니다.
 - 뷰에서 참조하는 사용자 정의 함수는 `WITH SCHEMABINDING` 옵션을 사용하여 만들어야 합니다.
-- 뷰에서 참조하는 사용자 정의 함수는 두 부분으로 구성된 이름인 _\<schema\>_ **.** _\<function\>_ 으로 참조되어야 합니다.
+- 뷰에서 참조하는 사용자 정의 함수는 두 부분으로 구성된 이름 _\<schema\>_ **.** _\<function\>_ 으로 참조되어야 합니다.
 - 사용자 정의 함수의 데이터 액세스 속성은 `NO SQL`이어야 하고 외부 액세스 속성은 `NO`여야 합니다.
 - CLR(공용 언어 런타임) 함수는 뷰의 SELECT 목록에 표시될 수 있지만 클러스터형 인덱스 키 정의의 일부일 수는 없습니다. CLR 함수는 뷰의 WHERE 절이나 뷰에서 JOIN 연산의 ON 절에 표시되지 않습니다.
 - 뷰 정의에서 사용된 CLR 사용자 정의 형식의 메서드 및 CLR 함수의 속성을 다음 표와 같이 설정해야 합니다.

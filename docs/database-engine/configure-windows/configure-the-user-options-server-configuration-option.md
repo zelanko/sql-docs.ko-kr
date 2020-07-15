@@ -1,5 +1,6 @@
 ---
 title: user options 서버 구성 옵션 구성 | Microsoft Docs
+description: "\"user options\" 옵션에 대해 알아봅니다. 이 옵션이 사용자 작업 세션에 대해 SQL Server에서 설정하는 쿼리 처리 옵션의 기본값을 어떻게 변경하는지 확인합니다."
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - users [SQL Server], global defaults
 - user options option [SQL Server]
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d06cb92287537293739fa9bd7b1a86ea7ffd767a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fe7a4f5bc7fb043533656041d5f10d5be1880273
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012157"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659768"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>user options 서버 구성 옵션 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] user options [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **user options** 옵션은 모든 사용자에 대한 전역 기본값을 지정합니다. 기본 쿼리 처리 옵션 목록은 사용자의 작업 세션 기간에 대해 설정됩니다. **user options** 옵션을 사용하면 서버의 기본 설정이 적합하지 않은 경우 SET 옵션의 기본값을 변경할 수 있습니다.  
   

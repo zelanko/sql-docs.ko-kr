@@ -1,5 +1,6 @@
 ---
 title: XML 인덱스(SQL Server) | Microsoft 문서
+description: XML 데이터 형식 열에 XML 인덱스를 만들면 어떻게 쿼리 성능이 향상되어 애플리케이션에 유용할 수 있는지 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -33,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b9cfd2d1e81d3778653a59b697dc740680169071
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8f5ab347d15e0363411640431f4d833f38e13234
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68096911"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729777"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 인덱스(SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XML 인덱스를 **xml** 데이터 형식의 열에 만들 수 있습니다. 그러면 열에 있는 XML 인스턴스에 대해 모든 태그, 값 및 경로가 인덱싱되어 쿼리 성능이 향상됩니다. 다음 경우에 애플리케이션에서 XML 인덱스를 활용할 수 있습니다.  
   
 -   XML 열의 쿼리가 작업에서 일반적입니다. 데이터를 수정하는 동안 XML 인덱스 유지 관리 비용이 고려되어야 합니다.  
@@ -94,7 +95,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   기본 테이블의 기본 키. 기본 테이블의 기본 키는 기본 테이블과 백 조인을 위한 기본 XML 인덱스에 복제되고 해당 기본 테이블의 기본 키에 있는 최대 열 수는 15개로 제한됩니다.  
   
- 이 노드 정보는 지정된 쿼리에 대해 XML 결과를 계산 및 구성하는 데 사용됩니다. 최적화를 위해 태그 이름과 노드 유형 정보는 정수 값으로 인코딩되고 경로 열에서는 같은 인코딩을 사용합니다. 또한 경로는 경로 접미사가 알려져 있는 경우에만 경로에 일치할 수 있도록 반대 순서로 저장됩니다. 다음은 그 예입니다.  
+ 이 노드 정보는 지정된 쿼리에 대해 XML 결과를 계산 및 구성하는 데 사용됩니다. 최적화를 위해 태그 이름과 노드 유형 정보는 정수 값으로 인코딩되고 경로 열에서는 같은 인코딩을 사용합니다. 또한 경로는 경로 접미사가 알려져 있는 경우에만 경로에 일치할 수 있도록 반대 순서로 저장됩니다. 예를 들면 다음과 같습니다.  
   
 -   `//ContactRecord/PhoneNumber` - 마지막 두 단계만 알려져 있는 경우  
   
@@ -133,7 +134,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   작업에 경로 식을 사용하여 개별적인 XML 인스턴스로부터 여러 값을 검색하는 경우 PROPERTY 인덱스에 있는 각 XML 인스턴스 내의 경로를 클러스터링하면 도움이 될 수 있습니다. 이러한 시나리오는 개체의 속성이 인출되고 해당 기본 키 값이 알려진 속성 모음 시나리오에서 일반적으로 발생합니다.  
   
--   작업에 해당 값이 포함된 요소 또는 특성 이름을 알지 못하는 상태에서 XML 인스턴스 내의 값을 쿼리하는 작업이 포함되는 경우 VALUE 인덱스를 만들 수 있습니다. 이러한 경우는 //author[last-name="Howard"]\(\<author> 요소는 계층의 임의 수준에서 발생 가능)와 같은 하위 항목 축 조회 시에 일반적으로 발생합니다. 또한 /book [@* = "novel"]\(쿼리가 "novel" 값이 있는 일부 특성을 포함하는 \<book> 요소 조회)과 같은 와일드카드 쿼리에서 발생합니다.  
+-   작업에 해당 값이 포함된 요소 또는 특성 이름을 알지 못하는 상태에서 XML 인스턴스 내의 값을 쿼리하는 작업이 포함되는 경우 VALUE 인덱스를 만들 수 있습니다. 이러한 경우는 \<author> 요소가 계층 구조의 어느 수준에서도 발생할 수 있는 //author[last-name="Howard"] 같은 하위 항목 축 조회 시에 일반적으로 발생합니다. 쿼리가 "novel" 값이 있는 일부 특성을 포함하는 \<book> 요소를 조회하는 /book [@* = "novel"]과 같은 와일드카드 쿼리에서도 발생합니다.  
   
 ### <a name="path-secondary-xml-index"></a>PATH 보조 XML 인덱스  
  쿼리에서 일반적으로 **xml** 유형 열에 경로 식을 지정하는 경우에는 PATH 보조 인덱스로 검색 속도를 높일 수도 있습니다. 이 항목의 앞에서 설명한 대로 기본 인덱스는 **exist()** 메서드를 WHERE 절에 지정하는 쿼리가 있는 경우에 유용합니다. 또한 PATH 보조 인덱스를 추가하면 이러한 쿼리에서 검색 성능을 향상시킬 수 있습니다.  

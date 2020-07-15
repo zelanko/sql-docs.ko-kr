@@ -1,5 +1,6 @@
 ---
 title: 다른 컴퓨터에 연결(SQL Server 구성 관리자) | Microsoft Docs
+description: 원격 컴퓨터의 서비스를 관리하는 방법을 알아봅니다. 이 태스크에 SQL Server 구성 관리자 또는 SQL Server Management Studio를 사용하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 11/19/2019
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], other computers
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 03f409e11e037fcc406940d5a97e9934a77b96b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e4a2ca1eea0ec4b42bba65b62525bb6d86e52c88
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74249766"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651343"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>SCM 서비스 - 다른 컴퓨터에 연결
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 문서에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 다른 컴퓨터에 연결하는 방법에 대해 설명합니다. 첫 번째 절차에 따라 Windows 컴퓨터 관리 MMC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console)를 열고 해당 컴퓨터에 연결한 다음 서비스 및 애플리케이션 트리를 확장합니다. 두 번째 절차에 따라 원격 컴퓨터의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에 대한 링크가 있는 파일을 만듭니다.
 
@@ -53,7 +54,7 @@ ms.locfileid: "74249766"
 6. **컴퓨터 관리** 창에서 **다른 컴퓨터**를 클릭하고 관리할 원격 컴퓨터의 이름을 입력한 다음 **마침**을 클릭합니다.
 7. **독립 실행형 스냅인 추가** 창에서 **닫기**를 클릭합니다.
 8. **스냅인 추가/제거** 창에서 **확인**을 클릭합니다.
-9. **컴퓨터 관리 (** _\<컴퓨터 이름&gt;_ **)** 와 **서비스 및 애플리케이션**을 펼칩니다.
+9. **컴퓨터 관리**( _\<computer name>_ **)** 와 **서비스 및 애플리케이션**을 확장합니다.
 10. **SQL Server 구성 관리자**를 마우스 오른쪽 단추로 클릭한 다음 **여기에서 창 새로 만들기**를 클릭합니다.
 11. **창** 메뉴에서 **콘솔 루트**를 클릭하여 첫 번째 창으로 전환한 다음, 창을 삭제합니다.
 12. **파일** 메뉴에서 **다른 이름으로 저장**을 클릭한 다음 **.msc** 파일 확장명을 가진 적절한 이름을 지정하여 파일을 원하는 폴더에 저장합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console을 닫습니다.

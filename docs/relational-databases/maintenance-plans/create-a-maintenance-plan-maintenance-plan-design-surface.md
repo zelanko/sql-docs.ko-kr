@@ -1,6 +1,6 @@
 ---
 title: Design Surface에서 유지 관리 계획 만들기
-ms.custom: seo-lt-2019
+description: SQL Server에서 유지 관리 계획 디자인 화면을 사용하여 단일 서버 또는 다중 서버 유지 관리 계획을 만드는 방법을 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,15 +12,16 @@ helpviewer_keywords:
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 892c1dd28eb482eac046016c5cb59b3d711387c8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 46d577d8488a4b696ef5736a1bb94127e24bc53a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055175"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667704"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>유지 관리 계획 만들기(유지 관리 계획 디자인 화면)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 유지 관리 디자인 화면을 사용하여 단일 서버 또는 다중 서버 유지 관리 계획을 만드는 방법에 대해 설명합니다. 기본 유지 관리 계획을 만들 때는 **유지 관리 계획 마법사** 가 적합한 반면 디자인 화면을 사용하여 계획을 만들면 워크플로의 향상된 기능을 활용할 수 있습니다.  
   
  **항목 내용**  
@@ -56,7 +57,7 @@ ms.locfileid: "74055175"
   
 3.  **유지 관리 계획** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 유지 관리 계획**을 선택합니다.  
   
-4.  **새 유지 관리 계획** 대화 상자의 **이름** 상자에 계획의 이름을 입력하고 **확인**을 클릭합니다. 이렇게 하면 주 그리드에서 만든 *Subplan_1* 하위 계획이 있는 **maintenance_plan_name** **[Design]** 화면과 도구 상자가 열립니다.  
+4.  **새 유지 관리 계획** 대화 상자의 **이름** 상자에 계획의 이름을 입력하고 **확인**을 클릭합니다. 이렇게 하면 주 그리드에서 만든 **Subplan_1** 하위 계획이 있는 *maintenance_plan_name* **[Design]** 화면과 도구 상자가 열립니다.  
   
      다음 옵션은 디자인 화면의 헤더에서 사용할 수 있습니다.  
   
@@ -161,10 +162,10 @@ ms.locfileid: "74055175"
          두 태스크 사이에서 제약 조건이 작동하는 방식을 정의합니다.  
   
          **평가 작업**  목록  
-         선행 제약 조건에서 사용하는 평가 작업을 지정합니다. 작업에는 **제약 조건**, **식**, **식 및 제약 조건**, **식 또는 제약 조건**이 있습니다.  
+         선행 제약 조건에서 사용하는 평가 작업을 지정합니다. 사용할 수 있는 작업에는 **제약 조건**, **식**, **식 및 제약 조건**, **식 또는 제약 조건**이 있습니다.  
   
          **값** 목록  
-         제약 조건 값을 **성공**, **실패**또는 **완료**로 지정합니다. 기본값은**성공** 입니다.  
+         제약 조건 값을 지정합니다. **성공**, **실패** 또는 **완료**와 같은 값을 사용할 수 있습니다. 기본값은**성공** 입니다.  
   
         > [!NOTE]  
         >  선행 제약 조건 줄은 **성공**인 경우 녹색, **실패**인 경우 빨간색, **완료**인 경우 파란색으로 표시됩니다.  
@@ -252,7 +253,7 @@ ms.locfileid: "74055175"
      로그 파일 항목의 로드를 중지합니다. 예를 들어 원격 또는 오프라인 로그 파일을 로드하는 데 시간이 오래 걸리며 최근 항목만 보려는 경우 이 옵션을 사용할 수 있습니다.  
   
      **로그 파일 요약**  
-     이 정보 창에는 로그 파일 필터링에 대한 요약이 표시됩니다. 파일을 필터링하지 않은 경우 **적용된 필터 없음**이 표시됩니다. 로그에 필터를 적용한 경우에는 **로그 항목 필터링 조건:** \<필터 조건>이 표시됩니다.  
+     이 정보 창에는 로그 파일 필터링에 대한 요약이 표시됩니다. 파일을 필터링하지 않은 경우 **적용된 필터 없음**이 표시됩니다. 로그에 필터를 적용한 경우에는 **로그 항목 필터링 조건:** \<filter criteria>라는 텍스트가 표시됩니다.  
   
      **Date**  
      이벤트의 날짜를 표시합니다.  

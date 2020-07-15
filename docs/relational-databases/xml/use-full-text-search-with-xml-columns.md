@@ -1,5 +1,6 @@
 ---
 title: XML 열에 전체 텍스트 검색 사용 | Microsoft 문서
+description: XML 열의 전체 텍스트 인덱스를 만들고 SQL을 사용하여 XML 값의 전체 텍스트 검색을 수행하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 108a54614bb6d77be53b28b42a128f9db7a46aae
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0c3cc821a8630bc7afcd919c4a45140bb9a2621d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665008"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752550"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>XML 열에 전체 텍스트 검색 사용
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   XML 값의 내용을 인덱싱하지만 XML 태그는 무시하는 전체 텍스트 인덱스를 XML 열에 만들 수 있습니다. 요소 태그는 토큰 경계로 사용됩니다. 다음 항목이 인덱싱됩니다.  
   
@@ -36,7 +37,7 @@ ms.locfileid: "80665008"
   
 2.  그런 다음 XML 열에서 XML 인덱스를 사용하는 해당 XML 값을 쿼리합니다.  
 
-## <a name="example-combining-full-text-search-with-xml-querying"></a>예제: 전체 텍스트 검색을 XML 쿼리와 결합  
+## <a name="example-combining-full-text-search-with-xml-querying"></a>예제: 전체 텍스트 검색과 XML 쿼리 조합  
  XML 열에 전체 텍스트 인덱스를 만든 후 다음 쿼리는 XML 값에 책 제목 중 "custom"이라는 단어가 포함되어 있는지 확인합니다.  
   
 ```sql

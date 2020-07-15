@@ -4,18 +4,18 @@ ms.custom: seo-dt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: jrasnick
 ms.topic: conceptual
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 author: ronortloff
 ms.author: rortloff
+ms.reviewer: jrasnick
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1b6b024507d06149efc0bc2693b5bde2f67d482b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ab42dfbed020840aeb90042b81266fc58cc74688
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74401703"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627405"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT(병렬 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "74401703"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  AT ('<connection_string>')  
     [ WITH ( BATCH_SIZE = batch_size ) ]  
@@ -67,7 +67,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
  원격 서버 컴퓨터의 이름 또는 원격 서버의 IPv4 주소입니다. IPv6 주소는 지원되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명명된 인스턴스를 **Computer_Name\Instance_Name** 또는 **IP_address\Instance_Name** 형식으로 지정할 수 있습니다. 서버는 원격이어야 하되 (local)로 지정할 수 없습니다.  
   
  TCP *port* 번호  
- 연결에 사용되는 TCP 포트 번호입니다. 기본 포트 1433에서 수신 대기하지 않는 SQL Server의 인스턴스에 대한 TCP 포트 번호를 0에서 65535 사이로 지정할 수 있습니다. 예: **ServerA, 1450** 또는 **10.192.14.27,1435**  
+ 연결에 사용되는 TCP 포트 번호입니다. 기본 포트 1433에서 수신 대기하지 않는 SQL Server의 인스턴스에 대한 TCP 포트 번호를 0에서 65535 사이로 지정할 수 있습니다. 예를 들면 다음과 같습니다. **ServerA,1450** 또는 **10.192.14.27,1435**  
   
 > [!NOTE]  
 >  IP 주소를 사용하여 원격 서버에 연결하는 것이 좋습니다. 네트워크 구성에 따라 컴퓨터 이름을 사용하여 연결할 때는 비 어플라이언스 DNS 서버를 사용하여 올바른 서버에 대한 이름을 확인하는 추가 단계가 필요할 수 있습니다. IP 주소를 사용하여 연결하는 경우에는 이 단계가 필요하지 않습니다. 자세한 내용은 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]의 “DNS 전달자를 사용하여 비 어플라이언스 DNS 이름 확인(분석 플랫폼 시스템)”을 참조하세요.  

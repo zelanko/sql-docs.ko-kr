@@ -1,5 +1,6 @@
 ---
-title: '예제: HIDE 지시어 지정 | Microsoft 문서'
+title: '예제: HIDE 지시어 지정 | Microsoft Docs'
+description: SQL 쿼리에서 HIDE 지시문을 사용하는 예제를 살펴봅니다.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d656dd0022a3c3234baf1e032e26ef77c80b9421
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f8f8f5a8eeeff444832d5cd6142f1bb0099c5913
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665382"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632499"
 ---
 # <a name="example-specifying-the-hide-directive"></a>예제: HIDE 지시어 지정
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   이 예에서는 **HIDE** 지시어 사용 방법을 보여 줍니다. 이 지시어는 쿼리에 의해 반환된 범용 테이블의 행을 정렬하기 위한 특성은 쿼리가 반환하게 하고 최종 결과 XML 문서에는 그 특성이 포함되지 않게 하려는 경우에 유용합니다.  
   
  다음 쿼리는 이러한 XML을 생성합니다.  

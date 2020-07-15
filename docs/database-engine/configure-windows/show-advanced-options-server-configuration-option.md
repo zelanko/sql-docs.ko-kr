@@ -1,5 +1,6 @@
 ---
 title: show advanced options 서버 구성 옵션 | Microsoft Docs
+description: "\"show advanced options\" 옵션에 대해 알아봅니다. 이 옵션을 사용하여 SQL Server 시스템 저장 프로시저인 \"sp_configure\"를 실행할 때 고급 옵션을 표시하는 방법을 확인합니다."
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - sp_configure
 - show advanced options option
 ms.assetid: 7572372a-24b6-428f-84ae-48560430b159
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0c7755484582f407fb288dd25af1ec74e520b0ce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 77fb685deedf582f16c804ed2d8591383f6e9503
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026110"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751171"
 ---
 # <a name="show-advanced-options-server-configuration-option"></a>show advanced options 서버 구성 옵션
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **show advanced options** 옵션을 사용하여 **sp_configure** 시스템 저장 프로시저 고급 옵션을 표시할 수 있습니다. **show advanced options** 를 1로 설정하면 **sp_configure**를 사용하여 고급 옵션을 나열할 수 있습니다. 기본값은 0입니다.  
   

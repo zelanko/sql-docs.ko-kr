@@ -1,5 +1,6 @@
 ---
 title: 로그 전달 구성(SQL Server) | Microsoft Docs
+description: SQL Server에서 SQL Server Management Studio 또는 Transact-SQL을 사용하여 로그 전달을 구성하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a262ba4daf1a54e4a57a71baa0b97308d473720
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b9735e45e834f60cff3a9d7fa25360b8935ed9b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68057896"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696262"
 ---
 # <a name="configure-log-shipping-sql-server"></a>로그 전달 구성(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 로그 전달을 구성하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
@@ -78,7 +79,7 @@ ms.locfileid: "68057896"
   
 8.  백업 일정은 **백업 작업** 의 **일정**상자에 나열됩니다. 설치 일정을 사용자 지정하려면 **일정** 을 클릭한 다음 필요에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 일정을 조정합니다.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md)을 지원합니다. 로그 전달 구성을 만들 때 **기본 서버 설정 사용**, **백업 압축**또는 **백업 압축 안 함**중 하나를 선택하여 로그 백업에 대한 백업 압축 동작을 제어할 수 있습니다. 자세한 내용은 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)을 참조하세요.  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md)을 지원합니다. 로그 전달 구성을 만들 때 다음 옵션 중 하나를 선택하여 로그 백업의 백업 압축 동작을 제어할 수 있습니다. **기본 서버 설정 사용**, **백업 압축** 또는 **백업 압축 안 함**. 자세한 내용은 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)을 참조하세요.  
   
 10. **확인**을 클릭합니다.  
   

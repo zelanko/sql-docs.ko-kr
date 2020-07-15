@@ -20,19 +20,19 @@ helpviewer_keywords:
 - GROUPING function
 - CUBE operator
 ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a5ecfbcd49712ce22f5e48aa5643d90414f78fae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 23b05c6355151aa556ad7531de60e3ccf65ea0ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74833776"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631561"
 ---
 # <a name="grouping-transact-sql"></a>GROUPING(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  GROUP BY 목록에 지정된 열 식이 집계되었는지 여부를 나타냅니다. GROUPING은 집계된 경우 결과 집합에 1을 반환하고 집계되지 않은 경우 0을 반환합니다. GROUP BY 절이 지정된 경우 GROUPING은 SELECT \<select> 목록, HAVING 및 ORDER BY 절에만 사용할 수 있습니다.  
+  GROUP BY 목록에 지정된 열 식이 집계되었는지 여부를 나타냅니다. GROUPING은 집계된 경우 결과 집합에 1을 반환하고 집계되지 않은 경우 0을 반환합니다. GROUP BY가 지정된 경우 GROUPING은 SELECT \<select> 목록, HAVING 및 ORDER BY 절에만 사용할 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,7 +53,7 @@ GROUPING ( <column_expression> )
 ## <a name="remarks"></a>설명  
  GROUPING은 ROLLUP, CUBE 또는 GROUPING SETS에서 반환된 Null 값과 표준 Null 값을 구분하기 위해 사용됩니다. ROLLUP, CUBE 또는 GROUPING SETS 작업의 결과로 반환되는 Null은 특별한 Null입니다. 이것은 결과 집합에서 열 자리 표시자로 사용되며 "모두"를 의미합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `SalesQuota`를 그룹화하고 `SaleYTD` 금액을 집계합니다. `GROUPING` 함수는 `SalesQuota` 열에 적용됩니다.  
   
 ```  

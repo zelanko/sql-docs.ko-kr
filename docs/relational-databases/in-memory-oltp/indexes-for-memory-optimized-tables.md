@@ -1,5 +1,6 @@
 ---
 title: 메모리 액세스에 최적화된 테이블의 인덱스 | Microsoft 문서
+description: 메모리 액세스에 최적화된 테이블의 인덱스가 SQL Server 및 Azure SQL Database의 디스크 기반 테이블에서의 기존 인덱스와 어떻게 다른지를 알아봅니다.
 ms.custom: ''
 ms.date: 09/16/2019
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6db09106a6ebd8128cc9a7c69b9094adbf732ad7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bbc6a5f1be39d3b46de9c9cb9abea5e17ecc0b41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70929693"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723107"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 인덱스
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 행을 함께 연결하는 인덱스이므로 모든 메모리 최적화 테이블에는 하나 이상의 인덱스가 있어야 합니다. 메모리 최적화 테이블에서는 모든 인덱스 또한 메모리 최적화되어 있습니다. 메모리 최적화 테이블의 인덱스와 디스크 기반 테이블의 기존 인덱스는 여러 방식에서 다릅니다.  
 
@@ -88,7 +89,7 @@ ms.locfileid: "70929693"
     )  
         WITH (  
         MEMORY_OPTIMIZED = ON,  
-        DURABILITY = SCHEMA\_AND_DATA);  
+        DURABILITY = SCHEMA_AND_DATA);  
     go  
         
         --------------------  
@@ -217,11 +218,11 @@ WHERE col1 = 'dn';
   
 | 작업(Operation) | 메모리 액세스에 최적화됨, <br/> hash | 메모리 액세스에 최적화됨, <br/> 비클러스터형 | 디스크 기반, <br/> (비)클러스터형 |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
-| 색인 검색은 모든 테이블 행을 검색합니다. | yes | yes | yes |  
-| 같음 조건자(=)에서 인덱스 검색 | yes <br/> (전체 키는 필수) | yes  | yes |  
-| 같지 않음 및 범위 조건자에서 인덱스 검색 <br/> (>, <, <=, >=, `BETWEEN`). | 예 <br/> (인덱스 검색의 결과) | 예 <sup>1</sup> | yes |  
-| 인덱스 정의와 일치하는 정렬 순서로 행을 검색합니다. | 예 | yes | yes |  
-| 인덱스 정의의 역순과 일치하는 정렬 순서로 행을 검색합니다. | 예 | 예 | yes |  
+| 색인 검색은 모든 테이블 행을 검색합니다. | 예 | 예 | 예 |  
+| 같음 조건자(=)에서 인덱스 검색 | 예 <br/> (전체 키는 필수) | 예  | 예 |  
+| 같지 않음 및 범위 조건자에서 인덱스 검색 <br/> (>, <, <=, >=, `BETWEEN`). | 예 <br/> (인덱스 검색의 결과) | 예 <sup>1</sup> | 예 |  
+| 인덱스 정의와 일치하는 정렬 순서로 행을 검색합니다. | 예 | 예 | 예 |  
+| 인덱스 정의의 역순과 일치하는 정렬 순서로 행을 검색합니다. | 예 | 예 | 예 |  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> 메모리 최적화 비클러스터형 인덱스의 경우 인덱스 검색을 수행하는 데 전체 키가 필요하지 않습니다.  

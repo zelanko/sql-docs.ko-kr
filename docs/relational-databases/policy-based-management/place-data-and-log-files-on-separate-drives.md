@@ -1,5 +1,6 @@
 ---
 title: 데이터와 로그 파일을 별개의 드라이브에 배치 | Microsoft 문서
+description: 데이터와 로그 파일을 별개의 논리 드라이브에 배치합니다. 별개의 위치를 사용하면 각각에 대한 작업을 동시에 수행하여 SQL 성능을 향상할 수 있습니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6cbedc27-4d77-44ad-bed2-c23b628475a7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 54f469f8ab9f0daaf6f37c8f6bad1878bc716dbd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c0ed515a8fe166d4b53fec5750fa3b09a48a06a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086936"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716859"
 ---
 # <a name="place-data-and-log-files-on-separate-drives"></a>데이터와 로그 파일을 별개의 드라이브에 배치
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 규칙은 데이터와 로그 파일이 별개의 논리적 드라이브에 배치되어 있는지 검사합니다. 데이터와 로그 파일을 동일 디바이스에 배치할 경우 디바이스에 경합이 발생하여 성능이 저하될 수 있습니다. 파일을 별개의 장치에 배치하면 데이터와 로그 파일에 대해 I/O 작업이 동시에 수행될 수 있습니다.  
   
 ## <a name="recommendations"></a>권장 사항  

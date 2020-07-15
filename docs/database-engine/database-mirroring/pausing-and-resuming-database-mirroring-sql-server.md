@@ -1,6 +1,6 @@
 ---
 title: 데이터베이스 미러링 일시 중지 및 다시 시작
-description: 언제든지 SQL Server 데이터베이스 미러링 세션을 일시 중지하고 나중에 다시 시작하는 방법을 알아봅니다.
+description: SQL Server 데이터베이스 미러링 세션을 일시 중지한 후 나중에 다시 시작하여 미러링을 일시 중단하는 동안 세션 상태를 유지하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b6a46805e9dfe86d7560a2786f10a99b66344a97
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8b71dd9efc29735d618e6cf7cbabab5615f31fb0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254148"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735251"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>데이터베이스 미러링 일시 중지 및 재개(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   데이터베이스 소유자는 데이터베이스 미러링 세션을 일시 중지하고 나중에 언제든지 재개할 수 있습니다. 일시 중지하면 미러링을 일시 중지하는 동안 세션 상태가 유지됩니다. 병목 상태에서 일시 중지는 주 서버의 성능을 높이는 데 유용할 수 있습니다.  
   
  세션을 일시 중지한 상태에서도 주 데이터베이스는 사용할 수 있습니다. 세션을 일시 중지하면 미러링 세션의 상태가 SUSPENDED로 설정되고 미러 데이터베이스가 주 데이터베이스보다 뒤쳐지므로 노출된 상태로 주 데이터베이스가 실행됩니다.  

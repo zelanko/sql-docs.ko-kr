@@ -17,15 +17,15 @@ ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3cb02f0cbb395b8e3f730e62139eb7b7d89b4c96
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc37d9d18d75a9e24b1e894b28b8e7a0a29f602c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908103"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753115"
 ---
 # <a name="create-filtered-indexes"></a>필터링된 인덱스 만들기
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 필터링된 인덱스를 만드는 방법에 대해 설명합니다. 필터링된 인덱스는 특히 데이터의 잘 정의된 하위 집합에서 선택하는 쿼리를 처리하는 데 적합한 최적화된 비클러스터형 인덱스입니다. 이 인덱스에서는 필터 조건자를 사용하여 테이블의 일부 행을 인덱싱합니다. 잘 디자인된 필터링된 인덱스는 전체 테이블 인덱스에 비해 쿼리 성능을 개선하고 인덱스 유지 관리 및 스토리지 비용을 줄일 수 있습니다.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "72908103"
   
     -   고유하지 않은 인덱스. 필터링된 인덱스는 고유하지 않아도 되지만 인덱싱된 뷰는 반드시 고유해야 합니다.  
   
--   필터링된 인덱스는 하나의 테이블에서 정의되고 간단한 비교 논리만 지원합니다. 여러 테이블을 참조하거나 복잡한 논리를 사용하는 필터 식이 필요할 경우 뷰를 만들어야 합니다.  
+-   필터링된 인덱스는 하나의 테이블에서 정의되고 간단한 [비교 연산자](../../t-sql/language-elements/comparison-operators-transact-sql.md)만 지원합니다. 여러 테이블을 참조하거나 복잡한 논리를 사용하는 필터 식이 필요할 경우 뷰를 만들어야 합니다. 필터링된 인덱스는 `LIKE` 연산자를 지원하지 않습니다. 
   
 -   필터링된 인덱스 식이 쿼리 조건자와 같고 쿼리가 쿼리 결과로 필터링된 인덱스 식의 열을 반환하지 않는다면 필터링된 인덱스 식의 열이 필터링된 인덱스 정의의 포괄 열 또는 키여야 할 필요는 없습니다.  
   

@@ -1,7 +1,7 @@
 ---
 title: 패키지에 대한 SQL Server 에이전트 작업 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 25a2d1fe5eba1f52fc9738b9191f9bdade40002d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 00dff38a2c1e3309d6b8984475791f885f174e82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295802"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643277"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>패키지에 대한 SQL Server 에이전트 작업
 
@@ -122,23 +122,25 @@ ms.locfileid: "71295802"
 6.  작업 단계 유형에 대한 **Integration Services 패키지** 를 선택합니다.  
   
 7.  **다음 계정으로 실행** 목록에서 **SQL Server 에이전트 서비스 계정** 을 선택하거나 작업 단계에 사용될 자격 증명이 있는 프록시 계정을 선택합니다. 프록시 계정을 만드는 방법은 [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)를 참조하십시오.  
-  
-     **SQL Server 에이전트 서비스 계정** 대신 프록시 계정을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 패키지를 실행할 때 발생할 수 있는 일반적인 문제를 해결할 수 있습니다. 이들 문제에 대한 자세한 정보는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 문서 [SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다](https://support.microsoft.com/kb/918760)를 참고하십시오. 
-     
-  7.1 프록시를 사용하여 작업을 성공적으로 실행하려면 다음 보안 항목을 배치해야 합니다.
 
-      프록시에서 사용되는 자격 증명 로그인, SQL Server 에이전트를 실행하는 계정 및 SQL Server 서비스를 실행하는 계정에는 다음 권한이 필요합니다. 로컬 보안 정책 특성: %SYSTEMROOT%\Temp에 대한 프로세스 수준 토큰 제어 바꾸기 
-
-보안 항목을 넣지 못하면 작업이 실패하고 다음과 비슷한 오류 메시지가 나타납니다. 작업이 실패했습니다.  클라이언트에 필수 권한이 없습니다.
+    **SQL Server 에이전트 서비스 계정** 대신 프록시 계정을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 패키지를 실행할 때 발생할 수 있는 일반적인 문제를 해결할 수 있습니다. 이들 문제에 대한 자세한 정보는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 문서 [SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다](https://support.microsoft.com/kb/918760)를 참고하십시오. 
      
-  
-    > **NOTE:** If the password changes for the credential that the proxy account uses, you need to update the credential password. Otherwise, the job step will fail.  
-  
-     For information about configuring the SQL Server Agent service account, see [Set the Service Startup Account for SQL Server Agent &#40;SQL Server Configuration Manager&#41;](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472).  
-  
+    - 프록시를 사용하여 작업을 성공적으로 실행하려면 다음 보안 항목이 있어야 합니다.
+
+        프록시에서 사용되는 자격 증명 로그인, SQL Server 에이전트를 실행하는 계정 및 SQL Server 서비스를 실행하는 계정에는 다음 권한이 필요합니다.
+
+        - 로컬 보안 정책 특성: 프로세스 수준 토큰 바꾸기
+        - %SYSTEMROOT%\Temp에 대한 모든 권한 
+
+        보안 항목을 넣지 못하면 작업이 실패하고 다음과 비슷한 오류 메시지가 나타납니다. 작업이 실패했습니다. 클라이언트에 필수 권한이 없습니다.
+
+        > **참고:** 프록시 계정에 사용하는 자격 증명의 암호가 변경되면 자격 증명 암호를 업데이트해야 합니다. 그렇지 않으면 작업 단계가 실패합니다.  
+
+        SQL Server 에이전트 서비스 계정을 구성하는 방법에 대한 자세한 내용은 [SQL Server 에이전트의 서비스 시작 계정 설정&#40;SQL Server 구성 관리자&#41;](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472)을 참조하세요.  
+
 8.  **패키지 원본** 목록 상자에서 패키지의 원본을 클릭하고 작업 단계의 옵션을 구성합니다.  
   
-     **다음 표에서는 패키지 원본에 대해 설명합니다.**  
+    **다음 표에서는 패키지 원본에 대해 설명합니다.**  
   
     |패키지 원본|Description|  
     |--------------------|-----------------|  
@@ -146,12 +148,13 @@ ms.locfileid: "71295802"
     |**SQL Server**|MSDB 데이터베이스에 저장된 패키지입니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 사용하여 패키지를 관리합니다.|  
     |**SSIS 패키지 저장소**|컴퓨터의 기본 폴더에 저장된 패키지입니다. 기본 폴더는 *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Packages입니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 사용하여 패키지를 관리합니다.<br /><br /> 참고: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 파일을 수정하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에서 관리할 파일 시스템에 추가로 폴더를 지정하거나 다른 폴더를 지정할 수 있습니다. 자세한 내용은 [Integration Services 서비스&#40;SSIS 서비스&#41;](../../integration-services/service/integration-services-service-ssis-service.md)를 참조하세요.|  
     |**파일 시스템**|컴퓨터의 임의 폴더에 저장된 패키지입니다.|  
+    |||
   
-     **다음 표에서는 선택한 패키지 원본에 따라 작업 단계에 사용할 수 있는 구성 옵션을 설명합니다.**  
+    **다음 표에서는 선택한 패키지 원본에 따라 작업 단계에 사용할 수 있는 구성 옵션을 설명합니다.**  
   
     > **중요:** 패키지가 암호로 보호된 경우 **새 작업 단계** 대화 상자의 **일반** 페이지에 있는 ( **패키지** 탭을 제외한) 탭을 클릭하면 표시되는 **패키지 암호** 대화 상자에 암호를 입력해야 합니다. 그렇지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업은 패키지 실행에 실패합니다.  
   
-     **패키지 원본**: SSIS 카탈로그  
+    **패키지 원본**: SSIS 카탈로그  
   
     |탭|옵션|  
     |---------|-------------|  
@@ -189,7 +192,8 @@ ms.locfileid: "71295802"
   
 9. **확인** 을 클릭하여 설정을 저장하고 **새 작업 단계** 대화 상자를 닫습니다.  
   
-    > **참고:** **SSIS 카탈로그**에 저장된 패키지의 경우 해결되지 않은 매개 변수 또는 연결 관리자 속성 설정이 있으면 **확인** 단추가 비활성화됩니다. 확인되지 않은 설정은 서버 환경 변수에 포함된 값을 사용하여 매개 변수나 속성을 설정하는 경우 다음 조건 중 하나를 충족하면 발생합니다.  
+    > [!NOTE]
+    > **SSIS 카탈로그**에 저장된 패키지의 경우 해결되지 않은 매개 변수 또는 연결 관리자 속성 설정이 있으면 **확인** 단추가 비활성화됩니다. 확인되지 않은 설정은 서버 환경 변수에 포함된 값을 사용하여 매개 변수나 속성을 설정하는 경우 다음 조건 중 하나를 충족하면 발생합니다.  
     >   
     >  **구성** 탭의 **환경** 확인란이 선택되어 있지 않습니다.  
     >   

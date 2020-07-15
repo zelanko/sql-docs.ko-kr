@@ -1,5 +1,6 @@
 ---
 title: 서버 구성 옵션(SQL Server) | Microsoft Docs
+description: SQL Server 리소스를 관리하고 최적화 하는 방법을 알아봅니다. 사용 가능한 구성 옵션, 가능한 설정, 기본값 및 다시 시작 요구 사항을 확인합니다.
 ms.custom: ''
 ms.date: 04/13/2017
 ms.prod: sql
@@ -27,17 +28,17 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 - administering SQL Server, configuration options
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: c42c9501772972c523d5635a159fcdeb54bf107b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 73a75a500c0833099bc2cdd146fb8f3f9978c42a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75002016"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715567"
 ---
 # <a name="server-configuration-options-sql-server"></a>서버 구성 옵션(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 sp_configure 시스템 저장 프로시저를 사용하면 구성 옵션을 통해 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 리소스를 관리하고 최적화할 수 있습니다. 자주 사용하는 서버 구성 옵션은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 통해 사용할 수 있으며 모든 구성 옵션에 액세스하려면 sp_configure를 사용해야 합니다. 이러한 옵션을 변경하기 전에 시스템에 주는 영향을 신중히 고려해야 합니다. 자세한 내용은 [서버 속성 보기 또는 변경&#40;SQL Server&#41;](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)을 참조하세요.  
   
@@ -74,6 +75,8 @@ ms.locfileid: "75002016"
     |[access check cache bucket count](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
     |[access check cache quota](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
     |[ad hoc distributed queries](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md) (A)|0|1|0|  
+    |[ADR 클리너 다시 시도 시간 제한(분)](../../database-engine/configure-windows/adr-cleaner-retry-timeout-configuration-option.md)<br><br> SQL Server 2019에서 도입|0|32767|15|  
+    |[ADR 미리 할당 요소](../../database-engine/configure-windows/adr-preallocation-factor-server-configuration-option.md)<br><br> SQL Server 2019에서 도입|0|32767|4|  
     |[affinity I/O mask](../../database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md) (A, RR)|-2147483648|2147483647|0|  
     |[affinity64 I/O mask](../../database-engine/configure-windows/affinity64-input-output-mask-server-configuration-option.md) (A, 64비트 버전에만 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])|-2147483648|2147483647|0|  
     |[affinity mask](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md) (A)|-2147483648|2147483647|0|  
@@ -83,7 +86,7 @@ ms.locfileid: "75002016"
     |[자동 soft-NUMA 사용 안 함](soft-numa-sql-server.md)|0|1|0|  
     |[백업 체크섬 기본값](../../database-engine/configure-windows/backup-checksum-default.md)|0|1|0|  
     |[backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)|0|1|0| 
-    |[blocked process threshold](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  
+    |[blocked process threshold](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md) (A)|5|86400|0|  
     |[c2 audit mode](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md) (A, RR)|0|1|0|  
     |[clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)|0|1|0|  
     |[clr strict security](../../database-engine/configure-windows/clr-strict-security.md) (A) <br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 이상).|0|1|0|  
@@ -114,16 +117,17 @@ ms.locfileid: "75002016"
     |[max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
     |[max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 32비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 최대 1024, 64비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 최대 2048을 설정하는 것이 좋습니다. **참고:** 32비트 운영 체제에서 제공되었던 마지막 버전은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]입니다.|0<br /><br /> 0을 선택하면 32비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 (256+(*\<프로세서 수>* -4) * 8) 수식을 사용하고, 64비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 (512 + (*\<프로세서 수>* - 4) * 8) 수식을 사용하여 프로세서 수에 따라 최대 작업자 스레드 수가 자동으로 구성됩니다. **참고:** 32비트 운영 체제에서 제공되었던 마지막 버전은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]입니다.|  
+    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 32비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 최대 1024, 64비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 최대 2048을 설정하는 것이 좋습니다. **참고:** 32비트 운영 체제에서 제공되었던 마지막 버전은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]입니다.|0<br /><br /> 값 0을 선택하면 32비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 (256 + ( *\<processors>* -4) * 8) 수식을 사용하고 64비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 (512 + ( *\<processors>* - 4) * 8) 수식을 사용하여 프로세서 수에 따라 최대 작업자 스레드의 수가 자동으로 구성됩니다. **참고:** 32비트 운영 체제에서 제공되었던 마지막 버전은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]입니다.|  
     |[media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
     |[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|0|2147483647|0|  
     |[중첩 트리거](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)|0|1|1|  
     |[network packet size](../../database-engine/configure-windows/configure-the-network-packet-size-server-configuration-option.md) (A)|512|32767|4096|  
-    |[OLE Automation 프로시저](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)(A)|0|1|0|  
+    |[Ole Automation Procedures](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md) (A)|0|1|0|  
     |[open objects](../../database-engine/configure-windows/open-objects-server-configuration-option.md) (A, RR, 구식)|0|2147483647|0|  
     |[optimize for ad hoc workloads](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
     |[PH_timeout](../../database-engine/configure-windows/ph-timeout-server-configuration-option.md) (A)|1|3600|60|  
+    |[Polybase 네트워크 암호화](../../relational-databases/polybase/polybase-installation.md#enable) | 0|1 |1
     |[polybase 사용 가능](../../relational-databases/polybase/polybase-installation.md#enable)(RR) **적용 대상**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)])|0|1|0|
     |[precompute rank](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md) (A)|0|1|0|  
     |[priority boost](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) (A, RR)|0|1|0|  

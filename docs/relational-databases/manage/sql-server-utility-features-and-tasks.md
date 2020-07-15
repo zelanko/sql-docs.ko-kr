@@ -1,5 +1,6 @@
 ---
 title: SQL Server 유틸리티 기능 및 태스크 | Microsoft 문서
+description: SQL Server 유틸리티를 파악합니다. 해당 기능을 살펴보고 이를 사용하여 SQL Server 환경을 모니터링하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 08c4877b4fc3280826100cdfe7f0dfcad716ca22
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c48779de7f7edccd4401e1d60740b7cff6a046cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115311"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755698"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server 유틸리티 기능 및 태스크
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고객은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경을 통합적으로 관리하기를 원했으며 이 릴리스에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 애플리케이션 및 다중 서버 관리 개념을 통해 이러한 고객의 요구 사항을 해결했습니다.  
   
 ## <a name="benefits-of-the-sql-server-utility"></a>SQL Server 유틸리티의 이점  

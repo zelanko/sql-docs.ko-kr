@@ -1,5 +1,6 @@
 ---
 title: 백업 체크섬 기본값 | Microsoft Docs
+description: 백업 체크섬 기본 옵션에 대해 알아봅니다. 이 옵션을 사용하여 SQL Server 백업 및 복원 작업 중에 백업 체크섬을 설정 또는 해제하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: eef42653-85d0-4eaf-94bd-2ea1b024cd23
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: eb631212791a80fbcf32bd461a2ef476eebe8703
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8dc3e92c294b2afd1374af45c51b349443b76828
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013138"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725247"
 ---
 # <a name="backup-checksum-default"></a>백업 체크섬 기본값
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   백업 체크섬 기본 설정을 사용하여 백업 및 복원 중에 백업 체크섬을 사용하거나 사용하지 않도록 설정할 수 있습니다.  
   

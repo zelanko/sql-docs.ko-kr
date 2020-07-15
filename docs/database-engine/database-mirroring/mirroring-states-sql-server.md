@@ -1,5 +1,6 @@
 ---
 title: 미러링 상태(SQL Server) | Microsoft Docs
+description: SQL Server에서 데이터베이스 미러링 세션의 데이터베이스 상태에 대해 알아봅니다. 이 상태는 통신 상태, 데이터 흐름 및 데이터 차이를 반영합니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 03455038964c06c5a101c7259e65dfecff5b4404
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a50f4a4a81267d8bb515fd4890d1d3fe66fb75a1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67996561"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715550"
 ---
 # <a name="mirroring-states-sql-server"></a>미러링 상태(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   데이터베이스 미러링 세션 동안 미러된 데이터베이스는 항상 특정 상태( *미러링 상태*)가 됩니다. 이러한 데이터베이스의 상태는 통신 상태, 데이터 흐름 및 파트너 간의 데이터 차이를 반영합니다. 데이터베이스 미러링 세션은 주 데이터베이스와 같은 상태가 됩니다.  
   
  데이터베이스 미러링 세션 동안 서버 인스턴스는 서로를 모니터링합니다. 파트너는 미러링 상태를 사용하여 데이터베이스를 모니터링합니다. PENDING_FAILOVER 상태를 제외하고 주 데이터베이스와 미러 데이터베이스는 항상 동일한 상태입니다. 세션에 미러링 모니터 서버가 설정되어 있으면 각 파트너는 연결 상태(CONNECTED 또는 DISCONNECTED)를 사용하여 미러링 모니터 서버를 모니터링합니다.  

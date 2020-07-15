@@ -1,5 +1,6 @@
 ---
 title: XML 열에서 뷰 만들기 | Microsoft 문서
+description: xml 데이터 형식의 value() 메서드를 사용하여 xml 형식 열에서 값을 검색하는 뷰를 만드는 방법을 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -11,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 40c91548b4bf106f938f4bce8298a162937e7ffc
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 5d4a9d8d0aa40f8454a2bd0fd089022630c34ca2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664603"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85691531"
 ---
 # <a name="create-views-over-xml-columns"></a>XML 열에서 뷰 만들기
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **xml** 유형 열을 사용하여 뷰를 만들 수 있습니다. 다음 예에서는 `xml` xml **데이터 형식의** value() **메서드를 사용하여** 유형 열의 값을 검색하는 뷰를 만듭니다.  
   
 ```  

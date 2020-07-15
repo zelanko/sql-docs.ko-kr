@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 검사점(SQL Server) | Microsoft 문서
+description: 복구 중 SQL Server 데이터베이스 엔진이 로그에 포함된 변경 내용을 적용하기 시작할 수 있는 확인된 지점인 검사점에 대해 알아봅니다.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -27,15 +28,15 @@ ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 604a882daffeb2a9031aa9cc7e4d577e1e4e2663
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 156668084a475f71cea6c18ac050bf45eead6f06
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288347"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754555"
 ---
 # <a name="database-checkpoints-sql-server"></a>데이터베이스 검사점(SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
  *검사점* 은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 예기치 않은 종료 또는 충돌 후 복구하는 과정에서 로그에 포함된 변경 내용의 적용을 시작할 수 있는 알려진 올바른 지점을 만듭니다.
 
 ##  <a name="overview"></a><a name="Overview"></a> 개요   
@@ -43,7 +44,7 @@ ms.locfileid: "79288347"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 자동, 간접, 수동 및 내부와 같은 여러 가지 유형의 검사점이 지원됩니다. 다음 표에는 **검사점**의 유형이 요약되어 있습니다.
   
-|속성|[!INCLUDE[tsql](../../includes/tsql-md.md)] 인터페이스|Description|  
+|Name|[!INCLUDE[tsql](../../includes/tsql-md.md)] 인터페이스|Description|  
 |----------|----------------------------------|-----------------|  
 |자동|EXEC sp_configure **'** 복구 간격 **',** _초'_ **'**|**recovery interval** 서버 구성 옵션에 제안된 최대 제한 시간에 맞게 백그라운드에서 자동으로 실행됩니다. 자동 검사점은 완료될 때까지 실행됩니다.  자동 검사점은 진행 중인 쓰기 작업의 수와 쓰기 지연 시간이 50밀리초 이상으로 증가할 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 이를 감지하는지에 따라 제한됩니다.<br /><br /> 자세한 내용은 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)을(를) 참조하세요.|  
 |간접|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=** _target\_recovery\_time_ { SECONDS &#124; MINUTES }|지정된 데이터베이스의 사용자 지정 대상 복구 시간에 맞게 백그라운드에서 실행됩니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]부터 기본값은 1분입니다. 이전 버전의 기본값 0은 데이터베이스가 자동 검사점을 사용함을 나타내며, 빈도는 서버 인스턴스의 복구 간격 설정에 따라 달라집니다.<br /><br /> 자세한 내용은 [데이터베이스의 대상 복구 시간 변경&#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)서버 구성 옵션을 구성하는 방법에 대해 설명합니다.|  

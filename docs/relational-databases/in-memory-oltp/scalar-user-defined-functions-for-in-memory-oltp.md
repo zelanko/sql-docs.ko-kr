@@ -1,5 +1,6 @@
 ---
 title: 메모리 내 OLTP에 대한 사용자 정의 스칼라 함수 | Microsoft 문서
+description: SQL Server의 메모리 내 OLTP에 대해 고유하게 컴파일된 스칼라 사용자 정의 함수를 만들고 삭제하는 방법을 알아봅니다. 네이티브 컴파일을 통해 성능이 향상됩니다.
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: d2546e40-fdfc-414b-8196-76ed1f124bf5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3914e8d5138dc2de4481276167165d1f4360c657
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 8914f495767e6942b12f5c4dd7b61fd4a6a5bebf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487772"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735031"
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 사용자 정의 스칼라 함수
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서는 고유하게 컴파일된 사용자 정의 스칼라 함수를 생성 및 삭제할 수 있습니다. 또한, 이러한 사용자 정의 함수를 변경하는 것도 가능합니다. 네이티브 컴파일을 사용하면 Transact-SQL에서 사용자 정의 함수의 평가 성능을 향상할 수 있습니다.  
   

@@ -20,12 +20,12 @@ ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7de5bc19cd49959663bf4ead3f8ebff62b3b982b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b9afe006b96d7b447b508d59a55163f8838caa1e
+ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982857"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85195823"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73982857"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 -- Transact-SQL Scalar Function Syntax    
 ALTER FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ][ type_schema_name. ] parameter_data_type   
@@ -54,7 +54,7 @@ RETURNS return_data_type
 [ ; ]
 ```  
 
-```
+```syntaxsql
 -- Transact-SQL Inline Table-Valued Function Syntax
 ALTER FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type   
@@ -69,7 +69,7 @@ RETURNS TABLE
 [ ; ]  
 ```
   
-```
+```syntaxsql
 -- Transact-SQL Multistatement Table-valued Function Syntax
 ALTER FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type   
@@ -87,7 +87,7 @@ RETURNS @return_variable TABLE <table_type_definition>
 [ ; ]  
 ```
 
-```  
+```syntaxsql
 -- Transact-SQL Function Clauses   
 <function_option>::=   
 {  
@@ -147,7 +147,7 @@ column_name AS computed_column_expression
 }  
 ```
   
-```
+```syntaxsql
 -- CLR Scalar and Table-Valued Function Syntax
 ALTER FUNCTION [ schema_name. ] function_name   
 ( { @parameter_name [AS] [ type_schema_name. ] parameter_data_type   
@@ -160,7 +160,7 @@ RETURNS { return_data_type | TABLE <clr_table_type_definition> }
 [ ; ]  
 ```
   
-```
+```syntaxsql
 -- CLR Function Clauses
 <method_specifier>::=  
     assembly_name.class_name.method_name  
@@ -177,7 +177,7 @@ RETURNS { return_data_type | TABLE <clr_table_type_definition> }
   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for In-Memory OLTP: Natively compiled, scalar user-defined function  
 ALTER FUNCTION [ schema_name. ] function_name    
  ( [ { @parameter_name [ AS ][ type_schema_name. ] parameter_data_type   
@@ -277,7 +277,7 @@ RETURNS return_data_type
  _\<_table\_type\_definition_\>_ **(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,** ...*n* ] **)**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수에 대한 테이블 데이터 형식을 정의합니다. 테이블 선언에는 열 정의와 열 또는 테이블 제약 조건이 포함됩니다.  
   
-\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,** ...*n* ] **)** **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([일부 지역에서는 미리 보기로 제공됨](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))  
+\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,** ...*n* ] **)** **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([일부 지역에서 미리 보기](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  CLR 함수에 대한 테이블 데이터 형식을 정의합니다. 테이블 선언에는 열 이름과 데이터 형식만 포함됩니다.  
   
@@ -295,7 +295,7 @@ RETURNS return_data_type
  SCHEMABINDING  
  SCHEMABINDING 인수가 고유하게 컴파일된 사용자 정의 스칼라 함수에 필요합니다.  
   
- **\<function_option>::= and \<clr_function_option>::=**  
+ **\<function_option>::= 및 \<clr_function_option>::=**  
   
  함수에 다음 옵션 중 하나 이상이 적용되도록 지정합니다.  
   
@@ -305,7 +305,7 @@ RETURNS return_data_type
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 ALTER FUNCTION 문의 텍스트가 포함된 카탈로그 뷰 열을 암호화하도록 지정합니다. ENCRYPTION을 사용하면 함수가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제의 일부로 게시되는 것을 방지할 수 있습니다. CLR 함수에는 ENCRYPTION을 지정할 수 없습니다.  
   
  SCHEMABINDING  
- 함수를 함수가 참조하는 데이터베이스 개체에 바인딩되도록 지정합니다. 이 경우 다른 스키마 바운드 개체가 이를 참조해도 함수가 변경되지 않습니다.  
+ 함수를 함수가 참조하는 데이터베이스 개체에 바인딩되도록 지정합니다. SCHEMABINDING을 지정하면 함수 정의에 영향을 미치는 방식으로 기본 개체를 수정할 수 없습니다. 함수 정의 자체를 먼저 수정하거나 삭제하여 수정할 개체에 대한 종속성을 제거해야 합니다.  
   
  다음 동작 중 하나만 발생해도 참조하는 개체에 대한 함수 바인딩이 제거됩니다.  
   
@@ -364,7 +364,7 @@ RETURNS return_data_type
  *increment*  
  테이블의 연속된 행에 대해 *초기*값에 추가되는 정수 값입니다.  
   
-**\< column_constraint >::= and \< table_constraint>::=**
+**\< column_constraint >::= 및 \< table_constraint>::=**
   
  지정된 열 또는 테이블에 대한 제약 조건을 정의합니다. CLR 함수의 경우 NULL 유형의 제약 조건만 허용됩니다. 명명된 제약 조건도 허용되지 않습니다.  
   

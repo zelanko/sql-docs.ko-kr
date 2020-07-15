@@ -1,5 +1,6 @@
 ---
 title: 선택적 XML 인덱스에 대한 경로 및 최적화 힌트 | Microsoft Docs
+description: 선택적 XML 인덱스를 만들거나 변경할 때 노드 경로 및 최적화 힌트를 지정하는 방법을 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,15 +11,15 @@ ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6053f7fbff8126976d607cb7423a93976621fa8c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 460ad75c1596ce6eaf45e35d9c03b2db2d5267bd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665228"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729849"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>선택적 XML 인덱스에 대한 경로 및 최적화 힌트 지정
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   이 항목에서는 선택적 XML 인덱스를 만들거나 변경할 때 인덱싱할 노드 경로 및 인덱싱에 대한 최적화 힌트를 지정합니다.  
   
  노드 경로 및 최적화 힌트는 다음 문 중 하나에 동시에 지정합니다.  
@@ -30,7 +31,7 @@ ms.locfileid: "80665228"
  선택적 XML 인덱스에 대한 자세한 내용은 [SXI&#40;선택적 XML 인덱스&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)를 참조하세요.  
   
 ##  <a name="understanding-xquery-and-sql-server-types-in-untyped-xml"></a><a name="untyped"></a> 형식화된 XML의 XQuery 및 SQL Server 유형 이해  
- 선택적 XML 인덱스는 XQuery 유형 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형의 두 가지 유형 시스템을 지원합니다. 인덱싱된 경로는 XQuery 식을 일치시키거나 XML 데이터 형식의 value() 메서드에 대한 반환 형식을 일치시키는 데 사용할 수 있습니다.  
+ 선택적 XML 인덱스는 두 가지 유형 시스템, XQuery 유형 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형을 지원합니다. 인덱싱된 경로는 XQuery 식을 일치시키거나 XML 데이터 형식의 value() 메서드에 대한 반환 형식을 일치시키는 데 사용할 수 있습니다.  
   
 -   인덱싱할 경로에 주석이 지정되어 있지 않거나 XQUERY 키워드로 주석이 지정된 경우 해당 경로는 XQuery 식과 일치합니다. XQUERY로 주석이 지정된 노드 경로에는 다음과 같은 두 가지 변형이 있습니다.  
   
@@ -111,7 +112,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형은 value() 메서드의 반환 값과 일치합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형은 SINGLETON의 최적화 힌트를 지원합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형은 SINGLETON 최적화 힌트를 지원합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형을 반환하는 경로에는 유형을 반드시 지정해야 합니다. 이 경우 value() 메서드에서 사용하는 것과 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형을 지정해야 합니다.  
   
@@ -271,7 +272,7 @@ FOR
 )  
 ```  
   
-### <a name="examples"></a>예  
+### <a name="examples"></a>예제  
  다음은 서로 다른 XQuery 형식에 대해 인덱싱할 올바른 노드를 선택하는 몇 가지 추가 예입니다.  
   
  **예제 1**  
@@ -357,20 +358,20 @@ WHERE T.xmldata.exist('
   
 |최적화 힌트|보다 효율적인 스토리지|성능 향상|  
 |-----------------------|----------------------------|--------------------------|  
-|**node()**|yes|예|  
-|**SINGLETON**|예|yes|  
-|**DATA TYPE**|yes|yes|  
-|**MAXLENGTH**|yes|yes|  
+|**node()**|예|예|  
+|**SINGLETON**|예|예|  
+|**DATA TYPE**|예|예|  
+|**MAXLENGTH**|예|예|  
   
 ### <a name="optimization-hints-and-data-types"></a>최적화 힌트 및 데이터 형식  
  노드를 XQuery 데이터 형식 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식으로 인덱싱할 수 있습니다. 다음 표에서는 각 데이터 형식에서 지원되는 최적화 힌트를 보여 줍니다.  
   
 |최적화 힌트|XQuery 데이터 형식|SQL 데이터 형식|  
 |-----------------------|-----------------------|--------------------|  
-|**node()**|yes|예|  
-|**SINGLETON**|yes|yes|  
-|**DATA TYPE**|yes|예|  
-|**MAXLENGTH**|yes|예|  
+|**node()**|예|예|  
+|**SINGLETON**|예|예|  
+|**DATA TYPE**|예|예|  
+|**MAXLENGTH**|예|예|  
   
 ### <a name="node-optimization-hint"></a>node() 최적화 힌트  
  적용 대상: XQuery 데이터 형식  

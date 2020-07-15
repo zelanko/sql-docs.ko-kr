@@ -1,7 +1,7 @@
 ---
 title: '빠른 시작: 데이터베이스 백업 및 복원'
 titleSuffix: SQL Server
-description: 이 빠른 시작에서는 온-프레미스에서 SQL Server 데이터베이스를 백업 및 복원하는 방법을 보여 줍니다.
+description: 이 문서에서는 SQL Server에서 새 데이터베이스를 만들고, 데이터베이스의 백업을 수행하고, 백업을 복원하는 방법을 알아봅니다.
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
@@ -11,21 +11,21 @@ ms.prod: sql
 ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
-ms.openlocfilehash: 97993d621de9b10d930feb2fc54f53bc83f00293
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e261914baec4774d0e7ae1f343874e4a3154d42
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258640"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669954"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>빠른 시작: 온-프레미스 SQL Server 데이터베이스 백업 및 복원
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 빠른 시작에서는 새 데이터베이스를 만들고, 간단하게 백업한 다음, 복원합니다. 
 
 자세한 방법은 [전체 데이터베이스 백업 만들기](create-a-full-database-backup-sql-server.md)와 [SSMS를 사용하여 백업 복원](restore-a-database-backup-using-ssms.md)을 참조하세요.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 이 빠른 시작을 완료하려면 다음이 필요합니다. 
 
 - [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)

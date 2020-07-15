@@ -1,5 +1,6 @@
 ---
 title: 애플리케이션 역할 만들기 | Microsoft 문서
+description: SQL Server Management Studio 또는 Transact-SQL을 사용하여 애플리케이션을 통한 데이터베이스 액세스를 제한하는 애플리케이션 역할을 SQL Server에서 만듭니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 09f90bcf10db6d5a1406aa7a68f90b4704270d95
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0f76734e5c640e7044c9b6ddc2eed5d62ce50e4c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903155"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85628122"
 ---
 # <a name="create-an-application-role"></a>애플리케이션 역할 만들기
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 애플리케이션 역할을 만드는 방법에 대해 설명합니다. 애플리케이션 역할은 특정 애플리케이션을 통한 경우를 제외하고 데이터베이스에 대한 사용자 액세스를 제한합니다. 애플리케이션 역할에 사용자가 없으므로 **애플리케이션 역할** 을 선택하면 **역할 멤버** 목록이 표시되지 않습니다.  
   
 > [!IMPORTANT]  
@@ -71,7 +72,7 @@ ms.locfileid: "72903155"
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 ### <a name="additional-options"></a>추가 옵션  
- **애플리케이션 역할 – 신규** 대화 상자는 또한 두 개의 추가 페이지인 **보안 개체** 및 **확장 속성**을 제공합니다.  
+ **애플리케이션 역할 - 신규** 대화 상자는 또한 **보안 개체** 및 **확장 속성**의 두 추가 페이지에 옵션을 제공합니다.  
   
 -   **보안 개체** 페이지에는 사용 가능한 모든 보안 개체와 이러한 보안 개체에서 로그인에 부여할 수 있는 권한이 나열됩니다.  
   

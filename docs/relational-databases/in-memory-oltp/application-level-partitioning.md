@@ -1,5 +1,6 @@
 ---
 title: 애플리케이션 수준 분할 | Microsoft 문서
+description: 주문을 처리하는 이 예제를 검토합니다. 이 애플리케이션은 최근 주문을 메모리 최적화 테이블에 저장하고 이전 주문을 디스크 기반 테이블에 저장합니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20fe12efc4bbc7ba948a89e5b15fb3f869651d4f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 047d337dd8ce561924a6f27de7ac43a4d57f4c60
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951252"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629707"
 ---
 # <a name="application-level-partitioning"></a>애플리케이션 수준 분할
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   이 애플리케이션은 주문을 처리합니다. 최근 주문에 대한 처리 작업이 많습니다. 이전 주문에 대한 처리 작업이 많지 않습니다. 최근 주문이 메모리 최적화 테이블에 있습니다. 이전 명령이 디스크 기반 테이블에 있습니다. *hotDate* 이후의 모든 주문은 메모리 최적화 테이블에 있습니다. *hotDate* 이전의 모든 주문은 디스크 기반 테이블에 있습니다. 동시 트랜잭션이 많이 있는 극단적인 OLTP 작업을 가정합니다. 여러 개의 동시 트랜잭션이 *hotDate*를 변경하려고 하는 경우에도 이 비즈니스 규칙(메모리 최적화 테이블에 있는 최근 주문)을 적용해야 합니다.  
   
  이 예제에서는 디스크 기반 테이블에 분할된 테이블을 사용하지 않지만 제 3의 테이블을 사용하여 두 테이블 간의 명시적 분할 지점을 추적합니다. 분할 지점을 사용하여 새로 삽입된 데이터가 날짜에 따라 적절한 테이블에 항상 삽입되도록 할 수 있으며 데이터를 찾을 위치를 결정할 수도 있습니다. 늦게 도착하는 데이터가 여전히 적절한 테이블로 이동합니다.  

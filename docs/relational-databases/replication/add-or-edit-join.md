@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 13c441771044ba6932b35fd59f593b9e635b0afe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 166107c908fb83c5fe4fae83f67b9dc4984bbafb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907570"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726102"
 ---
 # <a name="add-or-edit-join"></a>조인 추가 또는 편집
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **조인 추가** 및 **조인 편집** 대화 상자를 사용하여 병합 게시에 대한 조인 필터를 추가 및 편집할 수 있습니다.  
   
 > [!NOTE]  
@@ -46,7 +46,7 @@ ms.locfileid: "72907570"
   
     -   새 조인을 추가하는 경우 **작성기를 사용하여 문 작성** 또는 **조인 문 직접 작성**을 선택합니다. 수동으로 조인 작성을 시작하면 작성기를 사용할 수 없습니다.  
   
-         작성기 사용을 선택하면 표의 열(**결합**, **필터링된 테이블 열**, **연산자**및 **조인된 테이블 열**)을 사용하여 조인 문을 작성합니다. 표의 각 열에는 드롭다운 목록 상자가 들어 있어 두 개의 열과 연산자( **=** , **<>** , **<=** , **\<** , **>=** , **>** , **like**)를 선택할 수 있습니다. 결과는 **미리 보기** 텍스트 영역에 표시됩니다. 조인이 둘 이상의 열 쌍을 포함하면**결합** 열에서 결합( **AND**또는 **OR** )을 선택한 다음 두 개의 추가 열과 다른 연산자를 입력합니다.  
+         작성기 사용을 선택하면 표의 열(**결합**, **필터링된 테이블 열**, **연산자**및 **조인된 테이블 열**)을 사용하여 조인 문을 작성합니다. 그리드의 각 열에는 드롭다운 목록 상자가 있어 두 개의 열과 연산자( **=** , **<>** , **<=** , **\<**, **>=** , **>** , **like**)를 선택할 수 있습니다. 결과는 **미리 보기** 텍스트 영역에 표시됩니다. 조인이 둘 이상의 열 쌍을 포함하면**결합** 열에서 결합( **AND**또는 **OR** )을 선택한 다음 두 개의 추가 열과 다른 연산자를 입력합니다.  
   
          수동으로 문 작성을 선택하면 **조인 문** 텍스트 영역에 조인 문을 작성합니다. **필터링된 테이블 열** 목록 상자 및 **조인된 테이블 열** 목록 상자를 사용하여 열을 **조인 문** 텍스트 영역에 끌어다 놓습니다.  
   

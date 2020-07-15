@@ -15,15 +15,15 @@ ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 926822356c6e7f9f4d775ca0710ee2f815c0e7f5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1cc39f3a2a849bd60cda71c5988eeb0cadcd9a88
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74094492"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737594"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>데이터베이스 메일 메시지 및 이벤트 로그 보관을 처리하는 SQL Server 에이전트 작업 만들기
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   데이터베이스 메일 및 첨부 파일의 복사본은 데이터베이스 메일 이벤트 로그와 함께 **msdb** 테이블에 보관됩니다. 정기적으로 테이블의 크기를 축소하고 더 이상 필요하지 않은 메시지와 이벤트를 보관할 수 있습니다. 다음 절차에서는 SQL Server 에이전트 작업을 만들어 이 프로세스를 자동화합니다.  
   
 -   **시작하기 전에:**  , [필수 구성 요소](#Prerequisites), [권장 사항](#Recommendations), [권한](#Permissions)  
@@ -208,7 +208,7 @@ ms.locfileid: "74094492"
   
 5.  **빈도** 영역에서 정기적으로 작업을 실행할 옵션을 선택합니다(예: 매월 한 번).  
   
-6.  **일별 빈도** 영역에서 **한 번 수행 - \<시간>** 을(를) 선택합니다.  
+6.  **일별 빈도** 영역에서 **한 번 수행 - \<time>** 을 선택합니다.  
   
 7.  다른 옵션이 원하는 대로 구성되었는지 확인하고 **확인** 을 눌러 일정을 저장합니다.  
   

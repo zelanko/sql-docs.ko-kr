@@ -1,5 +1,6 @@
 ---
 title: 메모리 내 OLTP에 대한 예제 데이터베이스 | Microsoft 문서
+description: 메모리 내 OLTP의 기능 및 성능상의 이점에 대해 알아봅니다. 이 샘플에서는 메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저를 확인할 수 있습니다.
 ms.custom: ''
 ms.date: 12/14/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fea6c071434a50dc0e592533ccc3647aadec0106
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 4859a35269e0664b07f08db795e3e57a4c8feb70
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487669"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735042"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 예제 데이터베이스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
     
 ## <a name="overview"></a>개요  
  이 샘플에서는 메모리 내 OLTP 기능을 소개합니다. 이 예제는 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저를 보여 주며, 메모리 내 OLTP의 성능 이점을 설명하는 데 사용할 수 있습니다.  
@@ -574,7 +575,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 
  이는 예상된 결과입니다. 트랜잭션 작업이 실행 중일 때 메모리가 회수됩니다.  
   
- 데모 작업의 두 번째 실행을 시작하는 경우 이전에 삭제된 행이 정리됨에 따라 메모리 사용률이 처음에는 줄어드는 것을 확인할 수 있습니다. 특정 시점에서 메모리 크기가 다시 증가하고 작업이 완료될 때까지 증가합니다. 데모를 다시 설정하고 1,000만 개의 행을 삽입한 후 메모리 사용률은 처음 실행한 후의 사용률과 매우 유사합니다. 다음은 그 예입니다.  
+ 데모 작업의 두 번째 실행을 시작하는 경우 이전에 삭제된 행이 정리됨에 따라 메모리 사용률이 처음에는 줄어드는 것을 확인할 수 있습니다. 특정 시점에서 메모리 크기가 다시 증가하고 작업이 완료될 때까지 증가합니다. 데모를 다시 설정하고 1,000만 개의 행을 삽입한 후 메모리 사용률은 처음 실행한 후의 사용률과 매우 유사합니다. 예를 들면 다음과 같습니다.  
   
 ```sql
 SELECT type  
@@ -755,7 +756,7 @@ ORDER BY state, file_type
   
  데모를 다시 설정한 후 1,000만 개의 판매 주문을 삽입하는 데모 작업을 두 번째로 실행하면 작업을 처음 실행하는 동안 생성된 파일이 정리된 것을 확인할 수 있습니다. 작업이 실행되는 동안 위의 쿼리를 몇 차례 실행하는 경우 검사점 파일이 다양한 상태를 거치는 것을 확인할 수 있습니다.  
   
- 1,000만 개의 판매 주문을 삽입하는 작업을 두 번째로 실행한 후 디스크 사용률이 처음 실행한 후와 매우 유사한 것을 확인할 수 있습니다. 하지만 시스템이 특성상 동적이므로 반드시 같지는 않습니다. 다음은 그 예입니다.  
+ 1,000만 개의 판매 주문을 삽입하는 작업을 두 번째로 실행한 후 디스크 사용률이 처음 실행한 후와 매우 유사한 것을 확인할 수 있습니다. 하지만 시스템이 특성상 동적이므로 반드시 같지는 않습니다. 예를 들면 다음과 같습니다.  
   
 ```sql
 SELECT state_desc  

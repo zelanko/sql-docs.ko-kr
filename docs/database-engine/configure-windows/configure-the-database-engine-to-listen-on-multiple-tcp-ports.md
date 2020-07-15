@@ -1,5 +1,6 @@
 ---
 title: 여러 TCP 포트에서 수신 대기하도록 데이터베이스 엔진 구성 | Microsoft Docs
+description: TDS(Tabular Data Stream) 엔드포인트 관련 내용을 숙지하세요. 이 엔드포인트를 사용하여 추가 TCP 포트에서 수신하도록 SQL Server 데이터베이스 엔진을 구성하는 방법을 확인합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - tabular data stream
 - multiple ports
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3055750ac7f52c4dfaaae3cef94021d9d024a50a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dc92b34d57f2406c1b5aa59cce67840af4c21918
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012723"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85697762"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 여러 TCP 포트로 수신하도록 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 구성하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 TCP/IP가 설정된 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 IP 주소와 TCP 포트 번호로 구성된 연결 지점에서 들어오는 연결을 수신합니다. 다음 절차에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 추가 TCP 포트에서 수신할 수 있도록 TDS(Tabular Data Stream) 엔드포인트를 만듭니다.  
   
  두 번째 TDS 엔드포인트를 만드는 이유는 다음과 같습니다.  

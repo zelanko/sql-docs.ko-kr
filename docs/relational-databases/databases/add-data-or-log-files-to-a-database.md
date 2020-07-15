@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스에 데이터 또는 로그 파일 추가 | Microsoft 문서
+description: SQL Server Management Studio 또는 Transact-SQL을 사용하여 SQL Server 2019에서 데이터베이스에 데이터 또는 로그 파일을 추가하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 34e976dca163289450c3aa481d1f72bb46712046
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 563a075ec3cba0cc25980e59a228a5c319075caa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137403"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727583"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>데이터베이스에 데이터 또는 로그 파일 추가
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 데이터베이스에 데이터 또는 로그 파일을 추가하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -72,7 +73,7 @@ ms.locfileid: "68137403"
   
 6.  데이터 또는 로그 중에서 원하는 파일 형식을 선택합니다.  
   
-7.  데이터 파일을 선택한 경우 파일을 포함할 파일 그룹을 목록에서 선택하거나 **\<새 파일 그룹>** 을 선택하여 새 파일 그룹을 만듭니다. 트랜잭션 로그는 파일 그룹에 포함할 수 없습니다.  
+7.  데이터 파일을 선택한 경우 파일을 포함할 파일 그룹을 목록에서 선택하거나 **\<new filegroup>** 을 선택하여 새 파일 그룹을 만듭니다. 트랜잭션 로그는 파일 그룹에 포함할 수 없습니다.  
   
 8.  파일의 처음 크기를 지정합니다. 데이터베이스에서 예상되는 최대 데이터 양을 고려하여 데이터 파일의 크기를 최대한 크게 지정합니다.  
   

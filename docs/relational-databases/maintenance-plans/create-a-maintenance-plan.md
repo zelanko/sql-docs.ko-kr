@@ -1,5 +1,6 @@
 ---
 title: 유지 관리 계획 만들기 | Microsoft 문서
+description: SQL Server Management Studio 또는 Transact-SQL을 사용하여 SQL Server에서 단일 서버 또는 다중 서버 유지 관리 계획을 만드는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1dc50611e1497d84335f29d763c280cb09e9d41b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c8e76cdbc5adfb617511d81a1c5af938a95dba10
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70874744"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667481"
 ---
 # <a name="create-a-maintenance-plan"></a>유지 관리 계획 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 단일 서버 또는 다중 서버 유지 관리 계획을 만드는 방법에 대해 설명합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하면 유지 관리 계획 마법사나 디자인 화면을 통해 이러한 유지 관리 계획을 만들 수 있습니다. 기본 유지 관리 계획을 만들 때는 마법사가 적합한 반면 디자인 화면을 사용하여 계획을 만들면 워크플로의 향상된 기능을 활용할 수 있습니다.  
   
  **항목 내용**  

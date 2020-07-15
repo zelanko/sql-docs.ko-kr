@@ -1,5 +1,6 @@
 ---
 title: Always Encrypted 마법사를 사용하여 열 암호화 구성 | Microsoft Docs
+description: SQL Server에서 Always Encrypted 마법사를 사용하여 데이터베이스 열에 Always Encrypted 구성을 설정하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 10/30/2019
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71df93e5e7d628fadf5839e980f42a92138a5e0c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f592004e96a9b469a56bc9ff85b8f4080af38406
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73594500"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627450"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Always Encrypted 마법사를 사용하여 열 암호화 구성
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 Always Encrypted 마법사는 선택한 데이터베이스 열에 대해 원하는 [Always Encrypted](always-encrypted-database-engine.md) 구성을 설정할 수 있는 강력한 도구입니다. 현재 구성 및 원하는 대상 구성에 따라 마법사에서 열을 암호화하거나, 암호를 해독(암호화 제거)하거나, 다시 암호화(예: 열에 대해 구성된 현재 형식과 다른 암호화 형식 또는 새 열 암호화 키 사용)할 수 있습니다. 마법사를 한 번 실행하여 여러 열을 구성할 수 있습니다.
 

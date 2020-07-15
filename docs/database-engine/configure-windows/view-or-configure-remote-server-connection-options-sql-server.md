@@ -1,5 +1,6 @@
 ---
 title: 원격 서버 연결 옵션 보기 또는 구성(SQL Server) | Microsoft Docs
+description: 서버 수준에서 원격 서버 연결 옵션을 보거나 구성하는 방법을 알아봅니다. 이 목적을 위해 SQL Server Management Studio 또는 Transact-SQL을 사용할 수 있습니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - servers [SQL Server], remote
 - connections [SQL Server], remote servers
 ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 11ca900d4a6f0f820379b0446bcca85e97462177
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ec50e6ae39798add5a564dbeb8a971e879c18c27
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67945689"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85680711"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>원격 서버 연결 옵션 보기 또는 구성(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 서버 수준에서 원격 서버 연결 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -52,7 +53,7 @@ ms.locfileid: "67945689"
   
 1.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-2.  **SQL Server 속성 - \<** _server_name_ **>** 대화 상자에서 **연결**을 클릭합니다.  
+2.  **SQL Server 속성 - \<**_server_name_**>** 대화 상자에서 **연결**을 클릭합니다.  
   
 3.  **연결** 페이지에서 **원격 서버 연결** 설정을 확인한 다음 필요한 경우 수정합니다.  
   

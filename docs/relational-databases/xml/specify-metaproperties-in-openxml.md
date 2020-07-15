@@ -1,5 +1,6 @@
 ---
 title: OPENXML에 메타 속성 지정 | Microsoft 문서
+description: OPENXML 문에서 메타 속성 특성을 지정하여 XML 노드에서 정보를 추출하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6ff3072b84334f16395c7687c1baaf511cd1fd53
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: fd34411b00bfa89c5c69b0d71073ee1c0d4d2280
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664821"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728123"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>OPENXML에 메타 속성 지정
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XML 문서의 메타 속성 특성은 요소, 특성, 그 밖의 모든 DOM 노드와 같은 XML 항목의 속성을 설명하는 특성입니다. 이러한 특성은 물리적으로 XML 문서 텍스트에 존재하지 않습니다. 하지만 OPENXML은 모든 XML 항목에 대해 이러한 메타 속성을 제공합니다. 이러한 메타 속성을 사용하면 로컬 위치 및 네임스페이스 정보와 같은 XML 노드 정보를 추출할 수 있습니다. 이 정보는 텍스트에 명시적으로 표현된 것보다 자세한 정보를 제공합니다.  
   
  *ColPattern* 매개 변수를 사용하여 이러한 메타 속성을 OPENXML 문의 행 집합 열에 매핑할 수 있습니다. 열에는 매핑될 메타 속성 값이 포함됩니다. OPENXML 구문에 대한 자세한 내용은 [OPENXML&#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)을 참조하세요.  
@@ -56,7 +57,7 @@ ms.locfileid: "80664821"
 |**\@mp:parentnamespacerui**|**../\@mp:namespaceuri**에 해당합니다.|  
 |**\@mp:parentprefix**|**../\@mp:prefix**에 해당합니다.|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 OPENXML을 사용하여 여러 행 집합 뷰를 만드는 방법을 보여 줍니다.  
   
 ### <a name="a-mapping-the-openxml-rowset-columns-to-the-metaproperties"></a>A. OPENXML 행 집합 열을 메타 속성에 매핑  

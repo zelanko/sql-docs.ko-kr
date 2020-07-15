@@ -1,24 +1,25 @@
 ---
 title: PolyBase 연결 구성(Transact-SQL) | Microsoft Docs
+description: sp_configure를 사용하여 PolyBase Hadoop 및 Azure Blob 스토리지 연결에 대한 전역 구성 설정을 표시하거나 변경하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
-ms.technology: configuration
-ms.topic: conceptual
+ms.technology: polybase
+ms.topic: reference
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: d86483245f8a4f06dfcb357d5d105539dd56f3a7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b3daf000381fbfaa5481ae18f348bd987689e46b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67997920"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938980"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 연결 구성(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -58,25 +59,25 @@ RECONFIGURE
   
 -   옵션 0: Hadoop 연결 사용 안 함  
   
--   옵션 1: Windows Server에서 Hortonworks HDP 1.3  
+-   옵션 1: Windows Server의 Hortonworks HDP 1.3  
   
 -   옵션 1: Azure Blob 스토리지(WASB[S])  
   
--   옵션 2: Linux에서 Hortonworks HDP 1.3  
+-   옵션 2: Linux의 Hortonworks HDP 1.3  
   
 -   옵션 3: Linux에서 Cloudera CDH 4.3  
   
--   옵션 4: Windows Server에서 Hortonworks HDP 2.0  
+-   옵션 4: Windows Server의 Hortonworks HDP 2.0  
   
 -   옵션 4: Azure Blob 스토리지(WASB[S])  
   
--   옵션 5: Linux에서 Hortonworks HDP 2.0  
+-   옵션 5: Linux의 Hortonworks HDP 2.0  
   
--   옵션 6: Linux에서 Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 및 5.13  
+-   옵션 6: Linux의 Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 및 5.13  
   
--   옵션 7: Linux에서 Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0  
+-   옵션 7: Linux의 Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0  
   
--   옵션 7: Windows Server에서 Hortonworks 2.1, 2.2 및 2.3  
+-   옵션 7: Windows Server의 Hortonworks 2.1, 2.2 및 2.3  
   
 -   옵션 7: Azure Blob 스토리지(WASB[S])  
   
@@ -111,7 +112,7 @@ RECONFIGURE
   
  구성 값을 변경하거나 RECONFIGURE를 실행하려면 **sysadmin** 고정 서버 역할에 멤버 자격이나 **ALTER SETTINGS** 서버 수준 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-list-all-available-configuration-settings"></a>A. 모든 사용 가능한 구성 설정 나열  
  다음 예에서는 모든 구성 옵션을 나열하는 방법을 보여 줍니다.  

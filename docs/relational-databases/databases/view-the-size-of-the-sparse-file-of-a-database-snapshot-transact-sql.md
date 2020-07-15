@@ -1,10 +1,10 @@
 ---
 title: 데이터베이스 스냅숏 스파스 파일의 크기 보기(T-SQL)
+description: Transact-SQL을 사용하여 SQL Server 데이터베이스 파일이 스파스 파일인지 확인하고 실제 크기와 최대 크기를 찾습니다. 데이터베이스 스냅샷은 스파스 파일을 사용합니다.
 ms.date: 07/28/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.custom: seo-lt-2019
 ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,15 +18,16 @@ helpviewer_keywords:
 ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 71881edf1c98b0588a731964cf6f23dcffe6aa82
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: f62d33f45d390a4449bf603254ccc54be16a38b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055206"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727529"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>데이터베이스 스냅샷 스파스 파일의 크기 보기(Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 파일이 스파스 파일인지 확인하고 이 파일의 실제 크기 및 최대 크기를 찾는 방법을 보여 줍니다. NTFS 파일 시스템의 기능인 스파스 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 스냅샷에 사용됩니다.  
   
 > [!NOTE]  

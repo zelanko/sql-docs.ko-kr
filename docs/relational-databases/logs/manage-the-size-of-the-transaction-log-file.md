@@ -1,5 +1,6 @@
 ---
 title: 트랜잭션 로그 파일 크기 관리 | Microsoft Docs
+description: SQL Server 트랜잭션 로그 크기를 모니터링하고, 로그를 축소하고, 로그를 확장하고, tempdb 로그 증가 속도를 최적화하고, 트랜잭션 로그 증가를 제어하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 01/05/2018
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ff886f2eea70b010a2e64513cd561cf7f78d8dee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a722331a28cf741adb5b17ac8a398c106e7cd1c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68084026"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668003"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>트랜잭션 로그 파일의 크기 관리
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션 로그 크기 모니터링, 트랜잭션 로그 축소, 트랜잭션 로그 파일에 추가 또는 파일 확장, **tempdb** 트랜잭션 로그 증가율 최적화, 트랜잭션 로그 파일 증가 제어 등을 수행하는 방법에 대해 설명합니다.  
 
 ##  <a name="monitor-log-space-use"></a><a name="MonitorSpaceUse"></a>로그 공간 사용 모니터링  

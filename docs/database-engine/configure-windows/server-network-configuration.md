@@ -1,5 +1,6 @@
 ---
 title: 서버 네트워크 구성 | Microsoft Docs
+description: SQL Server 네트워크 구성 작업을 숙지합니다. 프로토콜 사용, 암호화 구성, SPN 등록 및 기타 작업에 대한 정보를 확인합니다.
 ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - ports [SQL Server], changing
 - server configuration [SQL Server]
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 826a2b2305354807b6db7bbb167f86d165b98b45
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ef32cd47093c2397752c01dc49dfa2af494fd8fe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025616"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724018"
 ---
 # <a name="server-network-configuration"></a>서버 네트워크 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   서버 네트워크 구성 태스크에는 프로토콜 사용, 프로토콜에 사용되는 포트 또는 파이프 수정, 암호화 구성, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스 구성, 네트워크상에 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 표시 또는 숨기기, SPN(서버 보안 주체 이름) 등록 등이 있습니다. 대개 사용자는 서버 네트워크 구성을 변경할 필요가 없습니다. 특별한 네트워크 요구 사항이 있을 경우에만 서버 네트워크 프로토콜을 다시 구성합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 네트워크 구성을 완료합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 해당 제품과 함께 제공된 서버 네트워크 유틸리티를 사용합니다.  
@@ -40,7 +41,7 @@ ms.locfileid: "68025616"
  동적 포트에 대해 구성하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용한 포트는 시작할 때마다 변경될 수 있습니다. 방화벽을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용한 포트를 열어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 특정 포트를 사용하도록 구성되므로 서버에 대한 통신을 허용하도록 방화벽을 구성할 수 있습니다. 자세한 내용은 [특정 TCP 포트로 수신하도록 서버 구성&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)을 참조하세요.  
   
 ### <a name="changing-a-named-pipe"></a>명명된 파이프 변경  
- 지정된 명명된 파이프에서 수신하도록 명명된 파이프 프로토콜을 구성할 수 있습니다. 기본적으로 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 기본 인스턴스는 기본 인스턴스의 경우 \\\\.\pipe\sql\query 파이프에서, 명명된 인스턴스의 경우 \\\\.\pipe\MSSQL$ *\<instancename>* \sql\query 파이프에서 수신 대기합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 하나의 명명된 파이프에서만 수신할 수 있지만 필요한 경우 파이프를 다른 이름으로 변경할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스는 클라이언트에서 연결할 때 파이프를 식별하는 데 도움이 됩니다. 자세한 내용은 [대체 파이프에서 수신하도록 서버 구성&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md)을 참조하세요.  
+ 지정된 명명된 파이프에서 수신하도록 명명된 파이프 프로토콜을 구성할 수 있습니다. 기본적으로 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스는 기본 인스턴스의 경우 \\\\.\pipe\sql\query 파이프에서, 명명된 인스턴스의 경우 \\\\.\pipe\MSSQL$ *\<instancename>* \sql\query 파이프에서 수신 대기합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 하나의 명명된 파이프에서만 수신할 수 있지만 필요한 경우 파이프를 다른 이름으로 변경할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스는 클라이언트에서 연결할 때 파이프를 식별하는 데 도움이 됩니다. 자세한 내용은 [대체 파이프에서 수신하도록 서버 구성&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md)을 참조하세요.  
   
 ## <a name="force-encryption"></a>암호화 적용  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 클라이언트 애플리케이션과 통신할 경우 암호화를 요구하도록 구성할 수 있습니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  

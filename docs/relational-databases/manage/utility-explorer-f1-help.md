@@ -1,5 +1,6 @@
 ---
 title: 유틸리티 탐색기 F1 도움말 | Microsoft 문서
+description: SQL Server 유틸리티의 다양한 영역에서 제공되는 기능에 대해 알아봅니다. 보기, 대시보드 및 유틸리티 관리 탭에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 08/19/2016
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 264c809ce03cca9a6bb9b84300d3780a1ddc33f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68024487"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640404"
 ---
 # <a name="utility-explorer-f1-help"></a>유틸리티 탐색기 F1 도움말
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   다음 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 기능 및 이와 관련된 작업에 대해 설명합니다.  
   
   ## <a name="utility-dashboard-sql-server-utility"></a>유틸리티 대시보드(SQL Server 유틸리티)
@@ -36,7 +37,7 @@ ms.locfileid: "68024487"
  유틸리티 제어 지점을 만드는 방법은 [SQL Server 유틸리티 제어 지점 만들기&#40;SQL Server 유틸리티&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)을 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 추가하는 방법은 [SQL Server 인스턴스 등록&#40;SQL Server 유틸리티&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)을 참조하세요.  
  
   
-### <a name="uielement-list"></a>UIElement 목록  
+### <a name="ui-element-list"></a>UI 요소 목록  
  관리되는 인스턴스 상태  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스 상태는 유틸리티 탐색기 내용 창에서 왼쪽에 표시됩니다.  
   
@@ -119,7 +120,7 @@ ms.locfileid: "68024487"
  ## <a name="deployed-data-tier-application-details-sql-server-utility"></a>배포된 데이터 계층 애플리케이션 세부 정보(SQL Server 유틸리티)
   유틸리티 탐색기의 배포된 데이터 계층 애플리케이션 뷰에 나오는 정보는 개별 데이터 계층 애플리케이션의 사용 데이터, CPU 사용 기록, 파일 수준의 스토리지 사용 세부 정보, 그리고 정책 임계 값을 확인 및 업데이트하는 기능을 제공합니다. 정책 임계값은 데이터 계층 애플리케이션 수준에서 CPU 사용에 대해, 그리고 데이터베이스 데이터 파일 및 로그 파일에 대해 제어할 수 있습니다. 개별 데이터 계층 애플리케이션의 속성 정보를 볼 수도 있습니다.  
   
-### <a name="uielement-list"></a>UIElement 목록  
+### <a name="ui-element-list"></a>UI 요소 목록  
  목록 보기  
  창 맨 위에 있는 목록 뷰에서는 개별 데이터 계층 애플리케이션에 대한 데이터를 표시됩니다. 상태 아이콘은 각 데이터 계층 애플리케이션의 상태 요약을 사용 범주별로 보여 줍니다.  
   
@@ -167,7 +168,7 @@ ms.locfileid: "68024487"
   
 -   배포된 날짜  
   
--   신뢰성: (True 또는 False)  
+-   신뢰: (True 또는 False)  
   
 -   데이터 정렬  
   
@@ -177,7 +178,7 @@ ms.locfileid: "68024487"
   
 -   복구 모델: (단순, 전체 또는 대량 로그)  
   
--   마지막 보고 시간: 이 열에는 날짜 및 시간 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간이 표시됩니다. 자세한 내용은 [datetime(TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 항목을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 [datetimeoffset(TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 항목을 참조하세요.  
+-   마지막 보고 시간: 이 열에는 datetime 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간이 표시됩니다. 자세한 내용은 [datetime(TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 항목을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 [datetimeoffset(TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 항목을 참조하세요.  
   
  CPU 사용 탭  
  CPU 사용 탭에는 데이터 계층 애플리케이션과 컴퓨터 CPU 사용의 기록 데이터 그래프가 함께 표시됩니다.  
@@ -244,7 +245,7 @@ ms.locfileid: "68024487"
   
 -   배포된 날짜  
   
--   신뢰성: (True 또는 False)  
+-   신뢰: (True 또는 False)  
   
 -   데이터 정렬  
   
@@ -254,12 +255,12 @@ ms.locfileid: "68024487"
   
 -   복구 모델: (단순, 전체 또는 대량 로그)  
   
--   마지막 보고 시간: 이 열에는 날짜 및 시간 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간이 표시됩니다. 자세한 내용은 [datetime(TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 항목을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 [datetimeoffset(TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 항목을 참조하세요.
+-   마지막 보고 시간: 이 열에는 datetime 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간이 표시됩니다. 자세한 내용은 [datetime(TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 항목을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 [datetimeoffset(TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 항목을 참조하세요.
 
 ## <a name="managed-instance-details-sql-server-utility"></a>관리되는 인스턴스 세부 정보(SQL Server 유틸리티)
  유틸리티 탐색기의 관리되는 인스턴스 뷰에 나오는 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 개별 인스턴스에 대한 사용 데이터, CPU 사용 기록, 파일 수준의 스토리지 사용 세부 정보, 그리고 정책 임계 값을 확인 및 업데이트하는 기능을 제공합니다. 정책 임계 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 수준, 컴퓨터, 데이터베이스 파일과 로그 파일, 그리고 스토리지 볼륨 수준에서 제어할 수 있습니다. 개별 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스 속성 정보를 볼 수도 있습니다.  
   
-### <a name="uielement-list"></a>UIElement 목록  
+### <a name="ui-element-list"></a>UI 요소 목록  
  목록 보기  
  창 맨 위에 있는 목록 뷰에는 개별 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 정보가 ComputerName\InstanceName 형식의 행으로 나열 표시됩니다.  
   
@@ -307,7 +308,7 @@ ms.locfileid: "68024487"
   
 -   SQL Server 에디션:  
   
--   클러스터: (True 또는 False)  
+-   클러스터형: (True 또는 False)  
   
 -   백업 디렉터리:  
   
@@ -317,7 +318,7 @@ ms.locfileid: "68024487"
   
 -   언어:  
   
--   마지막 보고 시간: 이 열에는 날짜 및 시간 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간이 표시됩니다. 자세한 내용은 [datetime(TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 항목을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 [datetimeoffset(TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 항목을 참조하세요.  
+-   마지막 보고 시간: 이 열에는 datetime 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간이 표시됩니다. 자세한 내용은 [datetime(TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 항목을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 [datetimeoffset(TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 항목을 참조하세요.  
   
  CPU 사용 탭  
  CPU 사용 탭에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 컴퓨터 CPU 사용의 기록 데이터 그래프가 함께 표시됩니다.  
@@ -404,7 +405,7 @@ ms.locfileid: "68024487"
   
 -   SQL Server 에디션:  
   
--   클러스터: (True 또는 False)  
+-   클러스터형: (True 또는 False)  
   
 -   백업 디렉터리:  
   
@@ -417,7 +418,7 @@ ms.locfileid: "68024487"
 ## <a name="utility-administration-sql-server-utility"></a>유틸리티 관리(SQL Server 유틸리티)
 유틸리티 관리 탭을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 정책, 보안 및 데이터 웨어하우스 설정을 관리할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 개념에 대한 자세한 내용은 [SQL Server 유틸리티 기능 및 태스크](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요.  
   
-### <a name="uielement-list"></a>UIElement 목록
+### <a name="ui-element-list"></a>UI 요소 목록
  **정책 탭** - 정책 탭을 사용하여 전역 모니터링 정책을 보거나 지정할 수 있습니다.  
   
  전역 데이터 계층 애플리케이션의 모니터링 정책을 설정합니다. 이 옵션의 값 목록을 확장하려면 정책 이름 옆에 있는 화살표를 클릭하거나 정책 제목을 클릭합니다.  
@@ -488,9 +489,9 @@ ms.locfileid: "68024487"
   
 -   UMDW 이름: Sysutility_mdw_\<GUID>_DATA.  
   
--   컬렉션 집합 업로드 빈도: 15분마다.  
+-   컬렉션 집합 업로드 빈도: 15분마다  
   
- UMDW 디렉터리는 구성할 수 있으며 \<시스템 드라이브>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\입니다. 여기서 \<시스템 드라이브>는 일반적으로 C:\ 드라이브입니다. 로그 파일 UMDW_\<GUID>_LOG는 같은 디렉터리에 있습니다.  
+ UMDW 디렉터리는 구성할 수 있으며 \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\입니다. 여기서 \<System drive>는 일반적으로 C:\ 드라이브입니다. 로그 파일 UMDW_\<GUID>_LOG는 같은 디렉터리에 있습니다.  
   
 > **참고:** UMDW(sysutility_mdw) 파일 위치는 detach/attach 또는 ALTER DATABASE를 사용하여 변경할 수 있으며 ALTER DATABASE를 사용하는 것이 좋습니다. 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
   

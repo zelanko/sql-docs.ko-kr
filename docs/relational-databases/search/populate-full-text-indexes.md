@@ -24,15 +24,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52fc7d3d43c1f0adcf7ab94d78cf301254a9a18d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 90224fd31bcb4592055ca22890dd63996eadba34
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903874"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629267"
 ---
 # <a name="populate-full-text-indexes"></a>전체 텍스트 인덱스 채우기
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   전체 텍스트 인덱스를 만들고 유지 관리하려면 *채우기* ( *탐색*이라고도 함)라는 프로세스를 사용하여 인덱스를 채워야 합니다.  
   
 ##  <a name="types-of-population"></a><a name="types"></a> Types of population  
@@ -216,8 +216,8 @@ ALTER FULLTEXT INDEX ON Production.Document
 `SQLFT<DatabaseID><FullTextCatalogID>.LOG[<n>]`
   
 크롤링 로그 파일 이름의 변수 부분은 다음과 같습니다.
--   <**DatabaseID**> - 데이터베이스의 ID입니다. \<**dbid**>는 앞에 오는 0을 사용하는 5자리 숫자입니다.  
--   <**FullTextCatalogID**> - 전체 텍스트 카탈로그 ID입니다. \<**catid**>는 앞에 오는 0을 사용하는 5자리 숫자입니다.  
+-   <**DatabaseID**> - 데이터베이스의 ID입니다. \<**dbid**>는 앞에 0이 오는 5자리 숫자입니다.  
+-   <**FullTextCatalogID**> - 전체 텍스트 카탈로그 ID입니다. \<**catid**>는 앞에 0이 오는 5자리 숫자입니다.  
 -   <**n**> - 동일한 전체 텍스트 카탈로그의 탐색 로그가 하나 이상 있음을 나타내는 정수입니다.  
   
  예를 들어 `SQLFT0000500008.2`는 데이터베이스 ID = 5, 전체 텍스트 카탈로그 ID = 8인 데이터베이스의 탐색 로그 파일입니다. 파일 이름 끝에 있는 2는 이 데이터베이스/카탈로그 쌍의 탐색 로그 파일이 두 개 있음을 나타냅니다.  

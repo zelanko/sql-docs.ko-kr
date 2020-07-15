@@ -17,15 +17,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4fd63c14206848107e2fea8c2e8972e76b77cc1c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021224"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629494"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>전체 텍스트 인덱스 성능 향상
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 이 항목에서는 전체 텍스트 인덱스 및 쿼리 성능 저하의 몇 가지 일반적인 원인에 대해 설명합니다. 또한 이러한 문제를 완화하고 성능을 향상시킬 수 있는 몇 가지 제안 사항도 제공합니다.
   
 ##  <a name="common-causes-of-performance-issues"></a><a name="causes"></a> Common causes of performance issues
@@ -82,7 +82,7 @@ ms.locfileid: "68021224"
   
 크롤링 로그 파일 이름의 변수 부분은 다음과 같습니다.
 -   \<**DatabaseID**> - 데이터베이스의 ID입니다. <**dbid**>는 앞에 오는 0을 사용하는 5자리 숫자입니다.  
--   <**FullTextCatalogID**> - 전체 텍스트 카탈로그 ID입니다. \<**catid**>는 앞에 오는 0을 사용하는 5자리 숫자입니다.  
+-   <**FullTextCatalogID**> - 전체 텍스트 카탈로그 ID입니다. \<**catid**>는 앞에 0이 오는 5자리 숫자입니다.  
 -   <**n**> - 동일한 전체 텍스트 카탈로그의 탐색 로그가 하나 이상 있음을 나타내는 정수입니다.  
   
  예를 들어 `SQLFT0000500008.2`는 데이터베이스 ID = 5, 전체 텍스트 카탈로그 ID = 8인 데이터베이스의 탐색 로그 파일입니다. 파일 이름 끝에 있는 2는 이 데이터베이스/카탈로그 쌍의 탐색 로그 파일이 두 개 있음을 나타냅니다.  
@@ -132,8 +132,8 @@ ms.locfileid: "68021224"
   
 |플랫폼|fdhost.exe에 필요한 예상 메모리(MB) - *F*^1|max server memory 계산 수식 - *M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* = ‘크롤링 범위 수’  *50*\*|*M* =minimum(*T*, 2000) - F - 500|  
-|x64|*F* = ‘크롤링 범위 수’ *10* 8\*\*|*M* = *T* - *F* - 500|  
+|x86|*F* = ‘크롤링 범위 수’ \* 50|*M* =minimum(*T*, 2000) - F - 500|  
+|x64|*F* = ‘크롤링 범위 수’ \* 10 \* 8|*M* = *T* - *F* - 500|  
 
 **수식 관련 참고 사항**
 1.  여러 전체 채우기가 진행 중인 경우 *F1*, *F2*와 같이 각 채우기 작업에 대한 fdhost.exe 메모리 요구 사항을 개별적으로 계산합니다. 그런 다음, *M*을 _T_ **-** sigma **(** _F_i **)** 로 계산합니다.  
@@ -150,9 +150,9 @@ ms.locfileid: "68021224"
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>예: 최대 서버 메모리 설정  
+ #### <a name="example-setting-max-server-memory"></a>예제: 최대 서버 메모리 설정  
   
- 이 예제에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 및 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 위 예제 **에서 계산된** M*값으로*max server memory`7052`를 설정합니다.  
+ 이 예제에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 및 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 위 예제 `7052`에서 계산된 *M* 값으로 **max server memory**를 설정합니다.  
   
 ```  
 USE master;  

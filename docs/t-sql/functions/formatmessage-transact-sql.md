@@ -19,17 +19,17 @@ helpviewer_keywords:
 - messages [SQL Server], formats
 - errors [SQL Server], formats
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 8910f8cd38d1336a5da5c91e386d7458164b3208
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5909e4812ca554ffdd7b7586af652382358170fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826930"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752391"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   sys.messages의 기존 메시지 또는 제공된 문자열에서 메시지를 작성합니다. FORMATMESSAGE의 기능은 RAISERROR 문의 기능과 유사합니다. 단, RAISERROR는 메시지를 즉시 인쇄하는 반면 FORMATMESSAGE는 추가 처리를 위해 서식이 지정된 메시지를 반환합니다.  
   
@@ -59,16 +59,16 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
 ## <a name="remarks"></a>설명  
  FORMATMESSAGE는 RAISERROR 문과 유사하게 메시지의 자리 표시자 변수를 제공된 매개 변수 값으로 대체하여 메시지를 편집합니다. 오류 메시지에서 허용되는 자리 표시자와 편집 프로세스에 대한 자세한 내용은 [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)를 참조하세요.  
   
- FORMATMESSAGE는 사용자의 현재 언어로 된 메시지를 찾습니다. 지역화된 버전의 메시지가 없는 경우 미국 영어 버전이 사용됩니다.  
+ FORMATMESSAGE는 사용자의 현재 언어로 된 메시지를 찾습니다. 시스템 메시지(*msg_number* <=50000)의 경우 지역화된 버전의 메시지가 없으면 OS 언어 버전이 사용됩니다. 사용자 메시지(*msg_number* >50000)의 경우 지역화된 버전의 메시지가 없으면 영어 버전이 사용됩니다.
   
  지역화된 메시지의 경우 제공된 매개 변수 값은 미국 영어 버전의 매개 변수 자리 표시자와 일치해야 합니다. 즉, 지역화된 버전의 매개 변수 1은 미국 영어 버전의 매개 변수 1과 일치해야 하며 매개 변수 2는 매개 변수 2와 일치해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-example-with-a-message-number"></a>A. 메시지 번호 사용 예  
  다음 예는 sys.messages에 "아티클 '%s'을(를) 게시 '%s'에 추가할 수 없습니다."로 저장된 복제 메시지 `20009`를 사용합니다. FORMATMESSAGE는 `First Variable` 및 `Second Variable` 값을 매개 변수 자리 표시자로 대체합니다. 결과 문자열 "아티클 '첫 번째 변수'를 게시 '두 번째 변수'에 추가할 수 없습니다."는 지역 변수 `@var1`에 저장됩니다.  
   
-```  
+```sql
 SELECT text FROM sys.messages WHERE message_id = 20009 AND language_id = 1033;  
 DECLARE @var1 VARCHAR(200);   
 SELECT @var1 = FORMATMESSAGE(20009, 'First Variable', 'Second Variable');   
@@ -81,7 +81,7 @@ SELECT @var1;
   
  다음 예는 입력으로 문자열을 사용합니다.  
   
-```  
+```sql
 SELECT FORMATMESSAGE('This is the %s and this is the %s.', 'first variable', 'second variable') AS Result;  
 ```  
   
@@ -90,7 +90,7 @@ SELECT FORMATMESSAGE('This is the %s and this is the %s.', 'first variable', 'se
 ### <a name="c-additional-message-string-formatting-examples"></a>C. 추가 메시지 문자열 서식 지정 예  
  다음 예는 다양한 서식 지정 옵션을 보여줍니다.  
   
-```  
+```sql
 SELECT FORMATMESSAGE('Signed int %i, %d %i, %d, %+i, %+d, %+i, %+d', 5, -5, 50, -50, -11, -11, 11, 11);
 SELECT FORMATMESSAGE('Signed int with up to 3 leading zeros %03i', 5);  
 SELECT FORMATMESSAGE('Signed int with up to 20 leading zeros %020i', 5);  

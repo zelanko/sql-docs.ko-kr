@@ -1,5 +1,6 @@
 ---
 title: 트랜잭션 내구성 제어 | Microsoft 문서
+description: 지연된 내구성이 있는 트랜잭션에 대해 알아봅니다. SQL Server 트랜잭션 커밋은 완전한 내구성 또는 지연된 내구성(지연 커밋이라고도 함)이 있을 수 있습니다.
 ms.custom: ''
 ms.date: 09/16/2016
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b20a628a24e36da854dd567c8f72c89c7169e361
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8df526a46aac597c9b6fee833d2673077aaf054b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68084100"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754563"
 ---
 # <a name="control-transaction-durability"></a>트랜잭션 내구성 제어
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션 커밋은 완전 내구성( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본값)이 있거나 지연된 내구성(느린 커밋이라고도 함)이 있습니다.    
     
@@ -134,7 +135,7 @@ AS BEGIN ATOMIC WITH
 END    
 ```    
     
-### <a name="table-1-durability-in-atomic-blocks"></a>테이블 1; ATOMIC 블록의 내구성    
+### <a name="table-1-durability-in-atomic-blocks"></a>테이블 1: ATOMIC 블록의 내구성    
     
 |ATOMIC 블록 내구성 옵션|기존 트랜잭션 없음|처리 중인 트랜잭션(완전 또는 지연된 내구성이 있음)|    
 |------------------------------------|-----------------------------|---------------------------------------------------------|    

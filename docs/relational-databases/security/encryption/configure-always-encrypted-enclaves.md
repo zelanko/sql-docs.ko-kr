@@ -1,5 +1,6 @@
 ---
 title: 보안 enclave를 사용한 Always Encrypted 구성 및 사용 | Microsoft Docs
+description: SQL Server에서 보안 enclave를 사용한 Always Encrypted 구성 및 사용을 통해 중요한 데이터에서 다양한 기능을 사용하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 10/18/2019
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 568944db62ca94048c45450500d3060daa957680
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d73d337e750e287066531017710b733c92a312ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74317938"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627021"
 ---
 # <a name="configure-and-use-always-encrypted-with-secure-enclaves"></a>보안 enclave를 사용한 Always Encrypted 구성 및 사용 
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../../../includes/applies-to-version/sqlserver2019.md)]
 
 [보안 Enclave를 사용한 Always Encrypted](always-encrypted-enclaves.md)는 기존 [Always Encrypted](always-encrypted-database-engine.md) 기능을 확장하여 데이터 기밀성을 유지하면서 중요한 데이터에 대해 보다 풍부한 기능을 사용하도록 설정합니다. 이 문서에서는 이 기능을 구성 및 사용하기 위한 일반적인 작업을 나열합니다.
 

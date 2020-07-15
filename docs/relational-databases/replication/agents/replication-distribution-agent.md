@@ -1,5 +1,6 @@
 ---
 title: 복제 배포 에이전트 | Microsoft 문서
+description: 복제 배포 에이전트를 사용하여 배포 데이터베이스 테이블에 저장된 스냅샷 및 트랜잭션을 구독자 대상 테이블로 이동합니다.
 ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c323fc0e0535b941b1349c3ceae2331aa55d7bb7
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: e36bac1d2455b82502c481ad811de7aac262a6b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151885"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722221"
 ---
 # <a name="replication-distribution-agent"></a>복제 배포 에이전트
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
   복제 배포 에이전트는 스냅샷(스냅샷 복제 및 트랜잭션 복제의 경우) 및 배포 데이터베이스 테이블에 저장된 트랜잭션(트랜잭션 배포의 경우)을 구독자의 대상 테이블로 이동하는 실행 파일입니다.  
   
 > [!NOTE]  

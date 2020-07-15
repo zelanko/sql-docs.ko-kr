@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY(Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 06/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -18,28 +18,29 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: cb698f95037cb6ab39c5a98dbf725f9decc66cd0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 56b15b96bf6f54ea2d58569afedacb9027e3b367
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73536253"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735833"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY(Transact-SQL)  
-
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-
-R, Python 또는 Java 패키지 파일을 지정된 바이트 스트림 또는 파일 경로의 데이터베이스에 업로드합니다. 이 명령문은 데이터베이스 관리자가 새 외부 언어 런타임 및 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]에서 지원되는 OS 플랫폼에 필요한 아티팩트를 업로드하기 위한 일반 메커니즘의 역할을 합니다. 
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+R, Python 또는 Java 패키지 파일을 지정된 바이트 스트림 또는 파일 경로의 데이터베이스에 업로드합니다. 이 명령문은 데이터베이스 관리자가 새 외부 언어 런타임 및 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]에서 지원되는 OS 플랫폼에 필요한 아티팩트를 업로드하기 위한 일반 메커니즘의 역할을 합니다. 
+
 > [!NOTE]
 > SQL Server 2017에서는 R 언어 및 Windows 플랫폼이 지원됩니다. Windows 및 Linux 플랫폼의 R, Python 및 외부 언어는 SQL Server 2019 이상에서 지원됩니다.
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+R 또는 Python 패키지 파일을 지정된 바이트 스트림 또는 파일 경로의 데이터베이스에 업로드합니다. 이 문은 데이터베이스 관리자가 필요한 아티팩트를 업로드하기 위한 일반 메커니즘의 역할을 합니다. 
+
 > [!NOTE]
-> Azure SQL Database에서 **sqlmlutils**를 사용하여 라이브러리를 설치할 수 있습니다. 자세한 내용은 [sqlmlutils를 사용하여 패키지 추가](/azure/sql-database/sql-database-machine-learning-services-add-r-packages#add-a-package-with-sqlmlutils)를 참조하세요.
+> Azure SQL Managed Instance에서 **sqlmlutils**를 사용하여 라이브러리를 설치할 수 있습니다. 자세한 내용은 [sqlmlutils를 사용하여 Python 패키지 설치](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-python-packages-on-sql-server?context=/azure/azure-sql/managed-instance/context/ml-context&view=azuresqldb-mi-current) 및 [sqlmlutils를 사용하여 새 R 패키지 설치](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-r-packages-on-sql-server?context=%2Fazure%2Fazure-sql%2Fmanaged-instance%2Fcontext%2Fml-context&view=azuresqldb-mi-current)를 참조하세요.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -113,14 +114,14 @@ WITH ( LANGUAGE = 'R' )
 ```
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-## <a name="syntax-for-azure-sql-database"></a>Azure SQL Database용 구문
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+## <a name="syntax-for-azure-sql-managed-instance"></a>Azure SQL Managed Instance용 구문
 
 ```text
 CREATE EXTERNAL LIBRARY library_name  
 [ AUTHORIZATION owner_name ]  
 FROM <file_spec> [ ,...2 ]  
-WITH ( LANGUAGE = 'R' )  
+WITH ( LANGUAGE = <language> )  
 [ ; ]  
 
 <file_spec> ::=  
@@ -132,6 +133,12 @@ WITH ( LANGUAGE = 'R' )
 { 
       varbinary_literal 
     | varbinary_expression 
+}
+
+<language> :: = 
+{
+      'R'
+    | 'Python'
 }
 ```
 ::: moniker-end
@@ -170,7 +177,7 @@ WITH ( LANGUAGE = 'R' )
 
 이 옵션은 라이브러리를 만들거나 기존 라이브러리를 변경해야 하지만(그리고 그렇게 하기 위해 필요한 권한을 가지고 있지만) 서버의 파일 시스템이 제한되어 라이브러리 파일을 서버가 액세스할 수 있는 위치에 복사할 수 없는 경우에 유용합니다.
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
 라이브러리의 콘텐츠에 대한 플랫폼을 지정합니다. 값은 기본적으로 SQL Server가 실행 중인 호스트 플랫폼입니다. 그러므로 사용자는 값을 지정하지 않아도 됩니다. 이는 여러 플랫폼이 지원되거나 사용자가 다른 플랫폼을 지정해야 하는 경우에 필요합니다.
@@ -184,18 +191,16 @@ SQL Server 2017에서는 Windows 플랫폼만 지원됩니다.
 SQL Server 2019에서는 Windows 및 Linux 플랫폼이 지원됩니다.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 **LANGUAGE = ‘R’**
 
-패키지의 언어를 지정합니다.
-R은 SQL Server 2017에서 지원됩니다.
+패키지의 언어를 지정합니다. R은 SQL Server 2017에서 지원됩니다.
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-**LANGUAGE = ‘R’**
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+**language**
 
-패키지의 언어를 지정합니다.
-R은 Azure SQL Database에서 지원됩니다.
+패키지의 언어를 지정합니다. Azure SQL Managed Instance에서 이 값은 `R` 또는 `Python`일 수 있습니다.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -239,7 +244,7 @@ GRANT CREATE EXTERNAL LIBRARY to user
 
 파일 경로를 사용하여 외부 라이브러리를 만들려면 사용자는 Windows 인증 로그인이거나 sysadmin 고정 서버 역할의 멤버여야 합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 ### <a name="add-an-external-library-to-a-database"></a>데이터베이스에 외부 라이브러리 추가  

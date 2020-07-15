@@ -16,18 +16,18 @@ ms.assetid: cf0ba215-cf83-48e0-bd98-a8ddc8810eab
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b71f68ad0c85f95af5d069eae8249b1d729cb42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb86d74c3b8a3e2cc1efe0804336115cbf387bcf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68127108"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727561"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>확장 속성 값 대화 상자
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  ‘**속성 이름’** 에 대한 값 _대화 상자를 사용하여 값을 입력하거나 확인할 수 있습니다.\<_ 이 대화 상자는 여러 위치에서 열 수 있는 일반 대화 상자입니다.  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  _\<property name>_ **에 대한 값** 대화 상자를 사용하여 값을 입력하거나 확인할 수 있습니다. 이 대화 상자는 여러 위치에서 열 수 있는 일반 대화 상자입니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **확장 속성 이름**  
  표시하거나 설정하는 확장 속성의 이름입니다.  
   

@@ -1,5 +1,6 @@
 ---
 title: 관리 데이터 웨어하우스(SSMS) 구성
+description: 데이터 수집기를 사용하는 하나 이상의 SQL Server 인스턴스에서 데이터 스토리지를 지원하도록 관리 데이터 웨어하우스를 구성하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 54badd0404ee5360aef4a7bc095c236e5b31f79d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c82c79bcf0b1494890055c098e6c7efdbc733ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056470"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733873"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>관리 데이터 웨어하우스 구성(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 데이터 수집기를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 단일 인스턴스 또는 여러 인스턴스에서 데이터 스토리지를 지원하도록 관리 데이터 웨어하우스를 구성하는 방법에 대해 설명합니다. 이러한 인스턴스는 같은 서버에 있거나 다른 서버에 있을 수 있습니다. 그리고 [데이터 관리 웨어하우스 구성 마법사](#Wizard) 대화 상자의 사용자 인터페이스에 대해서도 설명합니다. 데이터 수집기 구성에 대한 자세한 내용은 [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md)을 참조하세요.  
   
 > [!NOTE]  
@@ -93,7 +94,7 @@ ms.locfileid: "74056470"
   
  로그인에 대한 **매핑** 확인란을 선택하여 로그인을 지정합니다.  
   
- **데이터베이스 역할 멤버 자격:** ‘*데이터 웨어하우스 이름>’\<*  
+ **데이터베이스 역할 멤버 자격:**  *\<data warehouse name>*  
  다음 중 하나 이상의 옵션 옆에 있는 확인란을 클릭하여 로그인이 매핑되는 관리 데이터 웨어하우스 역할을 선택합니다.  
   
 -   **mdw_admin**  

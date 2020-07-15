@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2879807d7eb64446a26ea5857f33c52fe7b78970
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ee56255d55a8676fd55b903af70c002cefc9bea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165933"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737100"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>SQL Server Profiler를 사용하여 계획 지침 작성 및 테스트
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   계획 지침을 만들 때는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 *sp_create_plan_guide* 저장 프로시저의 **statement_text** 인수에서 사용할 정확한 쿼리 텍스트를 캡처할 수 있습니다. 이렇게 하면 컴파일 시 계획 지침이 쿼리와 일치하도록 보장할 수 있습니다. 계획 지침을 만든 다음 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 실제로 계획 지침이 쿼리와 일치하는지 여부를 테스트할 수도 있습니다. 일반적으로 쿼리가 계획 지침과 일치하는지 확인하기 위해 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 계획 지침을 테스트해야 합니다.  
   
 ## <a name="capturing-query-text-by-using-sql-server-profiler"></a>SQL Server Profiler를 사용하여 쿼리 텍스트 캡처  
@@ -68,7 +68,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  일괄 처리 텍스트 파일을 메모장에서 열고 텍스트를 복사 및 붙여 넣기 버퍼로 복사합니다.  
   
-8.  계획 지침을 만들고 복사한 텍스트를 **\@stmt** 인수에 대해 지정된 따옴표(**''**) 안에 붙여넣습니다. **\@stmt** 인수에 있는 작은따옴표 앞에 다른 작은따옴표를 붙여 이스케이프 처리해야 합니다. 작은따옴표를 삽입할 때는 다른 문자를 추가 또는 제거하지 않도록 주의해야 합니다. 예를 들어 날짜 리터럴 **'** 20000101 **'** 은 **''** 20000101 **''** 로 구분해야 합니다.  
+8.  계획 지침을 만들고 복사한 텍스트를 **\@stmt** 인수에 대해 지정된 따옴표( **''** ) 안에 붙여넣습니다. **\@stmt** 인수에 있는 작은따옴표 앞에 다른 작은따옴표를 붙여 이스케이프 처리해야 합니다. 작은따옴표를 삽입할 때는 다른 문자를 추가 또는 제거하지 않도록 주의해야 합니다. 예를 들어 날짜 리터럴 **'** 20000101 **'** 은 **''** 20000101 **''** 로 구분해야 합니다.  
   
  계획 지침은 다음과 같습니다.  
   

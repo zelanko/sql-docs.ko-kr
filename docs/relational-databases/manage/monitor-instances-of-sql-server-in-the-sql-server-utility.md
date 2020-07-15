@@ -1,5 +1,6 @@
 ---
 title: SQL Server 유틸리티에서 SQL Server 인스턴스 모니터링 | Microsoft 문서
+description: SQL Server 인스턴스를 모니터링하는 데 사용할 수 있는 SQL Server 유틸리티를 알아봅니다. 대시보드를 확인하고 보고 노이즈를 줄이는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: ca851a07-e4e5-439c-8da5-d8e97aaf4873
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ba3695cffffe5d28af15a94461f60fb207fbe665
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 31db9f3aeb938cfcf2fb88834eb59b116355760b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115620"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719030"
 ---
 # <a name="monitor-instances-of-sql-server-in-the-sql-server-utility"></a>SQL Server 유틸리티에서 SQL Server 인스턴스 모니터링
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
   
 |항목|정보|  

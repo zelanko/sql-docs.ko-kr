@@ -1,5 +1,6 @@
 ---
 title: 오프라인 로그 파일 보기 | Microsoft 문서
+description: 대상 인스턴스가 오프라인이거나 시작할 수 없는 경우 SQL Server의 로컬 또는 원격 인스턴스에서 SQL Server 로그 파일을 보는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 814bfdd9c44170cc25f8dbd7eabcfd78ebde2a7d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aa13f33366eebe2501a135a6f8de1abbe810fa19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908553"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667858"
 ---
 # <a name="view-offline-log-files"></a>오프라인 로그 파일 보기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터는 대상 인스턴스가 오프라인이거나 시작할 수 없는 경우 로컬 또는 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일을 볼 수 있습니다.  
   
  등록된 서버에서 오프라인 로그 파일에 액세스하거나 WMI 및 WQL(WMI Query Language) 쿼리를 통해 프로그래밍 방식으로 액세스할 수 있습니다.  
@@ -51,9 +52,9 @@ ms.locfileid: "72908553"
   
 -   **Root\Microsoft\SqlServer\ComputerManagement12** WMI 네임스페이스에 대한 읽기 권한. 기본적으로 모든 사용자는 계정 사용 권한으로 읽기 액세스합니다. 자세한 내용은 이 섹션 뒷부분의 "WMI 사용 권한을 확인하려면" 절차를 참조하십시오.  
   
--   오류 로그 파일을 포함하는 폴더에 대한 읽기 권한. 기본적으로 오류 로그 파일은 다음 경로에 있습니다. 여기서 \<*드라이브>* 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치한 드라이브를 나타내고 \<*InstanceName*>은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스 이름을 나타냅니다.  
+-   오류 로그 파일을 포함하는 폴더에 대한 읽기 권한. 기본적으로 오류 로그 파일은 다음 경로에 있습니다. 여기서 \<*Drive>*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치한 드라이브를 나타내고 \<*InstanceName*>은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스 이름을 나타냅니다.  
   
-     **\<드라이브>:\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\Log**  
+     **\<Drive>:\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\Log**  
   
  WMI 네임스페이스 보안 설정을 확인하려면 WMI 컨트롤 스냅인을 사용합니다.  
   
@@ -61,7 +62,7 @@ ms.locfileid: "72908553"
   
 1.  WMI 컨트롤 스냅인을 엽니다. WMI 컨트롤 스냅인을 열려면 운영 체제에 따라 다음 중 하나를 수행합니다.  
   
-    -   **시작**을 클릭하고 **검색 시작** 상자에 **wmimgmt.msc**를 입력한 다음 Enter 키를 누릅니다.  
+    -   **시작**을 클릭하고 **검색 시작** 상자에 **wmimgmt.msc** 를 입력한 다음 ENTER 키를 누릅니다.  
   
     -   **시작**, **실행**을 차례로 클릭하고 **wmimgmt.msc**를 입력한 다음 ENTER 키를 누릅니다.  
   

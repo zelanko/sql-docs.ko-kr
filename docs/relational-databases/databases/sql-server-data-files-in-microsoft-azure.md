@@ -1,5 +1,6 @@
 ---
 title: Microsoft Azure의 SQL Server 데이터 파일 | Microsoft Docs
+description: Microsoft Azure Storage에 SQL Server 데이터 파일을 저장하는 데 중요한 개념 및 고려 사항과 Azure Storage를 사용하는 몇 가지 이점을 알아봅니다.
 ms.custom: ''
 ms.date: 12/04/2019
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ba61e7cc35d9cd0a0f63e3e2f89980b12c6904d5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5314f43ea17351f54cf1815346a0820cc5cd77e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74833576"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715493"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure의 SQL Server 데이터 파일
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   ![Azure의 데이터 파일](../../relational-databases/databases/media/data-files-on-azure.png "Azure의 데이터 파일")  
   
 Microsoft Azure에서 SQL Server 데이터 파일을 통해 Blob으로 저장된 SQL Server 데이터베이스 파일이 기본적으로 지원됩니다. 이 기능을 사용하면 온-프레미스로 실행 중인 SQL Server에서 또는 Microsoft Azure Blob Storage에 전용 데이터 스토리지 위치가 있는 Microsoft Azure의 가상 머신에서 데이터베이스를 만들 수 있습니다. 또한 머신 간에 데이터베이스를 이동하는 프로세스를 간소화합니다. 한 머신에서 데이터베이스를 분리하여 다른 머신에 연결할 수 있습니다. 또한 Microsoft Azure 스토리지를 원본 또는 대상으로 복원하도록 허용하여 데이터베이스 백업 파일에 대한 대체 스토리지 위치를 제공합니다. 따라서 데이터 가상화, 데이터 이동, 보안 및 가용성, 고가용성 및 탄력적인 크기 조정을 위한 쉽고 저렴한 비용 및 유지 관리 등 여러 가지 이점을 제공하여 다양한 하이브리드 솔루션을 사용할 수 있도록 지원합니다.

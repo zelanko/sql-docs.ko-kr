@@ -1,5 +1,6 @@
 ---
 title: min memory per query 서버 구성 옵션 구성 | Microsoft Docs
+description: 쿼리당 최소 메모리 옵션을 사용하여 최초 메모리 부여를 지정하거나 SQL Server에서 쿼리에 할당하는 최소 kb 수를 지정하는 방법을 확인합니다.
 ms.custom: ''
 ms.date: 11/24/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - min memory per query option
 - min memory grant
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 9e7a08defb9ff222ac1699c924691c923a7f2c2e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 784dc57403cdb5c8dad6ba3e8f910ecd6d4dee26
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287487"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696852"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>min memory per query 서버 구성 옵션 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] min memory per query [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **min memory per query** 옵션은 쿼리 실행을 위해 할당할 최소 메모리 용량(KB)을 지정합니다. 최소 메모리 부여라고도 합니다. 예를 들어 **min memory per query** 를 2,048KB로 설정하면 쿼리는 최소한 그 만큼의 총 메모리를 얻을 수 있습니다. 기본값은 1,024KB입니다. 최소값은 512KB이고 최대값은 2,147,483,647KB(2GB)입니다.  
   

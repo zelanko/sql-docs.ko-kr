@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스의 증분 복원 - 메모리 최적화 테이블
+description: 메모리 최적화 테이블이 있는 데이터베이스는 SQL Server에서 증분 복원을 지원합니다. 증분 백업 및 복원 관련 주요 시나리오에 대해 알아보세요.
 ms.custom: seo-dt-2019
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a546e2aeceb60e42f4fc9dc8b1170431fd581ef3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d484e919fca78b3b77546f659ed198cdea7ab1b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412581"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722401"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블이 있는 데이터베이스의 증분 복원
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   증분 복원은 아래에 설명된 한 가지 제한 사항을 제외하고 메모리 최적화 테이블이 있는 데이터베이스에서 지원됩니다. 증분 백업 및 복원에 대한 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) 및 [증분 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)을 참조하세요.  
   
  메모리 최적화 파일 그룹은 주 파일 그룹과 함께 백업하고 복원해야 합니다.  

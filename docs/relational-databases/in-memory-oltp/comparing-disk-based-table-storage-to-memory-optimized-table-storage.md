@@ -1,5 +1,6 @@
 ---
 title: 디스크 기반 테이블 스토리지와 메모리 최적화 테이블 스토리지 비교
+description: DDL, 구조체, 인덱스, DML 작업 및 데이터 조각화 범주에 속하는 디스크 기반 테이블 스토리지와 메모리 최적화 테이블 스토리지를 비교합니다.
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: eacf443c-001a-445f-ad1c-5f5a45eca6f4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b13b42df862756f5b88c04ca44fa1a1cbfd158e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d3f5eb817cb2d29c91d77ef499e386207bff9994
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412751"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723340"
 ---
 # <a name="comparing-disk-based-table-storage-to-memory-optimized-table-storage"></a>디스크 기반 테이블 스토리지와 메모리 액세스에 최적화된 테이블 스토리지 비교
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   
   
 |범주|디스크 기반 테이블|메모리 액세스에 최적화된 내구성이 있는 테이블|  

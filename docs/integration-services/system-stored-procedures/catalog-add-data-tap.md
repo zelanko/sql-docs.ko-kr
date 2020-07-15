@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 513e4874c858d6ce83b65a9a846aa05617229481
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6df265a27d050dd554af2f57be15d398f635aa3e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295570"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749775"
 ---
 # <a name="catalogadd_data_tap"></a>catalog.add_data_tap 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   실행 패키지에 대한 패키지 데이터 흐름에서 구성 요소 출력에 데이터 탭을 추가합니다.  
   
@@ -56,7 +56,7 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  [ @data_filename = ] *data_filename*  
  탭 데이터를 저장하는 파일의 이름입니다. 데이터 흐름 태스크가 Foreach 루프 또는 For 루프 컨테이너 내부에서 실행되는 경우 각 루프 반복에 대한 탭 데이터가 개별 파일에 저장됩니다. 각 파일은 반복에 해당하는 번호가 접두사로 붙습니다.  
   
- 파일은 기본적으로 \<*드라이브*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps 폴더에 저장됩니다.  
+ 파일은 기본적으로 \<*drive*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps 폴더에 저장됩니다.  
   
  *data_filename*은 **nvarchar(4000)** 입니다.  
   
@@ -67,7 +67,7 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  데이터 탭의 ID를 반환합니다. *data_tap_id*는 **bigint**입니다.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 데이터 흐름 태스크 `'Paths[OLE DB Source.OLE DB Source Output]`의 데이터 흐름 경로 `\Package\Data Flow Task`에 데이터 탭을 만듭니다. 탭 데이터는 DataDumps 폴더(\<*드라이브*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps)의 `output0.txt` 파일에 저장됩니다.  
+ 다음 예에서는 데이터 흐름 태스크 `'Paths[OLE DB Source.OLE DB Source Output]`의 데이터 흐름 경로 `\Package\Data Flow Task`에 데이터 탭을 만듭니다. 탭 데이터는 DataDumps 폴더(\<*drive*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps)의 `output0.txt` 파일에 저장됩니다.  
   
 ```sql
 Declare @execution_id bigint  
@@ -126,7 +126,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ## <a name="requirements"></a>요구 사항  
   
 ## <a name="external-resources"></a>외부 리소스  
- raffael-alas.com의 블로그 항목 - [SSIS 2012: 데이터 탭 살펴보기](https://go.microsoft.com/fwlink/?LinkId=239983)  
+ rafael-salas.com의 블로그 항목 - [SSIS 2012: 데이터 탭 살펴보기](https://go.microsoft.com/fwlink/?LinkId=239983)  
   
 ## <a name="see-also"></a>참고 항목  
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  

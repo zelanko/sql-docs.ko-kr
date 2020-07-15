@@ -1,5 +1,6 @@
 ---
 title: '메모리 내 OLTP 채택 계획 '
+description: SQL Server의 메모리 내 OLTP 기능을 채택하는 것이 비즈니스 시스템의 다른 측면에 어떤 영향을 미치는지에 대해 알아봅니다.
 ms.custom: seo-dt-2019
 ms.date: 01/28/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f899a8fc1ad5a316784a83cb13f29acb84a01b2b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 12288ac1ab4923e776b968a6f990e95a17f96060
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412550"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722409"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>SQL Server에 메모리 내 OLTP 기능 채택 계획
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 이 문서에서는 메모리 내 기능 채택이 비즈니스 시스템의 다른 측면에 영향을 주는 방식을 설명합니다.

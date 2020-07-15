@@ -1,7 +1,7 @@
 ---
 title: CURRENT_TIMEZONE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/10/2019
+ms.date: 05/28/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - CURRENT_TIMEZONE function [SQL Server]
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: e659ae78b81cb6888e749bd40546efe16b4c542d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 760da1491a7fbf4633cb02fe1fea8568e7ab9fa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72261331"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85684498"
 ---
 # <a name="current_timezone-transact-sql"></a>CURRENT_TIMEZONE(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 이 함수는 서버 또는 인스턴스에서 관찰된 표준 시간대 이름을 반환합니다. SQL Database Managed Instance의 경우 반환 값은 기본 운영 체제의 표준 시간대가 아니라 인스턴스를 만드는 중에 할당된 인스턴스 자체의 표준 시간대를 기반으로 합니다.
   
@@ -72,3 +72,5 @@ SELECT CURRENT_TIMEZONE();
 ## <a name="see-also"></a>참고 항목
 
 [SQL Database Managed Instance 표준 시간대](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
+
+[CURRENT_TIMEZONE_ID()](https://docs.microsoft.com/sql/t-sql/functions/current-timezone-id-transact-sql)

@@ -1,5 +1,6 @@
 ---
 title: XML 인덱스 삭제 | Microsoft 문서
+description: DROP INDEX Transact-SQL 문을 사용하여 기존 기본 또는 보조 XML 및 비XML 인덱스를 삭제할 수 있습니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a5c638e405f7f2d15b5b48a483a5e46ea58b694e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 045e71896836a2ccb39e8605d14e49360a9cc7a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664560"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633194"
 ---
 # <a name="drop-xml-indexes"></a>XML 인덱스 삭제
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [DROP INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 기존 기본 또는 보조 XML 인덱스 및 비 XML 인덱스를 삭제할 수 있습니다. 그러나 DROP INDEX의 옵션은 XML 인덱스에 적용되지 않습니다. 기본 XML 인덱스를 삭제하려면 존재하는 보조 인덱스도 모두 삭제됩니다.  
   
  *TableName.IndexName* 이 있는 DROP 구문은 단계적으로 제거하며 XML 인덱스에 대해서는 지원되지 않습니다.  

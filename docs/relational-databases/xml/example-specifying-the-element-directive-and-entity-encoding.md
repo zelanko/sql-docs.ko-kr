@@ -1,5 +1,6 @@
 ---
 title: ELEMENT 지시어 및 엔터티 인코딩 지정 | Microsoft Docs
+description: 쿼리 결과가 엔터티 인코딩되도록 SQL 쿼리에서 ELEMENT 지시어를 지정하는 방법을 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +14,15 @@ ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 62d9a167e73748a1fb5ae801f6a99c6211644b82
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 176cbbd92b55ada81a845018826cbf0b899b3475
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664798"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632658"
 ---
 # <a name="example-specifying-the-element-directive-and-entity-encoding"></a>예제: ELEMENT 지시어 및 엔터티 인코딩 지정
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   이 예에서는 **ELEMENT** 및 **XML** 지시어 간의 차이점을 보여 줍니다. **ELEMENT** 지시어는 데이터를 엔터티화하지만 **XML** 지시어는 그렇지 않습니다. \<Summary> 요소는 쿼리에서 할당된 XML인 `<Summary>This is summary description</Summary>`입니다.  
   
  다음 쿼리를 살펴보십시오.  

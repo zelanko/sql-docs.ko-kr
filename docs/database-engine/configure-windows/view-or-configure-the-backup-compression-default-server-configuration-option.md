@@ -1,5 +1,6 @@
 ---
 title: backup compression default 서버 구성 옵션 보기 또는 구성 | Microsoft Docs
+description: "\"백업 압축 기본값\" 옵션에 대해 알아봅니다. SQL Server가 기본적으로 압축된 백업을 만들지 여부를 결정하는 방법과 이를 설정하는 방법을 알아봅니다."
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], backup compression default option
 - backup compression [SQL Server], backup compression default Option
 ms.assetid: 23029395-3e93-4c29-b7d6-e5a47a3526ff
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 139d5e3b2ec72917ed021fba005cacc306bce191
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bf58edccfbf4c0b663caadf29ffc364d9fd8bcb1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67945670"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85680643"
 ---
 # <a name="view-or-configure-the-backup-compression-default-server-configuration-option"></a>backup compression default 서버 구성 옵션 보기 또는 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 백업 압축 기본값 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다. **백업 압축 기본값** 옵션은 서버 인스턴스가 기본적으로 압축된 백업을 만드는지 여부를 결정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이(가) 설치되면 **백업 압축 기본값** 옵션이 해제됩니다.  
   

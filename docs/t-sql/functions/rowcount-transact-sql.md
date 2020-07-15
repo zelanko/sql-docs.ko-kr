@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5a67079be4ee6f64c4386b9c44e5f52a3e22893f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a84cae4e79d4b2bd1438bdae9778a4af37d4a231
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828657"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736412"
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   최근 실행된 문의 영향을 받은 행 수를 반환합니다. 행 수가 20억 개보다 많을 경우 [ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md)을 사용하세요.  
   
@@ -53,9 +53,9 @@ ms.locfileid: "82828657"
   
 -   @@ROWCOUNT을 0으로 다시 설정하지만 클라이언트에게 값을 반환하지 않습니다.  
   
- 단순한 할당을 수행하는 문은 항상 @@ROWCOUNT 값을 1로 설정합니다. 클라이언트에게 행은 보내지지 않습니다. 이러한 문의 예로는 SET @*local_variable*, RETURN, READTEXT 및 SELECT GETDATE() 또는 SELECT **'***Generic Text***'** 와 같이 쿼리 문이 없는 SELECT 문이 있습니다.  
+ 단순한 할당을 수행하는 문은 항상 @@ROWCOUNT 값을 1로 설정합니다. 클라이언트에게 행은 보내지지 않습니다. 이러한 명령문의 예는 다음과 같습니다. SET @*local_variable*, RETURN, READTEXT가 있고 SELECT GETDATE() 또는 SELECT **'***제네릭 텍스트***'** 와 같이 쿼리 문이 없이 선택합니다.  
   
- 쿼리에서 할당을 수행하거나 쿼리에 RETURN을 사용하는 문은 @@ROWCOUNT 값을 쿼리의 영향을 받거나 쿼리가 읽은 행 수로 설정합니다.(예: SELECT @*local_variable* = c1 FROM t1)  
+ 쿼리에서 할당을 수행하거나 쿼리에 RETURN을 사용하는 문은 @@ROWCOUNT 값을 쿼리의 영향을 받거나 쿼리가 읽은 행 수로 설정합니다. 예: SELECT @*local_variable* = c1 FROM t1  
   
  DML(데이터 조작 언어) 문은 @@ROWCOUNT 값을 쿼리의 영향을 받는 행 수로 설정하고 해당 값을 클라이언트에 반환합니다. DML 문은 클라이언트에게 행을 보내지 않을 수도 있습니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "82828657"
   
  고유하게 컴파일된 저장 프로시저는 이전 @@ROWCOUNT을 보존합니다. 고유하게 컴파일된 저장 프로시저 내의 [!INCLUDE[tsql](../../includes/tsql-md.md)]문은 @@ROWCOUNT을 설정하지 않습니다. 자세한 내용은 [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)를 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `UPDATE` 문을 실행하고 `@@ROWCOUNT`를 사용하여 변경된 행이 있는지 확인합니다.  
   
 ```  

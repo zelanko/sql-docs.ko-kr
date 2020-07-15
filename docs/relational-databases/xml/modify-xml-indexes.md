@@ -1,5 +1,6 @@
 ---
 title: XML 인덱스 수정 | Microsoft 문서
+description: ALTER INDEX (Transact-SQL) DDL 문으로 기존의 XML 인덱스와 비 XML 인덱스를 수정하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: efe1b72c4cb98b51da065b8194432f4e8d9efa61
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 3e89c0bc3a0cb7731507f1693fbd554011c62926
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665080"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729871"
 ---
 # <a name="modify-xml-indexes"></a>XML 인덱스 수정
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 문은 기존의 XML 인덱스와 비 XML 인덱스를 수정하는 데 사용할 수 없습니다. 그러나 모든 ALTER INDEX 옵션을 XML 인덱스에 사용할 수 있는 것은 아닙니다. XML 인덱스를 수정할 때 다음 옵션은 유효하지 않습니다.  
   
 -   다시 작성 및 설정 옵션인 IGNORE_DUP_KEY는 XML 인덱스에 대해 유효하지 않습니다. 다시 작성 옵션 ONLINE은 보조 XML 인덱스에 대해 OFF로 설정해야 합니다. DROP_EXISTING 옵션은 ALTER INDEX 문에서 허용되지 않습니다.  
@@ -51,7 +52,7 @@ ALTER INDEX PIdx_T_XmlCol on T
 SET (ALLOW_ROW_LOCKS = OFF)  
 ```  
   
-## <a name="example-disabling-and-enabling-an-xml-index"></a>예제: XML 인덱스 활성화 및 비활성화  
+## <a name="example-disabling-and-enabling-an-xml-index"></a>예제: XML 인덱스 사용 및 사용 안 함  
  기본적으로 XML 인덱스는 활성화됩니다. XML 인덱스가 비활성화되어 있는 경우 XML 열에 대해 실행되는 쿼리에서는 해당 XML 인덱스를 사용할 수 없습니다. XML 인덱스를 활성화하려면 `ALTER INDEX` 옵션과 함께 `REBUILD` 를 사용합니다.  
   
 ```  

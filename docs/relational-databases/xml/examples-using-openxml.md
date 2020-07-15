@@ -1,5 +1,6 @@
 ---
-title: '예제: OPENXML 사용 | Microsoft 문서'
+title: '예제: OPENXML 사용 | Microsoft Docs'
+description: OPENXML을 사용하여 XML 문서의 행 집합 뷰를 만드는 방법의 예제를 살펴봅니다.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -26,18 +27,18 @@ helpviewer_keywords:
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4ea3ad1c2f7cb482888f0cd4d31a91f9975745b7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 560e3b6ff5b9beeed4dcf93f831a51b941b9d74e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943381"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729974"
 ---
 # <a name="examples-using-openxml"></a>예제: OPENXML 사용
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   이 항목의 예제에서는 XML 문서의 행 집합 뷰를 만들 때 OPENXML을 사용하는 방법을 설명합니다. OPENXML 구문에 대한 자세한 내용은 [OPENXML&#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)을 참조하세요. 다음 예에서는 OPENXML의 메타 속성 지정을 제외한 OPENXML의 모든 측면을 보여 줍니다. OPENXML에서 메타 속성을 지정하는 방법은 [OPENXML에 메타 속성 지정](../../relational-databases/xml/specify-metaproperties-in-openxml.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  데이터를 검색할 때 XML 문서에서 행을 결정하는 노드를 식별하는 데 *rowpattern* 이 사용됩니다. 또한 MSXML XPath 구현에 사용된 XPath 패턴 언어에 *rowpattern* 이 표현됩니다. 예를 들어 패턴이 요소나 특성으로 끝나는 경우에는 *rowpattern*에 의해 지정된 각 요소 또는 특성 노드에 대해 한 개의 행이 생성됩니다.  
   
  *flags* 값은 기본 매핑을 제공합니다. *ColPattern* 이 *SchemaDeclaration*에 지정되지 않은 경우 *flags* 에 지정된 매핑이 간주됩니다. *ColPattern* 이 *SchemaDeclaration* 에 지정된 경우에는 *flags*값이 무시됩니다. 지정된 *ColPattern* 은 매핑(특성 중심 또는 요소 중심)은 물론, 오버플로와 소비되지 않은 데이터를 처리할 때의 동작도 결정합니다.  
@@ -443,7 +444,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- 결과는 Edge 테이블로 반환됩니다. Edge 테이블에 대해 쿼리를 작성하여 다음과 같은 정보를 얻을 수 있습니다. 다음은 그 예입니다.  
+ 결과는 Edge 테이블로 반환됩니다. Edge 테이블에 대해 쿼리를 작성하여 다음과 같은 정보를 얻을 수 있습니다. 예를 들면 다음과 같습니다.  
   
 -   다음은 문서의 **Customer** 노드 수를 반환하는 쿼리입니다. WITH 절이 지정되지 않았으므로 OPENXML은 Edge 테이블을 반환합니다. SELECT 문은 Edge 테이블을 쿼리합니다.  
   
@@ -524,7 +525,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. 여러 개의 텍스트 노드가 있는 XML 문서 지정  
- XML 문서에 텍스트 노드가 여러 개 있는 경우 *text()* **ColPattern**을 포함한 SELECT 문은 전체가 아닌 첫 번째 텍스트 노드만 반환합니다. 다음은 그 예입니다.  
+ XML 문서에 텍스트 노드가 여러 개 있는 경우 *text()* **ColPattern**을 포함한 SELECT 문은 전체가 아닌 첫 번째 텍스트 노드만 반환합니다. 예를 들면 다음과 같습니다.  
   
 ```  
 DECLARE @h int  
@@ -617,7 +618,7 @@ id  lname   xmlname                   OverFlow
   
      **id** (학생 ID), **name**및 **attendedBy** 특성입니다. **attendedBy** 특성은 다중 값 특성입니다.  
   
- \<Student>에 있는 **attends** 특성과 \<Class>에 있는 **attendedBy** 특성은 Student 및 Class 테이블 간의 **m:n** 관계를 나타냅니다. 학생은 여러 개의 수업을 받을 수 있고 한 수업에는 여러 학생이 있을 수 있습니다.  
+ \<Student>에 있는 **attends** 특성과 \<Class>에 있는 **attendedBy** 특성은 학생과 Student 및 Class 테이블 간의 **m:n** 관계를 나타냅니다. 학생은 여러 개의 수업을 받을 수 있고 한 수업에는 여러 학생이 있을 수 있습니다.  
   
  이 문서를 조각으로 나눈 후 다음과 같이 데이터베이스에 저장한다고 가정하십시오.  
   

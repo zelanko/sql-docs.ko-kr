@@ -1,5 +1,6 @@
 ---
 title: 이름이 XPath 노드 테스트인 열 | Microsoft 문서
+description: SQL 쿼리에 text() 또는 comment()와 같이 XPath 노드 테스트의 이름을 사용하는 열이 포함된 경우 XML 콘텐츠가 매핑되는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 632fe07b7ffdf74f01d9cf87367fee9fa7886f27
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2605e407cabf004ba05d48fca092a7db269ecacd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664640"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692317"
 ---
 # <a name="columns-with-the-name-of-an-xpath-node-test"></a>이름이 XPath 노드 테스트인 열
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   열 이름이 XPath 노드 테스트 중 하나일 경우 다음 표에서와 같이 내용이 매핑됩니다. 열 이름이 XPath 노드 테스트이면 내용이 해당 노드로 매핑됩니다. 열의 SQL 유형이 **xml**이면 오류가 반환됩니다.  
   
 |열 이름|동작|  

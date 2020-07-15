@@ -1,23 +1,22 @@
 ---
 title: Transact-SQL 편집기를 사용하여 데이터베이스 개체 만들기
-titleSuffix: Azure Data Studio
 description: 이 자습서에서는 T-SQL 작업을 간소화하는 Azure Data Studio의 주요 기능을 보여 줍니다.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: 65f078c16080f9ae54563acb5bd21c50d2036057
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8e5bd6cb986601baf97a02a3f167432e0c29b95
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957037"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726738"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---name-sos"></a>자습서: Transact-SQL 편집기를 사용하여 데이터베이스 개체 만들기 - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---azure-data-studio"></a>자습서: Transact-SQL 편집기를 사용하여 데이터베이스 개체 만들기 - Azure Data Studio
 
 쿼리, 저장 프로시저, 스크립트 등을 만들고 실행하는 것은 데이터베이스 전문가의 핵심 작업입니다. 이 자습서에서는 데이터베이스 개체를 만드는 T-SQL 편집기의 주요 기능을 보여 줍니다.
 
@@ -26,10 +25,10 @@ ms.locfileid: "74957037"
 > * 데이터베이스 개체 검색
 > * 테이블 데이터 편집 
 > * 코드 조각을 사용하여 빠르게 T-SQL 작성
-> * ‘정의 피킹(Peeking)’ 및 ‘정의로 이동’을 사용하여 데이터베이스 개체 세부 정보 보기  
+> * ‘정의 피킹(Peeking)’ 및 ‘정의로 이동’을 사용하여 데이터베이스 개체 세부 정보 보기 
 
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 자습서를 완료하려면 SQL Server 또는 Azure SQL Database *TutorialDB*가 필요합니다. *TutorialDB* 데이터베이스를 만들려면 다음 빠른 시작 중 하나를 완료합니다.
 
@@ -39,11 +38,11 @@ ms.locfileid: "74957037"
 
 ## <a name="quickly-locate-a-database-object-and-perform-a-common-task"></a>데이터베이스 개체를 빠르게 찾고 일반 작업 수행
 
-[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]는 데이터베이스 개체를 빠르게 찾을 수 있는 검색 위젯을 제공합니다. 결과 목록에는 테이블에 대한 ‘데이터 편집’과 같이 선택한 개체와 관련된 일반 작업의 상황에 맞는 메뉴가 제공됩니다. 
+[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]는 데이터베이스 개체를 빠르게 찾을 수 있는 검색 위젯을 제공합니다. 결과 목록에는 테이블에 대한 ‘데이터 편집’과 같이 선택한 개체와 관련된 일반 작업의 상황에 맞는 메뉴가 제공됩니다.
 
 1. 서버 사이드바를 열고(**Ctrl+G**), **데이터베이스**를 확장하고, **TutorialDB**를 선택합니다. 
 
-1. **TutorialDB**를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **관리**를 선택하여 ‘TutorialDB 대시보드’를 엽니다. 
+1. **TutorialDB**를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **관리**를 선택하여 ‘TutorialDB 대시보드’를 엽니다.
 
    ![상황에 맞는 메뉴 - 관리](./media/tutorial-sql-editor/insight-open-dashboard.png)
 
@@ -60,7 +59,7 @@ ms.locfileid: "74957037"
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>T-SQL 코드 조각을 사용하여 저장 프로시저 만들기
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]는 문을 빠르게 만들기 위한 다양한 기본 제공 T-SQL 코드 조각을 제공합니다.
+Azure Data Studio는 문을 빠르게 만들기 위한 다양한 기본 제공 T-SQL 코드 조각을 제공합니다.
 
 
 1. **Ctrl+N**을 눌러 새 쿼리 편집기를 엽니다.
@@ -114,7 +113,7 @@ ms.locfileid: "74957037"
 
 ## <a name="use-peek-definition"></a>정의 피킹(Peeking) 사용 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]는 정의 피킹(peeking) 기능을 사용하여 개체 정의를 보는 기능을 제공합니다. 이 섹션에서는 두 번째 저장 프로시저를 만들고 정의 피킹(peeking)을 사용하여 테이블에 있는 열을 확인하고 저장 프로시저의 본문을 빠르게 만듭니다.
+Azure Data Studio는 정의 피킹 기능을 사용하여 개체 정의를 보는 기능을 제공합니다. 이 섹션에서는 두 번째 저장 프로시저를 만들고 정의 피킹(peeking)을 사용하여 테이블에 있는 열을 확인하고 저장 프로시저의 본문을 빠르게 만듭니다.
 
 1. **Ctrl+N**을 눌러 새 편집기를 엽니다. 
 

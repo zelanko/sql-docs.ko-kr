@@ -1,5 +1,6 @@
 ---
 title: 서버 속성(보안 페이지) | Microsoft Docs
+description: SQL Server의 서버 보안 설정을 파악합니다. 서버 인증, 프록시 계정 및 기타 기능을 제어하는 옵션에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.security.f1
 ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 11a8e63d75f4194727344009dfac6f2fed77edaa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e864eced90a190dc7e7c0f204691ed02b9a2cff8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68031433"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724002"
 ---
 # <a name="server-properties---security-page"></a>서버 속성 - 보안 페이지
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 페이지를 사용하여 서버 보안 옵션을 확인하거나 수정할 수 있습니다.  
   
 ## <a name="server-authentication"></a>서버 인증  

@@ -20,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.date: 09/25/2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fe9d407b446177004715ae5d3403e856028985d3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a9f62a8a6aa679624e78def2dd5bea1ddeb7f5db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980585"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715398"
 ---
 # <a name="use-bulk-insert-or-openrowsetbulk-to-import-data-to-sql-server"></a>BULK INSERT 또는 OPENROWSET(BULK ...)을 사용하여 데이터를 SQL Server로 가져오기
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 이 문서에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT 문 및 INSERT...SELECT * FROM OPENROWSET(BULK...) 문을 사용하여 데이터 파일의 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL Database 테이블에 대량으로 가져오는 방법을 간략하게 설명합니다. BULK INSERT 및 OPENROWSET(BULK…)을 사용할 때와 이러한 방법을 사용하여 원격 데이터 원본에서 데이터를 대량으로 가져올 때의 보안 고려 사항에 대해서도 설명합니다.
 
@@ -109,6 +108,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ## <a name="bulk-importing-from-azure-blob-storage"></a>Azure Blob Storage에서 대량 가져오기
 
 Azure Blob Storage에서 가져오는 경우 데이터가 퍼블릭(익명 액세스)이 아니면 [MASTER KEY](../../t-sql/statements/create-master-key-transact-sql.md)로 암호화된 SAS 키를 기준으로 [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)을 만든 다음, BULK INSERT 명령에 사용할 [외부 데이터베이스 원본](../../t-sql/statements/create-external-data-source-transact-sql.md)을 만듭니다.
+
+> [!NOTE]
+> 명시적 트랜잭션을 사용하지 마세요. 그러면 4861 오류가 표시됩니다.
 
 ### <a name="using-bulk-insert"></a>BULK INSERT 사용
 

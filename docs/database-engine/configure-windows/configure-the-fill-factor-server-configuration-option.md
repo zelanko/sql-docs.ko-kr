@@ -1,5 +1,6 @@
 ---
 title: fill factor 서버 구성 옵션 구성 | Microsoft Docs
+description: 채우기 비율 옵션에 대해 알아봅니다. 각 리프 수준 페이지에서 SQL Server가 데이터로 채울 공간의 백분율을 지정하도록 이 옵션을 구성하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - fill factor option [SQL Server]
 ms.assetid: b920ec34-ba8b-4bb8-af53-a3ffd06bafa6
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 02ce284714526a57672d496dbc06242d3df44dff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bc99d890e179bd19a9797471f5b940d6ffb7a44f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012687"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85697236"
 ---
 # <a name="configure-the-fill-factor-server-configuration-option"></a>fill factor 서버 구성 옵션 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 채우기 비율 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. 채우기 비율은 미세 조정 인덱스 데이터 스토리지와 성능을 위해 제공됩니다. 인덱스를 만들거나 다시 작성할 때 채우기 비율에 따라 각 리프 수준 페이지에서 데이터로 채울 공간의 비율이 결정되므로 나머지 부분을 이후 인덱스 증가에 대비한 여유 공간으로 확보할 수 있습니다. 자세한 내용은 [인덱스의 채우기 비율 지정](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)을 참조하세요.  
   

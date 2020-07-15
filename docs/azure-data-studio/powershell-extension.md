@@ -1,22 +1,21 @@
 ---
 title: PowerShell 확장
-titleSuffix: Azure Data Studio
 description: Azure Data Studio용 PowerShell 설치 및 사용
 ms.custom: seodec18
 ms.date: 04/19/2019
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: fd5fabd1627968287c60fc8636964f4ac4831004
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 5f30d6078b28026dec2c6a4eef22eb1f3279755d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81484592"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637742"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Azure Data Studio에 대한 PowerShell 편집기 지원
 
@@ -24,7 +23,6 @@ ms.locfileid: "81484592"
 이제 Azure Data Studio에서 제공하는 뛰어난 IDE 유사 인터페이스를 사용하여 PowerShell 스크립트를 작성하고 디버그할 수 있습니다.
 
 ![PowerShell 확장](media/powershell-extension/powershell-extension.png)
-
 
 ## <a name="features"></a>기능
 
@@ -38,7 +36,6 @@ ms.locfileid: "81484592"
 - <kbd>F8</kbd> 키를 사용하여 선택한 PowerShell 코드 실행
 - <kbd>Ctrl</kbd>+<kbd>F1</kbd>을 사용하여 커서 아래에 있는 기호에 대한 온라인 도움말 시작
 - 기본 대화형 콘솔 지원
-
 
 ## <a name="installing-the-extension"></a>확장 설치
 
@@ -61,10 +58,10 @@ azuredatastudio --install-extension PowerShell-<version>.vsix
 
 ## <a name="installing-powershell-core"></a>PowerShell Core 설치
 
-MacOS 또는 Linux에서 Azure Data Studio를 실행하는 경우 PowerShell Core를 설치해야 할 수도 있습니다.
+macOS 또는 Linux에서 Azure Data Studio를 실행하는 경우 PowerShell Core를 설치해야 할 수도 있습니다.
 
 PowerShell Core는 [GitHub](https://github.com/powershell/powershell)의 오픈 소스 프로젝트입니다.
-MacOS 또는 Linux 플랫폼에 PowerShell Core를 설치하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
+macOS 또는 Linux 플랫폼에 PowerShell Core를 설치하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
 
 - [Linux에서 PowerShell Core 설치](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
 - [macOS에서 PowerShell Core 설치](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
@@ -147,7 +144,7 @@ Instance Name             Version    ProductLevel UpdateLevel  HostPlatform Host
 ServerA                   13.0.5233  SP2          CU4          Windows      Windows Server 2016 Datacenter
 ServerB                   14.0.3045  RTM          CU12         Linux        Ubuntu
 ```
-`SqlServer` 모듈에는 다음과 같은 저장된 SQL Server 연결 유형에 프로그래밍 방식으로 액세스할 수 있는 `SQLRegistration`라는 공급자가 포함되어 있습니다.
+`SqlServer` 모듈에는 다음과 같은 저장된 SQL Server 연결 유형에 프로그래밍 방식으로 액세스할 수 있는 `SQLRegistration`이라는 공급자가 포함되어 있습니다.
 
 + 데이터베이스 엔진 서버(등록된 서버)
 + CMS(중앙 관리 서버)
@@ -259,7 +256,7 @@ PowerShell 확장에 문제가 발생하는 경우 [문제 해결 설명서](htt
 
 이 확장은 [MIT 라이선스에 따라 사용이 허가](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt)됩니다. 이 프로젝트의 릴리스에 포함되는 타사 이진 파일에 대한 자세한 내용은 [타사 알림](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt) 파일을 참조하세요.
 
-## <a name="code-of-conductconduct-md"></a>[준수 사항][conduct-md]
+## <a name="code-of-conduct"></a>준수 사항
 
 이 프로젝트는 [Microsoft 오픈 소스 준수 사항][conduct-code]을 채택했습니다.
 자세한 내용은 [준수 사항 FAQ][conduct-FAQ]를 참조하고, 추가 질문이나 의견이 있는 경우에는 [opencode@microsoft.com][conduct-email]으로 문의하세요.

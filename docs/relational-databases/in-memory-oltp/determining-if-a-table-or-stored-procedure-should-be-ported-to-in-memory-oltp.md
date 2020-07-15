@@ -1,5 +1,6 @@
 ---
 title: 테이블 또는 저장 프로시저를 메모리 내 OLTP로 포팅해야 함
+description: SQL Server Management Studio의 트랜잭션 성능 분석 보고서를 사용하여 메모리 내 OLTP로 데이터베이스 애플리케이션 성능을 향상시킬 수 있는지 여부를 평가합니다.
 ms.custom: seo-dt-2019
 ms.date: 08/02/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8a11fe894dc9b1e0e9770565bef5f702e29c387f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1a445b423375a9ca577435424c0bd89016cd53f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412702"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723273"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 트랜잭션 성능 분석 보고서를 사용하면 메모리 내 OLTP를 통해 데이터베이스 애플리케이션의 성능이 향상될지 평가할 수 있습니다. 또한, 보고서는 애플리케이션에서 메모리 내 OLTP를 사용하도록 설정하기 위해 수행해야 하는 작업의 양도 나타냅니다. 메모리 내 OLTP에 이식할 디스크 기반 테이블을 식별한 후 [메모리 최적화 관리자](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)를 사용하여 테이블을 마이그레이션할 수 있습니다. 마찬가지로 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) 를 사용하여 저장 프로시저를 고유하게 컴파일된 저장 프로시저에 이식할 수 있습니다. 마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조하세요.  
   

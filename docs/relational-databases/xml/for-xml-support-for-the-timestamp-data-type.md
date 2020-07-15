@@ -1,5 +1,6 @@
 ---
 title: timestamp 데이터 형식에 대한 FOR XML 지원 | Microsoft 문서
+description: SQL 쿼리에서 FOR XML 절을 사용할 때 timestamp 데이터 형식에 대한 지원을 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4e1920e1-e7a4-4069-965e-3f6039a6099e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: df404c4c666b43bf9b2c7275196e5cb7ba74bb48
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 374cc13dbb95f548db632ab89f41e6b57302e436
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665147"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729938"
 ---
 # <a name="for-xml-support-for-the-timestamp-data-type"></a>timestamp 데이터 형식에 대한 FOR XML 지원
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   FOR XML 변환에서 **timestamp** 유형 값은 **varbinary(8)** 데이터로 취급되며 항상 base 64로 인코드됩니다. 요청된 경우 XSD 또는 XDR 스키마는 이 유형을 반영합니다.  
   
 ```  

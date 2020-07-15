@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 미러링 중에 발생 가능한 오류 | Microsoft Docs
+description: 물리적, 운영 체제 또는 SQL Server 문제로 인해 발생하는 데이터베이스 미러링 세션 실패에 대해 살펴보고 오류에 대응하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9d8530425db1353a22365b0de165619f6e8eee74
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6b1e2a216a38ed3a9009d446ebf8d5abd79048df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70874285"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735230"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Possible Failures During Database Mirroring
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   물리적, 운영 체제 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문제로 인해 데이터베이스 미러링 세션에서 오류가 발생할 수 있습니다. 데이터베이스 미러링은 Sqlservr.exe에서 사용하는 구성 요소를 정기적으로 검사하여 구성 요소가 올바르게 작동하는지, 아니면 실패했는지를 확인하지 않습니다. 하지만 일부 오류 유형의 경우 영향을 받는 구성 요소가 Sqlservr.exe에 오류를 보고합니다. 다른 구성 요소에서 보고된 오류를 *하드 오류*라고 합니다. 확인되지 않는 다른 오류를 감지하기 위해 데이터베이스 미러링은 자체적으로 제한 시간 메커니즘을 구현합니다. 미러링 제한 시간이 발생하면 데이터베이스 미러링은 오류가 발생했다고 가정하고 *소프트 오류*를 선언합니다. 하지만 SQL Server 인스턴스 수준에서 발생하는 일부 오류는 미러링 제한 시간을 일으키지 않으며, 발견되지 않은 상태로 진행될 수 있습니다.  
   
 > [!IMPORTANT]  
@@ -99,7 +100,7 @@ ms.locfileid: "70874285"
   
  **제한 시간 값을 변경하려면(보안 우선 모드 전용)**  
   
--   [ALTER DATABASE \<데이터베이스> SET PARTNER TIMEOUT \<정수>](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용합니다.  
+-   [ALTER DATABASE \<database> SET PARTNER TIMEOUT \<integer>](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용합니다.  
   
  **현재 제한 시간 값을 보려면**  
   

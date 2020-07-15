@@ -1,5 +1,6 @@
 ---
 title: Common Criteria Compliance Enabled 구성 | Microsoft Docs
+description: SQL Server에서 common criteria compliance 옵션이 사용하도록 설정하는 기준을 알아보고 Common Criteria Evaluation Assurance Level 4+를 준수하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 08/21/2018
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 47c7e7dc3b557085bb1f5a06e86de747579df007
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 2a33ce838ce32c6a7d2b883c5b256f668c213745
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001130"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659813"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration"></a>Common Criteria Compliance Enabled 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 common criteria compliance enabled 옵션은 [정보 기술 보안 평가에 대한 Common Criteria](https://www.commoncriteriaportal.org/)에 필요한 다음 요소를 사용할 수 있게 합니다.  
   
@@ -46,7 +47,7 @@ common criteria compliance enabled 옵션은 [정보 기술 보안 평가에 대
   
 -   1은 Common Criteria 준수를 설정함을 나타냅니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 Common Criteria 준수를 설정합니다.  
   
 ```  

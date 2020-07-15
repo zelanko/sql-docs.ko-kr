@@ -1,5 +1,6 @@
 ---
 title: 고스트 정리 프로세스 가이드 | Microsoft Docs
+description: SQL Server에서 삭제 표시가 된 페이지로부터 레코드를 삭제하는 백그라운드 프로세스인 고스트 정리 프로세스에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 05/02/2018
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - ghost clean up process
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 34be16d305bbb42a23c686e9b2befdd83792d523
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 557f76e3f54811581e41ad15a5270a0c1e6e4057
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72890482"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859095"
 ---
 # <a name="ghost-cleanup-process-guide"></a>고스트 정리 프로세스 가이드
 

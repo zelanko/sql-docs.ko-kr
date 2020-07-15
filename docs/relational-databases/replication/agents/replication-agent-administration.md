@@ -1,5 +1,6 @@
 ---
 title: 복제 에이전트 관리 | Microsoft 문서
+description: 스키마 및 데이터 복사본 생성이나 서버 간 변경 사항 전파와 같은 복제 관련 작업을 수행하는 복제 에이전트 관리에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
@@ -23,12 +24,12 @@ ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 43b3c6759f4ea213acf8bed789d67ff4952b4ae8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 97ab969b453176e3b5ecfa8e2f9d85908407241f
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288162"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807827"
 ---
 # <a name="replication-agent-administration"></a>복제 에이전트 관리
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

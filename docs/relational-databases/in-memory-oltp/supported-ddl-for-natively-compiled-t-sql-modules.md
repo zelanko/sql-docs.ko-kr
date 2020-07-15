@@ -1,5 +1,6 @@
 ---
 title: 고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 DDL | Microsoft 문서
+description: 저장 프로시저, 스칼라 UDF, 인라인 TVF, 트리거 등 고유하게 컴파일된 T-SQL 모듈에 지원되는 DDL 구문에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 6b21f47e-bceb-4054-8b3c-9d39bb9583c0
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fde492554b52170602e5676fa8dcce018885053
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9c2a91b1568b139038cad32e81e273d564fbec98
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086248"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715378"
 ---
 # <a name="supported-ddl-for-natively-compiled-t-sql-modules"></a>고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 DDL
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   이 항목에는 저장 프로시저, 스칼라 UDF, 인라인 TVF 및 트리거와 같은 고유하게 컴파일된 T-SQL 모듈에 지원되는 DDL 구문을 나열합니다.  
   
  고유하게 컴파일된 T-SQL 모듈의 일부로 사용할 수 있는 기능 및 T-SQL 노출 영역에 대한 자세한 내용은 [고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)을 참조하세요.  

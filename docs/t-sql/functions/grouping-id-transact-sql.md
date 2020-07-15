@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0ee4eb18589bc0ebdf214c2c21be25b1410b5db0
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6cfbecf5689432a0e9053abf043225b9f9ff596b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633005"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631564"
 ---
 # <a name="grouping_id-transact-sql"></a>GROUPING_ID(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   그룹 수준을 계산하는 함수입니다. GROUP BY 절이 지정된 경우 GROUPING_ID는 SELECT \<select> 목록, HAVING 및 ORDER BY 절에만 사용할 수 있습니다.  
   
@@ -47,7 +47,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
  **int**  
   
 ## <a name="remarks"></a>설명  
- GROUPING_ID \<column_expression>은 GROUP BY 목록의 식과 정확하게 일치해야 합니다. 예를 들어 DATEPART(yyyy, \<*column name*>)를 기준으로 그룹화하는 경우에는 GROUPING_ID(DATEPART(yyyy, \<*column name*>))를 사용하고, \<*column name*>를 기준으로 그룹화하는 경우에는 GROUPING_ID(\<*column name*>)를 사용하세요.  
+ GROUPING_ID \<column_expression>은 GROUP BY 목록의 식과 정확하게 일치해야 합니다. 예를 들어 DATEPART (yyyy, \<*column name*>)를 기준으로 그룹화하는 경우에는 GROUPING_ID (DATEPART (yyyy, \<*column name*>))를 사용하고, \<*column name*>를 기준으로 그룹화하는 경우에는 GROUPING_ID (\<*column name*>)를 사용하세요.  
   
 ## <a name="comparing-grouping_id--to-grouping-"></a>GROUPING_ID ()와 GROUPING () 비교  
  GROUPING_ID (\<column_expression> [ **,** ...*n* ])는 각 출력 행의 열 목록에 있는 각 열에 대해 반환되는 동등 함수인 GROUPING (\<column_expression>)을 0과 1로 구성된 문자열로 입력합니다. GROUPING_ID는 문자열을 밑이 2인 숫자로 해석하고 그에 해당하는 정수를 반환합니다. 예를 들어 다음 문을 살펴보세요: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. 다음 표에서는 GROUPING_ID () 입력 및 출력 값을 보여 줍니다.  
@@ -90,7 +90,7 @@ UNION ALL
 SELECT 0 FROM T GROUP BY A,B  
 ```  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-grouping_id-to-identify-grouping-levels"></a>A. GROUPING_ID를 사용하여 그룹화 수준 식별  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `Name`과 `Title`, `Name,` 및 Company Total별 직원 수를 반환합니다. `GROUPING_ID()`는 `Title` 열의 각 행에 대해 집계 수준을 식별하는 값을 생성합니다.  
@@ -138,7 +138,7 @@ GROUP BY ROLLUP(D.Name, E.JobTitle)
   
  다음은 필터링되지 않은 결과 집합입니다.  
   
-|속성|제목|Grouping Level|Employee Count|속성|  
+|Name|제목|Grouping Level|Employee Count|Name|  
 |----------|-----------|--------------------|--------------------|----------|  
 |문서 제어|Control Specialist|0|2|문서 제어|  
 |문서 제어|Document Control Assistant|0|2|문서 제어|  

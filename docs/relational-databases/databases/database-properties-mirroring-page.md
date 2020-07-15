@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 속성(미러링 페이지) | Microsoft 문서
+description: 미러링 속성을 구성하고 미러링 세션의 상태를 보는 방법을 알아봅니다. 미러링 세션을 시작, 일시 중지 또는 제거하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a25b2b40b147cd0bd23e8c7554e548b6a577d539
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5324c46fb8a4eb67d2364ee3bcbd5e21674a5c7a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099588"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630990"
 ---
 # <a name="database-properties-mirroring-page"></a>데이터베이스 속성(미러링 페이지)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   주 데이터베이스에서 이 페이지에 액세스한 다음 이 페이지를 사용하여 데이터베이스의 데이터베이스 미러링 속성을 구성하고 수정할 수 있습니다. 또한 이 페이지를 사용하여 데이터베이스 미러링 보안 구성 마법사를 시작하면 미러링 세션의 상태를 보거나 데이터베이스 미러링 세션을 일시 중지 또는 제거할 수 있습니다.  
   
 > **중요** 보안을 구성해야 미러링을 시작할 수 있습니다. 미러링이 시작되지 않은 경우 마법사를 사용하여 시작해야 합니다. 마법사를 완료할 때까지 **미러링** 페이지 입력란은 사용할 수 없습니다.  
@@ -41,7 +42,7 @@ ms.locfileid: "68099588"
 |미러링이 시작된 경우|마법사에서 미러링 모니터 서버를 변경한 경우 그에 따라 미러링 모니터 서버가 설정됩니다.|  
   
  **서버 네트워크 주소**  
- **주 서버**, **미러 서버**및 **미러링 모니터 서버**등 각 서버 인스턴스마다 해당하는 옵션이 있습니다.  
+ 주 서버, 미러 서버 및 미러링 모니터 서버 등 **보안 주체**, **미러** 및 **감시** 서버 인스턴스마다 해당하는 옵션이 있습니다.  
   
  데이터베이스 미러링 보안 구성 마법사를 완료하면 서버 인스턴스의 서버 네트워크 주소가 자동으로 지정됩니다. 마법사를 완료한 후 필요한 경우 네트워크 주소를 수동으로 수정할 수 있습니다.  
   

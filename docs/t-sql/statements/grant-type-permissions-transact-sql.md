@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14bd2fb3-1446-49c0-be87-c6a670317ed0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f1530d8e225d449ce84df450ec28b9db36a78b3b
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d111ba13b1b281f6ed6c18fd9a131a1c97e662ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634176"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735476"
 ---
 # <a name="grant-type-permissions-transact-sql"></a>GRANT 유형 사용 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   유형에 대한 사용 권한을 부여합니다.  
   
@@ -58,12 +58,12 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  ON TYPE **::** [ _schema_name_ **.** ] *type_name*  
  사용 권한을 부여할 유형을 지정합니다. 범위 한정자( **::** )가 필요합니다. *schema_name*을 지정하지 않은 경우 기본 스키마가 사용됩니다. *schema_name*을 지정한 경우 스키마 범위 한정자( **.** )가 필요합니다.  
   
- \<database_principal>에 대해 사용 권한을 부여할 보안 주체를 지정합니다.  
+ TO \<database_principal> 사용 권한을 부여할 보안 주체를 지정합니다.  
   
  WITH GRANT OPTION  
  지정된 사용 권한을 다른 보안 주체에게 부여할 수 있는 권한도 이 보안 주체에 제공됨을 나타냅니다.  
   
- \<database_principal>로서 이 쿼리를 실행하는 보안 주체가 사용 권한을 부여하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다.  
+ AS \<database_principal> 이 쿼리를 실행하는 보안 주체의 사용 권한 부여 권한이 파생되는 다른 보안 주체를 지정합니다.  
   
  *Database_user*  
  데이터베이스 사용자를 지정합니다.  
@@ -131,7 +131,7 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
 |데이터베이스 역할|역할에 대한 ALTER 권한, **db_securityadmin** 고정 데이터베이스 역할의 멤버 자격, **db_owner** 고정 데이터베이스 역할의 멤버 자격 또는 **sysadmin** 고정 서버 역할의 멤버 자격.|  
 |애플리케이션 역할|역할에 대한 ALTER 권한, **db_securityadmin** 고정 데이터베이스 역할의 멤버 자격, **db_owner** 고정 데이터베이스 역할의 멤버 자격 또는 **sysadmin** 고정 서버 역할의 멤버 자격.|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `VIEW DEFINITION`을 사용하여 사용자 `GRANT OPTION`에 대해 사용자 정의 형식 `PhoneNumber`에 대한 `KhalidR` 권한을 부여합니다. `PhoneNumber`는 `Telemarketing` 스키마에 있습니다.  
   
 ```  

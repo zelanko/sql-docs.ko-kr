@@ -15,20 +15,20 @@ ms.assetid: b7ccc34e-1c22-44b8-8eb5-f6423af3164e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 474a65593b830e671a7a65557c4c5fec11aea07a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 33473f0d5309b3db41c65ad6c8d376ac6f75dc62
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76285920"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652918"
 ---
 # <a name="generate-sql-script-replication-objects"></a>SQL 스크립트 생성(복제 개체)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   복제 스크립트에는 게시 또는 구독과 같이 스크립팅된 복제 구성 요소를 구현하는 데 필요한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 시스템 저장 프로시저가 포함되어 있습니다. 토폴로지의 모든 복제 구성 요소는 재해 복구 계획의 일부로 스크립팅되어야 하며 반복 태스크를 자동화하는 데도 스크립트를 사용할 수 있습니다. 복제에서는 복제 개체를 스크립팅할 수 있는 다음 두 개의 대화 상자를 제공합니다.  
   
 -   **SQL 스크립트 생성**대화 상자 - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 있는 **복제**폴더 및 모든 하위 폴더의 상황에 맞는 메뉴에서 사용할 수 있습니다. 이 대화 상자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 복제 개체를 스크립팅할 수 있습니다.  
   
--   **SQL 스크립트 생성 \<ObjectName>** 은 게시 및 구독의 상황에 맞는 메뉴에서 사용할 수 있습니다. 이 대화 상자를 사용하여 개별 개체를 스크립팅할 수 있습니다.  
+-   **SQL 스크립트 생성 \<ObjectName>** - 게시 및 구독의 상황에 맞는 메뉴에서 사용할 수 있습니다. 이 대화 상자를 사용하여 개별 개체를 스크립팅할 수 있습니다.  
   
  이러한 대화 상자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 단일 인스턴스에 있는 개체를 스크립팅하며, 다른 인스턴스에 연결하여 관련 개체를 스크립팅하지는 않습니다.  
   

@@ -1,5 +1,6 @@
 ---
 title: FOR XML에서 EXPLICIT 모드 사용 | Microsoft 문서
+description: 쿼리 결과에서 XML을 생성하는 가장 유연한 방법을 제공하는 FOR XML EXPLICIT 모드 사용법을 확인합니다.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cd64762cced69019e1d58414b43af061933c4437
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 193eae657a73f6801546c7234b141dae8f422e67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665019"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736548"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>FOR XML에서 EXPLICIT 모드 사용
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [FOR XML을 사용하는 XML 생성](../../relational-databases/xml/for-xml-sql-server.md)항목에 설명된 것과 같이 RAW 및 AUTO 모드에서는 쿼리 결과로 생성되는 XML의 모양을 상세하게 조정할 수 없습니다. 하지만 EXPLICIT 모드에서는 쿼리 결과로 생성되는 XML의 모양을 좀 더 상세하게 조정할 수 있습니다.  
   
  XML에 예상되는 중첩과 같은 필수 XML에 대한 추가 정보는 쿼리의 일부로 명시적으로 지정하는 방식으로 EXPLICIT 모드 쿼리를 작성해야 합니다. 요청한 XML에 따라 EXPLICIT 모드 쿼리를 작성하는 작업은 복잡할 수 있습니다. EXPLICIT 모드 쿼리를 작성하는 것보다는 [PATH 모드 사용](../../relational-databases/xml/use-path-mode-with-for-xml.md) 의 설명에 따라 중첩을 사용하는 것이 더 간단합니다.  
@@ -148,25 +149,25 @@ ElementName!TagNumber!AttributeName!Directive
 ## <a name="in-this-section"></a>섹션 내용  
  다음 예에서는 EXPLICIT 모드를 사용하는 방법을 보여 줍니다.  
   
--   [예제: 직원 정보 검색](../../relational-databases/xml/example-retrieving-employee-information.md)  
+-   [예: 직원 정보 검색](../../relational-databases/xml/example-retrieving-employee-information.md)  
   
--   [예제: ELEMENT 지시어 지정](../../relational-databases/xml/example-specifying-the-element-directive.md)  
+-   [예: ELEMENT 지시어 지정](../../relational-databases/xml/example-specifying-the-element-directive.md)  
   
--   [예제: ELEMENTXSINIL 지시어 지정](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
+-   [예: ELEMENTXSINIL 지시어 지정](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
   
--   [예: EXPLICIT 모드를 사용하여 형제 생성](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)  
+-   [예: EXPLICIT 모드를 사용하여 형제 구성](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [예제: ID 및 IDREF 지시어 지정](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
+-   [예: ID 및 IDREF 지시어 지정](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [예제: ID 및 IDREFS 지시어 지정](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [예: ID 및 IDREFS 지시어 지정](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
   
--   [예제: HIDE 지시어 지정](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
+-   [예: HIDE 지시어 지정](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
   
--   [예제: ELEMENT 지시어 및 엔터티 인코딩 지정](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [예: ELEMENT 지시어 및 엔터티 인코딩 지정](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
--   [예제: CDATA 지시어 지정](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
+-   [예: CDATA 지시어 지정](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
   
--   [예제: XMLTEXT 지시어 지정](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
+-   [예: XMLTEXT 지시어 지정](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [FOR XML에서 RAW 모드 사용](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   

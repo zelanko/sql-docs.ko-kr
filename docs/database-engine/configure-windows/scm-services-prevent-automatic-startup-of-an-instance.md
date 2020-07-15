@@ -1,5 +1,6 @@
 ---
 title: SCM 서비스 - 인스턴스 자동 시작 방지 | Microsoft Docs
+description: SQL Server 인스턴스가 자동으로 시작하는 것을 방지하는 방법을 알아봅니다. 시작 모드를 수동으로 설정하여 이 작업을 수행하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 01/06/2016
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - stopping SQL Server
 - preventing automatic startups [SQL Server]
 ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4293a8595ed287219da6e0d2f23e907236456daf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 72fecc8d4e14d8d9066cd7821f34195bdfdd8b5d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025658"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651406"
 ---
 # <a name="scm-services---prevent-automatic-startup-of-an-instance"></a>SCM 서비스 - 인스턴스 자동 시작 방지
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스가 자동으로 시작되지 않도록 방지하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 일반적으로 자동으로 시작되도록 구성됩니다. 인스턴스의 시작 모드를 수동으로 설정하면 이러한 구성을 변경할 수 있습니다.  
   
 ##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> SQL Server 구성 관리자 사용  
@@ -46,9 +47,9 @@ ms.locfileid: "68025658"
   
 3.  세부 정보 창에서 **MSSQLServer**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  **SQL Server \<** _인스턴스 이름_ **> 속성** 대화 상자에 있는 **서비스** 탭의 **일반** 상자에서 **시작 모드**의 값을 **수동**으로 설정합니다.  
+4.  **SQL Server \<**_instancename_**> 속성** 대화 상자에 있는 **서비스** 탭의 **일반** 상자에서 **시작 모드**의 값을 **수동**으로 설정합니다.  
   
-5.  **확인**을 클릭하여 **SQL Server \<** _instancename_ **> 속성** 대화 상자를 닫은 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 닫습니다.  
+5.  **확인**을 클릭하여 **SQL Server \<**_instancename_**> 속성** 대화 상자를 닫은 다음, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 닫습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  

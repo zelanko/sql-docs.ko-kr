@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8b222cf1105fbe8121e9c9738a79257c59fc3abf
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: 4f2791ea8a8cae425ae7839a7af2d722e8cfe8a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388142"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729862"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>&lt;xsd:redefine&gt; 요소
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   W3C XSD **redefine** 요소를 사용하면 스키마 구성 요소를 다시 정의할 수 있습니다. 그러나 이러한 지시어를 지원하려면 성능 비용이 많이 들 수 있으며 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 다시 정의된 스키마와 연결된 **xml** 데이터 형식의 모든 인스턴스에 대해 유효성을 다시 검사해야 합니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이 요소를 지원하지 않습니다. **\<xsd:redefine>** 요소를 포함하는 XML 스키마는 서버에서 거부됩니다.  
   
  스키마나 해당 구성 요소를 업데이트하려면 대신 다음을 수행합니다.  

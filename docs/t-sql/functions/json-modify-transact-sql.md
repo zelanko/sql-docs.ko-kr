@@ -1,22 +1,21 @@
 ---
 title: JSON_MODIFY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/02/2020
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 3aed59e8c90b301cd3fbf7caca9a0e466746dd2d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5e981958444fcb760d0baff036852d58aee0b1a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635110"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752282"
 ---
 # <a name="json_modify-transact-sql"></a>JSON_MODIFY(Transact-SQL)
 
@@ -28,7 +27,7 @@ ms.locfileid: "81635110"
   
 ## <a name="syntax"></a>구문  
   
-```sql  
+```syntaxsql
 JSON_MODIFY ( expression , path , newValue )  
 ```  
   
@@ -50,10 +49,10 @@ JSON_MODIFY ( expression , path , newValue )
     *\<json path>* 가 참조하는 배열에 새 값을 추가하도록 지정하는 선택적 한정자입니다.  
   
 - *lax*  
-    *\<json path>* 가 참조하는 속성이 존재하지 않아도 된다는 것을 지정합니다. 속성이 없으면 JSON_MODIFY가 지정된 경로에 새 값을 삽입하려고 시도합니다. 속성을 경로에 삽입할 수 없는 경우 삽입이 실패할 수 있습니다. *lax* 또는 *strict*를 지정하지 않으면 *lax*가 기본 모드입니다.  
+    *\<json path>* 가 참조하는 속성이 존재하지 않아도 된다고 지정합니다. 속성이 없으면 JSON_MODIFY가 지정된 경로에 새 값을 삽입하려고 시도합니다. 속성을 경로에 삽입할 수 없는 경우 삽입이 실패할 수 있습니다. *lax* 또는 *strict*를 지정하지 않으면 *lax*가 기본 모드입니다.  
   
 - *strict*  
-    *\<json path>* 가 참조하는 속성이 JSON 식에 있어야 함을 지정합니다. 속성이 없으면 JSON_MODIFY가 오류를 반환합니다.  
+    *\<json path>* 가 참조하는 속성이 JSON 식에 있어야 한다고 지정합니다. 속성이 없으면 JSON_MODIFY가 오류를 반환합니다.  
   
 - *\<json path>*  
     업데이트할 속성에 대한 경로를 지정합니다. 자세한 내용은 [JSON 경로 식&#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)을 참조하세요.  
@@ -89,7 +88,7 @@ JSON_MODIFY는 값의 형식이 VARCHAR 또는 NVARCHAR인 경우 새 값의 모
   
  lax 모드에서 JSON_MODIFY는 새 키:값 쌍을 만들려고 시도하지만 일부 경우에는 실패할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="example---basic-operations"></a>예 - 기본 작업
 
@@ -97,7 +96,7 @@ JSON_MODIFY는 값의 형식이 VARCHAR 또는 NVARCHAR인 경우 새 값의 모
   
  **쿼리**
   
-```syntaxsql
+```sql
 
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
@@ -156,7 +155,7 @@ PRINT @info
   
  **쿼리**
   
-```syntaxsql
+```sql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -250,7 +249,7 @@ PRINT @stats
   
  **쿼리**  
   
-```syntaxsql
+```sql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -278,7 +277,7 @@ PRINT @info
   
  **쿼리**  
   
-```syntaxsql
+```sql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -308,13 +307,12 @@ PRINT @info
   
 ```sql  
 UPDATE Employee
-SET jsonCol=JSON_MODIFY(jsonCol,"$.info.address.town",'London')
+SET jsonCol=JSON_MODIFY(jsonCol,'$.info.address.town','London')
 WHERE EmployeeID=17
- 
 ```  
   
 ## <a name="see-also"></a>참고 항목
 
- [JSON 경로 식&#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON 데이터&#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
+- [JSON 경로 식&#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+- [JSON 데이터&#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   

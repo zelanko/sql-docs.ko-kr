@@ -1,5 +1,6 @@
 ---
 title: 고유하게 컴파일된 저장 프로시저의 CASE 식
+description: 고유하게 컴파일된 T-SQL 모듈은 일부 버전의 SQL Server에서 CASE 식을 지원합니다. 이 예제에서는 쿼리에 CASE 식을 구현합니다.
 ms.custom: seo-dt-2019
 ms.date: 11/21/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c26cd8424000926030d37302606cece6a570668
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 51d1aed041e25ceaefea1a3237fb1e02848f2d77
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412652"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723204"
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>고유하게 컴파일된 저장 프로시저에서 CASE 식 구현
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **적용 대상:** [!INCLUDE[ssSDSFull_md](../../includes/sssdsfull-md.md)] 및 SQL Server [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 이상
 

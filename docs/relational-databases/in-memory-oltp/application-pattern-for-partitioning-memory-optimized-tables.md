@@ -1,5 +1,6 @@
 ---
 title: 애플리케이션 패턴 - 메모리 최적화 테이블 분할
+description: 매모리 최적화 테이블에 있는 현재 활성화된 데이터와 분할된 테이블에 있는 기존 데이터를 저장하는 메모리 내 OLTP 애플리케이션 디자인 패턴에 대해 알아봅니다.
 ms.custom: seo-dt-2019,issue-PR=4700-14820
 ms.date: 05/03/2020
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee8450f69d87bce0691de5d4641c0ab68b6fe3b7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0da2cd346f2f71b190d4192646bc58a70c116933
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762854"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730424"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 분할을 위한 애플리케이션 패턴
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]는 상대적으로 최신 데이터에 대한 성능 리소스를 많이 사용하는 애플리케이션 디자인 패턴을 지원합니다. 이 패턴은 최신 데이터를 이전 데이터보다 훨씬 자주 읽거나 업데이트할 때 적용할 수 있습니다. 이 경우 최신 데이터가 *활성* 또는 *핫*하다고 말하며 오래된 데이터는 *콜드*하다고 합니다.
 

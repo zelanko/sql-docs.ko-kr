@@ -1,5 +1,6 @@
 ---
-title: '예: XMLTEXT 지시어 지정 | Microsoft 문서'
+title: '예제: XMLTEXT 지시어 지정 | Microsoft Docs'
+description: EXPLICIT 모드를 사용하는 SELECT 문에 XMLTEXT 지시어를 지정하여 XML 문서의 사용하는 부분을 처리하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 52e3d6ea8cff9d1984ee11a510a6c21833034c29
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93e6735f9b4e30a97d86366b512c27489a921f2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006681"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632322"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>예: XMLTEXT 지시어 지정
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="example-specifying-the-xmltext-directive"></a>예제: XMLTEXT 지시어 지정
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   이 예에서는 EXPLICIT 모드를 사용하는 **문에서** XMLTEXT `SELECT` 지시어를 사용하여 오버플로 열의 데이터 주소를 지정하는 방법을 보여 줍니다.  
   
  `Person` 테이블을 검토해 보면 이 테이블에는 XML 문서 중 사용되지 않은 부분을 저장하는 `Overflow` 열이 있는 것을 볼 수 있습니다.  
@@ -99,7 +100,7 @@ FOR XML EXPLICIT;
   
  *AttributeName*이 `xmltext` 지시어와 함께 지정된 경우 <`overflow`> 요소의 특성이 묶는 <`Parent`> 요소의 하위 요소에 대한 특성으로 추가됩니다. *AttributeName* 에 대해 지정된 이름은 하위 요소의 이름이 됩니다.  
   
- 이 쿼리에서 *AttributeName*인 <`overflow`>는 `xmltext` 지시어와 함께 지정됩니다.   
+ 이 쿼리에서 *AttributeName*인 <`overflow`>는 `xmltext` 지시어와 함께 지정됩니다.  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  
@@ -152,7 +153,7 @@ FOR XML EXPLICIT;
  </Parent>
  ```  
   
- `XMLTEXT` 열 데이터의 경우 루트 요소에 특성이 있으면 이 특성은 XML 데이터 스키마에 표시되지 않고 MSXML 파서는 결과 XML 문서 조각의 유효성을 검사하지 않습니다. 다음은 그 예입니다.  
+ `XMLTEXT` 열 데이터의 경우 루트 요소에 특성이 있으면 이 특성은 XML 데이터 스키마에 표시되지 않고 MSXML 파서는 결과 XML 문서 조각의 유효성을 검사하지 않습니다. 예를 들면 다음과 같습니다.  
   
 ```  
 SELECT 1 AS Tag,  

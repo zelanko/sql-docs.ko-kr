@@ -11,16 +11,16 @@ ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 390e8d4c65951f7b2b6c1f17d161a8ddc6d71242
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e90efcea33406b176706ce8d6fe0196d3c825fb3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79434090"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727317"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>개체 탐색기에서 이벤트 세션 관리
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   이 항목에서는 **개체 탐색기** 에서 수행할 수 있는 확장 이벤트에 영향을 주는 동작에 대해 설명합니다.  
   
@@ -100,7 +100,7 @@ STATE = STOP
   
 4.  **템플릿** 드롭다운 상자를 확장합니다.  
   
-5.  **\<File From …>Open**을 클릭하고 가져올 세션(XML 파일)을 찾습니다.  
+5.  **\<File From ...>열기**를 클릭하고 가져올 세션(XML 파일)을 찾습니다.  
   
  해당 세션이 **세션** 노드에 표시됩니다. 기본적으로 세션은 시작되지 않습니다.  
   

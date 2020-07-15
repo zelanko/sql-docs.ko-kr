@@ -1,5 +1,6 @@
 ---
 title: 노출 영역 구성 | Microsoft 문서
+description: SQL Server 설치의 기능 기본값을 변경하고 실행 중인 SQL Server 인스턴스의 기능을 선택적으로 사용하거나 사용하지 않도록 설정하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d366634dcfc81fc62dded3205320fca53b193b52
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6ad0881cbc1c00bdebdd9244b56007ed51a66b86
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68127069"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736992"
 ---
 # <a name="surface-area-configuration"></a>노출 영역 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]새로 설치의 기본 구성에서는 많은 기능이 활성화되어 있지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 악의적인 사용자로부터 공격 대상이 될 수 있는 기능 수를 최소화하기 위해 주요 서비스와 기능만 필요에 따라 설치하고 시작합니다. 시스템 관리자는 설치 시 이러한 기본값을 변경할 수 있으며 필요에 따라 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 기능을 활성화 또는 비활성화할 수 있습니다. 또한 다른 컴퓨터에서 연결하는 경우 일부 구성 요소는 프로토콜을 구성해야만 사용할 수 있습니다.  
   
 > [!NOTE]  

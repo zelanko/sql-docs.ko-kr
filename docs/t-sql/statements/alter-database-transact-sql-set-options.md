@@ -2,7 +2,7 @@
 title: ALTER DATABASE SET 옵션(Transact-SQL) | Microsoft Docs
 description: SQL Server 및 Azure SQL Database에서 자동 튜닝, 암호화, 쿼리 저장소와 같은 데이터베이스 옵션을 설정하는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 01/10/2020
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 482451fbe9a94696f434bd005b95b49e5dd5dd5e
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: cfaf0b5cdb8ddddc3a27ed5fb80b6fcfb7b8afbd
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138283"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215245"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
 
@@ -297,7 +297,7 @@ SET
 수정할 데이터베이스의 이름입니다.
 
 CURRENT     
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상).
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
 
 현재 데이터베이스에서 작업을 실행합니다. 모든 컨텍스트의 모든 옵션에서 `CURRENT`가 지원되는 것은 아닙니다. `CURRENT`가 실패할 경우 데이터베이스 이름을 지정해야 합니다.
 
@@ -328,7 +328,7 @@ AUTO_CLOSE 옵션을 사용하면 데이터베이스 파일을 일반 파일처�
 >
 > 데이터베이스 미러링을 위해서는 AUTO_CLOSE가 OFF로 설정되어 있어야 합니다.
 
-데이터베이스가 AUTOCLOSE = ON으로 설정되어 있으면 자동 데이터베이스 종료를 시작하는 작업이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 계획 캐시를 삭제합니다. 계획 캐시를 삭제하면 모든 후속 실행 계획이 다시 컴파일되며 일시적으로 갑자기 쿼리 성능이 저하될 수 있습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서비스 팩 2 이상에서는 계획 캐시의 삭제된 각 캐시스토어에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`라는 정보 메시지가 있습니다. 이 메시지는 캐시가 해당 시간 간격 내에 플러시되는 동안 5분마다 기록됩니다.
+데이터베이스가 AUTOCLOSE = ON으로 설정되어 있으면 자동 데이터베이스 종료를 시작하는 작업이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 계획 캐시를 삭제합니다. 계획 캐시를 삭제하면 모든 후속 실행 계획이 다시 컴파일되며 일시적으로 갑자기 쿼리 성능이 저하될 수 있습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서비스 팩 2부터 계획 캐시의 삭제된 각 캐시스토어에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`라는 정보 메시지가 포함됩니다. 이 메시지는 캐시가 해당 시간 간격 내에 플러시되는 동안 5분마다 기록됩니다.
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }     
 켜기     
@@ -344,7 +344,7 @@ OFF
 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)에서 “데이터베이스 차원의 통계 옵션 사용” 섹션을 참조하세요.
 
 INCREMENTAL = ON | **OFF**     
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 AUTO_CREATE_STATISTICS를 ON으로 설정하고 INCREMENTAL을 ON으로 설정합니다. 그러면 증분 통계가 지원될 때마다 자동으로 생성된 통계가 증분으로 설정됩니다. 기본값은 OFF입니다. 자세한 내용은 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)를 참조하세요.
 
@@ -415,7 +415,7 @@ FORCE_LAST_GOOD_PLAN = { ON | **OFF** }
 켜기     
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 새 SQL 계획이 성능 저하를 일으키는 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 쿼리에 마지막으로 성공한 계획을 자동으로 강제로 적용합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]는 강제 계획을 통해 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 쿼리의 쿼리 성능을 지속적으로 모니터링합니다.
 
-성능이 향상되면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 마지막으로 성공한 계획을 계속 사용합니다. 성능 향상이 검색되지 않으면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]이 새 쿼리 계획을 생성합니다. 쿼리 저장소가 사용하도록 설정되지 않았거나 ‘읽기/쓰기’ 모드가 아닌 경우 문이 실패합니다. 
+성능이 향상되면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 마지막으로 성공한 계획을 계속 사용합니다. 성능 향상이 검색되지 않으면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]이 새 쿼리 계획을 생성합니다. 쿼리 저장소가 사용하도록 설정되지 않았거나 ‘읽기/쓰기’ 모드가 아닌 경우 문이 실패합니다.
 
 OFF     
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 뷰에서 SQL 계획 변경으로 인한 잠재적인 쿼리 성능 저하를 보고합니다. 하지만 이러한 권장 사항은 자동으로 적용되지 않습니다. 사용자는 뷰에 표시된 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 스크립트를 적용하여 활성 권장 사항을 모니터링하고 확인된 문제를 해결할 수 있습니다. 기본값은 OFF입니다.
@@ -446,7 +446,7 @@ OFF
 데이터베이스에서 변경 내용 추적을 해제합니다. 데이터베이스에서 변경 내용 추적을 사용 중지하려면 모든 테이블에서 변경 내용 추적을 사용하지 않도록 설정해야 합니다.
 
 **\<containment_option> ::=**      
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상).
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
 
 데이터베이스 포함 옵션을 제어합니다.
 
@@ -489,7 +489,7 @@ GLOBAL을 지정하고 커서를 만들 때 LOCAL로 정의하지 않으면 커�
 
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 `is_local_cursor_default` 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 함수의 `IsLocalCursorsDefault` 속성을 검사하여 상태를 확인할 수도 있습니다.
 
-**\<database_mirroring>**      
+**\<database_mirroring>**     
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 인수에 대한 설명은 [ALTER DATABASE 데이터베이스 미러링](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)을 참조하세요.
@@ -572,7 +572,7 @@ READ_WRITE
 이 상태를 변경하려면 데이터베이스에 대해 배타적 액세스 권한이 있어야 합니다. 자세한 내용은 SINGLE_USER 절을 참조하십시오.
 
 > [!NOTE]
-> [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 연결된 데이터베이스에서 SET { READ_ONLY | READ_WRITE }는 해제됩니다.
+> [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 페더레이션된 데이터베이스에서 `SET { READ_ONLY | READ_WRITE }`는 사용하지 않도록 설정됩니다.
 
 **\<db_user_access_option> ::=**      
 데이터베이스에 대한 사용자 액세스를 제어합니다.
@@ -580,7 +580,7 @@ READ_WRITE
 SINGLE_USER     
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-한 번에 한 사용자만 데이터베이스에 액세스할 수 있도록 지정합니다. SINGLE_USER를 지정하고 다른 사용자가 데이터베이스에 연결하면 모든 사용자가 지정된 데이터베이스에서 연결을 끊을 때까지 ALTER DATABASE 문이 차단됩니다. 이 동작을 무시하려면 WITH \<termination> 절을 참조하세요.
+한 번에 한 사용자만 데이터베이스에 액세스할 수 있도록 지정합니다. SINGLE_USER를 지정하고 다른 사용자가 데이터베이스에 연결하면 모든 사용자가 지정된 데이터베이스에서 연결을 끊을 때까지 ALTER DATABASE 문이 차단됩니다. 이 동작을 재정의하려면 WITH \<termination> 절을 참조하세요.
 
 옵션을 설정한 사용자가 로그아웃해도 데이터베이스는 단일 사용자 모드로 유지됩니다. 이때 다른 한 명의 사용자만 데이터베이스에 연결할 수 있습니다.
 
@@ -601,18 +601,18 @@ MULTI_USER
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 `user_access` 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 함수의 `UserAccess` 속성을 검사하여 상태를 확인할 수도 있습니다.
 
 **\<delayed_durability_option> ::=**      
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상).
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 시작)
 
 트랜잭션이 완전한 내구성이 있게 커밋될지 아니면 지연된 내구성이 있게 커밋될지 제어합니다.
 
 DISABLED     
-SET DISABLED 다음의 모든 트랜잭션은 완전한 내구성이 있습니다. ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션은 무시됩니다.
+`SET DISABLED` 다음의 모든 트랜잭션은 완전한 내구성이 있습니다. ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션은 무시됩니다.
 
 ALLOWED     
-SET ALLOWED 다음의 모든 트랜잭션은 ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션에 따라 완전한 내구성이 있거나 지연된 내구성이 있습니다.
+`SET ALLOWED` 다음의 모든 트랜잭션은 ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션에 따라 완전한 내구성이 있거나 지연된 내구성이 있습니다.
 
 FORCED     
-SET FORCED 다음의 모든 트랜잭션은 지연된 내구성이 있습니다. ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션은 무시됩니다.
+`SET FORCED` 다음의 모든 트랜잭션은 지연된 내구성이 있습니다. ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션은 무시됩니다.
 
 **\<external_access_option> ::=**      
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
@@ -651,7 +651,7 @@ TRUSTWORTHY는 데이터베이스가 연결될 때마다 OFF로 설정됩니다.
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 `is_trustworthy_on` 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다.
 
 DEFAULT_FULLTEXT_LANGUAGE     
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상).
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
 
 전체 텍스트 인덱싱된 열에 대한 기본 언어 값을 지정합니다.
 
@@ -659,27 +659,27 @@ DEFAULT_FULLTEXT_LANGUAGE
 > 이 옵션은 CONTAINMENT가 PARTIAL로 설정된 경우에만 사용할 수 있습니다. CONTAINMENT가 NONE으로 설정되어 있으면 오류가 발생합니다.
 
 DEFAULT_LANGUAGE     
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상).
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
 
 새로 생성된 모든 로그인에 대한 기본 언어를 지정합니다. LCID(로컬 ID), 언어 이름 또는 언어 별칭을 제공하여 언어를 지정할 수 있습니다. 사용 가능한 언어 이름 및 별칭 목록은 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)를 참조하세요. 이 옵션은 CONTAINMENT가 PARTIAL로 설정된 경우에만 사용할 수 있습니다. CONTAINMENT가 NONE으로 설정되어 있으면 오류가 발생합니다.
 
 NESTED_TRIGGERS     
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상).
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
 
 AFTER 트리거의 중첩(한 트리거가 다른 트리거를 시작하는 과정이 반복되는 동작) 여부를 지정합니다. 이 옵션은 CONTAINMENT가 PARTIAL로 설정된 경우에만 사용할 수 있습니다. CONTAINMENT가 NONE으로 설정되어 있으면 오류가 발생합니다.
 
 TRANSFORM_NOISE_WORDS     
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상).
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
 
 의미 없는 단어 또는 중지 단어로 인해 전체 텍스트 쿼리에 대한 부울 연산이 실패할 경우 오류 메시지를 표시하지 않는 데 사용됩니다. 이 옵션은 CONTAINMENT가 PARTIAL로 설정된 경우에만 사용할 수 있습니다. CONTAINMENT가 NONE으로 설정되어 있으면 오류가 발생합니다.
 
 TWO_DIGIT_YEAR_CUTOFF     
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상).
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
 
 두 자리 연도를 네 자리 연도로 해석하기 위한 구분 연도를 나타내는 1753에서 9999까지의 정수를 지정합니다. 이 옵션은 CONTAINMENT가 PARTIAL로 설정된 경우에만 사용할 수 있습니다. CONTAINMENT가 NONE으로 설정되어 있으면 오류가 발생합니다.
 
 **\<FILESTREAM_option> ::=**      
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
 
 FileTable에 대한 설정을 제어합니다.
 
@@ -702,7 +702,7 @@ Windows 호환 디렉터리 이름입니다. 이 이름은 [!INCLUDE[ssNoVersion
 [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)을 참조하세요.
 
 **\<mixed_page_allocation_option> ::=**      
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상).
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작)
 
 데이터베이스가 테이블이나 인덱스의 첫 8페이지에 대해 혼합 익스텐트를 사용하여 초기 페이지를 만들 수 있는지 여부를 제어합니다.
 
@@ -728,16 +728,19 @@ FORCED
 이 옵션의 현재 설정은 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 `is_parameterization_forced column` 열을 검사하여 확인할 수 있습니다.
 
 <a name="query-store"></a> **\<query_store_options> ::=**      
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상).
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작)
 
-ON | **OFF** | CLEAR [ ALL ]     
+ON | **OFF** [ FORCED ] | CLEAR [ ALL ]     
 이 데이터베이스에서 쿼리 저장소를 사용할 수 있는지 여부를 제어하고, 쿼리 저장소의 내용 제거도 제어합니다. 자세한 내용은 [쿼리 스토리지 사용 시나리오](../../relational-databases/performance/query-store-usage-scenarios.md)를 참조하세요.
 
 켜기     
 쿼리 저장소를 사용하도록 설정합니다.
 
-OFF     
-쿼리 저장소를 사용하지 않도록 합니다. OFF가 기본값입니다.
+OFF [ FORCED ]     
+쿼리 저장소를 사용하지 않도록 합니다. OFF가 기본값입니다. FORCED는 선택 사항입니다. FORCED는 실행 중인 모든 쿼리 저장소 백그라운드 태스크를 중단하고, 쿼리 저장소가 해제된 경우 동기 플러시를 건너뜁니다. 쿼리 저장소가 최대한 빨리 종료되도록 합니다. 실질적으로 쿼리 저장소를 즉시 해제합니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5에 FORCED가 도입됩니다.
+
+> [!NOTE]  
+> Azure SQL Database 단일 데이터베이스 및 탄력적 풀에서는 쿼리 저장소를 사용하지 않도록 설정할 수 없습니다. ALTER DATABASE [database] SET QUERY_STORE = OFF를 실행하면 "'QUERY_STORE=OFF'는 이 버전의 SQL Server에서 지원되지 않습니다."라는 경고가 반환됩니다. 
 
 CLEAR     
 쿼리 저장소의 내용을 제거합니다.
@@ -752,21 +755,25 @@ READ_ONLY
 쿼리 저장소에서 정보를 읽을 수 있지만 새 정보는 추가되지 않습니다. 쿼리 저장소의 최대 발급 공간이 최대값에 도달하면 쿼리 저장소는 작업 모드를 READ_ONLY로 변경합니다.
 
 CLEANUP_POLICY     
-쿼리 저장소의 데이터 보존 정책을 설명합니다. STALE_QUERY_THRESHOLD_DAYS는 쿼리에 대한 정보가 쿼리 저장소에 보존되는 일 수를 결정합니다. STALE_QUERY_THRESHOLD_DAYS는 **bigint** 형식입니다.
+쿼리 저장소의 데이터 보존 정책을 설명합니다. STALE_QUERY_THRESHOLD_DAYS는 쿼리에 대한 정보가 쿼리 저장소에 보존되는 일 수를 결정합니다. STALE_QUERY_THRESHOLD_DAYS는 **bigint** 형식입니다. 기본값은 30입니다.
 
 DATA_FLUSH_INTERVAL_SECONDS     
-쿼리 저장소에 기록된 데이터가 디스크에 유지되는 빈도를 결정합니다. 성능 최적화를 위해 쿼리 저장소에서 수집한 데이터는 디스크에 비동기적으로 기록됩니다. 비동기 전송이 발생하는 빈도는 DATA_FLUSH_INTERVAL_SECONDS 인수를 사용하여 구성됩니다. DATA_FLUSH_INTERVAL_SECONDS는 **bigint** 형식입니다.
+쿼리 저장소에 기록된 데이터가 디스크에 유지되는 빈도를 결정합니다. 성능 최적화를 위해 쿼리 저장소에서 수집한 데이터는 디스크에 비동기적으로 기록됩니다. 비동기 전송이 발생하는 빈도는 DATA_FLUSH_INTERVAL_SECONDS 인수를 사용하여 구성됩니다. DATA_FLUSH_INTERVAL_SECONDS는 **bigint** 형식입니다. 기본값은 **900**(15분)입니다.
 
 MAX_STORAGE_SIZE_MB     
-쿼리 저장소에 발급되는 공간을 결정합니다. MAX_STORAGE_SIZE_MB는 **bigint** 형식입니다.
+쿼리 저장소에 발급되는 공간을 결정합니다. MAX_STORAGE_SIZE_MB는 **bigint** 형식입니다. 기본값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 **100MB**입니다([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]까지). [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 기본값은 **1GB**입니다.
 
 > [!NOTE]
-> MAX_STORAGE_SIZE_MB 한도는 엄격하게 적용되지 않습니다. 쿼리 저장소가 디스크에 데이터를 쓰는 경우에만 스토리지 크기가 확인됩니다. 이 간격은 DATA_FLUSH_INTERVAL_SECONDS 옵션 또는 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 쿼리 저장소 대화 상자 옵션인 **데이터 플러시 간격**을 통해 설정됩니다. 간격 기본값은 900초, 즉 15분입니다.
-> 쿼리 저장소가 스토리지 크기 검사 간에 MAX_STORAGE_SIZE_MB 한도를 위반할 경우 읽기 전용 모드로 전환됩니다. SIZE_BASED_CLEANUP_MODE를 사용하도록 설정하면, MAX_STORAGE_SIZE_MB 한도를 적용하는 정리 메커니즘도 트리거됩니다.
+> `MAX_STORAGE_SIZE_MB` 한도는 엄격하게 적용되지 않습니다. 쿼리 저장소가 디스크에 데이터를 쓰는 경우에만 스토리지 크기가 확인됩니다. 이 간격은 `DATA_FLUSH_INTERVAL_SECONDS` 옵션 또는 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 쿼리 저장소 대화 상자 옵션 **데이터 플러시 간격**에서 설정됩니다. 간격 기본값은 900초, 즉 15분입니다.
+> 쿼리 저장소가 스토리지 크기 검사 간에 `MAX_STORAGE_SIZE_MB` 한도를 위반할 경우 읽기 전용 모드로 전환됩니다. `SIZE_BASED_CLEANUP_MODE`가 사용하도록 설정된 경우 `MAX_STORAGE_SIZE_MB` 한도를 적용하는 정리 메커니즘도 트리거됩니다.
 > 충분한 공간이 확보되면 쿼리 저장소 모드가 자동으로 읽기/쓰기로 다시 전환됩니다.
 
+> [!IMPORTANT]
+> 워크로드 캡처에 10GB 이상의 디스크 공간이 필요하다고 생각되는 경우 워크로드를 재고하여 쿼리 계획을 다시 사용하도록 최적화하는 것이 좋습니다. 예를 들어 [강제 매개 변수화](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)를 사용하거나 쿼리 저장소 구성을 조정할 수 있습니다.    
+> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 쿼리 캡처 정책에 대한 추가 제어를 위해 `QUERY_CAPTURE_MODE`을 CUSTOM으로 설정할 수 있습니다.
+
 INTERVAL_LENGTH_MINUTES     
-런타임 실행 통계 데이터가 쿼리 저장소로 집계되는 간격을 결정합니다. 공간 사용을 최적화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 시간 창을 통해 집계됩니다. 고정된 시간 창은 INTERVAL_LENGTH_MINUTES 인수를 사용하여 구성됩니다. INTERVAL_LENGTH_MINUTES는 **bigint** 형식입니다.
+런타임 실행 통계 데이터가 쿼리 저장소로 집계되는 간격을 결정합니다. 공간 사용을 최적화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 시간 창을 통해 집계됩니다. 고정된 시간 창은 INTERVAL_LENGTH_MINUTES 인수를 사용하여 구성됩니다. INTERVAL_LENGTH_MINUTES는 **bigint** 형식입니다. 기본값은 **60**입니다.
 
 SIZE_BASED_CLEANUP_MODE { **AUTO** | OFF }     
 총 데이터양이 최대 크기에 가까워지면 정리를 자동으로 활성화할지 여부를 제어합니다.
@@ -779,7 +786,7 @@ OFF
 
 SIZE_BASED_CLEANUP_MODE는 **nvarchar** 형식입니다.
 
-QUERY_CAPTURE_MODE { ALL | AUTO | NONE | CUSTOM }     
+QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
 현재 활성 쿼리 캡처 모드를 지정합니다. 각 모드는 특정 쿼리 캡처 정책을 정의합니다.
 
 > [!NOTE]
@@ -795,17 +802,28 @@ AUTO
 새 쿼리 캡처를 중지합니다. 쿼리 저장소는 이미 캡처된 쿼리에 대한 컴파일 및 런타임 통계를 계속 수집합니다. 중요한 쿼리 캡처를 놓칠 수 있으므로 이 구성은 주의해서 사용해야 합니다.
 
 CUSTOM     
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)
 
 QUERY_CAPTURE_POLICY 옵션에 대해 제어할 수 있습니다.
 
-QUERY_CAPTURE_MODE는 **nvarchar** 형식입니다.
+QUERY_CAPTURE_MODE는 **nvarchar** 형식입니다. 
 
 max_plans_per_query     
-각 쿼리에 대해 유지 관리되는 최대 계획 수를 정의합니다. 기본값은 200입니다. MAX_PLANS_PER_QUERY는 **int** 형식입니다.
+각 쿼리에 대해 유지 관리되는 최대 계획 수를 정의합니다. MAX_PLANS_PER_QUERY는 **int** 형식입니다. 기본값은 **200**입니다.
+
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작))
+
+쿼리별 대기 통계를 캡처할지 여부를 제어합니다.
+
+켜기    
+쿼리별 대기 통계 정보를 캡처합니다. 이 값은 기본 구성 값입니다.
+
+OFF    
+쿼리별 대기 통계 정보를 캡처하지 않습니다.
 
 **\<query_capture_policy_option_list> :: =**      
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)
 
 쿼리 저장소 캡처 정책 옵션을 제어합니다. STALE_CAPTURE_POLICY_THRESHOLD를 제외하고 이 옵션은 정의된 부실 캡처 정책 임계값에 캡처해야 할 쿼리에 대해 수행해야 할 OR 조건을 정의합니다.
 
@@ -872,7 +890,7 @@ PAGE_VERIFY 옵션을 사용하는 경우 다음 중요 사항을 고려하십�
 - 사용자 또는 시스템 데이터베이스를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전으로 업그레이드하는 경우 PAGE_VERIFY 값(NONE 또는 TORN_PAGE_DETECTION)이 유지됩니다. CHECKSUM으로 변경하는 것이 좋습니다.
 
     > [!NOTE]
-    > 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 TempDB 데이터베이스의 PAGE_VERIFY 데이터베이스 옵션이 NONE으로 설정되며 수정할 수 없습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 새로 설치된 경우 TempDB 데이터베이스의 기본값은 CHECKSUM입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치를 업그레이드하면 기본값이 NONE으로 유지됩니다. 이 옵션은 수정할 수 없습니다. tempdb 데이터베이스에는 CHECKSUM을 사용하는 것이 좋습니다.
+    > 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 TempDB 데이터베이스의 PAGE_VERIFY 데이터베이스 옵션이 NONE으로 설정되며 수정할 수 없습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 새로 설치한 경우 TempDB 데이터베이스의 기본값은 CHECKSUM입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치를 업그레이드하면 기본값이 NONE으로 유지됩니다. 이 옵션은 수정할 수 없습니다. tempdb 데이터베이스에는 CHECKSUM을 사용하는 것이 좋습니다.
 
 - TORN_PAGE_DETECTION은 리소스는 덜 사용하지만 CHECKSUM 보호를 최소한으로 제공합니다.
 - PAGE_VERIFY는 데이터베이스를 잠그거나 오프라인으로 설정하지 않고 즉, 데이터베이스의 동시성을 방해하지 않고 설정할 수 있습니다.
@@ -891,7 +909,7 @@ PAGE_VERIFY 옵션을 사용하는 경우 다음 중요 사항을 고려하십�
 이 옵션의 현재 설정은 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 `page_verify_option` 열이나 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 함수의 `IsTornPageDetectionEnabled` 속성을 검사하여 확인할 수 있습니다.
 
 **\<remote_data_archive_option> ::=**      
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상).
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작)
 
 데이터베이스에 Stretch Database를 사용하거나 사용하지 않도록 설정합니다. 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.
 
@@ -902,7 +920,7 @@ REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scope
 테이블 Stretch Database를 활성화하려면 `db_owner` 권한이 필요합니다. 데이터베이스 Stretch Database를 활성화하려면 `db_owner` 및 `CONTROL DATABASE` 권한이 필요합니다.
 
 SERVER = \<server_name>     
-Azure 서버의 주소를 지정합니다. 이름의 `.database.windows.net` 부분을 포함합니다. `MyStretchDatabaseServer.database.windows.net`)을 입력합니다.
+Azure 서버의 주소를 지정합니다. 이름의 `.database.windows.net` 부분을 포함합니다. 예들 들어 `MyStretchDatabaseServer.database.windows.net`입니다.
 
 CREDENTIAL = \<db_scoped_credential_name>     
 Azure 서버에 연결하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 사용하는 데이터베이스 범위 자격 증명을 지정합니다. 이 명령을 실행하기 전에 자격 증명이 있는지 확인해야 합니다. 자세한 내용은 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)을 참조하세요.
@@ -996,7 +1014,7 @@ master, tempdb 또는 msdb 시스템 데이터베이스에 대해서는 READ_COM
 > **DURABILITY = SCHEMA_ONLY**를 사용하여 테이블이 만들어지고 그 후에 **READ_COMMITTED_SNAPSHOT**이 **ALTER DATABASE**를 사용하여 변경되면 테이블의 데이터는 손실됩니다.
 
 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | **OFF** }     
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상).
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 시작)
 
 켜기     
 트랜잭션 격리 수준이 SNAPSHOT보다 낮은 격리 수준으로 설정된 경우 메모리 최적화 테이블에 대한 해석된 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업이 SNAPSHOT 격리로 실행됩니다. 스냅샷보다 낮은 격리 수준의 예는 READ COMMITTED 또는 READ UNCOMMITTED입니다. 이 작업은 세션 수준에서 트랜잭션 격리 수준이 명시적으로 설정되었거나 기본값이 암시적으로 사용되는지에 관계없이 실행됩니다.
@@ -1150,7 +1168,7 @@ OFF
 이 옵션의 상태는 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 `is_recursive_triggers_on` 열 또는 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 함수의 `IsRecursiveTriggersEnabled` 속성을 검사하여 확인할 수 있습니다.
 
 **\<target_recovery_time_option> ::=**      
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상).
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작)
 
 데이터베이스 단위로 간접 검사점의 빈도를 지정합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 새 데이터베이스의 기본값은 **1분**이며, 이 값은 데이터베이스에서 간접 검사점을 사용한다는 것을 나타냅니다. 이전 버전의 기본값 0은 데이터베이스가 자동 검사점을 사용함을 나타내며, 빈도는 서버 인스턴스의 복구 간격 설정에 따라 달라집니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서는 대부분의 시스템에 1분을 권장합니다.
 
@@ -1230,7 +1248,7 @@ NO_WAIT
 
 계획 캐시를 삭제하면 모든 후속 실행 계획이 다시 컴파일되며 일시적으로 갑자기 쿼리 성능이 저하될 수 있습니다. 계획 캐시의 삭제된 각 캐시스토어에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`라는 정보 메시지가 있습니다. 이 메시지는 캐시가 해당 시간 간격 내에 플러시되는 동안 5분마다 기록됩니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-setting-options-on-a-database"></a>A. 데이터베이스 옵션 설정
 
@@ -1320,7 +1338,7 @@ SET CHANGE_TRACKING = OFF;
 
 ### <a name="e-enabling-the-query-store"></a>E. 쿼리 저장소를 사용하도록 설정
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작)
 
 다음 예제에서는 쿼리 저장소를 사용하도록 설정하고 쿼리 저장소와 매개 변수를 구성합니다.
 
@@ -1517,9 +1535,19 @@ SET
   | DATA_FLUSH_INTERVAL_SECONDS = number
   | MAX_STORAGE_SIZE_MB = number
   | INTERVAL_LENGTH_MINUTES = number
-  | SIZE_BASED_CLEANUP_MODE = [ AUTO | OFF ]
-  | QUERY_CAPTURE_MODE = [ ALL | AUTO | NONE ]
+  | SIZE_BASED_CLEANUP_MODE = { AUTO | OFF }
+  | QUERY_CAPTURE_MODE = { ALL | AUTO | CUSTOM | NONE }
   | MAX_PLANS_PER_QUERY = number
+  | WAIT_STATS_CAPTURE_MODE = { ON | OFF }
+  | QUERY_CAPTURE_POLICY = ( <query_capture_policy_option_list> [,...n] )
+}
+
+<query_capture_policy_option_list> :: =
+{
+    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+    | EXECUTION_COUNT = number
+    | TOTAL_COMPILE_CPU_TIME_MS = number
+    | TOTAL_EXECUTION_CPU_TIME_MS = number
 }
 
 <snapshot_option> ::=
@@ -1682,7 +1710,7 @@ DEFAULT
 서버의 기본 설정을 상속합니다. 이 경우에 개별 자동 조정 기능을 사용하거나 사용하지 않도록 설정하는 옵션은 서버 수준에서 정의됩니다.
 
 켜기     
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 새 SQL 계획이 성능 저하를 일으키는 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 쿼리에 마지막으로 성공한 계획을 자동으로 강제로 적용합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]는 강제 계획을 통해 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 쿼리의 쿼리 성능을 지속적으로 모니터링합니다. 성능이 향상되면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 마지막으로 성공한 계획을 계속 사용합니다. 성능 향상이 검색되지 않으면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]이 새 쿼리 계획을 생성합니다. 쿼리 저장소를 사용할 수 없거나 ‘읽기/쓰기’ 모드가 아닌 경우 문이 실패합니다. 
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 새 SQL 계획이 성능 저하를 일으키는 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 쿼리에 마지막으로 성공한 계획을 자동으로 강제로 적용합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]는 강제 계획을 통해 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 쿼리의 쿼리 성능을 지속적으로 모니터링합니다. 성능이 향상되면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 마지막으로 성공한 계획을 계속 사용합니다. 성능 향상이 검색되지 않으면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]이 새 쿼리 계획을 생성합니다. 쿼리 저장소를 사용할 수 없거나 ‘읽기/쓰기’ 모드가 아닌 경우 문이 실패합니다.
 
 OFF     
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 뷰에서 SQL 계획 변경으로 인한 잠재적인 쿼리 성능 저하를 보고합니다. 하지만 이러한 권장 사항은 자동으로 적용되지 않습니다. 사용자는 뷰에 표시된 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 스크립트를 적용하여 활성 권장 사항을 모니터링하고 확인된 문제를 해결할 수 있습니다. 이것은 기본값입니다.
@@ -1749,7 +1777,7 @@ READ_WRITE
 이 상태를 변경하려면 데이터베이스에 대해 배타적 액세스 권한이 있어야 합니다. 자세한 내용은 SINGLE_USER 절을 참조하십시오.
 
 > [!NOTE]
-> [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 연결된 데이터베이스에서 SET { READ_ONLY | READ_WRITE }는 해제됩니다.
+> [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 페더레이션된 데이터베이스에서 `SET { READ_ONLY | READ_WRITE }`는 사용하지 않도록 설정됩니다.
 
 **\<db_user_access_option> ::=**      
 데이터베이스에 대한 사용자 액세스를 제어합니다.
@@ -1766,13 +1794,13 @@ MULTI_USER
 트랜잭션이 완전한 내구성이 있게 커밋될지 아니면 지연된 내구성이 있게 커밋될지 제어합니다.
 
 DISABLED     
-SET DISABLED 다음의 모든 트랜잭션은 완전한 내구성이 있습니다. ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션은 무시됩니다.
+`SET DISABLED` 다음의 모든 트랜잭션은 완전한 내구성이 있습니다. ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션은 무시됩니다.
 
 ALLOWED     
-SET ALLOWED 다음의 모든 트랜잭션은 ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션에 따라 완전한 내구성이 있거나 지연된 내구성이 있습니다.
+`SET ALLOWED` 다음의 모든 트랜잭션은 ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션에 따라 완전한 내구성이 있거나 지연된 내구성이 있습니다.
 
 FORCED     
-SET FORCED 다음의 모든 트랜잭션은 지연된 내구성이 있습니다. ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션은 무시됩니다.
+`SET FORCED` 다음의 모든 트랜잭션은 지연된 내구성이 있습니다. ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션은 무시됩니다.
 
 **\<PARAMETERIZATION_option> ::=**      
 매개 변수화 옵션을 제어합니다.
@@ -1786,7 +1814,7 @@ FORCED
 
 이 옵션의 현재 설정은 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 `is_parameterization_forced` 열을 검사하여 확인할 수 있습니다.
 
-**\<query_store_options> ::=**
+<a name="query-store"></a> **\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]     
 이 데이터베이스에서 쿼리 저장소를 사용할 수 있는지 여부를 제어하고, 쿼리 저장소의 내용 제거도 제어합니다.
@@ -1804,21 +1832,28 @@ OPERATION_MODE
 쿼리 저장소의 작업 모드를 설명합니다. 유효한 값은 READ_ONLY 및 READ_WRITE입니다. READ_WRITE 모드에서 쿼리 저장소는 쿼리 계획 및 런타임 실행 통계 정보를 수집하고 유지합니다. READ_ONLY 모드에서는 쿼리 저장소에서 정보를 읽을 수 있지만 새 정보는 추가되지 않습니다. 쿼리 저장소의 최대 할당 공간이 최대값에 도달하면 쿼리 저장소는 작업 모드를 READ_ONLY로 변경합니다.
 
 CLEANUP_POLICY     
-쿼리 저장소의 데이터 보존 정책을 설명합니다. STALE_QUERY_THRESHOLD_DAYS는 쿼리에 대한 정보가 쿼리 저장소에 보존되는 일 수를 결정합니다. STALE_QUERY_THRESHOLD_DAYS는 **bigint** 형식입니다.
+쿼리 저장소의 데이터 보존 정책을 설명합니다. STALE_QUERY_THRESHOLD_DAYS는 쿼리에 대한 정보가 쿼리 저장소에 보존되는 일 수를 결정합니다. STALE_QUERY_THRESHOLD_DAYS는 **bigint** 형식입니다. 기본값은 30입니다. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 버전의 경우 기본값은 **7**일입니다.
 
 DATA_FLUSH_INTERVAL_SECONDS     
-쿼리 저장소에 기록된 데이터가 디스크에 유지되는 빈도를 결정합니다. 성능 최적화를 위해 쿼리 저장소에서 수집한 데이터는 디스크에 비동기적으로 기록됩니다. 비동기 전송이 발생하는 빈도는 DATA_FLUSH_INTERVAL_SECONDS 인수를 사용하여 구성됩니다. DATA_FLUSH_INTERVAL_SECONDS는 **bigint** 형식입니다.
+쿼리 저장소에 기록된 데이터가 디스크에 유지되는 빈도를 결정합니다. 성능 최적화를 위해 쿼리 저장소에서 수집한 데이터는 디스크에 비동기적으로 기록됩니다. 비동기 전송이 발생하는 빈도는 DATA_FLUSH_INTERVAL_SECONDS 인수를 사용하여 구성됩니다. DATA_FLUSH_INTERVAL_SECONDS는 **bigint** 형식입니다. 기본값은 **900**(15분)입니다.
 
 MAX_STORAGE_SIZE_MB     
-쿼리 저장소에 할당되는 공간을 결정합니다. MAX_STORAGE_SIZE_MB는 **bigint** 형식입니다.
+쿼리 저장소에 할당되는 공간을 결정합니다. MAX_STORAGE_SIZE_MB는 **bigint** 형식입니다. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition의 경우 기본값은 **1GB**이고, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition의 경우 기본값은 **10MB**입니다.
 
 > [!NOTE]
-> MAX_STORAGE_SIZE_MB 한도는 엄격하게 적용되지 않습니다. 쿼리 저장소가 디스크에 데이터를 쓰는 경우에만 스토리지 크기가 확인됩니다. 이 간격은 DATA_FLUSH_INTERVAL_SECONDS 옵션 또는 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 쿼리 저장소 대화 상자 옵션인 **데이터 플러시 간격**을 통해 설정됩니다. 간격 기본값은 900초, 즉 15분입니다.
-> 쿼리 저장소가 스토리지 크기 검사 간에 MAX_STORAGE_SIZE_MB 한도를 위반할 경우 읽기 전용 모드로 전환됩니다. SIZE_BASED_CLEANUP_MODE를 사용하도록 설정하면, MAX_STORAGE_SIZE_MB 한도를 적용하는 정리 메커니즘도 트리거됩니다.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 `MAX_STORAGE_SIZE_MB` 설정 한도는 10,240MB입니다. 
+
+> [!NOTE]
+> `MAX_STORAGE_SIZE_MB` 한도는 엄격하게 적용되지 않습니다. 쿼리 저장소가 디스크에 데이터를 쓰는 경우에만 스토리지 크기가 확인됩니다. 이 간격은 `DATA_FLUSH_INTERVAL_SECONDS` 옵션 또는 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 쿼리 저장소 대화 상자 옵션 **데이터 플러시 간격**에서 설정됩니다. 간격 기본값은 900초, 즉 15분입니다.
+> 쿼리 저장소가 스토리지 크기 검사 간에 `MAX_STORAGE_SIZE_MB` 한도를 위반할 경우 읽기 전용 모드로 전환됩니다. `SIZE_BASED_CLEANUP_MODE`가 사용하도록 설정된 경우 `MAX_STORAGE_SIZE_MB` 한도를 적용하는 정리 메커니즘도 트리거됩니다.
 > 충분한 공간이 확보되면 쿼리 저장소 모드가 자동으로 읽기/쓰기로 다시 전환됩니다.
 
+> [!IMPORTANT]
+> 워크로드 캡처에 10GB 이상의 디스크 공간이 필요하다고 생각되는 경우 워크로드를 재고하여 쿼리 계획을 다시 사용하도록 최적화하는 것이 좋습니다. 예를 들어 [강제 매개 변수화](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)를 사용하거나 쿼리 저장소 구성을 조정할 수 있습니다.    
+> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 쿼리 캡처 정책에 대한 추가 제어를 위해 `QUERY_CAPTURE_MODE`을 CUSTOM으로 설정할 수 있습니다.
+
 INTERVAL_LENGTH_MINUTES     
-런타임 실행 통계 데이터가 쿼리 저장소로 집계되는 간격을 결정합니다. 공간 사용을 최적화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 시간 창을 통해 집계됩니다. 고정된 시간 창은 INTERVAL_LENGTH_MINUTES 인수를 사용하여 구성됩니다. INTERVAL_LENGTH_MINUTES는 **bigint** 형식입니다.
+런타임 실행 통계 데이터가 쿼리 저장소로 집계되는 간격을 결정합니다. 공간 사용을 최적화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 시간 창을 통해 집계됩니다. 고정된 시간 창은 INTERVAL_LENGTH_MINUTES 인수를 사용하여 구성됩니다. INTERVAL_LENGTH_MINUTES는 **bigint** 형식입니다. 기본값은 **60**입니다.
 
 SIZE_BASED_CLEANUP_MODE     
 총 데이터양이 최대 크기에 가까워지면 정리를 자동으로 활성화할지 여부를 제어합니다.
@@ -1831,11 +1866,14 @@ AUTO
 
 SIZE_BASED_CLEANUP_MODE는 **nvarchar** 형식입니다.
 
-QUERY_CAPTURE_MODE     
-현재 활성 쿼리 캡처 모드를 지정합니다.
+QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+현재 활성 쿼리 캡처 모드를 지정합니다. 각 모드는 특정 쿼리 캡처 정책을 정의합니다.   
+
+> [!NOTE]
+> 쿼리 캡처 모드를 모두, 자동 또는 사용자 지정으로 설정하면 커서, 저장 프로시저 내부 쿼리 및 고유하게 컴파일된 쿼리가 항상 캡처됩니다.
 
 ALL     
-모든 쿼리가 캡처됩니다.
+쿼리를 모두 캡처합니다.
 
 AUTO     
 실행 횟수 및 리소스 사용을 기반으로 관련 쿼리를 캡처합니다. 이것이 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 대한 기본 구성 값입니다.
@@ -1843,10 +1881,37 @@ AUTO
 없음     
 새 쿼리 캡처를 중지합니다. 쿼리 저장소는 이미 캡처된 쿼리에 대한 컴파일 및 런타임 통계를 계속 수집합니다. 중요한 쿼리 캡처를 놓칠 수 있으므로 이 구성은 주의해서 사용해야 합니다.
 
+CUSTOM     
+QUERY_CAPTURE_POLICY 옵션에 대해 제어할 수 있습니다.
+
 QUERY_CAPTURE_MODE는 **nvarchar** 형식입니다.
 
 max_plans_per_query     
-각 쿼리에 대하여 유지되는 계획의 수를 나타내는 정수입니다. 기본값은 200입니다.
+각 쿼리에 대해 유지 관리되는 최대 계획 수를 정의합니다. MAX_PLANS_PER_QUERY는 **int** 형식입니다. 기본값은 **200**입니다.
+
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+쿼리별 대기 통계를 캡처할지 여부를 제어합니다.
+
+켜기    
+쿼리별 대기 통계 정보를 캡처합니다. 이 값은 기본 구성 값입니다.
+
+OFF    
+쿼리별 대기 통계 정보를 캡처하지 않습니다.
+
+**\<query_capture_policy_option_list> :: =**      
+쿼리 저장소 캡처 정책 옵션을 제어합니다. STALE_CAPTURE_POLICY_THRESHOLD를 제외하고 이 옵션은 정의된 부실 캡처 정책 임계값에 캡처해야 할 쿼리에 대해 수행해야 할 OR 조건을 정의합니다.
+
+STALE_CAPTURE_POLICY_THRESHOLD = *number* { DAYS | HOURS }     
+쿼리가 캡처되어야 하는지 여부를 결정하는 평가 간격 기간을 정의합니다. 기본값은 1일이며 1시간에서 7일까지 설정할 수 있습니다. *number*는 **int** 형식입니다.
+
+EXECUTION_COUNT     
+평가 기간 동안 쿼리가 실행되는 횟수를 정의합니다. 기본값은 30으로, 기본 부실 캡처 정책 임계값의 경우 쿼리가 쿼리 저장소에 유지되려면 하루에 30회 이상 실행되어야 합니다. EXECUTION_COUNT는 **int** 형식입니다.
+
+TOTAL_COMPILE_CPU_TIME_MS     
+평가 기간 동안 쿼리에 사용하는 총 경과 컴파일 CPU 시간을 정의합니다. 기본값은 1000으로, 기본 부실 캡처 정책 임계값의 경우 쿼리가 쿼리 저장소에 유지되려면 하루에 쿼리 컴파일에 사용된 총 CPU 시간이 1초 이상이어야 합니다. TOTAL_COMPILE_CPU_TIME_MS는 **int** 형식입니다.
+
+TOTAL_EXECUTION_CPU_TIME_MS     
+평가 기간 동안 쿼리에 사용하는 총 경과 실행 CPU 시간을 정의합니다. 기본값은 100으로, 기본 부실 캡처 정책 임계값의 경우 쿼리가 쿼리 저장소에 유지되려면 하루에 실행에 사용된 총 CPU 시간이 100ms 이상이어야 합니다. TOTAL_EXECUTION_CPU_TIME_MS는 **int** 형식입니다.
 
 **\<snapshot_option> ::=**      
 트랜잭션 격리 수준을 결정합니다.
@@ -2094,10 +2159,9 @@ NO_WAIT
 |\<sql_option>|예|예|
 |\<target_recovery_time_option>|예|예|
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-setting-the-database-to-read_only"></a>A. 데이터베이스를 READ_ONLY로 설정
-
 데이터베이스 또는 파일 그룹의 상태를 READ_ONLY 또는 READ_WRITE로 변경하려면 데이터베이스에 대한 단독 액세스 권한이 필요합니다. 다음 예제에서는 데이터베이스를 `RESTRICTED_USER` 모드로 설정하여 액세스를 제한합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 상태를 `READ_ONLY` 로 설정한 후 데이터베이스 액세스를 모든 사용자에게 반환합니다.
 
 ```sql
@@ -2116,7 +2180,6 @@ GO
 ```
 
 ### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. 데이터베이스에서 스냅샷 격리 활성화
-
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 스냅샷 격리 프레임워크 옵션을 활성화합니다.
 
 ```sql
@@ -2142,7 +2205,6 @@ GO
 |[database_name] |1| 켜기 |
 
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>C. 변경 내용 추적 설정, 수정 및 해제
-
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 변경 내용 추적을 설정하고 보존 기간을 `2` 일로 설정합니다.
 
 ```sql
@@ -2166,18 +2228,61 @@ SET CHANGE_TRACKING = OFF;
 ```
 
 ### <a name="d-enabling-the-query-store"></a>D. 쿼리 저장소를 사용하도록 설정
-
 다음 예제에서는 쿼리 저장소를 사용하도록 설정하고 쿼리 저장소 매개 변수를 구성합니다.
 
 ```sql
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON
-(
-      OPERATION_MODE = READ_WRITE
-    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 )
-    , DATA_FLUSH_INTERVAL_SECONDS = 900
-    , MAX_STORAGE_SIZE_MB = 1024
-    , INTERVAL_LENGTH_MINUTES = 60
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```
+
+### <a name="e-enabling-the-query-store-with-wait-statistics"></a>E. 대기 통계가 포함된 쿼리 저장소를 사용하도록 설정
+다음 예제에서는 쿼리 저장소를 사용하도록 설정하고 쿼리 저장소와 매개 변수를 구성합니다.
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### <a name="f-enabling-the-query-store-with-custom-capture-policy-options"></a>F. 사용자 지정 캡처 정책 옵션이 포함된 쿼리 저장소를 사용하도록 설정
+다음 예제에서는 쿼리 저장소를 사용하도록 설정하고 쿼리 저장소와 매개 변수를 구성합니다.
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100
+      )
     );
 ```
 
@@ -2298,9 +2403,19 @@ SET
   | DATA_FLUSH_INTERVAL_SECONDS = number
   | MAX_STORAGE_SIZE_MB = number
   | INTERVAL_LENGTH_MINUTES = number
-  | SIZE_BASED_CLEANUP_MODE = [ AUTO | OFF ]
-  | QUERY_CAPTURE_MODE = [ ALL | AUTO | NONE ]
+  | SIZE_BASED_CLEANUP_MODE = { AUTO | OFF }
+  | QUERY_CAPTURE_MODE = { ALL | AUTO | CUSTOM | NONE }
   | MAX_PLANS_PER_QUERY = number
+  | WAIT_STATS_CAPTURE_MODE = { ON | OFF }
+  | QUERY_CAPTURE_POLICY = ( <query_capture_policy_option_list> [,...n] )
+}
+
+<query_capture_policy_option_list> :: =
+{
+    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+    | EXECUTION_COUNT = number
+    | TOTAL_COMPILE_CPU_TIME_MS = number
+    | TOTAL_EXECUTION_CPU_TIME_MS = number
 }
 
 <snapshot_option> ::=
@@ -2417,7 +2532,7 @@ AUTO_UPDATE_STATISTICS 옵션에 대한 통계 업데이트를 동기로 지정�
 
 FORCE_LAST_GOOD_PLAN = { ON | **OFF** }     
 켜기     
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 새 SQL 계획이 성능 저하를 일으키는 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 쿼리에 마지막으로 성공한 계획을 자동으로 강제로 적용합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]는 강제 계획을 통해 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 쿼리의 쿼리 성능을 지속적으로 모니터링합니다. 성능이 향상되면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 마지막으로 성공한 계획을 계속 사용합니다. 성능 향상이 검색되지 않으면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]이 새 쿼리 계획을 생성합니다. 쿼리 저장소를 사용할 수 없거나 ‘읽기/쓰기’ 모드가 아닌 경우 문이 실패합니다. 
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 새 SQL 계획이 성능 저하를 일으키는 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 쿼리에 마지막으로 성공한 계획을 자동으로 강제로 적용합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]는 강제 계획을 통해 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 쿼리의 쿼리 성능을 지속적으로 모니터링합니다. 성능이 향상되면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 마지막으로 성공한 계획을 계속 사용합니다. 성능 향상이 검색되지 않으면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]이 새 쿼리 계획을 생성합니다. 쿼리 저장소를 사용할 수 없거나 ‘읽기/쓰기’ 모드가 아닌 경우 문이 실패합니다.
 
 OFF     
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 뷰에서 SQL 계획 변경으로 인한 잠재적인 쿼리 성능 저하를 보고합니다. 하지만 이러한 권장 사항은 자동으로 적용되지 않습니다. 사용자는 뷰에 표시된 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 스크립트를 적용하여 활성 권장 사항을 모니터링하고 확인된 문제를 해결할 수 있습니다. 이것은 기본값입니다.
@@ -2497,13 +2612,13 @@ MULTI_USER
 트랜잭션이 완전한 내구성이 있게 커밋될지 아니면 지연된 내구성이 있게 커밋될지 제어합니다.
 
 DISABLED     
-SET DISABLED 다음의 모든 트랜잭션은 완전한 내구성이 있습니다. ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션은 무시됩니다.
+`SET DISABLED` 다음의 모든 트랜잭션은 완전한 내구성이 있습니다. ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션은 무시됩니다.
 
 ALLOWED     
-SET ALLOWED 다음의 모든 트랜잭션은 ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션에 따라 완전한 내구성이 있거나 지연된 내구성이 있습니다.
+`SET ALLOWED` 다음의 모든 트랜잭션은 ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션에 따라 완전한 내구성이 있거나 지연된 내구성이 있습니다.
 
 FORCED     
-SET FORCED 다음의 모든 트랜잭션은 지연된 내구성이 있습니다. ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션은 무시됩니다.
+`SET FORCED` 다음의 모든 트랜잭션은 지연된 내구성이 있습니다. ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션은 무시됩니다.
 
 **\<PARAMETERIZATION_option> ::=**      
 매개 변수화 옵션을 제어합니다.
@@ -2517,7 +2632,7 @@ FORCED
 
 이 옵션의 현재 설정은 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 `is_parameterization_forced` 열을 검사하여 확인할 수 있습니다.
 
-**\<query_store_options> ::=**
+<a name="query-store"></a> **\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]     
 이 데이터베이스에서 쿼리 저장소를 사용할 수 있는지 여부를 제어하고, 쿼리 저장소의 내용 제거도 제어합니다.
@@ -2535,16 +2650,25 @@ OPERATION_MODE
 쿼리 저장소의 작업 모드를 설명합니다. 유효한 값은 READ_ONLY 및 READ_WRITE입니다. READ_WRITE 모드에서 쿼리 저장소는 쿼리 계획 및 런타임 실행 통계 정보를 수집하고 유지합니다. READ_ONLY 모드에서는 쿼리 저장소에서 정보를 읽을 수 있지만 새 정보는 추가되지 않습니다. 쿼리 저장소의 최대 할당 공간이 최대값에 도달하면 쿼리 저장소는 작업 모드를 READ_ONLY로 변경합니다.
 
 CLEANUP_POLICY     
-쿼리 저장소의 데이터 보존 정책을 설명합니다. STALE_QUERY_THRESHOLD_DAYS는 쿼리에 대한 정보가 쿼리 저장소에 보존되는 일 수를 결정합니다. STALE_QUERY_THRESHOLD_DAYS는 **bigint** 형식입니다.
+쿼리 저장소의 데이터 보존 정책을 설명합니다. STALE_QUERY_THRESHOLD_DAYS는 쿼리에 대한 정보가 쿼리 저장소에 보존되는 일 수를 결정합니다. STALE_QUERY_THRESHOLD_DAYS는 **bigint** 형식입니다. 기본값은 30입니다. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 버전의 경우 기본값은 **7**일입니다.
 
 DATA_FLUSH_INTERVAL_SECONDS     
-쿼리 저장소에 기록된 데이터가 디스크에 유지되는 빈도를 결정합니다. 성능 최적화를 위해 쿼리 저장소에서 수집한 데이터는 디스크에 비동기적으로 기록됩니다. 비동기 전송이 발생하는 빈도는 DATA_FLUSH_INTERVAL_SECONDS 인수를 사용하여 구성됩니다. DATA_FLUSH_INTERVAL_SECONDS는 **bigint** 형식입니다.
+쿼리 저장소에 기록된 데이터가 디스크에 유지되는 빈도를 결정합니다. 성능 최적화를 위해 쿼리 저장소에서 수집한 데이터는 디스크에 비동기적으로 기록됩니다. 비동기 전송이 발생하는 빈도는 DATA_FLUSH_INTERVAL_SECONDS 인수를 사용하여 구성됩니다. DATA_FLUSH_INTERVAL_SECONDS는 **bigint** 형식입니다. 기본값은 **900**(15분)입니다.
 
 MAX_STORAGE_SIZE_MB     
-쿼리 저장소에 할당되는 공간을 결정합니다. MAX_STORAGE_SIZE_MB는 **bigint** 형식입니다.
+쿼리 저장소에 할당되는 공간을 결정합니다. MAX_STORAGE_SIZE_MB는 **bigint** 형식입니다. 기본값은 **100MB**입니다.
+
+> [!NOTE]
+> `MAX_STORAGE_SIZE_MB` 한도는 엄격하게 적용되지 않습니다. 쿼리 저장소가 디스크에 데이터를 쓰는 경우에만 스토리지 크기가 확인됩니다. 이 간격은 `DATA_FLUSH_INTERVAL_SECONDS` 옵션 또는 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 쿼리 저장소 대화 상자 옵션 **데이터 플러시 간격**에서 설정됩니다. 간격 기본값은 900초, 즉 15분입니다.
+> 쿼리 저장소가 스토리지 크기 검사 간에 `MAX_STORAGE_SIZE_MB` 한도를 위반할 경우 읽기 전용 모드로 전환됩니다. `SIZE_BASED_CLEANUP_MODE`가 사용하도록 설정된 경우 `MAX_STORAGE_SIZE_MB` 한도를 적용하는 정리 메커니즘도 트리거됩니다.
+> 충분한 공간이 확보되면 쿼리 저장소 모드가 자동으로 읽기/쓰기로 다시 전환됩니다.
+
+> [!IMPORTANT]
+> 워크로드 캡처에 10GB 이상의 디스크 공간이 필요하다고 생각되는 경우 워크로드를 재고하여 쿼리 계획을 다시 사용하도록 최적화하는 것이 좋습니다. 예를 들어 [강제 매개 변수화](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)를 사용하거나 쿼리 저장소 구성을 조정할 수 있습니다.    
+> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 쿼리 캡처 정책에 대한 추가 제어를 위해 `QUERY_CAPTURE_MODE`을 CUSTOM으로 설정할 수 있습니다.
 
 INTERVAL_LENGTH_MINUTES     
-런타임 실행 통계 데이터가 쿼리 저장소로 집계되는 간격을 결정합니다. 공간 사용을 최적화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 시간 창을 통해 집계됩니다. 고정된 시간 창은 INTERVAL_LENGTH_MINUTES 인수를 사용하여 구성됩니다. INTERVAL_LENGTH_MINUTES는 **bigint** 형식입니다.
+런타임 실행 통계 데이터가 쿼리 저장소로 집계되는 간격을 결정합니다. 공간 사용을 최적화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 시간 창을 통해 집계됩니다. 고정된 시간 창은 INTERVAL_LENGTH_MINUTES 인수를 사용하여 구성됩니다. INTERVAL_LENGTH_MINUTES는 **bigint** 형식입니다. 기본값은 **60**입니다.
 
 SIZE_BASED_CLEANUP_MODE     
 총 데이터양이 최대 크기에 가까워지면 정리를 자동으로 활성화할지 여부를 제어합니다.
@@ -2557,7 +2681,7 @@ AUTO
 
 SIZE_BASED_CLEANUP_MODE는 **nvarchar** 형식입니다.
 
-QUERY_CAPTURE_MODE     
+QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
 현재 활성 쿼리 캡처 모드를 지정합니다.
 
 ALL     
@@ -2572,7 +2696,31 @@ AUTO
 QUERY_CAPTURE_MODE는 **nvarchar** 형식입니다.
 
 max_plans_per_query     
-각 쿼리에 대하여 유지되는 계획의 수를 나타내는 정수입니다. 기본값은 200입니다.
+각 쿼리에 대하여 유지되는 계획의 수를 나타내는 정수입니다. MAX_PLANS_PER_QUERY는 **int** 형식입니다. 기본값은 **200**입니다.
+
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+쿼리별 대기 통계를 캡처할지 여부를 제어합니다.
+
+켜기    
+쿼리별 대기 통계 정보를 캡처합니다. 이 값은 기본 구성 값입니다.
+
+OFF    
+쿼리별 대기 통계 정보를 캡처하지 않습니다.
+
+**\<query_capture_policy_option_list> :: =**      
+쿼리 저장소 캡처 정책 옵션을 제어합니다. STALE_CAPTURE_POLICY_THRESHOLD를 제외하고 이 옵션은 정의된 부실 캡처 정책 임계값에 캡처해야 할 쿼리에 대해 수행해야 할 OR 조건을 정의합니다.
+
+STALE_CAPTURE_POLICY_THRESHOLD = *number* { DAYS | HOURS }     
+쿼리가 캡처되어야 하는지 여부를 결정하는 평가 간격 기간을 정의합니다. 기본값은 1일이며 1시간에서 7일까지 설정할 수 있습니다. *number*는 **int** 형식입니다.
+
+EXECUTION_COUNT     
+평가 기간 동안 쿼리가 실행되는 횟수를 정의합니다. 기본값은 30으로, 기본 부실 캡처 정책 임계값의 경우 쿼리가 쿼리 저장소에 유지되려면 하루에 30회 이상 실행되어야 합니다. EXECUTION_COUNT는 **int** 형식입니다.
+
+TOTAL_COMPILE_CPU_TIME_MS     
+평가 기간 동안 쿼리에 사용하는 총 경과 컴파일 CPU 시간을 정의합니다. 기본값은 1000으로, 기본 부실 캡처 정책 임계값의 경우 쿼리가 쿼리 저장소에 유지되려면 하루에 쿼리 컴파일에 사용된 총 CPU 시간이 1초 이상이어야 합니다. TOTAL_COMPILE_CPU_TIME_MS는 **int** 형식입니다.
+
+TOTAL_EXECUTION_CPU_TIME_MS     
+평가 기간 동안 쿼리에 사용하는 총 경과 실행 CPU 시간을 정의합니다. 기본값은 100으로, 기본 부실 캡처 정책 임계값의 경우 쿼리가 쿼리 저장소에 유지되려면 하루에 실행에 사용된 총 CPU 시간이 100ms 이상이어야 합니다. TOTAL_EXECUTION_CPU_TIME_MS는 **int** 형식입니다.
 
 **\<snapshot_option> ::=**
 
@@ -2795,10 +2943,9 @@ NO_WAIT
 
 새로 만드는 모든 데이터베이스에 대한 데이터베이스 옵션의 기본값을 변경할 수 있습니다. 이렇게 하려면 model 데이터베이스에서 해당 데이터베이스 옵션을 변경합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-setting-the-database-to-read_only"></a>A. 데이터베이스를 READ_ONLY로 설정
-
 데이터베이스 또는 파일 그룹의 상태를 READ_ONLY 또는 READ_WRITE로 변경하려면 데이터베이스에 대한 단독 액세스 권한이 필요합니다. 다음 예제에서는 데이터베이스를 `RESTRICTED_USER` 모드로 설정하여 액세스를 제한합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 상태를 `READ_ONLY` 로 설정한 후 데이터베이스 액세스를 모든 사용자에게 반환합니다.
 
 ```sql
@@ -2816,7 +2963,6 @@ GO
 ```
 
 ### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. 데이터베이스에서 스냅샷 격리 활성화
-
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 스냅샷 격리 프레임워크 옵션을 활성화합니다.
 
 ```sql
@@ -2842,7 +2988,6 @@ GO
 |[database_name] |1| 켜기 |
 
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>C. 변경 내용 추적 설정, 수정 및 해제
-
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 변경 내용 추적을 설정하고 보존 기간을 `2` 일로 설정합니다.
 
 ```sql
@@ -2866,18 +3011,61 @@ SET CHANGE_TRACKING = OFF;
 ```
 
 ### <a name="d-enabling-the-query-store"></a>D. 쿼리 저장소를 사용하도록 설정
-
 다음 예제에서는 쿼리 저장소를 사용하도록 설정하고 쿼리 저장소 매개 변수를 구성합니다.
 
 ```sql
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON
-  (  
-      OPERATION_MODE = READ_WRITE
-    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 )
-    , DATA_FLUSH_INTERVAL_SECONDS = 900
-    , MAX_STORAGE_SIZE_MB = 1024
-    , INTERVAL_LENGTH_MINUTES = 60
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```
+
+### <a name="e-enabling-the-query-store-with-wait-statistics"></a>E. 대기 통계가 포함된 쿼리 저장소를 사용하도록 설정
+다음 예제에서는 쿼리 저장소를 사용하도록 설정하고 쿼리 저장소와 매개 변수를 구성합니다.
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### <a name="f-enabling-the-query-store-with-custom-capture-policy-options"></a>F. 사용자 지정 캡처 정책 옵션이 포함된 쿼리 저장소를 사용하도록 설정
+다음 예제에서는 쿼리 저장소를 사용하도록 설정하고 쿼리 저장소와 매개 변수를 구성합니다.
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100
+      )
     );
 ```
 
@@ -3073,7 +3261,7 @@ READ_COMMITTED_SNAPSHOT이 설정된 데이터베이스에서 여러 데이터 �
 
 READ_COMMITTED_SNAPSHOT 옵션을 설정하려면 사용자에게 데이터베이스에 대한 ALTER 권한이 있어야 합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="check-statistics-setting-for-a-database"></a>데이터베이스에 대한 통계 설정 확인
 

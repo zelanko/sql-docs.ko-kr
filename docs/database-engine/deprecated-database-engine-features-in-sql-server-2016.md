@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 77c45273b5381a158d8a5cf317f292fd46dec55d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9c707c97df5b6c639a2c9df5847ff4f14fc400db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79190553"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729440"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016에서 사용되지 않는 데이터베이스 엔진 기능
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
 
 이 항목에서는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 에서 계속 제공되지만 더 이상 사용되지 않는 [!INCLUDE[sssql15-md](../includes/sssql15-md.md)]기능에 대해 설명합니다. 새 애플리케이션에는 이러한 기능을 사용하면 안 됩니다.  
   
@@ -47,7 +47,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>다음 버전의 SQL Server에서 사용되지 않는 기능
  아래의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 기능은 다음 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 지원되지 않습니다. 새 개발 작업에서는 이러한 기능을 사용하지 말고, 현재 이러한 기능을 사용하는 애플리케이션은 가능한 한 빨리 수정하십시오. **기능 이름** 값은 추적 이벤트에는 ObjectName으로 표시되고 성능 카운터 및 `sys.dm_os_performance_counters`에는 인스턴스 이름으로 표시됩니다. **기능 ID** 값은 추적 이벤트에 ObjectId로 표시됩니다.  
   
-|Category|사용되지 않는 기능|대체 기능|기능 이름|기능 ID|  
+|범주|사용되지 않는 기능|대체 기능|기능 이름|기능 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Backup 및 복원|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD는 계속 사용되지 않습니다. BACKUP { DATABASE &#124; LOG } WITH PASSWORD 및 BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD는 더 이상 사용되지 않습니다.|None|BACKUP DATABASE 또는 LOG WITH PASSWORD<br /><br /> BACKUP DATABASE 또는 LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
 |호환성 수준|버전 100([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)])에서 업그레이드합니다.|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전이 더 이상 [지원](https://aka.ms/sqllifecycle)되지 않을 경우 연결된 데이터베이스 호환성 수준이 사용되지 않는 것으로 표시됩니다. 하지만 업그레이드를 더욱 용이하게 할 수 있도록 지원되는 데이터베이스 호환성 수준에서 인증된 애플리케이션을 최대한 오래 계속 지원할 예정입니다. 호환성 수준에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.|데이터베이스 호환성 수준 100|108|  
@@ -62,7 +62,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 ## <a name="features-deprecated-in-a-future-version-of-sql-server"></a>향후 버전의 SQL Server에서 사용되지 않는 기능  
  아래의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 기능은 다음 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 지원되지만 이후 버전에서는 사용되지 않을 예정입니다. 어떤 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 제거될지는 결정되지 않았습니다.  
   
-|Category|사용되지 않는 기능|대체 기능|기능 이름|기능 ID|  
+|범주|사용되지 않는 기능|대체 기능|기능 이름|기능 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |호환성 수준|sp_dbcmptlevel|ALTER DATABASE ... SET COMPATIBILITY_LEVEL. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.|sp_dbcmptlevel|80|  
 |호환성 수준|데이터베이스 호환성 수준 110 및 120|이후 릴리스로 데이터베이스 및 애플리케이션을 업그레이드하도록 계획합니다. 하지만 업그레이드를 더욱 용이하게 할 수 있도록 지원되는 데이터베이스 호환성 수준에서 인증된 애플리케이션을 최대한 오래 계속 지원할 예정입니다. 호환성 수준에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.|데이터베이스 호환성 수준 110<br /><br /> 데이터베이스 호환성 수준 120||  

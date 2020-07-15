@@ -1,5 +1,6 @@
 ---
 title: 개요 및 사용 시나리오 | Microsoft 문서
+description: SQL Server 및 Azure SQL Database의 최적화된 트랜잭션 처리를 위한 기술인 메모리 내 OLTP에 대해 알아봅니다. 예제 및 추가 리소스를 확인합니다.
 ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b6fdfbbdd70ad0abf95c3860c2349cc55b5e12b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4f98e06aa52d2fe7e3c0a911f793a038c8dee9a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75831853"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722417"
 ---
 # <a name="overview-and-usage-scenarios"></a>개요 및 사용 시나리오
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 메모리 내 OLTP는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 트랜잭션 처리, 데이터 수집, 데이터 로드 및 일시적인 데이터 시나리오의 성능을 최적화하기 위해 사용할 수 있는 뛰어난 기술입니다. 이 문서에서는 메모리 내 OLTP의 기술 및 사용 시나리오를 알아봅니다. 이 정보를 사용하여 메모리 내 OLTP가 애플리케이션에 적합 한지 확인할 수 있습니다. 이 문서에는 메모리 내 OLTP 개체를 보여 주는 예제, 성능 데모에 대한 참조 및 다음 단계에 사용할 수 있는 리소스에 대한 참조가 포함되어 있습니다.
 

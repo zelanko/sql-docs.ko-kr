@@ -1,5 +1,6 @@
 ---
 title: FOR XML(SQL Server) | Microsoft 문서
+description: SQL 쿼리에서 결과를 XML로 검색하는 데 사용되는 FOR XML 절에 대해 알아봅니다.
 ms.custom: fresh2019may
 ms.date: 04/03/2020
 ms.prod: sql
@@ -19,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 author: RothJa
 ms.author: jroth
-ms.openlocfilehash: 6b59b52321f9c4e9489617bb8da9edf58f78b588
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 8cacd5efbc5d94c639c6dbc76c0a8865c4d4d7dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665146"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729928"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML(SQL Server)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 SELECT 쿼리는 결과를 행 집합으로 반환합니다. 선택적으로 쿼리에서 FOR XML 절을 지정하면 SQL 쿼리의 서식 결과를 XML로 검색할 수 있습니다. FOR XML 절은 최상위 쿼리 및 하위 쿼리에서 사용할 수 있습니다. 최상위 FOR XML 절은 SELECT 문에서만 사용할 수 있습니다. 하위 쿼리에서는 INSERT, UPDATE 및 DELETE 문에서 FOR XML을 사용할 수 있습니다. FOR XML은 대입문에서도 사용할 수 있습니다.
 

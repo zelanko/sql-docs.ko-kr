@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 08/07/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL RESOURCE POOL
@@ -22,15 +22,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7c55041d7b461406305a7b3a17c0e274270b7c5f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 12749b2a014f1f7b3c305572b3b0e72c4aef2024
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68893890"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735814"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 외부 프로세스에 대한 리소스를 정의하는 데 사용된 외부 풀을 만듭니다. 리소스 풀은 데이터베이스 엔진 인스턴스의 물리적 리소스(메모리 및 CPU)의 하위 집합을 나타냅니다. 데이터베이스 관리자는 리소스 관리자를 사용하여 서버 리소스를 최대 64개의 리소스 풀에 배치할 수 있습니다.
 
@@ -46,7 +46,7 @@ ms.locfileid: "68893890"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 CREATE EXTERNAL RESOURCE POOL pool_name  
 [ WITH (  
     [ MAX_CPU_PERCENT = value ]  
@@ -92,13 +92,13 @@ MAX_PROCESSES =*value*
 
 리소스 풀에 대한 일반 정보는 [Resource Governor 리소스 풀](../../relational-databases/resource-governor/resource-governor-resource-pool.md), [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md) 및 [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)을 참조합니다.
 
-기계 학습에 사용된 외부 리소스 풀 관리 관련 정보는 [SQL Server에서 기계 학습을 위한 리소스 거버넌스](../../advanced-analytics/r/resource-governance-for-r-services.md)를 참조하세요. 
+기계 학습에 사용된 외부 리소스 풀 관리 관련 정보는 [SQL Server에서 기계 학습을 위한 리소스 거버넌스](../../machine-learning/administration/resource-governor.md)를 참조하세요. 
 
 ## <a name="permissions"></a>사용 권한
 
 `CONTROL SERVER` 권한이 필요합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 다음 문은 CPU 사용량을 75%로 제한하는 외부 풀을 정의합니다. 또한 최대 메모리를 컴퓨터에서 사용 가능한 메모리의 30%로 정의합니다.
 

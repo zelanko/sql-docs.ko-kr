@@ -1,5 +1,6 @@
 ---
 title: XML 스키마 컬렉션(SQL Server) | Microsoft 문서
+description: 가져온 XML 스키마를 XML 스키마 컬렉션이 저장하여 XML 인스턴스의 유효성을 검사하고 SQL Server 데이터베이스에 저장된 XML 데이터 형식을 지정하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 850e6b9b1961809f51939edfc07fc1d11943fda7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2db7f06f0e68b1a03bf4b2a205666fcf90a58d32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664901"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729767"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 스키마 컬렉션 [SQL Server]
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [xml&#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) 항목에 설명된 것과 같이 SQL Server는 **xml** 데이터 형식을 통해 XML 데이터에 대한 네이티브 스토리지를 제공합니다. 선택적으로 XML 스키마 컬렉션을 통해 **xml** 유형의 열 또는 변수와 XSD 스키마를 연결할 수 있습니다. XML 스키마 컬렉션은 가져온 XML 스키마를 저장하고 다음을 수행하는 데 사용됩니다.  
   
 -   XML 인스턴스 유효성 검사  
@@ -38,7 +39,7 @@ ms.locfileid: "80664901"
   
  XML 스키마 컬렉션은 데이터베이스에 있는 테이블과 같은 메타데이터 엔터티입니다. 스키마 컬렉션은 생성, 수정 및 삭제할 수 있습니다. [CREATE XML SCHEMA COLLECTION(Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 문에 지정된 스키마는 새로 만든 XML 스키마 컬렉션 개체에 자동으로 가져와집니다. [ALTER XML SCHEMA COLLECTION(Transact-SQL)](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md) 문을 사용하여 추가 스키마 또는 스키마 구성 요소를 데이터베이스에 있는 기존 컬렉션 개체로 가져올 수 있습니다.  
   
- [형식화된 XML과 형식화되지 않은 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)항목에 설명된 것과 같이 스키마가 연결된 열 또는 변수에 저장된 XML은 스키마가 인스턴스 데이터에 대해 필요한 데이터 형식 정보를 제공하기 때문에 **형식화된** XML이라고 부릅니다. SQL Server는 이 유형 정보를 사용하여 데이터 스토리지를 최적화합니다.  
+ [형식화된 XML과 형식화되지 않은 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md) 항목에 설명된 것과 같이 스키마가 연결된 열 또는 변수에 저장된 XML은 스키마가 인스턴스 데이터에 대해 필요한 데이터 형식 정보를 제공하기 때문에 **형식화된** XML이라고 부릅니다. SQL Server는 이 유형 정보를 사용하여 데이터 스토리지를 최적화합니다.  
   
  쿼리 프로세싱 엔진은 또한 유형 검사 및 쿼리와 데이터 수정 최적화를 위해 스키마를 사용합니다.  
   
@@ -112,7 +113,7 @@ ms.locfileid: "80664901"
   
 -   MODELGROUP  
   
- 다음은 그 예입니다.  
+ 예를 들면 다음과 같습니다.  
   
 -   **SomeAttribute** 는 ATTRIBUTE 구성 요소입니다.  
   
@@ -173,7 +174,7 @@ ms.locfileid: "80664901"
   
  이러한 내용은 다음 예에 설명되어 있습니다.  
   
-### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>예: XML 스키마 컬렉션에 XML 네임스페이스 열거  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>예제: XML 스키마 컬렉션에 XML 네임스페이스 열거  
  XML 스키마 컬렉션 "myCollection"에 대해 다음 쿼리를 사용합니다.  
   
 ```sql
@@ -183,7 +184,7 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>예: XML 스키마 컬렉션의 내용 열거  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>예제: XML 스키마 컬렉션의 내용 열거  
  다음 문은 관계형 스키마 dbo 내에 있는 XML 스키마 컬렉션 "myCollection"의 내용을 열거합니다.  
   
 ```sql
@@ -192,7 +193,7 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  컬렉션 내의 개별 XML 스키마는 **XML_SCHEMA_NAMESPACE()** 에 대한 세 번째 인수로 대상 네임스페이스를 지정하여 **xml**데이터 형식의 인스턴스로 가져올 수 있습니다. 이는 다음 예에서 확인할 수 있습니다.  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>예: XML 스키마 컬렉션으로부터 지정된 스키마 출력  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>예제: XML 스키마 컬렉션으로부터 지정된 스키마 출력  
  다음 문은 관계형 스키마 dbo 내에 있는 XML 스키마 컬렉션 "myCollection"으로부터 _가짜_ 대상 네임스페이스가 https/\/www.microsoft.com/was-books인 XML 스키마를 출력합니다.  
   
 ```sql

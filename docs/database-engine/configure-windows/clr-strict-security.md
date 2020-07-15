@@ -1,6 +1,6 @@
 ---
 title: CLR 엄격한 보안 | Microsoft Docs
-description: SQL Server에서 CLR 엄격한 보안을 구성하는 방법
+description: SQL Server에서 CLR(공용 언어 런타임) 엄격한 보안을 구성하는 방법을 알아봅니다. SAFE, EXTERNAL ACCESS 및 UNSAFE 권한의 해석을 제어합니다.
 ms.custom: ''
 ms.date: 06/20/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 - assemblies [CLR integration], strick security
 - clr strict security option
 ms.assetid: ''
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 84c049f451572cb1119e695182a6c896f013e04b
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cd8f7f59c44187de4e639d12a9ab497a155f14f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087343"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85698012"
 ---
 # <a name="clr-strict-security"></a>CLR 엄격한 보안   
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 `SAFE`, `EXTERNAL ACCESS`, `UNSAFE` 권한의 해석을 제어합니다.   
 

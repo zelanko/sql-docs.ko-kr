@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 미러링 시스템 개체 참조 | Microsoft Docs
+description: 데이터베이스 미러링 시스템 개체인 시스템 카탈로그 뷰, 시스템 동적 관리 뷰 및 시스템 테이블 관련 정보를 확인합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,15 +10,15 @@ ms.technology: high-availability
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e61f8d9df3cb6dcaf545819d630c70bc18709d15
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c37c75f9824f85705f92d1fabb6519303a76fafb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041780"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754718"
 ---
 # <a name="database-mirroring-system-object-reference"></a>데이터베이스 미러링 시스템 개체 참조
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="system-catalog-views"></a>시스템 카탈로그 뷰
 

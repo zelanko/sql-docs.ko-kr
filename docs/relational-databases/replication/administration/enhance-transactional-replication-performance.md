@@ -1,5 +1,6 @@
 ---
 title: 트랜잭션 복제 성능 향상 | Microsoft 문서
+description: SQL Server에서 복제 성능을 개선할 수 있는 일반적인 성능 팁과 트랜잭션 복제를 위한 추가 기법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8ed18a3ea7ce4804146d448765d9f18e8b2a7f73
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e386c475975e94408ed4260f35bb0646c6878575
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288180"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807983"
 ---
 # <a name="enhance-transactional-replication-performance"></a>트랜잭션 복제 성능 향상
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -78,7 +79,7 @@ ms.locfileid: "76288180"
 결과: 
 - 더 작은 트랜잭션(500개 미만의 명령)의 워크로드가 있는 ‘로그 판독기 에이전트’의 경우 **ReadBatchSize** 값이 높으면 처리량이 향상될 수 있습니다. 그러나 큰 트랜잭션이 있는 워크로드의 경우 이 값을 변경해도 성능이 향상되지 않습니다. 
     - 동일한 서버에서 병렬로 실행되는 여러 배포 에이전트 및 여러 로그 판독기 에이전트가 있는 경우 **ReadBatchSize** 값이 높으면 배포 데이터베이스에서 경합이 발생합니다. 
-- ‘배포 에이전트’의 경우 
+- ‘배포 에이전트’의 경우
     - **CommitBatchSize**를 늘리면 처리량이 향상될 수 있습니다. 하지만 오류가 발생하는 경우에는 배포 에이전트가 많은 트랜잭션을 롤백하고 다시 시작하여 다시 적용해야 한다는 것을 고려해야 합니다. 
     - **SubscriptionStreams** 값을 늘리면 구독자에 대한 여러 연결이 변경 내용의 일괄 처리를 병렬로 적용하므로 배포 에이전트의 전체 처리량에 도움이 됩니다. 그러나 프로세서 및 기타 메타데이터 조건(예: 기본 키, 외래 키, 고유 제약 조건 및 인덱스)의 수에 따라 SubscriptionStreams 값이 높으면 실제로 부정적인 영향을 줄 수 있습니다. 또한 스트림이 실행 또는 커밋되지 않으면 배포 에이전트는 대신에 단일 스트림을 사용하여 실패한 일괄 처리를 다시 시도합니다.
 

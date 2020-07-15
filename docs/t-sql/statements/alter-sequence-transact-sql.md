@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 39a7bb9baed65d136b5c0f1c6bc64159473ca72d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d17c59e38b30ef8492d20348e06cbc9ac75c0c5e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626636"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735963"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   기존 시퀀스 개체의 인수를 수정합니다. **CACHE** 옵션을 사용하여 시퀀스를 만든 경우 시퀀스를 변경하면 캐시가 다시 생성됩니다.  
   
@@ -99,7 +99,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
 ### <a name="audit"></a>감사  
  **ALTER SEQUENCE**를 감사하려면 **SCHEMA_OBJECT_CHANGE_GROUP**을 모니터링합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  시퀀스를 만들고 **NEXT VALUE FOR** 함수를 사용하여 시퀀스 번호를 생성하는 방법에 대한 예는 [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)를 참조하세요.  
   
 ### <a name="a-altering-a-sequence"></a>A. 시퀀스 변경  

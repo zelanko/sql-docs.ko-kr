@@ -1,5 +1,6 @@
 ---
 title: FOR XML에서 PATH 모드 사용 | Microsoft 문서
+description: PATH 모드에서 중첩 FOR XML 쿼리 및 TYPE 지시어를 사용하여 XML 유형 인스턴스를 반환하는 덜 복잡한 쿼리를 작성하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a685a9ad-3d28-4596-aa72-119202df3976
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5073f921a7d80df9e59e93915dedaec11fddcf76
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ff6beee153a5f923178436710d1b38b1151d6c7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664969"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724545"
 ---
 # <a name="use-path-mode-with-for-xml"></a>FOR XML에서 PATH 모드 사용
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [FOR XML을 사용하는 XML 생성](../../relational-databases/xml/for-xml-sql-server.md)항목에 설명된 대로 PATH 모드를 사용하면 요소와 특성을 간단하게 혼합할 수 있고 추가 중첩을 간단하게 도입하여 복잡한 속성을 표시할 수 있습니다. FOR XML EXPLICIT 모드 쿼리를 사용하여 행 집합에서 해당 XML을 생성할 수 있지만 PATH 모드를 사용할 경우 복잡해지기 쉬운 EXPLICIT 모드 쿼리의 대안을 찾을 수 있습니다. **XML** 유형 인스턴스를 반환하는 중첩 FOR XML 쿼리 및 TYPE 지시어 작성 기능과 함께 PATH 모드를 사용하면 보다 간편하게 쿼리를 작성할 수 있습니다.  
   
  PATH 모드에서는 열 이름이나 열 별칭이 XPath 식으로 처리됩니다. 이러한 식은 값이 XML에 매핑되는 방법을 나타냅니다. 각 XPath 식은 특성, 요소와 스칼라 값 및 행 요소에 대해 생성되는 노드의 이름과 계층 등의 항목 유형을 제공하는 상대 XPath입니다.  

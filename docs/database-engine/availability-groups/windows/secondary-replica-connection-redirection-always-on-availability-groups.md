@@ -1,6 +1,6 @@
 ---
 title: 주 복제본에 대한 읽기/쓰기 연결 리디렉션
-description: 연결 문자열에 지정된 대상 서버와 관계없이 Always On 가용성 그룹의 주 복제본에 대한 읽기/쓰기 연결을 항상 리디렉션하는 방법에 대해 알아봅니다.
+description: 연결 문자열에 지정된 서버와 관계없이 Always On 가용성 그룹의 주 복제본에 대한 읽기/쓰기 연결을 리디렉션하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 01/09/2019
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cb7ac494a8a87b0ac5f2f6692763d526b7f26af6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 794d2f682c5a32ee348d229cfd2413687a57843e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77256666"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637819"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>보조-주 복제본 읽기/쓰기 연결 리디렉션(Always On 가용성 그룹)
 
-[!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto](../../../includes/applies-to-version/sqlserver2019.md)]
 
 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0은 Always On 가용성 그룹에 대해 *보조-주 복제본 읽기/쓰기 연결 리디렉션*을 도입했습니다. 읽기/쓰기 연결 리디렉션은 모든 운영 체제 플랫폼에서 사용할 수 있습니다. 이 기능은 연결 문자열에 지정된 대상 서버에 관계없이, 클라이언트 애플리케이션 연결이 주 복제본으로 전송되도록 합니다. 
 
@@ -35,7 +35,7 @@ ms.locfileid: "77256666"
 
 ## <a name="use-cases"></a>사용 사례
 
-[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] 이전에는 장애 조치(Failover) 후에 다시 연결되도록 하기 위해 AG 수신기 및 해당 클러스터 리소스가 사용자 트래픽을 주 복제본으로 리디렉션합니다. [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)]에서는 AG 수신기 기능을 계속 지원하고 수신기를 포함할 수 없는 시나리오를 위해 복제본 연결 리디렉션을 추가합니다. 다음은 그 예입니다.
+[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] 이전에는 장애 조치(Failover) 후에 다시 연결되도록 하기 위해 AG 수신기 및 해당 클러스터 리소스가 사용자 트래픽을 주 복제본으로 리디렉션합니다. [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)]에서는 AG 수신기 기능을 계속 지원하고 수신기를 포함할 수 없는 시나리오를 위해 복제본 연결 리디렉션을 추가합니다. 예를 들면 다음과 같습니다.
 
 * SQL Server 가용성 그룹과 통합되는 클러스터 기술은 수신기 유사 기능을 제공하지 않습니다. 
 * 클라우드 또는 다중 서브넷 부동 IP(Pacemaker 포함)의 다중 서브넷 구성(관련된 여러 구성 요소로 인해 구성이 복잡해지고 오류가 발생하기 쉬우며 문제 해결이 어려움)
@@ -137,7 +137,7 @@ CREATE AVAILABILITY GROUP MyAg
 GO  
 ```
    - `<domain>.<tld>`
-      - 전체 정규화된 도메인 이름의 도메인 및 최상위 도메인 `corporation.com`)을 입력합니다.
+      - 전체 정규화된 도메인 이름의 도메인 및 최상위 도메인 예들 들어 `corporation.com`입니다.
 
 
 ### <a name="connection-behaviors"></a>연결 동작

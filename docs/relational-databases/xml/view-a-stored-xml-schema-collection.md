@@ -1,5 +1,6 @@
 ---
 title: 저장된 XML 스키마 컬렉션 보기 | Microsoft 문서
+description: XQuery 함수 xml_schema_namespace()를 사용하여 저장된 XML 스키마 컬렉션을 보는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ef32368031876bc14619cd14aa215402c67618b6
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 76671186663e4d4173389d9aec19b0c0da2fbf88
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662921"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729802"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>저장된 XML 스키마 컬렉션 보기
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)을 사용하여 XML 스키마 컬렉션을 가져오면 스키마 구성 요소가 메타데이터에 저장됩니다. [xml_schema_namespace](../../t-sql/xml/xml-schema-namespace.md)내장 함수를 사용하여 XML 스키마 컬렉션을 다시 만들 수 있습니다. 이 함수는 **xml** 데이터 형식을 반환합니다.  
   
  예를 들어 다음 쿼리는`ProductDescriptionSchemaCollection`데이터베이스의 프로덕션 관계형 스키마에서 XML 스키마 컬렉션( [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] )을 검색합니다.  

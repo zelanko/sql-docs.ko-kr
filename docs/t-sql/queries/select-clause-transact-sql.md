@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 25eefb7a795034893bdf520be7b8645811443b13
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a6c854560982ceddf7d6237d77ba81562e97fc9a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635525"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705937"
 ---
 # <a name="select-clause-transact-sql"></a>SELECT 절(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   쿼리에서 열을 반환하도록 지정합니다.  
   
@@ -75,7 +75,7 @@ SELECT [ ALL | DISTINCT ]
   
  이전 버전과의 호환성을 위해 SELECT 문에서 괄호 없이 TOP *expression*을 사용할 수 있지만 권장되지는 않습니다. 자세한 내용은 [TOP&#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)을 참조하세요.  
   
-\< select_list >결과 집합에 대해 선택할 열입니다. 선택 목록은 쉼표로 구분된 일련의 식입니다. 선택 목록에 지정할 수 있는 식의 최대 수는 4096개입니다.  
+\< select_list > 결과 집합에 대해 선택할 열입니다. 선택 목록은 쉼표로 구분된 일련의 식입니다. 선택 목록에 지정할 수 있는 식의 최대 수는 4096개입니다.  
   
  \*  
  FROM 절에서 모든 테이블과 뷰에 있는 모든 열이 반환되도록 지정합니다. 열은 FROM 절에서 지정된 대로 테이블 또는 뷰에 존재하는 순서대로 테이블이나 뷰에서 반환됩니다.  

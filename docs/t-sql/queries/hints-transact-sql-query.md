@@ -55,15 +55,15 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 260de27d8a092ceabbf066d1546f471b90aa2c33
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4718bcb629f1aabbc458ac505eab3ae92bab52cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731300"
 ---
 # <a name="hints-transact-sql---query"></a>힌트(Transact-SQL) - 쿼리
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 쿼리 힌트는 해당 힌트가 전체 쿼리에 사용해야 하는 힌트임을 나타냅니다. 문의 모든 연산자에 영향을 줍니다. 기본 쿼리에 UNION이 포함된 경우 UNION 연산과 연관된 마지막 쿼리에만 OPTION 절을 포함할 수 있습니다. 쿼리 힌트는 [OPTION 절](../../t-sql/queries/option-clause-transact-sql.md)의 일부로 지정됩니다. 하나 이상의 쿼리 힌트로 인해 쿼리 최적화 프로그램에서 유효한 계획을 생성할 수 없는 경우 오류 8622가 발생합니다.  
   
@@ -238,7 +238,7 @@ OPTIMIZE FOR 쿼리 힌트와 함께 사용하도록 _\@variable\_name_을 할�
 OPTIMIZE FOR는 최적화 프로그램의 기본 매개 변수 검색 동작을 무효로 만들 수 있습니다. 계획 지침을 만들 경우에도 OPTIMIZE FOR를 사용합니다. 자세한 내용은 [저장 프로시저 다시 컴파일](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md)을 참조하십시오.  
   
 OPTIMIZE FOR UNKNOWN  
-쿼리가 컴파일 및 최적화될 때 쿼리 최적화 프로그램이 모든 지역 변수에 대해 초기 값 대신 통계 데이터를 사용하도록 지시합니다. 이 최적화에는 강제 매개 변수화를 통해 만든 매개 변수가 포함됩니다.  
+쿼리가 컴파일되고 최적화될 때 런타임 매개 변수 값을 사용하는 대신 모든 열 값에서의 조건자 평균 선택도를 사용하도록 쿼리 최적화 프로그램에 지시합니다.  
   
 같은 쿼리 힌트에서 OPTIMIZE FOR @variable_name = _literal\_constant_ 및 OPTIMIZE FOR UNKNOWN을 사용하면 쿼리 최적화 프로그램이 특정 값에는 지정된 _literal\_constant_를 사용합니다. 쿼리 최적화 프로그램은 나머지 변수 값에 UNKNOWN을 사용합니다. 해당 값은 쿼리 최적화 중에만 사용되고 쿼리 실행 중에는 사용되지 않습니다.  
 
@@ -389,7 +389,7 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
 
 몇 가지 시나리오에서는 오류 8072가 발생합니다. 한 가지 시나리오는 일치하는 쿼리 힌트 없이 OPTION 절에 TABLE HINT를 사용하여 INDEX, FORCESCAN 또는 FORCESEEK 이외의 테이블 힌트를 지정하는 경우입니다. 두 번째 시나리오는 그 반대의 경우입니다. 이 오류는 OPTION 절로 인해 쿼리의 의미 체계가 변경되고 쿼리가 실패할 수 있음을 나타냅니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-merge-join"></a>A. MERGE JOIN 사용  
  다음 예에서는 MERGE JOIN이 쿼리에서 조인 작업을 실행하도록 지정합니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다.  
@@ -404,17 +404,17 @@ GO
 ```  
   
 ### <a name="b-using-optimize-for"></a>B. OPTIMIZE FOR 사용  
- 다음 예에서는 쿼리를 최적화할 때 쿼리 최적화 프로그램이 지역 변수 `'Seattle'`에 `@city_name` 값을 사용하고 통계 데이터를 사용하여 지역 변수 `@postal_code`의 값을 결정하도록 지시합니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다.  
+ 다음 예에서는 쿼리를 최적화할 때 `@city_name`의 `'Seattle'` 값을 사용하고 `@postal_code`의 모든 열 값에서 조건자의 평균 선택도를 사용하도록 쿼리 최적화 프로그램에 지시합니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다.  
   
 ```sql  
-DECLARE @city_name nvarchar(30);  
-DECLARE @postal_code nvarchar(15);  
-SET @city_name = 'Ascheim';  
-SET @postal_code = 86171;  
+CREATE PROCEDURE dbo.RetrievePersonAddress
+@city_name nvarchar(30),  
+ @postal_code nvarchar(15)
+AS
 SELECT * FROM Person.Address  
 WHERE City = @city_name AND PostalCode = @postal_code  
 OPTION ( OPTIMIZE FOR (@city_name = 'Seattle', @postal_code UNKNOWN) );  
-GO  
+GO
 ```  
   
 ### <a name="c-using-maxrecursion"></a>C. MAXRECURSION 사용  

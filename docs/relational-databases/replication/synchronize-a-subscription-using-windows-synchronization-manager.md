@@ -15,18 +15,18 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 43e3c343bc3947e6cfd0be4886e9d369b55758b8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 591b33a5ad44a242fde2377c86002ea1f5b5931a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287030"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719514"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Windows 동기화 관리자를 사용하여 구독 동기화
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 가 동기화 관리자와 같은 컴퓨터에서 실행 중인 경우에는 구독을 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시와 동기화하는 데만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 동기화 관리자를 사용할 수 있습니다. 동기화 관리자를 사용하면 오프라인 파일과 웹 페이지를 동기화할 수도 있습니다. 동기화 관리자를 사용하려면 다음을 수행하십시오.  
   
-1.  **구독 속성 - \<Subscriber>:\<SubscriptionDatabase>** 대화 상자에서 Windows 동기화 관리자로 전체 구독의 동기화를 사용할 수 있습니다. 이 대화 상자에 액세스하는 방법은 [끌어오기 구독 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)을 참조하세요.  
+1.  **구독 속성 - \<Subscriber>: \<SubscriptionDatabase>** 대화 상자에서 Windows 동기화 관리자를 통한 끌어오기 구독 동기화를 사용하도록 설정합니다. 이 대화 상자에 액세스하는 방법은 [끌어오기 구독 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)을 참조하세요.  
   
 2.  Windows의 **시작** 메뉴를 통해 동기화 관리자에 액세스합니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "76287030"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Windows 동기화 관리자를 통한 끌어오기 구독 동기화가 가능하도록 설정하려면  
   
-1.  **구독 속성-\<Subscriber>: \<SubscriptionDatabase>** 대화 상자의 **일반** 페이지에서 **Windows 동기화 관리자 사용** 옵션에 **사용** 값을 선택합니다.  
+1.  **구독 속성 - \<Subscriber>: \<SubscriptionDatabase>** 대화 상자의 **일반** 페이지에서 **Windows 동기화 관리자 사용** 옵션에 **사용** 값을 선택합니다.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

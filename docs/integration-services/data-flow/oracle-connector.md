@@ -9,25 +9,26 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ce461246f0afef31ab4b60b772f92aeeb479a4cb
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 11e29a27597b7710ab38497a0b862aed9b65b404
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606892"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868447"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector for Oracle
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-Microsoft Connector for Oracle를 사용하면 SSIS 패키지에서 Oracle 데이터 원본에서 데이터를 내보내거나 이 원본으로 데이터를 로드할 수 있습니다.
+Microsoft Connector for Oracle을 사용하면 SSIS 패키지의 Oracle 데이터 원본에서 데이터를 내보내거나 이 원본으로 데이터를 로드할 수 있습니다.
 
 ## <a name="version-support"></a>버전 지원
 
 다음 Microsoft SQL Server 제품은 Microsoft Connector for Oracle에서 지원됩니다.
 
 - SQL Server 2019 CU1 이상
-- SSDT(SQL Server Data Tools) 버전 15.9.3 이후
+- Visual Studio 2017용 SQL Server Data Tools(SSDT) 15.9.3 이상
+- Visual Studio 2019용 Microsoft SQL Server Data Tools(SSDT)
 
 데이터 원본의 다음 Oracle 데이터베이스 버전이 지원됩니다.
 

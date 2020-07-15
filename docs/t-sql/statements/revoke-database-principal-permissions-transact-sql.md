@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0353ff7b9e0778a7ef59107f5ba2876e72bbdd69
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d92713b06958dbfd8e2aef995779a25ed76d9d09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243338"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735403"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE 데이터베이스 보안 주체 사용 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   데이터베이스 사용자, 데이터베이스 역할 또는 애플리케이션 역할에 대해 부여되거나 거부된 사용 권한을 취소합니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "75243338"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]    
     ON   
@@ -86,7 +86,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  WITH GRANT OPTION을 부여 받은 사용 권한이 연계되어 취소되면 해당 사용 권한의 GRANT 및 DENY가 모두 취소됩니다.  
   
- \<database_principal>로서 이 쿼리를 실행하는 보안 주체가 사용 권한을 부여하는 권한을 취소할 수 있는 다른 보안 주체를 지정합니다.  
+ AS \<database_principal> 이 쿼리를 실행하는 보안 주체가 사용 권한을 취소하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다.  
   
  *Database_user*  
  데이터베이스 사용자를 지정합니다.  
@@ -158,7 +158,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
  **db_owner** 고정 데이터베이스 역할의 멤버와 같이 데이터베이스에 대한 CONTROL 권한이 부여된 사용자는 데이터베이스의 모든 보안 개체에 대한 사용 권한을 부여할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-revoking-control-permission-on-a-user-from-another-user"></a>A. 다른 사용자로부터 사용자에 대한 CONTROL 권한 취소  
  다음 예에서는 사용자 `CONTROL`로부터 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 사용자 `Wanida`에 대한 `RolandX` 권한을 취소합니다.  

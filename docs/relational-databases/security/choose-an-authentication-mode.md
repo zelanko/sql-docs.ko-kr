@@ -1,5 +1,6 @@
 ---
 title: 인증 모드 선택 | Microsoft 문서
+description: 설치 시 SQL Server 데이터베이스 엔진의 Windows 인증 모드와 혼합 모드 인증 중에서 선택합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,16 +26,16 @@ helpviewer_keywords:
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: caee3b1fab893e456a5a781641b6cf70222b16ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ffe53e3f7819a2ca9bdd8adc9cb3db66aad57371
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75721358"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627592"
 ---
 # <a name="choose-an-authentication-mode"></a>인증 모드 선택
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  설치 중에 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인증 모드를 선택해야 합니다. Windows 인증 모드 및 혼합 모드의 2가지 유형이 있습니다. Windows 인증 모드는 Windows 인증을 활성화하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증은 비활성화합니다. 혼합 모드는 Windows 인증과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 모두 활성화합니다. Windows 인증은 항상 사용할 수 있으며 비활성화할 수 없습니다.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  설치 중에 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인증 모드를 선택해야 합니다. 가능한 모드로는 Windows 인증 모드 및 혼합 모드의 두 가지가 있습니다. Windows 인증 모드는 Windows 인증을 활성화하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증은 비활성화합니다. 혼합 모드는 Windows 인증과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 모두 활성화합니다. Windows 인증은 항상 사용할 수 있으며 비활성화할 수 없습니다.  
   
 ## <a name="configuring-the-authentication-mode"></a>인증 모드 구성  
  설치 중에 혼합 모드 인증을 선택하면 sa라는 기본 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자 계정에 대해 강력한 암호를 입력하고 확인해야 합니다. sa 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 연결합니다.  

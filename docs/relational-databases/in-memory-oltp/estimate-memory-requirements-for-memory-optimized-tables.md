@@ -1,5 +1,6 @@
 ---
 title: 메모리 요구 사항 - 메모리 최적화 테이블
+description: 모든 행과 인덱스에 충분한 메모리가 필요한 SQL Server 내 메모리 최적화 테이블의 메모리 사용량 및 관리 시나리오에 대해 알아봅니다.
 ms.custom: seo-dt-2019
 ms.date: 12/02/2016
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb553ecf259e6733da143428cd6474debd8215f3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 530d1eacd6c4bb480c8a8932563077b764b027fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412693"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723232"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 필요한 메모리 예측
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 메모리 액세스에 최적화된 테이블을 사용하려면 모든 행과 인덱스를 메모리 내에 유지하는 데 충분한 메모리가 있어야 합니다. 메모리는 한정된 리소스이므로 시스템에서 메모리 사용량을 파악하고 관리해야 합니다. 이 섹션의 항목에서는 일반적인 메모리 사용 및 관리 시나리오를 다룹니다.
 

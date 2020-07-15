@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 미러링 제거(SQL Server) | Microsoft Docs
+description: 데이터베이스 소유자가 SQL Server에서 아무 파트너에 대해 언제든 수행할 수 있는 데이터베이스 미러링 세션 중지가 어떤 영향을 미치는지 알아봅니다.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 40c72091-8f03-4037-8b55-5e95309fe145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ae494ae5b12cf99e836869f65c055803dd9666e6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d3da88574635b01afd7f309bb09b8850e072a241
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025263"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735171"
 ---
 # <a name="removing-database-mirroring-sql-server"></a>데이터베이스 미러링 제거(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   데이터베이스 소유자는 언제든지 파트너에서 데이터베이스 미러링 세션을 수동으로 중지할 수 있습니다.  
   
 ## <a name="impact-of-removing-mirroring"></a>미러링 제거의 영향  

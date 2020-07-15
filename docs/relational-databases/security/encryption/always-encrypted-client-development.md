@@ -1,5 +1,6 @@
 ---
 title: Always Encrypted를 사용하여 애플리케이션 개발 | Microsoft Docs
+description: 중요한 데이터가 SQL Server 또는 Azure SQL Database에 공개되지 않도록 하는 Always Encrypted 클라이언트 쪽 암호화 기술에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 10/30/2019
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0dbf983f044118a5d59812f1183d0733b20cb449
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6f348cf050941a06b2e0be6c37993a7f7458cb6a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74492014"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627569"
 ---
 # <a name="develop-applications-using-always-encrypted"></a>Always Encrypted를 사용하여 애플리케이션 개발
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 [상시 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)는 중요한 데이터 및 관련 암호화 키가 SQL Server 또는 Azure SQL 데이터베이스에 한 번도 공개된 적이 없는 클라이언트 쪽 암호화 기술입니다. 상시 암호화를 사용하여 클라이언트 드라이버에서 데이터베이스 엔진으로 데이터를 전달하기 전에 중요한 데이터를 투명하게 암호화하고 암호화된 데이터베이스 열에서 검색된 데이터를 투명하게 암호 해독합니다.
 

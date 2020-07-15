@@ -1,5 +1,6 @@
 ---
 title: SQL 메모리 내 OLTP용 하드웨어 | Microsoft 문서
+description: SQL Server의 메모리 내 OLTP 성능에 대한 하드웨어 고려 사항을 알아봅니다. 메모리 내 OLTP는 메모리 및 디스크를 디스크 기반 테이블과 다른 방식으로 사용합니다.
 ms.custom: ''
 ms.date: 03/28/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 21293308f2b21d0a41cca901a084d65ca0250573
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e5486dddb1b71d2a32055cb4175ed300ce19320f
+ms.sourcegitcommit: 7a47aaffbd82bab2707cd69f44571a9037d2273b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951133"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85377624"
 ---
 # <a name="hardware-considerations-for-in-memory-oltp-in-sql-server"></a>SQL Server의 메모리 내 OLTP에 대한 하드웨어 고려 사항
 

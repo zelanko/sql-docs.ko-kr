@@ -1,6 +1,6 @@
 ---
 title: 미러된 데이터베이스에 대한 신뢰할 수 있는 속성 사용
-description: 새로 미러된 데이터베이스에서 신뢰할 수 있는 속성을 사용하도록 설정하는 데 필요한 단계를 설명합니다.
+description: SQL Server에서 Transact-SQL을 사용하여 새로 미러된 데이터베이스에서 TRUSTWORTHY 데이터베이스 속성을 사용하도록 설정하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6993b076-78ef-453e-b0ea-e341b8e5ee3e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 20ee7631b1fd4ca8613191ac67a0e13ee1cb028c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3c187be44a25edd24c3e9f8f7e91ae52a55ff925
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735185"
 ---
 # <a name="set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql"></a>Trustworthy 속성을 사용하도록 미러 데이터베이스 설정(Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   데이터베이스를 백업하면 TRUSTWORTHY 데이터베이스 속성이 OFF로 설정됩니다. 따라서 새 미러 데이터베이스의 TRUSTWORTHY는 항상 OFF입니다. 장애 조치(Failover) 후 데이터베이스를 신뢰할 수 있어야 하는 경우에는 미러링이 시작된 다음 추가 설정 단계가 필요합니다.  
   
 > [!NOTE]  

@@ -1,5 +1,6 @@
 ---
 title: 메모리 내 OLTP에 지원되는 데이터 형식 | Microsoft Docs
+description: 최적화 테이블 및 고유하게 컴파일된 T-SQL 모듈의 메모리 내 OLTP 기능에 지원되지 않는 데이터 형식에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/19/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: daa05543715f81511aa0faa8467fc78819999404
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 324d9c27608bd5ee3e93a6987cec7b81407f048a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075896"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650926"
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>메모리 내 OLTP에 지원되는 데이터 형식
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   이 문서에서는 다음 항목의 메모리 내 OLTP 기능에 대해 지원되지 않는 데이터 형식을 소개합니다.  
   

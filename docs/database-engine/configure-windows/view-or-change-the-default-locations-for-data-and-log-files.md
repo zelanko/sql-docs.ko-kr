@@ -1,5 +1,6 @@
 ---
 title: 데이터 및 로그 파일의 기본 위치 보기 또는 변경 | Microsoft Docs
+description: SQL Server 데이터 파일 및 로그 파일의 기본 위치를 보거나 변경하는 방법을 알아봅니다. ACL(액세스 제어 목록)을 사용하여 파일을 보호하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - log files [SQL Server], changing default location
 - data files [SQL Server], changing default location
 ms.assetid: 70a57fda-fcfe-490f-9cf6-5df620e32b2a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 933d15e789e0d069822f657ff09cff0e2b4aaf8c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9a0c720684f0eefa301e9a5387ffda54e349f85d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67945752"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85680787"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files"></a>데이터 및 로그 파일의 기본 위치 보기 또는 변경
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
  데이터 파일 및 로그 파일을 보호하는 최선의 방법은 ACL(액세스 제어 목록)로 보호하는 것입니다. 파일을 만든 위치의 루트 디렉터리에 ACL을 설정합니다.  
  

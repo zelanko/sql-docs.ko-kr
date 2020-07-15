@@ -1,5 +1,6 @@
 ---
 title: ODBC 데이터 원본 관리자 열기 | Microsoft Docs
+description: 다양한 운영 체제에서 ODBC 데이터 원본 관리자를 여는 방법을 알아봅니다. 이 Windows 구성 요소를 사용하여 ODBC 데이터 원본을 만들고 관리할 수 있습니다.
 ms.custom: ''
 ms.date: 11/07/2016
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - ODBC Data Source Administrator
 - opening ODBC Data Source Administrator
 ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: ebb0be56f5d4401ba296733d6430bb82d602d3da
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 86a7cc5f6a52b0492ceb45a65a4a68c6a0109c3d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67997933"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696727"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>ODBC 데이터 원본 관리자 열기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 항목에서는 ODBC 데이터 원본 관리자를 여는 방법에 대해 설명합니다. ODBC 데이터 원본 관리자는 Windows 구성 요소입니다. ODBC 데이터 원본 관리자를 사용하여 ODBC 데이터 원본을 만들고 관리할 수 있습니다.  
   

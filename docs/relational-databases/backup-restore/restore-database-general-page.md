@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 303b971af1a0db351ee995bfa6c942fad13fa4e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62bfa9409fc2ad7cc999165ab8b02ae6e1c69feb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180780"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737739"
 ---
 # <a name="restore-database-general-page"></a>데이터베이스 복원(일반 페이지)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **일반** 페이지를 사용하여 데이터베이스 복원 작업의 대상 및 원본 데이터베이스를 지정할 수 있습니다.  
     

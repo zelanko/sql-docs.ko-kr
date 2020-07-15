@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 엔진 업그레이드 | Microsoft Docs
+description: 이 문서에서는 SQL Server 데이터베이스 엔진을 SQL Server의 이전 릴리스에서 SQL Server 2019로 업그레이드하는 데 도움이 되는 리소스에 대한 링크를 제공합니다.
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7dcf58da00887f396568367982da97b9c75e32ad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 492f663e09f8883d1994d1ee5af2c0ed9acbb111
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73531555"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748573"
 ---
 # <a name="upgrade-database-engine"></a>데이터베이스 엔진 업그레이드
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
   이 섹션의 문서에서는 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 릴리스에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진을 업그레이드하는 방법을 설명합니다.  
   

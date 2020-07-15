@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 스냅샷(SQL Server) | Microsoft 문서
+description: 데이터베이스 스냅샷을 사용하여 SQL Server에서 데이터베이스의 읽기 전용 정적 보기를 만드는 방법을 알아봅니다. 관련 혜택과 사전 요구 사항 및 제한 사항을 확인하세요.
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -18,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdf81fde342a3c7f0e250d467e7b486d753a8588
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68300433"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630816"
 ---
 # <a name="database-snapshots-sql-server"></a>데이터베이스 스냅샷(SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 데이터베이스 스냅샷은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스( *원본 데이터베이스*)의 읽기 전용 정적 뷰입니다. 데이터베이스 스냅샷은 스냅샷을 만든 시점의 원본 데이터베이스와 트랜잭션이 일치합니다. 데이터베이스 스냅샷은 항상 원본 데이터베이스와 동일한 서버 인스턴스에 있습니다. 데이터베이스 스냅샷은 스냅샷을 만들 때와 동일한 상태의 데이터 읽기 전용 뷰를 제공하는 반면, 스냅샷 파일의 크기는 원본 데이터베이스가 변경됨에 따라 증가합니다. 자세한 내용은 아래의 [기능 개요](#FeatureOverview) 섹션을 참조하세요.
   

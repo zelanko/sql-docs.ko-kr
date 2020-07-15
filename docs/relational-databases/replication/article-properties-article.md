@@ -15,15 +15,15 @@ ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 22410fd71e91084c99823ceba020ed43f54ed75e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 46fbde4be37677cc873089b00b53dd0be706a333
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288276"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722197"
 ---
 # <a name="article-properties---ltarticlegt"></a>아티클 속성 - &lt;Article&gt;
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **아티클 속성** 대화 상자는 새 게시 마법사 및 **게시 속성** 대화 상자에서 사용할 수 있습니다. 이 대화 상자를 사용하여 모든 아티클 유형에 대한 속성을 보고 설정할 수 있습니다. 게시가 생성된 경우에만 설정할 수 있거나 게시에 활성 구독이 없는 경우에만 설정할 수 있는 속성이 있습니다. 설정할 수 없는 속성은 읽기 전용으로 표시됩니다.  
   
 > [!NOTE]  
@@ -47,7 +47,7 @@ ms.locfileid: "76288276"
  구독자에서 개체 생성 시 사용자 정의 데이터 형식에서 기본 데이터 형식으로 변환할지 여부를 결정합니다. 사용자 정의 데이터 형식에는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입된 사용자 정의 CLR 유형이 포함됩니다. 이러한 데이터 형식을 이전 버전의 **로 복제하려면 값을** True [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 지정합니다. 이렇게 하면 구독자에서 해당 데이터 형식을 올바르게 처리할 수 있습니다.  
   
  **구독자에서 스키마 만들기**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서는 CREATE SCHEMA 문을 사용하여 정의되는 스키마가 도입되었습니다. 스키마는 개체의 소유자로 \<Database>.\<Schema>.\<Object>와 같이 여러 부분으로 구성된 이름에 사용됩니다. DBO 이외의 스키마가 소유하고 있는 데이터베이스에 개체가 있는 경우 복제 시 구독자에서 이러한 스키마를 만들 수 있으므로 게시된 개체를 만들 수 있습니다.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서는 CREATE SCHEMA 문을 사용하여 정의되는 스키마가 도입되었습니다. 스키마는 개체의 소유자로 \<Database>.\<Schema>.\<Object> 같이 여러 부분으로 구성된 이름에 사용됩니다. DBO 이외의 스키마가 소유하고 있는 데이터베이스에 개체가 있는 경우 복제 시 구독자에서 이러한 스키마를 만들 수 있으므로 게시된 개체를 만들 수 있습니다.  
   
  데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]로 복제하려면 다음을 수행하십시오.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "76288276"
  이 옵션은 저장 프로시저에만 적용됩니다. 저장 프로시저의 정의(CREATE PROCEDURE 문)를 복제할 것인지 아니면 저장 프로시저의 실행을 복제할 것인지를 결정합니다. 저장 프로시저의 실행을 복제하면 구독이 초기화될 때 프로시저 정의가 구독자로 복제됩니다. 게시자에서 이 프로시저를 실행하면 이러한 복제의 결과로 구독자에서 해당 프로시저가 실행됩니다. 이렇게 하면 대규모 일괄 처리 작업이 수행되는 경우 성능을 크게 향상시킬 수 있습니다. 자세한 내용은 [Publishing Stored Procedure Execution in Transactional Replication](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)를 참조하세요.  
   
 ## <a name="options-for-merge-publications"></a>병합 게시에 대한 옵션  
- 병합 게시의 **아티클 속성** 대화 상자에는 **속성** 및 **해결 프로그램**탭이 있습니다.  
+ 병합 게시의 **문서 속성** 대화 상자에는 **속성**과 **해결 프로그램**의 두 가지 탭이 있습니다.  
   
 ### <a name="properties-tab"></a>속성 탭  
  **동기화 방향**  
@@ -137,7 +137,7 @@ ms.locfileid: "76288276"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 제공하는 모든 COM 기반 해결 프로그램이 서명됩니다. 동기화할 때 해결 프로그램이 유효한지 확인하려면 이 옵션을 선택합니다.  
   
 ## <a name="options-for-oracle-publications"></a>Oracle 게시에 대한 옵션  
- Oracle 게시의 **아티클 속성** 대화 상자에는 **속성** 및 **데이터 매핑**탭이 있습니다. Oracle 게시는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시에서 지원하는 속성 중 일부만 지원합니다. 자세한 내용은 [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)을 참조하세요.  
+ Oracle 게시의 **문서 속성** 대화 상자에는 **속성**과 **데이터 매핑**의 두 가지 탭이 있습니다. Oracle 게시는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시에서 지원하는 속성 중 일부만 지원합니다. 자세한 내용은 [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)을 참조하세요.  
   
 ### <a name="properties-tab"></a>속성 탭  
  **INSERT, UPDATE 및 DELETE 저장 프로시저 복사**  

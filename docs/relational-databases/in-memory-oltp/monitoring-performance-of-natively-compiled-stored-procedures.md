@@ -1,5 +1,6 @@
 ---
 title: 고유하게 컴파일된 저장 프로시저의 성능 모니터링
+description: 고유하게 컴파일된 저장 프로시저 및 고유하게 컴파일된 다른 T-SQL 모듈의 성능을 모니터링하는 방법을 알아봅니다.
 ms.custom: seo-dt-2019
 ms.date: 04/03/2018
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b1970c5953373c500f85e82281a69be1d46f1be0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 38de30346d867d67770ce9b988d986f5f886c8fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78180068"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722457"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저의 성능 모니터링
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   이 문서에서는 고유하게 컴파일된 저장 프로시저 및 고유하게 컴파일된 다른 T-SQL 모듈의 성능을 모니터링하는 방법에 대해 설명합니다.  
   
 ## <a name="using-extended-events"></a>확장 이벤트 사용  

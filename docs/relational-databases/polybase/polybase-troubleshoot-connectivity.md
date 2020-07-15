@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 23aaaef5f85b814bda8f576fc6a0cfe671fea8e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e732d55daa55a8a3abc171ead7b7b1e87e92992
+ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215858"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84203560"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 연결 문제 해결
 
@@ -31,7 +31,7 @@ PolyBase에 기본 제공된 대화형 진단을 사용하면 Kerberos 보안 Ha
 > 이 도구는 HDFS Kerberos 설정 문제, 즉 사용자 이름/암호의 잘못된 구성과 클러스터 Kerberos 설정의 잘못된 구성 확인에 집중할 수 있도록 SQL Server 이외의 문제를 제외하는 데 도움이 됩니다.      
 > 이 도구는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와는 독립적입니다. Jupyter Notebook으로 제공되며, Azure Data Studio가 필요합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 1. PolyBase가 설치된 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM CU6/[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU3/[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 이상
 1. Kerberos(Active Directory 또는 MIT)로 보호된 Hadoop 클러스터(Cloudera 또는 Hortonworks)
@@ -89,6 +89,8 @@ PolyBase에는 Hadoop 클러스터의 속성이 포함된 다음과 같은 구�
     <value>KERBEROS</value>
 </property>
 ```
+> [!NOTE]
+> `polybase.kerberos.realm` 속성 값은 모두 대문자여야 합니다.
 
 나중에 푸시다운 작업이 필요한 경우 다른 XML도 업데이트해야 하지만 이 파일만 구성해도 HDFS 파일 시스템에 액세스할 수는 있습니다.
 
@@ -103,10 +105,10 @@ PolyBase에는 Hadoop 클러스터의 속성이 포함된 다음과 같은 구�
 
 | 인수 | Description|
 | --- | --- |
-| Name Node Address  | 이름 노드의 IP 또는 FQDN입니다. CREATE EXTERNAL DATA SOURCE T-SQL의 "LOCATION" 인수를 가리킵니다.|
-| Name Node Port  | 이름 노드의 포트입니다. CREATE EXTERNAL DATA SOURCE T-SQL의 "LOCATION" 인수를 가리킵니다. 예: 8020 |
-| Service Principal  | KDC의 관리 서비스 사용자입니다. `CREATE DATABASE SCOPED CREDENTIAL` T-SQL에서 "IDENTITY" 인수와 일치합니다.|
-| Service Password  | 암호를 콘솔에 입력하는 대신 파일에 저장하고 여기에 파일 경로를 전달합니다. 파일의 내용이 `CREATE DATABASE SCOPED CREDENTIAL` T-SQL에서 "SECRET" 인수로 사용하는 내용과 일치해야 합니다. |
+| Name Node Address | 이름 노드의 IP 또는 FQDN입니다. CREATE EXTERNAL DATA SOURCE T-SQL의 "LOCATION" 인수를 가리킵니다.|
+| Name Node Port | 이름 노드의 포트입니다. CREATE EXTERNAL DATA SOURCE T-SQL의 "LOCATION" 인수를 가리킵니다. 예: 8020 |
+| Service Principal | KDC의 관리 서비스 사용자입니다. `CREATE DATABASE SCOPED CREDENTIAL` T-SQL에서 "IDENTITY" 인수와 일치합니다.|
+| Service Password | 암호를 콘솔에 입력하는 대신 파일에 저장하고 여기에 파일 경로를 전달합니다. 파일의 내용이 `CREATE DATABASE SCOPED CREDENTIAL` T-SQL에서 "SECRET" 인수로 사용하는 내용과 일치해야 합니다. |
 | *원격 HDFS 파일 경로(선택 사항)* | 액세스할 기존 파일의 경로입니다. 지정하지 않으면 루트 “/”가 사용됩니다. |
 
 ## <a name="example"></a>예제
@@ -233,7 +235,7 @@ Kerberos를 액세스하는 문제가 여전히 발생하는 경우 아래 단�
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외부에서 Kerberos HDFS 데이터에 액세스할 수 있는지 확인합니다. 다음 작업 중 하나를 수행할 수 있습니다. 
 
     - 고유한 Java 프로그램을 작성하거나
-    - PolyBase 설치 폴더에서 `HdfsBridge` 클래스를 사용하세요. 다음은 그 예입니다.
+    - PolyBase 설치 폴더에서 `HdfsBridge` 클래스를 사용하세요. 예를 들면 다음과 같습니다.
 
       ```java
       -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020 admin_user C:\temp\kerberos_pass.txt

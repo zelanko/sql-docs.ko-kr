@@ -1,4 +1,4 @@
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 가용성 그룹을 만들려면 먼저 다음을 수행해야 합니다.
 
@@ -77,7 +77,7 @@ ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-이 XE 세션에 대한 자세한 내용은 [AlwaysOn 확장 이벤트](https://msdn.microsoft.com/library/dn135324.aspx)를 참조하세요.
+이 XE 세션에 대한 자세한 내용은 [Always On 확장 이벤트](../database-engine/availability-groups/windows/always-on-extended-events.md)를 참조하세요.
 
 ## <a name="create-a-certificate"></a>인증서 만들기
 

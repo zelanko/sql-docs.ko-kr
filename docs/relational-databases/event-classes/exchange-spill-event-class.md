@@ -12,15 +12,15 @@ ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 12c4552ac8a78c5347f700144afa316d64774602
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 234c70cb0724bd313f7e98b92f8d043ff1e2bf5f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089364"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642326"
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Exchange Spill** 이벤트 클래스는 병렬 쿼리 계획의 통신 버퍼가 **tempdb** 데이터베이스에 임시적으로 기록되었음을 나타냅니다. 이는 매우 드물게 발생하며 쿼리 계획에 다중 범위 검색이 있는 경우에만 발생합니다.  
   
  일반적으로 이러한 다중 범위 검색은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리에 BETWEEN 연산자가 많이 사용되었을 때 발생하며 각 BETWEEN 연산자는 테이블 또는 인덱스에서 행 범위를 선택합니다. 또는 (T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120)과 같은 식을 사용하여 다중 범위를 가져올 수도 있습니다. 또한 T.a에 ORDER BY 절이 있거나 계획 내의 반복자가 정렬된 튜플을 소비해야 하는 경우 쿼리 계획에서 이러한 범위가 순서대로 검색되어야 합니다.  
@@ -50,28 +50,28 @@ ms.locfileid: "68089364"
   
 |데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 애플리케이션의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|10|yes|  
-|**ClientProcessID**|**int**|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|yes|  
-|**DatabaseID**|**int**|USE *database* 문에서 지정한 데이터베이스 ID이거나, 지정한 인스턴스에 대해 USE *database* 문을 실행하지 않은 경우 기본 데이터베이스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|yes|  
-|**DatabaseName**|**nvarchar**|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|yes|  
+|**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 애플리케이션의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|10|예|  
+|**ClientProcessID**|**int**|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
+|**DatabaseID**|**int**|USE *database* 문에서 지정한 데이터베이스 ID이거나, 지정한 인스턴스에 대해 USE *database* 문을 실행하지 않은 경우 기본 데이터베이스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
+|**DatabaseName**|**nvarchar**|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|예|  
 |**EventClass**|**int**|이벤트 유형 = 127|27|예|  
 |**EventSequence**|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|예|  
-|**EventSubClass**|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 1=Spill 시작<br /><br /> 2=Spill 종료|21|yes|  
-|**GroupID**|**int**|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|yes|  
-|**HostName**|**nvarchar**|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|yes|  
-|**IsSystem**|**int**|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다. 1 = 시스템, 0 = 사용자|60|yes|  
-|**LoginName**|**nvarchar**|사용자 로그인 이름(*\<DOMAIN>\\<username\>* 형식의 Windows 로그인 자격 증명 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 로그인)입니다.|11|yes|  
-|**LoginSid**|**image**|로그인한 사용자의 SID(보안 ID)입니다. 이 정보는 **master** 데이터베이스의 **syslogins** 테이블에 있습니다. 각 SID는 서버의 각 로그인마다 고유합니다.|41|yes|  
-|**NTDomainName**|**nvarchar**|사용자가 속한 Windows 도메인입니다.|7|yes|  
-|**NTUserName**|**nvarchar**|Windows 사용자 이름입니다.|6|yes|  
-|**Exchange Spill**|**int**|시스템이 할당한 개체의 ID입니다. 실행 계획의 노드 ID와 일치합니다.|22|yes|  
-|**RequestID**|**int**|문을 포함하는 요청의 ID입니다.|49|yes|  
+|**EventSubClass**|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 1=Spill 시작<br /><br /> 2=Spill 종료|21|예|  
+|**GroupID**|**int**|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
+|**HostName**|**nvarchar**|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  
+|**IsSystem**|**int**|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다. 1 = 시스템, 0 = 사용자|60|예|  
+|**LoginName**|**nvarchar**|사용자 로그인 이름입니다( *\<DOMAIN>\\<username\>* 형식의 Windows 로그인 자격 증명 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 로그인).|11|예|  
+|**LoginSid**|**image**|로그인한 사용자의 SID(보안 ID)입니다. 이 정보는 **master** 데이터베이스의 **syslogins** 테이블에 있습니다. 각 SID는 서버의 각 로그인마다 고유합니다.|41|예|  
+|**NTDomainName**|**nvarchar**|사용자가 속한 Windows 도메인입니다.|7|예|  
+|**NTUserName**|**nvarchar**|Windows 사용자 이름입니다.|6|예|  
+|**Exchange Spill**|**int**|시스템이 할당한 개체의 ID입니다. 실행 계획의 노드 ID와 일치합니다.|22|예|  
+|**RequestID**|**int**|문을 포함하는 요청의 ID입니다.|49|예|  
 |**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|예|  
-|**SessionLoginName**|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 **SessionLoginName** 은 Login1을 표시하고 **LoginName** 은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|yes|  
-|**SPID**|**int**|이벤트가 발생한 세션의 ID입니다.|12|yes|  
-|**StartTime**|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|yes|  
-|**TransactionID**|**bigint**|시스템이 할당한 트랜잭션의 ID입니다.|4|yes|  
-|**XactSequence**|**bigint**|현재 트랜잭션을 설명하는 토큰입니다.|50|yes|  
+|**SessionLoginName**|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 **SessionLoginName** 은 Login1을 표시하고 **LoginName** 은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
+|**SPID**|**int**|이벤트가 발생한 세션의 ID입니다.|12|예|  
+|**StartTime**|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|예|  
+|**TransactionID**|**bigint**|시스템이 할당한 트랜잭션의 ID입니다.|4|예|  
+|**XactSequence**|**bigint**|현재 트랜잭션을 설명하는 토큰입니다.|50|예|  
   
 ## <a name="see-also"></a>참고 항목  
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

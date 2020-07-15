@@ -1,5 +1,6 @@
 ---
 title: affinity64 mask 서버 구성 옵션 | Microsoft Docs
+description: affinity64 mask 옵션에 대해 알아봅니다. 이 옵션을 SQL Server에서 사용하여 특정 스레드에 프로세서를 바인딩하는 경우를 확인합니다.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - affinity64 mask option
 - binding processors [SQL Server]
 ms.assetid: 75ed08c7-f85c-4e15-9ee1-e7bc545d3293
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2888394a73e7ce56e55c867adb21a54d6be81cc3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 452075955c30d7e49eb317f40bf377a6e894af29
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013171"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631410"
 ---
 # <a name="affinity64-mask-server-configuration-option"></a>affinity64 mask 서버 구성 옵션
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   affinity64 mask는 프로세서를 특정 스레드에 바인딩하며 affinity mask 옵션과 비슷합니다. 선호도 마스크를 사용하여 처음 32개 프로세서를 바인딩하고 affinity64 마스크를 사용하여 컴퓨터의 나머지 프로세서를 바인딩할 수 있습니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]64비트 버전에서만 사용할 수 있습니다.  
   

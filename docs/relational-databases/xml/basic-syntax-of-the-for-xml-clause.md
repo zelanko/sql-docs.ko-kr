@@ -1,5 +1,6 @@
 ---
 title: FOR XML 절의 기본 구문 | Microsoft 문서
+description: FOR XML 절의 기본 구문에 대해 살펴보고 이러한 구문을 사용하여 SQL 쿼리에서 생성되는 XML의 모양을 결정하는 방법을 알아봅니다.
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -16,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ebaf884d584f87afab1afaa4c30a50287d348284
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1364b5b8c7f0a95c9e3710082feae10defc37dd7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664735"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85661981"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>FOR XML 절의 기본 구문
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 FOR XML 모드는 RAW, AUTO, EXPLICIT 또는 PATH일 수 있습니다. 이 모드는 결과 XML의 셰이프를 결정합니다.  
   
@@ -72,7 +73,7 @@ Azure SQL Database에도 적용되는 SELECT...**FOR XML** 절의 문서는 [FOR
 ## <a name="arguments"></a>인수
 
 **RAW** [('_ElementName_')]  
- 쿼리 결과를 사용하여 결과 집합의 각 행을 요소 태그로 \<row /> 일반 식별자를 갖는 XML 요소로 변환합니다. 이 지시어를 사용하는 경우 필요에 따라 행 요소에 대한 이름을 지정할 수 있습니다. 결과 XML은 각 행에 대해 행 요소가 생성될 때 지정된 *ElementName* 을 사용합니다. 자세한 내용은 [FOR XML에서 RAW 모드 사용](../../relational-databases/xml/use-raw-mode-with-for-xml.md)을 참조하세요.  
+ 쿼리 결과를 사용하여 결과 집합의 각 행을 요소 태그로 일반 식별자 \<row />를 갖는 XML 요소로 변환합니다. 이 지시어를 사용하는 경우 필요에 따라 행 요소에 대한 이름을 지정할 수 있습니다. 결과 XML은 각 행에 대해 행 요소가 생성될 때 지정된 *ElementName* 을 사용합니다. 자세한 내용은 [FOR XML에서 RAW 모드 사용](../../relational-databases/xml/use-raw-mode-with-for-xml.md)을 참조하세요.  
   
 **AUTO**  
  단순하게 중첩된 XML 트리로 쿼리 결과를 반환합니다. 최소한 한 개의 열이 SELECT 절에 나열되는 FROM 절의 각 테이블은 XML 요소로 표시됩니다. SELECT 절에 나열되는 열은 해당 요소의 특성에 매핑됩니다. 자세한 내용은 [FOR XML에서 AUTO 모드 사용](../../relational-databases/xml/use-auto-mode-with-for-xml.md)을 참조하세요.  

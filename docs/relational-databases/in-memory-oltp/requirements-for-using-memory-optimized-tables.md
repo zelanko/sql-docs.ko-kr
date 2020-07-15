@@ -1,5 +1,6 @@
 ---
 title: 메모리 액세스에 최적화된 테이블 사용을 위한 요구 사항 | Microsoft 문서
+description: SQL Database 버전, 메모리 및 스토리지 고려사항 및 설치 같은 메모리 내 OLTP 사용 관련 요구 사항을 알아봅니다.
 ms.custom: ''
 ms.date: 11/24/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2a8830fbf4b9418f80cf07c7586e71689001d455
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: afb7af65cca7d2ee33a2fde38d77b6236320514b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68109611"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722373"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 사용을 위한 요구 사항
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Azure DB에서 메모리 내 OLTP 사용의 경우 [SQL 데이터베이스에서 메모리 내 시작](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/)을 참조하세요.  
   

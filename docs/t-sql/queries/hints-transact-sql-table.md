@@ -36,15 +36,15 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 225a92fc082a2778a7146923a9d138d0ce86aa7b
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: cdc73ac23a6d95d46b6ec02bb1aeb194df96422a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087525"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731333"
 ---
 # <a name="hints-transact-sql---table"></a>힌트(Transact-SQL) - 테이블
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   테이블 힌트는 잠금 메서드, 하나 이상의 인덱스, 테이블 검색 또는 Index Seek와 같은 쿼리 처리 연산이나 기타 옵션을 지정하여 DML(데이터 조작 언어) 문이 실행되는 동안 쿼리 최적화 프로그램의 기본 동작을 무시합니다. 테이블 힌트는 DML 문의 FROM 절에서 지정하며 해당 절에서 참조되는 테이블이나 뷰에만 영향을 줍니다.  
   
@@ -127,7 +127,7 @@ WITH **(** \<table_hint> **)** [ [ **,** ]...*n* ]
 > [!IMPORTANT]  
 > WITH 키워드 생략은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-다음 테이블 힌트는 `WITH` 키워드를 포함하거나 포함하지 않고 사용할 수 있습니다. `NOLOCK`, `READUNCOMMITTED`, `UPDLOCK`, `REPEATABLEREAD`, `SERIALIZABLE`, `READCOMMITTED`, `TABLOCK`, `TABLOCKX`, `PAGLOCK`, `ROWLOCK`, `NOWAIT`, `READPAST`, `XLOCK`, `SNAPSHOT`, `NOEXPAND` 이러한 테이블 힌트를 WITH 키워드 없이 지정하는 경우 힌트를 단독으로 지정해야 합니다. 다음은 그 예입니다.  
+다음 테이블 힌트는 `WITH` 키워드를 포함하거나 포함하지 않고 사용할 수 있습니다. `NOLOCK`, `READUNCOMMITTED`, `UPDLOCK`, `REPEATABLEREAD`, `SERIALIZABLE`, `READCOMMITTED`, `TABLOCK`, `TABLOCKX`, `PAGLOCK`, `ROWLOCK`, `NOWAIT`, `READPAST`, `XLOCK`, `SNAPSHOT`, `NOEXPAND` 이러한 테이블 힌트를 WITH 키워드 없이 지정하는 경우 힌트를 단독으로 지정해야 합니다. 예를 들면 다음과 같습니다.  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -414,7 +414,7 @@ NOEXPAND는 *인덱싱된 뷰*에만 적용됩니다. 인덱싱된 뷰란 고유
 ## <a name="permissions"></a>사용 권한  
  KEEPIDENTITY, IGNORE_CONSTRAINTS 및 IGNORE_TRIGGERS 힌트를 사용하려면 테이블에 대한 ALTER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>A. TABLOCK 힌트를 사용하여 잠금 방법 지정  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Production.Product` 테이블에 공유 잠금을 사용하고 UPDATE 문이 끝날 때까지 유지하도록 지정합니다.  

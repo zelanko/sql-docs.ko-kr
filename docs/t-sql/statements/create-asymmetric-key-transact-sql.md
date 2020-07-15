@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 009029f16d85fa82867f37e075066701dacfc375
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c57f0fde92d22d0fa70c88addc37e13e9e0954b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73064688"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735860"
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   데이터베이스에서 비대칭 키를 만듭니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "73064688"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 CREATE ASYMMETRIC KEY asym_key_name   
    [ AUTHORIZATION database_principal_name ]  
    [ FROM <asym_key_source> ]  
@@ -124,7 +124,7 @@ CREATE ASYMMETRIC KEY asym_key_name
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 CREATE ASYMMETRIC KEY 권한이 필요합니다. AUTHORIZATION 절이 지정된 경우 데이터베이스 보안 주체에 대한 IMPERSONATE 권한 또는 애플리케이션 역할에 대한 ALTER 권한이 필요합니다. Windows 로그인, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 및 애플리케이션 역할만 비대칭 키를 소유할 수 있습니다. 그룹 및 역할은 비대칭 키를 소유할 수 없습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-creating-an-asymmetric-key"></a>A. 비대칭 키 만들기  
  다음 예에서는 `PacificSales09` 알고리즘을 사용하여 `RSA_2048`라는 비대칭 키를 만들고 암호로 프라이빗 키를 보호합니다.  

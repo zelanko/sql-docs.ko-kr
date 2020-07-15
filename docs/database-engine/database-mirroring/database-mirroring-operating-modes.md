@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 미러링 운영 모드 | Microsoft Docs
+description: SQL Server에서 데이터베이스 미러링 세션의 동기 운영 모드 및 비동기 운영 모드에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6d39c2d0975f7be8a7e5481b9c91266528ae9ee2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fdcdc937ba8509f67b71352dd1b87d8f98f92d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006354"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631416"
 ---
 # <a name="database-mirroring-operating-modes"></a>데이터베이스 미러링 운영 모드
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 데이터베이스 미러링 세션의 동기 운영 모드 및 비동기 운영 모드에 대해 설명합니다.  
   
 > [!NOTE]  

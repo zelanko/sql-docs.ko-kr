@@ -1,5 +1,6 @@
 ---
 title: 로그 전달 모니터링(Transact-SQL) | Microsoft Docs
+description: SQL Server에서 로그 전달을 모니터링하기 위한 모니터링 정보 및 저장 프로시저를 포함하는 기록을 저장하는 테이블에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 33bb8320abf11400e5224af747d71bcb49fc2d16
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 87d17a3f6051e497b64dd88c1dd2e005a4411e27
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68030713"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85695871"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>로그 전달 모니터링(Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   로그 전달을 구성한 후 모든 로그 전달 서버의 상태에 대한 정보를 모니터링할 수 있습니다. 로그 전달 작업의 기록과 상태는 항상 로그 전달 작업에 의해 로컬에 저장됩니다. 백업 작업의 기록과 상태는 주 서버에 저장되고 복사 및 복원 작업의 기록과 상태는 보조 서버에 저장됩니다. 원격 모니터 서버를 구현한 경우 이 정보는 모니터 서버에도 저장됩니다.  
   
  로그 전달 작업이 예약된 대로 수행되지 않으면 경고가 발생하도록 구성할 수 있습니다. 오류는 백업 및 복원 작업 상태를 감시하는 경고 작업에 의해 발생합니다. 이러한 오류가 발생할 때 운영자에게 알리는 경고를 정의할 수 있습니다. 모니터 서버가 구성되어 있는 경우 모니터 서버에서 로그 전달 구성의 모든 작업에 대해 오류를 발생시키는 하나의 경고 작업이 실행됩니다. 모니터 서버가 지정되지 않은 경우 경고 작업은 주 서버 인스턴스에서 실행되어 백업 작업을 모니터링합니다. 모니터 서버가 지정되어 있지 않으면 각 보조 서버 인스턴스에서도 경고 작업이 실행되어 로컬 복사 및 복원 작업을 모니터링합니다.  

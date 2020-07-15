@@ -1,7 +1,7 @@
 ---
 title: BACKUP(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/13/2019
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 61d9071b5afa65e65bd05320409ffd0839a07201
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 52672baf04075f13e4bb88578689a82405145282
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922232"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215837"
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
 
@@ -185,7 +185,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 
 DATABASE 전체 데이터베이스 백업을 지정합니다. 파일 및 파일 그룹의 목록이 지정되어 있으면 해당 파일 및 파일 그룹만 백업됩니다. 전체 또는 차등 데이터베이스 백업 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 백업을 복원할 때 일관성 있는 데이터베이스를 생성하기 위해 충분한 트랜잭션 로그를 백업합니다.
 
-BACKUP DATABASE(데이터베이스 백업)로 만든 백업을 복원하면 전체 백업이 복원됩니다  . 백업 내의 특정 시간이나 트랜잭션으로는 로그 백업만 복원할 수 있습니다.
+BACKUP DATABASE(데이터베이스 백업)로 만든 백업을 복원하면 전체 백업이 복원됩니다. 백업 내의 특정 시간이나 트랜잭션으로는 로그 백업만 복원할 수 있습니다.
 
 > [!NOTE]
 > 전체 데이터베이스 백업만 **master** 데이터베이스에서 수행할 수 있습니다.
@@ -204,7 +204,7 @@ LOG
 > [!NOTE]
 > 데이터베이스 미러링 파트너 관계의 미러 데이터베이스는 백업할 수 없습니다.
 
-\<file_or_filegroup> [ **,** ...*n* ] BACKUP DATABASE와 함께만 사용되며 파일 백업에 포함시킬 데이터베이스 파일 또는 파일 그룹을 지정하거나 부분 백업에 포함할 읽기 전용 파일 또는 파일 그룹을 지정합니다.
+\<file_or_filegroup> [ **,** ...*n* ] BACKUP DATABASE와 함께만 사용되며, 파일 백업에 포함시킬 데이터베이스 파일 또는 파일 그룹을 지정하거나 부분 백업에 포함시킬 읽기 전용 파일 또는 파일 그룹을 지정합니다.
 
 FILE **=** { *logical_file_name* | **@** _logical\_file\_name\_var_ } 파일의 논리적 이름이거나 해당 값이 백업에 포함할 파일의 논리적 이름과 같은 변수입니다.
 
@@ -224,13 +224,13 @@ READ_WRITE_FILEGROUPS 부분 백업 시 모든 읽기/쓰기 파일 그룹을 �
 > [!IMPORTANT]
 > READ_WRITE_FILEGROUPS 대신 FILEGROUP을 사용하여 읽기/쓰기 파일 그룹을 명시적으로 나열하면 파일 백업이 생성됩니다.
 
-FILEGROUP = { *logical_filegroup_name* |  **@** _logical\_filegroup\_name\_var_ } 읽기 전용 파일 그룹의 논리적 이름이거나 해당 값이 부분 백업에 포함할 읽기 전용 파일 그룹의 논리적 이름과 같은 변수입니다. 자세한 내용은 이 항목의 앞부분에 나오는 "\<file_or_filegroup>"을 참조하세요.
+FILEGROUP = { *logical_filegroup_name* |  **@** _logical\_filegroup\_name\_var_ } 읽기 전용 파일 그룹의 논리적 이름이거나 해당 값이 부분 백업에 포함할 읽기 전용 파일 그룹의 논리적 이름과 같은 변수입니다. 자세한 내용은 이 주제의 앞부분에 있는 "\<file_or_filegroup>"을 참조하세요.
 
 *n* 쉼표로 구분된 목록에 여러 개의 읽기 전용 파일 그룹을 지정할 수 있음을 나타내는 자리 표시자입니다.
 
 부분 백업에 대한 자세한 내용은 [부분 백업](../../relational-databases/backup-restore/partial-backups-sql-server.md)을 참조하세요.
 
-TO \<backup_device&gt; [ **,** ...*n* ] 함께 제공되는 [백업 디바이스](../../relational-databases/backup-restore/backup-devices-sql-server.md) 세트가 미러되지 않은 미디어 세트이거나 하나 이상의 MIRROR TO 절이 선언된 경우 미러된 미디어 세트 내의 미러 중 첫 번째임을 나타냅니다.
+TO \<backup_device> [ **,** ...*n* ] 함께 제공되는 [백업 디바이스](../../relational-databases/backup-restore/backup-devices-sql-server.md) 세트가 미러되지 않은 미디어 세트이거나 하나 이상의 MIRROR TO 절이 선언된 경우 미러된 미디어 세트 내의 미러 중 첫 번째임을 나타냅니다.
 
 \<backup_device>
 
@@ -260,14 +260,14 @@ BACKUP 문에 지정되기 전에는 디스크 디바이스가 없어도 됩니�
 
 *n* 쉼표로 구분된 목록에 백업 디바이스를 최대 64개까지 지정할 수 있음을 나타내는 자리 표시자입니다.
 
-MIRROR TO \<backup_device&gt; [ **,** ...*n* ] TO 절에 지정된 각각의 백업 디바이스를 미러할 최대 3개의 보조 백업 디바이스 세트를 지정합니다. MIRROR TO 절에는 TO 절에서와 같은 유형과 개수의 백업 디바이스를 지정해야 합니다. MIRROR TO 절은 최대 3개까지 포함시킬 수 있습니다.
+MIRROR TO \<backup_device> [ **,** ...*n* ] TO 절에 지정된 각각의 백업 디바이스를 미러할 최대 3개의 보조 백업 디바이스 세트를 지정합니다. MIRROR TO 절에는 TO 절에서와 같은 유형과 개수의 백업 디바이스를 지정해야 합니다. MIRROR TO 절은 최대 3개까지 포함시킬 수 있습니다.
 
 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 엔터프라이즈 버전에서만 사용할 수 있습니다.
 
 > [!NOTE]
 > MIRROR TO = DISK의 경우 BACKUP은 디스크의 섹터 크기에 따라 디스크 디바이스에 적절한 블록 크기를 자동으로 결정합니다. MIRROR TO 디스크가 기본 백업 디바이스로 지정된 디스크와 다른 섹터 크기로 포맷되면 백업 명령이 실패합니다. 백업을 섹터 크기가 다른 디바이스에 미러링하려면 BLOCKSIZE 매개 변수를 지정해야 하며, 모든 대상 디바이스 중에서 가장 높은 섹터 크기로 설정해야 합니다. 블록 크기에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "BLOCKSIZE"를 참조하세요.
 
-\<backup_device>이 섹션의 앞부분에 나오는 "\<backup_device>"를 참조하세요.
+\<backup_device> 이 섹션 앞부분에 나오는 "\<backup_device>"를 참조하세요.
 
 *n* 쉼표로 구분된 목록에 백업 디바이스를 최대 64개까지 지정할 수 있음을 나타내는 자리 표시자입니다. MIRROR TO 절의 디바이스 수는 TO 절의 디바이스 수와 같아야 합니다.
 
@@ -361,7 +361,7 @@ EXPIREDATE **=** { **'** _date_ **'**  |  **@** _date\_var_ } 백업 세트가 �
 - **smalldatetime**
 - **datetime** 변수
 
-다음은 그 예입니다.
+예를 들면 다음과 같습니다.
 
 - `'Dec 31, 2020 11:59 PM'`
 - `'1/1/2021'`
@@ -436,7 +436,7 @@ BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ } 백업 작�
 > [!NOTE]
 > `BUFFERCOUNT` 옵션을 사용하는 방법은 [잘못된 BufferCount 데이터 전송 옵션을 사용하면 OOM 상태가 발생할 수 있음](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) 블로그를 참조하세요.
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ } [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 백업 미디어 간에 사용되는 가장 큰 전송 단위(바이트)를 지정합니다. 가능한 값은 최대 4194304바이트(4MB)까지 65536바이트(64KB)의 배수입니다.
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 백업 미디어 간에 사용되는 가장 큰 전송 단위(바이트)를 지정합니다. 가능한 값은 최대 4194304바이트(4MB)까지 65536바이트(64KB)의 배수입니다.
 
 > [!NOTE]
 > SQL 기록기 서비스를 사용하여 백업을 만들 때 데이터베이스에서 [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md)이 구성되었거나 [메모리 최적화 파일 그룹](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)이 포함된 경우 복원 시 `MAXTRANSFERSIZE`가 백업을 만들 때 사용된 `MAXTRANSFERSIZE`보다 커야 합니다.
@@ -690,8 +690,9 @@ BACKUP은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 
 운영 체제가 데이터베이스의 데이터 정렬을 지원하는 한 프로세서 유형이 다르더라도 플랫폼 간 백업 작업을 수행할 수 있습니다.
 
-단일 데이터 파일로 [TDE(투명한 데이터 암호화)](../../relational-databases/security/encryption/transparent-data-encryption.md) 가능 데이터베이스에 백업 압축을 사용하는 경우 **65536(64KB)보다 큰**`MAXTRANSFERSIZE` 설정을 사용하는 것이 좋습니다.
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 TDE 암호화 데이터베이스에 최적화된 압축 알고리즘 즉, 먼저 페이지 암호를 해독하고 압축한 다음, 다시 암호화하는 알고리즘이 사용됩니다. `MAXTRANSFERSIZE = 65536`(64KB)을 사용하는 경우 TDE로 암호화된 데이터베이스를 통해 백업 압축을 수행하면 암호화된 페이지가 바로 압축되어 압축률이 좋지 않을 수 있습니다. 자세한 내용은 [TDE 가능 데이터베이스의 백업 압축](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/)을 참조하세요.
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터, **65536(64KB)보다 큰** `MAXTRANSFERSIZE`를 설정 시 압축 알고리즘이 사용됩니다. 이 알고리즘은 먼저 페이지를 해독하고 압축한 다음 다시 암호화하는 [TDE(투명한 데이터 암호화)](../../relational-databases/security/encryption/transparent-data-encryption.md)로 암호화된 데이터베이스에 최적화되어 있습니다. `MAXTRANSFERSIZE`를 지정하지 않은 경우 또는 `MAXTRANSFERSIZE = 65536`(64KB)을 사용하는 경우 TDE 암호화 데이터베이스를 통해 백업 압축을 수행하면 암호화된 페이지가 바로 압축되어 압축률이 좋지 않을 수 있습니다. 자세한 내용은 [TDE 가능 데이터베이스의 백업 압축](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/)을 참조하세요.
+
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5부터 더 이상 이 TDE를 사용하는 최적화된 압축 알고리즘을 사용하도록 `MAXTRANSFERSIZE`를 설정할 필요가 없습니다. 백업 명령에 `WITH COMPRESSION`이 지정되거나 *백업 압축 기본값* 서버 구성이 1로 설정되어 있으면 `MAXTRANSFERSIZE`가 자동으로 128K로 증가하여 최적화된 알고리즘을 사용하도록 설정합니다. 백업 명령에 `MAXTRANSFERSIZE`가 64K를 초과하는 값으로 지정되면 제공된 값이 적용됩니다. 즉, SQL Server는 자동으로 이 값을 줄이지 않고 늘리기만 합니다. `MAXTRANSFERSIZE = 65536`을 사용하여 TDE 암호화 데이터베이스를 백업해야 하는 경우 `WITH NO_COMPRESSION`를 지정하거나 *백업 압축 기본값* 서버 구성이 0으로 설정되어 있어야 합니다.
 
 > [!NOTE]
 > 기본값 `MAXTRANSFERSIZE`이 64K를 초과하는 경우가 있습니다.
@@ -699,7 +700,7 @@ BACKUP은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 > - 데이터베이스에서 여러 데이터 파일을 만든 경우 `MAXTRANSFERSIZE` > 64K를 사용합니다.
 > - URL로 백업을 수행할 때 기본 `MAXTRANSFERSIZE = 1048576`(1MB)입니다.
 >
-> 이러한 조건 중 하나가 적용되는 경우에도 새 백업 압축 알고리즘을 가져오기 위해 백업 명령에서 `MAXTRANSFERSIZE` 64K를 초과하도록 명시적으로 설정해야 합니다.
+> 이러한 조건 중 하나가 적용되는 경우에도 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 이상이 아니면 최적화된 백업 압축 알고리즘을 가져오기 위해 백업 명령에서 `MAXTRANSFERSIZE` 64K를 초과하도록 명시적으로 설정해야 합니다.
 
 기본적으로 백업 작업을 성공적으로 수행할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와 시스템 이벤트 로그에 항목이 추가됩니다. 로그를 자주 백업하는 경우 이러한 성공 메시지는 바로 누적되므로 엄청난 오류 로그가 쌓여 다른 메시지를 찾기 힘들 수 있습니다. 이 경우 스크립트가 이러한 로그 항목에 종속되지 않을 경우 추적 플래그 3226을 사용하여 이러한 항목을 표시하지 않을 수 있습니다. 자세한 내용은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.
 
@@ -981,7 +982,7 @@ DATABASE 전체 데이터베이스 백업을 지정합니다. 데이터베이스
 > [!IMPORTANT]
 > 관리되는 인스턴스에서 생성된 데이터베이스 백업은 다른 관리되는 인스턴스에서만 복원할 수 있습니다. SQL Server 온-프레미스 인스턴스로 복원할 수 없습니다(SQL Server 2016 데이터베이스의 백업을 SQL Server 2012 인스턴스로 복원할 수 없는 방식과 비슷함).
 
-BACKUP DATABASE(데이터베이스 백업)로 만든 백업을 복원하면 전체 백업이 복원됩니다  . Azure SQL Database 관리형 인스턴스 자동 백업에서 복원하려면 [관리형 인스턴스로 데이터베이스 복원](/azure/sql-database/sql-database-managed-instance-get-started-restore)을 참조하세요.
+BACKUP DATABASE(데이터베이스 백업)로 만든 백업을 복원하면 전체 백업이 복원됩니다. Azure SQL Database 관리형 인스턴스 자동 백업에서 복원하려면 [관리형 인스턴스로 데이터베이스 복원](/azure/sql-database/sql-database-managed-instance-get-started-restore)을 참조하세요.
 
 { *database_name* |  **@** _database\_name\_var_ } 전체 데이터베이스를 백업하는 데이터베이스입니다. 변수( **@** _database\_name\_var_)로 제공된 경우, 이 이름은 문자열 상수( **@** _database\_name\_var_ **=** _database name_)나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.
 
@@ -1044,7 +1045,7 @@ BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ } 백업 작�
 > [!NOTE]
 > `BUFFERCOUNT` 옵션을 사용하는 방법은 [잘못된 BufferCount 데이터 전송 옵션을 사용하면 OOM 상태가 발생할 수 있음](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) 블로그를 참조하세요.
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ } [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 백업 미디어 간에 사용되는 가장 큰 전송 단위(바이트)를 지정합니다. 가능한 값은 최대 4194304바이트(4MB)까지 65536바이트(64KB)의 배수입니다.
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 백업 미디어 간에 사용되는 가장 큰 전송 단위(바이트)를 지정합니다. 가능한 값은 최대 4194304바이트(4MB)까지 65536바이트(64KB)의 배수입니다.
 
 > [!NOTE]
 > 단일 데이터 파일이 있는 [TDE(투명한 데이터 암호화)](../../relational-databases/security/encryption/transparent-data-encryption.md) 가능 데이터베이스의 경우 기본 `MAXTRANSFERSIZE`는 65536(64 KB)입니다. 비-TDE 암호화된 데이터베이스의 경우 디스크 백업을 사용할 때 기본 `MAXTRANSFERSIZE`는 1048576(1MB)이고 VDI 또는 TAPE를 사용하는 경우에는 65536(64KB)입니다.
@@ -1176,7 +1177,7 @@ NAME = **'** _backup \_name_ **'** 백업의 이름을 지정합니다. 백업 �
 
 DIFFERENTIAL 사용자 데이터베이스의 차등 백업을 수행하도록 지정합니다. 생략할 경우 기본값은 전체 데이터베이스 백업입니다. 차등 백업의 이름이 전체 백업의 이름과 일치할 필요는 없습니다. 차등 및 해당하는 전체 백업을 추적하려면 동일한 이름에 'full' 또는 'diff'를 추가하여 사용하는 것이 좋습니다.
 
-다음은 그 예입니다.
+예를 들면 다음과 같습니다.
 
 `BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerFull';`
 
@@ -1271,7 +1272,7 @@ DATABASE 개체에서 ExclusiveUpdate 잠금을 얻습니다.
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 저장된 모든 네트워크 자격 증명을 나열하려면 [sys.dm_pdw_network_credentials](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) 동적 관리 뷰를 사용합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-add-network-credentials-for-the-backup-location"></a>A. 백업 위치에 대한 네트워크 자격 증명 추가
 

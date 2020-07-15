@@ -1,5 +1,6 @@
 ---
 title: 모범 사례- 고유하게 컴파일된 저장 프로시저
+description: 애플리케이션에서 성능이 중요한 부분에 일반적으로 사용되는 고유하게 컴파일된 저장 프로시저 모범 사례에 대해 알아봅니다.
 ms.custom: seo-dt-2019
 ms.date: 03/24/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae3789c3f6afce4a54bede57d8fe3b805b94ff5c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc9fffa0c2b916163e0b9e8698cdf1f7df59667a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412783"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723387"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저를 호출하는 최선의 구현 방법
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   고유하게 컴파일된 저장 프로시저의 특징  
   
 -   애플리케이션에서 성능이 중요한 부분에 주로 사용됩니다.  

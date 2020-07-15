@@ -1,5 +1,6 @@
 ---
 title: 데이터 및 데이터베이스 개체 게시 | Microsoft 문서
+description: 이 문서에서는 SQL Server에서 복제용으로 게시할 수 있는 테이블 및 기타 데이터베이스 개체를 요약해 설명합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -42,12 +43,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5db7d4d73c4d6c03ce31935a9eb874bdd605fa99
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 89f88671ec51fedbfd075d82685892378fb5e840
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287610"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807304"
 ---
 # <a name="publish-data-and-database-objects"></a>데이터 및 데이터베이스 개체 게시
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "76287610"
 |분할된 테이블|X|X|  
 |저장 프로시저 - 정의([!INCLUDE[tsql](../../../includes/tsql-md.md)] 및 CLR)|X|X|  
 |저장 프로시저 - 실행([!INCLUDE[tsql](../../../includes/tsql-md.md)] 및 CLR)|X|아니요|  
-|뷰|X|X|  
+|보기|X|X|  
 |인덱싱된 뷰|X|X|  
 |인덱싱된 뷰(테이블 형식)|X|아니요|  
 |사용자 정의 형식(CLR)|X|X|  

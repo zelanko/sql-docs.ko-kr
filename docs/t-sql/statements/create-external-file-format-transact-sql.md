@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL FILE FORMAT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/20/2018
+ms.date: 05/08/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -20,19 +20,19 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0402da002440e26697aeaa52245e78873033818
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6c32db4bdc26e90faa74800076dade200c1348f6
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633461"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518643"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Hadoop, Azure Blob Storage, 또는 Azure Data Lake Store에 저장된 외부 데이터를 정의하는 외부 파일 형식 개체를 만듭니다. 외부 파일 형식 만들기는 외부 테이블을 만들기 위한 필수 구성 요소입니다. 외부 파일 형식을 만들어 외부 테이블에서 참조하는 데이터의 실제 레이아웃을 지정하게 됩니다.  
+  Hadoop, Azure Blob Storage, Azure Data Lake Store에 저장된 외부 데이터 또는 외부 스트림에 연결된 입력 및 출력 스트림의 외부 데이터를 정의하는 외부 파일 형식 개체를 만듭니다. 외부 파일 형식 만들기는 외부 테이블을 만들기 위한 필수 구성 요소입니다. 외부 파일 형식을 만들어 외부 테이블에서 참조하는 데이터의 실제 레이아웃을 지정하게 됩니다.  
   
- PolyBase는 다음 파일 형식을 지원합니다.
+지원되는 파일 형식은 다음과 같습니다.
   
 -   구분된 텍스트  
   
@@ -40,8 +40,11 @@ ms.locfileid: "81633461"
   
 -   Hive ORC
   
--   Parquet  
-  
+-   Parquet
+
+-   JSON - Azure SQL Edge에만 적용됩니다.
+
+
 외부 테이블을 만들려면 [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)을 참조하세요.
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -87,7 +90,17 @@ WITH (
          | 'org.apache.hadoop.io.compress.DefaultCodec'  
         }  
      ]);  
-  
+
+-- Create an external file format for JSON files.
+CREATE EXTERNAL FILE FORMAT file_format_name  
+WITH (  
+    FORMAT_TYPE = JSON  
+     [ , DATA_COMPRESSION = {  
+        'org.apache.hadoop.io.compress.SnappyCodec'  
+      | 'org.apache.hadoop.io.compress.GzipCodec'      
+      | 'org.apache.hadoop.io.compress.DefaultCodec'  }  
+    ]);  
+ 
 <format_options> ::=  
 {  
     FIELD_TERMINATOR = field_terminator  
@@ -119,6 +132,8 @@ WITH (
     -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
 
    -   DELIMITEDTEXT 필드 종결자라고도 하는 열 구분 기호가 있는 텍스트 형식을 만듭니다.
+   
+   -  JSON은 JSON 형식을 지정합니다. Azure SQL Edge에만 적용됩니다. 
   
  FIELD_TERMINATOR = *field_terminator*  
 구분 기호로 분리된 텍스트 파일에만 적용됩니다. 필드 종결자는 구분 기호로 분리된 텍스트 파일의 각 필드(열)의 끝을 표시하는 하나 이상의 문자를 지정합니다. 기본값은 파이프 문자 ꞌ|ꞌ입니다. 지원 보장을 위해 하나 이상의 ASCII 문자를 사용하는 것이 좋습니다.
@@ -170,7 +185,7 @@ PolyBase는 데이터를 가져오기 위해서만 사용자 지정 날짜 형�
   
 -   DateTimeOffset: 'yyyy-MM-dd HH:mm:ss'  
   
--   Time: 'HH:mm:ss'  
+-   시간: 'HH:mm:ss'  
   
 **날짜 형식 예**는 다음 표에 있습니다.
   
@@ -270,6 +285,14 @@ PolyBase는 데이터를 가져오기 위해서만 사용자 지정 날짜 형�
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+
+ JSON 파일 형식 유형은 다음 압축 메서드를 지원합니다.
+  
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
+  
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
   
 ## <a name="permissions"></a>사용 권한  
  ALTER ANY EXTERNAL FILE FORMAT 권한이 필요합니다.
@@ -301,7 +324,7 @@ PolyBase는 데이터를 가져오기 위해서만 사용자 지정 날짜 형�
   
  Gzip 압축 텍스트 파일은 분할할 수 없습니다. Gzip 압축 텍스트 파일의 성능을 높이기 위해 외부 데이터 원본 내에서 모두 동일한 디렉터리에 저장되는 여러 파일을 생성하는 ㄱ서이 좋습니다. 이 파일 구조를 통해 PolyBase가 여러 Reader 및 압축 풀기 프로세스를 사용하여 데이터를 더 빠르게 읽고 압축을 풀 수 있습니다. 이상적인 압축 파일의 수는 컴퓨팅 노드당 최대 데이터 Reader 프로세스 수입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 최대 데이터 Reader 프로세스 수는 노드당 20개 Reader에 해당하는 Azure SQL Data Warehouse Gen2를 제외하고 노드당 8개입니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 노드당 최대 데이터 Reader 프로세서 수는 SLO마다 다릅니다. 자세한 내용은 [Azure SQL Data Warehouse 로드 패턴 및 전략](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-create-a-delimitedtext-external-file-format"></a>A. DELIMITEDTEXT 외부 파일 형식 만들기  
  이 예제에서는 구분 기호로 분리된 텍스트 파일에 대해 이름이 *textdelimited1*인 외부 파일 형식을 만듭니다. FORMAT\_OPTIONS에 대해 나열된 옵션은 파일의 필드가 파이프 문자 '|'를 사용하여 구분되어야 함을 지정합니다. 또한 텍스트 파일은 Gzip 코덱을 사용하여 압축됩니다. DATA\_COMPRESSION을 지정하지 않은 경우 텍스트 파일이 압축되지 않습니다.
@@ -365,6 +388,16 @@ WITH (FORMAT_TYPE = DELIMITEDTEXT,
           USE_TYPE_DEFAULT = True)
 )
 ```   
+### <a name="f-create-a-json-external-file-format"></a>F. JSON 외부 파일 형식 만들기  
+ 이 예제에서는 org.apache.io.compress.SnappyCodec 데이터 압축 메서드를 사용하여 데이터를 압축하는 JSON 파일에 대한 외부 파일 형식을 만듭니다. DATA_COMPRESSION을 지정하지 않은 경우 압축되지 않는 것이 기본값입니다. 이 예제는 Azure SQL Edge에 적용되며 현재 다른 SQL 제품에서는 지원되지 않습니다. 
+  
+```  
+CREATE EXTERNAL FILE FORMAT jsonFileFormat  
+WITH (  
+    FORMAT_TYPE = JSON,  
+    DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
+);  
+```  
 
 ## <a name="see-also"></a>참고 항목
  [CREATE EXTERNAL DATA SOURCE&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   

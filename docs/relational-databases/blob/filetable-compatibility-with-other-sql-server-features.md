@@ -1,6 +1,6 @@
 ---
 title: FileTable 호환성 | Microsoft Docs
-description: FileTable과 기타 SQL Server 기능 간 호환성
+description: FileTable이 SQL Server의 다른 기능과 함께 작동하는 방식을 알아봅니다. SQL Server가 FileTable로 지원하는 기능과 적용하는 제약 조건에 대해 읽어 보세요.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d199ba6ad64f3b259d7b94ac6180d12e83a311e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a1899aefaeeef896112a903f1fe69b289740ef09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252708"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642560"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable과 기타 SQL Server 기능 간 호환성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   FileTable이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 기능과 함께 작동하는 방식에 대해 설명합니다.  
   
 ##  <a name="alwayson-availability-groups-and-filetables"></a><a name="alwayson"></a> AlwaysOn 가용성 그룹과 FileTable  
@@ -88,7 +88,7 @@ ms.locfileid: "75252708"
   
 -   "업데이트 가능한 뷰" 의미 체계에 따라 뷰를 업데이트할 수 있지만 테이블에서와 마찬가지로 기본 테이블 제약 조건에 따라 업데이트가 거부될 수 있습니다.  
   
--   파일의 경로를 뷰의 명시적 열로 추가하여 뷰에 시각화할 수 있습니다. 다음은 그 예입니다.  
+-   파일의 경로를 뷰의 명시적 열로 추가하여 뷰에 시각화할 수 있습니다. 예를 들면 다음과 같습니다.  
   
      `CREATE VIEW MP3FILES AS SELECT column1, column2, ..., GetFileNamespacePath() AS PATH, column3,...  FROM Documents`  
   

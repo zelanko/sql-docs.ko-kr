@@ -34,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 743c3c6d24be39ae9c2b56da26017bd4b15852a6
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4003b08205f1c7db98d2656e17fe653a3616638d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635915"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748955"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 지정한 데이터베이스에서 다음 작업을 수행하여 모든 개체의 논리적 무결성 및 물리적 무결성을 검사합니다.    
     
@@ -221,7 +221,13 @@ DBCC CHECKDB 명령이 완료된 후 [!INCLUDE[ssNoVersion](../../includes/ssnov
 |3|메타데이터가 손상되어 DBCC 명령이 종료되었음을 나타냅니다.|    
 |4|어설션 또는 액세스 위반이 감지되었습니다.|    
 |5|알 수 없는 오류가 발생하여 DBCC 명령이 종료되었습니다.|    
+
+> [!NOTE]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 오류 없이 데이터베이스 일관성 확인(또는 "깨끗한" 일관성 확인)이 실행된 날짜와 시간을 기록합니다. 이것을 `last known clean check`라고 합니다. 데이터베이스가 처음 시작될 때 이 날짜는 EventLog(EventID-17573) 및 ERRORLOG에 다음과 같은 형식으로 기록됩니다. 
+>
+>`CHECKDB for database '<database>' finished without errors on 2019-05-05 18:08:22.803 (local time). This is an informational message only; no user action is required.`
     
+
 ## <a name="error-reporting"></a>오류 보고    
 DBCC CHECKDB가 손상 오류를 감지할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG 디렉터리에 덤프 파일(`SQLDUMP*nnnn*.txt`)이 생성됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 *기능 사용* 데이터 수집 및 *오류 보고* 기능을 설정하면 이 파일이 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에 자동으로 전달됩니다. 수집된 데이터를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 향상시킬 수 있습니다.
 덤프 파일에는 DBCC CHECKDB 명령의 결과 및 추가 진단 출력이 포함됩니다. 액세스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 및 sysadmin 역할의 멤버로 제한됩니다. 기본적으로 sysadmin 역할에는 Windows `BUILTIN\Administrators` 그룹 및 로컬 관리자 그룹의 모든 멤버가 포함됩니다. 데이터 수집 프로세스가 실패해도 DBCC 명령은 실패하지 않습니다.
@@ -367,7 +373,7 @@ DBCC CHECKDB는 ESTIMATEONLY가 지정되었을 때 다음 결과 집합을 반�
 ## <a name="permissions"></a>사용 권한    
 sysadmin 고정 서버 역할의 멤버 또는 db_owner 고정 데이터베이스 역할의 멤버여야 합니다.
     
-## <a name="examples"></a>예    
+## <a name="examples"></a>예제    
     
 ### <a name="a-checking-both-the-current-and-another-database"></a>A. 현재 데이터베이스와 다른 데이터베이스 모두 검사    
 다음 예에서는 현재 데이터베이스 및 `DBCC CHECKDB` 데이터베이스에 대해 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]를 실행합니다.

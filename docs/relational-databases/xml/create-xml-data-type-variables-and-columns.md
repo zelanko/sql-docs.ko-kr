@@ -1,5 +1,6 @@
 ---
 title: XML 데이터 형식 변수 및 열 만들기 | Microsoft 문서
+description: SQL Server에서 XML 데이터 형식의 열과 변수를 만드는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 71bda739146d1729cdf09d510c8d8c7dfb835a84
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0471d842c56abf7ca888542d36ea9b688797dd64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664610"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85691470"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>XML 데이터 형식 변수 및 열 만들기
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **xml** 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 기본 제공 데이터 형식이며 **int** 및 **varchar**와 같은 다른 기본 제공 형식과 비슷합니다. 다른 기본 제공 유형과 마찬가지로 변수 유형, 매개 변수 유형, 함수 반환 유형 또는 **CAST 및 CONVERT** 로 테이블을 만들 때 [xml](../../t-sql/functions/cast-and-convert-transact-sql.md)데이터 형식을 열 유형으로 사용할 수 있습니다.  
   
 ## <a name="creating-columns-and-variables"></a>열 및 변수 만들기  
@@ -67,7 +68,7 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 **xml** 유형의 열에서 NULL과 NOT NULL 제약 조건도 지원합니다. 다음은 그 예입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 **xml** 유형의 열에서 NULL과 NOT NULL 제약 조건도 지원합니다. 예를 들면 다음과 같습니다.  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  

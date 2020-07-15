@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 속성(트랜잭션 로그 전달 페이지) | Microsoft 문서
+description: 데이터베이스 속성 대화 상자의 트랜잭션 로그 전달 탭을 사용하면 데이터베이스를 로그 전달 주 데이터베이스로 할성화하고 관련 옵션을 설정할 수 있습니다.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8155524f6e5d8172092630c04dbb0540514b56ed
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 75c87efd24b1e345cb99413d1a524e872f0eb022
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099576"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630966"
 ---
 # <a name="database-properties-transaction-log-shipping-page"></a>데이터베이스 속성(트랜잭션 로그 전달 페이지)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 페이지를 사용하여 데이터베이스의 로그 전달 속성을 구성하고 수정할 수 있습니다.  
   
  로그 전달 개념에 대한 설명은 [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)를 참조하세요.  
@@ -33,7 +34,7 @@ ms.locfileid: "68099576"
  백업 일정, 위치, 경고 및 보관 매개 변수를 구성하려면 **백업 설정** 을 클릭합니다.  
   
  **백업 일정**  
- 주 데이터베이스에 대해 현재 선택한 백업 일정을 보여 줍니다. 이러한 설정을 수정하려면 **백업 설정**을 클릭합니다.  
+ 주 데이터베이스에 대해 현재 선택한 백업 일정을 보여 줍니다. 이러한 설정을 수정하려면 **백업 설정** 을 클릭합니다.  
   
  **마지막으로 백업을 만든 날짜**  
  주 데이터베이스에서 마지막으로 수행된 트랜잭션 로그 백업의 시간과 날짜를 나타냅니다.  

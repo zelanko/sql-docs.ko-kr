@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5625c3429a9bae89ae940fb552a3e6d1e58678c9
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 76af9a82a53004d01443a0442946e28fed73d0f0
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999434"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858900"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -51,7 +51,7 @@ Always Encrypted는 다음 다이어그램에 설명된 것처럼 보안 Enclave
 
 - **바로 암호화** – 중요한 데이터에 대한 암호화 작업(예: 초기 데이터 암호화 또는 열 암호화 키 순환)은 보안 Enclave 내에서 수행되며 데이터베이스 외부로 데이터를 이동할 필요가 없습니다. ALTER TABLE Transact-SQL 문을 사용하여 바로 암호화를 실행할 수 있으며, SSMS의 Always Encrypted 마법사 또는 Set-SqlColumnEncryption PowerShell cmdlet과 같은 도구를 사용할 필요가 없습니다.
 
-- **리치 계산(미리 보기)** – 패턴 일치(LIKE 조건자) 및 범위 비교를 비롯하여 암호화된 열에 대해 수행되는 작업은 보안 Enclave 내에서 지원됩니다. 이 경우 데이터베이스 시스템 내에서 이러한 계산을 수행하도록 요구하는 광범위한 애플리케이션 및 시나리오가 Always Encrypted에서 지원됩니다.
+- **리치 계산** – 패턴 일치(LIKE 조건자) 및 범위 비교를 비롯하여 암호화된 열에 대해 수행되는 작업은 보안 Enclave 내에서 지원됩니다. 이 경우 데이터베이스 시스템 내에서 이러한 계산을 수행하도록 요구하는 광범위한 애플리케이션 및 시나리오가 Always Encrypted에서 지원됩니다.
 
 ## <a name="secure-enclave-attestation"></a>보안 Enclave 증명
 

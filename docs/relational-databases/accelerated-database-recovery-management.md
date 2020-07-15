@@ -12,16 +12,16 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8fea43ea41bc3e65fa0a6b36c7557322431e95fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99229b68f99cf96af3916ac6946ba5d931f50bce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245258"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727925"
 ---
 # <a name="manage-accelerated-database-recovery"></a>가속 데이터베이스 복구 관리
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 ## <a name="enabling-and-controlling-adr"></a>ADR 사용 설정 및 제어
 
@@ -103,6 +103,9 @@ PVS의 위치를 변경하는 과정은 세 단계로 진행됩니다.
    ```
 
 ## <a name="troubleshooting"></a>문제 해결
+
+> [!NOTE]
+> 이 섹션은 Azure SQL Database에도 적용됩니다.
 
 `sys.dm_tran_persistent_version_store_stats`를 쿼리하여 PVS 크기를 확인합니다.
 

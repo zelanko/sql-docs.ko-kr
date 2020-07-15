@@ -1,5 +1,6 @@
 ---
 title: 기록 정리 태스크(유지 관리 계획) | Microsoft 문서
+description: 기록 정리 태스크를 사용하여 msdb 데이터베이스에서 백업/복원 기록, SQL Server 에이전트 작업 기록 및 유지 관리 계획 기록을 삭제하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,20 +14,20 @@ ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 37841e848aab5ff991741e5d460500834c9185e6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a8fecc3eb56a015ac420ca2cd5167098bbce84ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115790"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667059"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>기록 정리 태스크(유지 관리 계획)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **기록 정리 태스크** 대화 상자를 사용하여 msdb 데이터베이스의 테이블에서 오래된 기록 정보를 삭제할 수 있습니다. 이 태스크는 백업 및 복원 기록, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 기록 및 유지 관리 계획 기록의 삭제를 지원합니다.  
   
  이 문은 **sp_purge_jobhistory** 문과 **sp_delete_backuphistory** 문을 사용합니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **연결**  
  이 태스크를 수행할 때 사용할 서버 연결을 선택합니다.  
   

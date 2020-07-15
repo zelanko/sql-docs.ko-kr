@@ -1,5 +1,6 @@
 ---
 title: 파일 입/출력 API를 사용하여 FileTable 액세스 | Microsoft 문서
+description: FileTable에서 파일 I/O API를 사용하는 방법을 알아보고 FileTable과 호환되는 파일 시스템 작업을 확인합니다.
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d1cdc6947c97052660dea3be9d6013a8e61a090d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d73f6f8e993784def2dd9325933778e2048d5eae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908782"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85744692"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>파일 입/출력 API를 사용하여 FileTable 액세스
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   FileTable에서 파일 시스템 I/O가 작동하는 방식에 대해 설명합니다.  
   
 ##  <a name="get-started-using-file-io-apis-with-filetables"></a><a name="accessing"></a> FileTable에서 파일 I/O API 사용 시작  
@@ -105,14 +106,14 @@ ms.locfileid: "72908782"
   
 |기능|지원됨|주석|  
 |----------------|---------------|--------------|  
-|**Oplock**|yes|수준 2, 수준 1, 일괄 처리 및 필터 oplock을 지원합니다.|  
+|**Oplock**|예|수준 2, 수준 1, 일괄 처리 및 필터 oplock을 지원합니다.|  
 |**확장 특성**|예||  
 |**구문 재분석 지점**|예||  
 |**영구 ACL**|예||  
 |**명명된 스트림**|예||  
-|**스파스 파일**|yes|스파스는 파일에 대해서만 설정할 수 있으며 데이터 스트림 스토리지에는 영향을 줍니다. FILESTREAM 데이터는 NTFS 볼륨에 저장되므로 FileTable 기능은 NTFS 파일 시스템에 대한 요청을 전달하여 스파스 파일을 지원합니다.|  
-|**압축**|yes||  
-|**암호화**|yes||  
+|**스파스 파일**|예|스파스는 파일에 대해서만 설정할 수 있으며 데이터 스트림 스토리지에는 영향을 줍니다. FILESTREAM 데이터는 NTFS 볼륨에 저장되므로 FileTable 기능은 NTFS 파일 시스템에 대한 요청을 전달하여 스파스 파일을 지원합니다.|  
+|**압축**|예||  
+|**암호화**|예||  
 |**TxF**|예||  
 |**파일 ID**|예||  
 |**개체 ID**|예||  
@@ -120,9 +121,9 @@ ms.locfileid: "72908782"
 |**하드 링크**|예||  
 |**짧은 이름**|예||  
 |**디렉터리 변경 알림**|예||  
-|**바이트 범위 잠금**|yes|바이트 범위 잠금에 대한 요청은 NTFS 파일 시스템에 전달됩니다.|  
+|**바이트 범위 잠금**|예|바이트 범위 잠금에 대한 요청은 NTFS 파일 시스템에 전달됩니다.|  
 |**메모리 매핑된 파일**|예||  
-|**취소 I/O**|yes||  
+|**취소 I/O**|예||  
 |**보안**|예|Windows 공유 수준 보안과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 테이블 및 열 수준 보안이 적용됩니다.|  
 |**USN 저널**|예|FileTable의 파일 및 디렉터리에 대한 메타데이터 변경은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 DML 작업입니다. 따라서 변경 내용이 해당 데이터베이스 로그 파일에 기록됩니다. 그러나 크기를 변경한 경우를 제외하고 NTFS USN 저널에는 변경 내용이 기록되지 않습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 변경 내용 추적 기능을 사용할 수 있습니다.|  
   

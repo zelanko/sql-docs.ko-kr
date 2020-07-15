@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: ee3854c45678cb29989849a6ee8b28e821b6d830
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb5a918c33a0c2017008079cc90693fb9c50309d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287840"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006273"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "76287840"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 { EXEC | EXECUTE } AS <context_specification>  
 [;]  
   
@@ -139,7 +138,7 @@ ms.locfileid: "76287840"
 ## <a name="permissions"></a>사용 권한  
  로그인에 **EXECUTE AS**를 지정하려면 호출자에게 지정한 로그인 이름에 대한 **IMPERSONATE** 권한이 있어야 하며 **IMPERSONATE ANY LOGIN** 권한에 의해 거부되지 않아야 합니다. 데이터베이스 사용자에 **EXECUTE AS**를 지정하려면 호출자에게 지정한 사용자 이름에 대한 **IMPERSONATE** 권한이 있어야 합니다. **EXECUTE AS CALLER**를 지정한 경우에는 **IMPERSONATE** 권한이 필요하지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ###  <a name="a-using-execute-as-and-revert-to-switch-context"></a><a name="_exampleA"></a> 1. EXECUTE AS 및 REVERT를 사용하여 컨텍스트 전환  
  다음 예에서는 여러 보안 주체를 사용하여 컨텍스트 실행 스택을 만듭니다. 그런 다음 `REVERT` 문을 사용하여 실행 컨텍스트를 이전 호출자로 다시 설정합니다. `REVERT` 문은 실행 컨텍스트가 원래 호출자로 설정될 때까지 스택 위로 이동하면서 여러 번 실행됩니다.  

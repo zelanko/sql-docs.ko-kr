@@ -1,5 +1,6 @@
 ---
 title: OOM(메모리 부족) 문제 해결 | Microsoft 문서
+description: SQL Server 메모리 내 OLTP의 메모리 부족 상황, 영향을 복원하고 해결하는 방법, 페이지 할당 오류 해결 방법, 모범 사례에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0db5cb560b4e50d903ceca431556f2bdc18365ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908446"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722393"
 ---
 # <a name="resolve-out-of-memory-issues"></a>OOM(메모리 부족) 문제 해결
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 다른 방법으로 더 많은 메모리를 사용합니다. 필요 증가에 따라 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 에 대해 설치하고 할당한 메모리의 양이 불충분해질 수 있습니다. 이 경우 메모리가 부족해질 수 있습니다. 이 항목에서는 OOM 상황에서 복구하는 방법을 설명합니다. 여러 OOM 상황을 방지하는 데 도움이 될 수 있는 지침은 [메모리 사용량 모니터링 및 문제 해결](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md) 을 참조하세요.  
   
@@ -26,13 +27,13 @@ ms.locfileid: "72908446"
   
 |항목|개요|  
 |-----------|--------------|  
-|[OOM으로 인한 데이터베이스 복원 실패 해결](#bkmk_resolveRecoveryFailures)|“' *\<resourcePoolName>* ' 리소스 풀의 메모리 부족으로 인해 ' *\<databaseName>* ' 데이터베이스에 대한 복원 작업이 실패했습니다”라는 오류 메시지가 나타나는 경우 수행할 작업입니다.|  
+|[OOM으로 인한 데이터베이스 복원 실패 해결](#bkmk_resolveRecoveryFailures)|"' *\<resourcePoolName>* ' 리소스 풀의 메모리 부족으로 인해 ' *\<databaseName>* ' 데이터베이스에 대한 복원 작업이 실패했습니다"라는 오류 메시지가 나타나는 경우 수행할 작업입니다.|  
 |[메모리 부족 또는 OOM 상황이 작업에 미치는 영향 해결](#bkmk_recoverFromOOM)|메모리 부족 문제가 성능에 부정적인 영향을 미치고 있음을 발견할 경우 수행할 작업입니다.|  
-|[사용 가능한 메모리가 충분한 경우 메모리 부족으로 인한 페이지 할당 오류 해결](#bkmk_PageAllocFailure)|작업에 사용할 수 있는 메모리가 충분한데 “' *\<resourcePoolName>* ' 리소스 풀의 메모리 부족으로 인해 ' *\<databaseName>* ' 데이터베이스에 대해 페이지를 할당할 수 없습니다...”라는 오류 메시지가 나타나는 경우 수행할 작업입니다.|
+|[사용 가능한 메모리가 충분한 경우 메모리 부족으로 인한 페이지 할당 오류 해결](#bkmk_PageAllocFailure)|작업에 사용할 수 있는 메모리가 충분한데 "' *\<resourcePoolName>* ' 리소스 풀의 메모리 부족으로 인해 ' *\<databaseName>* ' 데이터베이스에 대해 페이지를 할당할 수 없습니다"라는 오류 메시지가 나타나는 경우 수행할 작업입니다.|
 |[최선의 구현 방법: VM 환경에서 메모리 내 OLTP 사용](#bkmk_VMs)|가상화된 환경에서 메모리 내 OLTP를 사용할 때의 참고 사항입니다.|
   
 ##  <a name="resolve-database-restore-failures-due-to-oom"></a><a name="bkmk_resolveRecoveryFailures"></a> OOM으로 인한 데이터베이스 복원 실패 해결  
- 데이터베이스를 복원하려고 할 때 "' *\<resourcePoolName>* ' 리소스 풀의 메모리 부족으로 ' *\<databaseName>* ' 데이터베이스에 대한 복원 작업이 실패했습니다."라는 오류 메시지가 나타납니다. 이 오류는 서버에 데이터베이스를 복원하는 데 충분히 사용 가능한 메모리가 없는 것을 나타냅니다. 
+ 데이터베이스를 복원하려고 할 때 "' *\<resourcePoolName>* ' 리소스 풀의 메모리 부족으로 인해 ' *\<databaseName>* ' 데이터베이스 복원 작업이 실패했습니다"라는 오류 메시지가 나타납니다. 이 오류는 서버에 데이터베이스를 복원하는 데 충분히 사용 가능한 메모리가 없는 것을 나타냅니다. 
    
 데이터베이스를 복원할 서버에는 데이터베이스 백업 시 메모리 최적화 테이블에 대해 충분한 사용 가능한 메모리가 있어야 합니다. 그렇지 않으면 데이터베이스가 온라인 상태가 되지 않으며 주의 대상으로 표시됩니다.  
   

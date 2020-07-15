@@ -1,6 +1,6 @@
 ---
 title: Windows 인증을 사용하여 데이터베이스 미러링 구성(T-SQL)
-description: T-SQL(Transact-SQL)과 함께 Windows 인증을 사용하여 미러링 모니터가 있는 데이터베이스 미러링 세션을 만드는 데 필요한 모든 단계를 보여 주는 예제
+description: 이 문서에는 SQL Server에서 Transact-SQL과 함께 Windows 인증을 사용하여 미러링 모니터 서버가 있는 데이터베이스 미러링 세션을 만드는 예제가 포함되어 있습니다.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2a263cd161370a4d3f87c673209e82296ec2a28c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 343b04fe9f548c8f3c1274384c731cf6b74c1f95
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822267"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754650"
 ---
 # <a name="example-configure-database-mirroring-using-windows-authentication-transact-sql"></a>예제: Windows 인증을 사용하여 데이터베이스 미러링 구성(Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 예에서는 Windows 인증을 사용하는 미러링 모니터 서버가 있는 데이터베이스 미러링 세션을 만드는 데 필요한 모든 단계를 보여 줍니다. 이 항목의 예에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 단계를 사용하는 대신 데이터베이스 미러링 보안 구성 마법사를 데이터베이스 미러링 설치에 사용할 수도 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)을 참조하세요.  
   
 ## <a name="prerequisite"></a>필수 요소  

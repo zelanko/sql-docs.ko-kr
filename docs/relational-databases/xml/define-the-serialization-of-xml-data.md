@@ -1,5 +1,6 @@
 ---
 title: XML 데이터 직렬화 정의 | Microsoft 문서
+description: SQL Server에서 xml 데이터를 직렬화할 때 사용하는 규칙을 알아봅니다.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 37357c2d745dd741a872e151d72b5c453e91c1ec
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0ddeb0b98f163feb49eb258db29a58bfa5dd1f57
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664586"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738434"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>XML 데이터 직렬화 정의
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   xml 데이터 형식을 명시적이나 암시적으로 SQL 문자열 또는 이진 유형으로 캐스팅할 때 xml 데이터 형식의 콘텐츠는 이 항목에 설명된 규칙에 따라 직렬화됩니다.  
   
 ## <a name="serialization-encoding"></a>직렬화 인코딩  
  SQL 대상 유형이 VARBINARY인 경우 결과는 UTF-16 바이트 순서 표시가 앞에 표시되어 있지만 XML 선언이 없는 UTF-16으로 직렬화됩니다. 대상 유형이 너무 작으면 오류가 발생합니다.  
   
- 다음은 그 예입니다.  
+ 예를 들면 다음과 같습니다.  
   
 ```  
 select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
@@ -46,7 +47,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
   
  SQL 대상 유형이 NVARCHAR 또는 NCHAR인 경우 결과는 앞에 바이트 순서 표시가 없고 XML 선언이 없는 UTF-16으로 직렬화됩니다. 대상 유형이 너무 작으면 오류가 발생합니다.  
   
- 다음은 그 예입니다.  
+ 예를 들면 다음과 같습니다.  
   
 ```  
 select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
@@ -60,7 +61,7 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
   
  SQL 대상 유형이 VARCHAR 또는 CHAR인 경우 결과는 바이트 순서 표시나 XML 선언이 없이 데이터베이스의 데이터 정렬 코드 페이지에 따른 인코딩으로 직렬화됩니다. 대상 유형이 너무 작거나 값을 대상 데이터 정렬 코드 페이지에 매핑할 수 없는 경우 오류가 발생합니다.  
   
- 다음은 그 예입니다.  
+ 예를 들면 다음과 같습니다.  
   
 ```  
 select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
@@ -76,7 +77,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
 ## <a name="entitization-of-xml-characters-during-serialization"></a>직렬화 중 XML 문자 엔터티화  
  직렬화된 모든 XML 구조는 다시 구문 분석될 수 있어야 합니다. 따라서 일부 문자는 XML 파서의 정규화 단계를 통해 문자의 왕복 기능을 보존할 수 있도록 엔터티화된 방식으로 직렬화되어야 합니다. 하지만 일부 문자는 문서가 잘 작성되고 따라서 구문 분석될 수 있도록 엔터티화되어야 합니다. 다음은 직렬화 중에 적용되는 엔터티화 규칙입니다.  
   
--   &, \< 및 > 문자는 특성 값이나 요소 콘텐츠 내에 있는 경우 항상 &amp;, &lt; 및 &gt;로 매핑됩니다.  
+-   &, \<, and > 문자는 특성 값이나 요소 콘텐츠 내에 있는 경우 항상 &amp;, &lt; 및 &gt;로 매핑됩니다.  
   
 -   SQL Server는 특성 값을 묶을 때 따옴표(U+0022)를 사용하기 때문에 특성 값에 있는 따옴표는 &quot;로 엔터티화됩니다.  
   
@@ -88,7 +89,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
   
 -   공백만 포함된 텍스트 노드를 보호하기 위해 공백 문자 중 하나(일반적으로 마지막 공백 문자)는 해당 숫자 문자 참조로 엔터티화됩니다. 이러한 방식으로 다시 구문 분석 과정에서 구문 분석 중의 공백 처리 설정에 관계없이 공백 문자 텍스트 노드를 보존합니다.  
   
- 다음은 그 예입니다.  
+ 예를 들면 다음과 같습니다.  
   
 ```  
 declare @u NVARCHAR(50)  

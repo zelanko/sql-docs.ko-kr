@@ -1,5 +1,6 @@
 ---
 title: 보조 선택적 XML 인덱스 만들기, 변경 및 삭제 | Microsoft Docs
+description: 새 보조 선택적 XML 인덱스를 만들거나 기존 보조 선택적 XML 인덱스를 변경 또는 삭제하는 방법을 알아봅니다.
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,15 +11,15 @@ ms.assetid: 45128105-833b-40a9-9cc9-1ae03ac0b52b
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f86ff1eb81984414afaee99bd8fc76525825c219
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 85c338da45a60221d143012de4b8cff2bf5e716d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664617"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692193"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>보조 선택적 XML 인덱스 만들기, 변경 및 삭제
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   새 보조 선택적 XML 인덱스를 만들거나 기존 보조 선택적 XML 인덱스를 변경 또는 삭제하는 방법에 대해 설명합니다.  
   
 ##  <a name="creating-a-secondary-selective-xml-index"></a><a name="create"></a> 보조 선택적 XML 인덱스 만들기  

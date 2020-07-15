@@ -16,15 +16,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 241df9557a141eb45933ced261a7b55f98a6ec8e
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 8f9a92ee9ac1ed87a20515a267a80b8372c95366
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087354"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751794"
 ---
 # <a name="execution-plans"></a>실행 계획
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 쿼리를 실행하려면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]은(는) 필요한 데이터에 액세스하는 가장 효율적인 방법을 결정하는 명령문을 분석해야 합니다. 이 분석은 쿼리 최적화 프로그램이라는 구성 요소에 의해 처리됩니다. 최적화 프로그램에 대한 입력은 쿼리, 데이터베이스 스키마(테이블 및 인덱스 정의) 및 데이터베이스 통계로 이루어집니다. 쿼리 최적화 프로그램의 출력은 쿼리 실행 계획이며 경우에 따라 쿼리 계획이나 실행 계획이라고 합니다.   
 

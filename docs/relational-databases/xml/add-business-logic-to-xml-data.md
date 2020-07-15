@@ -1,5 +1,6 @@
 ---
 title: XML 데이터에 비즈니스 논리 추가 | Microsoft 문서
+description: XSL 변환을 적용하거나 데이터에 도메인별 제약 조건을 사용하거나 유효성 검사 규칙을 트리거하여 XML 데이터에 비즈니스 논리를 추가하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,22 +13,22 @@ helpviewer_keywords:
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: aaabf611574c60620df600264537436b41e85c18
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 524be57031368538271d1bde0016121644b9fed4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664807"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729163"
 ---
 # <a name="add-business-logic-to-xml-data"></a>XML 데이터에 비즈니스 논리 추가
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   비즈니스 논리를 여러 가지 방식으로 XML 데이터에 추가할 수 있습니다.  
   
 -   XML 데이터의 삽입 및 수정 중에 도메인 특정 제약 조건을 강화하도록 행 또는 열 제약 조건을 작성할 수 있습니다.  
   
 -   열에서 값을 삽입 또는 업데이트할 때 발생되는 트리거를 XML 열에 작성할 수 있습니다. 이 트리거는 도메인 특정 유효성 검사 규칙을 포함하거나 속성 테이블을 채울 수 있습니다.  
   
--   데이터베이스 엔진에 관리 코드를 실행하는 기능이 포함됩니다. 이 CLR(공용 언어 런타임) 통합을 사용하여 XML 값을 전달하는 관리 코드에 함수를 작성하고 System.Xml 네임스페이스에서 제공되는 XML 처리 기능을 사용할 수 있습니다. 한 예는 XSL 변환을 XML 데이터에 적용하는 것입니다. 또는 XML을 하나 이상의 관리 클래스로 역직렬화하고 관리 코드를 사용하여 작업할 수 있습니다.  
+-   데이터베이스 엔진에는 관리 코드를 실행하는 기능이 포함되어 있습니다. 이 CLR(공용 언어 런타임) 통합을 사용하여 XML 값을 전달하는 관리 코드에 함수를 작성하고 System.Xml 네임스페이스에서 제공되는 XML 처리 기능을 사용할 수 있습니다. 한 예는 XSL 변환을 XML 데이터에 적용하는 것입니다. 또는 XML을 하나 이상의 관리 클래스로 역직렬화하고 관리 코드를 사용하여 작업할 수 있습니다.  
   
 -   비즈니스 요구에 맞게 XML 열에서 처리를 시작하는 Transact-SQL 저장 프로시저와 함수를 작성할 수 있습니다.  
   

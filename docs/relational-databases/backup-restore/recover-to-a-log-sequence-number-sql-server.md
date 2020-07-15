@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a7b5233b44610ce5d2ad15d5a7aceda207f077dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56f5262fe130d391bf152d0924df814e15ffc316
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180899"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669833"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>로그 시퀀스 번호로 복구(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 전체 또는 대량 로그 복구 모델을 사용하는 데이터베이스와 관련된 내용을 다룹니다.  
   
  LSN(로그 시퀀스 번호)을 사용하여 복원 작업에 대한 복구 지점을 정의할 수 있습니다. 그러나 이 기능은 도구 공급업체를 위해 특별히 제작된 기능으로 일반적으로 유용한 기능은 아닙니다.  
@@ -64,13 +64,13 @@ ms.locfileid: "82180899"
   
      STOPATMARK는 복구 중지 지점을 나타내며 지정된 로그 레코드를 포함하는 지점까지 롤포워드됩니다.  
   
--   WITH STOPBEFOREMARK **='** lsn: _<lsn_number>_ **'** 절을 사용합니다. 여기서 lsn: *\<lsnNumber>* 는 지정한 LSN 번호가 포함된 로그 레코드 바로 앞의 로그 레코드가 복구 지점이 되도록 지정하는 문자열입니다.  
+-   WITH STOPBEFOREMARK **='** lsn: _<lsn_number>_ **'** 절을 사용합니다. 여기서 lsn: *\<lsnNumber>* 는 지정한 LSN이 포함된 로그 레코드가 복구 지점이 되도록 지정하는 문자열입니다.  
   
      STOPBEFOREMARK는 LSN에 롤포워드하고 롤포워드의 해당 로그 레코드를 제외합니다.  
   
  일반적으로 특정 트랜잭션을 포함하거나 제외하도록 선택합니다. 필수는 아니지만 대개 지정된 로그 레코드는 트랜잭션 커밋 레코드입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `AdventureWorks` 데이터베이스가 전체 복구 모델을 사용하도록 변경되었다고 가정합니다.  
   
 ```sql  

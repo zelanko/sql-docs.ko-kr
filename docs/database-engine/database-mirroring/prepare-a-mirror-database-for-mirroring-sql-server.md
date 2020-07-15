@@ -1,6 +1,6 @@
 ---
 title: 데이터베이스 미러링 준비
-description: 데이터베이스 미러링을 위해 SQL Server 데이터베이스를 준비하는 방법을 알아봅니다.
+description: SQL Server에서 SQL Server Management Studio 또는 Transact-SQL을 사용하여 SQL Server 데이터베이스의 데이터베이스 미러링을 준비하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 11/10/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f93ea5a9b37abcfac0310619b971e3ec5f1e625f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 74cd9b60e38fb011360bbfc678ccd49509531b59
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75255976"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735237"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>미러 데이터베이스의 미러링 준비(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   데이터베이스 미러링 세션을 시작하기 전에 데이터베이스 소유자나 시스템 관리자는 미러 데이터베이스가 생성되었으며 미러링 준비가 완료되었는지 확인해야 합니다. 새 미러 데이터베이스를 만들려면 최소한 주 데이터베이스의 전체 백업과 후속 로그 백업이 필요하며 WITH NORECOVERY를 사용하여 두 백업을 모두 미러 서버 인스턴스로 복원해야 합니다.  
   
  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에 미러 데이터베이스를 준비하는 방법에 대해 설명합니다.  

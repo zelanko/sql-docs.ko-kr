@@ -1,5 +1,6 @@
 ---
 title: SQL Server 메모리 내 OLTP 내부
+description: 테이블을 메모리 최적화로 선언해 메모리 내 OLTP 기능을 사용할 수 있도록 하는 SQL Server 메모리 내 OLTP 기술 구현에 대해 알아봅니다.
 ms.custom: seo-dt-2019
 ms.date: 09/14/2016
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: b14da361-a6b8-4d85-b196-7f2f13650f44
 author: jodebrui
 ms.author: jodebrui
-ms.openlocfilehash: d741f06741972637f7f9e6576a8dc5a21dabc681
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e13dc56d78a5305b8fb8221d5622d2cd49ade704
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412563"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735005"
 ---
 # <a name="sql-server-in-memory-oltp-internals-for-sql-server-2016"></a>SQL Server 2016용 SQL Server 메모리 내 OLTP 내부
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**요약:** 흔히 코드명 "Hekaton"으로 불리는 메모리 내 OLTP는 SQL Server 2014에서 도입되었습니다.
+**요약:** 흔히 코드명 “Hekaton”으로 불리는 메모리 내 OLTP는 SQL Server 2014에서 도입되었습니다.
 이 강력한 기술을 사용하면 많은 양의 메모리와 수십 개의 코어를 활용하여 OLTP 작업의 성능을 30-40배까지 늘릴 수 있습니다. SQL Server 2016에서는 메모리 내 OLTP에 계속 투자하여 SQL Server 2014에 있던 여러 제한 사항을 없애고 내부 처리 알고리즘을 향상하고 있으므로 메모리 내 OLTP에서 훨씬 향상된 기능을 제공할 수 있습니다. 이 백서에서는 SQL Server 2016 RTM을 기준으로 SQL Server 2016의 메모리 내 OLTP 기술에 대한 구현을 설명합니다. 메모리 내 OLTP를 사용하면 메모리 내 OLTP 기능을 사용할 수 있도록 '메모리에 최적화된' 테이블을 선언할 수 있습니다. 메모리에 최적화된 테이블은 완전히 트랜잭션이 될 수 있고 Transact-SQL을 사용하여 액세스할 수 있습니다. Transact-SQL 저장 프로시저, 트리거 및 스칼라 UDF를 기계어 코드로 컴파일하여 메모리 최적화 테이블의 성능을 더 향상할 수 있습니다. 이 엔진은 동시성이 높고 차단이 없도록 설계되었습니다.    
   
 **작성자:** Kalen Delaney  

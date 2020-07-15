@@ -1,5 +1,6 @@
 ---
 title: 서버 속성(메모리 페이지) | Microsoft Docs
+description: SQL Server의 서버 메모리 옵션을 파악합니다. 최소 및 최대 서버 메모리, 인덱스 생성 메모리 및 기타 설정에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/08/2016
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.memory.f1
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6eb32d81ccab79efa044ed4a21798bebe6ee3fd1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 83f8be52af8507203764cab7197359c1c99663a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025462"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726623"
 ---
 # <a name="server-properties---memory-page"></a>서버 속성 - 메모리 페이지
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 페이지를 사용하여 서버 메모리 옵션을 확인하거나 수정할 수 있습니다. **최소 서버 메모리** 를 0으로 설정하고 **최대 서버 메모리** 를 2147483647MB로 설정하면 운영 체제 및 기타 애플리케이션에서 현재 사용하고 있는 메모리에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 메모리가 항상 최적화됩니다. 컴퓨터와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 로드가 변경됨에 따라 할당되는 메모리도 달라집니다. 아래에 지정된 최소값과 최대값을 설정하여 이 동적 메모리 할당을 추가로 제한할 수 있습니다.  
   
 ## <a name="options"></a>옵션  

@@ -1,6 +1,6 @@
 ---
 title: 데이터베이스 미러링 역할 전환
-description: 데이터베이스 미러링 역할 전환에 대해 알아봅니다.
+description: 오류에 대응하여 또는 SQL Server에서 관리 목적으로 미러 서버가 주 서버가 되는 데이터베이스 미러링 역할 전환에 대해 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b310083d3317c9099532b8d08f2482efe193d95c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 624b42ae39cddd56c2401db346c497e6914fe7a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252788"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735158"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션 중 역할 전환(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   데이터베이스 미러링 세션에서는 *역할 전환*프로세스를 통해 주 역할과 미러 역할을 서로 바꿀 수 있습니다. 역할 전환 시 미러 서버는 주 서버에 대한 *장애 조치(Failover) 파트너* 역할을 하며 주 역할을 넘겨 받아 해당 데이터베이스 복사본을 복원하고 새로운 주 데이터베이스로 사용할 수 있도록 온라인 상태로 만듭니다. 이전 주 서버는 가능할 경우 미러 서버 역할을 맡으며 이 서버의 데이터베이스는 새 미러 데이터베이스가 됩니다. 여러 오류에 대한 응답이나 관리 용도로 역할이 전환될 수 있습니다.  
   
 > [!NOTE]  
@@ -69,9 +69,9 @@ ms.locfileid: "75252788"
   
 ||고성능|미러링 모니터 서버가 없는 보안 우선 모드|미러링 모니터 서버가 있는 보안 우선 모드|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
-|자동 장애 조치(automatic failover)|예|예|yes|  
-|수동 장애 조치(failover)|예|yes|yes|  
-|강제 서비스|yes|yes|예|  
+|자동 장애 조치(automatic failover)|예|예|예|  
+|수동 장애 조치(failover)|예|예|예|  
+|강제 서비스|예|예|예|  
   
  역할 전환 후 모든 데이터베이스 사용자가 새로운 주 데이터베이스에 액세스할 수 있게 하려면 특정 메타데이터가 두 파트너에 모두 있어야 합니다. 또한 데이터베이스가 정기적인 일정에 따라 계속 백업되게 하려면 새로운 주 서버에서 백업 작업을 만들어야 합니다. 자세한 내용은 [역할 전환 후 로그인 및 작업 관리&#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)를 참조하세요.  
   

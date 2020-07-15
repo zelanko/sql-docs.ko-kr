@@ -1,5 +1,6 @@
 ---
 title: 메모리 액세스에 최적화된 테이블에 대한 내구성 | Microsoft 문서
+description: 메모리 내 OLTP가 트랜잭션 로깅을 사용하고 디스크에 있는 스토리지에 데이터 변경 내용을 저장하여 메모리 최적화 테이블의 완전한 내구성을 제공하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ca651634947e730df4ae4dda70999c7839521659
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: abd3180e88d1950719ba07b4ef49def277655217
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67942805"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723248"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 내구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)]는 메모리 최적화 테이블에 대한 완전한 내구성을 제공합니다. 메모리 최적화 테이블을 변경한 트랜잭션을 커밋할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하면 (디스크 기반 테이블과 마찬가지로) 기본 스토리지를 사용할 수 있는 경우 변경 내용이 영구적이 됩니다(데이터베이스 다시 시작 유지). 내구성의 두 가지 주요 구성 요소는 트랜잭션 로깅 및 디스크상 스토리지에 데이터 변경 내용 저장입니다.  
   

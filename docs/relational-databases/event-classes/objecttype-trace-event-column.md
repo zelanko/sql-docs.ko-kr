@@ -1,5 +1,6 @@
 ---
 title: ObjectType 추적 이벤트 열 | Microsoft 문서
+description: SQL Server의 다양한 추적 이벤트에 사용되는 개체 형식 추적 이벤트 열의 가능한 값을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76675cf49ba1ac19e18b3bb4b96980aa30c4f6c3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f583813ae44cb180005b0cb9eeb592b3a946508c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115893"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755974"
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType 추적 이벤트 열
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Object Type 추적 이벤트 열은 다양한 추적 이벤트에 사용됩니다. 이 항목에서는 이 열에 사용할 수 있는 값과 해당 값의 정의에 대해 설명합니다.  
   
 ## <a name="object-type-column-values"></a>Object Type 열 값  

@@ -1,5 +1,6 @@
 ---
 title: 트랜잭션 복제 | Microsoft 문서
+description: 트랜잭션 복제는 데이터베이스의 스냅샷을 사용하여 일관성을 유지하기 위해 게시자에서 발생하는 변경 내용을 구독자에 적용합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 745001fb70cf3e210a1e5646fb198acfecdc8cee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8f7970284d3960b9c9ea91067a9adef553655b09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716658"
 ---
 # <a name="transactional-replication"></a>트랜잭션 복제
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
   트랜잭션 복제는 일반적으로 게시 데이터베이스 개체 및 데이터의 스냅샷으로 시작됩니다. 일반적으로 초기 스냅샷이 사용되자마자 게시자에서의 후속 데이터 변경 내용 및 스키마 수정 내용이 구독자로 배달됩니다. 이러한 작업은 거의 실시간으로 수행됩니다. 데이터 변경 내용은 게시자에서 발생한 것과 같은 순서 및 같은 트랜잭션 경계 내에서 구독자에 적용되므로 게시 내에서는 트랜잭션 일관성이 보장됩니다.  
   
  트랜잭션 복제는 일반적으로 서버 간 환경에 사용되며 다음과 같은 경우에 적합합니다.  

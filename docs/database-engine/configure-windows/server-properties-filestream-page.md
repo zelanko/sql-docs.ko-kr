@@ -1,5 +1,6 @@
 ---
 title: SQL Server 속성(FILESTREAM 페이지) | Microsoft Docs
+description: SQL Server의 FILESTREAM 설정을 파악합니다. FILESTREAM을 설정하는 방법과 원격 클라이언트 액세스 및 기타 속성을 구성하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,20 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - FILESTREAM [SQL Server], properties page
 ms.assetid: 8a8d38d3-e97a-4b09-a40b-659b2e3a5c47
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d40d7111bf7beac4c8a34f91481368b94f62c519
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 81edbd9bfc913f9d339625a993f866d44e1a313b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025463"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730927"
 ---
 # <a name="server-properties---filestream-page"></a>서버 속성 - FILESTREAM 페이지
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 페이지를 사용하여 이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치에 대해 FILESTREAM을 사용하도록 설정할 수 있습니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **Transact-SQL 액세스에 FILESTREAM 사용**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스에 FILESTREAM을 사용하도록 설정하려면 선택합니다. 다른 컨트롤 옵션을 사용하려면 먼저 이 컨트롤을 선택해야 합니다.  
   

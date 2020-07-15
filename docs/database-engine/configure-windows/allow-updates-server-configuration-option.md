@@ -1,5 +1,6 @@
 ---
 title: allow updates 서버 구성 옵션 | Microsoft Docs
+description: 사용되지 않는 SQL Server 구성 옵션인 '업데이트 허용'에 대해 알아봅니다. 이 옵션을 사용하면 RECONFIGURE 문이 어떻게 실패하는지 알아봅니다.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - allow updates option
 ms.assetid: 3967c3ed-280a-4de8-a2ce-393e82745a7b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3cccccebcbbd9054752aa8aa4e65f3f2bc17b342
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6e4cde898f4b7c95fa3dd46d23d073ba47b5fb43
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013156"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725261"
 ---
 # <a name="allow-updates-server-configuration-option"></a>allow updates 서버 구성 옵션
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   이 옵션은 **sp_configure** 저장 프로시저에 계속 제공되지만 이 옵션의 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 없습니다(설정의 영향 없음). 시스템 테이블에 대한 직접 업데이트는 지원되지 않습니다.  
   

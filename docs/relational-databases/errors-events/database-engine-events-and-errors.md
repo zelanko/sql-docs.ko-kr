@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 엔진 이벤트 및 오류
+description: 이 MSSQL 오류 코드 목록을 참조해 SQL Server 데이터베이스 엔진 이벤트에 대한 오류 메시지 관련 설명을 확인하세요.
 ms.custom: ''
 ms.date: 01/28/2020
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2f8ad61d068689bb0bc5c47e4e0921eddd9aad7c
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: f87cf70ebcb3a491d31fc7523ac6a4c0a7889a2f
+ms.sourcegitcommit: 49dab56fc71dc394f4dde9962ec44d99cc15027c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728254"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84158622"
 ---
 # <a name="database-engine-errors"></a>데이터베이스 엔진 오류
 
@@ -2031,7 +2032,7 @@ ORDER BY message_id
 |    4347    |    16    |    예    |    현재 복원 순서는 이전에 온라인 상태로 전환하는 중에 중단되었습니다. RESTORE DATABASE WITH RECOVERY를 사용하여 온라인으로의 전환을 완료할 수 있습니다.    |
 |    4348    |    16    |    예    |    데이터베이스 '%ls'의 온라인 복원에 실패했습니다. 오프라인 복원을 대신 수행하십시오. BACKUP LOG WITH NORECOVERY를 사용하여 오프라인 복원을 시작할 수 있습니다.    |
 |    4349    |    16    |    예    |    이 백업 세트의 로그는 LSN %.*ls에 시작하므로 데이터베이스에 적용하기에는 너무 이른 로그입니다. 이 복원 순서를 LSN %.* ls에 시작하려면 로그를 초기화해야 합니다. 이전 로그 백업을 사용하여 RESTORE LOG 문을 다시 실행하십시오.    |
-|    4350    |    16    |    예    |    RESTORE PAGE 문과 함께 제공된 페이지 목록의 형식이 잘못되었습니다. 문제가 발생하기 전에 %d 페이지는 올바르게 식별되었습니다. 문자 오프셋 %d에 문제가 있습니다. 모든 페이지를 <file>:<page> 형식의 숫자 값(각 숫자 값 쌍은 쉼표로 구분)으로 식별했는지 확인하세요(예: 다음은 그 예입니다.  PAGE='1:57,2:31'.    |
+|    4350    |    16    |    예    |    RESTORE PAGE 문과 함께 제공된 페이지 목록의 형식이 잘못되었습니다. 문제가 발생하기 전에 %d 페이지는 올바르게 식별되었습니다. 문자 오프셋 %d에 문제가 있습니다. 모든 페이지를 <file>:<page> 형식의 숫자 값(각 숫자 값 쌍은 쉼표로 구분)으로 식별했는지 확인하세요(예: 예를 들면 다음과 같습니다. PAGE='1:57,2:31'.    |
 |    4351    |    16    |    예    |    이전 버전의 SQL Server에서 가져온 백업은 fn_dump_dblog에서 지원하지 않습니다.    |
 |    4352    |    16    |    예    |    파일 '%ls'이(가) 너무 오래되어 이 데이터 백업에서 RESTORE LOG가 지원되지 않습니다. 정기 로그 백업을 사용하여 복원 시퀀스를 계속하십시오.    |
 |    4353    |    16    |    예    |    파일이 충돌하여 파일 '%.*ls'에 대해 재배치가 지정되었습니다. 논리 파일 이름에 대해서는 WITH MOVE 절을 하나만 지정해야 합니다.    |
@@ -5817,7 +5818,7 @@ ORDER BY message_id
 |    14596    |    16    |    예    |    DTS 패키지 '%s'이(가) 다른 범주에 있습니다.    |
 |    14597    |    16    |    예    |    DTS 패키지 ID '%s'이(가) 다른 이름으로 이미 있습니다.    |
 |    14598    |    16    |    예    |    Local, Repository 또는 LocalDefault DTS 범주는 삭제할 수 없습니다.    |
-|    14599    |    10    |    예    |    속성    |
+|    14599    |    10    |    예    |    Name    |
 |    14600    |    16    |    예    |    프록시 "%s"에 하위 시스템 "%s" 사용 권한이 부여되지 않았습니다.    |
 |    14601    |    16    |    예    |    운영자 "%s"이(가) 활성화되지 않았으므로 알림을 받을 수 없습니다.    |
 |    14602    |    16    |    예    |    운영자 "%s"에 지정된 전자 메일 주소가 없습니다.    |

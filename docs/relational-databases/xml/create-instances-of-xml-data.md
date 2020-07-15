@@ -1,5 +1,6 @@
 ---
 title: XML 데이터 인스턴스 만들기 | Microsoft 문서
+description: 대량 로드, 상수 할당, SELECT 문 및 FOR XML 절을 사용하거나 문자열 인스턴스를 형식 캐스팅하여 XML 데이터의 인스턴스를 만드는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 743ed3d936a51bf3c94f0bbd28ef490093edd570
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ac342c20eb38411c4b0d1d689c34a70cda04b873
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664675"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752569"
 ---
 # <a name="create-instances-of-xml-data"></a>XML 데이터 인스턴스 만들기
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   이 항목에서는 XML 인스턴스를 생성하는 방법에 대해 설명합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 다음과 같은 방법으로 XML 인스턴스를 생성할 수 있습니다.  
@@ -72,7 +73,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
 -   한 요소 또는 한 요소의 상위 항목 요소 중 하나에 적용된 `xml:space` 특성에 기본값이 있습니다.  
   
- 다음은 그 예입니다.  
+ 예를 들면 다음과 같습니다.  
   
 ```  
 declare @x xml  
@@ -86,7 +87,7 @@ select @x
 <root><child/></root>  
 ```  
   
- 그러나 이 동작을 변경할 수 있습니다. xml DT 인스턴스에 대한 공백을 유지하려면 CONVERT 연산자 및 값 1로 설정된 해당 옵션 *style* 매개 변수를 사용합니다. 다음은 그 예입니다.  
+ 그러나 이 동작을 변경할 수 있습니다. xml DT 인스턴스에 대한 공백을 유지하려면 CONVERT 연산자 및 값 1로 설정된 해당 옵션 *style* 매개 변수를 사용합니다. 예를 들면 다음과 같습니다.  
   
 ```  
 SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)  
@@ -94,7 +95,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  *style* 매개 변수가 사용되지 않거나 해당 값이 0으로 설정된 경우 xml DT 인스턴스의 변환에 대해 불필요한 공백이 유지되지 않습니다. 문자열 데이터를 xml DT 인스턴스로 변환할 때 CONVERT 연산자 및 해당 *style* 매개 변수를 사용하는 방법은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>예: 문자열 값을 형식화된 xml로 캐스팅하여 열에 할당  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>예제: 문자열 값을 형식화된 xml로 캐스팅하여 열에 할당  
  다음 예에서는 XML 조각이 포함된 문자열 변수를 **xml** 데이터 형식으로 캐스팅한 다음 **xml** 유형 열에 저장합니다.  
   
 ```  
@@ -122,7 +123,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>예: 문자열을 형식화된 xml로 변환하여 변수에 할당  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>예제: 문자열을 형식화된 xml로 변환하여 변수에 할당  
  다음 예에서는 문자열이 **xml** 유형으로 변환되고 **xml** 데이터 형식의 변수에 할당됩니다.  
   
 ```  
@@ -134,7 +135,7 @@ select @x
 ```  
   
 ## <a name="using-the-select-statement-with-a-for-xml-clause"></a>SELECT 문에 FOR XML 절 사용  
- SELECT 문에 FOR XML 절을 사용하여 결과를 XML로 반환할 수 있습니다. 다음은 그 예입니다.  
+ SELECT 문에 FOR XML 절을 사용하여 결과를 XML로 반환할 수 있습니다. 예를 들면 다음과 같습니다.  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -184,7 +185,7 @@ go
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 TYPE 지시어를 사용하는 FOR XML 쿼리와 같은 여러 서버 생성 결과로 클라이언트에 **xml** 데이터 형식 인스턴스를 반환합니다. 또는 **xml** 데이터 형식을 사용하여 SQL 열, 변수 및 출력 매개 변수로부터 XML을 반환합니다. 클라이언트 애플리케이션 코드에서 ADO.NET 공급자는 이 **xml** 데이터 형식 정보가 서버로부터 이진 인코딩으로 전송되도록 요청합니다. 하지만 TYPE 지시어 없이 FOR XML을 사용하는 경우 XML 데이터는 문자열 형식으로 반환됩니다. 클라이언트 공급자는 항상 두 XML 유형 중 하나를 처리할 수 있습니다.  
   
 ## <a name="using-constant-assignments"></a>상수 할당 사용  
- 문자열 상수는 **xml** 데이터 형식의 인스턴스가 예상되는 위치에 사용할 수 있습니다. 이것은 문자열을 XML로 암시적 캐스팅하는 것과 같습니다. 다음은 그 예입니다.  
+ 문자열 상수는 **xml** 데이터 형식의 인스턴스가 예상되는 위치에 사용할 수 있습니다. 이것은 문자열을 XML로 암시적 캐스팅하는 것과 같습니다. 예를 들면 다음과 같습니다.  
   
 ```  
 DECLARE @xmlDoc xml  

@@ -1,5 +1,6 @@
 ---
 title: 마이그레이션 평가용 PowerShell cmdlet | Microsoft 문서
+description: 메모리 내 OLTP용 SQL Server 데이터베이스에 있는 개체의 마이그레이션 적합성을 평가하는 Save-SqlMigrationReport에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 07/30/2019
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 117250d3-9982-47fe-94fd-6f29f6159940
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5272203fb1a1c0ac2f755a4da99c654b2595a7f0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f0c3489dab411718eb32e8ff4dd6c182ec59f2b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68698312"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722379"
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>마이그레이션 평가용 PowerShell cmdlet
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 `Save-SqlMigrationReport` cmdlet은 SQL Server 데이터베이스에서 여러 개체의 마이그레이션 적합성을 평가하는 도구입니다.
 
@@ -70,7 +71,7 @@ Save-SqlMigrationReport
 | 사용자 이름 | Windows 인증과 달리 SQL Server 인증을 통해 연결할 때 필요합니다. 이 외에는 생략됩니다. |
 | &nbsp; | &nbsp; |
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 cmdlet을 실행하려면 먼저 **SqlServer**라는 모듈을 설치해야 합니다.
 

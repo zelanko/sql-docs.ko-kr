@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: abc81687b3d75575d1bf8c7727ae3415fc7b3c91
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3cd5a1b5404728dde5f72928111391e13842fe35
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634043"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735343"
 ---
 # <a name="revoke-type-permissions-transact-sql"></a>REVOKE 유형 사용 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   유형에 대한 사용 권한을 취소합니다.  
   
@@ -72,7 +72,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  WITH GRANT OPTION을 부여 받은 사용 권한이 연계되어 취소되면 해당 사용 권한의 GRANT 및 DENY가 모두 취소됩니다.  
   
- \<database_principal>로서 이 쿼리를 실행하는 보안 주체가 사용 권한을 부여하는 권한을 취소할 수 있는 다른 보안 주체를 지정합니다.  
+ AS \<database_principal> 이 쿼리를 실행하는 보안 주체가 사용 권한을 취소하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다.  
   
  *Database_user*  
  데이터베이스 사용자를 지정합니다.  
@@ -127,7 +127,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="permissions"></a>사용 권한  
  해당 유형에 대한 CONTROL 권한이 필요합니다. AS 절을 사용하는 경우 지정한 보안 주체가 키를 소유해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 사용자 `VIEW DEFINITION`로부터 사용자 정의 형식 `PhoneNumber`에 대한 `KhalidR` 권한을 취소합니다. `CASCADE` 옵션은 `VIEW DEFINITION` 권한도 `KhalidR`이 부여한 보안 주체로부터 취소됨을 나타냅니다. `PhoneNumber`는 스키마 `Telemarketing`에 있습니다.  
   
 ```  

@@ -1,5 +1,6 @@
 ---
 title: XML 데이터 검색 및 쿼리 | Microsoft 문서
+description: XML 데이터를 쿼리할 때 지정해야 하는 쿼리 옵션과 데이터베이스에 저장할 때 보존되지 않는 XML 인스턴스 부분에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e754bc5e3fb738f36b309e7ff8a60c9f85bc258c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 86f908d6aa221b2c69be3d8960efac929cbf5306
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664869"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738395"
 ---
 # <a name="retrieve-and-query-xml-data"></a>XML 데이터 검색 및 쿼리
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   이 항목에서는 XML 데이터를 쿼리할 때 지정해야 하는 쿼리 옵션에 대해 설명합니다. 또한 XML 인스턴스가 데이터베이스에 저장될 때 보존되지 않는 인스턴스의 일부분에 대해 설명합니다.  
   
 ##  <a name="features-of-an-xml-instance-that-are-not-preserved"></a><a name="features"></a> 보존되지 않는 XML 인스턴스 기능  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 XML 인스턴스의 내용을 보존하지만 XML 데이터 모델에서 중요하다고 간주되지 않는 XML 인스턴스의 측면은 보존하지 않습니다. 즉, 검색된 XML 인스턴스는 서버에 저장된 인스턴스와 다를 수 있지만 동일한 정보를 포함한다는 의미입니다.  
   
 ### <a name="xml-declaration"></a>XML 선언  
- 인스턴스가 데이터베이스에 저장될 때 인스턴스에 있는 XML 선언이 보존되지 않습니다. 다음은 그 예입니다.  
+ 인스턴스가 데이터베이스에 저장될 때 인스턴스에 있는 XML 선언이 보존되지 않습니다. 예를 들면 다음과 같습니다.  
   
 ```  
 CREATE TABLE T1 (Col1 int primary key, Col2 xml)  
@@ -80,7 +81,7 @@ SELECT @x.query('/*')
 GO  
 ```  
   
- 결과의 네임스페이스 접두사는 다를 수 있습니다. 다음은 그 예입니다.  
+ 결과의 네임스페이스 접두사는 다를 수 있습니다. 예를 들면 다음과 같습니다.  
   
 ```  
 <p1:root xmlns:p1="abc"><p1:SomeElement/></p1:root>  

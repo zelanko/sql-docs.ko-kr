@@ -1,5 +1,6 @@
 ---
 title: 다양한 SQL Server 데이터 형식에 대한 FOR XML 지원 | Microsoft 문서
+description: SQL 쿼리의 FOR XML 절에서 지원하는 다양한 SQL Server 데이터 형식 관련 정보를 확인합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e050c3f6817bc6c975f8bf28f561fb91af109dd8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7b4e3d1ecc08c94e516b532cc8f0d68ef370e1e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729900"
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>다양한 SQL Server 데이터 형식에 대한 FOR XML 지원
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   이 섹션의 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터 형식에 대한 FOR XML 지원에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  

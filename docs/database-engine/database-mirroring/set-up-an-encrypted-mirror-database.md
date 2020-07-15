@@ -1,5 +1,6 @@
 ---
 title: 암호화된 미러 데이터베이스 설정 | Microsoft Docs
+description: sp_control_dbmasterkey_password로 자격 증명을 만들어 미러 데이터베이스의 데이터베이스 마스터 키 자동 암호 해독을 사용 하도록 설정하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7329a575-be29-46e0-abc6-1344db37920c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e96342ca114ae06d2c1d75954ccd32a674f900a4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a4711df54f96487447ed543945bd863a4bc7b598
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025232"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735141"
 ---
 # <a name="set-up-an-encrypted-mirror-database"></a>암호화된 미러 데이터베이스 설정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   미러 데이터베이스의 데이터베이스 마스터 키에 대한 자동 암호 해독을 사용하려면 마스터 키를 암호화하는 데 사용한 암호를 미러 서버 인스턴스에 제공해야 합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 및 이후 버전에는 암호를 전송하는 메커니즘이 포함됩니다. 데이터베이스 미러링을 시작하기 전에 **sp_control_dbmasterkey_password** 를 사용하여 데이터베이스 마스터 키에 대한 자격 증명을 만드세요. 미러되는 모든 데이터베이스에 대해 이 프로세스를 반복해야 합니다. 자세한 내용은 [sp_control_dbmasterkey_password&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md)를 참조하세요.  
   
 > [!CAUTION]  

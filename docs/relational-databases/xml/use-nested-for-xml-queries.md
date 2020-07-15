@@ -1,5 +1,6 @@
 ---
 title: 중첩 FOR XML 쿼리 사용 | Microsoft 문서
+description: 중첩 FOR XML 쿼리를 사용하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 384e312ca4deb3266da403e796ea93e504c6ab1a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f012f629d531955a4f662dfe3ee03f691c220003
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664991"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752544"
 ---
 # <a name="use-nested-for-xml-queries"></a>중첩 FOR XML 쿼리 사용
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **xml** 데이터 형식 및 [FOR XML 쿼리의 TYPE 지시어](../../relational-databases/xml/type-directive-in-for-xml-queries.md) 를 사용하여 FOR XML 쿼리로 반환되는 XML을 클라이언트는 물론 서버에서도 처리할 수 있습니다.  
   
 ## <a name="processing-with-xml-type-variables"></a>xml 유형 변수를 사용하여 처리  
@@ -84,7 +85,7 @@ SELECT  (SELECT ProductModelID, Name
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>내부 FOR XML 쿼리 결과를 외부 쿼리에 xml 유형 인스턴스로 반환  
- 내부 쿼리 결과가 `FOR XML` 유형으로 외부 쿼리로 반환되는 중첩 **xml** 쿼리를 작성할 수 있습니다. 다음은 그 예입니다.  
+ 내부 쿼리 결과가 `FOR XML` 유형으로 외부 쿼리로 반환되는 중첩 **xml** 쿼리를 작성할 수 있습니다. 예를 들면 다음과 같습니다.  
   
 ```  
 SELECT Col1,   
@@ -114,7 +115,7 @@ FOR XML AUTO, TYPE;
   
  사용하는 모드에 관계없이 중첩된 FOR XML 쿼리를 사용하면 결과 XML 형식을 보다 자유롭게 설명할 수 있습니다. EXPLICIT 모드 쿼리 대신 이러한 쿼리를 사용할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 항목에서는 중첩 FOR XML 쿼리의 예를 제공합니다.  
   
  [FOR XML 쿼리와 중첩 FOR XML 쿼리 비교](../../relational-databases/xml/for-xml-query-compared-to-nested-for-xml-query.md)  

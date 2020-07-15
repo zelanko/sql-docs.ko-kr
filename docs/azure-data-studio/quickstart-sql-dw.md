@@ -1,30 +1,29 @@
 ---
-title: Azure SQL Data Warehouse 연결 및 쿼리
-titleSuffix: Azure Data Studio
+title: Azure SQL 데이터 웨어하우스 연결 및 쿼리
 description: 이 빠른 시작에서는 Azure Data Studio를 사용하여 Azure SQL Data Warehouse에 연결하고 쿼리를 실행하는 방법을 보여 줍니다.
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: f07d13bc9110b5b9ec96aa17169687f471aeb197
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f9a8213dacb3a7f221d3a3c3e51f0ed94bb6990a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957110"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728007"
 ---
-# <a name="quickstart-use-name-sos-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>빠른 시작: [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 Azure SQL Data Warehouse에서 데이터 연결 및 쿼리
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>빠른 시작: Azure Data Studio를 사용하여 Azure SQL 데이터 웨어하우스의 데이터 연결 및 쿼리
 
-이 빠른 시작에서는 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 Azure SQL Data Warehouse에 연결한 다음, Transact-SQL 문을 사용하여 데이터를 만들고 삽입하고 선택하는 방법을 보여 줍니다. 
+이 빠른 시작에서는 Azure Data Studio를 사용하여 Azure SQL 데이터 웨어하우스에 연결한 다음, Transact-SQL 문을 사용하여 데이터를 만들고 삽입하고 선택하는 방법을 보여 줍니다. 
 
-## <a name="prerequisites"></a>사전 요구 사항
-이 빠른 시작을 완료하려면 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 및 Azure SQL Data Warehouse가 필요합니다.
+## <a name="prerequisites"></a>필수 구성 요소
+이 빠른 시작을 완료하려면 Azure Data Studio 및 Azure SQL 데이터 웨어하우스가 필요합니다.
 
-- [[!INCLUDE[name-sos](../includes/name-sos-short.md)] 설치](download.md)
+- [Azure Data Studio를 설치](download.md)합니다.
 
 SQL Data Warehouse가 아직 없는 경우 [SQL Data Warehouse 만들기](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision)를 참조하세요.
 
@@ -33,13 +32,13 @@ SQL Data Warehouse가 아직 없는 경우 [SQL Data Warehouse 만들기](https:
 
 ## <a name="connect-to-your-data-warehouse"></a>데이터 웨어하우스에 연결
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 Azure SQL Data Warehouse 서버에 대한 연결을 설정합니다.
+Azure Data Studio를 사용하여 Azure SQL Data Warehouse 서버에 대한 연결을 설정합니다.
 
-1. [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 처음 실행하면 **연결** 페이지가 열립니다. **연결** 페이지가 표시되지 않으면 **연결 추가** 또는 **서버** 사이드바의 **새 연결** 아이콘을 클릭합니다.
+1. Azure Data Studio를 처음 실행하면 **연결** 페이지가 열립니다. **연결** 페이지가 표시되지 않으면 **연결 추가** 또는 **서버** 사이드바의 **새 연결** 아이콘을 클릭합니다.
    
    ![새 연결 아이콘](media/quickstart-sql-dw/new-connection-icon.png)
 
-2. 이 문서에서는 ‘SQL 로그인’을 사용하지만 ‘Windows 인증’도 지원됩니다.   Azure SQL Server의 서버 이름, 사용자 이름 및 암호를 사용하여 다음과 같이 필드를 채웁니다. 
+2. 이 문서에서는 ‘SQL 로그인’을 사용하지만 ‘Windows 인증’도 지원됩니다.  Azure SQL Server의 서버 이름, 사용자 이름 및 암호를 사용하여 다음과 같이 필드를 채웁니다.
 
    | 설정       | 제안 값 | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -48,7 +47,7 @@ SQL Data Warehouse가 아직 없는 경우 [SQL Data Warehouse 만들기](https:
    | **사용자 이름** | 서버 관리자 계정 | 서버를 만들 때 지정한 계정입니다. |
    | **암호(SQL 로그인)** | 서버 관리자 계정의 암호 | 서버를 만들 때 지정한 암호입니다. |
    | **암호를 저장하시겠습니까?** | Yes 또는 No | 암호를 매번 입력하지 않으려면 Yes를 선택합니다. |
-   | **데이터베이스 이름** | ‘비워 둠’  | 연결할 데이터베이스의 이름입니다. |
+   | **데이터베이스 이름** | ‘비워 둠’ | 연결할 데이터베이스의 이름입니다. |
    | **서버 그룹** | <Default> 선택 | 서버 그룹을 만든 경우 특정 서버 그룹으로 설정할 수 있습니다. | 
 
    ![새 연결 아이콘](media/quickstart-sql-dw/new-connection-screen.png) 
@@ -57,7 +56,7 @@ SQL Data Warehouse가 아직 없는 경우 [SQL Data Warehouse 만들기](https:
 
    ![새 방화벽 규칙](media/quickstart-sql-dw/firewall.png)  
 
-4. 성공적으로 연결되면 서버가 ‘서버’ 사이드바에서 열립니다. 
+4. 성공적으로 연결되면 서버가 ‘서버’ 사이드바에서 열립니다.
 
 ## <a name="create-the-tutorial-data-warehouse"></a>자습서 데이터 웨어하우스 만들기
 1. 개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 선택합니다.

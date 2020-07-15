@@ -1,5 +1,6 @@
 ---
 title: Always Encrypted 서버 구성 옵션에 대한 Enclave 형식 구성 | Microsoft Docs
+description: Always Encrypted의 보안 Enclave를 사용하거나 사용하지 않는 방법을 알아봅니다. Enclave가 올바르게 초기화되었는지 확인하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 09/24/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4786c512850d161d9b7ab33f2a12cd0bd077b2bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e16bbd33d9353c02cf72e3c931a5d8749197f5d
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73593829"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818355"
 ---
 # <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>Always Encrypted 서버 구성 옵션에 대한 Enclave 형식 구성
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "73593829"
 
 VBS Enclave 구성 방법에 대한 단계별 지침은 [SQL Server에서 보안 Enclave를 사용한 Always Encrypted 사용](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md#step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server)을 참조하세요.
 
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예제에서는 보안 Enclave를 사용하도록 설정하고 Enclave 형식을 VBS로 설정합니다.
 
 ```sql  

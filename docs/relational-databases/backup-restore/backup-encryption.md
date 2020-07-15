@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6efb6c939f0881e1fd5a90e0d7df96303d40bea4
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 502feae1c94b905069b567bcf62d82fc128299a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220525"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728492"
 ---
 # <a name="backup-encryption"></a>백업 암호화
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업의 암호화 옵션에 대해 간략하게 설명합니다. 여기에서는 백업 중의 암호화에 대한 사용법, 이점 및 권장 방법을 살펴봅니다.  
 
 ## <a name="overview"></a><a name="Overview"></a> 개요  
@@ -73,8 +73,20 @@ ms.locfileid: "82220525"
 
 ##  <a name="permissions"></a><a name="Permissions"></a> 권한  
 
-백업을 암호화하거나 암호화된 백업에서 복원하려면, 데이터베이스 백업을 암호화하는 데 사용되는 인증서 또는 비대칭 키에 대한 **VIEW DEFINITION** 권한을 사용합니다.  
-  
+암호화된 데이터베이스에서 백업 작업을 수행하는 계정에는 특정 권한이 필요합니다. 
+
+- 백업 중인 데이터베이스에 대한 **db_backupoperator** 데이터베이스 수준 역할. 이 역할은 암호화에 관계없이 필요합니다. 
+- `master` 데이터베이스의 인증서에 대한 **VIEW DEFINITION** 권한.
+
+   다음 예는 인증서에 대한 적절한 권한을 부여합니다. 
+   
+   ```tsql
+   USE [master]
+   GO
+   GRANT VIEW DEFINITION ON CERTIFICATE::[<SERVER_CERT>] TO [<db_account>]
+   GO
+   ```
+
 > [!NOTE]  
 > TDE 인증서에 대한 액세스 권한은 TDE로 보호되는 데이터베이스를 백업하거나 복원하는 데 필요하지 않습니다.  
   

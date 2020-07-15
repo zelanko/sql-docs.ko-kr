@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: ff8fb262b643390f2914a4a5e6c42dcc887206f8
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 7faa39c696c6dd7dfc7e1055935ab96b3cb468f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728620"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85679488"
 ---
 # <a name="mssqlserver_5120"></a>MSSQLSERVER_5120
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>세부 정보  
   
-|||  
-|-|-|  
+| attribute | 값 |  
+| :-------- | :---- |  
 |제품 이름|SQL Server|  
 |이벤트 ID|5120|  
 |이벤트 원본|MSSQLSERVER|  
@@ -35,7 +35,7 @@ ms.locfileid: "81728620"
 ## <a name="explanation"></a>설명  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 데이터베이스 파일을 열지 못했습니다.  메시지에 제공된 운영 체제 오류는 보다 구체적인 실패 원인을 가리킵니다. 일반적으로 이 오류는 [17204](mssqlserver-17204-database-engine-error.md) 또는 [17207](mssqlserver-17207-database-engine-error.md)과 같은 다른 오류와 함께 표시될 수 있습니다.
   
-## <a name="user-action"></a>사용자 동작  
+## <a name="user-action"></a>사용자 조치  
   
   운영 체제 오류를 진단하고 수정한 후 작업을 다시 시도하세요. Microsoft가 제품에서 이 오류가 발생하는 영역 범위를 좁히는 데 도움이 되는 여러 가지 상태가 있습니다. 
   
@@ -46,7 +46,9 @@ ms.locfileid: "81728620"
    -  작업 유형(서버 시작 시 데이터베이스 열기, 데이터베이스 연결, 데이터베이스 복원 등)에 따라 가장과 데이터베이스 파일 액세스에 사용되는 계정이 다를 수 있습니다. [데이터 및 로그 파일 보안](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN) 항목을 검토하여 어떤 작업이 어떤 권한을 어떤 계정에 설정하는지 파악합니다. Windows SysInternals [프로세스 모니터](https://docs.microsoft.com/sysinternals/downloads/procmon)와 같은 도구를 사용하여 파일 액세스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 서비스 시작 계정(또는 서비스 SID) 또는 가장된 계정의 보안 컨텍스트에서 일어나는지 확인합니다.
 
       [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 ALTER DATABASE 또는 CREATE DATABASE 작업을 실행하는 로그인의 사용자 자격 증명을 가장하는 경우 프로세스 모니터 도구(예)에서 다음과 같은 정보를 확인할 수 있습니다.
-        ```Date & Time:      3/27/2010 8:26:08 PM
+      
+        ```
+        Date & Time:      3/27/2010 8:26:08 PM
         Event Class:        File System
         Operation:          CreateFile
         Result:                ACCESS DENIED
@@ -59,28 +61,29 @@ ms.locfileid: "81728620"
         Attributes:          N
         ShareMode:       Read
         AllocationSize:   n/a
-        Impersonating: DomainName\UserName```
+        Impersonating: DomainName\UserName
+        ```
   
   
-### Attaching Files that Reside on a Network-attached storage  
-If you cannot re-attach a database that resides on network-attached storage, a message like this may be logged in the Application log:
+### <a name="attaching-files-that-reside-on-a-network-attached-storage"></a>네트워크 연결 스토리지에 있는 파일 연결  
+네트워크 연결 스토리지에 있는 데이터베이스를 다시 연결할 수 없는 경우 애플리케이션 로그에 다음과 같은 메시지가 기록될 수 있습니다.
 
 ```Msg 5120, Level 16, State 101, Line 1 Unable to open the physical file "\\servername\sharename\filename.mdf". Operating system error 5: (Access is denied.).```
 
-This problem occurs because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resets the file permissions when the database is detached. When you try to reattach the database, a failure occurs because of limited share permissions.
+이 문제는 데이터베이스가 분리되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 파일 사용 권한을 다시 설정하기 때문에 발생합니다. 데이터베이스를 다시 연결하려고 하면 제한된 공유 권한으로 인해 오류가 발생합니다.
 
-To resolve, follow these steps:
-1. Use the -T startup option to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use this startup option to turn on trace flag 1802 in [SQL Server Configuration Manager](../sql-server-configuration-manager.md) (see [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) for information on 1802). For more information about how to change the startup parameters, see [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)
+이 문제를 해결하려면 다음 단계를 수행합니다.
+1. -T 시작 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작합니다. 이 시작 옵션을 사용하여 [SQL Server 구성 관리자](../sql-server-configuration-manager.md)에서 추적 플래그 1802를 설정합니다. 1802에 대한 자세한 내용은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)를 참조하세요. 시작 매개 변수를 변경하는 방법에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../../database-engine/configure-windows/database-engine-service-startup-options.md)을 참조하세요.
 
-2. Use the following command to detach the database.
-```tsql
- exec sp_detach_db DatabaseName
- go 
-```
+2. 다음 명령을 사용하여 데이터베이스를 분리합니다.
+   ```tsql
+    exec sp_detach_db DatabaseName
+    go 
+   ```
 
 3. 다음 명령을 사용하여 데이터베이스를 다시 연결합니다.
-```tsql
-exec sp_attach_db DatabaseName, '\\Network-attached storage_Path\DatabaseMDFFile.mdf', '\\Network-attached storage_Path\DatabaseLDFFile.ldf'
-go
-```
+   ```tsql
+   exec sp_attach_db DatabaseName, '\\Network-attached storage_Path\DatabaseMDFFile.mdf', '\\Network-attached storage_Path\DatabaseLDFFile.ldf'
+   go
+   ```
  

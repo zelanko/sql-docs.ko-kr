@@ -1,5 +1,6 @@
 ---
 title: 메모리 액세스에 최적화된 개체에 대한 내구성 정의 | Microsoft 문서
+description: SQL Server의 메모리 최적화 테이블 내구성 옵션인 기본 SCHEMA_AND_DATA 및 SCHEMA_ONLY에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 0fe85fbf-8e8d-4983-96fd-d04b3c7d6d65
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 764824a74480b6d17c890f57714b0df9221bf523
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a6fb32139ff2d3330616d842b092dac13ec1f1b4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68219877"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723277"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>메모리 액세스에 최적화된 개체에 대한 내구성 정의
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   메모리 최적화 테이블에는 두 가지 내구성 옵션이 있습니다.  
   

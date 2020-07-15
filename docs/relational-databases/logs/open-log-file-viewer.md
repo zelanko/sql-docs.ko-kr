@@ -1,5 +1,6 @@
 ---
 title: 로그 파일 뷰어 열기 | Microsoft 문서
+description: SQL Server Management Studio의 로그 파일 뷰어를 사용하여 몇몇 로그에 캡처되는 오류 및 이벤트에 대한 정보에 액세스하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9e76c7eb85306f63e9be230c76159efbab25444a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e6124fa7c8b4a0ab4637c52d7ceb38d4abc698fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68083979"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667961"
 ---
 # <a name="open-log-file-viewer"></a>로그 파일 뷰어 열기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 로그 파일 뷰어를 사용하여 다음 로그에 기록되는 오류 및 이벤트에 대한 정보에 액세스할 수 있습니다.  
   
 -   감사 컬렉션  

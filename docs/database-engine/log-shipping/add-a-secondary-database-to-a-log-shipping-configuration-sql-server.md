@@ -1,6 +1,6 @@
 ---
 title: 로그 전달 보조 추가
-description: 기존 로그 전달 구성에 보조 데이터베이스를 추가하는 방법에 대해 설명합니다.
+description: SQL Server에서 SQL Server Management Studio 또는 Transact-SQL을 사용하여 기존 로그 전달 구성에 보조 데이터베이스를 추가하는 방법을 설명합니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 66a194a26529834a3d77229a21b7556b03da635e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a140f44e848c7b8b00b8c8b7891467dde74822cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822155"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696735"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>로그 전달 구성에 보조 데이터베이스 추가(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 기존의 로그 전달 구성에 보조 데이터베이스를 추가하는 방법에 대해 설명합니다.  
   
   

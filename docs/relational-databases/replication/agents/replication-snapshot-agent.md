@@ -1,5 +1,6 @@
 ---
 title: 복제 스냅샷 에이전트 | Microsoft 문서
+description: SQL Server에서 복제 스냅샷 에이전트는 스냅샷 파일을 준비하고, 이 파일을 폴더에 저장하고, 배포 데이터베이스에 동기화 작업을 기록합니다.
 ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3c48422e86cfd3f42e6634a3ca3be1d0dbc85f24
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 7132154bcb61e84d052891c200589cf157b31f65
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528487"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730225"
 ---
 # <a name="replication-snapshot-agent"></a>Replication Snapshot Agent
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
   복제 스냅샷 에이전트는 게시된 테이블과 데이터베이스 개체의 스키마 및 데이터를 포함하는 스냅샷 파일을 준비하여 스냅샷 폴더에 저장하고 배포 데이터베이스에 동기화 작업을 기록하는 실행 파일입니다.  
   
 > [!NOTE]  
@@ -217,7 +218,7 @@ snapshot [ -?]
  에이전트 매개 변수에 사용할 에이전트 프로필을 지정합니다. **ProfileName** 이 NULL이면 에이전트 프로필이 사용되지 않습니다. **ProfileName** 이 지정되지 않으면 에이전트 유형에 대한 기본 프로필이 사용됩니다. 자세한 내용은 [복제 에이전트 프로필](../../../relational-databases/replication/agents/replication-agent-profiles.md)을 참조하세요.  
   
  **-PublisherDB** _publisher_database_  
- 게시 데이터베이스의 이름입니다.  이 매개 변수는 Oracle 게시자에 대해서는 지원되지 않습니다.  
+ 게시 데이터베이스의 이름입니다. 이 매개 변수는 Oracle 게시자에 대해서는 지원되지 않습니다.  
   
  **-PublisherDeadlockPriority** [ **-1**|**0**|**1**]  
  교착 상태가 발생할 경우 게시자에 대한 스냅샷 에이전트 연결의 우선 순위입니다. 이 매개 변수는 스냅샷을 생성하는 동안 스냅샷 에이전트와 사용자 애플리케이션 사이에서 발생할 수 있는 교착 상태를 해결하기 위해 지정됩니다.  

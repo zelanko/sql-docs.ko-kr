@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 57d18e823d76e039f93eff8e5c685239686fe505
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c734833e71bcfc0ffb04deb227404b089b78d3cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634298"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736291"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 절(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 FOR 절을 사용하여 쿼리 결과에 대해 다음 옵션 중 하나를 지정합니다.
   

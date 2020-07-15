@@ -1,5 +1,6 @@
 ---
 title: 메모리 내 OLTP(메모리 내 최적화) | Microsoft 문서
+description: 이러한 샘플과 리소스를 메모리 내 OLTP에 사용하면 SQL Server에서 성능을 크게 향상시킬 수 있습니다.
 ms.custom: ''
 ms.date: 11/21/2019
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1546b8fbf4abeafcb9051e17fae7c949babcfc24
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: b0575e8b5072dccf3c197180bec3941ca3585ba6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922125"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723128"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>메모리 내 OLTP 및 메모리 최적화
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 는 트랜잭션 처리, 데이터 수집 및 데이터 로드, 일시적인 데이터 시나리오의 성능을 크게 개선할 수 있습니다.  기본 코드 및 정보를 즉시 활용하려면 직접 작성한 메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저를 빠르게 테스트해야 합니다. 자세한 내용은 다음을 참조하세요.
  -  [빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)을 참조하세요.  

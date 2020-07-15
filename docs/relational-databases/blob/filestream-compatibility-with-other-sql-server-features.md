@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4c47e7af592383bee13399c2220fee25fa8ed2c2
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: e2d2fdefb8684a95c8c80376e0bb353125b911ab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999844"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642840"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM과 기타 SQL Server 기능 간 호환성
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   FILESTREAM 데이터는 파일 시스템에 있으므로 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다음 기능과 함께 FILESTREAM을 사용할 경우 몇 가지 고려 사항, 지침 및 제한 사항에 대해 설명합니다.  
   
 -   [SSIS(SQL Server Integration Services)](#ssis)  

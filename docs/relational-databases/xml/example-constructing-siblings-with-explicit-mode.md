@@ -1,5 +1,6 @@
 ---
-title: '예제: EXPLICIT 모드를 사용하여 형제 생성 | Microsoft 문서'
+title: '예제: EXPLICIT 모드로 형제 구성 | Microsoft Docs'
+description: FOR XML 절과 함께 EXPLICIT 모드를 사용하여 XML 형제를 생성하는 SQL 쿼리 예제를 살펴봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 606c83c59147bf6ef171d4fa4f802d13f55f8219
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e969fd0d003d44b3aaf97efad6e029d52e146dfa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006826"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633112"
 ---
-# <a name="example-constructing-siblings-with-explicit-mode"></a>예: EXPLICIT 모드를 사용하여 형제 생성
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="example-constructing-siblings-with-explicit-mode"></a>예제: EXPLICIT 모드를 사용하여 형제 생성
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   판매 주문 정보를 제공하는 XML을 생성한다고 가정해 보십시오. <`SalesPerson`> 및 <`OrderDetail`> 요소는 형제입니다. 각 Order에는 <`OrderHeader`> 요소 및 <`SalesPerson`> 요소가 하나씩 있고 하나 이상의 <`OrderDetail`> 요소가 있습니다.  
   
 ```  

@@ -1,5 +1,6 @@
 ---
 title: FOR XML 쿼리의 TYPE 지시어 | Microsoft 문서
+description: FOR XML 절과 함께 TYPE 지시문을 사용하여 쿼리 결과를 XML 데이터로 반환하도록 요청하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa7bd23de60f82aa83620e0d81a1887c1c997634
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 36c5f8a3178d82f899b7128434af4467d4f6f846
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665274"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729838"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML 쿼리의 TYPE 지시어
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [xml&#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md)을 지원하므로 필요에 따라 TYPE 지시어를 지정하여 FOR XML 쿼리 결과가 **xml** 데이터 형식으로 반환되도록 요청할 수 있습니다. 그러면 서버에서 FOR XML 쿼리 결과를 처리할 수 있습니다. 예를 들어 이 결과에 대해 XQuery 쿼리를 지정하거나 **xml** 유형 변수에 결과를 할당하거나 [중첩 FOR XML 쿼리](../../relational-databases/xml/use-nested-for-xml-queries.md)를 쓸 수 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 TYPE 지시어를 사용하거나 **xml** 데이터 형식을 사용하여 SQL 테이블 열과 출력 매개 변수에서 XML 인스턴스 데이터 값을 반환하는 FOR XML 쿼리와 같은 여러 서버 구문의 결과로 XML 데이터 형식 인스턴스 데이터를 클라이언트에 반환합니다. 클라이언트 애플리케이션 코드에서 ADO.NET 공급자가 이 XML 데이터 형식 정보를 서버에서 이진 인코딩으로 보내도록 요청합니다. 그러나 TYPE 지시어 없이 FOR XML을 사용하면 XML 데이터가 문자열 유형으로 반환됩니다. 클라이언트 공급자는 항상 두 XML 유형 중 하나를 처리할 수 있습니다. TYPE 지시어가 없는 최상위 FOR XML은 커서와 함께 사용할 수 없습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 TYPE 지시어를 FOR XML 쿼리와 함께 사용하는 방법을 보여 줍니다.  
   
 ### <a name="retrieving-for-xml-query-results-as-xml-type"></a>FOR XML 쿼리 결과를 xml 유형으로 검색  

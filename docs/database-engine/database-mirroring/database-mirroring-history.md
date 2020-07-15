@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 미러링 기록 | Microsoft Docs
+description: SQL Server Management Studio에서 지정된 서버 인스턴스의 미러링된 데이터베이스의 미러링 상태 기록을 보는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 329eda4ba3c0bdabc355242d626a3d0ac89e6033
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d2fd21c91577d2e2db1773bbbcbff942842cf043
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006429"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751891"
 ---
 # <a name="database-mirroring-history"></a>데이터베이스 미러링 기록
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 대화 상자를 사용하여 지정된 서버 인스턴스의 미러링된 데이터베이스에 대한 미러링 상태 기록을 볼 수 있습니다.  
   
  **SQL Server Management Studio를 사용하여 데이터베이스 미러링을 모니터링하려면**  

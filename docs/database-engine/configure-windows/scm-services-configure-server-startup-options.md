@@ -1,5 +1,6 @@
 ---
 title: 서버 시작 옵션 구성(SQL Server 구성 관리자) | Microsoft Docs
+description: SQL Server 데이터베이스 엔진이 시작 시 사용하는 옵션을 설정하는 방법을 알아봅니다. 시작 매개 변수 변경 시 제한 사항을 살펴봅니다.
 ms.custom: ''
 ms.date: 11/23/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 - SQL Server services, setting startup options
 - SQL Server services, setting startup parameters
 ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: c5e81ec7dcb3f86b5200ee2de3a65a9b56823b1a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0c64e7217cb6ff9f2f190c81ea612fe41b9d0889
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68024673"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651477"
 ---
 # <a name="scm-services---configure-server-startup-options"></a>SCM 서비스 - 서버 시작 옵션 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 시작될 때마다 사용할 시작 옵션을 구성하는 방법에 대해 설명합니다. 시작 옵션 목록에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../../database-engine/configure-windows/database-engine-service-startup-options.md)을 참조하세요.  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  

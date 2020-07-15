@@ -10,15 +10,15 @@ ms.technology: backup-restore
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c62a2dfb1a6728098c3faeed32ce842dbab4304e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fe880bc4296985811d21b06b905b3ceb4bef58a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77146735"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659477"
 ---
 # <a name="sql-server-back-up-applications---volume-shadow-copy-service-vss-and-sql-writer"></a>SQL Server 백업 애플리케이션 - VSS(볼륨 섀도 복사본 서비스) 및 SQL 기록기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server는 타사 백업 애플리케이션이 VSS 프레임워크를 사용하여 데이터베이스 파일을 백업할 수 있도록 기록기(SQL 기록기)를 제공하여 VSS(볼륨 섀도 복사본 서비스)를 지원합니다. 이 문서에서는 SQL 기록기 구성 요소 및 SQL Server 데이터베이스의 VSS 스냅샷 만들기 및 복원 프로세스에서 해당 역할에 대해 설명합니다. 또한 VSS 프레임워크에서 백업 애플리케이션과 함께 작동하도록 SQL 기록기를 구성하고 사용하는 방법에 대한 세부 정보도 캡처합니다.
 
@@ -255,9 +255,9 @@ SQL 기록기에는 백업해야 하는 데이터베이스를 자세히 설명�
 
 **스냅샷 만들기** 이 단계에는 VSS 프레임워크와 SQL 기록기 간에 수행되는 일련의 상호 작용이 포함됩니다.
 
-1. ‘스냅샷 준비’.  SQL 기록기가 SQL Server를 호출하여 스냅샷을 만들 준비를 합니다.
-1. ‘동결’. SQL 기록기가 SQL Server를 호출하여 스냅샷에 백업되는 각 데이터베이스에 대해 모든 데이터베이스 I/O를 동결합니다.  동결 이벤트가 VSS 프레임워크로 반환되면 VSS에서 스냅샷을 만듭니다.
-1. ‘재개’.  이 이벤트에서는 SQL 기록기가 SQL Server 인스턴스를 호출하여 정상적인 I/O 작업을 “재개”하거나 계속합니다.
+1. ‘스냅샷 준비’. SQL 기록기가 SQL Server를 호출하여 스냅샷을 만들 준비를 합니다.
+1. ‘동결’. SQL 기록기가 SQL Server를 호출하여 스냅샷에 백업되는 각 데이터베이스에 대해 모든 데이터베이스 I/O를 동결합니다. 동결 이벤트가 VSS 프레임워크로 반환되면 VSS에서 스냅샷을 만듭니다.
+1. ‘재개’. 이 이벤트에서는 SQL 기록기가 SQL Server 인스턴스를 호출하여 정상적인 I/O 작업을 “재개”하거나 계속합니다.
 
 
 데이터베이스에 대한 모든 쓰기를 차단하지 않기 위해 스냅샷 생성 단계는 빠르게 수행됩니다(60초 미만).

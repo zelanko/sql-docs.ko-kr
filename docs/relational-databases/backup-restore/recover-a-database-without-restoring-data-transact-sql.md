@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: ef3adbbf44c495e0449da174915704c4da9306dc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2d82dd94f3419b0f25c6c5ece04b94277144742c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834515"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669951"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>데이터를 복원하지 않고 데이터베이스 복구(Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   일반적으로 데이터베이스가 복구되기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 있는 모든 데이터가 복원됩니다. 하지만 예를 들어 데이터베이스와 일치하는 읽기 전용 파일을 복원할 경우 복원 작업에서 백업을 실제로 복원하지 않고 데이터베이스를 복구할 수 있습니다. 이 작업을 *복구 전용 복원*이라고 합니다. 오프라인 데이터가 데이터베이스와 이미 일치하고 사용 가능한 상태로만 만들면 되는 경우 복구 전용 복원 작업은 데이터베이스 복구를 완료하고 데이터를 온라인으로 전환합니다.  
   
  복구 전용 복원은 전체 데이터베이스 또는 하나 이상의 파일 또는 파일 그룹에 대해 수행될 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "82834515"
  `RESTORE DATABASE *database_name* WITH RECOVERY`  
   
 > [!NOTE]  
-> FROM **=** \<*backup_device>* 절은 백업이 필요 없는 복구 전용 복원에는 사용되지 않습니다.  
+> FROM **=** \<*backup_device>* 절은 백업이 필요 없으므로 복구 전용 복원에 사용하지 않습니다.  
   
  **예제**  
   

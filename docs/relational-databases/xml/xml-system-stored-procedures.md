@@ -1,5 +1,6 @@
 ---
 title: XML 시스템 저장 프로시저 | Microsoft 문서
+description: OPENXML을 사용하여 쿼리를 작성하는 데 사용하는 SQL Server에서 제공하는 XML 시스템 저장 프로시저에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e60c7f85-6823-4d28-93d6-b053d08cc830
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b39e3fef3b3729f9f2d4e58fe29e303d3070cb64
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4e3b6a8e61befce3dd68bd692976b25d0d9d7259
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664858"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729761"
 ---
 # <a name="xml-system-stored-procedures"></a>XML 시스템 저장 프로시저
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   SQL Server는 OPENXML과 함께 사용되는 다음 시스템 저장 프로시저를 제공합니다.  
   
 -   [sp_xml_preparedocument&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)  

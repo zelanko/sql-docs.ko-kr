@@ -22,15 +22,15 @@ ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 952d0be032c470eae7dc34b468afc3b33f5040b9
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 01d90b3a146c8e110b5cfad11b4d198a1f97c609
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529247"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720879"
 ---
 # <a name="sql-server-replication-publication-properties--dialog-box"></a>SQL Server 복제 '게시 속성' 대화 상자
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 이 페이지에서는 게시 속성 대화 상자 내에 있는 페이지를 설명합니다. 
 
@@ -108,7 +108,7 @@ ms.locfileid: "81529247"
  **테이블 찾기**  
  병합 게시에만 사용할 수 있습니다. **테이블 찾기** 를 클릭하여 복잡한 필터 트리에서 테이블을 찾을 수 있습니다. 관계가 복잡하게 설정된 데이터베이스에서는 한 테이블이 여러 테이블에 조인될 수 있으므로 필터 트리에서 두 개 이상의 위치에 표시될 수 있습니다.  
   
- 실제 테이블은 트리의 한 위치에만 표시되고 나머지 위치에서는 바로 가기로 표시됩니다. 테이블 바로 가기는 테이블에 대한 참조일 뿐이므로 해당 테이블의 자식 노드는 표시되지 않습니다. 바로 가기 노드는 바로 가기 화살표로 표시되며 해당 노드를 확장하면 **\<tablename>에 대한 테이블을 보려면 [테이블 찾기]를 클릭하십시오.** 라는 텍스트가 표시됩니다.  
+ 실제 테이블은 트리의 한 위치에만 표시되고 나머지 위치에서는 바로 가기로 표시됩니다. 테이블 바로 가기는 테이블에 대한 참조일 뿐이므로 해당 테이블의 자식 노드는 표시되지 않습니다. 바로 가기 노드는 바로 가기 화살표로 표시되며 해당 노드를 확장하면 **\<tablename>의 테이블을 보려면 테이블 찾기를 클릭하세요**라는 텍스트가 표시됩니다.  
   
  창에서 바로 가기 노드를 선택하고 **테이블 찾기** 를 클릭하면 창이 확장되고 테이블이 강조 표시됩니다. 바로 가기 노드를 선택하지 않고 **테이블 찾기** 를 클릭하면 **테이블 찾기** 대화 상자가 시작됩니다.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "81529247"
 
 ## <a name="data-partitions"></a>데이터 파티션
 데이터 파티션  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]  
   **게시 속성** 대화 상자의 **데이터 파티션** 페이지를 사용하여 매개 변수가 있는 필터링을 사용하는 병합 게시를 위한 데이터 파티션을 정의할 수 있습니다. 파티션을 정의하고 나면 이들 파티션에 대한 스냅샷을 생성하여 구독자의 연결 속성(로그인 및/또는 컴퓨터 이름)을 기준으로 다양한 구독자에 대한 각기 다른 초기 데이터 집합을 제공할 수 있습니다. 또한 구독자가 처음 동기화할 때 파티션에 사용할 수 있는 스냅샷을 가지고 있지 않은 경우 스냅샷 배달 및 생성을 요청할 수 있도록 선택할 수 있습니다. 자세한 내용은 [매개 변수가 있는 필터로 병합 게시에 대한 스냅샷 만들기](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
   
 ### <a name="options"></a>옵션  
@@ -190,7 +190,7 @@ ms.locfileid: "81529247"
 
 ## <a name="snapshot"></a>스냅샷
 스냅샷  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]  
   **게시 속성** 대화 상자의 **스냅샷** 페이지를 사용하여 스냅샷 형식, 스냅샷 폴더 위치 및 스냅샷 적용 전후 실행할 스크립트를 설정할 수 있습니다. 스냅샷 폴더를 공유로 지정해야 하며 파일을 읽고 폴더에 쓰는 에이전트에 대한 충분한 권한이 있어야 합니다. 폴더의 적절한 보안 유지 방법에 대한 자세한 내용은 [스냅샷 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
   
 > [!NOTE]  

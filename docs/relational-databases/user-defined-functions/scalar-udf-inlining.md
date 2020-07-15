@@ -2,7 +2,7 @@
 title: Microsoft SQL Server의 스칼라 UDF 인라인 처리 | Microsoft Docs
 description: 스칼라 UDF 인라인 처리 기능은 SQL Server(SQL Server 2019부터)에서 스칼라 UDF를 호출하는 쿼리의 성능을 향상하기 위한 것입니다.
 ms.custom: ''
-ms.date: 03/17/2020
+ms.date: 06/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,16 +15,16 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 79608c96e56a7f70d10aaa4b897db837bdf03acc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 395d639cd62894c91fbf0690467e60aaeac57bea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79486552"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727093"
 ---
 # <a name="scalar-udf-inlining"></a>스칼라 UDF 인라인 처리
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 문서에서는 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 기능 모음의 기능인 스칼라 UDF 인라인 처리를 소개합니다. 이 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]부터)에서 스칼라 UDF를 호출하는 쿼리의 성능을 향상합니다.
 
@@ -155,12 +155,24 @@ UDF의 논리 복잡성에 따라 결과적인 쿼리 계획이 더 크고 복�
 - UDF에 추가되는 서명은 없습니다.
 - UDF는 파티션 함수가 아닙니다.
 - UDF에는 CTE(공용 테이블 식)에 대한 참조가 포함되지 않습니다.
+- UDF는 인라인 적용시 결과가 바뀔 수 있는 내장 함수(예: @@ROWCOUNT)에 대한 참조를 포함하지 않습니다(Microsoft SQL Server 2019 CU2에서 추가된 제한).
+- UDF는 스칼라 UDF에 매개 변수로 전달되는 집계 함수를 포함하지 않습니다(Microsoft SQL Server 2019 CU2에 추가된 제한).
+- UDF는 기본 제공 보기(예: OBJECT_ID, Microsoft SQL Server 2019 CU2에 추가된 제한)를 참조하지 않습니다.
+-   UDF는 XML 메서드를 참조하지 않습니다(Microsoft SQL Server 2019 CU4에 추가된 제한).
+-   UDF는 "TOP 1"이 없는 ORDER BY를 이용하는 SELECT를 포함하지 않습니다(Microsoft SQL Server 2019 CU4에 추가된 제한).
+-   UDF는 ORDER BY 절과 함께 할당을 수행하는 SELECT 쿼리를 포함하지 않습니다(예: SELECT @x = @x +1 FROM table ORDER BY column_name, Microsoft SQL Server 2019 CU4에 추가된 제한).
+- UDF는 여러 개의 RETURN 문을 포함하지 않습니다(SQL Server 2019 CU5에 추가된 제한).
+- UDF는 RETURN 문에서 호출되지 않습니다(SQL Server 2019 CU5에 추가된 제한).
+- UDF는 STRING_AGG 함수를 참조하지 않습니다(SQL Server 2019 CU5에 추가된 제한). 
 
 <sup>1</sup> `SELECT`(변수 누적/집계 있음, 예: `SELECT @val += col1 FROM table1`)는 인라인 처리에 지원되지 않습니다.
 
 <sup>2</sup> 재귀 UDF는 특정 깊이에만 인라인 처리됩니다.
 
 <sup>3</sup> 현재 시스템 시간에 따라 결과가 달라지는 내장 함수는 시간 종속입니다. 부작용이 있는 함수의 예로 일부 내부 글로벌 상태를 업데이트할 수 있는 내장 함수를 들 수 있습니다. 이러한 함수는 내부 상태에 따라 호출될 때마다 다른 결과를 반환합니다.
+
+> [!NOTE]
+> 최신 T-SQL Scalar UDF 인라인 처리 수정 및 인라인 처리 적격 시나리오에 관한 내용은 다음 기술 자료 문서를 참조하십시오. [수정: SQL Server 2019에서의 Scalar UDF 인라인 처리 문제](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019).
 
 ### <a name="checking-whether-or-not-a-udf-can-be-inlined"></a>UDF를 인라인 처리할 수 있는지 여부를 확인합니다.
 모든 T-SQL 스칼라 UDF에 대해 [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 보기에는 UDF의 인라인 처리 가능 여부를 표시하는 `is_inlineable`이라는 속성이 포함되어 있습니다. 
@@ -189,7 +201,7 @@ UDF의 논리 복잡성에 따라 결과적인 쿼리 계획이 더 크고 복�
 - 특정 Xevent는 내보냅니다.
 
 ## <a name="enabling-scalar-udf-inlining"></a>스칼라 UDF 인라인 처리 사용
-데이터베이스에 대해 호환성 수준 150을 사용하도록 설정하여 워크로드가 스칼라 UDF 인라인 처리에 자동으로 적합하도록 만들 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 설정할 수 있습니다. 다음은 그 예입니다.  
+데이터베이스에 대해 호환성 수준 150을 사용하도록 설정하여 워크로드가 스칼라 UDF 인라인 처리에 자동으로 적합하도록 만들 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 설정할 수 있습니다. 예를 들면 다음과 같습니다.  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -210,7 +222,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF;
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = ON;
 ```
 
-ON이면 이 설정은 [`sys.database_scoped_configurations`](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md)에서 사용하는 것으로 표시됩니다. `DISABLE_TSQL_SCALAR_UDF_INLINING`을 `USE HINT` 쿼리 힌트로 지정하여 특정 쿼리에 대해 스칼라 UDF 인라인 처리를 사용하지 않게 설정할 수도 있습니다. 다음은 그 예입니다.
+ON이면 이 설정은 [`sys.database_scoped_configurations`](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md)에서 사용하는 것으로 표시됩니다. `DISABLE_TSQL_SCALAR_UDF_INLINING`을 `USE HINT` 쿼리 힌트로 지정하여 특정 쿼리에 대해 스칼라 UDF 인라인 처리를 사용하지 않게 설정할 수도 있습니다. 예를 들면 다음과 같습니다.
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (dbo.discount_price(L_EXTENDEDPRICE, L_DISCOUNT)) 
@@ -224,7 +236,7 @@ OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 `USE HINT` 쿼리 힌트는 데이터베이스 범위 구성 또는 호환성 수준 설정보다 우선합니다.
 
 `CREATE FUNCTION` 또는 `ALTER FUNCTION` 문에서 INLINE 절을 사용하는 특정 UDF에서는 스칼라 UDF 인라인 처리를 사용하지 않도록 설정할 수 있습니다.
-다음은 그 예입니다.
+예를 들면 다음과 같습니다.
 
 ```sql
 CREATE OR ALTER FUNCTION dbo.discount_price(@price DECIMAL(12,2), @discount DECIMAL(12,2))
@@ -259,11 +271,13 @@ END
 1. 인라인 처리에는 새 조인이 들어가므로 쿼리 수준 조인 힌트가 더 이상 유효하지 않을 수 있습니다. 로컬 조인 힌트를 대신 사용해야 합니다.
 1. 인라인 스칼라 UDF를 참조하는 보기를 인덱싱할 수 없습니다. 이런 보기에 대해 인덱스를 만들려면 참조된 UDF에 대해 인라인 처리를 사용하지 않습니다.
 1. UDF 인라인 처리에서 [동적 데이터 마스킹](../security/dynamic-data-masking.md)의 동작에 차이가 있을 수 있습니다. (UDF의 논리에 따라) 특정 상황에서는 인라인 처리가 w.r.t 마스킹 출력 열보다 더 보수적일 수 있습니다. UDF에서 참조하는 열이 출력 열이 아닌 시나리오에서는 마스킹되지 않습니다. 
-1. UDF가 기본 제공 함수(예: `SCOPE_IDENTITY()`, `@@ROWCOUNT` 또는 `@@ERROR`)를 참조할 경우 기본 제공 함수에서 반환한 값이 인라인 처리에 따라 변경됩니다. 이 동작 변경은 인라인 처리가 UDF 내 문 범위를 변경하기 때문입니다.
+1. UDF가 기본 제공 함수(예: `SCOPE_IDENTITY()`, `@@ROWCOUNT` 또는 `@@ERROR`)를 참조할 경우 기본 제공 함수에서 반환한 값이 인라인 처리에 따라 변경됩니다. 이 동작 변경은 인라인 처리가 UDF 내 문 범위를 변경하기 때문입니다. Microsoft SQL Server 2019 CU2부터는 UDF 참조에 특정 내장 함수(예: @@ROWCOUNT)가 있는 경우 인라인 처리를 차단합니다.
 
 ## <a name="see-also"></a>참고 항목
 [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 성능 센터](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)     
 [실행 계획 논리 및 물리 연산자 참조](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
 [조인](../../relational-databases/performance/joins.md)     
-[지능형 쿼리 처리 시연](https://aka.ms/IQPDemos)      
+[지능형 쿼리 처리 시연](https://aka.ms/IQPDemos)     
+[수정: SQL Server 2019에서의 Scalar UDF 인라인 처리 문제](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019)     
+

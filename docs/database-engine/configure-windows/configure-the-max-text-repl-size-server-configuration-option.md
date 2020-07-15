@@ -1,5 +1,6 @@
 ---
 title: max text repl size 서버 구성 옵션 구성 | Microsoft Docs
+description: max text repl size 옵션을 사용하여 SQL Server가 복제 또는 캡처된 열에 추가할 특정 데이터 형식의 크기를 제한하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - max text repl size option
 ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: abbdd3ed8e522150ad03ec334752e7ec3cf2763f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 85a47542c9681cd2dc004dae788d77010e2e0efd
+ms.sourcegitcommit: da836a2e23bd2ed56d2a72983f7b5b18c6f13342
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012551"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85090558"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>max text repl size 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

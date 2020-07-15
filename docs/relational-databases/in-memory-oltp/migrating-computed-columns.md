@@ -1,5 +1,6 @@
 ---
 title: 계산 열 마이그레이션 | Microsoft 문서
+description: 메모리 최적화 테이블에서 계산 열을 시뮬레이트하는 방법을 알아봅니다. 마이그레이션 후 계산 열 기능이 필요한지 여부를 평가합니다.
 ms.custom: ''
 ms.date: 12/17/2016
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 author: MightyPen
 ms.author: genemi
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 36a0a6f82499a617a37b7cc9b848a33ec29c2ce3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2b378b5921397ec90d44a4d63de3aeaf944d8ab2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050133"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730889"
 ---
 # <a name="migrating-computed-columns"></a>계산 열 마이그레이션
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 계산 열은 메모리 최적화 테이블에서 지원되지 않습니다. 그러나 계산 열을 시뮬레이션할 수 있습니다.
 

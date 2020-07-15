@@ -1,5 +1,6 @@
 ---
 title: 로그 전달 및 복제(SQL Server) | Microsoft Docs
+description: 로그 전달이 주 데이터베이스에 대해 수행된 모든 삽입, 업데이트 또는 삭제 작업의 트랜잭션 로그를 보조 데이터베이스에 적용하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ce1bf24e0f76a7e6d61f2b3bdc3c43c89863d85a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6c72f43b6605821ad984a9ad9dc98378aea258bd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68030823"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696049"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>로그 전달 및 복제(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   로그 전달에는 일반적으로 서로 다른 컴퓨터에 있는 두 개의 단일 데이터베이스 복사본이 사용됩니다. 클라이언트는 항상 하나의 데이터베이스 복사본만 사용할 수 있습니다. 이 복사본을 주 데이터베이스라고 합니다. 클라이언트가 주 데이터베이스에 업데이트한 내용은 로그 전달을 사용하여 보조 데이터베이스라고 부르는 다른 데이터베이스 복사본에 전달됩니다. 로그 전달에는 주 데이터베이스에 대해 수행된 모든 삽입, 업데이트 또는 삭제 작업의 트랜잭션 로그를 보조 데이터베이스에 적용하는 작업이 포함됩니다.  
   
  로그 전달은 다음과 같은 동작의 경우 복제와 함께 사용될 수 있습니다.  
@@ -109,7 +110,7 @@ ms.locfileid: "68030823"
   
     -   게시가 필터링되지 않은 경우 최신 구독자와 동기화하여 게시 데이터베이스를 최신 상태로 만들 수 있습니다.  
   
-    -   게시가 필터링된 경우 게시 데이터베이스를 최신 상태로 만들 수 없을 수도 있습니다. 각 구독이 동부, 서부, 남부 및 북부 중 한 지역에 대한 고객 데이터만 수신하도록 분할된 테이블을 고려해 봅시다. 각 데이터 파티션에 대해 최소 하나의 구독자가 있는 경우 각 파티션에 대해 구독자와 동기화하면 게시 데이터베이스가 최신 상태가 됩니다. 그러나 예를 들어 서부 파티션의 데이터가 구독자에 복제되지 않은 경우에는 게시자에서 이 데이터를 최신 상태로 만들 수 없습니다. 이 경우에는 게시자 및 구독자의 데이터가 일치하도록 모든 구독을 다시 초기화하는 것이 좋습니다. 자세한 내용은 [구독 다시 초기화](../../relational-databases/replication/reinitialize-subscriptions.md)를 참조하세요.  
+    -   게시가 필터링된 경우 게시 데이터베이스를 최신 상태로 만들 수 없을 수도 있습니다. 각 구독이 동부, 서부, 남부 및 북부 중 한 지역에 대한 고객 데이터만 수신하도록 분할된 테이블을 고려해 봅니다. 각 데이터 파티션에 대해 최소 하나의 구독자가 있는 경우 각 파티션에 대해 구독자와 동기화하면 게시 데이터베이스가 최신 상태가 됩니다. 그러나 예를 들어 서부 파티션의 데이터가 구독자에 복제되지 않은 경우에는 게시자에서 이 데이터를 최신 상태로 만들 수 없습니다. 이 경우에는 게시자 및 구독자의 데이터가 일치하도록 모든 구독을 다시 초기화하는 것이 좋습니다. 자세한 내용은 [구독 다시 초기화](../../relational-databases/replication/reinitialize-subscriptions.md)를 참조하세요.  
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]를 실행하는 구독자와 동기화할 경우에 해당 구독은 익명일 수 없습니다. 구독은 클라이언트 구독 또는 서버 구독(이전 버전에서는 로컬 구독 및 전역 구독)이어야 합니다. 자세한 내용은 [데이터 동기화](../../relational-databases/replication/synchronize-data.md)를 참조하세요.  
   

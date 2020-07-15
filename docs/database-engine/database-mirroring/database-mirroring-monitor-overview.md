@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 미러링 모니터 개요 | Microsoft Docs
+description: 데이터베이스 미러링 모니터를 사용하여 데이터베이스 미러링 세션에서 데이터 흐름을 확인하고 문제를 해결하기 위해 미러된 데이터베이스를 모니터링하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 07ad2379f82552a3db0ceee30305f7fdc38003fe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d5dbfd56f461da431843d1788d9226a72448b57
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006409"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730925"
 ---
 # <a name="database-mirroring-monitor-overview"></a>데이터베이스 미러링 모니터 개요
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   올바른 사용 권한이 있는 경우 데이터베이스 미러링 모니터를 사용하여 서버 인스턴스에 있는 미러된 데이터베이스의 모든 하위 집합을 모니터링할 수 있습니다. 모니터링을 사용하면 데이터베이스 미러링 세션에서 데이터가 제대로 흐르고 있는지 확인할 수 있습니다. 또한 데이터베이스 미러링 모니터는 데이터 흐름 감소의 원인을 해결하는 데 도움이 됩니다.  
   
  각 장애 조치(Failover) 파트너에서 개별적으로 모니터링하기 위해 미러된 데이터베이스를 등록할 수 있습니다. 데이터베이스를 등록하면 데이터베이스 미러링 모니터는 데이터베이스에 대한 다음 정보를 캐시합니다.  
@@ -51,7 +52,7 @@ ms.locfileid: "68006409"
  *<Database_name>*  
  데이터베이스 미러링 모니터에 등록한 미러된 데이터베이스의 이름입니다.  
   
- *\<상태>*  
+ *\<Status>*  
  가능한 상태 및 연관된 아이콘은 다음과 같습니다.  
   
 |아이콘|상태|Description|  

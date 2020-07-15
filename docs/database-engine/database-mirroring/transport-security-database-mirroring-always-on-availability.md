@@ -1,6 +1,6 @@
 ---
 title: '전송 보안: 가용성 그룹 및 데이터베이스 미러링'
-description: SQL Server에서 호스트되는 Always On 가용성 그룹 또는 데이터베이스 미러링 세션에 참여하는 데이터베이스 간에 교환되는 메시지의 전송을 보호하는 방법에 대해 알아봅니다.
+description: SQL Server에서 호스트되는 Always On 가용성 그룹 또는 데이터베이스 미러링 세션에 참여하는 데이터베이스 사이에서 메시지를 보호하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 85ca560e24fac75897d0b65946121e3ca4251e20
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 36c0f0d6ff5e4da43291f27c7f7bd47d1b736d1b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252745"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719996"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>전송 보안 - 데이터베이스 미러링 - Always On 가용성 그룹
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   전송 보안에는 데이터베이스 간에 교환되는 메시지의 인증과 암호화(선택적)가 포함됩니다. 데이터베이스 미러링 및 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]의 경우 데이터베이스 미러링 엔드포인트에 인증과 암호화가 구성됩니다. 데이터베이스 미러링 엔드포인트에 대한 개요를 보려면 [데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)을 참조하세요.  
   

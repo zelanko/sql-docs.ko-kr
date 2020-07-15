@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 엔진 오류 심각도 | Microsoft 문서
+description: 이 심각도 수준 목록을 사용하여 SQL Server 데이터베이스 엔진이 오류를 생성할 때 SQL Server에 발생한 문제의 유형을 이해할 수 있습니다.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d0984d0003f6a20c410b91f99dc6fd1b4ae3f545
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 16bf5154c5ab08b790739e287ccb2934b942e591
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73844328"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727522"
 ---
 # <a name="database-engine-error-severities"></a>데이터베이스 엔진 오류 심각도
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 오류가 발생한 경우 오류 심각도는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 발견된 문제의 유형을 나타냅니다.  
   
 ## <a name="levels-of-severity"></a>심각도  

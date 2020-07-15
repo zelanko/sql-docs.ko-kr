@@ -1,38 +1,38 @@
 ---
 title: '빠른 시작: PostgreSQL 연결 및 쿼리'
-titleSuffix: Azure Data Studio
 description: 이 빠른 시작에서는 Azure Data Studio를 사용하여 PostgreSQL에 연결하고 쿼리를 실행하는 방법을 보여 줍니다.
 ms.custom: seodec18
 ms.date: 09/18/2019
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f429848636de075e64ebaf6f74bc69f7faef5359
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71127247"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717158"
 ---
-# <a name="quickstart-connect-and-query-postgresql-using-name-sos"></a>빠른 시작: [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 PostgreSQL 연결 및 쿼리
-이 빠른 시작에서는 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 Postgres에 연결한 다음 SQL 문을 사용하여 데이터베이스 *tutorialdb*를 만들고 쿼리하는 방법을 보여 줍니다.
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-postgresql"></a>빠른 시작: Azure Data Studio를 사용하여 PostgreSQL 연결 및 쿼리
 
-## <a name="prerequisites"></a>사전 요구 사항
+이 빠른 시작에서는 Azure Data Studio를 사용하여 Postgres에 연결한 다음 SQL 문을 사용하여 데이터베이스 *tutorialdb*를 만들고 쿼리하는 방법을 보여 줍니다.
 
-이 빠른 시작을 완료하려면 [!INCLUDE[name-sos](../includes/name-sos-short.md)], [!INCLUDE[name-sos](../includes/name-sos-short.md)]용 PostgreSQL 확장 및 PostgreSQL 서버에 대한 액세스 권한이 필요합니다.
+## <a name="prerequisites"></a>필수 구성 요소
 
-- [[!INCLUDE[name-sos](../includes/name-sos-short.md)] 설치](download.md)
+이 빠른 시작을 완료하려면 Azure Data Studio, Azure Data Studio용 PostgreSQL 확장 및 PostgreSQL 서버에 대한 액세스 권한이 필요합니다.
+
+- [Azure Data Studio를 설치합니다.](download.md)
 - [Azure Data Studio용 PostgreSQL 확장을 설치합니다](postgres-extension.md).
 - [PostgreSQL을 설치합니다](https://www.postgresql.org/download/). (또는 [az postgres up](https://docs.microsoft.com/azure/postgresql/quickstart-create-server-up-azure-cli)을 사용하여 클라우드에서 Postgres 데이터베이스를 만들 수 있습니다). 
 
 ## <a name="connect-to-postgresql"></a>PostgreSQL에 연결
 
-1. **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** 를 시작합니다.
+1. **Azure Data Studio**를 시작합니다.
 
-2. [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 처음으로 시작하면 **연결** 대화 상자가 열립니다. **연결** 대화 상자가 열리지 않으면 **서버** 페이지에서 **새 연결** 아이콘을 클릭합니다.
+2. Azure Data Studio를 처음으로 시작하면 **연결** 대화 상자가 열립니다. **연결** 대화 상자가 열리지 않으면 **서버** 페이지에서 **새 연결** 아이콘을 클릭합니다.
 
    ![새 연결 아이콘](media/quickstart-postgresql/new-connection-icon.png)
 
@@ -49,9 +49,9 @@ ms.locfileid: "71127247"
    | **사용자 이름** | postgres | 로그인할 사용자 이름입니다. |
    | **암호(SQL 로그인)** | *password* | 로그인하는 계정의 암호입니다. |
    | **암호** | *확인* | 연결할 때마다 암호를 입력하지 않으려면 이 확인란을 선택합니다. |
-   | **데이터베이스 이름** | \<기본값\> | 연결에서 데이터베이스를 지정하도록 하려면 이 항목을 채웁니다. |
-   | **서버 그룹** | \<기본값\> | 이 옵션을 사용하면 만드는 특정 서버 그룹에 이 연결을 할당할 수 있습니다. | 
-   | **이름(선택 사항)** | ‘비워 둠’  | 이 옵션을 사용하면 서버의 이름을 지정할 수 있습니다. | 
+   | **데이터베이스 이름** | \<Default\> | 연결에서 데이터베이스를 지정하도록 하려면 이 항목을 채웁니다. |
+   | **서버 그룹** | \<Default\> | 이 옵션을 사용하면 만드는 특정 서버 그룹에 이 연결을 할당할 수 있습니다. | 
+   | **이름(선택 사항)** | ‘비워 둠’ | 이 옵션을 사용하면 서버의 이름을 지정할 수 있습니다. | 
 
 5. **연결**을 선택합니다. 
 

@@ -1,5 +1,6 @@
 ---
 title: SQL Server 보안 설정 | Microsoft 문서
+description: 이러한 문서를 사용하여 SQL Server에서 효과적인 보안 계획을 작성하고 구현할 수 있습니다. 플랫폼, 인증, 개체 및 애플리케이션에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/21/2019
 ms.prod: sql
@@ -18,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 473c12211ada579c3ceb441792788a1e975a85e0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 80c8c535c5463a6639c752a68e20fd95c54899b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68892490"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729243"
 ---
 # <a name="securing-sql-server"></a>SQL Server 보안 설정
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안은 플랫폼, 인증, 개체(데이터 포함) 및 시스템에 액세스하는 애플리케이션의 네 가지 영역과 관련된 일련의 단계로 볼 수 있습니다. 다음 항목에서는 효과적인 보안 계획을 만들고 구현하는 방법을 설명합니다.  
   

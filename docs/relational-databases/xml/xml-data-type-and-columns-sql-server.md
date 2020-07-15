@@ -1,5 +1,6 @@
 ---
 title: XML 데이터 형식 및 열(SQL Server) | Microsoft 문서
+description: SQL Server에 XML 데이터를 저장하는 xml 데이터 형식의 장점과 한계를 알아봅니다.
 ms.custom: ''
 ms.date: 05/17/2019
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 83cea04e6617706151c0f74c43273281e6b89901
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0a23431727b25135751693d1dbec68b6377dcd4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664788"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729795"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 데이터 형식 및 열(SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   이 항목에서는 **의** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터 형식을 사용할 때의 장점과 제한 사항을 설명하며, XML 데이터의 저장 방법을 선택할 수 있도록 도와 줍니다.  
   
 ## <a name="relational-or-xml-data-model"></a>관계형 데이터 모델 또는 XML 데이터 모델  
@@ -115,12 +116,12 @@ ms.locfileid: "80664788"
   
  네이티브 XML 스토리지는 구조 범위가 포함된 XML 문서가 있거나 관계형 구조로 매핑하기 어려운 여러 스키마 또는 복잡한 스키마에 해당하는 XML 문서가 있는 경우에 유용합니다.  
   
-#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>예: xml 데이터 형식을 사용하여 XML 데이터 모델링  
+#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>예제: XML 데이터 형식을 사용하여 XML 데이터 모델링  
  각 항목에 대한 별도의 장으로 구성되어 있고 각 장 내에 여러 섹션이 포함된 XML 형식의 제품 설명서를 가정해 보십시오. 하나의 섹션에는 하위 섹션이 포함될 수 있습니다. 따라서 \<section>은 재귀적 요소입니다. 제품 설명서에는 다량의 콘텐츠, 다이어그램 및 기술 자료가 혼합되어 있으며 데이터는 반구조적입니다. 사용자는 "인덱싱" 장에서 "클러스터형 인덱스" 섹션을 검색하는 것과 같이 원하는 항목을 문맥에 따라 검색하고 많은 기술 자료를 쿼리할 수 있습니다.  
   
  XML 문서에 적합한 스토리지 모델은 **xml** 데이터 형식의 열입니다. 이 모델은 XML 데이터에 대한 InfoSet 내용을 보존합니다. XML 열을 인덱싱하면 쿼리 성능이 높아집니다.  
   
-#### <a name="example-retaining-exact-copies-of-xml-data"></a>예: XML 데이터에 대한 정확한 복사본 유지  
+#### <a name="example-retaining-exact-copies-of-xml-data"></a>예제: XML 데이터에 대한 정확한 복사본 유지  
  이해를 돕기 위해 정부 규제에 따라 XML 문서에 대한 정확한 텍스트 복사본을 유지해야 한다고 가정해 보십시오. 예를 들어 여기에는 서명된 문서, 법률 문서 또는 상품 거래 주문 내역 등이 포함될 수 있습니다. 문서를 **[n]varchar(max)** 열에 저장할 수 있습니다.  
   
  쿼리를 위해서는 데이터를 런타임에 **xml** 데이터 형식으로 변환하고 여기에서 Xquery를 실행합니다. 런타임 변환은 특히 문서가 큰 경우 비용이 많이 듭니다. 쿼리를 자주 수행하는 경우 **xml** 데이터 형식의 열에 문서를 중복해서 저장하고 **[n]varchar(max)** 열에서 정확한 문서 복사본을 반환하는 동안 이를 인덱싱할 수 있습니다.  
@@ -144,7 +145,7 @@ ms.locfileid: "80664788"
   
  이러한 예로는 데이터 교환 및 웹 서비스에 대해 XML로 제공된 관계형 데이터와 고정 스키마가 포함된 XML 데이터가 있습니다. 자세한 내용은 [MSDN Online Library](https://go.microsoft.com/fwlink/?linkid=31174)를 참조하십시오.  
   
-#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>예: AXSD(주석 지정 XML 스키마)를 사용하여 데이터 모델링  
+#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>예제: AXSD(주석 지정 XML 스키마)를 사용하여 데이터 모델링  
  이해를 돕기 위해 고객, 주문 및 라인 항목 등과 같은 기존 관계형 데이터가 있고 이를 XML로 처리하려는 경우를 가정해 보십시오. 관계형 데이터에 대해 AXSD를 사용하여 XML 뷰를 정의합니다. XML 뷰를 사용하면 XML 데이터를 테이블에 대량 로드하고 XML 뷰를 사용하여 관계형 데이터를 쿼리 및 업데이트할 수 있습니다. 이 모델은 XML 태그가 포함된 데이터를 다른 애플리케이션과 교환하고 SQL 애플리케이션을 방해 받지 않고 실행해야 하는 경우에 유용합니다.  
   
 ### <a name="hybrid-model"></a>하이브리드 모델  

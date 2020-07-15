@@ -1,5 +1,6 @@
 ---
 title: 서버 수준 역할 | Microsoft 문서
+description: SQL Server는 서버 수준 역할을 제공합니다. 이러한 보안 주체는 다른 보안 주체를 그룹화하여 서버 차원의 사용 권한을 관리합니다.
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql
@@ -23,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 239e2d3f2475738044e4c3644f734fdbb6a0eafb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e955b167d1ce496ca14585d16c470502e9bffbe
+ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68116790"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334023"
 ---
 # <a name="server-level-roles"></a>서버 수준 역할
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "68116790"
 ![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   
   
 > [!IMPORTANT]  
->  **CONTROL SERVER** 권한은 **sysadmin** 고정 서버 역할과 유사하지만 동일하지는 않습니다. 권한이 역할 멤버 자격을 의미하지 않으며 역할 멤버 자격이 있다고 해서 사용 권한이 부여되는 것도 아닙니다. (예: **CONTROL SERVER** 가 **sysadmin** 고정 서버 역할의 멤버 자격을 의미하지는 않습니다. 그러나 때로 역할과 해당 권한 간에 가장하는 것이 가능할 수 있습니다. 대부분의 **DBCC** 명령 및 많은 시스템 절차를 수행하려면 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. **sysadmin** 멤버 자격이 필요한 171개의 시스템 저장 프로시저 목록의 경우 Andreas Wolter가 작성한 [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation - caveats](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/)(제어 서버 및 sysadmin/sa: 사용 권한, 시스템 프로시저, DBCC, 자동 스키마 생성 및 권한 에스컬레이션 - 주의할 사항) 블로그 게시물을 참조하세요.  
+>  **CONTROL SERVER** 권한은 **sysadmin** 고정 서버 역할과 유사하지만 동일하지는 않습니다. 권한이 역할 멤버 자격을 의미하지 않으며 역할 멤버 자격이 있다고 해서 사용 권한이 부여되는 것도 아닙니다. (예: **CONTROL SERVER**가 **sysadmin** 고정 서버 역할의 멤버 자격을 의미하지는 않습니다. 그러나 때로 역할과 해당 권한 간에 가장하는 것이 가능할 수 있습니다. 대부분의 **DBCC** 명령 및 많은 시스템 절차를 수행하려면 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. **sysadmin** 멤버 자격이 필요한 171개의 시스템 저장 프로시저 목록의 경우 Andreas Wolter가 작성한 [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation - caveats](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/)(제어 서버 및 sysadmin/sa: 사용 권한, 시스템 프로시저, DBCC, 자동 스키마 생성 및 권한 에스컬레이션 - 주의할 사항) 블로그 게시물을 참조하세요.  
   
 ## <a name="server-level-permissions"></a>서버 수준 사용 권한  
  사용자 정의 서버 역할에는 서버 수준 사용 권한만 추가할 수 있습니다. 서버 수준 사용 권한을 나열하려면 다음 문을 실행하세요. 서버 수준 사용 권한은 다음과 같습니다.  

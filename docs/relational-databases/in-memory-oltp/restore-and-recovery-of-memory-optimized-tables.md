@@ -1,5 +1,6 @@
 ---
 title: 메모리 최적화 테이블 복원 및 복구 | Microsoft Docs
+description: SQL Server에서 메모리 최적화 테이블을 사용하는 데이터베이스 복원과 디스크 기반 테이블만 사용하는 데이터베이스 복원이 어떻게 다른지 알아봅니다.
 ms.custom: ''
 ms.date: 12/31/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 03974bc83cb9c7d9b6202f04db84ae96fe791eb3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5393fec82a0e1ab082369970f15756dc59e91846
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908435"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722337"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>메모리 최적화 테이블 복원 및 복구
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 메모리 최적화 테이블을 사용하는 데이터베이스를 복구하거나 복원하기 위한 기본 메커니즘은 디스크 기반 테이블만 사용하는 데이터베이스에 대한 메커니즘과 비슷합니다. 하지만 디스크 기반 테이블과 달리, 메모리 최적화 테이블은 먼저 메모리에 로드해야만 사용자가 데이터베이스에 액세스할 수 있습니다. 이러한 요구 사항으로 인해 데이터베이스 복구에 새로운 단계가 추가됩니다.  
   

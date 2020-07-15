@@ -1,5 +1,6 @@
 ---
 title: TRUSTWORTHY 데이터베이스 속성 | Microsoft 문서
+description: SQL Server 인스턴스가 데이터베이스와 그 콘텐츠를 신뢰하는지 여부를 나타내는 TRUSTWORTHY 데이터베이스 속성에 대해 알아봅니다. 기본값은 OFF입니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 64b2a53d-4416-4a19-acc0-664a61b45348
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ec745810697b325b8f1e1b2d5e67871136b9f089
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4db2515c51085e79d67e6ace4cbbe1abedc91023
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68126818"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736959"
 ---
 # <a name="trustworthy-database-property"></a>TRUSTWORTHY 데이터베이스 속성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  TRUSTWORTHY 데이터베이스 속성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 데이터베이스 및 그 내용을 트러스트하는지 여부를 나타내는 데 사용됩니다. 기본적으로 이 설정은 OFF이지만 ALTER DATABASE 문을 사용하여 ON으로 설정할 수 있습니다. `ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;`)을 입력합니다.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  TRUSTWORTHY 데이터베이스 속성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 데이터베이스 및 그 내용을 트러스트하는지 여부를 나타내는 데 사용됩니다. 기본적으로 이 설정은 OFF이지만 ALTER DATABASE 문을 사용하여 ON으로 설정할 수 있습니다. 예들 들어 `ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;`입니다.  
   
 > [!NOTE]  
 >  이 옵션을 설정하려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  

@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 축소 태스크(유지 관리 계획) | Microsoft 문서
+description: 데이터베이스 축소 태스크를 사용하여 선택한 SQL Server 데이터베이스의 크기를 줄이는 태스크를 만드는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bbba27f582b65fdcc99ed8fda4d892b9a92eebb6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8456bacbc10b4b597a33c577ac7df12f0ba392cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115563"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715341"
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>데이터베이스 축소 태스크(유지 관리 계획)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **데이터베이스 축소 태스크** 대화 상자를 사용하여 선택한 데이터베이스의 크기를 줄이는 작업을 만들 수 있습니다. 아래 옵션을 사용하면 데이터베이스를 축소한 후 사용되지 않는 상태로 데이터베이스에 유지할 공간의 양을 결정할 수 있습니다. 이 비율이 커질수록 데이터베이스를 축소할 수 있는 비율이 줄어듭니다. 이 값은 데이터베이스에 있는 실제 데이터의 비율에 따라 결정됩니다. 예를 들어 60MB의 데이터와 40MB의 사용 가능한 공간이 있는 100MB의 데이터베이스에서 사용 가능한 공간의 비율을 50%로 설정하면 60MB의 50%는 30MB이기 때문에 데이터 공간은 60MB가 되고 사용 가능한 공간은 30MB가 됩니다. 데이터베이스에서 남는 공간만 제거됩니다. 유효한 값은 0에서 100까지입니다.  
   
  파일 끝에 있는 데이터 페이지를 파일 앞의 사용되지 않은 공간으로 이동하여 데이터 파일을 축소하면 공간이 복구됩니다. 파일 끝에 사용 가능한 공간을 충분히 확보한 다음 파일 끝에 있는 데이터 페이지를 할당 해제하고 파일 시스템에 반환할 수 있습니다.  
@@ -89,10 +90,10 @@ ms.locfileid: "68115563"
  서버에 대한 인증 방법을 지정합니다.  
   
  **Windows NT 통합 보안 사용**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 인증을 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스에 연결합니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
   
  **특정 사용자 이름 및 암호 사용**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
   
  **사용자 이름**  
  인증 시 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 입력합니다. 이 옵션은 사용할 수 없습니다.  

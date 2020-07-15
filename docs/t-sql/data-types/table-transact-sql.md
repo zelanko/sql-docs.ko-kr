@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a3ff2605e0c872bd5e544d618c88dc179e3c3b43
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ad3a4659009ceb6d36aba9e3e97dc4e6f170788c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74564806"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736510"
 ---
 # <a name="table-transact-sql"></a>table(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 나중에 처리하기 위해 결과 집합을 저장하는 데 사용되는 특별한 데이터 형식입니다. **table**은 주로 테이블 반환 함수의 결과 집합으로 반환되는 행 집합을 임시로 저장하는 데 사용됩니다. **테이블**은 주로 테이블 반환 함수의 결과 집합으로 반환되는 행 집합을 임시로 저장하는 데 사용됩니다. **테이블** 변수는 함수, 저장 프로시저 및 일괄 처리에 사용할 수 있습니다. **테이블** 유형의 변수를 선언하려면 [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)를 사용합니다.
   
@@ -34,7 +34,7 @@ ms.locfileid: "74564806"
   
 ## <a name="syntax"></a>구문  
   
-```sql
+```syntaxsql
 table_type_definition ::=   
     TABLE ( { <column_definition> | <table_constraint> } [ ,...n ] )   
   
@@ -82,7 +82,7 @@ JOIN Employee on (m.EmployeeID =Employee.EmployeeID AND
 ```  
   
 **테이블** 변수는 변경되지 않는 쿼리 계획이 있는 소규모 쿼리의 경우와 다시 컴파일 기능이 중요한 경우에 다음과 같은 이점을 제공합니다.
--   **테이블** 변수는 지역 변수처럼 작동하며 잘 정의된 범위를 가집니다. 이 변수는 변수가 선언된 함수, 저장 프로시저 또는 일괄 처리입니다.  
+-   **테이블** 변수는 지역 변수처럼 작동하며 잘 정의된 범위를 가집니다. 이 변수는 해당 변수가 선언된 함수, 저장 프로시저 또는 일괄 처리에 사용할 수 있습니다.  
      범위 내에서 일반 테이블처럼 **테이블** 변수를 사용할 수 있으며 SELECT, INSERT, UPDATE 및 DELETE 문에서 테이블 또는 테이블 식이 사용되는 어디에나 적용할 수 있습니다. 그러나 다음 문에서는 **테이블**을 사용할 수 없습니다.  
   
 ```sql
@@ -115,7 +115,7 @@ SELECT select_list INTO table_variable;
   
 테이블 변수는 생성 후 변경할 수 없습니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-declaring-a-variable-of-type-table"></a>A. 테이블 형식의 변수 선언  
 다음 예에서는 UPDATE 문의 OUTPUT 절에서 지정된 값을 저장하는 `table` 변수를 만듭니다. 각각 `SELECT`의 값과 `@MyTableVar` 테이블의 업데이트 작업 결과를 반환하는 두 개의 `Employee` 문이 이어집니다. `INSERTED.ModifiedDate` 열의 결과 값은 `Employee` 테이블의 `ModifiedDate` 열 값과 다릅니다. 이 차이는 `AFTER UPDATE` 값을 현재 날짜로 업데이트하는 `ModifiedDate` 트리거가 `Employee` 테이블에 정의되어 있기 때문에 나타납니다. 그러나 `OUTPUT`에서 반환된 열은 트리거가 실행되기 전의 데이터를 반영합니다. 자세한 내용은 [OUTPUT Clause&#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)를 참조하세요.

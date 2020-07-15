@@ -1,7 +1,7 @@
 ---
 title: 서버 데이터 정렬 설정 또는 변경 | Microsoft 문서
 ms.custom: ''
-ms.date: 12/05/2019
+ms.date: 05/10/2020
 ms.prod: sql
 ms.technology: ''
 ms.topic: conceptual
@@ -12,16 +12,16 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
-ms.openlocfilehash: 578735009c72da997159484d308a25784ac64be0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6517111f63f2e28bf27e88003fa0c7b2e9b25fad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762934"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733948"
 ---
 # <a name="set-or-change-the-server-collation"></a>서버 데이터 정렬 설정 또는 변경
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   서버 데이터 정렬은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 설치된 모든 시스템 데이터베이스와 새로 만든 사용자 데이터베이스의 기본 데이터 정렬로 적용됩니다. 다음과 같은 영향을 주므로 신중하게 서버 수준 데이터 정렬을 선택해야 합니다.
  - `=`, `JOIN`, `ORDER BY` 및 텍스트 데이터를 비교하는 기타 연산자의 정렬 및 비교 규칙입니다.
  - 시스템 보기, 시스템 함수 및 TempDB의 개체에 있는 `CHAR`, `VARCHAR`, `NCHAR` 및 `NVARCHAR` 열의 데이터 정렬입니다(예: 임시 테이블).
@@ -29,8 +29,11 @@ ms.locfileid: "82762934"
   
 ## <a name="setting-the-server-collation-in-sql-server"></a>SQL Server에서 서버 데이터 정렬 설정
 
-  서버 데이터 정렬은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 과정에서 지정됩니다. 기본 서버 수준 데이터 정렬은 **SQL_Latin1_General_CP1_CI_AS**입니다. 유니코드 전용 데이터 정렬은 서버 수준 데이터 정렬로 지정할 수 없습니다. 자세한 내용은 [Collation and Unicode Support](collation-and-unicode-support.md)을 참조하세요.
-  
+  서버 데이터 정렬은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 과정에서 지정됩니다. 기본 서버 수준 데이터 정렬은 운영 체제의 로캘을 기반으로 합니다. 예를 들어 미국 영어(en-us)를 사용하는 시스템의 기본 데이터 정렬은 **SQL_Latin1_General_CP1_CI_AS**입니다. 유니코드 전용 데이터 정렬은 서버 수준 데이터 정렬로 지정할 수 없습니다. 기본 데이터 정렬 매핑에 대한 OS 로캘 목록을 비롯한 자세한 내용은 [데이터 정렬 및 유니코드 지원](collation-and-unicode-support.md#Server-level-collations)의 "서버 수준 데이터 정렬" 섹션을 참조하세요.
+
+> [!NOTE]  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express LocalDB의 서버 수준 데이터 정렬은 **SQL_Latin1_General_CP1_CI_AS**이며 설치 도중 또는 후에 변경할 수 없습니다.  
+
 ## <a name="changing-the-server-collation-in-sql-server"></a>SQL Server에서 서버 데이터 정렬 변경
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 기본 데이터 정렬을 변경하는 작업은 복잡할 수 있으며 다음과 같은 단계가 포함됩니다.  
@@ -41,7 +44,7 @@ ms.locfileid: "82762934"
   
 - 모든 사용자 데이터베이스를 삭제합니다.  
   
-- **setup** 명령의 SQLCOLLATION 속성에 새 데이터 정렬을 지정하여 master 데이터베이스를 다시 작성합니다. 다음은 그 예입니다.  
+- **setup** 명령의 SQLCOLLATION 속성에 새 데이터 정렬을 지정하여 master 데이터베이스를 다시 작성합니다. 예를 들면 다음과 같습니다.  
   
     ```  
     Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName
@@ -56,7 +59,7 @@ ms.locfileid: "82762934"
 - 모든 데이터를 가져옵니다.  
   
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 기본 데이터 정렬을 변경하는 대신 사용자가 만드는 각각의 새 데이터베이스에 대해 기본 데이터 정렬을 지정할 수 있습니다.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 기본 데이터 정렬을 변경하는 대신 `CREATE DATABASE` 및 `ALTER DATABASE` 문의 `COLLATE` 절을 통해 생성한 각 새 데이터베이스의 기본 데이터 정렬을 지정해도 됩니다. 자세한 내용은 [Set or Change the Database Collation](set-or-change-the-database-collation.md)을 참조하세요.  
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>Managed Instance에서 서버 데이터 정렬 설정
 Azure SQL Managed Instance의 서버 수준 데이터 정렬은 인스턴스가 생성될 때 지정될 수 있고 나중에 변경될 수 없습니다. 인스턴스를 만드는 동안 [Azure Portal](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) 또는 [PowerShell 및 Resource Manager 템플릿](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template)을 통해 서버 수준 데이터 정렬을 설정할 수 있습니다. 기본 서버 수준 데이터 정렬은 **SQL_Latin1_General_CP1_CI_AS**입니다. 유니코드 전용 및 새 UTF-8 데이터 정렬은 서버 수준 데이터 정렬로 지정할 수 없습니다.

@@ -1,5 +1,6 @@
 ---
-title: '예제: 이진 데이터 검색 | Microsoft 문서'
+title: '예제: 이진 데이터 검색 | Microsoft Docs'
+description: FOR XML 절과 함께 RAW 및 BINARY BASE64 옵션을 사용하여 이진 데이터를 검색하는 SQL 쿼리의 예제를 살펴봅니다.
 ms.custom: ''
 ms.date: 04/03/2020
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 5cea5d49-58ac-403a-a933-c4fd91de400b
 author: RothJa
 ms.author: jroth
-ms.openlocfilehash: 8d66e1ec9c580030f1f65f030cdb0367d8f4f430
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 08010e294b1b143c941774912d661a53c021a6ab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664500"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632787"
 ---
 # <a name="example-retrieving-binary-data"></a>예제: 이진 데이터 검색
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 다음 쿼리는 **varbinary(max)** 유형 열에 저장된 제품 사진을 반환합니다. 이진 데이터를 base64 인코딩 형식으로 반환하기 위해 쿼리에서 `BINARY BASE64` 옵션을 지정합니다.
 

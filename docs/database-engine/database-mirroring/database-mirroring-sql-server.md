@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 미러링(SQL Server) | Microsoft Docs
+description: SQL Server 데이터베이스의 가용성을 높이기 위한 솔루션이며 데이터베이스 단위로 구현되는 데이터베이스 미러링에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 05/16/2016
 ms.prod: sql
@@ -23,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3f8ebb1119e84caa80c0faa03c5c1405992723b2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c1b95d55a979738f787e4814a9f40f929c521868
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006347"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754737"
 ---
 # <a name="database-mirroring-sql-server"></a>데이터베이스 미러링(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)]을 대신 사용합니다.  
@@ -53,7 +54,7 @@ ms.locfileid: "68006347"
   
      데이터베이스 미러링은 운영 모드가 보호 우선 모드인지 성능 우선 모드인지에 따라 완벽하거나 거의 완벽한 데이터 중복을 제공합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [운영 모드](#OperatingModes)를 참조하세요.  
   
-     [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 이상 버전에서 실행 중인 데이터베이스 미러링 파트너는 데이터 페이지를 읽지 못하게 하는 특정 오류 유형을 자동으로 해결하려고 시도합니다. 페이지를 읽지 못하는 파트너는 다른 파트너로부터 새 복사본을 요청합니다. 이 요청이 성공하면 읽을 수 없는 페이지는 새 복사본으로 대체되고 일반적으로 오류가 해결됩니다. 자세한 내용은 [자동 페이지 복구&#40;가용성 그룹: 데이터베이스 미러링&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)를 참조하세요.  
+     [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 이상 버전에서 실행 중인 데이터베이스 미러링 파트너는 데이터 페이지를 읽지 못하게 하는 특정 오류 유형을 자동으로 해결하려고 시도합니다. 페이지를 읽지 못하는 파트너는 다른 파트너로부터 새 복사본을 요청합니다. 이 요청이 성공하면 읽을 수 없는 페이지는 새 복사본으로 대체되고 일반적으로 오류가 해결됩니다. 자세한 내용은 [자동 페이지 복구&#40;가용성 그룹: 데이터베이스 미러링&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)을 참조하세요.  
   
 -   업그레이드 중에 프로덕션 데이터베이스의 가용성이 증가합니다.  
   

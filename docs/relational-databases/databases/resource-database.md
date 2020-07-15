@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5f6b63e0ff79f44b2900fb0f727436ed36401ee2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9ba6ba2d1238c75c29990a8ab2bd98ea419cc606
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68127456"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728384"
 ---
 # <a name="resource-database"></a>Resource 데이터베이스
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Resource 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함된 시스템 개체가 모두 들어 있는 읽기 전용 데이터베이스입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 개체(예: sys.objects)는 실제로는 Resource 데이터베이스에 저장되지만 논리적으로는 모든 데이터베이스의 sys 스키마에 나타납니다. Resource 데이터베이스에는 사용자 데이터 또는 사용자 메타데이터가 없습니다.  
   
  Resource 데이터베이스를 새 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 빠르고 쉽게 업그레이드합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업그레이드를 수행하려면 시스템 개체를 삭제한 다음 만들어야 합니다. 이제 Resource 데이터베이스 파일에 모든 시스템 개체가 들어 있으므로 단일 Resource 데이터베이스 파일을 로컬 서버에 복사하면 업그레이드할 수 있습니다.  
   
 ## <a name="physical-properties-of-resource"></a>Resource의 물리적 속성  
- Resource 데이터베이스의 물리적 파일 이름은 mssqlsystemresource.mdf 및 mssqlsystemresource.ldf입니다. 이러한 파일은 \<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\에 있으며 이동할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 인스턴스에는 관련된 mssqlsystemresource.mdf 파일이 하나만 있으며 인스턴스에서 이 파일을 공유하지 않습니다.  
+ Resource 데이터베이스의 물리적 파일 이름은 mssqlsystemresource.mdf 및 mssqlsystemresource.ldf입니다. 이러한 파일은 \<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\에 있으며 이동하면 안 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 인스턴스에는 관련된 mssqlsystemresource.mdf 파일이 하나만 있으며 인스턴스에서 이 파일을 공유하지 않습니다.  
   
 > [!WARNING]  
 >  업그레이드와 서비스 팩은 BINN 폴더에 설치되는 새 리소스 데이터베이스를 제공합니다. 리소스 데이터베이스의 위치 변경은 지원되지 않거나 사용하지 않는 것이 좋습니다.  

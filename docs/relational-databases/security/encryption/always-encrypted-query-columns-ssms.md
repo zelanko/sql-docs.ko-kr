@@ -1,5 +1,6 @@
 ---
 title: SQL Server Management Studio로 Always Encrypted를 사용하는 열 쿼리 | Microsoft Docs
+description: SQL Server Management Studio를 사용하여 Always Encrypted에서 열을 쿼리하는 방법을 알아봅니다. 암호화된 열에 저장된 암호 텍스트 또는 텍스트 값을 검색합니다.
 ms.custom: ''
 ms.date: 10/31/2019
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 221c5c0fa216b8d5fba7f133b717a3d102aea963
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f33d58a0fe9b61519c8946708dcd22c84dff90ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287137"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627409"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>SQL Server Management Studio로 Always Encrypted를 사용하는 열 쿼리
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 이 문서에서는 [SSMS(SQL Server Management Studio)](../../../ssms/download-sql-server-management-studio-ssms.md)를 사용하여 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)로 암호화된 열을 쿼리하는 방법을 설명합니다. SSMS를 사용하여 다음을 수행할 수 있습니다.
 - 암호화된 열에 저장된 암호 텍스트 값을 검색합니다. 
@@ -172,7 +173,7 @@ DECLARE @NewSalary money = @Salary * 1.1; -- an expression used instead of a lit
  
 시도한 매개 변수화가 성공하려면   
 - 매개 변수화할 변수의 초기화에 사용된 리터럴 형식이 변수 선언의 형식과 일치해야 합니다.   
-- 변수의 선언된 형식이 날짜 형식이거나 시간 형식인 경우 변수는 다음 ISO 8601 규격 형식 중 하나를 사용하는 문자열을 사용하여 초기화되어야 합니다.   
+- 변수의 선언된 형식이 날짜 형식이거나 시간 형식인 경우 변수는 다음 [ISO 8601 규격 형식](https://docs.microsoft.com/sql/t-sql/functions/cast-and-convert-transact-sql#date-and-time-styles) 중 하나를 사용하는 문자열을 사용하여 초기화되어야 합니다.    
 
 매개 변수화 오류가 발생하는 TRANSACT-SQL 변수 선언의 예는 다음과 같습니다.   
 ```sql

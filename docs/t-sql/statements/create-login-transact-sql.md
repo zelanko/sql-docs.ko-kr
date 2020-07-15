@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57639c3705f38396fdc3ebf5dd65b34c145c324d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 57f44934fa5ecfe7c14b4c4b2427656ccd4ef633
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79526798"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255426"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN(Transact-SQL)
 
@@ -101,7 +101,7 @@ MUST_CHANGE는 SQL Server 로그인에만 적용됩니다. 이 옵션을 선택�
 
 CREDENTIAL **=** _credential\_name_ 새 SQL Server 로그인에 매핑할 자격 증명의 이름입니다. 자격 증명이 서버에 이미 있어야 합니다. 현재 이 옵션은 자격 증명을 로그인에 연결하는 역할만 합니다. 자격 증명은 시스템 관리자(sa) 로그인에 매핑할 수 없습니다.
 
-SID = *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인증 로그인에만 적용되고 Windows 인증 로그인에는 적용되지 않습니다. 새 SQL Server 인증 로그인의 SID를 지정합니다. 이 옵션을 사용하지 않으면 SQL Server에서 자동으로 SID를 할당합니다. SID 구조는 SQL Server 버전에 따라 달라집니다. SQL Server 로그인 SID: GUID에 기반한 16바이트(**binary(16)** ) 리터럴 값입니다. `SID = 0x14585E90117152449347750164BA00A7`)을 입력합니다.
+SID = *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인증 로그인에만 적용되고 Windows 인증 로그인에는 적용되지 않습니다. 새 SQL Server 인증 로그인의 SID를 지정합니다. 이 옵션을 사용하지 않으면 SQL Server에서 자동으로 SID를 할당합니다. SID 구조는 SQL Server 버전에 따라 달라집니다. SQL Server 로그인 SID: GUID에 기반한 16바이트(**binary(16)** ) 리터럴 값입니다. 예들 들어 `SID = 0x14585E90117152449347750164BA00A7`입니다.
 
 DEFAULT_DATABASE **=** _database_ 로그인에 할당할 기본 데이터베이스를 지정합니다. 이 옵션을 선택하지 않으면 기본 데이터베이스가 master로 설정됩니다.
 
@@ -155,7 +155,7 @@ ASYMMETRIC KEY *asym_key_name* 이 로그인과 연결될 비대칭 키의 이�
 - **sp_addsrvrolemember**를 사용하여 고정 서버 역할에 로그인을 추가합니다. 자세한 내용은 [서버 수준 역할](../../relational-databases/security/authentication-access/server-level-roles.md) 및 [sp_addsrvrolemember](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)을 참조하세요.
 - **GRANT** 문을 사용하여 새 로그인 또는 해당 로그인을 포함한 역할에 서버 수준 권한을 부여합니다. 자세한 내용은 [GRANT](../../t-sql/statements/grant-transact-sql.md)를 참조하십시오.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-creating-a-login-with-a-password"></a>A. 암호로 로그인 만들기
 
@@ -296,7 +296,7 @@ PASSWORD **='** password* *'* 만들 SQL 로그인의 암호를 지정합니다.
 
 암호는 대소문자를 구분합니다. 암호의 길이는 항상 8자 이상이어야 하며 128자를 초과할 수 없습니다. 암호에는 a-z, A-Z, 0-9 및 영숫자가 아닌 대부분의 문자를 포함할 수 있습니다. 암호는 홑따옴표 또는 *login_name*을 포함할 수 없습니다.
 
-SID = *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인증 로그인에만 적용되고 Windows 인증 로그인에는 적용되지 않습니다. 새 SQL Server 인증 로그인의 SID를 지정합니다. 이 옵션을 사용하지 않으면 SQL Server에서 자동으로 SID를 할당합니다. SID 구조는 SQL Server 버전에 따라 달라집니다. SQL Database의 경우 `0x01060000000000640000000000000000`과 GUID를 나타내는 16바이트로 구성된 32바이트(**binary(32)** ) 리터럴입니다. `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`)을 입력합니다.
+SID = *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인증 로그인에만 적용되고 Windows 인증 로그인에는 적용되지 않습니다. 새 SQL Server 인증 로그인의 SID를 지정합니다. 이 옵션을 사용하지 않으면 SQL Server에서 자동으로 SID를 할당합니다. SID 구조는 SQL Server 버전에 따라 달라집니다. SQL Database의 경우 `0x01060000000000640000000000000000`과 GUID를 나타내는 16바이트로 구성된 32바이트(**binary(32)** ) 리터럴입니다. 예들 들어 `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -324,7 +324,7 @@ SQL Database에서 연결을 인증하는 데 필요한 로그인 데이터 및 
 
 프로비전 프로세스를 통해 만들어진 서버 수준의 보안 주체 로그인이나 master 데이터베이스에서 `loginmanager` 데이터베이스 역할이 할당된 멤버만 새 로그인을 만들 수 있습니다. 자세한 내용은 [관리자 권한이 있는 추가 로그인 및 사용자 만들기](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#create-additional-logins-and-users-having-administrative-permissions)를 참조하세요.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-creating-a-login-with-a-password"></a>A. 암호로 로그인 만들기
 
@@ -404,7 +404,7 @@ PASSWORD **=** '*password*' 만들 SQL 로그인의 암호를 지정합니다. �
 
 암호는 대소문자를 구분합니다. 암호의 길이는 항상 10자 이상이어야 하며 128자를 초과할 수 없습니다. 암호에는 a-z, A-Z, 0-9 및 영숫자가 아닌 대부분의 문자를 포함할 수 있습니다. 암호는 홑따옴표 또는 *login_name*을 포함할 수 없습니다.
 
-SID **=** *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인증 로그인에만 적용됩니다. 새 SQL Server 인증 로그인의 SID를 지정합니다. 이 옵션을 사용하지 않으면 SQL Server에서 자동으로 SID를 할당합니다. SID 구조는 SQL Server 버전에 따라 달라집니다. SQL Database의 경우 `0x01060000000000640000000000000000`과 GUID를 나타내는 16바이트로 구성된 32바이트(**binary(32)** ) 리터럴입니다. `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`)을 입력합니다.
+SID **=** *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인증 로그인에만 적용됩니다. 새 SQL Server 인증 로그인의 SID를 지정합니다. 이 옵션을 사용하지 않으면 SQL Server에서 자동으로 SID를 할당합니다. SID 구조는 SQL Server 버전에 따라 달라집니다. SQL Database의 경우 `0x01060000000000640000000000000000`과 GUID를 나타내는 16바이트로 구성된 32바이트(**binary(32)** ) 리터럴입니다. 예들 들어 `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -457,8 +457,14 @@ SID **=** *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
 - 다른 Azure AD 디렉터리에서 가져온 외부(게스트) 사용자를 관리되는 인스턴스의 Azure AD 관리자로 직접 구성할 수 없습니다. 대신 외부 사용자를 Azure AD 보안 사용 그룹에 조인하고 해당 그룹을 인스턴스 관리자로 구성합니다.
+- 로그인은 장애 조치 그룹의 보조 인스턴스에 복제되지 않습니다. 로그인은 시스템 데이터베이스인 master 데이터베이스에 저장되므로 지역에서 복제되지 않습니다. 이를 해결하려면 사용자가 보조 인스턴스에서 동일한 SID를 사용하여 로그인을 만들어야 합니다.
 
-## <a name="examples"></a>예
+```SQL
+-- Code to create login on the secondary instance
+CREATE LOGIN foo WITH PASSWORD = '<enterStrongPasswordHere>', SID = <login_sid>;
+```
+
+## <a name="examples"></a>예제
 
 ### <a name="a-creating-a-login-with-a-password"></a>A. 암호로 로그인 만들기
 
@@ -579,7 +585,7 @@ PASSWORD **='** password* *'* 만들 SQL 로그인의 암호를 지정합니다.
 
 암호는 대소문자를 구분합니다. 암호의 길이는 항상 8자 이상이어야 하며 128자를 초과할 수 없습니다. 암호에는 a-z, A-Z, 0-9 및 영숫자가 아닌 대부분의 문자를 포함할 수 있습니다. 암호는 홑따옴표 또는 *login_name*을 포함할 수 없습니다.
 
- SID = *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인증 로그인에만 적용되고 Windows 인증 로그인에는 적용되지 않습니다. 새 SQL Server 인증 로그인의 SID를 지정합니다. 이 옵션을 사용하지 않으면 SQL Server에서 자동으로 SID를 할당합니다. SID 구조는 SQL Server 버전에 따라 달라집니다. SQL Analytics의 경우 `0x01060000000000640000000000000000`과 GUID를 나타내는 16바이트로 구성된 32바이트(**binary(32)** ) 리터럴입니다. `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`)을 입력합니다.
+ SID = *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인증 로그인에만 적용되고 Windows 인증 로그인에는 적용되지 않습니다. 새 SQL Server 인증 로그인의 SID를 지정합니다. 이 옵션을 사용하지 않으면 SQL Server에서 자동으로 SID를 할당합니다. SID 구조는 SQL Server 버전에 따라 달라집니다. SQL Analytics의 경우 `0x01060000000000640000000000000000`과 GUID를 나타내는 16바이트로 구성된 32바이트(**binary(32)** ) 리터럴입니다. 예들 들어 `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -593,7 +599,7 @@ PASSWORD **='** password* *'* 만들 SQL 로그인의 암호를 지정합니다.
 
 **CREATE LOGIN** 문은 일괄 처리의 유일한 명령문이어야 합니다.
 
-**sqlcmd**와 같은 도구를 사용하여 Azure Synapse에 연결하는 경우 *\<로그인>* @ *\<서버>* 표기법을 사용하여 연결 문자열의 로그인 이름에 SQL Analytics 서버 이름을 추가해야 합니다. 예를 들어 로그인이 `login1`이고 SQL Analytics 서버의 정규화된 이름이 `servername.database.windows.net`인 경우 연결 문자열의 *username* 매개 변수는 `login1@servername`이어야 합니다. *username* 매개 변수의 총 길이는 128문자이므로 *login_name*은 127문자에서 서버 이름의 길이를 뺀 길이로 제한됩니다. 이 예에서는 `login_name`이 10자이므로 `servername`에는 117자까지만 사용할 수 있습니다.
+**sqlcmd**와 같은 도구를 사용하여 Azure Synapse에 연결하는 경우 *\<login>* @ *\<server>* 표기법을 사용하여 연결 문자열의 로그인 이름에 SQL Analytics 서버 이름을 추가해야 합니다. 예를 들어 로그인이 `login1`이고 SQL Analytics 서버의 정규화된 이름이 `servername.database.windows.net`인 경우 연결 문자열의 *username* 매개 변수는 `login1@servername`이어야 합니다. *username* 매개 변수의 총 길이는 128문자이므로 *login_name*은 127문자에서 서버 이름의 길이를 뺀 길이로 제한됩니다. 이 예에서는 `login_name`이 10자이므로 `servername`에는 117자까지만 사용할 수 있습니다.
 
 로그인을 만들려면 마스터 데이터베이스에 연결해야 합니다.
 
@@ -617,7 +623,7 @@ SQL Server 규칙을 사용하여 \<loginname>@\<servername> 형식의 SQL Serve
 
 - **GRANT** 문을 사용하여 새 로그인 또는 해당 로그인을 포함한 역할에 서버 수준 권한을 부여합니다. 자세한 내용은 [GRANT](../../t-sql/statements/grant-transact-sql.md)를 참조하십시오.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-creating-a-login-with-a-password"></a>A. 암호로 로그인 만들기
 
@@ -738,7 +744,7 @@ WINDOWS 로그인이 Windows 로그인에 매핑되도록 지정합니다.
 - **sp_addsrvrolemember**를 사용하여 고정 서버 역할에 로그인을 추가합니다. 자세한 내용은 [서버 수준 역할](../../relational-databases/security/authentication-access/server-level-roles.md) 및 [sp_addsrvrolemember](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)을 참조하세요.
 - **GRANT** 문을 사용하여 새 로그인 또는 해당 로그인을 포함한 역할에 서버 수준 권한을 부여합니다. 자세한 내용은 [GRANT](../../t-sql/statements/grant-transact-sql.md)를 참조하십시오.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="g-creating-a-sql-server-authentication-login-with-a-password"></a>G. 암호를 사용하여 SQL Server 인증 로그인 만들기
 

@@ -13,15 +13,15 @@ ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aef51bd94bf7cffb3e9481b409477a3830fabffb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f49da6a68a3d0897dc545215c9260904cdb8bb11
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68058600"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727101"
 ---
 # <a name="use-the-eventdata-function"></a>EVENTDATA 함수 사용
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   DDL 트리거를 발생하는 이벤트에 대한 정보는 EVENTDATA 함수를 사용하여 캡처합니다. 이 함수는 **xml** 값을 반환합니다. XML 스키마에는 다음에 대한 정보가 포함됩니다.  
   
 -   이벤트의 시간  

@@ -1,5 +1,6 @@
 ---
 title: 스토리지 만들기 및 관리 - 메모리 최적화 개체
+description: 메모리 최적화 테이블 및 디스크 기반 테이블의 특성에 대해 알아봅니다. 이러한 리소스를 사용하여 메모리 최적화 개체의 스토리지를 만들고 관리합니다.
 ms.custom: seo-dt-2019
 ms.date: 03/15/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90817352d72991e47f20b31144e15b204e5f3bff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f69a2d9f9601c56f8ed57a156f725c846120ddfa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412705"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723317"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>메모리 액세스에 최적화된 개체의 스토리지 만들기 및 관리
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 통합되어 있으므로 메모리 최적화 테이블과 기존의 디스크 기반 테이블을 모두 같은 데이터베이스에 포함할 수 있습니다. 그러나 메모리 최적화 테이블의 스토리지 구조는 디스크 기반 테이블과는 다릅니다.  
   

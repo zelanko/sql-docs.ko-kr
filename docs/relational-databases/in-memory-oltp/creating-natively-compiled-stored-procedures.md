@@ -1,5 +1,6 @@
 ---
 title: 고유하게 컴파일된 저장 프로시저 만들기 | Microsoft 문서
+description: 고유하게 컴파일된 저장 프로시저에 대해서만 지원되는 Transact-SQL 기능을 알아봅니다. SQL Server에서 고유하게 컴파일된 저장 프로시저를 만드는 방법을 확인합니다.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb7b029527eec87c87b9b21b4da8aff5e289424e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5ef2ee1bbc863de8f3be94733beac3f04fa90b3c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68032021"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723288"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저 만들기
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 고유하게 컴파일된 저장 프로시저는 전체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로그래밍 기능 및 쿼리 노출 영역을 구현하지 않습니다. 일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문은 고유하게 컴파일된 저장 프로시저 내에서 사용할 수 없습니다. 자세한 내용은 [고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)을 참조하세요.  
   
@@ -33,7 +34,7 @@ ms.locfileid: "68032021"
   
     -   DECLARE @myVarchar  varchar(32)  **not null = "Hello"** ; -- *(값으로 초기화해야 함)*  
   
-    -   SET @myVarchar **= null**; -- ‘(컴파일되지만 런타임 중에 실패함)’   
+    -   SET @myVarchar **= null**; -- ‘(컴파일되지만 런타임 중에 실패함)’  
   
 -   고유하게 컴파일된 저장 프로시저의 스키마 바인딩  
   

@@ -1,6 +1,6 @@
 ---
 title: '예제: 인증서를 사용한 데이터베이스 미러링(T-SQL)'
-description: Transact-SQL을 사용하여 인증서를 사용한 SQL Server 데이터베이스 미러링을 구성하는 예입니다.
+description: 이 문서에는 SQL Server에서 Transact-SQL을 사용하여 인증서 기반 인증을 통해 SQL Server 데이터베이스 미러링을 구성하는 예제가 포함되어 있습니다.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5e7c3a2fd690b7a19f7d94de7e8d4fbbd9cac355
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4341b53c4787e7a9c194b8ab5ad5892583d1db11
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75253589"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754668"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>예제: 인증서를 사용하여 데이터베이스 미러링 설정(Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 예에서는 인증서 기반 인증을 사용하여 데이터베이스 미러링 세션을 만드는 데 필요한 모든 단계를 보여 줍니다. 이 항목의 예에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용합니다. 네트워크 보안을 보장할 수 없는 경우 데이터베이스 미러링 연결에 암호화를 사용하는 것이 좋습니다.  
   
  인증서를 다른 시스템으로 복사할 때는 안전한 복사 방법을 사용하세요. 모든 인증서를 안전하게 보관하는 데 많은 주의를 기울여야 합니다.  

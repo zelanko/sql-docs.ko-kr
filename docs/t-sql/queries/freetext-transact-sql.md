@@ -21,17 +21,17 @@ helpviewer_keywords:
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3c0d1ed26fa58934a51ec051eb3aa4e1d5b9a2bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a60d8a2605d9b2533869b6f1c95922107c7d0aa0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67902099"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736314"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  문자 기반 데이터 형식이 포함된 전체 텍스트 인덱싱된 열에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 전체 텍스트 검색을 수행하기 위해 [ SELECT 문의 ](../../t-sql/queries/where-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]WHERE 절[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용되는 조건자입니다. 이 조건자는 검색 조건의 의미와 일치하지만 단어가 정확히 일치하지 않는 값을 검색합니다. FREETEXT를 사용하면 전체 텍스트 쿼리 엔진이 내부적으로 *freetext_string*에 대해 다음 동작을 수행하고 각 용어에 가중치를 할당한 다음, 일치 항목을 찾습니다.  
+  문자 기반 데이터 형식이 포함된 전체 텍스트 인덱싱된 열에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 검색을 수행하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문의 [!INCLUDE[tsql](../../includes/tsql-md.md)] [WHERE 절](../../t-sql/queries/where-transact-sql.md)에 사용되는 조건자입니다. 이 조건자는 검색 조건의 의미와 일치하지만 단어가 정확히 일치하지 않는 값을 검색합니다. FREETEXT를 사용하면 전체 텍스트 쿼리 엔진이 내부적으로 *freetext_string*에 대해 다음 동작을 수행하고 각 용어에 가중치를 할당한 다음, 일치 항목을 찾습니다.  
   
 -   단어 경계를 기반으로 문자열을 개별 단어로 구분합니다(단어 분리).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "67902099"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 FREETEXT ( { column_name | (column_list) | * }   
           , 'freetext_string' [ , LANGUAGE language_term ] )  
@@ -128,7 +128,7 @@ FREETEXT를 사용하는 전체 텍스트 쿼리는 CONTAINS를 사용하는 전
 ## <a name="comparison-of-like-to-full-text-search"></a>LIKE와 전체 텍스트 검색 비교  
  전체 텍스트 검색과 달리 [LIKE](../../t-sql/language-elements/like-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 조건자는 문자 패턴에 대해서만 적용됩니다. 또한 LIKE 조건자는 서식 있는 이진 데이터를 쿼리하는 데 사용할 수도 없습니다. 특히 구조화되지 않은 많은 텍스트 데이터에 대한 LIKE 쿼리는 동일한 데이터에 대한 전체 텍스트 쿼리보다 훨씬 느립니다. 수백만 개의 텍스트 데이터 행에 대해 LIKE 쿼리를 실행하면 결과가 반환되기까지 몇 분이 걸릴 수 있지만 같은 데이터에 대해 전체 텍스트 쿼리를 실행하면 반환되는 행 수에 따라 몇 초 내에 완료됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-freetext-to-search-for-words-containing-specified-character-values"></a>A. FREETEXT를 사용하여 지정된 문자 값을 포함하는 단어 검색  
  다음 예에서는 vital, safety, components와 관련된 단어를 포함하는 문서를 모두 검색합니다.  

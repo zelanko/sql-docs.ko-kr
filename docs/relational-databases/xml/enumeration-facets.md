@@ -1,5 +1,6 @@
 ---
 title: 열거 패싯 | Microsoft 문서
+description: SQL Server에서 열거 패싯을 사용하여 XML 스키마를 검사하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: dec23a79-ddd6-4701-9721-55a2c435a34d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5430f9549a2c0af3677d3ad374e9fb5513d6bd1f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e8939b3c8654452f50b280ad66fe221f94220754
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664568"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633140"
 ---
 # <a name="enumeration-facets"></a>열거 패싯
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 패턴 패싯 형식이나 이러한 패싯을 위반하는 열거형의 XML 스키마를 거부합니다.  
   
 ## <a name="example"></a>예제  

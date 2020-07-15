@@ -1,5 +1,6 @@
 ---
 title: OPENXML(SQL Server) | Microsoft 문서
+description: XML 문서 내부 표현의 행 집합 뷰를 제공하는 SQL Server의 OPENXML 문에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 05/11/2020
 ms.prod: sql
@@ -23,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 770b00c8aa14a09be36dc81ac8f661ec822b243a
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 6acc03c2412ac33337236efba130344cc9f91c9e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269446"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753701"
 ---
 # <a name="openxml-sql-server"></a>OPENXML(SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 키워드인 OPENXML은 테이블 또는 뷰와 비슷한 메모리 내 XML 문서에 대한 행 집합을 제공합니다. OPENXML은 관계형 행 집합인 것처럼 XML 데이터에 대한 액세스를 허용합니다. 이러한 기능은 XML 문서의 내부 표현에 대한 행 집합 뷰를 제공함으로써 제공됩니다. 행 집합의 레코드는 데이터베이스 테이블에 저장할 수 있습니다.  
   
  OPENXML은 행 집합 공급자, 뷰 또는 OPENROWSET이 원본으로 표시될 수 있는 경우 SELECT 및 SELECT INTO에서 사용할 수 있습니다. OPENXML 구문에 대한 자세한 내용은 [OPENXML&#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)을 참조하세요.  

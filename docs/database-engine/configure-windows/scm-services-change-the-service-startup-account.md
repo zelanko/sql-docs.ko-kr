@@ -1,5 +1,6 @@
 ---
 title: SCM 서비스 - 서비스 시작 계정 변경 | Microsoft Docs
+description: SQL Server 및 대부분의 SQL Server 서비스에서 사용하는 서비스 계정을 변경하는 방법을 알아봅니다. 서비스 계정 변경에 대한 제한 사항을 확인합니다.
 ms.custom: ''
 ms.date: 01/06/2016
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - startup accounts [SQL Server]
 - changing startup accounts for services
 ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2b0b681ffb0b045ab5ba59c1a9fd28b3b295431f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ac1e58ba681857b6548bf067f91cde5163a8583b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70212315"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651514"
 ---
 # <a name="scm-services---change-the-service-startup-account"></a>SCM 서비스 - 서비스 시작 계정 변경
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 토픽에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 시작 옵션을 변경하고 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 사용하는 서비스 계정을 변경하는 방법을 설명합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]또는 PowerShell을 사용합니다. 적절한 서비스 계정을 선택하는 방법에 대한 자세한 내용은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조하세요.  
   
 > [!IMPORTANT]  
@@ -60,7 +61,7 @@ ms.locfileid: "70212315"
   
 3.  세부 정보 창에서 서비스 시작 계정을 변경할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  **SQL Server \<** _instancename_ **> 속성** 대화 상자에서 **로그온** 탭을 클릭하고 **다음 계정으로 로그온** 계정 유형을 선택합니다.  
+4.  **SQL Server \<**_instancename_**> 속성** 대화 상자에서 **로그온** 탭을 클릭하고 **다음 계정으로 로그온** 계정 유형을 선택합니다.  
   
 5.  새 서비스 시작 계정을 선택한 다음 **확인**을 클릭합니다.  
   

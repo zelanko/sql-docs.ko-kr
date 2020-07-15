@@ -1,5 +1,6 @@
 ---
 title: 메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저
+description: 이 샘플에서는 메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저를 만들기 위한 메모리 내 OLTP 구문을 소개합니다.
 ms.custom: seo-dt-2019
 ms.date: 03/16/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6e8793d5fc14401cbe800604accc6642a424fbbe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba66306b4ce798e48e22d77c5b1ae0c37c8ec91b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412737"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723308"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저 만들기
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 항목에는 메모리 내 OLTP의 구문을 소개하는 예제가 포함되어 있습니다.  
 

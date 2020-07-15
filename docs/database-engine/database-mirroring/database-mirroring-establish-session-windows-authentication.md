@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cbdf7d05c25aad00e084c15929cce857cb6614d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff824174a3c9f806267e5b2a6a58e056fb57d513
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822296"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643421"
 ---
 # <a name="configure-database-mirroring"></a>데이터베이스 미러링 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)]을 대신 사용합니다.  
@@ -67,13 +67,13 @@ ms.locfileid: "74822296"
   
      ALTER DATABASE *\<database_name\>* SET PARTNER **=** _\<server\_network\_address\>_  
   
-     여기서 _\<database\_name\>_ 은 미러링할 데이터베이스의 이름(두 파트너에서 이 이름은 동일함)이고 _\<server\_network\_address\>_ 는 주 서버의 서버 네트워크 주소입니다.  
+     여기서 _\<database\_name\>_ 은 미러링할 데이터베이스의 이름(두 파트너에서 이 이름은 동일함)이고, _\<server\_network\_address\>_ 는 주 서버의 서버 네트워크 주소입니다.  
   
      서버 네트워크 주소 구문은 다음과 같습니다.  
   
      TCP<b>\://</b> _\<system-address\>_ <b>\:</b> _\<port\>_  
   
-     여기서 _\<system-address&gt;_ 는 대상 컴퓨터 시스템을 명확하게 식별하는 문자열이고, _\<포트&gt;_ 는 파트너 서버 인스턴스의 미러링 엔드포인트에서 사용되는 포트 번호입니다. 자세햔 내용은 [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)을 사용합니다.  
+     여기서 _\<system-address>_ 는 대상 컴퓨터 시스템을 명확하게 식별하는 문자열이고, _\<port>_ 는 파트너 서버 인스턴스의 미러링 엔드포인트에 사용되는 포트 번호입니다. 자세햔 내용은 [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)을 사용합니다.  
   
      예를 들어 미러 서버 인스턴스에서 다음 ALTER DATABASE 문은 파트너를 원래 주 서버 인스턴스로 설정합니다. 데이터베이스 이름은 **AdventureWorks**이고 시스템 주소는 DBSERVER1(파트너 시스템의 이름)이며 파트너의 데이터베이스 미러링 엔드포인트에서 사용되는 포트는 7022입니다.  
   

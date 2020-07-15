@@ -1,5 +1,6 @@
 ---
 title: UNIQUE PARTICLE ATTRIBUTION 제약 조건 | Microsoft 문서
+description: UPA(unique particle attribution) 제약 조건이 잠재적으로 모호한 콘텐츠 모델이 있는 유형을 포함하는 XSD 스키마를 어떻게 거부하는지 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2c64ff3f819e0d30db6654cbeed6cf5c19e43aa7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 9d7b6de76fdb5310a5121908779d4565a4b6ff1c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665207"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729830"
 ---
 # <a name="unique-particle-attribution-constraint"></a>UNIQUE PARTICLE ATTRIBUTION 제약 조건
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XSD에서 복잡한 콘텐츠 모델은 UPA(Unique Particle Attribution) 제약 조건 규칙에 의해 제한됩니다. 이 규칙에서는 항목 문서의 각 요소가 해당 부모 콘텐츠 모델에 있는 정확히 하나의 `<xsd:element>` 또는 `<xsd:any>` 파티클과 분명하게 일치해야 합니다. 잠재적으로 모호한 콘텐츠 모델이 있는 유형이 포함되는 스키마는 모두 거부됩니다.  
   
  모호성에 대한 가장 일반적인 원인은 minOccurs < maxOccurs와 같은 변수 발생 범위가 있는 `<xsd:any>` 와일드카드 문자 및 파티클입니다. 예를 들어 다음 콘텐츠 모델은 <`e1`> 요소가 `<xsd:element>` 또는 `<xsd:any>` 요소 중 하나와 일치할 수 있기 때문에 모호합니다.  
@@ -81,7 +82,7 @@ ms.locfileid: "80665207"
 ## <a name="finding-more-information"></a>추가 정보 찾기  
  다음 문서는 W3C(World Wide Web Consortium)에서 발행했으며 UNIQUE PARTICLE ATTRIBUTION 제약 조건에 대한 기술적인 설명이 포함되어 있습니다.  
   
- "XML 스키마 1부: 구조 제2판, W3C 제안 수정 추천":  
+ “XML 스키마 1부: 구조 제2판, W3C 제안 수정 권장 사항”:  
   
 -   섹션 3.8.6: 모델 그룹 스키마 구성 요소의 제한 사항  
   

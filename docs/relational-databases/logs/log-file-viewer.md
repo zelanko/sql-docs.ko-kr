@@ -1,5 +1,6 @@
 ---
 title: 로그 파일 뷰어 | Microsoft 문서
+description: SQL Server Management Studio의 로그 파일 뷰어를 사용하여 로그 파일에 캡처되는 오류 및 이벤트에 대한 자세한 내용을 확인할 수 있습니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a4ea7fc8-1cb2-4c98-bc86-8991c5e748b2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7c587edde597b3b1dffeb60675a1c3c5cb886bc7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7425bb2175b9a2e7b813f63e7d78aec7e73ef5ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68084069"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668128"
 ---
 # <a name="log-file-viewer"></a>로그 파일 뷰어
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 로그 파일 뷰어를 사용하여 로그 파일에 기록되는 오류 및 이벤트에 대한 정보에 액세스할 수 있습니다.  
   
 ## <a name="benefits-of-using-log-file-viewer"></a>로그 파일 뷰어 사용의 이점  

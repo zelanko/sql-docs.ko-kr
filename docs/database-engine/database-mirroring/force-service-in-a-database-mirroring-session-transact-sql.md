@@ -1,6 +1,6 @@
 ---
 title: 데이터베이스 미러링 서비스 적용
-description: 미러 서버를 사용할 수 있는 동안 주 서버가 실패하는 경우 서비스를 적용하여 미러된 데이터베이스로 장애 조치(failover)하는 방식으로 데이터베이스를 사용할 수 있도록 설정합니다(데이터가 손실될 수 있음).
+description: 미러 서버를 사용할 수 있는 동안 주 서버가 실패하는 경우 서비스를 적용하여 미러된 데이터베이스로 장애 조치(failover)하는 방식으로 데이터베이스를 사용할 수 있도록 설정합니다.
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8b6ffe77-35f3-4e2a-a658-8a38a8e1c794
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 970f399ab6227fdaf2672bf887c250b6be02de1e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9ac9ebf9538ad7800deb5807ac5bb1980b2f472b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822228"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754627"
 ---
 # <a name="force-service-in-a-database-mirroring-session-transact-sql"></a>데이터베이스 미러링 세션에 서비스 강제 수행(Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   성능 우선 모드 및 장애 조치를 지원하지 않는 보호 우선 모드에서 미러 서버는 사용할 수 있는데 주 서버는 실패하는 경우 데이터베이스 소유자는 서비스가 미러 데이터베이스로 장애 조치(데이터 손실 가능)되도록 강제 적용하여 데이터베이스를 사용 가능하게 만들 수 있습니다. 이 옵션은 다음 조건이 모두 충족된 경우에만 사용할 수 있습니다.  
   
 -   주 서버가 다운되었습니다.  

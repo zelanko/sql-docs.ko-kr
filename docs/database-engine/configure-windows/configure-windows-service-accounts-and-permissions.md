@@ -1,12 +1,13 @@
 ---
 title: Windows 서비스 계정 및 권한 구성 | Microsoft Docs
-ms.custom: ''
+description: SQL Server에서 서비스를 시작하고 실행하는 데 사용되는 서비스 계정에 대해 알아봅니다. 이러한 계정을 구성하고 적절한 권한을 할당하는 방법을 알아봅니다.
+ms.custom: contperfq4
 ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
 ms.technology: configuration
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - startup service states [SQL Server]
 - Setup [SQL Server], user accounts
@@ -48,18 +49,18 @@ helpviewer_keywords:
 - manual startup state [SQL Server]
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 93bfa129267ed149ce4d52904a0d5c459b6e87db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d4ef0d67bdb86d08754ed23805b4c04e56cf37a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82178744"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728677"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows 서비스 계정 및 권한 구성
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 서비스는 Windows를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업의 인증을 관리하는 프로세스 또는 프로세스 집합을 나타냅니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이 릴리스에서 기본 서비스 구성과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 그리고 설치 후에 설정할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 구성 옵션에 대해 설명합니다. 이 항목에서는 고급 사용자가 서비스 계정의 세부 정보를 파악하는 데 도움이 되는 정보를 제공합니다.
 
@@ -77,11 +78,11 @@ ms.locfileid: "82178744"
 
 사용자가 설치하도록 선택한 구성 요소에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서는 다음 서비스를 설치합니다.
 
-- **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 서비스** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대한 서비스입니다. 실행 파일 경로는 \<MSSQLPATH>\MSSQL\Binn\sqlservr.exe입니다.
-- **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트** - 작업을 실행하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 모니터링하고 경고를 발생시키고 일부 관리 태스크의 자동화를 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 제공되지만 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]인스턴스에서 해제됩니다. 실행 파일 경로는 \<MSSQLPATH>\MSSQL\Binn\sqlagent.exe입니다.
-- **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]** - 비즈니스 인텔리전스 애플리케이션을 위한 OLAP(온라인 분석 처리) 및 데이터 마이닝 기능을 제공합니다. 실행 파일 경로는 \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe입니다.
-- **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** - 보고서를 관리, 실행, 작성, 예약 및 배달합니다. 실행 파일 경로는 \<MSSQLPATH>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe입니다.
-- **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]** - [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 스토리지 및 실행을 위한 관리를 지원합니다. 실행 파일 경로는 \<MSSQLPATH>\130\DTS\Binn\MsDtsSrvr.exe입니다.
+- **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 서비스** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대한 서비스입니다. 실행 파일은 \<MSSQLPATH>\MSSQL\Binn\sqlservr.exe입니다.
+- **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트** - 작업을 실행하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 모니터링하고 경고를 발생시키고 일부 관리 태스크의 자동화를 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 제공되지만 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]인스턴스에서 해제됩니다. 실행 파일은 \<MSSQLPATH>\MSSQL\Binn\sqlagent.exe입니다.
+- **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]** - 비즈니스 인텔리전스 애플리케이션을 위한 OLAP(온라인 분석 처리) 및 데이터 마이닝 기능을 제공합니다. 실행 파일은 \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe입니다.
+- **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** - 보고서를 관리, 실행, 작성, 예약 및 배달합니다. 실행 파일은 \<MSSQLPATH>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe입니다.
+- **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]** - [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 스토리지 및 실행을 위한 관리를 지원합니다. 실행 파일은 \<MSSQLPATH>\130\DTS\Binn\MsDtsSrvr.exe입니다.
 - **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser** - 클라이언트 컴퓨터에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 정보를 제공하는 이름 확인 서비스입니다. 실행 경로는 c:\Program Files (x86)\Microsoft SQL Server\90\Shared\sqlbrowser.exe입니다.
 - **전체 텍스트 검색** - 구조화 또는 반구조화된 데이터의 내용 및 속성에 대한 전체 텍스트 인덱스를 생성하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 문서 필터링 및 단어 분리를 제공합니다.
 - **SQL 기록기** - 백업 및 복원 애플리케이션이 VSS(볼륨 섀도 복사본 서비스) 프레임워크에서 작동할 수 있도록 합니다.
@@ -245,7 +246,7 @@ ms.locfileid: "82178744"
 
 ### <a name="service-configuration-and-access-control"></a><a name="Serv_SID"></a> 서비스 구성 및 액세스 제어
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 각 서비스에 대해 서비스별 SID로 서비스 격리 및 철저한 방어 기능을 제공하도록 지원합니다. 서비스별 SID는 서비스 이름에서 파생되며 서비스마다 고유합니다. 예를 들어 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스에 대한 서비스 SID는 **NT Service\MSSQL$** _\<InstanceName>_ 일 수 있습니다. 서비스 격리는 높은 권한 수준의 계정에서 실행되거나 개체의 보안을 약화시키지 않고도 특정 개체에 액세스할 수 있도록 해줍니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스는 서비스 SID가 포함된 액세스 제어 항목을 사용하여 해당 리소스에 대한 액세스를 제한할 수 있습니다.
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 각 서비스에 대해 서비스별 SID로 서비스 격리 및 철저한 방어 기능을 제공하도록 지원합니다. 서비스별 SID는 서비스 이름에서 파생되며 서비스마다 고유합니다. 예를 들어, [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스의 서비스 SID 이름은 **NT Service\MSSQL$** _\<InstanceName>_ 입니다. 서비스 격리는 높은 권한 수준의 계정에서 실행되거나 개체의 보안을 약화시키지 않고도 특정 개체에 액세스할 수 있도록 해줍니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스는 서비스 SID가 포함된 액세스 제어 항목을 사용하여 해당 리소스에 대한 액세스를 제한할 수 있습니다.
 
 > [!NOTE]
 > Windows 7 및 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2(이후 버전)에서 서비스별 SID는 서비스에서 사용되는 가상 계정일 수 있습니다.
@@ -349,17 +350,17 @@ ms.locfileid: "82178744"
 ||80\tools|읽기, 실행|
 ||130\sdk|읽기|
 ||Microsoft SQL Server\130\Setup Bootstrap|읽기, 실행|
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|\<ToolsDir>\DReplayController\Log\(빈 디렉터리)|읽기, 실행, 폴더 내용 보기|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|\<ToolsDir>\DReplayController\Log\ (빈 디렉터리)|읽기, 실행, 폴더 내용 보기|
 ||\<ToolsDir>\DReplayController\DReplayController.exe|읽기, 실행, 폴더 내용 보기|
 ||\<ToolsDir>\DReplayController\resources\|읽기, 실행, 폴더 내용 보기|
 ||\<ToolsDir>\DReplayController\\{모든 dll}|읽기, 실행, 폴더 내용 보기|
 ||\<ToolsDir>\DReplayController\DReplayController.config|읽기, 실행, 폴더 내용 보기|
 ||\<ToolsDir>\DReplayController\IRTemplate.tdf|읽기, 실행, 폴더 내용 보기|
 ||\<ToolsDir>\DReplayController\IRDefinition.xml|읽기, 실행, 폴더 내용 보기|
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|\<ToolsDir>\DReplayClient\Log\|R읽기, 실행, 폴더 내용 보기|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|\<ToolsDir>\DReplayClient\Log\|읽기, 실행, 폴더 내용 보기|
 ||\<ToolsDir>\DReplayClient\DReplayClient.exe|읽기, 실행, 폴더 내용 보기|
 ||\<ToolsDir>\DReplayClient\resources\|읽기, 실행, 폴더 내용 보기|
-||\<ToolsDir>\DReplayClient\(모든 dll)|읽기, 실행, 폴더 내용 보기|
+||\<ToolsDir>\DReplayClient\ (모든 dll)|읽기, 실행, 폴더 내용 보기|
 ||\<ToolsDir>\DReplayClient\DReplayClient.config|읽기, 실행, 폴더 내용 보기|
 ||\<ToolsDir>\DReplayClient\IRTemplate.tdf|읽기, 실행, 폴더 내용 보기|
 ||\<ToolsDir>\DReplayClient\IRDefinition.xml|읽기, 실행, 폴더 내용 보기|
@@ -383,11 +384,11 @@ ms.locfileid: "82178744"
 ||관리자 전용|\\\\.\root\Microsoft\SqlServer\ServerEvents\\<sql_instance_name>\*|모든 권한|
 ||관리자, 시스템|\tools\binn\schemas\sqlserver\2004\07\showplan|모든 권한|
 ||사용자|\tools\binn\schemas\sqlserver\2004\07\showplan|읽기, 실행|
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|보고서 서버 Windows 서비스 계정|*\<설치>* \Reporting Services\LogFiles|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|
-||보고서 서버 Windows 서비스 계정|*\<설치>* \Reporting Services\ReportServer|읽기|
-||보고서 서버 Windows 서비스 계정|*\<설치>* \Reporting Services\ReportServer\global.asax|전체|
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|보고서 서버 Windows 서비스 계정|*\<install>* \Reporting Services\LogFiles|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|
+||보고서 서버 Windows 서비스 계정|*\<install>* \Reporting Services\ReportServer|읽기|
+||보고서 서버 Windows 서비스 계정|*\<install>* \Reporting Services\ReportServer\global.asax|전체|
 ||보고서 서버 Windows 서비스 계정|*\<install>* \Reporting Services\RSWebApp|읽기, 실행|
-||모든 사람|*\<설치>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|
+||모든 사람|*\<install>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|
 ||ReportServer Windows 서비스 계정|*\<install>* \Reporting Services\ReportServer\rsreportserver.config|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|
 ||모든 사람|보고서 서버 키(Instid 하이브)|값 쿼리<br /><br /> 하위 키 열거<br /><br /> 알림<br /><br /> 읽기 제어|
 ||터미널 서비스 사용자|보고서 서버 키(Instid 하이브)|값 쿼리<br /><br /> 값 설정<br /><br /> 하위 키 만들기<br /><br /> 하위 키 열거<br /><br /> 알림<br /><br /> DELETE<br /><br /> 읽기 제어|

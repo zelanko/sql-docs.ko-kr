@@ -34,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 98fc6b89cfe05b7c03d4d4211bea9387c5ef4e80
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1f0bf0dd95bbb209c0e6320c4ba91eb1bc84ff41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635846"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736325"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 특정 단어 또는 구와 정확히 일치하거나 비슷하게 일치하는 단어를 검색하거나 서로 근접한 단어를 검색하거나 가중치 검색을 수행합니다. CONTAINS는 문자 기반 데이터 형식이 포함된 전체 텍스트 인덱싱된 열에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 검색을 수행하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문의 [WHERE 절](../../t-sql/queries/where-transact-sql.md)에 사용되는 조건자입니다.  
@@ -225,7 +225,7 @@ WHERE CONTAINS(Description, @SearchWord);
  INFLECTIONAL  
  지정된 단순 단어에 언어별 형태소 분석기를 사용하도록 지정합니다. 형태소 분석기 동작은 각 언어의 형태소 분석 규칙에 따라 정의됩니다. 중립 언어에는 관련된 형태소 분석기가 없습니다. 쿼리할 열의 열 언어는 원하는 형태소 분석기를 참조하는 데 사용됩니다. *language_term*을 지정하면 해당 언어에 대한 형태소 분석기가 사용됩니다.  
   
- *\<generation_term>* 안에 지정된 *\<simple_term>* 은 명사 및 동사와 일치하지 않습니다.  
+ *\<generation_term>* 내에서 지정된 *\<simple_term>* 은 명사와 동사 중 하나만 검색합니다.  
   
  THESAURUS  
  열의 전체 텍스트 언어 또는 쿼리에 지정된 언어에 해당되는 동의어 사전이 사용되도록 지정합니다. *\<simple_term>* 에서 가장 긴 패턴에 대해 동의어 사전에서 대응되는 항목을 찾고 원래 패턴을 확장하거나 대체하도록 추가 단어가 생성됩니다. *\<simple_term>* 의 전체 또는 일부에 일치하는 항목을 찾을 수 없으면 일치하지 않는 부분이 *simple_term*으로 처리됩니다. 전체 텍스트 검색 동의어 사전에 대한 자세한 내용은 [전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)를 참조하세요.  
@@ -234,7 +234,7 @@ WHERE CONTAINS(Description, @SearchWord);
  검색 대상 문서에 있어야 하는 단어 또는 구를 지정합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]\<custom_proximity_term>을 사용하는 것이 좋습니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] \<custom_proximity_term>을 사용할 것을 권장합니다.  
   
  NEAR | ~  
  일치 항목이 반환되려면 NEAR 또는 ~ 연산자의 양쪽에 있는 단어나 구가 문서에 있어야 함을 나타냅니다. 두 개의 검색 단어를 지정해야 합니다. 지정한 검색 단어는 큰따옴표("*phrase*")로 구분되는 특정 단어나 구가 될 수 있습니다.  
@@ -290,7 +290,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  \<match_order>  
  검색 쿼리에서 반환하도록 지정한 순서로 단어가 나올지 여부를 지정합니다. \<match_order>를 지정하려면 \<maximum_distance>도 지정해야 합니다.  
   
- \<match_order>는 다음 값 중 하나를 갖습니다.  
+ \<match_order>는 다음 값 중 하나를 사용합니다.  
   
  **TRUE**  
  단어에 지정한 순서를 적용합니다. 예를 들어 `NEAR(A,B)`는 `A ... B`에만 일치합니다.  
@@ -315,7 +315,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  *\<weighted_term>* 키워드를 지정합니다.  
   
  WEIGHT(*weight_value*)  
- 0\.0에서 1.0 사이의 숫자로 가중치를 지정합니다. *\<weighted_term>* 의 각 구성 요소는 *weight_value*를 포함할 수 있습니다. *weight_value*를 사용하여 쿼리의 각 부분이 쿼리와 일치하는 각 행에 할당되는 등급 값에 영향을 주는 방법을 변경할 수 있습니다. WEIGHT는 CONTAINS 쿼리 결과에는 영향을 주지 않지만 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 쿼리의 순위에는 영향을 줍니다.  
+ 0\.0에서 1.0 사이의 숫자로 가중치를 지정합니다. *\<weighted_term>* 의 각 구성 요소에 *weight_value*가 포함될 수 있습니다. *weight_value*를 사용하여 쿼리의 각 부분이 쿼리와 일치하는 각 행에 할당되는 등급 값에 영향을 주는 방법을 변경할 수 있습니다. WEIGHT는 CONTAINS 쿼리 결과에는 영향을 주지 않지만 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 쿼리의 순위에는 영향을 줍니다.  
   
 > [!NOTE]  
 >  소수 구분 기호는 운영 체제 로캘에 관계없이 항상 마침표입니다.  
@@ -369,9 +369,9 @@ FROM Production.Product
 WHERE CONTAINS((Name, Color), 'Red');  
 ```  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
-### <a name="a-using-contains-with-simple_term"></a>A. \<simple_term>에 CONTAINS 사용  
+### <a name="a-using-contains-with-simple_term"></a>A. CONTAINS를 \<simple_term>과 함께 사용  
  다음 예에서는 가격이 `$80.99` 이고 `Mountain`이라는 단어가 포함된 모든 제품을 검색합니다.  
   
 ```sql  
@@ -384,7 +384,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-### <a name="b-using-contains-and-phrase-with-simple_term"></a>B. \<simple_term>에 CONTAINS 및 구 사용  
+### <a name="b-using-contains-and-phrase-with-simple_term"></a>B. CONTAINS 및 구를 \<simple_term>과 함께 사용  
  다음 예에서는 `Mountain`이나 `Road`라는 구가 포함된 모든 제품을 반환합니다.  
   
 ```sql  
@@ -396,7 +396,7 @@ WHERE CONTAINS(Name, ' Mountain OR Road ')
 GO  
 ```  
   
-### <a name="c-using-contains-with-prefix_term"></a>C. \<prefix_term>에 CONTAINS 사용  
+### <a name="c-using-contains-with-prefix_term"></a>C. CONTAINS를 \<prefix_term>과 함께 사용  
  다음 예에서는 `Name` 열에 접두사 chain으로 시작하는 단어가 하나 이상인 모든 제품 이름을 반환합니다.  
   
 ```sql  
@@ -408,7 +408,7 @@ WHERE CONTAINS(Name, ' "Chain*" ');
 GO  
 ```  
   
-### <a name="d-using-contains-and-or-with-prefix_term"></a>D. \<prefix_term>에 CONTAINS 및 OR 사용  
+### <a name="d-using-contains-and-or-with-prefix_term"></a>D. CONTAINS 및 OR을 \<prefix_term>과 함께 사용  
  다음 예에서는 접두사가 `chain` 또는 `full`인 문자열을 포함하는 모든 범주 설명을 반환합니다.  
   
 ```sql  
@@ -420,7 +420,7 @@ WHERE CONTAINS(Name, '"chain*" OR "full*"');
 GO  
 ```  
   
-### <a name="e-using-contains-with-proximity_term"></a>E. \<proximity_term>에 CONTAINS 사용  
+### <a name="e-using-contains-with-proximity_term"></a>E. CONTAINS를 \<proximity_term>과 함께 사용  
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 
   
@@ -435,7 +435,7 @@ WHERE CONTAINS(Comments , 'NEAR((bike,control), 10, TRUE)');
 GO  
 ```  
   
-### <a name="f-using-contains-with-generation_term"></a>F. \<generation_term>에 CONTAINS 사용  
+### <a name="f-using-contains-with-generation_term"></a>F. CONTAINS를 \<generation_term>과 함께 사용  
  다음 예에서는 riding, ridden 등 `ride`에서 파생된 단어가 있는 모든 제품을 검색합니다.  
   
 ```sql  
@@ -447,7 +447,7 @@ WHERE CONTAINS(Description, ' FORMSOF (INFLECTIONAL, ride) ');
 GO  
 ```  
   
-### <a name="g-using-contains-with-weighted_term"></a>G. \<weighted_term>에 CONTAINS 사용  
+### <a name="g-using-contains-with-weighted_term"></a>G. CONTAINS를 \<weighted_term>과 함께 사용  
  다음 예에서는 `performance`, `comfortable` 또는 `smooth` 단어가 포함된 모든 제품 이름을 검색하며 각 단어에는 다른 가중치가 지정됩니다.  
   
 ```sql  

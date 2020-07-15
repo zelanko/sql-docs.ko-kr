@@ -1,6 +1,6 @@
 ---
 title: SQL Server Integration Services Scale Out의 인증서 관리 | Microsoft Docs
-ms.description: This article describes how to manage certificates to secure communications between SSIS Scale Out Master and Scale Out Workers.
+description: 이 문서에서는 SSIS Scale Out 마스터 및 Scale Out 작업자 간의 통신을 보호하기 위해 인증서를 관리하는 방법을 설명합니다.
 ms.date: 12/19/2017
 ms.prod: sql
 ms.prod_service: integration-services
@@ -10,12 +10,12 @@ ms.custom: performance
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: ab701d44e14bbbd6234f5301a5fb3abdba451ef2
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 425d307d6afe1da1edca7c3ed5796cee5a7b2c5b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488139"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733958"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>SQL Server Integration Services Scale Out의 인증서 관리
 
@@ -47,7 +47,7 @@ SQL Server 설치 마법사의 **Integration Services Scale Out 구성 - 마스�
 ```dos
 MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
 ```
-다음은 그 예입니다.
+예를 들면 다음과 같습니다.
 
 ```dos
 MakeCert.exe -n CN=MasterMachine SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
@@ -60,7 +60,7 @@ MakeCert.exe -n CN=MasterMachine SSISScaleOutMaster.cer -r -ss Root -sr LocalMac
 netsh http show sslcert ipport=0.0.0.0:{Master port}
 ```
 
-다음은 그 예입니다.
+예를 들면 다음과 같습니다.
 
 ```dos
 netsh http show sslcert ipport=0.0.0.0:8391
@@ -73,7 +73,7 @@ netsh http delete sslcert ipport=0.0.0.0:{Master port}
 netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={TLS/SSL Certificate Thumbprint} certstorename=Root appid={original appid}
 ```
 
-다음은 그 예입니다.
+예를 들면 다음과 같습니다.
 
 ```dos
 netsh http delete sslcert ipport=0.0.0.0:8391
@@ -111,7 +111,7 @@ Scale Out 작업자 인증서를 변경하려는 경우 다음을 수행합니�
 MakeCert.exe -n CN={worker machine name};CN={worker machine ip} SSISScaleOutWorker.cer -r -ss My -sr LocalMachine
 ```
 
-다음은 그 예입니다.
+예를 들면 다음과 같습니다.
 
 ```dos
 MakeCert.exe -n CN=WorkerMachine;CN=10.0.2.8 SSISScaleOutWorker.cer -r -ss My -sr LocalMachine
@@ -127,7 +127,7 @@ certmgr.exe /del /c /s /r localmachine My /n {CN of the old certificate}
 winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the new certificate} -a {the account running Scale Out Worker service}
 ```
 
-다음은 그 예입니다.
+예를 들면 다음과 같습니다.
 
 ```dos
 certmgr.exe /del /c /s /r localmachine My /n WorkerMachine

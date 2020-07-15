@@ -1,5 +1,6 @@
 ---
 title: XMLDATA 및 XMLSCHEMA를 사용하여 결과로 스키마 요청 | Microsoft Docs
+description: FOR XML 절과 함께 RAW 모드에서 XMLDATA 및 XMLSCHEMA 옵션을 사용하여 쿼리 결과에서 XML-DATA 스키마 또는 XSD 스키마를 요청하는 방법을 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +14,15 @@ ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: ed72f442fa85a505ace0a1826028ee43f1ea6e97
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e7dfada43a7f899339f9f6ab59ef94dda9853c36
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664511"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632928"
 ---
 # <a name="request-schemas-as-results-with-xmldata--xmlschema"></a>XMLDATA 및 XMLSCHEMA를 사용하여 결과로 스키마 요청
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   다음 쿼리는 문서 구조를 설명하는 XMLDATA 스키마를 반환합니다.  
   
 ## <a name="example"></a>예제  
@@ -53,7 +54,7 @@ GO
 ```  
   
 > [!NOTE]  
->  <`Schema`>는 네임스페이스로 선언되었습니다. 서로 다른 FOR XML 쿼리에서 여러 XML-Data 스키마를 요청할 때는 네임스페이스 충돌을 피하기 위해 쿼리가 실행될 때마다 네임스페이스 식별자(이 예제에서는 `Schema1` )가 변경됩니다. 네임스페이스 식별자는 **Schema** _**n**_ 으로 구성됩니다. 여기서 _**n**_ 은 정수입니다.  
+>  <`Schema`>는 네임스페이스로 선언되었습니다. 서로 다른 FOR XML 쿼리에서 여러 XML-Data 스키마를 요청할 때는 네임스페이스 충돌을 피하기 위해 쿼리가 실행될 때마다 네임스페이스 식별자(이 예제에서는 `Schema1` )가 변경됩니다. 네임스페이스 식별자는 **Schema**_**n**_ 으로 구성됩니다. 여기서 _**n**_ 은 정수입니다.  
   
  `XMLSCHEMA` 옵션을 지정하면 결과에 대해 XSD 스키마를 요청할 수 있습니다.  
   

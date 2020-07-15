@@ -1,5 +1,6 @@
 ---
 title: 메모리 최적화 테이블이 포함된 데이터베이스 백업
+description: 메모리 최적화 테이블을 일반적인 데이터베이스 백업의 일부로 백업하는 방법을 알아봅니다. 전체 데이터베이스 백업 및 차등 백업에 대해 읽어 보세요.
 ms.custom: seo-dt-2019
 ms.date: 03/20/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c08f3c1ba1c31b0f6a1d34faeb5c6e2f77e404f8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0e1b2bf585b1b44f0f8e3b01eca46faaeda2a053
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412793"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723400"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블이 포함된 데이터베이스 백업
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   메모리 액세스에 최적화된 테이블은 일반적인 데이터베이스 백업의 일부로 백업됩니다. 디스크 기반 테이블의 경우 스토리지 손상을 검색하기 위해 데이터베이스 백업의 일부로 데이터 및 델타 파일 쌍의 CHECKSUM 유효성이 검사됩니다.  
   

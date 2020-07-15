@@ -1,5 +1,6 @@
 ---
 title: Kerberos 연결의 서비스 사용자 이름 등록 | Microsoft Docs
+description: SPN(서비스 사용자 이름)을 Active Directory에 등록하는 방법을 알아봅니다. 이 등록은 SQL Server에서 Kerberos 인증을 사용하는 데 필요합니다.
 ms.custom: ''
 ms.date: 08/06/2019
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - Server Principal Names
 - SPNs [SQL Server]
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 49d8ec52ae12f40f6adaaf360e2e7a1659bef97d
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b56afed2447f21f6595bec39873d4298b4762027
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087501"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651752"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Kerberos 연결의 서비스 사용자 이름 등록
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 Kerberos 인증을 사용하려면 다음 조건 중 하나에 해당해야 합니다.  
   
 -   클라이언트 및 서버 컴퓨터는 동일한 Windows 도메인이나 트러스트된 도메인의 일부여야 합니다.  
@@ -70,7 +71,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
 **명명된 인스턴스**  
   
--   **MSSQLSvc/\<FQDN>:[\<port> | \<instancename>]** , 여기서:  
+-   **MSSQLSvc/\<FQDN>:[\<port> | \<instancename>]** . 여기서  
   
     -   **MSSQLSvc** 는 등록할 서비스입니다.  
   
@@ -82,7 +83,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
 **기본 인스턴스**  
   
--   **MSSQLSvc/\<FQDN>:\<port>**  | **MSSQLSvc/\<FQDN>** , 여기서:  
+-   **MSSQLSvc/\<FQDN>:\<port>**  | **MSSQLSvc/\<FQDN>** . 여기서  
   
     -   **MSSQLSvc** 는 등록할 서비스입니다.  
   
@@ -97,15 +98,15 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 |-|-|  
 |MSSQLSvc/\<FQDN>:<port>|TCP가 사용될 때 공급자가 생성하는 기본 SPN입니다. \<port>는 TCP 포트 번호입니다.|  
 |MSSQLSvc/\<FQDN>|TCP 이외의 프로토콜이 사용될 때 기본 인스턴스에 대해 공급자가 생성하는 기본 SPN입니다. \<FQDN>은 정규화된 도메인 이름입니다.|  
-|MSSQLSvc/\<FQDN>:\<instancename>|TCP 이외의 프로토콜이 사용될 때 명명된 인스턴스에 대해 공급자가 생성하는 기본 SPN입니다. \<instancename>은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스 이름입니다.|  
+|MSSQLSvc/\<FQDN>:\<instancename>|TCP 이외의 프로토콜이 사용될 때 명명된 인스턴스에 대해 공급자가 생성하는 기본 SPN입니다. \<instancename>은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|  
 
 > [!NOTE]  
 > SPN에 TCP 포트가 포함되는 TCP/IP 연결의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 Kerberos 인증을 사용하여 연결하는 사용자를 위해 TCP 프로토콜을 사용하도록 설정해야 합니다. 
 
 ##  <a name="automatic-spn-registration"></a><a name="Auto"></a> SPN 자동 등록  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 시작되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 SPN을 등록하려고 하고, 인스턴스가 중지되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 SPN의 등록을 취소하려고 합니다. TCP/IP 연결의 경우 SPN은 *MSSQLSvc/\<FQDN>* : *\<tcpport>* 형식으로 등록됩니다. 명명된 인스턴스와 기본 인스턴스는 모두 *MSSQLSvc*로 등록되며, *\<tcpport>* 값을 사용하여 구분합니다.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 시작되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 SPN을 등록하려고 하고, 인스턴스가 중지되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 SPN의 등록을 취소하려고 합니다. TCP/IP 연결에서 SPN은 *MSSQLSvc/\<FQDN>* : *\<tcpport>* 형식으로 등록됩니다. 명명된 인스턴스와 기본 인스턴스는 모두 *MSSQLSvc*로 등록되며 *\<tcpport>* 값으로 인스턴스를 구문합니다.  
   
- Kerberos를 지원하는 다른 연결의 경우 SPN은 명명된 인스턴스에 대해 *MSSQLSvc/\<FQDN>* / *\<instancename>* 형식으로 등록됩니다. 기본 인스턴스는 *MSSQLSvc/\<FQDN>* 형식으로 등록됩니다.  
+ Kerberos를 지원하는 다른 연결에서 SPN은 명명된 인스턴스의 경우 *MSSQLSvc/\<FQDN>* / *\<instancename>* 형식으로 등록됩니다. 기본 인스턴스는 *MSSQLSvc/\<FQDN>* 형식으로 등록됩니다.  
   
  서비스 계정에 이러한 동작을 수행하는 데 필요한 권한이 없는 경우에는 수동으로 SPN을 등록하거나 등록 취소해야 합니다.  
   

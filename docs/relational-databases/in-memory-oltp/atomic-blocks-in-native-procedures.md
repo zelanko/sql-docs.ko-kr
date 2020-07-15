@@ -1,5 +1,6 @@
 ---
 title: Atomic 블록 | Microsoft 문서
+description: ANSI SQL 표준의 일부인 BEGIN ATOMIC에 대해 알아봅니다. SQL Server는 기본 프로시저의 Atomic 블록을 지원합니다.
 ms.custom: ''
 ms.date: 10/26/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 329fb8644219d750595ff8a9cb2ddb5a6b804e4d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 662d5c2fe285e92f8e8fdf74836eb1dddca77206
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951228"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723423"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>기본 프로시저의 Atomic 블록
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **BEGIN ATOMIC** 은 ANSI SQL 표준의 일부입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 고유하게 컴파일된 저장 프로시저와 고유하게 컴파일된 스칼라 사용자 정의 함수에 대해 최상위 수준에서 Atomic 블록을 지원합니다. 이러한 함수에 대한 자세한 내용은 [메모리 내 OLTP에 대한 사용자 정의 스칼라 함수](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)를 참조하세요.  
   
@@ -126,7 +127,7 @@ ORDER BY c1
 GO  
 ```  
   
- 메모리 최적화 테이블에 대한 다음 오류 메시지가 발생하면 트랜잭션이 실패합니다. Atomic 블록 범위 내에서 10772, 41301, 41302, 41305, 41325, 41332, 41333 및 41839 오류가 발생하면 트랜잭션을 중단시킵니다.  
+ 메모리 최적화 테이블에 대한 다음 오류 메시지가 발생하면 트랜잭션이 실패합니다. Atomic 블록 범위 내에서 10772, 41301, 41302, 41305, 41325, 41332, 41333 및 41839 오류가 발생하면 트랜잭션이 중단됩니다.  
   
 ## <a name="session-settings"></a>세션 설정  
  저장 프로시저가 컴파일되면 ATOMIC 블록의 세션 설정은 고정됩니다. 설정은 **BEGIN ATOMIC** 으로 지정할 수도 있고 같은 값으로 항상 고정할 수도 있습니다.  

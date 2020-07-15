@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 994018ab8b574bc313072f7a353ff999d645e0d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 848c53ce4ca004cec84609b12869a98fa45fa78d
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292758"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469328"
 ---
 # <a name="error-handling-in-data"></a>데이터 오류 처리
 
@@ -144,7 +144,7 @@ ms.locfileid: "71292758"
   
     -   <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 메서드를 호출하는 단일 스크립트 줄을 사용하여 추가 열에 오류 설명을 포함합니다.  
   
-    -   <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID%2A> 메서드를 호출하는 단일 스크립트 줄을 사용하여 추가 열에 열 이름을 포함합니다.  
+    -   <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스의 [Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID*](/previous-versions/sql/sql-server-2016/mt657629(v=sql.130)) 메서드를 호출하는 단일 스크립트 줄을 사용하여 추가 열에 열 이름을 포함합니다.  
   
      오류를 캡처할 데이터 흐름 구성 요소에서 임의의 다운스트림 위치에 있는 데이터 흐름의 오류 세그먼트에 Script 구성 요소를 추가할 수 있습니다. 일반적으로는 오류 행이 대상에 기록되기 직전에 Script 구성 요소를 배치합니다. 이렇게 하면 스크립트가 설명에서 기록된 오류 행만 조회합니다. 데이터 흐름의 오류 세그먼트가 일부 오류를 수정하고 해당 행을 오류 대상에 기록하지 않을 수도 있습니다.  
 

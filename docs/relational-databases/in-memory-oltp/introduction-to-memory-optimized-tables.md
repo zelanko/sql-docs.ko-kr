@@ -1,5 +1,6 @@
 ---
 title: 메모리 액세스에 최적화된 테이블 소개 | Microsoft 문서
+description: 원자적이고, 일관적이며, 격리되고, 내구성이 뛰어난 트랜잭션을 지원하는 견고한 메모리 액세스에 최적화된 테이블에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 12/02/2016
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fe7d83331ee1dc0824e77602c60be04e070fb6f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 32129e87589c982c2ae620abbf91eeeb245dc3a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050201"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723122"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 소개
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   메모리 최적화 테이블은 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)을 사용하여 만들어집니다.  
   
@@ -59,9 +60,9 @@ SQL Server 2016부터 Azure SQL Database에는 메모리 내 OLTP에 한정되�
   
 |기능|고유하게 컴파일된 저장 프로시저를 통한 액세스|해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스|CLR 액세스|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
-|메모리 액세스에 최적화된 테이블|yes|yes|아니요*|  
-|메모리 액세스에 최적화된 테이블 형식|yes|yes|예|  
-|고유하게 컴파일된 저장 프로시저|고유하게 컴파일된 저장 프로시저 중첩은 지원되지 않습니다. 참조되는 프로시저도 고유하게 컴파일된 경우 저장 프로시저 내에서 EXECUTE 구문을 사용할 수 있습니다.|yes|아니요*|  
+|메모리 액세스에 최적화된 테이블|예|예|아니요*|  
+|메모리 액세스에 최적화된 테이블 형식|예|예|예|  
+|고유하게 컴파일된 저장 프로시저|고유하게 컴파일된 저장 프로시저 중첩은 지원되지 않습니다. 참조되는 프로시저도 고유하게 컴파일된 경우 저장 프로시저 내에서 EXECUTE 구문을 사용할 수 있습니다.|예|아니요*|  
   
  *컨텍스트 연결(CLR 모듈을 실행하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 연결)에서는 메모리 최적화 테이블이나 고유하게 컴파일된 저장 프로시저에 액세스할 수 없습니다. 하지만 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저에 액세스할 수 있는 다른 연결을 만들어서 열 수 있습니다.  
   

@@ -1,5 +1,6 @@
 ---
 title: 암호 정책 | Microsoft 문서
+description: Windows 암호 정책은 SQL Server 인증을 사용하는 로그인과 암호를 가진 포함된 데이터베이스 사용자에게 적용됩니다.
 ms.custom: ''
 ms.date: 01/16/2019
 ms.prod: sql
@@ -32,16 +33,16 @@ helpviewer_keywords:
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: aa626cb69e22e56e1769d45b2cbfd652c51bc3b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f3bd3bf3de9e70095ed217a160d7f29234a65cea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68010817"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725933"
 ---
 # <a name="password-policy"></a>암호 정책
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 Windows 암호 정책 메커니즘을 사용할 수 있습니다. 암호 정책은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 로그인과 암호를 가진 포함된 데이터베이스 사용자에게 적용됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 Windows에서 사용되는 것과 동일한 복잡성 및 만료 정책을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]내부에 사용되는 암호에 적용할 수 있습니다. 이 기능은 `NetValidatePasswordPolicy` API 값에 따라 달라집니다.  

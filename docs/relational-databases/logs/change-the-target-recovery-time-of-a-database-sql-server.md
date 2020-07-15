@@ -1,6 +1,6 @@
 ---
 title: 데이터베이스의 대상 복구 시간 변경
-ms.custom: seo-lt-2019
+description: SQL Server Management Studio 또는 Transact-SQL을 사용하여 SQL Server에서 SQL Server 데이터베이스의 목표 복구 시간을 설정 또는 변경하는 방법을 알아봅니다.
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,16 +10,17 @@ ms.topic: conceptual
 ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 24a87adf77ea4217cb27b20d2452fcbd5ba26135
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: cbc9d56a0c084fe912ad9af0136166cdcf804ebf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056251"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734973"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>데이터베이스의 대상 복구 시간 변경(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]데이터베이스의 대상 복구 시간을 설정하거나 변경하는 방법에 대해 설명합니다. 기본적으로 대상 복구 시간은 60초이고, 데이터베이스에서는 *간접 검사점*을 사용합니다. 대상 복구 시간에서는 이 데이터베이스에 대한 복구 시간의 상한이 설정됩니다.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 목표 복구 시간을 설정 또는 변경하는 방법을 설명합니다. 기본적으로 대상 복구 시간은 60초이고, 데이터베이스에서는 *간접 검사점*을 사용합니다. 대상 복구 시간에서는 이 데이터베이스에 대한 복구 시간의 상한이 설정됩니다.  
   
 > [!NOTE]  
 >  장기 실행 트랜잭션으로 인해 UNDO 시간이 과도하게 길어지는 경우 주어진 데이터베이스에 대해 대상 복구 시간 설정에 지정된 상한이 초과될 수 있습니다.  

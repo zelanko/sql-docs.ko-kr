@@ -1,5 +1,6 @@
 ---
 title: SQL Server Audit(데이터베이스 엔진) | Microsoft 문서
+description: SQL Server 데이터베이스 엔진 또는 개별 데이터베이스에 대한 서버 감사에 대해 알아봅니다. 서버 감사에는 서버 및 데이터베이스 감사 사양이 포함됩니다.
 ms.custom: ''
 ms.date: 01/01/2020
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: davidtrigano
 ms.author: datrigan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f13076ab831dbf3321a60aef8752d88c6193265a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d9d459729a05078043b5365a54d16ade45df31d
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80243413"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85294635"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -127,7 +128,7 @@ ms.locfileid: "80243413"
 ### <a name="database-mirroring-and-sql-server-audit"></a>데이터베이스 미러링 및 SQL Server Audit  
  데이터베이스 감사 사양이 정의되어 있고 데이터베이스 미러링을 사용하는 데이터베이스는 데이터베이스 감사 사양을 포함합니다. 미러링된 SQL 인스턴스에서 올바르게 작동하려면 다음 항목을 구성해야 합니다.  
   
--   데이터베이스 감사 사양을 활성화하여 감사 레코드를 작성할 수 있도록 하려면 미러 서버에 동일한 GUID를 가진 감사가 있어야 합니다. 이는 CREATE AUDIT WITH GUID **=** _\<원본 서버 감사의 GUID_> 명령을 사용하여 구성할 수 있습니다.  
+-   데이터베이스 감사 사양을 활성화하여 감사 레코드를 작성할 수 있도록 하려면 미러 서버에 동일한 GUID를 가진 감사가 있어야 합니다. 이러한 감사는 CREATE AUDIT WITH GUID **=** _\<GUID from source Server Audit_> 명령을 사용하여 구성할 수 있습니다.  
   
 -   이진 파일 대상의 경우 미러 서버 서비스 계정에 감사 내역이 작성될 위치에 대한 적절한 권한이 있어야 합니다.  
   

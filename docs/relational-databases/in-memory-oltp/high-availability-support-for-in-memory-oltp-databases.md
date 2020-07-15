@@ -1,5 +1,6 @@
 ---
 title: 고가용성 - 메모리 내 OLTP 데이터베이스
+description: 고유하게 컴파일된 저장 프로시저가 있거나 없이 메모리 최적화 테이블을 포함하는 SQL Server 데이터베이스는 Always On 가용성 그룹에서 완전히 지원됩니다.
 ms.custom: seo-dt-2019
 ms.date: 08/31/2016
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dd467c8f6d942f53dade5ec6bb7d46ae9f39bdd9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d411bff221ed82f1d31252aa2530efcef68a614a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412674"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723215"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>메모리 내 OLTP 데이터베이스에 대한 고가용성 지원
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   고유하게 컴파일된 저장 프로시저가 있거나 없이 메모리 최적화 테이블을 포함하는 데이터베이스는 Always On 가용성 그룹에서 완전히 지원됩니다.  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 개체를 포함하는 데이터베이스의 구성과 지원 방식은 이러한 개체를 포함하지 않는 데이터베이스의 경우와 차이가 없습니다.  
   
  Always On 가용성 그룹에서 메모리 내 OLTP 데이터베이스를 배포하면 주 복제본의 메모리 최적화 테이블에 대한 변경 내용이 REDO 적용 시 메모리 내에서 보조 복제본의 테이블에 적용됩니다. 즉, 데이터가 이미 메모리에 있으므로 보조 복제본 장애 조치(failover)가 매우 신속하게 진행될 수 있습니다. 또한 읽기용으로 구성된 보조 복제본에 대한 쿼리에서 테이블을 사용할 수 있습니다.  
@@ -50,7 +51,7 @@ ms.locfileid: "74412674"
 ## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹(SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [활성 보조 복제본: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [메모리 액세스에 최적화된 테이블 구독자로 복제](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)  
   
   

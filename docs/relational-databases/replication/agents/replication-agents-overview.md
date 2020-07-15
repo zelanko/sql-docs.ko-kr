@@ -1,5 +1,6 @@
 ---
 title: 복제 에이전트 개요 | Microsoft 문서
+description: SQL Server 복제에서 변경 내용 추적 및 데이터 배포와 관련된 작업을 수행하는 데 사용하는 에이전트에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,12 +26,12 @@ ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d4aba7ca9e46725d771ba36c50ccc4e380fabae7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 237bb89915a606e33ffadbbf62584ed801721494
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288126"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807814"
 ---
 # <a name="replication-agents-overview"></a>복제 에이전트 개요
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

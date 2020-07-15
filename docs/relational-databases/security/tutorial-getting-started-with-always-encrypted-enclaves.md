@@ -2,7 +2,7 @@
 title: '자습서: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted'
 description: 이 자습서에서는 보안 enclave 환경을 사용하여 기본 Always Encrypted를 만드는 방법, 데이터를 원본 위치에서 암호화하는 방법, SSMS(SQL Server Management Studio)를 사용하여 암호화된 열에 대해 서식 있는 쿼리를 실행하는 방법을 설명합니다.
 ms.custom: seo-lt-2019
-ms.date: 10/15/2019
+ms.date: 04/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -13,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a01b55cb67332617ea2e326756fb8ad6fc7bcf42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2a6e27fb84267c1de09a3812747b063050b944e9
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288697"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807724"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>자습서: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "79288697"
 - 보안 enclave를 사용한 Always Encrypted를 테스트 및 평가하기 위한 기본 환경을 만드는 방법.
 - SSMS(SQL Server Management Studio)를 사용하여 암호화된 열에 대해 데이터를 미리 암호화하고 리치 쿼리를 실행하는 방법
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 보안 Enclave를 사용한 Always Encrypted를 시작하려면 2대 이상의 컴퓨터(가상 머신 가능)가 필요합니다.
 
@@ -115,14 +115,14 @@ ms.locfileid: "79288697"
 
 3. Hyper-V 설치를 완료하라는 메시지가 표시되면 SQL Server 컴퓨터를 다시 시작합니다.
 
-4. SQL Server 컴퓨터가 가상 머신이거나, UEFI 보안 부트를 지원하지 않거나 IOMMU가 장착되지 않은 레거시 물리적 컴퓨터인 경우 플랫폼 보안 기능에 대한 VBS 요구 사항을 제거해야 합니다.
-    1. Windows 레지스트리에서 이 요구 사항을 제거합니다.
+4. SQL Server 컴퓨터가 가상 머신이거나, UEFI 보안 부트를 지원하지 않는 물리적 컴퓨터거나, IOMMU가 장착되지 않은 물리적 컴퓨터인 경우 플랫폼 보안 기능에 대한 VBS 요구 사항을 제거해야 합니다.
+    1. 관리자 권한 PowerShell 콘솔의 SQL Server 컴퓨터에서 다음 명령을 실행하여 보안 부팅 및 IOMMU에 대한 요구 사항을 제거합니다.
 
         ```powershell
        Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
        ```
 
-    1. 컴퓨터를 다시 시작하여 줄어든 요구 사항을 사용하는 VBS가 온라인 상태로 전환되도록 합니다.
+    1. SQL Server 컴퓨터를 다시 시작하여 줄어든 요구 사항을 사용하는 VBS가 온라인 상태로 전환되도록 합니다.
 
         ```powershell
        Restart-Computer
