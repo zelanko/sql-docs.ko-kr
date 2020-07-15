@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 사용자 만들기 | Microsoft Docs
+description: SQL Server Management Studio 또는 Transact-SQL을 사용하여 가장 일반적인 유형의 데이터베이스 사용자를 만드는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql
@@ -24,15 +25,15 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f74a4cb83db387bf0251a3dc6be7c07c06d8dce2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981932"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005694"
 ---
 # <a name="create-a-database-user"></a>데이터베이스 사용자 만들기
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   이 항목에서는 가장 일반적인 데이터베이스 사용자 유형을 만드는 방법을 설명합니다. 사용자 유형에는 11가지가 있습니다. 전체 목록은 [CREATE USER&#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md) 항목에서 제공됩니다. 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 변형에서 데이터베이스 사용자를 지원하지만 반드시 모든 사용자 유형을 지원하는 것은 아닙니다.  
   
@@ -115,7 +116,7 @@ ms.locfileid: "73981932"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>추가 옵션  
- **데이터베이스 사용자 - 신규** 대화 상자에는 또한 **소유한 스키마**, **멤버 자격**, **보안 개체** 및 **확장 속성**의 네 가지 추가 페이지에 대한 옵션이 제공됩니다.  
+ **데이터베이스 사용자 - 신규** 대화 상자에서는 다음 네 가지 추가 페이지에 대한 옵션도 제공합니다. **소유한 스키마**, **멤버 자격**, **보안 개체** 및 **확장 속성**의 네 가지 추가 페이지에 대한 옵션이 제공됩니다.  
   
 -   **소유한 스키마** 페이지에는 새 데이터베이스 사용자가 소유할 수 있는 모든 가능한 스키마가 나열됩니다. 데이터베이스 사용자로부터 스키마를 추가하거나 제거하려면 **이 사용자가 소유한 스키마**아래에서 스키마 옆에 있는 확인란을 선택하거나 선택을 취소합니다.  
   

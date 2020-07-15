@@ -13,12 +13,12 @@ ms.assetid: d8d6f62a-e815-425c-a80e-a63fd34ec275
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf492b24e1473ce189f39a84096242773b78cc4a
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 287b86bd9cc368d2a04ea7f7be5e1397e2d6aab9
+ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82086819"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85942910"
 ---
 # <a name="transact-sql-statements"></a>Transact-SQL 문
 
@@ -34,7 +34,7 @@ Backup 및 Restore 문은 백업을 만들고 백업에서 복원하는 방법�
 
 ## <a name="data-definition-language"></a>DDL(데이터 정의 언어)
 
-DDL(데이터 정의 언어) 문은 데이터 구조를 정의합니다. 이 문을 사용하여 데이터베이스에서 데이터 구조를 생성, 변경 또는 삭제합니다.
+DDL(데이터 정의 언어) 문은 데이터 구조를 정의합니다. 이 문을 사용하여 데이터베이스에서 데이터 구조를 생성, 변경 또는 삭제합니다. 이러한 문에는 다음이 포함됩니다.
 
 - ALTER
 - 데이터 정렬
@@ -52,6 +52,7 @@ DML(데이터 조작 언어)는 데이터베이스에 저장된 정보에 영향
 - BULK INSERT
 - Delete
 - INSERT
+- SELECT
 - UPDATE
 - MERGE
 - TRUNCATE TABLE

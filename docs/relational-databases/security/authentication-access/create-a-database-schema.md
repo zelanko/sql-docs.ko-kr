@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 스키마 만들기 | Microsoft 문서
+description: SQL Server Management Studio 또는 Transact-SQL을 사용하여 SQL Server에서 제한 사항을 포함하여 스키마를 만드는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 07/05/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 980b179f39edc3e93e5cb0bc105b6b2f8d12bb58
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: faa0ea1e841edfde76cdfeb4f3285116a47a50fd
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903752"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005706"
 ---
 # <a name="create-a-database-schema"></a>데이터베이스 스키마 만들기
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 스키마를 만드는 방법에 대해 설명합니다.  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
@@ -65,7 +66,7 @@ ms.locfileid: "72903752"
 > **Azure SQL Database** 또는 **Azure SQL Data Warehouse**에 대해 SSMS를 사용하여 스키마를 만드는 경우 대화 상자가 표시되지 않습니다. 생성된 스키마 템플릿 T-SQL 문 만들기를 실행해야 합니다.
   
 ### <a name="additional-options"></a>추가 옵션  
- **스키마 – 신규** 대화 상자는 또한 두 개의 추가 페이지인 **권한** 및 **확장 속성**을 제공합니다.  
+ **스키마 - 신규** 대화 상자에는 또한 **사용 권한** 및 **확장 속성**의 두 가지 추가 페이지의 옵션이 제공됩니다.  
   
 -   **사용 권한** 페이지에는 사용 가능한 모든 보안 개체와 이러한 보안 개체에서 로그인에 부여할 수 있는 권한이 나열됩니다.  
   

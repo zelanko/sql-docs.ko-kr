@@ -17,18 +17,18 @@ helpviewer_keywords:
 - RIGHT function
 - character strings [SQL Server], RIGHT
 ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66627b7b430d15afe73ec823c0af90e2d19d9a39
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 86ec4ba1a3dce9ec818c9756261d19a775d3a1da
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70123181"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003715"
 ---
 # <a name="right-transact-sql"></a>RIGHT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   지정된 문자 수만큼 문자열의 오른쪽 부분을 반환합니다.  
   
@@ -36,13 +36,16 @@ ms.locfileid: "70123181"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 RIGHT ( character_expression , integer_expression )  
 ```  
   
 ## <a name="arguments"></a>인수  
  *character_expression*  
  문자 또는 이진 데이터의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *character_expression*은 상수, 변수 또는 열일 수 있습니다. *character_expression*은 **varchar** 또는 **nvarchar**로 변환될 수 있으며 **text** 또는 **ntext**를 제외한 모든 데이터 형식일 수 있습니다. 그렇지 않을 경우 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 함수를 사용하여 *character_expression*으로 명시적으로 변환합니다.  
+   
+> [!NOTE]  
+> *string_expression*이 **binary** 또는 **varbinary**라면 RIGHT는 **varchar**로의 암시적 변환을 수행하며 따라서 이진 입력을 유지하지 않습니다.  
   
  *integer_expression*  
  반환될 *character_expression*의 문자 수를 지정하는 양의 정수입니다. *integer_expression*이 음수이면 오류가 반환됩니다. *integer_expression*이 **bigint** 형식이고 큰 값이 포함된 경우 *character_expression*은 **varchar(max)** 와 같은 큰 데이터 형식이어야 합니다.  
@@ -55,9 +58,9 @@ RIGHT ( character_expression , integer_expression )
 ## <a name="supplementary-characters-surrogate-pairs"></a>보조 문자(서로게이트 쌍)  
  SC 데이터 정렬을 사용하는 경우 RIGHT 함수가 UTF-16 서로게이트 쌍을 단일 문자로 계산합니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
-### <a name="a-using-right-with-a-column"></a>1\. 열에서 RIGHT 사용  
+### <a name="a-using-right-with-a-column"></a>A: 열에서 RIGHT 사용  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 각 사람의 이름에서 이 가장 오른쪽 다섯 문자를 반환합니다.  
   
 ```  

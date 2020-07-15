@@ -1,5 +1,6 @@
 ---
 title: 효과적인 데이터베이스 엔진 사용 권한 결정 | Microsoft 문서
+description: 현재 및 이전 사용 권한 시스템을 포함한 SQL Server 데이터베이스 엔진의 다양한 개체에 대한 사용 권한이 있는 사용자를 결정하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7c27c18cb862a753bc1a71c38d732c72a040a48
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: f4e26da02da69955a3bc3f589753efa1007ae3a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488033"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005620"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>효과적인 데이터베이스 엔진 사용 권한 결정
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 이 문서에서는 SQL Server 데이터베이스 엔진의 다양한 개체에 대한 사용 권한이 있는 사용자를 결정하는 방법을 설명합니다. SQL Server는 데이터베이스 엔진에 대한 두 개의 사용 권한 시스템을 구현합니다. 고정된 역할의 이전 시스템은 사용 권한이 미리 구성되었습니다. SQL Server 2005부터 보다 유연하고 정확한 시스템을 사용할 수 있습니다. (이 문서의 정보는 SQL Server 2005부터 적용됩니다. SQL Server의 일부 버전에서는 일부 사용 권한 유형을 사용할 수 없습니다.)
 
@@ -145,7 +146,7 @@ SELECT pr.type_desc, pr.name, pe.state_desc,
    ON oj.schema_id = s.schema_id
  WHERE class_desc = 'OBJECT_OR_COLUMN';
 ```
-`HAS_PERMS_BY_NAME` 함수를 사용하여 특정 사용자(이 경우 `TestUser`)에게 사용 권한이 있는지 확인합니다. 다음은 그 예입니다.   
+`HAS_PERMS_BY_NAME` 함수를 사용하여 특정 사용자(이 경우 `TestUser`)에게 사용 권한이 있는지 확인합니다. 예를 들면 다음과 같습니다.   
 ```sql
 EXECUTE AS USER = 'TestUser';
 SELECT HAS_PERMS_BY_NAME ('dbo.T1', 'OBJECT', 'SELECT');

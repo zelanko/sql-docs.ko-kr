@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 엔진 업그레이드 계획 및 테스트 | Microsoft Docs
+description: 이 문서에서는 계획 검사 목록 및 업그레이드 계획 개발 및 테스트를 포함하여 SQL Server 업그레이드 시작 전의 계획에 대해 설명합니다.
 ms.custom: ''
 ms.date: 05/18/2018
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8deba047941509d294f6eb331fa610a453a71e82
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 65614af22873f907363bd721ff5c364e9cca5ea7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529457"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900346"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>데이터베이스 엔진 업그레이드 계획 및 테스트
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
  방법과 상관없이 성공적인 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 업그레이드를 수행하려면 적절한 계획이 필요합니다.  
   

@@ -1,6 +1,6 @@
 ---
 title: 가용성 데이터베이스 일시 중단
-description: SSMS(SQL Server Management Studio), T-SQL(Transact-SQL) 또는 PowerShell을 사용하여 Always On 가용성 그룹 내에서 데이터베이스에 대한 데이터 이동을 일시 중단하는 방법에 대해 알아봅니다.
+description: SQL Server Management Studio, Transact-SQL 또는 PowerShell을 사용하여 Always On 가용성 그룹 내에서 데이터베이스의 데이터 이동을 일시 중단하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 92f83bb31569a055bf9158a0388d9cb0630e9a1d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b56a461019a7b99bd73db3ed287020f0923b627f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251270"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900713"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>가용성 데이터베이스 일시 중지(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 의 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 가용성 데이터베이스를 일시 중지할 수 있습니다. 일시 중지하거나 재개할 데이터베이스를 호스팅하는 서버 인스턴스에서 일시 중지 명령을 실행해야 합니다.  
   
  일시 중지 명령의 효과는 일시 중지하는 데이터베이스가 보조 데이터베이스인지 주 데이터베이스인지에 따라 다음과 같이 다릅니다.  
   
 |일시 중지된 데이터베이스|일시 중지 명령의 효과|  
 |------------------------|-------------------------------|  
-|보조 데이터베이스|로컬 보조 데이터베이스만 일시 중지되고 동기화 상태가 NOT SYNCHRONIZING이 됩니다. 다른 보조 데이터베이스는 영향을 받지 않습니다. 일시 중지된 데이터베이스는 데이터(로그 레코드)의 수신과 적용을 중지하고 주 데이터베이스보다 뒤처지기 시작합니다. 읽기 가능한 보조 복제본에 대한 기존 연결은 계속 사용할 수 있습니다. 읽기 가능한 보조 복제본의 일시 중단된 데이터베이스에 대한 새 연결은 데이터 이동이 다시 시작될 때까지 허용되지 않습니다.<br /><br /> 주 데이터베이스는 사용 가능한 상태로 남아 있습니다. 각각의 해당 보조 데이터베이스를 중지하면 주 데이터베이스가 노출된 상태로 실행됩니다.<br /><br /> **\*\* 중요 \*\*** 보조 데이터베이스를 일시 중지하면 해당 주 데이터베이스의 큐 보내기에서 보내지 않은 트랜잭션 로그 레코드를 누적합니다. 보조 복제본에 대한 연결은 데이터 이동이 일시 중단된 시간에 사용 가능했던 데이터를 반환합니다.|  
+|보조 데이터베이스|로컬 보조 데이터베이스만 일시 중지되고 동기화 상태가 NOT SYNCHRONIZING이 됩니다. 다른 보조 데이터베이스는 영향을 받지 않습니다. 일시 중지된 데이터베이스는 데이터(로그 레코드)의 수신과 적용을 중지하고 주 데이터베이스보다 뒤처지기 시작합니다. 읽기 가능한 보조 복제본에 대한 기존 연결은 계속 사용할 수 있습니다. 읽기 가능한 보조 복제본의 일시 중단된 데이터베이스에 대한 새 연결은 데이터 이동이 다시 시작될 때까지 허용되지 않습니다. 이 동작은 수신기 및 읽기 전용 라우팅을 사용하여 연결을 연 경우에만 적용됩니다.<br /><br /> 주 데이터베이스는 사용 가능한 상태로 남아 있습니다. 각각의 해당 보조 데이터베이스를 중지하면 주 데이터베이스가 노출된 상태로 실행됩니다.<br /><br /> **\*\* 중요 \*\*** 보조 데이터베이스를 일시 중지하면 해당 주 데이터베이스의 큐 보내기에서 보내지 않은 트랜잭션 로그 레코드를 누적합니다. 보조 복제본에 대한 연결은 데이터 이동이 일시 중단된 시간에 사용 가능했던 데이터를 반환합니다.|  
 |주 데이터베이스|주 데이터베이스는 연결된 모든 보조 데이터베이스로의 데이터 이동을 중지합니다. 주 데이터베이스는 계속해서 노출된 모드에서 실행됩니다. 클라이언트에서 주 데이터베이스를 계속해서 사용할 수 있고 읽을 수 있는 보조 데이터베이스의 기존 연결을 계속해서 사용할 수 있으며 새로운 연결을 만들 수 있습니다.|  
   
 > [!NOTE]  

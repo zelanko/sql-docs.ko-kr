@@ -21,15 +21,15 @@ ms.assetid: 1c364511-d72a-4789-8efa-3cf2a1f6b791
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02da90c14c34dccbc3a195e206d13ba0a371188d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 66841ba6ac7e278cc2353a126675cbb2cc57c48f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82822415"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010853"
 ---
 # <a name="ntile-transact-sql"></a>NTILE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   정렬된 파티션의 행을 지정된 수의 그룹으로 분산시킵니다. 그룹에는 1부터 시작하는 번호가 매겨집니다. NTILE은 각 행에서 해당 행이 속한 그룹 번호를 반환합니다.  
   
@@ -59,7 +59,7 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
   
  NTILE은 비결정적입니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-dividing-rows-into-groups"></a>A. 행을 그룹으로 나누기  
  다음 예에서는 연간 누계 매출을 기준으로 행을 네 개의 직원 그룹으로 나눕니다. 총 행 수를 그룹 수로 나눌 수 없으므로 처음 두 그룹에는 네 개의 행이 포함되고 나머지 그룹에는 각각 세 개의 행이 포함됩니다.  
@@ -69,7 +69,7 @@ USE AdventureWorks2012;
 GO  
 SELECT p.FirstName, p.LastName  
     ,NTILE(4) OVER(ORDER BY SalesYTD DESC) AS Quartile  
-    ,CONVERT(nvarchar(20),s.SalesYTD,1) AS SalesYTD  
+    ,CONVERT(NVARCHAR(20),s.SalesYTD,1) AS SalesYTD  
     , a.PostalCode  
 FROM Sales.SalesPerson AS s   
 INNER JOIN Person.Person AS p   
@@ -115,7 +115,7 @@ DECLARE @NTILE_Var int = 4;
   
 SELECT p.FirstName, p.LastName  
     ,NTILE(@NTILE_Var) OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS Quartile  
-    ,CONVERT(nvarchar(20),s.SalesYTD,1) AS SalesYTD  
+    ,CONVERT(NVARCHAR(20),s.SalesYTD,1) AS SalesYTD  
     ,a.PostalCode  
 FROM Sales.SalesPerson AS s   
 INNER JOIN Person.Person AS p   
@@ -159,7 +159,7 @@ Lynn         Tsoflias             4        1,421,810.92  98055
 -- Uses AdventureWorks  
   
 SELECT e.LastName, NTILE(4) OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS Quartile,  
-       CONVERT (varchar(13), SUM(SalesAmountQuota), 1) AS SalesQuota  
+       CONVERT (VARCHAR(13), SUM(SalesAmountQuota), 1) AS SalesQuota  
 FROM dbo.DimEmployee AS e   
 INNER JOIN dbo.FactSalesQuota AS sq   
     ON e.EmployeeKey = sq.EmployeeKey  
@@ -199,7 +199,7 @@ Tsoflias          4          867,000.00
 -- Uses AdventureWorks  
   
 SELECT e.LastName, NTILE(2) OVER(PARTITION BY e.SalesTerritoryKey ORDER BY SUM(SalesAmountQuota) DESC) AS Quartile,  
-       CONVERT (varchar(13), SUM(SalesAmountQuota), 1) AS SalesQuota  
+       CONVERT (VARCHAR(13), SUM(SalesAmountQuota), 1) AS SalesQuota  
    ,st.SalesTerritoryCountry  
 FROM dbo.DimEmployee AS e   
 INNER JOIN dbo.FactSalesQuota AS sq   

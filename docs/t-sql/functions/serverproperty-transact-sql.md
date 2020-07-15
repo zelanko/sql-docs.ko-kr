@@ -1,7 +1,7 @@
 ---
 title: SERVERPROPERTY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/31/2020
+ms.date: 05/08/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,16 +23,16 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e9119b96d88d9727a18d6e7ef03310db56a719a
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: 97979dbef582835c5fcb8a8e3ec04fdf99b5d205
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849859"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003663"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 서버 인스턴스에 대한 속성 정보를 반환합니다.  
 
@@ -59,9 +59,9 @@ SERVERPROPERTY ( 'propertyname' )
 |CollationID|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬의 ID입니다.<br /><br /> 기본 데이터 형식: **int**|  
 |ComparisonStyle|데이터 정렬의 Windows 비교 스타일입니다.<br /><br /> 기본 데이터 형식: **int**|  
 |ComputerNamePhysicalNetBIOS|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 현재 실행되고 있는 로컬 컴퓨터의 NetBIOS 이름입니다.<br /><br /> 장애 조치(failover) 클러스터의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클러스터형 인스턴스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 장애 조치 클러스터의 다른 노드로 장애 조치되면 이 값이 변경됩니다.<br /><br /> 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 이 값은 일정하게 유지되며 MachineName 속성과 같은 값을 반환합니다.<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 장애 조치(failover) 클러스터에 있는 상태에서 장애 조치 클러스터형 인스턴스 이름을 가져오려는 경우 MachineName 속성을 사용합니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
-|버전|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 설치된 제품 버전입니다. 이 속성 값을 이용하여 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)와 같은 기능 및 제한을 확인합니다. 64비트 버전의 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에는 (64비트)가 추가됩니다.<br /><br /> HRESULT = NO_ERROR를<br /><br /> 'Enterprise Edition'<br /><br /> 'Enterprise Edition: 코어 기반 라이선스’<br /><br /> 'Enterprise Evaluation Edition'<br /><br /> 'Business Intelligence Edition'<br /><br /> 'Developer Edition'<br /><br /> 'Express Edition'<br /><br /> 'Express Edition with Advanced Services'<br /><br /> 'Standard Edition'<br /><br /> 'Web Edition'<br /><br /> 'SQL Azure'는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 또는 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]를 나타냅니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
-|EditionID|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 설치된 제품 버전을 나타내는 EditionID입니다. 이 속성 값을 이용하여 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)와 같은 기능 및 제한을 확인합니다.<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition: 코어 기반 라이선스<br /><br /> 610778273= Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905 = Express with Advanced Services<br /><br /> -1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = SQL Database 또는 Microsoft Azure Synapse Analytics(이전의 SQL Data Warehouse)<br /><br /> 기본 데이터 형식: **bigint**|  
-|EngineEdition|서버에 설치된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전입니다.<br /><br /> 1 = Personal 또는 Desktop Engine([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에는 사용할 수 없음)<br /><br /> 2 = Standard(Standard, Web 및 Business Intelligence 버전인 경우 이 값이 반환됨)<br /><br /> 3 = Enterprise (Evaluation, Developer 및 Enterprise 버전인 경우 이 값이 반환됨)<br /><br /> 4 = Express(Express, Express with Tools 및 Express with Advanced Services 버전인 경우 이 값이 반환됨)<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 = [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 8 = 관리되는 인스턴스<br /><br /> 기본 데이터 형식: **int**|  
+|버전|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 설치된 제품 버전입니다. 이 속성 값을 이용하여 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)와 같은 기능 및 제한을 확인합니다. 64비트 버전의 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에는 (64비트)가 추가됩니다.<br /><br /> HRESULT = NO_ERROR를<br /><br /> 'Enterprise Edition'<br /><br /> 'Enterprise Edition: 코어 기반 라이선스’<br /><br /> 'Enterprise Evaluation Edition'<br /><br /> 'Business Intelligence Edition'<br /><br /> 'Developer Edition'<br /><br /> 'Express Edition'<br /><br /> 'Express Edition with Advanced Services'<br /><br /> 'Standard Edition'<br /><br /> 'Web Edition'<br /><br /> 'SQL Azure'는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 또는 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]를 나타냅니다.<br /><br /> 'Azure SQL Edge Developer'는 Azure SQL Edge 개발 전용 버전을 나타냅니다. <br /><br /> 'Azure SQL Edge'는 Azure SQL Edge의 유료 버전을 나타냅니다. <br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
+|EditionID|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 설치된 제품 버전을 나타내는 EditionID입니다. 이 속성 값을 이용하여 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)와 같은 기능 및 제한을 확인합니다.<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition: 코어 기반 라이선스<br /><br /> 610778273= Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905 = Express with Advanced Services<br /><br /> -1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = SQL Database 또는 Microsoft Azure Synapse Analytics(이전의 SQL Data Warehouse)<br /><br /> -1461570097 = Azure SQL Edge Developer <br /><br /> 1994083197 = Azure SQL Edge <br /><br />기본 데이터 형식: **bigint**|  
+|EngineEdition|서버에 설치된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전입니다.<br /><br /> 1 = Personal 또는 Desktop Engine([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에는 사용할 수 없음)<br /><br /> 2 = Standard(Standard, Web 및 Business Intelligence 버전인 경우 이 값이 반환됨)<br /><br /> 3 = Enterprise (Evaluation, Developer 및 Enterprise 버전인 경우 이 값이 반환됨)<br /><br /> 4 = Express(Express, Express with Tools 및 Express with Advanced Services 버전인 경우 이 값이 반환됨)<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 = [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 8 = 관리되는 인스턴스<br /><br /> 9 = Azure SQL Edge(Azure SQL Edge 두 가지 버전 모두에 대해 반환됨)<br /><br /> 기본 데이터 형식: **int**|  
 |HadrManagerStatus|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 관리자가 시작되었는지 여부를 나타냅니다.<br /><br /> 0 = 시작되지 않았습니다. 통신 보류 중입니다.<br /><br /> 1 = 시작되어 실행 중입니다.<br /><br /> 2 = 시작되지 않고 실패했습니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.|  
 |InstanceDefaultDataPath|**적용 대상**: 2015년 후반부터 업데이트된 현재 버전을 통해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 적용됩니다.<br /><br /> 인스턴스 데이터 파일의 기본 경로 이름입니다.|  
 |InstanceDefaultLogPath|**적용 대상**: 2015년 후반부터 업데이트된 현재 버전을 통해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 적용됩니다.<br /><br /> 인스턴스 로그 파일의 기본 경로 이름입니다.|  
@@ -129,7 +129,7 @@ GO
 
 모든 사용자가 서버 속성을 쿼리할 수 있습니다.
   
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 다음 예에서는 `SELECT` 문에서 `SERVERPROPERTY` 함수를 사용하여 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]의 현재 인스턴스에 대한 정보를 반환합니다.
   

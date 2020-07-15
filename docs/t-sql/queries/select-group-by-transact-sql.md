@@ -32,15 +32,15 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e93f24bcd2b136cdc055faf3a100a76fa5bb4db
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 03c9b8dae913f7fb8dd770effcfd56a32e368c96
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634253"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999787"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 대개 각 그룹에서 하나 이상의 집계를 수행하기 위해 쿼리 결과를 행 그룹으로 분할하는 SELECT 문의 절입니다. SELECT 문은 그룹마다 하나의 행을 반환합니다.  
   
@@ -366,7 +366,7 @@ GROUP BY 절은 SQL-2006 표준에 포함된 모든 GROUP BY 기능을 지원하
 |WITH CUBE 또는 WITH ROLLUP "중복된" 그룹화 제거|지원됨|지원됨|지원됨| 
  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-use-a-simple-group-by-clause"></a>A. 단순 GROUP BY 절 사용  
  다음 예에서는 `SalesOrderID` 테이블의 각 `SalesOrderDetail`에 대한 합계를 계산합니다. 이 예제에서는 AdventureWorks를 사용합니다.  

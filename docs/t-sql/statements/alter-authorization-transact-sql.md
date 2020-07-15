@@ -26,16 +26,16 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 953faba1da7f4fbe1283d3aacf74a1c3e902ed2f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d3aded8f578733ac3c6274406dccef235e71c357
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629993"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85978325"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   보안 개체의 소유권을 변경합니다.    
     
@@ -260,11 +260,11 @@ ON d.owner_sid = sl.sid;
   ```    
   ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;  
   ```    
-2.  데이터베이스를 소유하고 사용자 데이터베이스에 사용자로서 추가해야 하는 Azure AD 그룹을 만듭니다. 다음은 그 예입니다.  
+2.  데이터베이스를 소유하고 사용자 데이터베이스에 사용자로서 추가해야 하는 Azure AD 그룹을 만듭니다. 예를 들면 다음과 같습니다.  
   ```    
   CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;  
   ```    
-3.  사용자 데이터베이스에서 Azure AD 그룹을 나타내는 사용자를 **db_owner** 고정 데이터베이스 역할에 추가합니다. 다음은 그 예입니다.  
+3.  사용자 데이터베이스에서 Azure AD 그룹을 나타내는 사용자를 **db_owner** 고정 데이터베이스 역할에 추가합니다. 예를 들면 다음과 같습니다.  
   ```    
   ALTER ROLE db_owner ADD MEMBER mydbogroup;  
   ```    
@@ -285,7 +285,7 @@ SELECT IS_MEMBER ('db_owner');
 ## <a name="permissions"></a>사용 권한    
  엔터티에 대한 TAKE OWNERSHIP 권한이 필요합니다. 새 소유자가 이 문을 실행하는 사용자가 아니면 1) 새 소유자가 사용자이거나 로그인인 경우 새 소유자에 대한 IMPERSONATE 권한, 2) 새 소유자가 역할인 경우 역할의 멤버 자격이나 역할에 대한 ALTER 권한 또는 3) 새 소유자가 애플리케이션 역할인 경우 애플리케이션 역할에 대한 ALTER 권한도 필요합니다.    
     
-## <a name="examples"></a>예    
+## <a name="examples"></a>예제    
     
 ### <a name="a-transfer-ownership-of-a-table"></a>A. 테이블의 소유권 이전    
  다음 예에서는 `Sprockets` 테이블의 소유권을 `MichikoOsada` 사용자에게 이전합니다. 테이블은 `Parts` 스키마 내부에 있습니다.    
@@ -302,7 +302,7 @@ ALTER AUTHORIZATION ON Parts.Sprockets TO MichikoOsada;
 GO    
 ```    
     
- 개체 스키마가 문의 일부로 포함되지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 사용자 기본 스키마에서 개체를 찾게 됩니다. 다음은 그 예입니다.    
+ 개체 스키마가 문의 일부로 포함되지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 사용자 기본 스키마에서 개체를 찾게 됩니다. 예를 들면 다음과 같습니다.    
     
 ```    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    

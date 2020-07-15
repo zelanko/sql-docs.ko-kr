@@ -1,5 +1,6 @@
 ---
 title: SysPrep을 사용하여 SQL Server 설치 | Microsoft Docs
+description: 이 문서에서는 SQL Server 설치 시 SysPrep을 사용하여 이미지를 준비하고 완료하는 방법을 설명합니다.
 ms.custom: ''
 ms.date: 09/07/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8e8b9a36fac2e90719d3f8a8dbeee5d4c4a0e662
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2984f165c686226337af7edfb94e4c4216eb5eab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67990955"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899662"
 ---
 # <a name="install-sql-server-with-sysprep"></a>SysPrep을 사용하여 SQL Server 설치
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 관련 설치 동작에 액세스할 수 있습니다. **설치 센터**의 **고급** 페이지에는 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이미지 준비**와 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스의 이미지 완료**라는 두 옵션이 있습니다. [준비](#prepare) 및 [완료](#complete) 섹션에서는 설치 프로세스에 대해 자세히 설명합니다. 자세한 내용은 [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)을 참조하세요. 
   
@@ -29,7 +30,7 @@ ms.locfileid: "67990955"
   
 - [구성 파일을 사용하여 SQL Server 설치](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하기 전에 [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)의 문서를 검토합니다. 
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전과 하드웨어 및 소프트웨어 요구 사항에 대한 자세한 내용은 [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)을 참조하세요. 
@@ -51,7 +52,7 @@ ms.locfileid: "67990955"
   
 3. Windows 장애 조치(Failover) 클러스터를 만듭니다. 
   
-4. 모든 노드에서 **/ACTION=PrepareFailoverCluster** 를 사용하여 setup.exe를 실행합니다. 다음은 그 예입니다.  
+4. 모든 노드에서 **/ACTION=PrepareFailoverCluster** 를 사용하여 setup.exe를 실행합니다. 예를 들면 다음과 같습니다.  
   
     ```  
     setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
@@ -153,7 +154,7 @@ ms.locfileid: "67990955"
   
 7. **준비 인스턴스 선택** 페이지의 드롭다운 상자에서 완료할 준비 인스턴스를 선택합니다. **인스턴스 ID** 목록에서 구성되지 않은 인스턴스를 선택합니다. 
   
-     **설치된 인스턴스:** 준비 인스턴스를 포함하여 이 컴퓨터에 설치되어 있는 모든 인스턴스가 표시됩니다. 
+     **설치된 인스턴스:** 준비 인스턴스를 포함하여 이 머신에 설치되어 있는 모든 인스턴스가 표시됩니다. 
   
 8. 준비 단계에서 설치에 포함하도록 선택한 기능 및 구성 요소가 **기능 검토** 페이지에 표시됩니다. 준비 인스턴스에 포함되지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 다른 기능을 더 추가하려면 먼저 이 단계를 완료하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 완료한 다음, **설치 센터** 의 **기능 추가**에서 기능을 추가해야 합니다. 
   

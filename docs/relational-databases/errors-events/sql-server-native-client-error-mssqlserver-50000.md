@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_50000 | Microsoft 문서
+description: SQL Server Native Client를 설치하거나 업데이트하려고 할 때 오류가 발생합니다. 오류에 대한 설명과 가능한 해결 방법을 확인합니다.
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -13,21 +14,21 @@ ms.assetid: 5426d87a-d5d9-4984-b211-b07d69e834a2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a8335493cad5325d8433305a8a5d7968765cc39
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ab1f72740a9aa69e9b890e668406896d21cd3d0d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73757542"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998910"
 ---
 # <a name="sql-server-native-client-error-mssqlserver_50000"></a>SQL Server Native Client 오류 MSSQLSERVER_50000
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
     
 ## <a name="details"></a>세부 정보  
   
-|||  
-|-|-|  
+| attribute | 값 |  
+| :-------- | :---- |  
 |제품 이름|SQL Server|  
 |제품 버전|11.0|  
 |이벤트 ID|50000|  

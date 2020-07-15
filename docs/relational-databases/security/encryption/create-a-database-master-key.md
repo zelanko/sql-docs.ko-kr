@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 마스터 키 만들기 | Microsoft 문서
+description: Transact-SQL을 사용하여 SQL Server에서 데이터베이스 마스터 키를 만듭니다. 필요한 권한이 있어야 합니다.
 ms.custom: ''
 ms.date: 09/12/2019
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb8730a00c09b57fdabf3465b290cd2df63b1bc4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 200f10a76629eb94e1e9fc1b3e1c29811d9e7f67
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79510034"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005577"
 ---
 # <a name="create-a-database-master-key"></a>데이터베이스 마스터 키 만들기
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 데이터베이스 마스터 키를 만드는 방법에 대해 설명합니다.
 
 ## <a name="security"></a>보안

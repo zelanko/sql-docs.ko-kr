@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: d63ef5b6535c34e9b5d2087d96dbe615c7f1d8b3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58c30fc1e88ec3b7e90549f28b13f91e3330675d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558548"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897254"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>장애 조치(failover) 클러스터 인스턴스 작동 - SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 문서에서는 Linux에서 SQL Server FCI(장애 조치(failover) 클러스터 인스턴스)를 작동하는 방법을 설명합니다. Linux에서 SQL Server FCI를 만들지 않은 경우 [장애 조치(failover) 클러스터 인스턴스 구성 - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)를 참조하세요. 
 
@@ -58,7 +58,7 @@ RHEL(Red Hat Enterprise Linux) 또는 Ubuntu 서버에서 수동 장애 조치�
 ## <a name="manual-failover-sles"></a>수동 장애 조치(failover)(SLES)
 
 
-SLES(Suse Linux Enterprise Server)에서 `migrate` 명령을 사용하여 SQL Server FCI를 수동으로 장애 조치(failover)합니다. 다음은 그 예입니다.
+SLES(Suse Linux Enterprise Server)에서 `migrate` 명령을 사용하여 SQL Server FCI를 수동으로 장애 조치(failover)합니다. 예를 들면 다음과 같습니다.
 
 ```bash
 crm resource migrate <FCIResourceName> <NewHostNode>

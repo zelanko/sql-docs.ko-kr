@@ -21,21 +21,23 @@ helpviewer_keywords:
 - messages [SQL Server], stored procedure where occurred
 - errors [SQL Server], trigger where occurred
 ms.assetid: b81edbf0-856a-498f-ba87-48ff1426d980
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd619ca33c4f6e77dbd1aa49fe6e81284efe4762
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 087e1cad75702da5b1077fcfaee2ec283074c1e9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823819"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999069"
 ---
 # <a name="error_procedure-transact-sql"></a>ERROR_PROCEDURE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]  
 
-이 함수는 해당 오류가 TRY...CATCH 구문의 CATCH 블록이 실행되게 하는 경우 오류가 발생한 저장 프로시저나 트리거의 이름을 반환합니다.  
-  
+이 함수는 해당 오류가 TRY...CATCH 구문의 CATCH 블록이 실행되게 하는 경우 오류가 발생한 저장 프로시저나 트리거의 이름을 반환합니다. 
+- SQL Server 2017~[현재 버전](../../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15)은 schema_name.stored_procedure_name을 반환
+- SQL Server 2016은 stored_procedure_name을 반환
+
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  

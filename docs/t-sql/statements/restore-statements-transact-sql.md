@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3661b840340f4fb14e5dcc52f2ae0aa296b7520e
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: ba9a1a0b2922cba5c2aadef862bec56bbc66666b
+ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922172"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86032445"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문(Transact-SQL)
 
@@ -978,7 +978,7 @@ RESTORE DATABASE 명령은 다음과 같은 조건에서 오류를 발생시킵�
 ## <a name="locking"></a>잠금
 DATABASE 개체에서 배타적 잠금을 사용합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-simple-restore-examples"></a>A. 간단한 RESTORE 예
 

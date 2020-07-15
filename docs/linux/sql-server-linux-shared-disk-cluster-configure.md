@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 61fe5d7ffb5dfc6ec98f6d5350eff396deaa0312
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f468697c165eefca98e5d5d7492b9a3d5eab25e8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558328"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897268"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>장애 조치(failover) 클러스터 인스턴스 구성 - SQL Server on Linux(RHEL)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 SQL Server 2노드 공유 디스크 장애 조치(failover) 클러스터 인스턴스는 고가용성을 위해 서버 수준 중복성을 제공합니다. 이 자습서에서는 SQL Server on Linux의 2노드 장애 조치(failover) 클러스터 인스턴스를 만드는 방법을 알아봅니다. 수행하는 구체적인 단계는 다음과 같습니다.
 
@@ -35,7 +35,7 @@ SQL Server 2노드 공유 디스크 장애 조치(failover) 클러스터 인스�
 
 개념 정보는 [Linux의 SQL Server FCI(장애 조치(failover) 클러스터 인스턴스)](sql-server-linux-shared-disk-cluster-concepts.md)를 참조하세요.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 다음 엔드투엔드 시나리오를 완료하려면 2노드 클러스터를 배포할 머신 2대와 스토리지에 사용할 또 다른 서버가 필요합니다. 아래 단계에서는 이러한 서버를 구성하는 방법을 간략하게 설명합니다.
 

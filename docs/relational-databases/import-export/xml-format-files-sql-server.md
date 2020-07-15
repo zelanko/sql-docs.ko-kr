@@ -16,15 +16,15 @@ ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ad508056c5ba614b92e06ca6453ea87bc4ed730
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f336e026d95db0de5ad40a9fb4ebc90d8165f609
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980378"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998991"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 서식 파일(SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 *테이블에 데이터를 대량으로 가져오는 데 사용할* XML 형식 파일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 작성하기 위한 구문을 정의하는 XML 스키마를 제공합니다. XML 서식 파일은 XSDL(XML Schema Definition Language)에 정의되어 있는 이 스키마에 충실해야 합니다. XML 서식 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client와 함께 설치한 경우에만 지원됩니다.  
   
  XML 서식 파일은 **bcp** 명령, BULK INSERT 문 또는 INSERT ... SELECT \* FROM OPENROWSET(BULK...)과 함께 사용할 수 있습니다. **bcp** 명령을 사용하면 테이블에 대해 XML 형식 파일을 자동으로 생성할 수 있습니다. 자세한 내용은 [bcp Utility](../../tools/bcp-utility.md)를 참조하세요.  
@@ -70,7 +70,7 @@ ms.locfileid: "80980378"
 ##  <a name="structure-of-xml-format-files"></a><a name="StructureOfXmlFFs"></a> XML 서식 파일의 구조  
  비 XML 서식 파일과 마찬가지로 XML 서식 파일도 데이터 파일의 데이터 필드 형식과 구조를 정의하며 해당 데이터 필드를 단일 대상 테이블의 열에 매핑합니다.  
   
- XML 서식 파일에는 두 개의 주요 구성 요소 \<RECORD>와 \<ROW>가 있습니다.  
+ XML 서식 파일에는 두 개의 주요 구성 요소, \<RECORD>와 \<ROW>가 있습니다.  
   
 -   \<RECORD>는 데이터 파일에 저장되어 있는 데이터를 설명합니다.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "80980378"
 -   [데이터 집합에 xsi:type 값 넣기](#PutXsiTypeValueIntoDataSet)  
   
 ###  <a name="basic-syntax-of-the-xml-schema"></a><a name="BasicSyntax"></a> XML 스키마의 기본 구문  
- 이 문의 구문에서는 요소(\<BCPFORMAT>, \<RECORD>, \<FIELD>, \<ROW>, \<COLUMN>) 및 그 기본 특성만 보여 줍니다.  
+ 이 구문은 요소(\<BCPFORMAT>, \<RECORD>, \<FIELD>, \<ROW>, \<COLUMN>) 및 그 기본 특성만 보여 줍니다.  
   
  \<BCPFORMAT ...>  
   
@@ -140,7 +140,7 @@ ms.locfileid: "80980378"
  \</BCPFORMAT>  
   
 > [!NOTE]  
->  \<FIELD> 또는 \<COLUMN> 요소의 xsi:type 값과 연관된 추가 특성은 이 항목의 뒷부분에서 설명합니다.  
+>  \<FIELD> 또는 \<COLUMN> 요소의 xsi:type 값에 연결된 추가 특성은 이 항목의 뒷부분에서 설명합니다.  
   
  **섹션 내용**  
   
@@ -148,7 +148,7 @@ ms.locfileid: "80980378"
   
 -   [\<FIELD> 요소의 특성](#AttrOfFieldElement)(및 [\<FIELD> 요소의 xsi:type 값](#XsiTypeValuesOfFIELD))  
   
--   [\<COLUMN> 요소의 특성](#AttrOfColumnElement)(및 [\<COLUMN> xsi:type 값](#XsiTypeValuesOfCOLUMN))  
+-   [\<COLUMN> 요소의 특성](#AttrOfColumnElement)(및 [\<COLUMN> 요소의 xsi:type 값](#XsiTypeValuesOfCOLUMN))  
   
 ####  <a name="schema-elements"></a><a name="SchemaElements"></a> 스키마 요소  
  이 섹션에서는 XML 스키마가 XML 서식 파일에 대해 정의하는 각 요소의 목적에 대해 요약합니다. 특성은 뒷부분의 다른 섹션에서 설명합니다.  
@@ -167,17 +167,17 @@ ms.locfileid: "80980378"
  \<ROW .../>  
  하나 이상의 \<COLUMN> 요소를 포함하는 복잡한 요소를 정의합니다. \<COLUMN> 요소의 순서는 RECORD 정의에 있는 \<FIELD> 요소의 순서와는 독립적입니다. 반면, 서식 파일에 있는 \<COLUMN> 요소의 순서는 결과 행 집합의 열 순서를 결정합니다. 데이터 필드는 해당 \<COLUMN> 요소가 \<COLUMN> 요소에서 선언되는 순서대로 로드됩니다.  
   
- 자세한 내용은 뒷부분의 [대량 가져오기의 \<ROW> 요소 사용 방법](#HowUsesROW)을 참조하세요.  
+ 자세한 내용은 뒷부분의 [대량 가져오기에서 \<ROW> 요소를 사용하는 방법](#HowUsesROW)을 참조하세요.  
   
  \<COLUMN>  
  열을 요소(\<COLUMN>)로 정의합니다. 각 \<COLUMN> 요소는 ID가 \<COLUMN> 요소의 SOURCE 특성에서 지정되는 \<FIELD> 요소에 해당합니다.  
   
- 이 요소의 특성은 이 항목의 뒷부분에 나오는 [\<COLUMN> 요소의 특성](#AttrOfColumnElement)에서 설명합니다. 자세한 내용은 뒷부분의 [대량 가져오기의 \<COLUMN> 요소를 사용하는 방법](#HowUsesColumn)을 참조하세요.  
+ 이 요소의 특성은 이 항목의 뒷부분에 나오는 [\<COLUMN> 요소의 특성](#AttrOfColumnElement)에서 설명합니다. 자세한 내용은 뒷부분의 [대량 가져오기에서 \<COLUMN> 요소를 사용하는 방법](#HowUsesColumn)을 참조하세요.  
   
  \</BCPFORMAT>  
  서식 파일을 끝내는 데 필요합니다.  
   
-####  <a name="attributes-of-the-field-element"></a><a name="AttrOfFieldElement"></a>\<FIELD> 요소의 특성  
+####  <a name="attributes-of-the-field-element"></a><a name="AttrOfFieldElement"></a> \<FIELD> 요소의 특성  
  이 섹션에서는 \<FIELD> 요소의 특성에 대해 설명합니다. 다음 스키마 구문으로 요약할 수 있습니다.  
   
  <FIELD  
@@ -202,7 +202,7 @@ ms.locfileid: "80980378"
   
 |FIELD 특성|Description|선택 /<br /><br /> 필수|  
 |---------------------|-----------------|------------------------------|  
-|ID **="** _fieldID_ **"**|데이터 파일에서 필드의 논리적 이름을 지정합니다. 필드의 ID는 필드를 참조하는 데 사용되는 키입니다.<br /><br /> \<FIELD ID **="** _fieldID_ **"** />는 \<COLUMN SOURCE **="** _fieldID_ **"** />에 매핑됩니다.|필수|  
+|ID **="** _fieldID_ **"**|데이터 파일에서 필드의 논리적 이름을 지정합니다. 필드의 ID는 필드를 참조하는 데 사용되는 키입니다.<br /><br /> \<FIELD ID**="**_fieldID_**"**/>는 \<COLUMN SOURCE**="**_fieldID_**"**/>에 매핑됩니다.|필수|  
 |xsi:type **="** _fieldType_ **"**|요소의 인스턴스 유형을 식별하는 XML 구문(특성처럼 사용)입니다. *fieldType* 값은 지정한 인스턴스에서 필요한 옵션 특성(아래)을 결정합니다.|필수(데이터 형식에 따라 다름)|  
 |LENGTH **="** _n_ **"**|이 특성은 고정 길이 데이터 형식의 인스턴스 길이를 정의합니다.<br /><br /> *n* 값은 양의 정수여야 합니다.|선택(xsi:type 값에서 필요로 하지 않는 경우)|  
 |PREFIX_LENGTH **="** _p_ **"**|이 특성은 이진 데이터 표현의 접두사 길이를 정의합니다. PREFIX_LENGTH 값인 *p*는 1, 2, 4 또는 8 중 하나를 사용해야 합니다.|선택(xsi:type 값에서 필요로 하지 않는 경우)|  
@@ -228,7 +228,7 @@ ms.locfileid: "80980378"
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 대한 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.  
   
-####  <a name="attributes-of-the-column-element"></a><a name="AttrOfColumnElement"></a>\<COLUMN> 요소의 특성  
+####  <a name="attributes-of-the-column-element"></a><a name="AttrOfColumnElement"></a> \<COLUMN> 요소의 특성  
  이 섹션에서는 \<COLUMN> 요소의 특성에 대해 설명합니다. 다음 스키마 구문으로 요약할 수 있습니다.  
   
  <COLUMN  
@@ -255,15 +255,15 @@ ms.locfileid: "80980378"
   
 |COLUMN 특성|Description|선택 /<br /><br /> 필수|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **="** _fieldID_ **"**|열에 매핑되는 필드의 ID를 지정합니다.<br /><br /> \<COLUMN SOURCE **="** _fieldID_ **"** />는 \<FIELD ID **="** _fieldID_ **"** />에 매핑됩니다.|필수|  
+|SOURCE **="** _fieldID_ **"**|열에 매핑되는 필드의 ID를 지정합니다.<br /><br /> \<COLUMN SOURCE**="**_fieldID_**"**/>는 \<FIELD ID**="**_fieldID_**"**/>에 매핑됩니다.|필수|  
 |NAME = "*columnName*"|서식 파일에 의해 표현된 행 집합의 열 이름을 지정합니다. 이 열 이름은 결과 집합에서 열을 식별하는 데 사용되며 대상 테이블에서 사용되는 열 이름과 일치할 필요는 없습니다.|필수|  
-|xsi **:** type **="** _ColumnType_ **"**|요소의 인스턴스 데이터 형식을 식별하는 XML 구문(특성처럼 사용)입니다. *ColumnType* 값은 지정한 인스턴스에서 필요한 옵션 특성(아래)을 결정합니다.<br /><br /> 참고: *ColumnType*의 가능한 값 및 관련 특성은 [&lt;COLUMN&gt; 요소의 Xsi:type 값](#XsiTypeValuesOfCOLUMN) 섹션의 \<COLUMN> 요소 테이블에 나와 있습니다.|옵션|  
+|xsi **:** type **="** _ColumnType_ **"**|요소의 인스턴스 데이터 형식을 식별하는 XML 구문(특성처럼 사용)입니다. *ColumnType* 값은 지정한 인스턴스에서 필요한 옵션 특성(아래)을 결정합니다.<br /><br /> 참고: *ColumnType*의 가능한 값 및 연결된 특성은 [&lt;COLUMN&gt; 요소의 Xsi:type 값](#XsiTypeValuesOfCOLUMN) 섹션의 \<COLUMN> 요소 테이블에 나와 있습니다.|옵션|  
 |LENGTH **="** _n_ **"**|고정 길이 데이터 형식의 인스턴스 길이를 정의합니다. LENGTH는 xsi:type이 문자열 데이터 형식인 경우에만 사용됩니다.<br /><br /> *n* 값은 양의 정수여야 합니다.|선택(xsi:type이 문자열 데이터 형식인 경우에만 사용 가능)|  
 |PRECISION **="** _n_ **"**|숫자의 전체 자릿수를 나타냅니다. 예를 들어 123.45의 전체 자릿수는 5입니다.<br /><br /> 값은 양의 정수여야 합니다.|선택(xsi:type이 가변 숫자 데이터 형식인 경우에만 사용 가능)|  
 |SCALE **="** _int_ **"**|숫자에서 소수점 이하 자릿수를 나타냅니다. 예를 들어 123.45의 소수 자릿수는 2입니다.<br /><br /> 값은 정수여야 합니다.|선택(xsi:type이 가변 숫자 데이터 형식인 경우에만 사용 가능)|  
 |NULLABLE **=** { **"** YES **"**<br /><br /> **"** NO **"** }|열이 NULL 값을 허용하는지 여부를 나타냅니다. 이 특성은 FIELDS와는 독립적입니다. 그러나 열이 NULLABLE이 아닌 경우 필드에서 NULL을 지정하면(아무 값도 지정하지 않음) 런타임 오류가 발생합니다.<br /><br /> NULLABLE 특성은 일반 SELECT FROM OPENROWSET(BULK...) 문의 경우에만 사용됩니다.|선택 사항(모든 데이터 형식에 사용 가능)|  
   
-#####  <a name="xsitype-values-of-the-column-element"></a><a name="XsiTypeValuesOfCOLUMN"></a>\<COLUMN> 요소의 xsi:type 값  
+#####  <a name="xsitype-values-of-the-column-element"></a><a name="XsiTypeValuesOfCOLUMN"></a> \<COLUMN> 요소의 xsi:type 값  
  xsi:type 값은 요소 인스턴스의 데이터 형식을 식별하는 XML 구문(특성처럼 사용)입니다. xsi:type 값의 사용 방법은 이 섹션의 뒷부분에 나오는 "데이터 집합에 xsi:type 값 넣기"를 참조하세요.  
   
  \<COLUMN> 요소는 다음과 같이 원시 SQL 데이터 형식을 지원합니다.  
@@ -461,7 +461,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 > [!NOTE]  
 >  해당하는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제는 [서식 파일을 사용하여 데이터 필드 건너뛰기&#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)를 참조하세요.  
   
-###  <a name="d-mapping-field-xsitype-to-column-xsitype"></a><a name="MapXSItype"></a> 4. \<FIELD> xsi:type을 \<COLUMN> xsi:type에 매핑  
+###  <a name="d-mapping-field-xsitype-to-column-xsitype"></a><a name="MapXSItype"></a> 4. \<FIELD> xsi:type을 \<COLUMN> xsi: type에 매핑  
  다음 예에서는 다양한 형식의 필드와 함께 해당 필드와 열의 매핑을 보여 줍니다.  
   
 ```xml

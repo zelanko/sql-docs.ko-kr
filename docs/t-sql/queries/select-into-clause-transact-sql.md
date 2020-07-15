@@ -29,15 +29,15 @@ ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d88b0c8e36b69bbc2a341917ec96e12ed8bfdc17
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c4e7add7cdc8d4dd804c91730db3bb7c121b9df
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981723"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007596"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 절(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SELECT...INTO는 기본 파일 그룹에 새 테이블을 만들고 쿼리의 결과 행을 이 테이블에 삽입합니다. 전체 SELECT 구문을 보려면 [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)를 참조하세요.  
   
@@ -99,12 +99,14 @@ SELECT...INTO는 기본 파일 그룹에 새 테이블을 만들고 쿼리의 �
  선택 목록에 계산 열이 있으면 새 테이블의 해당 열은 계산 열이 아닙니다. 새 열의 값은 `SELECT...INTO`가 실행될 때 계산된 값입니다.  
   
 ## <a name="logging-behavior"></a>로깅 동작  
- `SELECT...INTO`에 대한 로깅의 양은 데이터베이스에 적용되는 복구 모델에 따라 다릅니다. 단순 복구 모델 또는 대량 로그 복구 모델에서는 대량 작업이 최소 로깅됩니다. 최소 로깅으로 `SELECT...INTO` 문을 사용하면 테이블을 만든 다음, INSERT 문을 사용하여 해당 테이블을 채우는 것보다 더 효율적일 수 있습니다. 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)을(를) 참조하세요.  
+ `SELECT...INTO`에 대한 로깅의 양은 데이터베이스에 적용되는 복구 모델에 따라 다릅니다. 단순 복구 모델 또는 대량 로그 복구 모델에서는 대량 작업이 최소 로깅됩니다. 최소 로깅으로 `SELECT...INTO` 문을 사용하면 테이블을 만든 다음, INSERT 문을 사용하여 해당 테이블을 채우는 것보다 더 효율적일 수 있습니다. 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)을(를) 참조하세요.
+ 
+사용자 정의 함수(UDF)를 포함하는 `SELECT...INTO` 문은 완전히 로그되는 작업입니다. `SELECT...INTO` 문에 사용되는 사용자 정의 함수가 데이터 액세스 작업을 수행하지 않는 경우 사용자 정의 함수의 SCHEMABINDING 절을 지정하면 해당 사용자 정의 함수의 파생 UserDataAccess 속성이 0으로 설정됩니다. 이 변경 후에는 `SELECT...INTO` 문이 최소 로그됩니다. `SELECT...INTO` 문이 이 속성이 1로 설정된 사용자 정의 함수 하나 이상을 여전히 참조하는 경우 작업이 완전히 로그됩니다.
   
 ## <a name="permissions"></a>사용 권한  
  대상 데이터베이스에서 CREATE TABLE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>A. 여러 원본에서 열을 지정하여 테이블 만들기  
  다음 예에서는 다양한 직원 관련 테이블 및 주소 관련 테이블에서 7개의 열을 선택하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `dbo.EmployeeAddresses` 테이블을 만듭니다.  

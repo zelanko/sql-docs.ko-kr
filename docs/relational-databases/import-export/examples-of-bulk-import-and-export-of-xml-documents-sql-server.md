@@ -1,7 +1,6 @@
 ---
 title: XML 문서 대량 가져오기 및 내보내기
-description: 이 예제에서는 XML 문서를 SQL Server 데이터베이스에 대량으로 가져오고 SQL Server 데이터베이스에서 대량으로 내보내는 방법을 보여 줍니다.
-ms.description: Examples of bulk importing and exporting of XML documents with SQL Server
+description: SQL Server에서 XML 문서 대량 가져오기 및 내보내기 예
 ms.date: 10/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,15 +19,15 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e44f6a80553927b3888d76f53f0570ba5b3b9026
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: babdda8ca6ced94eba21788028d8bf6e6e7eeaae
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980665"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012451"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML 문서 대량 가져오기 및 내보내기 예(SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
     
 ##  <a name="top"></a>
@@ -49,7 +48,7 @@ ms.locfileid: "80980665"
 - [XML 대량 로드 구성 요소를 사용하여 SQL Server에 XML을 가져오는 방법입니다.](https://support.microsoft.com/kb/316005)
 - [XML 스키마 컬렉션 [SQL Server]](../xml/xml-schema-collections-sql-server.md)
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음과 같은 예가 제공됩니다.  
   
 -  [A. XML 데이터를 이진 바이트 스트림으로 대량 가져오기](#binary_byte_stream)  

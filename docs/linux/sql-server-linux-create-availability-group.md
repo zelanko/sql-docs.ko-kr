@@ -8,16 +8,16 @@ ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 72d1292b03bc518ec8dfbe7a8f2e5e281bc6978a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077441"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896549"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Linux의 SQL Server에 대해 가용성 그룹 만들기 및 구성
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 자습서에서는 Linux에서 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]에 대해 가용성 그룹을 만들고 구성하는 방법을 보여 줍니다. Windows의 [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] 및 이전 버전과 달리 기본 Pacemaker 클러스터를 먼저 만들거나 만들지 않고 AG를 사용하도록 설정할 수 있습니다. 필요에 따라 나중까지 클러스터와 연결되지 않을 수 있습니다.
 
@@ -582,7 +582,9 @@ Linux의 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]를 기준으�
 
 클러스터 유형으로 외부를 지정하고 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]에서 가용성 그룹을 만든 후에는 Pacemaker에서 해당 리소스를 만들어야 합니다. AG와 연결된 두 가지 리소스는 AG 자체와 IP 주소입니다. 수신기 기능을 사용하지 않는 경우 IP 주소 리소스를 구성하는 것이 좋지만 권장 사항입니다.
 
-만든 AG 리소스는 복제본이라는 특수한 종류의 리소스입니다. AG 리소스는 기본적으로 각 노드에 복사본이 있으며, 마스터라는 하나의 제어 리소스가 있습니다. 마스터는 주 복제본을 호스트하는 서버와 연결됩니다. 보조 복제본(일반 또는 구성 전용)은 슬레이브으로 간주되며 장애 조치(failover) 시 마스터로 승격될 수 있습니다.
+만든 AG 리소스는 복제본이라는 특수한 종류의 리소스입니다. AG 리소스는 기본적으로 각 노드에 복사본이 있으며, 마스터라는 하나의 제어 리소스가 있습니다. 마스터는 주 복제본을 호스트하는 서버와 연결됩니다. 다른 리소스는 보조 복제본(일반 또는 구성 전용)을 호스트하며 장애 조치(failover) 시 마스터로 승격될 수 있습니다.
+
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
 1.  다음 구문을 사용하여 AG 리소스를 만듭니다.
 

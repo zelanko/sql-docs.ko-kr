@@ -2,7 +2,7 @@
 title: COPY INTO(Transact-SQL)(미리 보기)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: 외부 스토리지 계정에서 로드하려면 Azure SQL Data Warehouse의 COPY 문을 사용합니다.
-ms.date: 04/30/2020
+ms.date: 06/19/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 455e75d13c8b083d37bbab1c6a15916871b1ffba
-ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
+ms.openlocfilehash: 5d2b3040c53c2bbffb6fd073fa9f385f78e28798
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82987442"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091677"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY(Transact-SQL)(미리 보기)
 
@@ -44,28 +44,34 @@ ms.locfileid: "82987442"
 > [!NOTE]  
 > COPY 문은 현재 공개 미리 보기로 제공됩니다.
 
+COPY 문을 사용하는 포괄적인 예제 및 빠른 시작은 다음 설명서를 참조하세요.
+
+- [빠른 시작: COPY 문을 사용하여 데이터 대량 로드](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
+- [빠른 시작: COPY 문 및 지원되는 인증 방법을 사용하는 예제](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
+- [빠른 시작: 풍부한 Synapse Studio UI를 사용하여 COPY 문 만들기(작업 영역 미리 보기)](https://docs.microsoft.com/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+
 ## <a name="syntax"></a>구문  
 
 ```syntaxsql
 COPY INTO [schema.]table_name
 [(Column_list)] 
-FROM ‘<external_location>’ [,...n]
+FROM '<external_location>' [,...n]
 WITH  
  ( 
  [FILE_TYPE = {'CSV' | 'PARQUET' | 'ORC'} ]
  [,FILE_FORMAT = EXTERNAL FILE FORMAT OBJECT ]  
  [,CREDENTIAL = (AZURE CREDENTIAL) ]
- [,ERRORFILE = '[http(s)://storageaccount/container]/errorfile_directory[/]] 
+ [,ERRORFILE = '[http(s)://storageaccount/container]/errorfile_directory[/]]' 
  [,ERRORFILE_CREDENTIAL = (AZURE CREDENTIAL) ]
  [,MAXERRORS = max_errors ] 
- [,COMPRESSION = { 'Gzip' | 'DefaultCodec'|’Snappy’}] 
- [,FIELDQUOTE = ‘string_delimiter’] 
- [,FIELDTERMINATOR =  ‘field_terminator’]  
- [,ROWTERMINATOR = ‘row_terminator’]
+ [,COMPRESSION = { 'Gzip' | 'DefaultCodec'| 'Snappy'}] 
+ [,FIELDQUOTE = 'string_delimiter'] 
+ [,FIELDTERMINATOR =  'field_terminator']  
+ [,ROWTERMINATOR = 'row_terminator']
  [,FIRSTROW = first_row]
- [,DATEFORMAT = ‘date_format’] 
+ [,DATEFORMAT = 'date_format'] 
  [,ENCODING = {'UTF8'|'UTF16'}] 
- [,IDENTITY_INSERT = {‘ON’ | ‘OFF’}]
+ [,IDENTITY_INSERT = {'ON' | 'OFF'}]
 )
 ```
 
@@ -125,7 +131,7 @@ WITH
 - ORC: ORC(최적화된 행 열 형식) 형식을 지정합니다.
 
 >[!NOTE]  
-> Polybase의 '구분된 텍스트' 파일 형식은 FIELDTERMINATOR 매개 변수를 통해 기본 쉼표 구분 기호를 구성할 수 있는 ‘CSV’ 파일 형식으로 대체됩니다. 
+>Polybase의 '구분된 텍스트' 파일 형식은 FIELDTERMINATOR 매개 변수를 통해 기본 쉼표 구분 기호를 구성할 수 있는 ‘CSV’ 파일 형식으로 대체됩니다. 
 
 *FILE_FORMAT = external_file_format_name*</br>
 *FILE_FORMAT*은 Parquet 및 ORC 파일에만 적용되면 외부 데이터에 대한 파일 형식과 압축 방법을 저장하는 외부 파일 형식 개체의 이름을 지정합니다. 외부 파일 형식을 만들려면 [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md?view=azure-sqldw-latest)을 사용합니다.
@@ -143,7 +149,7 @@ AAD 또는 퍼블릭 스토리지 계정을 사용하여 인증할 때는 자격
 - SAS(공유 액세스 서명)를 사용하여 인증
   
   - *IDENTITY: ‘공유 액세스 서명’의 값이 있는 상수*
-  - *SECRET:* [‘공유 액세스 서명’](/azure/storage/common/storage-sas-overview)은 ‘스토리지 계정의 리소스에 대한 위임된 액세스 권한을 제공합니다.’  
+  - *SECRET:* [‘공유 액세스 서명’](/azure/storage/common/storage-sas-overview)은 ‘스토리지 계정의 리소스에 대한 위임된 액세스 권한을 제공합니다.’ 
   -  필요한 최소 권한: 읽기 및 목록
   
 - [*서비스 사용자*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)로 인증
@@ -182,7 +188,7 @@ ERRORFILE에 정의된 스토리지 계정의 전체 경로가 있는 경우 ERR
   
 - SAS(공유 액세스 서명)를 사용하여 인증
   - *IDENTITY: ‘공유 액세스 서명’의 값이 있는 상수*
-  - *SECRET:* [‘공유 액세스 서명’](/azure/storage/common/storage-sas-overview)은 ‘스토리지 계정의 리소스에 대한 위임된 액세스 권한을 제공합니다.’  
+  - *SECRET:* [‘공유 액세스 서명’](/azure/storage/common/storage-sas-overview)은 ‘스토리지 계정의 리소스에 대한 위임된 액세스 권한을 제공합니다.’ 
   - 필요한 최소 권한: 읽기, 나열, 쓰기, 만들기, 삭제
   
 - [*서비스 사용자*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)로 인증
@@ -269,7 +275,7 @@ IDENTITY_INSERT는 가져온 데이터 파일의 ID 값 또는 값을 ID 열에 
 
 INSERT 및 ADMINISTER BULK OPERATIONS 권한이 필요합니다. Azure SQL Data Warehouse에서는 INSERT 및 ADMINISTER DATABASE BULK OPERATIONS 권한이 필요합니다.
 
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 
 ### <a name="a-load-from-a-public-storage-account"></a>A. 퍼블릭 스토리지 계정에서 로드
 
@@ -356,7 +362,7 @@ WITH (
 COPY INTO test_parquet
 FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder1/*.parquet'
 WITH (
-    FILE_FORMAT = myFileFormat
+    FILE_FORMAT = myFileFormat,
     CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='<Your_SAS_Token>')
 )
 ```
@@ -369,7 +375,7 @@ FROM
 'https://myaccount.blob.core.windows.net/myblobcontainer/folder0/*.txt', 
     'https://myaccount.blob.core.windows.net/myblobcontainer/folder1'
 WITH ( 
-    FILE_TYPE = 'CSV'
+    FILE_TYPE = 'CSV',
     CREDENTIAL=(IDENTITY= '<client_id>@<OAuth_2.0_Token_EndPoint>',SECRET='<key>'),
     FIELDTERMINATOR = '|'
 )

@@ -31,15 +31,15 @@ helpviewer_keywords:
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a320b01433ad95f4bd695a3f700b7e7bb9ba653
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7a8290a80438b41a201f268c7388c06d2d7df930
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67902829"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902295"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   클라이언트 애플리케이션에 사용할 수 있는 메서드를 포함하여 엔드포인트를 만들고 속성을 정의합니다. 관련 사용 권한에 대한 자세한 내용은 [GRANT 엔드포인트 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)을 참조하세요.  
   
@@ -53,13 +53,13 @@ ms.locfileid: "67902829"
   
      이 부분에서는 엔드포인트에서 지원되는 페이로드를 정의합니다. 지원되는 페이로드 유형인 [!INCLUDE[tsql](../../includes/tsql-md.md)], Service Broker, 데이터베이스 미러링 중에서 하나를 정의할 수 있습니다. 또한 이 부분에는 언어별 정보도 포함됩니다.  
   
-> **참고:** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서는 네이티브 XML 웹 서비스(SOAP/HTTP 엔드포인트)가 제거되었습니다.  
+> **참고:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서는 네이티브 XML 웹 서비스(SOAP/HTTP 엔드포인트)가 제거되었습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 CREATE ENDPOINT endPointName [ AUTHORIZATION login ]  
 [ STATE = { STARTED | STOPPED | DISABLED } ]  
 AS { TCP } (  

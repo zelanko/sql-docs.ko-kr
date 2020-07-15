@@ -16,15 +16,15 @@ ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75542c488b9033cb791b731535eaab6a14c72c72
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1f110124a562ccf6f1cc7ee1d570d29b67c49785
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633683"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004716"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT 개체 사용 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   테이블, 뷰, 테이블 반환 함수, 저장 프로시저, 확장 저장 프로시저, 스칼라 함수, 집계 함수, 서비스 큐 또는 동의어에 대한 사용 권한을 부여합니다.  
   
@@ -62,11 +62,11 @@ GRANT <permission> [ ,...n ] ON
  ALL  
  ALL을 부여하더라도 일부 가능한 사용 권한은 부여되지 않습니다. ALL을 부여하는 것은 지정된 개체에 적용할 수 있는 모든 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 사용 권한을 부여하는 것과 동일합니다. ALL의 의미는 다음과 같이 달라집니다.  
   
-- 스칼라 함수 사용 권한: EXECUTE, REFERENCES.  
-- 테이블 반환 함수 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
-- 저장 프로시저 사용 권한: EXECUTE.  
-- 테이블 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
-- 뷰 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+- 스칼라 함수 사용 권한: EXECUTE, REFERENCES  
+- 테이블 반환 함수 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE  
+- 저장 프로시저 사용 권한: EXECUTE  
+- 테이블 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE  
+- 뷰 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE  
   
 PRIVILEGES  
  [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 호환성을 위해 포함되었습니다. ALL의 동작을 변경하지 않습니다.  
@@ -86,7 +86,7 @@ PRIVILEGES
  WITH GRANT OPTION  
  지정된 사용 권한을 다른 보안 주체에게 부여할 수 있는 권한도 이 보안 주체에 제공됨을 나타냅니다.  
   
- \<database_principal>로서 이 쿼리를 실행하는 보안 주체가 사용 권한을 부여하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다.  
+ AS \<database_principal> 이 쿼리를 실행하는 보안 주체의 사용 권한 부여 권한이 파생되는 다른 보안 주체를 지정합니다.  
   
  *Database_user*  
  데이터베이스 사용자를 지정합니다.  
@@ -115,7 +115,7 @@ PRIVILEGES
 ## <a name="remarks"></a>설명  
   
 > [!IMPORTANT]  
->  일부 경우에서 ALTER 사용 권한과 REFERENCE 사용 권한의 조합을 사용하면 피부여자가 데이터를 보거나 권한 없는 함수를 실행할 수 있습니다. 예를 들어, 테이블에 대한 ALTER 사용 권한과 함수에 대한 REFERENCE 사용 권한을 가진 사용자는 함수를 통해 계산 열을 만들고 실행할 수 있습니다. 이 경우 계산 열에 대한 SELECT 사용 권한도 필요합니다.  
+>  일부 경우에서 ALTER 사용 권한과 REFERENCE 사용 권한의 조합을 사용하면 피부여자가 데이터를 보거나 권한 없는 함수를 실행할 수 있습니다. 예를 들면 다음과 같습니다. 테이블에 대한 ALTER 권한과 함수에 대한 REFERENCE 권한을 가진 사용자는 함수를 통해 계산 열을 만들고 실행할 수 있습니다. 이 경우 계산 열에 대한 SELECT 사용 권한도 필요합니다.  
   
  개체에 대한 정보는 다양한 카탈로그 뷰에 표시됩니다. 자세한 내용은 [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)을 참조하세요.  
   
@@ -152,7 +152,7 @@ PRIVILEGES
 |데이터베이스 역할|역할에 대한 ALTER 사용 권한, db_securityadmin 고정 데이터베이스 역할의 멤버 자격, db_owner 고정 데이터베이스 역할의 멤버 자격 또는 sysadmin 고정 서버 역할의 멤버 자격|  
 |애플리케이션 역할|역할에 대한 ALTER 사용 권한, db_securityadmin 고정 데이터베이스 역할의 멤버 자격, db_owner 고정 데이터베이스 역할의 멤버 자격 또는 sysadmin 고정 서버 역할의 멤버 자격|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-granting-select-permission-on-a-table"></a>A. 테이블에 대한 SELECT 사용 권한 부여  
  다음 예에서는 사용자 `SELECT`에게 `RosaQdM` 데이터베이스의 `Person.Address` 테이블에 대한 `AdventureWorks2012` 사용 권한을 부여합니다.  

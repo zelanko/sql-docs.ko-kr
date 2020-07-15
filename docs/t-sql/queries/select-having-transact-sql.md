@@ -21,15 +21,15 @@ ms.assetid: 55650709-001e-42f4-902f-ead09a3c34af
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a574e3f7348c4641665b067193c54604145386c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fcbdec5e4d0e6c35d01d02e48e1d680d9702a66c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76315613"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999753"
 ---
 # <a name="select---having-transact-sql"></a>SELECT - HAVING(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   그룹 또는 집계에 대한 검색 조건을 지정합니다. HAVING은 SELECT 문하고만 사용될 수 있으며 HAVING은 일반적으로 GROUP BY 절에 사용됩니다. GROUP BY를 사용하지 않을 경우 암시적 단일 집계 그룹이 있습니다.   
   
@@ -37,16 +37,16 @@ ms.locfileid: "76315613"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 [ HAVING <search condition> ]  
 ```  
   
 ## <a name="arguments"></a>인수  
-\<search_condition> 그룹 및/또는 집계가 부합해야 하는 하나 이상의 조건자를 지정합니다. 검색 조건 및 조건자에 대한 자세한 내용은 [검색 조건&#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)을 참조하세요.  
+\<search_condition> 그룹 및/또는 집계가 충족해야 하는 하나 이상의 조건자를 지정합니다. 검색 조건 및 조건자에 대한 자세한 내용은 [검색 조건&#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)을 참조하세요.  
   
  **text**, **image** 및 **ntext** 데이터 형식은 HAVING 절에 사용할 수 없습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 단순한 `HAVING` 절을 사용하여 `SalesOrderID` 테이블에서 `SalesOrderDetail`를 초과하는 각 `$100000.00`의 총계를 검색합니다.  
   
 ```sql

@@ -4,22 +4,22 @@ titleSuffix: SQL Server
 description: SQL Server on Linux를 설치, 업데이트 및 제거합니다. 이 문서에서는 온라인, 오프라인 및 무인 시나리오를 설명합니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/13/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: ea308fca55cd5cc19a6d8cd74427a87e8fbe9ee2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 915aaabeedeb7c240495e635ebb679c252112385
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79319843"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897310"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>SQL Server on Linux 설치 지침
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 문서에서는 Linux에서 SQL Server 2017 및 SQL Server 2019를 설치, 업데이트, 제거하는 방법을 설명합니다.
 
@@ -47,7 +47,7 @@ SQL Server는 RHEL(Red Hat Enterprise Linux), SLES(SUSE Linux Enterprise Server)
 
 | 플랫폼 | 지원되는 버전 | 가져오기
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [RHEL 7.6 다운로드](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6, 8  | [RHEL 7.6 다운로드](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [SLES v12 SP2 다운로드](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Ubuntu 16.04 다운로드](http://releases.ubuntu.com/xenial/)
 | **Docker 엔진** | 1.8 이상 | [Docker 다운로드](https://www.docker.com/get-started)
@@ -57,12 +57,7 @@ SQL Server는 RHEL(Red Hat Enterprise Linux), SLES(SUSE Linux Enterprise Server)
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| 플랫폼 | 지원되는 버전 | 가져오기
-|-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6, 8.0 | [RHEL 8.0 가져오기](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
-| **SUSE Linux Enterprise Server** | v12 SP2, SP3, SP4, SP5 | [SLES v12 가져오기](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04, 18.04 | [Ubuntu 18.04 다운로드](http://releases.ubuntu.com/bionic/)
-| **Docker 엔진** | 1.8 이상 | [Docker 다운로드](https://www.docker.com/get-started)
+[!INCLUDE [linux-supported-platfoms-2019](../includes/linux-supported-platfoms-2019.md)]
 
 ::: moniker-end
 

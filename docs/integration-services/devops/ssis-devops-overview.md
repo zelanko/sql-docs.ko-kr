@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 946ea5d404db51c5241e5657524cf3dbc1a519a7
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: eb93961b516623f0a22b3baeae4bc29026c3a994
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152165"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091784"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>SSIS(SQL Server Integration Services) DevOps 도구
 
@@ -74,7 +74,7 @@ start -Wait -FilePath msiexec -Args "/i AFP.msi /quiet /l* log.txt"
 cat log.txt
 ```
 
-- 보호 수준 **EncryptSensitiveWithPassword** 및 **EncryptAllWithPassword**는 SSIS 빌드 작업에서 지원되지 않습니다. 코드베이스의 모든 SSIS 프로젝트에서 이러한 두 보호 수준을 사용하지 않는지 확인하세요. 사용하면 SSIS 빌드 작업이 실행 중에 중단되고 시간 초과됩니다.
+- 보호 수준 **EncryptSensitiveWithPassword** 및 **EncryptAllWithPassword**는 SSIS 빌드 작업에서 지원되지 않습니다. 코드베이스의 모든 SSIS 프로젝트에서 이러한 두 보호 수준을 사용하지 않는지 확인하세요. 사용하면 SSIS 빌드 작업이 실행 중에 응답하지 않고 시간 초과됩니다.
 
 ## <a name="ssis-deploy-task"></a>SSIS 배포 작업
 
@@ -99,7 +99,7 @@ cat log.txt
 
 #### <a name="destination-path"></a>대상 경로
 
-원본 파일이 배포되는 대상 폴더의 경로입니다. 다음은 그 예입니다.
+원본 파일이 배포되는 대상 폴더의 경로입니다. 예를 들면 다음과 같습니다.
 
 - /SSISDB/\<folderName\>
 - \\\\\<machineName\>\\\<shareFolderName\>\\\<optionalSubfolderName\>
@@ -314,7 +314,7 @@ SSIS 카탈로그 구성의 인라인 JSON입니다. 이 속성은 구성 파일
 |속성  |Description  |메모  |
 |---------|---------|---------|
 |name|매개 변수의 이름입니다.|매개 변수는 ‘프로젝트 매개 변수’ 또는 ‘패키지 매개 변수’일 수 있습니다.  <br> 부모 프로젝트에 매개 변수가 없는 경우 매개 변수를 건너뜁니다.|
-|container|매개 변수의 컨테이너입니다.|<li>매개 변수가 프로젝트 매개 변수이면 *container*는 프로젝트 이름이어야 합니다. <li>매개 변수가 패키지 매개 변수이면 *container*는 **.dtsx** 확장자를 갖는 패키지 이름이어야 합니다. <li> 매개 변수가 연결 관리자 속성이면 이름은 다음과 같은 형식이어야 합니다. **CM.\<연결 관리자 이름>.\<속성 이름>** .|
+|container|매개 변수의 컨테이너입니다.|<li>매개 변수가 프로젝트 매개 변수이면 *container*는 프로젝트 이름이어야 합니다. <li>매개 변수가 패키지 매개 변수이면 *container*는 **.dtsx** 확장자를 갖는 패키지 이름이어야 합니다. <li> 매개 변수가 연결 관리자 속성이면 이름은 다음과 같은 형식이어야 합니다. **CM.\<Connection Manager Name>.\<Property Name>** .|
 |값|매개 변수의 값입니다.|<li>*valueType*이 *referenced*인 경우: 값은 ‘문자열’ 형식의 환경 변수에 대한 참조입니다. <li> *valueType*이 *literal*인 경우: 이 특성은 임의의 유효한 ‘부울’, ‘숫자’ 및 ‘문자열’ JSON 값을 지원합니다.   <br> 값은 대상 매개 변수 형식으로 변환됩니다. 변환할 수 없는 경우 오류가 발생합니다.<li> *null* 값은 유효하지 않습니다. 작업은 이 매개 변수 개체를 건너뛰고 경고를 표시합니다.|
 |valueType|매개 변수 값의 유형입니다.|유효한 유형은 다음과 같습니다. <br> *literal*: *value* 특성이 리터럴 값을 나타냅니다. <br> *referenced*: *value* 특성이 환경 변수에 대한 참조를 나타냅니다.|
 
@@ -344,6 +344,12 @@ SSIS 카탈로그 구성의 인라인 JSON입니다. 이 속성은 구성 파일
 |sensitive|환경 변수의 값이 민감한지 여부입니다.|잘못된 입력: <br> *true* <br> *false*|
 
 ## <a name="release-notes"></a>릴리스 정보
+
+### <a name="version-102"></a>버전 1.0.2
+
+릴리스 날짜: 2020년 5월 26일
+
+- 구성 작업이 완료된 후 SSIS 카탈로그 구성 작업이 실패할 수 있는 문제를 해결했습니다.
 
 ### <a name="version-101"></a>버전 1.0.1
 

@@ -25,17 +25,17 @@ ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4c8f956bc846c645fb8efe9ecb9ade7e2366d73
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4618de753675ef1b3d7ccd2f7a187f22aab9c683
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634149"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010737"
 ---
 # <a name="grant-transact-sql"></a>GRANT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  보안 주체에 보안 개체에 대한 사용 권한을 부여합니다.  일반적인 개념은 GRANT \<사용 권한> ON \<개체> TO \<사용자, 로그인 또는 그룹>입니다. 사용 권한에 대한 일반적인 설명은 [사용 권한&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-database-engine.md)을 참조하세요.  
+  보안 주체에 보안 개체에 대한 사용 권한을 부여합니다.  일반적인 개념은 \<some user, login, or group>에게 \<some object>에 대한 \<some permission>을 부여하는 것입니다. 사용 권한에 대한 일반적인 설명은 [사용 권한&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-database-engine.md)을 참조하세요.  
   
  ![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -157,7 +157,7 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
   
  sysadmin 고정 서버 역할의 멤버와 같이 CONTROL SERVER 사용 권한이 부여된 사용자는 서버의 모든 보안 개체에 대한 사용 권한을 부여할 수 있습니다. db_owner 고정 데이터베이스 역할의 멤버와 같이 데이터베이스에 대한 CONTROL 사용 권한이 부여된 사용자는 데이터베이스의 모든 보안 개체에 대한 사용 권한을 부여할 수 있습니다. 스키마에 대한 CONTROL 권한이 부여된 사용자는 스키마 내의 모든 개체에 대한 사용 권한을 부여할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 표에는 보안 개체와 보안 개체별 구문을 설명하는 문서 목록이 정리되어 있습니다.  
   
 |||  

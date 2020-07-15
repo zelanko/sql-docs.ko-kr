@@ -18,16 +18,16 @@ ms.assetid: 36cc4e2c-5a24-4975-9920-9305f12c6e7c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b78ebdd157afe35a78900e8ceb3c2bad40bb04d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5b33c0e855e093e82a121e689850bfd80e1e6aa7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73983232"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010740"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY 데이터베이스 사용 권한(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스에 대한 사용 권한을 거부합니다.
 
@@ -35,7 +35,7 @@ ms.locfileid: "73983232"
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 DENY <permission> [ ,...n ]
     TO <database_principal> [ ,...n ] [ CASCADE ]
     [ AS <database_principal> ]
@@ -58,13 +58,13 @@ DENY <permission> [ ,...n ]
 
 *permission* 데이터베이스에 대해 거부할 수 있는 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.
 
-ALL 이 옵션은 모든 가능한 권한을 거부하지 않습니다. ALL을 거부하는 것은 BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE, CREATE VIEW 사용 권한을 거부하는 것과 같습니다.
+ALL 이 옵션은 모든 가능한 권한을 거부하지 않습니다. ALL을 거부하는 것은 다음 사용 권한을 거부하는 것과 동일합니다. BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE 및 CREATE VIEW.
 
 PRIVILEGES ISO 준수를 위해 포함됩니다. ALL의 동작을 변경하지 않습니다.
 
 CASCADE 지정된 보안 주체가 권한을 부여한 다른 보안 주체에 대해서도 해당 권한이 거부됨을 나타냅니다.
 
-AS \<database_principal> 이 쿼리를 실행하는 보안 주체가 권한을 거부하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다.
+AS \<database_principal> 이 쿼리를 실행하는 보안 주체의 사용 권한 거부 권한이 파생되는 다른 보안 주체를 지정합니다.
 
 *Database_user* 데이터베이스 사용자를 지정합니다.
 
@@ -175,7 +175,7 @@ AS \<database_principal> 이 쿼리를 실행하는 보안 주체가 권한을 �
 
 AS 옵션을 사용하는 경우 지정한 보안 주체가 데이터베이스를 소유해야 합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-denying-permission-to-create-certificates"></a>A. 인증서를 만들기 위한 사용 권한 거부
 
@@ -215,5 +215,5 @@ GO
 - [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [GRANT](../../t-sql/statements/grant-transact-sql.md)
-- [사용 권한](../../relational-databases/security/permissions-database-engine.md)
+- [권한](../../relational-databases/security/permissions-database-engine.md)
 - [보안 주체](../../relational-databases/security/authentication-access/principals-database-engine.md)

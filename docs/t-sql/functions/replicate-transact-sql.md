@@ -17,18 +17,18 @@ helpviewer_keywords:
 - REPLICATE function
 - repeating character expressions
 ms.assetid: 0cd467fb-3f22-471a-892c-0039d9f7fa1a
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27078aceb7bbeb4918c6884bd8a1e984e9384ce5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db82218c76a9459c992b3cb8a5177cd06e319053
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67944484"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003738"
 ---
 # <a name="replicate-transact-sql"></a>REPLICATE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   지정한 횟수만큼 문자열 값을 반복합니다.  
   
@@ -36,16 +36,19 @@ ms.locfileid: "67944484"
   
 ## <a name="syntax"></a>구문  
   
-```  
-REPLICATE ( string_expression ,integer_expression )   
+```syntaxsql
+REPLICATE ( string_expression , integer_expression )   
 ```  
   
 ## <a name="arguments"></a>인수  
  *string_expression*  
- 문자 또는 이진 데이터 형식의 식입니다. *string_expression*는 문자 또는 이진 데이터일 수 있습니다.  
+ 문자 또는 이진 데이터 형식의 식입니다.  
   
 > [!NOTE]  
->  *string_expression*의 형식이 **varchar(max)** 또는 **nvarchar(max)** 가 아닌 경우 REPLACE는 반환 값을 8,000 바이트에서 자릅니다. 8,000바이트를 초과하는 값을 반환하려면 *string_expression*을 적절한 큰 값 데이터 형식으로 명시적으로 캐스팅해야 합니다.  
+> *string_expression*이 **binary** 형식이라면 REPLICATE는 **varchar**로의 암시적 변환을 수행하며 따라서 이진 입력을 유지하지 않습니다.  
+
+> [!NOTE]  
+> *string_expression* 입력이 **varchar(max)** 또는 **nvarchar(max)** 형식이라면 REPLICATE는 반환 값을 8,000 바이트에서 자릅니다. 8,000바이트를 초과하는 값을 반환하려면 *string_expression*을 적절한 큰 값 데이터 형식으로 명시적으로 캐스팅해야 합니다.  
   
  *integer_expression*  
  **bigint**를 포함하는 정수 유형의 식입니다. *integer_expression*이 음수이면 NULL이 반환됩니다.  
@@ -53,7 +56,7 @@ REPLICATE ( string_expression ,integer_expression )
 ## <a name="return-types"></a>반환 형식  
  *string_expression*과 같은 유형을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-replicate"></a>A. REPLICATE 사용  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 프로덕션 코드 줄 앞에 `0` 문자를 4번 복제합니다.  
@@ -119,7 +122,7 @@ Varchar Column        Char Column
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-replicate"></a>3\. REPLICATE 사용  
+### <a name="c-using-replicate"></a>C: REPLICATE 사용  
  다음 예에서는 `ItemCode` 값 앞의 `0` 문자를 4번 복제합니다.  
   
 ```  

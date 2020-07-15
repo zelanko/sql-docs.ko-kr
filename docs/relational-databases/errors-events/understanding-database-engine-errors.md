@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 엔진 오류 이해 | Microsoft 문서
+description: SQL Server 데이터베이스 엔진에서 발생하는 오류의 특성과 sys.messages에서 보내는 모든 시스템 및 사용자 정의 오류 메시지에 액세스하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: ddaca9d3-956f-46a5-8cd3-a7a15ec75878
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91ef40f0c1b5250cde244130b146479cf14fa9fc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 49e62b7fc66a462701ea65a537edee84c9735b86
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903748"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009215"
 ---
 # <a name="understanding-database-engine-errors"></a>데이터베이스 엔진 오류 이해
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 발생한 오류에는 다음 테이블에 설명된 것과 같은 특성이 있습니다.  
   
 |attribute|Description|  
@@ -42,7 +43,7 @@ ms.locfileid: "67903748"
   
  TRY...CATCH 구문의 TRY 블록 범위 내에서 발생하는 오류에 대한 정보는 관련 CATCH 블록 범위 내에서 ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY 및 ERROR_STATE와 같은 함수를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드에서 얻을 수 있습니다. 자세한 내용은 [TRY...CATCH&#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)를 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 영문( `sys.messages` ) 텍스트가 포함된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 모든 시스템 및 사용자 정의 오류 메시지 목록을 반환하기 위해`1033`카탈로그 뷰를 쿼리합니다.  
   
 ```  

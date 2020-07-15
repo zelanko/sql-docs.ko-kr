@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 식별자 | Microsoft 문서
+description: 데이터베이스 식별자를 파악합니다. 데이터 정렬, 다양한 클래스, 구분 요구 사항 및 명명 규칙에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -21,16 +22,16 @@ ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1179633f88bef025648b08892859e73b06f14b8
-ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
+ms.openlocfilehash: f0a42282f0f6f0c4cf645c64d1df94e95eae79b5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550146"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85980637"
 ---
 # <a name="database-identifiers"></a>데이터베이스 식별자
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   데이터베이스 개체 이름을 그 개체의 식별자라고 합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 개체에는 식별자가 있습니다. 서버, 데이터베이스 그리고 테이블, 뷰, 열, 인덱스, 트리거, 프로시저, 제약 조건, 규칙 등과 같은 데이터베이스 개체도 식별자를 가질 수 있습니다. 식별자는 대부분의 개체에서 필수 항목이지만 제약 조건과 같은 일부 개체에서는 옵션입니다.
 
  개체의 식별자는 개체를 정의할 때 만들어집니다. 만들어진 식별자는 개체를 참조하는 데 사용됩니다. 예를 들어 다음 문은 식별자가 `TableX`인 테이블과 식별자가 `KeyCol` 및 `Description`인 두 열을 만듭니다.
@@ -62,7 +63,7 @@ CREATE TABLE TableX
    ```
 
 -  구분 식별자    
-   큰따옴표(")나 대괄호([])로 묶여져 있습니다. 식별자 형식 규칙을 따르는 식별자는 구분되지 않을 수도 있습니다. 다음은 그 예입니다.
+   큰따옴표(")나 대괄호([])로 묶여져 있습니다. 식별자 형식 규칙을 따르는 식별자는 구분되지 않을 수도 있습니다. 예를 들면 다음과 같습니다.
 
    ```sql
    USE AdventureWorks
@@ -72,7 +73,7 @@ CREATE TABLE TableX
    WHERE [NationalIDNumber] = 153479919 --Delimiter is optional.
    ```
 
-모든 식별자 규칙을 따르지 않는 식별자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 구분되어야 합니다. 다음은 그 예입니다.
+모든 식별자 규칙을 따르지 않는 식별자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 구분되어야 합니다. 예를 들면 다음과 같습니다.
 
 ```sql
 USE AdventureWorks

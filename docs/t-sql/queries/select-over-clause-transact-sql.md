@@ -25,15 +25,15 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ffdfd5662cd8bbfd4b9cd580a4df141a4c5a4bd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: cfe397ae8b508e7821af6b3b9d837434129a3e56
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634193"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999768"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 절(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   관련 창 함수를 적용하기 전에 행 집합의 분할과 순서를 결정합니다. 즉, OVER 절은 쿼리 결과 집합 내의 창 또는 사용자 지정 행 집합을 정의합니다. 그런 다음 창 함수가 창의 각 행에 대한 값을 계산합니다. OVER 절에 함수를 사용하여 이동 평균, 누적 집계, 누계 또는 그룹 결과당 상위 N개 결과 등의 집계된 값을 계산할 수 있습니다.  
   
@@ -114,7 +114,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  *value_expression*  
  행 집합을 분할하는 데 사용하는 열을 지정합니다. *value_expression*은 FROM 절을 통해 사용 가능한 열만 참조할 수 있습니다. *value_expression*은 SELECT 목록의 식이나 별칭은 참조할 수 없습니다. *value_expression*은 열 식, 스칼라 하위 쿼리, 스칼라 함수 또는 사용자 정의 변수일 수 있습니다.  
   
- \<ORDER BY 절>  
+ \<ORDER BY clause>  
  결과 집합의 각 파티션 내에서 행의 논리적 순서를 정의합니다. 즉, 창 functioncalculation이 수행되는 논리적 순서를 지정합니다.  
   
  *order_by_expression*  
@@ -160,7 +160,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  창이 파티션의 마지막 행에서 끝나도록 지정합니다. UNBOUNDED FOLLOWING은 창 끝 지점으로만 지정할 수 있습니다. 예를 들어 RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING은 현재 행에서 시작하고 파티션의 마지막 행에서 끝나는 창을 정의합니다.  
   
  \<unsigned value specification> FOLLOWING  
- \<unsigned value specification>과 함께 지정되어 현재 행 다음의 행 또는 값 수를 나타냅니다. \<unsigned value specification> FOLLOWING이 창 시작 지점으로 지정된 경우 끝 지점은 \<unsigned value specification>FOLLOWING이어야 합니다. 예를 들어 ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING은 현재 행 다음의 두 번째 행에서 시작하고 현재 행 다음의 열 번째 행에서 끝나는 창을 정의합니다. RANGE에는 이 인수를 지정할 수 없습니다.  
+ \<unsigned value specification>과 함께 지정되어 현재 행 다음의 행 또는 값 수를 나타냅니다. \<unsigned value specification> FOLLOWING을 창 시작 지점으로 지정했다면 끝 지점은 \<unsigned value specification>FOLLOWING이어야 합니다. 예를 들어 ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING은 현재 행 다음의 두 번째 행에서 시작하고 현재 행 다음의 열 번째 행에서 끝나는 창을 정의합니다. RANGE에는 이 인수를 지정할 수 없습니다.  
   
  부호 없는 정수 리터럴  
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
@@ -174,7 +174,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  
 ### <a name="important"></a>중요!
 
-ROWS/RANGE를 지정되고 \<window frame extent>(짧은 구문)에 \<window frame preceding>을 사용할 경우 이 사양은 창 프레임 경계 시작 지점에 사용되고 CURRENT ROW는 경계 끝 지점에 사용됩니다. 예를 들어 “ROWS 5 PRECEDING”은 “ROWS BETWEEN 5 PRECEDING AND CURRENT ROW”와 같습니다.  
+ROWS/RANGE를 지정하고 \<window frame extent>(짧은 구문)에 \<window frame preceding>을 사용할 경우 이 사양은 창 프레임 경계 시작 지점에 사용되고 CURRENT ROW는 경계 끝 지점에 사용됩니다. 예를 들어 “ROWS 5 PRECEDING”은 “ROWS BETWEEN 5 PRECEDING AND CURRENT ROW”와 같습니다.  
   
 > [!NOTE]
 > ORDER BY를 지정하지 않을 경우 전체 파티션이 창 프레임에 사용됩니다. 이는 ORDER BY 절이 필요하지 않은 함수에만 적용됩니다. ROWS/RANGE는 지정하지 않았지만 ORDER BY를 지정한 경우 RANGE UNBOUNDED PRECEDING AND CURRENT ROW가 창 프레임의 기본값으로 사용됩니다. 이는 선택적 ROWS/RANGE 사양을 허용할 수 있는 함수에만 적용됩니다. 예를 들어 순위 함수는 ROWS/RANGE를 허용할 수 없으므로 ORDER BY가 있고 ROWS/RANGE가 없더라도 이 창 프레임은 적용되지 않습니다.  
@@ -186,7 +186,7 @@ ROWS/RANGE를 지정되고 \<window frame extent>(짧은 구문)에 \<window fra
   
  OVER 절과 함께 사용되는 순위, 집계 또는 분석 함수에 따라 \<ORDER BY clause> 및/또는 \<ROWS and RANGE clause>가 지원되지 않을 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-the-over-clause-with-the-row_number-function"></a>A. OVER 절에 ROW_NUMBER 함수 사용  
  다음 예에서는 OVER 절에 ROW_NUMBER 함수를 사용하여 파티션 내의 각 행에 대한 행 번호를 표시하는 방법을 보여 줍니다. OVER 절에 지정된 ORDER BY 절은 각 파티션의 행을 `SalesYTD` 열을 기준으로 정렬합니다. SELECT 문의 ORDER BY 절은 전체 쿼리 결과 집합이 반환되는 순서를 결정합니다.  
@@ -323,11 +323,11 @@ USE AdventureWorks2012;
 GO  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS  SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                            ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -360,10 +360,10 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
 WHERE TerritoryID IS NULL OR TerritoryID < 5  
@@ -396,9 +396,9 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
-    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
+    ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
-    ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+    ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                              ORDER BY DATEPART(yy,ModifiedDate)   
                                              ROWS BETWEEN CURRENT ROW AND 1 FOLLOWING ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -426,9 +426,9 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
-    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
+    ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
-    ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+    ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                              ORDER BY DATEPART(yy,ModifiedDate)   
                                              ROWS UNBOUNDED PRECEDING),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -463,7 +463,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS RowNumber,  
     FirstName, LastName,   
-CONVERT(varchar(13), SUM(SalesAmountQuota),1) AS SalesQuota   
+CONVERT(VARCHAR(13), SUM(SalesAmountQuota),1) AS SalesQuota   
 FROM dbo.DimEmployee AS e  
 INNER JOIN dbo.FactSalesQuota AS sq  
     ON e.EmployeeKey = sq.EmployeeKey  

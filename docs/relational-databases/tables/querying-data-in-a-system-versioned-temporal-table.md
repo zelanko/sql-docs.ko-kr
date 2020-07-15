@@ -1,7 +1,7 @@
 ---
 title: 시스템 버전 임시 테이블의 데이터 쿼리 | Microsoft 문서
 ms.custom: ''
-ms.date: 03/30/2020
+ms.date: 03/28/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,16 +11,16 @@ ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c64fbfa127f3e5992f2e924d7498fc68fec5db13
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 2ed4bcd1fb72c25520e935879305ff1c7d894707
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402681"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002338"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>시스템 버전 관리 temporal 테이블의 데이터 쿼리
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 temporal 테이블 데이터의 최신(실제) 상태를 가져오려면, 비temporal 테이블 쿼리와 완전히 동일한 방식으로 쿼리할 수 있습니다. PERIOD 열이 숨겨져 있지 않은 경우, 해당 값은 SELECT \* 쿼리에 나타납니다. **PERIOD** 열을 숨김으로 지정하면 해당 값이 SELECT \* 쿼리에 나타나지 않습니다. **PERIOD** 열이 숨겨진 경우 해당 열에 대한 값을 반환하기 위해 특히 SELECT 절의 **PERIOD** 열을 참조합니다.
 
@@ -32,7 +32,7 @@ temporal 테이블 데이터의 최신(실제) 상태를 가져오려면, 비tem
 - CONTAINED IN (<시작_날짜_시간> , <종료_날짜_시간>)
 - ALL
 
-**FOR SYSTEM_TIME** 은 쿼리의 각 테이블에 독립적으로 지정될 수 있습니다. 공용 테이블 식, 테이블 반환 함수, 저장 프로시저 내에 사용될 수 있습니다. temporal 테이블과 테이블 별칭을 함께 사용하는 경우, temporal 테이블 이름과 별칭 사이에 **FOR SYSTEM_TIME** 절을 포함해야 합니다. [AS OF 하위 절을 사용한 특정 시간의 쿼리](#query-for-a-specific-time-using-the-as-of-sub-clause)의 두 번째 예제를 참조하세요.
+**FOR SYSTEM_TIME** 은 쿼리의 각 테이블에 독립적으로 지정될 수 있습니다. 공용 테이블 식, 테이블 반환 함수, 저장 프로시저 내에 사용될 수 있습니다. temporal 테이블과 테이블 별칭을 함께 사용하는 경우, temporal 테이블 이름과 별칭 사이에 **FOR SYSTEM_TIME** 절을 포함해야 합니다(AS OF 하위 절을 사용한 특정 시간 쿼리의 두 번째 예제 참조).
 
 ## <a name="query-for-a-specific-time-using-the-as-of-sub-clause"></a>AS OF 하위 절을 사용한 특정 시간의 쿼리
 

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cdf3eb4e217ded2eef041a1cec910abedc6dadf4
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 90bb787880cf212cfeb4a70b8e76b265f59e532a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635501"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902230"
 ---
 # <a name="deny-server-principal-permissions-transact-sql"></a>DENY 서버 보안 주체 사용 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 대해 부여된 사용 권한을 거부합니다.  
   
@@ -113,7 +113,7 @@ DENY permission [ ,...n ] }
   
  서버 역할의 경우 서버 역할에 대한 CONTROL 권한 또는 서버에 대한 ALTER ANY SERVER ROLE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-denying-impersonate-permission-on-a-login"></a>A. 로그인에 IMPERSONATE 권한 거부  
  다음 예에서는 `IMPERSONATE`Windows 사용자 에서 생성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로그인`WanidaBenshoof`에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로그인에 대한 권한을 거부합니다`AdvWorks\YoonM`.  

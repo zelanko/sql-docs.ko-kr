@@ -29,15 +29,15 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 20b7649fe184382fe7a5b1a5f38b28e6b0982284
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b2790ce463d7ff6114bf96726d899cbe5d65f01f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635990"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004732"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   현재 데이터베이스에 사용자를 추가합니다. 12가지 유형의 사용자가 가장 기본적인 구문 샘플과 함께 아래 나열되어 있습니다.  
   
@@ -345,7 +345,7 @@ Azure SQL Database 관리되는 인스턴스 데이터베이스에서 사용자�
 ### <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 ALTER ANY USER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-creating-a-database-user-based-on-a-sql-server-login"></a>A. SQL Server 로그인 기반 데이터베이스 사용자 만들기  
  다음 예에서는 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이라는 `AbolrousHazem` 로그인을 만든 다음 `AbolrousHazem`에 이에 해당하는 `AdventureWorks2012`이라는 데이터베이스 사용자를 만듭니다.  

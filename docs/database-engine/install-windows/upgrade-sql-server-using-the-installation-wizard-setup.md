@@ -1,5 +1,6 @@
 ---
 title: '업그레이드: 설치 마법사(설치)'
+description: SQL Server 설치 마법사는 SQL Server 구성 요소를 현재 위치에서 최신 버전의 SQL Server로 업그레이드할 수 있는 단일 기능 트리를 제공합니다.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bb468aff505b4b12d2eabd64f9512c5d0a18267e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9535f71c496cdb59120ea95d62f5fa903d57dbde
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258803"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900206"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>설치 마법사를 사용하여 SQL Server 업그레이드(설치 프로그램)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 전체 업그레이드할 수 있는 단일 기능 트리를 제공합니다.  
   
@@ -41,7 +42,7 @@ ms.locfileid: "75258803"
 > * [Analysis Services 업그레이드](../../database-engine/install-windows/upgrade-analysis-services.md)
 > * [SharePoint용 파워 피벗 업그레이드](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하는 경우 원격 공유에 대한 읽기 및 실행 권한이 있으며 로컬 관리자인 도메인 계정을 사용해야 합니다.  
   
 > [!WARNING]  
@@ -97,7 +98,7 @@ ms.locfileid: "75258803"
      선택한 기능의 필수 구성 요소가 오른쪽 창에 표시됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서는 이미 설치되어 있지 않은 필수 구성 요소가 있는 경우 이 절차의 뒷부분에 설명된 설치 단계에서 이를 설치합니다.  
   
     > [!NOTE]  
-    >  **인스턴스 선택** 페이지에서 **\<공유 기능만 업그레이드>** 를 선택하여 공유 기능을 업그레이드하도록 선택한 경우 [기능 선택] 페이지에서 모든 공유 기능이 미리 선택되어 있습니다. 모든 공유 구성 요소는 동시에 업그레이드됩니다.  
+    >  **인스턴스 선택** 페이지에서 **\<Upgrade shared features only>** 를 선택하여 공유 기능을 업그레이드하도록 선택한 경우 기능 선택 페이지에서 모든 공유 기능이 미리 선택되어 있습니다. 모든 공유 구성 요소는 동시에 업그레이드됩니다.  
   
 12. 인스턴스 구성 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 인스턴스 ID를 지정합니다.  
   

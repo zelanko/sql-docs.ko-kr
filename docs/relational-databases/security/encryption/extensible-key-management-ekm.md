@@ -1,5 +1,6 @@
 ---
 title: EKM(확장 가능 키 관리) | Microsoft 문서
+description: 확장 가능 키 관리를 구성 및 사용하는 방법과 확장 가능 키 관리가 SQL Server의 데이터 암호화 기능에서 사용되는 방식을 알아봅니다.
 ms.custom: ''
 ms.date: 07/25/2019
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 9115535ecc2569e035f4831589e53191e2634f61
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6421c442c5cbb45b9e076d3353abcbad6217fa53
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957403"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896795"
 ---
 # <a name="extensible-key-management-ekm"></a>EKM(확장 가능 키 관리)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 암호화 및 키 생성용 MSCAPI( *Microsoft Cryptographic API* ) 공급자를 사용하여 EKM( *Extensible Key Management* )과 함께 데이터 암호화 기능을 제공합니다. 데이터 및 키 암호화를 위한 암호화 키는 임시 키 컨테이너에서 생성되며 데이터베이스에 저장되기 전에 공급자로부터 내보내져야 합니다. 이 방법을 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 암호화 키 계층 및 키 백업을 포함한 키 관리를 처리할 수 있습니다.  
   
  규정 준수에 대한 요구와 데이터에 포함된 개인 정보 보호에 대한 관심이 증가함에 따라 조직에서는 "심층 방어" 솔루션을 제공하기 위해 암호화를 활용하고 있습니다. 일반적으로 이 방법은 데이터베이스 암호화 관리 도구만 사용하므로 유용한 방법이 아닙니다. 하드웨어 공급업체에서는 HSM( *하드웨어 보안 모듈* )을 사용하여 엔터프라이즈 키 관리를 해결하는 제품을 제공합니다. HSM 디바이스는 하드웨어나 소프트웨어 모듈에 암호화 키를 저장합니다. 이 방법은 암호화 키와 암호화 데이터가 별도로 보관되므로 더욱 안전한 솔루션입니다.  
@@ -90,7 +91,7 @@ GO
 #### <a name="ekm-device-specific-basic-authentication-using-usernamepassword"></a>사용자 이름/암호를 통한 EKM 디바이스별 기본 인증  
  *사용자 이름/암호* 쌍을 사용한 기본 인증을 지원하는 EKM 모듈의 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 자격 증명을 사용하여 투명한 인증을 제공합니다. 자격 증명에 대한 자세한 내용은 [자격 증명&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/authentication-access/credentials-database-engine.md)을 참조하세요.  
   
- 로그온할 때마다 EKM 공급자에 대해 자격 증명을 만든 후 로그인(Windows 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 계정 모두)에 매핑하여 EKM 모듈에 액세스할 수 있습니다. 자격 증명의 *Identify* 필드에는 사용자 이름이 포함되고 *secret* 필드에는 EKM 모듈에 연결할 암호가 포함됩니다.  
+ 로그온할 때마다 EKM 공급자에 대해 자격 증명을 만든 후 로그인(Windows 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 계정 모두)에 매핑하여 EKM 모듈에 액세스할 수 있습니다. 자격 증명의 *ID* 필드에는 사용자 이름이 포함되고 암호 필드에는 EKM 모듈에 연결할 암호가 포함됩니다.  
   
  EKM 공급자에 대해 매핑된 로그인 자격 증명이 없으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정에 매핑된 자격 증명이 사용됩니다.  
   

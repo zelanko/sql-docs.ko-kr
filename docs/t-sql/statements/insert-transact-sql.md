@@ -32,15 +32,15 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ad386f4137b43746eed82665715e2fef5957a79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: daf046f217c37da8868cce538b4c136f8b782d82
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82181104"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009262"
 ---
 # <a name="insert-transact-sql"></a>INSERT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 테이블 또는 뷰에 새 행을 하나 이상 추가합니다. 예제를 보려면 [예제](#InsertExamples)를 참조하세요.  
@@ -419,7 +419,7 @@ SELECT를 ORDER BY와 함께 사용하여 행을 채우는 INSERT 쿼리는 ID �
   
 ##  <a name="examples"></a><a name="InsertExamples"></a> 예  
   
-|Category|중요한 구문 요소|  
+|범주|중요한 구문 요소|  
 |--------------|------------------------------|  
 |[기본 구문](#BasicSyntax)|INSERT • 테이블 값 생성자|  
 |[열 값 처리](#ColumnValues)|IDENTITY • NEWID • 기본값 • 사용자 정의 형식|  

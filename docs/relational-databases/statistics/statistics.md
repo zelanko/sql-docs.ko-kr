@@ -1,7 +1,7 @@
 ---
 title: 통계 | Microsoft 문서
 ms.custom: ''
-ms.date: 12/18/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -23,15 +23,15 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 371ef48f968bbc6cfd6a99d225dd8edf81cff6ca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4cda8a71b0023cfc5cb7e697bf98e06b4e8955f8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286737"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012231"
 ---
 # <a name="statistics"></a>통계
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   쿼리 최적화 프로그램에서는 통계를 사용하여 쿼리 성능을 향상하는 쿼리 계획을 만듭니다. 대부분의 쿼리에서 쿼리 최적화 프로그램은 고품질의 쿼리 계획에 필요한 통계를 이미 생성하므로 경우에 따라서 최상의 결과를 위해 추가 통계를 만들거나 쿼리 설계를 수정해야 합니다. 이 항목에서는 통계 개념에 대해 설명하고 쿼리 최적화 통계를 효율적으로 사용하기 위한 지침을 제공합니다.  
   
 ##  <a name="components-and-concepts"></a><a name="DefinitionQOStatistics"></a> 구성 요소 및 개념  
@@ -137,7 +137,11 @@ AUTO_UPDATE_STATISTICS 제어 방법에 대한 자세한 내용은 [SQL Server�
 * 애플리케이션에서 동일한 쿼리, 유사한 쿼리 또는 유사한 캐시된 쿼리 계획을 자주 실행하는 경우. 쿼리 최적화 프로그램은 최신 통계를 기다리지 않고 들어오는 쿼리를 실행할 수 있으므로 동기 통계 업데이트보다는 비동기 통계 업데이트를 사용할 때, 더욱 예상 가능한 쿼리 응답 시간을 얻을 수 있습니다. 이 방법으로 일부 쿼리의 지연을 방지할 수 있습니다.  
   
 * 애플리케이션에서 통계 업데이트를 기다리는 하나 이상의 쿼리로 인해 클라이언트 요청 제한 시간을 초과하는 경우가 있습니다. 동기 통계를 기다리는 경우 엄격한 시간 제한이 있는 애플리케이션은 실패할 수 있습니다.  
-  
+
+비동기 통계 업데이트는 백그라운드 요청에 의해 수행됩니다. 업데이트된 통계를 데이터베이스에 쓸 준비가 된 요청은 통계 메타데이터 개체에 대한 스키마 수정 잠금을 획득하려고 시도합니다. 다른 세션에서 이미 동일한 개체에 대한 잠금을 보유하고 있는 경우에는 스키마 수정 잠금을 획득할 수 있을 때까지 비동기 통계 업데이트가 차단됩니다. 마찬가지로 쿼리를 컴파일하기 위해 통계 메타데이터 개체에 대한 스키마 안정성 잠금을 획득해야 하는 세션은 이미 스키마 수정 잠금을 보유하고 있거나 획득 대기 중인 비동기 통계 업데이트 백그라운드 세션에 의해 차단될 수 있습니다. 따라서 쿼리 컴파일이 매우 빈번하고 통계 업데이트가 빈번하게 수행되는 워크로드의 경우 비동기 통계를 사용하면 잠금 차단으로 인한 동시성 문제의 가능성이 높아질 수 있습니다.
+
+Azure SQL Database에서 ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 사용하도록 설정하면 비동기 통계 업데이트를 사용하여 잠재적 동시성 문제를 방지할 수 있습니다. 이 구성을 사용하도록 설정하면 백그라운드 요청은 우선 순위가 낮은 별도의 큐에서 스키마 수정 잠금 획득을 기다리며 다른 요청이 기존 통계를 사용하여 쿼리를 계속 컴파일하도록 허용합니다. 통계 메타데이터 개체에 대한 잠금을 보유하고 있는 다른 세션이 없으면 백그라운드 요청은 해당 스키마 수정 잠금을 획득하고 통계를 업데이트합니다. 가능성은 낮지만 백그라운드 요청이 몇 분의 시간 제한 기간 내에 잠금을 획득할 수 없는 경우 비동기 통계 업데이트가 중단되고, 다른 자동 통계 업데이트가 트리거되거나 통계가 [수동으로 업데이트](update-statistics.md)될 때까지 통계가 업데이트되지 않습니다.
+
 #### <a name="incremental"></a>INCREMENTAL  
  CREATE STATISTICS의 INCREMENTAL 옵션이 ON이면 파티션 통계별로 통계가 작성됩니다. OFF로 설정된 경우 통계 트리가 삭제되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 통계를 다시 계산합니다. 기본값은 OFF입니다. 이 설정은 데이터베이스수준 INCREMENTAL 속성을 재정의합니다. 증분 통계 만들기에 대한 자세한 내용은 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)을 참조하세요. 자동으로 파티션별 통계를 만드는 방법은 [데이터베이스 속성 &#40;옵션 페이지&#41;](../../relational-databases/databases/database-properties-options-page.md#automatic) 및 [ALTER DATABASE SET 옵션 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요. 
   
@@ -202,7 +206,7 @@ GO
 ### <a name="query-selects-from-a-subset-of-data"></a>쿼리가 데이터 하위 집합에서 선택하는 경우  
 쿼리 최적화 프로그램에서 단일 열 및 인덱스에 대한 통계를 만들 때 모든 행의 값에 대해 통계를 작성합니다. 쿼리가 행의 하위 집합에서 선택하고 행의 해당 하위 집합에서 데이터 분포가 고유한 경우 필터링된 통계는 쿼리 계획을 향상시킬 수 있습니다. [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 문을 [WHERE](../../t-sql/queries/where-transact-sql.md) 절과 함께 사용하여 필터링된 통계를 만들어 필터 조건자 식을 정의할 수 있습니다.  
   
-예를 들어 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]를 사용하면 `Production.Product` 테이블의 각 제품이 `Production.ProductCategory` 테이블의 4가지 범주인 Bikes, Components, Clothing 및 Accessories 중 하나에 속하게 됩니다. 각 범주의 데이터 배포는 서로 다른 가중치를 가집니다. 자전거 가중치는 13.77에서 30.0이고 구성 요소 가중치는 2.12에서 1050.00이면서 일부 NULL 값을 가지며 의류 가중치는 모두 NULL이고 액세서리 가중치 또한 NULL입니다.  
+예를 들어 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]를 사용하면 `Production.Product` 테이블의 각 제품이 `Production.ProductCategory` 테이블의 4가지 범주인 자전거, 구성 요소, 의류 및 액세서리 중 하나에 포함됩니다. 각 범주의 데이터 배포는 서로 다른 가중치를 가집니다. 자전거 가중치는 13.77에서 30.0이고 구성 요소 가중치는 2.12에서 1050.00이면서 일부 NULL 값을 가지며 의류 가중치는 모두 NULL이고 액세서리 가중치 또한 NULL입니다.  
   
 자전거를 예로 사용할 때 모든 자전거 가중치에 대한 필터링된 통계는 쿼리 최적화 프로그램에 더욱 정확한 통계를 제공하므로 전체 테이블 통계 또는 Weight 열에 대한 존재하지 않는 통계에 비해 쿼리 계획의 품질을 향상할 수 있습니다. 자전거 가중치 열은 필터링된 통계의 경우에는 좋지만 가중치 조회 수가 상대적으로 적을 때 필터링된 인덱스의 경우에는 반드시 좋은 것은 아닙니다. 필터링된 인덱스에서 제공하는 조회 성능의 향상은 장점이지만 필터링된 인덱스를 데이터베이스에 추가하는 것으로 인한 추가 유지 관리 및 스토리지 비용은 부담이 될 수 있습니다.  
   

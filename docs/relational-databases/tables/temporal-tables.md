@@ -11,16 +11,16 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7afb01d003e6221b30ea194ff711555b7e982f41
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.openlocfilehash: 6f8ea5d4b1e91a3f1c3bf66dab4565ab457933c5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80873179"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999856"
 ---
 # <a name="temporal-tables"></a>임시 테이블
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 SQL Server 2016에서는 현재 시점에서 정확한 데이터만이 아니라 임의 시점에서 테이블에 저장된 데이터에 대한 정보를 제공하기 위해 기본적으로 지원을 제공하는 데이터베이스 기능으로 임시 테이블(시스템 버전 임시 테이블이라고도 함)에 대한 지원을 도입했습니다. 임시 테이블은 ANSI SQL 2011에서 도입된 데이터베이스 기능입니다.
 
@@ -106,7 +106,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));
 
 ## <a name="how-do-i-query-temporal-data"></a>Temporal 데이터를 쿼리하는 방법
 
-**SELECT** 문 **FROM** _\<table\>_ 절은 5개의 temporal 특정 하위 절과 함께 새로운 **FOR SYSTEM_TIME** 절을 사용하여 현재 테이블 및 기록 테이블에서 데이터를 쿼리합니다. 이 새로운 **SELECT** 문의 구문은 단일 테이블에서 직접 지원되며, 여러 조인 및 여러 temporal 테이블 위의 뷰를 통해 전파됩니다.
+**SELECT** 문의 **FROM** _\<table\>_ 절에는 5개의 임시 하위 절과 함께 새로운 **FOR SYSTEM_TIME** 절을 사용하여 현재 및 기록 테이블에서 데이터를 쿼리합니다. 이 새로운 **SELECT** 문의 구문은 단일 테이블에서 직접 지원되며, 여러 조인 및 여러 temporal 테이블 위의 뷰를 통해 전파됩니다.
 
 ![Temporal-Querying](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")
 

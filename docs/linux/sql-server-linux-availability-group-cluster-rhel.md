@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: be817f1fffd734dcf86f3b35d3215decbc9eb28d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d1a4dd8b5139498e558f718cdb5d0d22824f9655
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76706293"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896953"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 가용성 그룹에 대해 RHEL 클러스터 구성
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 문서에서는 Red Hat Enterprise Linux에서 SQL Server에 대한 3노드 가용성 그룹 클러스터를 만드는 방법에 대해 설명합니다. 고가용성을 위해 Linux의 가용성 그룹에는 세 개의 노드가 필요합니다. [가용성 그룹 구성의 고가용성 및 데이터 보호](sql-server-linux-availability-group-ha.md)를 참조하세요. 클러스터링 계층은 [Pacemaker](https://clusterlabs.org/) 위에 빌드된 RHEL(Red Hat Enterprise Linux) [HA 추가 기능](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)을 기반으로 합니다. 
 
@@ -167,7 +167,7 @@ Pacemaker 클러스터 속성에 대한 자세한 내용은 [Pacemaker Clusters 
 
 ## <a name="create-availability-group-resource"></a>가용성 그룹 리소스 만들기
 
-가용성 그룹 리소스를 만들려면 `pcs resource create` 명령을 사용하고 리소스 속성을 설정합니다. 다음 명령은 이름이 `ag1`인 가용성 그룹에 대해 `ocf:mssql:ag` 마스터/슬레이브 유형 리소스를 만듭니다.
+가용성 그룹 리소스를 만들려면 `pcs resource create` 명령을 사용하고 리소스 속성을 설정합니다. 다음 명령은 이름이 `ag1`인 가용성 그룹에 대해 `ocf:mssql:ag` 마스터/하위 유형 리소스를 만듭니다.
 
 **RHEL 7**
 

@@ -1,5 +1,6 @@
 ---
 title: MDS(Master Data Services) 업그레이드 | Microsoft Docs
+description: Microsoft SQL Server Master Data Services를 업그레이드하는 4가지 시나리오를 확인합니다. 업그레이드 관련 파일 위치 및 문제 해결 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1b9131442160969e7511f42b91ed09a3b4001e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e58b0ea07dc97ac7573934112dd3969cadb53c26
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934822"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900275"
 ---
 # <a name="upgrade-master-data-services"></a>MDS(Master Data Services) 업그레이드
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   다음은 Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Master Data Services를 업그레이드하는 시나리오입니다.  
   
@@ -112,7 +113,7 @@ ms.locfileid: "67934822"
   
  **데이터베이스 엔진 업그레이드를 사용해서 업그레이드하려면**  
   
-1.  **[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]의 경우에만**: **제어판** > **프로그램 및 기능**을 열고 Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]를 제거합니다.  
+1.  **[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에만 해당**: **제어판** > **프로그램 및 기능**을 열고 Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]를 제거합니다.  
   
 2.  데이터베이스 엔진을 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 또는 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]로 업그레이드합니다. 자세한 내용은 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)을(를) 참조하세요.  
   
@@ -149,7 +150,7 @@ ms.locfileid: "67934822"
 3.  MDS 데이터베이스 스키마를 업그레이드하고 웹 애플리케이션을 만들고 새 웹 애플리케이션을 업그레이드된 MDS 데이터베이스와 연결합니다. 지침은 [데이터베이스 엔진 업그레이드 없이 업그레이드](#noengine)의 2-4단계를 참조하세요.  
   
 ## <a name="troubleshooting"></a>문제 해결  
- **문제:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 웹 애플리케이션을 열면 "클라이언트 버전이 데이터베이스 버전과 호환되지 않습니다."라는 오류 메시지가 표시됩니다.  
+ **문제:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 웹 애플리케이션을 열 때 "클라이언트 버전이 데이터베이스 버전과 호환되지 않습니다."라는 오류 메시지가 나타납니다.  
   
  **해결 방법:** 이 문제는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 마스터 데이터 관리자 웹 애플리케이션이 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services로 업그레이드된 데이터베이스에 액세스하려고 할 때 발생합니다. [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] 웹 애플리케이션을 대신 사용해야 합니다.  
   

@@ -1,5 +1,6 @@
 ---
 title: SQL Server 업그레이드 | Microsoft Docs
+description: 이 문서에서는 다양한 버전의 SQL Server 인스턴스에 대한 업그레이드 정보가 들어 있는 리소스에 대한 링크를 제공합니다.
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a023389a6c3d0ea087d003af09464481af2089c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8689e210cd0faf265fc1dcf96705a87cecccf5ed
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79198320"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900211"
 ---
 # <a name="upgrade-sql-server"></a>SQL Server 업그레이드
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
  
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 또는 [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)] 인스턴스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 직접 업그레이드할 수 있습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]의 경우, 지원되는 주요 운영 체제 간에 겹치는 공통부분이 없으므로 병렬 업그레이드 또는 마이그레이션을 수행하여 SQL Server 2019로 이동해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하기 전에 업그레이드 프로세스 및 릴리스 정보에 대한 다음 문서를 검토하세요.  
   

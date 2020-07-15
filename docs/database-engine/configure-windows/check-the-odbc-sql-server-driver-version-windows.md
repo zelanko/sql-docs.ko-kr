@@ -1,5 +1,6 @@
 ---
 title: ODBC SQL Server 드라이버 버전 검사(Windows) | Microsoft Docs
+description: Windows ODBC 데이터 원본 관리자를 사용하여 컴퓨터에 설치된 ODBC 드라이버의 버전을 확인하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 11/07/2016
 ms.prod: sql
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - driver version number [ODBC]
 - ODBC drivers, version number
 ms.assetid: 43451080-a562-4231-b1d4-1ba35ca0ea79
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1c678dff11ef3958d2d204f369dabe5927d600a3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7cfebbf9266bfa97bd17415cd892f20f04869f1d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012977"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001210"
 ---
 # <a name="check-the-odbc-sql-server-driver-version-windows"></a>ODBC SQL Server 드라이버 버전 검사(Windows)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   사용자 컴퓨터에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 나 다른 회사에서 제공하는 다양한 ODBC 드라이버가 사용될 수 있습니다. 이 항목에서는 Windows **ODBC 데이터 원본 관리자** 를 사용하여 설치된 ODBC 드라이버의 버전을 확인하는 방법에 대해 설명합니다.  
   

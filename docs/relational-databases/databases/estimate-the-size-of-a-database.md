@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 크기 예측 | Microsoft 문서
+description: SQL Server에서 데이터베이스를 디자인할 때 크기를 추정하면 성능 및 디스크 공간에 필요한 하드웨어 구성을 결정하는 데 도움이 될 수 있습니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ ms.assetid: 5b240161-eba4-44b0-946c-61a8fc00fc8c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a11d6d83b4c2c56d6448431028beec89265a0d5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 444513824770954f44919051d96a0a573f63b84f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934487"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008206"
 ---
 # <a name="estimate-the-size-of-a-database"></a>데이터베이스 크기 예측
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   데이터베이스를 디자인할 때는 데이터베이스가 데이터로 가득 찰 때 얼마나 커질 수 있는지를 추정해야 합니다. 데이터베이스의 크기를 추정하면 다음을 수행하는 데 필요한 하드웨어 구성을 결정하는 데 도움이 됩니다.  
   
 -   애플리케이션에서 필요한 성능을 확보합니다.  

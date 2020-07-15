@@ -1,5 +1,6 @@
 ---
 title: 자격 증명 만들기 | Microsoft 문서
+description: SQL Server Management Studio 또는 Transact-SQL을 사용하여 SQL Server에서 자격 증명을 만드는 방법을 알아봅니다. 제한 사항 내에서 작업하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 675e152dfffa6bfce8decf37dc1716e7149bae83
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 541b8fc68dd5ae92864612b017f04d619fe444c6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095045"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900628"
 ---
 # <a name="create-a-credential"></a>Create a Credential
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 자격 증명을 만드는 방법에 대해 설명합니다.  
   
  자격 증명을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 사용자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]외부에서 ID를 가질 수 있습니다. 자격 증명은 주로 EXTERNAL_ACCESS 권한 집합이 포함된 어셈블리에서 코드를 실행하는 데 사용됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 사용자가 백업을 저장할 파일 위치와 같은 도메인 리소스에 액세스해야 할 경우에도 자격 증명을 사용할 수 있습니다.  

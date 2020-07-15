@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/31/2020
+ms.date: 06/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -59,16 +59,16 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abe671baec987e5fa98528b59671b48f7b0d8180
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 55f3b740365fc3fa20e93538eb3abdd2ca9b0526
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925387"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000662"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 열과 제약 조건을 변경, 추가 또는 삭제하여 테이블 정의를 수정합니다. ALTER TABLE은 파티션을 다시 할당 및 다시 빌드하거나 제약 조건과 트리거를 사용하거나 사용하지 않도록 설정합니다.
 
@@ -349,6 +349,8 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 
 ```
 
+## <a name="syntax-for-azure-synapse-analytics"></a>Azure Synapse Analytics 구문
+
 ```syntaxsql
 -- Syntax for Azure Synapse Analytics and Analytics Platform System
 
@@ -385,7 +387,7 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
     [ CONSTRAINT constraint_name ] 
     {
         DEFAULT DEFAULT constant_expression
-        | PRIMARY KEY (column_name) NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | PRIMARY KEY NONCLUSTERED (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
         | UNIQUE (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
     }
 <rebuild_option > ::=
@@ -563,7 +565,7 @@ ADD MASKED WITH ( FUNCTION = ' *mask_function* ')
 
 마스크를 삭제하려면 `DROP MASKED`를 사용합니다. 함수 매개 변수에 대해서는 [동적 데이터 마스킹](../../relational-databases/security/dynamic-data-masking.md)을 참조하세요.
 
-WITH ( ONLINE = ON | OFF) \<열 변경에 적용>  
+WITH ( ONLINE = ON | OFF) \<as applies to altering a column>  
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 테이블을 사용 가능한 상태로 유지하면서 많은 열 변경 작업을 수행할 수 있게 해줍니다. 기본값은 OFF입니다. 데이터 형식, 열 길이 또는 전체 자릿수, Null 허용 여부, 스파스 및 데이터 정렬과 관련된 열 변경 내용에 대해 온라인 열 변경을 실행할 수 있습니다.
@@ -1046,8 +1048,8 @@ ONLINE **=** ON에는 다음과 같은 제한 사항이 있습니다.
 다음은 분할된 테이블에 적용되는 제한 사항입니다.
 
 - 테이블에 정렬되지 않은 인덱스가 있으면 단일 파티션의 압축 설정을 변경할 수 없습니다.
-- ALTER TABLE \<table> REBUILD PARTITION ... 구문은 지정된 파티션을 다시 작성합니다.
-- ALTER TABLE \<table> REBUILD WITH ... 구문은 모든 파티션을 다시 작성합니다.
+- ALTER TABLE \<table> REBUILD PARTITION ... 구문은 지정된 파티션을 다시 빌드합니다.
+- ALTER TABLE \<table> REBUILD WITH ... 구문은 모든 파티션을 다시 빌드합니다.
 
 ## <a name="dropping-ntext-columns"></a>NTEXT 열 삭제
 
@@ -1081,7 +1083,7 @@ ALTER TABLE 문의 열을 CLR(공용 언어 런타임) 사용자 정의 형식 �
 
 ## <a name="examples"></a><a name="Example_Top"></a> 예
 
-|Category|중요한 구문 요소|
+|범주|중요한 구문 요소|
 |--------------|------------------------------|
 |[열 및 제약 조건 추가](#add)|ADD * 인덱스 옵션이 있는 PRIMARY KEY * 스파스 열과 열 집합 *|
 |[열 및 제약 조건 삭제](#Drop)|DROP|

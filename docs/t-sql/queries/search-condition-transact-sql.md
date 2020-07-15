@@ -37,15 +37,15 @@ ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b35445b9b04eafb6d8d302c8627c08ca90bd745e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 84a7961292625aa3d818dbbab62aa7b455dabea7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635527"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999815"
 ---
 # <a name="search-condition-transact-sql"></a>검색 조건(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   검색 조건은 논리 연산자 AND, OR 및 NOT을 사용하여 하나 이상의 조건자를 결합한 것입니다.  
   
@@ -189,7 +189,7 @@ ms.locfileid: "81635527"
  식이 목록에 포함되는지 또는 제외되는지 여부에 따라 식을 검색하도록 지정합니다. 검색 식은 상수 또는 열 이름이 될 수 있으며 목록은 상수 집합 또는 더 일반적으로는 하위 쿼리가 될 수 있습니다. 값의 목록은 괄호로 묶어야 합니다. 자세한 내용은 [IN&#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)을 참조하세요.  
   
  *subquery*  
- 제한된 SELECT 문으로 간주할 수 있고, SELECT 문에서 \<query_expression>과 비슷합니다. ORDER BY 절 및 INTO 키워드는 허용되지 않습니다. 자세한 내용은 [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)를 참조하세요.  
+ 제한된 SELECT 문으로 간주할 수 있으며 SELECT 문의 \<query_expression>과 비슷합니다. ORDER BY 절 및 INTO 키워드는 허용되지 않습니다. 자세한 내용은 [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)를 참조하세요.  
   
  ALL  
  비교 연산자 및 하위 쿼리와 함께 사용됩니다. 하위 쿼리에 대해 검색된 모든 값이 비교 연산을 충족하면 \<predicate>에 대해 TRUE를 반환하고, 모든 값이 비교 연산을 충족하지 않거나 하위 쿼리에서 외부 문에 행을 반환하지 않으면 FALSE를 반환합니다. 자세한 내용은 [ALL&#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)을 참조하세요.  
@@ -203,7 +203,7 @@ ms.locfileid: "81635527"
 ## <a name="remarks"></a>설명  
  논리 연산자의 우선 순위는 NOT(가장 높음), AND, OR 순입니다. 검색 조건에 괄호를 사용하면 이 순서를 무시할 수 있습니다. 논리 연산자의 계산 순서는 쿼리 최적화 프로그램에서 선택한 내용에 따라 달라질 수 있습니다. 논리 연산자에서 논리 값을 조작하는 방법에 대한 자세한 내용은 [AND&#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md), [OR&#40;Transact-SQL&#41;](../../t-sql/language-elements/or-transact-sql.md) 및 [NOT&#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-where-with-like-and-escape-syntax"></a>A. WHERE 절에 LIKE 및 ESCAPE 구문 사용  
  다음 예제에서는 `LargePhotoFileName` 열에 `green_` 문자가 있는 행을 검색하고, _이 와일드카드 문자이므로 `ESCAPE` 옵션을 사용합니다. `ESCAPE` 옵션을 지정하지 않으면 쿼리에서 `green` 단어 뒤에 _ 문자가 아닌 임의의 단일 문자가 포함된 설명 값을 검색합니다.  

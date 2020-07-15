@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 64b5d7f680379265a25bb8aa6566b1905cb7ca4c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: cce49d6dcad43375dc1c1e25721116f18be039e9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633063"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897035"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>REVOKE 개체 사용 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   테이블, 뷰, 테이블 반환 함수, 저장 프로시저, 확장 저장 프로시저, 스칼라 함수, 집계 함수, 서비스 큐 또는 동의어에 대한 사용 권한을 취소합니다. 
   
@@ -62,15 +62,15 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  ALL  
  ALL을 취소해도 일부 가능한 사용 권한은 취소되지 않습니다. ALL을 취소하는 것은 지정된 개체에 적용할 수 있는 모든 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 사용 권한을 취소하는 것과 동일합니다. ALL의 의미는 다음과 같이 달라집니다.  
   
- 스칼라 함수 사용 권한: EXECUTE, REFERENCES.  
+ 스칼라 함수 사용 권한: EXECUTE, REFERENCES  
   
- 테이블 반환 함수 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ 테이블 반환 함수 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE  
   
- 저장 프로시저 사용 권한: EXECUTE.  
+ 저장 프로시저 사용 권한: EXECUTE  
   
- 테이블 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ 테이블 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE  
   
- 뷰 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ 뷰 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE  
   
  PRIVILEGES  
  [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 호환성을 위해 포함되었습니다. ALL의 동작을 변경하지 않습니다.  
@@ -95,7 +95,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 > [!CAUTION]  
 >  WITH GRANT OPTION을 부여 받은 사용 권한이 연계되어 취소되면 해당 사용 권한의 GRANT 및 DENY가 모두 취소됩니다.  
   
- \<database_principal>로서 이 쿼리를 실행하는 보안 주체가 사용 권한을 부여하는 권한을 취소할 수 있는 다른 보안 주체를 지정합니다.  
+ AS \<database_principal> 이 쿼리를 실행하는 보안 주체가 사용 권한을 취소하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다.  
   
  *Database_user*  
  데이터베이스 사용자를 지정합니다.  
@@ -146,7 +146,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
   
  AS 절을 사용하는 경우 지정된 보안 주체가 사용 권한을 취소할 개체를 소유해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-revoking-select-permission-on-a-table"></a>A. 테이블에 대한 SELECT 사용 권한 취소  
  다음 예에서는 `SELECT` 데이터베이스의 `RosaQdM` 테이블에 대해 사용자 `Person.Address`에서 `AdventureWorks2012` 사용 권한을 취소합니다.  

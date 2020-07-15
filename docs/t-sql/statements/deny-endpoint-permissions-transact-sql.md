@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b7bb0f690305320f5ae0f5d4ecdeb8f59b33cb01
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: be8be48997be82e3781df5d4f569e8fd4c90237e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68114845"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902269"
 ---
 # <a name="deny-endpoint-permissions-transact-sql"></a>DENY 엔드포인트 사용 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   엔드포인트에 대한 사용 권한을 거부합니다.  
 
@@ -34,7 +34,7 @@ ms.locfileid: "68114845"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name  
     TO < server_principal >  [ ,...n ]  
     [ CASCADE ]  
@@ -93,7 +93,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ## <a name="permissions"></a>사용 권한  
  엔드포인트에 대한 CONTROL 권한 또는 서버에 대한 ALTER ANY ENDPOINT 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-denying-view-definition-permission-on-an-endpoint"></a>A. 엔드포인트에 대한 VIEW DEFINITION 권한 거부  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로그인`ZArifin`에 대해 `VIEW DEFINITION`엔드포인트에 대한 권한`Mirror7`을 거부합니다.  

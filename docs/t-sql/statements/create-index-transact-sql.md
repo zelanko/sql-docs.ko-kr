@@ -54,16 +54,16 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac07912de601370884d818c7d046f5c1f476672c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1cede57088f5d42041b28c00239ba29822f6c401
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632503"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010792"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 테이블 또는 뷰에 관계 인덱스를 만듭니다. 이 인덱스는 클러스터형 또는 비클러스터형 B-트리 인덱스이므로 rowstore 인덱스라고도 합니다. 테이블에 데이터가 채워지기 전에 rowstore 인덱스를 만들 수 있습니다. 특히 쿼리가 특정 열에서 값을 선택하거나 값을 특정 순서로 정렬해야 하는 경우 rowstore 인덱스를 사용하여 쿼리 성능을 개선할 수 있습니다.
 
@@ -590,7 +590,7 @@ DATA_COMPRESSION 설정을 적용할 파티션을 지정합니다. 인덱스가 
 - 여러 개별 파티션의 파티션 번호를 쉼표로 구분하여 지정합니다. 예를 들면 다음과 같습니다. ON PARTITIONS(1, 5).
 - 범위와 개별 파티션을 모두 지정합니다. 예를 들면 다음과 같습니다. ON PARTITIONS(2, 4, 6~8).
 
-\<range>는 TO라는 단어로 구분된 파티션 번호로 지정할 수 있습니다. 예를 들면 `ON PARTITIONS (6 TO 8)`와 같습니다.
+\<range>는 TO라는 단어로 구분된 파티션 번호로 지정할 수 있습니다(예: `ON PARTITIONS (6 TO 8)`).
 
  여러 파티션에 대해 서로 다른 데이터 압축 유형을 설정하려면 DATA_COMPRESSION 옵션을 두 번 이상 지정합니다. 예를 들면 다음과 같습니다.
 
@@ -723,9 +723,9 @@ INSERT INTO t1 VALUES (1, 0);
 ## <a name="specifying-index-options"></a>인덱스 옵션 지정
 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에는 새 인덱스 옵션이 추가되었으며 옵션 지정 방법도 수정되었습니다. 이전 버전과 호환되는 구문에서 WITH *option_name*은 WITH **(** \<option_name> **= ON )** 과 같습니다. 인덱스 옵션을 설정하면 다음 규칙이 적용됩니다.
 
-- 새 인덱스 옵션은 WITH ( **_option\_name_ = ON | OFF**)를 사용해서만 지정할 수 있습니다.
+- 새 인덱스 옵션은 WITH (**_option\_name_ = ON | OFF**)를 사용해서만 지정할 수 있습니다.
 - 옵션은 동일한 문에 이전 버전과 호환되는 구문 및 새 구문 모두를 사용하여 지정할 수 없습니다. 예를 들어 WITH (**DROP_EXISTING, ONLINE = ON**)을 지정하면 문이 실패합니다.
-- XML 인덱스를 만들 때 WITH( **_option_name_= ON | OFF**)를 사용하여 옵션을 지정해야 합니다.
+- XML 인덱스를 만들 때 WITH(**_option_name_= ON | OFF**)를 사용하여 옵션을 지정해야 합니다.
 
 ## <a name="drop_existing-clause"></a>DROP_EXISTING 절
 DROP_EXISTING 절을 사용하여 인덱스 다시 작성, 열 추가 또는 삭제, 옵션 수정, 열 정렬 순서 수정 또는 파티션 구성표나 파일 그룹 변경 등의 작업을 수행할 수 있습니다.
@@ -814,8 +814,8 @@ OPTIMIZE_FOR_SEQUENTIAL_KEY 인덱스 옵션을 켜면 데이터베이스 엔진
 다음은 분할된 인덱스에 적용되는 제한 사항입니다.
 
 - 테이블에 정렬되지 않은 인덱스가 있으면 단일 파티션의 압축 설정을 변경할 수 없습니다.
-- The ALTER INDEX \<index> ... REBUILD PARTITION ... 구문은 인덱스의 지정된 파티션을 다시 빌드합니다.
-- The ALTER INDEX \<index> ... REBUILD WITH ... 구문은 인덱스의 모든 파티션을 다시 빌드합니다.
+- ALTER INDEX \<index> ... REBUILD PARTITION ... 구문은 인덱스의 지정된 파티션을 다시 빌드합니다.
+- ALTER INDEX \<index> ... REBUILD WITH ... 구문은 인덱스의 모든 파티션을 다시 빌드합니다.
 
 압축 상태를 변경할 경우 테이블, 인덱스 또는 파티션에 어떤 영향을 주는지 확인하려면 [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 저장 프로시저를 사용합니다.
 

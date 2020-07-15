@@ -32,15 +32,15 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63084232460e60aedb0b0a1abe267caa7687e9dd
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75831811"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091924"
 ---
 # <a name="collation-and-unicode-support"></a>데이터 정렬 및 유니코드 지원
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 데이터 정렬은 데이터에 대한 정렬 규칙과 대/소문자 및 악센트 구분 속성을 제공합니다. **char**, **varchar** 등의 문자 데이터 형식과 함께 사용되는 데이터 정렬은 해당 데이터 형식을 나타내는 데 사용할 수 있는 코드 페이지와 해당 문자를 지정합니다. 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 새 인스턴스를 설치하든, 데이터베이스 백업을 복원하든, 서버를 클라이언트 데이터베이스에 연결하든 간에 사용하는 데이터의 로캘 요구 사항, 정렬 순서, 대/소문자 및 악센트 구분 여부를 파악하는 것이 중요합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 사용 가능한 데이터 정렬을 나열하려면 [sys.fn_helpcollations(Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)를 참조하세요.    
@@ -178,8 +178,8 @@ Windows 데이터 정렬은 관련 Windows 시스템 로캘을 기반으로 하�
 |아랍어(예멘)|0x2401|0x0401|Arabic_CI_AS|
 |아르메니아어(아르메니아)|0x042b|0x0419|Latin1_General_CI_AS|
 |아삼어(인도)|0x044d|0x044d|서버 수준에서 사용할 수 없음|
-|아제리어(아제르바이잔, 키릴 자모)|0x082c|0x082c|더 이상 사용되지 않으며 서버 수준에서 사용할 수 없음|
-|아제리어(아제르바이잔, 라틴 문자)|0x042c|0x042c|더 이상 사용되지 않으며 서버 수준에서 사용할 수 없음|
+|아제르바이잔어(아제르바이잔, 키릴 자모)|0x082c|0x082c|더 이상 사용되지 않으며 서버 수준에서 사용할 수 없음|
+|아제르바이잔어(아제르바이잔, 라틴 문자)|0x042c|0x042c|더 이상 사용되지 않으며 서버 수준에서 사용할 수 없음|
 |바슈키르어(러시아)|0x046d|0x046d|Latin1_General_CI_AI|
 |바스크어(바스크)|0x042d|0x0409|Latin1_General_CI_AS|
 |벨로루시어(벨로루시)|0x0423|0x0419|Cyrillic_General_CI_AS|
@@ -235,7 +235,7 @@ Windows 데이터 정렬은 관련 Windows 시스템 로캘을 기반으로 하�
 |프랑스어(모나코)|0x180c|0x040c|French_CI_AS|
 |프랑스어(스위스)|0x100c|0x040c|French_CI_AS|
 |프리지아어(네덜란드)|0x0462|0x0462|Latin1_General_CI_AI|
-|갈리시아어(스페인)|0x0456|0x0409|Latin1_General_CI_AS|
+|갈리시아어|0x0456|0x0409|Latin1_General_CI_AS|
 |조지아어(조지아)|0x10437|0x10437|Georgian_Modern_Sort_CI_AS|
 |조지아어(조지아)|0x0437|0x0419|Latin1_General_CI_AS|
 |독일어 - 전화 번호부 정렬(DIN)|0x10407|0x10407|German_PhoneBook_CI_AS|
@@ -275,7 +275,7 @@ Windows 데이터 정렬은 관련 Windows 시스템 로캘을 기반으로 하�
 |리투아니아어(리투아니아)|0x0427|0x0427|Lithuanian_CI_AS|
 |저지 소르비아어(독일)|0x082e|0x0409|Latin1_General_CI_AS|
 |룩셈부르크어(룩셈부르크)|0x046e|0x0409|Latin1_General_CI_AS|
-|마케도니아어(북마케도니아)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
+|마케도니아어(북마케도니아, FYROM)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
 |말레이어(브루나이)|0x083e|0x0409|Latin1_General_CI_AS|
 |말레이어(말레이시아)|0x043e|0x0409|Latin1_General_CI_AS|
 |말라얄람어(인도)|0x044c|0x0439|서버 수준에서 사용할 수 없음|
@@ -303,6 +303,7 @@ Windows 데이터 정렬은 관련 Windows 시스템 로캘을 기반으로 하�
 |루마니아어(루마니아)|0x0418|0x0418|Romanian_CI_AS|
 |로만시어(스위스)|0x0417|0x0417|Latin1_General_CI_AI|
 |러시아어(러시아)|0x0419|0x0419|Cyrillic_General_CI_AS|
+|사하어(러시아)|0x0485|0x0485|Latin1_General_CI_AI|
 |이나리 라프어(핀란드)|0x243b|0x083b|Latin1_General_CI_AI|
 |룰레 라프어(노르웨이)|0x103b|0x043b|Latin1_General_CI_AI|
 |룰레 라프어(스웨덴)|0x143b|0x083b|Latin1_General_CI_AI|
@@ -366,7 +367,6 @@ Windows 데이터 정렬은 관련 Windows 시스템 로캘을 기반으로 하�
 |웨일스어(영국)|0x0452|0x0452|Latin1_General_CI_AI|
 |월로프어(세네갈)|0x0488|0x040c|French_CI_AS|
 |코사어(남아프리카)|0x0434|0x0409|Latin1_General_CI_AS|
-|야쿠트어(러시아)|0x0485|0x0485|Latin1_General_CI_AI|
 |이 문자(중국)|0x0478|0x0409|Latin1_General_CI_AS|
 |요루바어(나이지리아)|0x046a|0x0409|Latin1_General_CI_AS|
 |줄루어(남아프리카)|0x0435|0x0409|Latin1_General_CI_AS|
@@ -433,7 +433,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 로캘은 위치나 문화권과 관련된 정보 집합입니다. 정보에는 음성 언어의 이름과 식별자, 언어를 기록하는 데 사용되는 스크립트, 문화권별 규칙 등이 포함될 수 있습니다. 데이터 정렬은 하나 이상의 로캘과 연결될 수 있습니다. 자세한 내용은 참조 [Microsoft에 의해 할당되는 로캘 ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)를 참조하세요.    
     
 ###  <a name="code-page"></a><a name="Code_Page_Defn"></a> 코드 페이지    
-코드 페이지는 지정한 스크립트의 각 문자와 연결된 숫자 인덱스 또는 코드 포인트 값을 정렬한 문자 집합입니다. Windows 코드 페이지는 일반적으로 ‘문자 집합’ 또는 *charset*이라고 합니다.  코드 페이지는 여러 다른 Windows 시스템 로캘에 사용되는 문자 집합과 자판 배열을 지원하는 데 사용됩니다.     
+코드 페이지는 지정한 스크립트의 각 문자와 연결된 숫자 인덱스 또는 코드 포인트 값을 정렬한 문자 집합입니다. Windows 코드 페이지는 일반적으로 ‘문자 집합’ 또는 *charset*이라고 합니다. 코드 페이지는 여러 다른 Windows 시스템 로캘에 사용되는 문자 집합과 자판 배열을 지원하는 데 사용됩니다.     
  
 ###  <a name="sort-order"></a><a name="Sort_Order_Defn"></a> 정렬 순서    
 정렬 순서는 데이터 값이 정렬되는 방식을 지정합니다. 순서는 데이터 비교 결과에 영향을 줍니다. 데이터는 데이터 정렬을 사용하여 정렬되며 인덱스를 사용하여 데이터 정렬을 최적화할 수 있습니다.    
@@ -512,7 +512,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]에서 UCS-2를 사용하여 인코딩하는 BMP 범위(000000~00FFFF)에 유니코드 데이터를 저장하기 위해 **nchar**, **nvarchar** 등의 데이터 형식을 제공합니다. 
 
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입된 일련의 새 보조 문자(\_SC) 데이터 정렬을 **nchar**, **nvarchar** 및 **sql_variant** 데이터 형식에 사용하여 전체 유니코드 문자 범위(000000~10FFFF)를 나타낼 수 있습니다. 다음은 그 예입니다.  **Latin1_General_100_CI_AS_SC** 또는 일본어 데이터 정렬을 사용하는 경우 **Japanese_Bushu_Kakusu_100_CI_AS_SC**가 여기에 해당합니다. 
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입된 일련의 새 보조 문자(\_SC) 데이터 정렬을 **nchar**, **nvarchar** 및 **sql_variant** 데이터 형식에 사용하여 전체 유니코드 문자 범위(000000~10FFFF)를 나타낼 수 있습니다. 예를 들면 다음과 같습니다. **Latin1_General_100_CI_AS_SC** 또는 일본어 데이터 정렬을 사용하는 경우 **Japanese_Bushu_Kakusu_100_CI_AS_SC**가 여기에 해당합니다. 
  
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 새로운 UTF-8 지원 데이터 정렬([\_UTF8](#utf8))을 사용하는 **char** 및 **varchar** 데이터 형식까지 보조 문자 지원을 확장합니다. 이 데이터 형식도 전체 유니코드 문자 범위를 나타낼 수 있습니다.   
 
@@ -597,14 +597,14 @@ UTF-8은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입된 보�
 |000800~003FFF<br />004000~00FFFF|2,048~16,383<br />16,384~65,535|3|2|
 |010000~03FFFF<sup>2</sup><br /><br />040000~10FFFF<sup>2</sup>|65,536~262,143<sup>2</sup><br /><br />262,144~1,114,111<sup>2</sup>|4|4|
 
-<sup>1</sup> ‘스토리지 크기(바이트)’는 인코딩된 바이트 길이를 가리키며, 데이터 형식의 디스크 스토리지 크기가 아닙니다.  디스크 스토리지 크기에 대한 자세한 내용은 [nchar 및 nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 및 [char 및 varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)를 참조하세요.
+<sup>1</sup> ‘스토리지 크기(바이트)’는 인코딩된 바이트 길이를 가리키며, 데이터 형식의 디스크 스토리지 크기가 아닙니다. 디스크 스토리지 크기에 대한 자세한 내용은 [nchar 및 nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 및 [char 및 varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)를 참조하세요.
 
 <sup>2</sup>[보조 문자](#Supplementary_Characters)의 코드 포인트 범위입니다.
 
 > [!TIP]   
 > [CHAR(*n*) 및 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 또는 [NCHAR(*n*) 및 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)에서 *n*이 문자 수를 정의한다고 잘못 생각하는 경우가 많습니다. CHAR(10) 열의 예제에서 **Latin1_General_100_CI_AI**와 같은 데이터 정렬을 사용하여 0~127 범위의 ASCII 문자 10자를 저장할 수 있기 때문입니다. 이 범위의 각 문자는 1바이트만 사용합니다.
 >    
-> 그러나 [CHAR(*n*) 및 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md)의 *n*은 ‘바이트’(0~8,000) 단위로 문자열 크기를 정의하고, [NCHAR(*n*) 및 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)의 *n*은 ‘바이트 쌍’(0~4,000)으로 문자열 크기를 정의합니다.   *n*은 저장할 수 있는 문자 수를 정의하지 않습니다.
+> 그러나 [CHAR(*n*) 및 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md)의 *n*은 ‘바이트’(0~8,000) 단위로 문자열 크기를 정의하고, [NCHAR(*n*) 및 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)의 *n*은 ‘바이트 쌍’(0~4,000)으로 문자열 크기를 정의합니다.  *n*은 저장할 수 있는 문자 수를 정의하지 않습니다.
 
 방금 확인한 것처럼, 적절한 유니코드 인코딩과 데이터 형식을 선택하면 사용 중인 문자 집합에 따라 스토리지 비용을 훨씬 절감하거나 현재 스토리지 공간을 늘릴 수 있습니다. 예를 들어 **Latin1_General_100_CI_AI_SC_UTF8**과 같은 UTF-8 지원 라틴어 데이터 정렬을 사용하는 경우 `CHAR(10)` 열은 10바이트를 저장하며, 0~127 범위의 ASCII 문자 10자를 포함할 수 있습니다. 그러나 128~2047 범위는 5자, 2048~65535 범위는 3자만 포함할 수 있습니다. 반면, `NCHAR(10)` 열은 10바이트 쌍(20바이트)을 저장하기 때문에 0~65535 범위의 문자 10자를 포함할 수 있습니다.  
 
@@ -656,4 +656,3 @@ UTF-8은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입된 보�
 [전체 텍스트 인덱스 생성 시 언어 선택](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
 [sys.fn_helpcollations(Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
 [싱글바이트 및 멀티바이트 문자 집합](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
- 

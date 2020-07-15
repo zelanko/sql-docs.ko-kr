@@ -1,5 +1,6 @@
 ---
 title: 복제된 데이터베이스 업그레이드 또는 패치 | Microsoft Docs
+description: SQL Server는 다른 노드에서의 활동을 중단하지 않고도 이전 버전의 SQL Server에서 복제된 데이터베이스를 업그레이드하는 기능을 지원합니다.
 ms.custom: ''
 ms.date: 07/24/2016
 ms.prod: sql
@@ -16,16 +17,16 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c2d6d5fc367e66b7a5ca84e2d1c290203f61b8d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72008458"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900225"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>복제된 데이터베이스 업그레이드 또는 패치
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 복제된 데이터베이스를 업그레이드할 수 있도록 지원합니다. 따라서 노드 업그레이드 중에 다른 노드의 작업을 중지할 필요가 없으며 한 토폴로지 내에서 지원되는 버전과 관련된 규칙만 잘 지키면 됩니다.  
   
@@ -36,7 +37,7 @@ ms.locfileid: "72008458"
     - 병합 게시에 대한 구독자는 버전 수명 주기 지원 주기에 따라 지원되는 게시자 버전과 같거나 낮은 모든 버전이 될 수 있습니다.  
  
 SQL Server로의 업그레이드 경로는 배포 패턴에 따라 다릅니다. SQL Server는 일반적으로 다음 두 가지 업그레이드 경로를 제공합니다.
-- 병렬 업그레이드: 병렬 환경을 배포하고, 로그인, 작업 등 연결된 인스턴스 수준 개체와 함께 데이터베이스를 새 환경으로 이동합니다. 
+- 함께 실행: 병렬 환경을 배포하고 로그인, 작업 등 연결된 인스턴스 수준 개체와 함께 데이터베이스를 새 환경으로 이동합니다. 
 - 현재 위치 업그레이드: SQL Server 설치 미디어를 통해 SQL Server 비트를 바꾸고 데이터베이스 개체를 업그레이드하여 기존 SQL Server 설치를 업그레이드하도록 허용합니다. Always On 가용성 그룹 또는 장애 조치 클러스터 인스턴스를 실행하는 환경의 경우 현재 위치 업그레이드는 [롤링 업그레이드](choose-a-database-engine-upgrade-method.md#rolling-upgrade)와 결합되어 가동 중지 시간을 최소화합니다. 
 
 복제 토폴로지를 병렬로 업그레이드하기 위해 채택된 일반적인 방법은 전체 토폴로지의 이동과 달리 일부 게시자-구독자 쌍을 새 병렬 새 환경으로 이동하는 것입니다. 이러한 단계별 방법은 가동 중지 시간을 제어하고 복제를 사용하는 비즈니스에 미치는 영향을 어느 정도 최소화할 수 있습니다.  

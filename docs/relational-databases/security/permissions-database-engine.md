@@ -1,5 +1,6 @@
 ---
 title: 사용 권한(데이터베이스 엔진) | Microsoft 문서
+description: 사용 중인 플랫폼에 적용되는 사용 권한을 확인하려면 이 SQL Server 사용 권한 전체 목록을 참조하세요.
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8488462e75a6f836a1b77c49052a9cfdd0c82d2e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f6155dd29c2d4afd5f422ad3499521451ccfc82
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68995848"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009396"
 ---
 # <a name="permissions-database-engine"></a>사용 권한(데이터베이스 엔진)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 개체에는 보안 주체에 부여될 수 있는 연결된 사용 권한이 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 권한은 로그인 및 서버 역할에 할당된 서버 수준에서 관리되고 데이터베이스 사용자 및 데이터베이스 역할에 할당된 데이터베이스 수준에서 관리됩니다. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 에 대한 모델은 데이터베이스 권한에 대하여 동일한 시스템을 갖지만 서버 수준 권한은 사용할 수 없습니다. 이 항목에는 전체 권한 목록이 포함됩니다. 권한에 대한 일반적인 구현은 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)을(를) 참조하십시오.  
   
@@ -102,8 +103,8 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |사용 권한|적용 대상|  
 |----------------|----------------|  
 |ALTER|TYPE을 제외한 모든 개체 클래스입니다.|  
-|CONTROL|모든 개체 클래스 <br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br /> DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE, USER,<br />VIEW 및<br />XML SCHEMA COLLECTION|  
-|Delete|DATABASE SCOPED CONFIGURATION 및 SERVER를 제외한 전체 개체 클래스입니다.|  
+|CONTROL|모든 개체 클래스 <br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br /> DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br /> USER,<br />VIEW 및<br />XML SCHEMA COLLECTION|  
+|Delete|DATABASE SCOPED CONFIGURATION, SERVER 및 TYPE을 제외한 전체 개체 클래스입니다.|  
 |CREATE 문을 실행하기 전에|CLR 형식, 외부 스크립트, 프로시저([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR), 스칼라와 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR) 및 동의어|  
 |IMPERSONATE|로그인 및 사용자|  
 |INSERT|동의어, 테이블과 열, 뷰 및 열입니다. 데이터베이스, 스키마 또는 개체 수준에서 권한을 부여할 수 있습니다.|  
@@ -417,7 +418,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 
 ## <a name="special-considerations-for-column-level-permissions"></a>열 수준 사용 권한에 대한 특별 고려 사항
 
-*<table_name>(\<column _name>)* 구문을 사용하여 열 수준 사용 권한을 부여합니다. 다음은 그 예입니다.
+*<table_name>(\<column _name>)* 구문을 사용하여 열 수준 사용 권한을 부여합니다. 예를 들면 다음과 같습니다.
 ```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```

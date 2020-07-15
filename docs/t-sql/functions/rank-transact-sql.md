@@ -21,15 +21,15 @@ ms.assetid: 2d96f6d2-5db7-4b3c-a63e-213c58e4af55
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 986f5149824ab645a1ff383284fccb420b516b8d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1aa1ab1466776af502249c43d005af896827de85
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823748"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003759"
 ---
 # <a name="rank-transact-sql"></a>RANK(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 결과 집합의 파티션 내에 있는 각 행의 순위를 반환합니다. 요청한 행의 순위는 해당 행 앞에 있는 행의 순위에 1을 더한 값입니다.  
 
@@ -48,7 +48,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
   
 ## <a name="arguments"></a>인수  
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
- *partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. _order\_by\_clause_는 함수를 적용하기 전에 데이터의 순서를 결정합니다. *order_by_clause*가 필요합니다. OVER 절의 \<rows 또는 range 절/>은 RANK 함수에 지정할 수 없습니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
+ *partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. _order\_by\_clause_는 함수를 적용하기 전에 데이터의 순서를 결정합니다. *order_by_clause*가 필요합니다. OVER 절의 \<rows or range clause/>는 RANK 함수에 지정할 수 없습니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
   
 ## <a name="return-types"></a>반환 형식  
  **bigint**  
@@ -60,7 +60,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
   
  RANK는 비결정적입니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-ranking-rows-within-a-partition"></a>A. 파티션 내의 행 순위 지정  
  다음 예에서는 재고 수량을 기준으로 지정한 인벤토리 위치의 제품에 순위를 부여합니다. 결과 집합은 `LocationID`를 기준으로 분할되고 `Quantity`를 기준으로 논리적으로 정렬됩니다. 제품 494와 495는 수량이 동일합니다. 두 제품은 서로 연결되어 있으므로 동일하게 순위 1이 부여됩니다.  
@@ -131,7 +131,7 @@ BusinessEntityID Rate                  RankBySalary
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-ranking-rows-within-a-partition"></a>3\. 파티션 내의 행 순위 지정  
+### <a name="c-ranking-rows-within-a-partition"></a>C: 파티션 내의 행 순위 지정  
  다음 예는 총 판매액에 따라 각 영업 지역에서 영업 담당자의 순위를 매깁니다. 행 집합은 `SalesTerritoryGroup`별로 분할되며 `SalesAmountQuota`를 기준으로 정렬됩니다.  
   
 ```sql  

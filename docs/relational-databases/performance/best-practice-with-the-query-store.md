@@ -13,16 +13,16 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c07131e3991fd7cceb77e1874b7150184345b546
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f304dea7c49965bbb511034c09fb6ef781f2311f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287577"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006005"
 ---
 # <a name="best-practices-with-query-store"></a>쿼리 저장소에 대한 모범 사례
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 이 문서에서는 워크로드에 SQL Server 쿼리 저장소를 사용하는 모범 사례에 대해 설명합니다.
 
@@ -34,9 +34,9 @@ ms.locfileid: "79287577"
 
 ## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> Azure SQL Database에서 Query Performance Insight 사용
 
-Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 쿼리 저장소를 실행하는 경우 [Query Performance Insight](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance)를 사용하여 시간에 따른 리소스 사용을 분석할 수 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 및 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is)를 사용하여 CPU, 메모리, I/O 등 모든 쿼리의 자세한 리소스 사용 정보를 가져올 수 있으며 Query Performance Insight를 사용하면 이와 같은 쿼리가 데이터베이스의 전반적인 DTU 사용에 미치는 영향을 빠르고 효율적으로 확인할 수 있습니다. 자세한 내용은 [Azure SQL 데이터베이스 Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)를 참조하세요.
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 쿼리 저장소를 실행하는 경우 [Query Performance Insight](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance)를 사용하여 시간에 따른 리소스 사용을 분석할 수 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 및 [Azure Data Studio](../../azure-data-studio/what-is.md)를 사용하여 CPU, 메모리, I/O 등 모든 쿼리의 자세한 리소스 사용 정보를 가져올 수 있으며 Query Performance Insight를 사용하면 이와 같은 쿼리가 데이터베이스의 전반적인 DTU 사용에 미치는 영향을 빠르고 효율적으로 확인할 수 있습니다. 자세한 내용은 [Azure SQL 데이터베이스 Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)를 참조하세요.
 
-이 섹션에서는 쿼리 저장소 및 종속 기능의 안정적인 운영을 보장하도록 설계된 최적의 구성 기본값을 설명합니다. 기본 구성은 지속적인 데이터 수집을 위해 최적화됩니다(예: OFF/READ_ONLY 상태에 소요되는 시간 최소화).
+이 섹션에서는 쿼리 저장소 및 종속 기능의 안정적인 운영을 보장하도록 설계된 최적의 구성 기본값을 설명합니다. 기본 구성은 지속적인 데이터 수집을 위해 최적화됩니다(예: OFF/READ_ONLY 상태에 소요되는 시간 최소화). 사용 가능한 모든 쿼리 저장소 옵션에 대한 자세한 내용은 [ALTER DATABASE SET 옵션(Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store)을 참조하세요.
 
 | 구성 | Description | 기본값 | 주석 |
 | --- | --- | --- | --- |
@@ -49,9 +49,12 @@ Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 쿼리 저장소를 �
 | | | | |
 
 > [!IMPORTANT]
-> 이러한 기본값은 모든 Azure SQL 데이터베이스의 쿼리 저장소 활성화 마지막 단계에서 자동으로 적용됩니다(위의 중요 항목 참조). 이후로, Azure SQL Database는 고객이 설정한 구성 값이 기본 워크로드 또는 쿼리 저장소의 안정적인 운영에 부정적인 영향을 미치지 않는 한 고객이 설정한 구성 값을 변경하지 않습니다.
+> 이러한 기본값은 모든 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 쿼리 저장소 활성화 마지막 단계에서 자동으로 적용됩니다. 사용하도록 설정된 후 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]는 기본 워크로드 또는 쿼리 저장소의 안정적인 운영에 부정적인 영향을 미치지 않는 한 고객이 설정한 구성 값을 변경하지 않습니다.
 
-사용자 지정 설정을 유지하려는 경우에는, [쿼리 저장소 옵션을 사용하여 ALTER DATABASE](https://msdn.microsoft.com/library/bb522682.aspx) 를 사용하여 이전 상태로 구성을 되돌립니다. 최적의 구성 매개 변수를 선택하는 방법을 알아보려면, [쿼리 저장소 모범 사례](https://msdn.microsoft.com/library/mt604821.aspx) 를 확인하세요.
+> [!NOTE]  
+> 쿼리 저장소는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 단일 데이터베이스 및 탄력적 풀에서 사용하지 않도록 설정할 수 없습니다. `ALTER DATABASE [database] SET QUERY_STORE = OFF`를 실행하면 경고 `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`가 반환됩니다. 
+
+사용자 지정 설정을 유지하려는 경우에는, [쿼리 저장소 옵션을 사용하여 ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store) 를 사용하여 이전 상태로 구성을 되돌립니다. 최적의 구성 매개 변수를 선택하는 방법을 알아보려면 [쿼리 저장소 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md)를 확인하세요.
 
 ## <a name="use-query-store-with-elastic-pool-databases"></a>탄력적 풀 데이터베이스에서 쿼리 저장소 사용
 
@@ -145,7 +148,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
 ```
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 
 다음 예제에서는 QUERY_CAPTURE_MODE를 AUTO로 설정하고 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 다른 권장 옵션을 설정합니다.
 
@@ -180,7 +183,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-다음 예제에서는 QUERY_CAPTURE_MODE를 AUTO로 설정하고, [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 다른 권장 옵션을 설정하며, ‘필요에 따라’ 새로운 기본 AUTO 캡처 모드 대신 CUSTOM 캡처 정책을 기본값으로 설정합니다. 
+다음 예제에서는 QUERY_CAPTURE_MODE를 AUTO로 설정하고, [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 다른 권장 옵션을 설정하며, ‘필요에 따라’ 새로운 기본 AUTO 캡처 모드 대신 CUSTOM 캡처 정책을 기본값으로 설정합니다.
 
 ```sql
 ALTER DATABASE [QueryStoreDB]
@@ -345,7 +348,7 @@ GO
 SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
     max_storage_size_mb, readonly_reason, interval_length_minutes,
     stale_query_threshold_days, size_based_cleanup_mode_desc,
-    query_capture_mode_de
+    query_capture_mode_desc
 FROM sys.database_query_store_options;
 ```
 

@@ -1,5 +1,6 @@
 ---
 title: 테이블 크기 예측 | Microsoft 문서
+description: 이 프로시저를 사용하여 SQL Server에서 테이블에 데이터를 저장하는 데 필요한 공간의 크기를 예측할 수 있습니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -26,15 +27,15 @@ ms.assetid: 15c17c92-616f-402e-894b-907a296efe5f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49e63511a23b670575f517640bb0b9f0eb06870a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d2cec3c9f67a07cb36c6ba7f4a11225b5544b252
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909027"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002197"
 ---
 # <a name="estimate-the-size-of-a-table"></a>테이블 크기 예측
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   다음 단계를 통해 테이블에 데이터를 저장하는 데 필요한 공간을 추정할 수 있습니다.  
   
 1.  [힙 크기 예측](../../relational-databases/databases/estimate-the-size-of-a-heap.md) 또는 [클러스터형 인덱스의 크기 예측](../../relational-databases/databases/estimate-the-size-of-a-clustered-index.md)의 설명에 따라 힙 또는 클러스터형 인덱스에 필요한 공간을 계산합니다.  

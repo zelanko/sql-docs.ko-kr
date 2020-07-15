@@ -1,6 +1,6 @@
 ---
 title: 전체 트랜잭션 로그 오류 9002 문제 해결
-ms.custom: seo-lt-2019
+description: SQL Server의 전체 트랜잭션 로그에 가능한 응답과 향후 문제를 방지하는 방법을 알아봅니다.
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,15 +18,16 @@ helpviewer_keywords:
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ad8b68338987256f1c7fa01f1f0d56242cef6a7f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 79e33cb5b5bea6c3eb264052dade0a3906a44efb
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056069"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006548"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>꽉 찬 트랜잭션 로그 문제 해결(SQL Server 오류 9002)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 트랜잭션 로그가 꽉 찼을 때 알맞은 대처 방법에 대해 설명하고 앞으로 이런 상황을 방지하기 위한 방법을 제시합니다. 
   
   트랜잭션 로그가 꽉 차면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 **9002 오류**가 발생합니다. 로그는 데이터베이스가 온라인 상태이거나 복구 중일 때 꽉 찰 수 있습니다. 데이터베이스가 온라인일 때 로그가 채워지면 데이터베이스는 온라인 상태를 유지하지만, 읽기만 가능하고 업데이트할 수 없습니다. 복구 중에 로그가 꽉 차면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 데이터베이스를 RESOURCE PENDING으로 표시합니다. 두 경우 모두 사용자 동작을 통해 사용 가능한 로그 공간을 만들어야 합니다.  
@@ -111,7 +112,7 @@ ms.locfileid: "74056069"
 프로세스를 종료해야 할 때 [KILL](../../t-sql/language-elements/kill-transact-sql.md) 문을 사용해야 하는 경우도 있습니다. 특히 중지하지 않을 중요한 프로세스가 실행 중일 때는 이 문을 신중하게 사용하세요. 자세한 내용은 [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목  
-[KB 지원 아티클 - 트랜잭션 로그가 예기치 않게 커지거나 SQL Server에 가득 참](https://support.microsoft.com/kb/317375) [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [트랜잭션 로그 파일의 크기 관리](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  

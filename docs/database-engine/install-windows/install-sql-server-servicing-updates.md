@@ -1,5 +1,6 @@
 ---
 title: SQL Server 서비스 업데이트 설치 | Microsoft Docs
+description: 이 문서에서는 새로운 설치 도중 또는 SQL Server가 설치된 후에 SQL Server 업데이트 설치에 대한 정보를 제공합니다.
 ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7d88350f00b90156cd1e33a4d816ae649cc6910f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5067ed61243e777cd2d0a4f9fab76830f6207a6e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67990940"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899684"
 ---
 # <a name="install-sql-server-servicing-updates"></a>SQL Server 서비스 업데이트 설치
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 이 문서에서는 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]용 업데이트 설치에 대한 정보를 제공합니다. 이 섹션에서는 다음과 같은 정보를 제공합니다.
   

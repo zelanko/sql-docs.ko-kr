@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 673c0cb67bb93329a8a31eb218a016b4c59becfd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d6382439c22ba36c2b04b3b58526e93a53d3545e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633941"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004724"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   행 수준 보안을 위한 보안 정책을 만듭니다.  
   
@@ -74,7 +74,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  *table_schema_name.table_name*  
  보안 조건자를 적용할 대상 테이블입니다. 사용되지 않도록 설정된 여러 보안 정책이 특정 DML 작업용 단일 테이블을 대상으로 할 수 있지만 지정된 시간에 하나만 사용할 수 있습니다.  
   
- *\<block_dml_operation>* 블록 조건자가 적용될 특정 DML 작업입니다. AFTER는 DML 작업 수행(INSERT 또는 UPDATE) 후 조건자가 행의 값에 따라 평가되도록 지정합니다. BEFORE는 DML 작업 수행(UPDATE 또는 DELETE) 전에 조건자가 행의 값에 따라 평가되도록 지정합니다. 작업이 지정되지 않은 경우 조건자는 모든 작업에 적용됩니다.  
+ *\<block_dml_operation>* 차단 조건자가 적용될 특정 DML 작업입니다. AFTER는 DML 작업 수행(INSERT 또는 UPDATE) 후 조건자가 행의 값에 따라 평가되도록 지정합니다. BEFORE는 DML 작업 수행(UPDATE 또는 DELETE) 전에 조건자가 행의 값에 따라 평가되도록 지정합니다. 작업이 지정되지 않은 경우 조건자는 모든 작업에 적용됩니다.  
   
  [ STATE = { **ON** | OFF } ]  
  대상 테이블에 대해 해당 보안 조건자를 강제 적용하여 보안 정책을 사용하거나 사용하지 않도록 설정합니다. 지정되지 않으면 생성되는 보안 정책이 사용되도록 설정됩니다.  
@@ -104,7 +104,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
   
 -   인수로 사용하는 대상 테이블의 모든 열에 대한 REFERENCES 권한.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예는 **CREATE SECURITY POLICY** 구문의 사용을 보여 줍니다. 완벽한 보안 정책 시나리오의 예를 보려면 [행 수준 보안](../../relational-databases/security/row-level-security.md)을 참조하세요.  
   
 ### <a name="a-creating-a-security-policy"></a>A. 보안 정책 만들기  

@@ -46,15 +46,15 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82fb30a374ea9ac4cdabf0ab5f7b4d8eefb8f4c4
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: e8c9b9fb9b58cee42c11e821e940966f2acce498
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588237"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000711"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   인덱스를 사용하지 않도록 설정, 다시 빌드 또는 다시 구성하거나 인덱스에 대한 옵션을 설정하여 기존 테이블 또는 뷰 인덱스(rowstore, columnstore, 또는 XML)를 수정합니다.  
   
@@ -399,7 +399,7 @@ STATISTICS_INCREMENTAL = { ON | **OFF** }
 -   내부 테이블에 대해 작성된 통계  
 -   공간 인덱스 또는 XML 인덱스를 사용하여 작성된 통계  
   
- ONLINE **=** { ON | **OFF** } \<rebuild_index_option에 적용>  
+ ONLINE **=** { ON | **OFF** } \<as applies to rebuild_index_option>  
  인덱스 작업 중 쿼리 및 데이터 수정에 기본 테이블과 관련 인덱스를 사용할 수 있는지 여부를 지정합니다. 기본값은 OFF입니다.  
   
  XML 인덱스 또는 공간 인덱스의 경우 `ONLINE = OFF`만 지원되며 ONLINE을 ON으로 설정하면 오류가 발생합니다.  
@@ -553,7 +553,7 @@ COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }
 -   여러 개별 파티션의 파티션 번호를 쉼표로 구분하여 지정합니다(예: `ON PARTITIONS (1, 5)`).  
 -   범위와 개별 파티션을 모두 지정합니다(예: `ON PARTITIONS (2, 4, 6 TO 8)`).  
   
- \<range>는 TO라는 단어로 구분된 파티션 번호로 지정할 수 있습니다. 예를 들면 `ON PARTITIONS (6 TO 8)`와 같습니다.  
+ \<range>는 TO라는 단어로 구분된 파티션 번호로 지정할 수 있습니다(예: `ON PARTITIONS (6 TO 8)`).  
   
  여러 파티션에 대해 서로 다른 데이터 압축 유형을 설정하려면 DATA_COMPRESSION 옵션을 두 번 이상 지정합니다. 예를 들면 다음과 같습니다.  
   
@@ -566,7 +566,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );  
 ```  
   
- ONLINE **=** { ON  | **OFF** } \<single_partition_rebuild_index_option에 적용>  
+ ONLINE **=** { ON  | **OFF** } \<as applies to single_partition_rebuild_index_option>  
  기본 테이블의 인덱스 또는 인덱스 파티션을 온라인 또는 오프라인으로 다시 작성할 수 있는지 여부를 지정합니다. **REBUILD**가 온라인(**ON**)으로 수행될 경우, 인덱스 작업 중에 이 테이블의 데이터를 쿼리 및 데이터 수정을 위해 사용할 수 있습니다.  기본값은 **OFF**입니다.  
   
  켜기  
@@ -751,8 +751,8 @@ WAIT_AT_LOW_PRIORITY는 **RESUMABLE=ON** 및 **ONLINE = ON** 상태에서만 사
 다음은 분할된 인덱스에 적용되는 제한 사항입니다.  
   
 -   ALTER INDEX ALL ...을 사용할 때 테이블에 정렬되지 않은 인덱스가 있으면 단일 파티션의 압축 설정을 변경할 수 없습니다.  
--   The ALTER INDEX \<index> ... REBUILD PARTITION ... 구문은 인덱스의 지정된 파티션을 다시 빌드합니다.  
--   The ALTER INDEX \<index> ... REBUILD WITH ... 구문은 인덱스의 모든 파티션을 다시 빌드합니다.  
+-   ALTER INDEX \<index> ... REBUILD PARTITION ... 구문은 인덱스의 지정된 파티션을 다시 빌드합니다.  
+-   ALTER INDEX \<index> ... REBUILD WITH ... 구문은 인덱스의 모든 파티션을 다시 빌드합니다.  
   
 ## <a name="statistics"></a>통계  
  테이블에서 **ALTER INDEX ALL ...** 을 실행하면 인덱스와 연결된 통계만 업데이트됩니다. 인덱스 대신 테이블에 대해 만들어진 자동 또는 수동 통계는 업데이트되지 않습니다.  

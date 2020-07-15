@@ -1,7 +1,8 @@
 ---
 title: Data Quality Services 업그레이드 | Microsoft Docs
+description: 이 문서에서는 기존 SQL Server DQS(Data Quality Services) 설치를 업그레이드하는 방법을 설명합니다.
 ms.custom: ''
-ms.date: 07/24/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,16 +11,16 @@ ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fab545b34f257563466ec2f64911cdfaceca9456
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2ebd08b11c99f8b5de54be9fc882c1fd2751afab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934852"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900251"
 ---
 # <a name="upgrade-data-quality-services"></a>Data Quality Services 업그레이드
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 이 문서에서는 기존 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] DQS(Data Quality Services) 설치를 업그레이드하는 방법에 대해 설명합니다. [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality 서버를 업그레이드할 때 DQS 데이터베이스 스키마도 업그레이드해야 합니다.  
   
@@ -58,18 +59,18 @@ ms.locfileid: "67934852"
   
     2.  명령 프롬프트에서 디렉터리를 DQSInstaller.exe가 있는 위치로 변경합니다. 기본 SQL Server 인스턴스의 경우 DQSInstaller.exe 파일은 C:\Program Files\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn에서 사용할 수 있습니다.  
 
-      >[!NOTE]
-      >폴더 경로에서 [nn]을 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 버전 번호로 바꿉니다.
-      >- SQL Server 2016의 경우: 13
-      >- SQL Server 2017의 경우: 14
-
-        ```  
+        >[!NOTE]
+        >폴더 경로에서 [nn]을 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 버전 번호로 바꿉니다.
+        >- SQL Server 2016의 경우: 13
+        >- SQL Server 2017의 경우: 14
+    
+        ```console
         cd C:\Program Files\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn  
         ```  
   
     3.  명령 프롬프트에 다음 명령을 입력하고 Enter 키를 누릅니다.  
   
-        ```  
+        ```console
         dqsinstaller.exe -upgrade  
         ```  
   
@@ -84,7 +85,7 @@ ms.locfileid: "67934852"
   
 2.  다음 쿼리를 실행합니다.  
   
-    ```  
+    ```sql
     SELECT * FROM DQS_MAIN.dbo.A_DB_VERSION WHERE STATUS=2;  
     SELECT * FROM DQS_PROJECTS.dbo.A_DB_VERSION WHERE STATUS=2;  
     ```  

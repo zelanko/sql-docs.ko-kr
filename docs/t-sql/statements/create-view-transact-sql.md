@@ -37,15 +37,15 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f29027f7b9ab16b1cb9de5c92f5aaf7dccf9765
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: de62120fd28e67c4323a88f73bc5bac939aedc64
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634849"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002490"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   쿼리에 의해 내용(열과 행)이 정의되는 가상 테이블을 만듭니다. 이 문을 사용하여 데이터베이스에서 하나 이상의 테이블에 있는 데이터의 뷰를 만들 수 있습니다. 예를 들어 뷰는 다음과 같은 용도로 사용할 수 있습니다.  
   
@@ -349,7 +349,7 @@ FROM Tn;
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에는 CREATE VIEW 권한이 필요하고 뷰를 만들 구성표에는 ALTER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 
 이 예에서는 AdventureWorks 2012 또는 AdventureWorksDW 데이터베이스를 사용합니다.  
 

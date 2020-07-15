@@ -22,15 +22,15 @@ ms.assetid: a8430421-7bce-4fab-a2d2-56c00a3c6fa4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77c80984ec2224e59a01184220c93cbc2eda8721
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b27eaa16660058c37cac34173787c7ad51341c87
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632864"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011343"
 ---
 # <a name="where-transact-sql"></a>WHERE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   쿼리가 반환하는 행에 대한 검색 조건을 지정합니다.  
   
@@ -43,9 +43,9 @@ ms.locfileid: "81632864"
 ```  
   
 ## <a name="arguments"></a>인수  
-\< *search_condition* > 행이 반환되기 위해 충족해야 하는 조건을 정의합니다. 검색 조건에 포함시킬 수 있는 조건자의 개수에는 제한이 없습니다. 검색 조건 및 조건자에 대한 자세한 내용은 [검색 조건&#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)을 참조하세요.  
+\< *search_condition* > 반환될 행이 충족해야 할 조건을 정의합니다. 검색 조건에 포함시킬 수 있는 조건자의 개수에는 제한이 없습니다. 검색 조건 및 조건자에 대한 자세한 내용은 [검색 조건&#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `WHERE` 절에서 일부 일반 검색 조건을 사용하는 방법을 보여 줍니다.  
   
 ### <a name="a-finding-a-row-by-using-a-simple-equality"></a>A. 간단 비교를 사용하여 행 찾기  

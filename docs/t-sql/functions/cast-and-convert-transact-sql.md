@@ -32,18 +32,18 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c11afeedcc46f53b57b90e7e5b117c13af188da1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1ce067a0ade3a84aed090532a92064db00a8bc9d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823338"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002234"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 및 CONVERT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 이러한 함수는 한 데이터 형식의 식을 다른 데이터 형식의 식으로 변환합니다.  
 
@@ -129,7 +129,7 @@ CONVERT 함수가 *식*을 변환하는 방법을 지정하는 정수 식입니�
 시간이 포함된 스타일을 사용하여 문자 데이터에서 **datetimeoffset**으로 변환할 때는 결과에 표준 시간대 오프셋이 추가됩니다.
   
 ## <a name="float-and-real-styles"></a>float 및 real 스타일
-**float** 또는 **real** ‘식’인 경우 ‘스타일’은 다음 테이블에 있는 값 중 하나일 수 있습니다.   다른 값은 0으로 처리됩니다.
+**float** 또는 **real** ‘식’인 경우 ‘스타일’은 다음 테이블에 있는 값 중 하나일 수 있습니다.  다른 값은 0으로 처리됩니다.
   
 |값|출력|  
 |---|---|
@@ -140,7 +140,7 @@ CONVERT 함수가 *식*을 변환하는 방법을 지정하는 정수 식입니�
 |**126, 128, 129**|이전 버전과의 호환성을 위해 제공되며 이후 릴리스에서는 이 값을 더 이상 사용하지 않을 수 있습니다.|  
   
 ## <a name="money-and-smallmoney-styles"></a>money 및 smallmoney 스타일
-**money** 또는 **smallmoney** ‘식’인 경우 ‘스타일’은 다음 테이블에 있는 값 중 하나일 수 있습니다.   다른 값은 0으로 처리됩니다.
+**money** 또는 **smallmoney** ‘식’인 경우 ‘스타일’은 다음 테이블에 있는 값 중 하나일 수 있습니다.  다른 값은 0으로 처리됩니다.
   
 |값|출력|  
 |---|---|
@@ -150,7 +150,7 @@ CONVERT 함수가 *식*을 변환하는 방법을 지정하는 정수 식입니�
 |**126**|char(n) 또는 varchar(n)으로 변환하는 경우 스타일 2와 같습니다.|  
   
 ## <a name="xml-styles"></a>xml 스타일
-**xml**’식’인 경우 ‘스타일’은 다음 테이블에 있는 값 중 하나일 수 있습니다.   다른 값은 0으로 처리됩니다.
+**xml**’식’인 경우 ‘스타일’은 다음 테이블에 있는 값 중 하나일 수 있습니다.  다른 값은 0으로 처리됩니다.
   
 |값|출력|  
 |---|---|
@@ -160,12 +160,12 @@ CONVERT 함수가 *식*을 변환하는 방법을 지정하는 정수 식입니�
 |**3**|불필요한 공백을 유지하고 제한된 내부 DTD 하위 집합 처리를 설정합니다.|  
   
 ## <a name="binary-styles"></a>이진 스타일
-**binary(n)** , **char(n)** , **varbinary(n)** 또는 **varchar(n)** ‘식’인 경우 ‘스타일’은 다음 테이블에 있는 값 중 하나일 수 있습니다.   여기에 없는 스타일 값은 오류를 반환합니다.
+**binary(n)** , **char(n)** , **varbinary(n)** 또는 **varchar(n)** ‘식’인 경우 ‘스타일’은 다음 테이블에 있는 값 중 하나일 수 있습니다.  여기에 없는 스타일 값은 오류를 반환합니다.
   
 |값|출력|  
 |---|---|
 |**0** (기본값)|ASCII 문자를 이진 바이트로 또는 이진 바이트를 ASCII 문자로 변환합니다. 각 문자 또는 바이트는 1:1로 변환됩니다.<br /><br /> 이진 *data_type*인 경우 결과의 왼쪽에 문자 0x가 추가됩니다.|  
-|**1**, **2**|이진 *data_type*인 경우 식이 문자 식이어야 합니다. *expression*은 **짝수** 개의 16진수(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f)여야 합니다. ‘스타일’이 1로 설정된 경우 식의 처음 두 자가 반드시 0x여야 합니다.  식에 홀수 개의 문자나 유효하지 않은 문자가 포함되어 있으면 오류가 발생합니다.<br /><br /> 변환된 식의 길이가 *data_type*의 길이보다 길면 결과의 오른쪽이 잘립니다.<br /><br /> 고정 길이 *data_types*가 변환된 결과보다 길면 결과의 오른쪽에 0이 추가됩니다.<br /><br /> 형식 문자 *data_type*에서는 이진 식을 사용해야 합니다. 각 이진 문자는 두 개의 16진수 문자로 변환됩니다. 변환된 식의 길이가 *data_type*의 길이보다 길면 오른쪽이 잘립니다.<br /><br /> 고정 크기 문자 유형 *data_type*이고 변환된 결과의 길이가 *data_type*의 길이보다 짧으면 짝수 개의 16진수가 유지되도록 변환된 식의 오른쪽에 공백이 추가됩니다.<br /><br /> *style* 1의 경우 변환된 결과의 왼쪽에 문자 0x가 추가됩니다.|  
+|**1**, **2**|이진 *data_type*인 경우 식이 문자 식이어야 합니다. *expression*은 **짝수** 개의 16진수(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f)여야 합니다. ‘스타일’이 1로 설정된 경우 식의 처음 두 자가 반드시 0x여야 합니다. 식에 홀수 개의 문자나 유효하지 않은 문자가 포함되어 있으면 오류가 발생합니다.<br /><br /> 변환된 식의 길이가 *data_type*의 길이보다 길면 결과의 오른쪽이 잘립니다.<br /><br /> 고정 길이 *data_types*가 변환된 결과보다 길면 결과의 오른쪽에 0이 추가됩니다.<br /><br /> 형식 문자 *data_type*에서는 이진 식을 사용해야 합니다. 각 이진 문자는 두 개의 16진수 문자로 변환됩니다. 변환된 식의 길이가 *data_type*의 길이보다 길면 오른쪽이 잘립니다.<br /><br /> 고정 크기 문자 유형 *data_type*이고 변환된 결과의 길이가 *data_type*의 길이보다 짧으면 짝수 개의 16진수가 유지되도록 변환된 식의 오른쪽에 공백이 추가됩니다.<br /><br /> *style* 2의 경우 변환된 결과의 왼쪽에 문자 0x가 추가됩니다.|  
   
 ## <a name="implicit-conversions"></a>암시적 변환
 암시적 변환에서는 CAST 함수나 CONVERT 함수 지정이 필요하지 않습니다. 명시적 변환에서는 CAST 함수나 CONVERT 함수를 지정해야 합니다. 다음 그림에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 제공 데이터 형식에 허용된 모든 명시적 및 암시적 데이터 형식 변환을 보여 줍니다. 여기에는 **bigint**, **sql_variant** 및 **xml**이 포함됩니다. 할당 시 **sql_variant** 데이터 형식에서 암시적으로 변환되지는 않지만 **sql_variant**로는 암시적으로 변환됩니다.
@@ -208,7 +208,7 @@ CONVERT 함수가 *식*을 변환하는 방법을 지정하는 정수 식입니�
 ## <a name="output-collation"></a>출력 데이터 정렬  
 CAST 또는 CONVERT 함수가 문자열을 출력하고 문자열 입력을 받으면 출력과 입력은 동일한 데이터 정렬 및 데이터 정렬 레이블을 가집니다. 입력이 문자열이 아닌 경우에는 출력에서 데이터베이스의 기본 데이터 정렬을 사용하며 강제할 수 있는 기본값의 데이터 정렬 레이블을 사용합니다. 자세한 내용은 [데이터 정렬 선행 규칙&#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)을 참조하세요.
   
-출력에 다른 데이터 정렬을 할당하려면 CAST 또는 CONVERT 함수의 결과 식에 COLLATE 절을 적용합니다. 다음은 그 예입니다.
+출력에 다른 데이터 정렬을 할당하려면 CAST 또는 CONVERT 함수의 결과 식에 COLLATE 절을 적용합니다. 예를 들면 다음과 같습니다.
   
 `SELECT CAST('abc' AS varchar(5)) COLLATE French_CS_AS`
   
@@ -302,13 +302,15 @@ SELECT  CAST(10.6496 AS int) as trunc1,
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 숫자가 아닌 **char**, **nchar**, **nvarchar** 또는 **varchar** 데이터를 **decimal**, **float**, **int**, **numeric**으로 변환할 경우 오류 메시지가 반환됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 빈 문자열(" ")을 **numeric** 또는 **decimal**로 변환해도 오류가 반환됩니다.
   
 ## <a name="certain-datetime-conversions-are-nondeterministic"></a>일부 datetime 변환은 비결정적임
-다음 표에서는 문자열에서 datetime으로의 변환이 비결정적인 스타일을 나열합니다.
+
+문자열에서 datetime으로의 변환이 비결정적인 스타일은 다음과 같습니다.
   
-|||  
-|-|-|  
-|100<sup>1</sup> 아래의 모든 스타일|106|  
-|107|109|  
-|113|130|  
+- 100<sup>1</sup> 아래의 모든 스타일
+- 106  
+- 107
+- 109
+- 113
+- 130  
   
 <sup>1</sup> 스타일 20 및 21 제외
 

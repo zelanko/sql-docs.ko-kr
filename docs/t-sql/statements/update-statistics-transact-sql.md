@@ -21,15 +21,15 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b33e22b3d6575e7f83572eeca5692d538b58a16b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5197708ff1e12aae5b2df32bc82b08cd48f1222c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77253328"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009624"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 테이블 또는 인덱싱된 뷰에 대한 쿼리 최적화 통계를 업데이트합니다. 기본적으로 쿼리 최적화 프로그램은 이미 필요할 때 통계를 업데이트하여 쿼리 계획을 향상시킵니다. 하지만 경우에 따라 사용자가 `UPDATE STATISTICS` 또는 [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) 저장 프로시저를 사용하여 기본 업데이트 주기보다 더 자주 통계를 업데이트하여 쿼리 성능을 향상시킬 수 있습니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "77253328"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 UPDATE STATISTICS table_or_indexed_view_name   
@@ -71,7 +71,7 @@ UPDATE STATISTICS table_or_indexed_view_name
     [ PAGECOUNT = numeric_contant ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 UPDATE STATISTICS [ schema_name . ] table_name   
@@ -133,7 +133,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
  
  **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4부터) 이상([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1부터)  
  
- ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] ON PARTITIONS 절에 지정된 파티션에 적용되는 리프 수준 통계를 강제로 다시 계산한 다음, 병합하여 글로벌 통계를 작성합니다. 서로 다른 샘플링 주기로 작성된 파티션 통계는 병합할 수 없으므로 WITH RESAMPLE이 필요합니다.  
+ ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] ON PARTITIONS 절에 지정된 파티션에 적용되는 리프 수준 통계를 강제로 다시 계산한 후 병합하여 전역 통계를 작성합니다. 서로 다른 샘플링 주기로 작성된 파티션 통계는 병합할 수 없으므로 WITH RESAMPLE이 필요합니다.  
   
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상
   
@@ -166,7 +166,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상
 
 MAXDOP = *max_degree_of_parallelism*  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작)  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작).  
   
  통계 작업 기간 동안 **최대 병렬 처리 수준** 구성 옵션을 재정의합니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
@@ -211,7 +211,7 @@ EXEC sp_updatestats;
 ### <a name="pdw--sql-data-warehouse"></a>PDW / SQL Data Warehouse  
  다음 구문은 PDW / SQL Data Warehouse에서 지원되지 않음  
   
-```sql  
+```syntaxsql
 update statistics t1 (a,b);   
 ```  
   
@@ -234,7 +234,7 @@ update statistics t1 (a) with stats_stream = 0x01;
 ## <a name="permissions"></a>사용 권한  
  테이블 또는 보기에 대한 `ALTER` 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-update-all-statistics-on-a-table"></a>A. 테이블에 대한 모든 통계 업데이트  
  다음 예제에서는 `SalesOrderDetail` 테이블에서 모든 인덱스에 대한 통계를 업데이트합니다.  

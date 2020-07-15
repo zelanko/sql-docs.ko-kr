@@ -1,5 +1,6 @@
 ---
 title: SQL Server 인증서 및 비대칭 키 | Microsoft 문서
+description: 외부에서 생성하거나 SQL Server에서 생성한 인증서, 도구 및 관련 작업을 포함한 SQL Server의 인증서 및 비대칭 키에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,17 +14,17 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b330e97aa006b223120d13433bf2c317205b96c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f631e55edaacc56c5c8bae3aec3e374824857db4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153122"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001022"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 인증서 및 비대칭 키
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
- 퍼블릭 키 암호화는 사용자가 ‘퍼블릭’ 키 및 ‘프라이빗’ 키를 만드는 메시지 비밀화의 형식입니다.   프라이빗 키는 비밀을 유지하지만 퍼블릭 키는 다른 사람에게 배포할 수 있습니다. 키가 수학적으로 서로 연관되어 있더라도 퍼블릭 키로 프라이빗 키를 쉽게 이끌어 낼 수 없습니다. 퍼블릭 키는 해당 프라이빗 키로만 암호를 해독할 수 있는 데이터를 암호화하는 데 사용할 수 있습니다. 이 키는 프라이빗 키의 소유자에게 보내는 메시지를 암호화하는 데 사용할 수 있습니다. 마찬가지로 프라이빗 키의 소유자는 퍼블릭 키로만 암호를 해독할 수 있는 데이터를 암호화할 수 있습니다. 이러한 사용 방식은 인증서에 포함된 정보를 프라이빗 키 소유자가 암호화하여 콘텐츠 작성자임을 보장하는 디지털 인증서의 기반이 됩니다. 암호화 및 암호 해독 키는 서로 다르기 때문에 ‘비대칭’ 키라고 합니다. 
+ 퍼블릭 키 암호화는 사용자가 ‘퍼블릭’ 키 및 ‘프라이빗’ 키를 만드는 메시지 비밀화의 형식입니다.  프라이빗 키는 비밀을 유지하지만 퍼블릭 키는 다른 사람에게 배포할 수 있습니다. 키가 수학적으로 서로 연관되어 있더라도 퍼블릭 키로 프라이빗 키를 쉽게 이끌어 낼 수 없습니다. 퍼블릭 키는 해당 프라이빗 키로만 암호를 해독할 수 있는 데이터를 암호화하는 데 사용할 수 있습니다. 이 키는 프라이빗 키의 소유자에게 보내는 메시지를 암호화하는 데 사용할 수 있습니다. 마찬가지로 프라이빗 키의 소유자는 퍼블릭 키로만 암호를 해독할 수 있는 데이터를 암호화할 수 있습니다. 이러한 사용 방식은 인증서에 포함된 정보를 프라이빗 키 소유자가 암호화하여 콘텐츠 작성자임을 보장하는 디지털 인증서의 기반이 됩니다. 암호화 및 암호 해독 키는 서로 다르기 때문에 ‘비대칭’ 키라고 합니다.
   
  인증서 및 비대칭 키의 두 가지 방법 모두 비대칭 암호화를 사용합니다. 인증서는 만료 날짜 및 발급자와 같은 자세한 정보를 포함할 수 있으므로 비대칭 키의 컨테이너로 종종 사용됩니다. 암호화 알고리즘에 있어서 두 가지 메커니즘 사이에 차이점이 없고 지정된 동일한 키 길이에 지정된 강도의 차이가 없습니다. 일반적으로 인증서를 사용하여 데이터베이스에서 다른 유형의 암호화 키를 암호화하거나 코드 모듈을 서명합니다.  
   

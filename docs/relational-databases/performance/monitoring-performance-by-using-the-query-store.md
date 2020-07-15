@@ -14,16 +14,16 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 8142cb9868a1daa8f7c73c6b30da1b29c12bf3bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 010d18fff933ee1bd362d1ebd59ef86905d493ed
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816486"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006218"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>쿼리 저장소를 사용하여 성능 모니터링
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 저장소 기능을 통해 사용자는 쿼리 계획 선택 및 성능에 대한 정보를 얻을 수 있습니다. 쿼리 계획 변경으로 인해 발생하는 성능 차이를 신속하게 찾을 수 있도록 하여 성능 문제 해결을 간소화합니다. 쿼리 저장소는 쿼리, 계획 및 런타임 통계의 기록을 자동으로 캡처하고 사용자 검토를 위해 보관합니다. 데이터를 기간별로 구분하여 데이터베이스 사용 패턴을 파악하고 서버에서 쿼리 계획 변경이 발생한 시기를 이해할 수 있게 해줍니다. 쿼리 저장소는 [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) 옵션을 사용하여 구성할 수 있습니다.
 
@@ -49,7 +49,7 @@ Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 쿼리 저장소 작업�
 
 ### <a name="use-transact-sql-statements"></a>Transact-SQL 문 사용
 
-**ALTER DATABASE** 문을 사용하여 지정된 데이터베이스에 대해 쿼리 저장소를 사용하도록 설정할 수 있습니다. 다음은 그 예입니다.
+**ALTER DATABASE** 문을 사용하여 지정된 데이터베이스에 대해 쿼리 저장소를 사용하도록 설정할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```sql
 SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE);
@@ -153,29 +153,11 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 ## <a name="configuration-options"></a><a name="Options"></a> 구성 옵션
 
-다음 옵션을 사용하여 쿼리 저장소 매개 변수를 구성할 수 있습니다.
-
-*OPERATION_MODE* **READ_WRITE**(기본값) 또는 READ_ONLY일 수 있습니다.
-
-*CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)* `STALE_QUERY_THRESHOLD_DAYS` 인수를 구성하여 쿼리 저장소에 데이터를 보존할 일수를 지정합니다. 기본값은 30입니다. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 버전의 경우 기본값은 **7**일입니다.
-
-*DATA_FLUSH_INTERVAL_SECONDS* 쿼리 저장소에 기록된 데이터가 디스크에 저장되는 빈도를 결정합니다. 성능 최적화를 위해 쿼리 저장소에서 수집한 데이터는 디스크에 비동기적으로 기록됩니다. 이 비동기 전송이 발생되는 빈도가 `DATA_FLUSH_INTERVAL_SECONDS`를 통해 구성됩니다. 기본값은 **900**(15분)입니다.
-
-*MAX_STORAGE_SIZE_MB* 쿼리 저장소의 최대 크기를 구성합니다. 쿼리 저장소의 데이터가 `MAX_STORAGE_SIZE_MB` 제한에 도달하는 경우 쿼리 저장소에서는 자동으로 상태를 읽기/쓰기에서 읽기 전용으로 변경하고 새 데이터 수집을 중지합니다. 기본값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 **100MB**입니다([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]까지). [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 기본값은 **1GB**입니다. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition의 경우 기본값은 **1GB**이고, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition의 경우 기본값은 **10MB**입니다.
-
-*INTERVAL_LENGTH_MINUTES* 런타임 실행 통계 데이터가 쿼리 저장소로 집계되는 시간 간격을 결정합니다. 공간 사용을 최적화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 기간 동안 집계됩니다. 이 고정된 기간은 `INTERVAL_LENGTH_MINUTES`를 통해 구성됩니다. 기본값은 **60**입니다.
-
-*SIZE_BASED_CLEANUP_MODE* 총 데이터의 양이 최대 크기에 가까워지면 정리 프로세스를 자동으로 활성화할지 여부를 제어합니다. **AUTO**(기본값) 또는 OFF일 수 있습니다.
-
-*QUERY_CAPTURE_MODE* 쿼리 저장소가 모든 쿼리 또는 실행 횟수와 리소스 사용에 따른 관련 쿼리를 캡처하는지, 아니면 새 쿼리 추가를 중지하고 현재 쿼리를 추적만 하는지를 지정합니다. **ALL**(모든 쿼리 캡처), AUTO(자주 발생하지 않은 쿼리 및 컴파일/실행 기간이 의미 없는 쿼리 무시), CUSTOM(사용자 정의된 캡처 정책) 또는 NONE(새 쿼리 캡처 중지)일 수 있습니다. 기본값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 **ALL**입니다([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]까지). [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 기본값은 **AUTO**입니다. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 기본값은 **AUTO**입니다.
-
-*MAX_PLANS_PER_QUERY* 각 쿼리에 대해 유지 관리되는 최대 계획 수를 나타내는 정수입니다. 기본값은 **200**입니다.
-
-*WAIT_STATS_CAPTURE_MODE* 쿼리 저장소에서 대기 통계 정보를 캡처할지 여부를 제어합니다. OFF 또는 **ON**(기본값)일 수 있습니다.
+쿼리 저장소 매개 변수를 구성하는 데 사용할 수 있는 옵션은 [ALTER DATABASE SET 옵션(Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store)을 참조하세요.
 
 **sys.database_query_store_options** 뷰를 쿼리하여 쿼리 저장소의 현재 옵션을 확인할 수 있습니다. 값에 대한 자세한 내용은 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)를 참조하세요.
 
-[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 옵션을 설정하는 방법에 대한 자세한 내용은 [옵션 관리](#OptionMgmt)를 참조하세요.
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 구성 옵션을 설정하는 방법에 대한 예제는 [옵션 관리](#OptionMgmt)를 참조하세요.
 
 ## <a name="related-views-functions-and-procedures"></a><a name="Related"></a> 관련된 뷰, 함수 및 프로시저
 

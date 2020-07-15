@@ -1,5 +1,6 @@
 ---
 title: 자격 증명(데이터베이스 엔진) | Microsoft 문서
+description: SQL Server의 자격 증명에 대해 알아봅니다. SQL Server 외부의 리소스에 연결하는 데 필요한 인증 정보를 알아봅니다.
 ms.custom: ''
 ms.date: 06/27/2019
 ms.prod: sql
@@ -22,16 +23,16 @@ ms.assetid: c8df6022-e0b4-46b8-9670-3f86938d3177
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a73728345ba30fefe755bbab53c185804080dc3d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8f6be70be8c7f2d03c55c5df53fd9f27a32b35fa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68094918"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005666"
 ---
 # <a name="credentials-database-engine"></a>자격 증명(데이터베이스 엔진)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   자격 증명은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]외부의 리소스에 연결하는 데 필요한 인증 정보(자격 증명)가 포함된 레코드입니다. 이 정보는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 내부적으로 사용됩니다. 대부분의 자격 증명에는 Windows 사용자 이름 및 암호가 들어 있습니다.  
   

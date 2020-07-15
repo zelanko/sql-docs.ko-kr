@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 28954a81cac3a5adacd037dbccb2e7584e060e79
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b96c091413e5ded9f3cff862f2c5650ce38fe5d1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251281"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902369"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>엔드포인트 URL 지정 - 가용성 복제본 추가 또는 수정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   가용성 그룹에 대한 가용성 복제본을 호스팅하려면 서버 인스턴스에서 데이터베이스 미러링 엔드포인트를 처리해야 합니다. 서버 인스턴스는 이 엔드포인트를 사용하여 다른 서버 인스턴스에서 호스팅하는 가용성 복제본의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 메시지를 수신합니다. 가용성 그룹에 대한 가용성 복제본을 정의하려면 복제본을 호스팅하는 서버 인스턴스의 엔드포인트 URL을 지정해야 합니다. *엔드포인트 URL*은 데이터베이스 미러링 엔드포인트의 전송 프로토콜인 TCP, 서버 인스턴스의 시스템 주소, 엔드포인트와 연결된 포트 번호를 구분합니다.  
   
 > [!NOTE]  
@@ -53,7 +53,7 @@ ms.locfileid: "75251281"
   
          도메인 세그먼트의 내용과 개수는 회사 또는 조직 내에서 결정됩니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [정규화된 도메인 이름 찾기](#Finding_FQDN)를 참조하세요.  
   
--   *\<포트&gt;* 는 파트너 서버 인스턴스의 미러링 엔드포인트에서 사용하는 포트 번호입니다.  
+-   *\<port>* 는 파트너 서버 인스턴스의 미러링 엔드포인트에 사용되는 포트 번호입니다.  
   
      데이터베이스 미러링 엔드포인트는 컴퓨터 시스템에서 사용 가능한 모든 포트를 사용할 수 있습니다. 각 포트 번호는 하나의 엔드포인트에만 연결되어야 하고 각 엔드포인트는 단일 서버 인스턴스와 연결되므로 같은 서버의 서로 다른 서버 인스턴스는 서로 다른 포트의 각 엔드포인트에서 수신합니다. 따라서 가용성 복제본을 지정할 때 엔드포인트 URL에서 지정하는 포트는 항상 들어오는 메시지를 엔드포인트가 해당 포트와 연결된 서버 인스턴스로 지정합니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "75251281"
   
      **type_desc** 값이 "DATABASE_MIRRORING"인 행을 찾아 해당 포트 번호를 사용합니다.  
   
-### <a name="examples"></a>예  
+### <a name="examples"></a>예제  
   
 #### <a name="a-using-a-system-name"></a>A. 시스템 이름 사용  
  다음 엔드포인트 URL은 시스템 이름 `SYSTEM46` 및 포트 `7022`를 지정합니다.  

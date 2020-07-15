@@ -137,15 +137,15 @@ ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ff043c2b88fd18666dad1bac3e2430e67ad2bce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a3fd29114074ea0e83e04b7c434264d1666efb59
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76037039"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091560"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>실행 계획 논리 및 물리 연산자 참조
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
   연산자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 쿼리 또는 DML(데이터 조작 언어) 문이 실행되는 방식을 설명합니다. 쿼리 최적화 프로그램은 연산자를 사용하여 쿼리 계획을 작성함으로써 쿼리에 지정된 결과를 만들거나 DML 문에 지정된 작업을 수행합니다. 쿼리 계획은 물리 연산자로 구성된 트리입니다. SET SHOWPLAN 문, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 그래픽 실행 계획 옵션 또는 SQL Server Profiler의 Showplan 이벤트 클래스를 사용하여 쿼리 계획을 볼 수 있습니다.  
   
  연산자는 논리 연산자와 물리 연산자로 분류됩니다.  
@@ -160,13 +160,13 @@ ms.locfileid: "76037039"
   
 -   **Init()** : **Init()** 메서드는 물리 연산자가 초기화하고 필요한 데이터 구조를 설정하도록 합니다. 일반적으로 물리 연산자는 하나의 **Init()** 호출을 받지만 여러 개의 호출을 받을 수도 있습니다.  
   
--   **GetNext()** : **GetNext()** 메서드는 물리 연산자가 첫 번째 또는 다음 데이터 행을 가져오도록 합니다. 물리 연산자는 **GetNext()** 호출을 받지 않을 수도 있고 여러 개의 호출을 받을 수도 있습니다.  
+-   **GetNext()** : **GetNext()** 메서드는 물리 연산자가 처음 또는 다음 데이터 행을 가져오도록 합니다. 물리 연산자는 **GetNext()** 호출을 받지 않을 수도 있고 여러 개의 호출을 받을 수도 있습니다.  
   
--   **Close()** : **Close()** 메서드는 물리 연산자가 정리 작업을 수행하고 자동으로 종료하도록 합니다. 물리 연산자는 하나의 **Close()** 호출만 받습니다.  
+-   **Close()** : **Close()** 메서드는 물리 연산자가 정리 작업을 수행하고 종료하도록 합니다. 물리 연산자는 하나의 **Close()** 호출만 받습니다.  
   
-**GetNext()** 메서드는 하나의 데이터 행을 반환하며 호출 횟수는 SET STATISTICS PROFILE ON 또는 SET STATISTICS XML ON을 사용하여 생성된 실행 계획 출력에 **ActualRows**로 나타납니다. 이러한 SET 옵션에 대한 자세한 내용은 [SET STATISTICS PROFILE&#40;Transact-SQL&#41;](../t-sql/statements/set-statistics-profile-transact-sql.md) 및 [SET STATISTICS XML&#40;Transact-SQL&#41;](../t-sql/statements/set-statistics-xml-transact-sql.md)을 참조하세요.  
+**GetNext()** 메서드는 하나의 데이터 행을 반환하며 호출 횟수는 `SET STATISTICS PROFILE ON` 또는 `SET STATISTICS XML ON`을 사용하여 생성된 실행 계획 출력에 **ActualRows**로 나타납니다. 이러한 SET 옵션에 대한 자세한 내용은 [SET STATISTICS PROFILE&#40;Transact-SQL&#41;](../t-sql/statements/set-statistics-profile-transact-sql.md) 및 [SET STATISTICS XML&#40;Transact-SQL&#41;](../t-sql/statements/set-statistics-xml-transact-sql.md)을 참조하세요.  
   
-실행 계획 출력에 나타나는 **ActualRebinds** 및 **ActualRewinds** 개수는 **Init()** 메서드가 호출된 횟수를 나타냅니다. 연산자가 루프 조인의 내부 측면에 있지 않으면 **ActualRebinds** 는 1이고 **ActualRewinds** 는 0입니다. 연산자가 루프 조인의 내부 측면에 있으면 다시 바인딩 횟수와 되감기 횟수의 합계가 조인 외부 측면에서 처리된 행 수와 같아야 합니다. 다시 바인딩은 조인의 상호 관련된 매개 변수가 하나 이상 변경되었으며 내부 측면을 다시 평가해야 함을 의미합니다. 되감기는 상호 관련된 매개 변수가 변경되지 않았으며 이전 내부 결과 집합을 다시 사용할 수 있음을 의미합니다.  
+실행 계획 출력에 나타나는 **ActualRebinds** 및 **ActualRewinds** 개수는 **Init()** 메서드가 호출된 횟수를 나타냅니다. 연산자가 중첩된 루프 조인의 내부 측면에 있지 않으면 **ActualRebinds**는 1이고 **ActualRewinds**는 0입니다. 연산자가 루프 조인의 내부 측면에 있으면 다시 바인딩 횟수와 되감기 횟수의 합계가 조인 외부 측면에서 처리된 행 수와 같아야 합니다. 다시 바인딩은 조인의 상호 관련된 매개 변수가 하나 이상 변경되었으며 내부 측면을 다시 평가해야 함을 의미합니다. 되감기는 상호 관련된 매개 변수가 변경되지 않았으며 이전 내부 결과 집합을 다시 사용할 수 있음을 의미합니다.  
   
 **ActualRebinds** 및 **ActualRewinds** 는 SET STATISTICS XML ON을 사용하여 생성된 XML 실행 계획 출력에 표시되며 **Nonclustered Index Spool**, **Remote Query**, **Row Count Spool**, **Sort**, **Table Spool**및 **Table-valued Function** 연산자에 대해서만 채워집니다. **ActualRebinds** 및 **ActualRewinds** 는 **StartupExpression** 특성이 TRUE로 설정되어 있을 때 **Assert** 및 **Filter** 연산자에 대해서도 채워질 수 있습니다.  
   
@@ -181,6 +181,9 @@ ms.locfileid: "76037039"
   
 ## <a name="operator-descriptions"></a>연산자 설명  
  이 섹션에서는 논리 및 물리 연산자에 대해 설명합니다.  
+
+ > [!TIP]
+ > 지정된 그래픽 실행 계획 아이콘에 오른쪽에서 왼쪽 방향 화살표가 두 개 있는 노란색 원이 있다면 항상 연산자가 병렬로 실행됩니다. 병렬 처리에 대한 자세한 내용은 [스레드 및 태스크 아키텍처 가이드](../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling)를 참조하세요.
   
 |그래픽 실행 계획 아이콘|실행 계획 연산자|Description|  
 |-----------------------------------|-----------------------|-----------------|  

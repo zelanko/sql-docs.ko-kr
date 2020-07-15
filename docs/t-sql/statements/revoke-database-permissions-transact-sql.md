@@ -17,15 +17,15 @@ ms.assetid: 442acfc6-af97-40a3-b546-91cd485ee2be
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: adcdc5c9c33a0a62d9922b0d6c4f9fdec7906abe
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 365f39eb24fde04d76e9424df12b77b65d411b40
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635828"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998531"
 ---
 # <a name="revoke-database-permissions-transact-sql"></a>REVOKE 데이터베이스 사용 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   데이터베이스에 대해 부여 및 거부된 사용 권한을 취소합니다.  
   
@@ -59,7 +59,7 @@ permission | ALL [ PRIVILEGES ]
  데이터베이스에 대해 거부할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
  ALL  
- 이 옵션은 모든 가능한 사용 권한을 취소하지 않습니다. ALL을 취소하는 것은 BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE, CREATE VIEW 사용 권한을 취소하는 것과 같습니다.  
+ 이 옵션은 모든 가능한 사용 권한을 취소하지 않습니다. ALL을 취소하는 것은 다음 사용 권한을 취소하는 것과 동일합니다. BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE 및 CREATE VIEW.  
   
  PRIVILEGES  
  ISO 호환성을 위해 포함됩니다. ALL의 동작을 변경하지 않습니다.  
@@ -76,7 +76,7 @@ permission | ALL [ PRIVILEGES ]
 > [!CAUTION]  
 >  WITH GRANT OPTION을 부여 받은 사용 권한이 연계되어 취소되면 해당 사용 권한의 GRANT 및 DENY가 모두 취소됩니다.  
   
- \<database_principal>로서 이 쿼리를 실행하는 보안 주체가 사용 권한을 부여하는 권한을 취소할 수 있는 다른 보안 주체를 지정합니다.  
+ AS \<database_principal> 이 쿼리를 실행하는 보안 주체가 사용 권한을 취소하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다.  
   
  *Database_user*  
  데이터베이스 사용자를 지정합니다.  
@@ -202,7 +202,7 @@ permission | ALL [ PRIVILEGES ]
   
  AS 옵션을 사용하는 경우 지정한 보안 주체가 데이터베이스를 소유해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-revoking-permission-to-create-certificates"></a>A. 인증서를 만들기 위해 사용 권한 취소  
  다음 예에서는 사용자 `CREATE CERTIFICATE`에서 `AdventureWorks2012` 데이터베이스에 대한 `MelanieK` 사용 권한을 취소합니다.  

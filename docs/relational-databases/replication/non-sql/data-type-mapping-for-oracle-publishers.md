@@ -1,5 +1,6 @@
 ---
 title: Oracle 게시자에 대한 데이터 형식 매핑 | Microsoft 문서
+description: 데이터가 Oracle 게시자에서 SQL Server 배포자로 이동할 때 Oracle과 SQL Server 간의 데이터 형식 기본 매핑에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,51 +15,51 @@ helpviewer_keywords:
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2b9d63f55ec7baacb4e387f6ee2f4a063ffa645b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d7063beae88d6bbf0de9af735e6e5d87c94a15a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67901127"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896807"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 게시자에 대한 데이터 형식 매핑
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Oracle 데이터 형식 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식이 항상 정확히 일치하지는 않습니다. Oracle 테이블을 게시할 때 가능한 일치하는 데이터 형식이 자동으로 선택됩니다. 단일 데이터 형식 매핑이 명확하지 않으면 대체 데이터 형식 매핑이 제공됩니다. 대체 매핑을 선택하는 방법은 아래의 "대체 데이터 형식 매핑 지정" 섹션을 참조하십시오.  
   
  다음 표에서는 Oracle 게시자에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자로 데이터 이동 시 Oracle과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 간에 데이터 형식이 기본적으로 매핑되는 방법을 보여 줍니다. 대체 형식 열은 대체 매핑을 사용할 수 있는지 여부를 나타냅니다.  
   
 |Oracle 데이터 형식|SQL Server 데이터 형식|대안|  
 |----------------------|--------------------------|------------------|  
-|BFILE|VARBINARY(MAX)|yes|  
-|BLOB|VARBINARY(MAX)|yes|  
-|CHAR([1-2000])|CHAR([1-2000])|yes|  
-|CLOB|VARCHAR(MAX)|yes|  
-|DATE|DATETIME|yes|  
+|BFILE|VARBINARY(MAX)|예|  
+|BLOB|VARBINARY(MAX)|예|  
+|CHAR([1-2000])|CHAR([1-2000])|예|  
+|CLOB|VARCHAR(MAX)|예|  
+|DATE|DATETIME|예|  
 |FLOAT|FLOAT|예|  
 |FLOAT([1-53])|FLOAT([1-53])|예|  
 |FLOAT([54-126])|FLOAT|예|  
-|INT|NUMERIC(38)|yes|  
-|INTERVAL|DATETIME|yes|  
-|LONG|VARCHAR(MAX)|yes|  
-|LONG RAW|IMAGE|yes|  
+|INT|NUMERIC(38)|예|  
+|INTERVAL|DATETIME|예|  
+|LONG|VARCHAR(MAX)|예|  
+|LONG RAW|IMAGE|예|  
 |NCHAR([1-1000])|NCHAR([1-1000])|예|  
-|NCLOB|NVARCHAR(MAX)|yes|  
-|NUMBER|FLOAT|yes|  
+|NCLOB|NVARCHAR(MAX)|예|  
+|NUMBER|FLOAT|예|  
 |NUMBER([1-38])|NUMERIC([1-38])|예|  
-|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|yes|  
+|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|예|  
 |NVARCHAR2([1-2000])|NVARCHAR([1-2000])|예|  
 |RAW([1-2000])|VARBINARY([1-2000])|예|  
 |real|FLOAT|예|  
 |ROWID|CHAR(18)|예|  
-|timestamp|DATETIME|yes|  
-|TIMESTAMP(0-7)|DATETIME|yes|  
-|TIMESTAMP(8-9)|DATETIME|yes|  
-|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|yes|  
+|timestamp|DATETIME|예|  
+|TIMESTAMP(0-7)|DATETIME|예|  
+|TIMESTAMP(8-9)|DATETIME|예|  
+|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|예|  
 |TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|예|  
-|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|yes|  
+|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|예|  
 |TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|예|  
 |UROWID|CHAR(18)|예|  
-|VARCHAR2([1-4000])|VARCHAR([1-4000])|yes|  
+|VARCHAR2([1-4000])|VARCHAR([1-4000])|예|  
   
 ## <a name="considerations-for-data-type-mapping"></a>데이터 형식 매핑에 대한 고려 사항  
  Oracle 데이터베이스에서 데이터를 복제할 때는 다음 데이터 형식 문제를 고려하십시오.  
@@ -82,7 +83,7 @@ ms.locfileid: "67901127"
 ### <a name="float-and-number-types"></a>FLOAT 및 NUMBER 형식  
  FLOAT 및 NUMBER 데이터 형식 매핑 중에 지정하는 전체 자릿수 및 소수 자릿수는 Oracle 데이터베이스에서 해당 데이터 형식을 사용하는 열에 지정된 전체 자릿수 및 소수 자릿수에 따라 달라집니다. 전체 자릿수는 숫자의 모든 자릿수이고 소수 자릿수는 숫자에서 소수점 오른쪽에 있는 자릿수입니다. 예를 들어 123.45의 전체 자릿수는 5이고 소수 자릿수는 2입니다.  
   
- Oracle에서는 NUMBER(4,5)처럼 전체 자릿수보다 큰 소수 자릿수로 숫자를 정의할 수 있지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 전체 자릿수가 소수 자릿수보다 크거나 같아야 합니다. 데이터가 잘리지 않도록 하기 위해 Oracle 게시자에서 소수 자릿수가 전체 자릿수보다 클 경우 데이터 형식이 매핑될 때 전체 자릿수가 소수 자릿수와 동일하게 설정됩니다.NUMBER(4,5)는 NUMERIC(5,5)로 매핑됩니다.  
+ Oracle에서는 NUMBER(4,5)처럼 전체 자릿수보다 큰 소수 자릿수로 숫자를 정의할 수 있지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 전체 자릿수가 소수 자릿수보다 크거나 같아야 합니다. 데이터가 잘리지 않도록 하기 위해 Oracle 게시자에서 소수 자릿수가 전체 자릿수보다 클 경우 데이터 형식이 매핑될 때 전체 자릿수가 소수 자릿수와 동일하게 설정됩니다. NUMBER(4,5)는 NUMERIC(5,5)으로 매핑됩니다.  
   
 > [!NOTE]  
 >  NUMBER에 대한 소수 자릿수와 전체 자릿수를 지정하지 않으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 기본적으로 최대 소수 자릿수(8)와 최대 전체 자릿수(38)를 사용합니다. 데이터를 복제할 때 더 나은 스토리지를 사용하고 성능을 높이려면 Oracle에서 특정 소수 자릿수와 전체 자릿수를 설정하는 것이 좋습니다.  

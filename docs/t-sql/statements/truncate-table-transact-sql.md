@@ -25,15 +25,15 @@ ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 078a6b8ebdef8604c4023f6e652f5f431ee59d5b
-ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
+ms.openlocfilehash: 8bed7fa9d84cc3100d5da0f784c9e2551071156e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643372"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012839"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 개별 행 삭제를 로깅하지 않고 테이블 또는 테이블의 지정된 파티션에서 모든 행을 제거합니다. TRUNCATE TABLE은 기능상으로 WHERE 절이 없는 DELETE 문과 동일하지만 더 빠르고 시스템 및 트랜잭션 로그 리소스를 덜 사용합니다.  
   
@@ -84,7 +84,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
 -   범위와 개별 파티션을 모두 지정합니다. 예: `WITH (PARTITIONS (2, 4, 6 TO 8))`  
   
--   *\<range>* 는 **TO**로 구분된 파티션 번호로 지정할 수 있습니다. 예: `WITH (PARTITIONS (6 TO 8))`  
+-   *\<range>* 는 **TO**라는 단어로 구분된 파티션 번호로 지정할 수 있습니다. 예: `WITH (PARTITIONS (6 TO 8))`  
   
  분할된 테이블을 자르려면 테이블과 인덱스를 정렬해야 합니다(동일한 파티션 함수에 분할).  
   
@@ -139,7 +139,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
 ## <a name="permissions"></a>사용 권한  
  최소한 *table_name*에 대한 `ALTER` 권한이 필요합니다. `TRUNCATE TABLE` 권한은 기본적으로 테이블 소유자, `sysadmin` 고정 서버 역할의 멤버와 `db_owner` 및 `db_ddladmin` 고정 데이터베이스 역할에 할당되며 이전할 수 없습니다. 하지만 저장 프로시저와 같은 모듈 내에 `TRUNCATE TABLE` 문을 통합한 뒤 `EXECUTE AS` 절을 사용하여 적절한 권한을 모듈에 허용할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-truncate-a-table"></a>A. 테이블 자르기  
  다음 예에서는 `JobCandidate` 테이블의 모든 데이터를 제거합니다. `SELECT` 문이 `TRUNCATE TABLE` 문 앞과 뒤에 포함되어 결과를 비교합니다.  

@@ -4,22 +4,22 @@ titleSuffix: SQL Server
 description: 이 문서에서는 Linux에 SQL Server 도구를 설치하는 방법을 설명합니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/12/2020
+ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: a6ee495dc984273b8a1c20784542d6611edbbbba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e427e429ea4fe65f1f4f0af707c1a11c16c0834b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288787"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897333"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Linux에서 SQL Server 명령줄 도구 sqlcmd 및 bcp 설치
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 다음 단계에서는 명령줄 도구, Microsoft ODBC 드라이버 및 해당 종속성을 설치합니다. **mssql-tools** 패키지에는 다음이 포함됩니다.
 
@@ -36,7 +36,7 @@ ms.locfileid: "79288787"
 
 이 문서에서는 명령줄 도구를 설치하는 방법을 설명합니다. **sqlcmd** 또는 **bcp**를 사용하는 방법에 대한 예제를 검색하는 경우 이 항목의 끝부분에 있는 [링크](#next-steps)를 참조하세요.
 
-## <a name="a-idrhelinstall-tools-on-rhel-7"></a><a id="RHEL"><a/>RHEL 7에 도구 설치
+## <a name="a-idrhelinstall-tools-on-rhel-8"></a><a id="RHEL"><a/>RHEL 8에 도구 설치
 
 다음 단계를 사용하여 Red Hat Enterprise Linux에서 **mssql-tools**를 설치합니다. 
 
@@ -49,7 +49,7 @@ ms.locfileid: "79288787"
 1. Microsoft Red Hat 리포지토리 구성 파일을 다운로드합니다.
 
    ```bash
-   curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/msprod.repo
+   curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/msprod.repo
    ```
 
 1. 슈퍼 사용자 모드를 종료합니다.
@@ -183,13 +183,13 @@ ms.locfileid: "79288787"
 
 이제 macOS에서 **sqlcmd** 및 **bcp** 미리 보기를 사용할 수 있습니다. 자세한 내용은 [공지](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/)를 참조하세요.
 
-‘아직 설치하지 않은 경우 [Homebrew](https://brew.sh)를 설치합니다.’ 
+‘아직 설치하지 않은 경우 [Homebrew](https://brew.sh)를 설치합니다.’
 
-        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+- `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
 Mac El Capitan 및 Sierra용 도구를 설치하려면 다음 명령을 사용합니다.
 
-```
+```bash
 # brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
@@ -218,7 +218,7 @@ brew install mssql-tools
 
    | Linux 배포 | ODBC 패키지 위치 |
    |---|---|
-   | Red Hat | [https://packages.microsoft.com/rhel/7.3/prod](https://packages.microsoft.com/rhel/7.3/prod) |
+   | Red Hat | [https://packages.microsoft.com/rhel/8/prod](https://packages.microsoft.com/rhel/8/prod) |
    | SLES | [https://packages.microsoft.com/sles/12/prod](https://packages.microsoft.com/sles/12/prod)|
    | Ubuntu 16.04 | [**msodbcsql**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql)<br/>[**unixodbc-dev**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/u/unixodbc/) |
 

@@ -1,5 +1,6 @@
 ---
 title: '업그레이드 준비: Data Migration Assistant'
+description: Microsoft Data Migration Assistant를 다운로드하고 실행하여 OLTP 데이터베이스를 업그레이드하고 SQL Server의 새 기능을 도입할 준비를 합니다.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: eabcc635-7adf-4e45-b6f1-158d6e024908
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 982ca86d373cde6b37faa8a88ae93cd3cb2d6702
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 577b65a693fd1955daed3600f75b8b67fdc4483e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258826"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900330"
 ---
 # <a name="prepare-for-upgrade-by-running-data-migration-assistant"></a>Data Migration Assistant를 실행하여 업그레이드 준비
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
 Microsoft Data Migration Assistant를 다운로드하고 실행하여 OLTP 데이터베이스를 업그레이드하고 [!INCLUDE[ssnover](../../includes/ssnoversion-md.md)] 의 새 기능을 도입할 준비를 합니다.  
   

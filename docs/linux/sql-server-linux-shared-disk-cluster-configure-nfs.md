@@ -9,16 +9,16 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 35f6dc79756c192419dbe3a8962d5dcdfeea8aef
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 47c2e816219ebbb4a4b3fefea2974ef511cdaee2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558338"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897287"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>장애 조치(failover) 클러스터 인스턴스 구성 - NFS - SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 문서에서는 Linux에서 FCI(장애 조치(failover) 클러스터 인스턴스)에 NFS 스토리지를 구성하는 방법을 설명합니다. 
 
@@ -76,7 +76,7 @@ NFS 서버에서 공유할 폴더를 구성하는 경우 이 지침의 일반 �
     mkdir <TempDir>
     ```
 
-    \<TempDir>은 폴더 이름입니다. 다음 예제에서는 /var/opt/mssql/tmp라는 폴더를 만듭니다.
+    \<TempDir>는 폴더 이름입니다. 다음 예제에서는 /var/opt/mssql/tmp라는 폴더를 만듭니다.
 
     ```bash
     mkdir /var/opt/mssql/tmp
@@ -88,7 +88,7 @@ NFS 서버에서 공유할 폴더를 구성하는 경우 이 지침의 일반 �
     cp /var/opt/mssql/data/* <TempDir>
     ```
 
-    \<TempDir>은 이전 단계의 폴더 이름입니다.
+    \<TempDir>는 이전 단계의 폴더 이름입니다.
 
    * 파일이 디렉터리에 있는지 확인합니다.
 
@@ -96,7 +96,7 @@ NFS 서버에서 공유할 폴더를 구성하는 경우 이 지침의 일반 �
     ls TempDir
     ```
 
-    \<TempDir>은 d단계의 폴더 이름입니다.
+    \<TempDir>는 d 단계의 폴더 이름입니다.
 
    * 기존 SQL Server 데이터 디렉터리에서 파일을 삭제합니다. 성공하는 경우 승인이 수신되지 않습니다.
 

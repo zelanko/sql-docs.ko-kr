@@ -22,15 +22,15 @@ ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4bb0b9c6b9d6fe47b69678211122e5c8be7023c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6799fefe08e3c57d6bac0924f2192094c1b9e428
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78937660"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091848"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   스키마 간에 보안 개체를 이동합니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "78937660"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 ALTER SCHEMA schema_name   
@@ -51,7 +51,7 @@ ALTER SCHEMA schema_name
     }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 ALTER SCHEMA schema_name   
@@ -83,6 +83,8 @@ ALTER SCHEMA schema_name
  테이블이나 동의어와 같은 개체를 이동할 경우 이 개체를 참조하는 개체는 자동으로 업데이트되지 않습니다. 이동된 개체를 참조하는 개체는 수동으로 수정해야 합니다. 예를 들어 테이블 이름을 바꿨고 해당 테이블이 트리거에서 참조되는 경우 트리거를 수정하여 새로운 스키마 이름을 적용해야 합니다. [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)를 사용하여 이 개체에 종속된 개체를 나열한 다음, 개체를 이동할 수 있습니다.  
 
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 테이블의 스키마를 변경하려면 개체 탐색기에서 테이블이나 뷰를 마우스 오른쪽 단추로 클릭한 다음, **디자인**을 클릭합니다. **F4** 키를 눌러 속성 창을 엽니다. **스키마** 상자에서 새 스키마를 선택합니다.  
+ 
+ ALTER SCHEMA는 스키마 수준 잠금을 사용합니다.
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
@@ -94,7 +96,7 @@ ALTER SCHEMA schema_name
   
  이동되는 보안 개체와 연결된 사용 권한은 이동 시 모두 삭제됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-transferring-ownership-of-a-table"></a>A. 테이블의 소유권 이전  
  다음 예제에서는 `Address` 테이블을 `Person` 스키마에서 ‘HumanResources’ 스키마로 이동하여 `HumanResources` 스키마를 수정합니다.  

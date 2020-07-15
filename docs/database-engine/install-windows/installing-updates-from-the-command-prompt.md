@@ -1,5 +1,6 @@
 ---
 title: 명령 프롬프트에서 업데이트 설치 | Microsoft Docs
+description: 이 문서에서는 SQL Server 업데이트 설치를 위한 명령 구문을 설명합니다. 조직의 필요에 따라 설치 스크립트를 테스트하고 수정할 수 있습니다.
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 933d8ae26522800326c88a8ba28dbd99c5688fc2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 22821930b8d0e10826fcaad0f33258262f59f2ae
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67990907"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900380"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>명령 프롬프트에서 업데이트 설치
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 조직의 필요에 따라 설치 스크립트를 테스트하고 수정할 수 있습니다. 
  
@@ -77,7 +78,7 @@ ms.locfileid: "67990907"
 |스위치|Description| 
 |------------|-----------------| 
 |**/?**|무인 설치 명령 프롬프트 도움말을 표시합니다.| 
-|**/action=Patch 또는 /action=RemovePatch**|설치 동작(Patch 또는 RemovePatch)을 지정합니다.| 
+|**/action=Patch 또는 /action=RemovePatch**|설치 동작으로 Patch 또는 RemovePatch를 지정합니다.| 
 |**/allinstances**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트를 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 적용하고 인스턴스를 인식하지 않는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공유 구성 요소에도 적용합니다.| 
 |**/instancename=InstanceName***|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트를 InstanceName이라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 적용하고 인스턴스를 인식하지 않는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공유 구성 요소에도 적용합니다.| 
 |**/InstanceID=Inst1**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inst1 인스턴스에 적용하고 인스턴스를 인식하지 않는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공유 구성 요소에도 적용합니다.| 

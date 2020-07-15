@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 엔진 사용 권한 시작 | Microsoft 문서
+description: SQL Server의 몇 가지 기본 보안 개념을 검토하고 데이터베이스 엔진 권한의 일반적 구현에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0fd86c132a0a51ea6bbba533bc7e8a2ab1083ddc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c5d6f2daf6b37c260b84683e3f85395a88b1f218
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903018"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005652"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>데이터베이스 엔진 권한 시작
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 의 권한은 로그인 및 서버 역할을 통해 서버 수준에서 관리되고 데이터베이스 사용자 및 데이터베이스 역할을 통해 데이터베이스 수준에서 관리됩니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 에 대한 모델은 각 데이터베이스 내에서 동일한 시스템을 노출하지만 서버 수준 권한을 사용할 수 없습니다. 이 항목에서는 몇 가지 기본 보안 개념을 검토한 다음 일반적인 권한 구현을 설명합니다.  
   

@@ -22,18 +22,19 @@ ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae7ab885ced505ccf7da03d388e8063c276fc0d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b23927e12bbfeb6fb49240322babb392c6970cb7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113708"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008078"
 ---
 # <a name="date-transact-sql"></a>date(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 날짜를 정의합니다.
-  
+
 ## <a name="date-description"></a>date 설명
   
 |속성|값|  
@@ -188,7 +189,7 @@ SELECT @date AS '@date', @datetime2 AS '@datetime2(3)';
 |TIME+TIMEZONE|기본값이 제공됩니다.|  
 |DATE+TIME+TIMEZONE|로컬 DATETIME의 DATE 부분이 사용됩니다.|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음 예에서는 문자열을 각 날짜 및 시간 데이터 형식으로 캐스팅하는 결과를 비교합니다.
   
 ```sql
@@ -214,7 +215,9 @@ SELECT
 |**datetime**|2007-05-08 12:35:29.123|  
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
-  
+
+SQL Server 2008에서 처음 도입되었습니다.
+
 ## <a name="see-also"></a>참고 항목
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   

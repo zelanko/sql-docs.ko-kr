@@ -1,5 +1,6 @@
 ---
 title: SQL Server 설치 로그 파일 보기 및 읽기 | Microsoft Docs
+description: 이 문서에서는 SQL Server 설치 시 생성되는 로그 파일을 설명합니다. 로그 파일은 날짜 및 시간 스탬프가 적용된 폴더에 배치됩니다.
 ms.custom: ''
 ms.date: 09/09/2016
 ms.prod: sql
@@ -18,16 +19,16 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b3ddfa9ee8866086fa16a384efb63a5392394d3a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: edeb881f5d589e0a2e09848cc4b4c7f7c958f9ba
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76929132"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900178"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>SQL Server 설치 로그 파일 보기 및 읽기
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 SQL Server 설치 프로그램은 기본적으로 **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log** 내의 일자 및 시간 스탬프가 포함된 폴더에서 로그 파일을 만듭니다. 여기서 *nnn*은 설치되는 SQL 버전에 해당하는 숫자입니다. 타임스탬프 로그 폴더 이름 형식은 YYYYMMDD_hhmmss입니다. 설치 프로그램을 무인 모드로 실행하면 % temp%\sqlsetup*.log 내에 로그가 생성됩니다. 로그 폴더의 모든 파일은 각각의 로그 폴더에 Log\*.cab 파일로 보관됩니다.  
 

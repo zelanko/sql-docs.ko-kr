@@ -11,16 +11,16 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 8d13d6df17cad82076813c5fee93ed794d3439f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ed9b17969e54f620ee22c237526f59e2f49700b5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68892580"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900240"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>SharePoint용 Power Pivot 업그레이드
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   이 문서에서는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포를 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]으로 업그레이드하는 데 필요한 단계에 대해 간략하게 설명합니다. 특정 단계는 사용자 환경에서 실행 중인 SharePoint 버전에 따라 다르며 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 추가 기능(**spPowerPivot.msi**)을 포함합니다.  
   
@@ -247,7 +247,7 @@ ms.locfileid: "68892580"
 Get-PowerPivotSystemService  
 ```  
   
- **CurrentSolutionVersion**을 확인합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 버전은 13.0\<주 빌드>.\<부 빌드>입니다.  
+ **CurrentSolutionVersion**을 확인합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]는 버전 13.0.\<major build>\<minor build>입니다.  
   
 ### <a name="verify-the-version-of-the-analysis-services-windows-service"></a>Analysis Services Windows 서비스 버전 확인  
  SharePoint 2010 팜에서 일부 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 서버만 업그레이드한 경우 업그레이드하지 않은 서버의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스가 팜에 있어야 하는 버전보다 이전 버전이 됩니다. 모든 서버를 사용하려면 모든 서버를 같은 버전으로 업그레이드해야 합니다. 다음 방법 중 하나를 사용하여 각 컴퓨터에서 SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) Windows 서비스의 버전을 확인합니다.  
@@ -260,7 +260,7 @@ Get-PowerPivotSystemService
   
 3.  **세부 정보**를 클릭합니다.  
   
-4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 파일 버전은 13.00\<주 빌드>.\<부 빌드>이어야 합니다.  
+4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 파일 버전은 13.00.\<major build>\<minor build>이어야 합니다.  
   
 5.  이 번호가 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 솔루션 및 시스템 서비스 버전과 동일한지 확인합니다.  
   
@@ -310,7 +310,7 @@ Get-PowerPivotSystemService
   
 2.  어셈블리 이름을 기준으로 정렬하고 **Microsoft.Analysis Services.Adomd.Client**를 찾습니다.  
   
-3.  버전이 13.0.\<빌드 번호>인지 확인합니다.  
+3.  버전 13.0.\<build number>인지 확인합니다.  
   
 ##  <a name="upgrading-multiple-power-pivot-for-sharepoint-servers-in-a-sharepoint-farm"></a><a name="geminifarm"></a> SharePoint 팜에 있는 여러 SharePoint용 Power Pivot 서버 업그레이드  
  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 서버가 둘 이상 포함된 다중 서버 토폴로지에서는 모든 서버 인스턴스와 구성 요소의 버전이 같아야 합니다. 가장 높은 소프트웨어 버전을 실행하는 서버에 따라 팜의 모든 서버에 대한 수준이 설정됩니다. 서버 중 일부만 업그레이드하면 이전 버전 소프트웨어를 실행하는 서버의 경우 업그레이드하기 전까지 사용할 수 없게 됩니다.  

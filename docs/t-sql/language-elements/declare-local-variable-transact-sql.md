@@ -21,15 +21,15 @@ ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99323a0124e5e5507a22fdf36c6622738aea3ce2
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: 11fadfd71bfc78128e83eb2157d32c5684d6ea35
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517659"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999004"
 ---
 # <a name="declare-local_variable-transact-sql"></a>DECLARE @local_variable(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   DECLARE 문을 사용하여 일괄 처리나 프로시저의 본문에 변수를 선언하고 SET 또는 SELECT 문을 사용하여 값을 할당합니다. 이 문을 사용하여 커서 변수를 선언하고 다른 커서 관련 문과 함께 사용할 수 있습니다. 선언의 일부로 값을 지정하지 않으면 선언 후 모든 변수가 NULL로 초기화됩니다.  
   
@@ -106,7 +106,7 @@ CURSOR
 <table_type_definition>  
 **table** 데이터 형식을 정의합니다. 테이블 선언에는 열 정의, 이름, 데이터 형식 및 제약 조건 등이 포함되며 PRIMARY KEY, UNIQUE, NULL 및 CHECK만 제약 조건 유형으로 사용할 수 있습니다. 규칙 또는 기본 정의가 형식에 바인딩되어 있는 경우 별칭 데이터 형식을 열 스칼라 데이터 형식으로 사용할 수 없습니다.
   
-\<table_type_definition>은 CREATE TABLE에 있는 테이블을 정의하는 정보의 하위 집합입니다. 여러 요소와 주요 정의가 여기에 포함됩니다. 자세한 내용은 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)을 참조하세요.  
+\<table_type_definiton>은 CREATE TABLE에 있는 테이블을 정의하는 정보의 하위 집합입니다. 여러 요소와 주요 정의가 여기에 포함됩니다. 자세한 내용은 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)을 참조하세요.  
   
  *n*  
  여러 변수를 지정하여 값을 할당할 수 있음을 나타내는 자리 표시자입니다. **table** 변수를 선언할 때는 **table** 변수가 DECLARE 문으로 선언되는 유일한 변수여야 합니다.  
@@ -191,7 +191,7 @@ CURSOR
   
 -   커서에 대한 포인터로 간주됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-declare"></a>A. DECLARE 사용  
  다음 예에서는 `@find`라는 지역 변수를 사용하여 성이 `Man`으로 시작하는 모든 연락처 정보를 검색합니다.  

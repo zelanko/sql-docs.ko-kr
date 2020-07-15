@@ -1,5 +1,6 @@
 ---
 title: 암호화 알고리즘 선택 | Microsoft 문서
+description: 이 지침을 사용하여 SQL Server의 인스턴스를 보호하는 데 도움이 되도록 몇 가지 일반적인 알고리즘을 지원하는 암호화 알고리즘을 선택할 수 있습니다.
 ms.custom: ''
 ms.date: 08/14/2018
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e73d0d6cdf244cfb9e08993c91737a14a1d2b24b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 61fc3a3e63d2fe4ff17865253607944c722b154c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957464"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005581"
 ---
 # <a name="choose-an-encryption-algorithm"></a>암호화 알고리즘 선택
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   암호화는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인터페이스를 보호하려는 관리자가 사용할 수 있는 여러 가지 심층 방어 중 하나입니다.  
   
  암호화 알고리즘은 권한이 없는 사용자가 쉽게 바꿀 수 없는 데이터 변환을 정의합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 사용하면 관리자와 개발자가 DES, Triple DES, TRIPLE_DES_3KEY, RC2, RC4, 128비트 RC4, DESX, 128비트 AES, 192비트 AES, 256비트 AES 등의 여러 알고리즘 중에서 원하는 알고리즘을 선택할 수 있습니다.  

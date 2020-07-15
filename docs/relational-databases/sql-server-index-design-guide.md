@@ -1,5 +1,6 @@
 ---
 title: SQL Server 인덱스 아키텍처 및 디자인 가이드 | Microsoft Docs
+description: SQL Server에서 효율적인 인덱스를 디자인하여 최적의 데이터베이스와 최상의 애플리케이션 성능을 달성하는 방법을 알아봅니다. 인덱스 아키텍처 및 모범 사례를 읽어보세요.
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -22,15 +23,15 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d6547436a3338805d9dd81c88ae786a187f9576
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 4b53758eaf1115b85a6c93600ead960f6f44a050
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151996"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000457"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 인덱스 아키텍처 및 디자인 가이드
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 데이터베이스 애플리케이션 병목 상태는 주로 잘못 디자인된 인덱스와 인덱스의 부족으로 인해 나타납니다. 최적의 데이터베이스와 최상의 애플리케이션 성능을 위해서는 효율적인 인덱스를 디자인하는 것이 가장 중요합니다. 이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인덱스 디자인 가이드에서는 인덱스 아키텍처에 대한 정보와, 애플리케이션 요구 사항을 충족하는 효율적인 인덱스를 디자인하는 데 도움이 되는 모범 사례를 제공합니다.  
     
@@ -53,7 +54,7 @@ XML 인덱스에 대한 자세한 내용은 [XML 인덱스 개요](../relational
 전체 텍스트 인덱스에 대한 자세한 내용은 [전체 텍스트 인덱스 채우기](../relational-databases/search/populate-full-text-indexes.md)를 참조하세요.
   
 ##  <a name="index-design-basics"></a><a name="Basics"></a> 인덱스 디자인 기본 사항  
- 일반적인 책을 생각해 보세요. 책의 끝에는 책에서 정보를 신속하게 찾는 데 도움이 되는 인덱스가 있습니다. 인덱스는 키워드의 정렬된 목록이며, 각 키워드 옆에는 각 키워드를 찾을 수 있는 페이지를 가리키는 페이지 번호 세트가 있습니다. SQL Server 인덱스도 다르지 않습니다. 값의 정렬된 목록이며, 각 값에는 해당 값이 있는 데이터 [페이지](../relational-databases/pages-and-extents-architecture-guide.md)의 포인터가 있습니다. 인덱스 자체는 페이지에 저장되어 SQL Server의 인덱스 페이지를 구성합니다. 일반적인 책에서 인덱스가 여러 페이지에 걸쳐 있고, “SQL” 등의 단어가 포함된 모든 페이지의 포인터를 찾아야 하는 경우 “SQL” 키워드가 포함된 인덱스 페이지를 찾을 때까지 살펴봐야 합니다. 여기서 모든 책 페이지의 포인터를 따릅니다.  인덱스의 시작 부분에 각 문자를 찾을 수 있는 위치의 사전순 목록이 포함된 단일 페이지를 만들면 이 기능을 더욱 최적화할 수 있습니다. 다음은 그 예입니다.  “A~D - 121페이지”, “E~G - 122페이지” 등입니다. 이 추가 페이지가 있으면 시작 위치를 찾기 위해 인덱스를 살펴보는 단계를 제거할 수 있습니다. 일반적인 책에는 이러한 페이지가 없지만 SQL Server 인덱스에는 있습니다. 이 단일 페이지를 인덱스의 루트 페이지라고 합니다. 루트 페이지는 SQL Server 인덱스에서 사용되는 트리 구조의 시작 페이지입니다. 트리 비유를 따라 실제 데이터의 포인터가 포함된 끝 페이지는 트리의 “리프 페이지”라고 합니다. 
+ 일반적인 책을 생각해 보세요. 책의 끝에는 책에서 정보를 신속하게 찾는 데 도움이 되는 인덱스가 있습니다. 인덱스는 키워드의 정렬된 목록이며, 각 키워드 옆에는 각 키워드를 찾을 수 있는 페이지를 가리키는 페이지 번호 세트가 있습니다. SQL Server 인덱스도 다르지 않습니다. 값의 정렬된 목록이며, 각 값에는 해당 값이 있는 데이터 [페이지](../relational-databases/pages-and-extents-architecture-guide.md)의 포인터가 있습니다. 인덱스 자체는 페이지에 저장되어 SQL Server의 인덱스 페이지를 구성합니다. 일반적인 책에서 인덱스가 여러 페이지에 걸쳐 있고, “SQL” 등의 단어가 포함된 모든 페이지의 포인터를 찾아야 하는 경우 “SQL” 키워드가 포함된 인덱스 페이지를 찾을 때까지 살펴봐야 합니다. 여기서 모든 책 페이지의 포인터를 따릅니다.  인덱스의 시작 부분에 각 문자를 찾을 수 있는 위치의 사전순 목록이 포함된 단일 페이지를 만들면 이 기능을 더욱 최적화할 수 있습니다. 예를 들면 다음과 같습니다. “A~D - 121페이지”, “E~G - 122페이지” 등입니다. 이 추가 페이지가 있으면 시작 위치를 찾기 위해 인덱스를 살펴보는 단계를 제거할 수 있습니다. 일반적인 책에는 이러한 페이지가 없지만 SQL Server 인덱스에는 있습니다. 이 단일 페이지를 인덱스의 루트 페이지라고 합니다. 루트 페이지는 SQL Server 인덱스에서 사용되는 트리 구조의 시작 페이지입니다. 트리 비유를 따라 실제 데이터의 포인터가 포함된 끝 페이지는 트리의 “리프 페이지”라고 합니다. 
 
  SQL Server 인덱스는 테이블이나 뷰와 연결된 디스크상 또는 메모리 내 구조로, 테이블이나 뷰의 행 검색 속도를 높입니다. 인덱스에는 테이블이나 뷰에 있는 하나 이상의 열로 작성되는 키가 포함됩니다. 디스크상 인덱스에서 이러한 키는 SQL Server가 키 값과 연결된 행을 빠르고 효율적으로 찾을 수 있는 트리 구조(B-트리)에 저장됩니다.  
 

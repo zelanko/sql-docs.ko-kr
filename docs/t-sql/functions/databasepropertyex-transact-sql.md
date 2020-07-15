@@ -17,18 +17,18 @@ helpviewer_keywords:
 - displaying database properties
 - database properties [SQL Server]
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0bae370acd535f331d287cea38de04375891db0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d9d655cdbec3b353455f2da13ea0cb17e9d4cee0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823914"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011472"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 이 함수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 지정된 데이터베이스에 대해 지정된 데이터베이스 옵션이나 속성의 현재 설정을 반환합니다.
   
@@ -87,7 +87,7 @@ DATABASEPROPERTYEX ( database , property )
 |IsXTPSupported|데이터베이스가 In-Memory OLTP, 즉, 메모리 최적화 테이블과 고유하게 컴파일된 모듈을 만들고 사용하는 것을 지원하는지 여부를 나타냅니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에만 해당 :<br /><br /> IsXTPSupported는 In-Memory OLTP 개체를 만드는 데 필요한 MEMORY_OPTIMIZED_DATA 파일 그룹의 존재 여부와 관계가 없습니다.|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않음<br /><br /> 기본 데이터 형식: **int**|  
 |LastGoodCheckDbTime|지정된 데이터베이스에서 성공적으로 실행된 마지막 DBCC CHECKDB의 시간 및 날짜입니다.<sup>1</sup> DBCC CHECKDB가 데이터베이스에서 실행되지 않은 경우 1900-01-01 00:00:00.000이 반환됩니다.|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2부터</br>[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] CU9부터</br>[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 이상</br>Azure SQL Database.<br/><br/>datetime 값<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **datetime**| 
 |LCID|데이터 정렬의 Windows LCID(로캘 ID)입니다.|LCID 값(10진수 형식)입니다.<br /><br /> 기본 데이터 형식: **int**|  
-|MaxSizeInBytes|최대 데이터베이스 크기(바이트)입니다.|**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL: 데이터베이스가 시작되지 않음<br /><br /> 기본 데이터 형식: **bigint**|  
+|MaxSizeInBytes|최대 데이터베이스 크기(바이트)입니다.|**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]<br /><br />[Azure SQL Database 및 Azure Synapse Analytics(SQL DW)](/azure/sql-database/sql-database-single-database-scale#dtu-based-purchasing-model) – 추가 스토리지를 구매하지 않으면 값은 SLO를 기반으로 합니다.<br /><br />[vCore](/azure/sql-database/sql-database-single-database-scale#vcore-based-purchasing-model) – 값은 최대 크기까지 1GB씩 증가합니다.<br /><br />NULL: 데이터베이스가 시작되지 않음<br /><br /> 기본 데이터 형식: **bigint**|  
 |복구|데이터베이스 복구 모델|FULL: 전체 복구 모델<br /><br /> BULK_LOGGED: 대량 로그 모델<br /><br /> SIMPLE: 단순 복구 모델<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
 |ServiceObjective|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 또는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 데이터베이스 성능 수준을 설명합니다.|다음 중 하나<br /><br /> Null: 데이터베이스가 시작되지 않았습니다.<br /><br /> 공유(Web/Business 버전)<br /><br /> Basic<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> 시스템(master DB용)<br /><br /> 기본 데이터 형식: **nvarchar(32)**|  
 |ServiceObjectiveId|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]의 서비스 목표 ID입니다.|서비스 목표를 식별하는 **uniqueidentifier**입니다.|  
@@ -113,7 +113,7 @@ DATABASEPROPERTYEX ( database , property )
 ## <a name="remarks"></a>설명  
 `DATABASEPROPERTYEX`는 한 번에 하나의 속성 설정만 반환합니다. 여러 속성 설정을 표시하려면 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰를 사용하세요.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-retrieving-the-status-of-the-auto_shrink-database-option"></a>A. AUTO_SHRINK 데이터베이스 옵션의 상태 검색  
 이 예에서는 `AdventureWorks` 데이터베이스에 대한 AUTO_SHRINK 데이터베이스 옵션의 상태를 반환합니다.

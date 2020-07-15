@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5260ccc53fbdba1e0773dc43c021f0ec4f21e255
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 6d4cae8c42f8a29842e62f94cfcd7a87e187b4e0
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151554"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091645"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 기능을 사용하도록 설정된 경우 새 가용성 그룹을 만듭니다.  
   
@@ -162,7 +162,7 @@ CREATE AVAILABILITY GROUP group_name
  FAILURE_CONDITION_LEVEL 및 HEALTH_CHECK_TIMEOUT 값은 지정된 그룹에 대한 *유연한 장애 조치(failover) 정책*을 정의합니다. 유연한 장애 조치(failover) 정책을 통해 자동 장애 조치(failover)를 수행해야 하는 상태를 세부적으로 제어할 수 있습니다. 자세한 내용은 [가용성 그룹 자동 장애 조치에 대한 유연한 장애 조치 정책&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)을 참조하세요.  
   
  HEALTH_CHECK_TIMEOUT **=** *milliseconds*  
- [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 시스템 저장 프로시저에서 서버 상태 정보를 반환할 때까지 허용되는 대기 시간(밀리초)을 지정합니다. 이 시간이 경과하면 WSFC 클러스터에서는 서버 인스턴스가 느리거나 중지된 것으로 간주합니다. HEALTH_CHECK_TIMEOUT은 그룹 수준에서 설정되지만 자동 장애 조치(failover)를 지원하는 동기-커밋 가용성 모드(AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT)에 대해 구성된 가용성 복제본에서만 적절합니다.  또한 상태 확인 시간 제한은 복제본과 보조 복제본 모두 자동 장애 조치 모드(FAILOVER_MODE **=** AUTOMATIC)에 대해 구성되고 보조 복제본이 현재 주 복제본과 동기화된 경우에만 자동 장애 조치(failover)를 트리거할 수 있습니다.  
+ [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 시스템 저장 프로시저에서 서버 상태 정보를 반환할 때까지 허용되는 대기 시간(밀리초)을 지정합니다. 이 시간이 경과하면 WSFC 클러스터에서는 서버 인스턴스가 느리거나 응답하지 않는 것으로 간주합니다. HEALTH_CHECK_TIMEOUT은 그룹 수준에서 설정되지만 자동 장애 조치(failover)를 지원하는 동기-커밋 가용성 모드(AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT)에 대해 구성된 가용성 복제본에서만 적절합니다.  또한 상태 확인 시간 제한은 복제본과 보조 복제본 모두 자동 장애 조치 모드(FAILOVER_MODE **=** AUTOMATIC)에 대해 구성되고 보조 복제본이 현재 주 복제본과 동기화된 경우에만 자동 장애 조치(failover)를 트리거할 수 있습니다.  
   
  기본 HEALTH_CHECK_TIMEOUT 값은 30,000밀리초(30초)입니다. 최소값은 15,000밀리초(15초)이고 최대값은 4,294,967,295밀리초입니다.  
   
@@ -339,7 +339,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  주 복제본의 데이터베이스에 대한 모든 연결이 허용됩니다. 기본 동작입니다.  
   
- READ_ONLY_ROUTING_LIST **=** { **(‘** \<server_instance> **’** [ **,** ...*n* ] **)** | NONE } 보조 역할로 실행 중일 때 다음과 같은 요구 사항을 충족하는 이 가용성 그룹에 대한 가용성 복제본을 호스팅하는 서버 인스턴스의 쉼표로 구분된 목록을 지정합니다.  
+ READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ...*n* ] **)** | NONE } 보조 역할로 실행 중일 때 다음과 같은 요구 사항을 충족하는 이 가용성 그룹에 대한 가용성 복제본을 호스팅하는 서버 인스턴스의 쉼표로 구분된 목록을 지정합니다.  
   
 -   모든 연결 또는 읽기 전용 연결을 허용하도록 구성되어야 합니다(위에서 SECONDARY_ROLE 옵션의 ALLOW_CONNECTIONS 인수 참조).  
   
@@ -450,25 +450,25 @@ CREATE AVAILABILITY GROUP group_name
 > [!IMPORTANT]  
 >  프로덕션 환경에서는 DHCP를 사용하지 않는 것이 좋습니다. 중단 시간이 있고 DHCP IP 임대가 만료되는 경우 수신기 DNS 이름과 연결되고 클라이언트 연결에 영향을 주는 새 DHCP 네트워크 IP 주소를 등록하기 위해 추가 시간이 필요합니다. 그러나 가용성 그룹의 기본 기능을 확인하고 애플리케이션과 통합하기 위해 DHCP를 개발 및 테스트 환경에 설정하는 것은 좋습니다.  
   
- 다음은 그 예입니다.  
+ 예를 들면 다음과 같습니다.  
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
  WITH IP **(** { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')**  |  **('** _ipv6\_address_ **')** } [ **,** ...*n* ] **)** [ **,** PORT **=** _listener\_port_ ]  
  DHCP를 사용하는 대신 가용성 그룹 수신기가 하나 이상의 고정 IP 주소를 사용할지 여부를 지정합니다. 여러 서브넷에서 가용성 그룹을 만들려면 각 서브넷의 수신기 구성에 하나의 고정 IP 주소가 필요합니다. 지정된 서브넷에 대해 고정 IP 주소는 IPv4 주소이거나 IPv6 주소일 수 있습니다. 새 가용성 그룹에 대한 복제본을 호스팅할 각 서브넷의 고정 IP 주소를 얻으려면 네트워크 관리자에게 문의하십시오.  
   
- 다음은 그 예입니다.  
+ 예를 들면 다음과 같습니다.  
   
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
  *ip4_address*  
- 가용성 그룹 수신기에 대해 네 부분으로 된 IPv4 주소를 지정합니다. `10.120.19.155`)을 입력합니다.  
+ 가용성 그룹 수신기에 대해 네 부분으로 된 IPv4 주소를 지정합니다. 예들 들어 `10.120.19.155`입니다.  
   
  *ipv4_mask*  
- 가용성 그룹 수신기에 대해 네 부분으로 된 IPv4 마스크를 지정합니다. `255.255.254.0`)을 입력합니다.  
+ 가용성 그룹 수신기에 대해 네 부분으로 된 IPv4 마스크를 지정합니다. 예들 들어 `255.255.254.0`입니다.  
   
  *ipv6_address*  
- 가용성 그룹 수신기의 IPv6 주소를 지정합니다. `2001::4898:23:1002:20f:1fff:feff:b3a3`)을 입력합니다.  
+ 가용성 그룹 수신기의 IPv6 주소를 지정합니다. 예들 들어 `2001::4898:23:1002:20f:1fff:feff:b3a3`입니다.  
   
  PORT **=** *listener_port*  
  WITH IP 절에서 지정된 가용성 그룹 수신기에서 사용될 포트 번호(*listener_port*)를 지정합니다. PORT는 선택적입니다.  
@@ -487,7 +487,7 @@ CREATE AVAILABILITY GROUP group_name
 ### <a name="permissions"></a>사용 권한  
  CREATE AVAILABILITY GROUP 서버 권한, ALTER ANY AVAILABILITY GROUP 권한, CONTROL SERVER 권한 중 하나와 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-configuring-backup-on-secondary-replicas-flexible-failover-policy-and-connection-access"></a>A. 보조 복제본, 유연한 장애 조치(failover) 정책 및 연결 액세스에 대한 백업 구성  
  다음 예에서는 두 개의 사용자 데이터베이스 `MyAg` 및 `ThisDatabase`에 대해 `ThatDatabase`라는 가용성 그룹을 만듭니다. 다음 표에는 가용성 그룹 전체에 대해 설정되는 옵션에 지정되는 값이 요약되어 있습니다.  
@@ -496,7 +496,7 @@ CREATE AVAILABILITY GROUP group_name
 |------------------|-------------|-----------------|  
 |AUTOMATED_BACKUP_PREFERENCE|SECONDARY|이 자동화된 백업 기본 설정은 주 복제본이 유일한 온라인 복제본일 경우(기본 동작)를 제외하고 백업이 보조 복제본에서 수행되도록 지정합니다. 자동화된 백업 기본 설정을 고려하도록 가용성 데이터베이스에서 백업 작업을 스크립팅해야 AUTOMATED_BACKUP_PREFERENCE 설정이 적용됩니다.|  
 |FAILURE_CONDITION_LEVEL|3|이 오류 상태 수준 설정은 분리된 spinlock, 중대한 쓰기 액세스 위반 또는 과도한 덤프와 같이 심각한 SQL Server 내부 오류가 발생할 경우 자동 장애 조치(failover)를 시작하도록 지정합니다.|  
-|HEALTH_CHECK_TIMEOUT|600000|이 상태 확인 제한 시간 값(60초)은 WSFC 클러스터에서 [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 시스템 저장 프로시저가 자동 장애 조치 모드의 동기-커밋 복제본을 호스팅하는 서버 인스턴스에 대한 서버 상태 정보를 반환할 때까지 60000밀리초 동안 기다리도록 지정합니다. 이 시간이 지나면 클러스터에서 호스트 서버 인스턴스가 느리거나 중단된 것으로 간주합니다. 기본값은 30,000밀리초입니다.|  
+|HEALTH_CHECK_TIMEOUT|600000|이 상태 확인 제한 시간 값(60초)은 WSFC 클러스터에서 [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 시스템 저장 프로시저가 자동 장애 조치 모드의 동기-커밋 복제본을 호스팅하는 서버 인스턴스에 대한 서버 상태 정보를 반환할 때까지 60000밀리초 동안 기다리도록 지정합니다. 이 시간이 지나면 클러스터에서 호스트 서버 인스턴스가 느리거나 응답하지 않는 것으로 간주합니다. 기본값은 30,000밀리초입니다.|  
   
  세 가지 가용성 복제본은 `COMPUTER01`, `COMPUTER02` 및 `COMPUTER03`이라는 컴퓨터의 기본 서버 인스턴스가 호스팅합니다. 다음 표에는 각 복제본의 복제본 옵션에 지정되는 값이 요약되어 있습니다.  
   
@@ -584,6 +584,3 @@ GO
  [Always On 가용성 그룹 구성 문제 해결&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
-  
-  
-

@@ -14,15 +14,15 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 971848a9feddd9cff64bafb5cadf36ab8bdc01e3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e7eefffe6d401c401c7fffa290000a63f4947f0d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288277"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006225"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>페이지 및 익스텐트 아키텍처 가이드
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 페이지는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기본 데이터 스토리지 단위입니다. 익스텐트는 물리적인 연속 페이지 8개의 모음입니다. 익스텐트는 효과적인 페이지 관리에 도움이 됩니다. 이 가이드에서는 모든 SQL Server 버전에서 페이지 및 익스텐트를 관리하는 데 사용되는 데이터 구조에 대해 설명합니다. 페이지 및 익스텐트의 아키텍처에 대한 이해는 효율적으로 동작하는 데이터베이스를 디자인하고 개발하는 데 있어 중요합니다.
 
@@ -42,7 +42,7 @@ ms.locfileid: "79288277"
 
 |페이지 유형 | 콘텐츠 |
 |-------|-------|
-|data |text in row를 ON으로 설정한 경우 온갖 데이터를 포함한 데이터 행. 단, 텍스트, ntext, 이미지, nvarchar(max), varchar(max), varbinary(max), xml 데이터 제외. |
+|데이터 |text in row를 ON으로 설정한 경우 온갖 데이터를 포함한 데이터 행. 단, 텍스트, ntext, 이미지, nvarchar(max), varchar(max), varbinary(max), xml 데이터 제외. |
 |인덱스 |인덱스 항목 |
 |텍스트/이미지 |LOB(Large Object) 데이터 유형: (텍스트, ntext, 이미지, nvarchar(max), varchar(max), varbinary(max), xml 데이터) <br> 데이터 행이 8KB를 초과하는 경우 가변 길이 열: (varchar, nvarchar, varbinary, and sql_variant) |
 |전역 할당 맵, 공유 전역 할당 맵 |익스텐트가 할당되었는지 여부에 대한 정보 |
@@ -162,7 +162,7 @@ IAM 페이지는 파일에서 4GB 범위를 처리하며 이는 GAM 또는 SGAM 
 IAM 페이지는 필요에 따라 각 할당 단위에 대해 할당되고 파일에서 임의의 위치에 배치됩니다. 시스템 뷰(sys.system_internals_allocation_units)는 할당 단위에 대한 첫 번째 IAM 페이지를 가리킵니다. 해당 할당 단위에 대한 모든 IAM 페이지는 체인으로 연결됩니다.
 
 > [!IMPORTANT]
-> `sys.system_internals_allocation_units` 시스템 뷰는 내부 전용이며 변경될 수 있습니다. 호환성은 보장되지 않습니다.
+> `sys.system_internals_allocation_units` 시스템 뷰는 내부 전용이며 변경될 수 있습니다. 호환성은 보장되지 않습니다. 이 뷰는 Azure SQL Database에서 사용할 수 없습니다. 
 
 ![iam_chain](../relational-databases/media/iam-chain.gif)
  

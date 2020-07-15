@@ -27,15 +27,15 @@ ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c4d512136ef0ecee8550d27b95acce0d91c3749
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8bc1a652b84aeb088046d6b76d40cbd5227d3672
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632868"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011358"
 ---
 # <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 집합을 지정합니다. 이는 단순 쿼리에서 파생되며 단일 SELECT, INSERT, UPDATE, DELETE 또는 MERGE 문 실행 범위 내에서 정의됩니다. 이 절은 정의하는 SELECT 문의 일부로 CREATE VIEW 문 내에서도 사용할 수 있습니다. 공통 테이블 식은 자신에 대한 참조를 포함할 수 있으며 이를 재귀 공통 테이블 식이라 합니다.  
   
@@ -173,7 +173,7 @@ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 �
   
 -   `sp_prepare`에서 준비한 명령문에 사용될 때 CTE는 PDW의 다른 `SELECT` 문과 같은 방식으로 작동합니다. 그러나 CTE가 `sp_prepare`에서 준비한 CETAS의 일부로서 사용되는 경우 그 동작은 바인딩이 `sp_prepare`에 대해 구현되는 방식 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 기타 PDW 문에서 지연될 수 있습니다. CTE를 참조하는 `SELECT`가 CTE에 존재하지 않는 잘못된 열을 사용하고 있는 경우, `sp_prepare`는 오류를 탐지하지 않고 지나가지만 대신 `sp_execute` 동안 오류가 throw됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-creating-a-simple-common-table-expression"></a>A. 간단한 공통 테이블 식 만들기  
  다음 예에서는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]에서 각 판매 담당자의 연간 총 판매 주문 수를 보여 줍니다.  

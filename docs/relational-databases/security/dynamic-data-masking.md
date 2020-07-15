@@ -1,5 +1,6 @@
 ---
 title: 동적 데이터 마스킹 | Microsoft 문서
+description: 중요한 데이터를 권한이 없는 사용자에게 마스킹해 중요한 데이터 노출을 제한하는 동적 데이터 마스킹에 대해 알아봅니다. 이는 SQL Server의 보안을 크게 간소화할 수 있습니다.
 ms.date: 05/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
@@ -10,15 +11,15 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0f2a5d652b23efec6b4dd1c6d021f85e1155247
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bf3c9a827a4a3318bbee7e550aa8759a8dcc0eb4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67997719"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005591"
 ---
 # <a name="dynamic-data-masking"></a>동적 데이터 마스킹
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 ![동적 데이터 마스킹](../../relational-databases/security/media/dynamic-data-masking.png)
 
@@ -40,7 +41,7 @@ DDM(동적 데이터 마스킹)에서는 권한이 없는 사용자로 마스킹
 ## <a name="defining-a-dynamic-data-mask"></a>동적 데이터 마스크 정의
  해당 열에서 데이터 난독 처리를 위해 테이블의 열에 마스킹 규칙을 정의할 수 있습니다. 네 가지 유형의 마스크를 사용할 수 있습니다.  
   
-|함수|Description|예|  
+|함수|Description|예제|  
 |--------------|-----------------|--------------|  
 |기본값|지정된 필드의 데이터 형식에 따라 전체 마스킹.<br /><br /> 문자열 데이터 형식의 경우 필드의 크기가 4자 미만인 경우 XXXX 미만의 X를 사용합니다(**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> 숫자 데이터 형식의 경우 영(0) 값을 사용합니다(**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> 날짜 및 시간 데이터 형식의 경우 01.01.1900 00:00:00.0000000(**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**)을 사용합니다.<br /><br />이진 데이터 형식의 경우 단일 바이트의 ASCII 값 0을 사용합니다(**binary**, **varbinary**, **image**).|열 정의 구문 예제: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> 변경 구문의 예제: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
 |Email|이메일 주소의 형식에서 이메일 주소의 첫 번째 문자와 상수 접미사 ".com"을 표시하는 마스킹 방법입니다. `aXXX@XXXX.com`입니다.|정의 구문 예제: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> 변경 구문의 예제: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
@@ -105,7 +106,7 @@ SELECT ID, Name, Salary FROM Employees
 WHERE Salary > 99999 and Salary < 100001;
 ```
 
->    |  Id | 속성| 급여 |   
+>    |  Id | Name| 급여 |   
 >    | ----- | ---------- | ------ | 
 >    |  62543 | Jane Doe | 0 | 
 >    |  91245 | John Smith | 0 |  
@@ -115,7 +116,7 @@ WHERE Salary > 99999 and Salary < 100001;
 데이터베이스에 대한 권한을 제대로 관리하고 항상 필요한 최소 권한 원칙에 따르는 것이 중요합니다. 또한 감사를 사용하도록 설정하여 데이터베이스에서 수행하는 모든 활동을 추적해야 합니다.
 
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="creating-a-dynamic-data-mask"></a>동적 데이터 마스크 만들기  
  다음 예에서는 세 가지 유형의 동적 데이터 마스크가 있는 테이블을 만듭니다. 이 예제는 테이블을 채우며 결과를 표시하도록 선택합니다.  

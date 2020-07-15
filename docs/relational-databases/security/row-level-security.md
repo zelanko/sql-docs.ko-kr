@@ -1,5 +1,6 @@
 ---
 title: 행 수준 보안 | Microsoft 문서
+description: 행 수준 보안이 그룹 멤버 자격 또는 실행 컨텍스트를 사용하여 SQL Server 내 데이터베이스 테이블의 행에 대한 액세스를 제어하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 05/14/2019
 ms.prod: sql
@@ -17,16 +18,16 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5573bcc6762e8a03651ba1573bc6254aaa2c80a0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78288971"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000532"
 ---
 # <a name="row-level-security"></a>행 수준 보안
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   ![행 수준 보안 그래픽](../../relational-databases/security/media/row-level-security-graphic.png "행 수준 보안 그래픽")  
   
@@ -41,7 +42,7 @@ RLS는 [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-tr
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([이해하기](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
   
 > [!NOTE]
-> Azure SQL Data Warehouse는 필터 조건자만 지원합니다. 차단 조건자는 현재 Azure SQL Data Warehouse에서 지원되지 않습니다.
+> Azure Synapse는 필터 조건자만 지원합니다. 차단 조건자는 현재 Azure Synapse에서 지원되지 않습니다.
 
 ## <a name="description"></a><a name="Description"></a> 설명
 
@@ -85,7 +86,7 @@ RLS는 두 가지 유형의 보안 조건자를 지원합니다.
   
 - UPDATE에 대한 차단 조건자는 BEFORE 및 AFTER에 대해 별도의 작업으로 분할됩니다. 따라서 예를 들어 사용자가 행을 현재보다 큰 값으로 업데이트하는 것을 차단할 수 없습니다. 이러한 종류의 논리가 필요한 경우 [DELETED 및 INSERTED](../triggers/use-the-inserted-and-deleted-tables.md) 중간 테이블과 함께 트리거를 사용하여 이전 값과 새 값을 함께 참조해야 합니다.  
   
-- 최적화 프로그램은 조건자 함수에서 사용하는 열이 변경되지 않은 경우 AFTER UPDATE 차단 조건자를 확인하지 않습니다. 다음은 그 예입니다.  Alice는 급여를 100,000보다 크게 변경할 수 없습니다. 조건자에서 참조되는 열이 변경되지 않은 경우 Alice는 급여가 이미 100,000보다 큰 직원의 주소를 변경할 수 있습니다.  
+- 최적화 프로그램은 조건자 함수에서 사용하는 열이 변경되지 않은 경우 AFTER UPDATE 차단 조건자를 확인하지 않습니다. 예를 들면 다음과 같습니다. Alice는 급여를 100,000보다 크게 변경할 수 없습니다. 조건자에서 참조되는 열이 변경되지 않은 경우 Alice는 급여가 이미 100,000보다 큰 직원의 주소를 변경할 수 있습니다.  
   
 - BULK INSERT를 포함하여 대량 API에 적용된 변경 내용은 없습니다. 따라서 일반적인 삽입 작업과 마찬가지로 차단 조건자 AFTER INSERT가 대량 삽입 작업에 적용됩니다.  
   
@@ -159,7 +160,7 @@ RLS는 두 가지 유형의 보안 조건자를 지원합니다.
   
 - **파일 스트림:** RLS는 파일 스트림과 호환되지 않습니다.  
   
-- **PolyBase:** RLS는 Azure SQL Data Warehouse의 경우에만 Polybase 외부 테이블과 함께 지원됩니다.
+- **PolyBase:** RLS는 Azure Synapse에서만 Polybase 외부 테이블을 이용하여 지원됩니다.
 
 - **메모리 최적화 테이블:** 메모리 최적화 테이블에서 보안 조건자로 사용되는 인라인 테이블 반환 함수는 `WITH NATIVE_COMPILATION` 옵션을 사용하여 정의해야 합니다. 이 옵션을 사용하면 메모리 최적화 테이블에서 지원되지 않는 언어 기능이 차단되며 만들 때 해당 오류가 발생합니다. 자세한 내용은 **메모리 액세스에 최적화된 테이블 소개** 의 [메모리 액세스에 최적화된 테이블의 행 수준 보안](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)섹션을 참조하세요.  
   
@@ -185,8 +186,6 @@ RLS는 두 가지 유형의 보안 조건자를 지원합니다.
   
  서로 다른 액세스 기능을 보여주는 3개의 사용자 계정을 만듭니다.  
 
-> [!NOTE]
-> Azure SQL Data Warehouse는 EXECUTE AS USER를 지원하지 않으므로 각 사용자에 대한 CREATE LOGIN을 미리 만들어야 합니다. 나중에 적절한 사용자로 로그인하여 이 동작을 테스트합니다.
 
 ```sql  
 CREATE USER Manager WITHOUT LOGIN;  
@@ -273,10 +272,6 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;
 REVERT;  
 ```
-
-> [!NOTE]
-> Azure SQL Data Warehouse는 EXECUTE AS USER를 지원하지 않으므로 적절한 사용자로 로그인하여 위의 동작을 테스트합니다.
-
 관리자는 6개의 행을 모두 볼 수 있습니다. Sales1 및 Sales2 사용자는 자신의 판매 행만 볼 수 있습니다.
 
 정책을 사용하지 않도록 보안 정책을 변경합니다.
@@ -301,7 +296,7 @@ DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
 ```
 
-### <a name="b-scenarios-for-using-row-level-security-on-an-azure-sql-data-warehouse-external-table"></a><a name="external"></a> 2. Azure SQL Data Warehouse 외부 테이블에 행 수준 보안을 사용하는 시나리오
+### <a name="b-scenarios-for-using-row-level-security-on-an-azure-synapse-external-table"></a><a name="external"></a> 2. Azure Synapse 외부 테이블에 행 수준 보안을 사용하는 시나리오
 
 이 간단한 예제에서는 3명의 사용자와 6개의 행이 있는 외부 테이블을 만듭니다. 그런 다음 외부 테이블에 대한 인라인 테이블 반환 함수 및 보안 정책을 만듭니다. 예에서는 select 문이 다양한 사용자를 필터링하는 방법을 보여줍니다.
 
@@ -345,7 +340,7 @@ INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 SELECT * FROM Sales;
 ```
 
-만들어진 Sales 테이블에서 Azure SQL Data Warehouse 외부 테이블을 만듭니다.
+생성된 Sales 테이블에서 Azure Synapse 외부 테이블을 만듭니다.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'somepassword';
@@ -394,7 +389,7 @@ WITH (STATE = OFF);
 
 이제 Sales1 및 Sales2 사용자가 6개의 행을 모두를 볼 수 있습니다.
 
-SQL Data Warehouse 데이터베이스에 연결하여 리소스 정리
+Azure Synapse 데이터베이스에 연결하여 리소스 정리
 
 ```sql
 DROP USER Sales1;
@@ -421,7 +416,7 @@ DROP LOGIN Manager;
 ### <a name="c-scenario-for-users-who-connect-to-the-database-through-a-middle-tier-application"></a><a name="MidTier"></a> 3. 중간 계층 애플리케이션을 통해 데이터베이스에 연결하는 사용자에 대한 시나리오
 
 > [!NOTE]
-> 이 예제 블록에서는 조건자 기능은 현재 Azure SQL Data Warehouse에 대해 지원되지 않으므로 잘못된 사용자 ID의 행을 삽입하면 Azure SQL Data Warehouse에서 차단됩니다.
+> 이 예제 블록에서는 조건자 기능이 현재 Azure Synapse에 대해 지원되지 않으므로 잘못된 사용자 ID의 행을 삽입해도 Azure Synapse에서 차단되지 않습니다.
 
 이 예는 중간 계층 애플리케이션이 애플리케이션 사용자(또는 테넌트)가 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자(애플리케이션)을 공유하는 연결 필터링을 구현하는 방법을 보여줍니다. 데이터베이스에 연결한 후 애플리케이션이 [SESSION_CONTEXT&#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) 에서 현재 애플리케이션 사용자 ID를 설정하면 보안 정책이 이 ID에 표시되지 않아야 하는 행을 투명하게 필터링하고 사용자가 잘못된 사용자 ID에 대한 행을 삽입하지 못하도록 차단합니다. 다른 응용 프로그램은 변경하지 않아도 됩니다.  
   

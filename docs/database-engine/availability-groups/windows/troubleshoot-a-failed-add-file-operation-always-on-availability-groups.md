@@ -1,6 +1,6 @@
 ---
 title: 실패한 가용성 그룹 파일 추가 작업
-decription: Possible resolutions for failing to add a file to an availability group.
+description: Always On 가용성 그룹에서 실패한 파일 추가 작업 문제 해결 주 복제본과 보조 복제본을 호스트하는 시스템 간에 파일 경로가 다를 수 있습니다.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 31ceaebf-864b-4dd0-9112-0d047b0316ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1655992526096035eb109821d8950980921951ad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d2cffb3b857e7d75bc8429876fd30b5a66f54c1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251223"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900686"
 ---
 # <a name="troubleshoot-a-failed-add-file-operation-always-on-availability-groups"></a>실패한 파일 추가 작업 문제 해결(Always On 가용성 그룹)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   일부 Always On 가용성 그룹 배포의 경우 주 복제본을 호스트하는 시스템과 보조 복제본을 호스트하는 시스템 간의 파일 경로가 다릅니다. 파일 추가 작업의 파일 경로가 보조 복제본에 존재하지 않는 경우 파일 추가 작업이 기본 데이터베이스에서 성공합니다. 하지만 파일 추가 작업으로 인해 보조 데이터베이스가 일시 중지될 수 있습니다. 이로 인해 보조 복제본이 NOT SYNCHRONIZING 상태가 됩니다.  
   

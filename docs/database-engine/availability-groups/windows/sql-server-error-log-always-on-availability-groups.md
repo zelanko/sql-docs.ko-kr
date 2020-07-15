@@ -1,6 +1,6 @@
 ---
 title: SQL Server 오류 로그(가용성 그룹)
-description: Always On 가용성 그룹에서 보고한 오류 로그 이벤트에 대한 설명입니다.
+description: Always On 가용성 그룹에 영향을 주는 SQL Server 오류 로그 이벤트 및 오류 로그를 검토해야 하는 증상에 대해 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 39d0c98d-75af-4dd1-b908-30d31af56f2a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81d31225838ec029a020af2df25753b26acd2fb1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c44f65761fcb54d8ad9b8eac0fc5e02bce82181
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251256"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898078"
 ---
 # <a name="sql-server-error-log-always-on-availability-groups"></a>SQL Server 오류 로그(Always On 가용성 그룹)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   SQL Server 오류 로그는 다음과 같은 Always On 가용성 그룹에 영향을 주는 이벤트를 보고합니다.  
   
 -   WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터와 통신    

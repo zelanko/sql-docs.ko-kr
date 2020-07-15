@@ -1,5 +1,6 @@
 ---
 title: SQL 삽입 | Microsoft 문서
+description: SQL 삽입 공격의 작동 방식에 대해 알아봅니다. SQL Server에서 입력의 유효성을 검사하고 SQL 삽입 코드를 검토하여 이러한 공격을 완화합니다.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c591a2dbc9b3cb5a5d2964875410637efd3149d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e1cffa7f2d8c388b391a3bcb8cbe51ebd6ff1c2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68126864"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001033"
 ---
 # <a name="sql-injection"></a>SQL 삽입
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   SQL 삽입은 구문 분석 및 실행을 위해 나중에 SQL Server의 인스턴스로 전달된 문자열에 악성 코드를 삽입한 공격입니다. SQL Server는 구문상 유효한 모든 수신 쿼리를 실행하므로 SQL 문을 생성하는 모든 프로시저에 삽입과 관련한 취약성이 있는지 확인해야 합니다. 매개 변수가 있는 데이터도 숙련된 전문 공격자에 의해 조작될 수 있습니다.  
   
 ## <a name="how-sql-injection-works"></a>SQL 삽입의 작동 방식  
@@ -85,7 +86,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
   
 -   유효성 검사를 수행하지 않은 사용자 입력을 연결하지 않습니다. 문자열 연결은 스크립트 삽입이 발생하는 주요 진입점입니다.  
   
--   파일 이름이 생성될 수도 있는 필드에는 AUX, CLOCK$, COM1~COM8, CON, CONFIG$, LPT1~LPT8, NUL, PRN과 같은 문자열을 허용하지 않습니다.  
+-   파일 이름을 생성하는 데 사용될 수 있는 필드에는 AUX, CLOCK$, COM1~COM8, CON, CONFIG$, LPT1~LPT8, NUL, PRN과 같은 문자열을 허용하지 않습니다.  
   
  가능한 경우 다음 문자가 포함된 입력을 거부합니다.  
   

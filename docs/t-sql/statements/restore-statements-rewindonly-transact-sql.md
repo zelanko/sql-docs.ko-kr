@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d7629abf8e458ccbc2cb1b24624d0cbb91918830
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 50f114b01f72f48dd0ebd28123dfabdeef3a4b91
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625728"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896585"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE 문 - REWINDONLY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   NOREWIND 옵션을 사용하여 실행된 BACKUP 또는 RESTORE 문에 의해 열려 있는 지정한 테이프 디바이스를 되감아 닫습니다. 이 명령은 테이프 디바이스에서만 지원됩니다.  
   
@@ -64,7 +64,7 @@ FROM <backup_device> [ ,...n ]
  데이터베이스가 복원되는 **sp_addumpdevice**에서 만든 백업 디바이스의 논리적 이름입니다. 이 논리적 이름은 식별자에 대한 규칙을 따라야 합니다. 변수( **@** _logical\_backup\_device\_name\_var_)로 제공한 경우 백업 디바이스 이름은 문자열 상수( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_)나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
   
  {DISK | TAPE } **=** { **'** _physical\_backup\_device\_name_ **'**  |  **@** _physical\_backup\_device\_name\_var_ }  
- 지정한 디스크나 테이프 디바이스에서 백업을 복원할 수 있습니다. 디스크나 테이프의 디바이스 유형은 전체 경로와 파일 이름을 포함한 디바이스의 실제 이름으로 지정되어야 합니다. DISK = ‘C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' or TAPE = '\\\\.\TAPE0’. 변수( **@** _physical\_backup\_device\_name\_var_)로 지정한 경우 디바이스 이름은 문자열 상수( **@** _physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*')나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
+ 지정한 디스크나 테이프 디바이스에서 백업을 복원할 수 있습니다. 디스크나 테이프의 디바이스 유형은 디바이스의 실제 이름(예:전체 경로 및 파일 이름)인 DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' 또는 TAPE = '\\\\.\TAPE0'으로 지정해야 합니다. 변수( **@** _physical\_backup\_device\_name\_var_)로 지정한 경우 디바이스 이름은 문자열 상수( **@** _physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*')나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
   
  네트워크 서버에 UNC 이름(컴퓨터 이름 포함)을 사용하는 경우 디스크의 디바이스 유형을 지정합니다. UNC 이름 사용에 대한 자세한 내용은 [백업 디바이스&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
   

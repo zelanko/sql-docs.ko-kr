@@ -26,15 +26,15 @@ ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7efc30e37b1242c66df856f79944de687650b99d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a2d74236b0c58776a43f4f2a56f7f240de72d2c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982574"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002504"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   하나 이상의 테이블 열, 인덱싱된 뷰 또는 외부 테이블에 대한 쿼리 최적화 통계를 만듭니다. 쿼리 최적화 프로그램은 대부분의 쿼리에 대해 고품질의 쿼리 계획에 필요한 통계를 기본적으로 생성합니다. 따라서 쿼리 성능을 향상시키기 위해 CREATE STATISTICS를 사용하여 추가 통계를 만들거나 쿼리 설계를 수정해야 하는 경우는 드뭅니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73982574"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Create statistics on an external table  
@@ -88,7 +88,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
     [ PAGECOUNT = numeric_contant ] 
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE STATISTICS statistics_name   
@@ -199,7 +199,7 @@ CREATE STATISTICS statistics_name
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상  
   
 MAXDOP = *max_degree_of_parallelism*  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작)  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작).  
   
  통계 작업 기간 동안 **최대 병렬 처리 수준** 구성 옵션을 재정의합니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
@@ -243,8 +243,9 @@ MAXDOP = *max_degree_of_parallelism*
 * 정적 개체당 최대 64개의 열을 나열할 수 있습니다.
 * MAXDOP 옵션은 STATS_STREAM, ROWCOUNT 및 PAGECOUNT 옵션과 호환되지 않습니다.
 * MAXDOP 옵션은 Resource Governor 워크로드 그룹 MAX_DOP 설정으로 제한됩니다(사용된 경우).
+* 외부 테이블에 대한 CREATE 및 DROP STATISTICS는 Azure SQL Database에서 지원되지 않습니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 
 ### <a name="examples-use-the-adventureworks-database"></a>예제에서는 AdventureWorks 데이터베이스를 사용합니다.  
 
@@ -278,7 +279,7 @@ GO
 ```  
   
 ### <a name="d-create-statistics-on-an-external-table"></a>D. 외부 테이블에 대한 통계 만들기  
- 열 목록을 제공하는 것을 제외하고, 외부 테이블에 대한 통계를 만들 때 내려야 하는 유일한 결정은 통계를 만드는 방법이 행 샘플링인지 아니면 모든 행 검사인가 하는 것입니다.  
+ 열 목록을 제공하는 것을 제외하고, 외부 테이블에 대한 통계를 만들 때 내려야 하는 유일한 결정은 통계를 만드는 방법이 행 샘플링인지 아니면 모든 행 검사인가 하는 것입니다. 외부 테이블에 대한 CREATE 및 DROP STATISTICS는 Azure SQL Database에서 지원되지 않습니다.
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 통계를 만들기 위해 외부 테이블의 데이터를 임시 테이블로 가져오므로 전체 검사 옵션이 훨씬 더 오래 걸립니다. 큰 테이블의 경우 일반적으로 기본 샘플링 방법으로 충분합니다.  
   
