@@ -46,14 +46,15 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8c9b9fb9b58cee42c11e821e940966f2acce498
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6c16150f2023a863bbdcbecb138cc7ff6053b26a
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000711"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381217"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX(Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   인덱스를 사용하지 않도록 설정, 다시 빌드 또는 다시 구성하거나 인덱스에 대한 옵션을 설정하여 기존 테이블 또는 뷰 인덱스(rowstore, columnstore, 또는 XML)를 수정합니다.  
@@ -173,6 +174,9 @@ ALTER INDEX { index_name | ALL }
 }  
   
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>인수
 
  *index_name*  
@@ -677,8 +681,8 @@ WAIT_AT_LOW_PRIORITY는 **RESUMABLE=ON** 및 **ONLINE = ON** 상태에서만 사
   
 행 또는 페이지 잠금 옵션이 설정된 경우 ALL을 지정하면 설정이 모든 인덱스에 적용됩니다. 기본 테이블이 힙인 경우 다음과 같은 방식으로 설정이 적용됩니다.  
   
-|||  
-|-|-|  
+|옵션|세부 정보|
+|------|-------|
 |ALLOW_ROW_LOCKS = ON 또는 OFF|힙 및 연결된 비클러스터형 인덱스|  
 |ALLOW_PAGE_LOCKS  =  ON|힙 및 연결된 비클러스터형 인덱스|  
 |ALLOW_PAGE_LOCKS  =  OFF|비클러스터형 인덱스 전체. 즉, 비클러스터형 인덱스에는 모든 페이지 잠금이 허용되지 않습니다. 힙에서는 페이지에 대한 공유(S), 업데이트(U) 및 배타(X) 잠금만 허용되지 않습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 내부에서 사용하기 위해 의도 페이지 잠금(IS, IU 또는 IX)을 획득할 수 있습니다.|  

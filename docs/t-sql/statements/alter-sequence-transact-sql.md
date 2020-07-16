@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d17c59e38b30ef8492d20348e06cbc9ac75c0c5e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3b6b37879dc3f2e274a5cd322f14cd9050c66a2d
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735963"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381087"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE(Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,9 @@ ALTER SEQUENCE [schema_name. ] sequence_name
     [ ; ]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *sequence_name*  
  데이터베이스에서 시퀀스를 식별하는 고유 이름을 지정합니다. 형식은 **sysname**입니다.  
   

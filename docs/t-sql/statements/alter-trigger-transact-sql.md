@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c9759a56800cd03c107fb9f578e9af2dbe86d1d5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a038026afd2e15ffda6f5f78a63704fa1d6bcad4
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760932"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380946"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -135,7 +135,9 @@ AS { sql_statement
     [ <EXECUTE AS Clause> ]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *schema_name*  
  DML 트리거가 속한 스키마의 이름입니다. DML 트리거는 트리거가 생성된 테이블 또는 뷰의 스키마로 한정됩니다. *schema**_name*은 DML 트리거 및 해당 테이블 또는 뷰가 기본 스키마에 속하는 경우에만 선택 사항입니다. *schema_name*은 DDL 또는 LOGON 트리거에 대해 지정될 수 없습니다.  
   

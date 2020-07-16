@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6f1104cd79b862fff0371c5b53ed6599854e6401
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a51d04f848e86c5b8dc242cd959aef6da393aa38
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895607"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381147"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +58,10 @@ ALTER RESOURCE POOL { pool_name | "default" }
 {NUMA_node_ID | NUMA_node_ID TO NUMA_node_ID}[,...n]  
 ```  
   
-## <a name="arguments"></a>인수  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  { *pool_name* |  **"default"** }  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 설치될 때 만들어지는 기본 리소스 풀이나 기존 사용자 정의 리소스 풀의 이름입니다.  
   
