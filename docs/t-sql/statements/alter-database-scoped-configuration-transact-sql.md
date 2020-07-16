@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: a37a0b4c0f474323680213d3719ae85cff7a5ecc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3812f2f7e2f41259416147e969ceb90e395b5bbb
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895686"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279499"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 
@@ -191,6 +191,8 @@ PRIMARY
 <a name="qo_hotfixes"></a> QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }
 
 데이터베이스의 호환성 수준에 관계없이 쿼리 최적화 프로그램 핫픽스를 사용하거나 사용하지 않도록 설정합니다. 기본값은 **OFF**이며 가장 높은 호환성 수준이 특정 버전(RTM 이후)에 대해 도입된 후에 릴리스된 쿼리 최적화 프로그램 핫픽스를 비활성화합니다. 이 값을 **ON**으로 설정하면 [추적 플래그 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 활성화하는 것과 동일합니다.
+
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 > [!TIP]
 > 쿼리 수준에서 이 작업을 수행하려면 **QUERYTRACEON** [쿼리 힌트](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 추가합니다.

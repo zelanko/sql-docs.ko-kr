@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a730a27af13836cb2eb01aab12cc4d8b718ec277
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3574e981ad09555533a7dc96e8ede27c50f9339d
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85761006"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380956"
 ---
 # <a name="alter-symmetric-key-transact-sql"></a>ALTER SYMMETRIC KEY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,8 +54,10 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
    |  
    ASYMMETRIC KEY Asym_Key_Name  
 ```  
-  
-## <a name="arguments"></a>인수  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *Key_name*  
  데이터베이스에서 변경할 대칭 키를 식별하는 이름입니다.  
   

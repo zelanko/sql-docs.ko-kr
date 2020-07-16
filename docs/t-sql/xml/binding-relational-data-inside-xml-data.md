@@ -1,5 +1,5 @@
 ---
-title: XML 데이터 내 관계형 데이터 바인딩 | Microsoft Docs
+title: XML 데이터 내 관계형 데이터 바인딩
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7a3dfe3480b6f2756ebff68f27574c8b72f6ae61
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fce46e032fa908bde53262c9f6dddea3c8d46d90
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751443"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392841"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>XML 데이터 내 관계형 데이터 바인딩
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "85751443"
   
  또한 이 바인딩은 읽기 전용으로만 사용됩니다. 즉, 이러한 함수를 사용하는 열에는 데이터를 기록할 수 없습니다. 예를 들어 sql:variable("\@x")="*some expression"* 은 허용되지 않습니다.  
   
-## <a name="example-cross-domain-query-using-sqlvariable"></a>예: sql:variable()을 사용한 도메인 간 쿼리  
+## <a name="example-cross-domain-query-using-sqlvariable"></a>예제: sql:variable()을 사용하는 도메인 간 쿼리  
  이 예에서는 애플리케이션에서 **sql:variable()** 을 사용하여 쿼리를 매개 변수화하는 방법을 보여 줍니다. ISBN은 SQL 변수 @isbn을 사용하여 전달됩니다. 상수를 **sql:variable()** 로 바꿈으로써 0-7356-1588-2인 ISBN뿐만 아니라 다른 모든 ISBN을 검색하는 데 쿼리를 사용할 수 있습니다.  
   
 ```  

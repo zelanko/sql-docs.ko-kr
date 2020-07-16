@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 834f3e28b8e368b29c2465f44f6a23528ad32626
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f26d4324170b6a8c35b1785865c0ba614a3a181c
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781087"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279162"
 ---
 # <a name="mssqlserver_137"></a>MSSQLSERVER_137
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,36 +35,42 @@ ms.locfileid: "85781087"
 ## <a name="explanation"></a>설명  
 이 오류는 SQL 스크립트에서 변수를 먼저 선언하지 않고 사용하는 경우에 발생합니다. 다음 예에서는 **\@mycol**이 선언되지 않았으므로 SET 및 SELECT 문에 대해 오류 137이 반환됩니다.  
   
+```sql
 SET @mycol = 'ContactName';  
   
-SELECT @mycol;  
+SELECT @mycol; 
+```
   
 이 오류의 좀 더 복잡한 원인 중 하나로 EXECUTE 문 외부에서 선언된 변수를 사용하는 경우가 있습니다. 예를 들어 SELECT 문에 지정된 **\@mycol** 변수는 SELECT 문에서 로컬로 사용되므로 EXECUTE 문 외부에 있습니다.  
   
+```sql
 USE AdventureWorks2012;  
   
-이동  
+GO  
   
 DECLARE @mycol nvarchar(20);  
   
 SET @mycol = 'Name';  
   
-EXECUTE ('SELECT @mycol FROM Production.Product;');  
+EXECUTE ('SELECT @mycol FROM Production.Product;'); 
+```
   
 ## <a name="user-action"></a>사용자 동작  
 SQL 스크립트에서 변수를 사용하기 전에 해당 변수를 선언했는지 확인하십시오.  
   
 EXECUTE 문 외부에서 선언된 변수를 참조하지 않도록 스크립트를 다시 작성하십시오. 예를 들면 다음과 같습니다.  
   
+```sql
 USE AdventureWorks2012;  
   
-이동  
+GO  
   
 DECLARE @mycol nvarchar(20) ;  
   
 SET @mycol = 'Name';  
   
-EXECUTE ('SELECT ' + @mycol + ' FROM Production.Product';) ;  
+EXECUTE ('SELECT ' + @mycol + ' FROM Production.Product';) ;
+```
   
 ## <a name="see-also"></a>참고 항목  
 [EXECUTE&#40;Transact-SQL&#41;](~/t-sql/language-elements/execute-transact-sql.md)  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ec1b0f13f67d632a33b5fc53248a6c641e58bd71
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ffb26c669a819c3599c36cea15d47724def5bd87
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760973"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381287"
 ---
 # <a name="alter-table-computed_column_definition-transact-sql"></a>ALTER TABLE computed_column_definition(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,9 @@ column_name AS computed_column_expression
 ]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 *column_name*  
  변경, 추가 또는 삭제할 열의 이름입니다. *column_name*은 1~128자의 문자를 포함할 수 있습니다. 새 열의 경우 **timestamp** 데이터 형식으로 만들어진 열에 대해 *column_name*을 생략할 수 있습니다. **타임스탬프** 데이터 형식 열에 대해 *column_name*이 지정되지 않으면 **타임스탬프**가 이름으로 사용됩니다.  
   
