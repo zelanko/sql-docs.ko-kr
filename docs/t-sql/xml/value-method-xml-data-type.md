@@ -1,5 +1,5 @@
 ---
-title: value() 메서드(xml 데이터 형식) | Microsoft Docs
+title: value() 메서드(xml 데이터 형식)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c237be1e705fa5d6b13722ae3ef5bf47f0f9436c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 316b7fda88a274812f376a511ca5f26638f0cea6
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731018"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393011"
 ---
 # <a name="value-method-xml-data-type"></a>value() 메서드(xml 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,9 @@ ms.locfileid: "85731018"
 value (XQuery, SQLType)  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *XQuery*  
  XML 인스턴스 내에서 데이터를 검색하는 *XQuery* 식(문자열 리터럴)입니다. XQuery는 최대 하나의 값을 반환해야 합니다. 그렇지 않으면 오류가 반환됩니다.  
   
@@ -47,7 +49,7 @@ value (XQuery, SQLType)
 > [!NOTE]  
 >  성능상의 이유로 조건자에서 **value()** 메서드를 사용하여 관계형 값과 비교하는 대신 **sql:column()** 에서 **exist()** 를 사용하세요. 뒤에 나오는 예 4에서 이러한 작업 방법을 보여 줍니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-the-value-method-against-an-xml-type-variable"></a>A. xml 유형 변수에 대해 value() 메서드 사용  
  다음 예에서 XML 인스턴스는 `xml` 유형의 변수에 저장됩니다. `value()` 메서드는 XML에서 `ProductID` 특성 값을 검색합니다. 그런 다음 이 값은 `int` 변수에 할당됩니다.  
@@ -135,7 +137,7 @@ Result
 ```  
   
 ### <a name="d-using-the-exist-method-instead-of-the-value-method"></a>D. value() 메서드 대신 exist() 메서드 사용  
- 성능상의 이유로 조건자에서 `value()` 메서드를 사용하여 관계형 값과 비교하는 대신 `exist()`에서 `sql:column()`를 사용하세요. 다음은 그 예입니다.  
+ 성능상의 이유로 조건자에서 `value()` 메서드를 사용하여 관계형 값과 비교하는 대신 `exist()`에서 `sql:column()`를 사용하세요. 예를 들면 다음과 같습니다.  
   
 ```  
 CREATE TABLE T (c1 int, c2 varchar(10), c3 xml)  

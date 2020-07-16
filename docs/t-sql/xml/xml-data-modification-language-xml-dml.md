@@ -1,5 +1,5 @@
 ---
-title: XML DML(XML 데이터 수정 언어) | Microsoft Docs
+title: XML DML(XML 데이터 수정 언어)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 68a0f5f6a52baff0a4baaaad2741bf9ad9a6288e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ce5cb12d755319255497bac7b96cd3945e92a86d
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901603"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391830"
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>XML DML(XML 데이터 수정 언어)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "85901603"
   
 -   **modify()** 메서드 내부에 적합한 XML DML 문을 지정합니다.  
   
- 일부 특성은 해당 값을 삽입, 삭제 또는 수정할 수 없습니다. 다음은 그 예입니다.  
+ 일부 특성은 해당 값을 삽입, 삭제 또는 수정할 수 없습니다. 예를 들면 다음과 같습니다.  
   
 -   형식화된 또는 형식화되지 않은 **xml**의 경우 특성은 **xmlns**, **xmlns:\*** 및 **xml:base**입니다.  
   

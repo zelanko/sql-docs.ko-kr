@@ -1,5 +1,5 @@
 ---
-title: replace value of(XML DML) | Microsoft Docs
+title: replace value of(XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1269b119a6f8bdcfe14890a911a4dd6b0e618328
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 70ef0ec9f3cec26b7e0a55df770a3983d0d8594e
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731043"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393051"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of(XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,14 +36,16 @@ replace value of Expression1
 with Expression2  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 *Expression1*  
 업데이트할 값이 있는 노드를 식별합니다. 하나의 노드만 식별해야 합니다. 즉, *Expression1*은 정적 싱글톤이어야 합니다. XML이 형식화되는 경우 노드 유형은 단순 유형이어야 합니다. 노드를 여러 개 선택하면 오류가 발생합니다. *Expression1*이 빈 시퀀스를 반환하면 값이 대체되지 않고 오류가 반환되지 않습니다. *Expression1*은 단순 형식 콘텐츠(목록 또는 원자성 형식), 텍스트 노드 또는 특성 노드를 가진 단일 요소를 반환해야 합니다. *Expression1*은 공용 구조체 형식, 복합 형식, 처리 명령, 문서 노드 또는 주석 노드가 될 수 없습니다. 그렇지 않으면 오류가 반환됩니다.  
   
 *Expression2*  
 노드의 새 값을 식별합니다. **data()** 를 암시적으로 사용하므로 단순 형식 노드를 반환하는 식이 될 수 있습니다. 값이 값 목록일 경우 **update** 문은 이전 값을 목록으로 대체합니다. 형식화된 XML 인스턴스를 수정하는 경우 *Expression2*는 *Expression*1과 같은 유형이거나 그 하위 유형이어야 합니다. 그렇지 않으면 오류가 반환됩니다. 형식화되지 않은 XML 인스턴스를 수정할 경우 *Expression2*는 원자화될 수 있는 식이어야 합니다. 그렇지 않으면 오류가 반환됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 **replace value of** XML DML 문의 다음 예제에서는 XML 문서에서 노드를 업데이트하는 방법을 보여줍니다.  
   
 ### <a name="a-replacing-values-in-an-xml-instance"></a>A. XML 인스턴스에서 값 바꾸기  

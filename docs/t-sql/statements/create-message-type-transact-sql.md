@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a6f9ba5edd20795d7645b334694e6e80fa57c47
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 70cdaf07914a409e83c8fc291964d79ce706a808
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892540"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393191"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,7 +55,9 @@ CREATE MESSAGE TYPE message_type_name
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *message_type_name*  
  생성할 메시지 유형의 이름입니다. 새 메시지 유형은 현재 데이터베이스에 생성되고 AUTHORIZATION 절에서 지정한 보안 주체가 소유합니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다. *message_type_name*은 최대 128 자까지 사용할 수 있습니다.  
   

@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a862161b34edb675fc38086d75713d35840c39c8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 72029c32440feac5d69e015a060d92bd204ec4f6
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892505"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392881"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,9 @@ AS condition_expression
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *schema_name*  
  규칙이 속한 스키마의 이름입니다.  
   

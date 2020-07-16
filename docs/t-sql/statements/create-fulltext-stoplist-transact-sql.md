@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 966bf472bddc213ee639d200818eb1c95181135e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec2dac854349ad7e05fcbf9738b4cafb78228cc6
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767116"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392921"
 ---
 # <a name="create-fulltext-stoplist-transact-sql"></a>CREATE FULLTEXT STOPLIST(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,8 +53,10 @@ CREATE FULLTEXT STOPLIST stoplist_name
 [ AUTHORIZATION owner_name ]  
 ;  
 ```  
-  
-## <a name="arguments"></a>인수  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *stoplist_name*  
  중지 목록의 이름입니다. *stoplist_name*은 최대 128자까지 가능합니다. *stoplist_name*은 현재 데이터베이스 내의 모든 중지 목록 가운데 고유해야 하고 식별자에 대한 규칙을 따라야 합니다.  
   

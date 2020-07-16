@@ -1,5 +1,5 @@
 ---
-title: xml 데이터 형식 메서드 | Microsoft Docs
+title: xml 데이터 형식 메서드
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7ac83db43e546af3641622d709e1d1a746d3b892
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6f1cb562110c113b5d56f680dd1fa86ef41a4c23
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730994"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393251"
 ---
 # <a name="xml-data-type-methods"></a>xml 데이터 형식 메서드
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "85730994"
 |[XML 데이터 내 관계형 데이터 바인딩](../../t-sql/xml/binding-relational-data-inside-xml-data.md)|XML 내에 XML이 아닌 데이터를 바인딩하는 방법에 대해 설명합니다.|  
 |[xml 데이터 형식 메서드를 사용하기 위한 지침](../../t-sql/xml/guidelines-for-using-xml-data-type-methods.md)|**xml** 데이터 형식 메서드 사용에 대한 지침을 설명합니다.|  
   
- 사용자 정의 형식 메서드 호출 구문을 사용하여 이러한 메서드를 호출할 수 있습니다. 다음은 그 예입니다.  
+ 사용자 정의 형식 메서드 호출 구문을 사용하여 이러한 메서드를 호출할 수 있습니다. 예를 들면 다음과 같습니다.  
   
 ```  
 SELECT XmlCol.query(' ... ')  

@@ -1,5 +1,5 @@
 ---
-title: CREATE SEQUENCE(Transact-SQL) | Microsoft Docs
+title: CREATE SEQUENCE(Transact-SQL)
 ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: sql
@@ -22,14 +22,15 @@ helpviewer_keywords:
 ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 909bd52e325726f9874b29ebc791eb049e4c0daa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f350f2d2a9b1f4b90030f928792570cc80653916
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767049"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392961"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE(Transact-SQL)
+
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   시퀀스 개체를 만들고 해당 속성을 지정합니다. 시퀀스는 시퀀스를 만들 때 사용된 사양에 따라 숫자 값의 시퀀스를 생성하는 사용자 정의 스키마 바운드 개체입니다. 숫자 값의 시퀀스는 정의된 간격에 따라 오름차순이나 내림차순으로 생성되며, 시퀀스가 모두 사용되면 다시 시작(순환)되도록 구성할 수 있습니다. ID 열과 달리 시퀀스는 특정 테이블과 연결되지 않습니다. 애플리케이션에서는 시퀀스 개체를 참조하여 다음 값을 검색합니다. 시퀀스와 테이블 간의 관계는 애플리케이션에서 제어합니다. 사용자 애플리케이션에서는 시퀀스 개체를 참조하고 여러 행 및 테이블에서 값을 조정합니다.  
@@ -54,7 +55,9 @@ CREATE SEQUENCE [schema_name . ] sequence_name
     [ ; ]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 *sequence_name*  
 데이터베이스에서 시퀀스를 식별하는 고유 이름을 지정합니다. 형식은 **sysname**입니다.  
   
@@ -240,7 +243,7 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
   
  출력의 목록 일부는 기본값을 나타냅니다.  
   
-|||  
+| 출력 | 기본값|  
 |-|-|  
 |`start_value`|`-9223372036854775808`|  
 |`increment`|`1`|  

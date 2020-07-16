@@ -1,5 +1,5 @@
 ---
-title: insert(XML DML) | Microsoft Docs
+title: insert(XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fc19088f8ee34202b5157015ac9ef71a8d24922c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 895fda87dd1c78744f7f95b334927940c76fdcd7
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731072"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393071"
 ---
 # <a name="insert-xml-dml"></a>insert(XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ insert
                 )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *Expression1*  
  삽입할 하나 이상의 노드를 식별합니다. 이는 상수 XML 인스턴스, 수정 메서드가 적용되고 있는 XML 스키마 컬렉션과 동일하게 형식화된 XML 데이터 형식 인스턴스에 대한 참조, 독립 실행형 **sql:column()** /**sql:variable()** 함수를 사용하는 형식화되지 않은 XML 데이터 형식 인스턴스 또는 XQuery 식일 수 있습니다. 식 결과는 노드, 텍스트 노드 또는 노드의 정렬된 시퀀스일 수 있습니다. 루트(/) 노드로는 확인될 수 없습니다. 식 결과가 값이나 값의 시퀀스인 경우 해당 값은 시퀀스의 각 값을 구분하기 위한 공백이 포함된 단일 텍스트 노드로 삽입됩니다. 여러 노드를 상수로 지정하는 경우 괄호 안에 노드가 포함되고 쉼표로 구분됩니다. 요소, 특성 또는 값의 시퀀스와 같은 유형이 다른 시퀀스는 삽입할 수 없습니다. *Expression1*이 빈 시퀀스로 확인되는 경우 삽입이 수행되지 않고 오류가 반환되지 않습니다.  
   

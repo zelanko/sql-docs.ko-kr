@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8624eb00f1d3822b2e3e0f857c4d07eb36c2bcad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: adcf67cf64888101f2a5a7d704cbe91785791133
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895492"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393161"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,9 @@ FOR CONVERSATION
   
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *ConversationPriorityName*  
  이 대화 우선 순위의 이름을 지정합니다. 이름은 현재 데이터베이스에서 고유해야 하며 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다.  
   

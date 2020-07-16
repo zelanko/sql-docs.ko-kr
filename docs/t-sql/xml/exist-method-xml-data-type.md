@@ -1,5 +1,5 @@
 ---
-title: exist() 메서드(xml 데이터 형식) | Microsoft Docs
+title: exist() 메서드(xml 데이터 형식)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1f8b4c9b1526d34139723b505d724411f9fa48dc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e2f8643b9c76f2abf8a6ffb49620b85f9b150891
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765623"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392711"
 ---
 # <a name="exist-method-xml-data-type"></a>exist() 메서드(xml 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "85765623"
 exist (XQuery)   
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  XQuery  
  문자열 리터럴인 XQuery 식입니다.  
   
@@ -54,7 +56,7 @@ set @x='';
 select @x.exist('true()');   
 ```  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 **exist()** 메서드를 지정하는 방법을 보여 줍니다.  
   
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>예제: xml 형식의 변수에 대해 exist() 메서드 지정  

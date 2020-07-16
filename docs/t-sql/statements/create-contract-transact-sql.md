@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9dac7df96ce86dc83959a6dcbde2383a0db5907c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c6fef1834b3e5b6afeda1df4c67e3403a6dd6d79
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895487"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391728"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,8 +46,10 @@ CREATE CONTRACT contract_name
        } [ ,...n] )   
 [ ; ]  
 ```  
-  
-## <a name="arguments"></a>인수  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *contract_name*  
  만들 계약의 이름입니다. 새 계약은 현재 데이터베이스에 생성되고 AUTHORIZATION 절에서 지정한 보안 주체가 소유합니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다. *contract_name*은 최대 128자까지 사용할 수 있습니다.  
   

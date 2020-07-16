@@ -1,5 +1,5 @@
 ---
-title: nodes() 메서드(xml 데이터 형식) | Microsoft Docs
+title: nodes() 메서드(xml 데이터 형식)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 65cff00f57d98746c77b51c38ed426a14d1dd066
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee5721f2fef1117f1f4d6da5664a644f32dadb92
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731054"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393061"
 ---
 # <a name="nodes-method-xml-data-type"></a>nodes() 메서드(xml 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "85731054"
 nodes (XQuery) as Table(Column)  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 *XQuery*  
 문자열 리터럴인 XQuery 식입니다. 쿼리 식이 노드를 생성하는 경우 이렇게 생성된 노드는 결과 행 집합에 제공됩니다. 쿼리 식에 의해 빈 시퀀스가 생성되는 경우 행 집합도 비어 있습니다. 쿼리 식이 노드 대신 원자 값이 들어 있는 시퀀스를 정적으로 생성하는 경우 정적 오류가 발생합니다.  
   
@@ -106,7 +108,7 @@ ProductModelID  Instructions
 1        <Location LocationID="30" .../>  
 ```  
   
-반환된 행 집합에는 형식 정보가 유지됩니다. **query()**, **value()**, **exist()** 및 **nodes()** 와 같은 **xml** 데이터 형식 메서드를 **nodes()** 메서드의 결과에 적용할 수 있습니다. 하지만 **modify()** 메서드를 적용하여 XML 인스턴스를 수정할 수는 없습니다.  
+반환된 행 집합에는 형식 정보가 유지됩니다. **query()** , **value()** , **exist()** 및 **nodes()** 와 같은 **xml** 데이터 형식 메서드를 **nodes()** 메서드의 결과에 적용할 수 있습니다. 하지만 **modify()** 메서드를 적용하여 XML 인스턴스를 수정할 수는 없습니다.  
   
 또한 행 집합의 컨텍스트 노드는 구체화할 수 없습니다. 즉, 이 노드를 SELECT 문에서 사용할 수 없습니다. 하지만 IS NULL 및 COUNT(*)에서는 사용할 수 있습니다.  
   
@@ -143,7 +145,7 @@ DROP FUNCTION XTest;
 GO  
 ```  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="using-nodes-method-against-a-variable-of-xml-type"></a>1\. xml 형식의 변수에 대해 nodes() 메서드 사용  
 다음 예에는 <`Root`> 최상위 요소 하나와 <`row`> 자식 요소 3개가 있는 XML 문서가 있습니다. 이 쿼리는 `nodes()` 메서드를 사용하여 각 <`row`> 요소에 대해 하나의 개별 컨텍스트 노드를 설정합니다. `nodes()` 메서드는 3개의 행이 포함된 행 집합을 반환합니다. 각 행에는 원래 문서에서 서로 다른 <`row`> 요소를 식별하는 각 컨텍스트 노드와 함께 원래 XML의 논리적 복사본이 들어 있습니다.  

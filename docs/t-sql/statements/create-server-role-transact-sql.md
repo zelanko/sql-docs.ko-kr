@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d93a7e04c6d79cc38afbf4d6465366025b041068
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8c4b791e77ceea4de4a39245adcaf95cc37aec62
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767004"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392931"
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,9 @@ ms.locfileid: "85767004"
 CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *role_name*  
  만들 서버 역할의 이름입니다.  
   

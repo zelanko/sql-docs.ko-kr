@@ -1,5 +1,5 @@
 ---
-title: xml 데이터 형식 메서드를 사용하기 위한 지침 | Microsoft Docs
+title: xml 데이터 형식 메서드를 사용하기 위한 지침
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: bddba19824a9c66d12d290f2212396724d88082f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2360243c2499d5b9cb274ab7dccfed9626783829
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731077"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393081"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>xml 데이터 형식 메서드를 사용하기 위한 지침
 
@@ -60,7 +60,7 @@ Msg errorNumber, Level levelNumber, State stateNumber:
 XQuery [database.table.method]: description_of_error
 ```
 
-다음은 그 예입니다.
+예를 들면 다음과 같습니다.
 
 ```
 Msg 2396, Level 16, State 1:
@@ -71,7 +71,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 
 단일 항목이 필요한 위치 단계, 함수 매개 변수 및 연산자는 컴파일러가 런타임 시 단일 항목이 보장되는지 여부를 확인할 수 없는 경우 오류를 반환합니다. 이 문제는 형식화되지 않은 데이터에서 자주 발생합니다. 예를 들어 특성 조회에는 단일 부모 요소가 필요합니다. 이를 위해서는 단일 부모 노드를 선택하는 서수만으로도 충분합니다. 특성 값 추출을 위한 **node()** -**value()** 조합의 평가에는 서수 사양이 필요하지 않을 수 있습니다. 이러한 내용은 다음 예에 표시되어 있습니다.
 
-### <a name="example-known-singleton"></a>예: 알려진 단일 항목
+### <a name="example-known-singleton"></a>예제: 알려진 단일 항목
 
 이 예에서 **nodes()** 메서드는 각 `<book>` 요소에 대해 별개의 행을 생성합니다. `<book>` 노드에서 평가되는 **value()** 메서드는 `@genre`의 값을 추출하고 싱글톤 특성이 됩니다.
 
@@ -84,7 +84,7 @@ FROM   T CROSS APPLY xCol.nodes('//book') AS R(nref)
 
 유형 검사를 위해서는 `//first-name[1]` 및 `(//first-name)[1]` 간의 차이점을 인식해야 합니다. 전자는 각 노드가 해당 형제 중 가장 왼쪽에 있는 `<first-name>` 노드인 `<first-name>` 노드의 시퀀스를 반환합니다. 후자는 XML 인스턴스에서 문서 순서의 첫 번째 싱글톤 `<first-name>` 노드를 반환합니다.
 
-### <a name="example-using-value"></a>예: value() 사용
+### <a name="example-using-value"></a>예제: value() 사용
 
 형식화되지 않은 XML 열에서 다음 쿼리를 실행하면 정적 컴파일 오류가 발생합니다. 그 이유는 **value()** 에 첫 번째 인수로 싱글톤 노드가 필요한데 런타임 시 하나의 `<last-name>` 노드만 발생하는지 여부를 컴파일러에서 확인할 수 없기 때문입니다.
 

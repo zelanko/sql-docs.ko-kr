@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 370e5525e25c01086510612730ba6123161853bd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8f5b67b73f4be4d8403600821ddd35843c65f2b5
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735873"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391798"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,9 @@ CREATE APPLICATION ROLE application_role_name
     WITH PASSWORD = 'password' [ , DEFAULT_SCHEMA = schema_name ]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *application_role_name*  
  애플리케이션 역할의 이름을 지정합니다. 이 이름은 데이터베이스의 다른 보안 주체를 참조하는 데 사용된 이름이 아니어야 합니다.  
   

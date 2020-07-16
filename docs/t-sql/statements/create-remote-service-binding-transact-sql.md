@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4ac4f35b0d7099147c12e8a1a05f72e7e70a215d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 881e474fb34edbb438d626a23dbaa507f86fb2b6
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892531"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392871"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,9 @@ CREATE REMOTE SERVICE BINDING binding_name
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *binding_name*  
  생성할 원격 서비스 바인딩의 이름입니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다. *binding_name*은 유효한 **sysname**이어야 합니다.  
   

@@ -27,15 +27,15 @@ ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe418c6245129acc1a2e72d100c770c6e430602c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c4f4a1209a68dc011aafdc43f631766a35c5a243
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633335"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392721"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스에 인증서를 추가합니다.  
 
@@ -84,8 +84,11 @@ CREATE CERTIFICATE certificate_name [ AUTHORIZATION user_name ]
     START_DATE = 'datetime' | EXPIRY_DATE = 'datetime'  
 ```  
   
+> [!Note]
+> [!INCLUDE [Synapse preview note](../../includes/synapse-preview-note.md)]
+   
 ```syntaxsql
--- Syntax for Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 CREATE CERTIFICATE certificate_name   
     { <generate_new_keys> | FROM <existing_keys> }  
@@ -109,7 +112,9 @@ CREATE CERTIFICATE certificate_name
     START_DATE ='datetime' | EXPIRY_DATE ='datetime'  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *certificate_name*  
  데이터베이스에 있는 인증서에 대한 이름입니다.  
   

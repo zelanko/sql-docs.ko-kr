@@ -1,5 +1,5 @@
 ---
-title: modify() 메서드(xml 데이터 형식) | Microsoft Docs
+title: modify() 메서드(xml 데이터 형식)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 52430735-51f4-46d1-a308-9aecf8648fda
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7182961996510fcded86a3e1d218d482eb834e63
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 52a2766833d6ab4349c3f6b000f35e9d686396bd
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731063"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393091"
 ---
 # <a name="modify-method-xml-data-type"></a>modify() 메서드(xml 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,14 +33,16 @@ ms.locfileid: "85731063"
 modify (XML_DML)  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  XML_DML  
  XML DML(데이터 조작 언어)에 있는 문자열입니다. XML 문서는 이 식에 따라 업데이트됩니다.  
   
 > [!NOTE]  
 >  Null 값에 **modify()** 메서드를 호출하거나 결과 값이 Null이면 오류가 반환됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  **modify()** 메서드가 XML DML(데이터 조작 언어)의 문자열이 필요하므로 **modify()** 의 예제는 XML DML 문을 설명하는 항목에 포함됩니다. 이러한 예제의 경우 [삽입&#40;XML DML&#41;](../../t-sql/xml/insert-xml-dml.md), [삭제&#40;XML DML&#41;](../../t-sql/xml/delete-xml-dml.md) 및 [값 바꾸기&#40;XML DML&#41;](../../t-sql/xml/replace-value-of-xml-dml.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

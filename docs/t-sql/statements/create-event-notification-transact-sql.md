@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f996ed5d086d263499214321c3f73bff39b805cd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7e5b1db8f48e6d4f336d47e8ce6dc09a1659be7f
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902284"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392751"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,9 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *event_notification_name*  
  이벤트 알림의 이름입니다. 이벤트 알림 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 준수하고 이들을 만든 SERVER, DATABASE 또는 *object_name* 범위 내에서 고유해야 합니다.  
   

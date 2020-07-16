@@ -1,5 +1,5 @@
 ---
-title: delete(XML DML) | Microsoft Docs
+title: delete(XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1e06e1679a8a416bbcdba8d1a2930ccd50f4ce74
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 340ad7968aeb31449f4b5200944ab591e08ae08b
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765639"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393101"
 ---
 # <a name="delete-xml-dml"></a>delete(XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,11 +35,13 @@ ms.locfileid: "85765639"
 delete Expression  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *식*  
  삭제할 노드를 식별하는 XQuery 식입니다. 식에서 선택한 모든 노드 및 선택한 노드에 포함된 모든 노드와 값이 삭제됩니다. [insert(XML DML)](../../t-sql/xml/insert-xml-dml.md)에서 설명한 대로 이 식은 문서에 있는 기존 노드에 대한 참조여야 합니다. 생성된 노드여서는 안 됩니다. 식은 루트(/) 노드일 수 없습니다. 식이 빈 시퀀스를 반환할 경우 아무것도 삭제되지 않으며 오류가 반환되지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-deleting-nodes-from-a-document-stored-in-an-untyped-xml-variable"></a>A. 형식화되지 않은 xml 변수에 저장된 문서에서 노드 삭제  
  다음 예에서는 문서에서 여러 노드를 삭제하는 방법을 보여 줍니다. 먼저 **xml** 형식의 변수에 XML 인스턴스가 할당됩니다. 그런 다음 이후의 delete XML DML 문이 문서에서 여러 노드를 삭제합니다.  

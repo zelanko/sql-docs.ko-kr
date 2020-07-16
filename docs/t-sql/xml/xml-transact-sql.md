@@ -1,5 +1,5 @@
 ---
-title: xml(Transact-SQL) | Microsoft Docs
+title: xml(Transact-SQL)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9198f671-8e61-4ca4-9c3a-859f84020e62
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 66e49e14785f3e99bde79c1de987ea5ac38d06d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b06e817cd649937b48c95fb6dc31e2ae38978c7a
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754792"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393241"
 ---
 # <a name="xml-transact-sql"></a>xml(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,9 @@ ms.locfileid: "85754792"
 xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  CONTENT  
  올바른 형식의 XML 조각이 되도록 **xml** 인스턴스를 제한합니다. XML 데이터는 최상위 수준에 0개 이상의 요소를 포함할 수 있습니다. 텍스트 노드도 최상위 수준에서 허용됩니다.  
   
@@ -54,7 +56,7 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
   
  CONTENT 및 DOCUMENT 패싯은 형식화된 XML에만 적용됩니다. 자세한 내용은 [형식화된 XML과 형식화되지 않은 XML 비교](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)를 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ```  
 USE AdventureWorks;  

@@ -1,5 +1,5 @@
 ---
-title: CREATE PROCEDURE(Transact-SQL) | Microsoft Docs
+title: CREATE PROCEDURE(Transact-SQL)
 ms.custom: ''
 ms.date: 09/06/2017
 ms.prod: sql
@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66ee4bfb4884fe649993eeefde51ea9c329ad696
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f0897e58e9d60ef8d53ce4d9be07fb5f1f3228c4
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010785"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392891"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE(Transact-SQL)
 
@@ -140,6 +140,8 @@ CREATE { PROC | PROCEDURE } [ schema_name.] procedure_name
 AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
 [;]
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>인수
 
@@ -341,7 +343,7 @@ SELECT DB_NAME() AS ThisDB;
 
 `EXEC What_DB_is_this;` 문으로 저장 프로시저 호출
 
-좀더 복잡한 방법은 입력 매개 변수를 제공하여 프로시저의 유연성을 높이는 것입니다. 다음은 그 예입니다.
+좀더 복잡한 방법은 입력 매개 변수를 제공하여 프로시저의 유연성을 높이는 것입니다. 예를 들면 다음과 같습니다.
 
 ```sql
 CREATE PROC What_DB_is_that @ID int
@@ -401,13 +403,16 @@ CREATE PROCEDURE 문은 단일 일괄 처리에서 다른 [!INCLUDE[tsql](../../
 
 다음 문은 저장 프로시저의 본문 어디에서도 사용할 수 없습니다.
 
-||||
-|-|-|-|
-|CREATE AGGREGATE|CREATE SCHEMA|SET SHOWPLAN_TEXT|
-|CREATE DEFAULT|CREATE 또는 ALTER TRIGGER|SET SHOWPLAN_XML|
-|CREATE 또는 ALTER FUNCTION|CREATE 또는 ALTER VIEW|USE *database_name*|
-|CREATE 또는 ALTER PROCEDURE|SET PARSEONLY||
-|CREATE RULE|SET SHOWPLAN_ALL||
+| CREATE | SET | USE |
+|--------|-----|-----|
+| CREATE AGGREGATE | SET SHOWPLAN_TEXT | USE *database_name*|
+| CREATE DEFAULT | SET SHOWPLAN_XML
+| CREATE RULE | SET PARSEONLY |
+| CREATE SCHEMA | SET SHOWPLAN_ALL |
+| CREATE 또는 ALTER TRIGGER |
+| CREATE 또는 ALTER FUNCTION |
+| CREATE 또는 ALTER PROCEDURE |
+| CREATE 또는 ALTER VIEW |
 
  프로시저는 아직 존재하지 않는 테이블을 참조할 수 있습니다. 프로시저를 만들 때는 구문 검사만 수행되며 처음 실행할 때까지는 프로시저가 컴파일되지 않습니다. 컴파일 중에만 프로시저에서 참조되는 모든 개체가 확인됩니다. 따라서 구문이 정확하면서 존재하지 않는 테이블을 참조하는 프로시저를 만들 수는 있지만 참조되는 테이블이 없을 경우 실행 시간에 오류가 발생합니다.
 
@@ -482,7 +487,7 @@ GO
 
 ## <a name="examples"></a><a name="Examples"></a> 예
 
-|Category|중요한 구문 요소|
+|범주|중요한 구문 요소|
 |--------------|------------------------------|
 |[기본 구문](#BasicSyntax)|CREATE PROCEDURE|
 |[매개 변수 전달](#Parameters)|@parameter <br> &nbsp;&nbsp;• = default <br> &nbsp;&nbsp; • OUTPUT <br> &nbsp;&nbsp; • 테이블 반환 매개 변수 <br> &nbsp;&nbsp; • CURSOR VARYING|
