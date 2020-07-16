@@ -17,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: f88dac4b-efe0-47ed-9808-972a4381377e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cda016d7f8d1c671cf47faa930a89bce0944e4ba
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
+ms.openlocfilehash: d4683e635e6eb30d8ac628e55d109d0d81794764
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091827"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301983"
 ---
 # <a name="alter-database-encryption-key-transact-sql"></a>ALTER DATABASE ENCRYPTION KEY(Transact-SQL)
-[!INCLUDE [sql-pdw](../../includes/applies-to-version/sql-pdw.md)]
+[!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
 
   데이터베이스를 명시적으로 암호화하는 데 사용되는 암호화 키와 인증서를 변경합니다. TDE(투명한 데이터 암호화)에 대한 자세한 내용은 [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하십시오.  
   
@@ -45,10 +46,13 @@ ALTER DATABASE ENCRYPTION KEY
         ASYMMETRIC KEY Encryptor_Name  
     }  
 [ ; ]  
-```  
+```
+  
+> [!Note]
+> [!INCLUDE [Synapse preview note](../../includes/synapse-preview-note.md)]
   
 ```syntaxsql
--- Syntax for Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 ALTER DATABASE ENCRYPTION KEY  
     {  
@@ -62,7 +66,9 @@ ALTER DATABASE ENCRYPTION KEY
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  REGENERATE WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY }  
  암호화 키에 사용되는 암호화 알고리즘을 지정합니다.  
   

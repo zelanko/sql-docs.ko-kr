@@ -11,15 +11,16 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e16bbd33d9353c02cf72e3c931a5d8749197f5d
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: 39ad6bdc8911a0596d619f6d6a68de07d733dd6f
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818355"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279440"
 ---
 # <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>Always Encrypted 서버 구성 옵션에 대한 Enclave 형식 구성
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 이 문서에서는 보안 Enclave를 사용한 Always Encrypted에 관해 보안 Enclave를 사용하거나 사용하지 않도록 설정하는 방법을 설명합니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.
 

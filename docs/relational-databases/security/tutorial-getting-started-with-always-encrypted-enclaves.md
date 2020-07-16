@@ -13,15 +13,15 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2a6e27fb84267c1de09a3812747b063050b944e9
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 35a7f19d04edc8cdcacbd9d41ec27ce3c91f6fd1
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807724"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279369"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>자습서: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 이 자습서에서는 [보안 Enclave를 사용한 Always Encrypted](encryption/always-encrypted-enclaves.md)를 시작하는 방법을 설명합니다. 다음이 설명됩니다.
 - 보안 enclave를 사용한 Always Encrypted를 테스트 및 평가하기 위한 기본 환경을 만드는 방법.

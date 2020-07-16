@@ -14,15 +14,15 @@ ms.assetid: 25b7af05-2721-4b24-9083-fb671e8bf4e0
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: cab28a63e72cf085c62ed6f35beefe7cafd06a05
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 123c63710dce6161e6ddb78c67642d7fcf00258b
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287241"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159451"
 ---
 # <a name="securing-replication-over-the-internet"></a>Securing Replication Over the Internet
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   인터넷을 통한 복제는 특히 모바일 구독자에게 유용하지만 적절한 보안을 유지하려면 인터넷 복제를 알맞게 구성해야 합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 에서는 다음 두 가지 기술 중 하나를 통해 인터넷에서 정보를 안전하게 공유할 것을 권장합니다.  
   
 -   VPN(가상 프라이빗 네트워크)  

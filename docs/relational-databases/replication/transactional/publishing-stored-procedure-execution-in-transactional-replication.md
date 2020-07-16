@@ -16,15 +16,15 @@ ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 49770fa4081a01c08ca82ed476c8eddbd409614d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 466e63894ac6f735032dad2af99679bdcf28d5d3
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287021"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159411"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>트랜잭션 복제에서 저장 프로시저 실행 게시
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   게시자에서 실행되고 게시된 테이블에 영향을 주는 하나 이상의 저장 프로시저가 있는 경우 이러한 저장 프로시저를 저장 프로시저 실행 아티클로 게시에 포함해 보십시오. 프로시저 정의(CREATE PROCEDURE 문)는 구독이 초기화될 때 구독자로 복제되고 게시자에서 프로시저가 실행되면 복제가 구독자에서 해당하는 프로시저를 실행합니다. 이렇게 하면 프로시저 실행만 복제하고 행별 변경 내용은 복제하지 않으므로 대용량 일괄 처리 작업이 수행되는 경우 성능을 크게 향상시킬 수 있습니다. 예를 들어 게시 데이터베이스에서 다음 저장 프로시저를 생성한다고 가정합니다.  
   
 ```  

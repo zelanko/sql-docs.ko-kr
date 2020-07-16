@@ -17,15 +17,15 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: davidtrigano
 ms.author: datrigan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1d9d459729a05078043b5365a54d16ade45df31d
-ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
+ms.openlocfilehash: ff084ae8b2a34a2f8bcfb7dd8312106a003efa69
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85294635"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159871"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit(데이터베이스 엔진)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 
   *인스턴스 또는 개별 데이터베이스를* 감사 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 할 때는 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]에서 발생하는 이벤트를 추적 및 기록합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit에서는 서버 수준 이벤트에 대한 서버 감사 사양과 데이터베이스 수준 이벤트에 대한 데이터베이스 감사 사양을 포함하는 서버 감사를 생성할 수 있습니다. 감사 이벤트는 이벤트 로그 또는 감사 파일에 기록될 수 있습니다.  
   

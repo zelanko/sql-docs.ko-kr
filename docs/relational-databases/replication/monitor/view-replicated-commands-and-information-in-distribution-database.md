@@ -19,15 +19,15 @@ ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 3794d249002fb6038be6a6d27d88e5f70e042104
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 12407e91cf4a4607d2b6ca2c7a195ba1104930dd
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286340"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159581"
 ---
 # <a name="view-replicated-commands-and-information-in-distribution-database"></a>배포 데이터베이스에서 복제된 명령 및 정보 보기
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   트랜잭션 복제를 사용하는 경우 트랜잭션 명령은 배포 에이전트에서 해당 명령을 모든 구독자에 전파하거나 구독자의 배포 에이전트에서 변경 내용을 끌어올 때까지 배포 데이터베이스에 저장됩니다. 이와 같이 배포 데이터베이스에서 보류 중인 명령은 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 볼 수 있습니다. 자세한 내용은 [복제 저장 프로시저&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)를 참조하세요.  
   
 ### <a name="to-view-replicated-commands-from-all-transactional-publications-in-the-distribution-database"></a>배포 데이터베이스의 모든 트랜잭션 게시에서 복제된 명령을 보려면  

@@ -1,5 +1,5 @@
 ---
-title: Oracle 원본 | Microsoft Docs
+title: Oracle 원본
 ms.custom: ''
 ms.date: 08/14/2019
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4444236d19c9d7c67aba5a36ba079e1dfa9189b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eced263351bc6c9add5fbd46894c08ccc65fb2be
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74542201"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196097"
 ---
 # <a name="oracle-source"></a>Oracle 원본
 
@@ -70,7 +70,7 @@ Oracle 원본 편집기는 아래 그림에 나와 있습니다. 여기에는 �
 - [Oracle 원본 편집기(열 페이지)](#oracle-source-editor-columns-page)
 - [Oracle 원본 편집기(오류 출력 페이지)](#oracle-source-editor-error-output-page)
 
-![](media/oracle-source.png)
+![Oracle 원본](media/oracle-source.png)
 
 **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 포함됩니다.
 

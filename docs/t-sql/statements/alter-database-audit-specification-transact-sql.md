@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0d8af9ca46800ad5f2d20a5de7f84ad0816d8666
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f4262b850a2afc9799c15d3a4155c9ab85432366
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895690"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301944"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DATABASE AUDIT SPECIFICATION(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,10 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
   
 ```  
   
-## <a name="arguments"></a>인수  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *audit_specification_name*  
  감사 사양의 이름입니다.  
   

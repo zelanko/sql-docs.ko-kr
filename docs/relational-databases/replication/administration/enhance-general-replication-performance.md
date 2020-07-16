@@ -22,15 +22,15 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8ac6758c3856858f6b10b17184705022aa51a62e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 85fc251c57e9f5572dfc192e0e83c8e1611a3745
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288192"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159721"
 ---
 # <a name="enhance-general-replication-performance"></a>일반적인 복제 성능 향상
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   이 항목에서 설명하는 지침을 따르면 애플리케이션 및 네트워크에서 모든 복제 유형의 일반적인 성능을 향상시킬 수 있습니다.  
   
 ## <a name="server-and-network"></a>서버 및 네트워크  

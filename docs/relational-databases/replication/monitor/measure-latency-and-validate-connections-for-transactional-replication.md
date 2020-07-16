@@ -18,15 +18,15 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: cdf335fe061bfd6c7c8646f87b6b4c1798243e9b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ac80080f663d43f9084932ca697970d50c9f307c
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288164"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159621"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   이 항목에서는 복제 모니터, [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 트랜잭션 복제에 대한 대기 시간을 측정하고 연결의 유효성을 검사하는 방법에 대해 설명합니다. 트랜잭션 복제는 트랜잭션 복제 토폴로지에서 대기 시간을 측정하고 게시자, 배포자 및 구독자 간 연결의 유효성을 검사하는 편리한 방법을 제공하는 추적 프로그램 토큰 기능을 제공합니다. 토큰(적은 양의 데이터)은 게시 데이터베이스의 트랜잭션 로그에 기록되고, 일반적인 복제된 트랜잭션인 것처럼 표시되고, 시스템을 통해 전달되며 다음을 계산할 수 있습니다.  
   
 -   게시자에서 커밋된 트랜잭션과 배포자의 배포 데이터베이스에서 삽입된 해당 명령 사이의 경과 시간  

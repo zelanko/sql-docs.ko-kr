@@ -15,15 +15,15 @@ ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 70d536ba9c0e4ae8c62c167397bd56686b8abab2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c66ce1e96a9f76be9a657b51551f1af95f8c731b
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288228"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158871"
 ---
 # <a name="common-actions-requiring-an-updated-backup"></a>업데이트된 백업이 필요한 일반 동작
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   정기적인 로그 백업을 수행할 경우 모든 복제 관련 변경 내용은 로그 백업에 캡처됩니다. 로그 백업을 수행하지 않는 경우 복제 스키마 또는 토폴로지에 변경 작업을 수행한 후 게시, 배포, 구독, **msdb**및 **master** 데이터베이스 백업을 수행합니다.  
   
 ## <a name="publication-database"></a>게시 데이터베이스  

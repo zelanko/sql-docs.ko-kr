@@ -19,15 +19,15 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8547753f7b00a4bfb057cc3587036022ee4c4e0a
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: a750eb05a8f4cb024e1837d46f028c72c76f4a29
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807170"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160101"
 ---
 # <a name="replicate-identity-columns"></a>ID 열 복제
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   열에 IDENTITY 속성을 할당하면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 ID 열을 포함하는 테이블에 순차적 개수대로 삽입되는 새 행을 자동으로 생성합니다. 자세한 내용은 [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md)를 참조하세요. ID 열은 기본 키의 일부분으로 포함될 수 있으므로 ID 열에 중복 값을 사용하지 않아야 합니다. 둘 이상의 노드에서 업데이트된 ID 열을 복제 토폴로지에서 사용하려면 복제 토폴로지의 각 노드가 다른 범위의 ID 값을 사용해야 중복이 발생하지 않습니다.  
   
  예를 들어 게시자에 1-100 범위, 구독자 A에 101-200 범위, 그리고 구독자 B에 201-300 범위를 할당할 수 있습니다. 예를 들어 게시자에 행이 삽입되고 ID 값이 65라면 이 값이 각 구독자에 복제됩니다. 복제가 각 구독자에 데이터를 삽입할 때 구독자 테이블의 ID 열 값을 증가시키지는 않습니다. 대신 리터럴 값 65가 삽입됩니다. 복제 에이전트 삽입이 아닌 사용자 삽입만 ID 열 값을 증가시킵니다.  

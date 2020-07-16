@@ -15,15 +15,15 @@ ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 91277deb1aab5916f23d52fed3f8d8f0530b6fab
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: e5abdc4a3ce6c1b58f2ae807889c1d0deb20bc4a
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529119"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159671"
 ---
 # <a name="replication-programming-concepts"></a>복제 프로그래밍 개념
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 
   복제 기능을 사용하는 애플리케이션을 개발하려면 먼저 다음과 같은 일반적인 계획 단계를 따르는 것이 좋습니다.  
   

@@ -22,26 +22,30 @@ ms.assetid: 5704aa04-68a3-4b29-b62b-8868af487817
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ea8b8b77ac4445bc40bea2a2dcc9359de0f6a09
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c9ace52421c194c7b3c2a7cc9d900cb611d900d5
+ms.sourcegitcommit: 4231364ab5bc15b74952ca5d20508b7ba9ca347e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67898273"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86291360"
 ---
 # <a name="drop-certificate-transact-sql"></a>DROP CERTIFICATE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
 
   데이터베이스에서 인증서를 제거합니다.  
   
 > [!IMPORTANT]  
 >  데이터베이스에 암호화를 사용할 수 없는 경우에도 데이터 암호화에 사용되는 인증서의 백업을 보관해야 합니다. 데이터베이스가 더 이상 암호화되지 않더라도 트랜잭션 로그 부분은 그대로 보호될 수 있으며, 일부 작업의 경우 데이터베이스 전체 백업을 수행할 때까지는 인증서가 필요할 수 있습니다. 데이터베이스 암호화 시 생성된 백업에서 복원하려면 인증서도 필요합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
+
+  
+> [!Note]
+> [!INCLUDE [Synapse preview note](../../includes/synapse-preview-note.md)]
   
 ## <a name="syntax"></a>구문  
   
-```  
+```synaxsql  
 DROP CERTIFICATE certificate_name  
 ```  
   

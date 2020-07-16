@@ -20,15 +20,15 @@ ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c463b8e1a0726fcde961b418fb12a902d7ce9b4e
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: ad64ec8bd3c9558f374e8963b1cc3093f42be4e6
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807943"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159801"
 ---
 # <a name="monitoring-replication"></a>모니터링(복제)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   복제 토폴로지의 모니터링은 복제 배포의 중요한 부분입니다. 복제 작업이 배포되므로 복제에 관련된 모든 컴퓨터에서 활동 및 상태를 추적해야 합니다. 다양한 모니터링 도구를 사용하여 다음과 같은 일반적인 질문에 대답할 수 있습니다. 
 
 -   복제 시스템이 정상적으로 작동 중인가?

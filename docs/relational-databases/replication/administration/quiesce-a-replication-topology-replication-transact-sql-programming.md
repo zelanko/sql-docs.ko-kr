@@ -18,15 +18,15 @@ ms.assetid: 7626d575-9994-47be-b772-5b6f1b7ef7ca
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b940a8cccf7123e4783e2f351b940f40c3e5c5bf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1db75568779b7675a072467678e6be4004ec2698
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288351"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158881"
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>복제 토폴로지 정지(복제 Transact-SQL 프로그래밍)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   시스템*정지* 과정에서는 모든 노드에서 게시된 테이블에 대한 작업을 중지하고 각 노드가 다른 모든 노드의 변경 내용을 받았는지 확인합니다. 이 항목에서는 여러 가지 관리 태스크에 필요한 복제 토폴로지 정지 방법과 노드가 다른 노드의 변경 내용을 모두 받았는지 확인하는 방법을 설명합니다.  
   
 ### <a name="to-quiesce-a-transactional-replication-topology-with-read-only-subscriptions"></a>읽기 전용 구독이 포함된 트랜잭션 복제 토폴로지를 정지하려면  

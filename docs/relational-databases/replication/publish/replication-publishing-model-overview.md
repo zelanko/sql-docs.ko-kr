@@ -24,15 +24,15 @@ ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 963e9c1ffba4c1286793c564e22cd1a122c795b3
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: df1813018defce81e6e7fcb69c206fc3e4d91195
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807085"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159941"
 ---
 # <a name="replication-publishing-model-overview"></a>복제 게시 모델 개요
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   복제는 복제 토폴로지의 구성 요소를 나타내는 데 게시자, 배포자, 구독자, 게시, 아티클 및 구독을 포함하는 게시 관련 산업의 메타포를 사용합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제를 잡지의 개념으로 생각하면 이해가 쉽습니다.  
   
 -   잡지사(게시자)에서는 하나 이상의 출판물(게시)을 생산합니다.  

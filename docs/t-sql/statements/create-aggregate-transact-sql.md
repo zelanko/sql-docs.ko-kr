@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36df84c6bd88ff7525f2a335d140358d4370064f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2235751cc4c198a39a3e3c368f4d07f5451dedd7
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895509"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380816"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,9 @@ EXTERNAL NAME assembly_name [ .class_name ]
   
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *schema_name*  
  사용자 정의 집계 함수가 속한 스키마의 이름입니다.  
   

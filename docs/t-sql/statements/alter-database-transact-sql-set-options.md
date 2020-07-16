@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: cfaf0b5cdb8ddddc3a27ed5fb80b6fcfb7b8afbd
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: 822cd1efc21dbdeae7a5194bc659f73c00eddb7d
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85215245"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159741"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
 
@@ -730,17 +730,17 @@ FORCED
 <a name="query-store"></a> **\<query_store_options> ::=**      
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작)
 
-ON | **OFF** [ FORCED ] | CLEAR [ ALL ]     
+ON | **OFF** | CLEAR [ ALL ]     
 이 데이터베이스에서 쿼리 저장소를 사용할 수 있는지 여부를 제어하고, 쿼리 저장소의 내용 제거도 제어합니다. 자세한 내용은 [쿼리 스토리지 사용 시나리오](../../relational-databases/performance/query-store-usage-scenarios.md)를 참조하세요.
 
 켜기     
 쿼리 저장소를 사용하도록 설정합니다.
 
-OFF [ FORCED ]     
-쿼리 저장소를 사용하지 않도록 합니다. OFF가 기본값입니다. FORCED는 선택 사항입니다. FORCED는 실행 중인 모든 쿼리 저장소 백그라운드 태스크를 중단하고, 쿼리 저장소가 해제된 경우 동기 플러시를 건너뜁니다. 쿼리 저장소가 최대한 빨리 종료되도록 합니다. 실질적으로 쿼리 저장소를 즉시 해제합니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5에 FORCED가 도입됩니다.
+OFF      
+쿼리 저장소를 사용하지 않도록 합니다. OFF가 기본값입니다. 
 
 > [!NOTE]  
-> Azure SQL Database 단일 데이터베이스 및 탄력적 풀에서는 쿼리 저장소를 사용하지 않도록 설정할 수 없습니다. ALTER DATABASE [database] SET QUERY_STORE = OFF를 실행하면 "'QUERY_STORE=OFF'는 이 버전의 SQL Server에서 지원되지 않습니다."라는 경고가 반환됩니다. 
+> 쿼리 저장소는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 단일 데이터베이스 및 탄력적 풀에서 사용하지 않도록 설정할 수 없습니다. `ALTER DATABASE [database] SET QUERY_STORE = OFF`를 실행하면 경고 `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`가 반환됩니다. 
 
 CLEAR     
 쿼리 저장소의 내용을 제거합니다.

@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_17204 | Microsoft 문서
 ms.custom: ''
-ms.date: 06/03/2020
+ms.date: 07/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: 362f907187d7fe738216ea2000f2a5c48eca7b5f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1c0c799af360e10780c35ba6848031fb5a4d6737
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780785"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279629"
 ---
 # <a name="mssqlserver_17207"></a>MSSQLSERVER_17207
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -103,7 +103,7 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
         Impersonating: DomainName\UserName
         ```
   
-1. ```The system cannot find the file specified``` OS 오류 = 3이 표시되는 경우:
+1. `The system cannot find the file specified` OS 오류 = 3이 표시되는 경우:
    - 오류 메시지에서 전체 경로를 검토합니다.
    - Windows 탐색기에서 디스크 드라이브 및 폴더 경로가 표시되고 액세스할 수 있는지 확인합니다.
    - Windows 이벤트 로그를 검토하여 이 디스크 드라이브에 문제가 있는지 확인합니다.
@@ -113,7 +113,7 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
      - 오류를 생성한 파일이 트랜잭션 로그 파일이라면 [CREATE DATABASE (Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) 항목의 "FOR ATTACH" 및 "FOR ATTACH_REBUILD_LOG" 섹션에서 정보를 검토하여 누락된 트랜잭션 로그 파일을 만드는 방법을 확인합니다.
    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이러한 위치에 있는 데이터베이스 파일에 액세스하기 전에 [iSCSI 드라이브 같은] 디스크나 네트워크 위치를 사용할 수 있는지 확인합니다. 필요하다면 클러스터 관리자나 서비스 제어 관리자에서 필요한 종속성을 만듭니다.
 
-1. ```The process cannot access the file because it is being used by another process``` 운영 체제 오류 = 32가 표시되는 경우:
+1. `The process cannot access the file because it is being used by another process` 운영 체제 오류 = 32가 표시되는 경우:
    - Windows Sysinternals에서 [프로세스 탐색기](https://docs.microsoft.com/sysinternals/downloads/process-explorer)나 [핸들](https://docs.microsoft.com/sysinternals/downloads/handle) 같은 도구를 사용하여 다른 프로세스 또는 서비스가 이 데이터베이스 파일에 대한 배타적 잠금을 획득했는지 확인합니다.
    - 프로세스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 파일에 액세스하지 못하게 합니다. 일반적인 예제에는 바이러스 백신 프로그램이 동원됩니다(다음 [기술 자료 문서](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server)에서 파일 제외 지침을 참조하세요).
    - 클러스터 환경에서 이전 소유 노드의 sqlservr.exe 프로세스가 데이터베이스 핸들을 실제로 릴리스했는지 확인합니다. 일반적으로는 발생하지 않지만 클러스터 또는 I/O 경로를 잘못 구성하면 이러한 문제가 발생할 수 있습니다.

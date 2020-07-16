@@ -12,15 +12,15 @@ ms.assetid: 0e8ebd60-1936-48c9-b2b9-e099c8269fcf
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c8f60ee25f00c4b9ba4b7959a6447e11a0f549b1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4ef78ed05046064dd00f534bf76b2adae069f1e
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244826"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196466"
 ---
 # <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>하위 쿼리(Azure SQL Data Warehouse, 병렬 데이터 웨어하우스)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   이 항목에는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 하위 쿼리를 사용한 예제가 나와 있습니다.  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: d8d3a22e-1ff8-48a4-891f-4c8619437e24
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d03b67e5a047d615a53e1053d39b75d41f7cbc09
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 514e0d342fb542ade5cefaf0f405f9caf1cd0b1d
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733823"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279611"
 ---
 # <a name="mssqlserver_605"></a>MSSQLSERVER_605
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,9 +54,10 @@ ms.locfileid: "85733823"
   
 1.  다음 쿼리를 실행하여 메시지에 지정된 할당 단위와 연결된 테이블을 식별합니다. `allocation_unit_id`를 오류 메시지에 지정된 할당 단위로 바꾸십시오.  
   
+    ```sql  
     USE`database_name`;  
   
-    이동  
+    GO  
   
     SELECT au.allocation_unit_id, OBJECT_NAME(p.object_id) AS table_name, fg.name AS filegroup_name,  
   
@@ -72,7 +73,8 @@ ms.locfileid: "85733823"
   
     ORDER BY au.allocation_unit_id;  
   
-    이동  
+    GO  
+    ```
   
 2.  오류 메시지에 지정된 두 번째 할당 단위 ID와 연결된 테이블에 대해 REPAIR 절 없이 DBCC CHECKTABLE을 실행합니다.  
   

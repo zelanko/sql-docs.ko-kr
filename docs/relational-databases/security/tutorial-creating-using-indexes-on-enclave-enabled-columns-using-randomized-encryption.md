@@ -13,15 +13,15 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 636b304d99ee244ef7a367fb8a474ebe8df312a0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9ddfb9836650028c0f6aae150a2f70e4758b6ca2
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557773"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279293"
 ---
 # <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>자습서: 임의 암호화를 사용하는 enclave 사용 열에 인덱스 만들기 및 사용
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 이 자습서에서는 [보안 enclave를 사용한 Always Encrypted](encryption/always-encrypted-enclaves.md)에서 지원되는 임의 암호화를 사용하는 enclave 사용 열에 인덱스를 만들고 사용하는 방법을 설명합니다. 다음이 설명됩니다.
 

@@ -19,15 +19,15 @@ ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 821a45a08316bfdcf17ab57253b46641568aa4f8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d76163d161bfc6d64d4bbe7f0781c21cddb2eb16
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76285862"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159861"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 복제 토폴로지의 사용자 구성 가능한 모든 기능에 대한 프로그래밍 방식 액세스는 시스템 저장 프로시저를 통해 제공됩니다. 저장 프로시저는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]나 sqlcmd 명령줄 유틸리티를 사용하여 개별적으로 실행할 수 있지만 복제 태스크의 논리적 시퀀스를 수행하기 위해 실행할 수 있는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트 파일을 작성하는 것이 효율적일 수 있습니다.  
   

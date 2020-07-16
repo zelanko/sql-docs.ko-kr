@@ -19,15 +19,15 @@ ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 883f554c214809260f69392ad072b1971a34f2da
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 824e5c768ab36b7af5d228e5879eae4f05916051
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287828"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159761"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>복제 모니터에 임계값 및 경고 설정
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터에는 게시와 구독의 상태 정보가 표시됩니다. 기본적으로 복제 모니터는 초기화되지 않은 구독에 대해서만 경고를 표시하지만 다른 조건에 대한 경고를 활성화할 수 있습니다. 토폴로지에 대한 경고를 활성화하여 상태 및 성능 정보를 적시에 받아보는 것이 좋습니다.  
   
  경고를 활성화할 때는 임계값을 지정해야 합니다. 임계값에 도달하거나 임계값이 초과되면 우선 순위가 더 높은 문제점이 표시될 필요가 없는 한 경고가 표시됩니다. 임계값에 도달하면 복제 모니터에 경고가 표시되는 것은 물론 알림 신호가 트리거될 수 있습니다. 다음 상황에 대해 경고를 설정할 수 있습니다.  
