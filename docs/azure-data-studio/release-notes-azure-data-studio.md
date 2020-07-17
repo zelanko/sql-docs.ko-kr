@@ -8,17 +8,33 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 06/15/2020
-ms.openlocfilehash: 09b894fb6604c912bafaa0fc2856134fe970a721
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.date: 07/15/2020
+ms.openlocfilehash: 3f6766e32369c2002b6da7df62646572a4cf8507
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758411"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406256"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio의 릴리스 정보
 
 **[최신 릴리스 다운로드 및 설치](download.md)**
+
+## <a name="july-2020"></a>2020년 7월
+
+2020년 7월 15일 &nbsp; / &nbsp; 버전: 1.20.0
+
+&nbsp;
+
+| 변경 | 세부 정보 |
+| :----- | :------ |
+| 새로운 기능 둘러보기가 추가됨 | 이제 사용자는 환영 페이지 및 명령 팔레트에서 기능 둘러보기를 시작하여 연결 뷰렛, Notebook 뷰렛, 확장 Marketplace 등 일반적으로 사용되는 기능을 둘러볼 수 있습니다. |
+| 새로운 Notebook 기능 | &bull; &nbsp; Markdown 도구 모음의 헤더 지원<br/> &bull; &nbsp; 텍스트 셀의 병렬 Markdown 미리 보기
+| 쿼리 편집기에서 열 및 테이블 끌어서 놓기 | 이제 사용자는 연결 뷰렛에서 쿼리 편집기로 열과 테이블을 직접 끌어서 놓을 수 있습니다. |
+| 작업 막대에 Azure 계정 아이콘이 추가됨 | Azure에 로그인하는 기능을 찾기가 더 쉬워짐 |
+| 버그 및 이슈 해결 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed)를 참조하세요. |
+| &nbsp; | &nbsp; |
+
 
 ## <a name="june-2020"></a>2020년 6월
 
