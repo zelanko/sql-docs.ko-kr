@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: add476168eabf5255bb4cbdce59bd763d05faf4e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9a82afb6ef63963c414997e43fdd1d4ed6a42765
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719558"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279639"
 ---
 # <a name="query-profiling-infrastructure"></a>쿼리 프로파일링 인프라
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -195,6 +195,9 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
 
 > [!NOTE]
 > 경량 프로파일링을 활용하는 확장 이벤트는 표준 프로파일링 인프라가 이미 활성화된 경우 표준 프로파일링의 정보를 사용합니다. 예를 들어 `query_post_execution_showplan`을 사용하는 확장 이벤트 세션이 실행 중이고 `query_post_execution_plan_profile`을 사용하는 세션이 시작됩니다. 두 번째 세션은 여전히 표준 프로파일링 정보를 사용합니다.
+
+> [!NOTE]
+> [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에서 경량 프로파일링은 기본적으로 해제되어 있지만 `query_post_execution_plan_profile`을 사용하는 XEvent 추적이 시작될 때 활성화되며 추적이 중지되면 다시 비활성화됩니다. 따라서 `query_post_execution_plan_profile`을 기반으로 하는 Xevent 추적이 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 인스턴스에서 자주 시작되고 중지되는 경우 추적 플래그 7412로 전역 수준에서 경량 프로파일링을 활성화하여 반복되는 활성화/비활성화 오버헤드를 방지하는 것이 좋습니다. 
 
 ## <a name="see-also"></a>참고 항목  
  [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

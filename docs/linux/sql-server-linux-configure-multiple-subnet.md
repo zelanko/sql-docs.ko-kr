@@ -9,12 +9,12 @@ ms.date: 12/01/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d6cd6b4cdd25c6da0a7d034e2f980ad583a6561b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3a18e668d1a62a74396530e37243d75a5a86aee2
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901552"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196971"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>다중 서브넷 Always On 가용성 그룹 및 장애 조치(failover) 클러스터 인스턴스 구성
 
@@ -28,17 +28,17 @@ Always On AG(가용성 그룹) 또는 FCI(장애 조치(failover) 클러스터 �
 
 AG 또는 FCI에 대한 IP 주소는 VLAN에서 생성됩니다. 다음 예제에서 VLAN에는 192.168.3.*x* 서브넷이 있으므로. AG 또는 FCI에 대해 생성된 IP 주소는 192.168.3.104입니다. AG 또는 FCI에 할당된 단일 IP 주소가 있으므로 추가로 구성할 필요가 없습니다.
 
-![](./media/sql-server-linux-configure-multiple-subnet/image1.png)
+![다중 서브넷 구성 01](./media/sql-server-linux-configure-multiple-subnet/image1.png)
 
 ## <a name="configuration-with-pacemaker"></a>Pacemaker를 사용한 구성
 
 Windows 환경에서 WSFC(Windows Server 장애 조치(failover) 클러스터)는 기본적으로 여러 서브넷을 지원하며 IP 주소에 대한 OR 종속성을 통해 여러 IP 주소를 처리합니다. Linux에는 OR 종속성이 없지만 다음과 같이 Pacemaker를 사용하여 기본적으로 적절한 다중 서브넷을 달성할 수 있는 방법이 있습니다. 단순히 일반적인 Pacemaker 명령줄을 사용하여 리소스를 수정하는 방법으로는 이 작업을 수행할 수 없습니다. CIB(Cluster Information Base)를 수정해야 합니다. CIB는 Pacemaker 구성이 포함된 XML 파일입니다.
 
-![](./media/sql-server-linux-configure-multiple-subnet/image2.png)
+![다중 서브넷 구성 02](./media/sql-server-linux-configure-multiple-subnet/image2.png)
 
 ### <a name="update-the-cib"></a>CIB 업데이트
 
-1.  CIB를 내보냅니다.
+1. CIB를 내보냅니다.
 
     **RHEL(Red Hat Enterprise Linux) 및 Ubuntu**
 
@@ -54,7 +54,7 @@ Windows 환경에서 WSFC(Windows Server 장애 조치(failover) 클러스터)�
 
     여기서 *filename*은 CIB를 호출할 이름입니다.
 
-2.  생성된 파일을 편집합니다. `<resources>` 섹션을 찾습니다. AG 또는 FCI에 대해 생성된 다양한 리소스가 표시됩니다. IP 주소와 연결된 항목을 찾습니다. 두 번째 IP 주소의 정보가 포함된 `<instance attributes>` 섹션을 기존 항목 위 또는 아래의 `<operations>` 앞에 추가합니다. 다음 구문과 유사합니다.
+2. 생성된 파일을 편집합니다. `<resources>` 섹션을 찾습니다. AG 또는 FCI에 대해 생성된 다양한 리소스가 표시됩니다. IP 주소와 연결된 항목을 찾습니다. 두 번째 IP 주소의 정보가 포함된 `<instance attributes>` 섹션을 기존 항목 위 또는 아래의 `<operations>` 앞에 추가합니다. 다음 구문과 유사합니다.
 
     ```xml
     <instance attributes id="<NameForAttribute>" score="<Score>">
@@ -80,7 +80,7 @@ Windows 환경에서 WSFC(Windows Server 장애 조치(failover) 클러스터)�
     </instance attributes>
     ```
 
-3.  수정된 CIB를 가져오고 Pacemaker를 다시 구성합니다.
+3. 수정된 CIB를 가져오고 Pacemaker를 다시 구성합니다.
 
     **RHEL/Ubuntu**
     
@@ -98,7 +98,7 @@ Windows 환경에서 WSFC(Windows Server 장애 조치(failover) 클러스터)�
 
 ### <a name="check-and-verify-failover"></a>장애 조치(failover) 확인
 
-1.  업데이트된 구성으로 CIB가 적용된 후 Pacemaker에서 IP 주소 리소스와 연결된 DNS 이름을 ping합니다. 현재 AG 또는 FCI를 호스트하는 서브넷과 연결된 IP 주소를 반영해야 합니다.
-2.  AG 또는 FCI를 다른 서브넷으로 장애 조치(failover)합니다.
-3.  AG 또는 FCI가 완전히 온라인 상태가 된 후 IP 주소와 연결된 DNS 이름을 ping합니다. 두 번째 서브넷의 IP 주소를 반영해야 합니다.
-4.  원하는 경우 AG 또는 FCI를 원래 서브넷으로 장애 복구(failback)합니다.
+1. 업데이트된 구성으로 CIB가 적용된 후 Pacemaker에서 IP 주소 리소스와 연결된 DNS 이름을 ping합니다. 현재 AG 또는 FCI를 호스트하는 서브넷과 연결된 IP 주소를 반영해야 합니다.
+2. AG 또는 FCI를 다른 서브넷으로 장애 조치(failover)합니다.
+3. AG 또는 FCI가 완전히 온라인 상태가 된 후 IP 주소와 연결된 DNS 이름을 ping합니다. 두 번째 서브넷의 IP 주소를 반영해야 합니다.
+4. 원하는 경우 AG 또는 FCI를 원래 서브넷으로 장애 복구(failback)합니다.

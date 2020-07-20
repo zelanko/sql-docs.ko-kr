@@ -15,12 +15,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6e8ee2bd3910f3b7ae4bbdba37b973c095fef00
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: df923a4a1509520b95e5efcf87e9eac51497e4a8
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091932"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158921"
 ---
 # <a name="thread-and-task-architecture-guide"></a>스레드 및 태스크 아키텍처 가이드
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,16 @@ ms.locfileid: "86091932"
 -  직렬 요청은 실행 도중 특정 시점에서 하나의 활성 태스크만 포함합니다.     
 태스크는 수명이 지속되는 동안 다양한 상태로 존재합니다. 태스크 상태에 대한 자세한 내용은 [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)를 참조하세요. 작업이 일시 중단됨 상태일 경우 작업을 실행하는 데 필요한 리소스가 사용 가능해질 때까지 기다리고 있는 것입니다. 대기 태스크에 대한 자세한 내용은 [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md)를 참조하세요.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **작업자 스레드**(작업자 또는 스레드라고도 함)는 운영 체제 스레드의 논리적 표현입니다. **직렬 요청**을 실행하는 경우 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]는 활성 캐스트를 실행할 작업자를 생성합니다(1:1). [행 모드](../relational-databases/query-processing-architecture-guide.md#execution-modes)에서 **병렬 요청**을 실행하는 경우 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]는 할당된 태스크를 완료해야 하는 자식 작업자를 (역시 1:1로) 조정하는 작업자인 **부모 스레드**를 할당합니다. 부모 스레드에는 연결된 부모 태스크가 있습니다. 각 태스크에 대해 생성되는 작업자 스레드 수는 다음에 따라 달라집니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **작업자 스레드**(작업자 또는 스레드라고도 함)는 운영 체제 스레드의 논리적 표현입니다. **직렬 요청**을 실행하는 경우 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]는 활성 캐스트를 실행할 작업자를 생성합니다(1:1). [행 모드](../relational-databases/query-processing-architecture-guide.md#execution-modes)에서 **병렬 요청**을 실행하는 경우 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 할당된 작업을 완료해야 하는 자식 작업자를(역시 1:1로) 조정하는 작업자인 **부모 스레드**(또는 조정 스레드)를 할당합니다. 부모 스레드에는 연결된 부모 태스크가 있습니다. 부모 스레드는 요청의 진입점이며 엔진이 쿼리를 구문 분석하기 전에도 존재합니다. 부모 스레드의 주요 책임은 다음과 같습니다. 
+-  병렬 검색을 조정합니다.
+-  자식 병렬 작업자를 시작합니다.
+-  병렬 스레드에서 행을 수집하여 클라이언트로 보냅니다.
+-  로컬 및 전역 집계를 수행합니다.    
+
+> [!NOTE]
+> 쿼리 계획에 직렬 및 병렬 분기가 있는 경우 병렬 작업 중 하나가 직렬 분기 실행을 담당합니다. 
+
+각 태스크에 대해 생성되는 작업자 스레드 수는 다음에 따라 달라집니다.
 -   요청이 쿼리 최적화 프로그램에 의해 결정된 대로 병렬 처리에 적합한지 여부.
 -   현재 로드를 기반으로 하는 시스템에서 실제 사용 가능한 [DOP(병렬 처리 수준)](../relational-databases/query-processing-architecture-guide.md#DOP). 이는 MAXDOP(최대 병렬 처리 수준)에 대한 서버 구성을 기반으로 하는 예상 DOP와 다를 수 있습니다. 예를 들어 MAXDOP에 대한 서버 구성은 8이지만 런타임에 사용 가능한 DOP는 단지 2일 수 있습니다. 이것이 쿼리 성능에 영향을 미칩니다. 
 
@@ -72,19 +81,18 @@ WHERE (h.OrderDate >= '2014-3-28 00:00:00');
 > 실행 계획을 나무라고 생각하면 **분기**는 Exchange 반복기라고도 하는 Parallelism 연산자 하나 이상을 그룹화하는 계획 영역입니다. 계획 연산자에 대한 자세한 내용은 [실행 계획 논리 및 물리 연산자 참조](../relational-databases/showplan-logical-and-physical-operators-reference.md)를 확인하세요. 
 
 실행 계획에는 분기 세 개가 있지만 이 실행 계획에서는 실행 중 다음 분기 두 개만 동시에 실행할 수 있습니다.
-1.  클러스터형 인덱스 스캔을 `Sales.SalesOrderDetailBulk`(조인의 프로브 입력)에서 사용한 분기에서 동시에 실행되는 `Sales.SalesOrderHeaderBulk`(조인의 빌드 입력)에서 클러스터형 인덱스 스캔을 사용하는 분기.
-2. *Bitmap*을 생성하고 현재 해시 매치가 실행 중인 분기에서 동시에 실행되는 `Sales.SalesOrderDetailBulk`(조인의 프로브 입력)에서 클러스터형 인덱스 스캔을 사용하는 분기.
+1.  `Sales.SalesOrderHeaderBulk`에서 ‘클러스터형 인덱스 스캔’이 사용되는 분기(조인의 빌드 입력)는 단독으로 실행됩니다.
+2.  그런 다음, `Sales.SalesOrderDetailBulk`(조인의 프로브 입력)에서 ‘클러스터형 인덱스 스캔’을 사용하는 분기는 ‘비트맵’을 생성하고 현재 ‘해시 매치’가 실행 중인 분기와 동시에 실행됩니다.  
 
-실행 계획 XML에서는 작업자 스레드 16개가 예약되었고 NUMA 노드 0 및 1에서 사용했음을 확인할 수 있습니다.
+실행 계획 XML에서는 작업자 스레드 16개가 예약되었고 NUMA 노드 0에서 사용했음을 확인할 수 있습니다.
 
 ```xml
 <ThreadStat Branches="2" UsedThreads="16">
-  <ThreadReservation NodeId="0" ReservedThreads="8" />
-  <ThreadReservation NodeId="1" ReservedThreads="8" />
+  <ThreadReservation NodeId="0" ReservedThreads="16" />
 </ThreadStat>
 ```
 
-스레드 예약을 사용하면 [!INCLUDE[ssde_md](../includes/ssde_md.md)]는 요청에 필요한 모든 태스크를 수행할 수 있을 만큼의 작업자 스레드를 확보할 수 있습니다. 스레드는 전체 NUMA 노드에 예약하거나 단일 NUMA 노드에 예약할 수 있습니다. 스레드 예약은 실행 시작 전 런타임 시에 수행되며 스케줄러 로드에 따라 달라집니다. 예약된 작업자 스레드 수는 일반적으로 **동시 스레드 * 런타임 DOP** 수식에서 파생되며 부모 작업자 스레드를 제외합니다. 각 분기는 MaxDOP와 동일한 작업자 스레드 수로 제한됩니다. 이 예제에서는 동시 분기 두 개가 있고 MaxDOP가 8로 설정되어 있으므로 **2 * 8 = 16**개입니다.
+스레드 예약을 사용하면 [!INCLUDE[ssde_md](../includes/ssde_md.md)]는 요청에 필요한 모든 태스크를 수행할 수 있을 만큼의 작업자 스레드를 확보할 수 있습니다. 스레드는 여러 NUMA 노드에 예약하거나 단일 NUMA 노드에 예약할 수 있습니다. 스레드 예약은 실행 시작 전 런타임 시에 수행되며 스케줄러 로드에 따라 달라집니다. 예약된 작업자 스레드 수는 일반적으로 **동시 스레드 * 런타임 DOP** 수식에서 파생되며 부모 작업자 스레드를 제외합니다. 각 분기는 MaxDOP와 동일한 작업자 스레드 수로 제한됩니다. 이 예제에서는 동시 분기 두 개가 있고 MaxDOP가 8로 설정되어 있으므로 **2 * 8 = 16**개입니다.
 
 참조를 위해 [활성 쿼리 통계](../relational-databases/performance/live-query-statistics.md)의 활성 실행 계획을 확인하면 분기 하나가 완료되고 분기 두 개가 동시에 실행 중임을 알 수 있습니다.
 
@@ -131,8 +139,8 @@ ORDER BY parent_task_address, scheduler_id;
 16개의 각 자식 태스크에는 (`worker_address`에서처럼) 서로 다른 작업자 스레드가 할당되어 있지만 모든 작업자는 같은 8개 스케줄러 풀(0,5,6,7,8,9,10,11)에 할당되며 부모 태스크는 이 풀에 속하지 않는 스케줄러(3)에 할당됩니다.
 
 > [!IMPORTANT]
-> 지정된 분기에 대한 첫 번째 병렬 태스크 모음이 예약되면 [!INCLUDE[ssde_md](../includes/ssde_md.md)]에서는 다른 분기의 추가 태스크에 대해 같은 스케줄러 풀을 사용합니다. 따라서 전체 실행 계획의 모든 병렬 태스크에 대해 같은 스케줄러 모음을 사용하며 유일한 제한은 MaxDOP입니다.      
-> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 언제나 태스크 실행을 위해 같은 NUMA 노드에서 스케줄러를 할당합니다. 그러나 부모 태스크에 할당된 작업자 스레드는 다른 태스크와 다른 NUMA 노드에 배치할 수 있습니다.
+> 지정된 분기에 대한 첫 번째 병렬 태스크 모음이 예약되면 [!INCLUDE[ssde_md](../includes/ssde_md.md)]에서는 다른 분기의 추가 태스크에 대해 같은 스케줄러 풀을 사용합니다. 따라서 전체 실행 계획의 모든 병렬 태스크에 대해 같은 스케줄러 모음을 사용하며 유일한 제한은 MaxDOP입니다.  
+> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 항상 작업 실행을 위해 동일한 NUMA 노드에서 스케줄러를 할당하도록 시도하고, 스케줄러를 사용할 수 있는 경우 순차적으로(라운드 로빈 방식) 할당합니다. 그러나 부모 태스크에 할당된 작업자 스레드는 다른 태스크와 다른 NUMA 노드에 배치할 수 있습니다.
 
 작업자 스레드는 자신의 퀀텀 기간(4ms)에만 스케줄러에서 활성 상태를 유지하며 활성화될 수 있는 다른 태스크에 작업자 스레드가 할당될 수 있도록 퀀텀이 끝나면 스케줄러를 일시 중단해야 합니다. 작업자의 퀀텀이 만료되고 활성 상태가 끝나면 대응하는 태스크는 다시 RUNNING 상태가 되기 전까지 RUNNABLE 상태로 FIFO 큐에 배치됩니다. 태스크는 래치 또는 잠금처럼 현재 사용할 수 없는 리소스에 대한 액세스를 요구하지 않는다고 가정하며, 요구한다면 태스크는 이러한 리소스를 사용할 수 있을 때까지 RUNNABLE이 아닌 SUSPENDED 상태로 배치됩니다.  
 
@@ -142,7 +150,7 @@ ORDER BY parent_task_address, scheduler_id;
 요약하자면 병렬 요청은 여러 태스크를 생성하며 각 태스크는 단일 작업자 스레드에 할당되어야 하고, 각 작업자 스레드는 단일 스케줄러에 할당되어야 합니다. 따라서 사용 중인 스케줄러 수는 MaxDOP로 설정하는 분기 당 병렬 작업 수를 초과할 수 없습니다. 
 
 ### <a name="allocating-threads-to-a-cpu"></a>CPU에 스레드 할당
-기본적으로 각각의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스는 각 스레드를 시작하며 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 스레드를 부하에 따라 컴퓨터의 프로세서(CPU)에 균일하게 분산합니다. affinity 프로세스가 운영 체제 수준에서 사용하도록 설정된 경우, 운영 체제에서 각 스레드를 특정 CPU에 할당합니다. 반대로 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]는 스레드를 CPU에 균일하게 분산하는 **스케줄러**에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **작업자 스레드**를 할당합니다.
+기본적으로 각각의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스는 각 스레드를 시작하며 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 스레드를 부하에 따라 컴퓨터의 프로세서(CPU)에 균일하게 분산합니다. affinity 프로세스가 운영 체제 수준에서 사용하도록 설정된 경우, 운영 체제에서 각 스레드를 특정 CPU에 할당합니다. 반대로 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 스레드를 CPU에 균일하게 분산하는 **스케줄러**에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **작업자 스레드**를 라운드 로빈 방식으로 할당합니다.
     
 동일한 CPU 세트에 여러 애플리케이션이 액세스하는 등, 멀티태스킹을 수행하기 위해 운영 체제가 가끔 다른 CPU 간에 작업자 스레드를 이동하기도 합니다. 이는 운영 체제의 측면에서 볼 때는 효율적이지만 각 프로세서 캐시에 데이터를 반복적으로 다시 로드해야 하므로 시스템 부하가 큰 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 성능 저하를 초래할 수 있습니다. CPU를 특정 스레드에 할당하면 프로세서를 다시 로드할 필요가 없고 CPU 간에 스레드 마이그레이션이 감소되어 컨텍스트 전환이 줄게 되므로 성능이 향상될 수 있습니다. 스레드와 프로세서의 이러한 관계를 프로세서 선호도라고 합니다. affinity를 사용하는 경우에는 운영 체제에서 각 스레드를 특정 CPU에 할당합니다. 
 

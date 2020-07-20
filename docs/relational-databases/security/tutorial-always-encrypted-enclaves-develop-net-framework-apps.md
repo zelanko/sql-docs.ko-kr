@@ -12,19 +12,19 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b73d24edb139e36f11e05c854c9d10d885994e18
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 62c4954663f7553fd6df7461f5b5c967f7386721
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595488"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279359"
 ---
 # <a name="tutorial-develop-a-net-framework-application-using-always-encrypted-with-secure-enclaves"></a>자습서: 보안 enclave를 사용한 Always Encrypted를 이용하여 .NET Framework 애플리케이션 개발
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 이 자습서에서는 [보안 enclave를 사용한 Always Encrypted](encryption/always-encrypted-enclaves.md)에 대해 서버 쪽 보안 enclave를 사용하는 데이터베이스 쿼리를 실행하는 간단한 애플리케이션을 개발하는 방법을 알아봅니다. 
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 이 자습서는 [자습서: SSMS를 사용하여 보안 enclave를 사용한 Always Encrypted 시작](./tutorial-getting-started-with-always-encrypted-enclaves.md)에서 이어집니다. 해당 자습서를 완료한 후에 아래 단계를 수행해야 합니다.
 
 또한 Visual Studio(버전 2019 권장)가 필요합니다([https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com)에서 다운로드할 수 있음). 애플리케이션 개발 컴퓨터가 .NET Framework 4.7.2 이상을 실행해야 합니다.
@@ -54,16 +54,16 @@ ms.locfileid: "73595488"
 
 7. 프로젝트의 App.config 파일을 엽니다.
 
-8. \<구성\> 섹션을 찾아 \<configsections\> 섹션을 추가하거나 업데이트합니다.
+8. \<configuration\> 섹션을 찾아 \<configSections\> 섹션을 추가하거나 업데이트합니다.
 
-   a. \<구성\> 섹션에 \<configSections\> 섹션이 포함되어 있지 **않으면**\<구성\> 바로 아래 있는 다음 콘텐츠를 추가합니다.
+   a. \<configuration\> 섹션에 \<configSections\> 섹션이 포함되어 있지 **않는** 경우 \<configuration\> 바로 아래에 다음 콘텐츠를 추가합니다.
    
       ```xml
       <configSections>
          <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
       </configSections>
       ```
-   b. \<구성\> 섹션에 이미 \<configsections\> 섹션이 있는 경우 \<configsections\> 내에 다음 줄을 추가합니다.
+   b. \<configruation\> 섹션에 이미 \<configSections\> 섹션이 있는 경우 \<configSections\> 내에 다음 줄을 추가합니다.
 
    ```xml
    <section name="SqlColumnEncryptionEnclaveProviders"  type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data,  Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>

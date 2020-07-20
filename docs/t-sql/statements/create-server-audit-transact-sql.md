@@ -1,5 +1,5 @@
 ---
-title: CREATE SERVER AUDIT(Transact-SQL) | Microsoft Docs
+title: CREATE SERVER AUDIT(Transact-SQL)
 ms.custom: ''
 ms.date: 01/07/2019
 ms.prod: sql
@@ -22,14 +22,15 @@ ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 6a1ca0be2ca87754dc753b7ceb8721ad7da29691
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d16fcf886e074fb71a148a7f36741c1c7f0a3f74
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767016"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392941"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT(Transact-SQL)
+
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit를 사용하여 서버 감사 개체를 만듭니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
@@ -73,8 +74,10 @@ CREATE SERVER AUDIT audit_name
     event_field_name { = | < > | ! = | > | > = | < | < = | LIKE } { number | ' string ' }  
 ```  
   
-## <a name="arguments"></a>인수  
- { FILE | APPLICATION_LOG | SECURITY_LOG | URL | EXTERNAL_MONITOR } 감사 대상의 위치를 결정합니다. 이 옵션은 이진 파일, Windows 애플리케이션 로그 또는 Windows 보안 로그입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 Windows 보안 로그에 쓸 수 없습니다. 자세한 내용은 [보안 로그에 SQL Server Audit 이벤트 쓰기](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)를 참조하세요.  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
+ TO { FILE \| APPLICATION_LOG \| SECURITY_LOG \| URL \| EXTERNAL_MONITOR } 감사 대상의 위치를 결정합니다. 이 옵션은 이진 파일, Windows 애플리케이션 로그 또는 Windows 보안 로그입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 Windows 보안 로그에 쓸 수 없습니다. 자세한 내용은 [보안 로그에 SQL Server Audit 이벤트 쓰기](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)를 참조하세요.  
 
 > [!IMPORTANT]
 > Azure SQL Database 관리되는 인스턴스에서 SQL Audit은 서버 수준에서 작동합니다. 위치는 `URL` 또는 `EXTERNAL_MONITOR`만 될 수 있습니다.
@@ -155,7 +158,7 @@ SHUTDOWN
   
  감사 정보를 파일에 저장할 때 변조를 방지하기 위해 파일 위치에 대한 액세스를 제한합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-creating-a-server-audit-with-a-file-target"></a>A. 파일 대상을 사용하여 서버 감사 만들기  
  다음 예에서는 이진 파일을 대상으로 사용하고 옵션 없이 `HIPAA_Audit`라는 서버 감사를 만듭니다.  

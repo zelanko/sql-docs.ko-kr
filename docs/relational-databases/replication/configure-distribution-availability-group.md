@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 39d990e334c790840eab7c47634dde6c6f9ff065
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad1dbfa9c39167d6bef9ae14afc4245225cfb4cb
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774056"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159831"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Always On 가용성 그룹에서 복제 배포 데이터베이스 설정
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +74,7 @@ SQL Server 2017 CU6 및 SQL Server 2016 SP2-CU3에서는 다음 메커니즘을 
    >[!NOTE]
    >보조 복제본에서 복제 저장 프로시저(예: `sp_dropdistpublisher`, `sp_dropdistributiondb`, `sp_dropdistributor`, `sp_adddistributiondb`, `sp_adddistpublisher`)를 실행하기 전에 복제본이 완전히 동기화되었는지 확인합니다.
 
-- 배포 데이터베이스 AG의 모든 보조 복제본은 읽을 수 있어야 합니다.
+- 배포 데이터베이스 AG의 모든 보조 복제본은 읽을 수 있어야 합니다. 보조 복제본을 읽을 수 없는 경우 특정 보조 복제본에서 SQL Server Management Studio의 배포자 속성에 액세스할 수 없지만 복제는 계속 정확하게 작동합니다. 
 - 배포 데이터베이스 AG의 모든 노드는 SQL Server 에이전트 실행을 위해 동일한 도메인 계정을 사용해야 하며 이 도메인 계정은 각 노드에서 동일한 권한을 가져야 합니다.
 - 프록시 계정에서 실행되는 복제 에이전트가 있는 경우 프록시 계정이 배포 데이터베이스 AG의 모든 노드에 있고 각 노드에서 동일한 권한을 가져야 합니다.
 - 배포 데이터베이스 AG에 참여하는 모든 복제본에서 배포자 또는 배포 데이터베이스 속성을 변경합니다.
@@ -117,12 +117,18 @@ SQL Server 2017 CU6 및 SQL Server 2016 SP2-CU3에서는 다음 메커니즘을 
 
    `@working_directory` 값은 DIST1, DIST2 및 DIST3과는 별개인 네트워크 경로여야 합니다.
 
-1. DIST2 및 DIST3에서 다음을 실행합니다.  
+1. DIST2 및 DIST3에서 복제본을 보조 복제본으로 읽을 수 있는 경우 다음을 실행합니다.  
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
+   복제본을 보조 복제본으로 읽을 수 없는 경우 복제본이 주 복제본이 되게 하는 장애 조치(failover)를 수행하고 다음을 실행합니다. 
+
+   ```sql
+   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   ```
+   
    `@working_directory` 값은 이전 단계와 동일해야 합니다.
 
 ### <a name="publisher-workflow"></a>게시자 워크플로
@@ -196,12 +202,18 @@ SQL Server 2017 CU6 및 SQL Server 2016 SP2-CU3에서는 다음 메커니즘을 
    sp_adddistributiondb 'distribution'
    ```
 
-4. DIST3에서 다음을 실행합니다. 
+4. DIST3에서 복제본을 보조 복제본으로 읽을 수 있는 경우 다음을 실행합니다. 
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
+   복제본을 보조 복제본으로 읽을 수 없는 경우 복제본이 주 복제본이 되게 하는 장애 조치(failover)를 수행하고 다음을 실행합니다.
+
+   ```sql
+   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   ```
+   
    `@working_directory` 값은 DIST1 및 DIST2에 대해 지정 된 것과 동일해야 합니다.
 
 4. DIST3에서는 구독자에 대한 연결된 서버를 다시 만들어야 합니다.

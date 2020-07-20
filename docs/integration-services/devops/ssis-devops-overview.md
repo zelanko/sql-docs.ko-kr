@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eb93961b516623f0a22b3baeae4bc29026c3a994
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 6c5634130e2a9a4e6f2a394d067f0e679ab02827
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091784"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196075"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>SSIS(SQL Server Integration Services) DevOps 도구
 
@@ -313,9 +313,9 @@ SSIS 카탈로그 구성의 인라인 JSON입니다. 이 속성은 구성 파일
 
 |속성  |Description  |메모  |
 |---------|---------|---------|
-|name|매개 변수의 이름입니다.|매개 변수는 ‘프로젝트 매개 변수’ 또는 ‘패키지 매개 변수’일 수 있습니다.  <br> 부모 프로젝트에 매개 변수가 없는 경우 매개 변수를 건너뜁니다.|
-|container|매개 변수의 컨테이너입니다.|<li>매개 변수가 프로젝트 매개 변수이면 *container*는 프로젝트 이름이어야 합니다. <li>매개 변수가 패키지 매개 변수이면 *container*는 **.dtsx** 확장자를 갖는 패키지 이름이어야 합니다. <li> 매개 변수가 연결 관리자 속성이면 이름은 다음과 같은 형식이어야 합니다. **CM.\<Connection Manager Name>.\<Property Name>** .|
-|값|매개 변수의 값입니다.|<li>*valueType*이 *referenced*인 경우: 값은 ‘문자열’ 형식의 환경 변수에 대한 참조입니다. <li> *valueType*이 *literal*인 경우: 이 특성은 임의의 유효한 ‘부울’, ‘숫자’ 및 ‘문자열’ JSON 값을 지원합니다.   <br> 값은 대상 매개 변수 형식으로 변환됩니다. 변환할 수 없는 경우 오류가 발생합니다.<li> *null* 값은 유효하지 않습니다. 작업은 이 매개 변수 개체를 건너뛰고 경고를 표시합니다.|
+|name|매개 변수의 이름입니다.|<li>매개 변수는 ‘프로젝트 매개 변수’ 또는 ‘패키지 매개 변수’일 수 있습니다. <li>매개 변수가 없으면 건너뜁니다. <li>매개 변수가 연결 관리자 속성이면 이름은 **CM.\<Connection Manager Name>.\<Property Name>** 형식이어야 합니다. |
+|container|매개 변수의 컨테이너입니다.|<li>매개 변수가 프로젝트 매개 변수이면 *container*는 프로젝트 이름이어야 합니다. <li>매개 변수가 패키지 매개 변수이면 *container*는 **.dtsx** 확장자를 갖는 패키지 이름이어야 합니다.|
+|값|매개 변수의 값입니다.|<li>*valueType*이 *referenced*인 경우: 값은 ‘문자열’ 형식의 환경 변수에 대한 참조입니다. <li> *valueType*이 *literal*인 경우: 이 특성은 임의의 유효한 ‘부울’, ‘숫자’ 및 ‘문자열’ JSON 값을 지원합니다.   <li> 값은 대상 매개 변수 형식으로 변환됩니다. 변환할 수 없는 경우 오류가 발생합니다.<li> *null* 값은 유효하지 않습니다. 작업은 이 매개 변수 개체를 건너뛰고 경고를 표시합니다.|
 |valueType|매개 변수 값의 유형입니다.|유효한 유형은 다음과 같습니다. <br> *literal*: *value* 특성이 리터럴 값을 나타냅니다. <br> *referenced*: *value* 특성이 환경 변수에 대한 참조를 나타냅니다.|
 
 ##### <a name="reference-attributes"></a>참조 특성

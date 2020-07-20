@@ -17,15 +17,15 @@ ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ee2425a5b2ff846e37dfe6acb06d8b26b54fd7da
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 137a7d29806baf4eee6a4380338f1bb383119f40
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287630"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159891"
 ---
 # <a name="manage-identity-columns"></a>ID 열 관리
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 ID 열을 관리하는 방법에 대해 설명합니다. 구독자 삽입이 게시자로 복제되는 경우 구독자와 게시자 모두에 동일한 ID 값이 할당되지 않도록 ID 열을 관리해야 합니다. 복제는 ID 범위를 자동으로 관리할 수 있으며, 사용자가 ID 범위 관리를 수동으로 처리하도록 선택할 수도 있습니다.  복제에서 제공하는 ID 범위 관리 옵션에 대한 자세한 내용은 [ID 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md)를 참조하세요.  
   
  **항목 내용**  
@@ -55,7 +55,7 @@ ms.locfileid: "76287630"
   
 -   다른 게시 유형을 선택한 경우에 ID 범위 관리는 수동으로 설정해야 합니다.  
   
- **게시 속성 - \<게시>** 대화 상자에서 사용 가능한 **아티클 속성 -\<Article>** 의 **속성** 탭에서 ID 범위 및 임계값을 수정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+ **게시 속성 - \<Publication>** 대화 상자에서 사용 가능한 **아티클 속성 -\<Article>** 의 **속성** 탭에서 ID 범위 및 임계값을 수정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="to-specify-an-identity-column-management-option"></a>ID 열 관리 옵션을 지정하려면  
   
@@ -65,7 +65,7 @@ ms.locfileid: "76287630"
   
 3.  **아티클 속성**을 클릭한 다음 **선택한 테이블 아티클 속성 설정**을 클릭합니다.  
   
-4.  **아티클 속성 - \<Article>** 대화 상자 **속성** 탭의 **ID 범위 관리** 섹션에서 **자동으로 ID 범위 관리** 속성을 **자동** 또는 **수동**([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상을 실행하는 게시자의 경우)으로 설정하거나 **True** 또는 **False**([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]의 이전에 나온 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전을 실행하는 게시자의 경우)로 설정합니다.  
+4.  **아티클 속성 - \<Article>** 대화 상자의 **속성** 탭에 있는 **ID 범위 관리** 섹션에서 **자동으로 ID 범위 관리** 속성을 **자동** 또는 **수동**([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상을 실행하는 게시자의 경우)으로 설정하거나 **True** 또는 **False**([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]의 이전에 나온 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전을 실행하는 게시자의 경우)로 설정합니다.  
   
 5.  4단계에서 **자동** 또는 **True** 를 선택한 경우 다음 표를 참조하여 옵션 값을 입력합니다. 이러한 설정의 사용 방법은 [ID 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md)의 "ID 범위 할당" 섹션을 참조하세요.  
   
@@ -86,11 +86,11 @@ ms.locfileid: "76287630"
   
 2.  **아티클 속성**을 클릭한 다음 **선택한 테이블 아티클 속성 설정**을 클릭합니다.  
   
-3.  **아티클 속성 - \<Article>** 대화 상자 **속성** 탭의 **ID 범위 관리** 섹션에서 **게시자 범위 크기**, **구독자 범위 크기** 및 **범위 임계값 비율** 속성 중 하나 이상에 대해 값을 입력합니다.  
+3.  **아티클 속성 - \<Article>** 대화 상자의 **속성** 탭에 있는 **ID 범위 관리** 섹션에서 **게시자 범위 크기**, **구독자 범위 크기** 및 **범위 임계값 비율** 중 하나 이상의 속성에 값을 입력합니다.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  **게시 속성 - \<게시>** 대화 상자에서 **확인**을 클릭합니다.  
+5.  **게시 속성 - \<Publication>** 대화 상자에서 **확인**을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  복제 저장 프로시저를 사용하여 아티클이 작성될 때 ID 범위 관리 옵션을 지정할 수 있습니다.  

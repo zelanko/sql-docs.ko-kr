@@ -2,7 +2,7 @@
 title: 백업 압축(SQL Server) | Microsoft 문서
 description: 제한 사항, 성능에 미치는 영향, 백업 압축 구성, 압축 비율과 같은 SQL Server 백업의 압축에 대해 알아봅니다.
 ms.custom: ''
-ms.date: 08/08/2016
+ms.date: 07/08/2020
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2111c5c96c808202369d0516755263283a4d08b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3351a709eef1550ab172e90b61d2cb67673ba27
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728539"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196948"
 ---
 # <a name="backup-compression-sql-server"></a>백업 압축(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -84,13 +84,22 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
 -   데이터의 암호화 여부  
   
-     암호화된 데이터는 암호화되지 않은 데이터보다 압축률이 크게 낮습니다. 투명한 데이터 암호화를 사용하여 전체 데이터베이스를 암호화할 경우 백업을 압축해도 크기가 별로 줄어들지 않거나 그대로일 수 있습니다.  
-  
+     암호화된 데이터는 암호화되지 않은 데이터보다 압축률이 크게 낮습니다. 예를 들어 Always Encrypted 또는 다른 애플리케이션 수준 암호화를 사용하여 열 수준에서 데이터를 암호화하는 경우 백업을 압축하면 크기가 크게 줄어들지 않을 수 있습니다.
+
+     TDE(투명한 데이터 암호화)로 암호화된 데이터베이스를 압축하는 방법에 대한 자세한 내용은 [TDE로 백업 압축](#backup-compression-with-tde)을 참조하세요.
+
 -   데이터베이스의 압축 여부  
   
      데이터베이스가 압축된 경우 백업을 압축하면 크기가 줄어들더라도 많이 줄어들지 않을 수 있습니다.  
-  
-  
+
+## <a name="backup-compression-with-tde"></a>TDE로 백업 압축
+
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터, **65536(64KB)보다 큰** `MAXTRANSFERSIZE`를 설정 시 압축 알고리즘이 사용됩니다. 이 알고리즘은 먼저 페이지를 해독하고 압축한 다음 다시 암호화하는 [TDE(투명한 데이터 암호화)](../../relational-databases/security/encryption/transparent-data-encryption.md)로 암호화된 데이터베이스에 최적화되어 있습니다. `MAXTRANSFERSIZE`를 지정하지 않은 경우 또는 `MAXTRANSFERSIZE = 65536`(64KB)을 사용하는 경우 TDE 암호화 데이터베이스를 통해 백업 압축을 수행하면 암호화된 페이지가 바로 압축되어 압축률이 좋지 않을 수 있습니다. 자세한 내용은 [TDE 가능 데이터베이스의 백업 압축](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/)을 참조하세요.
+
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5부터 더 이상 이 TDE를 사용하는 최적화된 압축 알고리즘을 사용하도록 `MAXTRANSFERSIZE`를 설정할 필요가 없습니다. 백업 명령에 `WITH COMPRESSION`이 지정되거나 *백업 압축 기본값* 서버 구성이 1로 설정되어 있으면 `MAXTRANSFERSIZE`가 자동으로 128K로 증가하여 최적화된 알고리즘을 사용하도록 설정합니다. 백업 명령에 `MAXTRANSFERSIZE`가 64K를 초과하는 값으로 지정되면 제공된 값이 적용됩니다. 즉, SQL Server는 자동으로 이 값을 줄이지 않고 늘리기만 합니다. `MAXTRANSFERSIZE = 65536`을 사용하여 TDE 암호화 데이터베이스를 백업해야 하는 경우 `WITH NO_COMPRESSION`를 지정하거나 *백업 압축 기본값* 서버 구성이 0으로 설정되어 있어야 합니다.
+
+자세한 내용은 [BACKUP(Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)을 참조하세요.
+
 ##  <a name="allocation-of-space-for-the-backup-file"></a><a name="Allocation"></a> 백업 파일에 대한 공간 할당  
  압축된 백업에 대한 최종 백업 파일의 크기는 데이터의 압축 가능한 정도에 따라 달라지며, 백업 작업이 완료되기 전까지는 크기를 알 수 없습니다.  따라서 기본적으로 압축을 사용하여 데이터베이스를 백업할 때 데이터베이스 엔진은 백업 파일에 대한 사전 할당 알고리즘을 사용합니다. 이 알고리즘을 사용하면 백업 파일의 데이터베이스 크기에 대해 미리 정의된 백분율이 사전 할당됩니다. 백업하는 동안 더 많은 공간이 필요한 경우 데이터베이스 엔진은 파일을 늘립니다. 백업 작업의 마지막에 최종 크기가 할당된 공간보다 작으면 데이터베이스 엔진이 파일을 백업의 실제 최종 크기로 축소합니다.  
   

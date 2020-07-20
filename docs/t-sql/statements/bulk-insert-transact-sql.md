@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 909bca7ee100b89362a877fcea2df54a0718b2a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ebdcdb325ba39d163ef63c04008d86a46cb6bec4
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767242"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380866"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT(Transact-SQL)
 
@@ -79,6 +79,8 @@ BULK INSERT
     )]
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>인수
 
 *database_name* 지정한 테이블 또는 뷰가 상주하는 데이터베이스 이름입니다. 지정하지 않으면 기본값은 현재 데이터베이스입니다.
@@ -89,7 +91,7 @@ BULK INSERT
 
 **‘** _data_file_ **’** 지정한 테이블 또는 뷰로 가져올 데이터가 포함된 데이터 파일의 전체 경로입니다. BULK INSERT는 디스크 또는 Azure Blob Storage(예: 네트워크, 플로피 디스크, 하드 디스크 등)에서 데이터를 가져올 수 있습니다.
 
-*data_file*은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 실행 중인 서버에서 유효한 경로를 지정해야 합니다. *data_file*이 원격 파일일 경우 UNC(Universal Naming Convention) 이름을 지정합니다. UNC 이름의 형식은 \\\\*Systemname*\\*ShareName*\\*Path*\\*FileName*입니다. 다음은 그 예입니다.
+*data_file*은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 실행 중인 서버에서 유효한 경로를 지정해야 합니다. *data_file*이 원격 파일일 경우 UNC(Universal Naming Convention) 이름을 지정합니다. UNC 이름의 형식은 \\\\*Systemname*\\*ShareName*\\*Path*\\*FileName*입니다. 예를 들면 다음과 같습니다.
 
 ```sql
 BULK INSERT Sales.Orders
@@ -120,7 +122,7 @@ CHECK_CONSTRAINTS 대량 가져오기 작업 중 대상 테이블 또는 뷰의 
 > [!NOTE]
 > MAXERRORS 옵션은 제약 조건 확인에 적용되지 않습니다.
 
-CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'** _code_page_ **'** } 데이터 파일에 있는 데이터의 코드 페이지를 지정합니다. CODEPAGE는 문자 값이 **127**보다 크거나 **32**보다 작은 **char**, **varchar**또는 **text** 열이 데이터에 포함된 경우에만 적합합니다. 예제는 [코드 페이지 지정](#d-specifying-a-code-page)을 참조하세요.
+CODEPAGE **=** { **'** ACP **'** \| **'** OEM **'** \| **'** RAW **'** \| **'** _code_page_ **'** } 데이터 파일에 있는 데이터의 코드 페이지를 지정합니다. CODEPAGE는 문자 값이 **127**보다 크거나 **32**보다 작은 **char**, **varchar**또는 **text** 열이 데이터에 포함된 경우에만 적합합니다. 예제는 [코드 페이지 지정](#d-specifying-a-code-page)을 참조하세요.
 
 > [!IMPORTANT]
 > CODEPAGE는 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]의 경우 Linux에서 지원되는 옵션이 아닙니다. [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)]의 경우 CODEPAGE에 대해 **'RAW'** 옵션만 허용됩니다.
@@ -136,7 +138,7 @@ CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'
 |*code_page*|특정 코드 페이지 번호(예: 850)입니다.<br /><br /> **&#42;&#42; 중요 &#42;&#42;** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이전 버전은 코드 페이지 65001(UTF-8 인코딩)을 지원하지 않습니다.|
 | &nbsp; | &nbsp; |
 
-DATAFILETYPE **=** { **‘char’**  |  **'native'**  |  **’widechar’**  |  **’widenative’** } BULK INSERT에서 지정된 데이터 파일 형식 값을 사용하여 가져오기 작업을 수행하도록 지정합니다.
+DATAFILETYPE **=** { **'char'** \| **'native'** \| **'widechar'** \| **'widenative'** } BULK INSERT에서 지정된 데이터 파일 형식 값을 사용하여 가져오기 작업을 수행하도록 지정합니다.
 
 &nbsp;
 
@@ -354,7 +356,7 @@ INSERT 및 ADMINISTER BULK OPERATIONS 권한이 필요합니다. Azure SQL Datab
 
 - KEEPIDENTITY 옵션을 사용하여 데이터 파일에서 ID 값을 가져올 수 있습니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-using-pipes-to-import-data-from-a-file"></a>A. 파이프를 사용하여 파일에서 데이터 가져오기
 

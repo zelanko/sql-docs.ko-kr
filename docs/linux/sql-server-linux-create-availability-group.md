@@ -8,12 +8,12 @@ ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 72d1292b03bc518ec8dfbe7a8f2e5e281bc6978a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d2bc4c05c711645b0cff669acbf847da4998f5d2
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896549"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196741"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Linux의 SQL Server에 대해 가용성 그룹 만들기 및 구성
 
@@ -326,7 +326,7 @@ sudo systemctl restart mssql-server
 
 3.  가용성 그룹 옵션 지정 대화 상자에서 가용성 그룹의 이름을 입력하고 드롭다운에서 클러스터 유형으로 외부 또는 없음을 선택합니다. Pacemaker를 배포하는 경우 외부를 사용해야 합니다. 읽기 확장과 같은 특수한 시나리오의 경우에는 없음을 사용합니다. 데이터베이스 수준 상태 검색 옵션을 선택하는 것은 선택 사항입니다. 이 옵션에 대한 자세한 내용은 [가용성 그룹 데이터베이스 수준의 상태 검색 장애 조치(failover) 옵션](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)을 참조하세요. **다음**을 클릭합니다.
 
-    ![](./media/sql-server-linux-create-availability-group/image3.png)
+    ![가용성 그룹 만들기 03](./media/sql-server-linux-create-availability-group/image3.png)
 
 4.  데이터베이스 선택 대화 상자에서 AG에 참여할 데이터베이스를 선택합니다. 각 데이터베이스를 AG에 추가하려면 먼저 전체 백업이 있어야 합니다. **다음**을 클릭합니다.
 
@@ -340,17 +340,17 @@ sudo systemctl restart mssql-server
 
     다음 예제에서는 클러스터 유형이 외부인 두 개의 복제본과 구성 전용 복제본이 있는 AG를 보여 줍니다.
 
-    ![](./media/sql-server-linux-create-availability-group/image4.png)
+    ![가용성 그룹 만들기 04](./media/sql-server-linux-create-availability-group/image4.png)
 
     다음 예제에서는 클러스터 유형이 없음인 두 개의 복제본과 구성 전용 복제본이 있는 AG를 보여 줍니다.
 
-    ![](./media/sql-server-linux-create-availability-group/image5.png)
+    ![가용성 그룹 만들기 05](./media/sql-server-linux-create-availability-group/image5.png)
 
 9.  백업 기본 설정을 변경하려면 백업 기본 설정 탭을 클릭합니다. AG의 백업 기본 설정에 대한 자세한 내용은 [가용성 복제본에 백업 구성](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)을 참조하세요.
 
 10. 읽을 수 있는 보조 복제본을 사용하거나 읽기 확장을 위해 클러스터 유형이 없음인 AG를 만드는 경우 수신기 탭을 선택하여 수신기를 만들 수 있습니다. 수신기를 나중에 추가할 수도 있습니다. 수신기를 만들려면 **가용성 그룹 수신기 만들기** 옵션을 선택하고 이름, TCP/IP 포트를 입력하고, 고정 DHCP IP 주소 또는 자동으로 할당된 DHCP IP 주소 중 어떤 주소를 사용할지 지정합니다. 클러스터 유형이 없음인 AG의 경우 IP는 고정이어야 하고, 기본 IP 주소로 설정되어야 합니다.
 
-    ![](./media/sql-server-linux-create-availability-group/image6.png)
+    ![가용성 그룹 만들기 06](./media/sql-server-linux-create-availability-group/image6.png)
 
 11. 읽을 수 있는 시나리오에 대해 수신기를 만드는 경우 SSMS 17.3 이상에서 마법사를 통해 읽기 전용 라우팅을 만들 수 있습니다. SSMS 또는 Transact-SQL을 통해 나중에 추가할 수도 있습니다. 지금 읽기 전용 라우팅을 추가하려면
 

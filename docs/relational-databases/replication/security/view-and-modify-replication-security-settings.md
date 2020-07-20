@@ -18,15 +18,15 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 420a68755ca7a8adbcc9cfa1dbbf40afaa5f76f7
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 11d2020fff776707da786babb18c07a0a7ab20b1
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808051"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159471"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>복제 보안 설정 보기 및 수정
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 복제 보안 설정을 보고 수정하는 방법에 대해 설명합니다. 예를 들어 게시자에 대한 로그 판독기 에이전트의 연결을 SQL Server 인증에서 Windows 통합 인증으로 변경해야 하거나 Windows 계정 암호가 변경되었을 때 에이전트 작업을 실행하는 데 사용된 자격 증명을 변경해야 할 경우가 있습니다. 각 에이전트에 필요한 사용 권한에 대한 자세한 내용은 [복제 에이전트 보안 모델](../../../relational-databases/replication/security/replication-agent-security-model.md)를 참조하세요.  
   
  **항목 내용**  
@@ -90,7 +90,7 @@ ms.locfileid: "83808051"
   
 #### <a name="to-change-security-settings-for-the-snapshot-agent"></a>스냅샷 에이전트의 보안 설정을 변경하려면  
   
-1.  **게시 속성 - \<게시&gt;** 대화 상자의 **에이전트 보안** 페이지에서 **스냅샷 에이전트** 입력란 옆에 있는 **보안 설정** 단추를 클릭합니다.  
+1.  **게시 속성 - \<Publication>** 대화 상자의 **에이전트 보안** 페이지에서 **스냅샷 에이전트** 입력란 옆에 있는 **보안 설정** 단추를 클릭합니다.  
   
 2.  **스냅샷 에이전트 보안** 대화 상자에서 에이전트가 실행될 계정을 지정합니다.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "83808051"
   
 #### <a name="to-change-security-settings-for-the-log-reader-agent"></a>로그 판독기 에이전트의 보안 설정을 변경하려면  
   
-1.  **게시 속성 - \<게시>** 대화 상자의 **에이전트 보안** 페이지에서 **로그 판독기 에이전트** 입력란 옆에 있는 **보안 설정** 단추를 클릭합니다.  
+1.  **게시 속성 - \<Publication>** 대화 상자의 **에이전트 보안** 페이지에서 **로그 판독기 에이전트** 입력란 옆에 있는 **보안 설정** 단추를 클릭합니다.  
   
 2.  **로그 판독기 에이전트 보안** 대화 상자에서 에이전트가 실행될 계정을 지정합니다.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "83808051"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-push-subscription"></a>밀어넣기 구독에 대한 배포 에이전트의 보안 설정을 변경하려면  
   
-1.  게시자의 **구독 속성 - \<Subscription>** 대화 상자에서 다음과 같이 변경할 수 있습니다.  
+1.  **게시자의 구독 속성 - \<Subscription>** 대화 상자에서 다음과 같이 변경할 수 있습니다.  
   
     -   배포 에이전트를 실행하고 배포자에 배포 에이전트를 연결하는 계정을 변경하려면 **에이전트 프로세스 계정** 행을 클릭한 다음, 행에 있는 속성 단추( **...** )를 클릭합니다. **배포 에이전트 보안** 대화 상자에서 계정과 암호를 지정합니다.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "83808051"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription"></a>끌어오기 구독에 대한 배포 에이전트의 보안 설정을 변경하려면  
   
-1.  구독자의 **구독 속성 - \<Subscription>** 대화 상자에서 다음과 같이 변경할 수 있습니다.  
+1.  **구독자의 구독 속성 - \<Subscription>** 대화 상자에서 다음과 같이 변경할 수 있습니다.  
   
     -   배포 에이전트를 실행하고 구독자에 배포 에이전트를 연결하는 계정을 변경하려면 **에이전트 프로세스 계정** 행을 클릭한 다음, 행에 있는 속성 단추( **...** )를 클릭합니다. **배포 에이전트 보안** 대화 상자에서 계정과 암호를 지정합니다.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "83808051"
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-push-subscription"></a>밀어넣기 구독에 대한 병합 에이전트의 보안 설정을 변경하려면  
   
-1.  게시자의 **구독 속성 - \<Subscription>** 대화 상자에서 다음과 같이 변경할 수 있습니다.  
+1.  **게시자의 구독 속성 - \<Subscription>** 대화 상자에서 다음과 같이 변경할 수 있습니다.  
   
     -   병합 에이전트를 실행하고 게시자 및 배포자에 병합 에이전트를 연결하는 계정을 변경하려면 **에이전트 프로세스 계정** 행을 클릭한 다음, 행에 있는 속성 단추( **...** )를 클릭합니다. **병합 에이전트 보안** 대화 상자에서 계정과 암호를 지정합니다.  
   
@@ -177,7 +177,7 @@ ms.locfileid: "83808051"
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription"></a>끌어오기 구독에 대한 병합 에이전트의 보안 설정을 변경하려면  
   
-1.  구독자의 **구독 속성 - \<Subscription>** 대화 상자에서 다음과 같이 변경할 수 있습니다.  
+1.  **구독자의 구독 속성 - \<Subscription>** 대화 상자에서 다음과 같이 변경할 수 있습니다.  
   
     -   병합 에이전트를 실행하고 구독자에 병합 에이전트를 연결하는 계정을 변경하려면 **에이전트 프로세스 계정** 행을 클릭한 다음, 행에 있는 속성 단추( **...** )를 클릭합니다. **병합 에이전트 보안** 대화 상자에서 계정과 암호를 지정합니다.  
   
@@ -187,7 +187,7 @@ ms.locfileid: "83808051"
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>큐 판독기 에이전트가 실행되는 계정을 변경하려면  
   
-1.  **배포자 속성 - \<Distributor>** 대화 상자의 **일반** 페이지에서 배포 데이터베이스 옆에 있는 속성( **…** )단추를 클릭합니다.  
+1.  **배포자 속성 - \<Distributor>** 대화 상자의 **일반** 페이지에서 배포 데이터베이스의 옆에 있는 속성 단추( **...** )를 클릭합니다.  
   
 2.  **배포 데이터베이스 속성 - \<Database>** 대화 상자에서 **에이전트 프로세스 계정** 입력란 옆에 있는 **보안 설정** 단추를 클릭합니다.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "83808051"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>끌어오기 구독 즉시 업데이트에 대한 보안 설정을 변경하려면  
   
-1.  구독자의 **구독 속성 - \<Subscription>** 대화 상자에서 **게시자 연결** 행을 클릭한 다음, 행에 있는 속성( **&#x2026;** ) 단추를 클릭합니다.  
+1.  **구독자의 구독 속성 - \<Subscription>** 대화 상자에서 **게시자 연결** 행을 클릭한 다음, 행에 있는 속성 단추( **&#x2026;** )를 클릭합니다.  
   
 2.  **연결 정보 입력** 대화 상자에서 다음 옵션 중 하나를 선택합니다.  
   

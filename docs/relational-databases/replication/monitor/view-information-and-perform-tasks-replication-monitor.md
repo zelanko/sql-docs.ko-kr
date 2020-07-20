@@ -16,15 +16,15 @@ ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1e78db0d3844ee7581bd57da1e57f14ee80e29cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: be851d2ff0919125699a4e33c4b4d1d6445c0fc6
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286390"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159631"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>복제 모니터를 사용하여 정보 보기 및 태스크 수행
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 복제 모니터는 정보를 보고 다양한 작업을 수행할 수 있는 여러 가지 탭과 옵션을 제공합니다. 이 아티클에서는 복제 모니터를 사용할 때 보고 수행할 수 있는 여러 가지 사항을 설명합니다. 
 
 
@@ -97,7 +97,7 @@ ms.locfileid: "76286390"
   
 1.  왼쪽 창에서 게시자 그룹을 확장한 다음 해당 게시자를 클릭합니다.    
 2.  구독에 대한 정보를 보려면 **구독 조사 목록** 탭을 클릭합니다.    
-3.  **\<SubscriptionType> 구독 표시** 드롭다운 목록에서 표시할 구독 유형을 선택합니다. '동기화 중'과 같은 특정 상태에 있는 구독만 보려면 **표시** 드롭다운 목록에서 옵션을 선택합니다.    
+3.  **\<SubscriptionType>구독 표시** 드롭다운 목록에서 표시할 구독 유형을 선택합니다. '동기화 중'과 같은 특정 상태에 있는 구독만 보려면 **표시** 드롭다운 목록에서 옵션을 선택합니다.    
 4.  구독 속성을 보고 수정하려면 해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 이 탭에서 보다 자세한 정보에 액세스하고 태스크를 수행할 수도 있습니다. 
   
   

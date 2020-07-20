@@ -24,12 +24,12 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4efecdda3375430a380e10ddb1845f08050ce4a3
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 0610ec89a4475b9eb60922b1d52c7005d5692bb0
+ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81627673"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217801"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN(Transact-SQL)
 
@@ -147,7 +147,7 @@ MUST_CHANGE를 지정한 경우에는 CHECK_EXPIRATION  및 CHECK_POLICY를 ON�
 
 CHECK_POLICY를 OFF로 설정한 경우에는 CHECK_EXPIRATION을 ON으로 설정할 수 없습니다. 이 옵션 조합을 사용하면 ALTER LOGIN 문이 실패합니다.
 
-ALTER_LOGIN에 DISABLE 인수를 사용하여 Windows 그룹에 대한 액세스를 거부할 수 없습니다. 예를 들어 ALTER_LOGIN [*domain\group*] DISABLE은 다음 오류 메시지를 반환합니다.
+ALTER LOGIN에 DISABLE 인수를 사용하여 Windows 그룹에 대한 액세스를 거부할 수 없습니다. 예를 들어 ALTER LOGIN [*domain\group*] DISABLE은 다음 오류 메시지를 반환합니다.
 
     `"Msg 15151, Level 16, State 1, Line 1
     "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
@@ -172,7 +172,7 @@ CREDENTIAL 옵션을 사용하는 경우에는 ALTER ANY CREDENTIAL 권한도 �
 
 보안 주체는 자신이 소유하는 로그인의 암호, 기본 언어 및 기본 데이터베이스를 변경할 수 있습니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-enabling-a-disabled-login"></a>A. 비활성화된 로그인 활성화
 
@@ -331,7 +331,7 @@ ALTER ANY LOGIN 권한이 필요합니다.
 
 보안 주체는 자체 로그인에 대한 암호를 변경할 수 있습니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 이러한 예제에는 다른 SQL 제품 사용에 대한 예제도 포함되어 있습니다. 위에서 지원되는 인수를 참조하세요.
 
@@ -575,7 +575,7 @@ CREDENTIAL 옵션을 사용하는 경우에는 ALTER ANY CREDENTIAL 권한도 �
 
 `sysadmin` 권한이 있는 SQL 주체만 Azure AD 로그인에 대해 ALTER LOGIN 명령을 실행할 수 있습니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 이러한 예제에는 다른 SQL 제품 사용에 대한 예제도 포함되어 있습니다. 위에서 지원되는 인수를 참조하세요.
 
@@ -738,7 +738,7 @@ ALTER ANY LOGIN 권한이 필요합니다.
 
 보안 주체는 자체 로그인에 대한 암호를 변경할 수 있습니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 이러한 예제에는 다른 SQL 제품 사용에 대한 예제도 포함되어 있습니다. 위에서 지원되는 인수를 참조하세요.
 
@@ -927,7 +927,7 @@ CREDENTIAL 옵션을 사용하는 경우에는 ALTER ANY CREDENTIAL 권한도 �
 
 보안 주체는 자신이 소유하는 로그인의 암호, 기본 언어 및 기본 데이터베이스를 변경할 수 있습니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 이러한 예제에는 다른 SQL 제품 사용에 대한 예제도 포함되어 있습니다. 위에서 지원되는 인수를 참조하세요.
 

@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 81f446164fd12867c19273e6cf15018b749061a4
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 14a0cfa2227179d74d67d6e3ed16198da3323855
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925175"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279411"
 ---
 # <a name="ssis-catalog"></a>SSIS 카탈로그
 
@@ -87,7 +87,7 @@ ms.locfileid: "82925175"
 ###  <a name="folder-project-environment"></a><a name="Folder"></a> 폴더, 프로젝트, 환경  
  폴더, 프로젝트 또는 환경의 이름을 바꿀 때 고려할 규칙은 다음과 같습니다.  
   
--   ASCII/유니코드 문자 1~31, 따옴표("), 보다 작음(\<), 보다 큼(>), 파이프(|), 백스페이스(\b), null(\0) 및 탭(\t)은 올바른 문자가 아닙니다.  
+-   ASCII/유니코드 문자 1~31, 따옴표("), 보다 작음(\<), greater than (>), 파이프(|), 백스페이스(\b), null(\0) 및 탭(\t)은 잘못된 문자입니다.  
   
 -   이름은 선행 또는 후행 공백을 포함할 수 없습니다.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "82925175"
 ###  <a name="environment-variable"></a><a name="EnvironmentVariable"></a> 환경 변수  
  환경 변수 이름을 지정할 때 고려할 규칙은 다음과 같습니다.  
   
--   ASCII/유니코드 문자 1~31, 따옴표("), 보다 작음(\<), 보다 큼(>), 파이프(|), 백스페이스(\b), null(\0) 및 탭(\t)은 올바른 문자가 아닙니다.  
+-   ASCII/유니코드 문자 1~31, 따옴표("), 보다 작음(\<), greater than (>), 파이프(|), 백스페이스(\b), null(\0) 및 탭(\t)은 잘못된 문자입니다.  
   
 -   이름은 선행 또는 후행 공백을 포함할 수 없습니다.  
   
@@ -598,7 +598,7 @@ SSISDB 데이터베이스에 대한 Always On 지원을 활성화하기 전에 �
   
 > [!IMPORTANT]  
 > -   가용성 그룹의 **주 노드** 에서 이러한 단계를 수행해야 합니다.
-> -   Always On 가용성 그룹에 SSISDB를 추가한 ‘후’ **Always On에 대한 SSIS 지원**을 사용하도록 설정해야 합니다.   
+> -   Always On 가용성 그룹에 SSISDB를 추가한 ‘후’ **Always On에 대한 SSIS 지원**을 사용하도록 설정해야 합니다.  
 
 > [!NOTE]
 > 이 절차에 대한 자세한 내용은 데이터 플랫폼 MVP Marcos Freccia의 추가 스크린 샷이 포함된 다음 연습을 참조하세요. [SQL Server 2016용 AG에 SSISDB 추가](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
@@ -661,6 +661,18 @@ Always On 가용성 그룹에 SSISDB 데이터베이스를 추가하는 것은 �
 4.  [2단계: Always On 가용성 그룹에 SSISDB 추가](#Step2)의 지침에 따라 가용성 그룹에 SSISDB를 다시 추가합니다.  
   
 5.  [3단계: Always On에 대한 SSIS 지원 활성화](#Step3)의 지침을 따릅니다.  
+
+
+## <a name="ssisdb-catalog-and-delegation-in-double-hop-scenarios"></a>더블 홉 시나리오에서 SSISDB 카탈로그 및 위임
+
+기본적으로 SSISDB 카탈로그에 저장된 SSIS 패키지의 원격 호출은 더블 홉이라고도 하는 자격 증명 위임을 지원하지 않습니다. 
+
+사용자가 클라이언트 머신 A에 로그인하여 SSMS(SQL Server Management Studio)를 시작하는 시나리오를 가정합니다. SSMS 내에서 사용자는 SSISDB 카탈로그가 있는 머신 B에 호스트된 SQL 서버에 연결합니다. SSIS 패키지는 이 SSISDB 카탈로그에 저장되고 패키지는 머신 C에서 실행되는 SQL Server 서비스에 연결됩니다(패키지는 다른 서비스에도 액세스할 수도 있음). 사용자가 머신 A에서 SSIS 패키지 실행을 호출하면 SSMS는 먼저 머신 A에서 머신 B(SSIS 런타임 프로세스가 패키지를 실행하는 위치)로 사용자 자격 증명을 성공적으로 전달합니다. 이제 실행을 성공적으로 완료하기 위해 머신 B에서 머신 C로 사용자 자격 증명을 위임하려면 SSIS 실행 런타임 프로세스(ISServerExec.exe)가 필요합니다. 그러나 자격 증명 위임은 기본적으로 사용하도록 설정되어 있지 않습니다.
+
+사용자는 SQL Server 서비스 계정(머신 B)에 ‘모든 서비스에 대한 위임용으로 이 사용자 트러스트(Kerberos만)’ 권한을 부여하여 자격 증명을 위임할 수 있으며 자식 프로세스로 ISServerExec.exe가 시작됩니다. 이 프로세스를 SQL Server 서비스 계정에 대한 비제한 위임 또는 개방형 위임 설정이라고 합니다. 이 권한을 부여하기 전에 조직의 보안 요구 사항을 충족하는지 여부를 고려해야 합니다.
+
+SSISDB는 제한된 위임을 지원하지 않습니다. 더블 홉 환경에서 SSISDB 카탈로그를 호스트하는 SQL 서버의 서비스 계정(이 예제의 경우 머신 B)이 제한된 위임에 대해 설정된 경우 ISServerExec.exe는 세 번째 머신(머신 C)에 자격 증명을 위임할 수 없습니다. 이는 Windows Credential Guard를 사용하도록 설정하여 제한된 위임을 반드시 설정해야 하는 시나리오에 적용됩니다.
+
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   

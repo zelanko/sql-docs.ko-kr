@@ -8,12 +8,12 @@ ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: da852f20d9109c5c4e2988cbdfc3915fe226718f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b48511e9e737f4fb775925d8a6bff81e31ef2a5a
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896523"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196761"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>SQL Server on Linux용 Pacemaker 클러스터 배포
 
@@ -21,7 +21,7 @@ ms.locfileid: "85896523"
 
 이 자습서에서는 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Always On AG(가용성 그룹) 또는 FCI(장애 조치(failover) 클러스터 인스턴스)용 Linux Pacemaker 클러스터를 배포하는 데 필요한 작업을 설명합니다. 긴밀하게 결합된 Windows Server/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 스택과는 달리, Linux에서 AG(가용성 그룹)를 구성하고 Pacemaker 클러스터를 만드는 작업은 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]를 설치하기 전이나 설치 후에 수행할 수 있습니다. AG 또는 FCI 배포의 Pacemaker 부분에 대한 리소스 통합 및 구성은 클러스터가 구성된 후에 수행됩니다.
 > [!IMPORTANT]
-> 클러스터 유형이 None인 AG에는 Pacemaker 클러스터가 필요하지 ‘않으며’ Pacemaker에서 관리할 수도 없습니다.  
+> 클러스터 유형이 None인 AG에는 Pacemaker 클러스터가 필요하지 ‘않으며’ Pacemaker에서 관리할 수도 없습니다. 
 
 > [!div class="checklist"]
 > * 고가용성 추가 기능을 설치한 다음, Pacemaker를 설치합니다.
@@ -175,7 +175,7 @@ RHEL 및 Ubuntu와 SLES에서 Pacemaker 클러스터를 만드는 프로세스�
    ```
    
 7. 관리에 사용할 IP 주소를 구성한 경우 브라우저에서 테스트할 수 있습니다. 그러면 *hacluster*의 암호 변경도 테스트됩니다.
-   ![](./media/sql-server-linux-deploy-pacemaker-cluster/image2.png)
+   ![hacLuster](./media/sql-server-linux-deploy-pacemaker-cluster/image2.png)
    
 8. 클러스터의 노드로 사용할 또 다른 SLES 서버에서 다음 명령을 실행합니다. 
    ```bash

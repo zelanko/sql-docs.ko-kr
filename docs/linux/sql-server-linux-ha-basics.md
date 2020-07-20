@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c7b22e569f17ca7297483d0b5286ecc77a9a14e5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 67a5219e955ccd9d4b0303276823d8cafbce4963
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895312"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196856"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 배포의 SQL Server 가용성 기본 사항
 
@@ -146,7 +146,7 @@ Windows 기반 구성에서 구성된 AG 또는 FCI는 클러스터를 인식합
 
 이 솔루션은 Windows를 사용하여 클러스터형 구성을 배포하는 것과 일부 측면에서는 비슷하지만 많은 측면에서 서로 다릅니다. Windows에서는 WSFC(Windows Server 장애 조치(failover) 클러스터)라는 클러스터링의 가용성 형식이 운영 체제에 기본 제공되며, WSFC, 장애 조치(failover) 클러스터링을 만들 수 있는 기능은 기본적으로 사용하지 않도록 설정됩니다. Windows에서 AG 및 FCI는 WSFC 위에 빌드되며 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]에서 제공하는 특정 리소스 DLL로 인해 긴밀한 통합을 공유합니다. 한 공급업체에서 모든 것을 제공하므로 대체로 솔루션을 이렇게 긴밀하게 결합할 수 있습니다.
 
-![](./media/sql-server-linux-ha-basics/image1.png)
+![HA 기본 사항](./media/sql-server-linux-ha-basics/image1.png)
 
 Linux에서 지원되는 각 배포에는 Pacemaker를 사용할 수 있지만 각 배포는 약간 다른 구현 및 버전을 사용자 지정하고 포함할 수 있습니다. 몇 가지 차이는 이 문서의 지침에 반영됩니다. 클러스터링 계층은 오픈 소스이므로 배포와 함께 제공되더라도 WSFC가 Windows에서 작동하는 것과 동일한 방식으로 긴밀하게 통합되지는 않습니다. 이런 이유로 Microsoft에서는 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 및 Pacemaker 스택이 Windows 기반 AG 및 FCI에 가깝지는 똑같지는 않은 환경을 제공할 수 있도록 *mssql-server-ha*를 제공합니다.
 

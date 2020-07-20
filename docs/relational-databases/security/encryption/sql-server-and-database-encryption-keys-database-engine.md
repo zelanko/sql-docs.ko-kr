@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: bd4a4e98f464c56e5c46c669b7ca26e5db5c814e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 82cd5d463b74fb432b781d6fd721badaa1e836c1
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883080"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279339"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 및 데이터베이스 암호화 키(데이터베이스 엔진)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85883080"
 
 ### <a name="service-master-key"></a>서비스 마스터 키
   
- 서비스 마스터 키는 SQL Server 암호화 계층의 루트입니다. SMK는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 시작되고 연결된 서버 암호, 자격 증명 및 데이터베이스 마스터 키를 암호화하는 데 사용될 때 처음으로 자동 생성됩니다. SMK는 Windows DPAPI(데이터 보호 API)를 사용하는 로컬 머신 키로 암호화됩니다. DPAPI는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정의 Windows 자격 증명 및 컴퓨터의 자격 증명에서 파생된 키를 사용합니다. 서비스 마스터 키의 암호는 해당 키가 만들어진 서비스 계정이나 해당 컴퓨터의 자격 증명에 대한 액세스 권한이 있는 보안 주체에 의해서만 해독될 수 있습니다.
+ 서비스 마스터 키는 SQL Server 암호화 계층의 루트입니다. SMK는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 시작되고 각 데이터베이스에서 연결된 서버 암호, 자격 증명 및 데이터베이스 마스터 키를 암호화하는 데 사용될 때 처음으로 자동 생성됩니다. SMK는 Windows DPAPI(데이터 보호 API)를 사용하는 로컬 머신 키로 암호화됩니다. DPAPI는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정의 Windows 자격 증명 및 컴퓨터의 자격 증명에서 파생된 키를 사용합니다. 서비스 마스터 키의 암호는 해당 키가 만들어진 서비스 계정이나 해당 컴퓨터의 자격 증명에 대한 액세스 권한이 있는 보안 주체에 의해서만 해독될 수 있습니다.
 
 서비스 마스터 키는 이 키를 만든 Windows 서비스 계정이나 서비스 계정 이름 및 암호에 대한 액세스를 갖고 있는 보안 주체만 열 수 있습니다.
 

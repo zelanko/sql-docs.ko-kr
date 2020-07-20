@@ -1,5 +1,5 @@
 ---
-title: WITH XMLNAMESPACES(Transact-SQL) | Microsoft Docs
+title: WITH XMLNAMESPACES(Transact-SQL)
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fd1179c6951860dcb168e847ed748f3a69d82aff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2883be875b827cc38e0412ba8ca75851b11543e8
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902221"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392691"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,9 @@ DEFAULT <xml_namespace_uri>
   
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *xml_namespace_uri*  
  선언할 XML 네임스페이스를 식별하는 URI(Uniform Resource Identifier)입니다. *xml_namespace_uri*는 SQL 문자열입니다.  
   
@@ -98,7 +100,7 @@ DEFAULT <xml_namespace_uri>
   
 -   XMLNAMESPACES 키워드는 WITH 절의 컨텍스트에서 예약됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  예를 들어 [WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

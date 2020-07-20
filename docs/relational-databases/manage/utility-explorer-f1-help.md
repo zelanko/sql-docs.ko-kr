@@ -1,5 +1,5 @@
 ---
-title: 유틸리티 탐색기 F1 도움말 | Microsoft 문서
+title: 유틸리티 탐색기 F1 도움말
 description: SQL Server 유틸리티의 다양한 영역에서 제공되는 기능에 대해 알아봅니다. 보기, 대시보드 및 유틸리티 관리 탭에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 08/19/2016
@@ -20,14 +20,15 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 264c809ce03cca9a6bb9b84300d3780a1ddc33f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e97a0e8ddae735865b4314e33f3a5ce6d365de0
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640404"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197271"
 ---
 # <a name="utility-explorer-f1-help"></a>유틸리티 탐색기 F1 도움말
+
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   다음 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 기능 및 이와 관련된 작업에 대해 설명합니다.  
   
@@ -124,11 +125,11 @@ ms.locfileid: "85640404"
  목록 보기  
  창 맨 위에 있는 목록 뷰에서는 개별 데이터 계층 애플리케이션에 대한 데이터를 표시됩니다. 상태 아이콘은 각 데이터 계층 애플리케이션의 상태 요약을 사용 범주별로 보여 줍니다.  
   
--   녹색 확인 표시 - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - 리소스 사용 정책을 위반하지 않는 데이터 계층 애플리케이션 수입니다. 리소스 사용이 정상적입니다.  
+-   녹색 확인 표시 - :::image type="icon" source="media/well-utilized.png" border="false"::: - 리소스 사용 정책을 위반하지 않는 데이터 계층 애플리케이션의 수입니다. 리소스 사용이 정상적입니다.  
   
--   녹색 아래쪽 화살표 - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - 리소스가 사용 미달 상태입니다.  
+-   녹색 아래쪽 화살표 - ![아래쪽 화살표](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - 리소스가 사용 미달 상태입니다.  
   
--   빨강 위쪽 화살표 - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - 리소스가 사용 과다 상태입니다.  
+-   빨강 위쪽 화살표 - ![위쪽 화살표](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - 리소스가 사용 과다 상태입니다.  
   
  목록 뷰의 열 순서는 마우스로 왼쪽이나 오른쪽으로 끌어서 변경할 수 있습니다. 목록 뷰에서 열 머리글을 마우스 오른쪽 단추로 클릭하고 열을 선택하거나 선택을 취소하여 열을 추가하거나 삭제할 수 있습니다. 오른쪽 클릭 메뉴에도 정렬 옵션이 있습니다. 열 이름 위쪽을 클릭하여 정렬을 활성화할 수도 있습니다.  
   
@@ -266,11 +267,11 @@ ms.locfileid: "85640404"
   
  상태 아이콘은 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 상태 요약을 사용 범주별로 보여 줍니다.  
   
--   녹색 확인 표시 - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - 리소스 사용 정책을 위반하지 않는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리형 인스턴스 수입니다. 리소스 사용이 정상적입니다.  
+-   녹색 확인 표시 - ![녹색 확인](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - 리소스 사용 정책을 위반하지 않는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스 수입니다. 리소스 사용이 정상적입니다.  
   
--   녹색 아래쪽 화살표 - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - 리소스가 사용 미달 상태입니다.  
+-   녹색 아래쪽 화살표 - ![아래쪽 화살표](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - 리소스가 사용 미달 상태입니다.  
   
--   빨강 위쪽 화살표 - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - 리소스가 사용 과다 상태입니다.  
+-   빨강 위쪽 화살표 - ![위쪽 화살표](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - 리소스가 사용 과다 상태입니다.  
   
  목록 뷰의 열 순서는 마우스로 왼쪽이나 오른쪽으로 끌어서 변경할 수 있습니다. 목록 뷰에서 열 머리글을 마우스 오른쪽 단추로 클릭하고 열을 선택하거나 선택을 취소하여 열을 추가하거나 삭제할 수 있습니다. 오른쪽 클릭 메뉴에도 정렬 옵션이 있습니다. 열 이름 위쪽을 클릭하여 정렬을 활성화할 수도 있습니다.  
   

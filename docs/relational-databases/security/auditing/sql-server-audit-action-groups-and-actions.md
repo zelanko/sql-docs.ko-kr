@@ -2,7 +2,7 @@
 title: SQL Server 감사 동작 그룹 및 동작 | Microsoft 문서
 description: SQL Server 감사에서의 서버 수준, 데이터베이스 수준과 감사 수준 작업 그룹 및 개별 작업에 대해 알아봅니다.
 ms.custom: ''
-ms.date: 10/19/2016
+ms.date: 07/13/2020
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: vanto
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: cd25caf80cffef2810139ce1a2ab63269e5ec6ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68943b7b57794d779656ca8537a7c59d4f486db8
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885599"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301902"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 감사 동작 그룹 및 동작
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -78,8 +78,8 @@ ms.locfileid: "85885599"
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|애플리케이션 역할의 암호가 변경될 때마다 발생하는 이벤트입니다. [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md)와 동일합니다.|  
 |AUDIT_CHANGE_GROUP|모든 감사가 생성, 수정 또는 삭제되거나 모든 감사 사양이 생성, 수정 또는 삭제될 때마다 발생하는 이벤트입니다. 감사에 대한 모든 변경 내용은 자체적으로 감사됩니다. [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md)와 동일합니다.|  
 |BACKUP_RESTORE_GROUP|백업 또는 복원 명령이 실행될 때마다 발생하는 이벤트입니다. [감사 백업 및 이벤트 클래스 복원](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md)과 동일합니다.|  
-|BATCH_COMPLETED_GROUP|일괄 처리 텍스트, 저장 프로시저 또는 트랜잭션 관리 작업의 실행이 완료될 때마다 발생하는 이벤트입니다. 일괄 처리가 완료된 후 발생하고 결과를 포함하여 클라이언트에서 보낸 전체 일괄 처리 또는 저장 프로시저 텍스트를 감사합니다.|  
-|BATCH_STARTED_GROUP|일괄 처리 텍스트, 저장 프로시저 또는 트랜잭션 관리 작업의 실행이 시작될 때마다 발생하는 이벤트입니다. 실행 전에 발생하고 클라이언트에서 보낸 전체 일괄 처리 또는 저장 프로시저 텍스트를 감사합니다.|  
+|BATCH_COMPLETED_GROUP|일괄 처리 텍스트, 저장 프로시저 또는 트랜잭션 관리 작업의 실행이 완료될 때마다 발생하는 이벤트입니다. 일괄 처리가 완료된 후 발생하고 결과를 포함하여 클라이언트에서 보낸 전체 일괄 처리 또는 저장 프로시저 텍스트를 감사합니다. **SQL Server 2019에 추가되었습니다.**|  
+|BATCH_STARTED_GROUP|일괄 처리 텍스트, 저장 프로시저 또는 트랜잭션 관리 작업의 실행이 시작될 때마다 발생하는 이벤트입니다. 실행 전에 발생하고 클라이언트에서 보낸 전체 일괄 처리 또는 저장 프로시저 텍스트를 감사합니다. **SQL Server 2019에 추가되었습니다.**|  
 |BROKER_LOGIN_GROUP|Service Broker 전송 보안과 연관된 감사 메시지를 보고하기 위해 발생하는 이벤트입니다. [Audit Broker Login Event Class](../../../relational-databases/event-classes/audit-broker-login-event-class.md)와 동일합니다.|  
 |DATABASE_CHANGE_GROUP|데이터베이스가 생성, 변경 또는 삭제되면 발생하면 발생하는 이벤트입니다. 이 이벤트는 모든 데이터베이스가 생성, 변경 또는 삭제될 때마다 발생합니다. [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md)와 동일합니다.|  
 |DATABASE_LOGOUT_GROUP|포함된 데이터베이스 사용자가 데이터베이스에서 로그아웃하면 발생하는 이벤트입니다.|  

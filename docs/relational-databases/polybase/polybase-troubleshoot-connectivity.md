@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5e732d55daa55a8a3abc171ead7b7b1e87e92992
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: 9e50701d0486ee7bc00bf765d2a71cb4de0c0b25
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84203560"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196196"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 연결 문제 해결
 
@@ -52,7 +52,7 @@ PolyBase에서 Kerberos 보안 리소스에 대해 인증이 요청되면 다음
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 KDC로 돌아가고, TGT를 다시 전달하고, ST를 요청하여 해당하는 특정 보안 리소스에 액세스합니다. ST는 보안 서비스의 프라이빗 키를 사용하여 암호화됩니다.
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 ST를 Hadoop에 전달하고 인증되어 해당 서비스에 대해 세션이 만들어집니다.
 
-![](./media/polybase-sqlserver.png)
+![PolyBase SQL Server](./media/polybase-sqlserver.png)
 
 인증 관련 문제는 위 4단계 중 하나 이상에 속합니다. 더 빠르게 디버그할 수 있도록 PolyBase에서는 실패 지점을 식별하는 데 도움이 되는 통합 진단 도구를 도입했습니다.
 

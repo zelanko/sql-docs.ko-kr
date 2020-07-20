@@ -1,5 +1,5 @@
 ---
-title: SQL Server 유틸리티 제어 지점 만들기(SQL Server 유틸리티) | Microsoft 문서
+title: SQL Server 유틸리티 제어 지점 만들기(SQL Server 유틸리티)
 description: SQL Server 유틸리티 제어 지점(UCP)를 만들어 리소스 사용 병목 현상 및 통합 기회를 식별하는 데 도움을 받으세요.
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3203785a5850d2ac8a0d635ed9f899daeb2c52fe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d29ab79c75adb436b45faab5e8161c8d01e6c533
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85776021"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196894"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>SQL Server 유틸리티 제어 지점 만들기(SQL Server 유틸리티)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -101,9 +101,9 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 컬렉션 집합을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 이외의 컬렉션 집합과 함께 사용하는 것이 가능합니다. 즉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 멤버이면 다른 컬렉션 집합으로 모니터링할 수 있습니다. 그러나 관리되는 인스턴스의 모든 컬렉션 집합은 해당 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 관리 데이터 웨어하우스로 업로드합니다. 자세한 내용은 [같은 SQL Server 인스턴스에서 유틸리티 및 유틸리티 이외의 컬렉션 집합을 실행하기 위한 고려 사항](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md) 및 [유틸리티 제어 지점 데이터 웨어하우스 구성&#40;SQL Server 유틸리티&#41;](../../relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md)을 참조하세요.  
   
 ## <a name="wizard-steps"></a>마법사 단계  
- ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")  
+ ![UCP 만들기](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")  
   
- 다음 섹션에서는 마법사 워크플로의 각 페이지에서 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP를 만들기 위한 정보를 제공합니다. 마법사를 시작하여 새 UCP를 만들려면 SSMS의 보기 메뉴에서 유틸리티 탐색기 창을 열고, 유틸리티 탐색기 창의 맨 위에 있는 ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") **UCP 만들기** 단추를 클릭합니다.  
+ 다음 섹션에서는 마법사 워크플로의 각 페이지에서 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP를 만들기 위한 정보를 제공합니다. 마법사를 시작하여 새 UCP를 만들려면 SSMS의 보기 메뉴에서 유틸리티 탐색기 창을 열고 유틸리티 탐색기 창 위쪽의 ![UCP 만들기](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") **UCP 만들기** 단추를 클릭합니다.  
   
  아래 목록의 링크를 클릭하여 마법사 페이지에 대한 세부 정보를 탐색할 수 있습니다.  
   
@@ -126,9 +126,9 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="introduction-to-create-ucp-wizard"></a><a name="Welcome"></a> UCP 만들기 마법사 소개  
  유틸리티 탐색기를 열 때 연결된 유틸리티 제어 지점이 없으면 기존 항목에 연결하거나 새 항목을 만들어야 합니다.  
   
- **기존 UCP에 연결** - 배포 환경에 기존 유틸리티 제어 지점이 있는 경우 유틸리티 탐색기 창의 맨 위에 있는 ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**유틸리티에 연결** 단추를 클릭하여 연결할 수 있습니다. 기존 UCP에 연결하려면 관리자 자격 증명이 있거나 유틸리티 읽기 역할의 멤버여야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티당 UCP는 하나만 있을 수 있으며 사용자는 SSMS 인스턴스에서 하나의 UCP에만 연결할 수 있습니다.  
+ **기존 UCP에 연결** - 배포 환경에 기존 유틸리티 제어 지점이 있는 경우 유틸리티 탐색기 창 위쪽의 ![유틸리티에 연결](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**유틸리티에 연결** 단추를 클릭하여 연결할 수 있습니다. 기존 UCP에 연결하려면 관리자 자격 증명이 있거나 유틸리티 읽기 역할의 멤버여야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티당 UCP는 하나만 있을 수 있으며 사용자는 SSMS 인스턴스에서 하나의 UCP에만 연결할 수 있습니다.  
   
- **새 UCP 만들기** - 새 유틸리티 제어 지점을 만들려면 유틸리티 탐색기 창의 맨 위에 있는 ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")**UCP 만들기** 단추를 클릭합니다. 새 UCP를 만들려면 연결 대화 상자에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 지정하고 관리자 자격 증명을 제공해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 한 개마다 UCP를 한 개만 사용할 수 있습니다.  
+ **새 UCP 만들기** - 새 유틸리티 제어 지점을 만들려면 유틸리티 탐색기 창 위쪽의 ![UCP 만들기](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")**UCP 만들기** 단추를 클릭합니다. 새 UCP를 만들려면 연결 대화 상자에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 지정하고 관리자 자격 증명을 제공해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 한 개마다 UCP를 한 개만 사용할 수 있습니다.  
   
 ##  <a name="specify-instance"></a><a name="Instance_name"></a> 인스턴스 지정  
  만들려는 UCP에 대한 다음 정보를 지정합니다.  

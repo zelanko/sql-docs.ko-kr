@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5d2e90088d844bbd897f2a0efae9379e9a1a585
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9c0a353c91b952571932ae6d2abe318f70decc4a
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007483"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279268"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Columnstore 인덱스 - 새로운 기능
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,6 +49,9 @@ ms.locfileid: "86007483"
 |Columnstore 인덱스에는 비지속형 계산 열이 있을 수 있음||||예|||   
   
  <sup>1</sup> 읽기 전용 비클러스터형 columnstore 인덱스를 만들려면 읽기 전용 파일 그룹에 인덱스를 저장합니다.  
+ 
+> [!NOTE]
+> [일괄 처리 모드](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) 작업에 대한 DOP(병렬 처리 수준)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition의 경우 2로 제한되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 및 Express Edition의 경우 1로 제한됩니다. 디스크 기반 테이블과 메모리 최적화 테이블에서 생성된 columnstore 인덱스가 해당합니다.
 
 ## [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 이러한 새 기능을 추가합니다.
@@ -85,22 +88,26 @@ ms.locfileid: "86007483"
   
 -   Columnstore는 인덱스를 명시적으로 다시 만들 필요 없이 삭제된 행을 제거하여 인덱스 조각 모음을 지원합니다. `ALTER INDEX ... REORGANIZE` 문은 내부에서 정의한 정책을 바탕으로 columnstore에서 온라인 작업으로 삭제된 행을 제거함  
   
--   Columnstore 인덱스는 AlwaysOn 읽기 가능 보조 복제본에 대한 액세스일 수 있습니다. 분석 쿼리를 AlwaysOn 보조 복제본으로 분산하여 운영 분석의 성능을 개선할 수 있습니다.  
+-   columnstore 인덱스는 Always On 읽기 가능한 보조 복제본에 대한 액세스일 수 있습니다. 분석 쿼리를 Always On 보조 복제본으로 분산하여 운영 분석의 성능을 개선할 수 있습니다.  
   
--   성능 향상을 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 데이터 형식이 8바이트 이하를 사용하고 문자열 형식이 아닌 경우 테이블 검색 중에 집계 함수 `MIN`, `MAX`, `SUM`, `COUNT` 및 `AVG`를 계산합니다. 클러스터형 columnstore 인덱스 및 비클러스터형 columnstore 인덱스 둘 다에 대해 Group By 절을 사용하거나 사용하지 않는 집계 푸시다운을 지원합니다.  
+-   집계 푸시 다운은 데이터 형식이 8바이트 이하를 사용하고 문자열 데이터 형식이 아닌 경우 테이블 검색 중에 집계 함수 `MIN`, `MAX`, `SUM`, `COUNT` 및 `AVG`를 계산합니다. 클러스터형 columnstore 인덱스 및 비클러스터형 columnstore 인덱스 모두에 대해 `GROUP BY` 절을 사용하거나 사용하지 않는 집계 푸시다운을 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 향상된 기능은 Enterprise Edition용으로 예약되어 있습니다.
   
--   조건자 푸시다운은 [v]archar 또는 n[v]archar 형식의 문자열을 비교하는 쿼리의 속도를 향상시킵니다. 이는 일반적인 비교 연산자에 적용되며 비트맵 필터를 사용하는 LIKE와 같은 연산자를 포함합니다. 이는 SQL Server가 지원하는 모든 데이터 정렬에서 작동합니다.  
+-   문자열 조건자 푸시다운은 VARCHAR/CHAR 또는 NVARCHAR/NCHAR 형식의 문자열을 비교하는 쿼리의 속도를 향상합니다. 이는 일반적인 비교 연산자에 적용되며 비트맵 필터를 사용하는 `LIKE`와 같은 연산자를 포함합니다. 또한 지원되는 모든 데이터 정렬에서 작동합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 향상된 기능은 Enterprise Edition용으로 예약되어 있습니다. 
+
+-   벡터 기반 하드웨어 기능을 활용하여 일괄 처리 모드 작업을 향상합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 AVX 2(고급 벡터 확장) 및 SSE 4(스트리밍 SIMD 확장 4) 하드웨어 확장에 대한 CPU 지원 수준을 검색하고, 지원되는 경우 이를 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 향상된 기능은 Enterprise Edition용으로 예약되어 있습니다.
   
 ### <a name="performance-for-database-compatibility-level-130"></a>데이터베이스 호환성 수준 130에 대한 성능  
   
 -   다음 연산 중 하나 이상을 사용하는 쿼리에 대한 새 일괄 처리 모드 실행 지원:  
-    -   SORT  
-    -   여러 가지 고유 함수를 사용하여 집계합니다. 몇 가지 예: `COUNT/COUNT`, `AVG/SUM`, `CHECKSUM_AGG`, `STDEV/STDEVP`.  
-    -   Window 집계 함수: `COUNT`, `COUNT_BIG`, `SUM`, `AVG`, `MIN`, `MAX`, `CLR`.  
-    -   Window 사용자 정의 집계: `CHECKSUM_AGG`, `STDEV`, `STDEVP`, `VAR`, `VARP`, `GROUPING`.  
-    -   Window 집계 분석 함수: `LAG`, `LEAD`, `FIRST_VALUE`, `LAST_VALUE`, `PERCENTILE_CONT`, `PERCENTILE_DISC`, `CUME_DIST`, `PERCENT_RANK`.  
+    -   `SORT`  
+    -   여러 가지 고유 함수를 사용하여 집계합니다. 몇 가지 예: `COUNT/COUNT`, `AVG/SUM`, `CHECKSUM_AGG`, `STDEV/STDEVP`  
+    -   창 집계 함수: `COUNT`, `COUNT_BIG`, `SUM`, `AVG`, `MIN`, `MAX`, `CLR`  
+    -   창 사용자 정의 집계: `CHECKSUM_AGG`, `STDEV`, `STDEVP`, `VAR`, `VARP`, `GROUPING`  
+    -   창 집계 분석 함수: `LAG`, `LEAD`, `FIRST_VALUE`, `LAST_VALUE`, `PERCENTILE_CONT`, `PERCENTILE_DISC`, `CUME_DIST`, `PERCENT_RANK`  
+
 -   `MAXDOP 1`에서 실행되거나 직렬 쿼리 계획을 사용하는 단일 스레드 쿼리는 일괄 처리 모드에서 실행됩니다. 이전에는 다중 스레드 쿼리만이 일괄 처리 실행으로 실행되었습니다.  
--   메모리 액세스에 최적화된 테이블 쿼리는 rowstore 또는 columnstore 인덱스의 데이터에 액세스하는 경우 SQL InterOp에 병렬 계획을 가질 수 있습니다.  
+
+-   메모리 최적화 테이블 쿼리는 rowstore 또는 columnstore 인덱스의 데이터에 액세스하는 경우 SQL InterOp 모드에서 병렬 계획을 포함할 수 있습니다.
   
 ### <a name="supportability"></a>지원 가능성  
 이러한 시스템 뷰는 columnstore의 새로운 특징임:  

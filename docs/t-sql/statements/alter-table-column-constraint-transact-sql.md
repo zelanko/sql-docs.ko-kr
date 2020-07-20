@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a54784e777f85fea73036df3f0c6ec0b23be878e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a6e943dd07c7687d6ab56cc74ebde1cc2ed77214
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760983"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381237"
 ---
 # <a name="alter-table-column_constraint-transact-sql"></a>ALTER TABLE column_constraint(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +56,9 @@ ms.locfileid: "85760983"
 }  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  CONSTRAINT  
  PRIMARY KEY, UNIQUE, FOREIGN KEY 또는 CHECK 제약 조건에 대한 정의의 시작을 지정합니다.  
   
@@ -109,7 +111,7 @@ ms.locfileid: "85760983"
  *ref_column*  
  새 FOREIGN KEY 제약 조건에 의해 참조되는 열로 괄호 안에 표시됩니다.  
   
- ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
+ ON DELETE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }  
  행에 참조 관계가 있고 참조되는 행이 부모 테이블에서 삭제될 경우 변경된 테이블의 행에 수행될 동작을 지정합니다. 기본값은 NO ACTION입니다.  
   
  NO ACTION  
@@ -132,9 +134,9 @@ ms.locfileid: "85760983"
   
  **Vendor** 테이블의 행에 대해 DELETE 문을 실행하고 **ProductVendor.VendorID**에 대해 ON DELETE CASCADE 동작을 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 **ProductVendor** 테이블에 하나 이상의 종속 행이 있는지 확인합니다. **ProductVendor** 테이블에 종속 행이 있는 경우 삭제되며 **Vendor** 테이블에서 참조된 행도 삭제됩니다.  
   
- 반대로 NO ACTION을 지정한 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]ProductVendor**테이블에**Vendor**행을 참조하는 행이 하나 이상 있으면**에서 오류가 발생하고 참조된 행의 삭제 동작이 롤백됩니다.  
+ 반대로 NO ACTION을 지정한 경우 **ProductVendor** 테이블에 **Vendor** 행을 참조하는 행이 하나 이상 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류가 발생하고 참조된 행의 삭제 동작이 롤백됩니다.  
   
- ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
+ ON UPDATE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }  
  변경된 테이블의 행에 참조 관계가 있고 참조된 행이 부모 테이블에서 업데이트될 경우 해당 행에 대해 발생할 동작을 지정합니다. 기본값은 NO ACTION입니다.  
   
  NO ACTION  
@@ -157,7 +159,7 @@ ms.locfileid: "85760983"
   
  **Vendor** 테이블의 행에 대해 UPDATE 문을 실행하고 **ProductVendor.VendorID**에 대해 ON UPDATE CASCADE 동작을 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]는 **ProductVendor** 테이블에 하나 이상의 종속 행이 있는지 확인합니다. **ProductVendor** 테이블에 종속 행이 있는 경우 업데이트되며 **Vendor** 테이블에서 참조된 행도 업데이트됩니다.  
   
- 반대로 NO ACTION을 지정한 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]ProductVendor**테이블에**Vendor**행을 참조하는 행이 하나 이상 있으면**에서 오류가 발생하고 참조된 행의 업데이트 동작이 롤백됩니다.  
+ 반대로 NO ACTION을 지정한 경우 **ProductVendor** 테이블에 **Vendor** 행을 참조하는 행이 하나 이상 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류가 발생하고 참조된 행의 업데이트 동작이 롤백됩니다.  
   
  NOT FOR REPLICATION  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
@@ -175,7 +177,7 @@ ms.locfileid: "85760983"
   
  각 PRIMARY KEY 및 UNIQUE 제약 조건은 인덱스를 생성합니다. UNIQUE 및 PRIMARY KEY 제약 조건의 수가 많아도 테이블의 비클러스터형 인덱스는 999개, 클러스터형 인덱스는 1개를 초과할 수 없습니다. FOREIGN KEY 제약 조건은 인덱스를 자동으로 생성하지 않습니다. 그러나 외래 키 열은 쿼리에서 한 테이블의 FOREIGN KEY 제약 조건 열을 다른 테이블의 기본 또는 고유 키 열과 연결하는 조인에서 자주 사용됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 외래 키 열의 인덱스를 만들어 외래 키 테이블에 있는 관련 데이터를 빠르게 찾을 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  예제는 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

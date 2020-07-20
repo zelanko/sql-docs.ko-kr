@@ -14,15 +14,15 @@ ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 19ad038e69144b4f9f570ef9d647a5f528945542
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c53fe453c141af32e1b31aad4ec15dc29351d96
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288350"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158911"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>복제 유지 관리 작업 실행(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   복제는 다음 유지 관리 작업을 사용합니다.  
   
 -   **데이터 유효성 검사에 실패한 구독 다시 초기화**  
@@ -63,7 +63,7 @@ ms.locfileid: "76288350"
   
 3.  작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  **작업 속성 - \<Job>** 대화 상자에서 필요한 경우 속성을 수정한 다음 **확인**을 클릭합니다.  
+4.  **작업 속성 - \<Job>** 대화 상자에서 필요한 경우 속성을 수정한 다음, **확인**을 클릭합니다.  
   
 ### <a name="to-view-and-modify-properties-for-a-replication-maintenance-job-in-replication-monitor"></a>복제 모니터에서 복제 유지 관리 작업의 속성을 보고 수정하려면  
   
@@ -73,7 +73,7 @@ ms.locfileid: "76288350"
   
 3.  표에서 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  **작업 속성 - \<Job>** 대화 상자에서 필요한 경우 속성을 수정한 다음 **확인**을 클릭합니다.  
+4.  **작업 속성 - \<Job>** 대화 상자에서 필요한 경우 속성을 수정한 다음, **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   

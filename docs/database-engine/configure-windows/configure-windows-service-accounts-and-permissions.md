@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d4ef0d67bdb86d08754ed23805b4c04e56cf37a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a70a3794a75ffb253e3e52917a075c11e22f865
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728677"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196954"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows 서비스 계정 및 권한 구성
 
@@ -83,6 +83,9 @@ ms.locfileid: "85728677"
 - **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]** - 비즈니스 인텔리전스 애플리케이션을 위한 OLAP(온라인 분석 처리) 및 데이터 마이닝 기능을 제공합니다. 실행 파일은 \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe입니다.
 - **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** - 보고서를 관리, 실행, 작성, 예약 및 배달합니다. 실행 파일은 \<MSSQLPATH>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe입니다.
 - **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]** - [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 스토리지 및 실행을 위한 관리를 지원합니다. 실행 파일은 \<MSSQLPATH>\130\DTS\Binn\MsDtsSrvr.exe입니다.
+
+   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에는 스케일 아웃 배포에 대한 추가 서비스가 포함될 수 있습니다. 자세한 내용은 [연습: Integration Services(SSIS) Scale Out 설정](../../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md)을 참조하세요.
+
 - **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser** - 클라이언트 컴퓨터에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 정보를 제공하는 이름 확인 서비스입니다. 실행 경로는 c:\Program Files (x86)\Microsoft SQL Server\90\Shared\sqlbrowser.exe입니다.
 - **전체 텍스트 검색** - 구조화 또는 반구조화된 데이터의 내용 및 속성에 대한 전체 텍스트 인덱스를 생성하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 문서 필터링 및 단어 분리를 제공합니다.
 - **SQL 기록기** - 백업 및 복원 애플리케이션이 VSS(볼륨 섀도 복사본 서비스) 프레임워크에서 작동할 수 있도록 합니다.

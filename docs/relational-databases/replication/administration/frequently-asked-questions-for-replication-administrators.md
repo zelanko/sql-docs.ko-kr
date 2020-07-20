@@ -15,15 +15,15 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 233a96ee389e8ffa7b190fde4413a33d51d0c462
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6b85d5e265bbb31cb9a2c8068a90809c48b566ea
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77173576"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160011"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>복제 관리자를 위한 질문과 대답
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   다음 질문과 대답은 복제 데이터베이스 관리자의 다양한 태스크에 대한 지침을 제공합니다.  
   
 ## <a name="configuring-replication"></a>복제 구성  
@@ -127,7 +127,7 @@ ms.locfileid: "77173576"
   
 -   `CREATE TABLE` 문과 같은 개체의 정의입니다. 기본적으로 복제는 복제된 모든 개체의 정의를 구독자로 복사합니다.  
   
--   개체가 만들어진 다음과 같은 네임스페이스입니다. \<데이터베이스>.\<스키마>.\<개체>. 스키마는 `CREATE SCHEMA` 문을 사용하여 정의됩니다.  
+-   개체가 만들어진 \<Database>.\<Schema>.\<Object>와 같은 네임스페이스입니다. 스키마는 `CREATE SCHEMA` 문을 사용하여 정의됩니다.  
   
 -   복제는 새 게시 마법사에서 스키마 및 개체 소유권에 대해 기본적으로 다음과 같이 작동합니다.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "77173576"
   
 -   문자 모드 스냅샷([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자 및 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 구독자에 사용됨)을 사용하는 게시의 아티클에 대해 기본적으로 소유자는 빈 상태입니다. 소유자는 기본적으로 배포 에이전트 또는 병합 에이전트를 구독자에 연결하는 데 사용하는 계정과 연결된 소유자입니다.  
   
- 개체 소유자는 **아티클 속성 - \<** _Article_ **>** 대화 상자와 **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** 및 **sp_changemergearticle** 저장 프로시저를 통해 변경할 수 있습니다. 자세한 내용은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [아티클 정의](../../../relational-databases/replication/publish/define-an-article.md) 및 [아티클 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)을 참조하세요.  
+ 개체 소유자는 **아티클 속성 - \<**_Article_**>** 대화 상자와 **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** 및 **sp_changemergearticle**의 저장 프로시저를 통해 변경할 수 있습니다. 자세한 내용은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [아티클 정의](../../../relational-databases/replication/publish/define-an-article.md) 및 [아티클 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)을 참조하세요.  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>구독 데이터베이스에 부여된 권한을 게시 데이터베이스에 부여된 권한과 일치시키려면 어떻게 해야 합니까?  
  기본적으로 복제는 구독 데이터베이스에서 GRANT 문을 실행하지 않습니다. 구독 데이터베이스에 대한 사용 권한을 게시 데이터베이스의 사용 권한과 일치시키려면 다음 방법 중 하나를 사용하십시오.  
@@ -160,7 +160,7 @@ ms.locfileid: "77173576"
   
     -   [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 또는 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행할 때 `@property` 매개 변수에 ‘pre_creation_cmd’(**sp_changearticle**) 또는 ‘pre_creation_command’(**sp_changemergearticle**)를 지정하고 `@value` 매개 변수에 ‘none’, ‘delete’ 또는 ‘truncate’ 값을 지정합니다.  
   
-    -   **아티클 속성 - \<Article>** 대화 상자의 **대상 개체** 섹션에서 **기존 개체를 변경하지 않고 유지**, **데이터를 삭제합니다. 아티클에 행 필터가 있으면 필터에 대응하는 데이터만 삭제합니다.** 또는 **기존 개체의 모든 데이터를 잘라냅니다.** 값을 **이름이 사용 중일 때 수행할 동작**를 참조하세요. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+    -   **아티클 속성 - \<Article>** 대화 상자의 **대상 개체** 섹션에서 **기존 개체를 변경하지 않고 유지**, **데이터를 삭제합니다. 아티클에 행 필터가 있으면 필터에 대응하는 데이터만 삭제합니다.** 또는 **기존 개체의 모든 데이터를 잘라냅니다.** 값을 **이름이 사용 중일 때 수행할 동작** 옵션에서 선택합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 ## <a name="database-maintenance"></a>데이터베이스 유지 관리  
   
@@ -188,7 +188,7 @@ ms.locfileid: "77173576"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서는 데이터베이스 파일을 이동하거나 이름을 바꾸려면 해당 데이터베이스를 분리하고 다시 연결해야 했습니다. 그러나 복제된 데이터베이스는 분리할 수 없으므로 먼저 이러한 데이터베이스에서 복제를 제거해야 했습니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터는 데이터베이스를 분리하거나 다시 연결하지 않고도 복제에 아무런 영향을 미치지 않으면서 파일을 이동하거나 이름을 바꿀 수 있습니다. 파일을 이동하고 이름을 바꾸는 방법은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
   
 ### <a name="how-do-i-drop-a-table-that-is-being-replicated"></a>복제 중인 테이블을 어떻게 삭제합니까?  
- 먼저 [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) 또는 **게시 속성 - \<게시>** 대화 상자를 사용하여 게시에서 아티클을 삭제한 다음 `DROP <Object>`를 사용하여 데이터베이스에서 아티클을 삭제합니다. 구독이 추가된 후에는 스냅샷 또는 트랜잭션 게시에서 아티클을 삭제할 수 없습니다. 따라서 먼저 구독을 삭제해야 합니다. 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
+ 먼저 [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) 또는 **게시 속성 - \<Publication>** 대화 상자를 사용하여 게시에서 아티클을 삭제한 다음, `DROP <Object>`를 사용하여 데이터베이스에서 아티클을 삭제합니다. 구독이 추가된 후에는 스냅샷 또는 트랜잭션 게시에서 아티클을 삭제할 수 없습니다. 따라서 먼저 구독을 삭제해야 합니다. 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>게시된 테이블에서 열을 어떻게 추가하고 삭제합니까?  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 열 추가 및 삭제를 비롯하여 게시된 개체에 대한 다양한 스키마 변경을 수행할 수 있습니다. 예를 들어, 게시자에서 `ALTER TABLE … DROP COLUMN`을(를) 실행하면 해당 문이 구독자로 복제된 다음 실행되어 해당 열을 삭제합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 를 실행하는 구독자는 [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) 및 [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md)저장 프로시저를 통해 열을 추가 및 삭제할 수 있습니다. 자세한 내용은 [게시 데이터베이스의 스키마 변경](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)을 참조하세요.  
@@ -202,7 +202,7 @@ ms.locfileid: "77173576"
  테이블이나 다른 개체를 추가하기 위해 게시 또는 구독 데이터베이스의 작업을 중지하지 않아도 됩니다. **게시 속성 - \<Publication>** 대화 상자나 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 및 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 저장 프로시저를 통해 게시에 테이블을 추가합니다. 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
   
 ### <a name="how-do-i-remove-a-table-from-a-publication"></a>게시에서 테이블을 어떻게 제거합니까?  
- 먼저 [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) 또는 **게시 속성 - \<게시>** 대화 상자를 사용하여 게시에서 테이블을 제거합니다. 구독이 추가된 후에는 스냅샷 또는 트랜잭션 게시에서 아티클을 삭제할 수 없습니다. 따라서 먼저 구독을 삭제해야 합니다. 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
+ 먼저 [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) 또는 **게시 속성 - \<Publication>** 대화 상자를 사용하여 게시에서 테이블을 제거합니다. 구독이 추가된 후에는 스냅샷 또는 트랜잭션 게시에서 아티클을 삭제할 수 없습니다. 따라서 먼저 구독을 삭제해야 합니다. 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
   
 ### <a name="what-actions-require-subscriptions-to-be-reinitialized"></a>구독을 다시 초기화해야 하는 동작에는 어떤 것이 있습니까?  
  일부 아티클 및 게시를 변경하면 구독을 다시 초기화해야 합니다. 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
