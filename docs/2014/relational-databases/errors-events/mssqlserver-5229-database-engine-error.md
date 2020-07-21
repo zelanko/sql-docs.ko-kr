@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 0d9e50da-4f42-4b3a-bc84-daf05cf0e0e5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d46c1bea4fad2eee8342fcee1ac1732f1aafdd77
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 3720d8a0965a28d56f1db118c034dc19c6c63ca8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053861"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551306"
 ---
 # <a name="mssqlserver_5229"></a>MSSQLSERVER_5229
     
 ## <a name="details"></a>세부 정보  
   
-|||  
+|attribute|값|  
 |-|-|  
 |제품 이름|SQL Server|  
 |이벤트 ID|5229|  
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBCC4_ANTIMATTER_IN_HEAP_OR_CLUSTERED_INDEX|  
-|메시지 텍스트|테이블 오류: 개체 ID O_ID, 인덱스 ID I_ID, 파티션 ID PN_ID, 할당 단위 ID A_ID (TYPE 유형)은(는) anti-matter 열을 포함하지만 비클러스터형 인덱스가 아닙니다.|  
+|메시지 텍스트|테이블 오류: 개체 ID O_ID, 인덱스 ID I_ID, 파티션 ID PN_ID, 할당 단위 ID A_ID(TYPE 유형)은(는) anti-matter 열을 포함하지만 비클러스터형 인덱스가 아닙니다.|  
   
 ## <a name="explanation"></a>설명  
  힙 또는 클러스터형 인덱스에 포함될 수 없는 anti-matter 열이 포함되어 있습니다.  

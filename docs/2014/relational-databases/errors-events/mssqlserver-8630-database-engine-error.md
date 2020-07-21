@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 45a9d084-b5ad-435b-ac19-5f4352515817
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dd9b54cfc84a574be8a3935f5c17b62ca37dea2e
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 4fedd73c52ff5945c2487b840595028a77121bf5
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053537"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550839"
 ---
 # <a name="mssqlserver_8630"></a>MSSQLSERVER_8630
     
 ## <a name="details"></a>세부 정보  
   
-|||  
+|attribute|값|  
 |-|-|  
 |제품 이름|SQL Server|  
 |이벤트 ID|8630|  
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|EXECUTION_ERR|  
-|메시지 텍스트|내부 쿼리 프로세서 오류: 쿼리 프로세서 실행 중 예기치 않은 오류가 발생했습니다.|  
+|메시지 텍스트|내부 쿼리 프로세서 오류: 쿼리 프로세서 실행 중 오류가 발생했습니다.|  
   
 ## <a name="explanation"></a>설명  
  내부 쿼리 처리 오류입니다.  

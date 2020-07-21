@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 8f929d69-8eb4-4fe9-be52-b9680a7820db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7bb0a1202eab8e172f3c9e4df04146ff41047389
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 1065002577235b5a2e36d60f4ac23eac7cad51f3
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85034184"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551937"
 ---
 # <a name="mssqlserver_2579"></a>MSSQLSERVER_2579
     
 ## <a name="details"></a>세부 정보  
   
-|||  
+|attribute|값|  
 |-|-|  
 |제품 이름|SQL Server|  
 |이벤트 ID|2579|  

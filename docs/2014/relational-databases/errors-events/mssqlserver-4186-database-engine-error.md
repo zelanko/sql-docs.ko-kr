@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 1ae88554-f291-45bc-a186-6f41d9cd0fca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 525c1c3bd6e631044b8bc7f17b2c2a01aeb1ef8b
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: df48de66d3b962966f9ea298a5fcf797f2a7cf06
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053886"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551328"
 ---
 # <a name="mssqlserver_4186"></a>MSSQLSERVER_4186
     
 ## <a name="details"></a>세부 정보  
   
-|||  
+|attribute|값|  
 |-|-|  
 |제품 이름|SQL Server|  
 |이벤트 ID|4186|  
@@ -40,7 +40,7 @@ ms.locfileid: "85053886"
   
 -   해당 정의에서 사용자 또는 시스템 데이터 액세스를 수행하는 사용자 정의 함수가 포함된 계산 열  
   
-### <a name="examples"></a>예  
+### <a name="examples"></a>예제  
  **하위 쿼리에 의해 정의되는 뷰 열**  
   
  다음 예에서는 열 `State`를 정의하기 위해 선택 목록에 있는 하위 쿼리를 사용하는 뷰를 만듭니다. 그러면 UPDATE 문이 OUTPUT 절의 `State` 열을 참조하지만 선택 목록의 하위 쿼리로 인해 실패합니다.  

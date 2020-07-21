@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 53a51c7a-dcd4-4c15-b4d2-6aaa9dce76da
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ec84e6898e0f7d45f9eba5d43074982679ff554e
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 24ce58ed8b836f59b4de272c712d2a118e934b50
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053955"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551748"
 ---
 # <a name="mssqlserver_32042"></a>MSSQLSERVER_32042
     
 ## <a name="details"></a>세부 정보  
   
-|||  
+|attribute|값|  
 |-|-|  
 |제품 이름|SQL Server|  
 |이벤트 ID|32042|  
@@ -40,7 +40,7 @@ ms.locfileid: "85053955"
  주 서버 인스턴스 및 미러 서버 인스턴스의 로드를 확인하고 문제의 원인이 된 해당 네트워크 연결을 확인합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 미러링 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
+ [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [미러링 성능 메트릭에 대해 경고 임계값 및 경고 사용&#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   
   

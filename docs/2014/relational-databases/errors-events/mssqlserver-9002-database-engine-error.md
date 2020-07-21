@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 2e50841f-2b99-45f4-aec5-aa4add70cbeb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b40fe70db8849d09f9296a06cbeed65a9c71e5a5
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 4aec35b54d62178ab27b9df007b126e4c05a5a21
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053488"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550776"
 ---
 # <a name="mssqlserver_9002"></a>MSSQLSERVER_9002
     
 ## <a name="details"></a>세부 정보  
   
-|||  
+|attribute|값|  
 |-|-|  
 |제품 이름|SQL Server|  
 |이벤트 ID|9002|  
@@ -38,7 +38,7 @@ ms.locfileid: "85053488"
  **sys.databases**를 사용하여 로그가 꽉 찬 이유를 확인하고 문제를 해결하세요. 자세한 내용은 SQL Server 온라인 설명서의 "꽉 찬 트랜잭션 로그 문제 해결(오류 9002)"을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [전체 트랜잭션 로그 &#40;문제 해결 SQL Server 오류 9002&#41;](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)   
+ [꽉 찬 트랜잭션 로그 문제 해결&#40;SQL Server 오류 9002&#41;](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)   
  [sys.databases&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
   
