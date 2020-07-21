@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 6e9c7241-0201-44e0-9f8b-b3c4e293f0f6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1fcac03f044aacce5e907824862eb589c97a07d2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 2e8b07e870bafb11acbf64db04f4b8f9bc57f57f
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967963"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552318"
 ---
 # <a name="mssqlserver_1418"></a>MSSQLSERVER_1418
     
 ## <a name="details"></a>세부 정보  
   
-|||  
+|attribute|값|  
 |-|-|  
 |제품 이름|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |이벤트 ID|1418|  
@@ -93,11 +93,11 @@ ms.locfileid: "84967963"
   
 ## <a name="see-also"></a>참고 항목  
  [ALTER ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
- [데이터베이스 미러링 끝점은 SQL Server을 &#40;&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [미러링을 위한 미러 데이터베이스 준비 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [SERVERPROPERTY &#40;Transact-sql&#41;](/sql/t-sql/functions/serverproperty-transact-sql)   
- [데이터베이스 미러링 &#40;서버 네트워크 주소를 지정&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
- [database_mirroring_endpoints &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)   
+ [데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
+ [SERVERPROPERTY&#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)   
+ [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
+ [sys.database_mirroring_endpoints&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)   
  [데이터베이스 미러링 구성 문제 해결&#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   

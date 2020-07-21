@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 helpviewer_keywords:
-- Installing the Extension Pack
+- Installing the extension pack
 - SQL Server Database Objects
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 736807d427b08a1b3a32df1d295b84f4ea3d23d2
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: 2495d1b61b0251deee1b86ce66c03b6474f36cd8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411669"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554828"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>SQL Server에 SSMA 구성 요소 설치 (OracleToSQL)
 
@@ -30,7 +30,7 @@ SSMA 확장 팩은 **sysdb** 및 **ssmatesterdb** 데이터베이스를 지정 �
 
 또한 데이터를로 마이그레이션하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ssma는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이그레이션에 서버 쪽 데이터 마이그레이션 엔진이 사용 될 때 에이전트 작업을 만듭니다.
 
-### <a name="prerequisites"></a>필수 조건
+### <a name="prerequisites"></a>필수 구성 요소
 
 Oracle 용 SSMA 서버 구성 요소를 설치 하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템이 다음과 같은 요구 사항을 충족 하는지 확인 합니다.
 
@@ -60,9 +60,7 @@ Oracle 용 SSMA 서버 구성 요소를 설치 하기 전에 [!INCLUDE[ssNoVersi
 6. **설치 준비** 페이지에서 **설치**를 선택합니다.
 7. **설치의 첫 번째 단계 완료** 페이지에서 **다음**을 선택 합니다.
   
-   새 대화 상자가 표시 되 고 확장 팩 설치 유형을 선택 합니다.
-
-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]확장 팩 설치용의 인스턴스입니다.
+   새 대화 상자가 나타납니다. 확장 팩 유형을 선택 합니다.
   
 8. 원하는 설치 유형을 선택 하 고 **다음**을 클릭 합니다.
 
@@ -106,7 +104,7 @@ Oracle 용 SSMA 서버 구성 요소를 설치 하기 전에 [!INCLUDE[ssNoVersi
 
 데이터를로 마이그레이션할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ssma는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 만듭니다. 이러한 작업에는 **데이터 마이그레이션 패키지 {GUID} ssma_oracle**이름이 지정 되 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업 폴더의 에이전트 노드에 표시 됩니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - [Oracle용 SSMA 클라이언트 설치](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)
 - [Oracle 데이터베이스를 SQL Server로 마이그레이션](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)

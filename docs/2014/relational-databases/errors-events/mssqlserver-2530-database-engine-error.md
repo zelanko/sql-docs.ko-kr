@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 5d4be07a-38a5-4b25-819c-4dcb4636cc15
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 30b57aae907d6f0acc4d1c0e6021bf936621c69e
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 1bb321f89c70983855e00b3eec4382c51fce1e16
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85034247"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552052"
 ---
 # <a name="mssqlserver_2530"></a>MSSQLSERVER_2530
     
 ## <a name="details"></a>세부 정보  
   
-|||  
+|attribute|값|  
 |-|-|  
 |제품 이름|SQL Server|  
 |이벤트 ID|2530|  

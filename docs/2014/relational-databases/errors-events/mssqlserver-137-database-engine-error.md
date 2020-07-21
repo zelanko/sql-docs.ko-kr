@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e0142cd53006609e9274972e4f5964132f5982c2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 72e0b54f26c323c16efa8c67aea1c325e8ddf72d
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967973"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552290"
 ---
 # <a name="mssqlserver_137"></a>MSSQLSERVER_137
     
 ## <a name="details"></a>세부 정보  
   
-|||  
+|attribute|값|  
 |-|-|  
 |제품 이름|SQL Server|  
 |이벤트 ID|137|  
@@ -53,7 +53,7 @@ ms.locfileid: "84967973"
 ## <a name="user-action"></a>사용자 동작  
  SQL 스크립트에서 변수를 사용하기 전에 해당 변수를 선언했는지 확인하십시오.  
   
- EXECUTE 문 외부에서 선언된 변수를 참조하지 않도록 스크립트를 다시 작성하십시오. 다음은 그 예입니다.  
+ EXECUTE 문 외부에서 선언된 변수를 참조하지 않도록 스크립트를 다시 작성하십시오. 예를 들면 다음과 같습니다.  
   
  USE AdventureWorks2012;  
   

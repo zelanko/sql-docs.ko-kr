@@ -13,25 +13,25 @@ helpviewer_keywords:
 ms.assetid: 567fb571-7cda-4ce8-a702-cdff2df5d419
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8fdf89a03e13c40e1b72d621c120db82356db1a7
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: f9bfdca119a99dd07512753beeb3e0399e4c53a2
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85034780"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552228"
 ---
 # <a name="mssqlserver_2"></a>MSSQLSERVER_2
     
 ## <a name="details"></a>세부 정보  
   
-|||  
+|attribute|값|  
 |-|-|  
 |제품 이름|SQL Server|  
 |이벤트 ID|2|  
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름||  
-|메시지 텍스트|서버에 대한 연결을 구성하는 동안 오류가 발생했습니다.  SQL Server에 연결할 때 기본 설정에서 SQL Server가 원격 연결을 허용하지 않기 때문에 이 오류가 발생할 수 있습니다. (공급자: 명명된 파이프 공급자, 오류: 40 - SQL Server에 대한 연결을 열 수 없습니다.) (.Net SqlClient 데이터 공급자)|  
+|메시지 텍스트|서버에 대한 연결을 구성하는 동안 오류가 발생했습니다.  SQL Server에 연결할 때 기본 설정에서 SQL Server가 원격 연결을 허용하지 않기 때문에 이 오류가 발생할 수 있습니다. (공급자: 명명된 파이프 공급자, 오류: 40 - SQL Server에 대한 연결을 열 수 없습니다.)(.Net SqlClient 데이터 공급자)|  
   
 ## <a name="explanation"></a>설명  
  아마도 서버가 시작되지 않았기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 클라이언트 요청에 응답하지 않았습니다.  

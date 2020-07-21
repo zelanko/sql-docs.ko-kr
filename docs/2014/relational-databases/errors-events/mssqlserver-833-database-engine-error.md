@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 14129cc4-be80-4772-9e3f-0e5da4d0696b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 070e024eb752ebffc7aa113d0f4a6fc4a95f4175
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: ceccd88d57a934da69bead726399edf2b39d45be
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85031812"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553198"
 ---
 # <a name="mssqlserver_833"></a>MSSQLSERVER_833
     
 ## <a name="details"></a>세부 정보  
   
-|||  
+|attribute|값|  
 |-|-|  
 |제품 이름|SQL Server|  
 |이벤트 ID|833|  

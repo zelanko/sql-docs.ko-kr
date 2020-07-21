@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 14b233839901167ca92a1d2aed5a8c1441fefe0e
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: d0f1216bf1b617a80288c6e5112674c2447979f4
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85034974"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552248"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
     
 ## <a name="details"></a>세부 정보  
   
-|||  
+|attribute|값|  
 |-|-|  
 |제품 이름|SQL Server|  
 |이벤트 ID|18456|  
@@ -59,7 +59,7 @@ ms.locfileid: "85034974"
 ## <a name="additional-error-information"></a>추가 오류 정보  
  보안 향상을 위해 클라이언트로 반환되는 오류 메시지는 의도적으로 인증 오류의 특성을 숨깁니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그의 해당 오류에는 인증 실패 조건에 매핑되는 오류 상태가 포함되어 있습니다. 로그인 실패 이유를 확인하려면 오류 상태를 다음 목록과 비교합니다.  
   
-|시스템 상태|Description|  
+|시스템 상태|설명|  
 |-----------|-----------------|  
 |1|오류 정보를 사용할 수 없습니다. 일반적으로 이 상태는 오류 정보를 수신할 수 있는 권한이 없음을 의미합니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자에게 문의하십시오.|  
 |2|사용자 ID가 잘못되었습니다.|  
@@ -76,7 +76,7 @@ ms.locfileid: "85034974"
   
  **일반적이진 않지만 가능한 다른 원인**  
   
- **SQL 인증을 사용 하 여 로그인 하지 못한 오류 원인입니다. 서버는 Windows 인증용 으로만 구성 됩니다.** 오류 원인이 반환할 수 있습니다.  
+ 다음과 같은 상황에서 **SQL Server 인증을 사용하여 로그인하지 못했습니다. 서버가 Windows 인증만 사용하도록 구성되어 있습니다.** 오류 원인이 반환할 수 있습니다.  
   
 -   서버가 혼합 모드 인증으로 구성되고, ODBC 연결이 TCP 프로토콜을 사용하고, 신뢰할 수 있는 연결을 사용해야 한다고 연결에 명시적으로 지정되어 있지 않은 경우  
   
@@ -93,7 +93,7 @@ ms.locfileid: "85034974"
 |2007-12-05 20:12:56.34|로그온|사용자 '<user_name>'이(가) 로그인하지 못했습니다. [클라이언트: \<ip address>]|  
   
 > [!NOTE]  
->  Windows 인증 모드를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하고 나중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 인증 모드로 변경하면 처음에는 **sa** 로그인을 사용할 수 없습니다. 이로 인해 상태 7 오류가 발생 합니다. "사용자 ' sa '가 로그인 하지 못했습니다." **Sa** 로그인을 사용 하도록 설정 하려면 [서버 인증 모드 변경](../../database-engine/configure-windows/change-server-authentication-mode.md)을 참조 하세요.  
+>  Windows 인증 모드를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하고 나중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 인증 모드로 변경하면 처음에는 **sa** 로그인을 사용할 수 없습니다. 이 경우 상태 7 오류: "사용자 'sa'이(가) 로그인하지 못했습니다"가 발생합니다. **sa** 로그인을 사용하도록 설정하려면 [서버 인증 모드 변경](../../database-engine/configure-windows/change-server-authentication-mode.md)을 참조하세요.  
   
 ## <a name="user-action"></a>사용자 동작  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 연결하려고 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 혼합 인증 모드로 구성되어 있는지 확인합니다.  
@@ -108,6 +108,6 @@ ms.locfileid: "85034974"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 포함된 데이터베이스를 지원하는 경우 포함된 데이터베이스 사용자로 마이그레이션한 후 해당 로그인이 삭제되지 않았는지 확인하십시오.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로컬로 연결하는 경우 **NT AUTHORITY\NETWORK SERVICE**에서 실행되는 서비스의 연결도 컴퓨터의 정규화된 도메인 이름을 사용하여 인증해야 합니다. 자세한 내용은 [방법: 네트워크 서비스 계정을 사용하여 ASP.NET의 리소스에 액세스](https://msdn.microsoft.com/library/ff647402.aspx)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로컬로 연결하는 경우 **NT AUTHORITY\NETWORK SERVICE**에서 실행되는 서비스의 연결도 컴퓨터의 정규화된 도메인 이름을 사용하여 인증해야 합니다. 자세한 내용은 [방법: 네트워크 서비스 계정을 사용하여 ASP.NET의 리소스에 액세스](https://msdn.microsoft.com/library/ff647402.aspx)를 참조하십시오.  
   
   

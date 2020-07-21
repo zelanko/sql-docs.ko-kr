@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 28434ba1-b033-4866-ab41-111fccef45a2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c30ee6149c95d93bdaf1d2877f5fe1871a575ec1
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 9811239df295b584d26f69150aa307a5613fe9e9
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969556"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552258"
 ---
 # <a name="mssqlserver_1457"></a>MSSQLSERVER_1457
     
 ## <a name="details"></a>세부 정보  
   
-|||  
+|attribute|값|  
 |-|-|  
 |제품 이름|SQL Server|  
 |이벤트 ID|1457|  
@@ -47,10 +47,10 @@ ms.locfileid: "84969556"
     >  SET PARTNER OFF 문이 실패한 후 미러링이 계속 활성화된 경우에만 미러 데이터베이스를 삭제할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 미러링 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
+ [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL &#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [데이터베이스 미러링 &#40;SQL Server&#41;설정](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [데이터베이스 미러링 &#40;SQL Server&#41;제거](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)   
+ [데이터베이스 미러링 설정&#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
+ [데이터베이스 미러링 제거&#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)   
  [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
   

@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74c152404cf2d3710bbe98b29da7a96d86f58859
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 1b23850ffcaf7ae4e4d63775cd6a7c112ef44e00
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969527"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553788"
 ---
 # <a name="mssqlserver_1505"></a>MSSQLSERVER_1505
     
 ## <a name="details"></a>세부 정보  
   
-|||  
+|attribute|값|  
 |-|-|  
 |제품 이름|SQL Server|  
 |이벤트 ID|1505|  
@@ -58,7 +58,7 @@ ms.locfileid: "84969527"
   
 -   고유 인덱스 또는 제약 조건을 만들 열을 선택할 때는 NOT NULL로 정의된 열을 선택합니다. 이렇게 하면 둘 이상의 행에서 키 값이 NULL인 경우 발생하는 고유성 위반의 가능성을 없앨 수 있습니다.  
   
--   중복 값이 데이터 입력 오류로 인한 것이면 데이터를 직접 수정한 다음 인덱스나 제약 조건을 만듭니다. 테이블에서 중복 행을 제거하는 방법에 대한 자세한 내용은 기술 자료 문서 139444 [SQL Server의 테이블에서 중복 행을 제거하는 방법](https://support.microsoft.com/kb/139444)을 참조하세요.  
+-   중복 값이 데이터 입력 오류로 인한 것이면 데이터를 직접 수정한 다음 인덱스나 제약 조건을 만듭니다. 테이블에서 중복 행을 제거하는 방법에 대한 자세한 내용은 기술 자료 문서 139444: [SQL Server의 테이블에서 중복 행을 제거하는 방법](https://support.microsoft.com/kb/139444)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [CREATE INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   

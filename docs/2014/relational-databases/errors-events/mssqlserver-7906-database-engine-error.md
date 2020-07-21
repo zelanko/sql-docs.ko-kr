@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 9638a764-4ac1-40ae-a614-2726ebcc6ba4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c7e691567bcc2a17d04e827caf3850f1d50c5d15
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 9557678be5fb53482fcb6eff8faf1183e27a4178
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032471"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553376"
 ---
 # <a name="mssqlserver_7906"></a>MSSQLSERVER_7906
     
 ## <a name="details"></a>세부 정보  
   
-|||  
+|attribute|값|  
 |-|-|  
 |제품 이름|SQL Server|  
 |이벤트 ID|7906|  
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBCC2_FS_INVALID_TOP_LEVEL_FILE|  
-|메시지 텍스트|데이터베이스 오류: 파일 'FILE'이(가) 잘못된 Filestream 파일입니다.|  
+|메시지 텍스트|데이터베이스 오류: 파일 'FILE'이 잘못된 Filestream 파일입니다.|  
   
 ## <a name="explanation"></a>설명  
  Filestream 데이터 공간 바로 아래에는 'filestream.hdr'과 같은 일부 특수한 파일을 제외한 다른 파일이 있을 수 없습니다.  

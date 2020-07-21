@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 5892ed24-4dcb-4bf9-a8a4-a7ca898832d5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a599b6b4eb5f980096824ccd655ef9bb33448f59
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 0495e3d3b4ec835f33254152874b21f5f989808b
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85031890"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553210"
 ---
 # <a name="mssqlserver_802"></a>MSSQLSERVER_802
     
 ## <a name="details"></a>세부 정보  
   
-|||  
+|attribute|값|  
 |-|-|  
 |제품 이름|SQL Server|  
 |이벤트 ID|802|  
@@ -39,7 +39,7 @@ ms.locfileid: "85031890"
   
 1.  다른 애플리케이션 또는 서비스가 현재 서버의 메모리를 사용 중인지 확인합니다. 중요도가 낮은 애플리케이션이나 서비스에서 메모리를 덜 사용하도록 다시 구성합니다.  
   
-2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Buffer Manager**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Memory Manager**에 대한 성능 모니터 카운터 수집을 시작합니다.  
+2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: 버퍼 관리자**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Memory Manager**에 대한 성능 모니터 카운터 수집을 시작합니다.  
   
 3.  다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 구성 매개 변수를 확인합니다.  
   

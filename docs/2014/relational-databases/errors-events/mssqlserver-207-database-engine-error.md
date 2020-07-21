@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: d1ab00c7-0331-437a-84fe-bae53b82feec
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bd6044c08ecd5a73f539bfbc1139d6257c2db9d3
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 51c001019581c736ff3e27b13f5ebb6150fcd149
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85054196"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552138"
 ---
 # <a name="mssqlserver_207"></a>MSSQLSERVER_207
     
 ## <a name="details"></a>세부 정보  
   
-|||  
+|attribute|값|  
 |-|-|  
 |제품 이름|SQL Server|  
 |이벤트 ID|207|  
@@ -114,7 +114,7 @@ ms.locfileid: "85054196"
     GROUP BY Year;  
     ```  
   
--   MERGE 문의 WHEN NOT MATCHED BY SOURCE 절이 참조하는 값에 액세스할 수 없습니다. WHEN NOT MATCHED BY SOURCE 절의 원본 테이블에서 하나 이상의 행을 반환하도록 MERGE 문을 수정합니다. 예를 들어 이 절에 지정된 검색 조건을 추가하거나 수정해야 할 수 있습니다. 또는 절을 수정하여 원본 테이블을 참조하지 않는 값을 지정할 수 있습니다. `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`)을 입력합니다.  
+-   MERGE 문의 WHEN NOT MATCHED BY SOURCE 절이 참조하는 값에 액세스할 수 없습니다. WHEN NOT MATCHED BY SOURCE 절의 원본 테이블에서 하나 이상의 행을 반환하도록 MERGE 문을 수정합니다. 예를 들어 이 절에 지정된 검색 조건을 추가하거나 수정해야 할 수 있습니다. 또는 절을 수정하여 원본 테이블을 참조하지 않는 값을 지정할 수 있습니다. 예들 들어 `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [MERGE&#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)   

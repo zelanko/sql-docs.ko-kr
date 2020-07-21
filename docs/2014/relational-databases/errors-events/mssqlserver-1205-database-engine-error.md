@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 9fe3f67c-df3c-4642-a3a4-ccc0e138b632
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4df3e6edc789dfc95e41cec0b516fb335aa9a823
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: d057693dbc77a07ab7c71a24d7a2c80209b0e18c
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968015"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553908"
 ---
 # <a name="mssqlserver_1205"></a>MSSQLSERVER_1205
     
 ## <a name="details"></a>세부 정보  
   
-|||  
+|attribute|값|  
 |-|-|  
 |제품 이름|SQL Server|  
 |이벤트 ID|1205|  
@@ -32,7 +32,7 @@ ms.locfileid: "84968015"
 |메시지 텍스트|트랜잭션(프로세스 ID %d)이 %.*ls 리소스에서 다른 프로세스와의 교착 상태가 발생하여 실행이 중지되었습니다. 트랜잭션을 다시 실행하십시오.|  
   
 ## <a name="explanation"></a>설명  
- 리소스가 별도의 트랜잭션에서 충돌하는 순서대로 액세스되면 교착 상태가 발생합니다. 다음은 그 예입니다.  
+ 리소스가 별도의 트랜잭션에서 충돌하는 순서대로 액세스되면 교착 상태가 발생합니다. 예를 들면 다음과 같습니다.  
   
 -   Transaction2가 **Table2.Row2**를 업데이트하는 동안 Transaction1이 **Table1.Row1**을 업데이트합니다.  
   
