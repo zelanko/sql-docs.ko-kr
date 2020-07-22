@@ -22,12 +22,12 @@ ms.assetid: a8430421-7bce-4fab-a2d2-56c00a3c6fa4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b27eaa16660058c37cac34173787c7ad51341c87
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 98638f23d0216bb100d34d180fce91358724bf56
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011343"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554418"
 ---
 # <a name="where-transact-sql"></a>WHERE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "86011343"
 [ WHERE <search_condition> ]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 \< *search_condition* > 반환될 행이 충족해야 할 조건을 정의합니다. 검색 조건에 포함시킬 수 있는 조건자의 개수에는 제한이 없습니다. 검색 조건 및 조건자에 대한 자세한 내용은 [검색 조건&#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)을 참조하세요.  
   
 ## <a name="examples"></a>예제  

@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b208b63dd096f35faa151f6f739d5e20cc3917b
-ms.sourcegitcommit: 38639b67a135ca1a50a8e38fa61a089efe90e3f1
+ms.openlocfilehash: 913e6db093b05bd0093e353facd468059fa4e7b0
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454506"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552608"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE(Transact-SQL)
 
@@ -36,9 +36,7 @@ ms.locfileid: "84454506"
 
 구문 표기 규칙에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하십시오.
 
-## <a name="click-a-product"></a>제품을 클릭하세요.
-
-다음 행에서 관심이 있는 제품 이름을 클릭합니다. 클릭하면 웹페이지의 여기에서 클릭한 제품에 적절한 다른 콘텐츠를 표시합니다.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 

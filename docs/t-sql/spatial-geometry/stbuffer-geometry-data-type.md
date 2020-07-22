@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0a091906818ffea85a8b30b3678f75f02de3a886
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b461b711ba7e91e4c29a362523b3ebb4a1228004
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748739"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552836"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85748739"
 .STBuffer ( distance )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *distance*  
  해당 버퍼를 계산할 geometry 인스턴스와의 거리를 지정하는 **float**(.NET Framework의 경우 **double**) 형식의 값입니다.  
   

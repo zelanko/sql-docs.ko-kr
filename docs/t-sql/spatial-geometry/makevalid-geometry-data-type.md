@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 38673010-ab77-4ebb-9c4d-b26b79e3b7ea
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 497585a187a8e34250e825e3c8c96f6c2b9ed176
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 75c3dd359121ea24a69100e6297a790a1812a612
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759520"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552850"
 ---
 # <a name="makevalid-geometry-data-type"></a>MakeValid(geometry 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85759520"
 .MakeValid ()  
 ```  
   
-## <a name="return-types"></a>반환 형식  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>반환 형식
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
   
  CLR 반환 형식: **SqlGeometry**  

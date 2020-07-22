@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 20533532ffc29f243ef202a0757f42149f7f6a8c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 99133135d568030646813026af0c6543a05218de
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85700495"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552868"
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance(geometry 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "85700495"
 .CurveToLineWithTolerance ( tolerance, relative )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *tolerance*  
  원래의 원호 세그먼트와 선형 근사값 사이의 최대 오차를 정의하는 **double** 식입니다.  
   

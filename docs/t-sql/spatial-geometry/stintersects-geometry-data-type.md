@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7c18f5be-5a29-422e-8ca7-d8a5f38e03f5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: fd517a8396b9e23eaafa761a7e0511fe6926d21f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c3f4d6e606ba37283fee75da148cfe1a54d3cf00
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762432"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554298"
 ---
 # <a name="stintersects-geometry-data-type"></a>STIntersects(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762432"
 .STIntersects ( other_geometry )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *other_geometry*  
  `STIntersects()`를 호출할 인스턴스와 비교할 다른 **geometry** 인스턴스입니다.  
   

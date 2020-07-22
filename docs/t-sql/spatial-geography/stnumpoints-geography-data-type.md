@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 26d1e0fc71a43dabeb1c02737180766cbe840f32
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 372dea8b43f386795d49274ed63d62b862ecff43
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85702611"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552469"
 ---
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85702611"
 .STNumPoints ( )  
 ```  
   
-## <a name="return-types"></a>반환 형식  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>반환 형식
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **int**  
   
  CLR 반환 형식: **SqlInt32**  

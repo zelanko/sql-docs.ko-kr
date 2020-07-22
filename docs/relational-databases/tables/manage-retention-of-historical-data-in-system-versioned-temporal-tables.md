@@ -11,16 +11,16 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f58db948bbe7b6fe03f895dacc5fca0b74cc1c54
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 01ca3494bce1f392757206a5ae68ae736d0f9a95
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85977856"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552709"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>시스템 버전 관리된 temporal 테이블에서 기록 데이터의 보존 관리
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 시스템 버전 관리된 temporal 테이블에서 기록 테이블은 특히 다음과 같은 상황에서 일반 테이블보다 데이터베이스 크기를 좀 더 크게 늘릴 수 있습니다.
 
@@ -42,11 +42,13 @@ temporal 테이블 데이터 보존 관리는 각 temporal 테이블에 대한 �
 
  기록 데이터 문제 완화 또는 정리를 위한 논리는 이 방법 중 한 가지를 사용하며 현재 테이블에서 기간 종료에 해당하는 열을 기반으로 합니다. 각 행에 대해 기간 값의 끝에서는 행 버전이 "닫힌" 상태가 되는, 즉 기록 테이블에서 해당 값이 처음 삽입되는 순간을 결정합니다. 예를 들어 조건 `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` 은1개월보다 오래된 기록 데이터를 기록 테이블에서 제거하거나 제외해야 한다고 지정합니다.
 
-> **참고:** 이 항목의 예제에서는 이 [임시 테이블 예제](creating-a-system-versioned-temporal-table.md)를 사용합니다.
+> [!NOTE]
+> 이 항목의 예제에서는 이 [임시 테이블 예제](creating-a-system-versioned-temporal-table.md)를 사용합니다.
 
 ## <a name="using-stretch-database-approach"></a>Stretch Database 접근 방식 사용
 
-> **참고:** Stretch Database 접근 방식 사용은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에만 적용되며 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에는 적용되지 않습니다.
+> [!NOTE]
+> Stretch Database 접근 방식 사용은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에만 적용되며 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에는 적용되지 않습니다.
 
 [스트레치 데이터베이스](../../sql-server/stretch-database/stretch-database.md) 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 Azure로 기록 데이터를 투명하게 마이그레이션합니다. 추가 보안을 위해 SQL Server의 [항상 암호화](https://msdn.microsoft.com/library/mt163865.aspx) 기능을 사용하여 동작에 대한 데이터를 암호화할 수 있습니다. 또한 데이터 보호를 위해 [행 수준 보안](../../relational-databases/security/row-level-security.md) 및 기타 고급 SQL Server 보안 기능을 임시 및 스트레치 데이터베이스와 함께 사용할 수 있습니다.
 
@@ -58,7 +60,8 @@ Stretch Database 접근 방식을 사용하면 기록 데이터 일부 또는 �
 
   결정적 조건자 함수를 사용하면 현재 데이터가 있는 동일한 데이터베이스에서 기록의 일부를 보관하고 나머지는 Azure로 마이그레이션할 수 있습니다. 예제 및 제한 사항에 대한 자세한 내용은 [필터 함수를 사용하여 마이그레이션할 행 선택(Stretch Database)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)을 참조하세요. 비결정적인 함수는 유효하지 않으므로 슬라이딩 윈도우 방식으로 기록 데이터를 전송하려는 경우에는 로컬로 보관할 행의 창이 보관 기간 측면에서 일정하도록 인라인 조건자 함수 정의를 지속적으로 변경해야 합니다. 슬라이딩 윈도우를 사용하면 1개월이 지난 기록 데이터를 지속적으로 Azure로 이동할 수 있습니다. 이 접근 방법의 예는 아래에 표시됩니다.
 
-> **참고:** Stretch Database는 데이터를 Azure로 마이그레이션합니다. 따라서 대금 청구를 위해 Azure 계정 및 구독이 있어야 합니다. Azure 평가판 계정을 얻으려면 [1개월 평가판](https://azure.microsoft.com/pricing/free-trial/)을 클릭하세요.
+> [!NOTE]
+> Stretch Database는 데이터를 Azure로 마이그레이션합니다. 따라서 대금 청구를 위해 Azure 계정 및 구독이 있어야 합니다. Azure 평가판 계정을 얻으려면 [1개월 평가판](https://azure.microsoft.com/pricing/free-trial/)을 클릭하세요.
 
 스트레치 마법사 또는 TRANSACT-SQL을 사용하여 스트레치를 위해 임시 기록 테이블을 구성할 수 있으며 시스템 버전 관리가 **ON**으로 설정되어 있어도 임시 기록 테이블에 스트레치를 사용하도록 설정할 수 있습니다. 현재 테이블을 스트레치하는 것은 의미가 없으므로 허용되지 않습니다.
 
@@ -81,7 +84,8 @@ Stretch Database 접근 방식을 사용하면 기록 데이터 일부 또는 �
     ![Stretch Database 마법사의 IP 주소 선택 페이지](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database 마법사의 IP 주소 선택 페이지")
 6. 마법사가 완료되면 데이터베이스에 스트레치가 사용하도록 설정되었는지 확인합니다. 개체 탐색기에서 데이터베이스가 스트레치되었는지 나타내는 아이콘을 살펴봅니다.
 
-> **참고:** 스트레치에 데이터베이스 사용이 실패하는 경우 오류 로그를 검토하세요. 일반적으로 방화벽 규칙을 잘못 구성했을 때 오류가 발생합니다.
+> [!NOTE]
+> 스트레치에 데이터베이스 사용이 실패하는 경우 오류 로그를 검토하세요. 일반적으로 방화벽 규칙을 잘못 구성했을 때 오류가 발생합니다.
 
 참고 항목:
 
@@ -159,7 +163,8 @@ SQL Server 에이전트 또는 일부 다른 예약 메커니즘을 사용하여
 
 테이블 분할 기능을 사용하면 슬라이딩 윈도우 접근 방식을 구현하여 필수 보존 기간에 맞게 데이터를 기록 테이블에서 유지 관리하면서도 기록 테이블에서 가장 오래된 기록 데이터 일부를 이동하여 제외시키고, 기간 측면에서 보관 부분의 크기를 지속적으로 유지할 수 있습니다. SYSTEM_VERSIONING이 ON이더라도 기록 테이블의 데이터를 외부로 전환하는 작업은 지원됩니다. 즉 유지 관리 창을 도입하거나 정기 작업을 차단하지 않고 기록 데이터의 일부를 정리할 수 있습니다.
 
-> **참고:** 파티션 전환 작업을 수행하려면 기록 테이블에서 클러스터형 인덱스를 분할 스키마에 정렬해야 합니다(SysEndTime 포함 필수). 시스템에서 만든 기본 기록 테이블에는 SysEndTime 및 SysStartTime 열이 포함된 클러스터형 인덱스가 있어 분할, 새 기록 데이터 삽입, 일반적인 임시 쿼리 작업에 적합합니다. 자세한 내용은 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)을 참조하세요.
+> [!NOTE]
+> 파티션 전환 작업을 수행하려면 기록 테이블에서 클러스터형 인덱스를 분할 스키마에 정렬해야 합니다(SysEndTime 포함 필수). 시스템에서 만든 기본 기록 테이블에는 SysEndTime 및 SysStartTime 열이 포함된 클러스터형 인덱스가 있어 분할, 새 기록 데이터 삽입, 일반적인 임시 쿼리 작업에 적합합니다. 자세한 내용은 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)을 참조하세요.
 
 슬라이딩 윈도우 방식에서는 다음 두 가지 작업을 수행해야 합니다.
 
@@ -174,7 +179,8 @@ SQL Server 에이전트 또는 일부 다른 예약 메커니즘을 사용하여
 
 ![분할](../../relational-databases/tables/media/partitioning.png "분할")
 
-> **참고:** 분할 구성 시 RANGE LEFT와 RANGE RIGHT를 사용할 때 성능에 미치는 영향에 대한 자세한 내용은 아래의 테이블 분할 시 성능 고려 사항을 참조하세요.
+> [!NOTE]
+> 분할 구성 시 RANGE LEFT와 RANGE RIGHT를 사용할 때 성능에 미치는 영향에 대한 자세한 내용은 아래의 테이블 분할 시 성능 고려 사항을 참조하세요.
 
 첫 번째 및 마지막 파티션은 각각 위쪽 경계와 아래쪽 경계에 “열린” 상태로 유지됩니다. 이렇게 하면 분할 열 값에 상관없이 모든 새 행에 대상 파티션이 포함됩니다. 시간이 지남에 따라 기록 테이블의 새 행은 더 높은 파티션에 순서대로 삽입됩니다. 6번째 파티션이 채워지면 대상으로 지정된 보존 기간에 도달합니다. 이 순간에 반복적인 파티션 유지 관리 작업이 처음으로 시작됩니다(이 예에서는 한 달에 한 번 정기적으로 실행하도록 예약해야 합니다).
 
@@ -410,7 +416,8 @@ COMMIT;
 
 ## <a name="using-temporal-history-retention-policy-approach"></a>Temporal 기록 보존 정책 접근 방식 사용
 
-> **참고:** Temporal 기록 보존 정책 접근 방식 사용은 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 및 SQL Server 2017 CTP 1.3 이상에 적용됩니다.
+> [!NOTE]
+> Temporal 기록 보존 정책 접근 방식 사용은 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 및 SQL Server 2017 CTP 1.3 이상에 적용됩니다.
 
 Temporal 기록 보존은 개별 테이블 수준에서 구성할 수 있으므로 사용자가 유연한 에이징 정책을 만들 수 있습니다. Temporal 보존 적용은 간단해서, 테이블을 만들거나 스키마를 변경할 때 매개 변수 하나만 설정하면 됩니다.
 

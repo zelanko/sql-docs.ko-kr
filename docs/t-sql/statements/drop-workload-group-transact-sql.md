@@ -17,18 +17,16 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 149c0e80cc64c1511c074a60595b26b668cfae8e
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 74725f71656141c4e441f80b4ba059012b4b65bb
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83605705"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552758"
 ---
 # <a name="drop-workload-group-transact-sql"></a>DROP WORKLOAD GROUP(Transact-SQL)
 
-## <a name="click-a-product"></a>제품을 클릭하세요.
-
-다음 행에서 관심이 있는 제품 이름을 클릭합니다. 클릭하면 웹페이지의 여기에서 클릭한 제품에 적절한 다른 콘텐츠를 표시합니다.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -62,7 +60,7 @@ ms.locfileid: "83605705"
 
 ||||
 |---|---|---|
-|[SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)|[SQL Database<br />관리되는 인스턴스](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)| **_\* Azure Synapse<br />분석 \*_** &nbsp;|
+|[SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)|[SQL Database<br />관리되는 인스턴스](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)| **_\* Azure Synapse<br />Analytics \*_** &nbsp;|
 ||||
 
 &nbsp;

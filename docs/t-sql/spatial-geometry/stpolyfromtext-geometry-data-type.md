@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a7c1c9f0-1dd5-493b-b206-83bbfa33452b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a979222ad928512ccfc22efb106027434579af19
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 199236c4dc25764b5eab8b5f2754981cf0c70aef
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762202"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554458"
 ---
 # <a name="stpolyfromtext-geometry-data-type"></a>STPolyFromText(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762202"
 STPolyFromText ( 'polygon_tagged_text' , SRID )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *polygon_tagged_text*  
  반환하려는 **geometryPolygon** 인스턴스의 WKT 표현입니다. *polygon_tagged_text*는 **nvarchar(max)** 식입니다.  
   

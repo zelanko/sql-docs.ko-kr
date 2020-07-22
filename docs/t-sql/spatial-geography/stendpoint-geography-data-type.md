@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 83e7abc5c20e429cdac419241a7f3c02f1ae16ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 475b5e99cd7628992e90a2921c0bd726f8f69560
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85703813"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554408"
 ---
 # <a name="stendpoint-geography-data-type"></a>STEndPoint(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85703813"
 .STEndPoint ( )  
 ```  
   
-## <a name="return-types"></a>반환 형식  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>반환 형식
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  
   
  CLR 반환 형식: **SqlGeography**  

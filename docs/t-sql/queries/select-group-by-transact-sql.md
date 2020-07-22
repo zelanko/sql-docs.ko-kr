@@ -32,12 +32,12 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03c9b8dae913f7fb8dd770effcfd56a32e368c96
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6c248d5381429b3bf53ee483c5200096601e08e2
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999787"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552966"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -105,7 +105,9 @@ GROUP BY {
 
 ```  
     
-## <a name="arguments"></a>인수 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  
 ### <a name="column-expression"></a>*column-expression*  
 열 또는 열에 대한 비집계 계산을 지정합니다. 이 열은 테이블, 파생 테이블 또는 뷰에 속할 수 있습니다. 열은 SELECT 문의 FROM 절에 나타나야 하지만, SELECT 목록에는 나타나지 않아도 됩니다. 

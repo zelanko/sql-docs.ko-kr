@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a19520fc-7f91-4a2c-856f-4d8b99a7e496
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0912e67fcf72ccdf5e13be46cf4507a47f33fc83
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32770e46a7df18e588d5afe9de17a63e2eee4b91
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762257"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552806"
 ---
 # <a name="stnumpoints-geometry-data-type"></a>STNumPoints(geometry 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762257"
 .STNumPoints ( )  
 ```  
   
-## <a name="return-types"></a>반환 형식  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>반환 형식
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **int**  
   
  CLR 반환 형식: **SqlInt32**  

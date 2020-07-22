@@ -11,16 +11,16 @@ ms.assetid: d431f216-82cf-4d97-825e-bb35d3d53a45
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bed32b21fe1e6c249c6de30779c28d0350e2a639
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a87f79468344173034655a06ae87d33aa2931b9d
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85977222"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552725"
 ---
 # <a name="getting-started-with-system-versioned-temporal-tables"></a>시스템 버전 관리 temporal 테이블 시작
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 시나리오에 따라 새 시스템 버전 관리 temporal 테이블을 만들 수도 있고 기존 테이블 스키마에 임시 특성을 추가하여 기존 테이블을 수정할 수도 있습니다. temporal 테이블의 데이터를 수정하면 시스템은 애플리케이션과 최종 사용자는 확인할 수 없는 버전 기록을 작성합니다. 따라서 시스템 버전 temporal 테이블 작업 시에는 테이블이 수정되는 방식이나 데이터의 최신(실제) 상태를 쿼리하는 방법을 변경할 필요가 없습니다.
 

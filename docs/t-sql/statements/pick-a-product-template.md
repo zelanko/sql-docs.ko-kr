@@ -14,12 +14,12 @@ helpviewer_keywords: ''
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 8a341ebc8ba5b80b61cbc5c9337b4ea6ad41f34c
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 346eccd3668808225a707233703117736928502d
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85011266"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554248"
 ---
 # <a name="title-transact-sql"></a>Title(Transact-SQL)
 
@@ -29,15 +29,13 @@ ms.locfileid: "85011266"
 
 구문 표기 규칙에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하십시오.
 
-## <a name="click-a-product"></a>제품을 클릭하세요.
-
-다음 행에서 관심이 있는 제품 이름을 클릭합니다. 클릭하면 웹페이지의 여기에서 클릭한 제품에 적절한 다른 콘텐츠를 표시합니다.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
 > |||||
 > |---|---|---|---|
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />단일 데이터베이스/탄력적 풀](pick-a-product-template.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](pick-a-product-template.md?view=azuresqldb-mi-current)|[Azure Synapse<br />분석](pick-a-product-template.md?view=azure-sqldw-latest)|||
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />단일 데이터베이스/탄력적 풀](pick-a-product-template.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](pick-a-product-template.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](pick-a-product-template.md?view=azure-sqldw-latest)|||
 
 &nbsp;
 
@@ -49,7 +47,7 @@ ms.locfileid: "85011266"
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* SQL Database<br />단일 데이터베이스/탄력적 풀 \*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[Azure Synapse<br />분석](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* SQL Database<br />단일 데이터베이스/탄력적 풀 \*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -62,7 +60,7 @@ ms.locfileid: "85011266"
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL Database<br />관리되는 인스턴스 \*_** &nbsp;||[Azure Synapse<br />분석](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL Database<br />관리되는 인스턴스 \*_** &nbsp;||[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -75,7 +73,7 @@ ms.locfileid: "85011266"
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />분석 \*_** &nbsp;||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_** &nbsp;||||
 
 &nbsp;
 

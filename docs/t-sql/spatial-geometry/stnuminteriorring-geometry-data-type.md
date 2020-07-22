@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 48e78948-5b14-41dd-85d1-169bba1c4195
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a13ae1a62d6a1cac3059f4b149d7d828698202fb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a71683269a23c20531c6e5aba6ad609172d461fd
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762268"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554616"
 ---
 # <a name="stnuminteriorring-geometry-data-type"></a>STNumInteriorRing(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Polygon **Polygongeometry** 인스턴스의 내부 링 개수를 반환합니다
 .STNumInteriorRing ( )  
 ```  
   
-## <a name="return-types"></a>반환 형식  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>반환 형식
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **int**  
   
  CLR 반환 형식: **SqlInt32**  

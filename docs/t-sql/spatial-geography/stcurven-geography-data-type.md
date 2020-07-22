@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: eabf47faee7f6dbd0916680b378a653a1ae9c619
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cca9963b6f8ad6690190de8d3da551c6536c92ed
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85704383"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552523"
 ---
 # <a name="stcurven-geography-data-type"></a>STCurveN(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85704383"
 .STCurveN( n )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *n*  
  1과 **geography** 인스턴스에 있는 곡선의 개수 사이의 **int** 식입니다.  
   

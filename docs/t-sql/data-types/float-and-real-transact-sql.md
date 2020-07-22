@@ -1,5 +1,5 @@
 ---
-title: float 및 real(Transact-SQL) | Microsoft Docs
+title: float 및 real(Transact-SQL)
 ms.custom: ''
 ms.date: 09/10/2019
 ms.prod: sql
@@ -23,14 +23,15 @@ ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75b888832f9694907af1fbab7031294f32fdda0e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 921f6e0b26f9187f8dcf241996b601e46ba1cb2e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999235"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554519"
 ---
 # <a name="float-and-real-transact-sql"></a>float 및 real(Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 부동 소수점 숫자 데이터에 사용하는 근사 숫자 데이터 형식입니다. 부동 소수점 데이터는 근사값이므로 해당 데이터 형식 범위에 있는 모든 값을 정확하게 표현할 수는 없습니다. **real**의 ISO 동의어는 **float(24)** 입니다.
@@ -49,7 +50,9 @@ ms.locfileid: "85999235"
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 *n*을 가능한 두 값 중 하나로 처리합니다. **1**<=n<=**24**이면 *n*은 **24**로 처리됩니다. **25**<=n<=**53**이면 *n*은 **53**으로 처리됩니다.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float**[ **(n)** ] 데이터 형식은 *1*부터 **53**까지 **n**의 모든 값에 대해 ISO 표준을 준수합니다. **double precision**의 동의어는 **float(53)** 입니다.
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>설명  
   
 |데이터 형식|범위|스토리지|  

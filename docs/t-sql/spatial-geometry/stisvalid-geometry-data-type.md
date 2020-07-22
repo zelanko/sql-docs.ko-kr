@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6da39bea-0f67-4660-98fc-d7214f9b2138
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 93d938b45f9820c1de2b7f225c222cab8dd0d11b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6068ed19c1f531104127402fddfa75ab30210932
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762376"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554656"
 ---
 # <a name="stisvalid-geometry-data-type"></a>STIsValid(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762376"
 .STIsValid ( )  
 ```  
   
-## <a name="return-types"></a>반환 형식  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>반환 형식
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **bit**  
   
  CLR 반환 형식: **SqlBoolean**  

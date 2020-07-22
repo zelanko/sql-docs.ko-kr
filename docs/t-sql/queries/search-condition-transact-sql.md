@@ -37,12 +37,12 @@ ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84a7961292625aa3d818dbbab62aa7b455dabea7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ff6ea88da299779e334f51f653888f29ff6e8bf2
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999815"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554448"
 ---
 # <a name="search-condition-transact-sql"></a>검색 조건(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -110,7 +110,9 @@ ms.locfileid: "85999815"
     | expression [ NOT ] EXISTS (subquery)     }   
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  \<search_condition>  
  SELECT 문, 쿼리 식 또는 하위 쿼리에 대해 결과 집합에 반환되는 행의 조건을 지정합니다. UPDATE 문에는 업데이트할 행을 지정합니다. DELETE 문에는 삭제할 행을 지정합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 검색 조건에 포함할 수 있는 조건자의 개수에는 제한이 없습니다.  
   

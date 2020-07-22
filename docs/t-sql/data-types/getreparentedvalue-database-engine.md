@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2fe15544cd689004eb2fcc56ae4083651e6c02ae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a1b6700c10a73a2b3f0ab59dbad7f0a5d2c435c
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732795"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554480"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue(데이터베이스 엔진)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,9 @@ node. GetReparentedValue ( oldRoot, newRoot )
 SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newRoot )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 _oldRoot_  
 수정할 계층 구조의 수준을 나타내는 노드인 **hierarchyid**입니다.
   

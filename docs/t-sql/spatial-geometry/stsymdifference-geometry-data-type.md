@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1d4cf35a-ca89-4aa4-ae30-e61a0ff18b53
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 63122ab29322432be181aa162e7727f342470974
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a6924bec676d8de525e29c8f124774b41edf0a2d
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762150"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554599"
 ---
 # <a name="stsymdifference-geometry-data-type"></a>STSymDifference(geometry 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762150"
 .STSymDifference ( other_geometry )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *other_geometry*  
  `STSymDifference()`를 호출할 인스턴스 외의 다른 **geometry** 인스턴스입니다.  
   
