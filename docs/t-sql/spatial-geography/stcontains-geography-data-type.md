@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b10e8f0a-2926-449a-82ea-be42543420ca
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: fa83e1bfc466f9eaf92faf1bb32868d1781f283a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0c1b1aa4526479675ec6153ad34b3a1e98671ade
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705072"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554740"
 ---
 # <a name="stcontains--geography-data-type"></a>STContains(geography 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "85705072"
 .STContains ( other_geography )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *other_geography*  
  `STContains()`가 호출되는 인스턴스와 비교할 다른 **geography** 인스턴스입니다.  
   

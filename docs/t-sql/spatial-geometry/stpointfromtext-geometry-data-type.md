@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1d71dfd8-9d80-44c3-b6e1-64e99cde1fa0
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: dc24a1ed9998c478b7ca7a272c00d68656a2285e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f9dcc83f9b164f27d50e047792a069b148239872
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762236"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554950"
 ---
 # <a name="stpointfromtext-geometry-data-type"></a>STPointFromText(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762236"
 STPointFromText ( 'point_tagged_text' , SRID )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *point_tagged_text*  
  반환할 **geometryPoint** 인스턴스의 WKT 표현입니다. *point_tagged_text*는 **nvarchar(max)** 식입니다.  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8f0bb3b7-5cd9-42c2-b9f8-f04628653bd0
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 598f292c88cdd8516610df7b9a8b0a64424fab1d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eced8c5e3c7d42abf8974af1efc9202bd30bed27
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762218"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554937"
 ---
 # <a name="stpointn-geometry-data-type"></a>STPointN(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762218"
 .STPointN ( expression )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *expression*  
  1과 **geometry** 인스턴스에 있는 점 개수 사이의 **int** 식입니다.  
   

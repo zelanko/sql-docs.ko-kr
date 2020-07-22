@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dcbd6ae1-5d63-485f-9d58-28bfd504524e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 44b62d04c52ddb707bfd094d3b29fbfe84cf5bb4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f541f5420409293080eeb07bd1bbfc54f28ef504
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762395"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555361"
 ---
 # <a name="stisempty-geometry-data-type"></a>STIsEmpty(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762395"
 .STIsEmpty ( )  
 ```  
   
-## <a name="return-types"></a>반환 형식  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>반환 형식
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **bit**  
   
  CLR 반환 형식: **SqlBoolean**  

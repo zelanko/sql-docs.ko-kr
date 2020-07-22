@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 05ca6d65-4799-4b9a-9672-cfebae95f23e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 74743e0a91601ff210236a355739559ad03ecdb1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 35c2776a6749f4f087cc32daa5abf3ddd121cc9f
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85703033"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555144"
 ---
 # <a name="stmlinefromwkb-geography-data-type"></a>STMLineFromWKB(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ OGC(Open Geospatial Consortium) WKB(WELL-KNOWN Binary) 표현에서 **geographyM
 STMLineFromWKB ( 'WKB_multilinestring' , SRID )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *WKB_multilinestring*  
  반환할 **geographyMultiLineString** 인스턴스의 WKT 표현입니다. *WKB_multilinestring*은 **varbinary(max)** 식입니다.  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c4d0e649-0abb-4343-a3f0-3a702c8bbbdb
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 77de4f1e1fb5e76316101312f9c30b1b0663f0f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 24d691b695a326e24a74a6489be33f41cebf9aa1
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85702820"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556075"
 ---
 # <a name="stmpolyfromwkb-geography-data-type"></a>STMPolyFromWKB(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ OGC(Open Geospatial Consortium) WKB(Well-Known Binary) 표현에서 **geographyM
 STMPolyFromWKB ( 'WKB_multipolygon' , SRID )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *WKB_multipolygon*  
  반환하려는 **geographyMultiPolygon** 인스턴스의 WKB 표현입니다. *WKB_multipolygon*은 **varbinary(max)** 식입니다.  
   

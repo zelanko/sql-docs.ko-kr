@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 49d0d65ae6f8eed112847b471620ba8ccb3c825d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1aa6995864aa4407c0c7c71611ddf9da65acfc7
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759558"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555135"
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed(geometry 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "85759558"
 .IsValidDetailed()  
 ```  
   
-## <a name="return-types"></a>반환 형식  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>반환 형식
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **nvarchar(max)**  
   
  CLR 반환 형식: **string**  

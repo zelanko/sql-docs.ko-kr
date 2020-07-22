@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 8fc476ac-bd69-434e-9636-70776e0b3b6c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a746df126c3652108217ea3dfedeb37be4f1751e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7a9525a8fb130b7fcf08c22d5b9fe9012d28c518
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295085"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86901296"
 ---
 # <a name="troubleshooting-reports-for-package-execution"></a>패키지 실행 보고서 문제 해결
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 현재 릴리스에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 카탈로그에 배포된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 모니터링하고 문제를 해결하는 데 도움이 되는 표준 보고서를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 사용할 수 있습니다. 특히 이 두 가지 패키지 보고서는 패키지 실행 상태를 보고 실행 실패 원인을 파악하는 데 도움이 됩니다.  

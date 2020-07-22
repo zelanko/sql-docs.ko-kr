@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 30f47275-2727-4d22-bbec-c0c54bcb3ac2
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5d1639e33d52777b55845ecc489a5faf552536d8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 420fe265e6871fe02d4f3dc62936b5de9d0da3de
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705697"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555838"
 ---
 # <a name="ringn-geography-data-type"></a>RingN(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85705697"
 .RingN (expression )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *expression*  
  1부터 **polygon** 인스턴스의 링 개수 사이의 **int** 식입니다.  
   

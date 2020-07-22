@@ -36,12 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cdc73ac23a6d95d46b6ec02bb1aeb194df96422a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c73969d5bd4b02373d9a16d292504530a626650b
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731333"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555869"
 ---
 # <a name="hints-transact-sql---table"></a>힌트(Transact-SQL) - 테이블
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -120,7 +120,9 @@ WITH  ( <table_hint> [ [, ]...n ] )
 }   
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 WITH **(** \<table_hint> **)** [ [ **,** ]...*n* ]  
 몇 가지 예외가 있지만 테이블 힌트는 WITH 키워드를 사용하여 힌트를 지정할 때만 FROM 절에서 지원됩니다. 또한 테이블 힌트는 괄호로 묶어 지정해야 합니다.  
   
@@ -393,18 +395,20 @@ GO
 NOEXPAND는 *인덱싱된 뷰*에만 적용됩니다. 인덱싱된 뷰란 고유한 클러스터형 인덱스가 만들어져 있는 뷰를 의미합니다. 인덱싱된 뷰와 기본 테이블 모두에 있는 열에 대한 참조가 포함된 쿼리의 경우 쿼리 최적화 프로그램이 쿼리를 실행하는 데 인덱싱된 뷰를 사용하는 것이 최상의 방법이라고 결정하면 뷰의 인덱스를 사용합니다. 이 기능은 *인덱싱된 뷰 일치*라고 합니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 이전에는 쿼리 최적화 프로그램에서 인덱싱된 뷰를 자동으로 사용하는 것은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 특정 버전에서만 지원됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
 단, 최적화 프로그램에서 일치시킬 인덱싱된 뷰를 고려하거나 NOEXPAND 힌트로 참조된 인덱싱된 뷰를 사용하려면 다음 SET 옵션을 ON으로 설정해야 합니다.  
- 
-> [!NOTE]  
+
+> [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]는 NOEXPAND 힌트를 지정하지 않고도 인덱싱된 뷰를 자동으로 사용할 수 있도록 지원합니다.
-  
-||||  
-|-|-|-|  
-|ANSI_NULLS|ANSI_WARNINGS|CONCAT_NULL_YIELDS_NULL|  
-|ANSI_PADDING|ARITHABORT<sup>1</sup>|QUOTED_IDENTIFIER|  
-  
- <sup>1</sup> ANSI_WARNINGS가 ON으로 설정되면 ARITHABORT가 암시적으로 ON으로 설정됩니다. 따라서 이 설정을 수동으로 조정할 필요가 없습니다.  
-  
- 또한 NUMERIC_ROUNDABORT 옵션은 OFF로 설정해야 합니다.  
+
+- ANSI_NULLS
+- ANSI_PADDING
+- ANSI_WARNINGS
+- ARITHABORT<sup>1</sup>
+- CONCAT_NULL_YIELDS_NULL
+- QUOTED_IDENTIFIER
+
+<sup>1</sup> ANSI_WARNINGS가 ON으로 설정되면 ARITHABORT가 암시적으로 ON으로 설정됩니다. 따라서 이 설정을 수동으로 조정할 필요가 없습니다.  
+
+또한 NUMERIC_ROUNDABORT 옵션은 OFF로 설정해야 합니다.  
   
  최적화 프로그램이 인덱싱된 뷰에 대한 인덱스를 강제로 사용하게 하려면 NOEXPAND 옵션을 지정합니다. 이 힌트는 뷰가 쿼리에서도 명명되어 있는 경우에만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 FROM 절에서 직접 뷰를 명명하지 않는 쿼리에서 특정 인덱싱된 뷰를 강제로 사용하도록 힌트를 제공하지 않지만 쿼리 최적화 프로그램은 쿼리에서 직접 참조되지 않은 경우에도 인덱싱된 뷰의 사용을 고려합니다. NOEXPAND 테이블 힌트를 사용하는 경우 SQL Server는 인덱싱된 보기의 통계만 자동으로 만듭니다. 이 힌트를 생략하면 수동으로 통계를 생성하여 확인할 수 없는 누락된 통계에 대한 실행 계획 경고가 발생할 수 있습니다. 쿼리 최적화 중 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 쿼리가 보기를 직접 참조하고 NOEXPAND 힌트를 사용할 때 자동 또는 수동으로 생성된 보기 통계를 사용합니다.    
   

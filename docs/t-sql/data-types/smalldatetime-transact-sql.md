@@ -22,14 +22,15 @@ ms.assetid: 68b74610-d54c-4c8e-b4b2-7e3747546ee0
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2eaec4d3e43f0a24b0b7ed297589a2699e41bc2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ac0442c2dfe609d112c12ada4f2dedb3be20b8ee
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007996"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556188"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime(Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 날짜와 시간을 정의합니다. 시간은 하루 24시간을 기준으로 하며 초는 항상 소수 자릿수 없이 0(:00)으로 표시됩니다.
@@ -39,8 +40,8 @@ ms.locfileid: "86007996"
   
 ## <a name="smalldatetime-description"></a>smalldatetime 설명
   
-|||  
-|-|-|  
+|속성|값|
+|--------|-----|
 |구문|**smalldatetime**|  
 |사용|DECLARE \@MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1(Column1 **smalldatetime**)|  
 |기본 문자열 리터럴 형식<br /><br /> (하위 클라이언트에 대해 사용됨)|해당 없음|  

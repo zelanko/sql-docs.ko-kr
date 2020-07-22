@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5fe54dc-0007-4631-8dde-7ae4d4c41f6e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d08ac48f8125c577d89c0c7e0b43cccc93f43c0e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5eb48601ba6b584f0846e873c3aff4f326f72493
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85702303"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556032"
 ---
 # <a name="stpointfromtext-geography-data-type"></a>STPointFromText(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85702303"
 STPointFromText ( 'point_tagged_text' , SRID )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *point_tagged_text*  
  반환하려는 **geographyPoint** 인스턴스의 WKT 표현입니다. *point_tagged_text*는 **nvarchar(max)** 식입니다.  
   

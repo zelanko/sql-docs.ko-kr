@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0c05ded2f6c00dd4c2f28336fb5054796f40607d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1deed4d716bbee62dac425a9d71780aec445602e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85703263"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555799"
 ---
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,9 @@ ms.locfileid: "85703263"
 .STGeometryN ( expression )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *expression*  
  1과 **GeometryCollection**에 있는 **geography** 인스턴스 수 사이의 **int** 식입니다.  
   

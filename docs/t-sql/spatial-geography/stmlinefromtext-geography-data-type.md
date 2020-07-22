@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 66dfd722-a9bd-45d3-9788-f1946dd23e17
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: aa9e059d2fbfb2e2ef3cb1b9d41f865f31c52cd6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 38f600215710efc1886e93a8eb4941f6996f195e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85702979"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556076"
 ---
 # <a name="stmlinefromtext-geography-data-type"></a>STMLineFromText(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85702979"
 STMLineFromText ( 'multilinestring_tagged_text' , SRID )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *multilinestring_tagged_text*  
  반환할 **geographyMultiLineString** 인스턴스의 WKT 표현입니다. *multilinestring_tagged_text*는 **nvarchar(max)** 식입니다.  
   

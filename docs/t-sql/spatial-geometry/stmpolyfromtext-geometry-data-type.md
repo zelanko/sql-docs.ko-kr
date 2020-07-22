@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f087a61c-f063-4fb8-8f1c-251a2fed76a1
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4592965d484785f3f5a5407d517010288743b5d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 015de9248eb9e3af834a2c595abc8efdc2fc3794
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762313"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554989"
 ---
 # <a name="stmpolyfromtext-geometry-data-type"></a>STMPolyFromText(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762313"
 STMPolyFromText ( 'multipolygon_tagged_text' , SRID )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *multipolygon_tagged_text*  
  반환하려는 **geometryMultiPolygon** 인스턴스의 WKT 표현입니다. *multipolygon_tagged_text*는 **nvarchar(max)** 식입니다.  
   

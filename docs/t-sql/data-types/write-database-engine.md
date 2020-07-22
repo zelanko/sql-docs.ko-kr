@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7c554334-d2d9-4eae-a4ae-097aa4020e1a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5e68559c2f795a16bd9257d53a92f1cb5899d711
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3394e41418a45c56625af084e4dca0afeefa50b8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729616"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554788"
 ---
 # <a name="write-database-engine"></a>Write(데이터베이스 엔진)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,8 +34,10 @@ Write는 전달된 **BinaryWriter**에 **SqlHierarchyId**의 이진 표현을 �
 ```sql
 void Write( BinaryWriter w )   
 ```  
-  
-## <a name="arguments"></a>인수  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 *w*  
 이 **hierarchyid** 노드의 이진 표현을 쓸 **BinaryWriter** 개체입니다.
   

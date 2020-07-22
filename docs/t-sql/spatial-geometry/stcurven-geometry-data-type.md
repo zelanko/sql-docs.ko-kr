@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1816630332b7691d9d85216df7ac242baa65f4bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7905da990bf06b79641f19823f954abe201139ad
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748705"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555072"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN(geometry 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "85748705"
 .STCurveN ( curve_index )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *curve_index*  
  1과 **geometry** 인스턴스에 있는 곡선 개수 사이의 **int** 식입니다.  
   

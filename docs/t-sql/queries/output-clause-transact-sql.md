@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4b4eb7bcfc5711d041a354f4187e506ee130a0ea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a63b7d9565f93a770061fc39a9aac7eb4e496366
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706026"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554778"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 절(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -75,7 +75,9 @@ ms.locfileid: "85706026"
     | $action  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  \@*table_variable*  
  반환된 행이 호출자에게 반환되는 대신 삽입되는 **table** 변수를 지정합니다. \@*table_variable*은 INSERT, UPDATE, DELETE 또는 MERGE 문 앞에 선언해야 합니다.  
   

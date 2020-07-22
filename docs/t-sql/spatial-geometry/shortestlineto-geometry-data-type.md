@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 39a2d0e4-4f93-4e94-a27e-6ad9537cfe74
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: bd65f185f2fac61c85eb6b21ab22c3d1d9abf622
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 37008718b66d96ba604a72b49a5f082cc29766bc
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748820"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555673"
 ---
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo(geometry 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "85748820"
 .ShortestLineTo ( geometry_other )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *geometry_other*  
  **geometry** 인스턴스를 호출하여 최단 거리를 확인하려는 두 번째 **geometry** 인스턴스입니다.  
   

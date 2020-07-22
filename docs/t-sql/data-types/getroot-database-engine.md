@@ -17,14 +17,15 @@ helpviewer_keywords:
 ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fbc5bd95c10c89da4fb6fc6cbd1400f2e310927b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4dfb1988f2f1405b2e69459824ee47983295ad31
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738202"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556218"
 ---
 # <a name="getroot-database-engine"></a>GetRoot(데이터베이스 엔진)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 계층 트리의 루트를 반환합니다. GetRoot ()는 정적 메서드입니다.
@@ -40,7 +41,9 @@ hierarchyid::GetRoot ( )
 -- CLR syntax  
 static SqlHierarchyId GetRoot ( )   
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-types"></a>반환 형식  
 **SQL Server 반환 형식: hierarchyid**
   

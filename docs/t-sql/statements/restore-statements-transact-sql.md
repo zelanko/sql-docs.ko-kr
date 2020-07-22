@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ba9a1a0b2922cba5c2aadef862bec56bbc66666b
-ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
+ms.openlocfilehash: 692bd0bf6bd493ee8133e9c428670d5c46829780
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86032445"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554818"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문(Transact-SQL)
 
@@ -55,9 +55,7 @@ BACKUP 명령을 사용하여 만든 SQL 데이터베이스 백업을 복원합�
 
 구문 표기 규칙에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하십시오.
 
-## <a name="click-a-product"></a>제품을 클릭하세요.
-
-다음 행에서 관심이 있는 제품 이름을 클릭합니다. 클릭하면 여기에서 클릭한 제품에 적절한 다른 콘텐츠를 표시합니다.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 14a7ba15-168c-4b08-ba3d-951d73092ac7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9406d8a5913c850d492c588b49d6cff8c6cec5e4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2066a2874094e3a6e4f7376809d26cbcbaba9e81
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736153"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555460"
 ---
 # <a name="envelopeangle-geography-data-type"></a>EnvelopeAngle(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,9 @@ ms.locfileid: "85736153"
   
 EnvelopeAngle( )  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **float**  
   

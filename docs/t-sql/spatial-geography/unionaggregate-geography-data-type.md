@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1a3aeef1-5b0e-4ae8-aeb7-c4aab22f42ab
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0e37094620354c86185244326d6dcd3c3cb35640
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8e562dec75bf6a91bb9166b4d711831e03258bb5
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85701357"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555808"
 ---
 # <a name="unionaggregate-geography-data-type"></a>UnionAggregate(geography 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,8 +35,10 @@ geography 개체 집합에서 통합 연산을 수행합니다.
   
 UnionAggregate ( geography_operand )  
 ```  
-  
-## <a name="arguments"></a>인수  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *geography_operand*  
  통합 연산을 수행할 **geography** 개체 집합을 보관하는 **geography** 형식 테이블 열입니다.  
   

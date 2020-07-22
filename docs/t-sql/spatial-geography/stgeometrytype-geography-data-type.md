@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3e169ead-a98e-44af-8d33-fd59a955cae4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 73f17f6388599583439fdb7953306aab01483979
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 957615b665641afd3ffbfbcac8d789a2426b35cc
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85703202"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555408"
 ---
 # <a name="stgeometrytype-geography-data-type"></a>STGeometryType(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85703202"
 .STGeometryType ( )  
 ```  
   
-## <a name="return-types"></a>반환 형식  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>반환 형식
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **nvarchar(4000)**  
   
  CLR 반환 형식: **SqlString**  

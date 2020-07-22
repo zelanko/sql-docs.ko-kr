@@ -11,16 +11,16 @@ ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9eec9c506d6026bef09a3cd6415a786a8a4f01af
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a0860b822341fb3c974fbdd80726082cd3b1abbf
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002480"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555282"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>시스템 버전 관리 temporal 테이블의 데이터 수정
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 시스템 버전 temporal 테이블의 데이터는 일반 DML 문을 사용하여 수정됩니다. 여기서 한가지 중요한 차이점은 기간 열 데이터를 직접 수정할 수 없다는 것입니다. 데이터가 업데이트되면 버전이 부여되며, 업데이트된 각 행의 이전 버전은 기록 테이블에 삽입됩니다. 데이터가 삭제되는 경우, 논리적으로 삭제되고 행이 현재 테이블에서 기록 테이블로 이동합니다. 영구적으로 삭제되지 않습니다.
 

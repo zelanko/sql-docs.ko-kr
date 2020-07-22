@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b26d8a7fa1c72a3c31f43d6d8e99bfceedde96a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ccde42f9243c775ffe7e5044ba9df7aa3b7efbe6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731203"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555212"
 ---
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,9 @@ GML에 대한 자세한 내용은 [OGC 사양, Geography Markup Language](https:
 GeomFromGml ( GML_input, SRID )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *GML_input*  
  GML이 값을 반환하는 데 사용되는 XML 입력입니다.  
   

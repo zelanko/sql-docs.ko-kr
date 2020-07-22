@@ -1,5 +1,5 @@
 ---
-title: Reduce(geography 데이터 형식) | Microsoft Docs
+title: Reduce(geography 데이터 형식)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: db28891a7e1bed887f3a8d58a5994734d65b9185
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e0745bbe895fcc26aceb197c9779f44249825083
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705844"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556153"
 ---
 # <a name="reduce-geography-data-type-"></a>Reduce(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,11 +38,12 @@ ms.locfileid: "85705844"
 .Reduce ( tolerance )  
 ```  
   
-## <a name="arguments"></a>인수  
-  
-|||  
-|-|-|  
-|용어|정의|  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
+
+|용어|정의|
+|----|----------|
 |*tolerance*|**float** 형식의 값입니다. *tolerance*는 Douglas-Peucker 알고리즘에 입력할 허용 오차입니다. *tolerance*는 양수여야 합니다.|  
   
 ## <a name="return-types"></a>반환 형식  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 516c2c3efefd0c9a1384823b8eb1f6c04abd29c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3b9ee26c8fcda094228e7bc5a26a4173c8a8d69b
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705975"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554768"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "85705975"
 READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 _table_ **.** _column_  
 읽을 테이블과 열의 이름입니다. 테이블 및 열 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다. 테이블 및 열 이름은 반드시 지정해야 하지만 데이터베이스 이름과 소유자 이름을 지정하는 것은 선택적입니다.  
   

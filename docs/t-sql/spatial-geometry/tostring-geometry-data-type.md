@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2e55fa98-aa22-4baa-a516-7c233a33e212
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d8e140a968a86be980f38d1333fc82e28bbc812e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 62d8f5a0348dd6104983daaf2592feda80514a4f
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762091"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554922"
 ---
 # <a name="tostring-geometry-data-type"></a>ToString(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,9 @@ ms.locfileid: "85762091"
 .ToString ()  
 ```  
   
-## <a name="return-types"></a>반환 형식  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>반환 형식
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **nvarchar(max)**  
   
  CLR 반환 형식: **SqlString**  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d236e0ea-dabe-4341-a6eb-ecc210d1f056
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: c2a3191e96d70cff0be0dfa2b3f0944b449c995a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1f83894fc743a9d1d9c779dc44c1243eb27696da
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85701962"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555381"
 ---
 # <a name="stpolyfromwkb-geography-data-type"></a>STPolyFromWKB(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ OGC(Open Geospatial Consortium) WKB(Well-Known Binary) 표현에서 **geographyP
 STPolyFromWKB ( 'WKB_polygon' , SRID )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *WKB_polygon*  
  반환하려는 **geographyPolygon** 인스턴스의 WKB 표현입니다. *WKB_polygon*은 **varbinary(max)** 식입니다.  
   

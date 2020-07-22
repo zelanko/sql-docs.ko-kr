@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a5b3c344-1045-43a4-82fa-47f6206a288e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 78f17c846500173f080dbf95f33c06f0c2f372d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d72d49a08deb05bc5e5750e98493047257c6f2ed
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85703655"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556128"
 ---
 # <a name="stgeomcollfromtext-geography-data-type"></a>STGeomCollFromText(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85703655"
 STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *geometrycollection_tagged_text*  
  반환할 **geography** 인스턴스의 WKT 표현입니다. *geometrycollection_tagged_text*는 **nvarchar(max)** 식입니다.  
   

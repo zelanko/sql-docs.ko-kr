@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b0d8769c-7598-4f97-8162-ace5f182b5bc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2881ad1cc83e7916c325c0492c8243d09833c3b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 95d3209fd08f08820966294b96b0fd11831e73ea
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734213"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555938"
 ---
 # <a name="ntext-text-and-image-transact-sql"></a>ntext, text 및 image(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,8 +35,7 @@ ms.locfileid: "85734213"
   
 >**중요!**  **ntext**, **text** 및 **image** 데이터 형식은 이후 버전의 SQL Server에서 제거될 예정입니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하세요. 대신 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)및 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 를 사용합니다.  
   
-  
-## <a name="arguments"></a>인수  
+## <a name="arguments"></a>인수
 **ntext**  
 최대 문자열 길이가 2^30 - 1(1,073,741,823)바이트인 가변 길이 유니코드 데이터입니다. 바이트 단위의 스토리지 크기는 입력된 문자열 길이의 두 배입니다. **ntext**의 ISO 동의어는 **national text**입니다.
   

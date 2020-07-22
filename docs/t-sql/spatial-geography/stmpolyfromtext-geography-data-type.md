@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 15356c0f-5144-418d-aa96-3e7ea5fecea3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5c60f2395b34d580c4782de5d3cfda40eb39cf35
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: acd6437e3a87b13559be460358ca83d6a45630cd
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85702838"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555776"
 ---
 # <a name="stmpolyfromtext-geography-data-type"></a>STMPolyFromText(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85702838"
 STMPolyFromText ( 'multipolygon_tagged_text' , SRID )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *multipolygon_tagged_text*  
  반환할 **geographyMultiPolygon** 인스턴스의 WKT 표현입니다. *multipolygon_tagged_text*는 **nvarchar(max)** 식입니다.  
   

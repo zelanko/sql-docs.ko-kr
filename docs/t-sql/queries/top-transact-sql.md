@@ -21,12 +21,12 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: faab44501aa1cae4245d745598e32fab8d66a9f6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ce9c31baedb0b423e93e96080ea6697c553e549e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012581"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555874"
 ---
 # <a name="top-transact-sql"></a>TOP(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,9 @@ Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스에 대한 구문�
 ]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 *expression*  
 반환할 행 개수를 지정하는 숫자 식입니다. PERCENT를 지정하면 *expression*은 암시적으로 **float** 값으로 변환됩니다. 그렇지 않으면 *expression*이 **bigint**로 변환됩니다.  
   

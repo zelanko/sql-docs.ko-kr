@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1bfe787f-ddf0-4fc7-af6a-570a58faab23
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9b2eeeab17ad2f130886ad2f47ebcbe4ddc75715
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4549b317f3b6948fd72e0c5c2856255b8a6bd507
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736083"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556127"
 ---
 # <a name="stisvalid-geography-data-type"></a>STIsValid(geography 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,9 @@ ms.locfileid: "85736083"
 .STIsValid ( )  
 ```  
   
-## <a name="return-types"></a>반환 형식  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>반환 형식
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **bit**  
   
  CLR 반환 형식: **SqlBoolean**  

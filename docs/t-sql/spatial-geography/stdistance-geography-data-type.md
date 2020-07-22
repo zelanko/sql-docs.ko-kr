@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: c958f789e1c8eadc027c4144bae711b1288599c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 795fa917f598ed1dd477916f42808d4abb0c8a69
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85703748"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555158"
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance(geography 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "85703748"
 .STDistance ( other_geography )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *other_geography*  
  STDistance()를 호출할 인스턴스 간 거리를 측정할 다른 **geography** 인스턴스입니다. *other_geography*가 빈 집합이면 STDistance()는 null을 반환합니다.  
   

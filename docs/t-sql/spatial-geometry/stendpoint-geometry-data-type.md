@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 61773c45-b568-4e0c-94da-1310c42de7f5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: fe9bfa8ec357f3d5a3a7721e908c43e440bbaa57
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1ca874a25d97359e4d61beac101f3b4d88cdefae
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748633"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555032"
 ---
 # <a name="stendpoint-geometry-data-type"></a>STEndpoint(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85748633"
 .STEndPoint ( )  
 ```  
   
-## <a name="return-types"></a>반환 형식  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>반환 형식
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
   
  CLR 반환 형식: **SqlGeometry**  

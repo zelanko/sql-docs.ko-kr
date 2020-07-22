@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bbed028c-9cd6-4236-b5e5-8e914a21f2e4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: bae3ccf4e9eadc6e0df1843753cc38d8fceec7be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4ec65b0dd5ccae1a727d10b83ff51e06c0d29084
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85703695"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555422"
 ---
 # <a name="stgeomcollfromwkb-geography-data-type"></a>STGeomCollFromWKB(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ OGC(Open Geospatial Consortium) WKB(Well-Known Binary) 표현의 **GeometryColle
 STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *WKB_geometrycollection*  
  반환할 **GeometryCollection** 인스턴스의 WKB 표현입니다. *WKB_geometrycollection*은 **varbinary(max)** 식입니다.  
   

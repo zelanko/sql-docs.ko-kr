@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e49a644a-dbf2-46c3-98f5-4b3ec197e2ad
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7e0cf58bd672560b30704d44822fa244f86e5ed1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cdb2269e38b482d51a8320c6dd91403bdf7cc289
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736177"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555488"
 ---
 # <a name="collectionaggregate-geography-data-type"></a>CollectionAggregate(geography 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "85736177"
 ConvexHullAggregate ( geography_operand )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *geography_operand*  
  **GeometryCollection** 인스턴스에 나열될 **geography** 객체 집합을 나타내는 **geography** 형식 테이블 열입니다.  
   
