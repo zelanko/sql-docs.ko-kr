@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2a1c3460d3633ddb8b17582eea53a2c8d740b2ff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 78e081b5f684751e23efab27acac38e5413f9845
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899900"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483902"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,9 @@ ms.locfileid: "85899900"
 SETUSER [ 'username' [ WITH NORESET ] ]   
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  **'** *username* **'**  
  가장된 현재 데이터베이스 내의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Windows 사용자 이름입니다. *username*을 지정하지 않으면 사용자 ID를 시스템 관리자 또는 사용자를 가장한 데이터베이스 소유자의 원래 ID로 다시 설정합니다.  
   

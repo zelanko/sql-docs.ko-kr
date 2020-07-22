@@ -1,5 +1,5 @@
 ---
-title: DBCC SHOWRESULTCACHESPACEUSED(Transact-SQL) | Microsoft Docs
+title: DBCC SHOWRESULTCACHESPACEUSED(Transact-SQL)
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f6821ae2ee11a6cd8e5713996cc04b3330a63300
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 946be938c591ce53a564bb96741681527c2734e6
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632334"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485227"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED(Transact-SQL)
 
@@ -49,7 +49,6 @@ VIEW SERVER STATE 권한이 필요합니다.
 |data_space|bigint|데이터에 사용된 공간(KB)입니다.|  
 |index_space|bigint|인덱스에 사용된 공간(KB)입니다.|  
 |unused_space|bigint|예약된 공간이면서 사용되지 않은 공간(KB)입니다.|  
-
 
 ## <a name="see-also"></a>참고 항목
 

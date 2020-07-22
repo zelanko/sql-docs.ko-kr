@@ -1,5 +1,5 @@
 ---
-title: CREATE SYNONYM(Transact-SQL) | Microsoft Docs
+title: CREATE SYNONYM(Transact-SQL)
 ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: sql
@@ -22,14 +22,15 @@ helpviewer_keywords:
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f4fd357cb833832beb03e23e3b7ba6e1f26fb03
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7d4131868fbaf40c59be2b55aad5fe078490c824
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766970"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484574"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM(Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   새 동의어를 만듭니다.  
@@ -61,7 +62,9 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 }  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *schema_name_1*  
  동의어가 생성되는 스키마를 지정합니다. *schema*를 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 현재 사용자의 기본 스키마를 사용합니다.  
   
@@ -89,15 +92,19 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  다음과 같은 유형의 개체에 대해 동의어를 만들 수 있습니다.  
   
-|||  
-|-|-|  
-|어셈블리(CLR) 저장 프로시저|어셈블리(CLR) 테이블 반환 함수|  
-|어셈블리(CLR) 스칼라 함수|어셈블리 집계(CLR) 집계 함수|  
-|복제 필터 프로시저|확장 저장 프로시저|  
-|SQL 스칼라 함수|SQL 테이블 반환 함수|  
-|SQL 인라인 테이블 반환 함수|SQL 저장 프로시저|  
-|보기|테이블<sup>1</sup>(사용자 정의)|  
-  
+- 어셈블리(CLR) 저장 프로시저
+- 어셈블리(CLR) 테이블 반환 함수
+- 어셈블리(CLR) 스칼라 함수
+- 어셈블리 집계(CLR) 집계 함수
+- 복제 필터 프로시저
+- 확장 저장 프로시저
+- SQL 스칼라 함수
+- SQL 테이블 반환 함수
+- SQL 인라인 테이블 반환 함수
+- SQL 저장 프로시저
+- 테이블<sup>1</sup>(사용자 정의)
+- 보기
+
  <sup>1 로컬 및 전역 임시 테이블이 포함됩니다</sup>  
   
  함수 기본 개체의 네 부분으로 된 이름은 지원되지 않습니다.  

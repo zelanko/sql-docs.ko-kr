@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b327105398388615aa507ceaf30734347fbf2683
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d72a643f1bc9774ebfa412ff50db21b8800e934e
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882590"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484858"
 ---
 # <a name="set-remote_proc_transactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "85882590"
 SET REMOTE_PROC_TRANSACTIONS { ON | OFF }   
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  ON | OFF  
  ON으로 설정하면 로컬 트랜잭션에서 원격 저장 프로시저를 실행할 때 [!INCLUDE[tsql](../../includes/tsql-md.md)] 분산 트랜잭션이 시작됩니다. OFF로 설정하면 로컬 트랜잭션에서 원격 저장 프로시저를 호출해도 [!INCLUDE[tsql](../../includes/tsql-md.md)] 분산 트랜잭션이 시작되지 않습니다.  
   

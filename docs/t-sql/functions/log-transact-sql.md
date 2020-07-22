@@ -20,12 +20,12 @@ ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0acbc4f5244852f988047e9ec1798201fefc30e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c93a2a05df661fa0eaf1560249a9331f0b96b78f
+ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008825"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86465284"
 ---
 # <a name="log-transact-sql"></a>LOG(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +72,7 @@ LOG ( float_expression )
 ### <a name="a-calculating-the-logarithm-for-a-number"></a>A. 수의 로그를 계산합니다.  
  다음 예에서는 지정된 `LOG`float**식의**를 계산하는 방법을 보여 줍니다.  
   
-```  
+```sql  
 DECLARE @var FLOAT = 10;  
 SELECT 'The LOG of the variable is: ' + CONVERT(VARCHAR, LOG(@var));  
 GO  
@@ -90,7 +90,7 @@ The LOG of the variable is: 2.30259
 ### <a name="b-calculating-the-logarithm-of-the-exponent-of-a-number"></a>B. 수의 지수에 대한 로그를 계산합니다.  
  다음 예에서는 수의 지수에 대한 `LOG`를 계산합니다.  
   
-```  
+```sql  
 SELECT LOG (EXP (10));  
   
 ```  
@@ -108,7 +108,7 @@ SELECT LOG (EXP (10));
 ### <a name="c-calculating-the-logarithm-for-a-number"></a>C. 수의 로그를 계산합니다.  
  다음 예에서는 지정된 `LOG`float**식의**를 계산하는 방법을 보여 줍니다.  
   
-```  
+```sql  
 SELECT LOG(10);  
 ```  
   

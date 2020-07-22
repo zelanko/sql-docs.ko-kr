@@ -21,19 +21,21 @@ ms.assetid: bcce65f9-10db-4b3e-bfaf-dfc06c6f820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8013a0a8cefc9623500a65df5560333a63632af
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f267da97eeb409be81bfcca71af602ebce1ffe1c
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002548"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86548746"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary 및 varbinary(Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 고정 길이 또는 가변 길이의 이진 데이터 형식입니다.
   
-## <a name="arguments"></a>인수  
+## <a name="arguments"></a>인수
+
 **binary** [(_n_)] 길이가 _n_바이트인 고정 길이의 이진 데이터입니다. 여기서 _n_은 1부터 8,000까지의 값입니다. 스토리지 크기는 _n_ 바이트입니다.
   
 **varbinary** [(_n_ | **max**)] 가변 길이 이진 데이터입니다. _n_은 1부터 8000 사이의 값이 될 수 있습니다. **max**는 최대 스토리지 크기가 2^31-1바이트임을 나타냅니다. 스토리지 크기는 입력된 실제 데이터 길이에 2바이트를 더한 값입니다. 입력된 데이터의 길이가 0바이트일 수 있습니다. **varbinary**의 ANSI SQL 동의어는 **binary varying**입니다.

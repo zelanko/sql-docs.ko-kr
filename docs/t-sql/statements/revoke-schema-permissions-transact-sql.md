@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1fabf35-1f42-48db-b0b8-7181f413ba3a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c9a1d41649a9d1c6d43ddbc8cf50d2776a1e170c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 514b903576110c324a1ec703ecd17f54a2188ac3
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765979"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484522"
 ---
 # <a name="revoke-schema-permissions-transact-sql"></a>REVOKE 스키마 사용 권한(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,9 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
     [ AS revoking_principal ]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *permission*  
  스키마에 대해 취소할 수 있는 사용 권한을 지정합니다. 스키마에서 취소할 수 있는 사용 권한은 이 항목 뒷부분의 "주의" 섹션에 나와 있습니다.  
   

@@ -24,12 +24,12 @@ ms.assetid: 222806b7-4e45-445b-8cd0-bd5461f3ca4a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef2a22baa6be2298e398485c0fbbc97cd05bbef5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d10b55c020bcd037f82eb841fba549c17a707992
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003400"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483974"
 ---
 # <a name="drop-statistics-transact-sql"></a>DROP STATISTICS(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,9 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
 [;]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *table* | *view*  
  통계를 삭제할 대상 테이블이나 인덱싱된 뷰의 이름입니다. 테이블 및 뷰 이름은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md) 규칙을 따라야 합니다. 테이블이나 뷰 소유자 이름은 선택적으로 지정할 수 있습니다.  
   

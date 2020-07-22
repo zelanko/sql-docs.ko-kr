@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8a1fd8c5-0e75-4b2f-9d3c-c296bed56cc7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4b6b39adb0239730b9a53b5d4ac53059bf78a10c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1fe1402f5d0f71a36ac6e2c7ae83e5d645d804d9
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766101"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485449"
 ---
 # <a name="drop-signature-transact-sql"></a>DROP SIGNATURE(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,9 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
     | ASYMMETRIC KEY Asym_key_name  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *module_name*  
  저장 프로시저, 함수, 어셈블리 또는 트리거의 이름입니다.  
   

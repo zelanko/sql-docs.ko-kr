@@ -23,12 +23,12 @@ ms.assetid: 1783352b-6852-4658-9d94-51963c59b9bf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 885327b1ce2cf6662ff74fef755f3d78ba05a667
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 78118290ef95e73046818af2ab81afdb38770e35
+ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010895"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86465260"
 ---
 # <a name="lower-transact-sql"></a>LOWER(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "86010895"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 LOWER ( character_expression )  
 ```  
   
@@ -53,7 +53,7 @@ LOWER ( character_expression )
 ## <a name="examples"></a>예  
  다음 예에서는 가격이 $11에서 $20 사이인 제품 이름을 선택한 것에서 `LOWER` 함수, `UPPER` 함수를 사용하고 `UPPER` 함수 내에 `LOWER` 함수를 중첩하여 사용합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LOWER(SUBSTRING(EnglishProductName, 1, 20)) AS Lower,   

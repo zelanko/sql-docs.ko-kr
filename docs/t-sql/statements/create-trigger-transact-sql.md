@@ -1,5 +1,5 @@
 ---
-title: CREATE TRIGGER(Transact-SQL) | Microsoft Docs
+title: CREATE TRIGGER(Transact-SQL)
 description: DML, DDL 또는 로그온 트리거를 만드는 데 사용되는 CREATE TRIGGER 문의 Transact-SQL 참조입니다.
 ms.date: 10/30/2019
 ms.prod: sql
@@ -28,16 +28,16 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 ms.reviewer: mathoma
-ms.openlocfilehash: 70a32b0f5c3a80d4d3c5af0cad7adcd1e15f5088
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2434250e8ea3fe4abd7c17ed5fc4041c63880321
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766948"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86481944"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER(Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 DML, DDL 또는 LOGON 트리거를 만듭니다. 트리거는 데이터베이스 서버에서 이벤트가 발생하면 자동으로 실행되는 특수한 종류의 저장 프로시저입니다. DML 트리거는 DML(데이터 조작 언어) 이벤트를 통해 데이터를 수정하려는 경우에 실행됩니다. DML 이벤트는 테이블이나 뷰에 대한 INSERT, UPDATE 또는 DELETE 문입니다. 테이블 행이 영향을 받는지 여부에 관계없이 유효한 이벤트가 실행될 때 이 트리거가 실행됩니다. 자세한 내용은 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)을 참조하세요.  
   
@@ -160,6 +160,8 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
     [ EXECUTE AS Clause ]  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>인수
 OR ALTER  
 **적용 대상**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 시작) 
@@ -310,20 +312,27 @@ TRUNCATE TABLE 문은 사실상 DELETE 문과 같지만 이 작업은 개별 행
 WRITETEXT 문은 기록 여부에 관계없이 트리거를 활성화하지 않습니다.  
   
 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 DML 트리거에서 사용할 수 없습니다.  
-  
-||||  
-|-|-|-|  
-|ALTER DATABASE|CREATE DATABASE|DROP DATABASE|  
-|RESTORE DATABASE|RESTORE LOG|RECONFIGURE|  
-  
+
+- ALTER DATABASE
+- CREATE DATABASE
+- DROP DATABASE
+- RESTORE DATABASE
+- RESTORE LOG
+- RECONFIGURE
+
 또한 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 트리거를 실행하는 동작의 대상인 테이블이나 뷰에 사용될 경우 DML 트리거 본문에 사용할 수 없습니다.  
   
-||||  
-|-|-|-|  
-|CREATE INDEX(CREATE SPATIAL INDEX 및 CREATE XML INDEX 포함)|ALTER INDEX|DROP INDEX|  
-|DBCC DBREINDEX|ALTER PARTITION FUNCTION|DROP TABLE|  
-|다음 용도로 사용하는 ALTER TABLE<br /><br /> 열 추가, 수정 또는 삭제<br /><br /> 파티션 전환<br /><br /> PRIMARY KEY 또는 UNIQUE 제약 조건 추가 또는 삭제|||  
-  
+- CREATE INDEX(CREATE SPATIAL INDEX 및 CREATE XML INDEX 포함)
+- ALTER INDEX
+- DROP INDEX
+- DROP TABLE
+- DBCC DBREINDEX
+- ALTER PARTITION FUNCTION
+- 다음 용도로 사용하는 ALTER TABLE
+    - 열 추가, 수정 또는 삭제
+    - 파티션 전환
+    - PRIMARY KEY 또는 UNIQUE 제약 조건 추가 또는 삭제
+
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 시스템 테이블에 대한 사용자 정의 트리거를 지원하지 않기 때문에 시스템 테이블에 대한 사용자 정의 트리거를 만들지 않는 것이 좋습니다. 
 

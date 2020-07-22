@@ -17,12 +17,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c9f43a8c3739652cabfbe4abe21fca7612e9d38
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f772d95923a7fcfe3dce8bafaf4382be71ccce54
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735470"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484521"
 ---
 # <a name="insert-sql-graph"></a>INSERT(SQL Graph)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -100,7 +100,9 @@ INSERT
 ```  
   
  
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 이 문서에서는 SQL 그래프와 관련된 인수를 설명합니다. INSERT 문에서 지원되는 인수에 대한 전체 목록과 설명은 [INSERT TABLE(Transact SQL)](../../t-sql/statements/insert-transact-sql.md)을 참조하세요.
 
 INTO  

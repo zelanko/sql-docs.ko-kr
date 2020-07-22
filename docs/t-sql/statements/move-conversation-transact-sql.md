@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 19acce9df264a4a0571be796548f4c1ae2ae0339
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c06776bc9d3c8080349607a6d349b3bd0b7505de
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897107"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484059"
 ---
 # <a name="move-conversation-transact-sql"></a>MOVE CONVERSATION(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +46,9 @@ MOVE CONVERSATION conversation_handle
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *conversation_handle*  
  이동할 대화의 대화 핸들을 포함하는 변수 또는 상수입니다. *conversation_handle*은 **uniqueidentifier** 형식이어야 합니다.  
   

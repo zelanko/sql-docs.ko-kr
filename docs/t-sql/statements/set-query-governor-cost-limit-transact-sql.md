@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3424bb44-6915-462d-a8d7-fe834af81387
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 56a071487c2cd3f6a6116c3d90d1572a450aa73d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 20eaa69a9c0f07926d937128a7fc10c43d4128ef
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765767"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484334"
 ---
 # <a name="set-query_governor_cost_limit-transact-sql"></a>SET QUERY_GOVERNOR_COST_LIMIT(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "85765767"
 SET QUERY_GOVERNOR_COST_LIMIT value  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *value*  
  쿼리가 실행될 수 있는 가장 긴 시간을 지정하는 숫자 또는 정수 값입니다. 값을 가장 가까운 정수로 내림합니다. 음수 값은 0으로 올림됩니다. 쿼리 관리자는 예상 비용이 해당 값을 초과하는 쿼리의 실행을 허용하지 않습니다. 이 옵션에 0(기본값)을 지정하면 쿼리 관리자가 꺼지고 모든 쿼리가 무기한 실행될 수 있습니다.  
   

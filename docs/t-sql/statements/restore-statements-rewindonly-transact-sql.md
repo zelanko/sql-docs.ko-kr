@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 50f114b01f72f48dd0ebd28123dfabdeef3a4b91
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 252285ed8560d6a8dd2361077100f2ce9633f707
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896585"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484046"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE 문 - REWINDONLY(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,9 @@ FROM <backup_device> [ ,...n ]
 }   
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  **\<backup_device> ::=** 
   
  복원 작업에 사용할 논리적 또는 물리적 백업 디바이스를 지정합니다.  

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f48d933dec2dc87d0171641146f652a4e881045e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ad156a9164d2b59833b3103a8f08b9cbe1ab284
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735681"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483728"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS 절(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -71,7 +71,9 @@ DDL Triggers with Database Scope
   
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  **CALLER**  
  모듈 내부의 문이 모듈 호출자의 컨텍스트에서 실행되도록 지정합니다. 모듈을 실행하는 사용자는 모듈 자체에 대한 알맞은 사용 권한뿐만 아니라 모듈에서 참조하는 모든 데이터베이스 개체에 대한 사용 권한도 갖고 있어야 합니다.  
   

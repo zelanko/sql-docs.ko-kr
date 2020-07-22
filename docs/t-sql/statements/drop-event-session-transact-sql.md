@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 92eabe4b-24e2-43b1-978c-31a199964b90
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8fff9476a48b765288423cd85d3b3a6cd6595502
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9704a50205e901c50a1a25d47741a3336832fcdb
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901625"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483601"
 ---
 # <a name="drop-event-session-transact-sql"></a>DROP EVENT SESSION(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,9 @@ DROP EVENT SESSION event_session_name
 ON SERVER  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *event_session_name*  
  기존 이벤트 세션의 이름입니다.  
   

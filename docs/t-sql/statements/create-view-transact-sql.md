@@ -1,5 +1,5 @@
 ---
-title: CREATE VIEW(Transact-SQL) | Microsoft Docs
+title: CREATE VIEW(Transact-SQL)
 ms.custom: ''
 ms.date: 04/16/2020
 ms.prod: sql
@@ -37,14 +37,15 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de62120fd28e67c4323a88f73bc5bac939aedc64
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b896f7614d5f44802e98b45abb1592d5ed35f1e6
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002490"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485239"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW(Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   쿼리에 의해 내용(열과 행)이 정의되는 가상 테이블을 만듭니다. 이 문을 사용하여 데이터베이스에서 하나 이상의 테이블에 있는 데이터의 뷰를 만들 수 있습니다. 예를 들어 뷰는 다음과 같은 용도로 사용할 수 있습니다.  
@@ -62,18 +63,18 @@ ms.locfileid: "86002490"
 ```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
-CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [ (column [ ,...n ] ) ]   
-[ WITH <view_attribute> [ ,...n ] ]   
-AS select_statement   
-[ WITH CHECK OPTION ]   
+CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [ (column [ ,...n ] ) ]
+[ WITH <view_attribute> [ ,...n ] ]
+AS select_statement
+[ WITH CHECK OPTION ]
 [ ; ]  
   
-<view_attribute> ::=   
+<view_attribute> ::=
 {  
     [ ENCRYPTION ]  
     [ SCHEMABINDING ]  
-    [ VIEW_METADATA ]       
-}   
+    [ VIEW_METADATA ]
+}
 ```  
   
 ```syntaxsql
@@ -88,7 +89,10 @@ AS <select_statement>
     SELECT <select_criteria>  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>인수
+
 OR ALTER  
  **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터)   
   

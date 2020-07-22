@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3fe4dd0be7b453bfa01feac2b60f1ec6a915320b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 58d29c1979dc97b43dd6ccb82c5bad4c875995e6
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899170"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484914"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,7 +52,9 @@ ms.locfileid: "85899170"
 { database_name.schema_name.queue_name | schema_name.queue_name | queue_name }  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  WAITFOR  
  현재 메시지가 없으면 메시지가 큐에 도착할 때까지 GET CONVERSATION GROUP 문이 대기하도록 지정합니다.  
   

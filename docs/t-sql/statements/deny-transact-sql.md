@@ -1,5 +1,5 @@
 ---
-title: DENY(Transact-SQL) | Microsoft Docs
+title: DENY(Transact-SQL)
 ms.custom: ''
 ms.date: 05/15/2017
 ms.prod: sql
@@ -27,14 +27,15 @@ ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0b77901f1a4c625f241c057f22af6b5fd437f10
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e146021bf3bd601e01f6220ffcf42de970e63657
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012563"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484844"
 ---
 # <a name="deny-transact-sql"></a>DENY(Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   보안 주체에 대한 사용 권한을 거부합니다. 보안 주체가 해당 그룹 또는 역할의 멤버 자격을 통해 사용 권한을 상속받는 것을 방지합니다. DENY가 개체 소유자 또는 sysadmin 고정 서버 역할의 멤버에 적용되지 않는 경우를 제외하고 DENY는 모든 사용 권한에 우선합니다.
@@ -86,7 +87,9 @@ DENY
 }  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  ALL  
  이 옵션은 모든 가능한 사용 권한을 거부하지 않습니다. ALL을 거부하는 것은 다음 사용 권한을 거부하는 것과 같습니다.  
   
@@ -153,11 +156,12 @@ DENY
   
  sysadmin 고정 서버 역할의 멤버와 같이 CONTROL SERVER 권한이 부여된 사용자는 서버의 모든 보안 개체에 대한 모든 사용 권한을 거부할 수 있습니다. db_owner 고정 데이터베이스 역할의 멤버와 같이 데이터베이스에 대한 CONTROL 권한이 부여된 사용자는 데이터베이스의 모든 보안 개체에 대한 모든 사용 권한을 거부할 수 있습니다. 스키마에 대한 CONTROL 권한이 부여된 사용자는 스키마의 모든 개체에 대한 모든 사용 권한을 거부할 수 있습니다. AS 절을 사용하는 경우 지정된 보안 주체가 사용 권한을 거부할 보안 개체를 소유해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예
+
  다음 표에는 보안 개체와 보안 개체별 구문을 설명하는 항목 목록이 정리되어 있습니다.  
   
-|||  
-|-|-|  
+|보안 개체|구문|
+|----------|------|
 |애플리케이션 역할|[DENY 데이터베이스 보안 주체 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
 |어셈블리|[DENY 어셈블리 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-assembly-permissions-transact-sql.md)|  
 |비대칭 키|[DENY 비대칭 키 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-asymmetric-key-permissions-transact-sql.md)|  

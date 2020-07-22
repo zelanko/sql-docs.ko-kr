@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f6e294c0bca1a871cc7b0ccb6c45a92072d7b0fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 37e46ba0453f9606a5ddc5310e15d4263de57fcf
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766994"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483340"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +68,9 @@ CREATE SYMMETRIC KEY key_name
     | ASYMMETRIC KEY asym_key_name  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *Key_name*  
  데이터베이스에서 대칭 키를 식별하는 고유한 이름을 지정합니다. _key_name_이 하나의 숫자(#) 기호로 시작하면 임시 키가 지정됩니다. 예를 들면 **#temporaryKey900007**과 같습니다. 2개 이상의 #으로 시작하는 이름이 포함된 대칭 키는 만들 수 없습니다. 임시 대칭 키는 EKM 공급자를 사용하여 만들 수 없습니다.  
   

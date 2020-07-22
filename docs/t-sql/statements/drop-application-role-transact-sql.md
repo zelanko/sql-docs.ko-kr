@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 44121ee7-ef40-405d-b03b-f8ddb4e3c559
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 251394047af1e37c505308c830e1428f163b81c6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e301c2fdca2a6c5646ddd61241c2879970c1bf9
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766561"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484749"
 ---
 # <a name="drop-application-role-transact-sql"></a>DROP APPLICATION ROLE(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "85766561"
 DROP APPLICATION ROLE rolename  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *rolename*  
  삭제할 애플리케이션 역할의 이름을 지정합니다.  
   

@@ -21,14 +21,15 @@ helpviewer_keywords:
 ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: d021905cfd1a75a35487499ef383d6e0a78c8323
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f847da8dec94f7344087d836e651b9edf2c4fa35
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85685472"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484254"
 ---
 # <a name="dbcc-proccache-transact-sql"></a>DBCC PROCCACHE(Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 프로시저 캐시에 대한 정보를 테이블 형식으로 표시합니다.
@@ -41,7 +42,9 @@ ms.locfileid: "85685472"
 DBCC PROCCACHE [ WITH NO_INFOMSGS ]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  WITH  
  옵션을 지정할 수 있습니다.  
   

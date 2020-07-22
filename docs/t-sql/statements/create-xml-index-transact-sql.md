@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a0f885f15371460e79df287738fce96ac9ce2d7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8aa04b27ec929809e55896421f9f0656fbf9b44
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766889"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485015"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +74,9 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  [PRIMARY] XML  
  지정된 **xml** 열에 XML 인덱스를 만듭니다. PRIMARY를 지정한 경우 사용자 테이블의 클러스터링 키 및 XML 노드 식별자로 구성된 클러스터형 키를 사용하여 클러스터형 인덱스가 만들어집니다. 각 테이블에는 최대 249개의 XML 인덱스가 있을 수 있습니다. XML 인덱스를 만들 때는 다음 사항을 알아야 합니다.  
   

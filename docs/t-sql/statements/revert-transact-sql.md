@@ -23,12 +23,12 @@ ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: caa5127a1721d63d86c8f854e630d6b94a81f016
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 82fe397e6709617af5aa7f92db170e25ccd9b8d9
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998559"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485404"
 ---
 # <a name="revert-transact-sql"></a>REVERT(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]   
@@ -45,7 +45,9 @@ REVERT
     [ WITH COOKIE = @varbinary_variable ]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  WITH COOKIE = @*varbinary_variable*  
  해당되는 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) 독립 실행형 문에 생성된 쿠키를 지정합니다. *\@varbinary_variable*은 **varbinary(100)** 입니다.  
   

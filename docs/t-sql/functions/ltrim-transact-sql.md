@@ -23,12 +23,12 @@ ms.assetid: 369ed340-1a09-4597-a9eb-6720156cd39a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0d0f66102bd21a7d53b8fcc12083a12a2a2a26b8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 599dedb5f33152132bcf7cc72ad1227c48eb45eb
+ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010884"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86465300"
 ---
 # <a name="ltrim-transact-sql"></a>LTRIM(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,8 +71,8 @@ SELECT LTRIM('     Five spaces are at the beginning of this string.') FROM sys.d
   
  다음 예에서는 `LTRIM`을 사용하여 문자 변수에서 선행 공백을 제거하는 방법을 보여 줍니다.  
   
-```  
-DECLARE @string_to_trim varchar(60);  
+```sql  
+DECLARE @string_to_trim VARCHAR(60);  
 SET @string_to_trim = '     5 spaces are at the beginning of this string.';  
 SELECT 
     @string_to_trim AS 'Original string',

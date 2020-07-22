@@ -1,5 +1,5 @@
 ---
-title: DBCC DROPCLEANBUFFERS(Transact-SQL) | Microsoft Docs
+title: DBCC DROPCLEANBUFFERS(Transact-SQL)
 ms.custom: ''
 ms.date: 07/16/2017
 ms.prod: sql
@@ -25,14 +25,15 @@ ms.assetid: a4121927-f2ce-4926-aa2c-9b1519dac048
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3b2d2ff81fddaae0b0ae68da9d4477819a61073
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 57c29581a8a2c7d5be9978dce6b4b8b3f9b6aae9
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101929"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485549"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS(Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
 버퍼 풀에서 빈 버퍼를 제거하고 columnstore 개체 풀에서 columnstore 개체를 모두 제거합니다.
@@ -40,7 +41,7 @@ ms.locfileid: "68101929"
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문
-SQL Server용 구문: 
+SQL Server용 구문:
 
 ```sql
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]  
@@ -49,8 +50,8 @@ SQL Data Warehouse 및 병렬 데이터 웨어하우스용 구문:
 
 ```sql  
 DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]  
-```  
-  
+```
+
 ## <a name="arguments"></a>인수  
  WITH NO_INFOMSGS  
  모든 정보 메시지를 표시하지 않습니다. 정보 메시지는 항상 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 무시됩니다.  

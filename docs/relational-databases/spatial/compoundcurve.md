@@ -1,6 +1,6 @@
 ---
 title: CompoundCurve | Microsoft 문서
-ms.date: 06/02/2016
+ms.date: 07/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -10,21 +10,18 @@ ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6250f45a50721d322bc29b1b2655b9d2d66edc4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1ada315623e41e188a93eb7bef8df2295e437429
+ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751135"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86438195"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **CompoundCurve** 는 geometry 또는 geography 유형의 연속적인 **CircularString** 또는 **LineString** 인스턴스가 하나 이상 포함된 컬렉션입니다.  
   
-> [!IMPORTANT]  
->  **CompoundCurve** 하위 유형을 포함하여 이 릴리스의 새로운 공간 기능에 대한 자세한 설명 및 예제를 보려면 [SQL Server 2012의 새로운 공간 기능](https://go.microsoft.com/fwlink/?LinkId=226407)백서를 다운로드하세요.  
-  
- 빈 **CompoundCurve** 인스턴스를 인스턴스화할 수 있지만 **CompoundCurve** 가 유효한 인스턴스가 되려면 다음 조건을 충족해야 합니다.  
+빈 **CompoundCurve** 인스턴스를 인스턴스화할 수 있지만 **CompoundCurve** 가 유효한 인스턴스가 되려면 다음 조건을 충족해야 합니다.  
   
 1.  적어도 하나의 **CircularString** 또는 **LineString** 인스턴스를 포함해야 합니다.  
   
