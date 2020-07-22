@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: 0c71bda5a459c7993de824cdb6665978ba57166f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1ac71b9cf171e66486c40310bfd8be0e7bc6ae91
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892465"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86911581"
 ---
 # <a name="in-memory-database-systems-and-technologies"></a>메모리 내 데이터베이스 시스템 및 기술
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 이 페이지는 SQL Server의 메모리 내 기능 및 기술에 대한 참조 페이지로 작성되었습니다. 메모리 내 데이터베이스 시스템의 개념은 최신 데이터베이스 시스템에서 사용할 수 있는 큰 메모리 용량을 활용하도록 설계된 데이터베이스 시스템을 가리킵니다. 메모리 내 데이터베이스는 본질적으로 관계형 또는 비관계형일 수 있습니다.
 
@@ -36,19 +36,19 @@ ms.locfileid: "85892465"
 
 ## <a name="hybrid-buffer-pool"></a>하이브리드 버퍼 풀
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [하이브리드 버퍼 풀](../database-engine/configure-windows/hybrid-buffer-pool.md)은 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]를 사용하여 Windows 및 Linux 플랫폼에 대해 바이트 주소 지정 가능한 영구 메모리 스토리지 디바이스에 있는 데이터베이스 파일의 버퍼 풀을 확장합니다.
 
 ## <a name="memory-optimized-tempdb-metadata"></a>메모리 최적화 `tempdb` 메타데이터
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 [메모리 최적화 tempdb 메타데이터](./databases/tempdb-database.md#memory-optimized-tempdb-metadata)인 새로운 기능을 도입하여 일부 경합 병목 현상을 효과적으로 제거하고 tempdb-heavy 워크로드를 위한 새로운 수준의 확장성을 구현합니다.
 
 ## <a name="in-memory-oltp"></a>메모리 내 OLTP
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [메모리 내 OLTP](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md)는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../includes/sssds-md.md)]에서 트랜잭션 처리, 데이터 수집, 데이터 로드 및 일시적인 데이터 시나리오의 성능을 최적화하기 위해 사용할 수 있는 데이터베이스 기술입니다.
 

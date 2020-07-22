@@ -12,16 +12,16 @@ f1_keywords:
 - sql14.dts.designer.afpextfilesrc.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bdebcba1d6313c1e8c6363faa147a3e6a275e9dc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 996ee931207979b8741706673cdbf1ee02520613
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292393"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912352"
 ---
 # <a name="flexible-file-source"></a>유연한 파일 원본
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 **Flexible File Source** 구성 요소를 사용하면 SSIS 패키지가 지원되는 여러 스토리지 서비스에서 데이터를 읽을 수 있습니다.
 현재 지원되는 스토리지 서비스는 다음과 같습니다.

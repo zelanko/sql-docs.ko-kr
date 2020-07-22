@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c28f8dbaa649e0755c6f18f7cc0f1485f022e4a6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e9189790bb29d5595459f0fcabecdf735fc0bdf1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71289557"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86910846"
 ---
 # <a name="hex-ssis-expression"></a>HEX(SSIS 식)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   정수의 16진수 값을 나타내는 문자열을 반환합니다.  
