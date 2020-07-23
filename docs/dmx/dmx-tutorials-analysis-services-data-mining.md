@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 262d8f9f62718bcb91ef034177375035a37dfc84
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 4fcf803bb76bfb894faa75e6e51180cc25434abe
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668964"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969822"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>DMX 자습서(Analysis Services - 데이터 마이닝)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   다음 자습서에서는 데이터 마이닝 구조 및 모델과 관련하여 DMX(Data Mining Extensions)를 사용하는 방법을 소개합니다.  
   

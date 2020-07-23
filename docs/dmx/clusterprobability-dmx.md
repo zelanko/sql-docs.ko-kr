@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e06563d9b6a69bc8903a55ee1e67cda962f246ba
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 60c95521ba42dc5877c0e10a3f34453a497ad438
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669355"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969958"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   입력 사례가 지정한 클러스터에 속할 확률을 반환합니다.  
   
@@ -40,9 +40,9 @@ ClusterProbability([<Node_Caption>])
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- 이 구문을 사용 하는 방법에 대 한 자세한 내용은 [SELECT FROM &#60;model&#62;을 참조 하세요. 콘텐츠 &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md). 마이닝 모델 콘텐츠 스키마 행 집합에 대 한 자세한 내용은 [DMSCHEMA_MINING_MODEL_CONTENT 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)을 참조 하세요.  
+ 이 구문을 사용 하는 방법에 대 한 자세한 내용은 [SELECT FROM &#60;model&#62;을 참조 하세요. 콘텐츠 &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md). 마이닝 모델 콘텐츠 스키마 행 집합에 대 한 자세한 내용은 [DMSCHEMA_MINING_MODEL_CONTENT 행 집합](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126267(v=sql.110))을 참조 하세요.  
   
- \<노드 캡션> 지정 되지 않은 경우이 함수는 입력 사례가 가장 가능성이 높은 클러스터에 속할 확률을 반환 합니다. **클러스터** 함수를 사용 하 여 가장 가능성이 높은 클러스터를 반환 합니다.  
+ \<node caption>가 지정 되지 않은 경우이 함수는 입력 사례가 가장 가능성이 높은 클러스터에 속할 확률을 반환 합니다. **클러스터** 함수를 사용 하 여 가장 가능성이 높은 클러스터를 반환 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 Cluster 2라는 클러스터에 지정한 사례가 나타날 확률을 반환합니다.  

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 33c84ada33abee06a78fe0a9f8cc3f37242458ac
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: ef4dc17d77707ca5bf08f935fb4a62f6d979ae05
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670235"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969620"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   사례가 지정된 데이터 마이닝 모델 또는 마이닝 구조의 테스트 사례로 사용되는지 여부를 나타냅니다.  
   
@@ -40,7 +40,7 @@ IsTestCase()
   
  학습 데이터 집합의 일부인 사례를 반환 하려면 [IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)함수를 사용 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Targeted Mailing` [기본 데이터 마이닝 자습서](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)에서 만든 마이닝 구조를 사용 합니다. 쿼리는 테스트에 사용된 구조의 모든 사례를 반환합니다.  
   
 ```  

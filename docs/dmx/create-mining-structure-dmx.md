@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 07cda29c288f574fd960398f8a607c04f1d8dce7
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: efe160fc3bb50f80b70c0d510eedd880f985f9b9
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669452"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971817"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   데이터베이스에 새 마이닝 구조를 만들고 필요에 따라 학습 및 테스트 파티션을 정의합니다. 마이닝 구조를 만든 후에는 [ALTER 마이닝 structure &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md) 문을 사용 하 여 마이닝 구조에 모델을 추가할 수 있습니다.  
   
@@ -73,7 +73,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
 -   데이터 형식(필수)  
   
--   분포  
+-   배포  
   
 -   모델링 플래그 목록  
   
@@ -106,7 +106,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  열 하나에 대해 여러 개의 모델링 플래그 값을 정의할 수 있습니다. 단, 하나의 열에는 각각 하나의 내용 유형과 데이터 형식만 있을 수 있습니다.  
   
 ### <a name="column-relationships"></a>열 관계  
- 열 정의 문에 절을 추가하여 두 열 간의 관계를 설명할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 다음과 같은 \< 열 관계> 절을 사용할 수 있습니다.  
+ 열 정의 문에 절을 추가하여 두 열 간의 관계를 설명할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 다음 절의 사용을 지원 합니다 \<column relationship> .  
   
  **관련 항목**  
  값 계층 구조를 나타냅니다. RELATED TO 열의 대상은 중첩 테이블의 키 열, 사례 행의 불연속 값 열 또는 RELATED TO 절이 있는 다른 열(중첩된 열을 나타냄)일 수 있습니다.  

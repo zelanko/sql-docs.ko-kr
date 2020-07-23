@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9e88ec6673a00e3776032f33390451207c2f399f
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7eda9b0e13ee5cbf918d80f41b9a517906a56a57
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670116"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970514"
 ---
 # <a name="select-from-ltmodelgtsample_cases-dmx"></a>모델에서 &lt; 선택 &gt; 합니다. SAMPLE_CASES (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   데이터 마이닝 모델의 학습에 사용되는 사례를 보여 주는 샘플 사례를 반환합니다.  
   
@@ -49,7 +49,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
 ## <a name="remarks"></a>설명  
  샘플 사례가 생성되지만 실제로 학습 데이터에는 없을 수 있습니다. 반환된 사례는 지정된 내용 노드와 관련됩니다.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)]시퀀스 클러스터링 알고리즘은 [!INCLUDE[msCoName](../includes/msconame-md.md)] SELECT FROM model>의 사용을 지 원하는 유일한 알고리즘입니다 \< . SAMPLE_CASES 타사 알고리즘 에서도이를 지원할 수 있습니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)]시퀀스 클러스터링 알고리즘은 [!INCLUDE[msCoName](../includes/msconame-md.md)] SELECT FROM 사용을 지 원하는 유일한 알고리즘입니다 \<model> . SAMPLE_CASES 타사 알고리즘 에서도이를 지원할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 Target Mail 마이닝 모델의 학습에 사용되는 샘플 사례를 반환합니다. **Where** 절에서 [IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md) 함수를 사용 하면 ' 000000003 ' 노드와 연결 된 사례만 반환 됩니다. 노드 문자열은 스키마 행 집합의 NODE_UNIQUE_NAME 열에서 찾을 수 있습니다.  

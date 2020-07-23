@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8450107e9d591b8d789037303edbcaeea1ec08e5
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e3f13f1d110c26ee590df3a09296f6d861e34e37
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669628"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970670"
 ---
 # <a name="rangemid-dmx"></a>RangeMid(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   불연속화된 열에 대해 발견한 예측 버킷의 중간점을 반환합니다.  
   
@@ -36,7 +36,7 @@ RangeMid(<scalar column reference>)
 ## <a name="remarks"></a>설명  
  [SELECT FROM &#60;모델&#62; 예측 조인 &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)에서 사용 하는 경우 **RangeMin**, **RangeMid**및 **RangeMax** 함수는 지정 된 버킷의 실제 경계 값을 반환 합니다. 예를 들어 불연속화된 열에 대해 예측을 수행하면 해당 쿼리는 불연속화된 열의 예측 버킷 번호를 반환합니다. **RangeMin**, **RangeMid**및 **RangeMax** 함수는 예측이 지정 하는 버킷을 설명 합니다. **RangeMid** 함수를 예측 조인 문과 함께 사용 하는 경우 스칼라 열 참조는 불연속 하 고 예측 가능한 열만 포함할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 TM Decision Tree 마이닝 모델의 Yearly Income 연속 열에 대한 최대값, 최소값 및 평균값을 반환합니다.  
   
 ```  

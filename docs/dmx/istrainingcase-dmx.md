@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a1c2719323bad884db77860590d0a95080c1a234
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e6bdfe1e3d22a2d2c4752e43df254231725fa447
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670198"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969560"
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   사례를 지정된 데이터 마이닝 모델 또는 마이닝 구조의 학습 사례로 사용할지 여부를 나타냅니다.  
   

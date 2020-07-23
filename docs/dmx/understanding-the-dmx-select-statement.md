@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 689e04acc8177a55a751ffa8e8e2e46848732fd1
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a31be8bc6d7bf5e747b9228229efc892c1462339
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669234"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970305"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>DMX Select 문 이해
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   [SELECT](../dmx/select-dmx.md) 문은에서 DMX (데이터 마이닝 확장)를 사용 하 여 만드는 대부분의 쿼리에 대 한 기본입니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . 이 문을 사용하여 데이터 마이닝 모델을 검색하거나 예측하는 등의 여러 가지 태스크를 수행할 수 있습니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "83669234"
 |쿼리 유형|설명|  
 |----------------|-----------------|  
 |SELECT FROM [자연] 예측 조인|마이닝 모델의 열을 내부 데이터 원본의 열에 조인하여 만든 예측을 반환합니다.<br /><br /> 이 쿼리 유형에 대한 도메인은 모델의 예측 가능한 열과 입력 데이터 원본의 열입니다.<br /><br /> [&#60;모델&#62; 예측 조인 &#40;DMX에서 선택&#41;](../dmx/select-from-model-prediction-join-dmx.md)<br /><br /> [예측 쿼리&#40;데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
-|모델에서 선택 * \<>*|마이닝 모델만을 기준으로 예측 가능한 열에서 가능성이 가장 높은 상태를 반환합니다. 이 쿼리 유형을 사용하면 더 간단하게 빈 예측 조인을 사용하여 예측을 만들 수 있습니다.<br /><br /> 이 쿼리 유형의 도메인은 모델의 예측 가능한 열입니다.<br /><br /> [&#60;모델&#62; &#40;DMX에서 선택&#41;](../dmx/select-from-model-dmx.md)<br /><br /> [예측 쿼리&#40;데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
+|SELECT FROM*\<model>*|마이닝 모델만을 기준으로 예측 가능한 열에서 가능성이 가장 높은 상태를 반환합니다. 이 쿼리 유형을 사용하면 더 간단하게 빈 예측 조인을 사용하여 예측을 만들 수 있습니다.<br /><br /> 이 쿼리 유형의 도메인은 모델의 예측 가능한 열입니다.<br /><br /> [&#60;모델&#62; &#40;DMX에서 선택&#41;](../dmx/select-from-model-dmx.md)<br /><br /> [예측 쿼리&#40;데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
   
  [SELECT 유형으로 이동](#Select_Types)  
   
@@ -72,10 +72,10 @@ ms.locfileid: "83669234"
   
 |쿼리 유형|설명|  
 |----------------|-----------------|  
-|모델에서 고유를 선택 * \<>*|지정한 열의 마이닝 모델에 있는 모든 상태 값을 반환합니다.<br /><br /> 이 쿼리 유형의 데이터 도메인은 데이터 마이닝 모델입니다.<br /><br /> [&#60;모델 &#62; &#40;DMX&#41;에서 고유를 선택 합니다.](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [내용 쿼리&#40;데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
-|* \< 모델>* 에서 선택 합니다. 콘텐트가|마이닝 모델을 설명하는 내용을 반환합니다.<br /><br /> 이 쿼리 유형의 데이터 도메인은 내용 스키마 행 집합입니다.<br /><br /> [&#60;모델&#62;에서 선택 합니다. 콘텐츠 &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [내용 쿼리&#40;데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
-|* \< 모델>* 에서 선택 합니다. DIMENSION_CONTENT|마이닝 모델을 설명하는 내용을 반환합니다.<br /><br /> 이 쿼리 유형의 데이터 도메인은 내용 스키마 행 집합입니다.<br /><br /> [&#60;모델&#62;에서 선택 합니다. DMX&#41;DIMENSION_CONTENT &#40;](../dmx/select-from-model-dimension-content-dmx.md)|  
-|* \< 모델>* 에서 선택 합니다. PMML|이 기능을 지원하는 알고리즘에 대한 마이닝 모델의 PMML(Predictive Model Markup Language) 표현을 반환합니다.<br /><br /> 이 쿼리 유형의 도메인은 PMML 스키마 행 집합입니다.<br /><br /> [DMSCHEMA_MINING_MODEL_CONTENT_PMML 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset)|  
+|다음에서 고유 선택*\<model>*|지정한 열의 마이닝 모델에 있는 모든 상태 값을 반환합니다.<br /><br /> 이 쿼리 유형의 데이터 도메인은 데이터 마이닝 모델입니다.<br /><br /> [&#60;모델 &#62; &#40;DMX&#41;에서 고유를 선택 합니다.](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [내용 쿼리&#40;데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
+|선택에서 선택 *\<model>* 합니다. 콘텐트가|마이닝 모델을 설명하는 내용을 반환합니다.<br /><br /> 이 쿼리 유형의 데이터 도메인은 내용 스키마 행 집합입니다.<br /><br /> [&#60;모델&#62;에서 선택 합니다. 콘텐츠 &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [내용 쿼리&#40;데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
+|선택에서 선택 *\<model>* 합니다. DIMENSION_CONTENT|마이닝 모델을 설명하는 내용을 반환합니다.<br /><br /> 이 쿼리 유형의 데이터 도메인은 내용 스키마 행 집합입니다.<br /><br /> [&#60;모델&#62;에서 선택 합니다. DMX&#41;DIMENSION_CONTENT &#40;](../dmx/select-from-model-dimension-content-dmx.md)|  
+|선택에서 선택 *\<model>* 합니다. PMML|이 기능을 지원하는 알고리즘에 대한 마이닝 모델의 PMML(Predictive Model Markup Language) 표현을 반환합니다.<br /><br /> 이 쿼리 유형의 도메인은 PMML 스키마 행 집합입니다.<br /><br /> [DMSCHEMA_MINING_MODEL_CONTENT_PMML 행 집합](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126283(v=sql.110))|  
   
  [SELECT 유형으로 이동](#Select_Types)  
   
@@ -84,7 +84,7 @@ ms.locfileid: "83669234"
   
 |쿼리 유형|설명|  
 |----------------|-----------------|  
-|* \< 새 모델>* 선택|마이닝 모델의 복사본을 만듭니다.<br /><br /> 이 쿼리 유형의 도메인은 데이터 마이닝 모델입니다.<br /><br /> [&#40;DMX&#41;를 선택 합니다.](../dmx/select-into-dmx.md)|  
+|SELECT INTO*\<new model>*|마이닝 모델의 복사본을 만듭니다.<br /><br /> 이 쿼리 유형의 도메인은 데이터 마이닝 모델입니다.<br /><br /> [&#40;DMX&#41;를 선택 합니다.](../dmx/select-into-dmx.md)|  
   
  [SELECT 유형으로 이동](#Select_Types)  
   
@@ -93,9 +93,9 @@ ms.locfileid: "83669234"
   
 |쿼리 유형|설명|  
 |----------------|-----------------|  
-|* \< 모델>* 에서 선택 합니다. 경우|마이닝 모델의 학습에 사용된 사례를 반환합니다.<br /><br /> 이 쿼리 유형의 도메인은 데이터 마이닝 모델입니다.<br /><br /> [&#60;모델&#62;에서 선택 합니다. 사례 &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [DMX를 사용하여 드릴스루 쿼리 만들기](https://docs.microsoft.com/analysis-services/data-mining/create-drillthrough-queries-using-dmx)|  
-|* \< 모델>* 에서 선택 합니다. SAMPLE_CASES|마이닝 모델 학습에 사용된 대표 사례인 샘플 사례를 반환합니다.<br /><br /> 이 쿼리 유형의 도메인은 데이터 마이닝 모델입니다.<br /><br /> [&#60;모델&#62;에서 선택 합니다. DMX&#41;SAMPLE_CASES &#40;](../dmx/select-from-model-sample-cases-dmx.md)|  
-|* \< 구조>* 에서 선택 합니다. 경우|일부 상세 정보가 마이닝 모델 학습에 사용되지 않은 경우에도 기본 마이닝 구조에서 자세한 데이터 행을 반환합니다.<br /><br /> [&#60;구조&#62;에서 선택 합니다. 경우](../dmx/select-from-structure-cases.md)<br /><br /> [드릴스루 쿼리&#40;데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining)|  
+|선택에서 선택 *\<model>* 합니다. 경우|마이닝 모델의 학습에 사용된 사례를 반환합니다.<br /><br /> 이 쿼리 유형의 도메인은 데이터 마이닝 모델입니다.<br /><br /> [&#60;모델&#62;에서 선택 합니다. 사례 &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [DMX를 사용하여 드릴스루 쿼리 만들기](https://docs.microsoft.com/analysis-services/data-mining/create-drillthrough-queries-using-dmx)|  
+|선택에서 선택 *\<model>* 합니다. SAMPLE_CASES|마이닝 모델 학습에 사용된 대표 사례인 샘플 사례를 반환합니다.<br /><br /> 이 쿼리 유형의 도메인은 데이터 마이닝 모델입니다.<br /><br /> [&#60;모델&#62;에서 선택 합니다. DMX&#41;SAMPLE_CASES &#40;](../dmx/select-from-model-sample-cases-dmx.md)|  
+|선택에서 선택 *\<structure>* 합니다. 경우|일부 상세 정보가 마이닝 모델 학습에 사용되지 않은 경우에도 기본 마이닝 구조에서 자세한 데이터 행을 반환합니다.<br /><br /> [&#60;구조&#62;에서 선택 합니다. 경우](../dmx/select-from-structure-cases.md)<br /><br /> [드릴스루 쿼리&#40;데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining)|  
   
  [SELECT 유형으로 이동](#Select_Types)  
   

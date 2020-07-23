@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db27f240030115ea24d8d32e2ffa1d5e4bf8921e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c0b96fbd075ed2b2f79ca8b92d09e2d2782d77dc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729515"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922326"
 ---
 # <a name="comparison-expressions-xquery"></a>비교 식(XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   XQuery는 다음 유형의 비교 연산자를 제공합니다.  
   
@@ -50,9 +50,9 @@ ms.locfileid: "85729515"
 |=|같음|  
 |!=|같지 않음|  
 |\<|보다 작음|  
-|>|초과|  
+|>|보다 큼|  
 |\<=|작거나 같음|  
-|>=|크거나 같음|  
+|>=|다음보다 크거나 같음|  
   
  일반 비교 연산자를 사용하여 두 시퀀스를 비교할 때 True와 첫 번째 시퀀스에 있는 값을 비교하는 두 번째 시퀀스에 값이 있으면 전체 결과는 True이고 그렇지 않으면 False입니다. 예를 들어 (1, 2, 3) = (3, 4)는 값 3이 두 시퀀스에 모두 나타나므로 True입니다.  
   
@@ -145,9 +145,9 @@ WHERE ContactID=1
 |eq|같음|  
 |ne|같지 않음|  
 |lt|보다 작음|  
-|gt|초과|  
+|gt|보다 큼|  
 |le|작거나 같음|  
-|ge|크거나 같음|  
+|ge|다음보다 크거나 같음|  
   
  두 값을 비교하여 선택한 연산자와 같으면 식은 True를 반환하고 그렇지 않으면 False를 반환합니다. 한 값이 빈 시퀀스이면 식 결과는 False입니다.  
   

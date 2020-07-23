@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 02c6d29bbebcc794e72f4ca960e3d9259de7205b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3bac5d7d067186e2b84277a5c0dc02cd31cba011
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892140"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967384"
 ---
 # <a name="mdx-data-definition---create-measure"></a>MDX 데이터 정의 - CREATE MEASURE
 
@@ -42,7 +42,7 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
 ## <a name="remarks"></a>설명  
  *Measure_Name* 는 괄호로 묶어야 합니다.  
   
- CREATE MEASURE 문은 MDX 스크립트 정의 내 에서만 사용할 수 있습니다. [&#41;&#40;MdxScript 요소 ](https://docs.microsoft.com/bi-reference/assl/objects/mdxscript-element-assl)를 참조 하세요.  
+ CREATE MEASURE 문은 MDX 스크립트 정의 내 에서만 사용할 수 있습니다. [&#41;&#40;MdxScript 요소 ](https://docs.microsoft.com/analysis-services/assl/objects/mdxscript-element-assl?view=asallproducts-allversions)를 참조 하세요.  
   
  또한 단일 쿼리에서 사용할 계산 멤버를 정의할 수 있습니다. 단일 쿼리로 제한된 계산 멤버를 정의하려면 SELECT 문에서 WITH 절을 사용합니다. 자세한 내용은 [MDX로 측정값 작성](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-building-measures)을 참조 하세요.  
   

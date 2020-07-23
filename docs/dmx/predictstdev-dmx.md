@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: def9b352b97921b080e379d235972bb9dfc84510
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 25dde754c2e71c6aa40d763d7e3a81c3edca6938
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666748"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970712"
 ---
 # <a name="predictstdev-dmx"></a>PredictStdev(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   지정된 열의 예측 표준 편차를 반환합니다.  
   
@@ -31,7 +31,7 @@ PredictStdev(<scalar column reference>)
  스칼라 열  
   
 ## <a name="return-type"></a>반환 형식  
- * \<>스칼라 열 참조 *로 지정 된 형식의 스칼라 값입니다.  
+ 로 지정 된 형식의 스칼라 값입니다 *\<scalar column reference>* .  
   
 ## <a name="remarks"></a>설명  
  열 참조가 불연속 이면 불연속 값에서 표준 편차를 계산할 수 없기 때문에 **Predictstdev** 는 0을 반환 합니다.  

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 610e9f5d575134d3d6948528622637662b65c9f3
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 6359b17825e1f62c38492acb6747ca52a264c7bc
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669655"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970641"
 ---
 # <a name="reserved-keywords-dmx"></a>예약어(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]는 단독 사용을 위해 특정 키워드를 예약 합니다. 예약어는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 DMX 언어 참조에서 정의한 위치가 아닌 다른 DMX(Data Mining Extensions) 문 위치에서는 사용할 수 없습니다. 이러한 제한된 DMX 키워드에는 다음 멤버가 포함됩니다.  
   

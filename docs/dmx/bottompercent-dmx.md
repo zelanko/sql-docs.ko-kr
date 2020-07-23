@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6fdb1563f644b544fd9c0bd2ee0857bf4b403329
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 647f0cdaaef28f1da7ca51157388288cfdd729dc
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669834"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969961"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   누적 합계가 지정한 비율 이상이 되는 테이블의 맨 아래 행을 오름차순으로 반환합니다.  
   
@@ -28,20 +28,20 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ```  
   
 ## <a name="arguments"></a>인수  
- *\<테이블 식>*  
+ *\<Table expression>*  
  중첩 테이블 열이나 테이블 반환 식의 이름입니다.  
   
- *\<rank 식>*  
+ *\<rank expression>*  
  중첩 테이블의 열이거나 열로 계산되는 식입니다.  
   
- *\<백분율>*  
+ *\<percent>*  
  총 대상 백분율을 나타내는 double 값입니다.  
   
 ## <a name="result-type"></a>결과 형식  
  테이블입니다.  
   
 ## <a name="remarks"></a>설명  
- **BottomPercent** 함수는 최하위 행을 차수 보다 오름차순으로 반환 합니다. Rank는 rank 식의 계산 된 값을 기준으로 하 여 \< 각 행에 대 한 \< 값> 값의 합계가 적어도 \< percent> 인수로 지정 된 비율 이상> 합니다. **BottomPercent** 는 지정 된 백분율 값을 충족 하는 동안 가능한 가장 작은 수의 요소를 반환 합니다.  
+ **BottomPercent** 함수는 최하위 행을 차수 보다 오름차순으로 반환 합니다. Rank는 \<rank expression> 각 행에 대 한 인수의 계산 된 값을 기반으로 하며, 값의 합이 인수에 지정 된 지정 된 비율 이상 임을 확인 합니다 \<rank expression> \<percent> . **BottomPercent** 는 지정 된 백분율 값을 충족 하는 동안 가능한 가장 작은 수의 요소를 반환 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 [기본 데이터 마이닝 자습서](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)에서 만든 연결 모델에 대 한 예측 쿼리를 만듭니다.  

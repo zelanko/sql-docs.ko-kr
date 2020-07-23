@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0156d12fe2d3d3f62105dccf05f99c2eebab8833
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e3e4e9a4d929d9533b10d87654f685e45dafd238
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670134"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970512"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>&lt;모델 &gt; 예측 조인에서 선택 (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   마이닝 모델을 사용하여 외부 데이터 원본에 있는 열의 상태를 예측합니다. **예측 조인** 문은 원본 쿼리의 각 사례를 모델에 대응 시킵니다.  
   
@@ -57,7 +57,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>설명  
- ON 절은 원본 쿼리의 열 및 마이닝 모델의 열 간의 매핑을 정의합니다. 이 매핑은 예측을 만들 때 원본 쿼리의 열을 입력으로 사용할 수 있도록 원본 쿼리의 열을 마이닝 모델의 열로 전송하는 데 사용됩니다. \<다음 예제와 같이 *조인 매핑 목록의* 열> 등호 (=)를 사용 하 여 관련 됩니다.  
+ ON 절은 원본 쿼리의 열 및 마이닝 모델의 열 간의 매핑을 정의합니다. 이 매핑은 예측을 만들 때 원본 쿼리의 열을 입력으로 사용할 수 있도록 원본 쿼리의 열을 마이닝 모델의 열로 전송하는 데 사용됩니다. 의 열은 \<*join mapping list*> 다음 예제와 같이 등호 (=)를 사용 하 여 관련 됩니다.  
   
 ```  
 [MiningModel].ColumnA = [source data query].Column1 AND   
@@ -69,7 +69,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  예측 조인에 대한 원본 쿼리는 테이블 또는 단일 쿼리일 수 있습니다.  
   
- Select 식 목록에서 테이블 식을 반환 하지 않는 예측 함수 \< *select expression list*> 및 \< *조건 식*>를 지정할 수 있습니다.  
+ 및에서 테이블 식을 반환 하지 않는 예측 함수를 지정할 수 있습니다 \<*select expression list*> \<*condition expression*> .  
   
  **자연 예측 조인은** 모델의 열 이름과 일치 하는 원본 쿼리의 열 이름을 자동으로 매핑합니다. **자연 예측**을 사용 하는 경우 ON 절을 생략할 수 있습니다.  
   

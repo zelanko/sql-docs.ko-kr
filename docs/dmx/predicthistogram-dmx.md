@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0b413a53aa0b5f423a5977ef051e55c2abf3f65e
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 94ec67fe103901f19af36b8be01ea21ceaa9ac85
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666794"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967921"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   지정된 열의 예측에 대한 히스토그램을 나타내는 테이블을 반환합니다.  
   
@@ -37,7 +37,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
  히스토그램은 통계 열을 생성합니다. 반환 된 히스토그램의 열 구조는 **PredictHistogram** 함수와 함께 사용 되는 열 참조의 유형에 따라 달라 집니다.  
   
 ## <a name="scalar-columns"></a>스칼라 열  
- \<스칼라 열 참조>의 경우 **PredictHistogram** 함수가 반환 하는 히스토그램은 다음과 같은 열로 구성 됩니다.  
+ 의 경우 \<scalar column reference> **PredictHistogram** 함수가 반환 하는 히스토그램은 다음과 같은 열로 구성 됩니다.  
   
 -   예측되는 값  
   
@@ -58,7 +58,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
      **$AdjustedProbability** 열은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] 데이터 마이닝 사양의 OLE DB에 대 한 확장입니다.  
   
 ## <a name="cluster-columns"></a>클러스터 열  
- **PredictHistogram** 함수가 클러스터 열 참조> 대해 반환 하는 히스토그램은 \< 다음과 같은 열로 구성 됩니다.  
+ **PredictHistogram** 함수가에 대해 반환 하는 히스토그램은 \<cluster column reference> 다음과 같은 열로 구성 됩니다.  
   
 -   **$Cluster** (클러스터 이름을 나타냄)  
   

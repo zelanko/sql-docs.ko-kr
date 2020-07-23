@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: be257e4da206c1c30d54341fbfda4c0aed894ab2
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: db7e660b5b92d49f5a5151d5d71e9ac31f9e9013
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669857"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969980"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   식에서 지정한 수만큼 맨 아래 행을 오름차순으로 반환합니다.  
   
@@ -28,13 +28,13 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>적용 대상  
- 테이블 열 참조>와 같이 테이블을 반환 하는 식 \< 또는 테이블을 반환 하는 함수입니다.  
+ 테이블을 반환 하는 식 (예:) \<table column reference> 또는 테이블을 반환 하는 함수입니다.  
   
 ## <a name="return-type"></a>반환 형식  
- \<테이블 식>  
+ \<table expression>  
   
 ## <a name="remarks"></a>설명  
- Rank 식> 인수로 제공 되는 값은 \< 테이블 식> 인수에 제공 되는 행의 차수를 결정 하 \< 고 count> 인수에 지정 된 최하위 행의 수를 \< 반환 합니다.  
+ 인수에 의해 제공 되는 값은 \<rank expression> 인수에 제공 된 행의 차수를 늘리고 \<table expression> 인수에 지정 된 최하위 행의 수를 \<count> 반환 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 [기본 데이터 마이닝 자습서](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)를 사용 하 여 작성 하는 연결 모델에 대 한 예측 쿼리를 만듭니다.  

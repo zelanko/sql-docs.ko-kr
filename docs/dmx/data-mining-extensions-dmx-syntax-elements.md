@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7cfd0e6846fc377cda6fe9655fa3770748748e2c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 16d77e459cc472430081e52b485763b4e0c62f50
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669805"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971744"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>DMX(Data Mining Extensions) 구문 요소
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다양 한 구문 요소를 사용 하 여 데이터 마이닝 모델을 작성, 관리 및 작업 하는 데 사용할 수 있는 DMX (data 마이닝 확장) 문을 정의할 수 있습니다. 아래 섹션에서는 이러한 구문 요소에 대해 설명합니다.  
   

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bf2e0f2d57ce8bf1834813d4e39d06afc9724fd7
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a0a245d152ddd9946142f5f115ee1db64ee5998b
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670092"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970561"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   기존 마이닝 모델의 마이닝 구조를 기반으로 새 마이닝 모델을 만듭니다. **SELECT INTO** 문은 스키마 및 실제 알고리즘과 관련이 없는 기타 정보를 복사 하 여 새 마이닝 모델을 만듭니다.  
   

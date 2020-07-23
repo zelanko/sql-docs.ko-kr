@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3f2f97ef9c7a1cdfa2bb1ba1b86dbe4cf60c8404
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a91941241b61f74190b9ab1ef0c29dffded5dc79
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669919"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970244"
 ---
 # <a name="toppercent-dmx"></a>TopPercent(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   **TopPercent** 함수는 누적 합계가 지정 된 비율 이상인 테이블의 맨 위 행을 내림차순으로 반환 합니다.  
   
@@ -28,13 +28,13 @@ TopPercent(<table expression>, <rank expression>, <percent>)
 ```  
   
 ## <a name="applies-to"></a>적용 대상  
- 테이블 열 참조>와 같이 테이블을 반환 하는 식 \< 또는 테이블을 반환 하는 함수입니다.  
+ 테이블을 반환 하는 식 (예:) \<table column reference> 또는 테이블을 반환 하는 함수입니다.  
   
 ## <a name="return-type"></a>반환 형식  
- \<테이블 식>  
+ \<table expression>  
   
 ## <a name="remarks"></a>설명  
- **TopPercent** 함수는 차수> 식의 계산 된 값을 기준으로 가장 높은 행을 차수 식의 계산 된 값을 기준으로 내림차순으로 반환 합니다 .이 값은 \< \< rank 식의 합계가 백분율> 인수로 지정 되는 지정 된 비율 이상> 합니다 \< . **TopPercent** 는 지정 된 백분율 값을 충족 하는 동안 가능한 가장 작은 수의 요소를 반환 합니다.  
+ **TopPercent** 함수는 각 행에 대해 계산 된 인수의 값을 기준으로 최상위 행을 내림차순으로 반환 합니다 \<rank expression> .이 값의 합계는 인수에 지정 된 비율 이상으로 \<rank expression> 지정 됩니다 \<percent> . **TopPercent** 는 지정 된 백분율 값을 충족 하는 동안 가능한 가장 작은 수의 요소를 반환 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 [기본 데이터 마이닝 자습서](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)를 사용 하 여 작성 하는 연결 모델에 대 한 예측 쿼리를 만듭니다.  

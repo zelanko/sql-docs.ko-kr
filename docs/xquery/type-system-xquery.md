@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f093a8105c21ab6c96d0d1b84c7a48e3a48c9fe0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cb0b853b83fc65d8faddc341f9f0249debc2d2c1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643394"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915276"
 ---
 # <a name="type-system-xquery"></a>유형 시스템(XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   XQuery는 유형 지정이 엄격한 언어이며 형식화되지 않은 데이터에 대해서는 유형 지정이 엄격하지 않은 언어입니다. XQuery의 미리 정의된 유형에는 다음이 포함됩니다.  
   

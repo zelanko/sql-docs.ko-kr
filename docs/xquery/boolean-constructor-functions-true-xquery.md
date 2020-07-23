@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 614128995edaefae4fb5f6746d092a6d3f74c1ba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3661757a2352c5a4a968e58c8676aec609391652
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726763"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914647"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>부울 생성자 함수 - true(XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   xs:boolean 값 True를 반환합니다. `xs:boolean("1")`와 같습니다.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "85726763"
 fn:true() as xs:boolean  
 ```  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  이 항목에서는 AdventureWorks 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
   
 ### <a name="a-using-the-true-xquery-boolean-function"></a>A. true() XQuery 부울 함수 사용  

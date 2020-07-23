@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a5ee393faed7f88bb155527d2233285d142b3a09
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: af6e9ba832a267c2f85bbe2f44f087399384179c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726789"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914669"
 ---
 # <a name="aggregate-functions---avg"></a>집계 함수 - avg
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   일련의 숫자의 평균을 반환합니다.  
   
@@ -44,7 +44,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
  입력이 정적으로 비어 있으면 비어 있다는 것이 유추되어 정적 오류가 발생합니다.  
   
- **Avg ()** 함수는 계산 된 숫자의 평균을 반환 합니다. 예를 들면 다음과 같습니다.  
+ **Avg ()** 함수는 계산 된 숫자의 평균을 반환 합니다. 예를 들어:  
   
  **sum(** *$arg* **) div count(** *$arg* **)**  
   
@@ -54,7 +54,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
  다른 모든 경우 함수는 정적 오류를 반환합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  이 항목에서는 AdventureWorks 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
   
 ### <a name="a-using-the-avg-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-in-which-labor-hours-are-greater-than-the-average-for-all-work-center-locations"></a>A. avg() XQuery 함수를 사용하여 제조 과정에서 근로 시간이 모든 작업 센터 위치의 평균보다 큰 경우의 작업 센터 위치 찾기  

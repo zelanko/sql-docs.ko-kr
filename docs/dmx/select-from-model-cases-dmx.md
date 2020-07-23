@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6753f90b76f70de9f7368a5656ba93b16a3740d1
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 1fa1da730fc370995b22927604f9550c865877f4
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669612"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970630"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>모델에서 &lt; 선택 &gt; 합니다. 사례 (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   드릴스루를 지원하며 모델 학습에 사용된 사례를 반환합니다. 또한 마이닝 구조와 마이닝 모델 모두에 드릴스루가 사용되도록 설정되어 있고 적절한 권한이 있으면 마이닝 모델에 포함되지 않은 구조 열도 반환할 수 있습니다.  
   

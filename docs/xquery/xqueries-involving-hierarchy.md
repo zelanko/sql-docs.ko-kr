@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 21348f838ab51f2352ea975b81688ac0777fe277
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1b37eeff2ffcee5b8b2434e096783916af30b17a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730723"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914627"
 ---
 # <a name="xqueries-involving-hierarchy"></a>계층 포함 XQuery
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   **AdventureWorks** 데이터베이스의 대부분의 **xml** 유형 열은 반 구조화 된 문서입니다. 따라서 각 행에 저장된 문서는 다르게 보일 수 있습니다. 이 항목의 쿼리 예제에서는 이러한 여러 문서로부터 정보를 추출하는 방법을 보여 줍니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. 제조 지침 문서에서 작업 센터 위치와 해당 위치의 첫 번째 제조 단계 검색  
  제품 모델 7의 경우 쿼리는 <> 요소를 포함 하는 XML을 생성 하며,이는 상품 `ManuInstr` **modelid** 및 **제품 modelname** 특성과 하나 이상의 <`Location`> 자식 요소입니다.  
@@ -116,7 +116,7 @@ WHERE ContactID = 1
   
  `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참조  
  [XQuery 기본 사항](../xquery/xquery-basics.md)   
  [XML 생성 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
  [XML 데이터&#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  

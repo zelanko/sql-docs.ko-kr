@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 167bf7e17b172b9d3e6c58df1f52510f93a668aa
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e2aaeedff9eb0d22d6a7175641177f803379adaa
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669994"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970288"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>DMX 예측 쿼리의 구조 및 사용법
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 마이닝 확장 (DMX)의 예측 쿼리를 사용 하 여 마이닝 모델의 결과를 기반으로 새 데이터 집합에서 알 수 없는 열 값을 예측할 수 있습니다.  
   
@@ -42,13 +42,13 @@ ms.locfileid: "83669994"
   
 -   **SELECT [평면화]**  
   
--   **맨 위로**  
+-   **맨 위로 이동**  
   
--   **FROM*** \< 모델>* **예측 조인** 에서      
+-   **시작** *\<model>* **예측 조인**      
   
 -   **ON**  
   
--   **위치**  
+-   **WHERE**  
   
 -   **ORDER BY**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "83669994"
   
 -   데이터 열을 반환하는 함수  
   
- **FROM** * \< model>* **예측 조인** 요소는 예측을 만드는 데 사용 되는 원본 데이터를 정의 합니다. 단일 쿼리의 경우 이 요소는 열에 할당된 일련의 값입니다. 빈 예측 조인의 경우 이 요소는 빈 상태가 됩니다.  
+ **FROM** *\<model>* **예측 조인** 요소는 예측을 만드는 데 사용 되는 원본 데이터를 정의 합니다. 단일 쿼리의 경우 이 요소는 열에 할당된 일련의 값입니다. 빈 예측 조인의 경우 이 요소는 빈 상태가 됩니다.  
   
  **ON** 요소는 마이닝 모델에 정의 된 열을 외부 데이터 집합의 열에 매핑합니다. 빈 예측 조인 쿼리나 자연 예측 조인을 만드는 경우에는 이 요소를 포함하지 않아도 됩니다.  
   

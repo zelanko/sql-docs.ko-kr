@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 54489088aa6edc540dd2da0fb0d9121fc0c6d4b9
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 1b8fe4c8a83eaf56aea70abc810e7dc45f35eebb
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670410"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971781"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>DMX(Data Mining Extensions) 문
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   에서 데이터 마이닝 모델을 사용 하 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 경우 다음과 같은 기본 작업을 수행 해야 합니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "83670410"
  [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md) 문을 사용 하 여 기존 마이닝 모델의 구조를 새 마이닝 모델로 복사 하 고 동일한 데이터를 사용 하 여 새 모델을 학습 합니다.  
   
  마이닝 모델 검색  
- [SELECT &#40;DMX&#41;](../dmx/select-dmx.md) 문을 사용 하 여 모델 학습 중 데이터 마이닝 알고리즘에서 계산 하 고 데이터 마이닝 모델에 저장 하는 정보를 찾아볼 수 있습니다. 와 마찬가지로 [!INCLUDE[tsql](../includes/tsql-md.md)] SELECT 문에 여러 절을 사용 하 여 해당 기능을 확장할 수 있습니다. 이러한 절은 모델>에서 [ \< 모델>와 구분 ](../dmx/select-distinct-from-model-dmx.md)됩니다 [ \< . ](../dmx/select-from-model-cases-dmx.md) [ \< 모델>의 사례입니다. ](../dmx/select-from-model-sample-cases-dmx.md) [ \< 모델>에서 SAMPLE_CASES 합니다. 콘텐츠](../dmx/select-from-model-content-dmx.md) 및 [ \< 모델>. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md).  
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md) 문을 사용 하 여 모델 학습 중 데이터 마이닝 알고리즘에서 계산 하 고 데이터 마이닝 모델에 저장 하는 정보를 찾아볼 수 있습니다. 와 마찬가지로 [!INCLUDE[tsql](../includes/tsql-md.md)] SELECT 문에 여러 절을 사용 하 여 해당 기능을 확장할 수 있습니다. 이러한 절에는의 [ \<model> 고유한 ](../dmx/select-distinct-from-model-dmx.md)가 포함 됩니다 [ \<model> . ](../dmx/select-from-model-cases-dmx.md)의 사례 [ \<model> . ](../dmx/select-from-model-sample-cases-dmx.md)에서 SAMPLE_CASES [ \<model> 합니다. 콘텐츠](../dmx/select-from-model-content-dmx.md) 및 [의 \<model> DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md).  
   
  마이닝 모델로 예측  
  SELECT 문의 [예측 조인](../dmx/select-from-model-prediction-join-dmx.md) 절을 사용 하 여 기존 마이닝 모델을 기반으로 하는 예측을 만들 수 있습니다.  

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 544071565a18ade74b3dd4f26945991987295cbc
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: bf4164308b0fdc9e6ba3fabb756c18214757cde5
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669600"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970622"
 ---
 # <a name="select-dmx"></a>SELECT(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   DMX (데이터 마이닝 확장)의 **SELECT** 문은 데이터 마이닝의 다음 태스크에 사용 됩니다.  
   
@@ -46,11 +46,11 @@ FROM <model/structure>[.aspect]
 SELECT FLATTENED <select list> FROM ...  
 ```  
   
-## <a name="top-n-and-order-by"></a>상위 \< n> 및 ORDER by  
- 식을 사용 하 여 쿼리 결과를 정렬 한 다음 **ORDER by** 및 **TOP** 절의 조합을 사용 하 여 결과의 하위 집합을 반환할 수 있습니다. 이 함수는 응답할 가능성이 높은 사람에게만 결과를 보내도록 메일 대상을 지정하는 시나리오 등에서 유용합니다. 예측 확률을 기준으로 대상 메일 예측 쿼리의 결과를 정렬 한 다음 상위 \< n 개> 결과만 반환할 수 있습니다.  
+## <a name="top-n-and-order-by"></a>TOP \<n> 및 ORDER by  
+ 식을 사용 하 여 쿼리 결과를 정렬 한 다음 **ORDER by** 및 **TOP** 절의 조합을 사용 하 여 결과의 하위 집합을 반환할 수 있습니다. 이 함수는 응답할 가능성이 높은 사람에게만 결과를 보내도록 메일 대상을 지정하는 시나리오 등에서 유용합니다. 예측 확률을 기준으로 대상 메일 예측 쿼리의 결과를 정렬 한 다음 상위 결과만 반환할 수 있습니다 \<n> .  
   
 ## <a name="select-list"></a>select list  
- * \< Select 목록>* 은 스칼라 열 참조, 예측 함수 및 식을 포함할 수 있습니다. 사용 가능한 옵션은 알고리즘과 다음 컨텍스트에 따라 달라집니다.  
+ 에는 *\<select list>* 스칼라 열 참조, 예측 함수 및 식이 포함 될 수 있습니다. 사용 가능한 옵션은 알고리즘과 다음 컨텍스트에 따라 달라집니다.  
   
 -   마이닝 구조를 쿼리하는지 아니면 마이닝 모델을 쿼리하는지 여부  
   
@@ -76,7 +76,7 @@ JOIN <source data query>
 ```  
   
 ## <a name="where"></a>WHERE  
- **WHERE** 절을 사용 하 여 쿼리에서 반환 되는 사례를 제한할 수 있습니다. **Where** 절은 **where** 식의 열 참조가 **select** 문의 * \< select 목록>* 열 참조와 동일한 의미 체계를 갖도록 지정 하 고 부울 식만 반환할 수 있도록 지정 합니다. **Where** 절의 구문은 다음과 같습니다.  
+ **WHERE** 절을 사용 하 여 쿼리에서 반환 되는 사례를 제한할 수 있습니다. **Where** 절은 **where** 식의 열 참조가 SELECT 문의에 있는 열 참조와 동일한 의미 체계를 가져야 하 *\<select list>* 고 부울 **SELECT** 식만 반환할 수 있도록 지정 합니다. **Where** 절의 구문은 다음과 같습니다.  
   
 ```  
 WHERE < condition expression >  

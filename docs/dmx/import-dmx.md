@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2e17363aa255591977dc1a9e9ecb4ece04604814
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 1bddae4cf71b30a2a1365d0d5748170c0d5bac53
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670075"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969821"
 ---
 # <a name="import-dmx"></a>IMPORT(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Analysis Services 백업 파일(.abf)의 마이닝 모델 또는 마이닝 구조를 서버로 로드합니다.  
   

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: baa7ed6209daf3de76c20d8ff67a9b76a36be4e8
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 2e0fc30945396f22184e1d18c6b132d8e2e2d781
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670098"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970439"
 ---
 # <a name="select-from-ltstructuregtcases"></a>구조에서 &lt; 선택 &gt; 합니다. 경우
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   마이닝 구조를 만드는 데 사용된 사례를 반환합니다.  
   

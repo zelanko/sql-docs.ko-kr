@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 83a381e36a31542d6ad39ed9d26864350004af5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97b9f5fd13a6cfb017f128564f0f0cf93c22ad58
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68891146"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967374"
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX 데이터 조작 - SELECT
 
@@ -88,7 +88,7 @@ FROM
  *Set_Expression*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
- *값*  
+ *Integer*  
  0에서 127 사이의 정수입니다.  
   
  *Cube_Name*  
@@ -116,7 +116,7 @@ FROM
   
  하위 SELECT 문에 NON VISUAL 옵션을 사용하면 필터링된 합계 대신 순 합계를 유지하면서 멤버를 필터링할 수 있습니다. 즉, 상위 10개 매출 정보(사람/제품/지역)를 쿼리한 후 상위 10개의 매출 합계 값 대신 쿼리한 모든 멤버의 매출 순 합계를 반환 결과로 얻을 수 있습니다. 자세한 내용은 아래 예를 참조하십시오.  
   
- 연결 문자열 매개 변수 \< *하위 쿼리 = 1*을 사용 하 여 연결을 열 때마다 SELECT query axis 절에 계산 멤버를 포함할 수 있습니다> [&#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 및 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 매개 변수 사용에 대해 지원 되는 xmla 속성을 참조 하세요. 하위 SELECT의 계산 멤버에 대한 예는 다음을 참조하십시오.  
+ 연결 \<SELECT query axis clause> 문자열 매개 변수 *하위 쿼리 = 1*을 사용 하 여 연결을 열 때마다 계산 멤버를에 포함할 수 있습니다. [지원 되는 xmla 속성 &#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 및 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 매개 변수 사용을 참조 하세요. 하위 SELECT의 계산 멤버에 대한 예는 다음을 참조하십시오.  
   
 ## <a name="autoexists"></a>AUTOEXIST  
  SELECT 문에 두 개 이상의 차원 특성이 사용되는 경우 Analysis Services에서는 이러한 특성의 멤버가 다른 모든 특성의 기준에 맞도록 적절히 제한되도록 특성의 식을 계산합니다. 예를 들어 Geography 차원의 특성을 사용한다고 가정합니다. City 특성의 모든 멤버를 반환하는 식과 Country 특성의 멤버를 유럽의 모든 국가로 제한하는 다른 식이 있는 경우 City 멤버는 유럽 국가에 속한 도시로만 제한됩니다. 이러한 Analysis Services 특징을 Autoexists라고 하며 이는 동일한 차원의 특성에만 적용됩니다. Autoexists는 한 특성 식에서 제외된 차원 레코드를 다른 특성 식에서 포함하지 않도록 하기 때문에 동일한 차원의 특성에만 적용됩니다. 결과적으로 차원 레코드에서 서로 다른 특성 식이 교차하는 것으로 Autoexists를 이해할 수도 있습니다. 아래의 예를 참조하십시오.  
@@ -339,10 +339,10 @@ FROM
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Autoexists 동작은 연결 문자열의 AUTOEXISTS = [1 | 2 | 3] 매개 변수를 사용 하 여 수정할 수 있습니다. [&#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 및 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 매개 변수 사용에 대해 지원 되는 xmla 속성을 참조 하세요.  
+ Autoexists 동작은 연결 문자열의 AUTOEXISTS = [1 | 2 | 3] 매개 변수를 사용 하 여 수정할 수 있습니다. [&#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 및 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 매개 변수 사용에 대해 지원 되는 xmla 속성을 참조 하세요.  
   
-## <a name="examples"></a>예  
- 다음 예에서는 **놀이 Works** 큐브에서 `Date` 차원에 `Measures.[Order Quantity]` 포함 된 2003 년의 첫 8 개월 동안 집계 된 멤버의 합계를 반환 합니다.  
+## <a name="examples"></a>예제  
+ 다음 예에서는 `Measures.[Order Quantity]` `Date` **놀이 Works** 큐브에서 차원에 포함 된 2003 년의 첫 8 개월 동안 집계 된 멤버의 합계를 반환 합니다.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -377,11 +377,11 @@ WHERE
   
 |||||||  
 |-|-|-|-|-|-|  
-||**All Products**|**Accessories**|**Bikes**|**구**|**요소도**|  
+||**모든 제품**|**액세서리**|**자전거**|**Clothing**|**Components**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
 |**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
-|**웨어하우스와**|**$38,726,913.48**|**$331,169.64**|**$29,329,909.50**|**$932,521.23**|**$8,133,313.11**|  
+|**웨어하우스**|**$38,726,913.48**|**$331,169.64**|**$29,329,909.50**|**$932,521.23**|**$8,133,313.11**|  
   
  Accessories 및 Clothing 제품과 Value Added Reseller 및 Warehouse 대리점에 대한 데이터만 포함된 테이블을 만들고 전체 합계를 유지하려면 NON VISUAL을 사용하여 다음과 같이 문을 작성할 수 있습니다.  
   
@@ -401,10 +401,10 @@ WHERE
   
 |||||  
 |-|-|-|-|  
-||**All Products**|**Accessories**|**구**|  
+||**모든 제품**|**액세서리**|**Clothing**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
-|**웨어하우스와**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
+|**웨어하우스**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
   
  열에는 보이는 값 합계만 포함하고 행 합계에는 모든 [Category]의 순 합계를 표시하는 테이블을 만들려면 다음과 같은 쿼리를 실행해야 합니다.  
   
@@ -428,7 +428,7 @@ WHERE
   
 |||||  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
+||All Products|액세서리|Clothing|  
 |All Resellers|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  

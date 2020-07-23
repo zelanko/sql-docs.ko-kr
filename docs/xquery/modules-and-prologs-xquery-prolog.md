@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ece175be7fa0791bf1355ed6020121999d62660b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8098ddebb61a33c017f22598bec16041f112097a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775481"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918486"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>모듈 및 프롤로그 - XQuery 프롤로그
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   XQuery 쿼리는 프롤로그와 본문으로 구성됩니다. XQuery 프롤로그는 쿼리 처리에 필요한 환경을 만드는 일련의 선언 및 정의로 구성됩니다. SQL Server에서 XQuery 프롤로그에는 네임스페이스 선언이 포함될 수 있습니다. XQuery 본문은 의도된 쿼리 결과를 지정하는 일련의 식으로 구성됩니다.  
   

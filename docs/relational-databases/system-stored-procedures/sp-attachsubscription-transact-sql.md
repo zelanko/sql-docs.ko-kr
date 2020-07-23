@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1017c3332ca4e399984c01c68585d96aad86666
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c039ce9a5f54f3c0498ef613df15353217d91036
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716183"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923467"
 ---
 # <a name="sp_attachsubscription-transact-sql"></a>sp_attachsubscription(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   기존 구독 데이터베이스를 임의의 구독자에 연결합니다. 이 저장 프로시저는 master 데이터베이스의 새 구독자에서 실행됩니다.  
   

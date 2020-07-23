@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f93df1c1388f6a85272ced6bf419140c74105ddc
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 0d4c83626c11def14f1ed9f745fca54e94995c97
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669954"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970269"
 ---
 # <a name="topcount-dmx"></a>TopCount(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   식에서 지정한 수만큼 맨 위 행을 내림차순으로 반환합니다.  
   
@@ -28,13 +28,13 @@ TopCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>적용 대상  
- 테이블 열 참조>와 같이 테이블을 반환 하는 식 \< 또는 테이블을 반환 하는 함수입니다.  
+ 테이블을 반환 하는 식 (예:) \<table column reference> 또는 테이블을 반환 하는 함수입니다.  
   
 ## <a name="return-type"></a>반환 형식  
- \<테이블 식>  
+ \<table expression>  
   
 ## <a name="remarks"></a>설명  
- Rank 식> 인수로 제공 되는 값은 \< 테이블 식> 인수에 제공 되는 행의 순위를 내림차순으로 결정 \< 하 고 count> 인수에 지정 된 최상위 행의 수를 \< 반환 합니다.  
+ 인수에 의해 제공 되는 값은 \<rank expression> 인수에 제공 된 행의 차수를 구분 하는 순서를 결정 \<table expression> 하 고 인수에 지정 된 최상위 행의 수를 \<count> 반환 합니다.  
   
  TopCount 함수는 원래 연결 예측을 사용 하도록 도입 되었으며 일반적으로 **SELECT TOP** 및 **ORDER BY** 절을 포함 하는 문과 동일한 결과를 생성 합니다. 반환할 예측 수를 지정 하는 **Predict (DMX)** 함수를 사용 하는 경우 연관 예측에 대해 더 나은 성능을 얻을 수 있습니다.  
   

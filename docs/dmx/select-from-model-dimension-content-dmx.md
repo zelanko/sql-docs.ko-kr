@@ -8,17 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7ffc372ad0c44208d246a2afc9259428e354e480
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: d16b8b01251be6703350a1a64bb9cdd2bdc5cadb
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669578"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970591"
 ---
 # <a name="select-from-ltmodelgtdimension_content-dmx"></a>모델에서 &lt; 선택 &gt; 합니다. DIMENSION_CONTENT (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  OLAP 큐브에서 모델의 각 노드가 차원 멤버를 나타내도록 하여 마이닝 모델을 차원으로 사용할 수 있습니다. **SELECT FROM \< model>입니다. Dimension_CONTENT** 문은 차원으로 사용 하는 것과 관련 된 모델의 콘텐츠를 반환 합니다.  
+  OLAP 큐브에서 모델의 각 노드가 차원 멤버를 나타내도록 하여 마이닝 모델을 차원으로 사용할 수 있습니다. **SELECT FROM \<model> 입니다. Dimension_CONTENT** 문은 차원으로 사용 하는 것과 관련 된 모델의 콘텐츠를 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   

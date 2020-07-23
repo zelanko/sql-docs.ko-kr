@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: df52a83c2e60395e72b6f81903d0372d1dc05614
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: fdf58a943986dc43f82ef7023b68a2c6168a5518
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670245"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971719"
 ---
 # <a name="exists-dmx"></a>Exists(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   지정 된 하위 쿼리가 하나 이상의 행을 반환 하는 경우 **true** 를 반환 합니다.  
   
@@ -28,8 +28,8 @@ EXISTS(<subquery>)
 ```  
   
 ## <a name="arguments"></a>인수  
- *하위 쿼리*  
- Select * FROM \< 열 name> [WHERE \< predicate list>] 형식의 select 문입니다.  
+ *subquery*  
+ Select * FROM [WHERE] 형식의 SELECT 문입니다 \<column name> \<predicate list> .  
   
 ## <a name="result-type"></a>결과 형식  
  하위 쿼리에서 반환 된 결과 집합에 하나 이상의 행이 포함 된 경우 **true** 를 반환 합니다. 그렇지 않으면 **false**를 반환 합니다.  

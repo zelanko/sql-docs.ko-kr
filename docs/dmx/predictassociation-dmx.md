@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0d34ea224efd5b218cafee58dec09ff4590b8511
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a834c87c3febf0554ad07334000d62f1f9a93fee
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668765"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968239"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   연관된 멤버 자격을 예측합니다.  
   
@@ -33,7 +33,7 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
  연결 및 일부 분류 알고리즘을 포함 하 여 예측 가능한 중첩 테이블을 포함 하는 알고리즘입니다. 중첩 테이블을 지 원하는 분류 알고리즘에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 의사 결정 트리, [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] 신경망 알고리즘이 포함 됩니다.  
   
 ## <a name="return-type"></a>반환 형식  
- \<테이블 식>  
+ \<table expression>  
   
 ## <a name="remarks"></a>설명  
  **PredictAssociation** 함수에 대 한 옵션에는 EXCLUDE_NULL, INCLUDE_NULL, 포함, 배타 (기본값), INPUT_ONLY, INCLUDE_STATISTICS 및 INCLUDE_NODE_ID가 포함 됩니다.  

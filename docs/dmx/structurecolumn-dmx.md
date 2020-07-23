@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 82317f4a4e5f4c4fddd4ffaf45c5897dfd4d0df5
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: cb07dd463ddbbc15942ca6f62c4ccb708a8c5efd
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669985"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970319"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   지정된 사례에 해당하는 구조 열의 값이나 지정된 사례의 중첩 테이블에 대한 테이블 값을 반환합니다.  
   
@@ -32,7 +32,7 @@ StructureColumn('structure column name')
  사례 또는 중첩 테이블 마이닝 구조 열의 이름입니다.  
   
 ## <a name="result-type"></a>결과 형식  
- 반환 되는 유형은 \< 구조 열 이름> 매개 변수에서 참조 되는 열 유형에 따라 달라 집니다. 예를 들어 참조되는 마이닝 구조 열에 스칼라 값이 포함되어 있으면 스칼라 값이 반환됩니다.  
+ 반환 되는 형식은 매개 변수에서 참조 되는 열의 형식에 따라 달라 집니다 \<structure column name> . 예를 들어 참조되는 마이닝 구조 열에 스칼라 값이 포함되어 있으면 스칼라 값이 반환됩니다.  
   
  참조되는 마이닝 구조 열이 중첩 테이블이면 테이블 값이 반환됩니다. 반환된 테이블 값은 하위 SELECT 문의 FROM 절에 사용할 수 있습니다.  
   

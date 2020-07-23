@@ -8,17 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 15767abbbffd7ede7d7ae252c7e84589abad1a98
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7117409372fcbcbc6ef3662a2355f063b2a99d98
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670009"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970291"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;원본 데이터 쿼리&gt;
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  데이터 마이닝 모델을 학습 하 고 마이닝 모델에서 예측을 만들려면 데이터베이스 외부에 있는 데이터에 액세스 해야 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 합니다. \<DMX (데이터 마이닝 확장)의 원본 데이터 쿼리> 절을 사용 하 여이 외부 데이터를 정의할 수 있습니다. [DMX에 삽입 &#40;dmx&#41;](../dmx/insert-into-dmx.md), [&#60;모델에서&#62; 예측 조인 &#40;dmx&#41;를 선택 ](../dmx/select-from-model-prediction-join-dmx.md)하 고, 모두 ** \< 원본 데이터 쿼리>** 를 사용 하 여 [자연어를 선택](../dmx/select-from-model-prediction-join-dmx.md) 합니다.  
+  데이터 마이닝 모델을 학습 하 고 마이닝 모델에서 예측을 만들려면 데이터베이스 외부에 있는 데이터에 액세스 해야 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 합니다. \<source data query>DMX (데이터 마이닝 확장)에서 절을 사용 하 여이 외부 데이터를 정의 합니다. [DMX에 삽입 &#40;dmx&#41;](../dmx/insert-into-dmx.md), [&#60;모델에서&#62; 예측 조인 &#40;dmx&#41;를 선택 ](../dmx/select-from-model-prediction-join-dmx.md)하 고, 모두 사용 하 여 [자연 예측 조인 문을 선택](../dmx/select-from-model-prediction-join-dmx.md) **\<source data query>** 합니다.  
   
 ## <a name="query-types"></a>쿼리 유형  
  일반적으로 원본 데이터를 지정하는 3가지 방법은 다음과 같습니다.  

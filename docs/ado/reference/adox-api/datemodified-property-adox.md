@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fed09266-1547-4bda-9088-c254d81cc738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ccd916a8b9e9c500d3b718371b01831cc0ef292f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1c3a2a8ba0890dd50621fac143aa102091abcc19
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759209"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942715"
 ---
 # <a name="datemodified-property-adox"></a>DateModified 속성(ADOX)
 개체가 마지막으로 수정 된 날짜를 나타냅니다.  
@@ -34,11 +34,19 @@ ms.locfileid: "82759209"
  새로 추가 된 개체의 **DateModified** 속성은 null입니다. 새 [뷰나](../../../ado/reference/adox-api/view-object-adox.md) [프로시저](../../../ado/reference/adox-api/procedure-object-adox.md)를 추가한 후에는 **DateModified** 속성에 대 한 값을 얻기 위해 [뷰](../../../ado/reference/adox-api/views-collection-adox.md) 또는 [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md) 컬렉션의 [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) 메서드를 호출 해야 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
-  
-||||  
-|-|-|-|  
-|[Procedure 개체(ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Table 개체(ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[View 개체(ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Procedure 개체(ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Table 개체(ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [View 개체(ADOX)](../../../ado/reference/adox-api/view-object-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>참고 항목  
  [DateCreated 및 DateModified 속성 예제 (VB)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   
  [DateCreated 속성(ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)

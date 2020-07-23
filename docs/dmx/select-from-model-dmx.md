@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6f6371df8d1ab987bf1f49d149ff7856ba2d111c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 43a7157c5ec7889b2f8cb7018423d909f3db3cb7
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666667"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970562"
 ---
 # <a name="select-from-ltmodelgt-dmx"></a>모델에서 &lt; 선택 &gt; (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   빈 예측 조인을 수행하며 지정한 열에 대해 가장 가능성이 높은 값을 반환합니다. 예측을 만드는 데는 마이닝 모델의 콘텐츠만 사용됩니다.  
   

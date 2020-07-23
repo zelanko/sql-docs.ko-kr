@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ea538271bf84d7d5b4e0fbea0a860f68bb1f62b6
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 3413ec29cb2f1f3e710a1d52037161094ab713ce
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669625"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970637"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>모델에서 고유 &lt; 선택 &gt; (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   모델에서 선택한 열에 대해 가능한 모든 상태를 반환합니다. 반환되는 값은 지정된 열에 불연속 값, 불연속화된 숫자 값 또는 연속 숫자 값이 들어 있는지 여부에 따라 다릅니다.  
   
@@ -53,7 +53,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 <model>.<table column reference>.<column reference>  
 ```  
   
- **SELECT DISTINCT FROM \< model>** 문의 결과는 열 유형에 따라 달라 집니다. 다음 표에서는 지원되는 열 유형 및 문의 출력 결과에 대해 설명합니다.  
+ **SELECT DISTINCT FROM \<model> ** 문의 결과는 열 유형에 따라 달라 집니다. 다음 표에서는 지원되는 열 유형 및 문의 출력 결과에 대해 설명합니다.  
   
 |열 유형|출력|  
 |-----------------|------------|  

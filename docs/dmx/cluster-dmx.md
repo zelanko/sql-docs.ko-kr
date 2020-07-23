@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6c14bc8189bdea705ab37c66863d74bcef66e23c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 0cd7b2e0a78f2d47349de2701572b2f9dc4b0095
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669823"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969927"
 ---
 # <a name="cluster-dmx"></a>Cluster(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   입력 사례가 포함되었을 가능성이 가장 높은 클러스터를 반환합니다.  
   
@@ -33,7 +33,7 @@ Cluster()
 ## <a name="return-type"></a>반환 형식  
  **클러스터** 함수에는 매개 변수가 필요 하지 않습니다.  
   
- **클러스터** 함수는 클러스터 이름의 스칼라 값을 반환 합니다. 그러나이 함수를 다른 함수의 인수로 사용 하는 경우에는 \<> 클러스터 열 참조로 간주 해야 합니다.  
+ **클러스터** 함수는 클러스터 이름의 스칼라 값을 반환 합니다. 그러나이 함수를 다른 함수의 인수로 사용 하는 경우에는이 함수를로 간주 해야 합니다 \<cluster column reference> .  
   
 ## <a name="remarks"></a>설명  
  **클러스터** 를 `<` `>` **PredictHistogram** 함수에 대 한 클러스터 열 참조로 사용할 수도 있습니다.  

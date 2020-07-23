@@ -11,14 +11,15 @@ ms.assetid: 32494df1-7ab7-4b88-a858-6b1021d67433
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5e0e31418e2399a8d2fcfb35fde2422636d2469
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d2171403f78fe3de84223e24ef189fd08c53fd88
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003052"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920721"
 ---
 # <a name="sysdatabase_event_session_actions-azure-sql-database"></a>sys.database_event_session_actions(Azure SQL Database)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   이벤트 세션의 각 이벤트의 동작에 대해 한 행을 반환합니다.  
   
@@ -34,15 +35,14 @@ ms.locfileid: "86003052"
 |패키지|**sysname**|이벤트가 포함된 이벤트 패키지의 이름입니다. Null을 허용합니다.|  
 |모듈(module)|**sysname**|이벤트가 포함된 모듈의 이름입니다. Null을 허용합니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 VIEW DATABASE STATE 권한이 필요합니다.  
   
 ## <a name="remarks"></a>설명  
  이 뷰는 다음과 같은 관계 카디널리티를 가집니다.  
   
-||||  
-|-|-|-|  
-|시작|대상|관계|  
+| 보낸 사람 | 수행할 작업 | 관계 |
+| ---- | -- | ------------ |
 |database_event_session_actions. event_session_id|sys.sys. database_event_sessions event_session_id|다 대 일|  
 |database_event_session_actions. event_id<br /><br /> database_event_session_actions. event_session_id|database_event_session_events. event_session_id<br /><br /> database_event_session_events. event_id|다 대 일|  
   

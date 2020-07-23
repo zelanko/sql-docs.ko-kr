@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cf7389ee0097428bd5825c81abd36f3bdc5c02d2
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7e05d629f46f1c94bbe9305510daf37c09a39c9b
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83667947"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969125"
 ---
 # <a name="modeling-flags-dmx"></a>모델링 플래그(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 모델링 플래그를 사용하여 사례 테이블에 정의되어 있는 데이터에 대한 추가 정보를 데이터 마이닝 알고리즘에 제공할 수 있습니다. 데이터 마이닝 알고리즘은 이 정보를 토대로 더욱 정확한 데이터 마이닝 모델을 만들 수 있습니다. 마이닝 구조 열과 마이닝 모델 열에서 모델링 플래그를 정의할 수 있습니다.  
   

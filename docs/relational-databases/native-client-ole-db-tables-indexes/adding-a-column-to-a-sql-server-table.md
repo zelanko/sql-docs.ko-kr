@@ -1,5 +1,5 @@
 ---
-title: SQL Server 테이블에 열 추가 | Microsoft Docs
+title: SQL Server 테이블에 열 추가 (Native Client OLE DB 공급자) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,11 +16,12 @@ ms.assetid: 22bae18a-bc9d-4617-8660-ed8b17a468d4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6d5654db4b86995dcc38833afb514e707969f8d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c9042b2fb6c7495974cc64b16186834ebb30ed08
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012967"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942239"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>SQL Server 테이블에 열 추가
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

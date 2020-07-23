@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d6f5d30d107bb2011a470849dd78e940b74a38d6
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e2933700c24e34748d2c0d6593d5f34eb8e69bc2
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666956"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970849"
 ---
 # <a name="predictprobability-dmx"></a>PredictProbability(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   지정한 상태에 대한 확률을 반환합니다.  
   
@@ -34,7 +34,7 @@ PredictProbability(<scalar column reference>, [<predicted state>])
  스칼라 값  
   
 ## <a name="remarks"></a>설명  
- 예측 상태를 생략하면 누락된 상태 버킷을 제외하고 확률이 가장 높은 상태가 사용됩니다. 누락 상태 버킷을 포함 하려면 \< 예측 상태>를 **INCLUDE_NULL**로 설정 합니다. 누락 상태에 대 한 확률을 반환 하려면 \< 예측 상태>를 NULL로 설정 합니다.  
+ 예측 상태를 생략하면 누락된 상태 버킷을 제외하고 확률이 가장 높은 상태가 사용됩니다. 누락 상태 버킷을 포함 하려면를 \<predicted state> **INCLUDE_NULL**설정 합니다. 누락 상태에 대 한 확률을 반환 하려면를 \<predicted state> NULL로 설정 합니다.  
   
 > [!NOTE]  
 >  일부 마이닝 모델은 확률 값을 제공하지 않으므로 이 함수를 사용할 수 없습니다. 또한 쿼리하는 모델 유형에 따라 특정 대상 값에 대한 확률 값이 다르게 계산되거나 다르게 해석될 수 있습니다. 특정 모델 유형에 대 한 확률을 계산 하는 방법에 대 한 자세한 내용은 [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)의 개별 알고리즘 항목을 참조 하세요.  

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0fe7de8ce6ee6f40d0d50ce76a148dc3d000a808
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 15294c85fc119aff6b8c3cc43b1a99a6b79dc141
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669596"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970602"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>모델에서 &lt; 선택 &gt; 합니다. 콘텐츠 (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   지정한 데이터 마이닝 모델의 마이닝 모델 스키마 행 집합을 반환합니다.  
   
@@ -46,7 +46,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>설명  
- **SELECT FROM** _ \< model>_ **입니다. CONTENT** 문은 각 알고리즘과 관련 된 콘텐츠를 반환 합니다. 예를 들어 사용자 지정 애플리케이션에서 연결 규칙 모델의 모든 규칙 설명을 사용하려는 경우 **SELECT FROM model>를 사용할 수 있습니다 \< . **모델의 NODE_RULE 열에서 값을 반환 하는 내용 문입니다.  
+ **SELECT FROM** _\<model>_ **입니다. CONTENT** 문은 각 알고리즘과 관련 된 콘텐츠를 반환 합니다. 예를 들어 사용자 지정 애플리케이션에서 연결 규칙 모델의 모든 규칙 설명을 사용하려는 경우 SELECT FROM를 사용할 수 있습니다 ** \<model> . **모델의 NODE_RULE 열에서 값을 반환 하는 내용 문입니다.  
   
  다음 표에서는 마이닝 모델 콘텐츠에 포함된 열을 나열합니다.  
   
@@ -74,7 +74,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |NODE_DISTRIBUTION|노드의 값 분포를 설명하는 통계가 들어 있는 테이블입니다.|  
 |NODE_SUPPORT|이 노드를 지원하는 사례 수입니다.|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 코드는 타겟 메일링 마이닝 구조에 추가된 의사 결정 트리 모델에 대한 부모 노드의 ID를 반환합니다.  
   
 ```  

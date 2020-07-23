@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1fdb72a4067a9b48e648cffe1d12b29b23f1652a
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: cceeac44646b904a7d7e1b45bd3c92d4ad07a0d5
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669846"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969939"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   집합을 오름차순으로 정렬하고 누적 합계가 지정한 값 이상이 되는 맨 아래 테이블 행을 반환합니다.  
   
@@ -28,13 +28,13 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>적용 대상  
- 테이블 열 참조>와 같이 테이블을 반환 하는 식 \< 또는 테이블을 반환 하는 함수입니다.  
+ 테이블을 반환 하는 식 (예:) \<table column reference> 또는 테이블을 반환 하는 함수입니다.  
   
 ## <a name="return-type"></a>반환 형식  
- \<테이블 식>  
+ \<table expression>  
   
 ## <a name="remarks"></a>설명  
- **BottomSum** 함수는 최하위 행을 차수 보다 오름차순으로 반환 합니다. Rank는 차수> 식의 계산 된 값을 기준으로 하 여 \< 각 행에 대 한 \< 값> 값의 합계가 적어도 sum> 인수로 지정 된 지정 된 합계 이상이 되도록 합니다 \< . **BottomSum** 는 지정 된 sum 값을 충족 하는 동안 가능한 가장 작은 수의 요소를 반환 합니다.  
+ **BottomSum** 함수는 최하위 행을 차수 보다 오름차순으로 반환 합니다. Rank는 \<rank expression> 각 행에 대 한 인수의 계산 된 값을 기준으로 하며, 값의 합이 인수에 지정 된 지정 된 합계 이상이 되도록 합니다 \<rank expression> \<sum> . **BottomSum** 는 지정 된 sum 값을 충족 하는 동안 가능한 가장 작은 수의 요소를 반환 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 [기본 데이터 마이닝 자습서](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)를 사용 하 여 작성 하는 연결 모델에 대 한 예측 쿼리를 만듭니다.  

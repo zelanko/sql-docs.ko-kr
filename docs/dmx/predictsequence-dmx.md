@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 09911d0d0d8553ab26d0fc141bcc07ed2f479728
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: acb1982e61e622b150ee79af08e36ddcf24048ba
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666976"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970751"
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   지정한 시퀀스 데이터 집합에 대한 미래의 시퀀스 값을 예측합니다.  
   
@@ -30,7 +30,7 @@ PredictSequence(\<table column reference, n-start, n-end>)
 ```  
   
 ## <a name="return-type"></a>반환 형식  
- \<테이블 식>입니다.  
+ \<table expression>.  
   
 ## <a name="remarks"></a>설명  
  *N* 매개 변수를 지정 하면 다음 값이 반환 됩니다.  

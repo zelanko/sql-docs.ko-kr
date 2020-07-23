@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e9dfbe291c1aa7d856862de54ed10c845b4e5544
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 980a13c88abc8d6cbe0fcb71f22f4c0a9f564094
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670388"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969820"
 ---
 # <a name="identifiers-dmx"></a>식별자(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   의 모든 개체에 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 식별자가 있어야 합니다. 개체의 이름은 해당 개체의 식별자입니다. 데이터 원본, 데이터 원본 뷰, 큐브, 차원 및 마이닝 모델과 같은 데이터베이스 개체, 서버 및 데이터베이스에는 식별자가 있습니다.  
   

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 834e31fcc9d8e0887929dae356c7b2068aeeff2d
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 37e646df007684ee8e68f9d39119e42014415715
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669345"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969905"
 ---
 # <a name="comments-dmx"></a>주석(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   DMX (데이터 마이닝 확장)의 주석은 실행 되지 않는 프로그램 코드의 텍스트 문자열입니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . 주석은 설명이라고도 합니다. 주석을 사용하여 코드에 대한 설명을 기록하거나 코드를 검사할 때 DMX 문 또는 스크립트 부분이 임시로 실행되지 않도록 할 수 있습니다.  
   

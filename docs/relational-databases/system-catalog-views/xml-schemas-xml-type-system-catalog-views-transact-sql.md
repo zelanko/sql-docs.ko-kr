@@ -15,31 +15,55 @@ helpviewer_keywords:
 ms.assetid: e92304ae-f920-4b28-8f63-6324973ba359
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c057221d9d5cc7252d7dd290d438f647a98240d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ba9b2512e664e4078ea4861f7324a7fff8451f8c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895219"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86899204"
 ---
 # <a name="xml-schemas-xml-type-system-catalog-views-transact-sql"></a>XML 스키마(XML 유형 시스템) 카탈로그 뷰(Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   이 섹션에서 다음과 같은 카탈로그 뷰를 설명합니다.  
-  
-|||  
-|-|-|  
-|[sys.column_xml_schema_collection_usage](../../relational-databases/system-catalog-views/sys-column-xml-schema-collection-usages-transact-sql.md)|[sys.parameter_xml_schema_collection_usages](../../relational-databases/system-catalog-views/sys-parameter-xml-schema-collection-usages-transact-sql.md)|  
-|[sys.selective_xml_index_paths](../../relational-databases/system-catalog-views/sys-selective-xml-index-paths-transact-sql.md)|[sys.xml_schema_attributes](../../relational-databases/system-catalog-views/sys-xml-schema-attributes-transact-sql.md)|  
-|[sys.xml_schema_model_groups](../../relational-databases/system-catalog-views/sys-xml-schema-model-groups-transact-sql.md)|[sys.xml_schema_component_placements](../../relational-databases/system-catalog-views/sys-xml-schema-component-placements-transact-sql.md)|  
-|[sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)|[sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)|  
-|[sys.xml_schema_namespaces](../../relational-databases/system-catalog-views/sys-xml-schema-namespaces-transact-sql.md)|[sys.xml_schema_elements](../../relational-databases/system-catalog-views/sys-xml-schema-elements-transact-sql.md)|  
-|[sys.xml_schema_types](../../relational-databases/system-catalog-views/sys-xml-schema-types-transact-sql.md)|[sys.xml_schema_facets](../../relational-databases/system-catalog-views/sys-xml-schema-facets-transact-sql.md)|  
-|[sys.xml_schema_wildcard_namespaces](../../relational-databases/system-catalog-views/sys-xml-schema-wildcard-namespaces-transact-sql.md)|[sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)|  
-|[sys.xml_schema_wildcards](../../relational-databases/system-catalog-views/sys-xml-schema-wildcards-transact-sql.md)||  
+
+:::row:::
+    :::column:::
+        [sys.column_xml_schema_collection_usage](../../relational-databases/system-catalog-views/sys-column-xml-schema-collection-usages-transact-sql.md)
+        
+        [sys.selective_xml_index_paths](../../relational-databases/system-catalog-views/sys-selective-xml-index-paths-transact-sql.md)
+        
+        [sys.xml_schema_model_groups](../../relational-databases/system-catalog-views/sys-xml-schema-model-groups-transact-sql.md)
+        
+        [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)
+        
+        [sys.xml_schema_namespaces](../../relational-databases/system-catalog-views/sys-xml-schema-namespaces-transact-sql.md)
+        
+        [sys.xml_schema_types](../../relational-databases/system-catalog-views/sys-xml-schema-types-transact-sql.md)
+        
+        [sys.xml_schema_wildcard_namespaces](../../relational-databases/system-catalog-views/sys-xml-schema-wildcard-namespaces-transact-sql.md)
+        
+        [sys.xml_schema_wildcards](../../relational-databases/system-catalog-views/sys-xml-schema-wildcards-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.parameter_xml_schema_collection_usages](../../relational-databases/system-catalog-views/sys-parameter-xml-schema-collection-usages-transact-sql.md)
+        
+        [sys.xml_schema_attributes](../../relational-databases/system-catalog-views/sys-xml-schema-attributes-transact-sql.md)
+        
+        [sys.xml_schema_component_placements](../../relational-databases/system-catalog-views/sys-xml-schema-component-placements-transact-sql.md)
+        
+        [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)
+        
+        [sys.xml_schema_elements](../../relational-databases/system-catalog-views/sys-xml-schema-elements-transact-sql.md)
+        
+        [sys.xml_schema_facets](../../relational-databases/system-catalog-views/sys-xml-schema-facets-transact-sql.md)
+        
+        [sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)
+    :::column-end:::
+:::row-end:::
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Transact-sql&#41;&#40;시스템 뷰](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

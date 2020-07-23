@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b9c623a1e99053e796609dc82f27519f27c07a9d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6fdbc6ef265d51484160ab57a87e5672362326cc
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68049296"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970074"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel(MDX)
 
@@ -33,13 +33,13 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  집합을 반환하는 유효한 MDX 식입니다.  
   
  *Level_Expression*  
- (선택 사항). 드릴다운할 수준을 명시적으로 식별하는 MDX 식입니다. 수준 식을 지정하는 경우 아래의 인덱스 인수를 건너뛰세요.  
+ (선택 사항) 드릴다운할 수준을 명시적으로 식별하는 MDX 식입니다. 수준 식을 지정하는 경우 아래의 인덱스 인수를 건너뛰세요.  
   
- *인덱스*  
- (선택 사항). 집합 내에서 드릴다운할 대상 계층 번호를 지정하는 유효한 숫자 식입니다. Level_Expression 대신 인덱스 수준을 사용하여 드릴다운할 수준을 명시적으로 식별할 수 있습니다.  
+ *Index*  
+ (선택 사항) 집합 내에서 드릴다운할 대상 계층 번호를 지정하는 유효한 숫자 식입니다. Level_Expression 대신 인덱스 수준을 사용하여 드릴다운할 수준을 명시적으로 식별할 수 있습니다.  
   
  *Include_Calc_Members*  
- (선택 사항). 드릴다운 수준에서 계산된 구성원 포함 여부(존재하는 경우)를 나타내는 플래그입니다.  
+ (선택 사항) 드릴다운 수준에서 계산된 구성원 포함 여부(존재하는 경우)를 나타내는 플래그입니다.  
   
 ## <a name="remarks"></a>설명  
  **DrilldownLevel** 함수는 지정 된 집합에 포함 된 멤버를 기반으로 하는 자식 멤버 집합을 계층적 순서로 반환 합니다. 이때 함수의 결과 집합에 포함되는 모든 자식 구성원이 해당 부모 구성원 바로 아래에 포함된다는 점만 제외하고 지정된 집합의 원래 구성원 순서가 유지됩니다.  
@@ -52,7 +52,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
   
  수준 식과 인덱스 값이 모두 지정되지 않은 경우 이 함수는 지정된 집합에서 참조되는 첫 번째 차원의 최하위 수준에 있는 구성원의 자식만 검색하여 집합을 계층적 순서로 구성합니다.  
   
- XMLA 속성 MdpropMdxDrillFunctions를 쿼리하면 서버에서 드릴링 함수에 대해 제공 하는 지원 수준을 확인할 수 있습니다. 자세한 내용은 [지원 되는 Xmla 속성 &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 를 참조 하세요.  
+ XMLA 속성 MdpropMdxDrillFunctions를 쿼리하면 서버에서 드릴링 함수에 대해 제공 하는 지원 수준을 확인할 수 있습니다. 자세한 내용은 [지원 되는 Xmla 속성 &#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 를 참조 하세요.  
   
 ## <a name="examples"></a>예  
  Adventure Works 큐브를 사용하여 SSMS의 MX 쿼리 창에서 다음 예를 시도할 수 있습니다.  

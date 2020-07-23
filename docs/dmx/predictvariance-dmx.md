@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 13beb2a9a99ceea1d517e9ef2c77a071d7c72d30
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 6217df2efb63b691ad565ea4d6466cdbd5831830
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666865"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970681"
 ---
 # <a name="predictvariance-dmx"></a>PredictVariance(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   지정한 열의 분산을 반환합니다.  
   
@@ -31,7 +31,7 @@ PredictVariance(<scalar column reference>)
  스칼라 열  
   
 ## <a name="return-type"></a>반환 형식  
- * \<>스칼라 열 참조 *로 지정 된 형식의 스칼라 값입니다.  
+ 로 지정 된 형식의 스칼라 값입니다 *\<scalar column reference>* .  
   
 ## <a name="remarks"></a>설명  
  열 참조가 불연속 인 경우 불연속 값에서 분산을 계산할 수 없기 때문에 **Predictvariance** 는 0을 반환 합니다.  

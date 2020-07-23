@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0264c6d5c533510e7350e2f88e270d2cc7538dd3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 24840ac01f448270e43065887746fd7230be4d35
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643598"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914665"
 ---
 # <a name="atomization-xquery"></a>원자화(XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   원자화는 항목의 유형 값을 추출하는 프로세스입니다. 이 프로세스는 특정 상황에서 적용됩니다. 산술 및 비교 연산자와 같은 일부 XQuery 연산자는 이 프로세스에 따라 달라집니다. 예를 들어 산술 연산자를 노드에 직접 적용 하면 [데이터 함수](../xquery/data-accessor-functions-data-xquery.md)를 암시적으로 호출 하 여 노드의 형식화 된 값이 먼저 검색 됩니다. 이렇게 하면 원자 값이 피연산자로 산술 연산자에 전달됩니다.  
   

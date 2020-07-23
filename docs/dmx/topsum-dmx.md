@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5a616db3e2fd0927faf9273bfaf55bb31e94391c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: c8247440f0e9d074e24eab3e9836fdb46bd0855e
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669907"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970243"
 ---
 # <a name="topsum-dmx"></a>TopSum(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   누적 합계가 지정한 값 이상이 되는 테이블의 맨 위 행을 내림차순으로 반환합니다.  
   
@@ -28,13 +28,13 @@ TopSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>적용 대상  
- 테이블 열 참조>와 같이 테이블을 반환 하는 식 \< 또는 테이블을 반환 하는 함수입니다.  
+ 테이블을 반환 하는 식 (예:) \<table column reference> 또는 테이블을 반환 하는 함수입니다.  
   
 ## <a name="return-type"></a>반환 형식  
- \<테이블 식>  
+ \<table expression>  
   
 ## <a name="remarks"></a>설명  
- **TopSum** 함수는 각 행에 대 한 rank> 식의 계산 된 값을 기준으로 최상위 행을 반환 합니다 .이 값은 \< rank 식의 합계는 \< sum> 인수로 지정 된 합계 이상> 합니다 \< . **TopSum** 는 지정 된 sum 값을 충족 하는 동안 가능한 가장 작은 수의 요소를 반환 합니다.  
+ **TopSum** 함수는 각 행에 대해 계산 된 인수의 값을 기준으로 최상위 행을 내림차순으로 반환 합니다 \<rank expression> .이 값의 합계는 인수에 지정 된 합계 이상이 되도록 합니다 \<rank expression> \<sum> . **TopSum** 는 지정 된 sum 값을 충족 하는 동안 가능한 가장 작은 수의 요소를 반환 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 [기본 데이터 마이닝 자습서](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)를 사용 하 여 작성 하는 연결 모델에 대 한 예측 쿼리를 만듭니다.  

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c6bdacd512dce26d423980cb5af3c91d5947cb24
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 4d5d93d4236b3cf86719c416ba87517401e4b4f5
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881800"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970308"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;원본 데이터 쿼리 &gt; -셰이프
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   여러 데이터 원본으로부터 단일 계층 구조의 테이블(중첩 테이블이 있는 테이블)로 쿼리를 결합합니다. 이 테이블은 마이닝 모델의 사례 테이블이 됩니다.  
   
@@ -57,7 +57,7 @@ APPEND ({ <child table query> }
 ## <a name="remarks"></a>설명  
  부모 테이블 및 자식 테이블에 관련되는 열을 기준으로 쿼리를 정렬해야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  [INSERT INTO &#40;DMX&#41;](../dmx/insert-into-dmx.md) 문 내에서 다음 예를 사용 하 여 중첩 테이블을 포함 하는 모델을 학습 시킬 수 있습니다. **SHAPE** 문 내의 두 테이블은 **ordernumber** 열을 통해 관련 됩니다.  
   
 ```  

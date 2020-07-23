@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c296948a41096c5c63b0e7019649d48bac8a23ca
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7b25146ce36a0b58bb46bcacb4348f8e34221068
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669430"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971820"
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>DMX(Data Mining Extensions) 함수 참조
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 DMX(Data Mining Extensions) 언어의 일부 함수를 지원합니다. 이러한 함수는 예측 쿼리의 결과를 확장하여 예측에 대한 더 많은 정보를 제공합니다. 함수는 또한 예측 결과의 반환 방법에 대한 제어 기능도 제공합니다. 다음 표에서는 DMX의 함수를 사용하는 방법을 이해하는 데 도움이 되는 리소스의 링크를 제공합니다.  
   

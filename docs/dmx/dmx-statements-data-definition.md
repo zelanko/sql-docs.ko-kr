@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9f93c9cc6330aba88317a96698bd3e3232e3efaa
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7c9646fa7e2ba438bb2f2b57ac37b2ceca5a957c
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669750"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969844"
 ---
 # <a name="dmx-statements---data-definition"></a>DMX 문 - 데이터 정의 
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   다음 표에서는 DMX(Data Mining Extensions)의 데이터 마이닝 DDL(데이터 정의 언어) 문 중 일부를 나열합니다.  
   

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 600f3bc6d5ad4b9f7f67e15b894185123dccca8b
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 1ce350c4d99fec986d8df06c364e6f6adac94324
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669758"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969874"
 ---
 # <a name="delete-dmx"></a>DELETE(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   사용할 DMX(Data Mining Extensions) 절에 따라 마이닝 모델, 마이닝 구조, 또는 마이닝 구조 및 연결된 모든 마이닝 모델을 지웁니다.  
   
@@ -42,11 +42,11 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
   
 |인수를 제거합니다.|결과|  
 |---------------|------------|  
-|마이닝 구조 구조에서 삭제* \<>*<br /><br /> 또는<br /><br /> 마이닝 구조* \< 구조>* 에서 삭제 합니다. 콘텐트가|마이닝 구조에서 ProcessClear를 수행 합니다. 마이닝 구조 및 연결된 마이닝 모델에서 모든 내용이 지워집니다.|  
-|마이닝 구조* \< 구조>* 에서 삭제 합니다. 경우|마이닝 구조에 대해 ProcessClearStructureOnly를 수행 합니다. 마이닝 구조에서 모든 내용이 지워지고 연결된 마이닝 모델은 그대로 유지됩니다. 마이닝 구조를 지운 후에는 연결된 마이닝 모델에서 드릴스루가 실행되지 않습니다.|  
-|마이닝 모델 모델에서 삭제* \<>*<br /><br /> 또는<br /><br /> 마이닝 모델* \< 모델>* 에서 삭제 합니다. 콘텐트가|마이닝 모델에서 ProcessClear를 수행 하지만 상태 값은 그대로 유지 합니다. 상태 값은 열에서 가능한 상태입니다. 예를 들어 Gender 열의 상태 값은 Male 및 Female입니다.|  
+|마이닝 구조에서 삭제*\<structure>*<br /><br /> 또는<br /><br /> 마이닝 구조에서 삭제 *\<structure>* 합니다. 콘텐트가|마이닝 구조에서 ProcessClear를 수행 합니다. 마이닝 구조 및 연결된 마이닝 모델에서 모든 내용이 지워집니다.|  
+|마이닝 구조에서 삭제 *\<structure>* 합니다. 경우|마이닝 구조에 대해 ProcessClearStructureOnly를 수행 합니다. 마이닝 구조에서 모든 내용이 지워지고 연결된 마이닝 모델은 그대로 유지됩니다. 마이닝 구조를 지운 후에는 연결된 마이닝 모델에서 드릴스루가 실행되지 않습니다.|  
+|마이닝 모델에서 삭제*\<model>*<br /><br /> 또는<br /><br /> 마이닝 모델에서 삭제 *\<model>* 합니다. 콘텐트가|마이닝 모델에서 ProcessClear를 수행 하지만 상태 값은 그대로 유지 합니다. 상태 값은 열에서 가능한 상태입니다. 예를 들어 Gender 열의 상태 값은 Male 및 Female입니다.|  
   
- 형식을 처리 하는 방법에 대 한 자세한 내용은 [형식 요소 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla)를 참조 하세요.  
+ 형식을 처리 하는 방법에 대 한 자세한 내용은 [형식 요소 &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/type-element-xmla)를 참조 하세요.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 NB_Sample 모델에서 모든 내용을 제거합니다.  
