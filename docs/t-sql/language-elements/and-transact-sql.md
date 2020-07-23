@@ -22,12 +22,12 @@ ms.assetid: b61d7f8d-5a51-49b7-91dd-f6190a5a0fb9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4acc2dfb88767dd246dc8e8c5af413235a8bb803
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b3d054610c1c44f5d3826c90b28bc8dd899c23c3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85991207"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923019"
 ---
 # <a name="and-transact-sql"></a>AND(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "85991207"
 boolean_expression AND boolean_expression  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *boolean_expression*  
  [TRUE](../../t-sql/language-elements/expressions-transact-sql.md), **FALSE** 또는 **UNKNOWN**의 부울 값을 반환하는 유효한 **식**입니다.  
   

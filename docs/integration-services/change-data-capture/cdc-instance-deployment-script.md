@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 8fa82822-ac99-48ef-a18d-f4f3a77105b4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 595af36a5eb19ff6fd019df8a2b9203537350c5a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 34e5b1872c23d28a59ae0a9ac762c470fc297ee0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298904"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921198"
 ---
 # <a name="cdc-instance-deployment-script"></a>CDC 인스턴스 배포 스크립트
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   CDC 인스턴스 배포 스크립트를 표시하는 CDC 인스턴스 배포 스크립트 대화 상자입니다. 이 스크립트를 사용하여 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 아티팩트를 포함하는 CDC 데이터베이스를 다시 만들 수 있습니다.  

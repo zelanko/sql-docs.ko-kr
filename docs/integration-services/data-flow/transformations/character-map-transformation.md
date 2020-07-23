@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8211045a72ae56b04bb93b7be7e83f296f2467e5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 46d4833b6879330e62b89470b8a542f8f6ed910e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291663"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922464"
 ---
 # <a name="character-map-transformation"></a>문자표 변환
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   문자표 변환은 소문자에서 대문자로의 변환과 같은 문자열 함수를 문자 데이터에 적용합니다. 이 변환은 문자열 데이터 형식의 열 데이터에서만 실행됩니다.  

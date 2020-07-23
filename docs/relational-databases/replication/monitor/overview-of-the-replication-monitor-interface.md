@@ -14,15 +14,15 @@ ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 4906f088a20b6028958bf1d613e839dbfe568f26
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 5f967280890199b4b3313a65b89664b0a511184d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159791"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921528"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>복제 모니터 인터페이스 개요
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터는 모든 복제 작업을 게시자 관점 또는 배포자 관점으로 제공합니다. 왼쪽 창에서 모니터에 게시자를 추가하면 오른쪽 창에 게시자, 해당 게시, 게시에 대한 구독 및 다양한 복제 에이전트 정보가 표시됩니다. 복제 토폴로지에 대한 정보를 제공하는 것 외에도 복제 모니터를 사용하여 에이전트 시작 및 중지, 데이터 유효성 검사 등 다양한 태스크를 수행할 수 있습니다.  
   
 ## <a name="viewing-information-for-the-entire-topology"></a>전체 토폴로지 정보 보기  

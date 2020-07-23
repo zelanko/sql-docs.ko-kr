@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fd8b17acb904ae0d33b06e85531e531792f1d60e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 84922b21e074cbef8afe233e41746a51dfd13d20
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295699"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922069"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>디지털 서명을 사용하여 패키지 원본 확인
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에 해당 원본을 식별하는 디지털 인증서를 사용하여 서명할 수 있습니다. 디지털 인증서를 사용하여 패키지에 서명하면 패키지를 로드하기 전에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 디지털 서명을 확인하도록 할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 서명을 확인하도록 하려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 또는 **dtexec** 유틸리티(dtexec.exe)에서 옵션을 설정하거나 선택적 레지스트리 값을 설정합니다.  

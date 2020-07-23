@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dc0df82879f835428640b403a5d9b2befa66e34a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 226dd6c94787af8c32d17cd7bf923a860645c5ac
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294503"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921722"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>파일 연결 관리자 추가 대화 상자 UI 참조
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **파일 연결 관리자 추가** 대화 상자를 사용하여 파일 또는 폴더 그룹에 대한 연결을 정의할 수 있습니다.  

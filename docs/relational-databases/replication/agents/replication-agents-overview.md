@@ -26,15 +26,15 @@ ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 58c905c60a965308410f9b99dbf604e2f2f5a517
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 18b3914f2ed9be429f29b929bc74623af9f707bf
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159661"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922857"
 ---
 # <a name="replication-agents-overview"></a>복제 에이전트 개요
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   복제는 에이전트라는 여러 독립 실행형 프로그램을 사용하여 변경 내용 추적 및 데이터 배포와 연관된 태스크를 수행합니다. 기본적으로 복제 에이전트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트에서 예약된 작업으로 실행되므로 해당 작업을 실행하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트가 실행 중이어야 합니다. 복제 에이전트는 명령줄이나 RMO(복제 관리 개체)를 사용하는 애플리케이션에서 실행할 수도 있습니다. 복제 에이전트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터 및 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 관리할 수 있습니다.  
   
 ## <a name="sql-server-agent"></a>SQL Server 에이전트  

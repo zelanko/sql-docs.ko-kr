@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 91f0ca0980eceb5ccdd2b1c0814661695f573d50
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7120a86d04a21f448d423719fa7d963658a2774a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291654"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922467"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>느린 변경 차원 마법사를 사용하여 출력 구성
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   느린 변경 차원 마법사는 느린 변경 차원 변환에 대한 편집기 역할을 수행합니다. 느린 변경 차원 데이터에 대한 데이터 흐름의 작성 및 구성은 복잡한 태스크일 수 있습니다. 느린 변경 차원 마법사를 사용하면 열을 매핑하고, 비즈니스 키 열을 선택하고, 열 변경 특성을 설정하고, 유추 차원 멤버에 대한 지원을 구성하는 단계별 안내에 따라 가장 쉬운 방법으로 느린 변경 차원 변환 출력에 대한 데이터 흐름을 작성할 수 있습니다.  

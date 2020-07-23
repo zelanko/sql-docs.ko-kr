@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1bee1c469ca7febfa114a3143d5842db74356ed9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5d84724471eba8f1b5215a976e51e8c498352e05
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294369"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923151"
 ---
 # <a name="multiple-files-connection-manager"></a>다중 파일 연결 관리자
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   다중 파일 연결 관리자를 사용하면 패키지에서 기존 파일 및 폴더를 참조하거나 런타임에 파일 및 폴더를 만들 수 있습니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "71294369"
   
  다중 파일 연결 관리자에서 다중 파일 및 폴더를 참조하는 경우 파일 및 폴더의 경로는 세로줄 문자(|)로 구분됩니다. 연결 관리자의 **ConnectionString** 속성은 다음 형식을 갖습니다.  
   
- \<*경로*>|\<*경로*>  
+ \<*path*>|\<*path*>  
   
  또한 와일드카드 문자를 사용하여 다중 파일이나 폴더를 지정할 수 있습니다. 예를 들어 C 드라이브의 모든 텍스트 파일을 참조하려면 **ConnectionString** 속성 값을 C:\\*.txt로 설정할 수 있습니다.  
   

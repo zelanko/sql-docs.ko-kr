@@ -20,12 +20,12 @@ ms.assetid: 1d69893b-e5c3-441d-8dd8-0e5eb872ecfc
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee91b9b909820a36b8ffa152ff88a3018ed4950c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 236d829e8c3b5f7ea41f1d9713d3b1ddd4c6f779
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67894905"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923347"
 ---
 # <a name="-division-transact-sql"></a>/(나누기)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,9 @@ ms.locfileid: "67894905"
 dividend / divisor  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *dividend*  
  나눌 숫자 식입니다. *dividend*는 숫자 데이터 형식 범주에서 **datetime** 및 **smalldatetime** 데이터 형식을 제외한 데이터 형식 중 하나에 대한 올바른 [식](../../t-sql/language-elements/expressions-transact-sql.md)일 수 있습니다.  
   

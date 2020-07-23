@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f69f0553eecb8ebe13dc23f50982ac09ef63e5a0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e2eaa85cc4c4fe7a93ffe962b74527031bd7938e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71299075"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922677"
 ---
 # <a name="working-with-variables-programmatically"></a>프로그래밍 방식으로 변수 사용
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   변수는 패키지, 컨테이너, 태스크 및 이벤트 처리기에서 동적으로 값을 설정하고 프로세스를 제어하는 데 사용됩니다. 선행 제약 조건에서 변수를 사용하여 다른 태스크로의 데이터 흐름 방향을 제어할 수도 있습니다. 다음과 같은 다양한 용도로 변수를 사용할 수 있습니다.  

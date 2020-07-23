@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 610f75fa8b706dab60b9691b4f5e5e82c2bdb93f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2ab217d81620b28ced334842dcff3643f686a98
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294619"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921757"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>변경 데이터에 대한 쿼리 준비
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 제어 흐름에서 세 번째이자 마지막 태스크는 변경 데이터 쿼리를 준비하고 데이터 흐름 태스크를 추가하는 것입니다.  

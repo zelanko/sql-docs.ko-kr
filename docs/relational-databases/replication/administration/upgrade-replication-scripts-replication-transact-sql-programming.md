@@ -21,15 +21,15 @@ ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b186061bc487129721526693af862a9d789c8551
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: b08199f3cbc0d0ae87b5902600188908dac6615d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159701"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923448"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>복제 스크립트 업그레이드(복제 Transact-SQL 프로그래밍)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트 파일을 사용하여 복제 토폴로지를 프로그래밍 방식으로 구성할 수 있습니다. 자세한 내용은 [복제 시스템 저장 프로시저 개념](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)을 참조하세요.  
   
 > [!IMPORTANT]  

@@ -15,15 +15,15 @@ ms.assetid: c09007f0-9374-4f60-956b-8a87670cd043
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 222726b75703b5c59204e2180d453a8f54aeaff8
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: ba855f4bee897f6bcadcc30eaa6de7a6be9dd693
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160071"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921314"
 ---
 # <a name="replicate-schema-changes"></a>스키마 변경 내용 복제
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 스키마 변경 내용을 복제하는 방법에 대해 설명합니다.  
   
  게시된 아티클에서 다음 스키마를 변경하면 기본적으로 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자에 변경 내용이 전파됩니다.  

@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1610f98d77ba4a762a63f3ccf5a445393537d36b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73c837f4bbdd8cb7c7a6060beaea6bc97eba0a02
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296336"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922390"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사에서 데이터 형식 매핑
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서는 새로운 대상 테이블 및 파일에서 열의 이름, 데이터 형식 및 데이터 형식 속성을 설정할 수 있지만 열 값에 대한 사용자 지정 변환을 지정할 수는 없습니다. 결과적으로, 원본-대상 간의 기본 제공 데이터 형식 매핑이 중요합니다.  

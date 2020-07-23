@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0bc268c2baea6e0e661fac123df9fe19ec60252c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b4abc0de87f8dc11fbbd1d66b32b2eb9a0f6f2b9
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287647"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922035"
 ---
 # <a name="security-overview-integration-services"></a>보안 개요(Integration Services)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 보안은 풍부하고 유연한 보안 환경을 제공하는 여러 계층으로 구성되어 있습니다. 이러한 보안 계층에서는 디지털 서명, 패키지 속성, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 역할 및 운영 체제 권한을 사용합니다. 이러한 보안 기능은 대부분 ID 및 액세스 제어라는 범주에 해당합니다.  

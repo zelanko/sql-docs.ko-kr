@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 025961e39a4f0b1beb0588f0dc7ef2c668bd09a2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c396f85d05203a9a2c01825adb94bd0cd2ae910e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294766"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921707"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>변경 데이터의 준비 여부 확인
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 제어 흐름에서 두 번째 태스크는 선택한 간격에 대한 변경 데이터가 준비되었는지 확인하는 것입니다. 비동기 캡처 프로세스에서 선택한 엔드포인트까지 변경 내용을 아직 다 처리하지 않았을 수 있기 때문에 이 단계가 필요합니다.  

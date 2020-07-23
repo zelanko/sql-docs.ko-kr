@@ -22,15 +22,15 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 490dc9907114db22c0b506f6fa436f429cbd1fad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4b10938502a052e0713a43b40c1feb5ae298f99e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85740841"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923449"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>스냅샷 및 트랜잭션 복제의 백업 및 복원을 위한 전략
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
   스냅샷 및 트랜잭션 복제에 대한 백업 및 복원 전략을 설계할 때 다음 세 가지 영역을 고려해야 합니다.  
   
 -   백업할 데이터베이스

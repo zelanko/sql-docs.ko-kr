@@ -10,16 +10,16 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 987217c1afe07b5e917f415b9a5bc0d784ab7c6d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 96cbbba57e74b0ffaa9dac9d012faf38e34a1ab8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903777"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922072"
 ---
 # <a name="troubleshoot-scale-out"></a>Scale Out 문제 해결
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

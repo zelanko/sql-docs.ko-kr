@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 260c1617-eecc-4007-a84d-3c5778ce46b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1ba543153e90059312223b2477e9cebd63fbaf79
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f5b462a03b15042c6fbb801b121bb04a07b7966b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294723"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921602"
 ---
 # <a name="generate-mirror-tables-and-cdc-capture-instances"></a>미러 테이블 및 CDC 캡처 인스턴스 생성
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   미러 테이블 생성 페이지를 사용하여 CDC 인스턴스에 포함된 테이블에 대한 미러 테이블 생성  

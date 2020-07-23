@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 676bbf9fb96521ceaa24f58b448182506307f691
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1bcdd5c54db4695e3b8d7b97d10d6de0ba8f9226
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298394"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923067"
 ---
 # <a name="check-database-integrity-task"></a>데이터베이스 무결성 검사 태스크
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   데이터 무결성 검사 태스크는 지정한 데이터베이스에서 모든 개체의 할당과 구조적 무결성을 검사합니다. 단일 데이터베이스나 여러 개의 데이터베이스를 검사할 수 있으며 데이터베이스 인덱스 검사 여부도 선택할 수 있습니다.  

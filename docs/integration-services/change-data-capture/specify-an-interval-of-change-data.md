@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3cb5949943cb03095328bc43599fbfef2fa74da2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ad9785a9cddc36d368a01ec507fe0c7b3909794b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294568"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921287"
 ---
 # <a name="specify-an-interval-of-change-data"></a>변경 데이터의 간격 지정
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 제어 흐름에서 첫 번째 태스크는 변경 간격의 엔드포인트를 계산하는 것입니다. 이러한 엔드포인트는 **datetime** 값이며 패키지에서 나중에 사용하기 위해 패키지 변수에 저장됩니다.  

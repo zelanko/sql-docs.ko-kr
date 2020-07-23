@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 906809946b22012e6a8831017fb57769fc6063b8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5c30ffbbeab823935db503d4e420df6b3c95f312
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298976"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922637"
 ---
 # <a name="package-properties-dialog-box"></a>패키지 속성 대화 상자
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **패키지 속성** 대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 저장된 패키지의 속성을 볼 수 있습니다.  

@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd9266512675c4127a99903e6de0d1da5ccaec70
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ae6a1109ce6c2631f4adabd6d828794a1a21869
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295955"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922214"
 ---
 # <a name="lesson-4-2-create-a-corrupted-file"></a>4-2단원: 손상된 파일 만들기
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

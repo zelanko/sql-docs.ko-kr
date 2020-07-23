@@ -29,12 +29,12 @@ ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a3e654527c1672f9b26d5e36d198ee860c9ffa0
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d30d04f709a4caac5f3ec266f1130737264029f3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635865"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922960"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +60,9 @@ COMMIT [ TRAN | TRANSACTION ]
 ``` 
  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *transaction_name*  
  **적용 대상:** SQL Server 및 Azure SQL Database
  

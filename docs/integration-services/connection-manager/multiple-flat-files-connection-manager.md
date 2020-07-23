@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c93f0be480341abb59038db34616a94d4b475952
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dc4c1b81917e07ec23b543f64cb81942104ad31d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298511"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923114"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>다중 플랫 파일 연결 관리자
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   다중 플랫 파일 연결 관리자를 사용하면 패키지에서 다중 플랫 파일의 데이터에 액세스할 수 있습니다. 예를 들어 데이터 흐름 태스크가 For 루프 컨테이너와 같은 루프 컨테이너 내부에 있는 경우 플랫 파일 원본에서 다중 플랫 파일 연결 관리자를 사용할 수 있습니다. 각 컨테이너 루프에서 플랫 파일 원본은 다중 플랫 파일 연결 관리자가 제공하는 다음 파일 이름에서 데이터를 로드합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "71298511"
   
  다중 플랫 파일 연결 관리자에서 다중 파일을 참조하는 경우 파일의 경로는 세로줄 문자(|)로 구분됩니다. 연결 관리자의 **ConnectionString** 속성은 다음 형식을 갖습니다.  
   
- \<*경로*>|\<*경로*>  
+ \<*path*>|\<*path*>  
   
  또한 와일드카드 문자를 사용하여 다중 파일을 지정할 수 있습니다. 예를 들어 C 드라이브의 모든 텍스트 파일을 참조하려면 **ConnectionString** 속성 값을 C:\\*.txt로 설정할 수 있습니다.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "71298511"
  **열 구분 기호**  
  사용 가능한 열 구분 기호의 목록에서 선택하거나 구분 기호 텍스트를 입력합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**{CR}{LF}**|열이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.|  
 |**{CR}**|열이 캐리지 리턴으로 구분됩니다.|  
@@ -203,7 +203,7 @@ ms.locfileid: "71298511"
  **행 구분 기호**  
  사용 가능한 행 구분 기호의 목록에서 선택하거나 구분 기호 텍스트를 입력합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**{CR}{LF}**|행이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.|  
 |**{CR}**|행이 캐리지 리턴으로 구분됩니다.|  

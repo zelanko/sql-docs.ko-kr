@@ -21,15 +21,15 @@ ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 60e89b8d24a96b6694a4e11352c8081e2df318f5
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 95166948ff2d447eaac439442230af91d75c1bf3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159681"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922858"
 ---
 # <a name="replication-agent-profiles"></a>복제 에이전트 프로필
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   복제가 구성되면 에이전트 프로필 집합이 배포자에 설치됩니다. 에이전트 프로필에는 에이전트가 실행될 때마다 사용할 매개 변수 집합이 포함됩니다. 각 에이전트는 시작 과정 중에 배포자로 로그인하여 해당 프로필의 매개 변수에 대해 쿼리합니다. 웹 동기화를 사용하는 병합 구독의 경우 구독자에서 프로필을 다운로드하고 저장합니다. 프로필이 변경되면 다음에 병합 에이전트가 실행될 때 구독자에 있는 프로필이 업데이트됩니다. 웹 동기화에 대한 자세한 내용은 [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)를 참조하십시오.  
   
  복제는 각 에이전트에 대한 기본 프로필과 로그 판독기 에이전트, 배포 에이전트 및 병합 에이전트에 대한 미리 정의된 추가 프로필을 제공합니다. 제공된 프로필뿐 아니라 애플리케이션 요구 사항에 찾는 프로필을 만들 수 있습니다. 에이전트 프로필을 사용하면 해당 프로필에 연결된 모든 에이전트에 대해 키 매개 변수를 쉽게 변경할 수 있습니다. 예를 들어 스냅샷 에이전트가 20개인 상태에서 쿼리 제한 시간 값을 변경해야 하는 경우( **-QueryTimeout** 매개 변수) 스냅샷 에이전트에서 사용하는 프로필을 업데이트할 수 있으며 다음에 해당 유형의 모든 에이전트가 실행될 때 자동으로 새 값을 사용하여 시작됩니다.  

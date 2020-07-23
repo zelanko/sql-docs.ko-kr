@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f226dd4b96774de236a3938662be2bf506db8cad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 005ec67edba5dd57a42d1866dbba169c0d32f070
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706435"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923343"
 ---
 # <a name="fetch-transact-sql"></a>FETCH(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +51,9 @@ FETCH
 [ INTO @variable_name [ ,...n ] ]   
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  NEXT  
  현재 행 바로 다음의 결과 행을 반환하며 현재 행을 반환되는 행 앞의 행으로 만듭니다. 커서에 대해 `FETCH NEXT`가 첫 번째 인출인 경우 결과 집합의 첫 번째 행을 반환합니다. `NEXT`는 커서 인출의 기본 옵션입니다.  
   

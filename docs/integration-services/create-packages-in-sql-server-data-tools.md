@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 96110e35227fbca970fd3bc92bcee314b5ebae6c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8366969291ce3c8e970986376d7f3938fdb174b1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293700"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923249"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>SQL Server Data Tools에서 패키지 만들기
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 다음 방법 중 하나를 사용하여 새 패키지를 만들 수 있습니다.  

@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0890fbce533a540300ebd6b7da37a1fc26572a52
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5fdb7545f2dc8bf5d27b26e54bf76b0307aad235
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768071"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921421"
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>PostgreSQL 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 이 항목에서는 SQL Server 가져오기 및 내보내기 마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **PostgreSQL** 데이터 원본에 연결하는 방법을 보여 줍니다. 

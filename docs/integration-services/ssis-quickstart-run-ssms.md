@@ -8,16 +8,16 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9b9f44c7fbd4b0b801347f1b1360165fb504e6bf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9e89ca342011010eebb330eb20319a2bf9a8d9ba
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71281510"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921853"
 ---
 # <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)를 사용하여 SSIS 패키지 실행
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 이 빠른 시작에서는 SSMS(SQL Server Management Studio)를 사용하여 SSIS 카탈로그 데이터베이스에 연결한 다음, SSIS의 개체 탐색기에서 SSIS 카탈로그에 저장된 SSIS 패키지를 실행하는 방법을 보여줍니다.

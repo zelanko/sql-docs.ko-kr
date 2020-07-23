@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 66733b12bbf3b4723449eb09f93182efb1f6462c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2285a23325b91a78759d1dac26725e0e570b23fb
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71290174"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923466"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD(SSIS 식)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   날짜에서 지정한 날짜 부분에 날짜 또는 시간 간격을 나타내는 숫자를 더한 후 새로운 DT_DBTIMESTAMP 값을 반환합니다. 숫자 매개 변수는 정수로 계산되고 날짜 매개 변수는 유효한 날짜여야 합니다.  

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f81dd17da405d1fe9b3dd6e73e569df91e10d4e2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e33ca36bc30cd5f2420ca67db94bba3163cc5156
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898946"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923414"
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,9 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *transaction_name*  
  MS DTC 유틸리티에서 분산 트랜잭션을 추적하는 데 사용되는 사용자 정의 트랜잭션 이름입니다. *transaction_name*은 식별자 규칙을 따라야 하며 \<=32자여야 합니다.  
   

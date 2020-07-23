@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 38ba2374821505dc3541ea05e76fd8aaecdcb5fc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c233d75beabca847937f85977acfd0e2230dc7c2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297633"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922785"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>속성 식의 열거 상수
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   속성 식에 열거자 멤버 목록의 값이 포함된 경우 식에 멤버 이름 대신 열거자 멤버의 숫자 값을 사용해야 합니다. 예를 들어 식에 **LoggingMode** 속성을 설정한 경우 이름인 Disabled 대신 숫자 값 2를 사용해야 합니다.  

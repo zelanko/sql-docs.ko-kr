@@ -18,16 +18,16 @@ f1_keywords:
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 98f0e19bb0e3eb424d742990ce2f63e3fb0af019
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0bd61166df6d257c6088b1e62c2c5b262207f958
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295710"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921983"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 패키지 업그레이드 마법사 F1 도움말
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   SSIS 패키지 업그레이드 마법사를 사용하여 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 만든 패키지를 최신 릴리스의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에 대한 패키지 형식으로 업그레이드할 수 있습니다.  

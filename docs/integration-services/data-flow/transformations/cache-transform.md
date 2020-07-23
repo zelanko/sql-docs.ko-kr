@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1b934ea191a0dc4f9f276b4e483f5f5671bd0cc3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b9fc1882dec5946e002d906afc07541d0923fc18
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297993"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922501"
 ---
 # <a name="cache-transform"></a>캐시 변환
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   캐시 변환은 데이터 흐름에 있는 연결된 데이터 원본의 데이터를 캐시 연결 관리자에 기록하여 조회 변환에 대한 참조 데이터 세트를 생성합니다. 조회 변환은 연결된 데이터 원본의 입력 열에 있는 데이터를 참조 데이터베이스의 열과 조인하여 조회합니다.  

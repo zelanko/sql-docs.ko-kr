@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 86b2cf26c7af957579c5368ed70262e43db005f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d0b5484de65a497df68ca4d87f6a67ec3581728c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285873"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923084"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>대상 선택(SQL Server 가져오기 및 내보내기 마법사)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
  데이터 원본 및 연결하는 방법에 대한 정보를 제공하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서 **대상 선택**을 표시합니다. 이 페이지에서는 데이터 대상 및 연결하는 방법에 대한 정보를 제공합니다.

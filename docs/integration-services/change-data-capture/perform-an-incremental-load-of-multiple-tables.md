@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f933683e11229500ceea29c3a10180a13c154baf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c52a54708b1842207582909cbfdc3bdfe831b303
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294630"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921315"
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>여러 테이블의 증분 로드 수행
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [변경 데이터 캡처를 사용하여 증분 로드 개선](../../integration-services/change-data-capture/change-data-capture-ssis.md)항목의 다이어그램에서는 한 테이블에서만 증분 로드를 수행하는 기본 패키지를 보여 줍니다. 그러나 한 테이블을 로드하는 작업은 여러 테이블을 증분 로드하는 작업만큼 일반적이지 않습니다.  

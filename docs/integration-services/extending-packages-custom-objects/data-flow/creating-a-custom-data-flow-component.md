@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 9d96bcf5-eba8-44bd-b113-ed51ad0d0521
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 93a2d0db91c8e22146ed3d83bf30d72d9cc3a00e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f7acd3f9c218a068f5af09da21ec21b1fcf6e065
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297283"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921259"
 ---
 # <a name="creating-a-custom-data-flow-component"></a>사용자 지정 데이터 흐름 구성 요소 만들기
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서 데이터 흐름 태스크는 개발자가 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]와 관리형 코드를 사용하여 사용자 지정 데이터 흐름의 원본, 변환 및 대상 구성 요소를 만들 수 있게 해 주는 개체 모델을 제공합니다.  

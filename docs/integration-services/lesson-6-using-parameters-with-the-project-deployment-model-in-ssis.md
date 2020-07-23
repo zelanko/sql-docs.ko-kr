@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: afc1e7ceb6dca21bd562745fe7250500cc9c2033
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e5bcf043f779660692b11cc6238b74d1b83d6af
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903876"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922349"
 ---
 # <a name="lesson-6-use-parameters-with-the-project-deployment-model-in-ssis"></a>6단원: SSIS에서 프로젝트 배포 모델에 매개 변수 사용
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

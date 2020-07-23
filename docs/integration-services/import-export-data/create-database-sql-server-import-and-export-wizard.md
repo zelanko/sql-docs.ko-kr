@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4900f90f4044b32aea673106ad0a7a2a14a8f5cb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f3616da1034fa0c590a4544691e22ffd054eaa10
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296282"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922409"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>데이터베이스 만들기(SQL Server 가져오기 및 내보내기 마법사)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 **대상 선택** 페이지에서 **새로 만들기** 를 선택하여 새 SQL Server 대상 데이터베이스를 만드는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에 **데이터베이스 만들기** 대화 상자가 표시됩니다. 이 페이지에서 새 데이터베이스의 이름을 입력합니다. 필요에 따라 새 데이터베이스의 처음 크기와 자동 증가 및 해당 로그 파일에 대한 설정을 변경할 수도 있습니다. 

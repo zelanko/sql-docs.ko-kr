@@ -8,16 +8,16 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 04f7231dc4781b3c7194a7a34002b67087c9eaf2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52cd26f15dc6c6be1568bc174d0d4658e75af1dd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74947119"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921938"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)를 사용하여 SSIS 프로젝트 배포
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 이 빠른 시작에서는 SSMS(SQL Server Management Studio)를 사용하여 SSIS 카탈로그 데이터베이스에 연결한 다음, Integration Services 배포 마법사를 실행하여 SSIS 프로젝트를 SSIS 카탈로그에 배포하는 방법을 보여줍니다. 

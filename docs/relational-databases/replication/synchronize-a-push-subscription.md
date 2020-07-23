@@ -16,15 +16,15 @@ ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 60901383eeab8202c47f897674140d2e808f5c99
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 67434f137137a443dc0ef7e8708f8d7f37811abd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716692"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921411"
 ---
 # <a name="synchronize-a-push-subscription"></a>밀어넣기 구독 동기화
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]복제 에이전트 [또는 RMO(복제 관리 개체)를 사용하여](../../relational-databases/replication/agents/replication-agents-overview.md)에서 밀어넣기 구독을 동기화하는 방법에 대해 설명합니다.  
   
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]

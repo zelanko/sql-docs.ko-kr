@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc7255cdcb9758f2bdd55b043e70669affadabd8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b877689bbccb0ea4ab206e403b54d15ce189fb79
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285226"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922399"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>테이블 생성 SQL 문(SQL Server 가져오기 및 내보내기 마법사)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 **열 매핑** 대화 상자에서 **대상 테이블 만들기** 를 선택한 다음 **SQL 편집** 을 선택하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서 **테이블 생성 SQL 문** 대화 상자를 표시합니다. 이 페이지에서 마법사가 새 대상 테이블을 만들기 위해 실행하는 **CREATE TABLE** 명령을 검토하고 필요에 따라 사용자 지정합니다.

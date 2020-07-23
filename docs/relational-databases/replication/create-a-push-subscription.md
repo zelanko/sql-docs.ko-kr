@@ -18,15 +18,15 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: d02267b12a80abb7784b552eb8d71fcca89aa8a6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ca0d771c480118d6e97f3f16c01bcc5408cd336a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773951"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921403"
 ---
 # <a name="create-a-push-subscription"></a>밀어넣기 구독 만들기
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 밀어넣기 구독을 만드는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 대해 밀어넣기 구독을 만드는 방법에 대한 자세한 내용은 [SQL Server 이외 구독자에 대한 구독 만들기](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)를 참조하세요.  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]

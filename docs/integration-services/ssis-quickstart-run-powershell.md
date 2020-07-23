@@ -8,16 +8,16 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b3a77db696e684a499ffcfc09fb64271be5c6b64
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a86309c484cac3538b48c797665661341ca6648
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295603"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921887"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>PowerShell을 사용하여 SSIS 패키지 실행
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 이 빠른 시작에서는 PowerShell 스크립트를 사용하여 데이터베이스 서버에 연결하고 SSIS 패키지를 실행하는 방법을 보여줍니다.

@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5b6c50ffe5278003a70fcba77818cb8333800dc5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d69335c7455dcd34fc5368a68c86193c2fc7526
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295630"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921861"
 ---
 # <a name="ssis-toolbox"></a>SSIS 도구 상자
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   로컬 컴퓨터에 설치된 모든 구성 요소는 **SSIS 도구 상자**에 자동으로 나타납니다. 추가 구성 요소를 설치할 때는 도구 상자 내부를 마우스 오른쪽 단추로 클릭한 다음 **도구 상자 새로 고침** 을 클릭하여 구성 요소를 추가합니다.  

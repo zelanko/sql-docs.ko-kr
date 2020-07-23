@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4e670cf37550734d672047f2d7cf4a9f8045473
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7f05fbdb725e2304e7f30dce7a6801bb8300e4c9
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293491"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923228"
 ---
 # <a name="ado-net-custom-properties"></a>ADO.NET 사용자 지정 속성
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **원본 사용자 지정 속성**  

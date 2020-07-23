@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: ff92a96a-8af6-4532-82cc-c0bbff92401b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3b0833c1c10fb8b4be039466594e2c2025a06b91
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3ec0914353d941aec9e85ebd4d5ce058c5a69740
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71299055"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922732"
 ---
 # <a name="discovering-data-flow-components-programmatically"></a>프로그래밍 방식으로 데이터 흐름 구성 요소 검색
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   패키지에 데이터 흐름 태스크를 추가한 후 사용할 수 있는 데이터 흐름 구성 요소를 확인할 수 있습니다. 로컬 컴퓨터에 설치되어 있고 사용 가능한 데이터 흐름 원본, 변환 및 대상을 프로그래밍 방식으로 검색할 수 있습니다. 패키지에 데이터 흐름 태스크 추가에 대한 자세한 내용은 [프로그래밍 방식으로 데이터 흐름 태스크 추가](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)를 참조하세요.  

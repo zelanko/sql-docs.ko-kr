@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fd0f778495220f227e2dd1fca42c8f5104ea7d2b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eacd467eed8a9c0a80be5e94f8495176ac134633
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294228"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922495"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>열 값 분포 프로필 요청 옵션(데이터 프로파일링 태스크)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **열 값 분포 프로필 요청** 의 옵션을 설정할 수 있습니다. 열 값 분포 프로필은 선택한 열에 있는 모든 고유 값 및 각 값이 나타내는 테이블 내 행의 비율을 보고합니다. 또한 프로필은 테이블에서 지정된 행 비율을 초과하는 값을 보고할 수 있습니다. 이 프로필을 사용하면 열에 포함된 잘못된 고유 값 수와 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 미국의 주가 포함된 열을 프로파일링하는 중 50개를 초과하는 고유 값이 검색될 수 있습니다.  

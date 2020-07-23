@@ -21,12 +21,12 @@ ms.assetid: dc07cc35-20f1-46e6-9995-2938390dc19a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48f52991347331645857ee2c7ac6d58e5a65f9ba
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0bda0a8199275ad124786e0eaf56bac4efdead6c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85990464"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923194"
 ---
 # <a name="not-transact-sql"></a>NOT(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "85990464"
 [ NOT ] boolean_expression  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *boolean_expression*  
  유효한 부울 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   

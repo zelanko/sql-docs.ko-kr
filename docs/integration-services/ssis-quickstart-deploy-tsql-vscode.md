@@ -8,16 +8,16 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: befa64e6c79a1f1e4fe0604014dbb7c583bf830e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af19358906b70cad15103913eebf45507f449410
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74947175"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921879"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Transact-SQL을 사용하여 Visual Studio Code에서 SSIS 프로젝트 배포
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 이 빠른 시작에서는 Visual Studio Code를 사용하여 SSIS 카탈로그 데이터베이스에 연결한 다음, Transact-SQL 문을 사용하여 SSIS 프로젝트를 SSIS 카탈로그에 배포하는 방법을 보여줍니다.

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2baea8e71a3730a100eda8971ad70a28f1a97773
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e373ce2ab1d5b9f45c169b287b5fea2447dd1113
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296464"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922305"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>SQL Server 2017 Integration Services의 새로운 기능
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 이 토픽에서는 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 추가되거나 업데이트된 기능에 대해 설명합니다.

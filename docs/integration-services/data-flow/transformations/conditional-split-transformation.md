@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d1e4cddbdad631a5602096f92915a4fe78b23d67
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bb286721fac9e90a5e1d34bfb8a30ac9ac52032f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298011"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923218"
 ---
 # <a name="conditional-split-transformation"></a>조건부 분할 변환
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   조건부 분할 변환은 데이터 내용에 따라 각 데이터 행을 서로 다른 출력으로 라우팅할 수 있습니다. 조건부 분할 변환의 구현은 프로그래밍 언어의 CASE 결정 구조체와 비슷합니다. 이 변환은 식을 평가한 후 평가 결과를 기준으로 데이터 행을 지정된 출력으로 보냅니다. 이 변환은 기본 출력도 제공하므로, 행과 일치하는 식이 없을 경우 기본 출력으로 보내집니다.  

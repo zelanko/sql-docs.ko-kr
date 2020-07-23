@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
-ms.openlocfilehash: edb989e798274860359a89d4a7a184ba19fd04b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec484e698234dc71282a11b07555be73cd2c694d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706656"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923377"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,9 @@ ms.locfileid: "85706656"
 CHECKPOINT [ checkpoint_duration ]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *checkpoint_duration*  
  수동 검사점을 완료하기 위해 요청된 시간(초)을 지정합니다. *checkpoint_duration*을 지정하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 요청된 기간 내에 검사점을 수행하려고 시도합니다. *checkpoint_duration*은 **int** 형식의 식이어야 하며 0보다 커야 합니다. 이 매개 변수를 생략하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 검사점 기간을 조정하여 데이터베이스 애플리케이션의 성능에 미치는 영향을 최소화합니다. *checkpoint_duration*은 고급 옵션입니다.  
   

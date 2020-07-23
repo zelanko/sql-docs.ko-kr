@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7357e1508172e5b4debbdea99967314c45d53bf4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f23f4f68c6856ad86db206d19551c564b5121d67
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71299066"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921329"
 ---
 # <a name="adding-tasks-programmatically"></a>프로그래밍 방식으로 태스크 추가
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   런타임 엔진에서 다음과 같은 유형의 개체에 태스크를 추가할 수 있습니다.  

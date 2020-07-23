@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f9aee0d7233b5f163a5f9c39f9053b9f0842aa7e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f8abf0faafe21b01c34875968cac43c501f951a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298951"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922617"
 ---
 # <a name="project-properties-dialog-box"></a>프로젝트 속성 대화 상자
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트는 하나의 배포 단위입니다. 각 프로젝트는 패키지, 매개 변수 및 환경 참조를 포함할 수 있습니다. 프로젝트는 검색 가능한 개체이며 데이터베이스 보안 주체의 사용 권한을 정의할 수 있습니다. 프로젝트를 다시 배포하는 경우 이전 버전의 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에 저장할 수 있습니다.  

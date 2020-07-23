@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1ef859193b0a2410b7057365c64506976d7ee8ab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e5097ad2987dfbcc3301b35666ba6245a7559b63
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294256"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923106"
 ---
 # <a name="cdc-control-task"></a>CDC 제어 태스크
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   CDC 제어 태스크는 CDC(변경 데이터 캡처) 패키지의 수명 주기를 제어하는 데 사용됩니다. 이 태스크를 사용하면 초기 로드 패키지와의 CDC 패키지 동기화, CDC 패키지 실행 시 처리되는 LSN(로그 시퀀스 번호) 범위의 관리가 처리됩니다. 또한 CDC 제어 태스크는 오류 시나리오 및 복구를 다룹니다.  

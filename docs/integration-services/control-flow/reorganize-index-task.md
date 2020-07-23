@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 9ed87861-e5c3-4fcd-8760-d112f4c0af0c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1a70f690c646e9f8662a65525cf34d43541b7b41
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 74e3b6d54dfddc976080a5a530d89905524887bc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293967"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921169"
 ---
 # <a name="reorganize-index-task"></a>인덱스 다시 구성 태스크
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   인덱스 다시 구성 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 테이블과 뷰의 인덱스를 다시 구성합니다. 인덱스 관리에 대한 자세한 내용은 [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)을 참조하세요.  

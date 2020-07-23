@@ -8,16 +8,16 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 108331bfdff6734b7f5a8d64a4983f2c54490ec5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e2d9a8e6cc8d071ee6f4c4d7557a437d7806f3d1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74947117"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921940"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>PowerShell을 사용하여 SSIS 프로젝트 배포
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 이 빠른 시작에서는 PowerShell 스크립트를 사용하여 데이터베이스 서버에 연결하고 SSIS 프로젝트를 SSIS 카탈로그에 배포하는 방법을 보여줍니다.

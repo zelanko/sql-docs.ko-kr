@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd3ef168c8d3c58fb387787e8635ef94c512a475
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d29e650bb3dc812b4b64f3bb0c336d094adf1e8d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297247"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921239"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>사용자 지정 데이터 흐름 구성 요소 개발
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   데이터 흐름 태스크는 다양한 데이터 원본에 연결한 다음 해당 데이터를 빠른 속도로 변환하고 라우팅하는 여러 구성 요소로 구성됩니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서는 개발자가 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]와 배포된 패키지에서 사용할 수 있는 사용자 지정 원본, 변환 및 대상을 만들 수 있게 해주는 확장 가능한 개체 모델을 제공합니다. 이 섹션에는 사용자 지정 데이터 흐름 구성 요소의 개발 과정을 설명하는 항목이 포함되어 있습니다.  

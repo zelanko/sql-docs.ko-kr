@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d523437dd2deaddac4462f2e825ff0c197b26bf6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 60b888d1a17d56c41b586a0ffa0d2b869aa2ab4f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291844"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923234"
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>SAP BW 원본 편집기(열 페이지)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **SAP BW 원본 편집기** 의 **열** 페이지를 사용하여 출력 열을 각 외부(원본) 열에 매핑할 수 있습니다.  

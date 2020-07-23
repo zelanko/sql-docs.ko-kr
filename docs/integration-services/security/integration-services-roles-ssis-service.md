@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3290aa2297ca849ed175b7db109f6b200debc789
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 86ebb4c5420b1fa7abcbae00a190f11023b73b0b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295681"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922089"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services 역할(SSIS 서비스)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 패키지에 대한 액세스를 보호하는 데 사용할 수 있는 특정 고정 데이터베이스 수준 역할을 제공합니다. 사용 가능한 역할은 패키지를 SSIS 카탈로그 데이터베이스(SSISDB)에 저장하는지 아니면 msdb 데이터베이스에 저장하는지에 따라 달라집니다.  

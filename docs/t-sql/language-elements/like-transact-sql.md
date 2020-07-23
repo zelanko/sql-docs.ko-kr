@@ -31,12 +31,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fca606be32cc3b9e73defd52a30257ad09c0e099
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 37cf0c961903707f86ec838c45d5935e72d72402
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007316"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922969"
 ---
 # <a name="like-transact-sql"></a>LIKE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,9 @@ match_expression [ NOT ] LIKE pattern
 >[!NOTE]
 > 현재 ESCAPE 및 STRING_ESCAPE는 Azure SQL Data Warehouse 또는 병렬 데이터 웨어하우스에서 지원되지 않습니다.
 
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *match_expression*  
  문자 데이터 형식의 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   

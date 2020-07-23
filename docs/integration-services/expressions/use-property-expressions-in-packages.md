@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: be976ec58ae275f37262f136a2896ffb6a9c7677
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8c02dfe0e479873b50399a2dfcdbe8ae20a984f1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71287879"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922298"
 ---
 # <a name="use-property-expressions-in-packages"></a>패키지에서 속성 식 사용
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   속성 식은 런타임에 동적으로 속성을 업데이트하기 위해 속성에 할당한 식입니다. 예를 들어 속성 식을 사용하면 메일 보내기 태스크에서 사용하는 받는 사람 줄에 변수에 저장된 전자 메일 주소를 삽입할 수 있습니다.  

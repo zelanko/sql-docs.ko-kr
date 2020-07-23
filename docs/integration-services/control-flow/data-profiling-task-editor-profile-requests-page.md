@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a13799d353fcf1e1dff1999009cc2f1e8dcedc76
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6716457b994721da54c1f42fe8057fda67f7e4be
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294177"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921729"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>데이터 프로파일링 태스크 편집기(프로필 요청 페이지)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **데이터 프로파일링 태스크 편집기** 의 **프로필 요청 페이지** 를 사용하여 컴퓨팅할 프로필을 선택하고 구성할 수 있습니다. 단일 데이터 프로파일링 태스크에서 여러 테이블 또는 뷰에 있는 여러 열이나 열 조합에 대해 여러 프로필을 컴퓨팅할 수 있습니다.  

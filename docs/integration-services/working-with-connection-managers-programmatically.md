@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4dff74cd1e21ba743fa425bb632c736ee1cce158
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 14318e122888c4baa89a3919c08456545690cfa0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295013"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922289"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>프로그래밍 방식으로 연결 관리자 사용
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 관련된 연결 관리자 클래스의 AcquireConnection 메서드는 관리 코드에서 연결 관리자를 사용할 때 가장 자주 호출하는 메서드입니다. 관리 코드를 작성할 때 연결 관리자의 기능을 사용하려면 AcquireConnection 메서드를 호출해야 합니다. 스크립트 태스크, 스크립트 구성 요소, 사용자 지정 개체 또는 사용자 지정 애플리케이션 중 어느 항목에서 관리 코드를 작성하든 관계없이 이 메서드를 호출해야 합니다.  

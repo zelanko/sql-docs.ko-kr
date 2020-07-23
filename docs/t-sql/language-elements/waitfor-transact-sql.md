@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3b8ca20f5304dae35a54357b79c763831ceb280
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 87fc7c86277292cbce61e1a8f66b38b80b580996
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731358"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922999"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,9 @@ WAITFOR
 }  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  DELAY  
  일괄 처리, 저장 프로시저 또는 트랜잭션을 실행하기 전에 대기하도록 지정된 시간으로 최대 24시간이 될 수 있습니다.  
   

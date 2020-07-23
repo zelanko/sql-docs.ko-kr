@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6123a670053f5e6fa4b9c7196c9bc503b97c855b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93353b31ff84d1fc48c88c4fdaec1c105d0d5e44
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293503"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923239"
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>데이터 흐름에서 구성 요소 추가 또는 삭제
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   데이터 흐름 구성 요소는 데이터 흐름에 있는 원본, 대상 및 변환입니다. 데이터 흐름에 구성 요소를 추가하려면 패키지의 제어 흐름에 데이터 흐름 태스크 포함되어 있어야 합니다.  

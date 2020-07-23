@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fa5d6c780ce80e8f6de0493494f736f7049edc16
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 37acf59a44c561e43f6c1dc6dbcb4f26cd06918e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298969"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922631"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services(SSIS) 서버 및 카탈로그
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 패키지를 디자인하고 테스트한 후에는 이 패키지가 포함된 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다.  

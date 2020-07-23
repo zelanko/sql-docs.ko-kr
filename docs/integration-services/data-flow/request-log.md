@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4a84025efefa397cd1f33a706073faceb0ad70ae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9c0a129bd8985180a9094b8846e685c0d4025313
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292125"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922757"
 ---
 # <a name="request-log"></a>요청 로그
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **요청 로그** 대화 상자를 사용하여 샘플 데이터에 대해 SAP Netweaver BW 시스템에 요청하는 동안 기록된 이벤트를 확인할 수 있습니다. SAP BW 원본의 구성 문제를 해결해야 하는 경우 이 정보가 유용할 수 있습니다.  

@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c2350410fe4aa70a9091314034a849a2ed8c4e18
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 86e3ec1d9e9721ff050ea9196322c3e8a81aba7f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216912"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922038"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 서비스(SSIS 서비스)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   이 섹션의 항목에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 관리하는 Windows 서비스인 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에 대해 설명합니다. 이 서비스는 Integration Services 패키지를 생성, 저장 및 실행하는 데 필요하지 않습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 는 이전 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 버전과의 호환성을 위한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]서비스를 지원합니다.  

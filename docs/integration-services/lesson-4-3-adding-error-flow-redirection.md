@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4a3626878ba4be6d56bb56b545f3d0cdc24a407a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 852a614576780e27512e5fb234fd0905ef41a9ca
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283199"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922163"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>4-3단원: 오류 흐름 리디렉션 추가
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

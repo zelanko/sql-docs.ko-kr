@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 03d0bab629c717b39e09d66e37f7664e1491ef65
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 124682b94fd3512141c267ed43b93b45c1eb77a3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298755"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921665"
 ---
 # <a name="edit-the-advanced-properties"></a>고급 속성 편집
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **고급** 탭을 사용하여 CDC 인스턴스에 특별 속성을 추가할 수 있습니다.  

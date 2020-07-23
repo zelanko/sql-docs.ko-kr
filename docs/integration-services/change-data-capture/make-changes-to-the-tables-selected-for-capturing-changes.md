@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: a309f82a-c6ef-464d-a6ef-df555bfb609a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ee52054e14c641aad64eaa96b146af86e048d95
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 71122a2b6ffca4e5b1080ed1cef8321cfd4bef04
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298701"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922539"
 ---
 # <a name="make-changes-to-the-tables-selected-for-capturing-changes"></a>변경 캡처를 위해 선택된 테이블 변경
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   이 대화 상자에서 변경을 캡처할 선택된 테이블의 특정 열을 선택할 수 있습니다. 또한 **보안 역할** 및 **캡처 인스턴스** 정보를 편집할 수 있습니다.  

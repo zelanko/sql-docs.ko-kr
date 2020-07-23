@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9d54fb221cd4440ca5332ee47b0b183b857572c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3aafabf6767248994420d781e8d8a309ed749a58
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294784"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921536"
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>CDC Designer 콘솔에서 CDC Service를 관리하는 방법
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   이 절차에서는 CDC Designer 콘솔을 사용하여 CDC Service를 관리하는 방법에 대해 설명합니다.  

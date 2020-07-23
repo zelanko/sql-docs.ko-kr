@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8a6f07634f9f4a3fba48889391a4bfc9e4e245df
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9e94009fd87412d9d015158e9a3cc4f3edde1ede
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285322"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922419"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>변환 검사를 수행하지 않고 형식 변환(SQL Server 가져오기 및 내보내기 마법사)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   복사할 기존 테이블 및 뷰를 선택하거나 제공한 쿼리를 검토한 후에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에 **변환 검사를 수행하지 않고 형식 변환**이 표시될 수 있습니다. 마법사에서는 원본과 대상 간에 데이터 형식을 매핑하는 데 필요한 하나 이상의 데이터 형식 변환 및 매핑 파일을 찾을 수 없는 경우 이 페이지를 표시합니다. 이 페이지에는 누락된 항목을 파악하는 데 도움이 되는 정보가 포함됩니다.

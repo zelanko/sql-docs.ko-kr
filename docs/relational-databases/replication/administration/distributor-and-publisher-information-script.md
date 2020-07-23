@@ -15,15 +15,15 @@ ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7cd1c20e9fc0dd126fe74a7f9ae02bfd9343fc93
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 52cb0385679d82f7d5b5a24f039ba2828e09cd94
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159341"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922278"
 ---
 # <a name="distributor-and-publisher-information-script"></a>배포자 및 게시자 정보 스크립트
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   이 스크립트는 시스템 테이블 및 복제 저장 프로시저를 사용하여 배포자 및 게시자의 개체에 대한 일반적인 질문에 대해 응답할 수 있습니다. 스크립트는 "현재 상태로" 사용할 수 있으며 사용자 지정 스크립트의 기준도 제공할 수 있습니다. 스크립트를 사용자 환경에서 실행하려면 다음 두 가지를 수정해야 합니다.  
   
 -   사용자의 게시 데이터베이스 이름을 사용할 수 있도록 `use AdventureWorks2012` 줄을 변경합니다.  

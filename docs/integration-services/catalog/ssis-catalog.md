@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 14a0cfa2227179d74d67d6e3ed16198da3323855
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: e2ae3fa6680916e01bb69e2e8d2d243404a311f0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279411"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922596"
 ---
 # <a name="ssis-catalog"></a>SSIS 카탈로그
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **SSISDB** 카탈로그는 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버에 배포한 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)](SSIS) 프로젝트를 사용할 수 있는 중앙 위치입니다. 예를 들어 프로젝트 및 패키지 매개 변수를 설정하고, 패키지의 런타임 값을 지정하기 위한 환경을 구성하고, 패키지를 실행하거나 문제를 해결하고, [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버 작업을 관리할 수 있습니다.  

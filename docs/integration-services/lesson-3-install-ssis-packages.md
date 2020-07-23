@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5f325c9322d9194ff9dfb99dcf5bcae902a59faa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4db3158c378d32dd472a9845e785be95130780b6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295974"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922177"
 ---
 # <a name="lesson-3-install-ssis-packages"></a>3단원: SSIS 패키지 설치
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [2단원: SSIS에서 배포 번들 만들기](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)에서는 배포 유틸리티를 빌드하고 다른 컴퓨터에 패키지를 설치해야 하는 항목이 포함된 배포 번들을 만들었습니다. 또한 배포 번들에서 파일 목록을 확인하고 배포 유틸리티를 작성할 때 만들었던 매니페스트 파일의 내용을 검사했습니다.  

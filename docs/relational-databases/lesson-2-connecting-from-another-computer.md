@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: afa9d06c9f9d2bdf0281fadfc93ec2a550b9f4af
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0022e0e740e9c4268ddf08340029c2e74a101437
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767732"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922876"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>2단원: 다른 컴퓨터에서 연결
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 보안을 강화하기 위해 처음 설치 시에는 [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer, Express 및 Evaluation 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 다른 컴퓨터에서 액세스할 수 없습니다. 이 단원에서는 다른 컴퓨터에서 연결하기 위해 프로토콜을 설정하고 포트를 구성하며 Windows 방화벽을 구성하는 방법을 보여 줍니다.  
   
 이 단원에서는 다음 태스크를 다룹니다.  

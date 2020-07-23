@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1b380b56611e72bfd6b0c249792843a6a684813b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ea753e6d74ae5073936cbb98bc0eed716f224dd7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283324"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922217"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>3-2단원 - 패키지 설치 마법사 실행
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 이 태스크에서는 패키지 설치 마법사를 실행하여 Deployment Tutorial 프로젝트의 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 배포합니다. 패키지만 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 sysssispackages 테이블에 설치할 수 있고 배포 번들에 포함된 지원 파일은 파일 시스템에 배포됩니다.  
