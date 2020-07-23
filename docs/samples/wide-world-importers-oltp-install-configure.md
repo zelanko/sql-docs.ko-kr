@@ -10,18 +10,18 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6d37575864666c5aa2b8c47484b5bcac798b3e9a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d49a56c7d545a69729f222daad1e9504802e7bcc
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718668"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942384"
 ---
 # <a name="installation-and-configuration"></a>설치 및 구성
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Wide 세계 가져오기 OLTP 데이터베이스 설치 및 구성 지침
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 이상 [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)합니다. 샘플의 전체 버전은 SQL Server Evaluation/Developer/Enterprise Edition을 사용 합니다.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). 최상의 결과를 위해 6 월 2016 릴리스 이상을 사용 합니다.
@@ -64,7 +64,7 @@ Bacpac를 새 SQL Database 가져오려면 Management Studio를 사용할 수 �
 5. **데이터베이스 설정** 에서 데이터베이스 이름을 *WideWorldImporters* 로 변경 하 고 사용할 대상 버전 및 서비스 목표를 선택 합니다.
 6. **다음** 을 클릭 하 고 **마침** 을 클릭 하 여 배포를 시작 합니다. P1에서 완료 하는 데 몇 분이 걸립니다. 낮은 가격 책정 계층을 원하는 경우 새 P1 데이터베이스로 가져온 다음 가격 책정 계층을 원하는 수준으로 변경 하는 것이 좋습니다.
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>구성
 
 ### <a name="full-text-indexing"></a>전체 텍스트 인덱싱
 
@@ -80,7 +80,9 @@ Bacpac를 새 SQL Database 가져오려면 Management Studio를 사용할 수 �
 
 SQL Server에서 감사를 사용 하도록 설정 하려면 서버 구성이 필요 합니다. WideWorldImporters 샘플에 대 한 SQL Server 감사를 사용 하도록 설정 하려면 데이터베이스에서 다음 문을 실행 합니다.
 
-    EXECUTE [Application].[Configuration_ApplyAuditing]
+```sql
+EXECUTE [Application].[Configuration_ApplyAuditing]
+```
 
 Azure SQL Database에서 감사는 [Azure Portal](https://portal.azure.com/)를 통해 구성 됩니다.
 
@@ -90,5 +92,7 @@ Azure SQL Database에서 감사는 [Azure Portal](https://portal.azure.com/)를 
 
 행 수준 보안은 WideWorldImporters의 bacpac 다운로드에서 기본적으로 사용 하도록 설정 되어 있지 않습니다. 데이터베이스에서 행 수준 보안을 사용 하도록 설정 하려면 다음 저장 프로시저를 실행 합니다.
 
-    EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
+```sql
+EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
+```
 

@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 977e38016fbb58356d22ccfc5f783539e5f852d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 88e1619ce37de7c7a334ee7d915115f2deef47ef
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74400940"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941075"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>관리 콘솔-분석 플랫폼 시스템을 사용 하 여 어플라이언스 모니터링
 관리 콘솔은 어플라이언스 상태, 상태 및 성능 정보를 표시 하는 SQL Server PDW 웹 응용 프로그램입니다. 사용자는 Internet Explorer를 통해 관리 콘솔에 연결 합니다.  
@@ -22,11 +22,11 @@ ms.locfileid: "74400940"
 ## <a name="about-the-admin-console"></a><a name="About"></a>관리 콘솔 정보  
 ![어플라이언스 콘솔 홈](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
-**기기가**  
+**어플라이언스**  
 홈  
 어플라이언스 상태를 간략히 요약 하 여 제공 합니다.  
   
-상태  
+의료  
 각 노드 내에서 모니터링 되는 각 구성 요소의 상태를 표시 하는 표시기를 사용 하 여 어플라이언스 토폴로지를 표시 합니다. 개별 노드 및 노드 구성 요소의 속성에 대 한 현재 상태를 볼 수 있습니다.  
   
 하드웨어 및 소프트웨어 경고를 표시 합니다.  
@@ -44,13 +44,13 @@ PDW 상태를 간략히 요약 하 여 제공 합니다.
 쿼리  
 실행 중인 쿼리 및 최근에 완료 된 쿼리 목록을 표시 합니다. 관련 오류 (있는 경우)를 표시 합니다. 는 또한 쿼리 실행 계획 및 노드 실행 정보에 대 한 세부 정보를 볼 수 있는 기능을 제공 합니다.  
   
-로드  
+부하  
 로드 계획, 현재 PDW 로드 상태 및 관련 오류 (있는 경우)를 표시 합니다.  
   
 백업/복원  
 PDW 백업 및 복원 작업의 로그를 표시 합니다.  
   
-상태  
+의료  
 각 노드 내에서 모니터링 되는 각 구성 요소의 상태를 표시 하는 표시기를 사용 하 여 PDW 토폴로지를 표시 합니다. 개별 노드 및 노드 구성 요소의 속성에 대 한 현재 상태를 볼 수 있습니다.  
   
 하드웨어 및 소프트웨어 경고를 표시 합니다.  
@@ -76,14 +76,13 @@ PDW 성능 모니터 그래프를 표시 합니다.
   
 -   제어 노드 클러스터의 IP 주소입니다.  SQL Server PDW 관리자에 게 문의 하세요.  
   
-관리 콘솔에 연결 하려면 Internet Explorer 및 https를 사용 하 여 제어 노드 클러스터의 IP 주소를 찾습니다. 예를 들어, 제어 노드 클러스터의 IP 주소가 인 `10.192.63.102`경우 브라우저 주소 표시줄 `https://10.192.63.102` 에를 입력 합니다. 첫 번째 화면에서는 **로그인** 과 **암호**를 요청 합니다. SQL Server 인증 로그인 및 암호, Windows 인증 로그인 및 Windows 암호를 제공 합니다. Windows 인증 로그인을 사용 하는 경우 관리 콘솔에서 가장을 사용 합니다.  
+관리 콘솔에 연결 하려면 Internet Explorer 및 https를 사용 하 여 제어 노드 클러스터의 IP 주소를 찾습니다. 예를 들어, 제어 노드 클러스터의 IP 주소가 인 경우 `10.192.63.102` `https://10.192.63.102` 브라우저 주소 표시줄에를 입력 합니다. 첫 번째 화면에서는 **로그인** 과 **암호**를 요청 합니다. SQL Server 인증 로그인 및 암호, Windows 인증 로그인 및 Windows 암호를 제공 합니다. Windows 인증 로그인을 사용 하는 경우 관리 콘솔에서 가장을 사용 합니다.  
   
 ## <a name="admin-console-tasks"></a><a name="RelatedTasks"></a>관리 콘솔 작업  
 관리 콘솔은 다음을 모니터링 하는 기능을 제공 합니다.  
   
-|||  
-|-|-|  
-|**정보 유형**|**관리 콘솔에서 액세스 하는 방법**|  
+|Information Type|관리 콘솔에서 액세스 하는 방법|
+|-|-|
 |기기의 전체 상태|위쪽 메뉴 또는 **홈**에서 **어플라이언스 상태** 를 클릭 합니다.|  
 |경고|**경고**를 클릭합니다. 자세한 내용은 [분석 플랫폼 시스템&#41;&#40;관리 콘솔 경고 이해 ](understanding-admin-console-alerts.md)를 참조 하세요.|  
 |어플라이언스 구성 요소 및 해당 상태|위쪽 메뉴 또는 **홈**에서 **어플라이언스 상태** 를 클릭 합니다.|  

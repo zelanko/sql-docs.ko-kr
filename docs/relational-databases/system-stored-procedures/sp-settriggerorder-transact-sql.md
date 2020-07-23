@@ -18,12 +18,12 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7b90b91773ab0497452e0c12c5f485a36f81b6e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2f222261c21ecb96f3599b20917a441898e3325e
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719182"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977726"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,9 +63,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
  ** \@ namespace =** { **' DATABASE '**  |  **' SERVER '** | N  
  *Triggername* 가 DDL 트리거 이면 ** \@ 네임 스페이스** 는 데이터베이스 범위 또는 서버 범위를 사용 하 여 *triggername* 를 만들었는지 여부를 지정 합니다. *Triggername* 가 logon 트리거 이면 서버를 지정 해야 합니다. DDL 트리거 범위에 대 한 자세한 내용은 [Ddl 트리거](../../relational-databases/triggers/ddl-triggers.md)를 참조 하세요. 지정 하지 않거나 NULL을 지정 하면 *triggername* 는 DML 트리거입니다.  
   
-||  
-|-|  
-|서버 적용 대상: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상|  
+* 서버 적용 대상: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 및 1(실패)  
@@ -106,7 +104,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
  DML 트리거의 순서를 설정하려면 트리거가 정의된 테이블 또는 뷰에 대한 ALTER 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-setting-the-firing-order-for-a-dml-trigger"></a>A. DML 트리거의 실행 순서 설정  
  다음 예에서는 `uSalesOrderHeader` 트리거를 `UPDATE` 테이블에서 `Sales.SalesOrderHeader` 작업이 발생한 후 실행되는 첫 번째 트리거로 지정합니다.  

@@ -20,12 +20,12 @@ ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2a7a5e9f8410ab8ca66f0621d6a2c955258c28c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ee50d943daf4f5970c162788659092ad31ef8c6
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734665"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943107"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -95,7 +95,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 > [!NOTE]
 > 임시 쿼리에 대 한 *sql_handle* 에서 **dbid** 를 확인할 수 없습니다. 임시 쿼리에 대해 **dbid** 를 결정 하려면 *plan_handle* 를 대신 사용 합니다.
   
-## <a name="examples"></a>예제 
+## <a name="examples"></a>예 
 
 ### <a name="a-conceptual-example"></a>A. 개념 예
 다음은 직접 또는 **CROSS APPLY**를 사용 하 여 **sql_handle** 를 전달 하는 방법을 보여 주는 기본 예제입니다.
@@ -110,7 +110,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
         WAITFOR DELAY '00:02:00';
       ```
       
-    2.  **CROSS APPLY**사용.  
+  2.  **CROSS APPLY**사용.  
     **Dm_exec_requests** 에서 Sql_handle는 **CROSS APPLY**를 사용 하 여 **sys. dm_exec_sql_text** 전달 됩니다. 새 쿼리 창을 열고 1 단계에서 확인 한 spid를 전달 합니다. 이 예에서는 spid가로 수행 됩니다 `59` .
 
         ```sql
@@ -120,7 +120,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
         WHERE session_id = 59 -- modify this value with your actual spid
          ```      
  
-    2.  직접 **sql_handle** 전달.  
+  2.  직접 **sql_handle** 전달.  
 **Dm_exec_requests**에서 **sql_handle** 를 가져옵니다. 그런 다음 **sql_handle** 를 **dm_exec_sql_text**에 직접 전달 합니다. 새 쿼리 창을 열고 1 단계에서 확인 한 spid를 **dm_exec_requests**으로 전달 합니다. 이 예에서는 spid가로 수행 됩니다 `59` . 그런 다음 반환 된 **sql_handle** 를 **dm_exec_sql_text**에 대 한 인수로 전달 합니다.
 
         ```sql
@@ -178,11 +178,11 @@ WHERE s2.objectid is null
 ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>참조  
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
- [dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [dm_exec_cursors &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
  [dm_exec_xml_handles &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
  [dm_exec_query_memory_grants &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
