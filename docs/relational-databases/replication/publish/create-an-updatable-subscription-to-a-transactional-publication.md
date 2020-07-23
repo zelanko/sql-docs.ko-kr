@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 68f87213d310c909d266a20c235f1686f66e6902
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0d28fec80479a8eec877452763e78d4fadfa3d2c
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896817"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942842"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "85896817"
     * `sync tran` - 구독에서 즉시 업데이트를 사용하도록 설정합니다.
     * `failover` - 즉시 업데이트 구독을 사용하고 지연 업데이트를 장애 조치(Failover) 옵션으로 설정합니다.
     > [!NOTE]  
->  `failover` 를 사용하려면 게시에서 지연 업데이트 구독도 설정해야 합니다. 
+    >  `failover` 를 사용하려면 게시에서 지연 업데이트 구독도 설정해야 합니다. 
  
 4. 구독자에서 [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행합니다. 다음을 지정합니다.
 
@@ -150,7 +150,7 @@ ms.locfileid: "85896817"
     * `@job_login` 및 `@job_password`에 대해 배포자에서 배포 에이전트가 실행되는 Windows 자격 증명 
 
     > [!NOTE]  
->  Windows 통합 인증을 사용하여 만든 연결은 항상 `@job_login` 및 `@job_password`로 지정한 Windows 자격 증명을 사용합니다. 배포 에이전트는 항상 Windows 통합 인증을 사용하여 배포자에 대한 로컬 연결을 만듭니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 구독자에 연결합니다. 
+    >  Windows 통합 인증을 사용하여 만든 연결은 항상 `@job_login` 및 `@job_password`로 지정한 Windows 자격 증명을 사용합니다. 배포 에이전트는 항상 Windows 통합 인증을 사용하여 배포자에 대한 로컬 연결을 만듭니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 구독자에 연결합니다. 
 
     * (선택 사항) `0` 에 대한 `@subscriber_security_mode` 값과, `@subscriber_login` 및 `@subscriber_password`에 대한 SQL Server 로그인 정보(구독자에 연결할 때 SQL Server 인증을 사용 해야하는 경우). 
     * 이 구독에 대한 배포 에이전트 작업 일정.
@@ -180,7 +180,7 @@ ms.locfileid: "85896817"
     * `queued failover` - 지연 업데이트 지원을 설정하고 즉시 업데이트를 장애 조치 옵션으로 설정합니다.
 
     > [!NOTE]  
->  `queued failover` 를 사용하려면 게시에서 즉시 업데이트 구독도 설정해야 합니다. 즉시 업데이트로 장애 조치를 수행하려면 [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) 을 사용하여 구독자의 변경 내용을 게시자에 복제할 때 사용할 자격 증명을 정의해야 합니다.
+    >  `queued failover` 를 사용하려면 게시에서 즉시 업데이트 구독도 설정해야 합니다. 즉시 업데이트로 장애 조치를 수행하려면 [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) 을 사용하여 구독자의 변경 내용을 게시자에 복제할 때 사용할 자격 증명을 정의해야 합니다.
  
 4. 구독자에서 [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행합니다. 다음 매개 변수를 지정합니다.
 

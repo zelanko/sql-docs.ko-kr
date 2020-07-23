@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18252987543528f41b4c0f64c2954138b7a5d13c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0068126b439ff99ec88c76a0329454cc5931b683
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71282499"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923769"
 ---
 # <a name="reuse-of-package-objects"></a>패키지 개체 다시 사용
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   다시 사용하려는 자주 사용되는 패키지 기능입니다. 예를 들어 태스크 집합을 만든 경우 항목을 모두 그룹으로 다시 사용하거나 다른 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에서 만든 연결 관리자와 같은 단일 항목을 다시 사용하려고 할 수 있습니다.  

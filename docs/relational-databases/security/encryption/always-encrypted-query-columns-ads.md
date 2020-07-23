@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d5d202bbd1b285acbe2831fcdb56ec5cc1dd1ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 99ed0b0c5424b995f336511ef267d842ba4fe81b
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627325"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942142"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Azure Data Studio를 사용하여 Always Encrypted를 이용하는 열 쿼리
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -195,13 +195,15 @@ SELECT * FROM [dbo].[Patients]
 WHERE [SSN] = @SSN;
 ```
 
-    Msg 402, Level 16, State 2, Line 5   
-    The data types char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
-    encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_Auto1', 
-    column_encryption_key_database_name = 'Clinic') collation_name = 'Latin1_General_BIN2' 
-    and nchar(11) encrypted with (encryption_type = 'DETERMINISTIC', 
-    encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_Auto1', 
-    column_encryption_key_database_name = 'Clinic') are incompatible in the equal to operator. 
+```output
+Msg 402, Level 16, State 2, Line 5   
+The data types char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
+encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_Auto1', 
+column_encryption_key_database_name = 'Clinic') collation_name = 'Latin1_General_BIN2' 
+and nchar(11) encrypted with (encryption_type = 'DETERMINISTIC', 
+encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_Auto1', 
+column_encryption_key_database_name = 'Clinic') are incompatible in the equal to operator.
+```
 
 > [!NOTE]
 > 매개 변수화를 사용하지 않으면 형식 변환을 포함하여 전체 쿼리가 SQL Server/Azure SQL Database 내에서 처리됩니다. 매개 변수화를 사용하면 Azure Data Studio에서 Microsoft .NET Data Provider for SQL Server가 일부 형식 변환을 수행합니다. Microsoft .NET 형식 시스템과 SQL Server 형식 시스템 간의 차이(예: float와 같은 일부 형식의 정밀도 차이)로 인해 매개 변수화를 사용하여 실행된 쿼리는 매개 변수화를 사용하지 않고 실행된 쿼리와 다른 결과를 생성할 수 있습니다. 

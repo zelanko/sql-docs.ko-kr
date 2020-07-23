@@ -20,29 +20,29 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c32db4bdc26e90faa74800076dade200c1348f6
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 129ac690a0615062bb620c8b81dfbdb16a41659e
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518643"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942675"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Hadoop, Azure Blob Storage, Azure Data Lake Store에 저장된 외부 데이터 또는 외부 스트림에 연결된 입력 및 출력 스트림의 외부 데이터를 정의하는 외부 파일 형식 개체를 만듭니다. 외부 파일 형식 만들기는 외부 테이블을 만들기 위한 필수 구성 요소입니다. 외부 파일 형식을 만들어 외부 테이블에서 참조하는 데이터의 실제 레이아웃을 지정하게 됩니다.  
+Hadoop, Azure Blob Storage, Azure Data Lake Store에 저장된 외부 데이터 또는 외부 스트림에 연결된 입력 및 출력 스트림의 외부 데이터를 정의하는 외부 파일 형식 개체를 만듭니다. 외부 파일 형식 만들기는 외부 테이블을 만들기 위한 필수 구성 요소입니다. 외부 파일 형식을 만들어 외부 테이블에서 참조하는 데이터의 실제 레이아웃을 지정하게 됩니다.  
   
 지원되는 파일 형식은 다음과 같습니다.
   
--   구분된 텍스트  
+- 구분된 텍스트  
   
--   Hive RCFile  
+- Hive RCFile  
   
--   Hive ORC
+- Hive ORC
   
--   Parquet
+- Parquet
 
--   JSON - Azure SQL Edge에만 적용됩니다.
+- JSON - Azure SQL Edge에만 적용됩니다.
 
 
 외부 테이블을 만들려면 [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)을 참조하세요.
@@ -113,33 +113,33 @@ WITH (
 ```  
   
 ## <a name="arguments"></a>인수  
- *file_format_name*  
- 외부 파일 형식의 이름을 지정합니다.
+*file_format_name*  
+외부 파일 형식의 이름을 지정합니다.
   
- FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT] 외부 데이터 형식을 지정합니다.
+FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT] 외부 데이터 형식을 지정합니다.
   
-   -   PARQUET Parquet 형식을 지정합니다.
+- PARQUET Parquet 형식을 지정합니다.
   
-   -   ORC  
-   ORC(최적화된 행 열 형식) 형식을 지정합니다. 이 옵션에는 버전 이상 0.11 외부 Hadoop 클러스터에서 하이브가 필요합니다. Hadoop에서는 ORC 파일 형식이RCFILE 파일 형식보다 압축과 성능이 더 낫습니다.
+- ORC  
+  ORC(최적화된 행 열 형식) 형식을 지정합니다. 이 옵션에는 버전 이상 0.11 외부 Hadoop 클러스터에서 하이브가 필요합니다. Hadoop에서는 ORC 파일 형식이RCFILE 파일 형식보다 압축과 성능이 더 낫습니다.
 
-   -   RCFILE(SERDE_METHOD = *SERDE_method*와 함께) RcFile(Record Columnar file) 형식을 지정합니다. 이 옵션을 사용하려면 Hive 직렬 변환기와 역직렬화 변환기(SerDe) 메서드를 지정해야 합니다. Hadoop에서 Hive/HiveQL을 사용하여 RC 파일을 쿼리할 때도 요구 사항은 같습니다. SerDe 메서드는 대소문자를 구분합니다.
+- RCFILE(SERDE_METHOD = *SERDE_method*와 함께) RcFile(Record Columnar file) 형식을 지정합니다. 이 옵션을 사용하려면 Hive 직렬 변환기와 역직렬화 변환기(SerDe) 메서드를 지정해야 합니다. Hadoop에서 Hive/HiveQL을 사용하여 RC 파일을 쿼리할 때도 요구 사항은 같습니다. SerDe 메서드는 대소문자를 구분합니다.
 
-   PolyBase가 지원하는 두 SerDe 메서드를 사용하여 RCFile을 지정하는 예제입니다.
+  PolyBase가 지원하는 두 SerDe 메서드를 사용하여 RCFile을 지정하는 예제입니다.
 
-    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
+  - FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
 
-    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
+  - FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
 
-   -   DELIMITEDTEXT 필드 종결자라고도 하는 열 구분 기호가 있는 텍스트 형식을 만듭니다.
+- DELIMITEDTEXT 필드 종결자라고도 하는 열 구분 기호가 있는 텍스트 형식을 만듭니다.
    
-   -  JSON은 JSON 형식을 지정합니다. Azure SQL Edge에만 적용됩니다. 
+- JSON은 JSON 형식을 지정합니다. Azure SQL Edge에만 적용됩니다. 
   
- FIELD_TERMINATOR = *field_terminator*  
+FIELD_TERMINATOR = *field_terminator*  
 구분 기호로 분리된 텍스트 파일에만 적용됩니다. 필드 종결자는 구분 기호로 분리된 텍스트 파일의 각 필드(열)의 끝을 표시하는 하나 이상의 문자를 지정합니다. 기본값은 파이프 문자 ꞌ|ꞌ입니다. 지원 보장을 위해 하나 이상의 ASCII 문자를 사용하는 것이 좋습니다.
   
   
- 예제:  
+예제:  
   
 -   FIELD_TERMINATOR = '|'  
   
@@ -149,7 +149,7 @@ WITH (
   
 -   FIELD_TERMINATOR = '~|~'  
   
- STRING_DELIMITER = *string_delimiter*  
+STRING_DELIMITER = *string_delimiter*  
 구분 기호로 분리된 텍스트 파일에 형식 문자열의 데이터에 대한 필드 종결자를 지정합니다. 문자열 구분 기호는 길이가 한 자 이상이며 작은따옴표로 묶입니다. 기본값은 빈 문자열 ""입니다. 지원 보장을 위해 하나 이상의 ASCII 문자를 사용하는 것이 좋습니다.
  
   

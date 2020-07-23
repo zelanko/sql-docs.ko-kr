@@ -17,15 +17,15 @@ ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1c5abd21bd631647bb7605289b5c8e8179c96a66
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 6ff9fece0d1cb995e0d1643bf41bd095f7fe6bf5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160091"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923645"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>게시 액세스 목록에서 로그인 관리
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 게시 액세스 목록의 로그인을 관리하는 방법에 대해 설명합니다. 게시에 대한 액세스는 PAL(게시 액세스 목록)에서 제어합니다. 로그인 및 그룹을 추가하고 PAL에서 제거할 수 있습니다.  
   
  **항목 내용**  

@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cb86b202db40fb3bde858a43fb5dac550a2aaada
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f88355c8c2242d6dee36d52b7fb26e6016201ff4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71299116"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923762"
 ---
 # <a name="add-copy-of-existing-package"></a>기존 패키지의 복사본 추가
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **기존 패키지의 복사본 추가** 대화 상자를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 파일 시스템 또는 SSIS 패키지 저장소에 저장된 패키지의 복사본을 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 추가할 수 있습니다.  

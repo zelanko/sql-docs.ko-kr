@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a8eaed6e70ad457f33dc9587e3004e433da43ae1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8cdc189849f501558500d1910bf1950aaf45e9be
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298085"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923709"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>SAP BW 원본 편집기(고급 페이지)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **SAP BW 원본 편집기** 의 **고급** 페이지를 사용하여 문자열 변환 규칙과 제한 시간을 지정하고 특정 요청 ID의 상태를 다시 설정할 수 있습니다.  

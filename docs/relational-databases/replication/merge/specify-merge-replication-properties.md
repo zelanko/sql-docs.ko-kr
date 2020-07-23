@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bc784bc678dd5ebf52b06edc2af99e7efac08aaf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f4bedac84834f0b8cf4dda7ad22a097e82508983
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882238"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942629"
 ---
 # <a name="specify-merge-replication-properties"></a>병합 복제 속성 지정
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -169,8 +169,8 @@ ms.locfileid: "85882238"
   
 게시 데이터베이스의 게시자에서 [sp_addmergearticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행합니다. `@delete_tracking`에 **false** 값을 지정합니다. 자세한 내용은 [아티클을 정의](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.
   
-    > [!NOTE]  
-    >  If the source table for an article is already published in another publication, the value of **delete_tracking** must be the same for both articles.  
+> [!NOTE]  
+>  아티클의 원본 테이블이 이미 다른 게시에 게시된 경우 **delete_tracking** 값은 두 아티클에 대해 동일해야 합니다.  
   
 ### <a name="specify-that-deletes-be-ignored-for-an-existing-merge-article"></a>기존 병합 문서에 대해 삭제가 무시되도록 지정  
   
