@@ -10,12 +10,12 @@ metadata:
   author: markingmyname
   ms.author: maghan
   ms.date: 05/09/2020
-  ms.openlocfilehash: b5020185efafd9e166c8d3dd627ee61a955a0d27
-  ms.sourcegitcommit: 812f572d13616c1bd085b0648603736ba1bc20d1
+  ms.openlocfilehash: c7e8bdc53740ff2030b27c4d855b5b6a7de2ded9
+  ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/27/2020
-  ms.locfileid: "84112336"
+  ms.lasthandoff: 07/22/2020
+  ms.locfileid: "86914532"
 landingContent:
 - title: Azure Data Studio 정보
   linkLists:
@@ -59,8 +59,8 @@ landingContent:
       url: notebooks-guidance.md
     - text: SQL 커널을 사용하는 방법
       url: notebooks-tutorial-sql-kernel.md
-    - text: Azure Data Studio에서 Notebook을 관리하는 방법
-      url: notebooks-manage-sql-server.md
+    - text: Python 커널을 사용하는 방법
+      url: notebooks-tutorial-python-kernel.md
     - text: Azure Data Studio의 Kqlmagic 확장
       url: notebooks-kqlmagic.md
 - title: 확장
