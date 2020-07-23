@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 03b521f06925ad21847cf588b27c211167dbd425
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aa36ccd8a161c15cf4d12d1f92bb1ec36b1ac0b2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297649"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920649"
 ---
 # <a name="data-truncation-ssis"></a>데이터 잘림(SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   값의 데이터 형식을 변환하면 값이 잘릴 수 있습니다.  

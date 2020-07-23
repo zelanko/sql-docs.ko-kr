@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f3d338531b2d7e7d76571ad2d04793c6200c63d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: db543ba464af2c71ba3390cb4574797713b8c764
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893395"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918781"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "85893395"
 SHUTDOWN [ WITH NOWAIT ]   
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  WITH NOWAIT  
  (선택 사항) 모든 데이터베이스에서 검사점을 수행하지 않고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 종료합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 모든 사용자 프로세스를 종료한 후 종료됩니다. 서버를 다시 시작하면 완료되지 않은 트랜잭션에 대해 롤백 작업이 수행됩니다.  
   

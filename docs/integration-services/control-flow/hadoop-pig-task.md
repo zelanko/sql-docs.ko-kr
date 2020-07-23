@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 90646316-9822-48aa-9900-295a33750780
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a624228a0df45ee0ba2954d27e38be511db629fe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 375ae2fd7b0e2ba0d125fab597132f3978430346
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294089"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918194"
 ---
 # <a name="hadoop-pig-task"></a>Hadoop Pig 작업
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Hadoop Pig 태스크를 사용하여 Hadoop 클러스터에서 Pig 스크립트를 실행합니다.  

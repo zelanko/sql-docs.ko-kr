@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 520dc05b-83de-4668-8d27-07ee0ef08185
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ab96499d8c4185e14481e18518cad514992b2e96
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a78ef76f0b8a1c133d09747e460837e1d68dd318
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294812"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918688"
 ---
 # <a name="change-data-capture-for-oracle-by-attunity"></a>Attunity Oracle CDC
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Attunity Oracle CDC 다운로드는 다음 두 구성 요소를 포함합니다.

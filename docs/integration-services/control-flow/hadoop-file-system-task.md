@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e97ae33bcccee338be576138ca335bd6298e0128
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 006c9d5ae0ade37cc3ecbe4d7912c49eafbf4069
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294068"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918214"
 ---
 # <a name="hadoop-file-system-task"></a>Hadoop 파일 시스템 태스크
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Hadoop 파일 시스템 태스크에서는 SSIS 패키지가 Hadoop 클러스터에서/클러스터로/클러스터 내에서 파일을 복사할 수 있습니다.  

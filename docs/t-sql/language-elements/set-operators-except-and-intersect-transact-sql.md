@@ -23,12 +23,12 @@ ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a76fa18b50c62127208db9430fafcfb5668225c1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cf59a6245de8c1520dcd8196cc207fe2761d84c6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004986"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918810"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>집합 연산자 - EXCEPT 및 INTERSECT(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,9 @@ EXCEPT 또는 INTERSECT를 사용하는 두 쿼리의 결과 집합을 결합하
 { <query_specification> | ( <query_expression> ) }  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 \<_query\_specification_> | ( \<_query\_expression_> )  
 다른 쿼리 사양이나 쿼리 식의 데이터와 비교할 데이터를 반환하는 쿼리 사양 또는 쿼리 식입니다. EXCEPT 또는 INTERSECT 연산의 일부인 열의 정의는 같을 필요는 없습니다. 그러나 암시적 변환을 통해 비교할 수 있어야 합니다. 데이터 형식이 다를 때 비교를 위해 실행되는 데이터 형식은 [데이터 형식 우선 순위](../../t-sql/data-types/data-type-precedence-transact-sql.md)의 규칙에 따라 결정됩니다.  
   

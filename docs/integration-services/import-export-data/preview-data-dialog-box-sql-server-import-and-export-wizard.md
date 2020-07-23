@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: feeef370bc64697e3fa9ef3a279e31ba047301fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e59c3aa71cbbff6f955c67d033713f7a27dfbb28
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296316"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920184"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>데이터 미리 보기 대화 상자(SQL Server 가져오기 및 내보내기 마법사)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   복사할 데이터를 지정한 후 필요에 따라 **미리 보기** 를 클릭하여 **데이터 미리 보기** 대화 상자를 열 수 있습니다. 이 페이지에서는 데이터 원본의 샘플 데이터 행을 최대 200개까지 미리 볼 수 있습니다. 이를 통해 원하는 데이터를 마법사가 복사하는지 확인할 수 있습니다.

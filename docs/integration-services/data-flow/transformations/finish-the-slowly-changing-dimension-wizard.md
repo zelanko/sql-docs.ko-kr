@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1f2aafff1e63fbacc92dbbac40c93ef090a4aef9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bb0d230f07ff082a16c55699f6c49eade131359e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297923"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919349"
 ---
 # <a name="finish-the-slowly-changing-dimension-wizard"></a>느린 변경 차원 마법사 완료
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **느린 변경 차원 마법사 완료** 대화 상자를 사용하여 마법사가 느린 변경 차원에 대한 지원 기능을 구성하기 전에 선택한 내용을 확인할 수 있습니다.  

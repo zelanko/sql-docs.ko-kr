@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d98782b0c007f584c5d013c49dafe47a01106a38
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 593c17254c06e22e26e4e131fd74c5dacd1a5621
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71288630"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919066"
 ---
 # <a name="sign-ssis-expression"></a>SIGN(SSIS 식)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   숫자 식의 양수(+1), 음수(-1) 또는 영(0) 부호를 반환합니다.  
