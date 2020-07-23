@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 333ccd783a1ef55a3c2ddc79936011330cf79b9d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7a25aa0d58500f5a51a1ae64983d6d4f8f221f97
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294105"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915419"
 ---
 # <a name="maintenance-cleanup-task"></a>유지 관리 정리 태스크
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   유지 관리 정리 태스크는 유지 관리 계획에서 만든 데이터베이스 백업 파일 및 보고서를 비롯하여 유지 관리 계획과 관련된 파일을 제거합니다. 자세한 내용은 [유지 관리 계획](../../relational-databases/maintenance-plans/maintenance-plans.md) 및 [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)을 참조하세요.  

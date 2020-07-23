@@ -20,12 +20,12 @@ ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cec953dc8bbb6f0baf51f996306f7a960ebc2fdd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b3bbb0c09f819e686185f65dab28123b95f6e2f6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007637"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915459"
 ---
 # <a name="set-operators---union-transact-sql"></a>집합 연산자 - UNION(Transact-SQL)
 
@@ -58,7 +58,9 @@ ms.locfileid: "86007637"
   [ ...n ] }
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 \<query_specification> | ( \<query_expression> ) 다른 쿼리 사양 또는 쿼리 식의 데이터와 결합할 데이터를 반환하는 쿼리 사양 또는 쿼리 식입니다. UNION 연산의 일부인 열의 정의는 같을 필요는 없지만 암시적 변환을 통해 호환되어야 합니다. 데이터 형식이 다를 때 결과 데이터 형식은 [ 데이터 형식 우선 순위](../../t-sql/data-types/data-type-precedence-transact-sql.md)의 규칙에 따라 결정됩니다. 형식은 동일하지만 전체 자릿수, 소수 자릿수 또는 길이가 다르면 결과는 식 결합에 대한 동일한 규칙을 기반으로 합니다. 자세한 내용은 [전체 자릿수, 소수 자릿수 및 길이(Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)를 참조하세요.  
   
 **xml** 데이터 형식의 열은 동일해야 합니다. 모든 열은 XML 스키마로 형식화되거나 형식화되지 않아야 합니다. 형식화되는 경우 모든 열은 동일한 XML 스키마 컬렉션으로 형식화되어야 합니다.  

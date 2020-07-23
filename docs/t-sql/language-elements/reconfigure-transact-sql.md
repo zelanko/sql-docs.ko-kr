@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 240bc2359a3c0c66fc6f95c2392ae78740865a1d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 44ccb855d3a9a4d545d2c882b1d3ff7b788419d2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880413"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915623"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "85880413"
 RECONFIGURE [ WITH OVERRIDE ]    
 ```    
     
-## <a name="arguments"></a>인수    
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  RECONFIGURE    
  구성 설정에서 서버를 중지하고 다시 시작하지 않아도 될 경우 현재 실행 중인 값이 업데이트되도록 지정합니다. 또한 RECONFIGURE는 새 구성 값에서 유효하지 않은 값(예: **syscharsets**에 없는 정렬 순서 값)이나 권장되지 않는 값을 확인합니다. 서버를 중지하고 다시 시작할 필요가 없는 이런 구성 옵션을 사용하는 경우에는 RECONFIGURE를 지정한 후 구성 옵션의 현재 실행 중인 값과 현재 구성된 값이 같아야 합니다.    
     

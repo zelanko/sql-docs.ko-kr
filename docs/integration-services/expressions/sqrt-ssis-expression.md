@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a13d07fe353c4d10345cce609f4b82cd7019db6c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b12c303d12d0bc4dac23993b9da574409a8e3ae4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297400"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914943"
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT(SSIS 식)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   숫자 식의 제곱근을 반환합니다.  

@@ -9,16 +9,16 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 092760fdd99a6840e77278fce96e2d321ea4edc9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0df21d12c9a7d29957d004517a3a6de3e93a8221
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "69553251"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915664"
 ---
 # <a name="oracle-connection-manager"></a>Oracle 연결 관리자
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Oracle 연결 관리자를 사용하여 패키지에서는 Oracle 데이터베이스의 데이터를 추출하고 Oracle 데이터베이스에 데이터를 로드할 수 있습니다.
 

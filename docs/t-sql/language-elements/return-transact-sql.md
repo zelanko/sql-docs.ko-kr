@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d47b798f9af00fc3cae3699001b645fc5564b4b0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 89ccceece9d5d84faaae9b63c6846bfbd351f666
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706205"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915629"
 ---
 # <a name="return-transact-sql"></a>RETURN(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +49,9 @@ RETURN [ integer_expression ]
  *integer_expression*  
  반환되는 정수 값입니다. 저장 프로시저는 호출 프로시저나 애플리케이션에 정수 값을 반환할 수 있습니다.  
   
-## <a name="return-types"></a>반환 형식  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>반환 형식
  **int**를 선택적으로 반환합니다.  
   
 > [!NOTE]  

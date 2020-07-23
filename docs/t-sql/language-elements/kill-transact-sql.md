@@ -34,12 +34,12 @@ ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 055599b3aba3fb84c3b3e2c5e3d710ac32a434f4
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 3cff1d920326f3ca9c0ecbdb04cd81fe98180747
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159751"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915676"
 ---
 # <a name="kill-transact-sql"></a>KILL(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +65,9 @@ KILL 'session_id'
 [;]   
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 _session ID_  
 종료할 프로세스의 세션 ID입니다. _session ID_는 사용자가 연결할 때 각 연결에 할당된 고유한 정수(**int**)입니다. 세션 ID 값은 연결되어 있는 동안 해당 연결에 대해 유지됩니다. 연결이 종료되면 이 정수 값은 해제되어 새 연결에 다시 할당될 수 있습니다.  
 다음 쿼리는 중지하려는 `session_id`를 식별하는 데 유용할 수 있습니다.  
