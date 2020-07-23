@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: ab87b7da-c3b9-4bc8-a853-798716cbf74b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6447fa6b4105f15cf069524f022579e255def5a3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 12556983c82d6d06e8821d009c8a8e7ece7d618c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298719"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916542"
 ---
 # <a name="how-to-use-the-cdc-service-command-line-interface"></a>CDC Service 명령줄 인터페이스를 사용하는 방법
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Oracle CDC Service 프로그램인 xdbcdcsvc.exe는 일반적으로 Oracle CDC Windows 서비스를 실행하지만 명령줄에서 직접 이 프로그램을 호출하여 Oracle CDC Windows 서비스를 만들거나 삭제할 수 있습니다.  

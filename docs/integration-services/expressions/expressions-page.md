@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e3bbe6e788512144211ed35d1cfa8326d8f3ef7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1fe673f96f3272c2f23005588f0ad49271e943fe
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71290011"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917045"
 ---
 # <a name="expressions-page"></a>식 페이지
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **식** 페이지를 사용하여 속성 식을 편집하고 **속성 식 편집기** 및 **식 작성기** 대화 상자에 액세스할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "71290011"
  **식(...)**  
  **속성 식 편집기** 대화 상자를 열려면 줄임표를 클릭합니다. 자세한 내용은 [Property Expressions Editor](../../integration-services/expressions/property-expressions-editor.md)를 참조하세요.  
   
- **\<속성 이름>**  
+ **\<property name>**  
  **식 작성기** 대화 상자를 열려면 줄임표를 클릭합니다. 자세한 내용은 [Expression Builder](../../integration-services/expressions/expression-builder.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

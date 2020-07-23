@@ -26,15 +26,15 @@ ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5c1734fba82d819b9bce8e253d780d44952dbea7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 347566a8187cbe61132e1c7f024e3f0dc6cd814e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765159"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917739"
 ---
 # <a name="subscribe-to-publications"></a>게시 구독
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
   구독은 게시에 있는 데이터 및 데이터베이스 개체 복사본에 대한 요청입니다. 구독은 어떤 게시를 언제 어디서 받을 것인지를 정의합니다. 구독을 계획하는 경우 에이전트 처리를 수행할 위치를 고려합니다. 선택한 구독 유형에 따라 에이전트가 실행되는 위치가 결정됩니다. 밀어넣기 구독을 사용하면 병합 에이전트 또는 배포 에이전트가 배포자에서 실행되고 끌어오기 구독을 사용하면 에이전트가 구독자에서 실행됩니다. 구독을 만든 후에는 해당 유형을 변경할 수 없습니다.  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]

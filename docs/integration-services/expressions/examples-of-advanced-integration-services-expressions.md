@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f5643e4e1d900b0c4152a422927a29302f40f952
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dbf2c304cf97dfad85fbdb53ca83fd7922e3a128
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297625"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917659"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>고급 Integration Services 식의 예
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   이 섹션에서는 여러 개의 연산자와 함수가 결합된 고급 식의 예를 제공합니다. 선행 제약 조건이나 조건부 분할 변환에 사용된 식은 부울로 계산되어야 합니다. 그러나 속성 식, 변수, 파생 열 변환 또는 For 루프 컨테이너에 사용된 식에는 이 제한이 적용되지 않습니다.  

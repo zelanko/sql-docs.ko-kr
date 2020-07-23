@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fa6129fe5e617fc9f1684644012171d3ff6836c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52565494c572fdb6a0eb24ccc0c591bf00005a79
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293022"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916781"
 ---
 # <a name="data-viewer"></a>데이터 뷰어
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   경로에서 데이터 뷰어를 사용하도록 구성한 경우 데이터 뷰어에서는 데이터가 두 데이터 흐름 구성 요소 간을 이동할 때 데이터를 버퍼별로 표시합니다.  

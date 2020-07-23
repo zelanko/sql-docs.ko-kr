@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a98437a88fc81d83c98ec2c3417df6d38bc1b421
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ba3ef8fe03b0f3057dbb443dfbf5ab257a70983
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283829"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917389"
 ---
 # <a name="lesson-1-4-add-a-data-flow-task-to-the-package"></a>1-4단원: 패키지에 데이터 흐름 태스크 추가
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

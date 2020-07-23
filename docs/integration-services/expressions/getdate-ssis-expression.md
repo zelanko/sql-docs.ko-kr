@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7b17deb29406ff70d777e45ceed8db8ca23275f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 36646e7411312cd6285f61dafbb64628bb82eb20
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71289750"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916997"
 ---
 # <a name="getdate-ssis-expression"></a>GETDATE(SSIS 식)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   시스템의 현재 날짜를 DT_DBTIMESTAMP 형식으로 반환합니다. GETDATE 함수는 인수가 필요 없습니다.  

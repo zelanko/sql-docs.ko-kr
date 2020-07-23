@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8df702e1b77a551e1073e4d5834535e27b4ea43f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4b64d20ecb26a143c373a1073b379f0ae9debfb1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903851"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917549"
 ---
 # <a name="integration-services-ssis-development-and-management-tools"></a>SSIS(Integration Services) 배포 및 관리 도구
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 패키지에 사용할 수 있는 두 가지 스튜디오가 포함되어 있습니다.  

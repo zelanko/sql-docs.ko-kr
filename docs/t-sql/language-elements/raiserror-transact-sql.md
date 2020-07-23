@@ -29,12 +29,12 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 450914318f3bc7a17e16599fd715992356ed6e91
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 053097efe59628629e6b2d1edf45c852ad02de56
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81630922"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917999"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,9 @@ RAISERROR ( { msg_str | @local_variable }
     [ WITH option [ ,...n ] ]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *msg_id*  
  sp_addmessage를 사용하여 sys.messages 카탈로그 뷰에 저장된 사용자 정의 오류 메시지 번호입니다. 사용자 정의 오류 메시지의 오류 번호는 50000보다 커야 합니다. *msg_id*를 지정하지 않으면 RAISERROR는 오류 번호가 50000인 오류 메시지를 발생시킵니다.  
   

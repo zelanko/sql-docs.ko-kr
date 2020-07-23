@@ -9,16 +9,16 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d520f83f515694bd8852ce11ea13fce7f3213596
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a0aa51c868ae89062320640015ad01ef79134e8d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245118"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917759"
 ---
 # <a name="use-the-teradata-connection-manager"></a>Teradata 연결 관리자 사용
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Teradata 연결 관리자를 사용하면 패키지를 사용하도록 설정하여 Teradata 데이터베이스에서 데이터를 추출하고 Teradata 데이터베이스에 데이터를 로드할 수 있습니다.
 

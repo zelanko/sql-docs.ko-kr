@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e154659500155a2a171f03ee18f5c62319142a8c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99a15645e037e578e1594142b9869ef5d92860af
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297571"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916973"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt;(보다 큼)(SSIS 식)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   비교를 수행하여 첫 번째 식이 두 번째 식보다 큰지 확인합니다. 식 계산기는 비교를 수행하기 전에 많은 데이터 형식을 자동으로 변환합니다.  

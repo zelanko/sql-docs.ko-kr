@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 64f1b991d0978e45cbfa9dbf19ba796cc824bf5c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cee61de08afac103f0280b905100683011460972
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292934"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916741"
 ---
 # <a name="define-a-state-variable"></a>상태 변수 정의
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   이 절차에서는 CDC 상태가 저장되는 패키지 변수를 정의하는 방법을 설명합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "71292934"
   
 |구성 요소|Description|  
 |---------------|-----------------|  
-|**\<상태 이름 >**|현재 CDC 상태의 이름입니다.|  
+|**\<state-name>**|현재 CDC 상태의 이름입니다.|  
 |**CS**|이렇게 하면 현재 처리 범위 시작점(현재 시작)이 표시됩니다.|  
 |**\<cs-lsn>**|이전 CDC 실행 시 마지막으로 처리된 LSN(로그 시퀀스 번호)입니다.|  
 |**CE**|이렇게 하면 현재 처리 범위 끝점(현재 끝)이 표시됩니다. CDC 상태에 CE 구성 요소가 있으면 CDC 패키지가 현재 처리 중이거나 해당 CDC 패키지에서 CDC 처리 범위를 완전히 처리하기 전에 실패했음을 나타냅니다.|  

@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 12fd42ba8f7fa5abf7f35c14001cb1bc68f10096
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eac15d46e1530d0a742a3161e0622233c05ac3da
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295984"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918156"
 ---
 # <a name="lesson-3-1---copying-the-deployment-bundle"></a>3-1단원 - 배포 번들 복사
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 이 태스크에서는 배포 번들을 대상 컴퓨터에 복사합니다.  

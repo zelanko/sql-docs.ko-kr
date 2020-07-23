@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 85b7d512-0ea7-47f5-8937-b1af6592b5b5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b32f52bd01cb0f19bc107f5f94118d699c239e27
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3e7d3c0f25f34685af4531e5d59541f028098291
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71290719"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916661"
 ---
 # <a name="delete-packages"></a>패키지 삭제
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 파일 시스템에 저장된 패키지를 삭제할 수 있습니다. 패키지를 삭제하면 패키지가 영구적으로 삭제되어 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트로 복원할 수 없습니다.  

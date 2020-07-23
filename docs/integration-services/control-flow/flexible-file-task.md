@@ -12,16 +12,16 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 83ef614593641b762a628838354a6a3bef9dfadd
-ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
+ms.openlocfilehash: 14850ea141db133fe7d3bdfe879ad0e6d47111b8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80607852"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917889"
 ---
 # <a name="flexible-file-task"></a>유연한 파일 작업
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Flexible File Task를 사용하면 사용자가 지원되는 다양한 스토리지 서비스에서 파일 작업을 수행할 수 있습니다.
 현재 지원되는 스토리지 서비스는 다음과 같습니다.
