@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 88dbf49e-1307-4dda-b9db-ff1632053550
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c5248919a2944ad81b06883b1a0aa01a64676b98
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 15392de2f7a77edd0a4f43f2edc1346a52cd1a5e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297535"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914552"
 ---
 # <a name="isnull-ssis-expression"></a>ISNULL(SSIS 식)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   식이 Null인지 여부에 따라 부울 결과를 반환합니다.  

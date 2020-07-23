@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 82b9b9b02931aee0a7ea5411cb367b394c1d1d74
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 72af408a25ecc085d60fd18e25243cd71c42c337
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774063"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914451"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>마이그레이션 후 유효성 검사 및 최적화 가이드
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 마이그레이션 후 단계는 데이터 정확도와 완전성을 조정하고 작업의 성능 문제를 파악하는 데 매우 중요합니다.
 

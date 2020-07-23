@@ -9,16 +9,16 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c28efd8106056ea900fef0cd57791837cf79e21a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: abbcea42546421fb7c0d3fef9824ef8ef56d2a0c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "69553233"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913789"
 ---
 # <a name="microsoft-connector-for-oracle-data-type-support"></a>Microsoft Connector for Oracle 데이터 형식 지원
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Oracle용 SSIS 구성 요소가 모든 Oracle 데이터 형식을 지원하는 것은 아닙니다. 지원되지 않는 데이터 형식이 있는 열은 SSDT에서 패키지를 디자인할 때 경고를 발생하며 매핑 열에서 삭제됩니다. 지원되지 않는 데이터 형식의 열에는 데이터를 로드할 수 없습니다.
 
