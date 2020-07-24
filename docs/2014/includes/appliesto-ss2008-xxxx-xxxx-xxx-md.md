@@ -1,1 +1,0 @@
-<Token>**이 항목은 다음에 적용 됩니다.**![](media/yes-icon.png)예 SQL Server (2008![부터](media/no-icon.png)시작![)](media/no-icon.png)아니요 ![Azure SQL Database](media/no-icon.png)Azure SQL Data Warehouse 아니요 병렬 데이터 웨어하우스</Token>

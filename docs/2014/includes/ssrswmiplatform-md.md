@@ -1,1 +1,0 @@
-Windows Server 2003, Datacenter Edition; Windows Server 2003, Enterprise Edition Windows Server 2003, Standard Edition; Windows Vista Windows XP Professional 서비스 팩 \(2 SP2\) 또는 서비스 팩 1 SP1\) \( 또는 Windows 2000 \(모든 버전\)
