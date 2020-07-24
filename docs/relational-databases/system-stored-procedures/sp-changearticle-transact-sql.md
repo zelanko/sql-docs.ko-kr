@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 223f1feb346a48a2afaae9e89437ba1b06bcd2c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e0f9b47d2a8d5732aa42ed92f2b5af00524052e6
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717400"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977551"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,7 +57,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |--------------|------------|-----------------|  
 |**creation_script**||대상 테이블을 만드는 데 사용하는 아티클 스키마 스크립트의 경로 및 이름입니다. 기본값은 NULL입니다.|  
 |**del_cmd**||실행할 DELETE 문입니다. 그렇지 않은 경우에는 로그에서 만들어집니다.|  
-|**한**||아티클에 대한 새로운 설명 항목입니다.|  
+|**description**||아티클에 대한 새로운 설명 항목입니다.|  
 |**dest_object**||이전 버전과의 호환성을 위해 제공됩니다. **Dest_table**를 사용 합니다.|  
 |**dest_table**||새 대상 테이블입니다.|  
 |**destination_owner**||대상 개체 소유자의 이름입니다.|  
@@ -210,9 +210,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="valid-schema-options"></a>유효한 스키마 옵션  
  다음 표에서는 복제 유형 (위에 표시 됨)과 아티클 유형 (첫 번째 열에 표시 됨)을 기반으로 *schema_option* 의 허용 가능한 값에 대해 설명 합니다.  
   
-|아티클 유형|복제 유형||  
-|------------------|----------------------|------|  
-||트랜잭션|스냅샷|  
+| 아티클 유형 | 복제 유형-트랜잭션 | 복제 유형-스냅숏 |
+| ------------ | -------------------------------- | --------------------------- |
 |**logbased**|모든 옵션|**0x02** 를 제외한 모든 옵션|  
 |**logbased manualfilter**|모든 옵션|**0x02** 를 제외한 모든 옵션|  
 |**logbased manualview**|모든 옵션|**0x02** 를 제외한 모든 옵션|  
@@ -242,7 +241,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  [Transact-sql&#41;sp_addarticle &#40;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [Transact-sql&#41;sp_articlecolumn &#40;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [Transact-sql&#41;sp_droparticle &#40;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [Transact-sql&#41;sp_helparticle &#40;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helparticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [Transact-sql&#41;sp_helparticlecolumns &#40;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   
   

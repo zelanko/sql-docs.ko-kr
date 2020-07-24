@@ -20,11 +20,12 @@ ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2281586bfe77b7cadaa2b3a8f7ae7a9b18c655ab
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 000c71e284f77b5024cd45727803af55fa8d8b06
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091795"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977744"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings(Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -61,7 +62,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|키 값에 해당하는 내부 문서 ID(DocId) 열입니다.|  
-|Key|*|지정한 테이블의 전체 텍스트 키 값입니다.<br /><br /> 매핑 테이블에 전체 텍스트 키가 없으면 빈 행 집합이 반환됩니다.|  
+|키|*|지정한 테이블의 전체 텍스트 키 값입니다.<br /><br /> 매핑 테이블에 전체 텍스트 키가 없으면 빈 행 집합이 반환됩니다.|  
   
  <sup>*</sup>Key의 데이터 형식은 기본 테이블에 있는 전체 텍스트 키 열의 데이터 형식과 동일 합니다.  
   
@@ -85,7 +86,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 -   NULL이 아닐 수 있는 매개 변수에 대해 NULL이 발생한 경우  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 > [!NOTE]  
 >  이 섹션의 예에서는 `Production.ProductReview` 예제 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블을 사용합니다. `ProductReview` [Transact-sql&#41;&#40;전체 텍스트 인덱스 만들기 ](../../t-sql/statements/create-fulltext-index-transact-sql.md)에서 테이블에 대해 제공 된 예를 실행 하 여이 인덱스를 만들 수 있습니다.  
@@ -107,9 +108,8 @@ GO
   
  이 예에서는 다음과 같이 테이블에서 모든 DocId 및 전체 텍스트 키를 반환합니다.  
   
-||||  
-|-|-|-|  
-||`docid`|`key`|  
+| TABLE | docid | key |
+| ----- | ----- | --- |
 |`1`|`1`|`1`|  
 |`2`|`2`|`2`|  
 |`3`|`3`|`3`|  
@@ -132,9 +132,8 @@ GO
   
  이 예에서는 다음 결과를 반환합니다.  
   
-||||  
-|-|-|-|  
-||`docid`|`key`|  
+| TABLE | docid | key |
+| ----- | ----- | --- |
 |`4`|`4`|`4`|  
   
 ## <a name="see-also"></a>참고 항목  

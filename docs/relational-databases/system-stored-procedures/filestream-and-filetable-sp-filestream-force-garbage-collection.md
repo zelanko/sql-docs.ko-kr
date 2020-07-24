@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc56f1434c0b1670495d30accdb70e0456295b01
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0068e1afb8f096b3758d45a770f1aac56512d0c6
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717434"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977603"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,9 +53,8 @@ sp_filestream_force_garbage_collection
   
 ## <a name="return-code-values"></a>반환 코드 값  
   
-|||  
-|-|-|  
-|값|설명|  
+| 값 | 설명 |
+| ----- | ----------- |   
 |0|작업 성공|  
 |1|작업 실패|  
   
@@ -85,7 +84,7 @@ GC (가비지 수집)는 로그 잘림에 의존 합니다. 따라서 전체 복
 ## <a name="permissions"></a>사용 권한  
  db_owner 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `FSDB` 데이터베이스의 FILESTREAM 컨테이너에 대해 가비지 수집기를 실행합니다.  
   
 ### <a name="a-specifying-no-container"></a>A. 컨테이너 지정 안 함  

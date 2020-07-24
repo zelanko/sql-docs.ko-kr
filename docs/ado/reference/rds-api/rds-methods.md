@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 97af6e8394ac8371f2ddd1baff2363079c898f84
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c178bae1f3da5ccc6ca4cfdd6b5645335141908f
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758549"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942305"
 ---
 # <a name="rds-methods"></a>RDS 메서드
 > [!IMPORTANT]
 >  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
-|||  
+|메서드|설명|  
 |-|-|  
 |[취소 (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)|보류 중인 비동기 메서드 호출의 실행을 취소 합니다.|  
 |[CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)|**레코드 집합** 개체의 현재 또는 새 행에 대 한 변경 내용을 취소 합니다.|  

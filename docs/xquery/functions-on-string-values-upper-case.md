@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9fa783dfb2ac1d7e3cbca735c9f2a2cbca19dbda
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e48fb5448284cc90a87aff88a9cf7a0304c661d
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720027"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87107224"
 ---
 # <a name="functions-on-string-values---upper-case"></a>문자열 값 함수 - upper-case
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -37,15 +37,14 @@ fn:upper-case($arg as xs:string?) as xs:string
   
 ## <a name="arguments"></a>인수  
   
-|||  
-|-|-|  
 |용어|정의|  
+|-|-|
 |*$arg*|대문자로 변환될 문자열 값입니다.|  
   
 ## <a name="remarks"></a>설명  
  *$Arg* 값이 비어 있으면 길이가 0 인 문자열이 반환 됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. 문자열을 대문자로 변경  
  다음 예에서는 입력 문자열 ' abcDEF! '를 변경 합니다. @4 대문자로  

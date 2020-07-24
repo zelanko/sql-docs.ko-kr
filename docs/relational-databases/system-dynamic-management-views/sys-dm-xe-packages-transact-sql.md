@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a70105791ed9c6dea0371bd941dcae185ab05b2d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3ae80e8db245c5a70db238a17b5d09bb682b09b1
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898590"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942356"
 ---
 # <a name="sysdm_xe_packages-transact-sql"></a>sys.dm_xe_packages(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,12 +52,11 @@ ms.locfileid: "85898590"
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-||||  
-|-|-|-|  
-|시작|대상|관계|  
+| 보낸 사람 | 수행할 작업 | 관계 |
+| ---- | -- | ------------ |  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|다 대 일|  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

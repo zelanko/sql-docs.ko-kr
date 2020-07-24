@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3a11adb93f3de8f0887eefe964f1c85836ccc43e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3291b5ca72ab984ecd8487612384ece6d5b76f9a
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750580"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942280"
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges 메서드(RDS)
 로컬에서 캐시 하 고 업데이트할 수 있는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 보류 중인 변경 내용을 [Connect](../../../ado/reference/rds-api/connect-property-rds.md) 속성 또는 [URL](../../../ado/reference/rds-api/url-property-rds.md) 속성에 지정 된 데이터 원본에 전송 합니다.  
@@ -58,11 +58,16 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  **Url** 속성이 설정 된 경우 **SubmitChanges** 는 url로 지정 된 위치에 변경 내용을 전송 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
-  
-|||  
-|-|-|  
-|[DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataFactory 개체(RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
-  
+
+:::row:::
+    :::column:::
+        [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+    :::column-end:::
+    :::column:::
+        [DataFactory 개체(RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>참고 항목  
  [SubmitChanges 메서드 예제 (VBScript)](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)   
  [주소록 명령 단추](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   

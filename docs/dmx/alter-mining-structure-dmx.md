@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f4f4cd71f7ecfaa0f8221f599a2814c153af97be
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: ace89ae45aff0e740691025d2039213cfacebff9
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669868"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971841"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   기존 마이닝 구조를 기반으로 새 마이닝 모델을 만듭니다.  **ALTER 마이닝 structure** 문을 사용 하 여 새 마이닝 모델을 만드는 경우 구조가 이미 존재 해야 합니다. 반면, 문을 사용 하 여 [DMX&#41;&#40;마이닝 모델을 만드는 ](../dmx/create-mining-model-dmx.md)경우에는 모델을 만들고 동시에 기본 마이닝 구조를 자동으로 생성 합니다.  
   
@@ -55,7 +55,7 @@ USING <algorithm> [(<parameter list>)]
  공급자가 정의한 데이터 마이닝 알고리즘의 이름입니다.  
   
 > [!NOTE]  
->  [DMSCHEMA_MINING_SERVICES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)을 사용 하 여 현재 공급자가 지 원하는 알고리즘 목록을 검색할 수 있습니다. 현재 인스턴스에서 지원 되는 알고리즘을 보려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [데이터 마이닝 속성](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)을 참조 하세요.  
+>  [DMSCHEMA_MINING_SERVICES 행 집합](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))을 사용 하 여 현재 공급자가 지 원하는 알고리즘 목록을 검색할 수 있습니다. 현재 인스턴스에서 지원 되는 알고리즘을 보려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [데이터 마이닝 속성](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)을 참조 하세요.  
   
  *매개 변수 목록*  
  (선택 사항) 알고리즘에 대해 공급자가 정의한 매개 변수의 쉼표로 구분된 목록입니다.  
@@ -121,7 +121,7 @@ USING <algorithm> [(<parameter list>)]
   
 |||  
 |-|-|  
-|**PREDICT**|모델에서 이 열을 예측할 수 있으며 열 값은 다른 예측 가능한 열의 값을 예측하기 위한 입력으로 사용할 수 있습니다.|  
+|**예측**|모델에서 이 열을 예측할 수 있으며 열 값은 다른 예측 가능한 열의 값을 예측하기 위한 입력으로 사용할 수 있습니다.|  
 |**PREDICT_ONLY**|이 열은 모델에 의해 예측될 수 있지만 이 열의 값을 입력 사례에 사용하여 다른 예측 가능 열 값을 예측할 수는 없습니다.|  
   
 ## <a name="filter-criteria-expressions"></a>필터 조건 식  

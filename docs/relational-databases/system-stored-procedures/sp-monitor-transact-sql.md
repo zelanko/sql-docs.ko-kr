@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 21d6e73f79c2cb8c1c0a749f4d8e849d644c8291
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 400d6f484ee80d9b4b1244aad6b91c8836aa95d4
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891581"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977719"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,32 +70,30 @@ sp_monitor
 ## <a name="examples"></a>예  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 얼마나 많이 사용되었는지에 대한 정보를 보고합니다.  
   
-```  
+```console
 USE master  
 EXEC sp_monitor  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-||||  
-|-|-|-|  
-|**last_run**|**current_run**|**까지의**|  
-|Mar 29 1998 11:55AM|Apr 4 1998 2:22 PM|561|  
-  
-||||  
-|-|-|-|  
-|**cpu_busy**|**io_busy**|**유휴**|  
-|190 (0)-0%|187 (0)-0%|148 (556)-99%|  
-  
-||||  
-|-|-|-|  
-|**packets_received**|**packets_sent**|**packet_errors**|  
-|16 (1)|20 (2)|0 (0)|  
-  
-|||||  
-|-|-|-|-|  
-|**total_read**|**total_write**|**total_errors**|**연결만**|  
-|141 (0)|54920 (127)|0 (0)|4 (0)|  
+
+```console
+last_run       current_run                   seconds
+-----------    --------------------------    ---------
+Mar 29 1998    11:55AM Apr 4 1998 2:22 PM    561
+
+cpu_busy           io_busy     idle
+---------------    ---------   --------------
+190(0)-0%          187(0)-0%   148(556)-99%
+
+packets_received       packets_sent    packet_errors
+----------------       ------------    -------------
+16(1)                  20(2)           0(0)
+
+total_read     total_write   total_errors    connections
+-----------    -----------   -------------   -----------
+141(0)         54920(127)    0(0)            4(0)
+```
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_who &#40;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   

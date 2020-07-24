@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5236d35009c67eb6e205129cd629fa5f7eca54d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401173"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942345"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>병렬 데이터 웨어하우스의 dwloader 명령줄 로더
 **dwloader** 는 테이블 행을 기존 테이블에 대량으로 로드 하는 PDW (병렬 데이터 웨어하우스) 명령줄 도구입니다. 행을 로드할 때 모든 행을 테이블의 끝에 추가 (*추가 모드* 또는 *fastappend 모드*) 하거나, 새 행을 추가 하 고 기존 행을 업데이트 (*upsert 모드*) 하거나, 로드 하기 전에 기존 행을 모두 삭제 하 고 모든 행을 빈 테이블 (*다시 로드 모드*)에 삽입할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "74401173"
   
 5.  **Dwloader**를 실행 합니다.  
   
-    로드 서버에 로그인 하 고 적절 한 명령줄 옵션을 사용 하 여 실행 가능한 **dwloader .exe** 를 실행 합니다.  
+    로드 서버에 로그인 하 고 적절 한 명령줄 옵션을 사용 하 여 실행 파일 **dwloader.exe** 를 실행 합니다.  
   
 6.  결과를 확인 합니다.  
   
@@ -123,7 +123,7 @@ dwloader.exe
 **-U** *login_name*  
 로드를 수행할 수 있는 적절 한 권한이 있는 유효한 SQL Server 인증 로그인입니다.  
   
-**-P** *암호*  
+**-P** *password*  
 *Login_name*SQL Server 인증에 대 한 암호입니다.  
   
 **-W**  
@@ -136,9 +136,9 @@ For information about configuring Windows Authentication, see [Security - Config
 **-f** *parameter_file_name*  
 명령줄 매개 변수 대신 *parameter_file_name*매개 변수 파일을 사용 합니다. *parameter_file_name* 는 *user_name* 와 *암호*를 제외한 모든 명령줄 매개 변수를 포함할 수 있습니다. 명령줄과 매개 변수 파일에 매개 변수가 지정 된 경우 명령줄은 file 매개 변수를 재정의 합니다.  
   
-매개 변수 파일에는 한 줄에 **-** 접두사 없이 하나의 매개 변수가 포함 되어 있습니다.  
+매개 변수 파일에는 한 줄에 접두사 없이 하나의 매개 변수가 포함 되어 있습니다 **-** .  
   
-예:  
+예제:  
   
 `rt=percentage`  
   
@@ -193,17 +193,17 @@ For more information about this install option, see [Install dwloader Command-Li
   
 -   모든 파일은 하나의 파일 처럼 연결 되 고 로드 되며 거부 된 행은 단일 거부 파일로 이동 합니다.  
   
-예:  
+예제:  
   
--   -i \\\loadserver\loads\daily\\*. release.tar.gz  
+-   -i \\ \loadserver\loads\daily \\ *. release.tar.gz  
   
--   -i \\\loadserver\loads\daily\\* .txt  
+-   -i \\ \loadserver\loads\daily \\ * .txt  
   
--   -i \\\loadserver\loads\daily\monday. *  
+-   -i \\ \loadserver\loads\daily\monday. *  
   
 -   -i \\\loadserver\loads\daily\monday.txt  
   
--   -i \\\loadserver\loads\daily\\*  
+-   -i \\ \loadserver\loads\daily\\*  
   
 **-R** *load_failure_file_name*  
 로드 오류가 발생 한 경우 **dwloader** 는 로드에 실패 한 행을 저장 하 고 오류는 *load_failure_file_name*이라는 파일에 오류 정보를 설명 합니다. 이 파일이 이미 있으면 dwloader는 기존 파일을 덮어씁니다. *load_failure_file_name* 는 첫 번째 오류가 발생할 때 생성 됩니다. 모든 행이 성공적으로 로드 되 면 *load_failure_file_name* 생성 되지 않습니다.  
@@ -234,7 +234,7 @@ ASCII 파일의 경우에는 구분 기호를 연속으로 배치 하 여 Null�
   
 명령줄에서 파이프 문자를 지정 하려면 큰따옴표 ("|")로 묶습니다. 이렇게 하면 명령줄 파서에서 잘못 해석 하지 않습니다. 다른 문자는 작은따옴표로 묶여 있습니다.  
   
-예:  
+예제:  
   
 -t "|"  
   
@@ -274,7 +274,7 @@ Unix에는 LF가 필요 합니다. Windows에는 CR이 필요 합니다.
 **-s** *string_delimiter*  
 텍스트 구분 입력 파일의 문자열 데이터 형식 필드에 대 한 구분 기호입니다. 문자열 구분 기호는 하나 이상의 ASCII 값입니다.  문자 (예:-s *) 또는 16 진수 값으로 지정할 수 있습니다 (예: 큰따옴표의 경우-s 0x22).  
   
-예:  
+예제:  
   
 삭제  
   
@@ -290,9 +290,9 @@ Unix에는 LF가 필요 합니다. Windows에는 CR이 필요 합니다.
   
 이 파일은 로드 서버에 상주해 야 합니다. 경로는 UNC, 상대 또는 절대 경로일 수 있습니다. *Fixed_width_config_file* 의 각 줄은 한 열의 이름과 해당 열의 문자 수를 포함 합니다. 열 마다 다음과 같이 한 줄이 있고 파일의 순서는 대상 테이블의 순서와 일치 해야 합니다.  
   
-*column_name*=*num_chars*  
+*column_name* = *num_chars*  
   
-*column_name*=*num_chars*  
+*column_name* = *num_chars*  
   
 고정 너비 구성 파일의 예:  
   
@@ -340,17 +340,17 @@ LF의 예:
   
 Unix에는 LF가 필요 합니다. Windows에는 CR이 필요 합니다.  
   
-**-D** { **ymd** | ydm | mdy | myd |  개 | dym | *custom_date_format* }  
+**-D** { **ymd** \| ydm \| mdy \| myd \| dmy \| dym \| *custom_date_format* }  
 입력 파일의 모든 날짜/시간 필드에 대 한 월 (m), 일 (d) 및 연도 (y)의 순서를 지정 합니다. 기본 순서는 ymd입니다. 동일한 원본 파일에 대해 여러 주문 형식을 지정 하려면-dt 옵션을 사용 합니다.  
   
-ymd | dmy  
+ymd \|  
 ydm 및 amy는 동일한 입력 형식을 허용 합니다. 모두 날짜의 시작 또는 끝에 연도를 사용할 수 있습니다. 예를 들어 **ydm** 및 adate **dmy** 형식의 경우 입력 파일에 2013-02-03 또는 02-03-2013이 있을 수 있습니다.  
   
 ydm  
 Datetime 및 smalldatetime 데이터 형식의 열에는 ydm 형식의 입력만 로드할 수 있습니다. 데이터 형식의 datetime2, date 또는 datetimeoffset 열에 ydm 값을 로드할 수 없습니다.  
   
 mdy  
-mdy는 <month> <space> <day> <comma> <year>를 허용 합니다.  
+mdy는 \<month> \<space> \<day> \<comma> \<year> 를 허용 합니다.  
   
 1975 년 1 월 1 일에 대 한 mdy 입력 데이터의 예:  
   
@@ -380,7 +380,7 @@ dym
   
 각 줄에는 대상 테이블의 열 이름과 해당 날짜/시간 형식이 포함 됩니다.  
   
-예:  
+예제:  
   
 `LastReceiptDate=ymd`  
   
@@ -443,12 +443,12 @@ SQL Server 2012 PDW부터 제어 노드는 기본적으로 각 로드에 대 한
 -Rt 백분율을 사용 하는 경우 로더는 간격 (-rs 옵션)에서 백분율을 계산 합니다. 따라서 실패 한 행의 백분율이 *reject_value*를 초과할 수 있습니다.  
   
 **-rs** *reject_sample_size*  
-증분 백분율 검사 `-rt percentage` 를 지정 하는 옵션과 함께 사용 됩니다. 예를 들어 reject_sample_size가 1000 인 경우 로더는 1000 행을 로드 하려고 시도한 후 실패 한 행의 백분율을 계산 합니다. 각 추가 1000 행을 로드 하려고 시도한 후 실패 한 행의 백분율을 다시 계산 합니다.  
+`-rt percentage`증분 백분율 검사를 지정 하는 옵션과 함께 사용 됩니다. 예를 들어 reject_sample_size가 1000 인 경우 로더는 1000 행을 로드 하려고 시도한 후 실패 한 행의 백분율을 계산 합니다. 각 추가 1000 행을 로드 하려고 시도한 후 실패 한 행의 백분율을 다시 계산 합니다.  
   
 **-c**  
 Char, nchar, varchar 및 nvarchar 필드의 왼쪽과 오른쪽에서 공백 문자를 제거 합니다. 공백 문자만 포함 하는 각 필드를 빈 문자열로 변환 합니다.  
   
-예:  
+예제:  
   
 ' '이 ' ' (으)로 잘렸습니다.  
   
@@ -490,7 +490,7 @@ CU 7.4 update에서 사용할 수 있으며 로드할 수 있는 최대 행 길�
 ## <a name="return-code-values"></a>반환 코드 값  
 0 (성공) 또는 기타 정수 값 (오류)  
   
-명령 창이 나 배치 파일에서를 사용 `errorlevel` 하 여 반환 코드를 표시 합니다. 예를 들면 다음과 같습니다.  
+명령 창이 나 배치 파일에서를 사용 `errorlevel` 하 여 반환 코드를 표시 합니다. 예를 들어:  
   
 ```  
 dwloader  
@@ -499,7 +499,7 @@ if not %errorlevel%==0 echo Fail
 if %errorlevel%==0 echo Success  
 ```  
   
-PowerShell을 사용 하는 `$LastExitCode`경우를 사용 합니다.  
+PowerShell을 사용 하는 경우를 사용 `$LastExitCode` 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
 대상 테이블에서 로드 권한 및 해당 사용 권한 (INSERT, UPDATE, DELETE)이 필요 합니다. 준비 데이터베이스에 대 한 CREATE 권한 (임시 테이블을 만드는 경우)이 필요 합니다. 준비 데이터베이스를 사용 하지 않는 경우 대상 데이터베이스에 대 한 CREATE 권한이 필요 합니다. 
@@ -568,7 +568,7 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
 ## <a name="examples"></a>예  
   
 ### <a name="a-simple-dwloader-example"></a>A. Simple dwloader 예  
-다음 예에서는 필수 옵션만 선택 하 여 **로더** 를 시작 하는 방법을 보여 줍니다. 기타 옵션은 전역 구성 파일인 *loadparamfile .txt*에서 가져옵니다.  
+다음 예에서는 필수 옵션만 선택 하 여 **로더** 를 시작 하는 방법을 보여 줍니다. 기타 옵션은 *loadparamfile.txt*전역 구성 파일에서 가져옵니다.  
   
 SQL Server 인증을 사용 하는 예입니다.  
   
@@ -598,13 +598,13 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 ```  
   
 ### <a name="b-load-data-into-an-adventureworks-table"></a>B. AdventureWorks 테이블로 데이터 로드  
-다음 예는 **AdventureWorksPDW2012**으로 데이터를 로드 하는 일괄 처리 스크립트의 일부입니다.  전체 스크립트를 보려면 **AdventureWorksPDW2012** 설치 패키지와 함께 제공 되는 aw_create .bat 파일을 엽니다. 
+다음 예는 **AdventureWorksPDW2012**으로 데이터를 로드 하는 일괄 처리 스크립트의 일부입니다.  전체 스크립트를 보려면 **AdventureWorksPDW2012** 설치 패키지와 함께 제공 되는 aw_create.bat 파일을 엽니다. 
 
 <!-- Missing link
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-다음 스크립트 조각에서는 dwloader를 사용 하 여 데이터를 나이 계정 및 나이에 대 한 통화 테이블로 로드 합니다. 이 스크립트는 이더넷 주소를 사용 합니다. InfiniBand를 사용 하는 경우 서버는 `-SQLCTL01` *>appliance_name<* 됩니다.  
+다음 스크립트 조각에서는 dwloader를 사용 하 여 데이터를 나이 계정 및 나이에 대 한 통화 테이블로 로드 합니다. 이 스크립트는 이더넷 주소를 사용 합니다. InfiniBand를 사용 하는 경우 서버는 *>appliance_name<* 됩니다 `-SQLCTL01` .  
   
 ```  
 set server=10.193.63.134  
@@ -646,7 +646,7 @@ with (CLUSTERED INDEX(AccountKey),
 DISTRIBUTION = REPLICATE);  
 ```  
   
-다음은 테이블에 로드할 데이터를 포함 하는 데이터 파일의 예입니다.  
+다음은 테이블에 로드할 데이터가 포함 된 데이터 파일 DimAccount.txt의 예입니다.  
   
 ```  
 --Sample of data in the DimAccount.txt load file.  
@@ -675,7 +675,7 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -
   
 명령줄 매개 변수에 대 한 설명입니다.  
   
--   *C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe* 는 설치 된 dwloader .exe의 위치입니다.  
+-   *C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe* 는 dwloader.exe의 설치 된 위치입니다.  
   
 -   *-S* 뒤에는 제어 노드의 IP 주소가 옵니다.  
   
@@ -685,17 +685,17 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -
   
 -   *-e UTF16* 은 원본 파일이 little endian 문자 인코딩 형식을 사용 함을 나타냅니다.  
   
--   *-i .\DimAccount.txt* 는 데이터를 현재 디렉터리에 있는 파일에 있는 파일에 지정 합니다.  
+-   *-i .\DimAccount.txt* 현재 디렉터리에 있는 DimAccount.txt 라는 파일에 있는 데이터를 지정 합니다.  
   
 -   *-T AdventureWorksPDW2012* 는 데이터를 받을 테이블의 세 부분으로 구성 된 이름을 지정 합니다.  
   
 -   *-R 파일 계정. 잘못* 됨을 지정 하면 로드에 실패 한 행이 나이 계정 이라는 파일에 기록 됩니다.  
   
--   *-t "|"* 입력 파일의 필드를 표시 하 고,이는 파이프 문자로 구분 됩니다.  
+-   *-t "|"* 입력 파일 DimAccount.txt의 필드가 파이프 문자로 구분 되어 있음을 나타냅니다.  
   
--   *-r \r\n* 은 각 행을 나이를 지정 합니다. txt는 캐리지 리턴 및 줄 바꿈 문자로 끝납니다.  
+-   *-r \r\n* DimAccount.txt의 각 행을 캐리지 리턴 및 줄 바꿈 문자로 지정 합니다.  
   
--   *-U <login_name>-P <password> * 는 로드를 수행할 수 있는 권한이 있는 로그인에 대 한 로그인 및 암호를 지정 합니다.  
+-   *-U <login_name>-P <password> * 로드를 수행할 수 있는 권한이 있는 로그인에 대 한 로그인 및 암호를 지정 합니다.  
   
 
 <!-- MISSING LINK

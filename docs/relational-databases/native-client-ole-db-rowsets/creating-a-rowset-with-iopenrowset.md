@@ -1,5 +1,5 @@
 ---
-title: IOpenRowset을 사용하여 행 집합 만들기 | Microsoft Docs
+title: IOpenRowset (Native Client OLE DB 공급자)를 사용 하 여 행 집합 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,11 +16,12 @@ ms.assetid: e8bc3de7-4b97-4de9-8df8-e11947d24045
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5183d413e05fae6963ad0d314ba025a74edad3a9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b3c9b5355492a4522073ced3c5b6666fbf40ec2b
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005245"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942445"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>IOpenRowset을 사용하여 행 집합 만들기
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

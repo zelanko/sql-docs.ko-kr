@@ -20,11 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 572cc4eb126114697d4fc4ecfeb9589458c46baa
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 7ce40edcea8e734aae84b5f24ec5f0e71890c7d6
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053499"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977517"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup. sp_get_backup_diagnostics (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "86053499"
 managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@begin_time = ] 'time1' ] [, [@end_time = ] 'time2'VARCHAR(255) = 'Xevent',@begin_time DATETIME = NULL,@end_time DATETIME = NULL  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>인수의  
+##  <a name="arguments"></a><a name="Arguments"></a> 인수  
  @xevent_channel  
  확장 이벤트의 유형입니다. 기본값은 이전 30분 동안 기록된 모든 이벤트를 반환하도록 설정됩니다. 기록된 이벤트는 활성화된 확장 이벤트의 유형에 따라 달라집니다. 이 매개 변수를 사용하여 특정 유형의 이벤트만 표시되도록 저장 프로시저를 필터링할 수 있습니다. 전체 이벤트 이름을 지정 하거나 **' admin**', **' 분석 '**, **' 작동 '** 및 **' 디버그 '** 와 같은 부분 문자열을 지정할 수 있습니다. 는 @event_channel **VARCHAR (255)** 입니다.  
   
@@ -56,19 +57,18 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 ## <a name="table-returned"></a>반환된 테이블  
  이 저장 프로시저는 다음 정보와 함께 테이블을 반환합니다.  
   
-||||  
-|-|-|-|  
-|열 이름|데이터 형식|Description|  
+| 열 이름 | 데이터 형식 | 설명 |  
+| ----------- | --------- | ----------- |
 |event_type|NVARCHAR (512)|확장 이벤트 유형|  
 |이벤트|NVARCHAR (512)|이벤트 로그의 요약입니다.|  
-|타임스탬프|timestamp|이벤트 발생 시 표시되는 이벤트의 타임스탬프입니다.|  
+|Timestamp|timestamp|이벤트 발생 시 표시되는 이벤트의 타임스탬프입니다.|  
   
 ## <a name="security"></a>보안  
   
 ### <a name="permissions"></a>사용 권한  
  저장 프로시저에 대 한 **EXECUTE** 권한이 필요 합니다. 또한이 권한이 필요한 다른 시스템 개체를 내부적으로 호출 하기 때문에 **VIEW SERVER STATE** 권한도 필요 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 이전 30분 동안 기록된 모든 이벤트를 반환합니다.  
   
 ```  

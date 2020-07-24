@@ -21,12 +21,12 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8dcde5de27764979cf2258d3d1895574a4ca4e54
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e1ebbe98efecd97cb7ddda6284d4a28176e8ec1
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677910"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112761"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -110,10 +110,16 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|평균 레코드 크기(바이트)입니다.<br /><br /> 인덱스의 경우 IN_ROW_DATA 할당 단위에서 B-트리의 현재 수준에 평균 레코드 크기가 적용됩니다.<br /><br /> 힙의 경우 IN_ROW_DATA 할당 단위에서 평균 레코드 크기입니다.<br /><br /> LOB_DATA 또는 ROW_OVERFLOW_DATA 할당 단위의 경우 전체 할당 단위에서 평균 레코드 크기입니다.<br /><br /> *Mode* =가 제한 된 경우 NULL입니다.|  
 |forwarded_record_count|**bigint**|다른 데이터 위치로의 전달 포인터가 있는 힙의 레코드 수입니다. 이 상태는 업데이트하는 동안 원본 위치에 새 행을 저장할 공간이 충분하지 않은 경우에 발생합니다.<br /><br /> 힙의 IN_ROW_DATA 할당 단위 이외의 모든 할당 단위에 대해 NULL입니다.<br /><br /> *Mode* = 제한 된 경우 힙의 경우 NULL입니다.|  
 |compressed_page_count|**bigint**|압축된 페이지 수입니다.<br /><br /> 힙의 경우 새로 할당된 페이지는 PAGE 압축되지 않습니다. 힙은 데이터를 대량으로 가져오거나 힙을 다시 작성하는 경우의 두 가지 특별한 조건에서 PAGE 압축됩니다. 일반적으로 페이지 할당을 발생시키는 DML 작업은 PAGE 압축되지 않습니다. compressed_page_count 값이 원하는 임계값보다 커지면 힙을 다시 작성하십시오.<br /><br /> 클러스터형 인덱스가 있는 테이블의 경우 compressed_page_count 값은 PAGE 압축의 효율성을 나타냅니다.|  
-|hobt_id|bigint|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> Columnstore 인덱스의 경우에는 파티션에 대 한 내부 columnstore 데이터를 추적 하는 행 집합의 ID입니다. 행 집합은 데이터 힙 또는 이진 트리로 저장 됩니다. 부모 columnstore 인덱스와 동일한 인덱스 ID를 가집니다. 자세한 내용은 [internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)을 참조 하십시오.<br /><br /> If 인 경우 NULL|  
-|column_store_delete_buffer_state|tinyint|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 드레이닝<br /><br /> 3 = 플러시<br /><br /> 4 = 사용 중지<br /><br /> 5 = 준비|  
-|column_store_delete_buff_state_desc||**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> 유효 하지 않음-부모 인덱스가 columnstore 인덱스가 아닙니다.<br /><br /> 열기-deleters 및 스캐너가이를 사용 합니다.<br /><br /> 드레이닝이 드레이닝 중입니다. 하지만 스캐너는이를 계속 사용 합니다.<br /><br /> 플러시-버퍼가 닫히고 버퍼의 행이 삭제 비트맵에 기록 됩니다.<br /><br /> 사용 중지-닫힌 삭제 버퍼의 행이 삭제 비트맵에 기록 되었지만 스캐너가 아직 사용 하 고 있기 때문에 버퍼가 잘렸습니다. 새 스캐너는 오픈 버퍼가 충분 하므로 사용 중지 버퍼를 사용할 필요가 없습니다.<br /><br /> 준비-이 삭제 버퍼를 사용할 준비가 되었습니다.|  
-  
+|hobt_id|bigint|Columnstore 인덱스의 경우에는 파티션에 대 한 내부 columnstore 데이터를 추적 하는 행 집합의 ID입니다. 행 집합은 데이터 힙 또는 이진 트리로 저장 됩니다. 부모 columnstore 인덱스와 동일한 인덱스 ID를 가집니다. 자세한 내용은 [internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)을 참조 하십시오.<br /><br /> If 인 경우 NULL <br /><br /> **적용 대상**: SQL Server 2016 이상, Azure SQL Database, Azure SQL Managed Instance|  
+|column_store_delete_buffer_state|tinyint| 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 드레이닝<br /><br /> 3 = 플러시<br /><br /> 4 = 사용 중지<br /><br /> 5 = 준비<br /><br />**적용 대상**: SQL Server 2016 이상, Azure SQL Database, Azure SQL Managed Instance|  
+|column_store_delete_buff_state_desc|| 유효 하지 않음-부모 인덱스가 columnstore 인덱스가 아닙니다.<br /><br /> 열기-deleters 및 스캐너가이를 사용 합니다.<br /><br /> 드레이닝이 드레이닝 중입니다. 하지만 스캐너는이를 계속 사용 합니다.<br /><br /> 플러시-버퍼가 닫히고 버퍼의 행이 삭제 비트맵에 기록 됩니다.<br /><br /> 사용 중지-닫힌 삭제 버퍼의 행이 삭제 비트맵에 기록 되었지만 스캐너가 아직 사용 하 고 있기 때문에 버퍼가 잘렸습니다. 새 스캐너는 오픈 버퍼가 충분 하므로 사용 중지 버퍼를 사용할 필요가 없습니다.<br /><br /> 준비-이 삭제 버퍼를 사용할 준비가 되었습니다. <br /><br /> **적용 대상**: SQL Server 2016 이상, Azure SQL Database, Azure SQL Managed Instance|  
+|version_record_count|**bigint**|이 인덱스에서 유지 관리 되는 행 버전 레코드의 수입니다.  이러한 행 버전은 [가속화 된 데이터베이스 복구](../../relational-databases/accelerated-database-recovery-concepts.md) 기능을 통해 유지 관리 됩니다. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
+|inrow_version_record_count|**bigint**|빠른 검색을 위해 데이터 행에 보관 된 ADR 버전 레코드 수입니다. <br /><br />  [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e|  
+|inrow_diff_version_record_count|**bigint**| 기본 버전의 차이 형식으로 유지 된 ADR 버전 레코드의 수입니다. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|total_inrow_version_payload_size_in_bytes|**bigint**|이 인덱스에 대 한 행 내부 버전 레코드의 총 크기 (바이트)입니다. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|offrow_regular_version_record_count|**bigint**|원본 데이터 행 외부에 유지 되는 버전 레코드의 수입니다. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|offrow_long_term_version_record_count|**bigint**|장기 간주 되는 버전 레코드 수입니다. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
+
 ## <a name="remarks"></a>설명  
  sys.dm_db_index_physical_stats 동적 관리 함수는 DBCC SHOWCONTIG 문을 대체합니다.  
   
@@ -236,7 +242,7 @@ GO
   
  자세한 내용은 [동적 관리 뷰 및 함수 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)를 참조 하세요.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-returning-information-about-a-specified-table"></a>A. 지정한 테이블에 대한 정보 반환  
  다음 예에서는 `Person.Address` 테이블의 모든 인덱스와 파티션에 대한 크기 및 조각화 통계를 반환합니다. 최대한의 성능을 발휘하고 반환되는 통계를 제한하기 위해 검색 모드를 `'LIMITED'`로 설정합니다. 이 쿼리를 실행하려면 최소한 `Person.Address` 테이블에 대한 CONTROL  권한이 필요합니다.  
@@ -424,12 +430,12 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [인덱스 관련 동적 관리 뷰 및 함수 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [dm_db_index_operational_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [dm_db_index_usage_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [dm_db_partition_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [allocation_units &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [Transact-sql&#41;&#40;시스템 뷰](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

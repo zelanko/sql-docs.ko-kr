@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 45f4851acf2d3c92807a571f6c8c6b436b86936b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7ba592cd0bb0dc10c094784fbb7d41585d5b6dd6
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764834"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942295"
 ---
 # <a name="rds-objects"></a>RDS 개체
 > [!IMPORTANT]
 >  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
-|||  
+|Object|설명|  
 |-|-|  
 |[DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|텍스트 상자, 표 형태 컨트롤 또는 콤보 상자와 같은 하나 이상의 컨트롤에 데이터 쿼리 **레코드 집합** 을 바인딩하여 웹 페이지에 **레코드 집합** 데이터를 표시 합니다.<br /><br /> **DataControl** 개체는 스크립팅에 안전 합니다.|  
 |[DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|클라이언트 쪽 응용 프로그램에 대해 지정 된 데이터 소스에 대 한 읽기/쓰기 데이터 액세스를 제공 하는 메서드를 구현 합니다.<br /><br /> **DataFactory** 개체는 스크립팅에 안전 하지 않습니다.|  

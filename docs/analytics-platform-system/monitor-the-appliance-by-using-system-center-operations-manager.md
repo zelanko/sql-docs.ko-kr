@@ -1,5 +1,5 @@
 ---
-title: SCOM을 사용 하 여 모니터링
+title: System Center Operations Manager를 사용 하 여 AP 모니터링
 description: SCOM (System Center Operations Manager)을 사용 하 여 APS (분석 플랫폼 시스템) 어플라이언스를 모니터링할 수 있습니다.
 author: mzaman1
 ms.prod: sql
@@ -9,19 +9,19 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0b244d85e601e46fe778298e723c0a7d01e669bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 539c18efe43afcf5436c6913c20cab081974b7f5
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74400977"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941125"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>System Center Operations Manager 분석 플랫폼 시스템을 사용 하 여 모니터링
 SCOM (System Center Operations Manager)을 사용 하 여 APS (분석 플랫폼 시스템) 어플라이언스를 모니터링할 수 있습니다.
   
 ## <a name="before-you-begin"></a>시작하기 전에  
   
-### <a name="prerequisites"></a>사전 요구 사항  
+### <a name="prerequisites"></a>필수 조건  
   
 1.  System Center Operations Manager 2007 R2, 2012 또는 2012 s p 1을 설치 하 고 실행 해야 합니다.  
   

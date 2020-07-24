@@ -1,6 +1,6 @@
 ---
 title: CREATE MEMBER 문 (MDX) | Microsoft Docs
-ms.date: 06/04/2018
+ms.date: 07/22/2020
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 220741cb2103c3428737cdcb9def9463381db900
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ca2c664246dfeab8070337a0daf818fb0a3327c
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69494071"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110158"
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX 데이터 정의 - CREATE MEMBER
 
@@ -105,7 +105,7 @@ WHERE ProfitRatio
 ```  
   
 ## <a name="standard-properties"></a>표준 속성  
- 각 계산 멤버에는 기본 속성 집합이 있습니다. 클라이언트 응용 프로그램이에 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]연결 된 경우 관리자가 선택 하는 대로 기본 속성이 지원 되거나 지원 될 수 있습니다.  
+ 각 계산 멤버에는 기본 속성 집합이 있습니다. 클라이언트 응용 프로그램이에 연결 된 경우 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 관리자가 선택 하는 대로 기본 속성이 지원 되거나 지원 될 수 있습니다.  
   
  큐브 정의에 따라 멤버 속성을 추가로 사용할 수도 있습니다. 다음 속성은 큐브의 차원 수준에 관한 정보를 나타냅니다.  
   
@@ -114,9 +114,9 @@ WHERE ProfitRatio
 |SOLVE_ORDER|계산 멤버가 다른 계산 멤버를 참조하는 경우(즉, 계산 멤버가 서로 교차하는 경우) 계산 멤버를 확인하는 순서입니다.|  
 |FORMAT_STRING|클라이언트 응용 프로그램에서 셀 값을 표시할 때 사용할 수 있는 Office 스타일 서식 문자열입니다.|  
 |VISIBLE|계산 멤버를 스키마 행 집합에서 볼 수 있는지 여부를 나타내는 값입니다. [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) 함수를 사용 하 여 집합에 표시 되는 계산 멤버를 추가할 수 있습니다. 0이 아닌 값은 계산 멤버를 볼 수 있음을 나타냅니다. 이 속성의 기본값은 *표시*됩니다.<br /><br /> 볼 수 없는 계산 멤버(이 값이 0으로 설정된 계산 멤버)는 일반적으로 더 복잡한 계산 멤버에서 중간 단계로 사용됩니다. 이런 계산 멤버는 측정값과 같은 다른 종류의 멤버가 참조할 수도 있습니다.|  
-|NON_EMPTY_BEHAVIOR|빈 셀을 확인할 때 계산 멤버의 동작을 결정하는 데 사용하는 측정값 또는 집합입니다.<br /><br /> ** \* 경고 \* \* ** 이 속성은 사용 되지 않습니다. 이 속성을 설정하지 마세요. 자세한 내용은 [SQL Server 2014에서 사용 되지 않는 Analysis Services 기능](/sql/analysis-services/deprecated-analysis-services-features-in-sql-server-2014) 을 참조 하세요.|  
+|NON_EMPTY_BEHAVIOR|빈 셀을 확인할 때 계산 멤버의 동작을 결정하는 데 사용하는 측정값 또는 집합입니다.<br /><br /> 경고이 속성은 사용 되지 않습니다. ** \* \* \* \* ** 이 속성을 설정하지 마세요. 자세한 내용은 [SQL Server 2014에서 사용 되지 않는 Analysis Services 기능](/previous-versions/sql/2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014?view=sql-server-2014) 을 참조 하세요.|  
 |CAPTION|클라이언트 애플리케이션이 멤버에 대한 캡션으로 사용하는 문자열입니다.|  
-|DISPLAY_FOLDER|클라이언트 애플리케이션이 멤버를 표시하기 위해 사용하는 표시 폴더의 경로를 식별하는 문자열입니다. 폴더 수준 구분 기호는 클라이언트 애플리케이션에서 정의합니다. 에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]제공 하는 도구 및 클라이언트의 경우 백슬래시 (\\)는 수준 구분 기호입니다. 정의 멤버에 대해 여러 표시 폴더를 제공하려면 세미콜론(;)을 사용하여 폴더를 구분하십시오.|  
+|DISPLAY_FOLDER|클라이언트 애플리케이션이 멤버를 표시하기 위해 사용하는 표시 폴더의 경로를 식별하는 문자열입니다. 폴더 수준 구분 기호는 클라이언트 애플리케이션에서 정의합니다. 에서 제공 하는 도구 및 클라이언트의 경우 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 백슬래시 ( \\ )는 수준 구분 기호입니다. 정의 멤버에 대해 여러 표시 폴더를 제공하려면 세미콜론(;)을 사용하여 폴더를 구분하십시오.|  
 |ASSOCIATED_MEASURE_GROUP|이 멤버를 연결할 측정값 그룹의 이름입니다.|  
   
 ## <a name="see-also"></a>참고 항목  

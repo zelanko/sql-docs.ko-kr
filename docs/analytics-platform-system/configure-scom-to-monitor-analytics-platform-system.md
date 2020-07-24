@@ -1,5 +1,5 @@
 ---
-title: SCOM을 사용 하 여 모니터링
+title: AP를 모니터링 하도록 System Center Operations Manager 구성
 description: 분석 플랫폼 시스템용 SCOM (System Center Operations Manager) 관리 팩을 구성 하려면 다음 단계를 수행 합니다. 관리 팩은 SCOM에서 분석 플랫폼 시스템을 모니터링 하는 데 필요 합니다.
 author: mzaman1
 ms.prod: sql
@@ -9,18 +9,18 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 67029d235a1bc65b5ee0ab6f01f51dea42ebcc8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0786cbc8230ecf29dd377a35fefc6969072512b3
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401306"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942215"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>분석 플랫폼 시스템을 모니터링 하는 System Center Operations Manager (SCOM) 구성
 분석 플랫폼 시스템용 SCOM (System Center Operations Manager) 관리 팩을 구성 하려면 다음 단계를 수행 합니다. 관리 팩은 SCOM에서 분석 플랫폼 시스템을 모니터링 하는 데 필요 합니다.  
   
 ## <a name="before-you-begin"></a><a name="BeforeBegin"></a>시작 하기 전에  
-**전제 조건**  
+**필수 구성 요소**  
   
 System Center Operations Manager 2007 r 2를 설치 하 고 실행 해야 합니다.  
   
@@ -37,7 +37,7 @@ System Center를 구성 하려면 다음 단계를 수행 해야 합니다.
   
 1.  **Aps 감시자** 도메인 사용자에 대 한 **Windows** 계정 유형을 사용 하 여 **aps 감시자** 실행 계정을 만듭니다.  
   
-    1.  **관리** 창으로 이동 하 여 **실행 구성** -> **계정** 을 마우스 오른쪽 단추로 클릭 하 고 **실행 계정 만들기** ...를 선택 합니다.  
+    1.  **관리** 창으로 이동 하 여 **실행 구성**계정을 마우스 오른쪽 단추로 클릭 하  ->  **Accounts** 고 **실행 계정 만들기** ...를 선택 합니다.  
   
         ![ConfigureScomCreateRunAsAccount](./media/configure-scom-to-monitor-analytics-platform-system/ConfigureScomCreateRunAsAccount.png "ConfigureScomCreateRunAsAccount")  
   
@@ -61,7 +61,7 @@ System Center를 구성 하려면 다음 단계를 수행 해야 합니다.
   
 2.  **Ap 감시자** 실행 계정을 사용 하도록 **Microsoft ap 감시자 계정** 프로필을 설정 합니다.  
   
-    1.  **관리** -> **실행을 구성** -> **프로필로**이동 합니다.  
+    1.  **관리**  ->  **실행을 구성**  ->  **프로필로**이동 합니다.  
   
         ![AdministrationRunAsConfigurationProfiles](./media/configure-scom-to-monitor-analytics-platform-system/AdministrationRunAsConfigurationProfiles.png "AdministrationRunAsConfigurationProfiles")  
   
@@ -81,7 +81,7 @@ System Center를 구성 하려면 다음 단계를 수행 해야 합니다.
   
 3.  APS 어플라이언스 검색이 완료 될 때까지 기다립니다.  
   
-    1.  **모니터링** 창으로 이동 하 여 **SQL Server 어플라이언스** -> **Microsoft Analytics Platform System** -> **어플라이언스** 상태 보기를 엽니다.  
+    1.  **모니터링** 창으로 이동 하 여 **SQL Server 어플라이언스**  ->  **Microsoft Analytics Platform System**  ->  **어플라이언스** 상태 보기를 엽니다.  
   
         ![SqlServerApplianceMicrosoftApsAppliances](./media/configure-scom-to-monitor-analytics-platform-system/SqlServerApplianceMicrosoftApsAppliances.png "SqlServerApplianceMicrosoftApsAppliances")  
   
