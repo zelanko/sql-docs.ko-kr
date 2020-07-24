@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb13be5e26fb4bdb74b4776ca34ab42eacc7eb03
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 307b1a1259210890d0b21abdc7a26f0e321e49b3
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890905"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122703"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,12 +47,11 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="result-sets"></a>결과 집합  
  ** \@ Parameter_name** 지정 하지 않으면는 다음 열이 포함 된 결과 집합을 반환 합니다.  
   
-||||  
-|-|-|-|  
-|열 이름|데이터 형식|Description|  
+| 열 이름 | 데이터 형식 | Description |
+| ----------- | --------- | ----------- |
 |**paramname**|**nvarchar(256)**|구성 매개 변수의 이름입니다.|  
 |**paramvalue**|**nvarchar(256)**|구성 매개 변수의 값입니다.|  
-|**한**|**nvarchar(256)**|구성 매개 변수에 대한 설명입니다.|  
+|**description**|**nvarchar(256)**|구성 매개 변수에 대한 설명입니다.|  
   
 ## <a name="remarks"></a>설명  
  저장 프로시저 **sysmail_help_configure_sp** 인스턴스에 대 한 현재 데이터베이스 메일 구성 설정을 나열 합니다.  

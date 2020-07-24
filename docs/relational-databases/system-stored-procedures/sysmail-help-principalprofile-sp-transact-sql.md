@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 024eec5c9e74eb48ac57dcf16a40a7783d79f5b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9f4d5af37675811b978e444e40e730ad59fd823b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890891"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122746"
 ---
 # <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,9 +55,8 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ## <a name="result-sets"></a>결과 집합  
  다음 표에 나열된 열이 포함된 결과 집합을 반환합니다.  
   
-||||  
-|-|-|-|  
-|열 이름|데이터 형식|Description|  
+| 열 이름 | 데이터 형식 | Description |
+| ----------- | --------- | ----------- |
 |**principal_id**|**int**|데이터베이스 사용자의 ID입니다.|  
 |**principal_name**|**sysname**|데이터베이스 사용자의 이름입니다.|  
 |**profile_id**|**int**|데이터베이스 메일 프로필의 ID입니다.|  

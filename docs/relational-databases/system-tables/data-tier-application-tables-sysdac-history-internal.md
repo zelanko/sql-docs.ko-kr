@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08b90446625fb2d2f8375c44d2854f3f679cea32
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a5095dbc6dae56a8e8ebf534cdd196b3785b43bf
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890575"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123024"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>데이터 계층 애플리케이션 테이블 - sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,9 +54,8 @@ ms.locfileid: "85890575"
 ## <a name="remarks"></a>설명  
  DAC 배포 또는 삭제와 같은 DAC 관리 동작은 여러 단계를 생성합니다. 각 동작에는 동작 식별자가 할당됩니다. 각 단계에는 일련 번호와 **sysdac_history_internal**행이 할당 되며, 여기서 단계 상태가 기록 됩니다. 각 행은 동작 단계가 시작될 때 만들어지고 작업 상태를 반영하기 위해 필요에 따라 업데이트됩니다. 예를 들어 DAC 배포 작업을 12 **action_id** 할당 하 고 **sysdac_history_internal**에서 4 개의 행을 가져올 수 있습니다.  
   
-|||||  
-|-|-|-|-|  
-|**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
+| action_id | sequence_id | action_type_name | dac_object_type_name |
+| --------- | ----------- | ---------------- | -------------------- |
 |12|0|create|dacpac|  
 |12|1|create|로그인|  
 |12|2|create|데이터베이스|  
@@ -80,7 +79,7 @@ WHERE instance_id NOT IN
  sysadmin 고정 서버 역할의 멤버 자격이 필요합니다. Master 데이터베이스에 대 한 연결 권한이 있는 모든 사용자는이 뷰에 대 한 읽기 전용 액세스를 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 계층 응용 프로그램](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [데이터 계층 애플리케이션](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Transact-sql&#41;&#40;dac_instancesdbo.sys](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
  [Transact-sql&#41;sysdac_instances_internal &#40;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   
