@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f5f04017124520f6e2acd0669946d5d43d4e83f4
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: d400e0e19d381c3cce2ebfeffd9f97abe16354b9
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160171"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921881"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 통합 프로그래밍 모델 제한 사항
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   관리 되는 저장 프로시저나 다른 관리 되는 데이터베이스 개체를 작성 하는 경우를 고려해 야 하는 특정 코드 검사를 수행 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]관리 코드 어셈블리를 데이터베이스에 처음 등록할 때 **CREATE assembly** 문을 사용 하 여 관리 코드 어셈블리에 대 한 검사를 수행 하 고 런타임 시에도 검사를 수행 합니다. 실제로 런타임에 접근할 수 없는 코드 경로가 어셈블리에 있을 수 있으므로 관리 코드는 런타임에도 검사됩니다.  따라서 특히 클라이언트 환경에서 실행되는 '안전하지 않은' 코드가 있는 경우 어셈블리가 차단되지 않고 호스팅된 CLR에서 실행되지 않도록 유연성 있게 타사 어셈블리를 등록할 수 있습니다. 관리 코드에서 충족 해야 하는 요구 사항은 어셈블리가 **safe**, **EXTERNAL_ACCESS**또는 **UNSAFE**로 등록 되었는지 여부에 따라 다르며, **안전** 하 고 가장 엄격한 됩니다.  
   
  관리 코드 어셈블리에 적용되는 제한뿐 아니라 부여되는 코드 보안 권한도 있습니다. CLR(공용 언어 런타임)은 관리 코드에 대해 CAS(코드 액세스 보안)라는 보안 모델을 지원합니다. 이 모델에서는 코드 ID를 기반으로 어셈블리에 사용 권한이 부여됩니다. **SAFE**, **EXTERNAL_ACCESS**및 **UNSAFE** 어셈블리에는 서로 다른 CAS 권한이 있습니다. 자세한 내용은 [CLR 통합 코드 액세스 보안](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)을 참조 하세요.  

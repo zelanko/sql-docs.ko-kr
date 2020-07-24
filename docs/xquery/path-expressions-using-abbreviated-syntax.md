@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83dab3384810943901813b90286674253b88b8f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4b8270babb8fe592c050a9352a7fd687660b178e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765629"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920099"
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>경로 식 - 축약형 구문 사용
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   [XQuery의 경로 식 이해](../xquery/path-expressions-xquery.md) 의 모든 예에서는 경로 식에 대해 축약 되지 않은 구문을 사용 합니다. 경로 식의 축 단계에 대해 축약하지 않은 구문은 축 이름과 노드 테스트를 포함하고 두 개의 콜론으로 분리되며 뒤에 0개 이상의 단계 한정자가 옵니다.  
   
- 예를 들면 다음과 같습니다.  
+ 예를 들어:  
   
 ```  
 child::ProductDescription[attribute::ProductModelID=19]  

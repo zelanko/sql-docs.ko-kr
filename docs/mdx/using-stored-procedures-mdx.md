@@ -8,17 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4daa38f185569e1579413870cc929a8b1b3b6570
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c7cc3a7ba79b15b0eee36ac6907013673a5b7bf9
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038008"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971491"
 ---
 # <a name="using-stored-procedures-mdx"></a>저장 프로시저 사용(MDX)
 
 
-  .NET 저장 프로시저 또는 사용자 정의 함수를 작성하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 및 MDX(Multidimensional Expressions)의 기능을 확장할 수 있습니다. 자세한 내용은 [ADOMD.NET 서버 프로그래밍](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming) 을 참조 하세요.  
+  .NET 저장 프로시저 또는 사용자 정의 함수를 작성하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 및 MDX(Multidimensional Expressions)의 기능을 확장할 수 있습니다. 자세한 내용은 [ADOMD.NET 서버 프로그래밍](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming) 을 참조 하세요.  
   
  저장 프로시저를 참조하거나 호출할 때는 함수 이름 뒤에 괄호를 지정합니다. 괄호 안에는 매개 변수로 전달할 데이터를 제공하는 식(인수)을 지정할 수 있습니다. 함수를 호출할 때는 모든 괄호에 대해 인수 값을 제공해야 하며 사용자 정의 함수에서 매개 변수가 정의된 순서와 같은 순서로 인수 값을 지정해야 합니다.  
   
@@ -32,7 +32,7 @@ WHERE [Measures].[Reseller Freight Cost]
 ```  
   
 > [!NOTE]  
->  *저장 프로시저* 는 이러한 유형의 함수에 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 대해에서 사용 되는 용어입니다. 이전 버전의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 이러한 유형의 함수를 *사용자 정의 함수로*부릅니다.  
+>  *저장 프로시저* 는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이러한 유형의 함수에 대해에서 사용 되는 용어입니다. 이전 버전의에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이러한 유형의 함수를 *사용자 정의 함수로*부릅니다.  
   
 ## <a name="types-of-stored-procedures"></a>저장 프로시저 유형  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 COM 및 CLR 어셈블리를 모두 지원합니다. CLR 어셈블리에 적용되는 향상된 보안 기능 때문에 CLR 어셈블리를 권장합니다. 서버에 Microsoft Office Excel이 설치되어 있으면 Excel 기능도 사용할 수 있습니다.  

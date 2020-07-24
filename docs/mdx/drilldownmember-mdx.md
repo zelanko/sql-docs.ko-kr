@@ -55,7 +55,7 @@ DrillDownMember(<Set_Expression1>, <Set_Expression2> [,[<Target_Hierarchy>]] [,[
 > [!IMPORTANT]  
 >  바로 다음에 자식 중 하나가 오는 멤버는 드릴다운되지 않습니다. 집합의 멤버 순서는 드릴 다운 * 및 Drillup 함수 패밀리 모두에 대해 중요 합니다 \* .  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 첫 번째 집합의 멤버 중 두 번째 집합에도 있는 멤버인 Australia로 드릴다운합니다.  
   
 ```  

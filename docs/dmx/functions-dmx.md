@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ad02b8414f2b59bf8e226b8d3d2cbbc05f161d9c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 891bad9f62174ec00451e533fe94063a21dc62af
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670185"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971690"
 ---
 # <a name="functions-dmx"></a>함수(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   DMX (데이터 마이닝 확장)를 사용 하 여에서 개체를 쿼리 하는 경우 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 함수를 사용 하 여 데이터 마이닝 모델 또는 입력 데이터 집합의 열 값 뿐만 아니라 추가 정보를 반환할 수 있습니다. 예를 들어 DMX 쿼리를 사용하여 열의 예측 값뿐만 아니라 예측의 정확성에 대한 확률도 반환할 수 있습니다. 또한 DMX 함수를 비롯하여 Microsoft VBA(Visual Basic for Applications), Microsoft Excel 및 저장 프로시저의 함수도 사용할 수 있습니다.  
   

@@ -10,15 +10,15 @@ ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fc333e99ab9dcf2b74c8c829ca27faf77d8b08b0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5949e1667040296e2eb5472dd92bdb2a12db424e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888475"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915614"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile 클래스
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일에 대한 정보를 보기 위한 속성을 제공합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -39,18 +39,18 @@ class SQLErrorLogFile
 ## <a name="properties"></a>속성  
  SQLErrorLogFile 클래스는 다음 속성을 정의 합니다.  
   
-|||  
-|-|-|  
+| 속성 | 설명 |
+| -------- | ----------- |
 |ArchiveNumber|데이터 형식: **uint32**<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 로그 파일에 대한 보관 파일 번호입니다.|  
 |InstanceName|데이터 형식: **문자열**<br /><br /> 액세스 형식: 읽기 전용<br /><br /> 한정자: Key<br /><br /> <br /><br /> 로그 파일이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|  
 |LastModified|데이터 형식: **datetime**<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 로그 파일이 마지막으로 수정된 날짜입니다.|  
 |LogFileSize|데이터 형식: **uint32**<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 로그 파일의 크기(바이트)입니다.|  
-|이름|데이터 형식: **문자열**<br /><br /> 액세스 형식: 읽기 전용<br /><br /> 한정자: Key<br /><br /> <br /><br /> 로그 파일의 이름입니다.|  
+|Name|데이터 형식: **문자열**<br /><br /> 액세스 형식: 읽기 전용<br /><br /> 한정자: Key<br /><br /> <br /><br /> 로그 파일의 이름입니다.|  
   
 ## <a name="remarks"></a>설명  
   
-|||  
-|-|-|  
+| Type | Name |
+| ---- | ---- |
 |MOF|Sqlmgmprovider xpsp2up.mof|  
 |DLL|Sqlmgmprovider.dll|  
 |네임스페이스|\root\Microsoft\SqlServer\ComputerManagement10|  
@@ -75,7 +75,7 @@ WScript.Echo "Instance Name:  " & logFile.InstanceName & vbNewLine _
 Next   
 ```  
   
-## <a name="comments"></a>의견  
+## <a name="comments"></a>주석  
  *InstanceName* 이 WQL 문에 제공 되지 않은 경우 쿼리는 기본 인스턴스에 대 한 정보를 반환 합니다. 예를 들어 다음 WQL 문은 기본 인스턴스(MSSQLSERVER)에서 모든 로그 파일에 대한 정보를 반환합니다.  
   
 ```  

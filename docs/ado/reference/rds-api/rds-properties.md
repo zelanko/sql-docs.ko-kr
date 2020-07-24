@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb0250875bfaa9d23d483b4e95e0d8949e2a907a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8d868aaeb917c446e9f345924ab37c0b887dad3a
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758539"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942995"
 ---
 # <a name="rds-properties"></a>RDS 속성
 > [!IMPORTANT]
 >  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
-|||  
+|속성|설명|  
 |-|-|  
 |[연결 (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)|쿼리 및 업데이트 작업이 실행 되는 데이터베이스 이름을 나타냅니다.|  
 |[ExecuteOptions (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)|비동기 실행을 사용 하는지 여부를 나타냅니다.|  

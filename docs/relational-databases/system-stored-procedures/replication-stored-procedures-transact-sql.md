@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 10996a2a-3be4-4f66-9fc4-815d43fc6e52
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f02b55e6b798bd66e7e13a8ba8a40329fc0255e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64f75e38aea006fffc0b464bcaeabb4ff6d9fec4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752803"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920089"
 ---
 # <a name="replication-stored-procedures-transact-sql"></a>복제 저장 프로시저(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   복제 시스템 저장 프로시저는 복제 구현과 같은 일회적인 태스크나 배치 파일이나 스크립트에서 사용할 수 있도록 문서화되고 사용됩니다.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "85752803"
 |[Transact-sql&#41;sp_helparticlecolumns &#40;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)||  
   
 ## <a name="see-also"></a>참고 항목  
- [복제 관리 개체 개념](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+ [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [복제 프로그래밍 개념](../../relational-databases/replication/concepts/replication-programming-concepts.md)  
   
   

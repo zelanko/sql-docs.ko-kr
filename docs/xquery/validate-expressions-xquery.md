@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fb2592a1-1fad-41f9-8ff8-74c5905dbae9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ba7b28277db82a39de449a51776b9893419d9db6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 213a386866ee85e06787c541e4b4578ac9e4c19a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765570"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918919"
 ---
 # <a name="validate-expressions-xquery"></a>식 유효성 검사(XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   이 구현에서는 **validate** 식이 지원 되지 않습니다. XQuery 생성 식의 결과는 항상 형식화되지 않습니다. XQuery 식의 결과를 입력 해야 하는 경우 SQL 캐스트 식을 사용 하 여 기본 스키마 컬렉션을 사용 하 여 결과를 **xml** 데이터 형식으로 캐스팅 합니다.  
   

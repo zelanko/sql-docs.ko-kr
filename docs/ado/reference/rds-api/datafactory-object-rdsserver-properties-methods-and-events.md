@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 15cc2596022889fe855145cd538d82676620aa13
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2ac5645910a4b5339e696d793c167222b80cc6c3
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752624"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942857"
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>DataFactory 개체(RDSServer) 속성, 메서드 및 이벤트
 > [!IMPORTANT]
@@ -28,7 +28,7 @@ ms.locfileid: "82752624"
   
 ## <a name="methods"></a>메서드  
   
-|||  
+|메서드|설명|  
 |-|-|  
 |[ConvertToString 메서드(RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|레코드 집합을 MIME64 문자열로 변환 합니다.|  
 |[CreateRecordset 메서드(RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|빈 레코드 집합을 만들어 반환 합니다.|  

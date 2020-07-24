@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d493218f31965c04b5a64321c4a1bf87a2518f6f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fe7d97909a2d38e548a072245b08110b1d61eb3c
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763794"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943165"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
 사용 권한이 나 소유권을 설정할 데이터베이스 개체의 유형을 지정 합니다.  
@@ -35,8 +35,14 @@ ms.locfileid: "82763794"
 |**adPermObjView**|5|개체가 뷰입니다.|  
   
 ## <a name="applies-to"></a>적용 대상  
-  
-|||  
-|-|-|  
-|[GetObjectOwner 메서드(ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|[GetPermissions 메서드(ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)|  
-|[SetObjectOwner 메서드](../../../ado/reference/adox-api/setobjectowner-method.md)|[SetPermissions 메서드(ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)|
+
+:::row:::
+    :::column:::
+        [GetObjectOwner 메서드(ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)  
+        [GetPermissions 메서드(ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+    :::column-end:::
+    :::column:::
+        [SetObjectOwner 메서드](../../../ado/reference/adox-api/setobjectowner-method.md)  
+        [SetPermissions 메서드(ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+    :::column-end:::
+:::row-end:::

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ae24b0195beab2b34804a14e5e105e6e277f3529
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 67ba5385ab11091ca45b50556fe63983fee01aac
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669304"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971701"
 ---
 # <a name="gt-greater-than-dmx"></a>&gt;(보다 큼) DMX
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   DMX(Data Mining Extensions) 식의 값이 다른 DMX 식의 값보다 큰지 확인하는 비교 연산을 수행합니다.  
   

@@ -41,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68e9625b1e5acb7ef0d7b8d1389895d8a96dcbef
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 24d86b384a1eb2916e488c17c99e4b9b5962dd1a
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763824"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942725"
 ---
 # <a name="name-property-adox"></a>Name 속성(ADOX)
 개체의 이름을 나타냅니다.  
@@ -65,13 +65,25 @@ ms.locfileid: "82763824"
 >  키의 경우이 속성은 이미 컬렉션에 추가 된 **키** 개체에 대해 읽기 전용입니다. 테이블의 경우이 속성은 이미 컬렉션에 추가 된 **테이블** 개체에 대해 읽기 전용입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
-  
-||||  
-|-|-|-|  
-|[Column 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Group 개체(ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[Index 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)|  
-|[Key 개체(ADOX)](../../../ado/reference/adox-api/key-object-adox.md)|[Procedure 개체(ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[속성 개체(ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-|[Table 개체(ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[User 개체(ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|[View 개체(ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Column 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+        [Group 개체(ADOX)](../../../ado/reference/adox-api/group-object-adox.md)  
+        [Index 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Key 개체(ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+        [Procedure 개체(ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)  
+        [속성 개체(ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Table 개체(ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
+        [User 개체(ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+        [View 개체(ADOX)](../../../ado/reference/adox-api/view-object-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>참고 항목  
  [Columns 및 Tables Append 메서드, Name 속성 예제 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Keys Append 메서드, Key Type, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8862cc58889c4446c23e994a9c8e0f6a54a50d38
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 30de657985eafdc5a601d61fedbd666455f3dbc9
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751964"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941065"
 ---
 # <a name="internettimeout-property-rds"></a>InternetTimeout 속성(RDS)
 요청 시간이 초과 될 때까지 대기 하는 시간 (밀리초)을 나타냅니다.  
@@ -35,11 +35,16 @@ ms.locfileid: "82751964"
  3 계층 환경의 요청은 실행 하는 데 몇 분 정도 걸릴 수 있습니다. 이 속성을 사용 하 여 장기 실행 요청에 대 한 추가 시간을 지정 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
-  
-|||  
-|-|-|  
-|[DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataSpace 개체(RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|  
-  
+
+:::row:::
+    :::column:::
+        [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+    :::column-end:::
+    :::column:::
+        [DataSpace 개체(RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>참고 항목  
  [InternetTimeout 속성 예제 (VB)](../../../ado/reference/rds-api/internettimeout-property-example-vb.md)   
  [InternetTimeout 속성 예제(VC++)](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)   

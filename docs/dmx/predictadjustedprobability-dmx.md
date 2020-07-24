@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 610d304f2634a4de8f8578fff3258f4b1f2dbc67
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 735df047307f78c238fbf29669f0e0b1e0933e37
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669296"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971569"
 ---
 # <a name="predictadjustedprobability-dmx"></a>PredictAdjustedProbability(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   지정한 상태에 대한 조정된 확률을 반환합니다.  
   
@@ -34,9 +34,9 @@ PredictAdjustedProbability(<scalar column reference>, [<predicted state>])
  스칼라 값  
   
 ## <a name="remarks"></a>설명  
- 예측 상태를 생략하면 누락된 상태 버킷을 제외하고 예측 가능성이 가장 높은 상태가 사용됩니다. 누락 상태 버킷을 포함 하려면 \< 예측 상태>를 **INCLUDE_NULL**로 설정 합니다.  
+ 예측 상태를 생략하면 누락된 상태 버킷을 제외하고 예측 가능성이 가장 높은 상태가 사용됩니다. 누락 상태 버킷을 포함 하려면를 \<predicted state> **INCLUDE_NULL**설정 합니다.  
   
- 누락 된 상태에 대 한 조정 된 확률을 반환 하려면 \< 예측 상태>를 NULL로 설정 합니다.  
+ 누락 된 상태에 대 한 조정 된 확률을 반환 하려면를 \<predicted state> NULL로 설정 합니다.  
   
  **PredictAdjustedProbability** 함수는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] 데이터 마이닝 사양의 OLE DB에 대 한 확장입니다.  
   

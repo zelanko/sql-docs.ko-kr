@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 79bea49705c4f2fb66b8c9866be335433cbb783f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 442f9c57124e06236d50d60f0e5db1de3ebbe731
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68049263"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971501"
 ---
 # <a name="drilldownmemberbottom-mdx"></a>DrilldownMemberBottom(MDX)
 
@@ -34,7 +34,7 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
  *Set_Expression2*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
- *Count*  
+ *개수*  
  반환할 튜플 수를 지정하는 유효한 숫자 식입니다.  
   
  *Numeric_Expression*  
@@ -60,7 +60,7 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
   
  **DrilldownMemberBottom** 함수는 [DrilldownMember](../mdx/drilldownmember-mdx.md) 함수와 유사 하지만 첫 번째 집합의 각 멤버에 대해 두 번째 집합에도 있는 모든 자식을 포함 하는 대신 **DrilldownMemberBottom** 함수는 각 멤버에 대해 최하위 자식 멤버 수를 반환 합니다.  
   
- XMLA 속성 MdpropMdxDrillFunctions를 쿼리하면 서버에서 드릴링 함수에 대해 제공 하는 지원 수준을 확인할 수 있습니다. 자세한 내용은 [지원 되는 Xmla 속성 &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 를 참조 하세요.  
+ XMLA 속성 MdpropMdxDrillFunctions를 쿼리하면 서버에서 드릴링 함수에 대해 제공 하는 지원 수준을 확인할 수 있습니다. 자세한 내용은 [지원 되는 Xmla 속성 &#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bc2d295f43dfab4327ac1b0ea47382324a22db41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aaad5923695e6cb8e98e2c7f40fa2bb9a044a7ce
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786513"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915549"
 ---
 # <a name="path-expressions---specifying-node-test"></a>경로 식 - 노드 테스트 지정
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   경로 식의 축 단계는 다음 구성 요소를 포함합니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "85786513"
 >  XQuery 경로 식에 지정된 노드 이름은 Transact-SQL 쿼리와 같은 데이터 정렬 구분 규칙이 적용되지 않고 항상 대/소문자를 구분합니다.  
   
 ## <a name="node-name-as-node-test"></a>노드 테스트로서의 노드 이름  
- 경로 식 단계에서 노드 테스트로 노드 이름을 지정할 때는 주 노드 종류의 개념을 이해해야 합니다. 모든 축(child, parent 또는 attribute)에는 주 노드 종류가 있습니다. 예를 들면 다음과 같습니다.  
+ 경로 식 단계에서 노드 테스트로 노드 이름을 지정할 때는 주 노드 종류의 개념을 이해해야 합니다. 모든 축(child, parent 또는 attribute)에는 주 노드 종류가 있습니다. 예를 들어:  
   
 -   attribute 축은 특성만 포함할 수 있습니다. 따라서 특성 노드는 attribute 축의 주 노드 종류입니다.  
   
@@ -108,7 +108,7 @@ child::comment()
   
  마찬가지로는 `/child::ProductDescription/child::Features/child::comment()` \<Features> 요소 노드의 요소 노드 자식에 대 한 주석 노드 자식을 검색 \<ProductDescription> 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 노드 이름과 노드 종류를 비교합니다.  
   
 ### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>A. 경로 식에서 노드 테스트로 노드 이름과 노드 유형을 지정한 결과  

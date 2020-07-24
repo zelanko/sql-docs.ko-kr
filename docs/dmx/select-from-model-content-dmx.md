@@ -74,7 +74,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |NODE_DISTRIBUTION|노드의 값 분포를 설명하는 통계가 들어 있는 테이블입니다.|  
 |NODE_SUPPORT|이 노드를 지원하는 사례 수입니다.|  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 코드는 타겟 메일링 마이닝 구조에 추가된 의사 결정 트리 모델에 대한 부모 노드의 ID를 반환합니다.  
   
 ```  

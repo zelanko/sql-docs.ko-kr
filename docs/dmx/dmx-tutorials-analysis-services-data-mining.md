@@ -29,7 +29,7 @@ ms.locfileid: "86969822"
   
  이 자습서에서는 동시에 구입되는 경향이 있는 제품을 예측하는 마이닝 모델을 만드는 방법을 배웁니다. 또한 데이터 마이닝에서 중첩 테이블을 사용하는 방법을 보여 줍니다.  
   
-## <a name="reference"></a>참고  
+## <a name="reference"></a>참조  
  [데이터 마이닝 확장 &#40;DMX&#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
  [DMX&#40;Data Mining Extensions&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)  

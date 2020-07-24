@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9a2bbb889bc0277ab01f29896d4f60eebd8236cb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 221b340cd8df2a9bfc2bfdb19e3e46b18d3a2c57
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759169"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942705"
 ---
 # <a name="getpermissions-method-adox"></a>GetPermissions 메서드(ADOX)
 개체 또는 개체 컨테이너의 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 또는 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 에 대 한 권한을 반환 합니다.  
@@ -49,11 +49,16 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
  (선택 사항) OLE DB 사양에서 정의 되지 않은 공급자 개체 유형의 GUID를 지정 하는 **변형** 값입니다. 이 매개 변수는 *ObjectType* 이 **adPermObjProviderSpecific**로 설정 된 경우에 필요 합니다. 그렇지 않은 경우에는 사용 되지 않습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
-  
-|||  
-|-|-|  
-|[Group 개체(ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[User 개체(ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Group 개체(ADOX)](../../../ado/reference/adox-api/group-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [User 개체(ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>참고 항목  
  [GetPermissions 및 SetPermissions 메서드 예제 (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [Name 속성 (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   

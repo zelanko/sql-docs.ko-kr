@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94cc5b07c97bd5c8d7c7ae6c30c179e2555b95d5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4287e836dd46c579ee81a4baf0e175e8b49acf67
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762784"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942641"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions 메서드(ADOX)
 개체의 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 또는 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 에 대 한 사용 권한을 지정 합니다.  
@@ -42,7 +42,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  *ObjectType*  
  사용 권한을 가져올 개체의 형식을 지정 하는 **Long** 값으로, [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) 상수 중 하나일 수 있습니다.  
   
- *작업*  
+ *동작*  
  사용 권한을 설정할 때 수행할 동작의 유형을 지정 하는 [Actionenum](../../../ado/reference/adox-api/actionenum.md) 상수 중 하나일 수 있는 **Long** 값입니다.  
   
  *권한*  
@@ -61,11 +61,16 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
 >  **SetPermissions**를 호출할 때 **Adaccessrevoke** 로 작업을 설정 하면 *Rights* 매개 변수의 모든 설정이 재정의 됩니다. *Rights* 매개 변수에 지정 된 권한이 적용 되도록 하려면 *작업* 을 **adaccessrevoke** 로 설정 하지 마세요.  
   
 ## <a name="applies-to"></a>적용 대상  
-  
-|||  
-|-|-|  
-|[Group 개체(ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[User 개체(ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Group 개체(ADOX)](../../../ado/reference/adox-api/group-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [User 개체(ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>참고 항목  
  [GetPermissions 및 SetPermissions 메서드 예제 (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [GetPermissions 메서드 (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   

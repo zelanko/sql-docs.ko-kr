@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9055cc483cc306e039f893bcb80554718092a2a7
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 5dd4df26faad2c52a803db90122e6bb78a3f1a75
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669647"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971605"
 ---
 # <a name="operators---unary"></a>연산자 - 단항
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   단항 연산자는 숫자 식의 음수 값 또는 양수 값을 반환하는 것처럼 단일 피연산자에서 연산을 수행합니다.  
   

@@ -20,12 +20,12 @@ ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2b473019a20a962a41c44aade08e4a1daa2a765
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f97f23edb38e7d97a6da19860cf49ca4fdb1182d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820870"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941385"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,26 +52,86 @@ sys.dm_db_index_operational_stats (
 ```    
     
 ## <a name="arguments"></a>인수    
- *database_id* | NULL | 0 | 기본    
- 데이터베이스의 ID입니다. *database_id* 은 **smallint**입니다. 올바른 입력은 데이터베이스의 ID 번호, NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다.    
+
+:::row:::
+    :::column:::
+        *database_id*
+    :::column-end:::
+    :::column:::
+        NULL
+    :::column-end:::
+    :::column:::
+        0
+    :::column-end:::
+    :::column:::
+        DEFAULT
+    :::column-end:::
+:::row-end:::
+
+  데이터베이스의 ID입니다. *database_id* 은 **smallint**입니다. 올바른 입력은 데이터베이스의 ID 번호, NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다.    
     
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 데이터베이스에 대한 정보를 반환하려면 NULL을 지정합니다. *Database_id*에 대해 null을 지정 하는 경우 *object_id*, *index_id*및 *partition_number*에 대해서도 null을 지정 해야 합니다.    
     
  [DB_ID](../../t-sql/functions/db-id-transact-sql.md) 기본 제공 함수를 지정할 수 있습니다.    
-    
- *object_id* | NULL | 0 | 기본    
+
+:::row:::
+    :::column:::
+        *object_id*
+    :::column-end:::
+    :::column:::
+        NULL
+    :::column-end:::
+    :::column:::
+        0
+    :::column-end:::
+    :::column:::
+        DEFAULT
+    :::column-end:::
+:::row-end:::
+
  인덱스가 있는 테이블 또는 뷰의 개체 ID입니다. *object_id* 는 **int**입니다.    
     
  올바른 입력은 테이블 및 뷰의 ID 번호, NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다.    
     
  지정된 데이터베이스에 있는 모든 테이블 및 뷰에 대한 캐시된 정보를 반환하려면 NULL을 지정합니다. *Object_id*에 대해 null을 지정 하는 경우 *index_id* 및 *partition_number*에 대해서도 null을 지정 해야 합니다.    
-    
- *index_id* | 0 | NULL | -1 | 기본    
+
+:::row:::
+    :::column:::
+        *index_id*
+    :::column-end:::
+    :::column:::
+        0
+    :::column-end:::
+    :::column:::
+        NULL
+    :::column-end:::
+    :::column:::
+        -1
+    :::column-end:::
+    :::column:::
+        DEFAULT
+    :::column-end:::
+:::row-end:::
+
  인덱스의 ID입니다. *index_id* 은 **int**입니다. 유효한 입력은 인덱스의 ID 번호, *object_id* 가 힙, NULL,-1 또는 DEFAULT 인 경우 0입니다. 기본값은 -1입니다. 이 경우 NULL, -1 및 DEFAULT는 동등한 값입니다.    
     
  기본 테이블 또는 뷰의 모든 인덱스에 대한 캐시된 정보를 반환하려면 NULL을 지정합니다. *Index_id*에 대해 null을 지정 하는 경우 *partition_number*에 대해서도 null을 지정 해야 합니다.    
-    
- *partition_number* | NULL | 0 | 기본    
+
+:::row:::
+    :::column:::
+        *partition_number*
+    :::column-end:::
+    :::column:::
+        NULL
+    :::column-end:::
+    :::column:::
+        0
+    :::column-end:::
+    :::column:::
+        DEFAULT
+    :::column-end:::
+:::row-end:::
+
  개체의 파티션 번호입니다. *partition_number* 은 **int**입니다. 유효한 입력은 인덱스 또는 힙의 *partion_number* , NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다.    
     
  인덱스 또는 힙의 모든 파티션에 대한 캐시된 정보를 반환하려면 NULL을 지정합니다.    
@@ -236,14 +296,14 @@ GO
 ```    
     
 ## <a name="see-also"></a>참고 항목    
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
- [Transact-sql&#41;&#40;인덱스 관련 동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
+ [인덱스 관련 동적 관리 뷰 및 함수 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
  [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [sys.dm_db_index_physical_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     
  [dm_db_index_usage_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
  [dm_os_latch_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
  [dm_db_partition_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
- [allocation_units &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
  [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)    
     
   

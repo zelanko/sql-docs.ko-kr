@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 461c91d7261b42b5828e2c515a89e8203f40e357
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bdb07daea5b48ac2627f23d9149e590e1fe35b48
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68049272"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971511"
 ---
 # <a name="drilldownleveltop-mdx"></a>DrilldownLevelTop(MDX)
 
@@ -32,7 +32,7 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
  *Set_Expression*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
- *Count*  
+ *개수*  
  반환할 튜플 수를 지정하는 유효한 숫자 식입니다.  
   
  *Level_Expression*  
@@ -51,7 +51,7 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
   
  **DrilldownLevelTop** 함수는 [DrilldownLevel](../mdx/drilldownlevel-mdx.md) 함수와 비슷하지만 지정 된 수준에서 각 멤버에 대 한 모든 자식을 포함 하는 대신 **DrilldownLevelTop** 함수는 최상위 자식 멤버 수를 반환 합니다.  
   
- XMLA 속성 MdpropMdxDrillFunctions를 쿼리하면 서버에서 드릴링 함수에 대해 제공 하는 지원 수준을 확인할 수 있습니다. 자세한 내용은 [지원 되는 Xmla 속성 &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 를 참조 하세요.  
+ XMLA 속성 MdpropMdxDrillFunctions를 쿼리하면 서버에서 드릴링 함수에 대해 제공 하는 지원 수준을 확인할 수 있습니다. 자세한 내용은 [지원 되는 Xmla 속성 &#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 를 참조 하세요.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 기본 측정값을 기준으로 Product Category 수준에서 맨 위에 있는 세 하위를 반환합니다. Adventure Works 샘플 큐브에서 Accessories의 맨 위에 있는 세 하위는 Bike Racks, Bike Stands 및 Bottles and Cages입니다. Management Studio의 MDX 쿼리 창에서 Products | Product Categories | Members | All Products | Accessories로 이동하여 전체 목록을 볼 수 있습니다. Count 인수를 늘려 더 많은 구성원을 반환할 수 있습니다.  

@@ -21,19 +21,19 @@ ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce2cbf99a62ca8515e596bf4b392315c6b5945b2
-ms.sourcegitcommit: 812f572d13616c1bd085b0648603736ba1bc20d1
+ms.openlocfilehash: 6673b9d0c235f7a38e04d534bf4358585a5b0bd2
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84112314"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942577"
 ---
 # <a name="sysdatabase_query_store_options-transact-sql"></a>sys. database_query_store_options (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   이 데이터베이스에 대 한 쿼리 저장소 옵션을 반환 합니다.  
   
-**적용**대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] .
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -45,8 +45,8 @@ ms.locfileid: "84112314"
 |**current_storage_size_mb**|**bigint**|디스크의 쿼리 저장소 크기 (mb)입니다.|  
 |**flush_interval_seconds**|**bigint**|쿼리 저장소 데이터를 디스크에 정기적으로 플러시하는 기간 (초)입니다. 기본값은 **900** (15 분)입니다.<br /><br /> 문을 사용 하 여 변경 `ALTER DATABASE <database> SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS  = <interval>)` 합니다.|  
 |**interval_length_minutes**|**bigint**|통계 집계 간격 (분)입니다. 임의 값은 허용 되지 않습니다. 다음 중 하나를 사용 합니다. 1, 5, 10, 15, 30, 60 및 1440 분 기본값은 **60** 분입니다.|  
-|**max_storage_size_mb**|**bigint**|쿼리 저장소에 대 한 최대 디스크 크기 (mb)입니다. 기본값은 **100** MB입니다.<br />[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]Premium edition의 경우 기본값은 1gb이 고 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 버전의 경우 기본값은 10mb입니다.<br /><br /> 문을 사용 하 여 변경 `ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)` 합니다.|  
-|**stale_query_threshold_days**|**bigint**|정책 설정이 없는 쿼리가 쿼리 저장소에 유지 되는 일 수입니다. 기본값은 **30**입니다. 보존 정책을 사용 하지 않으려면 0으로 설정 합니다.<br />[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 버전의 경우 기본값은 7일입니다.<br /><br /> 문을 사용 하 여 변경 `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` 합니다.|  
+|**max_storage_size_mb**|**bigint**|쿼리 저장소에 대 한 최대 디스크 크기 (mb)입니다. 기본값은 **100** ,로 시작 하는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] **1gb** 입니다 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] .<br />[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]Premium edition의 경우 기본값은 1gb이 고 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 버전의 경우 기본값은 10mb입니다.<br /><br /> 문을 사용 하 여 변경 `ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)` 합니다.|  
+|**stale_query_threshold_days**|**bigint**|쿼리 정보를 쿼리 저장소 유지 하는 일 수입니다. 기본값은 **30**입니다. 보존 정책을 사용 하지 않으려면 0으로 설정 합니다.<br />[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 버전의 경우 기본값은 7일입니다.<br /><br /> 문을 사용 하 여 변경 `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` 합니다.|  
 |**max_plans_per_query**|**bigint**|저장 된 계획의 최대 수를 제한 합니다. 기본값은 **200**입니다. 최 댓 값에 도달 하면 쿼리 저장소 해당 쿼리에 대 한 새 계획의 캡처가 중지 됩니다. 를 0으로 설정 하면 캡처된 계획의 수와 관련 된 제한이 제거 됩니다.<br /><br /> 문을 사용 하 여 변경 `ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)` 합니다.|  
 |**query_capture_mode**|**smallint**|현재 활성 쿼리 캡처 모드:<br /><br /> **1** = 모두-모든 쿼리가 캡처됩니다. 이는 이상에 대 한 기본 구성 값입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br /> 2 = 실행 수 및 리소스 소비량에 따라 관련 쿼리를 자동으로 캡처합니다. 이것이 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에 대한 기본 구성 값입니다.<br /><br /> 3 = 없음-새 쿼리 캡처를 중지 합니다. Query Store는 이미 캡처된 쿼리에 대한 컴파일 및 런타임 통계를 계속 수집합니다. 중요 한 쿼리 캡처가 누락 될 수 있으므로이 구성을 신중 하 게 사용 합니다.|  
 |**query_capture_mode_desc**|**nvarchar(60)**|쿼리 저장소의 실제 캡처 모드에 대 한 텍스트 설명입니다.<br /><br /> 모두 (의 기본값 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] )<br /><br /> **AUTO** (기본값 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] )<br /><br /> 없음|  
@@ -67,7 +67,7 @@ ms.locfileid: "84112314"
  [sys.query_store_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [관련된 뷰, 함수 및 프로시저](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [fn_stmt_sql_handle_from_sql_stmt &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
  [쿼리 저장소 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   

@@ -36,7 +36,7 @@ RangeMid(<scalar column reference>)
 ## <a name="remarks"></a>설명  
  [SELECT FROM &#60;모델&#62; 예측 조인 &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)에서 사용 하는 경우 **RangeMin**, **RangeMid**및 **RangeMax** 함수는 지정 된 버킷의 실제 경계 값을 반환 합니다. 예를 들어 불연속화된 열에 대해 예측을 수행하면 해당 쿼리는 불연속화된 열의 예측 버킷 번호를 반환합니다. **RangeMin**, **RangeMid**및 **RangeMax** 함수는 예측이 지정 하는 버킷을 설명 합니다. **RangeMid** 함수를 예측 조인 문과 함께 사용 하는 경우 스칼라 열 참조는 불연속 하 고 예측 가능한 열만 포함할 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 TM Decision Tree 마이닝 모델의 Yearly Income 연속 열에 대한 최대값, 최소값 및 평균값을 반환합니다.  
   
 ```  

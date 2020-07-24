@@ -33,7 +33,7 @@ IsInNode(<NodeID>)
 ## <a name="remarks"></a>설명  
  **IsInNode** 는 [SELECT FROM &#60;모델&#62; 에서만 사용 됩니다. DMX&#41;&#40;사례](../dmx/select-from-model-cases-dmx.md) [&#60;모델&#62;에서 선택 합니다. DMX&#41;쿼리를 &#40;SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md) .  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 IsInNode 함수에서 지정한 노드와 연관된 모델을 만드는 데 사용된 모든 사례를 반환합니다.  
   
 ```  

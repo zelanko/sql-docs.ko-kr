@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 462fe9e3634ea1dfa844fe4a97f1086bdef82cba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f83d85ab2a79a4f5f27143de655f7748fe7f0fd4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716365"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915301"
 ---
 # <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   새 구독자를 게시자에 추가하여 게시한 내용을 받을 수 있도록 합니다. 이 저장 프로시저는 스냅샷 및 트랜잭션 게시를 위한 게시 데이터베이스의 게시자에서 실행됩니다. 원격 배포자를 사용하는 병합 게시의 경우에는 이 저장 프로시저가 배포자에서 실행됩니다.  
   
@@ -124,9 +124,9 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 |값|설명|  
 |-----------|-----------------|  
-|**1** (기본값)|첫째|  
+|**1** (기본값)|첫 번째|  
 |**2**|Second|  
-|**4**|셋째|  
+|**4**|세 번째|  
 |**8**|넷째|  
 |**16**|마지막|  
   
@@ -144,7 +144,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |-----------|-----------------|  
 |**1**|한 번|  
 |**2**|Second|  
-|**4** (기본값)|Minute|  
+|**4** (기본값)|분|  
 |**8**|시간|  
   
 > [!NOTE]  
@@ -203,7 +203,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_addsubscriber**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [밀어넣기 구독 만들기](../../relational-databases/replication/create-a-push-subscription.md)   
+ [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Transact-sql&#41;sp_changesubscriber &#40;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
  [Transact-sql&#41;sp_dropsubscriber &#40;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   

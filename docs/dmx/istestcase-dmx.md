@@ -40,7 +40,7 @@ IsTestCase()
   
  학습 데이터 집합의 일부인 사례를 반환 하려면 [IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)함수를 사용 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 `Targeted Mailing` [기본 데이터 마이닝 자습서](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)에서 만든 마이닝 구조를 사용 합니다. 쿼리는 테스트에 사용된 구조의 모든 사례를 반환합니다.  
   
 ```  

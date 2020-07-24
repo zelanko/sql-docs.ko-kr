@@ -116,7 +116,7 @@ WHERE ContactID = 1
   
  `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
  [XQuery 기본 사항](../xquery/xquery-basics.md)   
  [XML 생성 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
  [XML 데이터&#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  

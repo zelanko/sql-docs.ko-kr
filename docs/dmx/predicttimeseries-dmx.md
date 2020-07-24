@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7d0888082380c7380e5fb025bb70d4bd3c2e518b
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: ececf16131544b0a450d877b5c4ba43c2cd80466
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666688"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970691"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   시계열 데이터에 대한 예측 미래 값을 반환합니다. 시계열 데이터는 연속적이며 중첩 테이블이나 사례 테이블에 저장할 수 있습니다. **PredictTimeSeries** 함수는 항상 중첩 테이블을 반환 합니다.  
   
@@ -37,7 +37,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## <a name="arguments"></a>인수  
- * \< 테이블 열 참조>*, * \< 스칼라 열 참조할>*  
+ *\<table column reference>*, *\<scalar column referenc>*  
  예측할 열의 이름을 지정합니다. 열에는 스칼라 또는 테이블 형식 데이터가 포함될 수 있습니다.  
   
  *n*  
@@ -52,7 +52,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
  *n 끝* 은 *n-시작*보다 큰 정수 여야 합니다.  
   
- *\<원본 쿼리>*  
+ *\<source query>*  
  예측을 수행하는 데 사용되는 외부 데이터를 정의합니다.  
   
  REPLACE_MODEL_CASES | EXTEND_MODEL_CASES  
@@ -65,7 +65,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  이러한 인수는 PREDICTION JOIN 문을 사용하여 새 데이터가 추가되는 경우에만 사용할 수 있습니다. PREDICTION JOIN 쿼리를 사용하고 인수를 지정하지 않을 경우 기본값은 EXTEND_MODEL_CASES입니다.  
   
 ## <a name="return-type"></a>반환 형식  
- \< *테이블 식*>입니다.  
+ \<*table expression*>.  
   
 ## <a name="remarks"></a>설명  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] 시계열 알고리즘은 PREDICTION JOIN 문을 사용하여 새 데이터를 추가하는 경우 기록 예측을 지원하지 않습니다.  

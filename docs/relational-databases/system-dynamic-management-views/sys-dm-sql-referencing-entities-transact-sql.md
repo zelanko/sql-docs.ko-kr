@@ -20,12 +20,12 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9d0c2366e0d05fb7d3abe6488d8a2f8ff969f011
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a467a445dda5f4d950c5bf4813f5ec69606df487
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717445"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943068"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,17 +60,15 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>인수  
- *schema_name. 참조*_*entity_name*  
- 참조된 엔터티의 이름입니다.  
+ `schema_name.referenced_entity_name`참조 된 엔터티의 이름입니다.  
   
- 참조 된 클래스가 PARTITION_FUNCTION 되는 경우를 제외 하 고 *schema_name* 필요 합니다.  
+ `schema_name`은 참조된 클래스가 PARTITION_FUNCTION일 경우를 제외하고 필요합니다.  
   
- *schema_name referenced_entity_name* **nvarchar (517)** 입니다.  
+ `schema_name.referenced_entity_name`는 **nvarchar (517)** 입니다.  
   
- *<referenced_class>* :: = {OBJECT | 형식 | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
- 참조된 엔터티의 클래스입니다. 각 문에는 하나의 클래스만 지정할 수 있습니다.  
+ `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }`는 참조 된 엔터티의 클래스입니다. 각 문에는 하나의 클래스만 지정할 수 있습니다.  
   
- *<referenced_class>* 은 **nvarchar**(60)입니다.  
+ `<referenced_class>`은 **nvarchar**(60)입니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
@@ -140,7 +138,7 @@ sys.dm_sql_referencing_entities (
   
 -   참조 엔터티가 서버 수준 DDL 트리거인 경우 서버에 대한 VIEW ANY DEFINITION이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>A. 지정된 엔터티를 참조하는 엔터티 반환  
  다음 예에서는 지정된 테이블을 참조하는 현재 데이터베이스의 엔터티를 반환합니다.  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: af15f93b869fed56bed19a495c64810b0f2436c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2936ac69cc4053e68fc92d2bb5c2cae95ac68673
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718593"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942194"
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters 데이터 생성
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -69,11 +69,11 @@ WideWorldImportersDW는 성능 테스트를 위해 데이터 크기를 임의로
 
 #### <a name="name"></a>Name
 
-    Application.Configuration_PopulateLargeSaleTable
+`Application.Configuration_PopulateLargeSaleTable`
 
 #### <a name="parameters"></a>매개 변수
 
-  `@EstimatedRowsFor2012`**bigint** (기본값 1200만)
+`@EstimatedRowsFor2012`**bigint** (기본값 1200만)
 
 #### <a name="result"></a>결과
 

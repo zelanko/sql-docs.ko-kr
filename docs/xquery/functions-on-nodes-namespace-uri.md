@@ -49,7 +49,7 @@ fn:namespace-uri($arg as node()?) as xs:string
   
 -   *$Arg* 이 확장 된 QName이 네임 스페이스에 없는 element 또는 attribute 노드인 경우 함수는 길이가 0 인 문자열을 반환 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  이 항목에서는 AdventureWorks 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
   
 ### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>A. 특정 노드의 네임스페이스 URI 검색  

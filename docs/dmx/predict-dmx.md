@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9a21336db54ab6fadaa219a3ef3d743dcf860087
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: d323794af598cb621b7fb8f9939cd2ae1c0f2746
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669268"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968401"
 ---
 # <a name="predict-dmx"></a>Predict(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   **Predict** 함수는 지정 된 열에 대 한 예측 값 또는 값 집합을 반환 합니다.  
   
@@ -32,11 +32,11 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
  스칼라 열 참조 또는 테이블 열 참조  
   
 ## <a name="return-type"></a>반환 형식  
- \<스칼라 열 참조>  
+ \<scalar column reference>  
   
  또는  
   
- \<테이블 열 참조>  
+ \<table column reference>  
   
  반환 형식은 이 함수가 적용되는 열 유형에 따라 다릅니다.  
   

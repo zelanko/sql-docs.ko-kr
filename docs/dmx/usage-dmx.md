@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: dc1ae000166f075a3c6bac347cd7e3e8a605042b
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: cdbefcfeb6d638998ec2e0a01b8da5ca40f2aeaf
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670375"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971576"
 ---
 # <a name="usage-dmx"></a>사용법(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   DMX (데이터 마이닝 확장)를 사용 하 여에서 새 데이터 마이닝 모델을 정의 하는 경우 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 모델을 작성 하는 데이터 마이닝 알고리즘에서 각 열을 사용 하는 방법을 지정 해야 합니다. 다음 유형 중 하나로 열을 지정할 수 있습니다.  
   
--   **키**  
+-   **Key**  
   
 -   **키 시퀀스**  
   

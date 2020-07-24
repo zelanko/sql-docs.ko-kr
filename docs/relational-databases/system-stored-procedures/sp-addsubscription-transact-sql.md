@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ff31939ce763f91ca706dfe9e7966b2a7b42f7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d3550dad3292c7ff2a226d6bfc21b1f55e148d58
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716353"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918946"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription(Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   게시에 구독을 추가하고 구독자 상태를 설정합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -163,9 +163,9 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |값|설명|  
 |-----------|-----------------|  
-|1|첫째|  
+|1|첫 번째|  
 |2|Second|  
-|4|셋째|  
+|4|세 번째|  
 |8|넷째|  
 |16|마지막|  
 |NULL(기본값)||  
@@ -180,7 +180,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |-----------|-----------------|  
 |1|한 번|  
 |2|Second|  
-|4|Minute|  
+|4|분|  
 |8|시간|  
 |NULL||  
   
@@ -295,7 +295,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="remarks"></a>설명  
  sp_addsubscription은 스냅샷 복제 및 트랜잭션 복제에 사용됩니다.  
   
- sysadmin 고정 서버 역할의 멤버가 밀어넣기 구독을 만들기 위해 sp_addsubscription을 실행할 경우 배포 에이전트 작업이 암시적으로 생성되어 SQL Server 에이전트 서비스 계정에서 실행됩니다. [Sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) 를 실행 하 고 및에 대 한 다른 에이전트 특정 Windows 계정의 자격 증명을 지정 하는 것이 좋습니다 @job_login @job_password . 자세한 내용은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조 하세요.  
+ sysadmin 고정 서버 역할의 멤버가 밀어넣기 구독을 만들기 위해 sp_addsubscription을 실행할 경우 배포 에이전트 작업이 암시적으로 생성되어 SQL Server 에이전트 서비스 계정에서 실행됩니다. [Sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) 를 실행 하 고 및에 대 한 다른 에이전트 특정 Windows 계정의 자격 증명을 지정 하는 것이 좋습니다 @job_login @job_password . 자세한 내용은 [복제 에이전트 보안 모델](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
   
  sp_addsubscription은 ODBC 및 OLE DB 구독자가 다음과 같은 게시에 액세스하는 것을 막습니다.  
   
@@ -320,7 +320,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/sp-addsubscription-trans_1.sql)]  
   
 ## <a name="see-also"></a>참고 항목  
- [밀어넣기 구독 만들기](../../relational-databases/replication/create-a-push-subscription.md)   
+ [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [SQL Server 이외 구독자에 대 한 구독 만들기](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Transact-sql&#41;sp_addpushsubscription_agent &#40;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
