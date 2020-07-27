@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c837241abfaebe3776a21e03a9c2cbf4c4f5ee9d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bf49a6cd604350ca9b3e73ee96bb6c61b1977a60
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292538"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920886"
 ---
 # <a name="flat-file-destination"></a>플랫 파일 대상
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   플랫 파일 대상은 데이터를 텍스트 파일에 기록합니다. 텍스트 파일은 구분 기호로 분리된 형식, 고정 폭 형식, 행 구분 기호가 있는 고정 폭 형식 또는 왼쪽 정렬 형식일 수 있습니다.  
@@ -91,7 +91,7 @@ ms.locfileid: "71292538"
  사용 가능한 대상 열의 목록을 표시합니다. 끌어서 놓기 작업을 사용하여 사용 가능한 대상 열을 입력 열에 매핑할 수 있습니다.  
   
  **입력 열**  
- 이 항목의 앞부분에서 선택한 입력 열을 표시합니다. **사용 가능한 입력 열**의 목록을 사용하여 매핑을 변경할 수 있습니다. 출력에서 열을 제외하려면 **\<무시>** 를 선택합니다.  
+ 이 항목의 앞부분에서 선택한 입력 열을 표시합니다. **사용 가능한 입력 열**의 목록을 사용하여 매핑을 변경할 수 있습니다. 출력에서 열을 제외하려면 **\<ignore>** 를 선택합니다.  
   
  **대상 열**  
  매핑 여부에 관계없이 사용 가능한 각 대상 열을 표시합니다.  

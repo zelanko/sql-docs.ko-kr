@@ -1,5 +1,6 @@
 ---
 title: SQL Server, Databases 개체 | Microsoft 문서
+description: 대량 복사 작업, 백업 및 복원 처리량 및 트랜잭션 로그 동작에 대한 카운터를 제공하는 SQLServer:Databases 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: da5bdd3fe0ea6e53e3943054470011040e9fe0c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d775ca3158b642c6184f9d6c909b349d49d779ef
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655954"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457985"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, Databases 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

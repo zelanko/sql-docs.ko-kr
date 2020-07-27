@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 46eb7c7f0834f864aba8e3951f4caf9092f5bb7b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8c1d3d2c727deea49e68e9f58e3ad0bf14245899
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294197"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919796"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>데이터 프로파일링 태스크 편집기(일반 페이지)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **데이터 프로파일링 태스크 편집기** 의 **일반** 페이지를 사용하여 다음 옵션을 구성할 수 있습니다.  
@@ -62,9 +62,9 @@ ms.locfileid: "71294197"
  **대상**  
  데이터 프로필 출력을 포함할 파일 연결 관리자 또는 패키지 변수를 지정합니다.  
   
--   **DestinationType** 옵션이 **FileConnection**으로 설정된 경우 **Destination** 옵션에 사용 가능한 파일 연결 관리자가 표시됩니다. 이러한 연결 관리자 중 하나를 선택하거나 \<새 파일 연결>을 선택하여 새 파일 연결 관리자를 만듭니다.  
+-   **DestinationType** 옵션이 **FileConnection**으로 설정된 경우 **Destination** 옵션에 사용 가능한 파일 연결 관리자가 표시됩니다. 이러한 연결 관리자 중 하나를 선택하거나 \<New File connection>을 선택하여 새 파일 연결 관리자를 만듭니다.  
   
--   **DestinationType** 옵션이 **Variable**로 설정된 경우 **Destination** 옵션에 사용 가능한 패키지 변수가 **Destination** 목록으로 표시합니다. 이러한 변수 중 하나를 선택하거나 \<새 변수>를 선택하여 새 변수를 만듭니다.  
+-   **DestinationType** 옵션이 **Variable**로 설정된 경우 **Destination** 옵션에 사용 가능한 패키지 변수가 **Destination** 목록으로 표시합니다. 이러한 변수 중 하나를 선택하거나 \<New Variable>를 선택하여 새 변수를 만듭니다.  
   
  **OverwriteDestination**  
  출력 파일이 이미 있는 경우 덮어쓸 것인지 여부를 지정합니다. 기본값은 **False**입니다. 이 속성의 값은 DestinationType 옵션이 FileConnection으로 설정된 경우에만 사용됩니다. DestinationType 옵션이 Variable로 설정된 경우 태스크에서는 변수의 이전 값을 항상 덮어씁니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "71294197"
  데이터 프로필 뷰어를 엽니다. 독립 실행형 데이터 프로필 뷰어에는 데이터 프로파일링 태스크의 데이터 프로필 출력이 표시됩니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 내에서 데이터 프로파일링 태스크를 실행하고 데이터 프로필을 계산한 후에 이러한 프로필 출력을 볼 수 있습니다.  
   
 > [!NOTE]  
->  또한 *\<드라이브>* :\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 폴더에서 DataProfileViewer.exe를 실행하여 데이터 프로필 뷰어를 열 수도 있습니다.  
+>  *\<drive>* :\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 폴더에서 DataProfileViewer.exe를 실행하여 데이터 프로필 뷰어를 열 수도 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)   

@@ -1,5 +1,6 @@
 ---
 title: SQL Server XTP 가상 프로세서 | Microsoft 문서
+description: 메모리 내 OLTP 엔진의 가상 처리 하위 시스템에 대한 카운터를 포함하는 SQL Server XTP 가상 프로세서 성능 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0f691b3d-a8fd-4459-ad21-2cfc8574a8c0
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bb3c619edfc1fae76e8b497c46a882fbfc42ffd2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1ab23b48d001d9145a06b620a20812f856e699de
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85743168"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457933"
 ---
 # <a name="sql-server-xtp-phantom-processor"></a>SQL Server XTP 가상 프로세서
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

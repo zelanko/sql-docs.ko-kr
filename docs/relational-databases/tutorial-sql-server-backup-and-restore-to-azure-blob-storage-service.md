@@ -1,5 +1,6 @@
 ---
 title: '빠른 시작: Azure Blob Storage 서비스로 백업 및 복원'
+description: '빠른 시작: Azure Blob Storage 서비스에서 백업을 작성하고 복원하는 방법을 알아봅니다. Azure Blob 컨테이너를 만들고 백업을 작성한 후 복원합니다.'
 ms.custom: seo-dt-2019
 ms.date: 04/09/2018
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24847d7b14341e9a1d5a4d874eb0046f53261fea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 59968cad65f3a80c2d511dad3dc804d151d33095
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165518"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458045"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>빠른 시작: Azure Blob Storage 서비스로 SQL 백업 및 복원
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 이 빠른 시작은 Azure Blob Storage 서비스에서 백업을 작성하고 복원하는 방법을 이해하도록 도와줍니다.  이 문서에서는 Azure Blob 컨테이너를 만들고 blob 서비스에 백업을 쓴 다음 복원을 수행하는 방법을 설명합니다.
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 이 빠른 시작을 완료하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 백업 및 복원 개념과 T-SQL 구문에 대해 잘 알고 있어야 합니다.  Azure Storage 계정, SQL Server Management Studio(SSMS), 그리고 SQL Server 또는 Azure SQL Database 관리되는 인스턴스를 실행하는 서버에 대한 액세스 권한이 필요합니다. 또한 BACKUP 및 RESTORE 명령을 실행하는 데 사용하는 계정은 **모든 자격 증명 변경** 권한이 있는 **db_backup operator** 데이터베이스 역할에 있어야 합니다. 
 
 - 체험 [Azure 계정](https://azure.microsoft.com/offers/ms-azr-0044p/)을 받습니다.

@@ -29,16 +29,16 @@ helpviewer_keywords:
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: baad15da62c4452361fe8ff3cdf46582dd3727ea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba8e26a75af5508e2fe18390e92fda3aea73c648
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287887"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918357"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services(SSIS) 로깅
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에는 패키지, 컨테이너 및 태스크에서의 로깅 구현을 위해 사용할 수 있는 로그 공급자가 포함되어 있습니다. 로깅을 사용하면 패키지에 대한 런타임 정보를 캡처하여 패키지가 실행될 때마다 패키지를 감사하고 문제를 해결하는 데 활용할 수 있습니다. 예를 들어 로그를 사용하여 패키지를 실행한 운영자의 이름과 패키지가 시작 및 종료된 시간을 캡처할 수 있습니다.  
@@ -230,7 +230,7 @@ ms.locfileid: "79287887"
   
 3.  **공급자 유형** 목록에서 로그 공급자를 선택한 다음 **추가**를 클릭합니다.  
   
-4.  **구성** 열에서 연결 관리자를 선택하거나 **\<새 연결>** 을 클릭하여 로그 공급자에 대한 적절한 유형의 연결 관리자를 만듭니다. 선택한 공급자에 따라 다음 연결 관리자 중 하나를 사용합니다.  
+4.  **구성** 열에서 연결 관리자를 선택하거나 **\<New connection>** 을 클릭하여 로그 공급자에 대한 적절한 유형의 연결 관리자를 만듭니다. 선택한 공급자에 따라 다음 연결 관리자 중 하나를 사용합니다.  
   
     -   텍스트 파일에는 파일 연결 관리자를 사용합니다. 자세한 내용은 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -312,7 +312,7 @@ ms.locfileid: "79287887"
  설명 필드는 편집할 수 있습니다. 클릭한 다음 로그의 기본 설명을 수정합니다.  
   
  **Configuration**  
- 목록에서 기존 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다. 로그 공급자의 유형에 따라 OLE DB 연결 관리자 또는 파일 연결 관리자를 구성할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 이벤트 로그의 로그 공급자에는 연결이 필요하지 않습니다.  
+ 목록에서 기존 연결 관리자를 선택하거나 \<**New connection...**>을 클릭하여 새 연결 관리자를 만듭니다. 로그 공급자의 유형에 따라 OLE DB 연결 관리자 또는 파일 연결 관리자를 구성할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 이벤트 로그의 로그 공급자에는 연결이 필요하지 않습니다.  
   
  관련 항목: [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) , [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   

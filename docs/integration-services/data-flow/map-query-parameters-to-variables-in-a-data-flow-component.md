@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0eef24cbeac94a6447c2cd6b4f5a43fd0ca93657
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 54581ad36eea167316d9e6c4cdb68b23e69a1cbd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292291"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916474"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>쿼리 매개 변수를 데이터 흐름 구성 요소의 변수에 매핑
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   매개 변수가 있는 쿼리를 사용하도록 OLE DB 원본을 구성할 경우 매개 변수를 변수에 매핑할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "71292291"
   
 7.  **매개 변수**를 클릭합니다.  
   
-8.  **쿼리 매개 변수 설정** 대화 상자에서 **매개 변수** 목록의 각 매개 변수를 **변수** 목록의 변수에 매핑하거나 **\<새 변수>** 를 클릭하여 새 변수를 만듭니다. **확인**을 클릭합니다.  
+8.  **쿼리 매개 변수 설정** 대화 상자에서 **매개 변수** 목록의 각 매개 변수를 **변수** 목록의 변수에 매핑하거나 **\<New variable>** 를 클릭하여 새 변수를 만듭니다. **확인**을 클릭합니다.  
   
     > [!NOTE]  
     >  패키지, Foreach 루프와 같은 부모 컨테이너 또는 데이터 흐름 구성 요소가 포함된 데이터 흐름 태스크의 범위에 속하는 사용자 정의 변수와 시스템 변수만 매핑에 사용할 수 있습니다. 변수는 매개 변수가 할당된 WHERE 절의 열과 호환되는 데이터 형식이어야 합니다.  

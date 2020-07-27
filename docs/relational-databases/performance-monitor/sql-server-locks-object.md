@@ -1,5 +1,6 @@
 ---
 title: SQL Server, Locks 개체 | Microsoft 문서
+description: 개별 리소스 유형에 대한 SQL Server 잠금 정보를 제공하는 SQLServer:Locks 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 853a19af5644e9c29659c5595a8ce9ee6357f499
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1553985a2c85eb183841491854ef010eb12d941a
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775818"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458131"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server, Locks 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

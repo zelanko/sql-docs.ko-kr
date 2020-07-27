@@ -2,7 +2,7 @@
 title: 서버 구성 옵션(SQL Server) | Microsoft Docs
 description: SQL Server 리소스를 관리하고 최적화 하는 방법을 알아봅니다. 사용 가능한 구성 옵션, 가능한 설정, 기본값 및 다시 시작 요구 사항을 확인합니다.
 ms.custom: ''
-ms.date: 04/13/2017
+ms.date: 07/20/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e776fdc4ac65d640728bffad774ef3fbc253d172
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 6ffbb3df5a8a8dac4ce22c27a1194520e8b058de
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279469"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923617"
 ---
 # <a name="server-configuration-options-sql-server"></a>서버 구성 옵션(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -149,7 +149,8 @@ ms.locfileid: "86279469"
 | [set working set size](../../database-engine/configure-windows/set-working-set-size-server-configuration-option.md) (A, RR, 구식) | 0 | 1 | 0 |
 | [show advanced options](../../database-engine/configure-windows/show-advanced-options-server-configuration-option.md) | 0 | 1 | 0 |
 | [SMO and DMO XPs](../../database-engine/configure-windows/smo-and-dmo-xps-server-configuration-option.md) (A) | 0 | 1 | 1 |
-| [tempdb 메타데이터 메모리 최적화](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)(A) <br/><br/> [!INCLUDE [sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)]입니다.| 0 | 1 | 0 |
+| [복구 모델 오류 표시 안 함](../../database-engine/configure-windows/suppress-recovery-model-errors-server-configuration-option.md)(A) <br/><br/>[!INCLUDE [asdbmi](../../includes/applies-to-version/_asdbmi.md)]| 0 | 1 | 0 |
+| [tempdb 메타데이터 메모리 최적화](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)(A) <br/><br/> [!INCLUDE [sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)].| 0 | 1 | 0 |
 | [transform noise words](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md) (A) | 0 | 1 | 0 |
 | [two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) (A) | 1753 | 9999 | 2049 |
 | [user connections](../../database-engine/configure-windows/configure-the-user-connections-server-configuration-option.md) (A, RR, SC) | 0 | 32767 | 0 |

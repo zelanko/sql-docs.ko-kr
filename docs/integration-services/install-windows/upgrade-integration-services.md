@@ -16,16 +16,16 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 0b7fd8a71f2636893f157b18630e2773b2f01951
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f287a9853b27a58128176bfe740a3efc99a9258
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68262788"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919989"
 ---
 # <a name="upgrade-integration-services"></a>Integration Services 업그레이드
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 이상이 현재 컴퓨터에 설치되어 있으면 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]로 업그레이드할 수 있습니다.  

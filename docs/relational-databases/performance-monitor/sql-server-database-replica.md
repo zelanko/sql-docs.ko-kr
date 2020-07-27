@@ -1,5 +1,6 @@
 ---
 title: SQL Server, Database Replica | Microsoft 문서
+description: Always On 가용성 그룹의 보조 데이터베이스에 대한 성능 카운터를 포함하는 SQLServer:Database Replica 성능 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: db892b71ba5e86faf1b45b94cdef12b1850c22a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d164d5d2ad9bba0cbb052941944e3808cf1dc822
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730842"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458337"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, 데이터베이스 복제본
 

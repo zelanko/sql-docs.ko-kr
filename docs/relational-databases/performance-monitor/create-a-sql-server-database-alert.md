@@ -1,5 +1,6 @@
 ---
 title: SQL Server 데이터베이스 경고 만들기 | Microsoft 문서
+description: 시스템 모니터를 사용하여 시스템 모니터 카운터의 임계값에 도달했을 때 발생하는 SQL Server 데이터베이스 경고를 만들 수 있습니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0511136a-1b6b-4095-aa45-39e77b67aba2
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 971f9519208f9af67d8d1d1af63737ed876bfff1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: abb5eddab78146c91adf1387c048e013f018c763
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787483"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457778"
 ---
 # <a name="create-a-sql-server-database-alert"></a>SQL Server 데이터베이스 경고 만들기
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

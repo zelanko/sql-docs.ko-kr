@@ -1,5 +1,6 @@
 ---
 title: SQL Server XTP 가비지 수집 | Microsoft 문서
+description: 메모리 내 OLTP 엔진의 가비지 수집기와 관련된 카운터를 포함하는 SQL Server XTP 가비지 수집 성능 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 64ae91e5-b420-44b4-af1a-f8bca83d7f41
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0edeb2fef45d23faec92846b65626bdc3c00d049
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8575295948b5560f25dc0e967fa419699587af7b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774224"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457967"
 ---
 # <a name="sql-server-xtp-garbage-collection"></a>SQL Server XTP 가비지 수집
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -10,16 +10,16 @@ ms.custom: loading
 ms.date: 08/20/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 8d78ab5befe5f95c07b6cb539d2629fdd9d003ae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c8f697e2bd68a7cbfe7053a4a2f3054d6ed14b85
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75924983"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943131"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 SQL Server 또는 Azure SQL Database에 데이터 로드
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-xxxx-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/ssis-appliesto-ssvrpluslinux-asdb-xxxx-xxx.md)]
 
 SSIS(SQL Server Integration Services) 패키지를 만들어 SQL Server 또는 [Azure SQL Database](/azure/sql-database/)에 데이터를 로드합니다. SSIS 데이터 흐름을 통해 전달될 때 필요에 따라 데이터를 재구성, 변형 및 정리할 수 있습니다.
 
@@ -75,28 +75,28 @@ Visual Studio가 열리고 새 Integration Services(SSIS) 프로젝트를 만듭
 * 중간은 여러 탭이 포함된 디자인 화면입니다. 일반적으로 최소한 **제어 흐름** 및 **데이터 흐름** 탭을 사용합니다.
 * 오른쪽은 **솔루션 탐색기** 및 **속성** 창입니다.
   
-    ![][01]
+    ![도구 상자 창, 디자인 창, 솔루션 탐색기 창 및 속성 창이 표시된 Visual Studio의 스크린샷.][01]
 
 ## <a name="create-the-basic-data-flow"></a>기본 데이터 흐름 만들기
 1. 도구 상자에서 디자인 화면(**제어 흐름** 탭에서)의 가운데로 데이터 흐름 태스크를 끌어 옵니다.
    
-    ![][02]
+    ![데이터 흐름 태스크를 디자인 창의 제어 흐름 탭으로 끌어서 놓는 것을 보여 주는 Visual Studio의 스크린샷.][02]
 2. 데이터 흐름 태스크를 두 번 클릭하여 데이터 흐름 탭으로 전환합니다.
 3. 도구 상자의 기타 원본 목록에서 ADO.NET 원본을 디자인 화면으로 끕니다. 원본 어댑터를 선택한 상태로 **속성** 창에서 해당 이름을 **SQL Server 원본**으로 변경합니다.
 4. 도구 상자의 기타 대상 목록에서 ADO.NET 대상을 ADO.NET 원본 아래의 디자인 화면으로 끕니다. 대상 어댑터를 선택한 상태로 **속성** 창에서 해당 이름을 **SQL 대상**으로 변경합니다.
    
-    ![][09]
+    ![대상 어댑터를 원본 어댑터 바로 아래 위치로 끌어서 오는 것을 보여 주는 스크린샷.][09]
 
 ## <a name="configure-the-source-adapter"></a>원본 어댑터 구성
 1. 원본 어댑터를 두 번 클릭하여 **ADO.NET 원본 편집기**를 엽니다.
    
-    ![][03]
+    ![ADO.NET 원본 편집기의 스크린샷. 연결 관리자 탭이 표시되어 있고 컨트롤을 사용하여 데이터 흐름 속성을 구성할 수 있습니다.][03]
 2. **ADO.NET 원본 편집기**의 **연결 관리자** 탭에서 **ADO.NET 연결 관리자** 목록 옆의 **새로 만들기** 단추를 클릭하여 **ADO.NET 연결 관리자 구성** 대화 상자를 열고 이 자습서에서 데이터를 로드하는 SQL Server 데이터베이스에 대한 연결 설정을 만듭니다.
    
-    ![][04]
+    ![ADO.NET 연결 관리자 구성 대화 상자 스크린샷. 컨트롤을 사용하여 연결 관리자를 설정하고 구성할 수 있습니다.][04]
 3. **ADO.NET 연결 관리자 구성** 대화 상자에서 **새로 만들기** 단추를 클릭하여 **연결 관리자** 대화 상자를 열고 새 데이터 연결을 만듭니다.
    
-    ![][05]
+    ![연결 관리자 대화 상자 스크린샷. 컨트롤을 사용하여 데이터 연결을 구성할 수 있습니다.][05]
 4. **연결 관리자** 대화 상자에서 다음을 수행합니다.
    
    1. **공급자**의 경우 SqlClient 데이터 공급자를 선택합니다.
@@ -105,16 +105,16 @@ Visual Studio가 열리고 새 Integration Services(SSIS) 프로젝트를 만듭
    4. **데이터베이스에 연결** 섹션에서 AdventureWorks 샘플 데이터베이스를 선택합니다.
    5. **연결 테스트**를 클릭합니다.
       
-       ![][06]
+       ![테스트 연결에 성공했음을 나타내는 확인 단추와 텍스트를 표시하는 대화 상자 스크린샷.][06]
    6. 연결 테스트의 결과를 보고하는 대화 상자에서 **확인**을 클릭하여 **연결 관리자** 대화 상자로 돌아갑니다.
    7. **연결 관리자** 대화 상자에서 **확인**을 클릭하여 **ADO.NET 연결 관리자 구성** 대화 상자로 돌아갑니다.
 5. **ADO.NET 연결 관리자 구성** 대화 상자에서 **확인**을 클릭하여 **ADO.NET 원본 편집기**로 돌아갑니다.
 6. **ADO.NET 원본 편집기**의 **테이블 또는 뷰 이름** 목록에서 **Sales.SalesOrderDetail** 테이블을 선택합니다.
    
-    ![][07]
+    ![ADO.NET 원본 편집기의 스크린샷. 테이블 또는 보기 목록 이름에서 Sales.SalesOrderDetail 테이블이 선택되어 있습니다.][07]
 7. **미리 보기**를 클릭하여 **쿼리 결과 미리 보기** 대화 상자에서 원본 테이블의 처음 200개의 데이터 행을 봅니다.
    
-    ![][08]
+    ![쿼리 결과 미리 보기 대화 상자 스크린샷. 원본 테이블의 여러 판매 데이터 행을 볼 수 있습니다.][08]
 8. **쿼리 결과 미리 보기** 대화 상자에서 **닫기**를 클릭하여 **ADO.NET 원본 편집기**로 돌아갑니다.
 9. **ADO.NET 원본 편집기**에서 **확인**을 클릭하여 데이터 원본 구성을 마칩니다.
 
@@ -122,14 +122,14 @@ Visual Studio가 열리고 새 Integration Services(SSIS) 프로젝트를 만듭
 1. 디자인 화면에서 원본 어댑터를 선택합니다.
 2. 원본 어댑터에서 확장하는 파란색 화살표를 선택하고 제자리에 맞출 때까지 대상 편집기를 끕니다.
    
-    ![][10]
+    ![원본 및 대상 어댑터를 보여 주는 스크린샷. 파란색 화살표가 원본 어댑터에서 대상 어댑터를 가리키고 있습니다.][10]
    
     일반적인 SSIS 패키지에서 원본과 대상 간의 SSIS 도구 상자에서 다양한 구성 요소를 사용하여 SSIS 데이터 흐름을 통해 전달될 때 데이터를 재구성, 변형 및 정리합니다. 이 예제를 최대한 단순하게 유지하기 위해 원본을 대상에 직접 연결합니다.
 
 ## <a name="configure-the-destination-adapter"></a>대상 어댑터 구성
 1. 대상 어댑터를 두 번 클릭하여 **ADO.NET 대상 편집기**를 엽니다.
    
-    ![][11]
+    ![ADO.NET 대상 편집기 스크린샷. 연결 관리자 탭이 표시되어 있고 컨트롤을 사용하여 데이터 흐름 속성을 구성할 수 있습니다.][11]
 2. **ADO.NET 대상 편집기**의 **연결 관리자** 탭에서 **연결 관리자** 목록 옆의 **새로 만들기** 단추를 클릭하여 **ADO.NET 연결 관리자 구성** 대화 상자를 열고 이 자습서에서 데이터를 로드하는 데이터베이스에 대한 연결 설정을 만듭니다.
 3. **ADO.NET 연결 관리자 구성** 대화 상자에서 **새로 만들기** 단추를 클릭하여 **연결 관리자** 대화 상자를 열고 새 데이터 연결을 만듭니다.
 4. **연결 관리자** 대화 상자에서 다음을 수행합니다.
@@ -143,17 +143,17 @@ Visual Studio가 열리고 새 Integration Services(SSIS) 프로젝트를 만듭
 5. **ADO.NET 연결 관리자 구성** 대화 상자에서 **확인**을 클릭하여 **ADO.NET 대상 편집기**로 돌아갑니다.
 6. **ADO.NET 대상 편집기**에서 **테이블 또는 뷰 사용** 목록 옆의 **새로 만들기**를 클릭하여 **테이블 만들기** 대화 상자를 열고 원본 테이블과 일치하는 열 목록으로 새 대상 테이블을 만듭니다.
    
-    ![][12a]
+    ![테이블 만들기 대화 상자 스크린샷. 대상 테이블을 만드는 S Q L 코드를 볼 수 있습니다.][12a]
 7. **테이블 만들기** 대화 상자에서 다음을 수행합니다.
    
    1. 대상 테이블의 이름을 **SalesOrderDetail**로 변경합니다.
       
-       ![][12b]
+       ![테이블 만들기 대화 상자 스크린샷. SalesOrderDetail이라는 테이블을 만드는 S Q L 코드를 볼 수 있습니다.][12b]
 
    2. **확인**을 클릭하여 테이블을 만들고 **ADO.NET 대상 편집기**로 돌아갑니다.
 8. **ADO.NET 대상 편집기**에서 **매핑** 탭을 선택하여 원본의 열이 대상의 열로 매핑되는 방법을 확인합니다.
    
-    ![][13]
+    ![ADO.NET 대상 편집기의 매핑 탭 스크린샷. 선들이 원본 및 대상 테이블에서 이름이 같은 열을 연결하고 있습니다.][13]
 9. **확인**을 클릭하여 대상 구성을 완료합니다.
 
 ## <a name="run-the-package-to-load-the-data"></a>패키지를 실행하여 데이터 로드
@@ -163,19 +163,19 @@ Visual Studio가 열리고 새 Integration Services(SSIS) 프로젝트를 만듭
 
 패키지 실행을 시작하면 활동과 지금까지 처리된 행 수를 나타내는 데 노란색 회전 바퀴가 나타납니다.
 
-![][14]
+![원본 및 대상 어댑터를 보여 주는 스크린샷. 각 어댑터 위에 노란색 회전 휠이 있고, 그 가운데에 “89748개 행”이라는 텍스트가 있습니다.][14]
 
 패키지가 실행을 마치면 성공과 원본에서 대상으로 로드된 데이터의 행 수를 나타내는 녹색 확인 표시가 나타납니다.
 
-![][15]
+![원본 및 대상 어댑터를 보여 주는 스크린샷. 각 어댑터 위에 녹색 확인 표시가 있고, 그 가운데에 “121317개 행”이라는 텍스트가 있습니다.][15]
 
 축하합니다! SQL Server Integration Services를 사용하여 SQL Server 또는 Azure SQL Database에 데이터를 성공적으로 로드했습니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-- 디자인 환경에서 패키지 권한을 디버그하고 문제를 해결하는 방법을 알아봅니다. [패키지 개발용 문제 해결 도구][Troubleshooting Tools for Package Development]에서 시작할 수 있습니다.
+- 디자인 환경에서 패키지 권한을 디버그하고 문제를 해결하는 방법을 알아봅니다. 여기에서 시작하세요. [패키지 배포 문제 해결 도구][Troubleshooting Tools for Package Development].
 
-- SSIS 프로젝트와 패키지를 Integration Services 서버 또는 다른 스토리지 위치에 배포하는 방법에 대해 알아보세요. [프로젝트 및 패키지 배포][Deployment of Projects and Packages]에서 시작할 수 있습니다.
+- SSIS 프로젝트와 패키지를 Integration Services 서버 또는 다른 스토리지 위치에 배포하는 방법에 대해 알아보세요. 여기에서 시작하세요. [프로젝트 및 패키지 배포][Deployment of Projects and Packages].
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-database-with-ssis/ssis-designer-01.png

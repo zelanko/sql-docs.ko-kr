@@ -8,17 +8,33 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 07/15/2020
-ms.openlocfilehash: 3f6766e32369c2002b6da7df62646572a4cf8507
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.date: 07/17/2020
+ms.openlocfilehash: 5acbadb8d019b6d7d468f756bd25b70d890251c8
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406256"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458888"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio의 릴리스 정보
 
 **[최신 릴리스 다운로드 및 설치](download.md)**
+
+## <a name="july-2020-hotfix"></a>2020년 7월(핫픽스)
+
+2020년 7월 17일 &nbsp; / &nbsp; 버전: 1.20.1
+
+&nbsp;
+
+| 변경 | 세부 정보 |
+| :----- | :------ |
+| 수정됨: 버그 #11372 개체 탐색기 끌어서 놓기 테이블이 테이블 이름을 잘못 래핑함 | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372)  |
+| 수정됨: 버그 #11356 이제 어두운 테마가 기본 테마임 | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356)  |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issue"></a>알려진 문제
+
+- 일부 사용자가 이번 릴리스에 포함된 새로운 Microsoft.Data.SqlClient v2.0.0에서 연결 오류를 보고했습니다. [이 지침을 따르면](https://github.com/microsoft/azuredatastudio/issues/11367#issuecomment-659614111) 연결을 성공적으로 수행할 수 있습니다.
 
 ## <a name="july-2020"></a>2020년 7월
 
@@ -809,7 +825,7 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 | 연결 대화 상자에서 저장된 서버 연결을 사용할 수 있음 | &nbsp; |
 | Hot Exit 사용. Hot Exit는 기본적으로 해제됩니다. 사용하도록 설정하는 방법은 [Hot Exit 설정](settings.md#hot-exit)을 참조하세요. | &nbsp; |
 | 서버 그룹 기반의 탭 색 지정 탭 색 지정은 기본적으로 해제됩니다. 사용하도록 설정하는 방법은 [탭 색 설정](settings.md#tab-color)을 참조하세요. | &nbsp; |
-| 연결 대화 상자에서 ‘서버 이름’을 ‘서버’로 변경  | &nbsp; |
+| 연결 대화 상자에서 ‘서버 이름’을 ‘서버’로 변경 | &nbsp; |
 | 손상된 ‘현재 쿼리 실행’ 명령 수정 | &nbsp; |
 | 끌어서 놓기 중단 스크립팅 버그 수정 | &nbsp; |
 | 잘못된 고정된 시작 메뉴 아이콘 수정 | &nbsp; |
@@ -829,7 +845,7 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 | 이제 Azure SQL Database 및 Azure SQL Data Warehouse에 대한 연결을 지원하는 방화벽 규칙 만들기 대화 상자를 사용할 수 있음 | &nbsp; |
 | Windows 설치 프로그램과 Linux DEB 및 RPM 설치 패키지가 추가됨 | &nbsp; |
 | 대시보드 관리 시각적 레이아웃 편집기 | &nbsp; |
-| ‘Alter로 스크립트’ 및 ‘Execute로 스크립트’ 명령  | &nbsp; |
+| ‘Alter로 스크립트’ 및 ‘Execute로 스크립트’ 명령 | &nbsp; |
 | ‘실제 계획을 사용하여 현재 쿼리 실행’ 명령 | &nbsp; |
 | VS Code 1.18.1 편집기 플랫폼 통합 | &nbsp; |
 | VSIX 확장 파일의 사이드로드 사용 | &nbsp; |

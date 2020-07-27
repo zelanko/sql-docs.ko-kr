@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 395d639cd62894c91fbf0690467e60aaeac57bea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d32a8c6a2096cab67917db7a464b70eaf16ff6f5
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727093"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484424"
 ---
 # <a name="scalar-udf-inlining"></a>스칼라 UDF 인라인 처리
 
@@ -29,7 +29,7 @@ ms.locfileid: "85727093"
 이 문서에서는 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 기능 모음의 기능인 스칼라 UDF 인라인 처리를 소개합니다. 이 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]부터)에서 스칼라 UDF를 호출하는 쿼리의 성능을 향상합니다.
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>T-SQL 스칼라 사용자 정의 함수
-[!INCLUDE[tsql](../../includes/tsql-md.md)]로 구현되며 단일 데이터 값을 반환하는 UDF(사용자 정의 함수)를 T-SQL 스칼라 사용자 정의 함수라고 합니다. T-SQL UDF는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리에서 코드 재사용과 모듈화를 구현하는 세련된 방법입니다. 일부 계산(예: 복잡한 비즈니스 규칙)은 명령적 UDF 형태에서 더 표현하기 쉽습니다. UDF는 복잡한 SQL 쿼리를 작성하기 위한 전문 지식 없이도 복잡한 논리를 구축하는 데 도움이 됩니다.
+[!INCLUDE[tsql](../../includes/tsql-md.md)]로 구현되며 단일 데이터 값을 반환하는 UDF(사용자 정의 함수)를 T-SQL 스칼라 사용자 정의 함수라고 합니다. T-SQL UDF는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리에서 코드 재사용과 모듈화를 구현하는 세련된 방법입니다. 일부 계산(예: 복잡한 비즈니스 규칙)은 명령적 UDF 형태에서 더 표현하기 쉽습니다. UDF는 복잡한 SQL 쿼리를 작성하기 위한 전문 지식 없이도 복잡한 논리를 구축하는 데 도움이 됩니다. UDF에 대한 자세한 내용은 [사용자 정의 함수 만들기(데이터베이스 엔진)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)를 참조하세요.
 
 ## <a name="performance-of-scalar-udfs"></a>스칼라 UDF 성능
 스칼라 UDF의 성능이 저하되는 이유는 일반적으로 다음과 같습니다.
@@ -154,25 +154,31 @@ UDF의 논리 복잡성에 따라 결과적인 쿼리 계획이 더 크고 복�
 - UDF는 사용자 정의 형식을 참조하지 않습니다.
 - UDF에 추가되는 서명은 없습니다.
 - UDF는 파티션 함수가 아닙니다.
-- UDF에는 CTE(공용 테이블 식)에 대한 참조가 포함되지 않습니다.
-- UDF는 인라인 적용시 결과가 바뀔 수 있는 내장 함수(예: @@ROWCOUNT)에 대한 참조를 포함하지 않습니다(Microsoft SQL Server 2019 CU2에서 추가된 제한).
-- UDF는 스칼라 UDF에 매개 변수로 전달되는 집계 함수를 포함하지 않습니다(Microsoft SQL Server 2019 CU2에 추가된 제한).
-- UDF는 기본 제공 보기(예: OBJECT_ID, Microsoft SQL Server 2019 CU2에 추가된 제한)를 참조하지 않습니다.
--   UDF는 XML 메서드를 참조하지 않습니다(Microsoft SQL Server 2019 CU4에 추가된 제한).
--   UDF는 "TOP 1"이 없는 ORDER BY를 이용하는 SELECT를 포함하지 않습니다(Microsoft SQL Server 2019 CU4에 추가된 제한).
--   UDF는 ORDER BY 절과 함께 할당을 수행하는 SELECT 쿼리를 포함하지 않습니다(예: SELECT @x = @x +1 FROM table ORDER BY column_name, Microsoft SQL Server 2019 CU4에 추가된 제한).
-- UDF는 여러 개의 RETURN 문을 포함하지 않습니다(SQL Server 2019 CU5에 추가된 제한).
-- UDF는 RETURN 문에서 호출되지 않습니다(SQL Server 2019 CU5에 추가된 제한).
-- UDF는 STRING_AGG 함수를 참조하지 않습니다(SQL Server 2019 CU5에 추가된 제한). 
+- UDF는 CTE(공용 테이블 식)에 대한 참조를 포함하지 않습니다.
+- UDF는 인라인 적용 시 결과가 바뀔 수 있는 내장 함수(예: `@@ROWCOUNT`)에 대한 참조를 포함하지 않습니다<sup>4</sup>.
+- UDF는 스칼라 UDF에 매개 변수로 전달되는 집계 함수를 포함하지 않습니다<sup>4</sup>.
+- UDF는 기본 제공 보기(예: `OBJECT_ID`)를 참조하지 않습니다<sup>4</sup>.
+- UDF는 XML 메서드를 참조하지 않습니다<sup>5</sup>.
+- UDF는 `TOP 1` 절이 없는 `ORDER BY`를 이용하는 SELECT를 포함하지 않습니다<sup>5</sup>.
+- UDF는 `ORDER BY` 절과 함께 할당을 수행하는 SELECT 쿼리를 포함하지 않습니다(예: `SELECT @x = @x + 1 FROM table1 ORDER BY col1`)<sup>5</sup>.
+- UDF는 여러 개의 RETURN 문을 포함하지 않습니다<sup>6</sup>.
+- UDF는 RETURN 문에서 호출되지 않습니다<sup>6</sup>.
+- UDF는 `STRING_AGG` 함수를 참조하지 않습니다<sup>6</sup>. 
 
-<sup>1</sup> `SELECT`(변수 누적/집계 있음, 예: `SELECT @val += col1 FROM table1`)는 인라인 처리에 지원되지 않습니다.
+<sup>1</sup> 변수 누적/집계가 있는 `SELECT`는 인라인 처리가 지원되지 않습니다(예: `SELECT @val += col1 FROM table1`).
 
 <sup>2</sup> 재귀 UDF는 특정 깊이에만 인라인 처리됩니다.
 
 <sup>3</sup> 현재 시스템 시간에 따라 결과가 달라지는 내장 함수는 시간 종속입니다. 부작용이 있는 함수의 예로 일부 내부 글로벌 상태를 업데이트할 수 있는 내장 함수를 들 수 있습니다. 이러한 함수는 내부 상태에 따라 호출될 때마다 다른 결과를 반환합니다.
 
+<sup>4</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2에 추가된 제한
+
+<sup>5</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4에 추가된 제한
+
+<sup>6</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5에 추가된 제한
+
 > [!NOTE]
-> 최신 T-SQL Scalar UDF 인라인 처리 수정 및 인라인 처리 적격 시나리오에 관한 내용은 다음 기술 자료 문서를 참조하십시오. [수정: SQL Server 2019에서의 Scalar UDF 인라인 처리 문제](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019).
+> 최신 T-SQL Scalar UDF 인라인 처리 수정 및 인라인 처리 적격 시나리오에 관한 내용은 다음 기술 자료 문서를 참조하십시오. [수정: SQL Server 2019에서의 Scalar UDF 인라인 처리 문제](https://support.microsoft.com/help/4538581).
 
 ### <a name="checking-whether-or-not-a-udf-can-be-inlined"></a>UDF를 인라인 처리할 수 있는지 여부를 확인합니다.
 모든 T-SQL 스칼라 UDF에 대해 [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 보기에는 UDF의 인라인 처리 가능 여부를 표시하는 `is_inlineable`이라는 속성이 포함되어 있습니다. 
@@ -233,7 +239,8 @@ GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
 OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 ```
 
-`USE HINT` 쿼리 힌트는 데이터베이스 범위 구성 또는 호환성 수준 설정보다 우선합니다.
+> [!TIP]
+> `USE HINT` 쿼리 힌트는 데이터베이스 범위 구성 또는 호환성 수준 설정보다 우선합니다.
 
 `CREATE FUNCTION` 또는 `ALTER FUNCTION` 문에서 INLINE 절을 사용하는 특정 UDF에서는 스칼라 UDF 인라인 처리를 사용하지 않도록 설정할 수 있습니다.
 예를 들면 다음과 같습니다.
@@ -271,13 +278,14 @@ END
 1. 인라인 처리에는 새 조인이 들어가므로 쿼리 수준 조인 힌트가 더 이상 유효하지 않을 수 있습니다. 로컬 조인 힌트를 대신 사용해야 합니다.
 1. 인라인 스칼라 UDF를 참조하는 보기를 인덱싱할 수 없습니다. 이런 보기에 대해 인덱스를 만들려면 참조된 UDF에 대해 인라인 처리를 사용하지 않습니다.
 1. UDF 인라인 처리에서 [동적 데이터 마스킹](../security/dynamic-data-masking.md)의 동작에 차이가 있을 수 있습니다. (UDF의 논리에 따라) 특정 상황에서는 인라인 처리가 w.r.t 마스킹 출력 열보다 더 보수적일 수 있습니다. UDF에서 참조하는 열이 출력 열이 아닌 시나리오에서는 마스킹되지 않습니다. 
-1. UDF가 기본 제공 함수(예: `SCOPE_IDENTITY()`, `@@ROWCOUNT` 또는 `@@ERROR`)를 참조할 경우 기본 제공 함수에서 반환한 값이 인라인 처리에 따라 변경됩니다. 이 동작 변경은 인라인 처리가 UDF 내 문 범위를 변경하기 때문입니다. Microsoft SQL Server 2019 CU2부터는 UDF 참조에 특정 내장 함수(예: @@ROWCOUNT)가 있는 경우 인라인 처리를 차단합니다.
+1. UDF가 기본 제공 함수(예: `SCOPE_IDENTITY()`, `@@ROWCOUNT` 또는 `@@ERROR`)를 참조할 경우 기본 제공 함수에서 반환한 값이 인라인 처리에 따라 변경됩니다. 이 동작 변경은 인라인 처리가 UDF 내 문 범위를 변경하기 때문입니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2부터, UDF가 특정 내장 함수(예: `@@ROWCOUNT`)를 참조하는 경우 인라인 처리가 차단됩니다.
 
 ## <a name="see-also"></a>참고 항목
+[사용자 정의 함수 만들기(데이터베이스 엔진)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
 [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 성능 센터](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)     
 [실행 계획 논리 및 물리 연산자 참조](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
 [조인](../../relational-databases/performance/joins.md)     
 [지능형 쿼리 처리 시연](https://aka.ms/IQPDemos)     
-[수정: SQL Server 2019에서의 Scalar UDF 인라인 처리 문제](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019)     
+[수정: SQL Server 2019에서의 Scalar UDF 인라인 처리 문제](https://support.microsoft.com/help/4538581)     
 

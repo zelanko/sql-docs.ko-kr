@@ -1,5 +1,6 @@
 ---
 title: 실제 실행 계획 표시 | Microsoft 문서
+description: SQL Server Management Studio를 사용하여 실제 그래픽 실행 계획을 생성하는 방법을 알아봅니다. 실제 그래픽 실행 계획은 런타임 정보를 포함합니다.
 ms.custom: ''
 ms.date: 11/21/2018
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6279cdb7cf2d818852dde87b9755b845a07b3e86
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c1d781e54672263e08daac2101caccfecd8e32e
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655389"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457308"
 ---
 # <a name="display-an-actual-execution-plan"></a>실제 실행 계획 표시
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

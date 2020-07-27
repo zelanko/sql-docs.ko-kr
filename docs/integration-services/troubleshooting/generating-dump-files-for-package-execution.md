@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 60ec7105d0942383ad1ebcd963665a8a47eab60c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: edff307773f51fab064c47e7d4ff45e1161d18f3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669913"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913765"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>패키지 실행을 위한 덤프 파일 생성
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 패키지 실행에 대한 정보를 제공하는 디버그 덤프 파일을 만들 수 있습니다. 이러한 파일의 정보는 패키지 실행 문제를 해결하는 데 도움이 됩니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "83669913"
   
 -   .tmp 디버그 덤프 파일. 텍스트 형식 파일입니다.  
   
- 기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 이러한 파일을 *\<드라이브>:* \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 폴더에 저장합니다.  
+ 기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 이러한 파일을 *\<drive>:* \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 폴더에 저장합니다.  
   
  다음 표에서는 .tmp 파일의 특정 섹션에 대해서만 설명합니다. .tmp 파일에는 이 표에 나열되지 않은 추가 데이터가 포함되어 있습니다.  
   

@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6f899ec9c1e006212483a49133ad343e93f20173
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287847"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918335"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>실행 중인 패키지 및 기타 작업 모니터링
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   다음 도구 중 하나 이상을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 실행, 프로젝트 유효성 검사 및 기타 작업을 모니터링할 수 있습니다. 데이터 탭과 같은 일부 도구는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 프로젝트에 대해서만 사용할 수 있습니다.  
@@ -179,7 +179,7 @@ ms.locfileid: "79287847"
  **모든 유효성 검사 보고서** 에는 서버에서 수행된 모든 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 유효성 검사에 대한 요약 내용이 표시됩니다. 요약 내용으로는 상태, 시작 시간 및 종료 시간과 같은 각 유효성 검사에 대한 정보가 표시됩니다. 각 요약 항목에는 유효성 검사 중 생성된 메시지에 대한 링크가 포함됩니다. Integration Services 대시보드를 사용하는 경우와 마찬가지로 테이블에 필터를 적용하여 표시되는 정보를 좁힐 수 있습니다.  
   
 ### <a name="custom-reports"></a>사용자 지정 보고서  
- **Integration Services 카탈로그** 노드 아래의 **SSISDB**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]카탈로그 노드에 사용자 지정 보고서(.rdl 파일)를 추가할 수 있습니다. 보고서를 추가하기 전에 세 부분으로 이루어진 명명 규칙을 사용하여 원본 테이블과 같은 참조 개체를 정규화하고 있는지 확인합니다. 그렇지 않으면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 오류를 표시합니다. 명명 규칙은 \<데이터베이스>.\<소유자>.\<개체>입니다. 일례로 SSISDB.internal.executions를 들 수 있습니다.  
+ **Integration Services 카탈로그** 노드 아래의 **SSISDB**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]카탈로그 노드에 사용자 지정 보고서(.rdl 파일)를 추가할 수 있습니다. 보고서를 추가하기 전에 세 부분으로 이루어진 명명 규칙을 사용하여 원본 테이블과 같은 참조 개체를 정규화하고 있는지 확인합니다. 그렇지 않으면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 오류를 표시합니다. 명명 규칙은 \<database>.\<owner>.\<object>입니다. 일례로 SSISDB.internal.executions를 들 수 있습니다.  
   
 > [!NOTE]  
 >  **데이터베이스** 노드 아래의 **SSISDB** 노드에 사용자 지정 보고서를 추가한 경우에는 SSISDB 접두사가 필요하지 않습니다.  

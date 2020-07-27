@@ -1,5 +1,6 @@
 ---
 title: 쿼리 저장소에 대한 모범 사례 | Microsoft Docs
+description: '워크로드에 SQL Server 쿼리 저장소를 사용하는 모범 사례(예: 최신 SQL Server Management Studio 및 Query Performance Insight 사용)에 대해 알아봅니다.'
 ms.custom: ''
 ms.date: 03/04/2020
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f304dea7c49965bbb511034c09fb6ef781f2311f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 39c563da1d79492b36cdd13a29ef5ebf4401bed6
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006005"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457735"
 ---
 # <a name="best-practices-with-query-store"></a>쿼리 저장소에 대한 모범 사례
 

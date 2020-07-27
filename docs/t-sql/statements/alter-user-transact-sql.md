@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6db50af7454526c910b3c2688e0a81fe261c2167
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a486cc868c445e664977e67fd108aaca2873a595
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632203"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552748"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER(Transact-SQL)
 
@@ -38,9 +38,7 @@ ms.locfileid: "81632203"
 
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
-## <a name="click-a-product"></a>제품을 클릭하세요.
-
-다음 행에서 관심이 있는 제품 이름을 클릭합니다. 클릭하면 웹페이지의 여기에서 클릭한 제품에 적절한 다른 콘텐츠를 표시합니다.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -158,7 +156,7 @@ NAME = newUserName
 
  기본 스키마나 언어를 변경하려면 사용자에 대한 **ALTER** 권한이 필요합니다. 사용자는 자신의 기본 스키마 또는 언어를 변경할 수 있습니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 모든 예제는 사용자 데이터베이스에서 실행됩니다.
 
@@ -332,7 +330,7 @@ ALTER USER userName
 
  기본 스키마나 언어를 변경하려면 사용자에 대한 **ALTER** 권한이 필요합니다. 사용자는 자신의 기본 스키마 또는 언어를 변경할 수 있습니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 모든 예제는 사용자 데이터베이스에서 실행됩니다.
 
@@ -552,7 +550,7 @@ ALTER USER userName
 
  기본 스키마나 언어를 변경하려면 사용자에 대한 **ALTER** 권한이 필요합니다. 사용자는 자신의 기본 스키마 또는 언어를 변경할 수 있습니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 모든 예제는 사용자 데이터베이스에서 실행됩니다.
 
@@ -709,7 +707,7 @@ ALTER USER userName
 
  기본 스키마나 언어를 변경하려면 사용자에 대한 **ALTER** 권한이 필요합니다. 사용자는 자신의 기본 스키마 또는 언어를 변경할 수 있습니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 모든 예제는 사용자 데이터베이스에서 실행됩니다.
 
@@ -820,7 +818,7 @@ ALTER USER userName
 
  기본 스키마나 언어를 변경하려면 사용자에 대한 **ALTER** 권한이 필요합니다. 사용자는 자신의 기본 스키마 또는 언어를 변경할 수 있습니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 모든 예제는 사용자 데이터베이스에서 실행됩니다.
 

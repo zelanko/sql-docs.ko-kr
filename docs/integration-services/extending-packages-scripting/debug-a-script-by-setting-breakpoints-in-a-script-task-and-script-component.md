@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7b9fddccdf8f6f89c7b03074d052c49c94692bc6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c9380a9e8699b2c0f38436228b0a2fdf820096e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71286287"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913392"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>스크립트 태스크 및 스크립트 구성 요소에서 중단점을 설정하여 스크립트 디버깅
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   이 절차에서는 스크립트 태스크 및 스크립트 구성 요소에 사용되는 스크립트에서 중단점을 설정하는 방법에 대해 설명합니다.  
   
- 스크립트에 중단점을 설정하면 중단점이 기본 제공 중단점과 함께 **중단점 설정 - \<개체 이름>** 대화 상자에 나열됩니다.  
+ 스크립트에 중단점을 설정하면 중단점이 기본 제공 중단점과 **함께 중단점 설정 - \<object name>** 대화 상자에 나열됩니다.  
   
 > [!IMPORTANT]  
 >  스크립트 태스크 및 스크립트 구성 요소의 중단점이 무시되는 경우도 있습니다. 자세한 내용은 [스크립트 태스크 코딩 및 디버깅](../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)의 **스크립트 태스크 디버깅** 섹션 및 [스크립트 구성 요소 코딩 및 디버깅](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)의 **스크립트 구성 요소 디버깅**을 참조하세요.  

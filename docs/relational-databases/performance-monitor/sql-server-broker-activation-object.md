@@ -1,5 +1,6 @@
 ---
 title: SQL Server, Broker Activation 개체 | Microsoft 문서
+description: 저장 프로시저 활성화에 대한 정보를 보고하는 성능 카운터를 포함하는 SQLServer:BrokerActivation 성능 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd9b6880-c924-42c7-b333-09c303317c0b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0f2b877899a425397e7431d7b615c61356fb9d5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 74031fb95207c1bb0a4916aa512893dd38aeb7b4
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787341"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458149"
 ---
 # <a name="sql-server-broker-activation-object"></a>SQL Server, Broker 활성화 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

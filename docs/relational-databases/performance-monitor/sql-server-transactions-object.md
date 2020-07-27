@@ -1,5 +1,6 @@
 ---
 title: SQL Server, Transactions 개체 | Microsoft 문서
+description: 데이터베이스 엔진의 활성 트랜잭션과 SQL Server에서 트랜잭션의 효과를 모니터링하는 카운터를 제공하는 Transactions 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 635bb13a1d6e44f5fc8f694cb2618a19c08831f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a7d51ee275f234de0be33a5bfa618684ee2e07e
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758958"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458772"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, Transactions 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

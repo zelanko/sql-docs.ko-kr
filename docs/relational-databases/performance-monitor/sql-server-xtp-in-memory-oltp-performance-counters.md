@@ -1,5 +1,6 @@
 ---
 title: XTP(메모리 내 OLTP) 성능 카운터
+description: SQL Server는 메모리 내 OLTP 작업을 모니터링하기 위해 성능 모니터에서 사용할 수 있는 개체 및 카운터를 제공합니다.
 ms.custom: seo-dt-2019
 ms.date: 04/06/2016
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 84d07784cbd167f036cfe4540faf93784ba762cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: da65c189145f9233194f7b86ab6acf8f11765bfa
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715233"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457955"
 ---
 # <a name="sql-server-xtp-in-memory-oltp-performance-counters"></a>SQL Server XTP(메모리 내 OLTP) 성능 카운터
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

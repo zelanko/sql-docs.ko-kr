@@ -1,6 +1,6 @@
 ---
-title: Azure Data Studio에서 SQL Server와 함께 Jupyter Notebook 사용
-description: Azure Data Studio에서 Notebook을 사용하는 방법을 알아봅니다.
+title: Azure Data Studio에서 Jupyter Notebook 사용
+description: Azure Data Studio에서 Jupyter Notebook을 사용하는 방법을 알아봅니다.
 author: yualan
 ms.author: alayu
 ms.reviewer: achatter, maghan, mikeray
@@ -8,220 +8,143 @@ ms.topic: conceptual
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.custom: seo-lt-2019
-ms.date: 03/30/2020
-ms.openlocfilehash: 0376dd04bdd340fe7aa8281debbd49d0cbcb869f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.date: 07/01/2020
+ms.openlocfilehash: 7e61b31a21a6a3a85a9830bc73a7d62777c78b9b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729503"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920550"
 ---
-# <a name="notebooks-with-sql-server-in-azure-data-studio"></a>Azure Data Studio에서 SQL Server와 함께 Notebook 사용
+# <a name="use-jupyter-notebooks-in-azure-data-studio"></a>Azure Data Studio에서 Jupyter Notebook 사용
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Jupyter Notebook은 라이브 코드, 수식, 시각화 및 내레이션 텍스트를 포함하는 문서를 만들고 공유할 수 있는 오픈 소스 웹 애플리케이션입니다. 사용에는 데이터 정리 및 변환, 숫자 시뮬레이션, 통계 모델링, 데이터 시각화 및 기계 학습이 포함됩니다.
 
-이 문서에서는 최신 버전의 [**Azure Data Studio**](../azure-data-studio/download.md)에서 Notebook 환경을 시작하는 방법 및 고유한 Notebook 작성을 시작하는 방법을 설명합니다. 또한 다양한 커널을 사용하여 Notebook을 작성하는 방법을 보여 줍니다.
+이 문서에서는 최신 버전의 [**Azure Data Studio**](../azure-data-studio/download.md)에서 새 Notebook을 만드는 방법과 여러 커널을 사용하여 고유한 Notebook 작성을 시작하는 방법을 설명합니다.
 
-Azure Data Studio에서 Notebook에 대한 소개는 5분 분량의 다음 동영상을 시청하세요.
+Notebook에 대한 소개는 5분 분량의 다음 동영상을 시청하세요. Azure Data Studio:
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introduction-to-Azure-Data-Studio-Notebooks/player?WT.mc_id=dataexposed-c9-niner]
 
-## <a name="connect-to-sql-server"></a>SQL Server에 연결
+## <a name="create-a-notebook"></a>Notebook 만들기
 
-Azure Data Studio에서 Microsoft SQL Server 연결 형식에 연결할 수 있습니다.
-Azure Data Studio에서 F1 키를 누른 다음, **새 연결**을 선택하여 해당 SQL Server에 연결할 수도 있습니다.
-
-![연결 정보](media/notebooks-guidance/connection-info.png)
-
-## <a name="launch-notebooks"></a>Notebook 시작
-
-새 Notebook을 시작하는 방법에는 여러 가지가 있습니다.
+새 Notebook을 만드는 방법에는 여러 가지가 있습니다. 어떤 방법을 사용하든 `Notebook-1.ipynb`라는 이름의 새 파일이 열립니다.
 
 - Azure Data Studio에서 **파일 메뉴**로 이동한 다음, **새 Notebook**을 선택합니다.
 
-    ![새 Notebook](media/notebooks-guidance/file-new-notebook.png)
+  ![새 Notebook](media/notebooks-guidance/file-new-notebook.png)
 
-- **SQL Server** 연결을 마우스 오른쪽 단추로 클릭하고 **새 Notebook**을 시작합니다.
+- **SQL Server** 연결을 마우스 오른쪽 단추로 클릭하고 **새 Notebook**을 선택합니다.
 
-    ![새 Notebook](media/notebooks-guidance/server-new-notebook.png)
+  ![새 Notebook](media/notebooks-guidance/server-new-notebook.png)
 
-- 명령 팔레트(**Ctrl+Shift+P**)를 열고 **새 Notebook**을 입력합니다. `Notebook-1.ipynb`라는 새 파일이 열립니다.
+- 명령 팔레트(**Ctrl+Shift+P**)를 열고 “새 Notebook”을 입력한 다음, **새 Notebook** 명령을 선택합니다.
 
-## <a name="supported-kernels-and-attach-to-context"></a>지원되는 커널 및 컨텍스트에 연결
+  ![새 Notebook](media/notebooks-guidance/command-palette-new-notebook.png)
 
-Azure Data Studio의 Notebook 설치는 기본적으로 SQL 커널을 지원합니다. SQL 개발자이고 Notebook을 사용하려는 경우 SQL 커널을 선택하면 됩니다.
+## <a name="connect-to-a-kernel"></a>커널에 연결
 
-SQL 커널을 사용하여 PostgreSQL 서버 인스턴스에 연결할 수도 있습니다. PostgreSQL 개발자이고 Notebook을 PostgreSQL 서버에 연결하려는 경우, Azure Data Studio 확장 마켓플레이스에서 [**PostgreSQL 확장**](../azure-data-studio/postgres-extension.md)을 다운로드한 다음, **새 Notebook**을 시작하여 PostgreSQL 서버에 연결할 Notebook 인스턴스를 엽니다.
+Azure Data Studio Notebook은 SQL Server, Python, PySpark를 비롯한 다양한 커널을 지원합니다. 각 커널은 Notebook의 코드 셀에서 서로 다른 언어를 지원합니다. 예를 들어, SQL Server 커널에 연결된 경우 Notebook 코드 셀에서 T-SQL 문을 입력하고 실행할 수 있습니다.
 
-![PostgreSQL 연결](media/notebooks-guidance/sql-kernel-dropdown.png)
+**연결 대상**은 커널의 컨텍스트를 제공합니다. 예를 들어 SQL 커널을 사용하는 경우 임의의 SQL Server 인스턴스에 연결할 수 있습니다.
+Python3 커널을 사용하는 경우 **localhost**에 연결하고 로컬 Python 개발에 이 커널을 사용할 수 있습니다.
 
-### <a name="sql-kernel"></a>SQL 커널
+SQL 커널을 사용하여 PostgreSQL 서버 인스턴스에 연결할 수도 있습니다. PostgreSQL 개발자이고 Notebook을 PostgreSQL 서버에 연결하려는 경우, Azure Data Studio 확장 마켓플레이스에서 [**PostgreSQL 확장**](../azure-data-studio/postgres-extension.md)을 다운로드한 다음, PostgreSQL 서버에 연결합니다.
 
-Microsoft는 쿼리 편집기와 유사한 Notebook 내의 코드 셀에서 다양한 기능의 SQL 편집기, IntelliSense 및 기본 제공 코드 조각과 같은 기본 제공 기능을 통해 일상적인 작업을 간편하게 수행할 수 있는 최신 SQL 코딩 환경을 지원합니다. 코드 조각을 사용하여 데이터베이스, 테이블, 뷰, 저장 프로시저를 만드는 적절한 SQL 구문을 생성하고 기존 데이터베이스 개체를 업데이트할 수 있습니다. 코드 조각을 통해 개발 또는 테스트 목적으로 데이터베이스 복사본을 빠르게 만들고 스크립트를 생성 및 실행할 수도 있습니다.
+SQL Server 2019 빅 데이터 클러스터에 연결되어 있는 경우, 기본 **연결 대상**은 클러스터의 엔드포인트입니다. 클러스터의 Spark 컴퓨팅을 사용하여 Python, Scala 및 R 코드를 제출할 수 있습니다.
 
-**실행**을 선택하여 각 셀을 실행합니다.
+| 커널                      | Description                                                  |
+|:----------------------------|:-------------------------------------------------------------|
+| SQL 커널                  | 관계형 데이터베이스를 대상으로 하는 SQL 코드를 작성합니다.         |
+| PySpark3 및 PySpark 커널 | 클러스터의 Spark 컴퓨팅을 사용하여 Python 코드를 작성합니다.      |
+| Spark 커널                | 클러스터의 Spark 컴퓨팅을 사용하여 Scala 및 R 코드를 작성합니다. |
+| Python 커널               | 로컬 개발을 위한 Python 코드를 작성합니다.                     |
 
-SQL Server 인스턴스에 연결하기 위한 SQL 커널
+특정 커널에 대한 자세한 내용은 다음을 참조하세요.
+
+- [SQL Server Notebook 만들기 및 실행](notebooks-tutorial-sql-kernel.md)
+- [Python 노트북 만들기 및 실행](notebooks-tutorial-python-kernel.md)
+- [Azure Data Studio의 Kqlmagic 확장](notebooks-kqlmagic.md) - Python 커널의 기능을 확장합니다.
+
+## <a name="add-a-code-cell"></a>코드 셀 추가
+
+코드 셀을 사용하면 Notebook 내에서 대화형으로 코드를 실행할 수 있습니다.
+
+도구 모음에서 **+ 셀** 명령을 클릭하고 **코드 셀**을 선택하여 새 코드 셀을 추가합니다. 현재 선택된 셀 뒤에 새 코드 셀이 추가됩니다.
+
+셀에 선택한 커널에 대한 코드를 입력합니다. 예를 들어 SQL 커널을 사용하는 경우 코드 셀에 T-SQL 명령을 입력할 수 있습니다.
+
+SQL 커널을 사용하여 코드를 입력하는 것은 SQL 쿼리 편집기를 사용하는 방법과 비슷합니다. 코드 셀은 다양한 기능을 갖춘 SQL 편집기, IntelliSense 및 기본 제공 코드 조각과 같은 기본 제공 기능을 통해 최신 SQL 코딩 환경을 지원합니다. 코드 조각을 사용하여 데이터베이스, 테이블, 뷰, 저장 프로시저를 만드는 적절한 SQL 구문을 생성하고 기존 데이터베이스 개체를 업데이트할 수 있습니다. 코드 조각을 통해 개발 또는 테스트 목적으로 데이터베이스 복사본을 빠르게 만들고 스크립트를 생성 및 실행할 수도 있습니다.
 
 ![SQL 커널](media/notebooks-guidance/intellisense-code-cell.png)
 
-쿼리 결과
+## <a name="add-a-text-cell"></a>텍스트 셀 추가
 
-![쿼리 결과](media/notebooks-guidance/sql-cell-results.png)
+텍스트 셀을 사용하면 코드 셀 사이에 Markdown 텍스트 블록을 추가하여 코드를 문서화할 수 있습니다.
 
-PostgreSQL Server 인스턴스에 연결하기 위한 SQL 커널
+도구 모음에서 **+ 셀** 명령을 클릭하고 **텍스트 셀**을 선택하여 새 텍스트 셀을 추가합니다.
 
-![PostgreSQL 연결](media/notebooks-guidance/pgsql-code-cell.png)
-
-쿼리 결과
-
-![쿼리 결과](media/notebooks-guidance/pgsql-cell-results.png)
-
-SQL 커널에 연결된 기존 Notebook에 텍스트 셀을 추가하려면 도구 모음에서 **+텍스트** 명령을 선택합니다.
-
-![Notebook 도구 모음](media/notebooks-guidance/notebook-toolbar.png)
-
-셀이 편집 모드로 바뀌고, 이제 markdown을 입력하면서 동시에 미리 보기를 확인할 수 있습니다.
+셀이 편집 모드에서 시작되므로 Markdown 텍스트를 입력할 수 있습니다. 입력함에 따라 아래에 미리 보기가 표시됩니다.
 
 ![markdown 셀](media/notebooks-guidance/notebook-markdown-cell.png)
 
-텍스트 셀 바깥쪽을 선택하면 markdown 텍스트가 표시됩니다.
+텍스트 셀 바깥쪽을 선택하면 Markdown 텍스트가 표시됩니다.
 
 ![markdown 텍스트](media/notebooks-guidance/notebook-markdown-preview.png)
 
-### <a name="configure-python-for-notebooks"></a>Notebook에 대해 Python 구성
+텍스트 셀 안쪽을 다시 클릭하면 편집 모드로 변경됩니다.
 
-커널 드롭다운에서 SQL 이외의 커널을 선택하면 **Notebook에 대해 Python을 구성**하라는 메시지가 표시됩니다. Notebook 종속성은 지정된 위치에 설치되지만, 설치 위치의 설정 여부를 결정할 수 있습니다. 이 설치는 시간이 걸릴 수 있으며, 설치가 완료될 때까지 애플리케이션을 닫지 않는 것이 좋습니다. 설치가 완료되면 지원되는 언어로 코드 작성을 시작할 수 있습니다.
+## <a name="run-a-cell"></a>셀 실행
 
-![python 구성](media/notebooks-guidance/configure-python.png)
+단일 셀을 실행하려면 셀 왼쪽에 있는 **셀 실행**(원형 검은색 화살표)을 클릭하거나 셀을 선택하고 F5 키를 누릅니다. 도구 모음에서 **모두 실행**을 클릭하여 Notebook의 모든 셀을 실행할 수 있습니다. 셀은 한 번에 하나씩 실행되며 셀에서 오류가 발생하면 실행이 중지됩니다.
 
-설치가 성공적으로 완료되면 작업 기록에 알림이 표시되며, 출력 터미널에서 실행 중인 Jupyter 백 엔드 서버의 위치를 확인할 수도 있습니다.
+셀의 결과는 셀 아래에 표시됩니다. Notebook에서 실행된 모든 셀의 결과를 지우려면 도구 모음에서 **결과 지우기** 단추를 선택합니다.
 
-![Jupyter 백 엔드](media/notebooks-guidance/jupyter-backend.png)
+## <a name="save-a-notebook"></a>Notebook 저장
 
-|커널|Description
-|:-----|:-----
-| SQL 커널 | 관계형 데이터베이스를 대상으로 하는 SQL 코드를 작성합니다.
-|PySpark3 및 PySpark 커널| 클러스터의 Spark 컴퓨팅을 사용하여 Python 코드를 작성합니다.
-|Spark 커널|클러스터의 Spark 컴퓨팅을 사용하여 Scala 및 R 코드를 작성합니다.
-|Python 커널|로컬 개발을 위한 Python 코드를 작성합니다.
+Notebook을 저장하려면 다음 중 하나를 수행합니다.
 
-`Attach to`는 커널이 연결되는 컨텍스트를 제공합니다. SQL 커널을 사용하는 경우 SQL Server 인스턴스 중 하나를 `Attach to`에 지정할 수 있습니다.
+- Ctrl+S 입력
+- **파일** 메뉴에서 **저장** 선택
+- **파일** 메뉴에서 **다른 이름으로 저장...** 선택
+- **파일** 메뉴에서 **모두 저장** 선택 - 열려 있는 모든 Notebook이 저장됩니다.
+- 명령 팔레트에서 **파일: 저장** 입력
 
-Python3 커널을 사용하는 경우 `Attach to`는 `localhost`입니다. 이 커널을 로컬 Python 개발에 사용할 수 있습니다.
+Notebook이 `.ipynb` 파일로 저장됩니다.
 
-SQL Server 2019 빅 데이터 클러스터에 연결되어 있는 경우, 기본 `Attach to`는 클러스터의 해당 엔드포인트이며 클러스터의 Spark 컴퓨팅을 사용하여 Python, Scala, R 코드를 제출할 수 있습니다.
-
-### <a name="code-cells-and-markdown-cells"></a>코드 셀 및 markdown 셀
-
-도구 모음에서 **+코드** 명령을 선택하여 새 코드 셀을 추가합니다.
-
-도구 모음에서 **+텍스트** 명령을 선택하여 새 텍스트 셀을 추가합니다.
-
-![Notebook 도구 모음](media/notebooks-guidance/notebook-toolbar.png)
-
-셀이 편집 모드로 바뀌고, 이제 markdown을 입력하면서 동시에 미리 보기를 확인할 수 있습니다.
-
-![markdown 셀](media/notebooks-guidance/notebook-markdown-cell.png)
-
-텍스트 셀 바깥쪽을 선택하면 markdown 텍스트가 표시됩니다.
-
-![markdown 텍스트](media/notebooks-guidance/notebook-markdown-preview.png)
-
-### <a name="trusted-and-non-trusted"></a>신뢰할 수 있음 및 신뢰할 수 없음
+## <a name="trusted-and-non-trusted"></a>신뢰할 수 있음 및 신뢰할 수 없음
 
 Azure Data Studio에서 열린 Notebook은 기본적으로 **신뢰할 수 있음**으로 설정됩니다.
 
 다른 원본의 Notebook을 여는 경우 **신뢰할 수 없음** 모드로 열린 다음, **신뢰할 수 있음**으로 설정할 수 있습니다.
 
-### <a name="run-cells"></a>셀 실행
+## <a name="examples"></a>예제
 
-Notebook의 모든 셀을 실행하려면 도구 모음에서 **셀 실행** 단추를 선택합니다.
+다음 예에서는 여러 커널을 사용하여 간단한 “Hello World” 명령을 실행하는 방법을 보여 줍니다. 커널을 선택하고 셀에 예제 코드를 입력한 다음, **셀 실행**을 클릭합니다.
 
-### <a name="clear-results"></a>결과 지우기
-
-Notebook에서 실행된 모든 셀의 결과를 지우려면 도구 모음에서 **결과 지우기** 단추를 선택합니다.
-
-### <a name="save"></a>저장
-
-Notebook을 저장하려면 다음 중 하나를 수행합니다.
-
-- Ctrl+S 선택
-- **파일** > **저장** 선택
-- **파일** > **다른 이름으로 저장...** 선택
-- **파일** > **모두 저장** 선택
-- 명령 팔레트에서 **파일: 저장** 입력
-
-### <a name="pyspark3pyspark-kernel"></a>Pyspark3/PySpark 커널
-
-`PySpark Kernel`을 선택하고 셀에 다음 코드를 입력합니다.
-
-**실행**을 선택합니다.
-
-Spark 애플리케이션이 시작되고 다음 출력이 반환됩니다.
+### <a name="pyspark"></a>Pyspark
 
 ![Spark 애플리케이션](media/notebooks-guidance/pyspark.png)
 
-### <a name="spark-kernel--scala-language"></a>Spark 커널 | Scala 언어
-
-`Spark|Scala Kernel`을 선택하고 셀에 다음 코드를 입력합니다.
+### <a name="spark--scala-language"></a>Spark | Scala 언어
 
 ![Spark Scala](media/notebooks-guidance/spark-scala.png)
 
-아래의 옵션 아이콘을 선택하면 “셀 옵션”도 확인할 수 있습니다.
-
-![셀 옵션](media/notebooks-guidance/scala-cell-options.png)
-
-### <a name="spark-kernel--r-language"></a>Spark 커널 | R 언어
-
-커널 드롭다운에서 Spark | R을 선택합니다. 셀에서 코드를 입력하거나 붙여넣습니다. **실행**을 선택하여 다음 출력을 확인합니다.
+### <a name="spark--r-language"></a>Spark | R 언어
 
 ![Spark R](media/notebooks-guidance/spark-r.png)
 
-### <a name="local-python-kernel"></a>로컬 Python 커널
-
-로컬 Python 커널을 선택하고 셀에 다음을 입력합니다.
+### <a name="python-3"></a>Python 3
 
 ![로컬 python](media/notebooks-guidance/local-python.png)
 
-## <a name="manage-packages"></a>패키지 관리
-
-로컬 Python 개발에 최적화된 작업 중 하나는 고객 시나리오에 필요한 패키지를 설치하는 기능을 포함하는 것이었습니다. 기본적으로 `pandas`, `numpy` 등의 일반적인 패키지를 포함하지만, 포함되지 않은 패키지가 필요한 경우 Notebook 셀에 다음 코드를 작성합니다.
-
-```python
-import <package-name>
-```
-
-이 명령을 실행하면 `Module not found`가 반환됩니다. 패키지가 있으면 오류가 발생하지 않습니다.
-
-`Module not Found` 오류가 반환되면 **패키지 관리**를 선택하여 터미널을 시작합니다. 이제 패키지를 로컬에 설치할 수 있습니다. 다음 명령을 사용하여 패키지를 설치합니다.
-
-```bash
-./pip install <package-name>
-```
-
-   > [!Tip]
-   > Mac에서는 터미널 창의 패키지 설치 지침을 따르세요.
-
-패키지가 설치되면 Notebook 셀로 이동하여 다음 명령을 입력할 수 있습니다.
-
-```python
-import <package-name>
-```
-
-패키지를 제거하려면 터미널에서 다음 명령을 사용합니다.
-
-```bash
-./pip uninstall <package-name>
-```
-
 ## <a name="next-steps"></a>다음 단계
 
-- [Azure Data Studio에서 Notebook을 관리하는 방법](notebooks-manage-sql-server.md)
 - [SQL Server Notebook 만들기 및 실행](notebooks-tutorial-sql-kernel.md).
+- [Python 노트북 만들기 및 실행](notebooks-tutorial-python-kernel.md)
+- [SQL Server Machine Learning Services를 사용하여 Azure Data Studio Notebook에서 Python 및 R 스크립트 실행](../machine-learning/install/sql-machine-learning-azure-data-studio.md)
 - [Azure Data Studio Notebook을 사용하여 SQL Server 빅 데이터 클러스터 배포](../big-data-cluster/notebooks-deploy.md)
 - [Azure Data Studio Notebook을 사용하여 SQL Server 빅 데이터 클러스터 관리](../big-data-cluster/notebooks-manage-bdc.md)
 - [Spark를 사용하여 샘플 Notebook 실행](../big-data-cluster/notebooks-tutorial-spark.md)
-- [SQL Server Machine Learning Services를 사용하여 Azure Data Studio Notebook에서 Python 및 R 스크립트 실행](../machine-learning/install/sql-machine-learning-azure-data-studio.md)

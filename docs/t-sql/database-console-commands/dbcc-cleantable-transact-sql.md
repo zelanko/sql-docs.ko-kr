@@ -1,5 +1,5 @@
 ---
-title: DBCC CLEANTABLE(Transact-SQL) | Microsoft Docs
+title: DBCC CLEANTABLE(Transact-SQL)
 ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
@@ -26,14 +26,15 @@ helpviewer_keywords:
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 706025b8be4a8b48f022a752ac60686e51cc7692
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8294877bd557ae29ebc39b5b55534ed69088e29
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738180"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485264"
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE(Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 테이블 또는 인덱싱된 뷰의 삭제된 가변 길이 열에서 공간을 반환합니다.
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -51,11 +52,13 @@ DBCC CLEANTABLE
 [ WITH NO_INFOMSGS ]  
 ```  
   
-## <a name="arguments"></a>인수  
- *database_name* | *database_id* | 0  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
+ *database_name* \| *database_id* \| 0  
  정리될 테이블이 속한 데이터베이스입니다. 0을 지정하면 현재 데이터베이스가 사용됩니다. 데이터베이스 이름은 반드시 [식별자](../../relational-databases/databases/database-identifiers.md)에 적용되는 규칙을 준수해야 합니다.  
   
- *table_name* | *table_id* | *view_name*| *view_id*  
+ *table_name* \| *table_id* \| *view_name* \| *view_id*  
  정리될 테이블이나 인덱싱된 뷰입니다.  
   
  *batch_size*  
@@ -159,8 +162,7 @@ FROM sys.dm_db_index_physical_stats(@db_id, @object_id, NULL, NULL , 'Detailed')
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
-[DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
- [sys.allocation_units&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>참고 항목
+
+- [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
+- [sys.allocation_units&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)

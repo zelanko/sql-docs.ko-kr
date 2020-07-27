@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a6cd2bbabd1cae5fd23dd0522c9664d39b66084f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a99770eded434ef15966535f082bbd25e07aece7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298522"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923124"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ 연결 관리자
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   MSMQ 연결 관리자를 사용하면 패키지에서 MSMQ(메시지 큐)를 사용하는 메시지 큐에 연결할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 포함된 메시지 큐 태스크에서는 MSMQ 연결 관리자가 사용됩니다.  
@@ -43,8 +43,8 @@ ms.locfileid: "71298522"
   
 |큐 유형|샘플 경로|  
 |----------------|-----------------|  
-|공용|\<컴퓨터 이름>\\<큐 이름\>|  
-|프라이빗|\<컴퓨터 이름>\Private$\\<큐 이름\>|  
+|공용|\<computer name>\\<queue name\>|  
+|프라이빗|\<computer name>\Private$\\<queue name\>|  
   
  마침표(.)를 사용하여 로컬 컴퓨터를 나타낼 수 있습니다.  
   
@@ -75,8 +75,8 @@ ms.locfileid: "71298522"
   
 |큐 유형|샘플 경로|  
 |----------------|-----------------|  
-|공용|\<컴퓨터 이름>\\<큐 이름\>|  
-|프라이빗|\<컴퓨터 이름>\Private$\\<큐 이름\>|  
+|공용|\<computer name>\\<queue name\>|  
+|프라이빗|\<computer name>\Private$\\<queue name\>|  
   
  "."를 사용하여 로컬 컴퓨터를 나타낼 수 있습니다.  
   

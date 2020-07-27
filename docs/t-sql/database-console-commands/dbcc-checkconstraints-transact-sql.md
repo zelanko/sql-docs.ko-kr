@@ -1,5 +1,5 @@
 ---
-title: DBCC CHECKCONSTRAINTS(Transact-SQL) | Microsoft Docs
+title: DBCC CHECKCONSTRAINTS(Transact-SQL)
 ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
@@ -23,14 +23,15 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 1ca0b3f46cba5fc2e64babbba4dd591b8fb0b095
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f704b064998c584461e4708b52d9c2aa68f20fe7
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786557"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485075"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS(Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 현재 데이터베이스의 지정한 테이블에서 특정 제약 조건이나 모든 제약 조건의 무결성을 확인합니다.
@@ -52,8 +53,10 @@ DBCC CHECKCONSTRAINTS
     ]  
 ```  
   
-## <a name="arguments"></a>인수  
- *table_name* | *table_id* | *constraint_name* | *constraint_id*  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
+ *table_name* \| *table_id* \| *constraint_name* \| *constraint_id*  
  검사할 테이블이나 제약 조건입니다. *table_name* 또는 *table_id*를 지정하면 해당 테이블에 설정된 모든 제약 조건을 검사합니다. *constraint_name* 또는 *constraint_id*를 지정하면 해당 제약 조건만 검사합니다. 테이블 식별자도 제약 조건 식별자도 지정하지 않으면 현재 데이터베이스의 모든 테이블에 대해 설정된 모든 제약 조건을 검사합니다.  
  제약 조건 이름은 제약 조건이 속해 있는 테이블을 고유하게 식별합니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   

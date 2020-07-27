@@ -1,5 +1,6 @@
 ---
 title: SQL Server, Backup Device 개체 | Microsoft 문서
+description: 백업 및 복원 작업에 사용되는 Microsoft SQL Server 백업 디바이스를 모니터링하는 카운터를 제공하는 Backup Device 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 52e7febf-d5e0-4674-945b-aacc40a9ad6e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 87cda19087f0e1ed742399032888a77f2a013dd4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 116a4cc015e74fd737c5e9fb9d5f1f920abaf377
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787350"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458849"
 ---
 # <a name="sql-server-backup-device-object"></a>SQL Server, Backup Device 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

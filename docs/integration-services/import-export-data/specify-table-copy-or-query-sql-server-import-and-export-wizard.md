@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f561fd0e5817ecc03e8d5fe4cc8c32661ebdca21
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da112bf3a58d33fd7fae154d5a437c309ab7d2a6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296246"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914350"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>테이블 복사 또는 쿼리 지정(SQL Server 가져오기 및 내보내기 마법사)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   데이터 대상 및 연결하는 방법에 대한 정보를 제공하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서 **테이블 복사 또는 쿼리 지정**을 표시합니다. 이 페이지에서 다음 옵션 중 하나를 선택합니다.
@@ -56,7 +56,7 @@ ms.locfileid: "71296246"
 일반적으로 SQL 쿼리를 작성하지 않더라도 내보낼 테이블의 이름을 알고 있으면 **쿼리 작성** 옵션을 사용할 수 있습니다. **다음**을 클릭한 후 표시되는 **원본 쿼리 지정** 대화 상자에서 쿼리를 `SELECT * FROM <name of table>`이라고 입력합니다. 테이블 이름에 공백이나 다른 특수 문자가 포함되어 있으면 이름을 대괄호(`SELECT * FROM [<name of table>]`)로 묶습니다.
 
 ### <a name="more-info"></a>추가 정보
- **하나 이상의 테이블 또는 뷰에서 데이터 복사** 옵션은 ProviderDescriptors.xml 파일에 ProviderDescription 섹션이 있는 공급자에 대해서만 사용할 수 있습니다. 기본적으로 이 파일은 \<*드라이브*>:\Program Files\Microsoft SQL Server\130\DTS\ProviderDescriptors에 있습니다. 이 파일의 각 ProviderDescription 섹션에는 해당 공급자에서 메타데이터를 검색하는 데 필요한 정보가 포함되어 있습니다.    
+ **하나 이상의 테이블 또는 뷰에서 데이터 복사** 옵션은 ProviderDescriptors.xml 파일에 ProviderDescription 섹션이 있는 공급자에 대해서만 사용할 수 있습니다. (기본적으로 이 파일은 \<*drive*>:\Program Files\Microsoft SQL Server\130\DTS\ProviderDescriptors에 있습니다.) 이 파일의 각 ProviderDescription 섹션에는 해당 공급자에서 메타데이터를 검색하는 데 필요한 정보가 포함되어 있습니다.    
     
  기본적으로 다음 목록의 공급자에 대해서만 ProviderDescriptors.xml 파일에 ProviderDescription 섹션이 포함됩니다.    
     

@@ -1,5 +1,6 @@
 ---
 title: SQL Server, Broker TO Statistics 개체 | Microsoft 문서
+description: Service Broker 요청 전송 개체에 대한 정보를 보고하는 SQLServer:Broker TO Statistics 성능 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5bc5dde-e540-4848-8aa3-5735c51df2fb
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 11f6ac4dbc4c4955b05f43ce65f5da231820c3da
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3d71f2d4f3f523295c04b099e43415df5b0834b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85656506"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458669"
 ---
 # <a name="sql-server-broker-to-statistics-object"></a>SQL Server, Broker TO Statistics 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

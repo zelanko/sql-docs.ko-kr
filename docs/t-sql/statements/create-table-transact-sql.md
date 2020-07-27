@@ -1,5 +1,5 @@
 ---
-title: CREATE TABLE(Transact-SQL) | Microsoft Docs
+title: CREATE TABLE(Transact-SQL)
 ms.custom: ''
 ms.date: 02/24/2020
 ms.prod: sql
@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 384b474180e17eaed9827da2d2e2b2f9157c6f4b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: be5b8f28ec06b48f0f35d8d246ad12ccbc3c8292
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766960"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86482154"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
 
@@ -343,6 +343,8 @@ column_name <data_type>
 }
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>인수
 
 *database_name* 테이블이 생성된 데이터베이스의 이름입니다. *database_name*은 기존 데이터베이스 이름을 지정해야 합니다. *database_name*을 지정하지 않으면 기본적으로 현재 데이터베이스가 됩니다. 현재 연결에 대한 로그인은 *database_name*에 지정된 데이터베이스의 기존 사용자 ID와 연결되어야 하며 해당 사용자 ID는 CREATE TABLE 권한을 갖고 있어야 합니다.
@@ -578,7 +580,7 @@ FOREIGN KEY REFERENCES 열에 있는 데이터에 대한 참조 무결성을 제
 
 **(** *ref_column* [ **,** ... *n* ] **)** FOREIGN KEY 제약 조건이 참조하는 테이블의 열 또는 열 목록입니다.
 
-ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT } 행이 참조 관계를 가지고 참조된 행이 부모 테이블에서 삭제될 경우에 테이블의 행에 수행될 동작을 지정합니다. 기본값은 NO ACTION입니다.
+ON DELETE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT } 행이 참조 관계를 가지고 참조된 행이 부모 테이블에서 삭제될 경우에 테이블의 행에 수행될 동작을 지정합니다. 기본값은 NO ACTION입니다.
 
 NO ACTION [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 오류가 발생하며 부모 테이블의 행에 대한 삭제 동작이 롤백됩니다.
 
@@ -598,7 +600,7 @@ SET DEFAULT 부모 테이블에서 해당 행을 삭제하면 외래 키를 구�
 
 반대로 `NO ACTION`을 지정한 경우 **ProductVendor** 테이블에 **Vendor** 행을 참조하는 행이 하나 이상 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류가 발생하고 Vendor 행의 삭제 동작이 롤백됩니다.
 
-ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT } 변경된 테이블의 행에 참조 관계가 있고 참조된 행이 부모 테이블에서 업데이트될 경우 해당 행에 대해 발생할 동작을 지정합니다. 기본값은 NO ACTION입니다.
+ON UPDATE { **NO ACTION** \| CASCADE \ SET NULL \| SET DEFAULT } 변경된 테이블의 행에 참조 관계가 있고 참조된 행이 부모 테이블에서 업데이트될 경우 해당 행에 대해 발생할 동작을 지정합니다. 기본값은 NO ACTION입니다.
 
 NO ACTION [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 오류가 발생하며 부모 테이블의 행에 대한 업데이트 동작이 롤백됩니다.
 

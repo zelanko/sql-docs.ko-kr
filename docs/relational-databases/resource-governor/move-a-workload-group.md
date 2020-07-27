@@ -1,5 +1,6 @@
 ---
 title: 작업 그룹 이동 | Microsoft 문서
+description: SQL Server Management Studio 또는 Transact-SQL을 사용하여 Resource Governor 작업 그룹을 다른 리소스 풀로 이동하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d7db094db50938b08125b6605040eba935b77273
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3ff2eff8f72499506aa129b064690693f1b14ff
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720461"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86456760"
 ---
 # <a name="move-a-workload-group"></a>작업 그룹 이동
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

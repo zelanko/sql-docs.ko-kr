@@ -15,12 +15,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df923a4a1509520b95e5efcf87e9eac51497e4a8
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: f61fad1afac14c2e6a27314e2a65371722ee9b23
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158921"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485582"
 ---
 # <a name="thread-and-task-architecture-guide"></a>스레드 및 태스크 아키텍처 가이드
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -82,7 +82,7 @@ WHERE (h.OrderDate >= '2014-3-28 00:00:00');
 
 실행 계획에는 분기 세 개가 있지만 이 실행 계획에서는 실행 중 다음 분기 두 개만 동시에 실행할 수 있습니다.
 1.  `Sales.SalesOrderHeaderBulk`에서 ‘클러스터형 인덱스 스캔’이 사용되는 분기(조인의 빌드 입력)는 단독으로 실행됩니다.
-2.  그런 다음, `Sales.SalesOrderDetailBulk`(조인의 프로브 입력)에서 ‘클러스터형 인덱스 스캔’을 사용하는 분기는 ‘비트맵’을 생성하고 현재 ‘해시 매치’가 실행 중인 분기와 동시에 실행됩니다.  
+2.  그런 다음, `Sales.SalesOrderDetailBulk`(조인의 프로브 입력)에서 ‘클러스터형 인덱스 스캔’을 사용하는 분기는 ‘비트맵’을 생성하고 현재 ‘해시 매치’가 실행 중인 분기와 동시에 실행됩니다.
 
 실행 계획 XML에서는 작업자 스레드 16개가 예약되었고 NUMA 노드 0에서 사용했음을 확인할 수 있습니다.
 
@@ -111,6 +111,9 @@ ORDER BY parent_task_address, scheduler_id;
 > [!TIP]
 > `parent_task_address` 열은 부모 태스크에 대해 언제나 NULL입니다. 
 
+> [!TIP]
+> 대단히 바쁜 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 예약된 스레드로 설정하는 제한을 초과하는 수의 활성 태스크가 표시될 수 있습니다. 이러한 태스크는 더 이상 사용하지 않는 분기에 속할 수 있으며 현재는 정리를 기다리는 임시 상태입니다. 
+
 [!INCLUDE[ssResult](../includes/ssresult-md.md)] 현재 실행 중인 분기에 대한 활성 태스크 17개가 있습니다. 예약된 스레드에 해당하는 자식 태스크 16개와 부모 태스크(조정 태스크) 1개로 구성됩니다.
 
 |parent_task_address|task_address|task_state|scheduler_id|worker_address|
@@ -133,9 +136,6 @@ ORDER BY parent_task_address, scheduler_id;
 |0x000001EF4758ACA8|0x000001EC8628D468|SUSPENDED|11|0x000001EFBFA4A160|
 |0x000001EF4758ACA8|0x000001EFBD3A1C28|SUSPENDED|11|0x000001EF6BD72160|
 
-> [!TIP]
-> 대단히 바쁜 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 예약된 스레드로 설정하는 제한을 초과하는 수의 활성 태스크가 표시될 수 있습니다. 이러한 태스크는 더 이상 사용하지 않는 분기에 속할 수 있으며 현재는 정리를 기다리는 임시 상태입니다. 
-
 16개의 각 자식 태스크에는 (`worker_address`에서처럼) 서로 다른 작업자 스레드가 할당되어 있지만 모든 작업자는 같은 8개 스케줄러 풀(0,5,6,7,8,9,10,11)에 할당되며 부모 태스크는 이 풀에 속하지 않는 스케줄러(3)에 할당됩니다.
 
 > [!IMPORTANT]
@@ -147,7 +147,7 @@ ORDER BY parent_task_address, scheduler_id;
 > [!TIP] 
 > 위에 표시된 DMV 출력에서는 모든 활성 태스크가 SUSPENDED 상태입니다. 대기 태스크에 대한 자세한 내용은 [dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md) DMV를 쿼리하여 확인할 수 있습니다. 
 
-요약하자면 병렬 요청은 여러 태스크를 생성하며 각 태스크는 단일 작업자 스레드에 할당되어야 하고, 각 작업자 스레드는 단일 스케줄러에 할당되어야 합니다. 따라서 사용 중인 스케줄러 수는 MaxDOP로 설정하는 분기 당 병렬 작업 수를 초과할 수 없습니다. 
+요약하자면, 병렬 요청은 여러 작업을 생성합니다. 각 작업은 단일 작업자 스레드에 할당되어야 합니다. 각 작업자 스레드는 단일 스케줄러에 할당되어야 합니다. 따라서 사용 중인 스케줄러 수는 분기당 병렬 작업 수를 초과할 수 없습니다. 이 수는 MaxDOP 구성 또는 쿼리 힌트에 의해 설정됩니다. 조정 스레드는 MaxDOP 제한에 영향을 주지 않습니다. 
 
 ### <a name="allocating-threads-to-a-cpu"></a>CPU에 스레드 할당
 기본적으로 각각의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스는 각 스레드를 시작하며 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 스레드를 부하에 따라 컴퓨터의 프로세서(CPU)에 균일하게 분산합니다. affinity 프로세스가 운영 체제 수준에서 사용하도록 설정된 경우, 운영 체제에서 각 스레드를 특정 CPU에 할당합니다. 반대로 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 스레드를 CPU에 균일하게 분산하는 **스케줄러**에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **작업자 스레드**를 라운드 로빈 방식으로 할당합니다.

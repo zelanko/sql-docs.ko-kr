@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e53569a8680ec3a6414aeeaa83e9322e77568ecf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d0f402739a63d4e11983c4ad1b50d0c2f337a9e1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297981"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918859"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>조회 변환에 대한 캐시 만들기 및 배포
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   조회 변환에 대한 캐시 파일(.caw)을 만들고 배포할 수 있습니다. 참조 데이터 세트는 캐시 파일에 저장됩니다.  
@@ -90,7 +90,7 @@ ms.locfileid: "71297981"
   
 4.  배치 유틸리티를 만들도록 프로젝트를 구성한 다음 프로젝트를 빌드합니다. 자세한 내용은 [Create a Deployment Utility](../../../integration-services/packages/create-a-deployment-utility.md)를 참조하세요.  
   
-     매니페스트 파일인 \<*프로젝트 이름*>.SSISDeploymentManifest.xml이 만들어집니다. 이 파일은 프로젝트, 패키지 및 패키지 구성에 기타 파일을 나열합니다.  
+     매니페스트 파일인 \<*project name*>.SSISDeploymentManifest.xml이 만들어집니다. 이 파일은 프로젝트, 패키지 및 패키지 구성에 기타 파일을 나열합니다.  
   
 5.  파일 시스템에 패키지를 배포합니다. 자세한 내용은 [Deploy Packages by Using the Deployment Utility](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md)를 참조하세요.  
   

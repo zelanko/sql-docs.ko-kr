@@ -1,5 +1,6 @@
 ---
 title: 실제 실행 계획 분석 | Microsoft Docs
+description: SQL Server Management Studio 계획 분석 기능을 사용하여 런타임 정보를 포함하는 실제 그래픽 실행 계획을 분석하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 10/11/2019
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 089cc2fd9a2131ab18fea01262f9bc0d476355e4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1424558566e544acd1a65aeb39c9a83747bbbb64
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773139"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458598"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>실제 실행 계획 분석
 

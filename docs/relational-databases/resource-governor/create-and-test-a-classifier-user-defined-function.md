@@ -1,6 +1,6 @@
 ---
 title: 분류자 사용자 정의 함수 만들기 및 테스트 - Resource Governor
-description: 이 항목에서는 분류자 사용자 정의 함수(Transact-UDF)를 만들고 테스트하는 방법을 보여 줍니다.
+description: SQL Server Management Studio 쿼리 편집기에서 Transact-SQL 문 실행과 관련된 분류자 사용자 정의 함수를 만들고 테스트하는 방법을 알아봅니다.
 ms.custom: seo-dt-2019
 ms.date: 07/11/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 405e99a8cfda0792b29da8ff40ab6e8d7687a706
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e5b1b0accf599793fdaac0bd492b648d1b302cae
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720493"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457887"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>분류자 사용자 정의 함수 만들기 및 테스트
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

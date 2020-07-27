@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 42c556b3c348205833f4d080199c184dd30c8cf3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 18ae2128e0f0bcbec5f3fb78a63778f44f260bf5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291251"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915244"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>UNION ALL 변환을 사용하여 데이터 병합
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   UNION ALL 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 두 개의 데이터 원본이 이미 들어 있어야 합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "71291251"
   
 4.  UNION ALL 변환을 두 번 클릭합니다.  
   
-5.  **UNION ALL 변환 편집기**에서 행을 클릭하여 입력의 열을 **출력 열 이름** 목록의 열로 매핑한 후 입력 목록에서 열을 선택합니다. 입력 목록에서 **\<무시>** 를 선택하여 열 매핑을 건너뜁니다.  
+5.  **UNION ALL 변환 편집기**에서 행을 클릭하여 입력의 열을 **출력 열 이름** 목록의 열로 매핑한 후 입력 목록에서 열을 선택합니다. 입력 열 목록에서 **\<ignore>** 를 선택하여 열 매핑을 건너뜁니다.  
   
     > [!NOTE]  
     >  두 열을 매핑하려면 해당 열의 메타데이터가 일치해야 합니다.  

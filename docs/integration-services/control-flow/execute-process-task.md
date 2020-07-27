@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 214f28fbb977414d4e14fdd14f2be53e9b705bc1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a47088f610dc016fe904b9b772e261b9bd2adcf0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298336"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920689"
 ---
 # <a name="execute-process-task"></a>프로세스 실행 태스크
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   프로세스 실행 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 워크플로의 일부로 애플리케이션이나 배치 파일을 실행합니다. 프로세스 실행 태스크를 사용하여 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 또는 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]와 같은 모든 표준 애플리케이션을 열 수 있지만 이 태스크는 일반적으로 데이터 원본에 대해 작동하는 비즈니스 애플리케이션이나 배치 파일을 실행하는 데 사용됩니다. 예를 들어 프로세스 실행 태스크를 사용하여 압축된 텍스트 파일을 확장할 수 있습니다. 패키지는 이 텍스트 파일을 패키지의 데이터 흐름에 대한 데이터 원본으로 사용할 수 있습니다. 예를 들어 프로세스 실행 태스크를 사용하여 일일 판매 보고서를 생성하는 사용자 지정 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 애플리케이션을 실행할 수도 있습니다. 그런 다음 이 보고서를 메일 보내기 태스크에 첨부하여 메일 그룹에 전달할 수 있습니다.  
@@ -116,15 +116,15 @@ ms.locfileid: "71298336"
  실행 파일이 들어 있는 폴더의 경로를 입력하거나 찾아보기 단추 **(...)** 를 클릭하여 해당 폴더를 찾습니다.  
   
  **StandardInputVariable**  
- 프로세스에 입력을 제공할 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
+ 프로세스에 입력을 제공할 변수를 선택하거나 \<**New variable...**>를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목:** [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
- 프로세스 출력을 캡처할 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
+ 프로세스 출력을 캡처할 변수를 선택하거나 \<**New variable...**>를 클릭하여 새 변수를 만듭니다.  
   
  **StandardErrorVariable**  
- 프로세서의 오류 출력을 캡처할 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
+ 프로세서의 오류 출력을 캡처할 변수를 선택하거나 \<**New variable...**>를 클릭하여 새 변수를 만듭니다.  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  프로세스 종료 코드가 **SuccessValue**에 지정한 값과 다른 경우 태스크 실패 여부를 나타냅니다.  

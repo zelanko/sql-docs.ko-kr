@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5fb38e4be2b7d7c780dae3ee819e146958541c9f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a5d6eec55e339d8aaf23d04b88d14fc945e8f0c7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295962"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922151"
 ---
 # <a name="lesson-4-1-copy-the-lesson-3-package"></a>4-1단원: 3단원 패키지 복사
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -45,7 +45,7 @@ ms.locfileid: "71295962"
 
 7.  **속성** 창에서 **Name** 속성을 **4단원**으로 변경합니다.
 
-8.  **ID** 속성 상자를 선택하고 드롭다운 화살표를 선택한 다음, **\<새 ID> 생성**을 선택합니다.
+8.  **ID** 속성 상자를 선택하고 드롭다운 화살표를 선택한 다음, **\<Generate New ID>** 을 선택합니다.
 
 ## <a name="add-the-completed-lesson-3-package"></a>완성된 3단원 패키지 추가
 

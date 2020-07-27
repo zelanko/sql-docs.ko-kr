@@ -1,5 +1,6 @@
 ---
 title: 유니코드 압축 구현 | Microsoft 문서
+description: SQL Server는 Standard Compression Scheme for Unicode 알고리즘을 사용하여 행 또는 페이지 압축 개체에 저장된 유니코드 값을 압축합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab0732ae3773a7fefb86461272ff036fdb41d7a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4c78ac0d04681c7c7fcefd708480fddbe721b5fe
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737653"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457486"
 ---
 # <a name="unicode-compression-implementation"></a>유니코드 압축 구현
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

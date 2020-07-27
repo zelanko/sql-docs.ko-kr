@@ -1,5 +1,6 @@
 ---
 title: SQL Server, Database Mirroring 개체 | Microsoft 문서
+description: SQL Server 데이터베이스 미러링에 대한 정보를 보고하는 성능 카운터를 포함하는 SQLServer:Database Mirroring 성능 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b2239718cae70fc5df05e65e7d310e86efe65efc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c2d3dd59f6e2736938bfc9880e7258cf81dfafb
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760551"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458035"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server, Database Mirroring 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **SQLServer:Database Mirroring** 성능 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 미러링에 대한 정보를 보고하는 성능 카운터를 포함합니다. 다음 표에서는 이 개체가 포함하는 카운터를 나열합니다.  
   
-|속성|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |**Bytes Received/sec**|초당 받은 바이트 수입니다.|  
 |**Bytes Sent/sec**|초당 보낸 바이트 수입니다.|  

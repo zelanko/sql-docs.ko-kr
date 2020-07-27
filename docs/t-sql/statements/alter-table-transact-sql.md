@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c83519d96d336da2e7577a2b9ea7d3693732d5c
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 71d274d8dbdf7ccdd0d6e508628cb7a89e191400
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391882"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917240"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
 
@@ -349,10 +349,10 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 
 ```
 
-## <a name="syntax-for-azure-synapse-analytics"></a>Azure Synapse Analytics 구문
+## <a name="syntax-for-azure-synapse-analytics-and-parallel-data-warehouse"></a>Azure Synapse Analytics 및 병렬 데이터 웨어하우스용 구문
 
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Analytics Platform System
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
 
 ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
 {

@@ -21,12 +21,12 @@ ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83f9b8cf8fd74f980c6ea85a335058779cd5736b
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: 48b8dbac5a4ad484103dcceedb243a52cc7e621d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834734"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943097"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE(Transact-SQL) IDENTITY (Property)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -49,7 +49,10 @@ IDENTITY [ (seed , increment) ]
  테이블에 로드되는 첫 번째 행에 사용하는 값입니다.  
   
  *increment*  
- 로드된 이전 행의 ID 값에 추가되는 증가값입니다.  
+ 로드된 이전 행의 ID 값에 추가되는 증가값입니다.
+
+ > [!NOTE]
+ > 데이터 웨어하우스의 분산 아키텍처로 인해, Azure Synapse Analytics에서 ID의 값은 증분되지 않습니다. 자세한 내용은 [Synapse SQL 풀에서 IDENTITY를 사용하여 서로게이트 키 만들기](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#allocation-of-values)를 참조하세요.
   
  초기값과 증가값을 모두 지정하거나 모두 지정하지 않아야 합니다. 둘 다 지정하지 않은 경우에는 기본값 (1,1)이 사용됩니다.  
   
@@ -62,8 +65,11 @@ IDENTITY [ (seed , increment) ]
   
  열에 있는 IDENTITY 속성은 다음 사항을 보장하지 않습니다.  
   
--   **값의 고유성** – 고유성은 **PRIMARY KEY** 또는 **UNIQUE** 제약 조건 또는 **UNIQUE** 인덱스를 사용하여 적용되어야 합니다.  
-  
+-   **값의 고유성** – 고유성은 **PRIMARY KEY** 또는 **UNIQUE** 제약 조건 또는 **UNIQUE** 인덱스를 사용하여 적용되어야 합니다. - 
+ 
+> [!NOTE]
+> Azure Synapse Analytics는 **PRIMARY KEY** 또는 **UNIQUE** 제약 조건 또는 **UNIQUE** 인덱스를 지원하지 않습니다. 자세한 내용은 [Synapse SQL 풀에서 IDENTITY를 사용하여 서로게이트 키 만들기](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key)를 참조하세요.
+
 -   **트랜잭션 내에서 연속적인 값** – 테이블에서 다른 동시 삽입이 발생할 수 있기 때문에 여러 행 삽입 트랜잭션은 행에 대한 연속적인 값 가져오기를 보장하지 않습니다. 값이 연속적이어야 하는 경우 트랜잭션에서 테이블에 대해 배타적 잠금을 사용하거나 **SERIALIZABLE** 격리 수준을 사용해야 합니다.  
   
 -   **서버 다시 시작 또는 다른 실패 후 연속적인 값** -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 성능상의 이유로 ID 값을 캐싱할 수 있으며 데이터베이스 오류 또는 서버 재시작 중에 지정된 값의 일부가 손실될 수 있습니다. 그러면 삽입 시 ID 값에서 간격이 발생할 수 있습니다. 간격이 허용되지 않는 경우 애플리케이션에서 고유 메커니즘을 사용하여 키 값을 생성해야 합니다. **NOCACHE** 옵션과 함께 시퀀스 생성기를 사용하면 커밋되지 않는 트랜잭션에 대한 간격을 제한할 수 있습니다.  

@@ -12,12 +12,12 @@ ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de347e9f950c16ccbbe014a9b2c07a76aaf168a5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bdbc04c4a1294605b59c04fb9df9a3c44b1f077f
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881184"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483694"
 ---
 # <a name="manage-trigger-security"></a>트리거 보안 관리
 
@@ -60,7 +60,7 @@ GO
     ```  
 
    > [!NOTE]
-   > Managed Instance를 사용하지 않는 경우 Azure SQL Database에 **sys.triggers**만 사용할 수 있습니다.
+   > [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]를 사용하지 않는 경우 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 **sys.triggers**만 사용할 수 있습니다.
 
 ::: moniker-end
 
@@ -124,5 +124,4 @@ GO
  [DML 트리거](../../relational-databases/triggers/dml-triggers.md)   
  [DDL 트리거](../../relational-databases/triggers/ddl-triggers.md)  
  [LOGON 트리거](../../relational-databases/triggers/logon-triggers.md)  
-  
   

@@ -1,5 +1,6 @@
 ---
 title: 계획 지침 | Microsoft 문서
+description: SQL Server에서 쿼리 텍스트를 직접 변경하지 않고도 성능을 최적화하는 데 사용할 수 있는 계획 지침에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 8012115ff5f5a7fbd85de36b6263ea4380b44ccc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9ce87be759659c79815165d827b06f6f6322df46
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722243"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457695"
 ---
 # <a name="plan-guides"></a>계획 지침
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

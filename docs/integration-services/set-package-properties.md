@@ -25,16 +25,16 @@ helpviewer_keywords:
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b6f3217854bf72f3c7300c87aefceab24220401a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd679e14920099a6383a414772bc162cdf470645
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71281933"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921989"
 ---
 # <a name="set-package-properties"></a>패키지 속성 설정
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 가 제공하는 그래픽 인터페이스를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지를 만들 때는 속성 창에서 패키지 개체의 속성을 설정합니다.  
@@ -112,7 +112,7 @@ ms.locfileid: "71281933"
 |**CreatorComputerName**|패키지를 만든 컴퓨터의 이름입니다.|  
 |**CreatorName**|패키지를 만든 사용자의 이름입니다.|  
 |**설명**|패키지 기능에 대한 설명입니다.|  
-|**ID**|패키지를 만들 때 할당된 패키지 GUID입니다. 이 속성은 읽기 전용입니다. **ID** 속성의 새 임의 값을 생성하려면 드롭다운 목록에서 **\<새 ID 생성\>** 을 선택합니다.|  
+|**ID**|패키지를 만들 때 할당된 패키지 GUID입니다. 이 속성은 읽기 전용입니다. **ID** 속성에 대한 새로운 임의 값을 생성하려면 드롭다운 목록에서 **\<Generate New ID\>** 를 선택합니다.|  
 |**이름**|패키지의 이름입니다.|  
 |**PackageType**|패키지 유형입니다. 가능한 값은 **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**및 **SQLReplication**입니다. 이 속성의 기본값은 **Default**입니다. 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>을 참조하세요.|  
   

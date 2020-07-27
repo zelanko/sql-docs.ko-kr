@@ -1,6 +1,6 @@
 ---
 title: 작업 모니터 열기(SSMS)
-description: SSMS(SQL Server Management Studio)에서 작업 모니터를 여는 방법입니다.
+description: SQL Server Management Studio에서 작업 모니터를 여는 방법을 알아봅니다. 작업 모니터는 모니터링 대상 인스턴스를 쿼리하여 표시할 정보를 가져옵니다.
 ms.custom: seo-dt-2019
 ms.date: 08/05/2016
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 16d08bbc2b651ef21ee80be1e8af74a00b45a253
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d570faf51200708bcbd56371d68f53a12776d12e
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787437"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457475"
 ---
 # <a name="open-activity-monitor-in-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)에서 작업 모니터 열기
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

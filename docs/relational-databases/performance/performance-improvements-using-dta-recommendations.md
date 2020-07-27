@@ -1,5 +1,6 @@
 ---
 title: DTA 권장 성능 향상
+description: 데이터베이스 엔진 튜닝 관리자가 SQL Server의 데이터베이스 워크로드를 분석하여 rowstore 및 columnstore 인덱스 조합을 권장하는 방법을 알아봅니다.
 ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 3dcd1405bb41243bf2bd618d3fe8ed89393ed5d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: abad80759ccfbc2d5315c5f89cf1dcce3172c9f4
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762839"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458287"
 ---
 # <a name="performance-improvements-using-database-engine-tuning-advisor-dta-recommendations"></a>DTA(데이터베이스 엔진 튜닝 관리자) 권장 사항을 사용한 성능 향상
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ SQL Server 2016부터 DTA(데이터베이스 엔진 튜닝 관리자)는 지정�
 
 
 
-**혼합 물리적 디자인에 필요**: 고객 1 쿼리 1에 해당하는 첫 번째 막대 집합입니다. DTA(rowstore + columnstore)에는 4개의 columnstore와 6개의 rowstore 인덱스 세트가 권장됩니다. 이 세트를 사용하면 columnstore 인덱스 전용 및 DTA(rowstore 전용)와 비교하여 CPU 시간이 2.5-4배 낮아집니다. 이는 *단일 쿼리에도* rowstore 및 columnstore 인덱스를 구성하는 혼합 물리적 디자인이 유리함을 나타냅니다. 
+**혼합된 실제 디자인에 필요**: 고객 1 쿼리 1에 해당하는 첫 번째 막대 집합입니다. DTA(rowstore + columnstore)에는 4개의 columnstore와 6개의 rowstore 인덱스 세트가 권장됩니다. 이 세트를 사용하면 columnstore 인덱스 전용 및 DTA(rowstore 전용)와 비교하여 CPU 시간이 2.5-4배 낮아집니다. 이는 *단일 쿼리에도* rowstore 및 columnstore 인덱스를 구성하는 혼합 물리적 디자인이 유리함을 나타냅니다. 
 
 **rowstore 인덱스 권장 구성의 효율성**: 두 번째와 세 번째 막대 집합(고객 1 쿼리 2 및 고객 2 쿼리 1에 해당)은 쿼리에 적절한 rowstore 인덱스의 이점을 활용하는 선택적 필터 조건자가 있는 경우입니다. 이러한 두 쿼리에 대해 DTA(rowstore 전용) 및 DTA(rowstore + columnstore)는 rowstore 인덱스 전용을 권장합니다. 또한 이러한 예는 DTA가 columnstore 인덱스를 권장하는 옵션을 사용하여 호출되는 경우에도 비용을 기반으로 하는 방법에서는 작업이 실제로 columnstore 인덱스의 이점을 활용할 수 있는 경우에만 columnstore 인덱스 전용을 권장합니다.
 

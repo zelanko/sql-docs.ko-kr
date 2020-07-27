@@ -1,5 +1,6 @@
 ---
 title: 교착 상태 그래프 저장(SQL Server Profiler) | Microsoft Docs
+description: SQL Server Profiler를 사용하여 교착 상태 그래프를 저장하는 방법을 알아봅니다. 교착 상태 그래프는 XML 파일로 저장됩니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5dba428d744a2384b9733f06955298ae31c58dca
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 874597d5d62f13556072fb129931fa9e4faf1a85
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758848"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458733"
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>교착 상태 그래프 저장(SQL Server Profiler)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

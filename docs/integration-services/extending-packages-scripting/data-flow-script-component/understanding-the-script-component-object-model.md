@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa6235337aab70ed826a5507e7bd8ff2a45c4636
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e265f95741ba3957902e7f502232bc4c08bbcbd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71286584"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914239"
 ---
 # <a name="understanding-the-script-component-object-model"></a>스크립트 구성 요소 개체 모델 이해
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [스크립트 구성 요소 코딩 및 디버깅](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)에서 설명한 대로 스크립트 구성 요소 프로젝트에는 다음 세 개의 프로젝트 항목이 있습니다.  
@@ -119,9 +119,9 @@ public override void PreExecute()
   
 -   선택한 각 입력 열에 대한 명명되고 형식화된 접근자 속성. 이러한 속성은 **스크립트 변환 편집기**의 **입력 열** 페이지에서 열에 대해 지정된 **사용 유형**에 따라 읽기 전용 또는 읽기/쓰기입니다.  
   
--   선택한 각 입력 열에 대한 **\<column>_IsNull** 속성 - 이 속성도 열에 대해 지정된 **사용 유형**에 따라 읽기 전용 또는 읽기/쓰기입니다.  
+-   선택한 각 입력 열에 대한 **\<column>_IsNull** 속성. 이 속성도 열에 대해 지정된 **사용 유형**에 따라 읽기 전용 또는 읽기/쓰기입니다.  
   
--   구성된 각 출력에 대한 **DirectRowTo\<outputbuffer>** 메서드 - 이러한 메서드는 동일한 **ExclusionGroup**의 여러 출력 중 하나로 행을 필터링할 때 사용합니다.  
+-   구성된 각 출력에 대한 **DirectRowTo\<outputbuffer>** 메서드. 이러한 메서드는 동일한 **ExclusionGroup**의 여러 출력 중 하나로 행을 필터링할 때 사용합니다.  
   
 -   다음 입력 행을 가져오는 **NextRow** 함수 및 데이터의 마지막 버퍼가 처리되었는지 여부를 결정하는 **EndOfRowset** 함수 - 일반적으로 **UserComponent** 기본 클래스에 구현된 입력 처리 메서드를 사용할 때는 이러한 함수가 필요하지 않습니다. 다음 섹션에서는 **UserComponent** 기본 클래스에 대한 자세한 정보를 제공합니다.  
   
@@ -130,9 +130,9 @@ public override void PreExecute()
   
 -   **ProcessInput** 메서드의 재정의된 구현 - 데이터 흐름 엔진에서 런타임에 **PreExecute** 메서드 다음으로 호출하는 메서드이며 여러 번 호출될 수 있습니다. **ProcessInput**은 **\<inputbuffer>_ProcessInput** 메서드로 처리를 넘깁니다. 다음으로 **ProcessInput** 메서드는 입력 버퍼의 끝을 확인하고, 버퍼의 끝에 도달하면 재정의 가능한 **FinishOutputs** 메서드 및 프라이빗 **MarkOutputsAsFinished** 메서드를 호출합니다. 그런 다음 **MarkOutputsAsFinished** 메서드는 마지막 출력 버퍼에서 **SetEndOfRowset**을 호출합니다.  
   
--   **\<inputbuffer>_ProcessInput** 메서드의 재정의 가능한 구현 - 이 기본 구현은 단순히 각 입력 행을 반복하며 **\<inputbuffer>_ProcessInputRow**를 호출합니다.  
+-   **\<inputbuffer>_ProcessInput** 메서드의 재정의 가능한 구현. 이 기본 구현은 단순히 각 입력 행을 반복하며 **\<inputbuffer>_ProcessInputRow**를 호출합니다.  
   
--   **\<inputbuffer>_ProcessInputRow** 메서드의 재정의 가능한 구현 - 기본 구현은 비어 있습니다. 이 메서드는 일반적으로 사용자 지정 데이터 처리 코드를 작성하기 위해 재정의하는 메서드입니다.  
+-   **\<inputbuffer>_ProcessInputRow** 메서드의 재정의 가능한 구현. 기본 구현은 비어 있습니다. 이 메서드는 일반적으로 사용자 지정 데이터 처리 코드를 작성하기 위해 재정의하는 메서드입니다.  
   
 #### <a name="what-your-custom-code-should-do"></a>사용자 지정 코드로 수행하는 작업  
  **ScriptMain** 클래스에서 다음 메서드를 사용하여 입력을 처리할 수 있습니다.  

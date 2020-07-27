@@ -1,5 +1,6 @@
 ---
 title: 업그레이드 후 계획 지침의 유효성 검사 | Microsoft 문서
+description: 애플리케이션을 새로운 릴리스의 SQL Server로 업그레이드할 때는 계획 지침 정의를 다시 평가하고 테스트하는 것이 좋습니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a55ebd88-6f58-454d-b1c4-991b88add522
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ac4198289fc7c57bfbeaaf4ac1119bdf3e41e8b5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bb7b3981c76e5bf8059d13afc74f3181d4b60cea
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737109"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457008"
 ---
 # <a name="validate-plan-guides-after-upgrade"></a>업그레이드 후 계획 지침의 유효성 검사
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

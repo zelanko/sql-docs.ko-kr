@@ -1,5 +1,6 @@
 ---
 title: 리소스 풀 설정 변경 | Microsoft 문서
+description: SQL Server Management Studio 또는 Transact-SQL을 사용하여 리소스 풀 설정을 변경하는 방법을 알아봅니다. 이 작업에는 CONTROL SERVER 권한이 필요합니다.
 ms.custom: ''
 ms.date: 03/17/2016
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 354b81a774be131c7112b61d8b3709d45e9c0c2e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7488211a92ae59ee88dad31719af3c4941f2fa19
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720519"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457576"
 ---
 # <a name="change-resource-pool-settings"></a>리소스 풀 설정 변경
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,5 +1,6 @@
 ---
 title: 작업 모니터 | Microsoft 문서
+description: 작업 모니터를 사용하여 SQL Server 프로세스에 대한 정보 및 이러한 프로세스가 SQL Server의 현재 인스턴스에 미치는 영향에 대한 정보를 표시하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 04/07/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 45d2e41fa88d0ea586832ab91a927832b82ab0fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad03ee3c5c9cc0128bb281ff695c1f51cc518d6e
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787498"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457785"
 ---
 # <a name="activity-monitor"></a>작업 모니터
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

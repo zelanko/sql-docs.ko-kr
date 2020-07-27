@@ -1,5 +1,6 @@
 ---
 title: 리소스 풀 삭제 | Microsoft 문서
+description: SQL Server Management Studio 또는 Transact-SQL을 사용하여 리소스 풀을 삭제하는 방법을 알아봅니다. 이 작업에는 CONTROL SERVER 권한이 필요합니다.
 ms.custom: ''
 ms.date: 03/17/2016
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 65ebdd2cfac33202437d0c6f515a838ed71e9534
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1b2494442986bd24febc90318502736faf5f2367
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720484"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457859"
 ---
 # <a name="delete-a-resource-pool"></a>리소스 풀 삭제
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

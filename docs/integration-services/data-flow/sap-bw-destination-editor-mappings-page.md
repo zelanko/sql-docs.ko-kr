@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 31c6ab812081d66980002ed0138f5b1ad63f62b5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a2878b4691515c835165f764e09735bafb617b0f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298097"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917871"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>SAP BW 대상 편집기(매핑 페이지)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **SAP BW 대상 편집기** 의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "71298097"
  **입력 열**  
  선택한 입력 열을 표시합니다.  
   
- 다른 입력 열을 동일한 대상 열에 매핑하려면 목록에서 다른 입력 열을 선택합니다. 매핑을 제거하려면 **\<무시>** 를 선택하여 해당 입력 열을 출력에서 제외합니다.  
+ 다른 입력 열을 동일한 대상 열에 매핑하려면 목록에서 다른 입력 열을 선택합니다. 매핑을 제거하려면 **\<ignore>** 를 선택하여 해당 입력 열을 출력에서 제외합니다.  
   
  **대상 열**  
  열의 매핑 여부에 관계없이 사용 가능한 각 대상 열을 표시합니다.  

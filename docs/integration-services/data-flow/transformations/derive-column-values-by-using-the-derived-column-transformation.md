@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 13ab80fe810559105027070e15ca64c87ddc4161
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3ef2d8078dedfb15c1f4be27d4970c7eaaf4731a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903932"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919401"
 ---
 # <a name="derive-column-values-with-the-derived-column-transformation"></a>파생 열 변환을 사용하여 열 값 파생
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   파생 열 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 하나의 원본이 이미 들어 있어야 합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "77903932"
     > [!NOTE]  
     >  식이 올바르지 않으면 식 텍스트가 강조 표시되고 열의 도구 설명에 오류에 대한 설명이 제공됩니다.  
   
-7.  **파생 열** 목록에서 **\<새 열로 추가>** 를 선택하여 식의 계산 결과를 새 열에 기록하거나 기존 열을 선택하여 평가 결과를 업데이트합니다.  
+7.  **파생 열** 목록에서 **\<add as new column>** 를 선택하여 식의 계산 결과를 새 열에 기록하거나 기존 열을 선택하여 평가 결과를 업데이트합니다.  
   
      새 열을 사용하는 경우 **파생 열 변환 편집기** 대화 상자는 식을 계산하고 데이터 형식, 길이, 전체 자릿수, 소수 자릿수 및 코드 페이지에 따라 열에 데이터 형식을 할당합니다.  
   

@@ -10,16 +10,16 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 6e46ebc13ddd9368a2234c99979c9036a702e11e
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 00a31303aac5f562462cf6950e233fa84be31215
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924889"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922110"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>SQL Server 장애 조치(failover) 클러스터 인스턴스를 통한 고가용성을 위한 Scale Out 지원
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -47,7 +47,7 @@ SQL Server 장애 조치(failover) 클러스터에 보조 노드를 추가합니
 [3. 보조 노드에 Scale Out 마스터 설치](scale-out-support-for-high-availability.md#3-install-scale-out-master-on-the-secondary-node) 수행
 
 ## <a name="5-update-the-scale-out-master-service-configuration-file"></a>5. Scale Out 마스터 서비스 구성 파일 업데이트
-주 노드와 보조 노드에서 Scale Out 마스터 서비스 구성 파일(\<드라이브\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config)을 업데이트합니다. **SqlServerName**을 기본 인스턴스의 [SQL Server 네트워크 이름]//[인스턴스 이름] 또는 [SQL Server 네트워크 이름]으로 업데이트합니다.
+주 노드와 보조 노드에서 Scale Out 마스터 서비스 구성 파일(\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config)을 업데이트합니다. **SqlServerName**을 기본 인스턴스의 [SQL Server 네트워크 이름]//[인스턴스 이름] 또는 [SQL Server 네트워크 이름]으로 업데이트합니다.
 
 ## <a name="6-add-scale-out-master-service-to-sql-server-role-in-windows-failover-cluster"></a>6. Windows 장애 조치(failover) 클러스터에서 SQL Server 역할에 Scale Out 마스터 서비스 추가
 장애 조치(Failover) 클러스터 관리자에서 Scale Out용 클러스터에 연결합니다. 탐색기에서 역할을 선택하고, SQL Server 역할을 마우스 오른쪽 단추로 클릭한 다음, 리소스 추가, 일반 서비스를 선택합니다. 

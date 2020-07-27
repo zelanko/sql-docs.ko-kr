@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a40336899e804ee634cf586078ec7c219f31c486
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e26918f5b545068ad5e121452dc704f7d72abe35
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297872"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919516"
 ---
 # <a name="script-component"></a>스크립트 구성 요소
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   스크립트 구성 요소는 스크립트를 호스팅하고 패키지에서 사용자 지정 스크립트 코드를 포함시키고 실행할 수 있도록 합니다. 패키지의 스크립트 구성 요소는 다음 용도로 사용할 수 있습니다.  
@@ -133,7 +133,7 @@ ms.locfileid: "71297872"
  연결에 대한 설명이 포함된 고유 이름을 입력합니다.  
   
  **연결 관리자**  
- 사용 가능한 연결 관리자 목록에서 선택하거나 **\<새 연결>** 을 선택하여 **SSIS 연결 관리자 추가** 대화 상자를 엽니다.  
+ 사용 가능한 연결 관리자 목록에서 선택하거나 **\<New connection>** 을 선택하여 **SSIS 연결 관리자 추가** 대화 상자를 엽니다.  
   
  **설명**  
  연결에 대한 설명을 입력합니다.  

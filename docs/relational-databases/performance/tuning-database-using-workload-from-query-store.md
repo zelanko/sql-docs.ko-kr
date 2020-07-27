@@ -1,5 +1,6 @@
 ---
 title: 쿼리 저장소의 작업을 사용하여 데이터베이스 튜닝 | Microsoft 문서
+description: 데이터베이스 엔진 튜닝 관리자는 쿼리 저장소를 사용하여 튜닝하기에 적합한 워크로드를 자동으로 선택하는 옵션을 지원합니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a308c4d7236c7822398cd9c8bf9aee94e0ffc61e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d7e279c7fe8cb6dd1ea2a716cd2a7a15d73c68e2
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737131"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457585"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>쿼리 저장소의 작업을 사용하여 데이터베이스 튜닝
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

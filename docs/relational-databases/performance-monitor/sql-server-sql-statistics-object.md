@@ -1,5 +1,6 @@
 ---
 title: SQL Server, SQL Statistics 개체 | Microsoft 문서
+description: SQL Server의 인스턴스로 보낸 컴파일과 요청 유형을 모니터링하는 카운터를 제공하는 SQLServer:SQL Statistics 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 42dd497f32dc322a7b7808beca0779292198e5e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ddb47208f37344a1c7a7985f877486d3254a68f4
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758945"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458135"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, SQL Statistics 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

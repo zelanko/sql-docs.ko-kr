@@ -1,5 +1,6 @@
 ---
 title: 조인(SQL Server) | Microsoft Docs
+description: SQL Server에서 사용하는 조인 작업의 유형에 대해 알아봅니다. SQL Server는 조인 작업을 사용하여 세로 테이블 분할 또는 열 형식 스토리지를 지원합니다.
 ms.custom: ''
 ms.date: 07/19/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c7f2ff4782923eef9ee4d91fa0a7c69239e298c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c4c93c73aa3f20304a5e58fda096565d0db0456a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009684"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915849"
 ---
 # <a name="joins-sql-server"></a>조인(SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -245,7 +246,7 @@ WHERE [fo].[Quantity] = 361;
 - 데이터베이스 호환성 수준이 140 이상입니다.
 - 쿼리가 `SELECT` 문입니다(데이터 수정 문은 현재 적합하지 않음).
 - 인덱싱된 중첩 루프 조인 또는 해시 조인 실제 알고리즘 둘 다에서 조인을 실행할 수 있습니다.
-- 해시 조인이 쿼리 전체의 Columnstore 인덱스 현재 상태를 통해 또는 조인에서 직접 참조되는 Columnstore 인덱싱된 테이블을 통해 [일괄 처리 모드](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)를 사용합니다.
+- 해시 조인은 일괄 처리 모드를 사용합니다. 일괄 처리 모드는 쿼리 전체의 columnstore 인덱스 현재 상태를 통해 사용하도록 설정되거나, 조인에서 직접 참조되는 columnstore 인덱싱된 테이블을 통해 사용하도록 설정되거나, [Rowstore 기능의 일괄 처리 모드](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore)를 사용함으로써 사용하도록 설정됩니다.
 - 중첩 루프 조인 및 해시 조인의 생성된 대체 솔루션에 동일한 첫 번째 자식(외부 참조)이 있어야 합니다.
 
 ### <a name="adaptive-threshold-rows"></a>적응 임계값 행
@@ -276,7 +277,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
 ```
 
-또한 `DISABLE_BATCH_MODE_ADAPTIVE_JOINS`를 [USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)로 지정하여 특정 쿼리에 대한 적응형 조인을 비활성화할 수 있습니다. 다음은 그 예입니다.
+또한 `DISABLE_BATCH_MODE_ADAPTIVE_JOINS`를 [USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)로 지정하여 특정 쿼리에 대한 적응형 조인을 비활성화할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```sql
 SELECT s.CustomerID,

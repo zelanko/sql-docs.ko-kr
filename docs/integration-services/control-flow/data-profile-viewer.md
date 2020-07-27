@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4c4924ee6dd1c053119f7ceaf97cd1dbd4d7e95f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4197d1acc7a7faaa8414b6ff73e7d6876610cece
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294219"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919817"
 ---
 # <a name="data-profile-viewer"></a>데이터 프로필 뷰어(Data Profile Viewer)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   데이터 프로파일링 프로세스의 다음 단계는 데이터 프로필을 보고 분석하는 것입니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 내에서 데이터 프로파일링 태스크를 실행하고 데이터 프로필을 계산한 후에 이러한 프로필을 볼 수 있습니다. 데이터 프로파일링 태스크를 설정하고 실행하는 방법은 [데이터 프로파일링 태스크 설정](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)을 참조하세요.  
@@ -37,7 +37,7 @@ ms.locfileid: "71294219"
   
 -   **디자이너에서** 데이터 프로파일링 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 태스크를 마우스 오른쪽 단추로 클릭하고 **편집**을 클릭합니다. **데이터 프로파일링 태스크 편집기** 의 **일반** 페이지에서 **프로필 뷰어 열기**를 클릭합니다.  
   
--   *\<드라이브>* :\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 폴더에서 DataProfileViewer.exe를 실행합니다.  
+-   *\<drive>* :\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 폴더에서 DataProfileViewer.exe를 실행합니다.  
   
  이 뷰어는 여러 창을 사용하여 선택적 세부 정보 및 드릴다운 기능과 함께 요청한 프로필과 계산된 결과를 표시합니다.  
   

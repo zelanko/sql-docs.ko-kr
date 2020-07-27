@@ -1,5 +1,6 @@
 ---
 title: 쿼리 저장소 사용 시나리오 | Microsoft 문서
+description: 쿼리 저장소를 사용하여 예측 가능한 워크로드 성능을 추적하고 보장하는 방법을 알아봅니다. SQL Server의 몇 가지 예제를 살펴봅니다.
 ms.custom: ''
 ms.date: 11/29/2018
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a694e18dd4ade720283beea6fc57d5dd4e919d7d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0d1da7312c338a866b4fb22df94175a7500d8f7c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85989797"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457645"
 ---
 # <a name="query-store-usage-scenarios"></a>쿼리 저장소 사용 시나리오
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "85989797"
 ## <a name="identify-and-tune-top-resource-consuming-queries"></a>상위 리소스 소비 쿼리 식별 및 조정  
  워크로드에서 수천 개의 쿼리를 생성할 수 있지만 일반적으로 그 중 소수의 쿼리만 대부분의 시스템 리소스를 사용하므로 주의가 필요합니다. 리소스를 많이 사용하는 상위 쿼리 중에서 추가 조정을 통해 개선할 수 있는 쿼리 또는 재발된 쿼리를 찾습니다.  
   
- 탐색을 시작하는 가장 쉬운 방법은 **에서** 상위 리소스 소비 쿼리 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 여는 것입니다. 사용자 인터페이스는 다음 세 개의 창으로 구분됩니다. 상위 리소스 소비 쿼리(왼쪽), 선택한 쿼리에 대한 계획 요약(오른쪽) 및 선택한 계획에 대한 시각적 쿼리 계획(아래쪽)을 나타내는 막대 그래프. **구성** 을 클릭하여 분석할 쿼리 수 및 관심 있는 시간 간격을 제어할 수 있습니다. 또한 다양한 리소스 소비 차원(기간, CPU, 메모리, IO, 실행 횟수)과 기준선(평균, 최소값, 최대값, 합계, 표준 편차) 간에 선택할 수 있습니다.  
+ 탐색을 시작하는 가장 쉬운 방법은 **에서** 상위 리소스 소비 쿼리 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 여는 것입니다. 사용자 인터페이스는 상위 리소스 소비 쿼리를 나타내는 막대 그래프(왼쪽), 선택한 쿼리에 대한 계획 요약(오른쪽) 및 선택한 계획에 대한 시각적 쿼리 계획(아래쪽), 이렇게 세 개의 창으로 구분되어 있습니다. **구성** 을 클릭하여 분석할 쿼리 수 및 관심 있는 시간 간격을 제어할 수 있습니다. 또한 다양한 리소스 소비 차원(기간, CPU, 메모리, IO, 실행 횟수)과 기준선(평균, 최소값, 최대값, 합계, 표준 편차) 간에 선택할 수 있습니다.  
   
  ![query-store-usage-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
   
@@ -132,7 +133,7 @@ ms.locfileid: "85989797"
     b.  강제 적용에 실패하는 쿼리 계획이 있는 경우 또는 성능이 여전히 충분하지 않은 경우 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)을 이전 설정으로 되돌린 다음, Microsoft 고객 지원 서비스에 연락하는 것이 좋습니다.  
     
 > [!TIP]
-> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ‘데이터베이스 업그레이드’ 태스크를 사용하여 [데이터베이스 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)을 업그레이드합니다.  자세한 내용은 [쿼리 튜닝 길잡이를 사용하여 데이터베이스 업그레이드](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)를 참조하세요.
+> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ‘데이터베이스 업그레이드’ 태스크를 사용하여 [데이터베이스 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)을 업그레이드합니다. 자세한 내용은 [쿼리 튜닝 길잡이를 사용하여 데이터베이스 업그레이드](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)를 참조하세요.
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>임시 워크로드 식별 및 개선  
 일부 워크로드에는 전체 애플리케이션 성능을 개선하기 위해 조정할 수 있는 주요 쿼리가 없습니다. 이러한 워크로드는 일반적으로 각각 시스템 리소스의 일부를 사용하는 비교적 다수의 쿼리가 있는 것이 특징입니다. 이러한 쿼리는 거의 실행되지 않으므로(일반적으로 한 번만 실행되므로 임시 쿼리라고 함) 해당 런타임 소비는 중요하지 않습니다. 반면, 애플리케이션이 항상 완전히 새로운 쿼리를 생성하는 경우에는 시스템 리소스의 상당 부분이 최적화되지 않은 쿼리 컴파일에 소비됩니다. 이는 많은 수의 쿼리와 계획이 예약된 공간을 차지하는 경우 쿼리 저장소에 이상적인 상황이 아닙니다. 즉, 쿼리 저장소가 매우 빠르게 읽기 전용 모드로 전환될 수 있습니다. **크기 기반 정리 정책** (쿼리 저장소를 항상 실행되도록 유지하는 데[매우 권장됨](best-practice-with-the-query-store.md) )을 활성화한 경우 백그라운드 프로세스에서 쿼리 저장소 구조를 정리하므로 대부분의 시간 동안 상당한 시스템 리소스가 소비됩니다.  

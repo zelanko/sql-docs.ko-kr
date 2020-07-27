@@ -1,5 +1,5 @@
 ---
-title: DBCC SHOWCONTIG(Transact-SQL) | Microsoft Docs
+title: DBCC SHOWCONTIG(Transact-SQL)
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
@@ -23,14 +23,15 @@ helpviewer_keywords:
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 3e177015f1d17ff28fe702a4c5998f97999b66ec
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd596c6915c7df811ff06e7aa5a75472ee106a68
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882029"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485246"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG(Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 지정한 테이블이나 뷰의 데이터와 인덱스에 대한 조각화 정보를 표시합니다.
@@ -61,11 +62,13 @@ DBCC SHOWCONTIG
     ]  
 ```  
   
-## <a name="arguments"></a>인수  
- *table_name* | *table_id* | *view_name* | *view_id*  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
+ *table_name* \| *table_id* \| *view_name* \| *view_id*  
  조각화 정보를 검사할 테이블이나 뷰입니다. 이 인수를 지정하지 않으면 현재 데이터베이스의 모든 테이블과 인덱싱된 뷰를 검사합니다. 테이블이나 뷰 ID를 구하려면 [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) 함수를 사용합니다.  
   
- *index_name* | *index_id*  
+ *index_name* \| *index_id*  
  조각화 정보를 검사할 인덱스입니다. 이 인수를 지정하지 않으면 지정한 테이블이나 뷰의 기본 인덱스를 처리합니다. 인덱스 ID를 가져오려면 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 카탈로그 뷰를 사용합니다.  
   
  WITH  

@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: 584bd3a22c24dfccf8fab562202d66ce8689b55b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52b4f561f29d78c170b334a4ea97486a30ba41c4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67947191"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918899"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 업로드 태스크
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -61,7 +61,7 @@ RetainFiles|Azure Storage에 업로드된 파일을 유지할지 여부를 지�
 CompressionType|Azure Storage에 파일 업로드 시 사용할 압축 형식을 지정합니다. 로컬 원본은 영향을 받지 않습니다.
 CompressionLevel|압축 형식에 사용할 압축 수준을 지정합니다.
 AzureDwConnection|Azure SQL DW용 ADO.NET 연결 관리자를 지정합니다.
-TableName|대상 테이블의 이름을 지정합니다. 기존 테이블 이름을 선택하거나 **\<New Table ...>** (새 테이블...)을 선택하여 새 테이블을 만듭니다.
+TableName|대상 테이블의 이름을 지정합니다. 기존 테이블 이름을 선택하거나 **\<New Table ...>** 을 선택하여 새 테이블을 만듭니다.
 TableDistribution|새 테이블에 대한 배포 방법을 지정합니다. 새 테이블 이름이 **TableName**에 대해 지정된 경우 적용합니다.
 HashColumnName|해시 테이블 배포에 사용되는 열을 지정합니다. **TableDistribution** 에 대해 **HASH**가 지정된 경우 적용합니다.
 
@@ -76,7 +76,7 @@ RowDelimiter|각 행의 끝을 표시하는 문자를 지정합니다.
 ColumnDelimiter|각 열의 끝을 표시하는 하나 이상의 문자를 지정합니다. 예를 들어 &#124;(파이프), \t(탭), '(작은따옴표), "(큰따옴표) 및 0x5c(백슬래시).
 CompressionType|원본 데이터에 사용되는 압축 형식을 지정합니다.
 AzureDwConnection|Azure SQL DW용 ADO.NET 연결 관리자를 지정합니다.
-TableName|대상 테이블의 이름을 지정합니다. 기존 테이블 이름을 선택하거나 **\<New Table ...>** (새 테이블...)을 선택하여 새 테이블을 만듭니다.
+TableName|대상 테이블의 이름을 지정합니다. 기존 테이블 이름을 선택하거나 **\<New Table ...>** 을 선택하여 새 테이블을 만듭니다.
 TableDistribution|새 테이블에 대한 배포 방법을 지정합니다. 새 테이블 이름이 **TableName**에 대해 지정된 경우 적용합니다.
 HashColumnName|해시 테이블 배포에 사용되는 열을 지정합니다. **TableDistribution** 에 대해 **HASH**가 지정된 경우 적용합니다.
 

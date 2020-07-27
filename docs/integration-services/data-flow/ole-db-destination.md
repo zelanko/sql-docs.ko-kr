@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a81d65cfd0716ba386db98b3d9973fb4e57876a7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 046e23f3861af9e1a1b6877036d90f249bb04723
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298184"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86908421"
 ---
 # <a name="ole-db-destination"></a>OLE DB 대상
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   OLE DB 대상은 데이터베이스 테이블이나 뷰 또는 SQL 명령을 사용하여 다양한 OLE DB 호환 데이터베이스로 데이터를 로드합니다. 예를 들어 OLE DB 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 테이블로 데이터를 로드할 수 있습니다.  
@@ -95,9 +95,9 @@ ms.locfileid: "71298184"
   
 |빠른 로드 옵션|Description|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|삽입할 크기(KB)를 지정합니다. 이 옵션은 **KILOBYTES_PER_BATCH** = \<양의 정수 값 **>** 형식으로 입력합니다.|  
+|KILOBYTES_PER_BATCH|삽입할 크기(KB)를 지정합니다. 이 옵션은 **KILOBYTES_PER_BATCH** = \<positive integer value**>** 형식으로 입력합니다.|  
 |FIRE_TRIGGERS|테이블 삽입에 대한 트리거 시작 여부를 지정합니다. 이 옵션은 **FIRE_TRIGGERS**형식으로 입력합니다. 이 옵션이 있으면 트리거가 시작됨을 나타냅니다.|  
-|ORDER|입력 데이터 저장 방식을 지정합니다. 이 옵션은 ORDER \<열 이름> ASC&#124;DESC 형식으로 입력합니다. 열 수에 상관없이 나열할 수 있으며 정렬 순서를 포함할 수도 있습니다. 정렬 순서를 생략하면 삽입 작업에서는 데이터가 정렬되지 않은 것으로 간주합니다.<br /><br /> 참고: ORDER 옵션을 사용하여 테이블의 클러스터형 인덱스에 따라 입력 데이터를 정렬하면 성능을 개선할 수 있습니다.|  
+|ORDER|입력 데이터 저장 방식을 지정합니다. 이 옵션은 ORDER \<column name> ASC&#124;DESC 형식으로 입력합니다. 열 수에 상관없이 나열할 수 있으며 정렬 순서를 포함할 수도 있습니다. 정렬 순서를 생략하면 삽입 작업에서는 데이터가 정렬되지 않은 것으로 간주합니다.<br /><br /> 참고: ORDER 옵션을 사용하여 테이블의 클러스터형 인덱스에 따라 입력 데이터를 정렬하면 성능을 개선할 수 있습니다.|  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 키워드는 일반적으로 대문자를 사용하여 입력하지만 키워드는 대/소문자를 구분하지 않습니다.  
   

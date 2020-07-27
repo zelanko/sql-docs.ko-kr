@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 엔진 튜닝 관리자 시작 및 사용 | Microsoft 문서
+description: SQL Server의 데이터베이스 엔진 튜닝 관리자를 시작하여 워크로드를 만들고, 데이터베이스를 튜닝하고, XML 입력 파일을 만드는 용도로 사용하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 00441600bb5d2059686f6fe2bc388146e880d4ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f0986c7af4ed3f6f8284db2e9faf99cad149b216
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737152"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457622"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자 시작 및 사용
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -268,7 +269,7 @@ ms.locfileid: "85737152"
     dta -E -D DatabaseName -if WorkloadFile -s SessionName  
     ```  
   
-     여기에서 `-E` 는 튜닝 세션이 로그인 ID와 암호 대신에 트러스트된 연결을 사용하도록 지정하고 `-D` 는 튜닝할 데이터베이스의 이름을 지정합니다. 기본적으로 이 유틸리티는 로컬 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 기본 인스턴스에 연결합니다. 다음 절차에 표시된 대로 원격 데이터베이스를 지정하거나 명명된 인스턴스를 지정하려면 `-S` 옵션을 사용합니다. `-if` 옵션은 작업 파일([!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 또는 추적 파일)의 이름과 경로를 지정하고 `-s` 옵션은 튜닝 세션의 이름을 지정합니다.  
+     여기에서 `-E` 는 튜닝 세션이 로그인 ID와 암호 대신에 트러스트된 연결을 사용하도록 지정하고 `-D` 는 튜닝할 데이터베이스의 이름을 지정합니다. 기본적으로 이 유틸리티는 로컬 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 기본 인스턴스에 연결합니다. 다음 절차에 표시된 대로 원격 데이터베이스를 지정하거나 명명된 인스턴스를 지정하려면 `-S` 옵션을 사용합니다. `-if` 옵션은 작업 파일( [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 또는 추적 파일)의 이름과 경로를 지정하고 `-s` 옵션은 튜닝 세션의 이름을 지정합니다.  
   
      여기에 표시된 네 가지 옵션(데이터베이스 이름, 작업, 연결 유형, 세션 이름)은 필수 항목입니다.  
   

@@ -1,5 +1,6 @@
 ---
 title: 통계
+description: 쿼리 최적화 프로그램에서는 통계를 사용하여 쿼리 성능을 향상하는 쿼리 계획을 만듭니다. 쿼리 최적화 사용의 개념과 지침에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/03/2020
 ms.prod: sql
@@ -23,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b509109cd155d0990950afbd073709325b01f5b9
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: ae25071d2740306c8ff6156a51cc380101046ba8
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196751"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86456976"
 ---
 # <a name="statistics"></a>통계
 

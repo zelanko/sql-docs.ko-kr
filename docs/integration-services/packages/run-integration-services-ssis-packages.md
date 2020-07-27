@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fe82e7d6746f3a5fc76fda3f960f069ef4345525
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 29d9fce968a000a2212ada9776d1b5f3a812c25f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287387"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919176"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Integration Services(SSIS) 패키지 실행
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행하려면 해당 패키지가 저장된 위치에 따라 여러 도구 중 하나를 사용할 수 있습니다. 도구는 다음 표에 나열되어 있습니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "79287387"
   
 1.  솔루션 탐색기에서 실행할 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트 폴더를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-2.  **\<프로젝트 이름> 속성 페이지** 대화 상자에서 **빌드**를 클릭합니다.  
+2.  **\<project name> 속성 페이지** 대화 상자에서 **빌드**를 클릭합니다.  
   
 3.  OutputPath 속성의 값을 업데이트하여 디자인 타임 배포에 사용할 폴더를 지정하고 **확인**을 클릭합니다.  
 

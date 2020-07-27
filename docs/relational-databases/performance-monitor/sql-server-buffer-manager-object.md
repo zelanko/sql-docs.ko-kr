@@ -1,5 +1,6 @@
 ---
 title: SQL Server, Buffer Manager 개체 | Microsoft 문서
+description: 페이지 메모리, 물리적 I/O를 모니터링하는 카운터 및 버퍼 풀 확장을 모니터링하는 카운터를 제공하는 Buffer Manager 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 81f487db3622de86fdf041acab5acee93c68d1ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 63ecd1f64db0a3065bc513e935fc832292d5dd00
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85656445"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457437"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server, Buffer Manager 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

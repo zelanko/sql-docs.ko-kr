@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 6409dd44381b1d927b07f8ecee043465eacdd14e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3595c9aac3b0b8a0419780cdeaf9b5547bfa97d1
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774654"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483861"
 ---
 # <a name="azure-data-studio-extensibility"></a>Azure Data Studio 확장성
 
@@ -48,9 +48,9 @@ Azure Data Studio에는 사용자 환경을 사용자 지정하고 해당 사용
 
 IntelliSense는 azuredatastudio 내에서 지원됩니다.
 
-## <a name="contributes-dashboard"></a>기여 대시보드
+### <a name="dashboard-contribution-points"></a>대시보드 기여 점수
 
-대시보드에 탭, 컨테이너, 인사이트 위젯을 기여합니다.
+대시보드에 탭, 컨테이너 및/또는 인사이트 위젯을 기여합니다.
 
 ![대시보드](media/extensibility/dashboard-page.png)
 

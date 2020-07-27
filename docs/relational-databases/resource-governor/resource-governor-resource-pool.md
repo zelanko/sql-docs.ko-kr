@@ -1,5 +1,6 @@
 ---
 title: 리소스 관리자 리소스 풀 | Microsoft 문서
+description: SQL Server Resource Governor는 들어오는 애플리케이션 요청이 리소스 풀에서 사용할 수 있는 CPU, 물리적 IO 및 메모리 양의 한도를 지정합니다.
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0236841f3f3c6944d411fd18cb0222afb1802947
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bfc4c3eb6562c6424ecff4cfa8f311afe0a3510c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729281"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457832"
 ---
 # <a name="resource-governor-resource-pool"></a>리소스 관리자 리소스 풀
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

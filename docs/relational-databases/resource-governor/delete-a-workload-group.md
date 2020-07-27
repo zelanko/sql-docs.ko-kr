@@ -1,5 +1,6 @@
 ---
 title: 작업 그룹 삭제 | Microsoft 문서
+description: SQL Server Management Studio 또는 Transact-SQL을 사용하여 작업 그룹 또는 리소스 풀을 삭제하는 방법을 알아봅니다. 이 작업에는 CONTROL SERVER 권한이 필요합니다.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 11a0723882b5af2002ead9d8645b047f69aae43e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 160f7f998aa42ed86a9f46d9fab70e38ac1b2d02
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729299"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457905"
 ---
 # <a name="delete-a-workload-group"></a>작업 그룹 삭제
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

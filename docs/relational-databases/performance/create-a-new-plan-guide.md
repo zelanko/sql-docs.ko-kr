@@ -1,5 +1,6 @@
 ---
 title: 새 계획 지침 만들기 | Microsoft 문서
+description: SQL Server Management Studio 또는 Transact-SQL을 사용하여 계획 지침을 만드는 방법을 알아봅니다. 계획 지침은 정해진 쿼리 계획 및 쿼리 힌트를 쿼리에 적용합니다.
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c8301bfe9073a31020fe4481edfff24d89b68994
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 46a3cc2e95093a9d4d3a69f1b5ca0e1eddb38d21
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655642"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457355"
 ---
 # <a name="create-a-new-plan-guide"></a>새 계획 지침 만들기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

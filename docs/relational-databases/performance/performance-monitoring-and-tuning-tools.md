@@ -1,5 +1,6 @@
 ---
 title: 성능 모니터링 및 튜닝 도구 | Microsoft 문서
+description: SQL Server 모니터링 및 튜닝 도구를 살펴보고, 모니터링 유형 및 모니터링 이벤트에 따라 적절한 도구를 선택하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 30cc668487299677bb2874300d660d09d1dedd22
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 13b974b37202a41f333e7d94104eccbee4c72d5c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85635444"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457669"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>성능 모니터링 및 튜닝 도구
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,12 +58,12 @@ ms.locfileid: "85635444"
   
 |이벤트/작업|확장 이벤트|SQL Server Profiler|Distributed Replay|시스템 모니터|작업 모니터|Transact-SQL|오류 로그|성능 대시보드|  
 |-----------------------|-----------------------|-------------------------|------------------------|--------------------|----------------------|-------------------|----------------|----------------|   
-|추세 분석|yes|yes||yes|||||  
+|추세 분석|yes|yes||예|||||  
 |캡처한 이벤트 재생||예(단일 컴퓨터에서)|예(여러 컴퓨터에서)||||||  
-|임시 모니터링|예<sup>1</sup>|yes|||yes|yes|yes|yes|  
-|경고 생성||||yes|||||  
-|그래픽 인터페이스|yes|yes||yes|yes||yes|yes|  
-|사용자 지정 애플리케이션에서 사용|yes|예<sup>2</sup>||||yes|||  
+|임시 모니터링|예<sup>1</sup>|yes|||yes|yes|yes|예|  
+|경고 생성||||예|||||  
+|그래픽 인터페이스|yes|yes||yes|yes||yes|예|  
+|사용자 지정 애플리케이션에서 사용|예|예<sup>2</sup>||||예|||  
   
  <sup>1</sup>[SQL Server Management Studio XEvent 프로파일러](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)   사용  
  <sup>2</sup>[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 시스템 저장 프로시저 사용.  

@@ -1,5 +1,6 @@
 ---
 title: SQL Server, Batch Resp Statistics 개체 | Microsoft 문서
+description: SQL Server 일괄 처리 응답 시간을 추적하는 카운터를 제공하는 SQLServer:Batch Resp Statistics 성능 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 447ab09f049a5177a68a1c4a1d3d00239161149a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b28b0d8af863c21f4764f5c7126fca20b18c1ab1
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787379"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458155"
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server, 일괄 처리 응답 통계 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

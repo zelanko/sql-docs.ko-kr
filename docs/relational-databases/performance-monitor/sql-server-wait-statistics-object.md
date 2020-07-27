@@ -1,5 +1,6 @@
 ---
 title: SQL Server, Wait Statistics 개체 | Microsoft 문서
+description: 대기 상태에 대한 정보를 보고하는 성능 카운터를 포함하는 SQLServer:Wait Statistics 성능 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b5b9a2ccdd73150eeaa1dda8403c4b73aed03009
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64a21ac3072869f74c71997be5160b55758fc917
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758916"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457407"
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server, Wait Statistics 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

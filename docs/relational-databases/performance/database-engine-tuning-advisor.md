@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 엔진 튜닝 관리자 | Microsoft 문서
+description: 데이터베이스 엔진 튜닝 관리자를 사용하여 SQL Server에서 문제를 해결하고, 많은 쿼리 세트를 튜닝하고, 디자인 변경을 분석하고, 스토리지 공간을 관리하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c5e5dbbe43dfb0bff348f68bcd0f237e570eed75
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 84ff76946cacefee80cc61f7e1b66e6a1e77fb21
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655502"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458305"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

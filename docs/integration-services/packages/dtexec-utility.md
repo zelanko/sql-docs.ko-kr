@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7f2e417ddefc0094fc6320deafea40251ba77372
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 53a05fea022a2ea0232bc44646509ee3a84028af
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76761857"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919225"
 ---
 # <a name="dtexec-utility"></a>dtexec 유틸리티
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **dtexec** 명령 프롬프트 유틸리티는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 구성 및 실행하는 데 사용합니다. **dtexec** 유틸리티에서는 매개 변수, 연결, 속성, 변수, 로깅, 진행률 표시기 등의 모든 패키지 구성 및 실행 기능에 액세스할 수 있습니다. **dtexec** 유틸리를 사용하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버, .ispac 프로젝트 파일, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소, 파일 시스템의 원본에서 패키지를 로드할 수 있습니다.  
@@ -68,17 +68,17 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="installation-considerations-on-64-bit-computers"></a><a name="bit"></a> 64비트 컴퓨터에서의 설치 고려 사항  
  64비트 컴퓨터의 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 64비트 버전의 **dtexec** 유틸리티(dtexec.exe)를 설치합니다. 특정 패키지를 32비트 모드로 실행해야 하는 경우 **dtexec** 유틸리티의 32비트 버전을 설치해야 합니다. 32비트 버전의 **dtexec** 유틸리티를 설치하려면 설치 도중 클라이언트 도구 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 선택해야 합니다.  
   
- 기본적으로 64비트 및 32비트 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 명령 프롬프트 유틸리티가 모두 설치되어 있는 64비트 컴퓨터는 명령 프롬프트에서 32비트 버전을 실행합니다. 64비트 버전에 대한 디렉터리 경로 앞에 32비트 버전에 대한 디렉터리 경로가 PATH 환경 변수에 나타나기 때문에 32비트 버전이 실행됩니다. (일반적으로 32비트 디렉터리 경로는 *\<드라이브>* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn이고, 64비트 디렉터리 경로는 *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn입니다.)  
+ 기본적으로 64비트 및 32비트 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 명령 프롬프트 유틸리티가 모두 설치되어 있는 64비트 컴퓨터는 명령 프롬프트에서 32비트 버전을 실행합니다. 64비트 버전에 대한 디렉터리 경로 앞에 32비트 버전에 대한 디렉터리 경로가 PATH 환경 변수에 나타나기 때문에 32비트 버전이 실행됩니다. 일반적으로 32비트 디렉터리 경로는 *\<drive>* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn이고, 64비트 디렉터리 경로는 *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn입니다.  
   
 > **참고:** SQL Server 에이전트를 사용하여 유틸리티를 실행하는 경우 SQL Server 에이전트는 64비트 버전의 유틸리티를 자동으로 사용합니다. SQL Server 에이전트는 PATH 환경 변수가 아닌 레지스트리를 사용하여 유틸리티에 대한 올바른 실행 파일을 찾습니다.  
   
  명령 프롬프트에서 64비트 버전의 유틸리티를 실행하기 위해 다음 동작 중 하나를 수행할 수 있습니다.  
   
--   명령 프롬프트 창을 열고 64비트 버전의 유틸리티가 포함되어 있는 디렉터리( *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn)로 변경한 다음 해당 위치에서 유틸리티를 실행합니다.  
+-   명령 프롬프트 창을 열고 64비트 버전의 유틸리티가 포함되어 있는 디렉터리( *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn)로 변경한 다음, 해당 위치에서 유틸리티를 실행합니다.  
   
 -   명령 프롬프트에서 64비트 버전의 유틸리티에 대한 전체 경로( *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn)를 입력하여 유틸리티를 실행합니다.  
   
--   변수에서 32비트 경로( *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn) 앞에 64비트 경로( *\<drive>* :\ Program Files(x86)\Microsoft SQL Server\110\DTS\Binn)를 배치하여 PATH 환경 변수에서의 경로 순서를 영구적으로 변경합니다.  
+-   PATH 환경 변수에서 32비트 경로( *\<drive>* :\ Program Files(x86)\Microsoft SQL Server\110\DTS\Binn) 앞에 64비트 경로( *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn)를 배치하여 변수에서의 경로 순서를 영구적으로 변경합니다.  
   
 ##  <a name="considerations-on-computers-with-side-by-side-installations"></a><a name="side"></a> 병렬 설치 컴퓨터에 대한 고려 사항  
  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 또는 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 가 설치된 컴퓨터에 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 를 설치하면 여러 버전의 **dtexec** 유틸리티가 설치됩니다.  

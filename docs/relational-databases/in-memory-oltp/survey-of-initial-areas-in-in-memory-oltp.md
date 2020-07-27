@@ -12,12 +12,12 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e90d523b4dc17d640ebaae825abef59d80582389
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d150330a700b8580f561c4459d50ceab355eb8de
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650868"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942920"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>메모리 내 OLTP에서 초기 영역 설문 조사
 
@@ -332,8 +332,10 @@ SET @mesg = CONCAT(@LatestSalesOrderId,
 PRINT @mesg;  
 ```
       
-    -- Here is the actual PRINT output:  
-    -- 2 = Latest SalesOrderId, for CustomerId = 42  
+실제 PRINT 출력은 다음과 같습니다.  
+```output
+-- 2 = Latest SalesOrderId, for CustomerId = 42  
+```
   
   
   

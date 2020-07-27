@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c025eac60079e601d755439573b35257038d9275
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ca682adb998ad20b04e40cda29d5a083f4c4e58f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297361"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913489"
 ---
 # <a name="token--ssis-expression"></a>TOKEN(SSIS 식)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   문자열에서 토큰을 구분하는 지정된 구분 기호와 반환할 토큰을 나타내는 토큰 번호를 기반으로 문자열에서 토큰(부분 문자열)을 반환합니다.  
@@ -44,7 +44,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
  DT_WSTR  
   
 ## <a name="remarks"></a>설명  
- 이 함수는 <character_expression> 문자열을 <delimiter_string>에 지정된 구분 기호로 구분된 토큰 집합으로 분할한 다음 N번째 토큰을 반환합니다. 여기서 N은 \<occurrence> 매개 변수로 지정된 토큰의 발생 횟수입니다. 이 함수의 샘플 사용법은 예 섹션을 참조하십시오.  
+ 이 함수는 <character_expression> 문자열을 <delimiter_string>에 지정된 구분 기호로 구분된 토큰 세트로 분할한 다음, N번째 토큰을 반환합니다. 여기서 N은 \<occurrence> 매개 변수로 지정된 토큰의 발생 횟수입니다. 이 함수의 샘플 사용법은 예 섹션을 참조하십시오.  
   
  다음 설명은 TOKEN 함수에 적용됩니다.  
   

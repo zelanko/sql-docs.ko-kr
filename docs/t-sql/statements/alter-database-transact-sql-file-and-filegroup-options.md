@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: fe0605cdfd2d2cf341ff6ab51939fee2c78ae797
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e16612058617d324d0b3c0e4534716b39a09527f
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216280"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552426"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE(Transact-SQL) 파일 및 파일 그룹 옵션
 
@@ -57,9 +57,7 @@ ms.locfileid: "80216280"
 
 구문 표기 규칙에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하십시오.
 
-## <a name="click-a-product"></a>제품 클릭
-
-다음 행에서 관심이 있는 제품 이름을 클릭합니다. 클릭하면 웹페이지의 여기에서 클릭한 제품에 적절한 다른 콘텐츠를 표시합니다.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -72,7 +70,7 @@ ms.locfileid: "80216280"
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 ALTER DATABASE database_name
 {
     <add_or_modify_files>
@@ -142,13 +140,13 @@ REMOVE FILE *logical_file_name*[!INCLUDE[ssNoVersion](../../includes/ssnoversion
 
 MODIFY FILE 수정할 파일을 지정합니다. \<filespec> 속성은 한 번에 한 개씩만 변경할 수 있습니다. 수정할 파일을 식별하려면 \<filespec>에 항상 NAME을 지정해야 합니다. SIZE를 지정할 경우 새 크기가 현재 파일 크기보다 커야 합니다.
 
-데이터 파일이나 로그 파일의 논리적 이름을 수정하려면 `NAME` 절에 이름을 바꿀 논리적 파일 이름을 지정하고 `NEWNAME` 절에 파일의 새 논리적 이름을 지정합니다. 다음은 그 예입니다.
+데이터 파일이나 로그 파일의 논리적 이름을 수정하려면 `NAME` 절에 이름을 바꿀 논리적 파일 이름을 지정하고 `NEWNAME` 절에 파일의 새 논리적 이름을 지정합니다. 예를 들면 다음과 같습니다.
 
 ```sql
 MODIFY FILE ( NAME = logical_file_name, NEWNAME = new_logical_name )
 ```
 
-데이터 파일 또는 로그 파일을 새 위치로 이동하려면 `NAME` 절에 파일의 현재 논리적 이름을 지정하고 `FILENAME` 절에 새 경로와 운영 체제 파일 이름을 지정합니다. 다음은 그 예입니다.
+데이터 파일 또는 로그 파일을 새 위치로 이동하려면 `NAME` 절에 파일의 현재 논리적 이름을 지정하고 `FILENAME` 절에 새 경로와 운영 체제 파일 이름을 지정합니다. 예를 들면 다음과 같습니다.
 
 ```sql
 MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
@@ -692,7 +690,7 @@ Azure SQL Database 관리되는 인스턴스의 데이터베이스에 이 문을
 
 ## <a name="syntax-for-databases-in-a-managed-instance"></a>관리되는 인스턴스의 데이터베이스 구문
 
-```
+```syntaxsql
 ALTER DATABASE database_name
 {
     <add_or_modify_files>

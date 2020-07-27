@@ -1,5 +1,6 @@
 ---
 title: 통계 이름 바꾸기 | Microsoft 문서
+description: Transact-SQL을 사용하여 SQL Server의 통계 개체 이름을 바꾸는 방법을 알아봅니다. 테이블 또는 뷰에 대한 ALTER 권한이 필요합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: a3bed7b7-3dc5-4b33-b1c6-67c27f573764
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f597ccebd33fb533a8b4908818740954f4209e21
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 09b27cba405c758be84b996eebe2628041a9611d
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760380"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458541"
 ---
 # <a name="rename-statistics"></a>통계 이름 바꾸기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

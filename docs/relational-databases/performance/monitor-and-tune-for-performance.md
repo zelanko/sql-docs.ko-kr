@@ -1,5 +1,6 @@
 ---
 title: 성능 모니터링 및 튜닝 | Microsoft 문서
+description: 주기적인 스냅샷을 사용하고 지속적으로 데이터를 수집하여 성능 추세를 추적함으로써 데이터베이스를 모니터링하여 서버 성능을 평가하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 07/18/2016
 ms.prod: sql
@@ -29,12 +30,12 @@ ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8867064c0d2745c0e34e9e07aa956cf68c76690e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7706c41442ee412cacea4e61b76a14ac7129d72f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716905"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458895"
 ---
 # <a name="monitor-and-tune-for-performance"></a>성능 모니터링 및 튜닝
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

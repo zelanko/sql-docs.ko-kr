@@ -34,16 +34,16 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1f0bf0dd95bbb209c0e6320c4ba91eb1bc84ff41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 30942bd7f9c5ff8180eb9adfddedff72d1d97f05
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736325"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552578"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS(Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 특정 단어 또는 구와 정확히 일치하거나 비슷하게 일치하는 단어를 검색하거나 서로 근접한 단어를 검색하거나 가중치 검색을 수행합니다. CONTAINS는 문자 기반 데이터 형식이 포함된 전체 텍스트 인덱싱된 열에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 검색을 수행하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문의 [WHERE 절](../../t-sql/queries/where-transact-sql.md)에 사용되는 조건자입니다.  
   
@@ -140,7 +140,9 @@ CONTAINS (
   
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *column_name*  
  FROM 절에 지정된 테이블에 대한 전체 텍스트 인덱싱된 열의 이름입니다. 열은 **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** 또는 **varbinary(max)** 형식이 될 수 있습니다.  
   
@@ -318,18 +320,18 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  0\.0에서 1.0 사이의 숫자로 가중치를 지정합니다. *\<weighted_term>* 의 각 구성 요소에 *weight_value*가 포함될 수 있습니다. *weight_value*를 사용하여 쿼리의 각 부분이 쿼리와 일치하는 각 행에 할당되는 등급 값에 영향을 주는 방법을 변경할 수 있습니다. WEIGHT는 CONTAINS 쿼리 결과에는 영향을 주지 않지만 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 쿼리의 순위에는 영향을 줍니다.  
   
 > [!NOTE]  
->  소수 구분 기호는 운영 체제 로캘에 관계없이 항상 마침표입니다.  
+> 소수 구분 기호는 운영 체제 로캘에 관계없이 항상 마침표입니다.  
   
- { AND | & } | { AND NOT | &! } | { OR | | }  
+ { AND \| & } \| { AND NOT \| &! } \| { OR \| \| }  
  두 개의 포함 검색 조건 간에 논리적 연산을 지정합니다.  
   
- { AND | & }  
+ { AND \| & }  
  두 개의 포함 검색 조건이 모두 충족되어야 일치한다는 것을 나타냅니다. AND 키워드 대신 앰퍼샌드 기호(&)를 사용하여 AND 연산자를 나타낼 수도 있습니다.  
   
- { AND NOT | &! }  
+ { AND NOT \| &! }  
  두 번째 검색 조건이 일치하지 않아야 한다는 것을 나타냅니다. AND NOT 키워드 대신 앰퍼샌드 다음에 느낌표 기호(&)를 사용하여 AND NOT 연산자를 나타낼 수도 있습니다.  
   
- { OR | | }  
+ { OR \| \| }  
  두 개의 포함 검색 조건 중 하나가 충족되어야 일치한다는 것을 나타냅니다. OR 키워드 대신 막대 기호(|)를 사용하여 OR 연산자를 나타낼 수도 있습니다.  
   
  *\<contains_search_condition>* 에 괄호로 묶은 그룹이 있으면 이러한 그룹이 가장 먼저 평가됩니다. 괄호로 묶인 그룹을 평가한 후 포함 검색 조건에 논리 연산자를 사용할 때 다음 규칙이 적용됩니다.  

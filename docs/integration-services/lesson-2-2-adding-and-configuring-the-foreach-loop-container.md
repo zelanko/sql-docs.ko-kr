@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a5a0b804cb1e5bf130179c7a91ec04fa0d064f12
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ada4d9c133bbcb96e1a5c19fa505c4d51eb8b343
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296043"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917269"
 ---
 # <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>2-2단원: Foreach 루프 컨테이너 추가 및 구성
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -70,7 +70,7 @@ ms.locfileid: "71296043"
   
 1.  **변수 매핑**을 선택합니다.  
   
-2.  **변수 매핑** 페이지의 **변수** 열에서 빈 셀을 선택하고 **\<새 변수...>** 를 선택합니다.  
+2.  **변수 매핑** 페이지의 **변수** 열에서 빈 셀을 선택하고 **\<New Variable...>** 를 선택합니다.  
   
 3.  **변수 추가** 대화 상자에서 **이름**에 **varFileName**을 입력합니다.  
   

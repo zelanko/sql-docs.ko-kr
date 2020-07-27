@@ -1,5 +1,6 @@
 ---
 title: 쿼리 튜닝 길잡이를 사용하여 데이터베이스 업그레이드
+description: 쿼리 튜닝 길잡이는 SQL Server의 최신 버전으로 업그레이드하는 동안 성능 안정성을 유지하기 위해 사용자에게 권장된 워크플로를 안내합니다.
 ms.custom: seo-dt-2019
 ms.date: 02/13/2019
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 3113caec4026547fcf2dca940a3908f64b6efa44
-ms.sourcegitcommit: 69f93dd1afc0df76c3b4d9203adae0ad7dbd7bb2
+ms.openlocfilehash: 25083a6254d05abb44a4df3e96d5b070c3d0ba37
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82598749"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457575"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>쿼리 튜닝 길잡이를 사용하여 데이터베이스 업그레이드
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -185,7 +186,7 @@ QTA는 세션이 처음으로 만들어진 사용자 데이터베이스의 `msqt
     -  **쿼리 ID** 
     -  **쿼리 텍스트**: **...** 단추를 클릭하여 확장할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.
     -  **상태**: 쿼리에 대한 현재 실험 상태를 표시합니다.
-    -  **기준선 메트릭**: **2단계 하위 3단계**에서 실행한 대로 쿼리를 위한 ms 단위의 선택한 메트릭(기간 또는 CpuTime)으로 데이터베이스 호환성 업그레이드 후에 회귀된 쿼리를 표시합니다.
+    -  **기준 메트릭**: **2단계 하위 3단계**에서 실행한 대로 쿼리를 위한 ms 단위의 선택한 메트릭(기간 또는 CpuTime)으로 데이터베이스 호환성 업그레이드 후에 회귀된 쿼리를 표시합니다.
     -  **관찰된 메트릭**: 충분히 적합한 제안된 최적화를 위해 실험 후 쿼리를 위한 ms 단위의 선택한 메트릭(기간 또는 CpuTime)입니다.
     -  **변경률(%)** : 실험 단계 전후 사이의 선택한 메트릭에 대한 변경률을 백분율로 표시한 것입니다. 제안된 최적화를 사용한 쿼리에 대해 측정된 개선 사항의 양을 표시합니다.
     -  **쿼리 옵션**: 쿼리 실행 메트릭을 개선하는 제안된 힌트로 연결됩니다.

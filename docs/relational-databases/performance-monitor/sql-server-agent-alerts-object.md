@@ -1,5 +1,6 @@
 ---
 title: SQL Server 에이전트, Alerts 개체 | Microsoft 문서
+description: SQL Server 에이전트 경고에 대한 정보를 보고하는 성능 카운터를 포함하는 SQL Server 에이전트 Alerts 성능 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 425a2330f8ecb3f33380cf0500de32e82463634e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9fe293b70b074322380dc55f4294971908c106ee
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787400"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457469"
 ---
 # <a name="sql-server-agent-alerts-object"></a>SQL Server 에이전트, Alerts 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85787400"
   
  다음 표에서는 **SQLAgent:Alerts** 카운터를 나열합니다.  
   
-|속성|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |**Activated alerts**|이 카운터는 SQL Server 에이전트가 마지막으로 다시 시작된 이후 SQL Server 에이전트가 활성화한 총 경고 수를 보고합니다.|  
 |**Alerts activated/minute**|이 카운터는 마지막 시간(분) 내에 SQL Server 에이전트가 활성화한 경고의 수를 보고합니다.|  

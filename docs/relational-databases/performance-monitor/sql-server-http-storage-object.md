@@ -1,5 +1,6 @@
 ---
 title: SQL Server, HTTP_STORAGE_OBJECT | Microsoft 문서
+description: Azure Storage 계정을 모니터링하는 성능 카운터로 구성된 SQLServer:HTTP Storage 성능 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 7d1406bc3696cfcd16121e2f12758791e2da86e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a18cb0e74a537a62eb662fdb30ba289e255c0348
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775839"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457430"
 ---
 # <a name="sql-server-http-storage"></a>SQL Server, HTTP 스토리지
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

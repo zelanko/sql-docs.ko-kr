@@ -1,5 +1,6 @@
 ---
 title: 테이블 또는 인덱스에 압축 사용 | Microsoft 문서
+description: SQL Server Management Studio 또는 Transact-SQL을 사용하여 SQL Server에서 테이블 또는 인덱스에 대한 압축을 사용하도록 설정하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +24,12 @@ ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5d8ad2b1ccc0951276dccaf085c554fa7385b6e1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8d168265fbd400f94939103411a6f56afe901f07
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003916"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457535"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>테이블 또는 인덱스에 압축 사용
 

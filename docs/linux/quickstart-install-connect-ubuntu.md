@@ -3,18 +3,18 @@ title: 'Ubuntu: SQL Server on Linux 설치'
 description: 이 빠른 시작에서는 Ubuntu에 SQL Server 2017 또는 SQL Server 2019를 설치한 다음, sqlcmd를 사용하여 데이터베이스를 만들고 쿼리하는 방법을 보여 줍니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/10/2020
+ms.date: 07/15/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 98485bbe09cb7996aec6dacb93751ab1d69b17fe
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cce5af380f3706ef6fd6f22578c2b693aff1ad7c
+ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894143"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86438115"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>빠른 시작: Ubuntu에 SQL Server 설치 및 데이터베이스 만들기
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -25,6 +25,9 @@ ms.locfileid: "85894143"
 
 이 빠른 시작에서는 Ubuntu 18.04에 SQL Server 2017을 설치합니다. 그런 다음, **sqlcmd**를 통해 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
 
+> [!TIP]
+> 이 자습서를 사용하려면 사용자 입력과 인터넷 연결이 필요합니다. 무인 또는 오프라인 설치 절차에 관심이 있는 경우 [SQL Server on Linux 설치 지침](sql-server-linux-setup.md)을 참조하세요. 지원되는 플랫폼 목록은 [릴리스 정보](sql-server-linux-release-notes.md)를 참조하세요.
+
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
@@ -32,10 +35,10 @@ ms.locfileid: "85894143"
 
 이 빠른 시작에서는 Ubuntu 18.04에 SQL Server 2019를 설치합니다. 그런 다음, **sqlcmd**를 통해 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
 
-::: moniker-end
-
 > [!TIP]
-> 이 자습서를 사용하려면 사용자 입력과 인터넷 연결이 필요합니다. 무인 또는 오프라인 설치 절차에 관심이 있는 경우 [SQL Server on Linux 설치 지침](sql-server-linux-setup.md)을 참조하세요.
+> 이 자습서를 사용하려면 사용자 입력과 인터넷 연결이 필요합니다. 무인 또는 오프라인 설치 절차에 관심이 있는 경우 [SQL Server on Linux 설치 지침](sql-server-linux-setup.md)을 참조하세요. 지원되는 플랫폼 목록은 [릴리스 정보](sql-server-linux-release-notes-2019.md)를 참조하세요.
+
+::: moniker-end
 
 ## <a name="prerequisites"></a>사전 요구 사항
 

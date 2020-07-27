@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c6076e4c02ccb4c91c88a22df7cd7c4a50b0f877
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 663ecd4dba689f394af61c4a26ff8edc1c241703
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295124"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86900129"
 ---
 # <a name="debugging-data-flow"></a>데이터 흐름 디버깅
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 데이터 흐름 문제를 해결하는 데 사용할 수 있는 기능과 도구가 포함되어 있습니다.  
@@ -172,7 +172,7 @@ order by source_component_name desc
   
 4.  구성하려는 오류 출력 열이 있는 구성 요소를 마우스 오른쪽 단추로 클릭하고 **고급 편집기 표시**를 클릭합니다.  
   
-5.  **입/출력 속성** 탭을 클릭하고 **\<구성 요소 이름> 오류 출력**을 확장한 다음 **출력 열**을 확장합니다.  
+5.  **입/출력 속성** 탭을 클릭하고 **\<component name> 오류 출력**을 확장한 다음, **출력 열**을 확장합니다.  
   
 6.  열을 클릭하고 속성을 업데이트합니다.  
   

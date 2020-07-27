@@ -1,5 +1,6 @@
 ---
 title: 실행 계획 | Microsoft Docs
+description: SQL Server 데이터베이스 엔진이 쿼리를 실행할 수 있도록 쿼리 최적화 프로그램이 만드는 실행 계획 또는 쿼리 계획에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2020
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 8f9a92ee9ac1ed87a20515a267a80b8372c95366
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9b0f95a4afa1397783547f2804d92dd3fc37b357
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751794"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457262"
 ---
 # <a name="execution-plans"></a>실행 계획
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

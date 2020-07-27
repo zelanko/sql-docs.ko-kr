@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e2b43837de8617af559e2a810c89115e5a3963d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 348ec6768d7a1eb47c77759c039d0a465aabed65
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283267"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922229"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>3-2단원: 로깅 추가 및 구성
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -39,7 +39,7 @@ ms.locfileid: "71283267"
   
 5.  **설명**을 수정할 수도 있습니다.  
   
-6.  **구성** 열에서 **\<새 연결>** 을 선택하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]가 로그 정보를 기록하는 위치를 지정합니다.  
+6.  **구성** 열에서 **\<New Connection>** 을 선택하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]가 로그 정보를 기록하는 위치를 지정합니다.  
   
     **파일 연결 관리자 편집기** 대화 상자의 **사용 유형**에서 **파일 만들기**를 선택한 다음, **찾아보기**를 선택합니다. 기본적으로 **파일 선택** 대화 상자에 프로젝트 폴더가 열리지만 임의의 위치에 로그 정보를 저장할 수도 있습니다.  
   

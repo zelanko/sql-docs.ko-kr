@@ -1,5 +1,6 @@
 ---
 title: SQL Server, Memory Node | Microsoft 문서
+description: SQL Server에서 NUMA 노드의 서버 메모리 사용량을 모니터링하는 카운터를 제공하는 Memory Node 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 55b28ba9-b6d5-4ea9-8103-db8a72f42982
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: cfa8eb11b89919a3a1f151a0deddd24528631fe1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9afe187c8a9a732145862040ab09f0377aa59a60
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775792"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458785"
 ---
 # <a name="sql-server-memory-node"></a>SQL Server, Memory Node
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

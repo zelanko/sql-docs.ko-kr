@@ -24,16 +24,16 @@ helpviewer_keywords:
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3c458257766e52898d0924b2f8ad57ddd2423b19
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4941e8bfbb47a5d4d4e7139a6c761483dec7ad8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295663"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921967"
 ---
 # <a name="ssis-designer"></a>SSIS 디자이너
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 만들고 유지 관리하는 데 사용할 수 있는 그래픽 도구입니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 프로젝트의 일부로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 사용할 수 있습니다.  
@@ -158,7 +158,7 @@ ms.locfileid: "71295663"
  **Delete**  
  이벤트 처리기를 선택하고 **삭제**를 클릭하여 해당 처리기를 패키지에서 제거합니다.  
   
- **실행 파일 \<실행 파일 이름\>** 에 대한 \<이벤트 처리기 이름\> 을 만들려면 여기를 클릭하십시오.  
+ **실행 파일 \<executable name\>에 대한 \<event handler name\>를 만들려면 여기를 클릭하세요.**  
  이벤트 처리기를 만들려면 클릭합니다.  
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] 태스크 및 컨테이너를 나타내는 그래픽 개체를 **도구 상자** 에서 **이벤트 처리기** 탭의 디자인 화면으로 끌어 온 다음 이러한 태스크 및 컨테이너가 실행되는 순서를 정의하는 선행 제약 조건으로 이러한 개체를 연결하여 제어 흐름을 만듭니다.  

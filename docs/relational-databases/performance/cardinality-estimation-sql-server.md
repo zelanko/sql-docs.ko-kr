@@ -1,5 +1,6 @@
 ---
 title: 카디널리티 추정(SQL Server) | Microsoft 문서
+description: SQL Server 쿼리 최적화 프로그램은 처리된 행과 비용 모델을 기준으로 계산된 가장 낮은 예상 처리 비용을 갖는 쿼리 계획을 선택합니다.
 ms.custom: ''
 ms.date: 02/24/2019
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36c7637d1408a8d37764bf18997d341db959d8e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3806092674dde608bed9a962bcf939ac0379b374
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730292"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457709"
 ---
 # <a name="cardinality-estimation-sql-server"></a>카디널리티 추정(SQL Server)
 

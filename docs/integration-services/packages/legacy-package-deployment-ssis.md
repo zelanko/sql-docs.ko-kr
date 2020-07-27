@@ -31,16 +31,16 @@ helpviewer_keywords:
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fc3a1e41edd95a8e1cf9b4489732cff7ac2852d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4ab6bc0a45ec2ac3b72fb029e6ef3ec74601c183
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287397"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919214"
 ---
 # <a name="legacy-package-deployment-ssis"></a>레거시 패키지 배포(SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에는 패키지를 배포 컴퓨터에서 프로덕션 서버나 다른 컴퓨터로 손쉽게 배포할 수 있는 도구와 마법사가 포함되어 있습니다.  
@@ -149,7 +149,7 @@ ms.locfileid: "79287397"
 #### <a name="registry-entry"></a>레지스트리 항목  
  레지스트리 항목을 사용하여 구성을 저장하려면 기존 키를 사용하거나 HKEY_CURRENT_USER에서 새 키를 만들 수 있습니다. **Value**값이 있는 레지스트리 키를 사용해야 합니다. 값은 DWORD 또는 문자열이 될 수 있습니다.  
   
- **레지스트리 항목** 구성 유형을 선택할 경우 레지스트리 항목 상자에 레지스트리 키의 이름을 입력합니다. 형식은 \<레지스트리 키>입니다. HKEY_CURRENT_USER의 루트에 없는 레지스트리 키를 사용하려면 \<레지스트리 키\레지스트리 키\\...> 형식을 사용하여 키를 식별합니다. 예를 들어 SSISPackages에 있는 MyPackage 키를 사용하려면 **SSISPackages\MyPackage**를 입력합니다.  
+ **레지스트리 항목** 구성 유형을 선택할 경우 레지스트리 항목 상자에 레지스트리 키의 이름을 입력합니다. 형식은 \<registry key>입니다. HKEY_CURRENT_USER의 루트에 없는 레지스트리 키를 사용하려면 \<Registry key\registry key\\...> 형식을 사용하여 키를 식별합니다. 예를 들어 SSISPackages에 있는 MyPackage 키를 사용하려면 **SSISPackages\MyPackage**를 입력합니다.  
   
 #### <a name="sql-server"></a>SQL Server  
  **SQL Server** 구성 유형을 선택한 경우 구성을 저장할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 연결을 지정하십시오. 기존 테이블에 구성을 저장하거나 지정한 데이터베이스에 새 테이블을 만들 수 있습니다.  
@@ -360,7 +360,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 |값|Description|  
 |-----------|-----------------|  
-|**레지스트리 항목**|구성 정보를 포함하는 레지스트리 키를 입력합니다. 형식은 \<레지스트리 키>입니다.<br /><br /> 레지스트리 키가 HKEY_CURRENT_USER에 이미 있어야 하고 Value라고 지정된 값을 가져야 합니다. 값은 DWORD 또는 문자열이 될 수 있습니다.<br /><br /> HKEY_CURRENT_USER의 루트에 없는 레지스트리 키를 사용하려면 \<레지스트리 키\레지스트리 키\\...> 형식을 사용하여 키를 식별합니다.|  
+|**레지스트리 항목**|구성 정보를 포함하는 레지스트리 키를 입력합니다. 형식은 \<registry key>입니다.<br /><br /> 레지스트리 키가 HKEY_CURRENT_USER에 이미 있어야 하고 Value라고 지정된 값을 가져야 합니다. 값은 DWORD 또는 문자열이 될 수 있습니다.<br /><br /> HKEY_CURRENT_USER의 루트에 없는 레지스트리 키를 사용하려면 \<Registry key\registry key\\...> 형식을 사용하여 키를 식별합니다.|  
   
  **구성 위치가 환경 변수에 저장됨**  
  구성이 저장되는 환경 변수를 지정하는 데 사용됩니다.  
@@ -498,7 +498,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-3.  **\<프로젝트 이름> 속성 페이지** 대화 상자에서 **배포 유틸리티**를 클릭합니다.  
+3.  **\<project name> 속성 페이지** 대화 상자에서 **배포 유틸리티**를 클릭합니다.  
   
 4.  패키지를 배포할 때 패키지 구성을 업데이트하려면 **AllowConfigurationChanges** 를 **True**로 설정합니다.  
   
@@ -517,7 +517,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  배포 폴더의 경로는 배포 유틸리티를 만든 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트의 DeploymentOutputPath 속성에 지정됩니다. 기본 경로는 bin\Deployment이며 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에 상대적입니다. 자세한 내용은 [Create a Deployment Utility](../../integration-services/packages/create-a-deployment-utility.md)를 참조하세요.  
   
- 패키지 설치 마법사를 사용하여 패키지를 설치합니다. 마법사를 시작하려면 배포 폴더를 서버로 복사한 다음 배포 유틸리티 파일을 두 번 클릭합니다. 이 파일의 이름은 \<프로젝트 이름>.SSISDeploymentManifest이며 대상 컴퓨터의 배포 폴더에 있습니다.  
+ 패키지 설치 마법사를 사용하여 패키지를 설치합니다. 마법사를 시작하려면 배포 폴더를 서버로 복사한 다음 배포 유틸리티 파일을 두 번 클릭합니다. 이 파일의 이름은 \<project name>.SSISDeploymentManifest이며 대상 컴퓨터의 배포 폴더에 있습니다.  
   
 > [!NOTE]  
 >  배포하는 패키지의 버전에 따라 여러 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 함께 설치할 경우 오류가 발생할 수 있습니다. 이 오류는 .SSISDeploymentManifest 파일 이름 확장명이 모든 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]버전에서 동일하기 때문에 발생할 수 있습니다. 파일을 두 번 클릭하면 가장 최근에 설치된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]버전의 설치 관리자가 호출되며 이 버전이 배포 유틸리티 파일과 동일한 버전이 아닐 수 있습니다. 이 문제를 해결하려면 명령줄에서 정확한 버전의 dtsinstall.exe를 실행한 후 배포 유틸리티 파일의 경로를 입력합니다.  
@@ -540,7 +540,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 1.  대상 컴퓨터에서 배포 폴더를 엽니다.  
   
-2.  매니페스트 파일 \<프로젝트 이름>.SSISDeploymentManifest를 두 번 클릭하여 패키지 설치 마법사를 시작합니다.  
+2.  매니페스트 파일 \<project name>.SSISDeploymentManifest를 두 번 클릭하여 패키지 설치 마법사를 시작합니다.  
   
 3.  **SSIS 패키지 배포** 페이지에서 **SQL Server 배포** 옵션을 선택합니다.  
   

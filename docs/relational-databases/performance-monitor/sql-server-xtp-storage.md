@@ -1,5 +1,6 @@
 ---
 title: SQL Server XTP 스토리지 | Microsoft 문서
+description: SQL Server의 메모리 내 OLTP에 대한 디스크에 있는 스토리지와 관련된 카운터를 포함하는 SQL Server XTP 스토리지 성능 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4070580b-880d-4f4c-abcc-626a4fe0c9a2
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 853f9b125a67b95e5c26bd9e81a540e6febc7afe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a623d68d5d738d773ab479bd0ca24c7454399f58
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715208"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457923"
 ---
 # <a name="sql-server-xtp-storage"></a>SQL Server XTP 스토리지
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

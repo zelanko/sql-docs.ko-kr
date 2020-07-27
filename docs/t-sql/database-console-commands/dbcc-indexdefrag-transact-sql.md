@@ -1,5 +1,5 @@
 ---
-title: DBCC INDEXDEFRAG(Transact-SQL) | Microsoft Docs
+title: DBCC INDEXDEFRAG(Transact-SQL)
 ms.custom: ''
 ms.date: 07/16/2017
 ms.prod: sql
@@ -23,14 +23,15 @@ helpviewer_keywords:
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: d1894e33de743e8e4b7f4053b7b77746cca3e124
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ca27b41cffa6ee319acf27e62bc26e1f27a82c44
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901666"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484300"
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG(Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 지정된 테이블 또는 뷰의 인덱스를 조각 모음합니다.
@@ -54,17 +55,19 @@ DBCC INDEXDEFRAG
     [ WITH NO_INFOMSGS ]   
 ```  
   
-## <a name="arguments"></a>인수  
- *database_name* | *database_id* | 0  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
+ *database_name* \| *database_id* \| 0  
  조각 모음할 인덱스가 들어 있는 데이터베이스입니다. 0을 지정하면 현재 데이터베이스가 사용됩니다. 데이터베이스 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 준수해야 합니다.  
   
- *table_name* | *table_id* | *view_name* | *view_id*  
+ *table_name* \| *table_id* \| *view_name* \| *view_id*  
  조각 모음할 인덱스가 들어 있는 테이블 또는 뷰입니다. 테이블 및 뷰 이름은 식별자 규칙을 따라야 합니다.  
   
- *index_name* | *index_id*  
+ *index_name* \| *index_id*  
  조각 모음할 인덱스의 이름 또는 ID입니다. 이 인수를 지정하지 않으면 지정한 테이블이나 뷰의 모든 인덱스를 조각 모음합니다. 인덱스 이름은 식별자에 대한 규칙을 따라야 합니다.  
   
- *partition_number* | 0  
+ *partition_number* \| 0  
  조각 모음할 인덱스의 파티션 번호입니다. 지정하지 않거나 0을 지정하면 지정한 인덱스의 모든 파티션을 조각 모음합니다.  
   
  WITH NO_INFOMSGS  

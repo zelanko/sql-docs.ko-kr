@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1e331b974bee3017e17e75dbf8c3ecb8506349b2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f334633fa164a22f8e23175fd3ba6b25c4f6423
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298309"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917931"
 ---
 # <a name="execute-sql-task"></a>SQL 실행 태스크
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   SQL 실행 태스크는 패키지에서 SQL 문이나 저장 프로시저를 실행합니다. 이 태스크는 단일 SQL 문 또는 순서대로 실행되는 여러 SQL 문을 포함할 수 있습니다. SQL 실행 태스크는 다음 용도로 사용할 수 있습니다.  
@@ -148,7 +148,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
  **관련 항목:** [OLE DB 연결 관리자](../../integration-services/connection-manager/ole-db-connection-manager.md), [ODBC 연결 관리자](../../integration-services/connection-manager/odbc-connection-manager.md), [ADO 연결 관리자](../../integration-services/connection-manager/ado-connection-manager.md), [ADO.NET 연결 관리자](../../integration-services/connection-manager/ado-net-connection-manager.md), [SQL Server Compact Edition 연결 관리자](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **연결**  
- 정의된 연결 관리자 목록에서 연결을 선택합니다. 새 연결을 설정하려면 \<**새 연결...** >을 선택합니다.  
+ 정의된 연결 관리자 목록에서 연결을 선택합니다. 새 연결을 설정하려면 \<**New connection...**>을 선택합니다.  
   
  **SQLSourceType**  
  태스크에서 실행하는 SQL 문의 원본 유형을 선택합니다.  
@@ -190,13 +190,13 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = 파일 연결  
  **FileConnection**  
- 기존 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
+ 기존 파일 연결 관리자를 선택하거나 \<**New connection...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = 변수  
  **SourceVariable**  
- 기존 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
+ 기존 변수를 선택하거나 \<**New variable...**>를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
@@ -205,7 +205,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
   
 ### <a name="options"></a>옵션  
  **변수 이름**  
- **추가**를 클릭하여 매개 변수 매핑을 추가했으면 **변수 추가** 대화 상자를 사용하여 목록에서 시스템 또는 사용자 정의 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 추가합니다.  
+ **추가**를 클릭하여 매개 변수 매핑을 추가했으면 **변수 추가** 대화 상자를 사용하여 목록에서 시스템 또는 사용자 정의 변수를 선택하거나 \<**New variable...**>를 클릭하여 새 변수를 추가합니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md)  
   
@@ -244,7 +244,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
  
   
  **변수 이름**  
- 변수를 선택하여 결과 집합을 변수로 매핑하거나 \<**새 변수...** >를 클릭하여 **변수 추가** 대화 상자를 사용하여 새 변수를 추가합니다.  
+ 변수를 선택하여 결과 집합을 변수로 매핑하거나 \<**New variable...**>를 클릭하여 **변수 추가** 대화 상자를 사용하여 새 변수를 추가합니다.  
   
  **추가**  
  결과 집합 매핑을 추가하려면 클릭합니다.  
@@ -282,7 +282,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
 |연결 형식|매개 변수 표식|매개 변수 이름|SQL 명령 예|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<매개 변수 이름>|\@\<매개 변수 이름>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<parameter name>|\@\<parameter name>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL 및 OLE DB|?|0, 1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -421,7 +421,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
     |연결 형식|매개 변수 표식|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET 및 SQLMOBILE|\@\<매개 변수 이름>|  
+    |ADO.NET 및 SQLMOBILE|\@\<parameter name>|  
     |ODBC|?|  
     |EXCEL 및 OLE DB|?|  
   
@@ -444,7 +444,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
     |연결 형식|매개 변수 이름|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, ...|  
-    |ADO.NET 및 SQLMOBILE|\@\<매개 변수 이름>|  
+    |ADO.NET 및 SQLMOBILE|\@\<parameter name>|  
     |ODBC|1, 2, 3, ...|  
     |EXCEL 및 OLE DB|0, 1, 2, 3, ...|  
   

@@ -1,5 +1,6 @@
 ---
 title: CPU 사용량 모니터링 | Microsoft 문서
+description: SQL Server 인스턴스를 모니터링하여 CPU 사용량이 정상 범위에 있는지 확인합니다. 시스템 모니터를 사용하여 스레드를 실행하는 데 CPU가 얼마만큼의 시간을 소요하는지 확인합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0ba69baf585aca6d6dd30c6a0ab0016a76ef6047
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e81db69a70a54365ffe7da6fbe9933bb98848db
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787465"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458563"
 ---
 # <a name="monitor-cpu-usage"></a>CPU 사용량 모니터링
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "85787465"
   
      프로세서가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 같은 사용자 프로세스를 실행하는 데 소비하는 시간의 백분율에 해당합니다.  
   
--   **System: Processor Queue Length**  
+-   **시스템: Processor Queue Length**  
   
      프로세서 시간을 기다리는 스레드 수에 해당합니다. 프로세스의 스레드에 필요한 프로세서 사이클 수가 사용할 수 있는 개수보다 많으면 프로세서 병목 상태가 발생합니다. 여러 프로세스에서 프로세서 시간을 이용하려고 하면 더 빠른 프로세서를 설치해야 합니다. 또는 다중 프로세서 시스템에서는 프로세서를 추가할 수 있습니다.  
   

@@ -14,16 +14,16 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 3d458e7696719c383b03a5cc3f259de08e4b8c37
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6603041f72a434895aab20b5ab22bf771c90dcac
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68262777"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921249"
 ---
 # <a name="upgrade-integration-services-packages"></a>Integration Services 패키지 업그레이드
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 인스턴스를 최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]릴리스로 업그레이드할 때는 기존 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 패키지가 최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 릴리스에서 사용되는 패키지 형식으로 자동 업그레이드되지 않습니다. 직접 업그레이드 방법을 선택하고 수동으로 패키지를 업그레이드해야 합니다.  
@@ -59,14 +59,14 @@ ms.locfileid: "68262777"
   
 -   DTExecUI.exe.config  
   
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]를 사용하여 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 사용자 지정 구성 요소가 포함된 패키지를 디자인하려면 *\<드라이브>* :\Program Files\Microsoft Visual Studio 10.0\Common7\IDE에 있는 devenv.exe.config 파일을 수정해야 합니다.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]를 사용하여 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 사용자 지정 구성 요소가 포함된 패키지를 디자인하려면 *\<drive>* :\Program Files\Microsoft Visual Studio 10.0\Common7\IDE에 있는 devenv.exe.config 파일을 수정해야 합니다.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]용 런타임을 사용하여 빌드된 사용자 지정 애플리케이션으로 이러한 패키지를 사용하려면 실행 파일에 대한 *.exe.config 파일의 구성 섹션에 리디렉션 파일을 포함하십시오. 규칙은 런타임 어셈블리를 버전 13.0.0.0([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])으로 리디렉션합니다. 어셈블리 버전 리디렉션에 대한 자세한 내용은 [\<runtime>용 \<assemblyBinding>요소](https://msdn.microsoft.com/library/twy1dw1e.aspx)를 참조하세요.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]용 런타임을 사용하여 빌드된 사용자 지정 애플리케이션으로 이러한 패키지를 사용하려면 실행 파일에 대한 *.exe.config 파일의 구성 섹션에 리디렉션 파일을 포함하십시오. 규칙은 런타임 어셈블리를 버전 13.0.0.0([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])으로 리디렉션합니다. 어셈블리 버전 리디렉션에 대한 자세한 내용은 [\<runtime>의 \<assemblyBinding>](https://msdn.microsoft.com/library/twy1dw1e.aspx) 요소를 참조하세요.  
   
 ### <a name="locating-the-assemblies"></a>어셈블리 찾기  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 어셈블리는 .NET 4.0으로 업그레이드되었습니다. *\<드라이브>* :\Windows\Microsoft.NET\assembly에는 .NET 4에 대한 별도의 전역 어셈블리 캐시가 있습니다. 이 경로, 주로 GAC_MSIL 폴더에서 모든 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 어셈블리를 찾을 수 있습니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 어셈블리는 .NET 4.0으로 업그레이드되었습니다. *\<drive>* :\Windows\Microsoft.NET\assembly에는 .NET 4에 대한 별도의 전역 어셈블리 캐시가 있습니다. 이 경로, 주로 GAC_MSIL 폴더에서 모든 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 어셈블리를 찾을 수 있습니다.  
   
- 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서와 같이 핵심 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 확장성 .dll 파일도 *\<드라이브>* :\Program Files\Microsoft SQL Server\130\SDK\Assemblies에 있습니다.  
+ 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서처럼 핵심 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 확장성 .dll 파일도 *\<drive>* :\Program Files\Microsoft SQL Server\130\SDK\Assemblies에 있습니다.  
   
 ## <a name="understanding-sql-server-package-upgrade-results"></a>SQL Server 패키지 업그레이드 결과 이해  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 패키지에 포함된 대부분의 구성 요소 및 기능은 패키지 업그레이드 프로세스 중에 최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]릴리스의 해당 구성 요소 및 기능으로 원활하게 변환됩니다. 하지만 업그레이드되지 않거나 업그레이드 결과에 주의해야 하는 몇 가지 구성 요소 및 기능이 있습니다. 다음 표에서는 이러한 구성 요소 및 기능을 보여 줍니다.  

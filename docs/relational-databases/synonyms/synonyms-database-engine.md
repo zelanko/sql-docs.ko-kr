@@ -15,15 +15,15 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e863a04214a27f61581f10c4a2610671bde43635
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0e992a6629f3dbff2e8ed5e3b2b9cc568a7b8811
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787254"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918069"
 ---
 # <a name="synonyms-database-engine"></a>동의어(데이터베이스 엔진)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   동의어란 다음 용도로 사용되는 데이터베이스 개체입니다.  
   
 -   로컬 서버나 원격 서버에 있을 수 있는 기본 개체로 참조되는 다른 데이터베이스 개체의 대체 이름을 제공합니다.  
@@ -35,17 +35,37 @@ ms.locfileid: "85787254"
 **Server1**의 **Employee** 테이블에 대한 동의어, **EmpTable** 을 **Server2**에 만들어 이러한 문제를 해결할 수 있습니다. 이제 클라이언트 애플리케이션은 단일 부분으로 된 이름인 **EmpTable**만 사용하여 **Employee** 테이블을 참조해야 합니다. 또한 **Employee** 테이블 위치가 변경되면 동의어 **EmpTable**를 수정하여 **Employee** 테이블의 새 위치를 가리키게 해야 합니다. ALTER SYNONYM 문이 없으므로 먼저 동의어 **EmpTable**을 삭제한 다음 같은 이름으로 동의어를 다시 만들지만 **Employee**의 새 위치를 가리키게 해야 합니다.  
   
 동의어는 스키마에 속하고 스키마의 다른 개체처럼 동의어 이름은 고유해야 합니다. 다음 데이터베이스 개체의 동의어를 만들 수 있습니다.  
-  
-|||  
-|-|-|  
-|어셈블리(CLR) 저장 프로시저|어셈블리(CLR) 테이블 반환 함수|  
-|어셈블리(CLR) 스칼라 함수|어셈블리(CLR) 집계 함수|  
-|복제 필터 프로시저|확장 저장 프로시저|  
-|SQL 스칼라 함수|SQL 테이블 반환 함수|  
-|SQL 인라인 테이블 반환 함수|SQL 저장 프로시저|  
-|보기|테이블*(사용자 정의)|  
-  
- *로컬 및 전역 임시 테이블이 포함됩니다.  
+
+:::row:::
+    :::column:::
+        어셈블리(CLR) 저장 프로시저
+
+        어셈블리(CLR) 스칼라 함수
+
+        복제 필터 프로시저
+
+        SQL 스칼라 함수
+
+        SQL 인라인 테이블 반환 함수
+
+        보기
+    :::column-end:::
+    :::column:::
+        어셈블리(CLR) 테이블 반환 함수
+
+        어셈블리(CLR) 집계 함수
+
+        어셈블리(CLR) 집계 함수
+
+        SQL 테이블 반환 함수
+
+        SQL 저장 프로시저
+
+        테이블*(사용자 정의)
+    :::column-end:::
+:::row-end:::
+
+*로컬 및 전역 임시 테이블이 포함됩니다.  
   
 > [!NOTE]  
 > 함수 기본 개체의 네 부분으로 된 이름은 지원되지 않습니다.  
@@ -63,23 +83,48 @@ ms.locfileid: "85787254"
 **db_owner**의 멤버나 **db_ddladmin** 의 멤버인 동의어 소유자만 동의어에 대한 권한을 부여 받을 수 있습니다.  
   
 동의어에 대한 다음과 같은 모든 권한에 대해 `GRANT`, `DENY` 및 `REVOKE`를 수행할 수 있습니다.  
-  
-|||  
-|-|-|  
-|CONTROL|Delete|  
-|CREATE 문을 실행하기 전에|INSERT|  
-|SELECT|TAKE OWNERSHIP|  
-|UPDATE|VIEW DEFINITION|  
-  
+
+:::row:::
+    :::column:::
+      CONTROL
+
+      CREATE 문을 실행하기 전에
+
+      SELECT
+
+      UPDATE
+    :::column-end:::
+    :::column:::
+      Delete
+
+      INSERT
+
+      TAKE OWNERSHIP
+
+      VIEW DEFINITION
+    :::column-end:::
+:::row-end:::
+
 ## <a name="using-synonyms"></a>동의어 사용  
- 여러 SQL 문 및 식 컨텍스트에서 동의어를 해당 참조 기준 개체 대신 사용할 수 있습니다. 다음 표에서는 이러한 문 및 식 컨텍스트를 나열합니다.  
-  
-|||  
-|-|-|  
-|SELECT|INSERT|  
-|UPDATE|Delete|  
-|CREATE 문을 실행하기 전에|하위 SELECT|  
-  
+ 여러 SQL 문 및 식 컨텍스트에서 동의어를 해당 참조 기준 개체 대신 사용할 수 있습니다. 다음 열에서는 이러한 문 및 식 컨텍스트를 나열합니다.  
+
+:::row:::
+    :::column:::
+        SELECT
+
+        UPDATE
+
+        CREATE 문을 실행하기 전에
+    :::column-end:::
+    :::column:::
+        INSERT
+
+        Delete
+
+        하위 SELECT
+    :::column-end:::
+:::row-end:::
+ 
  앞에서 설명한 컨텍스트에서 동의어를 사용하면 기준 개체가 영향을 받습니다. 예를 들어 동의어가 테이블 기준 개체를 참조하며 동의어에 행을 삽입한 경우 실제로 참조되는 테이블에 행이 삽입됩니다.  
   
 > [!NOTE]  
@@ -97,19 +142,36 @@ EXEC ('ALTER TABLE dbo.MyProduct
 ```  
   
 사용 권한 제어를 위한 다음 문은 동의어에만 관련되며 기준 개체와는 관련되지 않습니다.  
-  
-|||  
-|-|-|  
-|GRANT|거부|  
-|REVOKE||  
-  
+
+:::row:::
+    :::column:::
+        GRANT
+
+        REVOKE
+    :::column-end:::
+    :::column:::
+        거부
+    :::column-end:::
+:::row-end:::
+
 동의어는 스키마 바운드가 아니므로 다음과 같은 스키마 바운드 식 컨텍스트에서 참조할 수 없습니다.  
-  
-|||  
-|-|-|  
-|CHECK 제약 조건|계산 열|  
-|기본 식|규칙 식|  
-|스키마 바운드 뷰|스키마 바운드 함수|  
+
+:::row:::
+    :::column:::
+        CHECK 제약 조건
+
+        기본 식
+
+        스키마 바운드 뷰
+    :::column-end:::
+    :::column:::
+        계산 열
+
+        규칙 식
+
+        스키마 바운드 함수
+    :::column-end:::
+:::row-end:::
   
 스키마 바운드 함수에 대한 자세한 내용은 [사용자 정의 함수 만들기&#40;데이터베이스 엔진&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)를 참조하세요.  
   

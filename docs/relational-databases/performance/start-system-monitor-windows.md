@@ -1,5 +1,6 @@
 ---
 title: 시스템 모니터 시작(Windows) | Microsoft 문서
+description: 프로세서 및 메모리 사용 같은 성능 데이터 카운터를 수집하고 잠금 및 트랜잭션 같은 SQL Server 리소스에 대해 시스템 모니터를 사용하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 58027f9fa617b5fb77fc02f1268197930ea169cf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e03d2d02e970a4e76988664254e0f6f26a78355b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655214"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457605"
 ---
 # <a name="start-system-monitor-windows"></a>시스템 모니터 시작(Windows)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

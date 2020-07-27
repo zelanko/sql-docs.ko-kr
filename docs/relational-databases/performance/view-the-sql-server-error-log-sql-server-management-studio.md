@@ -1,6 +1,6 @@
 ---
 title: SQL Server 오류 로그 보기(SSMS)
-description: SSMS(SQL Server Management Studio)에서 SQL Server 오류 로그를 봅니다.
+description: 문제 해결에 사용할 수 있는 사용자 정의 이벤트와 특정 시스템 이벤트를 포함하는 SQL Server 오류 로그에 대해 알아봅니다.
 ms.custom: seo-dt-2019
 ms.date: 09/29/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a10948a63d119ec86c156b79d925f1b905b152f4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 54aa4b48837f171406edbbe4cbadcacf5b910a99
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737081"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458055"
 ---
 # <a name="view-the-sql-server-error-log-in-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)에서 SQL Server 오류 로그 보기
 

@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 4718bcb629f1aabbc458ac505eab3ae92bab52cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 260babc5be248cc07b90001c2bb63fa7a6439a05
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731300"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552958"
 ---
 # <a name="hints-transact-sql---query"></a>힌트(Transact-SQL) - 쿼리
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -138,7 +138,9 @@ ms.locfileid: "85731300"
 }  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 { HASH | ORDER } GROUP  
 쿼리의 GROUP BY 또는 DISTINCT 절이 지정하는 집계에서 해시나 정렬을 사용하도록 지정합니다.  
   
@@ -359,11 +361,11 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
   
  테이블 힌트를 지정하지 않고 _exposed\_object\_name_을 지정하면 개체에 대한 테이블 힌트의 일부로 쿼리에서 지정한 인덱스가 모두 무시됩니다. 쿼리 최적화 프로그램에서 인덱스 사용 여부를 결정합니다. 이 방법은 원래 쿼리를 수정할 수 없을 때 INDEX 테이블 힌트의 효과를 제거하는 데 이용할 수 있습니다. 자세한 내용은 예 10을 참조하세요.  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) | INDEX = ( _index\_value_ ) | FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } *exposed_object_name*에 해당하는 테이블 또는 뷰에 쿼리 힌트로 적용할 테이블 힌트입니다. 이러한 힌트에 대한 설명은 [테이블 힌트 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)을 참조하세요.  
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) \| INDEX = ( _index\_value_ ) \| FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... ] **))** ] \| FORCESCAN \| HOLDLOCK \| NOLOCK \| NOWAIT \| PAGLOCK \| READCOMMITTED \| READCOMMITTEDLOCK \| READPAST \| READUNCOMMITTED \| REPEATABLEREAD \| ROWLOCK \| SERIALIZABLE \| SNAPSHOT \| SPATIAL_WINDOW_MAX_CELLS \| TABLOCK \| TABLOCKX \| UPDLOCK \| XLOCK } *exposed_object_name*에 해당하는 테이블 또는 뷰에 쿼리 힌트로 적용할 테이블 힌트입니다. 이러한 힌트에 대한 설명은 [테이블 힌트 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)을 참조하세요.  
   
  쿼리에 테이블 힌트를 지정하는 WITH 절이 없다면 INDEX, FORCESCAN 및 FORCESEEK 이외의 테이블 힌트를 쿼리 힌트로 사용할 수 없습니다. 자세한 내용은 설명 부분을 참조하세요.  
   
-> [!CAUTION] 
+> [!CAUTION]
 > 매개 변수와 함께 FORCESEEK를 지정할 경우 매개 변수 없이 FORCESEEK를 지정할 때보다 최적화 프로그램에서 고려할 수 있는 계획 수가 더 제한됩니다. 이로 인해 "계획을 생성할 수 없음" 오류가 많은 사례에서 발생하는 원인이 될 수도 있습니다. 후속 릴리스에서는 더 많은 계획을 고려할 수 있도록 최적화 프로그램이 수정될 것입니다.  
   
 ## <a name="remarks"></a>설명  

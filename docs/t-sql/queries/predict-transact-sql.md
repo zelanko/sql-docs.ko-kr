@@ -17,13 +17,13 @@ helpviewer_keywords:
 - PREDICT clause
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: e570c7cbc06c6d2e384d34571e0af7ca93003ceb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest||=sqlallproducts-allversions'
+ms.openlocfilehash: 039441b0029a5c2d92e16f7bc35bc496c6cd440c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012576"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918609"
 ---
 # <a name="predict-transact-sql"></a>PREDICT(Transact-SQL)
 
@@ -32,6 +32,8 @@ ms.locfileid: "86012576"
 저장된 모델을 기반으로 예측 값 또는 점수를 생성합니다. 자세한 내용은 [PREDICT T-SQL 함수를 사용하는 네이티브 채점](../../machine-learning/predictions/native-scoring-predict-transact-sql.md)을 참조하세요.
 
 ## <a name="syntax"></a>구문
+
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 ```syntaxsql
 PREDICT  
@@ -55,21 +57,58 @@ WITH ( <result_set_definition> )
 MODEL = @model | model_literal  
 ```
 
+::: moniker-end
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+
+```syntaxsql
+PREDICT  
+(  
+  MODEL = <model_object>,
+  DATA = object AS <table_alias>
+  [, RUNTIME = ONNX ]
+)  
+WITH ( <result_set_definition> )  
+
+<result_set_definition> ::=  
+  {  
+    { column_name  
+      data_type  
+      [ COLLATE collation_name ]  
+      [ NULL | NOT NULL ]  
+    }  
+      [,...n ]  
+  }  
+
+<model_object> ::=
+  {
+    model_literal
+    | model_variable
+    | ( scalar_subquery )
+  }
+```
+
+::: moniker-end
+
 ### <a name="arguments"></a>인수
 
 **MODEL**
 
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
 `MODEL` 매개 변수를 사용하여 점수 매기기 또는 예측에 사용되는 모델을 지정합니다. 모델은 변수 또는 리터럴 또는 스칼라 식으로 지정됩니다.
 
-::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
 `PREDICT`는 [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) 및 [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) 패키지를 사용하여 학습된 모델을 지원합니다.
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+`MODEL` 매개 변수를 사용하여 점수 매기기 또는 예측에 사용되는 모델을 지정합니다. 모델은 변수 또는 리터럴 또는 스칼라 식으로 지정됩니다.
+
 Azure SQL Managed Instance에서 `PREDICT`는 [ONNX(Open Neural Network Exchange)](https://onnx.ai/get-started.html) 형식의 모델 또는 [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) 및 [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) 패키지를 사용하여 학습된 모델을 지원합니다.
 ::: moniker-end
 
 ::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+`MODEL` 매개 변수를 사용하여 점수 매기기 또는 예측에 사용되는 모델을 지정합니다. 모델은 변수 또는 리터럴 또는 스칼라 식 또는 스칼라 하위 쿼리로 지정됩니다.
+
 Azure Synapse Analytics에서 `PREDICT`는 [ONNX(Open Neural Network Exchange)](https://onnx.ai/get-started.html) 형식의 모델을 지원합니다.
 ::: moniker-end
 
@@ -129,11 +168,27 @@ WITH 절을 사용하여 `PREDICT` 함수에서 반환되는 출력의 스키마
 
 이 예제는 `SELECT` 문의 `FROM`절에서 `PREDICT` 함수를 참조합니다.
 
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
 ```sql
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
     DATA = dbo.mytable AS d) WITH (Score float) AS p;
 ```
+
+:::moniker-end
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+
+```sql
+DECLARE @model varbinary(max) = (SELECT test_model FROM scoring_model WHERE model_id = 1);
+
+SELECT d.*, p.Score
+FROM PREDICT(MODEL = @model,
+    DATA = dbo.mytable AS d) WITH (Score float) AS p;
+```
+
+::: moniker-end
 
 `DATA` 매개 변수에서 테이블 원본에 대해 지정된 별칭 **d**는 `dbo.mytable`에 속하는 열을 참조하는 데 사용됩니다. `PREDICT` 함수에 대해 지정된 별칭 **p**는 `PREDICT` 함수에서 반환한 열을 참조하는 데 사용됩니다.
 
@@ -141,6 +196,20 @@ FROM PREDICT(MODEL = @model,
 - `DATA` 매개 변수에서 테이블 원본에 대해 지정된 별칭 **d**는 `dbo.mytable`에 속하는 열을 참조하는 데 사용됩니다. 입력 데이터 열 이름은 모델의 입력 이름과 일치해야 합니다.
 - `PREDICT` 함수에 대해 지정된 별칭 **p**는 `PREDICT` 함수에서 반환한 예측 열을 참조하는 데 사용됩니다. 열 이름에는 모델의 출력 이름과 같은 이름을 지정해야 합니다.
 - 모든 입력 데이터 열 및 예측 열은 SELECT 문에 표시될 수 있습니다.
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+
+위의 예제 쿼리에서 `MODEL`을 스칼라 하위 쿼리로 지정하여 보기를 만들 수 있습니다.
+
+```sql
+CREATE VIEW predictions
+AS
+SELECT d.*, p.Score
+FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
+             DATA = dbo.mytable AS d) WITH (Score float) AS p;
+```
+
+:::moniker-end
 
 ### <a name="combining-predict-with-an-insert-statement"></a>INSERT 문과 PREDICT 결합
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a38a6f46ca742dc280135590c2a4cece40ff13f6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 34e33ea3fbb3ff0ef10e237bc7bdc0ad61c223db
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882488"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484631"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Linux에 SQL Server Machine Learning Services(Python 및 R) 설치
 
@@ -60,11 +60,11 @@ ms.locfileid: "85882488"
 |mssql-server-extensibility  | 모두 | Python 및 R을 실행하는 데 사용되는 확장성 프레임워크입니다. |
 | microsoft-openmpi  | Python, R | Linux에서 병렬 처리를 위해 Rev* 라이브러리가 사용하는 메시지 전달 인터페이스입니다. |
 | mssql-mlservices-python | Python | Anaconda 및 Python의 오픈 소스 배포입니다. |
-|mssql-mlservices-mlm-py  | Python | ‘전체 설치’.  이미지 기능화 및 텍스트 감정 분석을 위한 revoscalepy, microsoftml, 미리 학습된 모델을 제공합니다.| 
-|mssql-mlservices-packages-py  | Python | ‘최소 설치’.  revoscalepy 및 microsoftml을 제공합니다. <br/>미리 학습된 모델을 제외합니다. | 
+|mssql-mlservices-mlm-py  | Python | ‘전체 설치’. 이미지 기능화 및 텍스트 감정 분석을 위한 revoscalepy, microsoftml, 미리 학습된 모델을 제공합니다.| 
+|mssql-mlservices-packages-py  | Python | ‘최소 설치’. revoscalepy 및 microsoftml을 제공합니다. <br/>미리 학습된 모델을 제외합니다. | 
 | [microsoft-r-open*](#mro) | R | 3개 패키지로 구성된 R의 오픈 소스 배포입니다. |
-|mssql-mlservices-mlm-r  | R | ‘전체 설치’.  제공 항목: 이미지 기능화 및 텍스트 감정 분석을 위한 미리 학습된 모델, RevoScaleR, MicrosoftML, sqlRUtils, olapR| 
-|mssql-mlservices-packages-r  | R | ‘최소 설치’.  RevoScaleR, sqlRUtils, MicrosoftML, olapR을 제공합니다. <br/>미리 학습된 모델을 제외합니다. |
+|mssql-mlservices-mlm-r  | R | ‘전체 설치’. 제공 항목: 이미지 기능화 및 텍스트 감정 분석을 위한 미리 학습된 모델, RevoScaleR, MicrosoftML, sqlRUtils, olapR| 
+|mssql-mlservices-packages-r  | R | ‘최소 설치’. RevoScaleR, sqlRUtils, MicrosoftML, olapR을 제공합니다. <br/>미리 학습된 모델을 제외합니다. |
 
 <a name="RHEL"></a>
 
@@ -92,8 +92,8 @@ yum update
 Python 및 R의 설치 옵션:
 
 *  요구 사항에 따라 언어 지원을 설치합니다(단일 언어 또는 여러 언어).
-*  ‘전체 설치’는 미리 학습된 기계 학습 모델을 포함하여 사용 가능한 모든 기능을 제공합니다. 
-*  ‘최소 설치’는 모델을 제외하지만 모든 기능을 포함합니다. 
+*  ‘전체 설치’는 미리 학습된 기계 학습 모델을 포함하여 사용 가능한 모든 기능을 제공합니다.
+*  ‘최소 설치’는 모델을 제외하지만 모든 기능을 포함합니다.
 
 > [!Tip]
 > 가능하면 `yum clean all`을 실행하여 설치 전에 시스템에서 패키지를 새로 고칩니다.
@@ -165,8 +165,8 @@ sudo apt-get update
 Python 및 R의 설치 옵션:
 
 *  요구 사항에 따라 언어 지원을 설치합니다(단일 언어 또는 여러 언어).
-*  ‘전체 설치’는 미리 학습된 기계 학습 모델을 포함하여 사용 가능한 모든 기능을 제공합니다. 
-*  ‘최소 설치’는 모델을 제외하지만 모든 기능을 포함합니다. 
+*  ‘전체 설치’는 미리 학습된 기계 학습 모델을 포함하여 사용 가능한 모든 기능을 제공합니다.
+*  ‘최소 설치’는 모델을 제외하지만 모든 기능을 포함합니다.
 
 > [!Tip]
 > 가능하면 `apt-get update`을 실행하여 설치 전에 시스템에서 패키지를 새로 고칩니다. 
@@ -234,8 +234,8 @@ zypper update
 Python 및 R의 설치 옵션:
 
 *  요구 사항에 따라 언어 지원을 설치합니다(단일 언어 또는 여러 언어).
-*  ‘전체 설치’는 미리 학습된 기계 학습 모델을 포함하여 사용 가능한 모든 기능을 제공합니다. 
-*  ‘최소 설치’는 모델을 제외하지만 모든 기능을 포함합니다. 
+*  ‘전체 설치’는 미리 학습된 기계 학습 모델을 포함하여 사용 가능한 모든 기능을 제공합니다.
+*  ‘최소 설치’는 모델을 제외하지만 모든 기능을 포함합니다.
 
 ### <a name="full-installation"></a>전체 설치 
 
@@ -276,7 +276,7 @@ sudo zypper install mssql-mlservices-packages-r
 
 추가 구성은 주로 [mssql-conf tool](sql-server-linux-configure-mssql-conf.md)을 통해 진행됩니다.
 
-1. SQL Server 서비스를 실행하는 데 사용되는 mssql 사용자 계정을 추가합니다.
+1. 패키지 설치가 완료되면 mssql-conf setup을 실행하고, 프롬프트에 따라 SA 암호를 설정하고, 버전을 선택합니다. 아직 SQL Server on Linux를 구성하지 않은 경우에만 이 단계를 수행합니다. 
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -384,21 +384,21 @@ sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 ### <a name="rhel7-paths"></a>RHEL/7 경로
 
-|||
+|패키지|다운로드 위치|
 |--|----|
 | mssql/mlservices 패키지 | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 | microsoft-r-open 패키지 | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
 
 ### <a name="ubuntu1604-paths"></a>Ubuntu/16.04 경로
 
-|||
+|패키지|다운로드 위치|
 |--|----|
 | mssql/mlservices 패키지 | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 | microsoft-r-open 패키지 | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/) | 
 
 ### <a name="sles12-paths"></a>SLES/12 경로
 
-|||
+|패키지|다운로드 위치|
 |--|----|
 | mssql/mlservices 패키지 | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 | microsoft-r-open 패키지 | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 

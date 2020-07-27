@@ -27,16 +27,16 @@ helpviewer_keywords:
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 33ce0a748381e425371b6f36c1ceeaaba4b62501
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7121efa290a8cea45804467243e11dbfd98f275
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296875"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921999"
 ---
 # <a name="package-management-ssis-service"></a>패키지 관리(SSIS 서비스)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   패키지 관리에는 모니터링, 관리, 패키지 가져오기 및 내보내기가 포함됩니다.  
@@ -130,7 +130,7 @@ ms.locfileid: "71296875"
   
     -   **서버 유형** 상자에서 **Integration Services**를 선택합니다.  
   
-    -   **서버 이름** 상자에 서버 이름을 입력하거나 **\<더 찾아보기…>** 를 클릭하여 사용할 서버를 찾습니다.  
+    -   **서버 이름** 상자에 서버 이름을 입력하거나 **\<Browse for more...>** 를 클릭하여 사용할 서버를 찾습니다.  
   
 3.  개체 탐색기가 열려 있지 않으면 **보기** 메뉴에서 **개체 탐색기**를 클릭합니다.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "71296875"
   
     -   **서버 유형** 상자에서 **Integration Services**를 선택합니다.  
   
-    -   **서버 이름** 상자에 서버 이름을 입력하거나 **\<더 찾아보기…>** 를 클릭하여 사용할 서버를 찾습니다.  
+    -   **서버 이름** 상자에 서버 이름을 입력하거나 **\<Browse for more...>** 를 클릭하여 사용할 서버를 찾습니다.  
   
 3.  개체 탐색기가 열려 있지 않으면 **보기** 메뉴에서 **개체 탐색기**를 클릭합니다.  
   

@@ -25,16 +25,16 @@ helpviewer_keywords:
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 19f179ae869a175ea6238ba4ade9e5f87d663e08
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d200856e098317f3158c2ace61c8e7cbb0001e88
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297794"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917110"
 ---
 # <a name="dtutil-utility"></a>Encrypt
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **dtutil** 명령 프롬프트 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 관리합니다. 이 유틸리티는 패키지를 복사, 이동, 삭제하거나 패키지가 있는지 여부를 확인할 수 있습니다. 해당 동작은 [!INCLUDE[ssIS](../includes/ssis-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] 데이터베이스, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 패키지 저장소 및 파일 시스템의 세 위치 중 하나에 저장된 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지에서 수행할 수 있습니다. 유틸리티가 **msdb**에 저장된 패키지에 액세스하는 경우 명령 프롬프트에 사용자 이름과 암호를 입력해야 할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하면 사용자 이름과 암호를 모두 입력해야 합니다. 사용자 이름이 누락된 경우 **dtutil** 은 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 로그온하려고 시도합니다. 패키지 스토리지 유형은 **/SQL**, **/FILE**및 **/DTS** 옵션으로 식별됩니다.  
@@ -66,18 +66,18 @@ ms.locfileid: "71297794"
   
  64비트 컴퓨터의 경우 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 64비트 버전의 **dtexec** 유틸리티(dtexec.exe) 및 **dtutil** 유틸리티(dtutil.exe)를 설치합니다. 이러한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 도구의 32비트 버전을 설치하려면 설치 도중 클라이언트 도구 또는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 를 선택해야 합니다.  
   
- 기본적으로 64비트 및 32비트 버전의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 명령 프롬프트 유틸리티가 모두 설치되어 있는 64비트 컴퓨터는 명령 프롬프트에서 32비트 버전을 실행합니다. 64비트 버전에 대한 디렉터리 경로 앞에 32비트 버전에 대한 디렉터리 경로가 PATH 환경 변수에 나타나기 때문에 32비트 버전이 실행됩니다. (일반적으로 32비트 디렉터리 경로는 *\<drive>* :\Program Files(x86)\Microsoft SQL Server\130\DTS\Binn이고, 64비트 디렉터리 경로는 *\<drive>* :\Program Files\Microsoft SQL Server\130\DTS\Binn입니다.)  
+ 기본적으로 64비트 및 32비트 버전의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 명령 프롬프트 유틸리티가 모두 설치되어 있는 64비트 컴퓨터는 명령 프롬프트에서 32비트 버전을 실행합니다. 64비트 버전에 대한 디렉터리 경로 앞에 32비트 버전에 대한 디렉터리 경로가 PATH 환경 변수에 나타나기 때문에 32비트 버전이 실행됩니다. 일반적으로 32비트 디렉터리 경로는 *\<drive>* :\Program Files(x86)\Microsoft SQL Server\130\DTS\Binn이고, 64비트 디렉터리 경로는 *\<drive>* :\Program Files\Microsoft SQL Server\130\DTS\Binn입니다.  
   
 > [!NOTE]  
 >  SQL Server 에이전트를 사용하여 유틸리티를 실행하는 경우 SQL Server 에이전트는 64비트 버전의 유틸리티를 자동으로 사용합니다. SQL Server 에이전트는 PATH 환경 변수가 아닌 레지스트리를 사용하여 유틸리티에 대한 올바른 실행 파일을 찾습니다.  
   
  명령 프롬프트에서 64비트 버전의 유틸리티를 실행하기 위해 다음 동작 중 하나를 수행할 수 있습니다.  
   
--   명령 프롬프트 창을 열고 64비트 버전의 유틸리티가 포함되어 있는 디렉터리( *\<drive>* :\Program Files\Microsoft SQL Server\130\DTS\Binn)로 변경한 다음 해당 위치에서 유틸리티를 실행합니다.  
+-   명령 프롬프트 창을 열고 64비트 버전의 유틸리티가 포함되어 있는 디렉터리 *(\<drive>* :\Program Files\Microsoft SQL Server\130\DTS\Binn)로 변경한 다음, 해당 위치에서 유틸리티를 실행합니다.  
   
 -   명령 프롬프트에서 64비트 버전의 유틸리티에 대한 전체 경로( *\<drive>* :\Program Files\Microsoft SQL Server\130\DTS\Binn)를 입력하여 유틸리티를 실행합니다.  
   
--   변수에서 32비트 경로( *\<drive>* :\Program Files\Microsoft SQL Server\130\DTS\Binn) 앞에 64비트 경로( *\<drive>* :\ Program Files(x86)\Microsoft SQL Server\130\DTS\Binn)를 배치하여 PATH 환경 변수에서의 경로 순서를 영구적으로 변경합니다.  
+-   PATH 환경 변수에서 32비트 경로( *\<drive>* :\ Program Files(x86)\Microsoft SQL Server\130\DTS\Binn) 앞에 64비트 경로( *\<drive>* :\Program Files\Microsoft SQL Server\130\DTS\Binn)를 배치하여 변수에서의 경로 순서를 영구적으로 변경합니다.  
   
 ## <a name="syntax"></a>구문  
   

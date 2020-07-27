@@ -11,16 +11,16 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f8ea5d4b1e91a3f1c3bf66dab4565ab457933c5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 364f706c8c2dc361ae5e2b53d8130662914f6ccf
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999856"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554850"
 ---
 # <a name="temporal-tables"></a>임시 테이블
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 SQL Server 2016에서는 현재 시점에서 정확한 데이터만이 아니라 임의 시점에서 테이블에 저장된 데이터에 대한 정보를 제공하기 위해 기본적으로 지원을 제공하는 데이터베이스 기능으로 임시 테이블(시스템 버전 임시 테이블이라고도 함)에 대한 지원을 도입했습니다. 임시 테이블은 ANSI SQL 2011에서 도입된 데이터베이스 기능입니다.
 
@@ -51,7 +51,7 @@ SQL Server 2016에서는 현재 시점에서 정확한 데이터만이 아니라
 
 ## <a name="what-is-a-system-versioned-temporal-table"></a>시스템 버전 관리 temporal 테이블이란?
 
-시스템 버전 임시 테이블은 데이터 변경 내용의 전체 기록을 유지하고 간편한 지정 시간 분석을 허용하도록 설계된 사용자 테이블의 종류입니다. 이 유형의 temporal 테이블은 각 행의 유효 기간이 시스템(예: 데이터베이스 엔진)에 의해 관리되기 때문에 시스템 버전 temporal 테이블이라고 합니다.
+시스템 버전 temporal 테이블은 데이터 변경 내용의 전체 기록을 유지하여 간편한 지정 시간 분석을 허용하도록 설계된 사용자 테이블의 종류입니다. 이 유형의 temporal 테이블은 각 행의 유효 기간이 시스템(예: 데이터베이스 엔진)에 의해 관리되기 때문에 시스템 버전 temporal 테이블이라고 합니다.
 
 모든 temporal 테이블에는 명시적으로 정의된 두 개의 열이 있으며, 각 열의 데이터 형식은 **datetime2** 입니다. 이러한 열을 기간 열이라고 합니다. 이러한 기간 열은 행이 수정될 때마다 시스템에서 각 행의 유효 기간을 기록하는 데에만 사용됩니다.
 

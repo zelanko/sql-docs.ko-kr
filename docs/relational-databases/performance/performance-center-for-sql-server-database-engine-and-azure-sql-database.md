@@ -1,5 +1,6 @@
 ---
 title: 성능 센터
+description: SQL Server 데이터베이스 엔진 및 Azure SQL Database의 성능에 대해 알아야 하는 정보를 찾습니다.
 ms.custom: seo-dt-2019
 ms.date: 12/11/2018
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e5149d0b1128b2ecb0c934ad9abf3ec7979e532e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9a0a4e7305ec54193b933f7360c32ef864f0c6ec
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758864"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457670"
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 성능 센터
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +67,7 @@ ms.locfileid: "85758864"
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **병렬 처리 최적화**|[max worker threads 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)<br />[데이터베이스 범위 구성 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **쿼리 최적화 프로그램 최적화**|[데이터베이스 범위 구성 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)<br />[USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[통계](../../relational-databases/statistics/statistics.md)**|[통계 업데이트 시기](../statistics/statistics.md)<br />[통계 업데이트](../../relational-databases/statistics/update-statistics.md)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[메모리 내 OLTP &#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)**|[메모리 최적화 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)<br />[고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)<br />[고유하게 컴파일된 저장 프로시저의 TempDB에서 테이블 만들기 및 액세스](../../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md)<br />[메모리 액세스에 최적화된 해시 인덱스의 일반적인 성능 문제 해결](https://msdn.microsoft.com/library/1954a997-7585-4713-81fd-76d429b8d095)<br />[데모: 메모리 내 OLTP 성능 향상](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)|
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[메모리 내 OLTP &#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)**|[메모리 최적화 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)<br />[고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)<br />[고유하게 컴파일된 저장 프로시저의 TempDB에서 테이블 만들기 및 액세스](../../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md)<br />[메모리 액세스에 최적화된 해시 인덱스의 일반적인 성능 문제 해결](https://msdn.microsoft.com/library/1954a997-7585-4713-81fd-76d429b8d095)<br />[데모: 메모리 내 OLTP의 성능 향상](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)|
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md)**|[지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md)|
   
 ## <a name="see-also"></a>참고 항목  

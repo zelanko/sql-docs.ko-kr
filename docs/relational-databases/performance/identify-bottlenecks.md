@@ -1,5 +1,6 @@
 ---
 title: 병목 상태 식별 | Microsoft 문서
+description: SQL Server의 부족한 리소스, 오작동하는/잘못 구성된 리소스 등 병목 상태의 원인에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c55d70a4c3ca15a204b216493395e22b2e59642
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 271a005709dc4087ca8d22c7b54f21eebbbfc525
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718912"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457671"
 ---
 # <a name="identify-bottlenecks"></a>병목 상태 식별
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "85718912"
 ## <a name="analyzing-bottlenecks"></a>병목 상태 분석  
  다양한 이벤트에서 과도하게 시간이 소요되면 튜닝할 수 있는 병목 상태가 있음을 의미합니다.  
   
- 다음은 그 예입니다.  
+ 예를 들면 다음과 같습니다.  
   
 -   다른 구성 요소로 인해 이 구성 요소에 로드가 도달하지 못해 로드를 완료하기까지의 시간이 길어지는 경우  
   

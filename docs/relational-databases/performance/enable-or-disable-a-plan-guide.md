@@ -1,5 +1,6 @@
 ---
 title: 계획 지침 사용 또는 사용 안 함 | Microsoft 문서
+description: SQL Server Management Studio 또는 Transact-SQL을 사용하여 계획 지침을 사용하거나 사용하지 않도록 설정하는 방법을 알아봅니다. 데이터베이스에 있는 계획 지침 중 하나 또는 전부를 사용하거나 사용하지 않도록 설정합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 3bd43f7ae13f2c107915ef2e37655b5b7fe16b7f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04180f951747b7517775ec7c222f679d043286c3
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655401"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457275"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>계획 지침 사용 또는 사용 안 함
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

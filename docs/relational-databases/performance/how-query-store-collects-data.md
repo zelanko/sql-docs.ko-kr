@@ -1,5 +1,6 @@
 ---
 title: 쿼리 저장소에서 데이터를 수집하는 방법 | Microsoft Docs
+description: SQL Server 쿼리 저장소는 쿼리와 관련된 데이터를 내부 테이블에 유지하고 뷰 세트를 통해 사용자에게 표시합니다.
 ms.custom: ''
 ms.date: 11/29/2018
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23b3d551d11ee09875f49be1bd553adcb9d9759c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1c099485550f258c81684bf11c76ab7d57d0830b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005990"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458425"
 ---
 # <a name="how-query-store-collects-data"></a>쿼리 저장소에서 데이터를 수집하는 방법
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -31,7 +32,7 @@ SQL Server 쿼리 저장소는 플라이트 데이터 레코더처럼 작동하�
  ![쿼리 저장소 프로세스 뷰](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
 **뷰 설명**  
   
-|보기|Description|  
+|View|Description|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|데이터베이스에 대해 실행되는 고유 쿼리 텍스트를 표시합니다. 쿼리 텍스트 전후의 주석 및 공백은 무시됩니다. 텍스트 내의 주석 및 공백은 무시되지 않습니다. 배치의 모든 문은 별도 쿼리 텍스트 항목을 생성합니다.|  
 |**sys.query_context_settings**|쿼리 실행에 사용되는 계획 관련 설정의 고유한 조합을 표시합니다. `context_settings_id`는 쿼리 키의 일부이므로, 다른 계획 관련 설정으로 동일한 쿼리 텍스트를 실행할 경우 쿼리 저장소에 별도의 쿼리 항목이 생성됩니다.|  

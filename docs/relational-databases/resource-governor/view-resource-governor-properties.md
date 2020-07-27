@@ -1,5 +1,6 @@
 ---
 title: 리소스 관리자 속성 보기 | Microsoft 문서
+description: SQL Server Management Studio의 Resource Governor 속성 페이지를 사용하여 Resource Governor 엔터티를 만들거나 구성하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 07/18/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c19adf7c918fa4a2bd2f48227a8109cef26c64f2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ff1c4429b14e359ae249f7a9e9baf2f5da46224
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729260"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457827"
 ---
 # <a name="view-resource-governor-properties"></a>리소스 관리자 속성 보기
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

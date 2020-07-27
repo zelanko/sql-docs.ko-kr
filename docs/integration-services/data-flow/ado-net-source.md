@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ade0d29ed20bb8b39d9ac2a1762977abe24d8f65
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: acbf13282531e22c37acd247a42f4f346fa6b393
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293520"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922809"
 ---
 # <a name="ado-net-source"></a>ADO.NET 원본
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   ADO.NET 원본은 .NET 공급자의 데이터를 사용하며 데이터 흐름에서 해당 데이터를 사용할 수 있도록 합니다.  
@@ -124,7 +124,7 @@ ms.locfileid: "71293520"
  **데이터 보기** 대화 상자를 사용하여 결과를 미리 봅니다. **미리 보기** 에는 최대 200개의 행이 표시될 수 있습니다.  
   
 > [!NOTE]  
->  데이터를 미리 보면 CLR 사용자 정의 형식의 열에 데이터가 포함되지 않습니다. 대신 \<값이 너무 커서 표시할 수 없습니다> 또는 System.Byte[] 값이 표시됩니다. 전자는 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 공급자를 사용하여 데이터 원본에 액세스하는 경우 표시되고 후자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 공급자를 사용하는 경우 표시됩니다.  
+>  데이터를 미리 보면 CLR 사용자 정의 형식의 열에 데이터가 포함되지 않습니다. 대신 \<value too big to display> 또는 System.Byte[] 값이 표시됩니다. 전자는 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 공급자를 사용하여 데이터 원본에 액세스하는 경우 표시되고 후자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 공급자를 사용하는 경우 표시됩니다.  
   
 ### <a name="data-access-mode-dynamic-options"></a>데이터 액세스 모드 동적 옵션  
   

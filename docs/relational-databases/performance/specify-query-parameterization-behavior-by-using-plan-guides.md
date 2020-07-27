@@ -1,5 +1,6 @@
 ---
 title: 계획 지침을 사용하여 쿼리 매개 변수화 동작 설정
+description: SQL Server의 쿼리에서 리터럴 값이 매개 변수로 대체되는 매개 변수화를 위한 옵션을 살펴봅니다.
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f9f7c65eb69a79ff2190ab1371c594fa7b305093
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: df9520716c559b2f567d6c4a674b4ea9d250321d
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716874"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458617"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>계획 지침을 사용하여 쿼리 매개 변수화 동작 지정
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

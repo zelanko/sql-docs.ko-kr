@@ -1,5 +1,6 @@
 ---
 title: SQL Server XTP 데이터베이스 | Microsoft 문서
+description: 메모리 내 OLTP 데이터베이스 관련 카운터를 제공하는 SQL Server XTP 데이터베이스 성능 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f40d6d4afd6195e65ded4e010268251a5bda8b0b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3dea94fe092f4481386a9fd8a5649d0ea4dd18c2
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774239"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457401"
 ---
 # <a name="sql-server-xtp-databases"></a>SQL Server XTP 데이터베이스
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

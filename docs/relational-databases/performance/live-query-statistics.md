@@ -1,5 +1,6 @@
 ---
 title: 활성 쿼리 통계 | Microsoft 문서
+description: SQL Server Management Studio에서 활성 쿼리의 활성 실행 계획을 보는 방법을 알아봅니다. 실행 통계를 사용하여 쿼리 성능 문제를 디버그합니다.
 ms.custom: ''
 ms.date: 11/21/2018
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2705923e404273046b828b2cc4144a3f65c296a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d23b18096f1be3feeaddbee6bc2517bcaae8130
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731800"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457895"
 ---
 # <a name="live-query-statistics"></a>활성 쿼리 통계
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

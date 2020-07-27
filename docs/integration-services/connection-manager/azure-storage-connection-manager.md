@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d3912e2b5cbf8051348191cf3efb6ed2d20d551
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 76257fd464a7107297d609bfb6a4ef150d6f58bc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74687200"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913661"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure Storage 연결 관리자
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Azure Storage 연결 관리자를 사용하여 SQL Server Integration Services(SSIS) 패키지가 Azure Storage 계정에 연결할 수 있습니다. 이 연결 관리자는 [Azure용 SQL Server Integration Services(SSIS) 기능 팩](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)의 구성 요소입니다. 
   
@@ -33,11 +33,15 @@ Azure Storage 연결 관리자를 사용하여 SQL Server Integration Services(S
 
 - **서비스:** 연결할 스토리지 서비스를 지정합니다.
 - **계정 이름**: 스토리지 계정 이름을 지정합니다.
-- **인증:** 사용할 인증 방법을 지정합니다. AccessKey 및 ServicePrincipal 인증이 지원됩니다.
+- **인증:** 사용할 인증 방법을 지정합니다. AccessKey, ServicePrincipal 및 SharedAccessSignature 인증이 지원됩니다.
     - **AccessKey:** 이 인증 방법에 대해 **계정 키**를 지정합니다.
     - **ServicePrincipal:** 이 인증 방법에 대해 서비스 사용자의 **애플리케이션 ID**, **애플리케이션 키**, **테넌트 ID**를 지정합니다.
       **테스트 연결**이 작동하려면 서비스 사용자에게 최소한 스토리지 계정에 대한 **Storage Blob 데이터 읽기 권한자** 역할을 할당해야 합니다.
       자세한 내용은 [Azure Portal에서 RBAC로 Azure Blob 및 큐 데이터에 대한 액세스 권한 부여](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal)를 참조하세요.
+    - **SharedAccessSignature:** 이 인증 방법의 경우 공유 액세스 서명의 **토큰**을 하나 이상 지정합니다.
+      연결을 테스트하려면 테스트할 리소스 범위를 추가로 지정합니다. 리소스 범위는 **서비스**, **컨테이너** 또는 **Blob**일 수 있습니다.
+      **컨테이너** 및 **Blob**의 경우 각각 컨테이너 이름과 Blob 경로를 지정합니다.
+      자세한 내용은 [Azure Storage 공유 액세스 서명 개요](https://docs.microsoft.com/azure/storage/common/storage-sas-overview)를 참조하세요.
 - **환경:** 스토리지 계정을 호스팅하는 클라우드 환경을 지정합니다.
 
 ## <a name="managed-identities-for-azure-resources-authentication"></a>Azure 리소스 인증을 위한 관리 ID

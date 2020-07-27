@@ -1,5 +1,6 @@
 ---
 title: 쿼리 프로파일링 인프라 | Microsoft Docs
+description: SQL Server 데이터베이스 엔진이 쿼리 실행 계획의 런타임 정보에 액세스하여 워크로드와 리소스 사용량의 변화를 파악하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 04/23/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 9a82afb6ef63963c414997e43fdd1d4ed6a42765
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 099bf39d869caf8e42575393276e1a7e5ddadb68
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279639"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457263"
 ---
 # <a name="query-profiling-infrastructure"></a>쿼리 프로파일링 인프라
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

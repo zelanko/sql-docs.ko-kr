@@ -1,5 +1,6 @@
 ---
 title: SQL Server 에이전트, Jobs 개체 | Microsoft 문서
+description: SQL Server 에이전트 작업에 관한 정보를 보고하는 성능 카운터를 포함하는 SQL Server 에이전트 Jobs 성능 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 50bc6f07cce0dd1ab52c29ec075dd514808bc49b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d791edff7b4f9aa5dd8693bfec5b146fb44bb0c9
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787431"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458451"
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server 에이전트, Jobs 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85787431"
   
  이 표에는 **SQLAgent:Jobs** 카운터가 포함되어 있습니다.  
   
-|속성|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |**Active Jobs**|이 카운터는 현재 실행 중인 작업의 수를 보고합니다.|  
 |**Failed jobs**|이 카운터는 오류 발생으로 종료된 작업의 수를 보고합니다.|  

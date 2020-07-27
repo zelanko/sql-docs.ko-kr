@@ -1,5 +1,6 @@
 ---
 title: SQL Server, SQL Errors 개체 | Microsoft 문서
+description: SQL Server에서 SQL 오류를 모니터링하는 카운터를 제공하는 SQLServer:SQL Errors 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6e5273ca-29cb-4618-88a2-70b9b8d6cf76
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b8f99ab36545778981ed509ed0575c039916d42f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d2b511f76fd659f1fcb3bd37d4041d57603b3cd
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758930"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457975"
 ---
 # <a name="sql-server-sql-errors-object"></a>SQL Server, SQL Errors 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

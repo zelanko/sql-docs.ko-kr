@@ -1,5 +1,6 @@
 ---
 title: SQL Server, General Statistics 개체 | Microsoft 문서
+description: 현재 연결 수와 같은 서버 차원의 일반적 동작을 모니터링하는 카운터를 제공하는 SQLServer:General Statistics 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 854345e3985d3254e774071e8e6cc4df36be177b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d146725df4f8c2eaffafb0c46f8062849857ad01
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775860"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458295"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server, General Statistics 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  **의** SQLServer:General Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 현재 연결 수 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결하고 연결을 끊은 초당 사용자 수와 같은 서버 차원의 일반적 동작을 모니터링하는 카운터를 제공합니다. 이 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 많은 수의 클라이언트가 연결하고 해제하는 대규모의 OLTP(온라인 트랜잭션 처리) 유형의 시스템에서 작업할 때 유용합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 **SQLServer:General Statistics** 개체는 현재 연결 수 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하고 연결을 끊은 초당 사용자 수와 같은 서버 차원의 일반적 동작을 모니터링하는 카운터를 제공합니다. 이 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 많은 수의 클라이언트가 연결하고 해제하는 대규모의 OLTP(온라인 트랜잭션 처리) 유형의 시스템에서 작업할 때 유용합니다.  
   
  이 테이블에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **General Statistics** 카운터에 대해 설명합니다.  
   

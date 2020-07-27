@@ -1,5 +1,6 @@
 ---
 title: SQL Server, CLR 개체 | Microsoft 문서
+description: Microsoft SQL Server에서 공용 언어 런타임 실행을 모니터링하는 카운터를 제공하는 SQLServer:CLR 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bed788b0-a68e-4fb1-b001-03bf09ff868e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 9936cf11b0b8a71989f41cf6e7834bfe845cf7ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3748641366e41a44845084ef6b5f487f1465178d
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85656275"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458646"
 ---
 # <a name="sql-server-clr-object"></a>SQL Server, CLR 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

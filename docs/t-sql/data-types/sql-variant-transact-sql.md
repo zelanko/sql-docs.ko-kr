@@ -1,5 +1,5 @@
 ---
-title: sql_variant(Transact-SQL) | Microsoft Docs
+title: sql_variant(Transact-SQL)
 ms.custom: ''
 ms.date: 09/12/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 81914007c22cf850693d2a38b0da83cd64cde6c5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a16ac1b62c5a0aad216db06dc4e11c8c7263da65
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754800"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556212"
 ---
 # <a name="sql_variant-transact-sql"></a>sql_variant(Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원하는 여러 가지 데이터 형식의 값을 저장하는 데이터 형식입니다.
@@ -36,10 +37,12 @@ ms.locfileid: "85754800"
   
 ## <a name="syntax"></a>구문  
   
-```sql
+```syntaxsql
 sql_variant  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>설명  
 **sql_variant**는 열, 매개 변수, 변수 및 사용자 정의 함수의 반환 값으로 사용될 수 있습니다. **sql_variant**는 이 데이터베이스 개체들이 다른 데이터 형식의 값을 지원할 수 있게 합니다.
   
@@ -97,18 +100,24 @@ ODBC에서는 **sql_variant**를 모두 지원하지는 않습니다. 따라서 
 ## <a name="converting-sql_variant-data"></a>sql_variant 데이터 변환  
 **sql_variant** 데이터 형식을 처리할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 개체의 데이터 형식을 **sql_variant** 형식으로 암시적으로 변환할 수 있습니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 **sql_variant** 데이터에서 다른 데이터 형식의 개체로의 암시 적 변환을 지원하지 않습니다.
   
-## <a name="restrictions"></a>제한  
-다음 표에서는 **sql_variant**를 사용하여 저장할 수 없는 값 형식을 나열합니다.
-  
-|||  
-|-|-|  
-|**varchar(max)**|**varbinary(max)**|  
-|**nvarchar(max)**|**xml**|  
-|**text**|**ntext**|  
-|**image**|**rowversion**(**timestamp**)|  
-|**sql_variant**|**geography**|  
-|**hierarchyid**|**geometry**|  
-|사용자 정의 형식|**datetimeoffset**<sup>1</sup>| 
+## <a name="restrictions"></a>제한
+
+아래에는 **sql_variant**를 사용하여 저장할 수 없는 값 형식이 나열되어 있습니다.
+
+- **datetimeoffset**<sup>1</sup>
+- **geography**
+- **geometry**
+- **hierarchyid**
+- **image**
+- **ntext**
+- **nvarchar(max)**
+- **rowversion**(**timestamp**)
+- **text**
+- **varchar(max)**
+- **varbinary(max)**
+- **sql_variant**
+- 사용자 정의 형식
+- **xml**
 
 <sup>1</sup> SQL Server 2012 이상에서는 **datetimeoffset**을 제한하지 않습니다.
 

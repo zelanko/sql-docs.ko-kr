@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 60dcf1692fb8b805b9eef8fad228353104131c93
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb26be1034632ce747c21239636f9b0a4ec08114
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295734"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913269"
 ---
 # <a name="save-packages"></a>패키지 저장
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에서 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 사용하여 만든 패키지를 파일 시스템에 XML 파일(.dtsx 파일)로 저장합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 msdb 데이터베이스나 패키지 저장소에 패키지 XML 파일의 복사본을 저장할 수도 있습니다. 패키지 저장소는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에서 관리하는 파일 시스템 위치에 있는 폴더를 나타냅니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "71295734"
   
 1.  솔루션 탐색기에서 복사본을 저장하려는 패키지를 두 번 클릭합니다.  
   
-2.  **파일** 메뉴에서 **다른 이름으로 \<패키지 파일>의 복사본 저장**을 클릭합니다.  
+2.  **파일** 메뉴에서 **다른 이름으로 \<package file>의 복사본 저장**을 클릭합니다.  
   
 3.  **패키지 복사본 저장** 대화 상자의 **패키지 위치** 목록에서 패키지 위치를 선택합니다. 다음 옵션을 사용할 수 있습니다.  
     -   SQL Server
@@ -110,7 +110,7 @@ ms.locfileid: "71295734"
   
 2.  솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가**를 가리킨 다음 **새 항목**을 클릭합니다.  
   
-3.  **새 항목 추가 -\<프로젝트 이름>** 대화 상자에서 템플릿으로 사용할 패키지를 클릭합니다.  
+3.  **새 항목 추가 - \<project name>** 대화 상자에서 템플릿으로 사용할 패키지를 클릭합니다.  
   
      템플릿 목록에 새 SSIS 패키지라는 기본 패키지 템플릿이 포함됩니다. 패키지 아이콘을 통해 패키지 템플릿으로 사용할 수 있는 템플릿을 식별할 수 있습니다.  
   

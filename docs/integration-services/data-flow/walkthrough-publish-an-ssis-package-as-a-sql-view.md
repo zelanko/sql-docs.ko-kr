@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52c4f92994068e0c5de8afd7233bd53c1244e38d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 410fb5cc9ebfe04b62b6d196e7757f2455234014
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216902"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920342"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>연습: SSIS 패키지를 SQL 뷰로 게시
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   이 연습에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 SSIS 패키지를 SQL 뷰로 게시하는 자세한 단계를 제공합니다.  
@@ -164,9 +164,9 @@ ms.locfileid: "80216902"
   
 1.  SQL Server Management Studio를 시작합니다.  
   
-2.  \<**컴퓨터 이름**>, **데이터베이스**, \<**마법사에서 선택한 데이터베이스**> 및 **뷰**를 확장합니다.  
+2.  \<**machine name**>, **데이터베이스**, \<**database you selected in the wizard**> 및 **보기**를 확장합니다.  
   
-3.  마법사에서 만든 \<**마법사에서 만든 뷰**>를 마우스 오른쪽 단추로 클릭하고 **상위 1000개 행 선택**을 클릭합니다.  
+3.  마법사에서 만든 \<**view created by the wizard**>를 마우스 오른쪽 단추로 클릭하고 **상위 1000개 행 선택**을 클릭합니다.  
   
 4.  SSIS 패키지의 결과가 표시되는지 확인합니다.  
   

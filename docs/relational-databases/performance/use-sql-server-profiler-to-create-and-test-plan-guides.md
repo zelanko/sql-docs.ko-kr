@@ -1,7 +1,7 @@
 ---
 title: 계획 지침 작성 및 테스트
 titleSuffix: SQL Server Profiler
-description: SQL Server Profiler에서 계획 지침을 작성하고 테스트합니다.
+description: SQL Server Profiler를 사용하여, SQL Server에서 sp_create_plan_guide 저장 프로시저의 statement_text argument 인수에서 사용할 정확한 쿼리 텍스트를 캡처합니다.
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 7ee56255d55a8676fd55b903af70c002cefc9bea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cd63a1de999b04ed1c6c3b80efabdf9fc5dc1919
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737100"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86455915"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>SQL Server Profiler를 사용하여 계획 지침 작성 및 테스트
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

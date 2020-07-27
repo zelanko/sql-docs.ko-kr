@@ -1,5 +1,6 @@
 ---
 title: SQL Server 에이전트, JobSteps 개체 | Microsoft 문서
+description: SQL Server 에이전트 작업 단계에 관한 정보를 보고하는 성능 카운터를 포함하는 SQL Server 에이전트 JobSteps 성능 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b3d0c8197f275801140bec48ab05dc6bc19324eb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 14a13671c5447872e1c4c0030c8717e471d8114f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787388"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457455"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server 에이전트, JobSteps 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85787388"
   
  아래 표에는 **SQLAgent:JobSteps** 카운터가 있습니다.  
   
-|속성|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |**Active steps**|이 카운터는 현재 실행 중인 작업 단계 수를 보고합니다.|  
 |**Queued steps**|이 카운터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행될 준비가 되어 있지만 아직 실행이 시작되지 않은 작업 단계 수를 보고합니다.|  

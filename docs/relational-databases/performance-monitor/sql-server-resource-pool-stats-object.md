@@ -1,5 +1,6 @@
 ---
 title: SQL Server, Resource Pool Stats 개체 | Microsoft 문서
+description: Resource Governor 리소스 풀 통계를 보고하는 성능 카운터를 포함하는 SQLServer:Resource Pool Stats 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 35053d98db9b87b06512064e75adf06b4bcd6c51
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4629cc0e109946c6dcd2f146e7e18568eca082f0
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758923"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458773"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQLServer, Resource Pool Stats 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,5 +1,6 @@
 ---
 title: SQL Server, Memory Manager 개체 | Microsoft 문서
+description: SQL Server에서 전반적인 서버 메모리 사용량을 모니터링하는 카운터를 제공하는 Memory Manager 개체에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bab9dfb83a918fe072cc4a97f974f77b0243d06e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad1317d52ca3075a5726e528216f569bd91c2a15
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775805"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458802"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server, Memory Manager 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

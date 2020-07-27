@@ -1,5 +1,5 @@
 ---
-title: DBCC UPDATEUSAGE(Transact-SQL) | Microsoft Docs
+title: DBCC UPDATEUSAGE(Transact-SQL)
 ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
@@ -33,14 +33,15 @@ helpviewer_keywords:
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: fa1bd6767a81142e115e02d242a54b9715bf78f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2528ac49fb62a41bebe55cb50392cb306ec93edf
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643854"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484206"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE(Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 카탈로그 뷰의 부정확한 페이지와 행 개수를 보고하고 수정합니다. 이러한 부정확성으로 인해 sp_spaceused 시스템 저장 프로시저에서 정확하지 않은 공간 사용 보고서를 반환할 수 있습니다.
@@ -57,14 +58,16 @@ DBCC UPDATEUSAGE
 ) [ WITH [ NO_INFOMSGS ] [ , ] [ COUNT_ROWS ] ]   
 ```  
   
-## <a name="arguments"></a>인수  
-*database_name* | *database_id* | 0  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
+*database_name* \| *database_id* \| 0  
 공간 사용량 통계를 보고하고 수정할 데이터베이스의 이름 또는 ID입니다. 0을 지정하면 현재 데이터베이스가 사용됩니다. 데이터베이스 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 준수해야 합니다.  
   
-*table_name* | *table_id* | *view_name* | *view_id*  
+*table_name* \| *table_id* \| *view_name* \| *view_id*  
 공간 사용 통계를 보고하고 수정할 테이블이나 인덱싱된 뷰의 이름 또는 ID입니다. 테이블 및 뷰 이름은 식별자 규칙을 따라야 합니다.  
   
-*index_id* | *index_name*  
+*index_id* \| *index_name*  
 사용할 인덱스의 ID 또는 이름입니다. 이 인수를 지정하지 않으면 해당 문에서 지정한 테이블이나 뷰의 모든 인덱스를 처리합니다.  
   
 WITH  

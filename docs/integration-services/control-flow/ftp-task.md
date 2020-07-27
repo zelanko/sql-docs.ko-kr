@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d606e66c3ad7a78edf3808578fe3021d2933b22d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c33ec0b3d8b597e46403337a11b4f3d99bc3393
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294136"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918241"
 ---
 # <a name="ftp-task"></a>FTP 태스크
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   FTP 태스크는 데이터 파일을 다운로드 및 업로드하고 서버의 디렉터리를 관리합니다. 예를 들어 패키지는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 워크플로의 일부로 원격 서버 또는 인터넷 위치에서 데이터 파일을 다운로드할 수 있습니다. FTP 태스크는 다음 용도로 사용할 수 있습니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "71294136"
   
 ### <a name="options"></a>옵션  
  **FtpConnection**  
- 기존 FTP 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 연결 관리자를 만듭니다.  
+ 기존 FTP 연결 관리자를 선택하거나 \<**New connection...**>을 클릭하여 연결 관리자를 만듭니다.  
   
 > [!IMPORTANT]  
 >  FTP 연결 관리자는 익명 인증과 기본 인증만 지원하며 Windows 인증은 지원하지 않습니다.  
@@ -148,13 +148,13 @@ ms.locfileid: "71294136"
   
 #### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
  **RemoteVariable**  
- 기존 사용자 정의 변수를 선택하거나 \<**새 변수...** >를 클릭하여 사용자 정의 변수를 만듭니다.  
+ 기존 사용자 정의 변수를 선택하거나 \<**New variable...**>를 클릭하여 사용자 정의 변수를 만듭니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), 변수 추가  
   
 #### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
- 기존 FTP 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 연결 관리자를 만듭니다.  
+ 기존 FTP 연결 관리자를 선택하거나 \<**New connection...**>을 클릭하여 연결 관리자를 만듭니다.  
   
  **관련 항목:** [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
@@ -162,13 +162,13 @@ ms.locfileid: "71294136"
   
 #### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
  **LocalVariable**  
- 기존 사용자 정의 변수를 선택하거나 \<**새 변수...** >를 클릭하여 변수를 만듭니다.  
+ 기존 사용자 정의 변수를 선택하거나 \<**New variable...**>를 클릭하여 변수를 만듭니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), 변수 추가  
   
 #### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
- 기존 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 연결 관리자를 만듭니다.  
+ 기존 파일 연결 관리자를 선택하거나 \<**New connection...**>을 클릭하여 연결 관리자를 만듭니다.  
   
  **관련 항목**: [플랫 파일 연결 관리자](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   

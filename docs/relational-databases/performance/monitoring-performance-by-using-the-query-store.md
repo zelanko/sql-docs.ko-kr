@@ -1,5 +1,6 @@
 ---
 title: 쿼리 저장소를 사용하여 성능 모니터링 | Microsoft Docs
+description: SQL Server 쿼리 저장소는 쿼리 계획 선택 및 성능에 대한 인사이트를 제공합니다. 쿼리 저장소는 쿼리, 계획 및 런타임 통계의 기록을 캡처합니다.
 ms.custom: ''
 ms.date: 04/09/2020
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 010d18fff933ee1bd362d1ebd59ef86905d493ed
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f56ea55b90613ea657994af6acff7eef271843b4
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006218"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458432"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>쿼리 저장소를 사용하여 성능 모니터링
 

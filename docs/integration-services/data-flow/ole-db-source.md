@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b0793c48a6ea531dbca499b07ca28be9601e5843
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a19cee0b650c82c513bd6f4d9d0b7afd11184b3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292239"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913813"
 ---
 # <a name="ole-db-source"></a>OLE DB 원본
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   OLE DB 원본은 데이터베이스 테이블, 뷰 또는 SQL 명령을 사용하여 다양한 OLE DB 호환 관계형 데이터베이스에서 데이터를 추출합니다. 예를 들어 OLE DB 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 테이블에서 데이터를 추출할 수 있습니다.  
@@ -157,7 +157,7 @@ ms.locfileid: "71292239"
  **데이터 보기** 대화 상자를 사용하여 결과를 미리 봅니다. **미리 보기** 에는 최대 200개의 행이 표시될 수 있습니다.  
   
 > [!NOTE]  
->  데이터를 미리 보면 CLR 사용자 정의 형식의 열에 데이터가 포함되지 않습니다. 대신 \<값이 너무 커서 표시할 수 없습니다> 또는 System.Byte[] 값이 표시됩니다. 전자는 SQL OLE DB 공급자를 사용하여 데이터 원본에 액세스하는 경우 표시되고 후자는 &lt; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 공급자를 사용하는 경우 표시됩니다.  
+>  데이터를 미리 보면 CLR 사용자 정의 형식의 열에 데이터가 포함되지 않습니다. 대신 \<value too big to display> 또는 System.Byte[] 값이 표시됩니다. 전자는 SQL OLE DB 공급자를 사용하여 데이터 원본에 액세스하는 경우 표시되고 후자는 &lt; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 공급자를 사용하는 경우 표시됩니다.  
   
 ### <a name="data-access-mode-dynamic-options"></a>데이터 액세스 모드 동적 옵션  
   

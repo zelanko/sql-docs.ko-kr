@@ -1,5 +1,6 @@
 ---
 title: 실행 계획 표시 및 저장 | Microsoft 문서
+description: SQL Server Management Studio를 사용하여 실행 계획을 표시하고 실행 계획을 XML 형식의 파일로 저장하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 08/21/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: bcd6f094-c613-4835-ae19-4caaadb4bb17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2d049990cd2c60db36105d3c03da36bc25b4f4b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 19c0cee8d1ff56167032f7a0ff918b3adee24056
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749546"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457299"
 ---
 # <a name="display-and-save-execution-plans"></a>실행 계획 표시 및 저장
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

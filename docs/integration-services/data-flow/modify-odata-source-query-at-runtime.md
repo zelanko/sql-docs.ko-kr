@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa8a5454fb85c4a6bcfe53088549107f09b9772f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d98222a9f8663dfb2495220ee43af34c1f0c02d9
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298206"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920811"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>런타임에 OData 원본 쿼리 제공
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
  데이터 흐름 태스크의 **[OData Source].[Query]** 속성에 *식*을 추가하여 런타임에 OData 원본 쿼리를 수정할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "71298206"
   
 1.  **데이터 흐름 태스크**를 마우스 오른쪽 단추로 클릭하고 **매개 변수화...** 옵션을 선택합니다.  
   
-2.  **매개 변수화** 대화 상자에서 **속성**에 대한 **[\<OData 원본 구성 요소 이름>].[Query]** 를 선택합니다.  
+2.  **매개 변수화** 대화 상자에서 **속성**에 대한 **[\<Name of the OData Source Component>].[Query]** 를 선택합니다.  
   
 3.  **새 매개 변수 만들기** 또는 **기존 매개 변수 사용**중에서 하나를 선택합니다.  
   
