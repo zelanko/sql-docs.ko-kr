@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: eda8dea2-eedd-43a7-85aa-92bd97783b5f
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: c9eaf5f0a26660439d9bfbc9db85c645d95553e3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 247f8fe68dca157a98b9e0c0a36445422cc3332f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255289"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999514"
 ---
 # <a name="reconcile-a-database-diagram-with-a-modified-database-visual-database-tools"></a>수정된 데이터베이스와 데이터베이스 다이어그램 일치(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 다이어그램에 일치하도록 데이터베이스를 업데이트할 준비가 되면 데이터베이스 다이어그램을 저장합니다. 그러나 다이어그램을 연 이후에 다른 사용자가 이미 데이터베이스를 업데이트한 경우에는 다른 사용자의 변경 내용이 현재 사용자의 다이어그램에 영향을 줄 수 있습니다. 그 반대의 경우도 마찬가지입니다.  
   
 이 상태에서 다이어그램을 저장하면 데이터베이스가 현재 사용자의 다이어그램에 일치하도록 조정됩니다. 즉, 다른 사용자의 변경 내용을 덮어쓰게 됩니다.  

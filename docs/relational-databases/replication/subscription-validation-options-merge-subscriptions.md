@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4958c4ab-2025-42ce-b836-6fb4e9e6f24d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5f946ed9ba857692b5d8d5ef5983262a31a9914b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 497282dbdc0710f732c10f9e06abbffc40d4d046
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729337"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111994"
 ---
 # <a name="subscription-validation-options-merge-subscriptions"></a>구독 유효성 검사 옵션(병합 구독)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

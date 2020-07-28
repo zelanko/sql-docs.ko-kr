@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 41cf0607ae8d308d4d1f243e8b987ca6c9d541fd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1985ba159951718772d6a7bc16b4ea76f59d5686
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737956"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111918"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "85737956"
 PERMISSIONS ( [ objectid [ , 'column' ] ] )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *objectid*  
  보안 개체의 ID입니다. *objectid*를 지정하지 않으면 현재 사용자의 문 사용 권한이 비트맵 값에 포함됩니다. 이 값을 지정하면 현재 사용자의 해당 보안 개체에 대한 사용 권한이 비트맵 값에 포함됩니다. 지정한 보안 개체가 현재 데이터베이스에 있어야 합니다. [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) 함수를 사용하여 *objectid* 값을 확인할 수 있습니다.  
   

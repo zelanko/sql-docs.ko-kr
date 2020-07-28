@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f9a66712c7547a5fce852c23cdccd57465d794f1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 429c56bed55931e4e30be6b2730638eb93113bd8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918821"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245610"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 구성 관리자
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "86918821"
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]와 연관된 서비스를 관리하고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 사용되는 네트워크 프로토콜을 구성하며 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 클라이언트 컴퓨터에서 네트워크 연결 구성을 관리하기 위한 도구입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 SQL Server 설치와 함께 설치됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 시작 메뉴에서 사용할 수 있거나 다른 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 표시에 추가할 수 있는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 스냅인입니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console(**mmc.exe**)은 **SQLServerManager\<version>.msc** 파일([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]의 경우 **SQLServerManager13.msc**)을 사용하여 구성 관리자를 엽니다. 특정 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 관리하려면 해당 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자 버전이 필요합니다. Windows가 C 드라이브에 설치되어 있는 경우 최신 5개 버전의 경로는 다음과 같습니다.  
   
-|||  
+|버전|경로|  
 |-|-|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2019|C:\Windows\SysWOW64\SQLServerManager15.msc| 
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|  

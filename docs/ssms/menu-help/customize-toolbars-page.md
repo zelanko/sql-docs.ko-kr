@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1d6297151c5f31c88d108835f1c6c4955bfbccf8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 52bd2e24ec2819d18f965fa7cd08eba8b4c351f1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242186"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001665"
 ---
 # <a name="customize-toolbars-page"></a>사용자 지정(도구 모음 페이지)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 **도구 모음** 탭을 사용하여 도구 모음을 만들고 제거하며 다시 설정하고 해당 이름을 바꿀 수 있습니다. **도구** 메뉴에서 **사용자 지정** 을 클릭한 다음 **도구 모음**을 클릭하여 이 탭에 액세스할 수 있습니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
 **도구 모음**  
 기본 제공 도구 모음과 사용자가 만든 다른 모든 도구 모음을 표시합니다. 도구 모음이 표시된 경우 이 대화 상자에서 해당 도구 모음 옆에 확인 표시가 나타납니다.  
   

@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4859a35269e0664b07f08db795e3e57a4c8feb70
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4eaa35280b4f469f6fcf49fe9d73f4b33bfda672
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735042"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245212"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 예제 데이터베이스
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -465,14 +465,12 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
  데이터베이스를 만든 후의 스냅샷:  
   
-||||  
-|-|-|-|  
-|**type**|**name**|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|기본값|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
 |MEMORYCLERK_XTP|기본값|0|  
 |MEMORYCLERK_XTP|기본값|0|  
-||||
   
  기본 메모리 클럭은 시스템 차원의 메모리 구조를 포함하고 있으며 비교적 작습니다. 사용자 데이터베이스(이 경우 ID 5인 데이터베이스)의 메모리 클럭은 약 900MB입니다.  
   
@@ -490,9 +488,8 @@ WHERE t.type='U'
   
  다음 테이블에서는 예제를 처음 설치한 경우 이 쿼리의 결과를 보여 줍니다.  
   
-||||  
-|-|-|-|  
-|**테이블 이름**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
+| 테이블 이름 | memory_allocated_for_table_kb | memory_allocated_for_indexes_kb |
+| ---------- | ----------------------------- | ------------------------------- |
 |SpecialOfferProduct_inmem|64|3840|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
 |SalesOrderDetail_inmem|15316|663552|  
@@ -500,7 +497,6 @@ WHERE t.type='U'
 |SpecialOffer_inmem|3|8192|  
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
-||||
 
  보시는 것처럼 테이블이 상당히 작습니다. SalesOrderHeader_inmem은 약 7MB이고, SalesOrderDetail_inmem은 약 15MB입니다.  
   
@@ -516,14 +512,12 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
-||||  
-|-|-|-|  
-|**type**|**name**|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|기본값|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
 |MEMORYCLERK_XTP|기본값|0|  
 |MEMORYCLERK_XTP|기본값|0|  
-||||
 
  보다시피 SQL Server는 예제 데이터베이스에서 메모리 최적화 테이블과 인덱스에 8GB보다 조금 작은 크기를 사용하고 있습니다.  
   
@@ -538,9 +532,8 @@ ON dms.object_id=t.object_id
 WHERE t.type='U'  
 ```  
   
-||||  
-|-|-|-|  
-|**테이블 이름**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
+| 테이블 이름 | memory_allocated_for_table_kb | memory_allocated_for_indexes_kb |
+| ---------- | ----------------------------- | ------------------------------- |
 |SalesOrderDetail_inmem|5113761|663552|  
 |DemoSalesOrderDetailSeed|64|10368|  
 |SpecialOffer_inmem|2|8192|  
@@ -548,7 +541,6 @@ WHERE t.type='U'
 |Product_inmem|111|12032|  
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
-||||
 
  총 6.5GB 정도의 데이터를 확인할 수 있습니다. SalesOrderHeader_inmem 및 SalesOrderDetail_inmem 테이블의 인덱스 크기는 판매 주문을 삽입하기 전의 인덱스 크기와 동일합니다. 인덱스 크기는 두 테이블 모두 해시 인덱스를 사용하고 해시 인덱스가 고정되어 있기 때문에 변경되지 않았습니다.  
   
@@ -564,14 +556,12 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
-||||  
-|-|-|-|  
-|**type**|**name**|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|기본값|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
 |MEMORYCLERK_XTP|기본값|0|  
 |MEMORYCLERK_XTP|기본값|0|  
-||||
 
  이는 예상된 결과입니다. 트랜잭션 작업이 실행 중일 때 메모리가 회수됩니다.  
   
@@ -584,14 +574,12 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
-||||  
-|-|-|-|  
-|**type**|**name**|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|기본값|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
 |MEMORYCLERK_XTP|기본값|0|  
 |MEMORYCLERK_XTP|기본값|0|  
-||||
 
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>메모리 최적화 테이블의 디스크 사용률  
  지정된 시점에서 데이터베이스의 검사점 파일에 대한 전체 디스크 크기는 다음 쿼리를 사용하여 확인할 수 있습니다.  
@@ -616,11 +604,9 @@ FROM sys.filegroups f JOIN sys.database_files df
 WHERE f.type=N'FX'  
 ```  
   
-||  
-|-|  
-|**On-disk size in MB**|  
+| On-disk size in MB |
+| ------------------ |
 |2312|  
-||
 
  보다시피 검사점 파일의 디스크 크기(2.3GB)와 실제 데이터 크기(30MB에 가까움)에는 큰 차이가 있습니다.  
   
@@ -643,14 +629,12 @@ ORDER BY state, file_type
   
  예제의 초기 상태에 대한 결과는 논리적 프로세서가 16개인 서버의 경우와 유사합니다.  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
+| state_desc | file_type_desc | count | on-disk size MB |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
-|||||
 
  보시다시피 대부분의 공간이 미리 만들어진 데이터 및 델타 파일에서 사용됩니다. SQL Server는 논리적 프로세서당 하나의 (데이터, 델타) 파일 쌍을 미리 만들었습니다. 또한 데이터 파일의 크기는 128MB로, 델타 파일의 크기는 8MB로 미리 지정되므로 이러한 파일에 더욱 효율적으로 데이터를 삽입할 수 있습니다.  
   
@@ -666,11 +650,9 @@ FROM sys.filegroups f JOIN sys.database_files df
 WHERE f.type=N'FX'  
 ```  
   
-||  
-|-|  
-|**On-disk size in MB**|  
+| On-disk size in MB |
+| ------------------ |
 |8828|
-||
   
  디스크 크기는 데이터의 메모리 내 크기와 유사하게 9GB에 가깝습니다.  
   
@@ -691,14 +673,12 @@ GROUP BY state, state_desc, file_type, file_type_desc
 ORDER BY state, file_type  
 ```  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
+| state_desc | file_type_desc | count | on-disk size MB |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
-|||||
 
  검사점이 닫힐 때 사용할 준비가 된 미리 만들어진 파일 쌍이 16개 있습니다.  
   
@@ -716,11 +696,9 @@ FROM sys.filegroups f JOIN sys.database_files df
 WHERE f.type=N'FX'  
 ```  
   
-||  
-|-|  
-|**On-disk size in MB**|  
+| On-disk size in MB |
+| ------------------ |
 |11839|
-||
   
  거의 12GB로, 데모를 다시 설정하기 전의 9GB보다 훨씬 큽니다. 이는 다음에서 확인할 수 있듯이 일부 검사점 파일 병합이 시작되었지만 일부 병합 대상이 아직 설치되지 않았으며 일부 병합 원본 파일이 아직 정리되지 않았기 때문입니다.  
   
@@ -739,9 +717,8 @@ GROUP BY state, state_desc, file_type, file_type_desc
 ORDER BY state, file_type  
 ```  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
+| state_desc | file_type_desc | count | on-disk size MB |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |ACTIVE|DATA|38|5152|  
@@ -750,7 +727,6 @@ ORDER BY state, file_type
 |MERGE TARGET|DELTA|7|56|  
 |MERGED SOURCE|DATA|13|1772|  
 |MERGED SOURCE|DELTA|13|455|  
-|||||
 
  트랜잭션 작업이 시스템에서 발생하면 병합 대상이 설치되고 병합된 원본이 정리됩니다.  
   
@@ -773,16 +749,14 @@ GROUP BY state, state_desc, file_type, file_type_desc
 ORDER BY state, file_type  
 ```  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
+| state_desc | file_type_desc | count | on-disk size MB |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|2|268|  
 |UNDER CONSTRUCTION|DELTA|2|16|  
 |ACTIVE|DATA|41|5608|  
 |ACTIVE|DELTA|41|328|  
-|||||
 
  이 경우에는 'under construction' 상태의 검사점 파일 쌍이 두 개 있습니다. 즉, 작업의 높은 동시성 수준 때문에 여러 파일 쌍이 ‘under construction’ 상태로 이동했습니다. 여러 동시 스레드에서 같은 시간에 새로운 파일 쌍을 필요로 했으므로 파일 쌍이 'precreated'에서 ‘under construction’으로 이동했습니다.  
   

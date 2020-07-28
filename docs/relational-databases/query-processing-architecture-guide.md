@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e2d32824b62cf54132c6168e5f44d93fa0cd6289
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ff4ab76193c13b03fbd4d7fab05cbf212d1aae4b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726152"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247624"
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -481,13 +481,61 @@ GO
 
 지정된 실행에 대해 다음 SET 옵션을 변경하면 계획을 다시 사용하는 기능에 영향을 줍니다. 이는 [!INCLUDE[ssde_md](../includes/ssde_md.md)]이 [상수 폴딩](#ConstantFolding)을 수행하고 이 옵션이 해당 식의 결과에 영향을 주기 때문입니다.
 
-|||   
-|-----------|------------|------------|    
-|ANSI_NULL_DFLT_OFF|FORCEPLAN|ARITHABORT|    
-|DATEFIRST|ANSI_PADDING|NUMERIC_ROUNDABORT|    
-|ANSI_NULL_DFLT_ON|LANGUAGE|CONCAT_NULL_YIELDS_NULL|    
-|DATEFORMAT|ANSI_WARNINGS|QUOTED_IDENTIFIER|    
-|ANSI_NULLS|NO_BROWSETABLE|ANSI_DEFAULTS|    
+:::row:::
+    :::column:::
+        ANSI_NULL_DFLT_OFF
+    :::column-end:::
+    :::column:::
+        FORCEPLAN
+    :::column-end:::
+    :::column:::
+        ARITHABORT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DATEFIRST
+    :::column-end:::
+    :::column:::
+        ANSI_PADDING
+    :::column-end:::
+    :::column:::
+        NUMERIC_ROUNDABORT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ANSI_NULL_DFLT_ON
+    :::column-end:::
+    :::column:::
+        LANGUAGE
+    :::column-end:::
+    :::column:::
+        CONCAT_NULL_YIELDS_NULL
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DATEFORMAT
+    :::column-end:::
+    :::column:::
+        ANSI_WARNINGS
+    :::column-end:::
+    :::column:::
+        QUOTED_IDENTIFIER
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ANSI_NULLS
+    :::column-end:::
+    :::column:::
+        NO_BROWSETABLE
+    :::column-end:::
+    :::column:::
+        ANSI_DEFAULTS
+    :::column-end:::
+:::row-end:::
 
 ### <a name="caching-multiple-plans-for-the-same-query"></a>동일한 쿼리의 여러 계획 캐싱 
 쿼리와 실행 계획은 지문과 비슷하게 [!INCLUDE[ssde_md](../includes/ssde_md.md)]에서 고유하게 식별할 수 있습니다.
@@ -671,16 +719,70 @@ sql_handle
 `sql_statement_recompile` 확장 이벤트(xEvent)는 문 수준의 재컴파일이 있는지 보고합니다. 어떠한 종류의 일괄 처리에서든 문 수준의 재컴파일이 필요한 경우 이 xEvent가 발생합니다. 여기에는 저장 프로시저, 트리거, 임시 일괄 처리 및 쿼리가 포함됩니다. 일괄 처리는 sp_executesql, 동적 SQL, Prepare 메서드 또는 Execute 메서드를 비롯한 여러 인터페이스를 통해 제출할 수 있습니다.
 `sql_statement_recompile` xEvent의 `recompile_cause` 열에는 다시 컴파일된 이유를 나타내는 정수 코드가 들어 있습니다. 다음 표에는 가능한 이유가 나와 있습니다.
 
-|||
-|----|----|  
-|스키마가 변경됨|통계가 변경됨|  
-|컴파일이 지연됨|SET 옵션이 변경됨|  
-|임시 테이블이 변경됨|원격 행 집합이 변경됨|  
-|`FOR BROWSE` 권한이 변경됨|쿼리 알림 환경이 변경됨|  
-|분할 뷰가 변경됨|커서 옵션이 변경됨|  
-|`OPTION (RECOMPILE)` 이 요청되었습니다.|매개 변수가 있는 계획이 플러시됨|  
-|데이터베이스 버전에 영향을 주는 계획이 변경됨|쿼리 저장소 계획 강제 적용 정책이 변경됨|  
-|쿼리 저장소 계획 강제 적용이 실패함|쿼리 저장소에 계획이 누락됨|
+:::row:::
+    :::column:::
+        스키마가 변경됨
+    :::column-end:::
+    :::column:::
+        통계가 변경됨
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        컴파일이 지연됨
+    :::column-end:::
+    :::column:::
+        SET 옵션이 변경됨
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        임시 테이블이 변경됨
+    :::column-end:::
+    :::column:::
+        원격 행 집합이 변경됨
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        `FOR BROWSE` 권한이 변경됨
+    :::column-end:::
+    :::column:::
+        쿼리 알림 환경이 변경됨
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        분할 뷰가 변경됨
+    :::column-end:::
+    :::column:::
+        커서 옵션이 변경됨
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        `OPTION (RECOMPILE)` 이 요청되었습니다.
+    :::column-end:::
+    :::column:::
+        매개 변수가 있는 계획이 플러시됨
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        데이터베이스 버전에 영향을 주는 계획이 변경됨
+    :::column-end:::
+    :::column:::
+        쿼리 저장소 계획 강제 적용 정책이 변경됨
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        쿼리 저장소 계획 강제 적용이 실패함
+    :::column-end:::
+    :::column:::
+        쿼리 저장소에 계획이 누락됨
+    :::column-end:::
+:::row-end:::
 
 > [!NOTE]
 > xEvent를 사용할 수 없는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전에서는 문 수준의 재컴파일을 보고하기 위한 동일한 목적으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로파일러 [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) 추적 이벤트를 사용할 수 있습니다.

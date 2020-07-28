@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c82aae8312d19606853a3a676e98c6ca14c821f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e6144ba5cf5848beef7960debaaed6e12014d31b
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752343"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110448"
 ---
 # <a name="index_col-transact-sql"></a>INDEX_COL(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,9 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
     table_or_view_name', index_id , key_id )   
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *database_name*  
  데이터베이스의 이름입니다.  
   

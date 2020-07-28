@@ -2,7 +2,7 @@
 title: '가용성 그룹: 필수 조건, 제한 사항 및 권장 사항'
 description: SQL Server에 Always On 가용성 그룹을 배포하기 위한 필수 조건, 제한 사항 및 권장 사항에 대한 설명입니다.
 ms.custom: seo-lt-2019
-ms.date: 03/22/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8688a67d4fecaba0857f0fc1ac0e763ebbb18267
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 92e42fd172a694e7c320399c113f8ed8f857e0ed
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892408"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110268"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -134,7 +134,7 @@ ms.locfileid: "85892408"
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|호스트 컴퓨터는 WSFC 노드여야 합니다. 지정된 가용성 그룹의 가용성 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스는 클러스터의 개별 노드에 있습니다. 다른 클러스터로 마이그레이션되는 동안 가용성 그룹이 일시적으로 두 클러스터에 걸쳐 있을 수 있습니다. SQL Server 2016에서는 분산된 가용성 그룹을 소개합니다. 분산 가용성 그룹에서는 두 가용성 그룹이 서로 다른 클러스터에 있습니다.|[SQL Server의 WSFC&#40;Windows Server 장애 조치(failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [장애 조치(failover) 클러스터링 및 Always On 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [분산된 가용성 그룹(Always On 가용성 그룹)](../../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹이 Kerberos로 작동하도록 하려는 경우:<br /><br /> 가용성 그룹에 대한 가용성 복제본을 호스팅하는 모든 서버 인스턴스는 동일한 SQL Server 서비스 계정을 사용해야 합니다.<br /><br /> 도메인 관리자는 가용성 그룹 수신기의 VNN(가상 네트워크 이름)에 대해 SQL Server 서비스 계정에서 Active Directory에 SPN(서비스 사용자 이름)을 수동으로 등록해야 합니다. SQL Server 서비스 계정이 아닌 다른 계정에 SPN이 등록된 경우 인증이 실패합니다.<br /><br /> <br /><br /> <b>\*\* 중요 \*\*</b> SQL Server 서비스 계정을 변경하면 도메인 관리자가 SPN을 수동으로 다시 등록해야 합니다.|[Kerberos 연결의 서비스 사용자 이름 등록](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **간략한 설명:**<br /><br /> Kerberos 및 SPN은 상호 인증을 강제 적용합니다. SPN은 SQL Server 서비스를 시작하는 Windows 계정에 매핑됩니다. SPN이 올바르게 등록되지 않았거나 실패하면, Windows 보안 계층이 SPN과 연결된 계정을 확인할 수 없으며, Kerberos 인증을 사용할 수 없습니다.<br /><br /> <br /><br /> 참고: NTLM에는 이러한 요구 사항이 없습니다.|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI(장애 조치(Failover) 클러스터 인스턴스)를 사용하여 가용성 복제본을 호스팅하려는 경우 FCI 제한 사항을 이해하고 FCI 요구 사항을 충족해야 합니다.|[SQL Server FCI(장애 조치(failover) 클러스터 인스턴스)를 사용하여 가용성 복제본을 호스트하기 위한 필수 구성 요소 및 요구 사항](#FciArLimitations)(이 문서 뒷부분)|  
-|![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|각 서버 인스턴스는 Always On 가용성 그룹에 참여하기 위해 동일한 버전의 SQL Server를 실행해야 합니다.|[SQL 2014](https://docs.microsoft.com/sql/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014), [SQL 2016](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-2016), [SQL 2017](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017?view=sql-server-2017)의 버전 및 지원되는 기능|  
+|![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|각 서버 인스턴스는 Always On 가용성 그룹에 참여하기 위해 동일한 버전의 SQL Server를 실행해야 합니다.|[SQL 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014), [SQL 2016](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-2016), [SQL 2017](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017?view=sql-server-2017)의 버전 및 지원되는 기능|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹의 가용성 복제본을 호스팅하는 모든 서버 인스턴스는 동일한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 정렬을 사용해야 합니다.|[서버 데이터 정렬 설정 또는 변경](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹의 가용성 복제본을 호스팅할 각 서버 인스턴스에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능을 사용하도록 설정합니다. 특정 컴퓨터에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 설치에서 지원하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서버 인스턴스를 개수에 관계없이 사용하도록 설정할 수 있습니다.|[Always On 가용성 그룹 활성화 및 비활성화&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> <b>\*\* 중요 \*\*</b> WSFC를 삭제하고 다시 만드는 경우 원본 클러스터에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대해 사용하도록 설정한 각 서버 인스턴스에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능을 해제한 다음 다시 사용하도록 설정해야 합니다.|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|각 서버 인스턴스에는 데이터베이스 미러링 엔드포인트가 있어야 합니다. 이 엔드포인트는 서버 인스턴스의 미러링 모니터 서버 및 데이터베이스 미러링 파트너와 모든 가용성 복제본에서 공유합니다.<br /><br /> 가용성 복제본을 호스팅하도록 선택한 서버 인스턴스가 도메인 사용자 계정으로 실행되고 있고 아직 데이터베이스 미러링 엔드포인트를 가지고 있지 않는 경우, [새 가용성 그룹 마법사](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) (또는 [가용성 그룹에 복제본 추가 마법사](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) 가 엔드포인트를 만들고 서버 인스턴스 서비스 계정에 CONNECT 권한을 부여할 수 있습니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 로컬 시스템, 로컬 서비스 또는 네트워크 서비스와 같은 기본 제공 계정이나 비도메인 계정으로 실행 중인 경우에는 사용자가 엔드포인트 인증을 위한 인증서를 사용해야 하며 마법사를 통해 서버 인스턴스에 대한 데이터베이스 미러링 엔드포인트를 만들 수는 없습니다. 이 경우 마법사를 시작하기 전에 데이터 미러링 엔드포인트를 수동으로 만드는 것이 좋습니다.<br /><br /> <br /><br /> <b>\*\* 보안 정보 \*\*</b>[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에 대한 전송 보안은 데이터베이스 미러링의 경우와 동일합니다.|[데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [데이터베이스 미러링 및 Always On 가용성 그룹에 대한 전송 보안&#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  

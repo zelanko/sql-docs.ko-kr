@@ -2,21 +2,21 @@
 title: Azure Data Studio Notebook(Python, R)
 description: SQL Server Machine Learning Services를 사용하여 Azure Data Studio Notebook에서 Python 및 R 스크립트를 실행하는 방법을 알아봅니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/09/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4b6bb16013b75765ee5fdf6b1b52ab0bd65de37f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 1c5e16667f311c3afff9b2ada9e17c8ffe3751c2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487572"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916631"
 ---
 # <a name="run-python-and-r-scripts-in-azure-data-studio-notebooks-with-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services를 사용하여 Azure Data Studio Notebook에서 Python 및 R 스크립트 실행
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)를 사용하여 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) Notebook에서 Python 및 R 스크립트를 실행하는 방법을 알아봅니다. Azure Data Studio는 플랫폼 간 데이터베이스 도구입니다.
 
@@ -26,11 +26,9 @@ ms.locfileid: "81487572"
 
 - SQL Server Machine Learning Services가 설치되고 사용하도록 설정된 서버. Windows, Linux 또는 빅 데이터 클러스터에서 Machine Learning Services를 사용할 수 있습니다.
 
-    - [Windows에 SQL Server Machine Learning Services 설치](sql-machine-learning-services-windows-install.md)
-
-    - [Linux에 SQL Server Machine Learning Services 설치](../../linux/sql-server-linux-setup-machine-learning.md)
-
-    - [SQL Server 빅 데이터 클러스터에서 Machine Learning Services를 사용하여 Python 및 R 스크립트 실행](../../big-data-cluster/machine-learning-services.md)
+  - [Windows에 SQL Server Machine Learning Services 설치](sql-machine-learning-services-windows-install.md)
+  - [Linux에 SQL Server Machine Learning Services 설치](../../linux/sql-server-linux-setup-machine-learning.md)
+  - [SQL Server 빅 데이터 클러스터에서 Machine Learning Services를 사용하여 Python 및 R 스크립트 실행](../../big-data-cluster/machine-learning-services.md)
 
 ## <a name="create-a-sql-notebook"></a>SQL Notebook 만들기
 
@@ -125,5 +123,7 @@ R 스크립트를 실행하려면 다음 단계를 수행합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
+- [Azure Data Studio에서 Notebook을 사용하는 방법](../../azure-data-studio/notebooks-guidance.md)
+- [SQL Server Notebook 만들기 및 실행](../../azure-data-studio/notebooks-tutorial-sql-kernel.md)
 - [빠른 시작: SQL Server Machine Learning Services로 간단한 Python 스크립트 실행](../tutorials/quickstart-python-create-script.md)
 - [빠른 시작: SQL Server Machine Learning Services로 간단한 R 스크립트 실행](../tutorials/quickstart-r-create-script.md)

@@ -10,20 +10,19 @@ f1_keywords:
 ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 167b1e86c28a56c9d3159a4e01fe337ba428e1b7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 47ded1289c8daec463913060ce205c162143eeb1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253405"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002516"
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>테이블 추가 대화 상자(쿼리 및 뷰 디자이너)(Visual Database Tools)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 이 대화 상자를 사용하여 쿼리나 뷰에 테이블, 뷰, 사용자 정의 함수 또는 동의어를 추가할 수 있습니다.  
   
 > [!NOTE]  

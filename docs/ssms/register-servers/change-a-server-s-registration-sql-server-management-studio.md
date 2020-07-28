@@ -7,20 +7,19 @@ ms.topic: conceptual
 ms.assetid: ce6d9d88-3ac8-4f5d-8ea9-e9b55ceca0f4
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 7d77b9630b873661b33687312375c79de8a496bc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f66817edcd2c7d1c284658625bb5e9e1f658ccf4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258916"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001791"
 ---
 # <a name="change-a-server39s-registration-sql-server-management-studio"></a>서버 등록 변경(SQL Server Management Studio)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 서버의 등록을 변경하는 방법에 대해 설명합니다. 등록된 서버에 대한 연결 정보는 언제든지 변경할 수 있습니다.
 

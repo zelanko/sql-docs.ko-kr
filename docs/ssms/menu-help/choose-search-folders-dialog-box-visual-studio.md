@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a31e9e898101c15c032db1be5f348bf28267d52c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 15d6c1e0cf13da4b8dd0fe38ffcf57e555bdd650
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253294"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85983641"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>검색 폴더 선택 대화 상자(Visual Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 사용자의 명명된 검색 폴더 집합을 조합, 저장 및 수정할 수 있으며 폴더의 검색 순서를 지정할 수 있습니다. 이 대화 상자를 표시하려면 파일에서 찾기, 파일에서 바꾸기, 찾기 및 바꾸기 창의 **찾는 위치** 드롭다운 목록 옆의 **찾아보기(...)** 단추를 선택합니다.  
   
 **선택한 폴더** 목록에 폴더를 추가하고 **폴더 집합** 필드에 이 폴더 집합의 이름을 입력한 다음 **적용** 을 클릭하여 저장합니다. 이러한 사용자 지정 검색 범위는 이후에 **파일에서 찾기** 및 **파일에서 바꾸기** 의 **찾는 위치**드롭다운 목록에서 이름으로 선택할 수 있습니다. 사용자 지정 폴더 집합을 **찾는 위치** 목록에서 제거하려면 **폴더 집합** 필드에서 해당 이름을 선택하고 **삭제**를 클릭합니다.  

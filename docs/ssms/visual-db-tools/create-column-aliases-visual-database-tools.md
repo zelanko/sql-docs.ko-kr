@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: e2e1c166-8ea7-47a2-b6a7-e419bf0fa3bb
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: ecf5cbcac382bc088c5a04595d554e4d8ea124ba
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c4feb18b5f01b1e999ecec5b5b8e022230912d8f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254359"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85977978"
 ---
 # <a name="create-column-aliases-visual-database-tools"></a>열 별칭 만들기(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 열 이름에 대한 별칭을 만들면 열 이름, 계산 및 요약 값에 대한 작업을 좀 더 쉽게 수행할 수 있습니다. 예를 들어, 열 별칭을 만들어 다음 작업을 수행할 수 있습니다.  
   
 -   `(quantity * unit_price)` 같은 식이나 집계 함수에 대해 "Total Amount" 같은 열 이름을 만들 수 있습니다.  

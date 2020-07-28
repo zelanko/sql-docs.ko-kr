@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 822cd1efc21dbdeae7a5194bc659f73c00eddb7d
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 4d03eef91636b454b03f20d40c7a602ea8dc3fc5
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159741"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111261"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
 
@@ -51,9 +51,20 @@ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[s
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> |||||
-> |---|---|---|---|
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -1229,13 +1240,39 @@ NO_WAIT
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스에 대한 계획 캐시는 다음 옵션 중 하나를 설정하여 삭제됩니다.
 
-|||
-|-|-|
-|OFFLINE|READ_WRITE|
-|ONLINE|MODIFY FILEGROUP DEFAULT|
-|MODIFY_NAME|MODIFY FILEGROUP READ_WRITE|
-|COLLATE|MODIFY FILEGROUP READ_ONLY|
-|READ_ONLY||
+:::row:::
+    :::column:::
+        OFFLINE
+    :::column-end:::
+    :::column:::
+        ONLINE
+    :::column-end:::
+    :::column:::
+        MODIFY_NAME
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        COLLATE
+    :::column-end:::
+    :::column:::
+        READ_ONLY
+    :::column-end:::
+    :::column:::
+        READ_WRITE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        MODIFY FILEGROUP DEFAULT
+    :::column-end:::
+    :::column:::
+        MODIFY FILEGROUP READ_WRITE
+    :::column-end:::
+    :::column:::
+        MODIFY FILEGROUP READ_ONLY
+    :::column-end:::
+:::row-end:::
 
 계획 캐시는 다음 시나리오에서도 플러시됩니다.
 
@@ -1423,9 +1460,20 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* SQL Database<br />단일 데이터베이스/탄력적 풀 \*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database<br />단일 데이터베이스/탄력적 풀 \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -2304,9 +2352,20 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL Database<br />관리되는 인스턴스 \*_** &nbsp;||[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database<br />관리되는 인스턴스 \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -3087,9 +3146,20 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_** &nbsp;||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        **_\* Azure Synapse<br />Analytics \*_** &nbsp;
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 

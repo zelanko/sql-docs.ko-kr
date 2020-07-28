@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7b8851b8-eccb-4e6c-944a-68fa90fc5870
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bc8164e2c47c1224610183274c460ede9df00ad5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 49801a4ac617de832b5a20e3803daa364a0ad614
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251973"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003280"
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>쿼리와 연관된 연결 변경
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 쿼리에 사용되는 연결을 변경하여 다른 여러 개의 서버나 데이터베이스에 대해 쿼리를 실행할 수 있습니다.  
   
 ### <a name="to-change-the-connection-associated-with-a-query"></a>쿼리와 연관된 연결을 변경하려면  

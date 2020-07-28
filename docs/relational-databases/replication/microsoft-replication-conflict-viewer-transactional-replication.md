@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 35138719e779da2301ab635e29e9adcaacf2fdec
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 17b2fd7cd58cdd63884850ccd3b4da1b5e1ee380
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722025"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110546"
 ---
 # <a name="replication-conflict-viewer-transactional-replication"></a>복제 충돌 뷰어(트랜잭션 복제)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

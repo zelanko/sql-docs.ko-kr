@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e1a6da50988a372514cf613f16896aea966fd153
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9cf4513c4094798f72b6e3f5012fd47afb29bdae
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245755"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001622"
 ---
 # <a name="options-designers---maintenance-plans-page"></a>옵션(디자이너 - 유지 관리 계획 페이지)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 **옵션** 대화 상자를 사용하여 디자인 화면에 새 셰이프를 추가할 때의 디자이너 기본 동작을 결정할 수 있습니다. **도구** 메뉴에서 **옵션**을 클릭하고 **디자이너**를 확장한 다음 **유지 관리 계획**을 선택합니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
 **기본적으로 선택한 셰이프에 새 셰이프 연결**  
 이 확인란을 선택하면 디자인 화면에 새 셰이프를 추가할 때 해당 셰이프가 다른 셰이프에 자동으로 연결됩니다. 이 확인란의 선택을 취소하면 추가한 새 셰이프가 기존 셰이프에 연결되지 않습니다. 이 확인란을 선택하면 다음 상자가 활성화됩니다.  
   

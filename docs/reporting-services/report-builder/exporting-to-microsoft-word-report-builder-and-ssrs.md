@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b0085829346cd09f813e62fe50b1ce22f85b7f5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: afcafeeb554e60c84c3d5e5051db354721371416
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342873"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86972131"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Microsoft Word로 내보내기(보고서 작성기 및 SSRS)
 
@@ -151,7 +151,7 @@ ms.locfileid: "80342873"
 > [!IMPORTANT]  
 >  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003(.doc) 렌더링 확장 프로그램은 더 이상 사용되지 않습니다. 자세한 내용은 [SQL Server 2016의 SQL Server Reporting Services에서 지원되지 않는 기능](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)을 참조하세요.  
   
- Word 렌더러는 Word, Excel 및 PowerPoint용 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 호환 기능 팩이 설치된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003과도 호환됩니다. 자세한 내용은 [Word, Excel 및 PowerPoint용 Microsoft Office 호환 기능 팩](https://www.microsoft.com/download/details.aspx?id=1285)을 참조하세요.
+ Word 렌더러는 Word, Excel 및 PowerPoint용 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 호환 기능 팩이 설치된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003과도 호환됩니다. 자세한 내용은 [Word, Excel 및 PowerPoint용 Microsoft Office 호환 기능 팩](https://www.microsoft.com/download/office.aspx)을 참조하세요.
   
  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003과 호환되는 이전 버전의 Word 렌더링 확장 프로그램은 Word 2003으로 이름이 변경되었습니다. 기본적으로 Word 렌더링 확장 프로그램만 사용할 수 있습니다. Word 2003 렌더링 확장 프로그램을 사용할 수 있도록 하려면 Reporting Services 구성 파일을 업데이트해야 합니다. Word 2003 렌더러를 통해 생성되는 파일의 콘텐츠 형식은 **application/vnd.ms-word** 이고 파일 이름 확장명은 .doc입니다.  
   

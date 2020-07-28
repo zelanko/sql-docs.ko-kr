@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 51e9e14fc53c4b9904e64180307f7da8939408ab
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1ff264c620123dcbb73c58373871f568ff1d249e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924633"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243404"
 ---
 # <a name="jdbc-42-compliance-for-the-jdbc-driver"></a>JDBC 드라이버의 JDBC 4.2 준수
 
@@ -59,14 +59,12 @@ ms.locfileid: "80924633"
   
 ## <a name="sqlserverresultset-class"></a>SQLServerResultSet 클래스
   
-||||  
-|-|-|-|  
 |새 메서드|Description|중요한 구현|  
+|-|-|-|  
 ||지정된 열을 개체 값으로 업데이트합니다. 새 SQLType 인터페이스를 지원하는 4개의 오버로드된 새 메서드가 있습니다.|java.sql.ResultSet 인터페이스에 설명된 대로 구현됩니다. 자세한 내용은 [java.sql.ResultSet](https://docs.oracle.com/javase/8/docs/api/java/sql/ResultSet.html)을 참조하세요.|  
   
  Java Database Connectivity API 4.2 사양은 다음과 같은 데이터 형식 매핑을 통해 SQL Server용 Microsoft JDBC Driver 4.2에서 지원됩니다.  
   
-|||  
-|-|-|  
 |새로운 데이터 형식 매핑|Description|  
+|-|-|  
 |**Java 8의 새로운 Java 클래스:** <br /> <br /> LocalDate/LocalTime/LocalDateTime<br /><br /> OffsetTime/OffsetDateTime<br /><br /> **새 JDBC 형식:**<br /><br /> TIME_WITH_TIMEZONE<br /><br /> TIMESTAMP_WITH_TIMEZONE<br /><br /> REF_CURSOR|REF_CURSOR는 SQL Server에서 지원되지 않습니다. 이 형식이 사용되는 경우 드라이버에서 SQLFeatureNotSupportedException 예외가 throw됩니다. 드라이버는 JDBC 4.2 사양에 지정된 대로 다른 모든 새 Java 및 JDBC 형식 매핑을 지원합니다.|  

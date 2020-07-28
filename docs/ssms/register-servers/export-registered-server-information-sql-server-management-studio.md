@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 673cde844a678e54ccb5622a55e2d546cf7e9bc9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6137cc5760caec8017f2aeecc1cbb5dffb19e8a0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246534"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85977955"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>등록된 서버 정보 내보내기(SQL Server Management Studio)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 등록된 서버 정보를 저장하여 내보내고 그 정보를 다른 사용자나 서버로 배포하는 방법에 대해 설명합니다. 이러한 내보내기 기능을 사용하면 여러 대의 컴퓨터에서 일관된 사용자 인터페이스를 사용할 수 있습니다.  
   

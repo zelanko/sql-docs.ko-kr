@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7b0e3e12eee099191da6ea0db231c0f2f99f8c48
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 29c44806ff3a5677f8d59841782e3a8bc4bb5044
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85681920"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111456"
 ---
 # <a name="min_active_rowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "85681920"
 MIN_ACTIVE_ROWVERSION  
 ```  
   
-## <a name="return-types"></a>반환 형식  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>반환 형식
  **binary(8)** 값을 반환합니다.  
   
 ## <a name="remarks"></a>설명  

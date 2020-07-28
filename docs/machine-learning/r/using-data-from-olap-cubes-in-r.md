@@ -2,22 +2,22 @@
 title: R에서 OLAP 큐브의 데이터 사용
 description: 이 문서에서는 다차원 큐브 데이터베이스를 처음 접하는 사용자를 위한 OLAP 및 MDX 개요와 함께 olapR API에 대해 설명합니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 99f67fb0fb52717eaa42e229a1b60c82f6223fad
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f27866a242cb03839a67a8f68478bc786222aa64
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117236"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968034"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>R에서 OLAP 큐브의 데이터 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 **olapR** 패키지는 Machine Learning Server 및 SQL Server와 함께 사용하도록 Microsoft에서 제공하는 R 패키지로, MDX 쿼리를 실행하여 OLAP 큐브에서 데이터를 가져올 수 있습니다. 이 패키지를 사용하면 연결된 서버를 만들거나 일반 행 세트를 정리할 필요가 없으며, R에서 직접 OLAP 데이터를 가져올 수 있습니다.
 
@@ -99,7 +99,7 @@ SQL Server Management Studio 같은 클라이언트를 사용하여 Analysis Ser
 
 서버 속성 쿼리에 대한 내용은 다음 문서를 참조하세요.
 
-+ [OLAP용 OLE DB 스키마 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets)
++ [OLAP용 OLE DB 스키마 행 집합](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126079(v=sql.110))
 
 ### <a name="writeback-is-not-supported"></a>쓰기 저장은 지원되지 않습니다.
 

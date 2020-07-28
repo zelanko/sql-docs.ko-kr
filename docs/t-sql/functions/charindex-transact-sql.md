@@ -21,12 +21,12 @@ ms.assetid: 78c10341-8373-4b30-b404-3db20e1a3ac4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bd8a0c883e49ef9846dc74acf0b3080ce1edcd7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8c7e5deac23eaed47a1426c51bdb0aee087f10d0
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002213"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110625"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "86002213"
 CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )   
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 *expressionToFind*  
 찾으려는 시퀀스가 포함된 문자 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *expressionToFind*는 8,000자로 제한됩니다.
   

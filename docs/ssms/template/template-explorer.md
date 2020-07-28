@@ -19,16 +19,16 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 22864ca365917d295f8111580cb833097fb31c46
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3720799e0af4dbd7d01b6703be87bd9ac16b0587
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247187"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001535"
 ---
 # <a name="template-explorer"></a>Template Explorer
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다양한 템플릿을 제공합니다. 템플릿은 데이터베이스에서 개체를 만드는 데 유용한 SQL 스크립트를 포함하는 상용구 파일입니다. 템플릿 탐색기를 처음으로 열면 템플릿 복사본이 C:\Users 사용자 폴더의 AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates 아래에 배치됩니다.  
   
 템플릿 탐색기에서 사용 가능한 템플릿을 찾은 다음 열어서 코드를 코드 편집기 창에 통합할 수 있습니다. 사용자 지정 템플릿을 만들 수도 있습니다.  

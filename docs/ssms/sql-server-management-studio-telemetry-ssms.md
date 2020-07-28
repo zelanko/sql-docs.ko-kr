@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5b61b32ab266c4068f610b9138bf3fc8ea364f0e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e9ecc82ab14bf73ab52219301ca5843673b3ba4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245697"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001585"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>SSMS 사용 현황 및 진단 데이터 수집에 대한 로컬 감사
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SSMS(SQL Server Management Studio)에는 익명 기능 사용 현황 및 진단 데이터를 수집하고 Microsoft에 보낼 수 있는 인터넷 사용 기능이 포함되어 있습니다. SSMS는 표준 컴퓨터 정보 및 Microsoft로 전송되어 SSMS의 품질, 보안 및 안정성 개선의 목적으로 분석될 수 있는 사용 및 성능에 대한 정보를 수집할 수 있습니다. 사용자 이름, 주소 또는 기타 개인 정보는 수집하지 않습니다. 자세한 내용은 [Microsoft 개인정보처리방침](https://privacy.microsoft.com/privacystatement) 및 [SQL Server 개인 정보 제공](https://go.microsoft.com/fwlink/?LinkID=868444)을 참조하세요.
 

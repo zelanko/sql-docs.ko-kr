@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5e515bcf14eff0ce4d4b6c5913803ee8e322365d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: aa160cf83c8942ef0b5ed2b5b0f5c06add17d6a4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252138"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246242"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>일정을 만들고 작업에 연결
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
@@ -90,9 +89,8 @@ CPU 유휴 조건을 CPU 사용이 지정된 시간 동안 그 이하로 유지�
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|||  
+|Description|항목|  
 |-|-|  
-|**설명**|**항목**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에 대한 예약을 만드는 방법에 대해 설명합니다.|[Create a Schedule](../../ssms/agent/create-a-schedule.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 예약하는 방법에 대해 설명합니다.|[작업 예약](../../ssms/agent/schedule-a-job.md)|  
 |서버의 CPU 유휴 상태 판단 기준을 정의하는 방법에 대해 설명합니다.|[CPU 유휴 시간 및 기간 설정&#40;SQL Server Management Studio&#41;](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  

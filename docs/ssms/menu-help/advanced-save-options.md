@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1210df560b91cab1239e6fa4b1b2ca0a6446b04a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1b0466252ead4c5bc1dca28d69890c9d04ef1824
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253279"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001680"
 ---
 # <a name="advanced-save-options"></a>저장 고급 옵션
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 이 대화 상자를 사용하여 언어 인코딩 스키마를 선택하고 각 줄 끝에 삽입할 문자를 지정할 수 있습니다. **고급 저장 옵션** 대화 상자에 액세스하려면 **파일** 메뉴에서 **다른 이름으로** <query name> **.sql 저장**을 클릭하여 **다른 이름으로 파일 저장** 대화 상자를 열고, **저장** 단추에서 아래쪽 화살표를 클릭한 다음, **인코딩하여 저장**을 클릭합니다.  
   
 ## <a name="options"></a>옵션  

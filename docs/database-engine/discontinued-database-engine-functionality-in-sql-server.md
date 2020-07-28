@@ -2,7 +2,7 @@
 title: 중단된 데이터베이스 엔진 기능
 description: SQL Server 2019(15.x), SQL Server 2016(13. x) 및 이전 버전에서 중단된 데이터베이스 엔진 기능 및 특성에 대해 알아봅니다.
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -36,12 +36,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2137021617ecf15375be480021ca54b50627464d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0aada5da9da6b0eadb1c190690f98c4a3d3cb3b8
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920289"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110247"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>SQL Server에서 중단된 데이터베이스 엔진 기능
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -69,13 +69,13 @@ ms.locfileid: "86920289"
 
 - ActiveX 하위 시스템이 중단되었습니다. 명령줄 또는 PowerShell 스크립트를 대신 사용 합니다.
 
-- 시작 매개 변수 **-h** 및 **-g**. 자세한 내용은 [Database Engine Service Startup Options](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014)을(를) 참조하세요.
+- 시작 매개 변수 **-h** 및 **-g**. 자세한 내용은 [Database Engine Service Startup Options](/previous-versions/sql/2014/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014)을(를) 참조하세요.
 
 - SSL(Secure Sockets Layer) 암호화가 더 이상 사용되지 않습니다. 대신 TLS(전송 계층 보안)를 사용해야 합니다. 자세한 내용은 [데이터베이스 엔진에 대해 암호화 연결 사용](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.
 
 ## <a name="previous-versions"></a>이전 버전
 
-- [SQL Server 2014에서 지원되지 않는 데이터베이스 엔진 기능](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
+- [SQL Server 2014에서 지원되지 않는 데이터베이스 엔진 기능](/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
 
 ### <a name="see-also"></a>참고 항목
 

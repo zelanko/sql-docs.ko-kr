@@ -20,15 +20,15 @@ ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 90ef549988aefd2740d10cf12b04fb5510400ab8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2e302910a5a7870ed7c57a7325e6686f42a15707
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77478462"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999728"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>분리된 사용자 문제 해결(SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 분리된 사용자는 데이터베이스 사용자가 **마스터** 데이터베이스의 로그인을 기반으로 하지만 해당 로그인이 **마스터**에 더 이상 존재하지 않는 경우 발생합니다. 이는 로그인이 삭제되었거나 데이터베이스가 로그인이 존재하지 않는 다른 서버로 이동된 경우에 발생할 수 있습니다. 이 항목에서는 분리된 사용자를 찾아서 로그인에 다시 매핑하는 방법을 설명합니다.  
   

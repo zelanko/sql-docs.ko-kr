@@ -23,12 +23,12 @@ ms.assetid: 5ced55f7-ac89-4cf2-9465-f63f4dc480db
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc6822f890ba66df1f2d7945e411a4cd334de1bc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f8c2eaf53931d935300c4002ab88843b86525576
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004070"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110280"
 ---
 # <a name="upper-transact-sql"></a>UPPER(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "86004070"
 UPPER ( character_expression )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *character_expression*  
  문자 데이터의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *character_expression*은 문자나 이진 데이터의 상수, 변수 또는 열일 수 있습니다.  
   

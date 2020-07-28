@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0cc70ffc8f2520c4d8c50eff24b451f5a53ffbfc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a82e5c9a18f1bb21ac58d3158395881ee973a9a5
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732738"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111659"
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED(Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,9 @@ ms.locfileid: "85732738"
 CERTENCODED ( cert_id )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 *cert_id*  
 인증서의 **certificate_id**입니다. sys.certificates에서 이 값을 찾습니다. [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)함수도 이를 반환합니다. *cert_id*는 **int** 데이터 형식을 갖습니다.
   

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b1c46159-cc76-4205-a841-8f4a71742f80
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b031b74da10dd4162650d11559474562d69d3f3c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 44bdf92723ed68b4b79e5b6dd5825d9b9e3a7907
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85714930"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111355"
 ---
 # <a name="signbyasymkey-transact-sql"></a>SIGNBYASYMKEY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,9 @@ ms.locfileid: "85714930"
 SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *Asym_Key_ID*  
  현재 데이터베이스에 있는 비대칭 키의 ID입니다. *Asym_Key_ID*는 **int**입니다.  
   

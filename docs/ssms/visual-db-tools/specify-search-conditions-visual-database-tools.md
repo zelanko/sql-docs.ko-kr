@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 18e2c759-68ec-4efe-b208-2f73418cd9bd
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 424615ed5edfb74b4c31d048425ce700db66b483
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e1541a4602c53c96dfad36c549bc75c8cf76fae5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254952"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999259"
 ---
 # <a name="specify-search-conditions-visual-database-tools"></a>검색 조건 지정(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 검색 조건을 지정하여 쿼리에 표시할 데이터 행을 지정할 수 있습니다. 예를 들어 `employee` 테이블을 쿼리 중인 경우 특정 지역에 근무하는 직원만 찾도록 지정할 수 있습니다.  
   
 식을 사용하여 검색 조건을 지정합니다. 가장 일반적으로 사용하는 식은 연산자와 검색 값으로 구성됩니다. 예를 들어 특정 영업 지역에 근무하는 직원을 찾으려면 `region` 열에 다음 검색 조건을 지정하면 됩니다.  

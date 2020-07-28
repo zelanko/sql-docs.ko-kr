@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1234aa14-3464-4a3e-922a-5cfb8fb23627
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b0c4cc26fddff13e388b74593aa9d8f9331359f8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4f04595d222f037e875e85b1cb079cef435e1404
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245676"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001542"
 ---
 # <a name="replace-template-parameters"></a>템플릿 매개 변수 바꾸기
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 템플릿에는 템플릿이 사용될 때마다 구현별 값으로 바꿀 수 있는 매개 변수가 포함되어 있습니다. 코드 편집기에서 템플릿을 연 후 매개 변수를 구현과 관련된 값으로 바꿀 수 있습니다.  
   
 ## <a name="before-you-begin"></a>시작하기 전에  

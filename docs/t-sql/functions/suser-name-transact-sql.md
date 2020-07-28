@@ -24,12 +24,12 @@ ms.assetid: ae598d9f-9baa-49b8-b1c1-042854206de4
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 63eb298fab5e2c62ac9403325368b008efa95dab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3b62e29885c9e23ae7f391106ce83cdf77c1b8d3
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79526748"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110754"
 ---
 # <a name="suser_name-transact-sql"></a>SUSER_NAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "79526748"
 SUSER_NAME ( [ server_user_id ] )   
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 _server\_user\_id_  
 사용자의 로그인 ID입니다. _server\_user\_id_는 선택 사항이며 **int**입니다. _server\_user\_id_는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있는 권한을 가진 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자나 그룹 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 로그인 ID 번호일 수 있습니다. _server\_user\_id_를 지정하지 않으면 현재 사용자에 대한 로그인 ID 이름이 반환됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다.  
   

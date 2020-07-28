@@ -20,12 +20,12 @@ ms.assetid: 71dfc339-16c8-42f9-8555-ad45400f7f9b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6169291360e853cfdbeb8ea8c412399651d25b2e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7a7e64d73c44bf76d45dd672970f1216f88412c6
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004054"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111306"
 ---
 # <a name="var-transact-sql"></a>VAR(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,9 @@ VAR ( [ ALL | DISTINCT ] expression )
 VAR ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  **ALL**  
  모든 값에 함수를 적용합니다. 기본값은 ALL입니다.  
   

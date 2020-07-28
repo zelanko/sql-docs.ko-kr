@@ -23,16 +23,16 @@ ms.author: maghan
 ms.reviewer: ''
 ms.date: 10/20/2016
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de184b30270ff301e343b1598327a449907fb508
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d48e64edfaaa1c3f5506f8c2c674101616254000
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75558268"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718428"
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>TSQL 디버거를 실행 하기 전에 방화벽 규칙 구성
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기와 다른 컴퓨터에서 실행 중인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결된 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 디버깅을 사용하도록 Windows 방화벽 규칙을 구성해야 합니다.
 

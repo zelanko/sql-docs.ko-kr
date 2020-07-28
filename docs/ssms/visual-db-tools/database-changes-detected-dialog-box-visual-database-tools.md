@@ -13,17 +13,16 @@ f1_keywords:
 ms.assetid: 91f13086-371f-46a2-9f46-804c1415f3ed
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: b3944c7fa09ba71ea79eef976bab8ad4e88a56ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eff88edb726854bdc24fe334190d9014a2693a97
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254704"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999952"
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>데이터베이스 변경 감지 대화 상자(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 이 대화 상자는 데이터베이스 다이어그램이나 선택된 테이블을 저장하려 하지만 저장 동작이 적용되는 일부 데이터베이스 개체가 최신 상태가 아닌 경우에 나타납니다. 이 대화 상자에 표시되는 변경 내용을 적용하면 데이터베이스가 다이어그램과 일치하도록 업데이트되고 다른 사용자의 변경 내용을 덮어쓰게 됩니다.  
   
 > [!NOTE]  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 971432a363eb18129c560c5738a9cc65e77b01a4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 608c24801a19e003751d6455f86cd11e4c053719
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257606"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001835"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사용
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 사용자 지정 보고서가 선택한 개체 탐색기 노드의 보고서 매개 변수를 참조하면 사용자 지정 보고서를 해당 노드의 컨텍스트에서 실행할 수 있습니다. 이렇게 하면 사용자 지정 보고서가 현재 컨텍스트(예: 현재 데이터베이스)나 데이터베이스 또는 서버 개체를 사용할 수 있습니다.  
   
 ## <a name="object-explorer-node-report-parameters"></a>개체 탐색기 노드 보고서 매개 변수  

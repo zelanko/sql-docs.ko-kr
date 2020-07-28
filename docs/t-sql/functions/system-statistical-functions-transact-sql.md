@@ -16,26 +16,67 @@ helpviewer_keywords:
 ms.assetid: 45828c67-1b9a-4653-bb24-86246084d8ba
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ff5025ce34155432736bd341a332f602cf94d337
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 887e4b80a60ab4600c9f049c7dbf8557609a7ce5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85714704"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245272"
 ---
 # <a name="system-statistical-functions-transact-sql"></a>시스템 통계 함수(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   다음 스칼라 함수는 시스템에 대한 통계 정보를 반환합니다.  
+
+:::row:::
+    :::column:::
+        [@@CONNECTIONS](../../t-sql/functions/connections-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [@@PACK_RECEIVED](../../t-sql/functions/pack-received-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [@@CPU_BUSY](../../t-sql/functions/cpu-busy-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [@@PACK_SENT](../../t-sql/functions/pack-sent-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [@@TIMETICKS](../../t-sql/functions/timeticks-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [@@IDLE](../../t-sql/functions/idle-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [@@TOTAL_ERRORS](../../t-sql/functions/total-errors-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [@@IO_BUSY](../../t-sql/functions/io-busy-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [@@TOTAL_READ](../../t-sql/functions/total-read-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [@@PACKET_ERRORS](../../t-sql/functions/packet-errors-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [@@TOTAL_WRITE](../../t-sql/functions/total-write-transact-sql.md)
+    :::column-end:::
+:::row-end:::
   
-|||  
-|-|-|  
-|[@@CONNECTIONS](../../t-sql/functions/connections-transact-sql.md)|[@@PACK_RECEIVED](../../t-sql/functions/pack-received-transact-sql.md)|  
-|[@@CPU_BUSY](../../t-sql/functions/cpu-busy-transact-sql.md)|[@@PACK_SENT](../../t-sql/functions/pack-sent-transact-sql.md)|  
-|[fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md)|[@@TIMETICKS](../../t-sql/functions/timeticks-transact-sql.md)|  
-|[@@IDLE](../../t-sql/functions/idle-transact-sql.md)|[@@TOTAL_ERRORS](../../t-sql/functions/total-errors-transact-sql.md)|  
-|[@@IO_BUSY](../../t-sql/functions/io-busy-transact-sql.md)|[@@TOTAL_READ](../../t-sql/functions/total-read-transact-sql.md)|  
-|[@@PACKET_ERRORS](../../t-sql/functions/packet-errors-transact-sql.md)|[@@TOTAL_WRITE](../../t-sql/functions/total-write-transact-sql.md)|  
   
  모든 시스템 통계 함수는 비 결정적입니다. 이는 이러한 함수를 호출할 때마다 동일한 입력 값 집합을 사용하더라도 항상 동일한 결과가 반환되지는 않는다는 것을 의미합니다. 함수 결정성에 대한 자세한 내용은 [결정적 함수 및 비결정적 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.  
   

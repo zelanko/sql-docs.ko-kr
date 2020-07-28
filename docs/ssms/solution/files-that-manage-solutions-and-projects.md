@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: e19d2859-0b97-4727-ac27-c4c226d86b2f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ac5014ed3567af77b0389e5262925f6e7ae6de12
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bec1f5859162d2438d2db137ef0637fc4900b32b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251902"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000842"
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>솔루션 및 프로젝트 관리 파일
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
  이 문서에서는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 고유한 파일 형식에 대해 설명합니다. 기본적으로 모든 솔루션과 해당 프로젝트는 \My Documents\SQL Server Management Studio Projects에서 생성됩니다.  
 
 

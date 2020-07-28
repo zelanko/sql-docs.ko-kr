@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c0df880a36a0822c3c397be4f2ed9aa14d47c2bc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5356b49095c1a2601425f3b58c877117a2b45306
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768014"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246612"
 ---
 # <a name="create-alter-and-drop-filetables"></a>FileTable 만들기, 변경 및 삭제
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -160,9 +160,8 @@ GO
  **새 FileTable을 만들 때 생성되는 인덱스**  
  새 FileTable을 만들면 다음과 같은 시스템 정의 인덱스도 만들어집니다.  
   
-|||  
+|열|인덱스 유형|  
 |-|-|  
-|**열**|**인덱스 유형**|  
 |[path_locator] ASC|기본 키, 비클러스터형|  
 |[parent_path_locator] ASC,<br /><br /> [name] ASC|고유, 비클러스터형|  
 |[stream_id] ASC|고유, 비클러스터형|  

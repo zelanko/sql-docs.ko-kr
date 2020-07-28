@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - TRY_CONVERT function
 ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
-ms.openlocfilehash: ace985045db2bf10b1ef0e80a2b05ea3e0cb85ca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99b2ffa6676b5f9ee1dbe6fe4f2ac294b496557c
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70151960"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111716"
 ---
 # <a name="try_convert-transact-sql"></a>TRY_CONVERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -34,12 +34,14 @@ ms.locfileid: "70151960"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *data_type [ ( length ) ]*  
  *expression*을 캐스팅할 데이터 형식입니다.  
   
@@ -49,7 +51,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
  *style*  
  **TRY_CONVERT** 함수가 *expression*을 변환하는 방법을 지정하는 선택적 정수 식입니다.  
   
- *style*은 **CONVERT** 함수의 *style* 매개 변수와 동일한 값을 허용합니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.  
+ *style*은 *CONVERT* 함수의 **style** 매개 변수와 동일한 값을 허용합니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.  
   
  허용되는 값 범위는 *data_type* 값에 따라 결정됩니다. *style*이 Null이면 **TRY_CONVERT**는 Null을 반환합니다.  
   

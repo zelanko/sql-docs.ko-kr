@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 8b8e112c3d83704870c43f2971b2774ffd9b6b34
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: bc2a4c5da5db899289b05845eaef1564437ef8c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150550"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726817"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner 요소(ssbdiagnose)
 
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 **ssbdiagnose** 출력 XML 파일을 생성한 유틸리티를 식별합니다.  
   

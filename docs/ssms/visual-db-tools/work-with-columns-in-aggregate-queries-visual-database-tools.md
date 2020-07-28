@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 427f367eac38f2c5899f06c022e614bde80f37fb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 397e41a6ad34203fd16bf19e56f6284f7bb8c94f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246239"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002606"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>집계 쿼리에서 열 작업(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 집계 쿼리를 만드는 경우 [쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 에서는 특정 가정을 만들어 유효한 쿼리를 만들 수 있도록 합니다. 예를 들어 집계 쿼리를 만들 때 출력할 데이터 열을 표시하면 쿼리 및 뷰 디자이너가 이 열을 자동으로 GROUP BY 절의 일부로 만들기 때문에 요약에서 개별 행의 내용을 실수로 표시할 염려가 없습니다.  
   
 ## <a name="using-group-by"></a>그룹화 방법 사용  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 67106a11e7a42f6167c0d08df99917ed057f11f5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3737a87e4b4efebc738d8f506fda3aaeeec3ca15
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251875"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000820"
 ---
 # <a name="manage-files-with-encoding"></a>인코딩으로 파일 관리
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 특정 언어와 특정 플랫폼에서 코드를 더 쉽게 표시할 수 있도록 특정 문자 인코딩을 파일과 연결할 수 있습니다.  
   
 ## <a name="opening-files"></a>파일 열기  

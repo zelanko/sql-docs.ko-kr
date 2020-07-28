@@ -1,7 +1,7 @@
 ---
 title: model 데이터베이스 | Microsoft 문서
 ms.custom: ''
-ms.date: 11/19/2018
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 04a328034388f5ad305b627106d178b73df040bc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dd0390e7e6b781d5ca5d2b0f5685aeb8fc95c88f
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726425"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87108330"
 ---
 # <a name="model-database"></a>model 데이터베이스
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "85726425"
 |주 데이터|modeldev|model.mdf|디스크가 꽉 찰 때까지 64MB씩 자동 증가|  
 |로그|modellog|modellog.ldf|최대 2TB까지 64MB씩 자동 증가|  
 
-SQL Server 2014의 경우 기본 파일 증가 값은 [model 데이터베이스](https://docs.microsoft.com/sql/relational-databases/databases/model-database?view=sql-server-2014)를 참조하세요.  
+SQL Server 2014의 경우 기본 파일 증가 값은 [model 데이터베이스](/previous-versions/sql/2014/relational-databases/databases/model-database?view=sql-server-2014)를 참조하세요.  
 
  **model** 데이터베이스나 로그 파일을 이동하려면 [시스템 데이터베이스 이동](../../relational-databases/databases/move-system-databases.md)을 참조하세요.  
   

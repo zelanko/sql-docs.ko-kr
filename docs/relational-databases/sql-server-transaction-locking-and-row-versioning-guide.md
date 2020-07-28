@@ -19,12 +19,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b39ab62ed76269869ae8c9327f5aaa0996672fba
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: d1323c8736934a46fdb4ef8c4d8752364f8ae38d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053749"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87239485"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>트랜잭션 잠금 및 행 버전 관리 지침
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,14 +71,62 @@ ms.locfileid: "86053749"
   
  명시적 트랜잭션에서는 다음 문을 제외한 모든 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 사용할 수 있습니다.  
   
-||||  
-|-|-|-|  
-|ALTER DATABASE|CREATE DATABASE|DROP FULLTEXT INDEX|  
-|ALTER FULLTEXT CATALOG|CREATE FULLTEXT CATALOG|RECONFIGURE|  
-|ALTER FULLTEXT INDEX|CREATE FULLTEXT INDEX|RESTORE|  
-|BACKUP|DROP DATABASE|전체 텍스트 시스템 저장 프로시저|  
-|CREATE DATABASE|DROP FULLTEXT CATALOG|데이터베이스 옵션을 설정하는 sp_dboption 또는 명시적/암시적 트랜잭션 내에서 master 데이터베이스를 수정하는 시스템 프로시저|  
-  
+:::row:::
+    :::column:::
+        ALTER DATABASE
+    :::column-end:::
+    :::column:::
+        CREATE DATABASE
+    :::column-end:::
+    :::column:::
+        DROP FULLTEXT INDEX
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ALTER FULLTEXT CATALOG
+    :::column-end:::
+    :::column:::
+        CREATE FULLTEXT CATALOG
+    :::column-end:::
+    :::column:::
+        RECONFIGURE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ALTER FULLTEXT INDEX
+    :::column-end:::
+    :::column:::
+        CREATE FULLTEXT INDEX
+    :::column-end:::
+    :::column:::
+        RESTORE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        BACKUP
+    :::column-end:::
+    :::column:::
+        DROP DATABASE
+    :::column-end:::
+    :::column:::
+        전체 텍스트 시스템 저장 프로시저
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE DATABASE
+    :::column-end:::
+    :::column:::
+        DROP FULLTEXT CATALOG
+    :::column-end:::
+    :::column:::
+        데이터베이스 옵션을 설정하는 sp_dboption 또는 명시적/암시적 트랜잭션 내에서 master 데이터베이스를 수정하는 시스템 프로시저
+    :::column-end:::
+:::row-end:::
+
 > [!NOTE]  
 > UPDATE STATISTICS는 명시적 트랜잭션 내에서 사용할 수 있습니다. 그러나 UPDATE STATISTICS는 포함하는 트랜잭션과 별개로 커밋하며 롤백할 수 없습니다.  
   
@@ -90,13 +138,51 @@ ms.locfileid: "86053749"
   
  연결에 대해 암시적 트랜잭션 모드를 설정하고 나면 이러한 문을 처음 실행할 때 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스가 자동으로 트랜잭션을 시작합니다.  
   
-||||  
-|-|-|-|  
-|ALTER TABLE|FETCH|REVOKE|  
-|CREATE|GRANT|SELECT|  
-|Delete|INSERT|TRUNCATE TABLE|  
-|DROP|OPEN|UPDATE|  
-  
+:::row:::
+    :::column:::
+        ALTER TABLE
+    :::column-end:::
+    :::column:::
+        FETCH
+    :::column-end:::
+    :::column:::
+        REVOKE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE
+    :::column-end:::
+    :::column:::
+        GRANT
+    :::column-end:::
+    :::column:::
+        SELECT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Delete
+    :::column-end:::
+    :::column:::
+        INSERT
+    :::column-end:::
+    :::column:::
+        TRUNCATE TABLE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DROP
+    :::column-end:::
+    :::column:::
+        OPEN
+    :::column-end:::
+    :::column:::
+        UPDATE
+    :::column-end:::
+:::row-end:::
+
 -  **일괄 처리 범위의 트랜잭션**  
    MARS(Multiple Active Result Sets)에만 해당되며, MARS 세션에서 시작되는 [!INCLUDE[tsql](../includes/tsql-md.md)] 명시적 또는 암시적 트랜잭션이 일괄 처리 범위 트랜잭션이 됩니다. 일괄 처리가 완료될 때 커밋되거나 롤백되지 않은 일괄 처리 범위의 트랜잭션은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 자동으로 롤백합니다.  
   

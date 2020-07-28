@@ -22,12 +22,12 @@ ms.assetid: abf34f99-9ee9-460b-85b2-930ca5c4b5ae
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f2cda4a044f6980a5998371f1a7b0f70397e259
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 915cf95799a80a0d8841206f4b23b04fba5fec5f
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737989"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112373"
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -45,6 +45,8 @@ ms.locfileid: "85737989"
 PARSENAME ('object_name' , object_piece )
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>인수
 
 *'object_name'* 지정된 개체 부분을 검색할 개체의 이름을 보관하는 매개 변수입니다. 이 매개 변수는 선택적으로 한정된 개체 이름입니다. 개체 이름의 모든 부분이 정규화된 경우 이 이름은 서버 이름, 데이터베이스 이름, 스키마 이름, 개체 이름의 네 부분으로 이루어질 수 있습니다.  'object_name' 문자열의 각 부분은 nvarchar(128) 또는 256 바이트와 동일한 *sysname* 형식입니다. 문자열에 256바이트를 초과하는 부분이 있는 경우 유효한 sysname이 아니므로 PARSENAME은 해당 부분에 대해 NULL을 반환합니다.

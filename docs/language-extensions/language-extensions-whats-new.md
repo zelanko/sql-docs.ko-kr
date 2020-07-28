@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3bcf60c390b06695c4913bd1347045b807c1ae9d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b52daf4ad0e789dc1508b5903cc95a92c39e0929
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73658800"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921061"
 ---
 # <a name="whats-new-in-sql-server-language-extensions"></a>SQL Server 언어 확장의 새로운 기능
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 Microsoft는 외부 언어와 데이터 플랫폼 간의 통합을 계속 확장하고 발전시키고 있으며, 릴리스마다 SQL Server에 [언어 확장](language-extensions-overview.md) 기능을 추가하고 있습니다. 
 

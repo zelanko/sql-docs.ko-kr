@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: ba7d7c10-9bb3-4d9b-90b0-5fa94ecae59b
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 7995bd9ac78595200f6ded5e23c0f0b40cf3ff66
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ea4bed93c1e1c886e4dc7c2e85c440be1d4a541e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254927"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999220"
 ---
 # <a name="specify-the-top-clause-in-queries-visual-database-tools"></a>쿼리에 TOP 절 지정(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 TOP 절은 쿼리에서 처음 *n*개 또는 *n%* 의 행만 반환합니다. TOP 절은 쿼리 결과를 모두 반환하는 데 필요한 리소스를 사용하지 않은 채 쿼리가 의도한 대로 올바르게 작동하는지 확인하기 위해 결과의 일부만 검사하려는 경우에 유용합니다.  
   
 ### <a name="to-specify-the-top-clause-in-queries"></a>쿼리에 TOP 절을 지정하려면  

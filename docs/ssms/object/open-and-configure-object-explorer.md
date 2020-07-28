@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 07a21139575c3eedfddec9f22254fe82a5b5659c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b1bda1521bf3982f66179a170c6aba7990db81ea
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257131"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001891"
 ---
 # <a name="open-and-configure-object-explorer"></a>개체 탐색기 열기 및 구성
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 **의** 보기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]메뉴를 사용하여 개체 탐색기를 엽니다. **도구** 메뉴의 **옵션** 을 사용하여 개체 탐색기 옵션을 구성합니다.  
   
 ## <a name="viewing-object-explorer"></a>개체 탐색기 보기  

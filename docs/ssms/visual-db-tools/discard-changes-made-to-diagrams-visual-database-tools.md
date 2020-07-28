@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 90361fc9910bc556b69d008bfde92fe499097ac1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 45ae54e4f921478869c9e360d3daeb2660730075
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251819"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999692"
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>다이어그램 변경 내용 취소(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 데이터베이스에 저장할 필요가 없는 변경 내용은 데이터베이스 다이어그램에서 취소할 수 있습니다.  
   
 ### <a name="to-discard-pending-modifications"></a>보류 중인 수정 내용을 취소하려면  

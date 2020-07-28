@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 49541441-179c-40d3-ba0c-01bcae545984
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 91ff60508e0c22ae202cd6984b5c8d5ad84cc879
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 07972c72c89d5098c528ab65f886b1935d47b2a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257198"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001978"
 ---
 # <a name="delete-objects"></a>개체 삭제
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 이 대화 상자를 사용하여 데이터베이스나 데이터베이스 개체를 삭제할 수 있습니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
 **삭제할 개체**  
 삭제하려고 하는 개체의 이름, 유형, 소유자 및 상태와 실행하는 동안 발생한 오류에 대한 메시지를 표시합니다.  
   

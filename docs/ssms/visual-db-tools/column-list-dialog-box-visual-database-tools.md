@@ -11,17 +11,16 @@ f1_keywords:
 ms.assetid: 9ebd08b6-fa93-4581-bb6c-96b51d2c895c
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: dc6739dff9103c842aca1439fe0cbe1a168794ad
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 553a6da4bbc6527339f366d7b4b319fc21a17504
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241248"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003831"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>열 목록 대화 상자(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 쿼리를 작성할 때는 선택된 테이블 반환 개체에 사용할 수 있는 열 목록을 확인하는 것이 유용할 수 있습니다.  
   
 이 대화 상자를 열려면 **쿼리 디자이너** 메뉴의 다이어그램 창에서 테이블 반환 개체의 머리글을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. **속성** 창에서 **열 목록** 필드를 클릭합니다. 그런 다음, 필드 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다.  

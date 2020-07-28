@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ad03ee3c5c9cc0128bb281ff695c1f51cc518d6e
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: d634a2e790edb01747014e930e677e18a1f8b0a3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457785"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243814"
 ---
 # <a name="activity-monitor"></a>작업 모니터
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "86457785"
 
 ## <a name="more-information"></a>자세한 정보  
    
-|||  
+|Description|항목|  
 |-|-|  
 |작업 모니터를 여는 방법 및 작업 모니터 새로 고침 간격을 설정하는 방법에 대해 설명합니다.|[작업 모니터 열기&#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)|  
 |서버 성능 및 작업 모니터링 관련 항목을 연결합니다.|[서버 성능 및 작업 모니터링](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|  
