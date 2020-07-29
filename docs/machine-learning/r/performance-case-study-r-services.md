@@ -2,22 +2,22 @@
 title: 결과에 대한 성능 튜닝
 description: 이 문서에서는 다양한 최적화 방법을 테스트한 두 가지 사례 연구의 방법, 결과 및 결론을 요약합니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/29/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1313cc2074058b104ea0939d02cdac30ddf28595
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 1af68324f613c0e47cd8cc5eaca73dca5881db04
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486782"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242333"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services에 대한 성능: 결과 및 리소스
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 문서는 R Services에 대한 성능 최적화를 설명하는 시리즈의 네 번째이자 최종입니다. 이 문서에서는 다양한 최적화 방법을 테스트한 두 가지 사례 연구의 방법, 결과 및 결론을 요약합니다.
 
@@ -337,7 +337,7 @@ CPU affinitization은 R 작업에 대한 영향을 평가하기 위해 다시 �
 
 많은 사용자는 R(또는 Python) 런타임이 처음 로드될 때 약간의 일시 중지가 있음을 언급했습니다. 이러한 이유로 이 테스트에 설명된 대로 첫 번째 실행 시간이 측정되는 경우가 많으며 나중에 삭제됩니다. 후속 캐싱은 첫 번째와 두 번째 실행 사이에 현저한 성능 차이가 발생할 수 있습니다. 특히 데이터가 SQL Server에서 직접 로드되는 대신 네트워크를 통해 데이터가 전달되는 경우 SQL Server와 외부 런타임 간에 데이터가 이동될 때 약간의 오버헤드가 발생합니다.
 
-이러한 모든 이유로 인해 성능에 미치는 영향은 작업에 따라 크게 달라지므로 이 초기 로딩 시간을 완화할 수 있는 단일 솔루션은 없습니다. 예를 들어 캐싱은 단일 행 점수 매기기에 대해 일괄 처리로 수행됩니다. 따라서 후속 점수 매기기 작업은 훨씬 빨라지고 모델 및 R 런타임이 다시 로드되지 않습니다. [네이티브 점수 매기기](../sql-native-scoring.md)를 사용하여 R 런타임을 완전히 로드하지 않도록 할 수도 있습니다.
+이러한 모든 이유로 인해 성능에 미치는 영향은 작업에 따라 크게 달라지므로 이 초기 로딩 시간을 완화할 수 있는 단일 솔루션은 없습니다. 예를 들어 캐싱은 단일 행 점수 매기기에 대해 일괄 처리로 수행됩니다. 따라서 후속 점수 매기기 작업은 훨씬 빨라지고 모델 및 R 런타임이 다시 로드되지 않습니다. [네이티브 점수 매기기](../predictions/native-scoring-predict-transact-sql.md)를 사용하여 R 런타임을 완전히 로드하지 않도록 할 수도 있습니다.
 
 큰 모델을 학습하거나 큰 일괄 처리로 점수를 매기는 경우 데이터 이동을 방지하거나 스트리밍 및 병렬 처리를 통해 얻는 이점에 비해 오버헤드가 최소화될 수 있습니다. 추가 성능 지침은 다음 블로그 게시물을 참조하세요.
 

@@ -2,22 +2,22 @@
 title: 'R + T-SQL 자습서: 데이터 살펴보기'
 description: R 함수를 사용하여 SQL Server 데이터를 살펴보고 시각화하는 방법을 보여주는 자습서입니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/03/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ff235cecbfc4bd01e6531d32f206dec56658a6c2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: bc5434483fd6f63a73362fb42b1bd17aa749ebd3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632113"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757102"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>1단원: 데이터 탐색 및 시각화
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 문서는 SQL Server에서 R을 사용하는 방법에 대한 SQL 개발자를 위한 자습서의 일부입니다.
 
@@ -79,7 +79,7 @@ ms.locfileid: "81632113"
     BEGIN
       SET NOCOUNT ON;
       DECLARE @query nvarchar(max) =  
-      N'SELECT tipped FROM nyctaxi_sample'  
+      N'SELECT tipped FROM [dbo].[nyctaxi_sample]'  
       EXECUTE sp_execute_external_script @language = N'R',  
                                          @script = N'  
        image_file = tempfile();  

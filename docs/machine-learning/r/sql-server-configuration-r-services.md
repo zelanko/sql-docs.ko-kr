@@ -2,22 +2,22 @@
 title: R 사용을 위한 구성
 description: 이 문서에서는 SQL Server R Services 실행을 위해 사용되는 컴퓨터의 하드웨어 및 네트워크 구성에 대한 지침을 제공합니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/29/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6daadcd1e98e19f2d4f43c4b5a6c95f1cf137697
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 1bfd7de9d7ee576c726a6b4473937cc1d9a294ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486712"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730900"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>R 사용을 위한 SQL Server 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 문서는 두 가지 사례 연구를 기준으로 R 서비스를 위한 성능 최적화를 기술하는 시리즈의 두 번째 문서입니다.  이 문서에서는 SQL Server R Services 실행을 위해 사용되는 컴퓨터의 하드웨어 및 네트워크 구성에 대한 지침을 제공합니다. 또한 솔루션에 사용되는 SQL Server 인스턴스, 데이터베이스 또는 테이블을 구성하기 위한 방법에 대한 정보도 포함되어 있습니다. SQL Server에서 NUMA를 사용하면 하드웨어 및 데이터베이스 최적화 간의 경계가 흐려지기 때문에 세 번째 섹션에서는 CPU affinitization 및 리소스 거버넌스에 대해 자세히 설명합니다.
 

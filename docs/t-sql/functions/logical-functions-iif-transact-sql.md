@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e3ccf8ed-1cec-43ac-90b7-d8597c24b050
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4175c95cd73c444f7a1df5c2f11009bc6b854c33
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cda1db97174190f27f2de801c751045bffb61793
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784459"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112925"
 ---
 # <a name="logical-functions---iif-transact-sql"></a>논리 함수 - IIF(Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,9 @@ ms.locfileid: "85784459"
 IIF ( boolean_expression, true_value, false_value )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *boolean_expression*  
  유효한 부울 식입니다.  
   

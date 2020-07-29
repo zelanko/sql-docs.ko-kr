@@ -11,17 +11,16 @@ f1_keywords:
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 2188d0ede38f7cc5afbbb7f1a918e8428e7924c2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a628be0f00cd2d4a90a139ba6217a663d2780c9f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75224645"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011694"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>위치 대화 상자(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 이 대화 상자를 사용하여 원하는 파일을 포함하는 폴더를 찾고 선택할 수 있습니다. 이 대화 상자에서는 호출하는 대화 상자로 선택한 폴더의 경로를 반환합니다. 다음과 같은 방법으로 이 대화 상자에 액세스할 수 있습니다.  
   
 -   **파일** 메뉴에서 **새로 만들기** 를 선택한 다음 **프로젝트**를 선택합니다. **새 프로젝트** 대화 상자가 표시되면 **찾아보기**를 선택합니다. **프로젝트 위치** 라는 제목의 **위치**대화 상자가 열립니다.  

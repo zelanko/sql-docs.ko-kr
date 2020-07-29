@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: df13c50363723ca9351b6e73cf5db59bc6a183d9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4151e138347ad09f8e32dbd0f96e8e7a9a5ff83e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831574"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732094"
 ---
 # <a name="index-element-dta"></a>Index 요소(DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 사용자 지정 구성에 대해 만들거나 삭제하려는 인덱스에 대한 정보를 포함합니다.  
   

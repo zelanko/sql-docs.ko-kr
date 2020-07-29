@@ -9,16 +9,16 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 25a6b733eed0611b43fb1f17ad0fe8a0cc1d690a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 688031d9301710ada0ba5952ab45dba02bf46de0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75720862"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774535"
 ---
 # <a name="deploy-hdfs-name-node-and-shared-spark-services-in-a-highly-available-configuration"></a>HDFS 이름 노드 및 공유 Spark 서비스를 고가용성 구성으로 배포
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 고가용성 그룹을 사용하여 SQL Server 마스터 인스턴스를 고가용성 구성으로 배포하는 것 외에도 빅 데이터 클러스터에 여타 중요 업무용 서비스를 배포하여 안정성 수준을 높일 수 있습니다. `sparkhead` 아래에 그룹화된 공유 Spark 서비스와 `HDFS name node`를 추가 복제본으로 구성할 수 있습니다. 이때 빅 데이터 클러스터에 다음 서비스를 위한 클러스터 코디네이터 및 메타데이터 저장소로 사용될 `Zookeeper`도 배포됩니다. 
 

@@ -23,18 +23,17 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 61bf9d30ef6e789e56784ac78bf95215f377e85a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5cc337a6a6676e47ac2541d0559829ad4ec6e6ae
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256107"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247398"
 ---
 # <a name="manage-job-steps"></a>작업 단계 관리
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
@@ -203,9 +202,8 @@ SSIS 카탈로그에 패키지를 배포하고 패키지 원본으로 **SSIS 카
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|||  
+|Description|항목|  
 |-|-|  
-|**설명**|**항목**|  
 |실행 프로그램으로 작업 단계를 만드는 방법에 대해 설명합니다.|[CmdExec 작업 단계 만들기](../../ssms/agent/create-a-cmdexec-job-step.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 사용 권한을 다시 설정하는 방법에 대해 설명합니다.|[SQL Server 에이전트 작업을 만들고 관리하도록 사용자 구성](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계를 만드는 방법에 대해 설명합니다.|[Create a Transact-SQL Job Step](../../ssms/agent/create-a-transact-sql-job-step.md)|  

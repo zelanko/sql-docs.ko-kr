@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fb0036acec4ec0c416f6fa01ccf99663be741514
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e97723d6ea047aa86641c9074ff235c682519e7a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789462"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245208"
 ---
 # <a name="maintenance-plans"></a>유지 관리 계획
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,9 +63,8 @@ ms.locfileid: "85789462"
 ## <a name="related-tasks"></a>관련 작업  
  유지 관리 계획을 시작하려면 다음 항목을 사용하십시오.  
   
-|||  
+|Description|항목|  
 |-|-|  
-|**설명**|**항목**|  
 |SQL Server 에이전트의 확장 프로시저를 사용할 수 있도록 **에이전트 XP** 서버 구성 옵션을 구성합니다.|[Agent XPs 서버 구성 옵션](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
 |[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 유지 관리 계획을 만드는 방법에 대해 설명합니다.|[유지 관리 계획 만들기](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)|  
 |유지 관리 계획 디자인 화면을 사용하여 유지 관리 계획을 만드는 방법에 대해 설명합니다.|[유지 관리 계획 만들기&#40;유지 관리 계획 디자인 화면&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  

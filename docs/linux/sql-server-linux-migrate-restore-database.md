@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: 8f8436e463a969921ef3e37ebf89f48bc94b49dc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 63226ae06abe2771c50fc5debc1a1dc63cb7c590
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895180"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971531"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>백업 및 복원을 사용하여 Windows에서 Linux로 SQL Server 데이터베이스 마이그레이션
 
@@ -36,7 +36,7 @@ SQL Server Always On 가용성 그룹을 만들어 Windows에서 Linux로 SQL Se
 이 자습서를 완료하려면 다음 필수 조건이 필요합니다.
 
 * 다음 조건을 충족하는 Windows 머신:
-  * [SQL Server](https://www.microsoft.com/sql-server/sql-server-2016-editions)가 설치되어 있음
+  * [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)가 설치되어 있음
   * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
   * 마이그레이션할 대상 데이터베이스
 

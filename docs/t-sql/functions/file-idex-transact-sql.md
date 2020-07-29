@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e369ae57024b88ee65c4a81217661314e5533d47
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 63bfdc72ea7a8a71c0f96292902356b3a07702ee
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895782"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112467"
 ---
 # <a name="file_idex-transact-sql"></a>FILE_IDEX(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "85895782"
 FILE_IDEX ( file_name )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *file_name*  
 파일 이름에 대해 파일 ID 값 ‘FILE_IDEX’를 반환하는 **sysname** 형식의 식입니다. 
   

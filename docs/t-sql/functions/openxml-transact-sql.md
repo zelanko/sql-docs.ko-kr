@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c9f0034e6f3fb620bd55410d345c1c2291db280f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ca8ececca1e40762aa386ba05a53bdf8a1932090
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738066"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112396"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,9 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 [ WITH ( SchemaDeclaration | TableName ) ]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *idoc*  
  XML 문서의 내부 표시 문서 핸들입니다. XML 문서의 내부 표현은 **sp_xml_preparedocument**를 호출하여 만듭니다.  
   

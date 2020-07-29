@@ -9,16 +9,16 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 776c54ef7475b1ff7c5679f98e994a1b42784262
-ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
+ms.openlocfilehash: dedae90b5242282fb550ebc59c5a4d98d21506f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80607832"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764069"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 업그레이드하는 방법
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 업그레이드 경로는 SQL Server 빅 데이터 클러스터(BDC)의 현재 버전에 따라 달라집니다. GDR(일반 배포 릴리스), CU(누적 업데이트) 또는 QFE(빠른 수정) 업데이트 등의 지원되는 릴리스에서 업그레이드하려면 현재 위치에서 업그레이드할 수 있습니다. CTP(고객 기술 미리 보기) 또는 릴리스 후보 버전의 BDC에서는 현재 위치 업그레이드가 지원되지 않습니다. 클러스터를 제거하고 다시 만들어야 합니다. 다음 섹션은 각 시나리오의 단계를 설명합니다.
 

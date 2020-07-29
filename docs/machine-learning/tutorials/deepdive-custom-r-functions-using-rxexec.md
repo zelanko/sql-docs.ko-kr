@@ -2,22 +2,22 @@
 title: rxExec를 사용하는 사용자 지정 R 함수
 description: 'RevoScaleR 자습서 14: RevoScaleR 함수를 사용하여 SQL Server에서 사용자 지정 R 스크립트를 실행하는 방법을 안내합니다.'
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9cf8ea9ea8086f0483a7add8478236da870d98c9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2f4fbaaa82bf1f06819e43e0f3d69094bfb6e81b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116936"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728581"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec-sql-server-and-revoscaler-tutorial"></a>rxExec(SQL Server 및 RevoScaleR 자습서)를 사용하여 SQL Server에서 사용자 지정 R 함수 실행
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이것은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 14에 해당됩니다.
 

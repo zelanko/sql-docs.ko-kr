@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 01d2738b6a095646d1585857fdee7760079672c3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b6fe67dc138f9c3661732f1c1cbbf5038d9013f1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252213"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009341"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio의 사용자 지원
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서는 도움말 메뉴 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서를 통해 사용자에 대한 지원이 제공됩니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 의 도움말 메뉴는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 정보를 볼 수 있는 여러 다른 경로를 제공합니다. 또한 이전에 도움말 환경 내에서 사용할 수 없었던 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 커뮤니티 및 MSDN 온라인 리소스에 대한 액세스가 제공됩니다. 이외에도 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 환경 내에서 시작되거나 연관된 고유한 외부 창에서 시작되도록 도움말 환경을 구성할 수 있습니다.  
   
 ## <a name="the-help-interface"></a>도움말 인터페이스  

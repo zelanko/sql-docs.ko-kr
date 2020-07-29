@@ -16,17 +16,16 @@ helpviewer_keywords:
 ms.assetid: 2dec7e0b-99cd-4185-8334-111795e52f45
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: cf2a7c0625a542ca4e4f25e1bb42905595e7d7f2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 776f2a3a0a89ab17d894ec1cfd8ef3c4da138ebe
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246209"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002585"
 ---
 # <a name="work-with-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램 작업(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 데이터베이스 디자이너를 사용하여 데이터베이스에 대한 시각적인 다이어그램을 만들 수 있습니다. 다음은 디자이너를 사용하여 데이터베이스 다이어그램 작업을 수행하는 기본적인 내용을 다루는 항목입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  

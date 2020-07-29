@@ -2,22 +2,22 @@
 title: R을 사용한 예측 모델링
 description: 이 문서에서는 SQL Server와의 통합을 통해 가능한 데이터 과학 프로세스의 개선 사항에 대해 설명합니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 40dadfebdb37ca9be0d220a8f63cfba6021a7c90
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1f3c5b72f562f4ba90de68f53911c067baa37189
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117656"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735067"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>SQL Server에서 R을 사용한 데이터 탐색 및 예측 모델링
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 문서에서는 SQL Server와의 통합을 통해 가능한 데이터 과학 프로세스의 개선 사항에 대해 설명합니다.
 

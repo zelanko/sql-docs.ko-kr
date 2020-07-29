@@ -16,16 +16,16 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: 613e3eddce55fbc52cd011f5070def12d31d83b9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 80f6a13c952c09153713a36e3e0f8f979ee7bcd3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76037178"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001592"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)란?
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](SSMS)는 모든 SQL 인프라를 관리하기 위한 통합 환경입니다. SSMS를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Azure SQL Database 및 SQL Data Warehouse의 모든 구성 요소에 액세스하고, 이를 관리 및 개발할 수 있습니다. SSMS는 기술 수준에 상관없이 모든 개발자와 데이터베이스 관리자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 액세스할 수 있도록 수많은 서식 있는 스크립트 편집기와 광범위한 그래픽 도구 그룹을 결합하는 포괄적인 단일 유틸리티를 제공합니다.
 

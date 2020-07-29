@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 050242e1-9b79-4ade-91a9-580707b9d2d9
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3208c2543292fd67ec36ad25dd5a065e08988ca6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 643c58adfed622b6a5d57e6056dcea316b6cf5ec
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245794"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243757"
 ---
 # <a name="specify-job-responses"></a>작업 응답 지정
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
@@ -46,9 +45,8 @@ ms.locfileid: "75245794"
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|||  
+|Description|항목|  
 |-|-|  
-|**설명**|**항목**|  
 |운영자에게 작업 상태를 알리는 방법에 대해 설명합니다.|[Notify an Operator of Job Status](../../ssms/agent/notify-an-operator-of-job-status.md)|  
 |Windows 애플리케이션 로그에 작업 상태를 기록하는 방법에 대해 설명합니다.|[Windows 애플리케이션 로그에 작업 상태 쓰기](../../ssms/agent/write-the-job-status-to-the-windows-application-log.md)|  
   

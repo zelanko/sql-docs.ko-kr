@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dca6f9c58872060c4c57a850923eab3c81f89778
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f47e9c58921cbbf473295e62cc78f9bbd99f714
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895775"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112451"
 ---
 # <a name="file_name-transact-sql"></a>FILE_NAME(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "85895775"
 FILE_NAME ( file_id )   
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 *file_id*  
 반환될 파일 이름 `FILE_NAME`이 포함된 파일 ID 번호입니다. *file_id*는 **int** 데이터 형식입니다.  
   

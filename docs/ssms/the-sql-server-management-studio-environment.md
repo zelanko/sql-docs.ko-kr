@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 73f4db18-6b4e-4b72-9dce-449bd5de8eab
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f7c9339e5e374850bda986eedc28ace32b5630d1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 366e1ce6ddbfc8e94d8a1441502f8edd78db9e33
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247184"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001521"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>SQL Server Management Studio 환경
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 쿼리를 관리 및 개발하기 위한 풍부한 환경을 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  

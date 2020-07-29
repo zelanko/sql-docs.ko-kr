@@ -2,22 +2,22 @@
 title: 'R + T-SQL 자습서: 데이터 기능'
 description: R 기계 학습 모델에서 사용하기 위해 저장 프로시저에 계산을 추가하는 방법을 보여 주는 자습서입니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6970fd92fc1b655e0df66cdb548a044e3bdc746e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: c5b588f9cb94d39753040e3251d9a4b2e1f12d49
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116066"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670958"
 ---
 # <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>2단원: R 및 T-SQL을 사용하여 데이터 기능 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 문서는 SQL Server에서 R을 사용하는 방법에 대한 SQL 개발자를 위한 자습서의 일부입니다.
 

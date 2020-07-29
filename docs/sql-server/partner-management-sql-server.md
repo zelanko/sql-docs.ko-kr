@@ -5,18 +5,18 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 09/17/2017
 ms.prod: sql
-ms.technology: ''
+ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: f483b643d2d1b1c8ec1e58c0772de021092b2594
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 026ad974a3b743283d2d2810a2e0a4fdf8588ff2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75656956"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923039"
 ---
 # <a name="sql-server-managing-partners"></a>SQL Server 관리 파트너
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 SQL Server 서비스를 관리하려면 다양한 업계 최고의 도구 중에서 선택합니다.  이 문서에서는 Microsoft SQL Server를 지원하는 관리 솔루션이 있는 Microsoft 파트너 회사를 강조 표시합니다.
 
 ## <a name="our-management-partners"></a>관리 파트너

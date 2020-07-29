@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbe6eaed0482642e8200b26561e3b2bb473bfa9e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e98abae6a85c885bf667e75e2a0f5353c18c6704
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255877"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007822"
 ---
 # <a name="options-environment---keyboard-page"></a>옵션(환경 - 키보드 페이지)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 **옵션** 대화 상자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 키보드 구성표를 사용자 지정할 수 있습니다. 이 옵션을 사용하여 키보드 구성표를 선택할 수 있습니다. 이 페이지를 표시하려면 **도구** 메뉴의 **옵션** 을 클릭하고 **환경** 폴더를 선택한 다음 **키보드**를 클릭합니다.  
   
 **키보드 구성표** 드롭다운 목록에 사용 가능한 바로 가기 키 모음이 표시됩니다. 특정 구성표를 로드하려면 목록에서 선택합니다. **옵션** 대화 상자를 닫으려면 **확인**을 클릭합니다. 선택한 구성표가 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]로 로드됩니다.  

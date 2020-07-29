@@ -2,6 +2,7 @@
 title: SQL Server 개인 정보 제공 | Microsoft Docs
 ms.date: 01/19/2019
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: mikeray
 ms.custom: ''
 ms.topic: conceptual
@@ -9,16 +10,16 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 946e99884b4c261393c29cd06747823c3aa7e3a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9362402d6c02fe7ff140f4105c6f011441c457ad
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76761808"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916912"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 개인 정보 제공
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 이 문서에서는 익명 기능 사용 및 진단 데이터를 수집하고 Microsoft에 보낼 수 있는 인터넷 사용 기능을 요약해서 설명합니다. SQL Server는 표준 컴퓨터 정보와 사용 및 성능 데이터를 수집할 수 있습니다. 이 데이터는 Microsoft로 전송되어 제품의 품질, 보안 및 안정성 개선을 위해 분석될 수 있습니다. Microsoft Azure 서비스의 가상 머신에 SQL Server를 설치하면 환경 정보가 Microsoft로 전송되므로 Microsoft에서 Azure 구독 내 리소스 공급자를 통해 SQL Server 가상 머신 리소스를 등록할 수 있습니다. 자세한 정보는 [여기](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider)를 참조하세요. SQL Server 가상 머신 리소스 등록의 일부인 SQL Server IaaS Agent Extension는 [여기](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension)에 자세히 설명된 대로 가상 머신에 설치할 수 있습니다. 이 문서는 전반적인 [Microsoft 개인정보처리방침](https://go.microsoft.com/fwlink/?LinkId=521839)에 대한 추록입니다. 이 문서에서 데이터 분류는 SQL Server 온-프레미스 제품의 버전에만 적용됩니다. 항목에 적용되지 않습니다.
 

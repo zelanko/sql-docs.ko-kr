@@ -2,22 +2,22 @@
 title: R 데이터 과학 클라이언트 설정
 description: SQL Server에 대한 원격 연결을 위해 개발 워크스테이션에 로컬 R 라이브러리 및 도구를 설치합니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 160365ea9782f50376a34eb87a3bf6893ce404c9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a42d3203455d4273410b9b216c19e7a9d1da4e3a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117376"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896383"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>SQL Server에서 R 개발을 위한 데이터 과학 클라이언트 설정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 R 통합은 [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) 또는 [SQL Server Machine Learning Services(데이터베이스 내)](../install/sql-machine-learning-services-windows-install.md) 설치에 R 언어 옵션을 포함하는 경우 SQL Server 2016 이상에서 사용할 수 있습니다. 
 
@@ -48,12 +48,12 @@ Microsoft의 R 패키지는 여러 제품 및 서비스에서 사용할 수 있�
 
 2. 설치 마법사에서 기본 설치 경로를 그대로 사용하거나 변경하고, 구성 요소 목록을 그대로 사용하거나 변경하고, Microsoft R Client 사용 조건에 동의합니다.
 
-  설치가 완료되면 시작 화면에서 제품 및 설명서를 소개합니다.
+   설치가 완료되면 시작 화면에서 제품 및 설명서를 소개합니다.
 
 3. MKL_CBWR 시스템 환경 변수를 설정하여 Intel MKL(Math Kernel Library) 계산에서 일관성 있는 출력을 보장합니다.
 
-  + 제어판에서 **시스템 및 보안** > **시스템** > **고급 시스템 설정** > **환경 변수**를 클릭합니다.
-  + 값이 **AUTO**로 설정된 **MKL_CBWR**이라는 새 시스템 변수를 만듭니다.
+   + 제어판에서 **시스템 및 보안** > **시스템** > **고급 시스템 설정** > **환경 변수**를 클릭합니다.
+   + 값이 **AUTO**로 설정된 **MKL_CBWR**이라는 새 시스템 변수를 만듭니다.
 
 ## <a name="2---locate-executables"></a>2 - 실행 파일 찾기
 
@@ -74,7 +74,7 @@ SQL Server와 함께 R을 설치하는 경우 RGui, Rterm 등을 포함한 R의 
 
 1. C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64를 열고 **RGui**를 두 번 클릭하여 R 명령 프롬프트에서 R 세션을 시작합니다.
 
-  Microsoft 프로그램 폴더에서 R 세션을 시작하면 RevoScaleR을 포함한 여러 패키지가 자동으로 로드됩니다. 
+   Microsoft 프로그램 폴더에서 R 세션을 시작하면 RevoScaleR을 포함한 여러 패키지가 자동으로 로드됩니다. 
 
 2. 명령 프롬프트에 `print(Revo.version)`를 입력하여 RevoScaleR 패키지 버전 정보를 반환합니다. RevoScaleR의 버전 9.2.1 또는 9.3.0이 있어야 합니다.
 
@@ -103,7 +103,7 @@ SQL Server 인스턴스에 연결하여 스크립트를 실행하고 데이터�
 
 ## <a name="5---test-connections"></a>5 - 연결 테스트
 
- 확인 단계로 **RGUI** 및 RevoScaleR을 사용하여 원격 서버에 대한 연결을 확인합니다. SQL Server에서 [원격 연결](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server)을 사용하도록 설정해야 하며, 사용자 로그인 및 연결할 데이터베이스를 포함하여 권한이 있어야 합니다. 
+확인 단계로 **RGUI** 및 RevoScaleR을 사용하여 원격 서버에 대한 연결을 확인합니다. SQL Server에서 [원격 연결](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server)을 사용하도록 설정해야 하며, 사용자 로그인 및 연결할 데이터베이스를 포함하여 권한이 있어야 합니다. 
 
 다음 단계에서는 데모 데이터베이스 [NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md) 및 Windows 인증을 가정합니다.
 
@@ -113,78 +113,78 @@ SQL Server 인스턴스에 연결하여 스크립트를 실행하고 데이터�
 
 3. 원격 서버에서 실행되는 데모 스크립트를 입력합니다. 원격 SQL Server 인스턴스의 유효한 이름을 포함하도록 다음 샘플 스크립트를 수정해야 합니다. 이 세션은 로컬 세션으로 시작되지만 **rxSummary** 함수는 원격 SQL Server 인스턴스에서 실행됩니다.
 
-  ```R
-  # Define a connection. Replace server with a valid server name.
-  connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
+   ```R
+   # Define a connection. Replace server with a valid server name.
+   connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
   
-  # Specify the input data in a SQL query.
-  sampleQuery <-"SELECT DISTINCT TOP(100) tip_amount FROM [dbo].nyctaxi_sample ORDER BY tip_amount DESC;"
+   # Specify the input data in a SQL query.
+   sampleQuery <-"SELECT DISTINCT TOP(100) tip_amount FROM [dbo].nyctaxi_sample ORDER BY tip_amount DESC;"
   
-  # Define a remote compute context based on the remote server.
-  cc <-RxInSqlServer(connectionString=connStr)
+   # Define a remote compute context based on the remote server.
+   cc <-RxInSqlServer(connectionString=connStr)
 
-  # Execute the function using the remote compute context.
-  rxSummary(formula = ~ ., data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr), computeContext=cc)
-  ```
+   # Execute the function using the remote compute context.
+   rxSummary(formula = ~ ., data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr), computeContext=cc)
+   ```
 
-  **Results:**
+   **Results:**
 
-  이 스크립트는 원격 서버의 데이터베이스에 연결되고, 쿼리를 제공하고, 원격 코드 실행에 대한 컴퓨팅 컨텍스트 `cc` 명령을 만든 다음, RevoScaleR 함수 **rxSummary**를 제공하여 쿼리 결과의 통계 요약을 반환합니다.
+   이 스크립트는 원격 서버의 데이터베이스에 연결되고, 쿼리를 제공하고, 원격 코드 실행에 대한 컴퓨팅 컨텍스트 `cc` 명령을 만든 다음, RevoScaleR 함수 **rxSummary**를 제공하여 쿼리 결과의 통계 요약을 반환합니다.
 
-  ```R
-    Call:
-  rxSummary(formula = ~., data = RxSqlServerData(sqlQuery = sampleQuery, 
-      connectionString = connStr), computeContext = cc)
+   ```R
+     Call:
+   rxSummary(formula = ~., data = RxSqlServerData(sqlQuery = sampleQuery, 
+       connectionString = connStr), computeContext = cc)
 
-  Summary Statistics Results for: ~.
-  Data: RxSqlServerData(sqlQuery = sampleQuery, connectionString = connStr) (RxSqlServerData Data Source)
-  Number of valid observations: 100 
+   Summary Statistics Results for: ~.
+   Data: RxSqlServerData(sqlQuery = sampleQuery, connectionString = connStr) (RxSqlServerData Data Source)
+   Number of valid observations: 100 
   
-  Name       Mean   StdDev   Min Max ValidObs MissingObs
-  tip_amount 63.245 31.61087 36  180 100      0     
-  ```
+   Name       Mean   StdDev   Min Max ValidObs MissingObs
+   tip_amount 63.245 31.61087 36  180 100      0     
+   ```
 
 4. 컴퓨팅 컨텍스트를 가져오고 설정합니다. 컴퓨팅 컨텍스트를 설정하면 해당 컴퓨팅 컨텍스트는 세션 기간 동안 적용됩니다. 계산이 로컬 또는 원격인지 확실하지 않으면 다음 명령을 실행하여 확인합니다. 연결 문자열을 지정하는 결과는 원격 컴퓨팅 컨텍스트를 나타냅니다.
 
-  ```R
-  # Return the current compute context.
-  rxGetComputeContext()
+   ```R
+   # Return the current compute context.
+   rxGetComputeContext()
 
-  # Revert to a local compute context.
-  rxSetComputeContext("local")
-  rxGetComputeContext()
+   # Revert to a local compute context.
+   rxSetComputeContext("local")
+   rxGetComputeContext()
 
-  # Switch back to remote.
-  connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
-  cc <-RxInSqlServer(connectionString=connStr)
-  rxSetComputeContext(cc)
-  rxGetComputeContext()
-  ```  
+   # Switch back to remote.
+   connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
+   cc <-RxInSqlServer(connectionString=connStr)
+   rxSetComputeContext(cc)
+   rxGetComputeContext()
+   ```  
 
 5. 이름 및 형식을 포함하여 데이터 원본의 변수 관련 정보를 반환합니다.
 
-  ```R
-  rxGetVarInfo(data = inDataSource)
-  ```
-  결과에는 변수 23개가 포함됩니다.
+   ```R
+   rxGetVarInfo(data = inDataSource)
+   ```
+   결과에는 변수 23개가 포함됩니다.
 
 
 6. 산점도를 생성하여 두 변수 간에 종속성이 있는지 여부를 살펴봅니다. 
 
-  ```R
-  # Set the connection string. Substitute a valid server name for the placeholder.
-  connStr <- "Driver=SQL Server;Server=<your database name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
+   ```R
+   # Set the connection string. Substitute a valid server name for the placeholder.
+   connStr <- "Driver=SQL Server;Server=<your database name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
 
-  # Specify a query on the nyctaxi_sample table.
-  # For variables on each axis, remove nulls. Use a WHERE clause and <> to do this.
-  sampleQuery <-"SELECT DISTINCT TOP 100 * from [dbo].[nyctaxi_sample] WHERE fare_amount <> '' AND  tip_amount <> ''"
-  cc <-RxInSqlServer(connectionString=connStr)
+   # Specify a query on the nyctaxi_sample table.
+   # For variables on each axis, remove nulls. Use a WHERE clause and <> to do this.
+   sampleQuery <-"SELECT DISTINCT TOP 100 * from [dbo].[nyctaxi_sample] WHERE fare_amount <> '' AND  tip_amount <> ''"
+   cc <-RxInSqlServer(connectionString=connStr)
 
-  # Generate a scatter plot.
-  rxLinePlot(fare_amount ~ tip_amount, data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr, computeContext=cc), type="p")
-  ```
+   # Generate a scatter plot.
+   rxLinePlot(fare_amount ~ tip_amount, data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr, computeContext=cc), type="p")
+   ```
 
-  다음 스크린샷은 입력 및 산점도 출력을 보여 줍니다.
+   다음 스크린샷은 입력 및 산점도 출력을 보여 줍니다.
 
    ![RGUI의 산점도](media/rclient-setup-scatterplot.png "NYC Taxi 데모 데이터의 산점도")
 
@@ -206,10 +206,10 @@ IDE로 로컬 R 라이브러리인 기본 R, RevoScaleR 등을 가리킵니다. 
 
 1. RStudio에서 RevoScaleR, Microsoft R Open 및 기타 Microsoft 패키지를 제공하는 R 환경을 가리키도록 [R 경로를 업데이트](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R)합니다. 
 
-  + R Client 설치의 경우 C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64 검색
-  + 독립 실행형 서버의 경우 C:\Program Files\Microsoft SQL Server\140\R_SERVER\Library 또는 C:\Program Files\Microsoft SQL Server\130\R_SERVER\Library 검색
+   + R Client 설치의 경우 C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64 검색
+   + 독립 실행형 서버의 경우 C:\Program Files\Microsoft SQL Server\140\R_SERVER\Library 또는 C:\Program Files\Microsoft SQL Server\130\R_SERVER\Library 검색
 
-2. RStudio를 닫은 후 엽니다.
+1. RStudio를 닫은 후 엽니다.
 
 RStudio를 다시 열면 R Client(또는 독립 실행형 서버)의 R 실행 파일이 기본 R 엔진이 됩니다.
 
@@ -230,16 +230,16 @@ R의 기본 설정 IDE가 아직 없는 경우 **Visual Studio용 R 도구**를 
 
 2. 왼쪽 창에는 미리 설치된 템플릿 목록이 포함됩니다. **R**을 클릭하고 **R 프로젝트**를 선택합니다. **이름** 상자에 `dbtest`를 입력하고 **확인**을 클릭합니다. 
 
-  Visual Studio에서 새 프로젝트 폴더 및 기본 스크립트 파일 `Script.R`을 만듭니다. 
+   Visual Studio에서 새 프로젝트 폴더 및 기본 스크립트 파일 `Script.R`을 만듭니다. 
 
 3. 스크립트 파일의 첫 번째 줄에 `.libPaths()`를 입력한 후 CTRL+ENTER를 누릅니다.
 
-  현재 R 라이브러리 경로는 **R 대화형** 창에 표시되어야 합니다. 
+   현재 R 라이브러리 경로는 **R 대화형** 창에 표시되어야 합니다. 
 
 4. **R 도구** 메뉴를 클릭하고 **Windows**를 선택하여 작업 영역에 표시할 수 있는 다른 R 관련 창 목록을 확인합니다.
  
-  + CTRL+3을 눌러 현재 라이브러리의 패키지에 대한 도움말을 확인합니다.
-  + CTRL+8을 눌러 **변수 탐색기**에서 R 변수를 확인합니다.
+   + CTRL+3을 눌러 현재 라이브러리의 패키지에 대한 도움말을 확인합니다.
+   + CTRL+8을 눌러 **변수 탐색기**에서 R 변수를 확인합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

@@ -17,12 +17,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: cd78371a838d257065eece76d69e1c3e89acc1f7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28a61eb05b015be7eee85a7376a3c0ce84cac27f
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738086"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112868"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON(Transact-SQL)
 
@@ -64,6 +64,8 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 ![OPENJSON TVF의 WITH 절 구문](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON WITH 구문")
 
 *with_clause*는 반환할 **OPENJSON**에 대한 열과 형식의 목록을 포함합니다. 기본적으로 **OPENJSON**은 *jsonExpression*의 키와 *with_clause*의 열 이름을 일치시킵니다(이 경우 matches 키는 대/소문자를 구분함을 의미). 열 이름이 키 이름과 일치하지 않으면 *jsonExpression* 내의 키를 참조하는 [JSON 경로 식](../../relational-databases/json/json-path-expressions-sql-server.md)인 선택적 *column_path*를 제공할 수 있습니다. 
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>인수
 

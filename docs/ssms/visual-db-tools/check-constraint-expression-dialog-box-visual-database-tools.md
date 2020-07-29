@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: fcd0eacf11390947248208310eba3ddec40089ce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bcde2847ecbe1fbfdd156df6e631ef4d5c382917
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255497"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003904"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>CHECK 제약 조건 식 대화 상자(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 CHECK 제약 조건을 테이블이나 열에 연결하려면 SQL 식을 포함해야 합니다. 제공된 입력란에 CHECK 제약 조건 식을 입력합니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
 식  
 식을 입력합니다.  
   
@@ -50,9 +49,11 @@ NOT (payment_method = 'credit card') OR
 ## <a name="to-define-a-constraint-expression"></a>제약 조건 식을 정의하려면  
 속성 페이지의 CHECK 제약 조건 탭에서 다음 구문을 사용하여 제약 조건 식 상자에 식을 입력합니다.  
   
-<pre>{constant | column_name | function | (subquery)}  
+```
+{constant | column_name | function | (subquery)}  
 [{operator | AND | OR | NOT}  
-{constant | column_name | function | (subquery)}...]</pre>  
+{constant | column_name | function | (subquery)}...]
+```
   
 이 SQL 구문은 다음 매개 변수로 구성되어 있습니다.  
   

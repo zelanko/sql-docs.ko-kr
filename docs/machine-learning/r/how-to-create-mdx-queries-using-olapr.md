@@ -2,22 +2,22 @@
 title: olapR을 사용하여 R에서 MDX 쿼리 만들기
 description: SQL Server에서 olapR 패키지 라이브러리를 사용하여 R 언어 스크립트에서 MDX 쿼리를 작성합니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 05/22/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: dceaaa9848b754de65d213e570f33780c3be95bd
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 501449396ee20b763047ac16d23e32b3e98aa366
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117636"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722532"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>R에서 olapR을 사용하여 MDX 쿼리를 만드는 방법
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) 패키지는 SQL Server Analysis Services에서 호스트되는 큐브에 대한 MDX 쿼리를 지원합니다. 기존 큐브에 대해 쿼리를 빌드하고, 차원 및 기타 큐브 개체를 탐색하고, 기존 MDX 쿼리에 붙여넣어 데이터를 검색할 수 있습니다.
 

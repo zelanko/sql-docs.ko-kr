@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: e43a4142c970c1e096478a65bf7753db7ea54a36
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 96ac7ab3424c43d35c3ee6996a3eadcd5b98a709
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255489"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003865"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>쿼리 결과 지우기(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 **쿼리 및 뷰 디자이너**에서 쿼리를 실행한 후에 결과 창을 지울 수 있습니다. 이 프로시저는 개체 탐색기에서 **뷰 열기** 또는 **테이블 열기** 옵션을 사용하여 만든 쿼리에 적용됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기에서 쿼리를 실행한 후에는 쿼리 편집기 창을 닫거나 다른 쿼리를 실행하는 경우를 제외하고 결과 창을 지울 수 없습니다.  
   
 > [!NOTE]  

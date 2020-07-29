@@ -2,22 +2,22 @@
 title: RevoScaleR을 사용하여 데이터 변환
 description: 'RevoScaleR 자습서 9: SQL Server에서 R 언어를 사용하여 데이터를 변환하는 방법입니다.'
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 03f8b3f9cacd4faa77116cd560abfdb81596d074
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7ed1884b1d4dc6f2b1b32a06d348307171edd592
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116736"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757114"
 ---
 # <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>R을 사용하여 데이터 변환(SQL Server 및 RevoScaleR 자습서)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이것은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 9에 해당됩니다.
 

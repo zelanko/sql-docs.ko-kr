@@ -2,22 +2,22 @@
 title: 데이터 과학 솔루션 템플릿
 description: 이 문서에서는 모범 사례를 보여 주고 기계 학습 솔루션을 구현할 수 있도록 구성 요소를 제공하는 산업별 템플릿을 설명합니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6d323178152e07726c818971c8c7e8ee297c20af
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: b039af528200782d788394f49e0bd74ed2b54dd4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116986"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728644"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>데이터 과학 시나리오 및 솔루션 템플릿
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 문서에서는 다양한 SQL Server 기계 학습 솔루션 템플릿을 설명합니다. 이 템플릿은 모범 사례를 보여주고 기계 학습 솔루션을 빠르게 구현할 수 있도록 구성 요소를 제공합니다. 각 템플릿은 특정 업종 또는 업계의 특정 데이터 과학 문제를 해결하도록 설계되었습니다.
 각 템플릿의 작업은 데이터 준비 및 기능 엔지니어링에서 모델 학습 및 점수 매기기까지 확장됩니다. 
