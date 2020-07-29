@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7c57ca648d2298705cd73752f07418987e49761e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4835b3d7ad39ff94b6b5173bb6c4540062d5cb46
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784561"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113473"
 ---
 # <a name="ident_incr-transact-sql"></a>IDENT_INCR(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "85784561"
 IDENT_INCR ( 'table_or_view' )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 **'** *table_or_view* **'**  
 올바른 ID 증가값을 확인할 테이블 또는 뷰를 지정하는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *table_or_view*는 따옴표로 묶은 문자열 상수이거나 변수, 함수 또는 열 이름일 수도 있습니다. *table_or_view*는 **char**, **nchar**, **varchar** 또는 **nvarchar**입니다.  
   

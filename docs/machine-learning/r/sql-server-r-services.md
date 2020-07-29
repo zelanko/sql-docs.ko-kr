@@ -3,21 +3,21 @@ title: SQL Server 2016 R Services란?
 titleSuffix: ''
 description: R Services는 관계형 데이터를 사용하여 R 스크립트를 실행하는 기능을 제공하는 SQL Server 2016의 기능입니다. 예측 분석 및 기계 학습에 오픈 소스 패키지와 프레임워크 및 Microsoft R 패키지를 사용할 수 있습니다. 스크립트는 SQL Server 외부에서 또는 네트워크를 통해 데이터를 이동하지 않고 데이터베이스 내에서 실행됩니다. 이 문서에서는 SQL Server R Services의 기본 사항에 대해 설명합니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 08/12/2019
-ms.topic: overview
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 25b21944db46a5054ad8765b83fe7e2985f8d894
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 974562d95ebf756de5f95eca0e89a6d5fc6e958f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486706"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775397"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>SQL Server 2016 R Services란?
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 R Services는 관계형 데이터를 사용하여 R 스크립트를 실행하는 기능을 제공하는 SQL Server 2016의 기능입니다. 예측 분석 및 기계 학습에 오픈 소스 패키지와 프레임워크 및 [Microsoft R 패키지](#packages)를 사용할 수 있습니다. 스크립트는 SQL Server 외부에서 또는 네트워크를 통해 데이터를 이동하지 않고 데이터베이스 내에서 실행됩니다. 이 문서에서는 SQL Server R Services의 기본 사항에 대해 설명합니다.
 

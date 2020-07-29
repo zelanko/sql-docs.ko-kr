@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 564f34822a6c674b20cb0fd54879ee44de16dd6b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4a03934759aa32ca9c852eef0588d9cec17b0983
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732669"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110986"
 ---
 # <a name="col_length-transact-sql"></a>COL_LENGTH(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,9 @@ ms.locfileid: "85732669"
 COL_LENGTH ( 'table' , 'column' )   
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 **'** *table* **'**  
 열 길이 정보를 확인하려는 테이블의 이름입니다. *table*은 **nvarchar** 형식의 식입니다.
   

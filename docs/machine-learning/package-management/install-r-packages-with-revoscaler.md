@@ -2,23 +2,23 @@
 title: RevoScaleR을 사용하여 R 패키지 설치
 description: RevoScaleR 함수를 사용하여 Machine Learning Services 또는 R Services를 통해 SQL Server에 R 패키지를 설치하는 방법에 대해 알아봅니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/20/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 1d5d832d41f6bd087c6e9b334ebeac03728f97b1
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7f2978cd971f2259d7155d9d6c69c32ffe923ee5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117996"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723935"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>RevoScaleR을 사용하여 R 패키지 설치
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 문서에서는 [RevoScaleR](../r/ref-r-revoscaler.md)(버전 9.0.1 이상) 함수를 사용하여 Machine Learning Services 또는 R Services를 통해 SQL Server에 R 패키지를 설치하는 방법에 대해 설명합니다. RevoScaleR 함수는 서버에 직접 액세스하지 않고도 관리자가 아닌 원격 위치에서 SQL Server에 패키지를 설치하는 데 사용할 수 있습니다.
 

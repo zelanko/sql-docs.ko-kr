@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5800bd00faac0c34052a5930cfdb1ccaf86afbcb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6980c7914a10498d2f1d5cc08d60d63d9dd1f0ac
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257886"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895206"
 ---
 # <a name="use-tokens-in-job-steps"></a>작업 단계에서 토큰 사용
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
@@ -124,18 +123,22 @@ ms.locfileid: "75257886"
   
 업데이트 스크립트를 실행하고 나면 토큰과 함께 `ESCAPE_NONE` 매크로가 삽입됩니다. 그러나 이 경우 다음과 같이 중첩 없이 스크립트를 다시 작성한 다음 `ESCAPE_SQUOTE` 매크로를 삽입하여 토큰 교체 문자열에 전달될 수 있는 구분 기호를 올바르게 이스케이프해야 합니다.  
   
-<pre>DECLARE @msgString nvarchar(max)  
-SET @msgString = '$(ESCAPE_SQUOTE(A-MSG))'  
-SET @msgString = QUOTENAME(@msgString,'''')  
-PRINT N'Print ' + @msgString ;</pre>  
+```sql
+DECLARE @msgString nvarchar(max);
+SET @msgString = '$(ESCAPE_SQUOTE(A-MSG))';
+SET @msgString = QUOTENAME(@msgString,'''');
+PRINT N'Print ' + @msgString;
+```
   
 이 예에서 QUOTENAME 함수는 인용 문자도 설정합니다.  
   
 ### <a name="c-using-tokens-with-the-escape_none-macro"></a>C. 토큰에 ESCAPE_NONE 매크로 사용  
 다음 예는 `job_id` 테이블에서 `sysjobs` 를 검색하고 `JOBID` 토큰을 사용하여 스크립트의 앞부분에서 binary 데이터 형식으로 선언된 `@JobID` 변수를 채우는 스크립트의 일부입니다. binary 데이터 형식에는 구분 기호가 필요하지 않으므로 `ESCAPE_NONE` 토큰에 `JOBID` 매크로가 사용됩니다. 이 작업 단계는 업데이트 스크립트를 실행한 후에 업데이트하지 않아도 됩니다.  
   
-<pre>SELECT * FROM msdb.dbo.sysjobs  
-WHERE @JobID = CONVERT(uniqueidentifier, $(ESCAPE_NONE(JOBID))) ;</pre>  
+```sql
+SELECT * FROM msdb.dbo.sysjobs  
+WHERE @JobID = CONVERT(uniqueidentifier, $(ESCAPE_NONE(JOBID)));
+```
   
 ## <a name="see-also"></a>참고 항목  
 [작업 구현](../../ssms/agent/implement-jobs.md)  

@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: 580ed86a-be86-419b-9dc7-e3b17f19905f
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 83d6eb87f7a51a916d2d90e21692e0d7fc899252
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d85973d880fb6a68e78f3597d074cedc95acb619
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255541"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003884"
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>값 삽입의 대상 테이블 선택 대화 상자(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 이 대화 상자를 사용하면 INSERT VALUES 쿼리를 사용하여 업데이트할 테이블을 지정할 수 있습니다. 이 대화 상자는 **다이어그램** 창에 두 개 이상의 테이블이 표시되어 있는 상태에서 쿼리 형식을 INSERT VALUES 쿼리로 변경하는 경우에 나타납니다.  
   
 데이터를 추가하려는 테이블을 선택한 다음 **확인**을 선택합니다.  

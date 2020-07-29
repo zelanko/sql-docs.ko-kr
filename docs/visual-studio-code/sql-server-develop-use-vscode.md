@@ -8,16 +8,16 @@ ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 author: markingmyname
 ms.author: maghan
 ms.date: 10/28/2019
-ms.openlocfilehash: 615e205566ced2c1d0a66ab69b3e9eb80c7f82f3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 657dab5c2d80bc4ae4c404872386eb993e242235
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75558458"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896530"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>Visual Studio Code를 사용하여 Transact-SQL 스크립트 만들기 및 실행
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 이 문서에서는 Visual Studio Code **mssql** 확장을 사용하여 SQL Server 데이터베이스를 개발하는 방법을 보여 줍니다. Visual Studio Code는 플랫폼 간에 지원되므로 Linux, macOS 및 Windows에서 **mssql** 확장을 사용할 수 있습니다.
 

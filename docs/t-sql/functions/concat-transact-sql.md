@@ -18,12 +18,12 @@ ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 785b1d1cb8dfd2b36da981d0194ed9651eeedfa3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c2352266477c04ebc242ffa0b2eeb934d0187a2b
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732599"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113098"
 ---
 # <a name="concat-transact-sql"></a>CONCAT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -38,7 +38,9 @@ ms.locfileid: "85732599"
 CONCAT ( string_value1, string_value2 [, string_valueN ] )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 *string_value*  
 다른 값에 연결할 문자열 값입니다. `CONCAT` 함수에는 둘 이상의 *string_value* 인수와 254개 이하의 *string_value*  인수가 필요합니다.
   

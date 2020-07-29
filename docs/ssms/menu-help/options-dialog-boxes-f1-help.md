@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1d55f1115db836d3fddab4e18e63499c43e5993f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a4a5cd90fc4b73304ca072ce0669227c086ed1e6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245722"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002070"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>옵션 대화 상자 F1 도움말
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 이 섹션에서는 **의** 도구 **메뉴에서** 옵션 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 클릭하면 사용할 수 있는 대화 상자에 대한 F1 도움말을 제공합니다.  
   
 [옵션&#40;디자이너 - Analysis Services 디자이너 - 일반&#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  

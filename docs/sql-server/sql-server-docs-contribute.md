@@ -2,18 +2,19 @@
 title: SQL Server 설명서에 기여하는 방법 | Microsoft Docs
 ms.date: 08/13/2018
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: ''
 ms.custom: ''
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d947ae25f6f01740e7c5826a7edf332ff422a9de
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286327"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247386"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>SQL Server 설명서에 기여하는 방법
 
@@ -23,7 +24,7 @@ ms.locfileid: "79286327"
 
 참여하기 위해 사용할 수 있는 두 가지 주 워크플로가 있습니다.
 
-|||
+|워크플로|Description|
 |---|---|
 | [브라우저에서 편집](#githubui) | 모든 문서의 작고 빠른 편집에 적합합니다. |
 | [도구를 사용하여 로컬로 편집](#tools) | 더 복잡한 편집, 여러 문서를 포함하는 편집 및 docs.microsoft.com에 대한 빈번한 참여에 적합합니다. |
@@ -93,7 +94,7 @@ ms.locfileid: "79286327"
 **appliesto-ss-asdb-asdw-pdw-md.md** include 파일을 끌어오는 다음 Markdown 예제를 고려합니다.
 
 ```Markdown
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 ```
 
 문서의 위쪽에 다음 텍스트를 추가합니다.

@@ -11,17 +11,16 @@ helpviewer_keywords:
 ms.assetid: c09a6bb7-efc3-4471-819e-c60f11de96f0
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: c3222a1ae0e951f2ee2a7fca7b2b08d6dda2669f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4c6c3928de56e853318978b0c4db131106fb5e79
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255356"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003203"
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>사용 권한 및 Visual Database Tools(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 사용자가 데이터 원본 개체에 액세스하는 데 필요한 사용 권한은 Visual Database Tools가 아니라 데이터 원본에 부여됩니다. 데이터 원본 개체에 부여된 액세스 권한은 설치 환경의 보안 정책을 통해 제어됩니다. 특정 데이터베이스 개체에 액세스할 수 있는 권한이 없는 경우 데이터베이스 관리자에게 문의하십시오.  
   
 데이터베이스 권한으로 데이터베이스 구조를 볼 수는 있지만 수정할 수 없는 경우 변경 스크립트를 사용하여 수정 내용을 데이터베이스에 전송하지 않고 디자인할 수 있습니다.  

@@ -22,17 +22,16 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/03/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a6298057dbc5d4dcb4dc71cedb166186a95cbddf
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: 9e90e4596c3d78f48b8ecc4a5af4741ea1f5949d
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80530816"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123045"
 ---
 # <a name="ssms-query-editor"></a>SSMS 쿼리 편집기
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 데이터베이스 엔진 쿼리 편집기는 SSMS(SQL Server Management Studio)에서 구현되는 네 가지 편집기 중 하나입니다.
 

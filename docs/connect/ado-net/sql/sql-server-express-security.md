@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: cd6f71f5c42418ab9357a9aaeec9788ae3ea0d65
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0e9a0b87e0275846b1c1b9535b9485dd1cbae066
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920956"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243427"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express 보안
 
@@ -40,7 +40,7 @@ SQL Server Express는 일반적으로 명명된 인스턴스로 설치됩니다.
 ## <a name="external-resources"></a>외부 리소스  
 SQL Server Express에 대한 자세한 내용은 다음 리소스를 참조하세요.  
   
-|||  
+|리소스|설명|
 |-|-|  
 |[Microsoft SQL Server 2005 Express Edition 온라인 설명서](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|SQL Server 2005 Express Edition에 대한 전체 설명서입니다.|  
 |[비관리자용 사용자 인스턴스](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100))(SQL Server 온라인 설명서)|사용자 인스턴스를 만들고 배포하는 방법을 설명합니다.|  

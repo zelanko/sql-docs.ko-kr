@@ -5,25 +5,25 @@ description: azdata app 명령에 대한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7cb67f55af03fc8c948df6f17ee2924dea12825f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 10885da7ad9033f8060192820e653e688e8e2e93
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74820973"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942955"
 ---
 # <a name="azdata-app"></a>azdata app
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-다음 문서에서는 `azdata` 도구의 `app` 명령에 대한 참조를 제공합니다. 다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
+다음 문서에서는 `azdata` 도구의 `sql` 명령에 대한 참조를 제공합니다. 다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
 
 ## <a name="commands"></a>명령
-|     |     |
+| 명령 | 설명 |
 | --- | --- |
 [azdata app template](reference-azdata-app-template.md) | 템플릿입니다.
 [azdata app init](#azdata-app-init) | 새 애플리케이션 구조를 시작합니다.
@@ -38,12 +38,16 @@ ms.locfileid: "74820973"
 ```bash
 azdata app init [--spec -s] 
                 [--name -n]  
-                [--version -v]  
-                [--template -t]  
-                [--destination -d]  
-                [--url -u]
+                
+[--version -v]  
+                
+[--template -t]  
+                
+[--destination -d]  
+                
+[--url -u]
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 새 애플리케이션 `spec.yaml`만 스캐폴드합니다.
 ```bash
 azdata app init --spec
@@ -81,15 +85,16 @@ azdata app init --name reduce --template ssis
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-app-create"></a>azdata app create
 애플리케이션을 만듭니다.
 ```bash
 azdata app create --spec -s 
+                  
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 유효한 spec.yaml 배포 사양이 있는 디렉터리에서 새 애플리케이션을 만듭니다.
 ```bash
 azdata app create --spec /path/to/dir/with/spec/yaml
@@ -105,7 +110,7 @@ azdata app create --spec /path/to/dir/with/spec/yaml
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-app-update"></a>azdata app update
@@ -114,7 +119,7 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 azdata app update [--spec -s] 
                   [--yes -y]
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 유효한 spec.yaml 배포 사양이 있는 디렉터리에서 기존 애플리케이션을 업데이트합니다.
 ```bash
 azdata app update --spec /path/to/dir/with/spec/yaml    
@@ -132,7 +137,7 @@ CWD의 spec.yaml 파일에서 애플리케이션을 업데이트할 때 확인 �
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-app-list"></a>azdata app list
@@ -141,7 +146,7 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 azdata app list [--name -n] 
                 [--version -v]
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 이름 및 버전을 기준으로 애플리케이션을 나열합니다.
 ```bash
 azdata app list --name reduce  --version v1
@@ -167,7 +172,7 @@ azdata app list
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-app-delete"></a>azdata app delete
@@ -176,7 +181,7 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 azdata app delete --name -n 
                   --version -v
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 이름 및 버전을 기준으로 애플리케이션을 삭제합니다.
 ```bash
 azdata app delete --name reduce --version v1    
@@ -194,7 +199,7 @@ azdata app delete --name reduce --version v1
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-app-run"></a>azdata app run
@@ -202,9 +207,10 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 ```bash
 azdata app run --name -n 
                --version -v  
-               [--inputs]
+               
+[--inputs]
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 입력 매개 변수 없이 애플리케이션을 실행합니다.
 ```bash
 azdata app run --name reduce --version v1
@@ -233,7 +239,7 @@ CSV `name=value` 형식의 애플리케이션 입력 매개 변수입니다.
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-app-describe"></a>azdata app describe
@@ -241,9 +247,10 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 ```bash
 azdata app describe [--spec -s] 
                     [--name -n]  
-                    [--version -v]
+                    
+[--version -v]
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 애플리케이션을 설명합니다.
 ```bash
 azdata app describe --name reduce --version v1    
@@ -263,7 +270,7 @@ azdata app describe --name reduce --version v1
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 

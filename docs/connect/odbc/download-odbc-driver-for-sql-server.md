@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c9a1b33348729aca9a0f77628e51f1c7d4c0e051
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 250dc0014e7ab38bf669608e9f509e273e7a9928
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153248"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012553"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>SQL Server용 ODBC 드라이버 다운로드
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Microsoft ODBC Driver for SQL Server는 네이티브 코드 API를 사용하여 SQL Server에 연결하는 애플리케이션에 대한 런타임 지원을 포함하는 단일 DLL(동적 연결 라이브러리)입니다. Microsoft ODBC Driver 17 for SQL Server를 사용하여 새로운 SQL Server 기능을 활용해야 하는 새로운 애플리케이션을 만들거나 기존 애플리케이션을 개선할 수 있습니다.
 

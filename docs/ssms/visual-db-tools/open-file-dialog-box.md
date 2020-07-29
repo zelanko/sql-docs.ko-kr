@@ -11,17 +11,16 @@ f1_keywords:
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 61a0a699c7d754d3b21b671da5cd29ea0ec0f240
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 214942feecf0161f373ca588c15510bcd5c0615f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251459"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999506"
 ---
 # <a name="open-file-dialog-box"></a>파일 열기 대화 상자
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 **파일 열기** 대화 상자를 사용하여 디스크에 있는 기존 파일을 열 수 있습니다. 또한 이 대화 상자를 사용하여 다양한 언어 인코딩 옵션을 통해 이미 열린 파일을 열 수 있습니다.  
   
 이 대화 상자에 액세스하려면 **파일** 메뉴에서 **열기** 를 선택한 다음 **파일**을 선택합니다. 이 대화 상자는 **외부 도구** 대화 상자와 같은 다른 요소에서 파일을 열 때도 나타납니다. **파일** 메뉴에서 **열기**를 선택한 다음 **프로젝트/솔루션** 을 선택하여 **프로젝트 열기** 대화 상자를 열 수 있습니다.  

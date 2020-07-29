@@ -2,22 +2,22 @@
 title: 리소스 풀 만들기
 description: SQL Server Machine Learning Services에서 Python 및 R 워크로드를 관리하기 위해 리소스 풀을 만들고 사용하는 방법에 대해 알아봅니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 02/28/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f8661101fa5b0f859723a168e149ae9747b3da4
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 5679a02542777e2302dcefc98274957b2f837445
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81119036"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902320"
 ---
 # <a name="create-a-resource-pool-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 사용자 계정 풀 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 SQL Server Machine Learning Services에서 Python 및 R 워크로드를 관리하기 위해 리소스 풀을 만들고 사용하는 방법에 대해 알아봅니다. 
 

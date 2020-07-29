@@ -20,12 +20,12 @@ ms.assetid: 73efa688-ae91-4014-98bc-1cabe47321f7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71a3d8f8ce28fcc8918f2058d08f99df2982be5c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 05ada0fde26bdd1e22ceea152539daae8967c1d4
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086709"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113428"
 ---
 # <a name="is_rolemember-transact-sql"></a>IS_ROLEMEMBER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -36,12 +36,14 @@ ms.locfileid: "68086709"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  **'** *role* **'**  
  확인할 데이터베이스 역할의 이름입니다. *role*은 **sysname**입니다.  
   
@@ -60,7 +62,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 ## <a name="remarks"></a>설명  
  IS_ROLEMEMBER를 사용하여 현재 사용자가 데이터베이스 역할의 사용 권한이 필요한 동작을 수행할 수 있는지 여부를 확인할 수 있습니다.  
   
- *database_principal*에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 직접 액세스가 부여 또는 거부되지 않은 경우 *database_principal*이 Contoso\Mary5 등의 Windows 로그인 기반이면 IS_ROLEMEMBER가 NULL을 반환합니다.  
+ *database_principal*에 *에 대한 직접 액세스가 부여 또는 거부되지 않은 경우* database_principal[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 Contoso\Mary5 등의 Windows 로그인 기반이면 IS_ROLEMEMBER가 NULL을 반환합니다.  
   
  선택적 *database_principal* 매개 변수가 제공되지 않고 *database_principal*이 Windows 도메인 로그인 기반일 경우 Windows 그룹의 멤버 자격을 통해 데이터베이스 역할의 멤버가 될 수 있습니다. 이러한 간접 멤버 자격을 확인하기 위해 IS_ROLEMEMBER는 도메인 컨트롤러에 Windows 그룹 멤버 자격 정보를 요청합니다. 도메인 컨트롤러에 액세스할 수 없거나 도메인 컨트롤러가 응답하지 않으면 IS_ROLEMEMBER가 사용자 및 사용자의 로컬 그룹만 고려하여 역할 멤버 자격 정보를 반환합니다. 지정된 사용자가 현재 사용자가 아닌 경우 IS_ROLEMEMBER가 반환하는 값이 인증자(예: Active Directory)의 마지막 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 업데이트와 다를 수 있습니다.  
   

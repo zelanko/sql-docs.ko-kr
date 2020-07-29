@@ -26,16 +26,16 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 575c8d2ec6e6397f7a3444bcc718988b070e783d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4eae86044d8e0ec03268e23abc81df4945b46990
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257146"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245569"
 ---
 # <a name="object-explorer"></a>개체 탐색기
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]인스턴스의 개체를 관리하는 데 필요한 기능을 제공합니다.  
   
 ## <a name="benefits-of-object-explorer"></a>개체 탐색기의 이점  
@@ -49,5 +49,4 @@ ms.locfileid: "75257146"
 |개체 탐색기를 [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]인스턴스에 연결하는 방법에 대해 설명합니다.|[개체 탐색기에서 인스턴스에 연결](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  
 |개체 탐색기 계층 구조에서 노드로 표시되는 개체를 관리하는 방법에 대해 설명합니다.|[개체 탐색기를 사용하여 개체 관리](../../ssms/object/manage-objects-by-using-object-explorer.md)|  
 |개체 탐색기 정보 창에 대해 설명합니다. 개체 탐색기 정보 창은 서버의 모든 개체를 관리하기 위한 사용자 인터페이스를 제공하는 테이블 형식 뷰입니다.|[개체 탐색기 정보 창](../../ssms/object/object-explorer-details-pane.md)|  
-|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 사용자 지정 보고서를 실행하는 방법에 대해 설명합니다.|[Management Studio의 사용자 지정 보고서](../../ssms/object/custom-reports-in-management-studio.md)|  
-  
+|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 사용자 지정 보고서를 실행하는 방법에 대해 설명합니다.|[Management Studio의 사용자 지정 보고서](../../ssms/object/custom-reports-in-management-studio.md)|

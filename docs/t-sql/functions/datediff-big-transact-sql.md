@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f3cd8777a05d285c49ae314c4e39aed42b5dc184
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dd18d79d9417dc980f2a35ced5c0fddea5d1f49b
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011422"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112037"
 ---
 # <a name="datediff_big-transact-sql"></a>DATEDIFF_BIG(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "86011422"
 ```
 DATEDIFF_BIG ( datepart , startdate , enddate )  
 ```  
-  
-## <a name="arguments"></a>인수  
+
+## <a name="arguments"></a>인수
 *datepart*  
 겹쳐지는 범위의 유형을 지정하는 *startdate*와 *enddate* 부분입니다.
 

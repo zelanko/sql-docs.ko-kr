@@ -9,15 +9,15 @@ author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 66719e8a30b9e7f4e42eaba376c73af9eb9868b2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 67e54169dab869751a0e63e9e1e4a2d62a23d34c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73658852"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722570"
 ---
 # <a name="microsoft-extensibility-sdk-for-java-for-sql-server"></a>SQL Server에 대한 Java용 Microsoft 확장성 SDK
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Java용 Microsoft 확장성 SDK를 사용하여 SQL Server용 Java 프로그램을 구현하는 방법을 알아봅니다. 이 SDK는 SQL Server와 데이터를 교환하고 SQL Server에서 Java 코드를 실행하는 데 사용되는 Java 언어 확장용 인터페이스입니다.
 

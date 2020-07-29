@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c4e138eb6b530377b76fcb6e6fb21a2694bce63
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df3c48dcab1ee71f8cfee1932099b034729451e3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255697"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000418"
 ---
 # <a name="customize-commands-page"></a>사용자 지정(명령 페이지)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 이 대화 상자를 사용하여 도구 모음과 메뉴에서 명령을 추가하거나 제거할 수 있을 뿐만 아니라 도구 모음 단추 또는 메뉴 명령에 사용되는 이미지를 변경할 수 있습니다. **도구** 메뉴에서 **사용자 지정** 을 클릭한 다음 **명령** 을 클릭하면 **명령**페이지에 액세스할 수 있습니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
 **범주**  
 **명령** 목록 상자에 표시되는 명령 집합을 지정합니다. 명령의 범주는 현재 환경이 지원하는 도구와 디자이너에서 제공하는 메뉴 제목에 따라 결정됩니다. 이 제목 목록은 동적이며 도구와 디자이너 및 해당 도구와 디자이너에 적용된 사용자 지정에 따라 범주 및 메뉴 제목의 순서가 바뀝니다. 따라서 디자이너에 따라 서로 다른 메뉴의 이름이 같을 수도 있기 때문에 같은 제목이 두 번 표시되더라도 제공하는 명령 집합은 다를 수 있습니다.  
   

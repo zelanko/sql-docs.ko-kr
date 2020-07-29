@@ -2,22 +2,22 @@
 title: rxExecBy를 사용하여 여러 모델 만들기
 description: RevoScaleR 라이브러리의 rxExecBy 함수를 사용하여 SQL Server에 저장된 컴퓨터 데이터에 대해 여러 개의 미니 모델을 빌드합니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: dbba63ae69997c9c5dbdccf49ec590b3f4eba652
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f4f0da1fdee47d166fe1b06fd8ce6e8ddea64f4c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117706"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723851"
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>rxExecBy를 사용하여 여러 모델 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 RevoScaleR의 **rxExecBy** 함수는 여러 관련 모델의 병렬 처리를 지원합니다. 데이터 과학자는 여러 비슷한 엔터티 데이터를 기준으로 하나의 대형 모델을 학습하는 대신 각각 단일 엔터티와 관련된 데이터를 사용하여 여러 개의 관련 모델을 빠르게 만들 수 있습니다. 
 

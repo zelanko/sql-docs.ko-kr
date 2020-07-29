@@ -2,22 +2,22 @@
 title: 'Python + T-SQL: 데이터 살펴보기'
 description: SQL Server 저장 프로시저 및 T-SQL 함수에 Python을 포함하는 방법을 보여주는 자습서
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2aef2ed82803af2a6ca1966cde5f5bf6675ca016
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 05b51550880e2e2324698cdadc92ba1d7dd1cc7f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115956"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775354"
 ---
 # <a name="explore-and-visualize-the-data"></a>데이터 탐색 및 시각화
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 문서는 [SQL 개발자를 위한 데이터베이스 내 Python 분석](sqldev-in-database-python-for-sql-developers.md) 자습서의 일부입니다. 
 

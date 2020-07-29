@@ -19,12 +19,12 @@ ms.assetid: 68cefc68-7c4f-4326-80c1-300f90cf19db
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e2994f4b141a9c162101e3bbfb2fe25f0710d89
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dcd53208afaa16fdab638b854773163a6353bc05
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005088"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111470"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "86005088"
 NCHAR ( integer_expression )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *integer_expression*  
  데이터베이스의 데이터 정렬에 [SC(보조 문자)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 플래그가 포함되어 있지 않은 경우 이 인수는 0에서 65535(0~0xFFFF) 사이의 양의 정수입니다. 이 범위 밖의 값을 지정한 경우 NULL이 반환됩니다. 보조 문자에 대한 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)를 참조하세요.  
   

@@ -1,6 +1,6 @@
 ---
 title: Reporting Services 인증에 대한 확장된 보호 | Microsoft Docs
-ms.date: 05/30/2017
+ms.date: 06/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e4d8347b57c7dae62dc8261c6542badfb654bde
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c881376243e1e870c5d3aa6c8477eccfb4a17ac0
+ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635925"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263790"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services 인증에 대한 확장된 보호
 
@@ -153,13 +153,7 @@ SSRS는 운영 체제에서 사용하도록 설정된 확장된 보호를 지원
 |ComputerNamePhysicalDnsHostname|로컬 컴퓨터의 DNS 호스트 이름입니다. 로컬 컴퓨터가 클러스터의 노드인 경우 클러스터 가상 서버의 이름이 아니라 로컬 컴퓨터의 DNS 호스트 이름이 사용됩니다.|  
 |ComputerNamePhysicalNetBIOS|로컬 컴퓨터의 NetBIOS 이름입니다. 로컬 컴퓨터가 클러스터의 노드인 경우 클러스터 가상 서버의 이름이 아니라 로컬 컴퓨터의 NetBIOS 이름이 사용됩니다.|  
   
- SPN이 추가되면 다음과 비슷한 항목이 추적 로그에 추가됩니다.  
-  
- `rshost!rshost!10a8!01/07/2010-19:29:38:: i INFO: SPN Whitelist Added <ComputerNamePhysicalNetBIOS> - <theservername>.`  
-  
- `rshost!rshost!10a8!01/07/2010-19:29:38:: i INFO: SPN Whitelist Added <ComputerNamePhysicalDnsHostname> - <theservername>.`  
-  
- 자세한 내용은 [보고서 서버의 SPN&#40;서비스 사용자 이름&#41; 등록](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) 및 [URL 예약 및 등록 정보&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)를 참조하세요.  
+자세한 내용은 [보고서 서버의 SPN&#40;서비스 사용자 이름&#41; 등록](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) 및 [URL 예약 및 등록 정보&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)를 참조하세요.  
   
 ## <a name="next-steps"></a>다음 단계
 

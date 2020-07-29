@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: c9e15350-ed57-4d95-814d-815fbebfd86b
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: c8903c23179d2743b39afd88d8f23c26e6da2790
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 184fd75abaa14e495307e2e710ab5434cf0a21b8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254847"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008141"
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>쿼리 결과 요약(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 집계 쿼리를 만들 때 특정 논리 원칙이 적용됩니다. 예를 들어, 요약 쿼리에서는 개별 행의 내용을 표시할 수 없습니다. 쿼리 및 뷰 디자이너를 사용하면 [다이어그램 창](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) 및 [조건 창](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) 의 동작에 따라 이러한 원칙을 준수할 수 있습니다.  
   
 집계 쿼리의 원칙과 쿼리 및 뷰 디자이너의 동작을 이해하면 논리적으로 올바른 집계 쿼리를 만들 수 있습니다. 가장 우선하는 원칙은 집계 쿼리를 사용하면 요약 정보만 만들어진다는 것입니다. 따라서 나머지 대부분의 원칙은 집계 쿼리 내의 개별 데이터 열을 참조할 수 있는 방법에 대해 설명합니다.  
