@@ -5,16 +5,16 @@ description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터의 H
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/05/2019
+ms.date: 06/29/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 543db5b96f9a2b02d579b7b6686049ff19af99d7
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: b0206ca193e6c03624c0d40d0c66e7474b00a7a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606525"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730649"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>빅 데이터 클러스터에 HDFS 계층화를 위한 ADLS Gen2를 탑재하는 방법
 
@@ -48,7 +48,7 @@ OAuth 자격 증명을 사용하여 탑재하려면 아래 단계를 수행해�
 1. 오른쪽 탐색 모음에서 “앱 등록”을 선택하고 새 등록을 만듭니다.
 1. “웹 애플리케이션”을 만들고 마법사를 따릅니다. **여기서 만든 앱의 이름을 기억해 두세요**. 이 이름을 권한 있는 사용자로 ADLS 계정에 추가해야 합니다. 앱을 선택할 때 개요에 표시되는 애플리케이션 클라이언트 ID도 기억해 두세요.
 1. 웹 애플리케이션이 생성되면 “인증서 및 암호”로 이동해서 **새 클라이언트 암호**를 만들고 키 지속 기간을 선택합니다. 암호를 **추가**합니다.
-1.     앱 등록 페이지로 돌아가서 맨 위의 “엔드포인트”를 클릭합니다. **“OAuth 토큰 엔드포인트(v2)”** URL을 기록해 둡니다.
+1. 앱 등록 페이지로 돌아가서 맨 위의 “엔드포인트”를 클릭합니다. **“OAuth 토큰 엔드포인트(v2)”** URL을 기록해 둡니다.
 1. 이제 OAuth에 대해 적어 둔 다음 정보를 보유하고 있습니다.
 
     - 웹 애플리케이션의 “애플리케이션 클라이언트 ID”
@@ -71,13 +71,13 @@ OAuth 자격 증명을 사용하여 탑재하려면 아래 단계를 수행해�
 
 **참고:** 자격 증명을 입력할 때 쉼표 “,” 사이에 있는 줄 바꿈과 공백을 모두 제거해야 합니다. 아래와 같은 서식은 오직 가독성을 좋게 만들기 위한 용도입니다.
 
-   ```text
-    set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
-    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
-    fs.azure.account.oauth2.client.endpoint=[token endpoint],
-    fs.azure.account.oauth2.client.id=[Application client ID],
-    fs.azure.account.oauth2.client.secret=[client secret]
-   ```
+```console
+   set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
+   fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
+   fs.azure.account.oauth2.client.endpoint=[token endpoint],
+   fs.azure.account.oauth2.client.id=[Application client ID],
+   fs.azure.account.oauth2.client.secret=[client secret]
+```
 
 ## <a name="use-access-keys-to-mount"></a>액세스 키를 사용하여 탑재
 
@@ -94,10 +94,10 @@ Azure Portal에서 ADLS 계정에 대해 얻을 수 있는 액세스 키를 사�
 
 **참고:** 자격 증명을 입력할 때 쉼표 “,” 사이에 있는 줄 바꿈과 공백을 모두 제거해야 합니다. 아래와 같은 서식은 오직 가독성을 좋게 만들기 위한 용도입니다.
 
-   ```text
-   set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
-   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
-   ```
+```console
+set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
+fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
+```
 
 ## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a> 원격 HDFS 스토리지 탑재
 

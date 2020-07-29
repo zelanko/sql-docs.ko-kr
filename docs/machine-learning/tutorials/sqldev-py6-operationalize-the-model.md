@@ -2,22 +2,22 @@
 title: 'Python + T-SQL: 예측 실행'
 description: T-SQL 함수를 사용하여 SQL Server 저장 프로시저에 포함된 PYthon 스크립트를 운영하는 방법을 보여주는 자습서
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/02/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 00e4ba99b23abff0147627239093328e6f483ffb
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0d6994aade329150d2715eca92181f4cf2773c40
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115826"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775325"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>저장 프로시저에 포함된 Python을 사용하여 예측 실행
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 문서는 [SQL 개발자를 위한 데이터베이스 내 Python 분석](sqldev-in-database-python-for-sql-developers.md) 자습서의 일부입니다. 
 

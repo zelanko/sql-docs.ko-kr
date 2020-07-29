@@ -5,25 +5,25 @@ description: azdata bdc gateway status 명령에 대한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1c74439be0a696197f35a86a0d493a8ad01e28ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 30410e4acbaa6b52228c89334c9ee8a26a80d5b4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74820925"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243062"
 ---
 # <a name="azdata-bdc-gateway-status"></a>azdata bdc gateway status
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-다음 문서에서는 `azdata` 도구의 `bdc gateway status` 명령에 대한 참조를 제공합니다. 다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
+다음 문서에서는 `azdata` 도구의 `sql` 명령에 대한 참조를 제공합니다. 다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
 
 ## <a name="commands"></a>명령
-|     |     |
+| 명령 | 설명 |
 | --- | --- |
 [azdata bdc gateway status 표시](#azdata-bdc-gateway-status-show) | 게이트웨이 서비스 상태입니다.
 ## <a name="azdata-bdc-gateway-status-show"></a>azdata bdc gateway status 표시
@@ -32,7 +32,7 @@ ms.locfileid: "74820925"
 azdata bdc gateway status show [--resource -r] 
                                [--all -a]
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 게이트웨이 서비스의 상태를 가져옵니다.
 ```bash
 azdata bdc gateway status show
@@ -58,7 +58,7 @@ azdata bdc gateway status show --resource gateway
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 

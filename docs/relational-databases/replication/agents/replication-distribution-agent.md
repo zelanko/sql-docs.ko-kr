@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: cbb2df105e6ed9172bd271d81f563cf017db110a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 51a34db68f77193c42662476656d46e5fa2f6092
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918103"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87109406"
 ---
 # <a name="replication-distribution-agent"></a>복제 배포 에이전트
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]

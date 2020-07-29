@@ -9,16 +9,16 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0cb2f253f56fc58e215d1c800788294e2df7b0aa
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: f7199663209c2d9a0dc51baa0e6986f16722ef94
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606649"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773651"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터의 마스터 인스턴스란?
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 이 문서에서는 SQL Server 2019용 빅 데이터 클러스터에서 ‘SQL Server 마스터 인스턴스’의 역할을 설명합니다. 마스터 인스턴스는 연결, 스케일 아웃 쿼리, 메타데이터 및 사용자 데이터베이스, Machine Learning Services를 관리하기 위해 빅 데이터 클러스터에서 실행되는 SQL Server 인스턴스입니다.
 

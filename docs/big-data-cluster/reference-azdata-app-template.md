@@ -1,38 +1,39 @@
 ---
 title: azdata app template 참조
+titleSuffix: SQL Server big data clusters
 description: azdata app template 명령에 대한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: da1b98649eeb48d5ae2d6ca05e61da53f519e944
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 89b5436536d221364f967548bf4a5c4dd70a1ebd
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251051"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942965"
 ---
 # <a name="azdata-app-template"></a>azdata app template
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-다음 문서에서는 `azdata` 도구의 `app template` 명령에 대한 참조를 제공합니다. 다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
+다음 문서에서는 `azdata` 도구의 `sql` 명령에 대한 참조를 제공합니다. 다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
 
 ## <a name="commands"></a>명령
-|     |     |
+| 명령 | 설명 |
 | --- | --- |
-[`azdata app template list`](#azdata-app-template-list) | 지원되는 템플릿을 가져옵니다.
-[`azdata app template pull`](#azdata-app-template-pull) | 지원되는 템플릿을 다운로드합니다.
+[azdata app template list](#azdata-app-template-list) | 지원되는 템플릿을 가져옵니다.
+[azdata app template pull](#azdata-app-template-pull) | 지원되는 템플릿을 다운로드합니다.
 ## <a name="azdata-app-template-list"></a>azdata app template list
 지정된 [URL] github 리포지토리에서 지원되는 템플릿을 가져옵니다.
 ```bash
-azdata app template list [--url -u]
+azdata app template list [--url -u] 
+                         
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 기본 템플릿 리포지토리 위치에 있는 템플릿을 모두 가져옵니다.
 ```bash
 azdata app template list
@@ -52,7 +53,7 @@ azdata app template list --url https://github.com/diffrent/templates.git
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-app-template-pull"></a>azdata app template pull
@@ -60,9 +61,10 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 ```bash
 azdata app template pull [--name -n] 
                          [--url -u]  
-                         [--destination -d]
+                         
+[--destination -d]
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 기본 템플릿 리포지토리 위치에 있는 템플릿을 모두 다운로드합니다.
 ```bash
 azdata app template pull
@@ -91,7 +93,7 @@ azdata app template pull --name ssis
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 

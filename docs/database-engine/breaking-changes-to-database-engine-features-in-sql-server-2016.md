@@ -3,7 +3,7 @@ title: '데이터베이스 엔진: 호환성이 손상되는 변경 | Microsoft 
 titleSuffix: SQL Server 2016
 description: 업그레이드 시 이전 버전의 기능이 중단될 수 있는 SQL Server 2016(13.x) 및 이전 버전의 데이터베이스 엔진 변경 내용에 대해 알아봅니다.
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8c6dad3c9ec55f9e895cc9f7ed430ed5816a73a8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bddfd0b06bfc64d68534548cfb90ea09ed2d4076
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751259"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236068"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 데이터베이스 엔진 기능의 호환성이 손상되는 변경
 
@@ -40,7 +40,7 @@ ms.locfileid: "85751259"
 
 ## <a name="previous-versions"></a><a name="previous-versions"></a> 이전 버전  
 
-[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 및 일부 이전 버전의 호환성이 손상되는 변경에 대한 자세한 내용은 [SQL Server 2014 데이터베이스 엔진 기능의 호환성이 손상되는 변경](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)을 참조하세요.
+[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 및 일부 이전 버전의 호환성이 손상되는 변경에 대한 자세한 내용은 [SQL Server 2014 데이터베이스 엔진 기능의 호환성이 손상되는 변경](/previous-versions/sql/2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016)을 참조하세요.
 
 #### <a name="archived-documentation-for-very-old-versions-of-sql-server"></a>이전 버전의 SQL Server에 대해 보관된 설명서
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a457fbc0f87f9ba83170f8235e7ae144f4e86648
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 90d900af5fe86862ad59df61d4640e38797c0a01
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922794"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893174"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,6 @@ PHP 개체로 데이터의 다음 행을 검색합니다.
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, row[, ]offset]]])  
 ```  
   
@@ -81,17 +80,21 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 이름이 없는 필드가 반환되면 **sqlsrv_fetch_object** 가 필드 값을 삭제하고 경고를 발생시킵니다. 예를 들어 값을 데이터베이스 테이블에 삽입하고 서버 생성 기본 키를 검색하는 다음 Transact-SQL 문을 고려해 보겠습니다.  
   
-<pre>INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
-SELECT SCOPE_IDENTITY()</pre>  
+```sql
+INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
+SELECT SCOPE_IDENTITY()
+```
   
 이 쿼리에서 반환된 결과가 **sqlsrv_fetch_object**로 검색되는 경우 `SELECT SCOPE_IDENTITY()` 에서 반환된 값이 삭제되고 경고가 발생합니다. 이를 방지하려면 Transact-SQL 문에서 반환된 필드에 대해 이름을 지정하면 됩니다. 다음은 Transact-SQL에 열 이름을 지정하는 한 가지 방법입니다.  
   
-`SELECT SCOPE_IDENTITY() AS PictureID`  
+```sql
+SELECT SCOPE_IDENTITY() AS PictureID
+```
   
 ## <a name="example"></a>예제  
 다음 예제는 결과 집합의 각 행을 PHP 개체로 검색합니다. 이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
-```  
+``` 
 <?php  
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
@@ -234,12 +237,16 @@ sqlsrv_close( $conn);
   
 이름이 없는 필드가 반환되면 **sqlsrv_fetch_object** 가 필드 값을 삭제하고 경고를 발생시킵니다. 예를 들어 값을 데이터베이스 테이블에 삽입하고 서버 생성 기본 키를 검색하는 다음 Transact-SQL 문을 고려해 보겠습니다.  
   
-<pre>INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
-SELECT SCOPE_IDENTITY()</pre>  
+```sql
+INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
+SELECT SCOPE_IDENTITY()
+```
   
 이 쿼리에서 반환된 결과가 **sqlsrv_fetch_object**로 검색되는 경우 `SELECT SCOPE_IDENTITY()` 에서 반환된 값이 삭제되고 경고가 발생합니다. 이를 방지하려면 Transact-SQL 문에서 반환된 필드에 대해 이름을 지정하면 됩니다. 다음은 Transact-SQL에 열 이름을 지정하는 한 가지 방법입니다.  
   
-`SELECT SCOPE_IDENTITY() AS PictureID`  
+```sql
+SELECT SCOPE_IDENTITY() AS PictureID
+```
   
 ## <a name="see-also"></a>참고 항목  
 [데이터 검색](../../connect/php/retrieving-data.md)  

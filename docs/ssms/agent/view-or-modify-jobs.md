@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 57f649b8-190c-4304-abd7-7ca5297deab7
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 93a81e3cc2dc7990c2bbf0207e72d258923eae66
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 674f27ad2534f6cabb44402ee675aad844a5e26c
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257541"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245540"
 ---
 # <a name="view-or-modify-jobs"></a>작업 보기 또는 수정
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
@@ -64,9 +63,8 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|||  
+|Description|항목|  
 |-|-|  
-|**설명**|**항목**|  
 |[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 보는 방법에 대해 설명합니다.|[View a Job](../../ssms/agent/view-a-job.md)|  
 |[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 기록 로그를 보는 방법에 대해 설명합니다.|[View the Job History](../../ssms/agent/view-the-job-history.md)|  
 |[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 기록 로그의 내용을 삭제하는 방법에 대해 설명합니다.|[Clear the Job History Log](../../ssms/agent/clear-the-job-history-log.md)|  

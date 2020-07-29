@@ -18,17 +18,16 @@ helpviewer_keywords:
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 4161966534f65936bbddc8753cdb116ea5f47e33
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 759aaed19c2ef313712725edaa03b91eb37afcbe
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246217"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002592"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>결과 창에서 데이터 작업(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 쿼리나 뷰를 실행하면 결과 창에 그 결과가 표시됩니다. 이러한 결과를 사용하여 작업할 수 있습니다. 예를 들어 행을 추가 및 삭제하고 데이터를 입력 또는 변경하며 수많은 결과 집합 사이를 쉽게 이동할 수 있습니다.  
   
 다음은 결과 집합을 효율적으로 사용하고 문제를 방지하는 데 도움이 되는 정보입니다.  

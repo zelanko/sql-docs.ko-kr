@@ -1,29 +1,29 @@
 ---
 title: azdata bdc control status 참조
+titleSuffix: SQL Server big data clusters
 description: azdata bdc control status 명령에 대한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1a617b57e4a73db83d88573b77f7058e0aab3889
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5036e7646a847edfa38998694ace8b35d649dd5e
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75233925"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942915"
 ---
 # <a name="azdata-bdc-control-status"></a>azdata bdc control status
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-다음 문서에서는 `azdata` 도구의 `bdc control` 명령에 대한 참조를 제공합니다. 다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
+다음 문서에서는 `azdata` 도구의 `sql` 명령에 대한 참조를 제공합니다. 다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
 
 ## <a name="commands"></a>명령
-|     |     |
+| 명령 | 설명 |
 | --- | --- |
 [azdata bdc control status show](#azdata-bdc-control-status-show) | 서비스 상태를 제어합니다.
 ## <a name="azdata-bdc-control-status-show"></a>azdata bdc control status show
@@ -32,7 +32,7 @@ ms.locfileid: "75233925"
 azdata bdc control status show [--resource -r] 
                                [--all -a]
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 서비스 상태를 가져옵니다.
 ```bash
 azdata bdc control status show
@@ -58,7 +58,7 @@ azdata bdc control status show --resource control
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 

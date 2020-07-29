@@ -2,23 +2,23 @@
 title: R 도구를 사용하여 패키지 설치
 description: 표준 R 도구를 사용하여 SQL Server Machine Learning Services 또는 SQL Server R Services 인스턴스에 새 R 패키지를 설치하는 방법을 알아보세요.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/20/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 5d7c610f887de137c44f97ca8809e70c548a51db
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a1a135588c9775758008b5db9ffca38e6ff3d041
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118036"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723954"
 ---
 # <a name="install-packages-with-r-tools"></a>R 도구를 사용하여 패키지 설치
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 문서에서는 표준 R 도구를 사용하여 SQL Server Machine Learning Services 또는 SQL Server R Services 인스턴스에 새 R 패키지를 설치하는 방법을 설명합니다. 사용자는 인터넷에 연결된 SQL Server뿐만 아니라 인터넷에서 격리된 SQL Server에서도 패키지를 설치할 수 있습니다.
 

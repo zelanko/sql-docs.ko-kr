@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b1a0df1686543cfe69a998149ede45ea2f845894
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 13845b7e7903207f7d5b3c026663d6b1d44d4795
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251862"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011593"
 ---
 # <a name="projects-sql-server-management-studio"></a>프로젝트(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 프로젝트는 데이터베이스 관리 및 개발을 위해 함께 저장할 수 있는 논리적으로 연관된 스크립트 및 파일 모음입니다.  
   
 ## <a name="script-project-overview"></a>스크립트 프로젝트 개요  

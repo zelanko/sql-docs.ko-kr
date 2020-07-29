@@ -2,22 +2,22 @@
 title: 'Python + T-SQL: 데이터 기능'
 description: Python 기계 학습 모델에서 사용하기 위해 저장 프로시저에 계산을 추가하는 방법을 보여 주는 자습서입니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eb7f7b271c49922698058e396b69b91444c5b65a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 98a1ca3b012c5580e55dd6ea963c3869269f7136
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115926"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775345"
 ---
 # <a name="create-data-features-using-t-sql"></a>T-SQL을 사용하여 데이터 기능 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 데이터 탐색 후 데이터에서 몇 가지 인사이트를 수집했으며 *기능 엔지니어링*으로 넘어갈 준비가 되었습니다. 원시 데이터에서 기능을 만드는 이 프로세스는 고급 분석 모델링에서 중요한 단계가 될 수 있습니다.
 

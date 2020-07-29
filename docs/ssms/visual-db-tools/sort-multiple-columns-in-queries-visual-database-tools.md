@@ -11,17 +11,16 @@ helpviewer_keywords:
 ms.assetid: 5057a6ee-3ca8-4734-9e96-592b24624c55
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 84d6f39736839a36baba504b41cb069bc6b8713c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c9956d8df5d1445581f149073bff1c2b3bc39397
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255016"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000480"
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>쿼리에서 여러 열 정렬(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 **조건 창** 에서 [정렬 순서](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)열을 사용하면 열이 사용되는 순서를 지정하여 데이터를 정렬할 수 있습니다.  
   
 ### <a name="to-sort-query-results-by-more-than-one-column"></a>두 개 이상의 열을 기준으로 쿼리 결과를 정렬하려면  

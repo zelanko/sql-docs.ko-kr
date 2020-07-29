@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 5c1a8b952d0723c4fd1c54ab2b841ed818017c9f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3328277c15511a94603436c7c845671e9fd8dc86
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254313"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000061"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>외부 조인 만들기(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 는 기본적으로 테이블 간에 내부 조인을 만듭니다. 다른 테이블의 행과 일치하지 않는 행은 없앱니다. 그러나 외부 조인은 FROM 절에 지정된 하나 이상의 테이블이나 뷰에서 WHERE 또는 HAVING 검색 조건을 만족하는 모든 행을 반환합니다. 조인된 테이블에 일치 값이 없는 데이터 행을 결과 집합에 포함하려면 외부 조인을 만들면 됩니다.  
   
 외부 조인을 만들 때는 SQL 창의 SQL 문에 테이블이 표시되는 순서가 중요합니다. 첫 번째로 추가하는 테이블이 "왼쪽" 테이블이 되고 두 번째로 추가하는 테이블이 "오른쪽" 테이블이 됩니다. [다이어그램 창](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) 에 테이블이 실제로 표시되는 순서는 중요하지 않습니다. 왼쪽 또는 오른쪽 우선 외부 조인을 지정할 경우 쿼리에 테이블이 추가된 순서와 [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)의 SQL 문에 테이블이 표시되는 순서를 참조합니다.  

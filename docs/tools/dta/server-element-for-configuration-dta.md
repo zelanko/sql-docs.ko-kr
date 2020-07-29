@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: da9ff870-9cfd-42fe-994b-7b9292681f7d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: f723e02b13ed5613d3606927ae500c3072c8c6fc
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: dd7c6d0c32ab3e5cdffaf66765ca05b8995ef440
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151794"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732058"
 ---
 # <a name="server-element-for-configuration-dta"></a>Configuration의 Server 요소(DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 데이터베이스 엔진 튜닝 관리자가 가상 구성( **Configuration** 요소에 의해 지정됨)을 평가하는 서버에 대한 식별 정보를 포함합니다.  
   

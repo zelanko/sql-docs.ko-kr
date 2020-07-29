@@ -4,21 +4,21 @@ description: R 또는 SQL Server를 처음 접하는 사용자를 위해 제공�
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/06/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9a8402432904e724c0eee769f0f899ff12498ac8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: ad2650317958ffd43b0f4b910585d429249115b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117956"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730543"
 ---
 # <a name="tips-for-using-r-packages"></a>R 패키지 사용 팁
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 이 문서에서는 SQL Server에서 R 패키지를 사용하는 방법에 대한 유용한 팁을 제공합니다. 이러한 팁은 R에 익숙하지 않은 DBA와 SQL Server 인스턴스의 패키지 액세스에 익숙하지 않은 숙련된 R 개발자를 위한 것입니다.
 
@@ -93,6 +93,6 @@ SQL Server에서 R 패키지를 설치하는 방법에 대한 내용은 [SQL Ser
 ::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
 + [R 도구를 사용하여 패키지 설치](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 + [sqlmlutils를 사용하여 새 R 패키지 설치](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

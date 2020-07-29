@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 69e06724-25c7-4fb3-8a5b-3d4596f21756
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9770382558af7e77090235775c133dbeaeabff51
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2c5de395fdf9f546eb467712145fda29580914b4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242354"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246215"
 ---
 # <a name="implement-jobs"></a>작업 구현
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
@@ -38,9 +37,8 @@ ms.locfileid: "75242354"
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|||  
-|-|-|  
-|**설명**|**항목**|  
+|Description|항목|  
+|-|-|   
 |작업을 만들고 소유권을 할당하는 방법에 대해 설명합니다.|[작업 만들기](../../ssms/agent/create-jobs.md)|  
 |범주에 작업을 구성하는 방법에 대해 설명합니다.|[작업 구성](../../ssms/agent/organize-jobs.md)|  
 |사용자가 만들 수 있는 작업 단계의 여러 가지 종류와 관리하는 방법에 대해 설명합니다.|[작업 단계 관리](../../ssms/agent/manage-job-steps.md)|  

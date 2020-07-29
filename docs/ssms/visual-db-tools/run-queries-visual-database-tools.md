@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 3880beb6f4927c28fe6edd686b26804d3826cf16
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6c27df1b246b5313e5b55e36f8485b1417a02e84
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255170"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85989194"
 ---
 # <a name="run-queries-visual-database-tools"></a>쿼리 실행(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 쿼리 디자인을 마친 후에 쿼리를 실행할 수 있습니다.  
   
 ### <a name="to-execute-a-query"></a>쿼리를 실행하려면  

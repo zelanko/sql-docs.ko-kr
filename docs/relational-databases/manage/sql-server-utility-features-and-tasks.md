@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c48779de7f7edccd4401e1d60740b7cff6a046cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2378ecd42d821a818a539350f872ed0d12099a8d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755698"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242968"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server 유틸리티 기능 및 태스크
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +40,8 @@ ms.locfileid: "85755698"
 ## <a name="related-tasks"></a>관련 작업  
  다음 항목을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티를 시작합니다.  
   
-|||  
+|Description|항목|  
 |-|-|  
-|**설명**|**항목**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 동일 인스턴스에서 유틸리티 및 비 유틸리티 컬렉션 집합을 실행하도록 서버를 구성하기 위한 고려 사항을 설명합니다.|[같은 SQL Server 인스턴스에서 유틸리티 및 유틸리티 이외의 컬렉션 집합을 실행하기 위한 고려 사항](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
 |SQL Server 유틸리티 제어 지점을 만드는 방법을 설명합니다.|[SQL Server 유틸리티 제어 지점 만들기&#40;SQL Server 유틸리티&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)|  
 |SQL Server 유틸리티에 연결하는 방법을 설명합니다.|[SQL Server 유틸리티에 연결](../../relational-databases/manage/connect-to-a-sql-server-utility.md)|  

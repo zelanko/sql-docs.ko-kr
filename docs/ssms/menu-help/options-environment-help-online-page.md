@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7be77c2ce856a1940197a7b1d52550beac011e4b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3d41b6e48a9b5125b661d2bbfc5dbc6b3a7fe3b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252337"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008059"
 ---
 # <a name="options-environment---help---online-page"></a>옵션(환경 - 도움말 - 온라인 페이지)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 **옵션** 대화 상자를 사용하면 F1 도움말을 비롯하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 검색에 사용할 도움말 원본을 지정할 수 있습니다. **도구** 메뉴에서 **옵션**을 클릭하고 **환경** 폴더를 확장한 다음 **도움말**을 선택하고 **온라인**을 클릭합니다. **온라인** 페이지가 목록에 나타나지 않으면 **옵션** 대화 상자의 **모든 설정 표시** 확인란을 선택합니다.  
   
 **도움말 콘텐츠를 로드할 때**  

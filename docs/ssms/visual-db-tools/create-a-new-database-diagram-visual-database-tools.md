@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 0c9d69f04fc7825b0902e101d1c8f8f40494da72
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f16ffac1272a0dd9bfc847d33b3232179d306c3d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254397"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751452"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>새 데이터베이스 다이어그램 만들기(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 개체 탐색기를 사용하여 새 데이터베이스 다이어그램을 만들 수 있습니다. 데이터베이스 다이어그램은 데이터베이스의 구조를 그래픽으로 표시합니다. 데이터베이스 다이어그램을 사용하면 테이블, 열, 관계 및 키를 만들고 수정할 수 있으며, 인덱스 및 제약 조건을 수정할 수도 있습니다.  
   
 ### <a name="to-create-a-new-database-diagram"></a>새 데이터베이스 다이어그램을 만들려면  

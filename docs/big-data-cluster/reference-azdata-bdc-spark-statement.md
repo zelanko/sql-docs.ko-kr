@@ -1,29 +1,29 @@
 ---
 title: azdata bdc spark statement 참조
+titleSuffix: SQL Server big data clusters
 description: azdata bdc spark statement 명령에 대한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 38d556944db9e8c269fb8acf8f3089050fb8b1d8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3e43dcb6cc5bb28876179bcd2d2da25ae9ac4a2f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258609"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243504"
 ---
 # <a name="azdata-bdc-spark-statement"></a>azdata bdc spark statement
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-다음 문서에서는 `azdata` 도구의 `bdc spark statement` 명령에 대한 참조를 제공합니다. 다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
+다음 문서에서는 `azdata` 도구의 `sql` 명령에 대한 참조를 제공합니다. 다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
 
 ## <a name="commands"></a>명령
-|     |     |
+| 명령 | 설명 |
 | --- | --- |
 [azdata bdc spark statement list](#azdata-bdc-spark-statement-list) | 지정된 Spark 세션의 문을 모두 나열합니다.
 [azdata bdc spark statement create](#azdata-bdc-spark-statement-create) | 지정된 세션에서 새 Spark 문을 만듭니다.
@@ -33,9 +33,10 @@ ms.locfileid: "75258609"
 지정된 Spark 세션의 문을 모두 나열합니다.
 ```bash
 azdata bdc spark statement list --session-id -i 
-              ```
-### Examples
-List all the session statements.
+                                
+```
+### <a name="examples"></a>예제
+세션 문을 모두 나열합니다.
 ```bash
 azdata spark statement list --session-id 0
 ```
@@ -50,7 +51,7 @@ Spark 세션 ID 번호입니다.
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-bdc-spark-statement-create"></a>azdata bdc spark statement create
@@ -59,7 +60,7 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 azdata bdc spark statement create --session-id -i 
                                   --code -c
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 문을 실행합니다.
 ```bash
 azdata spark statement create --session-id 0 --code "2+2"
@@ -77,7 +78,7 @@ Spark 세션 ID 번호입니다.
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-bdc-spark-statement-info"></a>azdata bdc spark statement info
@@ -86,7 +87,7 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 azdata bdc spark statement info --session-id -i 
                                 --statement-id -s
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 ID가 0이고 문 ID가 0인 세션의 문 정보를 가져옵니다.
 ```bash
 azdata spark statement info --session-id 0 --statement-id 0
@@ -104,7 +105,7 @@ Spark 세션 ID 번호입니다.
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-bdc-spark-statement-cancel"></a>azdata bdc spark statement cancel
@@ -113,7 +114,7 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 azdata bdc spark statement cancel --session-id -i 
                                   --statement-id -s
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 문을 취소합니다.
 ```bash
 azdata spark statement cancel --session-id 0 --statement-id 0
@@ -131,7 +132,7 @@ Spark 세션 ID 번호입니다.
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 

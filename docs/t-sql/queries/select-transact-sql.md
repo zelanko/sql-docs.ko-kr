@@ -25,12 +25,12 @@ ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db5b1cc185c4fc3cb4c932867851703d8c134a14
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b0c6ba071498bb3c5fafac38618723046bd82bdc
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999744"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248757"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -102,16 +102,63 @@ SELECT <select_criteria>
   
 ## <a name="remarks"></a>설명  
  SELECT 문은 복잡하기 때문에 자세한 구문 요소와 인수가 다음과 같은 절로 표시됩니다.  
-  
-|||  
-|-|-|  
-|[WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)<br /><br /> [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)|[HAVING](../../t-sql/queries/select-having-transact-sql.md)|  
-|[SELECT 절](../../t-sql/queries/select-clause-transact-sql.md)|[UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md)|  
-|[INTO 절](../../t-sql/queries/select-into-clause-transact-sql.md)|[EXCEPT 및 INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)|  
-|[FROM](../../t-sql/queries/from-transact-sql.md)|[ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md)|  
-|[WHERE](../../t-sql/queries/where-transact-sql.md)|[FOR 절](../../t-sql/queries/select-for-clause-transact-sql.md)|  
-|[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md)|[OPTION 절](../../t-sql/queries/option-clause-transact-sql.md)|  
-  
+
+:::row:::
+    :::column:::
+        [WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)
+    :::column-end:::
+    :::column:::
+        [HAVING](../../t-sql/queries/select-having-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [SELECT 절](../../t-sql/queries/select-clause-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [EXCEPT 및 INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [INTO 절](../../t-sql/queries/select-into-clause-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [FROM](../../t-sql/queries/from-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [FOR 절](../../t-sql/queries/select-for-clause-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [WHERE](../../t-sql/queries/where-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [OPTION 절](../../t-sql/queries/option-clause-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
  SELECT 문에서 절의 순서는 매우 중요합니다. 선택 사항인 절은 생략할 수 있지만 이러한 절을 사용할 때는 적절한 순서로 표시해야 합니다.  
   
  사용자 정의 함수 내의 SELECT 문은 함수에서 로컬인 변수에 값을 할당하는 식이 문의 선택 목록에 포함된 경우에만 허용됩니다.  

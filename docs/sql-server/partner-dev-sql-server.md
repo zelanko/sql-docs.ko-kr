@@ -5,19 +5,18 @@ ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.date: 09/17/2017
 ms.prod: sql
-ms.technology: ''
-ms.prod_service: database-engine
+ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 769c421c087de366ec262c3e5b8744ffb78f3ba6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d0f2bb38923f52edd8f1dae3410d29c7d4babc95
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75656796"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923066"
 ---
 # <a name="sql-server-development-partners"></a>SQL Server 개발 파트너
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 SQL Server 데이터베이스 솔루션 개발을 지원하기 위해 다양한 업계 최고의 도구 중에서 선택합니다.  이 문서에서는 Microsoft SQL Server에 대한 개발 솔루션이 있는 Microsoft 파트너 회사를 강조 표시합니다.
 
 ## <a name="our-development-partners"></a>개발 파트너

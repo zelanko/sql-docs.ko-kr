@@ -2,22 +2,22 @@
 title: 'R 자습서: 데이터 살펴보기'
 description: SQL Server에서 데이터베이스 내 분석을 위해 R 함수를 사용하여 통계 요약을 시각화하고 생성하는 방법을 보여 주는 자습서입니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e74224851d2c475cd89160b362ba163d53c00f61
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 18fd4df2d2ae5764b5f3e9becaa872f863ed5ee5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115696"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781774"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>R을 사용하여 SQL Server 데이터 보기 및 요약(연습)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 단원에서는 **RevoScaleR** 패키지의 기능을 소개하고 다음 작업을 단계별로 안내합니다.
 

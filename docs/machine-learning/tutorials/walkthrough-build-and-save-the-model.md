@@ -2,22 +2,22 @@
 title: 'R 자습서: 모델 빌드 및 저장'
 description: SQL Server 데이터베이스 내 분석에 사용되는 R 언어 모델을 작성하는 방법을 보여주는 자습서입니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4cb806c0a6286ec8a6608b346d12e666a8e9a09f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 8ae0de4af29dd68e71300de52875044a8c2d64b4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115776"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730429"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>R 모델을 빌드하여 SQL Server에 저장(연습)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 단계에서는 기계 학습 모델을 작성하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장하는 방법을 알아봅니다. 모델을 저장하면 시스템 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 또는 [PREDICT (T-SQL) function](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드에서 직접 호출할 수 있습니다.
 

@@ -23,12 +23,12 @@ ms.assetid: 369ed340-1a09-4597-a9eb-6720156cd39a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 599dedb5f33152132bcf7cc72ad1227c48eb45eb
-ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
+ms.openlocfilehash: ed3275d95ad1b7b7923c55b9ab7c82aadb4d3761
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86465300"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110913"
 ---
 # <a name="ltrim-transact-sql"></a>LTRIM(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "86465300"
 LTRIM ( character_expression )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *character_expression*  
  문자 또는 이진 데이터의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *character_expression*은 상수, 변수 또는 열일 수 있습니다. *string_expression*은 **varchar**로 암시적으로 변환될 수 있는 데이터 형식이어야 하며 **text**, **ntext**, **image**는 제외됩니다. 그렇지 않은 경우 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md)를 사용하여 *character_expression*을 명시적으로 변환하세요.  
   

@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 508c7561dc77f375375e174d68d3955e044ae4ee
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 743b0ea95643555136ee5c785a1aea689ebb6d50
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247202"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011738"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>쿼리 결과 행 그룹화(Visual Database Tools)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 부분합을 계산하거나 테이블의 하위 집합에 대한 다른 요약 정보를 표시하려면 집계 쿼리를 사용하여 그룹을 만듭니다. 각 그룹은 테이블에서 값이 동일한 모든 행의 데이터를 요약하는 데 사용됩니다.  
   
 예를 들어, `titles` 테이블에서 출판사별로 구분된 도서 평균 가격 결과를 확인해야 할 수도 있습니다. 이 경우 출판사별로 쿼리를 그룹화할 수 있습니다(예: `pub_id`). 다음과 같은 쿼리 결과가 만들어집니다.  

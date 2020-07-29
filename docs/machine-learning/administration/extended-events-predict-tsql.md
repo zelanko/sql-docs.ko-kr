@@ -2,19 +2,19 @@
 title: 확장 이벤트를 사용하여 T-SQL 모니터링
 description: 확장 이벤트를 사용하여 SQL Server Machine Learning Services에서 PREDICT T-SQL 문을 모니터링하고 문제를 해결하는 방법에 대해 알아봅니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 09/24/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9e891ee16ce664e12f12b16c9deda957d0fa2263
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4d3be71d304cb17392fcc4ec5a8796588de9d884
+ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118986"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85352320"
 ---
 # <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 확장 이벤트를 사용하여 PREDICT T-SQL 문 모니터링
 

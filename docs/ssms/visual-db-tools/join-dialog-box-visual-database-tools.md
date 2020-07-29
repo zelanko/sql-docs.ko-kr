@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: cff110d8eccc22ac9c6705420c845713bfffdb74
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d049e23db7020ca84c4cec1e4ddc1ba5bbe84b4d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75224668"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011716"
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>조인 대화 상자(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 이 대화 상자를 사용하면 테이블을 조인하기 위한 옵션을 지정할 수 있습니다. 이 대화 상자에 액세스하려면 **디자인** 창에서 조인 선을 선택합니다. 그런 다음, **속성** 창에서 **조인 조건 및 형식**을 클릭하고 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다.  
   
 기본적으로 관련 테이블은 조인 열의 일치하는 정보를 포함하는 행에 기반하여 결과 집합을 만드는 내부 조인을 사용하여 조인됩니다. **조인** 대화 상자에서 옵션을 설정하여 다른 연산자를 기반으로 하는 조인을 지정하거나 외부 조인을 지정할 수 있습니다.  

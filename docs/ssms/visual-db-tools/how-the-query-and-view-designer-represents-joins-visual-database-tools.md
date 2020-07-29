@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 7e0d4b8ff645ad918cea32cbbed3eade62017254
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 51c94c3d0cd6f5e86d8d6ed35e0ebf81606ecfdd
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255874"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011752"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>쿼리 및 뷰 디자이너의 조인 표시 방법(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 테이블이 조인되면 [쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 는 [다이어그램 창](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) 에 조인을 그래픽으로 나타내고 [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)에 SQL 구문을 사용합니다.  
   
 ## <a name="diagram-pane"></a>다이어그램 창  

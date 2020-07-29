@@ -10,16 +10,16 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 13510f430c11253a569540e02dc83d3b8b3ca113
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 0deca0c189782e56fdbb37dd388fa9b55982991f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606745"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726708"
 ---
 # <a name="submit-spark-jobs-on-big-data-clusters-2019-in-azure-data-studio"></a>Azure Data Studio에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 Spark 작업 제출
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 빅 데이터 클러스터의 주요 시나리오 중 하나는 SQL Server에 대한 Spark 작업을 제출하는 기능입니다. Spark 작업 제출 기능을 사용하면 SQL Server 2019 빅 데이터 클러스터를 참조하는 로컬 Jar 또는 Py 파일을 제출할 수 있습니다. 또한 HDFS 파일 시스템에 이미 있는 Jar 또는 Py 파일을 실행할 수 있습니다. 
 

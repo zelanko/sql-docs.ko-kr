@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 40c19abf-ded5-43de-be96-5b43b1b81b03
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 11c91d2b85d04c06012329c2a49d23d68ab1edd4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d954f229bae8db22abdfb034d950dd96c54bf706
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831536"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786006"
 ---
 # <a name="dtainput-element-dta"></a>DTAInput 요소(DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 데이터베이스 엔진 튜닝 관리자에 대한 XML 입력의 정의를 포함합니다.  
   

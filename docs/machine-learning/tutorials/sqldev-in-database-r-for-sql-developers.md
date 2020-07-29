@@ -2,22 +2,22 @@
 title: 'R + T-SQL 자습서: 모델 개발'
 description: SQL Server 저장 프로시저 및 T-SQL 함수에 R 프로그래밍 언어 코드를 포함하는 방법에 대해 알아봅니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9669b2c38d2e8b571ef7e519100b13cf5a63a10d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a27bd044dbdca7a05663080be08ebaff1acb86d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115986"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785601"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>자습서: SQL 개발자를 위한 R 데이터 분석
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 SQL 프로그래머를 위한 이 자습서에서는 SQL Server에서 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) 데이터베이스를 사용하여 R 기반 기계 학습 솔루션을 빌드 및 배포하여 R 통합에 대해 알아봅니다. [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) 및 R 언어 지원 기능과 함께 T-SQL, SQL Server Management Studio 및 데이터베이스 엔진 인스턴스를 사용합니다.
 

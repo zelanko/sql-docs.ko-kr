@@ -20,12 +20,12 @@ ms.assetid: 5e3c40b2-8401-4741-9f2a-bae70eaa4da6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 313a3b583c842b80827de704084a05707ea13cc3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0f6500371f5a3cc854c823118f70306255b13d45
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85991971"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112233"
 ---
 # <a name="unicode-transact-sql"></a>UNICODE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,9 @@ ms.locfileid: "85991971"
 UNICODE ( 'ncharacter_expression' )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 **'** *ncharacter_expression* **'**  
 **nchar** 또는 **nvarchar** 식입니다.  
   

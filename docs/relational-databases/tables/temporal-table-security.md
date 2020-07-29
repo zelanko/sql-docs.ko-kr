@@ -11,12 +11,12 @@ ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4eb809ddbd1acfdd3a01f5601b30e9cf6e9259e0
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6f9392a6ef282d1a3201e5edb2a4fa026adc5752
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555258"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122778"
 ---
 # <a name="temporal-table-security"></a>임시 테이블 보안
 
@@ -58,15 +58,15 @@ SYSTEM_VERSIONING이 ON으로 설정된 경우에는 스키마 수정 작업이 
 
 ## <a name="security-of-the-create-temporal-table-statement"></a>CREATE Temporal TABLE 문의 보안
 
-||새 기록 테이블 만들기|기존 기록 테이블 재사용|
-|-|------------------------------|----------------------------------|
+| 기능 | 새 기록 테이블 만들기 | 기존 기록 테이블 재사용 |
+| ------- | ------------------------ | ---------------------------- |
 |필요 권한|데이터베이스의**CREATE TABLE** 권한<br /><br /> 현재 및 기록 테이블을 만들고 있는 대상 스키마에 대한**ALTER** 권한|데이터베이스의**CREATE TABLE** 권한<br /><br /> 현재 테이블을 만들 대상 스키마에 대한**ALTER** 권한<br /><br /> temporal 테이블을 만드는**CONTROL** 문의 일부로 지정된 기록 테이블에 대한 **CONTROL** 권한|
 |감사|감사를 실행할 경우 사용자가 두 개의 개체를 만들려는 시도를 했음이 표시됩니다. 데이터베이스에 테이블을 만들 수 있는 권한이 없거나 각 테이블의 스키마를 수정할 수 있는 권한이 없는 경우 작업이 실패할 수 있습니다.|감사를 실행할 경우 temporal 테이블이 생성되었음이 표시됩니다. 데이터베이스에 테이블을 만들 권한이 없거나 temporal 테이블에 대한 스키마를 수정할 권한이 없거나 기록 테이블에 대한 권한이 없는 경우 작업이 실패할 수 있습니다.|
 
 ## <a name="security-of-the-alter-temporal-table-set-system_versioning-onoff-statement"></a>ALTER Temporal TABLE SET(SYSTEM_VERSIONING ON/OFF) 문의 보안
 
-||새 기록 테이블 만들기|기존 기록 테이블 재사용|
-|-|------------------------------|----------------------------------|
+| 기능 | 새 기록 테이블 만들기 | 기존 기록 테이블 재사용 |
+| ------- | ------------------------ | ---------------------------- |
 |필요 권한|데이터베이스의**CONTROL** 권한<br /><br /> 데이터베이스의**CREATE TABLE** 권한<br /><br /> 기록 테이블을 만들고 있는 대상 스키마에 대한**ALTER** 권한|수정된 원본 테이블에 대한**CONTROL** 권한<br /><br /> **ALTER TABLE** 문의 일부로 지정된 기록 테이블에 대한 **CONTROL** 권한|
 |감사|감사 시 temporal 테이블이 수정되었으며 그와 동시에 기록 테이블이 생성되었다는 내용이 표시됩니다. 데이터베이스에 테이블을 만들 권한이 없거나 기록 테이블의 스키마를 수정할 권한이 없거나 temporal 테이블을 수정할 권한이 없는 경우 작업이 실패할 수 있습니다.|감사 시 temporal 테이블이 수정되었지만 해당 작업에서 기록 테이블에 대한 액세스가 필요하다는 내용이 표시됩니다. 기록 테이블에 대한 권한이 없거나 현재 테이블에 대한 권한이 없는 경우 작업이 실패할 수 있습니다.|
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4fffb842f8d9f1140f018c50951462b1b8ab647e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0323bb93388010c1ba9c20176893674aff03760a
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732722"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112161"
 ---
 # <a name="certproperty-transact-sql"></a>CERTPROPERTY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,9 @@ CertProperty ( Cert_ID , '<PropertyName>' )
    | Cert_Serial_Number | Subject | SID | String_SID   
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 *Cert_ID*  
 int 데이터 형식의 인증서 ID 값입니다.
   

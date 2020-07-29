@@ -26,12 +26,12 @@ ms.assetid: 58c4e64b-5634-4c29-aa22-33193282dd27
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51c3975cb0db2b93ebcaefcc6d2c423da62ba0e0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 09d9ff8e9944faa4d5dcbd9f24f2ab5a359962e2
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011338"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111208"
 ---
 # <a name="collation-precedence"></a>데이터 정렬 선행 규칙
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -227,16 +227,63 @@ CAST, CONVERT, COLLATE 함수는 **char**, **varchar** 및 **text** 데이터 �
  문자열을 반환하지만 입력 문자열은 사용하지 않는 기본 제공 함수의 경우 결과 문자열은 기본값 강제 변환이 되며 현재 데이터베이스의 데이터 정렬 또는 함수를 참조하는 사용자 정의 함수, 저장 프로시저, 트리거를 포함하는 데이터베이스의 데이터 정렬이 할당됩니다.  
   
  다음은 함수는 데이터 정렬을 인식하며 입력 문자열의 데이터 정렬 레이블을 출력 문자열에 적용합니다.  
-  
-|||  
-|-|-|  
-|CHARINDEX|REPLACE|  
-|DIFFERENCE|REVERSE|  
-|ISNUMERIC|RIGHT|  
-|LEFT|SOUNDEX|  
-|LEN|STUFF|  
-|LOWER|SUBSTRING|  
-|PATINDEX|UPPER|  
+
+:::row:::
+    :::column:::
+        CHARINDEX
+    :::column-end:::
+    :::column:::
+        REPLACE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DIFFERENCE
+    :::column-end:::
+    :::column:::
+        REVERSE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ISNUMERIC
+    :::column-end:::
+    :::column:::
+        RIGHT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        LEFT
+    :::column-end:::
+    :::column:::
+        SOUNDEX
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        LEN
+    :::column-end:::
+    :::column:::
+        STUFF
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        LOWER
+    :::column-end:::
+    :::column:::
+        SUBSTRING
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        PATINDEX
+    :::column-end:::
+    :::column:::
+        UPPER
+    :::column-end:::
+:::row-end:::
   
 ## <a name="see-also"></a>참고 항목  
  [COLLATE&#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   

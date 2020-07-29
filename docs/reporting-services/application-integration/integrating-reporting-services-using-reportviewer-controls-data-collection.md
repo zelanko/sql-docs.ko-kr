@@ -3,19 +3,19 @@ title: ReportViewer 컨트롤에서 데이터 수집
 description: ReportViewer는 익명 사용 현황 데이터를 수집하여 고객이 제품을 사용하는 방식을 파악하고 고객과 가장 관련된 개선 사항 개발에 중점을 둡니다.
 author: maggiesMSFT
 ms.author: maggies
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.reviewer: ''
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
-ms.date: 09/18/2018
-ms.openlocfilehash: 078b36034d48dbb4389c69e64d8b8b18d240b24c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 06/03/2020
+ms.openlocfilehash: 22f693824c244e02f313e488a067a0b732b2fa10
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198180"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423401"
 ---
 # <a name="integrate-reporting-services-using-reportviewer-controls---data-collection"></a>ReportViewer 컨트롤을 사용하여 Reporting Services 통합 - 데이터 수집
 

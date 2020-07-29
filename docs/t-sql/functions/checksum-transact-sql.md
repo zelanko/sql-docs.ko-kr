@@ -20,12 +20,12 @@ ms.assetid: e26d3339-845c-49c2-9d89-243376874c13
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f5fca41d59ed5b35451a1e63993b7ec6235244a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 496c08f2bdf9942349ccdda83c90a97336767203
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732647"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110600"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -40,7 +40,9 @@ ms.locfileid: "85732647"
 CHECKSUM ( * | expression [ ,...n ] )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 \*  
 이 인수는 체크섬 계산이 모든 테이블 열에 적용됨을 지정합니다. `CHECKSUM`은 비교할 수 없는 데이터 형식인 열이 있는 경우에 오류를 반환합니다. 비교할 수 없는 데이터 형식에는 다음이 포함됩니다.
 

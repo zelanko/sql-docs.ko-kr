@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 4ff94dbf-434d-4e2c-b8cb-a3c04e8613c9
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 3a43ab4d45ddb30a655beefa9b39713f1d451054
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c0500a5354c549baec2fc718f93be6cacd67c17b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75225545"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009286"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>데이터베이스 다이어그램 디자이너에서 탐색(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 데이터베이스 다이어그램 디자이너에서 작업할 때 마우스와 키보드를 모두 사용할 수 있습니다. 데이터베이스 다이어그램 디자이너에 사용되는 특정 작업 방법에 대한 내용은 아래 표를 참조하십시오.  
   
 |**수행할 작업**|**작업 방법**|  

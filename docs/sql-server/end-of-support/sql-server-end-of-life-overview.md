@@ -5,19 +5,19 @@ ms.date: 12/18/2019
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
+author: markingmyname
+ms.author: maghan
 ms.reviewer: pmasl
-monikerRange: =sql-server-previousversions||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a774b93d60a2a44e419b362ae2efe2309bf9b2ab
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+monikerRange: =sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d3143a586c54f0c908e80ca9e78041c9f1996931
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75776461"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112100"
 ---
 # <a name="sql-server-end-of-support-options"></a>SQL Server 지원 종료 옵션 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 이 문서에서는 지원 종료에 도달한 SQL Server 제품을 위한 옵션을 설명합니다.
 

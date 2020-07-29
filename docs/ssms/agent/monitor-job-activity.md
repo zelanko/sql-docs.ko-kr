@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0fdb46ddca31f870363385bef70adde37a7a36ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b4bfe163fb1f3ffe4eb5b5203bfced15f43069de
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252354"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87237453"
 ---
 # <a name="monitor-job-activity"></a>작업 활동 모니터링
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
@@ -62,9 +61,8 @@ ms.locfileid: "75252354"
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|||  
-|-|-|  
-|**설명**|**항목**|  
+|Description|항목|  
+|-|-|   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 런타임 상태를 보는 방법에 대해 설명합니다.|[작업 활동 보기](../../ssms/agent/view-job-activity.md)|  
   
 ## <a name="see-also"></a>참고 항목  

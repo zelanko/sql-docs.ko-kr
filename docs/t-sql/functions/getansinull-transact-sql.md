@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d67d058e089ce00308382d0b52ecc102b062cba2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8b464037ffb914b78dc95edbf33676820e849ca1
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631593"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111526"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "85631593"
 GETANSINULL ( [ 'database' ] )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  '*database*'  
  Null 허용 여부 정보를 반환할 데이터베이스의 이름입니다. *database는 **char** 또는 **nchar**입니다. **char**인 경우, *데이터베이스*는 암시적으로 **nchar**으로 변환됩니다.  
   

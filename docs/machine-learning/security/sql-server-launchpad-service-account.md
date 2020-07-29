@@ -2,22 +2,22 @@
 title: 실행 패드 계정 구성
 description: SQL Server에서 외부 스크립트 실행에 사용되는 SQL Server 실행 패드 서비스 계정을 수정하는 방법입니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/17/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: aa249c59a5b97e2b2e71e5d2fa17eccbafd8944f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 5ce304db442ab9e4c1fd283cb43eed83829710b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117106"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772387"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>SQL Server 실행 패드 서비스 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]는 전체 텍스트 인덱싱 및 쿼리 서비스에서 전체 텍스트 쿼리를 처리하기 위해 별도의 호스트를 시작하는 것과 비슷한 방식으로 외부 스크립트를 관리하고 실행하는 서비스입니다.
 

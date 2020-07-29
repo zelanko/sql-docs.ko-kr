@@ -2,7 +2,6 @@
 title: 서버 그룹 만들기 또는 편집
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -15,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: d4a942bd-2dd1-42db-ad0e-e9a9ae5b856d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
+ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 61b9111eb218f479a2b46636b648a5c9715d49f7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eb39627de23f236dcd3a7241f83883b747353501
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246553"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001746"
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>서버 그룹 만들기 또는 편집(SQL Server Management Studio)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 서버 그룹을 만들고 등록된 서버를 서버 그룹에 배치하여 등록된 서버에서 서버를 구성하는 방법에 대해 설명합니다. 언제든지 등록된 서버에서 서버 그룹을 만들고, 또한 서버를 등록할 때 서버 그룹을 만들 수도 있습니다.  
 

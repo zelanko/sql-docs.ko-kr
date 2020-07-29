@@ -2,23 +2,23 @@
 title: 데이터 랭글링 작업에 대한 코드 생성
 titleSuffix: Azure Data Studio
 description: 이 문서에서는 Azure Data Studio에서 PROSE Code Accelerator를 사용하여 일반적인 데이터 랭글링 작업의 코드를 자동으로 생성하는 방법을 설명합니다.
-author: MikeRayMSFT
-ms.author: mikeray
+author: dphansen
+ms.author: davidph
 ms.reviewer: mihaelab
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
-ms.openlocfilehash: e21c172bf886695a3d424d25907a0c36e4b22f20
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.technology: machine-learning-bdc
+ms.openlocfilehash: 548db45e97fed2a5d955eef947c6d21004d439d2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67957682"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243444"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>PROSE Code Accelerator를 사용한 데이터 랭글링
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 PROSE Code Accelerator는 데이터 랭글링 작업에 대해 판독 가능한 Python 코드를 생성합니다. Azure Data Studio 내에서 Notebook으로 작업하면서 생성한 코드와 손으로 작성한 코드를 원활하게 혼합할 수 있습니다. 이 문서에서는 Code Accelerator를 사용하는 방법을 간략히 설명합니다.
 
@@ -113,8 +113,8 @@ builder.learn().code()
 또 다른 일반적인 시나리오는 정리 또는 그룹화의 목적으로 문자열 열의 패턴을 검색하는 것입니다. 예를 들어, 여러 다른 형식의 날짜를 포함하는 날짜 열이 있을 수 있습니다. 값을 표준화하기 위해 정규식을 사용하여 조건문을 작성할 수 있습니다.
 
 
-|   |속성                      |BirthDate      |
-|---|:-------------------------|:--------------|
+|행|Name                      |BirthDate      |
+|--:|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |알 수 없음        |
 | 2 |Jihoo Spel                |2014           |

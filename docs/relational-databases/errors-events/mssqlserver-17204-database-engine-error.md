@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_17204 | Microsoft 문서
 ms.custom: ''
-ms.date: 06/03/2020
+ms.date: 07/25/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40db66f9-dd5e-478c-891e-a06d363a2552
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 63f8e2729492d66eb498b0634e015a0a3d4638ea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a094a2baf20ccdf29514a82f4ff749c6d9e18be3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780796"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236176"
 ---
 # <a name="mssqlserver_17204"></a>MSSQLSERVER_17204
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +78,7 @@ FCB::Open failed: Could not open file c:\Program Files\Microsoft SQL Server\MSSQ
 1. 17204 오류를 해결하려면 연결된 운영 체제 오류 코드를 이해하고 해당 오류를 진단해야 합니다. 운영 체제 오류 상태가 해결되면 데이터베이스(예를 들어 ALTER DATABASE SET ONLINE을 사용) 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작하여 영향을 받은 데이터베이스를 온라인 상태로 만들 수 있습니다. 운영 체제 오류를 해결할 수 없는 경우도 있습니다. 그러면 특정 정정 작업을 수행해야 합니다. 이 섹션에서는 이러한 작업에 대해 설명합니다.
 1. 17204 오류 메시지에 오류 코드만 포함되고 오류 설명이 없는 경우에는 운영 체제 셸에서 net helpmsg <error code> 명령을 사용하여 오류 코드를 해결할 수 있습니다. 오류 코드로 8자리 상태 코드가 반환되는 경우 [HRESULT를 Win32 오류 코드로 변환하는 방법은 무엇인가요?](https://devblogs.microsoft.com/oldnewthing/20061103-07/?p=29133)와 같은 정보 소스를 참조하여 이러한 상태 코드가 어떤 OS 오류인지 확인합니다.
 1. `Access is Denied` 운영 체제 오류 = 5가 반환되는 경우 다음 방법을 고려하세요.
-   -  Windows 탐색기에서 파일의 속성을 보고 파일에 설정된 권한을 확인합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Windows 그룹을 사용하여 다양한 파일 리소스에 Access Control을 프로비전합니다. [SQLServerMSSQLUser$ComputerName$MSSQLSERVER 또는 SQLServerMSSQLUser$ComputerName$InstanceName 같은 이름을 가진] 적절한 그룹에 오류 메시지에서 언급된 데이터베이스 파일에 필요한 권한이 있는지 확인합니다. 자세한 내용은 [데이터베이스 엔진 액세스에 대한 파일 시스템 권한 구성](../../2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)을 검토하세요. Windows 그룹에 실제로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 계정 또는 서비스 SID가 포함되어 있는지 확인합니다.
+   -  Windows 탐색기에서 파일의 속성을 보고 파일에 설정된 권한을 확인합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Windows 그룹을 사용하여 다양한 파일 리소스에 Access Control을 프로비전합니다. [SQLServerMSSQLUser$ComputerName$MSSQLSERVER 또는 SQLServerMSSQLUser$ComputerName$InstanceName 같은 이름을 가진] 적절한 그룹에 오류 메시지에서 언급된 데이터베이스 파일에 필요한 권한이 있는지 확인합니다. 자세한 내용은 [데이터베이스 엔진 액세스에 대한 파일 시스템 권한 구성](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014)을 검토하세요. Windows 그룹에 실제로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 계정 또는 서비스 SID가 포함되어 있는지 확인합니다.
    -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 현재 실행되고 있는 사용자 계정을 검토합니다. Windows 작업 관리자를 사용하여 이 정보를 가져올 수 있습니다. 실행 파일 "sqlservr.exe"의 "사용자 이름" 값을 찾습니다. 또한 최근에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정을 변경한 경우 이 작업을 수행하는 데 지원되는 방법은 SQL Server 구성 관리자 유틸리티를 사용하는 것임을 알아야 합니다. 이에 대한 자세한 내용은 [SQL Server 구성 관리자](../sql-server-configuration-manager.md)에서 확인할 수 있습니다. 
    -  작업 유형(서버 시작 시 데이터베이스 열기, 데이터베이스 연결, 데이터베이스 복원 등)에 따라 가장과 데이터베이스 파일 액세스에 사용되는 계정이 다를 수 있습니다. [데이터 및 로그 파일 보안](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN) 항목을 검토하여 어떤 작업이 어떤 권한을 어떤 계정에 설정하는지 파악합니다. Windows SysInternals [프로세스 모니터](https://docs.microsoft.com/sysinternals/downloads/procmon)와 같은 도구를 사용하여 파일 액세스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 서비스 시작 계정(또는 서비스 SID) 또는 가장된 계정의 보안 컨텍스트에서 일어나는지 확인합니다.
 
