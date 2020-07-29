@@ -2,22 +2,22 @@
 title: RevoScaleR을 사용하여 데이터 점수 매기기
 description: 'RevoScaleR 자습서 8: SQL Server에서 R 언어를 사용하여 데이터 점수를 매기는 방법입니다.'
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9f0722eeef0b8364da789c8f3787c21c1398527e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 58e58dcf3112566c09070cc6e522b29ffff6f3b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116756"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757133"
 ---
 # <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>새 데이터 점수 매기기(SQL Server 및 RevoScaleR 자습서)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이것은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 8에 해당됩니다.
 

@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 66f60039e21ebefa1ee7eff36b9165f907b4689a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5b9136e9f24447f57bc375a8ff9d8ec83ef17bd9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254877"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008195"
 ---
 # <a name="sql-pane-visual-database-tools"></a>SQL Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 SQL 창을 사용하여 고유한 SQL 문을 만들거나 조건 창 및 다이어그램 창을 사용하여 문을 만들 수 있습니다. 조건 창이나 다이어그램 창을 사용해도 SQL 문은 SQL 창에 작성됩니다. 쿼리를 작성할 때 SQL 창은 자동으로 업데이트되고 읽기 쉽도록 서식이 다시 지정됩니다.  
   
 SQL 창을 열려면 먼저 **데이터베이스** 메뉴에서 **새 쿼리**를 클릭하여 서버 탐색기에서 데이터베이스 개체를 선택한 상태로 쿼리 및 뷰 디자이너를 엽니다. 그런 다음 **쿼리 디자이너** 메뉴에서 **창** 을 가리키고 **SQL**을 클릭합니다.  

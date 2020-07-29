@@ -10,16 +10,16 @@ ms.date: 03/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 28ba612c1932dd511ee0cd99a2aa97dd127d63f7
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: 4d5a1f176cba1212b305f4f2f3b2031e7882d692
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531336"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85660397"
 ---
 # <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>Azure Data Studio Notebooks를 사용하여 SQL Server 빅 데이터 클러스터 관리
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서는 Notebook을 포함하는 Azure Data Studio에 대한 확장을 제공합니다. Notebook은 Azure Data Studio에서 SQL Server 2019 빅 데이터 클러스터를 관리하는 데 사용할 수 있는 설명서와 코드를 제공합니다.
 

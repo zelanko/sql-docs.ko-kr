@@ -22,12 +22,12 @@ ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c9599ddcade6c62a21245ef16cc89034df1524c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 12f1f710a78c6dcd059fbae5078b0b643296700e
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003806"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111427"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "86003806"
 PATINDEX ( '%pattern%' , expression )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *pattern*  
  찾을 시퀀스가 포함된 문자 식 입니다. 와일드카드 문자를 사용할 수 있습니다. 그러나 % 문자가 앞에 오고 그 다음에 *패턴*이 와야 합니다. 단, 첫 문자 또는 마지막 문자를 검색하는 경우는 예외입니다. *패턴*은 문자열 데이터 형식 범주의 식입니다. *패턴*은 8,000자로 제한됩니다.
 

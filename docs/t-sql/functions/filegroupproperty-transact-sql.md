@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8804b058a851f6053f62ef8654f76edc5df3e980
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 48c0d9a2a3b83256e8ae32a13d615e3a36b10ccb
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899011"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111541"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,9 @@ ms.locfileid: "85899011"
 FILEGROUPPROPERTY ( filegroup_name, property )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *filegroup_name*  
 명명된 속성 정보를 반환하는 **의 파일 그룹 이름을 나타내는** sysname`FILEGROUPPROPERTY` 형식의 식입니다.  
   

@@ -20,12 +20,12 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94e1353d8fb3d49a71b98e53f6ec92a6db469e2b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f854ae440a51d1f9b3b873dad9f0aa21e88f3ab5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786079"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247292"
 ---
 # <a name="track-data-changes-sql-server"></a>데이터 변경 내용 추적(SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -159,9 +159,8 @@ ms.locfileid: "85786079"
   
 ## <a name="related-tasks-required"></a>관련 태스크(필수)  
   
-|||  
+|Task|항목|  
 |-|-|  
-|**Task**|**항목**|  
 |변경 데이터 캡처의 개요를 제공합니다.|[변경 데이터 캡처 정보&#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)|  
 |데이터베이스 또는 테이블에서 변경 데이터 캡처를 사용하도록 설정하거나 사용하지 않도록 설정하는 방법에 대해 설명합니다.|[변경 데이터 캡처 설정 및 해제&#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)|  
 |변경 데이터 캡처를 관리 및 모니터링하는 방법을 설명합니다.|[변경 데이터 캡처 관리 및 모니터링&#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)|  

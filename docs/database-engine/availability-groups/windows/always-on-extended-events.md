@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8ce4c3e7568c9c8c135228beccc926924d08affd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: af4a34a41607a7410d2f2ca43ae9b8bb197ff682
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900946"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236067"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 확장 이벤트 구성
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -248,9 +248,8 @@ GO
   
 #### <a name="event-fields"></a>이벤트 필드  
   
-||||  
-|-|-|-|  
 |속성|Type_name|Description|  
+|-|-|-|  
 |availability_group_id|guid|가용성 그룹의 ID입니다.|  
 |availability_group_name|unicode_string|사용 가능한 경우 가용성 그룹의 이름입니다.|  
 |availability_replica_id|guid|가용성 복제본의 ID입니다.|  

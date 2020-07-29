@@ -2,22 +2,22 @@
 title: 저장 프로시저에 R 코드 배포
 description: SQL Server 저장 프로시저에 R 언어 코드를 포함하여 SQL Server 데이터베이스에 액세스할 수 있는 모든 클라이언트 애플리케이션에서 사용할 수 있도록 합니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/15/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 324cf4446a593175fd5a8cd11b2abc24bff7d2d7
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 9790f5a5d82584bb0d09fda92c1a7048d384e119
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486812"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242328"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 저장 프로시저를 사용하여 R 코드 운영화
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server Machine Learning Services에서 R 및 Python 기능을 사용하는 경우 솔루션을 프로덕션 환경으로 이동하는 가장 일반적인 방법은 저장 프로시저에 코드를 포함하는 것입니다. 이 문서에서는 SQL 개발자가 SQL Server를 사용하여 R 코드를 운영화할 때 고려해야 할 핵심 사항을 간략히 설명합니다.
 
@@ -46,7 +46,7 @@ R 또는 Python 코드에서 사전에 약간의 최적화가 수행되면 SQL�
 
 + [소규모 일괄 처리에 최적화된 실시간 채점
 + 애플리케이션에서 호출하기 위한 단일 행 채점
-+ R을 호출하지 않고 SQL Server에서 빠른 일괄 예측을 위한 [네이티브 채점](../sql-native-scoring.md)
++ R을 호출하지 않고 SQL Server에서 빠른 일괄 예측을 위한 [네이티브 채점](../predictions/native-scoring-predict-transact-sql.md)
 
 이 연습에서는 일괄 처리 및 단일 행 모드에서 저장 프로시저를 사용하는 채점의 예를 제공합니다.
 

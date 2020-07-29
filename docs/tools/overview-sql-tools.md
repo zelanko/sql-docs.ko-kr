@@ -12,16 +12,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/04/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 3f457b485994d2619e68b4315a308e66a05715cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 59a376b17c6e4b396dba24999a52bf37ecc27988
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77051673"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009600"
 ---
 # <a name="sql-tools-overview"></a>SQL 도구 개요
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 데이터베이스를 관리하려면 도구가 필요합니다. 데이터베이스가 클라우드, Windows, macOS 또는 [Linux](../linux/sql-server-linux-overview.md)에서 실행되는지 관계없이 도구는 데이터베이스와 동일한 플랫폼에서 실행할 필요가 없습니다.
 

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8241bb0edff2a424d42d79ad3e6aa514519e79b3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9d489dac9355a573473063d1cafb32d42ed5fd98
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257210"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001992"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>SQL Server 또는 Azure SQL Database에 연결
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 서버 및 데이터베이스를 사용하려면 먼저 서버에 연결해야 합니다. 여러 서버에 동시에 연결할 수 있습니다.
 
 [SSMS(SQL Server Management Studio)](../download-sql-server-management-studio-ssms.md)는 여러 유형의 연결을 지원합니다. 이 문서에서는 SQL Server 및 Azure SQL Database에 연결(SQL Azure 단일 데이터베이스 또는 탄력적 풀)에 대한 세부 정보를 제공합니다. 다른 연결 옵션에 대한 내용은 이 페이지 하단의 [링크](#see-also)를 참조하세요.

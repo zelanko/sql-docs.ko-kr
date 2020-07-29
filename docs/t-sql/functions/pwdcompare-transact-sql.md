@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 613eb5742f295b1169befca8ba988ed8282076e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad59b8d81641999da674ca73db696c2f0c3ce1ef
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737923"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111865"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,9 @@ PWDCOMPARE ( 'clear_text_password'
    [ , version ] )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  **'** *clear_text_password* **'**  
  암호화되지 않은 암호입니다. *clear_text_password*는 **sysname**( **nvarchar(128)** )입니다.  
   

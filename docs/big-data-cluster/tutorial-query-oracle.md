@@ -9,16 +9,16 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0955875255acc695133700fd0b5a0b30cdf9045e
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 7695cf6d88fd05fdbffba28663c910889797ace9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606173"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772846"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에서 Oracle 쿼리
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 이 자습서에서는 SQL Server 2019 빅 데이터 클러스터에서 Oracle 데이터를 쿼리하는 방법을 보여 줍니다. 이 자습서를 실행하려면 Oracle 서버에 대한 액세스 권한이 있어야 합니다. 액세스 권한이 없는 경우 이 자습서를 통해 SQL Server 빅 데이터 클러스터에서 외부 데이터 원본에 대해 데이터 가상화가 작동하는 방식을 이해할 수 있습니다.
 

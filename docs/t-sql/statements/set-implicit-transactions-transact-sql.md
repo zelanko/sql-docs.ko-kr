@@ -24,12 +24,12 @@ ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eba14b85c18ed8f64288839f5758ed4c4e456e08
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e2ca06a2b34d0c4823ad6e548ddba58f0c5589d9
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004973"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110274"
 ---
 # <a name="set-implicit_transactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,16 +46,63 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
   
 ## <a name="remarks"></a>설명  
  ON이면 시스템이 암시적(*implicit*) 트랜잭션 모드입니다. 즉, @@TRANCOUNT = 0이면 다음 Transact-SQL 문 중 하나가 새 트랜잭션을 시작합니다. 보이지 않는 BEGIN TRANSACTION이 먼저 실행되는 것과 같습니다.  
-  
-||||  
-|-|-|-|  
-|ALTER TABLE|FETCH|REVOKE|  
-|BEGIN TRANSACTION|GRANT|SELECT(아래 예외 참조)|  
-|CREATE|INSERT|TRUNCATE TABLE|  
-|Delete|OPEN|UPDATE|  
-|DROP|.|.|  
-||||
-  
+
+:::row:::
+    :::column:::
+        ALTER TABLE
+    :::column-end:::
+    :::column:::
+        FETCH
+    :::column-end:::
+    :::column:::
+        REVOKE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        BEGIN TRANSACTION
+    :::column-end:::
+    :::column:::
+        GRANT
+    :::column-end:::
+    :::column:::
+        SELECT(아래 예외 참조)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        CREATE
+    :::column-end:::
+    :::column:::
+        INSERT
+    :::column-end:::
+    :::column:::
+        TRUNCATE TABLE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Delete
+    :::column-end:::
+    :::column:::
+        OPEN
+    :::column-end:::
+    :::column:::
+        UPDATE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DROP
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
+&nbsp;
+
  OFF이면 앞의 T-SQL 문은 보이지 않는 BEGIN TRANSACTION 및 보이지 않는 COMMIT TRANSACTION 문으로 제한됩니다. OFF이면 트랜잭션 모드가 자동 커밋(*autocommit*)이라고 합니다. T-SQL 코드가 BEGIN TRANSACTION을 눈에 보이게 발급하면 트랜잭션 모드가 명시적(*explicit*)이라고 합니다.  
   
  명확한 이해가 필요한 몇 가지는 다음과 같습니다.  
@@ -80,7 +127,7 @@ IF ( (2 & @@OPTIONS) = 2 ) SET @IMPLICIT_TRANSACTIONS = 'ON';
 SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;  
 ```  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 Transact-SQL 스크립트는 몇 가지 다른 테스트 사례를 실행합니다. 각 테스트 사례의 세부 동작과 결과를 보여주는 텍스트 출력도 제공됩니다.  
   
 ```sql  

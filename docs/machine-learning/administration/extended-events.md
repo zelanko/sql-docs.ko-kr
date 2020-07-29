@@ -2,22 +2,22 @@
 title: 확장 이벤트를 사용하여 스크립트 모니터링
 description: 확장 이벤트를 사용하여 SQL Server Machine Learning Services, SQL Server 실행 패드, Python 또는 R 작업 외부 스크립트와 관련된 작업을 모니터링하고 문제를 해결하는 방법에 대해 알아봅니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bfc3c95a4184cede01fb077ee232c02458c97cbf
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 65ede143baab867d77704ce4e776515d5d7d32de
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118906"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110176"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 확장 이벤트를 사용하여 Python 및 R 스크립트 모니터링
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 확장 이벤트를 사용하여 SQL Server Machine Learning Services, SQL Server 실행 패드, Python 또는 R 작업 외부 스크립트와 관련된 작업을 모니터링하고 문제를 해결하는 방법에 대해 알아봅니다.
 
@@ -46,7 +46,7 @@ AND p.name = 'SQLSatellite';
 
 ## <a name="table-of-extended-events"></a>확장 이벤트 테이블
 
-|이벤트|Description|메모|  
+|이벤트|설명|메모|  
 |-----------|-----------------|---------|  
 |connection_accept|새 연결이 허용될 때 발생합니다. 이 이벤트는 모든 연결 시도를 기록합니다.||  
 |failed_launching|시작하지 못했습니다.|오류를 나타냅니다.|  
@@ -94,7 +94,7 @@ SQL Server Machine Learning Services는 SQL Server 프로세스 외부에서 실
   
     실행 패드 관련 이벤트를 캡처하려면 SQL Server 인스턴스의 Binn 디렉터리에 *.xml* 파일을 배치합니다. 기본 설치의 경우 다음과 같습니다.
 
-    `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`입니다.  
+    `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`.  
   
 + **BXLServer**는 R 또는 Python과 같은 외부 스크립트 언어를 사용하여 SQL 확장성을 지원하는 위성 프로세스입니다. 각 외부 언어 인스턴스에 대해 별도의 BxlServer 인스턴스가 실행됩니다.
   
@@ -135,7 +135,7 @@ SQL Server Machine Learning Services는 SQL Server 프로세스 외부에서 실
 다음 예제는 실행 패드 서비스 이벤트 추적에 대한 정의를 보여줍니다.
 
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
 <event_session name="sqlsatelliteut" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="hay">Xevent for sql tdd runner.</description>  
@@ -158,7 +158,7 @@ SQL Server Machine Learning Services는 SQL Server 프로세스 외부에서 실
 다음 예는 BXLServer 실행 파일 이벤트 추적에 대한 정의를 보여줍니다.
   
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
  <event_session name="sqlsatelliteut" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="hay">Xevent for sql tdd runner.</description>  

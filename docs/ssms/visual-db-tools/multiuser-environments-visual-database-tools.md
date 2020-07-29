@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: 330bd48c-9427-4967-b58e-b7c492d5ee36
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 75346207a2f91744c78db783bf40edd679ebcbb8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fbd00cd0d6bdd06e23ec65ddb73ffbfa65649199
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258337"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009295"
 ---
 # <a name="multiuser-environments-visual-database-tools"></a>다중 사용자 환경(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 다중 사용자 환경은 작업하고 있는 동일한 데이터베이스에 다른 사용자가 연결하여 변경할 수 있는 환경입니다. 결과적으로 여러 명의 사용자가 동시에 동일한 데이터베이스 개체에서 작업할 수 있습니다. 따라서 다중 사용자 환경에서 현재 사용자가 작업 중인 데이터베이스를 다른 사용자가 변경할 수 있으며 그 반대의 경우도 가능합니다.  
   
 다중 사용자 환경에서 데이터베이스로 작업할 때 가장 중요한 것은 액세스 권한입니다. 데이터베이스에 대한 권한에 따라 데이터베이스에서 작업할 수 있는 범위가 결정됩니다. 예를 들어, 데이터베이스의 개체를 변경하려면 해당 데이터베이스에 대한 적절한 쓰기 권한이 있어야 합니다. 데이터베이스의 권한에 대한 자세한 내용은 데이터베이스 설명서를 참조하십시오. 자세한 내용은 [사용 권한 및 Visual Database Tools&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/permissions-and-visual-database-tools-visual-database-tools.md)를 참조하세요.  

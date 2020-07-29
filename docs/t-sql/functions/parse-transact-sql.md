@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 412099db82b2b16e538b1b2f742dde6548b93ce6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36649527ab73d15de4c811bcbe5c3234980e6a86
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737995"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111432"
 ---
 # <a name="parse-transact-sql"></a>PARSE(Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,9 @@ ms.locfileid: "85737995"
 PARSE ( string_value AS data_type [ USING culture ] )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *string_value*  
  지정된 데이터 형식으로 구문 분석할 형식이 지정된 값을 나타내는 **nvarchar**(4000) 값입니다.  
   

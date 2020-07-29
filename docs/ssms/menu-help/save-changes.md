@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: abe17944-c538-4106-a18b-ade5e2d8e20f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1e9d57005557b16e83b12a7ef668414b07ed191e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d1d354aeffc15a65ebe8ec1f4bac8ddaa494b2a9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75240636"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007781"
 ---
 # <a name="save-changes"></a>변경 내용 저장
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 **예**를 클릭하지 않으면 나열된 항목의 변경 내용이 저장되지 않는다는 경고가 표시됩니다.  
   
 이 대화 상자는 솔루션, 유지 관리 계획 또는 다른 열려 있는 파일을 닫을 때 표시될 수 있습니다.  

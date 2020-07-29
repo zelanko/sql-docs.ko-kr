@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fea000eb9b428c58fa01afdd9724b7b4418789cc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8c3a13ad090b378e00ed43d0319100ec8e8a0638
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257148"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001915"
 ---
 # <a name="object-explorer-details-pane"></a>개체 탐색기 세부 정보 창
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 구성 요소인 개체 탐색기 정보는 서버의 모든 개체를 테이블 형식으로 표시하고 이러한 개체를 관리하기 위한 사용자 인터페이스를 제공합니다. 개체 탐색기의 기능은 서버의 유형에 따라 조금씩 다르지만 일반적으로 데이터베이스를 위한 개발 기능과 모든 서버 유형을 위한 관리 기능을 포함합니다.  
   
 개체 탐색기 정보 창은 기본적으로 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에 표시됩니다. 개체 탐색기가 표시되지 않으면 **보기** 메뉴에서 **개체 탐색기 정보** 를 클릭하거나 **F7**키를 누릅니다.  

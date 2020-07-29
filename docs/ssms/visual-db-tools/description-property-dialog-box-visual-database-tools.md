@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: 1f15ef88-6f02-4cfc-8327-3408233619b1
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 5972e47097591118fb731f03c1e7f1237dda27e7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bb550a5981c22128dc5386ee13906855ea5e2477
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254665"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008312"
 ---
 # <a name="description-property-dialog-box-visual-database-tools"></a>설명 속성 대화 상자(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 **설명 속성** 대화 상자에서는 테이블, 열, 외래 키 제약 조건 등과 같은 데이터베이스 개체에 대한 자세한 설명을 입력할 수 있는 편집 가능한 영역을 제공합니다. 디자이너에서 테이블이나 뷰를 선택한 경우 이러한 개체에 대한 속성 창에서 이 대화 상자에 액세스할 수 있고, 테이블 디자이너에서 테이블 열에 대한 **열 속성** 탭을 사용하거나 인덱스 및 CHECK 제약 조건 같은 개체의 대화 상자를 통해 이 대화 상자에 액세스할 수도 있습니다. 설명은 개체에 대한 확장 속성으로 저장됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

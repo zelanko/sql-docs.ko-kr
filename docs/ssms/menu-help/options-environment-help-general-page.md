@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b5c3935ebf4c42cf971c7b01dd7d79b9d2d1b5c1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ae3b7c18a7f9e220767193aa570319255d9a10e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252353"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007836"
 ---
 # <a name="options-environment---help---general-page"></a>옵션(환경 - 도움말 - 일반 페이지)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 **옵션** 대화 상자를 사용하여 설명서 집합을 선택하고 항목을 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 내부에 표시할지 또는 별도의 창으로 외부에 표시할지 여부를 지정할 수 있습니다. 이 대화 상자에 액세스하려면 **도구** 메뉴의 **옵션** 을 클릭하고 **환경** 노드의 **도움말** 을 확장한 다음 **일반**을 클릭합니다.  
   
 > [!NOTE]  

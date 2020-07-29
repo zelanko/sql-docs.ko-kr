@@ -9,16 +9,16 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5360e7aa9718fef0d17bf73b9064c2d1a61a4577
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 034514c13a65171fca9eb1fc20b6c496329816a1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75726950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773629"
 ---
 # <a name="install-azdata-with-pip"></a>`pip`를 사용하여 `azdata` 설치
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 이 문서에서는 `pip`를 사용하여 `azdata` 도구 Windows 또는 Linux를 설치하는 방법을 설명합니다.
 

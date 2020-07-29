@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 322572041340f1ed61b003cb424df48f32bb2a0d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7cabed9e928dce14f324e7f7b482d2ebed36d8ed
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255377"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002678"
 ---
 # <a name="print-query-results-visual-database-tools"></a>쿼리 결과 인쇄(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 쿼리 결과를 인쇄하려면 [결과 창](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) 의 내용을 워드 프로세서 프로그램 같은 다른 Windows 프로그램에 복사한 다음 서식을 지정하여 인쇄합니다.  
   
 쿼리 및 뷰 디자이너는 탭을 열과 캐리지 리턴 사이의 구분 기호로 사용하고 줄 바꿈 문자를 행 사이의 구분 기호로 사용하여 클립보드에 쿼리 결과를 넣습니다.  

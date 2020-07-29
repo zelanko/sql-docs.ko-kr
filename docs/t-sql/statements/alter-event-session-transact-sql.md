@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1227c893dbbb3999182140e6b63a9f74206c4ec4
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 819799dbabbe28a254dbc1cbe1a069f6664a9eea
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301877"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111254"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -118,9 +118,8 @@ ON SERVER
 
 ## <a name="arguments"></a>인수
   
-|||  
-|-|-|  
 |용어|정의|  
+|-|-|
 |*event_session_name*|기존 이벤트 세션의 이름입니다.|  
 |STATE = START &#124; STOP|이벤트 세션을 시작 또는 중지합니다. 이 인수는 ALTER EVENT SESSION이 이벤트 세션 개체에 적용되는 경우에만 사용할 수 있습니다.|  
 |ADD EVENT \<event_specifier>|\<event_specifier>로 식별되는 이벤트를 이벤트 세션과 연결합니다.|

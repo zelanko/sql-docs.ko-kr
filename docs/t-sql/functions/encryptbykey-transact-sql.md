@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 918890142acb736976d642161e2e7cc1f54e3533
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: da36a011f2999527218e668755a8c1d10c9ce692
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784591"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112973"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,9 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
      , { authenticator | @authenticator } ] )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *key_GUID*  
  *일반 텍스트* 암호화에 사용할 키의 GUID입니다. **uniqueidentifier**  
   

@@ -2,22 +2,22 @@
 title: RevoScaleR 심층 학습 자습서
 description: 이 자습서 시리즈에서는 SQL Server Machine Learning R 통합을 사용하여 RevoScaleR 함수를 호출하는 방법을 알아봅니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fc1f427659155b5379a681787a633b6037b4bd87
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 77cbd38bf873761496800cc4ad78d74eee414cf1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116926"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728574"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>자습서: RevoScaleR R 함수를 SQL Server 데이터와 함께 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 여러 부분으로 이루어진 이 자습서 시리즈에서는 데이터 과학과 관련된 작업에 필요한 다양한 **RevoScaleR** 함수를 소개합니다. 이 프로세스에서는 원격 컴퓨팅 컨텍스트를 만들고, 로컬 및 원격 컴퓨팅 컨텍스트 간에 데이터를 이동하고, 원격 SQL Server에서 R 코드를 실행하는 방법을 알아봅니다. 또한 로컬 및 원격 서버에서 데이터를 분석하고 그리는 방법과 모델을 만들고 배포하는 방법을 알아봅니다.
 

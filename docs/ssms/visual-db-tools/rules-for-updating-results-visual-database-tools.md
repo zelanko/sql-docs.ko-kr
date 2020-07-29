@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 95d22a06194bfd4121eff4ba01cb2788cf095bf8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b71d1e6324465df97a174134463f8d5759a2d06a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255157"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010705"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>결과 업데이트 규칙(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 대부분의 경우 [결과 창](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)에 표시된 결과 집합을 업데이트할 수 있지만 업데이트를 할 수 없는 경우도 종종 있습니다.  
   
 일반적으로 결과를 업데이트하려면 [쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 에 테이블의 행을 고유하게 식별할 수 있는 충분한 정보가 있어야 합니다. 예를 들어 쿼리에 출력 목록의 기본 키가 포함되어 있는 경우입니다. 또한 사용자는 데이터베이스를 업데이트할 수 있는 충분한 권한이 있어야 합니다.  

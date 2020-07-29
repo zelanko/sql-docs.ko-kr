@@ -2,22 +2,22 @@
 title: 미리 학습된 모델 설치
 description: 감정 분석 및 이미지 기능화용으로 미리 학습된 모델을 SQL Server Machine Learning Services(R 또는 Python) 또는 SQL Server R Services에 추가합니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 07/30/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 97da2ed795d002fa47900eb21ead90b48b525387
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: aa50fd62b3f1d3c1d40f3603b6a0b3fc4182497f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118236"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771768"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>SQL Server에 미리 학습된 기계 학습 모델 설치
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 문서에서는 Powershell을 사용하여 *감정 분석* 및 *이미지 기능화*용으로 미리 학습된 무료 기계 학습 모델을 R 또는 Python이 통합된 SQL Server 인스턴스에 추가하는 방법을 설명합니다. 미리 학습된 모델은 Microsoft에서 빌드하고 사용 가능한 상태가 되며 설치 후 작업으로 인스턴스에 추가됩니다. 이러한 모델에 대한 자세한 내용은 이 문서의 [리소스](#bkmk_resources) 섹션을 참조하세요.
 

@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: d932e59c-953f-4ab4-934d-b6baf344835c
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: ee28954c4206e2e26edfa567bae5a1b282d41dea
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 929e74d0988b5cff59a18d847555ea4202432ebf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151818"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732047"
 ---
 # <a name="schema-element-for-database-dta"></a>Database의 Schema 요소(DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 튜닝할 데이터베이스의 스키마를 지정합니다.  
   

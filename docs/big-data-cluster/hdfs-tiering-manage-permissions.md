@@ -9,16 +9,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 758338618a312d8efe92503581ae82d49d353e51
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8112c5c6b69b83986bdf10c6b73d72afba4d9cb6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531970"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764053"
 ---
 # <a name="manage-hdfs-permissions-for-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 대한 HDFS 권한 관리
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 파일 시스템으로서의 HDFS는 파일 권한을 위해 POSIX를 사용하는 Linux 기반 파일 시스템과 비슷합니다. HDFS는 기존의 POSIX 권한 모델 외에도 POSIX ACL(액세스 제어 목록)을 지원합니다. 자세한 내용은 [ACL에 관한 Apache Hadoop 문서](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#ACLs_.28Access_Control_Lists.29)를 참조하세요.
 

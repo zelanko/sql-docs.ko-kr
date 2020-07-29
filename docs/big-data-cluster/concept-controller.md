@@ -9,16 +9,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3748e66b01b1b168d617625fe789ce895e79a1a8
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 5a294bf705e4caf4a79c0f67ce925187e24c0f00
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606147"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730698"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터의 컨트롤러란?
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 컨트롤러는 빅 데이터 클러스터를 배포하고 관리하기 위한 핵심 논리를 호스트합니다. Kubernetes, 클러스터에 속한 SQL Server 인스턴스 및 기타 구성 요소(예: HDFS 및 Spark)와의 상호 작용을 모두 처리합니다.
 

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (methods)
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: d3b8f541956a88361267f54a5dde7a93c9cadc8d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d56e201a9c227358e54752bfcd08f718bcfbc371
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015318"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008743"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-methods"></a>OLE DB 테이블 반환 매개 변수 형식 지원(메서드)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

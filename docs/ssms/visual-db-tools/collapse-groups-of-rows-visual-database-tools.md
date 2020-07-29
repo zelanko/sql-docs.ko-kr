@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 81c66fe885c7e700366cc12129734710094824d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d810785665e4ecb2e8c59ba3832687724e65c7b1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255523"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007402"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>행 그룹 축소(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 쿼리 결과의 각 결과 행이 원본 데이터의 전체 행 그룹에 대응하는 쿼리 결과를 만들 수 있습니다. 행을 축소하는 경우 다음 사항에 유의해야 합니다.  
   
 -   **중복 행을 제거할 수 있습니다.** 일부 쿼리의 경우 동일한 행이 여러 개 나타나는 결과 집합을 만들 수 있습니다. 예를 들어 각 행에 저자가 있는 도시의 이름과 주 이름이 있는 결과 집합을 만들 수 있습니다. 그러나 한 도시에 저자가 여러 명인 경우 똑같은 행이 여러 개 생깁니다. 결과 SQL은 다음과 같습니다.  

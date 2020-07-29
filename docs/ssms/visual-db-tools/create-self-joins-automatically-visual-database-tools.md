@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: f9ec90e8-3aad-415c-a5c4-8dfa9540e37f
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 719f1ed067e3f53cc13839ecd42a5b7ec4791512
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 64cccf1d3ec1f4524531e86acf390c4b959c4c6e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254264"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000026"
 ---
 # <a name="create-self-joins-automatically-visual-database-tools"></a>자체 조인 자동으로 만들기(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 데이터베이스에서 테이블에 반사 관계가 있는 경우 자동으로 자체 조인할 수 있습니다.  
   
 ### <a name="to-create-a-self-join-automatically"></a>자체 조인을 자동으로 만들려면  

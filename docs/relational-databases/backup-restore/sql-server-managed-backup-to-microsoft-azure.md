@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1501b60e9c858bac62b48dfa7b3875d0d93d5115
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bb479998c739a5d9bd62a5f7d6c517a3ec4b52d1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737675"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246302"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure로의 SQL Server 관리형 백업
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,9 +51,8 @@ ms.locfileid: "85737675"
   
  PowerShell cmdlet도 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 구성하는 데 사용할 수 있습니다. SQL Server Management Studio는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 에서 **데이터베이스 복원** 태스크를 사용하여 만든 백업 복원을 지원합니다.  
   
-|||  
-|-|-|  
 |시스템 개체|Description|  
+|-|-|  
 |**MSDB**|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에서 만든 모든 백업에 대한 메타데이터, 백업 기록을 저장합니다.|  
 |[managed_backup.sp_backup_config_basic(Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]를 사용합니다.|  
 |[managed_backup.sp_backup_config_advanced&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에 대한 고급 설정(예: 암호화)을 구성합니다.|  

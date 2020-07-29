@@ -21,12 +21,12 @@ ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3886e6688f6e880a736885b55e5427dc0a98b8d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6d1cc88f04a85957f21cb215a19c56efa8dc7d9b
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634534"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112781"
 ---
 # <a name="set-ansi_defaults-transact-sql"></a>SET ANSI_DEFAULTS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -55,14 +55,40 @@ ANSI_DEFAULTS는 모든 클라이언트 연결의 동작을 사용하도록 설�
   
 이 옵션이 설정(ON)되어 있는 경우 다음 ISO 설정을 사용할 수 있습니다.  
   
-|||  
-|-|-|  
-|SET ANSI_NULLS|SET CURSOR_CLOSE_ON_COMMIT|  
-|SET ANSI_NULL_DFLT_ON|SET IMPLICIT_TRANSACTIONS|  
-|SET ANSI_PADDING|SET QUOTED_IDENTIFIER|  
-|SET ANSI_WARNINGS||  
-|||
-  
+:::row:::
+    :::column:::
+        SET ANSI_NULLS
+    :::column-end:::
+    :::column:::
+        SET CURSOR_CLOSE_ON_COMMIT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        SET ANSI_NULL_DFLT_ON
+    :::column-end:::
+    :::column:::
+        SET IMPLICIT_TRANSACTIONS
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        SET ANSI_PADDING
+    :::column-end:::
+    :::column:::
+        SET QUOTED_IDENTIFIER
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        SET ANSI_WARNINGS
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
+&nbsp;
+
 또한 이러한 ISO 표준 SET 옵션은 사용자 작업 세션 기간, 실행 중인 트리거, 저장 프로시저에 대해 쿼리 처리 환경을 정의합니다. 하지만 이러한 SET 옵션에는 ISO 표준을 따르는 데 필요한 모든 옵션이 포함되어 있지 않습니다.  
   
 계산 열이나 인덱싱된 뷰의 인덱스를 처리할 때 네 가지 기본값(`ANSI_NULLS`, `ANSI_PADDING`, `ANSI_WARNINGS`, `QUOTED_IDENTIFIER`)을 ON으로 설정해야 합니다. 이 기본값은 계산 열과 인덱싱된 뷰에서 인덱스를 만들고 변경할 때 필요한 값이 할당되어야 할 7가지 SET 옵션에 포함됩니다. 나머지 SET 옵션은 `ARITHABORT`(ON), `CONCAT_NULL_YIELDS_NULL`(ON), `NUMERIC_ROUNDABORT`(OFF)입니다. 인덱싱된 뷰 및 계산 열의 인덱스가 있는 필수 SET 옵션 설정에 대한 자세한 내용은 [SET 문 사용 시 고려 사항](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements)을 참조하세요.  
@@ -71,12 +97,31 @@ ANSI_DEFAULTS는 모든 클라이언트 연결의 동작을 사용하도록 설�
   
 SET ANSI_DEFAULTS가 실행되면 QUOTED_IDENTIFIER 옵션은 구문 분석 시 설정되고 다음 옵션은 실행 시 설정됩니다.  
   
-|||  
-|-|-|  
-|SET ANSI_NULLS|SET ANSI_WARNINGS|  
-|SET ANSI_NULL_DFLT_ON|SET CURSOR_CLOSE_ON_COMMIT|  
-|SET ANSI_PADDING|SET IMPLICIT_TRANSACTIONS|  
-  
+:::row:::
+    :::column:::
+        SET ANSI_NULLS
+    :::column-end:::
+    :::column:::
+        SET ANSI_WARNINGS
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        SET ANSI_NULL_DFLT_ON
+    :::column-end:::
+    :::column:::
+        SET CURSOR_CLOSE_ON_COMMIT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        SET ANSI_PADDING
+    :::column-end:::
+    :::column:::
+        SET IMPLICIT_TRANSACTIONS
+    :::column-end:::
+:::row-end:::
+
 ## <a name="permissions"></a>사용 권한  
 **public** 역할의 멤버 자격이 필요합니다.  
   

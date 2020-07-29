@@ -20,12 +20,12 @@ ms.assetid: 9b002b69-ab5e-472d-b12e-dc2fbe35ef42
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db639be44408d0472d536706f6651bbf09b66c3a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 63beea910b2598ffc014ebd508906aecfddd75b0
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010330"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112400"
 ---
 # <a name="max-transact-sql"></a>MAX(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,9 @@ MAX( [ ALL | DISTINCT ] expression )
 MAX ([ ALL ] expression) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] )  
 ``` 
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  **ALL**  
  모든 값에 집계 함수를 적용합니다. 기본값은 ALL입니다.  
   

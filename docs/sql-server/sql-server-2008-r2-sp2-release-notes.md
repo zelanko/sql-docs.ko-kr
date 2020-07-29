@@ -2,9 +2,9 @@
 title: SQL Server 2008 R2 SP2 릴리스 정보 | Microsoft 문서
 description: 이 릴리스 정보 문서에서는 Microsoft SQL Server 2008 R2 서비스 팩 2를 설치하거나 문제를 해결하기 전에 읽어야 할 알려진 문제에 대해 설명합니다.
 ms.prod: sql
-ms.technology: install
+ms.technology: release-landing
 ms.custom: ''
-ms.date: 10/15/2019
+ms.date: 07/22/2020
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: bb817c9983e3bf4a7dd4e1d148dd5a26b18a8738
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+monikerRange: = sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a8ed0a9892110f4469a9adeb4d586c8eec7f081c
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999450"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111010"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 이 릴리스 정보 문서에서는 Microsoft SQL Server 2008 R2 서비스 팩 2를 설치하거나 문제를 해결하기 전에 읽어야 할 알려진 문제에 대해 설명합니다. 이 릴리스 정보 문서는 SQL Server 2008 R2 SP2의 모든 버전에 적용되며 온라인으로만 볼 수 있습니다. 문서는 주기적으로 업데이트됩니다.  
   
 ## <a name="10-whats-new-in-service-pack-2"></a>1.0 서비스 팩 2의 새로운 기능  

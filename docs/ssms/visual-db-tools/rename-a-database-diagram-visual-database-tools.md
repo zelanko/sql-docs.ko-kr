@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: 27c90b54-cc21-4f2f-a529-eacdc41f302e
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 2b91485a548fa8d9199e3e8cac60f8cfa6db1e96
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 79d11ec9e6fa2e2b740b492ad6ed5a65443a90b0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255237"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010685"
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>데이터베이스 다이어그램 이름 바꾸기(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 개체 탐색기에서 데이터베이스 다이어그램의 이름을 바꿀 수 있습니다. 데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
 ### <a name="to-rename-a-database-diagram"></a>데이터베이스 다이어그램의 이름을 바꾸려면  
