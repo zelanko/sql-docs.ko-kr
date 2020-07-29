@@ -1,5 +1,6 @@
 ---
 title: SharePoint 페이지에 SQL Server Reporting Services 보고서 뷰어 웹 파트 추가 | Microsoft Docs
+description: SharePoint 페이지에 보고서 뷰어 웹 파트를 추가하여 SQL Server Reporting Services 또는 Power BI Report Server에서 보고서를 표시합니다.
 ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a101278bed81bf1c901cf22d25d82f46e8c94e7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8a70d7619f878b7091e7a49e05caf93dd814e3a0
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256733"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767403"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>SharePoint 페이지에 SQL Server Reporting Services 보고서 뷰어 웹 파트 추가
 
@@ -22,7 +23,7 @@ SharePoint 페이지에 보고서 뷰어 웹 파트를 추가하여 SQL Server R
 
 ![SharePoint 페이지의 보고서 뷰어 웹 파트](media/sharepoint-report-viewer-web-part-on-page.png)
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 * 보고서를 성공적으로 로드하려면 C2WTS(Windows 토큰 서비스에 대한 클레임)가 Kerberos 제한된 위임에 대해 구성되어야 합니다. C2WTS를 구성하는 방법에 대한 자세한 내용은 [C2WTS(Windows 토큰 서비스에 대한 클레임) 및 Reporting Services](../install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md)를 참조하세요.
 

@@ -10,16 +10,16 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b69073a903a94435c8e73120e45109f1719d2ac6
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: ad5509d3718c0ccd579893d1b260e558437b882a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606785"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730661"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>bash 스크립트를 사용하여 단일 노드 kubeadm 클러스터에 배포
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 이 자습서에서는 샘플 bash 배포 스크립트를 통해 kubeadm을 사용하는 단일 노드 Kubernetes 클러스터를 배포하고, 이 클러스터에 SQL Server 빅 데이터 클러스터도 배포합니다.
 

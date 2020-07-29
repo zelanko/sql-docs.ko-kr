@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 44110ee4d46cbd0ef25544b3cf410a1c8312d460
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2ff8df58824aee2e718284bbbb2201b2123c216e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257589"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001813"
 ---
 # <a name="properties-window-management-studio"></a>속성 창(Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 이 창을 사용하여 선택한 요소의 속성을 볼 수 있습니다. 또한 속성 창을 사용하여 파일, 프로젝트 및 솔루션 속성을 볼 수도 있습니다. **보기** 메뉴에서 **속성 창** 을 클릭하면 속성 창이 활성화됩니다.  
   
 속성 창에는 특정 속성의 필요 여부에 따라 다른 유형의 편집 필드가 표시됩니다. 회색으로 표시된 속성은 읽기 전용입니다.  

@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: 02/19/2020
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - Setup [SQL Server], software
@@ -43,17 +43,17 @@ helpviewer_keywords:
 - disk space [SQL Server]
 - localized SQL Server versions
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: a46ffca543701f7c74c83b3f39d7902c8a588577
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.author: mikeray
+author: MikeRayMSFT
+ms.openlocfilehash: 5708f31a580e5ba3373397d1d55a83edd4c93d3b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342942"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238355"
 ---
 # <a name="sql-server-2016-and-2017-hardware-and-software-requirements"></a>SQL Server 2016 및 2017: 하드웨어 및 소프트웨어 요구 사항
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 이 문서에는 Windows 운영 체제에서 SQL Server 2016 및 SQL Server 2017을 설치 및 실행하기 위한 최소 하드웨어 및 소프트웨어 요구 사항이 나와 있습니다.  
 
@@ -142,13 +142,44 @@ ms.locfileid: "80342942"
 
 Server Core 모드에서 SQL Server 2016 및 2017을 설치하는 것은 다음 버전의 Windows Server에서 지원됩니다.
 
-|                              |                                |
-| :------------------------    | :------------------------------|
-| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
-| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
-| Windows Server 2012 R2 Standard | Windows Server 2012 R2 데이터 센터|
-| Windows Server 2012 Standard | Windows Server 2012 데이터 센터 |
-| &nbsp; | &nbsp; |
+:::row:::
+    :::column:::
+        Windows Server 2019 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2019 Datacenter
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Windows Server 2016 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2016 Datacenter
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Windows Server 2012 R2 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2012 R2 데이터 센터
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Windows Server 2012 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2012 데이터 센터
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 Server Core에 SQL Server를 설치하는 방법에 대한 자세한 내용은 [Server Core에 SQL Server 설치](../../database-engine/install-windows/install-sql-server-on-server-core.md)를 참조하세요.  
 

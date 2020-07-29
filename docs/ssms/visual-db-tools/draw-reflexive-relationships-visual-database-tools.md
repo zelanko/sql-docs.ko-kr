@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: e218363f-faec-46d5-9904-a537fbcc994d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 02790c49db32ca45aebdc2e57e242a6dad31e597
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d87529fc1aebccecca90308475f6efeaf82f4a2f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247244"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004957"
 ---
 # <a name="draw-reflexive-relationships-visual-database-tools"></a>반사 관계 그리기(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 반사 관계를 만들면 테이블에 있는 하나 이상의 열을 동일한 테이블에 있는 하나 이상의 다른 열에 연결할 수 있습니다. 예를 들어, `employee` 테이블에 `emp_id` 열과 `mgr_id` 열이 있다고 가정합니다. 각 관리자는 회사의 직원이기도 하므로 테이블 내에서 관계 선을 그려 이러한 두 열을 연결합니다. 이와 같이 관계를 설정하면 테이블에 추가되는 각 관리자 ID가 기존의 직원 ID와 일치하도록 만들 수 있습니다.  
   
 관계를 만들려면 먼저 테이블에 대한 기본 키나 UNIQUE 제약 조건을 정의해야 합니다. 그런 다음 기본 키 열을 일치하는 열에 연결합니다. 관계를 만들면 일치하는 열이 테이블의 외래 키가 됩니다.  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1988a31f085619604198b889138bb8e62eb8f28b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2c41f99d32803914b20ffa65dfb22722f62143b0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251927"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999567"
 ---
 # <a name="create-a-new-solution"></a>새 솔루션 만들기
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 프로젝트를 만들 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 해당 프로젝트를 포함하는 솔루션을 만듭니다. 공간 인덱스는 한 번에 하나씩만 만들 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 프로젝트 내에서 폴더를 만드는 것이 허용되지 않습니다. 작업을 구성하려면 여러 프로젝트를 만듭니다.  
   
 솔루션 탐색기에 액세스하려면 **보기** 메뉴에서 **솔루션 탐색기** 를 클릭합니다.  

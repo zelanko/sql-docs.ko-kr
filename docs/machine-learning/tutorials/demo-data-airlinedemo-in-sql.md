@@ -2,22 +2,22 @@
 title: 자습서에 대한 항공 비행 데모 데이터
 Description: R 및 Python에서 Airline 데이터 세트를 포함하는 데이터베이스를 만듭니다. 이 데이터 세트는 SQL Server Machine Learning Services용 R 및 Python 자습서에서 사용됩니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/22/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bb8d26acb21ff38725c6e993c0b6080a35410f1
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4f697287bff5ad4734d11c3d6391154a3a970470
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116686"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728004"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 및 R 자습서에 대한 항공 비행 도착 데모 데이터
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 연습에서는 R 또는 Python 기본 제공 Airline 데모 데이터 세트에서 가져온 데이터를 저장할 SQL Server 데이터베이스를 만듭니다. R 및 Python 배포는 Management Studio를 사용하여 SQL Server 데이터베이스로 가져올 수 있는 동일한 데이터를 제공합니다.
 

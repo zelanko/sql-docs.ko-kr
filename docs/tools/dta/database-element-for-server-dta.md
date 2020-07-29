@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 5cd9a87a-af4b-45f3-8c18-f7fd7e7d3064
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: d416f6f57d70674a8f9a7b484f7da9c87b18342c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f7fbe622fe39cf39339f0a5267684db91f1d2c79
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831598"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732129"
 ---
 # <a name="database-element-for-server-dta"></a>Server의 Database 요소(DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 특정 서버에서 튜닝할 데이터베이스를 지정합니다.  
   

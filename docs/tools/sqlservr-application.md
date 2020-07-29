@@ -2,7 +2,7 @@
 title: sqlservr 애플리케이션
 description: sqlservr 애플리케이션은 명령 프롬프트에서 SQL Server 인스턴스를 시작, 중지, 일시 중지 및 계속합니다.
 ms.custom: seo-lt-2019
-ms.date: 08/01/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 56498901eb6f7eed8fa58f73bae58daddb36f874
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 1302360b6ab5175bed5a9776d7de5389c3d40c00
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150562"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112570"
 ---
 # <a name="sqlservr-application"></a>sqlservr 애플리케이션
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 **sqlservr** 애플리케이션은 명령 프롬프트에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 시작, 중지, 일시 중지 및 계속합니다.
 
@@ -86,7 +86,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 |매개 변수 | 자세한 정보|
 |:-----|:-----|
 |**-h** | 이전 버전 32비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 AWE가 설정된 경우 Hot Add 메모리 메타데이터에 대해 가상 주소 공간을 예약하는 데 사용됩니다. [!INCLUDE[sssql14](../includes/sssql14-md.md)]을 통해 지원됩니다. 자세한 내용은 [SQL Server 2016에서 지원되지 않는 SQL Server 기능](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)을 참조하세요.|
-|**-g** | *memory_to_reserve*<br/><br>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 32비트 인스턴스 이전 버전에 적용됩니다. [!INCLUDE[sssql14](../includes/sssql14-md.md)]을 통해 지원됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스 내, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 풀 외부의 메모리 할당에 사용할 수 있도록 남겨 두는 메모리 양(MB)을 정수로 지정합니다. 자세한 내용은 [서버 메모리 구성 옵션에 관한 SQL Server 2014 설명서](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014)를 참고하세요.|
+|**-g** | *memory_to_reserve*<br/><br>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 32비트 인스턴스 이전 버전에 적용됩니다. [!INCLUDE[sssql14](../includes/sssql14-md.md)]을 통해 지원됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스 내, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 풀 외부의 메모리 할당에 사용할 수 있도록 남겨 두는 메모리 양(MB)을 정수로 지정합니다. 자세한 내용은 [서버 메모리 구성 옵션에 관한 SQL Server 2014 설명서](/previous-versions/sql/2014/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014)를 참고하세요.|
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>참고 항목

@@ -5,25 +5,25 @@ description: azdata notebook 명령에 대한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0a866dcca1debba47abf2e2e241d00151b8641ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7543666f7c8654cc0a28f44a8fe09fdd39f185c0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74820966"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243001"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-다음 문서에서는 `azdata` 도구의 `notebook` 명령에 대한 참조를 제공합니다. 다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
+다음 문서에서는 `azdata` 도구의 `sql` 명령에 대한 참조를 제공합니다. 다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
 
 ## <a name="commands"></a>명령
-|     |     |
+| 명령 | 설명 |
 | --- | --- |
 [azdata notebook view](#azdata-notebook-view) | Notebook을 봅니다.  첫 번째 셀 실행 오류 발생 시 중지하는 옵션입니다.
 [azdata notebook run](#azdata-notebook-run) | Notebook을 실행합니다.  첫 번째 오류 발생 시 실행이 중지됩니다.
@@ -33,14 +33,14 @@ ms.locfileid: "74820966"
 azdata notebook view --path -p 
                      [--continue-on-error -c]
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 Notebook을 봅니다.  모든 셀이 표시됩니다.
 ```bash
-azdata notebook view --path '/home/me/notebooks/demo_notebook.ipynb'
+azdata notebook view --path "/home/me/notebooks/demo_notebook.ipynb"
 ```
 Notebook을 봅니다.  출력에 오류가 있는 셀이 없으면 모든 셀이 표시됩니다.  이 경우 출력이 중지됩니다.
 ```bash
-azdata notebook view --path '/home/me/notebooks/demo_notebook.ipynb' --stop-on-error
+azdata notebook view --path "/home/me/notebooks/demo_notebook.ipynb" --stop-on-error
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--path -p`
@@ -56,7 +56,7 @@ Notebook 출력에 있는 셀 오류를 무시하고 추가 셀을 계속 표시
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-notebook-run"></a>azdata notebook run
@@ -64,16 +64,21 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 ```bash
 azdata notebook run --path -p 
                     [--output-path]  
-                    [--output-html]  
-                    [--arguments -a]  
-                    [--interactive -i]  
-                    [--clear -c]  
-                    [--timeout -t]
+                    
+[--output-html]  
+                    
+[--arguments -a]  
+                    
+[--interactive -i]  
+                    
+[--clear -c]  
+                    
+[--timeout -t]
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 Notebook을 실행합니다.
 ```bash
-azdata notebook run --path '/home/me/notebooks/demo_notebook.ipynb'
+azdata notebook run --path "/home/me/notebooks/demo_notebook.ipynb"
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--path -p`
@@ -100,7 +105,7 @@ Notebook 실행에 삽입할 수 있는 Notebook 인수의 선택적 목록입�
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 

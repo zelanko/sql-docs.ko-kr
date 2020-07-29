@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 269ad9c5-3261-4526-badf-7be3c869f229
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 7e6c1bee30fb6ef4cd73772e7f62c2a51ebcd03f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 97a416830b2849b41e88dbf7c66f03f98027e7b9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254961"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999293"
 ---
 # <a name="specify-conditions-for-groups-visual-database-tools"></a>그룹 조건 지정(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 HAVING 절에서 그룹 전체에 적용되는 조건을 지정하여 쿼리에 표시되는 그룹을 제한할 수 있습니다. 데이터를 그룹화하고 집계한 후에 HAVING 절의 조건이 적용됩니다. 쿼리에는 이 조건에 맞는 그룹만 표시됩니다.  
   
 예를 들어, `titles` 테이블의 각 출판사에서 발행한 모든 도서의 평균 가격 중에서 $10.00를 초과하는 평균 가격만 표시할 수 있습니다. 이 경우, `AVG(price) > 10`과 같은 조건을 사용하여 HAVING 절을 지정합니다.  

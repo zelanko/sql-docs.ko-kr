@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 32e31469-36e4-42d9-a57a-12388bfd229d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 475e1fe8858ca5fc5491ef2491bdfea6108c67c0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 27b324de43f1aa9bc330057ca9159ccf78d0ce1b
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914839"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87107455"
 ---
 # <a name="validate-all-subscriptions"></a>모든 구독 유효성 검사
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

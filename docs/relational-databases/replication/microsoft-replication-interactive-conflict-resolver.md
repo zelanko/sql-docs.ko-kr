@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: d3d4a480-782b-4b1d-b839-565c8cf6cb24
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 557627ae2524131c277361967e6564704f691397
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: b96d438aa8332a024932dec689ada2efa419d139
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722013"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87108312"
 ---
 # <a name="microsoft-replication-interactive-conflict-resolver"></a>Microsoft 복제 상호 충돌 해결 프로그램
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

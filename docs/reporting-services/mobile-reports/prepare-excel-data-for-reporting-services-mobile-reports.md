@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ef25e90b8a9deb641a72006faf0a0c903a554ba5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f3a760b0ae100259b8102f303f0747e0da81223e
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448378"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942325"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서에 대한 Excel 데이터 준비
   
@@ -70,11 +70,11 @@ Excel 파일을 모바일 보고서에 대한 데이터 세트로 준비할 때�
   
 날짜 필드는 많은 모바일 보고서에 필수이므로 셀을 Excel의 날짜로 올바르게 서식 지정합니다. 일부 경우에는 이 때문에 변환이 필요합니다. 다음은 셀을 텍스트에서 Excel의 날짜로 변환하는 수식의 예입니다.  
   
-    Week 24-2013=DATE(MID(A2,9,4),1,-2)-WEEKDAY(DATE(MID(A2,9,4),1,3))+MID(A2,6,2)*7  
-  
-    2013/03/21=DATEVALUE(A1)  
-  
-    2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
+`Week 24-2013=DATE(MID(A2,9,4),1,-2)-WEEKDAY(DATE(MID(A2,9,4),1,3))+MID(A2,6,2)*7`  
+
+`2013/03/21=DATEVALUE(A1)`  
+
+`2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))`  
   
 셀을 변환한 후 셀 또는 **범주** 목록에서 전체 열 > **컨텍스트** 메뉴 > **셀 서식** > **날짜**를 선택하여 날짜로 서식 지정해야 합니다. 또한 Excel의 텍스트 열 변환 마법사를 사용하여 텍스트 셀을 올바르게 서식 지정된 날짜로 변환할 수 있습니다.  
   

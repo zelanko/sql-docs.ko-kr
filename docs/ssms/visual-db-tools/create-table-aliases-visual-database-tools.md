@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 14c8defcabde99a42993b4f1490094670a890cee
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b89cec27a4c31b8165129fe4b3565ce6f448ac15
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254235"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999985"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>테이블 별칭 만들기(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 별칭을 사용하면 테이블 이름이 필요한 작업을 더 쉽게 수행할 수 있습니다. 별칭은 다음과 같은 경우에 유용하게 사용할 수 있습니다.  
   
 -   [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) 에서 문을 더 간결하고 읽기 쉽게 만들려는 경우  

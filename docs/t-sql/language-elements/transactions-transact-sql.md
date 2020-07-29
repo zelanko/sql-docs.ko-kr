@@ -21,12 +21,12 @@ ms.assetid: 1485c375-921a-42af-a871-bb333cc08d3e
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a706c73c12ad35480380f8d558837f30f3ad3542
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a0a517dbfd2e5ebda4d48e3b66f4a49a7ef9e9fa
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007566"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248753"
 ---
 # <a name="transactions-transact-sql"></a>트랜잭션(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,12 +53,37 @@ ms.locfileid: "86007566"
 ## <a name="in-this-section"></a>섹션 내용  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음과 같은 트랜잭션 문을 제공합니다.  
   
-|||  
-|-|-|  
-|[BEGIN DISTRIBUTED TRANSACTION](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)|[ROLLBACK TRANSACTION](../../t-sql/language-elements/rollback-transaction-transact-sql.md)|  
-|[BEGIN TRANSACTION](../../t-sql/language-elements/begin-transaction-transact-sql.md)|[ROLLBACK WORK](../../t-sql/language-elements/rollback-work-transact-sql.md)|  
-|[COMMIT TRANSACTION](../../t-sql/language-elements/commit-transaction-transact-sql.md)|[SAVE TRANSACTION](../../t-sql/language-elements/save-transaction-transact-sql.md)|  
-|[COMMIT WORK](../../t-sql/language-elements/commit-work-transact-sql.md)||  
+:::row:::
+    :::column:::
+        [BEGIN DISTRIBUTED TRANSACTION](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [ROLLBACK TRANSACTION](../../t-sql/language-elements/rollback-transaction-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [BEGIN TRANSACTION](../../t-sql/language-elements/begin-transaction-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [ROLLBACK WORK](../../t-sql/language-elements/rollback-work-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [COMMIT TRANSACTION](../../t-sql/language-elements/commit-transaction-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [SAVE TRANSACTION](../../t-sql/language-elements/save-transaction-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [COMMIT WORK](../../t-sql/language-elements/commit-work-transact-sql.md)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
   
 ## <a name="see-also"></a>참고 항목  
  [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   

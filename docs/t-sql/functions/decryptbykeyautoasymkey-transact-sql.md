@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5521d4cf-740c-4ede-98b6-4ba90b84e32d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b416b915c011ecd4222dc9a3d708786f58852fe9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 48e2f2c50c06c429b07bb67380b3c43509b82ccc
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901645"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111633"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,9 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
   [ , { authenticator | @authenticator } ] ] )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *akey_ID*  
 대칭 키 암호화에 사용되는 비대칭 키의 ID입니다. *akey_ID*는 **int** 데이터 형식을 갖습니다.  
   

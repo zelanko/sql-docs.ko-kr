@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 105726e73bb9c7ae0e2b0117546b763cc13bbf7f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 06934b26d956d126257e531ba62a163e64901c31
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255309"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999491"
 ---
 # <a name="query-with-joins-visual-database-tools"></a>조인을 사용한 쿼리(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 쿼리 결과에 여러 테이블 또는 테이블 반환 개체의 데이터가 포함될 수 있습니다. 여러 테이블 반환 개체에 있는 데이터를 조합하려면 SQL에서 JOIN 연산을 사용합니다.  
   
 여러 테이블을 사용하는 쿼리를 작성하는 방법은 다음 항목을 참조하십시오.  

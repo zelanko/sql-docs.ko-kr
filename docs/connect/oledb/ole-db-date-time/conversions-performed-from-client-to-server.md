@@ -12,15 +12,15 @@ helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: a5a4dd3540f4171847014e6175b84bd861b7abb6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ccf1505fd896b627a83fe2ee7b3d1e6e19ab556e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67995140"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244893"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>클라이언트에서 서버로 수행되는 변환
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -70,9 +70,8 @@ ms.locfileid: "67995140"
 |15|**datetime**에 대한 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이전의 변환 의미가 유지됩니다. 초는 가장 근사한 300초로 반올림됩니다.|  
 |16|SSVARIANT 클라이언트 구조에 포함된 값(지정된 형식)의 변환 동작은 SSVARIANT 클라이언트 구조에 포함되지 않은 동일한 값 및 형식의 동작과 같습니다.|  
   
-||||  
-|-|-|-|  
 |Type|길이(문자)|확장|  
+|-|-|-|  
 |DBTIME2|8, 10..18|0,1..9|  
 |DBTIMESTAMP|19, 21..29|0,1..9|  
 |DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  

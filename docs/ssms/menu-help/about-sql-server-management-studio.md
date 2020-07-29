@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: acb6ad109fb34641ab5661f48db8906cf4de1430
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2837f9a4135832c99addaff0600d4e3c2aff9c52
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253303"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85983781"
 ---
 # <a name="about-sql-server-management-studio"></a>SQL Server Management Studio 정보
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 이 대화 상자를 사용하여 컴퓨터에 설치되어 있는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 대한 정보를 확인하거나 복사할 수 있습니다. 평가 버전은 제품 사용 만료일까지 남은 일 수를 표시합니다.  
   
 ## <a name="options"></a>옵션  

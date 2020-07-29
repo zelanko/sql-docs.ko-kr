@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 750bb2ac-4f69-4c8d-9db5-3f33837b6dff
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1edd4563386ad88e5f7df1fecb42f9e13537ad87
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e91b3e62a9ca9201a5bac8a5df5f880d9e6f3b9a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251914"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999574"
 ---
 # <a name="delete-a-solution"></a>솔루션 삭제
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 솔루션을 삭제하면 솔루션의 파일 항목뿐만 아니라 물리적 스토리지의 파일도 영구적으로 삭제됩니다.  
   
 > [!NOTE]  

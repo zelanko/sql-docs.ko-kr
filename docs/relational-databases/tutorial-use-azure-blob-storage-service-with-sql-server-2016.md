@@ -1,7 +1,7 @@
 ---
 title: '자습서: SQL Server 2016에서 Azure Blob Storage 서비스 사용'
 ms.custom: seo-dt-2019
-ms.date: 01/10/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -14,12 +14,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cd01280d2777fdab926c2e733224dc94b5fef834
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4e8d09fd7af7501427490178ef7cc9624b7e98a1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906049"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247272"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>자습서: SQL Server 2016에서 Azure Blob Storage 서비스 사용
 
@@ -37,7 +37,7 @@ Microsoft Azure Blob Storage 서비스에 대한 SQL Server 통합 지원은 SQL
 - 체험 [Azure 계정](https://azure.microsoft.com/offers/ms-azr-0044p/)을 받습니다.
 - [Azure Storage 계정](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal)을 만듭니다.
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
-- [SQL Server를 실행하는 Azure VM](https://azure.microsoft.com/documentation/articles/virtual-machines-provision-sql-server/) 프로비전
+- [SQL Server를 실행하는 Azure VM](https://azure.microsoft.com/services/virtual-machines/sql-server/) 프로비전
 - [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
 - [AdventureWorks2016 샘플 데이터베이스](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)를 다운로드합니다.
 - 사용자 계정에 [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) 역할을 할당하고 [모든 자격 증명 변경](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) 권한을 부여합니다. 
@@ -180,7 +180,7 @@ SQL Server 자격 증명을 만들려면 다음 단계를 수행합니다.
 이 섹션에서는 온-프레미스 SQL Server 2016 인스턴스의 AdventureWorks2016 데이터베이스를 [섹션 1](#1---create-stored-access-policy-and-shared-access-storage)에서 만든 Azure 컨테이너로 백업합니다.
   
 > [!NOTE]  
-> SQL Server 2012 SP1 CU2 이상 데이터베이스 또는 SQL Server 2014 데이터베이스를 이 Azure 컨테이너에 백업하려는 경우 [여기](https://docs.microsoft.com/sql/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014) 에 문서화된 사용되지 않는 구문을 통해 WITH CREDENTIAL 구문을 사용하여 URL에 백업할 수 있습니다.  
+> SQL Server 2012 SP1 CU2 이상 데이터베이스 또는 SQL Server 2014 데이터베이스를 이 Azure 컨테이너에 백업하려는 경우 [여기](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014) 에 문서화된 사용되지 않는 구문을 통해 WITH CREDENTIAL 구문을 사용하여 URL에 백업할 수 있습니다.  
   
 Blob Storage에 데이터베이스를 백업하려면 다음 단계를 따르세요.  
   

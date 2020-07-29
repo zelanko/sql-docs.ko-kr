@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0e5dafb96c0bb94fcb2dd0134fefb3f96b7c5708
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 515bb92125c48f963bc6d6c2dfa0836bcb9ef14e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257232"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001987"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio의 사용자 지정 보고서
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 많은 개체 탐색기 노드에는 [!INCLUDE[msCoName](../../includes/msconame_md.md)]에서 만든 표준 보고서 집합이 표시됩니다. 이러한 보고서는 일반적으로 요청되는 서버 정보를 요약합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서비스 팩 2부터 관리자는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 를 사용하여 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 만든 사용자 지정 보고서를 실행할 수 있습니다.  
   
 ## <a name="implementation"></a>구현  

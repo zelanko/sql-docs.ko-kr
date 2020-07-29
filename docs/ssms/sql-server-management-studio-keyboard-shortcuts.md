@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f835927ba9927b5614ac0660ce3cad2ae96ae483
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 14bc7634ab3b8b3ad54f8544dc694bb955bd55ce
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261722"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001616"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio 바로 가기 키
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에는 두 개의 키보드 구성표가 있습니다. 기본적으로 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] 2010을 기반으로 하는 바로 가기 키가 포함된 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 구성표가 사용됩니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 에서는 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]의 표준 구성표와 유사한 키보드 구성표도 제공합니다. 키보드 구성표를 변경하거나 다른 바로 가기 키를 추가하려면 **도구** 메뉴에서 **옵션**을 클릭합니다. **환경**, **키보드** 페이지에서 원하는 키보드 구성표를 선택합니다.  
   

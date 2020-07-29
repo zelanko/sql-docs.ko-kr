@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 8333c2120868f8d929d937faa155b7d595abff20
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 41ecd01badd21d8c3198dfb661d63b7d14753d76
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246253"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002618"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>연습: 데이터베이스 다이어그램 추가 및 변경
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 이 연습에서는 데이터베이스 다이어그램을 만들고 수정하는 방법과 데이터베이스 다이어그램 구성 요소를 통해 데이터베이스를 변경하는 방법을 설명합니다. 또한 다이어그램에 테이블을 추가하고, 테이블 간에 관계를 만들고, 열에 대해 제약 조건과 인덱스를 만들며 각 테이블에 대해 표시할 정보 수준을 변경하는 방법을 설명합니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  

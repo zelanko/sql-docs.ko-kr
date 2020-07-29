@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 2e4fdeb6-c596-43cb-ac2e-9a18ea2bac0d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 083f3da69d7b86d12dc1919cea143d10ce5a10fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fd07a135a52ab90837cbcbe9ba32f2a0bb4561f6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255297"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999523"
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>매개 변수를 사용하여 쿼리(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 매번 서로 다른 입력으로 애플리케이션에서 여러 차례 다시 사용할 수 있는 쿼리를 만드는 것이 유용한 경우가 많습니다. 이 섹션에서는 이와 같은 일반적인 목적을 위해 매개 변수 쿼리를 만드는 방법에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  

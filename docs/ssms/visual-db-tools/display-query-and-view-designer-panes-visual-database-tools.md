@@ -16,17 +16,16 @@ helpviewer_keywords:
 ms.assetid: 605c63af-f91e-410d-8d60-5cf6f899d756
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 7ce2afd0dd8fd7c63e348b72c9499314494c49ae
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 83534e704d4460e32a5d7c62307dbd8a9adba08e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244168"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004968"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>쿼리 및 뷰 디자이너 창 표시(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 쿼리 및 뷰 디자이너는 다이어그램 창, 조건 창, SQL 창, 결과 창이라는 네 개의 별도 창으로 구성되어 있습니다. 일반적으로 뷰를 열거나 새 쿼리를 만들 때는 네 개의 창이 모두 열리지만 쿼리 및 뷰 디자이너가 열려 있는 상태에서 이러한 창을 임의로 선택하여 열 수도 있습니다.  
   
 ### <a name="to-display-query-and-view-designer-panes"></a>쿼리 및 뷰 디자이너 창을 표시하려면  

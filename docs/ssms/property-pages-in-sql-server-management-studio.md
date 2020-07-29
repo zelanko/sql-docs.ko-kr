@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 039ad2ec8ea2e0d05eae0ec2d627c07117580bf8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c865561f66f9f40ce131e9b8dce563f77ca187aa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258917"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001804"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>SQL Server Management Studio의 속성 페이지
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 모든 속성 페이지 대화 상자는 확대 및 축소 범주가 포함된 정보를 표시하는 공통된 형식을 사용합니다. 표시되는 필드는 특정 속성에 따라 달라집니다. 회색으로 표시된 속성은 읽기 전용입니다. 각 속성 페이지의 맨 위 근처에는 범주별 및 사전순 단추가 있습니다.  
   
 다음 표에서는 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 속성 페이지 대화 상자의 공통 요소를 설명합니다.  

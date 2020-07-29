@@ -2,22 +2,22 @@
 title: 인터넷 액세스 권한 없이 설치
 description: 네트워크 방화벽 뒤에 격리된 컴퓨터에 SQL Server 기계 학습 R 및 Python을 설치합니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/04/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bdcec8602a9552fdc7ffac0be3badb26b19646e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: d51ac079bf06938826bc343b1b3317e558964655
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118256"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247986"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>인터넷 액세스가 없는 컴퓨터에 SQL Server 기계 학습 R 및 Python 설치
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 기본적으로 설치 관리자는 Microsoft 다운로드 사이트에 연결하여 SQL Server에 기계 학습을 위한 필수 구성 요소 및 업데이트된 구성 요소를 가져옵니다. 방화벽 제약 조건으로 인해 설치 관리자가 이러한 사이트에 도달하지 못하는 경우 인터넷에 연결된 장치를 사용하여 파일을 다운로드하고 오프라인 서버로 파일을 전송한 다음 설치 프로그램을 실행할 수 있습니다.
 
@@ -215,4 +215,4 @@ SQL Server R Services의 초기 오프라인 설치에는 다음과 같은 온�
 
 ## <a name="next-steps"></a>다음 단계
 
-익숙하지 않은 메시지 또는 로그 항목에 대한 도움말은 [업그레이드 및 설치 FAQ - Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md)를 참조하세요.
+익숙하지 않은 메시지 또는 로그 항목에 대한 도움말은 [업그레이드 및 설치 FAQ - Machine Learning Services](../troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md)를 참조하세요.

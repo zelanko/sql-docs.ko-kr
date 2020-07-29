@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 74725f71656141c4e441f80b4ba059012b4b65bb
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d5aa9af5ae45e962ff130d7de18d62417a0b3987
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552758"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111036"
 ---
 # <a name="drop-workload-group-transact-sql"></a>DROP WORKLOAD GROUP(Transact-SQL)
 
@@ -30,10 +30,17 @@ ms.locfileid: "86552758"
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-||||
-|---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)|
-||||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />관리되는 인스턴스](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -44,10 +51,17 @@ ms.locfileid: "86552758"
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-||||
-|---|---|---|
-|[SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />관리되는 인스턴스 \*_** &nbsp;|[Azure Synapse<br />Analytics](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)|
-||||
+:::row:::
+    :::column:::
+        [SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database<br />관리되는 인스턴스 \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -58,10 +72,17 @@ ms.locfileid: "86552758"
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-||||
-|---|---|---|
-|[SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)|[SQL Database<br />관리되는 인스턴스](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)| **_\* Azure Synapse<br />Analytics \*_** &nbsp;|
-||||
+:::row:::
+    :::column:::
+        [SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />관리되는 인스턴스](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        **_\* Azure Synapse<br />Analytics \*_** &nbsp;
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 

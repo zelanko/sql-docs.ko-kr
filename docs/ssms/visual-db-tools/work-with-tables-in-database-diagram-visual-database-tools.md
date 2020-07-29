@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: ee2c5d84-22bf-4597-ac70-a27ed8cc94f4
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 81611e2968dcf60bbf4d20a07364dc8fdd91a072
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7072233d4a4d509fbb002e9951484f547396dad5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246187"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002566"
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>데이터베이스 다이어그램에서 테이블 작업(Visual Database Tools)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 테이블 디자이너나 데이터베이스 다이어그램 디자이너에서 데이터베이스 테이블을 만들고 수정할 수 있습니다.  
   
 > [!NOTE]  

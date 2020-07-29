@@ -9,16 +9,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a138a8451211436d55da537b9d8a45d26c534e48
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8a3ca863818d11471b0ae6aadd38458faf8b9daf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80215749"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85661074"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 사용한 데이터 지속성
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 [영구적 볼륨](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)은 Kubernetes의 스토리지에 대한 플러그 인 모델을 제공합니다. 이 모델에서 스토리지를 제공하는 방법은 사용 방식으로부터 추상화됩니다. 따라서 고유한 고가용성 스토리지를 가져와 SQL Server 빅 데이터 클러스터에 연결할 수 있습니다. 이를 통해 필요한 스토리지 유형, 가용성 및 성능을 완벽하게 제어할 수 있습니다. Kubernetes는 Azure 디스크 및 파일, NFS(네트워크 파일 시스템) 및 로컬 저장소를 비롯한 [다양한 종류의 스토리지 솔루션](https://kubernetes.io/docs/concepts/storage/storage-classes/#provisioner)을 지원합니다.
 

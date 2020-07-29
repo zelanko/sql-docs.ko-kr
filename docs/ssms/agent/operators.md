@@ -22,18 +22,17 @@ helpviewer_keywords:
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3e5ecdc830550570f43484c61a87e315e9fc7661
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a500a4c03562d024bb64a65053fe1afc374844c8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247628"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246452"
 ---
 # <a name="operators"></a>연산자
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
@@ -122,9 +121,8 @@ ms.locfileid: "75247628"
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|||  
+|작업|항목|  
 |-|-|  
-|**작업**|**항목**|  
 |운영자 만들기 관련 태스크|[운영자 만들기](../../ssms/agent/create-an-operator.md)<br /><br />[Designate a Fail-Safe Operator](../../ssms/agent/designate-a-fail-safe-operator.md)|  
 |알림 할당 관련 태스크|[운영자에게 경고 할당](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[경고에 대한 응답 정의&#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification(Transact-SQL)](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[운영자에게 경고 할당](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   

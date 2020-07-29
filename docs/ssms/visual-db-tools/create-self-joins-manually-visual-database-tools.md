@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 57ceb0963f303a1674642b65ef6c2089fd86ef70
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 162f2e872d1feedd3cecdf54b766ed8e3a43365b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254249"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000008"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>수동으로 자체 조인 만들기(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 데이터베이스에서 테이블에 반사 관계가 없는 경우에도 테이블을 자체 조인할 수 있습니다. 예를 들어, 자체 조인을 사용하여 같은 도시에 살고 있는 만든 이 쌍을 찾을 수 있습니다.  
   
 다른 조인과 마찬가지로 자체 조인에도 테이블이 두 개 이상 필요합니다. 차이점은 쿼리에 두 번째 테이블을 추가하지 않고 같은 테이블의 두 번째 인스턴스를 추가한다는 점입니다. 이런 방식으로 테이블의 첫 번째 인스턴스의 열을 두 번째 인스턴스의 같은 열과 비교하여 열의 값을 서로 비교할 수 있습니다. [쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 는 테이블의 두 번째 인스턴스에 별칭을 할당합니다.  

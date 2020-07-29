@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: d61cc55b-9ee8-4ecf-a32f-6459ae43910b
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: fbef85b0211b49319298b29f7e935d6c2bc51db4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 947ff75c1eb3f0a20b0bc3c415645254a7c4b6c4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255026"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85976948"
 ---
 # <a name="sort-in-ascending-or-descending-order-visual-database-tools"></a>오름차순 또는 내림차순으로 정렬(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 **ASC** 또는 **DESC** 키워드를 **ORDER BY** 절과 함께 사용하면 결과 집합에 있는 하나 이상의 열에 대해 쿼리 결과를 오름차순이나 내림차순으로 정렬할 수 있습니다.  
   
 > [!NOTE]  

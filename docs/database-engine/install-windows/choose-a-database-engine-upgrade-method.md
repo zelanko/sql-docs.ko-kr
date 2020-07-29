@@ -11,12 +11,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7331bc542db301e519b8a75c43b47129c845bb45
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4f3f9aef2003676c90d049a894a03c816225def3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901584"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244080"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>데이터베이스 엔진 업그레이드 방법 선택
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "85901584"
   
 > [!NOTE]  
 >  또한 Azure SQL 데이터베이스 업그레이드 또는 SQL Server 환경 가상화를 업그레이드 계획에 포함하여 고려할 수 있습니다. 이러한 문서는 본 문서의 범위를 벗어나지만, 일부 링크를 준비했습니다.
->   - [Azure Virtual Machines의 SQL Server 개요](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
+>   - [Azure Virtual Machines의 SQL Server 개요](https://azure.microsoft.com/services/virtual-machines/sql-server/#overview)
 >   - [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) 
 >   - [Azure에서 SQL Server 옵션 선택](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)  
   

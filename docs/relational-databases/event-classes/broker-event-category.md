@@ -14,12 +14,12 @@ ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e31a222a0d8229019e844f2cac64a1a108760779
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 924959b2c5c5b9782a1e73e404644299ba5bd5d8
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717808"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971521"
 ---
 # <a name="broker-event-category"></a>Broker 이벤트 범주
 
@@ -45,6 +45,6 @@ ms.locfileid: "85717808"
  두 개의 보안 감사 이벤트도 Service Broker에 제공됩니다. 이러한 이벤트에 대한 자세한 내용은 [Audit Broker Login 이벤트 클래스](../../relational-databases/event-classes/audit-broker-login-event-class.md) 및 [Audit Broker Conversation 이벤트 클래스](../../relational-databases/event-classes/audit-broker-conversation-event-class.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Security Audit 이벤트 범주](/bi-reference/trace-events/security-audit-event-category)  
+ [Security Audit 이벤트 범주](https://docs.microsoft.com/analysis-services/trace-events/security-audit-event-category)  
   
   

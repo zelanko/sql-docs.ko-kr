@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 069736c17191e3583e5a6868c90e640acb6585b2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3e52727922f03a6ae078477b8af6cf0171acd053
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73658878"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722561"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>SQL Server 언어 확장의 확장성 아키텍처
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server에서 외부 코드를 실행할 수 있도록 하는 SQL Server 언어 확장에 사용되는 확장성 아키텍처에 대해 알아봅니다. SQL Server 2019에서는 Java가 지원됩니다. 이 코드는 언어 런타임 환경에서 코어 데이터베이스 엔진에 대한 확장으로 실행됩니다.
 

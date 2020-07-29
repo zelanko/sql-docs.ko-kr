@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 804cec4cbfe25f92b6b244b25b25a4498a09f1fa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 82ddc00bcf23aae923047ef204587728107b0ada
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245036"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000212"
 ---
 # <a name="arguments-dialog-box"></a>인수 대화 상자
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 **인수** 대화 상자는 도구에 대한 새 인수나 기존 인수를 지정합니다. **외부 도구** 대화 상자에서 선택한 **인수 확인** 옵션이 있는 외부 도구를 시작하면 이 대화 상자가 나타납니다.  
   
 ## <a name="options"></a>옵션  

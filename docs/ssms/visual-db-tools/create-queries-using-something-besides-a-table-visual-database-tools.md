@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 52ddb76ab1e4b6e04d043bd56c3ec55cef94e52b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2495d18fa283b8eecaec238fb4779068358c4df0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254298"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004214"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>테이블 외의 항목을 사용하여 쿼리 만들기(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 검색 쿼리를 작성할 때마다 원하는 열과 행, 쿼리 프로세서가 원래 데이터를 찾는 위치 등을 분명히 설정해야 합니다. 일반적으로 이 원래 데이터는 하나의 테이블 또는 함께 조인된 여러 테이블로 구성됩니다. 그러나 원래 데이터를 테이블 이외의 원본에서 가져올 수 있습니다. 실제로 테이블을 반환하는 사용자 정의 함수나 뷰, 쿼리 또는 동의어에서 가져올 수 있습니다.  
   
 ## <a name="using-a-view-in-place-of-a-table"></a>테이블 대신 뷰 사용  

@@ -3,7 +3,7 @@ title: '데이터베이스 엔진: 호환성이 손상되는 변경 | Microsoft 
 titleSuffix: SQL Server 2017
 description: SQL Server 2017 데이터베이스 엔진 기능의 주요 변경 사항
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 0e7ee0b123215032df23ef5c31ea5dfef8469079
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b7bac937b230a5311c88676001078ce6fa54c779
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751214"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110192"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sssqlv14-md"></a>[!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] 데이터베이스 엔진 기능의 주요 변경 사항
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85751214"
 
 - [SQL Server 2016 데이터베이스 엔진 기능의 주요 변경](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)
 
-- [SQL Server 2014 데이터베이스 엔진 기능의 주요 변경](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016?view=sql-server-2014#SQL14)
+- [SQL Server 2014 데이터베이스 엔진 기능의 주요 변경](/previous-versions/sql/2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016?view=sql-server-2014#SQL14)
 
 #### <a name="archived-documentation-for-very-old-versions-of-sql-server"></a>이전 버전의 SQL Server에 대해 보관된 설명서
 

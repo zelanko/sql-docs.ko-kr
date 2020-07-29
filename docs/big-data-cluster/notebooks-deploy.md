@@ -10,16 +10,16 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 99826b03d1e3c280f576394b539c857c9dedc557
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: 67cbd034cd2b5fc36b9f98bbfb2f8bbc43f1598e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531266"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85699964"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebook"></a>Azure Data Studio Notebook을 사용하여 SQL Server 빅 데이터 클러스터 배포
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서는 배포 Notebook을 포함하는 Azure Data Studio 확장을 제공합니다. 배포 Notebook에는 SQL Server 빅 데이터 클러스터를 만들기 위해 Azure Data Studio에서 사용할 수 있는 코드와 설명서가 포함되어 있습니다.
 

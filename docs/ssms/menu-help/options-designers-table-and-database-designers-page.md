@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 09df28c2bcd304733250a90813773ede3a29c2ed
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d7b15f63893dfc052902f245cbb4a52220fd00c5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245707"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001602"
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>옵션(디자이너 - 테이블 및 데이터베이스 디자이너 페이지)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 이 페이지를 사용하여 디자이너의 기본 동작을 결정할 수 있습니다. 이 설정에 액세스하려면 **도구** 메뉴에서 **옵션**을 클릭하고 **디자이너** 폴더를 확장한 다음 **테이블 디자이너**를 클릭합니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
 **테이블 디자이너 업데이트에 대한 연결 문자열 제한 시간 값 재정의**  
 테이블 디자이너의 동작에 대해 새 제한 시간 값을 설정하도록 허용합니다. 이 옵션은 테이블 디자이너가 수정하는 데 시간이 많이 걸리는 대형 테이블에 대한 작업을 수행하는 경우에 유용합니다.  
   

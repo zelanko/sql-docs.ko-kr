@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 781d6819519b35153564b4032fce867875fb8d1c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9fa5297cdd4e128d9ab800293514b3ee56045ac1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257111"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85978299"
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>OR에 우선 순위가 있는 조건 조합(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 조건을 OR로 연결하고 AND로 연결된 조건보다 높은 우선 순위를 부여하려면 각 OR 조건에 대하여 AND 조건을 반복해야 합니다.  
   
 예를 들어, 근무 연수가 5년이 넘는 직원 중 직급이 낮거나 퇴직한 직원을 모두 찾는다고 가정합니다. 이 쿼리에는 세 개의 조건이 필요하며 하나의 조건이 두 개의 추가 조건과 AND로 연결되어 있어야 합니다.  

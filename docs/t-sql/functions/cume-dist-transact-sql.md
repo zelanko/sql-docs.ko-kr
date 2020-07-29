@@ -19,12 +19,12 @@ ms.assetid: 491b07f3-9ffd-4cdd-93e5-5abb636fc5ef
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21ee42a6901d24a0dcdd01c5c096a73cca4d95e4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 26527260cfcb3f557239f6ca83b60e3f269be9ac
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732463"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112513"
 ---
 # <a name="cume_dist-transact-sql"></a>CUME_DIST(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -39,9 +39,11 @@ ms.locfileid: "85732463"
 CUME_DIST( )  
     OVER ( [ partition_by_clause ] order_by_clause )  
   
-```  
-  
-## <a name="arguments"></a>인수  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_)  
 
 _partition\_by\_clause_는 FROM 절 결과 집합을 함수가 적용되는 파티션으로 나눕니다. _partition\_by\_clause_ 인수를 지정하지 않는 경우 `CUME_DIST`는 모든 쿼리 결과 집합 행을 단일 그룹으로 처리합니다. _order\_by\_clause_는 작업이 발생하는 논리적 순서를 결정합니다. `CUME_DIST`에는 _order\_by\_clause_가 필요합니다. `CUME_DIST`에서는 OVER 구문의 \<rows or range clause>는 허용되지 않습니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.

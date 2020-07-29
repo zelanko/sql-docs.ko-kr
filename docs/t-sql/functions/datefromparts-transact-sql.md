@@ -18,12 +18,12 @@ ms.assetid: 5b885376-87aa-41f1-9e18-04987aead250
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 954a1a765ebbc34094ef183f95d6598a40545d97
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f6316f6e8e80e056884995cdde0377f411a676c2
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85632028"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112501"
 ---
 # <a name="datefromparts-transact-sql"></a>DATEFROMPARTS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -38,7 +38,9 @@ ms.locfileid: "85632028"
 DATEFROMPARTS ( year, month, day )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
 *year*  
 년을 지정하는 정수 식입니다.
   

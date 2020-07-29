@@ -1,9 +1,8 @@
 ---
 title: 메뉴 및 바로 가기 키 사용자 지정
 ms.custom: seo-lt-2019
-ms.date: 01/19/2017
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,17 +19,17 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: e2b398a1acd5e91a55e18f25b2094f9b671c70b8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: de57e987e933b7dee45b1dd9ff91698dd43488ee
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243919"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000175"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>메뉴 및 바로 가기 키 사용자 지정
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-*키보드 액셀러레이터를 사용하면 Alt+\<single letter>* 를 눌러 메뉴 명령이나 단추를 선택할 수 있습니다. 예를 들어 **편집** 메뉴를 열려면 Alt+E를 누릅니다. **사용자 지정** 대화 상자를 사용하여 도구 모음 단추, 메뉴 및 메뉴 명령을 다시 정렬하고 수정할 수 있습니다. 여기에서는 마우스를 사용하거나 키보드만 사용하여 설정을 변경하기 위한 지침이 제공됩니다.  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+키보드 액셀러레이터를 사용하면 Alt+ *\<single letter>* 를 눌러 메뉴 명령이나 단추를 선택할 수 있습니다. 예를 들어 **편집** 메뉴를 열려면 Alt+E를 누릅니다. **사용자 지정** 대화 상자를 사용하여 도구 모음 단추, 메뉴 및 메뉴 명령을 다시 정렬하고 수정할 수 있습니다. 여기에서는 마우스를 사용하거나 키보드만 사용하여 설정을 변경하기 위한 지침이 제공됩니다.  
   
 Ctrl 키를 사용하는 저장 프로시저에 대한 키보드 액셀러레이터는 **도구** 옵션 **대화 상자의**/**키보드** 페이지에서 만들 수 있습니다.  
   

@@ -19,12 +19,12 @@ ms.assetid: 1990c3c7-dad2-48db-b2cd-3e8bd2c49d17
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1eba52b9bd30a64ec6955501f4df7cf1e59cc56e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 832118fc8b8e8566cbd00a05fba4994c7f9ecdf5
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631578"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111980"
 ---
 # <a name="first_value-transact-sql"></a>FIRST_VALUE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -41,7 +41,9 @@ FIRST_VALUE ( [scalar_expression ] )
   
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *scalar_expression*  
  반환할 값입니다. *scalar_expression*은 열, 하위 쿼리 또는 결과로 반환되는 값이 하나뿐인 임의의 다른 식일 수 있습니다. 다른 분석 함수는 사용할 수 없습니다.  
   

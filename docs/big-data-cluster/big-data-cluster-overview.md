@@ -9,16 +9,16 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 610f837c5354a72c665da067fcc8fea582ac6de3
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: bc83184b6cac6ab574090f8059e2a79fa9ca69ca
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152003"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942790"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]란 무엇인가요?
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]부터 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 사용하면 Kubernetes에서 실행되는 SQL Server, Spark 및 HDFS 컨테이너의 확장 가능한 클러스터를 배포할 수 있습니다. 이러한 구성 요소는 동시에 실행되므로 Transact-SQL 또는 Spark에서 빅 데이터 읽기, 쓰기 및 처리할 수 있으며, 대용량의 빅 데이터를 사용하여 가치 높은 관계형 데이터를 쉽게 조합하고 분석할 수 있습니다.
 
@@ -85,7 +85,7 @@ SQL Server 빅 데이터 클러스터는 [Kubernetes](https://kubernetes.io/docs
 
 Kubernetes는 컨테이너 배포를 필요에 따라 확장할 수 있는 오픈 소스 컨테이너 오케스트레이터입니다. 다음 표에서는 몇 가지 중요한 Kubernetes 용어를 정의합니다.
 
-|||
+|용어|설명|
 |:--|:--|
 | **Cluster** | Kubernetes 클러스터는 노드라는 컴퓨터 세트입니다. 한 노드는 클러스터를 제어하고 마스터 노드로 지정됩니다. 나머지 노드는 작업자 노드입니다. Kubernetes 마스터는 작업자 간에 작업을 배포하고 클러스터의 상태를 모니터링하는 일을 담당합니다. |
 | **Node** | 노드는 컨테이너화된 애플리케이션을 실행합니다. 물리적 컴퓨터 또는 가상 머신일 수 있습니다. Kubernetes 클러스터는 물리적 컴퓨터 및 가상 머신 노드를 혼합해서 포함할 수 있습니다. |

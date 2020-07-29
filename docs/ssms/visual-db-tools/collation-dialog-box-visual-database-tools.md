@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 1c926bd77ab1fd2abf048c15d93b8935b2ed679d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 23ba5cfb04712ebb0bf7f2e744cc0e7dcb5234e1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255481"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003852"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>데이터 정렬 대화 상자(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 이 대화 상자를 사용하면 열의 데이터 정렬 순서를 지정할 수 있습니다. 열의 데이터 정렬 순서는 열의 값을 다른 열이나 상수 값과 비교하는 모든 작업에 사용됩니다. 이 순서는 SUBSTRING 및 CHARINDEX 등과 같은 일부 문자열 함수의 동작에도 영향을 줍니다. 열의 데이터 정렬 순서 설정이 미치는 영향에 대한 전체 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설명서를 참조하십시오.  
   
 이 대화 상자는 다음과 같은 경우에 나타납니다.  

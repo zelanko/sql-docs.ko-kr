@@ -10,20 +10,19 @@ helpviewer_keywords:
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 3e7f0abd6003583858fbf323f96b4cf203236083
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 16843ff8599e9cda540c2a9f3ac264c8edc2dc88
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286647"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726924"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>1단원: DTA(데이터베이스 엔진 튜닝 관리자) 기본 탐색
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 데이터베이스 엔진 튜닝 관리자를 사용하면 GUI(그래픽 사용자 인터페이스)를 기반으로 튜닝 세션과 튜닝 권장 구성 보고서를 볼 수 있습니다. 이 단원에서는 도구를 시작하는 방법과 도구 화면을 구성하는 방법을 보여 줍니다. 이 세션의 작업을 마치면 도구를 시작하는 여러 방법과 정기적으로 수행하는 튜닝 태스크를 지원하도록 도구 화면을 구성하는 방법을 알게 됩니다.  
 

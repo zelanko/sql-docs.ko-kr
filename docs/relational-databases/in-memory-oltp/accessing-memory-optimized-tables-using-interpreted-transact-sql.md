@@ -11,12 +11,12 @@ ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50e15e99ce68b47b1cd87262ff12fda3e9836bcf
-ms.sourcegitcommit: 7a47aaffbd82bab2707cd69f44571a9037d2273b
+ms.openlocfilehash: 2d61c6e1ebb1d417ebe3f95f588a1e2b12b6b5f3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85377804"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246274"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>해석된 Transact-SQL을 사용하여 메모리 액세스에 최적화된 테이블에 액세스
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -52,14 +52,42 @@ ms.locfileid: "85377804"
   
 다음 테이블 힌트는 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 메모리 최적화 테이블에 액세스하는 경우 지원되지 않습니다.  
 
-  
-|||||  
-|-|-|-|-|  
-|HOLDLOCK|IGNORE_CONSTRAINTS|IGNORE_TRIGGERS|NOWAIT|  
-|PAGLOCK|READCOMMITTED|READCOMMITTEDLOCK|READPAST|  
-|READUNCOMMITTED|ROWLOCK|SPATIAL_WINDOW_MAX_CELLS = *integer*|TABLOCK|  
-|TABLOCKXX|UPDLOCK|XLOCK||  
-  
+:::row:::
+    :::column:::
+        HOLDLOCK
+
+        PAGLOCK
+
+        READUNCOMMITTED
+
+        TABLOCKXX
+    :::column-end:::
+    :::column:::
+        IGNORE_CONSTRAINTS
+
+        READCOMMITTED
+
+        ROWLOCK
+
+        UPDLOCK
+    :::column-end:::
+    :::column:::
+        IGNORE_TRIGGERS
+
+        READCOMMITTEDLOCK
+
+        SPATIAL_WINDOW_MAX_CELLS = *integer*
+
+        XLOCK
+    :::column-end:::
+    :::column:::
+        NOWAIT
+
+        READPAST
+
+        TABLOCK
+    :::column-end:::
+:::row-end:::
 
 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 명시적 또는 암시적 트랜잭션에서 메모리 최적화 테이블에 액세스하는 경우 적어도 다음 중 하나를 수행해야 합니다.  
   

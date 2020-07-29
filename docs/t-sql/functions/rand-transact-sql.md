@@ -20,12 +20,12 @@ ms.assetid: 363c84d6-b9fa-49ba-9a75-e44f27535ff6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61303b7bffb07b2a42628af54d054250308723f2
-ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
+ms.openlocfilehash: 6f69b3aadea5a426cc478eadd9c3228242161060
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85942921"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111348"
 ---
 # <a name="rand-transact-sql"></a>RAND(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "85942921"
 RAND ( [ seed ] )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *seed*  
  초기값을 제공하는 정수 [식](../../t-sql/language-elements/expressions-transact-sql.md)(**tinyint**, **smallint** 또는 **int**)입니다. *초기값*을 지정하지 않으면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]은 임의로 초기값을 할당합니다. 지정된 초기값에 대해 반환된 결과는 항상 동일합니다.  
   

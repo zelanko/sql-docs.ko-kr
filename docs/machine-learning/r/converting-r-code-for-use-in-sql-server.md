@@ -2,22 +2,22 @@
 title: SQL에 대한 R 코드 변환
 description: SQL Server의 관계형 데이터베이스에 대한 솔루션 배포 및 데이터 액세스를 위해 R 코드를 SQL Server 저장 프로시저로 마이그레이션합니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 97bb0a54181f88703363bfbe598af26ede58ebf8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 47a96a6bf233a1d8f7fe70df6ab537a31fd2e896
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117716"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723883"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>SQL Server(데이터베이스 내) 인스턴스에서 실행할 수 있도록 R 코드를 변환합니다.
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 문서에서는 SQL Server에서 작동하도록 R 코드를 수정하는 방법에 대한 개략적인 지침을 제공합니다. 
 

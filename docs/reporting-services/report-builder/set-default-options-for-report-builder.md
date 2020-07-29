@@ -11,19 +11,19 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cad43cd9b4a842cd022e9139b7b303b15134af6f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dc526ec022d139288fd057ac1cd7889653cecba5
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290771"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859766"
 ---
 # <a name="set-default-options-for-report-builder"></a>보고서 작성기에 대한 기본 옵션 설정
   보고서 작성기에서 다양한 유용한 기본값을 설정하여 보고서 작성을 쉽고 빠르게 할 수 있습니다.  예를 들어 기본 보고서 서버를 설정하거나 변경할 수 있는 경우 보고서 작성기는 별도로 지정하지 않는 한 보고서를 동일한 보고서 서버에 자동으로 저장합니다.  
   
 -   보고서 작성기에서 **파일** > **옵션**을 클릭합니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **기본적으로 이 보고서 서버 또는 SharePoint 사이트 사용**  
  관리자가 이 옵션을 구성했을 수 있습니다. 값은 http:// 또는 https://로 시작되는 올바른 형식의 URL일 수 있습니다. 이 설정은 테이블/행렬 및 차트 마법사에 기본적으로 나타나는 데이터 원본 연결을 결정합니다. 또한 보고서는 이 서버에서 처리되며 이 서버의 리소스를 참조할 수 있습니다.  
   

@@ -14,12 +14,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39c563da1d79492b36cdd13a29ef5ebf4401bed6
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 721cb6dca81681fec19d30a30ae0067bb4df1745
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457735"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970084"
 ---
 # <a name="best-practices-with-query-store"></a>쿼리 저장소에 대한 모범 사례
 
@@ -180,7 +180,7 @@ SET QUERY_STORE = ON
       INTERVAL_LENGTH_MINUTES = 60,
       SIZE_BASED_CLEANUP_MODE = AUTO,
       MAX_PLANS_PER_QUERY = 200,
-      WAIT_STATS_CAPTURE_MODE = ON,
+      WAIT_STATS_CAPTURE_MODE = ON
     );
 ```
 
