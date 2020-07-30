@@ -18,15 +18,15 @@ ms.assetid: 14320251-c551-49d8-b933-057406114978
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 715b050bc73816b9b1c7f6841e9c6fbb12fdaf90
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c11e03c511634bc255b6a94ff03bfec16d386164
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820234"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394558"
 ---
 # <a name="sp_unprepare-transact-sql"></a>sp_unprepare(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Sp_prepare 저장 프로시저에서 만든 실행 계획을 삭제 합니다. sp_unprepare은 TDS (tabular data stream) 패킷에서 ID = 15를 지정 하 여 호출 합니다.  
   

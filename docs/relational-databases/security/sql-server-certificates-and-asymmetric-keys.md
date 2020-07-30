@@ -14,12 +14,12 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f631e55edaacc56c5c8bae3aec3e374824857db4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0da744d41c2135038e14a8aef71e088df7ba851d
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001022"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332652"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 인증서 및 비대칭 키
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,9 +68,8 @@ ms.locfileid: "86001022"
 ## <a name="tools"></a>도구  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서는 인증서 및 강력한 이름 키 파일을 생성하는 도구 및 유틸리티를 제공합니다. 이러한 도구는 키 생성 프로세스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구문보다 더 많은 융통성을 제공합니다. 이러한 도구를 사용하여 보다 복잡한 키 길이가 있는 RSA 키를 만든 다음 이 키를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 가져올 수 있습니다. 다음 표에는 이러한 도구를 찾을 수 있는 위치가 나와 있습니다.  
   
-|||  
-|-|-|  
-|도구|목적|  
+| 도구 | 목적 |
+| ---- | ------- |
 |[New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)|자체 서명된 인증서를 만듭니다.|  
 |[makecert](/windows/desktop/SecCrypto/makecert)|인증서를 만듭니다. **New-SelfSignedCertificate**가 대신 사용됩니다.|  
 |[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|대칭 키에 대한 강력한 이름을 만듭니다.|  
