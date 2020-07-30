@@ -13,19 +13,19 @@ ms.assetid: 10cb119d-92df-4124-b85d-cd2f2666c99c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d692345d5403c805369e8e415863131623694779
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1f597a76f2f94acbfeb3647a01da0d2183b99ad2
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85721961"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362763"
 ---
 # <a name="mssql_eng003724"></a>MSSQL_ENG003724
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## <a name="message-details"></a>메시지 정보  
   
-|||  
+|attribute|값|  
 |-|-|  
 |제품 이름|SQL Server|  
 |이벤트 ID|3724|  
@@ -38,7 +38,7 @@ ms.locfileid: "85721961"
  데이터베이스의 개체가 복제되면 **sysarticles** 시스템 테이블(스냅샷 및 트랜잭션 게시의 경우) 또는 **sysmergearticles** 시스템 테이블(병합 게시의 경우)에 복제된 상태로 표시됩니다. 복제된 개체를 삭제하려고 하면 이 오류가 발생합니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- 데이터베이스 개체를 삭제하기 전에 복제되지 않았는지 확인합니다. 다음은 그 예입니다.  
+ 데이터베이스 개체를 삭제하기 전에 복제되지 않았는지 확인합니다. 예를 들면 다음과 같습니다.  
   
 -   게시 데이터베이스에서 오류가 발생한 경우 개체를 삭제하기 전에 게시에서 해당 아티클을 삭제합니다. 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
   

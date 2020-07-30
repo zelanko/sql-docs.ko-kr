@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e89b45bd-59c1-4d23-8bd7-3dafc1947448
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 4aedce85a63c5f931cfab0b590810d1fac36d64b
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: db29fe499889ce67af5979821d07f2eef2a91f75
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293650"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394935"
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>MySQL용 SSMA 설치(MySqlToSql)
 MySQL 용 SSMA (SQL Server Migration Assistant)는 MySQL에서 또는 SQL Azure로의 마이그레이션을 수행 하는 데 사용 하는 클라이언트 응용 프로그램으로 구성 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 또한 마이그레이션된 데이터베이스에서 데이터 마이그레이션 및 MySQL 시스템 기능 사용을 지 원하는 확장 팩이 포함 되어 있습니다.  
@@ -29,9 +29,8 @@ MySQL 용 SSMA (SQL Server Migration Assistant)는 MySQL에서 또는 SQL Azure�
   
 ## <a name="contents"></a>콘텐츠  
   
-|||  
+|항목|설명|  
 |-|-|  
-|**뒷부분**|**설명**|  
 |[MySQLToSQL&#41;&#40;MySQL 용 SSMA 클라이언트 설치](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|SSMA 클라이언트를 설치 하는 방법에 대 한 정보와 지침을 제공 합니다.|  
 |[SQL Server에 SSMA 구성 요소 설치 (MySQL to SQL)](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|인스턴스에 확장 팩을 설치 하는 방법에 대 한 정보와 지침을 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.|  
 |[MySQLToSql&#41;&#40;MySQL 용 SSMA 구성 요소 제거](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|클라이언트 프로그램을 제거 하는 방법에 대 한 지침을 제공 합니다.|  

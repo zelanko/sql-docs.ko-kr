@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 78bfa2f0-358b-40bb-be2e-16262752d676
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44cdaf1ea526a85816ddee18157a4a11052fa040
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8d4aa045313cb62e3afefce4ba5b02e55718ba85
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765224"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242563"
 ---
 # <a name="ado-md-methods"></a>ADO MD 메서드
 
-|||  
+|메서드|설명|  
 |-|-|  
 |[닫기](../../../ado/reference/ado-md-api/close-method-ado-md.md)|열린 셀 집합을 닫습니다.|  
 |[GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)|고유 이름으로 ADO MD 스키마 개체 (차원, 계층, 수준 또는 멤버)를 검색 합니다.|  

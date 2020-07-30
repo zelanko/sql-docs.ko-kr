@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: markingmyname
 ms.author: maghan
 ms.custom: contperfq4
-ms.openlocfilehash: f1b4b8db6d5af2ff76b85933ab4fcdc3f67e4987
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 375d0b39fe0f898961d1386445b3b8e3f2945ee4
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159731"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363310"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>max degree of parallelism 서버 구성 옵션 구성
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "86159731"
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 **최대 병렬 처리 수준** 서버 구성 값을 구성할 때 다음 지침을 사용하세요.
 
-||||
+|서버 구성|프로세서 수|지침|
 |----------------|-----------------|-----------------|
 |단일 NUMA 노드가 있는 서버|8개 이하의 논리 프로세서|MAXDOP을 #개 이하 논리 프로세서로 유지|
 |단일 NUMA 노드가 있는 서버|논리 프로세서 8개 초과|MAXDOP을 8개로 유지|
@@ -75,7 +75,7 @@ ms.locfileid: "86159731"
   
 **최대 병렬 처리 수준** 서버 구성 값을 구성할 때 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]~[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 다음 지침을 사용합니다.
 
-||||
+|서버 구성|프로세서 수|지침|
 |----------------|-----------------|-----------------|
 |단일 NUMA 노드가 있는 서버|8개 이하의 논리 프로세서|MAXDOP을 #개 이하 논리 프로세서로 유지|
 |단일 NUMA 노드가 있는 서버|논리 프로세서 8개 초과|MAXDOP을 8개로 유지|

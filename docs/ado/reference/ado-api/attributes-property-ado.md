@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 488fe5a46b994ed664c6355e24fe8d567d5ff11d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fe649e6636f33dfc73ee5aac949830b4175cd3ec
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762910"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242453"
 ---
 # <a name="attributes-property-ado"></a>Attributes 속성(ADO)
 개체의 특성을 하나 이상 나타냅니다.  
@@ -47,12 +47,18 @@ ms.locfileid: "82762910"
 >  **원격 데이터 서비스 사용** 클라이언트 쪽 **연결** 개체에서는이 속성을 사용할 수 없습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
-  
-|||  
-|-|-|  
-|[연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Field 개체](../../../ado/reference/ado-api/field-object.md)|  
-|[Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)|[속성 개체(ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [Field 개체](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)  
+        [속성 개체(ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>참고 항목  
  [특성 및 이름 속성 예제 (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
  [특성 및 이름 속성 예제 (VC + +)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b38b11917bf5d8a3248a6c9c0a64518109d7c83
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9aa95b7633d5dfa3a484dd97289c15c5737af986
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760189"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242743"
 ---
 # <a name="cursorlocation-property-ado"></a>CursorLocation 속성(ADO)
 커서 서비스의 위치를 나타냅니다.  
@@ -42,10 +42,15 @@ ms.locfileid: "82760189"
 >  **원격 데이터 서비스 사용** 클라이언트 쪽 **레코드 집합** 또는 **연결** 개체에서 사용 하는 경우 **CursorLocation** 속성은 **adUseClient**로만 설정할 수 있습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
-  
-|||  
-|-|-|  
-|[연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>참고 항목  
  [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)

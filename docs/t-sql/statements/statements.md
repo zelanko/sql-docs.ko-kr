@@ -13,16 +13,16 @@ ms.assetid: d8d6f62a-e815-425c-a80e-a63fd34ec275
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 287b86bd9cc368d2a04ea7f7be5e1397e2d6aab9
-ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
+ms.openlocfilehash: 0fc44d29ca0b94f03fd94e89d5ba442f53fdf5da
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85942910"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87392298"
 ---
 # <a name="transact-sql-statements"></a>Transact-SQL 문
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SQL 문은 작업의 원자성 단위이며 완전히 성공하거나 완전히 실패합니다. SQL 문은 식별자, 매개 변수, 변수, 이름, 데이터 형식 및 성공적으로 컴파일되는 SQL 예약어로 구성된 지침 집합입니다. `BeginTransaction` 명령에 트랜잭션 시작이 지정되지 않을 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 SQL 문에 대한 *암시적* 트랜잭션을 만듭니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 문이 성공하는 경우 항상 암시적 트랜잭션을 커밋하고 명령이 실패하는 경우 암시적 트랜잭션을 롤백합니다.  
 

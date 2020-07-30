@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 868acb8dec7ed8a6bd22f3cc5551dede63a50408
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e7465ee994a0e09cf62b80d3317948479354780b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757139"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242713"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 공급자가 명령을 실행 하는 방법을 지정 합니다.  
@@ -40,15 +40,21 @@ ms.locfileid: "82757139"
   
 |상수|  
 |--------------|  
-|AdoEnums 옵션. ASYNCEXECUTE|  
-|AdoEnums 인출|  
-|AdoEnums 옵션. ASYNCFETCHNONBLOCKING|  
-|AdoEnums. NORECORDS|  
-|AdoEnums 옵션입니다. 지정 되지 않았습니다.|  
+|AdoEnums.Exe를 수행 합니다. ASYNCEXECUTE|  
+|AdoEnums.Exe-ASYNCFETCH|  
+|AdoEnums.Exe를 선택 합니다. ASYNCFETCHNONBLOCKING|  
+|AdoEnums.ExeNORECORDS|  
+|AdoEnums.Exe가공선 Eoption. 지정 되지 않음|  
   
 ## <a name="applies-to"></a>적용 대상  
-  
-|||  
-|-|-|  
-|[Execute 메서드(ADO 명령)](../../../ado/reference/ado-api/execute-method-ado-command.md)|[Execute 메서드(ADO 연결)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|  
-|[Open 메서드(ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|[Requery 메서드](../../../ado/reference/ado-api/requery-method.md)|
+
+:::row:::
+    :::column:::
+        [Execute 메서드(ADO 명령)](../../../ado/reference/ado-api/execute-method-ado-command.md)  
+        [Execute 메서드(ADO 연결)](../../../ado/reference/ado-api/execute-method-ado-connection.md)  
+    :::column-end:::
+    :::column:::
+        [Open 메서드(ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+        [Requery 메서드](../../../ado/reference/ado-api/requery-method.md)  
+    :::column-end:::
+:::row-end:::

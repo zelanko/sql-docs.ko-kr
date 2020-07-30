@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: ad4ba313-1161-4bc7-b8f6-4083305bc81e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d49db4cb1d471d06b6e834e46218307bc25a008
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 02eedbeaf8c9d85f3a896b8991661461825b2b19
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758709"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242673"
 ---
 # <a name="idsoshapeextensions-interface"></a>IDSOShapeExtensions 인터페이스
 셰이프 공급자에 대 한 내부 OLE DB 데이터 소스 개체를 가져옵니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -36,7 +36,7 @@ public:
   
 ## <a name="methods"></a>메서드  
   
-|||  
+|메서드|설명|  
 |-|-|  
 |[GetDataProviderDSO 메서드](../../../ado/reference/ado-api/getdataproviderdso-method.md)|셰이프 공급자에서 내부 OLE DB 데이터 소스 개체를 검색 합니다.|  
   

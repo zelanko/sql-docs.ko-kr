@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fbc22ea4b3673d6ed4d0d4ee581da8fadb473fb8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d09e76a26e0364857c70469ef1308f21e298727b
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888055"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395048"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>복제, 변경 내용 추적 및 변경 데이터 캡처 - Always On 가용성 그룹
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -205,13 +205,12 @@ Always On 가용성 그룹의 일부인 데이터베이스에서 변경 데이�
 ### <a name="restrictions"></a>제한  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 지원되는 복제 조합은 다음과 같습니다.  
   
-|||||  
+|복제|게시자|배포자|가입자|  
 |-|-|-|-|  
-||**게시자**|**배포자**|**구독자**|  
-|**트랜잭션**|예<br /><br /> 참고: 양방향 및 상호 트랜잭션 복제에 대한 지원을 포함하지 않습니다.|예|예| 
+|**트랜잭션**|예<br /><br /> 참고: 양방향 및 상호 트랜잭션 복제에 대한 지원을 포함하지 않습니다.|예|yes| 
 |**P2P**|예|예|예|  
 |**병합**|예|예|예|  
-|**스냅샷**|예|예|예|
+|**스냅샷**|예|아니요|예|
   
  **배포자 데이터베이스는 데이터베이스 미러링과 함께 사용할 수 없습니다.  
   

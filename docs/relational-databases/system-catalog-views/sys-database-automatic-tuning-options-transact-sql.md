@@ -1,6 +1,6 @@
 ---
 title: sys. database_automatic_tuning_options (Transact-sql) | Microsoft Docs
-description: SQL Database에서 자동 조정 옵션을 확인 하는 방법에 대해 알아봅니다.
+description: SQL Database에서 자동 조정 옵션을 확인 하는 방법에 대해 알아봅니다. 필요한 권한을 확인 하 고 사용 가능한 추가 리소스를 확인 합니다.
 ms.custom: ''
 ms.date: 07/20/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6660bc43a6db9437ba628c0856760aac4ccd52f5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4de2851505d7c5c240d792ecacdaa6bf3d1c6c3e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787144"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242953"
 ---
 # <a name="sysdatabase_automatic_tuning_options-transact-sql"></a>sys. 데이터베이스 \_ 자동 \_ Tuning_options (transact-sql)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]

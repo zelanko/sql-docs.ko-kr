@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bcc1b02671d73e9056babb417ba2fa22a4d6cf0e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b69826fbbc45751247ce2eba6fe74ad251189dea
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762544"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242693"
 ---
 # <a name="filter-property"></a>Filter 속성
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 데이터에 대 한 필터를 나타냅니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "82762544"
 
 -   *FieldName* 은 **레코드 집합**의 올바른 필드 이름 이어야 합니다. 필드 이름에 공백이 포함 된 경우 이름을 대괄호로 묶어야 합니다.  
   
--   연산자는 \< , >, \< =, >=,  <>, = 또는 **와**같은 중 하나 여야 합니다.  
+-   연산자는 \<, > , \<=, > =,  <>, = 또는 **와**같은 중 하나 여야 합니다.  
   
 -   Value는 필드 값을 비교 하는 데 사용할 값입니다 (예: ' Smith ', #8/24/95 #, 12.345 또는 $50.00). 날짜에 문자열 및 파운드 기호 (#)와 함께 작은따옴표를 사용 합니다. 숫자의 경우 소수점, 달러 기호 및 과학적 표기법을 사용할 수 있습니다. 연산자가 **LIKE**인 경우 값은 와일드 카드를 사용할 수 있습니다. 별표 (*) 및 백분율 기호 (%)만 와일드 카드는 사용할 수 있으며 문자열에서 마지막 문자 여야 합니다. 값은 Null일 수 없습니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "82762544"
 -   대신이 필터를 다음과 같이 생성 합니다.  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   **LIKE** 절에서는 패턴의 시작과 끝에 와일드 카드를 사용할 수 있습니다. 예를 들어 `LastName Like '*mit*'`를 사용할 수 있습니다. 또는 **LIKE** 를 사용 하는 경우 패턴의 끝에만 와일드 카드를 사용할 수 있습니다. 예를 들어 `LastName Like 'Smit*'`.  
+-   **LIKE** 절에서는 패턴의 시작과 끝에 와일드 카드를 사용할 수 있습니다. 예를 들어 `LastName Like '*mit*'`를 사용할 수 있습니다. 또는 **LIKE** 를 사용 하는 경우 패턴의 끝에만 와일드 카드를 사용할 수 있습니다. 예: `LastName Like 'Smit*'`.  
   
  필터 상수를 사용 하면 예를 들어, 마지막 [UpdateBatch 메서드](../../../ado/reference/ado-api/updatebatch-method.md) 호출 중에 영향을 받은 레코드만 볼 수 있으므로 일괄 업데이트 모드에서 개별 레코드 충돌을 쉽게 해결할 수 있습니다.  
   
@@ -90,7 +90,7 @@ Filter 속성에 사용할 배열을 만들 수 있는 책갈피 값에 대 한 
   
 다음 표에서는 다양 한 필터링 및 수정 조합에서 **Adfilterpendingrecords** 의 효과를 요약 하 여 보여 줍니다. 왼쪽 열에는 가능한 수정 내용이 표시 됩니다. 키가 아닌 필드, 단일 키 테이블의 키 필드 또는 다중 키 테이블의 키 필드에 대 한 수정 작업을 수행할 수 있습니다. 맨 위 행은 필터링 조건을 표시 합니다. 필터링은 키가 아닌 필드, 단일 키 테이블의 키 필드 또는 다중 키 테이블의 키 필드 중 하나를 기반으로 할 수 있습니다. 교차 하는 셀에 결과가 표시 됩니다. **+** 더하기 기호는 **Adfilterpendingrecords** 를 적용 하 여 비어 있지 않은 **레코드 집합**을 생성 한다는 것을 의미 합니다. **-** 빼기 기호는 빈 **레코드 집합**을 의미 합니다.  
   
-||키가 아닌|단일 키|여러 키|
+|넣을|키가 아닌|단일 키|여러 키|
 |-|--------------|----------------|-------------------|
 |**키가 아닌**|+|+|+|
 |**단일 키**|+|-|해당 없음|

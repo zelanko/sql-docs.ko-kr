@@ -1,5 +1,5 @@
 ---
-title: sysdatabases (Transact-sql) | Microsoft Docs
+title: sys.sys데이터베이스 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,17 +21,17 @@ ms.assetid: 60a93880-62f1-4eda-a886-f046706ba90c
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b0dab1ca5f21ced6a54192a4b0173ead68fd6f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c32503ffe44cf45dbff9608e0baa9127e39b1a4d
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089160"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393466"
 ---
 # <a name="syssysdatabases-transact-sql"></a>sys.sysdatabases(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  인스턴스의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]각 데이터베이스에 대해 하나의 행을 포함 합니다. 가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 처음 설치 되 면 **sysdatabases** 에 **master**, **model**, **msdb**및 **tempdb** 데이터베이스에 대 한 항목이 포함 됩니다.  
+  인스턴스의 각 데이터베이스에 대해 하나의 행을 포함 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 처음 설치 되 면 **sysdatabases** 에 **master**, **model**, **msdb**및 **tempdb** 데이터베이스에 대 한 항목이 포함 됩니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
@@ -48,7 +48,7 @@ ms.locfileid: "68089160"
 |**쓰이는**|**datetime**|다음에 사용하도록 예약됩니다.|  
 |**category**|**int**|복제에 사용되는 정보의 비트맵을 포함합니다.<br /><br /> 1 = 스냅샷 또는 트랜잭션 복제용으로 게시됩니다.<br /><br /> 2 = 스냅샷 또는 트랜잭션 게시를 구독합니다.<br /><br /> 4 = 병합 복제용으로 게시됩니다.<br /><br /> 8 = 병합 게시를 구독합니다.<br /><br /> 16 = 배포 데이터베이스입니다.|  
 |**cmptlevel**|**tinyint**|데이터베이스의 호환성 수준입니다. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.|  
-|**이름도**|**nvarchar(260)**|데이터베이스 주 파일의 운영 체제 경로 및 이름입니다.<br /><br /> **filename** 은 **dbcreator**, **sysadmin**, 데이터베이스 소유자에 게 CREATE ANY DATABASE 권한 또는 피부 여자 (ALTER any DATABASE, CREATE any database, VIEW any DEFINITION) 중 하나가 포함 된 데이터베이스 소유자에 게 표시 됩니다. 경로 및 파일 이름을 반환 하려면 [sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md) 호환성 뷰 또는 [sys. database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 뷰를 쿼리 합니다.|  
+|**filename**|**nvarchar(260)**|데이터베이스 주 파일의 운영 체제 경로 및 이름입니다.<br /><br /> **filename** 은 **dbcreator**, **sysadmin**, 데이터베이스 소유자에 게 CREATE ANY DATABASE 권한 또는 피부 여자 (ALTER any DATABASE, CREATE any database, VIEW any DEFINITION) 중 하나가 포함 된 데이터베이스 소유자에 게 표시 됩니다. 경로 및 파일 이름을 반환 하려면 [sys.sys파일](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md) 호환성 뷰 또는 [database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 뷰를 쿼리 합니다.|  
 |**version**|**smallint**|데이터베이스가 만들어진 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드의 내부 버전 번호입니다. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="see-also"></a>참고 항목  

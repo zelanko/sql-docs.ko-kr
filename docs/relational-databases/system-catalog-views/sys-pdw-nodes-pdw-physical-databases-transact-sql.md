@@ -12,19 +12,19 @@ ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 48f2a2d485f99b91b0f30a6a707a900ccbbeea96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64d74d28c4b99e75c114effdf651a58d01a614d6
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74399912"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394048"
 ---
 # <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys. pdw_nodes_pdw_physical_databases (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
-  계산 노드의 각 물리적 데이터베이스에 대 한 행을 포함 합니다. 데이터베이스에 대 한 자세한 정보를 얻기 위해 실제 데이터베이스 정보를 집계 합니다. 정보를 결합 하려면 `sys.pdw_nodes_pdw_physical_databases` `sys.pdw_database_mappings` 및 `sys.databases` 테이블에를 조인 합니다.  
+  계산 노드의 각 물리적 데이터베이스에 대 한 행을 포함 합니다. 데이터베이스에 대 한 자세한 정보를 얻기 위해 실제 데이터베이스 정보를 집계 합니다. 정보를 결합 하려면 `sys.pdw_nodes_pdw_physical_databases` 및 테이블에를 조인 합니다 `sys.pdw_database_mappings` `sys.databases` .  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|데이터베이스의 개체 ID입니다. 이 값은 [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 뷰의 database_id와 동일 하지 않습니다.|  
 |physical_name|**sysname**|셸/계산 노드에 있는 데이터베이스의 물리적 이름입니다. 이 값은 [pdw_database_mappings &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) 뷰의 physical_name 열에 있는 값과 동일 합니다.|  

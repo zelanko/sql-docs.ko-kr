@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 507ac2a61043260435a18c90fb473130988e7f35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0785c3ecc6335494ed4c34f8919e3ad766236631
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67948517"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394515"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>SAP ASE 데이터베이스 개체 변환 (SybaseToSQL)
-SAP 적응 서버 엔터프라이즈 (ASE)에 연결 하 고, 또는 Azure SQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결 하 고, 프로젝트 및 데이터 매핑 옵션을 설정한 후에는 Sap 적응 서버 엔터프라이즈 (ase) 데이터베이스 개체 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 또는 azure sql database 개체로 변환할 수 있습니다.  
+SAP 적응 서버 엔터프라이즈 (ASE)에 연결 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고, 또는 AZURE SQL에 연결 하 고, 프로젝트 및 데이터 매핑 옵션을 설정한 후에는 Sap 적응 서버 엔터프라이즈 (ase) 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 azure sql database 개체로 변환할 수 있습니다.  
   
 ## <a name="the-conversion-process"></a>변환 프로세스  
-데이터베이스 개체를 변환 하면 ASE에서 개체 정의를 사용 하 여 유사 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 SQL Azure 개체로 변환한 다음이 정보를 ssma 메타 데이터로 로드 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL 인스턴스에 정보를 로드 하지 않습니다. 그런 다음 또는 Azure SQL 메타 데이터 탐색기를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하 여 개체 및 해당 속성을 볼 수 있습니다.
+데이터베이스 개체를 변환 하면 ASE에서 개체 정의를 사용 하 여 유사 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 SQL Azure 개체로 변환한 다음이 정보를 SSMA 메타 데이터로 로드 합니다. 또는 Azure SQL 인스턴스에 정보를 로드 하지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 그런 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 AZURE SQL 메타 데이터 탐색기를 사용 하 여 개체 및 해당 속성을 볼 수 있습니다.
   
 변환 하는 동안 SSMA는 출력 창에 출력 메시지를 인쇄 하 고 **오류 목록** 창에 오류 메시지를 출력 합니다. 출력 및 오류 정보를 사용 하 여 ASE 데이터베이스를 수정 하거나 변환 프로세스를 수정 하 여 원하는 변환 결과를 가져와야 하는지 여부를 결정할 수 있습니다.  
   
@@ -54,27 +54,57 @@ ASE 데이터베이스 개체를 변환 하려면 먼저 변환할 개체를 선
   
 > [!NOTE]  
 > 일부 SAP ASE 시스템 함수는 동작의 해당 SQL Server 시스템 함수와 정확히 일치 하지 않습니다. SAP ASE 동작을 에뮬레이트하기 위해 SSMA는 변환 된 SQL Server 데이터베이스에서 2ss ' 이라는 스키마를 사용 하 여 사용자 정의 함수를 생성 합니다. 프로젝트 설정에 따라 일부 SQL Server 시스템 함수는 이러한 에뮬레이트된 함수로 바뀝니다. SSMA는 다음과 같은 사용자 정의 함수를 만듭니다.  
-  
-||||  
-|-|-|-|  
-|**char_length_nvarchar**|**index_colorder**|**ssma_datepart**|  
-|**char_length_varchar**|**inttohex**|**substring_nvarchar**|  
-|**charindex_nvarchar**|**ssma_datediff**|**substring_varbinary**|  
-|**charindex_varchar**|**hextoint**|**substring_varchar**|  
-|**ulowsurr**|**to_unichar**|**ssma_current_time**|  
-|**uhighsurr**|||  
-  
+
+:::row:::
+    :::column:::
+        **char_length_nvarchar**  
+        **char_length_varchar**  
+        **charindex_nvarchar**  
+        **charindex_varchar**  
+        **hextoint**  
+        **index_colorder**  
+    :::column-end:::
+    :::column:::
+        **inttohex**  
+        **ssma_current_time**  
+        **ssma_datediff**  
+        **ssma_datepart**  
+        **substring_nvarchar**  
+        **substring_varbinary**  
+    :::column-end:::
+    :::column:::
+        **substring_varchar**  
+        **to_unichar**  
+        **uhighsurr**  
+        **ulowsurr**  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="objects-not-supported-in-azure-sql"></a>Azure SQL에서 지원 되지 않는 개체  
 다음 T-sql 키워드는 SQL Server 온-프레미스로 변환 하는 동안 SAP ASE 용 SSMA에서 사용 되지만 이러한 키워드는 SQL Azure T-sql 구문에서 지원 되지 않습니다.  
-  
-||||  
-|-|-|-|  
-|CHECKPOINT|CREATE/ALTER/DROP DEFAULT|CREATE/DROP RULE|  
-|DBCC TRACEOFF|DBCC TRACEON|GRANT/REVOKE/DENY ALL|  
-|KILL|READTEXT|SELECT INTO|  
-|SET OFFSETS|SETUSER|SHUTDOWN|  
-|WRITETEXT|||  
-  
+
+:::row:::
+    :::column:::
+        CHECKPOINT  
+        CREATE/ALTER/DROP DEFAULT  
+        CREATE/DROP RULE  
+        DBCC TRACEOFF  
+        DBCC TRACEON  
+    :::column-end:::
+    :::column:::
+        GRANT/REVOKE/DENY ALL  
+        KILL  
+        READTEXT  
+        SELECT INTO  
+        SET OFFSETS  
+    :::column-end:::
+    :::column:::
+        SETUSER  
+        SHUTDOWN  
+        WRITETEXT  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="viewing-conversion-problems"></a>변환 문제 보기  
 일부 SAP ASE 개체는 변환 되지 않을 수 있습니다. 요약 변환 보고서를 보면 변환 성공률을 확인할 수 있습니다.  
   
@@ -120,7 +150,7 @@ ASE 데이터베이스 개체를 변환 하려면 먼저 변환할 개체를 선
   
 -   SAP ASE 개체를 변경 하 여 문제가 있는 코드를 제거 하거나 수정할 수 있습니다. 업데이트 된 코드를 SSMA에 로드 하려면 메타 데이터를 업데이트 해야 합니다. 자세한 내용은 [SAP ASE에 연결 &#40;SybaseToSQL&#41;을 ](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)참조 하세요.  
   
--   마이그레이션할 때 개체를 제외할 수 있습니다. 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure Sql 메타 데이터 탐색기 및 Sybase 메타 데이터 탐색기에서 또는 azure sql로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 로드 하기 전에 항목 옆에 있는 확인란의 선택을 취소 하 고 SAP ASE에서 데이터를 마이그레이션합니다.  
+-   마이그레이션할 때 개체를 제외할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]또는 AZURE Sql 메타 데이터 탐색기 및 Sybase 메타 데이터 탐색기에서 또는 AZURE sql로 개체를 로드 하기 전에 항목 옆에 있는 확인란의 선택을 취소 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하 고 SAP ASE에서 데이터를 마이그레이션합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계에서는 변환 된 [데이터베이스 개체를 SQL Server/SQL Azure (SybaseToSQL)로 로드](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06)합니다.  

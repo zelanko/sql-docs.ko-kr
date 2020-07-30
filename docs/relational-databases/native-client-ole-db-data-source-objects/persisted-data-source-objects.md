@@ -1,5 +1,5 @@
 ---
-title: 지속형 데이터 원본 개체 | Microsoft Docs
+title: 지속형 데이터 원본 개체 (Native Client OLE DB 공급자)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,18 +16,19 @@ ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a0af87b23685fb0249b5abf6dbb212715e166c6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a28fd6b4f3c7fc46223a75fdf96881a73739b8d7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998269"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242183"
 ---
-# <a name="persisted-data-source-objects"></a>지속형 데이터 원본 개체
+# <a name="persisted-data-source-objects-in-sql-server-native-client"></a>SQL Server Native Client의 지속형 데이터 원본 개체 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 **IPersistFile** 인터페이스를 사용 하 여 지속형 데이터 원본 개체를 지원 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  **1. 데이터 원본 초기화 지속:**  
   
  이 예에서는 서버, 데이터베이스 및 연결의 Windows 인증 모드 사용을 정의하는 데이터 원본 초기화 속성을 지속하는 함수를 보여 줍니다. 서버 이름과 데이터베이스 이름은 함수의 *pLocation* 및 *pDatasource* 매개 변수로 받습니다.  

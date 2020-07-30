@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 48fc3a1adf8dbeae010e4035ac4f2e390c015e54
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0688fc8b45f444ca8c711f3229623484fa2139a8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756541"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242583"
 ---
 # <a name="refresh-method-ado"></a>Refresh 메서드(ADO)
 공급자와 관련 하 여 사용 가능한 개체를 반영 하도록 컬렉션의 개체를 업데이트 합니다.  
@@ -54,17 +54,35 @@ collection.Refresh
  일부 개체의 **Properties** 컬렉션에 **Refresh** 메서드를 사용 하면 공급자가 노출 하는 동적 속성을 사용 하 여 컬렉션을 채웁니다. 이러한 속성은 ADO에서 지 원하는 기본 제공 속성 외에 공급자와 관련 된 기능에 대 한 정보를 제공 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
-  
-||||  
-|-|-|-|  
-|[축 컬렉션](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|[Columns 컬렉션](../../../ado/reference/adox-api/columns-collection-adox.md)|[CubeDefs 컬렉션](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)|  
-|[차원 컬렉션](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)|[Errors 컬렉션](../../../ado/reference/ado-api/errors-collection-ado.md)|[Fields 컬렉션](../../../ado/reference/ado-api/fields-collection-ado.md)|  
-|[Groups 컬렉션](../../../ado/reference/adox-api/groups-collection-adox.md)|[계층 컬렉션](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[Indexes 컬렉션](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
-|[Keys 컬렉션](../../../ado/reference/adox-api/keys-collection-adox.md)|[수준 컬렉션](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)|[Members 컬렉션](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|  
-|[Parameters 컬렉션](../../../ado/reference/ado-api/parameters-collection-ado.md)|[위치 컬렉션](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[프로시저 컬렉션](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
-|[속성 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)|[Tables 컬렉션](../../../ado/reference/adox-api/tables-collection-adox.md)|[사용자 컬렉션](../../../ado/reference/adox-api/users-collection-adox.md)|  
-|[Views 컬렉션](../../../ado/reference/adox-api/views-collection-adox.md)|||  
-  
+
+:::row:::
+    :::column:::
+        [축 컬렉션](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)  
+        [Columns 컬렉션](../../../ado/reference/adox-api/columns-collection-adox.md)  
+        [CubeDefs 컬렉션](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)  
+        [차원 컬렉션](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)  
+        [Errors 컬렉션](../../../ado/reference/ado-api/errors-collection-ado.md)  
+        [Fields 컬렉션](../../../ado/reference/ado-api/fields-collection-ado.md)  
+        [Groups 컬렉션](../../../ado/reference/adox-api/groups-collection-adox.md)  
+    :::column-end:::
+    :::column:::
+        [계층 컬렉션](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)  
+        [Indexes 컬렉션](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+        [Keys 컬렉션](../../../ado/reference/adox-api/keys-collection-adox.md)  
+        [수준 컬렉션](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)  
+        [Members 컬렉션](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
+        [Parameters 컬렉션](../../../ado/reference/ado-api/parameters-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [위치 컬렉션](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
+        [프로시저 컬렉션](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+        [속성 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
+        [Tables 컬렉션](../../../ado/reference/adox-api/tables-collection-adox.md)  
+        [사용자 컬렉션](../../../ado/reference/adox-api/users-collection-adox.md)  
+        [Views 컬렉션](../../../ado/reference/adox-api/views-collection-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>참고 항목  
  [Refresh 메서드 예제 (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Refresh 메서드 예제 (VC + +)](../../../ado/reference/ado-api/refresh-method-example-vc.md)   

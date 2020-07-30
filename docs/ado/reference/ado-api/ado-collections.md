@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: faad4d819939362f7e3b9c22062768bee71a0cda
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c19252e14ba5a04329c9cdc1c38b5ee6398b7874
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749354"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242903"
 ---
 # <a name="ado-collections"></a>ADO 컬렉션
 이러한 컬렉션과 ADO 개체 간의 관계는 [Ado 개체 모델](../../../ado/reference/ado-api/ado-object-model.md)에 표시 됩니다.  
   
  각 컬렉션은 해당 개체를 포함할 수 있습니다. 예를 들어 [오류](../../../ado/reference/ado-api/error-object.md) 개체는 [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) 컬렉션에 포함 될 수 있습니다. 개체에 대 한 자세한 내용은 [ADO 개체](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) 또는 특정 개체 항목을 참조 하세요.  
   
-|||  
+|컬렉션|설명|  
 |-|-|  
 |[Errors](../../../ado/reference/ado-api/errors-collection-ado.md)|단일 공급자 관련 오류에 대 한 응답으로 생성 된 모든 **오류** 개체를 포함 합니다.|  
 |[필드](../../../ado/reference/ado-api/fields-collection-ado.md)|**레코드 집합** 개체의 모든 **필드** 개체를 포함 합니다.|  

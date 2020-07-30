@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 794d2f682c5a32ee348d229cfd2413687a57843e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d70d9599dda2f71edff911ad42821fdf101b524c
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85637819"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363175"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>보조-주 복제본 읽기/쓰기 연결 리디렉션(Always On 가용성 그룹)
 
@@ -62,7 +62,7 @@ ms.locfileid: "85637819"
 
 기본적으로 읽기/쓰기 복제본 연결 리디렉션은 복제본에 대해 설정되지 않습니다. 보조 복제본이 연결 요청을 처리하는 방식은 보조 복제본이 연결을 허용하도록 설정되어 있는지 여부와 연결 문자열의 `ApplicationIntent` 설정에 따라 좌우됩니다. 다음 표에서는 보조 복제본이 `SECONDARY_ROLE (ALLOW CONNECTIONS = )` 및 `ApplicationIntent`에 따라 연결을 처리하는 방법을 보여 줍니다.
 
-||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
+|`ApplicationIntent` 값|`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
 |`ApplicationIntent=ReadWrite`<br/> 기본값|연결 실패|연결 실패|연결 성공<br/>읽기 성공<br/>쓰기 실패|
 |`ApplicationIntent=ReadOnly`|연결 실패|연결 성공|연결 성공
@@ -73,7 +73,7 @@ ms.locfileid: "85637819"
 
 읽기/쓰기 연결 리디렉션을 설정한 후에는 복제본이 연결 요청을 처리하는 방식이 다르게 동작합니다. 연결 동작은 여전히 `SECONDARY_ROLE (ALLOW CONNECTIONS = )` 및 `ApplicationIntent` 설정에 따라 좌우됩니다. 다음 표에서는 `READ_WRITE_ROUTING`이 설정된 보조 복제본이 `SECONDARY_ROLE (ALLOW CONNECTIONS = )` 및 `ApplicationIntent`에 따라 연결을 처리하는 방법을 보여 줍니다.
 
-||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
+|`ApplicationIntent` 값|`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
 |`ApplicationIntent=ReadWrite`<br/>기본값|연결 실패|연결 실패|연결 경로가 주 복제본으로 지정|
 |`ApplicationIntent=ReadOnly`|연결 실패|연결 성공|연결 성공

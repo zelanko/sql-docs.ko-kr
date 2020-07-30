@@ -18,15 +18,15 @@ ms.assetid: 3f51a9a4-75f8-4a11-9552-8bf6118b68da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0475dc1666af92e141610e56200a881798b3774b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bc96f144e7b23b54faae5a58bf6f17975daa305c
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821328"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395219"
 ---
 # <a name="systime_zone_info-transact-sql"></a>sys. time_zone_info (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   지원 되는 표준 시간대에 대 한 정보를 반환 합니다. 컴퓨터에 설치 된 모든 표준 시간대는 다음 레지스트리 하이브에 저장 됩니다.  
 `KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`.  

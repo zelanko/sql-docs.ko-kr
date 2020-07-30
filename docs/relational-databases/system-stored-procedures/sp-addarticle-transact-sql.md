@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 35aa02236cf3e8a11d03539042ccdaf9049dd8f9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9201e8f74a62315132743c36669892b7bd3cc90f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731710"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394760"
 ---
 # <a name="sp_addarticle-transact-sql"></a>sp_addarticle(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -75,7 +75,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @source_table = ] 'source_table'`이 매개 변수는 더 이상 사용 되지 않습니다. 대신 *source_object* 를 사용 해야 합니다.  
   
- *이 매개 변수는 Oracle 게시자에 대해서는 지원되지 않습니다.*  
+ *이 매개 변수는 Oracle 게시자에 대해 지원 되지 않습니다.*  
   
 `[ @destination_table = ] 'destination_table'`*Source_table*또는 저장 프로시저와 다른 경우 대상 (구독) 테이블의 이름입니다. *destination_table* 는 **sysname**이며 기본값은 NULL입니다. 즉, *source_table* *destination_table * ** 와 같습니다.  
   
@@ -342,9 +342,8 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="default-schema-options"></a>기본 스키마 옵션  
  이 표에서는 사용자가 *schema_options* 지정 하지 않은 경우 복제에 의해 설정 되는 기본값을 설명 합니다. 여기서이 값은 복제 유형 (맨 위에 표시) 및 아티클 유형 (첫 번째 열에 표시 됨)에 따라 달라 집니다.  
   
-|아티클 유형|복제 유형||  
+|아티클 유형|트랜잭션 복제|스냅샷 복제|  
 |------------------|----------------------|------|  
-||트랜잭션|스냅샷|  
 |**aggregate schema only**|**0x01**|**0x01**|  
 |**func schema only**|**0x01**|**0x01**|  
 |**indexed view schema only**|**0x01**|**0x01**|  
@@ -366,9 +365,8 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="valid-schema-options"></a>유효한 스키마 옵션  
  다음 표에서는 복제 유형 (위에 표시 됨)과 아티클 유형 (첫 번째 열에 표시 됨)에 따라 *schema_option* 의 허용 가능한 값에 대해 설명 합니다.  
   
-|아티클 유형|복제 유형||  
+|아티클 유형|트랜잭션 복제|스냅샷 복제|  
 |------------------|----------------------|------|  
-||트랜잭션|스냅샷|  
 |**logbased**|모든 옵션|**0x02** 를 제외한 모든 옵션|  
 |**logbased manualfilter**|모든 옵션|**0x02** 를 제외한 모든 옵션|  
 |**logbased manualview**|모든 옵션|**0x02** 를 제외한 모든 옵션|  
@@ -393,13 +391,13 @@ sp_addarticle [ @publication = ] 'publication'
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_addarticle**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [아티클 정의](../../relational-databases/replication/publish/define-an-article.md)   
+ [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [Transact-sql&#41;sp_articlecolumn &#40;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [Transact-sql&#41;sp_articlefilter &#40;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
  [Transact-sql&#41;sp_articleview &#40;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
  [Transact-sql&#41;sp_changearticle &#40;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [Transact-sql&#41;sp_droparticle &#40;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [Transact-sql&#41;sp_helparticle &#40;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helparticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [Transact-sql&#41;sp_helparticlecolumns &#40;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
  [Transact-sql&#41;를 &#40;하는 복제 저장 프로시저](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [데이터 및 데이터베이스 개체 게시](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

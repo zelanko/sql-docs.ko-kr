@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5ebf6f52e4c2ac9cc4875db26e633457915c0a5e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9e3d58ae93285accc9cf7a71e43579be4f54b21d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762942"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242463"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk 메서드(ADO)
 대량 텍스트 또는 이진 데이터 [필드](../../../ado/reference/ado-api/field-object.md)또는 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체에 데이터를 추가 합니다.  
@@ -59,11 +59,16 @@ object.AppendChunk Data
  **매개 변수** 개체에 대 한 첫 번째 **AppendChunk** 호출은 데이터를 매개 변수에 쓰고 기존 데이터를 덮어씁니다. **매개 변수** 개체에 대 한 후속 **AppendChunk** 호출은 기존 매개 변수 데이터에 추가 합니다. Null 값을 전달 하는 **AppendChunk** 호출은 모든 매개 변수 데이터를 삭제 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
-  
-|||  
-|-|-|  
-|[Field 개체](../../../ado/reference/ado-api/field-object.md)|[Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Field 개체](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>참고 항목  
  [AppendChunk 및 GetChunk 메서드 예제 (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
  [AppendChunk 및 GetChunk 메서드 예제 (VC + +)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
