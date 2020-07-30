@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b2b277707c8da44d141036c7e19055383c6c56a8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0a8c86710cdfce8a56c6a122b069773a16365cc2
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900018"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395852"
 ---
 # <a name="configure-an-oracle-publisher"></a>Oracle 게시자 구성
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "85900018"
 
 -   Oracle에서 데이터를 게시할 때 다음과 같은 제한 사항이 있습니다.  
 
-  | |2016 또는 이전 버전 |2017 이상 |
+  |시나리오|2016 또는 이전 버전 |2017 이상 |
   |-------|-------|--------|
   |Oracle에서 복제 |Oracle 10g 또는 이전 버전만 지원 |Oracle 10g 또는 이전 버전만 지원 |
   |Oracle로 복제 |Oracle 12c까지 |지원되지 않음 |
@@ -89,7 +89,7 @@ ms.locfileid: "85900018"
   
  Oracle Universal Installer에서 다음 정보를 제공해야 합니다.  
   
-|정보|Description|  
+|정보|설명|  
 |-----------------|-----------------|  
 |Oracle|Oracle 소프트웨어 설치를 위한 디렉터리 경로입니다. 기본값(C:\oracle\ora90 또는 유사한 경로)을 그대로 적용하거나 다른 경로를 입력합니다. Oracle 홈에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "Oracle 홈에 대한 고려 사항" 섹션을 참조하십시오.|  
 |Oracle 홈 이름|Oracle 홈 경로에 대한 별칭입니다.|  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b771c5b8dc54bb312893885aea9c9c151feef3e3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0b708b2b79c22240468811732d2ffae0955ea204
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760392"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242783"
 ---
 # <a name="commandtimeout-property-ado"></a>CommandTimeout 속성(ADO)
 시도를 종료 하 고 오류를 생성 하기 전에 명령을 실행 하는 동안 대기 하는 시간을 나타냅니다.  
@@ -36,11 +36,16 @@ ms.locfileid: "82760392"
  **연결** 개체에서 **CommandTimeout** 속성은 **연결이** 열린 후 읽기/쓰기 상태로 유지 됩니다.  
   
 ## <a name="applies-to"></a>적용 대상  
-  
-|||  
-|-|-|  
-|[명령 개체(ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [명령 개체(ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>참고 항목  
  [ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   

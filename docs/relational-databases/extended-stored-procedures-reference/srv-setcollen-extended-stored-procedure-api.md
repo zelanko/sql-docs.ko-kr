@@ -1,5 +1,6 @@
 ---
 title: srv_setcollen(확장 저장 프로시저 API) | Microsoft Docs
+description: Srv_setcollen 가변 길이 열의 현재 데이터 길이 (바이트)를 지정 하거나 NULL 값을 허용 하는 열을 지정 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3c60f1c3-4562-463a-a259-12df172788bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b1947a1fe9f08b8eb14a2285ee114b002f94260
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e87c0728bf68fb7cae076d25cbda0ac43a7ed3ef
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760865"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332464"
 ---
 # <a name="srv_setcollen-extended-stored-procedure-api"></a>srv_setcollen(확장 저장 프로시저 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

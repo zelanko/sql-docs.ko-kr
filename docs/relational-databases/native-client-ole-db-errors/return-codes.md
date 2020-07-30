@@ -1,5 +1,5 @@
 ---
-title: 반환 코드 | Microsoft Docs
+title: 반환 코드 (Native Client OLE DB 공급자)
 description: 일반적으로 발생 하는 DB_S_ERRORSOCCURRED HRESULT 값을 포함 하 여 SQL Server Native Client OLE DB에 대해 지원 되는 반환 코드에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,13 +24,14 @@ ms.assetid: 7f7457e9-fce4-400c-82e5-ee02e9e811c6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 400c5b1016e7519813c41ec5627dd86f6652441b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dff6003bf6671f4b3e7867daa4e6c444c6cd8854
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010524"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247932"
 ---
-# <a name="return-codes"></a>반환 코드
+# <a name="return-codes-native-client-ole-db-provider"></a>반환 코드 (Native Client OLE DB 공급자)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   아주 간단히 말해 멤버 함수는 성공하거나 실패하거나 둘 중 하나입니다. 그러나 좀 더 정확하게 말하면 함수가 성공하더라도 이러한 성공이 애플리케이션 개발자가 의도한 것이 아닐 수 있습니다.  

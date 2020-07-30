@@ -13,11 +13,12 @@ ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9266133a7594c2703e0c8671710034c5d85dc9ff
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5bd8bff34cca52da2e865a020ff97211b09d9882
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004364"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87331067"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>날짜/시간 데이터 형식을 SQL에서 C로 변환
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,15 +27,14 @@ ms.locfileid: "86004364"
   
 ## <a name="conversions"></a>변환  
   
-||||||||||  
-|-|-|-|-|-|-|-|-|-|  
-||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
-|SQL_CHAR|2, 3, 4, 5|2, 3, 6, 7, 8|2, 3, 9, 10, 11|2, 3, 6, 7|2, 3, 9, 10, 11|1|1|1|  
-|SQL_WCHAR|2, 3, 4, 5|2, 3, 6, 7, 8|2, 3, 9, 10, 11|2, 3, 6, 7|2, 3, 9, 10, 11|1|1|1|  
-|SQL_TYPE_DATE|정상|12|13|12|13, 23|14|16|16|  
-|SQL_SS_TIME2|12|8|15|정상|10, 23|17|16|16|  
-|SQL_TYPE_TIMESTAMP|18|7, 8|정상|7|23|19|16|16|  
-|SQL_SS_TIMESTAMPOFFSET|18, 22|7, 8, 20|20|7, 20|정상|21|16|16|  
+|   | SQL_C_DATE | SQL_C_TIME | SQL_C_TIMESTAMP | SQL_C_SS_TIME2 | SQL_C_SS_TIMESTAMPOFFSET | SQL_C_BINARY | SQL_C_CHAR | SQL_C_WCHAR |
+| - | ---------- | ---------- | --------------- | -------------- | ------------------------ | ------------ | ---------- | ----------- |
+| **SQL_CHAR** |2, 3, 4, 5|2, 3, 6, 7, 8|2, 3, 9, 10, 11|2, 3, 6, 7|2, 3, 9, 10, 11|1|1|1|  
+| **SQL_WCHAR** |2, 3, 4, 5|2, 3, 6, 7, 8|2, 3, 9, 10, 11|2, 3, 6, 7|2, 3, 9, 10, 11|1|1|1|  
+| **SQL_TYPE_DATE** |정상|12|13|12|13, 23|14|16|16|  
+| **SQL_SS_TIME2** |12|8|15|정상|10, 23|17|16|16|  
+| **SQL_TYPE_TIMESTAMP** |18|7, 8|정상|7|23|19|16|16|  
+| **SQL_SS_TIMESTAMPOFFSET** |18, 22|7, 8, 20|20|7, 20|정상|21|16|16|  
   
 ## <a name="key-to-symbols"></a>기호 설명  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f5f658e3-417e-4286-9213-5738266f3b28
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 02c013b9635a441ade10b5784b2b2752d0ecad0c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0326b5a4101d6c18d84302c38bcf8de02ce924b5
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898162"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395262"
 ---
 # <a name="database-maintenance-plan-stored-procedures-transact-sql"></a>데이터베이스 유지 관리 계획 저장 프로시저(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,13 +30,21 @@ ms.locfileid: "85898162"
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-|||  
-|-|-|  
-|[sp_add_maintenance_plan](../../relational-databases/system-stored-procedures/sp-add-maintenance-plan-transact-sql.md)|[sp_delete_maintenance_plan_db](../../relational-databases/system-stored-procedures/sp-delete-maintenance-plan-db-transact-sql.md)|  
-|[sp_add_maintenance_plan_db](../../relational-databases/system-stored-procedures/sp-add-maintenance-plan-db-transact-sql.md)|[sp_delete_maintenance_plan_job](../../relational-databases/system-stored-procedures/sp-delete-maintenance-plan-job-transact-sql.md)|  
-|[sp_add_maintenance_plan_job](../../relational-databases/system-stored-procedures/sp-add-maintenance-plan-job-transact-sql.md)|[sp_help_maintenance_plan](../../relational-databases/system-stored-procedures/sp-help-maintenance-plan-transact-sql.md)|  
-|[sp_delete_maintenance_plan](../../relational-databases/system-stored-procedures/sp-delete-maintenance-plan-transact-sql.md)||  
-  
+:::row:::
+    :::column:::
+    [sp_add_maintenance_plan](../../relational-databases/system-stored-procedures/sp-add-maintenance-plan-transact-sql.md)  
+    [sp_add_maintenance_plan_db](../../relational-databases/system-stored-procedures/sp-add-maintenance-plan-db-transact-sql.md)  
+    [sp_add_maintenance_plan_job](../../relational-databases/system-stored-procedures/sp-add-maintenance-plan-job-transact-sql.md)  
+    [sp_delete_maintenance_plan](../../relational-databases/system-stored-procedures/sp-delete-maintenance-plan-transact-sql.md)  
+    :::column-end:::
+    :::column:::
+    [sp_delete_maintenance_plan_db](../../relational-databases/system-stored-procedures/sp-delete-maintenance-plan-db-transact-sql.md)  
+    [sp_delete_maintenance_plan_job](../../relational-databases/system-stored-procedures/sp-delete-maintenance-plan-job-transact-sql.md)  
+    [sp_help_maintenance_plan](../../relational-databases/system-stored-procedures/sp-help-maintenance-plan-transact-sql.md)  
+    [sp_delete_maintenance_plan](../../relational-databases/system-stored-procedures/sp-delete-maintenance-plan-transact-sql.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [유지 관리 계획](../../relational-databases/maintenance-plans/maintenance-plans.md)  

@@ -11,13 +11,14 @@ ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1033410d6dbc65f9acd3b68c6dd0247775f5dd6b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8dd0a5edb17e50283a6260d7ba2c14f1ff0b450f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011126"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247842"
 ---
-# <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>IRowsetFastUpload를 사용하여 FILESTREAM 열에 데이터 전송(OLE DB)
+# <a name="send-data-to-a-filestream-column-using-irowsetfastupload-sql-server-native-client-ole-db"></a>IRowsetFastUpload SQL Server Native Client (OLE DB)를 사용 하 여 FILESTREAM 열에 데이터 보내기
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   이 예제에서는 IRowsetFastUpload 인터페이스를 사용하여 filestream 열에 4MB에서 4GB 사이의 데이터를 전송합니다.  

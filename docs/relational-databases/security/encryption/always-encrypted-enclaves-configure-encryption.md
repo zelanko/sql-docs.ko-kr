@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d887e428773e6901544422edcb6960e6e9ae0580
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b4f794e66e881ddeb36c724fc583d95a42bce33d
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595518"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411459"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted를 사용하여 바로 열 암호화 구성 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 [보안 Enclave를 사용한 Always Encrypted](always-encrypted-enclaves.md)는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 보안 Enclave 내에서 바로 데이터베이스 열의 암호화 작업을 수행할 수 있도록 지원합니다. 바로 암호화를 사용하면 암호화 작업을 수행하기 위해 데이터베이스 외부로 데이터를 이동할 필요가 없으므로 더 빠르고 안정적으로 암호화 작업을 수행할 수 있습니다. 
 

@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65145ce8f77c352fb24a2a206d99828298b6a60c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a08f7c896b48f6cb76c9805d3bea9910a8f5bda8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747254"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242863"
 ---
 # <a name="ado-methods"></a>ADO 메서드
 
-|||  
+|메서드|설명|  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|업데이트할 수 있는 **레코드 집합** 개체에 대 한 새 레코드를 만듭니다.|  
-|[추가할](../../../ado/reference/ado-api/append-method-ado.md)|컬렉션에 개체를 추가 합니다. 컬렉션이 **필드인**경우 컬렉션에 추가 되기 전에 새 **필드** 개체를 만들 수 있습니다.|  
+|[Append](../../../ado/reference/ado-api/append-method-ado.md)|컬렉션에 개체를 추가 합니다. 컬렉션이 **필드인**경우 컬렉션에 추가 되기 전에 새 **필드** 개체를 만들 수 있습니다.|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|대량 텍스트 또는 이진 데이터 **필드**또는 **매개 변수** 개체에 데이터를 추가 합니다.|  
 |[BeginTrans, CommitTrans 및 RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|는 다음과 같이 **Connection** 개체 내에서 트랜잭션 처리를 관리 합니다.<br /><br /> **BeginTrans** -새 트랜잭션을 시작 합니다.<br /><br /> **CommitTrans** -모든 변경 내용을 저장 하 고 현재 트랜잭션을 종료 합니다. 새 트랜잭션을 시작할 수도 있습니다.<br /><br /> **RollbackTrans** -모든 변경 내용을 취소 하 고 현재 트랜잭션을 종료 합니다. 새 트랜잭션을 시작할 수도 있습니다.|  
 |[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|보류 중인 비동기 메서드 호출의 실행을 취소 합니다.|  
@@ -45,7 +45,7 @@ ms.locfileid: "82747254"
 |[Execute (ADO 명령)](../../../ado/reference/ado-api/execute-method-ado-command.md)|**CommandText** 속성에 지정 된 쿼리, SQL 문 또는 저장 프로시저를 실행 합니다.|  
 |[Execute (ADO 연결)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|지정 된 쿼리, SQL 문, 저장 프로시저 또는 공급자별 텍스트를 실행 합니다.|  
 |[찾기](../../../ado/reference/ado-api/find-method-ado.md)|**레코드 집합** 에서 지정 된 조건을 만족 하는 행을 검색 합니다.|  
-|[플러시가](../../../ado/reference/ado-api/flush-method-ado.md)|ADO 버퍼에 남아 있는 **스트림의** 내용을 **스트림이** 연결 된 기본 개체에 강제로 적용 합니다.|  
+|[플러시](../../../ado/reference/ado-api/flush-method-ado.md)|ADO 버퍼에 남아 있는 **스트림의** 내용을 **스트림이** 연결 된 기본 개체에 강제로 적용 합니다.|  
 |[get_OLEDBCommand 메서드](../../../ado/reference/ado-api/get-oledbcommand-method.md)|먼저 ADO 명령에 설정 된 모든 매개 변수 정보를 OLEDB 명령에 전파 하는 기본 OLEDB 명령을 반환 합니다.|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|이 **레코드가**나타내는 디렉터리의 파일 및 하위 디렉터리를 나타내는 행을 포함 하는 **레코드 집합** 을 반환 합니다.|  
 |[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)|크게 텍스트 또는 이진 데이터 **필드** 개체의 내용을 모두 또는 일부 반환 합니다.|  
@@ -75,7 +75,7 @@ ms.locfileid: "82747254"
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|텍스트 스트림을 읽을 때 한 줄 전체를 건너뜁니다.|  
 |[우편함](../../../ado/reference/ado-api/stat-method.md)|열려 있는 스트림에 대 한 통계 정보를 가져옵니다.|  
 |[지원](../../../ado/reference/ado-api/supports-method.md)|지정 된 **레코드 집합** 개체가 특정 유형의 기능을 지원 하는지 여부를 확인 합니다.|  
-|[업데이트](../../../ado/reference/ado-api/update-method.md)|레코드 **집합** 개체의 현재 행 또는 **Record** 개체의 **Fields** 컬렉션에 대 한 변경 내용을 저장 합니다.|  
+|[Update](../../../ado/reference/ado-api/update-method.md)|레코드 **집합** 개체의 현재 행 또는 **Record** 개체의 **Fields** 컬렉션에 대 한 변경 내용을 저장 합니다.|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|모든 보류 중인 일괄 처리 업데이트를 디스크에 기록 합니다.|  
 |[쓰기](../../../ado/reference/ado-api/write-method.md)|**스트림** 개체에 이진 데이터를 씁니다.|  
 |[WriteText](../../../ado/reference/ado-api/writetext-method.md)|지정 된 텍스트 문자열을 **스트림** 개체에 씁니다.|  

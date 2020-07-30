@@ -9,20 +9,20 @@ ms.topic: reference
 ms.assetid: ff67bda8-7e5c-4b06-8d7b-9985b6059a98
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8b21d9137483b7d7b76c6e91f0fd44363bf58f7c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cdb7c78a8301ec11ddd54329c4c68943ea66afd2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85641798"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245203"
 ---
 # <a name="localdb_error_insufficient_buffer"></a>LOCALDB_ERROR_INSUFFICIENT_BUFFER
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>세부 정보  
   
-|||  
-|-|-|  
+| attribute | 값 |
+| --------- | ----- |
 |제품 이름|SQL Server|  
 |이벤트 ID|276|  
 |이벤트 원본|SQL Server 로컬 데이터베이스 런타임 12.0|  

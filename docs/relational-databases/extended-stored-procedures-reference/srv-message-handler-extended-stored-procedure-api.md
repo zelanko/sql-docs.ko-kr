@@ -1,5 +1,6 @@
 ---
 title: srv_message_handler(확장 저장 프로시저 API)
+description: Srv_message_handler 및 설치 된 확장 저장 프로시저 API 메시지 처리기를 호출 하는 방법에 대해 알아봅니다.
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5841cdb3f57c0c4b6e33737d8c08b3ff0437e800
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2edc96558c00b43dfe9d9b346ad75c32b42af1cd
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756730"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332359"
 ---
 # <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler(확장 저장 프로시저 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

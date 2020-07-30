@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b7e8118dc6404bf0f23422e030737403857367d8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e1dba061f6b8bc30e8f9f0e64e45f16493f62db1
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595568"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411443"
 ---
 # <a name="configure-column-encryption-in-place-with-transact-sql"></a>Transact-SQL을 사용하여 내부 열 암호화 구성
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 이 문서에서는 [ALTER TABLE](../../../odbc/microsoft/alter-table-statement.md)/`ALTER COLUMN` 문으로 보안 enclave를 사용한 Always Encrypted를 이용하여 열에서 내부 암호화 작업을 수행하는 방법을 설명합니다. 내부 암호화 및 일반적인 필수 구성 요소에 대한 기본 정보는 [보안 enclave를 사용한 Always Encrypted를 이용하여 내부 열 암호화 구성](always-encrypted-enclaves-configure-encryption.md)을 참조하세요.
 

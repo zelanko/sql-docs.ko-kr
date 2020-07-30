@@ -14,11 +14,12 @@ ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff762ab39c2d915538dc58d2162175803895f877
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 84c0a5b48196ddb6fdc5f7fcfb7fe0f9d6cd4d55
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006612"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332343"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,8 +37,8 @@ ms.locfileid: "86006612"
 ## <a name="sqldescribecol-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 SQLDescribeCol 지원  
  날짜/시간 형식에 대해 반환되는 값은 다음과 같습니다.  
   
-||*DataTypePtr*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
-|-|-------------------|---------------------|------------------------|  
+| attribute | *DataTypePtr* | *ColumnSizePtr* | *DecimalDigitsPtr* |  
+| --------- | ------------- |---------------- | ------------------ |  
 |Datetime|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
 |date|SQL_TYPE_DATE|10|0|  

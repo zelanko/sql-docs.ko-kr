@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a3cd283f09263d4f36f0f4e2cfd4a18767dd614e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bba5095587b8ddbb4c06d3334ad60e16cb2f5e35
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898364"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395746"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
 ```  
   
 ## <a name="arguments"></a>인수  
- **'**<relational_operator>**'** {가장 큼 | 가장 큼 | 가장 큼 | 가장 큼 | 가장 크거나 같음}  
+ **'**<relational_operator>**'** {가장 크거나 같은 가장 작은 값 보다 작거나 같음 \| \| \| }  
  는 *tracking_time* 값과 비교 했을 때 관계를 충족 하는 연결 된 **tran_end_time** 를 사용 하 여 **cdc. LSN_TIME_MAPPING** 테이블 내에서 고유 LSN 값을 식별 하는 데 사용 됩니다.  
   
  *relational_operator* 은 **nvarchar (30)** 입니다.  

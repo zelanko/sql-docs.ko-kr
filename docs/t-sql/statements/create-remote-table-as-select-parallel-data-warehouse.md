@@ -10,15 +10,15 @@ author: ronortloff
 ms.author: rortloff
 ms.reviewer: jrasnick
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ab42dfbed020840aeb90042b81266fc58cc74688
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 4547fe6ae7282aa95ed2b1e46c47a5a07aa20f11
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627405"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395248"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT(병렬 데이터 웨어하우스)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 데이터베이스에서 데이터를 선택하고 해당 데이터를 원격 서버의 SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 있는 새 테이블로 복사합니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]는 MPP 쿼리 프로세스의 모든 이점을 갖는 어플라이언스를 사용하여 원격 복사본에 대한 데이터를 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능이 필요한 시나리오에 이를 사용합니다.  
   

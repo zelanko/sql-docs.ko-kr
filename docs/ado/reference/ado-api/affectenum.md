@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 06d3234317e38177defeacdf6f258bc2301dde9e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8c75c83fea1e6c8f4916180889635ddebd9cd915
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747045"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242803"
 ---
 # <a name="affectenum"></a>AffectEnum
 작업의 영향을 받는 레코드를 지정 합니다.  
@@ -43,8 +43,14 @@ ms.locfileid: "82747045"
 |AdoEnums. GROUP|  
   
 ## <a name="applies-to"></a>적용 대상  
-  
-|||  
-|-|-|  
-|[CancelBatch 메서드(ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|[Delete 메서드(ADO 레코드 집합)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|  
-|[Resync 메서드](../../../ado/reference/ado-api/resync-method.md)|[UpdateBatch 메서드](../../../ado/reference/ado-api/updatebatch-method.md)|
+
+:::row:::
+    :::column:::
+        [CancelBatch 메서드(ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)  
+        [Delete 메서드(ADO 레코드 집합)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
+    :::column-end:::
+    :::column:::
+        [Resync 메서드](../../../ado/reference/ado-api/resync-method.md)  
+        [UpdateBatch 메서드](../../../ado/reference/ado-api/updatebatch-method.md)  
+    :::column-end:::
+:::row-end:::

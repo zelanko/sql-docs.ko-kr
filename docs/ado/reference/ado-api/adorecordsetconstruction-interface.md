@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 770bf86f62f243ea255693c7773e6fae48527cfd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 23ee532329e8104d3a0e02c9547d9ca7813b42a2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747083"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242823"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 인터페이스
 **ADORecordsetConstruction** 인터페이스는 C/c + + 응용 프로그램의 OLE DB **ROWSET** 개체에서 ADO **레코드 집합** 개체를 생성 하는 데 사용 됩니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "82747083"
   
 ## <a name="properties"></a>속성  
   
-|||  
+|속성|설명|  
 |-|-|  
 |[장](../../../ado/reference/ado-api/chapter-property-ado.md)|읽기/쓰기.<br />이 ADO **레코드 집합** 개체의/에서 OLE DB **챕터** 개체를 가져오거나 설정 합니다.|  
 |[행 위치](../../../ado/reference/ado-api/rowposition-property-ado.md)|읽기/쓰기.<br />이 ADO **레코드 집합** 개체의 OLE DB **rowposition** 개체를 가져오거나 설정 합니다.|  

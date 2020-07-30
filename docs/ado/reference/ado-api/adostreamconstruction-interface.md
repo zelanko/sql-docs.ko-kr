@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c120667a0ce279ea03922adf487f58c1fdc92de
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 75af8d899c4fb0b97f4ee09795888ef773999b60
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747055"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242813"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction 인터페이스
 **ADOStreamConstruction** 인터페이스는 C/c + + 응용 프로그램의 OLE DB **ISTREAM** 개체에서 ADO **스트림** 개체를 생성 하는 데 사용 됩니다.  
   
 ## <a name="properties"></a>속성  
   
-|||  
+|속성|설명|  
 |-|-|  
-|[Stream 속성](../../../ado/reference/ado-api/stream-property.md)|읽기/쓰기. OLE DB **Stream** 개체를 가져오거나 설정 합니다.|  
+|[스트림](../../../ado/reference/ado-api/stream-property.md)|읽기/쓰기. OLE DB **Stream** 개체를 가져오거나 설정 합니다.|  
   
 ## <a name="methods"></a>메서드  
  없음  

@@ -12,16 +12,16 @@ dev_langs:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: bcd5752f8e7bfa7b750d43638af4665c25a50b4b
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5c3dd051156178572a03eeff23052e2c103d9555
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484570"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395890"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD(Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 구체화된 뷰용으로 저장된 기본 테이블에 증분 변경 횟수를 표시합니다. 오버헤드 비율은 TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS)로 계산합니다.
 

@@ -13,11 +13,12 @@ ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02dacc3323d331c2442e12518146681bdc45cb23
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 298e16b814251cf0068436cb5c1a6331aef8c1b4
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004371"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332419"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>날짜/시간 데이터 형식을 C에서 SQL로 변환
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,23 +27,22 @@ ms.locfileid: "86004371"
   
  다음 표에서 설명하는 변환은 클라이언트에서 수행되는 변환에 해당합니다. 클라이언트에서 서버에 정의 된 것과 다른 매개 변수에 대해 소수 자릿수 초의 소수 자릿수를 지정 하는 경우 클라이언트 변환에 성공할 수 있지만 **Sqlexecute** 또는 **sqlexecutedirect** 를 호출 하면 서버에서 오류를 반환 합니다. 특히 ODBC는 소수 자릿수 초의 잘림을 오류로 처리 하는 반면, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예를 들어 **datetime2 (6)** 에서 **datetime2 (2)** 로 이동할 때 반올림이 발생 합니다. datetime 열 값은 1/300초로 반올림되며 smalldatetime 열은 서버에 의해 0초로 설정됩니다.  
   
-|||||||||  
-|-|-|-|-|-|-|-|-|  
-||SQL_TYPE_DATE|SQL_TYPE_TIME|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_SS_TIMSTAMPOFFSET|SQL_CHAR|SQL_WCHAR|  
-|SQL_C_DATE|1|-|-|1,6|1,5,6|1,13|1,13|  
-|SQL_C_TIME|-|1|1|1,7|1, 5, 7|1,13|1,13|  
-|SQL_C_SS_TIME2|-|1,3|1,10|1,7|1, 5, 7|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|해당 없음|해당 없음|1,10,11|해당 없음|해당 없음|해당 없음|해당 없음|  
-|SQL_C_TYPE_TIMESTAMP|1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
-|SQL_C_SS_TIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10|1,10|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|해당 없음|해당 없음|해당 없음|해당 없음|1,10,11|해당 없음|해당 없음|  
-|SQL_C_CHAR/SQL_WCHAR(date)|9|9|9|9,6|9,5,6|해당 없음|해당 없음|  
-|SQL_C_CHAR/SQL_WCHAR(time2)|9|9, 3|9,10|9,7,10|9,5,7,10|해당 없음|해당 없음|  
-|SQL_C_CHAR/SQL_WCHAR(datetime)|9,2|9, 3, 4|9,4,10|9,10|9,5,10|해당 없음|해당 없음|  
-|SQL_C_CHAR/SQL_WCHAR(datetimeoffset)|9,2,8|9, 3, 4, 8|9,4,8,10|9,8,10|9,10|해당 없음|해당 없음|  
-|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|  
-|SQL_C_BINARY(SQL_TIME_STRUCT)|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|  
-|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|  
+|   | SQL_TYPE_DATE | SQL_TYPE_TIME | SQL_SS_TIME2 | SQL_TYPE_TIMESTAMP | SQL_SS_TIMSTAMPOFFSET | SQL_CHAR | SQL_WCHAR |
+| - | ------------- | ------------- | ------------ | ------------------ | --------------------- | -------- | --------- |
+| **SQL_C_DATE** |1|-|-|1,6|1,5,6|1,13|1,13|  
+| **SQL_C_TIME** |-|1|1|1,7|1, 5, 7|1,13|1,13|  
+| **SQL_C_SS_TIME2** |-|1,3|1,10|1,7|1, 5, 7|1,13|1,13|  
+| **SQL_C_BINARY(SQL_SS_TIME2_STRUCT)** |해당 없음|해당 없음|1,10,11|해당 없음|해당 없음|해당 없음|해당 없음|  
+| **SQL_C_TYPE_TIMESTAMP** |1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
+| **SQL_C_SS_TIMESTAMPOFFSET** |1,2,8|1,3,4,8|1,4,8,10|1,8,10|1,10|1,13|1,13|  
+| **SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)** |해당 없음|해당 없음|해당 없음|해당 없음|1,10,11|해당 없음|해당 없음|  
+| **SQL_C_CHAR/SQL_WCHAR(date)** |9|9|9|9,6|9,5,6|해당 없음|해당 없음|  
+| **SQL_C_CHAR/SQL_WCHAR(time2)** |9|9, 3|9,10|9,7,10|9,5,7,10|해당 없음|해당 없음|  
+| **SQL_C_CHAR/SQL_WCHAR(datetime)** |9,2|9, 3, 4|9,4,10|9,10|9,5,10|해당 없음|해당 없음|  
+| **SQL_C_CHAR/SQL_WCHAR(datetimeoffset)** |9,2,8|9, 3, 4, 8|9,4,8,10|9,8,10|9,10|해당 없음|해당 없음|  
+| **SQL_C_BINARY(SQL_DATE_STRUCT)** |1,11|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|  
+| **SQL_C_BINARY(SQL_TIME_STRUCT)** |해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|  
+| **SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)** |해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|  
   
 ## <a name="key-to-symbols"></a>기호 설명  
   
@@ -78,10 +78,10 @@ ms.locfileid: "86004371"
   
      소수 자릿수 초의 자릿수 (소수 자릿수)는 다음 표에 따라 대상 열의 크기에 따라 결정 됩니다.  
   
-    ||||  
-    |-|-|-|  
-    |Type|암시된 소수 자릿수<br /><br /> 0|암시된 소수 자릿수<br /><br /> 1.9|  
-    |SQL_C_TYPE_TIMESTAMP|19|21..29|  
+    |   | 암시된 소수 자릿수 | 암시된 소수 자릿수 |
+    | - | ------------- | ------------- |
+    | **형식** | 0 | 1.9 |  
+    |**SQL_C_TYPE_TIMESTAMP** |19|21..29|  
   
      그러나 SQL_C_TYPE_TIMESTAMP의 경우에는 소수 자릿수 초를 데이터 손실 없이 3자리로 나타낼 수 있고 열 크기가 23 이상인 경우 소수 자릿수 초의 자릿수는 정확히 3자리로 생성됩니다. 이 동작은 이전 ODBC 드라이버를 사용하여 개발된 애플리케이션과의 호환성을 보장합니다.  
   

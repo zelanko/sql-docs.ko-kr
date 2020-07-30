@@ -1,5 +1,6 @@
 ---
 title: srv_paramlen(확장 저장 프로시저 API) | Microsoft Docs
+description: 확장 저장 프로시저 API의 srv_paramlen 원격 저장 프로시저 호출 매개 변수의 데이터 길이를 반환 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55d9c6bf2e64509872faf02fa653499a28efb300
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e76d1f4a68d0c15d1f0a0b33627d18ade97669cf
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756727"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248433"
 ---
 # <a name="srv_paramlen-extended-stored-procedure-api"></a>srv_paramlen(확장 저장 프로시저 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

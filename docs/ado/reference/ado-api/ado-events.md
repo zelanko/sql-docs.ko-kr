@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e1b69ced6c5d55b3b393ec30247c1a9f35f9fc57
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a93353be1737b38e7acb557a682e84cbb947c2a1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747332"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242873"
 ---
 # <a name="ado-events"></a>ADO 이벤트
 
-|||  
+|이벤트|설명|  
 |-|-|  
 |[BeginTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**BeginTrans** 작업 후에 호출 됩니다.|  
 |[CommitTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**CommitTrans** 작업 후에 호출 됩니다.|  

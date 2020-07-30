@@ -1,5 +1,5 @@
 ---
-title: 로컬 트랜잭션 지원 | Microsoft Docs
+title: 로컬 트랜잭션 지원 (Native Client OLE DB 공급자)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,14 @@ ms.assetid: 78f2e5fc-b6fb-4eda-9f71-991a4d6c4902
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd6640c497226bbe2c97cbafaa9931582e9b5d6c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 39de80135212acb962953c1054187e4d04e61af8
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005780"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332282"
 ---
-# <a name="supporting-local-transactions"></a>로컬 트랜잭션 지원
+# <a name="supporting-local-transactions-in-sql-server-native-client"></a>SQL Server Native Client에서 로컬 트랜잭션 지원
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   세션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 로컬 트랜잭션에 대 한 트랜잭션 범위를 구분 합니다. 소비자의 방향으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 공급자가 연결 된 인스턴스에 요청을 전송 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 요청은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB 공급자에 대 한 작업 단위를 구성 합니다. 로컬 트랜잭션은 항상 단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 세션에서 하나 이상의 작업 단위를 래핑합니다.  
@@ -35,7 +36,7 @@ ms.locfileid: "86005780"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 다음과 **같이 ITransactionLocal:: starttransaction** 매개 변수를 지원 합니다.  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
 |*isoLevel*[in]|이 트랜잭션에 사용할 격리 수준입니다. 로컬 트랜잭션에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 다음을 지원 합니다.<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> 참고: [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터는 데이터베이스에 버전 관리가 설정되어 있는지 여부에 관계없이 *isoLevel* 인수에 대해 ISOLATIONLEVEL_SNAPSHOT이 유효합니다. 그러나 버전 관리가 설정되어 있지 않거나 데이터베이스가 읽기 전용이 아닌 상태에서 사용자가 문을 실행하려고 하면 오류가 발생합니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 버전에 연결할 때 ISOLATIONLEVEL_SNAPSHOT을 *isoLevel*로 지정하면 XACT_E_ISOLATIONLEVEL 오류가 발생합니다.|  
 |*isoFlags*[in]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 0 이외의 값에 대해 오류를 반환 합니다.|  
@@ -44,7 +45,7 @@ ms.locfileid: "86005780"
   
  로컬 트랜잭션의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 다음과 같이 **ITransaction:: Abort** 매개 변수를 구현 합니다.  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
 |*pboidReason*[in]|설정된 경우 무시됩니다. NULL이어도 안전합니다.|  
 |*fRetaining*[in]|TRUE인 경우 해당 세션을 위한 새 트랜잭션이 암시적으로 시작됩니다. 이 트랜잭션은 소비자가 커밋 또는 종료해야 합니다. FALSE 이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 세션에 대해 자동 커밋 모드로 되돌립니다.|  
@@ -52,7 +53,7 @@ ms.locfileid: "86005780"
   
  로컬 트랜잭션의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 다음과 같이 **ITransaction:: Commit** 매개 변수를 구현 합니다.  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
 |*fRetaining*[in]|TRUE인 경우 해당 세션을 위한 새 트랜잭션이 암시적으로 시작됩니다. 이 트랜잭션은 소비자가 커밋 또는 종료해야 합니다. FALSE 이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 세션에 대해 자동 커밋 모드로 되돌립니다.|  
 |*grfTC*[in]|Native Client OLE DB 공급자는 비동기 및 1 단계 반환을 지원 하지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 XACTTC_SYNC 이외의 값에 대해 XACT_E_NOTSUPPORTED을 반환 합니다.|  
@@ -128,7 +129,7 @@ if (FAILED(hr))
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [트랜잭션을](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
- [스냅샷 격리 작업](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
+ [트랜잭션](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
+ [스냅숏 격리 작업](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ISSAsynchStatus(OLE DB) | Microsoft Docs
+title: ISSAsynchStatus (Native Client OLE DB 공급자) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,18 +16,19 @@ ms.assetid: c643f09f-9ccc-4d8b-9243-3cde86c2bd46
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d5b52a2940f2db4a4128fa9a73acdc2f871c174
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 49d409c97e4ae07d4953610e8e6ba51933574728
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005370"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246905"
 ---
-# <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus(OLE DB)
+# <a name="issasynchstatus-native-client-ole-db-provider"></a>ISSAsynchStatus (Native Client OLE DB 공급자)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **ISSAsynchStatus** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 비동기 작업에 대한 지원을 제공합니다. 이 인터페이스는 선택적 인터페이스이며 핵심 OLE DB 인터페이스인 **IDBAsynchStatus**에서 상속됩니다. **ISSAsynchStatus** 는 **IDBAsynchStatus** 에서 상속된 **Abort**및 **GetStatus** 메서드 이외에도 비동기 작업이 완료되거나 제한 시간이 초과될 때까지 대기하는 데 사용되는 새 메서드를 제공합니다.  
   
-|방법|Description|  
+|메서드|설명|  
 |------------|-----------------|  
 |[ISSAsynchStatus::Abort&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md)|비동기적으로 실행 중인 작업을 취소합니다.|  
 |[ISSAsynchStatus::GetStatus&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-getstatus-ole-db.md)|비동기적으로 실행 중인 작업의 상태를 반환합니다.|  

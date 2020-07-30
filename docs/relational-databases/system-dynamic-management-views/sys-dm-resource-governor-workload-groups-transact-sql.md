@@ -20,15 +20,15 @@ ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32858f6e508ef0a7de2b981dc17379d7be7fa4c7
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: 1940c42143eb2a1b4112eb2dea789196938e18ed
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84941037"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397142"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   작업 그룹 통계 및 작업 그룹의 현재 메모리 내 구성을 반환합니다. 이 뷰는 sys.dm_resource_governor_resource_pools와 조인하여 리소스 풀 이름을 가져올 수 있습니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "84941037"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |group_id|**int**|작업 그룹의 ID입니다. Null을 허용하지 않습니다.|  
-|이름|**sysname**|작업 그룹의 이름입니다. Null을 허용하지 않습니다.|  
+|name|**sysname**|작업 그룹의 이름입니다. Null을 허용하지 않습니다.|  
 |pool_id|**int**|리소스 풀의 ID입니다. Null을 허용하지 않습니다.|  
 |external_pool_id|**int**|**적용 대상**:부터 시작 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 합니다.<br /><br /> 외부 리소스 풀의 ID입니다. Null을 허용하지 않습니다.|  
 |statistics_start_time|**datetime**|작업 그룹에 대해 통계 컬렉션이 다시 설정된 시간입니다. Null을 허용하지 않습니다.|  
@@ -77,7 +77,7 @@ ms.locfileid: "84941037"
  `VIEW SERVER STATE` 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [dm_resource_governor_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
  [resource_governor_workload_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR&#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: SQL Server 오류 세부 정보 | Microsoft Docs
+title: SQL Server 오류 세부 정보 (Native Client OLE DB 공급자)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,13 +18,14 @@ ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fdb803531ae271f59dda6268cca986abb166b1f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3b491e14b7109af533eb2e7cfa3bc05658436e31
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010518"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87331884"
 ---
-# <a name="sql-server-error-detail"></a>SQL Server 오류 세부 정보
+# <a name="sql-server-native-client-error-detail"></a>SQL Server Native Client 오류 정보
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 공급자별 오류 인터페이스 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)를 정의 합니다. 이 인터페이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류에 대한 세부 정보를 반환하며 명령 실행이나 행 집합 작업이 실패할 경우에 유용합니다.  

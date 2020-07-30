@@ -1,5 +1,5 @@
 ---
-title: 행 집합 속성 및 동작 | Microsoft Docs
+title: 행 집합 속성 및 동작 (Native Client OLE DB 공급자)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d66aa7280bb2ce7f92211054713469626b4f6a3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 15f9884944eb5d0298e5536fa5b2f43f3aa46c96
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013138"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246852"
 ---
-# <a name="rowset-properties-and-behaviors"></a>행 집합 속성 및 동작
+# <a name="rowset-properties-and-behaviors-native-client-ole-db-provider"></a>행 집합 속성 및 동작 (Native Client OLE DB 공급자)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   이러한 속성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 행 집합 속성입니다.  
@@ -78,7 +79,7 @@ ms.locfileid: "86013138"
 |DBPROP_REPORTMULTIPLECHANGES|이 행 집합 속성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 구현 하지 않습니다. 이 속성 값을 읽거나 쓰려고 하면 오류가 생성됩니다.|  
 |DBPROP_RETURNPENDINGINSERTS|R/W: 읽기 전용<br /><br /> Default: VARIANT_FALSE<br /><br /> 설명: 행을 인출 하는 메서드가 호출 될 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 보류 중인 삽입 행을 반환 하지 않습니다.|  
 |DBPROP_ROWRESTRICT|R/W: 읽기 전용<br /><br /> 기본값: VARIANT_TRUE<br /><br /> 설명: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 행 집합은 행을 기반으로 하는 액세스 권한을 지원 하지 않습니다. **IRowsetChange** 인터페이스가 행 집합에 노출되면 사용자가 **SetData** 메서드를 호출할 수 있습니다.|  
-|DBPROP_ROWSET_ASYNCH|R/W: 읽기/쓰기<br /><br /> 기본값: 0<br /><br /> 설명: 비동기 행 집합 처리를 제공합니다. 이 속성은 Rowset 속성 그룹과 DBPROPSET_ROWSET 속성 집합에 있습니다. 형식은 VT_14입니다.<br /><br /> Native Client에서 지 원하는 비트 마스크의 유일한 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **DBPROPVAL_ASYNCH_INITIALIZE**입니다.|  
+|DBPROP_ROWSET_ASYNCH|R/W: 읽기/쓰기<br /><br /> 기본값: 0<br /><br /> 설명: 비동기 행 집합 처리를 위해를 제공 합니다. 이 속성은 Rowset 속성 그룹과 DBPROPSET_ROWSET 속성 집합에 있습니다. 형식은 VT_14입니다.<br /><br /> Native Client에서 지 원하는 비트 마스크의 유일한 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **DBPROPVAL_ASYNCH_INITIALIZE**입니다.|  
 |DBPROP_ROWTHREADMODEL|R/W: 읽기 전용<br /><br /> 기본값: DBPROPVAL_RT_FREETHREAD<br /><br /> 설명: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 단일 소비자의 여러 실행 스레드에서 개체에 대 한 액세스를 지원 합니다.|  
 |DBPROP_SERVERCURSOR|R/W: 읽기/쓰기<br /><br /> Default: VARIANT_FALSE<br /><br /> 설명: 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 커서를 사용하여 행 집합을 지원합니다. 자세한 내용은 [행 집합 및 SQL Server 커서](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md)를 참조하십시오.|  
 |DBPROP_SERVERDATAONINSERT|R/W: 읽기/쓰기<br /><br /> Default: VARIANT_FALSE<br /><br /> 설명: 삽입 시 서버 데이터<br /><br /> VARIANT_TRUE: 삽입이 서버로 전송될 때 공급자는 서버에서 데이터를 검색하여 로컬 행 캐시를 업데이트합니다.<br /><br /> VARIANT_FALSE: 공급자는 새로 삽입되는 행에 대한 서버 값을 검색하지 않습니다.|  
