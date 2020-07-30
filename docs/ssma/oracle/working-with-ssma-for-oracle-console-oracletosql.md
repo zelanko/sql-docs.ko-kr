@@ -10,12 +10,12 @@ ms.assetid: 4e47bb04-cf9b-41a0-923e-bdab9ba0c51d
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 855f84253db65da29bc871fa3b37dd9780a5cab8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1f760d2cc97c7f54be18281c7b55a6527eb8ec2
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68256650"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87392108"
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>Oracle용 SSMA 콘솔 작업(OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Oracle 용 SSMA (Migration Assistant) 릴리스는 이제 명령줄에서 콘솔 응용 프로그램을 통해 액세스할 수 있습니다. 스크립트 파일은 명령을 실행 하기 위해 응용 프로그램에 대 한 입력을 구성 합니다. SSMA는 콘솔 응용 프로그램으로 스크립트 수준 상호 작용을 사용 하도록 설정 하 고 마이그레이션 주기를 줄이고 마이그레이션 작업을 확장 합니다.  
@@ -24,9 +24,8 @@ ms.locfileid: "68256650"
   
 이 섹션에서 다루는 항목은 다음과 같습니다.  
   
-|||  
+|항목|설명|  
 |-|-|  
-|**토픽**|**설명**|  
 |[OracleToSQL&#41;&#40;Oracle 용 SSMA 콘솔 시작](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|콘솔 응용 프로그램을 실행 하는 절차에 대해 설명 합니다.|  
 |[SSMA 콘솔의 명령줄 옵션 &#40;OracleToSQL&#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|SSMA 콘솔 응용 프로그램을 작동 하는 명령줄 옵션과 매개 변수를 설명 합니다.|  
 |[OracleToSQL&#41;&#40;스크립트 파일 만들기](../../ssma/oracle/creating-script-files-oracletosql.md)|스크립트 파일을 만드는 방법을 설명 합니다.|  

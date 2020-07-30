@@ -13,19 +13,19 @@ ms.assetid: a2c0444f-d97b-4760-8905-3574791c2e26
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e8bab80f3b913bc09b855317c8ba0b6304987c5c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 491c7b44aaa9bfb8a732e0f95aecb4fea4086386
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85721631"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363311"
 ---
 # <a name="mssql_eng021385"></a>MSSQL_ENG021385
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## <a name="message-details"></a>메시지 정보  
   
-|||  
+|attribute|값|  
 |-|-|  
 |제품 이름|SQL Server|  
 |이벤트 ID|21385|  

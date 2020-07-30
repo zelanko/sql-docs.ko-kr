@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 07727642-0266-4cbc-8c55-3c367e4458ca
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6926fba5e248b51df28b342b5c7d49ecf497f89
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 055821c4d005c52ff20b79967fca35ac2994ff9f
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85680950"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362629"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>NUMA 노드에 TCP IP 포트 매핑(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "85680950"
   
  사용할 노드의 번호를 확인하려면 오류 로그나 **sys.dm_os_schedulers** 뷰의 노드 정보를 확인하세요. 한 개 또는 여러 개의 노드에 TCP/IP 주소와 포트를 설정하려면 포트 번호 뒤에서 괄호 안에 노드 확인 비트맵(선호도 마스크)을 추가합니다. 십진수나 16진수 형식으로 노드를 지정할 수 있습니다. 비트맵을 만들려면 먼저 76543210처럼 0부터 시작하여 오른쪽에서 왼쪽으로 노드 번호를 매깁니다. 사용할 노드에 1을 지정하고 사용하지 않을 노드에 0을 지정하여 노드 목록의 이진 표현을 만드세요. 예를 들어 NUMA 노드 0, 2, 5를 사용하려면 00100101을 지정합니다.  
   
-|||  
-|-|-|  
-|NUMA 노드 번호|76543210|  
-|오른쪽에서부터 0, 2, 5 숫자에 마스크 설정|00100101|  
+```text
+NUMA node number                            76543210
+Mask for 0, 2, and 5 counting from right    00100101
+```
   
  이진 표현(00100101)을 십진수 `[37]`또는 16진수 `[0x25]`로 변환합니다. 모든 노드에서 수신하려면 노드 식별자를 제공하지 마세요.  
   

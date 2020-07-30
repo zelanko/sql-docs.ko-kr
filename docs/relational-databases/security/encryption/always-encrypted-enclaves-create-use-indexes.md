@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e370af38481593404629fb3367deb3b9f54bb869
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6fa36eeebc1f93ed0a2855627943d04dba8e3d7d
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595678"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411419"
 ---
 # <a name="create-and-use-indexes-on-columns-using-always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted를 이용하여 열에 인덱스 만들기 및 사용
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 이 문서에서는 [보안 Enclave를 사용한 Always Encrypted](always-encrypted-enclaves.md)에서 Enclave 사용 열 암호화 키를 사용하여 암호화된 열에서 인덱스를 만들고 사용하는 방법을 설명합니다. 
 

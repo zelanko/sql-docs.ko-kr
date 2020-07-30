@@ -41,12 +41,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: ca8891058091bca9862fbdbf81bfa51cc17d250a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 385e0a0d6873f8480c3d99efe9700ef938fc3abf
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763985"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363033"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>SQL Server 서비스 시작, 중지, 일시 중지, 계속 및 다시 시작
 
@@ -114,7 +114,7 @@ Transact-SQL **SHUTDOWN** 명령을 사용하여 데이터베이스 엔진을 �
 
 SQL Server 구성 관리자는 독립 실행형 프로그램이 아니라 Microsoft Management Console 프로그램용 스냅인이므로, 최신 Windows 버전에서는 SQL Server 구성 관리자가 애플리케이션으로 표시되지 않습니다. Windows가 C 드라이브에 설치되어 있는 경우 최신 4개 버전의 경로는 다음과 같습니다.  
 
-|||
+|버전|경로|
 |-|-|
 |SQL Server 2019|C:\Windows\SysWOW64\SQLServerManager15.msc|
 |SQL Server 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|
