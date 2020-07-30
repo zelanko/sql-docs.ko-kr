@@ -1,5 +1,5 @@
 ---
-title: 향상된 날짜 및 시간 기능 사용(OLE DB) | Microsoft Docs
+title: 향상 된 날짜 및 시간 기능 사용 (Native Client OLE DB 공급자)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,13 +11,14 @@ ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ccf4d9d292e8266cd0839d5480a7f88109bda9f7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 950f4d25cfdcd4bb8aee320ebfec8b6fd1b9c82b
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998908"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396512"
 ---
-# <a name="use-enhanced-date-and-time-features-ole-db"></a>향상된 날짜 및 시간 기능 사용(OLE DB)
+# <a name="use-enhanced-date-and-time-features-in-sql-server-native-client-ole-db"></a>SQL Server Native Client에서 향상 된 날짜 및 시간 기능 사용 (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   이 예제에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에 도입된 날짜/시간 기능을 사용하는 방법을 보여 줍니다. 이 예제에서는 새로운 네 가지 날짜 및 시간 형식(**date**, **time**, **datetime2**및 **datetimeoffset**)을 사용하여 매개 변수가 있는 명령을 실행하고 행 집합 결과를 검색합니다.  

@@ -14,15 +14,15 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b59f204fafd7e1b912eea2673783290f67fa786
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdb7bb3ef617d244e1e58f7c74cece3d47b87b72
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287747"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396886"
 ---
 # <a name="tables"></a>테이블
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
 테이블은 데이터베이스의 모든 데이터를 포함하는 데이터베이스 개체입니다. 테이블에서 데이터는 스프레드시트와 비슷한 논리적인 행 및 열 형식으로 구성됩니다. 각 행은 고유한 레코드를 나타내며 각 열은 레코드 내의 필드를 나타냅니다. 예를 들어 회사 사원 데이터가 들어 있는 테이블은 각 사원에 대한 행과 사원 번호, 이름, 주소, 직책 및 집 전화번호와 같은 자세한 사원 정보를 나타내는 열로 구성할 수 있습니다. 
 

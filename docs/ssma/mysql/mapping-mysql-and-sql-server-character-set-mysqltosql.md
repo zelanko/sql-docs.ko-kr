@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0b52f18f8a7247faae24f266c6d8dba3d6c2ea4c
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: d7fe937b95049788f4b488df2d36451df67c4c09
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293640"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396402"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>MySQL 및 SQL Server 문자 집합 매핑(MySQLToSQL)
 문자 집합 (문자 집합)은 MySQL 문자 데이터 형식, 식 및 리터럴에 대해 지정할 수 있습니다.  
@@ -77,9 +77,8 @@ ms.locfileid: "84293640"
   
     MySQL 데이터베이스와 루트 메타 데이터 노드 수준의 대상 데이터베이스 간 문자 집합 매핑은 다음과 같습니다.  
   
-    ||||  
+    |문자 집합 이름|문자 집합 설명|대상 문자 집합 형식 (기본값)|  
     |-|-|-|  
-    |**문자 집합 이름**|**문자 집합 설명**|**대상 문자 집합 형식 (기본값)**|  
     |번체|Big5 중국어 번체|NCHAR/NVARCHAR (기본값)|  
     |dec8|12 월 서유럽|CHAR/VARCHAR (기본값)|  
     |cp850은|DOS 유럽 서 부|CHAR/VARCHAR (기본값)|  

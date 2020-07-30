@@ -15,15 +15,15 @@ ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ef1d3001078b4f1217bad60646d28a26319d80c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5cb7e20e8f310b6cb6786c2d4cc1a62409dc81c6
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68016237"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397009"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>테이블 열 속성(SQL Server Management Studio)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   이러한 속성은 테이블 디자이너의 아래쪽 창에 나타납니다. 별도로 언급하지 않는 한 열을 선택하면 속성 창에서 이러한 속성을 편집할 수 있습니다. **열 속성** 을 범주 또는 사전순으로 표시할 수 있습니다. 많은 속성의 경우 특정 데이터 형식에 대해서만 나타나거나 변경할 수 있습니다.  
   

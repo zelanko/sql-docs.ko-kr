@@ -10,12 +10,12 @@ ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 6366ed7d6346fb6240a5d56ae6cc4d91575f2ed0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c470cf8ea61851b80f04bce716bc7c83c54929b0
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68259779"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396902"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>Access 용 SSMA 콘솔 작업 (AccessToSQL)
 Access 용 SSMA (Microsoft SQL Server Migration Assistant)는 이제 명령줄에서 콘솔 응용 프로그램을 통해 액세스할 수 있습니다. 스크립트 파일은 명령을 실행 하기 위해 응용 프로그램에 대 한 입력을 구성 합니다. SSMA는 콘솔 응용 프로그램으로 스크립트 수준 상호 작용을 사용 하도록 설정 하 고 마이그레이션 주기를 줄이고 마이그레이션 작업을 확장 합니다.  
@@ -24,9 +24,8 @@ Access 용 SSMA (Microsoft SQL Server Migration Assistant)는 이제 명령줄�
   
 이 섹션에서 다루는 항목은 다음과 같습니다.  
   
-|||  
+|항목|설명|  
 |-|-|  
-|**토픽**|**설명**|  
 |[Access 용 SSMA &#40;콘솔 시작 AccessToSQL&#41;](../../ssma/access/getting-started-with-ssma-for-access-console-accesstosql.md)|콘솔 응용 프로그램을 실행 하는 절차에 대해 설명 합니다.|  
 |[SSMA 콘솔의 명령줄 옵션 &#40;AccessToSQL&#41;](../../ssma/access/command-line-options-in-ssma-console-accesstosql.md)|SSMA 콘솔 응용 프로그램을 작동 하는 명령줄 옵션과 매개 변수를 설명 합니다.|  
 |[AccessToSQL&#41;&#40;스크립트 파일 만들기](../../ssma/access/creating-script-files-accesstosql.md)|스크립트 파일을 만드는 방법을 설명 합니다.|  
