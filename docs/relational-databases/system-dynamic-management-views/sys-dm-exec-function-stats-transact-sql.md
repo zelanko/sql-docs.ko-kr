@@ -18,15 +18,15 @@ ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02cff18af9c0824d7f28e5685f5fc63a0bf45128
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 25ec8e19343d707fefdda9049428280b1dfddb80
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821248"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396787"
 ---
 # <a name="sysdm_exec_function_stats-transact-sql"></a>sys. dm_exec_function_stats (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   캐시 된 함수에 대 한 집계 성능 통계를 반환 합니다. 이 뷰는 캐시 된 각 함수 계획에 대해 하나의 행을 반환 하 고, 해당 함수는 캐시 된 상태로 유지 되는 동안에는 행의 수명이 지속 됩니다. 캐시에서 함수를 제거 하면 해당 행이이 뷰에서 제거 됩니다. 이때 Performance Statistics SQL 추적 이벤트가 **sys.dm_exec_query_stats**와 유사하게 발생합니다. 메모리 내 함수 및 CLR 스칼라 함수를 비롯 한 스칼라 함수에 대 한 정보를 반환 합니다. 는 테이블 반환 함수에 대 한 정보를 반환 하지 않습니다.  
   

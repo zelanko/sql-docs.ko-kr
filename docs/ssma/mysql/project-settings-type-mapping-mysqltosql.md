@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7add1259778bf189c981d5b302e989bf7bc233c3
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138334"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396563"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>프로젝트 설정(형식 매핑)(MySQLToSQL)
 형식 매핑 프로젝트 설정을 사용 하 여 SSMA 프로젝트에 대 한 기본 형식 매핑을 설정할 수 있습니다.  
@@ -48,9 +48,8 @@ ms.locfileid: "68138334"
 ## <a name="type-mappings"></a>형식 매핑  
 다음 표에서는 원본 및 대상 데이터 형식 간의 기본 매핑을 보여 줍니다.  
   
-|||  
+|MySQL 데이터 형식|SQL Server 데이터 형식|  
 |-|-|  
-|**MySQL 데이터 형식**|**SQL Server 데이터 형식**|  
 |bigint|bigint|  
 |bigint [*.. 255]|bigint|  
 |binary|이진 [1]|  
@@ -86,18 +85,18 @@ ms.locfileid: "68138334"
 |Datetime|datetime2 [0]|  
 |dec|decimal|  
 |dec [*.. 65]|decimal [*] [0]|  
-|dec [*.. 65] [\*.. 인치|decimal [*] [\*]|  
+|dec [*.. 65] [ \* .. 인치|decimal [*] [ \* ]|  
 |decimal|decimal|  
 |decimal [*.. 65]|decimal [*] [0]|  
-|decimal [*.. 65] [\*.. 인치|decimal [*] [\*]|  
+|decimal [*.. 65] [ \* .. 인치|decimal [*] [ \* ]|  
 |double|float [53]|  
 |double precision|float [53]|  
-|배정밀도 [*.. 255] [\*.. 인치|숫자 [*] [\*]|  
-|double [*.. 255] [\*.. 인치|숫자 [*] [\*]|  
+|배정밀도 [*.. 255] [ \* .. 인치|숫자 [*] [ \* ]|  
+|double [*.. 255] [ \* .. 인치|숫자 [*] [ \* ]|  
 |고정|numeric|  
-|수정 됨 [*.. 65] [\*.. 인치|숫자 [*] [\*]|  
+|수정 됨 [*.. 65] [ \* .. 인치|숫자 [*] [ \* ]|  
 |float|float [24]|  
-|float [*.. 255] [\*.. 인치|숫자 [*] [\*]|  
+|float [*.. 255] [ \* .. 인치|숫자 [*] [ \* ]|  
 |float [*.. 53]|float [53]|  
 |int|int|  
 |int [*.. 255]|int|  
@@ -132,13 +131,13 @@ ms.locfileid: "68138334"
 |nchar [2.255]|nchar [*]|  
 |numeric|numeric|  
 |숫자 [*.. 65]|숫자 [*] [0]|  
-|숫자 [*.. 65] [\*.. 인치|숫자 [*] [\*]|  
+|숫자 [*.. 65] [ \* .. 인치|숫자 [*] [ \* ]|  
 |nvarchar|nvarchar [1]|  
 |nvarchar [0 ..1]|nvarchar [1]|  
 |nvarchar [2 ... 4000]|nvarchar [*]|  
 |nvarchar [4001 *]|nvarchar(max)|  
 |real|float [53]|  
-|real [*.. 255] [\*.. 인치|숫자 [*] [\*]|  
+|real [*.. 255] [ \* .. 인치|숫자 [*] [ \* ]|  
 |serial|bigint|  
 |smallint|smallint|  
 |smallint [*.. 255]|smallint|  
@@ -156,18 +155,18 @@ ms.locfileid: "68138334"
 |unsigned bigint [*.. 255]|bigint|  
 |unsigned dec|decimal|  
 |unsigned dec [*.. 65]|decimal [*] [0]|  
-|unsigned dec [*.. 65] [\*.. 인치|decimal [*] [\*]|  
+|unsigned dec [*.. 65] [ \* .. 인치|decimal [*] [ \* ]|  
 |부호 없는 10 진수|decimal|  
 |unsigned decimal [*.. 65]|decimal [*] [0]|  
-|unsigned decimal [*.. 65] [\*.. 인치|decimal [*] [\*]|  
+|unsigned decimal [*.. 65] [ \* .. 인치|decimal [*] [ \* ]|  
 |부호 없는 double|float [53]|  
 |부호 없는 배정밀도|float [53]|  
-|부호 없는 배정밀도 [*.. 255] [\*.. 인치|숫자 [*] [\*]|  
-|unsigned double [*.. 255] [\*.. 인치|숫자 [*] [\*]|  
+|부호 없는 배정밀도 [*.. 255] [ \* .. 인치|숫자 [*] [ \* ]|  
+|unsigned double [*.. 255] [ \* .. 인치|숫자 [*] [ \* ]|  
 |부호 없는 고정|numeric|  
-|부호 없는 고정 [*.. 65] [\*.. 인치|숫자 [*] [\*]|  
+|부호 없는 고정 [*.. 65] [ \* .. 인치|숫자 [*] [ \* ]|  
 |부호 없는 부동 소수점|float [24]|  
-|unsigned float [*.. 255] [\*.. 인치|숫자 [*] [\*]|  
+|unsigned float [*.. 255] [ \* .. 인치|숫자 [*] [ \* ]|  
 |unsigned float [*.. 53]|float [53]|  
 |부호 없는 정수|bigint|  
 |unsigned int [*.. 255]|bigint|  
@@ -177,9 +176,9 @@ ms.locfileid: "68138334"
 |unsigned mediumint [*.. 255]|int|  
 |부호 없는 숫자|numeric|  
 |부호 없는 숫자 [*.. 65]|숫자 [*] [0]|  
-|부호 없는 숫자 [*.. 65] [\*.. 인치|숫자 [*] [\*]|  
+|부호 없는 숫자 [*.. 65] [ \* .. 인치|숫자 [*] [ \* ]|  
 |서명 되지 않은 실수|float [53]|  
-|부호 없는 실수 [*.. 255 [[\*.. 인치|숫자 [*] [\*]|  
+|부호 없는 실수 [*.. 255 [[ \* .. 인치|숫자 [*] [ \* ]|  
 |unsigned smallint|int|  
 |unsigned smallint [*.. 255]|int|  
 |unsigned tinyint|tinyint|  

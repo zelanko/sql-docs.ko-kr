@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1330b409b40bfeea9b265d93e6f6b55cc1b674da
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec99528c375126e06bc48ac7b241df98f62952a4
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757498"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87331962"
 ---
 # <a name="selective-xml-indexes-sxi"></a>SXI(선택적 XML 인덱스)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -194,9 +194,8 @@ FOR
   
 ##  <a name="related-tasks"></a><a name="reltasks"></a> 관련 작업  
   
-|||  
-|-|-|  
-|**Task**|**항목**|  
+| Task | 항목 |
+| ---- | ----- |
 |선택적 XML 인덱스를 만들거나 변경할 때 인덱싱할 노드 경로 및 선택적 최적화 힌트를 지정합니다.|[선택적 XML 인덱스에 대한 경로 및 최적화 힌트 지정](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)|  
 |선택적 XML 인덱스를 만들고, 변경하고, 삭제합니다.|[선택적 XML 인덱스 만들기, 변경 및 삭제](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)|  
 |보조 선택적 XML 인덱스를 만들고, 변경하고, 삭제합니다.|[보조 선택적 XML 인덱스 만들기, 변경 및 삭제](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)|  

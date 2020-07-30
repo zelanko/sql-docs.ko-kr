@@ -25,16 +25,16 @@ ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 43a0382495c04a3fa34e00cb4e85d0b7ab04336e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5dc64b473319421eab790c438ba75c073852d3c5
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982196"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397010"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 하나 이상의 사용자 데이터베이스 또는 데이터베이스 스냅샷을 제거합니다.
 
@@ -42,12 +42,12 @@ ms.locfileid: "73982196"
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 -- SQL Server Syntax
 DROP DATABASE [ IF EXISTS ] { database_name | database_snapshot_name } [ ,...n ] [;]
 ```
 
-```
+```syntaxsql
 -- Azure SQL Database, Azure SQL Data Warehouse and Analytics Platform System Syntax
 DROP DATABASE database_name [;]
 ```
@@ -77,7 +77,7 @@ DROP DATABASE database_name [;]
 데이터베이스를 삭제하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 데이터베이스가 삭제되며 데이터베이스가 사용하는 물리적 디스크 파일도 삭제됩니다. 삭제 시 데이터베이스 또는 해당 데이터베이스의 파일 중 하나가 오프라인 상태이면 디스크 파일은 삭제되지 않습니다. 이 파일은 Windows 탐색기를 사용해 수동으로 삭제할 수 있습니다. 파일 시스템에서 파일을 삭제하지 않고 현재 서버에서 데이터베이스를 제거하려면 [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)를 사용합니다.
 
 > [!WARNING]
-> FILE_SNAPSHOT 백업과 연결된 데이터베이스 파일을 제거하는 것은 성공하지만 연결된 스냅샷이 있는 데이터베이스 파일은 해당 데이터베이스 파일을 참조하는 백업이 무효화되는 것을 방지하기 위해 삭제되지 않습니다. 파일은 잘라지지만 FILE_SNAPSHOT 백업을 그대로 유지하기 위해 물리적으로 삭제되지는 않습니다. 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. **적용 대상**: [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)을 통한 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]입니다.
+> FILE_SNAPSHOT 백업과 연결된 데이터베이스 파일을 제거하는 것은 성공하지만 연결된 스냅샷이 있는 데이터베이스 파일은 해당 데이터베이스 파일을 참조하는 백업이 무효화되는 것을 방지하기 위해 삭제되지 않습니다. 파일은 잘라지지만 FILE_SNAPSHOT 백업을 그대로 유지하기 위해 물리적으로 삭제되지는 않습니다. 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]현재 버전[을 통한 ](https://go.microsoft.com/fwlink/p/?LinkId=299658)입니다.
 
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

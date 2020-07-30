@@ -16,18 +16,18 @@ helpviewer_keywords:
 - uniqueidentifier data type
 - NEWID function
 ms.assetid: f7014e60-96d5-457e-afc3-72b60ba20c0f
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f9324ee324188fd8cf70f97280b5e613ffd1178
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fff840992f0b24af961acb069268cb41c550da2a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73843648"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397102"
 ---
 # <a name="newid-transact-sql"></a>NEWID(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   **uniqueidentifier** 형식의 고유한 값을 만듭니다.  
   
@@ -71,7 +71,7 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
- 다음 예에서는 **uniqueidentifier** 데이터 형식을 사용하여 `cust` 테이블을 만들고, NEWID를 사용하여 테이블을 기본값으로 채웁니다. `NEWID()`의 기본값을 할당할 때 새 행과 기존 행마다 `CustomerID` 열에 고유 값이 있습니다.  
+ 다음 예에서는 `cust`uniqueidentifier**데이터 형식을 사용하여** 테이블을 만들고, NEWID를 사용하여 테이블을 기본값으로 채웁니다. `NEWID()`의 기본값을 할당할 때 새 행과 기존 행마다 `CustomerID` 열에 고유 값이 있습니다.  
   
 ```  
 -- Creating a table using NEWID for uniqueidentifier data type.  

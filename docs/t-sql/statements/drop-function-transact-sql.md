@@ -22,15 +22,15 @@ ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cc1eb2d3c2953fd2bdf24fdf3c13c94872f6632
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d0f955bbb373c48f55b9769485354050c2c86a3
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77144183"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396754"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   현재 데이터베이스에서 하나 이상의 사용자 정의 함수를 제거합니다. 사용자 정의 함수는 [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md)을 사용하여 만들고 [ALTER FUNCTION](../../t-sql/statements/alter-function-transact-sql.md)을 사용하여 수정할 수 있습니다.  
   
@@ -40,14 +40,14 @@ ms.locfileid: "77144183"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
  -- SQL Server, Azure SQL Database 
 
 DROP FUNCTION [ IF EXISTS ] { [ schema_name. ] function_name } [ ,...n ]   
 [;]
 ```
 
-```  
+```syntaxsql
  -- Azure SQL Data Warehouse, Parallel Data Warehouse 
 
 DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
@@ -76,7 +76,7 @@ DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 ## <a name="examples"></a>예  
   
 ### <a name="a-dropping-a-function"></a>A. 함수 삭제  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]예제 데이터베이스의 `Sales` 스키마에서 `fn_SalesByStore` 사용자 정의 함수를 삭제합니다. 이 함수를 만들려면의 [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)에서 예제 B를 참조 하십시오.  
+ 다음 예에서는 `fn_SalesByStore`예제 데이터베이스의 `Sales` 스키마에서 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 사용자 정의 함수를 삭제합니다. 이 함수를 만들려면의 [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)에서 예제 B를 참조 하십시오.  
   
 ```  
 DROP FUNCTION Sales.fn_SalesByStore;  
