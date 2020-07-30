@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e155e9c6f0e8a85eaf7ec905f9c9b471160a9ec
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b2706faaf181e609df6209758e60b2a46c87aa46
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885903"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248646"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 통합 코드 액세스 보안
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -104,14 +104,13 @@ ms.locfileid: "85885903"
 ## <a name="permission-set-summary"></a>권한 집합 요약  
  다음 차트에는 **SAFE**, **EXTERNAL_ACCESS**및 **UNSAFE** 권한 집합에 부여 된 제한 사항 및 권한이 요약 되어 있습니다.  
   
-|||||  
+|기능|**색상**|**EXTERNAL_ACCESS**|**하는데**|   
 |-|-|-|-|  
-||**색상**|**EXTERNAL_ACCESS**|**하는데**|  
-|**코드 액세스 보안 권한**|실행 전용|실행 및 외부 리소스 액세스|제한 없음(P/Invoke 포함)|  
-|**프로그래밍 모델 제한 사항**|예|예|제한 없음|  
-|**안정성 요구 사항**|예|예|아니요|  
-|**로컬 데이터 액세스**|예|예|예|  
-|**네이티브 코드를 호출하는 기능**|아니요|예|예|  
+|코드 액세스 보안 권한|실행 전용|실행 및 외부 리소스 액세스|제한 없음(P/Invoke 포함)|  
+|프로그래밍 모델 제한 사항|yes|yes|제한 없음|  
+|안정성 요구 사항|yes|yes|아니요|  
+|로컬 데이터 액세스|yes|yes|yes|  
+|네이티브 코드를 호출하는 기능|아니요|예|예|  
   
 ## <a name="see-also"></a>참고 항목  
  [CLR 통합 보안](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

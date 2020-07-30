@@ -1,5 +1,6 @@
 ---
 title: srv_paramset(확장 저장 프로시저 API) | Microsoft Docs
+description: 확장 저장 프로시저 API의 srv_paramset 원격 저장 프로시저 호출 반환 매개 변수의 값을 설정 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8a2f3caa15eeb6e7ff25f511b4a0e92de68b383
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 645b87be7c1b5955975a370e9e1b49e6608272b3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756686"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248384"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset(확장 저장 프로시저 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +61,7 @@ len
  *n*  
  설정할 매개 변수의 번호를 나타냅니다. 첫 번째 매개 변수는 1입니다.  
   
- *데이터*  
+ *data*  
  원격 저장 프로시저에서 매개 변수를 반환할 때 다시 클라이언트로 전달될 데이터 값에 대한 포인터입니다.  
   
  *길이가*  

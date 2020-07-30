@@ -1,5 +1,5 @@
 ---
-title: IRow::GetColumns를 사용하여 열 페치(OLE DB) | Microsoft Docs
+title: 'IRow:: GetColumns를 사용 하 여 열 페치 (Native Client OLE DB 공급자) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +13,19 @@ ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db4a869049b0092f314e2cb89035d4a5549c0760
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 645c627f70b3135792b882a1ae62504948f2839a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004550"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247872"
 ---
-# <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>IRow::GetColumns를 사용하여 열 인출(OLE DB)
+# <a name="fetch-columns-in-sql-server-native-client-using-irowgetcolumns-ole-db"></a>IRow:: GetColumns (OLE DB)를 사용 하 여 SQL Server Native Client에서 열 페치
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **IRow** 인터페이스를 사용하여 결과 집합에 있는 단일 행의 열에 직접 액세스할 수 있습니다. 따라서 **IRow**는 행이 한 개인 결과 집합에서 열을 검색하는 데 효과적입니다.  
   
- **IRow**를 사용하여 단일 행을 인출하는 방법을 보여 주는 코드 예제가 있습니다. 이 예제에서는 행에서 한 번에 한 개의 열이 검색됩니다. 이 예제에서는 다음 작업을 수행하는 방법을 보여 줍니다.  
+ **IRow**를 사용 하 여 단일 행을 인출 하는 방법을 보여 주는 코드 샘플을 사용할 수 있습니다. 이 예제에서는 행에서 한 번에 한 개의 열이 검색됩니다. 이 예제에서는 다음 작업을 수행하는 방법을 보여 줍니다.  
   
 -   열 그룹을 순서대로 인출하는 방법  
   
@@ -56,7 +57,7 @@ ms.locfileid: "86004550"
   
  첫 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은 예제에서 사용하는 테이블을 만듭니다.  
   
- ole32.lib oleaut32.lib를 사용하여 컴파일하고 두 번째(C++) 코드 목록을 실행합니다. 이 애플리케이션은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명된 인스턴스에 연결하려면 연결 문자열을 L"(local)"에서 L"(local)\\\name"으로 변경합니다. 여기서 name은 명명된 인스턴스입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
+ ole32.lib oleaut32.lib를 사용하여 컴파일하고 두 번째(C++) 코드 목록을 실행합니다. 이 애플리케이션은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명 된 인스턴스에 연결 하려면 연결 문자열을 L "(local)"에서 L "(local) \\ \name"으로 변경 합니다. 여기서 name은 명명 된 인스턴스입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
  세 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은 예제에서 사용하는 테이블을 삭제합니다.  
   

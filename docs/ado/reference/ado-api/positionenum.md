@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e69af0a5-3405-4b72-9c6e-6b188ff746fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 57a440a97dcdf1c0fddcff8017e0c2d04967b92d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6a61dae9888628302da3326a1465f4182c49e39c
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763344"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243224"
 ---
 # <a name="positionenum"></a>PositionEnum
 레코드 [집합](../../../ado/reference/ado-api/recordset-object-ado.md)내에서 레코드 포인터의 현재 위치를 지정 합니다.  
@@ -41,7 +41,12 @@ ms.locfileid: "82763344"
 |AdoEnums. 알 수 없음|  
   
 ## <a name="applies-to"></a>적용 대상  
-  
-|||  
-|-|-|  
-|[AbsolutePage 속성(ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)|[AbsolutePosition 속성(ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|
+
+:::row:::
+    :::column:::
+        [AbsolutePage 속성(ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)  
+    :::column-end:::
+    :::column:::
+        [AbsolutePosition 속성(ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)  
+    :::column-end:::
+:::row-end:::

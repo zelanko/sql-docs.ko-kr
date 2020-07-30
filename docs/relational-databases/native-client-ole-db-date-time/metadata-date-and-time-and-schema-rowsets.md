@@ -13,13 +13,14 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1920d9dac28cbbd72f43ddac95b8f34b38fb8fc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e2b6ca8c13930da79d47f103f7eaa00185e64ca2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005446"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245818"
 ---
-# <a name="metadata---date-and-time-and-schema-rowsets"></a>메타데이터 - 날짜 및 시간과 스키마 행 집합
+# <a name="metadata---date-and-time-and-schema-rowsets-in-sql-server-native-client"></a>메타 데이터-SQL Server Native Client의 날짜 및 시간 및 스키마 행 집합
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   이 항목에서는 COLUMNS 및 PROCEDURE_PARAMETERS 행 집합에 대한 정보를 제공합니다. 이 정보는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에 새로 추가된 향상된 OLE DB 날짜 및 시간 기능과 관련이 있습니다.  
@@ -66,7 +67,7 @@ ms.locfileid: "86005446"
 ## <a name="provider_types-rowset"></a>PROVIDER_TYPES 행 집합  
  날짜/시간 형식에 대해 다음 행이 반환됩니다.  
   
-|형식 -><br /><br /> Column|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
+|형식 -><br /><br /> 열|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |TYPE_NAME|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
@@ -76,7 +77,7 @@ ms.locfileid: "86005446"
 |CREATE_PARAMS|NULL|소수 자릿수|NULL|NULL|소수 자릿수|소수 자릿수|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|  
+|검색 가능|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|  
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  

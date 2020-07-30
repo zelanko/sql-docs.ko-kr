@@ -1,5 +1,6 @@
 ---
 title: srv_paramtype(확장 저장 프로시저 API) | Microsoft Docs
+description: 확장 저장 프로시저 API의 srv_paramtype 원격 저장 프로시저 호출 매개 변수의 데이터 형식을 반환 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: badc6d36-8a87-42b5-b28c-9c4f5ded8552
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8fa7e689bea3f05b43e9867614912cb97bd58534
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7dc2200fc0cfb526e78d3544dc5bba7ad0f3e52e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755942"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248322"
 ---
 # <a name="srv_paramtype-extended-stored-procedure-api"></a>srv_paramtype(확장 저장 프로시저 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -21,13 +21,14 @@ ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0648fda674a0dba83ae4560fa3744e3c1b1430dc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 13d0e51b7b06acdfbe847976d093765203b51638
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009081"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245801"
 ---
-# <a name="changing-passwords-programmatically"></a>프로그래밍 방식으로 암호 변경
+# <a name="changing-sql-server-native-client-passwords-programmatically"></a>프로그래밍 방식으로 SQL Server Native Client 암호 변경
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이전에는 사용자 암호가 만료될 때 관리자만 암호를 다시 설정할 수 있었습니다. 부터 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client OLE DB 공급자와 native client ODBC 드라이버를 통해 프로그래밍 방식으로 암호 만료를 처리 하 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 고 **SQL Server 로그인** 대화 상자를 변경 하는 것을 지원 합니다.  

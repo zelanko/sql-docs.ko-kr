@@ -1,5 +1,6 @@
 ---
 title: sys. sp_rda_get_rpo_duration (Transact-sql) | Microsoft Docs
+description: Sp_rda_get_rpo_duration를 사용 하 여 원격 Azure 데이터베이스를 완전히 복원 하기 위해 준비 테이블에 유지 SQL Server는 마이그레이션된 데이터의 시간 수를 가져올 수 있습니다.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 35882067-3072-47ff-9024-ca453c0f49a7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8e903c3b41a8a191122fdf8499ee6b4c82dbe308
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 3e50e313e49b955b40497f28b2cb9265cf7717e3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053039"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243358"
 ---
 # <a name="syssp_rda_get_rpo_duration-transact-sql"></a>sys. sp_rda_get_rpo_duration (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

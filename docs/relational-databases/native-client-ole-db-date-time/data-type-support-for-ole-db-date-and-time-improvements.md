@@ -1,5 +1,5 @@
 ---
-title: OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원 | Microsoft Docs
+title: 날짜 및 시간 기능 향상을 위한 데이터 형식 지원 (Native Client OLE DB 공급자) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,13 +14,14 @@ ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d414c4aaf8e316d4662448f7e19b847468bee0c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0a39a9c4d99ed94db0d70575f0047698b1a15074
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005467"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245837"
 ---
-# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원
+# <a name="sql-server-native-client-data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원 SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜/시간 데이터 형식을 지 원하는 OLE DB (Native Client) 형식에 대 한 정보를 제공 합니다.  
@@ -73,7 +74,7 @@ ms.locfileid: "86005467"
   
  다음과 같은 기존 OLE DB 구조체의 구현은 새로운 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 및 시간 데이터 형식을 지원하도록 수정되었습니다. 단, 정의는 변경되지 않았습니다.  
   
--   DBTYPE_DATE. 자동 DATE 형식입니다. 내부적으로 **더블**로 표시됩니다. 정수 부분은 1899년 12월 30일 이후의 일 수이고, 소수 부분은 하루를 분수로 표시한 수입니다. 이 형식의 정확도는 1초 단위이므로 소수 자릿수가 0입니다.  
+-   DBTYPE_DATE. 자동 DATE 형식입니다. 내부적으로 **double**로 표시 됩니다. 정수 부분은 1899년 12월 30일 이후의 일 수이고, 소수 부분은 하루를 분수로 표시한 수입니다. 이 형식의 정확도는 1초 단위이므로 소수 자릿수가 0입니다.  
   
 -   DBTYPE_DBDATE  
   
@@ -172,14 +173,14 @@ enum SQLVARENUM {
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable의 데이터 형식 매핑  
  다음 형식 매핑은 ITableDefinition::CreateTable에서 사용되는 DBCOLUMNDESC 구조체와 함께 사용됩니다.  
   
-|OLE DB 데이터 형식(*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식|메모|  
+|OLE DB 데이터 형식(*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식|참고|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
 |DBTYPE_DBTIMESTAMP|**datetime2**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 DBCOLUMDESC *bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
 |DBTYPE_DBTIME2|**time**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 DBCOLUMDESC *bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
 |DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 DBCOLUMDESC *bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
   
- 애플리케이션은 *wType*에 DBTYPE_DBTIMESTAMP를 지정하면 *pwszTypeName*에 형식 이름을 지정하여 **datetime2**에 대한 매핑을 재정의할 수 있습니다. **datetime**을 지정하는 경우 *bScale*은 3이어야 합니다. **smalldatetime**을 지정하는 경우 *bScale*은 0이어야 합니다. *Bscale* 이 *Wtype* 및 *pwszTypeName*와 일치 하지 않는 경우 DB_E_BADSCALE 반환 됩니다.  
+ 애플리케이션은 *wType*에 DBTYPE_DBTIMESTAMP를 지정하면 *pwszTypeName*에 형식 이름을 지정하여 **datetime2**에 대한 매핑을 재정의할 수 있습니다. **datetime**을 지정하는 경우 *bScale*은 3이어야 합니다. **smalldatetime**을 지정하는 경우 *bScale*은 0이어야 합니다. *bScale*이 *wType* 및 *pwszTypeName*과 일치하지 않는 경우 DB_E_BADSCALE이 반환됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [날짜 및 시간 기능 향상&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  

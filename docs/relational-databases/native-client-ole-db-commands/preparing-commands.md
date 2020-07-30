@@ -1,5 +1,5 @@
 ---
-title: 명령 준비 | Microsoft Docs
+title: 명령 준비 (Native Client OLE DB 공급자)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,18 +16,19 @@ ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 731f03b29f48d8e1970bdddd1f6ee2d1a7748c3e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6d9d789b9abdc9af6b392b57d046d9d9c80d0747
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002805"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247052"
 ---
-# <a name="preparing-commands"></a>명령 준비
+# <a name="preparing-commands-in-sql-server-native-client"></a>SQL Server Native Client에서 명령 준비
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 단일 명령을 효율적으로 여러 번 실행하기 위한 명령 준비를 지원합니다. 그러나 명령 준비로 인해 오버헤드가 늘어나며 소비자가 명령을 두 번 이상 실행하기 위해 준비할 필요는 없습니다. 일반적으로 4번 이상 실행할 명령을 준비해야 합니다.  
   
- 성능상의 이유로 명령 준비는 명령이 실행될 때까지 지연되며 이것은 기본적인 동작입니다. 따라서 준비 중인 명령에서 발생하는 모든 오류는 명령이 실행되거나 메타 속성 작업이 수행될 때까지 알려지지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 속성 SSPROP_DEFERPREPARE를 FALSE로 설정하면 이 기본 동작을 해제할 수 있습니다.  
+ 성능상의 이유로 명령 준비는 명령이 실행될 때까지 지연되며 기본 동작입니다. 따라서 준비 중인 명령에서 발생하는 모든 오류는 명령이 실행되거나 메타 속성 작업이 수행될 때까지 알려지지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 속성 SSPROP_DEFERPREPARE를 FALSE로 설정하면 이 기본 동작을 해제할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 명령을 먼저 준비하지 않고 직접 실행하면 실행 계획이 만들어져 캐시됩니다. SQL 문을 다시 실행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 효율적인 알고리즘을 통해 새 문을 캐시의 기존 실행 계획과 비교하고 해당 문에 실행 계획을 다시 사용합니다.  
   

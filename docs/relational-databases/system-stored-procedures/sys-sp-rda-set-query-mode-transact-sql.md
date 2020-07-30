@@ -1,5 +1,6 @@
 ---
 title: sys. sp_rda_set_query_mode (Transact-sql) | Microsoft Docs
+description: 현재 스트레치 사용 데이터베이스 및 해당 테이블에 대 한 쿼리가 로컬 및 원격 데이터 또는 로컬 데이터만 반환 하는지 여부를 지정 하려면 sp_rda_set_query_mode을 사용 합니다.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 06aa5b76b321206a936340cc5bfd8715dbf14f52
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: b2fbef46606f182e2c9833d2ce421c61fc421105
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053036"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243336"
 ---
 # <a name="syssp_rda_set_query_mode-transact-sql"></a>sys. sp_rda_set_query_mode (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -45,7 +47,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
   
 -   **LOCAL_ONLY** 스트레치 사용 테이블에 대 한 쿼리는 로컬 데이터만 반환 합니다.  
   
--   **LOCAL_AND_REMOTE** 스트레치 사용 테이블에 대 한 쿼리는 로컬 및 원격 데이터를 모두 반환 합니다. 이것은 기본적인 동작입니다.  
+-   **LOCAL_AND_REMOTE** 스트레치 사용 테이블에 대 한 쿼리는 로컬 및 원격 데이터를 모두 반환 합니다. 기본 동작입니다.  
   
  [ @force =] * \@ force*  
  는 유효성 검사 없이 쿼리 모드를 변경 하려는 경우 1로 설정할 수 있는 선택적 비트 값입니다.  

@@ -14,15 +14,15 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1877f653244100126226b85b29a24ca458c1cf74
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a45bfb98fa5b8d5a9ce5c640d07c3c13ab7d5284
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71326134"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396176"
 ---
 # <a name="use-column-sets"></a>열 집합 사용
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   스파스 열을 사용하는 테이블에서는 테이블의 모든 스파스 열을 반환하는 열 집합을 지정할 수 있습니다. 열 집합은 구조화된 출력으로 테이블의 모든 스파스 열을 결합하는 형식화되지 않은 XML 표현입니다. 열 집합은 열 집합이 테이블에 물리적으로 저장되지 않는다는 점에서 계산 열과 유사하며, 직접 업데이트할 수 있다는 점에서 계산 열과 다릅니다.  
   

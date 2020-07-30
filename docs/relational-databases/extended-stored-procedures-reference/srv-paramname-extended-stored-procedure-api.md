@@ -1,5 +1,6 @@
 ---
 title: srv_paramname(확장 저장 프로시저 API) | Microsoft Docs
+description: 확장 저장 프로시저 API의 srv_paramname 원격 저장 프로시저 호출 매개 변수의 이름을 반환 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1a53d707-7b06-49cc-a0df-ac727cfe953f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9905b5f148ccbf94bb4ca85f85164b5289d0dcec
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: df8add84e06ea06445a070cd94f5b2033fd4c7d1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756694"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248434"
 ---
 # <a name="srv_paramname-extended-stored-procedure-api"></a>srv_paramname(확장 저장 프로시저 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

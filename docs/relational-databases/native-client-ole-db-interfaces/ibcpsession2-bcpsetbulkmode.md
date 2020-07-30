@@ -1,5 +1,5 @@
 ---
-title: IBCPSession2::BCPSetBulkMode | Microsoft Docs
+title: 'IBCPSession2:: Bcpset대량 모드 (Native Client OLE DB 공급자) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12788578b865e24f390a3e49d97fa66388ecb4aa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dc8b48c6a9dab071df8fa3df1977f62afb91659d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008437"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247709"
 ---
-# <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
+# <a name="ibcpsession2bcpsetbulkmode-native-client-ole-db-provider"></a>IBCPSession2:: Bcpset대량 모드 (Native Client OLE DB 공급자)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   IBCPSession2::BCPSetBulkMode는 열 형식을 지정하기 위한 [IBCPSession::BCPColFmt&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)에 대한 대안을 제공합니다. 개별 열 형식 특성을 설정하는 IBCPSession::BCPColFmt와 달리, IBCPSession2::BCPSetBulkMode는 모든 특성을 설정합니다.  
@@ -71,7 +72,7 @@ HRESULT BCPSetBulkMode (
   
  다음 표에서는 *property* 매개 변수에 대한 상수를 나열합니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> BCP.EXE의 -c 옵션에 해당하며, *eUserDataType* 속성이 **BCP_TYPE_SQLCHARACTER**로 설정된 IBCPSession::BCPColFmt에 해당합니다.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> BCP.EXE의 -w 옵션에 해당하며, *eUserDataType* 속성이 **BCP_TYPE_SQLNCHAR**로 설정된 IBCPSession::BCPColFmt에 해당합니다.|  

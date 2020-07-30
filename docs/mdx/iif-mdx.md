@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 87b7b030776c1c18bb13307bf97db721fe472bd3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca6449308f9683bccf55e58d9cec6d5d5a97a59e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105331"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247137"
 ---
 # <a name="iif-mdx"></a>IIf(MDX)
 
@@ -28,7 +28,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
 ```  
   
 ## <a name="arguments"></a>인수  
- IIf 함수는 iif (\<condition>, \<branch>, \<else branch>)의 세 가지 인수를 사용 합니다.  
+ IIf 함수는 세 가지 인수인 iif ( \<condition> , \<then branch> ,)를 사용 \<else branch> 합니다.  
   
  *Logical_Expression*  
  **True** (1) 또는 **false** (0)로 계산 되는 조건입니다. 유효한 MDX(Multidimensional Expressions) 논리식이어야 합니다.  
@@ -63,9 +63,9 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  EAGER 및 STRICT는 힌트에서 함께 사용할 수 없으며 동일한 IIF(,,)에서 서로 다른 식에 대해 사용할 수 있습니다.  
   
- 자세한 내용은 [SQL Server Analysis Services 2008의 IIF 함수 쿼리 힌트](https://go.microsoft.com/fwlink/?LinkId=269540) 및 [MDX IIF 함수 및 CASE 문에 대 한 실행 계획 및 계획 힌트](https://go.microsoft.com/fwlink/?LinkId=269565)를 참조 하세요.  
+ 자세한 내용은 [SQL Server Analysis Services 2008의 IIF 함수 쿼리 힌트](http://www.ssas-info.com/analysis-services-articles/50-mdx/1103-iif-function-query-hints-in-sql-server-analysis-services-2008) 및 [MDX IIF 함수 및 CASE 문에 대 한 실행 계획 및 계획 힌트](https://go.microsoft.com/fwlink/?LinkId=269565)를 참조 하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 쿼리에서는 계산 측정값 내에서 **IIF** 를 간단 하 게 사용 하 여 측정값 Internet Sales Amount가 $1만 보다 크거나 작은 경우 두 개의 다른 문자열 값 중 하나를 반환 하는 방법을 보여 줍니다.  
   
  `WITH MEMBER MEASURES.IIFDEMO AS`  

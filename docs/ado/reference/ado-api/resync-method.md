@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54c92fad618ffaad9b22a8ed73b287c0a5716959
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6907bfa9b83370074db9d9e2e522ed49d2c96e7e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756307"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243214"
 ---
 # <a name="resync-method"></a>Resync 메서드
 현재 레코드 [집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 또는 [Record](../../../ado/reference/ado-api/record-object-ado.md) 개체의 [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에 있는 데이터를 기본 데이터베이스에서 새로 고칩니다.  
@@ -65,11 +65,16 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
  다시 **동기화는** 다시 **동기화** 가 호출 될 때 오류가 발생 하지 않는 한 **필드** 개체의 **상태** 값을 수정 하지 않습니다. 예를 들어 필드가 더 이상 존재 하지 않는 경우 공급자는 **adFieldDoesNotExist**와 같은 **field** 개체에 대 한 적절 한 **상태** 값을 반환 합니다. 반환 된 **상태** 값은 **상태** 속성의 값 내에서 논리적으로 조합할 수 있습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
-  
-|||  
-|-|-|  
-|[Fields 컬렉션(ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Fields 컬렉션(ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>참고 항목  
  [Resync 메서드 예제 (VB)](../../../ado/reference/ado-api/resync-method-example-vb.md)   
  [Resync 메서드 예제 (VC + +)](../../../ado/reference/ado-api/resync-method-example-vc.md)   

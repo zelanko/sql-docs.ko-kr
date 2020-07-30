@@ -19,13 +19,14 @@ ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56831c5cde9a446cb5ecef49d925eea39db5e354
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4a08e03bf4fed86d7da0f341e6bf2b74d0ef84a9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010437"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243883"
 ---
-# <a name="stored-procedures---calling"></a>저장 프로시저 - 호출
+# <a name="stored-procedures---calling-in-sql-server-native-client"></a>저장 프로시저-SQL Server Native Client에서 호출
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   저장 프로시저는 0개 이상의 매개 변수를 가질 수 있으며 값을 반환할 수도 있습니다. Native Client OLE DB 공급자를 사용 하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 저장 프로시저에 대 한 매개 변수를 다음으로 전달할 수 있습니다.  

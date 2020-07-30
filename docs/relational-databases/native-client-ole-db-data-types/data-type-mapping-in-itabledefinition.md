@@ -19,14 +19,14 @@ ms.assetid: 13292d1f-c17e-4d11-bf98-3460a10cbb18
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a308a4c7dfbff5462080d696675759c8c781815f
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 5fa2776bf9e14ccd42a3aecb871dbdbce817448d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86976643"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245940"
 ---
-# <a name="data-type-mapping-in-itabledefinition"></a>ITableDefinition의 데이터 형식 매핑
+# <a name="sql-server-native-client-data-type-mapping-in-itabledefinition"></a>ITableDefinition의 SQL Server Native Client 데이터 형식 매핑
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **Itabledefinition:: CreateTable** 함수를 사용 하 여 테이블을 만들 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전달 되는 DBCOLUMNDESC 배열의 *pwszTypeName* 멤버에서 데이터 형식을 지정할 수 있습니다. 소비자가 열의 데이터 형식을 이름으로 지정하면 DBCOLUMNDESC 구조의 *wType* 멤버로 표시되는 OLE DB 데이터 형식 매핑이 무시됩니다.  

@@ -15,13 +15,14 @@ ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae5e998bbbb76ab6843e230efee2ff01a569796f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e5047dda28d7d1540f1c69c9c2919aa031b8206c
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009030"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247609"
 ---
-# <a name="performing-bulk-copy-operations"></a>대량 복사 작업 수행
+# <a name="performing-bulk-copy-operations-in-sql-server-native-client"></a>SQL Server Native Client에서 대량 복사 작업 수행 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 대량 복사 기능은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블 또는 뷰와의 대량 데이터 전송을 지원합니다. SELECT 문을 지정하여 데이터를 전송할 수도 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 ASCII 파일과 같은 운영 체제 데이터 파일 간에 데이터를 이동할 수 있습니다. 데이터 파일은 다른 형식을 가질 수 있습니다. 형식은 형식 파일에서 대량 복사로 정의됩니다. 필요에 따라 데이터를 프로그램 변수로 로드하고 대량 복사 함수와 메서드를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로 전송할 수 있습니다.  

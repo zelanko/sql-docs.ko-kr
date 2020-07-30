@@ -17,13 +17,14 @@ ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0be65fc5e045c13244cab2e3fbe4664afd454e00
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: faa764aae707ae785c7cfd1cb324427b9a941376
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010486"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243891"
 ---
-# <a name="schema-rowset-support-ole-db"></a>스키마 행 집합 지원(OLE DB)
+# <a name="schema-rowset-support-in-sql-server-native-client-ole-db"></a>SQL Server Native Client에서 스키마 행 집합 지원 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 분산 쿼리를 처리할 때 연결 된 서버에서 스키마 정보를 반환 하는 것도 지원 합니다 [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  

@@ -12,22 +12,22 @@ ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: d548291653b589d973c9c21813690a61a0fdb7ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf5146b885839b88268b5ffbd6fe642503523655
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729831"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395804"
 ---
 # <a name="syspdw_materialized_view_mappings-transact-sql"></a>sys. pdw_materialized_view_mappings (Transact-sql)  
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Object_id 하 여 구체화 된 뷰를 내부 개체 이름과 연결 합니다.
 
 열 physical_name 및 object_id이 카탈로그 뷰에 대 한 키를 구성 합니다.
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |physical_name |**nvarchar (36)**|구체화 된 뷰의 물리적 이름입니다.|  
 |object_id  |**int**|구체화 된 뷰의 개체 ID입니다. [Sys. objects (transact-sql)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest)를 참조 하세요.| 

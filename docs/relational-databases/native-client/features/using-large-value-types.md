@@ -18,13 +18,14 @@ ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b46af0e58d433f51fe4417bfe9245a35fbe1b629
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 40196c8ec895bbf6bfc8e092e82ca8704d4f803e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009874"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243904"
 ---
-# <a name="using-large-value-types"></a>큰 값 형식 사용
+# <a name="using-large-value-types-in-sql-server-native-client"></a>SQL Server Native Client에서 많은 값 형식 사용
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이전에 큰 값 데이터 형식으로 작업하려면 특별한 처리가 필요했습니다. 큰 값 데이터 형식은 최대 행 크기가 8KB를 초과하는 데이터 형식입니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서는 **varchar**, **nvarchar** 및 **varbinary** 데이터 형식에 대 한 **max** 지정자를 도입 하 여 값을 2 ^ 31-1 바이트로 저장할 수 있습니다. 테이블 열 및 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 변수는 **varchar (max)**, **nvarchar (max)** 또는 **varbinary (max)** 데이터 형식을 지정할 수 있습니다.  

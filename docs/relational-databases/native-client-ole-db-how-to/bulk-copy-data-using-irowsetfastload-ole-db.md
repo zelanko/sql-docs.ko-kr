@@ -16,14 +16,14 @@ ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ec8dcb3a768e6067e44baf615c69c47d7928204
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 6a898f45d80a266b0d385b73832312e9046b157b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942485"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247915"
 ---
-# <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>IRowsetFastLoad를 통한 데이터 대량 복사(OLE DB)
+# <a name="bulk-copy-data-using-irowsetfastload-ole-db-in--sql-server-native-client"></a>SQL Server Native Client에서 IRowsetFastLoad (OLE DB)를 사용 하는 대량 데이터 복사
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   이 예제에서는 레코드를 테이블에 대량 복사하기 위해 IRowsetFastLoad를 사용하는 방법을 보여 줍니다.  

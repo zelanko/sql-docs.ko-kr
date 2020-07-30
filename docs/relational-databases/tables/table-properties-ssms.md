@@ -17,15 +17,15 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c0dea1eff86506021907b184c80b3f28f74ab5a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c566b77fcc7c8c9854900f448a9b32a61948172
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72905948"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395731"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 테이블 속성 편집 대화 상자에 표시된 테이블 속성에 대해 설명합니다. 이러한 속성을 표시하는 방법은 [테이블 정의 보기](../../relational-databases/tables/view-the-table-definition.md)를 참조하세요.  
   

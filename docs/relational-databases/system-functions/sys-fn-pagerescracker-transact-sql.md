@@ -1,6 +1,6 @@
 ---
 title: sys. fn_PageResCracker (Transact-sql) | Microsoft Docs
-description: Sys. fn_PageResCracker 시스템 함수에 대 한 설명서입니다.
+description: Fn_PageResCracker 시스템 함수에 대해 알아봅니다. 예제를 참조 하 고 사용 가능한 추가 리소스를 봅니다.
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 460f1990a7020d7a57ea7ad543f3253576756d05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a48b5ba06223130a83980bf6cf8ec410bd58e5a1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790432"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247582"
 ---
 # <a name="sysfn_pagerescracker-transact-sql"></a>sys. fn_PageResCracker (Transact-sql)
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]

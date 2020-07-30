@@ -1,5 +1,6 @@
 ---
 title: sys. sp_rda_reconcile_columns (Transact-sql) | Microsoft Docs
+description: Sp_rda_reconcile_columns에 대해 자세히 알아보세요. 이 저장 프로시저를 사용 하 여 원격 Azure 테이블 및 스트레치 사용 SQL Server 테이블의 열을 조정 합니다.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a528609b8ab33f913a45e9bd61a1409bc3927930
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 939bc5cbe299ce144b8617391fd33d740011b08a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053125"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245750"
 ---
 # <a name="syssp_rda_reconcile_columns-transact-sql"></a>sys. sp_rda_reconcile_columns (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

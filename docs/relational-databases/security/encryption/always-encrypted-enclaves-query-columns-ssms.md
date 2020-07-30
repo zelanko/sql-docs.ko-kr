@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6bee04f4a794a503b89b73d4ef4a6a1cef897b4b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 50f44a01383a307ac462c0f4fcb3e9e3f67d66fa
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595598"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411509"
 ---
 # <a name="query-columns-using-always-encrypted-with-secure-enclaves-with-ssms"></a>SSMS로 보안 enclave를 사용한 Always Encrypted를 이용하는 열 쿼리
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 이 문서에서는 SQL Server Management Studio를 사용하여 [보안 enclave를 사용한 Always Encrypted](always-encrypted-enclaves.md)에 대해 서버 쪽 보안 enclave를 사용하는 쿼리를 발급하는 방법을 설명하며 여기에는 다음이 포함됩니다.
 - 내부 암호화 작업을 트리거하는 쿼리

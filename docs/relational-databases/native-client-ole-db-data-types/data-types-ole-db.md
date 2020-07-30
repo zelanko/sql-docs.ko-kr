@@ -16,14 +16,14 @@ ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42944947ce8c2998a4329064d9ad496fdfff72b2
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: e1574b87bef2e231415b0c95a333c4b7107ca726
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86976640"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245908"
 ---
-# <a name="data-types-ole-db"></a>데이터 형식(OLE DB)
+# <a name="sql-server-native-client-data-types-ole-db"></a>SQL Server Native Client 데이터 형식 (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)]Native client OLE DB 공급자를 사용 하 여 문을 실행 하 고 결과를 처리 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 행 집합의 매개 변수 또는 열을 바인딩할 때 및 **itabledefinition** 인터페이스를 사용 하 여에 테이블을 만들 때 native client OLE DB 공급자가 데이터 형식을 OLE DB 데이터 형식에 매핑하는 방법을 알아야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

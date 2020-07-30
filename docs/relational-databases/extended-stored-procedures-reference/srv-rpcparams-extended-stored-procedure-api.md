@@ -1,5 +1,6 @@
 ---
 title: srv_rpcparams(확장 저장 프로시저 API) | Microsoft Docs
+description: Srv_rpcparams 및 현재 원격 저장 프로시저에 대 한 매개 변수 수를 반환 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 96a5e6f6-d320-4623-b96e-0a856e3abebb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 328359e13594de8666fcdf031798dc59151ddd89
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 47fa4b7a539f1491d539b73fdcc50a9b298db910
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755865"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248262"
 ---
 # <a name="srv_rpcparams-extended-stored-procedure-api"></a>srv_rpcparams(확장 저장 프로시저 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

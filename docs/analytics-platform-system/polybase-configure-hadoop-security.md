@@ -9,14 +9,14 @@ ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f275c77556e8abe8932e241075b9e24e2ae5db77
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4a1007529db6d861d3090fbbdcb6c85975fb882a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289681"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243499"
 ---
-# <a name="polybase-configuration-and-security-for-hadoop"></a>Hadoop에 대한 PolyBase 구성 및 보안
+# <a name="configure-polybase-hadoop-security"></a>PolyBase Hadoop 보안 구성
 
 이 문서에서는 Hadoop에 대 한 APS PolyBase 연결에 영향을 주는 다양 한 구성 설정에 대 한 참조를 제공 합니다. PolyBase에 대 한 연습은 [polybase 란?](configure-polybase-connectivity-to-external-data.md)을 참조 하세요.
 
@@ -62,10 +62,10 @@ MIT KDC를 사용 하 여 Kerberos 보안 Hadoop 클러스터에 연결 하려�
    |------------|----------------|---------------------|----------|   
    |1|core-site.xml|polybase.kerberos.kdchost|KDC 호스트 이름을 지정합니다. 예를 들면 kerberos.your-realm.com과 같습니다.|  
    |2|core-site.xml|polybase.kerberos.realm|Kerberos 영역을 지정합니다. 다음은 그 예입니다.  YOUR-REALM.COM|  
-   |3|core-site.xml|hadoop.security.authentication|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 다음은 그 예입니다.  KERBEROS<br></br>**보안 정보:** KERBEROS는 대문자로 작성해야 합니다. 소문자로 작성되면 실행되지 않을 수 있습니다.|   
+   |3|core-site.xml|hadoop.security.authentication|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 예를 들면 다음과 같습니다. KERBEROS<br></br>**보안 정보:** KERBEROS는 대문자로 작성해야 합니다. 소문자로 작성되면 실행되지 않을 수 있습니다.|   
    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 예: hdfs/_HOST@YOUR-REALM.COM|  
    |5|mapred-site.xml|mapreduce.jobhistory.principal|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 예: mapred/_HOST@YOUR-REALM.COM|  
-   |6|mapred-site.xml|mapreduce.jobhistory.address|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 다음은 그 예입니다.  10.193.26.174:10020|  
+   |6|mapred-site.xml|mapreduce.jobhistory.address|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 예를 들면 다음과 같습니다. 10.193.26.174:10020|  
    |7|yarn-site.xml yarn|yarn.resourcemanager.principal|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 예: yarn/_HOST@YOUR-REALM.COM|  
 
 **core-site.xml**
@@ -115,7 +115,7 @@ MIT KDC를 사용 하 여 Kerberos 보안 Hadoop 클러스터에 연결 하려�
 4. 데이터베이스 범위 자격 증명 개체를 만들어 각 Hadoop 사용자에 대해 인증 정보를 지정합니다. [PolyBase T-SQL 개체](../relational-databases/polybase/polybase-t-sql-objects.md)를 참조하세요.
 
 ## <a name="hadoop-encryption-zone-setup"></a><a id="encryptionzone"></a>Hadoop 암호화 영역 설정
-Hadoop 암호화 영역을 사용 하는 경우 core-site.xml 및 hdfs-site.xml를 다음과 같이 수정 합니다. 해당 포트 번호를 사용 하 여 KMS 서비스를 실행 하는 ip 주소를 제공 합니다. CDH의 KMS에 대 한 기본 포트는 16000입니다.
+Hadoop 암호화 영역을 사용 하는 경우 core-site.xml를 수정 하 고 다음과 같이 hdfs-site.xml 합니다. 해당 포트 번호를 사용 하 여 KMS 서비스를 실행 하는 ip 주소를 제공 합니다. CDH의 KMS에 대 한 기본 포트는 16000입니다.
 
 **core-site.xml**
 ```xml

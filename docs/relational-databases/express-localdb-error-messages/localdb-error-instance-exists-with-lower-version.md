@@ -9,20 +9,20 @@ ms.topic: reference
 ms.assetid: a7c5ce08-8841-49a3-b252-116807ba469a
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 61392e655f46e17d3641ee91e37433f0aa436fef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b07c4eebc34872868da61d7af633d29f1758e313
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756895"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246070"
 ---
 # <a name="localdb_error_instance_exists_with_lower_version"></a>LOCALDB_ERROR_INSTANCE_EXISTS_WITH_LOWER_VERSION
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>세부 정보  
   
-|||  
-|-|-|  
+| attribute | 값 |
+| --------- | ----- |
 |제품 이름|SQL Server|  
 |이벤트 ID|258|  
 |이벤트 원본|SQL Server 로컬 데이터베이스 런타임 12.0|  

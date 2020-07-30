@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04e60b218439a67e0fd0d57f6c36cc725217931b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6730ee9db626356ceb8f569928717af851896b07
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727645"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246398"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 통합 아키텍처 - CLR 호스팅 환경
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -154,12 +154,11 @@ Thread.EndThreadAffinity();
 ###### <a name="security-permission-sets"></a>보안: 권한 집합  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 데이터베이스에 배포되는 코드의 안정성 및 보안 요구 사항을 사용자가 지정할 수 있습니다. 어셈블리를 데이터베이스에 업로드 하면 어셈블리 작성자는 해당 어셈블리에 대해 SAFE, EXTERNAL_ACCESS 및 UNSAFE의 세 가지 권한 집합 중 하나를 지정할 수 있습니다.  
   
-|||||  
+|기능|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |-|-|-|-|  
-|권한 집합|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |코드 액세스 보안|실행 전용|실행 및 외부 리소스 액세스|제한 없음|  
-|프로그래밍 모델 제한 사항|예|예|제한 없음|  
-|안정성 요구 사항|예|예|아니요|  
+|프로그래밍 모델 제한 사항|yes|yes|제한 없음|  
+|안정성 요구 사항|yes|예|아니요|  
 |네이티브 코드를 호출하는 기능|아니요|예|예|  
   
  SAFE는 가장 신뢰할 수 있고 안전한 모드로, 허용되는 프로그래밍 모델에 대한 제한이 있습니다. SAFE 어셈블리는 실행하고, 계산을 수행하고, 로컬 데이터베이스에 액세스할 수 있는 권한이 부여됩니다. SAFE 어셈블리는 확인할 수 있는 형식 안전 어셈블리여야 하며 비관리 코드를 호출할 수 없습니다.  

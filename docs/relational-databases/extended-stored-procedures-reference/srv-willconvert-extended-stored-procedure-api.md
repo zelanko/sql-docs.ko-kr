@@ -1,5 +1,6 @@
 ---
 title: srv_willconvert(확장 저장 프로시저 API) | Microsoft Docs
+description: 특정 데이터 형식 변환을 ODS 라이브러리 내에서 사용할 수 있는지 여부를 srv_willconvert 확인 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6f4db5fd-215a-461c-95e4-17697852733e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d9ba59555ce590c460854481d916e30ef942cba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ef515b200221a6bb439a65a02e546017046dd0e4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755802"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248230"
 ---
 # <a name="srv_willconvert-extended-stored-procedure-api"></a>srv_willconvert(확장 저장 프로시저 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

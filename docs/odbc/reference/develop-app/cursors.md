@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a7484de48edaecea56fc135ca3b803875f9557c
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 2457667e374587e5e91a4c758dfbe641a0b02f78
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977780"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247123"
 ---
-# <a name="cursors"></a>커서
+# <a name="odbc-cursors"></a>ODBC 커서
 응용 프로그램은 *커서*를 사용 하 여 데이터를 인출 합니다. 커서는 결과 집합과 다릅니다. 결과 집합은 특정 검색 조건과 일치 하는 행 집합 이지만 커서는 응용 프로그램에 해당 행을 반환 하는 소프트웨어입니다. 데이터베이스에 적용 되는 이름 *커서* 는 컴퓨터 터미널의 깜박이는 커서에서 발생 했을 수 있습니다. 커서가 화면에서 현재 위치를 나타내고 입력 된 단어가 다음에 표시 되는 것 처럼 결과 집합의 커서는 결과 집합의 현재 위치 및 다음에 반환 되는 행을 나타냅니다.  
   
  ODBC의 커서 모델은 포함 된 SQL의 커서 모델을 기반으로 합니다. 이러한 모델 간의 주요 차이점 중 하나는 커서가 열리는 방식입니다. 포함 된 SQL에서 사용 하려면 먼저 커서를 명시적으로 선언 하 고 열어야 합니다. ODBC에서는 결과 집합을 만드는 문이 실행 될 때 커서가 암시적으로 열립니다. 커서를 열 때 커서는 결과 집합의 첫 번째 행 앞에 배치 됩니다. 포함 된 SQL과 ODBC 모두에서 응용 프로그램 사용을 마친 후 커서를 닫아야 합니다.  

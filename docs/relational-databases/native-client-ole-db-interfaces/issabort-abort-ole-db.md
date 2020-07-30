@@ -1,5 +1,5 @@
 ---
-title: ISSAbort::Abort(OLE DB) | Microsoft Docs
+title: 'ISSAbort:: Abort (Native Client OLE DB 공급자) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e71843d190389b806b5726a42436582f79d52ae2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 03a6e0119db3cabce4184af5ea387522bd3602c0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005392"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246942"
 ---
-# <a name="issabortabort-ole-db"></a>ISSAbort::Abort(OLE DB)
+# <a name="issabortabort-native-client-ole-db-provider"></a>ISSAbort:: Abort (Native Client OLE DB 공급자)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   현재 행 집합 및 현재 명령과 연결된 일괄 처리되는 명령을 취소합니다.  
@@ -39,9 +40,9 @@ HRESULT Abort(void);
 ```  
   
 ## <a name="remarks"></a>설명  
- 중단할 명령이 저장 프로시저에 있으면 저장 프로시저 및 해당 프로시저를 호출한 프로시저의 실행 및 저장 프로시저 호출이 포함된 명령 일괄 처리가 종료됩니다. 서버에서 결과 집합을 클라이언트로 전송 중이면 전송이 중지됩니다. 클라이언트가 결과 집합을 사용하지 않으려는 경우 행 집합을 해제하기 전에 **ISSAbort::Abort**를 호출하면 행 집합을 신속하게 해제할 수 있습니다. 그러나 열려 있는 트랜잭션이 있고 XACT_ABORT가 ON인 경우 **ISSAbort::Abort**를 호출하면 트랜잭션이 롤백됩니다.  
+ 중단 되는 명령이 저장 프로시저에 있는 경우 저장 프로시저 (및 해당 프로시저를 호출한 프로시저)의 실행이 종료 되 고 저장 프로시저 호출을 포함 하는 명령 일괄 처리가 종료 됩니다. 서버에서 결과 집합을 클라이언트로 전송 중이면 전송이 중지됩니다. 클라이언트가 결과 집합을 사용하지 않으려는 경우 행 집합을 해제하기 전에 **ISSAbort::Abort**를 호출하면 행 집합을 신속하게 해제할 수 있습니다. 그러나 열려 있는 트랜잭션이 있고 XACT_ABORT가 ON인 경우 **ISSAbort::Abort**를 호출하면 트랜잭션이 롤백됩니다.  
   
- **ISSAbort:: Abort** 가 S_OK를 반환 하면 연결 된 **IMultipleResults** 인터페이스가 사용할 수 없는 상태로 전환 되 고 해제 될 때까지 모든 메서드 호출 ( **IUnknown** 인터페이스에 의해 정의 된 메서드 제외)에 DB_E_CANCELED 반환 됩니다. **Abort**를 호출하기 전에 **IMultipleResults**에서 **IRowset**을 가져온 경우에도 **ISSAbort::Abort** 호출 후 인터페이스가 사용할 수 없는 상태로 전환되어 해제될 때까지 모든 메서드 호출(**IUnknown** 인터페이스 및 **IRowset::ReleaseRows**로 정의된 메서드는 제외)에 대해 DB_E_CANCELED를 반환합니다.  
+ **ISSAbort::Abort**가 S_OK를 반환한 후에는 연결된 **IMultipleResults** 인터페이스가 사용할 수 없는 상태로 전환되어 해제될 때까지 모든 메서드 호출(**IUnknown** 인터페이스로 정의된 메서드는 제외)에 대해 DB_E_CANCELED를 반환합니다. **Abort**를 호출하기 전에 **IMultipleResults**에서 **IRowset**을 가져온 경우에도 **ISSAbort::Abort** 호출 후 인터페이스가 사용할 수 없는 상태로 전환되어 해제될 때까지 모든 메서드 호출(**IUnknown** 인터페이스 및 **IRowset::ReleaseRows**로 정의된 메서드는 제외)에 대해 DB_E_CANCELED를 반환합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터는 서버 XACT_ABORT 상태가 ON일 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결되어 있을 때 **ISSAbort::Abort**를 실행하면 현재의 암시적 또는 명시적 트랜잭션이 종료되고 롤백됩니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 트랜잭션이 중단되지 않습니다.  

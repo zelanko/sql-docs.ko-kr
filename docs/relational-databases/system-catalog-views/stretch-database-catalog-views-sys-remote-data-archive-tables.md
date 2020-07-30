@@ -1,5 +1,6 @@
 ---
 title: sys. remote_data_archive_tables (Transact-sql) | Microsoft Docs
+description: 스트레치 사용 로컬 테이블의 데이터를 저장 하는 각 원격 테이블에 대해 한 행을 포함 하는 remote_data_archive_tables에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,11 +19,12 @@ ms.assetid: 765069b7-60fd-414c-875f-3455460b75cd
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: b91a01714f7c7784f5ec227362c66c9468f44df5
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: c4b2b32181360b9974a3acfe85cb166d7ebd515d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053620"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248142"
 ---
 # <a name="stretch-database-catalog-views---sysremote_data_archive_tables"></a>Stretch Database 카탈로그 뷰-sys. remote_data_archive_tables
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c0d75e8f9fb6d11315e327edd6f7d064c13e063
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: aeeb7bcbb79231a2d6ed842459355a09e2889e4f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759499"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243174"
 ---
 # <a name="update-method"></a>Update 메서드
 레코드 [집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 현재 행 또는 [Record](../../../ado/reference/ado-api/record-object-ado.md) 개체의 [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에 대 한 변경 내용을 저장 합니다.  
@@ -67,11 +67,16 @@ record.Fields.Update
  예를 들어 **Delete** 메서드를 사용 하 여 삭제 된 필드는 즉시 삭제 되도록 표시 되지만 컬렉션에 남아 있습니다. 공급자의 컬렉션에서 이러한 필드를 실제로 삭제 하려면 **Update** 메서드를 호출 해야 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
-  
-|||  
-|-|-|  
-|[Fields 컬렉션(ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Fields 컬렉션(ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>참고 항목  
  [Update 및 CancelUpdate 메서드 예제 (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [Update 및 CancelUpdate 메서드 예제 (VC + +)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   

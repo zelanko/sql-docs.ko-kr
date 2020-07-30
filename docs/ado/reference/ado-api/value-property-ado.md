@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6648fcabe8890ef653558636738735a4f5e4012f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c84ab6806924649bdad9bb712f730c24011cdb38
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759449"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243164"
 ---
 # <a name="value-property-ado"></a>Value 속성(ADO)
 
@@ -43,11 +43,19 @@ ADO에서는 **Value** 속성을 사용 하 여 긴 이진 데이터를 설정 �
 > [Record](../../../ado/reference/ado-api/record-object-ado.md) 개체의 [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에 추가 된 새 **Field** 개체의 경우 다른 **필드** 속성을 지정 하려면 먼저 **Value** 속성을 설정 해야 합니다. 먼저 **value** 속성의 특정 값이 할당 되 고 라는 **필드** 컬렉션에 대해 [업데이트](../../../ado/reference/ado-api/update-method.md) 되어야 합니다. 그런 다음 [형식](../../../ado/reference/ado-api/type-property-ado.md) 또는 [특성과](../../../ado/reference/ado-api/attributes-property-ado.md) 같은 다른 속성에 액세스할 수 있습니다.
   
 ## <a name="applies-to"></a>적용 대상
-  
-||||  
-|-|-|-|  
-|[Field 개체](../../../ado/reference/ado-api/field-object.md)|[Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)|[속성 개체(ADO)](../../../ado/reference/ado-api/property-object-ado.md)|
-  
+
+:::row:::
+    :::column:::
+        [Field 개체](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+    :::column:::
+        [속성 개체(ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>참고 항목
 
 [Value 속성 예제 (VB)](../../../ado/reference/ado-api/value-property-example-vb.md) 

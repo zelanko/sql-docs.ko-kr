@@ -1,5 +1,6 @@
 ---
 title: srv_wsendmsg(확장 저장 프로시저 API) | Microsoft Docs
+description: 확장 저장 프로시저 API의 srv_wsendmsg에서 클라이언트에 유니코드 메시지를 보낼 수 있는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f2153076-32c9-4a52-8e1b-fc9618153543
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a74e343c67f83800c21d2c9227f064aa90f29d4e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0256a21d4d64df710a4720797297293cbf8a9c0e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755784"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248214"
 ---
 # <a name="srv_wsendmsg-extended-stored-procedure-api"></a>srv_wsendmsg(확장 저장 프로시저 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

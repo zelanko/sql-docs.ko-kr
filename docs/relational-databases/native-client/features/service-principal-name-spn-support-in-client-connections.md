@@ -16,13 +16,14 @@ ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6dcafb11041fc3698e0af5db31d05e95263dd268
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e50be9c92fdf887fbf11ae5e301c8c21b55be62c
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009011"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247594"
 ---
-# <a name="service-principal-name-spn-support-in-client-connections"></a>클라이언트 연결의 SPN(서비스 사용자 이름) 지원
+# <a name="service-principal-name-spn-support-in-client-connections-in-sql-server-native-client"></a>SQL Server Native Client에서 클라이언트 연결의 SPN (서비스 사용자 이름) 지원
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]부터는 모든 프로토콜에서 상호 인증을 지원하도록 SPN(서비스 사용자 이름)이 확장되었습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 SPN은 Active Directory에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 기본 SPN이 등록된 경우 TCP를 사용하는 Kerberos에 대해서만 지원되었습니다.  
