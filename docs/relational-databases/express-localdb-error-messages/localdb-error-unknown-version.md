@@ -9,20 +9,20 @@ ms.topic: reference
 ms.assetid: f2a04023-ed42-4516-b59c-7a1b8a5395d4
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d63b78c0f173860df62e1015ac2f689c672c9320
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 703db802d9a1d7f7971ca82a444b4aab62f2923e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85641302"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246559"
 ---
 # <a name="localdb_error_unknown_version"></a>LOCALDB_ERROR_UNKNOWN_VERSION
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>세부 정보  
   
-|||  
-|-|-|  
+| attribute | 값 |
+| --------- | ----- |
 |제품 이름|SQL Server|  
 |이벤트 ID|269|  
 |이벤트 원본|SQL Server 로컬 데이터베이스 런타임 12.0|  

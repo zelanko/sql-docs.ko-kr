@@ -1,5 +1,6 @@
 ---
 title: srv_senddone(확장 저장 프로시저 API) | Microsoft Docs
+description: 확장 저장 프로시저 API의 srv_senddone 결과 완료 메시지를 클라이언트에 보내는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1fc4f1d5-56d4-43f6-b5e4-0c0cc295cba3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b5f7722daf7ebbdda988cf3fb41ac1ab5b06049
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 424ef5a1050def714e7f42483cb2c8d16ecfb99b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755852"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248252"
 ---
 # <a name="srv_senddone-extended-stored-procedure-api"></a>srv_senddone(확장 저장 프로시저 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +62,7 @@ count
  *status*  
  다양한 *status* 플래그에 대한 2바이트 필드입니다. *status* 플래그 값에 AND 및 OR 논리 연산자를 사용하여 여러 플래그를 설정할 수 있습니다. 다음 표에서는 가능한 *status* 플래그를 보여 줍니다.  
   
-|상태 플래그|설명|  
+|상태 플래그|Description|  
 |-----------------|-----------------|  
 |SRV_DONE_COUNT|*count* 매개 변수에 올바른 개수가 포함되어 있습니다.|  
 |SRV_DONE_ERROR|현재 클라이언트 명령에 오류가 수신되었습니다.|  

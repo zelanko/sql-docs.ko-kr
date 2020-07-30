@@ -1,5 +1,6 @@
 ---
 title: srv_setcoldata(확장 저장 프로시저 API) | Microsoft Docs
+description: 확장 저장 프로시저 API의 srv_setcoldata에 대 한 자세한 내용은 열의 데이터에 대 한 현재 주소를 지정 합니다.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2e19205a-25ca-4d4a-916b-d591cf2c892b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70612b61740c0467de31c01bb5383012ea953aea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3c9d151ca52e52d550d7eba42cb6e53af1d8417e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755823"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248229"
 ---
 # <a name="srv_setcoldata-extended-stored-procedure-api"></a>srv_setcoldata(확장 저장 프로시저 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +58,7 @@ data
  *column*  
  주소가 지정되는 열의 번호를 나타냅니다. 열 번호는 1부터 시작됩니다.  
   
- *데이터*  
+ *data*  
  열 데이터에 대한 포인터입니다. **srv_setcoldata**에 대한 다른 호출에 의해 열 데이터가 바뀌거나 **srv_senddone**이 호출될 때까지 *data*에 할당된 메모리를 해제하면 안 됩니다.  
   
 ## <a name="returns"></a>반환  

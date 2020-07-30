@@ -1,5 +1,6 @@
 ---
 title: sys. sp_rda_reconcile_indexes (Transact-sql) | Microsoft Docs
+description: Sp_rda_reconcile_indexes에 대해 자세히 알아보세요. 이 Transact-sql 저장 프로시저를 사용 하 여 스키마 태스크를 큐에 대기 하 여 원격 테이블의 인덱스를 조정 하는 방법을 참조 하세요.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: be9e80c522cc68cd4438e34d96564a7e49196152
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 098649587cbb6f01caafdedb631c901af160c85f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053023"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236071"
 ---
 # <a name="syssp_rda_reconcile_indexes-transact-sql"></a>sys. sp_rda_reconcile_indexes (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

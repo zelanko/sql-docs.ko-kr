@@ -9,20 +9,20 @@ ms.topic: reference
 ms.assetid: 35b4d6fa-ebb9-49d3-aaab-d4e37b6f3760
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fbbad615b2b4f18e9e46ad931a00e7a2d8bee804
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 636080d7247345cca8f6a6b74fbd19c9e8a487d9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756915"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246163"
 ---
 # <a name="localdb_error_instance_already_shared"></a>LOCALDB_ERROR_INSTANCE_ALREADY_SHARED
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>세부 정보  
   
-|||  
-|-|-|  
+| attribute | 값 |
+| --------- | ----- |
 |제품 이름|SQL Server|  
 |이벤트 ID|284|  
 |이벤트 원본|SQL Server 로컬 데이터베이스 런타임 12.0|  

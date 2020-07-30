@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5d22757951cad59c10bc1d7eea85ea8ee11ed0ad
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 456b11972fcb9b7bb20ee07b58e36d2daa5cc0da
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757629"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242386"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 [필드](../../../ado/reference/ado-api/field-object.md), [매개 변수](../../../ado/reference/ado-api/parameter-object.md)또는 [속성](../../../ado/reference/ado-api/property-object-ado.md)의 데이터 형식을 지정 합니다. 해당 OLE DB 형식 표시기는 다음 표의 설명 열에 괄호 안에 표시 됩니다.  
   
-|상수|값|설명|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|다른 데이터 형식의 배열을 나타내는 플래그 값으로, 항상 다른 데이터 형식 상수와 결합 됩니다. ADOX에는 적용 되지 않습니다.|  
 |**adBigInt**|20|부호 있는 8 바이트 정수 (DBTYPE_I8)를 나타냅니다.|  
@@ -115,8 +115,14 @@ ms.locfileid: "82757629"
 |AdoEnums|  
   
 ## <a name="applies-to"></a>적용 대상  
-  
-|||  
-|-|-|  
-|[Append 메서드(ADO)](../../../ado/reference/ado-api/append-method-ado.md)|[CreateParameter 메서드(ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)|  
-|[CreateRecordset 메서드(RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|[Type 속성(ADO)](../../../ado/reference/ado-api/type-property-ado.md)|
+
+:::row:::
+    :::column:::
+        [Append 메서드(ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
+        [CreateParameter 메서드(ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)  
+    :::column-end:::
+    :::column:::
+        [CreateRecordset 메서드(RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)  
+        [Type 속성(ADO)](../../../ado/reference/ado-api/type-property-ado.md)  
+    :::column-end:::
+:::row-end:::

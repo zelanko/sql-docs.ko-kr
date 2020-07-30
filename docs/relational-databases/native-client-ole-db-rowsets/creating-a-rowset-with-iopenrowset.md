@@ -16,14 +16,14 @@ ms.assetid: e8bc3de7-4b97-4de9-8df8-e11947d24045
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3c9b5355492a4522073ced3c5b6666fbf40ec2b
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 3d775eaa8e8263d1009f122a4d4f5e6ff245cd27
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942445"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247679"
 ---
-# <a name="creating-a-rowset-with-iopenrowset"></a>IOpenRowset을 사용하여 행 집합 만들기
+# <a name="creating-a-rowset-with-iopenrowset-in-sql-server-native-client"></a>SQL Server Native Client에서 IOpenRowset을 사용 하 여 행 집합 만들기
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 다음과 같은 제한 사항이 있는 **iopenrowset:: OpenRowset** 메서드를 지원 합니다.  

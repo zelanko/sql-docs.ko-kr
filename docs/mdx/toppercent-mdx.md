@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7a8c92a4b6a76cb9d15048d6f058038363970cb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dcb01ae9771f748ad62faba37cea103f1c7acc8c
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036588"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362653"
 ---
 # <a name="toppercent-mdx"></a>TopPercent(MDX)
 
@@ -31,7 +31,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  *Set_Expression*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
- *백분율*  
+ *Percentage*  
  반환할 튜플의 백분율을 지정하는 유효한 숫자 식입니다.  
   
 > [!IMPORTANT]  
@@ -67,7 +67,7 @@ WHERE([Product].[Product Categories].[Bikes])
   
  위의 식은 다음 결과를 생성합니다.  
   
-||Reseller Sales Amount|  
+|도시|Reseller Sales Amount|  
 |-|---------------------------|  
 |Toronto|$3508904.84|  
 |London|$1521530.09|  
@@ -102,7 +102,7 @@ FROM [Adventure Works]
   
  위의 쿼리는 다음 결과를 반환합니다. 가운데 섹션의 행은 가독성을 위해 제거되었습니다.  
   
-||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
+|여행용 자전거|Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157444.56|$163112.57|($5668.01)|  
 |여행용-2000 파랑, 46|$321027.03|$333021.50|($11994.47)|  
@@ -122,7 +122,7 @@ FROM [Adventure Works]
   
  100%를 요청하는 쿼리란 모든 행을 반환해야 함을 의미합니다. 그러나 *Numeric_Expression* 에는 음수 값이 있으므로 한 행만 반환 됩니다.  
   
-||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
+|여행용 자전거|Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157444.56|$163112.57|($5668.01)|  
   

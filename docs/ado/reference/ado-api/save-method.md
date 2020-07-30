@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4134e34cc494185ec384bd9900ba578e9fa3034d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: db4b5d86c59e35ac3a7aa66684115668d19ead42
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755867"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243204"
 ---
 # <a name="save-method"></a>Save 메서드
 파일 또는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체에 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 을 저장 합니다.  
@@ -34,7 +34,7 @@ recordset.Save Destination, PersistFormat
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *대상이*  
+ *대상*  
  (선택 사항) **레코드 집합** 을 저장할 파일의 전체 경로 이름을 나타내는 **Variant** 이거나 **스트림** 개체에 대 한 참조입니다.  
   
  *PersistFormat*  
@@ -88,11 +88,16 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
  XML 형식으로 저장 된 **레코드 집합** 은 utf-8 형식을 사용 하 여 저장 됩니다. 이러한 파일이 ADO 스트림에 로드 될 때 스트림의 Charset 속성이 UTF-8 형식에 적절 한 값으로 설정 되지 않은 경우 stream 개체는 스트림에서 **레코드 집합** 을 열려고 시도 하지 않습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
-  
-|||  
-|-|-|  
-|[레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>참고 항목  
  [Save 및 Open 메서드 예제 (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
  [Save 및 Open 메서드 예제 (VC + +)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   

@@ -9,14 +9,14 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 3b754fb2de33a230bc7d27f239b2778d2849fd5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 352f51e0d53c9dc145b1faf1832faf59587fef6f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401271"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243094"
 ---
-# <a name="what-is-polybase"></a>PolyBase란?
+# <a name="configure-polybase-connectivity"></a>PolyBase 연결 구성
 PolyBase를 사용 하면 AP (분석 플랫폼 시스템)에서 데이터를 읽고 외부 데이터 원본에 데이터를 쓸 수 있는 Transact-sql 쿼리를 처리할 수 있습니다. 외부 데이터에 액세스 하는 동일한 쿼리는 AP에 관계 테이블을 포함할 수도 있습니다. 이를 통해 외부 원본의 데이터를 APS 데이터베이스의 상위 값 관계형 데이터와 결합할 수 있습니다.
 
 ![PolyBase 논리](media/polybase/polybase-logical.png)
@@ -33,7 +33,7 @@ APS의 PolyBase는 Hadoop (HDFS) 파일 시스템 및 Azure Blob Storage에 대 
 > PolyBase 관련 문서의 나머지 부분에서는 AU6 (APS 2016) 이상에서 PolyBase를 구성 하는 방법을 대해 설명.
 
 ## <a name="see-also"></a>참고 항목
-- [Hadoop은](polybase-configure-hadoop.md)
+- [Hadoop](polybase-configure-hadoop.md)
 - [Azure Blob Storage](polybase-configure-azure-blob-storage.md)
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  
   

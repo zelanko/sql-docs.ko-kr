@@ -18,13 +18,14 @@ ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b548a1ee0edd7bbd5b83fd3692937ac349a2d540
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1c0ef8694db1d2f5feb4a994fa2fb557a9a7b187
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010542"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247952"
 ---
-# <a name="information-in-error-interfaces"></a>오류 인터페이스의 정보
+# <a name="information-in-ole-db-defined-error-interfaces"></a>OLE DB 정의 오류 인터페이스의 정보
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 OLE DB 정의 오류 인터페이스 **IErrorInfo**, **Ierrorrecords**및 **ISQLErrorInfo**에 일부 오류 및 상태 정보를 보고 합니다.  
@@ -35,7 +36,7 @@ ms.locfileid: "86010542"
 |---------------------|-----------------|  
 |**GetDescription**|설명적인 오류 메시지 문자열입니다.|  
 |**GetGUID**|오류를 정의한 인터페이스의 GUID입니다.|  
-|**GetHelpContext**|지원되지 않습니다. 항상 0을 반환합니다.|  
+|**GetHelpContext**|지원 안 됨 항상 0을 반환합니다.|  
 |**GetHelpFile**|지원되지 않습니다. 항상 NULL을 반환합니다.|  
 |**GetSource**|"Microsoft SQL Server Native Client" 문자열입니다.|  
   

@@ -12,12 +12,12 @@ ms.assetid: 2625466b-d0ef-4c71-bedc-6d13491a8351
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7f47fb9d9047e02fde6a7e8a7f758e455e3fc789
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 74cfb2819cd462a2e3cf695cbb0daf92b4dac5a3
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197105"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332386"
 ---
 # <a name="sysdm_pdw_exec_connections-transact-sql"></a>sys. dm_pdw_exec_connections (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -33,13 +33,13 @@ ms.locfileid: "86197105"
 |client_id|**varchar(48)**|이 서버에 연결 하는 클라이언트의 IP 주소입니다. Null을 허용합니다.|  
 |sql_spid|**int**|연결의 서버 프로세스 ID입니다. `@@SPID`를 사용 하 여 `sql_spid` 현재 연결의를 반환 합니다. 용도 대부분의 경우를 `session_id` 대신 사용 합니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  서버에 대 한 **VIEW SERVER STATE** 권한이 필요 합니다.  
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-||||  
-|-|-|-|  
+| From | 받는 사람 | 관계 |
+| ---- | -- | ------------ |
 |dm_pdw_exec_sessions session_id|dm_pdw_exec_connections session_id|일 대 일|  
 |dm_pdw_exec_requests connection_id|dm_pdw_exec_connections connection_id|다 대 일|  
   

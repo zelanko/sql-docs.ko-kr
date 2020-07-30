@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be6d076ca121923a4b6769c7dad5269c3fd642ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c55668bb565bd383d170e7bf331630bf8b6adef1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301163"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246602"
 ---
 # <a name="sqldescribeparam-function"></a>SQLDescribeParam 함수(SQLDescribeParam Function)
 **규칙**  
@@ -47,7 +47,7 @@ SQLRETURN SQLDescribeParam(
       SQLSMALLINT *   NullablePtr);  
 ```  
   
-## <a name="argument"></a>인수  
+## <a name="arguments"></a>인수  
  *StatementHandle*  
  입력 문 핸들입니다.  
   
@@ -57,9 +57,9 @@ SQLRETURN SQLDescribeParam(
  *DataTypePtr*  
  출력 매개 변수의 SQL 데이터 형식을 반환할 버퍼에 대 한 포인터입니다. 이 값은 IPD의 레코드 SQL_DESC_CONCISE_TYPE 필드에서 읽습니다. 이 값은 부록 D: 데이터 형식 또는 드라이버별 SQL 데이터 형식의 [Sql 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 섹션에 있는 값 중 하나입니다.  
   
- ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME 또는 SQL_TYPE_TIMESTAMP는 각각 날짜, 시간 또는 타임 스탬프 데이터에 대해 * \*DataTypePtr* 로 반환 됩니다. ODBC 2. *x*, SQL_DATE, SQL_TIME 또는 SQL_TIMESTAMP 반환 됩니다. 드라이버 관리자는 ODBC 2를 사용할 때 필요한 매핑을 수행 합니다. *x* 응용 프로그램이 ODBC 3에서 작동 하 고 있습니다. *x* 드라이버 또는 ODBC 3 인 경우 *x* 응용 프로그램에서 ODBC 2를 사용 하 고 있습니다. *x* 드라이버.  
+ ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME 또는 SQL_TYPE_TIMESTAMP는 각각 날짜, 시간 또는 타임 스탬프 데이터에 대해 * \* DataTypePtr* 로 반환 됩니다 (ODBC 2* 의 경우). x*, SQL_DATE, SQL_TIME 또는 SQL_TIMESTAMP 반환 됩니다. 드라이버 관리자는 ODBC 2를 사용할 때 필요한 매핑을 수행 합니다. *x* 응용 프로그램이 ODBC 3에서 작동 하 고 있습니다. *x* 드라이버 또는 ODBC 3 인 경우 *x* 응용 프로그램에서 ODBC 2를 사용 하 고 있습니다. *x* 드라이버.  
   
- *Columnnumber* 가 0과 같을 때 (책갈피 열) SQL_BINARY 가변 길이 책갈피에 대 한 * \*DataTypePtr* 에서 반환 됩니다. ODBC 3에서 책갈피를 사용 하는 경우 SQL_INTEGER 반환 됩니다. ODBC 2를 사용 하 여 작동 하는 *x* 응용 프로그램 *x* 드라이버 또는 ODBC 2. ODBC 3에서 작동 하는 *x* 응용 프로그램입니다. *x* 드라이버)  
+ *Columnnumber* 가 0과 같을 때 (책갈피 열) SQL_BINARY 가변 길이 책갈피에 대 한 * \* DataTypePtr* 에서 반환 됩니다. ODBC 3에서 책갈피를 사용 하는 경우 SQL_INTEGER 반환 됩니다. ODBC 2를 사용 하 여 작동 하는 *x* 응용 프로그램 *x* 드라이버 또는 ODBC 2. ODBC 3에서 작동 하는 *x* 응용 프로그램입니다. *x* 드라이버)  
   
  자세한 내용은 부록 D: 데이터 형식에서 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 을 참조 하세요. 드라이버별 SQL 데이터 형식에 대 한 자세한 내용은 드라이버 설명서를 참조 하십시오.  
   
@@ -90,7 +90,7 @@ SQLRETURN SQLDescribeParam(
 |07009|잘못 된 설명자 인덱스|(DM) 인수 *Parameternumber* 에 지정 된 값이 1 보다 작은 경우<br /><br /> 인수 *Parameternumber* 에 지정 된 값이 연결 된 SQL 문의 매개 변수 개수 보다 큽니다.<br /><br /> 매개 변수 표식은 비 DML 문에 속합니다.<br /><br /> 매개 변수 표식은 **SELECT** 목록의 일부입니다.|  
 |08S01|통신 연결 오류|드라이버가 연결 된 드라이버와 데이터 원본 간의 통신 연결이 함수 처리를 완료 하기 전에 실패 했습니다.|  
 |21S01|삽입 값 목록이 열 목록과 일치 하지 않습니다.|**INSERT** 문의 매개 변수 수가 문에서 이름이 지정 된 테이블의 열 수와 일치 하지 않습니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* MessageText* 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류|드라이버가 실행 또는 함수의 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY008|작업 취소됨|*StatementHandle*에 대해 비동기 처리를 사용 하도록 설정 했습니다. 함수가 호출 되었으며 실행이 완료 되기 전에 **sqlcancel** 또는 **Sqlcancelhandle** 이 *StatementHandle*에 대해 호출 되었습니다. 그런 다음 *StatementHandle*에서 함수를 다시 호출 했습니다.<br /><br /> 함수가 호출 되 고 실행이 완료 되기 전에 **sqlcancel** 또는 **sqlcancelhandle** 이 다중 스레드 응용 프로그램의 다른 스레드에서 *StatementHandle* 호출 되었습니다.|  
 |HY010|함수 시퀀스 오류|(DM) *StatementHandle*에 대해 **Sqlprepare** 또는 **sqlexecdirect** 를 호출 하기 전에 함수가 호출 되었습니다.<br /><br /> (DM) *StatementHandle*연결 된 연결 핸들에 대해 비동기적으로 실행 되는 함수가 호출 되었습니다. **SQLDescribeParam** 함수가 호출 될 때이 비동기 함수는 계속 실행 중입니다.<br /><br /> (DM) *StatementHandle* 에 대해 비동기적으로 실행 되는 함수 (이 함수 아님)가 호출 되었으며이 함수가 호출 될 때 계속 실행 중입니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**, **SQLBulkOperations**또는 **SQLSetPos** 가 *StatementHandle* 에 대해 호출 되 고 SQL_NEED_DATA 반환 되었습니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대해 데이터를 보내기 전에 호출 되었습니다.|  
@@ -101,7 +101,7 @@ SQLRETURN SQLDescribeParam(
 |IM017|비동기 알림 모드에서는 폴링을 사용할 수 없습니다.|알림 모델을 사용할 때마다 폴링은 사용 하지 않도록 설정 됩니다.|  
 |IM018|이 핸들에서 이전 비동기 작업을 완료 하기 위해 **SQLCompleteAsync** 가 호출 되지 않았습니다.|핸들에 대 한 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드가 설정 된 경우에는 핸들에 대해 **SQLCompleteAsync** 를 호출 하 여 사후 처리를 수행 하 고 작업을 완료 해야 합니다.|  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  매개 변수 표식은 SQL 문에 표시 되는 순서 대로 1부터 시작 하는 매개 변수 순서에 따라 번호가 매겨집니다.  
   
  **SQLDescribeParam** 는 SQL 문에서 매개 변수의 유형 (입력, 입/출력 또는 출력)을 반환 하지 않습니다. 프로시저에 대 한 호출을 제외 하 고 SQL 문의 모든 매개 변수는 입력 매개 변수입니다. 프로시저 호출에서 각 매개 변수의 형식을 확인 하기 위해 응용 프로그램은 **SQLProcedureColumns**를 호출 합니다.  

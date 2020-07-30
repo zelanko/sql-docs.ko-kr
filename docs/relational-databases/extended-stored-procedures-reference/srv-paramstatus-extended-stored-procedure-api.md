@@ -1,5 +1,6 @@
 ---
 title: srv_paramstatus(확장 저장 프로시저 API) | Microsoft Docs
+description: Srv_paramstatus에서 특정 원격 저장 프로시저 호출 매개 변수의 상태를 반환 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86cecd45-0b09-42e9-8152-32a12a1c2b7a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fcf1c5ea6db06072aff5075b42a1dde18ad00640
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e55986b0d781b311b050eb5695ca350f7331e25c
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755964"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248387"
 ---
 # <a name="srv_paramstatus-extended-stored-procedure-api"></a>srv_paramstatus(확장 저장 프로시저 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

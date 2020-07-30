@@ -1,5 +1,5 @@
 ---
-title: 결과 처리 방법 도움말 항목(OLE DB) | Microsoft Docs
+title: 결과 처리 방법 도움말 항목 (Native Client OLE DB 공급자)
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72707085af2cdc39b2e2ef24804613af7a68f171
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 558ff0ae2d1ad83392a1b7b94a779c1a2b099636
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006418"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246993"
 ---
-# <a name="processing-results-how-to-topics-ole-db"></a>결과 처리 방법 도움말 항목(OLE DB)
+# <a name="processing-results-how-to-topics-native-client-ole-db-provider"></a>결과 처리 방법 도움말 항목 (Native Client OLE DB 공급자)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   OLE DB 애플리케이션에서 결과를 처리하려면 먼저 결과 집합의 특징을 확인한 다음 데이터를 프로그램 변수로 가져와야 합니다. 명령에서 저장 프로시저를 실행하는 경우 저장 프로시저의 반환 코드 및 출력 매개 변수를 처리하는 방법도 알아야 합니다.  

@@ -1,5 +1,6 @@
 ---
 title: srv_parammaxlen(확장 저장 프로시저 API) | Microsoft Docs
+description: Srv_parammaxlen에서 원격 저장 프로시저 호출 매개 변수의 최대 데이터 길이를 반환 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 936dddfc9faecc48f61ac61e390aca7b82533314
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d0a89b5bf724bb3e1fc8afe335c5458a4ee09c4d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756700"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248426"
 ---
 # <a name="srv_parammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen(확장 저장 프로시저 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

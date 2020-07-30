@@ -17,14 +17,14 @@ ms.assetid: 6239d440-2818-4b98-bb79-732dced41952
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62f1f6d0e30df7202ae85962914cc628c6455041
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 4e5dff60a0605e059c32edd3d4e8501036a42405
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977721"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87241865"
 ---
-# <a name="creating-sql-server-indexes"></a>SQL Server 인덱스 만들기
+# <a name="creating-sql-server-native-client-indexes"></a>SQL Server Native Client 인덱스 만들기
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 소비자가 테이블에 새 인덱스를 정의할 수 있도록 **Iindexdefinition:: createindex** 함수를 제공 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  

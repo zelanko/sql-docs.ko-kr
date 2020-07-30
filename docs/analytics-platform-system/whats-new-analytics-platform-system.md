@@ -9,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e609beb77b92a6dbaf95f39bf5a2a6971a7ae5c4
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 684979981878590c0fbd8d56c648525b25e7c8b6
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85039829"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243081"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>확장 MPP 데이터 웨어하우스의 분석 플랫폼 시스템의 새로운 기능
 최신 어플라이언스 업데이트 Microsoft Analytics Platform System (APS)의 새로운 기능을 참조 하세요. APS는 MPP SQL Server 병렬 데이터 웨어하우스를 호스팅하는 스케일 아웃 온-프레미스 어플라이언스입니다. 
@@ -65,6 +65,8 @@ APS CU 7.3은 SQL 쿼리 최적화 프로그램에서 일반적인 하위 식 �
 
 ### <a name="aps-informatica-connector-for-informatica-1020-published"></a>Informatica 10.2.0 게시 된 APS Informatica 커넥터
 Informatica 버전 10.2.0 및 10.2.0 핫픽스 1에서 작동 하는 AP 용 Informatica 커넥터의 새 버전을 릴리스 했습니다. 새 커넥터는 [다운로드 사이트](https://www.microsoft.com/download/details.aspx?id=57472)에서 다운로드할 수 있습니다.
+> [!NOTE]
+> Informatica 10.2.0 또는 10.2.0 핫픽스 1 용 APS Informatica 커넥터는 strict TLS 1.2에서 작동 하지 않으며 TLS 1.0 및 1.1이 완전 하 게 작동 해야 합니다.
 
 #### <a name="supported-versions"></a>지원되는 버전
 

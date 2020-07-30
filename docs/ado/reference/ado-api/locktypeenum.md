@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3fd3c1ffea99abf859a4a328e21da288bc9378a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e609a51d6b9f42cb6101ff485633302193757fbd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762534"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242653"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 편집 하는 동안 레코드에 적용 되는 잠금 유형을 지정 합니다.  
   
-|상수|값|설명|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|낙관적 일괄 처리 업데이트를 나타냅니다. 일괄 업데이트 모드에 필요 합니다.|  
 |**adLockOptimistic**|3|낙관적 잠금, 레코드 별로 기록을 나타냅니다. 공급자는 낙관적 잠금을 사용 하 고 [Update](../../../ado/reference/ado-api/update-method.md) 메서드를 호출 하는 경우에만 레코드를 잠급니다.|  
@@ -38,15 +38,21 @@ ms.locfileid: "82762534"
   
 |상수|  
 |--------------|  
-|AdoEnums 낙관적|  
+|AdoEnums.LockType.BATCHOPTIMISTIC|  
 |AdoEnums|  
 |AdoEnums|  
 |AdoEnums|  
 |AdoEnums|  
   
 ## <a name="applies-to"></a>적용 대상  
-  
-|||  
-|-|-|  
-|[Clone 메서드(ADO)](../../../ado/reference/ado-api/clone-method-ado.md)|[LockType 속성(ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)|  
-|[Open 메서드(ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|[WillExecute 이벤트(ADO)](../../../ado/reference/ado-api/willexecute-event-ado.md)|
+
+:::row:::
+    :::column:::
+        [Clone 메서드(ADO)](../../../ado/reference/ado-api/clone-method-ado.md)  
+        [LockType 속성(ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Open 메서드(ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+        [WillExecute 이벤트(ADO)](../../../ado/reference/ado-api/willexecute-event-ado.md)  
+    :::column-end:::
+:::row-end:::

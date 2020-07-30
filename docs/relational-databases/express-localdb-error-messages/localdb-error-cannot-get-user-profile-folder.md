@@ -9,20 +9,20 @@ ms.topic: reference
 ms.assetid: 3625c9cb-579c-4b4b-be74-0d4de7b64bb6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 10b1fd976fb3189f3588b298179bb8d432a30b7e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 938557d0ac2fe3c5ddaca6009518940936a78d05
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756926"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246181"
 ---
 # <a name="localdb_error_cannot_get_user_profile_folder"></a>LOCALDB_ERROR_CANNOT_GET_USER_PROFILE_FOLDER
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>세부 정보  
   
-|||  
-|-|-|  
+| attribute | 값 |
+| --------- | ----- |
 |제품 이름|SQL Server|  
 |이벤트 ID|259|  
 |이벤트 원본|SQL Server 로컬 데이터베이스 런타임 12.0|  

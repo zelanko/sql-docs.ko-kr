@@ -1,5 +1,5 @@
 ---
-title: BLOB 출력 매개 변수에 대한 스트리밍 지원 | Microsoft Docs
+title: BLOB 출력 매개 변수에 대 한 스트리밍 지원 (Native Client OLE DB 공급자)
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: b55fccbe-643e-42f1-bf9e-99509c4281af
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29b96935cae07db3da6f65ef35da57a61c24ef84
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0e14ca101644c49630d837e6d31646ae792a3111
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002862"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332166"
 ---
-# <a name="streaming-support-for-blob-output-parameters"></a>BLOB 출력 매개 변수에 대한 스트리밍 지원
+# <a name="streaming-support-for-blob-output-parameters-in-sql-server-native-client"></a>SQL Server Native Client의 BLOB 출력 매개 변수에 대 한 스트리밍 지원
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   이 항목에서는 BLOB 출력 매개 변수를 ISequentialStreams로 바인딩하는 BLOB 출력 매개 변수에 대한 스트리밍 지원을 보여 주는 예제를 제공합니다.  

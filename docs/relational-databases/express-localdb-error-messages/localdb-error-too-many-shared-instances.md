@@ -9,20 +9,20 @@ ms.topic: reference
 ms.assetid: c1595263-6264-4a43-9535-5eb76ece3a57
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d6927c17ed19c0721f0ec90c4e74664e79287ea8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 48308ffe551f55b5526fccc634ad84747b9bc976
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85641308"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245984"
 ---
 # <a name="localdb_error_too_many_shared_instances"></a>LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>세부 정보  
   
-|||  
-|-|-|  
+| attribute | 값 |
+| --------- | ----- |
 |제품 이름|SQL Server|  
 |이벤트 ID|287|  
 |이벤트 원본|SQL Server 로컬 데이터베이스 런타임 12.0|  

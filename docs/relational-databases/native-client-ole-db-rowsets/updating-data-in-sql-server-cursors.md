@@ -18,13 +18,14 @@ ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5627da0643b35bac430e59d9cbc0685ac6f44e38
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c99ab25fdfece33961b72e4ea7c3ea6e233bb071
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013083"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246793"
 ---
-# <a name="updating-data-in-sql-server-cursors"></a>SQL Server 커서의 데이터 업데이트
+# <a name="updating-data-in-sql-server-cursors-in-sql-server-native-client"></a>SQL Server Native Client에서 SQL Server 커서의 데이터 업데이트
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   커서를 통해 데이터를 가져오고 업데이트할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 공급자 소비자 응용 프로그램은 다른 클라이언트 응용 프로그램에 적용 되는 것과 동일한 고려 사항과 제약 조건에 의해 바인딩됩니다.  

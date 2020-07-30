@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d62837bd06798fd8ce7b51b0345cf5e5a6463e4b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0ecc08dde974826846058d4d8927df202367d28d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763164"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242410"
 ---
 # <a name="cancelupdate-method-ado"></a>CancelUpdate 메서드(ADO)
 [Update](../../../ado/reference/ado-api/update-method.md) 메서드를 호출 하기 전에 레코드 [집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 현재 행 또는 새 행 또는 [Record](../../../ado/reference/ado-api/record-object-ado.md) 개체의 [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에 대 한 변경 내용을 취소 합니다.  
@@ -45,11 +45,16 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
  **CancelUpdate** 메서드는 보류 중인 모든 [필드](../../../ado/reference/ado-api/field-object.md) 개체 삽입 또는 삭제를 취소 하 고 기존 필드의 보류 중인 업데이트를 취소 하 여 원래 값으로 복원 합니다. **Fields** 컬렉션에 있는 모든 필드의 [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) 속성은 **adFieldOK**로 설정 됩니다.  
   
 ## <a name="applies-to"></a>적용 대상  
-  
-|||  
-|-|-|  
-|[Fields 컬렉션(ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Fields 컬렉션(ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>참고 항목  
  [Update 및 CancelUpdate 메서드 예제 (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [Update 및 CancelUpdate 메서드 예제 (VC + +)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   

@@ -9,18 +9,18 @@ ms.date: 12/13/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2989be74f4c180d07a6270a8ba5f685460780fbd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245388"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243477"
 ---
-# <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop의 외부 데이터에 액세스하도록 PolyBase 구성
+# <a name="configure-polybase-in-parallel-data-warehouse-to-access-external-data-in-hadoop"></a>Hadoop에서 외부 데이터에 액세스 하도록 병렬 데이터 웨어하우스의 PolyBase 구성
 
 이 문서에서는 APS 어플라이언스에서 PolyBase를 사용 하 여 Hadoop의 외부 데이터를 쿼리 하는 방법을 설명 합니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 PolyBase는 HDP(Hortonworks Data Platform) 및 CDH(Cloudera Distributed Hadoop)의 두 가지 Hadoop 공급자를 지원합니다. Hadoop은 새 릴리스의 "Major.Minor.Version" 패턴을 따르며, 지원되는 주/부 릴리스 내의 모든 버전이 지원됩니다. 다음 Hadoop 공급자가 지원됩니다.
  - Linux/Windows Server에서 Hortonworks HDP 1.3  
@@ -55,7 +55,7 @@ PolyBase는 HDP(Hortonworks Data Platform) 및 CDH(Cloudera Distributed Hadoop)�
   
 1. PDW 제어 노드에 대 한 원격 데스크톱 연결을 엽니다.
 
-2. 컨트롤 노드에서 **yarn-site.xml** 파일을 찾습니다. 일반적인 경로는 다음과 같습니다.  
+2. 컨트롤 노드에서 파일 **yarn-site.xml** 를 찾습니다. 일반적인 경로는 다음과 같습니다.  
 
    ```xml  
    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf\  
@@ -63,7 +63,7 @@ PolyBase는 HDP(Hortonworks Data Platform) 및 CDH(Cloudera Distributed Hadoop)�
 
 3. Hadoop 컴퓨터의 Hadoop 구성 디렉터리에서 동일한 파일을 찾습니다. 이 파일에서 구성 키 yarn.application.classpath의 값을 찾아서 복사합니다.  
   
-4. Control 노드의 yarn 파일에서 **yarn** 속성을 찾습니다. **이 파일** 은 Hadoop 컴퓨터의 값을 value 요소에 붙여넣습니다.  
+4. Control 노드의 **yarn.site.xml 파일** 에서 **yarn** 속성을 찾습니다. Hadoop 컴퓨터의 값을 value 요소에 붙여넣습니다.  
   
 5. 모든 CDH 5.X 버전에서 mapreduce.application.classpath 구성 매개 변수를 yarn.site.xml 파일의 끝이나 mapred-site.xml 파일에 추가해야 합니다. HortonWorks는 yarn.application.classpath 구성 내에 이러한 구성을 포함하고 있습니다. 예제는 [PolyBase 구성](../relational-databases/polybase/polybase-configuration.md)을 참조하세요.
 
@@ -102,7 +102,7 @@ yarn.application.classpath 및 mapreduce.application.classpath 구성이 포함�
 </configuration>
 ```
 
-두 구성 설정을 mapred-site.xml 및 yarn-site.xml로 분할 하도록 선택 하는 경우 파일은 다음과 같습니다.
+두 구성 설정을 mapred-site.xml 및 yarn-site.xml으로 분할 하도록 선택 하는 경우 파일은 다음과 같습니다.
 
 **yarn-site.xml**
 
@@ -227,7 +227,7 @@ Hadoop 데이터 원본에서 데이터를 쿼리하려면 Transact-SQL 쿼리�
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-3. [CREATE EXTERNAL DATA source](../t-sql/statements/create-external-data-source-transact-sql.md)를 사용 하 여 외부 데이터 원본을 만듭니다.
+3. [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)를 사용하여 외부 데이터 원본을 만듭니다.
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  

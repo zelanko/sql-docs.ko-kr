@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 77e1dc6a2e0039c8ff9a2f66c6b3ed45a2176a17
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 32ecd829cbd3de8845f38a367e1e23d5af39ec48
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898099"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363013"
 ---
 # <a name="managing-a-domain"></a>도메인 관리
 
@@ -44,7 +44,7 @@ ms.locfileid: "85898099"
 ## <a name="in-this-section"></a>섹션 내용  
  도메인을 사용하면 다음과 같은 작업을 수행할 수 있습니다.  
   
-|||  
+|작업 설명|항목|  
 |-|-|  
 |특정 데이터 형식의 데이터 필드를 의미 체계에 따라 표현, 도메인을 채우는 방법 지정, 도메인의 출력 형식 지정|[도메인 만들기](../data-quality-services/create-a-domain.md)|  
 |도메인을 다른 도메인에 연결하여 동일한 설정 및 값 공유|[연결된 도메인 만들기](../data-quality-services/create-a-linked-domain.md)|  
