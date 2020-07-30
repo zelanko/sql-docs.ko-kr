@@ -9,19 +9,19 @@ ms.topic: reference
 ms.assetid: ca7d2c05-2bde-4284-bb17-aa7fd8d7b20a
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fd911fda7424df681eaa5ce3e11db5a6b573ca54
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ae0dd94c2cf995cffdd7f96c299d5fb79c445c3f
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753278"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363555"
 ---
 # <a name="localdb_error_auto_instance_create_failed"></a>LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>세부 정보  
   
-|||  
+|범주|값|  
 |-|-|  
 |제품 이름|SQL Server|  
 |이벤트 ID|280|  

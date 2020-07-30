@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f137e8c377c94a60fdcfd8f1534069cef4b28f66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1034d96ce0d683d38139636d53471d23581807a1
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68887432"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362803"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX 데이터 정의 - CREATE SUBCUBE
 
@@ -89,9 +89,8 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  반환되는 결과는 다음과 같습니다.  
   
-|||||  
+|비즈니스 유형 + 범주|All Products|액세서리|Clothing|  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
 |All Resellers|$2031079.39|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$767388.52|$175,002.81|$592,385.71|  
 |Warehouse|$1263690.86|$331,169.64|$932,521.23|  
@@ -118,9 +117,8 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  다음과 같이 다른 결과가 반환됩니다.  
   
-|||||  
+|비즈니스 유형 + 범주|All Products|액세서리|Clothing|  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
 |All Resellers|$80,450,596.98|$571,297.93|$1,777,840.84|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6018a733-c2c8-4047-92ec-92cf85031767
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1bdd9b3b559d5cc78a0d44f5280aae347bc8996a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 366af9f48f709ec7414c1efc43000f1b565ff6d6
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300493"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363445"
 ---
 # <a name="sqlsetstmtattr-cursor-library"></a>SQLSetStmtAttr(커서 라이브러리)
 > [!IMPORTANT]  
@@ -26,15 +26,24 @@ ms.locfileid: "81300493"
  이 항목에서는 커서 라이브러리에서 **SQLSetStmtAttr** 함수를 사용 하는 방법을 설명 합니다. **SQLSetStmtAttr**에 대 한 일반 정보는 [SQLSetStmtAttr 함수](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)를 참조 하세요.  
   
  커서 라이브러리는 **SQLSetStmtAttr**을 사용 하는 다음과 같은 문 특성을 지원 합니다.  
-  
-|||  
-|-|-|  
-|SQL_ATTR_CONCURRENCY|SQL_ATTR_ROW_BIND_OFFSET_PTR|  
-|SQL_ATTR_CURSOR_TYPE|SQL_ATTR_ROW_BIND_TYPE|  
-|SQL_ATTR_FETCH_BOOKMARK_PTR|SQL_ATTR_ROWSET_ARRAY_SIZE|  
-|SQL_ATTR_PARAM_BIND_OFFSET_PTR|SQL_ATTR_SIMULATE_CURSOR|  
-|SQL_ATTR_PARAM_BIND_TYPE|SQL_ATTR_USE_BOOKMARKS|  
-  
+
+:::row:::
+    :::column:::
+        SQL_ATTR_CONCURRENCY  
+        SQL_ATTR_CURSOR_TYPE  
+        SQL_ATTR_FETCH_BOOKMARK_PTR  
+        SQL_ATTR_PARAM_BIND_OFFSET_PTR  
+        SQL_ATTR_PARAM_BIND_TYPE  
+    :::column-end:::
+    :::column:::
+        SQL_ATTR_ROW_BIND_OFFSET_PTR  
+        SQL_ATTR_ROW_BIND_TYPE  
+        SQL_ATTR_ROWSET_ARRAY_SIZE  
+        SQL_ATTR_SIMULATE_CURSOR  
+        SQL_ATTR_USE_BOOKMARKS  
+    :::column-end:::
+:::row-end:::
+
  커서 라이브러리는 SQL_ATTR_CURSOR_TYPE statement 특성의 SQL_CURSOR_FORWARD_ONLY 및 SQL_CURSOR_STATIC 값만 지원 합니다.  
   
  전방 전용 커서의 경우 커서 라이브러리는 SQL_ATTR_CONCURRENCY statement 특성의 SQL_CONCUR_READ_ONLY 값을 지원 합니다. 정적 커서의 경우 커서 라이브러리는 SQL_ATTR_CONCURRENCY statement 특성의 SQL_CONCUR_READ_ONLY 및 SQL_CONCUR_VALUES 값을 지원 합니다.  

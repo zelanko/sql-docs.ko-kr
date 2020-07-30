@@ -100,10 +100,10 @@ sys.dm_sql_referencing_entities (
 |엔터티 유형|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
 |테이블|예*|예|  
-|보기|예|예|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|예|예|  
+|View|yes|yes|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|yes|yes|  
 |CLR 저장 프로시저|예|예|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|예|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|yes|yes|  
 |CLR 사용자 정의 함수|예|예|  
 |CLR 트리거(DML 및 DDL)|아니요|아니요|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|아니요|  
@@ -138,7 +138,7 @@ sys.dm_sql_referencing_entities (
   
 -   참조 엔터티가 서버 수준 DDL 트리거인 경우 서버에 대한 VIEW ANY DEFINITION이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>A. 지정된 엔터티를 참조하는 엔터티 반환  
  다음 예에서는 지정된 테이블을 참조하는 현재 데이터베이스의 엔터티를 반환합니다.  

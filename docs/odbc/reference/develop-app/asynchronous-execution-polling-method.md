@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ca7b3d5fa16be44bf4c2ef8f8df8953ae081235d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a188c607c499e16652e314c67c37914f6cc9b85f
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81293403"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362771"
 ---
 # <a name="asynchronous-execution-polling-method"></a>비동기 실행(폴링 메서드)
 ODBC 3.8 및 Windows 7 SDK 이전에는 문 함수 에서만 비동기 작업을 수행할 수 있었습니다. 자세한 내용은이 항목의 뒷부분에 나오는 **문 작업을 비동기적으로 실행**을 참조 하세요.  
@@ -36,19 +36,43 @@ ODBC 3.8 및 Windows 7 SDK 이전에는 문 함수 에서만 비동기 작업을
   
 ## <a name="executing-statement-operations-asynchronously"></a>비동기 문 작업 실행  
  다음 문 함수는 데이터 원본에 대해 작동 하 고 비동기적으로 실행 될 수 있습니다.  
-  
-||||  
-|-|-|-|  
-|[SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|[SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md)|[SQLColumnPrivileges](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)|  
-|[SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md)|[SQLDescribeCol](../../../odbc/reference/syntax/sqldescribecol-function.md)|[SQLDescribeParam](../../../odbc/reference/syntax/sqldescribeparam-function.md)|  
-|[SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)|[SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|[SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|  
-|[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|[SQLForeignKeys](../../../odbc/reference/syntax/sqlforeignkeys-function.md)|[SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
-|[SQLGetTypeInfo](../../../odbc/reference/syntax/sqlgettypeinfo-function.md)|[SQLMoreResults](../../../odbc/reference/syntax/sqlmoreresults-function.md)|[SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md)|  
-|[SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|[SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md)|[SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
-|[SQLPrimaryKeys](../../../odbc/reference/syntax/sqlprimarykeys-function.md)|[SQLProcedureColumns](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)|[SQLProcedures](../../../odbc/reference/syntax/sqlprocedures-function.md)|  
-|[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|[SQLSpecialColumns](../../../odbc/reference/syntax/sqlspecialcolumns-function.md)|  
-|[SQLStatistics](../../../odbc/reference/syntax/sqlstatistics-function.md)|[SQLTablePrivileges](../../../odbc/reference/syntax/sqltableprivileges-function.md)|[SQLTables](../../../odbc/reference/syntax/sqltables-function.md)|  
-  
+
+:::row:::
+    :::column:::
+        [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)  
+        [SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md)  
+        [SQLColumnPrivileges](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)  
+        [SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md)  
+        [SQLDescribeCol](../../../odbc/reference/syntax/sqldescribecol-function.md)  
+        [SQLDescribeParam](../../../odbc/reference/syntax/sqldescribeparam-function.md)  
+        [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)  
+        [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)  
+        [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)  
+    :::column-end:::
+    :::column:::
+        [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)  
+        [SQLForeignKeys](../../../odbc/reference/syntax/sqlforeignkeys-function.md)  
+        [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)  
+        [SQLGetTypeInfo](../../../odbc/reference/syntax/sqlgettypeinfo-function.md)  
+        [SQLMoreResults](../../../odbc/reference/syntax/sqlmoreresults-function.md)  
+        [SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md)  
+        [SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)  
+        [SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md)  
+        [SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)  
+    :::column-end:::
+    :::column:::
+        [SQLPrimaryKeys](../../../odbc/reference/syntax/sqlprimarykeys-function.md)  
+        [SQLProcedureColumns](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)  
+        [SQLProcedures](../../../odbc/reference/syntax/sqlprocedures-function.md)  
+        [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)  
+        [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)  
+        [SQLSpecialColumns](../../../odbc/reference/syntax/sqlspecialcolumns-function.md)  
+        [SQLStatistics](../../../odbc/reference/syntax/sqlstatistics-function.md)  
+        [SQLTablePrivileges](../../../odbc/reference/syntax/sqltableprivileges-function.md)  
+        [SQLTables](../../../odbc/reference/syntax/sqltables-function.md)  
+    :::column-end:::
+:::row-end:::
+
  비동기 문 실행은 데이터 원본에 따라 문이나 연결 단위 별로 제어 됩니다. 즉, 응용 프로그램은 특정 함수가 비동기적으로 실행 되는 것이 아니라 특정 문에서 실행 되는 모든 함수가 비동기적으로 실행 되도록 지정 합니다. 지원 되는 항목을 찾기 위해 응용 프로그램은 SQL_ASYNC_MODE 옵션으로 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) 를 호출 합니다. 문 핸들에 대 한 연결 수준 비동기 실행이 지원 되는 경우 SQL_AM_CONNECTION 반환 됩니다. 문 수준 비동기 실행이 지원 되는지 여부를 SQL_AM_STATEMENT 합니다.  
   
  특정 문으로 실행 되는 함수가 비동기적으로 실행 되도록 지정 하기 위해 응용 프로그램은 SQL_ATTR_ASYNC_ENABLE 특성을 사용 하 여 **SQLSetStmtAttr** 를 호출 하 고 SQL_ASYNC_ENABLE_ON로 설정 합니다. 연결 수준 비동기 처리가 지원 되는 경우 SQL_ATTR_ASYNC_ENABLE statement 특성은 읽기 전용 이며 해당 값은 문이 할당 된 연결의 연결 특성과 같습니다. 문 특성의 값이 문 할당 시간 이상에서 설정 되었는지 여부에 관계 없이 드라이버 마다 다릅니다. 설정 하려고 하면 SQL_ERROR 및 SQLSTATE HYC00 (선택적 기능이 구현 되지 않음)가 반환 됩니다.  
@@ -156,12 +180,22 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
 -   효율적인 비동기 ODBC 호출 및 연결 작업을 취소 하는 기능을 통해 응용 프로그램은 사용자가 시간 초과를 기다리지 않고 속도가 느려지는 작업을 취소할 수 있습니다.  
   
  이제 연결 핸들에 대해 작동 하는 다음 함수를 비동기적으로 실행할 수 있습니다.  
-  
-||||  
-|-|-|-|  
-|[SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|[SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
-|[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
-  
+
+:::row:::
+    :::column:::
+        [SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)  
+        [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)  
+    :::column-end:::
+    :::column:::
+        [SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)  
+        [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)  
+    :::column-end:::
+    :::column:::
+        [SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)  
+        [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)  
+    :::column-end:::
+:::row-end:::
+
  드라이버가 이러한 함수에 대해 비동기 작업을 지원 하는지 여부를 확인 하기 위해 응용 프로그램은 SQL_ASYNC_DBC_FUNCTIONS를 사용 하 여 **SQLGetInfo** 를 호출 합니다. 비동기 작업이 지원 되는 경우 SQL_ASYNC_DBC_CAPABLE 반환 됩니다. 비동기 작업이 지원 되지 않는 경우 SQL_ASYNC_DBC_NOT_CAPABLE 반환 됩니다.  
   
  특정 연결을 사용 하 여 실행 되는 함수가 비동기적으로 실행 되도록 지정 하려면 응용 프로그램은 **SQLSetConnectAttr** 를 호출 하 고 SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE 특성을 SQL_ASYNC_DBC_ENABLE_ON로 설정 합니다. 연결을 설정 하기 전에 연결 특성을 설정 하는 것은 항상 동기적으로 실행 됩니다. 또한 **SQLSetConnectAttr** 를 사용 하 여 SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE 연결 특성을 설정 하는 작업은 항상 동기적으로 실행 됩니다.  

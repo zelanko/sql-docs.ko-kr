@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 895dcfdd5acaa580b8ee719a3edac67d7308f605
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c9375c6050c3f401a47857c385348da1478f21ca
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897553"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362695"
 ---
 # <a name="building-a-knowledge-base"></a>기술 자료 구축
 
@@ -25,7 +25,7 @@ ms.locfileid: "85897553"
 ## <a name="in-this-section"></a>섹션 내용  
  기술 자료에 대해 다음과 같은 작업을 수행할 수 있습니다.  
   
-|||  
+|작업 설명|항목|  
 |-|-|  
 |새 기술 자료를 처음부터 만들거나, 기존 기술 자료나 .dqs 데이터 파일을 통해 만듭니다.|[기술 자료 만들기](../data-quality-services/create-a-knowledge-base.md)|  
 |기존 기술 자료를 열어 기술 자료 검색, 도메인 관리를 수행하거나 일치 정책을 추가할 수 있습니다.|[기술 자료 열기](../data-quality-services/open-a-knowledge-base.md)|  

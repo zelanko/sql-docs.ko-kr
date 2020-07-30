@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c4d6ad76f68acb72072f04728e55793bad3aa9cd
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f197ebbd41c32bb8cd8ee7eeae944dddd583f70d
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813677"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362487"
 ---
 # <a name="business-rules-extension-master-data-services"></a>비즈니스 규칙 확장(Master Data Services)
 
@@ -64,14 +64,13 @@ CREATE PROCEDURE [usr].[YourAction]
   
  스크립트 작업은 다음 권한이 있는 mds_br_user로 실행됩니다.  
   
-|||  
+|스키마|사용 권한|  
 |-|-|  
-|**스키마**|**권한**|  
 |mdm|SELECT|  
 |stg|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
 |usr|FULL|  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   시스템 관리 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -104,7 +103,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     4.  각 매개 변수에 값을 할당합니다.  
   
-    5.  **Save**을 클릭합니다.  
+    5.  **저장**을 클릭합니다.  
   
 8.  다음 단계를 수행하여 사용자 지정 스크립트를 동작으로 지정합니다.  
   
@@ -112,7 +111,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     2.  **연산자** 드롭다운 목록의 **사용자 정의 스크립트** 에서 사용자 정의 함수를 선택합니다.  
   
-    3.  **Save**을 클릭합니다.  
+    3.  **저장**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [비즈니스 규칙 &#40;MDS(Master Data Services)&#41;](../master-data-services/business-rules-master-data-services.md)   

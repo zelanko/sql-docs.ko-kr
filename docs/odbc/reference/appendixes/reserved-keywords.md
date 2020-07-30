@@ -13,133 +13,260 @@ helpviewer_keywords:
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ed8056d6c9645a211f1413a1b280426925dd538e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c83df20d95b9fe968b7c1c01cd8a9031043c8ad
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307994"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362988"
 ---
 # <a name="reserved-keywords"></a>예약 키워드
 다음은 ODBC 함수 호출에 사용하기 위해 예약된 단어입니다. 이러한 단어는 최소 SQL 문법을 제한 하지 않습니다. 그러나 핵심 SQL 문법을 지 원하는 드라이버와의 호환성을 보장 하기 위해 응용 프로그램은 이러한 키워드를 사용 하지 않아야 합니다. #**Define** 값 SQL_ODBC_KEYWORDS은 쉼표로 구분 된 이러한 키워드 목록을 포함 합니다.  
-  
-|||  
-|-|-|  
-|ABSOLUTE|IS|  
-|ACTION|ISOLATION|  
-|ADA|JOIN|  
-|ADD|KEY|  
-|ALL|LANGUAGE|  
-|ALLOCATE|LAST|  
-|ALTER|LEADING|  
-|AND|LEFT|  
-|ANY|LEVEL|  
-|ARE|LIKE|  
-|AS|LOCAL|  
-|ASC|LOWER|  
-|ASSERTION|MATCH|  
-|AT|최대|  
-|AUTHORIZATION|최소|  
-|평균|MINUTE|  
-|BEGIN|MODULE|  
-|BETWEEN|MONTH|  
-|BIT|NAMES|  
-|BIT_LENGTH|NATIONAL|  
-|BOTH|NATURAL|  
-|BY|NCHAR|  
-|CASCADE|NEXT|  
-|CASCADED|아니요|  
-|CASE|없음|  
-|CAST|NOT|  
-|CATALOG|NULL|  
-|CHAR|NULLIF|  
-|CHAR_LENGTH|NUMERIC|  
-|CHARACTER|OCTET_LENGTH|  
-|CHARACTER_LENGTH|OF|  
-|CHECK|켜기|  
-|CLOSE|ONLY|  
-|COALESCE|OPEN|  
-|COLLATE|OPTION|  
-|COLLATION|또는|  
-|COLUMN|ORDER|  
-|COMMIT|OUTER|  
-|CONNECT|OUTPUT|  
-|CONNECTION|OVERLAPS|  
-|CONSTRAINT|PAD|  
-|CONSTRAINTS|PARTIAL|  
-|CONTINUE|PASCAL|  
-|CONVERT|POSITION|  
-|CORRESPONDING|PRECISION|  
-|개수|PREPARE|  
-|CREATE|PRESERVE|  
-|CROSS|PRIMARY|  
-|CURRENT|PRIOR|  
-|CURRENT_DATE|PRIVILEGES|  
-|CURRENT_TIME|PROCEDURE|  
-|CURRENT_TIMESTAMP|PUBLIC|  
-|CURRENT_USER|READ|  
-|CURSOR|real|  
-|DATE|REFERENCES|  
-|DAY|RELATIVE|  
-|DEALLOCATE|RESTRICT|  
-|DEC|REVOKE|  
-|DECIMAL|RIGHT|  
-|DECLARE|ROLLBACK|  
-|DEFAULT|ROWS|  
-|DEFERRABLE|SCHEMA|  
-|DEFERRED|SCROLL|  
-|Delete|SECOND|  
-|DESC|SECTION|  
-|DESCRIBE|SELECT|  
-|DESCRIPTOR|SESSION|  
-|DIAGNOSTICS|SESSION_USER|  
-|DISCONNECT|SET|  
-|DISTINCT|SIZE|  
-|DOMAIN|SMALLINT|  
-|DOUBLE|SOME|  
-|DROP|SPACE|  
-|ELSE|SQL|  
-|END|SQLCA|  
-|END-EXEC|SQLCODE|  
-|ESCAPE|SQLERROR|  
-|EXCEPT|SQLSTATE|  
-|EXCEPTION|SQLWARNING|  
-|EXEC|SUBSTRING|  
-|CREATE 문을 실행하기 전에|합계|  
-|EXISTS|SYSTEM_USER|  
-|EXTERNAL|TABLE|  
-|EXTRACT|TEMPORARY|  
-|FALSE|THEN|  
-|FETCH|TIME|  
-|FIRST|timestamp|  
-|FLOAT|TIMEZONE_HOUR|  
-|FOR|TIMEZONE_MINUTE|  
-|FOREIGN|TO|  
-|FORTRAN|TRAILING|  
-|FOUND|TRANSACTION|  
-|FROM|TRANSLATE|  
-|FULL|TRANSLATION|  
-|GET|TRIM|  
-|GLOBAL|TRUE|  
-|이동|UNION|  
-|GOTO|UNIQUE|  
-|GRANT|UNKNOWN|  
-|GROUP|UPDATE|  
-|HAVING|UPPER|  
-|HOUR|USAGE|  
-|IDENTITY|USER|  
-|IMMEDIATE|USING|  
-|IN|값|  
-|INCLUDE|VALUES|  
-|INDEX|VARCHAR|  
-|INDICATOR|VARYING|  
-|INITIALLY|VIEW|  
-|INNER|WHEN|  
-|INPUT|WHENEVER|  
-|INSENSITIVE|WHERE|  
-|INSERT|WITH|  
-|INT|WORK|  
-|INTEGER|WRITE|  
-|INTERSECT|YEAR|  
-|INTERVAL|ZONE|  
-|INTO||
+
+:::row:::
+    :::column:::
+        ABSOLUTE  
+        ACTION  
+        ADA  
+        ADD  
+        ALL  
+        ALLOCATE  
+        ALTER  
+        AND  
+        ANY  
+        ARE  
+        AS  
+        ASC  
+        ASSERTION  
+        AT  
+        AUTHORIZATION  
+        AVG  
+        BEGIN  
+        BETWEEN  
+        BIT  
+        BIT_LENGTH  
+        BOTH  
+        BY  
+        CASCADE  
+        CASCADED  
+        CASE  
+        CAST  
+        CATALOG  
+        CHAR  
+        CHAR_LENGTH  
+        CHARACTER  
+        CHARACTER_LENGTH  
+        CHECK  
+        CLOSE  
+        COALESCE  
+        COLLATE  
+        COLLATION  
+        COLUMN  
+        COMMIT  
+        CONNECT  
+        CONNECTION  
+        CONSTRAINT  
+        CONSTRAINTS  
+        CONTINUE  
+        CONVERT  
+        CORRESPONDING  
+        개수  
+        CREATE  
+    :::column-end:::
+    :::column:::
+        CROSS  
+        CURRENT  
+        CURRENT_DATE  
+        CURRENT_TIME  
+        CURRENT_TIMESTAMP  
+        CURRENT_USER  
+        CURSOR  
+        DATE  
+        DAY  
+        DEALLOCATE  
+        DEC  
+        DECIMAL  
+        DECLARE  
+        DEFAULT  
+        DEFERRABLE  
+        DEFERRED  
+        Delete  
+        DESC  
+        DESCRIBE  
+        DESCRIPTOR  
+        DIAGNOSTICS  
+        DISCONNECT  
+        DISTINCT  
+        DOMAIN  
+        DOUBLE  
+        DROP  
+        ELSE  
+        End  
+        END-EXEC  
+        ESCAPE  
+        EXCEPT  
+        EXCEPTION  
+        EXEC  
+        CREATE 문을 실행하기 전에  
+        EXISTS  
+        EXTERNAL  
+        EXTRACT  
+        FALSE  
+        FETCH  
+        FIRST  
+        FLOAT  
+        FOR  
+        FOREIGN  
+        FORTRAN  
+        FOUND  
+        FROM  
+        FULL  
+    :::column-end:::
+    :::column:::
+        GET  
+        GLOBAL  
+        이동  
+        GOTO  
+        GRANT  
+        GROUP  
+        HAVING  
+        HOUR  
+        IDENTITY  
+        IMMEDIATE  
+        IN  
+        INCLUDE  
+        INDEX  
+        INDICATOR  
+        INITIALLY  
+        INNER  
+        INPUT  
+        INSENSITIVE  
+        INSERT  
+        INT  
+        정수  
+        INTERSECT  
+        INTERVAL  
+        INTO  
+        IS  
+        ISOLATION  
+        JOIN  
+        KEY  
+        LANGUAGE  
+        LAST  
+        LEADING  
+        LEFT  
+        LEVEL  
+        LIKE  
+        LOCAL  
+        LOWER  
+        MATCH  
+        최대  
+        최소  
+        MINUTE  
+        MODULE  
+        MONTH  
+        NAMES  
+        NATIONAL  
+        NATURAL  
+        NCHAR  
+        NEXT  
+    :::column-end:::
+    :::column:::
+        아니요  
+        없음  
+        NOT  
+        NULL  
+        NULLIF  
+        NUMERIC  
+        OCTET_LENGTH  
+        OF  
+        켜기  
+        ONLY  
+        OPEN  
+        OPTION  
+        또는  
+        ORDER  
+        OUTER  
+        OUTPUT  
+        OVERLAPS  
+        PAD  
+        PARTIAL  
+        PASCAL  
+        POSITION  
+        PRECISION  
+        PREPARE  
+        PRESERVE  
+        PRIMARY  
+        PRIOR  
+        PRIVILEGES  
+        PROCEDURE  
+        PUBLIC  
+        READ  
+        실수  
+        REFERENCES  
+        RELATIVE  
+        RESTRICT  
+        REVOKE  
+        RIGHT  
+        ROLLBACK  
+        ROWS  
+        SCHEMA  
+        SCROLL  
+        SECOND  
+        SECTION  
+        SELECT  
+        SESSION  
+        SESSION_USER  
+        SET  
+        SIZE  
+    :::column-end:::
+    :::column:::
+        SMALLINT  
+        SOME  
+        SPACE  
+        SQL  
+        SQLCA  
+        SQLCODE  
+        SQLERROR  
+        SQLSTATE  
+        SQLWARNING  
+        SUBSTRING  
+        합계  
+        SYSTEM_USER  
+        TABLE  
+        TEMPORARY  
+        THEN  
+        TIME  
+        timestamp  
+        TIMEZONE_HOUR  
+        TIMEZONE_MINUTE  
+        TO  
+        TRAILING  
+        TRANSACTION  
+        TRANSLATE  
+        TRANSLATION  
+        TRIM  
+        TRUE  
+        UNION  
+        UNIQUE  
+        UNKNOWN  
+        UPDATE  
+        UPPER  
+        USAGE  
+        USER  
+        USING  
+        값  
+        Values  
+        VARCHAR  
+        VARYING  
+        VIEW  
+        WHEN  
+        WHENEVER  
+        WHERE  
+        WITH  
+        WORK  
+        WRITE  
+        YEAR  
+        ZONE  
+    :::column-end:::
+:::row-end:::

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0f6c31e8e1cb40c5fbb00eaaf42c8734a8392f74
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2d463b65247dc5606605f1760ef6a259b5f534e9
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898088"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363063"
 ---
 # <a name="managing-a-composite-domain"></a>복합 도메인 관리
 
@@ -29,7 +29,7 @@ ms.locfileid: "85898088"
 ## <a name="in-this-section"></a>섹션 내용  
  복합 도메인을 사용하면 다음과 같은 작업을 수행할 수 있습니다.  
   
-|||  
+|작업 설명|항목|  
 |-|-|  
 |구문 분석되지 않은 여러 관련 용어로 구성된 데이터 필드를 의미 체계에 따라 표현합니다.|[복합 도메인 만들기](../data-quality-services/create-a-composite-domain.md)|  
 |복합 도메인에 복잡한 데이터를 매핑할 때 정보 기반 데이터를 구문 분석하고 구분 기호에 대해 구문 분석을 수행할 수 있습니다. DQS는 우선 단일 도메인에 대한 정보를 사용하여 복잡한 문자열의 각 부분이 단일 도메인에 어떻게 속해 있는지 확인합니다.|[복합 도메인 만들기](../data-quality-services/create-a-composite-domain.md)|  

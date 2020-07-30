@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ececf16131544b0a450d877b5c4ba43c2cd80466
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ff8525e9742009e5a5ada680160f20d5e8063d86
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970691"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363523"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -65,7 +65,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  이러한 인수는 PREDICTION JOIN 문을 사용하여 새 데이터가 추가되는 경우에만 사용할 수 있습니다. PREDICTION JOIN 쿼리를 사용하고 인수를 지정하지 않을 경우 기본값은 EXTEND_MODEL_CASES입니다.  
   
 ## <a name="return-type"></a>반환 형식  
- \<*table expression*>.  
+ \<*table expression*>입니다.  
   
 ## <a name="remarks"></a>설명  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] 시계열 알고리즘은 PREDICTION JOIN 문을 사용하여 새 데이터를 추가하는 경우 기록 예측을 지원하지 않습니다.  
@@ -75,7 +75,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 > [!NOTE]  
 >  새 데이터의 길이는 예측의 시작 지점에 영향을 미치지 않습니다. 따라서 새 데이터를 추가하고 새 예측도 수행하려면 예측 시작 지점을 새 데이터의 길이보다 큰 값으로 설정하거나 예측 종료 지점을 새 데이터 길이만큼 늘려야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 기존 시계열 모델에 대해 예측을 수행하는 방법을 보여 줍니다.  
   
 -   첫 번째 예는 현재 모델을 기반으로 지정된 수만큼의 예측을 수행하는 방법을 보여 줍니다.  
@@ -147,7 +147,7 @@ ON
   
  원래 예측:  
   
-||||  
+|Model Region|ReportingDate|수량|  
 |-|-|-|  
 |M200 Pacific|7/25/2008 12:00:00 AM|46|  
 |M200 Pacific|8/25/2008 12:00:00 AM|44|  
@@ -155,7 +155,7 @@ ON
   
  업데이트 된 예측:  
   
-||||  
+|Model Region|ReportingDate|수량|  
 |-|-|-|  
 |M200 Pacific|7/25/2008 12:00:00 AM|91|  
 |M200 Pacific|8/25/2008 12:00:00 AM|89|  

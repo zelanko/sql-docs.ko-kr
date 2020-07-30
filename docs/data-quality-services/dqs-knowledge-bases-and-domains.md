@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: a4eff5b70e83b92e1c99e1d7c4b1c351dec35b7e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c677a999454f307f90b0f0444e67069ce81dfcc3
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895385"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362505"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 기술 자료 및 도메인
 
@@ -146,7 +146,7 @@ ms.locfileid: "85895385"
 ## <a name="in-this-section"></a>섹션 내용  
  기술 자료 및 도메인에서 다음과 같은 작업을 수행할 수 있습니다.  
   
-|||  
+|작업 설명|항목|  
 |-|-|  
 |지식 만들기, 열기 및 기술 자료에 지식 추가, 기술 자료에서 검색 수행|[기술 자료 구축](../data-quality-services/building-a-knowledge-base.md)|  
 |도메인 및 기술 자료에서 가져오기 및 내보내기 작업 수행|[기술 자료 가져오기 및 내보내기](../data-quality-services/importing-and-exporting-knowledge.md)|  

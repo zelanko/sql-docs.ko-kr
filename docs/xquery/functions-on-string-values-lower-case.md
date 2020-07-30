@@ -44,7 +44,7 @@ fn:lower-case($arg as xs:string?) as xs:string
 ## <a name="remarks"></a>설명  
  *$Arg* 값이 비어 있으면 길이가 0 인 문자열이 반환 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. 문자열을 대문자로 변경  
  다음 예에서는 입력 문자열 ' abcDEF! '를 변경 합니다. @4 소문자로  

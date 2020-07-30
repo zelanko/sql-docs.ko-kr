@@ -98,7 +98,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 ## <a name="permissions"></a>사용 권한  
  VIEW SERVER STATE 권한이 필요합니다. 자세한 내용은 [동적 관리 뷰 및 함수 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)를 참조 하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 
 ### <a name="a-return-statistics-for-a-log-file"></a>A. 로그 파일에 대 한 통계 반환
 

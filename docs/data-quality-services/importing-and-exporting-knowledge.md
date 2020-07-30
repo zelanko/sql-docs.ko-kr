@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 638a5f791f7997cc96b22bde47f41198a9946133
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 517e672cdb5bb7a6991f83b72f25f937ecbb6359
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882782"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362823"
 ---
 # <a name="importing-and-exporting-knowledge"></a>기술 자료 가져오기 및 내보내기
 
@@ -28,7 +28,7 @@ ms.locfileid: "85882782"
 ## <a name="in-this-section"></a>섹션 내용  
  다음과 같은 가져오기 및 내보내기 작업을 수행할 수 있습니다.  
   
-|||  
+|작업 설명|항목|  
 |-|-|  
 |기술 자료의 도메인을 .dqs 데이터 파일로 내보내기|[.dqs 파일로 도메인 내보내기](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
 |.dqs 데이터 파일에서 기존의 기술 자료로 도메인 가져오기|[.dqs 파일에서 도메인 가져오기](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  

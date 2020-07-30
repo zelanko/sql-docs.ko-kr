@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 077a6c6a-2c57-42c9-a4fd-4cf0e65cf7e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e283bbc13f0d0dda055b047b027f7b9816502df5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 969296e377d398615ad95cf1337c3f9f97d5eb5c
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300683"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363403"
 ---
 # <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>SQL 적합성 수준(Oracle용 ODBC 드라이버)
 > [!IMPORTANT]  
@@ -32,42 +32,94 @@ ms.locfileid: "81300683"
 -   왼쪽 및 오른쪽 우선 외부 조인  
   
 -   숫자 함수:  
-  
-    |||||  
-    |-|-|-|-|  
-    |Abs|로그|round|tan|  
-    |Ceiling|Log10|second|truncate|  
-    |Cos|Mod|sign||  
-    |Exp|Pi|sin||  
-    |Floor|전원|sqrt||  
-  
+
+    :::row:::
+        :::column:::
+            Abs  
+            Ceiling  
+            Cos  
+            Exp  
+            Floor  
+        :::column-end:::
+        :::column:::
+            로그  
+            Log10  
+            Mod  
+            Pi  
+            전력  
+        :::column-end:::
+        :::column:::
+            round  
+            second  
+            sign  
+            sin  
+            sqrt  
+        :::column-end:::
+        :::column:::
+            tan  
+            truncate  
+        :::column-end:::
+    :::row-end:::
+    
 -   날짜 함수:  
-  
-    |||||  
-    |-|-|-|-|  
-    |Curdate|Dayofweek|monthname|second|  
-    |Curtime|Dayofyear|minute|week|  
-    |Dayname|Hour|now|year|  
-    |Dayofmonth|월|quarter||  
-  
+
+    :::row:::
+        :::column:::
+            Curdate  
+            Curtime  
+            Dayname  
+            Dayofmonth  
+        :::column-end:::
+        :::column:::
+            Dayofweek  
+            Dayofyear  
+            시간  
+            월  
+        :::column-end:::
+        :::column:::
+            monthname  
+            minute  
+            now  
+            quarter  
+        :::column-end:::
+        :::column:::
+            second  
+            week  
+            year  
+        :::column-end:::
+    :::row-end:::
+
 -   문자열 함수:  
-  
-    |||||  
-    |-|-|-|-|  
-    |ASCII|Left|오른쪽|ucase|  
-    |Char|길이|rtrim||  
-    |Concat|Ltrim|soundex||  
-    |Lcase|Replace|substring||  
-  
+
+    :::row:::
+        :::column:::
+            ASCII  
+            Char  
+            Concat  
+            Lcase  
+        :::column-end:::
+        :::column:::
+            왼쪽  
+            길이  
+            Ltrim  
+            바꾸기  
+        :::column-end:::
+        :::column:::
+            오른쪽  
+            rtrim  
+            soundex  
+            substring  
+        :::column-end:::
+        :::column:::
+            ucase  
+        :::column-end:::
+    :::row-end:::
+
 -   형식 변환 함수:  
-  
-    ||  
-    |-|  
-    |변환|  
-  
+
+    변환  
+
 -   시스템 함수:  
   
-    ||  
-    |-|  
-    |Ifnull|  
-    |사용자|
+    Ifnull  
+    사용자

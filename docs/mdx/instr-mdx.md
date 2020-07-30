@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 201580b71086dfe39e669966070dae2dca72e3eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d7da3f994ed0741ef7ca6bcbe4d6003eea981c7
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105297"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363413"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 
@@ -39,7 +39,7 @@ InStr([start, ]searched_string, search_string[, compare])
  *비교*  
  (선택 사항) 정수 값입니다. 이 인수는 항상 무시되며, 다른 언어의 다른 **Instr** 함수와의 호환성을 위해 정의 됩니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  *String1*에서 *문자열 2* 의 시작 위치를 포함 하는 정수 값입니다.  
   
  또한 **InStr** 함수는 조건에 따라 다음 표에 나열 된 값을 반환 합니다.  
@@ -48,7 +48,7 @@ InStr([start, ]searched_string, search_string[, compare])
 |---------------|------------------|  
 |String1의 길이가 0인 경우|영(0)|  
 |String1이 Null인 경우|정의되지 않음|  
-|String2의 길이가 0인 경우|start|  
+|String2의 길이가 0인 경우|시작|  
 |String2가 Null인 경우|정의되지 않음|  
 |String2를 찾을 수 없는 경우|영(0)|  
 |start가 Len(String2)보다 큰 경우|영(0)|  
@@ -95,9 +95,8 @@ from [Adventure Works]
   
  다음 표에서는 얻게 되는 결과를 보여 줍니다.  
   
-|||  
+|측정값의 필드|결과|  
 |-|-|  
-||결과|  
 |소문자 문자열에 소문자가 있습니다.|16|  
 |소문자 문자열에 대문자가 있습니다.|16|  
 |검색된 문자열이 비어 있습니다.|0|  

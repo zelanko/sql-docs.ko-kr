@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2de8a8cb6177e9210e8d48c0ce097d13c9a276fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed0a1e9155eeb3e2147bed3dd31e78176bdc38d2
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306994"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363323"
 ---
 # <a name="explicit-data-type-conversion-function"></a>명시적 데이터 형식 변환 함수
 명시적 데이터 형식 변환은 SQL 데이터 형식 정의를 기준으로 지정 됩니다.  
@@ -31,29 +31,52 @@ ms.locfileid: "81306994"
  **CONVERT (** _value_exp_, _data_type_**)**  
   
  함수는 지정 된 *data_type*로 변환 된 *value_exp* 에 지정 된 값을 반환 합니다. 여기서 *data_type* 는 다음 키워드 중 하나입니다.  
-  
-|||  
-|-|-|  
-|SQL_BIGINT|SQL_INTERVAL_HOUR_TO_MINUTE|  
-|SQL_BINARY|SQL_INTERVAL_HOUR_TO_SECOND|  
-|SQL_BIT|SQL_INTERVAL_MINUTE_TO_SECOND|  
-|SQL_CHAR|SQL_LONGVARBINARY|  
-|SQL_DECIMAL|SQL_LONGVARCHAR|  
-|SQL_DOUBLE|SQL_NUMERIC|  
-|SQL_FLOAT|SQL_REAL|  
-|SQL_GUID|SQL_SMALLINT|  
-|SQL_INTEGER|SQL_DATE|  
-|SQL_INTERVAL_MONTH|SQL_TIME|  
-|SQL_INTERVAL_YEAR|SQL_TIMESTAMP|  
-|SQL_INTERVAL_YEAR_TO_MONTH|SQL_TINYINT|  
-|SQL_INTERVAL_DAY|SQL_VARBINARY|  
-|SQL_INTERVAL_HOUR|SQL_VARCHAR|  
-|SQL_INTERVAL_MINUTE|SQL_WCHAR|  
-|SQL_INTERVAL_SECOND|SQL_WLONGVARCHAR|  
-|SQL_INTERVAL_DAY_TO_HOUR|SQL_WVARCHAR|  
-|SQL_INTERVAL_DAY_TO_MINUTE||  
-|SQL_INTERVAL_DAY_TO_SECOND||  
-  
+
+:::row:::
+    :::column:::
+        SQL_BIGINT  
+        SQL_BINARY  
+        SQL_BIT  
+        SQL_CHAR  
+        SQL_DATE  
+        SQL_DECIMAL  
+        SQL_DOUBLE  
+        SQL_FLOAT  
+        SQL_GUID  
+        SQL_INTEGER  
+        SQL_INTERVAL_DAY  
+        SQL_INTERVAL_DAY_TO_HOUR  
+    :::column-end:::
+    :::column:::
+        SQL_INTERVAL_DAY_TO_MINUTE  
+        SQL_INTERVAL_DAY_TO_SECOND  
+        SQL_INTERVAL_HOUR  
+        SQL_INTERVAL_HOUR_TO_MINUTE  
+        SQL_INTERVAL_HOUR_TO_SECOND  
+        SQL_INTERVAL_MINUTE  
+        SQL_INTERVAL_MINUTE_TO_SECOND  
+        SQL_INTERVAL_MONTH  
+        SQL_INTERVAL_SECOND  
+        SQL_INTERVAL_YEAR  
+        SQL_INTERVAL_YEAR_TO_MONTH  
+        SQL_LONGVARBINARY  
+    :::column-end:::
+    :::column:::
+        SQL_LONGVARCHAR  
+        SQL_NUMERIC  
+        SQL_REAL  
+        SQL_SMALLINT  
+        SQL_TIME  
+        SQL_TIMESTAMP  
+        SQL_TINYINT  
+        SQL_VARBINARY  
+        SQL_VARCHAR  
+        SQL_WCHAR  
+        SQL_WLONGVARCHAR  
+        SQL_WVARCHAR  
+    :::column-end:::
+:::row-end:::
+
  명시적 데이터 형식 변환 함수에 대 한 ODBC 구문은 변환 형식의 사양을 지원 하지 않습니다. 기본 데이터 원본에서 명시적 형식 지정을 지 원하는 경우 드라이버는 기본값을 지정 하거나 형식 사양을 구현 해야 합니다.  
   
  *Value_exp* 인수는 열 이름, 다른 스칼라 함수의 결과 또는 숫자 또는 문자열 리터럴일 수 있습니다. 예를 들면 다음과 같습니다.  

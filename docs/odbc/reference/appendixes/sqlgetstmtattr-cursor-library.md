@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c34e1ef-4273-4afb-a7d3-f9017ab69c5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a035a114e0ffd5c3fb44b856ea4c3016af240e82
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a9b29d21c166751f5a57b7951cb6c028861cb501
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306004"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362953"
 ---
 # <a name="sqlgetstmtattr-cursor-library"></a>SQLGetStmtAttr(커서 라이브러리)
 > [!IMPORTANT]  
@@ -26,11 +26,20 @@ ms.locfileid: "81306004"
  이 항목에서는 커서 라이브러리에서 **SQLGetStmtAttr** 함수를 사용 하는 방법을 설명 합니다. **SQLGetStmtAttr**에 대 한 일반 정보는 [SQLGetStmtAttr 함수](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)를 참조 하세요.  
   
  커서 라이브러리는 **SQLGetStmtAttr**을 사용 하는 다음과 같은 문 특성을 지원 합니다.  
-  
-|||  
-|-|-|  
-|SQL_ATTR_CONCURRENCY|SQL_ATTR_ROW_BIND_OFFSET_PTR|  
-|SQL_ATTR_CURSOR_TYPE|SQL_ATTR_ROW_BIND_TYPE|  
-|SQL_ATTR_FETCH_BOOKMARK_PTR|SQL_ATTR_ROW_NUMBER|  
-|SQL_ATTR_PARAM_BIND_OFFSET_PTR|SQL_ATTR_ROW_ARRAY_SIZE|  
-|SQL_ATTR_PARAM_BIND_TYPE|SQL_ATTR_SIMULATE_CURSOR|
+
+:::row:::
+    :::column:::
+        SQL_ATTR_CONCURRENCY  
+        SQL_ATTR_CURSOR_TYPE  
+        SQL_ATTR_FETCH_BOOKMARK_PTR  
+        SQL_ATTR_PARAM_BIND_OFFSET_PTR  
+        SQL_ATTR_PARAM_BIND_TYPE  
+    :::column-end:::
+    :::column:::
+        SQL_ATTR_ROW_ARRAY_SIZE  
+        SQL_ATTR_ROW_BIND_OFFSET_PTR  
+        SQL_ATTR_ROW_BIND_TYPE  
+        SQL_ATTR_ROW_NUMBER  
+        SQL_ATTR_SIMULATE_CURSOR  
+    :::column-end:::
+:::row-end:::

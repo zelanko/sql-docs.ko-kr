@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cde2fe9da61ca9d877f0c905609d8baf832ea509
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6db4adccfa0786e2acb1ce45725758d6b302b51f
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971682"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363023"
 ---
 # <a name="general-prediction-functions-dmx"></a>일반 예측 함수(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -22,15 +22,23 @@ ms.locfileid: "86971682"
   
 ## <a name="common-functions"></a>일반 함수  
  함수를 사용하여 마이닝 모델이 반환하는 결과를 확장할 수 있습니다. 테이블 식을 반환 하는 **select** 문에는 다음 함수를 사용할 수 있습니다.  
-  
-|||  
-|-|-|  
-|[BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)|[RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)|  
-|[BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)|[TopCount &#40;DMX&#41;](../dmx/topcount-dmx.md)|  
-|[예측&#40;DMX&#41;](../dmx/predict-dmx.md)|[TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)|  
-|[RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)|[TopSum &#40;DMX&#41;](../dmx/topsum-dmx.md)|  
-|[RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)||  
-  
+
+:::row:::
+    :::column:::
+        [BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)  
+        [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)  
+        [예측&#40;DMX&#41;](../dmx/predict-dmx.md)  
+        [RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)  
+        [RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)  
+    :::column-end:::
+    :::column:::
+        [RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)  
+        [TopCount &#40;DMX&#41;](../dmx/topcount-dmx.md)  
+        [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)  
+        [TopSum &#40;DMX&#41;](../dmx/topsum-dmx.md)  
+    :::column-end:::
+:::row-end:::
+
  다음 함수도 거의 모든 모델 유형에 대해 지원됩니다.  
   
 -   [DMX &#40;DMX&#41;](../dmx/exists-dmx.md)  
@@ -61,7 +69,7 @@ ms.locfileid: "86971682"
 |쿼리 유형|지원되는 함수|설명|  
 |----------------|-------------------------|-------------|  
 |[SELECT DISTINCT FROM \<model>](../dmx/select-distinct-from-model-dmx.md)|[RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)<br /><br /> [RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)<br /><br /> [RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)|이러한 함수는 숫자 데이터 형식을 포함하는 열이 연속 열인지 아니면 불연속화된 열인지에 관계없이 해당 열의 최소값, 최대값 및 평균을 제공하는 데 사용할 수 있습니다.|  
-|[SELECT FROM \<model>.CONTENT](../dmx/select-from-model-content-dmx.md)<br /><br /> 또는<br /><br /> [SELECT FROM \<model>.DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant&#40;DMX&#41;](../dmx/isdescendant-dmx.md)|이 함수는 모델의 지정된 노드에 대한 자식 노드를 검색하며 마이닝 모델 콘텐츠의 노드를 반복하는 데 사용할 수 있습니다. 마이닝 모델 콘텐츠에 포함된 노드 배열은 모델 유형에 따라 달라집니다. 각 마이닝 모델 유형에 대 한 구조에 대 한 자세한 내용은 [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)를 참조 하세요.<br /><br /> 마이닝 모델 콘텐츠를 차원으로 저장한 경우 특성 계층을 쿼리하는 데 사용할 수 있는 다른 MDX(Multidimensional Expressions) 함수도 사용할 수 있습니다.|  
+|[SELECT FROM \<model>.CONTENT](../dmx/select-from-model-content-dmx.md)<br /><br /> 또는<br /><br /> [SELECT FROM \<model>.DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant&#40;DMX&#41;](../dmx/isdescendant-dmx.md)|이 함수는 모델의 지정된 노드에 대한 자식 노드를 검색하며 마이닝 모델 콘텐츠의 노드를 반복하는 데 사용할 수 있습니다. 마이닝 모델 콘텐츠에 포함된 노드 배열은 모델 유형에 따라 달라집니다. 각 마이닝 모델 유형에 대 한 구조에 대 한 자세한 내용은 [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)를 참조 하세요.<br /><br /> 마이닝 모델 콘텐츠를 차원으로 저장 한 경우에는 특성 계층을 쿼리 하는 데 사용할 수 있는 다른 MDX (Multidimensional Expressions) 함수도 사용할 수 있습니다.|  
 |[SELECT FROM \<model>.CASES](../dmx/select-from-model-cases-dmx.md)|[IsInNode&#40;DMX&#41;](../dmx/isinnode-dmx.md)<br /><br /> [ClientSettingsGeneralFlag 클래스](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)<br /><br /> [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)|Lag 함수는 시계열 모델에 대해서만 지원 됩니다.<br /><br /> IsTestCase 함수는 홀드 아웃 옵션을 사용 하 여 만든 구조를 기반으로 하는 모델에서 테스트 데이터 집합을 만드는 데 사용할 수 있습니다. 모델이 홀드아웃 테스트 집합이 포함된 구조를 기반으로 하지 않을 경우 모든 사례는 학습 사례로 간주됩니다.|  
 |[SELECT FROM \<model>.SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode&#40;DMX&#41;](../dmx/isinnode-dmx.md)|이 컨텍스트에서 IsInNode 함수는 이상적인 샘플 사례 집합에 속한 사례를 반환 합니다.|  
 |선택에서 선택 \<model> 합니다. PMML|해당 없음 대신 XML 쿼리 함수 사용|PMML 표현은 다음 모델 유형에 대해서만 지원됩니다.<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] 의사 결정 트리<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] 클러스터링|  

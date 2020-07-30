@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ee57d716cbb93f855e1fd78d41bff62a681eb6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b8c18a77cfd843a6bb7b70494e62dcb9efc4582
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306165"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363393"
 ---
 # <a name="level-2-interface-conformance"></a>수준 2 인터페이스 적합성
 수준 2 인터페이스 규칙 수준은 수준 1 인터페이스 규칙 수준 기능 및 다음 기능을 포함 합니다.  
   
-|||  
+|기능 번호|설명|  
 |-|-|  
 |201|데이터베이스 테이블 및 뷰의 세 부분으로 된 이름을 사용 합니다. 자세한 내용은 [수준 1 인터페이스 규칙](../../../odbc/reference/develop-app/level-1-interface-conformance.md)의 두 부분으로 구성 된 명명 지원 기능 101을 참조 하세요.|  
 |202|**SQLDescribeParam**를 호출 하 여 동적 매개 변수를 설명 합니다.|  

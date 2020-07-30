@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3d31d5fe8aea1df4e7937104580efb820ba6f031
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 29f59cf06eac1ce0f6589ad9c7cba8491e8383b5
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306184"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363427"
 ---
 # <a name="level-1-interface-conformance"></a>수준 1 인터페이스 적합성
 수준 1 인터페이스 규칙 수준에는 OLTP 관계형 DBMS에서 일반적으로 사용할 수 있는 핵심 인터페이스 규칙 수준 기능 및 트랜잭션과 같은 추가 기능이 포함 됩니다. 수준 1 인터페이스 준수 드라이버를 통해 응용 프로그램은 핵심 인터페이스 규칙 수준의 기능 외에도 다음 작업을 수행할 수 있습니다.  
   
-|||  
+|기능 번호|설명|  
 |-|-|  
 |101|데이터베이스 테이블 및 뷰 (두 부분으로 구성 된 이름 지정)의 스키마를 지정 합니다. 자세한 내용은 [수준 2 인터페이스 규칙](../../../odbc/reference/develop-app/level-2-interface-conformance.md)의 세 부분으로 구성 된 이름 지정 기능 201을 참조 하세요.|  
 |102|지정 된 연결에서 해당 ODBC 함수가 모두 동기 이거나 모두 비동기 인 경우 ODBC 함수에 대해 진정한 비동기 실행을 호출 합니다.|  

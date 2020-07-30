@@ -13,12 +13,12 @@ keywords:
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 741a967b3fde6c5e3b5e3de87ac54a1142c93bfe
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 513e376199c6f53953d49b70eae17f8da916f6bf
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896979"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362978"
 ---
 # <a name="web-application-requirements-master-data-services"></a>웹 애플리케이션 요구 사항(MDS(Master Data Services))
 
@@ -50,16 +50,45 @@ ms.locfileid: "85896979"
 > [!IMPORTANT]  
 >**동적 콘텐츠 압축** 은 기본적으로 사용하도록 설정됩니다. 이로 인해 CPU 사용량이 증가하지만 xml 응답 크기가 크게 줄어들고 네트워크 I/O가 저장됩니다.  자세한 내용은 **MDS&#40;Master Data Services&#41;의 새로운 기능** in [What's New in Master Data Services &#40;MDS&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md)를 참조하세요.  
   
-||  
-|-|  
-|인터넷 정보 서비스<br /><br /> 웹 관리 도구<br /><br /> IIS 관리 콘솔<br /><br /> World Wide Web 서비스<br /><br /> 애플리케이션 개발<br /><br /> .NET 확장성 3.5<br /><br /> .NET 확장성 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 확장<br /><br /> ISAPI 필터<br /><br /> 일반 HTTP 기능<br /><br /> 기본 문서<br /><br /> 디렉터리 검색<br /><br /> HTTP 오류<br /><br /> 정적 콘텐츠<br /><br /> [참고: WebDAV 게시를 설치하지 마세요.]<br /><br /> 상태 및 진단<br /><br /> HTTP 로깅<br /><br /> 요청 모니터<br /><br /> 성능<br /><br /> 정적 콘텐츠 압축<br /><br /> 보안<br /><br /> 요청 필터링<br /><br /> Windows 인증|  
+- 인터넷 정보 서비스
+- 웹 관리 도구
+- IIS 관리 콘솔
+- World Wide Web 서비스
+- 애플리케이션 개발
+- .NET 확장성 3.5
+- .NET 확장성 4.5
+- ASP.NET 3.5
+- ASP.NET 4.5
+- ISAPI 확장
+- ISAPI 필터
+- 일반 HTTP 기능
+- 기본 문서
+- 디렉터리 검색
+- HTTP 오류
+- 정적 콘텐츠 [참고: WebDAV 게시를 설치 하지 마세요.]
+- 상태 및 진단
+- HTTP 로깅
+- 요청 모니터
+- 성능
+- 정적 콘텐츠 압축
+- 보안
+- 요청 필터링
+- Windows 인증
   
 ### <a name="features"></a>기능 
  Windows Server 2012 및 Windows Server 2012 R2에서 **서버 관리자** 를 사용하여 다음 필수 기능을 설치할 수 있습니다.  
   
-||  
-|-|  
-|.NET framework 3.5(.NET 2.0 및 3.0 포함)<br /><br /> .NET Framework 4.5 Advanced Services<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> HTTP 활성화[참고: 필수 항목입니다.]<br /><br /> TCP 포트 공유<br /><br /> Windows Process Activation Service<br /><br /> 프로세스 모델<br /><br /> .NET 환경<br /><br /> 구성 API<br/><br/>동적 콘텐츠 압축|  
+- .NET framework 3.5(.NET 2.0 및 3.0 포함)
+- .NET Framework 4.5 Advanced Services
+- ASP.NET 4.5
+- WCF Services
+- HTTP 활성화[참고: 필수 항목입니다.]
+- TCP 포트 공유
+- Windows Process Activation Service
+- 프로세스 모델
+- .NET 환경
+- 구성 API
+- 동적 콘텐츠 압축
   
  다음은 필수 구성 요소 서버 역할 및 기능을 추가하는 예제 PowerShell 스크립트입니다. 필수 구성 요소 서버 역할 및 기능은 환경에 따라 달라집니다.  
   
@@ -83,5 +112,3 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
       
  [MDS(Master Data Services) &#40;마스터 데이터 관리자 웹 응용 프로그램을 만듭니다&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
  [웹 구성 페이지&#40;Master Data Services 구성 마법사&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
-  
-  

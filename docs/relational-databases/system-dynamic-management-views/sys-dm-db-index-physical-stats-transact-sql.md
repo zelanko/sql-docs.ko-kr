@@ -183,7 +183,7 @@ GO
   
  **논리적 조각화**  
   
- 인덱스의 리프 페이지에서 순서가 잘못된 페이지의 비율입니다. 순서가 잘못된 페이지란 인덱스에 할당된 다음 물리적 페이지가 현재 리프 페이지의 다음 페이지** 포인터가 가리키는 페이지와 다른 경우를 나타냅니다.  
+ 인덱스의 리프 페이지에서 순서가 잘못된 페이지의 비율입니다. 순서가 잘못된 페이지란 인덱스에 할당된 다음 물리적 페이지가 현재 리프 페이지의 다음 페이지  포인터가 가리키는 페이지와 다른 경우를 나타냅니다.  
   
  **익스텐트 조각화**  
   
@@ -242,7 +242,7 @@ GO
   
  자세한 내용은 [동적 관리 뷰 및 함수 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)를 참조 하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-information-about-a-specified-table"></a>A. 지정한 테이블에 대한 정보 반환  
  다음 예에서는 `Person.Address` 테이블의 모든 인덱스와 파티션에 대한 크기 및 조각화 통계를 반환합니다. 최대한의 성능을 발휘하고 반환되는 통계를 제한하기 위해 검색 모드를 `'LIMITED'`로 설정합니다. 이 쿼리를 실행하려면 최소한 `Person.Address` 테이블에 대한 CONTROL  권한이 필요합니다.  
