@@ -20,15 +20,15 @@ ms.assetid: 5b6d6498-bac6-4266-94b9-d16ef5089cf0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec4ee023960c573ac48ff66886181c2f88b374bb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 722aca86c43839e9deb4e558f447f5377dffe99a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825058"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396143"
 ---
 # <a name="sysnumbered_procedures-transact-sql"></a>sys.numbered_procedures(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   번호를 매긴 프로시저로 작성된 각 SQL Server 저장 프로시저당 한 개의 행을 포함합니다. 여기에는 기본(번호 = 1) 저장 프로시저에 대한 행은 표시되지 않습니다. 기본 저장 프로시저에 대 한 항목은 **sys. objects** 및 **sys.debug**와 같은 뷰에서 찾을 수 있습니다.  
   
@@ -44,11 +44,11 @@ ms.locfileid: "82825058"
 > [!NOTE]  
 >  번호를 매긴 프로시저에는 XML 및 CLR 매개 변수를 사용할 수 없습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;개체 카탈로그 뷰](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [개체 카탈로그 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: syscolumns (Transact-sql) | Microsoft Docs
+title: sys.sys열 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ ms.assetid: 863fd87b-ff33-4ac5-9aa9-df21140681da
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c158533188db7e3d72235a69bff1b14546a1a1a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8dcf0f88fed4ef48cc90a6057a757a205d9e56b
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089245"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396102"
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   데이터베이스에 있는 모든 테이블 및 뷰의 모든 열에 대한 행, 그리고 저장 프로시저의 각 매개 변수당 한 개의 행을 반환합니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68089245"
 |**length**|**smallint**|**Sys**의 최대 실제 저장소 길이입니다. **형식**.|  
 |**xprec**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xscale**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**colid**|**smallint**|열 또는 매개 변수 ID입니다.|  
+|**id**|**smallint**|열 또는 매개 변수 ID입니다.|  
 |**xoffset**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**bitpos**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**쓰이는**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

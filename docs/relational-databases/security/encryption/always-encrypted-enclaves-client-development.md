@@ -12,15 +12,15 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ec032a9a6bd6d02372d77d8844d5e4938fbe945
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 971cce5ddf61f528e9e4ffdc0377603b6ce96946
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74492009"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411388"
 ---
 # <a name="develop-applications-using-always-encrypted-with-secure-enclaves"></a>보안 enclave를 사용한 Always Encrypted를 이용하여 애플리케이션 개발
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 [보안 Enclave를 사용한 Always Encrypted](always-encrypted-enclaves.md)는 [Always Encrypted](always-encrypted-database-engine.md)를 확장하여 암호화된 중요한 데이터베이스 열에서 더욱 다양한 애플리케이션 쿼리 기능을 지원합니다. 보안 Enclave 기술을 활용하여 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]의 쿼리 실행기가 암호화된 열에 대한 계산을 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 프로세스 내 보안 Enclave로 위임할 수 있도록 합니다.
 

@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 268844335920f88469119df5cc84a145369da1e1
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: c9d942e2255c2c60978d41004cfe53097c99209d
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197239"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332432"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE(Azure SQL Data Warehouse)
 
@@ -256,7 +256,7 @@ CCI(클러스터형 columnstore 인덱스)는 Azure SQL Data Warehouse에서 테
 | `money`|8|  
 | `smallmoney` |4|  
   
- `bigint` | `int` | `smallint` | `tinyint`  
+ `bigint` \| `int` \| `smallint` \| `tinyint`  
  정수 데이터를 사용하는 정확한 숫자 데이터 형식입니다. 다음 표에 스토리지 용량이 나와 있습니다.  
   
 | 데이터 형식 | 스토리지 크기(바이트) |  
@@ -551,7 +551,7 @@ WITH
   
 ### <a name="k-create-a-table-with-date-partitioning"></a><a name="DatePartition"></a> K. 날짜 분할로 테이블 만들기
 
- 다음 예제에서는 `myTable` 열에서 분할하여 `date`이라는 새 테이블을 만듭니다. 경계 값에 대해 RANGE RIGHT 및 날짜를 사용하면 각 파티션에 데이터의 월을 배치합니다.  
+ 다음 예제에서는 `date` 열에서 분할하여 `myTable`이라는 새 테이블을 만듭니다. 경계 값에 대해 RANGE RIGHT 및 날짜를 사용하면 각 파티션에 데이터의 월을 배치합니다.  
   
 ```sql
 CREATE TABLE myTable (  

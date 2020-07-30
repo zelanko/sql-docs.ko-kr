@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: fcc1543a26c179ae6a775b6d735283ba068312ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df1539bde5064dc9ae9211029631bb233be0f469
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68112869"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396790"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>Sybase용 SSMA 콘솔 작업(SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이제는 명령줄에서 콘솔 응용 프로그램을 통해 Sybase (Sybase 적응 서버 엔터프라이즈)의 릴리스를 사용할 수 있습니다. Migration Assistant 스크립트 파일은 명령을 실행 하기 위해 응용 프로그램에 대 한 입력을 구성 합니다. SSMA는 콘솔 응용 프로그램으로 스크립트 수준 상호 작용을 사용 하도록 설정 하 고 마이그레이션 주기를 줄이고 마이그레이션 작업을 확장 합니다.  
@@ -23,9 +23,8 @@ ms.locfileid: "68112869"
   
 이 섹션에서 다루는 항목은 다음과 같습니다.  
   
-|||  
+|항목|설명|  
 |-|-|  
-|**토픽**|**설명**|  
 |[Sybase 용 SSMA 콘솔 시작 &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md)|콘솔 응용 프로그램을 실행 하는 절차에 대해 설명 합니다.|  
 |[SSMA 콘솔의 명령줄 옵션 &#40;SybaseToSQL&#41;](../../ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md)|SSMA 콘솔 응용 프로그램을 작동 하는 명령줄 옵션과 매개 변수를 설명 합니다.|  
 |[스크립트 파일 &#40;SybaseToSQL&#41;만들기](../../ssma/sybase/creating-script-files-sybasetosql.md)|스크립트 파일을 만드는 방법을 설명 합니다.|  

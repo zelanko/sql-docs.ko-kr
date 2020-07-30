@@ -10,15 +10,15 @@ ms.assetid: 4272cfad-5ad7-493d-9edd-d9111619bda0
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 32300b0f0ee89e2a135468a658bde49bb77f7c69
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: def9dc4a7601e4d5a89794e85f4e209036966f73
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627154"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397122"
 ---
 # <a name="syspdw_health_component_status_mappings-transact-sql"></a>sys. pdw_health_component_status_mappings (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   [!INCLUDE[ssDW](../../includes/ssdw-md.md)]구성 요소 상태와 제조업체에서 정의한 구성 요소 이름 간의 매핑을 정의 합니다.  
   

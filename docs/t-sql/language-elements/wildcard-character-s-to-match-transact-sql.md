@@ -23,15 +23,15 @@ ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82876d2f0e749163ced821bdc24797a6f71b6e7e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d262fd04eeac9ebe8eaed29056a01cbf48eb8a78
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76831585"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396340"
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \](와일드카드 - 하나 이상의 문자 일치)(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 지정된 범위 또는 대괄호 `[ ]` 사이에 지정한 집합에 포함되는 하나의 문자와 일치됩니다. 와일드카드 문자는 `LIKE` 및 `PATINDEX` 등의 패턴 일치를 포함하는 문자열 비교에 사용할 수 있습니다.  
 

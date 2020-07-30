@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6794f5fd57d1c89e7c1989e79b5072a8c15cf43e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d8fd7e4164807789939ba0c3fd515d1a2d8dc67
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74320056"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410989"
 ---
 # <a name="deploy-the-host-guardian-service-for-ssnoversion-md"></a>[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]에 대한 호스트 보호 서비스 배포
 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 이 문서에서는 HGS(호스트 보호 서비스)를 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]에 대한 증명 서비스로 배포하는 방법을 설명합니다.
 시작하기 전에 필수 구성 요소 및 아키텍처 지침의 전체 목록을 보려면 [호스트 보호 서비스 증명 계획](./always-encrypted-enclaves-host-guardian-service-plan.md) 문서를 읽어보세요.

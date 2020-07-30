@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b3f6ee7c1f0b1dc1ccbcd4db260621dc5bda3168
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 13d5355bd1798af1514d16965059916e42e1ade0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750460"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243763"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ SQL Server 데이터베이스에서 이진 형식으로 저장 된 기계 학습
 
 R 및 Python 기계 학습 모델에 대 한 점수를 거의 실시간으로 제공 합니다. `sp_rxPredict`은 `rxPredict` [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) 및 [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)에서 R 함수의 래퍼로 제공 되는 저장 프로시저로, [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) 및 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)에서 Python 함수를 [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) 합니다. 이는 c + +로 작성 되었으며 점수 매기기 작업을 위해 특별히 최적화 되어 있습니다.
 
-모델은 R 또는 Python을 사용 하 여 만들어야 하지만, 대상 데이터베이스 엔진 인스턴스에서 이진 형식으로 직렬화 되 고 저장 된 후에는 R 또는 Python 통합이 설치 되지 않은 경우에도 해당 데이터베이스 엔진 인스턴스에서 사용 될 수 있습니다. 자세한 내용은 [sp_rxPredict를 사용한 실시간 점수 매기기](https://docs.microsoft.com/sql/machine-learning/real-time-scoring)를 참조 하세요.
+모델은 R 또는 Python을 사용 하 여 만들어야 하지만, 대상 데이터베이스 엔진 인스턴스에서 이진 형식으로 직렬화 되 고 저장 된 후에는 R 또는 Python 통합이 설치 되지 않은 경우에도 해당 데이터베이스 엔진 인스턴스에서 사용 될 수 있습니다. 자세한 내용은 [sp_rxPredict를 사용한 실시간 점수 매기기](https://docs.microsoft.com/sql/machine-learning/predictions/real-time-scoring)를 참조 하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -124,7 +124,7 @@ sp_rxPredict  ( @model, @input )
 + R의 PMML 모델
 + 다른 타사 라이브러리를 사용 하 여 만든 모델 
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 ```sql
 DECLARE @model = SELECT @model 

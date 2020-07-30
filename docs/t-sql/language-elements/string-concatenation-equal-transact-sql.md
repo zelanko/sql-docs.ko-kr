@@ -19,15 +19,15 @@ ms.assetid: 4aaeaab7-9b2b-48e0-8487-04ed672ebcb1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b43fa24ddf0ba8ec5e6c1361925161b222fb72d9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 33bf02ad0b9f4718fc9d8e80596176304a8794f6
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913159"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396650"
 ---
 # <a name="-string-concatenation-assignment-transact-sql"></a>+=(문자열 연결 대입)(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   두 문자열을 연결하고 문자열을 연산 결과로 설정합니다. 예를 들어 @x 변수가 'Adventure'와 같으면 @x += 'Works'는 @x의 원래 값을 가져오고, 이 문자열에 'Works'를 추가하고, @x를 새 값('AdventureWorks')으로 설정합니다.  
   

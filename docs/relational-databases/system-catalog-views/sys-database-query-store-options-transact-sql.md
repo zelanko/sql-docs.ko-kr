@@ -21,15 +21,15 @@ ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6673b9d0c235f7a38e04d534bf4358585a5b0bd2
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 373b6f2ae29bb858f4a89d6fdefb61a897e24e59
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942577"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396212"
 ---
 # <a name="sysdatabase_query_store_options-transact-sql"></a>sys. database_query_store_options (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   이 데이터베이스에 대 한 쿼리 저장소 옵션을 반환 합니다.  
   
