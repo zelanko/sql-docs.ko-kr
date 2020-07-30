@@ -12,20 +12,20 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 585eb4551fb688f4f6a620729310b0245462cbff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 69d06d021bfdc7a9208f8177ad93708008104653
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632961"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393956"
 ---
 # <a name="sysworkload_management_workload_classifiers-transact-sql"></a>sys. workload_management_workload_classifiers (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
  작업 분류자에 대 한 세부 정보를 반환 합니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|분류자의 고유 ID입니다. Null을 허용하지 않습니다.||
 group_name|**sysname**|분류자가 할당 된 작업 그룹의 이름입니다. Null을 허용하지 않습니다. 조인 가능를 workload_management_workload_groups ||

@@ -13,20 +13,20 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7237e7f7b49916e09f4a8c5cab0d7d49486cb971
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb63045fa1a34898e9c195e7a5c75bdf6b34b15a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73145658"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394351"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys. dm_pdw_nodes_exec_query_profiles (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 쿼리가 실행 되는 동안 실시간 데이터 웨어하우스 쿼리 진행률을 모니터링 합니다.   
   
 ## <a name="table-returned"></a>반환 된 테이블  
-반환된 카운터는 연산자 및 스레드 기준입니다. 결과는 동적 이며 쿼리가 완료 될 때만 출력을 만드는 것 `SET STATISTICS XML ON` 과 같은 기존 옵션의 결과와 일치 하지 않습니다.  
+반환된 카운터는 연산자 및 스레드 기준입니다. 결과는 동적 이며 `SET STATISTICS XML ON` 쿼리가 완료 될 때만 출력을 만드는 것과 같은 기존 옵션의 결과와 일치 하지 않습니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -66,7 +66,7 @@ ms.locfileid: "73145658"
 |segment_read_count|**int**|지금까지의 세그먼트 read-ahead 수입니다.|  
 |segment_skip_count|**int**|지금까지 생략된 세그먼트 수입니다.| 
 |actual_read_row_count|**bigint**|잔여 조건자를 적용 하기 전에 연산자가 읽은 행 수입니다.| 
-|estimated_read_row_count|**bigint**|**적용 대상:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] S p 1 부터는 <br/>나머지 조건자가 적용 되기 전에 연산자에서 읽을 수 있는 것으로 예상 되는 행 수입니다.|  
+|estimated_read_row_count|**bigint**|**적용 대상:** S p [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 1 부터는 <br/>나머지 조건자가 적용 되기 전에 연산자에서 읽을 수 있는 것으로 예상 되는 행 수입니다.|  
   
 ## <a name="remarks"></a>설명  
 [Dm_exec_query_profiles](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql?view=sql-server-ver15) 적용 됩니다.  

@@ -10,12 +10,12 @@ ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: f6a2bb7e10e487d65c0fa8dfd406a30f9acd557a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b78f6ccae739b6fe70fc813959daa44adca7c22
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265530"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394878"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA 콘솔의 명령줄 옵션 (AccessToSQL)
 Microsoft는 SSMA 활동을 실행 하 고 제어 하는 강력한 명령줄 옵션 집합을 제공 합니다. 결과 섹션은 추가 세부 정보를 제공 합니다.  
@@ -25,7 +25,7 @@ Microsoft는 SSMA 활동을 실행 하 고 제어 하는 강력한 명령줄 옵
   
 이 섹션에서는 ' option ' 이라는 용어를 ' 스위치 ' 라고도 합니다.  
   
-옵션은 대/소문자를 구분 하지 않으며 '**-**' 또는 '**/**' 문자로 시작할 수 있습니다.  
+옵션은 대/소문자를 구분 하지 않으며 ' **-** ' 또는 ' ' 문자로 시작할 수 있습니다 **/** .  
   
 옵션을 지정 하는 경우 해당 옵션 매개 변수를 지정 해야 합니다.  
   
@@ -117,16 +117,12 @@ Xmloutput에는 다음과 같은 두 가지 옵션을 사용할 수 있습니다
   
 `"C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -e c:\SsmaProjects\CommonEnvironment`  
   
-||  
-|-|  
-||  
-  
 ### <a name="secure-password-option--psecurepassword"></a>보안 암호 옵션:-p/securepassword  
 이 옵션은 서버 연결에 대 한 암호화 된 암호를 나타냅니다. 이는 마이그레이션 관련 작업에서 스크립트나 도움말을 실행 하지 않는다는 점에서 다른 모든 옵션과 다르며 마이그레이션 프로젝트에 사용 되는 서버 연결에 대 한 암호 암호화를 관리 하는 데 도움이 됩니다.  
   
 다른 옵션 또는 암호는 명령줄 매개 변수로 입력할 수 없습니다. 그렇지 않으면 오류가 발생 합니다. 자세한 내용은 [암호 관리](managing-passwords-accesstosql.md) 섹션을 참조 하세요.  
   
-에 대해 `-p/securepassword`지원 되는 하위 옵션는 다음과 같습니다.  
+에 대해 지원 되는 하위 옵션는 `-p/securepassword` 다음과 같습니다.  
   
 -   지정 된 서버 ID 또는 서버 연결 파일에 정의 된 모든 서버 id에 대해 암호를 추가 하거나 기존 암호를 보호 된 저장소에 업데이트 하려면 다음을 수행 합니다.  
   

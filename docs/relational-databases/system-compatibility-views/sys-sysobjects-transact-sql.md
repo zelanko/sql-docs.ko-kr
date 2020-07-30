@@ -1,5 +1,5 @@
 ---
-title: sys sysobjects (Transact-sql) | Microsoft Docs
+title: sys.sysobjects (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ ms.assetid: 44fdc387-67b0-4139-8bf5-ed26cf640cd1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26d4860c7ea434aecb0255134178b73fb7c01be4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5984d36c1cd23bbc89f57eb7e48b76ba07c0fea5
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67995611"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393843"
 ---
 # <a name="syssysobjects-transact-sql"></a>sys.sysobjects(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   데이터베이스에서 만들어진 각 개체(제약 조건, 기본값, 로그, 규칙, 저장 프로시저)당 한 개의 행을 포함합니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "67995611"
 |name|**sysname**|개체 이름|  
 |id|**int**|개체 ID|  
 |xtype|**char(2)**|개체 유형입니다. 다음 개체 유형 중 하나일 수 있습니다.<br /><br /> AF = 집계 함수(CLR)<br /><br /> C = CHECK 제약 조건<br /><br /> D = 기본값 또는 DEFAULT 제약 조건<br /><br /> F = FOREIGN KEY 제약 조건<br /><br /> L = 로그<br /><br /> FN = 스칼라 함수<br /><br /> FS = 어셈블리(CLR) 스칼라 함수<br /><br /> FT = 어셈블리(CLR) 테이블 반환 함수<br /><br /> IF = 인라인 테이블 함수<br /><br /> IT = 내부 테이블<br /><br /> P = 저장 프로시저<br /><br /> PC = 어셈블리(CLR) 저장 프로시저<br /><br /> PK = PRIMARY KEY 제약 조건(K 유형)<br /><br /> RF = 복제 필터 저장 프로시저<br /><br /> S = 시스템 테이블<br /><br /> SN = 동의어<br /><br /> SQ = 서비스 큐<br /><br /> TA = 어셈블리(CLR) DML 트리거<br /><br /> TF = 테이블 함수<br /><br /> TR = SQL DML 트리거<br /><br /> TT = 테이블 유형<br /><br /> U = 사용자 테이블<br /><br /> UQ = UNIQUE 제약 조건(K 유형)<br /><br /> V = 뷰<br /><br /> X = 확장 저장 프로시저|  
-|uid|**smallint**|개체 소유자의 스키마 ID입니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업그레이드한 데이터베이스의 경우 스키마 ID는 소유자의 사용자 ID와 동일합니다. 사용자 및 역할 수가 32,767을 초과하는 경우 오버플로되거나 NULL을 반환합니다.<br /><br /> ** \* 중요 \* \* ** 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DDL 문 중 하나를 사용 하는 경우에는 sys.debug 대신에 [sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 카탈로그 뷰를 사용 해야 합니다.<br /><br /> &#124; ALTER &#124; DROP 사용자 만들기<br /><br /> &#124; ALTER &#124; DROP 역할 만들기<br /><br /> &#124; ALTER &#124; DROP 응용 프로그램 역할 만들기<br /><br /> CREATE SCHEMA<br /><br /> ALTER AUTHORIZATION ON OBJECT|  
+|uid|**smallint**|개체 소유자의 스키마 ID입니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업그레이드한 데이터베이스의 경우 스키마 ID는 소유자의 사용자 ID와 동일합니다. 사용자 및 역할 수가 32,767을 초과하는 경우 오버플로되거나 NULL을 반환합니다.<br /><br /> 중요 다음 DDL 문 중 하나를 사용 하는 경우 sys.sys개체 대신에는 sys ** \* . objects 카탈로그 뷰를 사용 해야 합니다. \* \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)<br /><br /> &#124; ALTER &#124; DROP 사용자 만들기<br /><br /> &#124; ALTER &#124; DROP 역할 만들기<br /><br /> &#124; ALTER &#124; DROP 응용 프로그램 역할 만들기<br /><br /> CREATE SCHEMA<br /><br /> ALTER AUTHORIZATION ON OBJECT|  
 |정보|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |상태|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |base_schema_ver|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -51,7 +51,7 @@ ms.locfileid: "67995611"
 |ftcatid|**smallint**|전체 텍스트 인덱싱을 위해 등록된 모든 사용자 테이블의 경우 전체 텍스트 카탈로그 식별자이며, 등록되지 않은 모든 사용자 테이블의 경우 0입니다.|  
 |schema_ver|**int**|테이블의 스키마가 변경될 때마다 증가하는 버전 번호입니다. 항상 0을 반환합니다.|  
 |stats_schema_ver|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|type|**char(2)**|개체 유형입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> AF = 집계 함수(CLR)<br /><br /> C = CHECK 제약 조건<br /><br /> D = 기본값 또는 DEFAULT 제약 조건<br /><br /> F = FOREIGN KEY 제약 조건<br /><br /> FN = 스칼라 함수<br /><br /> FS = 어셈블리(CLR) 스칼라 함수<br /><br /> FT = 어셈블리(CLR) 테이블 반환 함수 IF = 인라인 테이블 함수<br /><br /> IT = 내부 테이블<br /><br /> K = PRIMARY KEY 또는 UNIQUE 제약 조건<br /><br /> L = 로그<br /><br /> P = 저장 프로시저<br /><br /> PC = 어셈블리(CLR) 저장 프로시저<br /><br /> R = 규칙<br /><br /> RF = 복제 필터 저장 프로시저<br /><br /> S = 시스템 테이블<br /><br /> SN = 동의어<br /><br /> SQ = 서비스 큐<br /><br /> TA = 어셈블리(CLR) DML 트리거<br /><br /> TF = 테이블 함수<br /><br /> TR = SQL DML 트리거<br /><br /> TT = 테이블 유형<br /><br /> U = 사용자 테이블<br /><br /> V = 뷰<br /><br /> X = 확장 저장 프로시저|  
+|type|**char(2)**|개체 유형입니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> AF = 집계 함수(CLR)<br /><br /> C = CHECK 제약 조건<br /><br /> D = 기본값 또는 DEFAULT 제약 조건<br /><br /> F = FOREIGN KEY 제약 조건<br /><br /> FN = 스칼라 함수<br /><br /> FS = 어셈블리(CLR) 스칼라 함수<br /><br /> FT = 어셈블리(CLR) 테이블 반환 함수 IF = 인라인 테이블 함수<br /><br /> IT = 내부 테이블<br /><br /> K = PRIMARY KEY 또는 UNIQUE 제약 조건<br /><br /> L = 로그<br /><br /> P = 저장 프로시저<br /><br /> PC = 어셈블리(CLR) 저장 프로시저<br /><br /> R = 규칙<br /><br /> RF = 복제 필터 저장 프로시저<br /><br /> S = 시스템 테이블<br /><br /> SN = 동의어<br /><br /> SQ = 서비스 큐<br /><br /> TA = 어셈블리(CLR) DML 트리거<br /><br /> TF = 테이블 함수<br /><br /> TR = SQL DML 트리거<br /><br /> TT = 테이블 유형<br /><br /> U = 사용자 테이블<br /><br /> V = 뷰<br /><br /> X = 확장 저장 프로시저|  
 |userstat|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |sysstat|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |indexdel|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

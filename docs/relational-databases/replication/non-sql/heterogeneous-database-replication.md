@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3fd983ad-e206-45db-9054-417c9b5bb815
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f6a2540f4b1a3cb35f697ce4e27a51b99f5bdf84
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f392b232e81c0f6dcb2fcd546acf91a714f5c7ee
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893329"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394394"
 ---
 # <a name="heterogeneous-database-replication"></a>다른 유형의 데이터베이스 복제  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85893329"
 
 -   Oracle에서 데이터를 게시할 때 다음과 같은 제한 사항이 있습니다.  
 
-  | |2016 또는 이전 버전 |2017 이상 |
+  |시나리오|2016 또는 이전 버전 |2017 이상 |
   |-------|-------|--------|
   |Oracle에서 복제 |Oracle 10g 또는 이전 버전만 지원 |Oracle 10g 또는 이전 버전만 지원 |
   |Oracle로 복제 |Oracle 12c까지 |지원되지 않음 |
@@ -44,7 +44,7 @@ ms.locfileid: "85893329"
 ## <a name="publishing-data-from-oracle"></a>Oracle에서 데이터 게시  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 사용하여 Oracle에서 데이터를 게시할 수 있습니다. 이때 대부분의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 스냅샷 및 트랜잭션 복제 기능을 동일한 방식으로 간단하게 사용할 수 있습니다. 이 기능을 사용하려면 Oracle 버전 10G 또는 이전 버전이 필요합니다. 다음 시나리오에 대해서는 Oracle에서 데이터를 게시하는 것이 가장 적합합니다.  
   
-|시나리오|Description|  
+|시나리오|설명|  
 |--------------|-----------------|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 애플리케이션 배포|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 이외 데이터베이스에서 복제한 데이터 작업 시 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Visual Studio 및[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 사용하여 개발합니다.|  
 |데이터 웨어하우징 준비 서버(staging server)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 준비 데이터베이스와[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 데이터베이스의 동기화를 유지합니다.|  

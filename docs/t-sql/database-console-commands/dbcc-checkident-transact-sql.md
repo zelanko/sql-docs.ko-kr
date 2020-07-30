@@ -29,16 +29,16 @@ ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: a3be9148e4ae5e8daae7528923506fc0bbde665d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: fd1523d0c1cb9d21240887f2d801e447828def0e
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484396"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395208"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 지정된 테이블에 대한 현재 ID 값을 검사하고 필요한 경우 ID 값을 변경합니다. DBCC CHECKIDENT를 사용하여 ID 열의 새 현재 ID 값을 수동으로 설정할 수도 있습니다.  
   

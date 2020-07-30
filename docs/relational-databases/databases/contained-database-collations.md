@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 054bb22c1dfe2f1497af6e74bea0cfc0bca158b8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 09edac79bf52c2826436ecdfdf25b0db342f4aeb
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763630"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363566"
 ---
 # <a name="contained-database-collations"></a>포함된 데이터베이스 데이터 정렬
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -126,9 +126,8 @@ END;
   
  포함된 데이터베이스와 포함되지 않은 데이터베이스의 여러 개체 동작은 다음 표에 요약되어 있습니다.  
   
-||||  
+|항목|포함되지 않은 데이터베이스|포함된 데이터베이스|  
 |-|-|-|  
-|**항목**|**포함되지 않은 데이터베이스**|**포함된 데이터베이스**|  
 |사용자 데이터(기본값)|COLLATE|COLLATE|  
 |임시 데이터(기본값)|TempDB 데이터 정렬|COLLATE|  
 |메타데이터|DATABASE_DEFAULT/CATALOG_DEFAULT|CATALOG_DEFAULT|  

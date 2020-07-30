@@ -18,21 +18,21 @@ ms.assetid: 796322df-e62a-45bf-b519-89e1d521abce
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2521d9543c71d9dee298fbb58518163fd45fbfdc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b78875b7c6f3440bd747045d1b90d0f8ef323c4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67999531"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394888"
 ---
 # <a name="sysdatabase_credentials-transact-sql"></a>sys. database_credentials (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   데이터베이스의 각 데이터베이스 범위 자격 증명에 대해 하나의 행을 반환 합니다.  
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) 를 사용 해야 합니다.    
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |credential_id|**int**|데이터베이스 범위 자격 증명의 ID입니다. 데이터베이스에서 고유 합니다.|  
 |name|**sysname**|데이터베이스 범위 자격 증명의 이름입니다. 데이터베이스에서 고유 합니다.|  
@@ -50,7 +50,7 @@ ms.locfileid: "67999531"
  [Transact-sql&#41;&#40;데이터베이스 범위 자격 증명 만들기](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
  [ALTER DATABASE 범위 자격 증명 &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
  [Transact-sql&#41;&#40;데이터베이스 범위 자격 증명 삭제](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
- [Transact-sql&#41;자격 증명 &#40;만들기](../../t-sql/statements/create-credential-transact-sql.md)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 17a287b38eb1dd1c1d9e3cee6943f7c069a39c61
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36cc006382bab28a93beed1ce8c6e48896719674
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944625"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395178"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>사용자 인터페이스 참조(MySQLToSQL)
 이 섹션에는 MySQL 용 SSMA (SQL Server Migration Assistant)에 대 한 도움말 항목이 포함 되어 있습니다.  
@@ -22,9 +22,8 @@ ms.locfileid: "67944625"
 ## <a name="in-this-section"></a>섹션 내용  
 다음 표에서는 SSMA 대화 상자를 보여 줍니다.  
   
-|||  
+|항목|설명|  
 |-|-|  
-|**항목**|**설명**|  
 |[MySQLToSQL&#41;&#40;고급 개체 선택](../../ssma/mysql/advanced-object-selection-mysqltosql.md)|**고급 개체 선택** 대화 상자를 사용 하 여 필터 조건을 사용 하 여 데이터베이스 개체를 찾은 다음 해당 개체를 선택 하거나 선택 취소 합니다.|  
 |[평가 보고서 &#40;MySQLToSQL&#41;](../../ssma/mysql/assessment-report-mysqltosql.md)|보고서를 사용 하 여 MySQL 개체를 Transact-sql 구문으로 변환 하는 결과를 확인 하 고 SQL Server로 마이그레이션의 시간과 복잡성을 예측할 수 있습니다.|  
 |[MySQL &#40;MySQLToSQL&#41;에 연결](../../ssma/mysql/connect-to-mysql-mysqltosql.md)|**Mysql에 연결** 대화 상자를 사용 하 여 마이그레이션하려는 mysql 데이터베이스에 연결 합니다.|  

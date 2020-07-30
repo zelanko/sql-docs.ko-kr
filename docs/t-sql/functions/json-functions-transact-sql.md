@@ -12,16 +12,16 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 7d0c7e172a1be634ada37d8c83d6602112be5ead
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: c857d57f26c22e0f4eb9346e2925d493ec5e4541
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423112"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394228"
 ---
 # <a name="json-functions-transact-sql"></a>JSON 함수(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 JSON 텍스트에 대한 유효성 검사 또는 변경을 수행하거나 간단한 값이나 복잡한 값을 추출하려면 이 섹션의 페이지에 설명된 함수를 사용합니다.  
   

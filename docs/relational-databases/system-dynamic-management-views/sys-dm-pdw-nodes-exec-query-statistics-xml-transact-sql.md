@@ -13,21 +13,21 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 2b12e1a1400ec2d9d4bb85466671cda446511f24
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0fea3a43ccf786d5ebc6f9c19acb977097bea1e4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73145648"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394338"
 ---
 # <a name="dm_pdw_nodes_exec_query_statistics_xml-transact-sql"></a>dm_pdw_nodes_exec_query_statistics_xml (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 진행 중인 요청에 대 한 쿼리 실행 계획을 반환 합니다. 이 DMV를 사용 하 여 임시 통계를 사용 하 여 실행 계획 XML을 검색 합니다.
 
 ## <a name="table-returned"></a>반환 된 테이블
 
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|
 |node_id|**int**|노드와 연결 된 고유 숫자 ID입니다.|
 |session_id|**smallint**|세션의 ID입니다. Null을 허용하지 않습니다.|

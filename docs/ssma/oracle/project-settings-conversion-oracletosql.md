@@ -11,12 +11,12 @@ ms.assetid: a98a5e07-eb5e-47b9-a6f2-e2cb3a18309c
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 86cc0909140190ca7731ddc647fc979a6cd21c7a
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: a822aa1e9c30e245b61bd43c0af60b94fae33fe1
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293625"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394915"
 ---
 # <a name="project-settings-conversion-oracletosql"></a>프로젝트 설정(변환)(OracleToSQL)
 **프로젝트 설정** 대화 상자의 변환 페이지에는 Ssma가 Oracle 구문을 구문으로 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -29,16 +29,14 @@ ms.locfileid: "84293625"
   
 ## <a name="conversion-messages"></a>변환 메시지  
   
-|||  
-|-|-|  
 |용어|정의|  
+|-|-|  
 |**적용 된 문제에 대 한 메시지 생성**|SSMA가 변환 중에 정보 메시지를 생성 하는지 여부를 지정 하 고 출력 창에 표시 한 다음 변환 된 코드에 추가 합니다.<br /><br />**모드** 상자에서 변환 모드를 선택 하면 ssma가 다음 설정을 적용 합니다.<br /><br />**기본/최적 모드:** 아니요<br /><br />**전체 모드:** 아니요|  
   
 ## <a name="miscellaneous-options"></a>기타 옵션  
   
-|||  
-|-|-|  
 |용어|정의|  
+|-|-|  
 |**정수로 ROWNUM 식 캐스트**|SSMA는 ROWNUM 식을 변환 하는 경우 식을 TOP 절로 변환 하 고 그 뒤에 식을 변환 합니다. 다음 예에서는 Oracle DELETE 문의 ROWNUM을 보여 줍니다.<br /><br />`DELETE FROM Table1`<br /><br />`WHERE ROWNUM < expression and Field1 >= 2`<br /><br />다음 예에서는 결과를 보여 줍니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] .<br /><br />`DELETE TOP (expression-1)`<br /><br />`FROM Table1`<br /><br />`WHERE Field1>=2`<br /><br />TOP을 사용 하려면 TOP 절 식이 정수로 계산 되어야 합니다. 정수가 음수인 경우 문은 오류를 생성 합니다.<br /><br />**예**를 선택 하면 ssma가 식을 정수로 캐스팅 합니다.<br /><br />**아니요**를 선택 하면 ssma는 변환 된 코드에서 모든 정수가 아닌 식을 오류로 표시 합니다.<br /><br />**모드** 상자에서 변환 모드를 선택 하면 ssma가 다음 설정을 적용 합니다.<br /><br />**기본/전체 모드:** 아니요<br /><br />**낙관적 모드:** 예로|  
 |**기본 스키마 매핑**|이 설정은 Oracle 스키마를 SQL Server 스키마에 매핑하는 방법을 지정 합니다. 이 설정에서는 다음 두 가지 옵션을 사용할 수 있습니다.<br /><br />**데이터베이스 스키마:** 이 모드에서 Oracle 스키마 ' sch1 '는 기본적으로 SQL Server 데이터베이스 ' sch1 '의 ' dbo ' SQL Server 스키마에 매핑됩니다.<br /><br />스키마 스키마 **:** 이 모드에서 Oracle 스키마 ' sch1 '은 기본적으로 연결 대화 상자에서 제공 하는 기본 SQL Server 데이터베이스의 ' sch1 ' SQL Server 스키마에 매핑됩니다.<br /><br />**모드** 상자에서 변환 모드를 선택 하면 ssma가 다음 설정을 적용 합니다.<br /><br />**기본/최적/전체 모드:** 스키마를 데이터베이스로|  
 |**MERGE 문의 변환 방법**|**Insert, update, delete 문 사용**을 선택 하는 경우 SSMA는 병합기 문을 INSERT, UPDATE, delete 문으로 변환 합니다.<br /><br />**Merge 문 사용**을 선택 하는 경우 ssma는 병합기 문을의 MERGE 문으로 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.<br /><br />**참고:** 이 프로젝트 설정 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, 2014 에서만 사용할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br />**모드** 상자에서 변환 모드를 선택 하면 ssma가 다음 설정을 적용 합니다.<br /><br />**기본/최적/전체 모드:** MERGE 문 사용|  
@@ -69,18 +67,16 @@ ms.locfileid: "84293625"
   
 ## <a name="returning-clause-conversion"></a>절 변환 반환  
   
-|||  
-|-|-|  
 |용어|정의|  
+|-|-|  
 |**DELETE 문의 반환 절을 출력으로 변환**|Oracle은 삭제 된 값을 즉시 가져오는 방법으로 반환 절을 제공 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 OUTPUT 절을 사용 하 여 해당 기능을 제공 합니다.<br /><br />**예**를 선택 하면 DELETE 문의 반환 절이 OUTPUT 절로 변환 됩니다. 테이블의 트리거가 값을 변경할 수 있기 때문에 반환 된 값은 Oracle의 경우와 다를 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br />**아니요**를 선택 하면 SSMA는 DELETE 문 앞에 select 문을 생성 하 여 반환 된 값을 검색 합니다.<br /><br />**모드** 상자에서 변환 모드를 선택 하면 ssma가 다음 설정을 적용 합니다.<br /><br />**기본/최적/전체 모드:** 예로|  
 |**INSERT 문의 반환 절을 출력으로 변환**|Oracle은 삽입 된 값을 즉시 가져오는 방법으로 반환 절을 제공 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 OUTPUT 절을 사용 하 여 해당 기능을 제공 합니다.<br /><br />**예**를 선택 하면 SSMA가 INSERT 문의 반환 절을 출력으로 변환 합니다. 테이블의 트리거가 값을 변경할 수 있기 때문에 반환 된 값은 Oracle의 경우와 다를 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br />**아니요**를 선택 하면 ssma가 참조 테이블에서 값을 삽입 한 다음 선택 하 여 Oracle 기능을 에뮬레이트합니다.<br /><br />**모드** 상자에서 변환 모드를 선택 하면 ssma가 다음 설정을 적용 합니다.<br /><br />**기본/최적/전체 모드:** 예로|  
 |**UPDATE 문의 반환 절을 출력으로 변환**|Oracle은 업데이트 된 값을 즉시 가져오는 방법으로 반환 절을 제공 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 OUTPUT 절을 사용 하 여 해당 기능을 제공 합니다.<br /><br />**예**를 선택 하면 SSMA가 UPDATE 문의 반환 절을 OUTPUT 절로 변환 합니다. 테이블의 트리거가 값을 변경할 수 있기 때문에 반환 된 값은 Oracle의 경우와 다를 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br />**아니요**를 선택 하면 SSMA는 UPDATE 문 뒤에 select 문을 생성 하 여 반환 값을 검색 합니다.<br /><br />**모드** 상자에서 변환 모드를 선택 하면 ssma가 다음 설정을 적용 합니다.<br /><br />**기본/최적/전체 모드:** 예로|  
   
 ## <a name="sequence-conversion"></a>시퀀스 변환  
   
-|||  
-|-|-|  
 |용어|정의|  
+|-|-|  
 |**시퀀스 생성기 변환**|Oracle에서는 시퀀스를 사용 하 여 고유 식별자를 생성할 수 있습니다.<br /><br />SSMA는 시퀀스를 다음으로 변환할 수 있습니다.<br /><br />SQL Server 시퀀스 생성기 사용 (이 옵션은 SQL Server 2012 및 SQL Server 2014)으로 변환 하는 경우에만 사용할 수 있습니다.<br /><br />SSMA 시퀀스 생성기 사용.<br /><br />열 id 사용.<br /><br />SQL Server 2012 또는 SQL Server 2014로 변환할 때 기본 옵션은 SQL Server 시퀀스 생성기를 사용 하는 것입니다. 그러나 SQL Server 2012 및 SQL Server 2014에서는 현재 시퀀스 값 (예: Oracle sequence al val 메서드의 경우)을 가져올 수 없습니다. Oracle 시퀀스 통화를 마이그레이션하는 방법에 대 한 지침은 SSMA 팀 블로그 사이트를 참조 하세요.<br /><br />또한 SSMA는 Oracle 시퀀스를 SSMA 시퀀스 에뮬레이터로 변환 하는 옵션을 제공 합니다. 2012 이전의 SQL Server로 변환할 경우의 기본 옵션입니다.<br /><br />마지막으로 테이블의 열에 할당 된 시퀀스를 변환 하 여 id 값을 SQL Server 수도 있습니다. Oracle **테이블** 탭의 시퀀스와 id 열 간의 매핑을 지정 해야 합니다.|  
 |**트리거 외부에서 통화를 변환 합니다.**|변환 시퀀스 생성기가 **열 id를 사용**하도록 설정 된 경우에만 표시 됩니다. Oracle 시퀀스는 테이블과 별도의 개체 이므로 시퀀스를 사용 하는 많은 테이블은 트리거를 사용 하 여 새 시퀀스 값을 생성 하 고 삽입 합니다. SSMA는 이러한 문을 주석 처리 하거나 주석 처리 시 오류가 생성 될 때 오류로 표시 합니다.<br /><br />**예**를 선택 하면 ssma는 변환 된 시퀀스의 외부 트리거에 대 한 모든 참조를 경고와 함께 표시 합니다.<br /><br />**아니요**를 선택 하면 ssma는 변환 된 시퀀스의 외부 트리거에 대 한 모든 참조를 오류로 표시 합니다.|  
   

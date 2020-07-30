@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d0a522d6deb01169189d6f5faaf7ba2f189d1522
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bf127e7aa40e538bb3dee390f3661ae5d74413f3
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595508"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411499"
 ---
 # <a name="query-columns-using-always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted를 이용하는 열 쿼리
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 이 문서에서는 [보안 Enclave를 사용한 Always Encrypted](always-encrypted-enclaves.md)에 대해 서버 쪽 보안 Enclave를 사용하여 암호화된 열에서 쿼리를 실행하기 위한 일반적인 고려 사항을 설명합니다. 
 

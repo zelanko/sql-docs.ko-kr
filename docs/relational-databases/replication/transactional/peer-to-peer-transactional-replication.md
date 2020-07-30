@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d85b1f3460dc55f7d6cd24420f2d86bb0f9623c2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 656b05414327e35b5aff1a982a0313835ded20a4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901246"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394658"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>피어 투 피어 - 트랜잭션 복제
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -157,7 +157,7 @@ ms.locfileid: "85901246"
 ### <a name="maintenance-considerations"></a>유지 관리 고려 사항  
  시스템을 정지해야 수행할 수 있는 작업도 있습니다. 즉, 모든 노드에서 게시된 테이블에 대한 작업을 중지하고 각 노드가 다른 모든 노드의 변경 내용을 모두 받았는지 확인해야 합니다.  
   
-||SQL Server 2005 피어 전용 또는 SQL Server 2005 피어와 SQL Server 2008 이상 피어 혼합|SQL Server 2005 피어 전용 또는 SQL Server 2005 피어와 SQL Server 2008 이상 피어 혼합|SQL 2008 이상 피어|SQL 2008 이상 피어|  
+|작업|SQL Server 2005 피어 전용 또는 SQL Server 2005 피어와 SQL Server 2008 이상 피어 혼합|SQL Server 2005 피어 전용 또는 SQL Server 2005 피어와 SQL Server 2008 이상 피어 혼합|SQL 2008 이상 피어|SQL 2008 이상 피어|  
 |-|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|  
 |토폴로지에 노드 추가|전체 토폴로지의 2개 노드: 정지 필요 없음. 대신 `sync_type = 'initialize with backup'`를|2개 노드 초과: 정지 필요.|`sync_type = 'replication support only'`: 정지 필요.|`sync_type = 'initialize with backup'` 및 `'initialize from lsn'`: 정지 필요 없음.|  
   

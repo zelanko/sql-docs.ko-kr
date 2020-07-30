@@ -20,15 +20,15 @@ ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b96b1d6f1229dba624076abc4cb0c82e49249a2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 15a46fa3c1adc9478bd1da9c0152cb671be378cf
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752355"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395702"
 ---
 # <a name="what-are-the-sql-database-functions"></a>SQL 데이터베이스 함수란?
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SQL 데이터베이스에서 사용할 수 있는 기본 제공 함수의 범주에 대해 알아보세요. 기본 제공 함수를 사용하거나 각자의 사용자 정의 함수를 만들 수 있습니다.
   
