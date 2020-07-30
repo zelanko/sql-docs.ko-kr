@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2e013259-0022-4897-a08d-5f8deb880fa8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7814090b688f362737e7cd045bca9edd32c34bcb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3326dab096a1b275bc06bfb0949eeb88b2d4fe30
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883629"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397171"
 ---
 # <a name="oracle-publishing-overview"></a>Oracle Publishing Overview  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85883629"
 
 -   Oracle에서 데이터를 게시할 때 다음과 같은 제한 사항이 있습니다.  
 
-  |       | 2016 또는 이전 버전 |2017 이상 |
+  |시나리오| 2016 또는 이전 버전 |2017 이상 |
   |-------|-------|--------|
   |Oracle에서 복제 |Oracle 10g 또는 이전 버전만 지원 |Oracle 10g 또는 이전 버전만 지원 |
   |Oracle로 복제 |Oracle 12c까지 |지원되지 않음 |

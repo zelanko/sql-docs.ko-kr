@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06db927ec2d77f07e82a9647239f87bc46e8a953
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fd8b43e431a4e67eb1933548935fb37562dcdeb7
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74320066"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411149"
 ---
 # <a name="register-computer-with-host-guardian-service"></a>호스트 보호 서비스에 컴퓨터 등록
 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 이 문서에서는 증명하기 위해 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 컴퓨터를 HGS(호스트 보호 서비스)에 등록하는 방법을 설명합니다.
 

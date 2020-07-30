@@ -11,15 +11,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 76af9a82a53004d01443a0442946e28fed73d0f0
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 3ad3743b35570ddb0f4644b909ca06339444143e
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858900"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410939"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
  
 보안 Enclave를 사용한 Always Encrypted는 [Always Encrypted](always-encrypted-database-engine.md) 기능에 추가 기능을 제공합니다.
 

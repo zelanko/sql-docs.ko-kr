@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 13c6c2a0f4b2b96911a05b0ec9d8fdd2325ffa9b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0222df74a33fabb535354403bbf7cc550898708f
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759187"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362498"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -98,9 +98,8 @@ ms.locfileid: "85759187"
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|||  
+|태스크 설명|항목|  
 |-|-|  
-|**태스크 설명**|**항목**|  
 |버퍼 풀 확장을 사용하도록 설정하고 구성합니다.|[ALTER SERVER CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)|  
 |버퍼 풀 확장 구성을 수정합니다.|[ALTER SERVER CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)|  
 |버퍼 풀 확장 구성을 봅니다.|[sys.dm_os_buffer_pool_extension_configuration&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)|  

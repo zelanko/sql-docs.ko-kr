@@ -1,5 +1,5 @@
 ---
-title: 대규모 데이터 설정 | Microsoft Docs
+title: 대량 데이터 설정 (Native Client OLE DB 공급자)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,14 @@ ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8de78c3d4218c3f5ef37e1e2d7a0e197f8c2d1c0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 01e0e20b410ddf2300779923ed317a897a74862d
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002852"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332180"
 ---
-# <a name="setting-large-data"></a>대규모 데이터 설정
+# <a name="setting-large-data-in-sql-server-native-client"></a>SQL Server Native Client에서 대량 데이터 설정
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자를 사용 하면 소비자 저장소 개체에 대 한 포인터를 전달 하 여 BLOB 데이터를 설정할 수 있습니다.  

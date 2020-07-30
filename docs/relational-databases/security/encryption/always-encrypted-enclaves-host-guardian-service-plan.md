@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d774df3329c6c9e49e9e1bd9a86dbeaf30ac5765
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 425fdeb973918744b4aeab423629939a2a84f97a
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287147"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411387"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>호스트 보호자 서비스 증명 계획
 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 [보안 enclave를 사용한 Always Encrypted](always-encrypted-enclaves.md)를 사용하는 경우 클라이언트 애플리케이션이 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 프로세스 내에서 신뢰할 수 있는 enclave와 통신하고 있는지 확인합니다. VBS(가상화 기반 보안) enclave의 경우 이 요구 사항에는 enclave 내의 코드가 둘 다 유효하고 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]를 호스트하는 컴퓨터를 신뢰할 수 있는지 확인하는 작업이 포함됩니다. 원격 증명은 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 컴퓨터의 ID 및 구성(선택 사항)의 유효성을 검사할 수 있는 제3자를 도입하여 이 목표를 달성합니다. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]는 enclave를 사용하여 쿼리를 실행하려면 먼저 증명 서비스에 운영 환경에 대한 정보를 제공하여 상태 인증서를 얻어야 합니다. 그러면 이 상태 인증서가 클라이언트에 전송되고 증명 서비스를 사용하여 신뢰성을 독립적으로 확인할 수 있습니다. 클라이언트는 상태 인증서를 신뢰하면 신뢰할 수 있는 VBS enclave와 통신하고 있는 것으로 판단하고 해당 enclave를 사용하는 쿼리를 실행하게 됩니다.
 

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 162cf9d1f062d69daf671ed0bf8962b9ddb7ddf9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bb2cfc1df70f22f3e0fb90cd3d9cf552e6e01d60
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85680973"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362243"
 ---
 # <a name="manage-the-database-engine-services"></a>데이터베이스 엔진 서비스 관리
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,20 +56,53 @@ ms.locfileid: "85680973"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 독립 실행형 프로그램이 아니라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 프로그램용 스냅인이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 Windows 8.0을 실행할 때 애플리케이션으로 표시되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 열려면 **앱** 의 **검색**창에서 **SQLServerManager12.msc** ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]의 경우), **SQLServerManager11.msc** ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]의 경우) 또는 **SQLServerManager10.msc** ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]의 경우)를 입력한 다음 **Enter**키를 누릅니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
-  
-|||  
-|-|-|  
-|[서비스 관리를 위한 보안 요구 사항](../../database-engine/configure-windows/security-requirements-for-managing-services.md)|[SQL Server 인스턴스의 자동 시작 방지&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)|  
-|[Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)|[SQL Server의 서비스 시작 계정 변경&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md)|  
-|[네트워크에서 또는 네트워크 없이 SQL Server 실행](../../database-engine/configure-windows/run-sql-server-with-or-without-a-network.md)|[서버 시작 옵션 구성&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)|  
-|[SQL Server Browser 서비스&#40;데이터베이스 엔진 및 SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)|[SQL Server에서 사용하는 계정의 암호 변경&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/scm-services-change-the-password-of-the-accounts-used.md)|  
-|[데이터베이스 엔진 서비스 시작 옵션](../../database-engine/configure-windows/database-engine-service-startup-options.md)|[SQL Server 오류 로그 구성](../../database-engine/configure-windows/scm-services-configure-sql-server-error-logs.md)|  
-|[데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|[서버 인증 모드 변경](../../database-engine/configure-windows/change-server-authentication-mode.md)|  
-|[단일 사용자 모드로 SQL Server 시작](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)|[SQL 기록기 서비스](../../database-engine/configure-windows/sql-writer-service.md)|  
-|[최소 구성으로 SQL Server 시작](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)|[종료 메시지 브로드캐스트&#40;명령 프롬프트&#41;](../../database-engine/configure-windows/broadcast-a-shutdown-message-command-prompt.md)|  
-|[다른 컴퓨터에 연결&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/scm-services-connect-to-another-computer.md)|[SQL Server 인스턴스에 로그인&#40;명령 프롬프트&#41;](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)|  
-|[SQL Server 인스턴스를 자동으로 시작하도록 설정&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)|[데이터베이스 엔진 액세스에 대한 파일 시스템 사용 권한 구성](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)|  
-  
+
+:::row:::
+    :::column:::
+        [서비스 관리를 위한 보안 요구 사항](../../database-engine/configure-windows/security-requirements-for-managing-services.md)
+
+        [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)
+
+        [데이터베이스 엔진 액세스에 대한 파일 시스템 사용 권한 구성](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)
+
+        [네트워크에서 또는 네트워크 없이 SQL Server 실행](../../database-engine/configure-windows/run-sql-server-with-or-without-a-network.md)
+
+        [SQL Server Browser 서비스&#40;데이터베이스 엔진 및 SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)
+
+        [데이터베이스 엔진 서비스 시작 옵션](../../database-engine/configure-windows/database-engine-service-startup-options.md)
+
+        [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)
+
+        [단일 사용자 모드로 SQL Server 시작](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)
+
+        [최소 구성으로 SQL Server 시작](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)
+    :::column-end:::
+    :::column:::
+        [다른 컴퓨터에 연결&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/scm-services-connect-to-another-computer.md)
+
+        [SQL Server 인스턴스를 자동으로 시작하도록 설정&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)
+
+        [SQL Server 인스턴스의 자동 시작 방지&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)
+
+        [SQL Server의 서비스 시작 계정 변경&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md)
+
+        [서버 시작 옵션 구성&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)
+
+        [SQL Server에서 사용하는 계정의 암호 변경&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/scm-services-change-the-password-of-the-accounts-used.md)
+
+        [SQL Server 오류 로그 구성](../../database-engine/configure-windows/scm-services-configure-sql-server-error-logs.md)
+    :::column-end:::
+    :::column:::
+        [서버 인증 모드 변경](../../database-engine/configure-windows/change-server-authentication-mode.md)
+
+        [SQL 기록기 서비스](../../database-engine/configure-windows/sql-writer-service.md)
+
+        [종료 메시지 브로드캐스트&#40;명령 프롬프트&#41;](../../database-engine/configure-windows/broadcast-a-shutdown-message-command-prompt.md)
+
+        [SQL Server 인스턴스에 로그인&#40;명령 프롬프트&#41;](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)
+    :::column-end:::
+:::row-end:::
+
 ## <a name="related-content"></a>관련 내용  
  [SQL Server 에이전트 구성](../../ssms/agent/configure-sql-server-agent.md)  
   

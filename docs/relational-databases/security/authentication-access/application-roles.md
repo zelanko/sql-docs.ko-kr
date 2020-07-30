@@ -22,12 +22,12 @@ ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8232644c8d44b4df541d8301dffa75771fbba44f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 01d9a3825b2972313602cbc077c0da501868c712
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628424"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332221"
 ---
 # <a name="application-roles"></a>애플리케이션 역할
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "85628424"
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|||  
-|-|-|  
+| Task | Type |
+| ---- | ---- |
 |애플리케이션 역할 만들기|[애플리케이션 역할 만들기](../../../relational-databases/security/authentication-access/create-an-application-role.md) 및 [CREATE APPLICATION ROLE&#40;Transact-SQL&#41;](../../../t-sql/statements/create-application-role-transact-sql.md)|  
 |애플리케이션 역할 변경|[ALTER APPLICATION ROLE&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-application-role-transact-sql.md)|  
 |애플리케이션 역할 삭제|[DROP APPLICATION ROLE&#40;Transact-SQL&#41;](../../../t-sql/statements/drop-application-role-transact-sql.md)|  

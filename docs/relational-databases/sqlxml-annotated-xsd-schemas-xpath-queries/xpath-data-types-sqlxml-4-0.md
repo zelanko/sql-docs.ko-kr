@@ -29,12 +29,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eade5e3328993176f8795d27e511902a42468192
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 724290f48b0f33d586a797629766b36bae49ddb6
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764871"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332642"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 데이터 형식(SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "85764871"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 노드 집합에 대해 위치 선택을 수행하지 않습니다. 예를 들어 XPath 쿼리 `Customer[3]`는 세 번째 고객을 의미하는데 이러한 종류의 위치 선택이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 지원되지 않습니다. 따라서 XPath 사양에서 설명 하는 노드 집합-**문자열** 또는 노드 집합-**숫자** 변환이 구현 되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 XPath 사양에 "첫 번째" 의미 체계가 지정된 경우 항상 "임의" 의미 체계를 사용합니다. 예를 들어 W3C XPath 사양을 기반으로 하는 XPath 쿼리는 `Order[OrderDetail/@UnitPrice > 10.0]` **단가** 가 10.0 보다 큰 첫 번째 **orderdetail** 이 포함 된 주문을 선택 합니다. 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 XPath 쿼리는 **단가** 가 10.0 보다 큰 **orderdetail** 이 포함 된 주문을 선택 합니다.  
   
- **부울** 로 변환 하면 존재 테스트가 생성 됩니다. 따라서 XPath 쿼리는 `Products[@Discontinued=true()]` sql 식 "products. 단종 = 1"이 아니라 sql 식 "products. 단종 함은 null이 아닙니다."와 동일 합니다. 쿼리를 후자의 SQL 식과 동일 하 게 만들려면 먼저 노드 집합을 **숫자**와 같은**부울** 이 아닌 형식으로 변환 합니다. 예: `Products[number(@Discontinued) = true()]`  
+ **부울** 로 변환 하면 존재 테스트가 생성 됩니다. 따라서 XPath 쿼리는 `Products[@Discontinued=true()]` sql 식 "products. 단종 = 1"이 아니라 sql 식 "products. 단종 함은 null이 아닙니다."와 동일 합니다. 쿼리를 후자의 SQL 식과 동일 하 게 만들려면 먼저 노드 집합을 **숫자**와 같은**부울** 이 아닌 형식으로 변환 합니다. 예들 들어 `Products[number(@Discontinued) = true()]`입니다.  
   
  대부분의 연산자는 노드 집합의 임의 노드 또는 특정 노드에 대해 TRUE이면 TRUE가 되도록 정의되어 있으므로 노드 집합이 비어 있으면 이러한 연산의 결과가 항상 FALSE입니다. 따라서 A가 비어 있으면 `A = B`와 `A != B`는 모두 FALSE이고 `not(A=B)`와 `not(A!=B)`는 TRUE입니다.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "85764871"
 |-------------------|------------------------------------|--------------------------------|  
 |Nonebin.base64bin.hex|해당 없음|NoneEmployeeID|  
 |boolean|boolean|CONVERT(bit, EmployeeID)|  
-|number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|number|CONVERT(float(53), EmployeeID)|  
+|number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|숫자|CONVERT(float(53), EmployeeID)|  
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|문자열|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|해당 사항 없음(XPath에는 fixed14.4 XDR 데이터 형식에 해당하는 데이터 형식이 없음)|CONVERT(money, EmployeeID)|  
 |date|문자열|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
@@ -126,14 +126,13 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  다음 표에서 볼 수 있듯이 이 변환은 리터럴 또는 복합 식과 같은 다른 XPath 식에 적용되는 변환과 같습니다.  
   
-||||||  
-|-|-|-|-|-|  
-||X는 알 수 없는 형식입니다.|X는 **문자열** 입니다.|X는 **숫자** 입니다.|X는 **부울** 입니다.|  
-|string(X)|CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
-|number(X)|CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
-|boolean(X)|-|LEN (X) > 0|X != 0|-|  
+|   | X는 알 수 없는 형식입니다. | X는 문자열입니다. | X는 숫자입니다. | X는 부울입니다. |
+| - | ------------ | ----------- | ----------- | ------------ |
+| **string(X)** |CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
+| **number(X)** |CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
+| **boolean(X)** |-|LEN (X) > 0|X != 0|-|  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-convert-a-data-type-in-an-xpath-query"></a>A. XPath 쿼리에서 데이터 형식 변환  
  주석이 추가 된 XSD 스키마에 대해 지정 된 다음 XPath 쿼리에서 쿼리는 **EmployeeID** 특성 값이 E-1 인 모든 **Employee** 노드를 선택 합니다. 여기서 "e-"는 **sql: id-접두사** 주석을 사용 하 여 지정 된 접두사입니다.  

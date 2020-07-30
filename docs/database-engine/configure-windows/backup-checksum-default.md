@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: eef42653-85d0-4eaf-94bd-2ea1b024cd23
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8dc3e92c294b2afd1374af45c51b349443b76828
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5b3ce275f3195d3de49f77b0af01e2f2380718e7
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725247"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362491"
 ---
 # <a name="backup-checksum-default"></a>백업 체크섬 기본값
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,9 +25,8 @@ ms.locfileid: "85725247"
   
  다음 표에서는 이 옵션에 사용할 수 있는 값을 설명합니다.  
   
-|||  
+|값|의미|  
 |-|-|  
-|**값**|**의미**|  
 |0|사용 안 함. 이 값은 기본 설정입니다.|  
 |1|사용|  
   

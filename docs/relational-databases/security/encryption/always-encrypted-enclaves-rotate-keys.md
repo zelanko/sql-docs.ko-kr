@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39d90da404fd6bc230a3308c76b48fdc26da2b8f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5420d49b6e5d165168610d002424e3a3b9499748
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595818"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411059"
 ---
 # <a name="rotate-enclave-enabled-keys"></a>Enclave 사용 키 회전
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 Always Encrypted에서 키 회전은 기존 열 마스터 키 또는 열 암호화 키를 새 키로 바꾸는 프로세스입니다. 이 문서에서는 초기 키 및/또는 대상 키(새 키)가 Enclave 사용 키인 경우 [보안 Enclave를 사용한 Always Encrypted](always-encrypted-enclaves.md)와 관련된 키 회전의 사용 사례 및 고려 사항에 관해 설명합니다. Always Encrypted 키 관리에 대한 일반 지침과 프로세스는 [Always Encrypted를 위한 키 관리 개요](overview-of-key-management-for-always-encrypted.md)를 참조하세요. 
 
