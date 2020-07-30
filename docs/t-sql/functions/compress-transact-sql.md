@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e42349b93666071e389e080e200591f70a2517e9
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6edda04e2520ec915a6c4767751130f091668e85
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111067"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394298"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS(Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 이 함수는 GZIP 알고리즘을 사용하여 입력된 식을 압축합니다. 이 함수는 **varbinary(max)** 유형의 바이트 배열을 반환합니다.
   

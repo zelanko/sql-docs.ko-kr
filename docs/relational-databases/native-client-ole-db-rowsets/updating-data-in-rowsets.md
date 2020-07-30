@@ -1,5 +1,5 @@
 ---
-title: 행 집합의 데이터 업데이트 | Microsoft Docs
+title: 행 집합의 데이터 업데이트 (Native Client OLE DB 공급자)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 37769b1c-c480-419a-8c54-5cc420bf73db
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 230ecf53d6260cb11411b2513e6b06a7fac883d1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 34a2aeb4a6b971e196dd876a8bade429afddc792
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246810"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393908"
 ---
 # <a name="updating-data-in-rowsets-in-sql-server-native-client"></a>SQL Server Native Client 행 집합의 데이터 업데이트
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

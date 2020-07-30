@@ -25,15 +25,15 @@ ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7cf13b0056a659fb59f236cf7d49c1ea1f12368
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9eb54f4ecc659a3691ee7ed27a3330be8481e9e4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915589"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394155"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   명시적 또는 암시적인 트랜잭션을 트랜잭션의 처음이나 트랜잭션 내의 저장점으로 롤백합니다. ROLLBACK TRANSACTION을 사용하여 트랜잭션의 시작 이후 또는 저장점까지의 모든 데이터 수정 사항을 지울 수 있습니다. 또한 트랜잭션에서 보유한 리소스도 해제합니다.  
   

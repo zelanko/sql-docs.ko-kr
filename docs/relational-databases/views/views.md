@@ -13,15 +13,15 @@ ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48614fa846903b2104ee27f00dc57cc154adef92
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6ef24d6eeb1739d40fb88eccd2fb18220ef6fea9
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68131991"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395712"
 ---
 # <a name="views"></a>뷰
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   뷰는 쿼리에 의해 내용이 정의되는 가상 테이블입니다. 테이블과 같이 뷰는 데이터의 명명된 열과 행 집합으로 구성됩니다. 인덱싱하지 않을 경우 뷰는 데이터베이스에 저장된 데이터 값 집합으로 존재하지 않습니다. 데이터 행과 열은 뷰를 정의하는 쿼리에서 참조하는 테이블에 있으며 뷰가 참조될 때 동적으로 생성됩니다.  
   
  뷰는 뷰에서 참조하는 기본 테이블에 대한 필터 역할을 합니다. 뷰를 정의하는 쿼리는 현재 또는 다른 데이터베이스의 다른 뷰나 하나 이상의 테이블을 기반으로 할 수 있습니다. 분산 쿼리를 사용하면 유형이 다른 여러 원본의 데이터를 사용하는 뷰를 정의할 수도 있습니다. 예를 들어 이 기능은 각각 다른 지역의 데이터가 저장되는 여러 서버에서 구조가 비슷한 데이터를 결합할 때 유용합니다.  

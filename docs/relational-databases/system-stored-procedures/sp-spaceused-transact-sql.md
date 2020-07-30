@@ -18,15 +18,15 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f015625f168693da0c3c204ca85cbee1beb5d897
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 65b65c0ff721742c1bccbd6998d358797bd6d10b
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152140"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393957"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   행의 수, 예약된 디스크 공간 및 현재 데이터베이스의 테이블, 인덱싱된 뷰 또는 [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서 사용하는 디스크 공간을 표시하거나, 전체 데이터베이스가 예약하여 사용하는 디스크 공간을 표시합니다.  
   
@@ -97,7 +97,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**쓰이는**|**varchar (18)**|데이터베이스의 개체에 의해 할당된 총 공간입니다.|  
-|**데이터**|**varchar (18)**|데이터가 사용하는 총 공간입니다.|  
+|**data**|**varchar (18)**|데이터가 사용하는 총 공간입니다.|  
 |**index_size**|**varchar (18)**|인덱스가 사용하는 총 공간입니다.|  
 |**사용 되지 않는**|**varchar (18)**|데이터베이스의 개체에 예약되었지만 아직 사용되지 않은 총 공간입니다.|  
   
@@ -109,7 +109,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**database_size**|**varchar (18)**|현재 데이터베이스의 크기(메가바이트)입니다. **database_size** 에는 데이터 파일과 로그 파일이 모두 포함 됩니다.|  
 |**할당 되지 않은 공간**|**varchar (18)**|데이터베이스 개체용으로 예약되지 않은 데이터베이스 공간입니다.|  
 |**쓰이는**|**varchar (18)**|데이터베이스의 개체에 의해 할당된 총 공간입니다.|  
-|**데이터**|**varchar (18)**|데이터가 사용하는 총 공간입니다.|  
+|**data**|**varchar (18)**|데이터가 사용하는 총 공간입니다.|  
 |**index_size**|**varchar (18)**|인덱스가 사용하는 총 공간입니다.|  
 |**사용 되지 않는**|**varchar (18)**|데이터베이스의 개체에 예약되었지만 아직 사용되지 않은 총 공간입니다.|  
   
@@ -120,7 +120,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**name**|**nvarchar(128)**|공간 사용 정보가 필요한 개체의 이름입니다.<br /><br /> 개체의 스키마 이름은 반환되지 않습니다. 스키마 이름이 필요한 경우 [dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) 또는 [dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 동적 관리 뷰를 사용 하 여 해당 하는 크기 정보를 가져옵니다.|  
 |**열**|**char (20)**|테이블에 있는 행 수입니다. 지정된 개체가 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐일 경우 이 열은 큐에 있는 메시지 수를 나타냅니다.|  
 |**쓰이는**|**varchar (18)**|*Objname*에 대해 예약 된 공간의 전체 크기입니다.|  
-|**데이터**|**varchar (18)**|*Objname*의 데이터에 사용 되는 총 공간입니다.|  
+|**data**|**varchar (18)**|*Objname*의 데이터에 사용 되는 총 공간입니다.|  
 |**index_size**|**varchar (18)**|*Objname*의 인덱스에서 사용 하는 총 공간입니다.|  
 |**사용 되지 않는**|**varchar (18)**|*Objname* 에 대해 예약 되었지만 아직 사용 되지 않은 총 공간입니다.|  
  
@@ -137,7 +137,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**쓰이는**|**varchar (18)**|데이터베이스의 개체에 의해 할당된 총 공간입니다.|  
-|**데이터**|**varchar (18)**|데이터가 사용하는 총 공간입니다.|  
+|**data**|**varchar (18)**|데이터가 사용하는 총 공간입니다.|  
 |**index_size**|**varchar (18)**|인덱스가 사용하는 총 공간입니다.|  
 |**사용 되지 않는**|**varchar (18)**|데이터베이스의 개체에 예약되었지만 아직 사용되지 않은 총 공간입니다.|
 
@@ -157,7 +157,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**database_size**|**varchar (18)**|현재 데이터베이스의 크기(메가바이트)입니다. **database_size** 에는 데이터 파일과 로그 파일이 모두 포함 됩니다. 데이터베이스에 MEMORY_OPTIMIZED_DATA 파일 그룹이 있는 경우 파일 그룹에 있는 모든 검사점 파일의 전체 디스크 크기를 포함 합니다.|
 |**할당 되지 않은 공간**|**varchar (18)**|데이터베이스 개체용으로 예약되지 않은 데이터베이스 공간입니다. 데이터베이스에 MEMORY_OPTIMIZED_DATA 파일 그룹이 있는 경우 파일 그룹에 사전 생성 된 검사점 파일의 전체 디스크 크기를 포함 합니다.|  
 |**쓰이는**|**varchar (18)**|데이터베이스의 개체에 의해 할당된 총 공간입니다.|  
-|**데이터**|**varchar (18)**|데이터가 사용하는 총 공간입니다.|  
+|**data**|**varchar (18)**|데이터가 사용하는 총 공간입니다.|  
 |**index_size**|**varchar (18)**|인덱스가 사용하는 총 공간입니다.|  
 |**사용 되지 않는**|**varchar (18)**|데이터베이스의 개체에 예약되었지만 아직 사용되지 않은 총 공간입니다.|
 |**xtp_precreated**|**varchar (18)**|상태가 사전 생성 된 검사점 파일의 총 크기 (KB)입니다. 이는 전체 데이터베이스의 할당 되지 않은 공간을 계산 합니다. 하나 이상의 컨테이너를 포함 하는 memory_optimized_data 파일 그룹이 데이터베이스에 없는 경우 NULL을 반환 합니다. *이 열은 @include_total_xtp_storage = 1 인 경우에만 포함 됩니다*.| 
@@ -249,9 +249,9 @@ GO
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DBCC UPDATEUSAGE &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [allocation_units &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [sys.debug &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [index_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys.index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys. 개체 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [&#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

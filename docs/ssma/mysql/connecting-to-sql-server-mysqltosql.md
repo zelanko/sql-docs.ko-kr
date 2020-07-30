@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0bed8dee876546cf418f3f547b0ddce092d3cfce
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 462b209d73f48217cf9941adf2e3af45d62371cd
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293960"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394290"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>SQL Server에 연결(MySQLToSQL)
 MySQL 데이터베이스를 SQL Server로 마이그레이션하려면 SQL Server의 대상 인스턴스에 연결 해야 합니다. 연결할 때 SSMA는 SQL Server 인스턴스의 모든 데이터베이스에 대 한 메타 데이터를 가져오고 SQL Server 메타 데이터 탐색기에 데이터베이스 메타 데이터를 표시 합니다. SSMA는 연결 된 SQL Server의 인스턴스에 대 한 정보를 저장 하지만 암호를 저장 하지는 않습니다.  
@@ -78,9 +78,8 @@ MySQL 데이터베이스 개체를 SQL Server 구문으로 변환 하기 전에 
   
 5.  "SQL Azure"에 대 한 버전 호환성이 더 이상 유효 하지 않습니다.  
   
-||||||||  
+|프로젝트 형식 및 대상 서버 버전|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (버전: 4.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (버전: 10. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012<br />(버전: 11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014<br />(버전: 12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016<br />(버전: 13.x)|SQL Azure|  
 |-|-|-|-|-|-|-|  
-|**프로젝트 형식 Vs 대상 서버 버전**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (버전: 4.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (버전: 10. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012<br />(버전: 11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014<br />(버전: 12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016<br />(버전: 13.x)|SQL Azure|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|예|예|예|예|예||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||예|예|예|예||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||예|예|예||  

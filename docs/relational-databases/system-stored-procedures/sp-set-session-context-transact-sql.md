@@ -18,15 +18,15 @@ ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a57bf4acff6f8d0d08f86852de5ecc0411211c67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11a3bae7cc6cbf025370a947c8fa3194f978d419
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104390"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394521"
 ---
 # <a name="sp_set_session_context-transact-sql"></a>sp_set_session_context (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 세션 컨텍스트에서 키-값 쌍을 설정 합니다.  
   
@@ -42,13 +42,13 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @key= ] N'key'  
+ [ @key =] N'key '  
  **Sysname**형식의 설정 되는 키입니다. 최대 키 크기는 128 바이트입니다.  
   
- [ @value= ] 기본값  
+ [ @value =] ' value '  
  **Sql_variant**형식의 지정 된 키에 대 한 값입니다. NULL 값을 설정 하면 메모리를 해제 합니다. 최대 크기는 8,000바이트입니다.  
   
- [ @read_only= ] {0 | 1}  
+ [ @read_only =] {0 | 1}  
  **Bit**형식의 플래그입니다. 1 인 경우이 논리 연결에서 지정 된 키의 값을 다시 변경할 수 없습니다. 0 (기본값) 이면 값을 변경할 수 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  

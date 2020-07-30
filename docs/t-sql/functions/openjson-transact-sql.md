@@ -17,16 +17,16 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 28a61eb05b015be7eee85a7376a3c0ce84cac27f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 27f83649fc0549854fa131bf1a859f0c20ebf65c
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112868"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394798"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 **OPENJSON**은 JSON 텍스트를 구문 분석하고 JSON 입력의 개체 및 속성을 행 및 열로 반환하는 테이블 반환 함수입니다. 즉, **OPENJSON**은 JSON 문서를 통해 행 집합 뷰를 제공합니다. 행 집합의 열과 열을 채우는 데 사용되는 JSON 속성 경로를 명시적으로 지정할 수 있습니다. **OPENJSON**은 행 집합을 반환하기 때문에 다른 테이블, 뷰 또는 테이블 반환 함수를 사용할 수 있는 것처럼, **OPENJSON**을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 `FROM` 절에서 사용할 수 있습니다.  
   

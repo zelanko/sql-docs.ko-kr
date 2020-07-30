@@ -14,16 +14,16 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1544242905645fed5cb00fda3f7da0a06809326c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e624926eb55adf65bd8390e6929cfa04aa742ba4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79448484"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395821"
 ---
 # <a name="specify-default-values-for-columns"></a>열의 기본값 지정
 
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 테이블 열에 입력될 기본값을 지정할 수 있습니다. 사용자 인터페이스의 개체 탐색기를 사용하거나 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 제출하여 기본값을 설정할 수 있습니다.
 

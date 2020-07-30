@@ -20,15 +20,15 @@ ms.assetid: e26d3339-845c-49c2-9d89-243376874c13
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 496c08f2bdf9942349ccdda83c90a97336767203
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9f93b8ac9dc503d60f095add6e4a98050a93544d
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110600"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394252"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 `CHECKSUM` 함수는 테이블의 행이나 식 목록에 대해 계산한 체크섬 값을 반환합니다. `CHECKSUM`을 사용하여 해시 인덱스를 작성합니다.
   

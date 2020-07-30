@@ -31,15 +31,15 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d4e9130ac3a22da474b7ce576969e26bd9205ac
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2d53fe144263d9e3a3b91d6f0e929076a7043b3f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917943"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395318"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 내에서 또는 시스템 저장 프로시저, 사용자 정의 저장 프로시저, CLR 저장 프로시저, 스칼라 반환 사용자 정의 함수, 확장 저장 프로시저 등과 같은 모듈 중 하나에서 명령 문자열이나 문자열을 실행합니다. EXECUTE 문은 연결된 서버로 통과 명령을 보내는 데 사용할 수 있습니다. 또한 문자열이나 명령이 실행되는 컨텍스트를 명시적으로 설정할 수도 있습니다. WITH RESULT SETS 옵션을 사용하여 결과 집합에 대한 메타데이터를 정의할 수 있습니다.
   

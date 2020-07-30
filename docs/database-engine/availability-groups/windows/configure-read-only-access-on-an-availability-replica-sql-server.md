@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 589eb9450419b3ef4a4274b0c3a9dfbba3c8e6c2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f6ca7a3fdd634dab10880d082ad09ac1d71e2616
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896097"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362641"
 ---
 # <a name="configure-read-only-access-to-a-secondary-replica-of-an-always-on-availability-group"></a>Always On 가용성 그룹의 보조 복제본에 대한 읽기 전용 액세스 구성
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -181,10 +181,10 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
   
 -   클라이언트 애플리케이션을 읽을 수 있는 보조 복제본에 연결할 수 있도록 설정하려면:  
   
-    ||필수 요소|링크|  
-    |-|------------------|----------|  
-    |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹에 수신기가 있는지 확인합니다.|[가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
-    |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹에 대한 읽기 전용 라우팅을 구성합니다.|[가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)|  
+|필수 요소|링크|  
+|------------------|----------|  
+|가용성 그룹에 수신기가 있는지 확인합니다.|[가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
+|가용성 그룹에 대한 읽기 전용 라우팅을 구성합니다.|[가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)|  
   
  **장애 조치(Failover) 후 트리거 및 작업에 영향을 줄 수 있는 요소**  
   
