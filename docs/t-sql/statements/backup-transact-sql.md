@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 29a53d4ccb5958a191bf06f4565cc8f908376086
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e0dc290a3e514d8de7a63a6afb4a0ed6453b6107
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552778"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332512"
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
 
@@ -65,10 +65,17 @@ SQL 데이터베이스를 백업합니다.
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-||||
-|---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System(PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
-||||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />관리되는 인스턴스](backup-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System(PDW)](backup-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -234,9 +241,9 @@ TO \<backup_device> [ **,** ...*n* ] 함께 제공되는 [백업 디바이스](.
 
 백업 작업에 사용할 논리적 백업 디바이스나 물리적 백업 디바이스를 지정합니다.
 
-{ *logical_device_name* |  **@** _logical\_device\_name\_var_ } **적용 대상:** SQL Server 데이터베이스를 백업할 백업 디바이스의 논리적 이름입니다. 논리적 이름은 식별자 규칙을 따라야 합니다. 변수(@*logical_device_name_var*)로 제공한 경우 백업 디바이스 이름은 문자열 상수(@_logical\_device\_name\_var_ **=** 논리적 백업 디바이스 이름)나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.
+{ *logical_device_name* \| **@** _logical\_device\_name\_var_ } **적용 대상:** SQL Server 데이터베이스를 백업할 백업 디바이스의 논리적 이름입니다. 논리적 이름은 식별자 규칙을 따라야 합니다. 변수(@*logical_device_name_var*)로 제공한 경우 백업 디바이스 이름은 문자열 상수(@_logical\_device\_name\_var_ **=** 논리적 백업 디바이스 이름)나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.
 
-{ DISK | TAPE | URL} **=** { **'** _physical\_device\_name_ **'**  |  **@** _physical\_device\_name\_var_ | 'NUL' } **적용 대상:** DISK, TAPE 및 URL이 SQL Server에 적용됩니다.
+{ DISK \| TAPE \| URL} **=** { **'** _physical\_device\_name_ **'** \| **@** _physical\_device\_name\_var_ \| 'NUL' } **적용 대상:** DISK, TAPE 및 URL이 SQL Server에 적용됩니다.
 디스크 파일이나 테이프 디바이스 또는 Microsoft Azure Blob Storage 서비스를 지정합니다. URL 형식은 Microsoft Azure Storage 서비스에 대한 백업을 만드는 데 사용됩니다. 자세한 내용과 예제는 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. 자습서는 [자습서: Microsoft Azure Blob Storage Service에 SQL Server 백업 및 복원](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)을 참조하세요.
 
 > [!NOTE]
@@ -664,7 +671,7 @@ BACKUP 문의 `TO` 절에 지정된 각 백업 디바이스는 미디어 패밀�
 > [!NOTE]
 > 테이프 미디어가 비어 있거나 디스크 백업 파일이 없는 경우에는 이러한 모든 상호 작용에서 미디어 헤더를 기록한 다음 작업을 계속 진행합니다. 미디어가 비어 있지 않은데도 유효한 미디어 헤더가 없는 경우에는 이러한 작업에서 유효한 MTF 미디어가 아니라는 사실을 알린 후 백업 작업을 종료합니다.
 
-||NOINIT|INIT|
+|skip 옵션|NOINIT|INIT|
 |------|------------|----------|
 |NOSKIP|볼륨에 유효한 미디어 헤더가 포함되어 있으면 미디어 이름이 지정된 `MEDIANAME`과 일치하는지 확인합니다. 이름이 일치하면 기존 백업 세트를 모두 유지하면서 백업 세트를 추가합니다.<br /> 볼륨에 유효한 미디어 헤더가 포함되어 있지 않으면 오류가 발생합니다.|볼륨에 유효한 미디어 헤더가 포함되어 있으면 다음 검사를 수행합니다.<br /><ul><li>`MEDIANAME`이 지정되어 있으면 지정된 미디어 이름이 미디어 헤더의 미디어 이름과 일치하는지 확인합니다.<sup>1</sup></li><li>미디어에 만료되지 않은 백업 세트가 없는지 확인합니다. 만료되지 않은 백업 세트가 있으면 백업을 종료합니다.</li></ul><br />이러한 검사를 통과하면 미디어 헤더만 유지하며 미디어의 모든 백업 세트를 덮어씁니다.<br /> 볼륨에 유효한 미디어 헤더가 포함되어 있지 않으면 지정된 `MEDIANAME` 및 `MEDIADESCRIPTION`을 사용하여 미디어 헤더를 생성합니다.|
 |SKIP|볼륨에 유효한 미디어 헤더가 포함되어 있으면 기존 백업 세트를 모두 유지하면서 백업 세트를 추가합니다.|볼륨에 유효한<sup>2</sup> 미디어 헤더가 포함되어 있으면 미디어 헤더만 유지하며 미디어의 모든 백업 세트를 덮어씁니다.<br /> 미디어가 비어 있으면 지정된 `MEDIANAME` 및 `MEDIADESCRIPTION`을 사용하여 미디어 헤더를 생성합니다.|
@@ -929,9 +936,17 @@ WHERE r.command LIKE 'BACKUP%'
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />관리되는 인스턴스 \*_** &nbsp;|[Analytics Platform<br />System(PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+:::row:::
+    :::column:::
+        [SQL Server](backup-transact-sql.md?view=sql-server-2016)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database<br />관리되는 인스턴스 \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System(PDW)](backup-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -1111,9 +1126,17 @@ WITH STATS = 5, COPY_ONLY;
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL Database<br />관리되는 인스턴스](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Analytics<br />Platform System(PDW) \*_** &nbsp;|
+:::row:::
+    :::column:::
+        [SQL Server](backup-transact-sql.md?view=sql-server-2016)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />관리되는 인스턴스](backup-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        **_\* Analytics<br />Platform System(PDW) \*_** &nbsp;
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 

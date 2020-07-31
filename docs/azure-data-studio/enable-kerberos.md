@@ -1,6 +1,6 @@
 ---
 title: Windows 인증을 사용하여 SQL Server에 연결(Kerberos)
-description: Kerberos에서 Azure Data Studio에 대해 Active Directory 인증을 사용할 수 있도록 하는 방법을 알아봅니다.
+description: Microsoft Kerberos 통합 인증을 사용하여 Azure Data Studio를 SQL Server에 연결하는 방법을 알아봅니다.
 ms.prod: azure-data-studio
 ms.technology: ''
 author: markingmyname
@@ -9,12 +9,12 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: c2e6b303217d420d439d510fc3fc24886657684b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 325d066ec88045380c45dc2784e6766a4f549757
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774664"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411159"
 ---
 # <a name="connect-azure-data-studio-to-your-sql-server-using-windows-authentication---kerberos"></a>Windows 인증을 사용하여 Azure Data Studio를 SQL Server에 연결 - Kerberos
 

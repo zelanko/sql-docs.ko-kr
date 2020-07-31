@@ -1,5 +1,6 @@
 ---
 title: 저장 프로시저 속성(일반 페이지) | Microsoft 문서
+description: 저장 속성(일반 페이지)을 사용하여 저장 프로시저에 관한 읽기 전용 정보를 보는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 8ee433b6-3931-47e8-b1cf-332806f71161
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc9324aaf4b0acdc0eb15000a4bd07f5c4d7fdd5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e9bb7b2bdfda8ff783db835adf4a87b0650d08d9
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85997875"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87331074"
 ---
 # <a name="stored-procedure-properties-general-page"></a>저장 프로시저 속성(일반 페이지)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

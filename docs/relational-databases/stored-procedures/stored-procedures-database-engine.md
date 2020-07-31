@@ -1,5 +1,6 @@
 ---
 title: 저장 프로시저(데이터베이스 엔진) | Microsoft 문서
+description: SQL Server의 저장 프로시저는 하나 이상의 Transact-SQL 문 그룹이거나 .NET Framework 공용 런타임 언어 메서드에 대한 참조라는 사실을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73243b7be6587b1e811ac040c5977207748b3889
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 68fbf67a8ff58c4f768c56a84e45c11fd4480c05
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003106"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332230"
 ---
 # <a name="stored-procedures-database-engine"></a>저장 프로시저(데이터베이스 엔진)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -79,9 +80,8 @@ ms.locfileid: "86003106"
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|||  
-|-|-|  
-|**태스크 설명**|**항목**|  
+| 태스크 설명 | 항목 |
+| ---------------- | ----- |
 |저장 프로시저를 만드는 방법에 대해 설명합니다.|[저장 프로시저 만들기](../../relational-databases/stored-procedures/create-a-stored-procedure.md)|  
 |저장 프로시저를 수정하는 방법에 대해 설명합니다.|[저장 프로시저 수정](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)|  
 |저장 프로시저를 삭제하는 방법에 대해 설명합니다.|[저장 프로시저 삭제](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)|  

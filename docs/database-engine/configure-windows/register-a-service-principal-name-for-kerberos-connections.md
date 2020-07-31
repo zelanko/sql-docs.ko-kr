@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b56afed2447f21f6595bec39873d4298b4762027
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4618c69eb24901580118a6fc6b4119689f1e9663
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651752"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362673"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Kerberos 연결의 서비스 사용자 이름 등록
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,9 +94,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
     > [!NOTE]
     > 새로운 SPN 형식에는 포트 번호가 필요하지 않습니다. 따라서 포트 번호를 사용하지 않는 다중 포트 서버 또는 프로토콜이 Kerberos 인증을 사용할 수 있습니다.  
    
-|||  
+|SPN 형식|Description|  
 |-|-|  
-|MSSQLSvc/\<FQDN>:<port>|TCP가 사용될 때 공급자가 생성하는 기본 SPN입니다. \<port>는 TCP 포트 번호입니다.|  
+|MSSQLSvc/\<FQDN>:\<port>|TCP가 사용될 때 공급자가 생성하는 기본 SPN입니다. \<port>는 TCP 포트 번호입니다.|  
 |MSSQLSvc/\<FQDN>|TCP 이외의 프로토콜이 사용될 때 기본 인스턴스에 대해 공급자가 생성하는 기본 SPN입니다. \<FQDN>은 정규화된 도메인 이름입니다.|  
 |MSSQLSvc/\<FQDN>:\<instancename>|TCP 이외의 프로토콜이 사용될 때 명명된 인스턴스에 대해 공급자가 생성하는 기본 SPN입니다. \<instancename>은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|  
 

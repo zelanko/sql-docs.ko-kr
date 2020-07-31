@@ -1,6 +1,6 @@
 ---
 title: 재사용 가능한 코드 조각 만들기
-description: Azure Data Studio에서 SQL 코드 조각을 만들고 사용하는 방법 알아보기
+description: 데이터베이스 및 데이터베이스 개체를 쉽게 만들 수 있도록 해 주는 Azure Data Studio SQL 코드 조각을 만들고 사용하는 방법을 알아봅니다.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8e2c6883840513fb9f09f8dc58080d36402bdf9f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8ef725a83a0800dbe5027e4d76bc8f7f51f7f3b
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774691"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411169"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-azure-data-studio"></a>Azure Data Studio에서 코드 조각을 만들고 사용하여 T-SQL(Transact-SQL) 스크립트를 빠르게 만들 수 있습니다.
 

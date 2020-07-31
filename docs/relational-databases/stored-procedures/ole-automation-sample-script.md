@@ -1,5 +1,6 @@
 ---
 title: OLE 자동화 예제 스크립트 | Microsoft 문서
+description: OLE 자동화 저장 프로시저를 사용하여 SQL-DMO SQLServer 개체를 만들고 사용하는 Transact-SQL 문 일괄 처리의 예가 사용하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: e59f75a9-ed41-4f12-888e-ffc57f9b3882
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab7633bf3bc321a82b44f3ac5373563adb7dd64c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 41dfe839f76f860a3909b38cf0302c84050e087a
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000936"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332557"
 ---
 # <a name="ole-automation-sample-script"></a>OLE 자동화 예제 스크립트
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

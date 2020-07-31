@@ -1,6 +1,6 @@
 ---
 title: Azure Data Studio FAQ
-description: Azure Data Studio에 대한 FAQ(질문과 대답)입니다.
+description: Azure Data Studio의 기능, Azure Data Studio를 사용해야 하는 사용자, Azure Data Studio의 비용과 같은 자주 묻는 질문을 살펴봅니다.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: dfcab918073fedd80def91d3556e15f632a62edc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 123618a84b07aa2215a2666f9d427f669247c5d7
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774614"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411099"
 ---
 # <a name="azure-data-studio-faq"></a>Azure Data Studio FAQ
 
@@ -80,14 +80,14 @@ Azure Data Studio 및 해당 데이터 공급자용 소스 코드는 GitHub에�
 
 |기능|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Azure 로그인|예|예|
+|Azure 로그인|yes|yes|
 |대시보드|예| |
 |확장|예| |
 |통합 터미널|예||
-|개체 탐색기|예|예|
-|개체 스크립팅|예|예|
+|개체 탐색기|yes|yes|
+|개체 스크립팅|yes|yes|
 |프로젝트 시스템|예||
-|테이블에서 선택|예|예|
+|테이블에서 선택|yes|yes|
 |원본 코드 제어|예||
 |작업창|예||
 |테마|예||
@@ -104,8 +104,8 @@ Azure Data Studio 및 해당 데이터 공급자용 소스 코드는 GitHub에�
 |:---|:---|:---|
 |차트 뷰어|예||
 |CSV, JSON, XLSX로 결과 내보내기|예||
-|IntelliSense|예|예|
-|코드 조각|예|예|
+|IntelliSense|yes|yes|
+|코드 조각|yes|yes|
 |플랜 표시|미리 보기|예|
 |클라이언트 통계||예|
 |활성 쿼리 통계||예|
@@ -120,7 +120,7 @@ Azure Data Studio 및 해당 데이터 공급자용 소스 코드는 GitHub에�
 
 |기능|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Windows|예|예|
+|Windows|yes|yes|
 |macOS|예||
 |Linux|예||
 
@@ -136,7 +136,7 @@ Azure Data Studio 및 해당 데이터 공급자용 소스 코드는 GitHub에�
 
 |기능|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|백업/복원|예|예|
+|백업/복원|yes|yes|
 |플랫 파일 가져오기|미리 보기|예|
 |SQL 에이전트|미리 보기|예|
 |SQL 프로파일러|미리 보기|예|

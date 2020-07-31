@@ -1,6 +1,6 @@
 ---
 title: 릴리스 정보
-description: Azure Data Studio 릴리스 정보
+description: 이 문서에는 2017년 11월부터 현재까지의 Azure Data Studio 릴리스에 대한 릴리스 정보가 안내되어 있습니다. 요약된 문제 중 다수에 추가 세부 정보로 연결되는 링크가 있습니다.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 07/17/2020
-ms.openlocfilehash: 5acbadb8d019b6d7d468f756bd25b70d890251c8
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: b064c24ff7717fc5a03ee1413b1e85fbb71530dc
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458888"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411264"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio의 릴리스 정보
 

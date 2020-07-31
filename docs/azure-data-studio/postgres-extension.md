@@ -1,6 +1,6 @@
 ---
 title: PostgreSQL 확장(미리 보기)
-description: Azure Data Studio용 PostgreSQL 확장(미리 보기)
+description: Postgres 데이터베이스에 연결하고, 쿼리하고, 데이터베이스를 개발할 수 있도록 지원하는 Azure Data Studio PostgreSQL 확장을 설치하는 방법을 알아봅니다.
 ms.custom: seodec18
 ms.date: 03/19/2019
 ms.reviewer: alayu, maghan, sstein
@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: conceptual
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: 5c5c12a45ee49456ff0b4742e258ee5ad2936600
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a273850f64168caeb48304606e50703ba8fc54f4
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735288"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411329"
 ---
 # <a name="postgresql-extension-preview"></a>PostgreSQL 확장(미리 보기)
 

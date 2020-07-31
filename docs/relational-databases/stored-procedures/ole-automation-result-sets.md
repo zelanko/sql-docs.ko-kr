@@ -1,5 +1,6 @@
 ---
 title: OLE 자동화 결과 집합 | Microsoft 문서
+description: OLE 자동화 속성 또는 메서드에서 1차원 또는 2차원 배열로 데이터를 반환하면 해당 배열은 클라이언트에 결과 집합으로 반환된다는 사실을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: b2f99e33-2303-427c-94b9-9d55f8e2a6ab
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b11a58d6b5b838fc5add9f8303be0758a6ce7c31
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8e3498ed53137443b647e2d1e93fbec5c7d49ef5
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000953"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332601"
 ---
 # <a name="ole-automation-result-sets"></a>OLE 자동화 결과 집합
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,9 +37,8 @@ ms.locfileid: "86000953"
   
  하나의 열에 있는 모든 데이터 값이 같은 데이터 형식을 공유하는 경우에는 해당 데이터 형식이 전체 열에 대해 사용됩니다. 한 열의 여러 데이터 값이 다른 데이터 형식을 사용하는 경우에는 다음 표를 기준으로 전체 열의 데이터 형식이 선택됩니다. 다음 표를 사용하려면 왼쪽 행 축에 나열된 데이터 형식 중 하나를 찾은 다음 두 번째 데이터 형식으로 위쪽 열 축에 나열된 데이터 형식을 찾습니다. 행과 열이 교차하는 위치에 결과 집합 열의 데이터 형식이 설명되어 있습니다.  
   
-||||||||  
-|-|-|-|-|-|-|-|  
-||**int**|**float**|**money**|**datetime**|**varchar**|**nvarchar**|  
+|   | **int** | **float** | **money** | **datetime** | **varchar** | **nvarchar** |
+| - | ------- | --------- | --------- | ------------ | ----------- | ------------ |
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**money**|**money**|**money**|**money**|**varchar**|**varchar**|**nvarchar**|  

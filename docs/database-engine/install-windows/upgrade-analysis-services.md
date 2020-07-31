@@ -21,12 +21,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 72cba47c520749a2e78ae529d941b12ddcccf105
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 61b67a70b3193763a46a7aa99783397ee57d0e92
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900266"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362625"
 ---
 # <a name="upgrade-analysis-services"></a>Analysis Services 업그레이드
 
@@ -77,7 +77,7 @@ ms.locfileid: "85900266"
   
  배경 지식을 제공할 목적으로 다음 표에 호환성 수준이 요약되어 있지만, 각 수준에서 제공하는 내용을 정확하게 이해하려면 세부 문서를 검토해야 합니다.  
   
-||||  
+|데이터베이스 모델|호환성 수준|호환되는 버전|  
 |-|-|-|  
 |테이블 형식|1400|SQL Server 2017|
 |테이블 형식|1200|SQL Server 2016|  

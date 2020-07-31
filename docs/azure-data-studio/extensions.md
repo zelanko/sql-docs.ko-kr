@@ -1,6 +1,6 @@
 ---
 title: 확장 추가
-description: 확장 Marketplace에서 Azure Data Studio로 확장 추가
+description: Microsoft 및 타사에서 제공하는 확장을 선택하고 설치하여 Azure Data Studio에 기능을 추가하는 방법을 알아봅니다.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 10/03/2019
-ms.openlocfilehash: d049b80197fdd50e3f7da5a449c35e092366fa51
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: eb6578f69ab9c0ded637ef9762ea50cfd18a25bb
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483676"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411119"
 ---
 # <a name="extend-the-functionality-of-azure-data-studio"></a>Azure Data Studio의 기능 확장
 

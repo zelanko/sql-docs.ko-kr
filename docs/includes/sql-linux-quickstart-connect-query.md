@@ -106,8 +106,8 @@ Linux에 SQL Server를 설치한 후에는 프로덕션 시나리오에 대한 �
 
 **sqlcmd** 외에도 다음과 같은 플랫폼 간 도구를 사용하여 SQL Server를 관리할 수 있습니다.
 
-|||
-|---|---|
+| 도구 | 설명 |
+| ---- | ----------- |
 | [Azure Data Studio](../azure-data-studio/index.yml) | 플랫폼 간 GUI 데이터베이스 관리 유틸리티입니다. |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | mssql 확장을 사용하여 Transact-SQL 문을 실행하는 플랫폼 간 GUI 코드 편집기입니다. |
 | [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | cmdlet을 기준으로 하는 플랫폼 간 자동화 및 구성 도구입니다. |
@@ -129,12 +129,10 @@ Windows에서 실행하지만 Linux의 SQL Server에 연결하는 다른 도구�
 
 다른 설치 시나리오의 경우 다음 리소스를 참조하세요.
 
-|||
-|---|---|
-| [업그레이드](../linux/sql-server-linux-setup.md#upgrade) | Linux에서 SQL Server의 기존 설치를 업그레이드하는 방법 알아보기 |
-| [제거](../linux/sql-server-linux-setup.md#uninstall) | Linux에서 SQL Server 제거 |
-| [무인 설치](../linux/sql-server-linux-setup.md#unattended) | 확인 메시지를 표시하지 않고 설치를 스크립팅하는 방법을 알아봅니다. |
-| [오프라인 설치](../linux/sql-server-linux-setup.md#offline) | 오프라인 설치에 대한 패키지를 수동으로 다운로드하는 방법을 알아봅니다. |
+* [업그레이드](../linux/sql-server-linux-setup.md#upgrade): Linux에서 SQL Server의 기존 설치를 업그레이드하는 방법 알아보기
+* [제거](../linux/sql-server-linux-setup.md#uninstall): Linux에서 SQL Server 제거
+* [무인 설치](../linux/sql-server-linux-setup.md#unattended): 확인 메시지를 표시하지 않고 설치를 스크립팅하는 방법을 알아봅니다.
+* [오프라인 설치](../linux/sql-server-linux-setup.md#offline): 오프라인 설치에 대한 패키지를 수동으로 다운로드하는 방법을 알아봅니다.
 
 > [!TIP]
 > 질문과 대답은 [SQL Server on Linux FAQ](../linux/sql-server-linux-faq.md)를 참조하세요.

@@ -12,15 +12,16 @@ helpviewer_keywords:
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4b4786490fdf680125915fc69513290c3a8a4921
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: bc0c2453f8b9a2331a31ab917539bddeb1d31fa9
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914646"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411019"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>자습서: 인증서로 저장 프로시저 서명
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database SQL Managed Instance](../includes/applies-to-version/sql-asdb-asdbmi.md)]
 이 자습서에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 생성한 인증서를 사용하여 저장 프로시저에 서명하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
@@ -154,7 +155,7 @@ EXECUTE TestCreditRatingSP;
 GO  
 ```  
   
-다음 코드를 실행하여 `EXECUTE AS` 계정이 되도록 `TestCreditRatingUser` 문을 사용하고 저장 프로시저를 실행합니다. 이번에는 사용자 컨텍스트가 USER MAPPED TO CERTIFICATE 컨텍스트로 설정되어 있는 것을 확인할 수 있습니다.  
+다음 코드를 실행하여 `EXECUTE AS` 계정이 되도록 `TestCreditRatingUser` 문을 사용하고 저장 프로시저를 실행합니다. 이번에는 사용자 컨텍스트가 USER MAPPED TO CERTIFICATE 컨텍스트로 설정되어 있는 것을 확인할 수 있습니다. 이 옵션은 포함된 데이터베이스 또는 Azure SQL Database나 Azure Synapse Analytics에서 지원되지 않습니다.
   
 ```sql  
 EXECUTE AS LOGIN = 'TestCreditRatingUser';  

@@ -1,5 +1,6 @@
 ---
 title: 저장 프로시저 수정 | Microsoft 문서
+description: SQL Server Management Studio 또는 Transact-SQL을 사용하여 SQL Server 2019(15.x)에서 저장 프로시저를 수정하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 13396239-6100-48ce-aa34-461358d99c92
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40c56e38106212d4f1f7a7d099dfdbad48b322c6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f70272f01918af1d7cb91000e0ce15904b1e5518
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000976"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332622"
 ---
 # <a name="modify-a-stored-procedure"></a>저장 프로시저 수정
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

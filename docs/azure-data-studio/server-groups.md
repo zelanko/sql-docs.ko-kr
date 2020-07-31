@@ -1,6 +1,6 @@
 ---
 title: 서버 그룹
-description: Azure Data Studio의 서버 그룹에 대한 자세한 정보
+description: 서버 및 데이터베이스를 서버 그룹으로 그룹화하고 그룹에 색을 할당하는 방법을 알아봅니다. 서버를 올바른 그룹으로 끌어서 놓을 수 있습니다.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: dfdc9f3c80b61d65d164b8328122a4785b37ba54
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e2936b06376ff130f7bc4e8f3402850c6b2afbef
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758396"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411219"
 ---
 # <a name="server-groups-in-azure-data-studio"></a>Azure Data Studio의 서버 그룹
 

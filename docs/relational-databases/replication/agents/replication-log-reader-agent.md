@@ -17,12 +17,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 4570d85074e2d339162aefa681bc92d35c99f3bd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 09334d8eedab294de3015cdcaf0ac5b1c61c9239
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906389"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395013"
 ---
 # <a name="replication-log-reader-agent"></a>복제 로그 판독기 에이전트
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -93,10 +93,10 @@ logread [-?]
  **-DistributorPassword** _distributor_password_  
  배포자 암호입니다.  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ **-DistributorSecurityMode** [ **0**\| **1**]  
  배포자의 보안 모드를 지정합니다. 값 **0** 은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 모드(기본값)를 나타내며 값 **1** 은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 인증 모드를 나타냅니다.  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ **-EncryptionLevel** [ **0** \| **1** \| **2** ]  
  연결을 만들 때 로그 판독기 에이전트에서 사용하는 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안) 암호화의 수준입니다.  
   
 |EncryptionLevel 값|Description|  
@@ -113,7 +113,7 @@ logread [-?]
  **-ExtendedEventConfigFile** _configuration_path_and_file_name_  
  확장 이벤트 XML 구성 파일의 경로 및 파일 이름을 지정합니다. 확장 이벤트 구성 파일에서는 세션을 구성하고 추적 이벤트를 사용하도록 설정할 수 있습니다.  
   
- **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
+ **-HistoryVerboseLevel** [ **0**\| **1**\| **2**]  
  로그 판독기 작업을 수행하는 동안 기록에 추가되는 양을 지정합니다. **1**을 선택하여 기록 로깅이 성능에 주는 영향을 최소화할 수 있습니다.  
   
 |HistoryVerboseLevel 값|Description|  
@@ -142,12 +142,12 @@ logread [-?]
   
  원본에 사용할 수 있는 복제된 트랜잭션이 없는 경우 에이전트에서는 배포자에 트랜잭션 없음 메시지를 보고합니다. 이 옵션은 다른 트랜잭션 없음 메시지를 보고하기 전에 에이전트에서 기다리는 시간을 지정합니다. 에이전트에서는 이전에 복제된 트랜잭션을 처리한 후 원본에 사용할 수 있는 트랜잭션이 없는지 감지할 때 항상 트랜잭션 없음 메시지를 보고합니다. 기본값은 60초입니다.  
  
- **-MultiSubnetFailover** [**0**|**1**] MultiSubnetFailover 속성이 사용되는지 여부를 지정합니다. 애플리케이션이 다른 서브넷의 AG(AlwaysOn 가용성 그룹)에 연결 중인 경우 MultiSubnetFailover를 1(true)로 설정하면 (현재) 활성 서버를 더 신속하게 검색하여 연결할 수 있습니다.
+ **-MultiSubnetFailover** [**0**\|**1**] MultiSubnetFailover 속성이 사용되는지 여부를 지정합니다. 애플리케이션이 다른 서브넷의 AG(AlwaysOn 가용성 그룹)에 연결 중인 경우 MultiSubnetFailover를 1(true)로 설정하면 (현재) 활성 서버를 더 신속하게 검색하여 연결할 수 있습니다.
   
  **-Output** _output_path_and_file_name_  
  에이전트 출력 파일의 경로입니다. 파일 이름을 지정하지 않으면 출력이 콘솔로 전달됩니다. 지정된 파일 이름이 존재하면 출력이 파일에 추가됩니다.  
   
- **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
+ **-OutputVerboseLevel** [ **0**\| **1**\| **2** \| **3** \| **4** ]  
  출력이 자세해야 하는지 여부를 지정합니다.  
   
 |값|Description|  
@@ -172,7 +172,7 @@ logread [-?]
  **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  게시 데이터베이스와 함께 데이터베이스 미러링 세션에 참여하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 장애 조치 파트너 인스턴스를 지정합니다. 자세한 내용은 [데이터베이스 미러링 및 복제&#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)을 참조하세요.  
   
- **-PublisherSecurityMode** [ **0**| **1**]  
+ **-PublisherSecurityMode** [ **0**\| **1**]  
  게시자의 보안 모드를 지정합니다. 값 **0** 은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증(기본값)을 나타내며 값 **1** 은 Windows 인증 모드를 나타냅니다.  
   
  **-PublisherLogin** _publisher_login_  

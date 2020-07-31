@@ -18,16 +18,16 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 5d2b3040c53c2bbffb6fd073fa9f385f78e28798
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 6d18996610899fd348b179495ab78af2e2717f83
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091677"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396012"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY(Transact-SQL)(미리 보기)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 이 문서에서는 외부 스토리지 계정에서 로드하기 위해 Azure SQL Data Warehouse의 COPY 문을 사용하는 방법을 설명합니다. COPY 문은 SQL Data Warehouse에 대한 처리량이 높은 데이터 수집을 위한 가장 뛰어난 유연성을 제공합니다. 다음 기능에 COPY를 사용합니다.
 
@@ -149,7 +149,7 @@ AAD 또는 퍼블릭 스토리지 계정을 사용하여 인증할 때는 자격
 - SAS(공유 액세스 서명)를 사용하여 인증
   
   - *IDENTITY: ‘공유 액세스 서명’의 값이 있는 상수*
-  - *SECRET:* [‘공유 액세스 서명’](/azure/storage/common/storage-sas-overview)은 ‘스토리지 계정의 리소스에 대한 위임된 액세스 권한을 제공합니다.’ 
+  - *SECRET:* [‘공유 액세스 서명’](/azure/storage/common/storage-sas-overview)은 ‘스토리지 계정의 리소스에 대한 위임된 액세스 권한을 제공합니다.’
   -  필요한 최소 권한: 읽기 및 목록
   
 - [*서비스 사용자*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)로 인증
@@ -188,7 +188,7 @@ ERRORFILE에 정의된 스토리지 계정의 전체 경로가 있는 경우 ERR
   
 - SAS(공유 액세스 서명)를 사용하여 인증
   - *IDENTITY: ‘공유 액세스 서명’의 값이 있는 상수*
-  - *SECRET:* [‘공유 액세스 서명’](/azure/storage/common/storage-sas-overview)은 ‘스토리지 계정의 리소스에 대한 위임된 액세스 권한을 제공합니다.’ 
+  - *SECRET:* [‘공유 액세스 서명’](/azure/storage/common/storage-sas-overview)은 ‘스토리지 계정의 리소스에 대한 위임된 액세스 권한을 제공합니다.’
   - 필요한 최소 권한: 읽기, 나열, 쓰기, 만들기, 삭제
   
 - [*서비스 사용자*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)로 인증
@@ -217,7 +217,7 @@ ERRORFILE에 정의된 스토리지 계정의 전체 경로가 있는 경우 ERR
 *MAXERRORS = max_errors*</br>
 *MAXERRORS*는 COPY 작업이 취소되기 전에 로드에서 허용되는 최대 거부 행 수를 지정합니다. COPY 작업으로 가져올 수 없는 각 행은 무시되고 하나의 오류로 계산됩니다. max_errors를 지정하지 않으면 기본값은 0입니다.
 
-*COMPRESSION = { 'DefaultCodec '| ’Snappy’ | ‘GZIP’ | ‘NONE’}*</br>
+*COMPRESSION = { 'DefaultCodec '\| ’Snappy’ \| ‘GZIP’ \| ‘NONE’}*</br>
 *COMPRESSION*은 선택 사항이며 외부 데이터에 대한 데이터 압축 메서드를 지정합니다.
 
 - CSV에서 GZIP 지원
@@ -250,7 +250,7 @@ COPY 명령은 \n(줄 바꿈)을 지정할 때 \r 문자를 접두사하여 \r\n
 *FIRSTROW  = First_row_int*</br>
 *FIRSTROW*는 CSV에 적용되며 COPY 명령의 모든 파일에서 먼저 읽을 행 번호를 지정합니다. 값은 1부터 시작되며 이것이 기본값입니다. 값이 2로 설정되면 데이터를 로드할 때 모든 파일의 첫 행(헤더 행)을 건너뜁니다. 행 종결자의 존재에 따라 행을 건너뜁니다.
 
-*DATEFORMAT = { ‘mdy’ | ‘dmy’ | ‘ymd’ | ‘ydm’ | ‘myd’ | ‘dym’ }*</br>
+*DATEFORMAT = { ‘mdy’ \| ‘dmy’ \| ‘ymd’ \| ‘ydm’ \| ‘myd’ \| ‘dym’ }*</br>
 DATEFORMAT은 CSV에만 적용되며 SQL Server 날짜 형식에 대한 날짜 매핑의 날짜 형식을 지정합니다. 모든 Transact-SQL 날짜/시간 데이터 형식 및 함수에 대한 개요는 [날짜/시간 데이터 형식 및 함수(Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md?view=sql-server-ver15)를 참조하세요. COPY 명령 내의 DATEFORMAT은 [세션 수준에서 구성된 DATEFORMAT](set-dateformat-transact-sql.md?view=sql-server-ver15)보다 우선합니다.
 
 *ENCODING = ‘UTF8’ | ‘UTF16’*</br>

@@ -2,7 +2,7 @@
 title: 가용성 그룹에 대한 드라이버 및 클라이언트 연결 지원
 description: '이 항목에서는 클라이언트 구성 및 설정에 대한 사전 요구 사항, 제한 사항 및 권장 사항을 비롯하여 Always On 가용성 그룹에 클라이언트를 연결할 때 고려해야 할 사항에 대해 설명합니다. '
 ms.custom: seodec18
-ms.date: 04/26/2018
+ms.date: 07/28/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bb97e94e55f270331ff99909b5ec7dca6f8683e3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 691195b4a44065a95cf97d073d5bf52d2caa19f8
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901035"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395072"
 ---
 # <a name="driver-and-client-connectivity-support-for-availability-groups"></a>가용성 그룹에 대한 드라이버 및 클라이언트 연결 지원
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -40,8 +40,9 @@ ms.locfileid: "85901035"
 |SQL Native Client 11.0 OLEDB|예|yes|yes|예|예|  
 |연결 패치가 포함된 .NET Framework 4.0이 있는 ADO.NET*|yes|yes|yes|yes|yes|  
 |연결 패치가 포함된 .NET Framework 3.5 SP1이 있는 ADO.NET**|yes|yes|yes|yes|yes|  
-|SQL Server용 Microsoft JDBC Driver 4.0|yes|yes|yes|yes|yes| 
-|SQL Server용 Microsoft OLE DB 드라이버|yes|yes|yes|yes|yes| 
+|[Microsoft ODBC Driver 13.1+ for SQL Server](../../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)|yes|yes|yes|yes|yes|
+|[Microsoft JDBC Driver 4.0+ for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md)|yes|yes|yes|yes|yes| 
+|[SQL Server용 Microsoft OLE DB 드라이버](../../../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md)|예|예|예|예|예| 
   
  *.NET Framework 4.0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211)이 있는 ADO.NET용 연결 패치를 다운로드합니다.  
   

@@ -1,5 +1,6 @@
 ---
 title: 저장 프로시저 이름 바꾸기 | Microsoft 문서
+description: SQL Server Management Studio 또는 Transact-SQL을 사용하여 SQL Server 2019(15.x)에서 저장 프로시저의 이름을 바꾸는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 07/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 5d2e4c68-7e0b-4405-8919-f5b203e46770
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71d0fefec2a0b0ba867b7c96a0d8b852884e08d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ddf1685f89d24c5b1b6dec4956c3e0c7542ac236
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767499"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332533"
 ---
 # <a name="rename-a-stored-procedure"></a>저장 프로시저 이름 바꾸기
 

@@ -1,6 +1,6 @@
 ---
 title: Azure Data Studio 다운로드 및 설치
-description: Windows, macOS, 또는 Linux용 Azure Data Studio 다운로드 및 설치
+description: Windows, macOS, 또는 Linux용 Azure Data Studio를 다운로드 및 설치합니다. 이 문서에서는 릴리스 날짜, 버전 번호, 시스템 요구 사항 및 다운로드 링크를 제공합니다.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 7/17/2020
-ms.openlocfilehash: 367711588e9a58358abff972a8f8637aefdf013a
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: a5f16cc15fc44a1b07b11159ac0accc6a47afc60
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86459035"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411179"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Azure Data Studio 다운로드 및 설치
 

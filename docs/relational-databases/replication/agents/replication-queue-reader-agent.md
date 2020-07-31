@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f2474ed82498dae30b96178f0fcf962f3b1f0767
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 84872a5acaacf6c969e4dea367f0e64a2588d26a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897875"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395000"
 ---
 # <a name="replication-queue-reader-agent"></a>복제 큐 판독기 에이전트
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -75,10 +75,10 @@ qrdrsvc [-?]
  **-DistributorPassword** _distributor_password_  
  배포자 암호입니다.  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ **-DistributorSecurityMode** [ **0**\| **1**]  
  배포자의 보안 모드를 지정합니다. 값 **0** 은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 모드(기본값)를 나타내며 값 **1** 은 Windows 인증 모드를 나타냅니다.  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ **-EncryptionLevel** [ **0** \| **1** \| **2** ]  
  연결을 만들 때 큐 판독기 에이전트에서 사용하는 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안) 암호화의 수준입니다.  
   
 |EncryptionLevel 값|Description|  
@@ -92,7 +92,7 @@ qrdrsvc [-?]
   
  자세한 내용은 [복제 보안 설정 보기 및 수정](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)을 참조하세요.  
   
- **-HistoryVerboseLevel** [ **0**| **1**| **2**| **3**]  
+ **-HistoryVerboseLevel** [ **0**\| **1**\| **2**\| **3**]  
  큐 판독기 작업을 수행하는 동안 기록에 추가되는 양을 지정합니다. **1**을 선택하여 성능에서 기록 로깅의 영향을 최소화할 수 있습니다.  
   
 |HistoryVerboseLevel 값|Description|  
@@ -108,7 +108,7 @@ qrdrsvc [-?]
  **-Output** _output_path_and_file_name_  
  에이전트 출력 파일의 경로입니다. 파일 이름을 지정하지 않으면 출력이 콘솔로 전달됩니다. 지정된 파일 이름이 존재하면 출력이 파일에 추가됩니다.  
   
- **-OutputVerboseLevel** [ **0**| **1**| **2**]  
+ **-OutputVerboseLevel** [ **0**\| **1**\| **2**]  
  출력이 자세해야 하는지 여부를 지정합니다. 정보 표시 수준이 **0**이면 오류 메시지만 출력됩니다. 정보 표시 수준이 **1**이면 모든 진행률 보고 메시지가 출력됩니다. 정보 표시 수준이 **2** (기본값)이면 디버깅에 유용한 오류 메시지와 진행률 보고 메시지가 모두 출력됩니다.  
   
  **-PollingInterval** _polling_interval_  
@@ -123,7 +123,7 @@ qrdrsvc [-?]
  **-QueryTimeOut** _query_time_out_seconds_  
  쿼리 시간이 초과될 때까지 걸리는 시간(초)입니다. 기본값은 1800초입니다.  
   
- **-ResolverState** [ **1**| **2**| **3**]  
+ **-ResolverState** [ **1**\| **2**\| **3**]  
  지연 업데이트 충돌의 해결 방법을 지정합니다. 값 **1** 은 충돌 시 게시자의 내용이 적용되고, 현재 충돌하는 지연 트랜잭션이 게시자 및 원래 업데이트 구독자에서 다시 롤백되며, 이후 지연 트랜잭션의 처리가 계속됨을 나타냅니다. 값 **2** 는 충돌 시 구독자의 내용이 적용되고 지연 트랜잭션이 게시자의 값을 재정의함을 나타냅니다. 값 **3** 은 충돌이 발생할 경우 구독자가 다시 초기화되고, 게시자의 내용이 적용되고, 이후 지연 트랜잭션의 처리가 종료되며, 구독이 다시 초기화됨을 나타냅니다. 기본 설정은 트랜잭션 게시의 경우 **1** 이고 스냅샷 게시의 경우 **3** 입니다.  
   
 ## <a name="remarks"></a>설명  

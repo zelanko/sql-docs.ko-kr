@@ -20,15 +20,15 @@ ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5471791b3f75130bc2fb262a05683aa953f7f3a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1f7233d92e3b6a568d64f0b23817838d65dcbc74
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000442"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396282"
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 16바이트 GUID입니다.
   

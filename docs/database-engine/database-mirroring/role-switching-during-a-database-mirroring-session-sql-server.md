@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 624b42ae39cddd56c2401db346c497e6914fe7a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3aefc181c1dc42e939579dcdce274a27086dd1ed
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735158"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362238"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션 중 역할 전환(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,11 +67,11 @@ ms.locfileid: "85735158"
   
  다음 표에서는 각 운영 모드에서 지원되는 장애 조치 유형을 요약합니다.  
   
-||고성능|미러링 모니터 서버가 없는 보안 우선 모드|미러링 모니터 서버가 있는 보안 우선 모드|  
+|장애 조치(failover)의 형태|고성능|미러링 모니터 서버가 없는 보안 우선 모드|미러링 모니터 서버가 있는 보안 우선 모드|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
-|자동 장애 조치(automatic failover)|예|예|예|  
+|자동 장애 조치(automatic failover)|예|아니요|예|  
 |수동 장애 조치(failover)|예|예|예|  
-|강제 서비스|예|예|예|  
+|강제 서비스|예|yes|예|  
   
  역할 전환 후 모든 데이터베이스 사용자가 새로운 주 데이터베이스에 액세스할 수 있게 하려면 특정 메타데이터가 두 파트너에 모두 있어야 합니다. 또한 데이터베이스가 정기적인 일정에 따라 계속 백업되게 하려면 새로운 주 서버에서 백업 작업을 만들어야 합니다. 자세한 내용은 [역할 전환 후 로그인 및 작업 관리&#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)를 참조하세요.  
   

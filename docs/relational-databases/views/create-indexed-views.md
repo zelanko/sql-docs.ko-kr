@@ -18,12 +18,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08e432e0470074a5861c070d26110478353817b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 03cff187ee251278274af6f7c97e4598235fde38
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727067"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363452"
 ---
 # <a name="create-indexed-views"></a>인덱싱된 뷰 만들기
 
@@ -107,10 +107,14 @@ SET 옵션 및 결정적 함수 요구 사항 외에 다음 요구 사항을 충
 
 - 뷰는 `WITH SCHEMABINDING` 옵션을 사용하여 만들어야 합니다.
 - 뷰는 뷰와 동일한 데이터베이스의 기본 테이블만 참조해야 합니다. 뷰는 다른 뷰를 참조할 수 없습니다.
+
+- `GROUP BY`가 있는 경우 VIEW 정의는 `COUNT_BIG(*)`을 포함해야 하며 `HAVING`은 포함할 수 없습니다. 이러한 `GROUP BY` 제약 조건은 인덱싱된 뷰 정의에만 적용됩니다. 쿼리는 이러한 `GROUP BY` 제약 조건을 충족하지 않는 경우에도 실행 계획에 인덱싱된 뷰를 사용할 수 있습니다.
+- 뷰 정의에 `GROUP BY` 절이 들어 있으면 고유 클러스터형 인덱스의 키는 `GROUP BY` 절에 지정된 열만 참조할 수 있습니다.
+
 - 뷰 정의의 SELECT 문에는 다음 Transact-SQL 요소가 포함되지 않아야 합니다.
 
-   ||||
-   |-|-|-|
+   | Transact-SQL 요소 | (계속) | (계속) |
+   | --------------------- | ----------- | ----------- |
    |`COUNT`|ROWSET 함수(`OPENDATASOURCE`, `OPENQUERY`, `OPENROWSET` 및 `OPENXML`)|`OUTER` 조인(`LEFT`, `RIGHT` 또는 `FULL`)|
    |파생 테이블(`FROM` 절에서 `SELECT` 문을 지정하여 정의)|자체 조인|`SELECT *` 또는`SELECT <table_name>.*`을 사용하여 열 지정|
    |`DISTINCT`|`STDEV`, `STDEVP`, `VAR`, `VARP` 또는 `AVG`|CTE(공통 테이블 식)|
@@ -121,15 +125,11 @@ SET 옵션 및 결정적 함수 요구 사항 외에 다음 요구 사항을 충
    |테이블 변수|`OUTER APPLY` 또는 `CROSS APPLY`|`PIVOT`, `UNPIVOT`|
    |스파스 열 집합|인라인(TVF) 또는 다중 문 테이블 반환 함수(MSTVF)|`OFFSET`|
    |`CHECKSUM_AGG`|||
-   |&nbsp;|&nbsp;|&nbsp;|
-  
-    <sup>1</sup>인덱싱된 뷰는 **float** 열을 포함할 수 있지만 이러한 열은 클러스터형 인덱스 키에 포함될 수 없습니다.
 
-- `GROUP BY`가 있는 경우 VIEW 정의는 `COUNT_BIG(*)`을 포함해야 하며 `HAVING`은 포함할 수 없습니다. 이러한 `GROUP BY` 제약 조건은 인덱싱된 뷰 정의에만 적용됩니다. 쿼리는 이러한 `GROUP BY` 제약 조건을 충족하지 않는 경우에도 실행 계획에 인덱싱된 뷰를 사용할 수 있습니다.
-- 뷰 정의에 `GROUP BY` 절이 들어 있으면 고유 클러스터형 인덱스의 키는 `GROUP BY` 절에 지정된 열만 참조할 수 있습니다.
+   <sup>1</sup>인덱싱된 뷰는 **float** 열을 포함할 수 있지만 이러한 열은 클러스터형 인덱스 키에 포함될 수 없습니다.
 
-> [!IMPORTANT]
-> 인덱싱된 뷰는 임시 쿼리를 기반으로 사용할 수 없습니다(`FOR SYSTEM_TIME` 절을 사용하는 쿼리).
+   > [!IMPORTANT]
+   > 인덱싱된 뷰는 임시 쿼리를 기반으로 사용할 수 없습니다(`FOR SYSTEM_TIME` 절을 사용하는 쿼리).
 
 ### <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항
 

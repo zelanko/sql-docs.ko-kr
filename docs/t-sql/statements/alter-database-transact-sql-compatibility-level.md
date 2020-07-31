@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 호환성 수준(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c690545847979fcd50f2de23aca201eed067d5a
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: b17da534ff8b1f5864589882ca924ebd0379bc71
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86302052"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332019"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE(Transact-SQL) 호환성 수준
 
@@ -52,7 +52,7 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 
 *database_name* 수정할 데이터베이스의 이름입니다.
 
-COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 } 데이터베이스가 호환되도록 설정할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전입니다. 다음 호환성 수준 값을 구성할 수 있습니다(모든 버전이 위의 나열된 호환성 수준을 모두 지원하지는 않음).
+COMPATIBILITY_LEVEL { 150 \| 140 \| 130 \| 120 \| 110 \| 100 \| 90 \| 80 } 데이터베이스가 호환되도록 설정할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전입니다. 다음 호환성 수준 값을 구성할 수 있습니다(모든 버전이 위의 나열된 호환성 수준을 모두 지원하지는 않음).
 
 <a name="supported-dbcompats"></a>
 
@@ -136,7 +136,7 @@ SELECT name, compatibility_level FROM sys.databases;
 > 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 도입된 **지원되지 않는** 기능은 호환성 수준으로 보호되지 **않습니다**. 이는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 제거된 기능을 나타냅니다.
 > 예를 들어 `FASTFIRSTROW` 힌트는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 더 이상 사용되지 않으며 `OPTION (FAST n )` 힌트로 대체되었습니다. 데이터베이스 호환성 수준을 110으로 설정하면 지원되지 않는 힌트를 복원하지 않습니다.  
 >  
-> 지원되지 않는 기능에 대한 자세한 내용은 [SQL Server 2016에서 지원되지 않는 데이터베이스 엔진 기능](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [SQL Server 2014에서 지원되지 않는 데이터베이스 엔진 기능](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014) 및 [SQL Server 2012에서 지원되지 않는 데이터베이스 엔진 기능](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali)을 참조하세요.    
+> 지원되지 않는 기능에 대한 자세한 내용은 [SQL Server 2016에서 지원되지 않는 데이터베이스 엔진 기능](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md) 및 [SQL Server 2014에서 지원되지 않는 데이터베이스 엔진 기능](/sql/database-engine/discontinued-database-engine-functionality-in-sql-server)을 참조하세요.
 
 > [!IMPORTANT]
 > 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 도입된 **주요 변경 사항**은 호환성 수준으로 보호되지 **않을 수 있습니다**. 이는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 버전 간 동작 변경을 나타냅니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 동작은 일반적으로 호환성 수준으로 보호됩니다. 그러나 변경되거나 제거된 시스템 개체는 호환성 수준으로 보호되지 **않습니다**.
@@ -148,7 +148,7 @@ SELECT name, compatibility_level FROM sys.databases;
 > - 시스템 개체의 변경된 열 이름입니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 sys.dm_os_sys_info의 *single_pages_kb* 열 이름은 *pages_kb*로 변경되었습니다. 호환성 수준에 관계 없이 쿼리 `SELECT single_pages_kb FROM sys.dm_os_sys_info`는 오류 207(잘못된 열 이름)을 생성합니다.
 > - 제거된 시스템 개체입니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 `sp_dboption`이 제거되었습니다. 호환성 수준에 관계 없이 `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` 문은 오류 2812(저장된 프로시저 'sp_dboption'을 찾을 수 없음)를 생성합니다.
 >
-> 주요 변경 내용에 대한 자세한 내용은 [SQL Server 2017에서 데이터베이스 엔진 기능에 대한 주요 변경 내용](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [SQL Server 2016에서 데이터베이스 엔진 기능에 대한 주요 변경 내용](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [SQL Server 2014에서 데이터베이스 엔진 기능에 대한 주요 변경 내용](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014) 및 [SQL Server 2012에서 데이터베이스 엔진 기능에 대한 주요 변경 내용](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali)을 참조하세요.
+> 주요 변경 내용에 대한 자세한 내용은 [SQL Server 2017의 호환성이 손상되는 데이터베이스 엔진 변경 내용](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [SQL Server 2016의 호환성이 손상되는 데이터베이스 엔진 변경 내용](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md) 및 [SQL Server 2014의 호환성이 손상되는 데이터베이스 엔진 변경 내용](/sql/database-engine/discontinued-database-engine-functionality-in-sql-server)을 참조하세요.
 
 ## <a name="differences-between-compatibility-levels"></a>호환성 수준 간 차이
 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 경우 [이 표](#supported-dbcompats)에 표시된 것처럼 기본 호환성 수준은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 버전과 관련됩니다. 새 개발 작업의 경우 항상 최신 데이터베이스 호환성 수준에서 애플리케이션을 인증하도록 계획합니다.

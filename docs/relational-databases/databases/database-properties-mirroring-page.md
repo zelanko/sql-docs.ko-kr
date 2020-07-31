@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5324c46fb8a4eb67d2364ee3bcbd5e21674a5c7a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2be2bcf872af3be6caf8bb2b13af70347fcf1106
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630990"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87361447"
 ---
 # <a name="database-properties-mirroring-page"></a>데이터베이스 속성(미러링 페이지)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85630990"
   
  마법사가 성공적으로 완료되면 미러링이 이미 시작되었는지 여부에 따라 다른 동작이 수행됩니다.  
   
-|||  
+|미러링 상태|수행한 작업|  
 |-|-|  
 |미러링이 시작되지 않은 경우|속성 페이지는 해당 연결 정보를 캐시할 뿐만 아니라 미러 데이터베이스에 파트너 속성 집합이 있는지 여부를 나타내는 값을 캐시합니다.<br /><br /> 마법사 완료 시 기본 서버 네트워크 주소 및 운영 모드를 사용하여 데이터베이스 미러링을 시작하라는 메시지가 표시됩니다. 주소나 운영 모드를 변경해야 할 경우 **미러링 시작 안 함**을 클릭합니다.|  
 |미러링이 시작된 경우|마법사에서 미러링 모니터 서버를 변경한 경우 그에 따라 미러링 모니터 서버가 설정됩니다.|  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 98681c7ba908a43f2f4cc3e792f7f62b8a8ba2b7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9aec87c4b57016f862b671734a871f77bd84da15
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897499"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395058"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>장애 조치(Failover) 및 장애 조치(Failover) 모드(Always On 가용성 그룹)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -79,10 +79,10 @@ ms.locfileid: "85897499"
 ##  <a name="overview-of-failover"></a><a name="Overview"></a> 장애 조치(Failover) 개요  
  다음 표에서는 다양한 가용성 모드 및 장애 조치(Failover) 모드에서 지원되는 장애 조치(Failover) 형태를 요약합니다. 각 쌍에 대해 유효한 가용성 모드 및 장애 조치(Failover) 모드는 주 복제본 모드와 하나 이상의 보조 복제본 모드의교차로 결정됩니다.  
   
-||비동기-커밋 모드|수동 장애 조치(Failover) 모드를 사용하는 동기-커밋 모드|자동 장애 조치(Failover) 모드를 사용하는 동기-커밋 모드|  
-|-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|자동 장애 조치(automatic failover)|예|예|예|  
-|계획된 수동 장애 조치(Failover)|예|예|예|  
+|장애 조치(Failover)의 형식|비동기-커밋 모드|수동 장애 조치(Failover) 모드를 사용하는 동기-커밋 모드|자동 장애 조치(Failover) 모드를 사용하는 동기-커밋 모드|  
+|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
+|자동 장애 조치(automatic failover)|예|아니요|예|  
+|계획된 수동 장애 조치(Failover)|예|예|yes|  
 |강제 장애 조치(failover)|예|예|예 **&#42;**|  
   
  **&#42;** 동기화된 보조 복제본에 강제 장애 조치(Failover) 명령을 실행하면 보조 복제본은 수동 장애 조치(Failover)의 경우와 동일하게 작동합니다.  
@@ -259,7 +259,7 @@ ms.locfileid: "85897499"
 |보조 복제본의 가용성 모드|데이터베이스가 동기화되는지 여부|데이터가 손실될 가능성이 있는지 여부|  
 |--------------------------------------------|-------------------------------|----------------------------|  
 |Synchronous-commit|예|예|  
-|Synchronous-commit|예|예|  
+|Synchronous-commit|아니요|예|  
 |Asynchronous-commit|예|예|  
   
  보조 데이터베이스는 두 개의 복구 분기만 추적하므로 강제 장애 조치(Failover)를 여러 번 수행할 경우 이전 강제 장애 조치(Failover)와 데이터 동기화를 시작한 보조 데이터베이스는 재개하지 못할 수도 있습니다. 이 경우 재개할 수 없는 보조 데이터베이스를 올바른 시점으로 복원된 가용성 그룹에서 제거한 후 이 가용성 그룹에 다시 조인해야 합니다. 이 시나리오에서 상태 103인 오류 1408이 관찰될 수 있습니다(오류: 1408, 심각도: 16, 상태: 103). 여러 복구 분기 지점에 대해 복원을 수행할 수 없으므로 둘 이상의 강제 장애 조치(Failover) 수행한 후 로그 백업을 수행해야 합니다.  

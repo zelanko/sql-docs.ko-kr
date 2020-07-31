@@ -21,12 +21,12 @@ ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63c00456e36742d62074a65eb291dc19e23a2863
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 80b0606f38f50b067f706bc5dad4d094ea49a4b2
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85979535"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332042"
 ---
 # <a name="metadata-visibility-configuration"></a>메타데이터 표시 유형 구성
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,21 +43,43 @@ GO
   
 ## <a name="scope-and-impact-of-metadata-visibility-configuration"></a>메타데이터 표시 유형 범위 및 영향 구성  
  메타데이터 표시 유형 구성은 다음 보안 개체에만 적용됩니다.  
-  
-|||  
-|-|-|  
-|카탈로그 뷰|[!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 저장 프로시저|  
-|메타데이터를 제공하는 기본 제공 함수|정보 스키마 뷰|  
-|호환성 뷰|확장 속성|  
+
+:::row:::
+    :::column:::
+        카탈로그 뷰
+
+        메타데이터를 제공하는 기본 제공 함수
+
+        호환성 뷰
+    :::column-end:::
+    :::column:::
+         [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 저장 프로시저
+
+        정보 스키마 뷰
+
+        확장 속성
+    :::column-end:::
+:::row-end:::
   
  메타데이터 표시 유형 구성이 적용되지 않는 보안 개체는 다음과 같습니다.  
-  
-|||  
-|-|-|  
-|로그 전달 시스템 테이블|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 시스템 테이블|  
-|데이터베이스 유지 관리 계획 시스템 테이블|백업 시스템 테이블|  
-|복제 시스템 테이블|복제 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 **sp_help** 저장 프로시저|  
-  
+
+:::row:::
+    :::column:::
+        로그 전달 시스템 테이블
+
+        데이터베이스 유지 관리 계획 시스템 테이블
+
+        복제 시스템 테이블
+    :::column-end:::
+    :::column:::
+         [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 시스템 테이블
+
+        백업 시스템 테이블
+
+        복제 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 **sp_help** 저장 프로시저
+    :::column-end:::
+:::row-end:::
+
  제한된 메타데이터 액세스란 다음을 의미합니다.  
   
 -   **public** 메타데이터 액세스가 사용되는 애플리케이션이 차단됩니다.  
@@ -118,26 +140,28 @@ GO
     -   사용자에게 개체에 대한 VIEW DEFINITION 권한이 거부되지 않았고 개체에 대한 CONTROL, ALTER 또는 TAKE OWNERSHIP 권한이 있습니다. 다른 모든 사용자에게는 NULL이 표시됩니다.  
   
 -   다음 카탈로그 뷰에 있는 정의 열  
-  
-    |||  
-    |-|-|  
-    |**sys.all_sql_modules**|**sys.sql_modules**|  
-    |**sys.server_sql_modules**|**sys.check_constraints**|  
-    |**sys.default_constraints**|**sys.computed_columns**|  
-    |**sys.numbered_procedures**||  
-  
+
+    - **sys.all_sql_modules**  
+    - **sys.server_sql_modules**  
+    - **sys.default_constraints**
+    - **sys.numbered_procedures**
+    - **sys.sql_modules**
+    - **sys.check_constraints**
+    - **sys.computed_columns**
+
 -   **syscomments** 호환성 뷰에 있는 **ctext** 열  
   
 -   **sp_helptext** 프로시저의 출력  
   
--   정보 스키마 뷰에 있는 다음 열  
-  
-    |||  
-    |-|-|  
-    |INFORMATION_SCHEMA.CHECK_CONSTRAINTS.CHECK_CLAUSE|INFORMATION_SCHEMA.COLUMNS.COLUMN_DEFAULT|  
-    |INFORMATION_SCHEMA.DOMAINS.DOMAIN_DEFAULT|INFORMATION_SCHEMA.ROUTINE_COLUMNS.COLUMN_DEFAULT|  
-    |INFORMATION_SCHEMA.ROUTINES.ROUTINE_DEFINITION|INFORMATION_SCHEMA.VIEWS.VIEW_DEFINITION|  
-  
+-   정보 스키마 뷰에 있는 다음 열
+
+    - INFORMATION_SCHEMA.CHECK_CONSTRAINTS.CHECK_CLAUSE
+    - INFORMATION_SCHEMA.DOMAINS.DOMAIN_DEFAULT
+    - INFORMATION_SCHEMA.ROUTINES.ROUTINE_DEFINITION
+    - INFORMATION_SCHEMA.COLUMNS.COLUMN_DEFAULT
+    - INFORMATION_SCHEMA.ROUTINE_COLUMNS.COLUMN_DEFAULT
+    - INFORMATION_SCHEMA.VIEWS.VIEW_DEFINITION
+
 -   OBJECT_DEFINITION() 함수  
   
 -   **sys.sql_logins**의 password_hash 열에 저장된 값.  CONTROL SERVER 권한이 없는 사용자에게는 이 열에 NULL 값이 표시됩니다.  
@@ -177,19 +201,45 @@ GO
   
  DB_ID() 및 DB_NAME() 함수로 반환된 메타데이터는 모든 사용자에게 표시됩니다.  
   
- 다음 표에서는 **public** 역할에 표시할 수 있는 카탈로그 뷰 목록을 나열합니다.  
-  
-|||  
-|-|-|  
-|**sys.partition_functions**|**sys.partition_range_values**|  
-|**sys.partition_schemes**|**sys.data_spaces**|  
-|**sys.filegroups**|**sys.destination_data_spaces**|  
-|**sys.database_files**|**sys.allocation_units**|  
-|**sys.partitions**|**sys.messages**|  
-|**sys.schemas**|**sys.configurations**|  
-|**sys.sql_dependencies**|**sys.type_assembly_usages**|  
-|**sys.parameter_type_usages**|**sys.column_type_usages**|  
-  
+ **public** 역할에 표시할 수 있는 카탈로그 뷰 목록입니다.  
+
+:::row:::
+    :::column:::
+        **sys.partition_functions**
+
+        **sys.partition_schemes**
+
+        **sys.filegroups**
+
+        **sys.database_files**
+
+        **sys.partitions**
+
+        **sys.schemas**
+
+        **sys.sql_dependencies**
+
+        **sys.parameter_type_usages**
+    :::column-end:::
+    :::column:::
+        **sys.partition_range_values**
+
+        **sys.data_spaces**
+
+        **sys.destination_data_spaces**
+
+        **sys.allocation_units**
+
+        **sys.messages**
+
+        **sys.configurations**
+
+        **sys.type_assembly_usages**
+
+        **sys.column_type_usages**
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>참고 항목  
  [GRANT&#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY&#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   

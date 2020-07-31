@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2020
+ms.date: 07/29/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08056878aabb707433dc22ca891798feb96ef329
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 11f67835fe3cd74b63a9f2921850376ff4805881
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245232"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411045"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN(Transact-SQL)
 
@@ -51,10 +51,10 @@ CREATE LOGIN은 트랜잭션에 참여합니다. CREATE LOGIN이 트랜잭션 �
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />단일 데이터베이스/탄력적 풀](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database<br />단일 데이터베이스/탄력적 풀](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />관리되는 인스턴스](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
@@ -284,10 +284,10 @@ CHECK_EXPIRATION = OFF ;
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_**
+        **_\* Azure SQL Database<br />단일 데이터베이스/탄력적 풀 \*_**
     :::column-end:::
     :::column:::
-        [SQL Database<br />관리되는 인스턴스](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
@@ -402,10 +402,10 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />단일 데이터베이스/탄력적 풀](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database<br />단일 데이터베이스/탄력적 풀](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />관리되는 인스턴스 \*_**
+        **_\* Azure SQL<br />Managed Instance \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
@@ -495,7 +495,7 @@ SID **=** *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인
 - `sysadmin` 역할의 일부인 SQL 서버 수준 보안 주체(로그인)만 Azure AD 보안 주체를 대상으로 다음 작업을 실행할 수 있습니다.
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
-- 다른 Azure AD 디렉터리에서 가져온 외부(게스트) 사용자를 관리되는 인스턴스의 Azure AD 관리자로 직접 구성할 수 없습니다. 대신 외부 사용자를 Azure AD 보안 사용 그룹에 조인하고 해당 그룹을 인스턴스 관리자로 구성합니다.
+- 다른 Azure AD 디렉터리에서 가져온 외부(게스트) 사용자를 Azure Portal을 사용하여 SQL Managed Instance의 Azure AD 관리자로 직접 구성할 수 없습니다. 대신 외부 사용자를 Azure AD 보안 사용 그룹에 조인하고 해당 그룹을 인스턴스 관리자로 구성합니다. PowerShell이나 Azure CLI를 사용하여 개별 게스트 사용자를 인스턴스 관리자로 설정할 수 있습니다.
 - 로그인은 장애 조치 그룹의 보조 인스턴스에 복제되지 않습니다. 로그인은 시스템 데이터베이스인 master 데이터베이스에 저장되므로 지역에서 복제되지 않습니다. 이를 해결하려면 사용자가 보조 인스턴스에서 동일한 SID를 사용하여 로그인을 만들어야 합니다.
 
 ```SQL
@@ -601,10 +601,10 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />단일 데이터베이스/탄력적 풀](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database<br />단일 데이터베이스/탄력적 풀](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />관리되는 인스턴스](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -676,7 +676,7 @@ SQL Server 규칙을 사용하여 \<loginname>@\<servername> 형식의 SQL Serve
 
 - **GRANT** 문을 사용하여 새 로그인 또는 해당 로그인을 포함한 역할에 서버 수준 권한을 부여합니다. 자세한 내용은 [GRANT](../../t-sql/statements/grant-transact-sql.md)를 참조하십시오.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 ### <a name="a-creating-a-login-with-a-password"></a>A. 암호로 로그인 만들기
 
@@ -729,10 +729,10 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />단일 데이터베이스/탄력적 풀](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database<br />단일 데이터베이스/탄력적 풀](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />관리되는 인스턴스](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)

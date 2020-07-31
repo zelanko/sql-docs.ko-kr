@@ -1,6 +1,6 @@
 ---
 title: '빠른 시작: PostgreSQL 연결 및 쿼리'
-description: 이 빠른 시작에서는 Azure Data Studio를 사용하여 PostgreSQL에 연결하고 쿼리를 실행하는 방법을 보여 줍니다.
+description: Azure Data Studio를 사용하여 PostgreSQL에 연결하고 SQL 문을 사용하여 데이터베이스를 만들고 쿼리해 보는 빠른 시작을 진행합니다.
 ms.custom: seodec18
 ms.date: 09/18/2019
 ms.prod: azure-data-studio
@@ -9,16 +9,16 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: f429848636de075e64ebaf6f74bc69f7faef5359
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e2ba0f0123faeacd0f431a72ef35add40ee48e19
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717158"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411309"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-postgresql"></a>빠른 시작: Azure Data Studio를 사용하여 PostgreSQL 연결 및 쿼리
 
-이 빠른 시작에서는 Azure Data Studio를 사용하여 Postgres에 연결한 다음 SQL 문을 사용하여 데이터베이스 *tutorialdb*를 만들고 쿼리하는 방법을 보여 줍니다.
+이 빠른 시작에서는 Azure Data Studio를 사용하여 PostgreSQL에 연결한 다음 SQL 문을 사용하여 데이터베이스 *tutorialdb*를 만들고 쿼리하는 방법을 보여 줍니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 

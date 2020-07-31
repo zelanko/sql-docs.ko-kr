@@ -1,6 +1,6 @@
 ---
 title: 확장성 API
-description: Azure Data Studio의 확장성 API에 대해 알아보기
+description: '확장과 Azure Data Studio의 다른 부분(예: 개체 탐색기)의 상호 작용을 지원하는 Azure Data Studio 확장 API에 대해 알아봅니다.'
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: c94935e7d8b1a72b6a99f83618fb0e8855379ed8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0ef95d4b77e91bcd950b2d8aa5dddf5bb95b3841
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774647"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411139"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 확장성 API
 

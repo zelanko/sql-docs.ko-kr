@@ -16,12 +16,12 @@ ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85c45ef2facc4a477c0851c2f2e89a7960eda001
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d69fbd48f7d7f713d9a10806c65c144fff84d6d
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630770"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87361593"
 ---
 # <a name="databases"></a>데이터베이스
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,28 +40,43 @@ ms.locfileid: "85630770"
  데이터베이스를 사용하는 대부분의 사용자는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 도구를 사용합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 도구에는 데이터베이스와 데이터베이스 내의 개체를 만드는 데 필요한 그래픽 사용자 인터페이스가 있습니다. 또한 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 작성하여 데이터베이스와 상호 작용하기 위한 쿼리 편집기가 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 디스크에서 설치하거나 MSDN에서 다운로드할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 도구에 대한 자세한 내용은 [SSMS(SQL Server Management Studio)](../../ssms/sql-server-management-studio-ssms.md)를 참조하세요.
   
 ## <a name="in-this-section"></a>섹션 내용  
-  
-|||  
-|-|-|  
-|[시스템 데이터베이스](../../relational-databases/databases/system-databases.md)|[데이터베이스에서 데이터 또는 로그 파일 삭제](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)|  
-|[포함된 데이터베이스](../../relational-databases/databases/contained-databases.md)|[데이터베이스의 데이터 및 로그 공간 정보 표시](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)|  
-|[Microsoft Azure의 SQL Server 데이터 파일](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)|[데이터베이스의 크기 늘리기](../../relational-databases/databases/increase-the-size-of-a-database.md)|  
-|[데이터베이스 파일 및 파일 그룹](../../relational-databases/databases/database-files-and-filegroups.md)|[데이터베이스 이름 바꾸기](../../relational-databases/databases/rename-a-database.md)|  
-|[데이터베이스 상태](../../relational-databases/databases/database-states.md)|[단일 사용자 모드로 데이터베이스 설정](../../relational-databases/databases/set-a-database-to-single-user-mode.md)|  
-|[파일 상태](../../relational-databases/databases/file-states.md)|[데이터베이스 축소](../../relational-databases/databases/shrink-a-database.md)|  
-|[데이터베이스 크기 예측](../../relational-databases/databases/estimate-the-size-of-a-database.md)|[파일 축소](../../relational-databases/databases/shrink-a-file.md)|  
-|[데이터베이스를 다른 서버로 복사](../../relational-databases/databases/copy-databases-to-other-servers.md)|[데이터베이스의 속성 보기 또는 변경](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)|  
-|[데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)|[SQL Server 인스턴스에서 데이터베이스의 목록 보기](../../relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
-|[데이터베이스에 데이터 또는 로그 파일 추가](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)|[데이터베이스의 호환성 수준 보기 또는 변경](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)|  
-|[데이터베이스 메일의 구성 설정 변경](../../relational-databases/databases/change-the-configuration-settings-for-a-database.md)|[유지 관리 계획 마법사 사용](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)|  
-|[데이터베이스 만들기](../../relational-databases/databases/create-a-database.md)|[사용자 정의 데이터 형식 별칭 만들기](../../relational-databases/databases/create-a-user-defined-data-type-alias.md)|  
-|[데이터베이스 삭제](../../relational-databases/databases/delete-a-database.md)|[데이터베이스 스냅샷&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)|  
-  
+
+:::row:::
+    :::column:::
+        [시스템 데이터베이스](../../relational-databases/databases/system-databases.md)  
+        [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md)  
+        [Microsoft Azure의 SQL Server 데이터 파일](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
+        [데이터베이스 파일 및 파일 그룹](../../relational-databases/databases/database-files-and-filegroups.md)  
+        [데이터베이스 상태](../../relational-databases/databases/database-states.md)  
+        [파일 상태](../../relational-databases/databases/file-states.md)  
+        [데이터베이스 크기 예측](../../relational-databases/databases/estimate-the-size-of-a-database.md)  
+        [데이터베이스를 다른 서버로 복사](../../relational-databases/databases/copy-databases-to-other-servers.md)  
+        [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
+        [데이터베이스에 데이터 또는 로그 파일 추가](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
+        [데이터베이스의 구성 설정 변경](../../relational-databases/databases/change-the-configuration-settings-for-a-database.md)  
+        [데이터베이스 만들기](../../relational-databases/databases/create-a-database.md)  
+        [데이터베이스 삭제](../../relational-databases/databases/delete-a-database.md)  
+    :::column-end:::
+    :::column:::
+        [데이터베이스에서 데이터 또는 로그 파일 삭제](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)  
+        [데이터베이스의 데이터 및 로그 공간 정보 표시](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
+        [데이터베이스의 크기 늘리기](../../relational-databases/databases/increase-the-size-of-a-database.md)  
+        [데이터베이스 이름 바꾸기](../../relational-databases/databases/rename-a-database.md)  
+        [단일 사용자 모드로 데이터베이스 설정](../../relational-databases/databases/set-a-database-to-single-user-mode.md)  
+        [데이터베이스 축소](../../relational-databases/databases/shrink-a-database.md)  
+        [파일 축소](../../relational-databases/databases/shrink-a-file.md)  
+        [데이터베이스의 속성 보기 또는 변경](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)  
+        [SQL Server 인스턴스에서 데이터베이스의 목록 보기](../../relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md)  
+        [데이터베이스의 호환성 수준 보기 또는 변경](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)  
+        [유지 관리 계획 마법사 사용](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
+        [사용자 정의 데이터 형식 별칭 만들기](../../relational-databases/databases/create-a-user-defined-data-type-alias.md)  
+        [데이터베이스 스냅샷&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="related-content"></a>관련 내용  
  [인덱스](../../relational-databases/indexes/indexes.md)  
   
  [뷰](../../relational-databases/views/views.md)  
   
  [저장 프로시저&#40;데이터베이스 엔진&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)  
-  
-  

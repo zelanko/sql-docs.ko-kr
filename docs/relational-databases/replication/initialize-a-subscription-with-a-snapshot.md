@@ -1,5 +1,5 @@
 ---
-title: 스냅샷으로 구독 초기화 | Microsoft 문서
+title: 스냅샷으로 구독 초기화
 ms.custom: ''
 ms.date: 03/23/2020
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 44ccd31700ab6bb3bf3500e93febc0209d9fa9ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cb69f5c2033a515676587ddbef0cb3d14e3bc3d6
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716790"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396137"
 ---
-# <a name="initialize-a-subscription-with-a-snapshot"></a>스냅샷으로 구독 초기화
+# <a name="initialize-a-subscription-with-a-snapshot-for-a-new-publication"></a>새 게시를 위해 스냅샷으로 구독 초기화
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
@@ -35,10 +35,10 @@ ms.locfileid: "85716790"
 
 새 스냅샷이 에이전트에 의해 구독자에 적용됩니다. 적용은 구독의 초기 동기화 중에 진행됩니다. 적용을 진행하는 에이전트는 게시 유형에 따라 달라집니다.
 
-- ‘트랜잭션’ 및 ‘스냅샷’ 게시의 경우:  
+- ‘트랜잭션’ 및 ‘스냅샷’ 게시의 경우:
   - 배포 에이전트
 
-- ‘병합’ 게시의 경우: 
+- ‘병합’ 게시의 경우:
   - 병합 에이전트
 
 ### <a name="type-of-publication"></a>게시 유형
@@ -60,7 +60,7 @@ ms.locfileid: "85716790"
 1. 다음 항목을 포함하는 스키마 스냅샷이 생성됩니다.
    - 복제 스크립트.
    - 게시된 개체의 스키마.
-   - (단, 데이터는 없음) 
+   - (단, 데이터는 없음)
 
 2. 그런 다음, 각 구독이 스냅샷을 사용하여 초기화됩니다. 스냅샷에는 다음 항목이 포함됩니다.
    - 스키마 스냅샷에서 복사된 스키마 및 스크립트.
@@ -80,7 +80,7 @@ ms.locfileid: "85716790"
 
 ### <a name="snapshot-folder"></a>스냅샷 폴더
 
-파일은 기본 ‘스냅샷 폴더’에 복사되거나 스냅샷을 위한 ‘대체 폴더’에 복사됨으로써 전송됩니다.  
+파일은 기본 ‘스냅샷 폴더’에 복사되거나 스냅샷을 위한 ‘대체 폴더’에 복사됨으로써 전송됩니다.
 
 스냅샷 폴더는 배포자가 구성될 때 지정됩니다. 대체 폴더는 게시가 생성될 때 지정됩니다.
 

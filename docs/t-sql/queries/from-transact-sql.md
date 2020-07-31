@@ -34,16 +34,16 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 246cf0c526e04c5f4df33067286b0cefaf9913cd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e958aaf757ecc9e28c090d50a13ead57b2de90bb
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636198"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397082"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 절과 JOIN, APPLY, PIVOT(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
 Transact-SQL에서 FROM 절은 다음 명령문에서 사용할 수 있습니다.
 
@@ -228,7 +228,7 @@ FROM { <table_source> [ ,...n ] }
  *derived_table*  
  데이터베이스의 행을 검색하는 하위 쿼리입니다. *derived_table*은 외부 쿼리에 대한 입력으로 사용됩니다.  
   
- *derived* *_table*은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 값 생성자 기능을 사용하여 여러 행을 지정할 수 있습니다. `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`)을 입력합니다. 자세한 내용은 [테이블 값 생성자&#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)를 참조하세요.  
+ *derived* *_table*은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 값 생성자 기능을 사용하여 여러 행을 지정할 수 있습니다. 예들 들어 `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`입니다. 자세한 내용은 [테이블 값 생성자&#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)를 참조하세요.  
   
  *column_alias*  
  파생된 테이블의 결과 집합에서 열 이름을 대체할 선택적인 별칭입니다. SELECT 목록의 각 열당 한 개의 열 별칭을 포함하고 열 별칭의 전체 목록을 괄호로 묶습니다.  
@@ -383,14 +383,14 @@ ON (p.ProductID = v.ProductID);
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
 
   
- 과거의 지정된 시간에 실제(현재)였던 값이 포함된 각 행에 대한 단일 레코드를 포함하는 테이블을 반환합니다. 내부적으로 임시 테이블과 해당 기록 테이블 간에 합집합이 계산되고, 결과가 필터링되어 *\<date_time>* 매개 변수로 지정된 시점에 유효했던 행의 값을 반환합니다. *system_start_time_column_name* 값이 *\<date_time>* 매개 변수 값보다 작거나 같고, *system_end_time_column_name* 값이 *\<date_time>* 매개 변수 값보다 큰 경우 행에 대한 값이 유효한 것으로 간주됩니다.   
+ 과거의 지정된 시간에 실제(현재)였던 값이 포함된 각 행에 대한 단일 레코드를 포함하는 테이블을 반환합니다. 내부적으로 temporal 테이블과 기록 테이블 간에 합집합이 계산되며, 지정된 시간에 유효했던 행의 값을 반환하도록 결과가 *\<date_time>* 매개 변수로 필터링됩니다. *system_start_time_column_name* 값이 *\<date_time>* 매개 변수 값보다 작거나 같고, *system_end_time_column_name* 값이 *\<date_time>* 매개 변수 값보다 큰 경우 행에 대한 값이 유효한 것으로 간주됩니다.   
   
  FROM \<start_date_time> TO \<end_date_time>
 
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
   
- FROM 인수에 대한 *\<start_date_time>* 매개 변수 값 이전에 활성 상태가 시작되었는지, 아니면 TO 인수에 대한 *\<end_date_time>* 매개 변수 값 이후에 활성 상태가 중단되었는지 여부에 관계없이, 지정된 시간 범위 내에 활성 상태였던 모든 레코드 버전에 대한 값이 포함된 테이블을 반환합니다. 내부적으로 temporal 테이블과 기록 테이블 간에 합집합이 계산되며, 지정된 시간 범위 중 임의의 시점에 활성 상태였던 모든 행 버전을 반환하도록 결과가 필터링됩니다. FROM 엔드포인트에서 정의된 하위 경계에서 정확히 활성화된 행은 포함되고, TO 엔드포인트에서 정의된 상위 경계에서 정확히 활성화된 행은 포함되지 않습니다.  
+ FROM 인수에 대한 *\<start_date_time>* 매개 변수 값 이전에 활성 상태가 시작되었든 아니면 TO 인수에 대한 *\<end_date_time>* 매개 변수 값 이후에 활성 상태가 중단되었든 상관없이 지정된 시간 범위 내에 활성 상태였던 모든 레코드 버전의 값을 포함하는 테이블을 반환합니다. 내부적으로 temporal 테이블과 기록 테이블 간에 합집합이 계산되며, 지정된 시간 범위 중 임의의 시점에 활성 상태였던 모든 행 버전을 반환하도록 결과가 필터링됩니다. FROM 엔드포인트에서 정의된 하위 경계에서 정확히 활성화된 행은 포함되고, TO 엔드포인트에서 정의된 상위 경계에서 정확히 활성화된 행은 포함되지 않습니다.  
   
  BETWEEN \<start_date_time> AND \<end_date_time>  
 

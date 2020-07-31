@@ -1,6 +1,6 @@
 ---
 title: Azure SQL 데이터베이스 연결 및 쿼리
-description: 이 빠른 시작에서는 Azure Data Studio를 사용하여 SQL 데이터베이스에 연결하고 쿼리를 실행하는 방법을 보여 줍니다.
+description: Azure Data Studio를 사용하여 Azure SQL Database 서버에 연결한 다음 데이터베이스를 만들고 쿼리해 보는 빠른 시작을 진행합니다.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.reviewer: alayu; maghan; sstein
@@ -9,12 +9,12 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: 73e910b6d199a4918eafca067a95136e31ac079c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f7ceb73d25d69e1d8e8f33b2c6a23b0ff7bff636
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771953"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411299"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>빠른 시작: Azure Data Studio를 사용한 Azure SQL 데이터베이스 연결 및 쿼리
 

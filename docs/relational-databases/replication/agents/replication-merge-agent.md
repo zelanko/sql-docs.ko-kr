@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a4dff5292a3cd0bfcd46e2615bc755665ff3e49d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4f65282964494ba1fdb160b1e755922a60ad80d8
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897897"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394988"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -150,7 +150,7 @@ replmerg [-?]
  **-DistributorPassword** _distributor_password_  
  배포자 암호입니다.  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ **-DistributorSecurityMode** [ **0**\| **1**]  
  배포자의 보안 모드를 지정합니다. 값 **0** 은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 모드(기본값)를 나타내며 값 **1** 은 Windows 인증 모드를 나타냅니다.  
   
  **-DownloadGenerationsPerBatch** _download_generations_per_batch_  
@@ -165,7 +165,7 @@ replmerg [-?]
  **-DynamicSnapshotLocation** _dynamic_snapshot_location_  
  게시에서 매개 변수가 있는 행 필터를 사용할 경우 필터링된 데이터 스냅샷 파일의 위치입니다.  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ **-EncryptionLevel** [ **0** \| **1** \| **2** ]  
  연결을 만들 때 병합 에이전트에서 사용하는 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안) 암호화의 수준입니다.  
   
 |EncryptionLevel 값|Description|  
@@ -179,7 +179,7 @@ replmerg [-?]
 
  자세한 내용은 [복제 보안 설정 보기 및 수정](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)을 참조하세요.  
   
- **-ExchangeType** [ **1**| **2**| **3**]  
+ **-ExchangeType** [ **1**\| **2**\| **3**]  
 > [!WARNING]
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 업로드를 제한하려면 **sp_addmergearticle**의 **\@subscriber_upload_options**를 대신 사용하세요.  
   
@@ -195,13 +195,13 @@ replmerg [-?]
   
  **ExchangeType** 을 사용하여 병합 복제의 업로드 및 다운로드 단계를 별도의 세션으로 분리하는 경우 **ExchangeType** 을 먼저 1로 설정한 상태로 병합 에이전트를 실행한 후 값을 2로 설정하여 병합 에이전트를 다시 실행해야 합니다. 두 매개 변수를 사용하여 병합 에이전트를 실행하는 데 실패하면 메타데이터가 삭제되고 구독을 다시 초기화해야 합니다(업로드 제외).  
   
- **-FastRowCount** [**0**|**1**]  
+ **-FastRowCount** [**0**\|**1**]  
  행 개수 유효성 검사에 사용할 행 개수 계산 방법의 유형을 지정합니다. 값 **1** (기본값)은 빠른 행 개수 계산 방법을 나타냅니다. 값 **0** 은 전체 행 개수 계산 방법을 나타냅니다.  
   
- **-FileTransferType** [**0**|**1**]  
+ **-FileTransferType** [**0**\|**1**]  
  파일 전송 유형을 지정합니다. 값 **0** 은 UNC(Universal Naming Convention)를 나타내고, 값 **1** 은 FTP(File Transfer Protocol)를 나타냅니다.  
   
- **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
+ **-ForceConvergenceLevel** [**0**\|**1**\|**2** ( **Publisher**\| **Subscriber**\| **Both**)]  
  병합 에이전트에서 사용할 일치성 수준을 지정하며 값은 다음 중 하나가 될 수 있습니다.  
   
 |ForceConvergenceLevel 값|Description|  
@@ -222,7 +222,7 @@ replmerg [-?]
  **-FtpUserName** _ftp_user_name_  
  FTP 서비스에 연결할 때 사용할 사용자 이름입니다. 지정되지 않은 경우, anonymous가 사용됩니다.  
   
- **-HistoryVerboseLevel** [**1**|**2**|**3**]  
+ **-HistoryVerboseLevel** [**1**\|**2**\|**3**]  
  병합 작업을 수행하는 동안 기록에 추가되는 양을 지정합니다. **1**을 선택하여 성능에서 기록 로깅의 영향을 최소화할 수 있습니다.  
   
 |HistoryVerboseLevel 값|Description|  
@@ -235,7 +235,7 @@ replmerg [-?]
  **-Hostname** _host_name_  
  로컬 컴퓨터의 네트워크 이름입니다. 기본값은 로컬 컴퓨터 이름입니다.  
   
- **-InteractiveResolution** [**0**|**1**]  
+ **-InteractiveResolution** [**0**\|**1**]  
  동기화를 수행하는 동안 충돌이 발생할 경우 대화형 충돌 해결을 사용할지 여부를 지정합니다. 기본값은 **0**으로, 대화형 충돌 해결을 사용하지 않음을 나타냅니다.  
   
  **-InternetLogin** _internet_login_  
@@ -253,7 +253,7 @@ replmerg [-?]
  **-InternetProxyServer**  *internet_proxy_server*  
  *internet_url*에 지정된 HTTP 리소스에 액세스할 때 사용할 프록시 서버를 지정합니다.  
   
- **-InternetSecurityMode** [**0**|**1**]  
+ **-InternetSecurityMode** [**0**\|**1**]  
  웹 동기화를 수행하는 동안 웹 서버에 연결할 때 사용할 IIS 보안 모드를 지정합니다. 값 **0** 은 기본 인증을 나타내고, 값 **1** 은 Windows 통합 인증(기본값)을 나타냅니다.  
   
  **-InternetTimeout** _internet_timeout_  
@@ -282,16 +282,16 @@ replmerg [-?]
  **-MaxUploadChanges** _number_of_upload_changes_  
  구독자에서 게시자로 업로드할 변경된 행의 최대 개수를 지정합니다. 업로드되는 행 수가 지정된 최대값보다 클 수도 있습니다. 전체 세대가 처리되는 경우나, 병렬 대상 스레드가 실행될 수 있고 각 스레드가 첫 번째 전달에서 100개 이상의 변경 내용을 처리하는 경우가 이러한 경우에 해당됩니다. 기본적으로 업로드할 수 있는 모든 변경 내용이 보내집니다.  
   
- **-MetadataRetentionCleanup** [**0**|**1**]  
+ **-MetadataRetentionCleanup** [**0**\|**1**]  
  게시 보존 기간에 따라 [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md), [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md), [MSmerge_past_partition_mappings](../../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md)및 [MSmerge_current_partition_mappings](../../../relational-databases/system-tables/msmerge-current-partition-mappings.md) 에서 메타데이터를 제거할지 여부를 지정합니다. 기본값은 **1**로서, 정리를 수행함을 나타냅니다. 값 **0** 은 정리를 자동으로 수행하지 않음을 나타냅니다.  
   
  **-Output** _output_path_and_file_name_  
  에이전트 출력 파일의 경로입니다. 파일 이름을 지정하지 않으면 출력이 콘솔로 전달됩니다. 지정된 파일 이름이 존재하면 출력이 파일에 추가됩니다.  
   
- **-OutputVerboseLevel** [**0**|**1**|**2**]  
+ **-OutputVerboseLevel** [**0**\|**1**\|**2**]  
  출력이 자세해야 하는지 여부를 지정합니다. 정보 표시 수준이 **0**이면 오류 메시지만 출력됩니다. 정보 표시 수준이 **1**이면 모든 진행률 보고 메시지가 출력됩니다. 정보 표시 수준이 **2** (기본값)이면 디버깅에 유용한 오류 메시지와 진행률 보고 메시지가 모두 출력됩니다.  
   
- **-ParallelUploadDownload** [**0**|**1**]  
+ **-ParallelUploadDownload** [**0**\|**1**]  
  병합 에이전트에서 게시자에 업로드되는 변경 내용과 구독자에 다운로드되는 변경 내용을 병렬로 처리할지 여부를 지정합니다. 병렬 처리는 네트워크 대역폭이 높은 대규모 환경에서 유용합니다. **ParallelUploadDownload** 가 **1**이면 병렬 처리가 사용됩니다.  
   
  **-PacketSize**  
@@ -312,7 +312,7 @@ replmerg [-?]
  **-PublisherPassword** _publisher_password_  
  게시자 암호입니다. **PublisherSecurityMode** 가 **0** ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증의 경우)이면 이 매개 변수를 지정해야 합니다.  
   
- **-PublisherSecurityMode** [**0**|**1**]  
+ **-PublisherSecurityMode** [**0**\|**1**]  
  게시자의 보안 모드를 지정합니다. 값 **0** 은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증(기본값)을 나타내며 값 **1** 은 Windows 인증 모드를 나타냅니다.  
   
  **-QueryTimeOut** _query_time_out_seconds_  
@@ -327,7 +327,7 @@ replmerg [-?]
  **-SubscriberDatabasePath** _subscriber_database_path_  
  **SubscriberType** 이 **2** 로서, ODBC DSN(데이터 원본 이름)이 없는 Jet 데이터베이스에 대한 연결이 허용되는 경우 Jet 데이터베이스(.mdb 파일)의 경로입니다.  
   
- **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
+ **-SubscriberDBAddOption** [**0**\| **1**\| **2**\| **3**]  
  기존 구독자 데이터베이스가 있는지 여부를 지정합니다.  
   
 |SubscriberDBAddOption 값|Description|  
@@ -346,22 +346,22 @@ replmerg [-?]
  **-SubscriberPassword** _subscriber_password_  
  구독자 암호입니다. **SubscriberSecurityMode** 가 **0** ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증의 경우)이면 이 매개 변수를 지정해야 합니다.  
   
- **-SubscriberSecurityMode** [ **0**| **1**]  
+ **-SubscriberSecurityMode** [ **0**\| **1**]  
  구독자의 보안 모드를 지정합니다. 값 **0** 은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증(기본값)을 나타내며 값 **1** 은 Windows 인증 모드를 나타냅니다.  
   
- **-SubscriberConflictClean** [ **0**| **1**]  
+ **-SubscriberConflictClean** [ **0**\| **1**]  
  동기화 프로세스를 수행하는 동안 구독자에서 충돌 테이블을 정리할지 여부를 나타냅니다. 값 **1** 은 구독자의 충돌 테이블이 정리됨을 나타냅니다. 이 매개 변수는 분산 충돌 로깅을 사용하는 게시자에 대한 구독에만 사용됩니다.  
   
- **-SubscriberType** [ **0**| **1**| **3**| **4**| **5**| **6**| **7**| **8**]  
+ **-SubscriberType** [ **0**\| **1**\| **3**\| **4**\| **5**\| **6**\| **7**\| **8**]  
  병합 에이전트에서 사용하는 구독자 연결 유형을 지정합니다. 이 매개 변수에는 기본값 **0** 만 지원됩니다.  
   
- **-SubscriptionType**[ **0**| **1**| **2**]  
+ **-SubscriptionType**[ **0**\| **1**\| **2**]  
  배포의 구독 유형을 지정합니다. 값 **0** 은 밀어넣기 구독(기본값)을, 값 **1** 은 끌어오기 구독을, 값 **2** 는 익명 구독을 나타냅니다.  
   
- **-SyncToAlternate** [ **0|1**]  
+ **-SyncToAlternate** [ **0\|1**]  
  병합 에이전트에서 구독자와 대체 게시자 간의 동기화를 수행하는지 여부를 지정합니다. 값 **1** 은 동기화 대상이 대체 게시자임을 나타냅니다. 기본값은 **0**입니다.  
  
- **-T** [**101|102**]  
+ **-T** [**101\|102**]  
  병합 에이전트에 대해 추가 기능을 사용하도록 설정하는 추적 플래그입니다. **101** 값을 지정하면 자세한 로깅 정보를 사용하여 병합 복제 동기화 프로세스의 각 단계에서 소요되는 시간을 확인할 수 있습니다. **102** 값을 지정하면 추적 플래그 **101**과 동일한 통계가 기록되지만, <Distribution server>..msmerge_history 테이블에 기록됩니다. 추적 플래그 101을 사용하는 경우 `-output` 및 `-outputverboselevel` 매개 변수를 사용하여 병합 에이전트 로깅을 사용하도록 설정합니다.  예를 들어 병합 에이전트에 `-T 101, -output, -outputverboselevel` 매개 변수를 추가한 다음, 에이전트를 다시 시작합니다. 
  
  **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
@@ -376,7 +376,7 @@ replmerg [-?]
  **-UseInprocLoader**  
  병합 에이전트에서 구독자에 스냅샷 파일을 적용할 때 BULK INSERT 명령을 사용하도록 지정하여 초기 스냅샷의 성능을 향상시킵니다. 이 매개 변수는 XML 데이터 형식과 호환되지 않으므로 이후에는 지원되지 않습니다. XML 데이터를 복제하지 않을 계획이라면 이 매개 변수를 사용할 수 있습니다. 이 매개 변수는 문자 모드 스냅샷과 함께 사용할 수 없습니다. 이 매개 변수를 사용하려면 구독자의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정에 스냅샷 .bcp 데이터 파일이 있는 디렉터리에 대한 읽기 권한이 있어야 합니다. 이 매개 변수를 사용하지 않으면 에이전트에서 로드한 ODBC 드라이버가 파일 내용을 읽으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트가 사용되지 않습니다.  
   
- **-Validate** [**0**|**1**|**2**|**3**]  
+ **-Validate** [**0**\|**1**\|**2**\|**3**]  
  병합 세션이 종료될 때 유효성 검사를 수행할지 여부와 수행할 유효성 검사 유형을 지정합니다. 값 **3** 이 권장 값입니다.  
   
 |값 유효성 검사|Description|  

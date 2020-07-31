@@ -1,6 +1,6 @@
 ---
 title: Azure Data Studio용 SandDance
-description: Azure Data Studio에서 SandDance를 사용하는 방법
+description: Azure Data Studio 확장을 사용하여 인사이트를 제공하는 데이터의 시각화를 빠르게 만드는 방법을 알아봅니다.
 ms.custom: seodec18
 ms.date: 07/03/2019
 ms.prod: azure-data-studio
@@ -9,12 +9,12 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 6574ab58edb7e4c874273ba2f5349be34ea3202b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b40ad2646f1eaa1534ab84cb0d638465588f2cd2
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758425"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411239"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>Azure Data Studio SandDance(미리 보기)
 이제 Azure Data Studio에서는 데이터의 시각화를 빠르게 만드는 방법을 제공합니다. 이 확장은 데이터를 확인하고 진행 상황을 파악하려고 하는 경우에 유용합니다. 이를 위해 데이터 시각화를 바로 생성할 수 있는 Microsoft Research의 SandDance라는 기술을 사용합니다.

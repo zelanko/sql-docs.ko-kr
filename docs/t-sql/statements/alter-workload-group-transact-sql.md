@@ -18,12 +18,12 @@ ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 575394e11a9d1d0addba6fa6e1eaa7a24479a69f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 51c6e9f7278025614c314ae873e6a484be4f7c4b
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111225"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332242"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP(Transact-SQL)
 
@@ -126,7 +126,7 @@ value는 0.75에서 100.00 사이의 범위에 해당하는 10진수입니다.  
 REQUEST_MAX_RESOURCE_GRANT_PERCENT = value  
 value는 10진수이며 request_min_resource_grant_percent보다 커야 합니다.
 
-IMPORTANCE = { LOW |  BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }  
+IMPORTANCE = { LOW \|  BELOW_NORMAL \| NORMAL \| ABOVE_NORMAL \| HIGH }  
 워크로드 그룹에 대한 요청의 기본 중요도를 변경합니다.
 
 QUERY_EXECUTION_TIMEOUT_SEC = value  

@@ -1,5 +1,6 @@
 ---
 title: 저장 프로시저의 종속성 보기 | Microsoft 문서
+description: SQL Server Management Studio 또는 Transact-SQL을 사용하여 SQL Server 2019(15.x)에서 저장 프로시저의 종속성을 보는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 6ae0a369-1bc7-4ae4-be89-2b483697cd1f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aea9d3e1e073bfb4e34b1cc4250f2af64921d65f
-ms.sourcegitcommit: 3ea90a17a04827d573a281a4d62e72dba974504f
+ms.openlocfilehash: 7b59fe000bb72cdfb7286c5efba0de009439c555
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84332579"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332202"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>저장 프로시저의 종속성 보기
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]

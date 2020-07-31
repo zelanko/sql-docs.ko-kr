@@ -1,6 +1,6 @@
 ---
 title: 인사이트 위젯을 사용하여 서버 및 데이터베이스 모니터링
-description: Azure Data Studio의 인사이트 위젯에 대해 알아보기
+description: Azure Data Studio 인사이트 위젯을 사용하여 서버 및 데이터베이스를 모니터링하는 쿼리를 인사이트 있는 시각화로 만드는 방법을 알아봅니다.
 ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: 05/14/2019
 ms.prod: azure-data-studio
@@ -9,12 +9,12 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1568251dba79998c07e05b78b2d156cebbb0e7fd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3307093404ddc09b6db085f1cc275273280913d3
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774601"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411109"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-azure-data-studio"></a>Azure Data Studio에서 인사이트 위젯을 사용하여 서버 및 데이터베이스 관리
 

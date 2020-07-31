@@ -17,12 +17,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 51a34db68f77193c42662476656d46e5fa2f6092
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c9e762060e3afdc5df7802249e99075de66ef751
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87109406"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395028"
 ---
 # <a name="replication-distribution-agent"></a>복제 배포 에이전트
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -133,10 +133,10 @@ distrib [-?]
  **-DistributorPassword** _distributor_password_  
  배포자 암호입니다.  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ **-DistributorSecurityMode** [ **0**\| **1**]  
  배포자의 보안 모드를 지정합니다. 값 0은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 모드를 나타내고 값 1은 Windows 인증 모드(기본값)를 나타냅니다.  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ **-EncryptionLevel** [ **0** \| **1** \| **2** ]  
  연결을 만들 때 배포 에이전트에서 사용하는 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안) 암호화의 수준입니다.  
   
 |EncryptionLevel 값|Description|  
@@ -171,7 +171,7 @@ distrib [-?]
  **-FtpUserName**  _ftp_user_name_  
  FTP 서비스에 연결할 때 사용할 사용자 이름입니다. 지정되지 않은 경우, **anonymous** 가 사용됩니다.  
   
- **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
+ **-HistoryVerboseLevel** [ **0** \| **1** \| **2** \| **3** ]  
  배포 작업을 수행하는 동안 기록에 추가되는 양을 지정합니다. **1**을 선택하여 기록 로깅이 성능에 주는 영향을 최소화할 수 있습니다.  
   
 |HistoryVerboseLevel 값|Description|  
@@ -261,7 +261,7 @@ distrib [-?]
 |**1**|ODBC 데이터 원본|  
 |**3**|OLE DB 데이터 원본|  
   
- **-SubscriptionStreams** [**0**|**1**|**2**|...**64**]  
+ **-SubscriptionStreams** [**0**\|**1**\|**2**\|...**64**]  
  단일 스레드를 사용할 때 나타나는 여러 가지 트랜잭션 특징을 유지하면서 변경 내용의 일괄 처리를 구독자에 대해 병렬로 적용하기 위해 배포 에이전트당 허용된 연결 수입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 게시자의 경우 1에서 64 사이의 값 범위가 지원됩니다. 이 매개 변수는 게시자 및 배포자가 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전에서 실행 중인 경우에만 지원됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자 또는 피어 투 피어 구독의 경우 이 매개 변수가 지원되지 않거나 0이어야 합니다.  
   
 > [!NOTE]  

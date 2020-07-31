@@ -1,6 +1,6 @@
 ---
 title: '빠른 시작: SQL Server 연결 및 쿼리'
-description: 이 빠른 시작에서는 Azure Data Studio를 사용하여 SQL Server에 연결하고 쿼리를 실행하는 방법을 보여 줍니다.
+description: Azure Data Studio를 사용하여 SQL Server에 연결하고 T-SQL(Transact-SQL) 문을 사용하여 데이터베이스를 만들어 보는 빠른 시작을 진행합니다.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: quickstart
@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
-ms.openlocfilehash: d5fc104e5c4a848c24c6bc45ab09419dc10d1818
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 532e210d239f8c55b99bd34828fafe160e1fb78b
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764111"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411289"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-sql-server"></a>빠른 시작: Azure Data Studio를 사용하여 SQL Server 연결 및 쿼리
 
@@ -40,7 +40,7 @@ SQL Server에 대한 액세스 권한이 없는 경우 다음 링크에서 해�
 
    ![새 연결 아이콘](media/quickstart-sql-server/new-connection-icon.png)
 
-3. 이 문서에서는 ‘SQL 로그인’을 사용하지만 ‘Windows 인증’도 지원됩니다.  다음과 같이 필드를 채웁니다.
+3. 이 문서에서는 ‘SQL 로그인’을 사용하지만 ‘Windows 인증’도 지원됩니다. 다음과 같이 필드를 채웁니다.
 
    - **서버 이름:** 여기에 서버 이름을 입력합니다. 예를 들어 localhost를 입력합니다.
    - **인증 유형:** SQL 로그인

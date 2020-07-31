@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 4d03eef91636b454b03f20d40c7a602ea8dc3fc5
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e06355d91e73430c203711515fb9501caebfd291
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111261"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87331995"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
 
@@ -524,7 +524,7 @@ DATE_CORRELATION_OPTIMIZATION을 ON으로 설정하려면 ALTER DATABASE 문을 
 **\<db_encryption_option> ::=**      
 데이터베이스 암호화 상태를 제어합니다.
 
-ENCRYPTION { ON | **OFF** | SUSPEND | RESUME }     
+ENCRYPTION { ON \| **OFF** \| SUSPEND \| RESUME }     
 켜기     
 데이터베이스를 암호화하도록 설정합니다.
 
@@ -797,7 +797,7 @@ OFF
 
 SIZE_BASED_CLEANUP_MODE는 **nvarchar** 형식입니다.
 
-QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 현재 활성 쿼리 캡처 모드를 지정합니다. 각 모드는 특정 쿼리 캡처 정책을 정의합니다.
 
 > [!NOTE]
@@ -924,7 +924,7 @@ PAGE_VERIFY 옵션을 사용하는 경우 다음 중요 사항을 고려하십�
 
 데이터베이스에 Stretch Database를 사용하거나 사용하지 않도록 설정합니다. 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.
 
-REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scoped_credential_name> | FEDERATED_SERVICE_ACCOUNT = ON | OFF } )| **OFF**     
+REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scoped_credential_name> \| FEDERATED_SERVICE_ACCOUNT = ON \| OFF } )\| **OFF**     
 켜기     
 데이터베이스에 Stretch Database를 사용하도록 설정합니다. 추가 필수 구성 요소를 비롯한 자세한 내용은 [데이터베이스에서 Stretch Database 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)를 참조하세요.
 
@@ -1914,7 +1914,7 @@ AUTO
 
 SIZE_BASED_CLEANUP_MODE는 **nvarchar** 형식입니다.
 
-QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 현재 활성 쿼리 캡처 모드를 지정합니다. 각 모드는 특정 쿼리 캡처 정책을 정의합니다.   
 
 > [!NOTE]
@@ -2093,7 +2093,7 @@ OFF
 
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 `is_arithabort_on` 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 함수의 `IsArithmeticAbortEnabled` 속성을 검사하여 상태를 확인할 수도 있습니다.
 
-COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }     
+COMPATIBILITY_LEVEL = { 150 \| 140 \| 130 \| 120 \| 110 \| 100 }     
 자세한 내용은 [ALTER DATABASE 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.
 
 CONCAT_NULL_YIELDS_NULL { ON | **OFF** }     
@@ -2740,7 +2740,7 @@ AUTO
 
 SIZE_BASED_CLEANUP_MODE는 **nvarchar** 형식입니다.
 
-QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 현재 활성 쿼리 캡처 모드를 지정합니다.
 
 ALL     
@@ -2914,7 +2914,7 @@ OFF
 
   [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 `is_arithabort_on` 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 함수의 `IsArithmeticAbortEnabled` 속성을 검사하여 상태를 확인할 수도 있습니다.
 
-COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }     
+COMPATIBILITY_LEVEL = { 150 \| 140 \| 130 \| 120 \| 110 \| 100 }     
 자세한 내용은 [ALTER DATABASE 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.
 
 CONCAT_NULL_YIELDS_NULL { ON | **OFF** }     

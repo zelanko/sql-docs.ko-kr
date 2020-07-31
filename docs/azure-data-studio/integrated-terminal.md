@@ -1,6 +1,6 @@
 ---
 title: 통합 터미널
-description: Azure Data Studio의 통합 터미널에 대해 알아봅니다.
+description: Azure Data Studio에 통합된 터미널을 여는 방법을 알아봅니다. 통합 터미널은 별도의 터미널보다 편리할 수 있습니다.
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: azure-data-studio
@@ -9,12 +9,12 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: ecd96299a29619bdf52894b36782f6d71e3a0c19
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 127ea216dccab32a17199b2b5b9e0f3f8d577c24
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774590"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411089"
 ---
 # <a name="integrated-terminal"></a>통합 터미널
 

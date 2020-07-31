@@ -20,16 +20,16 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 67f844ff5955f51b0c878f2a3161cc4762834f74
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9125903880247cd3aece0715ffcd3a9e34b35a36
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79112256"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396187"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>워크로드 분류자 만들기(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 워크로드 관리에 사용할 분류자 개체를 만듭니다.  분류자는 분류자 문 정의에 지정된 매개 변수에 따라 들어오는 요청을 워크로드 그룹에 할당합니다.  분류자는 제출된 모든 요청마다 평가됩니다.  요청이 분류자와 일치하지 않으면 기본 작업 그룹에 할당됩니다.  기본 작업 그룹은 smallrc 리소스 클래스입니다.
 
@@ -40,7 +40,7 @@ ms.locfileid: "79112256"
   
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 CREATE WORKLOAD CLASSIFIER classifier_name  
 WITH  
     (   WORKLOAD_GROUP = 'name'  
@@ -84,7 +84,7 @@ SELECT COUNT(*)
 ```
 
 *WLM_CONTEXT*  
-요청을 분류할 수 있는 세션 컨텍스트 값을 지정합니다.  context는 nvarchar(255) 형식의 선택적 매개 변수입니다.  세션 컨텍스트 설정 요청을 제출하기 전에 `wlm_context` 변수와 동일한 변수 이름을 가진 [sp_set_session_context](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest)를 사용합니다.
+요청을 분류할 수 있는 세션 컨텍스트 값을 지정합니다.  context는 nvarchar(255) 형식의 선택적 매개 변수입니다.  세션 컨텍스트 설정 요청을 제출하기 전에 [ 변수와 동일한 변수 이름을 가진 ](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest)sp_set_session_context`wlm_context`를 사용합니다.
 
 예제:
 
@@ -118,7 +118,7 @@ CREATE WORKLOAD CLASSIFIER wcELTLoads WITH
  ,END_TIME       = '02:00' )
 ```
 
-*IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }  
+*IMPORTANCE* = { LOW \| BELOW_NORMAL \| NORMAL \| ABOVE_NORMAL \| HIGH }  
 요청의 상대적 중요도를 지정합니다.  중요도는 다음 값 중 하나입니다.
 
 - LOW

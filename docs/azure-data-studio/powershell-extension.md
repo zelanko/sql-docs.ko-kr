@@ -1,6 +1,6 @@
 ---
 title: PowerShell 확장
-description: Azure Data Studio용 PowerShell 설치 및 사용
+description: 스크립트를 작성하고 디버깅하기 위한 다양한 기능을 갖춘 Powershell 편집기 지원을 제공하는 Azure Data Studio PowerShell 확장을 설치하고 사용하는 방법을 알아봅니다.
 ms.custom: seodec18
 ms.date: 04/19/2019
 ms.reviewer: alayu, maghan, sstein
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: 5f30d6078b28026dec2c6a4eef22eb1f3279755d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a0c6a37af62422f65329ef1bbe2e66efbdc5eeb0
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85637742"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411319"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Azure Data Studio에 대한 PowerShell 편집기 지원
 

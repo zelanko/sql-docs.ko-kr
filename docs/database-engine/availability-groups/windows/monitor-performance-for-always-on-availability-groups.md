@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 951a6967e51d877efdd68b4f4a6f118c5ec1e6e7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 08ef8be56e34d7f0e62a02c5a9819f0f5c41344b
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897343"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362696"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 성능 모니터링
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -26,9 +26,8 @@ ms.locfileid: "85897343"
   
  ![가용성 그룹 데이터 동기화](media/always-onag-datasynchronization.gif "가용성 그룹 데이터 동기화")  
   
-|||||  
+|시퀀스|단계 설명|주석|유용한 메트릭|  
 |-|-|-|-|  
-|**시퀀스**|**단계 설명**|**설명**|**유용한 메트릭**|  
 |1|로그 생성|로그 데이터는 디스크에 플러시됩니다. 이 로그를 보조 복제본에 복제해야 합니다. 로그 레코드에 전송 큐를 입력합니다.|[SQL Server:데이터베이스 > 플러시된 로그 바이트\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|캡처|각 데이터베이스에 대한 로그가 캡처되어 해당 파트너 큐(데이터베이스-복제본 쌍마다 한 개)로 전송됩니다. 이 캡처 프로세스는 가용성 복제본이 연결되고 데이터 이동이 어떤 이유로든 일시 중단되지 않는 한 지속적으로 실행되며 데이터베이스-복제본 쌍이 동기화 중이거나 동기화된 것으로 표시됩니다. 캡처 프로세스가 메시지를 충분히 빠르게 스캔하여 큐에 넣을 수 없는 경우 로그 전송 큐가 축적됩니다.|[SQL Server:가용성 복제본 > 복제본에 전송된 바이트 수\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)는 해당 가용성 복제본의 큐에 저장된 모든 데이터베이스 메시지의 합계를 집계한 것입니다.<br /><br /> 주 복제본의 [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)(KB) 및 [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)(KB/sec).|  
 |3|보내기|각 데이터베이스 복제본 큐의 메시지가 큐에서 제거되고 유선을 통해 해당 보조 복제본으로 전송됩니다.|[SQL Server: 가용성 복제본 > transport\sec에 보낸 바이트 수](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
@@ -41,9 +40,8 @@ ms.locfileid: "85897343"
   
  로그는 주 복제본에 캡처된 후 다음 표와 같이 두 단계의 흐름 제어를 적용합니다.  
   
-|||||  
+|Level|게이트 수|메시지 수|유용한 메트릭|  
 |-|-|-|-|  
-|**Level**|**게이트 수**|**메시지 수**|**유용한 메트릭**|  
 |전송|가용성 복제본당 1개|8192|확장 이벤트 **database_transport_flow_control_action**|  
 |데이터베이스|가용성 데이터베이스당 1개|11200(x64)<br /><br /> 1600(x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> 확장 이벤트 **hadron_database_flow_control_action**|  
   

@@ -2,19 +2,19 @@
 title: 다중 서브넷 가용성 그룹 및 FCI 구성(Linux)
 description: SQL Server on Linux의 다중 서브넷 Always On 가용성 그룹과 FCI(장애 조치 클러스터 인스턴스)를 구성하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: vanto
-ms.date: 12/01/2017
+author: liweiSecurity
+ms.author: liweiyin
+ms.reviewer: VanMSFT
+ms.date: 07/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 3a18e668d1a62a74396530e37243d75a5a86aee2
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 5abe1d99f753e0f41ca74a0864079293800dc1df
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196971"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362992"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>다중 서브넷 Always On 가용성 그룹 및 장애 조치(failover) 클러스터 인스턴스 구성
 
@@ -57,28 +57,42 @@ Windows 환경에서 WSFC(Windows Server 장애 조치(failover) 클러스터)�
 2. 생성된 파일을 편집합니다. `<resources>` 섹션을 찾습니다. AG 또는 FCI에 대해 생성된 다양한 리소스가 표시됩니다. IP 주소와 연결된 항목을 찾습니다. 두 번째 IP 주소의 정보가 포함된 `<instance attributes>` 섹션을 기존 항목 위 또는 아래의 `<operations>` 앞에 추가합니다. 다음 구문과 유사합니다.
 
     ```xml
-    <instance attributes id="<NameForAttribute>" score="<Score>">
-        <rule id="<RuleName>" score="INFINITY">
-            <expression id="<ExpressionName>" attribute="\#uname" operation="eq" value="<NodeNameInSubnet2>" />
-        </rule>
-        <nvpair id="<NameForSecondIP>" name="ip" value="<IPAddress>"/>
-        <nvpair id="<NameForSecondIPNetmask>" name="cidr\_netmask" value="<Netmask>"/>
+    <instance attributes id="<NameForAttribute>">
+        <nvpair id="<NameForIP>" name="ip" value="<IPAddress>"/>
     </instance attributes>
     ```
     
-    여기서 *NameForAttribute*는 이 특성의 고유 이름이고, *Score*는 주 서브넷 번호보다 높은 특성에 할당된 번호이고, *RuleName*은 규칙 이름이고, *ExpressionName*은 식 이름이고, *NodeNameInSubnet2*는 다른 서브넷에 있는 노드 이름이고, *NameForSecondIP*는 두 번째 IP 주소와 연결된 이름이고, *IPAddress*는 두 번째 서브넷의 IP 주소이고, *NameForSecondIPNetmask*는 네트워크 마스크와 연결된 이름이고, *Netmask*는 두 번째 서브넷의 네트워크 마스크입니다.
+    여기서 *NameForAttribute*은 이 특성의 고유 이름이고, *NameForIP*는 IP 주소에 연결된 이름이고, *IPAddress*는 두 번째 서브넷의 IP 주소입니다.
     
     예제는 다음과 같습니다.
     
     ```xml
-    <instance attributes id="Node3-2nd-IP" score="2">
-        <rule id="Subnet2-IP" score="INFINITY">
-            <expression id="Subnet2-Node" attribute="\#uname" operation="eq" value="Node3" />
-        </rule>
-        <nvpair id="IP-In-Subnet-2" name="ip" value="192.168.2.102"/>
-        <nvpair id="Netmask-For-IP2" name="cidr\_netmask" value="24" />
+    <instance attributes id="virtualip-instance_attributes">
+        <nvpair id="virtualip-instance_attributes-ip" name="ip" value="192.168.1.102"/>
     </instance attributes>
     ```
+    
+    기본적으로, 내보낸 CIB XML 파일에는 하나의 <instance/>만 있습니다. 서브넷이 두 개 있으면 두 개의 <instance/> 항목이 있어야 합니다.
+    다음은 두 서브넷의 항목 예입니다.
+    
+    ```xml
+    <instance attributes id="virtualip-instance_attributes1">
+        <rule id="Subnet1-IP" score="INFINITY" boolean-op="or">
+            <expression id="Subnet1-Node1" attribute="#uname" operation="eq" value="Node1" />
+            <expression id="Subnet1-Node2" attribute="#uname" operation="eq" value="Node2" />
+        </rule>
+        <nvpair id="IP-In-Subnet1" name="ip" value="192.168.1.102"/>
+    </instance attributes>
+    <instance attributes id="virtualip-instance_attributes2">
+        <rule id="Subnet2-IP" score="INFINITY">
+            <expression id="Subnet2-Node1" attribute="#uname" operation="eq" value="Node3" />
+        </rule>
+        <nvpair id="IP-In-Subnet2" name="ip" value="192.168.2.102"/>
+    </instance attributes>
+    ```
+   
+   서브넷이 둘 이상의 서버를 갖는 경우 ‘boolean-op=“or”’가 사용됩니다.
+
 
 3. 수정된 CIB를 가져오고 Pacemaker를 다시 구성합니다.
 
@@ -99,6 +113,11 @@ Windows 환경에서 WSFC(Windows Server 장애 조치(failover) 클러스터)�
 ### <a name="check-and-verify-failover"></a>장애 조치(failover) 확인
 
 1. 업데이트된 구성으로 CIB가 적용된 후 Pacemaker에서 IP 주소 리소스와 연결된 DNS 이름을 ping합니다. 현재 AG 또는 FCI를 호스트하는 서브넷과 연결된 IP 주소를 반영해야 합니다.
+
 2. AG 또는 FCI를 다른 서브넷으로 장애 조치(failover)합니다.
+
 3. AG 또는 FCI가 완전히 온라인 상태가 된 후 IP 주소와 연결된 DNS 이름을 ping합니다. 두 번째 서브넷의 IP 주소를 반영해야 합니다.
+
 4. 원하는 경우 AG 또는 FCI를 원래 서브넷으로 장애 복구(failback)합니다.
+
+다음은 서브넷 3개에 대해 CIB를 구성하는 방법을 보여 주는 CSS 게시물입니다. 자세한 정보를 살펴보세요. [Configure multiple-subnet AlwaysOn Availability Group by modifying CIB](https://techcommunity.microsoft.com/t5/sql-server-support/configure-multiple-subnet-alwayson-availability-groups-by/ba-p/1544838)(CIB를 수정하여 여러 개의 서브넷을 갖는 AlwaysOn 가용성 그룹 구성)

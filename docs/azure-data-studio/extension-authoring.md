@@ -1,6 +1,6 @@
 ---
 title: 확장 만들기
-description: 확장을 만들고 Azure Data Studio에 게시하는 방법을 알아봅니다.
+description: 확장을 사용하여 Azure Data Studio에 기능을 추가할 수 있습니다. 확장을 만들고 확장 갤러리에 게시하는 방법을 알아봅니다.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 63a4c95f12aefafec97a58a186d33a5095b90dc2
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0473ac567f26748999e5718fe5f81660b0bfb7ba
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483847"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411129"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Azure Data Studio 확장을 만들어 기능 확장
 

@@ -19,15 +19,15 @@ ms.assetid: d019419e-5297-4994-97d5-e9c8fc61bbf4
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dada9214720bbe30711dbc0d722ea2904e0bb491
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0841c29b0897ed739b33e8d7e2d09227b8b495f8
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832940"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395815"
 ---
 # <a name="percentile_cont-transact-sql"></a>PERCENTILE_CONT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 열 값의 연속 분포를 기반으로 백분위수를 계산합니다. 결과는 보간되며 열의 특정 값과 같지 않을 수 있습니다.  
   
@@ -41,7 +41,9 @@ PERCENTILE_CONT ( numeric_literal )
     OVER ( [ <partition_by_clause> ] )  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *numeric_literal*  
  계산할 백분위수입니다. 값은 0.0에서 1.0 사이여야 합니다.  
   
@@ -49,7 +51,7 @@ PERCENTILE_CONT ( numeric_literal )
  정렬할 숫자 값 목록을 지정하고 백분위수를 컴퓨팅합니다. *order_by_expression*은 하나만 허용됩니다. 식은 정확하거나 근사치 숫자 형식으로 계산되어야 하며, 다른 데이터 유형은 허용되지 않습니다. 정확한 숫자 형식은 **int**, **bigint**, **smallint**, **tinyint**, **numeric**, **bit**, **decimal**, **smallmoney** 및 **money**입니다. 근사치 숫자 형식은 **float** 및 **real**입니다. 기본 정렬 순서는 오름차순입니다.  
   
  OVER **(** \<partition_by_clause> **)**  
- FROM 절이 생성한 결과 집합을 백분위수 함수가 적용되는 파티션으로 나눕니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요. OVER 구문의 \<ORDER BY 절> 및 \<rows 또는 range 절>은 PERCENTILE_CONT 함수에 지정할 수 없습니다.  
+ FROM 절이 생성한 결과 집합을 백분위수 함수가 적용되는 파티션으로 나눕니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요. OVER 구문의 \<ORDER BY clause> 및 \<rows or range clause>은 PERCENTILE_CONT 함수에 지정할 수 없습니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **float(53)**  

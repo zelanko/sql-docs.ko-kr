@@ -29,15 +29,15 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2fa18ece825ba55479eac3d5c421c6d5acba363c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7125460527a0ca6aa231d771cff8714db7891b09
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633273"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396272"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 rowstore 테이블을 클러스터형 columnstore 인덱스로 변환하거나 비클러스터형 columnstore 인덱스를를 만듭니다. OLTP 워크로드에서 실시간 운영 분석을 효율적으로 실행하거나 데이터웨어 하우징 워크로드에 대한 데이터 압축 및 쿼리 성능을 향상시키기 위해 columnstore 인덱스를 사용합니다.  
   
@@ -516,7 +516,7 @@ GO
     -   클러스터형 columnstore 인덱스로 변환할 때 인덱스에 새 이름을 지정하려는 경우 이 작업을 수행합니다. 클러스터형 인덱스를 삭제하지 않으면 새 클러스터형 columnstore 인덱스에 동일한 이름이 지정됩니다.  
   
         > [!NOTE]  
-        > 고유의 이름을 사용하면 인덱스 이름을 더 쉽게 기억할 수 있습니다. 모든 rowstore 클러스터형 인덱스는 'ClusteredIndex_\<GUID>'라는 기본 이름을 사용합니다.  
+        > 고유의 이름을 사용하면 인덱스 이름을 더 쉽게 기억할 수 있습니다. 모든 rowstore 클러스터형 인덱스는 ‘ClusteredIndex_\<GUID>’라는 기본 이름을 사용합니다.  
   
     ```sql  
     --Process for dropping a clustered index.  
