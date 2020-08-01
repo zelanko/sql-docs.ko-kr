@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d7cfca8eea2051ab8c1f070e0da9603604c5296a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: de629f6ae966f8ea64dffa01676811650ac38b43
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829944"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442638"
 ---
 # <a name="syssp_xtp_unbind_db_resource_pool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   이 시스템 프로시저는 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 메모리 사용량 추적을 위해 데이터베이스와 풀 리소스 간의 기존 바인딩을 제거합니다.  지정된 데이터베이스에 현재 바인딩된 풀이 없으면 성공이 반환됩니다. 데이터베이스가 바인딩 해제되면 메모리 최적화 개체에 대해 이전에 할당된 메모리가 이전 리소스 풀에 할당된 상태로 유지됩니다. 할당된 메모리를 해제하려면 데이터베이스를 다시 시작해야 합니다. 데이터베이스가 리소스 풀에서 바인딩 해제되면 DEFAULT 리소스 풀에 바인딩됩니다.  
   
@@ -70,7 +70,7 @@ sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'
 -   CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 액세스에 최적화 된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [데이터베이스를 리소스 풀에 바인딩하는 방법에 대한 지침은](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [sys.sp_xtp_bind_db_resource_pool&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)  
   
   

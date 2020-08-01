@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dfdfbe678e5b91d72e19a0300f9f1feec77c9d75
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b6f7e2f05d03c1bb43b184c259a5cef4b5d3b7e2
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814561"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442449"
 ---
 # <a name="syssp_xtp_bind_db_resource_pool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   지정된 리소스 풀에 지정된 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 데이터베이스를 바인딩합니다. `sys.sp_xtp_bind_db_resource_pool` 실행 전에 데이터베이스와 리소스 풀 모두 있어야 합니다.  
   
@@ -106,7 +106,7 @@ Database 'Hekaton_DB' is currently bound to a resource pool. A database must be 
  성공 시 SQL ERRORLOG에 기록되는 다음 성공 메시지가 반환됩니다  
 *ID %d의 데이터베이스와 ID %d의 리소스 풀 사이에 리소스 바인딩이 성공적으로 만들어졌습니다.*  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 A.  다음 코드 예제에서는 리소스 풀 Pool_Hekaton에 데이터베이스 Hekaton_DB를 바인딩합니다.  
   
 ```sql  
@@ -152,7 +152,7 @@ END
 -   CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 액세스에 최적화 된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [데이터베이스를 리소스 풀에 바인딩하는 방법에 대한 지침은](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [sys.sp_xtp_unbind_db_resource_pool&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

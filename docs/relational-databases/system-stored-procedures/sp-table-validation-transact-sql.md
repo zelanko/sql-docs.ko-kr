@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c63e6e535aed72684e56d5f578e52e065f8190d2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 37e03d7552f1297fe4410d68e69bdc15ddeb47ed
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834228"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442420"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   테이블 또는 인덱싱된 뷰에 관한 행 개수 또는 체크섬 정보를 반환하거나 제공된 행 개수 또는 체크섬 정보를 지정된 테이블 또는 인덱싱된 뷰와 비교합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자와 구독 데이터베이스의 구독자에서 실행됩니다. *Oracle 게시자에 대해서는 지원 되지 않습니다*.  
   

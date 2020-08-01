@@ -20,15 +20,15 @@ ms.assetid: d55ba31c-296c-419b-9c4b-c126e0a3d156
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c66bc0d20274819de2c9dc1b4a20e125e6e9044
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c7631a10e909eb0adae9d38b89c06632e2d013c2
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830817"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442456"
 ---
 # <a name="sysdm_db_xtp_nonclustered_index_stats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   sys.dm_db_xtp_nonclustered_index_stats에는 메모리 최적화 테이블의 비클러스터형 인덱스에서 작업에 대한 통계가 포함됩니다. sys.dm_db_xtp_nonclustered_index_stats에는 현재 데이터베이스의 메모리 최적화 테이블에서 각각의 비클러스터형 인덱스의 행 하나가 포함됩니다.  
   

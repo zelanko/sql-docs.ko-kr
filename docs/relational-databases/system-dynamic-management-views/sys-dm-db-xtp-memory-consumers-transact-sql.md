@@ -20,15 +20,15 @@ ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2efcff0a713c4f7f59206b484c26c4c797cd343
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fbe9d8a69a9bbe788c082cf2d684e0dd6763b1e2
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830781"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442682"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 데이터베이스 엔진에서 데이터베이스 수준 메모리 소비자를 보고합니다. 뷰는 데이터베이스 엔진에 사용되는 각 메모리 소비자에 대한 행을 반환합니다. 이 DMV를 사용 하 여 여러 내부 개체에서 메모리를 분산 하는 방법을 확인 합니다.  
   
@@ -46,10 +46,10 @@ ms.locfileid: "82830781"
 |allocated_bytes|**bigint**|이 소비자에 대해 예약된 바이트 수입니다.|  
 |used_bytes|**bigint**|이 소비자가 사용하는 바이트입니다. varheap에만 적용됩니다.|  
 |allocation_count|**int**|할당 수입니다.|  
-|partition_count|**int**|내부 전용입니다.|  
-|sizeclass_count|**int**|내부 전용입니다.|  
-|min_sizeclass|**int**|내부 전용입니다.|  
-|max_sizeclass|**int**|내부 전용입니다.|  
+|partition_count|**int**|내부적으로만 사용됩니다.|  
+|sizeclass_count|**int**|내부적으로만 사용됩니다.|  
+|min_sizeclass|**int**|내부적으로만 사용됩니다.|  
+|max_sizeclass|**int**|내부적으로만 사용됩니다.|  
 |memory_consumer_address|**varbinary**|소비자의 내부 주소입니다. 내부 전용입니다.|  
 |xtp_object_id|**bigint**|메모리 액세스에 최적화 된 테이블에 해당 하는 메모리 내 OLTP 개체 ID입니다.|  
   
@@ -67,7 +67,7 @@ ms.locfileid: "82830781"
  메모리 최적화 테이블에 columnstore 인덱스가 있는 경우 시스템은 일부 메모리를 사용 하는 일부 내부 테이블을 사용 하 여 columnstore 인덱스에 대 한 데이터를 추적 합니다. 이러한 내부 테이블 및 메모리 사용을 보여 주는 예제 쿼리에 대 한 자세한 내용은 [memory_optimized_tables_internal_attributes (transact-sql)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)를 참조 하세요.
  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ```  
 -- memory consumers (database level)  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 12400676-7f6b-4437-8fcb-ba9a33f35469
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e88ff3912b61147176b19df1c4f76267d6600f7f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dc35d5cf881880a6fdee18b80c50ffa7b7ce6933
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913569"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442430"
 ---
 # <a name="partition-function-catalog-views-transact-sql"></a>파티션 함수 카탈로그 뷰(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   이 섹션에서 다음과 같은 카탈로그 뷰를 설명합니다.  
 

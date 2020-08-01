@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 365351724f27205e7d460c757f1268d042cefc76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed041e43a211f58a34b4e2476d9e0b62ff5d162b
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305514"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442881"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini 파일(텍스트 파일 드라이버)
-텍스트 드라이버를 사용 하는 경우 텍스트 파일의 형식은 스키마 정보 파일을 사용 하 여 결정 됩니다. 스키마 정보 파일은 항상 schema.ini로 명명 되며 항상 텍스트 데이터 원본과 동일한 디렉터리에 보관 됩니다. 스키마 정보 파일은 파일의 일반 형식, 열 이름 및 데이터 형식 정보 및 기타 여러 데이터 특성에 대 한 정보를 IISAM에 제공 합니다. 고정 길이 데이터에 액세스 하려면 항상 schema.ini 파일이 필요 합니다. 텍스트 테이블에 DateTime, Currency 또는 Decimal 데이터가 포함 되어 있거나 테이블의 데이터 처리에 대 한 더 많은 제어가 필요한 경우에는 schema.ini 파일을 사용 해야 합니다.  
+텍스트 드라이버를 사용 하는 경우 텍스트 파일의 형식은 스키마 정보 파일을 사용 하 여 결정 됩니다. 스키마 정보 파일은 항상 Schema.ini 이름이 지정 되며 항상 텍스트 데이터 원본과 동일한 디렉터리에 보관 됩니다. 스키마 정보 파일은 파일의 일반 형식, 열 이름 및 데이터 형식 정보 및 기타 여러 데이터 특성에 대 한 정보를 IISAM에 제공 합니다. 고정 길이 데이터에 액세스 하려면 항상 Schema.ini 파일이 필요 합니다. 텍스트 테이블에 DateTime, Currency 또는 Decimal 데이터가 포함 되어 있거나 테이블의 데이터 처리에 대 한 더 많은 제어가 필요한 경우에는 Schema.ini 파일을 사용 해야 합니다.  
   
 > [!NOTE]  
->  텍스트 ISAM은 레지스트리에서 초기 값을 가져옵니다. 동일한 기본 파일 형식이 모든 새 텍스트 데이터 테이블에 적용 됩니다. CREATE TABLE 문으로 만든 모든 파일은 동일한 기본 형식 값을 상속 합니다 .이 값은 **테이블** 목록에서 기본> 선택 된 \< **텍스트 형식 정의** 대화 상자에서 파일 형식 값을 선택 하 여 설정 합니다. 레지스트리의 값이 schema.ini의 값과 다를 경우 레지스트리의 값을 schema.ini의 값으로 덮어씁니다.  
+>  텍스트 ISAM은 Schema.ini 아니라 레지스트리에서 초기 값을 가져옵니다. 동일한 기본 파일 형식이 모든 새 텍스트 데이터 테이블에 적용 됩니다. CREATE TABLE 문으로 만든 모든 파일은 동일한 기본 형식 값을 상속 하며,이 값은 테이블 목록에서 선택한 **텍스트 형식 정의** 대화 상자에서 파일 형식 값을 선택 하 여 설정 합니다 \<default> **Tables** . 레지스트리의 값이 Schema.ini의 값과 다를 경우 레지스트리의 값을 Schema.ini 값으로 덮어씁니다.  
   
 ## <a name="understanding-schemaini-files"></a>Schema.ini 파일 이해  
- Schema.ini 파일은 텍스트 파일에서 레코드에 대 한 스키마 정보를 제공 합니다. 각 schema.ini 항목은 테이블의 다섯 가지 특성 중 하나를 지정 합니다.  
+ Schema.ini 파일은 텍스트 파일에서 레코드에 대 한 스키마 정보를 제공 합니다. 각 Schema.ini 항목은 테이블의 다섯 가지 특성 중 하나를 지정 합니다.  
   
 -   텍스트 파일 이름입니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "81305514"
  다음 섹션에서는 이러한 특성에 대해 설명 합니다.  
   
 ## <a name="specifying-the-file-name"></a>파일 이름 지정  
- Schema.ini의 첫 번째 항목은 항상 대괄호로 묶은 텍스트 소스 파일의 이름입니다. 다음 예제에서는 샘플 .txt 파일에 대 한 항목을 보여 줍니다.  
+ Schema.ini의 첫 번째 항목은 항상 대괄호로 묶은 텍스트 소스 파일의 이름입니다. 다음 예에서는 Sample.txt 파일의 항목을 보여 줍니다.  
   
 ```  
 [Sample.txt]  
@@ -68,9 +68,9 @@ ms.locfileid: "81305514"
  각 열을 번호로 지정 하 고 고정 길이 파일의 열 이름, 데이터 형식 및 너비를 지정 해야 합니다.  
   
 > [!NOTE]  
->  Schema.ini의 **Colnameheader** 설정은 Windows 레지스트리의 **FirstRowHasNames** 설정 파일을 기준으로 파일을 재정의 합니다.  
+>  Schema.ini의 **Colnameheader** 설정은 Windows 레지스트리의 파일 **FirstRowHasNames** 설정을 재정의 합니다.  
   
- 필드의 데이터 형식을 확인할 수도 있습니다. **MaxScanRows** 옵션을 사용 하 여 열 유형을 결정할 때 검색할 행 수를 지정할 수 있습니다. **MaxScanRows** 를 0으로 설정 하면 전체 파일이 검색 됩니다. Schema.ini의 **MaxScanRows** 설정은 파일 별로 Windows 레지스트리의 설정을 재정의 합니다.  
+ 필드의 데이터 형식을 확인할 수도 있습니다. **MaxScanRows** 옵션을 사용 하 여 열 유형을 결정할 때 검색할 행 수를 지정할 수 있습니다. **MaxScanRows** 를 0으로 설정 하면 전체 파일이 검색 됩니다. Schema.ini의 **MaxScanRows** 설정은 Windows 레지스트리, 파일 별로 파일의 설정을 재정의 합니다.  
   
  다음 항목은 Microsoft Jet가 테이블의 첫 번째 행에 있는 데이터를 사용 하 여 필드 이름을 확인 하 고 전체 파일을 검사 하 여 사용 되는 데이터 형식을 확인 해야 함을 나타냅니다.  
   
@@ -79,7 +79,7 @@ ColNameHeader=True
 MaxScanRows=0  
 ```  
   
- 다음 항목은 문자 구분 파일의 경우 선택 사항이 고 고정 길이 파일에 필요한 열 번호 (**Col**_n_) 옵션을 사용 하 여 테이블의 필드를 지정 합니다. 이 예에서는 두 필드, 10 자 CustomerNumber 텍스트 필드 및 30 자 CustomerName 텍스트 필드에 대 한 schema.ini 항목을 보여 줍니다.  
+ 다음 항목은 문자 구분 파일의 경우 선택 사항이 고 고정 길이 파일에 필요한 열 번호 (**Col**_n_) 옵션을 사용 하 여 테이블의 필드를 지정 합니다. 이 예에서는 10 자의 CustomerNumber 텍스트 필드와 30 자 CustomerName 텍스트 필드의 두 필드에 대 한 Schema.ini 항목을 보여 줍니다.  
   
 ```  
 Col1=CustomerNumber Text Width 10  
@@ -90,7 +90,7 @@ Col2=CustomerName Text Width 30
   
 ```  
   
-n=ColumnNametype [#]  
+n=ColumnName type [Width] [#]  
 ```  
   
 ## <a name="remarks"></a>설명  
@@ -99,12 +99,12 @@ n=ColumnNametype [#]
 |매개 변수|Description|  
 |---------------|-----------------|  
 |*ColumnName*|열의 텍스트 이름입니다. 열 이름에 공백이 포함 된 경우에는 큰따옴표로 묶어야 합니다.|  
-|*type*|데이터 형식은 다음과 같습니다.<br /><br /> **Microsoft Jet 데이터 형식**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> long<br /><br /> Currency<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> Text<br /><br /> 메모<br /><br /> **ODBC 데이터 형식** Char (텍스트와 동일)<br /><br /> Float (Double과 같음)<br /><br /> Integer (Short와 동일)<br /><br /> 이상 문자 (메모와 동일)<br /><br /> 날짜 *날짜 형식*|  
-|**너비**|리터럴 문자열 값 `Width`입니다. 다음 숫자가 열 너비를 지정 함을 나타냅니다. 문자 구분 파일의 경우 선택 사항이 며 고정 길이 파일에 필요 합니다.|  
+|*type*|데이터 형식은 다음과 같습니다.<br /><br /> **Microsoft Jet 데이터 형식**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Currency<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> 텍스트<br /><br /> 메모<br /><br /> **ODBC 데이터 형식** Char (텍스트와 동일)<br /><br /> Float (Double과 같음)<br /><br /> Integer (Short와 동일)<br /><br /> 이상 문자 (메모와 동일)<br /><br /> 날짜 *날짜 형식*|  
+|**Width**|리터럴 문자열 값 `Width` 입니다. 다음 숫자가 열 너비를 지정 함을 나타냅니다. 문자 구분 파일의 경우 선택 사항이 며 고정 길이 파일에 필요 합니다.|  
 |*#*|열의 너비를 지정 하는 정수 값입니다 ( **width** 가 지정 된 경우 필수).|  
   
 ## <a name="selecting-a-character-set"></a>문자 집합 선택  
- ANSI와 OEM의 두 문자 집합 중에서 선택할 수 있습니다. Schema.ini의 **CharacterSet** 설정은 파일 별로 Windows 레지스트리의 설정을 재정의 합니다. 다음 예제에서는 문자 집합을 ANSI로 설정 하는 schema.ini 항목을 보여 줍니다.  
+ ANSI와 OEM의 두 문자 집합 중에서 선택할 수 있습니다. Schema.ini의 **CharacterSet** 설정은 Windows 레지스트리, 파일 별로 파일의 설정을 재정의 합니다. 다음 예제에서는 문자 집합을 ANSI로 설정 하는 Schema.ini 항목을 보여 줍니다.  
   
 ```  
 CharacterSet=ANSI  
@@ -122,7 +122,7 @@ CharacterSet=ANSI
 |**CurrencySymbol**|텍스트 파일의 통화 값에 사용할 수 있는 통화 기호를 나타냅니다. 예로는 달러 기호 ($) 및 Dm이 있습니다.|  
 |**CurrencyPosFormat**|는 다음 값 중 하나로 설정할 수 있습니다.<br /><br /> -구분 없이 통화 기호 접두사 ($1)<br />-구분 없이 통화 기호 접미사 ($1)<br />-문자 구분이 하나인 통화 기호 접두사 ($1)<br />-문자 구분이 하나인 통화 기호 접미사 ($1)|  
 |**CurrencyDigits**|통화 금액의 소수 부분에 사용 되는 자릿수를 지정 합니다.|  
-|**CurrencyNegFormat**|다음 값 중 하나일 수 있습니다.<br /><br /> -($1)<br />--$1<br />-$-1<br />-$1-<br />-($1)<br />--$1<br />-1-$<br />-$1-<br />--$1<br />--$1<br />-$1-<br />-$1-<br />-$-1<br />-1-$<br />-($1)<br />-($1)<br /><br /> 이 예제는 달러 기호를 보여 주지만 실제 프로그램에서 적절 한 **CurrencySymbol** 값으로 바꾸어야 합니다.|  
+|**CurrencyNegFormat**|다음 값 중 하나를 사용할 수 있습니다.<br /><br /> -($1)<br />--$1<br />-$-1<br />-$1-<br />-($1)<br />--$1<br />-1-$<br />-$1-<br />--$1<br />--$1<br />-$1-<br />-$1-<br />-$-1<br />-1-$<br />-($1)<br />-($1)<br /><br /> 이 예제는 달러 기호를 보여 주지만 실제 프로그램에서 적절 한 **CurrencySymbol** 값으로 바꾸어야 합니다.|  
 |**CurrencyThousandSymbol**|텍스트 파일의 통화 값을 천 단위로 구분 하는 데 사용할 수 있는 단일 문자 기호를 나타냅니다.|  
 |**CurrencyDecimalSymbol**|통화 금액의 소수 부분에서 전체를 구분 하는 데 사용 되는 단일 문자로 설정할 수 있습니다.|  
   

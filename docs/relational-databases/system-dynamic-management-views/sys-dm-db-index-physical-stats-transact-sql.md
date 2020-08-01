@@ -21,12 +21,12 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e1ebbe98efecd97cb7ddda6284d4a28176e8ec1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7bceaef8321248bc29be2faad3886319a9267391
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112761"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472213"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,33 +55,33 @@ sys.dm_db_index_physical_stats (
 ```  
   
 ## <a name="arguments"></a>인수  
- *database_id* | NULL | 0 | 기본  
+ *database_id* \| NULL \| 0 \| 기본값  
  데이터베이스의 ID입니다. *database_id* 은 **smallint**입니다. 올바른 입력은 데이터베이스의 ID 번호, NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 데이터베이스에 대한 정보를 반환하려면 NULL을 지정합니다. *Database_id*에 대해 null을 지정 하는 경우 *object_id*, *index_id*및 *partition_number*에 대해서도 null을 지정 해야 합니다.  
   
  [DB_ID](../../t-sql/functions/db-id-transact-sql.md) 기본 제공 함수를 지정할 수 있습니다. 데이터베이스 이름을 지정하지 않고 DB_ID를 사용하는 경우 현재 데이터베이스의 호환성 수준은 90 이상이어야 합니다.  
   
- *object_id* | NULL | 0 | 기본  
+ *object_id* \| NULL \| 0 \| 기본값  
  인덱스가 있는 테이블 또는 뷰의 개체 ID입니다. *object_id* 는 **int**입니다.  
   
  올바른 입력은 테이블 및 뷰의 ID 번호, NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 유효한 입력은 service broker 큐 이름 또는 큐 내부 테이블 이름을 포함 합니다. 모든 개체, 모든 인덱스 등의 기본 매개 변수를 적용 하는 경우 모든 큐에 대 한 조각화 정보는 결과 집합에 포함 됩니다.  
   
  지정된 데이터베이스에 있는 모든 테이블 및 뷰에 대한 정보를 반환하려면 NULL을 지정합니다. *Object_id*에 대해 null을 지정 하는 경우 *index_id* 및 *partition_number*에 대해서도 null을 지정 해야 합니다.  
   
- *index_id* | 0 | NULL | -1 | 기본  
+ *index_id* \| 0 \| NULL \| -1 \| 기본값  
  인덱스의 ID입니다. *index_id* 은 **int**입니다. 유효한 입력은 인덱스의 ID 번호, *object_id* 가 힙, NULL,-1 또는 DEFAULT 인 경우 0입니다. 기본값은 -1입니다. 이 컨텍스트에서 NULL,-1 및 DEFAULT는 동일한 값입니다.  
   
  기본 테이블 또는 뷰에 대한 모든 인덱스 정보를 반환하려면 NULL을 지정합니다. *Index_id*에 대해 null을 지정 하는 경우 *partition_number*에 대해서도 null을 지정 해야 합니다.  
   
- *partition_number* | NULL | 0 | 기본  
+ *partition_number* \| NULL \| 0 \| 기본값  
  개체의 파티션 번호입니다. *partition_number* 은 **int**입니다. 유효한 입력은 인덱스 또는 힙의 *partion_number* , NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다.  
   
  소유하는 개체의 모든 파티션에 대한 정보를 반환하려면 NULL을 지정합니다.  
   
  *partition_number* 은 1부터 사용 됩니다. 분할 되지 않은 인덱스 또는 힙의 *partition_number* 1로 설정 되어 있습니다.  
   
- *모드* | NULL | 기본  
+ *모드* \| NULL \| 기본값  
  모드 이름입니다. *모드* 통계를 얻는 데 사용 되는 검색 수준을 지정 합니다. *모드* 는 **sysname**입니다. 유효한 입력은 DEFAULT, NULL, LIMITED, SAMPLED 또는 DETAILED입니다. 기본값(NULL)은 LIMITED입니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  

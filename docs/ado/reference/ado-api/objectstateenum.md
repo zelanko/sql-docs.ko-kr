@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0b69deb64cc4ea04c007fd3d3328cb4154cc3e8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b6b8c5c9a593177155f2f22d7dba4e38515e0dce
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242620"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472609"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 개체가 열려 있는지 또는 닫혀 있는지, 데이터 원본에 연결 하 고, 명령을 실행 하거나, 데이터를 검색할지를 지정 합니다.  
   
-|상수|값|설명|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adStateClosed**|0|개체가 닫혀 있음을 나타냅니다.|  
 |**Adstateopen then**|1|개체가 열려 있음을 나타냅니다.|  
@@ -45,10 +45,6 @@ ms.locfileid: "87242620"
 |AdoEnums|  
   
 ## <a name="applies-to"></a>적용 대상  
-  
-|||  
-|-|-|  
-|||
 
 :::row:::
     :::column:::

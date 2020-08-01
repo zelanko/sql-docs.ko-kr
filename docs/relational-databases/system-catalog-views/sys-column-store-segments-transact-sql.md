@@ -19,24 +19,24 @@ helpviewer_keywords:
 ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b8d476e2f21693254eac5fc4712d53ac854e74ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a9b177fe44c3f94e77e2dc1f770d3c617b80c6dd
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139997"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442753"
 ---
 # <a name="syscolumn_store_segments-transact-sql"></a>sys.column_store_segments(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 Columnstore 인덱스의 각 열 세그먼트에 대해 하나의 행을 반환 합니다. 행 그룹 당 열 마다 하나의 열 세그먼트가 있습니다. 예를 들어 10 개의 행 그룹 및 34 열이 있는 테이블은 340 행을 반환 합니다. 
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|파티션 ID를 나타냅니다. 데이터베이스 내에서 고유합니다.|  
 |**hobt_id**|**bigint**|이 Columnstore 인덱스를 가진 테이블의 B-트리 인덱스(hobt) 또는 힙의 ID입니다.|  
 |**column_id**|**int**|Columnstore 열의 ID입니다.|  
-|**segment_id**|**int**|행 그룹의 ID입니다. 이전 버전과의 호환성을 위해 행 그룹 ID 인 경우에도 열 이름은 segment_id 계속 호출 됩니다. Hobt_id, partition_id, column_id> <\<segment_id>를 사용 하 여 세그먼트를 고유 하 게 식별할 수 있습니다.|  
+|**segment_id**|**int**|행 그룹의 ID입니다. 이전 버전과의 호환성을 위해 행 그룹 ID 인 경우에도 열 이름은 segment_id 계속 호출 됩니다. <segment_id>를 사용 하 여 세그먼트를 고유 하 게 식별할 수 있습니다 \<hobt_id, partition_id, column_id> .|  
 |**version**|**int**|열 세그먼트 형식의 버전입니다.|  
 |**encoding_type**|**int**|해당 세그먼트에 사용 되는 인코딩 유형입니다.<br /><br /> 1 = VALUE_BASED-사전 없이 문자열이 아닌/이진 (일부 내부 변형이 있는 4와 매우 유사)<br /><br /> 2 = VALUE_HASH_BASED-사전에 공통 값이 있는 문자열이 아닌/이진 열<br /><br /> 3 = STRING_HASH_BASED-사전에 공통 값이 있는 문자열/이진 열<br /><br /> 4 = STORE_BY_VALUE_BASED-사전이 없는 문자열/이진<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED-사전 없는 문자열/이진<br /><br /> 모든 인코딩은 가능 하면 비트 압축 및 실행 길이 인코딩을 활용 합니다.|  
 |**row_count**|**int**|행 그룹의 행 수입니다.|  
@@ -72,10 +72,10 @@ GO
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;개체 카탈로그 뷰](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [개체 카탈로그 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server 시스템 카탈로그 쿼리 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [&#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys.columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [all_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [computed_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [Columnstore 인덱스 가이드](~/relational-databases/indexes/columnstore-indexes-overview.md)    

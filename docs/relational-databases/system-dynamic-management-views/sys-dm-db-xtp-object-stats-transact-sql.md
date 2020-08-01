@@ -20,15 +20,15 @@ ms.assetid: 07300b59-3cab-4d3e-8138-5ea8f584f88f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf3997a3c0f8ed4c51651e3d32311b0c43725d59
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a01a1d5bb61e72a00e7a140e5f6767fab8af57d7
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830789"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442830"
 ---
 # <a name="sysdm_db_xtp_object_stats-transact-sql"></a>sys.dm_db_xtp_object_stats(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   마지막 데이터베이스 다시 시작 이후 각 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 개체에서 수행된 작업의 영향을 받는 행 수를 보고합니다. 트랜잭션이 커밋되거나 롤백되는지 여부에 관계없이 작업이 실행될 때 통계가 업데이트됩니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "82830789"
 |row_delete_attempts|**bigint**|마지막 데이터베이스 다시 시작 이후 커밋된 트랜잭션 및 중단된 트랜잭션 모두에 의해 테이블에서 삭제된 행 수입니다.|  
 |write_conflicts|**bigint**|마지막 데이터베이스 다시 시작 이후 발생한 쓰기 충돌 수입니다.|  
 |unique_constraint_violations|**bigint**|마지막 데이터베이스 다시 시작 이후 발생한 UNIQUE 제약 조건 위반 수입니다.|  
-|object_address|**varbinary(8)**|내부 전용입니다.|  
+|object_address|**varbinary(8)**|내부적으로만 사용됩니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  현재 데이터베이스에 대해 VIEW DATABASE STATE 권한이 필요합니다.  

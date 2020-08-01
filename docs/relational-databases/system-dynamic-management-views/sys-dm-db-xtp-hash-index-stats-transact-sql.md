@@ -20,15 +20,15 @@ ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 754c254a208adbb40a2efc44934bbcc40608ec85
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d27f44c0d0bcec96d6d4c0d5f4da63038485a1f7
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830800"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442563"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   이러한 통계는 버킷 수를 이해하고 조정하는 데 유용합니다. 또한 인덱스 키에 중복이 많은 경우 사례를 검색하는 데 사용할 수 있습니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "82830800"
   
 자세한 내용은 [메모리 액세스에 최적화 된 테이블의 해시 인덱스](../../relational-databases/sql-server-index-design-guide.md#hash_index)를 참조 하세요.  
   
-|열 이름|형식|설명|  
+|열 이름|Type|Description|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|부모 테이블의 개체 ID입니다.|  
 |xtp_object_id|**bigint**|메모리 액세스에 최적화 된 테이블의 ID입니다.|  
@@ -59,7 +59,7 @@ ms.locfileid: "82830800"
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 VIEW DATABASE STATE 권한이 필요합니다.  
 
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-troubleshooting-hash-index-bucket-count"></a>A. 해시 인덱스 버킷 수 문제 해결
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7d1f047fed74a212358ef7c1af61034d021661ef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f96efdec6878691c4c3b3a3efbeb1cd2d6324f3d
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892590"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472669"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  다음 표에서는 추적에서 추가 또는 제거될 수 있는 이벤트를 보여 줍니다.  
   
-|이벤트 번호|이벤트 이름|설명|  
+|이벤트 번호|이벤트 이름|Description|  
 |------------------|----------------|-----------------|  
 |0-9|예약됨|예약됨|  
 |10|RPC:Completed|RPC(원격 프로시저 호출)가 완료되면 발생합니다.|  
@@ -240,7 +240,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  다음 표에서는 이벤트에 추가될 수 있는 열을 나열합니다.  
   
-|열 번호|열 이름|설명|  
+|열 번호|열 이름|Description|  
 |-------------------|-----------------|-----------------|  
 |1|**TextData**|추적에서 캡처한 이벤트 클래스에 의존하는 텍스트 값입니다.|  
 |2|**BinaryData**|추적에서 캡처된 이벤트 클래스에 의존하는 이진 값입니다.|  
@@ -254,16 +254,16 @@ sp_trace_setevent [ @traceid = ] trace_id
 |10|**ApplicationName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 애플리케이션의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|  
 |11|**LoginName**|클라이언트의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름입니다.|  
 |12|**SPID**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 클라이언트와 관련된 프로세스에 할당한 서버 프로세스 ID입니다.|  
-|13|**Duration**|이벤트에 의해 사용된 경과 시간(마이크로초)입니다. 이 데이터 열은 Hash Warning 이벤트로 채워지지 않습니다.|  
+|13|**기간**|이벤트에 의해 사용된 경과 시간(마이크로초)입니다. 이 데이터 열은 Hash Warning 이벤트로 채워지지 않습니다.|  
 |14|**StartTime**|사용 가능한 경우 이벤트가 시작된 시간입니다.|  
 |15|**EndTime**|이벤트가 종료된 시간입니다. 이 열은 **SQL:BatchStarting** 또는 **SP:Starting**과 같은 시작하는 이벤트 클래스의 경우 채워지지 않습니다. 또한 **해시 경고** 이벤트로 채워지지 않습니다.|  
-|16|**나타납니다**|이벤트 대신 서버에서 수행한 논리적 디스크 읽기 수입니다. 이 열은 **Lock: Released** 이벤트로 채워지지 않습니다.|  
-|17|**쓰므로**|이벤트 대신 서버에서 수행한 물리적 디스크 쓰기 수입니다.|  
+|16|**Reads**|이벤트 대신 서버에서 수행한 논리적 디스크 읽기 수입니다. 이 열은 **Lock: Released** 이벤트로 채워지지 않습니다.|  
+|17|**Writes**|이벤트 대신 서버에서 수행한 물리적 디스크 쓰기 수입니다.|  
 |18|**CPU**|이벤트에 의해 사용된 CPU 시간(밀리초)입니다.|  
 |19|**권한**|보안 감사에 의해 사용된 사용 권한의 비트맵을 나타냅니다.|  
 |20|**심각도**|예외적인 심각도입니다.|  
 |21|**EventSubClass**|이벤트 하위 클래스의 유형입니다. 이 데이터 열은 모든 이벤트 클래스에 대해 채워지지는 않습니다.|  
-|22|**ObjectID**|시스템이 할당한 개체의 ID입니다.|  
+|22|**Exchange Spill**|시스템이 할당한 개체의 ID입니다.|  
 |23|**Success**|감사에 사용한 권한 사용 시도의 성공입니다.<br /><br /> **1** = 성공**0** = 실패|  
 |24|**IndexID**|이벤트에 의해 영향 받는 개체의 인덱스 ID입니다. 개체의 인덱스 ID를 확인하려면 **sysindexes** 시스템 테이블의 **indid** 열을 사용하십시오.|  
 |25|**IntegerData**|추적에서 캡처된 이벤트 클래스에 의존하는 정수 값입니다.|  
@@ -290,7 +290,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |46|**ProviderName**|OLE DB Provider의 이름입니다.|  
 |47|**MethodName**|OLE DB 메서드의 이름입니다.|  
 |48|**RowCounts**|일괄 처리의 행 수입니다.|  
-|49|**요청**|문을 포함하는 요청의 ID입니다.|  
+|49|**RequestID**|문을 포함하는 요청의 ID입니다.|  
 |50|**XactSequence**|현재 트랜잭션을 설명하는 토큰입니다.|  
 |51|**EventSequence**|이 이벤트의 시퀀스 번호입니다.|  
 |52|**BigintData1**|**bigint** 값-추적에서 캡처된 이벤트 클래스에 따라 달라 집니다.|  
@@ -298,11 +298,11 @@ sp_trace_setevent [ @traceid = ] trace_id
 |54|**GUID**|추적에서 캡처된 이벤트 클래스에 따라 달라지는 GUID 값입니다.|  
 |55|**IntegerData2**|추적에서 캡처된 이벤트 클래스에 따라 달라지는 정수 값입니다.|  
 |56|**ObjectID2**|관련 개체 또는 엔터티의 ID입니다(사용 가능한 경우).|  
-|57|**Type**|추적에서 캡처된 이벤트 클래스에 따라 달라지는 정수 값입니다.|  
+|57|**형식**|추적에서 캡처된 이벤트 클래스에 따라 달라지는 정수 값입니다.|  
 |58|**OwnerID**|잠금을 소유하는 개체의 유형입니다. 잠금 이벤트 전용입니다.|  
 |59|**ParentName**|개체가 포함된 스키마의 이름입니다.|  
 |60|**IsSystem**|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다.<br /><br /> **1** = 시스템<br /><br /> **0** = 사용자|  
-|61|**Offset**|저장 프로시저나 일괄 처리 내에 있는 문의 시작 오프셋입니다.|  
+|61|**이동**|저장 프로시저나 일괄 처리 내에 있는 문의 시작 오프셋입니다.|  
 |62|**SourceDatabaseID**|개체의 원본이 있는 데이터베이스의 ID입니다.|  
 |63|**Sqlhandle 대해**|임시 쿼리 또는 데이터베이스의 텍스트 및 SQL 개체의 개체 ID를 기반으로 하는 64비트 해시입니다. 이 값을 **sys. dm_exec_sql_text ()** 에 전달 하 여 연결 된 sql 텍스트를 검색할 수 있습니다.|  
 |64|**SessionLoginName**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **을 사용하여** 에 연결하고 **Login2**로 문을 실행하는 경우 **SessionLoginName** 은 **Login1**을 표시하고 **LoginName** 은 **Login2**를 표시합니다. 이 데이터 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|  
@@ -316,7 +316,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  다음 표에서는 및 ** \@ columnid**간의 ** \@ 상호 작용을 보여** 줍니다.  
   
-|@on|@columnid|결과|  
+|\@sign-on|\@columnid|결과|  
 |---------|---------------|------------|  
 |ON(**1**)|NULL|이벤트를 ON으로 설정합니다.<br /><br /> 모든 열은 지워집니다.|  
 ||NOT NULL|지정한 이벤트에 대한 열을 ON으로 설정합니다.|  

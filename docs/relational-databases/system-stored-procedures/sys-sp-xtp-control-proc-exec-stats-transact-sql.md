@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f5119808-76a1-4522-8529-9e02ee39adcb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 940caad59adf191e0ed1fe550707788de820c6b7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9d011be97c90f156b8cd26cfb8fcc85963b75161
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814562"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442397"
 ---
 # <a name="syssp_xtp_control_proc_exec_stats-transact-sql"></a>sys.sp_xtp_control_proc_exec_stats(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   인스턴스의 고유하게 컴파일된 저장 프로시저에 대한 통계 수집을 설정합니다.  
   
@@ -49,7 +49,7 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
 ## <a name="return-code"></a>반환 코드  
  성공의 경우 0이고, 실패의 경우 0이 아닙니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  고정 sysadmin 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="code-samples"></a>코드 샘플  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bb0a38e0-4eb2-49bf-bba8-750fb706d06e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9605bf0e316a562049b7c93e86414df2e983fbf9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e8fb39de4ea879fa3713761ff43d8ae31f854f9b
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918029"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442846"
 ---
 # <a name="resource-governor-catalog-views-transact-sql"></a>리소스 관리자 카탈로그 뷰(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   이 섹션에서는 다음 카탈로그 뷰에 대한 리소스 관리자 정보를 다룹니다. 이러한 뷰는 성능 및 유틸리티를 위해 최적화됩니다. 가능하면 이러한 카탈로그 뷰를 사용하여 리소스 관리자 메타데이터에 액세스합니다.  
 

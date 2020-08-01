@@ -1,6 +1,6 @@
 ---
 title: Data Migration Assistant 모범 사례
-description: Data Migration Assistant를 사용 하 여 SQL Server 데이터베이스 마이그레이션에 대 한 모범 사례를 알아봅니다.
+description: 설치, 평가 및 마이그레이션에 대 한 정보를 포함 하 여 Data Migration Assistant를 사용 하 여 SQL Server 데이터베이스를 마이그레이션하는 모범 사례를 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: fbfc995b3271c9618cd773d42d3e8154958d6af5
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 1d9dc4c4030330e7065d6f8531af967dcf88baa3
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886050"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472369"
 ---
-# <a name="best-practices-for-running-data-migration-assistant"></a>Data Migration Assistant 실행 모범 사례
+# <a name="best-practices-for-running-data-migration-assistant"></a>Data Migration Assistant 실행을 위한 모범 사례
 이 문서에서는 설치, 평가 및 마이그레이션에 대 한 몇 가지 모범 사례 정보를 제공 합니다.
 
 ## <a name="installation"></a>설치

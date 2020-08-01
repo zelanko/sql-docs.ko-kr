@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a8c2fb81-9644-4943-9391-fa62b37056de
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 43d1618b50e74cd6a7b0e24089ecbe145e4fce28
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 114958d9701b784ef3c8a4dd950e6cd62a0ca9ba
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920024"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442621"
 ---
 # <a name="extended-events-catalog-views-transact-sql"></a>확장 이벤트 카탈로그 뷰(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   이 섹션에서는 SQL Server 확장 이벤트에 대한 다음 카탈로그 뷰에 대해 다룹니다.  
 

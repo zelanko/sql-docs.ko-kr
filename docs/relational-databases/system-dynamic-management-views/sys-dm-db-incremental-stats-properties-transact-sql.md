@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1f958e122277e28665b10ff27be4c0224574690d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 20e4f7f015cc5d1ced1802e192c36f6c86471f0b
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820921"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442924"
 ---
 # <a name="sysdm_db_incremental_stats_properties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 지정한 데이터베이스 개체(테이블)에 대한 증분 통계 속성을 반환합니다. `sys.dm_db_incremental_stats_properties` 사용은(파티션 번호 포함) 비증분 통계에 사용되는 `sys.dm_db_stats_properties` 와 비슷합니다. 
   
@@ -59,7 +59,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
 |unfiltered_rows|**bigint**|필터링된 통계의 필터 식을 적용하기 전 테이블의 전체 행 수입니다. 통계가 필터링되지 않으면 unfiltered_rows는 행 열에서 반환된 값과 동일합니다.|  
 |modification_counter|**bigint**|통계를 마지막으로 업데이트한 이후 선행 통계 열(히스토그램이 작성된 열)의 총 수정 개수입니다.<br /><br /> 이 열은 메모리 최적화 테이블에 대한 정보를 포함하지 않습니다.|  
   
-## <a name="remarks"></a><a name="Remarks"></a> 주의 사항  
+## <a name="remarks"></a><a name="Remarks"></a> 주의  
  `sys.dm_db_incremental_stats_properties`는 다음과 같은 경우 빈 행 집합을 반환합니다.  
   
 -   `object_id` 또는 `stats_id`가 NULL입니다.   
@@ -74,7 +74,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
 ## <a name="permissions"></a>사용 권한  
  사용자가 통계 열에 대한 select 권한이 있거나 테이블을 소유하거나 `sysadmin` 고정 서버 역할, `db_owner` 고정 데이터베이스 역할, 또는 `db_ddladmin` 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 
 ### <a name="a-simple-example"></a>A. 간단한 예
 다음 예제에서는 `PartitionTable` 분할된 테이블 및 인덱스 만들기 [항목에서 설명하는](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)테이블에 대한 통계를 반환합니다.
@@ -86,8 +86,8 @@ SELECT * FROM sys.dm_db_incremental_stats_properties (object_id('PartitionTable'
 추가 사용 제안 방법은  [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)를 참조하세요.
   
 ## <a name="see-also"></a>참고 항목  
- [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [sys.debug &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
+ [DBCC SHOW_STATISTICS&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+ [sys.stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [Transact-sql&#41;&#40;개체 관련 동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
  [sys. dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   

@@ -20,15 +20,15 @@ ms.assetid: 5c1a0a7a-e851-4b6f-8dfd-c9655fbf5a51
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d83894ed9ca328db945201c0078c1f560ee2e618
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b5bfd506f1baa20a4edd36701e37c78847881089
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830747"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442867"
 ---
 # <a name="sysdm_db_xtp_transactions-transact-sql"></a>sys.dm_db_xtp_transactions(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   메모리 OLTP 데이터베이스 엔진의 활성 트랜잭션을 보고합니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "82830747"
 |commit_dependency_total_attempt_count|**int**|내부적으로만 사용됩니다.|  
 |scan_area|**int**|내부적으로만 사용됩니다.|  
 |scan_area_desc|**nvarchar**|내부적으로만 사용됩니다.|  
-|scan_location|**int**|내부 전용입니다.|  
+|scan_location|**int**|내부적으로만 사용됩니다.|  
 |dependent_1_address|**varbinary(8)**|내부적으로만 사용됩니다.|  
 |dependent_2_address|**varbinary(8)**|내부적으로만 사용됩니다.|  
 |dependent_3_address|**varbinary(8)**|내부적으로만 사용됩니다.|  

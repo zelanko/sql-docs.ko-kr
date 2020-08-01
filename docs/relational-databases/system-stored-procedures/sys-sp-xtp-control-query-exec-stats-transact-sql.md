@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60d5967417698bc1970f02658fc28e8659201089
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7f451e3d6083a32db87c7e453413cf6b318e739f
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814494"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442657"
 ---
 # <a name="syssp_xtp_control_query_exec_stats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   인스턴스에 대해 고유하게 컴파일된 모든 저장 프로시저 또는 고유하게 컴파일된 특정 저장 프로시저에 대해 쿼리별 통계 컬렉션을 설정합니다.  
   
@@ -59,7 +59,7 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
 ## <a name="return-code"></a>반환 코드  
  성공의 경우 0이고, 실패의 경우 0이 아닙니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  고정 sysadmin 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="code-sample"></a>코드 예제  

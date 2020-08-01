@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 1d8c604e-4361-4846-8661-14cfd1c44f63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 50766acbfa3f626061f71cf312d904dc350bc61b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a204858e7d2fcf78505e41de95d5301b2382b23a
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918447"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442476"
 ---
 # <a name="sysserver_event_session_actions-transact-sql"></a>sys.server_event_session_actions(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   이벤트 세션의 각 이벤트의 동작에 대해 한 행을 반환합니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "86918447"
 ## <a name="remarks"></a>설명  
  이 뷰는 다음과 같은 관계 카디널리티를 가집니다.  
   
-| 보낸 사람 | 수행할 작업 | 관계 |
+| From | 받는 사람 | 관계 |
 | ---- | -- | ------------ |
 |sys.server_event_session_actions.event_session_id|sys.sys.server_event_sessions.event_session_id|다 대 일|  
 |sys.server_event_session_actions.event_id<br /><br /> sys.server_event_session_actions.event_session_id|sys.server_event_session_events.event_session_id<br /><br /> sys.server_event_session_events.event_id|다 대 일|  

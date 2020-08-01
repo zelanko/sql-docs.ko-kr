@@ -20,15 +20,15 @@ ms.assetid: bbc9704e-158e-4d32-b693-f00dce31cd2f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fed687f9a0f29359e60c05439e36853504e1ab6b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e0edb4d46ae47b4c45dc01f7d2e33f856424352
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830819"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442574"
 ---
 # <a name="sysdm_db_xtp_gc_cycle_stats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   하나 이상의 행을 삭제한 커밋된 트랜잭션의 현재 상태를 출력합니다. 마지막 가비지 수집 주기 이후 유휴 가비지 수집 스레드는 매분 또는 커밋된 DML 트랜잭션 수가 내부 임계값을 초과할 때 실행됩니다. 가비지 수집 주기의 일부로 세대와 관련된 하나 이상의 큐에 커밋된 트랜잭션을 이동합니다. 유효하지 않은 버전을 만든 트랜잭션은 다음과 같이 16개 세대 간에 16개 트랜잭션 단위로 그룹화됩니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "82830819"
  자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  
   
   
-|열 이름|형식|설명|  
+|열 이름|Type|Description|  
 |-----------------|----------|-----------------|  
 |cycle_id|**bigint**|가비지 수집 주기에 대한 고유 식별자입니다.|  
 |ticks_at_cycle_start|**bigint**|주기가 시작된 시간의 틱입니다.|  

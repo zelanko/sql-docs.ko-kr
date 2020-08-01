@@ -11,11 +11,12 @@ ms.assetid: 38d775ee-1fe1-4820-88c6-02b2f875a66b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83f55f7ebef39866b94606151ea6e8c8d3ab2e83
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 67bb763d2896ef2156c442d82c29440d2cf4451b
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003017"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472643"
 ---
 # <a name="sysdatabase_event_session_targets-azure-sql-database"></a>sys.database_event_session_targets(Azure SQL Database)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -34,15 +35,14 @@ ms.locfileid: "86003017"
 |패키지|**sysname**|이벤트 대상이 포함된 이벤트 패키지의 이름입니다. Null을 허용하지 않습니다.|  
 |모듈(module)|**sysname**|이벤트 대상이 포함된 모듈의 이름입니다. Null을 허용하지 않습니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 VIEW DATABASE STATE 권한이 필요합니다.  
   
 ## <a name="remarks"></a>설명  
  이 뷰는 다음과 같은 관계 카디널리티를 가집니다.  
   
-||||  
+|From|받는 사람|관계|  
 |-|-|-|  
-|시작|대상|관계|  
 |database_event_session_targets. event_session_id|database_event_sessions. event_session_id|다 대 일|  
   
 ## <a name="see-also"></a>참고 항목  

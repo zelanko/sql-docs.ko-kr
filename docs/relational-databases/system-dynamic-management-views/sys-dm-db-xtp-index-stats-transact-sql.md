@@ -20,15 +20,15 @@ ms.assetid: 8d0a50b8-2015-4576-930f-e3307dfc888e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aeb38baa9671366f7291828e662afed30ad999f8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 91afcf9bc654c73b6dad416bf9c5d114ca1edee5
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830832"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442689"
 ---
 # <a name="sysdm_db_xtp_index_stats-transact-sql"></a>sys.dm_db_xtp_index_stats(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   데이터베이스를 마지막으로 다시 시작한 후 수집된 통계가 포함됩니다.  
   
@@ -44,17 +44,17 @@ ms.locfileid: "82830832"
 |scans_retries|**bigint**|다시 시도해야 하는 인덱스 검사 수입니다.|  
 |rows_returned|**bigint**|테이블을 만든 후 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 후 반환된 누적 행 수입니다.|  
 |rows_touched|**bigint**|테이블을 만든 후 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 후 액세스된 누적 행 수입니다.|  
-|rows_expiring|**bigint**|내부 전용입니다.|  
-|rows_expired|**bigint**|내부 전용입니다.|  
-|rows_expired_removed|**bigint**|내부 전용입니다.|  
-|phantom_scans_started|**bigint**|내부 전용입니다.|  
-|phatom_scans_retries|**bigint**|내부 전용입니다.|  
-|phantom_rows_touched|**bigint**|내부 전용입니다.|  
-|phantom_expiring_rows_encountered|**bigint**|내부 전용입니다.|  
-|phantom_expired_rows_encountered|**bigint**|내부 전용입니다.|  
-|phantom_expired_removed_rows_encountered|**bigint**|내부 전용입니다.|  
-|phantom_expired_rows_removed|**bigint**|내부 전용입니다.|  
-|object_address|**varbinary(8)**|내부 전용입니다.|  
+|rows_expiring|**bigint**|내부적으로만 사용됩니다.|  
+|rows_expired|**bigint**|내부적으로만 사용됩니다.|  
+|rows_expired_removed|**bigint**|내부적으로만 사용됩니다.|  
+|phantom_scans_started|**bigint**|내부적으로만 사용됩니다.|  
+|phatom_scans_retries|**bigint**|내부적으로만 사용됩니다.|  
+|phantom_rows_touched|**bigint**|내부적으로만 사용됩니다.|  
+|phantom_expiring_rows_encountered|**bigint**|내부적으로만 사용됩니다.|  
+|phantom_expired_rows_encountered|**bigint**|내부적으로만 사용됩니다.|  
+|phantom_expired_removed_rows_encountered|**bigint**|내부적으로만 사용됩니다.|  
+|phantom_expired_rows_removed|**bigint**|내부적으로만 사용됩니다.|  
+|object_address|**varbinary(8)**|내부적으로만 사용됩니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  현재 데이터베이스에 대해 VIEW DATABASE STATE 권한이 필요합니다.  

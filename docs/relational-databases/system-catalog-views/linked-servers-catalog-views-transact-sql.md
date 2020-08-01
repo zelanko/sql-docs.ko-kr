@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06d53a67-7804-4f1f-8201-3e42dc48ba79
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 87ccaca08c47310f1070e39f802f4bf3b1f562e5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4b1799683e03447aedd50be4e5475db58c437f05
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916829"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442710"
 ---
 # <a name="linked-servers-catalog-views-transact-sql"></a>연결된 서버 카탈로그 뷰(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   이 섹션에서 다음과 같은 카탈로그 뷰를 설명합니다.  
 
