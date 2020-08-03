@@ -4,21 +4,31 @@ description: 각 릴리스에 대 한 Oracle (OracleToSQL)에 대 한 변경 SQL
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/2/2020
+ms.date: 7/31/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: c0465466a00eb9e7c1eb3b75035d136687672fef
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1601ae2430ced8a30a04d8ab52d97dbb9bbb095a
+ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011291"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477455"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Oracle 용 SSMA의 새로운 기능 (OracleToSQL)
 
 이 문서에서는 각 릴리스의 Oracle 변경 내용에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v812"></a>SSMA v 8.12
+
+Oracle 용 SSMA의 v 8.12 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
+
+* `INSERT` / `UPDATE` / `MERGE` / `DELETE` 문 내의 하위 쿼리 팩터링 절 지원
+* `ON DELETE SET NULL`다중 경로 또는 순환 참조가 있는 경우의 절에 대 한 변환 메시지
+* 동적 SQL 문자열에서 만들어진 커서의 변환 향상
+* ODP.NET을 v 19.8로 업데이트 합니다.
 
 ## <a name="ssma-v811"></a>SSMA v 8.11
 
@@ -286,7 +296,7 @@ Oracle의 SSMA 릴리스 2016에는 다음과 같은 변경 내용이 포함 되
   > SQL Server 2016은 다음을 비롯 한 몇 가지 Oracle 플래시 백 기능을 지원 하지 않습니다.
   >
   >   * Oracle 플래시 백 트랜잭션 쿼리
-  >   * `DBMS_FLASHBACK`패키지
+  >   * `DBMS_FLASHBACK` 패키지
   >   * 플래시 백 트랜잭션
   >   * 플래시 백 데이터 보관
   >   * 플래시 백 테이블

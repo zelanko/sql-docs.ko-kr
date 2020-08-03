@@ -4,21 +4,31 @@ description: 각 릴리스에 대 한 AccessToSQL (액세스)에 대 한 변경 
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/2/2020
+ms.date: 7/31/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: 7e898fa94dda37342765001ba87283b986ac9eb1
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 06fd04921d217bf81861c76a5b09769039be5ee7
+ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091767"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477375"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Access 용 SSMA의 새로운 기능 (AccessToSQL)
 
 이 문서에서는 각 릴리스의 액세스 변경에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v812"></a>SSMA v 8.12
+
+Access 용 SSMA의 v 8.12 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
+
+* `BigInt`( `Large Number` ) 데이터 형식에 대 한 지원
+* 향상 된 열 형식 확인
+* 열 유효성 검사 규칙의 변환 향상
+* 데이터 마이그레이션을 위해 사용 가능한 최신 ACE OLE DB 공급자 사용
 
 ## <a name="ssma-v811"></a>SSMA v 8.11
 
