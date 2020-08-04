@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1c3da0afe1824b47af01946bbe5707c71578700d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6b6afc86afc567e2d6f93b45dae8fb9fd4861525
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110186"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522407"
 ---
 # <a name="always-on-availability-group-system-object-reference"></a>Always On 가용성 그룹 시스템 개체 참조
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
     
 이 항목은 Always On 가용성 그룹으로 작업하는 경우 사용할 수 있는 모든 다양한 시스템 개체에 대한 참조 페이지 역할을 합니다. 
 

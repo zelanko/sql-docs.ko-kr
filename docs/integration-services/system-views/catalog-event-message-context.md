@@ -10,12 +10,12 @@ ms.topic: language-reference
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0a4e6139842c3e1e12a7cb56a076361b556f318e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: efba3eecba580293397848a52bce40980f42987f
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912660"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472205"
 ---
 # <a name="catalogevent_message_context"></a>catalog.event_message_context 
 
@@ -41,9 +41,8 @@ ms.locfileid: "86912660"
 ## <a name="remarks"></a>설명  
  다음 표에서는 컨텍스트 유형을 나열합니다.  
   
-||||  
-|-|-|-|  
 |컨텍스트 유형 값|유형 이름|Description|  
+|-|-|-|  
 |10|Task|오류가 발생할 당시의 태스크 상태입니다.|  
 |20|파이프라인|파이프라인 구성 요소의 오류: 원본, 대상 또는 변환 구성 요소.|  
 |30|시퀀스|시퀀스의 상태입니다.|  

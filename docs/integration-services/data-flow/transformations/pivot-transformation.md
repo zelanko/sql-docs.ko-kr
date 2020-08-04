@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6f51c7dc5dcde2535e822a8f1d832e3747bdfd35
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7a4a969e44fde0abaf221592ed32a48cd233fc9e
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919539"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472543"
 ---
 # <a name="pivot-transformation"></a>피벗 변환
 
@@ -106,7 +106,7 @@ ms.locfileid: "86919539"
   
  다음 표에서는 **Year** 열로 데이터를 피벗한 후의 데이터 집합을 보여 줍니다.  
   
-||2002|2003|2004|  
+|제품 이름|2002|2003|2004|  
 |-|----------|----------|----------|  
 |HL Mountain Tire|141164.10|446297.775|1504884.15|  
 |Road Tire Tube|3592.05|35920.50|89801.25|  

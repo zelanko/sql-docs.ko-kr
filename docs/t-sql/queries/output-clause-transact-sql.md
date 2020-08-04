@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a63b7d9565f93a770061fc39a9aac7eb4e496366
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 922e42698f3b911912ffc1f745d171498c37151f
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554778"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435552"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 절(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +60,6 @@ ms.locfileid: "86554778"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 <OUTPUT_CLAUSE> ::=  
 {  
     [ OUTPUT <dml_select_list> INTO { @table_variable | output_table } [ ( column_list ) ] ]  
@@ -72,8 +71,8 @@ ms.locfileid: "86554778"
   
 <column_name> ::=  
 { DELETED | INSERTED | from_table_name } . { * | column_name }  
-    | $action  
-```  
+    | $action
+```
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -129,10 +128,10 @@ ms.locfileid: "86554778"
   
  예를 들어 다음 DELETE 문에서 `OUTPUT DELETED.*`는 `ShoppingCartItem` 테이블에서 삭제된 모든 열을 반환합니다.  
   
-```  
-DELETE Sales.ShoppingCartItem  
-    OUTPUT DELETED.*;  
-```  
+```sql
+DELETE Sales.ShoppingCartItem
+    OUTPUT DELETED.*;
+```
   
  *column_name*  
  명시적 열 참조입니다. 수정되는 테이블에 대한 모든 참조는 INSERTED 또는 DELETED 접두사로 적절히 한정되어야 합니다. 예: INSERTED **.** _column\_name_.  
@@ -233,21 +232,22 @@ DELETE Sales.ShoppingCartItem
 ## <a name="queues"></a>큐  
  테이블을 큐 또는 중간 결과 집합의 저장을 위해 사용하는 애플리케이션에서 OUTPUT을 사용할 수 있습니다. 이 경우 애플리케이션은 지속적으로 테이블에 행을 추가하거나 제거합니다. 다음 예에서는 삭제된 행을 호출하는 애플리케이션에 반환하기 위해 DELETE 문에 OUTPUT 절을 사용합니다.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DELETE TOP(1) dbo.DatabaseLog WITH (READPAST)  
 OUTPUT deleted.*  
 WHERE DatabaseLogID = 7;  
-GO  
-  
-```  
+GO
+```
   
  이 예에서는 큐로 사용되는 테이블에서 행을 삭제하고 삭제된 값을 처리하는 애플리케이션에 반환하는 과정을 한 번의 작동으로 수행합니다. 이 밖에도 스택 구현을 위해 테이블을 사용하는 등 다른 응용도 가능합니다. 하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 DML 문이 OUTPUT 절을 사용해 처리 및 반환하는 행의 순서 유지를 보장하지 않습니다. 원하는 용도에 맞게 적절한 WHERE 절을 포함하거나 DML 작업에 여러 행을 사용하기 위해 적절히 정규화할 책임은 애플리케이션의 몫입니다. 다음 예에서는 하위 쿼리를 사용하며 필요한 정렬 구현을 위해 각 `DatabaseLogID` 열이 고유한 특성을 가짐을 가정합니다.  
   
-```  
-USE tempdb;  
-GO  
+```sql
+USE tempdb;
+GO
+
 CREATE TABLE dbo.table1  
 (  
     id INT,  
@@ -301,9 +301,8 @@ DROP TABLE dbo.table1;
 --id          employee  
 ------------- ------------------------------  
 --2           Tom  
---4           Alice  
-  
-```  
+--4           Alice
+```
   
 > [!NOTE]  
 >  여러 개의 애플리케이션에서 한 테이블에 대해 파괴 읽기를 허용하는 경우 UPDATE 및 DELETE 문에서 READPAST 테이블 힌트를 사용하세요. 이렇게 하면 다른 애플리케이션이 이미 테이블의 첫 번째 정규화 레코드를 읽고 있는 경우 발생할 수 있는 잠금 문제를 방지합니다.  
@@ -318,9 +317,10 @@ DROP TABLE dbo.table1;
 ### <a name="a-using-output-into-with-a-simple-insert-statement"></a>A. 간단한 INSERT 문과 함께 OUTPUT INTO 사용  
  다음 예제에서는 `ScrapReason` 테이블에 행을 삽입하고, `OUTPUT` 절을 사용하여 명령문의 결과를 `@MyTableVar``table` 변수에 반환합니다. `ScrapReasonID` 열은 IDENTITY 속성을 사용해 정의되기 때문에 이 열의 값은 `INSERT` 문에서 지정되지 않습니다. 하지만 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 의해 생성된 해당 열의 값은 `OUTPUT` 열의 `inserted.ScrapReasonID` 절에서 반환됩니다.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTableVar table( NewScrapReasonID smallint,  
                            Name varchar(50),  
                            ModifiedDate datetime);  
@@ -334,34 +334,33 @@ SELECT NewScrapReasonID, Name, ModifiedDate FROM @MyTableVar;
 --Display the result set of the table.  
 SELECT ScrapReasonID, Name, ModifiedDate   
 FROM Production.ScrapReason;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="b-using-output-with-a-delete-statement"></a>B. DELETE 문과 함께 OUTPUT 사용  
  다음 예에서는 `ShoppingCartItem` 테이블의 모든 행을 삭제합니다. `OUTPUT deleted.*` 절은 `DELETE` 문의 결과로 삭제된 행의 모든 열을 호출하는 애플리케이션에 반환하도록 지정합니다. 이어지는 `SELECT` 문은 `ShoppingCartItem` 테이블의 삭제 작업 결과를 확인합니다.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DELETE Sales.ShoppingCartItem  
 OUTPUT DELETED.*   
 WHERE ShoppingCartID = 20621;  
   
 --Verify the rows in the table matching the WHERE clause have been deleted.  
 SELECT COUNT(*) AS [Rows in Table] FROM Sales.ShoppingCartItem WHERE ShoppingCartID = 20621;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="c-using-output-into-with-an-update-statement"></a>C. UPDATE 문과 함께 OUTPUT INTO 사용  
  다음 예에서는 `VacationHours` 테이블에 있는 처음 10개 행의 `Employee` 열을 25% 업데이트합니다. `OUTPUT` 절은 `deleted.VacationHours` 열에서 `UPDATE` 문을 적용하기 전에 존재했던 `VacationHours`의 값과 `inserted.VacationHours` 열에서 업데이트된 값을 `@MyTableVar` 테이블 변수에 반환합니다.  
   
  각각 `SELECT`의 값과 `@MyTableVar` 테이블의 업데이트 작업 결과를 반환하는 두 개의 `Employee` 문이 이어집니다.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
   
 DECLARE @MyTableVar table(  
     EmpID int NOT NULL,  
@@ -386,15 +385,15 @@ GO
 SELECT TOP (10) BusinessEntityID, VacationHours, ModifiedDate  
 FROM HumanResources.Employee;  
 GO  
-  
-```  
-  
+```
+
 ### <a name="d-using-output-into-to-return-an-expression"></a>D. OUTPUT INTO를 사용하여 식 반환  
  예 3을 기반으로 만들어진 다음 예에서는 업데이트된 `OUTPUT` 값과 업데이트가 적용되기 이전의 `VacationHours` 값 간의 차이를 나타내는 식을 `VacationHours` 절에 정의합니다. 이 식의 값은 `@MyTableVar``table` 열의 `VacationHoursDifference` 변수에 반환됩니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
-GO  
+GO
+
 DECLARE @MyTableVar table(  
     EmpID int NOT NULL,  
     OldVacationHours int,  
@@ -419,16 +418,16 @@ FROM @MyTableVar;
 GO  
 SELECT TOP (10) BusinessEntityID, VacationHours, ModifiedDate  
 FROM HumanResources.Employee;  
-GO  
-  
-```  
-  
+GO
+```
+
 ### <a name="e-using-output-into-with-from_table_name-in-an-update-statement"></a>E. UPDATE 문에 from_table_name과 함께 OUTPUT INTO 사용  
  다음 예제에서는 지정된 `ProductID` 및 `ScrapReasonID`가 있는 모든 작업 순서에 대해 `WorkOrder` 테이블의 `ScrapReasonID` 열을 업데이트합니다. `OUTPUT INTO` 절은 업데이트되는 테이블인 `WorkOrder`의 값과 더불어 `Product` 테이블의 값을 반환합니다. 업데이트할 행을 지정하기 위해 `Product` 테이블이 `FROM` 절에 사용됩니다. `WorkOrder` 테이블에는 `AFTER UPDATE` 트리거가 정의되어 있으므로 `INTO` 키워드가 필요합니다.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTestVar table (  
     OldScrapReasonID int NOT NULL,   
     NewScrapReasonID int NOT NULL,   
@@ -453,16 +452,16 @@ FROM Production.WorkOrder AS wo
 SELECT OldScrapReasonID, NewScrapReasonID, WorkOrderID,   
     ProductID, ProductName   
 FROM @MyTestVar;  
-GO  
-  
-```  
-  
+GO
+```
+
 ### <a name="f-using-output-into-with-from_table_name-in-a-delete-statement"></a>F. DELETE 문에 from_table_name과 함께 OUTPUT INTO 사용  
  다음 예에서는 `ProductProductPhoto` 문의 `FROM` 절에 정의된 검색 조건에 따라 `DELETE` 테이블의 행을 삭제합니다. `OUTPUT` 절은 삭제되는 테이블인 `deleted.ProductID` 및 `deleted.ProductPhotoID`의 열과 더불어 `Product` 테이블의 열을 반환합니다. 이 테이블은 `FROM` 절에서 삭제할 행을 지정하기 위해 사용됩니다.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTableVar table (  
     ProductID int NOT NULL,   
     ProductName nvarchar(50)NOT NULL,  
@@ -484,16 +483,16 @@ JOIN Production.Product as p
 SELECT ProductID, ProductName, ProductModelID, PhotoID   
 FROM @MyTableVar  
 ORDER BY ProductModelID;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="g-using-output-into-with-a-large-object-data-type"></a>G. 큰 개체 데이터 형식과 함께 OUTPUT INTO 사용  
  다음 예에서는 `DocumentSummary` 절을 사용해 `nvarchar(max)` 테이블의 `Production.Document` 열인 `.WRITE`의 부분 값을 업데이트합니다. 대체 단어, 기존 데이터에서 대체할 단어의 시작 위치(오프셋), 그리고 대체할 문자 수(길이)를 지정함으로써 `components`가 `features`로 대체됩니다. 이 예제에서는 `OUTPUT` 절을 사용해 `DocumentSummary` 열의 이전 및 이후 이미지를 `@MyTableVar``table` 변수에 반환합니다. `DocumentSummary` 열의 이전 및 이후 이미지 전체가 반환됩니다.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTableVar table (  
     SummaryBefore nvarchar(max),  
     SummaryAfter nvarchar(max));  
@@ -507,16 +506,16 @@ WHERE Title = N'Front Reflector Bracket Installation';
   
 SELECT SummaryBefore, SummaryAfter   
 FROM @MyTableVar;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="h-using-output-in-an-instead-of-trigger"></a>H. INSTEAD OF 트리거에서 OUTPUT 사용  
  다음 예에서는 트리거에 `OUTPUT` 절을 사용하여 트리거 작업 결과를 반환합니다. 먼저 `ScrapReason` 테이블에서 뷰를 만들고 해당 뷰에서 사용자가 기본 테이블의 `INSTEAD OF INSERT` 열만 수정할 수 있게 하는 `Name` 트리거를 정의합니다. `ScrapReasonID` 열은 기본 테이블의 `IDENTITY` 열이기 때문에 트리거는 사용자가 제공한 값을 무시합니다. 대신 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 자동으로 올바른 값을 생성합니다. 또한 사용자가 제공한 `ModifiedDate` 값 역시 무시되고 현재 날짜로 설정됩니다. `OUTPUT` 절은 `ScrapReason` 테이블에 실제로 삽입된 값을 반환합니다.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 IF OBJECT_ID('dbo.vw_ScrapReason','V') IS NOT NULL  
     DROP VIEW dbo.vw_ScrapReason;  
 GO  
@@ -540,9 +539,8 @@ END
 GO  
 INSERT vw_ScrapReason (ScrapReasonID, Name, ModifiedDate)  
 VALUES (99, N'My scrap reason','20030404');  
-GO  
-  
-```  
+GO
+```
   
  다음은 2004년 4월 12일('`2004-04-12'`)에 생성된 결과 집합입니다. `ScrapReasonIDActual` 및 `ModifiedDate` 열은 `INSERT` 문에서 제공된 값 대신 트리거 작업에 의해 생성된 값을 반영합니다.  
   
@@ -555,9 +553,10 @@ GO
 ### <a name="i-using-output-into-with-identity-and-computed-columns"></a>9\. ID 및 계산 열과 함께 OUTPUT INTO 사용  
  다음 예에서는 `EmployeeSales` 테이블을 만들고 `INSERT` 문에 `SELECT` 문을 사용하여 이 테이블에 여러 개의 행을 삽입한 후 원본 테이블에서 데이터를 검색합니다. `EmployeeSales` 테이블에는 ID 열(`EmployeeID`)과 계산 열(`ProjectedSales`)이 포함되어 있습니다.  
   
-```  
-USE AdventureWorks2012 ;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 IF OBJECT_ID ('dbo.EmployeeSales', 'U') IS NOT NULL  
     DROP TABLE dbo.EmployeeSales;  
 GO  
@@ -596,16 +595,16 @@ FROM @MyTableVar;
 GO  
 SELECT EmployeeID, LastName, FirstName, CurrentSales, ProjectedSales  
 FROM dbo.EmployeeSales;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="j-using-output-and-output-into-in-a-single-statement"></a>J. 단일 문에서 OUTPUT 및 OUTPUT INTO 사용  
  다음 예에서는 `ProductProductPhoto` 문의 `FROM` 절에 정의된 검색 조건에 따라 `DELETE` 테이블의 행을 삭제합니다. `OUTPUT INTO` 절은 삭제되는 테이블(`deleted.ProductID` 및 `deleted.ProductPhotoID`)의 열과 `Product` 테이블의 열을 `@MyTableVar``table` 변수에 반환합니다. `Product` 테이블은 `FROM` 절에서 삭제할 행을 지정하기 위해 사용됩니다. `OUTPUT` 절은 `deleted.ProductID` 및 `deleted.ProductPhotoID` 열, 그리고 `ProductProductPhoto` 테이블에서 행을 삭제한 날짜 및 시간을 호출하는 애플리케이션에 반환합니다.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTableVar table (  
     ProductID int NOT NULL,   
     ProductName nvarchar(50)NOT NULL,  
@@ -627,16 +626,16 @@ WHERE p.ProductID BETWEEN 800 and 810;
 --Display the results of the table variable.  
 SELECT ProductID, ProductName, PhotoID, ProductModelID   
 FROM @MyTableVar;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="k-inserting-data-returned-from-an-output-clause"></a>11. OUTPUT 절에서 반환된 데이터 삽입  
  다음 예에서는 `OUTPUT` 문의 `MERGE` 절에서 반환되는 데이터를 캡처하고 이 데이터를 다른 테이블에 삽입합니다. `MERGE` 문은 `Quantity` 테이블에서 처리하는 순서대로 `ProductInventory` 테이블의 `SalesOrderDetail` 열을 매일 업데이트합니다. 또한 재고가 `0` 이하로 떨어지는 제품의 행을 삭제합니다. 이 예에서는 삭제된 행을 캡처한 후 다른 `ZeroInventory` 테이블에 삽입하여 재고가 없는 제품을 추적합니다.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 IF OBJECT_ID(N'Production.ZeroInventory', N'U') IS NOT NULL  
     DROP TABLE Production.ZeroInventory;  
 GO  
@@ -663,9 +662,10 @@ WHERE Action = 'DELETE';
 IF @@ROWCOUNT = 0  
 PRINT 'Warning: No rows were inserted';  
 GO  
-SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;  
-  
-```  
+SELECT DeletedProductID, RemovedOnDate
+FROM Production.ZeroInventory;
+GO
+```
   
 ## <a name="see-also"></a>참고 항목  
  [DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
@@ -673,6 +673,4 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
  [UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
-  
-  
+ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f7bbdefbd6a418bb6dece10fb8abd919fc0dadc8
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: eed0eb24fc38f3ff2856d8b9693265d888d5a8e2
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628362"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442716"
 ---
 # <a name="alter-endpoint-transact-sql"></a>ALTER ENDPOINT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   다음 방법으로 기존 엔드포인트를 수정할 수 있도록 합니다.  
   

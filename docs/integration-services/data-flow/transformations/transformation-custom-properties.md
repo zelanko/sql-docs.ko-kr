@@ -41,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e4baea69adce173ee5421605825008f7721b92bd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fb2e93d5266b28ad7be189cd14034aca49abc3a1
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916689"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472525"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
 
@@ -60,19 +60,42 @@ ms.locfileid: "86916689"
  변환의 일부 속성은 속성 식을 사용하여 설정할 수 있습니다. 자세한 내용은 [식을 사용하여 설정할 수 있는 데이터 흐름 속성](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)을 참조하세요.  
   
 ## <a name="transformations-with-custom-properties"></a>사용자 지정 속성이 있는 변환  
-  
-||||  
-|-|-|-|  
-|[집계](#aggregate)|[열 내보내기](#extract)|[행 개수](#rowcount)|  
-|[감사](#audit)|[유사 항목 그룹화](#fgroup)|[행 샘플링](#rowsamp)|  
-|[캐시 변환](#cachetransform)|[유사 항목 조회](#flookup)|[S스크립트 구성 요소](#script)|  
-|[문자표 변환](#charmap)|[열 가져오기](#insert)|[느린 변경 차원](#scd)|  
-|[조건부 분할](#condsplit)|[조회](#lookup)|[Sort](#sort)|  
-|[열 복사](#copymap)|[병합 조인](#mjoin)|[용어 추출](#textract)|  
-|[데이터 변환](#dataconv)|[OLE DB 명령](#oledbcmd)|[용어 조회](#tlookup)|  
-|[데이터 마이닝 쿼리](#dmquery)|[비율 샘플링](#percent)|[피벗 해제](#unpivot)|  
-|[파생 열](#derived)|[피벗](#pivot)||  
-  
+
+:::row:::
+    :::column:::
+        [집계](#aggregate)  
+        [감사](#audit)  
+        [캐시 변환](#cachetransform)  
+        [문자표 변환](#charmap)  
+        [조건부 분할](#condsplit)  
+        [열 복사](#copymap)  
+        [데이터 변환](#dataconv)  
+        [데이터 마이닝 쿼리](#dmquery)  
+        [파생 열](#derived)  
+    :::column-end:::
+    :::column:::
+        [열 내보내기](#extract)  
+        [유사 항목 그룹화](#fgroup)  
+        [유사 항목 조회](#flookup)  
+        [열 가져오기](#insert)  
+        [조회](#lookup)  
+        [병합 조인](#mjoin)  
+        [OLE DB 명령](#oledbcmd)  
+        [비율 샘플링](#percent)  
+        [피벗](#pivot)  
+    :::column-end:::
+    :::column:::
+        [행 개수](#rowcount)  
+        [행 샘플링](#rowsamp)  
+        [S스크립트 구성 요소](#script)  
+        [느린 변경 차원](#scd)  
+        [Sort](#sort)  
+        [용어 추출](#textract)  
+        [용어 조회](#tlookup)  
+        [피벗 해제](#unpivot)  
+    :::column-end:::
+:::row-end:::
+
 ### <a name="transformations-without-custom-properties"></a>사용자 지정 속성이 없는 변환  
  구성 요소, 입력 또는 출력 수준에서 [병합 변환](../../../integration-services/data-flow/transformations/merge-transformation.md), [멀티캐스트 변환](../../../integration-services/data-flow/transformations/multicast-transformation.md) 및 [Union All 변환](../../../integration-services/data-flow/transformations/union-all-transformation.md) 변환은 사용자 지정 속성을 포함하지 않습니다. 이러한 변환은 모든 데이터 흐름 구성 요소에 공통된 속성만 사용합니다.  
   

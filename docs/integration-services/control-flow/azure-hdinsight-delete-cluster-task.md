@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52147ff689b88876512afd6cb428e78c6c00d621
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 87bbb8455169ae0c50475781b3b9e25e9967fd93
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913874"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472555"
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Azure HDInsight 클러스터 삭제 작업
 
@@ -36,9 +36,8 @@ ms.locfileid: "86913874"
   
 다음 표에서는 대화 상자의 필드에 대해 설명합니다.  
   
-|||  
+|필드|설명|  
 |-|-|  
-|**필드**|**설명**|  
 |AzureResourceManagerConnection|기존 Azure Resource Manager 연결 관리자를 선택하거나 HDInsight 클러스터를 삭제하는 데 사용할 새 연결 관리자를 만듭니다.|
 |SubscriptionId|HDInsight 클러스터가 있는 구독 ID를 지정합니다.|
 |ResourceGroup|HDInsight 클러스터가 있는 Azure 리소스 그룹을 지정합니다.|

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 5d3ee42f28fed73a4dd513b10d01948552fdd6d5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fe93023bfbcd285d8d50a90bb11ea532eb066f2c
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901542"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472189"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>mssql-conf 도구를 사용하여 SQL Server on Linux 구성
 
@@ -24,7 +24,7 @@ ms.locfileid: "85901542"
 
 **mssql-conf**는 Red Hat Enterprise Linux, SUSE Linux Enterprise Server 및 Ubuntu용 SQL Server 2017과 함께 설치되는 구성 스크립트입니다. 구성 값이 저장되는 [**mssql.conf 파일**](#mssql-conf-format)을 수정합니다. **mssql-conf** 유틸리티를 사용하여 다음 매개 변수를 설정할 수 있습니다.
 
-|||
+|매개 변수|설명|
 |---|---|
 | [에이전트](#agent) | SQL Server 에이전트를 사용하도록 설정합니다. |
 | [데이터 정렬](#collation) | SQL Server on Linux에 대한 새 데이터 정렬을 설정합니다. |
@@ -52,7 +52,7 @@ ms.locfileid: "85901542"
 
 **mssql-conf**는 Red Hat Enterprise Linux, SUSE Linux Enterprise Server 및 Ubuntu용 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]와 함께 설치되는 구성 스크립트입니다. 이 유틸리티를 사용하여 다음 매개 변수를 설정할 수 있습니다.
 
-|||
+|매개 변수|설명|
 |---|---|
 | [에이전트](#agent) | SQL Server 에이전트 사용 |
 | [데이터 정렬](#collation) | SQL Server on Linux에 대한 새 데이터 정렬을 설정합니다. |
@@ -393,7 +393,7 @@ SQL Server가 수집하는 메모리 덤프 유형을 제어하는 두 가지 �
 
     다음 표에는 가능한 **coredump.coredumptype** 값이 나와 있습니다.
 
-    | Type | Description |
+    | Type | 설명 |
     |-----|-----|
     | **mini** | Mini는 가장 작은 덤프 파일 형식입니다. Linux 시스템 정보를 사용하여 프로세스의 스레드 및 모듈을 결정합니다. 덤프에는 호스트 환경 스레드 스택 및 모듈만 포함됩니다. 간접 메모리 참조 또는 전역은 포함되지 않습니다. |
     | **miniplus** | MiniPlus는 mini와 비슷하지만 추가 메모리를 포함합니다. 다음 메모리 영역을 덤프에 추가하여 SQLPAL 및 호스트 환경의 내부를 이해합니다.</br></br> - 다양한 전역</br> - 64TB를 초과하는 모든 메모리</br> - **/proc/$pid/maps**에 있는 모든 명명된 영역</br> - 스레드 및 스택의 간접 메모리</br> - 스레드 정보</br> - 연결된 Teb 및 Peb</br> - 모듈 정보</br> - VMM 및 VAD 트리 |

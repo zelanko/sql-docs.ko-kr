@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 78bc5fe4d059a644c3490c94b02b5880c5d488d0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c75779e244087072d36c041edd22d4a6fb3109b2
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922739"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435438"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 Excel에서 데이터 가져오기 또는 Excel로 데이터 내보내기
 
@@ -253,8 +253,6 @@ Excel 열에 텍스트 데이터가 포함되어 있음이 확인되면 드라�
 255자보다 긴 문자열을 Excel 열에 저장하려면 드라이버에서 대상 열의 데이터 형식을 **string** 이 아닌 **memo**로 인식해야 합니다.
 
 -   기존 대상 테이블에 이미 데이터 행이 포함된 경우 드라이버에서 샘플링하는 처음 몇 개 행의 메모 열에 255자보다 긴 값의 인스턴스가 하나 이상 포함되어야 합니다.
-
--   패키지를 디자인하는 동안, 런타임 시 또는 가져오기 및 내보내기 마법사에 의해 새 대상 테이블을 만드는 경우 `CREATE TABLE` 문은 대상 메모 열의 데이터 형식으로 LONGTEXT(또는 해당 동의어 중 하나)를 사용해야 합니다. 마법사에서 필요한 경우 **열 매핑** 페이지의 **대상 테이블 만들기** 옵션 옆에 있는 **SQL 편집**을 클릭하여 `CREATE TABLE` 문을 확인하고 수정합니다.
 
 ## <a name="related-content"></a>관련 콘텐츠
 

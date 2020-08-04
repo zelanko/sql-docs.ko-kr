@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5e41b5ffc1ff1cbd524298a17e32f5f677954f24
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 26e976ee2a62d29f8f14584159888de428431101
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919223"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472518"
 ---
 # <a name="execute-package-utility-dtexecui"></a>패키지 실행 유틸리티(dtexecui)
 
@@ -68,9 +68,8 @@ ms.locfileid: "86919223"
  **패키지 원본**  
  다음 옵션을 사용하여 실행할 패키지의 위치를 지정합니다.  
   
-|||  
-|-|-|  
 |값|Description|  
+|-|-|  
 |**SQL Server**|패키지가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 있으면 이 옵션을 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증의 사용자 이름과 암호를 입력합니다. 사용자 이름과 암호를 입력할 때마다 명령 프롬프트에 **/USER** _username_ 및 **/PASSWORD** _password_ 옵션이 추가됩니다.|  
 |**파일 시스템**|패키지가 파일 시스템에 있으면 이 옵션을 선택합니다.|  
 |**SSIS 패키지 저장소**|패키지가 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소에 있으면 이 옵션을 선택합니다.|  

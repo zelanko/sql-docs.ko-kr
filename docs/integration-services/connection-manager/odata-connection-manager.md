@@ -13,12 +13,12 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0f97998b439fca6e0290966e2ee8fc2bdd785150
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 788aaa50e7bf083a91a4c919708e0677fc190476
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919675"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472439"
 ---
 # <a name="odata-connection-manager"></a>OData 연결 관리자
 
@@ -61,9 +61,8 @@ Microsoft Dynamics AX Online 또는 Microsoft Dynamics CRM Online에 연결하�
 ## <a name="odata-connection-manager-properties"></a>OData 연결 관리자 속성  
  다음 목록에서는 OData 연결 관리자의 속성에 대해 설명합니다.  
   
-|||  
-|-|-|  
 |속성|Description|  
+|-|-|  
 |Url|서비스 문서에 대한 URL입니다.|  
 |UserName|필요한 경우 인증에 사용할 사용자 이름입니다.|  
 |암호|필요한 경우 인증에 사용할 암호입니다.|  

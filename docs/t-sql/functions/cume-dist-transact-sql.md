@@ -19,15 +19,15 @@ ms.assetid: 491b07f3-9ffd-4cdd-93e5-5abb636fc5ef
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26527260cfcb3f557239f6ca83b60e3f269be9ac
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 101372817c6948a3ebf614774710fdde051212ed
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112513"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522527"
 ---
 # <a name="cume_dist-transact-sql"></a>CUME_DIST(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 이 함수에서는 값 그룹 내에서 값의 누적 분포를 계산합니다. 즉, `CUME_DIST`는 값 그룹에서 지정한 값의 상대적 위치를 계산합니다. 오름차순으로 정렬되었다고 가정하면, 행 _r_에서 값의 `CUME_DIST`는 행 _r_에서 해당 값 이하인 값을 가진 행의 수로 정의되며 파티션 또는 쿼리 결과 집합에서 계산된 행의 수로 나뉩니다. `CUME_DIST`는 `PERCENT_RANK` 함수와 유사합니다.
   

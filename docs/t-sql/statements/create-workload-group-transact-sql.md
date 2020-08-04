@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 19d5c9abe85d308f93f0aa085ff813ab7a3ca8f7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 806a687037d2b23a2800552a6f4467ce02b7ccc0
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111185"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472629"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP(Transact-SQL)
 
@@ -142,7 +142,7 @@ WITH
 *REQUEST_MAX_RESOURCE_GRANT_PERCENT* = value</br>         
 요청별로 할당된 최대 리소스 크기를 설정합니다. *value*는 기본값이 request_min_resource_grant_percent와 같은 선택적 10진수 매개 변수입니다. *value*는 request_min_resource_grant_percent보다 크거나 같아야 합니다. request_max_resource_grant_percent 값이 request_min_resource_grant_percent보다 크고, 시스템 리소스를 사용할 수 있는 경우 추가 리소스가 요청에 할당됩니다.
 
-*IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>        
+*IMPORTANCE* = { LOW \| BELOW_NORMAL \| NORMAL \| ABOVE_NORMAL \| HIGH }</br>        
 워크로드 그룹에 대한 요청의 기본 중요도를 지정합니다. 중요도는 다음 중 하나이며 NORMAL이 기본값입니다.
 
 - LOW
