@@ -18,15 +18,15 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: a3745f00e8e2e6d7ed0386a128ee6bcec2adebea
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2c40ef34ffcde3f7a1d02f6ba45963bd83df841a
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831187"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522547"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)] 
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
 
   일괄 처리의 선언 되지 않은 매개 변수에 대 한 메타 데이터를 포함 하는 결과 집합을 반환 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . ** \@ Tsql** 일괄 처리에 사용 되지만 ** \@ params**에 선언 되지 않은 각 매개 변수를 고려 합니다. 이러한 각 매개 변수에 대한 추론된 형식의 정보와 함께 해당 매개 변수에 대한 하나의 행이 포함된 결과 집합이 반환됩니다. ** \@ Tsql** 입력 일괄 처리에 ** \@ params**에 선언 된 매개 변수가 없는 경우이 프로시저는 빈 결과 집합을 반환 합니다.  
   
@@ -169,7 +169,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   단순 추론  
   
-     E ( \@ p) = \@ p 및 TT (p)가 있는 경우 (예 \@ : \@ p가 2 단계 시작 부분에 나열 된 식 중 하나에 대 한 인수) 이면 형식 추론 알고리즘에서 p의 데이터 형식을 \@ TT ( \@ p)로 추론 합니다. 다음은 그 예입니다.  
+     E ( \@ p) = \@ p 및 TT (p)가 있는 경우 (예 \@ : \@ p가 2 단계 시작 부분에 나열 된 식 중 하나에 대 한 인수) 이면 형식 추론 알고리즘에서 p의 데이터 형식을 \@ TT ( \@ p)로 추론 합니다. 예를 들면 다음과 같습니다.  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -177,7 +177,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      \@P1, \@ p2 및 p3의 데이터 형식은 \@ 각각 c1의 데이터 형식, dbo. tbl의 반환 데이터 형식 및 각각 dbo. d a c o. c o d 1의 매개 변수 데이터 형식입니다.  
   
-     특수 한 경우 이지만 \@ p가 \< , >, \< = 또는 >= 연산자에 대 한 인수 이면 단순 추론 규칙이 적용 되지 않습니다. 이 경우 형식 추론 알고리즘에서는 다음 섹션에 설명된 일반 추론 규칙을 사용합니다. 예를 들어 c1이 데이터 형식 char(30)의 열인 경우 다음 두 가지 쿼리를 고려합니다.  
+     특수 한 경우 이지만 \@ p가, = 연산자에 대 한 인수 이면 \<, > \<=, or > 단순 추론 규칙이 적용 되지 않습니다. 이 경우 형식 추론 알고리즘에서는 다음 섹션에 설명된 일반 추론 규칙을 사용합니다. 예를 들어 c1이 데이터 형식 char(30)의 열인 경우 다음 두 가지 쿼리를 고려합니다.  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p  
@@ -217,7 +217,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 1.  E (p)에서 가장 적은 수의 암시적 변환을 생성 하는 데이터 형식이 \@ 선택 됩니다. 특정 데이터 형식이 E (p)에 대해 TT (p)와 다른 데이터 형식을 생성 하는 경우 \@ \@ 형식 추론 알고리즘은이를 e (p)의 데이터 형식에서 \@ tt (p)로 추가 암시적 변환으로 간주 합니다 \@ .  
   
-     다음은 그 예입니다.  
+     예를 들면 다음과 같습니다.  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
@@ -225,7 +225,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      이 경우 E ( \@ p)는 Col_Int + p이 \@ 고 TT ( \@ p)는 **Int**입니다. **int** 는 \@ 암시적 변환을 생성 하지 않으므로 p에 대해 선택 됩니다. 다른 데이터 형식은 하나 이상의 암시적 변환을 생성합니다.  
   
-2.  변환 수가 가장 적은 데이터 형식에 여러 데이터 형식이 연결된 경우 우선 순위가 가장 높은 데이터 형식이 사용됩니다. 예를 들면 다음과 같습니다.  
+2.  변환 수가 가장 적은 데이터 형식에 여러 데이터 형식이 연결된 경우 우선 순위가 가장 높은 데이터 형식이 사용됩니다. 예  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
@@ -254,7 +254,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
 ## <a name="permissions"></a>사용 권한  
  Tsql 인수를 실행할 수 있는 권한이 필요 \@ 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 선언되지 않은 `@id` 및 `@name` 매개 변수에 필요한 데이터 형식과 같은 정보를 반환합니다.  
   
 ```sql

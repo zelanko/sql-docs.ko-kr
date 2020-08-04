@@ -19,15 +19,15 @@ ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab7e05eba835f5cee47e0256f5866623bc658e44
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8a534a32e23c09d4e6cc41dc6bd22c9fc44c4c7f
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816623"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87523455"
 ---
 # <a name="sp_sequence_get_range-transact-sql"></a>sp_sequence_get_range(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   시퀀스 개체에서 시퀀스 값의 범위를 반환합니다. 시퀀스 개체는 요청한 값의 수를 생성 및 실행하고 범위와 관련된 메타데이터를 애플리케이션에 제공합니다.  
   
@@ -84,10 +84,10 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
   
  `The requested range for sequence object '%.*ls' exceeds the maximum or minimum limit. Retry with a smaller range.`  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  시퀀스 개체 또는 시퀀스 개체의 스키마에 대한 UPDATE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예제에서는 RangeSeq 라는 시퀀스 개체를 사용 합니다. 다음 문을 사용 하 여 RangeSeq 시퀀스를 만듭니다.  
   
 ```  
@@ -180,10 +180,10 @@ Console.WriteLine(firstValueInRange.Value);
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;시퀀스 &#40;만들기](../../t-sql/statements/create-sequence-transact-sql.md)   
- [ALTER SEQUENCE &#40;Transact-sql&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [DROP SEQUENCE &#40;Transact-sql&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
- [&#40;Transact-sql&#41;의 다음 값](../../t-sql/functions/next-value-for-transact-sql.md)   
+ [CREATE SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [ALTER SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
+ [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
  [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

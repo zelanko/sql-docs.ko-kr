@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f17290773a3becf0b33b28eb5e95bf914d53af06
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ceea117b0b266fdc7649e8e786b034039fae3507
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901721"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522007"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services에 대한 고가용성 및 재해 복구
 
@@ -313,7 +313,7 @@ AG는 기존 데이터베이스에서만 만들 수 있습니다. 따라서 한 
 
    b. MDSSQLServer와 같은 **수신기 DNS 이름**을 입력합니다.
 
-   다. **포트** 텍스트 상자에 기본 SQL 포트 1433을 입력합니다.
+   c. **포트** 텍스트 상자에 기본 SQL 포트 1433을 입력합니다.
 
    d. **네트워크 모드** 텍스트 상자에 DHCP를 입력하고 **다음**을 클릭하여 계속합니다.
 
@@ -324,7 +324,7 @@ AG는 기존 데이터베이스에서만 만들 수 있습니다. 따라서 한 
 
    그림 18
 
-9. **데이터 동기화 선택** 페이지에서 **전체**를 클릭하고 모든 노드가 액세스할 수 있는 네트워크 공유를 지정합니다. **다음** 을 클릭하여 계속합니다. 그림 19를 참조하세요.
+9. **데이터 동기화 선택** 페이지에서 **전체**를 클릭하고 모든 노드가 액세스할 수 있는 네트워크 공유를 지정합니다. **다음**을 클릭하여 계속합니다. 그림 19를 참조하세요.
 
    이 네트워크 공유는 데이터베이스 백업을 저장하여 보조 복제본을 만드는 데 사용됩니다. 이를 조직에서 사용할 수 없는 경우 다른 데이터 동기화 기본 설정을 선택합니다. 다른 옵션을 사용 하 여 보조 복제본을 만드는 방법은 [SQL Server 2016 Always On 가용성 그룹](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) 을 참조 하세요. 또한 그림 17에 다른 옵션이 나열되어 있습니다.
 
@@ -332,7 +332,7 @@ AG는 기존 데이터베이스에서만 만들 수 있습니다. 따라서 한 
 
    그림 19 
 
-10. **유효성 검사** 페이지에서 모든 유효성 검사를 성공적으로 전달하고 오류를 수정했는지 확인합니다. **다음** 을 클릭하여 계속합니다.
+10. **유효성 검사** 페이지에서 모든 유효성 검사를 성공적으로 전달하고 오류를 수정했는지 확인합니다. **다음**을 클릭하여 계속합니다.
 
 11. **요약** 페이지에서 모든 구성 설정을 검토하고 **마침**을 클릭합니다. 그러면 가용성 그룹이 만들어지고 구성됩니다.
 
@@ -390,7 +390,7 @@ AG는 기존 데이터베이스에서만 만들 수 있습니다. 따라서 한 
 
 이 백서에서는 AG의 일부로 MDS(Master Data Services) 백 엔드 데이터베이스를 설정 하 고 구성 하는 방법을 살펴보았습니다. 이 구성은 Master Data Services 백 엔드 데이터베이스에 고가용성 및 재해 복구를 제공합니다. 이 구성을 구현 하려면 Windows Server 장애 조치 (Failover) 클러스터, AG 및 MDS(Master Data Services)를 설치 하 고 구성 해야 합니다.
 
-## <a name="feedback"></a>사용자 의견
+## <a name="feedback-comments"></a>사용자 의견 설명
 
 이 백서가 도움이 되었습니까? 문서 맨 위에 있는 **주석**을 클릭하여 여러분의 의견을 보내주세요. 
 
