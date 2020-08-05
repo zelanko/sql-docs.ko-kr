@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d9a3f6e52547b40adefd2b94ab320ae4784837aa
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 23df9963bccefaa5a637c7b93196f37e722ac3e4
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86302002"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332020"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -163,7 +163,7 @@ ALTER AVAILABILITY GROUP group_name
  *group_name*  
  새 가용성 그룹의 이름을 지정합니다. *group_name*은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자이고 WSFC 클러스터의 모든 가용성 그룹에서 고유해야 합니다.  
   
- AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
+ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }  
  백업을 수행할 위치를 선택할 때 백업 작업에서 주 복제본을 평가하는 방식에 관한 기본 설정을 지정합니다. 자동화된 백업 기본 설정을 고려하도록 지정한 백업 작업을 스크립팅할 수 있습니다. 기본 설정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 적용하는 것이 아니므로 임시 백업에 영향을 미치지 않는다는 것을 이해해야 합니다.  
   
  주 복제본에서만 지원되며,  
@@ -191,7 +191,7 @@ ALTER AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  기존 가용성 그룹의 자동화된 백업 기본 설정을 보려면 [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 카탈로그 뷰의 **automated_backup_preference** 또는 **automated_backup_preference_desc** 열을 선택합니다. 또한 [sys.fn_hadr_backup_is_preferred_replica&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)를 사용하여 기본 백업 복제본을 확인할 수 있습니다.  이 함수는 `AUTOMATED_BACKUP_PREFERENCE = NONE`인 경우에도 복제본 하나 이상에 대해 항상 1을 반환합니다.  
   
- FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
+ FAILURE_CONDITION_LEVEL **=** { 1 \| 2 \| **3** \| 4 \| 5 }  
  이 가용성 그룹에 대한 자동 장애 조치(failover)를 트리거할 오류 상태를 지정합니다. FAILURE_CONDITION_LEVEL은 그룹 수준에서 설정되지만 동기-커밋 가용성 모드(AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT)에 대해 구성된 가용성 복제본에서만 적절합니다. 또한 오류 상태는 주 복제본과 보조 복제본 모두 자동 장애 조치 모드(FAILOVER_MODE **=** AUTOMATIC)에 대해 구성되고 보조 복제본이 현재 주 복제본과 동기화된 경우에만 자동 장애 조치(failover)를 트리거할 수 있습니다.  
   
  주 복제본에서만 지원되며,  

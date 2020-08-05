@@ -12,15 +12,15 @@ ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d03afc892fcdadbdaa346366096bec184707e70b
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 1f642b375e4e3331bbac0e49fb878ceecd02cf5e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152184"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786023"
 ---
 # <a name="replay-trace-data"></a>추적 데이터 재생
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   입력 추적 데이터를 준비한 후 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능을 사용하여 분산 재생을 시작할 수 있습니다. 자세한 내용은 [입력 추적 데이터 준비](../../tools/distributed-replay/prepare-the-input-trace-data.md)를 참조하세요.  
   
  관리 도구 **replay** 옵션을 사용하여 Distributed Replay의 이벤트 재생 단계를 시작할 수 있습니다. 이 단계는 추적 데이터 디스패치와 분산 재생 시작 및 동기화의 두 부분으로 구성됩니다.  

@@ -30,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fdeeb1b5d16612415b1661df257f0530d8749df5
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 122aa921cb742d05c46e2d32430c857f4a723dee
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151641"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920899"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag Utility
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   **SQLdiag** 유틸리티는 콘솔 애플리케이션 또는 서비스로 실행할 수 있는 범용 진단 정보 수집 유틸리티입니다. **SQLdiag** 를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 기타 서버 유형에서 로그 및 데이터 파일을 수집할 수 있으며 이러한 파일을 사용하여 지속적으로 서버를 모니터링하거나 특정 서버 문제를 해결할 수 있습니다. **SQLdiag** 는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 고객 지원 서비스에서 진단 정보를 빠르고 간편하게 수집할 수 있도록 지원하는 유틸리티입니다.  
   
 > [!NOTE]  
@@ -360,7 +360,7 @@ SQLDIAG START /A Instance1
  명령줄에서 **/A**_SQLdiag\_application\_name_을 지정하여 동일한 컴퓨터에서 **SQLdiag**의 여러 인스턴스를 실행합니다. 이는 동일한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 동시에 다른 진단 정보 집합을 수집하는 데 유용합니다. 예를 들어 지속적으로 간단한 데이터 수집을 수행하도록 명명된 **SQLdiag** 인스턴스를 구성할 수 있습니다. 그런 다음 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 특정 문제가 발생하는 경우 기본 **SQLdiag** 인스턴스를 실행하여 해당 문제에 대한 진단 정보를 수집하거나 [!INCLUDE[msCoName](../includes/msconame-md.md)] 고객 지원 서비스에서 수집을 요청한 진단 정보 집합을 수집하여 문제를 진단할 수 있습니다.  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>클러스터형 SQL Server 인스턴스에서 진단 데이터 수집  
- **SQLdiag** 에서는 클러스터형 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 진단 데이터를 수집할 수 있습니다. 클러스터형 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 진단 정보를 수집하려면 SQLDiag.Xml 구성 파일에서 **\<Machine>** 요소의 **name** 특성에 대해 **"."** 를 지정해야 하며 명령줄에서 **/G** 인수를 지정하면 안 됩니다. 기본적으로 구성 파일에서 **name** 특성에는 **"."** 가 지정되고 **/G** 인수는 해제되어 있습니다. 일반적으로 클러스터형 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 정보를 수집할 때는 구성 파일을 편집하거나 명령줄 인수를 변경할 필요가 없습니다.  
+ **SQLdiag** 에서는 클러스터형 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 진단 데이터를 수집할 수 있습니다. 클러스터형 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 진단 정보를 수집하려면 SQLDiag.Xml 구성 파일에서 **\<Machine>** 요소의 **name** 특성에 대해 **"."** 을 지정해야 하며 명령줄에 **/G** 인수를 지정하지 않아야 합니다. 기본적으로 구성 파일에서 **name** 특성에는 **"."** 가 지정되고 **/G** 인수는 해제되어 있습니다. 일반적으로 클러스터형 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 정보를 수집할 때는 구성 파일을 편집하거나 명령줄 인수를 변경할 필요가 없습니다.  
   
  **"."** 를 컴퓨터 이름으로 지정하면 **SQLdiag** 에서는 컴퓨터가 클러스터에서 실행 중임을 감지하고 해당 클러스터에 설치된 모든 가상 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 동시에 진단 정보를 검색합니다. 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가상 인스턴스 중 하나에서만 진단 정보를 수집하려면 SQLDiag.Xml에서 **\<Machine>** 요소의 **name** 특성에 해당 가상 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다.  
   

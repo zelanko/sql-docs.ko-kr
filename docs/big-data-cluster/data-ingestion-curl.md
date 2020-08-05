@@ -5,20 +5,20 @@ description: curl을 사용하여 SQL Server 2019 빅 데이터 클러스터의 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 45974b3b59a97af8e432f059c0facfb27ece2fbd
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: e4d030b54944b8fe25d930f7f0b4fc540f7aff67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606855"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784327"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-big-data-clusters-2019"></a>curl을 사용하여 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]의 HDFS에 데이터 로드
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 이 문서에서는 **curl**을 사용하여 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]의 HDFS로 데이터를 로드하는 방법을 설명합니다.
 
@@ -30,7 +30,7 @@ ms.locfileid: "83606855"
 
 배포가 완료되면 WebHDFS가 시작되고 해당 액세스가 Knox를 통과합니다. Knox 엔드포인트는 **gateway-svc-external**이라는 Kubernetes 서비스를 통해 공개됩니다.  파일을 업로드/다운로드하는 데 필요한 WebHDFS URL을 만들려면 **gateway-svc-external** 서비스 외부 IP 주소와 빅 데이터 클러스터의 이름이 필요합니다. 다음 명령을 실행하여 **gateway-svc-external** 서비스 외부 IP 주소를 가져올 수 있습니다.
 
-```bash
+```terminal
 kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
 ```
 
@@ -51,24 +51,47 @@ kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq
 
 **hdfs:///product_review_data** 아래에 있는 파일을 나열하려면 다음 curl 명령을 사용합니다.
 
-```bash
-curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
+```terminal
+curl -i -k -u root:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
+```
+
+[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
+
+루트를 사용하지 않는 엔드포인트의 경우 다음 curl 명령을 사용합니다.
+
+```terminal
+curl -i -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
 ```
 
 ## <a name="put-a-local-file-into-hdfs"></a>HDFS에 로컬 파일 저장
 
 로컬 디렉터리의 새 파일 **test.csv**를 product_review_data 디렉터리에 저장하려면 다음 curl 명령을 사용합니다(**Content-Type** 매개 변수가 필요함).
 
-```bash
-curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
+```terminal
+curl -i -L -k -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
+```
+
+[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
+
+루트를 사용하지 않는 엔드포인트의 경우 다음 curl 명령을 사용합니다.
+
+```terminal
+curl -i -L -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
 ## <a name="create-a-directory"></a>디렉터리 만들기
 
 `hdfs:///` 아래에 **test** 디렉터리를 만들려면 다음 명령을 사용합니다.
 
-```bash
-curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
+```terminal
+curl -i -L -k -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
+```
+
+[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
+루트를 사용하지 않는 엔드포인트의 경우 다음 curl 명령을 사용합니다.
+
+```terminal
+curl -i -L -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
 ```
 
 ## <a name="next-steps"></a>다음 단계

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 08c37d53b0ab9bd9d02ca3574edfcc6061cf8218
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: a6a51b6949d3b387c1284bdd5cbaa9a64b3cfa37
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151309"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917074"
 ---
 # <a name="profiler-utility"></a>프로파일러 유틸리티
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   **profiler** 유틸리티는 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 도구를 실행합니다. 이 항목에서 나중에 나열된 옵션 인수를 사용하여 애플리케이션 시작 방법을 제어할 수 있습니다.  
   
 > [!NOTE]  
