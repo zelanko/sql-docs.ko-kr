@@ -19,15 +19,15 @@ ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 9bc37626879b743eb3a5d0864490dc3543a8d8a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c64e9a9773ae01d4714e5c36d49097ae4f4856f2
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70152059"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544406"
 ---
 # <a name="sp_set_firewall_rule-azure-sql-database"></a>sp_set_firewall_rule(Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
 
   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버에 대한 서버 수준 방화벽 설정을 만들거나 업데이트합니다. 이 저장 프로시저는 master 데이터베이스에서 서버 수준 보안 주체 로그인 또는 할당 된 Azure Active Directory 보안 주체에만 사용할 수 있습니다.  
   
@@ -42,13 +42,13 @@ sp_set_firewall_rule [@name =] 'name',
 ```  
   
 ## <a name="arguments"></a>인수  
- 다음 표에서는에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]지원 되는 인수와 옵션을 보여 줍니다.  
+ 다음 표에서는에서 지원 되는 인수와 옵션을 보여 줍니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .  
   
-|Name|데이터 형식|설명|  
+|이름|데이터 형식|Description|  
 |----------|--------------|-----------------|  
-|[@name =] 이름의|**NVARCHAR (128)**|서버 수준의 방화벽 설정을 설명하고 구분하는 데 사용된 이름입니다.|  
-|[@start_ip_address =] ' start_ip_address '|**VARCHAR (50)**|서버 수준 방화벽 설정 범위에서 가장 낮은 IP 주소입니다. 이 값보다 크거나 같은 IP 주소는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버에 연결을 시도할 수 있습니다. 가능한 가장 낮은 IP 주소는 `0.0.0.0`입니다.|  
-|[@end_ip_address =] ' end_ip_address '|**VARCHAR (50)**|서버 수준 방화벽 설정 범위에서 가장 높은 IP 주소입니다. 이 값보다 작거나 같은 IP 주소는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버에 연결을 시도할 수 있습니다. 가능한 가장 높은 IP 주소는 `255.255.255.255`입니다.<br /><br /> 참고:이 필드와 *start_ip_address* 필드가 모두 이면 `0.0.0.0`Azure 연결을 시도할 수 있습니다.|  
+|[ @name =] ' name '|**NVARCHAR (128)**|서버 수준의 방화벽 설정을 설명하고 구분하는 데 사용된 이름입니다.|  
+|[ @start_ip_address =] ' start_ip_address '|**VARCHAR (50)**|서버 수준 방화벽 설정 범위에서 가장 낮은 IP 주소입니다. 이 값보다 크거나 같은 IP 주소는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버에 연결을 시도할 수 있습니다. 가능한 가장 낮은 IP 주소는 `0.0.0.0`입니다.|  
+|[ @end_ip_address =] ' end_ip_address '|**VARCHAR (50)**|서버 수준 방화벽 설정 범위에서 가장 높은 IP 주소입니다. 이 값보다 작거나 같은 IP 주소는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버에 연결을 시도할 수 있습니다. 가능한 가장 높은 IP 주소는 `255.255.255.255`입니다.<br /><br /> 참고:이 필드와 *start_ip_address* 필드가 모두 이면 Azure 연결을 시도할 수 있습니다 `0.0.0.0` .|  
   
 ## <a name="remarks"></a>설명  
  서버 수준 방화벽 설정 이름은 고유해야 합니다. 저장 프로시저에 대해 제공된 설정 이름이 해당 방화벽 설정 테이블에 이미 있습니다. 시작 및 끝 IP 주소가 업데이트됩니다. 그렇지 않으면, 새 서버 수준 방화벽 설정이 만들어집니다.  
@@ -60,7 +60,7 @@ sp_set_firewall_rule [@name =] 'name',
 ## <a name="permissions"></a>사용 권한  
  프로 비전 프로세스에서 생성 된 서버 수준 보안 주체 로그인 또는 관리자로 할당 된 Azure Active Directory 보안 주체가 서버 수준 방화벽 규칙을 만들거나 수정할 수 있습니다. Sp_set_firewall_rule를 실행 하려면 사용자가 master 데이터베이스에 연결 되어 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 코드는 Azure에서 액세스를 허용하는 `Allow Azure`라는 서버 수준 방화벽 설정을 만듭니다. 가상 master 데이터베이스에서 다음을 실행 합니다.  
   
 ```  
@@ -69,7 +69,7 @@ exec sp_set_firewall_rule N'Allow Azure', '0.0.0.0', '0.0.0.0';
   
 ```  
   
- 다음 코드는 `Example setting 1` IP 주소에 대해서만 `0.0.0.2`이라는 서버 수준 방화벽 설정을 만듭니다. 그런 다음 해당 `sp_set_firewall_rule` 방화벽 설정에서 끝 IP 주소를로 `0.0.0.4`업데이트 하기 위해 저장 프로시저를 다시 호출 합니다. 이렇게 하면 IP 주소 `0.0.0.2` `0.0.0.3`, 및 `0.0.0.4` 가 서버에 액세스할 수 있는 범위가 만들어집니다.  
+ 다음 코드는 `Example setting 1` IP 주소에 대해서만 `0.0.0.2`이라는 서버 수준 방화벽 설정을 만듭니다. 그런 다음 `sp_set_firewall_rule` `0.0.0.4` 해당 방화벽 설정에서 끝 IP 주소를로 업데이트 하기 위해 저장 프로시저를 다시 호출 합니다. 이렇게 하면 IP 주소, `0.0.0.2` `0.0.0.3` 및가 `0.0.0.4` 서버에 액세스할 수 있는 범위가 만들어집니다.  
   
 ```  
 -- Create server-level firewall setting for only IP 0.0.0.2  

@@ -1,6 +1,6 @@
 ---
 title: SQL Server 업그레이드에 대 한 추적 캡처
-description: SQL Server 업그레이드에 대 한 데이터베이스 실험 도우미에서 추적 캡처
+description: 캡처 서버 이벤트 로그를 사용 하 여 추적 파일을 만들려면 데이터베이스 실험 도우미 (DEA)를 사용 합니다.
 ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c560aa2c5ba4b5113ce711601a4e85aab2788240
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289831"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565595"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>데이터베이스 실험 도우미에서 추적 캡처
 
@@ -134,11 +134,11 @@ DEA를 사용 하 여 서버 또는 단일 데이터베이스의 모든 데이�
 - SQL Server를 실행 하는 컴퓨터의 이름이 유효 합니다. 확인 하려면 SSMS (SQL Server Management Studio)를 사용 하 여 SQL Server를 실행 하는 컴퓨터에 연결을 시도 합니다.
 - 방화벽 구성은 SQL Server를 실행 하는 컴퓨터에 대 한 연결을 차단 하지 않습니다.
 - 사용자에 게 [재생 FAQ](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay)에 나열 된 사용 권한이 있습니다.
-- 추적 이름은 표준 롤오버 규칙 (캡처\_1)을 따르지 않습니다. 대신 Capture\_1A 또는 Capture1와 같은 추적 이름을 사용해 보세요.
+- 추적 이름은 표준 롤오버 규칙 (캡처 1)을 따르지 않습니다 \_ . 대신 Capture 1a 또는 Capture1와 같은 추적 이름을 사용해 보세요 \_ .
 
 다음은 표시 될 수 있는 몇 가지 오류와 해결 방법입니다.
 
-|가능한 오류|솔루션|  
+|가능한 오류|해결 방법|  
 |---|---|  
 |대상 SQL Server에서 추적을 시작할 수 없습니다. 필요한 권한이 있는지 확인 하 고 SQL Server 계정에 지정 된 추적 파일 경로 Sql 오류 코드 (53)에 대 한 쓰기 권한이 있는지 확인 하십시오.|DEA 도구를 실행 하는 사용자는 SQL Server를 실행 하는 컴퓨터에 액세스할 수 있어야 합니다. 사용자에 게 sysadmin 역할이 할당 되어야 합니다.|  
 |대상 SQL Server에서 추적을 시작할 수 없습니다. 필요한 권한이 있는지 확인 하 고 SQL Server 계정에 지정 된 추적 파일 경로 Sql 오류 코드 (19062)에 대 한 쓰기 권한이 있는지 확인 하십시오.|지정 된 추적 경로가 없거나, 해당 폴더에 SQL Server 서비스가 실행 중인 계정에 대 한 쓰기 권한이 없는 경우 (예: 네트워크 서비스) 경로가 있어야 하 고 추적을 시작 하는 데 필요한 권한이 있어야 합니다.|  

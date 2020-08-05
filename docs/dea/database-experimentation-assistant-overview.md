@@ -1,6 +1,6 @@
 ---
 title: 데이터베이스 실험 도우미 개요
-description: 데이터베이스 실험 도우미 개요
+description: 특정 작업에 대 한 SQL Server의 대상 버전을 평가 하는 방법 등 데이터베이스 실험 도우미 (DEA)에 대 한 자세한 정보를 알아봅니다.
 ms.date: 12/12/2019
 ms.prod: sql
 ms.suite: sql
@@ -11,12 +11,12 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dce2bfcafeb95a72e6584e4b619f1e4e5e12bdf1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 94bfd77da2658a4cb6b0e5e07868605f1c12140c
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759159"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565553"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>데이터베이스 실험 도우미 개요
 
@@ -32,7 +32,7 @@ DEA 분석 메트릭은 다음과 같습니다.
 
 ## <a name="get-dea"></a>DEA 가져오기
 
-DEA를 설치 하려면 최신 버전의 도구를 [다운로드](https://www.microsoft.com/download/details.aspx?id=54090) 합니다. 그런 다음 **DatabaseExperimentationAssistant** 파일을 실행 합니다.
+DEA를 설치 하려면 최신 버전의 도구를 [다운로드](https://www.microsoft.com/download/details.aspx?id=54090) 합니다. 그런 다음 **DatabaseExperimentationAssistant.exe** 파일을 실행 합니다.
 
 ## <a name="solution-architecture-for-comparing-workloads"></a>워크 로드 비교를 위한 솔루션 아키텍처
 
@@ -105,7 +105,7 @@ DEA에는 제품 환경을 개선 하는 데 사용할 수 있도록 원격 분�
 원격 분석 데이터를 수집 하 고 보내는 것은 선택 사항입니다. 수집 되는 이벤트와 수집 된 이벤트를 Microsoft로 보낼지 여부를 지정 하려면 다음 단계를 사용 합니다.
 
 1. DEA가 설치 된 위치 (예: C: \\ Program Files (x86) \\ Microsoft Corporation \\ 데이터베이스 실험 도우미)로 이동 합니다.
-2. 응용 프로그램에 대 한 .config 파일 **DEA** (응용 프로그램의 경우) 및 **deacmd .EXE .config** (CLI)를 열고 수정 하 여 시나리오를 적절 하 게 처리 합니다.
+2. 응용 프로그램의 **DEA.exe.config** .config 파일을 열고 수정 하 고 CLI 용 **DEACmd.exe.config** 하 여 시나리오를 적절 하 게 해결 합니다.
     - 이벤트 유형 수집을 중지 하려면 *이벤트* 의 값 (예: **traceevent**)을 **false**로 설정 합니다. 이벤트 수집을 다시 시작 하려면 값을 **true**로 설정 합니다.
     - 이벤트의 로컬 복사본을 저장 하는 것을 중지 하려면 **TraceLoggerEnabled** 의 값을 **false**로 설정 합니다. 로컬 복사본 저장을 다시 시작 하려면 값을 **true**로 설정 합니다.
     - Microsoft로의 이벤트 전송을 중지 하려면 **AppInsightsLoggerEnabled** 의 값을 **false**로 설정 합니다. Microsoft로 이벤트를 다시 보내기 시작 하려면 값을 **true**로 설정 합니다.

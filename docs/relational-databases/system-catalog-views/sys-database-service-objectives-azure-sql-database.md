@@ -16,15 +16,15 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7a6de1ad7652e7b948d741acdeebdd186f590b44
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: e6ee5d0f6a2b26dc10c901297097b99338ba9091
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627577"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544376"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives(Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
 Azure SQL database 또는 Azure SQL Data Warehouse에 대 한 버전 (서비스 계층), 서비스 목표 (가격 책정 계층) 및 탄력적 풀 이름 (있는 경우)을 반환 합니다. Azure SQL Database 서버의 마스터 데이터베이스에 로그인하면 모든 데이터베이스에 대한 정보를 반환합니다. Azure SQL Data Warehouse의 경우 마스터 데이터베이스에 연결되어 있어야 합니다.  
   
@@ -40,12 +40,12 @@ Azure SQL database 또는 Azure SQL Data Warehouse에 대 한 버전 (서비스 
 |database_id|int|Azure SQL Database server의 인스턴스 내에서 고유한 데이터베이스 ID입니다. 조인 가능를 사용 하 여 [transact-sql&#41;&#40;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |edition|sysname|데이터베이스 또는 데이터 웨어하우스의 서비스 계층: **Basic**, **Standard**, **Premium** 또는 **data warehouse**.|  
 |service_objective|sysname|데이터베이스의 가격 책정 계층입니다. 데이터베이스가 탄력적 풀에 있는 경우 **ElasticPool**를 반환 합니다.<br /><br /> **기본** 계층에서 **basic**을 반환 합니다.<br /><br /> **표준 서비스 계층의 단일 데이터베이스** 는 S0, S1, S2, S3, S4, S6, S7, S9 또는 s 12 중 하나를 반환 합니다.<br /><br /> **프리미엄 계층의 단일 데이터베이스** 는 P1, P2, P4, P6, P11 또는 P15을 반환 합니다.<br /><br /> **SQL Data Warehouse** 는 DW30000c를 통해 DW100을 반환 합니다.<br /><br /> 자세한 내용은 [단일 데이터베이스](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/), [탄력적 풀](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/), [데이터 웨어하우스](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/) 를 참조 하세요.|  
-|elastic_pool_name|sysname|데이터베이스가 속한 [탄력적 풀](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) 의 이름입니다. 데이터베이스가 단일 데이터베이스 또는 데이터 warehoue 경우 **NULL** 을 반환 합니다.|  
+|elastic_pool_name|sysname|데이터베이스가 속한 [탄력적 풀](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) 의 이름입니다. 데이터베이스가 단일 데이터베이스 또는 데이터 웨어하우스 인 경우 **NULL** 을 반환 합니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  Master 데이터베이스에 대 한 **dbManager** 권한이 필요 합니다.  데이터베이스 수준에서 사용자는 작성자 또는 소유자 여야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 예는 master 데이터베이스 또는 Azure SQL Database 사용자 데이터베이스에서 실행할 수 있습니다. 이 쿼리는 데이터베이스의 이름, 서비스 및 성능 계층 정보를 반환 합니다.  
   
 ```sql  

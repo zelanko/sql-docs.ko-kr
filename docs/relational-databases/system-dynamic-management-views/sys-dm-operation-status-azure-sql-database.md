@@ -1,5 +1,5 @@
 ---
-title: dm_operation_status (Azure SQL Database) | Microsoft Docs
+title: sys. dm_operation_status | Microsoft Docs
 ms.custom: ''
 ms.date: 06/05/2017
 ms.service: sql-database
@@ -19,16 +19,16 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 6b0894c29e1c3cb525cd9378c0a95e56299e8a1e
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: 080d12cdcf945fe34a2c8f1ab9ea7414e714da8c
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85440710"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544386"
 ---
-# <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status(Azure SQL Database)
+# <a name="sysdm_operation_status"></a>sys.dm_operation_status
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
   [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 서버의 데이터베이스에 대해 수행된 작업 정보를 반환합니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "85440710"
 |error_code|**int**|실패한 작업 중에 발생한 오류를 나타내는 코드입니다. 값이 0이면 작업이 성공적으로 완료되었음을 나타냅니다.|  
 |error_desc|**nvarchar(2048)**|실패한 작업 중에 발생한 오류에 대한 설명입니다.|  
 |error_severity|**int**|실패한 작업 중에 발생한 오류의 심각도 수준입니다. 오류 심각도에 대 한 자세한 내용은 [데이터베이스 엔진 오류 심각도](https://go.microsoft.com/fwlink/?LinkId=251052)를 참조 하세요.|  
-|error_state|**int**|다음에 사용하도록 예약됩니다. 향후 호환성은 보장되지 않습니다.|  
+|error_state|**int**|나중에 사용하기 위해 예약되어 있습니다. 향후 호환성은 보장되지 않습니다.|  
 |start_time|**datetime**|작업이 시작된 타임스탬프입니다.|  
 |last_modify_time|**datetime**|장기 실행 작업에 대해 레코드가 마지막으로 수정된 타임스탬프입니다. 완료된 작업의 경우 이 필드에는 작업 완료 시간의 타임스탬프가 표시됩니다.|  
   

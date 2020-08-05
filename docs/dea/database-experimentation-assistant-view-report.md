@@ -1,6 +1,6 @@
 ---
 title: SQL Server 업그레이드에 대 한 분석 보고서 보기
-description: 데이터베이스 실험 도우미 분석 보고서 보기
+description: 데이터베이스 실험 도우미 (DEA)에서 성능 정보에 대 한 분석 보고서를 보고 이해 하는 방법에 대해 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 02/04/2020
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 2a6d027c1fb1834e4033a11a498bfc8cdad4561f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5850f3f78590b5ceccea49033b401055180d715e
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76977604"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565492"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>데이터베이스 실험 도우미 분석 보고서 보기
 

@@ -1,6 +1,6 @@
 ---
 title: SQL Server 업그레이드에 대 한 추적 재생
-description: SQL Server 업그레이드에 대 한 데이터베이스 실험 도우미를 사용 하 여 추적 재생
+description: SQL Server 업그레이드에 대 한 데이터베이스 실험 도우미를 사용 하 여 캡처된 추적을 재생 하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 50f082edef5d9a6d4e95b7e37ef6d75f22eb6f2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85143440cc92cdc427be673667e22be6957cbe50
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289151"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565502"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>데이터베이스 실험 도우미에서 추적 재생
 
@@ -118,7 +118,7 @@ SQL Server은 상태 저장 관계형 데이터베이스 관리 시스템입니�
 
 **Q: 재생 중 수집 된 추적 이벤트를 어떻게 확인할 수 있나요?**
 
-대상 추적 파일을 열고 SQL Profiler에서 봅니다. 또는 재생 캡처를 수정 하려는 경우 모든 SQL Server 스크립트를 C\\: Program Files (x86)\\Microsoft Corporation\\데이터베이스 실험 도우미\\스크립트\\startreplaycapture. SQL에서 사용할 수 있습니다.
+대상 추적 파일을 열고 SQL Profiler에서 봅니다. 또는 재생 캡처를 수정 하려는 경우 모든 SQL Server 스크립트를 C: \\ Program Files (x86) \\ Microsoft Corporation \\ 데이터베이스 실험 도우미 \\ 스크립트 \\ startreplaycapture. SQL에서 사용할 수 있습니다.
 
 **Q: 재생 하는 동안 DEA에서 수집 하는 추적 이벤트는 무엇입니까?**
 
@@ -133,11 +133,11 @@ DEA는 성능 관련 정보를 포함 하는 추적 이벤트를 캡처합니다
 - 사용자에 게 필요한 사용자 권한이 있는지 확인 합니다.
 - Distributed Replay 클라이언트의 서비스 계정에 SQL Server를 실행 하는 컴퓨터에 대 한 액세스 권한이 있는지 확인 합니다.
 
-% Temp%\\DEA의 로그에서 자세한 내용을 볼 수 있습니다. 문제가 지속 되 면 제품 팀에 문의 하십시오.
+% Temp% DEA의 로그에서 자세한 내용을 볼 수 있습니다 \\ . 문제가 지속 되 면 제품 팀에 문의 하십시오.
 
 **Q: Distributed Replay 컨트롤러에 연결할 수 없는 이유는 무엇입니까?**
 
-- 컨트롤러 컴퓨터에서 Distributed Replay controller 서비스가 실행 중인지 확인 합니다. 확인 하려면 Distributed Replay 관리 도구 (명령 `dreplay.exe status -f 1`실행)를 사용 합니다.
+- 컨트롤러 컴퓨터에서 Distributed Replay controller 서비스가 실행 중인지 확인 합니다. 확인 하려면 Distributed Replay 관리 도구 (명령 실행)를 사용 `dreplay.exe status -f 1` 합니다.
 - 재생이 원격으로 시작 되는 경우:
   - DEA를 실행 하는 컴퓨터가 컨트롤러를 성공적으로 ping 할 수 있는지 확인 합니다. **재생 환경 구성** 페이지의 지침에 따라 방화벽 설정에서 연결을 허용 하는지 확인 합니다. 자세한 내용은 [SQL Server Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/sql-server-distributed-replay?view=sql-server-2017)문서를 참조 하세요.
   - Distributed Replay 컨트롤러의 사용자에 대해 DCOM 원격 시작 및 원격 활성화가 허용 되는지 확인 합니다.
@@ -163,6 +163,6 @@ UNC 경로는 Distributed Replay와 호환 되지 않습니다. Distributed Repl
   
 SQL Server 2017에 대 한 최신 누적 업데이트 1에서이 문제가 해결 되었습니다. [SQL Server 2017에 대 한 최신 버전의 누적 업데이트 1](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017)을 다운로드 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - 제안 된 변경 내용에 대 한 정보를 얻는 데 도움이 되는 분석 보고서를 만들려면 [보고서 만들기](database-experimentation-assistant-create-report.md)를 참조 하세요.

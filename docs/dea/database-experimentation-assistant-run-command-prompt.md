@@ -1,6 +1,6 @@
 ---
 title: 명령 프롬프트에서 데이터베이스 실험 도우미 실행
-description: 명령 프롬프트에서 데이터베이스 실험 도우미 실행
+description: 데이터베이스 실험 도우미 (DEA)에서 추적을 캡처한 다음 명령 프롬프트에서 결과를 모두 분석 하는 방법에 대해 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 02/25/2020
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 674f40b16437547956178293c5b491b11c8b2f89
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: 161258d8359ce46b9ff2afb2a878c008059772db
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85215490"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565532"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>명령 프롬프트에서 데이터베이스 실험 도우미 실행
 
