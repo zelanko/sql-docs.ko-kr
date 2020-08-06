@@ -7,12 +7,12 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: bd1c4ad80abb5e6df26ea09fc19e83b457fee87c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a41223036980a77a45094f2a64c22b898902548c
+ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895339"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477355"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux의 SQL Server FAQ(질문과 대답)
 
@@ -163,5 +163,9 @@ ms.locfileid: "85895339"
 1. **설치된 mssql 계정 및 그룹에서 SQL Server 파일 및 디렉터리의 소유권을 변경할 수 있나요?**
 
    기본 설치에서 SQL Server 디렉터리 및 파일의 소유권을 변경하는 것은 지원되지 않습니다. mssql 계정 및 그룹은 특별한 경우에 SQL Server에 사용되며 대화형 로그인 액세스 권한이 없습니다.
-
+   
+ 1. **SQL Server 데이터 및 로그 디렉터리에 대해 바로 가기 링크가 지원되나요?** 
+    
+    아니요. 바로 가기 링크는 SQL Server 데이터 및 로그 디렉터리에 대해 지원되지 않습니다. 기본 데이터 및 로그 디렉터리를 변경하려면 [기본 데이터 또는 로그 디렉터리 위치 변경](sql-server-linux-configure-mssql-conf.md#datadir)을 참조하세요.
+    
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

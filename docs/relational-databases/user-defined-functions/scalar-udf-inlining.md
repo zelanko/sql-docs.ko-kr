@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: d32a8c6a2096cab67917db7a464b70eaf16ff6f5
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b1a8d91cc9da7cb0707211464e53b2cccaf0a111
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484424"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435584"
 ---
 # <a name="scalar-udf-inlining"></a>스칼라 UDF 인라인 처리
 
@@ -131,7 +131,7 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]도 암시적 `GROUP BY O_CUSTKEY on ORDERS`를 추론하며 IndexSpool + StreamAggregate를 사용하여 구현합니다.
 -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이제 모든 연산자에서 병렬 처리를 사용하고 있습니다.
 
-UDF의 논리 복잡성에 따라 결과적인 쿼리 계획이 더 크고 복잡할 수도 있습니다. 여기서 보듯이 UDF 내 연산은 더 이상 블랙 박스가 아니므로 쿼리 최적화 프로그램이 해당 연산을 희생하고 최적화할 수 있습니다. 또한 UDF가 더 이상 계획에 없으므로 반복 UDF 호출이 함수 호출 과부하를 완전히 방지하는 계획으로 바뀝니다.
+UDF의 논리 복잡성에 따라 결과적인 쿼리 계획이 더 크고 복잡할 수도 있습니다. 여기서 보듯이 UDF 내 연산은 더 이상 불투명 상자가 아니므로 쿼리 최적화 프로그램이 해당 연산을 희생하고 최적화할 수 있습니다. 또한 UDF가 더 이상 계획에 없으므로 반복 UDF 호출이 함수 호출 과부하를 완전히 방지하는 계획으로 바뀝니다.
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>인라인 처리 가능한 스칼라 UDF 요구 사항
 <a name="requirements"></a> 다음 조건을 모두 만족하는 스칼라 T-SQL UDF를 인라인 처리할 수 있습니다.

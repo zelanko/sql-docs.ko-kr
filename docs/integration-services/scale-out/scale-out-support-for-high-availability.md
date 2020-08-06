@@ -1,6 +1,6 @@
 ---
 title: 고가용성을 위한 Scale Out 지원 | Microsoft Docs
-description: 이 문서에서는 고가용성에 대한 SSIS Scale Out 구성 방법 설명
+description: 고가용성을 위해 SSIS(SQL Server Integration Services) Scale Out 마스터 쪽을 구성하는 방법을 알아봅니다.
 ms.custom: performance
 ms.date: 05/23/2018
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: edd0418c3dc47089db309a66ad30a6f7f75a1280
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 75eeaf7b9402de747c49ad69f64731c2de6962c9
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922099"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522895"
 ---
 # <a name="scale-out-support-for-high-availability"></a>고가용성에 대한 Scale Out 지원
 

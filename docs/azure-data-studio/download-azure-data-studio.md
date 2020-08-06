@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 7/17/2020
-ms.openlocfilehash: a5f16cc15fc44a1b07b11159ac0accc6a47afc60
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: c0b701bb23b5ada0f3a4a58d23064bd79acd80ad
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411179"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442389"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Azure Data Studio 다운로드 및 설치
 
@@ -173,6 +173,8 @@ Azure Data Studio는 Windows, macOS, Linux에서 실행되고, 다음 플랫폼�
 ## <a name="check-for-updates"></a>업데이트 확인
 
 최신 업데이트를 확인하려면 창의 왼쪽 아래에 있는 기어 아이콘을 클릭한 다음, **업데이트 확인**을 클릭합니다.
+
+오프라인 환경에서 업데이트는 이전에 설치된 버전 위에 직접 [최신 버전을 설치](#download-and-install-azure-data-studio)하여 적용할 수 있습니다.  설치 관리자가 현재 설치된 애플리케이션(있는 경우)을 업데이트하므로 이전 버전의 Azure Data Studio를 제거할 필요는 없습니다.
 
 ## <a name="supported-sql-offerings"></a>지원되는 SQL 서비스
 

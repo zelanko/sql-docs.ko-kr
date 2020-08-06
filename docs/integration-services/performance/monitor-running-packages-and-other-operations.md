@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6f899ec9c1e006212483a49133ad343e93f20173
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4506f95337319d0b4a8fa4f63c99a182360cfa2b
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918335"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472508"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>실행 중인 패키지 및 기타 작업 모니터링
 
@@ -73,7 +73,7 @@ ms.locfileid: "86918335"
  **형식**  
  작업 유형을 지정합니다. 다음은 **유형** 필드의 가능한 값과 Transact-SQL **catalog.operations** 뷰의 operations_type 열에 표시되는 해당 값입니다.  
   
-|||  
+|형식 필드 설명|operations_type 값|  
 |-|-|  
 |Integration Services 초기화|1|  
 |작업 정리(SQL 에이전트 작업)|2|  

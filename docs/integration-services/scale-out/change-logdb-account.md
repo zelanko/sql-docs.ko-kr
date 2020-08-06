@@ -1,6 +1,6 @@
 ---
 title: SSIS Scale Out 로깅을 위한 계정 변경 | Microsoft Docs
-description: 이 문서에서는 SSIS Scale Out 로깅을 위해 사용자 계정을 변경하는 방법을 설명합니다
+description: SSIS(SQL Server Integration Services) Scale Out 로깅에 사용할 계정을 변경하는 방법을 알아봅니다.
 ms.custom: performance
 ms.date: 06/29/2020
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.reviewer: maghan
-ms.openlocfilehash: 0478b685adffa36b4ec344f4f13c52da6436300c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c53a389541408080f1de43da409b4b61ca85a0ec
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919039"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522337"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>Scale Out 로깅을 위한 계정 변경
 

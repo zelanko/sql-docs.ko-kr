@@ -1,6 +1,6 @@
 ---
 title: SSIS Scale Out 문제 해결 | Microsoft Docs
-description: 이 문서에서는 SSIS Scale Out을 사용하여 일반적인 문제를 해결하는 방법 설명
+description: 구성 실수, 액세스 권한 부족 등 SSIS Scale Out과 관련된 일반적인 문제를 해결합니다.
 ms.custom: performance
 ms.date: 01/09/2019
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 96cbbba57e74b0ffaa9dac9d012faf38e34a1ab8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e8e8a2b2acde605c779375adec9c0908cbf46b03
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922072"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522327"
 ---
 # <a name="troubleshoot-scale-out"></a>Scale Out 문제 해결
 

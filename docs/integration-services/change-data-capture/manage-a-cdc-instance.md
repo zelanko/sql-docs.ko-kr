@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a275dbc088774355c3546b7234174e5b7b585e43
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 929e6730ade53eeff07552652ff2905665fc4a49
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922531"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472559"
 ---
 # <a name="manage-a-cdc-instance"></a>CDC 인스턴스 관리
 
@@ -71,7 +71,7 @@ ms.locfileid: "86922531"
   
 -   **상태**: CDC 인스턴스의 현재 상태를 나타내는 아이콘입니다. 다음과 같이 상태를 설명합니다.  
   
-    |||  
+    |아이콘|상태 및 설명|  
     |-|-|  
     |![오류](../../integration-services/change-data-capture/media/error.gif "Error")|**오류**. 다시 시도할 수 없는 오류가 발생하여 Oracle CDC 인스턴스가 실행되지 않습니다. 다음과 같은 하위 상태를 사용할 수 있습니다.<br /><br /> **잘못 구성됨**: 수동 작업이 필요한 구성 오류가 발생했습니다.<br /><br /> **암호 필요**: Oracle CDC 인스턴스에 대해 암호를 설정하지 않았거나 암호가 올바르지 않습니다.<br /><br /> **예기치 않은 오류**: 복구할 수 없는 다른 모든 오류입니다.|  
     |![Okay](../../integration-services/change-data-capture/media/okay.gif "확인")|**실행 중**: CDC 인스턴스가 실행 중이며 변경 레코드를 처리하고 있습니다. 다음과 같은 하위 상태를 사용할 수 있습니다.<br /><br /> **유휴 상태**: 모든 변경 레코드가 처리되어 대상 변경 테이블에 저장되었습니다. 활성 트랜잭션이 더 이상 없습니다.<br /><br /> **처리 중**: 변경 테이블에 아직 기록되지 않은 처리 중인 변경 레코드가 있습니다.|  

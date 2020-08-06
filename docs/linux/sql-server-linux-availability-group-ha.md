@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 28a9541c1369202b8bd322cc23201e8d531f913e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a7a6ce8832db85d54ad9513d8258af2863dab2e5
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892250"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472424"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>가용성 그룹 구성의 고가용성 및 데이터 보호
 
@@ -59,7 +59,7 @@ SQL Server 2017에서는 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 클러스
 
 동기 복제본 3개가 있는 가용성 그룹은 읽기 확장, 고가용성 및 데이터 보호를 제공할 수 있습니다. 다음 표에서는 가용성 동작을 설명합니다. 
 
-| |읽기 확장|고가용성 및 </br> 데이터 보호 | 데이터 보호|
+|가용성 동작 |읽기 확장|고가용성 및 </br> 데이터 보호 | 데이터 보호|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
 |주 중단 |자동 장애 조치(failover). 새로운 주 복제본은 읽기/쓰기입니다. |자동 장애 조치(failover). 새로운 주 복제본은 읽기/쓰기입니다. |자동 장애 조치(failover). 이전 주 복제본이 복구되어 가용성 그룹에 보조 복제본으로 참가할 때까지 새로운 주 복제본을 사용자 트랜잭션에 사용할 수 없습니다. |
@@ -77,7 +77,7 @@ SQL Server 2017에서는 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 클러스
 
 동기 복제본 2개가 있는 가용성 그룹은 읽기 확장 및 데이터 보호를 제공합니다. 다음 표에서는 가용성 동작을 설명합니다. 
 
-| |읽기 확장 |데이터 보호|
+|가용성 동작 |읽기 확장 |데이터 보호|
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |주 중단 | 수동 장애 조치(failover). 데이터 손실이 있을 수 있습니다. 새로운 주 복제본은 읽기/쓰기입니다.| 자동 장애 조치(failover). 이전 주 복제본이 복구되어 가용성 그룹에 보조 복제본으로 참가할 때까지 새로운 주 복제본을 사용자 트랜잭션에 사용할 수 없습니다.|
@@ -103,7 +103,7 @@ SQL Server 2017에서는 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 클러스
 
 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`의 기본값은 0입니다. 다음 표에서는 가용성 동작을 설명합니다. 
 
-| |고가용성 및 </br> 데이터 보호 | 데이터 보호|
+|가용성 동작 |고가용성 및 </br> 데이터 보호 | 데이터 보호|
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |주 중단 | 자동 장애 조치(failover). 새로운 주 복제본은 읽기/쓰기입니다. | 자동 장애 조치(failover). 새로운 주 복제본을 사용자 트랜잭션에 사용할 수 없습니다. |
@@ -138,7 +138,7 @@ SQL Server 2017에서는 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 클러스
 
 SQL Server 2017 CTP 1.4에서는 `sys.availability_groups`에 `sequence_number`가 추가되어, Pacemaker에서 보조 복제본이 주 복제본을 기준으로 얼마나 최신 상태인지를 확인할 수 있습니다. `sequence_number`는 로컬 가용성 그룹 복제본이 얼마나 최신 상태인지를 나타내는 단조롭게 증가하는 BIGINT입니다. Pacemaker는 가용성 그룹 구성이 변경될 때마다 `sequence_number`를 업데이트합니다. 구성 변경의 예로는 장애 조치(failover), 복제본 추가, 제거 등이 있습니다. 이 번호는 주 복제본에서 업데이트된 다음, 보조 복제본에 복제됩니다. 따라서 최신 구성이 포함된 보조 복제본은 주 복제본과 시퀀스 번호가 같습니다. 
 
-Pacemaker는 복제본 수준을 주 복제본으로 올리기로 결정한 경우 먼저 모든 복제본에 ‘수준 올리기 전’ 알림을 보냅니다.  복제본이 시퀀스 번호를 반환합니다. 그다음에 Pacemaker가 실제로 복제본 수준을 주 복제본으로 올리려고 할 때 시퀀스 번호가 모든 시퀀스 번호 중 가장 높은 경우에만 복제본 수준이 올라갑니다. 시퀀스 번호가 가장 높은 시퀀스 번호와 일치하지 않는 복제본의 수준 올리기 작업은 거부됩니다. 이 방법에서는 일련 번호가 가장 높은 복제본만 주 복제본으로 승격될 수 있으므로 데이터가 손실되지 않습니다. 
+Pacemaker는 복제본 수준을 주 복제본으로 올리기로 결정한 경우 먼저 모든 복제본에 ‘수준 올리기 전’ 알림을 보냅니다. 복제본이 시퀀스 번호를 반환합니다. 그다음에 Pacemaker가 실제로 복제본 수준을 주 복제본으로 올리려고 할 때 시퀀스 번호가 모든 시퀀스 번호 중 가장 높은 경우에만 복제본 수준이 올라갑니다. 시퀀스 번호가 가장 높은 시퀀스 번호와 일치하지 않는 복제본의 수준 올리기 작업은 거부됩니다. 이 방법에서는 일련 번호가 가장 높은 복제본만 주 복제본으로 승격될 수 있으므로 데이터가 손실되지 않습니다. 
 
 이 프로세스를 수행하려면 이전 주 복제본과 시퀀스 번호가 같고 수준을 올릴 수 있는 복제본이 하나 이상 있어야 합니다. Pacemaker 리소스 에이전트는 하나 이상의 동기 보조 복제본이 최신 상태이고 기본적으로 자동 장애 조치(failover)의 대상이 될 수 있도록 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`을 설정합니다. 각 모니터링 작업에서 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 값은 계산됩니다(필요한 경우 업데이트됨). `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 값은 ‘동기 복제본 수’를 2로 나눈 값입니다. 장애 조치(failover) 시 리소스 에이전트가 수준 올리기 전 알림에 응답하려면 (`total number of replicas` - `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 복제본)이 필요합니다. `sequence_number`가 가장 높은 복제본이 주 복제본으로 수준이 올라갑니다. 
 

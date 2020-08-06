@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 27e39532a3b6198fd6d54c7b58407e76c487325a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8620da6349efe012e9e0d75d6ddf5efada437832
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751905"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442814"
 ---
 # <a name="server-memory-configuration-options"></a>서버 메모리 구성 옵션
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,9 +77,14 @@ ms.locfileid: "85751905"
   
 2.  **메모리** 노드를 클릭합니다.  
   
-3.  **서버 메모리 옵션**에서 원하는 **최소 서버 메모리** 및 **최대 서버 메모리**와 동일한 양을 입력합니다.  
+3.  **서버 메모리 옵션**에서 원하는 **최소 서버 메모리** 및 **최대 서버 메모리**양을 입력합니다.  
   
      기본 설정을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 사용할 수 있는 시스템 리소스에 따라 메모리 요구 사항을 동적으로 변경할 수 있습니다. **최대 서버 메모리**는 [위에서 설명한 대로](#max_server_memory) 설정하는 것이 좋습니다. 
+
+다음 스크린샷에는 세 단계 모두 나와 있습니다. 
+
+:::image type="content" source="media/server-memory-server-configuration-options/configure-memory-in-ssms.png" alt-text="SSMS에서 메모리 구성":::
+
   
 ## <a name="lock-pages-in-memory-lpim"></a>메모리의 페이지 잠금(LPIM) 
 이 Windows 정책은 데이터를 실제 메모리에 유지하는 프로세스를 사용하여 시스템이 디스크의 가상 메모리로 데이터를 페이징하지 않도록 방지할 수 있는 계정을 결정합니다. 메모리의 페이지를 잠그면 메모리를 디스크로 페이징할 때 서버가 계속해서 응답합니다. sqlservr.exe 실행 권한이 있는 계정에 Windows *메모리의 페이지 잠금*(LPIM) 사용자 권한이 부여된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 이상 버전의 인스턴스에서 **메모리의 페이지 잠금** 옵션은 ON으로 설정됩니다.  

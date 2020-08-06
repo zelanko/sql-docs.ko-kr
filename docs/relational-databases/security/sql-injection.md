@@ -14,12 +14,12 @@ ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e1cffa7f2d8c388b391a3bcb8cbe51ebd6ff1c2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ad927941169f7f93f43a534535f80449682c9d60
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001033"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472542"
 ---
 # <a name="sql-injection"></a>SQL 삽입
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -171,7 +171,7 @@ OR UPPER(text) LIKE '%SP_EXECUTESQL%';
 ### <a name="wrapping-parameters-with-quotename-and-replace"></a>QUOTENAME() 및 REPLACE()에서 매개 변수 래핑  
  선택한 각 저장 프로시저에서 동적 Transact-SQL에 사용된 모든 변수가 제대로 처리되는지 확인합니다. 저장 프로시저의 입력 매개 변수에서 가져온 데이터 또는 테이블에서 읽어 온 데이터는 QUOTENAME() 또는 REPLACE()에서 래핑되어야 합니다. QUOTENAME()에 전달되는 @variable의 값은 sysname이며 최대 길이는 128자입니다.  
   
-|@variable|권장 래퍼|  
+|\@variable|권장 래퍼|  
 |---------------|-------------------------|  
 |보안 개체 이름|`QUOTENAME(@variable)`|  
 |128자 이하의 문자열|`QUOTENAME(@variable, '''')`|  

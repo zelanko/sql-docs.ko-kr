@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cee7b5274347e26b595f81d78b51946c7d5ce39b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 851d6a801a83f8e66bbab3da2f1836a0bbdccf21
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896174"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435220"
 ---
 # <a name="basic-always-on-availability-groups-for-a-single-database"></a>단일 데이터베이스에 대한 기본 Always On 가용성 그룹
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -45,6 +45,9 @@ ms.locfileid: "85896174"
 - 기본 가용성 그룹은 Standard Edition 서버에 대해서만 지원됩니다. 
 
 - 기본 가용성 그룹은 분산 가용성 그룹의 일부가 될 수 없습니다. 
+
+- SQL Server의 단일 인스턴스에 연결된 여러 기본 가용성 그룹이 있을 수 있습니다.
+
   
 ## <a name="configuration"></a>구성  
  Always On 기본 가용성 그룹은 두 개의 SQL Server 2016 Standard Edition 서버에서 만들 수 있습니다. 기본 가용성 그룹을 만드는 경우에는, 만드는 동안 두 개의 복제본을 모두 지정해야 합니다.  

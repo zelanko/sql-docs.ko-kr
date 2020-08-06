@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3ad3743b35570ddb0f4644b909ca06339444143e
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 27ccecb8293adff8fe5f2aaa3062a871d745c587
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410939"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435447"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -27,7 +27,7 @@ SQL Server 2016에 도입된, Always Encrypted는 맬웨어 및 높은 권한이
 
 이 문서에 설명된 향상된 기능을 사용하지 않는 Always Encrypted는 클라이언트 쪽에서 데이터를 암호화하여 데이터 또는 해당 암호화 키가 SQL Server 엔진 내에서 일반 텍스트로 표시되지 않도록 함으로써 데이터를 보호합니다. 따라서 데이터베이스 내에 있는 암호화된 열에 대한 기능이 심각하게 제한됩니다. SQL Server가 암호화된 데이터에 관해 수행할 수 있는 유일한 작업은 같음 비교입니다(결정적 암호화에서만 사용할 수 있음). 암호화 작업(초기 데이터 암호화 또는 키 회전), 리치 계산(예: 패턴 일치) 등 다른 모든 작업은 데이터베이스 내에서 지원되지 않습니다. 사용자가 클라이언트 쪽에서 해당 작업을 수행하려면 데이터베이스 외부로 데이터를 이동해야 합니다.
 
-*보안 Enclave를 사용한* Always Encrypted는 서버 쪽의 보안 Enclave 내에서 일반 텍스트 데이터에 대한 계산을 허용하여 이러한 제한을 해결합니다. 보안 Enclave는 SQL Server 프로세스 내의 보호된 메모리 영역으로, SQL Server 엔진 내에서 중요한 데이터를 처리하기 위한 신뢰할 수 있는 실행 환경으로 사용됩니다. 보안 Enclave는 SQL Server의 나머지 부분 및 호스팅 컴퓨터의 다른 프로세스에서 검은색 상자로 표시됩니다. 디버거를 사용하더라도 외부에서 Enclave 내의 데이터나 코드를 볼 수 없습니다.  
+*보안 Enclave를 사용한* Always Encrypted는 서버 쪽의 보안 Enclave 내에서 일반 텍스트 데이터에 대한 계산을 허용하여 이러한 제한을 해결합니다. 보안 Enclave는 SQL Server 프로세스 내의 보호된 메모리 영역으로, SQL Server 엔진 내에서 중요한 데이터를 처리하기 위한 신뢰할 수 있는 실행 환경으로 사용됩니다. 보안 Enclave는 SQL Server의 나머지 부분 및 호스팅 컴퓨터의 다른 프로세스에서 불투명 상자로 표시됩니다. 디버거를 사용하더라도 외부에서 Enclave 내의 데이터나 코드를 볼 수 없습니다.  
 
 
 Always Encrypted는 다음 다이어그램에 설명된 것처럼 보안 Enclave를 사용합니다.

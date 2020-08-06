@@ -1,6 +1,6 @@
 ---
 title: '연습: SSIS Scale Out 설정 | Microsoft Docs'
-description: 이 문서에서는 SSIS Scale Out의 설정 및 구성을 연습합니다.
+description: SSIS(SQL Server Integration Services) Scale Out 마스터의 설정 및 구성에 대한 자세한 내용을 알아봅니다.
 ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.reviewer: maghan
-ms.openlocfilehash: 53e5b45af8da84c9afa7bf0a5fcebe0087db0d81
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f7de3c86cf58a9e4173ef170dff07db61f06f7f9
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922076"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522347"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>연습: Integration Services(SSIS) Scale Out 설정
 

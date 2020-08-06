@@ -14,23 +14,23 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 881385dbd03af3a2425a4b853ce4b194d474bb4d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 04bdf5678284b07ecf74799e4e6caaf55af1086b
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196897"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522955"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Always On 가용성 그룹을 사용하여 복제 구성
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 및 Always On 가용성 그룹을 구성하는 과정은 7단계로 구성됩니다. 각 단계에 대해서는 다음 섹션에서 자세하게 설명합니다.  
   
 ##  <a name="1-configure-the-database-publications-and-subscriptions"></a><a name="step1"></a> 1. 데이터베이스 게시 및 구독 구성  
  **배포자 구성**  
   
- 배포 데이터베이스는 SQL Server 2012 및 SQL Server 2014를 사용하여 가용성 그룹에 배치할 수 없습니다. 배포 데이터베이스를 가용성 그룹에 배치하는 것은 SQL 2016 이상에서 지원됩니다. 자세한 내용은 [가용성 그룹에서 배포 데이터베이스 구성](../../../relational-databases/replication/configure-distribution-availability-group.md)을 참조하세요.
+ 배포 데이터베이스는 SQL Server 2012 및 SQL Server 2014를 사용하여 가용성 그룹에 배치할 수 없습니다. 배포 데이터베이스를 가용성 그룹에 배치하는 것은 병합, 양방향 또는 피어 투 피어 복제 토폴로지에서 사용되는 배포 데이터베이스를 제외한 SQL 2016 이상에서 지원됩니다. 자세한 내용은 [가용성 그룹에서 배포 데이터베이스 구성](../../../relational-databases/replication/configure-distribution-availability-group.md)을 참조하세요.
   
 1.  배포자에서 배포를 구성합니다. 구성에 저장 프로시저를 사용하는 경우 **sp_adddistributor**를 실행합니다. *\@password* 매개 변수를 사용하여 원격 게시자가 배포자에 연결할 때 사용될 암호를 식별합니다. 암호는 원격 배포자를 설정할 때 각 원격 게시자에서도 필요합니다.  
   

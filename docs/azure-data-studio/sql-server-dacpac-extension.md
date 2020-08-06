@@ -1,6 +1,6 @@
 ---
 title: SQL Server dacpac 확장
-description: Azure Data Studio용 SQL Server dacpac 확장 설치 및 사용
+description: 데이터 계층 애플리케이션 마법사를 설치하고 시작하는 방법을 설명합니다. 이 마법사를 사용하면 간편하게 dacpac 파일을 배포 및 추출하고 bacpac 파일을 가져오고 내보낼 수 있습니다.
 ms.custom: seodec18
 ms.date: 11/04/2019
 ms.reviewer: alayu, maghan, sstein
@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 2062c32f5af698f635abba684eb1ea1bbe59250b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eeff69a65751097017383399784ea9a717f3b7e8
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758334"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522477"
 ---
 # <a name="sql-server-dacpac-extension"></a>SQL Server dacpac 확장
 
