@@ -1,6 +1,6 @@
 ---
 title: 데이터베이스 백업 및 복원
-description: Azure Data Studio를 사용하여 데이터베이스를 백업 및 복원하는 방법을 알아봅니다.
+description: 이 자습서에 따라 Azure Data Studio를 사용하여 데이터베이스를 백업 및 복원하는 방법을 알아봅니다.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: tutorial
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: 7ddb8cf9f3c0f73fde9f2fbbc30a7c6f6464d6cc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5e276a830f5fa6abc9b1fcf70c540d4cb955d5af
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758291"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522427"
 ---
 # <a name="backup-and-restore-databases-using-azure-data-studio"></a>Azure Data Studio를 사용하여 데이터베이스 백업 및 복원
 

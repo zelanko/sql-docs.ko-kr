@@ -1,6 +1,6 @@
 ---
 title: SSIS(SQL Server Integration Services) Scale Out에서 패키지 실행 | Microsoft Docs
-description: 이 문서에서는 Scale Out에서 SSIS 패키지를 실행하는 방법 설명
+description: 다양한 방법을 사용하여 Scale Out에서 SSIS(SQL Server Integration Services) 패키지를 실행하는 방법을 알아봅니다.
 ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.author: haoqian
 ms.reviewer: maghan
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 522b522c5afeedd71314bb53f0c4679828bf44e1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8de8aeb3b41c8ae44020c0cb0d4cca656ee96418
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914849"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522945"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Integration Services(SSIS) Scale Out에서 패키지 실행
 

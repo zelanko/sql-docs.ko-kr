@@ -1,6 +1,6 @@
 ---
 title: SQL Server Profiler 확장
-description: Azure Data Studio용 SQL Server Profiler 확장(미리 보기) 설치 및 사용
+description: SSMS Profiler와 유사한 사용하기 쉬운 SQL Server 추적 솔루션인 SQL Server Profiler 확장(미리 보기)을 설치하고 사용하는 방법을 알아봅니다.
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu, maghan, sstein
@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: f86257f7d024d36109901e09f11ab910525810e5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e6e71f00748fa9d0fc4b803d8268d8a8b23284fc
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758311"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522447"
 ---
 # <a name="sql-server-profiler-extension-preview"></a>SQL Server Profiler 확장(미리 보기)
 

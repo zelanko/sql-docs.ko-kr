@@ -1,6 +1,6 @@
 ---
 title: SQL Server 에이전트 확장
-description: Azure Data Studio에 대한 SQL Server 에이전트 확장(미리 보기) 설치 및 사용
+description: SQL 에이전트 작업 및 구성을 관리하기 위한 확장인 Azure Data Studio용 SQL Server 에이전트 확장(미리 보기)을 설치하고 사용하는 방법을 알아봅니다.
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu, maghan, sstein
@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 3cdbfc4adc32156f838ee3aeca726c2ebd92bd0c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e3329950ba9b6b4b9db46950a1633a4bfd5f2ccf
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758365"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522487"
 ---
 # <a name="sql-server-agent-extension-preview"></a>SQL Server 에이전트 확장(미리 보기)
 

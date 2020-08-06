@@ -1,6 +1,6 @@
 ---
 title: 원본 제어
-description: Azure Data Studio에서 원본 제어를 구성하는 방법을 알아봅니다.
+description: Azure Data Studio는 SCM(소스 제어 관리)용 Git를 지원합니다. 기존 Git 리포지토리를 여는 방법 및 새 Git 리포지토리를 초기화하는 방법을 알아봅니다.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: c4f586e355ad31422c75a5abb10a4c7e42f5eda6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c8b3ad59ac518eebefa9fbb073544fdb7791a419
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758371"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522507"
 ---
 # <a name="source-control-in-azure-data-studio"></a>Azure Data Studio의 소스 제어
 
