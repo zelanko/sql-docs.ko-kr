@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e0f611ac-7b67-4245-8d1c-804c1c44c935
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: e460a5b571988de65f1d3921f73f011520e6ca15
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 53495af2e2fc0e97ac91f42cf3cc282cfc0f4f2f
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929449"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937572"
 ---
 # <a name="project-settings-gui-accesstosql"></a>프로젝트 설정 (GUI) (AccessToSQL)
 GUI 프로젝트 설정을 사용 하면 **데이터 탭에 데이터를** 표시 하는 방법 및 평가 보고서와 함께 데이터 보고서를 포함 하는 방법을 구성할 수 있습니다.  

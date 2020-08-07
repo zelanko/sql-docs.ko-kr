@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2cd6bc01-b8e5-4312-83a4-eac66dc1d460
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 663a4b1e49d1f81ce040254a2c8f39a1a1f84b38
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b2237d2226644799b7360c53948ae2ecd9445cfa
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028677"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930742"
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>프로젝트 설정(동기화)(SybaseToSQL)
-**프로젝트 설정** 대화 상자의 동기화 페이지에는 테이블 및 저장 프로시저와 같은 데이터베이스 개체를 또는 SQL Azure로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로드 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다.  
+**프로젝트 설정** 대화 상자의 동기화 페이지에는 테이블 및 저장 프로시저와 같은 데이터베이스 개체를 또는 SQL Azure로 로드 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 동일한 설정을 포함 하는 두 개의 서로 다른 동기화 페이지에 액세스할 수 있습니다.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "68028677"
   
 ## <a name="options"></a>옵션  
 **시도한**  
-에서 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로드할 때의 시도 횟수를 지정 합니다. 현재 시도에서로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로드 되지 않은 개체는 ssma가 현재 동기화 프로세스의 최대 시도 수에 도달할 때까지 다시 시도 됩니다.  
+에서 개체를 로드할 때의 시도 횟수를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 현재 시도에서로 로드 되지 않은 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA가 현재 동기화 프로세스의 최대 시도 수에 도달할 때까지 다시 시도 됩니다.  
   
 ## <a name="synchronization-for-sql-server"></a>SQL Server에 대 한 동기화  
 **로컬 및 원격 개체 변경에서 로컬 개체 새로 고침**  

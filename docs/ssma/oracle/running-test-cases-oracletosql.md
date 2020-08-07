@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 7905c76803bf637e581af934f473b070d44a6b09
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 429ad47c63393696492d8eb22919749ed03cd71b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394866"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933054"
 ---
 # <a name="running-test-cases-oracletosql"></a>테스트 사례 실행(OracleToSQL)
 SSMA 테스터는 테스트 사례를 실행할 때 테스트를 위해 선택한 개체를 실행 하 고 확인 결과에 대 한 보고서를 만듭니다. 두 플랫폼에서 결과가 동일 하면 테스트에 성공 했습니다. Oracle과 간의 개체 대응은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 현재 SSMA 프로젝트의 스키마 매핑 설정에 따라 결정 됩니다.  
@@ -46,10 +46,10 @@ SSMA 테스터는 테스트를 시작 하기 전에 테스트 실행에 대해 �
 |USER_TABLE $ Trg|트리거|확인 된 테이블의 변경 내용에 대 한 감사를 트리거합니다.|  
 |USER_TABLE $ AUD|테이블|삭제 된 행과 덮어쓴 행을 저장 하는 테이블입니다.|  
 |USER_TABLE $|테이블|새 행과 변경 된 행이 저장 되는 테이블입니다.|  
-|USER_TABLE|뷰|테이블 수정의 단순화 된 표현입니다.|  
-|USER_TABLE $ NEW|뷰|삽입 및 덮어쓴 행의 단순화 된 표현입니다.|  
-|USER_TABLE $ NEW_ID|뷰|삽입 된 행과 변경 된 행의 id입니다.|  
-|USER_TABLE $ OLD|뷰|삭제 및 덮어쓴 행의 단순화 된 표현입니다.|  
+|USER_TABLE|view|테이블 수정의 단순화 된 표현입니다.|  
+|USER_TABLE $ NEW|view|삽입 및 덮어쓴 행의 단순화 된 표현입니다.|  
+|USER_TABLE $ NEW_ID|view|삽입 된 행과 변경 된 행의 id입니다.|  
+|USER_TABLE $ OLD|view|삭제 및 덮어쓴 행의 단순화 된 표현입니다.|  
   
 다음 개체는에서 확인 된 테이블의 스키마에 생성 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -63,10 +63,10 @@ Ssmatesterdb 데이터베이스의에서 다음 개체가 만들어집니다 [!I
 |-|-|-|  
 |USER_TABLE $ Aud|테이블|삭제 된 행과 덮어쓴 행을 저장 하는 테이블입니다.|  
 |USER_TABLE $|테이블|새 행과 변경 된 행이 저장 되는 테이블입니다.|  
-|USER_TABLE|뷰|테이블 수정의 단순화 된 표현입니다.|  
-|USER_TABLE $ new|뷰|삽입 및 덮어쓴 행의 단순화 된 표현입니다.|  
-|USER_TABLE $ new_id|뷰|삽입 된 행과 변경 된 행의 id입니다.|  
-|USER_TABLE $ old|뷰|삭제 및 덮어쓴 행의 단순화 된 표현입니다.|  
+|USER_TABLE|view|테이블 수정의 단순화 된 표현입니다.|  
+|USER_TABLE $ new|view|삽입 및 덮어쓴 행의 단순화 된 표현입니다.|  
+|USER_TABLE $ new_id|view|삽입 된 행과 변경 된 행의 id입니다.|  
+|USER_TABLE $ old|view|삭제 및 덮어쓴 행의 단순화 된 표현입니다.|  
   
 ### <a name="test-object-calls"></a>개체 호출 테스트  
 이 단계에서 SSMA 테스터는 테스트를 위해 선택한 각 개체를 호출 하 고, 결과를 비교 하 고, 보고서를 표시 합니다.  

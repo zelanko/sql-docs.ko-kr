@@ -9,15 +9,15 @@ ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-author: HJToland3
-ms.author: jtoland
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 161258d8359ce46b9ff2afb2a878c008059772db
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: c7443ed363a4968415b651e460bbc4f69cb7415b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565532"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87951108"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>명령 프롬프트에서 데이터베이스 실험 도우미 실행
 
@@ -44,7 +44,7 @@ ms.locfileid: "87565532"
 
 명령을 사용 하 여 새 워크 로드 캡처를 시작할 때 `Deacmd.exe` 다음과 같은 추가 옵션을 사용할 수 있습니다.
 
-| 옵션| Description |  
+| 옵션| 설명 |  
 | --- | --- |
 | -n, --name | 하다 추적 파일 이름 |
 | -x,--형식 | 하다 추적 형식 (Trace = 0, Xevent = 1) |
@@ -115,7 +115,7 @@ Distributed Replay를 사용 하는 경우 다음 단계를 수행 합니다.
 
 DEA 명령을 사용 하 여 추적을 분석 하는 경우 다음과 같은 추가 옵션을 사용할 수 있습니다.
 
-| 옵션| Description |  
+| 옵션| 설명 |  
 | --- | --- |
 | -a,--traceA | 하다 인스턴스에 대 한 이벤트 파일의 파일 경로입니다. 예 C:\traces\Sql2008trace.trc.  파일이 배치 되어 있으면 첫 번째 파일을 선택 하 고 DEA 롤오버 파일을 자동으로 확인 합니다. 파일이 blob에 있는 경우 이벤트 파일을 로컬에 저장 하려는 폴더 경로를 제공 합니다.  예 C:\traces\ |
 | -b,--traceB | 하다 B 인스턴스에 대 한 이벤트 파일의 파일 경로입니다. 예 C:\traces\Sql2014trace.trc. 파일이 배치 되어 있으면 첫 번째 파일을 선택 하 고 DEA 롤오버 파일을 자동으로 확인 합니다. 파일이 blob에 있는 경우 이벤트 파일을 로컬에 저장 하려는 폴더 경로를 제공 합니다.  예 C:\traces\ |

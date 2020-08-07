@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 43989355-cebf-4d8b-ba3d-fa8546e70230
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 4fc68e8b8d3fc009b766f0fb0be97f1124797764
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 715bc5d1a407380d47c05313954adab5cdf53dc6
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68259656"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934827"
 ---
 # <a name="global-settings-dialogs--oracletosql"></a>전역 설정 (대화 상자) (OracleToSQL)
 **전역 설정** 대화 상자의 대화 상자 페이지를 사용 하 여 ssma의 기본 사용자 동작 및 경고 설정을 지정할 수 있습니다.  

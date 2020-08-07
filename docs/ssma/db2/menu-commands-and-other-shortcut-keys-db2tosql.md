@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 8937eb796d75afdc404ef4815918245cda7f13a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3622c9928946e8708097f535b311a70b2a996bf3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68074156"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933724"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>메뉴 명령 및 기타 바로 가기 키 (DB2ToSQL)
 다음 섹션에서는 SSMA for DB2 응용 프로그램의 다양 한 대화 상자에서 사용 되는 메뉴 명령 및 기타 바로 가기 키에 액세스할 수 있는 바로 가기 키에 대해 설명 합니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "68074156"
 |보고서를 만듭니다.|ALT + T + C|  
 |스키마를 변환 합니다.|ALT + T + N 또는 CTRL + R|  
 |DB2 데이터베이스에서 새로 고칩니다.|Alt+T+R|  
-|SQL Server 또는 SQL Azure 데이터베이스와 동기화 합니다.|ALT + T + S|  
+|SQL Server 또는 Azure SQL Database와 동기화 합니다.|ALT + T + S|  
 |스크립트로 저장 합니다.|ALT + T + A|  
 |데이터를 마이그레이션합니다.|Alt+T+M|  
 |현재 작업을 중지 합니다.|ALT + T + O|  

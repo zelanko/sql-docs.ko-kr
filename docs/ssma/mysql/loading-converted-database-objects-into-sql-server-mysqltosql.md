@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ac993a6d-0283-4823-8793-6b217677dfa3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: fb68a40da645046d94dcd5e8b14ac90f0c53d8bc
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 57a6f527da05c4f62d9055b70193af6ce74275f7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822627"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935564"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-mysqltosql"></a>변환된 데이터베이스 개체를 SQL Server로 로드(MySQLToSQL)
-MySQL 데이터베이스를 또는 SQL Azure 변환한 후에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 결과 데이터베이스 개체를 또는 SQL Azure에 로드할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . SSMA에서 개체를 만들거나 개체를 스크립팅 하 고 스크립트를 직접 실행할 수 있습니다. 또한 SSMA를 사용 하면 또는 SQL Azure 데이터베이스의 실제 콘텐츠를 사용 하 여 대상 메타 데이터를 업데이트할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+MySQL 데이터베이스를 또는 SQL Azure 변환한 후에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 결과 데이터베이스 개체를 또는 SQL Azure에 로드할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . SSMA에서 개체를 만들거나 개체를 스크립팅 하 고 스크립트를 직접 실행할 수 있습니다. 또한 SSMA를 사용 하면의 실제 내용으로 대상 메타 데이터를 업데이트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 Azure SQL Database 수 있습니다.  
   
 ## <a name="choosing-between-synchronization-and-scripts"></a>동기화 및 스크립트 중에서 선택  
 변환 된 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 수정 하지 않고에 로드 하거나 수정 하지 않고 SQL Azure 하려면 SSMA에서 직접 데이터베이스 개체를 만들거나 다시 만들 수 있습니다. 이 방법은 쉽고 간단 하지만 또는 SQL Azure 개체를 정의 하는 Transact-sql 코드의 사용자 지정을 허용 하지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -25,10 +25,10 @@ MySQL 데이터베이스를 또는 SQL Azure 변환한 후에 [!INCLUDE[ssNoVers
 개체를 만드는 데 사용 되는 Transact-sql을 수정 하려는 경우 또는 개체 생성을 보다 세부적으로 제어 하려는 경우 SSMA를 사용 하 여 스크립트를 만듭니다. 그런 다음 이러한 스크립트를 수정 하 고, 각 개체를 개별적으로 만들고, SQL Server 에이전트를 사용 하 여 이러한 개체 만들기를 예약할 수 있습니다.  
   
 ## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>SSMA를 사용 하 여 SQL Server와 개체 동기화  
-SSMA를 사용 하 여 SQL Server 또는 SQL Azure 데이터베이스 개체를 만들려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 절차에서와 같이 또는 SQL Azure 메타 데이터 탐색기에서 개체를 선택 하 고 또는 SQL Azure를 사용 하 여 개체를 동기화 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 기본적으로 또는 SQL Azure에 개체가 이미 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있거나 ssma 메타 데이터에 일부 로컬 변경 내용이 있거나 해당 개체의 정의에 대 한 업데이트가 있는 경우 SSMA는 또는 SQL Azure에서 개체 정의를 변경 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **프로젝트 설정을**편집 하 여 기본 동작을 변경할 수 있습니다.  
+SSMA를 사용 하 여 SQL Server 또는 Azure SQL Database 개체를 만들려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 절차와 같이 또는 SQL Azure 메타 데이터 탐색기에서 개체를 선택 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure를 사용 하 여 개체를 동기화 합니다. 기본적으로 또는 SQL Azure에 개체가 이미 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있거나 ssma 메타 데이터에 일부 로컬 변경 내용이 있거나 해당 개체의 정의에 대 한 업데이트가 있는 경우 SSMA는 또는 SQL Azure에서 개체 정의를 변경 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **프로젝트 설정을**편집 하 여 기본 동작을 변경할 수 있습니다.  
   
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]MySQL 데이터베이스에서 변환 되지 않은 기존 또는 SQL Azure 데이터베이스 개체를 선택할 수 있습니다. 그러나 이러한 개체는 SSMA에 의해 다시 만들어지거나 변경 되지 않습니다.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]MySQL 데이터베이스에서 변환 되지 않은 기존 또는 Azure SQL Database 개체를 선택할 수 있습니다. 그러나 이러한 개체는 SSMA에 의해 다시 만들어지거나 변경 되지 않습니다.  
   
 ##### <a name="to-synchronize-objects-with-sql-server-or-sql-azure"></a>SQL Server 또는 SQL Azure를 사용 하 여 개체를 동기화 하려면  
   

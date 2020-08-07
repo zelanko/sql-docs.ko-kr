@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 04cd7ffa-5402-4aba-90dd-8b562dd4b0bb
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ea7cfd8940bdfbcda32d7a7338906db020b8c34a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d86b8f573e8539971dae9d9386d4b255977f5d3d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68051467"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933869"
 ---
 # <a name="troubleshooting-accesstosql"></a>문제 해결 (AccessToSQL)
 콘솔 스크립트나 명령을 실행 하는 중간에 마이그레이션하는 문제가 발생 하는 것은 일반적이 지 않습니다.  
   
 수정할 수 오류는 다음과 관련이 있을 수 있습니다.  
   
-1.  기능  
+1.  함수  
   
 2.  절차  
   

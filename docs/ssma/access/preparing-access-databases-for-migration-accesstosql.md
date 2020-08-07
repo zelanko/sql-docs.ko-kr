@@ -19,15 +19,15 @@ helpviewer_keywords:
 - versions of Access
 - workgroup security
 ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: 1b0fe1ef2f51da9e64954040e58440a9e7eee58e
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 038ffa60562a443c916d0143fa432d3e5da87bc4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293728"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937973"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>마이그레이션을 위해 Access 데이터베이스 준비 (AccessToSQL)
 Access 데이터베이스를로 마이그레이션하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션할 데이터베이스를 결정 하 고 해당 데이터베이스를 마이그레이션할 준비가 되었는지 확인 해야 합니다.  
@@ -76,6 +76,6 @@ Access 데이터베이스를 백업 하려면 **도구** 메뉴에서 **데이�
 ### <a name="documenting-databases"></a>데이터베이스 문서화  
 Access 데이터베이스의 데이터베이스 개체 목록, 파일 크기, 권한 등의 속성을 문서화할 수도 있습니다. Access에서이 설명서를 생성 하려면 **도구** 메뉴에서 **분석**을 가리킨 다음 **문서화**를 클릭 합니다.  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
 [SQL Server로 Access 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [SQL Server에 액세스 응용 프로그램 연결](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)

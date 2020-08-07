@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Working with SSMA projects, Open project
 - Working with SSMA projects, Save project
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2d9bec916103214169f549a0b555a46fd0d65fdb
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 98315541dc7eb2df1e77e32bcd34744b98708557
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862494"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935123"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>SSMA 프로젝트 작업(MySQLToSQL)
 MySQL 데이터베이스를 SQL Server 또는 SQL Azure로 마이그레이션하려면 먼저 SSMA 프로젝트를 만들어야 합니다. 프로젝트는 다음 정보를 포함 하는 파일입니다.  
@@ -105,7 +105,7 @@ SSMA에서 프로젝트 파일을 만듭니다.
   
 1.  **누락 된 메타 데이터**의 상태를 표시 하는 각 데이터베이스에 대해 데이터베이스 이름 옆의 확인란을 선택 합니다. 메타 데이터를 저장 하는 데 몇 분 정도 걸릴 수 있습니다. 이때 메타 데이터를 저장 하지 않으려면 확인란을 선택 하지 마십시오.  
   
-2.  **저장**을 클릭합니다.  
+2.  **Save**을 클릭합니다.  
   
 SSMA는 MySQL 스키마를 구문 분석 하 고 메타 데이터를 프로젝트 파일에 저장 합니다.  
   

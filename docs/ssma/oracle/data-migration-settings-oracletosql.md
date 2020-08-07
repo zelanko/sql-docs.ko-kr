@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 91f7f558-025d-4f4d-ac2c-aa095e7d1ace
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 2b435b02060d32e61bc3e75054171023262a87b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: b86114566be6b560aa571f15af1e3dfac3e59501
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264210"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934881"
 ---
 # <a name="data-migration-settings-oracletosql"></a>데이터 마이그레이션 설정(OracleToSQL)
   

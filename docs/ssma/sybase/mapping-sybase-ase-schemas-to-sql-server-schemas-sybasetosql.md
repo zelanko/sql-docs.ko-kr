@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Schema Mapping
 ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 212b5719c1ef8bac3e44ec33b786a032acef1d9f
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: acd4b7c13b2f8674f120c7f5b49f503a7f8fb5bc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865331"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931228"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Sybase ASE 스키마를 SQL Server 스키마에 매핑(SybaseToSQL)
-Sybase 적응 서버 엔터프라이즈 (ASE)에서 각 데이터베이스에는 하나 이상의 스키마가 있습니다. 기본적으로 SSMA는 데이터베이스 및 스키마 내의 모든 개체를 또는 SQL Azure의 동일한 데이터베이스 및 스키마로 마이그레이션합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 그러나 ASE와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure 데이터베이스 및 스키마 간의 매핑을 사용자 지정할 수 있습니다.  
+Sybase 적응 서버 엔터프라이즈 (ASE)에서 각 데이터베이스에는 하나 이상의 스키마가 있습니다. 기본적으로 SSMA는 데이터베이스 및 스키마 내의 모든 개체를 또는 SQL Azure의 동일한 데이터베이스 및 스키마로 마이그레이션합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 그러나 ASE와 또는 Azure SQL Database 간의 매핑을 사용자 지정할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="ase-and-sql-server-or-sql-azure-schemas"></a>ASE 및 SQL Server 또는 SQL Azure 스키마  
 ASE 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure는 두 부분으로 구성 된 표기법을 사용 하 여 데이터베이스와 해당 스키마를 지정 합니다. *스키마*. 예를 들어 ASE **데모** 데이터베이스에 **dbo** 스키마가 있을 수 있습니다. 해당 데이터베이스 및 스키마 쌍은 **demo**로 지정 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]또는 SQL Azure에 동일한 데이터베이스와 스키마가 있는 경우에는이 쌍도 **demo**로 지정 됩니다.  
@@ -51,7 +51,7 @@ SSMA에서 ASE 스키마를 사용 가능한 [!INCLUDE[ssNoVersion](../../includ
   
 -   SQL Azure 매핑  
   
-원본 데이터베이스를 연결 된 대상 SQL Azure 데이터베이스 또는 연결 된 대상 SQL Azure 데이터베이스의 모든 스키마에 매핑할 수 있습니다. 원본 스키마를 연결 된 대상 데이터베이스의 존재 하지 않는 스키마에 매핑하면 **"스키마가 대상 메타 데이터에 없습니다." 라는 메시지가 표시 됩니다. 동기화 중에 생성 됩니다. 계속 하 시겠습니까? "** 예를 클릭 합니다.  
+원본 데이터베이스를 연결 된 대상 Azure SQL Database 또는 연결 된 대상 Azure SQL Database의 스키마에 매핑할 수 있습니다. 원본 스키마를 연결 된 대상 데이터베이스의 존재 하지 않는 스키마에 매핑하면 **"스키마가 대상 메타 데이터에 없습니다." 라는 메시지가 표시 됩니다. 동기화 중에 생성 됩니다. 계속 하 시겠습니까? "** 예를 클릭 합니다.  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>기본 데이터베이스 및 스키마로 되돌리기  
 ASE 스키마와 또는 SQL Azure 스키마 간의 매핑을 사용자 지정 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 매핑을 다시 기본값으로 되돌릴 수 있습니다.  

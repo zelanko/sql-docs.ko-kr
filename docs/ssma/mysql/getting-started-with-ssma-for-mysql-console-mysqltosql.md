@@ -10,14 +10,14 @@ helpviewer_keywords:
 - MySQL Console, launching console
 - MySQL Console, output conventions
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 88cf4716ea02b8c5dbcbd73e9839c6bacfbed10b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: a5ade295e64415f50e4887fa971f20d8fe5b7f6a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075422"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935522"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>MySQL용 SSMA 콘솔 시작(MySQLToSQL)
 이 섹션에서는 MySQL 콘솔 응용 프로그램을 시작 하 고 시작 하는 절차에 대해 설명 합니다. 또한 여기에 나열 된 것은 일반적인 SSMA 콘솔 출력 창에서 사용 되는 규칙입니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "68075422"
   
 2.  **MySQL 명령 프롬프트** 바로 가기 SQL Server Migration Assistant를 클릭 합니다.  
   
-    콘솔 응용 프로그램을 시작 하는 데 도움이 `(/? Help)`되는 ssma 콘솔 사용 메뉴가 표시 됩니다.  
+    콘솔 응용 프로그램을 시작 하는 데 도움이 되는 SSMA 콘솔 사용 메뉴가 표시 됩니다 `(/? Help)` .  
   
 ## <a name="procedure-for-using-the-ssma-console"></a>SSMA 콘솔 사용 절차  
 Windows 시스템에서 콘솔이 성공적으로 시작 된 후에는 다음 단계를 사용 하 여 작업을 수행할 수 있습니다.  
@@ -57,10 +57,10 @@ SSMA 스크립트 명령 및 옵션을 실행 하면 콘솔 프로그램이 콘�
   
 |색|Description|  
 |---------|---------------|  
-|빨강|실행 하는 동안 심각한 오류가 발생 했습니다.|  
+|빨간색|실행 하는 동안 심각한 오류가 발생 했습니다.|  
 |회색|날짜 및 시간 스탬프, 사용자에 대 한 메시지|  
 |흰색|스크립트 파일 명령, 메시지 유형|  
-|노란색|Warning|  
+|노란색|경고|  
 |녹색|사용자 입력 확인|  
 |녹청|작업의 시작, 종료 및 결과|  
   

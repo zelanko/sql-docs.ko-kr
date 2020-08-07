@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Find Databases Wizard
 ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c084db939482fe57e150d4beb22eab4d5e6decb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3cd166f0e85a4a9a58a43feca8e1f3ba4fc211b7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006548"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938718"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>데이터베이스 찾기 마법사 (파일 선택) (AccessToSQL)
 데이터베이스 찾기 마법사의 파일 선택 페이지에는 검색 중에 발견 된 파일이 나열 됩니다. SSMA에 추가할 파일을 선택 하려면 파일 이름을 포함 하는 행을 선택 합니다. 파일 선택을 완료 하면 **다음** 을 클릭 하 여 선택 확인 페이지를 표시 합니다.  
@@ -44,10 +44,10 @@ Access 데이터베이스 파일의 경로를 표시 합니다.
 **크기**  
 데이터베이스의 크기 (바이트)입니다.  
   
-**만들어지며**  
+**만든 날짜**  
 데이터베이스를 만든 날짜와 시간입니다.  
   
-**수정한 날짜**  
+**수정한**  
 데이터베이스를 마지막으로 업데이트 한 날짜와 시간입니다.  
   
 ## <a name="see-also"></a>참고 항목  

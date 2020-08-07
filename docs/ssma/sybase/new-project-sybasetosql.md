@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: fcd83cd6-a876-4b5f-996d-84b7c8706305
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 4b64cd0aa3d6a6b03e396bfd0ecbc2ce25519897
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: eba002acba86df808adf9e57cc9d902a6b398173
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028776"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934680"
 ---
 # <a name="new-project-sybasetosql"></a>새 프로젝트(SybaseToSQL)
 **새 프로젝트** 대화 상자를 사용 하 여 새 ssma 프로젝트를 만들 수 있습니다. **새 프로젝트** 대화 상자에 액세스 하려면 **파일** 메뉴에서 **새 프로젝트**를 클릭 합니다.  

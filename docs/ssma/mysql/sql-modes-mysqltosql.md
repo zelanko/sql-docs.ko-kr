@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2c9dbd2b42ebde4cdfea602c3ad50c4b7d100bb2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 4bc4b59984cc9e2e1f7a6c358f24e3fc0d2e86be
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944653"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935102"
 ---
 # <a name="sql-modes-mysqltosql"></a>SQL 모드(MySQLToSQL)
 MySQL 용 SSMA는 서로 다른 SQL 모드에서 작동할 수 있으며 클라이언트 마다 이러한 모드를 다르게 적용할 수 있습니다.  

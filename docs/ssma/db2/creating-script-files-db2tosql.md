@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ec23d188-b890-49b8-9a88-446df96269e4
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 324aff21d677c213148922f7e06f267e08740c13
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: F
+ms.author: alexiva
+ms.openlocfilehash: ac87b3459a5a2ae5c8477ce0674facaf361f03b0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989842"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933834"
 ---
 # <a name="creating-script-files-db2tosql"></a>스크립트 파일 만들기 (DB2ToSQL)
 SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스크립트 파일을 만드는 것이 고, 필요한 경우 변수 값 파일 및 서버 연결 파일을 만드는 것입니다.  
@@ -44,7 +44,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     -   메시지 표시 안 함: 콘솔에서 메시지를 표시 하지 않습니다. 이는 기본적으로 ' f a l s e '입니다.  
   
-    **예제:**  
+    **예:**  
   
     ```xml  
     <output-providers>  
@@ -61,7 +61,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     </output-providers>  
     ```  
-    *또는*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -87,7 +87,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     -   대상별-last used = "true" (기본값) 또는 target-server = "target_servername"  
   
-    **예제:**  
+    **예:**  
   
     ```xml  
     <output-providers>  
@@ -98,7 +98,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     </output-providers>  
     ```  
-    *또는*  
+    *or*  
   
     ```xml  
     <migrate-data>  
@@ -122,7 +122,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     기본 모드는 **오류**입니다.  
   
-    **예제:**  
+    **예:**  
   
     ```xml  
     <output-providers>  
@@ -131,7 +131,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     </output-providers>  
     ```  
-    *또는*  
+    *or*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -153,7 +153,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     기본 모드는 **오류 생성**입니다.  
   
-    **예제:**  
+    **예:**  
   
     ```xml  
     <output-providers>  
@@ -164,7 +164,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     </output-providers>  
     ```  
-    *또는*  
+    *or*  
   
     ```xml  
     <!--synchronization-->  
@@ -175,7 +175,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     </synchronize-target>  
     ```  
-    *또는*  
+    *or*  
   
     ```xml  
     <!--data migration-->  
@@ -201,7 +201,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     -   ask-user: 사용자에 게 입력 하 라는 메시지를 표시 합니다 (' yes '/' no ').  
   
-    **예제:**  
+    **예:**  
   
     ```xml  
     <output-providers>  
@@ -210,7 +210,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     </output-providers>  
     ```  
-    *또는*  
+    *or*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -222,7 +222,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
 6.  **실패 한 필수 구성 요소 공급자:** 이를 통해 사용자는 명령을 처리 하는 데 필요한 모든 필수 구성 요소를 처리할 수 있습니다. 기본적으로 strict 모드는 ' f a l s e '입니다. ' T r u e '로 설정 된 경우 필수 조건에 맞지 않으면 예외가 생성 됩니다.  
   
-    **예제:**  
+    **예:**  
   
     ```xml  
     <output-providers>  
@@ -250,7 +250,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     -   매-20%  
   
-    **예제:**  
+    **예:**  
   
     ```xml  
     <output-providers>  
@@ -263,7 +263,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     </output-providers>  
     ```  
-    *또는*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -296,7 +296,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
     > [!NOTE]  
     > 필수 메시지는 모든 수준에서 기록 됩니다.  
   
-    **예제:**  
+    **예:**  
   
     ```xml  
     <output-providers>  
@@ -305,7 +305,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     </output-providers>  
     ```  
-    *또는*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -319,11 +319,11 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     여기에는 다음 두 가지 경우가 발생 합니다.  
   
-    1.  Override 옵션이 **false**인 경우 검색 순서는 저장소-&gt;스크립트 파일-&gt;서버 연결 파일-프롬프트 사용자로&gt; 보호 됩니다.  
+    1.  Override 옵션이 **false**인 경우 검색 순서는 저장소- &gt; 스크립트 파일- &gt; 서버 연결 파일-프롬프트 사용자로 보호 됩니다 &gt; .  
   
-    2.  Override 옵션이 **true**인 경우 검색 순서는 스크립트 파일-&gt;서버 연결 파일-&gt;프롬프트 사용자입니다.  
+    2.  Override 옵션이 **true**인 경우 검색 순서는 스크립트 파일- &gt; 서버 연결 파일- &gt; 프롬프트 사용자입니다.  
   
-    **예제:**  
+    **예:**  
   
     ```xml  
     <output-providers>  
@@ -343,11 +343,11 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
 ## <a name="script-commands"></a>스크립트 명령  
 스크립트 파일에는 XML 형식의 마이그레이션 워크플로 명령 시퀀스가 포함 되어 있습니다. SSMA 콘솔 응용 프로그램은 스크립트 파일에 표시 되는 명령 순서에 따라 마이그레이션을 처리 합니다.  
   
-예를 들어 DB2 데이터베이스의 특정 테이블에 대 한 일반적인 데이터 마이그레이션은 Schema&gt; 테이블의 계층 구조를 따릅니다.  
+예를 들어 DB2 데이터베이스의 특정 테이블에 대 한 일반적인 데이터 마이그레이션은 Schema 테이블의 계층 구조를 따릅니다 &gt; .  
   
 스크립트 파일의 모든 명령이 성공적으로 실행 되 면 SSMA 콘솔 응용 프로그램이 종료 되 고 사용자에 게 컨트롤이 반환 됩니다. 스크립트 파일의 내용은 변수 값 [파일 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md) 또는 변수 값에 대 한 스크립트 파일 내의 별도 섹션에 포함 된 변수 정보를 사용 하 여 정적입니다.  
   
-**예제:**  
+**예:**  
   
 ```xml  
 <!--Sample of script file commands -->  
@@ -374,15 +374,15 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
 ```  
 3 개의 스크립트 파일 (다양 한 시나리오를 실행 하는 경우), 변수 값 파일 및 서버 연결 파일로 구성 된 템플릿은 product 디렉터리의 Sample Console Scripts 폴더에 제공 됩니다.  
   
--   AssessmentReportGenerationSample  
+-   AssessmentReportGenerationSample.xml  
   
--   ConversionAndDataMigrationSample  
+-   ConversionAndDataMigrationSample.xml  
   
--   SqlStatementConversionSample  
+-   SqlStatementConversionSample.xml  
   
--   VariableValueFileSample  
+-   VariableValueFileSample.xml  
   
--   ServersConnectionFileSample  
+-   ServersConnectionFileSample.xml  
   
 관련성을 위해 여기에 표시 된 매개 변수를 변경한 후 템플릿 (파일)을 실행할 수 있습니다.  
   

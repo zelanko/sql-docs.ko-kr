@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: df94b295e7695dc79c78876b5d42f8a0ece7dce6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 0023e6d04b2f339fbd67337b7b241da2df275a79
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897587"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938047"
 ---
 # <a name="managing-passwords-accesstosql"></a>암호 관리 (AccessToSQL)
 이 섹션에서는 데이터베이스 암호를 보호 하는 방법과 서버에서 데이터베이스를 가져오거나 내보내는 절차에 대해 설명 합니다.  

@@ -27,14 +27,14 @@ helpviewer_keywords:
 - scanning for database files
 - searching for database files
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 6806792fa828a5ebb4ea3a7a5a7e813626bff523
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 597de64479014e44f38c7073b6bc88e76a3137b4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293690"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934144"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Access 데이터베이스 파일 추가 및 제거 (AccessToSQL)
 액세스 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 마이그레이션하려면 SSMA 프로젝트에 하나 이상의 access 데이터베이스를 추가 해야 합니다. 이러한 데이터베이스는 97 이상 버전에 액세스 해야 합니다. 이전 버전의 Access에서 데이터베이스를 사용 하는 경우 데이터베이스를 최신 버전으로 변환 해야 합니다. 이렇게 하려면 SSMA에 추가 하기 전에 Access 97 이상 버전에서 데이터베이스를 열고 저장 합니다.  

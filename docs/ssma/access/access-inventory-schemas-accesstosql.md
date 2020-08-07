@@ -34,17 +34,17 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: caf6c1045b02a84cf2dec0aba56c5c1c050277c1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68068952"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934154"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>AccessToSQL (액세스 인벤토리 스키마)
-다음 섹션에서는에 액세스 스키마를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]내보낼 때 ssma에서 만드는 테이블에 대해 설명 합니다.  
+다음 섹션에서는에 액세스 스키마를 내보낼 때 SSMA에서 만드는 테이블에 대해 설명 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="databases"></a>데이터베이스  
 데이터베이스 메타 데이터를 **SSMA_Access_InventoryDatabases** 테이블로 내보냅니다. 이 테이블에는 다음 열이 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "68068952"
 |**다르게**|**uniqueidentifier**|각 데이터베이스를 고유 하 게 식별 하는 GUID입니다. 이 열은 테이블의 기본 키 이기도 합니다.|  
 |**DatabaseName**|**nvarchar(4000)**|액세스 데이터베이스의 이름입니다.|  
 |**ExportTime**|**datetime**|SSMA에서이 메타 데이터를 만든 날짜와 시간입니다.|  
-|**FilePath**|**nvarchar(4000)**|Access 데이터베이스의 전체 경로 및 파일 이름입니다.|  
+|**Null**|**nvarchar(4000)**|Access 데이터베이스의 전체 경로 및 파일 이름입니다.|  
 |**FileSize**|**bigint**|액세스 데이터베이스의 크기 (KB)입니다.|  
 |**FileOwner**|**nvarchar(4000)**|Access 데이터베이스의 소유자로 지정 된 Windows 계정입니다.|  
 |**DateCreated**|**datetime**|액세스 데이터베이스를 만든 날짜와 시간입니다.|  
@@ -79,7 +79,7 @@ ms.locfileid: "68068952"
 |**다르게**|**uniqueidentifier**|이 테이블을 포함 하는 데이터베이스를 식별 합니다.|  
 |**TableId**|**uniqueidentifier**|테이블을 고유 하 게 식별 하는 GUID입니다. 이 열은 테이블의 기본 키 이기도 합니다.|  
 |**TableName**|**nvarchar(4000)**|테이블의 이름입니다.|  
-|**RowsCount**|**int**|테이블의 행 수입니다.|  
+|**RowsCount**|**int**|표의 행 수입니다.|  
 |**ValidationRule**|**nvarchar(4000)**|테이블에 대 한 유효한 입력을 정의 하는 규칙입니다. 유효성 검사 규칙이 없으면 필드에 빈 문자열이 포함 됩니다.|  
 |**LinkedTable**|**nvarchar(4000)**|테이블과 연결 된 다른 테이블 (있는 경우)입니다. 테이블을 연결 하면이 테이블을 사용 하 여 다른 테이블에 대 한 추가, 삭제 및 업데이트를 수행할 수 있습니다.|  
 |**ExternalSource**|**nvarchar(4000)**|테이블에 연결 된 데이터 원본 (있는 경우)입니다. 테이블이 연결 된 경우이 필드에는 외부 데이터 원본이 지정 됩니다.|  
@@ -96,7 +96,7 @@ ms.locfileid: "68068952"
 |**IsNullable**|**bit**|열에 null 값이 포함 될 수 있는지 여부를 지정 합니다. 값이 1 이면 열에 null 값이 포함 될 수 있습니다. 값이 0 이면 열은 null 값을 포함할 수 없습니다. 유효성 검사 규칙을 사용 하 여 null 값을 방지할 수도 있습니다.|  
 |**DataType**|**nvarchar(4000)**|**Text** 또는 **Long**과 같은 열의 액세스 데이터 형식입니다.|  
 |**IsAutoIncrement**|**bit**|열이 정수 값을 자동으로 증가 하는지 여부를 지정 합니다. 값이 1 이면 정수는 자동으로 증가 합니다.|  
-|**Ordinal**|**smallint**|테이블에서 열 순서 (0부터 시작)입니다.|  
+|**순서로**|**smallint**|테이블에서 열 순서 (0부터 시작)입니다.|  
 |**DefaultValue**|**nvarchar(4000)**|열의 기본값입니다.|  
 |**ValidationRule**|**nvarchar(4000)**|열에 추가 되거나 업데이트 된 데이터의 유효성을 검사 하는 데 사용 되는 규칙입니다.|  
   
@@ -152,7 +152,7 @@ ms.locfileid: "68068952"
 |**FormId**|**int**|폼을 식별 하는 증분 정수입니다. 이 열은 테이블의 기본 키입니다.|  
 |**FormName**|**nvarchar(4000)**|양식의 이름입니다.|  
   
-## <a name="macros"></a>Macros  
+## <a name="macros"></a>매크로  
 매크로 메타 데이터를 **SSMA_Access_InventoryMacros** 테이블로 내보냅니다. 이 테이블에는 다음 열이 있습니다.  
   
 |열 이름|데이터 형식|설명|  

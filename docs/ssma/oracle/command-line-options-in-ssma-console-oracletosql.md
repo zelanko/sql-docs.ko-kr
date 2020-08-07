@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Command Line Options, Variable Value File Option
 - Command Line Options,Script File Option
 ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 96d76d301e3f937cb0e3c21a43f1939d0149ec9b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 6bddaddeda73133b83d6a7669c98fd89af96cd2c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264506"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934992"
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>SSMA 콘솔의 명령줄 옵션(OracleToSQL)
 Microsoft에서는 SSMA 활동을 실행 하 고 제어 하는 강력한 set 명령줄 옵션을 제공 합니다. 결과 섹션에서 자세히 설명 합니다.  
@@ -30,7 +30,7 @@ Microsoft에서는 SSMA 활동을 실행 하 고 제어 하는 강력한 set 명
   
 이 섹션에서는 ' option ' 이라는 용어를 ' 스위치 ' 라고도 합니다.  
   
--   옵션은 대/소문자를 구분 하지 않으며 '**-**' 또는 '**/**' 문자로 시작할 수 있습니다.  
+-   옵션은 대/소문자를 구분 하지 않으며 ' ' **-** 또는 ' ' 문자로 시작할 수 있습니다 **/** .  
   
 -   옵션이 지정 된 경우 해당 옵션 매개 변수를 지정 해야 합니다.  
   
@@ -127,7 +127,7 @@ Xmloutput에 사용할 수 있는 두 가지 옵션은 시각화입니다.
   
 다른 옵션 또는 암호를 명령줄 매개 변수로 입력할 수 없습니다. 그렇지 않으면 오류가 발생 합니다. 자세한 내용은 [암호 관리](managing-passwords-oracletosql.md) 섹션을 참조 하세요.  
   
-에 대해 `-p/securepassword`지원 되는 하위 옵션은 다음과 같습니다.  
+에 대해 지원 되는 하위 옵션은 다음과 `-p/securepassword` 같습니다.  
   
 -   지정 된 서버 ID 또는 서버 연결 파일에 정의 된 모든 서버 id에 대해 보호 된 저장소에 암호를 추가 합니다. -Overwrite 옵션이 이미 있는 경우 암호를 업데이트 합니다.  
   

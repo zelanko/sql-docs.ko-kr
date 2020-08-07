@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Customizing order
 ms.assetid: 9d273ee3-2438-45cc-b4d1-8d3b549904b4
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 77586a09172fa0f737c7efb0f54fdc98fcb858da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 8f02452ce32b25893b9a724a09112ed1ea83eb6d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266105"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934919"
 ---
 # <a name="customizing-calls-order-oracletosql"></a>호출 순서 사용자 지정(OracleToSQL)
 이 단계에서는 테스트할 개체가 호출 되는 순서를 선택 합니다.  

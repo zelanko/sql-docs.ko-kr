@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: f7e421774d3a09622835b181d5c053c994e905ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 12ca00b130367495ba725627b7fbd5c523505387
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264409"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934776"
 ---
 # <a name="global-settings-tester-oracletosql"></a>전역 설정(테스터)(OracleToSQL)
 **전역 설정** 대화 상자의 테스터 페이지를 사용 하 여 Ssma 테스터에 대 한 설정을 지정할 수 있습니다.  

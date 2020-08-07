@@ -18,12 +18,12 @@ ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c0ef8694db1d2f5feb4a994fa2fb557a9a7b187
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7a0d18e8adff256ab9bc29e4c763989e008adeec
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247952"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87941865"
 ---
 # <a name="information-in-ole-db-defined-error-interfaces"></a>OLE DB 정의 오류 인터페이스의 정보
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "87247952"
 |---------------------|-----------------|  
 |**GetDescription**|설명적인 오류 메시지 문자열입니다.|  
 |**GetGUID**|오류를 정의한 인터페이스의 GUID입니다.|  
-|**GetHelpContext**|지원 안 됨 항상 0을 반환합니다.|  
+|**GetHelpContext**|지원되지 않습니다. 항상 0을 반환합니다.|  
 |**GetHelpFile**|지원되지 않습니다. 항상 NULL을 반환합니다.|  
 |**GetSource**|"Microsoft SQL Server Native Client" 문자열입니다.|  
   
@@ -45,7 +45,7 @@ ms.locfileid: "87247952"
 |멤버 함수|Description|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|ERRORINFO 구조에 오류에 대한 기본 정보를 채웁니다. ERRORINFO 구조에는 오류에 대한 HRESULT 반환 값을 식별하는 멤버와 오류가 적용되는 공급자 및 인터페이스가 포함됩니다.|  
-|**GetCustomErrorObject**|**ISQLErrorInfo** 및 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 인터페이스에 대한 참조를 반환합니다.|  
+|**GetCustomErrorObject**|**ISQLErrorInfo** 및 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) 인터페이스에 대한 참조를 반환합니다.|  
 |**GetErrorInfo**|**IErrorInfo** 인터페이스에 대한 참조를 반환합니다.|  
 |**GetErrorParameters**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 **geterrorparameters**를 통해 소비자에 게 매개 변수를 반환 하지 않습니다.|  
 |**GetRecordCount**|사용할 수 있는 오류 레코드 수입니다.|  

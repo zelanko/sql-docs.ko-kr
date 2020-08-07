@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Conversion Results
 ms.assetid: e021182d-31da-443d-b110-937f5db27272
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 844d602168c063c90034469466ade816431481d4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 907c04d8acd0859b71d1b31d2839c23d5e4b85e8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395168"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935069"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Oracle 스키마 변환(OracleToSQL)
 Oracle에 연결 하 고,에 연결 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고, 프로젝트 및 데이터 매핑 옵션을 설정한 후에는 oracle 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 개체로 변환할 수 있습니다.  
@@ -37,7 +37,7 @@ Oracle에 연결 하 고,에 연결 하 [!INCLUDE[ssNoVersion](../../includes/ss
 |Oracle 개체|결과 SQL Server 개체|  
 |-|-|  
 |Functions|함수를로 직접 변환할 수 있는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] ssma는 함수를 만듭니다.<br /><br />경우에 따라 함수를 저장 프로시저로 변환 해야 합니다. 이 경우 SSMA는 저장 프로시저와 저장 프로시저를 호출 하는 함수를 만듭니다.|  
-|절차|프로시저를로 직접 변환할 수 있으면 [!INCLUDE[tsql](../../includes/tsql-md.md)] ssma에서 저장 프로시저를 만듭니다.<br /><br />경우에 따라 저장 프로시저를 자치 트랜잭션에서 호출 해야 합니다. 이 경우 SSMA는 두 개의 저장 프로시저를 만듭니다. 하나는 프로시저를 구현 하 고 다른 하나는 구현 하는 저장 프로시저를 호출 하는 데 사용 됩니다.|  
+|프로시저|프로시저를로 직접 변환할 수 있으면 [!INCLUDE[tsql](../../includes/tsql-md.md)] ssma에서 저장 프로시저를 만듭니다.<br /><br />경우에 따라 저장 프로시저를 자치 트랜잭션에서 호출 해야 합니다. 이 경우 SSMA는 두 개의 저장 프로시저를 만듭니다. 하나는 프로시저를 구현 하 고 다른 하나는 구현 하는 저장 프로시저를 호출 하는 데 사용 됩니다.|  
 |패키지|SSMA는 비슷한 개체 이름으로 통합 되는 저장 프로시저 및 함수 집합을 만듭니다.|  
 |시퀀스|SSMA는 시퀀스 개체 (SQL Server 2012 또는 SQL Server 2014)를 만들거나 Oracle 시퀀스를 에뮬레이트합니다.|  
 |인덱스 및 트리거와 같은 종속 개체가 있는 테이블|SSMA는 종속 개체가 있는 테이블을 만듭니다.|  

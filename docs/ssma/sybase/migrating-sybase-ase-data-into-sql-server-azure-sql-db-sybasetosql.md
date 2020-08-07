@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Migrating data,Client Side Data Migration
 - Migrating data,Server Side Data Migration
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: b9a2663d22bf3820985712ade72f5eaf480266d6
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 5bac0e5437a4700c6bfb4b349e1a5ca9cf421901
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865341"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934702"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-database--sybasetosql"></a>Sybase ASE 데이터를 SQL Server Azure SQL Database로 마이그레이션 (SybaseToSQL)
 Sybase 서버 ASE (적응 서버 엔터프라이즈) 데이터베이스 개체를 또는 Azure SQL Database 성공적으로 로드 한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ase에서 또는 Azure SQL Database로 데이터를 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

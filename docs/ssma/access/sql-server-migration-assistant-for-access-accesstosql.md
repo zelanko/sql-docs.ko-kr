@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 40c1eb02-26b2-44ba-969d-6c430c61c281
-author: Jtoland
-ms.author: Jtoland
-manager: murato
-ms.openlocfilehash: 2e4ce80a111efcf978da55cab280205b08acdd1f
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: fdb846a0b43bd9816faf931d936c456093ac26e3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292948"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934018"
 ---
 # <a name="sql-server-migration-assistant-for-access-accesstosql"></a>액세스 SQL Server Migration Assistant (AccessToSQL)
 
@@ -26,7 +26,7 @@ ms.locfileid: "84292948"
   
 ## <a name="contents"></a>콘텐츠  
   
-|섹션|설명|
+|섹션|Description|
 |-----------|---------------|
 |[Access용 SSMA의 새로운 기능](https://msdn.microsoft.com/a24d3fc0-6911-4bfa-828a-197abf222e02)|SSMA 릴리스에 대 한 변경 내용을 나열 합니다.|  
 |[액세스용 SQL Server Migration Assistant 설치](installing-sql-server-migration-assistant-for-access-accesstosql.md)|SSMA를 설치 하기 위한 필수 구성 요소, SSMA 설치 및 라이선스 절차 및 최신 버전에 대 한 링크를 나열 합니다.|  

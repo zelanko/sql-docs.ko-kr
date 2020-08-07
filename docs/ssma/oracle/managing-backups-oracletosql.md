@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Oracle Backup Management
 - SQL Server Backup Management
 ms.assetid: a1a03ef9-b6e8-4127-bad0-eae261251472
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: a11948b901e0f687b1daf537faa7b836c4618206
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: b9e091db3e04eb0b82458e60f860dfb829076863
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262967"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934724"
 ---
 # <a name="managing-backups-oracletosql"></a>백업 관리(OracleToSQL)
 Oracle 백업 관리를 사용 하면 테스트를 실행 하기 전이나 후에 테이블 데이터를 백업 및 복원할 수 있습니다. 백업 콘텐츠 관리 대화 상자를 사용 하 여 백업 콘텐츠를 관리할 수도 있습니다.  

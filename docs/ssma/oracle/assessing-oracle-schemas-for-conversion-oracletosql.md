@@ -9,21 +9,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Analyzing Conversion Problems
 ms.assetid: 4de9bcf6-1346-4740-87f9-7f24a8226357
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 0ff56be1b7da0376250c7ed021ae78d7144a7645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: f8aaa58da9e9ace704d6214dcc56cab997fe082e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264546"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935070"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>변환을 위해 Oracle 스키마 평가(OracleToSQL)
-개체를 로드 하 고로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터를 마이그레이션하려면 먼저 마이그레이션의 복잡성과 마이그레이션에 소요 되는 시간을 결정 해야 합니다. SSMA는 성공적으로 변환 되는 개체의 비율을 보여 주는 평가 보고서를 만들 수 있습니다. SSMA를 사용 하면 변환 오류를 발생 시키는 특정 문제를 확인할 수도 있습니다.  
+개체를 로드 하 고로 데이터를 마이그레이션하려면 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션의 복잡성과 마이그레이션에 소요 되는 시간을 결정 해야 합니다. SSMA는 성공적으로 변환 되는 개체의 비율을 보여 주는 평가 보고서를 만들 수 있습니다. SSMA를 사용 하면 변환 오류를 발생 시키는 특정 문제를 확인할 수도 있습니다.  
   
 ## <a name="creating-assessment-reports"></a>평가 보고서 만들기  
-이 평가 보고서를 만들 때 SSMA는 선택한 Oracle 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구문으로 변환한 다음 결과를 표시 합니다.  
+이 평가 보고서를 만들 때 SSMA는 선택한 Oracle 데이터베이스 개체를 구문으로 변환한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 결과를 표시 합니다.  
   
 **평가 보고서를 만들려면**  
   
@@ -77,7 +77,7 @@ ms.locfileid: "68264546"
   
     -   Oracle에서 Oracle 개체를 수정 하 여 문제가 있는 코드를 제거 하거나 수정할 수 있습니다. 업데이트 된 코드를 SSMA에 로드 하려면 메타 데이터를 업데이트 해야 합니다. 자세한 내용은 [Oracle Database &#40;OracleToSQL&#41;에 연결 ](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)을 참조 하세요.  
   
-    -   마이그레이션할 때 개체를 제외할 수 있습니다. 메타 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 탐색기 및 Oracle 메타 데이터 탐색기에서 개체를에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로드 하 고 oracle에서 데이터를 마이그레이션하기 전에 항목 옆에 있는 확인란의 선택을 취소 합니다.  
+    -   마이그레이션할 때 개체를 제외할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]메타 데이터 탐색기 및 Oracle 메타 데이터 탐색기에서 개체를에 로드 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고 oracle에서 데이터를 마이그레이션하기 전에 항목 옆에 있는 확인란의 선택을 취소 합니다.  
   
 ## <a name="next-step"></a>다음 단계  
 [Oracle 스키마 &#40;OracleToSQL&#41;변환](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)  

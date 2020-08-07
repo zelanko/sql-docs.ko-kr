@@ -8,17 +8,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Connect to SQL Azure dialog box
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 34e25824ee95745bd5069a6ed601318d47a96e81
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f67bb072ce30117ebab93c3165545b13b6513df9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865251"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938872"
 ---
 # <a name="connect-to-azure-sql-database-accesstosql"></a>Azure SQL Database에 연결 (AccessToSQL)
-SQL Azure 연결 대화 상자를 사용 하 여 마이그레이션하려는 SQL Azure 데이터베이스에 연결할 수 있습니다.  
+SQL Azure 연결 대화 상자를 사용 하 여 마이그레이션하려는 Azure SQL Database 데이터베이스에 연결할 수 있습니다.  
   
 이 대화 상자에 액세스 하려면 **파일** 메뉴에서 **SQL Azure에 연결**을 선택 합니다. 이전에 연결한 경우 명령이 **SQL Azure에 다시 연결 됩니다.**  
   
@@ -27,7 +27,7 @@ SQL Azure 연결 대화 상자를 사용 하 여 마이그레이션하려는 SQL
   
 SQL Azure에 연결 하기 위한 서버 이름을 선택 하거나 입력 합니다.  
   
-**Database**  
+**데이터베이스**  
   
 을 선택 하 고 데이터베이스 이름을 입력 하거나 **검색** 합니다.  
   
@@ -36,7 +36,7 @@ SQL Azure에 연결 하기 위한 서버 이름을 선택 하거나 입력 합�
   
 **사용자 이름**  
   
-SQL Azure 데이터베이스에 연결 하는 데 사용할 사용자 이름을 입력 합니다.  
+SSMA에서 Azure SQL Database에 연결 하는 데 사용할 사용자 이름을 입력 합니다.  
   
 **암호**  
   

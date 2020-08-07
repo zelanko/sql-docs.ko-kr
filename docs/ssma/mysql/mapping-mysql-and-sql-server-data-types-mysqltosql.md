@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Mapping, customize data type mapping
 - Mapping, Type mapping
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d0b29deae2e0bdba81318130df46e30683717c86
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 604f9ce8e26e3d2221cd9a4bf7732c56ba3296c0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823468"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935392"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>MySQL 및 SQL Server 데이터 형식 매핑(MySQLToSQL)
-MySQL 데이터베이스 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터베이스 형식과 다릅니다. MySQL 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 개체로 변환 하는 경우 mysql의 데이터 형식 또는 SQL Azure를 매핑하는 방법을 지정 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 기본 데이터 형식 매핑을 그대로 적용 하거나 다음 절차에 표시 된 대로 매핑을 사용자 지정할 수 있습니다.  
+MySQL 데이터베이스 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL Database 형식과 다릅니다. MySQL 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 개체로 변환 하는 경우 mysql의 데이터 형식 또는 SQL Azure를 매핑하는 방법을 지정 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 기본 데이터 형식 매핑을 그대로 적용 하거나 다음 절차에 표시 된 대로 매핑을 사용자 지정할 수 있습니다.  
   
 ## <a name="default-mappings"></a>기본 매핑  
 SSMA에는 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목록은 [프로젝트 설정 &#40;형식 매핑&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)을 참조 하세요.  
@@ -68,9 +68,9 @@ SSMA에서 **형식 매핑** 탭을 보면 상속 된 형식 매핑을 보여 �
   
     이렇게 하면 동일한 데이터 형식의 더 작고 큰 값에 대 한 데이터 매핑을 사용자 지정할 수 있습니다. **대상 유형**에서 대상 SQL Server 또는 SQL Azure 데이터 형식을 선택 합니다.  
   
-    1.  일부 형식에는 대상 데이터 형식 길이가 필요 합니다. 필요한 경우 **바꿀 내용** 상자에 새 데이터 길이를 입력 한 다음 **확인**을 클릭 합니다.  
+    -  일부 형식에는 대상 데이터 형식 길이가 필요 합니다. 필요한 경우 **바꿀 내용** 상자에 새 데이터 길이를 입력 한 다음 **확인**을 클릭 합니다.  
   
-    2.  일부 형식에는 대상 데이터 형식 **전체 자릿수** 와 **소수** 자릿수가 필요 합니다. 필요한 경우 **바꿀 내용** 상자에 새로운 전체 자릿수와 소수 자릿수를 입력 한 다음 **확인** 을 클릭 합니다.  
+    -  일부 형식에는 대상 데이터 형식 **전체 자릿수** 와 **소수**자릿수가 필요 합니다. 필요한 경우 **바꿀 내용** 상자에 새로운 전체 자릿수와 소수 자릿수를 입력 한 다음 **확인**을 클릭 합니다.  
   
 -   **데이터 형식 매핑을 제거 하려면 다음을 수행 합니다.**  
   

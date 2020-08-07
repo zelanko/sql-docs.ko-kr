@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: bc5693c71ac6061f12ee90386b3c135a45a14e09
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 0cd80ee10d70b31f06c22e064d199c98cc1820b3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266069"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934871"
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>테스트 사례 준비 완료(OracleToSQL)
 마법사의 마지막 페이지에는 테스트 사례 설명 및 테스트와 관련 된 개체에 대 한 정보가 표시 됩니다. 또한이 페이지에서 테스트 실행 옵션을 설정할 수 있습니다.  

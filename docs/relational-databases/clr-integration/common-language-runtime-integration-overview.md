@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2982f3c078e23529eff2c8cb050ea66628d49da
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 57f889fdbf7e52b470c1ceb8b4015cad78e4cad9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864524"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934362"
 ---
 # <a name="common-language-runtime-integration"></a>공용 언어 런타임 통합
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,13 +41,13 @@ Azure SQL Managed Instance에서 CLR을 사용 하는 방법을 보여 주는 6 
 
 ## <a name="when-to-use-clr-modules"></a>CLR 모듈을 사용 하는 경우
 
-CLR 통합을 사용 하면 정규식, 외부 리소스 (서버, 웹 서비스, 데이터베이스)에 액세스 하는 코드, 사용자 지정 암호화 등의 .Net Framework에서 사용할 수 있는 복잡 한 기능을 구현할 수 있습니다. 서버 쪽 CLR 통합의 이점은 다음과 같습니다.
+CLR 통합을 사용 하면 정규식, 외부 리소스 (서버, 웹 서비스, 데이터베이스)에 액세스 하는 코드, 사용자 지정 암호화 등과 같은 .NET Framework에서 사용할 수 있는 복잡 한 기능을 구현할 수 있습니다. 서버 쪽 CLR 통합의 이점은 다음과 같습니다.
   
 -   **개선된 프로그래밍 모델.** .NET Framework 언어는 여러 측면에서 Transact-SQL보다 기능이 풍부하며 이전에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자에게 제공되지 않던 구문 및 기능을 제공합니다. 개발자는 또한 광범위한 클래스 집합을 제공하는 .NET Framework 라이브러리의 강력한 기능을 활용하여 프로그래밍 문제를 신속하고, 효율적으로 해결할 수 있습니다.  
   
 -   **개선된 안전성 및 보안.** 관리 코드는 데이터베이스 엔진에 의해 호스팅되는 공용 언어 런타임 환경에서 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이를 활용하여 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용되던 확장 저장 프로시저보다 안전성 및 보안이 우수한 대안을 제공합니다.  
   
--   **데이터 형식 및 집계 함수를 정의하는 기능.** 사용자 정의 형식과 사용자 정의 집계는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 스토리지 및 쿼리 기능을 확장하는 새로운 관리되는 데이터베이스 개체입니다.  
+-   **데이터 형식 및 집계 함수를 정의하는 기능.** 사용자 정의 형식 및 사용자 정의 집계는의 저장소 및 쿼리 기능을 확장 하는 두 개의 새로운 관리 되는 데이터베이스 개체입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   **표준화된 환경을 통한 효율적인 개발.** [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio .NET 개발 환경의 후속 릴리스에 데이터베이스 개발이 통합되었습니다. 개발자는 중간 계층 또는 클라이언트 계층 .NET Framework 구성 요소와 서비스를 작성할 때 사용하는 도구와 똑같은 도구를 사용하여 데이터베이스 개체와 스크립트를 개발하고 디버깅할 수 있습니다.  
   
