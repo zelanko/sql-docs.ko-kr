@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: dd368a1a-45b0-40e9-b4d3-5cdb48c26606
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 216e972fb817fec3a0446d42941b9915b73fa29a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 318de1e7a463892dbb40639bccacb89f6907b8bf
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394552"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864770"
 ---
 # <a name="connecting-to-sql-server-sybasetosql"></a>SQL Server에 연결(SybaseToSQL)
 Sybase 서버 ASE (적응 서버 엔터프라이즈) 데이터베이스를로 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 대상 인스턴스에 연결 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 연결할 때 SSMA는 인스턴스의 모든 데이터베이스에 대 한 메타 데이터를 가져오고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기에 데이터베이스 메타 데이터를 표시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. SSMA는 연결 된 인스턴스에 대 한 정보 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 저장 하지만 암호를 저장 하지는 않습니다.  
@@ -124,5 +124,5 @@ ASE 데이터베이스 개체를 구문으로 변환 하기 전에 [!INCLUDE[ssN
 -   이러한 작업을 수행할 필요가 없는 경우 Sybase ASE 데이터베이스 개체 정의를 개체 정의로 변환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 자세한 내용은 [SYBASE ASE 데이터베이스 개체 변환 &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
-[Sybase ASE 데이터베이스를 SQL Server로 마이그레이션-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Sybase ASE 데이터베이스를 SQL Server-Azure SQL Database &#40;SybaseToSQL&#41;로 마이그레이션](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

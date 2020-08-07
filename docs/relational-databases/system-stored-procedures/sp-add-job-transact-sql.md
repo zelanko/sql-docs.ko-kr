@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6a2cc2c6dcb1eb1d9068a5107f504683eb516bf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bf9351455ffa21978821590e06edaa93e7f70405
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879985"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865351"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85879985"
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
  > [!IMPORTANT]  
- > 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+ > [AZURE SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 대부분의 SQL Server 에이전트 기능은 현재 지원 되지 않습니다. 자세한 내용은 [AZURE sql Managed Instance SQL Server에서 t-sql 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) 을 참조 하세요.
  
 ## <a name="syntax"></a>구문  
   

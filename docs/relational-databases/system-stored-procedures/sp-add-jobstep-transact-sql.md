@@ -15,12 +15,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 03/15/2017
-ms.openlocfilehash: 292e2e14f8837aefb076256ec9d61ab7e2cf4032
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 97954598f44b5fa66a6558aae4964cc1651f6f70
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879949"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865069"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep(Transact-SQL)
 
@@ -31,7 +31,7 @@ SQL 에이전트 작업에 단계 (작업)를 추가 합니다.
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 > [!IMPORTANT]
-> [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 대부분의 SQL Server 에이전트 작업 유형이 지원 되지 않습니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> [AZURE SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 대부분의 SQL Server 에이전트 작업 유형이 지원 되지 않습니다. 자세한 내용은 [AZURE sql Managed Instance SQL Server에서 t-sql 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) 을 참조 하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -76,7 +76,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 
 |값|설명|
 |-----------|-----------------|
-|'**ActiveScripting**'|액티브 스크립트<br /><br /> ** \* \* \* 중요 \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|
+|'**ActiveScripting**'|액티브 스크립트<br /><br /> **\*\* 중요 \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|
 |'**CmdExec**'|운영 체제 명령 또는 실행 프로그램|
 |'**배포**'|복제 배포 에이전트 작업|
 |'**Snapshot**'|복제 스냅샷 에이전트 작업|

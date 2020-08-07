@@ -21,12 +21,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 484ae60390202e09625166a266c3972d927086f9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8956eda2e25ecd96df58f863743ae39d0bb88d8f
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395148"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823728"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>sys. query_store_runtime_stats (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -98,11 +98,11 @@ ms.locfileid: "87395148"
 |**min_tempdb_space_used**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최소 페이지 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |**max_tempdb_space_used**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최대 페이지 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |**stdev_tempdb_space_used**|**float**|페이지 수는 집계 간격 내의 쿼리 계획에 대 한 표준 편차를 읽습니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**avg_page_server_io_reads**|**float**|집계 간격 내의 쿼리 계획에 대 한 페이지 서버 i/o 읽기의 평균 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** Azure SQL Database Hyperscale</br>**참고:** Azure SQL Data Warehouse Azure SQL DB, MI (비 hyperscale)는 항상 0을 반환 합니다.|
-|**last_page_server_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 페이지 서버 i/o 읽기의 마지막 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** Azure SQL Database Hyperscale</br>**참고:** Azure SQL Data Warehouse Azure SQL DB, MI (비 hyperscale)는 항상 0을 반환 합니다.|
-|**min_page_server_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 페이지 서버 i/o 읽기의 최소 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** Azure SQL Database Hyperscale</br>**참고:** Azure SQL Data Warehouse Azure SQL DB, MI (비 hyperscale)는 항상 0을 반환 합니다.|
-|**max_page_server_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 페이지 서버 i/o 읽기의 최대 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** Azure SQL Database Hyperscale</br>**참고:** Azure SQL Data Warehouse Azure SQL DB, MI (비 hyperscale)는 항상 0을 반환 합니다.|
-|**stdev_page_server_io_reads**|**float**|페이지 서버 i/o 수 집계 간격 내의 쿼리 계획에 대 한 표준 편차를 읽습니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** Azure SQL Database Hyperscale</br>**참고:** Azure SQL Data Warehouse Azure SQL DB, MI (비 hyperscale)는 항상 0을 반환 합니다.|
+|**avg_page_server_io_reads**|**float**|집계 간격 내의 쿼리 계획에 대 한 페이지 서버 i/o 읽기의 평균 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** Azure SQL Database Hyperscale</br>**참고:** Azure SQL Data Warehouse, Azure SQL Database, Azure SQL Managed Instance (비 hyperscale)는 항상 0을 반환 합니다.|
+|**last_page_server_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 페이지 서버 i/o 읽기의 마지막 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** Azure SQL Database Hyperscale</br>**참고:** Azure SQL Data Warehouse, Azure SQL Database, Azure SQL Managed Instance (비 hyperscale)는 항상 0을 반환 합니다.|
+|**min_page_server_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 페이지 서버 i/o 읽기의 최소 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** Azure SQL Database Hyperscale</br>**참고:** Azure SQL Data Warehouse, Azure SQL Database, Azure SQL Managed Instance (비 hyperscale)는 항상 0을 반환 합니다.|
+|**max_page_server_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 페이지 서버 i/o 읽기의 최대 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** Azure SQL Database Hyperscale</br>**참고:** Azure SQL Data Warehouse, Azure SQL Database, Azure SQL Managed Instance (비 hyperscale)는 항상 0을 반환 합니다.|
+|**stdev_page_server_io_reads**|**float**|페이지 서버 i/o 수 집계 간격 내의 쿼리 계획에 대 한 표준 편차를 읽습니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** Azure SQL Database Hyperscale</br>**참고:** Azure SQL Data Warehouse, Azure SQL Database, Azure SQL Managed Instance (비 hyperscale)는 항상 0을 반환 합니다.|
   
 ## <a name="permissions"></a>사용 권한  
 `VIEW DATABASE STATE` 권한이 필요합니다.  

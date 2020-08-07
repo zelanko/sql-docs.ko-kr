@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: b59803cb-3cc6-41cc-8553-faf90851410e
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 1b90c4a0339481eb32839c026b56d157000f90ae
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 84c9a0a994e087314fcd8d1ae66e1bb5a79fedba
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394705"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863657"
 ---
 # <a name="connecting-to-sql-server-db2etosql"></a>SQL Server에 연결 (DB2eToSQL)
-DB2 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 또는 AZURE SQL DB로 마이그레이션하려면 이러한 대상 인스턴스에 연결 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 연결할 때 SSMA는 인스턴스의 모든 데이터베이스에 대 한 메타 데이터를 가져오고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기에 데이터베이스 메타 데이터를 표시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. SSMA는 연결 된 인스턴스에 대 한 정보 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 저장 하지만 암호를 저장 하지는 않습니다.  
+DB2 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 또는 Azure SQL Database로 마이그레이션하려면 이러한 대상 인스턴스에 연결 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 연결할 때 SSMA는 인스턴스의 모든 데이터베이스에 대 한 메타 데이터를 가져오고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기에 데이터베이스 메타 데이터를 표시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. SSMA는 연결 된 인스턴스에 대 한 정보 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 저장 하지만 암호를 저장 하지는 않습니다.  
   
 사용자의 연결은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로젝트를 닫을 때까지 활성 상태로 유지 됩니다. 프로젝트를 다시 열 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버에 대 한 활성 연결을 원하는 경우에 다시 연결 해야 합니다. 데이터베이스 개체를 로드 하 고 데이터를 마이그레이션할 때까지 오프 라인으로 작업할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -78,15 +78,15 @@ DB2 데이터베이스 개체를 구문으로 변환 하기 전에 [!INCLUDE[ssN
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]프로젝트를 만들 때 2012 및 2014 및 2016에 연결할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server 2012입니다.  
   
-|프로젝트 형식 및 대상 서버 버전|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(버전: 11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(버전: 12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(버전: 13.x)|Azure SQL DB|  
+|프로젝트 형식 및 대상 서버 버전|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(버전: 11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(버전: 12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(버전: 13.x)|Azure SQL Database|  
 |-|-|-|-|-|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|예|예|예||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||예|예||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014|||예||  
-|Azure SQL DB||||예|  
+|Azure SQL Database||||예|  
   
 > [!IMPORTANT]  
-> 데이터베이스 개체의 변환은 프로젝트 형식에 따라 수행 되지만 연결 된의 버전에 따라 수행 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 또는 Azure SQL DB의 경우.  
+> 데이터베이스 개체의 변환은 프로젝트 형식에 따라 수행 되지만 연결 된의 버전에 따라 수행 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 또는 Azure SQL Database의 경우  
   
 ## <a name="synchronizing-sql-server-metadata"></a>SQL Server 메타 데이터 동기화  
 데이터베이스에 대 한 메타 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 자동으로 업데이트 되지 않습니다. 메타 데이터 탐색기의 메타 데이터는 처음 연결할 때 메타 데이터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대 한 스냅숏입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 또는 수동으로 메타 데이터를 업데이트 한 경우에는입니다. 모든 데이터베이스 또는 단일 데이터베이스 또는 데이터베이스 개체에 대 한 메타 데이터를 수동으로 업데이트할 수 있습니다.  

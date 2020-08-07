@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a45a2330-9175-4c9e-af38-ef920e350614
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0558e86380c6cec822103a22b746b5af05437cae
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: ff1a2144dd9a8f18e71a5e9fa54343bd414f070a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306092"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864810"
 ---
 # <a name="connecting-to-sap-ase-sybasetosql"></a>SAP ASE에 연결 (SybaseToSQL)
 
@@ -115,4 +115,4 @@ ASE 데이터베이스에 대 한 메타 데이터는 자동으로 새로 고쳐
   
 ## <a name="see-also"></a>참고 항목
 
-[Sybase ASE 데이터베이스를 SQL Server로 마이그레이션-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Sybase ASE 데이터베이스를 SQL Server-Azure SQL Database &#40;SybaseToSQL&#41;로 마이그레이션](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: ae9210444311267569d5f240d40252d4fe024877
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 85923b0252eb24012c12e0c19937e076806b78bd
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139212"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823809"
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>변환을 위해 MySQL 데이터베이스 평가(MySQLToSQL)
 개체를 로드 하 고 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 마이그레이션하기 전에 마이그레이션의 복잡성과 마이그레이션에 소요 되는 시간을 결정 해야 합니다. SSMA는 성공적으로 변환 되는 개체의 비율을 보여 주는 평가 보고서를 만들 수 있습니다. SSMA를 사용 하면 변환 오류를 발생 시키는 특정 문제를 확인할 수도 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "68139212"
   
     SSMA는 창의 아래쪽에 있는 상태 표시줄에 진행률을 표시 합니다. 출력 창이 표시 되 면 출력 창에도 메시지가 표시 됩니다.  
   
-    평가가 완료 되 면 MySQL에 대 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 한 Migration Assistant 평가 보고서 창이 표시 됩니다.  
+    평가가 완료 되 면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] MySQL에 대 한 Migration Assistant 평가 보고서 창이 표시 됩니다.  
   
 ## <a name="using-assessment-reports"></a>평가 보고서 사용  
 평가 보고서 창에는 다음과 같은 세 개의 창이 있습니다.  
@@ -76,11 +76,11 @@ ms.locfileid: "68139212"
   
 -   MySQL에서 MySQL 개체를 수정 하 여 문제가 있는 코드를 제거 하거나 수정할 수 있습니다. 업데이트 된 코드를 SSMA에 로드 하려면 메타 데이터를 업데이트 해야 합니다. 자세한 내용은 [MySQL에 연결 &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)을 참조 하세요.  
   
--   마이그레이션할 때 개체를 제외할 수 있습니다. 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure 메타 데이터 탐색기 및 Mysql 메타 데이터 탐색기에서 개체를로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로드 하기 전에 항목 옆에 있는 확인란의 선택을 취소 하거나 mysql에서 데이터를 SQL Azure 하 고 마이그레이션합니다.  
+-   마이그레이션할 때 개체를 제외할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]또는 SQL Azure 메타 데이터 탐색기 및 Mysql 메타 데이터 탐색기에서 개체를로 로드 하기 전에 항목 옆에 있는 확인란의 선택을 취소 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 mysql에서 데이터를 SQL Azure 하 고 마이그레이션합니다.  
   
 ## <a name="next-step"></a>다음 단계  
 [MySQL 데이터베이스 &#40;MySQLToSQL&#41;변환](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>참고 항목  
-[MySQL 데이터베이스를 SQL Server로 마이그레이션-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[MySQL 데이터베이스를 SQL Server-Azure SQL Database &#40;MySQLToSql&#41;로 마이그레이션](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

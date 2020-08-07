@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: 1601ae2430ced8a30a04d8ab52d97dbb9bbb095a
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: c456c383625f43a5fef7f675edcd86ede6ca2515
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477455"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862404"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Oracle 용 SSMA의 새로운 기능 (OracleToSQL)
 
@@ -159,16 +159,16 @@ Oracle 용 SSMA의 v2.0 릴리스는 품질 및 변환 메트릭을 향상 시 �
 
 Oracle 용 SSMA의 v 8.0 릴리스는 품질 및 변환 메트릭을 개선 하기 위해 설계 된 대상 수정 기능으로 향상 되었습니다. 또한이 릴리스는 다음과 같은 새로운 기능을 제공 합니다.
 
-* 대상으로 **Azure SQL Database Managed Instance** 지원. 이제 Azure SQL Database Managed Instance를 대상으로 하는 새 프로젝트를 만들 수 있습니다.
+* 대상으로 **AZURE SQL Managed Instance** 지원. 이제 Azure SQL Managed Instance를 대상으로 하는 새 프로젝트를 만들 수 있습니다.
 
-  ![SQL DB MI 프로젝트](../media/ssma-newproject-sqldbmi.png)
+  ![SQL MI 프로젝트](../media/ssma-newproject-sqldbmi.png)
 
   > [!NOTE]
-  > Oracle 용 SSMA 확장 팩도 Azure SQL Database Managed Instance에서 원격 설치를 허용 하도록 업데이트 되었습니다.
+  > Oracle 용 SSMA 확장 팩도 Azure SQL Managed Instance에서 원격 설치를 허용 하도록 업데이트 되었습니다.
   >
   > ![Oracle 용 SSMA 확장 팩](../media/ssma-oracle-ext-pack.png)
 
-  Azure SQL Database Managed Instance를 대상으로 지정 하는 경우 테스터 및 서버 쪽 데이터 마이그레이션을 비롯 한 일부 기능이 지원 되지 않습니다. 자세한 내용은 [여기](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/)서 확인할 수 있습니다.
+  테스터 및 서버 쪽 데이터 마이그레이션을 비롯 한 일부 기능은 Azure SQL Managed Instance를 대상으로 지정할 때 지원 되지 않습니다. 자세한 내용은 [여기](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/)서 확인할 수 있습니다.
 
 * 변환 후 **수정 관리자**입니다. [여기](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)에서 자세히 알아보세요.
 
@@ -336,8 +336,8 @@ Oracle 용 SSMA의 1 월 2014 유지 관리 릴리스에는 다음과 같은 변
 
 Oracle 용 SSMA의 7 월 2014 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
 
-* Azure SQL DB에 대 한 지원이 추가 되었습니다.
-* 확장 팩 기능을 스키마로 이동 하 여 Azure SQL DB를 지원 합니다.
+* Azure SQL Database에 대 한 지원이 추가 되었습니다.
+* Azure SQL Database를 지원 하기 위해 확장 팩 기능을 스키마로 이동 했습니다.
 * Oracle 구체화 뷰에 대 한 지원이 추가 되었습니다.
 * SQL Server 2014 메모리 최적화 테이블에 대 한 지원이 추가 되었습니다.
 * 과도 한 개체가 포함 된 데이터베이스에 대 한 성능 향상 기능이 테스트 되었습니다.

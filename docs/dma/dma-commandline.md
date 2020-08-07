@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 62626e8a9f3cfe5bf9272378b26e3bb0ab2f6b1a
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 0b589d9f5bf90b78d6689ff3b37f09f15fe344b8
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925357"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864920"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>명령줄에서 Data Migration Assistant 실행
 
-버전 2.1 이상에서는 Data Migration Assistant를 설치 하는 경우 *% ProgramFiles% \\ Microsoft Data Migration Assistant \\ *에도 설치 됩니다. Node.js를 사용 하 여 무인 모드에서 데이터베이스를 평가 하 고 그 결과를 JSON 또는 CSV 파일에 출력 합니다. 이 방법은 여러 데이터베이스 또는 방대한 데이터베이스를 평가할 때 특히 유용 합니다. 
+버전 2.1 이상에서는 Data Migration Assistant를 설치 하는 경우 *% ProgramFiles% \\ Microsoft Data Migration Assistant \\ *에도 dmacmd.exe 설치 됩니다. dmacmd.exe를 사용 하 여 무인 모드에서 데이터베이스를 평가 하 고 그 결과를 JSON 또는 CSV 파일에 출력 합니다. 이 방법은 여러 데이터베이스 또는 방대한 데이터베이스를 평가할 때 특히 유용 합니다. 
 
 > [!NOTE]
-> Node.js는 평가 실행만 지원 합니다. 지금은 마이그레이션이 지원 되지 않습니다.
+> Dmacmd.exe는 평가 실행만 지원 합니다. 지금은 마이그레이션이 지원 되지 않습니다.
 
 ## <a name="assessments-using-the-command-line-interface-cli"></a>CLI (명령줄 인터페이스)를 사용 하 여 평가
 
@@ -42,7 +42,7 @@ DmaCmd.exe /AssessmentName="string"
 
 |인수  |설명  | 필수 (Y/N)
 |---------|---------|---------------|
-| `/help or /?`     | Node.js 도움말 텍스트를 사용 하는 방법        | N
+| `/help or /?`     | dmacmd.exe 도움말 텍스트를 사용 하는 방법        | N
 |`/AssessmentName`     |   평가 프로젝트의 이름입니다.   | 지원
 |`/AssessmentDatabases`     | 공백으로 구분 된 연결 문자열 목록입니다. 데이터베이스 이름 (초기 카탈로그)은 대/소문자를 구분 합니다. | 지원
 |`/AssessmentSourcePlatform`     | 평가를 위한 원본 플랫폼: <br>평가에 대해 지원 되는 값: SqlOnPrem, RdsSqlServer (기본값) <br>대상 준비 평가에 대해 지원 되는 값: SqlOnPrem, RdsSqlServer (기본값), Cassandra (미리 보기)   | N
@@ -61,7 +61,7 @@ DmaCmd.exe /AssessmentName="string"
 |`/ImportFeatureDiscoveryReportJson`    | 이전에 만든 기능 검색 JSON 보고서의 경로입니다. 원본 연결 대신이 파일이 사용 됩니다.   | N
 |`/EnableAssessmentUploadToAzureMigrate`    | Azure Migrate에 대 한 평가 결과를 업로드 하 고 게시할 수 있습니다.   | N
 |`/AzureCloudEnvironment`    |연결할 Azure 클라우드 환경을 선택 합니다. 기본값은 Azure 공용 클라우드입니다. 지원 되는 값: Azure (기본값), AzureChina, AzureGermany, Azureus정부.   | N 
-|`/SubscriptionId`    |Azure 구독 id입니다.   | 지원 <br> (EnableAssessmentUploadToAzureMigrate 인수가 지정 된 경우 필수)
+|`/SubscriptionId`    |Azure 구독 ID입니다.   | 지원 <br> (EnableAssessmentUploadToAzureMigrate 인수가 지정 된 경우 필수)
 |`/AzureMigrateProjectName`    |평가 결과를 업로드할 Azure Migrate 프로젝트 이름입니다.   | 지원 <br> (EnableAssessmentUploadToAzureMigrate 인수가 지정 된 경우 필수)
 |`/ResourceGroupName`    |리소스 그룹 이름을 Azure Migrate 합니다.   | 지원 <br> (EnableAssessmentUploadToAzureMigrate 인수가 지정 된 경우 필수)
 |`/AssessmentResultInputFolder`    |을 포함 하는 입력 폴더 경로입니다. Azure Migrate에 업로드할 DMA 평가 파일입니다.   | 지원 <br> (작업이 AzureMigrateUpload 경우 필수)
@@ -70,7 +70,7 @@ DmaCmd.exe /AssessmentName="string"
 
 ## <a name="examples-of-assessments-using-the-cli"></a>CLI를 사용 하는 평가 예
 
-**Node.js**
+**Dmacmd.exe**
 
   `Dmacmd.exe /? or DmaCmd.exe /help`
 
@@ -269,7 +269,7 @@ DmaCmd.exe
 DmaCmd.exe 
 /Action="AzureMigrateUpload" 
 /AssessmentResultInputFolder="C:\assessments\results" 
-/SubscriptionId="subscription Id" 
+/SubscriptionId="Subscription Id" 
 /AzureMigrateProjectName="Azure Migrate project name" 
 /ResourceGroupName="Resource Group name" 
 /AzureAuthenticationInteractiveAuthentication
@@ -277,9 +277,9 @@ DmaCmd.exe
 /EnableAssessmentUploadToAzureMigrate
 
 ```
-## <a name="azure-sql-databasemanaged-instance-sku-recommendations-using-the-cli"></a>CLI를 사용 하 여 Azure SQL Database/관리 되는 인스턴스 SKU 권장 사항
+## <a name="azure-sql-database--azure-sql-managed-instance-sku-recommendations-using-the-cli"></a>CLI를 사용 하 여 Azure SQL Database/Azure SQL Managed Instance SKU 권장 사항
 
-이러한 명령은 Azure SQL Database 단일 데이터베이스 및 관리 되는 인스턴스 배포 옵션 모두에 대 한 권장 사항을 지원 합니다.
+이러한 명령은 Azure SQL Database 단일 데이터베이스 및 Azure SQL Managed Instance 배포 옵션에 대 한 권장 사항을 모두 지원 합니다.
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -312,11 +312,11 @@ DmaCmd.exe
 
 ## <a name="examples-of-sku-assessments-using-the-cli"></a>CLI를 사용 하는 SKU 평가 예
 
-**Node.js**
+**Dmacmd.exe**
 
 `Dmacmd.exe /? or DmaCmd.exe /help`
 
-**가격 새로 고침을 사용한 Azure SQL DB/MI SKU 권장 사항 (최신 가격 가져오기)-대화형 인증** 
+**가격 새로 고침을 사용 하는 Azure SQL Database/Azure SQL Managed Instance SKU 권장 사항 (최신 가격 가져오기)-대화형 인증** 
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -333,7 +333,7 @@ DmaCmd.exe
 /AzureAuthenticationInteractiveAuthentication=true 
 ```
 
-**가격 새로 고침을 사용한 Azure SQL DB/MI SKU 권장 사항 (최신 가격 가져오기)-인증서 인증**
+**가격 새로 고침을 사용 하는 Azure SQL Database/Azure SQL Managed Instance SKU 권장 사항 (최신 가격 가져오기)-인증서 인증**
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -351,7 +351,7 @@ DmaCmd.exe
 /AzureAuthenticationCertificateThumbprint=<Your Certificate Thumbprint>  
 ```
 
-**가격 새로 고침 (최신 가격 가져오기)이 포함 된 Azure SQL DB SKU/MI 권장 사항-토큰 인증 및 권장 되는 데이터베이스 지정**
+**가격 새로 고침에 대 한 Azure SQL Database/Azure SQL Managed Instance 권장 사항 (최신 가격 가져오기)-토큰 인증 및 권장 되는 데이터베이스 지정**
   
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -369,7 +369,7 @@ DmaCmd.exe
 /AzureAuthenticationToken=<Your Authentication Token> 
 ```
 
-**가격 새로 고침 없이 Azure SQL DB/MI SKU 권장 사항 (정적 가격 사용)** 
+**가격 새로 고침 없이 Azure SQL Database/Azure SQL Managed Instance SKU 권장 사항 (정적 가격 사용)** 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
 /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"

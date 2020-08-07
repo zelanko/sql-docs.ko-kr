@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 99e86d99a4214b1ccdf317e75218fe22bb2c7af7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0b29deae2e0bdba81318130df46e30683717c86
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908997"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823468"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>MySQL 및 SQL Server 데이터 형식 매핑(MySQLToSQL)
-MySQL 데이터베이스 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터베이스 형식과 다릅니다. MySQL 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 개체로 변환 하는 경우 mysql의 데이터 형식 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure를 매핑하는 방법을 지정 해야 합니다. 기본 데이터 형식 매핑을 그대로 적용 하거나 다음 절차에 표시 된 대로 매핑을 사용자 지정할 수 있습니다.  
+MySQL 데이터베이스 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터베이스 형식과 다릅니다. MySQL 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 개체로 변환 하는 경우 mysql의 데이터 형식 또는 SQL Azure를 매핑하는 방법을 지정 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 기본 데이터 형식 매핑을 그대로 적용 하거나 다음 절차에 표시 된 대로 매핑을 사용자 지정할 수 있습니다.  
   
 ## <a name="default-mappings"></a>기본 매핑  
 SSMA에는 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목록은 [프로젝트 설정 &#40;형식 매핑&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)을 참조 하세요.  
@@ -82,5 +82,5 @@ SSMA에서 **형식 매핑** 탭을 보면 상속 된 형식 매핑을 보여 �
 마이그레이션 프로세스의 다음 단계는 [평가 보고서를 만들거나](assessing-mysql-databases-for-conversion-mysqltosql.md) [MySQL 데이터베이스 개체를 SQL Server 또는 SQL Azure 구문으로 변환](converting-mysql-databases-mysqltosql.md)하는 것입니다. 보고서를 만드는 경우 MySQL 개체는 평가 중에 자동으로 변환 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[MySQL 데이터베이스를 SQL Server로 마이그레이션-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[MySQL 데이터베이스를 SQL Server-Azure SQL Database &#40;MySQLToSql&#41;로 마이그레이션](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

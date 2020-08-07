@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 346fcd2ea7f83abcb9a5c23a22cb0eded76acc0e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5c85c551ba70d28b4af7eb87126c51ef5a4ff75
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944685"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863524"
 ---
 # <a name="setting-project-options-mysqltosql"></a>프로젝트 옵션 설정(MySQLToSQL)
 각 SSMA 프로젝트에 대해 프로젝트 수준 옵션을 설정할 수 있습니다. 이러한 옵션은 개체가 변환 되는 방법, 데이터를 마이그레이션하는 방법 및 원본 데이터 형식을 대상 데이터 형식에 매핑하는 방법을 지정 합니다.  개체를 SQL Server 또는 SQL Azure 데이터를 SQL Server 또는 SQL Azure로 변환 하기 전에 구성 옵션이 프로젝트에 적합 한지 확인 합니다.  
@@ -60,7 +60,7 @@ SSMA에는 5 개의 프로젝트 설정 집합이 있습니다.
   
 -   [프로젝트 설정 &#40;동기화&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
--   [Azure SQL DB&#41; &#40;MySQLToSQL&#41;&#40;프로젝트 설정](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
+-   [프로젝트 설정 &#40;Azure SQL Database&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
   
 ## <a name="setting-project-options"></a>프로젝트 옵션 설정  
 SSMA에서 모든 프로젝트에 대 한 기본 설정을 구성할 수 있습니다. 이러한 설정은 SSMA 구성 파일에 저장 되 고 사용자가 만드는 모든 새 프로젝트에 적용 됩니다.  

@@ -18,12 +18,12 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 34f524eb8e6c7a64a53f64eda67a370aace745c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4c6d2e7cccc7e1aa07327480415c0acd2a3db192
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648899"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822948"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "85648899"
 |**max_session_percent**|**decimal (5, 2)**|풀의 한도에 따른 백분율로 최대 동시 세션|  
 |**elastic_pool_dtu_limit**|**int**|이 간격 중에 이 탄력적 풀에 대한 현재 최대 탄력적 풀 DTU 설정|  
 |**elastic_pool_storage_limit_mb**|**bigint**|이 간격 중에 이 탄력적 풀에 대한 현재 최대 탄력적 풀 스토리지 제한 설정(MB)|
-|**avg_allocated_storage_percent**|**decimal (5, 2)**|탄력적 풀의 모든 데이터베이스에서 할당 한 데이터 공간의 비율입니다.  탄력적 풀의 데이터 최대 크기에 할당 된 데이터 공간의 비율입니다.  자세한 내용은 [SQL DB의 파일 공간 관리](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management) 를 참조 하세요.|  
+|**avg_allocated_storage_percent**|**decimal (5, 2)**|탄력적 풀의 모든 데이터베이스에서 할당 한 데이터 공간의 비율입니다.  탄력적 풀의 데이터 최대 크기에 할당 된 데이터 공간의 비율입니다.  자세한 내용은 [SQL Database 파일 공간 관리를](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management) 참조 하세요.|  
   
 ## <a name="remarks"></a>설명
 
@@ -57,7 +57,7 @@ ms.locfileid: "85648899"
 
  **Dbmanager** 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
  다음 예에서는 현재 SQL Database 서버에 있는 모든 탄력적 데이터베이스 풀에 대해 가장 최근 시간 순으로 정렬 된 리소스 사용률 데이터를 반환 합니다.  
   

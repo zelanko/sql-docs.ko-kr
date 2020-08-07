@@ -1,5 +1,5 @@
 ---
-title: Azure SQL DB에 연결 (AccessToSQL) | Microsoft Docs
+title: Azure SQL Database에 연결 (AccessToSQL) | Microsoft Docs
 description: Azure SQL Database의 대상 인스턴스에 연결 하 여 Access 데이터베이스를 마이그레이션하는 방법에 대해 알아봅니다. SSMA는 Azure SQL Database의 데이터베이스에 대 한 메타 데이터를 가져옵니다.
 ms.prod: sql
 ms.custom: ''
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: f07d63387a6abd55aa2a130f2809681b00a71b19
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 529962cbc303a66102f833374e42c6cfb8981b87
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293130"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822520"
 ---
-# <a name="connecting-to-azure-sql-db-accesstosql"></a>Azure SQL DB에 연결 (AccessToSQL)
+# <a name="connecting-to-azure-sql-database-accesstosql"></a>Azure SQL Database에 연결 (AccessToSQL)
 Access 데이터베이스를 SQL Azure로 마이그레이션하려면 SQL Azure의 대상 인스턴스에 연결 해야 합니다. 연결할 때 SSMA는 SQL Azure 인스턴스의 모든 데이터베이스에 대 한 메타 데이터를 가져오고 SQL Azure 메타 데이터 탐색기에 데이터베이스 메타 데이터를 표시 합니다. SSMA는 연결 된 SQL Azure의 인스턴스에 대 한 정보를 저장 하지만 암호를 저장 하지는 않습니다.  
   
 SQL Azure에 대 한 연결은 프로젝트를 닫을 때까지 활성 상태로 유지 됩니다. 프로젝트를 다시 열 때 서버에 대 한 활성 연결을 원하는 경우 SQL Azure에 다시 연결 해야 합니다. 데이터베이스 개체를 SQL Azure로 로드 하 고 데이터를 마이그레이션할 때까지 오프 라인으로 작업할 수 있습니다.  
@@ -56,7 +56,7 @@ Access 데이터베이스 개체를 SQL Azure 구문으로 변환 하기 전에 
   
 2.  연결 대화 상자에서 SQL Azure 서버 이름을 입력 하거나 선택 합니다.  
   
-3.  데이터베이스 이름을 입력 하 고 선택 하거나 **탐색** 합니다.  
+3.  데이터베이스 이름을 입력, 선택 또는 **검색** 합니다.  
   
 4.  **사용자 이름**을 입력 하거나 선택 합니다.  
   

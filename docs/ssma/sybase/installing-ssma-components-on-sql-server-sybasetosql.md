@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 06bddd3929efa4477039300f38fbdcf301680085
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: 1c66255f57a69db0807ab1620cafd60444f296c8
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411601"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865391"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>SQL Server에 SSMA 구성 요소 설치 (SybaseToSQL)
 
@@ -26,7 +26,7 @@ SSMA 확장 팩은 지정 된 인스턴스에 **sysdb** 및 **ssmatesterdb_syb**
 
 또한 데이터를로 마이그레이션하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ssma는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이그레이션에 서버 쪽 데이터 마이그레이션 엔진을 사용 하는 경우 에이전트 작업을 만듭니다.
 
-### <a name="prerequisites"></a>필수 조건
+### <a name="prerequisites"></a>필수 구성 요소
 
 Sybase 용 SSMA 서버 구성 요소를 설치 하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템이 다음과 같은 요구 사항을 충족 하는지 확인 합니다.
 
@@ -109,7 +109,7 @@ Sybase 용 SSMA 서버 구성 요소를 설치 하기 전에 [!INCLUDE[ssNoVersi
 3. 기능 선택 페이지에서 ODBC, OLE DB 및 ADO.NET 데이터 공급자를 선택 합니다.
 4. 선택한 기능을 확인 한 다음 **마침** 을 클릭 하 여 데이터 공급자를 설치 합니다.
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - [Sybase 클라이언트용 SSMA 설치](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)
-- [SQL Server로 Sybase ASE 데이터베이스 마이그레이션-Azure SQL DB](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)
+- [Sybase ASE 데이터베이스를 SQL Server-Azure SQL Database로 마이그레이션](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)

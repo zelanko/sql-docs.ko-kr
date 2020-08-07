@@ -14,36 +14,36 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 7fa2b8361f9a09dbab28689e31d77a3152ff83dd
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: f2df572e7e4be92eb91662ffc47448b7becf3a7e
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885831"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864910"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>온-프레미스 데이터베이스에 적합 한 Azure SQL Database/Managed Instance SKU 식별
 
 데이터베이스를 클라우드로 마이그레이션하는 것은 특히 데이터베이스에 가장 적합 한 Azure 데이터베이스 대상과 SKU를 선택 하려고 할 때 복잡할 수 있습니다. DMA (데이터베이스 Migration Assistant)의 목표는 이러한 질문을 해결 하 고 사용자에 게 친숙 한 출력으로 이러한 SKU 권장 사항을 제공 하 여 데이터베이스 마이그레이션 환경을 더 쉽게 만드는 것입니다.
 
-이 문서에서는 DMA의 Azure SQL Database SKU 권장 사항 기능에 대해 집중적으로 설명 합니다. Azure SQL Database에는 다음과 같은 몇 가지 배포 옵션이 있습니다.
+이 문서에서는 DMA의 Azure SQL Database SKU 권장 사항 기능에 대해 집중적으로 설명 합니다. Azure SQL Database 및 Azure SQL Managed Instance에는 다음과 같은 몇 가지 배포 옵션이 있습니다.
 
 - 단일 데이터베이스
 - 탄력적 풀
 - 관리되는 인스턴스
 
-SKU 권장 사항 기능을 사용 하면 데이터베이스를 호스트 하는 컴퓨터에서 수집 된 성능 카운터를 기반으로 하는 최소 권장 Azure SQL Database 단일 데이터베이스 또는 관리 되는 인스턴스 SKU를 모두 식별할 수 있습니다. 이 기능은 가격 책정 계층, 계산 수준 및 최대 데이터 크기와 관련 된 권장 사항과 월별 예상 비용을 제공 합니다. 또한 모든 권장 데이터베이스에 대해 Azure에서 단일 데이터베이스 및 관리 되는 인스턴스를 대량 프로 비전 하는 기능을 제공 합니다.
+SKU 권장 사항 기능을 사용 하면 데이터베이스를 호스트 하는 컴퓨터에서 수집 된 성능 카운터를 기반으로 하 여 권장 되는 최소 Azure SQL Database 단일 데이터베이스 또는 Azure SQL Managed Instance SKU를 모두 식별할 수 있습니다. 이 기능은 가격 책정 계층, 계산 수준 및 최대 데이터 크기와 관련 된 권장 사항과 월별 예상 비용을 제공 합니다. 또한 모든 권장 데이터베이스에 대해 단일 데이터베이스 및 관리 되는 인스턴스를 대량 프로 비전 하는 기능을 제공 합니다.
 
 > [!NOTE]
 > 이 기능은 현재 CLI (명령줄 인터페이스)를 통해서만 사용할 수 있습니다.
 
-다음은 Azure SQL Database SKU 권장 사항을 확인 하 고 DMA를 사용 하 여 Azure에서 해당 하는 단일 데이터베이스 또는 관리 되는 인스턴스를 프로 비전 하는 데 도움이 되는 지침입니다.
+다음은 SKU 권장 사항을 결정 하 고 DMA를 사용 하 여 Azure에서 해당 하는 단일 데이터베이스 또는 관리 되는 인스턴스를 프로 비전 하는 데 도움이 되는 지침입니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 - 최신 버전의 [DMA](https://aka.ms/get-dma)를 다운로드 하 여 설치 합니다. 이전 버전의 도구가 이미 있는 경우이를 열면 DMA를 업그레이드할지 묻는 메시지가 표시 됩니다.
 - 모든 스크립트를 실행 하는 데 필요한 [PowerShell 버전 5.1](https://www.microsoft.com/download/details.aspx?id=54616) 이상이 컴퓨터에 있는지 확인 합니다. 컴퓨터에 설치 된 PowerShell 버전을 확인 하는 방법에 대 한 자세한 내용은 [Windows powershell 5.1 다운로드 및 설치](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)문서를 참조 하세요.
 - 컴퓨터에 Azure Powershell 모듈이 설치 되어 있는지 확인 합니다. 자세한 내용은 [Azure PowerShell 모듈 설치](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0)문서를 참조 하세요.
-- 성능 카운터를 수집 하는 데 필요한 PowerShell 파일 **SkuRecommendationDataCollectionScript**이 DMA 폴더에 설치 되어 있는지 확인 합니다.
+- 성능 카운터를 수집 하는 데 필요한 PowerShell 파일 **SkuRecommendationDataCollectionScript.ps1**이 DMA 폴더에 설치 되어 있는지 확인 합니다.
 - 이 프로세스를 수행할 컴퓨터에 데이터베이스를 호스트 하는 컴퓨터에 대 한 관리자 권한이 있는지 확인 합니다.
 
 ## <a name="collect-performance-counters"></a>성능 카운터를 수집 합니다.
@@ -52,7 +52,7 @@ SKU 권장 사항 기능을 사용 하면 데이터베이스를 호스트 하는
 
 각 데이터베이스에 대해 개별적으로이 작업을 수행할 필요는 없습니다. 컴퓨터에서 수집 된 성능 카운터를 사용 하 여 컴퓨터에서 호스트 되는 모든 데이터베이스에 대 한 SKU를 권장할 수 있습니다.
 
-1. DMA 폴더에서 PowerShell 파일 SkuRecommendationDataCollectionScript. p s 1을 찾습니다. 이 파일은 성능 카운터를 수집 하는 데 필요 합니다.
+1. DMA 폴더에서 PowerShell 파일 SkuRecommendationDataCollectionScript.ps1를 찾습니다. 이 파일은 성능 카운터를 수집 하는 데 필요 합니다.
 
     ![DMA 폴더에 표시 되는 PowerShell 파일](../dma/media/dma-sku-recommend-data-collection-file.png)
 
@@ -80,9 +80,9 @@ SKU 권장 사항 기능을 사용 하면 데이터베이스를 호스트 하는
 
 단일 데이터베이스 옵션의 경우 DMA는 컴퓨터의 각 데이터베이스에 대 한 단일 데이터베이스 가격 책정 계층, 계산 수준 및 최대 데이터 크기 Azure SQL Database에 대 한 권장 사항을 제공 합니다. 컴퓨터에 데이터베이스가 여러 개 있는 경우 권장 구성에 사용할 데이터베이스를 지정할 수도 있습니다. 또한 DMA는 각 데이터베이스에 대해 예상 되는 월별 비용을 제공 합니다.
 
-관리 되는 인스턴스의 경우 권장 사항은 리프트 앤 시프트 시나리오를 지원 합니다. 따라서 DMA는 컴퓨터의 데이터베이스 집합에 대 한 Azure SQL Database 관리 되는 인스턴스 가격 책정 계층, 계산 수준 및 최대 데이터 크기에 대 한 권장 사항을 제공 합니다. 컴퓨터에 데이터베이스가 여러 개 있는 경우 권장 구성을 원하는 데이터베이스를 지정할 수도 있습니다. 또한 DMA는 관리 되는 인스턴스에 대 한 월별 예상 비용을 제공 합니다.
+관리 되는 인스턴스의 경우 권장 사항은 리프트 앤 시프트 시나리오를 지원 합니다. 따라서 DMA는 컴퓨터의 데이터베이스 집합에 대 한 Azure SQL Managed Instance 가격 책정 계층, 계산 수준 및 최대 데이터 크기에 대 한 권장 사항을 제공 합니다. 컴퓨터에 데이터베이스가 여러 개 있는 경우 권장 구성을 원하는 데이터베이스를 지정할 수도 있습니다. 또한 DMA는 관리 되는 인스턴스에 대 한 월별 예상 비용을 제공 합니다.
 
-DMA CLI를 사용 하 여 SKU 권장 사항을 가져오려면 명령 프롬프트에서 다음 인수를 사용 하 여 dmacmd .exe를 실행 합니다.
+DMA CLI를 사용 하 여 SKU 권장 사항을 가져오려면 명령 프롬프트에서 다음 인수를 사용 하 여 dmacmd.exe를 실행 합니다.
 
 - **/Action = U권고안**: SKU 평가를 실행 하려면이 인수를 입력 합니다.
 - **/SkuRecommendationInputDataFilePath**: 이전 섹션에서 수집 된 카운터 파일의 경로입니다.
@@ -102,7 +102,7 @@ DMA CLI를 사용 하 여 SKU 권장 사항을 가져오려면 명령 프롬프�
     - **/Azureauthenticationtenantid**: 인증 테 넌 트입니다.
     - **/Azureauthenticationclientid**: 인증에 사용 되는 AAD 앱의 클라이언트 ID입니다.
     - 다음 인증 옵션 중 하나입니다.
-      - Interactive (대화형)
+      - 대화형
         - **AzureAuthenticationInteractiveAuthentication**: 인증 팝업 창에 대해 true로 설정 합니다.
       - 인증서 기반
         - **AzureAuthenticationCertificateStoreLocation**: 인증서 저장소 위치 (예: "CurrentUser")로 설정 합니다.
@@ -176,15 +176,15 @@ DMA CLI를 사용 하 여 SKU 권장 사항을 가져오려면 명령 프롬프�
 출력 파일의 각 열에 대 한 설명은 다음과 같습니다.
 
 - **DatabaseName** -데이터베이스의 이름입니다.
-- **MetricType** -권장 Azure SQL Database 단일 데이터베이스/관리 되는 인스턴스 계층입니다.
-- **MetricValue** -권장 Azure SQL Database 단일 데이터베이스/관리 되는 인스턴스 SKU입니다.
+- **MetricType** -권장 성능 계층.
+- **MetricValue** -권장 SKU.
 - **PricePerMonth** – 해당 SKU에 대 한 월별 예상 가격입니다.
 - 영역 **이름** – 해당 SKU에 대 한 지역 이름입니다. 
 - **IsTierRecommended** -각 계층에 대 한 최소 SKU 권장 사항을 만듭니다. 그런 다음 추론을 적용 하 여 데이터베이스에 적합 한 계층을 결정 합니다. 이는 데이터베이스에 권장 되는 계층을 반영 합니다. 
 - **ExclusionReasons** -계층을 권장 하는 경우이 값은 비어 있습니다. 권장 되지 않는 각 계층에 대해 선택 하지 않은 이유를 제공 합니다.
 - **AppliedRules** -적용 된 규칙에 대 한 간단한 표기법입니다.
 
-최종 권장 계층 (즉, **MetricType**) 및 값 (예: **MetricValue**)- **IsTierRecommended** 열이 TRUE 인 경우 온-프레미스 데이터베이스와 유사한 성공률으로 Azure에서 실행 하는 데 필요한 최소 SKU를 반영 합니다. 관리 되는 인스턴스의 경우 현재 DMA는 가장 일반적으로 사용 되는 8vcore에서 40vcore Sku에 대 한 권장 사항을 지원 합니다. 예를 들어 표준 계층의 권장 되는 최소 SKU가 S4 인 경우 S3 또는 아래를 선택 하면 쿼리가 시간 초과 되거나 실행 되지 않습니다.
+최종 권장 계층 (즉, **MetricType**) 및 값 (예: **MetricValue**)- **IsTierRecommended** 열이 TRUE 인 경우 온-프레미스 데이터베이스와 유사한 성공률으로 Azure에서 실행 하는 데 필요한 최소 SKU를 반영 합니다. Azure SQL Managed Instance의 경우 DMA는 현재 가장 일반적으로 사용 되는 8vcore에서 40vcore Sku에 대 한 권장 사항을 지원 합니다. 예를 들어 표준 계층의 권장 되는 최소 SKU가 S4 인 경우 S3 또는 아래를 선택 하면 쿼리가 시간 초과 되거나 실행 되지 않습니다.
 
 HTML 파일에는이 정보가 그래픽 형식으로 포함 되어 있습니다. 최종 권장 사항을 보고 프로세스의 다음 부분을 프로 비전 하는 사용자에 게 친숙 한 방법을 제공 합니다. HTML 출력에 대 한 자세한 내용은 다음 섹션에서 설명 합니다.
 
@@ -198,7 +198,7 @@ HTML 파일에는이 정보가 그래픽 형식으로 포함 되어 있습니다
 
 **단일 데이터베이스 권장 사항**
 
-![Azure SQL DB SKU 권장 사항 화면](../dma/media/dma-sku-recommend-single-db-recommendations1.png)
+![Azure SQL Database SKU 권장 사항 화면](../dma/media/dma-sku-recommend-single-db-recommendations1.png)
 
 1. HTML 파일을 열고 다음 정보를 입력 합니다.
     - **구독 id** -데이터베이스를 프로 비전 하려는 Azure 구독의 구독 id입니다.
@@ -214,7 +214,7 @@ HTML 파일에는이 정보가 그래픽 형식으로 포함 되어 있습니다
 
     이 프로세스에서는 HTML 페이지에서 선택한 모든 데이터베이스를 만들어야 합니다.
 
-**관리 되는 인스턴스 권장 사항**
+**Azure SQL Managed Instance 권장 사항**
 
 ![Azure SQL MI SKU 권장 사항 화면](../dma/media/dma-sku-recommend-mi-recommendations1.png)
 

@@ -19,12 +19,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: dfed6ad282fe702b0f7f3fa484476524118805ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e421efbd15f15d56b6446fc39f73bcba04478800
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754157"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865281"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object(Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "85754157"
 
 작업 개체는 운영 체제 수준에서 CPU, 메모리 및 IO 리소스 관리를 구현 하는 Windows 구문입니다. 작업 개체에 대 한 자세한 내용은 [작업 개체](/windows/desktop/ProcThread/job-objects)를 참조 하세요.
   
-|열|데이터 형식|Description|  
+|열|데이터 형식|설명|  
 |-------------|---------------|-----------------|  
 |cpu_rate|**int**|각 일정 간격 중에 SQL Server 스레드가 사용할 수 있는 프로세서 주기 부분을 지정 합니다. 값은 1만-주기 예약 간격 내에서 사용 가능한 주기의 백분율로 보고 되며 논리 Cpu 수를 곱합니다. 예를 들어 논리적 Cpu가 8 인 SQL Server 인스턴스의 값 800은 스레드가 Cpu를 사용할 수 있다는 것을 의미 합니다.|
 |cpu_affinity_mask|**bigint**|SQL Server 프로세스가 프로세서 그룹 내에서 사용할 수 있는 논리 프로세서를 설명 하는 비트 마스크입니다. 예를 들어 cpu_affinity_mask 255 (이진의 1111 1111)는 처음 8 개의 논리적 프로세서를 사용할 수 있음을 의미 합니다. <br /><br />이 열은 이전 버전과의 호환성을 위해 제공 됩니다. 프로세서 그룹을 보고 하지 않으며 프로세서 그룹이 64 개 이상의 논리 프로세서를 포함 하는 경우 보고 된 값이 잘못 될 수 있습니다. 대신이 `process_physical_affinity` 열을 사용 하 여 프로세서 선호도를 확인 합니다.|
@@ -52,9 +52,9 @@ ms.locfileid: "85754157"
 |process_physical_affinity|**nvarchar (3072)**|SQL Server 프로세스가 각 프로세서 그룹에서 사용할 수 있는 논리 프로세서를 설명 하는 비트 마스크입니다. 이 열의 값은 각각 중괄호로 묶인 하나 이상의 값 쌍으로 구성 됩니다. 각 쌍에서 첫 번째 값은 프로세서 그룹 번호이 고, 두 번째 값은 해당 프로세서 그룹에 대 한 선호도 비트 마스크입니다. 예를 들어 값은 `{{0,a}{1,2}}` 프로세서 그룹의 선호도 마스크가 `0` `a` ( `1010` 이진에서 프로세서 2와 4가 사용 됨을 나타냄)이 고 프로세서 그룹에 대 한 선호도 마스크는 `1` `2` ( `10` 이진에서 프로세서 2가 사용 됨을 나타냄) 임을 의미 합니다.|
   
 ## <a name="permissions"></a>사용 권한  
-SQL Database Managed Instance에는 `VIEW SERVER STATE` 권한이 필요 합니다. SQL Database에서 데이터베이스의 `VIEW DATABASE STATE` 권한이 필요합니다.  
+SQL Managed Instance에는 `VIEW SERVER STATE` 권한이 필요 합니다. SQL Database에서 데이터베이스의 `VIEW DATABASE STATE` 권한이 필요합니다.  
  
 ## <a name="see-also"></a>참고 항목  
 
-관리 되는 인스턴스에 대 한 자세한 내용은 [SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)를 참조 하세요.
+관리 되는 인스턴스에 대 한 자세한 내용은 [SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)를 참조 하세요.
   

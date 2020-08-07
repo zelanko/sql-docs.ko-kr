@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fd6563881127b7a5c1cf134711a52fdedde629c4
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: dd3b2d26b79cf612c18a201a2b077323b1b68420
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435159"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823245"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>엔터프라이즈 평가 및 DMA에 평가 보고서 통합
 
@@ -197,7 +197,7 @@ LoadWarehouse 스크립트를 사용 하 여 데이터베이스 소유자를 설
 
 DMA 보고서를 사용 하려면 다음과 같이 책갈피 및 슬라이서를 사용 하 여 필터링 합니다.
 
-- 평가 유형 (Azure SQL DB, Azure SQL MI, SQL 온-프레미스) 
+- 평가 유형 (Azure SQL Database, Azure SQL Managed Instance, SQL Server) 
 - 인스턴스 이름
 - 데이터베이스 이름
 - 팀 이름
@@ -212,8 +212,8 @@ DMA 보고서를 사용 하려면 다음과 같이 책갈피 및 슬라이서를
 
 다음과 같이 책갈피를 사용 하 여 보고 컨텍스트를 전환할 수 있습니다.
 
-- Azure SQL DB 클라우드 평가
-- Azure SQL MI 클라우드 평가
+- Azure SQL Database 클라우드 평가
+- Azure SQL Managed Instance 클라우드 평가
 - 온-프레미스 평가
 
 ![DMA 보고서 뷰 책갈피](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)

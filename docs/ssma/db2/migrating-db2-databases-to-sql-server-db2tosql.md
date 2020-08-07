@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 14d2e655-af7e-4aa5-ba28-0e3d0d025518
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: a351723f12261e07c4cdbd1d707224278067522e
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: c66e88ff81cc8f7d06d3d946be8e476b175d1b47
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293680"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823684"
 ---
 # <a name="migrating-db2-databases-to-sql-server-db2tosql"></a>DB2 데이터베이스를 SQL Server로 마이그레이션 (DB2ToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]D b 2 용 SSMA (Migration Assistant)는 DB2 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 AZURE SQL DB로 신속 하 게 마이그레이션하는 데 도움이 되는 포괄적인 환경입니다. D b 2 용 SSMA를 사용 하면 데이터베이스 개체 및 데이터를 검토 하 고, 마이그레이션을 위해 데이터베이스를 평가 하 고, 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 AZURE SQL db로 마이그레이션한 다음, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 AZURE sql db로 데이터를 마이그레이션할 수 있습니다. SYS 및 SYSTEM DB2 스키마는 마이그레이션할 수 없습니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]D b 2 용 SSMA (Migration Assistant)는 DB2 데이터베이스를 또는 Azure SQL Database로 신속 하 게 마이그레이션하는 데 도움이 되는 포괄적인 환경입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . D b 2 용 SSMA를 사용 하 여 데이터베이스 개체 및 데이터를 검토 하 고, 마이그레이션을 위해 데이터베이스를 평가 하 고, 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL Database 마이그레이션하고, 데이터를 또는 Azure SQL Database로 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . SYS 및 SYSTEM DB2 스키마는 마이그레이션할 수 없습니다.  
   
 ## <a name="recommended-migration-process"></a>권장 마이그레이션 프로세스  
-DB2 데이터베이스에서 또는 Azure SQL DB로 개체 및 데이터를 성공적으로 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 프로세스를 사용 합니다.  
+DB2 데이터베이스에서 또는 Azure SQL Database 개체 및 데이터를 성공적으로 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 프로세스를 사용 합니다.  
   
 1.  [새 SSMA 프로젝트](https://msdn.microsoft.com/66437b45-4686-4fc7-a91b-ebde45e0f1b0)입니다.  
   

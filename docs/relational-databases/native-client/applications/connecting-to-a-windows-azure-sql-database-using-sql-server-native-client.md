@@ -1,5 +1,5 @@
 ---
-title: Azure SQL DB에 연결
+title: Azure SQL Database에 연결
 ms.custom: ''
 ms.date: 03/14/2017
 ms.reviewer: ''
@@ -10,11 +10,12 @@ ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3aae0fea006909634db2d19eb39345e066e9b631
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: db4f18fc780f1c3b0a88b5c18cd2ff3410800dad
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005756"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823660"
 ---
 # <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>SQL Server Native Client를 사용하여 Azure SQL Database에 연결
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

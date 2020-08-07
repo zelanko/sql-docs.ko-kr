@@ -1,5 +1,5 @@
 ---
-title: SQL Server로 MySQL 데이터 마이그레이션-Azure SQL DB (MySQLToSQL) | Microsoft Docs
+title: MySQL 데이터를 SQL Server Azure SQL Database (MySQLToSQL)로 마이그레이션 | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 83a4a2d1bea5074cc268590d4074bde631f28694
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9679651e80e036fce923daac76130be01cb5a07a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908831"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862712"
 ---
-# <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>MySQL 데이터를 SQL Server로 마이그레이션-Azure SQL DB (MySQLToSQL)
-변환 된 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 성공적으로 동기화 한 후에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 MySQL에서 또는 SQL Azure로 데이터를 마이그레이션할 수 있습니다.  
+# <a name="migrating-mysql-data-into-sql-server---azure-sql-database-mysqltosql"></a>MySQL 데이터를 SQL Server Azure SQL Database로 마이그레이션 (MySQLToSQL)
+변환 된 개체를 또는 SQL Azure 성공적으로 동기화 한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 MySQL에서 또는 SQL Azure로 데이터를 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
-> 사용 중인 엔진이 서버 쪽 데이터 마이그레이션 엔진 인 경우 데이터를 마이그레이션하기 전에 ssma를 실행 하는 컴퓨터에 mysql 확장 팩과 MySQL 공급자를 설치 해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스도 실행 중 이어야 합니다. 확장 팩을 설치 하는 방법에 대 한 자세한 내용은 [SQL Server에 SSMA 구성 요소 설치 (MySQL TO SQL)](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1) 를 참조 하세요.  
+> 사용 중인 엔진이 서버 쪽 데이터 마이그레이션 엔진 인 경우 데이터를 마이그레이션하기 전에 ssma를 실행 하는 컴퓨터에 mysql 확장 팩과 MySQL 공급자를 설치 해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트 서비스도 실행 중 이어야 합니다. 확장 팩을 설치 하는 방법에 대 한 자세한 내용은 [SQL Server에 SSMA 구성 요소 설치 (MySQL TO SQL)](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1) 를 참조 하세요.  
   
 ## <a name="setting-migration-options"></a>마이그레이션 옵션 설정  
 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 마이그레이션하기 전에 **프로젝트 설정** 대화 상자에서 프로젝트 마이그레이션 옵션을 검토 하십시오.  
@@ -57,7 +57,7 @@ ms.locfileid: "67908831"
 > **클라이언트 쪽 데이터 마이그레이션** 옵션은 SQL Azure에만 사용할 수 있습니다.  
   
 ## <a name="migrating-data-to-sql-server-or-sql-azure"></a>SQL Server 또는 SQL Azure로 데이터 마이그레이션  
-데이터 마이그레이션은 MySQL 테이블의 데이터 행을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 트랜잭션의 SQL Azure 테이블로 이동 하는 대량 로드 작업입니다. 각 트랜잭션에 로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 되는 행 수는 프로젝트 설정에서 구성 됩니다.  
+데이터 마이그레이션은 MySQL 테이블의 데이터 행을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 트랜잭션의 SQL Azure 테이블로 이동 하는 대량 로드 작업입니다. 각 트랜잭션에 로드 되는 행 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로젝트 설정에서 구성 됩니다.  
   
 마이그레이션 메시지를 보려면 출력 창이 표시 되는지 확인 합니다. 그렇지 않으면 **보기** 메뉴에서 **출력**을 선택 합니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "67908831"
   
         1.  MySQL 용 SSMA 확장 팩은 SQL Server 인스턴스에 설치 됩니다.  
   
-        2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가의 인스턴스에서 실행 되 고 SQL Server  
+        2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트 서비스가의 인스턴스에서 실행 되 고 SQL Server  
   
     -   **서버 쪽 데이터 마이그레이션을**수행 하려면 **프로젝트 설정** 대화 상자에서 **서버 쪽 데이터 마이그레이션 엔진** 옵션을 선택 합니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67908831"
   
     대상 데이터베이스가 SQL Server 경우 **SQL Server에 연결** 대화 상자에 연결 자격 증명을 입력 하 고 **연결**을 클릭 합니다. SQL Server에 연결 하는 방법에 대 한 자세한 내용은 [SQL Server에 연결](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536) 을 참조 하세요.  
   
-    대상 데이터베이스를 SQL Azure 하는 경우 **SQL Azure에 연결** 대화 상자에 연결 자격 증명을 입력 하 고 **연결**을 클릭 합니다. SQL Azure에 연결 하는 방법에 대 한 자세한 내용은 [AZURE SQL DB &#40;MySQLToSQL에 연결](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md) 을 참조 하세요&#41;  
+    대상 데이터베이스를 SQL Azure 하는 경우 **SQL Azure에 연결** 대화 상자에 연결 자격 증명을 입력 하 고 **연결**을 클릭 합니다. SQL Azure에 연결 하는 방법에 대 한 자세한 내용은 [Azure SQL Database &#40;MySQLToSQL에 연결](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md) 을 참조 하세요&#41;  
   
     메시지가 **출력** 창에 표시 됩니다. 마이그레이션이 완료 되 면 **데이터 마이그레이션 보고서** 가 나타납니다. 데이터를 마이그레이션하지 않은 경우 오류가 포함 된 행을 클릭 한 다음 **세부 정보**를 클릭 합니다. 보고서가 완료 되 면 **닫기**를 클릭 합니다. 데이터 마이그레이션 보고서에 대 한 자세한 내용은 [SSMA Common (데이터 마이그레이션 보고서)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241) 를 참조 하세요.  
   
@@ -108,5 +108,5 @@ ms.locfileid: "67908831"
 > SQL Express edition을 대상 데이터베이스로 사용 하는 경우 클라이언트 쪽 데이터 마이그레이션만 허용 되며 서버 쪽 데이터 마이그레이션은 지원 되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[MySQL 데이터베이스를 SQL Server로 마이그레이션-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[MySQL 데이터베이스를 SQL Server-Azure SQL Database &#40;MySQLToSql&#41;로 마이그레이션](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

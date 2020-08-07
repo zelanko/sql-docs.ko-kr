@@ -10,18 +10,18 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: d49a56c7d545a69729f222daad1e9504802e7bcc
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: c9757642736362745bd37607cacf74eeee962125
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942384"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87824068"
 ---
 # <a name="installation-and-configuration"></a>설치 및 구성
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Wide 세계 가져오기 OLTP 데이터베이스 설치 및 구성 지침
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 이상 [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)합니다. 샘플의 전체 버전은 SQL Server Evaluation/Developer/Enterprise Edition을 사용 합니다.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). 최상의 결과를 위해 6 월 2016 릴리스 이상을 사용 합니다.
@@ -68,7 +68,7 @@ Bacpac를 새 SQL Database 가져오려면 Management Studio를 사용할 수 �
 
 ### <a name="full-text-indexing"></a>전체 텍스트 인덱싱
 
-예제 데이터베이스는 전체 텍스트 인덱싱을 사용할 수 있습니다. 그러나이 기능은 기본적으로 SQL Server와 함께 설치 되지 않습니다. SQL Server 설치 중에 선택 해야 합니다 (Azure SQL DB에서 기본적으로 사용 하도록 설정 됨). 따라서 사후 설치 단계가 필요 합니다.
+예제 데이터베이스는 전체 텍스트 인덱싱을 사용할 수 있습니다. 그러나이 기능은 기본적으로 SQL Server와 함께 설치 되지 않습니다. SQL Server 설치 중에 선택 해야 합니다 (Azure SQL Database에서 기본적으로 사용 하도록 설정 됨). 따라서 사후 설치 단계가 필요 합니다.
 
 1. SQL Server Management Studio에서 WideWorldImporters 데이터베이스에 연결 하 고 새 쿼리 창을 엽니다.
 2. 다음 T-sql 명령을 실행 하 여 데이터베이스에서 전체 텍스트 인덱싱을 사용할 수 있도록 합니다.`EXECUTE Application.Configuration_ApplyFullTextIndexing`

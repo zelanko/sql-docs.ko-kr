@@ -1,6 +1,6 @@
 ---
 title: 관리 되는 인스턴스에서 데이터베이스를 호스팅합니다.
-description: 이 문서에서는 관리 되는 인스턴스에서 MDS (Master Data Service) 데이터베이스를 구성 하는 방법을 설명 합니다.
+description: MDS (MDS(Master Data Services)) 데이터베이스를 만들고 구성 하 고 Azure SQL Managed Instance에 호스트 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 07/01/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6c318a1fca182e60a5df7fb5d1569433f65d25d
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 616fa3791b0dbc154282f5273cd7fb4e1eb3c1f5
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812924"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87878941"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>관리 되는 인스턴스에서 MDS 데이터베이스를 호스팅합니다.
 
@@ -27,19 +27,19 @@ ms.locfileid: "85812924"
   
 ## <a name="preparation"></a>준비
 
-준비 하려면 Azure SQL Database 관리 되는 인스턴스를 만들고 구성 하 고 웹 응용 프로그램 컴퓨터를 구성 해야 합니다.
+준비 하려면 Azure SQL Managed Instance를 만들고 구성 하 고 웹 응용 프로그램 컴퓨터를 구성 해야 합니다.
 
 ### <a name="create-and-configure-the-database"></a>데이터베이스 만들기 및 구성
 
-1. 가상 네트워크를 사용 하 여 관리 되는 Azure SQL Database 인스턴스를 만듭니다. 자세한 내용은 [빠른 시작: 관리 되는 Azure SQL Database 인스턴스 만들기](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) 를 참조 하세요.
+1. 가상 네트워크를 사용 하 여 관리 되는 인스턴스를 만듭니다. 자세한 내용은 [빠른 시작: SQL Managed Instance 만들기를](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) 참조 하세요.
 
 1. 지점 및 사이트 간 연결을 구성 합니다. 지침은 [네이티브 Azure 인증서 인증을 사용 하 여 VNet에 지점 및 사이트 간 연결 구성: Azure Portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) 을 참조 하세요.
 
-1. SQL Database 관리 되는 인스턴스를 사용 하 여 Azure Active Directory 인증을 구성 합니다. 자세한 내용은 [SQL을 사용 하 여 Azure Active Directory 인증 구성 및 관리](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) 를 참조 하세요.
+1. SQL Managed Instance를 사용 하 여 Azure Active Directory 인증을 구성 합니다. 자세한 내용은 [SQL을 사용 하 여 Azure Active Directory 인증 구성 및 관리](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) 를 참조 하세요.
 
 ### <a name="configure-web-application-machine"></a>웹 응용 프로그램 컴퓨터 구성
 
-1. 지점 및 사이트 간 연결 인증서와 VPN을 설치 하 여 컴퓨터가 관리 되는 SQL Database 인스턴스에 액세스할 수 있도록 합니다. 지침은 [네이티브 Azure 인증서 인증을 사용 하 여 VNet에 지점 및 사이트 간 연결 구성: Azure Portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) 을 참조 하세요.
+1. 지점 및 사이트 간 연결 인증서와 VPN을 설치 하 여 컴퓨터가 관리 되는 인스턴스에 액세스할 수 있도록 합니다. 지침은 [네이티브 Azure 인증서 인증을 사용 하 여 VNet에 지점 및 사이트 간 연결 구성: Azure Portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) 을 참조 하세요.
 
 1. 다음 역할 및 기능을 설치 합니다.
    - 역할:

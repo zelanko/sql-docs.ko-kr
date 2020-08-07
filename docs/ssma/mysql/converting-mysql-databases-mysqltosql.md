@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: ce84ae70a1b09cd744528b132dcc7052cdde8816
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: c6f8e53a13d5950138f71ed9b4858419eb70f07f
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394278"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823290"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>MySQL 데이터베이스 변환(MySQLToSQL)
 MySQL에 연결 하 고,에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 SQL Azure 하 고, 프로젝트 및 데이터 매핑 옵션을 설정 하 고 나면 mysql 데이터베이스 개체를로 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 데이터베이스 개체를 SQL Azure 수 있습니다.  
@@ -34,8 +34,8 @@ MySQL에 연결 하 고,에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnover
 |MySQL 개체|결과 SQL Server 개체|  
 |-|-|  
 |인덱스와 같은 종속 개체가 있는 테이블|SSMA는 종속 개체가 있는 테이블을 만듭니다. 테이블은 모든 인덱스 및 제약 조건으로 변환 됩니다. 인덱스는 별도의 개체로 변환 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br />**공간 데이터 형식 매핑은** 테이블 노드 수준 에서만 수행할 수 있습니다.<br /><br />테이블 변환 설정에 대 한 자세한 내용은 [변환 설정](conversion-settings-mysqltosql.md) 을 참조 하세요.|  
-|Functions|함수를 Transact-sql로 직접 변환할 수 있는 경우 SSMA는 함수를 만듭니다. 경우에 따라 함수를 저장 프로시저로 변환 해야 합니다. 프로젝트 설정에서 **함수 변환을** 사용 하 여이 작업을 수행할 수 있습니다. 이 경우 SSMA는 저장 프로시저와 저장 프로시저를 호출 하는 함수를 만듭니다.<br /><br />**지정 된 항목:**<br /><br />프로젝트 설정에 따라 변환<br /><br />함수로 변환<br /><br />저장 프로시저로 변환<br /><br />함수 변환 설정에 대 한 자세한 내용은 [변환 설정](conversion-settings-mysqltosql.md) 을 참조 하세요.|  
-|절차|프로시저를 Transact-sql로 직접 변환할 수 있으면 SSMA에서 저장 프로시저를 만듭니다. 경우에 따라 저장 프로시저를 자치 트랜잭션에서 호출 해야 합니다. 이 경우 SSMA는 두 개의 저장 프로시저를 만듭니다. 하나는 프로시저를 구현 하 고 다른 하나는 구현 하는 저장 프로시저를 호출 하는 데 사용 됩니다.|  
+|함수|함수를 Transact-sql로 직접 변환할 수 있는 경우 SSMA는 함수를 만듭니다. 경우에 따라 함수를 저장 프로시저로 변환 해야 합니다. 프로젝트 설정에서 **함수 변환을** 사용 하 여이 작업을 수행할 수 있습니다. 이 경우 SSMA는 저장 프로시저와 저장 프로시저를 호출 하는 함수를 만듭니다.<br /><br />**지정 된 항목:**<br /><br />프로젝트 설정에 따라 변환<br /><br />함수로 변환<br /><br />저장 프로시저로 변환<br /><br />함수 변환 설정에 대 한 자세한 내용은 [변환 설정](conversion-settings-mysqltosql.md) 을 참조 하세요.|  
+|프로시저|프로시저를 Transact-sql로 직접 변환할 수 있으면 SSMA에서 저장 프로시저를 만듭니다. 경우에 따라 저장 프로시저를 자치 트랜잭션에서 호출 해야 합니다. 이 경우 SSMA는 두 개의 저장 프로시저를 만듭니다. 하나는 프로시저를 구현 하 고 다른 하나는 구현 하는 저장 프로시저를 호출 하는 데 사용 됩니다.|  
 |데이터베이스 변환|MySQL 개체인 데이터베이스는 MySQL 용 SSMA에서 직접 변환 되지 않습니다. MySQL 데이터베이스는 스키마 이름과 유사 하 게 처리 되며, 모든 물리적 매개 변수는 변환 중에 손실 됩니다. MySQL 용 SSMA는 mysql 데이터베이스 매핑을 사용 하 여 [MySQLToSQL&#41;&#40;SQL Server 스키마를](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md) 사용 하 여 mysql 데이터베이스의 개체를 적절 한 SQL Server 데이터베이스/스키마 쌍에 매핑합니다.|  
 |트리거 변환|**SSMA는 다음 규칙에 따라 트리거를 만듭니다.**<br /><br />Instead of 트리거는 T-sql 트리거 대신로 변환 됩니다.<br /><br />AFTER 트리거는 행 마다 반복을 사용 하거나 사용 하지 않고 T-sql 트리거 후에로 변환 됩니다.|  
 |변환 보기|SSMA가 종속 개체를 포함 하는 뷰를 만듭니다.|  
@@ -109,5 +109,5 @@ MySQL 데이터베이스 개체를 변환 하려면 먼저 변환할 개체를 �
 마이그레이션 프로세스의 다음 단계에서는 변환 된 [데이터베이스 개체를 SQL Server &#40;MySQLToSQL&#41;로드](../../ssma/mysql/loading-converted-database-objects-into-sql-server-mysqltosql.md) 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[MySQL 데이터베이스를 SQL Server로 마이그레이션-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[MySQL 데이터베이스를 SQL Server-Azure SQL Database &#40;MySQLToSql&#41;로 마이그레이션](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

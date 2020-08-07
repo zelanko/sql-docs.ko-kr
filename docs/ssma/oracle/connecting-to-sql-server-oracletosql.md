@@ -13,12 +13,12 @@ ms.assetid: 1b2a8059-1829-4904-a82f-9c06de1e245f
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 34e357ce88d75942d4784dbbbb7b43ad40150fa3
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 283b91e9cbe263e870856066d94dc2d1cd72dd68
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396662"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863496"
 ---
 # <a name="connecting-to-sql-server-oracletosql"></a>SQL Server에 연결(OracleToSQL)
 Oracle 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 R2 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 또는 2014로 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이러한 대상 인스턴스에 연결 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 연결할 때 SSMA는 인스턴스의 모든 데이터베이스에 대 한 메타 데이터를 가져오고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기에 데이터베이스 메타 데이터를 표시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. SSMA는 연결 된 인스턴스에 대 한 정보 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 저장 하지만 암호를 저장 하지는 않습니다.  
@@ -74,7 +74,7 @@ Oracle 데이터베이스 개체를 구문으로 변환 하기 전에 [!INCLUDE[
   
 7.  **연결**을 클릭합니다.  
   
-**높은 버전 호환성**  
+**높은 버전 호환성**
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 만든 마이그레이션 프로젝트가 2005 인 경우 2008 및 2012, 2014 및 2016에 연결할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -82,14 +82,14 @@ Oracle 데이터베이스 개체를 구문으로 변환 하기 전에 [!INCLUDE[
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]프로젝트를 만들 때 2012 및 2014 및 2016에 연결할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server 2012입니다.  
   
-|프로젝트 형식 및 대상 서버 버전|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (버전: 4.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (버전: 10. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(버전: 11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(버전: 12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(버전: 13.x)|Azure SQL DB|  
+|프로젝트 형식 및 대상 서버 버전|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (버전: 4.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (버전: 10. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(버전: 11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(버전: 12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(버전: 13.x)|Azure SQL Database|  
 |-|-|-|-|-|-|-|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|예|예|예|예|예||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||예|예|예|예||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||예|예|예||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||예|예||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||예||
-|Azure SQL DB||||||예|
+|Azure SQL Database||||||예|
   
 > [!IMPORTANT]
 > 데이터베이스 개체의 변환은 프로젝트 형식에 따라 수행 되지만 연결 된의 버전에 따라 수행 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 프로젝트의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 더 높은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016)에 연결 된 경우에도 2005 당 변환이 수행 됩니다.  

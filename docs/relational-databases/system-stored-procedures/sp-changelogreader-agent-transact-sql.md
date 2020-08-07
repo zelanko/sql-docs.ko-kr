@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c776d68cb997f5f360e7b79180a8dfaea86fd6e4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a46432317ebf320af3e3860c1c1973fc04119b5
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771501"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864970"
 ---
 # <a name="sp_changelogreader_agent-transact-sql"></a>sp_changelogreader_agent(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +43,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_login = ] 'job_login'`에이전트를 실행 하는 계정에 대 한 로그인입니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 NULL입니다. Azure SQL Database Managed Instance에서 SQL Server 계정을 사용 합니다. *이를 변경할* [!INCLUDE[msCoName](../../includes/msconame-md.md)] 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *게시자.*  
+`[ @job_login = ] 'job_login'`에이전트를 실행 하는 계정에 대 한 로그인입니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 NULL입니다. Azure SQL Managed Instance에서 SQL Server 계정을 사용 합니다. *이를 변경할* [!INCLUDE[msCoName](../../includes/msconame-md.md)] 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *게시자.*  
   
 `[ @job_password = ] 'job_password'`에이전트를 실행 하는 계정의 암호입니다. *job_password* 는 **sysname**이며 기본값은 NULL입니다.  
   

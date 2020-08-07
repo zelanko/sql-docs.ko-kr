@@ -1,7 +1,7 @@
 ---
 title: sp_execute_external_script (Transact-sql) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 10c29ab8faed05c2fb2750e1e4de17b2fc1fb2b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1ef1dc0f4b59b5eaf8f0ea4978a4eacde023e31
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790405"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87877958"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script(Transact-SQL)
 
@@ -177,7 +177,7 @@ sp_execute_external_script
 를 지정 하 여 스크립트를 병렬로 실행할 수 있습니다 `@parallel=1` . 입력 쿼리를 병렬화 할 수 있는 경우 `@parallel=1` 인수의 일부로를로 설정 해야 합니다 `sp_execute_external_script` . 기본적으로 쿼리 최적화 프로그램은 `@parallel=1` 행이 256 개를 초과 하는 테이블에서 작동 하지만이를 명시적으로 처리 하려는 경우이 스크립트에는 매개 변수가 데모용으로 포함 됩니다.
 
 > [!Tip]
-> 학습 워크로드의 경우 비-Microsoft-rx 알고리즘을 사용 중이어도 임의의 학습 스크립트에 `@parallel`을 사용할 수 있습니다. 일반적으로 RevoScaleR 알고리즘(rx 접두사 포함)만이 SQL Server의 학습 시나리오에서 병렬 처리를 제공합니다. 하지만 SQL Server vNext의 새 매개 변수를 사용 하 여 해당 기능으로 구체적으로 엔지니어링 되지 않은 함수를 호출 하는 스크립트를 병렬화 할 수 있습니다.
+> 학습 워크로드의 경우 비-Microsoft-rx 알고리즘을 사용 중이어도 임의의 학습 스크립트에 `@parallel`을 사용할 수 있습니다. 일반적으로 RevoScaleR 알고리즘(rx 접두사 포함)만이 SQL Server의 학습 시나리오에서 병렬 처리를 제공합니다. 그러나 SQL Server 2019 이상에서 새 매개 변수를 사용 하는 경우 해당 기능으로 특별히 엔지니어링 되지 않은 함수를 호출 하는 스크립트를 병렬화 할 수 있습니다.
 ::: moniker-end
 
 ### <a name="streaming-execution-for-python-and-r-scripts"></a>Python 및 R 스크립트에 대 한 스트리밍 실행  
@@ -189,7 +189,7 @@ sp_execute_external_script
 > [!NOTE]  
 > 스트리밍 및 병렬 처리는 Enterprise Edition 에서만 지원 됩니다. 오류를 발생 시 키 지 않고 표준 버전의 쿼리에 매개 변수를 포함할 수 있지만 매개 변수는 영향을 주지 않으며 R 스크립트는 단일 프로세스로 실행 됩니다.  
   
-## <a name="restrictions"></a>제한 사항  
+## <a name="restrictions"></a>제한  
 
 ### <a name="data-types"></a>데이터 형식
 
@@ -225,7 +225,7 @@ Float 값 (예: `+Inf` , `-Inf` , `NaN` )은 두 언어 모두 IEEE 754를 사�
 
 **EXECUTE ANY EXTERNAL SCRIPT** database 권한이 필요 합니다.  
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 이 섹션에서는를 사용 하 여이 저장 프로시저를 사용 하 여 R 또는 Python 스크립트를 실행 하는 방법의 예를 보여 줍니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] .
 
@@ -332,6 +332,6 @@ Python을 사용하여 비슷한 모델을 생성하려면 언어 식별자를 `
 + [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
 + [외부 스크립트 설정 서버 구성 옵션](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
 + [SERVERPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
-+ [SQL Server, External Scripts 개체](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
++ [SQL Server, 외부 스크립트 개체](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
 + [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
 + [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) 

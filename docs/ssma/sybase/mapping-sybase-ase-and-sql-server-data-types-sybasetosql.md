@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 79313d2344f6feb978a064f3fbd92e1f7bc7dce5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11d17d35dd8118c2afb9310ffcc45dcbea021f6c
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028895"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865361"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Sybase ASE 및 SQL Server 데이터 형식 매핑(SybaseToSQL)
-Sybase 적응 서버 엔터프라이즈 (ASE) 데이터베이스 유형은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터베이스 유형과 다릅니다. ASE 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 개체로 변환 하는 경우 ase에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터 형식을 매핑하는 방법을 지정 해야 합니다. 기본 데이터 형식 매핑을 그대로 적용 하거나 다음 섹션에 표시 된 대로 매핑을 사용자 지정할 수 있습니다.  
+Sybase 적응 서버 엔터프라이즈 (ASE) 데이터베이스 유형은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터베이스 유형과 다릅니다. ASE 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 개체로 변환 하는 경우 ase에서 또는 SQL Azure 데이터 형식을 매핑하는 방법을 지정 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 기본 데이터 형식 매핑을 그대로 적용 하거나 다음 섹션에 표시 된 대로 매핑을 사용자 지정할 수 있습니다.  
   
 ## <a name="default-mappings"></a>기본 매핑  
 SSMA에는 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목록은 [프로젝트 설정 &#40;형식 매핑&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)을 참조 하세요.  
@@ -91,5 +91,5 @@ SSMA에서 **형식 매핑** 탭을 보면 상속 된 형식 매핑을 보여 �
 마이그레이션 프로세스의 다음 단계는 [평가 보고서를 만들거나](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md) [Sybase ASE 데이터베이스 개체를 SQL Server 또는 SQL Azure 구문으로 변환](converting-sybase-ase-database-objects-sybasetosql.md)하는 것입니다. 평가 보고서를 만드는 경우에는 평가 중에 Sybase ASE 개체가 자동으로 변환 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[Sybase ASE 데이터베이스를 SQL Server로 마이그레이션-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Sybase ASE 데이터베이스를 SQL Server-Azure SQL Database &#40;SybaseToSQL&#41;로 마이그레이션](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

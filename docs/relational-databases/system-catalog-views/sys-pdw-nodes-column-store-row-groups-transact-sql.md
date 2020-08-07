@@ -1,7 +1,7 @@
 ---
 title: sys. pdw_nodes_column_store_row_groups (Transact-sql)
 ms.custom: seo-dt-2019
-ms.date: 03/03/2017
+ms.date: 08/05/2020
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -12,12 +12,12 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e65d2212dea9f8d2bbe9aad1854a2b8cd904dd3
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 88dd890b9d3f691fa671916b34daf8b2258aa2bc
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197345"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823908"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -50,13 +50,13 @@ ms.locfileid: "86197345"
   
  다 채워진 columnstore 행 그룹은 압축되며, 새 행을 수락하지 않습니다. 압축된 그룹에서 행을 삭제하면 삭제된 것으로 표시되고 행 자체는 그대로 유지됩니다. 압축된 그룹을 업데이트할 때는 압축된 그룹의 삭제 또는 열린 그룹에 대한 삽입을 이용합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **VIEW SERVER STATE** 권한이 필요합니다.  
   
 ## <a name="examples-sssdw-and-sspdw"></a>예: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예에서는 다른 시스템 테이블에 **pdw_nodes_column_store_row_groups** 테이블을 조인 하 여 특정 테이블에 대 한 정보를 반환 합니다. 계산된 `PercentFull` 열은 행 그룹의 효율성 예상치입니다. 단일 테이블에 대 한 정보를 찾으려면 WHERE 절 앞에 주석 하이픈을 제거 하 고 테이블 이름을 제공 합니다.  
   
-```  
+```sql
 SELECT IndexMap.object_id,   
   object_name(IndexMap.object_id) AS LogicalTableName,   
   i.name AS LogicalIndexName, IndexMap.index_id, NI.type_desc,   
@@ -75,14 +75,15 @@ JOIN sys.pdw_nodes_indexes AS NI
 JOIN sys.pdw_nodes_column_store_row_groups AS CSRowGroups  
     ON CSRowGroups.object_id = NI.object_id   
     AND CSRowGroups.pdw_node_id = NI.pdw_node_id  
-AND CSRowGroups.index_id = NI.index_id      
+    AND CSRowGroups.index_id = NI.index_id      
+WHERE total_rows > 0
 --WHERE t.name = '<table_name>'   
 ORDER BY object_name(i.object_id), i.name, IndexMap.physical_name, pdw_node_id;  
 ```  
 
 다음 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 예에서는 클러스터 된 열 저장소에 대 한 파티션당 행 수 뿐만 아니라 열려 있는 행, 닫힌 행 또는 압축 된 행 그룹의 행 수를 계산 합니다.  
 
-```
+```sql
 SELECT
     s.name AS [Schema Name]
     ,t.name AS [Table Name]
@@ -92,14 +93,16 @@ SELECT
     ,SUM(CASE WHEN rg.State = 2 THEN rg.Total_Rows ELSE 0 END) AS [Rows in Closed Row Groups]
     ,SUM(CASE WHEN rg.State = 3 THEN rg.Total_Rows ELSE 0 END) AS [Rows in COMPRESSED Row Groups]
 FROM sys.pdw_nodes_column_store_row_groups rg
-JOIN sys.pdw_nodes_tables pt
-ON rg.object_id = pt.object_id AND rg.pdw_node_id = pt.pdw_node_id AND pt.distribution_id = rg.distribution_id
-JOIN sys.pdw_table_mappings tm
-ON pt.name = tm.physical_name
-INNER JOIN sys.tables t
-ON tm.object_id = t.object_id
-INNER JOIN sys.schemas s
-ON t.schema_id = s.schema_id
+  JOIN sys.pdw_nodes_tables pt
+    ON rg.object_id = pt.object_id
+    AND rg.pdw_node_id = pt.pdw_node_id
+    AND pt.distribution_id = rg.distribution_id
+  JOIN sys.pdw_table_mappings tm
+    ON pt.name = tm.physical_name
+  INNER JOIN sys.tables t
+    ON tm.object_id = t.object_id
+  INNER JOIN sys.schemas s
+    ON t.schema_id = s.schema_id
 GROUP BY s.name, t.name, rg.partition_number
 ORDER BY 1, 2
 ```

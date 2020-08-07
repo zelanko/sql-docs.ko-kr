@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 37a763c0acca891d8bbbc1a310edcb6f8b987436
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d9bec916103214169f549a0b555a46fd0d65fdb
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67904900"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862494"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>SSMA 프로젝트 작업(MySQLToSQL)
 MySQL 데이터베이스를 SQL Server 또는 SQL Azure로 마이그레이션하려면 먼저 SSMA 프로젝트를 만들어야 합니다. 프로젝트는 다음 정보를 포함 하는 파일입니다.  
@@ -57,7 +57,7 @@ SSMA에는 데이터베이스를 변환 및 로드 하 고, 데이터를 마이�
   
 -   데이터 형식 매핑 설정에 대 한 자세한 내용은 [프로젝트 설정 &#40;형식 매핑&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)을 참조 하세요.  
   
--   SQL Azure 설정에 대 한 자세한 내용은 [프로젝트 설정 &#40;AZURE SQL DB&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)를 참조 하세요.  
+-   SQL Azure 설정에 대 한 자세한 내용은 [프로젝트 설정 &#40;Azure SQL Database&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)을 참조 하세요.  
   
 > [!NOTE]  
 > SQL Azure 설정은 프로젝트를 만드는 동안 **SQL Azure로 마이그레이션을** 선택한 경우에만 표시 됩니다.  
@@ -73,7 +73,7 @@ MySQL 데이터베이스에서 SQL Server 또는 SQL Azure로 데이터를 마�
   
 3.  **위치** 상자에서 프로젝트에 대 한 폴더를 입력 하거나 선택 합니다.  
   
-4.  **마이그레이션** 드롭다운에서 마이그레이션에 사용 되는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 선택 합니다. 제공되는 옵션은 다음과 같습니다.  
+4.  **마이그레이션** 드롭다운에서 마이그레이션에 사용 되는 대상 버전을 선택 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 제공되는 옵션은 다음과 같습니다.  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
@@ -83,7 +83,7 @@ MySQL 데이터베이스에서 SQL Server 또는 SQL Azure로 데이터를 마�
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
-    -   Azure SQL DB  
+    -   Azure SQL Database  
   
 그런 다음 **확인** 을 클릭 합니다.  
   
@@ -133,7 +133,7 @@ SSMA는 MySQL 스키마를 구문 분석 하 고 메타 데이터를 프로젝�
   
 ## <a name="see-also"></a>참고 항목  
 [MySQL &#40;MySQLToSQL&#41;에 연결](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
-[MySQL 데이터베이스를 SQL Server로 마이그레이션-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[MySQL 데이터베이스를 SQL Server-Azure SQL Database &#40;MySQLToSql&#41;로 마이그레이션](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [MySQLToSQL&#41;&#40;SQL Server에 연결](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
-[Azure SQL DB &#40;MySQLToSQL&#41;에 연결](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
+[MySQLToSQL&#41;&#40;Azure SQL Database에 연결](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
   

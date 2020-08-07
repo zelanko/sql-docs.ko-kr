@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 88dafeff6621a181b3720917235705d4e0b12e2d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d4ee3f039613865aab68860f93ab74279068a7da
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85878288"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865311"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -68,7 +68,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**16**|매월|  
 |**32**|매월, *freq_interval* 기준|  
 |**64**|SQL 에이전트 서비스를 시작할 때 실행|  
-|**128**|컴퓨터가 유휴 상태일 때 실행 됩니다 ( [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)에서 지원 되지 않음). |  
+|**128**|컴퓨터가 유휴 상태일 때 실행 ( [AZURE SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)에서 지원 되지 않음) |  
   
 `[ @freq_interval = ] freq_interval`작업이 실행 되는 요일입니다. *freq_interval* 은 **int**이며 기본값은 **1**이 고 *freq_type*의 값에 따라 달라 집니다.  
   
@@ -97,9 +97,9 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 |값|설명(단위)|  
 |-----------|--------------------------|  
-|**1**|첫째|  
-|**2**|Second|  
-|**4**|셋째|  
+|**1**|First|  
+|**2**|초|  
+|**4**|세 번째|  
 |**8**|넷째|  
 |**16**|마지막|  
   

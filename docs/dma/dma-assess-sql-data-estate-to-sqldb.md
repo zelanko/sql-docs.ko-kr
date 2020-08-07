@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a5181dcf07745fc1bf9cd993ebd65c58f55f96c1
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 4a4b9567865132d355a6285ecc046bfe6b4a3f7a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85054271"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864940"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Data Migration Assistant를 사용 하 여 Azure SQL Database으로 마이그레이션하는 SQL Server 데이터 공간 준비 상태를 평가 합니다.
 
@@ -99,7 +99,7 @@ Azure Migrate 프로젝트는 평가 하거나 마이그레이션하는 환경�
 1. 왼쪽에서 **+** 아이콘을 선택한 다음 평가 **프로젝트 형식을** 선택 합니다.
 2. 프로젝트 이름을 지정 하 고 원본 서버 및 대상 서버 유형을 선택 합니다.
 
-    온-프레미스 SQL Server 인스턴스를 SQL Server의 이후 버전으로 업그레이드 하는 경우 또는 Azure VM에서 호스트 되는 SQL Server 원본 및 대상 서버 유형을 **SQL Server**로 설정 합니다. 대상 서버 유형을 PaaS (Azure SQL Database) 대상 준비 평가에 **Azure SQL Database Managed Instance** 로 설정 합니다.
+    온-프레미스 SQL Server 인스턴스를 SQL Server의 이후 버전으로 업그레이드 하는 경우 또는 Azure VM에서 호스트 되는 SQL Server 원본 및 대상 서버 유형을 **SQL Server**로 설정 합니다. 대상 서버 유형을 PaaS (Azure SQL Database) 대상 준비 평가에 대해 **AZURE SQL Managed Instance** 로 설정 합니다.
 
 3. **만들기**를 선택합니다.
 
@@ -159,7 +159,7 @@ Azure Migrate 프로젝트는 평가 하거나 마이그레이션하는 환경�
    ![Azure Migrate-준비 결과 검토](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-review-readiness.png)
 
     **평가 된 데이터베이스 인스턴스**: 지금까지 평가한 SQL Server 인스턴스 수입니다.
-    **평가 된 데이터베이스**: 하나 이상의 SQL Server 인스턴스에서 평가 된 데이터베이스의 총 수입니다. **SQL DB에 대해 준비 된 데이터베이스**: PaaS (Azure SQL Database로 마이그레이션할 준비가 된 데이터베이스 수).
+    **평가 된 데이터베이스**: 하나 이상의 SQL Server 인스턴스에서 평가 된 총 데이터베이스 수 **SQL Database 준비 된 데이터베이스**: PaaS (Azure SQL Database)로 마이그레이션할 수 있는 데이터베이스의 수입니다.
     **AZURE SQL VM에 대해 준비 된 데이터베이스**: 데이터베이스 수는 PaaS (Azure SQL Database)로 하나 이상의 마이그레이션 차단기를 구성 했지만 Azure SQL Server vm으로 마이그레이션할 준비가 되었습니다.
 
 3. SQL Server 인스턴스 수준 뷰로 가져올 **평가 데이터베이스 인스턴스** 를 선택 합니다.

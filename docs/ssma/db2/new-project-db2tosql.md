@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 66437b45-4686-4fc7-a91b-ebde45e0f1b0
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 8e9edc319a539d438cdb7eb126694812d9084d24
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a670a9766388d4ba1d1908a71ef7a32147f60fc
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084618"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87824044"
 ---
 # <a name="new-project-db2tosql"></a>새 프로젝트 (DB2ToSQL)
 **새 프로젝트** 대화 상자를 사용 하 여 새 ssma 프로젝트를 만들 수 있습니다. **새 프로젝트** 대화 상자에 액세스 하려면 **파일** 메뉴에서 **새 프로젝트**를 클릭 합니다.  
@@ -35,5 +35,5 @@ ms.locfileid: "68084618"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
--   Azure SQL DB  
+-   Azure SQL Database  
   

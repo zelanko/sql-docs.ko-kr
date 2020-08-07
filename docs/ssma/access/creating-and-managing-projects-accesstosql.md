@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: abbe0746193df3fe341b4f66086291dc1055e11b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 034d15572b214a6afbd34be78528c57241a21caa
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006622"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823858"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>프로젝트 만들기 및 관리 (AccessToSQL)
-Access 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 마이그레이션하려면 먼저 ssma 프로젝트를 만들어야 합니다. 프로젝트는 SQL Azure 마이그레이션하려 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 액세스 데이터베이스에 대 한 메타 데이터, 마이그레이션된 개체 및 데이터, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 정보 및 프로젝트 설정을 받는 SQL Azure의 대상 인스턴스에 대 한 메타 데이터를 포함 하는 파일입니다.  
+Access 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 마이그레이션하려면 먼저 SSMA 프로젝트를 만들어야 합니다. 프로젝트는 SQL Azure 마이그레이션하려는 액세스 데이터베이스에 대 한 메타 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션된 개체 및 데이터, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 정보 및 프로젝트 설정을 받는 SQL Azure의 대상 인스턴스에 대 한 메타 데이터를 포함 하는 파일입니다.  
   
 ## <a name="reviewing-default-project-settings"></a>기본 프로젝트 설정 검토  
 SSMA에는 데이터베이스 개체를 변환 및 동기화 하 고 데이터를 변환 하기 위한 몇 가지 옵션이 포함 되어 있습니다. 이러한 옵션에 대 한 기본 설정은 대부분의 사용자에 게 적합 합니다. 그러나 새 SSMA 프로젝트를 만들기 전에 옵션을 검토 하 고 원하는 경우 모든 새 프로젝트에 사용 되는 기본 설정을 변경 해야 합니다.  
@@ -55,7 +55,7 @@ SSMA에는 데이터베이스 개체를 변환 및 동기화 하 고 데이터�
 **참고** SQL Azure 설정은 프로젝트를 만드는 동안 SQL Azure로 마이그레이션을 선택한 경우에만 사용할 수 있습니다.  
   
 ## <a name="creating-new-projects"></a>새 프로젝트 만들기  
-기본 프로젝트를 로드 하지 않고 SSMA가 시작 됩니다. Access 데이터베이스에서 또는 SQL Azure로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 마이그레이션하려면 프로젝트를 만들어야 합니다.  
+기본 프로젝트를 로드 하지 않고 SSMA가 시작 됩니다. Access 데이터베이스에서 또는 SQL Azure로 데이터를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로젝트를 만들어야 합니다.  
   
 **새 프로젝트를 만들려면**  
   
@@ -67,7 +67,7 @@ SSMA에는 데이터베이스 개체를 변환 및 동기화 하 고 데이터�
   
 3.  **위치** 상자에서 프로젝트에 대 한 폴더를 입력 하거나 선택 합니다.  
   
-4.  마이그레이션 드롭다운에서 SQL Server 2005/SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016/Azure SQL DB 중 하나를 선택 하 고 **확인**을 클릭 합니다.  
+4.  마이그레이션 드롭다운에서 SQL Server 2005/SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016/Azure SQL Database 중 하나를 선택 하 고 **확인**을 클릭 합니다.  
   
 SSMA에서 프로젝트 파일을 만듭니다. 이제 [하나 이상의 Access 데이터베이스를 추가](adding-and-removing-access-database-files-accesstosql.md)하는 다음 단계를 수행할 수 있습니다.  
   
@@ -94,7 +94,7 @@ SSMA에서 프로젝트 파일을 만듭니다. 이제 [하나 이상의 Access 
         SSMA는 액세스 스키마를 구문 분석 하 고 메타 데이터를 프로젝트 파일에 저장 합니다.  
   
 ## <a name="opening-projects"></a>프로젝트 열기  
-프로젝트를 열면 또는 SQL Azure에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결이 끊어집니다. 이렇게 하면 오프 라인으로 작업할 수 있습니다. 메타 데이터를 업데이트 하려면 데이터베이스 개체 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 또는 SQL Azure으로 로드 합니다. 데이터를 마이그레이션하려면 또는 SQL Azure에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다시 연결 해야 합니다.  
+프로젝트를 열면 또는 SQL Azure에서 연결이 끊어집니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이렇게 하면 오프 라인으로 작업할 수 있습니다. 메타 데이터를 업데이트 하려면 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure으로 로드 합니다. 데이터를 마이그레이션하려면 또는 SQL Azure에 다시 연결 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **프로젝트를 열려면**  
   
@@ -104,7 +104,7 @@ SSMA에서 프로젝트 파일을 만듭니다. 이제 [하나 이상의 Access 
   
     -   **파일** 메뉴에서 **프로젝트 열기**를 선택 하 고 a2ssproj 프로젝트 파일을 찾은 다음 파일을 선택 하 고 **열기**를 클릭 합니다.  
   
-2.  에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]다시 연결 하려면 **파일** 메뉴에서 **SQL Server에 다시 연결**을 선택 합니다.  
+2.  에 다시 연결 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **파일** 메뉴에서 **SQL Server에 다시 연결**을 선택 합니다.  
   
 3.  SQL Azure에 다시 연결 하려면 **파일** 메뉴에서 **SQL Azure에 다시 연결을 선택 합니다.**  
   

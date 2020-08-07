@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8aec9e25008c8dfe3b14bbe838f8122bb93fb756
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ed3ae93d1b2bd87decb43050e03624bb9a7ed62c
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717408"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865000"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +46,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 `[ @value = ] 'value'`지정 된 속성에 대 한 값입니다. *value* 는 **nvarchar (255)** 이며 기본값은 NULL입니다.  
   
-`[ @storage_connection_string = ] 'storage_connection_string'`SQL Database 관리 되는 인스턴스에 필요 합니다. Azure SQL Database 저장소 볼륨에 대 한 액세스 키와 일치 해야 합니다. 
+`[ @storage_connection_string = ] 'storage_connection_string'`는 SQL Managed Instance에 필요 하며 Azure SQL Database 저장소 볼륨에 대 한 액세스 키와 일치 해야 합니다. 
 
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
@@ -64,7 +64,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ||**0**|게시자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용합니다. *이를 변경할* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 수 없습니다. *게시자.*|  
 |**working_directory**||게시용 데이터 및 스키마 파일을 저장하는 데 사용되는 작업 디렉터리입니다.|  
 |NULL(기본값)||사용 가능한 모든 *속성* 옵션이 출력 됩니다.| 
-|**storage_connection_string**| 액세스 키 | 데이터베이스가 Azure SQL Database Managed Instance 될 때의 작업 디렉터리에 대 한 액세스 키입니다. 
+|**storage_connection_string**| 액세스 키 | 데이터베이스가 Azure SQL Managed Instance 때 작업 디렉터리에 대 한 액세스 키입니다. 
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -79,7 +79,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
  [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [Transact-sql&#41;sp_adddistpublisher &#40;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [Transact-sql&#41;sp_dropdistpublisher &#40;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
- [Transact-sql&#41;sp_helpdistpublisher &#40;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
+ [sp_helpdistpublisher&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

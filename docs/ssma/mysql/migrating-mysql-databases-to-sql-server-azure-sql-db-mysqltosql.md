@@ -1,5 +1,5 @@
 ---
-title: MySQL 데이터베이스를 SQL Server로 마이그레이션-Azure SQL DB | Microsoft Docs
+title: MySQL 데이터베이스를 SQL Server로 마이그레이션-Azure SQL Database | Microsoft Docs
 description: 이 권장 프로세스를 사용 하 여 MySQL 데이터베이스를 SQL Server으로 마이그레이션하거나 SSMA (SQL Server Migration Assistant)를 사용 하 여 Azure SQL Database 합니다.
 ms.prod: sql
 ms.custom: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 8006f9a0-394d-4238-8dc5-44255134628b
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0daee899775b5a8bb3a0e4b6ee0eef4a93eca00b
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: c6f360e67621288e6c04381931a7c0df0de3e256
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293592"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862360"
 ---
-# <a name="migrating-mysql-databases-to-sql-server---azure-sql-db-mysqltosql"></a>MySQL 데이터베이스를 SQL Server로 마이그레이션-Azure SQL DB (MySQLToSql)
+# <a name="migrating-mysql-databases-to-sql-server---azure-sql-database-mysqltosql"></a>MySQL 데이터베이스를 SQL Server-Azure SQL Database로 마이그레이션 (MySQLToSql)
 MySQL 용 SSMA (SQL Server Migration Assistant)는 MySQL 데이터베이스를 SQL Server 또는 SQL Azure으로 신속 하 게 마이그레이션하는 데 도움이 되는 포괄적인 환경입니다. MySQL 용 SSMA를 사용 하 여 데이터베이스 개체 및 데이터를 검토 하 고, 마이그레이션을 위해 데이터베이스를 평가 하 고, 데이터베이스 개체를 SQL Server 또는 SQL Azure로 마이그레이션하고, 데이터를 SQL Server 또는 SQL Azure로 마이그레이션할 수 있습니다.  
   
 ## <a name="recommended-migration-process"></a>권장 마이그레이션 프로세스  
@@ -33,7 +33,7 @@ MySQL 데이터베이스에서 SQL Server 또는 SQL Azure로 개체 및 데이�
   
 4.  [MySQL 데이터베이스를 SQL Server 스키마 &#40;MySQLToSQL&#41;에 매핑](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
-5.  [Azure SQL DB &#40;MySQLToSQL&#41;에 연결](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
+5.  [MySQLToSQL&#41;&#40;Azure SQL Database에 연결](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
   
 6.  필요에 따라 [MySQLToSQL&#41;&#40;변환에 대해 MySQL 데이터베이스를 평가](../../ssma/mysql/assessing-mysql-databases-for-conversion-mysqltosql.md) 하 여 변환에 대 한 데이터베이스 개체를 평가 하 고 변환 시간을 예측할 수 있습니다.  
   
@@ -47,7 +47,7 @@ MySQL 데이터베이스에서 SQL Server 또는 SQL Azure로 개체 및 데이�
   
     -   데이터베이스 개체를 동기화 합니다.  
   
-10. [MySQL 데이터를 SQL Server로 마이그레이션-Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
+10. [MySQL 데이터를 SQL Server Azure SQL Database &#40;MySQLToSQL&#41;로 마이그레이션](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
   
 11. 필요한 경우 데이터베이스 응용 프로그램을 업데이트 합니다.  
   

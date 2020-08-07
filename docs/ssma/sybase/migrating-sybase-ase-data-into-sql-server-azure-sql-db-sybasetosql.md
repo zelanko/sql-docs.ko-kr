@@ -1,5 +1,5 @@
 ---
-title: Sybase ASE 데이터를 SQL Server로 마이그레이션-Azure SQL DB | Microsoft Docs
+title: Sybase ASE 데이터를 SQL Server로 마이그레이션-Azure SQL Database | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 28a07c08fd801a9d5fdcdde4206f7aa6fe7b926f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b9a2663d22bf3820985712ade72f5eaf480266d6
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028840"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865341"
 ---
-# <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>Sybase ASE 데이터를 SQL Server로 마이그레이션-Azure SQL DB (SybaseToSQL)
-Sybase ASE (적응 서버 엔터프라이즈) 데이터베이스 개체를 또는 Azure SQL DB에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성공적으로 로드 한 후 ase에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 azure sql db로 데이터를 마이그레이션할 수 있습니다.  
+# <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-database--sybasetosql"></a>Sybase ASE 데이터를 SQL Server Azure SQL Database로 마이그레이션 (SybaseToSQL)
+Sybase 서버 ASE (적응 서버 엔터프라이즈) 데이터베이스 개체를 또는 Azure SQL Database 성공적으로 로드 한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ase에서 또는 Azure SQL Database로 데이터를 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 > 사용 중인 엔진이 서버 쪽 데이터 마이그레이션 엔진 인 경우 데이터를 마이그레이션하기 전에 ssma를 실행 하는 컴퓨터에 Sybase ASE 확장 팩의 SSMA 및 Sybase ASE 공급자를 설치 해야 합니다. SQL Server 에이전트 서비스도 실행 중 이어야 합니다. 확장 팩을 설치 하는 방법에 대 한 자세한 내용은 [SQL Server에 SSMA 구성 요소 설치 (SybaseToSQL)](https://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d) 를 참조 하세요.  
   
 ## <a name="setting-migration-options"></a>마이그레이션 옵션 설정  
-또는 Azure SQL DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 데이터를 마이그레이션하기 전에 **프로젝트 설정** 대화 상자에서 프로젝트 마이그레이션 옵션을 검토 합니다.  
+데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL Database 마이그레이션하기 전에 **프로젝트 설정** 대화 상자에서 프로젝트 마이그레이션 옵션을 검토 하십시오.  
   
 -   이 대화 상자를 사용 하 여 마이그레이션 일괄 처리 크기, 테이블 잠금, 제약 조건 확인, null 값 처리 및 id 값 처리 등의 옵션을 설정할 수 있습니다. 프로젝트 마이그레이션 설정에 대 한 자세한 내용은 [프로젝트 설정 (마이그레이션) (Sybase)](https://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924)을 참조 하세요.  
   
@@ -54,10 +54,10 @@ Sybase ASE (적응 서버 엔터프라이즈) 데이터베이스 개체를 또�
 -   서버 쪽에서 마이그레이션을 시작 하려면 **프로젝트 설정** 대화 상자에서 **서버 쪽 데이터 마이그레이션 엔진** 옵션을 선택 합니다.  
   
 > [!NOTE]  
-> Azure SQL DB를 대상 데이터베이스로 사용 하는 경우 **클라이언트 쪽 데이터 마이그레이션** 만 허용 되며 서버 쪽 데이터 마이그레이션은 지원 되지 않습니다.  
+> 대상 데이터베이스로 Azure SQL Database를 사용 하는 경우에는 **클라이언트 쪽 데이터 마이그레이션** 만 허용 되며 서버 쪽 데이터 마이그레이션은 지원 되지 않습니다.  
   
-## <a name="migrating-data-to-sql-server-or-azure-sql-db"></a>SQL Server 또는 Azure SQL DB로 데이터 마이그레이션  
-데이터 마이그레이션은 ASE 테이블의 데이터 행을 트랜잭션의 SQL Server 테이블로 이동 하는 대량 로드 작업입니다. 각 트랜잭션에서 SQL Server 또는 Azure SQL DB에 로드 되는 행 수는 프로젝트 설정에서 구성 됩니다.  
+## <a name="migrating-data-to-sql-server-or-azure-sql-database"></a>SQL Server 또는 Azure SQL Database로 데이터 마이그레이션  
+데이터 마이그레이션은 ASE 테이블의 데이터 행을 트랜잭션의 SQL Server 테이블로 이동 하는 대량 로드 작업입니다. 각 트랜잭션에서 SQL Server 또는 Azure SQL Database로 로드 되는 행 수는 프로젝트 설정에서 구성 됩니다.  
   
 마이그레이션 메시지를 보려면 출력 창이 표시 되는지 확인 합니다. 그렇지 않으면 **보기** 메뉴에서 **출력** 을 선택 합니다.  
   
@@ -67,7 +67,7 @@ Sybase ASE (적응 서버 엔터프라이즈) 데이터베이스 개체를 또�
   
     -   ASE 공급자는 SSMA를 실행 하는 컴퓨터에 설치 됩니다.  
   
-    -   변환 된 개체를 대상 데이터베이스 (SQL Server 또는 Azure SQL DB)와 동기화 했습니다.  
+    -   변환 된 개체를 대상 데이터베이스 (SQL Server 또는 Azure SQL Database)와 동기화 했습니다.  
   
 2.  Sybase 메타 데이터 탐색기에서 마이그레이션할 데이터가 포함 된 개체를 선택 합니다.  
   
@@ -100,7 +100,7 @@ Sybase ASE (적응 서버 엔터프라이즈) 데이터베이스 개체를 또�
   
     대상 데이터베이스가 SQL Server 경우 **SQL Server에 연결** 대화 상자에 연결 자격 증명을 입력 하 고 **연결**을 클릭 합니다. SQL Server에 연결 하는 방법에 대 한 자세한 내용은 [SQL Server에 연결 (SybaseToSQL)](https://msdn.microsoft.com/dd368a1a-45b0-40e9-b4d3-5cdb48c26606) 을 참조 하세요.  
   
-    대상 데이터베이스가 Azure SQL DB 인 경우 **AZURE SQL db에 연결** 대화 상자에 연결 자격 증명을 입력 하 고 **연결**을 클릭 합니다. Azure SQL DB에 연결 하는 방법에 대 한 자세한 내용은 [AZURE SQL db &#40;SybaseToSQL에 연결](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md) 을 참조 하세요&#41;  
+    대상 데이터베이스를 Azure SQL Database 하는 경우 **Azure SQL Database에 연결** 대화 상자에 연결 자격 증명을 입력 하 고 **연결**을 클릭 합니다. Azure SQL Database에 연결 하는 방법에 대 한 자세한 내용은 [Azure SQL Database &#40;SybaseToSQL에 연결](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md) 을 참조 하세요&#41;  
   
     메시지가 **출력** 창에 표시 됩니다. 마이그레이션이 완료 되 면 **데이터 마이그레이션 보고서** 가 나타납니다. 데이터를 마이그레이션하지 않은 경우 오류가 포함 된 행을 클릭 한 다음 **세부 정보**를 클릭 합니다. 보고서가 완료 되 면 **닫기**를 클릭 합니다. 데이터 마이그레이션 보고서에 대 한 자세한 내용은 [SSMA Common (데이터 마이그레이션 보고서)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241) 를 참조 하세요.  
   
@@ -108,5 +108,5 @@ Sybase ASE (적응 서버 엔터프라이즈) 데이터베이스 개체를 또�
 > SQL Express edition을 대상 데이터베이스로 사용 하는 경우 클라이언트 쪽 데이터 마이그레이션만 허용 되며 서버 쪽 데이터 마이그레이션은 지원 되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[Sybase ASE 데이터베이스를 SQL Server로 마이그레이션-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Sybase ASE 데이터베이스를 SQL Server-Azure SQL Database &#40;SybaseToSQL&#41;로 마이그레이션](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

@@ -11,12 +11,12 @@ ms.assetid: 2793bc33-38d3-46ed-8277-b8580cf78ced
 author: Jtoland
 ms.author: Jtoland
 manager: murato
-ms.openlocfilehash: ff0f81088d4da835a24b59c1629dc7d59ef2e5b1
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: de1adf21d1a4706fb8e15b3d8ae93ab1f5a95426
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293610"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863551"
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>MySQL에 대 한 SQL Server Migration Assistant (MySQLToSQL)
 
@@ -26,12 +26,12 @@ ms.locfileid: "84293610"
   
 ## <a name="contents"></a>콘텐츠  
   
-|섹션|설명|
+|섹션|Description|
 |-----------|---------------|
 |[MySQL용 SSMA의 새로운 기능](https://msdn.microsoft.com/1451a0b0-6713-4d0c-954f-ea3d8fce1d31)|MySQL 용 SSMA 버전의 새로운 기능|  
 |[&#40;MySqlToSql&#41;에 대 한 MySQL 용 SSMA 설치](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)|SQL Server를 실행 하는 컴퓨터에 MySQL 용 SSMA 클라이언트 및 필수 구성 요소를 설치 하기 위한 필수 구성 요소 및 지침을 제공 하는 문서가 포함 되어 있습니다.|  
 |[MySQL 용 SSMA를 시작 &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)|사용자 인터페이스, 프로젝트 및 구성 옵션을 소개 합니다.|  
-|[MySQL 데이터베이스를 SQL Server로 마이그레이션-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)|변환 프로세스에 대 한 개요와 프로세스의 각 단계에 대 한 자세한 정보를 제공 합니다.|  
+|[MySQL 데이터베이스를 SQL Server-Azure SQL Database &#40;MySQLToSql&#41;로 마이그레이션](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)|변환 프로세스에 대 한 개요와 프로세스의 각 단계에 대 한 자세한 정보를 제공 합니다.|  
 |[MySQLToSQL&#41;&#40;사용자 인터페이스 참조](../../ssma/mysql/user-interface-reference-mysqltosql.md)|MySQL 용 SSMA 대화 상자에 대 한 설명서가 포함 되어 있습니다.|  
 |[MySQL용 SSMA 콘솔 작업](working-with-ssma-for-mysql-console-mysqltosql.md)|SSMA 콘솔 응용 프로그램에 대 한 설명서가 포함 되어 있습니다.|  
 |[MySQL 용 SSMA 지원 가져오기](https://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|추가 지원을 받는 방법에 대 한 정보를 제공 합니다.|  

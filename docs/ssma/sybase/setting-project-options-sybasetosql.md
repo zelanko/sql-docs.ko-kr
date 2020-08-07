@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 2c8d074db2fc1e8a9d29ecf5fdc0405524e9bb1a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b2b16054a0a866d7772243a04cb8f5955931cfc4
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020925"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864750"
 ---
 # <a name="setting-project-options-sybasetosql"></a>프로젝트 옵션 설정(SybaseToSQL)
-각 SSMA 프로젝트에 대해 프로젝트 수준 옵션을 설정할 수 있습니다. 이러한 옵션은 개체 변환, 개체 로드, SQL azure, 사용자 인터페이스 및 데이터 마이그레이션 설정을 지정 합니다. 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 변환 하거나 SQL Azure 하거나 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure로 마이그레이션하려면 먼저 구성 옵션이 프로젝트에 적합 한지 확인 합니다.  
+각 SSMA 프로젝트에 대해 프로젝트 수준 옵션을 설정할 수 있습니다. 이러한 옵션은 개체 변환, 개체 로드, SQL azure, 사용자 인터페이스 및 데이터 마이그레이션 설정을 지정 합니다. 개체를로 변환 하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure 하거나 데이터를 또는 SQL Azure로 마이그레이션하려면 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 옵션이 프로젝트에 적합 한지 확인 합니다.  
   
 SSMA를 사용 하면 모든 프로젝트에 대 한 기본 옵션을 구성할 수 있습니다. 이러한 옵션은 사용자가 만드는 모든 새 프로젝트에 적용 됩니다. 그런 다음 각 프로젝트에 대 한 옵션을 사용자 지정할 수 있습니다.  
   
@@ -60,7 +60,7 @@ SSMA에는 5 개의 프로젝트 설정 집합이 있습니다.
   
 -   [프로젝트 설정 &#40;형식 매핑&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)  
   
--   [프로젝트 설정 &#40;Azure SQL DB &#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md)  
+-   [프로젝트 설정 &#40;Azure SQL Database &#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md)  
   
 ## <a name="setting-project-options"></a>프로젝트 옵션 설정  
 SSMA에서 모든 프로젝트에 대 한 기본 설정을 구성할 수 있습니다. 이러한 설정은 SSMA 구성 파일에 저장 되 고 사용자가 만드는 모든 새 프로젝트에 적용 됩니다.  
@@ -101,5 +101,5 @@ SSMA에서 모든 프로젝트에 대 한 기본 설정을 구성할 수 있습�
 -   그렇지 않으면 Sybase 데이터베이스 개체 정의를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 개체 정의로 변환할 수 있습니다. 자세한 내용은 [SYBASE ASE 데이터베이스 개체 변환 &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
-[Sybase ASE 데이터베이스를 SQL Server로 마이그레이션-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Sybase ASE 데이터베이스를 SQL Server-Azure SQL Database &#40;SybaseToSQL&#41;로 마이그레이션](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

@@ -20,12 +20,12 @@ ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2df86c9850dddb7532602476d2ce9ffcaebad62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f73452beb45c9f5df4b806d937043f22c5c0dbe1
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734699"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865321"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -116,10 +116,10 @@ ms.locfileid: "85734699"
 |**min_spills**|**bigint**|단일 실행 중이 쿼리가 분산 한 최소 페이지 수입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 CU3부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 시작|  
 |**max_spills**|**bigint**|단일 실행 중이 쿼리가 분산 한 최대 페이지 수입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 CU3부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 시작|  
 |**pdw_node_id**|**int**|이 배포가 설정 된 노드의 식별자입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
-|**total_page_server_reads**|**bigint**|이 계획이 컴파일된 이후 실행 될 때 수행 된 원격 페이지 서버 읽기의 총 수입니다.<br /><br /> **적용 대상:** Azure SQL DB Hyperscale |  
-|**last_page_server_reads**|**bigint**|계획이 마지막으로 실행 되었을 때 수행 된 원격 페이지 서버 읽기 수입니다.<br /><br /> **적용 대상:** Azure SQL DB Hyperscale |  
-|**min_page_server_reads**|**bigint**|단일 실행 중이 계획에서 수행한 최소 원격 페이지 서버 읽기 수입니다.<br /><br /> **적용 대상:** Azure SQL DB Hyperscale |  
-|**max_page_server_reads**|**bigint**|단일 실행 중이 계획에서 수행한 최대 원격 페이지 서버 읽기 수입니다.<br /><br /> **적용 대상:** Azure SQL DB Hyperscale |  
+|**total_page_server_reads**|**bigint**|이 계획이 컴파일된 이후 실행 될 때 수행 된 원격 페이지 서버 읽기의 총 수입니다.<br /><br /> **적용 대상:** Azure SQL Database Hyperscale |  
+|**last_page_server_reads**|**bigint**|계획이 마지막으로 실행 되었을 때 수행 된 원격 페이지 서버 읽기 수입니다.<br /><br /> **적용 대상:** Azure SQL Database Hyperscale |  
+|**min_page_server_reads**|**bigint**|단일 실행 중이 계획에서 수행한 최소 원격 페이지 서버 읽기 수입니다.<br /><br /> **적용 대상:** Azure SQL Database Hyperscale |  
+|**max_page_server_reads**|**bigint**|단일 실행 중이 계획에서 수행한 최대 원격 페이지 서버 읽기 수입니다.<br /><br /> **적용 대상:** Azure SQL Database Hyperscale |  
 > [!NOTE]
 > <sup>1</sup> 통계 수집을 사용 하는 경우 고유 하 게 컴파일된 저장 프로시저의 경우 작업자 시간이 밀리초 단위로 수집 됩니다. 쿼리가 1 밀리초 미만으로 실행 되는 경우 값은 0이 됩니다.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "85734699"
 ## <a name="remarks"></a>설명  
  쿼리가 완료되면 뷰의 통계가 업데이트됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-finding-the-top-n-queries"></a>A. TOP N 쿼리 찾기  
  다음 예제는 평균 CPU 시간별로 상위 5개의 쿼리에 대한 정보를 반환합니다. 이 예에서는 논리적으로 동일한 쿼리를 누적 리소스 소비량에 따라 그룹화할 수 있도록 쿼리 해시에 따라 쿼리를 집계합니다.  

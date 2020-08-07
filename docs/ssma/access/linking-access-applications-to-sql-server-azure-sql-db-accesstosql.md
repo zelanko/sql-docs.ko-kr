@@ -1,5 +1,5 @@
 ---
-title: SQL Server에 액세스 응용 프로그램 연결-Azure SQL DB | Microsoft Docs
+title: SQL Server-Azure SQL Database에 액세스 응용 프로그램 연결 Microsoft Docs
 description: SQL Server 또는 Azure SQL Database에서 기존 Access 응용 프로그램을 사용할 수 있도록 마이그레이션된 테이블에 Access 테이블을 연결 하는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.custom: ''
@@ -24,14 +24,14 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 382a1d94b46eeef39ca90103691afe45389002e3
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: aadb041b3b9005d0e593e97974090250129ed33d
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293770"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823852"
 ---
-# <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>SQL Server에 액세스 응용 프로그램 연결-Azure SQL DB (AccessToSQL)
+# <a name="linking-access-applications-to-sql-server---azure-sql-database-accesstosql"></a>액세스 응용 프로그램을 SQL Server Azure SQL Database에 연결 (AccessToSQL)
 에서 기존 Access 응용 프로그램을 사용 하려는 경우에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 원래 access 테이블을 마이그레이션된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블이 나 SQL Azure 테이블에 연결할 수 있습니다. 연결 하면 쿼리, 폼, 보고서 및 데이터 액세스 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] access 데이터베이스의 데이터 대신 또는 SQL Azure 데이터베이스의 데이터를 사용 하도록 access 데이터베이스를 수정 합니다.  
   
 > [!NOTE]  
@@ -154,6 +154,6 @@ Recordset.LastModified
   
 **해결 방법:** 지원 되는 데이터 형식의 행만 반환 하는 액세스 쿼리를 정의할 수 있습니다.  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
 [SQL Server로 Access 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

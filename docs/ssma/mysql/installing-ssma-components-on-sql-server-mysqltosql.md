@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9b598915222610470bc9cf2e618cea65d725c5fb
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: a38808c64209edb094c986e63305707a0a834edb
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411281"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823673"
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>SQL Server에 SSMA 구성 요소 설치 (MySQLToSql)
 
@@ -29,7 +29,7 @@ SSMA 확장 팩은 지정 된 인스턴스에 **sysdb**데이터베이스를 추
 
 또한 데이터를로 마이그레이션하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ssma는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이그레이션에 서버 쪽 데이터 마이그레이션 엔진이 사용 될 때 에이전트 작업을 만듭니다.
 
-### <a name="prerequisites"></a>필수 조건
+### <a name="prerequisites"></a>필수 구성 요소
 
 에서 MySQL 용 SSMA 서버 구성 요소를 설치 하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터가 다음 요구 사항을 충족 하는지 확인 합니다.
 
@@ -76,7 +76,7 @@ SSMA 확장 팩은 지정 된 인스턴스에 **sysdb**데이터베이스를 추
 
 12. 다른 인스턴스에 유틸리티를 설치 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **예**를 선택 하 고 **다음**을 클릭 합니다. 또는 마법사를 종료 하려면 **아니요**를 클릭 합니다.
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - [MySQL용 SSMA 클라이언트 설치](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)
-- [MySQL 데이터베이스를 SQL Server로 마이그레이션-Azure SQL DB](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)
+- [MySQL 데이터베이스를 SQL Server로 마이그레이션-Azure SQL Database](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)

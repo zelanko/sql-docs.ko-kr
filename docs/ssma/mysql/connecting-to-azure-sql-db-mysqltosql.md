@@ -1,5 +1,5 @@
 ---
-title: Azure SQL DB에 연결 (MySQLToSQL) | Microsoft Docs
+title: Azure SQL Database에 연결 (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 7fb6740681c08cb915755b3362352f139e078c4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da3e0d05abf24bdd7100769ecfbb597e2953a9d5
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103190"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822562"
 ---
-# <a name="connecting-to-azure-sql-db-mysqltosql"></a>Azure SQL DB에 연결(MySQLToSQL)
+# <a name="connecting-to-azure-sql-database-mysqltosql"></a>Azure SQL Database에 연결 (MySQLToSQL)
 MySQL 데이터베이스를 SQL Azure로 마이그레이션하려면 SQL Azure의 대상 인스턴스에 연결 해야 합니다. 연결할 때 SSMA는 SQL Azure 인스턴스의 모든 데이터베이스에 대 한 메타 데이터를 가져오고 SQL Azure 메타 데이터 탐색기에 데이터베이스 메타 데이터를 표시 합니다. SSMA는 연결 된 SQL Azure의 인스턴스에 대 한 정보를 저장 하지만 암호를 저장 하지는 않습니다.  
   
 SQL Azure에 대 한 연결은 프로젝트를 닫을 때까지 활성 상태로 유지 됩니다. 프로젝트를 다시 열 때 서버에 대 한 활성 연결을 원하는 경우 SQL Azure에 다시 연결 해야 합니다. 데이터베이스 개체를 SQL Azure로 로드 하 고 데이터를 마이그레이션할 때까지 오프 라인으로 작업할 수 있습니다.  
@@ -29,7 +29,7 @@ SQL Azure 인스턴스에 대 한 메타 데이터는 자동으로 동기화 되
 ## <a name="required-sql-azure-permissions"></a>필요한 SQL Azure 권한  
 SQL Azure에 연결 하는 데 사용 되는 계정에는 해당 계정에서 수행 하는 작업에 따라 다른 사용 권한이 필요 합니다.  
   
--   MySQL 개체를 구문으로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 변환 하거나, SQL Azure에서 메타 데이터를 업데이트 하거나, 변환 된 구문을 스크립트로 저장 하려면 계정에 SQL Azure 인스턴스에 로그온 할 수 있는 권한이 있어야 합니다.  
+-   MySQL 개체를 구문으로 변환 [!INCLUDE[tsql](../../includes/tsql-md.md)] 하거나, SQL Azure에서 메타 데이터를 업데이트 하거나, 변환 된 구문을 스크립트로 저장 하려면 계정에 SQL Azure 인스턴스에 로그온 할 수 있는 권한이 있어야 합니다.  
   
 -   데이터베이스 개체를 SQL Azure 로드 하려면 최소 권한 요구 사항이 대상 데이터베이스에서 **db_owner** 데이터베이스 역할의 멤버 자격 이어야 합니다.  
   
@@ -87,5 +87,5 @@ SQL Azure 데이터베이스에 대 한 메타 데이터는 자동으로 업데�
 -   이러한 작업을 수행할 필요가 없는 경우 MySQL 데이터베이스 개체 정의를 SQL Azure 개체 정의로 변환할 수 있습니다. 자세한 내용은 [&#40;MySQLToSQL&#41;MySQL 데이터베이스 변환](../../ssma/mysql/converting-mysql-databases-mysqltosql.md) (영문)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
-[MySQL 데이터베이스를 SQL Server로 마이그레이션-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[MySQL 데이터베이스를 SQL Server-Azure SQL Database &#40;MySQLToSql&#41;로 마이그레이션](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

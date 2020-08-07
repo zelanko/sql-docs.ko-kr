@@ -1,5 +1,5 @@
 ---
-title: SQL Server로 Access 데이터베이스 마이그레이션-Azure SQL DB | Microsoft Docs
+title: SQL Server-Azure SQL Database로 Access 데이터베이스 마이그레이션 | Microsoft Docs
 description: 이 권장 프로세스를 사용 하 여 Access 데이터베이스를 SQL Server으로 마이그레이션하거나 SSMA (SQL Server Migration Assistant)를 사용 하 여 Azure SQL Database 합니다.
 ms.prod: sql
 ms.custom: ''
@@ -17,14 +17,14 @@ ms.assetid: 76a3abcf-2998-4712-9490-fe8d872c89ca
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: d3cbe1565642d43aabf3e36604fac5bfc2979c65
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: d35f359186fca7d862ee8da8f4c4932d849c421b
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293741"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823558"
 ---
-# <a name="migrating-access-databases-to-sql-server---azure-sql-db-accesstosql"></a>SQL Server로 Access 데이터베이스 마이그레이션-Azure SQL DB (AccessToSQL)
+# <a name="migrating-access-databases-to-sql-server---azure-sql-database-accesstosql"></a>Access 데이터베이스를 SQL Server Azure SQL Database (AccessToSQL)로 마이그레이션
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SSMA (Migration Assistant)는 Access 데이터베이스를 또는 SQL Azure로 신속 하 게 마이그레이션하는 데 도움이 되는 종합적인 환경을 제공 하는 도구입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . SSMA를 사용 하 여 데이터베이스 개체에 대 한 액세스 및 SQL Azure 데이터베이스 개체를 검토 하 고, access 데이터베이스 개체를 변환 하 고, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] access 데이터베이스 개체를 변환 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고, 데이터를 SQL Azure 하 고, 데이터를 마이그레이션할 수 있습니다.  
   
 ## <a name="recommended-migration-process"></a>권장 마이그레이션 프로세스  
@@ -59,6 +59,6 @@ ms.locfileid: "84293741"
   
 마이그레이션 마법사를 사용 하 여이 프로세스를 안내할 수도 있습니다. 자세한 내용은 [마이그레이션 마법사](migration-wizard-accesstosql.md)를 참조 하십시오.  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
 [액세스를 위한 SQL Server Migration Assistant 시작](getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [마이그레이션을 위해 Access 데이터베이스 준비](preparing-access-databases-for-migration-accesstosql.md)

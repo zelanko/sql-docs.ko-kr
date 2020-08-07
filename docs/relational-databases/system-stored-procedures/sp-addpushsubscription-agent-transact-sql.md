@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f9ff6619109e198a50d15c21aecbe958a6183d2d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42dffc53fbce2350314d773ce4cd376fae84256a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716460"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864990"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -90,7 +90,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 > [!IMPORTANT]  
 >  빈 암호를 사용하지 마세요. 강력한 암호를 사용하세요. 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 스크립트 파일에 저장해야 하는 경우에는 파일에 무단으로 액세스하지 못하도록 보안을 설정해야 합니다.  
   
-`[ @job_login = ] 'job_login'`에이전트를 실행 하는 계정에 대 한 로그인입니다. Azure SQL Database Managed Instance에서 SQL Server 계정을 사용 합니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 NULL입니다. Windows 통합 인증을 사용할 때 배포자에 대한 에이전트 연결과 구독자에 대한 연결에 항상 이 Windows 계정을 사용합니다.  
+`[ @job_login = ] 'job_login'`에이전트를 실행 하는 계정에 대 한 로그인입니다. Azure SQL Managed Instance SQL Server 계정을 사용 합니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 NULL입니다. Windows 통합 인증을 사용할 때 배포자에 대한 에이전트 연결과 구독자에 대한 연결에 항상 이 Windows 계정을 사용합니다.  
   
 `[ @job_password = ] 'job_password'`에이전트를 실행 하는 계정의 암호입니다. *job_password* 는 **sysname**이며 기본값은 없습니다.  
   
@@ -121,9 +121,9 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 |값|설명|  
 |-----------|-----------------|  
-|**1** (기본값)|첫째|  
-|**2**|Second|  
-|**4**|셋째|  
+|**1** (기본값)|First|  
+|**2**|초|  
+|**4**|세 번째|  
 |**8**|넷째|  
 |**16**|마지막|  
   
@@ -134,7 +134,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|Second|  
+|**2**|초|  
 |**4** (기본값)|Minute|  
 |**8**|시간|  
   
@@ -186,7 +186,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_addpushsubscription_agent**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [밀어넣기 구독 만들기](../../relational-databases/replication/create-a-push-subscription.md)   
+ [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [SQL Server 이외 구독자에 대 한 구독 만들기](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Transact-sql&#41;를 &#40;하는 복제 저장 프로시저](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

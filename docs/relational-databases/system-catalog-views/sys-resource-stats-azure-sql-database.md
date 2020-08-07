@@ -19,12 +19,12 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a72bb16eddc55f5cf741a7809665b44ada4a7a30
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: be336780f5bbfd45660ea376c0d689b577f052da
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717578"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822924"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats(Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "85717578"
   
  다음 표에는 v12 서버에서 사용할 수 있는 열이 설명되어 있습니다.  
   
-|열|데이터 형식|Description|  
+|열|데이터 형식|설명|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime**|5 분 보고 간격의 시작을 나타내는 UTC 시간입니다.|  
 |end_time|**datetime**|5 분 보고 간격의 끝을 나타내는 UTC 시간입니다.|  
@@ -50,10 +50,10 @@ ms.locfileid: "85717578"
 |dtu_limit|**int**|이 간격 동안이 데이터베이스에 대 한 현재 최대 데이터베이스 DTU 설정입니다. |
 |xtp_storage_percent|**decimal (5, 2)**|메모리 내 OLTP에 대 한 저장소 사용률 (보고 간격의 끝에 있는 서비스 계층의 제한 백분율) 여기에는 메모리 내 OLTP 개체를 저장 하는 데 사용 되는 메모리 (메모리 최적화 테이블, 인덱스 및 테이블 변수)가 포함 됩니다. 또한 ALTER TABLE 작업을 처리 하는 데 사용 되는 메모리가 포함 됩니다.<br /><br /> 데이터베이스에서 메모리 내 OLTP를 사용 하지 않는 경우 0을 반환 합니다.|
 |avg_login_rate_percent|**decimal (5, 2)**|정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|
-|avg_instance_cpu_percent|**decimal (5, 2)**|SQL DB 프로세스의 백분율로 나타낸 평균 데이터베이스 CPU 사용량입니다.|
-|avg_instance_memory_percent|**decimal (5, 2)**|SQL DB 프로세스의 백분율로 나타낸 평균 데이터베이스 메모리 사용량입니다.|
+|avg_instance_cpu_percent|**decimal (5, 2)**|SQL Database 프로세스의 백분율로 나타낸 평균 데이터베이스 CPU 사용량입니다.|
+|avg_instance_memory_percent|**decimal (5, 2)**|SQL Database 프로세스의 백분율로 나타낸 평균 데이터베이스 메모리 사용량입니다.|
 |cpu_limit|**decimal (5, 2)**|이 간격 동안의이 데이터베이스에 대 한 vCores 수입니다. DTU 기반 모델을 사용 하는 데이터베이스의 경우이 열은 NULL입니다.|
-|allocated_storage_in_megabytes|**float**|데이터베이스 데이터를 저장 하는 데 사용할 수 있는 서식 있는 파일 공간의 크기 (MB)입니다. 형식이 지정 된 파일 공간을 할당 된 데이터 공간이 라고도 합니다.  자세한 내용은 [SQL DB의 파일 공간 관리](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management) 를 참조 하세요.|
+|allocated_storage_in_megabytes|**float**|데이터베이스 데이터를 저장 하는 데 사용할 수 있는 서식 있는 파일 공간의 크기 (MB)입니다. 형식이 지정 된 파일 공간을 할당 된 데이터 공간이 라고도 합니다.  자세한 내용은 [SQL Database 파일 공간 관리](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management) 를 참조 하세요.|
   
 > [!TIP]  
 >  이러한 제한 및 서비스 계층에 대 한 자세한 컨텍스트는 [서비스 계층](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)항목을 참조 하세요.  
@@ -68,7 +68,7 @@ ms.locfileid: "85717578"
   
  이 데이터에 대 한 자세한 보기를 보려면 사용자 데이터베이스에서 **dm_db_resource_stats** 동적 관리 뷰를 사용 합니다. 이 뷰는 15초마다 데이터를 캡처하고 1시간 동안 기록 데이터를 유지합니다.  자세한 내용은 [dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)를 참조 하세요.  
 
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 지난 1주일 동안 평균적으로 컴퓨팅 활용률의 80% 이상을 사용한 모든 데이터베이스를 반환합니다.  
   
 ```sql  

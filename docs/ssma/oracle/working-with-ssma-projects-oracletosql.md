@@ -13,12 +13,12 @@ ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 285665d1720b941523871d00fed9a0d2239c7d78
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 772bb36e42af5e96d40b4026327d90e4552218e7
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84294040"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862373"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>SSMA 프로젝트 작업(OracleToSQL)
 Oracle 데이터베이스를로 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 먼저 SSMA 프로젝트를 만듭니다. 프로젝트는 다음 정보를 포함 하는 파일입니다.  
@@ -81,7 +81,7 @@ Oracle 데이터베이스에서로 데이터를 마이그레이션하려면 [!IN
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
-    -   Azure SQL DB  
+    -   Azure SQL Database  
   
 ## <a name="customizing-project-settings"></a>프로젝트 설정 사용자 지정  
 모든 새 SSMA 프로젝트에 적용 되는 기본 프로젝트 설정을 정의 하는 것 외에도 각 프로젝트에 대 한 설정을 사용자 지정할 수 있습니다. 자세한 내용은 [프로젝트 옵션 설정 &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md)을 참조 하세요.  

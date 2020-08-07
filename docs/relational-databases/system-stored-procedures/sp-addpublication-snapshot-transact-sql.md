@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68540299b14af875f6625771d9d47f81f048f43d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d8b5f827126afca81baeafe5f5c35e3d94666fcc
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716532"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865261"
 ---
 # <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -88,7 +88,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|Second|  
+|**2**|초|  
 |**4** (기본값)|Minute|  
 |**8**|시간|  
   
@@ -117,7 +117,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 > [!IMPORTANT]  
 >  스크립트 파일에 인증 정보를 저장하지 않도록 합니다. 보안 향상을 위해 런타임에 로그인 이름과 암호를 제공하는 것이 좋습니다.  
   
-`[ @job_login = ] 'job_login'`에이전트를 실행 하는 계정에 대 한 로그인입니다. Azure SQL Database Managed Instance에서 SQL Server 계정을 사용 합니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 NULL입니다. 이 계정은 항상 배포자에 대 한 에이전트 연결에 사용 됩니다. 새 스냅샷 에이전트 작업을 만들 때는 이 매개 변수를 제공해야 합니다.  
+`[ @job_login = ] 'job_login'`에이전트를 실행 하는 계정에 대 한 로그인입니다. Azure SQL Managed Instance에서 SQL Server 계정을 사용 합니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 NULL입니다. 이 계정은 항상 배포자에 대 한 에이전트 연결에 사용 됩니다. 새 스냅샷 에이전트 작업을 만들 때는 이 매개 변수를 제공해야 합니다.  
   
 > [!NOTE]
 >  이외 게시자의 경우에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [Sp_adddistpublisher &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)에 지정 된 것과 동일한 로그인 이어야 합니다.  

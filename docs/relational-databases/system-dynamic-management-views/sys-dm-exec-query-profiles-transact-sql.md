@@ -20,12 +20,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8efc79ed772d92986af87a707cf64f4c0f9cbdcf
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 51dd6f1d831931fcd8e14e38a3ca94ae440dae1a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442554"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865371"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles(Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -89,10 +89,10 @@ S p 1 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] *표준 쿼리
 > 조사 중인 쿼리는 쿼리 프로 파일링 인프라를 사용 하도록 설정한 **후** 시작 해야 합니다. 쿼리를 시작한 후에 사용 하도록 설정 하면에서 결과가 생성 되지 않습니다 `sys.dm_exec_query_profiles` . 쿼리 프로 파일링 인프라를 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 [쿼리 프로 파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조 하세요.
 
 ## <a name="permissions"></a>사용 권한  
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]및의 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 관리 되는 인스턴스에서는 `VIEW DATABASE STATE` 데이터베이스 역할의 권한 및 멤버 자격이 필요 `db_owner` 합니다.   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]및 AZURE SQL Managed Instance에는 `VIEW DATABASE STATE` 데이터베이스 역할의 권한 및 멤버 자격이 필요 `db_owner` 합니다.   
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
    
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  1 단계: 분석할 쿼리를 실행 하려는 세션에 로그인 `sys.dm_exec_query_profiles` 합니다. 프로 파일링 사용을 위해 쿼리를 구성 `SET STATISTICS PROFILE ON` 합니다. 동일한 세션에서 쿼리를 실행합니다.  
   
 ```sql  

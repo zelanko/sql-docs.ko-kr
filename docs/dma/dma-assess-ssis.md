@@ -1,6 +1,6 @@
 ---
 title: Data Migration Assistant를 사용 하 여 SSIS 마이그레이션 평가를 만듭니다.
-description: Azure SQL Database 또는 Azure SQL Database 관리 되는 인스턴스로 마이그레이션하기 전에 Data Migration Assistant를 사용 하 여 온-프레미스 SSIS (SQL Server Integration Service)를 평가 하는 방법을 알아봅니다.
+description: Data Migration Assistant를 사용 하 여 Azure SQL Database 또는 Azure SQL로 마이그레이션하기 전에 온-프레미스 SSIS (SQL Server Integration Service)를 평가 하는 방법에 대해 알아봅니다 Managed Instance
 ms.date: 08/23/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,16 +14,16 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1652d5eec9d6419e7b39f96a8b854eef8651bf26
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a7b077c3046b2f0c7e50b7ec20f68a5544e91e1
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74687155"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822198"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant를 사용 하 여 SQL Server Integration Service 마이그레이션 평가 수행
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 SSIS (SQL Server Integration Service) 패키지를 평가 하려면 아래 구성 요소를 Data Migration Assistant와 함께 설치 해야 합니다.
 
@@ -34,7 +34,7 @@ SSIS (SQL Server Integration Service) 패키지를 평가 하려면 아래 구�
 
 ## <a name="performance-assessments"></a>성능 평가
 
-다음 단계별 지침은 Data Migration Assistant를 사용 하 여 SSIS (SQL Server Integration Services) 패키지를 Azure SQL Database 또는 Azure SQL Database 관리 되는 인스턴스로 마이그레이션하기 위한 첫 번째 평가를 수행 하는 데 도움이 됩니다.
+다음 단계별 지침은 Data Migration Assistant를 사용 하 여 SSIS (SQL Server Integration Services) 패키지를 Azure SQL Database 또는 Azure SQL Managed Instance로 마이그레이션하기 위한 첫 번째 평가를 수행 하는 데 도움이 됩니다.
 
 ## <a name="create-an-assessment"></a>평가 만들기
 
@@ -42,7 +42,7 @@ SSIS (SQL Server Integration Service) 패키지를 평가 하려면 아래 구�
 
 1. 원본 및 대상 서버 유형을 설정합니다.
 
-    **SQL Server**로 원본을 선택 하 고 대상 서버 유형을 **Azure SQL Database** 또는 **Azure SQL Database 관리 되는 인스턴스로**설정 합니다.
+    **SQL Server**로 원본을 선택 하 고 대상 서버 유형을 **AZURE SQL DATABASE** 또는 **Azure SQL Managed Instance**로 설정 합니다.
 
 1. **만들기**를 클릭합니다.
 
@@ -74,5 +74,5 @@ SSIS (SQL Server Integration Service) 패키지를 평가 하려면 아래 구�
 ## <a name="next-steps"></a>다음 단계
 
 - [ADF에서 SSIS로 온-프레미스 SSIS 작업 마이그레이션 개요](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
-- [SQL Server Integration Services 패키지를 Azure SQL Database  Managed Instance로 마이그레이션](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [SQL Server Integration Services 패키지를 Azure SQL Managed Instance로 마이그레이션](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
 - [SQL Server Integration Services 패키지를 Azure SQL Database에 다시 배포](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)

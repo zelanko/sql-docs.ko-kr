@@ -10,12 +10,12 @@ ms.assetid: 16849cfd-050c-4ac7-bd3d-a929aebb5010
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 02d1d499cb9030b737028e59219fd779bde295c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 135d0ef298a0b3ddc8d617080d535a71bfe80586
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264669"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864830"
 ---
 # <a name="new-project-oracletosql"></a>새 프로젝트(OracleToSQL)
 **새 프로젝트** 대화 상자를 사용 하 여 새 ssma 프로젝트를 만들 수 있습니다. **새 프로젝트** 대화 상자에 액세스 하려면 **파일** 메뉴에서 **새 프로젝트**를 클릭 합니다.  
@@ -40,5 +40,5 @@ ms.locfileid: "68264669"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
--   Azure SQL DB  
+-   Azure SQL Database  
   

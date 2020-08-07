@@ -11,18 +11,18 @@ ms.assetid: 1d196dd6-4322-4c98-bb72-602c57d96134
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 67fb6eeba0a1385d3d764dfa2d8e55f40f34455a
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: f6d6860f1f30c970148555d81a158a7ec98a72f3
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84294054"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863502"
 ---
 # <a name="migrating-oracle-databases-to-sql-server-oracletosql"></a>Oracle 데이터베이스를 SQL Server로 마이그레이션(OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Oracle 용 SSMA (Migration Assistant)는 Oracle 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , AZURE SQL DB 또는 Azure SQL Data Warehouse로 신속 하 게 마이그레이션하는 데 도움이 되는 포괄적인 환경입니다. Oracle 용 SSMA를 사용 하 여 데이터베이스 개체 및 데이터를 검토 하 고, 마이그레이션을 위해 데이터베이스를 평가 하 고, 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , AZURE SQL db 또는 Azure SQL Data Warehouse로 마이그레이션한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , AZURE sql db 또는 Azure SQL Data Warehouse로 데이터를 마이그레이션할 수 있습니다. SYS 및 시스템 Oracle 스키마는 마이그레이션할 수 없습니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Oracle 용 SSMA (Migration Assistant)는 Oracle 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Azure SQL Database 또는 Azure SQL Data Warehouse으로 신속 하 게 마이그레이션하는 데 도움이 되는 포괄적인 환경입니다. Oracle 용 SSMA를 사용 하 여 데이터베이스 개체 및 데이터를 검토 하 고, 마이그레이션을 위해 데이터베이스를 평가 하 고, 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Azure SQL Database 또는 Azure SQL Data Warehouse로 마이그레이션한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Azure SQL Database 또는 Azure SQL Data Warehouse로 데이터를 마이그레이션할 수 있습니다. SYS 및 시스템 Oracle 스키마는 마이그레이션할 수 없습니다.
   
 ## <a name="recommended-migration-process"></a>권장 마이그레이션 프로세스  
-Oracle 데이터베이스에서, Azure SQL DB 또는 Azure SQL Data Warehouse의 개체와 데이터를 성공적으로 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 프로세스를 사용 합니다.
+Oracle 데이터베이스에서, Azure SQL Database 또는 Azure SQL Data Warehouse 개체와 데이터를 성공적으로 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 프로세스를 사용 합니다.
   
 1.  [새 SSMA 프로젝트를 만듭니다](working-with-ssma-projects-oracletosql.md).  
   

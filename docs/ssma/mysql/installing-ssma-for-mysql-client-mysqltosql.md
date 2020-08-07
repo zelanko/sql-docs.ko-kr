@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7dc2cb4216386e13c57d31f121809a604e91b67d
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: d6bda2cad0761dbb53fcc4bb66d29829841f249d
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411611"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87824046"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>MySQL 용 SSMA 클라이언트 설치 (MySQLToSQL)
 
@@ -31,7 +31,7 @@ MySQL 용 SSMA 클라이언트는 다음 작업을 수행 하는 프로그램 �
 
 이 항목에서는 설치 필수 구성 요소 및 MySQL 용 SSMA 클라이언트를 설치 하기 위한 지침을 제공 합니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 MySQL 용 SSMA는 MySQL 4.1 이상 버전 및 2012 이상의 모든 버전 및에서 작동 하도록 설계 되었습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] .
 
@@ -42,7 +42,7 @@ SSMA를 설치 하기 전에 컴퓨터가 다음 요구 사항을 충족 하는�
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 버전 4.7.2 이상 버전입니다. [.NET Framework 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=48882)에서 가져올 수 있습니다.
 - MySQL ODBC 5.1 드라이버 및 마이그레이션하려는 MySQL 데이터베이스에 연결 합니다. Mysql 웹 사이트에서 MySQL을 설치할 수 있습니다. 연결에 대 한 자세한 내용은 [MySQL에 연결 &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)을 참조 하세요.
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터베이스 개체와 데이터를 마이그레이션할 대상 인스턴스를 호스트 하는 컴퓨터에 대 한 액세스 및 충분 한 권한 자세한 내용은 [MySQLToSQL&#41;&#40;SQL Server에 연결 ](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)을 참조 하세요.
-- 프로젝트의 경우 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 데이터베이스 개체와 데이터를 마이그레이션할 인스턴스에 액세스 하 고이에 대 한 충분 한 권한을 부여 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 합니다. 자세한 내용은 [AZURE SQL DB &#40;MySQLToSQL&#41;에 연결 ](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)을 참조 하세요.
+- 프로젝트의 경우 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 데이터베이스 개체와 데이터를 마이그레이션할 인스턴스에 액세스 하 고이에 대 한 충분 한 권한을 부여 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 합니다. 자세한 내용은 [MySQLToSQL&#41;&#40;Azure SQL Database에 연결 ](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)을 참조 하세요.
 - 4gb RAM 권장.
 
 ## <a name="installing-ssma-for-mysql-client"></a>MySQL 용 SSMA 클라이언트 설치
@@ -65,6 +65,6 @@ SSMA 클라이언트를 설치 하려면:
 
 기본 설치 위치는 `C:\Program Files\Microsoft SQL Server Migration Assistant for MySQL`입니다.
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
-- [MySQL 데이터베이스를 SQL Server로 마이그레이션-Azure SQL DB](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+- [MySQL 데이터베이스를 SQL Server로 마이그레이션-Azure SQL Database](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  

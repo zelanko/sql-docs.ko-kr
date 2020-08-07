@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 85143440cc92cdc427be673667e22be6957cbe50
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: ae88f4473414e83a2ffbddee5c47fa40c552115a
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565502"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823368"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>데이터베이스 실험 도우미에서 추적 재생
 
@@ -48,7 +48,7 @@ ms.locfileid: "87565502"
     - **재생 추적 위치**: 추적 재생에 연결 된 추적 파일/xevent을 저장할 경로를 지정 합니다.
 
         > [!NOTE]
-        > Azure SQL Database 또는 Azure SQL Database 관리 되는 인스턴스의 경우 Azure blob 저장소 계정의 SAS URI를 제공 해야 합니다.
+        > Azure SQL Database 또는 Azure SQL Managed Instance의 경우 Azure blob 저장소 계정의 SAS URI를 제공 해야 합니다.
 
 3. **예, 데이터베이스를 수동으로 복원** 했습니다. 확인란을 선택 하 여 데이터베이스를 복원 했는지 확인 합니다.
 

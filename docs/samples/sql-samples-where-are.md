@@ -1,6 +1,6 @@
 ---
 title: Microsoft SQL 샘플 | Microsoft Docs
-description: 샘플 데이터베이스에 대 한 설명서 및 Microsoft SQL 제품 샘플에 대 한 링크입니다.
+description: WideWorldImporters 및 AdventureWorks 샘플 데이터베이스, Azure 샘플 및 템플릿에 대 한 정보 및 Microsoft SQL 제품의 코드 샘플에 대 한 정보를 봅니다.
 ms.date: 04/04/2018
 ms.reviewer: ''
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.technology: samples
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3ea8f0ae2c998b02343ae3a7575325afe2ef6820
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f453fd2395d887a1c0c7c1b4eed755eb96a39294
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718586"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87898630"
 ---
 # <a name="sql-samples"></a>SQL 샘플
 

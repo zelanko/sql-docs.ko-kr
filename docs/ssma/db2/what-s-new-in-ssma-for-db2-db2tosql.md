@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: c9a6d0b5eee611de7009247484dbb9b7591982d5
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 9706f1f2313594ded00cc0fa7e1335bb194b8313
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477255"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862480"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>D b 2 용 SSMA의 새로운 기능 (DB2ToSQL)
 
@@ -152,9 +152,9 @@ D b 2 용 SSMA의 v 8.1 릴리스는 품질 및 변환 메트릭을 개선 하�
 
 D b 2 용 SSMA 릴리스는 품질 및 변환 메트릭을 개선 하기 위해 설계 된 대상 수정 기능을 제공 하도록 향상 되었습니다. 또한이 릴리스는 다음과 같은 새로운 기능을 제공 합니다.
 
-* 대상으로 **Azure SQL Database Managed Instance** 지원. 이제 Azure SQL Database Managed Instance를 대상으로 하는 새 프로젝트를 만들 수 있습니다.
+* 대상으로 **AZURE SQL Managed Instance** 지원. 이제 Azure SQL Managed Instance를 대상으로 하는 새 프로젝트를 만들 수 있습니다.
 
-  ![SQL DB MI 프로젝트](../media/ssma-newproject-sqldbmi.png)
+  ![SQL MI 프로젝트](../media/ssma-newproject-sqldbmi.png)
 
 * 변환 후 **수정 관리자**입니다. [여기](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)에서 자세히 알아보세요.
 

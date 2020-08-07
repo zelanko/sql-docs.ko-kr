@@ -9,20 +9,20 @@ ms.topic: conceptual
 ms.assetid: 11091d95-c488-48c3-891a-743cac94ac93
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: eb6f035b4d597e2b648134c195b698554dc78e12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 74096d97d01e9a700c10c9e4721c1dfca4d54f9b
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68072473"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864690"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>SSMA 프로젝트 작업(SybaseToSQL)
-Sybase ASE (적응 서버 엔터프라이즈) 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 마이그레이션하려면 먼저 ssma 프로젝트를 만듭니다. 프로젝트는 SQL Azure 마이그레이션하려 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 ASE 데이터베이스에 대 한 메타 데이터를 포함 하는 파일입니다 .이 파일의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상 인스턴스에 대 한 메타 데이터, 마이그레이션된 개체 및 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 받는 SQL Azure 또는 연결 정보 SQL Azure, 프로젝트 설정에 대 한 메타 데이터를 포함 하는 파일입니다.  
+Sybase ASE (적응 서버 엔터프라이즈) 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 마이그레이션하려면 먼저 SSMA 프로젝트를 만듭니다. 프로젝트는 SQL Azure 마이그레이션하려는 ASE 데이터베이스에 대 한 메타 데이터를 포함 하는 파일입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .이 파일의 대상 인스턴스에 대 한 메타 데이터, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션된 개체 및 데이터를 받는 SQL Azure 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 정보 SQL Azure, 프로젝트 설정에 대 한 메타 데이터를 포함 하는 파일입니다.  
   
-프로젝트를 열면 또는 SQL Azure에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결이 끊어집니다. 이렇게 하면 오프 라인으로 작업할 수 있습니다. 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다시 연결 하거나 SQL Azure 수 있습니다. 자세한 내용은 [SQL Server에 연결 &#40;sybasetosql&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)  /  [Azure SQL DB에 연결 &#40;sybasetosql&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)을 참조 하세요.  
+프로젝트를 열면 또는 SQL Azure에서 연결이 끊어집니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이렇게 하면 오프 라인으로 작업할 수 있습니다. 에 다시 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 SQL Azure 수 있습니다. 자세한 내용은 [SQL Server에 연결 &#40;sybasetosql&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)  /  [Azure SQL Database &#40;sybasetosql&#41;에 연결 ](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)을 참조 하세요.  
   
 ## <a name="reviewing-default-project-settings"></a>기본 프로젝트 설정 검토  
-SSMA에는 데이터베이스 개체를 변환 및 로드 하 고, 데이터를 마이그레이션하고, ASE 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure와 ssma를 동기화 하기 위한 몇 가지 옵션이 포함 되어 있습니다. 이러한 옵션에 대 한 기본 설정은 대부분의 사용자에 게 적합 합니다. 그러나 새 SSMA 프로젝트를 만들기 전에 옵션을 검토 하 고 원하는 경우 모든 새 프로젝트에 사용 되는 기본값을 변경 해야 합니다.  
+SSMA에는 데이터베이스 개체를 변환 및 로드 하 고, 데이터를 마이그레이션하고, ASE 및 또는 SQL Azure와 SSMA를 동기화 하기 위한 몇 가지 옵션이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이러한 옵션에 대 한 기본 설정은 대부분의 사용자에 게 적합 합니다. 그러나 새 SSMA 프로젝트를 만들기 전에 옵션을 검토 하 고 원하는 경우 모든 새 프로젝트에 사용 되는 기본값을 변경 해야 합니다.  
   
 **기본 프로젝트 설정을 검토 하려면**  
   
@@ -38,19 +38,19 @@ SSMA에는 데이터베이스 개체를 변환 및 로드 하 고, 데이터를 
   
     -   마이그레이션 옵션에 대 한 자세한 내용은 [프로젝트 설정 &#40;마이그레이션&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-migration-sybasetosql.md)을 참조 하세요.  
   
-    -   로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]개체를 로드 하는 옵션에 대 한 자세한 내용은 [프로젝트 설정 &#40;동기화&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-synchronization-sybasetosql.md)를 참조 하세요.  
+    -   로 개체를 로드 하는 옵션에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [프로젝트 설정 &#40;동기화&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-synchronization-sybasetosql.md)를 참조 하세요.  
   
     -   GUI 옵션에 대 한 자세한 내용은 [프로젝트 설정 &#40;GUI&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-gui-sybasetosql.md)를 참조 하세요.  
   
     -   데이터 형식 매핑 설정에 대 한 자세한 내용을 보려면 [프로젝트 설정 &#40;형식 매핑&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)을 클릭 합니다.  
   
-    -   SQL Azure 옵션에 대 한 자세한 내용은 [프로젝트 설정 &#40;AZURE SQL DB &#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md)를 참조 하세요.  
+    -   SQL Azure 옵션에 대 한 자세한 내용은 [프로젝트 설정 &#40;Azure SQL Database &#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md)을 참조 하세요.  
   
     > [!NOTE]  
     > SQL Azure 설정은 프로젝트를 만드는 동안 **SQL Azure로 마이그레이션을** 선택한 경우에만 표시 됩니다.  
   
 ## <a name="creating-new-projects"></a>새 프로젝트 만들기  
-ASE 데이터베이스에서 또는 SQL Azure로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 마이그레이션하려면 먼저 프로젝트를 만들어야 합니다.  
+ASE 데이터베이스에서 또는 SQL Azure로 데이터를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 먼저 프로젝트를 만들어야 합니다.  
   
 **프로젝트를 만들려면**  
   
@@ -62,7 +62,7 @@ ASE 데이터베이스에서 또는 SQL Azure로 [!INCLUDE[ssNoVersion](../../in
   
 3.  **위치** 상자에서 프로젝트에 대 한 폴더를 입력 하거나 선택 합니다.  
   
-4.  **마이그레이션** 드롭다운에서 마이그레이션에 사용 되는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 선택 합니다. 제공되는 옵션은 다음과 같습니다.  
+4.  **마이그레이션** 드롭다운에서 마이그레이션에 사용 되는 대상 버전을 선택 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 제공되는 옵션은 다음과 같습니다.  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
@@ -74,7 +74,7 @@ ASE 데이터베이스에서 또는 SQL Azure로 [!INCLUDE[ssNoVersion](../../in
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
-    -   Azure SQL DB  
+    -   Azure SQL Database  
   
 그런 다음 **확인**을 클릭 합니다.  
   
@@ -101,7 +101,7 @@ ASE 데이터베이스에서 또는 SQL Azure로 [!INCLUDE[ssNoVersion](../../in
         SSMA는 Sybase ASE 스키마를 구문 분석 하 고 메타 데이터를 프로젝트 파일에 저장 합니다.  
   
 ## <a name="opening-projects"></a>프로젝트 열기  
-프로젝트를 열 때 ASE와에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure에서 연결이 끊어집니다. 이렇게 하면 오프 라인으로 작업할 수 있습니다. 메타 데이터를 업데이트 하려면 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure으로 로드 합니다. 데이터를 마이그레이션하려면 ASE 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure에 다시 연결 해야 합니다.  
+프로젝트를 열 때 ASE와에서 또는 SQL Azure에서 연결이 끊어집니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이렇게 하면 오프 라인으로 작업할 수 있습니다. 메타 데이터를 업데이트 하려면 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure으로 로드 합니다. 데이터를 마이그레이션하려면 ASE 및 또는 SQL Azure에 다시 연결 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **프로젝트를 열려면**  
   
@@ -113,14 +113,14 @@ ASE 데이터베이스에서 또는 SQL Azure로 [!INCLUDE[ssNoVersion](../../in
   
 2.  ASE에 다시 연결 하려면 **파일** 메뉴에서 **Sybase에 다시 연결**을 선택 합니다.  
   
-3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure에 다시 연결 하려면 **파일** 메뉴에서 **다시 연결** / 을 선택 하 여**SQL Azure에 다시 연결**SQL Server 합니다.  
+3.  또는 SQL Azure에 다시 연결 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **파일** 메뉴에서 **다시 연결**을 선택 하 여  /  **SQL Azure에 다시 연결**SQL Server 합니다.  
   
 ## <a name="next-step"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계는 [SYBASE ASE에 연결](connecting-to-sybase-ase-sybasetosql.md)하는 것입니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[Sybase ASE 데이터베이스를 SQL Server로 마이그레이션-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Sybase ASE 데이터베이스를 SQL Server-Azure SQL Database &#40;SybaseToSQL&#41;로 마이그레이션](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
 [Sybase ASE &#40;SybaseToSQL&#41;에 연결](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)  
 [SQL Server &#40;SybaseToSQL&#41;에 연결](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)  
-[Azure SQL DB &#40;SybaseToSQL&#41;에 연결](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
+[Azure SQL Database &#40;SybaseToSQL&#41;에 연결](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
   

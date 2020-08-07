@@ -20,12 +20,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 04f0346e15043c105030b94eb96633e1f31b64d9
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 30c024fb1d1298e0ba2f2e4e49b2acf04d9b7619
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627305"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823898"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm_resource_governor_resource_pools_history_ex (Transact-sql)
 
@@ -35,15 +35,15 @@ Azure SQL Database에 대 한 리소스 풀 통계의 마지막 32 분 (128 개 
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**pool_id**|int|리소스 풀의 ID입니다. Null을 허용하지 않습니다.
+|**pool_id**|Int|리소스 풀의 ID입니다. Null을 허용하지 않습니다.
 |**name**|sysname|리소스 풀의 이름입니다. Null을 허용하지 않습니다.|
 |**snapshot_time**|datetime2|리소스 풀 통계 스냅숏의 날짜/시간|
-|**duration_ms**|int|현재 스냅숏과 이전 스냅숏 간의 지속 시간|
+|**duration_ms**|Int|현재 스냅숏과 이전 스냅숏 간의 지속 시간|
 |**statistics_start_time**|datetime2|이 풀에 대해 통계가 다시 설정된 시간입니다. Null을 허용하지 않습니다.|
-|**active_session_count**|int|현재 스냅숏의 총 활성 세션|
-|**active_worker_count**|int|현재 스냅숏의 총 작업자|
-|**delta_cpu_usage_ms**|int|마지막 스냅숏 이후 CPU 사용량 (밀리초)입니다. Null을 허용하지 않습니다.|
-|**delta_cpu_usage_preemptive_ms**|int|마지막 스냅숏 이후 SQL CPU RG에 의해 제어 되지 않는 선점형 win32 호출|
+|**active_session_count**|Int|현재 스냅숏의 총 활성 세션|
+|**active_worker_count**|Int|현재 스냅숏의 총 작업자|
+|**delta_cpu_usage_ms**|Int|마지막 스냅숏 이후 CPU 사용량 (밀리초)입니다. Null을 허용하지 않습니다.|
+|**delta_cpu_usage_preemptive_ms**|Int|마지막 스냅숏 이후 SQL CPU RG에 의해 제어 되지 않는 선점형 win32 호출|
 |**used_data_space_kb**|bigint|사용자 풀과 연결 된 사용자 데이터베이스에 사용 되는 총 공간|
 |**allocated_disk_space_kb**|bigint|사용자 풀과 연결 된의 사용자 데이터베이스에 대 한 총 데이터 파일 크기|
 |**target_memory_kb**|bigint|리소스 풀이 사용하려는 대상 메모리 양((KB)입니다. 현재 설정 및 서버 상태를 기반으로 합니다. Null을 허용하지 않습니다.|
@@ -53,37 +53,37 @@ Azure SQL Database에 대 한 리소스 풀 통계의 마지막 32 분 (128 개 
 |**active_memgrant_count**|bigint|현재 메모리 부여의 수입니다. Null을 허용하지 않습니다.|
 |**active_memgrant_kb**|bigint|현재 메모리 부여의 합계(KB)입니다. Null을 허용하지 않습니다.|
 |**used_memgrant_kb**|bigint|메모리 부여에서 현재 사용된(빼앗긴) 총 메모리(KB)입니다. Null을 허용하지 않습니다.|
-|**delta_memgrant_timeout_count**|int|이 기간에이 리소스 풀의 메모리 부여 시간 초과 수입니다. Null을 허용하지 않습니다.|
-|**delta_memgrant_waiter_count**|int|현재 메모리 부여에서 대기 중인 쿼리 수입니다. Null을 허용하지 않습니다.|
-|**delta_out_of_memory_count**|int|마지막 스냅숏 이후 풀에서 실패 한 메모리 할당의 수입니다. Null을 허용하지 않습니다.|
-|**delta_read_io_queued**|int|마지막 스냅숏 이후 큐에 넣은 총 읽기 Io입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다.|
-|**delta_read_io_issued**|int|마지막 스냅숏 이후 발급 된 총 읽기 Io입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다.|
-|**delta_read_io_completed**|int|마지막 스냅숏 이후 완료 된 총 읽기 Io입니다. Null을 허용하지 않습니다.|
-|**delta_read_io_throttled**|int|스냅숏 이후 제한 된 총 읽기 Io입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다.|
+|**delta_memgrant_timeout_count**|Int|이 기간에이 리소스 풀의 메모리 부여 시간 초과 수입니다. Null을 허용하지 않습니다.|
+|**delta_memgrant_waiter_count**|Int|현재 메모리 부여에서 대기 중인 쿼리 수입니다. Null을 허용하지 않습니다.|
+|**delta_out_of_memory_count**|Int|마지막 스냅숏 이후 풀에서 실패 한 메모리 할당의 수입니다. Null을 허용하지 않습니다.|
+|**delta_read_io_queued**|Int|마지막 스냅숏 이후 큐에 넣은 총 읽기 Io입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다.|
+|**delta_read_io_issued**|Int|마지막 스냅숏 이후 발급 된 총 읽기 Io입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다.|
+|**delta_read_io_completed**|Int|마지막 스냅숏 이후 완료 된 총 읽기 Io입니다. Null을 허용하지 않습니다.|
+|**delta_read_io_throttled**|Int|스냅숏 이후 제한 된 총 읽기 Io입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다.|
 |**delta_read_bytes**|bigint|마지막 스냅숏 이후 읽은 총 바이트 수입니다. Null을 허용하지 않습니다.|
-|**delta_read_io_stall_ms**|int|마지막 스냅숏 이후 읽기 IO 도착 및 완료 사이의 총 시간 (밀리초)입니다. Null을 허용하지 않습니다.|
-|**delta_read_io_stall_queued_ms**|int|마지막 스냅숏 이후 읽기 IO 도착 및 문제 사이의 총 시간 (밀리초)입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다. 0이 아닌 delta_read_io_stall_queued_ms는 IO가 RG의 영향을 받는 것을 의미 합니다.|
-|**delta_write_io_queued**|int|마지막 스냅숏 이후 큐에 넣은 총 쓰기 Io입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다.|
-|**delta_write_io_issued**|int|마지막 스냅숏 이후 실행 된 총 쓰기 Io입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다.|
-|**delta_write_io_completed**|int|마지막 스냅숏 이후 완료 된 총 쓰기 Io입니다. Null을 허용하지 않습니다.|
-|**delta_write_io_throttled**|int|마지막 스냅숏 이후 제한 된 총 쓰기 Io입니다. Null을 허용하지 않습니다.|
+|**delta_read_io_stall_ms**|Int|마지막 스냅숏 이후 읽기 IO 도착 및 완료 사이의 총 시간 (밀리초)입니다. Null을 허용하지 않습니다.|
+|**delta_read_io_stall_queued_ms**|Int|마지막 스냅숏 이후 읽기 IO 도착 및 문제 사이의 총 시간 (밀리초)입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다. 0이 아닌 delta_read_io_stall_queued_ms는 IO가 RG의 영향을 받는 것을 의미 합니다.|
+|**delta_write_io_queued**|Int|마지막 스냅숏 이후 큐에 넣은 총 쓰기 Io입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다.|
+|**delta_write_io_issued**|Int|마지막 스냅숏 이후 실행 된 총 쓰기 Io입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다.|
+|**delta_write_io_completed**|Int|마지막 스냅숏 이후 완료 된 총 쓰기 Io입니다. Null을 허용하지 않습니다.|
+|**delta_write_io_throttled**|Int|마지막 스냅숏 이후 제한 된 총 쓰기 Io입니다. Null을 허용하지 않습니다.|
 |**delta_write_bytes**|bigint|마지막 스냅숏 이후 작성 된 총 바이트 수입니다. Null을 허용하지 않습니다.|
-|**delta_write_io_stall_ms**|int|마지막 스냅숏 이후 쓰기 IO 도착 및 완료 사이의 총 시간 (밀리초)입니다. Null을 허용하지 않습니다.|
-|**delta_write_io_stall_queued_ms**|int|마지막 스냅숏 이후 쓰기 IO 도착과 발급 사이의 총 시간 (밀리초)입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다.|
-|**delta_io_issue_delay_ms**|int|마지막 스냅숏 후의 예약 된 문제와 실제 IO 문제 사이의 총 시간 (밀리초)입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다.|
-|**max_iops_per_volume**|int|이 풀에 대 한 디스크 볼륨 설정 당 최대 IOPS (초당 IO) 수입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다.|
+|**delta_write_io_stall_ms**|Int|마지막 스냅숏 이후 쓰기 IO 도착 및 완료 사이의 총 시간 (밀리초)입니다. Null을 허용하지 않습니다.|
+|**delta_write_io_stall_queued_ms**|Int|마지막 스냅숏 이후 쓰기 IO 도착과 발급 사이의 총 시간 (밀리초)입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다.|
+|**delta_io_issue_delay_ms**|Int|마지막 스냅숏 후의 예약 된 문제와 실제 IO 문제 사이의 총 시간 (밀리초)입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다.|
+|**max_iops_per_volume**|Int|이 풀에 대 한 디스크 볼륨 설정 당 최대 IOPS (초당 IO) 수입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다.|
 |**max_memory_kb**|bigint|리소스 풀에 있을 수 있는 최대 메모리 양((KB)입니다. 현재 설정 및 서버 상태를 기반으로 합니다. Null을 허용하지 않습니다.
 |**max_log_rate_kb**|bigint|리소스 풀 수준에서 최대 로그 속도 (초당 킬로바이트 바이트)입니다.|
 |**max_data_space_kb**|bigint|이 탄력적 풀에 대 한 최대 탄력적 풀 저장소 제한 설정 (킬로바이트)입니다.|
-|**max_session**|int|풀에 대 한 세션 제한|
-|**max_worker**|int|풀에 대 한 작업자 제한|
-|**min_cpu_percent**|int|CPU 충돌이 있을 때 리소스 풀의 모든 요청에 대해 보장되는 평균 CPU 대역폭에 대한 현재 구성입니다. Null을 허용하지 않습니다.|
-|**max_cpu_percent**|int|CPU 충돌이 있을 때 리소스 풀의 모든 요청에 허용되는 최대 평균 CPU 대역폭에 대한 현재 구성입니다. Null을 허용하지 않습니다.|
-|**cap_cpu_percent**|int|리소스 풀의 모든 요청에서 받을 CPU 대역폭의 하드 캡입니다. 최대 CPU 대역폭 수준을 지정된 수준으로 제한합니다. 허용되는 값의 범위는 1에서 100까지입니다. Null을 허용하지 않습니다.|
+|**max_session**|Int|풀에 대 한 세션 제한|
+|**max_worker**|Int|풀에 대 한 작업자 제한|
+|**min_cpu_percent**|Int|CPU 충돌이 있을 때 리소스 풀의 모든 요청에 대해 보장되는 평균 CPU 대역폭에 대한 현재 구성입니다. Null을 허용하지 않습니다.|
+|**max_cpu_percent**|Int|CPU 충돌이 있을 때 리소스 풀의 모든 요청에 허용되는 최대 평균 CPU 대역폭에 대한 현재 구성입니다. Null을 허용하지 않습니다.|
+|**cap_cpu_percent**|Int|리소스 풀의 모든 요청에서 받을 CPU 대역폭의 하드 캡입니다. 최대 CPU 대역폭 수준을 지정된 수준으로 제한합니다. 허용되는 값의 범위는 1에서 100까지입니다. Null을 허용하지 않습니다.|
 |**min_vcores**|decimal (5, 2)|CPU 충돌이 있을 때 리소스 풀의 모든 요청에 대해 보장되는 평균 CPU 대역폭에 대한 현재 구성입니다.  VCores 단위|
 |**max_vcores**|decimal (5, 2)|CPU 충돌이 있을 때 리소스 풀의 모든 요청에 허용되는 최대 평균 CPU 대역폭에 대한 현재 구성입니다.  VCores 단위|
 |**cap_vcores**|decimal (5, 2)|리소스 풀의 모든 요청에서 받을 CPU 대역폭의 하드 캡입니다.  VCores의 단위|
-|**instance_cpu_count**|int|인스턴스에 대해 구성 된 CPU 수|
+|**instance_cpu_count**|Int|인스턴스에 대해 구성 된 CPU 수|
 |**instance_cpu_percent**|decimal (5, 2)|인스턴스에 대해 구성 된 CPU 백분율|
 |**instance_vcores**|decimal (5, 2)|인스턴스에 대해 구성 된 vCores 수|
 |**delta_log_bytes_used**|decimal (5, 2)|마지막 스냅숏 이후 풀 수준에서 총 로그 생성 (바이트)|
@@ -94,12 +94,12 @@ Azure SQL Database에 대 한 리소스 풀 통계의 마지막 32 분 (128 개 
 |**avg_data_io_percent**|decimal (5, 2)|풀 한도에 따른 백분율로 평균 I/O 사용률|
 |**avg_log_write_percent**|decimal (5, 2)|풀 한도의 백분율로 평균 쓰기 리소스 사용률|
 |**avg_storage_percent**|decimal (5, 2)|풀의 스토리지 한도의 백분율로 평균 스토리지 사용률|
-|**avg_allocated_storage_percent**|decimal (5, 2)|탄력적 풀의 모든 데이터베이스에서 할당 한 데이터 공간의 비율입니다. 탄력적 풀의 데이터 최대 크기에 할당 된 데이터 공간의 비율입니다. 자세한 내용은 SQL DB의 파일 공간 관리를 참조 하세요.|
+|**avg_allocated_storage_percent**|decimal (5, 2)|탄력적 풀의 모든 데이터베이스에서 할당 한 데이터 공간의 비율입니다. 탄력적 풀의 데이터 최대 크기에 할당 된 데이터 공간의 비율입니다. 자세한 내용은 SQL Database 파일 공간 관리를 참조 하세요.|
 |**max_worker_percent**|decimal (5, 2)|풀의 한도에 따른 백분율로 최대 동시 작업자(요청)|
 |**max_session_percent**|decimal (5, 2)|풀의 한도에 따른 백분율로 최대 동시 세션|
 |||
 
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 
 이 보기에는 VIEW SERVER STATE 권한이 필요 합니다.
 

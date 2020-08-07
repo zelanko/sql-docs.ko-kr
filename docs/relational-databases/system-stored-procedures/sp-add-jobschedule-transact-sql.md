@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7c7f644b94c405fa4072ecd7d7c448f6ea865404
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f69b827981a53024dbf22d4b3e3d2f64fd4b720f
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879970"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865122"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85879970"
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+  > [AZURE SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 대부분의 SQL Server 에이전트 기능은 현재 지원 되지 않습니다. 자세한 내용은 [AZURE sql Managed Instance SQL Server에서 t-sql 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) 을 참조 하세요.
 
 ## <a name="syntax"></a>구문  
   
@@ -106,9 +106,9 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 |값|설명(단위)|  
 |-----------|--------------------------|  
-|**1**|첫째|  
-|**2**|Second|  
-|**4**|셋째|  
+|**1**|First|  
+|**2**|초|  
+|**4**|세 번째|  
 |**8**|넷째|  
 |**16**|마지막|  
   

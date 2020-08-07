@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: c65c19ee3b95303afb0e1ae0a950efe548c8f0af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8941c243b6741b42b7c3e628305431812ad3f8d7
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083531"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864840"
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>변환을 위해 SAP ASE 데이터베이스 개체 평가 (SybaseToSQL)
-개체를 로드 하 고 또는 Azure SQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 데이터를 마이그레이션하기 전에 마이그레이션의 복잡도와 소요 시간을 결정 해야 합니다. SSMA는로 [!INCLUDE[tsql](../../includes/tsql-md.md)]성공적으로 변환 되는 개체 및 프로시저의 비율을 보여 주는 평가 보고서를 만들 수 있습니다. SSMA를 사용 하면 변환 오류를 일으킬 수 있는 특정 문제를 확인할 수도 있습니다.  
+개체를 로드 하 고 또는 Azure SQL로 데이터를 마이그레이션하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션의 복잡도와 소요 시간을 결정 해야 합니다. SSMA는로 성공적으로 변환 되는 개체 및 프로시저의 비율을 보여 주는 평가 보고서를 만들 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . SSMA를 사용 하면 변환 오류를 일으킬 수 있는 특정 문제를 확인할 수도 있습니다.  
   
 ## <a name="create-assessment-reports"></a>평가 보고서 만들기  
-이 평가 보고서를 만들 때 SSMA는 선택한 SAP 적응 서버 엔터프라이즈 (ASE) 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL 구문으로 변환한 다음 결과를 표시 합니다.  
+이 평가 보고서를 만들 때 SSMA는 선택한 SAP 적응 서버 엔터프라이즈 (ASE) 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 AZURE SQL 구문으로 변환한 다음 결과를 표시 합니다.  
   
 **평가 보고서를 만들려면**  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68083531"
   
     SSMA는 창의 아래쪽에 있는 상태 표시줄에 진행률을 표시 합니다. 출력 창이 표시 되 면 관련 메시지도 표시 됩니다.  
   
-    평가가 완료 되 면 Sybase: 평가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보고서 창에 대 한 Migration Assistant 표시 됩니다.  
+    평가가 완료 되 면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sybase: 평가 보고서 창에 대 한 Migration Assistant 표시 됩니다.  
   
 ## <a name="use-assessment-reports"></a>평가 보고서 사용  
 평가 보고서 창에는 다음과 같은 세 개의 창이 있습니다.  
@@ -71,11 +71,11 @@ ms.locfileid: "68083531"
   
     -   ASE에서 ASE 개체를 변경 하 여 문제가 있는 코드를 제거 하거나 수정할 수 있습니다. 업데이트 된 코드를 SSMA에 로드 하려면 메타 데이터를 업데이트 해야 합니다. 자세한 내용은 [SYBASE ASE &#40;SybaseToSQL&#41;에 연결 ](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)을 참조 하세요.  
   
-    -   마이그레이션할 때 개체를 제외할 수 있습니다. 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure sql 메타 데이터 탐색기 및 Sybase 메타 데이터 탐색기에서 또는 azure sql로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 로드 하기 전에 항목 옆에 있는 확인란의 선택을 취소 하 고 ASE에서 데이터를 마이그레이션합니다.
+    -   마이그레이션할 때 개체를 제외할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]또는 AZURE Sql 메타 데이터 탐색기 및 Sybase 메타 데이터 탐색기에서 또는 AZURE sql로 개체를 로드 하기 전에 항목 옆에 있는 확인란의 선택을 취소 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고 ASE에서 데이터를 마이그레이션합니다.
   
 ## <a name="next-steps"></a>다음 단계  
 [SAP ASE 데이터베이스 개체 &#40;SybaseToSQL&#41;변환](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>참고 항목  
-[SAP ASE 데이터베이스를 SQL Server로 마이그레이션-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[SAP ASE 데이터베이스를 SQL Server-Azure SQL Database &#40;SybaseToSQL&#41;로 마이그레이션](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

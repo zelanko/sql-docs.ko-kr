@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 777d0b497bae5e52c49fb95e1e7ff3e7387ea676
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: d636d13512993d64a9abd88e61412f76790c7590
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834774"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823761"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 설치 및 구성
 
@@ -130,16 +130,16 @@ ms.locfileid: "85834774"
   
 3.  **데이터베이스 서버** 페이지에서 SQL Server 인스턴스를 지정 합니다. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]Managed Instance SQL Server에 대 한 지원을 추가 합니다. **SQL Server 인스턴스** 값을 Azure SQL Database 관리 되는 인스턴스의 호스트로 설정 합니다. 예: `xxxxxx.xxxxxx.database.windows.net`
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]Managed Instance SQL Server에 대 한 지원을 추가 합니다. **SQL Server 인스턴스** 값을 관리 되는 인스턴스의 호스트로 설정 합니다. 예: `xxxxxx.xxxxxx.database.windows.net`.
 
 4. **인증 유형을** 선택한 다음 **연결 테스트** 를 클릭 하 여 선택한 인증 유형에 대 한 자격 증명을 사용 하 여 데이터베이스에 연결할 수 있는지 확인 합니다. **다음**을 클릭합니다.
 
-    >의 경우 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] 관리 되는 인스턴스에 Azure SQL Database 연결 하려면 다음 인증 유형 중 하나를 사용 합니다.
+    >의 경우 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] 관리 되는 인스턴스에 연결 하려면 다음 인증 유형 중 하나를 사용 합니다.
     >
     >- Azure Active Directory 통합 인증: **현재 사용자 – Active Directory 통합**
     >- SQL Server 인증: **SQL Server 계정**.
     >
-    >Azure SQL Database 관리 되는 인스턴스에서 사용자는 고정 서버 역할의 멤버 여야 합니다 `sysadmin` .
+    >SQL Managed Instance에서 사용자는 고정 서버 역할의 멤버 여야 합니다 `sysadmin` .
 
     > [!NOTE]  
     >  인증 유형으로 **현재 사용자 통합 보안** 을 선택 하는 경우 **사용자 이름** 상자는 읽기 전용 이며 컴퓨터에 로그온 한 Windows 사용자 계정의 이름을 표시 합니다. Azure Virtual Machine(VM)에서 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)](을)를 실행하는 경우 **사용자 이름** 상자에 VM 이름과 VM의 로컬 관리자 계정에 대한 사용자 이름이 표시됩니다. 
