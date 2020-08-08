@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3fe4b59a5131838357d7f58e5333e0ba6b9c80f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 66ec484ca6bd442f936eb852db48f34c89099d11
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103229"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935982"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>MySQL에 연결(MySQLToSQL)
 **Mysql에 연결** 대화 상자를 사용 하 여 마이그레이션하려는 mysql 데이터베이스에 연결 합니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "68103229"
 이 대화 상자에 액세스 하려면 **파일** 메뉴에서 **MySQL에 연결**을 선택 합니다. 이전에 연결한 경우 명령은 **MySQL에 다시 연결**됩니다.  
   
 ## <a name="options"></a>옵션  
-**공급자**  
+**공급 기업**  
   
 사용 가능한 MySQL 공급자는 MySQL ODBC 5.1 드라이버 (신뢰할 수 있음)입니다.  
   

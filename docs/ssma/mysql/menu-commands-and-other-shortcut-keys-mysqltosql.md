@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 04450495d85eed7ab198090afcc2a4ac9cffb4c0
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: fc847eecec3f84cda54e2820a444036a016ec9a8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293604"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935272"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>메뉴 명령 및 기타 바로 가기 키(MySQLToSQL)
 다음 섹션에서는 메뉴 명령에 액세스 하는 바로 가기 키와 MySQL 용 SSMA 응용 프로그램의 다양 한 대화 상자에서 사용 되는 기타 바로 가기 키에 대해 설명 합니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "84293604"
 |보고서를 만듭니다.|ALT + T + C|  
 |스키마를 변환 합니다.|ALT + T + N 또는 CTRL + R|  
 |MySQL 데이터베이스에서 새로 고칩니다.|Alt+T+R|  
-|SQL Server 또는 SQL Azure 데이터베이스와 동기화 합니다.|ALT + T + S|  
+|SQL Server 또는 Azure SQL Database와 동기화 합니다.|ALT + T + S|  
 |스크립트로 저장 합니다.|ALT + T + A|  
 |데이터를 마이그레이션합니다.|Alt+T+M|  
 |현재 작업을 중지 합니다.|ALT + T + O|  

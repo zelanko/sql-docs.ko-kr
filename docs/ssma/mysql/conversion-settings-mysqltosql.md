@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: debdd549dc010f7be6b9d9b37a4caf649d4e106a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c34a379f2bd4fd47c31a4b664e8f56cc1ffba2be
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103119"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935827"
 ---
 # <a name="conversion-settings-mysqltosql"></a>변환 설정(MySQLToSQL)
 사용자는 **' 설정 '** 탭에서 노드 수준 설정을 지정할 수 있습니다. 이 탭은 다음 메타 베이스 노드에서 사용할 수 있습니다.  

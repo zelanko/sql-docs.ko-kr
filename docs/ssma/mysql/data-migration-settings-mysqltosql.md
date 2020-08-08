@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c2c903ef29ab1a103bc9aa4f7b061e83ee7f2a95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c8e673a4a12952303cb9b355698ed15742c9a704
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67896367"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935639"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>데이터 마이그레이션 설정(MySQLToSQL)
   

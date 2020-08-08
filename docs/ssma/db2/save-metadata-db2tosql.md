@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9a76083e-4902-449e-b125-7e9259fc37f7
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 8fb0c8849ce56fd424a93234d8878b19e19b5bdd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 6293a11055aeb7e5cd5d68ae936365334234e100
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060104"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936442"
 ---
 # <a name="save-metadata-db2tosql"></a>메타 데이터 저장 (DB2ToSQL)
 **메타 데이터 저장** 대화 상자에 메타 데이터를 저장 하기 전에 ssma 프로젝트에 로드 하 라는 메시지가 표시 됩니다. 이를 통해 오프 라인으로 사용 하 고 기술 지원 담당자와 같은 다른 사람에 게 보낼 수 있는 전체 프로젝트 파일을 사용할 수 있습니다.  
@@ -33,7 +33,7 @@ SSMA는 필요에 따라 메타 데이터를 프로젝트에 로드 합니다. �
 **모두 선택**  
 나열 된 모든 데이터베이스를 선택 합니다.  
   
-**해제**  
+**지우기**  
 메타 데이터가 누락 된 모든 데이터베이스의 확인란을 선택 취소 합니다. 메타 데이터가 로드 된 경우에는이 확인란의 선택을 취소할 수 없습니다.  
   
 **저장**  

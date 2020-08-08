@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Connecting to SQL Azure, SQL Azure permissions
 - Connecting to SQL Azure, synchronization
 ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: da3e0d05abf24bdd7100769ecfbb597e2953a9d5
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8e288b91c92d8d086d5b066f95868fa0fa733bb9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822562"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935962"
 ---
 # <a name="connecting-to-azure-sql-database-mysqltosql"></a>Azure SQL Database에 연결 (MySQLToSQL)
 MySQL 데이터베이스를 SQL Azure로 마이그레이션하려면 SQL Azure의 대상 인스턴스에 연결 해야 합니다. 연결할 때 SSMA는 SQL Azure 인스턴스의 모든 데이터베이스에 대 한 메타 데이터를 가져오고 SQL Azure 메타 데이터 탐색기에 데이터베이스 메타 데이터를 표시 합니다. SSMA는 연결 된 SQL Azure의 인스턴스에 대 한 정보를 저장 하지만 암호를 저장 하지는 않습니다.  
@@ -63,7 +63,7 @@ MySQL 데이터베이스 개체를 SQL Azure 구문으로 변환 하기 전에 M
 > MySQL 용 SSMA는 SQL Azure의 **master** 데이터베이스에 대 한 연결을 지원 하지 않습니다.  
   
 ## <a name="synchronizing-sql-azure-metadata"></a>SQL Azure 메타 데이터 동기화  
-SQL Azure 데이터베이스에 대 한 메타 데이터는 자동으로 업데이트 되지 않습니다. SQL Azure 메타 데이터 탐색기의 메타 데이터는 SQL Azure에 처음 연결 하거나 마지막으로 메타 데이터를 마지막으로 업데이트 한 경우 메타 데이터의 스냅숏입니다. 모든 데이터베이스 또는 단일 데이터베이스 또는 데이터베이스 개체에 대 한 메타 데이터를 수동으로 업데이트할 수 있습니다.  
+Azure SQL Database 데이터베이스에 대 한 메타 데이터는 자동으로 업데이트 되지 않습니다. SQL Azure 메타 데이터 탐색기의 메타 데이터는 SQL Azure에 처음 연결 하거나 마지막으로 메타 데이터를 마지막으로 업데이트 한 경우 메타 데이터의 스냅숏입니다. 모든 데이터베이스 또는 단일 데이터베이스 또는 데이터베이스 개체에 대 한 메타 데이터를 수동으로 업데이트할 수 있습니다.  
   
 **메타 데이터를 동기화 하려면**  
   
@@ -78,7 +78,7 @@ SQL Azure 데이터베이스에 대 한 메타 데이터는 자동으로 업데�
 ## <a name="next-step"></a>다음 단계  
 마이그레이션의 다음 단계는 프로젝트 요구 사항에 따라 달라 집니다.  
   
--   MySQL 스키마와 SQL Azure 데이터베이스 및 스키마 간의 매핑을 사용자 지정 하려면 [SQL Server 스키마에 Mysql 데이터베이스 매핑 &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md) 을 참조 하세요.  
+-   MySQL 스키마와 Azure SQL Database 간의 매핑을 사용자 지정 하려면 [SQL Server 스키마에 Mysql 데이터베이스 매핑 &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md) 을 참조 하세요.  
   
 -   프로젝트에 대 한 구성 옵션을 사용자 지정 하려면 [&#40;MySQLToSQL&#41;프로젝트 옵션 설정](../../ssma/mysql/setting-project-options-mysqltosql.md) 을 참조 하세요.  
   

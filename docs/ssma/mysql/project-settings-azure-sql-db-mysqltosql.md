@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 8c06420a-533b-4de0-948d-a0c6b368c544
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 4125f73ec34418261d0308221c448cae1fb06298
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 9deb8a87399f1934f1d105ad31a2c51540acddd9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862314"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935234"
 ---
 # <a name="project-settings-azure-sql-database-mysqltosql"></a>프로젝트 설정 (Azure SQL Database) (MySQLToSQL)
-SQL Azure 프로젝트 설정을 사용 하 여 연결 대화 상자에서 추가할 SQL Azure 데이터베이스 접미사를 구성 하 고 SQL Azure 연결에 하트 비트 메커니즘을 구현할 수도 있습니다.  
+SQL Azure 프로젝트 설정을 사용 하 여 연결 대화 상자에서 추가할 Azure SQL Database 접미사를 구성 하 고 SQL Azure 연결에 하트 비트 메커니즘을 구현할 수도 있습니다.  
   
 SQL Azure 창은 **프로젝트 설정** 및 **기본 프로젝트 설정** 대화 상자에서 사용할 수 있습니다.  
   

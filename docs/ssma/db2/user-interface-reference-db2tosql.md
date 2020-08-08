@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 29b7aa1a0e7aca34bee82180854a3b2ca63cafb4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c01e871490f5362e610339c6626252c700eea3f6
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394551"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936582"
 ---
 # <a name="user-interface-reference-db2tosql"></a>사용자 인터페이스 참조 (DB2ToSQL)
 이 섹션에는 d b 2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 용 SSMA (Migration Assistant)에 대 한 도움말 항목이 포함 되어 있습니다.  

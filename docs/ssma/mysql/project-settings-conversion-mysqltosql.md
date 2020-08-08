@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 7a8ad0b6c4c1e836a3eacca1f497d7ed229dbfc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 378bc98dd24eff758e6f4e368f4e97e211d1f2a8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908875"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935222"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>프로젝트 설정(변환)(MySQLToSQL)
 **프로젝트 설정** 대화 상자의 변환 페이지에는 Ssma가 MySQL 구문을 SQL Server 또는 SQL Azure 구문으로 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다.  

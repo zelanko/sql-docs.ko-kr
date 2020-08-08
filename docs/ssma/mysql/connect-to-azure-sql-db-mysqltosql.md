@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 6cf82511b7819b6c7b0451facc85ef35dc8cf9fc
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 7180e123572016661fa4de4a2b38a12f8480d89c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823796"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935992"
 ---
 # <a name="connect-to-azure-sql-database-mysqltosql"></a>Azure SQL Database에 연결 (MySQLToSQL)
-SQL Azure 연결 대화 상자를 사용 하 여 마이그레이션하려는 SQL Azure 데이터베이스에 연결할 수 있습니다.  
+SQL Azure 연결 대화 상자를 사용 하 여 마이그레이션하려는 Azure SQL Database 데이터베이스에 연결할 수 있습니다.  
   
 이 대화 상자에 액세스 하려면 **파일** 메뉴에서 **SQL Azure에 연결**을 선택 합니다. 이전에 연결한 경우 명령이 **SQL Azure에 다시 연결 됩니다.**  
   
@@ -26,7 +26,7 @@ SQL Azure 연결 대화 상자를 사용 하 여 마이그레이션하려는 SQL
   
 SQL Azure에 연결 하기 위한 서버 이름을 선택 하거나 입력 합니다.  
   
-**Database**  
+**데이터베이스**  
   
 을 선택 하 고 데이터베이스 이름을 입력 하거나 **검색** 합니다.  
   
@@ -35,7 +35,7 @@ SQL Azure에 연결 하기 위한 서버 이름을 선택 하거나 입력 합�
   
 **사용자 이름**  
   
-SQL Azure 데이터베이스에 연결 하는 데 사용할 사용자 이름을 입력 합니다.  
+SSMA에서 Azure SQL Database에 연결 하는 데 사용할 사용자 이름을 입력 합니다.  
   
 **암호**  
   

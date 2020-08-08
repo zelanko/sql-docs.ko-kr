@@ -10,13 +10,14 @@ helpviewer_keywords:
 - Password management, importing or exporting encrypted password
 - Password management, securing password
 ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: fc06af58a8e669b836a88490ebcbc7c971ca2f4f
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 55e387cf1f45f557b2e1bbbdce8a119bba03f6f8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053559"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935292"
 ---
 # <a name="managing-passwords-mysqltosql"></a>암호 관리(MySQLToSQL)
 이 문서에서는 데이터베이스 암호를 보호 하는 방법과 서버 간에 데이터베이스를 가져오거나 내보내는 절차에 대해 설명 합니다.

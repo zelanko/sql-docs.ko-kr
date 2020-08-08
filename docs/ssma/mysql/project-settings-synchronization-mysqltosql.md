@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c4437f76a926e84ffe3592042f9d29b50f3eabf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: cbf4252f9d9fb71fe98755dfbba748ca15ca5657
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908846"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935192"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>프로젝트 설정(동기화)(MySQLToSQL)
 동기화 **프로젝트 설정을** 사용 하 여 MySQL 데이터베이스 개체가 SQL Server database 개체와 동기화 되는 방법을 구성할 수 있습니다.  

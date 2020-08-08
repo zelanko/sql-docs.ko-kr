@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Mapping, Modifying target database and schema
 - Mapping, reverting to default database and schema
 ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 5fa0585a82a7c96fac8992b82f631364c27d3b87
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ded91465a2a9c7b5a0e8ddcdc219b2af5a84395e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823638"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935367"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>MySQL 데이터베이스를 SQL Server 스키마에 매핑(MySQLToSQL)
-기본적으로, MySQL 용 SSMA는 MySQL 스키마의 모든 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스키마에 대해 명명 된 또는 SQL Azure 데이터베이스로 마이그레이션합니다. 그러나 MySQL 스키마와 또는 SQL Azure 데이터베이스 간의 매핑을 사용자 지정할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+기본적으로, MySQL 용 SSMA는 MySQL 스키마의 모든 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스키마에 대해 명명 된 또는 Azure SQL Database 마이그레이션합니다. 그러나 MySQL 스키마와 Azure SQL Database 간의 매핑을 사용자 지정할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="mysql-and-sql-server-or-sql-azure-schemas"></a>MySQL 및 SQL Server 또는 SQL Azure 스키마  
 스키마의 MySQL 개념은 데이터베이스의 SQL Server 개념과 스키마 중 하나에 매핑됩니다. SSMA는 데이터베이스와 스키마의 SQL Server 조합을 스키마로 나타냅니다.  

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 8006f9a0-394d-4238-8dc5-44255134628b
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c6f360e67621288e6c04381931a7c0df0de3e256
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 7f42e460be6dd4f4b36b0ddaf3c52880775df8e0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862360"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935262"
 ---
 # <a name="migrating-mysql-databases-to-sql-server---azure-sql-database-mysqltosql"></a>MySQL 데이터베이스를 SQL Server-Azure SQL Database로 마이그레이션 (MySQLToSql)
 MySQL 용 SSMA (SQL Server Migration Assistant)는 MySQL 데이터베이스를 SQL Server 또는 SQL Azure으로 신속 하 게 마이그레이션하는 데 도움이 되는 포괄적인 환경입니다. MySQL 용 SSMA를 사용 하 여 데이터베이스 개체 및 데이터를 검토 하 고, 마이그레이션을 위해 데이터베이스를 평가 하 고, 데이터베이스 개체를 SQL Server 또는 SQL Azure로 마이그레이션하고, 데이터를 SQL Server 또는 SQL Azure로 마이그레이션할 수 있습니다.  

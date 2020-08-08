@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 7633f631-ffad-469a-8441-8831a6a9f932
-author: Jtoland
-ms.author: Jtoland
-manager: murato
-ms.openlocfilehash: 6788a977f4f818d72baa7d8c0b7bbc1ad927da4c
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 6ade3ce31bed08bdb7b25b09ec0d5bbcf91405f1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293718"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936514"
 ---
 # <a name="sql-server-migration-assistant-for-db2-db2tosql"></a>DB2 용 SQL Server Migration Assistant (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)]D b 2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 용 SSMA (Migration Assistant)는 db2 데이터베이스를로 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션하기 위한 도구입니다. Windows 및 linux에서 2012, [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014, [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017, [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] windows 및 linux의 2019 또는 Azure SQL Database입니다. D b 2 용 SSMA는 DB2 데이터베이스 개체를 데이터베이스 개체로 변환 하 고, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 해당 개체를 만든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 후 DB2에서 또는 Azure SQL Database로 데이터를 마이그레이션합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -25,7 +25,7 @@ ms.locfileid: "84293718"
   
 ## <a name="contents"></a>콘텐츠  
   
-|섹션|설명|  
+|섹션|Description|  
 |-----------|---------------|
 |[DB2용 SSMA의 새로운 기능](https://msdn.microsoft.com/1cc38f85-3caa-42d0-8c76-a380c1d15c67)|D b 2 용 SSMA 버전의 새로운 기능|  
 |[DB2ToSQL&#41;&#40;DB2 용 SSMA 클라이언트 설치](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)|을 실행 하는 컴퓨터에서 DB2 용 SSMA 클라이언트 및 필수 구성 요소를 설치 하기 위한 필수 구성 요소 및 지침을 제공 하는 문서가 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  

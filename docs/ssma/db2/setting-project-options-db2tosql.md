@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d384433e5a2653291fac4d990bb3660b31c13855
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: be1cc5ca7d48d72ee9c87ceb2c421a0c411548dc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060027"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936657"
 ---
 # <a name="setting-project-options-db2tosql"></a>프로젝트 옵션 설정 (DB2ToSQL)
-각 SSMA 프로젝트에 대해 프로젝트 수준 옵션을 설정할 수 있습니다. 이러한 옵션은 개체 변환, 개체 로드, 사용자 인터페이스 및 데이터 마이그레이션 설정을 지정 합니다. 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 변환 하거나 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를로 마이그레이션하기 전에 구성 옵션이 프로젝트에 적합 한지 확인 합니다.  
+각 SSMA 프로젝트에 대해 프로젝트 수준 옵션을 설정할 수 있습니다. 이러한 옵션은 개체 변환, 개체 로드, 사용자 인터페이스 및 데이터 마이그레이션 설정을 지정 합니다. 개체를로 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 데이터를로 마이그레이션하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 옵션이 프로젝트에 적합 한지 확인 합니다.  
   
 SSMA를 사용 하면 모든 프로젝트에 대 한 기본 옵션을 구성할 수 있습니다. 이러한 옵션은 사용자가 만드는 모든 새 프로젝트에 적용 됩니다. 그런 다음 각 프로젝트에 대 한 옵션을 사용자 지정할 수 있습니다.  
   
@@ -36,7 +36,7 @@ SSMA에는 5 개의 프로젝트 설정 집합이 있습니다.
   
 또한 이러한 설정을 구성 하는 네 가지 모드가 있습니다.  
   
--   기본값  
+-   Default  
   
 -   Optimistic  
   
@@ -44,7 +44,7 @@ SSMA에는 5 개의 프로젝트 설정 집합이 있습니다.
   
 -   사용자 지정  
   
-대부분의 사용자에 게 기본 모드를 권장 합니다. 낙관적 모드에서는 더 많은 최신 DB2 구문을 유지 하 고 더 쉽게 읽을 수 있습니다. 그러나 현재 구문을 유지 하는 것은 정확 하지 않을 수 있습니다. DB2 구문을 동등한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구문으로 변환 해야 하는 경우 전체 모드에서 가장 완전 한 변환을 수행 하지만 결과 코드를 읽기가 더 어려울 수 있습니다. 사용자 지정 모드에서 옵션을 설정 합니다.  
+대부분의 사용자에 게 기본 모드를 권장 합니다. 낙관적 모드에서는 더 많은 최신 DB2 구문을 유지 하 고 더 쉽게 읽을 수 있습니다. 그러나 현재 구문을 유지 하는 것은 정확 하지 않을 수 있습니다. DB2 구문을 동등한 구문으로 변환 해야 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 모드에서 가장 완전 한 변환을 수행 하지만 결과 코드를 읽기가 더 어려울 수 있습니다. 사용자 지정 모드에서 옵션을 설정 합니다.  
   
 설정 및 설정 설정에 대 한 자세한 내용은 다음 항목을 참조 하십시오.  
   
@@ -94,7 +94,7 @@ SSMA에서 모든 프로젝트에 대 한 기본 설정을 구성할 수 있습�
   
 -   원본 및 대상 데이터 형식의 매핑을 사용자 지정 하려면 [DB2 매핑 및 SQL Server 데이터 형식 &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)를 참조 하세요.  
   
--   그렇지 않으면 DB2 데이터베이스 개체 정의를 개체 정의로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변환할 수 있습니다. 자세한 내용은 [DB2 스키마 변환 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)을 참조 하세요.  
+-   그렇지 않으면 DB2 데이터베이스 개체 정의를 개체 정의로 변환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 자세한 내용은 [DB2 스키마 변환 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 [DB2 및 SQL Server 데이터 형식 매핑 &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)  

@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 4ee0d698-6246-48eb-b963-d62be81cab6a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 25c8222009c2ea9358c0bab2ad5ae077588fb3cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 6e5d1cd88027dfa3fb4216c93ab4e660ddcc0dc9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060091"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936739"
 ---
 # <a name="removing-ssma-for-db2-components-db2tosql"></a>DB2 용 SSMA 구성 요소 제거 (DB2ToSQL)
-DB2에서로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터베이스를 마이그레이션한 후에는 ssma 구성 요소를 제거 하는 것이 좋습니다. 언제 든 지 클라이언트 구성 요소를 제거할 수 있습니다. 그러나 마이그레이션된 데이터베이스가 **sysdb** 데이터베이스의 **ssma_DB2** 스키마에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 함수를 더 이상 사용 하지 않는 경우에는에서 확장 팩을 제거 하면 안 됩니다.  
+DB2에서로 데이터베이스를 마이그레이션한 후에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 SSMA 구성 요소를 제거 하는 것이 좋습니다. 언제 든 지 클라이언트 구성 요소를 제거할 수 있습니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션된 데이터베이스가 **sysdb** 데이터베이스의 **ssma_DB2** 스키마에서 함수를 더 이상 사용 하지 않는 경우에는에서 확장 팩을 제거 하면 안 됩니다.  
   
 ## <a name="uninstalling-the-ssma-for-db2-client"></a>DB2 용 SSMA 클라이언트 제거  
 **프로그램 추가/제거**를 사용 하 여 ssma를 제거할 수 있습니다.  

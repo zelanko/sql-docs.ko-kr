@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Assessment reports
 ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 85923b0252eb24012c12e0c19937e076806b78bd
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ebfe3523c155d0e1b58281e987341b6f83fcf9ae
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823809"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936312"
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>변환을 위해 MySQL 데이터베이스 평가(MySQLToSQL)
 개체를 로드 하 고 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 마이그레이션하기 전에 마이그레이션의 복잡성과 마이그레이션에 소요 되는 시간을 결정 해야 합니다. SSMA는 성공적으로 변환 되는 개체의 비율을 보여 주는 평가 보고서를 만들 수 있습니다. SSMA를 사용 하면 변환 오류를 발생 시키는 특정 문제를 확인할 수도 있습니다.  
