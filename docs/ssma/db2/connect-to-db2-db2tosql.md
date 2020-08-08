@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2a14b3a5de4292b01fd6fdb2df67bd4839d1a8d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 7180e78e7ec34e9c75d25dac51101e28291b1f4c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68141088"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933846"
 ---
 # <a name="connect-to-db2-db2tosql"></a>D b 2에 연결 (DB2ToSQL)
 **Db2에 연결** 대화 상자를 사용 하 여 마이그레이션할 db2 데이터베이스에 연결 합니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "68141088"
 이 대화 상자에 액세스 하려면 **파일** 메뉴에서 **DB2에 연결**을 선택 합니다. 이전에 연결한 경우 명령은 d b 2 **에 다시 연결**됩니다.  
   
 ## <a name="options"></a>옵션  
-**공급자**  
+**공급 기업**  
 DB2 데이터베이스에 연결 하기 위한 데이터 액세스 공급자를 선택 합니다. 사용 가능한 공급자는 DB2 클라이언트 공급자와 OLE DB 공급자입니다. 기본값은 DB2 클라이언트 공급자입니다.  
   
 **모드**  

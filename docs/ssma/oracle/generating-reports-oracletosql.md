@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Report Generation in Oracle Console,refresh-from-database
 - Report Generation in Oracle Console,write-summary-report-to
 ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: ca9490b53cd55c9d8fdae5d24a045ceaf5a2e83e
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 17f9c9b31d1593edd353830d999d5afdbfbaabaa
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396232"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934850"
 ---
 # <a name="generating-reports-oracletosql"></a>보고서 생성(OracleToSQL)
 명령을 사용 하 여 수행 되는 특정 활동의 보고서는 SSMA 콘솔에서 개체 트리 수준에 생성 됩니다.  

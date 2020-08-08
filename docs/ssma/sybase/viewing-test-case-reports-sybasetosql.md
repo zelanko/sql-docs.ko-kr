@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Test Case Reports
 ms.assetid: cb75d281-43ef-4f4a-b754-2c4ee3b62ae7
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 8a6d45f7e621f9b6516d4cc1211a8627174ae9b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 99bad46468ff0138c07f531c9e32cdecc4fda5be
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944604"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934527"
 ---
 # <a name="viewing-test-case-reports-sybasetosql"></a>테스트 사례 보고서 보기(SybaseToSQL)
 테스트 사례 보고서는 테스트 확인 결과 및 일반 테스트 정보를 표시 합니다. 테스트에 실패 하는 경우 확인 된 개체의 일치 하지 않는 데이터에 대 한 정보도 표시 됩니다.  

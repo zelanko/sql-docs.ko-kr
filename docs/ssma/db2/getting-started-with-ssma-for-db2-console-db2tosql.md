@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f245c017-023e-4880-8721-8908d339525e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: fbb0a90d9cfd628e9251a55de3df8b66a22f1ef7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 17798a2ccc0099210874a4bebb4fd05074c43639
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989664"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933874"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>DB2 용 SSMA 콘솔 시작 (DB2ToSQL)
 이 섹션에서는 DB2 콘솔 응용 프로그램을 시작 하 고 시작 하는 절차에 대해 설명 합니다. 또한 여기에 나열 된 것은 일반적인 SSMA 콘솔 출력 창에서 사용 되는 규칙입니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "67989664"
   
 2.  ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB2 용 Migration Assistant 명령 프롬프트** 바로 가기를 클릭 합니다.  
   
-    콘솔 응용 프로그램을 시작 하는 데 도움이 `(/? Help)`되는 ssma 콘솔 사용 메뉴가 표시 됩니다.  
+    콘솔 응용 프로그램을 시작 하는 데 도움이 되는 SSMA 콘솔 사용 메뉴가 표시 됩니다 `(/? Help)` .  
   
 ## <a name="procedure-for-using-the-ssma-console"></a>SSMA 콘솔 사용 절차  
 Windows 시스템에서 콘솔이 성공적으로 시작 된 후에는 다음 단계를 사용 하 여 작업을 수행할 수 있습니다.  
@@ -54,10 +54,10 @@ SSMA 스크립트 명령 및 옵션을 실행 하면 콘솔 프로그램이 콘�
   
 |색|Description|  
 |---------|---------------|  
-|빨강|실행 하는 동안 심각한 오류가 발생 했습니다.|  
+|빨간색|실행 하는 동안 심각한 오류가 발생 했습니다.|  
 |회색|날짜 및 시간 스탬프, 사용자에 대 한 메시지|  
 |흰색|스크립트 파일 명령, 메시지 유형|  
-|노란색|Warning|  
+|노란색|경고|  
 |녹색|사용자 입력 확인|  
 |녹청|작업의 시작, 종료 및 결과|  
   

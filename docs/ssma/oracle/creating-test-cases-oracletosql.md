@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Test Case Wizard
 ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 697f7049a60aa7ae2b8c89d1fb6c5ce8e3d29312
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 270d904c11df5ab28062cd83672071319ca6f17f
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266131"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934956"
 ---
 # <a name="creating-test-cases-oracletosql"></a>테스트 사례 만들기(OracleToSQL)
 테스트 사례 마법사를 사용 하 여 테스트를 만듭니다. 이 마법사를 사용 하면 테스트 되 고 확인 된 개체를 선택 하 고 테스트 매개 변수를 지정 하 여 테스트 사례를 만들 수 있습니다.  

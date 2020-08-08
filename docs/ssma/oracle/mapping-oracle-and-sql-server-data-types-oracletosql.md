@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Type Mapping Inheritance
 ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 8a9cb39213ed2809b7074a474edf5e4e20bd9122
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 656132dafce39e6007601b75956fd73714638716
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293840"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934795"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Oracle 및 SQL Server 데이터 형식 매핑(OracleToSQL)
 Oracle 데이터베이스 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 형식과 다릅니다. Oracle 데이터베이스 개체를 개체로 변환 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 경우 oracle에서로 데이터 형식을 매핑하는 방법을 지정 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 기본 데이터 형식 매핑을 그대로 적용 하거나 다음 섹션에 표시 된 대로 매핑을 사용자 지정할 수 있습니다.  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Customizing Calls Order
 ms.assetid: 47f160ce-f8f2-489e-9c3a-690c9fa25259
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 68aaaf9db4b2376a1c950bc4c2b463bd2b7b6391
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 279a4a9edb64beb545e0747febb114beeb2d9939
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029328"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931845"
 ---
 # <a name="customizing-calls-order-sybasetosql"></a>호출 순서 사용자 지정(SybaseToSQL)
 이 단계에서는 테스트할 개체가 호출 되는 순서를 선택 합니다.  

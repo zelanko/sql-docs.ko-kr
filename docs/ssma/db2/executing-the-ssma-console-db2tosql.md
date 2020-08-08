@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 64348e33502e8407e567b8901890246344765f4f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 7b3f7e776268eed28beed4e4349c1ae8909789d5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989685"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933814"
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>SSMA 콘솔 실행 (DB2ToSQL)
 Microsoft는 SSMA 활동을 실행 하 고 제어할 수 있는 강력한 스크립트 파일 명령 집합을 제공 합니다. 결과 섹션에서 자세히 설명 합니다. 콘솔 응용 프로그램은이 섹션에 열거 된 특정 표준 스크립트 파일 명령을 사용 합니다.  
@@ -38,7 +38,7 @@ create-new-project
   
 -   `project-type:`선택적 특성입니다. 프로젝트 형식 (예: "2005 2014 2012 2008") 또는 "sql-dmo" 프로젝트 또는 "sql-dmo" 프로젝트 또는 "sql-dmo" 프로젝트 또는 "sql-azure"를 나타냅니다. 기본값은 "2014"입니다.  
   
-**예제:**  
+**예:**  
   
 ```xml  
 <create-new-project  
@@ -242,7 +242,7 @@ save-project
   
 -   `write-summary-report-to:`요약 보고서가 생성 될 경로를 지정 합니다.  
   
-    폴더 경로만 언급 하는 경우 파일 이름 **&lt;AssessmentReport n&gt;. XML** 이 생성 됩니다. (선택적 특성)  
+    폴더 경로만 언급 하는 경우 파일 이름 **AssessmentReport &lt; n &gt; . XML** 이 생성 됩니다. (선택적 특성)  
   
     보고서 만들기에는 두 개의 하위 범주가 있습니다.  
   
@@ -314,7 +314,7 @@ save-project
   
 -   `write-summary-report-to:`요약 보고서가 생성 될 경로를 지정 합니다.  
   
-    폴더 경로만 언급 하는 경우 파일 이름 **&lt;SchemaConversionReport n&gt;. XML** 이 생성 됩니다. (선택적 특성)  
+    폴더 경로만 언급 하는 경우 파일 이름 **SchemaConversionReport &lt; n &gt; . XML** 이 생성 됩니다. (선택적 특성)  
   
     보고서 만들기에는 두 개의 하위 범주가 있습니다.  
   
@@ -376,7 +376,7 @@ save-project
   
 -   `write-summary-report-to:`요약 보고서가 생성 될 경로를 지정 합니다.  
   
-    폴더 경로만 언급 하는 경우 파일 이름 **&lt;DataMigrationReport n&gt;. XML** 이 생성 됩니다. (선택적 특성)  
+    폴더 경로만 언급 하는 경우 파일 이름 **DataMigrationReport &lt; n &gt; . XML** 이 생성 됩니다. (선택적 특성)  
   
     보고서 만들기에는 두 개의 하위 범주가 있습니다.  
   
@@ -500,7 +500,7 @@ save-project
   
     -   fail-스크립트  
   
--   `report-errors-to:`동기화 작업에 대 한 오류 보고서의 위치를 지정 합니다 (옵션 특성). 폴더 경로만 지정 하면 파일 이름 **TargetSynchronizationReport** 이 만들어집니다.  
+-   `report-errors-to:`동기화 작업에 대 한 오류 보고서의 위치를 지정 합니다 (옵션 특성). 폴더 경로만 지정 된 경우 이름으로 파일 **TargetSynchronizationReport.XML** 만들어집니다.  
   
 **구문 예제:**  
   
@@ -565,7 +565,7 @@ save-project
   
     -   fail-스크립트  
   
--   `report-errors-to:`폴더 경로만 지정 된 경우 새로 고침 작업 (옵션 특성)에 대 한 오류 보고서의 위치를 지정 합니다. 그러면 파일 이름 **SourceDBRefreshReport** 이 만들어집니다.  
+-   `report-errors-to:`폴더 경로만 지정 된 경우 새로 고침 작업 (옵션 특성)에 대 한 오류 보고서의 위치를 지정 합니다. 그런 다음 이름으로 파일 **SourceDBRefreshReport.XML** 만들어집니다.  
   
 **구문 예제:**  
   
@@ -674,13 +674,13 @@ convert-sql 문
   
     **기본값:** false (선택적 특성)  
   
--   `write-converted-sql-to`변환 된 T-sql을 저장할 파일 (또는) 폴더 경로를 지정 합니다. 폴더 경로를 `sql-files` 특성과 함께 지정 하면 각 원본 파일에 지정 된 폴더에 해당 하는 대상 t-sql 파일이 생성 됩니다. `sql` 특성을 사용 하 여 폴더 경로를 지정 하면 변환 된 t-sql은 지정 된 폴더에 있는 **Result. out** 이라는 파일에 기록 됩니다.  
+-   `write-converted-sql-to`변환 된 T-sql을 저장할 파일 (또는) 폴더 경로를 지정 합니다. 폴더 경로를 특성과 함께 지정 하면 `sql-files` 각 원본 파일에 지정 된 폴더에 해당 하는 대상 t-sql 파일이 생성 됩니다. 특성을 사용 하 여 폴더 경로를 지정 하면 `sql` 변환 된 t-sql은 지정 된 폴더에 있는 **Result. out** 이라는 파일에 기록 됩니다.  
   
 -   `sql`변환할 DB2 sql 문을 지정 합니다. ";"을 사용 하 여 하나 이상의 문을 구분할 수 있습니다.  
   
 -   `sql-files`T-sql 코드로 변환 해야 하는 sql 파일의 경로를 지정 합니다.  
   
--   `write-summary-report-to`보고서가 생성 될 경로를 지정 합니다. 폴더 경로만 설명 된 경우 이름이 **Convertsqlreport .xml** 인 파일을 만듭니다. (선택적 특성)  
+-   `write-summary-report-to`보고서가 생성 될 경로를 지정 합니다. 폴더 경로만 설명 된 경우 이름으로 파일 **ConvertSQLReport.XML** 생성 됩니다. (선택적 특성)  
   
     보고서를 만들 때 두 개의 하위 범주인 시각화.  
   

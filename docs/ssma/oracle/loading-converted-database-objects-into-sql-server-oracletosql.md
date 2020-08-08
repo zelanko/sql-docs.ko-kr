@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Synchronization, Securing Objects in SQL Server
 - Synchronization,Scripting Objects
 ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 69c4d30b3a803cfd5eb8e196f540c33952de3bf5
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 37d75a6454388c19caaa483d83cc5f6a230dab30
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293850"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934763"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>변환된 데이터베이스 개체를 SQL Server로 로드(OracleToSQL)
 Oracle 스키마를 SQL Server로 변환한 후 결과 데이터베이스 개체를 SQL Server에 로드할 수 있습니다. SSMA에서 개체를 만들거나 개체를 스크립팅 하 고 스크립트를 직접 실행할 수 있습니다. 또한 SSMA를 사용 하면 SQL Server 데이터베이스의 실제 콘텐츠를 사용 하 여 대상 메타 데이터를 업데이트할 수 있습니다.  

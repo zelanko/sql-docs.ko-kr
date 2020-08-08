@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 2becdd3e5ab0c6980ffbb4b4f4a5d50584f6fd35
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 19753cddaba236d0de75e492962bd6c8ad2675e2
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864900"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988500"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Data Migration Assistant의 새로운 기능
 
@@ -154,8 +154,8 @@ Data Migration Assistant v 3.2 릴리스에는 다음과 같은 추가 내용이
 
 Data Migration Assistant의 v 3.1 릴리스에는 다음과 같은 추가 내용이 포함 되어 있습니다.
 
-- 데이터베이스 데이터 정렬, 지원 되지 않는 시스템 저장 프로시저 및 CLR 개체 사용에 대 한 Azure SQL Database에 대 한 평가 권장 사항을 개선 했습니다.
-- Azure SQL Database로 마이그레이션할 때 호환성 수준 130, 120, 110 및 100에 대 한 평가 지침.
+- 데이터베이스 데이터 정렬, 지원 되지 않는 시스템 저장 프로시저 및 CLR 개체 사용에 대 한 Azure SQL Database에 대 한 향상 된 평가 권장 사항
+- Azure SQL Database로 마이그레이션할 때 호환성 수준 130, 120, 110 및 100에 대 한 평가 지침입니다.
 
 ## <a name="data-migration-assistant-v30"></a>Data Migration Assistant v 3.0
 
@@ -181,7 +181,7 @@ Data Migration Assistant v2.0 릴리스는 향상 된 스트레치 데이터베�
 Data Migration Assistant의 v1.0 릴리스는 초기 릴리스 이며 다음을 제공 합니다.
 
 - SQL Server 온-프레미스 버전으로의 업그레이드에 영향을 줄 수 있는 문제 검색. 모든 결과는 호환성 문제로 설명 되며 다음 영역으로 분류 됩니다.
-  - 호환성이 손상되는 변경
+  - 주요 변경 내용
   - 동작 변경 내용
   - 사용되지 않는 기능
 - 업그레이드 후 데이터베이스에서 혜택을 받을 수 있는 대상 SQL Server 플랫폼의 새로운 기능에 대 한 검색입니다. 모든 결과는 기능 권장 사항으로 설명 되며 다음 영역으로 분류 됩니다.

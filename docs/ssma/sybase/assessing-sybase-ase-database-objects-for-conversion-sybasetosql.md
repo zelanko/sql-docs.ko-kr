@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 8941c243b6741b42b7c3e628305431812ad3f8d7
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: fba4692780b9f9f2c556634bf1676bc00bbba169
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864840"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932614"
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>변환을 위해 SAP ASE 데이터베이스 개체 평가 (SybaseToSQL)
 개체를 로드 하 고 또는 Azure SQL로 데이터를 마이그레이션하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션의 복잡도와 소요 시간을 결정 해야 합니다. SSMA는로 성공적으로 변환 되는 개체 및 프로시저의 비율을 보여 주는 평가 보고서를 만들 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . SSMA를 사용 하면 변환 오류를 일으킬 수 있는 특정 문제를 확인할 수도 있습니다.  

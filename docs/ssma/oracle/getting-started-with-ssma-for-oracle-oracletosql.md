@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SSMA for Oracle, Metadata Explorers
 - SSMA for Oracle, Toolbars
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 985d6e58d00dee705a684b7ef2f6516a5459f0df
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 7ee753bd032cb8ad69f472888a99cc53cc5760d9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293873"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934905"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>Oracle용 SSMA 시작(OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Oracle 용 SSMA (Migration Assistant)를 사용 하면 Oracle 데이터베이스 스키마를 스키마로 신속 하 게 변환 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고, 결과 스키마를에 업로드 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고, oracle에서로 데이터를 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -85,7 +85,7 @@ SSMA에는 프로젝트 도구 모음과 마이그레이션 도구 모음 이라
 #### <a name="migration-toolbar"></a>마이그레이션 도구 모음  
 다음 표에서는 마이그레이션 도구 모음 명령을 보여 줍니다.  
   
-|단추|함수|  
+|단추|기능|  
 |------|--------|  
 |**보고서 만들기**|선택한 Oracle 개체를 구문으로 변환한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 성공적으로 변환 되었는지 보여 주는 보고서를 만듭니다.<br /><br />Oracle 메타 데이터 탐색기에서 개체를 선택 하지 않은 경우에는이 명령을 사용할 수 없습니다.|  
 |**스키마 변환**|선택한 Oracle 개체를 개체로 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.<br /><br />Oracle 메타 데이터 탐색기에서 개체를 선택 하지 않은 경우에는이 명령을 사용할 수 없습니다.|  
@@ -100,7 +100,7 @@ SSMA에는 프로젝트 도구 모음과 마이그레이션 도구 모음 이라
 |**최근에 사용한 파일**|프로젝트 작업, Oracle에 연결 및에 연결 하는 명령이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**편집**|SQL 세부 정보 창에서 복사와 같이 세부 정보 페이지에서 텍스트를 찾고 사용 하는 명령이 포함 되어 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . 또한에는 기존 책갈피 목록을 볼 수 있는 **책갈피 관리** 옵션도 포함 되어 있습니다. 대화 상자의 오른쪽에 있는 단추를 사용 하 여 책갈피를 관리할 수 있습니다.|  
 |**보기**|**메타 데이터 탐색기 동기화** 명령을 포함 합니다. Oracle 메타 데이터 탐색기와 메타 데이터 탐색기 간에 개체를 동기화 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 에는 **출력** 및 **오류 목록** 창 및 레이아웃을 관리 하는 옵션 **레이아웃** 을 표시 하 고 숨기는 명령도 포함 됩니다.|  
-|**Tools**|보고서를 만들고 개체와 데이터를 마이그레이션하는 명령을 포함 합니다. 또한 **전역 설정** 및 **프로젝트 설정** 대화 상자에 대 한 액세스를 제공 합니다.|  
+|**도구**|보고서를 만들고 개체와 데이터를 마이그레이션하는 명령을 포함 합니다. 또한 **전역 설정** 및 **프로젝트 설정** 대화 상자에 대 한 액세스를 제공 합니다.|  
 |**테스터**|테스트 사례, 리포지토리 및 백업 관리 시스템을 만들고 작업 하기 위한 명령이 포함 되어 있습니다.|  
 |**도움말**|SSMA 도움말과 정보 대화 상자에 대 **한** 액세스를 제공 합니다.|  
   

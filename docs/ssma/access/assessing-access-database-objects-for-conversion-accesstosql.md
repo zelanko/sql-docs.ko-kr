@@ -16,17 +16,17 @@ helpviewer_keywords:
 - SQL, assessing
 - syntax, assessing
 ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 4c2f5bc6953ab0e96397ca728391cbe22a73dd50
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d45df17f82bf52d6d059b2efbf69a39cedb949f0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910696"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934104"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>변환을 위해 Access 데이터베이스 개체를 평가 하는 방법 (AccessToSQL)
-개체를 로드 하 고 데이터를 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure로 마이그레이션하려면 먼저 마이그레이션의 양과 변환에 소요 되는 기간을 결정 해야 합니다. SSMA는 성공적으로 변환 된 개체의 비율을 표시 하는 평가 보고서를 만들거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , 마이그레이션을 수행 하기 위한 구문 및 시간 추정치를 SQL Azure 수 있습니다. SSMA를 사용 하 여 변환 실패를 일으킨 특정 문제를 확인할 수도 있습니다.  
+개체를 로드 하 고 데이터를 또는 SQL Azure로 마이그레이션하려면 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션의 양과 변환에 소요 되는 기간을 결정 해야 합니다. SSMA는 성공적으로 변환 된 개체의 비율을 표시 하는 평가 보고서를 만들거나, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션을 수행 하기 위한 구문 및 시간 추정치를 SQL Azure 수 있습니다. SSMA를 사용 하 여 변환 실패를 일으킨 특정 문제를 확인할 수도 있습니다.  
   
 ## <a name="creating-assessment-reports"></a>평가 보고서 만들기  
 평가 보고서를 만들 때 SSMA는 선택한 Access 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 구문으로 변환한 다음 결과를 표시 합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "67910696"
   
     SSMA는 창의 아래쪽에 있는 상태 표시줄에 진행률을 표시 합니다. 출력 창이 표시 되 면 출력 창에도 메시지가 표시 됩니다.  
   
-평가가 완료 되 면 액세스에 대 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 한 Migration Assistant: 평가 보고서 창이 표시 됩니다.  
+평가가 완료 되 면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 액세스에 대 한 Migration Assistant: 평가 보고서 창이 표시 됩니다.  
   
 ## <a name="using-assessment-reports"></a>평가 보고서 사용  
 평가 보고서 창에는 탐색기, 세부 정보 창 및 메시지 창과 같은 세 개의 창이 있습니다.  

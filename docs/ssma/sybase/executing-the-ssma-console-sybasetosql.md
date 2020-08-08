@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Sybase Console,Script File Commands
 - Sybase Console,Script Generation Commands
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 602bc0ac1584f9ff369efa8a2484a16a97a92285
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ee279098aa195cdc8cb1f5b7d50cf5ba7a8a73c5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029149"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931679"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>SSMA 콘솔 실행(SybaseToSQL)
 Microsoft는 SSMA 활동을 실행 하 고 제어할 수 있는 강력한 스크립트 파일 명령 집합을 제공 합니다. 결과 섹션에서 자세히 설명 합니다.  
@@ -201,7 +201,7 @@ Microsoft는 SSMA 활동을 실행 하 고 제어할 수 있는 강력한 스크
   
 -   `write-summary-report-to:`보고서가 생성 될 경로를 지정 합니다.  
   
-    폴더 경로만 언급 하는 경우 파일 이름 **&lt;AssessmentReport n&gt;. XML** 이 생성 됩니다. (선택적 특성)  
+    폴더 경로만 언급 하는 경우 파일 이름 **AssessmentReport &lt; n &gt; . XML** 이 생성 됩니다. (선택적 특성)  
   
     보고서 만들기에는 다음 두 개의 하위 범주가 있습니다.  
   
@@ -267,7 +267,7 @@ Microsoft는 SSMA 활동을 실행 하 고 제어할 수 있는 강력한 스크
   
 -   `write-summary-report-to:`요약 보고서가 생성 될 경로를 지정 합니다.  
   
-    폴더 경로만 언급 하는 경우 파일 이름 **&lt;SchemaConversionReport n&gt;. XML** 이 생성 됩니다. (선택적 특성)  
+    폴더 경로만 언급 하는 경우 파일 이름 **SchemaConversionReport &lt; n &gt; . XML** 이 생성 됩니다. (선택적 특성)  
   
     보고서 만들기에는 다음 두 개의 하위 범주가 있습니다.  
   
@@ -320,7 +320,7 @@ Microsoft는 SSMA 활동을 실행 하 고 제어할 수 있는 강력한 스크
   
 -   `write-summary-report-to:`보고서가 생성 될 경로를 지정 합니다.  
   
-    폴더 경로만 언급 하는 경우 파일 이름 **&lt;DataMigrationReport n&gt;. XML** 이 생성 됩니다. (선택적 특성)  
+    폴더 경로만 언급 하는 경우 파일 이름 **DataMigrationReport &lt; n &gt; . XML** 이 생성 됩니다. (선택적 특성)  
   
     보고서 만들기에는 다음 두 개의 하위 범주가 있습니다.  
   
@@ -411,7 +411,7 @@ sql-server-schema="<target-schema>"/>
   
     -   fail-스크립트  
   
--   `report-errors-to:`동기화 작업에 대 한 오류 보고서의 위치를 지정 합니다 (옵션 특성). 폴더 경로만 지정 된 경우에는 이름이 **TargetSynchronizationReport** 인 파일이 만들어집니다.  
+-   `report-errors-to:`동기화 작업에 대 한 오류 보고서의 위치를 지정 합니다 (옵션 특성). 폴더 경로만 지정 된 경우 이름으로 파일 **TargetSynchronizationReport.XML** 만들어집니다.  
   
 **구문 예제:**  
   
@@ -472,7 +472,7 @@ fail-script>" (optional)
   
     -   fail-스크립트  
   
--   `report-errors-to:`새로 고침 작업 (옵션 특성)에 대 한 오류 보고서의 위치를 지정 합니다. 폴더 경로만 지정 된 경우에는 이름이 **SourceDBRefreshReport** 인 파일이 만들어집니다.  
+-   `report-errors-to:`새로 고침 작업 (옵션 특성)에 대 한 오류 보고서의 위치를 지정 합니다. 폴더 경로만 지정 된 경우 이름으로 파일 **SourceDBRefreshReport.XML** 만들어집니다.  
   
 **구문 예제:**  
   
@@ -576,13 +576,13 @@ fail-script>" (optional)
   
     **기본값:** false (선택적 특성)  
   
--   `write-converted-sql-to`변환 된 T-sql을 저장할 파일 (또는) 폴더 경로를 지정 합니다. 폴더 경로를 `sql-files` 특성과 함께 지정 하면 각 원본 파일에 지정 된 폴더에 해당 하는 대상 t-sql 파일이 생성 됩니다. `sql` 특성을 사용 하 여 폴더 경로를 지정 하면 변환 된 t-sql은 지정 된 폴더에 있는 Result. out 이라는 파일에 기록 됩니다.  
+-   `write-converted-sql-to`변환 된 T-sql을 저장할 파일 (또는) 폴더 경로를 지정 합니다. 폴더 경로를 특성과 함께 지정 하면 `sql-files` 각 원본 파일에 지정 된 폴더에 해당 하는 대상 t-sql 파일이 생성 됩니다. 특성을 사용 하 여 폴더 경로를 지정 하면 `sql` 변환 된 t-sql은 지정 된 폴더에 있는 Result. out 이라는 파일에 기록 됩니다.  
   
 -   `sql`변환할 Sybase sql 문을 지정 합니다. ";"을 사용 하 여 하나 이상의 문을 구분할 수 있습니다.  
   
 -   `sql-files`T-sql 코드로 변환 해야 하는 sql 파일의 경로를 지정 합니다.  
   
--   `write-summary-report-to`요약 보고서가 생성 될 경로를 지정 합니다. 폴더 경로만 설명 된 경우 이름이 **Convertsqlreport .xml** 인 파일을 만듭니다. (선택적 특성)  
+-   `write-summary-report-to`요약 보고서가 생성 될 경로를 지정 합니다. 폴더 경로만 설명 된 경우 이름으로 파일 **ConvertSQLReport.XML** 생성 됩니다. (선택적 특성)  
   
     요약 보고서 생성에는 다음과 같은 두 개의 하위 범주가 있습니다.  
   

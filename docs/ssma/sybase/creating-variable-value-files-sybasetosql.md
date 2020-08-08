@@ -10,26 +10,26 @@ helpviewer_keywords:
 - Sybase Console,Creating Variable Value Files
 - Sybase Console,Variable Value File Validation
 ms.assetid: 395be464-4b19-44f7-91e5-b8876d6743dc
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2c0c76a36502d9d590b6db478efcab6feb50ba01
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d995562f1b62e04629861d1d562b9ed50e8c5db3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029393"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931875"
 ---
 # <a name="creating-variable-value-files-sybasetosql"></a>변수 값 파일 만들기(SybaseToSQL)
 변수 값 파일은 서버 마이그레이션 간에 자주 변경 되는 원본 또는 대상 서버 이름과 같은 명령의 매개 변수 값을 구성 하는 XML 파일입니다. 데이터베이스 마이그레이션이 많은 경우 각 원본 서버의 값을 저장 하는 여러 변수 파일이 생성 되 고 명령줄에서 **-v** 스위치를 사용 하 여 마스터 스크립트 파일에서 참조 됩니다. 이를 통해 여러 변수 파일의 변수 값을 사용 하 여 몇 가지 스크립트 파일의 정적 값을 유지 관리할 수 있습니다.  
   
 > [!NOTE]  
 > 1.  변수 이름 앞에는 $ (달러) 기호가 붙습니다. 변수에 변수 값 파일의 값이 할당 되지 않은 경우에는 스크립트 파일을 구문 분석 하는 동안 오류가 발생 하 여 콘솔 실행 프로세스가 상태일 됩니다.  
-> 2.  에 대 한 **$** 이스케이프 문자 **$$** 는입니다. 매개 변수의 변수 또는 정적 값이 (달러) 기호를 포함 **$** 하는 경우 변수 대신 문자로 **$$** 처리 하도록를 지정 해야 합니다.  
-> 3.  유지 관리를 위해 변수를 요소 내 `'variable-group'` 에 선언 하 여 사용자 정의 변수의 논리적 분리를 수행할 수 있습니다.  이 요소는 반드시 사용 해야 하는 것은 아닙니다.  
+> 2.  에 대 한 이스케이프 문자는 **$** **$$** 입니다. 매개 변수의 변수 또는 정적 값 **$** 이 (달러) 기호를 포함 하는 경우 **$$** 변수 대신 문자로 처리 하도록를 지정 해야 합니다.  
+> 3.  유지 관리를 위해 변수를 요소 내에 선언 하 여 `'variable-group'` 사용자 정의 변수의 논리적 분리를 수행할 수 있습니다.  이 요소는 반드시 사용 해야 하는 것은 아닙니다.  
   
 **예:**  
   
-**예 1:**  
+**예제 1:**  
   
 ```xml  
 <!--Sample of variable value file commands-->  

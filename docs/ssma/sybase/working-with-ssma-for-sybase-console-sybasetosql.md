@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: df1539bde5064dc9ae9211029631bb233be0f469
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8a5921282769cb4c8a696a4718ad07bb3f8d7622
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396790"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934533"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>Sybase용 SSMA 콘솔 작업(SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이제는 명령줄에서 콘솔 응용 프로그램을 통해 Sybase (Sybase 적응 서버 엔터프라이즈)의 릴리스를 사용할 수 있습니다. Migration Assistant 스크립트 파일은 명령을 실행 하기 위해 응용 프로그램에 대 한 입력을 구성 합니다. SSMA는 콘솔 응용 프로그램으로 스크립트 수준 상호 작용을 사용 하도록 설정 하 고 마이그레이션 주기를 줄이고 마이그레이션 작업을 확장 합니다.  

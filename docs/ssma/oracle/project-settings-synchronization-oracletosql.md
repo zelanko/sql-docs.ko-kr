@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e223fb7d-05ec-4fa5-8973-d845c33a23dd
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 743ed010107c9557c84b1683f7a81b369ca7cf3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 697bf746f438d45731e78c0c39d28677c3be6ddd
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266595"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933207"
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>프로젝트 설정(동기화)(OracleToSQL)
-**프로젝트 설정** 대화 상자의 동기화 페이지에는에서 테이블 및 저장 프로시저와 같은 데이터베이스 개체를 로드 하 고 새로 고치는 방법을 사용자 지정 하는 설정이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]포함 되어 있습니다.  
+**프로젝트 설정** 대화 상자의 동기화 페이지에는에서 테이블 및 저장 프로시저와 같은 데이터베이스 개체를 로드 하 고 새로 고치는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 기본 작업 옵션은 Oracle 데이터베이스에서 개체를 새로 고치고 SQL Server 데이터베이스와 개체를 동기화 하기 위한 기본 설정을 지정 합니다. 자세한 내용은 [데이터베이스에서 새로 고침-Oracle](../../ssma/oracle/refresh-from-database-oracletosql.md)을 참조 하세요.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "68266595"
   
 ## <a name="miscellaneous-options"></a>기타 옵션  
 **시도한**  
-에서 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로드할 때의 시도 횟수를 지정 합니다. 현재 시도에서로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로드 되지 않은 개체는 ssma가 현재 동기화 프로세스의 최대 시도 수에 도달할 때까지 다시 시도 됩니다. 기본값 설정 값은 **2** 입니다.  
+에서 개체를 로드할 때의 시도 횟수를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 현재 시도에서로 로드 되지 않은 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA가 현재 동기화 프로세스의 최대 시도 수에 도달할 때까지 다시 시도 됩니다. 기본값 설정 값은 **2** 입니다.  
   
 ## <a name="synchronization-for-oracle-options"></a>Oracle 옵션에 대 한 동기화  
 **로컬 및 원격 개체 변경에 대 한 작업**  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 3b671f49-c4cc-44fd-801e-e738a8c79415
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 209ed616f3993a0a93b802ddeca39a7065485afc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 06174be45e178f3fb7c612925e78795bf4eeaa7c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68051536"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933929"
 ---
 # <a name="refresh-from-database-accesstosql"></a>데이터베이스에서 새로 고침 (AccessToSQL)
 **데이터베이스에서 새로 고침** 대화 상자를 사용 하 여 Access 데이터베이스에서 새로 고칠 개체를 선택할 수 있습니다. 대화 상자의 행은 메타 데이터의 상태를 기반으로 하는 색으로 구분 됩니다.  

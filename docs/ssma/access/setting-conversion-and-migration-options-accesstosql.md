@@ -14,17 +14,17 @@ helpviewer_keywords:
 - project settings
 - schemas
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3e89cfd6768aeedd970889cbaea46bb3e1ceae4f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: e074f603586afa0322d62872c49abb52fe47f047
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68051501"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933964"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>변환 및 마이그레이션 옵션 설정 (AccessToSQL)
-각 SSMA 프로젝트에 대해 프로젝트 수준 옵션을 설정할 수 있습니다. 이러한 옵션은 개체가 변환 되는 방법, 데이터를 마이그레이션하는 방법 및 원본 데이터 형식을 대상 데이터 형식에 매핑하는 방법을 지정 합니다. 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 변환 하거나 SQL Azure 하거나 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure로 마이그레이션하려면 먼저 구성 옵션이 프로젝트에 적합 한지 확인 합니다.  
+각 SSMA 프로젝트에 대해 프로젝트 수준 옵션을 설정할 수 있습니다. 이러한 옵션은 개체가 변환 되는 방법, 데이터를 마이그레이션하는 방법 및 원본 데이터 형식을 대상 데이터 형식에 매핑하는 방법을 지정 합니다. 개체를로 변환 하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure 하거나 데이터를 또는 SQL Azure로 마이그레이션하려면 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 옵션이 프로젝트에 적합 한지 확인 합니다.  
   
 ## <a name="configuration-options-and-modes"></a>구성 옵션 및 모드  
 SSMA에는 네 가지 구성 설정 집합과 이러한 설정을 구성 하기 위한 4 가지 모드 (기본, 낙관적, 전체 및 사용자 지정)가 있습니다. 대부분의 사용자에 게 기본 모드를 권장 합니다. 단순 변환에는 낙관적 모드를 사용 합니다. 모든 메시지를 표시 하려면 전체 모드를 사용 합니다. 사용자 지정 모드에서 옵션을 설정 합니다.  

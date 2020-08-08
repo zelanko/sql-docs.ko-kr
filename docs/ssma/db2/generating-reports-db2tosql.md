@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3b8b0425cf8a22931b3b8f8d2a0d42d698d4142e
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 1ae04ceabe7a2063f8b9806894ff8e4d55c577fd
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396579"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933802"
 ---
 # <a name="generating-reports-db2tosql"></a>보고서 생성 (DB2ToSQL)
 명령을 사용 하 여 수행 되는 특정 활동의 보고서는 SSMA 콘솔에서 개체 트리 수준에 생성 됩니다.  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Oracle Console, Console Output Conventions
 - Oracle Console, Launching Console
 ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 25cd6eb9c811548e6300c944c65c5530185d46e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 57170c17538ccd997c5bc4d2e12ab53914b3727c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264498"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934895"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Oracle용 SSMA 콘솔 시작(OracleToSQL)
 이 섹션에서는 Oracle 콘솔 응용 프로그램을 시작 하 고 시작 하는 절차에 대해 설명 합니다. 또한 여기에 나열 된 것은 일반적인 SSMA 콘솔 출력 창에서 사용 되는 규칙입니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "68264498"
   
 2.  ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle 명령 프롬프트 바로 가기 Migration Assistant를** 클릭 합니다.  
   
-    콘솔 응용 프로그램을 시작 하는 데 도움이 `(/? Help)`되는 ssma 콘솔 사용 메뉴가 표시 됩니다.  
+    콘솔 응용 프로그램을 시작 하는 데 도움이 되는 SSMA 콘솔 사용 메뉴가 표시 됩니다 `(/? Help)` .  
   
 ## <a name="procedure-for-using-the-ssma-console"></a>SSMA 콘솔 사용 절차  
 Windows 시스템에서 콘솔이 성공적으로 시작 된 후에는 다음 단계를 사용 하 여 작업을 수행할 수 있습니다.  
@@ -58,10 +58,10 @@ SSMA 스크립트 명령 및 옵션을 실행 하면 콘솔 프로그램이 콘�
   
 |색|Description|  
 |---------|---------------|  
-|빨강|실행 하는 동안 심각한 오류가 발생 했습니다.|  
+|빨간색|실행 하는 동안 심각한 오류가 발생 했습니다.|  
 |회색|날짜 및 시간 스탬프, 사용자에 대 한 메시지|  
 |흰색|스크립트 파일 명령, 메시지 유형|  
-|노란색|Warning|  
+|노란색|경고|  
 |녹색|사용자 입력 확인|  
 |녹청|작업의 시작, 종료 및 결과|  
   

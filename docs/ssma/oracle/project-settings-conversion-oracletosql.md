@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a98a5e07-eb5e-47b9-a6f2-e2cb3a18309c
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: a822aa1e9c30e245b61bd43c0af60b94fae33fe1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: a98b7ec46bfb432ccb52f082376fcbaead963337
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394915"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933394"
 ---
 # <a name="project-settings-conversion-oracletosql"></a>프로젝트 설정(변환)(OracleToSQL)
 **프로젝트 설정** 대화 상자의 변환 페이지에는 Ssma가 Oracle 구문을 구문으로 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

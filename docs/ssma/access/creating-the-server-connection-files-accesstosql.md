@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 03d622c50a8760bbf1767bc8a4f79e215773695f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b74cf86e6a68653a2047aebefc7ca86ab6868475
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006610"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933984"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>서버 연결 파일 만들기 (AccessToSQL)
-서버 정보는 스크립트 파일의 서버 섹션에서 지정할 수 있습니다. 서버 정보는 별도의 서버 연결 파일에도 지정할 수 있습니다. 서버 연결 파일에 대 한 명령줄 매개 변수는 `-c <serverconnectionfile>`입니다. 스크립트 및 서버 연결 파일에 동일한 서버 id가 있는 경우 스크립트 파일의 서버 정의가 고려 됩니다.  
+서버 정보는 스크립트 파일의 서버 섹션에서 지정할 수 있습니다. 서버 정보는 별도의 서버 연결 파일에도 지정할 수 있습니다. 서버 연결 파일에 대 한 명령줄 매개 변수는 `-c <serverconnectionfile>` 입니다. 스크립트 및 서버 연결 파일에 동일한 서버 id가 있는 경우 스크립트 파일의 서버 정의가 고려 됩니다.  
   
 ```xml  
 <!--Sample of server connection file commands -->  

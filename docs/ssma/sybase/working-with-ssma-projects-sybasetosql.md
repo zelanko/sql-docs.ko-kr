@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 11091d95-c488-48c3-891a-743cac94ac93
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 74096d97d01e9a700c10c9e4721c1dfca4d54f9b
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c9bc3f8f81d8701a584a1f4d6caee1b442746b76
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864690"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934495"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>SSMA 프로젝트 작업(SybaseToSQL)
 Sybase ASE (적응 서버 엔터프라이즈) 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 마이그레이션하려면 먼저 SSMA 프로젝트를 만듭니다. 프로젝트는 SQL Azure 마이그레이션하려는 ASE 데이터베이스에 대 한 메타 데이터를 포함 하는 파일입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .이 파일의 대상 인스턴스에 대 한 메타 데이터, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션된 개체 및 데이터를 받는 SQL Azure 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 정보 SQL Azure, 프로젝트 설정에 대 한 메타 데이터를 포함 하는 파일입니다.  

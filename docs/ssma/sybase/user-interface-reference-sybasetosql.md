@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 997566ef168b53397ad7c76014012d671fb25c91
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: afe4c2fe8ad2ff254a44cc2aba477f4ef411fdd7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864730"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934582"
 ---
 # <a name="user-interface-reference-sybasetosql"></a>사용자 인터페이스 참조(SybaseToSQL)
 이 섹션에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sybase 용 SSMA (Migration Assistant)에 대 한 도움말 항목이 포함 되어 있습니다.  

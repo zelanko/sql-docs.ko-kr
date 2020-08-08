@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Columns Comparison Settings
 - Selection of Affected Objects
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: c06fb621cab581e934ba4655ed6507149d109c60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 619da90c19cf918b3f53ac6cd213b27e718b6a10
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266500"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932914"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>영향을 받는 개체 선택 및 구성(OracleToSQL)
 이 페이지에서 테이블 및 외래 키를 선택할 수 있으며, SSMA가 이전 단계에서 선택한 개체의 실행 결과를 확인할 때 이러한 변경 내용을 비교 해야 합니다. 또한 확인 매개 변수를 사용자 지정할 수 있습니다.  
@@ -35,13 +35,13 @@ SSMA 테스터가 이러한 개체를 확인할 수 없는 경우 개체 트리 
   
 -   데이터 형식  
   
--   자릿수  
+-   전체 자릿수  
   
 -   확장  
   
 -   규칙  
   
--   기본값  
+-   Default  
   
 -   ID  
   

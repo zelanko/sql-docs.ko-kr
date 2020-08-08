@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 62136073116141c206c36d5fcca8dd5b417de0e4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: acf7affd211dc95d05f8fe6ce8b29f05292ad46c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396425"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933554"
 ---
 # <a name="working-with-ssma-for-oracle-console-db2tosql"></a>Oracle 용 SSMA 콘솔 작업 (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]D b 2 용 SSMA (Migration Assistant) 릴리스는 이제 콘솔 응용 프로그램을 통해 명령줄에서 액세스할 수 있습니다. 스크립트 파일은 명령을 실행 하기 위해 응용 프로그램에 대 한 입력을 구성 합니다. SSMA는 콘솔 응용 프로그램으로 스크립트 수준 상호 작용을 사용 하도록 설정 하 고 마이그레이션 주기를 줄이고 마이그레이션 작업을 확장 합니다.  

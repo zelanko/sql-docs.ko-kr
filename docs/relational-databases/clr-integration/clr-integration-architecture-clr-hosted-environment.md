@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6730ee9db626356ceb8f569928717af851896b07
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8824e427b71c26a8b6145db7cf60bbfc110e9ed5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246398"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934398"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 통합 아키텍처 - CLR 호스팅 환경
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "87246398"
  형식 안전 코드는 명확하게 정의된 방법으로만 메모리 구조에 액세스하는 코드입니다. 예를 들어 올바른 개체 참조에 대해 형식 안전 코드는 실제 필드 멤버에 대응하는 고정 오프셋에서 메모리에 액세스할 수 있습니다. 그러나 개체에 속하는 메모리 범위 안이나 밖의 임의의 오프셋에서 메모리에 액세스하는 코드는 형식 안전 코드가 아닙니다. 어셈블리가 CLR에 로드되고 JIT(Just-In-Time) 컴파일을 사용하여 MSIL을 컴파일되기 전에 런타임에서는 코드의 형식 안전성을 검사하는 확인 단계를 수행합니다. 이 확인 과정을 통과한 코드는 형식 안전 코드라고 할 수 있습니다.  
   
 ###### <a name="application-domains"></a>애플리케이션 도메인  
- CLR은 호스트 프로세스에서 관리 코드 어셈블리를 로드하고 실행할 수 있는 실행 영역이라는 개념으로 애플리케이션 도메인을 지원합니다. 애플리케이션 도메인 경계는 어셈블리 사이를 구분합니다. 어셈블리는 정적 변수와 데이터 멤버의 표시 유형 및 코드를 동적으로 호출할 수 있는지 여부를 기준으로 격리됩니다. 애플리케이션 도메인은 코드를 로드하고 언로드하는 메커니즘이기도 합니다. 메모리에서 코드를 언로드하는 유일한 방법은 애플리케이션 도메인을 언로드하는 것입니다. 자세한 내용은 [응용 프로그램 도메인 및 CLR 통합 보안](https://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)을 참조 하세요.  
+ CLR은 호스트 프로세스에서 관리 코드 어셈블리를 로드하고 실행할 수 있는 실행 영역이라는 개념으로 애플리케이션 도메인을 지원합니다. 애플리케이션 도메인 경계는 어셈블리 사이를 구분합니다. 어셈블리는 정적 변수와 데이터 멤버의 표시 유형 및 코드를 동적으로 호출할 수 있는지 여부를 기준으로 격리됩니다. 애플리케이션 도메인은 코드를 로드하고 언로드하는 메커니즘이기도 합니다. 메모리에서 코드를 언로드하는 유일한 방법은 애플리케이션 도메인을 언로드하는 것입니다. 자세한 내용은 [응용 프로그램 도메인 및 CLR 통합 보안](https://docs.microsoft.com/previous-versions/sql/2014/database-engine/dev-guide/application-domains-and-clr-integration-security?view=sql-server-2014)을 참조 하세요.  
   
 ###### <a name="code-access-security-cas"></a>CAS(코드 액세스 보안)  
  CLR 보안 시스템을 사용하면 코드에 사용 권한을 할당하여 관리 코드로 수행할 수 있는 작업의 유형을 제어할 수 있습니다. 코드 액세스 권한은 코드 ID(예: 어셈블리의 서명 또는 코드 원본)를 기준으로 할당됩니다.  
@@ -157,9 +157,9 @@ Thread.EndThreadAffinity();
 |기능|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |-|-|-|-|  
 |코드 액세스 보안|실행 전용|실행 및 외부 리소스 액세스|제한 없음|  
-|프로그래밍 모델 제한 사항|yes|yes|제한 없음|  
-|안정성 요구 사항|yes|예|아니요|  
-|네이티브 코드를 호출하는 기능|아니요|예|예|  
+|프로그래밍 모델 제한 사항|예|예|제한 없음|  
+|안정성 요구 사항|예|예|아니요|  
+|네이티브 코드를 호출하는 기능|아니요|아니요|예|  
   
  SAFE는 가장 신뢰할 수 있고 안전한 모드로, 허용되는 프로그래밍 모델에 대한 제한이 있습니다. SAFE 어셈블리는 실행하고, 계산을 수행하고, 로컬 데이터베이스에 액세스할 수 있는 권한이 부여됩니다. SAFE 어셈블리는 확인할 수 있는 형식 안전 어셈블리여야 하며 비관리 코드를 호출할 수 없습니다.  
   

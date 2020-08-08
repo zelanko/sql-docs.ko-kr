@@ -16,17 +16,17 @@ helpviewer_keywords:
 - inventories of Access databases
 - querying exported metadata
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 0c05eafd1fb58b6ece15f5ad8721228d9d4beab6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 7d7a87d45807c749477da7a7158f3a63fc56ec4b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006558"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934025"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>액세스 인벤토리 내보내기 (AccessToSQL)
-여러 Access 데이터베이스를 사용 하 고 마이그레이션할 데이터베이스를 모를 경우에는 프로젝트에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]있는 모든 access 데이터베이스의 인벤토리를 내보낼 수 있습니다. 그런 다음 해당 데이터베이스 내에서 마이그레이션할 데이터베이스와 개체를 확인 하는 인벤토리 메타 데이터를 검토 하 고 쿼리할 수 있습니다. 이 인벤토리를 사용 하면 다음과 같은 질문에 대 한 답변을 신속 하 게 찾을 수 있습니다.  
+여러 Access 데이터베이스를 사용 하 고 마이그레이션할 데이터베이스를 모를 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로젝트에 있는 모든 access 데이터베이스의 인벤토리를 내보낼 수 있습니다. 그런 다음 해당 데이터베이스 내에서 마이그레이션할 데이터베이스와 개체를 확인 하는 인벤토리 메타 데이터를 검토 하 고 쿼리할 수 있습니다. 이 인벤토리를 사용 하면 다음과 같은 질문에 대 한 답변을 신속 하 게 찾을 수 있습니다.  
   
 -   가장 큰 데이터베이스는 무엇 인가요?  
   
@@ -44,12 +44,12 @@ ms.locfileid: "68006558"
 SSMA는 Access 데이터베이스, 테이블, 열, 인덱스, 외래 키, 쿼리, 보고서, 폼, 매크로 및 모듈에 대 한 메타 데이터를 내보냅니다. 이러한 항목의 각 범주에 대 한 메타 데이터를 별도 테이블로 내보냅니다. 이러한 테이블의 스키마는 [액세스 인벤토리 스키마](access-inventory-schemas-accesstosql.md)를 참조 하세요.  
   
 ## <a name="exporting-inventory-data"></a>인벤토리 데이터 내보내기  
-액세스 인벤토리를 내보내려면 먼저 SSMA 프로젝트를 열거나 만든 다음 분석할 Access 데이터베이스를 추가 해야 합니다. SSMA 프로젝트에 데이터베이스를 추가한 후에는 해당 데이터베이스에 대 한 메타 데이터를 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 된 데이터베이스 및 스키마로 내보냅니다. 필요한 경우 SSMA는 메타 데이터를 저장할 테이블을 만듭니다. 그런 다음 SSMA는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대 한 액세스 데이터베이스에 대 한 메타 데이터를 추가 합니다.  
+액세스 인벤토리를 내보내려면 먼저 SSMA 프로젝트를 열거나 만든 다음 분석할 Access 데이터베이스를 추가 해야 합니다. SSMA 프로젝트에 데이터베이스를 추가한 후에는 해당 데이터베이스에 대 한 메타 데이터를 지정 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 및 스키마로 내보냅니다. 필요한 경우 SSMA는 메타 데이터를 저장할 테이블을 만듭니다. 그런 다음 SSMA는 데이터베이스에 대 한 액세스 데이터베이스에 대 한 메타 데이터를 추가 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
-> Access 데이터베이스는 여러 파일로 분할 될 수 있습니다. 즉, 테이블을 포함 하는 백 엔드 데이터베이스와 쿼리, 폼, 보고서, 매크로, 모듈 및 바로 가기가 포함 된 프런트 엔드 데이터베이스가 포함 됩니다. 분할 데이터베이스를로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]마이그레이션하려면 프런트 엔드 데이터베이스를 ssma에 추가 합니다.  
+> Access 데이터베이스는 여러 파일로 분할 될 수 있습니다. 즉, 테이블을 포함 하는 백 엔드 데이터베이스와 쿼리, 폼, 보고서, 매크로, 모듈 및 바로 가기가 포함 된 프런트 엔드 데이터베이스가 포함 됩니다. 분할 데이터베이스를로 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프런트 엔드 데이터베이스를 SSMA에 추가 합니다.  
   
-다음 지침에서는 프로젝트를 만들고, 프로젝트에 데이터베이스를 추가 하 고, 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]하 여 인벤토리 데이터를 내보내는 방법에 대해 설명 합니다.  
+다음 지침에서는 프로젝트를 만들고, 프로젝트에 데이터베이스를 추가 하 고, 연결 하 여 인벤토리 데이터를 내보내는 방법에 대해 설명 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **프로젝트를 만들려면**  
   
@@ -100,7 +100,7 @@ SSMA는 Access 데이터베이스, 테이블, 열, 인덱스, 외래 키, 쿼리
   
 1.  **파일** 메뉴에서 **SQL Server에 연결**을 선택 합니다.  
   
-2.  연결 대화 상자에서 인스턴스의 이름을 입력 하거나 선택 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+2.  연결 대화 상자에서 인스턴스의 이름을 입력 하거나 선택 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
     -   로컬 컴퓨터의 기본 인스턴스에 연결 하는 경우 **localhost** 또는 점 (**.**)을 입력할 수 있습니다.  
   
@@ -110,11 +110,11 @@ SSMA는 Access 데이터베이스, 테이블, 열, 인덱스, 외래 키, 쿼리
   
 3.  **데이터베이스** 상자에 내보낸 메타 데이터에 대 한 대상 데이터베이스의 이름을 입력 합니다.  
   
-4.  인스턴스가 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 아닌 포트에서 연결을 허용 하도록 구성 된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **서버 포트** 상자에서 연결에 사용 되는 포트 번호를 입력 합니다. 기본 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]경우 기본 포트 번호는 1433입니다. 명명 된 인스턴스의 경우 SSMA는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스에서 포트 번호를 가져오려고 시도 합니다.  
+4.  인스턴스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본이 아닌 포트에서 연결을 허용 하도록 구성 된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **서버 포트** 상자에서 연결에 사용 되는 포트 번호를 입력 합니다. 기본 인스턴스의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 포트 번호는 1433입니다. 명명 된 인스턴스의 경우 SSMA는 Browser 서비스에서 포트 번호를 가져오려고 시도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
-5.  **인증** 드롭다운 메뉴에서 연결에 사용할 인증 유형을 선택 합니다. 현재 Windows 계정을 사용 하려면 **Windows 인증**을 선택 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 사용 하려면 **SQL Server 인증**을 선택 하 고 사용자 이름 및 암호를 제공 합니다.  
+5.  **인증** 드롭다운 메뉴에서 연결에 사용할 인증 유형을 선택 합니다. 현재 Windows 계정을 사용 하려면 **Windows 인증**을 선택 합니다. 로그인을 사용 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Server 인증**을 선택 하 고 사용자 이름 및 암호를 제공 합니다.  
   
-에 연결 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 방법에 대 한 자세한 내용은 [SQL Server &#40;AccessToSQL&#41;에 연결 ](../../ssma/access/connecting-to-sql-server-accesstosql.md)을 참조 하세요.  
+에 연결 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server &#40;AccessToSQL&#41;에 연결 ](../../ssma/access/connecting-to-sql-server-accesstosql.md)을 참조 하세요.  
   
 **인벤토리 정보를 내보내려면**  
   
@@ -131,11 +131,11 @@ SSMA는 Access 데이터베이스, 테이블, 열, 인덱스, 외래 키, 쿼리
 메타 데이터를 내보낼 때마다 SSMA는 인벤토리에 데이터를 추가 합니다. 인벤토리에 있는 기존 데이터는 업데이트 되거나 삭제 되지 않습니다.  
   
 ## <a name="querying-the-exported-metadata"></a>내보낸 메타 데이터 쿼리  
-액세스 데이터베이스에 대 한 메타 데이터를 내보낸 후 메타 데이터를 쿼리할 수 있습니다. 다음 지침에서는의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기 창을 사용 하 여 쿼리를 실행 하는 방법을 설명 합니다.  
+액세스 데이터베이스에 대 한 메타 데이터를 내보낸 후 메타 데이터를 쿼리할 수 있습니다. 다음 지침에서는의 쿼리 편집기 창을 사용 하 여 쿼리를 실행 하는 방법을 설명 합니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 **메타 데이터를 쿼리하려면**  
   
-1.  **시작** 메뉴에서 **모든 프로그램**, **microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005** 또는 microsoft ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008** 또는 ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] microsoft 2012**을 차례로 가리킨 다음 **SQL Server Management Studio**을 클릭 합니다.  
+1.  **시작** 메뉴에서 **모든 프로그램**, **microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005** 또는 microsoft ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008** 또는 **microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012**을 차례로 가리킨 다음 **SQL Server Management Studio**을 클릭 합니다.  
   
 2.  **서버에 연결** 대화 상자에서 설정을 확인 한 다음 **연결**을 클릭 합니다.  
   
@@ -146,7 +146,7 @@ SSMA는 Access 데이터베이스, 테이블, 열, 인덱스, 외래 키, 쿼리
 5.  F5 키를 눌러 쿼리를 실행 합니다.  
   
 ## <a name="query-examples"></a>쿼리 예제  
-다음 쿼리를 실행 하기 전에 *database_name* 쿼리를 실행 하 여 내보낸 메타 데이터가 포함 된 데이터베이스에 대해 쿼리가 실행 되 고 있는지 확인 해야 합니다. 예를 들어 메타 데이터를 MyAccessMetadata 라는 데이터베이스로 내보낸 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드의 시작 부분에 다음을 추가 합니다.  
+다음 쿼리를 실행 하기 전에 *database_name* 쿼리를 실행 하 여 내보낸 메타 데이터가 포함 된 데이터베이스에 대해 쿼리가 실행 되 고 있는지 확인 해야 합니다. 예를 들어 메타 데이터를 MyAccessMetadata 라는 데이터베이스로 내보낸 경우 코드의 시작 부분에 다음을 추가 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ```  
 USE MyAccessMetadata;  
@@ -213,7 +213,7 @@ ORDER BY DateModified;
 ```  
   
 ### <a name="which-databases-contain-private-information"></a>개인 정보를 포함 하는 데이터베이스  
-액세스 데이터베이스에는 중요 한 정보나 개인 정보가 포함 될 수 있습니다. 이러한 데이터베이스를로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이동 하 여 보안 기능을 사용할 수 있습니다. 중요 한 데이터를 포함 하는 열에 특정 이름이 있거나 특정 문자를 포함 하는 경우 쿼리를 사용 하 여 해당 정보가 포함 된 모든 열을 찾을 수 있습니다. 예를 들어 "salary" 문자열이 포함 된 모든 열을 찾을 수 있습니다.  그런 다음 쿼리는 데이터베이스 이름, 테이블 이름 및 열 이름을 반환 합니다.  
+액세스 데이터베이스에는 중요 한 정보나 개인 정보가 포함 될 수 있습니다. 이러한 데이터베이스를로 이동 하 여 보안 기능을 사용할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 중요 한 데이터를 포함 하는 열에 특정 이름이 있거나 특정 문자를 포함 하는 경우 쿼리를 사용 하 여 해당 정보가 포함 된 모든 열을 찾을 수 있습니다. 예를 들어 "salary" 문자열이 포함 된 모든 열을 찾을 수 있습니다.  그런 다음 쿼리는 데이터베이스 이름, 테이블 이름 및 열 이름을 반환 합니다.  
   
 ```  
 SELECT DatabaseName, TableName, ColumnName   

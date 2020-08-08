@@ -9,21 +9,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Sybase Console,Troubleshooting
 ms.assetid: 8684ed23-c36b-46f6-9687-30ad7f47f876
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2ecbd6235e0ebec1850bb959aec2aa25832e857f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 81796da3f15586fca400e4b3d4f07819ebe58308
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020883"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934572"
 ---
 # <a name="troubleshooting-sybasetosql"></a>문제 해결(SybaseToSQL)
 콘솔 스크립트나 명령을 실행 하는 중간에 마이그레이션하는 문제가 발생 하는 것은 일반적이 지 않습니다.  
   
 수정할 수 오류는 다음과 관련이 있을 수 있습니다.  
   
-1.  기능  
+1.  함수  
   
 2.  절차  
   

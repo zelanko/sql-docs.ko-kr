@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
-author: Jtoland
-ms.author: Jtoland
-ms.openlocfilehash: a8349922c991877c8cf9139cfedf3f458c2d68b8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 35f0b2698497c1c87ed6d54eab2dc82496318619
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758435"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932474"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 

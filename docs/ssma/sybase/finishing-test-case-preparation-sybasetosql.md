@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Test Case Settings
 ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c3085d17804866015a78e93556dd5373d3a1b8cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: bbc833070b127d885bf223340a1c5e35388f9cdb
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029143"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931628"
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>테스트 사례 준비 완료(SybaseToSQL)
 마법사의 마지막 페이지에는 테스트 사례 설명 및 테스트와 관련 된 개체에 대 한 정보가 표시 됩니다. 또한이 페이지에서 테스트 실행 옵션을 설정할 수 있습니다.  

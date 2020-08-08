@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 168b7465-a6d6-4329-b46e-fc6c5a3f2d9d
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 505b1cdce4589075e0d87aec8e9013865dce81c4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: c0861f8f05f4cc386a21a1b7ac867e124a71df81
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395524"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935002"
 ---
 # <a name="assessment-report-oracletosql"></a>평가 보고서(OracleToSQL)
 평가 보고서 창에는 데이터베이스 개체를 구문으로 변환한 결과가 표시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 되며 마이그레이션 프로젝트의 복잡성과 비용을 예측 하는 데에도 도움이 될 수 있습니다.  

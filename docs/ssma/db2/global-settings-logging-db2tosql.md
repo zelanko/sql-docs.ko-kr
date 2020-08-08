@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 16f987415e59d145c4ff423b1c221bffe54bd13d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 020eebfe3d6ae509516eaedd8a891b0ee481bc83
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989564"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933794"
 ---
 # <a name="global-settings-logging-db2tosql"></a>전역 설정 (로깅) (DB2ToSQL)
 **전역 설정** 대화 상자를 사용 하 여 ssma의 로깅 설정을 지정할 수 있습니다. 일반적으로 제품 지원에 대 한 작업을 수행 하는 경우에만 이러한 설정을 변경할 수 있습니다.  
@@ -25,18 +25,18 @@ ms.locfileid: "67989564"
 **메시지 수준**  
 **메시지 수준**에서 사용할 수 있는 옵션은 다음과 같습니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |----------|---------------|  
 |**[모든 범주]**|다음 옵션에 대 한 로깅 수준을 설정 하는 데 사용 됩니다.|  
 |**데이터 수집기**|소스 스키마에 대 한 메타 데이터를 수집 하 여 프로젝트에 저장 합니다.|  
 |**변환기**|테이블 및 저장 프로시저와 같은 원본 데이터베이스 개체의 구조를 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구조체로 변환 합니다.|  
-|**데이터 migrator**|원본 데이터베이스에서로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터를 마이그레이션합니다.|  
-|**포맷터**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스키마에 대 한 스크립트를 생성 하는 변환기의 하위 구성 요소입니다.|  
+|**데이터 migrator**|원본 데이터베이스에서로 데이터를 마이그레이션합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**포맷터**|스키마에 대 한 스크립트를 생성 하는 변환기의 하위 구성 요소입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**그래픽 사용자 인터페이스**|SSMA 도구를 사용할 때 표시 되는 메시지입니다.|  
 |**링커**|SQL 식별자를 확인 하 고 다른 구성 요소에 정보를 제공 합니다.|  
 |**기타**|다른 범주에 없는 모든 메시지|  
 |**파서**|소스 스키마를 구문 분석 합니다.|  
-|**장치의**|원본 데이터베이스 개체를에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로드 합니다.|  
+|**장치의**|원본 데이터베이스 개체를에 로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.|  
 |**TreeConverter**|원본 메타 데이터의 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터로 변환 합니다.|  
 |**테스터**|SSMA 테스터를 사용할 때 표시 되는 메시지입니다.|  
   
@@ -46,7 +46,7 @@ ms.locfileid: "67989564"
 |-|-|  
 |**심각한 오류**|심각한 오류 메시지를 로그에 기록 합니다.|  
 |**오류**|로그에 오류 및 심각한 오류 메시지를 씁니다.|  
-|**내용의**|로그에 경고, 오류 및 심각한 오류 메시지를 기록 합니다.|  
+|**경고**|로그에 경고, 오류 및 심각한 오류 메시지를 기록 합니다.|  
 |**정보**|정보, 경고, 오류 및 심각한 오류 메시지를 로그에 기록 합니다.|  
 |**디버그**|디버그 메시지를 포함 하 여 모든 메시지를 로그에 씁니다.|  
   

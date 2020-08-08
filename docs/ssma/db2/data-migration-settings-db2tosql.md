@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 4efd9989e0893d8941f3f6fcb9496f5f4744b0e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8336dd3279084a8af3734b89e3f3693a0f190e4c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989746"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933824"
 ---
 # <a name="data-migration-settings-db2tosql"></a>데이터 마이그레이션 설정 (DB2ToSQL)
   

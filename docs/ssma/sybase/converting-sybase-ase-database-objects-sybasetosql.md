@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Converting Database Objects
 ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 0785c3ecc6335494ed4c34f8919e3ad766236631
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f52700e0b85c2630d30c7ffe32193cbd96ce9d1e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394515"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932284"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>SAP ASE 데이터베이스 개체 변환 (SybaseToSQL)
 SAP 적응 서버 엔터프라이즈 (ASE)에 연결 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고, 또는 AZURE SQL에 연결 하 고, 프로젝트 및 데이터 매핑 옵션을 설정한 후에는 Sap 적응 서버 엔터프라이즈 (ase) 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 azure sql database 개체로 변환할 수 있습니다.  

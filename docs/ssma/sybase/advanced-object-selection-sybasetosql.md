@@ -7,14 +7,14 @@ ms.prod: sql
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: d2baa90f-1b77-47ce-988d-1910c7c74103
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3745a7599f986073d1b759b46fe33dd741d62b09
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 13c76ce76b5096d136df0b38b5526e80093f76cd
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083549"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932374"
 ---
 # <a name="advanced-object-selection-sybasetosql"></a>고급 개체 선택 영역(SybaseToSQL)
 **고급 개체 섹션** 대화 상자를 사용 하 여 개체 이름에서 문자열과 부분 문자열을 사용 하 여 데이터베이스 개체를 필터링 한 다음 해당 개체를 선택 하거나 선택 취소할 수 있습니다. SSMA는 선택한 개체에 대해 변환 및 마이그레이션 작업을 수행 합니다.  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: fc00e683-189e-4765-b280-84927d635126
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: b9534020525ace1df2976ee732d9016c02d5ed2e
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 76f088100ecdf0172cfb7403bffa4a1546113b6b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293930"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933274"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>메뉴 명령 및 기타 바로 가기 키(Oracle To SQL)
 다음 섹션에서는 메뉴 명령에 액세스 하는 바로 가기 키와 Oracle 용 SSMA 응용 프로그램의 다양 한 대화 상자에서 사용 되는 기타 바로 가기 키에 대해 설명 합니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "84293930"
 |보고서를 만듭니다.|ALT + T + C|  
 |스키마를 변환 합니다.|ALT + T + N 또는 CTRL + R|  
 |Oracle 데이터베이스에서 새로 고칩니다.|Alt+T+R|  
-|SQL Server 또는 SQL Azure 데이터베이스와 동기화 합니다.|ALT + T + S|  
+|SQL Server 또는 Azure SQL Database와 동기화 합니다.|ALT + T + S|  
 |스크립트로 저장 합니다.|ALT + T + A|  
 |데이터를 마이그레이션합니다.|Alt+T+M|  
 |현재 작업을 중지 합니다.|ALT + T + O|  

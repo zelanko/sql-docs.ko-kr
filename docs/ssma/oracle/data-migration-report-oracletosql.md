@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: d63aa7e2-62c6-4c84-b3da-dcf2d89ee134
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 0d58f07f4e9d43f78c9c8990d174030cce484781
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 3be5379cc339326bc8ce35c886982e7eeff4d0a8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264249"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934968"
 ---
 # <a name="data-migration-report--oracletosql"></a>데이터 마이그레이션 보고서(OracleToSQL)
-데이터 **마이그레이션 보고서** 대화 상자는 데이터를로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]마이그레이션한 후에 표시 됩니다.  
+데이터 **마이그레이션 보고서** 대화 상자는 데이터를로 마이그레이션한 후에 표시 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>옵션  
 **상태**  
@@ -27,7 +27,7 @@ ms.locfileid: "68264249"
 **From**  
 원본 테이블입니다.  
   
-**받는 사람**  
+**수행할 작업**  
 대상 테이블입니다.  
   
 **총 행 수**  
@@ -39,7 +39,7 @@ ms.locfileid: "68264249"
 **비율**  
 성공적으로 마이그레이션된 행의 비율입니다.  
   
-**세부 정보**  
+**설명**  
 데이터 마이그레이션이 실패 한 경우 보고서에서 선택한 행에 대 한 마이그레이션 세부 정보를 표시 하려면 클릭 합니다. SSMA에서 오류의 원인을 표시 합니다.  
   
 **보고서 저장**  

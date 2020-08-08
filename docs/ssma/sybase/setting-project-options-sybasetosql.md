@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Project Options Setting
 ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: b2b16054a0a866d7772243a04cb8f5955931cfc4
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 04efa94a93cc313e520eaebb8448c48e1b106ec6
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864750"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934632"
 ---
 # <a name="setting-project-options-sybasetosql"></a>프로젝트 옵션 설정(SybaseToSQL)
 각 SSMA 프로젝트에 대해 프로젝트 수준 옵션을 설정할 수 있습니다. 이러한 옵션은 개체 변환, 개체 로드, SQL azure, 사용자 인터페이스 및 데이터 마이그레이션 설정을 지정 합니다. 개체를로 변환 하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure 하거나 데이터를 또는 SQL Azure로 마이그레이션하려면 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 옵션이 프로젝트에 적합 한지 확인 합니다.  
@@ -38,7 +38,7 @@ SSMA에는 5 개의 프로젝트 설정 집합이 있습니다.
   
 또한 이러한 설정을 구성 하는 네 가지 모드가 있습니다.  
   
-1.  기본값  
+1.  Default  
   
 2.  Optimistic  
   

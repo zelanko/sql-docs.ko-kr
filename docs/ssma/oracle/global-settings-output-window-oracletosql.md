@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 42b26160-354f-460c-a1e4-167017af3a0b
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 660644dc59e0c787a4620d0b15341d1cc7eec0b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 4358ac838513503e08b8da45fd529b187751e613
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68263009"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934806"
 ---
 # <a name="global-settings-output-window--oracletosql"></a>전역 설정(출력 창)(OracleToSQL)
 **전역 설정** 대화 상자를 사용 하 여 ssma에 대 한 설정을 지정할 수 있습니다.  

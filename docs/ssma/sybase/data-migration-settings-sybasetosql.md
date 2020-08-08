@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 9fcf6142a0df913c33782b4c65e8e95d4fcf91ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 42ec7a228aa317f1427dae14cf95631341645bc8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029383"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931773"
 ---
 # <a name="data-migration-settings-sybasetosql"></a>데이터 마이그레이션 설정(SybaseToSQL)
   

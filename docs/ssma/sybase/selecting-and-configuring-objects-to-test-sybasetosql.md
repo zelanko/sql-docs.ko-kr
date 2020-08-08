@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Tester Component,Parameter Comparision Setting
 - Tester Component,Selecting Objects
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2951d4c3bf1eae73ffd066d796b0e3dda4d28cf6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 31cc868cfe2d6fa7cc87e3fc6f89c868c43d17c3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020958"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934642"
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>테스트할 개체 선택 및 구성(SybaseToSQL)
 이 단계에서는 테스트할 개체를 선택 하 고 프로시저의 반환 값 뿐만 아니라 프로시저의 출력 매개 변수 및 함수를 비교 하기 위한 설정을 구성 합니다.  

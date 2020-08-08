@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ea6081cb68d084bf51132824a143fc6fdd544399
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8f6ea6e9b9e0971967b58b005e4fe554b397edb0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028878"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934674"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>메뉴 명령 및 기타 바로 가기 키(Sybase To SQL)
 다음 섹션에서는 Sybase 응용 프로그램의 다양 한 대화 상자에서 사용 되는 메뉴 명령 및 기타 바로 가기 키에 액세스할 수 있는 바로 가기 키에 대해 설명 합니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "68028878"
 |보고서를 만듭니다.|ALT + T + C|  
 |스키마를 변환 합니다.|ALT + T + N 또는 CTRL + R|  
 |Sybase 데이터베이스에서 새로 고칩니다.|Alt+T+R|  
-|SQL Server 또는 SQL Azure 데이터베이스와 동기화 합니다.|ALT + T + S|  
+|SQL Server 또는 Azure SQL Database와 동기화 합니다.|ALT + T + S|  
 |스크립트로 저장 합니다.|ALT + T + A|  
 |데이터를 마이그레이션합니다.|Alt+T+M|  
 |현재 작업을 중지 합니다.|ALT + T + O|  

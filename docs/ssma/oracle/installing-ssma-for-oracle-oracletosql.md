@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9211013a-ab24-4c52-9b26-87994b35e502
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 3938d01e98bfb2a57057d9573ee7199f0b12fc14
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 0df64ceecaccb58521265873834bb02a626ffe80
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864850"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934792"
 ---
 # <a name="installing-ssma--for-oracle-oracletosql"></a>Oracle용 SSMA 설치(OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Oracle 용 SSMA (Migration Assistant)는 Oracle에서로의 마이그레이션을 수행 하 고 Azure SQL Database 하는 데 사용 하는 클라이언트 응용 프로그램으로 구성 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 또한 마이그레이션된 데이터베이스에서 데이터 마이그레이션 및 Oracle 시스템 기능 사용을 지 원하는 확장 팩이 포함 되어 있습니다.  

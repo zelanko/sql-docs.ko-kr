@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: af24f2c4-5e86-4135-a4f3-a24faaeeefe7
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c6d83e81253430f243fcaed55b66f6d0de6299ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 11b47065fe180956d58361ec80eda1dac25fa4b1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083500"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932324"
 ---
 # <a name="assessment-report-sybasetosql"></a>평가 보고서(SybaseToSQL)
-평가 보고서 창에는 데이터베이스 개체를 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문으로 변환한 결과가 표시 되며 마이그레이션 프로젝트의 복잡성과 비용을 예측 하는 데에도 도움이 될 수 있습니다.  
+평가 보고서 창에는 데이터베이스 개체를 구문으로 변환한 결과가 표시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 되며 마이그레이션 프로젝트의 복잡성과 비용을 예측 하는 데에도 도움이 될 수 있습니다.  
   
 평가 보고서에 액세스 하려면 원본 메타 데이터 탐색기에서 변환할 개체를 선택 하 고 **데이터베이스**를 마우스 오른쪽 단추로 클릭 한 다음 **보고서 만들기**를 선택 합니다.  
   
@@ -32,12 +32,12 @@ ms.locfileid: "68083500"
 선택한 개체에 대 한 변환 통계를 표시 합니다. 이 창은 왼쪽 창에서 코드가 있는 개별 개체를 선택한 경우에만 표시 됩니다. 이 창을 보려면 **통계** 를 확장 해야 할 수 있습니다.  
   
 **소스 탐색**  
-선택한 개체에 대 한 ASE 코드를 표시 하 고로 [!INCLUDE[tsql](../../includes/tsql-md.md)]변환 되지 않은 코드를 강조 표시 합니다. 이 창은 왼쪽 창에서 코드가 있는 개별 개체를 선택한 경우에만 표시 됩니다.  
+선택한 개체에 대 한 ASE 코드를 표시 하 고로 변환 되지 않은 코드를 강조 표시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 합니다. 이 창은 왼쪽 창에서 코드가 있는 개별 개체를 선택한 경우에만 표시 됩니다.  
   
 줄 번호를 클릭 하 여 책갈피를 설정 하거나 선택 취소 합니다. 창 맨 위에 있는 단추를 사용 하 여 코드를 탐색 합니다.  
   
 **대상 탐색**  
-선택한 개체에 대 한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 변환 결과 코드와 변환 되지 않은 코드에 대 한 오류 메시지를 표시 합니다. 이 창은 왼쪽 창에서 코드가 있는 개별 개체를 선택한 경우에만 표시 됩니다.  
+[!INCLUDE[tsql](../../includes/tsql-md.md)]선택한 개체에 대 한 변환 결과 코드와 변환 되지 않은 코드에 대 한 오류 메시지를 표시 합니다. 이 창은 왼쪽 창에서 코드가 있는 개별 개체를 선택한 경우에만 표시 됩니다.  
   
 줄 번호를 클릭 하 여 책갈피를 설정 하거나 선택 취소 합니다. 창 맨 위에 있는 단추를 사용 하 여 코드를 탐색 합니다.  
   

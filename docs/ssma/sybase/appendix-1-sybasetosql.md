@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Sybase Console,Appendix
 ms.assetid: 6dcfd6d5-772c-4876-aa94-a7f43c4b9d59
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 9d2d58b06c1a222a2ff6042bb5ca46338f752f7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ccd075529e5ecb3277ab698632cca9c948802690
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083546"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932294"
 ---
 # <a name="appendix---1-sybasetosql"></a>부록 - 1(SybaseToSQL)
 SSMA 콘솔 명령줄 옵션의 빠른 보기:  

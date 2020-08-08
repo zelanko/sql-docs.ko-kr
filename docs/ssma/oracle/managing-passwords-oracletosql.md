@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Managing Passwords in Oracle, Exporting or Importing Encrypted Password
 - Managing passwords in Oracle, Securing Password
 ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: a3fe98b4a0b552d8c26d64eed777d5bcadc42cd7
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: b96c7cff343c1c0f00c0e324961d633c4255f2a9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160001"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934712"
 ---
 # <a name="managing-passwords-oracletosql"></a>암호 관리(OracleToSQL)
 이 섹션에서는 데이터베이스 암호를 보호 하는 방법과 서버에서 데이터베이스를 가져오거나 내보내는 절차에 대해 설명 합니다.

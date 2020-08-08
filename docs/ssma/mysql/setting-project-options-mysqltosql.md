@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Setting project options,configuration options
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d5c85c551ba70d28b4af7eb87126c51ef5a4ff75
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: cf8ac834b014fe49a851d3887fb36e29f59e069e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863524"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935131"
 ---
 # <a name="setting-project-options-mysqltosql"></a>프로젝트 옵션 설정(MySQLToSQL)
 각 SSMA 프로젝트에 대해 프로젝트 수준 옵션을 설정할 수 있습니다. 이러한 옵션은 개체가 변환 되는 방법, 데이터를 마이그레이션하는 방법 및 원본 데이터 형식을 대상 데이터 형식에 매핑하는 방법을 지정 합니다.  개체를 SQL Server 또는 SQL Azure 데이터를 SQL Server 또는 SQL Azure로 변환 하기 전에 구성 옵션이 프로젝트에 적합 한지 확인 합니다.  
@@ -38,7 +38,7 @@ SSMA에는 5 개의 프로젝트 설정 집합이 있습니다.
   
 프로젝트 설정은 다음 네 가지 방법으로 구성할 수 있습니다.  
   
--   기본값  
+-   Default  
   
 -   Optimistic  
   

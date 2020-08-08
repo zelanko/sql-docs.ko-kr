@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Test Repositories
 ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: a94bd053dac04c4d595e4f2077c02d1d79858e56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ba0879ca35e40d7ea2d1466db97cabd3cb6abd18
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020839"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934554"
 ---
 # <a name="using-test-repositories-sybasetosql"></a>테스트 리포지토리 사용(SybaseToSQL)
 SSMA 테스트 리포지토리는 나중에 사용 하기 위해 SSMA 테스터 테스트 사례와 테스트 결과를 저장 합니다. 리포지토리 데이터는 **ssmatesterdb_syb** 데이터베이스의 스키마 **Ssma_sybase_utilities** SQL Server 테이블 **TestCaseRepository** 및 **RunTestCaseResultRepository** 에 저장 됩니다.  
