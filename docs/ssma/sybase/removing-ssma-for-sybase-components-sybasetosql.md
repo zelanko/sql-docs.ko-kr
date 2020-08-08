@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: aec09593-17d9-4ec2-ac56-3cd8851406fd
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 0c76b6b2e4e5295bf7db2d7857a73223fc6f8c7e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 4ffa47be1f35e86d09c136e5aeca6c0811630ca5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028646"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930595"
 ---
 # <a name="removing-ssma-for-sybase-components-sybasetosql"></a>Sybase용 SSMA 구성 요소 제거(SybaseToSQL)
-Sybase ASE (적응 서버 엔터프라이즈)에서로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터베이스를 마이그레이션한 후에는 ssma 구성 요소를 제거 하는 것이 좋습니다. 언제 든 지 클라이언트 구성 요소를 제거할 수 있지만, 마이그레이션된 데이터베이스가 **sysdb** 데이터베이스의 **ssma_syb** 스키마 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 함수를 더 이상 사용 하지 않을 경우에는에서 확장 팩을 제거 하면 안 됩니다.  
+Sybase ASE (적응 서버 엔터프라이즈)에서로 데이터베이스를 마이그레이션한 후에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 SSMA 구성 요소를 제거 하는 것이 좋습니다. 언제 든 지 클라이언트 구성 요소를 제거할 수 있지만, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션된 데이터베이스가 **sysdb** 데이터베이스의 **ssma_syb** 스키마에서 함수를 더 이상 사용 하지 않을 경우에는에서 확장 팩을 제거 하면 안 됩니다.  
   
 ## <a name="uninstalling-the-ssma-for-sybase-client"></a>Sybase 클라이언트용 SSMA 제거  
 **프로그램 추가/제거**를 사용 하 여 ssma를 제거할 수 있습니다.  
@@ -51,7 +51,7 @@ Sybase ASE (적응 서버 엔터프라이즈)에서로 [!INCLUDE[ssNoVersion](..
   
 7.  마침 페이지에서 **끝내기**를 클릭 합니다.  
   
-을 제거한 후에는를 사용 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]하 여 **sysdb ssma_syb** 스키마 및 전체 **sysdb** 데이터베이스가 제거 되었는지 확인할 수 있습니다. 그러나 다른 SSMA 제품을 사용 하는 경우 **sysdb** 데이터베이스도 사용 합니다. 데이터베이스가 있고 다른 데이터베이스에서이 데이터베이스의 개체를 참조 하지 않는 경우 데이터베이스를 분리할 수 있습니다.  
+을 제거한 후에는를 사용 하 여 **sysdb ssma_syb** 스키마 및 전체 **sysdb** 데이터베이스가 제거 되었는지 확인할 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . 그러나 다른 SSMA 제품을 사용 하는 경우 **sysdb** 데이터베이스도 사용 합니다. 데이터베이스가 있고 다른 데이터베이스에서이 데이터베이스의 개체를 참조 하지 않는 경우 데이터베이스를 분리할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [Sybase 용 SSMA 클라이언트 설치 &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  

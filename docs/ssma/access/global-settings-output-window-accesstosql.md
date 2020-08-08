@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ca64f234-38f2-4607-a9d6-d4906e48e336
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ff4dc8e042dc27156d03935c1de39c9fbd67a69c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: bf18bdcee058ac913a303a04e2ff4510696724a6
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67986378"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938300"
 ---
 # <a name="global-settings-output-window-accesstosql"></a>전역 설정 (출력 창) (AccessToSQL)
 **전역 설정** 대화 상자를 사용 하 여 ssma에 대 한 설정을 지정할 수 있습니다.  

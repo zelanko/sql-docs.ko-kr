@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Sybase Console,refresh-from-database report
 - Sybase Console,synchronize-target report
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 564385c15d9877454d30892f9cce54fbca6cf802
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: df30186091344addef429bfb125e90b898d21467
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396392"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931546"
 ---
 # <a name="generating-reports-sybasetosql"></a>보고서 생성(SybaseToSQL)
 명령을 사용 하 여 수행 되는 특정 활동의 보고서는 SSMA 콘솔에서 개체 트리 수준에 생성 됩니다.  

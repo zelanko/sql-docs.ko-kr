@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9b05b11fcf3110b9f51d1f9cb44fdabb4a3ba36
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 760fcc2212991f0841f4ded3dd2932e551c26060
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728448"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87948372"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>관리되는 데이터베이스 개체 모니터링 및 문제 해결
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85728448"
   
 |이벤트|설명|  
 |-----------|-----------------|  
-|[Assembly Load 이벤트 클래스](/sql/database-engine/assembly-load-event-class)|어셈블리 로드 요청(성공 및 실패)을 모니터링하는 데 사용합니다.|  
+|[Assembly Load 이벤트 클래스](https://docs.microsoft.com/sql/relational-databases/event-classes/sql-server-event-class-reference)|어셈블리 로드 요청(성공 및 실패)을 모니터링하는 데 사용합니다.|  
 |[Sql: BatchStarting 이벤트 클래스](../../relational-databases/event-classes/sql-batchstarting-event-class.md), [Sql: Batchstarting 이벤트 클래스](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|시작되거나 완료된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리에 대한 정보를 제공합니다.|  
 |[Sp: Starting 이벤트 클래스](../../relational-databases/event-classes/sp-starting-event-class.md), [Sp: Completed 이벤트 클래스](../../relational-databases/event-classes/sp-completed-event-class.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저의 실행을 모니터링하는 데 사용합니다.|  
 |[Sql: StmtStarting 이벤트 클래스](../../relational-databases/event-classes/sql-stmtstarting-event-class.md), [Sql: StmtCompleted 이벤트 클래스](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|CLR 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 루틴의 실행을 모니터링하는 데 사용합니다.|  

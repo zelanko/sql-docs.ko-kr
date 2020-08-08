@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Migration settings
 - Project Settings dialog box, Migration
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3e3d979b6f3c5943723fb5dd8f37831adfbc1305
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 973a957f3c2c758aaf83116d9cba1cc8f50a3adc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929390"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937768"
 ---
 # <a name="project-settings-migration-accesstosql"></a>프로젝트 설정 (마이그레이션) (AccessToSQL)
-마이그레이션 프로젝트 설정을 사용 하 여 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션하는 방법을 구성 하거나 SQL Azure 수 있습니다.  
+마이그레이션 프로젝트 설정을 사용 하 여 데이터를 마이그레이션하는 방법을 구성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 SQL Azure 수 있습니다.  
   
 마이그레이션 창은 **프로젝트 설정** 및 **기본 프로젝트 설정** 대화 상자에서 사용할 수 있습니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67929390"
 -   **전체 모드**: False  
   
 **트리거 실행**  
-테이블에 데이터를 추가할 때 SSMA에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 삽입 트리거를 발생 시켜야 하는지 여부를 지정 합니다.  
+테이블에 데이터를 추가할 때 SSMA에서 삽입 트리거를 발생 시켜야 하는지 여부를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   **기본 모드**: False  
   
@@ -48,7 +48,7 @@ ms.locfileid: "67929390"
 -   **전체 모드**: False  
   
 **ID 유지**  
-에 데이터를 추가할 때 SSMA에서 액세스 id 값을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]유지할지 여부를 지정 합니다. 이 값이 False 이면에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] id 값을 할당 합니다.  
+에 데이터를 추가할 때 SSMA에서 액세스 id 값을 유지할지 여부를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이 값이 False 이면에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] id 값을 할당 합니다.  
   
 -   **기본 모드**: True  
   
@@ -57,7 +57,7 @@ ms.locfileid: "67929390"
 -   **전체 모드**: False  
   
 **Null 유지**  
-에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]지정 된 기본값과 관계 없이 ssma가에 데이터를 추가할 때 원본 데이터에서 null 값을 유지할지 여부를 지정 합니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 지정 된 기본값과 관계 없이 SSMA가에 데이터를 추가할 때 원본 데이터에서 null 값을 유지할지 여부를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   **기본 모드**: True  
   
@@ -83,7 +83,7 @@ SSMA에서 가장 이른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
 -   지원 되는 날짜를 사용 하 여 01 년 1 월 1 1753 일 이전 날짜를 바꾸려면를 **지원 되는 가장 가까운 날짜로 바꿉니다**. 이 값을 선택 하는 경우 기본적으로 가장 가까운 지원 날짜는 01 년 1 월 1753로 선택 됩니다.  
   
-**일괄 처리 크기**  
+**Batch 크기**  
 데이터 마이그레이션 중에 사용 되는 일괄 처리 크기입니다. 트랜잭션은 각 일괄 처리 후에 기록 됩니다. 기본적으로 모든 스키마에 대 한 일괄 처리 크기는 1만입니다.  
   
 ## <a name="see-also"></a>참고 항목  

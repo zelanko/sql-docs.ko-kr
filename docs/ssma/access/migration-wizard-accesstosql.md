@@ -16,17 +16,17 @@ helpviewer_keywords:
 - Migration Wizard, New Project
 - Migration Wizard, Selecting objects to migrate
 ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 658487186924fe5547edee70425524b2b4e3be6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8413487d4b367426c22795f7e82e58ec029706c3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083588"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938012"
 ---
 # <a name="migration-wizard-accesstosql"></a>마이그레이션 마법사 (AccessToSQL)
-마이그레이션 마법사는 하나 이상의 데이터베이스를에 대 한 액세스에서 또는 SQL Azure로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션하는 과정을 안내 합니다. 마법사를 사용 하 여 프로젝트를 만들고, 프로젝트에 데이터베이스를 추가 하 고, 마이그레이션할 개체를 선택 하 고, SQL Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결 합니다. 또한 액세스 스키마와 데이터를 변환, 로드 및 마이그레이션합니다. 필요에 따라 액세스 테이블을 또는 SQL Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 연결할 수 있습니다.  
+마이그레이션 마법사는 하나 이상의 데이터베이스를에 대 한 액세스에서 또는 SQL Azure로 마이그레이션하는 과정을 안내 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 마법사를 사용 하 여 프로젝트를 만들고, 프로젝트에 데이터베이스를 추가 하 고, 마이그레이션할 개체를 선택 하 고, SQL Azure에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 또한 액세스 스키마와 데이터를 변환, 로드 및 마이그레이션합니다. 필요에 따라 액세스 테이블을 또는 SQL Azure 테이블에 연결할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 대부분의 마이그레이션 마법사 페이지에는 기존 SSMA 대화 상자와 같은 옵션이 포함 되어 있습니다. 따라서 마법사 페이지는 여기에 설명 되어 있으며, 개별 옵션에 대 한 자세한 내용을 확인할 수 있도록 링크가 제공 됩니다. 페이지에 고유한 옵션이 포함 되어 있으면 여기에 설명 되어 있습니다.  
   
@@ -43,7 +43,7 @@ Ssma를 시작 하면 기본적으로 마이그레이션 마법사가 시작 됩
 새 프로젝트 만들기 페이지에서 프로젝트 파일 이름, 위치 및 마이그레이션 프로젝트 형식 (마이그레이션에 사용 되는 대상 SQL Server의 버전)을 입력할 수 있습니다. 자세한 내용은 [SSMA (새 프로젝트)](https://msdn.microsoft.com/ca294f6d-eeb5-42ca-9306-156281a3f0f3) 를 참조 하세요.  
   
 ## <a name="add-access-databases-page"></a>액세스 데이터베이스 추가 페이지  
-액세스 데이터베이스 추가 페이지에서 하나 이상의 Access 데이터베이스를 프로젝트에 추가할 수 있습니다. **데이터베이스 추가**를 클릭 한 다음 **열기** 창에서 데이터베이스를 선택 하 여 개별 데이터베이스를 추가할 수 있습니다. 또는 데이터베이스 **찾기** 단추를 사용 하 여 데이터베이스를 찾을 수 있습니다. 자세한 내용은 아래 항목을 참조하세요.  
+액세스 데이터베이스 추가 페이지에서 하나 이상의 Access 데이터베이스를 프로젝트에 추가할 수 있습니다. **데이터베이스 추가**를 클릭 한 다음 **열기** 창에서 데이터베이스를 선택 하 여 개별 데이터베이스를 추가할 수 있습니다. 또는 데이터베이스 **찾기** 단추를 사용 하 여 데이터베이스를 찾을 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.  
   
 -   [Access 데이터베이스 파일 추가 및 제거](adding-and-removing-access-database-files-accesstosql.md)  
   
@@ -75,25 +75,25 @@ Ssma를 시작 하면 기본적으로 마이그레이션 마법사가 시작 됩
 필터링에 대 한 자세한 내용은 [고급 개체 선택 (SSMA Common)](https://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c)의 옵션 섹션을 참조 하세요.  
   
 ## <a name="connect-to-sql-server-page"></a>SQL Server 페이지에 연결  
-연결 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지에서 연결 속성을 지정 하 고에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]연결 합니다. 자세한 내용은 [SQL Server에 연결](connect-to-sql-server-accesstosql.md)을 참조 하세요.
+연결 대상 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 속성을 지정 하 고에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 자세한 내용은 [SQL Server에 연결](connect-to-sql-server-accesstosql.md)을 참조 하세요.
   
 > [!IMPORTANT]  
 > 연결이 성공 하는 즉시 테이블 링크 옵션이 있는 **링크 테이블** 페이지가 표시 됩니다. **다음** 을 클릭 하 여 마이그레이션을 시작 합니다.  
   
 ## <a name="connect-to-sql-azure-page"></a>SQL Azure 페이지에 연결  
-SQL Azure에 연결 페이지에서 연결 속성을 지정 하 고 SQL Azure에 연결 합니다. 새 azure 데이터베이스를 만들려면 **찾아보기** 단추 클릭에 표시 되는 **azure 데이터베이스 만들기** 옵션을 사용 하 여이 작업을 수행할 수 있습니다. 자세한 내용은 [SQL Azure에 연결](connect-to-azure-sql-db-accesstosql.md) 을 참조 하세요.  
+SQL Azure에 연결 페이지에서 연결 속성을 지정 하 고 SQL Azure에 연결 합니다. 새 Azure 데이터베이스를 만들려면 **찾아보기** 단추 클릭에 표시 되는 **azure 데이터베이스 만들기** 옵션을 사용 하 여이 작업을 수행할 수 있습니다. 자세한 내용은 [SQL Azure에 연결](connect-to-azure-sql-db-accesstosql.md) 을 참조 하세요.  
   
 > [!IMPORTANT]  
 > 연결이 성공 하는 즉시 테이블 링크 옵션이 있는 **링크 테이블** 페이지가 표시 됩니다. 연결 페이지에서 **다음** 단추를 클릭 하 여 마이그레이션을 시작 합니다.  
   
 ## <a name="link-tables-page"></a>테이블 연결 페이지  
-테이블 연결 페이지를 사용 하 여 마이그레이션된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블이 나 SQL Azure 테이블에 원래 액세스 테이블을 연결할 수 있습니다. 테이블을 연결 하면 쿼리, 폼, 보고서 및 데이터 액세스 페이지에서 Access 데이터베이스의 데이터 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터베이스의 데이터를 사용 하도록 access 데이터베이스를 수정 합니다.  
+테이블 연결 페이지를 사용 하 여 마이그레이션된 테이블이 나 SQL Azure 테이블에 원래 액세스 테이블을 연결할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 테이블을 연결 하면 쿼리, 폼, 보고서 및 데이터 액세스 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] access 데이터베이스의 데이터 대신 또는 Azure SQL Database의 데이터를 사용 하도록 access 데이터베이스를 수정 합니다.  
   
 **테이블 연결**  
-**테이블 연결** 확인란을 선택 하 여 마이그레이션된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 또는 SQL Azure 테이블에 액세스 테이블을 연결 합니다. 마이그레이션을 시작 하려면 [ **다음** ] 단추를 클릭 해야 합니다.  
+**테이블 연결** 확인란을 선택 하 여 마이그레이션된 테이블 또는 SQL Azure 테이블에 액세스 테이블을 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 마이그레이션을 시작 하려면 [ **다음** ] 단추를 클릭 해야 합니다.  
   
 ## <a name="migration-status-page"></a>마이그레이션 상태 페이지  
-마이그레이션 상태 페이지에는 액세스 스키마를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 스키마로 변환 하 고, 변환 된 스키마를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure로 로드 하 고, 데이터를 마이그레이션하는 진행률이 표시 됩니다.  
+마이그레이션 상태 페이지에는 액세스 스키마를 또는 SQL Azure 스키마로 변환 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , 변환 된 스키마를 또는 SQL Azure로 로드 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고, 데이터를 마이그레이션하는 진행률이 표시 됩니다.  
   
 이 페이지에 대 한 자세한 내용은 [변환, 로드 및 마이그레이션](https://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b) 을 참조 하세요.  
   

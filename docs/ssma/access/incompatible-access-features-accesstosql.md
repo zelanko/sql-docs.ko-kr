@@ -26,14 +26,14 @@ helpviewer_keywords:
 - unique indexes
 - validation rules
 ms.assetid: 99d45b9c-e3b9-4d56-8c25-b594b887ace1
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 8bccdd3ebb49e3694ca472525a7c76d81f1fcc7a
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 27761441dd9df65c276a2afd12565018e4440f85
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293550"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938762"
 ---
 # <a name="incompatible-access-features-accesstosql"></a>호환 되지 않는 액세스 기능 (AccessToSQL)
 모든 Access 데이터베이스 기능이와 호환 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 액세스에는 서로 다른 예약 키워드 집합이 있습니다. 이러한 문제로 인해로의 마이그레이션이 실패할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 다음 표를 사용 하 여 가능한 마이그레이션 문제와 이러한 문제에 대해 수행할 수 있는 작업에 대해 알아보세요.  

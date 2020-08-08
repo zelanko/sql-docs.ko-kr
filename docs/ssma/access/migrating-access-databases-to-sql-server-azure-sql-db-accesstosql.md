@@ -14,18 +14,18 @@ helpviewer_keywords:
 - procedure, migration
 - recommended migration process
 ms.assetid: 76a3abcf-2998-4712-9490-fe8d872c89ca
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: d35f359186fca7d862ee8da8f4c4932d849c421b
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: c8c0fbd289aea92c78d97a4d41a93255c9e196bf
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823558"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938075"
 ---
 # <a name="migrating-access-databases-to-sql-server---azure-sql-database-accesstosql"></a>Access 데이터베이스를 SQL Server Azure SQL Database (AccessToSQL)로 마이그레이션
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SSMA (Migration Assistant)는 Access 데이터베이스를 또는 SQL Azure로 신속 하 게 마이그레이션하는 데 도움이 되는 종합적인 환경을 제공 하는 도구입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . SSMA를 사용 하 여 데이터베이스 개체에 대 한 액세스 및 SQL Azure 데이터베이스 개체를 검토 하 고, access 데이터베이스 개체를 변환 하 고, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] access 데이터베이스 개체를 변환 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고, 데이터를 SQL Azure 하 고, 데이터를 마이그레이션할 수 있습니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SSMA (Migration Assistant)는 Access 데이터베이스를 또는 SQL Azure로 신속 하 게 마이그레이션하는 데 도움이 되는 종합적인 환경을 제공 하는 도구입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . SSMA를 사용 하면 액세스 및 Azure SQL Database 개체를 검토 하 고, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션을 위해 access 데이터베이스를 평가 하 고, access 데이터베이스 개체를 변환 하 고, 데이터를 SQL Azure로 로드 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고, 데이터를 마이그레이션할 수 있습니다.  
   
 ## <a name="recommended-migration-process"></a>권장 마이그레이션 프로세스  
 개체 및 데이터를 액세스에서 또는 SQL Azure 성공적으로 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 프로세스를 사용 합니다.  

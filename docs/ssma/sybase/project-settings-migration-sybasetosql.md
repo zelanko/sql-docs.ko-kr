@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: baa268431f9741e3dfe016476abdf051f8f54a09
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 5e8a8f9c88537d0dc807efe7baf387ea917468d3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028709"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930870"
 ---
 # <a name="project-settings-migration-sybasetosql"></a>프로젝트 설정(마이그레이션)(SybaseToSQL)
-**프로젝트 설정** 대화 상자의 마이그레이션 페이지에는 Ssma가 Sybase (Sybase Server Enterprise)에서로 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]마이그레이션하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다.  
+**프로젝트 설정** 대화 상자의 마이그레이션 페이지에는 Ssma가 Sybase (Sybase Server Enterprise)에서로 데이터를 마이그레이션하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 마이그레이션 창은 **프로젝트 설정** 및 **기본 프로젝트 설정** 대화 상자에서 모두 사용할 수 있습니다.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "68028709"
   
 |용어|정의|  
 |--------|--------------|  
-|**지원 되지 않는 날짜 바꾸기**|Ssma에서 가장 이른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 **/시간** (01 년 1 월 1753) 이전의 날짜를 수정 해야 하는지 여부를 지정 합니다.<br /><br />현재 날짜 값을 유지 하려면 **아무 것도 안 함**을 선택 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 datetime 열에서 01 년 1 월 1753 일 이전 날짜를 수락 하지 않습니다. 이전 날짜를 사용 하는 경우에는 datetime 값을 문자 값으로 변환 해야 합니다.<br /><br />1753 년 1 월 1 일 이전 날짜를 NULL로 변환 하려면 **바꾸기를 null로 바꾸기**를 선택 합니다.<br /><br />지원 되는 날짜를 사용 하 여 01 년 1 월 1 1753 일 이전 날짜를 바꾸려면를 **지원 되는 가장 가까운 날짜로 바꿉니다**.<br /><br />**기본 모드**: 아무 작업도 수행 하지 않습니다.<br /><br />**낙관적 모드**: 아무 작업도 수행 하지 않음<br /><br />**전체 모드**: 지원 되는 가장 가까운 날짜로 바꿉니다.|  
+|**지원 되지 않는 날짜 바꾸기**|SSMA에서 가장 이른 날짜 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **/시간** (01 년 1 월 1753) 이전의 날짜를 수정 해야 하는지 여부를 지정 합니다.<br /><br />현재 날짜 값을 유지 하려면 **아무 것도 안 함**을 선택 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 datetime 열에서 01 년 1 월 1753 일 이전 날짜를 수락 하지 않습니다. 이전 날짜를 사용 하는 경우에는 datetime 값을 문자 값으로 변환 해야 합니다.<br /><br />1753 년 1 월 1 일 이전 날짜를 NULL로 변환 하려면 **바꾸기를 null로 바꾸기**를 선택 합니다.<br /><br />지원 되는 날짜를 사용 하 여 01 년 1 월 1 1753 일 이전 날짜를 바꾸려면를 **지원 되는 가장 가까운 날짜로 바꿉니다**.<br /><br />**기본 모드**: 아무 작업도 수행 하지 않습니다.<br /><br />**낙관적 모드**: 아무 작업도 수행 하지 않음<br /><br />**전체 모드**: 지원 되는 가장 가까운 날짜로 바꿉니다.|  
   
 ## <a name="migration-engine"></a>마이그레이션 엔진  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68028709"
   
 |용어|정의|  
 |--------|--------------|  
-|**Batch 크기**|데이터 마이그레이션 중에 사용 되는 일괄 처리 크기를 지정 합니다.<br /><br />**기본 모드**: 1만<br /><br />**낙관적 모드**: 1만<br /><br />**전체 모드**: 1만|  
+|**일괄 처리 크기**|데이터 마이그레이션 중에 사용 되는 일괄 처리 크기를 지정 합니다.<br /><br />**기본 모드**: 1만<br /><br />**낙관적 모드**: 1만<br /><br />**전체 모드**: 1만|  
 |**CHECK 제약 조건**|SQL Server 테이블에 데이터를 삽입할 때 SSMA에서 제약 조건을 확인할 지 여부를 지정 합니다.<br /><br />**기본 모드**: False<br /><br />**낙관적 모드**: False<br /><br />**전체 모드**: False|  
 |**데이터 마이그레이션 시간 제한**|데이터 마이그레이션 중에 사용 되는 시간 제한을 지정 합니다.<br /><br />**기본 모드**: 15<br /><br />**낙관적 모드**: 15<br /><br />**전체 모드**: 15|  
 |**확장 데이터 마이그레이션 옵션**|별도의 세부 정보 탭에 있는 각 테이블에 대 한 추가 데이터 마이그레이션 옵션을 표시 합니다.<br /><br />**기본 모드**: 숨기기<br /><br />**낙관적 모드**: 숨기기<br /><br />**전체 모드**: 숨기기|  

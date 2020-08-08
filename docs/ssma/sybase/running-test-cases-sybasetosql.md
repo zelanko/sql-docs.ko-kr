@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Execution Steps
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 73047e0741d4dee12ecec3e83df308e3f7abd343
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d828142d83f21cf38663241d593fe197b9715592
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68021025"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930504"
 ---
 # <a name="running-test-cases-sybasetosql"></a>테스트 사례 실행(SybaseToSQL)
-SSMA 테스터는 테스트 사례를 실행할 때 테스트를 위해 선택한 개체를 실행 하 고 확인 결과에 대 한 보고서를 만듭니다. 두 플랫폼에서 결과가 동일 하면 테스트에 성공 했습니다. Sybase와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 간의 개체 대응은 현재 ssma 프로젝트의 스키마 매핑 설정에 따라 결정 됩니다.  
+SSMA 테스터는 테스트 사례를 실행할 때 테스트를 위해 선택한 개체를 실행 하 고 확인 결과에 대 한 보고서를 만듭니다. 두 플랫폼에서 결과가 동일 하면 테스트에 성공 했습니다. Sybase와 간의 개체 대응은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 현재 SSMA 프로젝트의 스키마 매핑 설정에 따라 결정 됩니다.  
   
 성공적인 테스트를 위해 필요한 요구 사항은 모든 Sybase 개체가 변환 되 고 대상 데이터베이스에 로드 되는 것입니다. 또한 두 플랫폼의 테이블 내용이 동기화 되도록 테이블 데이터를 마이그레이션해야 합니다.  
   
@@ -34,17 +34,17 @@ SSMA 테스터는 테스트 사례를 실행할 때 테스트를 위해 선택�
   
 ## <a name="test-case-execution-steps"></a>테스트 사례 실행 단계  
   
-### <a name="prerequisites"></a>사전 요구 사항  
+### <a name="prerequisites"></a>필수 구성 요소  
 SSMA 테스터는 테스트를 시작 하기 전에 테스트 실행에 대해 모든 필수 구성 요소가 충족 되는지 확인 합니다. 일부 조건이 충족 되지 않으면 오류 메시지가 나타납니다.  
   
 ### <a name="initialization"></a>초기화  
-이 단계에서 SSMA 테스터는 Sybase 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 보조 개체 (테이블, 트리거 및 뷰)를 만듭니다. 테이블 비교 모드가 변경 된 경우에 **만**확인 하도록 선택한 영향을 받는 테이블에 적용 된 변경 내용을 추적할 수 있습니다.  
+이 단계에서 SSMA 테스터는 Sybase 및에서 보조 개체 (테이블, 트리거 및 뷰)를 만듭니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 테이블 비교 모드가 변경 된 경우에 **만**확인 하도록 선택한 영향을 받는 테이블에 적용 된 변경 내용을 추적할 수 있습니다.  
   
 확인 된 테이블의 이름이 USER_TABLE 이라고 가정 합니다. 이러한 테이블의 경우 다음과 같은 보조 개체가 Sybase로 생성 됩니다.  
   
-SSMATESTER2005db 또는 SSMATESTER2008db 데이터베이스와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ssmatesterdb_syb 데이터베이스의에서 Sybase에 생성 되는 개체는 다음과 같습니다.  
+SSMATESTER2005db 또는 SSMATESTER2008db 데이터베이스와 ssmatesterdb_syb 데이터베이스의에서 Sybase에 생성 되는 개체는 다음과 같습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|속성|Type|Description|  
+|Name|Type|설명|  
 |--------|--------|---------------|  
 |USER_TABLE $ Trg|트리거|확인 된 테이블의 변경 내용에 대 한 감사를 트리거합니다.|  
 |USER_TABLE $ Aud|테이블|삭제 된 행과 덮어쓴 행을 저장 하는 테이블입니다.|  
@@ -54,9 +54,9 @@ SSMATESTER2005db 또는 SSMATESTER2008db 데이터베이스와 [!INCLUDE[ssNoVer
 |USER_TABLE $ new_id|보기|삽입 된 행과 변경 된 행의 id입니다.|  
 |USER_TABLE $ old|보기|삭제 및 덮어쓴 행의 단순화 된 표현입니다.|  
   
-Sybase 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 확인 된 테이블의 데이터베이스에 생성 되는 개체는 다음과 같습니다.  
+Sybase 및에서 확인 된 테이블의 데이터베이스에 생성 되는 개체는 다음과 같습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|속성|Type|Description|  
+|Name|Type|설명|  
 |--------|--------|---------------|  
 |USER_TABLE $ Trg|트리거|확인 된 테이블의 변경 내용에 대 한 감사를 트리거합니다.|  
   

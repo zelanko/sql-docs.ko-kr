@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 95b95de2-db05-4422-825d-43968ecfd01c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: e68a58135e28989c2661ee531e2b4bf3c86a0104
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 89c22a7151a7c7aa94c76d5278edd5911b9f2b6d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76910226"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937716"
 ---
 # <a name="new-gui-features-in-ssma-for-access-to-sql"></a>SQL에 대 한 액세스를 위한 SSMA의 새로운 GUI 기능
 이 장에서는 SSMA 사용자 인터페이스의 새로운 기능에 대해 설명 합니다.  
@@ -54,14 +54,14 @@ ms.locfileid: "76910226"
   
 -   SQL 창 왼쪽의 회색 영역을 클릭 합니다.  
   
--   번호가 매겨진 책갈피를 설정&lt;하려면 Ctrl + Shift&gt; + 0 ... 9를 사용 합니다.  
+-   &lt; &gt; 번호가 매겨진 책갈피를 설정 하려면 Ctrl + Shift + 0 ... 9를 사용 합니다.  
   
 ### <a name="bookmark-navigation"></a>책갈피 탐색  
 다음과 같은 방법으로 책갈피를 살펴볼 수 있습니다.  
   
 -   다음 책갈피, SQL 창 위쪽의 이전 책갈피를 사용 합니다.  
   
--   Ctrl +&lt;0 ... 9&gt; 를 사용 하 여 번호가 매겨진 책갈피 찾기  
+-   Ctrl + &lt; 0 ... 9를 사용 &gt; 하 여 번호가 매겨진 책갈피 찾기  
   
 -   [책갈피 관리] 대화 상자에서 단추를 사용 하 여 소스 보기  
   

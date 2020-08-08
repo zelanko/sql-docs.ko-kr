@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ca098c15-c343-4d7d-a284-c2fc405eb991
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 35e6c735fe0d9411d310298d4f32dbaab97b93c5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f59e442a70b8c9b621f453ab9837412238ec6102
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67927785"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937262"
 ---
 # <a name="advanced-object-selection-db2tosql"></a>고급 개체 선택 (DB2ToSQL)
 **고급 개체 섹션** 대화 상자를 사용 하 여 개체 이름에서 문자열과 부분 문자열을 사용 하 여 데이터베이스 개체를 필터링 한 다음 해당 개체를 선택 하거나 선택 취소할 수 있습니다. SSMA는 선택한 개체에 대해 변환 및 마이그레이션 작업을 수행 합니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "67927785"
   
 이 대화 상자를 사용 하기 전에 스키마를 변환 하거나 프로젝트를 저장 하 여 SSMA가 모든 메타 데이터를 로드 하도록 강제할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>옵션
 **모든 항목 선택**  
 모든 항목 옆에 확인 표시를 추가 합니다. 이러한 항목은 메타 데이터 탐색기에서 즉시 선택 됩니다.  
   

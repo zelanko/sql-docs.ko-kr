@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 0b589d9f5bf90b78d6689ff3b37f09f15fe344b8
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: a4fdc0343d1346833fd58c4e2fa0240e1a2af668
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864920"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87950978"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>명령줄에서 Data Migration Assistant 실행
 
@@ -106,7 +106,7 @@ Catalog=DatabaseName;Integrated Security=true"
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
-**대상 플랫폼 SQL Azure 데이터베이스에 대 한 단일 데이터베이스 평가, json 및 .csv 파일에 결과 저장**
+**대상 플랫폼 Azure SQL Database에 대 한 단일 데이터베이스 평가, json 및 .csv 파일에 결과 저장**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -155,7 +155,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 
-**대상 플랫폼 SQL Azure 데이터베이스에 대 한 단일 데이터베이스 평가, json 및 .csv 파일에 결과 저장**
+**대상 플랫폼 Azure SQL Database에 대 한 단일 데이터베이스 평가, json 및 .csv 파일에 결과 저장**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -304,7 +304,7 @@ DmaCmd.exe
 |`/SkuRecommendationSubscriptionId` | 구독 ID입니다. | 지원 <br> (최신 가격)
 |`/SkuRecommendationDatabasesToRecommend` | 권장 되는 데이터베이스의 공백으로 구분 된 목록입니다 (예: "Database1" "Database2" "Database3"). 이름은 대/소문자를 구분 하며 큰따옴표로 묶어야 합니다. 생략 하는 경우 모든 데이터베이스에 대 한 권장 사항이 제공 됩니다. | N
 |`/AzureAuthenticationTenantId` | 인증 테 넌 트입니다. | 지원 <br> (최신 가격)
-|`/AzureAuthenticationClientId` | 인증에 사용 되는 AAD 앱의 클라이언트 ID입니다. | 지원 <br> (최신 가격)
+|`/AzureAuthenticationClientId` | 인증에 사용 되는 Azure AD 앱의 클라이언트 ID입니다. | 지원 <br> (최신 가격)
 |`/AzureAuthenticationInteractiveAuthentication` | 창을 팝업 하려면 true로 설정 합니다. | 지원 <br> (최신 가격) <br>3 인증 옵션 중 하나를 선택 합니다.-옵션 1
 |`/AzureAuthenticationCertificateStoreLocation` | 인증서 저장소 위치 (예: "CurrentUser")로 설정 합니다. | 지원 <br>(최신 가격) <br> (3 인증 옵션 중 하나 선택-옵션 2)
 |`/AzureAuthenticationCertificateThumbprint` | 인증서 지 문으로 설정 합니다. | 지원 <br> (최신 가격) <br>(3 인증 옵션 중 하나 선택-옵션 2)

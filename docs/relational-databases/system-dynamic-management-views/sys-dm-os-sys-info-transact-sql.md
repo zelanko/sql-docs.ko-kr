@@ -22,12 +22,12 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b384190b6ffeee077f6658d0701f036c3f7746a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4ce8584d48a20f35b090b957b1455c444e5b4b83
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396838"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87928704"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "87396838"
 |**scheduler_total_count**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 총 스케줄러 수를 나타냅니다. Null을 허용하지 않습니다.|  
 |**deadlock_monitor_serial_number**|**int**|현재 교착 상태 모니터 시퀀스의 ID를 지정합니다. Null을 허용하지 않습니다.|  
 |**sqlserver_start_time_ms_ticks**|**bigint**|마지막으로 시작 된 **ms_tick** 번호를 나타냅니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 현재 ms_ticks 열과 비교됩니다. Null을 허용하지 않습니다.|  
-|**sqlserver_start_time**|**datetime**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 마지막으로 시작된 날짜와 시간을 지정합니다. Null을 허용하지 않습니다.|  
+|**sqlserver_start_time**|**datetime**|마지막으로 시작 된 로컬 시스템 날짜 및 시간을 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Null을 허용하지 않습니다.|  
 |**affinity_type**|**int**|**적용 대상:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 이상<br /><br /> 현재 사용 중인 서버 CPU 프로세스 선호도의 유형을 지정합니다. Null을 허용하지 않습니다. 자세한 내용은 [ALTER SERVER CONFIGURATION &#40;transact-sql&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)를 참조 하세요.<br /><br /> 1 = MANUAL<br /><br /> 2 = AUTO|  
 |**affinity_type_desc**|**varchar(60)**|**적용 대상:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 이상<br /><br /> **Affinity_type** 열에 대해 설명 합니다. Null을 허용하지 않습니다.<br /><br /> MANUAL = 하나 이상의 CPU에 선호도가 설정되었습니다.<br /><br /> AUTO = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CPU 간에 스레드를 자유롭게 이동할 수 있습니다.|  
 |**process_kernel_time_ms**|**bigint**|**적용 대상:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 이상<br /><br /> 커널 모드에서 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스레드에 걸린 총 시간(밀리초)입니다. 이 값은 서버에 있는 모든 프로세서의 시간을 포함하므로 단일 프로세서 클럭보다 클 수 있습니다. Null을 허용하지 않습니다.|  

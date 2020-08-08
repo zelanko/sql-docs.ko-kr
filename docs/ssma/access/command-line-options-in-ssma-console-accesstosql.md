@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: 1b78f6ccae739b6fe70fc813959daa44adca7c22
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: ca276036465ca5228fd5c52ca7d4b7de3fdbf13f
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394878"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938882"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA 콘솔의 명령줄 옵션 (AccessToSQL)
 Microsoft는 SSMA 활동을 실행 하 고 제어 하는 강력한 명령줄 옵션 집합을 제공 합니다. 결과 섹션은 추가 세부 정보를 제공 합니다.  

@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 506b9a32b465c9006fe4030bd6fcbb8ba4d0f136
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b889b896a70fa43ee3909ff251a3d91125e878b8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938330"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937472"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>변환할 DB2 스키마를 평가 하는 방법 (DB2ToSQL)
-개체를 로드 하 고로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터를 마이그레이션하려면 먼저 마이그레이션의 복잡성과 마이그레이션에 소요 되는 시간을 결정 해야 합니다. SSMA는 성공적으로 변환 되는 개체의 비율을 보여 주는 평가 보고서를 만들 수 있습니다. SSMA를 사용 하면 변환 오류를 발생 시키는 특정 문제를 확인할 수도 있습니다.  
+개체를 로드 하 고로 데이터를 마이그레이션하려면 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션의 복잡성과 마이그레이션에 소요 되는 시간을 결정 해야 합니다. SSMA는 성공적으로 변환 되는 개체의 비율을 보여 주는 평가 보고서를 만들 수 있습니다. SSMA를 사용 하면 변환 오류를 발생 시키는 특정 문제를 확인할 수도 있습니다.  
   
 ## <a name="creating-assessment-reports"></a>평가 보고서 만들기  
-이 평가 보고서를 만들 때 SSMA는 선택한 DB2 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구문으로 변환한 다음 결과를 표시 합니다.  
+이 평가 보고서를 만들 때 SSMA는 선택한 DB2 데이터베이스 개체를 구문으로 변환한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 결과를 표시 합니다.  
   
 **평가 보고서를 만들려면**  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67938330"
   
     SSMA는 창의 아래쪽에 있는 상태 표시줄에 진행률을 표시 합니다. 출력 창이 표시 되 면 출력 창에도 메시지가 표시 됩니다.  
   
-    평가가 완료 되 면 DB2: 평가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보고서 창의 Migration Assistant 표시 됩니다.  
+    평가가 완료 되 면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB2: 평가 보고서 창의 Migration Assistant 표시 됩니다.  
   
 ## <a name="using-assessment-reports"></a>평가 보고서 사용  
 평가 보고서 창에는 다음과 같은 세 개의 창이 있습니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "67938330"
   
     -   DB2에서는 DB2 개체를 수정 하 여 문제가 있는 코드를 제거 하거나 수정할 수 있습니다. 업데이트 된 코드를 SSMA에 로드 하려면 메타 데이터를 업데이트 해야 합니다. 자세한 내용은 [DB2 데이터베이스에 연결 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)을 참조 하세요.  
   
-    -   마이그레이션할 때 개체를 제외할 수 있습니다. 메타 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 탐색기 및 Db2 메타 데이터 탐색기에서 항목 옆에 있는 확인란의 선택을 취소 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고 d b 2에서 데이터를 마이그레이션합니다.  
+    -   마이그레이션할 때 개체를 제외할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]메타 데이터 탐색기 및 Db2 메타 데이터 탐색기에서 항목 옆에 있는 확인란의 선택을 취소 하 고 d b 2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터를 마이그레이션합니다.  
   
 ## <a name="next-step"></a>다음 단계  
 [DB2 스키마 &#40;DB2ToSQL&#41;변환](../../ssma/db2/converting-db2-schemas-db2tosql.md)  

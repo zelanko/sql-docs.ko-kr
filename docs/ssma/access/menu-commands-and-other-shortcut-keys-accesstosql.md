@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: cbfb9aa200560cf8d2b4ae42486f8a39b179e88b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f7e5aa6a3b6d663c21ff57abda09ee9308a0a2af
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907135"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937788"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>메뉴 명령 및 기타 바로 가기 키 (AccessToSQL)
 다음 섹션에서는 Access 응용 프로그램의 SSMA의 여러 대화 상자에서 사용 되는 메뉴 명령 및 기타 바로 가기 키에 액세스할 수 있는 바로 가기 키에 대해 설명 합니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "67907135"
 |보고서를 만듭니다.|ALT + T + C|  
 |스키마를 변환 합니다.|ALT + T + N 또는 CTRL + R|  
 |Access 데이터베이스에서 새로 고칩니다.|Alt+T+R|  
-|SQL Server 또는 SQL Azure 데이터베이스와 동기화 합니다.|ALT + T + S|  
+|SQL Server 또는 Azure SQL Database와 동기화 합니다.|ALT + T + S|  
 |스크립트로 저장 합니다.|ALT + T + A|  
 |데이터를 마이그레이션합니다.|Alt+T+M|  
 |현재 작업을 중지 합니다.|ALT + T + O|  

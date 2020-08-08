@@ -17,14 +17,14 @@ helpviewer_keywords:
 - SQL Azure, reconnecting
 - SQL Azure, synchronizing metadata
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 529962cbc303a66102f833374e42c6cfb8981b87
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3bb372b329ce516cae2ab26ece02721d7934b228
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822520"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938932"
 ---
 # <a name="connecting-to-azure-sql-database-accesstosql"></a>Azure SQL Database에 연결 (AccessToSQL)
 Access 데이터베이스를 SQL Azure로 마이그레이션하려면 SQL Azure의 대상 인스턴스에 연결 해야 합니다. 연결할 때 SSMA는 SQL Azure 인스턴스의 모든 데이터베이스에 대 한 메타 데이터를 가져오고 SQL Azure 메타 데이터 탐색기에 데이터베이스 메타 데이터를 표시 합니다. SSMA는 연결 된 SQL Azure의 인스턴스에 대 한 정보를 저장 하지만 암호를 저장 하지는 않습니다.  
@@ -72,7 +72,7 @@ Access 데이터베이스 개체를 SQL Azure 구문으로 변환 하기 전에 
 SQL Azure 계정에 데이터베이스가 없는 경우 **찾아보기** 단추 클릭에 표시 되는 **Azure 데이터베이스 만들기** 옵션을 사용 하 여 첫 번째 데이터베이스를 만들 수 있습니다.  
   
 ## <a name="synchronizing-sql-azure-metadata"></a>SQL Azure 메타 데이터 동기화  
-SQL Azure 데이터베이스에 대 한 메타 데이터는 자동으로 업데이트 되지 않습니다. SQL Azure 메타 데이터 탐색기의 메타 데이터는 SQL Azure에 처음 연결 하거나 마지막으로 메타 데이터를 마지막으로 업데이트 한 경우 메타 데이터의 스냅숏입니다. 모든 데이터베이스 또는 단일 데이터베이스 또는 데이터베이스 개체에 대 한 메타 데이터를 수동으로 업데이트할 수 있습니다.  
+Azure SQL Database 데이터베이스에 대 한 메타 데이터는 자동으로 업데이트 되지 않습니다. SQL Azure 메타 데이터 탐색기의 메타 데이터는 SQL Azure에 처음 연결 하거나 마지막으로 메타 데이터를 마지막으로 업데이트 한 경우 메타 데이터의 스냅숏입니다. 모든 데이터베이스 또는 단일 데이터베이스 또는 데이터베이스 개체에 대 한 메타 데이터를 수동으로 업데이트할 수 있습니다.  
   
 **메타 데이터를 동기화 하려면**  
   
@@ -96,10 +96,10 @@ SQL Azure에 대 한 연결은 프로젝트를 닫을 때까지 활성 상태로
   
 SQL Azure에 다시 연결 하는 절차는 연결을 설정 하는 절차와 같습니다.  
   
-## <a name="next-step"></a>다음 단계  
+## <a name="next-steps"></a>다음 단계  
 마이그레이션의 다음 단계는 프로젝트 요구 사항에 따라 달라 집니다.  
   
--   액세스 스키마와 SQL Azure 데이터베이스 및 스키마 간의 매핑을 사용자 지정 하려면 [Access 데이터베이스를 SQL Server 스키마에 매핑](mapping-source-and-target-databases-accesstosql.md)을 참조 하세요.  
+-   Access 스키마와 Azure SQL Database 간의 매핑을 사용자 지정 하려면 [Access 데이터베이스를 SQL Server 스키마에 매핑](mapping-source-and-target-databases-accesstosql.md)을 참조 하세요.  
   
 -   프로젝트에 대 한 구성 옵션을 사용자 지정 하려면 [프로젝트 옵션 설정](setting-conversion-and-migration-options-accesstosql.md)을 참조 하세요.  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd0f9f37b3381705a2e739276a7a044837fb20ad
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: db3a0122abd82506f24464fb7131eeb557c596c8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110161"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87947314"
 ---
 # <a name="clr-integration-security"></a>CLR 통합 보안
 
@@ -53,7 +53,6 @@ ms.locfileid: "87110161"
  [가장 및 CLR 통합 보안](https://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
  관리 코드에서 가장을 사용하여 외부 리소스에 액세스하는 방법을 설명합니다.  
   
- [부분적으로 신뢰할 수 있는 호출자 허용](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
  관리되는 메서드에서 다른 어셈블리에 포함된 클래스의 메서드를 호출할 때 발생하는 문제를 설명합니다.  
   
  [애플리케이션 도메인 및 CLR 통합 보안](/previous-versions/sql/2014/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  

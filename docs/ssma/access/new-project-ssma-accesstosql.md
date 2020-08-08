@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - New Project dialog box
 ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: db042e18beb0b33f50639b63f76dde21863c19a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 61c14895f2e464713661f74890b2eb1d5ccc79f5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112290"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937918"
 ---
 # <a name="new-project-ssma-accesstosql"></a>새 프로젝트 (SSMA) (AccessToSQL)
 **새 프로젝트** 대화 상자를 사용 하 여 새 ssma 프로젝트를 만들 수 있습니다. **새 프로젝트** 대화 상자에 액세스 하려면 **파일** 메뉴에서 **새 프로젝트**를 클릭 합니다.  
@@ -47,6 +47,6 @@ ms.locfileid: "79112290"
 -   SQL Azure  
   
 > [!IMPORTANT]  
-> ' SQL Azure ' 형식의 새 프로젝트에는 Access 테이블을 SQL Azure 데이터베이스에 연결 하는 데 SQL Server Native Client (SNAC) 버전 10.5 이상이 필요 합니다.   
+> ' SQL Azure ' 형식의 새 프로젝트에서 Access 테이블을 Azure SQL Database에 연결 하려면 SQL Server Native Client (SNAC) 버전 10.5 이상이 필요 합니다.   
 > [Microsoft® SQL Server® 2008 R2 기능 팩](https://www.microsoft.com/download/details.aspx?id=44272)에서 최신 버전의 SNAC를 가져올 수 있습니다.  
   

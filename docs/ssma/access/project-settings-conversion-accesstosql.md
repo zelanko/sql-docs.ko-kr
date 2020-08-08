@@ -10,17 +10,17 @@ helpviewer_keywords:
 - conversion, options described
 - Project Settings dialog box, Conversion
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ff44d34e6c701c8d43260982d3117def4cb9530d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8889e0d869960f8300194afe31fe87b7f0cf2346
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929454"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937893"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>프로젝트 설정 (변환) (AccessToSQL)
-변환 프로젝트 설정을 사용 하 여 Access 데이터베이스 개체에서 또는 SQL Azure 데이터베이스 개체로 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변환 하는 방법을 구성할 수 있습니다.  
+변환 프로젝트 설정을 사용 하 여 개체를 Access 데이터베이스 개체에서 또는 Azure SQL Database 개체로 변환 하는 방법을 구성할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 변환 창은 **프로젝트 설정** 및 **기본 프로젝트 설정** 대화 상자에서 사용할 수 있습니다.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "67929454"
   
 ## <a name="options"></a>옵션  
 **기본 키 추가**  
-액세스 테이블에 기본 키 또는 고유 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인덱스가 없는 경우 또는 SQL Azure 테이블에 새 기본 키를 만듭니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]액세스 테이블에 기본 키 또는 고유 인덱스가 없는 경우 또는 SQL Azure 테이블에 새 기본 키를 만듭니다.  
   
 -   **기본 모드**: False  
   
@@ -83,7 +83,7 @@ Null을 허용 하는 열이 포함 된 기본 키를 찾을 때 SSMA에서 출�
   
 -   **전체 모드**: 오류  
   
-**복잡 한 쿼리가 와일드 카드를 사용 하는\&경우 경고 (#42;)**  
+**복잡 한 쿼리가 와일드 카드를 사용 하는 경우 경고 ( \& #42;)**  
 SELECT 문의 열 이름이 와일드 카드 (*) 인 경우 출력 창에 경고를 표시 하 고 오류 목록 합니다.  
   
 -   **기본 모드**: True  

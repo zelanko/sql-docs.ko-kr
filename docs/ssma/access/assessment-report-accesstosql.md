@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Assessment Report dialog box
 - Conversion Report dialog box
 ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c28fb4cf5d110e01b156fc6ce985b2cb2fb7bfe1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: de675e479217170a465126d8fe242d01c778abf0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910682"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939082"
 ---
 # <a name="assessment-report-accesstosql"></a>평가 보고서 (AccessToSQL)
-평가 보고서 창에는 데이터베이스 개체를 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문으로 변환한 결과가 표시 되며 마이그레이션 프로젝트의 복잡성과 비용을 예측 하는 데에도 도움이 될 수 있습니다.  
+평가 보고서 창에는 데이터베이스 개체를 구문으로 변환한 결과가 표시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 되며 마이그레이션 프로젝트의 복잡성과 비용을 예측 하는 데에도 도움이 될 수 있습니다.  
   
 평가 보고서를 만들려면 원본 메타 데이터 탐색기에서 변환할 개체를 선택 하 고 **데이터베이스**를 마우스 오른쪽 단추로 클릭 한 다음 **보고서 만들기**를 선택 합니다. 스키마를 변환한 후에는이 보고서를 자동으로 표시할 수도 있습니다. 그러나 보고서 이름은 변환 보고서가 됩니다. 자세한 내용은 [프로젝트 설정 (GUI) (SSMA Common)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)을 참조 하세요.  
   

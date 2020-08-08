@@ -16,25 +16,25 @@ helpviewer_keywords:
 - source database
 - target database
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 894dec18ab2d487eca22a65542e1d77d6c2e2f77
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 9e07c42e272728943f30198c8800c86aaa9443e3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293755"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938163"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>원본 및 대상 데이터베이스 매핑 (AccessToSQL)
-또는 SQL Azure에 연결 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 경우 마이그레이션할 대상 데이터베이스를 지정 해야 합니다. 여러 Access 데이터베이스를 사용 하는 경우 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 (또는 스키마) 또는 연결 된 SQL Azure 데이터베이스의 여러 스키마에 매핑할 수 있습니다.  
+또는 SQL Azure에 연결 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 경우 마이그레이션할 대상 데이터베이스를 지정 해야 합니다. 여러 Access 데이터베이스를 사용 하는 경우 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 (또는 스키마) 또는 연결 된 Azure SQL Database 아래의 여러 스키마에 매핑할 수 있습니다.  
   
-## <a name="sql-server-or-sql-azure-database-schemas"></a>데이터베이스 스키마 SQL Server 또는 SQL Azure  
+## <a name="sql-server-or-azure-sql-database-schemas"></a>스키마 SQL Server 또는 Azure SQL Database  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터베이스는 스키마 개념을 사용 하 여 데이터베이스 내의 개체를 논리 그룹으로 구분 합니다. 예를 들어 라이브러리 데이터베이스는 **books**, **audio**및 **video** 라는 세 가지 스키마를 사용 하 여 책, 오디오 및 비디오 개체를 서로 구분할 수 있습니다. 기본적으로 access 데이터베이스는 SQL Azure의 **dbo** 연결 된 **master** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 및 **dbo** 스키마에 대 한 master 데이터베이스 및 dbo 스키마에 매핑됩니다.  
   
 각 Access 데이터베이스와 데이터베이스 및 스키마 간의 매핑을 사용자 지정 하지 않는 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA는 access 데이터베이스와 연결 된 모든 스키마와 데이터를 매핑된 기본 데이터베이스로 마이그레이션합니다.  
   
 ## <a name="modifying-the-target-database-and-schema"></a>대상 데이터베이스 및 스키마 수정  
-SSMA를 사용 하면 각 Access 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터베이스와 스키마에 매핑할 수 있습니다. 다음 절차에서는 데이터베이스당 매핑을 사용자 지정 하는 방법을 설명 합니다.  
+SSMA를 사용 하면 각 Access 데이터베이스를 또는 Azure SQL Database에 매핑할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 다음 절차에서는 데이터베이스당 매핑을 사용자 지정 하는 방법을 설명 합니다.  
   
 **대상 데이터베이스 및 스키마를 수정 하려면**  
   
@@ -61,7 +61,7 @@ SSMA를 사용 하면 각 Access 데이터베이스를 [!INCLUDE[ssNoVersion](..
 원본 데이터베이스를 연결 된 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 또는 연결 된 대상 데이터베이스의 모든 스키마에 매핑할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 원본 스키마를 연결 된 대상 데이터베이스의 존재 하지 않는 스키마에 매핑하면 **"스키마가 대상 메타 데이터에 없습니다." 라는 메시지가 표시 됩니다. 동기화 중에 생성 됩니다. 계속 하 시겠습니까? "** 예를 클릭 합니다.  
   
 ## <a name="reverting-to-your-initial-database-and-schema"></a>초기 데이터베이스 및 스키마로 되돌리기  
-Access 데이터베이스와 또는 SQL Azure 데이터베이스와 스키마 간의 매핑을 사용자 지정 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는에 연결 하거나 SQL Azure 때 지정한 데이터베이스로 매핑을 다시 되돌릴 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+Access 데이터베이스와 또는 Azure SQL Database 간의 매핑을 사용자 지정 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결 하거나 SQL Azure 때 지정한 데이터베이스로 다시 매핑을 되돌릴 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **기본 데이터베이스 및 스키마로 다시 설정 하려면**  
   

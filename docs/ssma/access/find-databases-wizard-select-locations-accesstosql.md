@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Find Databases Wizard
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 82558c7839263a777a15d374acff28b4c40103d4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 06a6135425a8baf19d28d99b74e761f229f977fd
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68024749"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938664"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>데이터베이스 찾기 마법사 (위치 선택) (AccessToSQL)
 데이터베이스 찾기 마법사의 위치 선택 페이지에서 Access 데이터베이스를 찾기 위한 검색 매개 변수를 입력 합니다.  
@@ -36,7 +36,7 @@ SSMA에서 검색할 위치를 나열 합니다. **추가** 단추를 클릭 하
 **추가**  
 위치 목록에 경로 텍스트 상자의 위치를 추가 합니다.  
   
-**바꾸십시오**  
+**바꾸기**  
 위치 목록에서 항목을 선택 하면 경로 텍스트 상자의 항목은 선택한 항목을 대체 합니다.  
   
 **제거**  
@@ -45,7 +45,7 @@ SSMA에서 검색할 위치를 나열 합니다. **추가** 단추를 클릭 하
 **파일 이름의 전체 또는 일부**  
 특정 문자열이 포함 된 이름을 가진 데이터베이스를 찾으려면 문자열을 입력 합니다. 와일드 카드 문자를 사용 하지 마십시오.  
   
-**만든 날짜입니다.**  
+**만든 날짜**  
 특정 날짜 범위 내에 생성 된 데이터베이스를 찾으려면 시작 상자에 시작 날짜를 **입력 하 고** 끝 날짜를 **끝 상자에** 입력 합니다.  
   
 **마지막 업데이트 날짜**  
@@ -55,7 +55,7 @@ SSMA에서 검색할 위치를 나열 합니다. **추가** 단추를 클릭 하
 크기 조건에 맞는 데이터베이스를 찾으려면 첫 번째 상자에서 비교 문자를 선택 하 고 크기에 대 한 숫자를 입력 한 다음 세 번째 상자에서 바이트, 킬로바이트 또는 메가바이트를 선택 합니다.  
   
 **소유자**  
-소유자의 전체 Windows 사용자 이름을 입력 합니다. 이는 *도메인*\\*사용자*로 지정 될 수 있습니다.  
+소유자의 전체 Windows 사용자 이름을 입력 합니다. 이는 *도메인*사용자로 지정 될 수 있습니다 \\ *user*.  
   
 ## <a name="see-also"></a>참고 항목  
 [Access 데이터베이스 파일 추가 및 제거](adding-and-removing-access-database-files-accesstosql.md)  

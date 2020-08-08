@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 79fbe8ea-471b-407a-be2a-4100d9b57c61
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: baf581fcec3caaf6bbb9fedad868e59d22b866e1
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 5eb767d6227e46dd5f41134228b54969124bbe1b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823704"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937294"
 ---
 # <a name="installing-ssma-for-db2-db2tosql"></a>D b 2 용 SSMA 설치 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]D b 2 용 SSMA (Migration Assistant)는 DB2에서로의 마이그레이션을 수행 하 고 Azure SQL Database 하는 데 사용 하는 클라이언트 응용 프로그램으로 구성 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 또한 마이그레이션된 데이터베이스에서 데이터 마이그레이션을 지 원하는 확장 팩과 DB2 시스템 함수를 사용할 수 있습니다.  

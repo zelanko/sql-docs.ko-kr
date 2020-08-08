@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Sybase Console,Managing Passwords
 - Sybase Console,Securing Password
 ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: a228f8d624d3a4250d10a258a7e51c9162d885a2
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 2d32e4d6129aa566d34c566f11cb7dde735f3783
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159851"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931061"
 ---
 # <a name="managing-passwords-sybasetosql"></a>암호 관리(SybaseToSQL)
 이 섹션에서는 데이터베이스 암호를 보호 하는 방법과 서버에서 데이터베이스를 가져오거나 내보내는 절차에 대해 설명 합니다.

@@ -28,17 +28,17 @@ helpviewer_keywords:
 - translating Access to SQL Azure
 - translating Access to SQL Server
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: f15fc6cee7f66128af7646b9605234e60830b8db
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 6109f523cce37e64bd13ccf9bf783b07a26fe94e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84302808"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939149"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Access 데이터베이스 개체 변환 (AccessToSQL)
-Access 데이터베이스를 추가 하 고 SQL Azure 또는에 연결 하 고 나면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA에서 access 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure database 개체에 대 한 메타 데이터를 표시 합니다. 이제 데이터베이스 개체에 액세스를 선택한 다음 스키마를 또는 SQL Azure 스키마로 변환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+Access 데이터베이스를 추가 하 고 또는 SQL Azure에 연결한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA는 access 및 또는 Azure SQL Database 개체에 대 한 메타 데이터를 표시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 이제 데이터베이스 개체에 액세스를 선택한 다음 스키마를 또는 SQL Azure 스키마로 변환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="the-conversion-process"></a>변환 프로세스  
 데이터베이스 개체를 변환 하면 액세스 메타 데이터의 개체 정의를 가져와 동일한 구문으로 변환한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 다음 프로젝트에이 정보를 로드 합니다. 그런 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 메타 데이터 탐색기를 사용 하 여 또는 SQL Azure 개체와 해당 속성을 볼 수 있습니다.  
@@ -60,7 +60,7 @@ Access 데이터베이스를 추가 하 고 SQL Azure 또는에 연결 하 고 �
 |열|열|  
 |인덱스|인덱스|  
 |외래 키(foreign key)|외래 키(foreign key)|  
-|Query|뷰<br /><br />대부분의 SELECT 쿼리가 뷰로 변환 됩니다. 업데이트 쿼리와 같은 다른 쿼리는 마이그레이션되지 않습니다.<br /><br />매개 변수를 사용 하는 SELECT 쿼리는 변환 되지 않으며 다중 탭 쿼리가 됩니다.|  
+|Query|view<br /><br />대부분의 SELECT 쿼리가 뷰로 변환 됩니다. 업데이트 쿼리와 같은 다른 쿼리는 마이그레이션되지 않습니다.<br /><br />매개 변수를 사용 하는 SELECT 쿼리는 변환 되지 않으며 다중 탭 쿼리가 됩니다.|  
 |보고서|변환 되지 않음|  
 |양식|변환 되지 않음|  
 |매크로|변환 되지 않음|  
@@ -88,7 +88,7 @@ Access 데이터베이스 개체를 변환 하려면 먼저 변환할 개체를 
   
     -   개별 테이블을 변환 하거나 생략 하려면 데이터베이스를 확장 하 고 **테이블**을 확장 한 다음 테이블 옆의 확인란을 선택 하거나 선택 취소 합니다.  
   
-3.  다음 작업 중 하나를 수행합니다.  
+3.  다음 중 하나를 수행합니다.  
   
     -   스키마를 변환 하려면 **데이터베이스** 를 마우스 오른쪽 단추로 클릭 하 고 **스키마 변환**을 선택 합니다.  
   
@@ -115,7 +115,7 @@ Access 데이터베이스 개체를 변환 하려면 먼저 변환할 개체를 
   
 이제 **SQL** 탭에서 코드의 변경 내용을 볼 수 있습니다.  
   
-## <a name="next-step"></a>다음 단계  
+## <a name="next-steps"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계는 변환 된 [데이터베이스 개체를로 로드](loading-converted-database-objects-into-sql-server-accesstosql.md) 하는 것입니다 SQL Server  
   
 ## <a name="see-also"></a>참고 항목  

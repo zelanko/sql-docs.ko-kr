@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Affected Objects
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c9efc329f80e880a58ec9926db677c4a71604e2c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020993"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930444"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>영향을 받는 개체 선택 및 구성(SybaseToSQL)
 이 페이지에서 테이블 및 외래 키를 선택할 수 있으며, SSMA가 이전 단계에서 선택한 개체의 실행 결과를 확인할 때 이러한 변경 내용을 비교 해야 합니다. 또한 확인 매개 변수를 사용자 지정할 수 있습니다.  
@@ -33,13 +33,13 @@ SSMA 테스터가 이러한 개체를 확인할 수 없는 경우 개체 트리 
   
 -   데이터 형식  
   
--   자릿수  
+-   전체 자릿수  
   
 -   확장  
   
 -   규칙  
   
--   기본값  
+-   Default  
   
 -   ID  
   
@@ -110,9 +110,9 @@ SQL 탭에는 선택한 테이블의 "테이블 만들기" SQL이 포함 됩니�
 -   **False**를 선택 하는 경우 비교 시 대/소문자를 고려 합니다.  
   
 ## <a name="comparing-sql"></a>SQL 비교  
-**SQL 비교** 페이지에서 Ssma 테스터에 의해 생성 된 SELECT 문을 볼 수 있습니다. 테스터는 행 단위로 이러한 문의 결과 집합을 비교 합니다. Sybase 결과 집합의 다음 행은에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]생성 된 결과 집합의 다음 행과 같아야 합니다.  
+**SQL 비교** 페이지에서 Ssma 테스터에 의해 생성 된 SELECT 문을 볼 수 있습니다. 테스터는 행 단위로 이러한 문의 결과 집합을 비교 합니다. Sybase 결과 집합의 다음 행은에서 생성 된 결과 집합의 다음 행과 같아야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-이러한 SELECT 문을 편집 하 여 사용자 지정 확인을 제공할 수 있습니다. Sybase 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문에서 변경 내용을 저장 하려면 원본 및 대상 SQL에서 **적용** 단추를 사용 합니다.  
+이러한 SELECT 문을 편집 하 여 사용자 지정 확인을 제공할 수 있습니다. Sybase 및 문에서 변경 내용을 저장 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원본 및 대상 SQL에서 **적용** 단추를 사용 합니다.  
   
 ## <a name="next-step"></a>다음 단계  
 [호출 순서 사용자 지정 &#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  

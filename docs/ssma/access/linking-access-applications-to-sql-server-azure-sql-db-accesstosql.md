@@ -21,18 +21,18 @@ helpviewer_keywords:
 - slow performance
 - unlinking tables
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: aadb041b3b9005d0e593e97974090250129ed33d
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: d19ed1ddfa2c64b653c02d887b9605ea132ae1bc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823852"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938459"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-database-accesstosql"></a>액세스 응용 프로그램을 SQL Server Azure SQL Database에 연결 (AccessToSQL)
-에서 기존 Access 응용 프로그램을 사용 하려는 경우에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 원래 access 테이블을 마이그레이션된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블이 나 SQL Azure 테이블에 연결할 수 있습니다. 연결 하면 쿼리, 폼, 보고서 및 데이터 액세스 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] access 데이터베이스의 데이터 대신 또는 SQL Azure 데이터베이스의 데이터를 사용 하도록 access 데이터베이스를 수정 합니다.  
+에서 기존 Access 응용 프로그램을 사용 하려는 경우에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 원래 access 테이블을 마이그레이션된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블이 나 SQL Azure 테이블에 연결할 수 있습니다. 연결 하면 쿼리, 폼, 보고서 및 데이터 액세스 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] access 데이터베이스의 데이터 대신 또는 Azure SQL Database의 데이터를 사용 하도록 access 데이터베이스를 수정 합니다.  
   
 > [!NOTE]  
 > 액세스 테이블은 Access에서 유지 되지만 또는 SQL Azure 업데이트와 함께 업데이트 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 테이블을 연결 하 고 기능을 확인 한 후 액세스 테이블을 삭제할 수 있습니다.  

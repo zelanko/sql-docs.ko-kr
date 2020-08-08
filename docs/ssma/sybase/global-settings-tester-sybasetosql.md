@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 0070dbed0b683b37c0280b9948ff4b592fea9084
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f1ebf6d1122db6b28b13c33320dabef520a40f5a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029005"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931290"
 ---
 # <a name="global-settings-tester-sybasetosql"></a>전역 설정(테스터)(SybaseToSQL)
 **전역 설정** 대화 상자의 테스터 페이지를 사용 하 여 Ssma 테스터에 대 한 설정을 지정할 수 있습니다.  
