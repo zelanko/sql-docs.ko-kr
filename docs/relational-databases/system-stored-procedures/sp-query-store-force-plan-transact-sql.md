@@ -21,14 +21,15 @@ ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b8cfc9116440bfba43f16fd1c05bd004fcca0cb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6aeea1c726e190945095b478e960266908019e0b
+ms.sourcegitcommit: 95be98587f6a3730ca75a77676dd952c45e4f53a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012668"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88046809"
 ---
 # <a name="sp_query_store_force_plan-transact-sql"></a>sp_query_store_force_plan (Transact-sql)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   특정 쿼리에 대해 특정 계획을 강제로 적용할 수 있습니다.  
   
@@ -52,7 +53,7 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
   
 ## <a name="remarks"></a>설명  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에 대 한 **ALTER** 권한이 필요 합니다.
   
 ## <a name="examples"></a>예  
