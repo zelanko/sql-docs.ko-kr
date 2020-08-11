@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ebb47597b5d08e0f14d37490304001811d0b33e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee3ac3901c09ab4a0f73803d00a2e4651af51df7
+ms.sourcegitcommit: 68c1dbc465898e20ec95f98cc2f14a8c9cd166a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786280"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051122"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_add_targetservergroup(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -201,7 +201,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **1** 은 서명이 신뢰할 수 있는 원본에서 가져온 것인지 확인 하도록 지정 합니다.  
   
-`[ @destination_object = ] 'destination_object'`구독 데이터베이스에 있는 개체의 이름입니다. *destination_object* 는 **sysname**이며 기본값은 ** \@ source_object**에 있는 값입니다. 이 매개 변수는 아티클이 저장 프로시저, 뷰 및 UDF와 같은 스키마 전용 아티클일 경우에만 지정할 수 있습니다. 지정한 아티클이 테이블 문서인 경우의 값이 *@source_object* *destination_object*의 값을 재정의 합니다.  
+`[ @destination_object = ] 'destination_object'`구독 데이터베이스에 있는 개체의 이름입니다. *destination_object* 는 **sysname**이며 기본값은 ** \@ source_object**에 있는 값입니다. 이 매개 변수는 아티클이 저장 프로시저, 뷰 및 UDF와 같은 스키마 전용 아티클일 경우에만 지정할 수 있습니다. 지정한 아티클이 테이블 문서인 경우의 값 * \@ source_object* *destination_object*의 값을 재정의 합니다.  
   
 `[ @allow_interactive_resolver = ] 'allow_interactive_resolver'`아티클에서 대화형 해결 프로그램을 사용 하거나 사용 하지 않도록 설정 합니다. *allow_interactive_resolver* 은 **nvarchar (5)** 이며 기본값은 FALSE입니다. **true로** 설정 하면 아티클에서 대화형 해결 프로그램을 사용할 수 있습니다. **false** 는 사용 하지 않도록 설정 합니다.  
   
@@ -358,12 +358,12 @@ sp_addmergearticle [ @publication = ] 'publication'
  **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [아티클 정의](../../relational-databases/replication/publish/define-an-article.md)   
+ [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [데이터 및 데이터베이스 개체 게시](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)   
  [Transact-sql&#41;sp_changemergearticle &#40;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [Transact-sql&#41;sp_dropmergearticle &#40;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
- [Transact-sql&#41;sp_helpmergearticle &#40;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [sp_helpmergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   
