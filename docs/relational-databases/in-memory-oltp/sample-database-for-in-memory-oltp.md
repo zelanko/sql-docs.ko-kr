@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4eaa35280b4f469f6fcf49fe9d73f4b33bfda672
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2cc94e5f36b6c36ed44185c47356f67efb8729fe
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245212"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87947552"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 예제 데이터베이스
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "87245212"
  이 샘플에서는 메모리 내 OLTP 기능을 소개합니다. 이 예제는 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저를 보여 주며, 메모리 내 OLTP의 성능 이점을 설명하는 데 사용할 수 있습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에 대한 이 항목을 보려면 [메모리 내 OLTP를 보여주기 위한 AdventureWorks 확장](https://msdn.microsoft.com/library/dn511655\(v=sql.120\).aspx)을 참조하세요.  
+>  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에 대한 이 항목을 보려면 [메모리 내 OLTP를 보여주기 위한 AdventureWorks 확장](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios?view=sql-server-ver15#in-memory-oltp-overview)을 참조하세요.  
   
  또한 AdventureWorks 데이터베이스의 5개 테이블을 메모리 최적화 테이블로 마이그레이션하며, 판매 주문 처리용 데모 작업을 포함하고 있습니다. 이 데모 작업을 사용하여 서버에서 메모리 내 OLTP를 사용하는 경우의 성능 이점을 확인할 수 있습니다.  
   
@@ -183,12 +183,11 @@ ms.locfileid: "87245212"
   
  해시 인덱스를 사용하여 작업을 추가로 최적화할 수 있습니다. 해시 인덱스는 포인트 조회와 행 삽입에 대해 특히 최적화됩니다. 그러나 해시 인덱스가 범위 검색, 정렬된 검색 또는 선행 인덱스 키 열에 대한 검색을 지원하지 않는다는 점을 고려해야 합니다. 따라서 이러한 인덱스를 사용할 때는 주의를 기울여야 합니다. 또한 만들 때 bucket_count를 지정해야 합니다. bucket_count는 일반적으로 인덱스 키 값의 수와 그 두 배 사이에서 설정되어야 하지만 더 많이 추정해도 대개 문제가 되지 않습니다.  
   
-[인덱스 지침](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) 및 [올바른 bucket_count 선택](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx) 지침에 대한 자세한 내용은 온라인 설명서를 참조하세요.  
+[인덱스 지침](https://docs.microsoft.com/sql/relational-databases/indexes/guidelines-for-online-index-operations) 및 [올바른 bucket_count 선택](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx) 지침에 대한 자세한 내용은 온라인 설명서를 참조하세요.  
 
 
 온라인 설명서에서는 다음 항목에 대해 자세히 설명합니다.
-- [인덱스 지침](https://docs.microsoft.com/sql/database-engine/guidelines-for-using-indexes-on-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
-- [올바른 bucket_count 선택](https://docs.microsoft.com/sql/database-engine/determining-the-correct-bucket-count-for-hash-indexes) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn494956 -->
+- [인덱스 지침](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
 
  마이그레이션된 테이블의 인덱스는 데모 판매 주문 처리 작업에 맞게 조정되었습니다. 작업은 Sales.SalesOrderHeader_inmem 및 Sales.SalesOrderDetail_inmem 테이블의 삽입 및 포인트 조회에 의존하며 Production.Product_inmem 및 Sales.SpecialOffer_inmem 테이블에서 기본 키 열에 대한 포인트 조회에도 의존합니다.  
   
@@ -276,7 +275,7 @@ ms.locfileid: "87245212"
   
     -   지정된 판매 주문에 대한 배송 정보를 업데이트합니다. 또한 판매 주문의 모든 품목에 대한 배송 정보도 업데이트합니다.  
   
-    -   이 저장 프로시저는 동일한 주문을 업데이트하는 동시 트랜잭션과의 예기치 않은 잠재적 충돌을 처리하는 재시도 논리가 포함된 고유하게 컴파일된 저장 프로시저 Sales.usp_UpdateSalesOrderShipInfo_native의 래퍼 프로시저입니다. 재시도 논리에 대한 자세한 내용은 [여기](https://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx)에서 온라인 설명서 항목을 참조하세요.  
+    -   이 저장 프로시저는 동일한 주문을 업데이트하는 동시 트랜잭션과의 예기치 않은 잠재적 충돌을 처리하는 재시도 논리가 포함된 고유하게 컴파일된 저장 프로시저 Sales.usp_UpdateSalesOrderShipInfo_native의 래퍼 프로시저입니다. 재시도 논리에 대한 자세한 내용은 [여기](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables)에서 온라인 설명서 항목을 참조하세요.  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_native  
   

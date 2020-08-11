@@ -1,5 +1,5 @@
 ---
-title: SQL 실행 태스크 | Microsoft Docs
+title: SQL 실행 태스크
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -8,10 +8,10 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
-- sql13.dts.designer.executesqltask.f1
-- sql13.dts.designer.executesqltask.general.f1
-- sql13.dts.designer.executesqltask.parametermapping.f1
-- sql13.dts.designer.executesqltask.resultset.f1
+- sql14.dts.designer.executesqltask.f1
+- sql14.dts.designer.executesqltask.general.f1
+- sql14.dts.designer.executesqltask.parametermapping.f1
+- sql14.dts.designer.executesqltask.resultset.f1
 helpviewer_keywords:
 - Transact-SQL statements, SSIS
 - statements [Integration Services]
@@ -20,17 +20,16 @@ helpviewer_keywords:
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4f334633fa164a22f8e23175fd3ba6b25c4f6423
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 377506ca7b8fb9b9fb94b606852bb90ce4756172
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917931"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988630"
 ---
 # <a name="execute-sql-task"></a>SQL 실행 태스크
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
 
   SQL 실행 태스크는 패키지에서 SQL 문이나 저장 프로시저를 실행합니다. 이 태스크는 단일 SQL 문 또는 순서대로 실행되는 여러 SQL 문을 포함할 수 있습니다. SQL 실행 태스크는 다음 용도로 사용할 수 있습니다.  
   

@@ -85,12 +85,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 78d413af670dd62d3eb761babf1e0df846117c14
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 190f757b7c9849866788646fe3288086d73f8811
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892341"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934389"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>방법: 명령 프롬프트에서 SQL Server 2008 R2 설치
 
@@ -883,7 +883,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=SQLEngine,PolyBase|PolyBase 엔진을 설치합니다.|  
   
 ##  <a name="role-parameters"></a><a name="RoleParameters"></a> 역할 매개 변수  
- 설치 역할 또는 /Role 매개 변수는 미리 구성된 기능 선택 항목을 설치하는 데 사용됩니다. SSAS 역할은 기존 SharePoint 팜이나 구성되지 않은 새 팜에 SSAS 인스턴스를 설치합니다. 각 시나리오를 지원하는 두 가지 설치 역할이 제공됩니다. 설치할 설치 역할은 한 번에 하나씩만 선택할 수 있습니다. 설치 역할을 선택하면 설치 프로그램에서 해당 역할에 속하는 기능 및 구성 요소를 설치합니다. 특정 역할에 지정된 기능과 구성 요소를 변경할 수는 없습니다. 기능 역할 매개 변수를 사용하는 방법에 대한 자세한 내용은 [명령 프롬프트에서 PowerPivot 설치](https://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)를 참조하세요. 
+ 설치 역할 또는 /Role 매개 변수는 미리 구성된 기능 선택 항목을 설치하는 데 사용됩니다. SSAS 역할은 기존 SharePoint 팜이나 구성되지 않은 새 팜에 SSAS 인스턴스를 설치합니다. 각 시나리오를 지원하는 두 가지 설치 역할이 제공됩니다. 설치할 설치 역할은 한 번에 하나씩만 선택할 수 있습니다. 설치 역할을 선택하면 설치 프로그램에서 해당 역할에 속하는 기능 및 구성 요소를 설치합니다. 특정 역할에 지정된 기능과 구성 요소를 변경할 수는 없습니다. 기능 역할 매개 변수를 사용하는 방법에 대한 자세한 내용은 [명령 프롬프트에서 PowerPivot 설치](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)를 참조하세요. 
   
  AllFeatures_WithDefaults 역할은 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 버전의 기본 동작으로, 사용자에게 표시되는 대화 상자 수를 줄입니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]이외의 SQL Server 버전을 설치할 때는 이 역할을 명령줄에서 지정할 수 있습니다. 
   

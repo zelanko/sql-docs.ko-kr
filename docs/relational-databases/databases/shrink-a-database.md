@@ -20,12 +20,12 @@ ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5cacfade7921a099d618704b3145f5de2acd2b73
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5761ee136c23cd82296f154e7e87d4756410c55a
+ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715515"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807516"
 ---
 # <a name="shrink-a-database"></a>데이터베이스 축소
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,9 +57,7 @@ ms.locfileid: "85715515"
   
 -   데이터베이스를 최소 데이터베이스 크기보다 작게 축소할 수는 없습니다. 최소 크기는 데이터베이스를 처음 만들 때 지정된 크기나 DBCC SHRINKFILE과 같은 파일 크기 변경 작업을 사용하여 명시적으로 설정한 최종 크기입니다. 예를 들어 원래 10MB로 생성된 데이터베이스가 100MB까지 증가한 경우 포함된 모든 데이터를 삭제하더라도 데이터베이스를 10MB 이하로는 축소할 수 없습니다.  
   
--   데이터베이스가 백업되는 동안에는 데이터베이스를 축소할 수 없습니다. 반대로 데이터베이스에 대한 축소 작업이 처리되는 동안에는 데이터베이스를 백업할 수 없습니다.  
-  
--   xVelocity 메모리 최적화 Columnstore 인덱스가 발생할 경우 DBCC SHRINKDATABASE는 실패합니다. Columnstore 인덱스가 발생하기 전에 완료된 작업은 성공하므로 데이터베이스 크기가 작아질 수 있습니다. DBCC SHRINKDATABASE를 완료하려면 DBCC SHRINKDATABASE를 실행하기 전에 모든 columnstore 인덱스를 사용하지 않도록 설정한 다음 columnstore 인덱스를 다시 작성합니다.  
+-   데이터베이스가 백업되는 동안에는 데이터베이스를 축소할 수 없습니다. 반대로 데이터베이스에 대한 축소 작업이 처리되는 동안에는 데이터베이스를 백업할 수 없습니다.
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
