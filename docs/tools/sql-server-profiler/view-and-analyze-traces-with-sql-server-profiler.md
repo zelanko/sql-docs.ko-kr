@@ -1,6 +1,7 @@
 ---
 title: 추적 보기 및 분석
 titleSuffix: SQL Server Profiler
+description: SQL Server Profiler를 사용하여 추적 데이터를 보고, 특정 이벤트를 찾고, 개체 이름을 표시하고, 문제를 해결하는 방법을 알아봅니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: bd9c65d104e6b397ea3483cd3873f4014d7798b3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c806d55867c63c273bd528ecafc4419d31fde7e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307788"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722632"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>SQL Server Profiler를 사용하여 추적 보기 및 분석
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 추적에서 캡처한 이벤트를 보려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 정의된 추적 속성을 기반으로 데이터를 표시합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 분석하는 한 가지 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 같은 다른 프로그램으로 데이터를 복사하는 것입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자는 **Text** 데이터 열이 추적에 포함되어 있는 경우 SQL 일괄 처리와 RPC(원격 프로시저 호출) 이벤트가 있는 추적 파일을 사용할 수 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에 사용할 수 있도록 올바른 이벤트와 열이 캡처되었는지 확인하려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서 제공되는 사전 정의된 튜닝 템플릿을 사용합니다.  
   
@@ -66,7 +67,7 @@ AND     CPU < (Duration * 1000)
   
     -   추적 파일이나 테이블을 열고 **Deadlock Chain**과 같은 원하는 이벤트 클래스의 노드를 확장하십시오. 자세한 내용은 [추적 파일 열기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) 또는 [추적 테이블 열기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)에서 제공되는 사전 정의된 튜닝 템플릿을 사용합니다.  
   
-    -   확인할 이벤트를 찾을 때까지 추적 데이터를 검색합니다. **에서** 편집 **메뉴의** 찾기 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 명령을 사용하면 추적에서 값을 찾는데 도움이 됩니다. 추적하는 이벤트의 **ClientProcessID** 및 **Start Time** 데이터 열 값을 메모하십시오.  
+    -   확인할 이벤트를 찾을 때까지 추적 데이터를 검색합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서 **편집** 메뉴의 **찾기** 명령을 사용하면 추적에서 값을 찾는데 도움이 됩니다. 추적하는 이벤트의 **ClientProcessID** 및 **Start Time** 데이터 열 값을 메모하십시오.  
   
 3.  이벤트를 컨텍스트에 표시합니다.  
   

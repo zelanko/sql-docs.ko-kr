@@ -1,5 +1,6 @@
 ---
 title: 차트의 빈 데이터 요소 및 Null 데이터 요소(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기에서 빈 값에 대한 차트 처리, 자리 표시자 사용, 빈 데이터 요소 및 Null 데이터 요소가 표시되는 방식에 대해 알아봅니다.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: faddd29d-4cc1-4c2c-8e29-d3d9918fe22a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d675921a3fe5dd1a49c8e9f4f9c52721db63726e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0945637105fccb7558521f59f65ae28f9b29808d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082132"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048271"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>차트의 빈 데이터 요소 및 Null 데이터 요소(보고서 작성기 및 SSRS)
 

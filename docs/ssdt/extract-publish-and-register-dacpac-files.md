@@ -1,5 +1,6 @@
 ---
 title: .dacpac 파일 추출, 게시 및 등록
+description: DAC(데이터 계층 애플리케이션)를 사용하여 수행할 수 있는 작업에 대해 알아봅니다. 예로는 스냅샷 파일(.dacpac) 추출, 게시, 등록이 포함됩니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -12,16 +13,15 @@ f1_keywords:
 ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 67cb0321ebc1bdfa345b7bb6670ca31a4418d6e8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: db4981480d5c14a658c49e29068f7eebfa53bb6b
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241645"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518963"
 ---
 # <a name="extract-publish-and-register-dacpac-files"></a>.dacpac 파일 추출, 게시 및 등록
 

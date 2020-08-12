@@ -1,6 +1,7 @@
 ---
 title: SQL Server Profiler 대화 상자
 titleSuffix: SQL Server Profiler
+description: SQL Server Profiler에서 추적, 템플릿, 파일, 테이블, 성능 카운터 및 재생에 사용할 수 있는 명령 및 설정을 알아봅니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,23 +12,23 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/07/2017
-ms.openlocfilehash: 24375bafa9123c5bba4adf83fce81427f39722e4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 72b9d67488e43a9d87ed52243b20fb49219887c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307854"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722645"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler 대화 상자
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 서버로부터 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트를 캡처하는 도구입니다. 이벤트는 추적 파일에 저장되며 이 파일은 나중에 분석되거나 문제를 진단할 때 특정 단계를 다시 수행하기 위해 사용할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]의 대화 상자에서 사용할 수 있는 명령 및 설정은 다음과 같습니다.  
 ## <a name="trace-properties"></a>추적 속성
 ### <a name="general-tab"></a>일반 탭
 **추적 속성** 대화 상자의 **일반** 탭을 사용하여 추적의 속성을 확인하거나 지정할 수 있습니다.  
 
-|항목|Description
+|항목|설명
 |---|---
 |**추적 이름** |추적 이름을 지정합니다.  
 |**추적 공급자 이름**|추적되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름을 표시합니다. 이 필드에는 연결할 때 지정한 서버의 이름이 자동으로 채워집니다. 추적 공급자의 이름을 변경하려면 **취소** 를 클릭하여 대화 상자를 닫은 다음 새 추적을 시작합니다.  
@@ -47,7 +48,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 서�
 ### <a name="events-selection-tab"></a>이벤트 선택 테이블
 **추적 속성** 대화 상자의 **이벤트 선택** 탭을 사용하여 추적된 이벤트 및 데이터 열의 속성을 확인하거나 지정할 수 있습니다.  
 
-|항목|Description
+|항목|설명
 |---|---
 |**Events** 열|이벤트 열에서 확인란을 선택하거나 선택 취소하여 추적된 이벤트를 지정합니다. **Events** 는 이벤트 범주별로 구성됩니다. 템플릿에 지정된 이벤트 클래스는 자동으로 선택됩니다. 자세한 내용은 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)를 참조하세요.  
 |데이터 열|원하는 이벤트 및 데이터 열에 해당하는 확인란을 선택하여 추적된 데이터 열을 지정합니다. 추적에 포함된 각 이벤트와 관련된 모든 이벤트 열이 기본적으로 선택됩니다.  
@@ -61,7 +62,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 서�
 ### <a name="new-general-tab"></a>새로 만들기(일반 탭)
 **추적 템플릿 속성** 대화 상자의 **일반** 탭을 사용하여 다음 옵션으로 새 추적 템플릿을 만들 수 있습니다. 이 대화 상자에 액세스하려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **파일** 메뉴에서 **템플릿**을 가리킨 다음 **새로 만들기**를 클릭합니다.
 
-|항목|Description
+|항목|설명
 |---|---
 |**서버 유형 선택**|이 템플릿을 사용할 서버 유형을 지정합니다.  
 |**새 템플릿 이름**|템플릿에 대해 설명하는 이름을 제공합니다.  
@@ -71,7 +72,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 서�
 ### <a name="edit-general-tab"></a>편집(일반 탭)
  **추적 템플릿 속성** 대화 상자의 **일반** 탭에서 제공하는 다음 옵션을 통해 기존 추적 템플릿을 보거나 편집할 수 있습니다. 이 대화 상자에 액세스하려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **파일** 메뉴에서 **템플릿**을 가리킨 다음 **템플릿 편집**을 클릭합니다.  
 
-|항목|Description
+|항목|설명
 |---|---
 |**서버 유형 선택**|이 템플릿을 사용할 서버 유형을 지정합니다.  
 |**템플릿 이름 선택**|편집할 템플릿을 선택합니다.  
@@ -80,7 +81,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 서�
 ### <a name="events-selection-tab"></a>이벤트 선택 테이블
 **추적 템플릿 속성** 대화 상자의 **이벤트 선택** 탭을 사용하여 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적 템플릿에 포함할 이벤트 클래스와 데이터 열을 표시, 편집 또는 지정할 수 있습니다.  
 
-|항목|Description
+|항목|설명
 |---|---
 |**Events** 열|이벤트 열에서 확인란을 선택하거나 선택 취소하여 추적해야 할 이벤트를 지정합니다. 이벤트는 이벤트 범주별로 구성됩니다. **일반** 탭에서 **기존 템플릿을 바탕으로 새 템플릿 만들기** 를 선택한 경우 지정한 템플릿에 따라 이벤트가 자동으로 선택됩니다. 이벤트 클래스에 대한 자세한 내용은 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)를 참조하십시오.  
 |데이터 열|필요한 데이터 열과 이벤트에 해당하는 확인란을 선택하여 추적해야 할 데이터 열을 지정합니다. 이벤트에 해당하는 확인란을 선택한 경우 추적에 포함된 이벤트마다 관련된 모든 이벤트 열이 기본적으로 선택되어 있습니다. **일반** 탭에서 **기존 템플릿을 바탕으로 새 템플릿 만들기** 를 선택한 경우 지정한 템플릿에 따라 데이터 열과 필터가 자동으로 선택됩니다.  
@@ -95,7 +96,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 서�
 **추적 파일 속성** 대화 상자의 **일반** 탭을 사용하여 추적 파일의 속성을 볼 수 있습니다.  
 이 창을 보려면 추적 파일을 엽니다. 그런 다음 **파일** 메뉴에서 **속성**을 클릭합니다.  
 
-|항목|Description
+|항목|설명
 |---|---
 |**파일 이름**|표시할 추적 파일의 경로 및 이름입니다.  
 |**추적 공급자 이름**|추적된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름을 표시합니다.  
@@ -109,7 +110,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 서�
 **추적 파일 템플릿 속성** 대화 상자의 **이벤트 선택** 탭을 사용하여 추적의 열 속성을 보거나 추적에서 데이터 열을 제거할 수 있습니다.  
 이 창을 보려면 추적 파일을 엽니다. 그런 다음 **파일** 메뉴에서 **속성**을 클릭하고 **이벤트 선택** 탭을 클릭합니다.  
 
-|항목|Description
+|항목|설명
 |---|---
 |**Events** 열|이벤트 범주별로 구성된 추적된 이벤트를 표시합니다. 처음에는 추적의 모든 이벤트가 선택됩니다. 이벤트는 해당 확인란을 선택하거나 이벤트에 대한 데이터 열을 선택하여 선택할 수 있습니다. 이벤트 확인란을 선택하면 해당 이벤트에 대해 사용할 수 있는 모든 데이터 열이 선택됩니다. 이벤트에 대한 데이터 열을 선택하면 이벤트가 선택되고 필요한 다른 열도 자동으로 선택됩니다. 추적 파일 또는 테이블을 볼 때 이벤트 또는 데이터 열에 대한 확인란의 선택을 취소하면 추적 창에 표시되는 데이터의 양이 줄어들므로 보다 쉽게 분석할 수 있습니다. 추적 창에 표시되는 데이터의 양은 열 필터를 변경하여 줄일 수도 있습니다. 이벤트 클래스에 대한 자세한 내용은 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)를 참조하십시오.  
 |데이터 열|추적된 데이터 열을 표시합니다. 추적에 포함된 각 이벤트에 대해 기본적으로 추적의 모든 관련 데이터 열이 선택됩니다.  
@@ -124,7 +125,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 서�
 **추적 테이블 속성** 대화 상자의 **이벤트 선택** 탭을 사용하여 추적의 이벤트 및 데이터 열 속성을 보거나 추적에서 이벤트나 열을 제거할 수 있습니다.  
 이 창을 표시하려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 추적 테이블을 엽니다. 그런 다음 **파일** 메뉴에서 **속성**을 클릭하고 **이벤트 선택** 탭을 클릭합니다.  
 
-|항목|Description
+|항목|설명
 |---|---
 |**Events** 열|이벤트 범주별로 구성된 추적된 이벤트를 표시합니다. 이벤트는 해당 확인란을 선택하거나 이벤트에 대한 데이터 열을 선택하여 선택할 수 있습니다. 이벤트 확인란을 선택하면 해당 이벤트에 대해 사용할 수 있는 모든 데이터 열이 선택됩니다. 이벤트에 대한 데이터 열을 선택하면 이벤트가 선택되고 필요한 다른 열도 자동으로 선택됩니다. 추적 파일 또는 테이블을 볼 때 이벤트 또는 데이터 열에 대한 확인란의 선택을 취소하면 추적 창에 표시되는 데이터의 양이 줄어들므로 보다 쉽게 분석할 수 있습니다. 추적 창에 표시되는 데이터의 양은 열 필터를 변경하여 줄일 수도 있습니다. 이벤트 클래스에 대한 자세한 내용은 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)를 참조하십시오.  
 |기타 데이터 열|추적된 데이터 열을 표시합니다. 추적에 포함된 각 이벤트에 대해 기본적으로 추적의 모든 관련 데이터 열이 선택됩니다.  
@@ -146,7 +147,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 서�
 **일반 옵션** 대화 상자를 사용하여 다음 옵션을 확인하거나 지정할 수 있습니다.  
 ### <a name="display-options"></a>표시 옵션  
 
-|항목|Description
+|항목|설명
 |---|---
 |**글꼴 이름**|추적하는 동안 추적 결과 표에 사용되는 글꼴 이름을 표시합니다.  
 |**글꼴 크기**|추적하는 동안 추적 결과 표에 사용되는 글꼴 크기를 표시합니다.  
@@ -156,14 +157,14 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 서�
 
 ### <a name="tracing-options"></a>추적 옵션  
 
-|항목|Description
+|항목|설명
 |---|---
 |**연결한 후 즉시 추적 시작**|연결되면 기본 템플릿을 사용하여 즉시 추적을 시작합니다.  
 |**공급자 버전 변경 시 추적 정의 업데이트**|공급자가 업데이트된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 최신 추적 정의를 적용합니다. 이 옵션은 기본적으로 선택되지 않습니다. 이 옵션을 선택하면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 가 서버에서 추적 정의를 쿼리하여 정의가 있으면 디스크에 파일을 다시 만듭니다.  
 
 ### <a name="file-rollover-options"></a>파일 롤오버 옵션  
 
-|항목|Description
+|항목|설명
 |---|---
 |**확인하지 않고 모든 롤오버 파일을 순서대로 로드**|추적 파일이 열리면 롤오버 파일을 자동으로 로드합니다. 이 옵션을 선택하면 추적하는 동안 두 개 이상의 파일이 생성된 경우 자동으로 모든 롤오버 파일이 로드됩니다.  
 |**롤오버 파일 로드 전에 확인**|추적 파일을 열면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 가 롤오버 파일을 추가하기 전에 사용자에게 확인 메시지를 표시합니다.  
@@ -171,7 +172,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 서�
 
 ### <a name="replay-options"></a>재생 옵션  
 
-|항목|Description
+|항목|설명
 |---|---
 |**기본 재생 스레드 수**|동시에 사용할 재생 스레드 수를 지정합니다. 이 값을 높게 설정할수록 재생하는 동안 리소스가 더 많이 사용되지만 재생 동시성은 향상됩니다.  
 |**기본 상태 모니터 대기 간격(초)**|재생하기 전에 대기하는 간격(초)을 지정합니다. 기본값은 3600초(1시간)입니다. 이 설정은 상태 모니터에서 스레드를 종료하기 전까지 스레드가 실행되는 시간을 결정합니다.  
@@ -204,7 +205,7 @@ Microsoft SQL Server Profiler 및 튜닝 관리자는 이 대화 상자를 사�
 **재생 구성** 대화 상자에서 **기본 재생 옵션** 페이지를 사용하여 추적 파일 또는 테이블을 재생하는 방법을 지정할 수 있습니다.  
 이 창을 보려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 재생에 적합한 이벤트가 포함된 추적 파일 또는 테이블을 엽니다. 자세한 내용은 [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)을 참조하세요. 추적 파일이나 테이블을 연 상태에서 **재생** 메뉴의 **시작**을 클릭한 다음 추적을 재생할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
 
-|항목|Description
+|항목|설명
 |---|---
 |**서버 재생**|재생을 위해 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 표시합니다.  
 |**변경...**|다른 서버에 연결하려면 **서버에 연결** 대화 상자를 시작합니다.  
@@ -219,7 +220,7 @@ Microsoft SQL Server Profiler 및 튜닝 관리자는 이 대화 상자를 사�
 **재생 구성** 대화 상자에서 **고급 재생 옵션** 탭을 사용하여 추적 파일 재생 방법을 지정할 수 있습니다.  
 이 창을 보려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 재생에 적합한 이벤트가 포함된 추적 파일 또는 테이블을 엽니다. 자세한 내용은 [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)을 참조하세요. 추적 파일 또는 테이블이 열려 있는 상태로 **재생** 메뉴에서 **시작**을 클릭하고 추적을 재생할 SQL Server의 인스턴스에 연결한 다음 **고급 재생 옵션** 탭을 클릭합니다.  
 
-|항목|Description
+|항목|설명
 |---|---
 |**시스템 SPID 재생**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서 SPID(시스템 프로세스 식별자)를 재생할지 여부를 지정합니다.  
 |**한 SPID만 재생**|선택한 SPID와 관련된 원본 추적 파일의 작업만 재생합니다.  
@@ -236,10 +237,10 @@ Microsoft SQL Server Profiler 및 튜닝 관리자는 이 대화 상자를 사�
 **찾기** 대화 상자를 사용하여 추적에서 특정 문자 또는 단어를 검색할 수 있습니다. 진행 중인 검색을 취소하려면 Esc 키를 누릅니다.  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서 이 대화 상자를 열려면 **편집** 메뉴에서 **찾기**를 클릭합니다.  
 
-|항목|Description
+|항목|설명
 |---|---
 |**찾을 내용**|검색할 텍스트를 입력합니다. 검색은 지정한 문자열을 포함하는 모든 문자열과 일치합니다. 예를 들어 "Completed"에 대한 검색은 "SQL:BatchCompleted"와 일치합니다. 와일드카드 문자(*, ? 등)는 지원되지 않습니다.  
-|**열에서 검색**|검색할 데이터 열을 클릭하거나 **\<All columns>** 를 클릭하여 추적에서 모든 데이터 열을 검색합니다.  
+|**열에서 검색**|검색할 데이터 열을 클릭하거나 **\<All columns>** 을 클릭하여 추적에서 모든 데이터 열을 검색합니다.  
 |**대/소문자 구분**|**찾을 내용** 상자에 입력한 텍스트와 대/소문자가 같은 텍스트를 찾습니다. 추적에서 대문자 및 소문자 텍스트로 이루어진 예를 모두 찾으려면 이 확인란의 선택을 취소합니다.  
 |**단어 단위로**|전체 단어로 검색을 제한합니다. 단어 내의 문자 단위로 검색하려면 **단어 단위로** 확인란의 선택을 취소합니다.  
 |**다음 찾기**|**다음 찾기** 상자에 입력한 문자의 다음 예를 찾습니다.  
@@ -256,7 +257,7 @@ Microsoft SQL Server Profiler 및 튜닝 관리자는 이 대화 상자를 사�
 - 이벤트를 집계하려면 데이터 열을 하나씩 **그룹**으로 이동합니다. 그러면 추적 창 화면의 이벤트 형식 이름 아래에 있는 특정 형식의 모든 이벤트가 축소됩니다. 이벤트 클래스 이름의 왼쪽에는 더하기 기호( **+** )가 나타납니다. 이벤트 클래스 형식을 확장하고 모든 이벤트를 표시하려면 더하기 기호를 클릭합니다. **보기** 메뉴에서 **집계 보기** 또는 **그룹화 보기** 를 클릭하여 집계 및 그룹화 옵션을 설정하거나 해제할 수 있습니다.
 - 이벤트를 그룹화하려면 둘 이상의 데이터 열을 **그룹**으로 이동합니다. 그러면 추적 창 화면에서 특정 형식의 모든 이벤트가 그룹화되지만 각 이벤트 클래스 형식 이름 아래에 있는 이벤트는 축소되지 않습니다. 보기 메뉴에서 **그룹화 보기** 를 클릭하여 그룹화된 보기와 그룹화되지 않은 보기 간에 전환할 수 있습니다. 데이터 열을 두 개 이상 **그룹**으로 이동한 경우에는 **집계 보기** 로 전환할 수 없습니다.
 
-|항목|Description
+|항목|설명
 |---|---
 |**열**|**그룹**으로 이동할 수 있는 데이터 열의 목록입니다. 목록을 확장하려면 **+** 열 **왼쪽에 있는 더하기 기호(** )를 클릭합니다.  
 |**위로**|데이터 열을 선택한 다음 **위로** 를 클릭하여 데이터 열을 **그룹**으로 이동합니다. **위로** 를 클릭하여 추적 창 화면에서 열이 표시되는 순서를 다시 정렬할 수도 있습니다.  

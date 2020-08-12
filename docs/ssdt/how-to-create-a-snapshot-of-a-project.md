@@ -1,5 +1,6 @@
 ---
 title: 프로젝트의 스냅샷 만들기
+description: 데이터 계층 애플리케이션 파일 또는 스냅샷에 대해 알아보고 사용 방법을 확인합니다. 스냅샷을 만들거나 가져오는 방법과 스냅샷을 비교하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,16 +10,15 @@ f1_keywords:
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 40111c8807c0a0aa6162e8ad6a03d796406d5c1d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c381b920a527ab2320f6e83d6dbc057b675a4754
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241528"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518843"
 ---
 # <a name="how-to-create-a-snapshot-of-a-project"></a>방법: 프로젝트의 스냅샷 만들기
 

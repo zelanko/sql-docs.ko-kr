@@ -1,5 +1,6 @@
 ---
 title: 설치 마법사 도움말 | Microsoft Docs
+description: SQL Server 설치 마법사에서 인스턴스 구성을 사용하여 SQL Server의 명명된 인스턴스를 만들지 또는 기본 인스턴스를 만들지 지정합니다.
 ms.custom: ''
 ms.date: 08/16/2019
 ms.prod: sql
@@ -12,19 +13,19 @@ helpviewer_keywords:
 - Instance Name page [SQL Server Installation Wizard]
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-author: MashaMSFT
-ms.author: mathoma
+author: markingmyname
+ms.author: maghan
 robots: noindex,nofollow
-ms.openlocfilehash: b32ad209651c30f810f239b0c14689be497c4378
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 040136a7867d2a56e8ec97f183227c6b8d7268f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730764"
 ---
 # <a name="installation-wizard-help"></a>설치 마법사 도움말
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 일부 구성 페이지에 대해 설명합니다.
 
@@ -127,9 +128,9 @@ ms.locfileid: "79286567"
 
 ## <a name="analysis-services-configuration---data-directories-page"></a>Analysis Services 구성 - 데이터 디렉터리 페이지
 
-다음 표의 기본 디렉터리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 사용자가 구성할 수 있습니다. 이러한 파일에 대한 액세스 권한은 설치 중에 만들어져 프로비저닝되는 SQLServerMSASUser$\<instance> 보안 그룹의 구성원과 로컬 관리자에게 부여됩니다.  
+다음 표의 기본 디렉터리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 사용자가 구성할 수 있습니다. 이러한 파일에 대한 액세스 권한은 설치 중에 만들어져 프로비전되는 SQLServerMSASUser$\<instance> 보안 그룹의 구성원과 로컬 관리자에게 부여됩니다.  
   
-### <a name="uielement-list"></a>UIElement 목록  
+### <a name="ui-element-list"></a>UI 요소 목록  
   
 |Description|기본 디렉터리|권장 사항|  
 |-----------------|-----------------------|---------------------|  
@@ -160,9 +161,9 @@ ms.locfileid: "79286567"
   
 ### <a name="analysis-services-configuration---data-directories-page"></a>Analysis Services 구성 - 데이터 디렉터리 페이지
 
-다음 표의 기본 디렉터리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 사용자가 구성할 수 있습니다. 이러한 파일에 대한 액세스 권한은 설치 중에 만들어져 프로비저닝되는 SQLServerMSASUser$\<instance> 보안 그룹의 구성원과 로컬 관리자에게 부여됩니다.  
+다음 표의 기본 디렉터리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 사용자가 구성할 수 있습니다. 이러한 파일에 대한 액세스 권한은 설치 중에 만들어져 프로비전되는 SQLServerMSASUser$\<instance> 보안 그룹의 구성원과 로컬 관리자에게 부여됩니다.  
   
-#### <a name="uielement-list"></a>UIElement 목록
+#### <a name="ui-element-list"></a>UI 요소 목록
   
 |Description|기본 디렉터리|권장 사항|  
 |-----------------|-----------------------|---------------------|  
@@ -283,7 +284,7 @@ SMB 파일 공유를 디렉터리로 지정하려면 지원되는 UNC 경로를 
   
 다음 표에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 독립 실행형 인스턴스에서 지원되는 스토리지 유형 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 구성할 수 있는 기본 디렉터리가 나와 있습니다.  
   
-### <a name="uielement-list"></a>UIElement 목록
+### <a name="ui-element-list"></a>UI 요소 목록
   
 |Description|지원되는 스토리지 형식|기본 디렉터리|권장 사항|  
 |-----------------|----------------------------|-----------------------|---------------------|  
@@ -358,11 +359,11 @@ SMB 파일 공유를 디렉터리로 지정하려면 지원되는 UNC 경로를 
 |**tempdb 데이터 디렉터리**|로컬 디스크, 공유 스토리지, SMB 파일 서버|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> **팁**: **클러스터 디스크 선택** 페이지에서 **공유 디스크**를 선택하는 경우 기본값은 첫 번째 공유 디스크입니다. **클러스터 디스크 선택** 페이지에 디스크를 선택하지 않으면 이 필드는 기본적으로 비어 있습니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 구성 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디렉터리에 대한 ACL을 구성하고 상속을 중단합니다.<br /><br /> 지정한 디렉터리(여러 파일을 지정한 경우 여러 디렉터리)가 모든 클러스터 노드에 유효한지 확인합니다. 장애 조치(failover) 중에, 장애 조치(failover) 대상 노드에서 **tempdb** 디렉터리를 사용할 수 없는 경우 SQL Server 리소스가 온라인 상태로 전환되지 않습니다.|  
 |**tempdb 로그 디렉터리**|로컬 디스크, 공유 스토리지, SMB 파일 서버|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **팁**: **클러스터 디스크 선택** 페이지에서 **공유 디스크**를 선택하는 경우 기본값은 첫 번째 공유 디스크입니다. **클러스터 디스크 선택** 페이지에 디스크를 선택하지 않으면 이 필드는 기본적으로 비어 있습니다.|사용자 데이터 디렉터리에 대한 모범 지침은 작업 및 성능 요구 사항에 따라 달라집니다.<br /><br /> 지정한 디렉터리가 모든 클러스터 노드에 유효한지 확인하십시오. 장애 조치(failover) 중에, 장애 조치(failover) 대상 노드에서 **tempdb** 디렉터리를 사용할 수 없는 경우 SQL Server 리소스가 온라인 상태로 전환되지 않습니다.<br /><br /> 로그 디렉터리에 적절한 공간이 있는지 확인하십시오.|  
   
-### <a name="uielement-list"></a>UIElement 목록
+### <a name="ui-element-list"></a>UI 요소 목록
 
 작업 및 요구 사항에 따라 **tempdb** 설정을 구성합니다. 다음 설정은 **tempdb** 데이터 파일에 적용됩니다.  
   
-* **파일 수** 는 **tempdb**의 데이터 파일의 총 수입니다. 기본값은 설치 프로그램에서 검색한 논리 코어 수와 8 중에서 작은 값입니다. 일반적으로 논리 프로세서의 수가 8 이하인 경우 논리 프로세서와 같은 수의 데이터 파일을 사용합니다. 논리 프로세서 수가 8보다 크면 8개의 데이터 파일을 사용합니다. 경합이 발생할 경우, 경합이 허용 가능한 수준으로 감소할 때까지 데이터 파일 수를 논리 프로세서 수까지 4의 배수로 늘리거나, 워크로드 또는 코드를 변경합니다.
+* **파일 수** 는 **tempdb**의 데이터 파일의 총 수입니다. 기본값은 설치 프로그램에서 검색한 논리 코어 수와 8 중에서 작은 값입니다. 일반적으로 논리 프로세서 수가 8보다 작거나 같으면 논리 프로세서와 동일한 개수의 데이터 파일을 사용합니다. 논리 프로세서 수가 8보다 크면 8개의 데이터 파일을 사용합니다. 경합이 발생할 경우, 경합이 허용 가능한 수준으로 감소할 때까지 데이터 파일 수를 논리 프로세서 수까지 4의 배수로 늘리거나, 워크로드 또는 코드를 변경합니다.
   
 * **초기 크기(MB)** 는 각 **tempdb** 데이터 파일의 초기 크기(메가바이트)입니다. 기본값은 8MB(또는 [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]의 경우 4MB)입니다. [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]에서는 초기 최대 파일 크기가 262,144MB(256GB)입니다. [!INCLUDE[sssql15](../../includes/sssql15-md.md)]의 최대 초기 파일 크기는 1024MB입니다. 모든 **tempdb** 데이터 파일의 초기 크기는 동일합니다. SQL Server를 시작하거나 장애 조치(failover)할 때마다 **tempdb**가 다시 생성되므로 일반 작업의 워크로드에 필요한 크기에 가까운 크기를 지정합니다. 시작 시 **tempdb** 생성을 더 최적화하려면 [데이터베이스 즉시 파일 초기화](../../relational-databases/databases/database-instant-file-initialization.md)를 사용하도록 설정합니다.  
   
@@ -423,7 +424,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 설치하는 동안 이 페이지를 건너뛰면 기본 MaxDOP 값은 이전 버전 (0)의 기본 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 대신 이 페이지에 표시되는 권장 값입니다. 이 페이지에서는 이 설정을 수동으로 구성할 수도 있으며, 설치 후에 이 설정을 수정할 수 있습니다. 
 
-### <a name="uielement-list"></a>UIElement 목록
+### <a name="ui-element-list"></a>UI 요소 목록
 
 * **MaxDOP(최대 병렬 처리 수준)** 는 단일 문을 병렬로 실행하는 동안 사용할 최대 프로세서 수에 대 한 값입니다. 기본값은 [최대 병렬 처리 수준 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)의 최대 병렬 처리 수준 지침에 따라 정렬됩니다.
 
@@ -431,11 +432,11 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 **최소 서버 메모리**는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]가 버퍼 풀 및 기타 캐시에 대해 사용할 낮은 메모리 제한을 결정합니다. 기본값과 및 권장되는 값은 모두 0입니다. **최소 서버 메모리**의 효과에 대한 자세한 내용은 [메모리 관리 아키텍처 가이드](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory)를 참조하세요.
 
-**최소 서버 메모리**는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]가 버퍼 풀 및 기타 캐시에 대해 사용할 높은 메모리 제한을 결정합니다. 기본값은 2,147,483,647MB(메가바이트)이며 계산 된 권장값은 기존 시스템 메모리를 기반으로 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 [서버 메모리 구성 옵션](../../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)의 메모리 구성 지침에 따라 정렬됩니다. **최대 서버 메모리**의 효과에 대한 자세한 내용은 [메모리 관리 아키텍처 가이드](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory)를 참조하세요.
+**최소 서버 메모리**는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]가 버퍼 풀 및 기타 캐시에 대해 사용할 높은 메모리 제한을 결정합니다. 기본값은 2,147,483,647MB(메가바이트)이며 계산 된 권장값은 기존 시스템 메모리를 기반으로 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 [서버 메모리 구성 옵션](../../database-engine/configure-windows/server-memory-server-configuration-options.md#manually)의 메모리 구성 지침에 따라 정렬됩니다. **최대 서버 메모리**의 효과에 대한 자세한 내용은 [메모리 관리 아키텍처 가이드](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory)를 참조하세요.
 
 설치하는 동안이 페이지를 건너뛰면 사용된 기본 **최대 서버 메모리** 값이 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 기본값(2,147,483,647메가바이트)입니다. **권장** 라디오 단추를 선택하면 이 페이지에서 이러한 설정을 수동으로 구성할 수 있으며 설치 후에 수정할 수 있습니다. 자세한 내용은 [Server Memory Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)(서버 메모리 구성 옵션)를 참고하세요.
 
-### <a name="uielement-list"></a>UIElement 목록
+### <a name="ui-element-list"></a>UI 요소 목록
   
 **기본값**: 이 라디오 단추는 기본적으로 선택되어 있으며 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 기본값에 대한 **최소 서버 메모리** 및 **최대 서버 메모리** 설정으로 설정되어 있습니다. 
 
@@ -453,7 +454,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 이 페이지를 사용하여 이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치에 대해 FILESTREAM을 사용하도록 설정할 수 있습니다. FILESTREAM은 **varbinary(max)** BLOB(Binary Large Object) 데이터를 파일 시스템의 파일로 저장하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 NTFS 파일 시스템과 통합합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 FILESTREAM 데이터를 삽입, 업데이트, 쿼리, 검색 및 백업할 수 있습니다. Microsoft Win32 파일 시스템 인터페이스는 데이터에 대한 스트리밍 액세스를 제공합니다. 
   
-### <a name="uielement-list"></a>UIElement 목록
+### <a name="ui-element-list"></a>UI 요소 목록
   
 **Transact-SQL 액세스에 FILESTREAM 사용**: [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스에 FILESTREAM을 사용하도록 설정하려면 선택합니다. 이 확인란을 먼저 선택해야 다른 옵션을 사용할 수 있습니다.  
   

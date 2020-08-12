@@ -1,5 +1,6 @@
 ---
 title: 보고서 디자인 팁(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기에서 데이터 표시를 개선하기 위한 시각적 디자인 방법을 알아봅니다. 차트, 데이터 막대, 표시기, 스파크라인, 테이블 및 지도를 사용하여 보고서를 사용자 지정합니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e527b4059e225b012a2fa39cf21033b8af5ab9e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1dcd59cb3b101007143fe212f1dd988b556ed770
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081093"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034957"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>보고서 디자인 팁(보고서 작성기 및 SSRS)
   다음 팁을 사용하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서를 디자인하는 데 도움이 됩니다.  

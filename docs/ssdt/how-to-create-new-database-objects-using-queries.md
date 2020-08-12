@@ -1,21 +1,21 @@
 ---
 title: 쿼리를 사용하여 새 데이터베이스 개체 만들기
+description: Transact-SQL 편집기에 대해 알아봅니다. 이 편집기를 여는 방법을 확인하고 편집기를 사용하여 새 테이블, 함수 또는 보기를 만드는 방법을 보여 주는 예를 확인합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 38a7165eb1145c6da08902d06a8483b0e26abf5b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df5dc9a0af721e8582ec7f9095efe73d03af2710
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241485"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518773"
 ---
 # <a name="how-to-create-new-database-objects-using-queries"></a>방법: 쿼리를 사용하여 새 데이터베이스 개체 만들기
 

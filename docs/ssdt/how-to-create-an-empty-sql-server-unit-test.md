@@ -1,5 +1,6 @@
 ---
 title: 빈 SQL Server 단위 테스트 만들기
+description: SQL Server 단위 테스트를 만드는 방법을 알아봅니다. 다른 테스트에서 사용하는 것과 동일한 TestInitialize 및 TestCleanup 스크립트를 사용하는 방법과 다른 스크립트를 사용하는 방법을 확인합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 5684735fc0bf2aaaa35183933145006d6efe188e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f447368d92d3e19d6733c0c1f026298202a8c7a9
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241507"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518823"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>방법: 빈 SQL Server 단위 테스트 만들기
 

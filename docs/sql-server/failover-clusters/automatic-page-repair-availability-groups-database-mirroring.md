@@ -1,6 +1,6 @@
 ---
 title: 가용성 그룹 및 데이터베이스 미러링에 대한 자동 페이지 복구
-description: '데이터베이스가 Always On 가용성 그룹 또는 데이터베이스 미러링 관계에 참여하는 경우 특정 유형의 페이지 손상을 자동으로 복구합니다. 이 문서에서는 오류 유형과 가능한 해결 방법에 대한 정보를 제공합니다. '
+description: 데이터베이스가 Always On 가용성 그룹 또는 데이터베이스 미러링에 참여하는 경우 특정 유형의 페이지 손상을 자동으로 복구하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7c8d58b7bdc836f44871560c0d1e9908d1f72f23
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 861ffae3a6bb9451ca9dc9d5c8684e5b211a3b93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822648"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729129"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>자동 페이지 복구(가용성 그룹: 데이터베이스 미러링)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   자동 페이지 복구는 데이터베이스 미러링과 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]에서 지원됩니다. 특정 유형의 오류로 인해 페이지가 손상되어 읽을 수 없게 되면 데이터베이스 미러링 파트너(주 파트너 또는 미러 파트너) 또는 가용성 복제본(주 복제본 또는 보조 복제본)이 자동으로 페이지를 복구하려고 시도합니다. 페이지를 읽을 수 없는 파트너 또는 복제본은 해당 파트너나 다른 복제본에 페이지의 새 복사본을 요청합니다. 이 요청이 성공하면 읽을 수 없는 페이지는 읽을 수 있는 복사본으로 대체되고 일반적으로 오류가 해결됩니다.  
   
  일반적으로 데이터베이스 미러링과 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 은 동일한 방식으로 I/O 오류를 처리합니다. 여기에서 몇 가지 차이점을 명시적으로 소개합니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "74822648"
   
 -   9페이지(데이터베이스 부트 페이지)  
   
--   할당 페이지: GAM(전역 할당 맵) 페이지, SGAM(공유 전역 할당 맵) 페이지 및 PFS(페이지 여유 공간) 페이지.  
+-   할당 페이지: GAM(글로벌 할당 맵) 페이지, SGAM(공유 글로벌 할당 맵) 페이지 및 PFS(페이지 여유 공간) 페이지.  
   
  
 ##  <a name="handling-io-errors-on-the-principalprimary-database"></a><a name="PrimaryIOErrors"></a> 주/기본 데이터베이스에서 I/O 오류 처리  
@@ -96,7 +96,7 @@ ms.locfileid: "74822648"
  자동 페이지 복구는 백그라운드로 실행되는 비동기 프로세스입니다. 따라서 읽을 수 없는 페이지를 요청하는 데이터베이스 작업은 실패하게 되고 오류를 일으킨 조건과 상관없이 오류 코드가 반환됩니다. 미러된 데이터베이스 또는 가용성 데이터베이스에 대한 애플리케이션을 개발하는 경우 실패한 작업에 대한 예외를 차단해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 코드가 823, 824 또는 829인 경우 작업을 나중에 다시 시도해야 합니다.  
   
 
-##  <a name="how-to-view-automatic-page-repair-attempts"></a><a name="ViewAPRattempts"></a> 자동 페이지 복구 시도 보기  
+##  <a name="how-to-view-automatic-page-repair-attempts"></a><a name="ViewAPRattempts"></a> 방법: 자동 페이지 복구 시도 보기  
  다음 동적 관리 뷰는 지정된 가용성 데이터베이스 또는 미러된 데이터베이스에 대한 최근 자동 페이지 복구 시도에 해당하는 행을 데이터베이스당 최대 100개까지 반환합니다.  
   
 -   **Always On 가용성 그룹:**  

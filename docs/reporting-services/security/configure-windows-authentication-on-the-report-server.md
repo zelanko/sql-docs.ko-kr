@@ -1,6 +1,6 @@
 ---
 title: 보고서 서버에서 Windows 인증 구성 | Microsoft Docs
-ms.date: 08/26/2016
+ms.date: 06/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 47cba9b26c56a41b6741211f1f9d228884b32b5b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c3320851b253b8ca509b564405db4b873e5dea0b
+ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66499942"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263838"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>보고서 서버의 Windows 인증 구성
   기본적으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 Negotiate 또는 NTLM 인증을 지정하는 요청을 허용합니다. 배포에 이러한 보안 공급자를 사용하는 클라이언트 애플리케이션 및 브라우저가 포함된 경우 추가 구성 없이 기본값을 사용할 수 있습니다. Windows 통합 보안을 위해 다른 보안 공급자를 사용하거나(예: Kerberos를 직접 사용하려는 경우) 기본값을 수정하고 원래 설정을 복원하려는 경우 이 항목의 정보를 사용하여 보고서 서버에서 인증 설정을 지정할 수 있습니다.  
@@ -30,9 +30,9 @@ ms.locfileid: "66499942"
     > [!IMPORTANT]  
     >  **RSWindowsNegotiate** 를 사용할 경우 보고서 서버 서비스가 도메인 사용자 계정으로 실행되도록 구성하고 해당 계정의 SPN(서비스 사용자 이름)을 등록하지 않으면 Kerberos 인증 오류가 발생합니다. 자세한 내용은 이 항목의 [보고서 서버에 연결할 때 Kerberos 인증 오류 해결](#proxyfirewallRSWindowsNegotiate) 을 참조하십시오.  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에는 Windows 인증을 구성해야 합니다. 기본적으로 보고서 서버 웹 서비스에 대한 Web.config 파일에는 \<authentication mode="Windows"> 설정이 들어 있습니다. 이를 \<authentication mode="Forms">로 변경하는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대한 Windows 인증이 실패합니다.  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에는 Windows 인증을 구성해야 합니다. 기본적으로 보고서 서버 웹 서비스용 Web.config 파일에는 \<authentication mode="Windows"> 설정이 포함되어 있습니다. 이 설정을 \<authentication mode="Forms">로 변경할 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대한 Windows 인증이 실패합니다.  
   
--   보고서 서버 웹 서비스에 대한 Web.config 파일에는 \<identity impersonate= "true" />가 들어 있어야 합니다.  
+-   보고서 서버 웹 서비스용 Web.config 파일에는 \<identity impersonate= "true" />가 있어야 합니다.  
   
 -   클라이언트 애플리케이션 또는 브라우저에서 Windows 통합 보안을 지원해야 합니다.  
 
@@ -51,7 +51,7 @@ ms.locfileid: "66499942"
   
 1.  텍스트 편집기에서 RSReportServer.config를 엽니다.  
   
-2.  \<**인증**>을 찾습니다.  
+2.  \<**Authentication**> 찾기.  
   
 3.  다음 중 필요에 가장 맞는 XML 구조를 복사합니다. **RSWindowsNegotiate**, **RSWindowsNTLM**및 **RSWindowsKerberos** 를 순서에 상관없이 지정할 수 있습니다. 각 개별 요청이 아닌 연결을 인증하려는 경우 인증 지속성을 사용해야 합니다. 인증 지속성을 사용하면 인증이 필요한 모든 요청이 연결 기간 동안 허용됩니다.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66499942"
           </AuthenticationTypes>  
     ```  
   
-4.  \<**인증**>의 기존 항목 위에 붙여넣습니다.  
+4.  \<**Authentication**>의 기존 항목에 붙여넣습니다.  
   
      **Custom** 유형에서는 **RSWindows** 을 사용할 수 없습니다.  
   
@@ -160,14 +160,8 @@ ms.locfileid: "66499942"
     <RSWindowsExtendedProtectionScenario>Any</RSWindowsExtendedProtectionScenario>  
     ```  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 다시 시작하고 추적 로그 파일에서 다음과 같은 항목을 찾습니다.  
-  
-    ```  
-    rshost!rshost!e44!01/14/2010-14:43:51:: i INFO: Registered valid SPNs list for endpoint 2: rshost!rshost!e44!01/14/2010-14:43:52:: i INFO: SPN Whitelist Added <Explicit> - \<HTTP/sqlpod064-13.w2k3.net>.  
-    ```  
-  
--   \<Explicit> 아래의 값은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 계정에 대해 Active Directory에 구성된 SPN을 포함합니다.  
-  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 다시 시작합니다.
+
  확장된 보호를 계속 사용하지 않으려면 구성 값을 다시 기본값으로 설정하고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 계정을 다시 시작합니다.  
   
 ```  

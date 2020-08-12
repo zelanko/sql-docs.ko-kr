@@ -1,5 +1,6 @@
 ---
 title: SqlPackage.exe
+description: SqlPackage.exe를 사용하여 데이터베이스 개발 작업을 자동화하는 방법을 알아봅니다. 예제 및 사용 가능한 매개 변수, 속성 및 SQLCMD 변수를 확인합니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -9,12 +10,12 @@ author: pensivebrian
 ms.author: broneill
 ms.reviewer: alayu; sstein
 ms.date: 03/17/2020
-ms.openlocfilehash: 1ee42c97fe4e032835ccb2f8a07ea51fe70114ac
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 1209945c167f26dd7011cc4ce210e61ac24f7134
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81303144"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441260"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -94,7 +95,7 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
 
 ### <a name="properties-specific-to-the-extract-action"></a>Extract 동작과 관련된 속성
 
-|속성|값|Description|
+|속성|Value|Description|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|SQL Server에 대한 쿼리를 실행할 때 명령 시간 제한(초)을 지정합니다.|
 |**/p:**|DacApplicationDescription=(STRING)|DACPAC 메타데이터에 저장할 애플리케이션 설명을 정의합니다.|
@@ -121,7 +122,7 @@ SqlPackage.exe 게시 작업은 원본 데이터베이스의 구조와 일치하
 
 ### <a name="help-for-publish-action"></a>Publish 동작에 대한 도움말
 
-|매개 변수|약식|값|Description|
+|매개 변수|약식|값|설명|
 |---|---|---|---|
 |**/Action:**|**/a**|게시|수행할 작업을 지정합니다. |
 |**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
@@ -269,7 +270,7 @@ SqlPackage.exe Export 작업은 SQL Server 또는 Azure SQL Database의 라이�
   
 ### <a name="help-for-export-action"></a>Export 동작에 대한 도움말
 
-|매개 변수|약식|값|Description|
+|매개 변수|약식|값|설명|
 |---|---|---|---|
 |**/Action:**|**/a**|내보내기|수행할 작업을 지정합니다. |
 |**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
@@ -333,7 +334,7 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
 
 Import 동작과 관련된 속성:
 
-|속성|값|Description|
+|속성|Value|Description|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|SQL Server에 대한 쿼리를 실행할 때 명령 시간 제한(초)을 지정합니다.|
 |**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;Hyperscale&#124;Default} 'Default')|Azure SQL Database의 버전을 정의합니다.|
@@ -352,7 +353,7 @@ Import 동작과 관련된 속성:
   
 ### <a name="help-for-deployreport-action"></a>DeployReport 동작에 대한 도움말
 
-|매개 변수|약식|값|Description|
+|매개 변수|약식|값|설명|
 |---|---|---|---|
 |**/Action:**|**/a**|DeployReport|수행할 작업을 지정합니다. |
 |**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |

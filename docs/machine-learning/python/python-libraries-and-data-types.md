@@ -2,22 +2,22 @@
 title: Python 및 SQL 데이터 형식 변환
 description: 데이터 과학 및 기계 학습 솔루션에서 Python과 SQL Server 간의 암시적 데이터 및 명시적 데이터 형식 변환을 검토합니다.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 12/10/2018
+ms.technology: machine-learning-services
+ms.date: 06/30/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f22f838bc78d4791e73a1d107cd253aae314d205
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2efa4bc739dcf39cd10672d81ebf66eceb6ecbb8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117886"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85671121"
 ---
 # <a name="data-type-mappings-between-python-and-sql-server"></a>Python과 SQL Server 간의 데이터 형식 매핑
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server Machine Learning Services의 Python 통합 기능에서 실행되는 Python 솔루션의 경우 Python과 SQL Server 간에 데이터가 전달될 때 암시적으로 수행될 수 있는 지원되지 않는 데이터 형식 및 데이터 형식 변환의 목록을 검토합니다.
 
@@ -33,20 +33,24 @@ Python은 SQL Server에 비해 제한된 수의 데이터 형식을 지원합니
 
 이 표에는 제공되는 암시적 변환이 나열되어 있습니다. 다른 데이터 유형은 지원되지 않습니다.
 
-|SQLtype|Python 형식|
-|-------|-----------|
-|**bigint**|`numeric`|
-|**binary**|`raw`|
+|SQLtype|Python 형식|Description
+|-------|-----------|---------------------------------------------------------------------------------------------|
+|**bigint**|`float64`|
+|**binary**|`bytes`|
 |**bit**|`bool`|
 |**char**|`str`|
+|**date**|`datetime`|
+|**datetime**|`datetime`|SQL Server 2017 CU6 이상에서 지원됩니다(**NumPy** 배열 `datetime.datetime` 형식 또는 **Pandas** `pandas.Timestamp` 사용). `sp_execute_external_script`가 이제 소수 자릿수 초의 `datetime` 형식을 지원합니다.|
 |**float**|`float64`|
 |**int**|`int32`|
 |**nchar**|`str`|
 |**nvarchar**|`str`|
 |**nvarchar(max)**|`str`|
-|**real**|`float32`|
-|**smallint**|`int16`|
-|**tinyint**|`uint8`|
+|**real**|`float64`|
+|**smalldatetime**|`datetime`|
+|**smallint**|`int32`|
+|**tinyint**|`int32`|
+|**uniqueidentifier**|`str`|
 |**varbinary**|`bytes`|
 |**varbinary(max)**|`bytes`|
 |**varchar(n)**|`str`|

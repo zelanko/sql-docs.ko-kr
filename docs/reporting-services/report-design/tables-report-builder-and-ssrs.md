@@ -1,5 +1,6 @@
 ---
 title: 테이블(보고서 작성기 및 SSRS) | Microsoft Docs
+description: 보고서 작성기의 페이지를 매긴 보고서에서 단일 필드 또는 여러 필드를 사용하거나 사용자 고유의 식을 작성하여 세부 데이터 또는 그룹화된 데이터를 표시합니다.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 319f221116d49cab52b0c01a273db565a9049669
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cac6edf23b15cbb6dc100c84a7035b425798d9d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574732"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067110"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>테이블(보고서 작성기 및 SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]에서 테이블을 사용하여 정보 데이터나 그룹화된 데이터 또는 두 데이터의 조합을 페이지가 매겨진 보고서에 표시할 수 있습니다.   
@@ -42,7 +43,7 @@ ms.locfileid: "65574732"
   
  ![디자인 화면에서 테이블 템플릿이 선택됨](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "디자인 화면에서 테이블 템플릿이 선택됨")  
   
- 데이터 행에 대한 행 핸들은 세부 정보 기호를 표시합니다(![세부 정보 행에 3개의 평행선이 있는 행 핸들](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "3개의 평행선이 있는 정보 행에 대한 행 핸들")). 이러한 행에서 데이터를 표시하려면 보고서 데이터 창의 필드를 머리글 행 또는 정보 행의 테이블 셀로 끌어옵니다. 두 행이 동시에 채워집니다. 열을 더 추가하려면 삽입 지점이 보일 때까지 해당 필드를 테이블로 끌어옵니다. 데이터 세트 필드를 테이블에 추가한 후에는 날짜 및 통화에 대한 기본 서식을 변경하여 보고서에 표시되는 방법을 제어할 수 있습니다. 다음 다이어그램에서는 Date, Order, Product, Qty 및 Line Total 필드가 있는 테이블 데이터 영역을 보여 줍니다.  
+ 데이터 행에 대한 행 핸들은 세부 정보 기호를 표시합니다(![세부 정보 행에 3개의 평행선이 있는 행 핸들](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "3개의 평행선이 있는 정보 행에 대한 행 핸들")). 이러한 행에서 데이터를 표시하려면 보고서 데이터 창의 필드를 머리글 행 또는 정보 행의 테이블 셀로 끌어옵니다. 두 행이 동시에 채워집니다. 열을 더 추가하려면 삽입 지점이 보일 때까지 해당 필드를 테이블로 끌어옵니다. 데이터 세트 필드를 테이블에 추가한 후에는 날짜 및 통화에 대한 기본 서식을 변경하여 보고서에 표시되는 방법을 제어할 수 있습니다. 다음 다이어그램에는 Date, Order, Product, Qty, Line Total 필드가 포함된 테이블 데이터 영역이 표시됩니다.  
   
  ![디자인, 열 머리글이 굵게 설정된 테이블](../../reporting-services/report-design/media/rs-basictabledetailsformatteddesign.gif "디자인, 열 머리글이 굵게 설정된 테이블")  
   

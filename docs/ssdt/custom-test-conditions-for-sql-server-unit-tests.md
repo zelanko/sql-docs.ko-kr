@@ -1,21 +1,21 @@
 ---
 title: SQL Server 단위 테스트의 사용자 지정 테스트 조건
+description: SQL Server 단위 테스트의 사용자 지정 테스트 조건을 설치하는 방법을 알아봅니다. 직접 만들지 않은 테스트 조건을 설치하는 경우의 위험을 확인합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 32a15d61-e908-4ae1-a238-4fd0f988d8c8
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 2852d075b6d5b1f55b76fea6b32443ea14e74384
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 829132cdd70afb725720ba629ae556ea07f09a56
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245526"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518743"
 ---
 # <a name="custom-test-conditions-for-sql-server-unit-tests"></a>SQL Server 단위 테스트의 사용자 지정 테스트 조건
 

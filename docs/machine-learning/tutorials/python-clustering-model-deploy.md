@@ -1,32 +1,35 @@
 ---
 title: 'Python 자습서: 클러스터 모델 배포'
+titleSuffix: SQL machine learning
 description: 4부로 구성된 이 자습서 시리즈의 4부에서는 Python에서 SQL 기계 학습을 사용하여 클러스터링 모델을 배포합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/27/2019
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0343c3c410c8cf7b76b391fecd6ff57bff5e80d3
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 93b01f213ccac6d6ede0965cc55f3e11a12623ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606448"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730519"
 ---
 # <a name="python-tutorial-deploy-a-model-to-categorize-customers-with-sql-machine-learning"></a>Python 자습서: SQL 기계 학습을 사용하여 고객을 분류하는 모델 배포
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-4부로 구성된 이 자습서 시리즈의 4부에서는 Python에서 개발한 클러스터링 모델을 SQL Server Machine Learning Services 또는 빅 데이터 클러스터를 사용하여 SQL 데이터베이스에 배포합니다.
+4부로 구성된 이 자습서 시리즈의 4부에서는 Python에서 개발한 클러스터링 모델을 SQL Server Machine Learning Services 또는 빅 데이터 클러스터를 사용하여 데이터베이스에 배포합니다.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-이 4부로 구성된 자습서 시리즈의 4부에서는 Machine Learning Services를 사용하여 Python에서 개발한 클러스터링 모델을 SQL 데이터베이스에 배포합니다.
+4부로 구성된 이 자습서 시리즈의 4부에서는 Python에서 개발한 클러스터링 모델을 SQL Server Machine Learning Services를 사용하여 데이터베이스에 배포합니다.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+4부로 구성된 이 자습서 시리즈의 4부에서는 Python에서 개발한 클러스터링 모델을 Azure SQL Managed Instance Machine Learning Services를 사용하여 데이터베이스에 배포합니다.
 ::: moniker-end
 
 새 고객이 계속 등록되므로 정기적으로 클러스터링을 수행하기 위해서는 어떤 앱에서든 Python 스크립트를 호출할 수 있어야 합니다. 그러려면 SQL 저장 프로시저 내부에 Python 스크립트를 배치하여 데이터베이스에 Python 스크립트를 배포하면 됩니다. 모델이 데이터베이스에서 실행되기 때문에 데이터베이스에 저장된 데이터에 대해 쉽게 학습시킬 수 있습니다.
@@ -42,7 +45,7 @@ ms.locfileid: "83606448"
 
 [1부](python-clustering-model.md)에서는 사전 요구 사항을 설치하고 샘플 데이터베이스를 복원했습니다.
 
-[2부](python-clustering-model-prepare-data.md)에서는 클러스터링을 수행하기 위해 SQL 데이터베이스의 데이터를 준비하는 방법을 배웠습니다.
+[2부](python-clustering-model-prepare-data.md)에서는 클러스터링을 수행하기 위해 데이터베이스의 데이터를 준비하는 방법을 배웠습니다.
 
 [3부](python-clustering-model-build.md)에서는 Python에서 K-평균 클러스터링 모델을 만들고 학습시키는 방법을 배웠습니다.
 
@@ -130,7 +133,7 @@ END;
 GO
 ```
 
-## <a name="perform-clustering-in-sql-database"></a>SQL 데이터베이스에서 클러스터링 수행
+## <a name="perform-clustering"></a>클러스터링 수행
 
 이제 저장 프로시저를 만들었으므로, 이 프로시저를 사용해서 다음 스크립트를 실행하여 클러스터링을 수행합니다.
 

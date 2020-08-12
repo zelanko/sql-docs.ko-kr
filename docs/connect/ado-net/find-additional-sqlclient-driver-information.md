@@ -1,7 +1,7 @@
 ---
 title: 추가 SqlClient 드라이버 정보 찾기
 description: 드라이버에 대한 유용한 정보가 포함된 페이지입니다.
-ms.date: 09/30/2019
+ms.date: 06/15/2019
 dev_langs:
 - csharp
 - vb
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 185c8648af5a55f53a25839a40008a203239957f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 26ee3500511ca937e0712b9338ba9a796b3a8a45
+ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929020"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85106891"
 ---
 # <a name="finding-additional-sqlclient-driver-information"></a>추가 SqlClient 드라이버 정보 찾기
 
@@ -30,7 +30,7 @@ ms.locfileid: "80929020"
   
 |리소스|Description|  
 |--------------|-----------------|  
-|[.Net CoreFX GitHub 리포지토리](https://github.com/dotnet/corefx)|이 리포지토리에는 .NET Core에 대한 라이브러리 구현이 포함됩니다.|
+|[.NET 런타임 GitHub 리포지토리](https://github.com/dotnet/runtime)|이 리포지토리에는 .NET Core에 대한 라이브러리 구현이 포함됩니다.|
 |[Microsoft SqlClient Data Provider for SQL Server GitHub 리포지토리](https://github.com/dotnet/SqlClient)|이 리포지토리에는 SqlClient 드라이버의 소스 코드가 포함됩니다.|  
 |[.NET API 브라우저](https://docs.microsoft.com/dotnet/api/)|이 사이트에는 드라이버에 대한 .NET API 정보가 포함됩니다.|  
   

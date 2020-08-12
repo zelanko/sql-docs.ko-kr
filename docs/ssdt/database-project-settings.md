@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 프로젝트 설정
+description: 데이터베이스 프로젝트 설정에 대해 알아봅니다. 데이터베이스 프로젝트 설정을 사용하여 데이터베이스, 디버깅 및 빌드 구성의 여러 측면을 제어하는 방법을 확인합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -36,16 +37,15 @@ f1_keywords:
 ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 3a57f52df4dced4f110135cce1ff30346cc1ebb0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fd90e97a8703e4d4a11f082b864555621542f745
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241678"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518853"
 ---
 # <a name="database-project-settings"></a>데이터베이스 프로젝트 설정
 
@@ -84,7 +84,7 @@ ms.locfileid: "75241678"
 ## <a name="project-settings"></a><a name="bkmk_proj_settings"></a>프로젝트 설정  
 다음 표의 설정은 이 데이터베이스 프로젝트의 모든 구성에 적용됩니다.  
   
-|필드|기본값|Description|  
+|필드|기본값|설명|  
 |---------|-----------------|---------------|  
 |대상 플랫폼|Microsoft SQL Server 2012|이 데이터베이스 프로젝트에서 대상으로 하는 SQL Server의 버전을 지정합니다.|  
 |일반 개체에 대한 확장 Transact\-SQL 확인을 사용하도록 설정합니다.|이 옵션은 새 프로젝트를 만들 때 사용하지 않도록 설정됩니다.<br /><br />이 옵션은 SQL Azure에 연결된 SQL Server 개체 탐색기에서 프로젝트를 만들 때 또는 SQL Azure 데이터베이스를 프로젝트에 가져올 때 또는 프로젝트의 대상 플랫폼을 SQL Azure로 변경할 때 사용하도록 설정됩니다.|이 옵션을 사용하도록 설정되어 있으면 프로젝트에서 실패한 SQL Server 컴파일러 확인이 발견되었다는 오류가 보고됩니다. 대상 플랫폼을 SQL Azure로 변경하면 확장 확인을 사용하도록 설정됩니다. 대상 플랫폼을 변경해도 이 옵션의 선택은 취소되지 않습니다.<br /><br />SQL Server의 다른 버전에 대해서는 이 옵션을 사용하도록 설정할 수 있지만 유효성 검사는 Microsoft SQL Server 2012가 부분적으로 포함된 데이터베이스 및 SQL Azure로 제한됩니다. 모든 SQL Server 버전에서 모든 Transact\-SQL 구문을 지원하는 것은 아닙니다.<br /><br />자세한 내용은 이 항목의 뒷부분에 나오는 [확장 Transact-SQL 확인](#bkmk_evf)을 참조하세요.|  
@@ -190,7 +190,7 @@ Transact-SQL 컴파일러 서비스는 Microsoft SQL Server 2012 데이터베이
   
 다음 표의 설정은 이 데이터베이스 프로젝트의 모든 빌드 구성에 적용됩니다.  
   
-|필드|기본값|Description|  
+|필드|기본값|설명|  
 |---------|-----------------|---------------|  
 |빌드 출력 경로|bin\Debug\|데이터베이스 프로젝트를 빌드하거나 배포할 때 빌드 출력이 생성될 위치를 지정합니다. 상대 경로를 지정하는 경우에는 데이터베이스 프로젝트 경로에 상대적인 경로를 지정해야 합니다. 경로가 없으면 새로 만들어집니다.|  
 |빌드 출력 파일 이름|*DatabaseProjectName*|데이터베이스 프로젝트를 빌드할 때 생성되는 출력에 부여할 이름을 지정합니다.|  
@@ -207,7 +207,7 @@ SQL Server 데이터베이스 프로젝트에서 SQLCMD 변수를 사용하여 �
 ## <a name="build-events"></a><a name="bkmk_build_events"></a>빌드 이벤트  
 이 설정을 사용하여 빌드 작업이 시작되기 전에 실행할 명령줄과 빌드 작업이 완료된 후 실행할 명령줄을 지정할 수 있습니다.  
   
-|필드|기본값|Description|  
+|필드|기본값|설명|  
 |---------|-----------------|---------------|  
 |빌드 전 이벤트 명령줄|None|프로젝트가 빌드되기 전에 실행할 명령줄을 지정합니다. **빌드 전 편집**을 클릭하여 명령줄을 수정합니다.|  
 |빌드 후 이벤트 명령줄|None|프로젝트가 빌드된 후에 실행할 명령줄을 지정합니다. **빌드 후 편집**을 클릭하여 명령줄을 수정합니다.|  
@@ -216,7 +216,7 @@ SQL Server 데이터베이스 프로젝트에서 SQLCMD 변수를 사용하여 �
 ## <a name="debug"></a><a name="bkmk_debug"></a>디버그  
 이러한 설정을 사용하여 데이터베이스 프로젝트의 디버깅을 제어할 수 있습니다.  
   
-|필드|기본값|Description|  
+|필드|기본값|설명|  
 |---------|-----------------|---------------|  
 |작업을 시작합니다.|None|프로젝트를 디버그할 때 실행할 스크립트 또는 외부 프로그램을 지정합니다.|  
 |대상 연결 문자열|Data Source=(localdb)\\*SolutionName*;Initial Catalog=*DatabaseProjectName*;Integrated Security=True;Pooling=False;Connect Timeout=30|지정한 빌드 구성에 대해 대상으로 할 데이터베이스 서버의 연결 정보를 지정합니다. 기본 연결 문자열은 동적으로 만들어진 SQL Server LocalDB 인스턴스 및 데이터베이스에 대한 것입니다.|  

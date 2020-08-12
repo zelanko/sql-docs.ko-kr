@@ -1,21 +1,21 @@
 ---
 title: 데이터베이스 기능 확장
+description: 데이터베이스 기능을 확장하는 방법을 알아봅니다. 사용자 지정 테스트 조건, 빌드 및 배포 참가자, 기타 기능 확장에 대한 정보를 확인합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 1c43d9e4-6fb1-4d15-a5fb-cd572daf2951
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 4006237a90f876228108504b90a26d371af4fc1d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cd0ba3850c401c57b0f478eba1ba6f8013f4a4d0
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241656"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518953"
 ---
 # <a name="extending-the-database-features"></a>데이터베이스 기능 확장
 

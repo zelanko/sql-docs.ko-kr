@@ -2,24 +2,24 @@
 title: 애플리케이션 사용
 titleSuffix: SQL Server Big Data Clusters
 description: RESTful 웹 서비스를 사용하여 SQL Server 빅 데이터 클러스터에 배포된 애플리케이션을 사용합니다.
-author: jeroenterheerdt
-ms.author: jterh
-ms.reviewer: mikeray
-ms.date: 01/07/2020
+author: cloudmelon
+ms.author: melqin
+ms.reviewer: bilia
+ms.date: 06/22/2020
 ms.metadata: seo-lt-2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 305080d5c3b0a1c517d757c1f6f2bd07fefb216c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 45161a879adadb0de78c4b2b0d3c62a5c2e18f55
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75721408"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719066"
 ---
 # <a name="consume-an-app-deployed-on-big-data-clusters-2019-using-a-restful-web-service"></a>RESTful 웹 서비스를 사용하여 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 배포된 앱을 사용합니다.
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 이 문서에서는 RESTful 웹 서비스를 사용하여 SQL Server 빅 데이터 클러스터에 배포된 앱을 사용하는 방법을 설명합니다.
 
@@ -29,11 +29,14 @@ ms.locfileid: "75721408"
 - [azdata 명령줄 유틸리티](deploy-install-azdata.md)
 - [azdata](big-data-cluster-create-apps.md) 또는 [앱 배포 확장](app-deployment-extension.md)을 사용하여 배포된 앱
 
+> [!NOTE]
+> 애플리케이션의 yaml 사양 파일에서 일정을 지정하는 경우 애플리케이션은 cron 작업을 통해 트리거됩니다. 빅 데이터 클러스터가 OpenShift에 배포되는 경우 cron 작업을 시작하려면 추가 기능이 필요합니다. 특정 지침은 [OpenShift의 보안 고려 사항](concept-application-deployment.md#app-deploy-security) 관련 세부 정보를 참조하세요.
+
 ## <a name="capabilities"></a>기능
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]에 애플리케이션을 배포한 후에 RESTful 웹 서비스를 사용하여 해당 애플리케이션에 액세스하고 사용할 수 있습니다. 이 기능을 사용하면 다른 애플리케이션 또는 서비스(예: 모바일 앱 또는 웹 사이트)에서 해당 앱을 통합할 수 있습니다. 다음 표에서는 앱의 RESTful 웹 서비스에 대한 정보를 가져오기 위해 **azdata**와 함께 사용할 수 있는 애플리케이션 배포 명령을 설명합니다.
 
-|명령 |Description |
+|명령 |설명 |
 |:---|:---|
 |`azdata app describe` | 애플리케이션을 설명합니다. |
 
@@ -98,6 +101,12 @@ azdata app describe --name add-app --version v1
 |GDR1|  `https://[IP]:[PORT]/docs/swagger.json`|
 |CU1 이상| `https://[IP]:[PORT]/api/v1/swagger.json`|
 
+ 위의 예에 나온 CU4 릴리스, 컨트롤러의 IP 주소(예에서는 10.1.1.3), 포트 번호(30080)의 출력에서 URL은 다음과 같습니다. 
+ 
+ ```bash
+    https://10.1.1.3 :30080/api/v1/swagger.json
+```
+ 
 > 버전 정보는 [릴리스 기록](release-notes-big-data-cluster.md#release-history)을 참조하세요.
 
 위에서 [`describe`](#retrieve-the-endpoint) 명령을 실행하여 검색한 IP 주소와 포트를 사용해 브라우저에서 적절한 URL을 엽니다. `azdata login`에 사용한 것과 동일한 자격 증명으로 로그인합니다.
@@ -106,18 +115,37 @@ azdata app describe --name add-app --version v1
 
 ![API Swagger](media/big-data-cluster-consume-apps/api_swagger.png)
 
-`app` GET 메서드 및 `token` POST 메서드를 확인합니다. 앱 인증에서 JWT 토큰을 사용하기 때문에 `token` 메서드에 대한 POST 호출을 수행하려면 원하는 도구를 사용하여 토큰을 가져와야 합니다. 다음은 [Postman](https://www.getpostman.com/)에서 이 작업을 수행하는 방법의 예제입니다.
+`app`은 GET 메서드이며 `token`을 가져오려면 POST 메서드를 사용합니다. 앱 인증에서 JWT 토큰을 사용하기 때문에 `token` 메서드에 대한 POST 호출을 수행하려면 원하는 도구를 사용하여 토큰을 가져와야 합니다. 동일한 예에서 JWT 토큰을 가져오는 URL은 다음과 같습니다.
+
+ ```bash
+    https://10.1.1.3 :30080/api/v1/token
+```
+
+
+다음은 [Postman](https://www.getpostman.com/)에서 이 작업을 수행하는 방법의 예제입니다.
 
 ![Postman 토큰](media/big-data-cluster-consume-apps/postman_token.png)
 
-이 요청의 결과를 통해 앱을 실행하는 URL을 호출하는 데 필요한 JWT `access_token`를 얻을 수 있습니다.
+
+이 요청의 출력을 통해 앱을 실행하기 위해 URL을 호출하는 데 필요한 JWT `access_token`을 얻을 수 있습니다.
 
 ## <a name="execute-the-app-using-the-restful-web-service"></a>RESTful 웹 서비스를 사용하여 앱 실행
 
-> [!NOTE]
-> 원하는 경우 브라우저에서 `azdata app describe --name [appname] --version [version]`을 실행했을 때 반환된 `swagger`의 URL을 열 수 있습니다. 이 URL은 `https://[IP]:[PORT]/app/[appname]/[version]/swagger.json`과 유사합니다. `azdata login`에 사용한 것과 동일한 자격 증명으로 로그인해야 합니다. `swagger.json`의 내용을 [Swagger 편집기](https://editor.swagger.io)에 붙여넣을 수 있습니다. 웹 서비스에서 `run` 메서드가 공개됩니다. 맨 위에 표시되는 기준 URL도 적어 둡니다.
+BDC에서 앱을 사용하는 다양한 방법이 있습니다. [azdata 앱 실행 명령](big-data-cluster-create-apps.md)을 사용하도록 선택할 수 있습니다. 이 섹션에서는 Postman 같은 일반적인 개발자 도구를 사용하여 앱을 실행하는 방법을 보여 줍니다. 
 
-자주 사용하는 도구를 통해 `run` 메서드(`https://[IP]:30778/api/app/[appname]/[version]/run`)를 호출하고 POST 요청의 본문에 있는 매개 변수를 json으로 전달할 수 있습니다. 이 예제에서는 [Postman](https://www.getpostman.com/)을 사용합니다. 호출하기 전에 `Authorization`을 `Bearer Token`으로 설정하고 앞에서 검색한 토큰을 붙여넣어야 합니다. 이렇게 하면 요청에 헤더가 설정됩니다. 아래 스크린샷을 참조하세요.
+브라우저에서 `azdata app describe --name [appname] --version [version]`을 실행했을 때 반환된 `swagger`의 URL을 열 수 있습니다. 이 URL은 `https://[IP]:[PORT]/app/[appname]/[version]/swagger.json`과 유사합니다. 
+
+> [!NOTE]
+> `azdata login`에 사용한 것과 동일한 자격 증명으로 로그인해야 합니다. 동일한 예에서 명령은 다음과 같습니다.
+
+ ```bash
+    azdata app describe --name add-app --version v1
+```
+
+`swagger.json`의 내용을 [Swagger 편집기](https://editor.swagger.io)에 붙여넣을 수 있습니다. 웹 서비스가 `run` 메서드를 노출하고 그 아래로 애플리케이션 프록시를 통과했음을 확인할 수 있습니다. 애플리케이션 프록시는 사용자를 인증한 후 요청을 애플리케이션으로 라우팅하는 웹 API입니다. 맨 위에 기준 URL이 표시됩니다. 원하는 도구를 통해 `run` 메서드(`https://[IP]:30778/api/app/[appname]/[version]/run`)를 호출하고 POST 요청의 본문에 있는 매개 변수를 json으로 전달할 수 있습니다. 
+
+
+이 예제에서는 [Postman](https://www.getpostman.com/)을 사용합니다. 호출하기 전에 `Authorization`을 `Bearer Token`으로 설정하고 앞에서 검색한 토큰을 붙여넣어야 합니다. 이렇게 하면 요청에 헤더가 설정됩니다. 아래 스크린샷을 참조하세요.
 
 ![Postman 실행 헤더](media/big-data-cluster-consume-apps/postman_run_1.png)
 
@@ -130,6 +158,7 @@ azdata app describe --name add-app --version v1
 ![Postman 실행 결과](media/big-data-cluster-consume-apps/postman_result.png)
 
 이제 웹 서비스를 통해 앱을 성공적으로 호출했습니다. 비슷한 단계를 수행하여 이 웹 서비스를 애플리케이션에 통합할 수 있습니다.
+
 
 ## <a name="next-steps"></a>다음 단계
 

@@ -1,5 +1,6 @@
 ---
 title: Count 함수(보고서 작성기) | Microsoft Docs
+description: 식으로 지정된 Null이 아닌 값의 개수를 반환하는 Count 함수에 대해 알아봅니다. 이 함수는 지정된 범위의 컨텍스트에서 계산됩니다.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c37b4999f0fb2dd7cbf14322348e5836e8b38e32
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3e0213d580935112e48df2f8a774ac49202ee7af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081304"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044093"
 ---
 # <a name="report-builder-functions---count-function"></a>보고서 작성기 함수 - Count 함수
   식으로 지정되어 정해진 범위의 컨텍스트에서 계산되는 Null이 아닌 값의 개수를 반환합니다.  
@@ -60,7 +61,7 @@ Count(expression, scope, recursive)
   
  예제  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  다음 코드 예에서는 기본 범위 및 부모 그룹 범위에 대해 Null이 아닌 `Size` 값의 수를 계산하는 식을 보여 줍니다. `GroupbySubcategory`자식 그룹에 속하는 행의 셀에 식이 추가됩니다. 부모 그룹은 `GroupbyCategory`입니다. 식은 `GroupbySubcategory` (기본 범위)에 대한 결과를 표시한 후 `GroupbyCategory` (부모 그룹 범위)에 대한 결과를 표시합니다.  
   
 > [!NOTE]  

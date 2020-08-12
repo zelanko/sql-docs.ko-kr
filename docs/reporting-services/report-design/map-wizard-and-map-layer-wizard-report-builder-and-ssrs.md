@@ -1,5 +1,6 @@
 ---
 title: 지도 마법사 및 지도 계층 마법사(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기에서 지도 마법사 또는 지도 계층 마법사를 사용하여 자동으로 지도를 만들거나 지도 계층을 추가하거나 지도 계층 옵션을 변경하는 방법을 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 02be70284a4a32c69618659f1271165677628845
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b139dc1b0aaa0b2d1477d182cf128d0f93795ca3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078572"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048326"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>지도 마법사 및 지도 계층 마법사(보고서 작성기 및 SSRS)
  페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 지도 마법사 및 지도 계층 마법사는 지도를 만들거나 지도 계층을 추가하거나 기존 계층의 지도 계층 옵션을 변경하는 태스크를 자동화합니다.  
@@ -44,7 +45,7 @@ ms.locfileid: "77078572"
   
  마법사 페이지의 제목을 클릭하면 해당 도움말 내용을 볼 수 있습니다. 표시되는 페이지는 선택한 지도 유형과 공간 데이터 원본 및 분석 데이터 원본에 따라 달라집니다.  
   
-1.  [공간 데이터의 원본 선택](#SpatialDataSource). 공간 데이터는 지도 갤러리, ESRI(Environmental Systems Research Institute, Inc.) 셰이프 파일 또는 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스의 공간 데이터에서 제공될 수 있습니다.  
+1.  [공간 데이터의 원본 선택](#SpatialDataSource). 공간 데이터는 지도 갤러리, ESRI(Environmental Systems Research Institute, Inc.) 셰이프 파일 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스의 공간 데이터에서 제공될 수 있습니다.  
   
     -   [공간 데이터란?](#SpatialData)  
   

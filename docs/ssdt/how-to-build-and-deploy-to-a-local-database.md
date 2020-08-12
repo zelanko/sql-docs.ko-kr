@@ -1,21 +1,21 @@
 ---
 title: 로컬 데이터베이스 빌드 및 배포
+description: SQL Server 2012에서 제공하는 로컬 서버 인스턴스에 대해 알아봅니다. 개발 프로젝트를 빌드, 테스트 및 디버깅하는 데 이 인스턴스를 사용하는 방법을 확인합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: ebca8ff8-9a09-4207-8979-9d577af7c1d5
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c3c079ddc375c1fa252975c419aff587d324dd1b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d7503049f0ea68b38206764eb3163a5a80a0b2d7
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241612"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518923"
 ---
 # <a name="how-to-build-and-deploy-to-a-local-database"></a>방법: 로컬 데이터베이스 빌드 및 배포
 

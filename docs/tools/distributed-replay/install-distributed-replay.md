@@ -4,23 +4,23 @@ titleSuffix: SQL Server Distributed Replay
 description: 이 문서에서는 설치 마법사, 명령 프롬프트 창 또는 구성 파일을 사용하여 Distributed Replay를 설치하는 방법에 대해 설명합니다.
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 08e69ce63d3bd3524614f014a2c193cad1634389
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8b05cbaf1978ec06da1f364d337509ca3652d030
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999393"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681338"
 ---
 # <a name="install-distributed-replay"></a>Distributed Replay 설치
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Distributed Replay는 다음 세 가지 방법 중 하나로 설치할 수 있습니다.  
   
@@ -67,7 +67,7 @@ Distributed Replay는 다음 세 가지 방법 중 하나로 설치할 수 있�
   
      \- 또는 -  
   
-     \<공유 기능 디렉터리>\Tools\\(사용자가 입력한 대체 공유 기능 디렉터리)  
+     \<Share Feature Directory>\Tools\\(사용자가 제공한 대체 공유 기능 디렉터리)  
   
 -   64비트 시스템:  
   
@@ -75,7 +75,7 @@ Distributed Replay는 다음 세 가지 방법 중 하나로 설치할 수 있�
   
      \- 또는 -  
   
-     \<공유 기능 디렉터리 (x86)>\Tools\\(사용자가 입력한 공유 기능 대체(x86) 디렉터리)  
+     \<Share Feature Directory (x86)>\Tools\\(사용자가 제공한 대체 공유 기능(x86) 디렉터리)  
   
 #### <a name="to-install-distributed-replay-features"></a>Distributed Replay 기능을 설치하려면  
   

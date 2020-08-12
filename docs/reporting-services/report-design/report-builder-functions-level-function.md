@@ -1,5 +1,6 @@
 ---
 title: Level 함수(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기의 Level 함수에 대해 알아봅니다. 이 함수는 재귀 계층 구조의 현재 수준을 반환합니다.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e70847a25230be39166ac6fa489f1fdc3f23e43
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b582a1c62f92fc001b4c6047319b9100b4e27ac9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081243"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048236"
 ---
 # <a name="report-builder-functions---level-function"></a>보고서 작성기 함수 - Level 함수
   재귀 계층의 현재 수준을 반환합니다.  

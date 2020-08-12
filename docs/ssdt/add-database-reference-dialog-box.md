@@ -1,20 +1,20 @@
 ---
 title: 데이터베이스 참조 추가 대화 상자
+description: 데이터베이스 참조에 대해 알아보고 이 참조를 사용하는 방법을 알아봅니다. 데이터베이스 참조 추가 대화 상자에서 수행할 수 있는 절차를 확인합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: a43b16b3c45a0f98ca22a4d1e0d3e291cf92f95d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 95d56c0a307d49f7cb0e4a2ba09d1f68d4063226
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256139"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519123"
 ---
 # <a name="add-database-reference-dialog-box"></a>데이터베이스 참조 추가 대화 상자
 

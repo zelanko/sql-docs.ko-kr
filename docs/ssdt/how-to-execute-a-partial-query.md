@@ -1,21 +1,21 @@
 ---
 title: 부분 쿼리 실행
+description: 복잡한 쿼리의 섹션을 디버깅하기 위한 도움말을 확인합니다. Transact-SQL 편집기를 사용하여 특정 스크립트 세그먼트를 강조 표시하고 단일 쿼리로 실행합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: af04ab37-6cbb-4185-9382-e5922fa5b1df
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 5786127626a655e47e2f6eb4ba96f0a16b740258
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f9aaa7712726b37d03c7d7de0994bb8abe01a7d9
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241424"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518803"
 ---
 # <a name="how-to-execute-a-partial-query"></a>방법: 부분 쿼리 실행
 

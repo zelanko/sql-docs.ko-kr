@@ -1,25 +1,25 @@
 ---
 title: 기존 데이터베이스 복제
+description: 데이터베이스를 복제하는 방법을 알아봅니다. 새 데이터베이스 만들기, 해당 스키마 복제, 데이터 복제와 관련된 단계를 확인합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 79dc8d87ab950336766283be20d79536b31a3cdd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 03dedf5c30c8370195243c11406552d12edd8394
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241585"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518903"
 ---
 # <a name="how-to-clone-an-existing-database"></a>방법: 기존 데이터베이스 복제
 
-이 작업에서는 이전 절차에서 배운 단계 중 일부를 사용하여 새 데이터베이스를 만들고 기존 데이터를 이식합니다. 또한 [방법: 스키마 비교를 사용하여 서로 다른 데이터베이스 정의 비교](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)에 설명된 단계를 사용하여 소스 및 프로젝트 데이터베이스의 스키마를 동기화합니다.  
+이 작업에서는 이전 절차에서 배운 단계 중 일부를 사용하여 새 데이터베이스를 만들고 기존 데이터를 이식합니다. 또한 [방법: 스키마 비교를 사용하여 서로 다른 데이터베이스 정의 비교](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) 항목에 설명된 단계를 사용하여 소스 및 프로젝트 데이터베이스의 스키마를 동기화합니다.  
   
 이러한 단계를 사용하면 프로덕션 데이터베이스에서 스키마 및 데이터가 동일한 개발 또는 테스트 데이터베이스를 손쉽게 만들 수 있습니다. 그런 다음 프로덕션 데이터베이스의 작업을 전혀 방해하지 않고 연결된 모드에서 테스트 데이터베이스를 계속해서 개발하거나 오프라인 개발 및 테스트를 위한 데이터베이스 프로젝트를 만들 수 있습니다.  
   

@@ -1,21 +1,21 @@
 ---
 title: SQL Server 단위 테스트에 테스트 조건 추가
+description: SQL Server 단위 테스트에 테스트 조건을 추가하는 방법을 알아봅니다. 이 작업에 SQL Server 단위 테스트 디자이너를 사용하는 방법을 확인합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 85ba2e56-a0b2-489c-aea2-fb135cce0cfc
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 4216358a4b8b541ed724b70fe68245a16235664b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e78a045c3dd7127df8c692120ff140892594fb0c
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241633"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518933"
 ---
 # <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>방법: SQL Server 단위 테스트에 테스트 조건 추가
 

@@ -1,21 +1,21 @@
 ---
 title: 함수, 트리거 및 저장 프로시저에 대한 SQL Server 단위 테스트 만들기
+description: SQL Server 개체 탐색기를 사용하여 데이터베이스 함수, 트리거 또는 저장 프로시저에서 SQL Server 단위 테스트를 만드는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: bda57c10-a1ab-4a1a-8a71-42085a3cb793
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c7218f035ca907bf9052865408b3a7311e8f75b4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 035ab41a162ca31542f87ba545af35e3bf49f007
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241468"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518713"
 ---
 # <a name="how-to-create-sql-server-unit-tests-for-functions-triggers-and-stored-procedures"></a>방법: 함수, 트리거 및 저장 프로시저에 대한 SQL Server 단위 테스트 만들기
 

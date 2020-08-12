@@ -1,5 +1,6 @@
 ---
 title: 테이블 디자이너를 사용하여 데이터베이스 개체 만들기
+description: SQL Server 개체 탐색기에서 새 데이터베이스를 만드는 방법을 알아봅니다. 테이블 디자이너에서 새 테이블, 제약 조건 및 외래 키 참조를 만드는 방법을 확인합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,16 +10,15 @@ f1_keywords:
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ef475a7a0f5e2e8fdea510a0ee743f0d74d19dd2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3364df5dd6336023af7316be12150b878f2c9eb9
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241500"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518783"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>방법: 테이블 디자이너를 사용하여 데이터베이스 개체 만들기
 
@@ -61,17 +61,17 @@ ms.locfileid: "75241500"
   
 6.  위의 단계를 반복하여 **Customer**라는 다른 테이블을 만듭니다. 이번에는 열 표를 사용하여 Customer 테이블에 다음 열을 추가 합니다. 그런 다음, 테이블의 이름이 `[dbo].[Customer]`가 되도록 스크립트를 변경해야 합니다.  
   
-    |속성|데이터 형식|**Null 허용**|  
+    |Name|데이터 형식|**Null 허용**|  
     |--------|-------------|-------------------|  
     |Id|int|선택 취소|  
-    |속성|nvarchar(128)|선택 취소|  
+    |Name|nvarchar(128)|선택 취소|  
   
 7.  **Products**라는 테이블을 하나 이상 만듭니다. 열 표를 사용하여 Products 테이블에 다음 열을 추가 합니다. 그런 다음, 테이블의 이름이 `[dbo].[Products]`가 되도록 스크립트를 변경해야 합니다.  
   
-    |속성|데이터 형식|**Null 허용**|  
+    |Name|데이터 형식|**Null 허용**|  
     |--------|-------------|-------------------|  
     |Id|int|선택 취소|  
-    |속성|nvarchar(128)|선택 취소|  
+    |Name|nvarchar(128)|선택 취소|  
     |ShelfLife|int|선택|  
     |SupplierId|int|선택|  
     |CustomerId|int|선택|  

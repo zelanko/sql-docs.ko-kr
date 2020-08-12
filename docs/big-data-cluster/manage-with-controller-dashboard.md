@@ -9,16 +9,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a78074b7e32df18de1308d2354d98079d074f9bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c051a634199bf6a8adc9a0b52a73196f68901893
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531935"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730600"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-controller-dashboard"></a>SQL Server 컨트롤러 대시보드의 빅 데이터 클러스터 관리
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 **azdata** 및 클러스터 상태 Notebook 외에도 SQL Server 빅 데이터 클러스터의 상태를 보는 또 다른 방법이 있습니다. 이제 **연결** 뷰렛을 통해 SQL Server 빅 데이터 클러스터 컨트롤러를 추가할 수 있습니다. 이렇게 하면 대시보드를 추가하여 클러스터 상태를 볼 수 있습니다.
 
@@ -27,8 +27,8 @@ ms.locfileid: "73531935"
 
 Notebook을 시작하는 데 필요한 필수 조건은 다음과 같습니다.
 
-* 최신 버전의 [Azure Data Studio 참가자 빌드](https://docs.microsoft.com/sql/big-data-cluster/deploy-big-data-tools?view=sqlallproducts-download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc)
-* Azure Data Studio에 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 확장이 설치됨
+* 최신 버전의 [Azure Data Studio](https://aka.ms/getazuredatastudio)
+* [Azure Data Studio에[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 확장이 설치됨](../azure-data-studio/data-virtualization-extension.md)
 
 이 밖에도 SQL Server 2019 빅 데이터 클러스터에는 다음이 필요합니다.
 

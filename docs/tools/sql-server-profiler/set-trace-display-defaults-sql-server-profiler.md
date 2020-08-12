@@ -1,6 +1,7 @@
 ---
 title: 추적 표시 기본값 설정
 titleSuffix: SQL Server Profiler
+description: 'SQL Server Profiler가 추적에서 기본적으로 사용하는 도구 옵션(예: 글꼴 종류, 크기, 스타일)을 살펴보고 이를 조정하는 방법을 알아봅니다.'
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 4a1958ee112b1453a6b86a5e520737b0945147c5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a1e746b4f418c23e22dafc6c07b211c188b8a13
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307930"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726872"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>추적 표시 기본값 설정(SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 항목에서는 도구 옵션을 설정하는 방법에 대해 설명합니다. 도구 옵션은 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서 추적 창에 추적을 표시하는 데 사용하는 글꼴 종류, 크기 및 스타일을 지정합니다. 또한 운영 체제에서 구성된 국가별 설정에 따라 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서 모든 날짜 및 시간을 표시하도록 지정할 수 있습니다.  
   

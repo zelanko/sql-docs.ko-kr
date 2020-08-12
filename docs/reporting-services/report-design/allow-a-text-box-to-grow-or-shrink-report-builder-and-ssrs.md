@@ -1,5 +1,6 @@
 ---
 title: 입력란을 늘리거나 줄이도록 허용(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기 페이지를 매긴 보고서에서 입력란을 내용에 따라 확장 또는 축소하도록 허용하는 속성 옵션을 설정하는 방법을 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: dbc01e78-5993-47e5-af04-34f9e3bbcee1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a31202c07faad2289e25283cfde9c87fb2e3d870
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2e224794dde1c171c583106bf1680ba19da23ed2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081493"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994552"
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>입력란을 늘리거나 줄이도록 허용(보고서 작성기 및 SSRS)
-  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 입력란은 보고서 디자인 화면의 단순한 독립 실행형 상자가 아닙니다. 테이블 또는 행렬(테이블릭스 데이터 영역)의 모든 셀에는 독립 실행형 입력란과 같은 방법으로 서식을 지정할 수 있는 입력란도 포함되어 있습니다. 기본적으로 입력란은 고정 크기입니다. 입력란의 내용에 따라 입력란을 확장하거나 축소할 수 있는 옵션을 설정할 수 있습니다. 이러한 옵션은 속성 창의 **CanGrow** 또는 **CanShrink** 속성에 해당합니다.  
+  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 입력란은 보고서 디자인 화면의 단순한 독립 실행형 상자가 아닙니다. 테이블 또는 행렬(테이블릭스 데이터 영역)의 모든 셀에는 독립 실행형 입력란과 같은 방법으로 서식을 지정할 수 있는 입력란도 포함되어 있습니다. 기본적으로 입력란은 고정된 크기를 가집니다. 입력란의 내용에 따라 입력란을 확장하거나 축소할 수 있는 옵션을 설정할 수 있습니다. 이러한 옵션은 속성 창의 **CanGrow** 또는 **CanShrink** 속성에 해당합니다.  
   
 ## <a name="to-allow-a-text-box-to-grow-or-shrink"></a>입력란을 늘리거나 줄이도록 허용하려면  
   

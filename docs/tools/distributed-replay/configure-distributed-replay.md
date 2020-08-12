@@ -12,15 +12,15 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: b1385a3bcc755844f5af803f16d247f0692d9fbb
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 5ec828e6aa1df2ad38c7a3f831d9f8432dc681b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999383"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681860"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 구성 세부 정보는 Distributed Replay 컨트롤러, 클라이언트 및 관리 도구가 설치되는 위치의 XML 파일에서 지정됩니다. 이러한 파일은 다음과 같습니다.  
   
 -   [컨트롤러 구성 파일](#DReplayController)  
@@ -34,7 +34,7 @@ ms.locfileid: "82999383"
 ##  <a name="controller-configuration-file-dreplaycontrollerconfig"></a><a name="DReplayController"></a> 컨트롤러 구성 파일: DReplayController.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 컨트롤러 서비스가 시작되면 컨트롤러 구성 파일 `DReplayController.config`에서 로깅 수준을 로드합니다. 이 파일은 Distributed Replay 컨트롤러 서비스를 설치한 폴더에 있습니다.  
   
- **\<컨트롤러 설치 경로>\DReplayController.config**  
+ **\<controller installation path>\DReplayController.config**  
   
  컨트롤러 구성 파일에 지정되는 로깅 수준은 다음과 같습니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "82999383"
 ##  <a name="client-configuration-file-dreplayclientconfig"></a><a name="DReplayClient"></a> 클라이언트 구성 파일: DReplayClient.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 클라이언트 서비스가 시작되면 클라이언트 구성 파일 `DReplayClient.config`에서 구성 설정을 로드합니다. 이 파일은 Distributed Replay 컨트롤러 서비스를 설치한 폴더에 있습니다.  
   
- **\<클라이언트 설치 경로>\DReplayClient.config**  
+ **\<client installation path>\DReplayClient.config**  
   
  클라이언트 구성 파일에 지정되는 설정은 다음과 같습니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "82999383"
   
  기본 전처리 구성 파일은 관리 도구를 설치한 폴더에 있으면 위치는 다음과 같습니다.  
   
- **\<관리 도구 설치 경로>\DReplayAdmin\DReplay.exe.preprocess.config**  
+ **\<administration tool installation path>\DReplayAdmin\DReplay.exe.preprocess.config**  
   
  전처리 구성 설정은 전처리 구성 파일에서 `<PreprocessModifiers>` 요소의 자식 요소인 XML 요소에 지정됩니다. 이 설정은 다음을 포함합니다.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "82999383"
   
  기본 재생 구성 파일은 관리 도구를 설치한 폴더에 있으며 위치는 다음과 같습니다.  
   
- **\<관리 도구 설치 경로>\DReplayAdmin\DReplay.exe.replay.config**  
+ **\<administration tool installation path>\DReplayAdmin\DReplay.exe.replay.config**  
   
  재생 구성 설정은 재생 구성 파일에서 `<ReplayOptions>` 및 `<OutputOptions>` 요소의 자식 요소인 XML 요소에 지정됩니다.  
   

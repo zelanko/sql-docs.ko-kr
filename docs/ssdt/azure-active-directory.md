@@ -1,21 +1,21 @@
 ---
 title: SSDT의 Azure Active Directory
+description: SSDT(SQL Server Data Tools)에서 Azure SQL Database 및 Azure SQL Data Warehouse용으로 제공되는 Azure Active Directory 인증 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
-manager: jroth
+author: markingmyname
+ms.author: maghan
 reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ed7bc77b48881351a144ed5d217454518abafcc2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8be8ec4b61c42c0a25c01a6511b5bf69da6a47fd
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286207"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519133"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)의 Azure Active Directory 지원
 
@@ -66,7 +66,7 @@ MFA 방법을 지정하면 **사용자 이름**을 지정해야 하며 **암호*
 
 #### <a name="password-entry"></a>암호 입력
 
-‘Active Directory 대화형 인증’으로 인증할 경우 인증 창이 열리며 사용자가 이 창에 암호를 직접 입력해야 합니다. 
+‘Active Directory 대화형 인증’으로 인증할 경우 인증 창이 열리며 사용자가 이 창에 암호를 직접 입력해야 합니다.
 
 ![로그인 대화 상자](media/azure-active-directory/sign-in.png)
 

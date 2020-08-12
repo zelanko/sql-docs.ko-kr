@@ -1,21 +1,21 @@
 ---
 title: 데이터베이스 개체 디버그
+description: 저장 프로시저, 함수 및 트리거를 디버그하는 방법을 알아봅니다. 디버깅을 켜고, 중단점을 설정하고, 디버그 모드에서 SQL Server 단위 테스트를 실행하는 방법을 확인합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ba04eba5107968f1be11c62fbac0f57ca5733b3f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a9e1b3b6dd7e46872c6196ef3257805c1f5a72f
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241459"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518763"
 ---
 # <a name="how-to--debug-database-objects"></a>방법:  데이터베이스 개체 디버그
 
@@ -23,7 +23,7 @@ SQL Server 단위 테스트는 다음 항목으로 구성됩니다.
   
 -   Visual C\# 또는 Visual Basic으로 작성된 단위 테스트 코드. SQL Server 단위 테스트 디자이너에서 생성되는 이 코드는 테스트 본문을 구성하는 Transact\-SQL 스크립트를 전송하는 역할을 합니다.  
   
--   Visual C\# 또는 Visual Basic으로 작성된 하나 이상의 테스트 조건. 테스트 조건을 디버깅하려면 [방법: 테스트 실행 중 디버그(Visual Studio 2010)](https://msdn.microsoft.com/library/ms182484(VS.100).aspx) 또는 [방법: 테스트 실행 중 디버그(Visual Studio 2012)](https://msdn.microsoft.com/library/ms182484.aspx)에 설명된 대로 단위 테스트 디버깅 절차를 수행합니다.  
+-   Visual C\# 또는 Visual Basic으로 작성된 하나 이상의 테스트 조건. 테스트 조건을 디버그하려면 [방법: 테스트 실행 도중 디버그(Visual Studio 2010)](https://msdn.microsoft.com/library/ms182484(VS.100).aspx) 또는 [방법: 테스트 실행 도중 디버그(Visual Studio 2012)](https://msdn.microsoft.com/library/ms182484.aspx)에 설명된 단위 테스트 디버깅 절차를 수행합니다.  
   
 -   테스트할 데이터베이스의 개체에서 실행되는 하나 이상의 Transact\-SQL 스크립트. 이러한 Transact\-SQL 스크립트는 디버그할 수 없습니다.  
   

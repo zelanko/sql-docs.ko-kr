@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 0b034a0c0d449bd85afbfd46fa407e34921b8cf2
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 84a7a8261e2fc3d2031b1b38b8ee7709ad015e39
+ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262133"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353100"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe에 대한 릴리스 정보
 
@@ -34,6 +34,21 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+
+## <a name="1851-sqlpackage"></a>18.5.1 sqlpackage
+
+|플랫폼|다운로드|릴리스 날짜|버전|빌드
+|:---|:---|:---|:---|:---|
+|Windows|[MSI 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2134206)|2020년 6월 24일|18.5.1|15.0.4826.1|
+|macOS .NET Core |[zip 파일](https://go.microsoft.com/fwlink/?linkid=2134312)|2020년 6월 24일| 18.5.1|15.0.4826.1|
+|Linux .NET Core |[zip 파일](https://go.microsoft.com/fwlink/?linkid=2134311)|2020년 6월 24일| 18.5.1|15.0.4826.1|
+|Windows .NET Core |[zip 파일](https://go.microsoft.com/fwlink/?linkid=2134310)|2020년 6월 24일| 18.5.1|15.0.4826.1|
+
+### <a name="fixes"></a>수정 프로그램
+| 기능 | 세부 정보 |
+| :------ | :------ |
+| 배포 | 외부에서 온-프레미스에 로그인한 사용자로 dacpac을 배포하거나 bacpac를 가져올 때 “'형식' 근처의 구문이 잘못되었습니다.” 오류가 발생하는 18.5에서 도입된 회귀 문제가 해결되었습니다. | 
+
 ## <a name="185-sqlpackage"></a>18.5 sqlpackage
 
 |플랫폼|다운로드|릴리스 날짜|버전|빌드
@@ -51,7 +66,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | 배포 | 순서가 지정된 클러스터형 columnstore 인덱스를 위한 Azure SQL Data Warehouse 지원이 추가되었습니다. |
 | 배포 | Oracle, Teradata, MongoDB/CosmosDB, ODBC, Big Data Cluster용 외부 데이터 원본 지원과 SQL Server 2019 Big Data Cluster용 외부 테이블 지원이 추가되었습니다. |
 | 배포 | 지원되는 버전으로 SQL Database Edge 인스턴스가 추가되었습니다. |
-| 배포 | ‘\<server>.\<dnszone>.database.windows.net’ 형식의 Managed Instance 서버 이름에 대한 지원이 추가되었습니다. |
+| 배포 | '\<server>.\<dnszone>.database.windows.net' 형식의 Managed Instance 서버 이름을 지원합니다. |
 | 배포 | Azure SQL Data Warehouse에 복사 명령에 대한 지원이 추가되었습니다. |
 | 배포 | Azure SQL Data Warehouse에 대해 테이블에서 파티션 함수가 변경된 경우 테이블이 다시 만들어지지 않도록 배포 옵션 게시 중에 ‘IgnoreTablePartitionOptions’가 추가되었습니다. |
 | .NET Core | sqlpackage의 .NET Core 버전에 Microsoft.Data.SqlClient에 대한 지원이 추가되었습니다. |
@@ -60,7 +75,6 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="fixes"></a>수정 프로그램
 | Fix | 세부 정보 |
 | :-- | :------ |
-| 배포 | 외부 사용자를 포함하는 데이터베이스의 dacpac 게시가 “개체 참조가 개체의 인스턴스로 설정되지 않았습니다” 오류를 throw하는 문제가 수정되었습니다. |
 | 배포 | json 경로가 식으로 구문 분석되는 문제가 수정되었습니다. |
 | 배포 | AlterAnyDatabaseScopedConfiguration 및 AlterAnySensitivityClassification 권한에 대해 GRANT 문이 생성되는 문제가 수정되었습니다. |
 | 배포 | 외부 스크립트 권한이 인식되지 않는 문제가 수정되었습니다. |
@@ -71,6 +85,13 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | ScriptDom | 인라인 인덱스 뒤에 정의된 인라인 제약 조건을 인식하지 않는 ScriptDom 버그가 수정되었습니다. |
 | ScriptDom | 일괄 처리 문에서 ScriptDom SYSTEM_TIME에 닫는 괄호가 누락된 문제가 수정되었습니다. |
 | Always Encrypted | sqlpackage가 다시 연결되었는데 연결이 끊기면 임시 테이블이 사라지므로 임시 테이블이 이미 사라진 경우 #tmpErrors 테이블이 삭제되지 않는 문제가 수정되었습니다. |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>알려진 문제
+| 기능 | 세부 정보 |
+| :------ | :------ |
+| 배포 |  외부에서 온-프레미스에 로그인한 사용자로 dacpac을 배포하거나 bacpac를 가져올 때 “'형식' 근처의 구문이 잘못되었습니다.” 오류가 발생하는 회귀 문제가 18.5에서 도입되었습니다. 해결 방법은 sqlpackage 18.4를 사용하는 것입니다. 이 문제는 다음 sqlpackage 릴리스에서 수정될 예정입니다. | 
+| .NET Core | Microsoft.Data.SqlClient에서 이 [알려진 문제](https://github.com/dotnet/SqlClient/issues/559) 때문에 민감도 분류가 포함된 bacpac 가져오기가 "심각한 내부 연결 오류"와 함께 실패합니다. 이 문제는 다음 sqlpackage 릴리스에서 수정될 예정입니다. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1841-sqlpackage"></a>18.4.1 sqlpackage

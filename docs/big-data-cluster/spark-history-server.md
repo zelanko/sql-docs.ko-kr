@@ -6,20 +6,20 @@ author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a2e1297ee6d32adc59810f3a4f9379e600f1464f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 7139b427e58e1aabc516c562def45f986ece1c9d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606505"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728034"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-big-data-clusters-2019-in-spark-history-server"></a>Spark 기록 서버에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]의 Spark 애플리케이션 디버그 및 진단
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 이 문서에서는 확장된 Spark 기록 서버를 사용하여 SQL Server 빅 데이터 클러스터의 Spark 애플리케이션을 디버그하고 진단하는 방법을 설명합니다. 이러한 디버그 및 진단 기능은 Spark 기록 서버에 기본 제공되며 Microsoft에서 제공합니다. 확장에는 데이터 탭, 그래프 탭, 진단 탭이 포함되어 있습니다. 데이터 탭에서는 사용자가 Spark 작업의 입력 및 출력 데이터를 확인할 수 있습니다. 그래프 탭에서는 사용자가 데이터 흐름을 확인하고 작업 그래프를 재생할 수 있습니다. 진단 탭에서는 사용자가 데이터 기울이기, 시간 기울이기 및 실행기 사용량 분석을 참조할 수 있습니다.
 
@@ -28,7 +28,7 @@ ms.locfileid: "83606505"
 오픈 소스의 Spark 기록 서버 사용자 환경이 작업 그래프의 작업별 데이터 및 대화형 시각화와 빅 데이터 클러스터의 데이터 흐름을 포함하는 정보를 사용하여 향상되었습니다. 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>URL을 통해 Spark 기록 서버 웹 UI 열기
-다음 URL로 이동하여 Spark 기록 서버를 엽니다. `<Ipaddress>` 및 `<Port>`를 빅 데이터 클러스터 관련 정보로 바꿉니다. 기본 인증(사용자 이름/암호) 빅 데이터 클러스터 설정에서 게이트웨이(Knox) 엔드포인트에 로그인하라는 메시지가 표시되면 사용자 **루트**를 제공해야 합니다. 자세한 내용은 다음을 참조하세요. [SQL Server 빅 데이터 클러스터 배포](quickstart-big-data-cluster-deploy.md)
+다음 URL로 이동하여 Spark 기록 서버를 엽니다. `<Ipaddress>` 및 `<Port>`를 빅 데이터 클러스터 관련 정보로 바꿉니다. SQL Server 2019 CU 5 이전에 배포된 클러스터의 경우 기본 인증(사용자 이름/암호) 빅 데이터 클러스터 설정에서 게이트웨이(Knox) 엔드포인트에 로그인하라는 메시지가 표시되면 사용자 **루트**를 제공해야 합니다. [SQL Server 빅 데이터 클러스터 배포](quickstart-big-data-cluster-deploy.md)를 참조하세요. [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -193,7 +193,13 @@ Spark 기록 서버 웹 UI는 다음과 같습니다.
 + 색 아이콘을 클릭하여 모든 초안에서 해당 콘텐츠를 선택하거나 선택 취소합니다.
 
     ![차트 선택](./media/apache-azure-spark-history-server/sparkui-diagnosis-select-chart.png)
+    
+## <a name="spark--yarn-logs"></a>Spark/Yarn 로그
+Spark 기록 서버 외에도 여기에서 Spark 및 Yarn에 대한 다음과 같은 로그를 찾을 수 있습니다.
+* Spark 이벤트 로그: hdfs:///system/spark-events
+* Yarn 로그: hdfs:///tmp/logs/root/logs-tfile
 
+참고: 두 로그의 기본 보존 기간은 7일입니다. 보존 기간을 변경하려면 [Apache Spark 및 Apache Hadoop 구성](configure-spark-hdfs.md) 페이지를 참조하세요. 위치는 변경되지 **않습니다**.
 
 ## <a name="known-issues"></a>알려진 문제
 Spark 기록 서버에는 다음과 같은 알려진 문제가 있습니다.

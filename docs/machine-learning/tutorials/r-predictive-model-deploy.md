@@ -8,22 +8,21 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f13efaa9181521a40d6f3ba9a5cdeef7da3d2afc
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: af3826d5153e2be157a74c96037bff51c6039e7c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606986"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728557"
 ---
 # <a name="tutorial-deploy-a-predictive-model-in-r-with-sql-machine-learning"></a>자습서: R에서 SQL 기계 학습을 사용하여 예측 모델 배포
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-4부로 구성된 이 자습서 시리즈의 4부에서는 Machine Learning Services를 사용하여 R에서 개발한 기계 학습 모델을 SQL Server에 배포합니다.
+4부로 구성된 이 자습서 시리즈의 4부에서는 R에서 개발한 기계 학습 모델을 SQL Server Machine Learning Services 또는 빅 데이터 클러스터에 배포합니다.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 4부로 구성된 이 자습서 시리즈의 4부에서는 Machine Learning Services를 사용하여 R에서 개발한 기계 학습 모델을 SQL Server에 배포합니다.
@@ -31,11 +30,13 @@ ms.locfileid: "83606986"
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 4부로 구성된 이 자습서 시리즈의 4부에서는 SQL Server R Services를 사용하여 R에서 개발한 기계 학습 모델을 SQL Server에 배포합니다.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+4부로 구성된 이 자습서 시리즈의 4부에서는 R에서 개발한 기계 학습 모델을 Machine Learning Services를 사용하여 Azure SQL Managed Instance에 배포합니다.
+::: moniker-end
 
 이 문서에서는 다음을 수행하는 방법을 알아봅니다.
 
 > [!div class="checklist"]
-
 > * 기계 학습 모델을 생성하는 저장 프로시저 만들기
 > * 모델을 데이터베이스 테이블에 저장
 > * 모델을 사용하여 예측을 수행하는 저장 프로시저 만들기
@@ -66,11 +67,14 @@ AS
 BEGIN
     EXECUTE sp_execute_external_script @language = N'R'
         , @script = N'
+rental_train_data$Month   <- factor(rental_train_data$Month);
+rental_train_data$Day     <- factor(rental_train_data$Day);
 rental_train_data$Holiday <- factor(rental_train_data$Holiday);
 rental_train_data$Snow    <- factor(rental_train_data$Snow);
 rental_train_data$WeekDay <- factor(rental_train_data$WeekDay);
 
 #Create a dtree model and train it using the training data set
+library(rpart);
 model_dtree <- rpart(RentalCount ~ Month + Day + WeekDay + Snow + Holiday, data = rental_train_data);
 #Serialize the model before saving it to the database table
 trained_model <- as.raw(serialize(model_dtree, connection=NULL));
@@ -157,6 +161,8 @@ BEGIN
     EXECUTE sp_execute_external_script @language = N'R'
         , @script = N'
 #Convert types to factors
+rentals$Month   <- factor(rentals$Month);
+rentals$Day     <- factor(rentals$Day);
 rentals$Holiday <- factor(rentals$Holiday);
 rentals$Snow    <- factor(rentals$Snow);
 rentals$WeekDay <- factor(rentals$WeekDay);
@@ -202,12 +208,12 @@ RentalCount_Predicted
 332.571428571429
 ```
 
-SQL 데이터베이스에서 모델을 만들고, 학습하고, 배포했습니다. 그런 다음, 저장 프로시저에서 해당 모델을 사용하여 새 데이터를 기반으로 값을 예측합니다.
+데이터베이스에서 모델을 만들고, 학습하고, 배포했습니다. 그런 다음, 저장 프로시저에서 해당 모델을 사용하여 새 데이터를 기반으로 값을 예측합니다.
 
 
 ## <a name="clean-up-resources"></a>리소스 정리
 
-TutorialDB 데이터베이스가 더 이상 필요 없으면 SQL 서버에서 삭제합니다.
+TutorialDB 데이터베이스 사용을 마치면 서버에서 삭제합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

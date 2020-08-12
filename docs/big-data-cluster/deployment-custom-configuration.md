@@ -5,20 +5,20 @@ description: 구성 파일을 사용하여 빅 데이터 클러스터 배포를 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bd9624ed1b3d6b164168d162ee68f1773b7a55ac
-ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
+ms.openlocfilehash: ad43f370db096450a88bf1ffe3dd742c86be3206
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550203"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728018"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>클러스터 리소스 및 서비스에 대한 배포 설정 구성
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 `azdata` 관리 도구에 기본적으로 제공되는 미리 정의된 구성 프로필 세트에서 시작하여 BDC 워크로드 요구 사항에 더 잘 맞도록 기본 설정을 쉽게 수정할 수 있습니다. 구성 파일의 구조를 사용하면 리소스의 각 서비스에 대한 설정을 세부적으로 업데이트할 수 있습니다.
 
@@ -665,6 +665,16 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 
 > [!IMPORTANT]
 > [이 문서](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)의 지침에 따라 Kubernetes 클러스터의 각 호스트에서 `max_map_count` 설정을 수동으로 업데이트하는 것이 좋습니다.
+
+## <a name="turn-pods-and-nodes-metrics-colelction-onoff"></a>Pod 및 노드 메트릭 수집 설정/해제
+
+SQL Server 2019 CU5에서는 Pod 및 노드 메트릭의 수집을 제어하는 두 가지 기능 스위치를 사용하도록 설정했습니다. Kubernetes 인프라를 모니터링하기 위해 다른 솔루션을 사용하는 경우 *control.json* 배포 구성 파일에서 *allowNodeMetricsCollection* 및 *allowPodMetricsCollection*을 *false*로 설정하면 기본 제공되는 Pod 및 호스트 노드 메트릭 수집을 해제할 수 있습니다. OpenShift 환경의 경우 Pod 및 노드 메트릭을 수집하려면 권한 기능이 필요하므로 기본 제공 배포 프로필에서 이 설정은 기본적으로 *false*로 설정됩니다.
+*azdata* CLI를 사용하여 사용자 지정 구성 파일에서 이 설정의 값을 업데이트하려면 다음 명령을 실행합니다.
+
+```bash
+ azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowNodeMetricsCollection=false"
+ azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowPodMetricsCollection=false"
+ ```
 
 ## <a name="next-steps"></a>다음 단계
 

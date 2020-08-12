@@ -1,5 +1,6 @@
 ---
 title: 행렬 및 차트에 같은 데이터 표시(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기에서 행렬 및 차트에 동일한 데이터를 표시합니다. 이러한 데이터 영역에 대한 속성을 설정하여 세부 정보를 포함합니다.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd4423251ae02931d539b047251abb5915f85ccc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b444cd40a8141ca3b9398181944aef3a6e61915c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578834"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056545"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>행렬 및 차트에 같은 데이터 표시(보고서 작성기)
   행렬 및 차트에 같은 데이터를 표시하려면 두 데이터 영역에서 같은 데이터 세트를 지정하는 속성을 설정해야 하고 필터, 그룹, 정렬 및 데이터에 대한 동일한 식도 지정해야 합니다.  

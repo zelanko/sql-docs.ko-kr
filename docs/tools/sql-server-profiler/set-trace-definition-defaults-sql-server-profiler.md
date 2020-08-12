@@ -1,6 +1,7 @@
 ---
 title: 추적 정의 기본값 설정
 titleSuffix: SQL Server Profiler
+description: SQL Server Profiler를 사용하여 SQL Server 및 Analysis Services가 각 공급자 또는 서버에 기본적으로 사용하는 템플릿을 설정하는 방법을 알아봅니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 76144d1e3b115bca73683b198abb328ac72fae8a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 48728a7557edc0d2ddfa5d3e1dbf3e9acb868aa7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307416"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726850"
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>추적 정의 기본값 설정(SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 추적 정의 기본값은 각 공급자나 서버에 사용되는 기본 추적 템플릿입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 기본 추적 템플릿을 설정할 수 있습니다.  
   

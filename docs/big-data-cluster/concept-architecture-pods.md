@@ -9,16 +9,16 @@ ms.date: 03/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0cf0d79e08025d52b248175485ba2e3272e18dcb
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ad3cc263ea81b9e3bda5cb34ea27cfabba1ae716
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665464"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730715"
 ---
 # <a name="resources-deployed-with-big-data-cluster"></a>빅 데이터 클러스터를 사용하여 배포되는 리소스
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 이 문서에서는 SQL Server 빅 데이터 클러스터가 배포하는 리소스에 대해 설명합니다.
 
@@ -30,7 +30,7 @@ ms.locfileid: "80665464"
 kubectl get pods -n <namespace>
 ```
 
-`<namespace>`를 빅 데이터 클러스터의 Kubernetes 네임스페이스로 바꿉니다. 
+`<namespace>`를 빅 데이터 클러스터의 이름으로 바꿉니다. 
 
 자세한 내용은 [Kubernetes에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 배포하는 방법](deployment-guidance.md#configfile)을 참조하세요.
 

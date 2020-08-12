@@ -1,21 +1,21 @@
 ---
 title: 연결된 데이터베이스 개발
+description: SQL Server Data Tools가 연결된 데이터베이스에서 작동하는 방법을 알아봅니다. 엔터티를 찾아보고, 테이블을 디자인하고, 스크립트를 편집하고, 기타 작업을 수행하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 21f7f959-7b8e-4335-8681-bebcd957692c
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 068418e04624d912671e5b390823fb0903ba50af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 340df9136dd674f4d340779dfc3d2d5e4db32042
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256128"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519073"
 ---
 # <a name="connected-database-development"></a>연결된 데이터베이스 개발
 
@@ -28,7 +28,7 @@ ms.locfileid: "75256128"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |---------|---------------|  
 |[방법: 데이터베이스에 연결 및 기존 개체 찾아보기](../ssdt/how-to-connect-to-a-database-and-browse-existing-objects.md)|데이터베이스에 연결하고 해당 엔터티를 찾습니다.|  
 |[방법: 테이블 디자이너를 사용하여 데이터베이스 개체 만들기](../ssdt/how-to-create-database-objects-using-table-designer.md)|새 테이블 디자이너를 사용하여 테이블을 디자인하고 테이블 관계를 관리합니다.|  

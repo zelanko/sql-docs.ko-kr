@@ -1,21 +1,21 @@
 ---
 title: 테이블에 있는 데이터를 참조 데이터베이스에 있는 데이터와 비교 및 동기화
+description: 서로 다른 두 데이터베이스의 데이터를 비교하는 방법을 알아봅니다. 데이터를 동기화하는 방법과 동기화 프로세스에 사용되는 스크립트를 보는 방법을 확인합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/27/2020
-ms.openlocfilehash: 097a024622dd7550ec3dabac1c1fac2a35dfe4b3
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: eb0ca79c68227bbc52b69da71eba191ec795ca2f
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402621"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519083"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>하나 이상의 테이블에 있는 데이터를 참조 데이터베이스에 있는 데이터와 비교 및 동기화
 

@@ -1,5 +1,6 @@
 ---
 title: Data Tools 작업 창
+description: Data Tools 작업 창을 사용하여 데이터베이스 확장, 결과 게시 및 기타 작업의 진행 상황을 확인하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: afb49faa-321a-42b1-a378-955b586429f2
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e37dc1f3cf3c78d3c1162c94f835dfab050467f4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f1eae246680e35f52d10a5c5338e866b58843ec3
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241667"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518723"
 ---
 # <a name="data-tools-operations-window"></a>Data Tools 작업 창
 
@@ -36,7 +36,7 @@ ms.locfileid: "75241667"
   
 -   **SQL Server 개체 탐색기**에서 개체 삭제. 자세한 내용은 [방법: 개체 삭제 및 종속성 해결](../ssdt/how-to-delete-objects-and-resolve-dependencies.md)을 참조하세요.  
   
--   결과 게시. 자세한 내용은 [방법: 대상 플랫폼 변경 및 데이터베이스 프로젝트 게시](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)를 참조하세요.  
+-   결과 게시. 자세한 내용은 [방법: 대상 플랫폼 변경 및 데이터베이스 프로젝트 게시](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
   
 -   배포. 자세한 내용은 [방법: 로컬 데이터베이스 빌드 및 배포](../ssdt/how-to-build-and-deploy-to-a-local-database.md)를 참조하세요.  
   

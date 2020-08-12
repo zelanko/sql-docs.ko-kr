@@ -1,21 +1,21 @@
 ---
 title: SQL Server에서 대량 복사 작업
 description: .NET Data Provider for SQL Server의 대량 복사 기능에 대해 설명합니다.
-ms.date: 09/30/2019
+ms.date: 06/15/2020
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: c827ae70d9aa344f52de1d76c482beaef90c09aa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4896bfdb419cfbd8e2cf6302a0a818407d6a596c
+ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78897030"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107009"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>SQL Server에서 대량 복사 작업
 
@@ -32,7 +32,7 @@ Microsoft SQL Server에는 **bcp**라는 많이 사용되는 명령줄 유틸리
 - 트랜잭션 내의 대량 복사 작업  
   
 > [!NOTE]
->  <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 클래스를 지원하지 않는 .NET Framework 버전 1.1 이하를 사용하는 경우 <xref:Microsoft.Data.SqlClient.SqlCommand> 개체를 사용하여 SQL Server Transact-SQL **BULK INSERT** 문을 실행할 수 있습니다.  
+>  <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 클래스를 지원하지 않는 .NET Framework 버전 1.1 이하를 사용하는 경우 **개체를 사용하여 SQL Server Transact-SQL**BULK INSERT<xref:Microsoft.Data.SqlClient.SqlCommand> 문을 실행할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 [대량 복사 예제 설정](bulk-copy-example-setup.md)  
@@ -46,6 +46,9 @@ Microsoft SQL Server에는 **bcp**라는 많이 사용되는 명령줄 유틸리
   
 [트랜잭션 및 대량 복사 작업](transaction-bulk-copy-operations.md)  
 트랜잭션을 커밋하거나 롤백하는 방법을 포함해 트랜잭션 내에서 대량 복사 작업을 수행하는 방법을 설명합니다.  
+
+[대량 복사 작업을 위한 순서 힌트](bulk-copy-order-hints.md)  
+순서 힌트를 사용하여 대량 복사 성능을 향상하는 방법을 설명합니다.
   
 ## <a name="next-steps"></a>다음 단계
 - [SQL Server 및 ADO.NET](index.md)

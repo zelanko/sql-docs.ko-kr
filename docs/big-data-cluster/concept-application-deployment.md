@@ -2,20 +2,20 @@
 title: 애플리케이션 배포란?
 titleSuffix: SQL Server Big Data Clusters
 description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터의 애플리케이션 배포를 설명합니다.
-author: jeroenterheerdt
-ms.author: jterh
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4b647ab4d03d110ce303388a8b62461f28033b6c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4423e6fe624c27c0b9c06d3ff59c56648762af99
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76831576"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215452"
 ---
 # <a name="what-is-application-deployment-on-a-big-data-cluster"></a>빅 데이터 클러스터의 애플리케이션 배포란?
 
@@ -52,6 +52,28 @@ output: #output parameter the app expects and the type
 ReplicaSet가 생성되고 Pod가 시작된 후에는 `spec.yaml` 파일에 `schedule`이 설정된 경우 cron 작업이 생성됩니다. 마지막으로, 애플리케이션을 관리하고 실행하는 데 사용할 수 있는 Kubernetes 서비스가 생성됩니다(아래 참조).
 
 애플리케이션을 실행하면 애플리케이션의 Kubernetes 서비스가 요청을 복제본으로 프록시하고 결과를 반환합니다.
+
+## <a name="security-considerations-for-applications-deployments-on-openshift"></a><a id="app-deploy-security"></a> OpenShift의 애플리케이션 배포에 대한 보안 고려 사항
+
+SQL Server 2019 CU5는 Red Hat OpenShift의 빅 데이터 클러스터 배포뿐만 아니라 BDC의 업데이트된 보안 모델도 지원하므로, 권한 있는 컨테이너가 더 이상 필요하지 않습니다. 권한 없는 컨테이너 외에도, 컨테이너는 SQL Server 2019 CU5를 사용하는 모든 신규 배포에 대해 기본적으로 루트가 아닌 사용자로 실행됩니다.
+
+CU5 릴리스 시점에 [앱 배포](concept-application-deployment.md) 인터페이스를 사용하여 배포되는 애플리케이션의 설치 단계는 여전히 ‘루트’ 사용자로 실행됩니다. 이 동작은 설치 도중에 애플리케이션에서 사용할 추가 패키지가 설치되기 때문에 필요합니다. 애플리케이션의 일부로 배포된 다른 사용자 코드는 권한이 낮은 사용자로 실행됩니다. 
+
+또한 **CAP_AUDIT_WRITE** 기능은 cron 작업을 사용하여 SSIS 애플리케이션 예약을 허용하는 데 필요한 선택적 기능입니다. 애플리케이션의 yaml 사양 파일에서 일정을 지정하는 경우 애플리케이션은 추가 기능을 필요로 하는 cron 작업을 통해 트리거됩니다.  또는 *azdata app run*을 사용하여 웹 서비스 호출을 통해 요청 시 애플리케이션을 트리거할 수 있으며, 여기에는 CAP_AUDIT_WRITE 기능이 필요하지 않습니다. 
+
+> [!NOTE]
+> [OpenShift 배포 문서](deploy-openshift.md)의 사용자 지정 SCC는 빅 데이터 클러스터의 기본 배포에 필요하지 않기 때문에 이 기능을 포함하지 않습니다. 이 기능을 사용하도록 설정하려면 먼저 사용자 지정 SCC yaml 파일을 업데이트하여 다음 위치에 CAP_AUDIT_WRITE를 포함해야 합니다. 
+
+```yml
+...
+allowedCapabilities:
+- SETUID
+- SETGID
+- CHOWN
+- SYS_PTRACE
+- AUDIT_WRITE
+...
+```
 
 ## <a name="how-to-work-with-application-deployment"></a>애플리케이션 배포를 사용하는 방법
 

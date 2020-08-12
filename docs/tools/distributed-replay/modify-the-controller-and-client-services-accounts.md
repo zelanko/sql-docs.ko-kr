@@ -4,23 +4,23 @@ titleSuffix: SQL Server Distributed Replay
 description: Distributed Replay 컨트롤러 및 클라이언트 서비스 계정을 수정한 후 액세스 제어 목록을 다시 적용하는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 7abe40c16dc49e948fbca68486f96db221e1aae8
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 4c8a0f29addf80905ef6edaf5920e479fbaa48e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000463"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681167"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>컨트롤러 및 클라이언트 서비스 계정 수정
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 항목에서는 Distributed Replay Controller 및 Distributed Replay Client 서비스 계정을 수정한 후 ACL(액세스 제어 목록)을 다시 적용하는 방법에 대해 설명합니다.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "83000463"
   
 1.  Distributed Replay 서비스가 설치된 컴퓨터에서 명령 프롬프트에 **dcomcnfg**을(를) 입력합니다.  
   
-2.  **서비스**를 두 번 클릭하고 아래로 스크롤한 다음, **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<서비스 이름>** 을 마우스 오른쪽 단추로 클릭하고 **시작** 또는 **중지**를 클릭합니다.  
+2.  **서비스**를 두 번 클릭하고 아래로 스크롤하여 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<service name>** 을 마우스 오른쪽 단추로 클릭한 다음 **시작** 또는 **중지**를 클릭합니다.  
   
 ### <a name="to-modify-the-distributed-replay-controller-service"></a>Distributed Replay Controller 서비스를 수정하려면  
   

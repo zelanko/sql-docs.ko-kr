@@ -1,21 +1,21 @@
 ---
 title: SQL Server 단위 테스트 디자이너용 테스트 조건 만들기
+description: TestCondition 클래스를 확장하여 SQL Server 단위 테스트 디자이너용 사용자 지정 테스트 조건을 만드는 방법을 확인합니다. 사용자 지정 테스트 조건의 예를 봅니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 75d65bb7b30a8a48a35ada0c929ddf4698ad8408
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e34ca98e6a6a9423bd0237c980e15b91fcdd9aa6
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241476"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518893"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>방법: SQL Server 단위 테스트 디자이너용 테스트 조건 만들기
 

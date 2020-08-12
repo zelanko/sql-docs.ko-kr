@@ -1,21 +1,21 @@
 ---
 title: DAC 프레임워크 호환성
+description: 호환되지 않는 버전의 DAC 프레임워크를 사용하는 SSDT(SQL Server Data Tools)에서 작업을 시도할 때 나타날 수 있는 오류 메시지를 이해합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 5f8e7f4a-f157-442a-8fe5-32b8774776dc
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: d6d0c1fc55b9cadc021026b4b3a5aaf6a6722d33
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c6652f8c6b76f9693229de8aba3e91ac2017c46c
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241693"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518733"
 ---
 # <a name="dac-framework-compatibility"></a>DAC 프레임워크 호환성
 

@@ -1,21 +1,21 @@
 ---
 title: 스크립트 성능 분석
+description: SQL Server Data Tools에서 클라이언트 통계, 실행 계획, Code Analysis를 활용하여 쿼리, 저장 프로시저 및 스크립트 성능을 향상할 수 있는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 0c762da9cf6bb8a2a66831e4a75c98a4360afc6a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dbaec18d8f28e820af1905047de89aa6c00e9743
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245557"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519113"
 ---
 # <a name="analyze-script-performance"></a>스크립트 성능 분석
 

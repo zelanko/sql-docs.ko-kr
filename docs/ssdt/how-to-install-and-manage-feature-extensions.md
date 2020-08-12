@@ -1,21 +1,21 @@
 ---
 title: 기능 확장 설치 및 관리
+description: SQL Server Data Tools의 기능을 향상할 수 있도록 기능 확장을 설치하는 방법을 알아봅니다. 다양한 유형의 확장을 설치할 위치를 확인하세요.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: 7ef7a61b87c11c63070d1e7713d2aae0ad87f547
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fd971797825b0af5b98ab498ce96549aad468e0c
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241400"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518983"
 ---
 # <a name="how-to-install-and-manage-feature-extensions"></a>방법: 기능 확장 설치 및 관리
 

@@ -4,34 +4,36 @@ description: SQL Server Machine Learning Services에서 버전 및 설치 위치
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/01/2020
-ms.topic: conceptual
+ms.date: 06/03/2020
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fb08940a9a6c9c15d8c633f5b3c439514bc43646
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: cecd267627b32b989913ace5e374c74543e69ba4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606005"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85671099"
 ---
 # <a name="get-python-package-information"></a>Python 패키지 정보 가져오기
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-이 문서에서는 SQL Server Machine Learning Services에서 버전 및 설치 위치를 포함하여 설치된 Python 패키지에 대한 정보를 가져오는 방법을 설명합니다. 예제 Python 스크립트는 설치 경로 및 버전과 같은 패키지 정보를 나열하는 방법을 보여 줍니다.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+이 문서에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)에서 버전 및 설치 위치를 포함하여 설치된 Python 패키지에 대한 정보를 가져오는 방법을 설명합니다. 예제 Python 스크립트는 설치 경로 및 버전과 같은 패키지 정보를 나열하는 방법을 보여 줍니다.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+이 문서에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에서 버전 및 설치 위치를 포함하여 설치된 Python 패키지에 대한 정보를 가져오는 방법을 설명합니다. 예제 Python 스크립트는 설치 경로 및 버전과 같은 패키지 정보를 나열하는 방법을 보여 줍니다.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+이 문서에서는 [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)에서 버전 및 설치 위치를 포함하여 설치된 Python 패키지에 대한 정보를 가져오는 방법을 설명합니다. 예제 Python 스크립트는 설치 경로 및 버전과 같은 패키지 정보를 나열하는 방법을 보여 줍니다.
+::: moniker-end
 
 ## <a name="default-python-library-location"></a>기본 Python 라이브러리 위치
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 SQL Server를 사용하여 기계 학습을 설치하는 경우 설치하는 각 언어의 인스턴스 수준에서 단일 패키지 라이브러리가 생성됩니다. 인스턴스 라이브러리는 SQL Server에 등록된 보안 폴더입니다.
-::: moniker-end
-
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
-SQL Server를 사용하여 기계 학습을 설치하는 경우 설치하는 각 언어의 인스턴스 수준에서 단일 패키지 라이브러리가 생성됩니다.
-::: moniker-end
 
 SQL Server의 데이터베이스 내에서 실행되는 모든 스크립트나 코드는 인스턴스 라이브러리에서 함수를 로드해야 합니다. SQL Server는 다른 라이브러리에 설치된 패키지에 액세스할 수 없습니다. 이것은 원격 클라이언트에도 적용됩니다. 서버 컴퓨팅 컨텍스트에서 실행되는 모든 Python 코드는 인스턴스 라이브러리에 설치된 패키지만 사용할 수 있습니다.
 서버 자산을 보호하려면 컴퓨터 관리자만 기본 인스턴스 라이브러리를 수정할 수 있습니다.
@@ -59,7 +61,7 @@ sp_configure 'external scripts enabled', 1;
 RECONFIGURE WITH override;
 ```
 
-다음 문을 실행하여 현재 인스턴스에 대한 기본 라이브러리를 확인합니다. 이 예제에서는 Python `sys.path` 변수에 포함된 폴더 목록을 반환합니다. 이 목록에는 현재 디렉터리와 표준 라이브러리 경로가 포함됩니다.
+현재 인스턴스의 기본 라이브러리를 확인하려면 다음 SQL 문을 실행합니다. 이 예제에서는 Python `sys.path` 변수에 포함된 폴더 목록을 반환합니다. 이 목록에는 현재 디렉터리와 표준 라이브러리 경로가 포함됩니다.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -68,6 +70,11 @@ EXECUTE sp_execute_external_script
 ```
 
 변수 `sys.path` 및 이 변수가 모듈에 대한 인터프리터의 검색 경로를 설정하는 데 사용되는 방법에 대한 자세한 내용은 [모듈 검색 경로](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)를 참조하세요.
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+> [!NOTE]
+> **pip** 또는 유사한 메서드를 사용하여 SQL 패키지 라이브러리에 직접 Python 패키지를 설치하지 마세요. 대신 **sqlmlutils**를 사용하여 SQL 인스턴스에 패키지를 설치합니다. 자세한 내용은 [sqlmlutils를 사용하여 Python 패키지 설치](install-additional-python-packages-on-sql-server.md)를 참조하세요.
+::: moniker-end
 
 ## <a name="default-microsoft-python-packages"></a>기본 Microsoft Python 패키지
 
@@ -123,7 +130,7 @@ EXECUTE sp_execute_external_script
   @language = N'Python',
   @script = N'
 import pkg_resources
-pkg_name = "pandas"
+pkg_name = "scikit-learn"
 try:
     version = pkg_resources.get_distribution(pkg_name).version
     print("Package " + pkg_name + " is version " + version)
@@ -135,22 +142,13 @@ except:
 결과:
 
 ```text
-STDOUT message(s) from external script: Package pandas is version 0.23.4
+STDOUT message(s) from external script: Package scikit-learn is version 0.20.2
 ```
 
-다음 예제는 `pandas` 패키지의 버전을 출력합니다.
+<a name="bkmk_SQLPythonVersion"></a>
+## <a name="view-the-version-of-python"></a>Python 버전 보기
 
-```sql
-EXECUTE sp_execute_external_script
-  @language = N'Python',
-  @script = N'
-import pkg_resources
-pkg_name = "pandas"
-print(pkg_name + " package is version " + pkg_resources.get_distribution(pkg_name).version)
-'
-```
-
-다음 예제는 Python 버전을 반환합니다.
+다음 예제 코드는 SQL Server 인스턴스에 설치된 Python 버전을 반환합니다.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -163,9 +161,9 @@ print(sys.version)
 
 ## <a name="next-steps"></a>다음 단계
 
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 + [Python 도구를 사용하여 패키지 설치](install-python-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 + [sqlmlutils를 사용하여 새 Python 패키지 설치](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end
