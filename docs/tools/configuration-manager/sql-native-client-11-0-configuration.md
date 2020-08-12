@@ -1,5 +1,6 @@
 ---
 title: SQL Native Client 11.0 구성
+description: Microsoft SQL Server 구성 관리자의 SQL Server Native Client 구성 대화 상자에서 구성되는 설정에 대해 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e205d03c430670a9b51a0ed852629d608d8e78af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08b2107b77acecebeb990e6a071963af964f61ca
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306725"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885969"
 ---
 # <a name="sql-native-client-110-configuration"></a>SQL Native Client 11.0 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   이 섹션에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 **SQL Server Native Client 구성** 대화 상자에 대한 F1 도움말 항목을 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 클라이언트 컴퓨터가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]부터 시작하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하는 데 사용하는 네트워크 라이브러리입니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 구성에서 구성한 설정은 클라이언트 프로그램이 실행되는 컴퓨터에서 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 실행되는 컴퓨터에서 구성한 경우 서버에서 실행되는 클라이언트 프로그램에만 영향을 줍니다.  

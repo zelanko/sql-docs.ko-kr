@@ -1,5 +1,6 @@
 ---
 title: Data Quality 서버 개체 제거 | Microsoft 문서
+description: SQL Server 인스턴스에서 Data Quality 서버를 제거하는 경우 DQS 데이터베이스를 비롯한 일부 Data Quality 서버 개체를 수동으로 삭제해야 합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,17 +8,17 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 531e7f600c1523a565890d1ba1ab781d3b8a9deb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4f19dc1e34ea35509a8894400ca298909e3b1f96
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68019818"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883736"
 ---
 # <a name="remove-data-quality-server-objects"></a>Data Quality 서버 개체 제거
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 인스턴스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 제거하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 있는 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 의 인스턴스를 완전히 제거해도 DQS 데이터베이스 등의 일부 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 개체는 삭제되지 않습니다. 이로 인해 사용자가 SQL Server 설치 프로그램을 사용하여 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 를 제거할 때 DQS 데이터가 삭제되지 않습니다. 제거 프로세스가 완료된 후 이러한 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 개체를 수동으로 삭제해야 합니다.  
   

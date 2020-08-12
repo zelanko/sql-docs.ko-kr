@@ -1,5 +1,6 @@
 ---
 title: 데이터 차이 보기
+description: 두 데이터베이스를 비교한 다음 데이터베이스 개체가 어떻게 다른지 확인하는 방법을 알아봅니다. 개체 내의 레코드를 보는 방법과 보기를 필터링하는 방법을 확인합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,20 +9,19 @@ f1_keywords:
 ms.assetid: f88d3350-2eaf-44cc-96a8-84008b6cd071
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 5c9e80f6289ff3313a3eeb7cec0601fb2c651aa2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 750909ea5344d5972ffdc8a2db418d8c482231f5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75226748"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895759"
 ---
 # <a name="how-to-view-data-differences"></a>방법: 데이터 차이 보기
 
-두 데이터베이스의 데이터를 비교한 후에는 사용자가 비교한 각 ‘데이터베이스 개체’ 및 해당 상태가 표시됩니다.  또한 상태별로 그룹화된 각 개체 내에서 레코드에 대한 결과를 볼 수도 있습니다.  
+두 데이터베이스의 데이터를 비교한 후에는 사용자가 비교한 각 ‘데이터베이스 개체’ 및 해당 상태가 표시됩니다. 또한 상태별로 그룹화된 각 개체 내에서 레코드에 대한 결과를 볼 수도 있습니다.  
   
 차이를 확인한 후에는 서로 다르거나, 누락되었거나, 새로 추가된 개체 또는 레코드의 일부 또는 전체가 *원본*과 일치하도록 *대상*을 업데이트할 수 있습니다.  
   

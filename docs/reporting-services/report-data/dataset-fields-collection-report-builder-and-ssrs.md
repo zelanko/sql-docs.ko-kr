@@ -1,5 +1,6 @@
 ---
 title: 데이터 세트 필드 컬렉션(보고서 작성기) | Microsoft Docs
+description: 데이터 세트 필드 컬렉션에 대해 알아봅니다. 데이터 세트 필드는 데이터 연결의 데이터를 나타냅니다. 필드는 숫자 데이터나 숫자가 아닌 데이터를 나타낼 수 있습니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b33041f7debc2ad75268973867c72e073459f1de
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7d19ea6df08431db42e700cabccd7a05167dd89c
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077785"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808583"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>데이터 세트 필드 컬렉션(보고서 작성기 및 SSRS)
   데이터 세트 필드는 데이터 연결의 데이터를 나타냅니다. 필드는 숫자 데이터나 숫자가 아닌 데이터를 나타낼 수 있습니다. 예로는 판매액, 총 판매액, 고객 이름, 데이터베이스 식별자, URL, 이미지, 공간 데이터, 전자 메일 주소 등이 있습니다. 디자인 화면에서 필드는 입력란, 테이블 및 차트와 같은 보고서 항목에서 식으로 나타납니다.  

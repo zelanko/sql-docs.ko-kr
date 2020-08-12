@@ -1,5 +1,6 @@
 ---
 title: 보고서 데이터 창
+description: 보고서 데이터 창을 사용하여 보고서의 현재 정의된 매개 변수, 데이터 원본, 데이터 세트, 필드 컬렉션 및 이미지를 보는 방법을 알아봅니다.
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 24c11796a758d4cbf3b1da35af16565e0e607535
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c7afab0edc7afd86b16103e5364d17a93579d096
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190748"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812618"
 ---
 # <a name="report-data-pane-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)의 보고서 데이터 창
 

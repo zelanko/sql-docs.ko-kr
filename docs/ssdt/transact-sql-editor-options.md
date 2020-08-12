@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL 편집기 옵션
+description: Transact-SQL 편집기 옵션에 대해 알아봅니다. 쿼리 실행 속성 및 쿼리 결과 속성에 대해 알아보고 값을 조정하는 방법을 확인합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -23,16 +24,15 @@ f1_keywords:
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 0b91be419419d7dab1904068b1600def88106023
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0edf0ee20ce44abadb7783baa6e99cba88ddff7b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256317"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883422"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL 편집기 옵션
 
@@ -44,7 +44,7 @@ ms.locfileid: "75256317"
   
 ## <a name="query-execution"></a><a name="QueryExecution"></a>쿼리 실행  
   
-|속성|Description|  
+|속성|설명|  
 |------------|---------------|  
 |**SET ROWCOUNT**|기본값 0은 모든 결과를 받을 때까지 SQL Server에서 결과를 기다린다는 것을 나타냅니다. SQL Server에서 지정한 행 수를 받은 후 쿼리를 중단하려면 0보다 큰 값을 지정합니다. 모든 행이 반환될 수 있도록 이 옵션을 해제하려면 SET ROWCOUNT 0을 지정합니다.|  
 |**SET TEXTSIZE**|기본값 2,147,483,647바이트는 SQL Server에서 text, ntext, nvarchar(max) 및 varchar(max) 데이터 필드의 제한까지 전체 데이터 필드를 제공한다는 것을 나타냅니다. XML 데이터 형식에는 영향을 주지 않습니다. 값이 클 경우 결과를 제한하려면 보다 작은 수를 지정합니다. 지정한 수보다 많은 열은 잘립니다.|  
@@ -72,7 +72,7 @@ ms.locfileid: "75256317"
   
 ## <a name="query-results"></a><a name="QueryResults"></a>쿼리 결과  
   
-|속성|Description|  
+|속성|설명|  
 |------------|---------------|  
 |**결과 집합에 쿼리 포함**|결과 집합의 일부로 쿼리 텍스트를 반환합니다.|  
 |**결과를 복사하거나 저장할 때 열 머리글 포함**|결과를 클립보드에 복사하거나 파일에 저장할 때 열 머리글(제목)을 포함합니다. 저장하거나 복사한 결과 데이터에 열 머리글 없이 데이터만 포함하려면 이 확인란의 선택을 취소합니다.|  

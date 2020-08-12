@@ -1,5 +1,6 @@
 ---
 title: 데이터 연결 추가 및 확인(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기를 사용하여 데이터 연결을 추가하고 확인하여 지정된 자격 증명이 충분한지 확인하는 방법을 알아봅니다.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/01/2017
-ms.openlocfilehash: 26ea58eaaaffbbd0c53d78ca971f472413be322b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e128bf4402074ecce5b65951f0d2463368c08bf6
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082262"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812148"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>데이터 연결 추가 및 확인(보고서 작성기 및 SSRS)
 
@@ -54,7 +55,7 @@ ms.locfileid: "77082262"
 
 3. 연결이 성공적이면 “연결되었습니다.”라는 메시지가 나타납니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-4. 연결이 성공적이지 않으면 "데이터 원본에 연결할 수 없습니다."라는 메시지가 나타납니다.  
+4. 연결이 성공적이지 않으면 “데이터 원본에 연결할 수 없습니다.”라는 메시지가 나타납니다.  
 
 5. **자세히**를 클릭하고 표시되는 정보를 사용하여 문제를 해결합니다.
 

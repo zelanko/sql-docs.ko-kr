@@ -1,5 +1,6 @@
 ---
 title: SQL Server의 로컬 언어 버전 | Microsoft 문서
+description: 지원되는 운영 체제의 영어 버전은 Windows Multilingual User Interface Pack 설정을 사용하여 SQL Server의 지역화된 버전을 지원합니다.
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -7,17 +8,17 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 20b99363-0490-4aa3-9a3d-262f827d81e8
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 4ab490b9c392f10abf4314dd70d760695d13a70f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cfeaf90e3765b108c66cd86fc184b9fcdef8a029
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68126157"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894324"
 ---
 # <a name="local-language-versions-in-sql-server"></a>SQL Server의 로컬 언어 버전
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 Windows 운영 체제에서 지원하는 모든 언어를 지원합니다.  
   

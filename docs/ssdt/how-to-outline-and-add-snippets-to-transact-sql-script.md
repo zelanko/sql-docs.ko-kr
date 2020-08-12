@@ -1,21 +1,21 @@
 ---
 title: 코드 조각 개요 표시 및 Transact-SQL 스크립트에 코드 조각 추가
+description: SSDT에서 제공하는 코드 조각에 대해 알아봅니다. 애플리케이션에 코드 조각을 삽입하는 방법과 Transact-SQL 편집기에서 코드를 숨기고 확장하는 방법을 확인합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ac322bd8bd53297c4322607819a2ed2ab042a4e1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 655dc1271fa928558974bf6ebc36b8d551207ea2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241357"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880427"
 ---
 # <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>방법: 코드 조각 개요 표시 및 Transact-SQL 스크립트에 코드 조각 추가
 

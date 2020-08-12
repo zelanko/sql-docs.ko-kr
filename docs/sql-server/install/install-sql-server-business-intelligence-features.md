@@ -1,5 +1,6 @@
 ---
 title: Business Intelligence 기능 설치
+description: 이 문서에서는 Microsoft 비즈니스 인텔리전스 플랫폼의 일부인 SQL Server 기능을 설치하기 위한 정보에 대한 링크를 제공합니다.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f1fe29347adabe175745d6994000d7f1f68b05dd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 805247f2fdf491bf75295c232e15d4b066ac179c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253449"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893951"
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>SQL Server Business Intelligence 기능 설치
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Microsoft Business Intelligence 플랫폼에 속하는 SQL Server 기능에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]및 분석 데이터를 만들거나 사용하는 데 사용되는 일부 클라이언트 애플리케이션이 포함됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 설명서 중 이 섹션에서는 이러한 기능을 설치하는 방법에 대해 설명합니다.  
   

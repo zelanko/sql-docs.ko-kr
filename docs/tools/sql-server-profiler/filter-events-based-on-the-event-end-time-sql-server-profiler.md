@@ -1,6 +1,7 @@
 ---
 title: 이벤트 종료 시간을 기준으로 이벤트 필터링
 titleSuffix: SQL Server Profiler
+description: 추적하는 동안 종료 시간을 기준으로 이벤트를 필터링합니다. SQL Server Profiler에서 이벤트 종료 시간에 대한 필터를 설정하는 방법을 알아봅니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 8372ce58317eead122675f3585be01f5da7eb829
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e82f5820f418e65e8638ee27898a130ae6e564d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307263"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774810"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>이벤트 종료 시간 기반의 이벤트 필터링(SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 이벤트 종료 시간을 기반으로 추적 이벤트를 필터링하는 방법을 설명합니다.  
   
 ### <a name="to-filter-events-based-on-the-event-end-time"></a>이벤트 종료 시간을 기반으로 이벤트를 필터링하려면  

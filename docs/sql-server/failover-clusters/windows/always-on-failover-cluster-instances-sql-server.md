@@ -1,6 +1,6 @@
 ---
 title: Always On 장애 조치(failover) 클러스터 인스턴스
-description: SQL Server에 대한 Always On 장애 조치(failover) 클러스터 인스턴스에 대한 설명입니다.
+description: Always On 장애 조치(failover) 클러스터 인스턴스가 SQL Server에서 서버 인스턴스 수준의 중복성을 통해 로컬 고가용성을 제공하는 방식을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 01/18/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6d9f3675a2bbd2af5d33452c0dccbb46d0596d85
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 727bc6c3725315a012cff268b180ecc28a5a3631
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230194"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882972"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On 제공을 위해 Always On 장애 조치(failover) 클러스터 인스턴스는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 기능을 사용하여 FCI( *장애 조치(failover) 클러스터 인스턴스*)라고 부르는 서버 인스턴스 수준의 중복성을 통해 로컬 고가용성을 제공합니다. FCI는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 노드 및 다중 서브넷 간에 설치되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 단일 인스턴스입니다. 네트워크에서 FCI는 단일 컴퓨터에서 실행되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스처럼 보이지만 현재 노드를 사용할 수 없을 경우 FCI가 하나의 WSFC 노드에서 다른 노드로 장애 조치(failover) 기능을 제공합니다.  
   

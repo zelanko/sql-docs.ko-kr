@@ -1,21 +1,21 @@
 ---
 title: 저장 프로시저 결과를 확인하기 위한 사용자 지정 테스트 조건
+description: 저장 프로시저가 올바른 개수의 열을 반환하는지 여부를 확인하는 사용자 지정 테스트 조건을 설정하는 단계를 안내합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 60160fe3f36d61364b8bf4385fa53b744f9a3475
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 296e9220c4c8b0518bba5a7587cf3a69fcecae06
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286597"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882889"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>연습: 사용자 지정 테스트 조건을 사용하여 저장 프로시저 결과 확인
 
@@ -54,7 +54,7 @@ ms.locfileid: "79286597"
   
 2.  **서명** 탭에서 **어셈블리 서명** 확인란을 선택합니다.  
   
-3.  **강력한 이름 키 파일 선택** 상자에서 **\<새로 만들기...>** 를 클릭합니다.  
+3.  **강력한 이름 키 파일 선택** 상자에서 **\<New...>** 를 클릭합니다.  
   
     **강력한 이름 키 만들기** 대화 상자가 나타납니다.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "79286597"
     public class ResultSetColumnCountCondition : TestCondition  
     ```  
   
-5.  [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx)를 추가합니다. UnitTesting.Conditions.ExportTestConditionAttribute에 대한 자세한 내용은 [방법: SQL Server 단위 테스트 디자이너용 테스트 조건 만들기](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)를 참조하세요.  
+5.  [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx)를 추가합니다. [방법: SQL Server 단위 테스트 디자이너용 테스트 조건 만들기](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)를 참조하세요.  
   
     ```  
     [ExportTestCondition("ResultSet Column Count", typeof(ResultSetColumnCountCondition))]  

@@ -1,6 +1,7 @@
 ---
 title: 추적 템플릿 내보내기
 titleSuffix: SQL Server Profiler
+description: 다른 인스턴스의 SQL Server Profiler에서 템플릿을 사용할 수 있도록 SQL Server Profiler를 사용하여 추적 템플릿을 템플릿 파일로 내보내는 방법을 알아봅니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 82e3bab1f7042029462e3d50b3c7e550fe9eba86
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8348b393da3dde8b8f941a882cf227b9bd99953b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307278"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774834"
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>추적 템플릿 내보내기(SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 기존 추적 템플릿을 내보내어 템플릿 파일(.tdf)로 저장하는 방법에 대해 설명합니다. 추적 템플릿을 내보내서 파일로 저장할 때는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]의 다른 인스턴스로 템플릿을 사용할 수 있습니다.  
   

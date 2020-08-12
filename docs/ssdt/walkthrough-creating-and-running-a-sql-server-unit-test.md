@@ -1,21 +1,21 @@
 ---
 title: SQL Server 단위 테스트 만들기 및 실행
+description: SQL Server 단위 테스트를 만드는 방법을 알아봅니다. 저장 프로시저에서 오류를 검색하는 테스트를 설정하는 단계를 안내합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: cb284457b86d6dd1e2284d6815a1b175640fa0c2
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: edc5f591746673f55dfc7ea10c99822ee0c13098
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087510"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882925"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>연습: SQL Server 단위 테스트 만들기 및 실행
 
@@ -39,7 +39,7 @@ ms.locfileid: "82087510"
   
 단위 테스트 중 하나에서 저장 프로시저의 오류가 검색된 후 오류를 수정하고 테스트를 다시 실행합니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 이 연습을 완료하려면 데이터베이스를 만들고 배포할 수 있는 권한이 있는 데이터베이스 서버(또는 LocalDB 데이터베이스)에 연결할 수 있어야 합니다. 자세한 내용은 [Visual Studio의 데이터베이스 기능에 필요한 권한](https://msdn.microsoft.com/library/aa833413(VS.100).aspx)을 참조하세요.  
   
 ## <a name="create-a-script-that-contains-a-database-schema"></a><a name="CreateScript"></a>데이터베이스 스키마가 포함된 스크립트 만들기  
@@ -181,7 +181,7 @@ ms.locfileid: "82087510"
     AS  
     BEGIN  
     INSERT INTO [Sales].[Customer] (CustomerName) VALUES (@CustomerName);  
-    SELECT SCOPE_IDENTITY()  
+    RETURN SCOPE_IDENTITY()  
     END  
     GO  
     PRINT N'Creating Sales.uspPlaceNewOrder...';  
@@ -274,7 +274,7 @@ ms.locfileid: "82087510"
   
 2.  저장 프로시저 중 하나를 마우스 오른쪽 단추로 클릭하고 **단위 테스트 만들기**를 클릭하여 **단위 테스트 만들기** 대화 상자를 표시합니다.  
   
-3.  다섯 개의 저장된 프로시저 모두에 대한 확인란을 선택합니다. **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder** 및 **Sales.uspShowOrderDetails**.  
+3.  다섯 개의 저장된 프로시저 전체에 대한 확인란을 선택합니다. **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder**및 **Sales.uspShowOrderDetails**.  
   
 4.  **프로젝트** 드롭다운 목록에서 **새 Visual C# 테스트 프로젝트 만들기**를 선택합니다.  
   

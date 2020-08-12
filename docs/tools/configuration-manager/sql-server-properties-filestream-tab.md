@@ -1,5 +1,6 @@
 ---
 title: SQL Server 속성(FILESTREAM 탭)
+description: SQL Server 속성 대화 상자의 FILESTREAM 탭을 사용하여 SQL Server 2019의 설치에 FILESTREAM을 사용하도록 설정하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,18 +12,18 @@ ms.assetid: 07ca5ac6-a68a-4e85-bc6f-fa7ccf9f1c10
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b6606424a2e3f8e2d0191b012a81b7af430657a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f3af7955cb439a32789436faa8883425f7a17570
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306779"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893320"
 ---
 # <a name="sql-server-properties-filestream-tab"></a>SQL Server 속성(FILESTREAM 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   이 페이지를 사용하여 이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치에 대해 FILESTREAM을 사용하도록 설정할 수 있습니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **Transact-SQL 액세스에 FILESTREAM 사용**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스에 FILESTREAM을 사용하도록 설정하려면 선택합니다. 다른 컨트롤 옵션을 사용하려면 먼저 이 컨트롤을 선택해야 합니다.  
   

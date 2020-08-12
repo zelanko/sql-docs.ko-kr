@@ -5,20 +5,20 @@ description: SQL Server 빅 데이터 클러스터를 배포하기 위한 단계
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0f6600b6578abe0a9b72dff8fee2d815b0771c0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4caaacd2d71d00d874a793129eef2f4144f03190
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82178134"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784300"
 ---
 # <a name="get-started-with-big-data-clusters-2019-deployment"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포 시작
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 배포하는 방법을 설명합니다. 이 문서에서는 배포 시나리오를 이해하는 데 도움이 되는 개념과 프레임워크를 안내합니다. 특정 배포 단계는 클라이언트 및 서버에 대해 선택한 플랫폼에 따라 다릅니다. [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 대한 소개는 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)를 참조하세요.
 
@@ -41,16 +41,7 @@ ms.locfileid: "82178134"
 
 ## <a name="client-tools"></a><a id="tools"></a> 클라이언트 도구
 
-빅 데이터 클러스터를 사용하려면 특정 클라이언트 도구 세트가 필요합니다. Kubernetes에 빅 데이터 클러스터를 배포하기 전에 다음 도구를 설치해야 합니다.
-
-| 도구 | Description |
-|---|---|
-| **azdata** | 빅 데이터 클러스터를 배포하고 관리합니다. |
-| **kubectl** | 기본 Kubernetes 클러스터를 만들고 관리합니다. |
-| **Azure Data Studio** | 빅 데이터 클러스터를 사용하기 위한 그래픽 인터페이스입니다. |
-| **SQL Server 2019 확장** | 빅 데이터 클러스터 기능을 사용할 수 있게 해주는 Azure Data Studio 확장입니다. |
-
-시나리오에 따라 다른 도구도 필요합니다. 각 문서에서 특정 작업을 수행하는 데 필요한 도구를 설명해야 합니다. 전체 도구 목록과 설치 링크는 [SQL Server 2019 빅 데이터 도구 설치](deploy-big-data-tools.md)를 참조하세요.
+빅 데이터 클러스터를 사용하려면 특정 클라이언트 도구 세트가 필요합니다. Kubernetes에 빅 데이터 클러스터를 배포하기 전에 배포에 필요한 도구를 설치해야 합니다. 시나리오에 따라 특정 도구가 필요합니다. 각 문서에서 특정 작업을 수행하는 데 필요한 도구를 설명해야 합니다. 전체 도구 목록과 설치 링크는 [SQL Server 2019 빅 데이터 도구 설치](deploy-big-data-tools.md)를 참조하세요.
 
 ## <a name="kubernetes"></a>Kubernetes
 
@@ -58,7 +49,11 @@ ms.locfileid: "82178134"
 
 - **AKS(Azure Kubernetes Service)** : AKS를 사용하여 관리되는 Kubernetes 클러스터를 Azure에 배포할 수 있습니다. 에이전트 노드만 관리하고 유지하면 됩니다. AKS를 사용하면 클러스터에 사용할 고유한 하드웨어를 프로비저닝할 필요가 없습니다. 또한 간편하게 [python 스크립트](quickstart-big-data-cluster-deploy.md) 또는 [배포 Notebook](notebooks-deploy.md)을 사용하여 한 단계로 AKS 클러스터를 만들고 빅 데이터 클러스터를 배포할 수 있습니다. 빅 데이터 클러스터 배포를 위한 AKS를 구성하는 방법에 대한 자세한 내용은 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]배포를 위한 Azure Kubernetes Service 구성](deploy-on-aks.md)을 참조하세요.
 
+- **ARO(Azure Red Hat OpenShift)** : ARO를 사용하면 Azure에 관리형 Red Hat OpenShift 클러스터를 배포할 수 있습니다. 에이전트 노드만 관리하고 유지하면 됩니다. ARO를 사용하면 클러스터에 사용할 고유한 하드웨어를 프로비저닝할 필요가 없습니다. 또한 간편하게 [python 스크립트](quickstart-big-data-cluster-deploy-aro.md)를 사용하여 한 단계로 ARO 클러스터를 만들고 빅 데이터 클러스터를 배포할 수 있습니다. 이 배포 모델은 SQL Server 2019 CU5에 도입되었습니다. 
+
 - **여러 머신**: 물리적 서버 또는 가상 머신일 수 있는 여러 Linux 머신에 Kubernetes를 배포할 수도 있습니다. [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) 도구를 사용하여 Kubernetes 클러스터를 만들 수 있습니다. [bash 스크립트](deployment-script-single-node-kubeadm.md)를 사용하여 이러한 유형의 배포를 자동화할 수 있습니다. 이 방법은 빅 데이터 클러스터에 사용하려는 기존 인프라가 이미 있는 경우에 적합합니다. 빅 데이터 클러스터에서 **kubeadm** 배포를 사용하는 방법에 대한 자세한 내용은 [여러 머신에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 배포를 위한 Kubernetes 구성](deploy-with-kubeadm.md)을 참조하세요.
+
+- **Red Hat OpenShift**: 고유의 Red Hat OpenShift 클러스터에 배포합니다. 자세한 내용은 OpenShift 온-프레미스 및 Azure Red Hat OpenShift에 SQL Server 빅 데이터 클러스터 [ 배포[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-openshift.md)를 참조하세요. 이 배포 모델은 SQL Server 2019 CU5에 도입되었습니다.
 
 ## <a name="deploy-a-big-data-cluster"></a>빅 데이터 클러스터 배포
 

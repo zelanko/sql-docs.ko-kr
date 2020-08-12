@@ -1,5 +1,6 @@
 ---
 title: 명명된 파이프 속성
+description: 명명된 파이프 속성 대화 상자의 프로토콜 페이지를 사용하여 명명된 파이프 프로토콜을 사용할 때 SQL Server에서 수신하는 명명된 파이프를 확인 또는 변경할 수 있습니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 923f84ccc98837892d144a07ce71238c877ca5b6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c4fae15dcdd786b93caf189afb478e435d3fc986
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306440"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894853"
 ---
 # <a name="named-pipes-properties"></a>명명된 파이프 속성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   명명된 파이프 프로토콜을 사용하는 경우 **명명된 파이프 속성** 대화 상자의 **프로토콜** 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 수신 대기하는 명명된 파이프를 보거나 변경할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 다시 시작해야 합니다.  

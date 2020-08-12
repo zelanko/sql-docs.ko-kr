@@ -1,5 +1,6 @@
 ---
 title: 클라이언트 프로토콜 - TCP/IP 속성(프로토콜 탭)
+description: Microsoft SQL Server 구성 관리자에서 연결 유지 매개 변수, 기본 포트 번호와 같은 TCP/IP 옵션을 지정하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ad15bb228002645c929f1ff2d4c049e94f3ae004
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 637ebfc8b031ed5b8b49ac634718c56786a9b813
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306513"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892043"
 ---
 # <a name="client-protocols---tcp-ip-properties-protocol-tab"></a>클라이언트 프로토콜 - TCP/IP 속성(프로토콜 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **TCP/IP 속성** 대화 상자의 **프로토콜** 탭을 사용하여 다음 옵션을 확인 또는 지정할 수 있습니다. 다른 포트에 연결하려면 **기본 포트** 입력란에 포트 번호를 입력하십시오. 연결 문자열에 대한 자세한 내용은 [TCP/IP를 사용하여 유효한 연결 문자열 만들기](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)를 참조하세요.  
   
 ## <a name="options"></a>옵션  

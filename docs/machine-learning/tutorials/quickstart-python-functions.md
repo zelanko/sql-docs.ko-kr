@@ -1,26 +1,25 @@
 ---
 title: '빠른 시작: Python 함수'
-description: 이 빠른 시작에서는 SQL Server Machine Learning Services와 함께 Python 수학 및 유틸리티 함수를 사용하는 방법에 대해 알아보겠습니다.
+titleSuffix: SQL machine learning
+description: 이 빠른 시작에서는 SQL 기계 학습에서 Python 수학 및 유틸리티 함수를 사용하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/28/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
-ms.reviewer: garye
+ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6afe1685956c43e30ace59f3e5cc794a2abbd88f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 5aef8010c48e08931998f1bd7e49c3797ef4e81a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606708"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784089"
 ---
-# <a name="quickstart-python-functions-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services를 사용한 Python 함수
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="quickstart-python-functions-with-sql-machine-learning"></a>빠른 시작: SQL 기계 학습에서 Python 함수 사용
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 이 빠른 시작에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 또는 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)에서 Python 수학 및 유틸리티 함수를 사용하는 방법을 알아봅니다. 통계 함수는 T-SQL에서 구현하기에 복잡한 경우가 많으며 다만 몇 줄의 코드만으로 Python에서 수행할 수 있습니다.
@@ -28,18 +27,29 @@ ms.locfileid: "83606708"
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 이 빠른 시작에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에서 Python 수학 및 유틸리티 함수를 사용하는 방법을 알아봅니다. 통계 함수는 T-SQL에서 구현하기에 복잡한 경우가 많으며 다만 몇 줄의 코드만으로 Python에서 수행할 수 있습니다.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+이 빠른 시작에서는 [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)에서 Python 수학 및 유틸리티 함수를 사용하는 방법을 알아봅니다. 통계 함수는 T-SQL에서 구현하기에 복잡한 경우가 많으며 다만 몇 줄의 코드만으로 Python에서 수행할 수 있습니다.
+::: moniker-end
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 이 빠른 시작을 수행하려면 Python 언어가 설치된 [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)가 포함된 SQL Server 인스턴스에 대한 액세스 권한이 필요합니다.
+이 빠른 시작을 실행하려면 다음과 같은 필수 구성 요소가 필요합니다.
 
-  SQL Server 인스턴스는 Azure 가상 머신 또는 온-프레미스에 있을 수 있습니다. 외부 스크립팅 기능은 기본적으로 사용하지 않도록 설정되어 있으므로 시작하기 전에 [외부 스크립팅을 활성화](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)하고 **SQL Server 실행 패드 서비스**가 실행 중인지 확인해야 합니다.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Machine Learning Services를 설치하는 방법은 [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md) 또는 [Linux 설치 가이드](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)를 참조하세요. [SQL Server 빅 데이터 클러스터에서 Machine Learning Services를 사용하도록 설정](../../big-data-cluster/machine-learning-services.md)할 수도 있습니다.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Machine Learning Services를 설치하는 방법은 [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md)를 참조하세요. 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL Managed Instance Machine Learning Services. 등록 방법은 [Azure SQL Managed Instance Machine Learning Services 개요](/azure/azure-sql/managed-instance/machine-learning-services-overview)를 참조하세요.
+::: moniker-end
 
-- 또한 Python 스크립트가 포함된 SQL 쿼리를 실행하기 위한 도구가 필요합니다. SQL Server 인스턴스에 연결할 수 있는 데이터베이스 관리 또는 쿼리 도구를 사용하여 이러한 스크립트를 실행하고 T-SQL 쿼리 또는 저장 프로시저를 실행할 수 있습니다. 이 빠른 시작에서는 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)를 사용합니다.
+- Python 스크립트가 포함된 SQL 쿼리를 실행하기 위한 도구. 이 빠른 시작에서는 [Azure Data Studio](../../azure-data-studio/what-is.md)를 사용합니다.
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>난수를 생성하는 저장 프로시저 만들기
 
-편의상 Python `numpy` 패키지를 사용합니다. 이 패키지는 Python이 설치된 SQL Server Machine Learning Services에 기본적으로 설치되고 로드됩니다. 패키지에는 일반 통계 태스크에 대한 수백 개의 함수가 포함되고, 이들 중 `random.normal` 함수는 표준 편차 및 평균을 고려하고 정규 분포를 사용하여 지정된 개수의 난수를 생성합니다.
+간단히 하기 위해 기본적으로 설치 및 로드되는 Python `numpy` 패키지를 사용하겠습니다. 패키지에는 일반 통계 태스크에 대한 수백 개의 함수가 포함되고, 이들 중 `random.normal` 함수는 표준 편차 및 평균을 고려하고 정규 분포를 사용하여 지정된 개수의 난수를 생성합니다.
 
 예를 들어 다음 Python 코드는 표준 편차 3을 고려하여 평균 50에 대한 100개의 숫자를 반환합니다.
 
@@ -60,9 +70,7 @@ OutputDataSet = pandas.DataFrame(numpy.random.normal(size=100, loc=50, scale=3))
 WITH RESULT SETS(([Density] FLOAT NOT NULL));
 ```
 
-다른 난수 집합을 더 쉽게 생성할 수 있다면 어떻게 될까요?
-
-SQL Server와 결합하면 쉽습니다. 사용자로부터 인수를 가져오는 저장 프로시저를 정의한 다음, 해당 인수를 Python 스크립트에 변수로 전달합니다.
+다른 난수 집합을 더 쉽게 생성할 수 있다면 어떻게 될까요? 사용자로부터 인수를 가져오는 저장 프로시저를 정의한 다음, 해당 인수를 Python 스크립트에 변수로 전달합니다.
 
 ```sql
 CREATE PROCEDURE MyPyNorm (
@@ -119,11 +127,7 @@ elapsed_time = time.time() - start_time
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server에서 Python을 사용하여 기계 학습 모델을 만들려면 다음 빠른 시작을 수행합니다.
+SQL 기계 학습에서 Python을 사용하여 기계 학습 모델을 만들려면 다음 빠른 시작을 수행합니다.
 
 > [!div class="nextstepaction"]
-> [빠른 시작: SQL Server Machine Learning Services를 사용하여 Python에서 예측 모델 만들기 및 점수 매기기](quickstart-python-train-score-model.md)
-
-SQL Server Machine Learning Services에 대한 자세한 내용은 다음을 참조하세요.
-
-- [SQL Server Machine Learning Services(Python 및 R)란?](../sql-server-machine-learning-services.md)
+> [빠른 시작: Python에서 예측 모델 만들기 및 점수 매기기](quickstart-python-train-score-model.md)

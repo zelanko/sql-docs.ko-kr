@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER에 대한 프로토콜 속성(인증서 탭)
+description: MSSQLSERVER에 대한 프로토콜 속성 대화 상자의 인증서 탭을 사용하여 SQL Server에 대한 인증서를 선택하거나 인증서 속성을 봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 776addd6-25f3-4875-9a71-064035787090
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b19b12a55f1afee35ed351ab6033179c17be89a8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 71740e97a0518e34ffa410a62efe14f96cfaccfc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306377"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881902"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>MSSQLSERVER에 대한 프로토콜 속성(인증서 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   **MSSQLSERVER에 대한 프로토콜 속성** 대화 상자의 **인증서** 탭을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용할 인증서를 선택하거나 인증서 속성을 확인할 수 있습니다. 인증서를 선택하기 전에는 모든 필드가 비어 있습니다.  
   
  인증서는 사용자 컴퓨터에 로컬로 저장됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용할 인증서를 로드하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스와 동일한 사용자 계정으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 실행해야 합니다.  

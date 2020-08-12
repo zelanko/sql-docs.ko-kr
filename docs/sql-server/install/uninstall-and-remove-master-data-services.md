@@ -1,5 +1,6 @@
 ---
 title: Master Data Services 제거 | Microsoft 문서
+description: 이 제거 프로세스는 로컬 컴퓨터에서 MDS(Master Data Services) 폴더 및 파일을 제거하고 Master Data Services 구성 관리자를 제거합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,23 +8,23 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: a0ed3134e26bc2ed0f581a722de50526a49fb9e3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ec6345d4470c95669b13a08bde103057409bde67
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68126042"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883722"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>Master Data Services 제거
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 기능을 제거하려면 [SQL Server의 기존 인스턴스 제거&#40;설치 프로그램&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)의 단계를 따르고 **기능 선택** 페이지에서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]를 제거할 기능으로 지정합니다. 제거 프로세스는 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 폴더와 파일을 제거하고 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 를 로컬 컴퓨터에서 제거합니다.  
   
  데이터 손실을 방지하고 시스템의 다른 컴퓨터에 영향을 주지 않기 위해 일부 항목은 제거 프로세스에서 제거 또는 변경되지 않습니다. 다음 표를 검토하여 항목을 남겨둘지, 아니면 제거할지 여부를 결정합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |----------|-----------------|  
 |폴더 및 파일|제거 프로세스는 대부분의 폴더와 파일을 제거 경로에서 제거합니다.<br /><br /> 제거 프로세스는 설치 위치에서 Master Data Services 및 MDSTempDir 폴더를 제거하지 않습니다. 제거 프로세스가 완료된 후 이러한 폴더를 파일 시스템에서 수동으로 삭제할 수 있습니다. 자세한 내용은 [폴더 및 파일 사용 권한&#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)을 참조하세요.|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 어셈블리|제거 프로세스는 GAC(전역 어셈블리 캐시)에서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 어셈블리를 제거합니다.|  

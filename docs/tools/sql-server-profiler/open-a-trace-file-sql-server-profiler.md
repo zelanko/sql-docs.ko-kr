@@ -1,5 +1,6 @@
 ---
 title: 추적 파일 열기(SQL Server Profiler)
+description: 추적하는 동안 캡처된 이벤트 데이터가 들어 있는 파일을 여는 방법을 알아봅니다. SQL Server Profiler에서 추적 파일을 엽니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,16 +11,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 7350e2f03d20754e57c726ec5db4c6b91a2528d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 166bb88c60717d0b01ba658d720e00898aade380
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307172"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774793"
 ---
 # <a name="open-a-trace-file-sql-server-profiler"></a>추적 파일 열기(SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적 파일을 여는 방법에 대해 설명합니다.  
   

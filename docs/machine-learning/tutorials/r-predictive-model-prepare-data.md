@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1ae2931ca07cdcd6e3f1216ce7adb2551a6e23ae
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: e0c679ce4a146065223123e41cb2935e7d33ad71
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607036"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784076"
 ---
 # <a name="tutorial-prepare-data-to-train-a-predictive-model-in-r-with-sql-machine-learning"></a>자습서: R에서 SQL 기계 학습을 사용하여 예측 모델을 학습시키기 위한 데이터 준비
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 4부로 구성된 이 자습서 시리즈의 2부에서는 R을 사용하여 데이터베이스의 데이터를 준비합니다. 이 시리즈의 뒷부분에서는 R에서 SQL Server Machine Learning Services 또는 빅 데이터 클러스터를 사용하여 이 데이터로 예측 모델을 학습시키고 배포합니다.
@@ -31,12 +30,15 @@ ms.locfileid: "83607036"
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 4부로 구성된 이 자습서 시리즈의 2부에서는 R을 사용하여 데이터베이스의 데이터를 준비합니다. 이 시리즈의 뒷부분에서는 R에서 SQL Server R Services를 사용하여 이 데이터로 예측 모델을 학습시키고 배포합니다.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+4부로 구성된 이 자습서 시리즈의 2부에서는 R을 사용하여 데이터베이스의 데이터를 준비합니다. 이 시리즈의 뒷부분에서는 R에서 Azure SQL Managed Instance Machine Learning Services를 사용하여 이 데이터로 예측 모델을 학습시키고 배포합니다.
+::: moniker-end
 
 이 문서에서는 다음을 수행하는 방법을 알아봅니다.
 
 > [!div class="checklist"]
 > * 샘플 데이터베이스를 데이터베이스에 복원
-> * SQL 데이터베이스의 데이터를 R 데이터 프레임에 로드
+> * 데이터베이스의 데이터를 R 데이터 프레임에 로드
 > * 일부 열을 범주로 식별하여 R에서 데이터 준비
 
 [1부](r-predictive-model-introduction.md)에서 샘플 데이터베이스를 복원하는 방법을 배웠습니다.
@@ -51,22 +53,19 @@ ms.locfileid: "83607036"
 
 ## <a name="load-the-data-into-a-data-frame"></a>데이터 프레임에 데이터 로드
 
-R에서 데이터를 사용하려면 SQL 데이터베이스의 데이터를 데이터 프레임(`rentaldata`)에 로드합니다.
+R에서 데이터를 사용하려면 데이터베이스의 데이터를 데이터 프레임(`rentaldata`)에 로드합니다.
 
 RStudio에서 새 RScript 파일을 만든 후 다음 스크립트를 실행합니다. **ServerName**을 해당하는 연결 정보로 바꿉니다.
 
 ```r
 #Define the connection string to connect to the TutorialDB database
-connStr <- "Driver=SQL Server;Server=ServerName;Database=TutorialDB;Trusted_Connection=TRUE"
+connStr <- "Driver=SQL Server;Server=ServerName;Database=TutorialDB;uid=Username;pwd=Password"
+
 
 #Get the data from the table
 library(RODBC)
 
 ch <- odbcDriverConnect(connStr)
-
-#Take a look at the structure of the data and the top rows
-head(rentaldata)
-str(rentaldata)
 
 #Import the data from the table
 rentaldata <- sqlFetch(ch, "dbo.rental_data")
@@ -138,7 +137,7 @@ $ Snow       : Factor w/ 2 levels "0","1": 1 1 1 1 1 1 1 1 1 1 ...
 
 이 자습서 시리즈의 2부에서는 다음 작업을 수행하는 방법을 알아보았습니다.
 
-* SQL Server의 샘플 데이터베이스를 R 데이터 프레임에 로드
+* R 데이터 프레임에 샘플 데이터 로드
 * 일부 열을 범주로 식별하여 R에서 데이터 준비
 
 TutorialDB 데이터베이스의 데이터를 사용하는 기계 학습 모델을 만들려면 다음 자습서 시리즈의 3부를 수행합니다.

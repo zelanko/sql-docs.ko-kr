@@ -1,5 +1,6 @@
 ---
 title: SQL Server &lt;server&gt; (SQL Server 구성 관리자)
+description: SQL Server 구성 관리자를 사용하여 SQL Server 데이터베이스 엔진의 속성을 보는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: a701c5d5-f190-4b57-a3f8-954c2572e682
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f0787f865f2960e38cf84d4f33c37b6329319e3f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f64b23e80b509941ea4ada060329a55972821090
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306768"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880322"
 ---
 # <a name="sql-server-ltservergt-sql-server-configuration-manager"></a>SQL Server &lt;server&gt; (SQL Server 구성 관리자)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]를 지원하는 서비스입니다. 이 서비스의 속성을 보려면 세부 정보 창에서 해당 서비스를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
   
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 대한 자세한 내용은 온라인 설명서를 참조하십시오.  

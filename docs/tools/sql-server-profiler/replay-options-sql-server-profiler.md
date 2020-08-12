@@ -1,6 +1,7 @@
 ---
 title: 재생 옵션
 titleSuffix: SQL Server Profiler
+description: SQL Server Profiler에서 캡처된 추적을 재생할 때 사용하는 설정에 대해 알아봅니다. 재생 구성 대화 상자를 사용하여 설정을 조정하는 방법을 알아봅니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 649bf543417c0772c23c6338862e33b6bac9bad1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bbeda6af1316bacd6b0cca561a989f5e9bd966c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307491"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789907"
 ---
 # <a name="replay-options-sql-server-profiler"></a>재생 옵션(SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 캡처된 추적을 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 재생하기 전에 **재생 구성** 대화 상자에서 재생 옵션을 지정할 수 있습니다. 이 대화 상자를 열려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서 추적 파일이나 테이블을 연 다음 **재생** 메뉴에서 **시작**을 클릭합니다. 추적 재생에 필요한 권한에 대한 자세한 내용은 [Permissions Required to Run SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)을 참조하십시오.  
   

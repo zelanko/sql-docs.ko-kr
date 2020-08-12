@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4d168b32b85e4d0bbf42e166e175d9951de4dd31
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 2b57a54c66259fe16c3143e0328476279a1aea01
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607006"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748503"
 ---
 # <a name="tutorial-create-a-predictive-model-in-r-with-sql-machine-learning"></a>자습서: R에서 SQL 기계 학습을 사용하여 예측 모델 만들기
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 4부로 구성된 이 자습서 시리즈의 3부에서는 R에서 예측 모델을 학습시킵니다. 그 다음 파트에서는 Machine Learning Services 또는 빅 데이터 클러스터를 사용하여 SQL Server 데이터베이스에 이 모델을 배포합니다.
@@ -29,7 +28,10 @@ ms.locfileid: "83607006"
 4부로 구성된 이 자습서 시리즈의 3부에서는 R에서 예측 모델을 학습시킵니다. 그 다음 파트에서는 Machine Learning Services를 사용하여 SQL Server 데이터베이스에 이 모델을 배포합니다.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-4부로 구성된 이 자습서 시리즈의 3부에서는 R에서 예측 모델을 학습시킵니다. 그 다음 파트에서는 SQL Server R Services를 사용하여 SQL Server 데이터베이스에 이 모델을 배포합니다.
+4부로 구성된 이 자습서 시리즈의 3부에서는 R에서 예측 모델을 학습시킵니다. 그 다음 부분에서는 SQL Server R Services를 사용하여 데이터베이스에 이 모델을 배포합니다.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+4부로 구성된 이 자습서 시리즈의 3부에서는 R에서 예측 모델을 학습시킵니다. 그 다음 부분에서는 Machine Learning Services를 사용하여 Azure SQL Managed Instance 데이터베이스에 이 모델을 배포합니다.
 ::: moniker-end
 
 이 문서에서는 다음을 수행하는 방법을 알아봅니다.
@@ -41,7 +43,7 @@ ms.locfileid: "83607006"
 
 [1부](r-predictive-model-introduction.md)에서 샘플 데이터베이스를 복원하는 방법을 배웠습니다.
 
-[2부](r-predictive-model-prepare-data.md)에서는 데이터베이스의 데이터를 Python 데이터 프레임에 로드하고, R에서 데이터를 준비하는 방법을 배웠습니다.
+[2부](r-predictive-model-prepare-data.md)에서는 데이터베이스의 데이터를 Python 데이터 프레임에 로드하고 R에서 데이터를 준비하는 방법을 배웠습니다.
 
 [4부](r-predictive-model-deploy.md)에서는 모델을 데이터베이스에 저장한 다음, 2부와 3부에서 개발한 Python 스크립트에서 저장 프로시저를 만드는 방법을 알아봅니다. 저장 프로시저는 서버에서 실행되어 새 데이터를 기반으로 미래를 예측합니다.
 
@@ -67,6 +69,7 @@ actual_counts <- test_data$RentalCount;
 model_lm <- lm(RentalCount ~  Month + Day + WeekDay + Snow + Holiday, data = train_data);
 
 #Model 2: Use rpart to create a decision tree model, trained with the training data set
+library(rpart);
 model_rpart  <- rpart(RentalCount ~ Month + Day + WeekDay + Snow + Holiday, data = train_data);
 ```
 

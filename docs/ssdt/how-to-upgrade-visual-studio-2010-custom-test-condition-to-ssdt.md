@@ -1,21 +1,21 @@
 ---
 title: 이전 릴리스의 Visual Studio 2010 사용자 지정 테스트 조건 업그레이드
+description: SQL Server Data Tools에서 사용하도록 Visual Studio 2010 사용자 지정 테스트 조건을 업그레이드하는 방법을 알아봅니다. 변경될 내용 및 조건 설치 방법을 확인하세요.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 44c895a3-dee0-4032-a60f-812f5fe3c713
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 333ef282fe4e1f9d7af53cd3569371e88018a03f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b2b211250acb2e2594601236a379023a8479243c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251069"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893364"
 ---
 # <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>방법: 이전 릴리스의 Visual Studio 2010 사용자 지정 테스트 조건을 SQL Server Data Tools로 업그레이드
 
@@ -50,7 +50,7 @@ SQL Server Data Tools 이전 버전에서 만든 단위 테스트 조건을 사�
   
 8.  **프로젝트** 메뉴에서 **프로젝트 언로드**를 클릭합니다.  
   
-9. **솔루션 탐색기**에서 **프로젝트**를 마우스 오른쪽 단추로 클릭하고 `project_name`**.csproj****편집**을 선택합니다.  
+9. **솔루션 탐색기**에서 **프로젝트**를 마우스 오른쪽 단추로 클릭하고 `project_name` **.csproj** **편집**을 선택합니다.  
   
 10. `Microsoft.CSharp.targets` 가져오기 뒤에 다음 Import 문을 추가합니다.  
   

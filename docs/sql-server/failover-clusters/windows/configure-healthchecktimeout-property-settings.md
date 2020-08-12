@@ -1,6 +1,6 @@
 ---
 title: 가용성 그룹에 대한 HealthCheckTimeout 구성
-description: SQL Server 리소스 DLL이 응답하지 않는 것으로 보고되기 전에 대기해야 하는 시간을 지정하는 데 사용되는 Always On 가용성 그룹에 대한 HealthCheckTimeout을 구성합니다.
+description: Always On 가용성 그룹에 대해 HealthCheckTimeout을 구성하여 SQL Server 리소스 DLL이 응답 없음을 보고하기 전에 대기하는 기간을 지정합니다.
 ms.custom: seo-lt-2019
 ms.date: 03/09/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e3baf48a747db8dfdc9fb18387ac92dd0c53b4c8
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 83c59052646a870b513ebe79835d4c5a9345a5d9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925123"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882955"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>HealthCheckTimeout 속성 설정 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   HealthCheckTimeout 설정은 SQL Server 리소스 DLL이 Always On FCI(장애 조치(failover) 클러스터 인스턴스)가 응답하지 않는 것으로 보고하기 전에 [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 저장 프로시저에서 반환되는 정보를 대기해야 하는 시간(밀리초)을 지정하는 데 사용됩니다. 제한 시간 설정에 대한 변경 내용은 즉시 적용되며 SQL Server 리소스를 다시 시작하지 않아도 됩니다.  
   
 -   **시작하기 전 주의 사항:**  [제한 사항](#Limits), [보안](#Security)  

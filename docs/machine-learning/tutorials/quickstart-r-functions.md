@@ -4,22 +4,22 @@ titleSuffix: SQL machine learning
 description: 이 빠른 시작에서는 SQL 기계 학습에서 R 수학 및 유틸리티 함수를 사용하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/23/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c769862ab2ab1b06169ae5191217945cf8220c9b
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a056d73ae28d822c12752ac60f31df5022acf28b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606671"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772369"
 ---
 # <a name="quickstart-r-functions-with-sql-machine-learning"></a>빠른 시작: SQL 기계 학습에서 R 함수 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 이 빠른 시작에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 또는 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)에서 R 수학 및 유틸리티 함수를 사용하는 방법을 알아봅니다. 통계 함수는 T-SQL에서 구현하기에 복잡한 경우가 많으며 다만 몇 줄의 코드만으로 R에서 수행할 수 있습니다.
@@ -29,6 +29,9 @@ ms.locfileid: "83606671"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 이 빠른 시작에서는 [SQL Server R Services](../r/sql-server-r-services.md)에서 R 수학 및 유틸리티 함수를 사용하는 방법을 알아봅니다. 통계 함수는 T-SQL에서 구현하기에 복잡한 경우가 많으며 다만 몇 줄의 코드만으로 R에서 수행할 수 있습니다.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+이 빠른 시작에서는 [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)에서 R을 사용할 때 데이터 구조와 데이터 형식을 사용하는 방법을 알아봅니다. R과 SQL Managed Instance 사이의 데이터 이동과 일반적으로 발생할 수 있는 문제에 대해 알아봅니다.
 ::: moniker-end
 
 ## <a name="prerequisites"></a>사전 요구 사항
@@ -43,6 +46,9 @@ ms.locfileid: "83606671"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - SQL Server 2016 R Services. R Services를 설치하는 방법은 [Windows 설치 가이드](../install/sql-r-services-windows-install.md)를 참조하세요.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL Managed Instance Machine Learning Services. 등록 방법은 [Azure SQL Managed Instance Machine Learning Services 개요](/azure/azure-sql/managed-instance/machine-learning-services-overview)를 참조하세요.
 ::: moniker-end
 
 - R 스크립트가 포함된 SQL 쿼리를 실행하기 위한 도구. 이 빠른 시작에서는 [Azure Data Studio](../../azure-data-studio/what-is.md)를 사용합니다.
@@ -106,21 +112,19 @@ EXECUTE MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 
 기본적으로 설치되는 **utils** 패키지는 R 환경을 조사하기 위한 다양한 유틸리티 함수를 제공합니다. 이러한 함수는 SQL Server 및 외부 환경에서 R 코드가 실행되는 방식으로 불일치를 찾는 경우에 유용할 수 있습니다.
 
-예를 들어 R `memory.limit()` 함수를 사용하여 현재 R 환경에 사용할 메모리를 가져올 수 있습니다. `utils` 패키지는 설치되지만 기본적으로 로드되지 않으므로 먼저 `library()` 함수를 사용하여 로드해야 합니다.
+예를 들어 R에서 `system.time` 및 `proc.time`과 같은 시스템 시간 함수를 사용하여 R 프로세스에 사용된 시간을 파악하고 성능 문제를 분석할 수 있습니다. 예를 들어 솔루션에 R 타이밍 함수가 포함된 [데이터 기능 만들기](../tutorials/walkthrough-create-data-features.md) 자습서를 참조하세요.
 
 ```sql
 EXECUTE sp_execute_external_script
       @language = N'R'
     , @script = N'
         library(utils);
-        mymemory <- memory.limit();
-        OutputDataSet <- as.data.frame(mymemory);'
-    , @input_data_1 = N' ;'
-WITH RESULT SETS (([Col1] int not null));
+        start.time <- proc.time();
+        
+        # Run R processes
+        
+        elapsed_time <- proc.time() - start.time;'
 ```
-
-> [!TIP]
-> 많은 사용자는 R 프로세스에 사용된 시간을 파악하고 성능 문제를 분석하기 위해 R에서 `system.time` 및 `proc.time`과 같은 시스템 타이밍 함수를 사용하기를 원합니다. 예를 들어 솔루션에 R 타이밍 함수가 포함된 [데이터 기능 만들기](../tutorials/walkthrough-create-data-features.md) 자습서를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

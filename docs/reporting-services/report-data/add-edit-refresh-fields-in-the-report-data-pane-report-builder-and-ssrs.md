@@ -1,5 +1,6 @@
 ---
 title: 보고서 데이터 창에서 필드 추가, 편집, 새로 고침(보고서 작성기) | Microsoft Docs
+description: 데이터 세트에 대한 자세한 내용 및 보고서 작성기의 보고서 데이터 창에서 필드를 추가, 편집 및 새로 고치는 방법을 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2e36f0fe-8100-4513-b169-14d611646f81
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c6bc3c94923c3ebdb6e2897c4d3aaedbc58621c9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 419e4fa24e6c22dd60eed70dd2b2e3871447f061
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082578"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813144"
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>보고서 데이터 창에서 필드 추가, 편집, 새로 고침(보고서 작성기 및 SSRS)
   데이터 세트 필드는 외부 데이터 원본에서 데이터 세트 쿼리를 실행할 때 반환되는 데이터를 나타내는 기본 제공 필드 이름 컬렉션입니다.  

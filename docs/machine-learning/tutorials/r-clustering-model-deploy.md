@@ -8,28 +8,30 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d9640ee6040e6906f888486f6b0a1f99bb1d071f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a949fc5f17d2e6875eeef7f62ecef065283e3a92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607116"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772313"
 ---
 # <a name="tutorial-deploy-a-clustering-model-in-r-with-sql-machine-learning"></a>자습서: R에서 SQL 기계 학습을 사용하여 클러스터링 모델 배포
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-4부로 구성된 이 자습서 시리즈의 4부에서는 R에서 개발한 클러스터링 모델을 SQL Server Machine Learning Services 또는 빅 데이터 클러스터를 사용하여 SQL 데이터베이스에 배포합니다.
+4부로 구성된 이 자습서 시리즈의 4부에서는 R에서 개발한 클러스터링 모델을 SQL Server Machine Learning Services 또는 빅 데이터 클러스터를 사용하여 데이터베이스에 배포합니다.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-4부로 구성된 이 자습서 시리즈의 4부에서는 R에서 개발한 클러스터링 모델을 SQL Server Machine Learning Services를 사용하여 SQL 데이터베이스에 배포합니다.
+4부로 구성된 이 자습서 시리즈의 4부에서는 R에서 개발한 클러스터링 모델을 SQL Server Machine Learning Services를 사용하여 데이터베이스에 배포합니다.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-4부로 구성된 이 자습서 시리즈의 4부에서는 R에서 개발한 클러스터링 모델을 SQL Server R Services를 사용하여 SQL 데이터베이스에 배포합니다.
+4부로 구성된 이 자습서 시리즈의 4부에서는 R에서 개발한 클러스터링 모델을 SQL Server R Services를 사용하여 데이터베이스에 배포합니다.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+4부로 구성된 이 자습서 시리즈의 4부에서는 R에서 개발한 클러스터링 모델을 Azure SQL Managed Instance Machine Learning Services를 사용하여 데이터베이스에 배포합니다.
 ::: moniker-end
 
 새 고객이 계속 등록되므로 정기적으로 클러스터링을 수행하려면 어떤 앱에서든 R 스크립트를 호출할 수 있어야 합니다. 그러려면 SQL 저장 프로시저 내부에 Python 스크립트를 배치하여 데이터베이스에 R 스크립트를 배포하면 됩니다. 모델이 데이터베이스에서 실행되기 때문에 데이터베이스에 저장된 데이터에 대해 쉽게 학습시킬 수 있습니다.
@@ -38,7 +40,7 @@ ms.locfileid: "83607116"
 
 > [!div class="checklist"]
 > * 모델을 생성하는 저장 프로시저 만들기
-> * SQL 데이터베이스에서 클러스터링 수행
+> * 클러스터링 수행
 > * 클러스터링 정보 사용
 
 [1부](r-clustering-model-introduction.md)에서는 사전 요구 사항을 설치하고 샘플 데이터베이스를 복원했습니다.
@@ -139,10 +141,11 @@ EXECUTE sp_execute_external_script
       @language = N'R'
     , @script = N'
 # Define the connection string
+
 connStr <- paste("Driver=SQL Server; Server=", instance_name,
-               "; Database=", database_name,
-               "; Trusted_Connection=true; ",
-                  sep="" );
+                 "; Database=", database_name,
+                 "; uid=Username;pwd=Password; ",
+                 sep="" )
 
 # Input customer data that needs to be classified.
 # This is the result we get from the query.
@@ -178,7 +181,7 @@ END;
 GO
 ```
 
-## <a name="perform-clustering-in-sql-database"></a>SQL 데이터베이스에서 클러스터링 수행
+## <a name="perform-clustering"></a>클러스터링 수행
 
 저장 프로시저를 만들었으므로, 이제 다음 스크립트를 실행하여 클러스터링을 수행합니다.
 
@@ -237,7 +240,7 @@ SELECT customer.[c_email_address], customer.c_customer_sk
 이 자습서 시리즈의 4부에서는 다음 작업을 수행하는 방법을 알아보았습니다.
 
 * 모델을 생성하는 저장 프로시저 만들기
-* SQL Server에서 클러스터링 수행
+* SQL 기계 학습을 사용하여 클러스터링 수행
 * 클러스터링 정보 사용
 
 Machine Learning Services에서 R을 사용하는 방법에 대한 자세한 내용은 다음을 참조하세요.

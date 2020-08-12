@@ -1,21 +1,21 @@
 ---
 title: 데이터베이스 프로젝트 빌드를 확장하여 모델 통계 생성
+description: 데이터베이스 프로젝트를 빌드할 때 SQL 데이터베이스 모델에서 통계를 출력하는 빌드 참가자를 만들고 설치하고 테스트하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9365c90104fb7291a130f338e88907dce932dd7a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242686"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894025"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>연습: 데이터베이스 프로젝트 빌드를 확장하여 모델 통계 생성
 
@@ -29,7 +29,7 @@ ms.locfileid: "75242686"
   
 -   [빌드 참가자 테스트](#TestBuildContributor)  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 이 연습을 완료하려면 다음과 같은 구성 요소가 필요합니다.  
   
 -   SSDT(SQL Server Data Tools)가 포함되고 C# 또는 VB 개발이 지원되는 Visual Studio 버전이 설치되어 있어야 합니다.  
@@ -508,7 +508,7 @@ ms.locfileid: "75242686"
         </Project>  
         ```  
   
-    4.  참가자를 실행하려는 프로젝트에 대해 .sqlproj 파일 내에서 \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> 노드 뒤에 다음 문을 추가하여 대상 파일을 가져옵니다.  
+    4.  참가자를 실행하려는 프로젝트의 .sqlproj 파일 내에서 .sqlproj 파일의 \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> 노드 뒤에 다음 문을 추가하여 대상 파일을 가져옵니다.  
   
         ```  
         <Import Project="$(MSBuildExtensionsPath)\MyContributors\MyContributors.targets " />  
@@ -525,7 +525,7 @@ ms.locfileid: "75242686"
   
 1.  Visual Studio에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 "다시 빌드"를 선택합니다. 그러면 프로젝트가 다시 빌드되고 모델 통계가 생성되며, 해당 결과가 빌드 출력에 포함되고 ModelStatistics.xml에 저장됩니다. xml 파일을 보려면 솔루션 탐색기에서 "모든 파일 표시"를 선택해야 할 수 있습니다.  
   
-2.  Visual Studio 명령 프롬프트 열기: **시작** 메뉴에서 **모든 프로그램**, **Microsoft Visual Studio <Visual Studio Version>** , **Visual Studio Tools**, **Visual Studio 명령 프롬프트(<Visual Studio Version>)** 를 차례로 클릭합니다.  
+2.  Visual Studio 명령 프롬프트 열기: **시작** 메뉴에서 **모든 프로그램**, **Microsoft Visual Studio <Visual Studio Version>**, **Visual Studio Tools**, **Visual Studio 명령 프롬프트(<Visual Studio Version>)** 를 차례로 클릭합니다.  
   
 3.  명령 프롬프트에서 SQL 프로젝트가 있는 폴더로 이동합니다.  
   

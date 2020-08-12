@@ -10,16 +10,16 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 532a08f29b3b623d531d03ff7bc0ac56605faa17
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 21b3f8f93d3375789de9da92ab4bb2b1e136964c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606210"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772341"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-machine-learning"></a>빠른 시작: R에서 SQL 기계 학습을 사용하여 예측 모델 만들기 및 채점
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 이 빠른 시작에서는 T를 사용하여 예측 모델을 만들어 학습시키고, 모델을 SQL Server 인스턴스의 테이블에 저장한 다음, 모델에서 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 또는 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)를 사용하여 새 데이터로 값을 예측합니다.
@@ -29,6 +29,9 @@ ms.locfileid: "83606210"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 이 빠른 시작에서는 T를 사용하여 예측 모델을 만들어 학습시키고, 모델을 SQL Server 인스턴스의 테이블에 저장한 다음, 모델에서 [SQL Server R Services](../r/sql-server-r-services.md)를 사용하여 새 데이터로 값을 예측합니다.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+이 빠른 시작에서는 T를 사용하여 예측 모델을 만들어 학습시키고, 모델을 SQL Server 인스턴스의 테이블에 저장한 다음, [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)를 사용하여 모델로 새 데이터의 값을 예측합니다.
 ::: moniker-end
 
 SQL에서 실행되는 두 개의 저장 프로시저를 만들고 실행합니다. 첫 번째 저장 프로시저는 R에 포함된 **mtcars** 데이터 세트를 사용하여 차량에 수동 변속기가 장착되었을 확률을 예측하는 단순한 일반화된 선형 모델(GLM)을 생성합니다. 두 번째 저장 프로시저는 첫 번째 프로시저에서 생성된 모델을 호출하여 새 데이터를 기반으로 예측 세트를 출력합니다. SQL 저장 프로시저에 R 코드를 배치하면 작업이 SQL에 포함되고 다시 사용할 수 있으며 다른 저장 프로시저와 클라이언트 애플리케이션에서 호출할 수 있습니다.
@@ -55,6 +58,9 @@ SQL에서 실행되는 두 개의 저장 프로시저를 만들고 실행합니�
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - SQL Server 2016 R Services. R Services를 설치하는 방법은 [Windows 설치 가이드](../install/sql-r-services-windows-install.md)를 참조하세요.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL Managed Instance Machine Learning Services. 등록 방법은 [Azure SQL Managed Instance Machine Learning Services 개요](/azure/azure-sql/managed-instance/machine-learning-services-overview)를 참조하세요.
 ::: moniker-end
 
 - R 스크립트가 포함된 SQL 쿼리를 실행하기 위한 도구. 이 빠른 시작에서는 [Azure Data Studio](../../azure-data-studio/what-is.md)를 사용합니다.

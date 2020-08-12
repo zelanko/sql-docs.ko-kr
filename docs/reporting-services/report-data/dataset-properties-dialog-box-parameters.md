@@ -1,5 +1,6 @@
 ---
 title: 데이터 세트 속성 대화 상자, 매개 변수 | Microsoft Docs
+description: 데이터 세트 속성 대화 상자의 매개 변수 속성을 사용하여 쿼리 매개 변수를 추가, 변경, 삭제하는 방법을 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 43b00aab-e2c3-4e85-abe1-a2b5a21efeed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 66e0d56cbff57a6100ab8c61436ba6bcddf15382
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fc0f85dbd100593549ab3f543dfaf4f95e0d91ba
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573173"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812244"
 ---
 # <a name="dataset-properties-dialog-box-parameters"></a>데이터 세트 속성 대화 상자, 매개 변수
   **데이터 세트 속성** 대화 상자에서 **매개 변수**를 선택하여 보고서 매개 변수에 연결되는 쿼리 매개 변수를 비롯한 쿼리 매개 변수를 추가, 변경 및 삭제할 수 있습니다.  

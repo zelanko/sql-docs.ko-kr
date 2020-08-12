@@ -1,5 +1,6 @@
 ---
 title: 액세스를 위해 다중 홈 컴퓨터 구성
+description: 다중 홈 환경에서 SQL Server 인스턴스에 대한 네트워크 연결을 제공하도록 SQL Server 및 Windows 방화벽을 구성하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: d8733c9a4624bcadb60eb5cfa70cf81f242f43a7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 74f365ec21285609055d8ecc04690787f5870802
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244457"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894900"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>SQL Server 액세스를 허용하도록 다중 홈 컴퓨터 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   한 서버에서 두 개 이상의 네트워크 또는 네트워크 서브넷으로의 연결을 제공해야 할 경우 다중 홈 컴퓨터를 사용하는 것이 일반적인 시나리오입니다. 이 컴퓨터는 경계 네트워크(DMZ(완충 영역) 또는 스크린된 서브넷이라고도 함)에 있는 경우가 많습니다. 이 문서에서는 다중 홈 환경에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 네트워크 연결을 제공하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 고급 보안이 포함된 Windows 방화벽을 구성하는 방법에 대해 설명합니다.  
   
@@ -69,7 +70,7 @@ ms.locfileid: "75244457"
   
 1.  **시작**을 클릭하고 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 선택한 다음 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자**를 클릭합니다.  
   
-2.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자**의 콘솔 창에서 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크 구성**, **\<인스턴스 이름>에 대한 프로토콜**을 차례로 확장한 다음 **TCP/IP**를 두 번 클릭합니다.  
+2.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자**의 콘솔 창에서 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크 구성**, **\<instance name>에 대한 프로토콜**을 차례로 확장한 다음 **TCP/IP**를 두 번 클릭합니다.  
   
 3.  **TCP/IP 속성** 대화 상자의 **IP 주소** 탭에 여러 개의 IP 주소가 **IP1**, **IP2**의 형식으로 **IPAll**까지 표시됩니다. 이러한 주소에는 루프백 어댑터의 IP 주소인 127.0.0.1이 포함됩니다. 컴퓨터에 구성된 각 IP 주소에 대한 추가 IP 주소가 나타납니다.  
   

@@ -1,5 +1,6 @@
 ---
 title: 데이터 세트 속성 대화 상자, 옵션(보고서 작성기) | Microsoft Docs
+description: 데이터 세트 속성 대화 상자를 사용하여 데이터 정렬 옵션, 부분합을 세부 데이터로 처리 등 데이터 옵션을 변경하는 방법을 알아봅니다.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1db5bcd2401d1888fb6dc76e42c5840ed3b0b62
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 141e2f9639ecd89113f738546f47053d9ab630fd
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573131"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812268"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>데이터 세트 속성 대화 상자, 옵션(보고서 작성기)
   **데이터 세트 속성** 대화 상자에서 **옵션**을 선택하여 데이터 정렬 옵션 및 부분을 세부 데이터로 처리하는 옵션 등 쿼리에 대한 데이터 옵션을 변경할 수 있습니다. 데이터 정렬에 대한 자세한 내용은 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  

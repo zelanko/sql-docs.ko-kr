@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: fc579bd3-010c-4f72-8b5c-d0cc18a1f280
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e3b579bb9154b59247b500c921850cae4e989d39
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3ca261b3ecff1a6bc8a806e1abce38fce7e83ba6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257850"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755043"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>프록시를 사용하는 다중 서버 작업 문제 해결
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
@@ -32,7 +31,7 @@ ms.locfileid: "75257850"
   
 -   "작업 단계에 프록시 계정이 필요하지만 일치하는 프록시를 대상 서버에서 사용할 수 없습니다."  
   
-    이 오류를 해결하려면 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.** _\<n\>_ **\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** 레지스트리 하위 키를 **1(true)** 로 설정합니다. 기본적으로 이 하위 키는 **0** (**false**)으로 설정됩니다. **MSSQL.** \<*n*>의 값은 인스턴스 이름입니다(예: **MSSQL.1** 또는 **MSSQL.3**).  
+    이 오류를 해결하려면 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.** _\<n\>_ **\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** 레지스트리 하위키를 **1(true)** 로 설정합니다. 기본적으로 이 하위 키는 **0** (**false**)으로 설정됩니다. **MSSQL**의 값입니다.\<*n*> 인스턴스 이름입니다. 예: **MSSQL.1** 또는 **MSSQL.3**.  
   
 -   "프록시를 찾을 수 없습니다."  
   

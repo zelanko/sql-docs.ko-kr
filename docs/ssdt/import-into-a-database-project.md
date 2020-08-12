@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 프로젝트로 가져오기
+description: 라이브 데이터베이스, 데이터 계층 애플리케이션 및 스크립트에서 데이터베이스 프로젝트로 개체를 가져오는 방법을 알아봅니다. 암호화된 개체를 가져오는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,16 +11,15 @@ f1_keywords:
 ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 0cfdbb9cb094188e372424257656953b62635996
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9cbe1d734238728b87f6931fdee49654155e82e6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246448"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893864"
 ---
 # <a name="import-into-a-database-project"></a>데이터베이스 프로젝트로 가져오기
 
@@ -49,7 +49,7 @@ ms.locfileid: "75246448"
 ![SSDT 가져오기 시 무시됨 폴더](../ssdt/media/ssdt-ignoredonimport.gif "SSDT 가져오기 시 무시됨 폴더")  
   
 ## <a name="import-source-script-sql"></a><a name="bkmk_import_source_script"></a>가져오기 원본: 스크립트(*.sql)  
-프로젝트에 ‘없었던’ 가져오기 원본의 모든 개체가 추가되며, 프로젝트에 ‘이미 있었던’ 가져오기 원본의 모든 개체는 프로젝트의 개체 정의를 덮어씁니다.    
+프로젝트에 ‘없었던’ 가져오기 원본의 모든 개체가 추가되며, 프로젝트에 ‘이미 있었던’ 가져오기 원본의 모든 개체는 프로젝트의 개체 정의를 덮어씁니다.****  
   
 > [!NOTE]  
 > 이 경로에는 향후 릴리스에서 수정될 두 가지 알려진 버그가 있습니다.  

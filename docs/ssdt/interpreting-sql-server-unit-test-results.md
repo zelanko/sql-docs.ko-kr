@@ -1,21 +1,21 @@
 ---
 title: SQL Server 단위 테스트 결과 해석
+description: 테스트 결과 창이나 .trx 파일을 사용하여 SQL Server 단위 테스트 결과를 보는 방법을 알아봅니다. 결과에 대한 자세한 정보를 가져오는 방법을 확인합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: fde3c95b-2f68-483d-a197-0f7161b72fa3
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 1708c6aa8a082cfc06aadf832e0dbf30f2c23e23
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 42ec6c34cad7a14d397965717a9447c9d0e29a4b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246429"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893835"
 ---
 # <a name="interpreting-sql-server-unit-test-results"></a>SQL Server 단위 테스트 결과 해석
 

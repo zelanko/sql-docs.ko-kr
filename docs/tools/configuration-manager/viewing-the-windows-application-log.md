@@ -1,5 +1,6 @@
 ---
 title: Windows 애플리케이션 로그 보기
+description: Windows 애플리케이션 로그를 보고 관리하는 방법을 알아봅니다. 이 로그에 이벤트 정보를 기록하도록 SQL Server를 구성할 수 있습니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ ms.assetid: f9853b74-7db7-47cc-b957-e49ed5bc0a1a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b70753626c65af4f8c125d33e12c4ce2ebbd1f78
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cfbe9955c07aaca9cf710efb405badee74dec1a2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306639"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880257"
 ---
 # <a name="viewing-the-windows-application-log"></a>Windows 애플리케이션 로그 보기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 Microsoft Windows 애플리케이션 로그를 사용하도록 구성된 경우 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 세션은 이 로그에 새 이벤트를 씁니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와는 달리 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 시작할 때마다 새 애플리케이션 로그가 생성되지는 않습니다.  
   
  Windows 이벤트 뷰어 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 로그 뷰어를 사용하여 Windows 애플리케이션 로그를 보고 관리하십시오.  

@@ -1,5 +1,6 @@
 ---
 title: TCP/IP 속성(프로토콜 탭)
+description: TCP/IP 속성 대화 상자의 프로토콜 탭에 있는 옵션을 사용하여 연결 유지 간격, 사용 플래그 및 기타 속성을 구성합니다.
 ms.custom: seo-lt-2019
 ms.date: 08/24/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 32054dfc368a358370abe4b3a5213305fe815afb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2e9bf22b501a097e59af3bef953ffcbaa26780c1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307581"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880294"
 ---
 # <a name="tcpip-properties-protocols-tab"></a>TCP/IP 속성(프로토콜 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   **TCP/IP 속성** 대화 상자를 사용하여 TCP/IP 프로토콜 옵션을 구성합니다. 세부 정보 창에 개별 IP 주소 구성을 표시하려면 왼쪽 창에서 **TCP/IP** 를 클릭합니다.  
   
  변경 내용을 적용하려면 Microsoft SQL Server를 다시 시작해야 합니다.  

@@ -1,5 +1,6 @@
 ---
 title: 파워 버퍼를 사용하여 연결된 데이터베이스 업데이트
+description: 파워 버퍼를 사용하여 데이터베이스를 업데이트하는 방법을 알아봅니다. 변경 내용을 적용하기 전에 확인하는 방법과 나중에 배포할 수 있도록 스크립트 변경 내용을 저장하는 방법을 확인합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: d9feeb9bee84cede398bba5105912385fd5e8c2e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3954ae84a201209e49b65dc421ab41b93126fb65
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244255"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893869"
 ---
 # <a name="how-to-update-a-connected-database-with-power-buffer"></a>방법: 파워 버퍼를 사용하여 연결된 데이터베이스 업데이트
 

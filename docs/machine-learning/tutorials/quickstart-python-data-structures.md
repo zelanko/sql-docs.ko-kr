@@ -1,24 +1,25 @@
 ---
 title: '빠른 시작: Python 데이터 구조'
-description: 이 빠른 시작에서는 Python 및 SQL Server Machine Learning Services에서 데이터 형식과 데이터 개체로 작업을 수행하는 방법을 알아봅니다.
+titleSuffix: SQL machine learning
+description: 이 빠른 시작에서는 SQL 기계 학습을 사용하여 Python에서 데이터 구조 및 데이터 개체로 작업을 수행하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
-ms.reviewer: garye
+ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3023287504cbb7b25e194b53d0957e82405d1ea8
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: ed35820d38ea31ea0b7f8bae9b0a440398d55674
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606697"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784098"
 ---
-# <a name="quickstart-data-structures-and-objects-using-python-in-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services에서 Python을 사용하는 데이터 구조 및 개체
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="quickstart-data-structures-and-objects-using-python-with-sql-machine-learning"></a>빠른 시작: SQL 기계 학습에서 Python을 사용하는 데이터 구조 및 개체
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 이 빠른 시작에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 또는 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)에서 Python을 사용하는 경우 데이터 구조와 데이터 형식을 사용하는 방법을 알아봅니다. Python과 SQL Server 사이의 데이터 이동과 일반적으로 발생할 수 있는 문제에 대해 알아봅니다.
@@ -26,8 +27,11 @@ ms.locfileid: "83606697"
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 이 빠른 시작에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에서 Python을 사용할 때 데이터 구조와 데이터 형식을 사용하는 방법을 알아봅니다. Python과 SQL Server 사이의 데이터 이동과 일반적으로 발생할 수 있는 문제에 대해 알아봅니다.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+이 빠른 시작에서는 [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)에서 Python을 사용할 때 데이터 구조와 데이터 형식을 사용하는 방법을 알아봅니다. Python과 Azure SQL Managed Instance 간에 데이터를 이동하는 방법과 발생할 수 있는 일반적인 문제에 대해 알아봅니다.
+::: moniker-end
 
-SQL Server는 표 형식 데이터를 사용할 때 유용한 Python **pandas** 패키지를 사용합니다. 하지만 Python에서 SQL Server로 스칼라를 전달만 해도 "단순히 작동"하는 것은 아닙니다. 이 빠른 시작에서는 Python과 SQL Server 사이에 표 형식 데이터를 전달할 때 발생할 수 있는 추가적인 문제들을 준비하기 위해 몇 가지 기본적인 데이터 구조 정의를 검토합니다.
+SQL 기계 학습은 표 형식 데이터를 사용할 때 유용한 Python **pandas** 패키지를 사용합니다. 하지만 Python에서 데이터베이스로 스칼라를 전달하기만 하면 작동하는 것은 아닙니다. 이 빠른 시작에서는 Python과 데이터베이스 사이에 표 형식 데이터를 전달할 때 발생할 수 있는 추가적인 문제들을 준비하기 위해 몇 가지 기본적인 데이터 구조 정의를 검토합니다.
 
 처음에 알아야 할 개념은 다음과 같습니다.
 
@@ -35,10 +39,10 @@ SQL Server는 표 형식 데이터를 사용할 때 유용한 Python **pandas** 
 - 데이터 프레임의 단일 열은 계열이라고 부르는 목록과 비슷한 개체입니다.
 - 데이터 프레임의 단일 값은 셀이라고 부르고, 인덱스로 액세스됩니다.
 
-data.frame에 표 형식 구조가 필요한 경우 계산의 단일 결과를 데이터 프레임으로 노출하려면 어떻게 할까요? 한 가지 답변은 데이터 프레임으로 쉽게 변환되는 계열로 단일 스칼라 값을 표시하는 것입니다. 
+data.frame에 표 형식 구조가 필요한 경우 계산의 단일 결과를 데이터 프레임으로 노출하려면 어떻게 할까요? 한 가지 답변은 데이터 프레임으로 쉽게 변환되는 계열로 단일 스칼라 값을 표시하는 것입니다.
 
 > [!NOTE]
-> 날짜를 반환할 때 SQL의 Python은 1753-01-01(-53690)에서 9999-12-31(2958463)까지 제한된 날짜 범위를 갖는 DATETIME을 사용합니다. 
+> 날짜를 반환할 때 SQL의 Python은 1753-01-01(-53690)에서 9999-12-31(2958463)까지 제한된 날짜 범위를 갖는 DATETIME을 사용합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -50,7 +54,11 @@ data.frame에 표 형식 구조가 필요한 경우 계산의 단일 결과를 �
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 - SQL Server Machine Learning Services. Machine Learning Services를 설치하는 방법은 [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md)를 참조하세요. 
 ::: moniker-end
-- 또한 Python 스크립트가 포함된 SQL 쿼리를 실행하기 위한 도구가 필요합니다. SQL Server 인스턴스에 연결할 수 있는 데이터베이스 관리 또는 쿼리 도구를 사용하여 이러한 스크립트를 실행하고 T-SQL 쿼리 또는 저장 프로시저를 실행할 수 있습니다. 이 빠른 시작에서는 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)를 사용합니다.
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL Managed Instance Machine Learning Services. 등록 방법은 [Azure SQL Managed Instance Machine Learning Services 개요](/azure/azure-sql/managed-instance/machine-learning-services-overview)를 참조하세요.
+::: moniker-end
+
+- Python 스크립트가 포함된 SQL 쿼리를 실행하기 위한 도구. 이 빠른 시작에서는 [Azure Data Studio](../../azure-data-studio/what-is.md)를 사용합니다.
 
 ## <a name="scalar-value-as-a-series"></a>계열로서의 스칼라 값
 
@@ -81,7 +89,7 @@ data.frame에 표 형식 구조가 필요한 경우 계산의 단일 결과를 �
    dtype: float64
    ```
 
-1. 계열의 길이를 늘리려면 배열을 사용해서 새 값을 추가할 수 있습니다. 
+1. 계열의 길이를 늘리려면 배열을 사용해서 새 값을 추가할 수 있습니다.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'Python'
@@ -100,7 +108,7 @@ data.frame에 표 형식 구조가 필요한 경우 계산의 단일 결과를 �
    **결과**
 
    ```text
-   STDOUT message(s) from external script: 
+   STDOUT message(s) from external script:
    0    0.5
    1    2.0
    dtype: float64
@@ -122,7 +130,7 @@ data.frame에 표 형식 구조가 필요한 경우 계산의 단일 결과를 �
    **결과**
 
    ```text
-   STDOUT message(s) from external script: 
+   STDOUT message(s) from external script:
    0.5
    simple math example 1    0.5
    simple math example 2    0.5
@@ -131,7 +139,7 @@ data.frame에 표 형식 구조가 필요한 경우 계산의 단일 결과를 �
 
 ## <a name="convert-series-to-data-frame"></a>계열을 데이터 프레임으로 변환
 
-스칼라 쉭 결과를 표 형식 구조로 변환한 후에도 여전히 이를 SQL Server가 처리할 수 있는 형식으로 변환해야 합니다.
+스칼라 쉭 결과를 테이블 형식 구조로 변환한 후에도 여전히 이를 SQL 기계 학습이 처리할 수 있는 형식으로 변환해야 합니다.
 
 1. 계열을 data.frame으로 변환하려면 pandas [DataFrame](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) 메서드를 호출합니다.
 
@@ -217,12 +225,7 @@ data.frame에 표 형식 구조가 필요한 경우 계산의 단일 결과를 �
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server에서 고급 Python 함수를 작성하는 방법을 알아보려면 다음 빠른 시작을 참조하세요.
+SQL 기계 학습에서 고급 Python 함수를 작성하는 방법을 알아보려면 다음 빠른 시작을 참조하세요.
 
 > [!div class="nextstepaction"]
-> [SQL Server Machine Learning Services를 사용하여 고급 Python 함수 작성](quickstart-python-functions.md)
-
-SQL Server Machine Learning Services에서 Python 사용에 대한 자세한 내용은 다음 문서를 참조하세요.
-
-- [Python에서 예측 모델 만들기 및 점수 매기기](quickstart-python-train-score-model.md)
-- [SQL Server Machine Learning Services(Python 및 R)란?](../sql-server-machine-learning-services.md)
+> [고급 Python 함수 작성](quickstart-python-functions.md)

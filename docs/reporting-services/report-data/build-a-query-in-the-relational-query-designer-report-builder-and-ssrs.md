@@ -1,5 +1,6 @@
 ---
 title: 관계형 쿼리 디자이너에서 쿼리 작성(보고서 작성기 및 SSRS
+description: 보고서 데이터 세트용 외부 데이터 원본에서 검색할 데이터를 지정할 수 있도록 관계형 쿼리 디자이너에서 쿼리를 작성하는 방법을 알아봅니다.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/25/2019
-ms.openlocfilehash: 9895582db682497dd272010466d05f0bebd93b1a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5ead07a1cf2afa13189b76c0c6eb75a472699543
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190901"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808483"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>관계형 쿼리 디자이너에서 쿼리 작성(보고서 작성기 및 SSRS)
 

@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8dc0267821ff4833bd33a1431f004336668063d0
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 5d83270e473f3135cfcdc3676d97675d7f658bb9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607086"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772330"
 ---
 # <a name="tutorial-build-a-clustering-model-in-r-with-sql-machine-learning"></a>자습서: R에서 SQL 기계 학습을 사용하여 클러스터링 모델 빌드
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 4부로 구성된 이 자습서 시리즈의 3부에서는 R에서 K-평균 모델을 빌드하여 클러스터링을 수행합니다. 이 시리즈의 다음 파트에서는 SQL Server Machine Learning Services 또는 빅 데이터 클러스터를 사용하여 이 모델을 데이터베이스에 배포합니다.
@@ -30,6 +29,9 @@ ms.locfileid: "83607086"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 4부로 구성된 이 자습서 시리즈의 3부에서는 R에서 K-평균 모델을 빌드하여 클러스터링을 수행합니다. 이 시리즈의 다음 파트에서는 SQL Server R Services를 사용하여 이 모델을 데이터베이스에 배포합니다.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+4부로 구성된 이 자습서 시리즈의 3부에서는 R에서 K-평균 모델을 빌드하여 클러스터링을 수행합니다. 이 시리즈의 다음 부분에서는 Azure SQL Managed Instance Machine Learning Services를 사용하여 데이터베이스에 이 모델을 배포합니다.
 ::: moniker-end
 
 이 문서에서는 다음을 수행하는 방법을 알아봅니다.
@@ -78,9 +80,8 @@ plot(1:20, wss, type = "b", xlab = "Number of Clusters", ylab = "Within groups s
 
 ```r
 # Output table to hold the customer group mappings.
-# Generate clusters using Kmeans and output key / cluster to a table in SQL database
+# Generate clusters using Kmeans and output key / cluster to a table
 # called return_cluster
-sqlDrop(ch, "return_cluster")
 
 ## create clustering model
 clust <- kmeans(customer_data[,2:5],4)

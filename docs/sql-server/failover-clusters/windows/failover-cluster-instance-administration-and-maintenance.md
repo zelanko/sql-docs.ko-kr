@@ -1,6 +1,6 @@
 ---
 title: 장애 조치(failover) 클러스터 인스턴스 관리 및 유지 관리
-description: SQL Server 장애 조치(failover) 클러스터 인스턴스의 관리 및 유지 관리에 대해 알아봅니다.
+description: SQL Server 설치 프로그램 또는 장애 조치(failover) 클러스터 관리자 스냅인을 사용하는 SQL Server 장애 조치(failover) 클러스터 인스턴스 유지 관리 및 관리에 대해 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5788d52a119fe6bada56ac2def9d2fbfb2c09cb0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c5a6abf9599591bf1619b951926626fc337cf170
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230074"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887790"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>장애 조치(failover) 클러스터 인스턴스 관리 및 유지 관리
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   기존 Always On FCI(장애 조치(Failover) 클러스터 인스턴스)에서 노드 추가 또는 제거와 같은 유지 관리 태스크는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 사용하여 수행합니다. IP 주소 리소스 변경, 특정 FCI 시나리오 복구 등과 같은 다른 관리 태스크는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 서비스용 관리 스냅인인 장애 조치(Failover) 클러스터 관리자 스냅인을 사용하여 수행합니다.  
   
 ## <a name="maintaining-a-failover-cluster-instance"></a>장애 조치(Failover) 클러스터 인스턴스 유지 관리  

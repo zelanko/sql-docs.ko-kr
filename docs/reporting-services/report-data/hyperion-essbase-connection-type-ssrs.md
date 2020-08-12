@@ -1,5 +1,6 @@
 ---
 title: Hyperion Essbase 연결 형식 | Microsoft Docs
+description: 보고서에 포함할 Hyperion Essbase 외부 데이터 원본에서 다차원 데이터를 검색하는 방법을 알아봅니다.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e65c3ca2bd6866ede2eb9924f8465e5b66d37c0b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d6ee62393c6b9a74dee16acf532d474a7a344b54
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079021"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808435"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase 연결 형식(SSRS)
   보고서에 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 외부 데이터 원본의 데이터를 포함하려면 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 유형의 보고서 데이터 원본에 기초하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]외부 데이터 원본에서 다차원 데이터를 검색할 수 있게 하는 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 에 대한 데이터 확장 프로그램을 기반으로 합니다.  
@@ -79,7 +80,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  다음 표에서는 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 데이터 원본에 사용할 수 있는 미리 정의된 필드 속성 목록을 제공합니다.  
   
-|**속성**|**형식**|**설명 또는 필요한 값**|  
+|**Property**|**Type**|**설명 또는 필요한 값**|  
 |------------------|--------------|---------------------------------------|  
 |**값**|**Object**|필드의 데이터 값을 지정합니다.<br /><br /> 차원 속성의 경우 MEMBER_CAPTION에 매핑됩니다. 측정값의 경우 데이터 값에 매핑됩니다.|  
 |**IsMissing**|**Boolean**|필드가 결과 데이터 집합에 있는지 여부를 나타냅니다.|  
@@ -100,7 +101,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  다음 표에서는 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 데이터 원본에 사용할 수 있는 사용자 지정 필드 속성을 보여 줍니다.  
   
-|**속성**|**형식**|**설명 또는 필요한 값**|  
+|**Property**|**Type**|**설명 또는 필요한 값**|  
 |------------------|--------------|---------------------------------------|  
 |**FORMAT_STRING**|**String**|측정값에 대해 정의되며, String 유형으로 사용할 수 있는 **FormattedValue** 입니다.|  
   

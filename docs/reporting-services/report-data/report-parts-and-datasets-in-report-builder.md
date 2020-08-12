@@ -1,5 +1,6 @@
 ---
 title: 보고서 작성기의 보고서 파트 및 데이터 세트 | Microsoft Docs
+description: 보고서 작성기 보고서 파트 갤러리에서 추가할 수 있는 보고서 파트에 대해 알아봅니다. 또한 보고서가 종속되는 데이터 세트에 대해서도 알아봅니다.
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a06344a119dfba635a07d0050a61f561065a2984
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 80d075cc85f3784459fa7302e601e95a1f11970b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571192"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808373"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>보고서 작성기의 보고서 파트 및 데이터 세트
   보고서 작성기에서 보고서에 데이터를 포함하는 가장 쉬운 방법은 보고서 파트 갤러리에서 보고서 파트를 추가하는 것입니다. 보고서 파트에는 파트가 종속되는 *종속 데이터 세트*라는 데이터 세트가 들어 있습니다. 종속 데이터 세트는 공유 데이터 원본을 기반으로 하며 포함된 데이터 세트 또는 공유 데이터 세트일 수 있습니다. [보고서 파트](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)에 대해 자세히 알아봅니다.  

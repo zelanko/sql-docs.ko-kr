@@ -1,5 +1,6 @@
 ---
 title: 클라이언트 프로토콜 속성(순서 탭)
+description: 클라이언트 프로토콜을 사용하거나 사용하지 않도록 설정하는 방법을 알아봅니다. 클라이언트가 SQL Server에 연결하려고 할 때 프로토콜을 사용하는 순서를 다시 정렬하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 59ffc1332b52d95221541a45ba90fe3e22a89caa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 841c923899900ecac354356c9599d5aad61d8cfd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306523"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892059"
 ---
 # <a name="client-protocols-properties-order-tab"></a>클라이언트 프로토콜 속성(순서 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   **클라이언트 프로토콜 속성** 대화 상자의 **순서**페이지를 사용하여 클라이언트 프로토콜을 확인하고 설정할 수 있습니다.  
   
  선택한 프로토콜을 **사용할 수 없는 프로토콜** 또는 **사용할 수 있는 프로토콜** 목록으로 이동하려면 해당 프로토콜을 클릭한 다음 **사용** 또는 **사용 안 함** 을 클릭합니다.  

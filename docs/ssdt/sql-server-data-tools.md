@@ -1,5 +1,6 @@
 ---
 title: SQL Server Data Tools
+description: 테이블 디자인 및 기능 확장과 같이 SQL Server Data Tools에서 수행할 수 있는 데이터베이스 개발 작업에 대한 리소스를 봅니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 2049550374569d10631239419cd380c115022ff2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2fa96a9175124e3aa1bc5f0e7008422fafe85aab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256338"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883441"
 ---
 # <a name="sql-server-data-tools"></a>SQL Server Data Tools
 

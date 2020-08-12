@@ -1,5 +1,6 @@
 ---
 title: 새 별칭(별칭 탭)
+description: SQL Server 인스턴스에 연결할 때 사용되는 인스턴스 대체 이름인 별칭을 만드는 방법을 알아봅니다. 별칭을 사용해야 하는 사례를 확인합니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 785eb6fb-f67e-449d-b1c8-c38dfbb95ef6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d691369d3df437cb8312d66f521eb48c20212ca8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 533f5fd890d75b7243f74a8cf5f2eb363b9ff04d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306437"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894810"
 ---
 # <a name="new-alias-alias-tab"></a>새 별칭(별칭 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   별칭은 연결 설정에 사용할 수 있는 대체 이름입니다. 별칭은 연결 문자열의 필수 요소를 캡슐화하고 사용자가 선택한 이름으로 나타납니다. **별칭 - 새로 만들기** 대화 상자의 **별칭** 페이지를 사용하여 별칭에 대한 연결 문자열의 요소를 지정할 수 있습니다. 기존 별칭의 연결 문자열을 변경하려면 [&#60;Alias&#62; 속성&#40;별칭 탭&#41;](../../tools/configuration-manager/alias-properties-alias-tab.md)을 참조하세요.  
   
  **속성** 표의 모든 값을 채울 필요는 없습니다. 선택한 프로토콜에 따라 유효한 값 조합이 달라집니다. 유효한 값 조합의 예는 아래 항목을 참조하십시오.  
@@ -39,7 +40,7 @@ ms.locfileid: "75306437"
 ## <a name="when-to-use-an-alias"></a>별칭을 사용하는 경우  
  기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 로컬 인스턴스에 연결할 때는 **공유 메모리** 프로토콜을 사용하고 다른 컴퓨터의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 때는 **TCP/IP** 또는 **명명된 파이프**를 사용합니다. TCP/IP 또는 명명된 파이프를 사용할 때, 사용자 지정 연결 문자열을 제공하려고 할 때 또는 연결에 대해 서버 이름 외에 다른 이름을 사용하려고 할 때 별칭을 만듭니다.  
   
-### <a name="examples"></a>예  
+### <a name="examples"></a>예제  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 기본 TCP/IP 포트인 1433에서 수신하지 않고 다른 포트 번호를 사용하여 연결 문자열을 제공하려고 합니다.  
   

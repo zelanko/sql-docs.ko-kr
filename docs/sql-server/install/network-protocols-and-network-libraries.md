@@ -1,5 +1,6 @@
 ---
 title: 네트워크 프로토콜 및 네트워크 라이브러리 | Microsoft 문서
+description: 서버는 여러 네트워크 프로토콜을 모니터링하도록 구성될 수 있습니다. SQL Server 구성 관리자를 사용하여 이 구성을 변경할 수 있습니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: abdd5e7af707bd566288bd1048eda4874d82311c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bc3f56fe60fdab32a41e61c878b1a3988e265a28
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68126068"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880453"
 ---
 # <a name="network-protocols-and-network-libraries"></a>네트워크 프로토콜 및 네트워크 라이브러리
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   서버는 한 번에 여러 네트워크 프로토콜을 수신하거나 모니터링할 수 있습니다. 이때 각각의 프로토콜을 구성해야 합니다. 특정 프로토콜을 구성하지 않으면 서버가 해당 프로토콜에서 수신할 수 없습니다. 설치 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 프로토콜 구성을 변경할 수 있습니다.  
   

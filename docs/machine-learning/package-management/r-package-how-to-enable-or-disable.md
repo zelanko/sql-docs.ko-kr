@@ -2,22 +2,22 @@
 title: 원격 Disable R 패키지 관리 사용 또는 사용 안 함
 description: SQL Server 2016 R Services 또는 SQL Server Machine Learning Services(In-Database)에서 원격 R 패키지 관리를 사용하도록 설정
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 250be5c8a4207a43d2e4194c78377bd87880a99c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1a18d56d1dcf0733f080da7cf8247421c669a4aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117986"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757148"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>SQL Server용 원격 패키지 관리 사용 또는 사용 안 함
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 문서에서는 클라이언트 워크스테이션 또는 다른 Machine Learning Server에서 R 패키지의 원격 관리를 사용하도록 설정하는 방법을 설명합니다. SQL Server에서 패키지 관리 기능을 사용하도록 설정한 후에는 클라이언트에서 RevoScaleR 명령을 사용하여 SQL Server에 패키지를 설치할 수 있습니다.
 
@@ -41,7 +41,7 @@ SQL Server에서 패키지 관리를 사용하거나 사용하지 않도록 설�
 
     이 명령은 SQL Server 컴퓨터에서 패키지 관리에 필요한 인스턴스 수준 아티팩트를 만듭니다. 또한 인스턴스에 대한 실행 패드를 다시 시작합니다.
 
-    인스턴스를 지정하지 않으면 기본 인스턴스가 사용됩니다. 사용자를 지정하지 않으면 현재 보안 컨텍스트가 사용됩니다. 예를 들어 다음 명령은 명령 프롬프트를 연 사용자의 자격 증명을 사용하여 RegisterRExt.exe의 경로에 위치한 인스턴스에 패키지 관리를 사용하도록 설정합니다.
+    인스턴스를 지정하지 않으면 기본 인스턴스가 사용됩니다. 사용자를 지정하지 않으면 현재 보안 컨텍스트가 사용됩니다. 예를 들어 다음 명령은 명령 프롬프트를 연 사용자의 자격 증명을 사용하여 기본 인스턴스에서 패키지 관리를 사용하도록 설정합니다.
 
     `REgisterRExt.exe /install pkgmgmt`
 
@@ -51,7 +51,7 @@ SQL Server에서 패키지 관리를 사용하거나 사용하지 않도록 설�
    
     이 명령은 사용자 권한을 제어하는 데 사용되는 다음과 같은 데이터베이스 역할을 비롯하여 몇 가지 데이터베이스 아티팩트를 만듭니다. `rpkgs-users`, `rpkgs-private` 및 `rpkgs-shared`.
 
-    예를 들어 다음 명령은 RegisterRExt가 실행되는 인스턴스에서 데이터베이스에 패키지 관리를 사용하도록 설정합니다. 사용자를 지정하지 않으면 현재 보안 컨텍스트가 사용됩니다.
+    예를 들어 다음 명령은 기본 인스턴스에서 데이터베이스에 대한 패키지 관리를 사용하도록 설정합니다. 사용자를 지정하지 않으면 현재 보안 컨텍스트가 사용됩니다.
 
     `RegisterRExt.exe /install pkgmgmt /database:TestDB`
 

@@ -1,5 +1,6 @@
 ---
 title: 기존 인스턴스 제거
+description: 이 문서에서는 SQL Server 독립 실행형 인스턴스를 제거하는 방법을 설명합니다. 이렇게 하면 SQL Server를 다시 설치할 수 있도록 시스템을 준비할 수도 있습니다.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - instances of SQL Server, uninstalling
 - uninstalling SQL Server
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 61647a4e0a654d478050268587b2b47fd79fc686
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fd4e3ee094bca1d27543a92a357f705b0e3d82fe
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78335744"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883730"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>SQL Server의 기존 인스턴스 제거(설치)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   이 문서에서는 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 제거하는 방법에 대해 설명합니다. 이 문서의 단계를 수행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 설치할 수 있도록 시스템을 준비할 수도 있습니다.  
   
@@ -67,7 +68,7 @@ Windows 10, Windows Server 2016, Windows Server 2019 이상에서 SQL Server를 
 
 1. 제거 프로세스를 시작하려면 시작 메뉴에서 **설정**으로 이동한 다음 **앱**을 선택합니다. 
 1. 검색 상자에서 `sql`을 검색합니다. 
-1. **Microsoft SQL Server (버전) (비트)** 를 선택합니다. `Microsoft SQL Server 2017 (64-bit)`)을 입력합니다.
+1. **Microsoft SQL Server (버전) (비트)** 를 선택합니다. 예들 들어 `Microsoft SQL Server 2017 (64-bit)`입니다.
 1. **제거**를 선택합니다.
  
     ![SQL Server 제거](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-10.png)
@@ -89,7 +90,7 @@ Windows 10, Windows Server 2016, Windows Server 2019 이상에서 SQL Server를 
 Windows Server 2008, Windows Server 2012 및 Windows 2012 R2에서 SQL Server를 제거하려면 다음 단계를 수행합니다. 
 
 1. 제거 프로세스를 시작하려면 **제어판**으로 이동한 다음 **프로그램 및 기능**을 선택합니다.
-1. **Microsoft SQL Server (버전) (비트)** 를 마우스 오른쪽 단추로 클릭하고 **제거**를 선택합니다. `Microsoft SQL Server 2012 (64-bit)`)을 입력합니다.  
+1. **Microsoft SQL Server (버전) (비트)** 를 마우스 오른쪽 단추로 클릭하고 **제거**를 선택합니다. 예들 들어 `Microsoft SQL Server 2012 (64-bit)`입니다.  
   
     ![SQL Server 제거](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-2012.png)
 

@@ -1,5 +1,6 @@
 ---
 title: SQL Server 속성(고급 탭)
+description: 데이터 경로, 인스턴스 ID, 사용자 지정 속성 등 SQL Server 속성 대화 상자의 고급 탭에 있는 옵션에 대해 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a21d6eb31b0edb5ab0cfa56f388b2cf3e3065627
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cabf817c5b2a1be512b93235e274d76abba7f69b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306831"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893345"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>SQL Server 속성(고급 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   다음 속성은 기본적으로 **고급** 탭에 나타납니다. 사용자 지정 속성을 정의한 경우 속성이 해당 값과 함께 이 탭에 나타납니다.  
   
 ## <a name="options"></a>옵션  

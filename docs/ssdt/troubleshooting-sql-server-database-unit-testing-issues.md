@@ -1,21 +1,21 @@
 ---
 title: SQL Server 데이터베이스 단위 테스트 문제 해결
+description: 시간 제한 오류 및 예기치 않은 대상에 데이터베이스 배포와 같이 SQL Server 단위 테스트에서 볼 수 있는 문제의 해결 팁을 봅니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: cf4c9cd1-7e73-4c3b-922a-68b9247e7b33
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fd1b41a9744c112fcafc8968bad7abc5ac9aa4c4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cc9f8c0c87922a54df0bcd3d2ee4fa730ecfaff7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256314"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883407"
 ---
 # <a name="troubleshooting-sql-server-database-unit-testing-issues"></a>SQL Server 데이터베이스 단위 테스트 문제 해결
 

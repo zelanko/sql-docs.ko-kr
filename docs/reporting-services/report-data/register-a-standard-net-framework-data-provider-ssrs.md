@@ -1,5 +1,6 @@
 ---
 title: 표준 .NET Framework 데이터 공급자 등록 | Microsoft Docs
+description: 타사 .NET Framework 데이터 공급자를 사용하여 Reporting Services 보고서 데이터 세트에 대한 데이터를 검색할 수 있도록 표준 .NET Framework 데이터 공급자를 등록합니다.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0f9435584579e36e46d55aa6723e0ade60b6642b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b50cd7f19db42111e22b26007e7bb1ca9ee48ff3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081952"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812128"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>표준 .NET Framework 데이터 공급자 등록(SSRS)
   타사 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 데이터 세트에 대한 데이터를 검색하려면 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자 어셈블리를 보고서 제작 클라이언트와 보고서 서버에 배포하고 등록해야 합니다. 보고서 제작 클라이언트에서 데이터 공급자를 데이터 원본 유형으로 등록하고 쿼리 디자이너와 연결해야 합니다. 그러면 보고서 데이터 세트를 만들 때 이 데이터 공급자를 데이터 원본 유형으로 선택할 수 있습니다. 연결된 쿼리 디자이너가 열려 이 데이터 원본 유형에 대한 쿼리 생성을 도와줍니다. 또한 보고서 서버에서 데이터 공급자를 데이터 원본 유형으로 등록해야 합니다. 그러면 이 데이터 공급자를 사용하여 데이터 원본에서 데이터를 검색하는 게시된 보고서를 처리할 수 있습니다.  
@@ -34,7 +35,7 @@ ms.locfileid: "77081952"
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-server"></a>보고서 서버에 데이터 공급자 어셈블리를 설치하려면  
   
-1.  보고서 서버에서 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 사용할 bin 디렉터리의 기본 위치로 이동합니다. 보고서 서버 bin 디렉터리의 기본 위치는 *\<드라이브>* :\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin입니다.  
+1.  보고서 서버에서 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 사용할 bin 디렉터리의 기본 위치로 이동합니다. 보고서 서버 bin 디렉터리의 기본 위치는 *\<drive>* :\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin입니다.  
   
 2.  준비 위치에서 보고서 서버의 bin 디렉터리로 어셈블리를 복사합니다. 또는 GAC(전역 어셈블리 캐시)에 어셈블리를 로드할 수 있습니다. 자세한 내용은 MSDN에 있는 [SDK 설명서의](https://go.microsoft.com/fwlink/?linkid=63912) 어셈블리 및 전역 어셈블리 캐시 작업(Working with Assemblies and the Global Assembly Cache) [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 을 참조하십시오.  
   
@@ -56,7 +57,7 @@ ms.locfileid: "77081952"
   
 4.  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자에 대한 항목을 추가합니다.  
   
-    |attribute|Description|  
+    |특성|설명|  
     |---------------|-----------------|  
     |**이름**|데이터 공급자의 고유 이름(예: **MyNETDataProvider**)을 제공합니다. **Name** 특성의 최대 길이는 255자입니다. 이름은 구성 파일의 **Extension** 요소에 있는 모든 항목 중에서 고유해야 합니다. 여기에 포함하는 값은 새 데이터 원본을 만들 때 데이터 원본 유형 드롭다운 목록에 표시됩니다.|  
     |**형식**|<xref:System.Data.IDbConnection> 인터페이스를 구현하는 클래스의 정규화된 네임스페이스 뒤에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자 어셈블리 이름(.dll 파일 확장명 포함 안 함)이 쉼표로 구분되어 결합된 목록을 입력합니다.|  
@@ -67,7 +68,7 @@ ms.locfileid: "77081952"
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     GAC(전역 어셈블리 캐시)에 어셈블리를 로드하는 경우 강력한 이름 속성을 제공해야 합니다. 다음은 그 예입니다.  
+     GAC(전역 어셈블리 캐시)에 어셈블리를 로드하는 경우 강력한 이름 속성을 제공해야 합니다. 예를 들면 다음과 같습니다.  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly,Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  
@@ -107,7 +108,7 @@ ms.locfileid: "77081952"
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-designer-client"></a>보고서 디자이너 클라이언트에 데이터 공급자 어셈블리를 설치하려면  
   
-1.  보고서 디자이너 클라이언트에서 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 사용할 PrivateAssemblies 디렉터리의 기본 위치로 이동합니다. PrivateAssemblies 디렉터리의 기본 위치는 *\<드라이브>* :\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies입니다.  
+1.  보고서 디자이너 클라이언트에서 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 사용할 PrivateAssemblies 디렉터리의 기본 위치로 이동합니다. PrivateAssemblies 디렉터리의 기본 위치는 *\<drive>* :\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies입니다.  
   
 2.  준비 위치에서 보고서 디자이너 클라이언트의 PrivateAssemblies 디렉터리로 어셈블리를 복사합니다. 또는 GAC(전역 어셈블리 캐시)에 어셈블리를 로드할 수 있습니다. 자세한 내용은 MSDN에 있는 [SDK 설명서의](https://go.microsoft.com/fwlink/?linkid=63912) 어셈블리 및 전역 어셈블리 캐시 작업(Working with Assemblies and the Global Assembly Cache) [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 을 참조하십시오.  
   
@@ -129,7 +130,7 @@ ms.locfileid: "77081952"
   
 4.  데이터 공급자에 대한 항목을 추가합니다.  
   
-    |attribute|Description|  
+    |특성|설명|  
     |---------------|-----------------|  
     |**이름**|데이터 공급자의 고유 이름(예: **MyNETDataProvider**)을 제공합니다. **Name** 특성의 최대 길이는 255자입니다. 이름은 구성 파일의 **Extension** 요소에 있는 모든 항목 중에서 고유해야 합니다. 여기에 포함하는 값은 새 데이터 원본을 만들 때 데이터 원본 유형 드롭다운 목록에 표시됩니다.|  
     |**형식**|<xref:System.Data.IDbConnection> 인터페이스를 구현하는 클래스의 정규화된 네임스페이스 뒤에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자 어셈블리 이름(.dll 파일 확장명 포함 안 함)이 쉼표로 구분되어 결합된 목록을 입력합니다.|  
@@ -140,7 +141,7 @@ ms.locfileid: "77081952"
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     GAC에 어셈블리를 로드하는 경우 강력한 이름 속성을 제공해야 합니다. 다음은 그 예입니다.  
+     GAC에 어셈블리를 로드하는 경우 강력한 이름 속성을 제공해야 합니다. 예를 들면 다음과 같습니다.  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly, Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  

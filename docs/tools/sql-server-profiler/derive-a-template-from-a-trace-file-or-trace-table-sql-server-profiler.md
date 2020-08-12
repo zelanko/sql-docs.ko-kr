@@ -1,6 +1,7 @@
 ---
 title: 추적 파일 또는 추적 테이블에서 템플릿 파생
 titleSuffix: SQL Server Profiler
+description: SQL Server Profiler를 사용하여 기존 추적 파일에서 또는 데이터베이스에 저장된 추적 테이블에서 추적 템플릿을 만드는 방법을 알아봅니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 88058eed970b7294f8bbc0c1cc50352753f511a2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 58e62ae757b0509c0cf9e7862e8bd6f0aa570183
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307295"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774823"
 ---
 # <a name="derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler"></a>추적 파일 또는 추적 테이블에서 템플릿 파생(SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 기존 추적 파일이나 테이블에서 추적 템플릿을 만드는 방법에 대해 설명합니다.  
   
 ### <a name="to-derive-a-template-from-a-trace-file-or-trace-table"></a>추적 파일 또는 추적 테이블에서 템플릿을 파생시키려면  

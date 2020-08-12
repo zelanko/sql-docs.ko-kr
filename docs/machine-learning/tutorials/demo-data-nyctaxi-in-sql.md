@@ -2,22 +2,22 @@
 title: 자습서용 뉴욕시 택시 데모 데이터
 description: 뉴욕시 택시 샘플 데이터를 포함하는 데이터베이스를 만듭니다. 이 데이터 세트는 SQL Server Machine Learning Services용 R 및 Python 자습서에서 사용됩니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/31/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e55076a539cb2a932c2f1e0c432daf774899518f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 46ad967b9ecd40b84cf7871e7b9ef113fe686953
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116666"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814063"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 및 R 자습서용 뉴욕시 택시 데모 데이터
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 문서에서는 [뉴욕시 택시 및 리무진 위원회](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)의 공용 데이터로 구성된 샘플 데이터베이스를 설정하는 방법을 설명합니다. 이 데이터는 SQL Server의 데이터베이스 내 분석에 대한 여러 R 및 Python 자습서에서 사용됩니다. 샘플 코드가 더 빨리 실행되도록 데이터의 대표 1% 샘플링을 만들었습니다. 시스템에서 데이터베이스 백업 파일은 90MB를 약간 초과하고 기본 데이터 테이블에 170만 개 행을 제공합니다.
 
@@ -33,6 +33,11 @@ ms.locfileid: "81116666"
 샘플 데이터베이스는 Microsoft에서 호스팅하는 SQL Server 2016 BAK 파일입니다. SQL Server 2016 이상에서 복원할 수 있습니다. 링크를 클릭하면 파일 다운로드가 즉시 시작됩니다. 
 
 파일 크기는 약 90MB입니다.
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+>[!NOTE]
+>[SQL Server 빅 데이터 클러스터](../../big-data-cluster/big-data-cluster-overview.md)에서 샘플 데이터베이스를 복원하려면 [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)를 다운로드하고 [SQL Server 빅 데이터 클러스터 마스터 인스턴스로 데이터베이스 복원](../../big-data-cluster/data-ingestion-restore-database.md)의 지침을 따릅니다.
+::: moniker-end
 
 1. [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)를 클릭하여 데이터베이스 백업 파일을 다운로드합니다.
 

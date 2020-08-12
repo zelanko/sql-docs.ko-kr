@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 제거 | Microsoft 문서
+description: 이 문서에서는 사용자가 만든 콘텐츠 또는 수정한 구성을 제거하지 않고 Reporting Services를 제거하는 방법을 설명합니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 16466f509383ec407dafcd5a9cf61b324a7c4b52
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 40bc0ef1014268a2d6b7d50d29589b1db3aaf093
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "71951572"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883699"
 ---
 # <a name="uninstall-reporting-services"></a>Reporting Services 제거
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 제거해도 사용자가 만든 콘텐츠나 수정한 구성은 제거되지 않습니다. 그러나 제거를 완료한 후에도 필요한 콘텐츠가 있는 경우 제거 프로세스를 시작하기 전에 콘텐츠를 복사하는 것이 좋습니다.  
   
@@ -35,9 +36,9 @@ ms.locfileid: "71951572"
   
  다음은 제거되지 않는 세 가지 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터베이스의 이름 예입니다.  
   
--   **보고서 서버 데이터베이스:** eportingService_7f616e2d253040e8ab5653b3c09a065e  
+-   **보고서 서버 데이터베이스:** ReportingService_7f616e2d253040e8ab5653b3c09a065e  
   
--   **보고서 서버 임시 데이터베이스:** portingService_7f616e2d253040e8ab5653b3c09a065eTempDB  
+-   **보고서 서버 임시 데이터베이스:** ReportingService_7f616e2d253040e8ab5653b3c09a065eTempDB  
   
 -   **보고서 서버 경고 데이터베이스:** ReportingService_7f616e2d253040e8ab5653b3c09a065e_Alerting  
   

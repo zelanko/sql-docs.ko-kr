@@ -1,5 +1,6 @@
 ---
 title: 오류 로그 모니터링
+description: SQL Server 오류 로그, Windows 애플리케이션 로그 및 SQL Server Management Studio 로그 파일 뷰어를 사용하여 SQL Server와 관련된 문제를 해결합니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,15 +26,15 @@ ms.assetid: e250336b-0695-44f6-a42f-23222f94e377
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f953f91d7def8c0363fe131540640047ef41f889
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 949a7c358d68ac66104140bb37d443af8b4b4b0f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306452"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894839"
 ---
 # <a name="monitoring-the-error-logs"></a>오류 로그 모니터링
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 특정 시스템 이벤트와 사용자 정의 이벤트를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 애플리케이션 로그에 기록합니다. 두 가지 로그 모두 모든 기록된 이벤트에 자동으로 타임스탬프를 남깁니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 있는 정보를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련된 문제를 해결할 수 있습니다.  
   
  Windows 애플리케이션 로그에서 Windows 운영 체제 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 발생하는 이벤트의 전체적인 모습을 볼 수 있습니다. Windows 이벤트 뷰어를 사용하여 Windows 애플리케이션 로그를 보고 정보를 필터링할 수 있습니다. 예를 들어 정보, 경고, 오류, 성공 감사 및 실패 감사와 같은 이벤트들을 필터링할 수 있습니다.  
@@ -43,7 +44,7 @@ ms.locfileid: "75306452"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[SQL Server 오류 로그 보기](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그 및 이 로그를 보는 방법에 대해 설명합니다.|  
 |[Windows 애플리케이션 로그 보기](../../tools/configuration-manager/viewing-the-windows-application-log.md)|Windows 애플리케이션 로그 및 이 로그를 보는 방법에 대해 설명합니다.|  

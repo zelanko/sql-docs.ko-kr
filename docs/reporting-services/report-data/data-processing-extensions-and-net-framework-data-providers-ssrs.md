@@ -1,5 +1,6 @@
 ---
 title: 데이터 처리 확장 프로그램과 .NET Framework 데이터 공급자 | Microsoft Docs
+description: Reporting Services와 함께 설치되는 구성 요소인 데이터 처리 확장 프로그램과 .NET Framework 데이터 공급자에 대해 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1be86b9522f0386fff2d1014c3d94c652411f029
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5c3e14debc6e14ebff0ef31cb47f560271b1a9b6
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082574"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812278"
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>데이터 처리 확장 프로그램과 .NET Framework 데이터 공급자(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 함께 설치되는 구성 요소로, 특정 유형의 데이터 원본에서 데이터를 검색하고 보고서 디자인 및 보고서 처리를 지원하기 위한 추가 기능을 제공하도록 디자인되었습니다. 먼저 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자는 특정 유형의 데이터 원본에서 데이터를 검색하고 수정할 수 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] System.Data <xref:System.Data> 또는 타사 제공 구성 요소입니다.  

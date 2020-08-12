@@ -1,5 +1,6 @@
 ---
 title: SQL Server Native Client 구성 속성(플래그 탭)
+description: SQL Server Native Client 구성 속성 대화 상자의 플래그 탭에 있는 옵션에 대해 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 59af121d-c8b9-4faa-91a1-b664f2c9b441
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4d8fd24d496c9a9fd42422aa9e46d26ddb27f062
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 84cdb363a7cae73f189a22298767e6eb47ef4e54
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087453"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880328"
 ---
 # <a name="sql-server-native-client-configuration-properties-flags-tab"></a>SQL Server Native Client 구성 속성(플래그 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   이 머신의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 라이브러리 파일에서 제공하는 프로토콜을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버와 통신합니다. 이 페이지에서는 이전에 SSL(Secure Sockets Layer)이라고 알려진 TLS(전송 계층 보안)를 사용하여 암호화된 연결을 요청하도록 클라이언트 컴퓨터를 구성합니다. 암호화된 연결을 설정할 수 없으면 연결되지 않습니다.  
   
  로그인 프로세스는 항상 암호화됩니다. 아래 옵션은 데이터 암호화에만 적용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 통신을 암호화하는 방법과 서버 인증서의 루트 인증 기관을 신뢰하도록 클라이언트를 구성하는 방법은 “[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 암호화” 및 “방법: [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 암호화 연결 사용([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager)"을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 참조하세요.  

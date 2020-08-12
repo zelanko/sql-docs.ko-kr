@@ -1,21 +1,21 @@
 ---
 title: Team Foundation Build에서 SQL Server 단위 테스트 실행
+description: Team Foundation 빌드에서 SQL Server 단위 테스트를 실행하는 방법을 알아봅니다. 빌드 정의를 만들고 자동화된 테스트 실행에서 단위 테스트를 실행하는 방법을 확인합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 0a892598e2d461d6c51e42292b00a367925f5f13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f256431ad0b9df55d23672522db8533ebd26f311
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244287"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893923"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>방법: Team Foundation Build에서 SQL Server 단위 테스트 실행
 
@@ -167,7 +167,7 @@ x64 빌드 에이전트에서 단위 테스트를 실행하려면 먼저 호스�
   
 9. 솔루션 탐색기에서 app.config를 두 번 클릭합니다.  
   
-10. 편집기에서 각 \<SqlUnitTesting_*VSVersion*> 노드에 `AllowConfigurationOverride="true"`를 추가합니다. 다음은 그 예입니다.  
+10. 편집기에서 각 \<SqlUnitTesting_*VSVersion*> 노드에 대해 `AllowConfigurationOverride="true"`를 추가합니다. 예를 들면 다음과 같습니다.  
   
     ```  
     -- Update SqlUnitTesting_VS2010 node to:  
@@ -264,7 +264,7 @@ x64 빌드 에이전트에서 단위 테스트를 실행하려면 먼저 호스�
   
 10. **기본** 그룹의 **자동화된 테스트**에서 실행하려는 테스트를 지정합니다. 기본적으로 솔루션에서 이름이 \*test\*.dll로 지정된 파일에 포함된 테스트가 실행됩니다.  
   
-11. **파일** 메뉴에서 **ProjectName** *저장*을 클릭합니다.  
+11. **파일** 메뉴에서 *ProjectName* **저장**을 클릭합니다.  
   
     빌드 정의를 만들었습니다. 이제 테스트 프로젝트를 수정합니다.  
   

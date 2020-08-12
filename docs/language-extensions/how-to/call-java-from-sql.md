@@ -4,20 +4,20 @@ titleSuffix: SQL Server Language Extensions
 description: SQL Server 언어 확장을 사용하여 SQL Server 저장 프로시저에서 Java 클래스를 호출하는 방법을 알아봅니다.
 author: dphansen
 ms.author: davidph
-ms.date: 11/05/2019
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bdff924b63b11eda850378987498e8601367d3fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5aa8659b57349efb7378209006bbada148206bcb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73658891"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735118"
 ---
 # <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>SQL Server 언어 확장에서 Java 런타임을 호출하는 방법
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [SQL Server 언어 확장](../language-extensions-overview.md)은 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 시스템 저장 프로시저를 인터페이스로 사용하여 Java 런타임을 호출합니다. 
 
@@ -114,6 +114,20 @@ with result sets ((column1 int))
 ```
 
 자세한 내용은 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)를 참조하세요.
+
+## <a name="loopback-connection-to-sql-server"></a>SQL Server에 대한 루프백 연결
+
+루프백 연결을 사용하여 JDBC를 통해 SQL Server에 다시 연결하여 `sp_execute_external_script`로 실행된 Java에서 데이터를 읽거나 씁니다. 이 방법은 `sp_execute_external_script`의 **InputDataSet** 및 **OutputDataSet** 인수 사용이 불가능할 때 사용할 수 있습니다.
+Windows에서 루프백 연결을 설정하려면 다음 예제를 사용합니다.
+
+```
+jdbc:sqlserver://localhost:1433;databaseName=Adventureworks;integratedSecurity=true;
+``` 
+
+Linux에서 루프백 연결을 설정하려면 JDBC 드라이버에 다음 인증서에 정의된 세 개의 연결 속성이 필요합니다.
+
+[Client-Certificate-Authenication](https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios)
+
 
 ## <a name="next-steps"></a>다음 단계
 

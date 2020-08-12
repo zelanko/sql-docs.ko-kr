@@ -1,31 +1,32 @@
 ---
 title: 자습서용 아이리스 데모 데이터 세트
-Description: 아이리스 데이터 세트 및 예상 모델을 포함하는 데이터베이스를 만듭니다. 이 데이터 세트는 SQL Server Machine Learning Services용 R 및 Python 자습서에서 사용됩니다.
+titleSuffix: SQL machine learning
+Description: 아이리스 데이터 세트 및 예상 모델을 포함하는 데이터베이스를 만듭니다. 이 데이터 세트는 SQL 기계 학습을 사용하는 R 및 Python 자습서에 사용됩니다.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 10/19/2018
+ms.technology: machine-learning-services
+ms.date: 05/26/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b1d3aee4034124f61d88ccdf5e35f86b13b60158
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 9a5b7cc5c89874bddfda0ac978bce5899b1cd64b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116676"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737843"
 ---
-#  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>SQL Server의 Python 및 R 자습서용 아이리스 데모 데이터 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="iris-demo-data-for-python-and-r-tutorials-with-sql-machine-learning"></a>SQL 기계 학습을 사용하는 Python 및 R 자습서용 아이리스 데모 데이터
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-이 연습에서는 [아이리스 꽃 데이터 세트](https://en.wikipedia.org/wiki/Iris_flower_data_set)의 데이터와 동일한 데이터를 기반으로 하는 모델의 데이터를 저장하는 데 사용할 SQL Server 데이터베이스를 만듭니다. 아이리스 데이터는 SQL Server에서 설치하는 R 및 Python 배포판 모두에 포함되며, SQL Server용 기계 학습 자습서에서 사용됩니다. 
+이 연습에서는 [아이리스 꽃 데이터 세트](https://en.wikipedia.org/wiki/Iris_flower_data_set)의 데이터를 저장할 데이터베이스를 만들고 동일한 데이터를 기반으로 모델을 만듭니다. 아이리스 데이터는 R 및 Python 배포판 모두에 포함되며, SQL 기계 학습용 기계 학습 자습서에서 사용됩니다.
 
-이 연습을 완료하려면 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) 또는 T-SQL 쿼리를 실행할 수 있는 다른 도구가 있어야 합니다.
+이 연습을 완료하려면 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 또는 T-SQL 쿼리를 실행할 수 있는 다른 도구가 있어야 합니다.
 
 이 데이터 세트를 사용하는 자습서 및 빠른 시작에는 다음이 포함됩니다.
 
-+  [빠른 시작: SQL Server에서 저장 프로시저를 사용하여 Python 모델 생성, 학습 및 사용](quickstart-python-train-score-model.md)
++ [빠른 시작: Python에서 예측 모델 만들기 및 점수 매기기](quickstart-python-train-score-model.md)
 
 ## <a name="create-the-database"></a>데이터베이스 만들기
 
@@ -39,9 +40,6 @@ ms.locfileid: "81116676"
     USE irissql
     GO
     ```
-
-    > [!TIP] 
-    > SQL Server를 처음 사용하거나 소유하고 있는 서버에서 작업하는 경우 일반적인 실수는 **마스터** 데이터베이스에 있음을 알리지 않고 로그인하여 작업을 시작하는 것입니다. 올바른 데이터베이스를 사용하고 있다고 확신할 수 있도록 항상 `USE <database name>` 문을 사용하여 컨텍스트를 지정합니다(예: `use irissql`).
 
 3. 데이터를 저장할 테이블 하나와 학습된 모델을 저장할 테이블을 포함한 몇 가지 빈 테이블을 추가합니다. **iris_models** 테이블은 다른 연습에서 생성된 직렬화된 모델을 저장하는 데 사용됩니다.
 
@@ -58,15 +56,12 @@ ms.locfileid: "81116676"
     );
     ```
 
-    > [!TIP] 
-    > T-SQL을 처음 사용하는 경우 `DROP...IF` 문을 기억하면 도움이 됩니다. 테이블을 만들려고 했지만 테이블이 이미 있는 경우 SQL Server에서 오류를 반환합니다. "데이터베이스에 'iris_data'라는 개체가 이미 있습니다." 이러한 오류를 방지하는 한 가지 방법은 코드에 포함된 기존 테이블 또는 다른 개체를 삭제하는 것입니다.
-
-4. 다음 코드를 실행하여 학습된 모델을 저장하는 데 사용되는 테이블을 만듭니다. SQL Server에 Python(또는 R) 모델을 저장하려면 직렬화하고 **varbinary(max)** 형식의 열에 저장해야 합니다. 
+4. 다음 코드를 실행하여 학습된 모델을 저장하는 데 사용되는 테이블을 만듭니다. SQL Server에 Python(또는 R) 모델을 저장하려면 직렬화하고 **varbinary(max)** 형식의 열에 저장해야 합니다.
 
     ```sql
     DROP TABLE IF EXISTS iris_models;
     GO
-    
+
     CREATE TABLE iris_models (
       model_name VARCHAR(50) NOT NULL DEFAULT('default model') PRIMARY KEY,
       model VARBINARY(MAX) NOT NULL
@@ -78,7 +73,7 @@ ms.locfileid: "81116676"
 
 ## <a name="populate-the-table"></a>테이블 채우기
 
-R 또는 Python에서 기본 제공되는 아이리스 데이터를 가져올 수 있습니다. Python 또는 R을 사용하여 데이터를 데이터 프레임에 로드한 다음, 데이터베이스의 테이블에 삽입할 수 있습니다. 외부 세션의 학습 데이터를 SQL Server 테이블로 이동하는 것은 다단계 프로세스입니다.
+R 또는 Python에서 기본 제공되는 아이리스 데이터를 가져올 수 있습니다. Python 또는 R을 사용하여 데이터를 데이터 프레임에 로드한 다음, 데이터베이스의 테이블에 삽입할 수 있습니다. 외부 세션의 학습 데이터를 테이블로 이동하는 것은 다단계 프로세스입니다.
 
 + 원하는 데이터를 가져오는 저장 프로시저를 설계합니다.
 + 저장 프로시저를 실행하여 실제로 데이터를 가져옵니다.
@@ -136,10 +131,6 @@ R 또는 Python에서 기본 제공되는 아이리스 데이터를 가져올 �
 
     T-SQL을 처음 사용하는 경우 INSERT 문이 새 데이터만 추가한다는 점에 유의해야 합니다. 기존 데이터를 확인하거나 테이블을 삭제하고 다시 빌드하지는 않습니다. 동일한 데이터의 여러 복사본이 테이블에 표시되지 않도록 하려면 먼저 `TRUNCATE TABLE iris_data` 문을 실행하면 됩니다. T-SQL [TRUNCATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/truncate-table-transact-sql) 문은 기존 데이터를 삭제하지만 테이블 구조는 그대로 유지합니다.
 
-    > [!TIP]
-    > 저장 프로시저를 나중에 수정하려면 삭제한 후 다시 만들 필요가 없습니다. [ALTER PROCEDURE](https://docs.microsoft.com/sql/t-sql/statements/alter-procedure-transact-sql) 문을 사용합니다. 
-
-
 ## <a name="query-the-data"></a>데이터 쿼리
 
 유효성 검사 단계로, 쿼리를 실행하여 데이터가 업로드되었는지 확인합니다.
@@ -157,4 +148,4 @@ R 또는 Python에서 기본 제공되는 아이리스 데이터를 가져올 �
 
 다음 빠른 시작에서 기계 학습 모델을 만들어 테이블에 저장한 다음, 모델을 사용하여 예측된 결과를 생성합니다.
 
-+ [빠른 시작: SQL Server에서 저장 프로시저를 사용하여 Python 모델 생성, 학습 및 사용](quickstart-python-train-score-model.md)
++ [빠른 시작: Python에서 예측 모델 만들기 및 점수 매기기](quickstart-python-train-score-model.md)

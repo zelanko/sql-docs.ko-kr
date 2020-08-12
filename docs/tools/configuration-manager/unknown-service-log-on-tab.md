@@ -1,5 +1,6 @@
 ---
 title: 알 수 없는 서비스(로그온 탭)
+description: SQL Server에서 알 수 없는 서비스 속성 대화 상자의 로그온 탭에 대해 알아봅니다. 이 탭을 사용하여 계정을 지정하고 서비스를 시작 또는 중지하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e9b35cb5-d8ae-42ea-b59e-deedc99c4823
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8fae62bb72e41cd9f87200a6bcfd2f17eb780697
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 423b2610627e4c6447dbaa1db8ac4624044a31ea
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307589"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880278"
 ---
 # <a name="unknown-service-log-on-tab"></a>알 수 없는 서비스(로그온 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자가 이 서비스를 식별할 수 없습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 서비스가 실행되는 컴퓨터의 WMI 공급자로부터 서비스 정보를 받습니다. 서비스 속성을 읽는 동안 오류가 발생했거나 서비스 속성이 완전하지 않습니다. 이 문제를 해결하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 닫은 후 다시 열거나 서비스가 실행되는 컴퓨터의 WMI 공급자를 확인하십시오.  

@@ -5,20 +5,20 @@ description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터를 �
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/28/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 49ed75b4986a45dfec25547317e3fe0789671fe4
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 4d384a1835d902e56030b62897d657c81c0ec3b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606405"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773676"
 ---
 # <a name="troubleshoot-big-data-clusters-2019-kubernetes"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes 문제 해결
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]를 모니터링하고 문제를 해결하는 데 사용할 수 있는 몇 가지 유용한 Kubernetes 명령을 설명합니다. 빅 데이터 클러스터에 있는 Pod 또는 다른 Kubernetes 아티팩트에 대한 자세한 정보를 보는 방법을 보여 줍니다. 이 문서에서는 SQL Server 빅 데이터 클러스터 서비스 중 하나를 실행하는 컨테이너에(서) 파일 복사 등의 일반적인 작업에 대해서도 설명합니다.
 
@@ -118,8 +118,10 @@ kubectl get svc -n mssql-cluster
 |---|---|
 | **master-svc-external** | 마스터 인스턴스에 대한 액세스를 제공합니다.<br/>(**EXTERNAL-IP,31433** 및 **SA** 사용자) |
 | **controller-svc-external** | 클러스터를 관리하는 도구 및 클라이언트를 지원합니다. |
-| **gateway-svc-external** | HDFS/Spark 게이트웨이에 대한 액세스를 제공합니다.<br/>(**EXTERNAL-IP** 및 **root** 사용자) |
+| **gateway-svc-external** | HDFS/Spark 게이트웨이에 대한 액세스를 제공합니다.<br/>(**EXTERNAL-IP** 및 `<AZDATA_USERNAME>` 사용자)<sup>1</sup>|
 | **appproxy-svc-external** | 애플리케이션 배포 시나리오를 지원합니다. |
+
+<sup>1</sup> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 > [!TIP]
 > 이 방법으로 **kubectl**을 사용하여 서비스를 볼 수 있지만, `azdata bdc endpoint list` 명령을 사용하여 해당 엔드포인트를 볼 수도 있습니다. 자세한 내용은 [빅 데이터 클러스터 엔드포인트 가져오기](deployment-guidance.md#endpoints)를 참조하세요.

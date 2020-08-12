@@ -1,5 +1,6 @@
 ---
 title: XML 보고서 데이터를 위한 요소 경로 구문 | Microsoft Docs
+description: 보고서 디자이너에서 XML 보고서 데이터의 경로를 정의하는 데 사용되는 요소 경로 구문 및 규칙에 대해 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 967ffe24035094296d467e4a60225f31b1558cc5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5a8404e6b993481202061644e68fa44a830fdca6
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077664"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808463"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML 보고서 데이터를 위한 요소 경로 구문(SSRS)
   보고서 디자이너에서 대/소문자 구분 요소 경로를 정의하여 XML 데이터 원본에서 보고서에 사용할 데이터를 지정할 수 있습니다. 요소 경로는 XML 데이터 원본의 XML 계층 노드와 해당 특성으로 이동하는 방법을 나타냅니다. 기본 요소 경로를 사용하려면 데이터 세트 쿼리나 XML **ElementPath**의 XML **Query**를 비워 둡니다. XML 데이터 원본에서 데이터가 검색될 때 텍스트 값이 있는 요소 노드와 요소 노드 특성은 결과 집합의 열이 됩니다. 쿼리를 실행하면 노드 및 특성 값은 행 데이터가 됩니다. 열은 보고서 데이터 창에 데이터 세트 필드 컬렉션으로 표시됩니다. 이 항목에서는 요소 경로 구문을 설명합니다.  
@@ -73,7 +74,7 @@ XMLLocalName :: =
 |용어|정의|  
 |----------|----------------|  
 |요소 경로|XML 데이터 원본을 사용하여 데이터 세트의 필드 데이터를 검색하기 위해 XML 문서 내에서 이동할 노드 시퀀스를 정의합니다.|  
-|**ElementNode**|XML 문서의 XML 노드입니다. 노드는 태그로 지정되며 다른 노드와 계층 관계에 있습니다. 예를 들어, \<Customers>는 루트 요소 노드이고 \<Customer>는 \<Customers>의 하위 요소입니다.|  
+|**ElementNode**|XML 문서의 XML 노드입니다. 노드는 태그로 지정되며 다른 노드와 계층 관계에 있습니다. 예를 들어 \<Customers>는 루트 요소 노드입니다. \<Customer>는 \<Customers>의 하위 요소입니다.|  
 |**XMLName**|노드의 이름입니다. 예를 들어 Customers 노드의 이름은 Customers입니다. **XMLName** 에 네임스페이스 식별자를 접두사로 사용하면 모든 노드에 고유 이름을 지정할 수 있습니다.|  
 |**인코딩**|이 요소에 대한 **Value** 가 인코딩된 XML이므로 이 값을 디코딩하여 이 요소의 하위 요소로 포함해야 함을 나타냅니다.|  
 |**FieldList**|데이터를 검색하는 데 사용할 요소 및 특성 집합을 정의합니다.<br /><br /> 지정하지 않으면 모든 특성 및 하위 요소가 필드로 사용됩니다. 빈 필드 목록을 지정하는 경우( **{}** ) 이 노드의 필드는 사용되지 않습니다.<br /><br /> **FieldList** 에 **Value** 와 **Element** 또는 **ElementNode**가 모두 포함될 수는 없습니다.|  
@@ -90,7 +91,7 @@ XMLLocalName :: =
 > [!NOTE]  
 >  요소 경로가 비어 있으면 쿼리는 기본 요소 경로인 첫 번째 리프 노드 컬렉션 경로를 사용합니다. 첫 번째 예에서 요소 경로를 비워 둔 것은 /Customers/Customer/Orders/Order 요소 경로를 지정한 것과 같습니다. 경로와 함께 모든 노드 값과 특성이 결과 세트에 반환되고 노드 이름과 특성 이름은 데이터 세트 필드로 나타납니다.  
   
- **예제 #1**: *비어 있음*  
+ **예 1**: *비어 있음*  
   
 |주문|수량|ID|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  

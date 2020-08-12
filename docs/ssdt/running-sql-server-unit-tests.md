@@ -1,5 +1,6 @@
 ---
 title: SQL Server 단위 테스트 실행
+description: SQL Server 단위 테스트에 대해 알아봅니다. 테스트 만들기, 사용자 지정 테스트 조건 만들기, 테스트 실행, 결과 해석에 대한 리소스를 봅니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: febcc87f-eb18-4c12-ba30-82ef0d49aaa3
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 93dfaf8cf202b0b9447574ecfc58cc13f151381b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d27d25d374d737cc51f7e0a5149556a4d5a92260
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256977"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883459"
 ---
 # <a name="running-sql-server-unit-tests"></a>SQL Server 단위 테스트 실행
 
@@ -26,7 +26,7 @@ ms.locfileid: "75256977"
 ## <a name="ways-to-run-sql-server-unit-tests"></a>SQL Server 단위 테스트를 실행하는 방법  
 아래에서 보여 주는 것과 같이 설치한 소프트웨어에 따라 다른 여러 가지 방법으로 SQL Server 단위 테스트를 실행할 수 있습니다.  
   
--   Visual Studio 2010 **테스트 뷰** 창을 사용하여 테스트를 실행합니다. 자세한 내용은 [방법: SQL Server 단위 테스트 실행](../ssdt/how-to-run-sql-server-unit-tests.md) 및 [방법: Microsoft Visual Studio 2010에서 자동화된 테스트 실행](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)을 참조하세요. Visual Studio 2012의 경우에는 [방법: Microsoft Visual Studio 2012에서 자동화된 테스트 실행](https://msdn.microsoft.com/library/ms182470.aspx)을 참조하세요.  
+-   Visual Studio 2010 **테스트 뷰** 창을 사용하여 테스트를 실행합니다. 자세한 내용은 [방법: SQL Server 단위 테스트 실행](../ssdt/how-to-run-sql-server-unit-tests.md) 및 [방법: Microsoft Visual Studio 2010에서 자동화된 테스트 실행](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)을 참조하세요. Visual Studio 2012의 경우 [방법: Microsoft Visual Studio 2012에서 자동화된 테스트 실행](https://msdn.microsoft.com/library/ms182470.aspx)을 참조하세요.  
   
 -   명령 프롬프트에서 MSTest.exe 명령을 사용하여 테스트를 실행합니다. 자세한 내용은 [방법: MSTest를 사용하여 명령줄에서 자동화된 테스트 실행(Visual Studio 2010)](https://msdn.microsoft.com/library/ms182487(VS.100).aspx) 또는 [MSTest를 사용하여 명령줄에서 자동화된 테스트 실행(Visual Studio 2012)](https://msdn.microsoft.com/library/ms182487.aspx)을 참조하세요.  
   

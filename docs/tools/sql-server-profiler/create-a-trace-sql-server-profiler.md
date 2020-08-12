@@ -1,6 +1,7 @@
 ---
 title: 추적 만들기
 titleSuffix: SQL Server Profiler
+description: SQL Server Profiler에서 추적을 만들어 이벤트 데이터를 캡처하는 방법을 알아봅니다. 추적에 지정할 수 있는 다양한 옵션을 알아봅니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 08/01/2016
-ms.openlocfilehash: 5a5c004bbc7e93720f18df998b989c46ced0188e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c9c3fd13687004c1e632e81819ea25bfac7a3689
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307338"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774882"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>추적 만들기(SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 추적을 만드는 방법에 대해 설명합니다.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "75307338"
   
      **추적 속성** 대화 상자가 나타납니다.  
   
-    > **참고:** **연결한 후 즉시 추적 시작** 을 선택한 경우에는 **추적 속성** 대화 상자가 나타나지 않고 추적이 시작됩니다. 이 설정을 해제하려면 *도구  *메뉴에서 **옵션**을 클릭한 다음, 연결하고 즉시 추적 시작 확인란의 선택을 취소합니다.  
+    > **참고:** **연결한 후 즉시 추적 시작** 을 선택한 경우에는 **추적 속성** 대화 상자가 나타나지 않고 추적이 시작됩니다. 이 설정을 해제하려면 *도구 *메뉴에서 **옵션**을 클릭한 다음, 연결하고 즉시 추적 시작 확인란의 선택을 취소합니다.  
   
 2.  **추적 이름** 입력란에 추적의 이름을 입력합니다.  
   

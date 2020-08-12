@@ -1,5 +1,6 @@
 ---
 title: 페이지를 매긴 보고서의 데이터 원본 속성 구성 - SSRS | Microsoft Docs
+description: Reporting Services에서 페이지를 매긴 보고서용 데이터 원본 속성을 구성하는 방법을 알아봅니다. 또한 속성을 설정하여 데이터 원본 연결 정보를 변경합니다.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5e134c81fd697d4aa6fc7e5b620c1a71ff462b73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2b4d8ce66078d49f7bf70e226de762a7c8a63325
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573202"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811372"
 ---
 # <a name="configure-data-source-properties-for-a-paginated-report"></a>페이지를 매긴 보고서의 데이터 원본 속성 구성
   페이지를 매긴 보고서를 실행하면 보고서 서버가 속성 정보를 검색하여 데이터 원본에 연결하는 방식을 결정합니다. 데이터 원본 유형, 연결 문자열 및 자격 증명 정보가 게시된 보고서의 데이터 원본 속성 페이지에 지정되어 있습니다. 데이터 원본 연결 정보가 보고서 생성 시 지정된 원래 값과 달라지도록 속성을 설정할 수 있습니다.  

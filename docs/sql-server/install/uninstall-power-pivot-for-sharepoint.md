@@ -1,5 +1,6 @@
 ---
 title: SharePoint용 파워 피벗 제거 | Microsoft 문서
+description: 이 문서에서는 SharePoint 설치용 파워 피벗을 제거하는 방법을 설명합니다. 이 작업은 여러 단계로 구성됩니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b39d5f4e33b9ecae8617cb414854d423945637d6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 91b944079d74d13ef7cd3cade08c00f5df9c9f29
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "71952732"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883711"
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>SharePoint용 Power Pivot 제거
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치 제거는 제거를 준비하고, 팜에서 기능과 솔루션을 제거하고, 프로그램 파일과 레지스트리 설정을 제거하는 작업으로 구성된 다단계 작업입니다.  
   
@@ -34,7 +35,7 @@ ms.locfileid: "71952732"
   
 -   [3단계: SQL Server 설치 프로그램을 실행하여 로컬 컴퓨터에서 프로그램 제거](#bkmk_uninstall)  
   
--   [4단계: SharePoint용 Power Pivot 추가 기능 제거](#bkmk_addin)  
+-   [4단계: SharePoint용 파워 피벗 추가 기능 제거](#bkmk_addin)  
   
 -   [5단계: 제거 확인](#verify)  
   
@@ -100,7 +101,7 @@ ms.locfileid: "71952732"
   
 6.  **유효성 검사** 를 클릭하여 각 동작이 유효한지 여부를 확인합니다. **유효성 검사** 를 사용할 수 없는 경우 모든 동작이 시스템에 유효한 것입니다.  
   
-7.  **실행** 을 클릭하여 이 태스크에 유효한 모든 동작을 수행합니다. **실행** 은 유효성 검사를 통과한 후에만 사용할 수 있습니다. **실행**을 클릭하면 동작이 일괄 처리 모드로 처리됨을 알리는 다음 경고가 나타납니다. “도구에서 유효한 것으로 플래그가 지정되는 모든 구성 설정이 SharePoint 팜에 적용됩니다. 계속하시겠습니까?”  
+7.  **실행** 을 클릭하여 이 태스크에 유효한 모든 동작을 수행합니다. **실행** 은 유효성 검사를 통과한 후에만 사용할 수 있습니다. **실행**을 클릭하면 작업이 일괄 처리 모드로 처리됨을 알리는 다음 경고가 나타납니다. "도구에서 유효한 것으로 플래그가 지정되는 모든 구성 설정이 SharePoint 팜에 적용됩니다. 계속하시겠습니까?”  
   
 8.  계속하려면 **예** 를 클릭합니다.  
   
@@ -122,7 +123,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
     Stsadm -o enumdeployments  
     ```  
   
-3.  기존 배포에서 **유형** 이 취소 또는 배포인지, **파일** 이 powerpivotwebapp.wsp 또는 powerpivotfarm.wsp인지 검토합니다.  
+3.  기존 배포에서 **유형**이 취소 또는 배포인지, **파일**이 powerpivotwebapp.wsp 또는 powerpivotfarm.wsp인지 검토합니다.  
   
 4.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 솔루션에 관련된 배포 또는 취소의 경우 **JobId**의 GUID 값을 복사하여 다음 명령에 붙여넣습니다(Shell의 편집 메뉴에서 표시, 복사 및 붙여넣기 명령을 사용하여 GUID를 복사합니다).  
   
@@ -147,7 +148,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      설치 프로그램에서 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** 인스턴스를 선택한 다음 **Analysis Services** 및 **Analysis Services SharePoint 통합** 을 선택하여 해당 기능만 제거하고 나머지 모든 기능을 그대로 둘 수 있습니다.  
   
-##  <a name="step-4-uninstall-the-power-pivot-for-sharepoint-add-in"></a><a name="bkmk_addin"></a> 4단계: SharePoint용 Power Pivot 추가 기능 제거  
+##  <a name="step-4-uninstall-the-power-pivot-for-sharepoint-add-in"></a><a name="bkmk_addin"></a> 4단계: SharePoint용 파워 피벗 추가 기능 제거  
  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포에 두 개 이상의 서버가 포함되었고 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 추가 기능이 설치된 경우 모든 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 파일을 완전히 제거하려면 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 추가 기능이 설치된 각 서버에서 이 추가 기능을 제거합니다. 자세한 내용은 [SharePoint용 파워 피벗 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)를 참조하세요.  
   
 ##  <a name="step-5-verify-uninstall"></a><a name="verify"></a> 5단계: 제거 확인  

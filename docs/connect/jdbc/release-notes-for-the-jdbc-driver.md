@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bbcff4ee14db85a3a973496ce8a5cb24772a35b9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f07f4e5f6e833419b922dd6f8e6d7b58becf96b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634290"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85793287"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>SQL Server용 Microsoft JDBC 드라이버에 대한 릴리스 정보
 
@@ -51,7 +51,7 @@ SQL Server용 Microsoft JDBC Driver 8.2는 이제 JDK 11.0 및 1.8 외에도 JDK
 | Always Encrypted 변경 | 세부 정보 |
 | :--------- | :------ |
 | SQL Server용 Microsoft JDBC Driver 8.2는 이제 보안 Enclave를 사용한 Always Encrypted를 지원합니다. 자세한 내용은 여기에서 찾을 수 있습니다. 보안 enclave를 사용한 Always Encrypted. |
-| 추가 정보 및 샘플 코드. | [보안 Enclave를 사용한 Always Encrypted](always-encrypted-with-secure-enclaves.md)를 참조하세요. |
+| 추가 정보 및 샘플 코드. | [보안 Enclave를 사용한 Always Encrypted](../../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md)를 참조하세요. |
 | &nbsp; | &nbsp; |
 
 ### <a name="performance-improvement-when-retrieving-temporal-datatypes-from-sql-server-sup1sup"></a>SQL Server에서 Temporal 데이터 형식을 검색하는 경우의 성능 향상<sup>1</sup>
@@ -64,11 +64,11 @@ SQL Server용 Microsoft JDBC Driver 8.2는 이제 JDK 11.0 및 1.8 외에도 JDK
 
 <sup>1</sup> java.util.Calendar 및 java.time.LocalDateTime API에서 표준 시간대가 처리되는 방법의 차이로 인해 사용자가 제공한 java.util.Calendar 개체가 연결된 temporal 데이터 형식 또는 microsoft.sql.DateTimeOffset 데이터 형식은 이 향상된 기능을 이용하지 않습니다.
 
-### <a name="deployment-of-mssql-jdbc_auth-version-archdll-previously-sqljdbc_authdll-to-maven-repository"></a>Maven 리포지토리에 mssql-jdbc_auth-\<버전>-\<arch>.dll(이전 sqljdbc_auth.dll) 배포
+### <a name="deployment-of-mssql-jdbc_auth-version-archdll-previously-sqljdbc_authdll-to-maven-repository"></a>Maven 리포지토리에 mssql-jdbc_auth-\<version>-\<arch>.dll(이전의 sqljdbc_auth.dll) 배포
 
 | sqljdbc_auth.dll 변경 | 세부 정보 |
 | :------------------- | :------ |
-| SQL Server용 Microsoft JDBC Driver 8.2부터, 드라이버는 sqljdbc_auth.dll이 아니라 mssql-jdbc_auth-\<버전>-\<arch>.dll을 통해 Azure Active Directory 인증 기능을 사용합니다. | &nbsp; |
+| SQL Server용 Microsoft JDBC Driver 8.2부터, 드라이버는 sqljdbc_auth.dll이 아니라 mssql-jdbc_auth-\<version>-\<arch>.dll을 통해 Azure Active Directory 인증 기능을 사용합니다. | &nbsp; |
 | 또한 더 쉽게 액세스할 수 있도록 DLL이 Maven 리포지토리에 업로드되었습니다. | [이 페이지](https://search.maven.org/artifact/com.microsoft.sqlserver/mssql-jdbc_auth)를 참조하세요. |
 | &nbsp; | &nbsp; |
 
@@ -344,7 +344,7 @@ JDBC Driver에서 성능 향상을 위해 준비된 문 메타데이터 캐싱�
 
 ### <a name="added-support-for-azure-ad-integrated-authentication-on-linuxmacos"></a>Linux/macOS에서 Azure AD 통합 인증에 대한 지원 추가
 
-또한 JDBC Driver는 이제 지원되는 모든 운영 체제(Windows, Linux, macOS)에서 Kerberos를 사용하여 Azure AD(Azure Active Directory) 통합 인증을 지원합니다. 또는 Windows 운영 체제에서 사용자는 mssql-jdbc_auth-\<버전>-\<arch>.dll을 사용하여 인증할 수 있습니다.
+또한 JDBC Driver는 이제 지원되는 모든 운영 체제(Windows, Linux, macOS)에서 Kerberos를 사용하여 Azure AD(Azure Active Directory) 통합 인증을 지원합니다. 또는 Windows 운영 체제에서 사용자는 mssql-jdbc_auth-\<version>-\<arch>.dll을 사용하여 인증할 수 있습니다.
 
 ### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-140"></a>업데이트된 "ADAL4J(Java용 Microsoft Azure Active Directory 인증 라이브러리)" 버전: 1.4.0
 

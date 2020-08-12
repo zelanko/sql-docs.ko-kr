@@ -1,6 +1,7 @@
 ---
 title: SHOWPLAN 결과로 쿼리 분석
 titleSuffix: SQL Server Profiler
+description: SQL Server Profiler가 쿼리 계획 정보를 표시하도록 추적에서 실행 계획 이벤트를 추출하는 방법을 알아봅니다. 실행 계획 추적 이벤트 표를 표시합니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: e0936a3931b574c08e5a58f396d7917eae569078
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b833f87e092260d38649c464fd4b09c6e43899d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307382"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774957"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>SQL Server Profiler에서 SHOWPLAN 결과로 쿼리 분석
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서 추적에 쿼리 계획 정보를 수집하고 표시하도록 추적 정의에 Showplan 이벤트 클래스를 추가할 수 있습니다. 추적에 수집된 다른 이벤트에서 Showplan 이벤트를 추출하고 이러한 Showplan 이벤트를 별도의 XML 파일에 저장할 수도 있습니다.  
   
  추적에서 Showplan 이벤트를 추출하는 것은 다음 방법 중 하나로 수행할 수 있습니다.  

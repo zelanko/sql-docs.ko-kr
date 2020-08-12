@@ -1,5 +1,6 @@
 ---
 title: SQL Server 단위 테스트에서 테스트 조건 사용
+description: SQL Server 단위 테스트의 테스트 조건에 대해 알아봅니다. 미리 정의된 조건 및 부정 테스트를 사용하고 사용자 지정 조건에 대한 정보를 보는 방법을 확인합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 85dfbf5b8843325f445a73b7e470c54cf3c91d58
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dc5e5817952ea19f12879079c572a3c79594e070
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243515"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895112"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>SQL Server 단위 테스트에서 테스트 조건 사용
 

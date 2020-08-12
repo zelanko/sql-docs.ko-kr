@@ -1,6 +1,7 @@
 ---
 title: 필터 수정
 titleSuffix: SQL Server Profiler
+description: 필요한 정보를 수집할 수 있도록 SQL Server Profiler에서 추적 필터를 수정하는 방법을 알아봅니다. 추적 필터가 데이터베이스 성능에 미치는 영향을 알아봅니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 4953da977f5172b8e861069616ff96e792dac8ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5231ec1526b1f019355f659ac58233c1f31005f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307182"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789962"
 ---
 # <a name="modify-a-filter-sql-server-profiler"></a>필터 수정(SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 추적 정의가 포함된 추적 템플릿에 필터를 추가하여 추적에서 수집하는 이벤트의 수를 제한할 수 있습니다. 수집된 이벤트의 수를 제한하면 추적의 성능 효과가 저하될 수 있습니다. 추적 템플릿에 필터를 설정했고 추적에서 필요한 유형의 정보를 수집하고 있지 않는 것을 확인하는 경우 해당 필터를 편집할 수 있습니다.  
   

@@ -1,21 +1,21 @@
 ---
 title: 데이터베이스 단위 테스트가 포함된 이전 테스트 프로젝트 업그레이드
+description: 데이터베이스 단위 테스트가 포함된 Visual Studio 2010 테스트 프로젝트를 업그레이드하는 방법을 알아봅니다. 이러한 프로젝트에 SQL Server Data Tools를 사용하는 방법을 확인합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 42782ff3-e8cf-4c9d-8dac-a95b236edfc4
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 146d52de5abbd868d80e848636213cf273c468ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 801844176680032b24e777a70acceea65f19f1f2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256298"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883388"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>데이터베이스 단위 테스트가 포함된 이전 테스트 프로젝트 업그레이드
 

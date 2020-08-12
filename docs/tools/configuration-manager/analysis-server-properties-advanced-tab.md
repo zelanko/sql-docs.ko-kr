@@ -1,5 +1,6 @@
 ---
 title: 분석 서버 속성(고급 탭)
+description: 덤프 디렉터리, 인스턴스 ID 등 Analysis Server 속성 대화 상자의 고급 탭에 있는 옵션에 대해 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: f4415e35-8f50-4cb7-813e-bdfafbdee275
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bbf3cee39d32cfa8b48de1f81228e623463a09fd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 72da2262279318c71b7df0a59433af55db7ec1c6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306578"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892075"
 ---
 # <a name="analysis-server-properties-advanced-tab"></a>분석 서버 속성(고급 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   이 서비스는 Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]입니다. 사용자 지정 속성을 정의한 경우 속성이 해당 값과 함께 이 탭에 나타납니다.  
   
 ## <a name="options"></a>옵션  

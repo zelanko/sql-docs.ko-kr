@@ -5,20 +5,20 @@ description: SQL Server 2019 빅 데이터 클러스터와 함께 사용되는 �
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cafec0d1542cd2ec6a02557b400a17b6d0d0ddad
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 3fe867d6f075067d949becdbcae4630f1ad019d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606675"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784307"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>SQL Server 2019 빅 데이터 도구 설치
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]를 만들고 관리 및 사용하기 위해 설치해야 하는 클라이언트 도구를 설명합니다. 다음 섹션에서는 도구 목록 및 설치 지침 링크를 제공합니다. 빅 데이터 클러스터를 배포하기 전에 Windows 또는 Linux에서 필수로 표시된 도구를 구성합니다.
 
@@ -37,6 +37,7 @@ ms.locfileid: "83606675"
 | **mssql-cli** | 옵션 | SQL Server를 쿼리하기 위한 최신 명령줄 인터페이스입니다([자세한 정보](../tools/mssql-cli.md)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
 | **sqlcmd** | 일부 스크립트의 경우 | SQL Server를 쿼리하기 위한 레거시 명령줄 도구입니다([자세한 정보](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). SQLCMD 패키지를 설치하기 전에 Microsoft ODBC Driver 11 for SQL Server를 설치해야 할 수 있습니다. | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | `curl` <sup>3</sup> | 일부 스크립트의 경우 | URL을 사용하여 데이터를 전송하기 위한 명령줄 도구입니다. | [Windows](https://curl.haxx.se/windows/) \| Linux: curl 패키지 설치 |
+| `oc` | Red Hat OpenShift 및 Azure Redhat OpenShift 배포에 필요합니다. |`oc`는 OpenShift CLI(명령줄 인터페이스)입니다. | [CLI 설치](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html#installing-the-cli)
 
 <sup>1</sup>`kubectl` 버전 1.13 이상을 사용해야 합니다. 또한 `kubectl` 버전은 Kubernetes 클러스터의 바로 이전 또는 이후 부 버전이어야 합니다. `kubectl` 클라이언트에서 특정 버전을 설치하려는 경우 [Install `kubectl` binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl)(curl을 통해 kubectl 이진 설치)를 참조하세요(Windows 10에서는 Windows PowerShell이 아닌 cmd.exe를 사용하여 curl 실행).
 

@@ -1,6 +1,7 @@
 ---
 title: 추적에 표시된 열 구성
 titleSuffix: SQL Server Profiler
+description: 추적을 정의하거나 볼 때 이벤트를 그룹화하고 집계하여 SQL Server Profiler 추적 출력을 더 쉽게 분석할 수 있습니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 52fc0c568a3880be3ace28f9f0a65f6bfd6a1225
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2dd83d35238e74908614c2aaed96e3bc8a11180f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307558"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774754"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>표시된 열 추적으로 구성(SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 추적 테이블이나 **추적 파일 속성** 대화 상자에서 **열 구성** 을 선택하는 방법으로 또는 추적을 정의할 때 추적에서 데이터 열을 그룹화할 수 있습니다. 데이터 열을 그룹화하면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적 출력을 더 정확히 분석할 수 있습니다. 자세한 내용은 [SQL Server Profiler를 사용하여 추적 보기 및 분석](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)을 참조하세요.  
   

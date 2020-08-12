@@ -1,18 +1,19 @@
 ---
 title: 데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS | Microsoft Docs
-ms.date: 11/18/2019
+description: 데이터 연결 문자열을 만드는 방법을 알아보고 데이터 원본 자격 증명과 관련된 중요 정보를 살펴봅니다.
+ms.date: 05/21/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 73bf9e24ffb42ef93547097c53b5838a22292fda
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: accb94c4fbfe0c7e10b6fdfcaa749e8059b8e498
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190920"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812298"
 ---
 # <a name="create-data-connection-strings---report-builder--ssrs"></a>데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS
 
@@ -41,12 +42,12 @@ ms.locfileid: "74190920"
 |SAP NetWeaver BI 데이터 원본|`DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|데이터 원본 유형을 **SAP NetWeaver BI**로 설정합니다. 자세한 내용은 [SAP NetWeaver BI 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md)을 참조하세요.|  
 |Hyperion Essbase 데이터 원본|`Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample`|데이터 원본 유형을 **Hyperion Essbase**로 설정합니다. 자세한 내용은 [Hyperion Essbase 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md)을 참조하세요.|  
 |Teradata 데이터 원본|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|데이터 원본 유형을 **Teradata**로 설정합니다. 연결 문자열은 1자리부터 3자리 숫자까지 허용되는 필드 네 개로 구성된 형식의 IP(인터넷 프로토콜) 주소입니다. 자세한 내용은 [Teradata 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md)을 참조하세요.|  
-|Teradata 데이터 원본|`Database=` *\<데이터베이스 이름>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN *>* `;Use X Views=False;Restrict to Default Database=True`|앞의 예와 마찬가지로 데이터 원본 유형을 **Teradata**로 설정합니다. Database 태그에 지정된 기본 데이터베이스만 사용하고 데이터 관계를 자동으로 검색하지 마십시오.|  
+|Teradata 데이터 원본|`Database=` *\<database name>* `; data source=` *\<NN*N*>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|앞의 예와 마찬가지로 데이터 원본 유형을 **Teradata**로 설정합니다. Database 태그에 지정된 기본 데이터베이스만 사용하고 데이터 관계를 자동으로 검색하지 마십시오.|  
 |XML 데이터 원본, 웹 서비스|`data source=https://adventure-works.com/results.aspx`|데이터 원본 유형을 **XML**로 설정합니다. 연결 문자열은 WSDL(Web Services Definition Language)을 지원하는 웹 서비스의 URL입니다. 자세한 내용은 [XML 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)을 참조하세요.|  
 |XML 데이터 원본, XML 문서|`https://localhost/XML/Customers.xml`|데이터 원본 유형을 **XML**로 설정합니다. 연결 문자열은 XML 문서의 URL입니다. 
 |XML 데이터 원본, 포함된 XML 문서|*비어 있음*|데이터 원본 유형을 **XML**로 설정합니다. XML 데이터는 보고서 정의에 포함됩니다.|  
 |SharePoint 목록|`data source=https://MySharePointWeb/MySharePointSite/`|데이터 원본 유형을 **SharePoint List**로 설정합니다.|  
-| Power BI Premium 데이터 세트(Reporting Services 2019부터) | Server=powerbi://api.powerbi.com/v1.0/myorg/<workspacename>;initial catalog = <YourDatasetName> | 데이터 원본 유형을 **Microsoft SQL Server Analysis Services**로 설정합니다. |
+| Power BI Premium 데이터 세트(Reporting Services 2019 및 Power BI Report Server 2020년 1월부터) | `Data Source=powerbi://api.powerbi.com/v1.0/myorg/<workspacename>;Initial Catalog=<datasetname>` | 데이터 원본 유형을 **Microsoft SQL Server Analysis Services**로 설정합니다. |
 
   
  **localhost**를 사용하여 보고서 서버에 연결하지 못하는 경우 TCP/IP 프로토콜에 대한 네트워크 프로토콜이 설정되어 있는지 확인합니다. 자세한 내용은 [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md)을 참조하세요.  

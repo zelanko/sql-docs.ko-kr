@@ -1,5 +1,6 @@
 ---
 title: 데이터 세트에 필터 추가(보고서 작성기) | Microsoft Docs
+description: 외부 데이터 원본에서 데이터를 검색한 후 데이터 세트에 필터를 추가하여 보고서의 데이터를 제한하는 방법을 알아봅니다.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67fb8bd61f337c4de0476c8a3fdb8265202b0161
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 797d8911fbb1d8b9a99abbf70bff5dde60415f6d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081662"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811362"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>데이터 세트에 필터 추가(보고서 작성기 및 SSRS)
   데이터 세트에 필터를 추가하여 데이터를 외부 데이터 원본에서 검색한 후에 보고서의 데이터를 제한합니다. 필터를 데이터 세트에 추가하면 모든 보고서 파트 또는 데이터 영역은 필터 조건과 일치하는 데이터만 사용합니다.  
